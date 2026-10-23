@@ -9,3 +9,5 @@
 .encounter-tags{z-index:2;margin-top:6px;display:flex;gap:5px;align-items:center}.exceptional{background:#edce83;color:#62461b}
 .research-dots{display:flex;gap:3px;justify-content:center;margin-top:6px}.research-dots i{width:12px;height:5px;background:#d5c7ac;border-radius:4px}.research-dots i.filled{background:#4d7e5d}
 @keyframes arrive{from{opacity:.3;transform:translateY(10px) scale(.92)}to{opacity:1;transform:none}}
+
+nav{display:flex;overflow-x:auto;scrollbar-width:thin}nav button{flex:0 0 auto;min-width:100px} .scene .animal-sprite{max-height:110px} select{touch-action:manipulation}

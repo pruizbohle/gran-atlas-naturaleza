@@ -1,0 +1,1 @@
+Corrección: los naturalistas ya no reconstruyen toda la interfaz a cada avistamiento. Selectores permanecen abiertos, diario actualizado cada 2,5 s, guardado cada 5 s y límite de búsquedas por ciclo. Compatible con partida guardada v0.1/v0.2.
