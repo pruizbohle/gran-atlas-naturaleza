@@ -6,7 +6,8 @@ const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>
 let save;try{save=normalizeSave(JSON.parse(localStorage.getItem(KEY)))}catch{save=freshSave()}
 const report=applyOfflineProgress(save,species);let tab='explore',selected='zorro';let encounterDisplay=null;
 function persist(){save.lastSavedAt=Date.now();try{localStorage.setItem(KEY,JSON.stringify(save));$('saveStatus').textContent='Guardado ✓'}catch{$('saveStatus').textContent='Guardado no disponible'}}
-function ui(){const total=Object.values(save.sightings).reduce((a,b)=>a+b,0);$('knowledge').textContent=Math.floor(save.knowledge).toLocaleString('es-CL');$('total').textContent=total.toLocaleString('es-CL');$('known').textContent=Object.keys(save.discovered).length+'/9';$('fame').textContent=save.fame;document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));renderPanel();}
+function updateCounters(){const total=Object.values(save.sightings).reduce((a,b)=>a+b,0);$('knowledge').textContent=Math.floor(save.knowledge).toLocaleString('es-CL');$('total').textContent=total.toLocaleString('es-CL');$('known').textContent=Object.keys(save.discovered).length+'/9';$('fame').textContent=save.fame;}
+function ui(){updateCounters();document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));renderPanel();}
 const sprite=(a,variant='normal')=>a?`<img class="animal-sprite" src="assets/sprites/${a.id}-${a.id==='zorro'&&['albino','melanico','alfa'].includes(variant)?variant:'normal'}.svg" alt="${esc(a.name)}">`:'🐾';
 const info=a=>{const n=save.sightings[a.id]||0,lv=save.research[a.id]||0;return {n,lv,next:MILESTONES[lv],cost:lv<5?researchCost(a,lv):0}};
 function renderPanel(){const panel=$('panel');if(tab==='explore'){
@@ -26,6 +27,34 @@ document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{tab=b.dataset.
 $('resetSave').onclick=()=>{if(confirm('¿Borrar la partida guardada?')){save=freshSave();selected='zorro';encounterDisplay=null;persist();ui()}};
 $('exportSave').onclick=()=>{persist();const blob=new Blob([JSON.stringify(save,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='gran-atlas-partida.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 // Count passive encounters in foreground independently of the view currently shown.
-let accumulator=0,lastTick=Date.now();const tick=setInterval(()=>{let now=Date.now(),dt=Math.min(1,(now-lastTick)/1000);lastTick=now;if(document.hidden)return;accumulator+=rate(save)*dt;let changed=false;while(accumulator>=1){attemptEncounter(save,species,Math.random,'auto');accumulator--;changed=true}if(changed){persist();ui()}},500);
+// Evitar reconstruir el DOM cuando trabajan los naturalistas: un <select> abierto
+// pierde el foco y se cierra si se reemplaza el panel completo.
+let accumulator=0,lastTick=Date.now(),lastPersist=Date.now(),lastDiaryRefresh=0;
+const tick=setInterval(()=>{
+  const now=Date.now(),dt=Math.min(1,(now-lastTick)/1000);
+  lastTick=now;
+  if(document.hidden)return;
+  accumulator+=rate(save)*dt;
+  let changed=false;
+  // Limitar trabajo por intervalo; el excedente queda en el acumulador.
+  let iterations=0;
+  while(accumulator>=1 && iterations<25){
+    attemptEncounter(save,species,Math.random,'auto');
+    accumulator--;iterations++;changed=true;
+  }
+  if(!changed)return;
+  updateCounters();
+  // El diario se actualiza sin reemplazar los selectores ni el área de juego.
+  if(tab==='explore' && now-lastDiaryRefresh>=2500){
+    lastDiaryRefresh=now;
+    const diary=document.querySelector('#panel .card:nth-child(2)');
+    if(diary){
+      diary.replaceChildren();
+      const title=document.createElement('h3');title.className='section';title.textContent='📋 Diario';diary.appendChild(title);
+      for(const line of save.log){const item=document.createElement('div');item.className='log';item.textContent=line;diary.appendChild(item)}
+    }
+  }
+  if(now-lastPersist>=5000){lastPersist=now;persist()}
+},500);
 document.addEventListener('visibilitychange',()=>{if(document.hidden)persist();else{applyOfflineProgress(save,species);lastTick=Date.now();persist();ui()}});
-window.addEventListener('pagehide',persist);setInterval(persist,15000);if(report.attempts)save.log.unshift(`📬 Al volver: ${report.sightings} avistamientos automáticos durante tu ausencia.`);persist();ui();
+window.addEventListener('pagehide',persist);setInterval(persist,15000);if(report.attempts)save.log.unshift(`📬 Al volver: ${report.sightings} avista
