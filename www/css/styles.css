@@ -404,3 +404,28 @@ button,select{font:inherit}
   .inventory-subtab{font-size:8px}
   .crown-quick-actions{grid-template-columns:1fr}
 }
+
+/* Fase 3 · respaldo de partida; conserva el diseño actual. */
+.save-tools-launch{border:1px solid #dbcda8;background:#e8dcc622;color:#fff2d3;border-radius:9px;cursor:pointer;min-width:39px;min-height:37px;font-size:21px;display:grid;place-items:center;flex:0 0 auto}
+.save-manager[hidden]{display:none!important}
+.save-manager{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:14px;isolation:isolate}
+.save-manager-backdrop{position:absolute;inset:0;background:#16251fcc;border:0;cursor:pointer;z-index:-1}
+.save-manager-panel{width:min(100%,480px);max-height:calc(100dvh - 28px);overflow-y:auto;background:#f8f0df;color:#343027;border:2px solid #b7a17b;border-radius:16px;padding:18px;box-shadow:0 20px 80px #10150f66;display:grid;gap:12px}
+.save-manager-header{display:flex;align-items:start;justify-content:space-between;gap:8px}
+.save-manager-header h2{font-size:23px;margin:3px 0 0}
+.save-manager-close{background:#e6dbc4;color:#473e2e;border:1px solid #c7b48f;border-radius:9px;min-width:38px;min-height:36px;font-size:19px;cursor:pointer}
+.save-action{width:100%;min-height:43px;font-size:13px}
+.save-file-label{font-weight:700;font-size:13px}
+#saveImportFile{width:100%;max-width:100%;font:12px system-ui;color:#463e30}
+.save-import-summary{background:#e9dfcb;padding:10px;border-radius:8px;min-height:37px;overflow-wrap:anywhere}
+.save-status:not(:empty){background:#dce9d7;border:1px solid #b4caa5;padding:9px;border-radius:8px}
+.save-status.error{background:#f9ded9;border-color:#d9a6a0}
+.save-warning{border-top:1px solid #ccb997;padding-top:10px;color:#77644a}
+@media(max-width:700px){
+  .topbar{grid-template-columns:minmax(0,1fr) auto 36px;gap:5px}
+  .topbar .region-pill{max-width:100px}
+  .save-tools-launch{min-width:34px;min-height:33px;font-size:19px;border-radius:7px}
+  .save-manager{padding:7px;align-items:end}
+  .save-manager-panel{width:100%;border-radius:18px 18px 10px 10px;max-height:calc(94dvh - env(safe-area-inset-top));padding:14px;padding-bottom:calc(18px + env(safe-area-inset-bottom));gap:10px}
+  .save-manager-header h2{font-size:20px}
+}
