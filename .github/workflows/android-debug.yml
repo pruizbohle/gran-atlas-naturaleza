@@ -6,6 +6,7 @@ on:
       - main
       - fase3/android-alpha
       - fase3/respaldos-v3.0.1
+      - fase3/redisenio-v3.1
     paths:
       - "www/**"
       - "package.json"
