@@ -1,0 +1,3045 @@
+{
+  "new_regions": [
+    {
+      "id": "HX-03-17",
+      "name": "Península Arábiga",
+      "code": "HX-03-17",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 30
+      },
+      "habitats": [
+        "desierto",
+        "estepa",
+        "pradera",
+        "montana"
+      ],
+      "species": [
+        "lobo_gris",
+        "asia_esp_0538",
+        "asia_esp_0088",
+        "asia_esp_0206",
+        "asia_esp_0214",
+        "asia_esp_0383",
+        "asia_esp_0519",
+        "asia_esp_0102"
+      ]
+    },
+    {
+      "id": "HX-04-12",
+      "name": "Mesopotamia",
+      "code": "HX-04-12",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 32
+      },
+      "habitats": [
+        "humedal",
+        "rio",
+        "estepa",
+        "pradera"
+      ],
+      "species": [
+        "garza_real",
+        "pelicano_cenudo",
+        "flamenco_comun",
+        "zorro_rojo",
+        "asia_esp_0205",
+        "asia_esp_0300",
+        "jabali",
+        "asia_esp_0065",
+        "asia_esp_0910",
+        "asia_esp_0327"
+      ]
+    },
+    {
+      "id": "HX-04-16",
+      "name": "Meseta de Irán",
+      "code": "HX-04-16",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 34
+      },
+      "habitats": [
+        "estepa",
+        "desierto",
+        "pradera",
+        "montana"
+      ],
+      "species": [
+        "asia_esp_0873",
+        "asia_esp_0881",
+        "lobo_gris",
+        "asia_esp_0088",
+        "asia_esp_0206",
+        "asia_esp_0401",
+        "asia_esp_0246",
+        "oso_pardo",
+        "asia_esp_0080",
+        "asia_esp_0182",
+        "asia_esp_0218"
+      ]
+    },
+    {
+      "id": "HX-04-17",
+      "name": "Meseta del Tíbet",
+      "code": "HX-04-17",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 36
+      },
+      "habitats": [
+        "montana",
+        "tundra",
+        "pradera",
+        "rio"
+      ],
+      "species": [
+        "asia_esp_0227",
+        "asia_esp_0534",
+        "asia_esp_0403",
+        "asia_esp_0321",
+        "asia_esp_0062",
+        "asia_esp_0821",
+        "asia_esp_0183",
+        "asia_esp_0404",
+        "asia_esp_0442",
+        "asia_esp_0445"
+      ]
+    },
+    {
+      "id": "HX-04-18",
+      "name": "Estepas de Asia Central",
+      "code": "HX-04-18",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 38
+      },
+      "habitats": [
+        "estepa",
+        "pradera",
+        "montana",
+        "rio"
+      ],
+      "species": [
+        "asia_esp_0030",
+        "asia_esp_0887",
+        "lobo_gris",
+        "asia_esp_0533",
+        "asia_esp_0347",
+        "asia_esp_0194",
+        "asia_esp_0319",
+        "asia_esp_0184",
+        "asia_esp_0441",
+        "asia_esp_0468"
+      ]
+    },
+    {
+      "id": "HX-05-15",
+      "name": "China Septentrional",
+      "code": "HX-05-15",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 40
+      },
+      "habitats": [
+        "bosque",
+        "estepa",
+        "pradera",
+        "rio"
+      ],
+      "species": [
+        "asia_esp_0891",
+        "asia_esp_0890",
+        "asia_esp_0226",
+        "asia_esp_0878",
+        "asia_esp_0422",
+        "lobo_gris",
+        "zorro_rojo",
+        "asia_esp_0401",
+        "asia_esp_0402",
+        "asia_esp_0842",
+        "jabali",
+        "asia_esp_0086",
+        "asia_esp_0824",
+        "asia_esp_0344",
+        "asia_esp_0915",
+        "asia_esp_0910",
+        "asia_esp_0911"
+      ]
+    },
+    {
+      "id": "HX-05-16",
+      "name": "Subcontinente Indio",
+      "code": "HX-05-16",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 42
+      },
+      "habitats": [
+        "bosque",
+        "sabana",
+        "pradera",
+        "rio"
+      ],
+      "species": [
+        "asia_esp_0888",
+        "asia_esp_0868",
+        "asia_esp_0872",
+        "asia_esp_0873",
+        "asia_esp_0410",
+        "asia_esp_0874",
+        "asia_esp_0401",
+        "asia_esp_0402",
+        "asia_esp_0816",
+        "asia_esp_0176",
+        "asia_esp_0855",
+        "asia_esp_0852",
+        "asia_esp_0336",
+        "asia_esp_0860",
+        "asia_esp_0853",
+        "asia_esp_0476",
+        "asia_esp_0833",
+        "asia_esp_0050",
+        "asia_esp_0061",
+        "asia_esp_0063",
+        "asia_esp_0830",
+        "asia_esp_0465",
+        "asia_esp_0825",
+        "asia_esp_0900",
+        "asia_esp_0136",
+        "asia_esp_0906",
+        "asia_esp_0905",
+        "asia_esp_0351"
+      ]
+    },
+    {
+      "id": "HX-05-17",
+      "name": "China Meridional",
+      "code": "HX-05-17",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 44
+      },
+      "habitats": [
+        "bosque",
+        "selva",
+        "rio",
+        "montana"
+      ],
+      "species": [
+        "asia_esp_0124",
+        "asia_esp_0864",
+        "asia_esp_0296",
+        "asia_esp_0096",
+        "asia_esp_0355",
+        "asia_esp_0006",
+        "asia_esp_0842",
+        "asia_esp_0318",
+        "asia_esp_0854",
+        "asia_esp_0395",
+        "asia_esp_0856",
+        "asia_esp_0523",
+        "asia_esp_0310",
+        "asia_esp_0821",
+        "asia_esp_0345",
+        "asia_esp_0910",
+        "asia_esp_0911",
+        "asia_esp_0902",
+        "asia_esp_0016"
+      ]
+    },
+    {
+      "id": "HX-06-16",
+      "name": "Península de Corea",
+      "code": "HX-06-16",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 46
+      },
+      "habitats": [
+        "bosque",
+        "pradera",
+        "rio",
+        "costa"
+      ],
+      "species": [
+        "asia_esp_0891",
+        "asia_esp_0890",
+        "asia_esp_0226",
+        "asia_esp_0878",
+        "asia_esp_0433",
+        "zorro_rojo",
+        "asia_esp_0440",
+        "asia_esp_0333",
+        "jabali",
+        "asia_esp_0523",
+        "asia_esp_0111",
+        "asia_esp_0249",
+        "asia_esp_0915"
+      ]
+    },
+    {
+      "id": "HX-06-17",
+      "name": "Sudeste Asiático",
+      "code": "HX-06-17",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 48
+      },
+      "habitats": [
+        "selva",
+        "bosque",
+        "rio",
+        "humedal"
+      ],
+      "species": [
+        "asia_esp_0888",
+        "asia_esp_0868",
+        "asia_esp_0067",
+        "asia_esp_0867",
+        "asia_esp_0869",
+        "asia_esp_0883",
+        "asia_esp_0820",
+        "asia_esp_0355",
+        "asia_esp_0402",
+        "asia_esp_0816",
+        "asia_esp_0849",
+        "asia_esp_0858",
+        "asia_esp_0176",
+        "asia_esp_0238",
+        "asia_esp_0857",
+        "asia_esp_0317",
+        "asia_esp_0850",
+        "asia_esp_0854",
+        "asia_esp_0860",
+        "asia_esp_0844",
+        "asia_esp_0853",
+        "asia_esp_0859",
+        "asia_esp_0251",
+        "asia_esp_0352",
+        "asia_esp_0436",
+        "asia_esp_0491",
+        "asia_esp_0165",
+        "asia_esp_0825",
+        "asia_esp_0834",
+        "asia_esp_0498",
+        "asia_esp_0901",
+        "asia_esp_0902",
+        "asia_esp_0527",
+        "asia_esp_0316",
+        "asia_esp_0373"
+      ]
+    },
+    {
+      "id": "HX-06-18",
+      "name": "Archipiélago Japonés",
+      "code": "HX-06-18",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 50
+      },
+      "habitats": [
+        "bosque",
+        "montana",
+        "costa",
+        "rio"
+      ],
+      "species": [
+        "asia_esp_0891",
+        "asia_esp_0890",
+        "asia_esp_0226",
+        "asia_esp_0877",
+        "asia_esp_0494",
+        "asia_esp_0886",
+        "asia_esp_0363",
+        "asia_esp_0440",
+        "asia_esp_0414",
+        "asia_esp_0523",
+        "asia_esp_0308",
+        "asia_esp_0087",
+        "asia_esp_0111",
+        "asia_esp_0017"
+      ]
+    }
+  ],
+  "new_species": {
+    "asia_esp_0538": {
+      "name": "Zorro de Rüppell",
+      "latin": "Vulpes rueppellii",
+      "rare": "Común",
+      "kind": "canid",
+      "color": "#b18a65",
+      "habitats": [
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0206": {
+      "name": "Gato de las arenas",
+      "latin": "Felis margarita",
+      "rare": "Poco común",
+      "kind": "cat",
+      "color": "#ac966c",
+      "habitats": [
+        "montana"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0214": {
+      "name": "Gacela de Arabia",
+      "latin": "Gazella arabica",
+      "rare": "Poco común",
+      "kind": "deer",
+      "color": "#c0a079",
+      "habitats": [
+        "desierto",
+        "estepa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0383": {
+      "name": "Órix árabe",
+      "latin": "Oryx leucoryx",
+      "rare": "Raro",
+      "kind": "deer",
+      "color": "#e7d9b8",
+      "habitats": [
+        "desierto",
+        "estepa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0519": {
+      "name": "Lagarto egipcio de cola espinosa",
+      "latin": "Uromastyx aegyptia",
+      "rare": "Poco común",
+      "kind": "lizard",
+      "color": "#7c976b",
+      "habitats": [
+        "desierto",
+        "estepa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0102": {
+      "name": "Víbora cornuda árabe",
+      "latin": "Cerastes gasperettii",
+      "rare": "Común",
+      "kind": "snake",
+      "color": "#a88b67",
+      "habitats": [
+        "desierto",
+        "estepa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0205": {
+      "name": "Gato de la jungla",
+      "latin": "Felis chaus",
+      "rare": "Común",
+      "kind": "cat",
+      "color": "#ac966c",
+      "habitats": [
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0300": {
+      "name": "Nutria lisa",
+      "latin": "Lutrogale perspicillata",
+      "rare": "Común",
+      "kind": "otter",
+      "color": "#796b55",
+      "habitats": [
+        "humedal",
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0065": {
+      "name": "Búfalo de agua",
+      "latin": "Bubalus bubalis",
+      "rare": "Raro",
+      "kind": "bison",
+      "color": "#584a3d",
+      "habitats": [
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0910": {
+      "name": "Carpa común",
+      "latin": "Cyprinus carpio",
+      "rare": "Raro",
+      "kind": "fish",
+      "color": "#8c8870",
+      "habitats": [
+        "humedal",
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0327": {
+      "name": "Galápago caspio",
+      "latin": "Mauremys caspica",
+      "rare": "Común",
+      "kind": "tortoise",
+      "color": "#a89070",
+      "habitats": [
+        "humedal",
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0873": {
+      "name": "Abejaruco verde",
+      "latin": "Merops orientalis",
+      "rare": "Común",
+      "kind": "songbird",
+      "color": "#5b9e74",
+      "habitats": [
+        "estepa",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0246": {
+      "name": "Hiena rayada",
+      "latin": "Hyaena hyaena",
+      "rare": "Común",
+      "kind": "canid",
+      "color": "#8b8068",
+      "habitats": [
+        "estepa"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0182": {
+      "name": "Onagro",
+      "latin": "Equus hemionus",
+      "rare": "Poco común",
+      "kind": "deer",
+      "color": "#a98b69",
+      "habitats": [
+        "estepa",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0218": {
+      "name": "Gacela persa",
+      "latin": "Gazella subgutturosa",
+      "rare": "Poco común",
+      "kind": "deer",
+      "color": "#a98b69",
+      "habitats": [
+        "estepa",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0227": {
+      "name": "Grulla de cuello negro",
+      "latin": "Grus nigricollis",
+      "rare": "Común",
+      "kind": "stork",
+      "color": "#bdc7ca",
+      "habitats": [
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0534": {
+      "name": "Zorro tibetano",
+      "latin": "Vulpes ferrilata",
+      "rare": "Común",
+      "kind": "canid",
+      "color": "#b18a65",
+      "habitats": [
+        "montana"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0321": {
+      "name": "Marmota del Himalaya",
+      "latin": "Marmota himalayana",
+      "rare": "Común",
+      "kind": "small",
+      "color": "#b29b76",
+      "habitats": [
+        "montana"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0183": {
+      "name": "Kiang",
+      "latin": "Equus kiang",
+      "rare": "Común",
+      "kind": "deer",
+      "color": "#c9ad7d",
+      "habitats": [
+        "montana",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0404": {
+      "name": "Antílope tibetano",
+      "latin": "Pantholops hodgsonii",
+      "rare": "Muy rara",
+      "kind": "deer",
+      "color": "#a98b69",
+      "habitats": [
+        "montana",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0442": {
+      "name": "Gacela tibetana",
+      "latin": "Procapra picticaudata",
+      "rare": "Común",
+      "kind": "deer",
+      "color": "#c0a079",
+      "habitats": [
+        "montana",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0347": {
+      "name": "Turón estepario",
+      "latin": "Mustela eversmanii",
+      "rare": "Común",
+      "kind": "mustelid",
+      "color": "#826953",
+      "habitats": [
+        "estepa"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0319": {
+      "name": "Marmota bobak",
+      "latin": "Marmota bobak",
+      "rare": "Poco común",
+      "kind": "small",
+      "color": "#b29b76",
+      "habitats": [
+        "estepa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0468": {
+      "name": "Antílope saiga",
+      "latin": "Saiga tatarica",
+      "rare": "Muy rara",
+      "kind": "deer",
+      "color": "#c3ad88",
+      "habitats": [
+        "estepa",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0891": {
+      "name": "Pato mandarín",
+      "latin": "Aix galericulata",
+      "rare": "Común",
+      "kind": "swan",
+      "color": "#aa714d",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0890": {
+      "name": "Cigüeña blanca oriental",
+      "latin": "Ciconia boyciana",
+      "rare": "Raro",
+      "kind": "stork",
+      "color": "#e6ddcf",
+      "habitats": [
+        "rio",
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0226": {
+      "name": "Grulla de coronilla roja",
+      "latin": "Grus japonensis",
+      "rare": "Común",
+      "kind": "stork",
+      "color": "#bdc7ca",
+      "habitats": [
+        "rio",
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0878": {
+      "name": "Urraca de pico azul",
+      "latin": "Cyanopica cyanus",
+      "rare": "Poco común",
+      "kind": "songbird",
+      "color": "#3b5f92",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0422": {
+      "name": "Faisán común",
+      "latin": "Phasianus colchicus",
+      "rare": "Común",
+      "kind": "forestbird",
+      "color": "#936d4e",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0842": {
+      "name": "Liebre china",
+      "latin": "Lepus sinensis",
+      "rare": "Poco común",
+      "kind": "hare",
+      "color": "#a89070",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0824": {
+      "name": "Ciervo del padre David",
+      "latin": "Elaphurus davidianus",
+      "rare": "Raro",
+      "kind": "deer",
+      "color": "#a67d55",
+      "habitats": [
+        "estepa",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0915": {
+      "name": "Pez cabeza de serpiente del norte",
+      "latin": "Channa argus",
+      "rare": "Poco común",
+      "kind": "fish",
+      "color": "#637e81",
+      "habitats": [
+        "rio",
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0911": {
+      "name": "Pez mandarín chino",
+      "latin": "Siniperca chuatsi",
+      "rare": "Poco común",
+      "kind": "fish",
+      "color": "#637e81",
+      "habitats": [
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0888": {
+      "name": "Pelícano blanco oriental",
+      "latin": "Pelecanus philippensis",
+      "rare": "Común",
+      "kind": "pelican",
+      "color": "#a89070",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0868": {
+      "name": "Cálao bicorne",
+      "latin": "Buceros bicornis",
+      "rare": "Común",
+      "kind": "forestbird",
+      "color": "#4d4641",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0872": {
+      "name": "Carraca india",
+      "latin": "Coracias benghalensis",
+      "rare": "Poco común",
+      "kind": "forestbird",
+      "color": "#bc915c",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0410": {
+      "name": "Pavo real común",
+      "latin": "Pavo cristatus",
+      "rare": "Raro",
+      "kind": "forestbird",
+      "color": "#267b8a",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0874": {
+      "name": "Bubul",
+      "latin": "Pycnonotus cafer",
+      "rare": "Poco común",
+      "kind": "songbird",
+      "color": "#547e79",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0816": {
+      "name": "Gato pescador",
+      "latin": "Prionailurus viverrinus",
+      "rare": "Raro",
+      "kind": "cat",
+      "color": "#ac966c",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0176": {
+      "name": "Elefante asiático",
+      "latin": "Elephas maximus",
+      "rare": "Raro",
+      "kind": "elephant",
+      "color": "#90999b",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0852": {
+      "name": "Pangolín indio",
+      "latin": "Manis crassicaudata",
+      "rare": "Raro",
+      "kind": "pangolin",
+      "color": "#a99675",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0336": {
+      "name": "Oso bezudo",
+      "latin": "Melursus ursinus",
+      "rare": "Común",
+      "kind": "small",
+      "color": "#6f6658",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0860": {
+      "name": "Loris lento de Bengala",
+      "latin": "Nycticebus bengalensis",
+      "rare": "Poco común",
+      "kind": "primate",
+      "color": "#a89070",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0853": {
+      "name": "Musaraña almizclera",
+      "latin": "Suncus murinus",
+      "rare": "Poco común",
+      "kind": "small",
+      "color": "#ac9374",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0476": {
+      "name": "Langur gris",
+      "latin": "Semnopithecus entellus",
+      "rare": "Poco común",
+      "kind": "primate",
+      "color": "#a89070",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0833": {
+      "name": "Antílope negro",
+      "latin": "Antilope cervicapra",
+      "rare": "Poco común",
+      "kind": "deer",
+      "color": "#a98b69",
+      "habitats": [
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0050": {
+      "name": "Ciervo chital",
+      "latin": "Axis axis",
+      "rare": "Poco común",
+      "kind": "deer",
+      "color": "#a67d55",
+      "habitats": [
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0061": {
+      "name": "Gaur",
+      "latin": "Bos gaurus",
+      "rare": "Poco común",
+      "kind": "bison",
+      "color": "#a89070",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0063": {
+      "name": "Nilgó",
+      "latin": "Boselaphus tragocamelus",
+      "rare": "Muy rara",
+      "kind": "bison",
+      "color": "#a89070",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0830": {
+      "name": "Búfalo salvaje asiático",
+      "latin": "Bubalus arnee",
+      "rare": "Raro",
+      "kind": "bison",
+      "color": "#584a3d",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0465": {
+      "name": "Rinoceronte indio",
+      "latin": "Rhinoceros unicornis",
+      "rare": "Poco común",
+      "kind": "rhino",
+      "color": "#868f8a",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0825": {
+      "name": "Ciervo sambar",
+      "latin": "Rusa unicolor",
+      "rare": "Raro",
+      "kind": "deer",
+      "color": "#a67d55",
+      "habitats": [
+        "pradera",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0900": {
+      "name": "Varano de Bengala",
+      "latin": "Varanus bengalensis",
+      "rare": "Común",
+      "kind": "lizard",
+      "color": "#657559",
+      "habitats": [
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0136": {
+      "name": "Cocodrilo de las marismas",
+      "latin": "Crocodylus palustris",
+      "rare": "Común",
+      "kind": "crocodile",
+      "color": "#58735b",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0906": {
+      "name": "Krait común",
+      "latin": "Bungarus caeruleus",
+      "rare": "Común",
+      "kind": "snake",
+      "color": "#454e5b",
+      "habitats": [
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0905": {
+      "name": "Víbora de Russell",
+      "latin": "Daboia russelii",
+      "rare": "Común",
+      "kind": "snake",
+      "color": "#a88b67",
+      "habitats": [
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0351": {
+      "name": "Cobra india",
+      "latin": "Naja naja",
+      "rare": "Común",
+      "kind": "snake",
+      "color": "#69654a",
+      "habitats": [
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0124": {
+      "name": "Faisán dorado",
+      "latin": "Chrysolophus pictus",
+      "rare": "Común",
+      "kind": "forestbird",
+      "color": "#e3a439",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0296": {
+      "name": "Faisán plateado",
+      "latin": "Lophura nycthemera",
+      "rare": "Común",
+      "kind": "forestbird",
+      "color": "#dad9cd",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0096": {
+      "name": "Gato dorado asiático",
+      "latin": "Catopuma temminckii",
+      "rare": "Raro",
+      "kind": "cat",
+      "color": "#ac966c",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0355": {
+      "name": "Leopardo nublado",
+      "latin": "Neofelis nebulosa",
+      "rare": "Común",
+      "kind": "cat",
+      "color": "#998c73",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0006": {
+      "name": "Panda gigante",
+      "latin": "Ailuropoda melanoleuca",
+      "rare": "Muy rara",
+      "kind": "bear",
+      "color": "#eceae1",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0318": {
+      "name": "Pangolín chino",
+      "latin": "Manis pentadactyla",
+      "rare": "Común",
+      "kind": "pangolin",
+      "color": "#a99675",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0854": {
+      "name": "Gibón de cresta negra",
+      "latin": "Nomascus concolor",
+      "rare": "Raro",
+      "kind": "primate",
+      "color": "#53463c",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0395": {
+      "name": "Civeta de las palmeras enmascarada",
+      "latin": "Paguma larvata",
+      "rare": "Poco común",
+      "kind": "mustelid",
+      "color": "#826953",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0856": {
+      "name": "Mono de nariz chata dorado",
+      "latin": "Rhinopithecus roxellana",
+      "rare": "Raro",
+      "kind": "primate",
+      "color": "#be984a",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0310": {
+      "name": "Macaco tibetano",
+      "latin": "Macaca thibetana",
+      "rare": "Poco común",
+      "kind": "primate",
+      "color": "#a89070",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0345": {
+      "name": "Muntíaco de Reeves",
+      "latin": "Muntiacus reevesi",
+      "rare": "Común",
+      "kind": "deer",
+      "color": "#c9ad7d",
+      "habitats": [
+        "montana"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0902": {
+      "name": "Gecko tokay",
+      "latin": "Gekko gecko",
+      "rare": "Común",
+      "kind": "lizard",
+      "color": "#648f79",
+      "habitats": [
+        "montana",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0016": {
+      "name": "Salamandra gigante china",
+      "latin": "Andrias davidianus",
+      "rare": "Raro",
+      "kind": "salamander",
+      "color": "#4a5145",
+      "habitats": [
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0433": {
+      "name": "Urraca oriental",
+      "latin": "Pica serica",
+      "rare": "Raro",
+      "kind": "songbird",
+      "color": "#3b5f92",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0440": {
+      "name": "Gato leopardo",
+      "latin": "Prionailurus bengalensis",
+      "rare": "Poco común",
+      "kind": "cat",
+      "color": "#998c73",
+      "habitats": [
+        "bosque",
+        "montana"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0333": {
+      "name": "Tejón asiático",
+      "latin": "Meles leucurus",
+      "rare": "Común",
+      "kind": "mustelid",
+      "color": "#826953",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0111": {
+      "name": "Ciervo sika",
+      "latin": "Cervus nippon",
+      "rare": "Poco común",
+      "kind": "deer",
+      "color": "#a67d55",
+      "habitats": [
+        "pradera",
+        "montana"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0249": {
+      "name": "Ciervo acuático chino",
+      "latin": "Hydropotes inermis",
+      "rare": "Común",
+      "kind": "deer",
+      "color": "#a67d55",
+      "habitats": [
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0067": {
+      "name": "Cálao rinoceronte",
+      "latin": "Buceros rhinoceros",
+      "rare": "Común",
+      "kind": "rhino",
+      "color": "#868f8a",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0867": {
+      "name": "Pavo verde",
+      "latin": "Pavo muticus",
+      "rare": "Raro",
+      "kind": "forestbird",
+      "color": "#376b81",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0869": {
+      "name": "Cálao de casco",
+      "latin": "Rhinoplax vigil",
+      "rare": "Raro",
+      "kind": "forestbird",
+      "color": "#4d4641",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0883": {
+      "name": "Águila de las Filipinas",
+      "latin": "Pithecophaga jefferyi",
+      "rare": "Muy rara",
+      "kind": "raptor",
+      "color": "#a89070",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0849": {
+      "name": "Binturong",
+      "latin": "Arctictis binturong",
+      "rare": "Poco común",
+      "kind": "mustelid",
+      "color": "#826953",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0858": {
+      "name": "Tarsio filipino",
+      "latin": "Carlito syrichta",
+      "rare": "Raro",
+      "kind": "small",
+      "color": "#8d7b66",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0238": {
+      "name": "Oso malayo",
+      "latin": "Helarctos malayanus",
+      "rare": "Raro",
+      "kind": "small",
+      "color": "#6f6658",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0857": {
+      "name": "Macaco de cola de cerdo",
+      "latin": "Macaca nemestrina",
+      "rare": "Común",
+      "kind": "primate",
+      "color": "#a89070",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0317": {
+      "name": "Pangolín malayo",
+      "latin": "Manis javanica",
+      "rare": "Común",
+      "kind": "pangolin",
+      "color": "#a99675",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0859": {
+      "name": "Tarsio de espectro",
+      "latin": "Tarsius tarsier",
+      "rare": "Raro",
+      "kind": "small",
+      "color": "#ac9374",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0251": {
+      "name": "Gibón de manos blancas",
+      "latin": "Hylobates lar",
+      "rare": "Poco común",
+      "kind": "primate",
+      "color": "#53463c",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0352": {
+      "name": "Mono narigudo",
+      "latin": "Nasalis larvatus",
+      "rare": "Común",
+      "kind": "primate",
+      "color": "#a89070",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0436": {
+      "name": "Orangután de Borneo",
+      "latin": "Pongo pygmaeus",
+      "rare": "Raro",
+      "kind": "small",
+      "color": "#8d7b66",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0491": {
+      "name": "Gibón siamango",
+      "latin": "Symphalangus syndactylus",
+      "rare": "Poco común",
+      "kind": "primate",
+      "color": "#53463c",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0165": {
+      "name": "Rinoceronte de Sumatra",
+      "latin": "Dicerorhinus sumatrensis",
+      "rare": "Muy rara",
+      "kind": "rhino",
+      "color": "#868f8a",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0834": {
+      "name": "Jabalí barbudo",
+      "latin": "Sus barbatus",
+      "rare": "Poco común",
+      "kind": "deer",
+      "color": "#c9ad7d",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0498": {
+      "name": "Tapir malayo",
+      "latin": "Tapirus indicus",
+      "rare": "Común",
+      "kind": "deer",
+      "color": "#c9ad7d",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0901": {
+      "name": "Dragón volador común",
+      "latin": "Draco volans",
+      "rare": "Raro",
+      "kind": "reptile",
+      "color": "#768159",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0527": {
+      "name": "Dragón de Komodo",
+      "latin": "Varanus komodoensis",
+      "rare": "Común",
+      "kind": "reptile",
+      "color": "#768159",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0316": {
+      "name": "Pitón reticulada",
+      "latin": "Malayopython reticulatus",
+      "rare": "Común",
+      "kind": "reptile",
+      "color": "#768159",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0373": {
+      "name": "Cobra real",
+      "latin": "Ophiophagus hannah",
+      "rare": "Común",
+      "kind": "snake",
+      "color": "#69654a",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0877": {
+      "name": "Petirrojo japonés",
+      "latin": "Larvivora akahige",
+      "rare": "Común",
+      "kind": "forestbird",
+      "color": "#786b53",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0494": {
+      "name": "Faisán cobrizo",
+      "latin": "Syrmaticus soemmerringii",
+      "rare": "Poco común",
+      "kind": "forestbird",
+      "color": "#bc915c",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0363": {
+      "name": "Tanuki",
+      "latin": "Nyctereutes procyonoides",
+      "rare": "Poco común",
+      "kind": "small",
+      "color": "#ac9374",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0414": {
+      "name": "Conejo de Amami",
+      "latin": "Pentalagus furnessi",
+      "rare": "Común",
+      "kind": "small",
+      "color": "#8d7b66",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0308": {
+      "name": "Macaco japonés",
+      "latin": "Macaca fuscata",
+      "rare": "Común",
+      "kind": "primate",
+      "color": "#a89070",
+      "habitats": [
+        "bosque",
+        "montana"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0087": {
+      "name": "Serau japonés",
+      "latin": "Capricornis crispus",
+      "rare": "Común",
+      "kind": "deer",
+      "color": "#c9ad7d",
+      "habitats": [
+        "montana"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    },
+    "asia_esp_0017": {
+      "name": "Salamandra gigante japonesa",
+      "latin": "Andrias japonicus",
+      "rare": "Poco común",
+      "kind": "salamander",
+      "color": "#4a5145",
+      "habitats": [
+        "costa",
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false
+    }
+  },
+  "new_species_count": 103
+}

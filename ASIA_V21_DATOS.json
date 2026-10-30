@@ -1,0 +1,551 @@
+{
+  "regions": [
+    {
+      "id": "HX-02-13",
+      "name": "Siberia Occidental",
+      "code": "HX-02-13",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 3
+      },
+      "habitats": [
+        "bosque",
+        "rio",
+        "tundra",
+        "pradera"
+      ],
+      "species": [
+        "asia_esp_0287",
+        "asia_esp_0880",
+        "asia_esp_0861",
+        "asia_esp_0886",
+        "lobo_gris",
+        "lince_boreal",
+        "gloton",
+        "asia_esp_0326",
+        "asia_esp_0843",
+        "oso_pardo",
+        "castor_europeo",
+        "alce",
+        "reno",
+        "asia_esp_0914"
+      ]
+    },
+    {
+      "id": "HX-03-14",
+      "name": "Siberia Central",
+      "code": "HX-03-14",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 4
+      },
+      "habitats": [
+        "bosque",
+        "tundra",
+        "rio",
+        "pradera"
+      ],
+      "species": [
+        "asia_esp_0880",
+        "asia_esp_0861",
+        "urogallo_comun",
+        "asia_esp_0886",
+        "lobo_gris",
+        "lince_boreal",
+        "gloton",
+        "asia_esp_0326",
+        "asia_esp_0843",
+        "oso_pardo",
+        "liebre_variable",
+        "alce",
+        "reno",
+        "asia_esp_0914",
+        "asia_esp_0899"
+      ]
+    },
+    {
+      "id": "HX-04-13",
+      "name": "Mongolia",
+      "code": "HX-04-13",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 5
+      },
+      "habitats": [
+        "estepa",
+        "pradera",
+        "montana",
+        "rio"
+      ],
+      "species": [
+        "asia_esp_0020",
+        "asia_esp_0030",
+        "asia_esp_0887",
+        "lobo_gris",
+        "asia_esp_0533",
+        "asia_esp_0387",
+        "asia_esp_0323",
+        "asia_esp_0184",
+        "asia_esp_0441",
+        "asia_esp_0898"
+      ]
+    }
+  ],
+  "new_species": {
+    "asia_esp_0287": {
+      "name": "Grulla siberiana",
+      "latin": "Leucogeranus leucogeranus",
+      "rare": "Muy rara",
+      "kind": "stork",
+      "color": "#e8e5df",
+      "habitats": [
+        "rio",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0880": {
+      "name": "Gallo lira",
+      "latin": "Lyrurus tetrix",
+      "rare": "Común",
+      "kind": "forestbird",
+      "color": "#292f36",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico",
+        "Notable"
+      ],
+      "dimorphism": true,
+      "sex": "capercaillie"
+    },
+    "asia_esp_0861": {
+      "name": "Arrendajo de Siberia",
+      "latin": "Perisoreus infaustus",
+      "rare": "Común",
+      "kind": "songbird",
+      "color": "#9c765c",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0886": {
+      "name": "Azor común",
+      "latin": "Accipiter gentilis",
+      "rare": "Raro",
+      "kind": "raptor",
+      "color": "#81654a",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0326": {
+      "name": "Marta cibelina",
+      "latin": "Martes zibellina",
+      "rare": "Común",
+      "kind": "mustelid",
+      "color": "#5c4939",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0843": {
+      "name": "Ardilla voladora siberiana",
+      "latin": "Pteromys volans",
+      "rare": "Poco común",
+      "kind": "small",
+      "color": "#8d7660",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0914": {
+      "name": "Esturión siberiano",
+      "latin": "Acipenser baerii",
+      "rare": "Común",
+      "kind": "fish",
+      "color": "#6d8184",
+      "habitats": [
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0899": {
+      "name": "Salamandra siberiana",
+      "latin": "Salamandrella keyserlingii",
+      "rare": "Muy rara",
+      "kind": "salamander",
+      "color": "#706a52",
+      "habitats": [
+        "bosque",
+        "tundra",
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Leucística",
+        "Notable"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0020": {
+      "name": "Grulla damisela",
+      "latin": "Anthropoides virgo",
+      "rare": "Común",
+      "kind": "stork",
+      "color": "#a2a6ab",
+      "habitats": [
+        "estepa",
+        "pradera",
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0030": {
+      "name": "Águila esteparia",
+      "latin": "Aquila nipalensis",
+      "rare": "Común",
+      "kind": "raptor",
+      "color": "#705139",
+      "habitats": [
+        "estepa",
+        "pradera",
+        "montana"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Leucístico"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0887": {
+      "name": "Halcón sacre",
+      "latin": "Falco cherrug",
+      "rare": "Raro",
+      "kind": "raptor",
+      "color": "#9b775a",
+      "habitats": [
+        "estepa",
+        "pradera",
+        "montana"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0533": {
+      "name": "Zorro corsac",
+      "latin": "Vulpes corsac",
+      "rare": "Poco común",
+      "kind": "canid",
+      "color": "#c1a278",
+      "habitats": [
+        "estepa",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0387": {
+      "name": "Manul",
+      "latin": "Otocolobus manul",
+      "rare": "Común",
+      "kind": "cat",
+      "color": "#9c9b91",
+      "habitats": [
+        "estepa",
+        "montana"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Melánico",
+        "Notable"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0323": {
+      "name": "Marmota siberiana",
+      "latin": "Marmota sibirica",
+      "rare": "Común",
+      "kind": "small",
+      "color": "#aa8a65",
+      "habitats": [
+        "estepa",
+        "pradera",
+        "montana"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Leucístico"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0184": {
+      "name": "Caballo de Przewalski",
+      "latin": "Equus przewalskii",
+      "rare": "Poco común",
+      "kind": "deer",
+      "color": "#b9936d",
+      "habitats": [
+        "estepa",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "sex": null
+    },
+    "asia_esp_0441": {
+      "name": "Gacela de Mongolia",
+      "latin": "Procapra gutturosa",
+      "rare": "Poco común",
+      "kind": "deer",
+      "color": "#ba9b71",
+      "habitats": [
+        "estepa",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": true,
+      "sex": "ibex"
+    },
+    "asia_esp_0898": {
+      "name": "Sapo mongol",
+      "latin": "Strauchbufo raddei",
+      "rare": "Raro",
+      "kind": "reptile",
+      "color": "#8b9370",
+      "habitats": [
+        "estepa",
+        "pradera",
+        "rio"
+      ],
+      "times": [
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono"
+      ],
+      "special": [
+        "Leucístico"
+      ],
+      "dimorphism": false,
+      "sex": null
+    }
+  }
+}
