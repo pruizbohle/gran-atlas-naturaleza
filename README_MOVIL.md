@@ -29,3 +29,14 @@ npm run cap:open:android
 ```
 
 Esto es el proyecto fuente preparado para Android, no un APK compilado. Capacitor no convierte por sí solo el guardado del navegador web al de la app instalada.
+
+
+## Versión 2.5.1 · móvil compacto
+
+- Cabecera y estadísticas compactas; tres recursos principales siempre visibles, secundarios desplegables.
+- Campo redimensionado con botón de observar visible y filtros plegables.
+- Cuaderno: selector de especies en lugar de largas tarjetas en pantallas móviles.
+- Menú inferior y subpestañas reducidas, sin eliminar funciones.
+- Fondo inicial de prueba de £420, solo en partidas nuevas. Partidas previas conservan su saldo exacto.
+- Corona: paquetes **gratuitos simulados** y canje 1 corona = £1. No hay pasarela ni compras reales.
+- Actualización de versión de caché PWA, sin modificar la clave de guardado.

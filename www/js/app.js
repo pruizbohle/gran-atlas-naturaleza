@@ -1622,10 +1622,10 @@ const RESEARCH_NODES=[
 function initialState(){
   const region=REGIONS[0].id;
   return {
-    money:120, knowledge:0, prestige:0, helpers:0, books:0,
+    money:420, knowledge:0, prestige:0, helpers:0, books:0,
     asiaPricingVersion:3, currentRegion:region, habitat:'bosque', time:'amanecer', season:'primavera',
     discovered:{}, sightings:{}, stages:{}, feedObs:{}, dimorphism:{}, sexSeen:{}, specialSeen:{}, specialFound:{}, published:{},
-    log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.'],
+    log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial de prueba: £420. En Corona puedes simular más libras.'],
     upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0}, purchases:{},
     regionUnlocked:{[REGIONS[0].id]:true}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', crownCoins:0, lastEncounter:null,
     lastTick:Date.now(), lastGrant:0, autoHourly:{}, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
@@ -2018,7 +2018,26 @@ function updateFieldOutput(){
  if(log && diaryDirty && Date.now()-lastDisplayRefresh>800){log.innerHTML=state.log.map(x=>`<div class="log">${esc(x)}</div>`).join('');lastDisplayRefresh=Date.now();diaryDirty=false;}
 }
 function render(){ renderCounters(); renderPanel(); persist(); }
-function renderCrown(){return `<section class="card crown-card stack"><div class="big">👑</div><h3 class="section">Corona inglesa</h3><div class="small">Moneda premium solo estética en esta etapa del prototipo. Puedes adquirir paquetes para visualizar cómo se integrará el módulo.</div><div class="choice-row"><button class="btn gold" data-action="buy-crown" data-id="50">Simular +50 coronas</button><button class="btn gold" data-action="buy-crown" data-id="250">Simular +250 coronas</button><button class="btn gold" data-action="buy-crown" data-id="1000">Simular +1000 coronas</button></div><div class="req"><strong>Saldo visual</strong><div class="small">${state.crownCoins||0} coronas</div></div></section>`;}
+function renderCrown(){
+  const coins=Math.floor(Math.max(0,state.crownCoins||0));
+  return `<section class="card crown-card stack trial-crown">
+    <div class="big">👑</div><h3 class="section">Corona inglesa · Laboratorio</h3>
+    <div class="small">Esta es una herramienta de pruebas: las coronas son gratuitas, no hay compras reales ni pagos.</div>
+    <div class="req"><strong>Coronas disponibles: ${fmt(coins)}</strong><div class="small">Equivalencia de prueba: 1 corona = £1</div></div>
+    <div class="crown-quick-actions">
+      <button class="btn gold" data-action="buy-crown" data-id="100">+100 coronas</button>
+      <button class="btn gold" data-action="buy-crown" data-id="500">+500 coronas</button>
+      <button class="btn gold" data-action="buy-crown" data-id="1000">+1.000 coronas</button>
+    </div>
+    <div class="crown-quick-actions">
+      <button class="btn" data-action="exchange-crown" data-id="100" ${coins<100?'disabled':''}>Canjear 100 → £100</button>
+      <button class="btn" data-action="exchange-crown" data-id="500" ${coins<500?'disabled':''}>Canjear 500 → £500</button>
+      <button class="btn alt" data-action="exchange-crown" data-id="all" ${coins<1?'disabled':''}>Canjear todas → £${fmt(coins)}</button>
+    </div>
+    <div class="small">El canje consume coronas y añade la misma cantidad de libras. Tus datos existentes no se reinician.</div>
+  </section>`;
+}
+
 function renderPanel(){
   lastPanelSignature='';diaryDirty=true;
   document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
@@ -2085,7 +2104,20 @@ function removeExhibit(id){
   if(!state.museum.exhibits[id]) return;
   delete state.museum.exhibits[id]; pushLog('🏛️ Se retiró de la sala: '+SPECIES[id].name); render();
 }
-function buyCrownPack(amount){ state.crownCoins=(state.crownCoins||0)+amount; pushLog('👑 Adquisición estética: +'+amount+' coronas.'); render(); }
+function buyCrownPack(amount){
+  if(!Number.isSafeInteger(amount) || amount<=0 || amount>1000) return;
+  state.crownCoins=(state.crownCoins||0)+amount;
+  pushLog('👑 Prueba: +'+amount+' coronas sin costo real.');render();
+}
+function exchangeTrialCrowns(amount){
+  if(!Number.isSafeInteger(amount)||amount<=0) return;
+  const available=Math.floor(Math.max(0,state.crownCoins||0));
+  if(amount>available) return;
+  state.crownCoins=available-amount;
+  state.money=(Number(state.money)||0)+amount;
+  pushLog('💷 Conversión de prueba: '+amount+' coronas → £'+amount+'.');render();
+}
+
 function bestiaryTypeBucket(id){
   const c=taxonomyInfo(id).className;
   if(c==='Mammalia') return 'Mamífero';
@@ -2156,6 +2188,13 @@ function renderField(){
         <button class="btn gold" data-action="field-aid" data-id="sightings">+ avistamientos</button>
         <button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button>
       </div>
+      <div class="field-filter-block ${state.fieldFiltersOpen?'field-filter-open':''}">
+        <button class="field-filter-toggle" type="button" data-action="toggle-field-filters" aria-expanded="${!!state.fieldFiltersOpen}">
+          <span>⚙️ Configurar observación</span>
+          <span class="field-filter-summary">${habitatLabel(state.habitat)} · ${timeLabel(state.time)} · ${seasonLabel(state.season)}</span>
+          <span aria-hidden="true">${state.fieldFiltersOpen?'▴':'▾'}</span>
+        </button>
+        <div class="field-filter-controls">
       <div>
         <div class="small">Hábitat</div>
         <div class="choice-row">${region.habitats.map(h=>`<button class="choice ${state.habitat===h?'active':''}" data-action="set-habitat" data-id="${h}">${habitatLabel(h)}</button>`).join('')}</div>
@@ -2167,6 +2206,8 @@ function renderField(){
       <div>
         <div class="small">Estación</div>
         <div class="choice-row">${['primavera','verano','otono','invierno'].map(s=>`<button class="choice ${state.season===s?'active':''}" data-action="set-season" data-id="${s}">${seasonLabel(s)}</button>`).join('')}</div>
+      </div>
+        </div>
       </div>
       <div class="scene" style="background:linear-gradient(${scene[0]},${scene[1]} 57%,${scene[2]} 58%)">
         <div class="scene-title">${scene[3]}</div>
@@ -2195,7 +2236,12 @@ function renderJournal(){
   const sp=SPECIES[id];
   const st=stage(id);
   const next=st<5?stageRequirements(id,st):null;
-  return `<div class="journal-grid">
+  return `<div class="mobile-species-picker">
+    <label for="mobileJournalSpecies">📖 Especie del Cuaderno</label>
+    <select id="mobileJournalSpecies" data-journal-select>
+      ${ids.map((sid,i)=>`<option value="${sid}" ${sid===id?'selected':''}>${i+1}. ${visibleName(sid)}</option>`).join('')}
+    </select>
+  </div><div class="journal-grid">
     <section class="card">
       <h3 class="section">📖 Cuaderno</h3>
       <div class="small">Especies identificadas en esta región: <b>${regionIdentifiedCount(state.currentRegion)}/${ids.length}</b></div>
@@ -2589,6 +2635,10 @@ function researchNodeCard(node){
 }
 
 function bindPanel(){
+  panel.querySelector('[data-journal-select]')?.addEventListener('change',e=>{
+    const id=e.target.value;
+    if(currentRegion().species.includes(id)){state.selectedJournal=id;renderPanel();persist();}
+  });
   panel.querySelectorAll('[data-action]').forEach(el=>el.addEventListener('click', e=>{
     const act=e.currentTarget.dataset.action; const id=e.currentTarget.dataset.id;
     if(act==='set-region') setRegion(id);
@@ -2596,6 +2646,7 @@ function bindPanel(){
     if(act==='unlock-region') unlockRegion(id);
     if(act==='atlas-tab'){state.atlasView=id; renderPanel(); persist();}
 
+    if(act==='toggle-field-filters'){state.fieldFiltersOpen=!state.fieldFiltersOpen;renderPanel();persist();}
     if(act==='set-habitat'){ state.habitat=id; renderPanel(); persist(); }
     if(act==='set-time'){ state.time=id; renderPanel(); persist(); }
     if(act==='set-season'){ state.season=id; renderPanel(); persist(); }
@@ -2623,6 +2674,7 @@ function bindPanel(){
     if(act==='finish-voyage'){finishVoyage(id);}
     if(act==='bestiary-sort'){state.bestiarySort=id; renderPanel(); persist();}
     if(act==='buy-crown'){buyCrownPack(Number(id)||0);}
+    if(act==='exchange-crown'){exchangeTrialCrowns(id==='all'?Math.floor(Math.max(0,state.crownCoins||0)):Number(id));}
   }));
 }
 

@@ -138,3 +138,11 @@ Abrir www/index.html desde Live Server.
 - Erizos renovados.
 - Familias homologadas: gatos, jabalíes, liebres/conejos y zorros, con mejor color y patrón.
 - Ajustes visuales adicionales de detalle y color.
+
+
+## v2.5.1 — Diseño móvil compacto y economía de pruebas
+- Menor altura de cabecera, barra inferior, estadísticas y tarjetas.
+- Filtros de Campo plegables, Cuaderno con selector de especie, Inventario compacto.
+- Nuevas partidas parten con £420 de prueba; el saldo de partidas existentes se conserva.
+- Coronas simuladas canjeables 1:1 por libras, sin pagos reales.
+- Caché PWA actualizado y clave de partida local sin cambios.

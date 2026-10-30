@@ -5,6 +5,13 @@
   const close=document.getElementById('mobileMenuClose');
   const backdrop=document.getElementById('mobileMenuBackdrop');
   const heading=document.getElementById('mobileViewTitle');
+  const statToggle=document.getElementById('mobileStatsToggle');
+  statToggle?.addEventListener('click',()=>{
+    const expanded=document.body.classList.toggle('mobile-stats-open');
+    statToggle.setAttribute('aria-expanded',String(expanded));
+    statToggle.lastElementChild.textContent=expanded?'▴':'▾';
+  });
+
   if(!menu||!open||!heading)return;
   const labels={atlas:'🗺️ Atlas',field:'🌿 Campo',journal:'📖 Cuaderno',research:'🔬 Investigación',society:'📜 Sociedad',bestiary:'🦉 Bestiario',expeditions:'⛵ Expediciones',objects:'🎒 Inventario',museum:'🏛️ Museo',crown:'👑 Corona'};
   const main=['atlas','field','journal','research'];
