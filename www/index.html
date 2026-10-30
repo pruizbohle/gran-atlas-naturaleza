@@ -8,17 +8,18 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icons/atlas-icon.svg" type="image/svg+xml" />
-  <title>El Gran Atlas v2.5.1 · Móvil compacto</title>
-  <link rel="stylesheet" href="css/styles.css?v=2.5.1" />
+  <title>El Gran Atlas v3.0.1 · Respaldo de partidas</title>
+  <link rel="stylesheet" href="css/styles.css?v=3.0.1" />
 </head>
 <body>
   <div id="app" class="app-shell">
     <header class="topbar">
       <div>
         <div class="brand">✦ El Gran Atlas de la Naturaleza</div>
-        <div class="subbrand">v2.5.1 · Navegación compacta · Europa y Asia</div>
+        <div class="subbrand">v3.0.1 · Android Alpha · Respaldo de partidas</div>
       </div>
       <div class="region-pill" id="regionPill">Islas Británicas · HX-01-09</div>
+      <button id="saveManagerOpen" class="save-tools-launch" type="button" aria-label="Respaldo y recuperación de partida" title="Respaldo y recuperación de partida">💾</button>
     </header>
 
     <section class="stats-grid">
@@ -79,7 +80,23 @@
       <p class="drawer-note">El progreso y el inventario son los mismos de la versión de escritorio.</p>
     </div>
   </div>
-  <script src="js/app.js?v=2.5.1"></script>
-  <script src="js/mobile-ui.js?v=2.5.1"></script>
+  <div id="saveManager" class="save-manager" hidden>
+    <button id="saveManagerBackdrop" class="save-manager-backdrop" type="button" aria-label="Cerrar respaldos"></button>
+    <section class="save-manager-panel" role="dialog" aria-modal="true" aria-labelledby="saveManagerTitle">
+      <div class="save-manager-header"><div><div class="small">ARCHIVO DEL NATURALISTA</div><h2 id="saveManagerTitle">💾 Respaldo de partida</h2></div><button id="saveManagerClose" class="save-manager-close" type="button" aria-label="Cerrar">✕</button></div>
+      <p class="small">Guarda una copia fuera del juego antes de actualizar o cambiar de teléfono. No hace falta conexión a internet.</p>
+      <button id="saveExportBtn" class="btn gold save-action" type="button">📤 Exportar mi partida</button>
+      <div class="divider"></div>
+      <label class="save-file-label" for="saveImportFile">📥 Seleccionar respaldo JSON</label>
+      <input id="saveImportFile" type="file" accept=".json,application/json" />
+      <div id="saveImportSummary" class="save-import-summary small" aria-live="polite">Aún no seleccionaste un archivo.</div>
+      <button id="saveImportBtn" class="btn save-action" type="button" disabled>Restaurar partida seleccionada</button>
+      <div id="saveManagerStatus" class="save-status small" aria-live="polite"></div>
+      <p class="small save-warning">Importar reemplaza el avance actual. Antes de hacerlo, se crea una copia local de emergencia. Para conservarlo en otro teléfono, exporta también el archivo.</p>
+    </section>
+  </div>
+  <script src="js/app.js?v=3.0.1"></script>
+  <script src="js/mobile-ui.js?v=3.0.1"></script>
+  <script src="js/save-manager.js?v=3.0.1"></script>
 </body>
 </html>

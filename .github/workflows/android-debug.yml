@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - fase3/android-alpha
+      - fase3/respaldos-v3.0.1
     paths:
       - "www/**"
       - "package.json"
