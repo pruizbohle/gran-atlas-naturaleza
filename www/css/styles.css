@@ -429,3 +429,167 @@ button,select{font:inherit}
   .save-manager-panel{width:100%;border-radius:18px 18px 10px 10px;max-height:calc(94dvh - env(safe-area-inset-top));padding:14px;padding-bottom:calc(18px + env(safe-area-inset-bottom));gap:10px}
   .save-manager-header h2{font-size:20px}
 }
+
+
+/* El Gran Atlas 3.1 — escena del naturalista y cuaderno ilustrado */
+.field-v31,.journal-v31{--atlas-paper:#f6ecd7;--atlas-forest:#243e32}
+.field-v31{align-items:start;gap:11px}
+.field-v31 .field-expedition{padding:12px;gap:9px;min-width:0;background:linear-gradient(160deg,#fff9ec,#f5ead4);border-color:#c7b48e}
+.field-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.field-eyebrow,.journal-sheet-top,.journal-folio-bottom,.field-diary-seal{font:800 9px system-ui,sans-serif;letter-spacing:.12em;color:#8e784f}
+.field-heading .section{font:700 22px/1.08 Georgia,serif;color:#2e4537;margin:5px 0 0}
+.field-compass{display:grid;place-items:center;width:34px;height:34px;background:#f3e3c1;color:#856c42;border:1px solid #ccba92;border-radius:50%;font-size:22px}
+.field-condition-line{display:flex;gap:5px;overflow-x:auto;min-width:0;scrollbar-width:none}
+.field-condition-line>span{padding:5px 8px;flex:none;border-radius:20px;background:#eee5d2;border:1px solid #d6c6a6;font:700 10px system-ui,sans-serif;color:#545d48}
+.field-v31 .scene{--biome-sky:#a9c8b8;--biome-haze:#e3dcbf;--biome-far:#8aa997;--biome-ground:#839f71;--biome-grass:#5e865b;--biome-tree:#426b54;--biome-detail:#48774b;position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:stretch;flex-direction:column;justify-content:space-between;height:330px;min-height:330px;max-height:none;border:1px solid #758a73;border-radius:12px;padding:0!important;background:#c8d8bc!important}
+.field-v31 .scene.biome-pradera{--biome-sky:#a8cddd;--biome-haze:#e7dcc1;--biome-far:#a1b4a1;--biome-ground:#9aaf77;--biome-grass:#7d9755;--biome-tree:#567c59;--biome-detail:#617b45}
+.field-v31 .scene.biome-rio,.field-v31 .scene.biome-costa{--biome-sky:#8ac7cc;--biome-haze:#e4e3ce;--biome-far:#a3b7aa;--biome-ground:#c9bb93;--biome-grass:#718e6b;--biome-tree:#53785e;--biome-detail:#68816a}
+.field-v31 .scene.biome-humedal{--biome-sky:#a0bdaf;--biome-haze:#e6e0ce;--biome-far:#839e8c;--biome-ground:#91a18c;--biome-grass:#677e58;--biome-tree:#587261;--biome-detail:#567d62}
+.field-v31 .scene.biome-desierto,.field-v31 .scene.biome-estepa{--biome-sky:#d6c3a0;--biome-haze:#f3deb0;--biome-far:#c2ad86;--biome-ground:#c7b489;--biome-grass:#a38e65;--biome-tree:#807859;--biome-detail:#90754d}
+.field-v31 .scene.biome-montana,.field-v31 .scene.biome-tundra{--biome-sky:#a2bdc4;--biome-haze:#e2e7de;--biome-far:#a4b7b1;--biome-ground:#889c8c;--biome-grass:#738875;--biome-tree:#547568;--biome-detail:#6c776b}
+.field-v31 .scene.biome-mediterraneo{--biome-sky:#9ebec4;--biome-haze:#eee1c7;--biome-far:#a9b49c;--biome-ground:#a5b089;--biome-grass:#83965d;--biome-tree:#667b52;--biome-detail:#8b8b55}
+.field-v31 .scene.light-amanecer .field-backdrop{filter:sepia(.18) saturate(1.06)}
+.field-v31 .scene.light-atardecer .field-backdrop{filter:sepia(.24) saturate(1.18) hue-rotate(-11deg) brightness(.95)}
+.field-v31 .scene.light-noche .field-backdrop{filter:brightness(.56) saturate(.67) hue-rotate(14deg)}
+.field-backdrop{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.field-v31 .scene-top,.field-v31 .scene-bottom{display:flex;align-items:center;justify-content:space-between;gap:6px;width:100%;padding:10px 12px;color:#213b2f;font:700 10px/1.3 system-ui,sans-serif;z-index:1}
+.field-v31 .scene-top{background:linear-gradient(#f2edda77,transparent)}
+.field-v31 .scene-bottom{background:linear-gradient(transparent,#243b2b91);color:#fdf2d8;font-size:9px;min-height:36px}
+.field-v31 .scene-bottom span:last-child{white-space:nowrap;opacity:.85}
+.field-v31 .scene-survey{background:#efe9d5c0;border-radius:99px;padding:4px 7px;font-size:9px;white-space:nowrap}
+.field-v31 .scene.light-noche .scene-top{color:#fff;text-shadow:0 1px 3px #222}
+.field-v31 .result-card{position:relative;z-index:1;align-self:center;display:flex;align-items:center;justify-content:flex-end;flex-direction:column;gap:6px;width:min(91%,282px);height:auto;min-height:224px;max-height:none;padding:7px 10px 12px;background:linear-gradient(#ffffff16,#f8efd7ec 76%);border:1px solid #f8ead2a3;border-radius:20px;box-shadow:0 10px 24px #344c383b;overflow:visible;backdrop-filter:blur(2px)}
+.encounter-art{flex:none;display:grid;place-items:center;width:148px;height:122px;filter:drop-shadow(0 11px 8px #344a3a33)}
+.encounter-art .sprite-wrap{width:128px;height:122px;display:grid;place-items:center;border-radius:25px;background:#f8edd526;border-color:#f4eccb50}
+.encounter-art .sprite-wrap svg{width:112px;height:112px;max-width:100%;max-height:100%}
+.field-binoculars{font-size:56px;filter:drop-shadow(0 3px 3px #263e3466)}
+.encounter-copy{display:grid;justify-items:center;gap:3px;max-width:100%;text-align:center}
+.field-v31 .result-card .encounter-copy>strong{font:bold 17px/1.15 Georgia,serif;max-width:100%;max-height:2.5em;overflow:hidden;white-space:normal;color:#2e4538}
+.field-v31 .result-card .encounter-copy .small{font:600 10px/1.27 system-ui,sans-serif;max-height:3.9em;min-height:0;overflow:auto;color:#635b48}
+.encounter-reveal .encounter-art{animation:atlas-observed .45s cubic-bezier(.25,1.2,.35,1) both}
+@keyframes atlas-observed{from{opacity:.1;transform:translateY(20px) scale(.84)}to{opacity:1;transform:translateY(0) scale(1)}}
+.field-v31 .field-observe{display:flex;align-items:center;justify-content:center;gap:10px;position:relative;width:100%;min-height:55px;font:bold 17px Georgia,serif;background:linear-gradient(145deg,#335c45,#1f4336);color:#fff0d0;border:1px solid #1e4938;border-bottom:3px solid #18342b;border-radius:12px;box-shadow:0 3px 8px #243c2834;cursor:pointer}
+.field-v31 .field-observe span:first-child{font-size:27px}.field-v31 .field-observe span:last-child{font-size:12px;color:#e7c77e}
+.field-v31 .field-filter-block{display:grid;gap:4px}
+.field-v31 .field-filter-toggle{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto;gap:3px 8px;min-height:45px;width:100%;padding:7px 10px;border-radius:9px;text-align:left;background:#e7dfca;color:#3f5a45;border:1px solid #c9b994;cursor:pointer;font:700 11px/1.2 system-ui,sans-serif}
+.field-v31 .field-filter-toggle span:first-child{grid-area:1/1}
+.field-v31 .field-filter-summary{grid-area:2/1;font:500 10px/1.15 system-ui,sans-serif;color:#746a55;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.field-v31 .field-filter-toggle span:last-child{grid-area:1/2/span 2;align-self:center;font-size:17px}
+.field-v31 .field-filter-controls{display:none;gap:9px;padding:9px 8px;border-radius:9px;background:#eee5d1}
+.field-v31 .field-filter-open .field-filter-controls{display:grid}
+.field-choice-label{font-size:9px!important;letter-spacing:.1em;font-weight:800!important;margin-bottom:5px}
+.field-v31 .choice-row{gap:4px}
+.field-v31 .choice{min-height:32px;padding:6px 9px;font:700 10px system-ui,sans-serif}
+.field-toolkit{border:1px dashed #c8b796;border-radius:9px;background:#f2e9d6;color:#4f543d;overflow:hidden}
+.field-toolkit summary{display:flex;align-items:center;justify-content:space-between;gap:7px;min-height:39px;padding:7px 9px;cursor:pointer;list-style:none;font:700 11px system-ui,sans-serif}
+.field-toolkit summary::-webkit-details-marker{display:none}
+.field-toolkit summary span:last-child{font-size:10px;font-weight:500;color:#8b7e67}
+.field-toolkit[open] summary{border-bottom:1px solid #d8cbb3}
+.field-toolkit .helper-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;padding:7px}
+.field-toolkit .btn{min-height:36px;padding:4px;font:700 10px/1.1 system-ui,sans-serif}
+.field-diary{background:linear-gradient(#faf3e4,#f3ead9)}
+.field-diary-head{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:7px}
+.field-diary .section{font-size:17px;margin:0;color:#3e5342}
+.field-diary .list{max-height:235px;overflow:auto;scrollbar-width:thin}
+.field-diary .log{font-size:11px;line-height:1.35}
+.journal-v31{display:grid;gap:9px;min-width:0}
+.journal-index{display:flex;align-items:center;gap:8px;padding:8px 11px;border-radius:11px;background:#344c3f;color:#f9edcf}
+.journal-index-label{flex:none;font:800 9px system-ui,sans-serif;letter-spacing:.09em}
+.journal-index select{flex:1;min-width:0;max-width:390px;padding:7px;border:1px solid #b7b79c;border-radius:7px;background:#f7eeda;color:#3b4032;font:700 12px system-ui,sans-serif}
+.journal-count{margin-left:auto;color:#e5dfc7;white-space:nowrap;font-size:10px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.journal-v31 .journal-grid{display:grid;grid-template-columns:minmax(280px,.8fr) minmax(320px,1.2fr);gap:10px;align-items:start}
+.journal-v31 .journal-directory{background:#f3e9d7}
+.journal-directory .species-grid{margin-top:9px}
+.journal-v31 .journal-sheet{position:static;display:grid;gap:12px;overflow:hidden;padding:16px;background:repeating-linear-gradient(transparent,transparent 34px,#c2aa801f 35px),linear-gradient(155deg,#fff9eb,#f1e2c4);border:1px solid #c7b08a;box-shadow:inset 6px 0 0 #c5a97d,0 5px 18px #634e2d12}
+.journal-sheet-top{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid #b9a17c;padding-bottom:8px}
+.journal-cover{display:flex;align-items:center;gap:16px;min-width:0}
+.journal-portrait{flex:none;display:grid;justify-items:center;gap:4px;padding:7px;border:1px solid #c9af83;background:#ede0bf;border-radius:10px;box-shadow:inset 0 0 0 4px #f6eccc}
+.journal-portrait .sprite-wrap{width:128px;height:128px;background:#f2e6c9;border-radius:9px;border:0}
+.journal-portrait .sprite-wrap svg{width:116px;height:116px}
+.journal-portrait>span{font:800 8px system-ui,sans-serif;letter-spacing:.12em;color:#947f59}
+.journal-identity{min-width:0;display:grid;gap:5px;align-content:center}
+.journal-identity h2{font:700 clamp(19px,3vw,29px)/1.08 Georgia,serif;letter-spacing:-.03em;margin:0;color:#314936;overflow-wrap:anywhere}
+.journal-identity em{font:italic 13px/1.25 Georgia,serif;color:#746a54;overflow-wrap:anywhere}
+.journal-stage-label{font:700 10px system-ui,sans-serif;color:#7b6850;margin-top:5px}
+.journal-rarity .badge{font-size:10px;font-weight:800;letter-spacing:.03em}
+.journal-research,.journal-collection,.journal-milestone{display:grid;gap:9px;min-width:0}
+.journal-block-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;font:700 14px Georgia,serif;color:#3d503d}
+.journal-block-heading>span{font:700 11px system-ui,sans-serif;color:#876e4c}
+.journal-stamps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}
+.journal-stamp{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0;opacity:.67}
+.journal-stamp>span{display:grid;place-items:center;width:35px;height:35px;background:#ddd2be;color:#867960;border:1px dashed #aa9978;border-radius:50%;font:800 15px Georgia,serif}
+.journal-stamp.earned{opacity:1}
+.journal-stamp.earned>span{background:#365f48;color:#ebd7a5;border:2px solid #a98a55;box-shadow:0 0 0 2px #e4d0a7}
+.journal-stamp>small{font:700 9px/1.15 system-ui,sans-serif;color:#786952;text-align:center;overflow-wrap:anywhere}
+.journal-track,.journal-milestone-meter{height:6px;border-radius:99px;background:#d6c6a4;overflow:hidden}
+.journal-track>span,.journal-milestone-meter>span{display:block;height:100%;background:#57795a;border-radius:99px}
+.journal-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+.journal-facts>div{display:grid;gap:4px;padding:9px 4px;border:1px solid #dac9a8;border-radius:8px;background:#f0e6d2ad;text-align:center;min-width:0}
+.journal-facts>div span{font:800 8px/1.12 system-ui,sans-serif;letter-spacing:.055em;color:#89775e;overflow-wrap:anywhere}
+.journal-facts>div strong{font:700 18px Georgia,serif;color:#2d4d3b}
+.journal-collection{border-top:1px solid #d7c6a8;padding-top:10px}
+.journal-variants .special-grid{display:flex;gap:7px;overflow-x:auto;padding:3px 0 6px;scrollbar-width:thin}
+.journal-variants .variant-card{flex:0 0 100px;width:100px;min-width:100px;padding:7px 4px;background:#f3e5c9;border-color:#c7af86;border-radius:9px}
+.journal-variants .variant-card.seen{background:#edf0de;border-color:#91ab79}
+.journal-variants .variant-card .sprite-wrap{width:68px;height:68px;border-radius:9px}
+.journal-variants .variant-card svg{width:60px;height:60px}
+.journal-variants .variant-card .small{font-weight:700;font-size:10px}
+.journal-v31 .sex-grid{gap:7px}
+.journal-v31 .sex-card{background:#f3e7d1;border-color:#ccb58f}
+.journal-v31 .sex-sprite{border-radius:9px}
+.journal-milestone{padding:12px;background:#ede2c8;border:1px solid #cfbb95;border-left:4px solid #a28555;border-radius:10px}
+.journal-milestone.milestone-ready{border-left-color:#467952;background:#e2eddb}
+.journal-milestone p{margin:0;font:12px/1.4 system-ui,sans-serif;color:#695e4a}
+.journal-milestone .btn{justify-self:start;min-height:37px;font:700 12px system-ui,sans-serif}
+.journal-reference{border-top:1px solid #d1bfa0}
+.journal-reference summary{display:flex;justify-content:space-between;gap:8px;align-items:center;min-height:42px;list-style:none;cursor:pointer;font:700 13px Georgia,serif;color:#4e583e}
+.journal-reference summary::-webkit-details-marker{display:none}
+.journal-reference summary span:last-child{font:600 10px system-ui,sans-serif;color:#907f63}
+.journal-reference-content{padding:8px 10px 11px;font:12px/1.5 system-ui,sans-serif;color:#5c5a4b;background:#ece0c680;border-radius:7px}
+.journal-folio-bottom{border-top:1px solid #bfa989;text-align:center;padding:10px 0 0;font-size:8px}
+@media(max-width:760px){
+.journal-v31 .journal-grid{grid-template-columns:minmax(0,1fr)}
+.journal-v31 .journal-directory{display:none}
+.journal-count,.journal-index-label{display:none}
+.journal-index select{max-width:none;font-size:12px}
+.journal-v31 .journal-sheet{padding:11px 12px 11px 17px;gap:10px;border-radius:10px}
+.journal-portrait .sprite-wrap{width:94px;height:94px}
+.journal-portrait .sprite-wrap svg{width:88px;height:88px}
+.journal-portrait>span{font-size:7px}
+.journal-cover{gap:11px}
+.journal-identity h2{font-size:21px}
+.journal-identity em{font-size:11px}
+.journal-stamp>span{width:30px;height:30px;font-size:12px}
+.journal-stamp>small{font-size:8px}
+.journal-facts>div{padding:7px 2px;gap:3px}
+.journal-facts>div strong{font-size:16px}
+.field-v31{grid-template-columns:1fr;gap:7px}
+.field-v31 .field-expedition{padding:8px;gap:7px}
+.field-heading .section{font-size:17px;margin-top:3px}
+.field-eyebrow{font-size:8px}
+.field-condition-line>span{font-size:9px;padding:4px 7px}
+.field-v31 .scene{height:255px!important;min-height:255px!important;max-height:255px!important;grid-template-rows:none!important}
+.field-v31 .scene-top{padding:8px 9px}
+.field-v31 .scene-bottom{padding:7px 8px;font-size:8px}
+.field-v31 .result-card{height:auto!important;min-height:173px!important;max-height:187px!important;width:min(90%,260px);padding:4px 7px 8px;gap:2px;display:flex;grid-template-rows:none}
+.encounter-art{width:108px;height:100px}
+.encounter-art .sprite-wrap{width:104px!important;height:100px!important}
+.encounter-art .sprite-wrap svg{width:94px!important;height:94px!important}
+.field-binoculars{font-size:45px}
+.field-v31 .result-card .encounter-copy>strong{font-size:14px;max-height:2.5em}
+.field-v31 .result-card .encounter-copy .small{font-size:9px;max-height:3.8em}
+.field-v31 .field-observe{position:sticky;bottom:calc(60px + env(safe-area-inset-bottom));z-index:6;min-height:48px;font-size:15px;box-shadow:0 4px 13px #203f304b}
+.field-v31 .field-filter-toggle{min-height:41px;padding:6px 9px}
+.field-toolkit summary{min-height:36px}
+.field-diary .list{max-height:140px}
+}
+@media(max-width:355px){
+.journal-portrait .sprite-wrap{width:78px;height:80px}
+.journal-portrait .sprite-wrap svg{width:74px;height:74px}
+.journal-portrait>span{font-size:6px}
+.journal-identity h2{font-size:18px}
+.journal-stamp>small{font-size:7px}
+.field-v31 .scene{height:244px!important;min-height:244px!important;max-height:244px!important}
+}
+@media(prefers-reduced-motion:reduce){.encounter-reveal .encounter-art{animation:none}}

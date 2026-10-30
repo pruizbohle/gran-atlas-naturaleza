@@ -45,3 +45,8 @@ Esto es el proyecto fuente preparado para Android, no un APK compilado. Capacito
 ## Fase 3 · v3.0.1
 
 Respaldo y recuperación de partida desde el botón 💾, exportación Android mediante menú de compartir y flujo de firma estable preparado. Consulta [README_RESPALDOS_ANDROID.md](README_RESPALDOS_ANDROID.md) para instrucciones, limitaciones y claves.
+
+
+## v3.1 — Rediseño de Campo y Cuaderno
+
+Se agregaron escenarios SVG por hábitat, observación en pantalla, ficha científica tipo folio con sellos de investigación, variantes y dimorfismo. La economía, especies y guardados son compatibles; respalda siempre antes de instalar la APK. Consulta `README_V31.md`.
