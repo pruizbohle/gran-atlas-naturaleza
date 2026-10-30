@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#294337" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/atlas-icon.svg" type="image/svg+xml" />
+  <title>El Gran Atlas v2.5 · Edición móvil</title>
+  <link rel="stylesheet" href="css/styles.css?v=2.5" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="brand">✦ El Gran Atlas de la Naturaleza</div>
+        <div class="subbrand">v2.5 · Edición móvil · Europa y Asia</div>
+      </div>
+      <div class="region-pill" id="regionPill">Islas Británicas · HX-01-09</div>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card"><span>📜 Conocimiento</span><strong id="statKnowledge">0</strong></div>
+      <div class="stat-card"><span>🪙 Libras</span><strong id="statMoney">0</strong></div>
+      <div class="stat-card"><span>🏅 Prestigio</span><strong id="statPrestige">0</strong></div>
+      <div class="stat-card"><span>👨‍🔬 Equipo</span><strong id="statHelpers">0</strong></div>
+      <div class="stat-card"><span>📚 Tomos</span><strong id="statBooks">0</strong></div>
+    </section>
+    <div class="minor-stats">Avistamientos totales: <b id="statSightings">0</b> · Monografías publicadas: <b id="statMonographs">0</b> · Regiones disponibles en el proyecto: <b>Europa 10 · Asia 21</b></div>
+
+    <nav class="tabs">
+      <button data-tab="atlas" class="tab active">🗺️ Atlas</button>
+      <button data-tab="field" class="tab">🌿 Campo</button>
+      <button data-tab="journal" class="tab">📖 Cuaderno</button>
+      <button data-tab="research" class="tab">🔬 Investigación</button>
+      <button data-tab="society" class="tab">🏛️ Sociedad</button>
+      <button data-tab="bestiary" class="tab">🦉 Bestiario</button>
+      <button data-tab="expeditions" class="tab">⛵ Expediciones</button>
+      <button data-tab="objects" class="tab">🎒 Inventario</button>
+      <button data-tab="museum" class="tab">🏛️ Museo</button>
+      <button data-tab="crown" class="tab">👑 Corona</button>
+    </nav>
+
+    <div class="mobile-view-heading" id="mobileViewHeading" aria-live="polite">
+      <span class="mobile-route">CUADERNO DE VIAJE <span class="mobile-route-diamond">✦</span> 1842</span>
+      <strong id="mobileViewTitle">🌿 Campo</strong>
+    </div>
+
+    <main id="panel" class="panel"></main>
+
+    <footer class="footer-note">
+      Prototipo jugable · guardado local automático · progreso offline hasta 8 horas.
+    </footer>
+  </div>
+  <nav class="mobile-dock" aria-label="Navegación móvil">
+    <button class="tab mobile-dock-link" data-tab="atlas" type="button"><span class="dock-icon">🗺️</span><span class="dock-label">Atlas</span></button>
+    <button class="tab mobile-dock-link" data-tab="field" type="button"><span class="dock-icon">🌿</span><span class="dock-label">Campo</span></button>
+    <button class="tab mobile-dock-link" data-tab="journal" type="button"><span class="dock-icon">📖</span><span class="dock-label">Cuaderno</span></button>
+    <button class="tab mobile-dock-link" data-tab="research" type="button"><span class="dock-icon">🔬</span><span class="dock-label">Mejoras</span></button>
+    <button class="mobile-dock-more" id="mobileMenuOpen" type="button" aria-expanded="false" aria-controls="mobileDrawer"><span class="dock-icon">☰</span><span class="dock-label">Más</span></button>
+  </nav>
+
+  <div class="mobile-drawer" id="mobileDrawer" hidden>
+    <button class="mobile-drawer-backdrop" id="mobileMenuBackdrop" type="button" aria-label="Cerrar menú"></button>
+    <div class="mobile-drawer-sheet" role="dialog" aria-modal="true" aria-label="Otros módulos del Atlas">
+      <div class="mobile-drawer-grip"></div>
+      <div class="mobile-drawer-top"><div><span class="mobile-eyebrow">GABINETE DEL NATURALISTA</span><h2>Más secciones</h2></div><button id="mobileMenuClose" class="drawer-close" type="button" aria-label="Cerrar">✕</button></div>
+      <div class="mobile-menu-grid">
+        <button class="tab mobile-menu-item" type="button" data-tab="expeditions"><span>⛵</span><strong>Expediciones</strong></button>
+        <button class="tab mobile-menu-item" type="button" data-tab="museum"><span>🏛️</span><strong>Museo</strong></button>
+        <button class="tab mobile-menu-item" type="button" data-tab="society"><span>📜</span><strong>Sociedad</strong></button>
+        <button class="tab mobile-menu-item" type="button" data-tab="bestiary"><span>🦉</span><strong>Bestiario</strong></button>
+        <button class="tab mobile-menu-item" type="button" data-tab="objects"><span>🎒</span><strong>Inventario</strong></button>
+        <button class="tab mobile-menu-item" type="button" data-tab="crown"><span>👑</span><strong>Corona</strong></button>
+      </div>
+      <p class="drawer-note">El progreso y el inventario son los mismos de la versión de escritorio.</p>
+    </div>
+  </div>
+  <script src="js/app.js?v=2.5"></script>
+  <script src="js/mobile-ui.js?v=2.5"></script>
+</body>
+</html>

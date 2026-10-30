@@ -1,0 +1,13 @@
+{
+  "name": "El Gran Atlas de la Naturaleza",
+  "short_name": "Gran Atlas",
+  "description": "Explora, observa e investiga especies del mundo.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eae0cc",
+  "theme_color": "#294337",
+  "icons": [{"src":"icons/atlas-192.png","sizes":"192x192","type":"image/png","purpose":"any"},{"src":"icons/atlas-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]
+}
