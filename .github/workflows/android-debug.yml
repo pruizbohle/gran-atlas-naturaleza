@@ -1,0 +1,77 @@
+name: Android APK de prueba
+
+on:
+  push:
+    branches:
+      - main
+      - fase3/android-alpha
+    paths:
+      - "www/**"
+      - "package.json"
+      - "capacitor.config.json"
+      - ".github/workflows/android-debug.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: android-debug-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Descargar proyecto
+        uses: actions/checkout@v4
+
+      - name: Preparar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Preparar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Preparar Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Instalar Capacitor
+        run: npm install --no-audit --no-fund
+
+      - name: Crear proyecto nativo Android
+        run: npx cap add android
+
+      - name: Copiar juego web a Android
+        run: npx cap sync android
+
+      - name: Fijar orientacion vertical en Android
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("android/app/src/main/AndroidManifest.xml")
+          s = p.read_text(encoding="utf-8")
+          if 'android:screenOrientation=' not in s:
+              assert 'android:name=".MainActivity"' in s, "No se encontro MainActivity"
+              s = s.replace('android:name=".MainActivity"', 'android:name=".MainActivity"\n            android:screenOrientation="portrait"', 1)
+              p.write_text(s, encoding="utf-8")
+          PY
+
+      - name: Compilar APK debug
+        run: |
+          chmod +x android/gradlew
+          cd android
+          ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: Publicar APK de prueba
+        uses: actions/upload-artifact@v4
+        with:
+          name: El-Gran-Atlas-Android-Alpha
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 14
