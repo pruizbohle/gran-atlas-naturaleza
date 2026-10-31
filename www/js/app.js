@@ -1670,6 +1670,12 @@ let batchingOffline=false;
 let diaryDirty=false;
 let lastPanelSignature='';
 let currentAutoNotice='';
+// Estado visual del catálogo, no forma parte de la partida.
+let journalRailQuery='';
+let journalSortMode='catalog';
+let journalRailScrollTop=0;
+let journalSheetScrollTop=0;
+
 let autoDiaryBuffer={searches:0,hits:0,knowledge:0};
 let lastAutoDiaryFlush=0;
 const panel=document.getElementById('panel');
@@ -2038,6 +2044,19 @@ function renderCrown(){
   </section>`;
 }
 
+function filterJournalRail(){
+  const rail=panel.querySelector('#journalSpeciesRail');
+  if(!rail)return;
+  const q=journalRailQuery.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+  let count=0;
+  rail.querySelectorAll('[data-action="select-journal"]').forEach(button=>{
+    const name=visibleName(button.dataset.id).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+    button.hidden=!!q&&!name.includes(q);
+    if(!button.hidden)count++;
+  });
+  const counter=panel.querySelector('#journalRailCount');
+  if(counter)counter.textContent=count===0?'Sin resultados':count+' especies';
+}
 function renderPanel(){
   lastPanelSignature='';diaryDirty=true;
   document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
@@ -2054,6 +2073,12 @@ function renderPanel(){
     panel.innerHTML='<section class="card stack"><h3>⚠️ No se pudo abrir este módulo</h3><p class="small">Puedes utilizar otra pestaña. Si el problema persiste, informa el nombre de la sección.</p></section>';
   }
   bindPanel();
+  if(tab==='journal'){
+    const rail=panel.querySelector('#journalSpeciesRail');
+    const sheet=panel.querySelector('.journal-v311 .journal-sheet');
+    if(rail)rail.scrollTop=journalRailScrollTop;
+    if(sheet)sheet.scrollTop=journalSheetScrollTop;
+  }
 }
 
 const ATLAS_CONTINENTS=[
@@ -2240,17 +2265,41 @@ function renderField(){
 }
 function renderJournal(){
   const ids=currentRegion().species;
-  if(!ids.includes(state.selectedJournal)) state.selectedJournal=ids[0];
+  if(!ids.includes(state.selectedJournal)) state.selectedJournal=ids.find(sid=>stage(sid)>=1)||ids[0];
   const id=state.selectedJournal || ids[0];
   const sp=SPECIES[id];
   const st=stage(id);
   const next=st<5?stageRequirements(id,st):null;
   const isKnown=!!state.discovered[id];
   const stamps=['I','II','III','IV','V'].map((mark,i)=>`<div class="journal-stamp ${i<st?'earned':''}" aria-label="Etapa ${i+1} ${i<st?'alcanzada':'pendiente'}"><span>${i<st?'✦':mark}</span><small>${['Vista','Nombre','Conducta','Hábitos','Estudio'][i]}</small></div>`).join('');
-  return `<div class="journal-v31">
-    <div class="journal-index"><span class="journal-index-label">📖 REGISTRO DE ESPECIES</span><label for="mobileJournalSpecies" class="sr-only">Seleccionar especie</label><select id="mobileJournalSpecies" data-journal-select aria-label="Seleccionar especie del Cuaderno">${ids.map((sid,i)=>`<option value="${sid}" ${sid===id?'selected':''}>${i+1}. ${visibleName(sid)}</option>`).join('')}</select><span class="small journal-count">${regionIdentifiedCount(state.currentRegion)} de ${ids.length} identificadas</span></div>
-    <div class="journal-grid">
-      <section class="card journal-directory"><h3 class="section">Índice de campo</h3><div class="small">${currentRegion().name} · ${currentRegion().code}</div><div class="species-grid">${ids.map(sid=>speciesCard(sid,sid===id)).join('')}</div></section>
+  const railIds=journalSortMode==='sightings'
+    ? [...ids].sort((a,b)=>sight(b)-sight(a)||ids.indexOf(a)-ids.indexOf(b))
+    : ids;
+  return `<div class="journal-v31 journal-v311">
+    <div class="journal-index journal-v311-heading"><span>📖 Cuaderno de campo</span><span class="small">${currentRegion().name} · ${regionIdentifiedCount(state.currentRegion)}/${ids.length} identificadas</span></div>
+    <div class="journal-grid journal-v311-layout">
+      <aside class="journal-v311-directory" aria-label="Catálogo de especies de la región">
+        <div class="journal-v311-filters">
+          <label for="journalRailSearch" class="sr-only">Buscar especie en esta región</label>
+          <input id="journalRailSearch" type="search" placeholder="⌕ Buscar especie" autocomplete="off" value="${esc(journalRailQuery).replace(/"/g,'&quot;')}" aria-label="Buscar especie" />
+          <label for="journalRailSort" class="sr-only">Ordenar especies</label>
+          <select id="journalRailSort" aria-label="Ordenar especies"><option value="catalog" ${journalSortMode==='catalog'?'selected':''}>Orden del catálogo</option><option value="sightings" ${journalSortMode==='sightings'?'selected':''}>Más avistadas</option></select>
+          <div class="journal-v311-count" id="journalRailCount" aria-live="polite">${ids.length} especies</div>
+        </div>
+        <nav class="journal-v311-rail" id="journalSpeciesRail" aria-label="Lista de especies, desplazamiento independiente">
+          ${railIds.map(sid=>{
+            const known=!!state.discovered[sid];
+            const selected=sid===id;
+            const name=visibleName(sid);
+            return `<button type="button" class="journal-v311-animal ${selected?'selected':''}" data-action="select-journal" data-id="${sid}" ${selected?'aria-current="true"':''} aria-label="${esc(name).replace(/"/g,'&quot;')}, ${fmt(sight(sid))} avistamientos, etapa ${stage(sid)} de 5">
+              <span class="journal-v311-avatar">${known?getSpriteMarkup(sid,'normal'):'<span class="journal-v311-unknown" aria-hidden="true">?</span>'}</span>
+              <span class="journal-v311-animal-name">${esc(name)}</span>
+              <span class="journal-v311-sightings" aria-label="${fmt(sight(sid))} avistamientos">👁 <b>${fmt(sight(sid))}</b></span>
+              <span class="journal-v311-progress">${stage(sid)}/5</span>
+            </button>`;
+          }).join('')}
+        </nav>
+      </aside>
       <section class="card journal-detail journal-sheet">
         <div class="journal-sheet-top"><span>ARCHIVO DEL NATURALISTA</span><span>FOLIO ${String(ids.indexOf(id)+1).padStart(3,'0')}</span></div>
         <div class="journal-cover"><div class="journal-portrait"><div class="sprite-wrap">${isKnown?getSpriteMarkup(id,'normal'):'<div class="qmark">?</div>'}</div><span>ILUSTRACIÓN DE CAMPO</span></div><div class="journal-identity"><div class="journal-rarity">${rarityBadge(sp.rare)}</div><h2>${visibleName(id)}</h2><em>${visibleLatin(id)}</em><div class="journal-stage-label">Investigación · ${st} de 5 etapas</div></div></div>
@@ -2625,10 +2674,22 @@ function researchNodeCard(node){
 }
 
 function bindPanel(){
-  panel.querySelector('[data-journal-select]')?.addEventListener('change',e=>{
-    const id=e.target.value;
-    if(currentRegion().species.includes(id)){state.selectedJournal=id;renderPanel();persist();}
+  const rail=panel.querySelector('#journalSpeciesRail');
+  const sheet=panel.querySelector('.journal-v311 .journal-sheet');
+  rail?.addEventListener('scroll',()=>{journalRailScrollTop=rail.scrollTop;},{passive:true});
+  sheet?.addEventListener('scroll',()=>{journalSheetScrollTop=sheet.scrollTop;},{passive:true});
+  panel.querySelector('#journalRailSearch')?.addEventListener('input',e=>{
+    journalRailQuery=e.target.value;
+    journalRailScrollTop=0;
+    if(rail)rail.scrollTop=0;
+    filterJournalRail();
   });
+  panel.querySelector('#journalRailSort')?.addEventListener('change',e=>{
+    journalSortMode=e.target.value==='sightings'?'sightings':'catalog';
+    journalRailScrollTop=0;
+    renderPanel();
+  });
+  filterJournalRail();
   panel.querySelectorAll('[data-action]').forEach(el=>el.addEventListener('click', e=>{
     const act=e.currentTarget.dataset.action; const id=e.currentTarget.dataset.id;
     if(act==='set-region') setRegion(id);
@@ -2642,7 +2703,7 @@ function bindPanel(){
     if(act==='set-season'){ state.season=id; renderPanel(); persist(); }
     if(act==='search-manual') { encounter('manual'); persist(); }
     if(act==='field-aid'){ fieldAid(id); }
-    if(act==='select-journal'){ state.selectedJournal=id; renderPanel(); persist(); }
+    if(act==='select-journal'){ if(!currentRegion().species.includes(id))return; state.selectedJournal=id; journalSheetScrollTop=0; renderPanel(); persist(); }
     if(act==='advance-species'){ advanceSpecies(id); }
     if(act==='buy-node'){ buyNode(id); }
     if(act==='publish'){ publishMonograph(id); }
