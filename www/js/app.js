@@ -1748,6 +1748,7 @@ window.AtlasSaveBridge={
        discovered:{...(imported.discovered||{})},
        published:{...(imported.published||{})},
        inventory:{...(imported.inventory||{})},
+       museum:{wing:1,exhibits:{},...(imported.museum||{}),exhibits:{...((imported.museum||{}).exhibits||{})}},
        equipment:{instrument:null,hat:null,necklace:null,...(imported.equipment||{})},
        sexSeen:{...(imported.sexSeen||{})},
        specialSeen:{...(imported.specialSeen||{})},
