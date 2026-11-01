@@ -24,3 +24,21 @@ test('Especies africanas tienen familias gráficas y condiciones válidas',()=>{
    assert.ok(sp.habitats.length && sp.times.length && sp.seasons.length,id+' condiciones vacías');
  }
 });
+
+test('ampliación v3.5 añade siete regiones y nuevas especies con sprites propios',()=>{
+ const matches=[...s.matchAll(/REGIONS\.push\(\.\.\.(\[[^\n]+\])\);/g)];
+ assert.equal(matches.length,2);
+ const extra=JSON.parse(matches[1][1]);
+ assert.equal(extra.length,7);
+ assert.equal(new Set(extra.map(x=>x.id)).size,7);
+ assert.equal(extra.at(-1).name,'Madagascar');
+ assert.ok(extra.every(x=>x.unlock.prestige>59 && x.species.length>=7));
+ const blocks=[...s.matchAll(/Object\.assign\(SPECIES,(\{"af_[^\n]+\})\);/g)];
+ assert.equal(blocks.length,2);
+ const newSpecies=JSON.parse(blocks[1][1]);
+ assert.ok(Object.keys(newSpecies).length>=40);
+ assert.ok(['hippo','zebra','giraffe','lemur','ostrich'].every(kind=>Object.values(newSpecies).some(s=>s.kind===kind)));
+ for(const r of extra){
+   for(const id of r.species) assert.ok(newSpecies[id] || blocks[0][1].includes('"'+id+'"'), 'Especie desconocida '+id);
+ }
+});

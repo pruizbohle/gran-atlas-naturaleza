@@ -47,3 +47,9 @@ El selector Android usa `ACTION_CREATE_DOCUMENT` y no necesita acceso general al
 - La partida existente no se sobrescribe hasta confirmar; se guarda además una copia local de emergencia.
 - Si el archivo no se puede leer o validar, se muestra el motivo y no se altera el progreso.
 - En Investigación, Fondo Científico I/II/III habilitan los lotes ×1, ×10 y ×100 del cambio libras→conocimiento en Sociedad, manteniendo la equivalencia £100→70 conocimiento.
+
+## v3.5 — corrección definitiva del mecanismo de importación
+
+La v3.4 guardaba el JSON en localStorage, pero **el motor seguía ejecutando el estado antiguo en memoria y lo escribía cada segundo**; se podía sobrescribir el progreso importado. v3.5 incorpora **AtlasSaveBridge.restoreGame()** que sustituye el estado activo, actualiza contadores y persistencia en una misma operación síncrona. Tras más de un segundo se verifica que el guardado automático no revirtió la restauración. Incluye prueba integrada del motor real con 12.139 avistamientos, £4.465 y 4 prestigio.
+
+La APK de prueba usa ID independiente `com.elgranatlas.naturaleza.beta35`. Mantén instalada la Beta 3.4 y la Alpha mientras validas el respaldo.

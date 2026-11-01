@@ -1,4 +1,4 @@
-/* El Gran Atlas 3.4 — recuperación verificada, compatibilidad con JSON y alternativas de importación. */
+/* El Gran Atlas 3.5 — recuperación sincronizada en memoria y almacenamiento con prueba del tick. */
 (() => {
   'use strict';
   const STORAGE_KEY = 'gran_atlas_v05';
@@ -122,7 +122,7 @@
     if (!raw) throw new Error('No hay una partida guardada todavía.');
     const data = normalizeGame(JSON.parse(raw));
     return { text: JSON.stringify({
-      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.4.0',
+      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.5.0',
       exportedAt: new Date().toISOString(), game: data
     }, null, 2), name: fileName() };
   }
@@ -281,24 +281,58 @@
       message('No se pudo verificar la restauración: '+(error?.message||error),true);
     }
   }
+  function matchImported(expected, got){
+    return !!got && expected.prestige===got.prestige &&
+      got.sightings>=expected.sightings && got.published>=expected.published &&
+      expected.currentRegion===got.currentRegion && (got.money||0) >= (expected.money||0) - 0.01;
+  }
   function restoreSelected() {
     if(!pending) return;
-    if(!window.confirm('¿Restaurar la partida elegida en ESTA instalación? La partida original de otra aplicación no se modifica.')) return;
-    try{
-      const old=localStorage.getItem(STORAGE_KEY);
-      const serialized=JSON.stringify(pending);
-      if(old) {
-        // Guardar una copia anterior y no depender solo de un único respaldo de emergencia.
-        localStorage.setItem(EMERGENCY_KEY,old);
+    if(!window.confirm('¿Restaurar esta partida en ESTA instalación? La anterior se guardará como copia de emergencia.')) return;
+    const bridge=window.AtlasSaveBridge;
+    if(!bridge || typeof bridge.restoreGame!=='function'){
+      message('No se pudo conectar con el motor del juego. La partida actual NO fue reemplazada.',true);
+      return;
+    }
+    const old=localStorage.getItem(STORAGE_KEY);
+    const expected=receiptSnapshot(pending);
+    const pendingMoney=pending.money;
+    try {
+      // Copia de emergencia ANTES de cualquier modificación a estado o almacenamiento.
+      if(old) localStorage.setItem(EMERGENCY_KEY,old);
+      const actual=bridge.restoreGame(pending);
+      if(!matchImported({...expected,money:pending.money},actual)){
+        throw new Error('El motor no adoptó los avistamientos, prestigio o libras de la partida.');
       }
-      localStorage.setItem(STORAGE_KEY,serialized);
-      if(localStorage.getItem(STORAGE_KEY)!==serialized)
-        throw new Error('El almacenamiento rechazó la escritura.');
-      localStorage.setItem(receiptKey,JSON.stringify(receiptSnapshot(pending)));
-      message('Respaldo escrito y comprobado. Reiniciando para verificar que la partida cargue…');
-      window.location.reload();
-    } catch(error) {
-      message('No se pudo restaurar: '+(error?.message||error)+'. No borres el JSON original.',true);
+      const current=localStorage.getItem(STORAGE_KEY);
+      if(!current) throw new Error('No se escribió la partida en el teléfono.');
+      const written=receiptSnapshot(normalizeGame(JSON.parse(current)));
+      if(!compareReceipt(expected,written) || Math.abs(JSON.parse(current).money-pending.money)>0.01)
+        throw new Error('La partida escrita no coincide con la importada.');
+      // No se deja un recibo pendiente: la verificación ya ocurre en la misma sesión.
+      summary.textContent='✅ Recuperación inmediata: '+actual.sightings.toLocaleString('es-CL')+
+        ' avistamientos · £'+Math.floor(actual.money).toLocaleString('es-CL')+
+        ' · '+actual.prestige+' prestigio. Comprueba los contadores detrás de esta ventana.';
+      message('Partida aplicada al juego. Verificando que el guardado automático la conserve…');
+      pending=null;
+      importButton.disabled=true;
+      // Tick del motor se ejecuta cada 1000 ms: confirmar luego de al menos un ciclo.
+      setTimeout(()=>{
+        try {
+          const inMemory=bridge.getSnapshot();
+          const onDisk=receiptSnapshot(normalizeGame(JSON.parse(localStorage.getItem(STORAGE_KEY))));
+          if(matchImported({...expected,money:pendingMoney},inMemory) && onDisk.prestige===expected.prestige && onDisk.currentRegion===expected.currentRegion && onDisk.sightings>=expected.sightings && onDisk.published>=expected.published){
+            message('✅ Restauración confirmada: el motor y el guardado automático conservan tu partida.');
+          }else {
+            message('⚠️ Diferencia entre memoria y archivo. Conserva tu respaldo JSON y no desinstales la versión anterior.',true);
+          }
+        }catch(e){ message('No se pudo completar la verificación: '+e.message,true); }
+      },1400);
+    } catch(error){
+      message('Fallo al aplicar la partida: '+(error?.message||error)+'. No elimines tu archivo JSON.',true);
+      if(old && bridge && typeof bridge.restoreGame==='function'){
+        try{bridge.restoreGame(normalizeGame(JSON.parse(old)));}catch(_){}
+      }
     }
   }
   importButton.addEventListener('click', restoreSelected);
