@@ -2,6 +2,8 @@ package __PACKAGE__;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.database.Cursor;
+import android.provider.OpenableColumns;
 import androidx.activity.result.ActivityResult;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
@@ -23,8 +25,7 @@ public class AtlasImportPlugin extends Plugin {
         Intent pick = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         pick.addCategory(Intent.CATEGORY_OPENABLE);
         pick.setType("*/*");
-        pick.putExtra(Intent.EXTRA_MIME_TYPES,
-                new String[]{"application/json", "text/plain", "application/octet-stream"});
+        pick.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION); // Sin filtros MIME: algunos gestores de Descargas no etiquetan JSON.
         startActivityForResult(call, pick, "onChosen");
     }
 
@@ -48,7 +49,14 @@ public class AtlasImportPlugin extends Plugin {
             }
             JSObject json = new JSObject();
             json.put("content", new String(out.toByteArray(), StandardCharsets.UTF_8));
-            json.put("name", "Respaldo elegido");
+            String displayName = "Respaldo elegido";
+            try (Cursor cursor = getContext().getContentResolver().query(uri, null, null, null, null)) {
+                if (cursor != null && cursor.moveToFirst()) {
+                    int index = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
+                    if (index >= 0) displayName = cursor.getString(index);
+                }
+            } catch (Exception ignored) {}
+            json.put("name", displayName);
             call.resolve(json);
         } catch (Exception e) {
             call.reject("No se pudo leer el archivo seleccionado", e);

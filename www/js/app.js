@@ -1060,6 +1060,8 @@ const REGIONS=[
   }
 ];
 
+// v3.4: tres regiones iniciales de África, sin modificar las anteriores.
+REGIONS.push(...[{"id":"HX-06-09","name":"Magreb","code":"HX-06-09","continent":"África","unlock":{"prestige":53},"habitats":["desierto","estepa","costa","pradera"],"species":["af_fenec","af_dromedario","af_gacela_dorcas","af_chacal_dorado","af_ibis_eremita","af_serval","af_cobra_egipcia","af_arrui"]},{"id":"HX-07-10","name":"Sabana de África oriental","code":"HX-07-10","continent":"África","unlock":{"prestige":56},"habitats":["pradera","estepa","rio","humedal"],"species":["af_leon","af_elefante_sabana","af_rinoceronte_blanco","af_bufalo_cafre","af_licaon","af_cocodrilo_nilo","af_aguila_pescadora","af_piton_africana","af_serval"]},{"id":"HX-08-11","name":"Cuenca del Congo","code":"HX-08-11","continent":"África","unlock":{"prestige":59},"habitats":["bosque","humedal","rio","pradera"],"species":["af_gorila_occidental","af_chimpance","af_pangolin_gigante","af_leopardo","af_elefante_bosque","af_loro_gris","af_colobo","af_cocodrilo_hocico"]}]);
 const SPECIES={
   "asia_esp_0287":{"name": "Grulla siberiana", "latin": "Leucogeranus leucogeranus", "rare": "Muy rara", "kind": "stork", "color": "#e8e5df", "habitats": ["rio", "pradera"], "times": ["amanecer", "dia"], "seasons": ["primavera", "verano", "otono"], "special": ["Notable"], "dimorphism": false},
   "asia_esp_0880":{"name": "Gallo lira", "latin": "Lyrurus tetrix", "rare": "Común", "kind": "forestbird", "color": "#292f36", "habitats": ["bosque", "pradera"], "times": ["amanecer", "dia"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Leucístico", "Notable"], "dimorphism": true},
@@ -1410,6 +1412,9 @@ Object.assign(SPRITE_TUNING,{
 });
 
 
+
+// Fauna inicial de África con familias de sprites existentes.
+Object.assign(SPECIES,{"af_fenec":{"name":"Fénec","latin":"Vulpes zerda","rare":"Poco común","kind":"canid","color":"#e9bb79","habitats":["desierto","estepa"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_dromedario":{"name":"Dromedario","latin":"Camelus dromedarius","rare":"Común","kind":"camel","color":"#bc9970","habitats":["desierto","estepa"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_gacela_dorcas":{"name":"Gacela dorcas","latin":"Gazella dorcas","rare":"Poco común","kind":"deer","color":"#c8a66d","habitats":["desierto","estepa"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_chacal_dorado":{"name":"Chacal dorado","latin":"Canis aureus","rare":"Común","kind":"canid","color":"#ad9060","habitats":["estepa","pradera"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_ibis_eremita":{"name":"Ibis eremita","latin":"Geronticus eremita","rare":"Muy rara","kind":"stork","color":"#43433b","habitats":["costa","pradera"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_serval":{"name":"Serval","latin":"Leptailurus serval","rare":"Raro","kind":"cat","color":"#c4a25b","habitats":["pradera","estepa"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_cobra_egipcia":{"name":"Cobra egipcia","latin":"Naja haje","rare":"Raro","kind":"snake","color":"#8c7453","habitats":["desierto","estepa"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_arrui":{"name":"Arruí","latin":"Ammotragus lervia","rare":"Poco común","kind":"deer","color":"#b69c7a","habitats":["estepa","desierto"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_leon":{"name":"León africano","latin":"Panthera leo","rare":"Raro","kind":"cat","color":"#cba35e","habitats":["pradera","estepa"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_elefante_sabana":{"name":"Elefante africano de sabana","latin":"Loxodonta africana","rare":"Raro","kind":"elephant","color":"#99978f","habitats":["pradera","rio"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_rinoceronte_blanco":{"name":"Rinoceronte blanco","latin":"Ceratotherium simum","rare":"Muy rara","kind":"rhino","color":"#a49d91","habitats":["pradera","estepa"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_bufalo_cafre":{"name":"Búfalo cafre","latin":"Syncerus caffer","rare":"Poco común","kind":"bison","color":"#5b4e42","habitats":["pradera","rio"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_licaon":{"name":"Licaón","latin":"Lycaon pictus","rare":"Raro","kind":"canid","color":"#af8559","habitats":["pradera","estepa"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_cocodrilo_nilo":{"name":"Cocodrilo del Nilo","latin":"Crocodylus niloticus","rare":"Raro","kind":"crocodile","color":"#718162","habitats":["rio","humedal"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_aguila_pescadora":{"name":"Pigargo vocinglero","latin":"Icthyophaga vocifer","rare":"Poco común","kind":"raptor","color":"#e0e3d5","habitats":["rio","humedal"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_piton_africana":{"name":"Pitón de Seba","latin":"Python sebae","rare":"Raro","kind":"snake","color":"#83765d","habitats":["pradera","rio"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_gorila_occidental":{"name":"Gorila occidental","latin":"Gorilla gorilla","rare":"Muy rara","kind":"primate","color":"#484840","habitats":["bosque"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_chimpance":{"name":"Chimpancé central","latin":"Pan troglodytes troglodytes","rare":"Raro","kind":"primate","color":"#594e44","habitats":["bosque"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_pangolin_gigante":{"name":"Pangolín gigante","latin":"Smutsia gigantea","rare":"Muy rara","kind":"pangolin","color":"#8a6f51","habitats":["bosque","humedal"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_leopardo":{"name":"Leopardo africano","latin":"Panthera pardus","rare":"Raro","kind":"cat","color":"#b89a65","habitats":["bosque","pradera"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_elefante_bosque":{"name":"Elefante africano de bosque","latin":"Loxodonta cyclotis","rare":"Muy rara","kind":"elephant","color":"#797d77","habitats":["bosque","humedal"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_loro_gris":{"name":"Loro gris africano","latin":"Psittacus erithacus","rare":"Poco común","kind":"songbird","color":"#8c8f8d","habitats":["bosque"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_colobo":{"name":"Colobo blanco y negro","latin":"Colobus guereza","rare":"Raro","kind":"primate","color":"#2b3432","habitats":["bosque"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false},"af_cocodrilo_hocico":{"name":"Cocodrilo de hocico estrecho","latin":"Mecistops cataphractus","rare":"Muy rara","kind":"crocodile","color":"#60765b","habitats":["rio","humedal"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Melánico","Notable"],"dimorphism":false}});
 
 // Solo especies con dimorfismo sexual notorio y representable con sprites distintos.
 const SEXUAL_DIMORPHISM={
@@ -1776,6 +1781,9 @@ function regionLandscape(regionId){
   };
   if(V22_SCENES[regionId])return V22_SCENES[regionId];
 
+  if(regionId==='HX-06-09')return ['#e5d6ae','#eadbbd','#c4ad7b','🏜️  🐪  🌵  🦊'];
+  if(regionId==='HX-07-10')return ['#e8d6a3','#e3cb95','#a3a36e','🌾  🦁  🐘  🌳'];
+  if(regionId==='HX-08-11')return ['#b2d0ae','#b8d8bc','#5d8f65','🌿  🦍  🌳  🦜'];
   if(regionId==='HX-02-13')return ['#bcd0cc','#e1ebde','#8b9d81','🌲  🐿️  🌊  ❄️  🌲'];
   if(regionId==='HX-03-14')return ['#bdc9ce','#e3e7de','#919b81','🌲  ❄️  🪶  🌲  🏔️'];
   if(regionId==='HX-04-13')return ['#dbd4b7','#eee4cb','#a9a178','🐎  🌾  🐈  ⛰️  🌾'];
@@ -2093,7 +2101,7 @@ function renderPanel(){
 const ATLAS_CONTINENTS=[
   {id:'Europa',label:'Europa',icon:'🇪🇺',implemented:true},
   {id:'Asia',label:'Asia',icon:'🌏',implemented:true},
-  {id:'África',label:'África',icon:'🌍',implemented:false},
+  {id:'África',label:'África',icon:'🌍',implemented:true},
   {id:'Norteamérica',label:'Norteamérica',icon:'🦬',implemented:false},
   {id:'Sudamérica',label:'Sudamérica',icon:'🦜',implemented:false},
   {id:'Oceanía',label:'Oceanía',icon:'🪃',implemented:false},
@@ -2103,11 +2111,13 @@ const ATLAS_CONTINENTS=[
 function regionRequirementsMet(r){
   if(!r) return false;
   if(r.continent==='Asia') return !!(state.upgrades.asiaUnlocked && state.prestige>=r.unlock.prestige);
+  if(r.continent==='África') return !!(state.inventory?.africa_map && state.prestige>=r.unlock.prestige);
   return state.prestige>=r.unlock.prestige;
 }
 function continentStatus(continent){
   if(continent==='Europa') return 'available';
   if(continent==='Asia') return state.upgrades.asiaUnlocked?'available':'unlockable';
+  if(continent==='África') return state.inventory?.africa_map?'available':'unlockable';
   return 'locked';
 }
 function unlockRegion(id){
@@ -2207,7 +2217,9 @@ function renderAtlas(){
   const status=active?'📍 Zona actual':unlocked?'✅ Ruta habilitada':ready?'🗝️ Puedes desbloquear esta zona':'🔒 Región bloqueada';
   const condition=r.continent==='Asia'
     ? (state.upgrades.asiaUnlocked?'✓ Cartografía de Asia':'✕ Necesitas investigar Cartografía de Asia')+' · '+r.unlock.prestige+' prestigio mínimo'
-    : r.unlock.prestige+' prestigio mínimo';
+    : r.continent==='África'
+      ? (state.inventory.africa_map?'✓ Mapa de África reunido':'✕ Fabrica el Mapa de África en Inventario')+' · '+r.unlock.prestige+' prestigio mínimo'
+      : r.unlock.prestige+' prestigio mínimo';
   const action=active?'<button class="btn gold" disabled>Explorando aquí</button>'
     :unlocked?'<button class="btn gold" data-action="travel-region" data-id="'+r.id+'">🧭 Viajar a Campo</button>'
     :ready?'<button class="btn gold" data-action="unlock-region" data-id="'+r.id+'">🗝️ Desbloquear zona</button>'
@@ -2600,7 +2612,7 @@ function renderObjects(){
    content=`<section class="inventory-block"><h4>🧭 Botín de expedición</h4><div class="small">Materiales, herramientas y fragmentos de mapa encontrados en viajes.</div><div class="inventory-items">${all.filter(([id,i])=>i.kind==='voyage'&&!collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div></section>`;
  }else{
    const asia=state.inventory.asia_map_piece||0,africa=state.inventory.africa_map_piece||0;
-   content=`<section class="inventory-block"><h4>🏛️ Coleccionables y cartografía</h4><div class="small">Mapas fabricados, fósiles y piezas singulares. No ocupan slots de equipo.</div><div class="inventory-items">${all.filter(([id])=>collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div><div class="divider"></div><h4>🗺️ Fabricación de mapas</h4><div class="inventory-items">${['asia_map','africa_map'].map(id=>recipeCard(id,RECIPES[id])).join('')}</div><div class="small">Mapa de Asia: ${Math.min(10,asia)}/10 fragmentos disponibles · Mapa de África: ${Math.min(10,africa)}/10. El mapa de África aún no desbloquea regiones.</div></section>`;
+   content=`<section class="inventory-block"><h4>🏛️ Coleccionables y cartografía</h4><div class="small">Mapas fabricados, fósiles y piezas singulares. No ocupan slots de equipo.</div><div class="inventory-items">${all.filter(([id])=>collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div><div class="divider"></div><h4>🗺️ Fabricación de mapas</h4><div class="inventory-items">${['asia_map','africa_map'].map(id=>recipeCard(id,RECIPES[id])).join('')}</div><div class="small">Mapa de Asia: ${Math.min(10,asia)}/10 fragmentos disponibles · Mapa de África: ${Math.min(10,africa)}/10. El mapa de África permite desbloquear las primeras tres regiones.</div></section>`;
  }
  const ownedEntries=Object.entries(state.inventory).filter(([,qty])=>Number(qty)>0);
  const equipped=Object.values(state.equipment).filter(Boolean).length;

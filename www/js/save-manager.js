@@ -1,4 +1,4 @@
-/* El Gran Atlas 3.3 — respaldos JSON con exportación e importación Android nativa. */
+/* El Gran Atlas 3.4 — recuperación verificada, compatibilidad con JSON y alternativas de importación. */
 (() => {
   'use strict';
   const STORAGE_KEY = 'gran_atlas_v05';
@@ -17,6 +17,10 @@
   const nativeImportButton = document.getElementById('saveNativeImportBtn');
   const summary = document.getElementById('saveImportSummary');
   const status = document.getElementById('saveManagerStatus');
+  const pasteInput = document.getElementById('savePasteJson');
+  const pasteButton = document.getElementById('savePasteBtn');
+  const receiptKey = 'gran_atlas_restore_receipt_v34';
+  const preImportKey = 'gran_atlas_backup_pre_import_v301';
   if (!root || !open || !exportButton || !fileInput || !importButton) return;
   let pending = null;
 
@@ -49,36 +53,57 @@
   function validNumber(n) {
     return typeof n === 'number' && Number.isFinite(n) && n >= 0 && n <= 1e15;
   }
-  function validateGame(data) {
-    if (!plainObject(data)) throw new Error('El archivo no contiene una partida válida.');
+  function normalizeGame(data) {
+    if (!plainObject(data)) throw new Error('El archivo no contiene un objeto de partida.');
+    const base=Object.create(null);
     if (!validNumber(data.money) || !validNumber(data.knowledge) || !validNumber(data.prestige))
-      throw new Error('La partida tiene recursos inválidos.');
+      throw new Error('Faltan libras, conocimiento o prestigio válidos.');
     if (typeof data.currentRegion !== 'string' || !/^[a-zA-Z0-9_-]{2,64}$/.test(data.currentRegion))
-      throw new Error('La región guardada no es válida.');
-    for (const field of ['discovered','sightings','stages','upgrades','purchases','regionUnlocked','published']) {
-      if (!plainObject(data[field])) throw new Error('Falta un dato necesario: ' + field + '.');
+      throw new Error('El código de región guardado no es válido.');
+    if (!['discovered','sightings','stages'].some(k=>plainObject(data[k])))
+      throw new Error('No hay registros de especies: este JSON no parece una partida de El Gran Atlas.');
+    for (const key of ['discovered','sightings','stages','upgrades','purchases','regionUnlocked','published','inventory','sexSeen','specialSeen','specialFound','feedObs','dimorphism','equipment']) {
+      if (data[key]!==undefined && !plainObject(data[key]))
+        throw new Error('El campo '+key+' tiene un formato incorrecto.');
     }
-    if (data.inventory !== undefined && !plainObject(data.inventory)) throw new Error('El inventario no es válido.');
-    if (data.sexSeen !== undefined && !plainObject(data.sexSeen)) throw new Error('El dimorfismo no es válido.');
-    if (data.voyages !== undefined && (!Array.isArray(data.voyages) || data.voyages.length > 100))
-      throw new Error('Los viajes guardados no son válidos.');
-    const all = [...Object.values(data.sightings), ...Object.values(data.stages), ...Object.values(data.inventory || {})];
-    if (all.length > 30000 || !all.every(validNumber)) throw new Error('Los registros de especies tienen valores incorrectos.');
-    if (Object.keys(data).some(k => ['__proto__','constructor','prototype'].includes(k)))
+    if (data.voyages!==undefined && (!Array.isArray(data.voyages)||data.voyages.length>100))
+      throw new Error('La lista de expediciones no es válida.');
+    for (const key of ['sightings','stages','inventory']) {
+      const entries=Object.values(data[key]||{});
+      if (entries.length>30000 || entries.some(n=>!validNumber(n)))
+        throw new Error('El campo '+key+' tiene cantidades incorrectas.');
+    }
+    if (Object.keys(data).some(k=>['__proto__','constructor','prototype'].includes(k)))
       throw new Error('El archivo contiene campos no permitidos.');
-    return data;
+    Object.assign(base,data);
+    for (const key of ['discovered','sightings','stages','upgrades','purchases','regionUnlocked','published','inventory','sexSeen','specialSeen','specialFound','feedObs','dimorphism']) {
+      if (!base[key]) base[key]={};
+    }
+    if (!base.regionUnlocked[base.currentRegion]) base.regionUnlocked[base.currentRegion]=true;
+    if (!base.voyages) base.voyages=[];
+    if (!base.equipment) base.equipment={instrument:null,hat:null,necklace:null};
+    return base;
   }
   function parseBackup(text) {
-    if (new TextEncoder().encode(text).length > MAX_BYTES) throw new Error('El archivo supera 4 MB.');
+    if (typeof text !== 'string') throw new Error('No se pudo leer el contenido del documento.');
+    if (new TextEncoder().encode(text).length > MAX_BYTES) throw new Error('El archivo supera los 4 MB.');
     let parsed;
-    try { parsed = JSON.parse(text); } catch (_) { throw new Error('El archivo no contiene JSON válido.'); }
-    let data = parsed;
+    try { parsed = JSON.parse(text.replace(/^\uFEFF/, '')); }
+    catch (_) { throw new Error('El documento no es JSON válido. Selecciona el archivo el-gran-atlas-partida-*.json, no el APK.'); }
+    let data=parsed;
     if (plainObject(parsed) && parsed.format === FORMAT) {
-      if (parsed.formatVersion > FORMAT_VERSION || parsed.formatVersion < 1)
-        throw new Error('Esta copia utiliza una versión de respaldo no compatible.');
-      data = parsed.game;
+      if (!Number.isInteger(parsed.formatVersion)||parsed.formatVersion>FORMAT_VERSION||parsed.formatVersion<1)
+        throw new Error('Formato de respaldo no compatible.');
+      data=parsed.game;
+    } else if (plainObject(parsed) && plainObject(parsed.game) && parsed.game.money!==undefined) {
+      data=parsed.game;
+    } else if (plainObject(parsed) && plainObject(parsed.state) && parsed.state.money!==undefined) {
+      data=parsed.state;
+    } else if (plainObject(parsed) && typeof parsed[STORAGE_KEY]==='string') {
+      try {data=JSON.parse(parsed[STORAGE_KEY]);}
+      catch(_){throw new Error('El respaldo antiguo contiene un registro ilegible.');}
     }
-    return validateGame(data);
+    return normalizeGame(data);
   }
   function fileName() {
     return 'el-gran-atlas-partida-' + new Date().toISOString().slice(0, 10) + '.json';
@@ -95,9 +120,9 @@
   function prepareBackup() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) throw new Error('No hay una partida guardada todavía.');
-    const data = validateGame(JSON.parse(raw));
+    const data = normalizeGame(JSON.parse(raw));
     return { text: JSON.stringify({
-      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.3.0',
+      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.4.0',
       exportedAt: new Date().toISOString(), game: data
     }, null, 2), name: fileName() };
   }
@@ -160,7 +185,7 @@
     importButton.disabled = true;
     summary.textContent = 'Comprobando archivo…';
     try {
-      const data = parseBackup(text.replace(/^\uFEFF/, ''));
+      const data = parseBackup(text);
       pending = data;
       const observations = Object.values(data.sightings).reduce((sum,n)=>sum+n,0);
       summary.textContent = 'Partida válida: ' + Math.floor(data.prestige) + ' prestigio · £' + Math.floor(data.money)
@@ -221,17 +246,66 @@
       nativeImportButton.disabled = false;
     }
   });
-  importButton.addEventListener('click', () => {
-    if (!pending) return;
-    if (!window.confirm('¿Reemplazar la partida actual por la del archivo? Se guardará una copia de emergencia de la partida anterior en este dispositivo.')) return;
+
+  function receiptSnapshot(data) {
+    return {
+      prestige:data.prestige,
+      currentRegion:data.currentRegion,
+      sightings:Object.values(data.sightings||{}).reduce((sum,n)=>sum+n,0),
+      published:Object.values(data.published||{}).filter(Boolean).length
+    };
+  }
+  function compareReceipt(expected,actual) {
+    return expected.prestige===actual.prestige &&
+      expected.sightings===actual.sightings &&
+      expected.published===actual.published &&
+      expected.currentRegion===actual.currentRegion;
+  }
+  function showPreviousRestore() {
     try {
-      const old = localStorage.getItem(STORAGE_KEY);
-      if (old) localStorage.setItem(EMERGENCY_KEY, old);
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(pending));
-      message('Partida recuperada. Reiniciando el juego…');
-      window.location.reload();
-    } catch (error) {
-      message('No se pudo importar. El almacenamiento podría estar lleno: ' + (error?.message || error), true);
+      const prior=JSON.parse(localStorage.getItem(receiptKey)||'null');
+      if(!prior) return;
+      localStorage.removeItem(receiptKey);
+      const raw=localStorage.getItem(STORAGE_KEY);
+      if(!raw) throw new Error('No hay una partida guardada después del reinicio.');
+      const current=normalizeGame(JSON.parse(raw));
+      const actual=receiptSnapshot(current);
+      if(compareReceipt(prior,actual)) {
+        summary.textContent='✅ Restauración verificada después del reinicio: '+actual.sightings+' avistamientos · '+actual.prestige+' prestigio · región '+actual.currentRegion+'.';
+        message('La partida importada está disponible en esta instalación.');
+      }else {
+        summary.textContent='⚠️ No coincide la partida después del reinicio. Conservamos el respaldo anterior en esta instalación.';
+        message('Se detectó una diferencia al reiniciar. No elimines tu partida original ni el JSON.',true);
+      }
+    } catch(error) {
+      message('No se pudo verificar la restauración: '+(error?.message||error),true);
     }
+  }
+  function restoreSelected() {
+    if(!pending) return;
+    if(!window.confirm('¿Restaurar la partida elegida en ESTA instalación? La partida original de otra aplicación no se modifica.')) return;
+    try{
+      const old=localStorage.getItem(STORAGE_KEY);
+      const serialized=JSON.stringify(pending);
+      if(old) {
+        // Guardar una copia anterior y no depender solo de un único respaldo de emergencia.
+        localStorage.setItem(EMERGENCY_KEY,old);
+      }
+      localStorage.setItem(STORAGE_KEY,serialized);
+      if(localStorage.getItem(STORAGE_KEY)!==serialized)
+        throw new Error('El almacenamiento rechazó la escritura.');
+      localStorage.setItem(receiptKey,JSON.stringify(receiptSnapshot(pending)));
+      message('Respaldo escrito y comprobado. Reiniciando para verificar que la partida cargue…');
+      window.location.reload();
+    } catch(error) {
+      message('No se pudo restaurar: '+(error?.message||error)+'. No borres el JSON original.',true);
+    }
+  }
+  importButton.addEventListener('click', restoreSelected);
+  pasteButton?.addEventListener('click',()=>{
+    const text=pasteInput?.value||'';
+    if(!text.trim()) {message('Pega primero el contenido del archivo JSON.',true);return;}
+    prepareImport(text,'Texto pegado');
   });
+  showPreviousRestore();
 })();
