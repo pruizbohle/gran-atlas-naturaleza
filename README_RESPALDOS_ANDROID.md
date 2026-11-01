@@ -33,3 +33,9 @@ Al configurar los secretos, abre `Actions → Android APK firmado → Run workfl
 - El respaldo es local, sin nube propia; evita compartirlo públicamente.
 - La importación revisa el contenido del archivo, conserva copia de emergencia e informa antes de reemplazar la partida.
 - Los APK de depuración generados por Actions pueden tener firmas diferentes en cada compilación. No los utilices para actualizaciones automáticas de una partida con progreso importante.
+
+## Actualización v3.2 — guardar directamente en el teléfono
+
+El menú 💾 ofrece dos opciones distintas: **⬇️ Guardar en el teléfono** abre el selector nativo Android para elegir una carpeta como Descargas y crear el archivo `.json` allí. **📤 Compartir respaldo** conserva el menú de compartir con otras aplicaciones. En navegador, Guardar solicita la descarga normal. La restauración desde un JSON sigue igual y no cambia la clave local de la partida.
+
+El selector Android usa `ACTION_CREATE_DOCUMENT` y no necesita acceso general al almacenamiento. Si cancelas el selector, no se modifica tu partida. Para incluirlo en la APK se utiliza `scripts/install-atlas-export.py` tras `npx cap sync android`.

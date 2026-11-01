@@ -1674,6 +1674,7 @@ let currentAutoNotice='';
 let journalRailQuery='';
 let journalSortMode='catalog';
 let journalRailScrollTop=0;
+let atlasMapScrollLeft=0;
 let journalSheetScrollTop=0;
 
 let autoDiaryBuffer={searches:0,hits:0,knowledge:0};
@@ -2073,6 +2074,10 @@ function renderPanel(){
     panel.innerHTML='<section class="card stack"><h3>⚠️ No se pudo abrir este módulo</h3><p class="small">Puedes utilizar otra pestaña. Si el problema persiste, informa el nombre de la sección.</p></section>';
   }
   bindPanel();
+  if(tab==='atlas'){
+    const map=panel.querySelector('.atlas-v32-map-scroll');
+    if(map)map.scrollLeft=atlasMapScrollLeft;
+  }
   if(tab==='journal'){
     const rail=panel.querySelector('#journalSpeciesRail');
     const sheet=panel.querySelector('.journal-v311 .journal-sheet');
@@ -2150,54 +2155,56 @@ function bestiaryTypeBucket(id){
   if(c==='Actinopterygii') return 'Pez';
   return 'Reptil/Anfibio';
 }
+// v3.2: mapa hexagonal esquemático: posiciones basadas en códigos HX, no geografía exacta.
 function renderAtlas(){
   const selected=ATLAS_CONTINENTS.some(c=>c.id===state.atlasView)?state.atlasView:'Europa';
-  const continent=ATLAS_CONTINENTS.find(c=>c.id===selected) || ATLAS_CONTINENTS[0];
+  const continent=ATLAS_CONTINENTS.find(c=>c.id===selected)||ATLAS_CONTINENTS[0];
   const regions=REGIONS.filter(r=>r.continent===selected);
-  const regionCard=r=>{
-    const active=r.id===state.currentRegion;
-    const identified=r.species.filter(id=>stage(id)>=1).length;
-    const met=regionRequirementsMet(r);
-    const unlocked=!!state.regionUnlocked[r.id] || active;
-    let button=''; let status='';
-    if(!met && !unlocked){
-      status = r.continent==='Asia' ? `🔒 Requiere Cartografía de Asia y ${r.unlock.prestige} prestigio acumulado` : `🔒 Requiere ${r.unlock.prestige} prestigio`;
-      button = '<button class="btn alt" disabled>🔒 Candado</button>';
-    } else if(!unlocked){
-      status = `🗝️ Requisitos cumplidos · listo para desbloquear`;
-      button = `<button class="btn gold" data-action="unlock-region" data-id="${r.id}">Desbloquear</button>`;
-    } else if(active){
-      status = '✅ Zona activa';
-      button = '<button class="btn gold" disabled>Explorando</button>';
-    } else {
-      status = `✅ Acceso habilitado`;
-      button = `<button class="btn" data-action="travel-region" data-id="${r.id}">Viajar</button>`;
-    }
-    return `<div class="atlas-region atlas-continent-card ${active?'atlas-current':''}">
-      <div><strong>${r.name}</strong>
-        <div class="small">${r.code} · ${identified}/${r.species.length} identificadas</div>
-        <div class="small">${status}</div>
-      </div>
-      ${button}
-    </div>`;
+  const chosen=regions.find(r=>r.id===state.atlasSelectedRegion)
+    ||regions.find(r=>r.id===state.currentRegion)||regions[0];
+  const tabs=ATLAS_CONTINENTS.map(c=>'<button type="button" class="subtab '+(selected===c.id?'active ':'')+(!c.implemented?'muted':'')+'" data-action="atlas-tab" data-id="'+c.id+'">'+c.icon+' '+c.label+(!c.implemented?' 🔒':'')+'</button>').join('');
+  const countReady=regions.filter(r=>!!state.regionUnlocked[r.id]||r.id===state.currentRegion).length;
+  if(!continent.implemented)return '<section class="atlas-v32 stack"><header class="atlas-v32-title"><span>🗺️ Atlas de expediciones</span><small>Cartografía del naturalista · 1842</small></header><div class="subtabs atlas-v32-continents">'+tabs+'</div><div class="card atlas-v32-future"><div class="big-lock">🔒</div><h3>'+continent.icon+' '+continent.label+'</h3><p class="small">Continente reservado para una futura expedición. Europa y Asia están disponibles en la versión actual.</p></div></section>';
+  const xs=regions.map(r=>Number(r.code.split('-')[2]));
+  const ys=regions.map(r=>Number(r.code.split('-')[1]));
+  const minCol=Math.min(...xs),maxCol=Math.max(...xs),minRow=Math.min(...ys),maxRow=Math.max(...ys);
+  const w=164+(maxCol-minCol)*88, h=144+(maxRow-minRow)*77;
+  const coords=r=>{
+    const parts=r.code.split('-'); const row=Number(parts[1]),col=Number(parts[2]);
+    return {x:79+(col-minCol)*88+(row%2?39:0),y:68+(row-minRow)*77};
   };
-  const implementedCount=REGIONS.filter(r=>r.continent===selected).length;
-  return `<div class="atlas-layout">
-    <section class="card stack">
-      <h3 class="section">🗺️ Atlas de expediciones</h3>
-      <div class="small">Navega por continentes. Los no implementados quedan marcados con candado. Las regiones pueden pasar por tres estados: candado, desbloquear y viajar.</div>
-      <div class="subtabs">${ATLAS_CONTINENTS.map(c=>`<button class="subtab ${selected===c.id?'active':''} ${!c.implemented?'muted':''}" data-action="atlas-tab" data-id="${c.id}">${c.icon} ${c.label}${!c.implemented?' 🔒':''}</button>`).join('')}</div>
-      <div class="req"><strong>${continent.icon} ${continent.label}</strong><div class="small">${continent.implemented?`${implementedCount} zonas cargadas en el prototipo.`:'Continente aún bloqueado para desarrollo futuro.'}</div></div>
-      ${continent.implemented?`<div class="list">${regions.map(regionCard).join('')}</div>`:`<div class="locked-panel"><div class="big-lock">🔒</div><div><strong>Continente bloqueado</strong><div class="small">Todavía no está integrado al proyecto actual.</div></div></div>`}
-    </section>
-    <section class="card stack">
-      <h3 class="section">🧭 Estado cartográfico</h3>
-      <div class="req"><strong>Europa</strong><div class="small">Completamente incorporada con 10 regiones.</div></div>
-      <div class="req"><strong>Asia</strong><div class="small">${REGIONS.filter(r=>r.continent==='Asia').length} regiones cargadas · Cartografía ${state.upgrades.asiaUnlocked?'completada':'pendiente'}.</div></div>
-      <div class="req"><strong>África</strong><div class="small">Mapa ${state.inventory.africa_map?'ensamblado':'aún no ensamblado'} · Continente bloqueado.</div></div>
-      <div class="req"><strong>Región actual</strong><div class="small">${currentRegion().name} · ${currentRegion().code}</div></div>
-    </section>
-  </div>`;
+  const tiles=regions.map(r=>{
+    const {x,y}=coords(r);
+    const active=r.id===state.currentRegion, chosenTile=r.id===chosen?.id;
+    const unlocked=!!state.regionUnlocked[r.id]||active, ready=!unlocked&&regionRequirementsMet(r);
+    const status=active?'actual':unlocked?'abierta':ready?'disponible':'bloqueada';
+    const label=r.name.length>17?r.name.slice(0,16)+'…':r.name;
+    const points=[[-41,0],[-21,-36],[21,-36],[41,0],[21,36],[-21,36]].map(([dx,dy])=>(x+dx)+','+(y+dy)).join(' ');
+    const count=r.species.filter(id=>stage(id)>=1).length;
+    return '<g class="atlas-v32-hex atlas-v32-'+status+(chosenTile?' atlas-v32-selected':'')+'" role="button" tabindex="0" data-action="atlas-select-region" data-id="'+r.id+'" aria-label="'+esc(r.name)+'. '+count+' de '+r.species.length+' especies identificadas. '+status+'"><polygon points="'+points+'"/><text class="atlas-v32-hex-symbol" x="'+x+'" y="'+(y-11)+'" text-anchor="middle">'+(active?'📍':unlocked?'✓':ready?'🗝':'🔒')+'</text><text class="atlas-v32-hex-name" x="'+x+'" y="'+(y+7)+'" text-anchor="middle">'+esc(label)+'</text><text class="atlas-v32-hex-code" x="'+x+'" y="'+(y+23)+'" text-anchor="middle">'+count+'/'+r.species.length+'</text></g>';
+  }).join('');
+  const r=chosen;
+  const active=r.id===state.currentRegion;
+  const unlocked=!!state.regionUnlocked[r.id]||active;
+  const ready=regionRequirementsMet(r);
+  const identified=r.species.filter(id=>stage(id)>=1).length;
+  const progress=Math.round(100*identified/Math.max(1,r.species.length));
+  const status=active?'📍 Zona actual':unlocked?'✅ Ruta habilitada':ready?'🗝️ Puedes desbloquear esta zona':'🔒 Región bloqueada';
+  const condition=r.continent==='Asia'
+    ? (state.upgrades.asiaUnlocked?'✓ Cartografía de Asia':'✕ Necesitas investigar Cartografía de Asia')+' · '+r.unlock.prestige+' prestigio mínimo'
+    : r.unlock.prestige+' prestigio mínimo';
+  const action=active?'<button class="btn gold" disabled>Explorando aquí</button>'
+    :unlocked?'<button class="btn gold" data-action="travel-region" data-id="'+r.id+'">🧭 Viajar a Campo</button>'
+    :ready?'<button class="btn gold" data-action="unlock-region" data-id="'+r.id+'">🗝️ Desbloquear zona</button>'
+    :'<button class="btn alt" disabled>🔒 Requisitos pendientes</button>';
+  const areas=r.habitats.map(x=>'<span class="atlas-v32-chip">'+esc(x.charAt(0).toUpperCase()+x.slice(1))+'</span>').join('');
+  return '<section class="atlas-v32 stack"><header class="atlas-v32-title"><span>🗺️ Atlas de expediciones</span><small>Cartografía del naturalista · 1842</small></header>'
+    +'<div class="subtabs atlas-v32-continents">'+tabs+'</div>'
+    +'<div class="atlas-v32-legend"><span>'+continent.icon+' '+continent.label+' · '+regions.length+' zonas</span><span>✅ '+countReady+' habilitadas</span></div>'
+    +'<div class="atlas-v32-layout">'
+    +'<section class="atlas-v32-map-card" aria-label="Mapa hexagonal de '+continent.label+'"><div class="atlas-v32-map-scroll"><svg class="atlas-v32-svg" style="--atlas-board-width:'+w+'px" viewBox="0 0 '+w+' '+h+'" aria-label="Selecciona una región en el mapa"><defs><linearGradient id="atlasMapPaper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f2e7ce"/><stop offset="1" stop-color="#d9c6a1"/></linearGradient><pattern id="atlasGrid" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M18 0H0V18" fill="none" stroke="#b19e7d" stroke-opacity=".16"/></pattern></defs><rect width="'+w+'" height="'+h+'" rx="13" fill="url(#atlasMapPaper)"/><rect width="'+w+'" height="'+h+'" rx="13" fill="url(#atlasGrid)"/><path d="M7 '+(h-42)+' Q'+Math.round(w*.23)+' '+Math.round(h*.34)+' '+Math.round(w*.45)+' '+(h-38)+' T'+(w-9)+' '+Math.round(h*.42)+'" fill="none" stroke="#b9ab87" stroke-width="2" stroke-dasharray="7 9" opacity=".44"/>'+tiles+'</svg></div><div class="atlas-v32-map-foot"><span><i class="atlas-dot atlas-dot-active"></i> Actual</span><span><i class="atlas-dot atlas-dot-open"></i> Accesible</span><span><i class="atlas-dot atlas-dot-ready"></i> Desbloquear</span><span><i class="atlas-dot atlas-dot-locked"></i> Bloqueada</span></div></section>'
+    +'<section class="card atlas-v32-details" aria-live="polite"><div class="atlas-v32-eyebrow">FICHA DE REGIÓN · '+r.code+'</div><h3>'+esc(r.name)+'</h3><div class="atlas-v32-state">'+status+'</div><div class="atlas-v32-count">'+identified+' <small>/ '+r.species.length+' especies identificadas</small></div><div class="progress"><div style="width:'+progress+'%"></div></div><div class="atlas-v32-req">'+esc(condition)+'</div><div class="atlas-v32-subtitle">Hábitats registrados</div><div class="atlas-v32-chips">'+areas+'</div><div class="atlas-v32-action">'+action+'</div><div class="small">El prestigio acumulado no se consume al desbloquear una región.</div></section></div>'
+    +'<div class="atlas-v32-note">Toca un hexágono para inspeccionarlo. Desliza el mapa horizontalmente si necesitas ver más zonas. Las coordenadas HX corresponden al esquema del juego, no a un mapa geográfico a escala.</div></section>';
 }
 
 // v3.1: escenografía SVG ligera; no afecta encuentros, especies, guardados ni economía.
@@ -2674,6 +2681,8 @@ function researchNodeCard(node){
 }
 
 function bindPanel(){
+  const atlasMap=panel.querySelector('.atlas-v32-map-scroll');
+  atlasMap?.addEventListener('scroll',()=>{atlasMapScrollLeft=atlasMap.scrollLeft;},{passive:true});
   const rail=panel.querySelector('#journalSpeciesRail');
   const sheet=panel.querySelector('.journal-v311 .journal-sheet');
   rail?.addEventListener('scroll',()=>{journalRailScrollTop=rail.scrollTop;},{passive:true});
@@ -2690,12 +2699,16 @@ function bindPanel(){
     renderPanel();
   });
   filterJournalRail();
+  panel.querySelectorAll('.atlas-v32-hex').forEach(el=>el.addEventListener('keydown',e=>{
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();el.dispatchEvent(new MouseEvent('click',{bubbles:true}));}
+  }));
   panel.querySelectorAll('[data-action]').forEach(el=>el.addEventListener('click', e=>{
     const act=e.currentTarget.dataset.action; const id=e.currentTarget.dataset.id;
     if(act==='set-region') setRegion(id);
     if(act==='travel-region') travelToRegion(id);
     if(act==='unlock-region') unlockRegion(id);
-    if(act==='atlas-tab'){state.atlasView=id; renderPanel(); persist();}
+    if(act==='atlas-tab'){state.atlasView=id; atlasMapScrollLeft=0; renderPanel(); persist();}
+    if(act==='atlas-select-region'){if(REGIONS.some(r=>r.id===id&&r.continent===state.atlasView)){state.atlasSelectedRegion=id;renderPanel();persist();}}
 
     if(act==='toggle-field-filters'){state.fieldFiltersOpen=!state.fieldFiltersOpen;renderPanel();persist();}
     if(act==='set-habitat'){ state.habitat=id; renderPanel(); persist(); }
