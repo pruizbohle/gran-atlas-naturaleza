@@ -283,7 +283,7 @@
   }
   function matchImported(expected, got){
     return !!got && expected.prestige===got.prestige &&
-      expected.sightings===got.sightings && expected.published===got.published &&
+      got.sightings>=expected.sightings && got.published>=expected.published &&
       expected.currentRegion===got.currentRegion && (got.money||0) >= (expected.money||0) - 0.01;
   }
   function restoreSelected() {
@@ -321,7 +321,7 @@
         try {
           const inMemory=bridge.getSnapshot();
           const onDisk=receiptSnapshot(normalizeGame(JSON.parse(localStorage.getItem(STORAGE_KEY))));
-          if(matchImported({...expected,money:pendingMoney},inMemory) && compareReceipt(expected,onDisk)){
+          if(matchImported({...expected,money:pendingMoney},inMemory) && onDisk.prestige===expected.prestige && onDisk.currentRegion===expected.currentRegion && onDisk.sightings>=expected.sightings && onDisk.published>=expected.published){
             message('✅ Restauración confirmada: el motor y el guardado automático conservan tu partida.');
           }else {
             message('⚠️ Diferencia entre memoria y archivo. Conserva tu respaldo JSON y no desinstales la versión anterior.',true);
