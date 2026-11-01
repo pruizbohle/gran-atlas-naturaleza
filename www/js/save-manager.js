@@ -11,6 +11,7 @@
   const close = document.getElementById('saveManagerClose');
   const backdrop = document.getElementById('saveManagerBackdrop');
   const exportButton = document.getElementById('saveExportBtn');
+  const downloadButton = document.getElementById('saveDownloadBtn');
   const importButton = document.getElementById('saveImportBtn');
   const fileInput = document.getElementById('saveImportFile');
   const summary = document.getElementById('saveImportSummary');
@@ -90,23 +91,60 @@
     await share.share({ title: 'Partida de El Gran Atlas', text: 'Copia de seguridad del juego', url: out.uri, dialogTitle: 'Guardar o compartir respaldo' });
     return true;
   }
+  function prepareBackup() {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) throw new Error('No hay una partida guardada todavía.');
+    const data = validateGame(JSON.parse(raw));
+    return { text: JSON.stringify({
+      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.2.0',
+      exportedAt: new Date().toISOString(), game: data
+    }, null, 2), name: fileName() };
+  }
+
+  function browserDownload(text, name) {
+    const url = URL.createObjectURL(new Blob([text], {type:'application/json;charset=utf-8'}));
+    const link = document.createElement('a');
+    link.href = url; link.download = name;
+    document.body.appendChild(link); link.click(); link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 10000);
+  }
+
+  async function downloadToDevice() {
+    try {
+      const { text, name } = prepareBackup();
+      downloadButton.disabled = true;
+      const cap = window.Capacitor;
+      const isAndroid = cap?.getPlatform?.() === 'android';
+      if (isAndroid) {
+        const saver = cap?.Plugins?.AtlasExport ||
+          (typeof cap?.registerPlugin === 'function' ? cap.registerPlugin('AtlasExport') : null);
+        if (!saver?.saveFile) throw new Error('Esta APK no incluye el guardado nativo. Utiliza Compartir respaldo.');
+        await saver.saveFile({name,content:text});
+        message('Respaldo guardado en la carpeta que elegiste. Conserva el archivo para recuperar tu partida.');
+      } else {
+        browserDownload(text, name);
+        message('Descarga solicitada: ' + name + '. Comprueba que esté en la carpeta Descargas.');
+      }
+    } catch (error) {
+      if (error?.code === 'CANCELLED') {
+        message('Cancelaste el guardado. Tu partida no cambió.');
+      } else {
+        message('No se pudo guardar el archivo: ' + (error?.message || error), true);
+      }
+    } finally {
+      downloadButton.disabled = false;
+    }
+  }
+  downloadButton?.addEventListener('click', downloadToDevice);
+
   async function exportSave() {
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) throw new Error('No hay una partida guardada todavía.');
-      const data = validateGame(JSON.parse(raw));
-      const text = JSON.stringify({ format: FORMAT, formatVersion: FORMAT_VERSION,
-        gameVersion: '3.0.1', exportedAt: new Date().toISOString(), game: data }, null, 2);
-      const name = fileName();
+      const { text, name } = prepareBackup();
       exportButton.disabled = true;
       if (await nativeShare(text, name)) {
         message('Se abrió el menú de compartir de Android. Selecciona dónde guardar el archivo JSON (por ejemplo, Archivos o Drive).');
       } else {
-        const url = URL.createObjectURL(new Blob([text], {type:'application/json;charset=utf-8'}));
-        const link = document.createElement('a');
-        link.href = url; link.download = name;
-        document.body.appendChild(link); link.click(); link.remove();
-        setTimeout(() => URL.revokeObjectURL(url), 10000);
+        browserDownload(text, name);
         message('Se solicitó la descarga del respaldo ' + name + '. Comprueba que esté guardado en tu dispositivo.');
       }
     } catch (error) {

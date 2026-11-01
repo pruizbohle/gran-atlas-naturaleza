@@ -8,8 +8,11 @@ on:
       - fase3/respaldos-v3.0.1
       - fase3/redisenio-v3.1
       - fase3/cuaderno-v3.1.1
+      - fase3/atlas-hexagonal-v3.2
     paths:
       - "www/**"
+      - "android-native/**"
+      - "scripts/**"
       - "package.json"
       - "capacitor.config.json"
       - ".github/workflows/android-debug.yml"
@@ -61,6 +64,9 @@ jobs:
 
       - name: Copiar juego web a Android
         run: npx cap sync android
+
+      - name: Habilitar guardado nativo en Descargas
+        run: python3 scripts/install-atlas-export.py
 
       - name: Fijar orientacion vertical en Android
         run: |
