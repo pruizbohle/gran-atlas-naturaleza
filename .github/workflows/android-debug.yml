@@ -10,6 +10,7 @@ on:
       - fase3/cuaderno-v3.1.1
       - fase3/atlas-hexagonal-v3.2
       - fase3/museo-inventario-v3.3
+      - fase4/respaldos-africa-v3.4
     paths:
       - "www/**"
       - "android-native/**"

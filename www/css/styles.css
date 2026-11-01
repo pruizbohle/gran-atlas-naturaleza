@@ -782,3 +782,10 @@ button,select{font:inherit}
  .museum-v33-vitrine .badge{font-size:10px}
  .inventory-v33-stats{flex-direction:column;align-items:flex-start}
 }
+
+/* Recuperación portátil v3.4 */
+.save-paste-fallback{background:#f3e8cf;border:1px solid #baa77f;border-radius:9px;padding:9px 11px}
+.save-paste-fallback summary{cursor:pointer;color:#33533d;font-weight:700;font-size:12px}
+.save-paste-fallback .small{margin:9px 0 6px}
+.save-paste-fallback textarea{display:block;box-sizing:border-box;width:100%;min-height:80px;padding:8px;border:1px solid #a99570;border-radius:7px;background:#fffdf7;color:#253c31;font:12px/1.4 monospace;resize:vertical}
+.save-paste-fallback button{margin-top:8px}
