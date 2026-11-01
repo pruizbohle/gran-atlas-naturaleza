@@ -13,6 +13,7 @@ on:
       - fase4/respaldos-africa-v3.4
     paths:
       - "www/**"
+      - "tests/**"
       - "android-native/**"
       - "scripts/**"
       - "package.json"
@@ -57,7 +58,7 @@ jobs:
           node --check www/js/app.js
           node --check www/js/mobile-ui.js
           node --check www/js/save-manager.js
-          node --test tests/save-roundtrip.test.cjs
+          node --test tests/save-roundtrip.test.cjs tests/africa.test.cjs
 
       - name: Instalar Capacitor
         run: npm install --no-audit --no-fund
