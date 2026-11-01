@@ -14,6 +14,8 @@ if not match:
 source=Path("android-native/AtlasExportPlugin.java").read_text(encoding="utf-8")
 source=source.replace("__PACKAGE__",match.group(1))
 (main.parent/"AtlasExportPlugin.java").write_text(source,encoding="utf-8")
+import_source=Path("android-native/AtlasImportPlugin.java").read_text(encoding="utf-8")
+(main.parent/"AtlasImportPlugin.java").write_text(import_source.replace("__PACKAGE__",match.group(1)),encoding="utf-8")
 marker="public class MainActivity extends BridgeActivity {"
 if marker not in body:
     raise SystemExit("No se encontró la clase MainActivity")
@@ -21,7 +23,7 @@ if "registerPlugin(AtlasExportPlugin.class)" not in body:
     body=body.replace(marker,marker+"""
     @Override
     public void onCreate(android.os.Bundle savedInstanceState) {
-        registerPlugin(AtlasExportPlugin.class);
+        registerPlugin(AtlasExportPlugin.class);\n        registerPlugin(AtlasImportPlugin.class);
         super.onCreate(savedInstanceState);
     }
 """,1)
