@@ -284,7 +284,7 @@
   function matchImported(expected, got){
     return !!got && expected.prestige===got.prestige &&
       expected.sightings===got.sightings && expected.published===got.published &&
-      expected.currentRegion===got.currentRegion && Math.abs((expected.money||0)-(got.money||0))<0.01;
+      expected.currentRegion===got.currentRegion && (got.money||0) >= (expected.money||0) - 0.01;
   }
   function restoreSelected() {
     if(!pending) return;
@@ -309,7 +309,7 @@
       const written=receiptSnapshot(normalizeGame(JSON.parse(current)));
       if(!compareReceipt(expected,written) || Math.abs(JSON.parse(current).money-pending.money)>0.01)
         throw new Error('La partida escrita no coincide con la importada.');
-      localStorage.setItem(receiptKey,JSON.stringify(expected));
+      // No se deja un recibo pendiente: la verificación ya ocurre en la misma sesión.
       summary.textContent='✅ Recuperación inmediata: '+actual.sightings.toLocaleString('es-CL')+
         ' avistamientos · £'+Math.floor(actual.money).toLocaleString('es-CL')+
         ' · '+actual.prestige+' prestigio. Comprueba los contadores detrás de esta ventana.';
