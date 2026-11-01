@@ -56,9 +56,8 @@ test('exporta y recupera una partida real, confirmando escritura y reinicio',asy
  await second.el.saveImportBtn.fire('click');
  assert.equal(second.reloaded,false);
  assert.equal(JSON.parse(store[KEY]).sightings.zorro_rojo,1314);
- const third=launch(store,{});
- assert.match(third.el.saveManagerStatus.textContent,/partida importada/i);
- assert.match(third.el.saveImportSummary.textContent,/1314/);
+ assert.match(second.el.saveManagerStatus.textContent,/Partida aplicada/i);
+ assert.match(second.el.saveImportSummary.textContent,/1[.,]314/);
 });
 test('rechaza un archivo JSON ajeno sin reemplazar la partida',async()=>{
  const store={[KEY]:JSON.stringify(fixture())};const before=store[KEY];
