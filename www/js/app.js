@@ -1617,6 +1617,10 @@ const RESEARCH_NODES=[
   {id:'flota_1', name:'Segundo destacamento', desc:'Permite una expedición adicional simultánea', money:260, knowledge:220, req:'rutas_1', once:true, effect(s){s.upgrades.fleet=1;}},
   {id:'gabinete_1', name:'Gabinete de especímenes', desc:'Los animales pueden dejar coleccionables raros', money:520, knowledge:460, req:'sociedad_1', once:true, effect(s){s.upgrades.specimenDrops=1;}},
   {id:'asia_1', name:'Cartografía de Asia', desc:'Desbloquea el acceso a Asia; cada región exige un prestigio mínimo acumulado, sin consumirlo', money:800, knowledge:650, req:'rutas_2', reqItem:'asia_map', reqItemQty:1, once:true, effect(s){s.upgrades.asiaUnlocked=1;}}
+
+  ,{id:'fondos_x1', name:'Fondos científicos I · ×1', desc:'Habilita el aporte básico £100 → 70 conocimiento en Sociedad', money:0, knowledge:0, once:true, effect(s){s.upgrades.fundingTier=1;}},
+  {id:'fondos_x10', name:'Fondos científicos II · ×10', desc:'Permite aportes de £1.000 → 700 conocimiento en una operación', money:250, knowledge:150, req:'fondos_x1', once:true, effect(s){s.upgrades.fundingTier=10;}},
+  {id:'fondos_x100', name:'Fondos científicos III · ×100', desc:'Permite aportes de £10.000 → 7.000 conocimiento en una operación', money:1200, knowledge:650, req:'fondos_x10', once:true, effect(s){s.upgrades.fundingTier=100;}}
 ];
 
 function initialState(){
@@ -1626,7 +1630,7 @@ function initialState(){
     asiaPricingVersion:3, currentRegion:region, habitat:'bosque', time:'amanecer', season:'primavera',
     discovered:{}, sightings:{}, stages:{}, feedObs:{}, dimorphism:{}, sexSeen:{}, specialSeen:{}, specialFound:{}, published:{},
     log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial de prueba: £420. En Corona puedes simular más libras.'],
-    upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0}, purchases:{},
+    upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,fundingTier:1}, purchases:{},
     regionUnlocked:{[REGIONS[0].id]:true}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', crownCoins:0, lastEncounter:null,
     lastTick:Date.now(), lastGrant:0, autoHourly:{}, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
   };
@@ -2112,7 +2116,13 @@ function unlockRegion(id){
 }
 function travelToRegion(id){ setRegion(id); tab='field'; renderPanel(); persist(); }
 function fieldAid(kind){
-  if(kind==='knowledge'){ state.knowledge+=150; pushLog('📜 Ayuda de campo: +150 conocimiento.'); render(); return; }
+  if(kind==='knowledge'){
+    state.knowledge+=150;
+    pushLog('📜 Ayuda de campo: +150 conocimiento.');
+    // Conservar abierto el panel <details> de herramientas.
+    renderCounters(); updateFieldOutput(); persist();
+    return;
+  }
   const runs = kind==='sightings'? 10 : 5;
   batchingOffline=true;
   try{ for(let i=0;i<runs;i++) encounter('manual'); } finally { batchingOffline=false; }
@@ -2120,10 +2130,15 @@ function fieldAid(kind){
   else { state.knowledge+=60; pushLog('🧭 Sesión guiada de campo completada.'); }
   renderCounters(); updateFieldOutput(); persist();
 }
-function spendMoneyForKnowledge(){
-  const cost=100, gain=70;
+function spendMoneyForKnowledge(multiplier=1){
+  if(![1,10,100].includes(multiplier)) return;
+  const max=state.purchases.fondos_x100?100:state.purchases.fondos_x10?10:1;
+  if(multiplier>max) return;
+  const cost=100*multiplier, gain=70*multiplier;
   if(state.money<cost) return;
-  state.money-=cost; state.knowledge+=gain; pushLog('📚 La Sociedad transforma £'+cost+' en '+gain+' conocimiento.'); render();
+  state.money-=cost; state.knowledge+=gain;
+  pushLog('📚 Aporte científico ×'+multiplier+': £'+fmt(cost)+' por '+fmt(gain)+' conocimiento.');
+  render();
 }
 function compileAtlas(){
   const total=Object.keys(state.published).length;
@@ -2331,6 +2346,7 @@ function renderJournal(){
 
 function renderResearch(){
   const layout={
+    fondos_x1:[3,1],fondos_x10:[4,1],fondos_x100:[5,1],
     prismaticos_1:[1,1],prismaticos_2:[2,1],cuaderno_1:[1,2],sociedad_1:[2,2],sociedad_2:[3,2],gabinete_1:[4,2],
     metodo_1:[1,3],metodo_2:[2,3],metodo_3:[3,3],metodo_4:[4,3],
     novato:[1,4],capacitacion_1:[2,4],capacitacion_2:[3,4],astillero:[4,4],
@@ -2388,7 +2404,7 @@ function renderSociety(){
     <div class="choice-row">
       <button class="btn gold" data-action="grant" ${Date.now()-state.lastGrant<60000 || !identified?'disabled':''}>Solicitar subvención</button>
       <button class="btn alt" data-action="exchange-notes" ${state.knowledge<40?'disabled':''}>Notas → Libras</button>
-      <button class="btn alt" data-action="money-to-knowledge" ${state.money<100?'disabled':''}>£100 → 70 conocimiento</button>
+      ${[1,10,100].map(mult=>'<button class="btn '+(mult===1?'gold':'alt')+'" data-action="money-to-knowledge" data-id="'+mult+'" '+(state.money<100*mult || (mult>1&&!state.purchases['fondos_x'+mult])?'disabled':'')+'>×'+mult+' · £'+fmt(100*mult)+' → '+fmt(70*mult)+' conoc.</button>').join('')}
     </div>
     <div class="small">Subvención disponible cada 60 s · Intercambio de libras por conocimiento para financiar estudios.</div>
     <div class="req"><strong>Fondos disponibles</strong><div class="small">£${fmt(state.money)} · ${fmt(state.knowledge)} conocimiento</div></div>
@@ -2445,8 +2461,10 @@ function renderMuseum(){
  const count=exhibitIds.length;
  const next=MUSEUM_WINGS[state.museum.wing];
  const publishedIds=Object.keys(SPECIES).filter(id=>state.published[id] || exhibits[id]);
- return `<div class="grid-2">
- <section class="card stack"><h3 class="section">🏛️ Museo de Historia Natural</h3>
+ return `<div class="grid-2 museum-v33">
+ <section class="card stack museum-v33-hall">
+   <header class="museum-v33-heading"><span class="museum-v33-eyebrow">GABINETE DE HISTORIA NATURAL · 1842</span><h3 class="section">🏛️ Museo de Historia Natural</h3><p class="small">Colección científica · ${count} vitrinas ocupadas de ${museumCapacity()}</p></header>
+   <div class="museum-v33-scene" aria-hidden="true"><span>🌿</span><span>🏛️</span><span>🪴</span></div>
   <div class="subtabs">${[['exhibitions','🖼️ Exposiciones'],['fossils','🦴 Fósiles'],['relicts','🗿 Relictos']].map(([id,label])=>`<button class="subtab ${state.museumView===id?'active':''}" data-action="museum-tab" data-id="${id}">${label}</button>`).join('')}</div>
   ${state.museumView==='exhibitions' ? `
     <div class="small">Expón especies investigadas 5/5 y con monografía para producir libras automáticamente.</div>
@@ -2455,11 +2473,11 @@ function renderMuseum(){
       <div class="small">Ingresos: £${museumRate().toFixed(2)} por segundo (hasta 8 h offline)</div>
     </div>
     ${next?`<button class="btn" data-action="expand-museum" ${state.prestige<next.prestige||state.money<next.cost?'disabled':''}>Ampliar: ${next.name} · £${next.cost} y ${next.prestige} prestigio</button>`:`<div class="badge">Nivel máximo del prototipo</div>`}
-    <div class="showcase-grid">${exhibitIds.length?exhibitIds.map(id=>`<div class="showpiece"><div class="sprite-wrap">${getSpriteMarkup(id)}</div><strong>${SPECIES[id].name}</strong><div class="small">${SPECIES[id].rare}</div><div class="badge">£${exhibitIncome(id).toFixed(2)}/s</div><button class="btn alt" data-action="remove-exhibit" data-id="${id}">Cambiar especie</button></div>`).join(''):`<div class="small">Aún no has montado exposiciones.</div>`}</div>
+    <div class="showcase-grid museum-v33-showcases">${exhibitIds.length?exhibitIds.map(id=>`<div class="showpiece museum-v33-vitrine"><div class="museum-v33-frame"><div class="sprite-wrap">${getSpriteMarkup(id)}</div></div><strong>${SPECIES[id].name}</strong><div class="small">${SPECIES[id].rare}</div><div class="badge">£${exhibitIncome(id).toFixed(2)}/s</div><button class="btn alt" data-action="remove-exhibit" data-id="${id}">Cambiar especie</button></div>`).join(''):`<div class="small">Aún no has montado exposiciones.</div>`}</div>
     <div class="divider"></div><h3 class="section">🐾 Animales con monografía</h3>
     <div class="list">${publishedIds.map(id=>{ const owned=!!exhibits[id],complete=stage(id)===5 && !!state.published[id],price=exhibitPrice(id); return `<div class="atlas-region"><div class="head" style="display:flex;gap:8px;align-items:center"><div class="sprite-wrap">${getSpriteMarkup(id)}</div><div><strong>${visibleName(id)}</strong><div class="small">${stage(id)}/5 · ${owned?'Expuesto · £'+exhibitIncome(id).toFixed(2)+'/s':complete?'Elegible para exponer':'Investigación incompleta'}</div></div></div>${owned?'<span class="badge">En sala</span>':`<button class="btn" data-action="exhibit" data-id="${id}" ${!complete || count>=museumCapacity() || state.money<price?'disabled':''}>Exponer · £${price} · +£${exhibitIncome(id).toFixed(2)}/s</button>`}</div>`; }).join('')||'<div class="small">Publica monografías desde Sociedad para habilitar animales en el museo.</div>'}</div>
   ` : state.museumView==='fossils' ? `<div class="locked-panel"><div class="big-lock">🦴</div><div><strong>Fósiles</strong><div class="small">Aquí aparecerán las piezas paleontológicas y futuras salas temáticas.</div></div></div>` : `<div class="locked-panel"><div class="big-lock">🗿</div><div><strong>Relictos</strong><div class="small">Espacio reservado para hallazgos raros y piezas únicas de expedición.</div></div></div>`}
- </section><section class="card stack"><h3 class="section">📊 Resumen del museo</h3>
+ </section><section class="card stack museum-v33-ledger"><h3 class="section">📊 Registro del museo</h3>
    <div class="req"><strong>Exposiciones activas</strong><div class="small">${count}</div></div>
    <div class="req"><strong>Capacidad total</strong><div class="small">${museumCapacity()}</div></div>
    <div class="req"><strong>Ingreso pasivo</strong><div class="small">£${museumRate().toFixed(2)} / segundo</div></div>
@@ -2584,7 +2602,9 @@ function renderObjects(){
    const asia=state.inventory.asia_map_piece||0,africa=state.inventory.africa_map_piece||0;
    content=`<section class="inventory-block"><h4>🏛️ Coleccionables y cartografía</h4><div class="small">Mapas fabricados, fósiles y piezas singulares. No ocupan slots de equipo.</div><div class="inventory-items">${all.filter(([id])=>collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div><div class="divider"></div><h4>🗺️ Fabricación de mapas</h4><div class="inventory-items">${['asia_map','africa_map'].map(id=>recipeCard(id,RECIPES[id])).join('')}</div><div class="small">Mapa de Asia: ${Math.min(10,asia)}/10 fragmentos disponibles · Mapa de África: ${Math.min(10,africa)}/10. El mapa de África aún no desbloquea regiones.</div></section>`;
  }
- return `<section class="card stack inventory-main"><h3 class="section">🎒 Inventario</h3><p class="small">Organiza tus hallazgos en cuatro pestañas. Solo el Equipo utiliza los tres slots activos.</p><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${sections.map(([id,label])=>`<button type="button" role="tab" aria-selected="${selected===id?'true':'false'}" class="inventory-subtab ${selected===id?'active':''}" data-action="inventory-tab" data-id="${id}">${label}</button>`).join('')}</div>${content}</section>`;
+ const ownedEntries=Object.entries(state.inventory).filter(([,qty])=>Number(qty)>0);
+ const equipped=Object.values(state.equipment).filter(Boolean).length;
+ return `<section class="card stack inventory-main inventory-v33"><header class="inventory-v33-header"><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3 class="section">🎒 Inventario</h3><div class="inventory-v33-stats"><span>📦 ${ownedEntries.length} tipos de objetos</span><span>🎽 ${equipped}/3 equipados</span></div></header><p class="small">Organiza tus hallazgos en cuatro pestañas. Solo el Equipo utiliza los tres slots activos.</p><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${sections.map(([id,label])=>`<button type="button" role="tab" aria-selected="${selected===id?'true':'false'}" class="inventory-subtab ${selected===id?'active':''}" data-action="inventory-tab" data-id="${id}">${label}</button>`).join('')}</div>${content}</section>`;
 }
 
 
@@ -2722,7 +2742,7 @@ function bindPanel(){
     if(act==='publish'){ publishMonograph(id); }
     if(act==='society-tab'){state.societyView=id; renderPanel(); persist();}
     if(act==='publication-tab'){state.publicationView=id; renderPanel(); persist();}
-    if(act==='money-to-knowledge'){spendMoneyForKnowledge();}
+    if(act==='money-to-knowledge'){spendMoneyForKnowledge(Number(id)||1);}
     if(act==='compile-atlas'){compileAtlas();}
     if(act==='grant'){ requestGrant(); }
     if(act==='exchange-notes'){ exchangeNotes(); }

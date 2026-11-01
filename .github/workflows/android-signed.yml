@@ -45,7 +45,7 @@ jobs:
           npx cap add android
           npx cap sync android
 
-      - name: Habilitar guardado nativo en Descargas
+      - name: Habilitar exportación e importación nativa de partidas
         run: python3 scripts/install-atlas-export.py
 
       - name: Preparar almacén de firma

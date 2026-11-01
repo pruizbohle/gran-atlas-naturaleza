@@ -8,15 +8,15 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icons/atlas-icon.svg" type="image/svg+xml" />
-  <title>El Gran Atlas v3.2.0 · Campo y Cuaderno</title>
-  <link rel="stylesheet" href="css/styles.css?v=3.2.0" />
+  <title>El Gran Atlas v3.3.0 · Campo y Cuaderno</title>
+  <link rel="stylesheet" href="css/styles.css?v=3.3.0" />
 </head>
 <body>
   <div id="app" class="app-shell">
     <header class="topbar">
       <div>
         <div class="brand">✦ El Gran Atlas de la Naturaleza</div>
-        <div class="subbrand">v3.2.0 · Nueva expedición visual</div>
+        <div class="subbrand">v3.3.0 · Nueva expedición visual</div>
       </div>
       <div class="region-pill" id="regionPill">Islas Británicas · HX-01-09</div>
       <button id="saveManagerOpen" class="save-tools-launch" type="button" aria-label="Respaldo y recuperación de partida" title="Respaldo y recuperación de partida">💾</button>
@@ -88,16 +88,17 @@
       <button id="saveDownloadBtn" class="btn gold save-action" type="button">⬇️ Guardar en el teléfono</button>
       <button id="saveExportBtn" class="btn alt save-action" type="button">📤 Compartir respaldo</button>
       <div class="divider"></div>
-      <label class="save-file-label" for="saveImportFile">📥 Seleccionar respaldo JSON</label>
-      <input id="saveImportFile" type="file" accept=".json,application/json" />
+      <label class="save-file-label" for="saveImportFile">📥 Recuperar una partida JSON</label>
+      <button id="saveNativeImportBtn" class="btn gold save-action" type="button">📁 Abrir archivo del teléfono</button>
+      <input id="saveImportFile" type="file" accept=".json,application/json" aria-label="Seleccionar archivo JSON desde navegador" />
       <div id="saveImportSummary" class="save-import-summary small" aria-live="polite">Aún no seleccionaste un archivo.</div>
       <button id="saveImportBtn" class="btn save-action" type="button" disabled>Restaurar partida seleccionada</button>
       <div id="saveManagerStatus" class="save-status small" aria-live="polite"></div>
       <p class="small save-warning">Importar reemplaza el avance actual. Antes de hacerlo, se crea una copia local de emergencia. Para conservarlo en otro teléfono, exporta también el archivo.</p>
     </section>
   </div>
-  <script src="js/app.js?v=3.2.0"></script>
-  <script src="js/mobile-ui.js?v=3.2.0"></script>
-  <script src="js/save-manager.js?v=3.2.0"></script>
+  <script src="js/app.js?v=3.3.0"></script>
+  <script src="js/mobile-ui.js?v=3.3.0"></script>
+  <script src="js/save-manager.js?v=3.3.0"></script>
 </body>
 </html>
