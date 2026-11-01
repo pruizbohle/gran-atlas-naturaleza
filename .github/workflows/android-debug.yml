@@ -6,6 +6,8 @@ on:
       - main
       - fase3/android-alpha
       - fase3/respaldos-v3.0.1
+      - fase3/redisenio-v3.1
+      - fase3/cuaderno-v3.1.1
     paths:
       - "www/**"
       - "package.json"
@@ -44,6 +46,12 @@ jobs:
           echo "ANDROID_HOME=$ANDROID_HOME"
           test -d "$ANDROID_HOME"
           ls "$ANDROID_HOME/platforms" || true
+
+      - name: Verificar JavaScript del juego
+        run: |
+          node --check www/js/app.js
+          node --check www/js/mobile-ui.js
+          node --check www/js/save-manager.js
 
       - name: Instalar Capacitor
         run: npm install --no-audit --no-fund

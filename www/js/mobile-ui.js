@@ -38,7 +38,7 @@
     if(window.matchMedia('(max-width:700px)').matches) window.scrollTo({top:0,behavior:'instant'});
   }));
   document.getElementById('panel')?.addEventListener('click',e=>{
-    if(e.target.closest('[data-action="select-journal"]') && window.matchMedia('(max-width:700px)').matches){
+    if(e.target.closest('[data-action="select-journal"]') && !document.querySelector('.journal-v311') && window.matchMedia('(max-width:700px)').matches){
       requestAnimationFrame(()=>document.querySelector('.journal-detail')?.scrollIntoView({block:'start',behavior:'smooth'}));
     }
   });

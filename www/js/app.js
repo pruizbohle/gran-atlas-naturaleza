@@ -1670,6 +1670,12 @@ let batchingOffline=false;
 let diaryDirty=false;
 let lastPanelSignature='';
 let currentAutoNotice='';
+// Estado visual del catálogo, no forma parte de la partida.
+let journalRailQuery='';
+let journalSortMode='catalog';
+let journalRailScrollTop=0;
+let journalSheetScrollTop=0;
+
 let autoDiaryBuffer={searches:0,hits:0,knowledge:0};
 let lastAutoDiaryFlush=0;
 const panel=document.getElementById('panel');
@@ -2012,7 +2018,7 @@ function updateFieldOutput(){
  if(tab!=='field')return;
  const last=state.lastEncounter;
  const result=document.getElementById('fieldResult');
- if(result){const signature=(last?.title||'')+'|'+(last?.subtitle||'');if(signature!==lastPanelSignature){result.innerHTML=`<div class="sprite-wrap">${last?.sprite || '<div style="font-size:36px">🔭</div>'}</div><strong>${last?.title || 'Aún no hay observación reciente'}</strong><div class="small subtitle">${last?.subtitle || 'Explora para descubrir fauna de la región.'}</div>`;lastPanelSignature=signature;}}
+ if(result){const signature=(last?.title||'')+'|'+(last?.subtitle||'');if(signature!==lastPanelSignature){result.innerHTML=encounterCardMarkup(last);result.classList.remove('encounter-reveal');void result.offsetWidth;result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
  const autoNoticeEl=document.getElementById('autoNotice'); if(autoNoticeEl) autoNoticeEl.textContent=currentAutoNotice||'Sin actividad automática reciente.';
  const log=document.getElementById('fieldLog');
  if(log && diaryDirty && Date.now()-lastDisplayRefresh>800){log.innerHTML=state.log.map(x=>`<div class="log">${esc(x)}</div>`).join('');lastDisplayRefresh=Date.now();diaryDirty=false;}
@@ -2038,6 +2044,19 @@ function renderCrown(){
   </section>`;
 }
 
+function filterJournalRail(){
+  const rail=panel.querySelector('#journalSpeciesRail');
+  if(!rail)return;
+  const q=journalRailQuery.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+  let count=0;
+  rail.querySelectorAll('[data-action="select-journal"]').forEach(button=>{
+    const name=visibleName(button.dataset.id).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+    button.hidden=!!q&&!name.includes(q);
+    if(!button.hidden)count++;
+  });
+  const counter=panel.querySelector('#journalRailCount');
+  if(counter)counter.textContent=count===0?'Sin resultados':count+' especies';
+}
 function renderPanel(){
   lastPanelSignature='';diaryDirty=true;
   document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
@@ -2054,6 +2073,12 @@ function renderPanel(){
     panel.innerHTML='<section class="card stack"><h3>⚠️ No se pudo abrir este módulo</h3><p class="small">Puedes utilizar otra pestaña. Si el problema persiste, informa el nombre de la sección.</p></section>';
   }
   bindPanel();
+  if(tab==='journal'){
+    const rail=panel.querySelector('#journalSpeciesRail');
+    const sheet=panel.querySelector('.journal-v311 .journal-sheet');
+    if(rail)rail.scrollTop=journalRailScrollTop;
+    if(sheet)sheet.scrollTop=journalSheetScrollTop;
+  }
 }
 
 const ATLAS_CONTINENTS=[
@@ -2175,111 +2200,125 @@ function renderAtlas(){
   </div>`;
 }
 
+// v3.1: escenografía SVG ligera; no afecta encuentros, especies, guardados ni economía.
+function fieldBackdropMarkup(habitat){
+  const trees=habitat==='bosque'||habitat==='mediterraneo'||habitat==='humedal';
+  const wet=habitat==='rio'||habitat==='costa'||habitat==='humedal';
+  const arid=habitat==='desierto'||habitat==='estepa';
+  const peaks=habitat==='montana'||habitat==='tundra';
+  return `<svg class="field-backdrop" viewBox="0 0 640 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <defs><linearGradient id="fieldSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--biome-sky)"/><stop offset="1" stop-color="var(--biome-haze)"/></linearGradient></defs>
+    <rect width="640" height="280" fill="url(#fieldSky)"/>
+    <circle class="field-sun" cx="502" cy="57" r="26" fill="#fce4a7" opacity=".78"/>
+    <path d="M0 171 Q72 119 146 159 T315 156 T490 148 T640 166 V280 H0Z" fill="var(--biome-far)" opacity=".85"/>
+    ${peaks?`<path d="M0 185 L97 65 188 177 306 70 415 191 513 82 640 179 V280 H0Z" fill="#667e81" opacity=".8"/><path d="M66 106 97 65 126 112 103 104 94 117Z M271 110 306 70 347 122 318 111 302 123Z M478 123 513 82 540 119 515 111 502 126Z" fill="#f0e9dd" opacity=".94"/>`:''}
+    ${arid?`<path d="M0 210 Q94 169 204 200 T415 207 T640 191 V280 H0Z" fill="#b99e6e" opacity=".75"/><path d="M0 239 Q146 193 292 224 T640 210 V280 H0Z" fill="#b09567"/>`:''}
+    ${trees?`<g fill="var(--biome-tree)" opacity=".86"><path d="M20 207 V137 L-8 160 22 104 45 151 24 139 24 207Z"/><path d="M88 205 V143 L64 157 88 92 113 159 91 143 91 205Z"/><path d="M558 201 V138 L528 153 558 91 588 161 561 141 561 201Z"/><path d="M628 213 V128 L595 147 628 71 662 155 632 134 632 213Z"/><circle cx="148" cy="166" r="38"/><circle cx="480" cy="155" r="35"/></g><g stroke="#756b4e" stroke-width="6"><path d="M149 167v55 M480 160v60"/></g>`:''}
+    <path d="M0 211 Q110 183 217 209 T436 209 T640 199 V280 H0Z" fill="var(--biome-ground)"/>
+    ${wet?`<path d="M0 229 Q120 217 222 231 T434 228 T640 225 V280 H0Z" fill="#7cbbc1" opacity=".86"/><g fill="none" stroke="#e7f2e8" stroke-width="2" opacity=".62"><path d="M28 248q40-6 74 0 M252 261q35-5 75 0 M461 244q44-6 85 0"/></g>`:arid?`<path d="M0 260 Q165 223 312 251 T640 242V280H0Z" fill="#c8b080"/>`:`<g fill="var(--biome-grass)" opacity=".9"><path d="M0 245q115-18 207-3t240-9 193 3v44H0Z"/></g>`}
+    <g stroke="var(--biome-detail)" stroke-width="2.2" stroke-linecap="round" opacity=".8"><path d="M62 263l-6-14m6 14 7-12 M206 276l-4-17m4 17 8-12 M423 268l-3-16m3 16 6-9 M591 265l-5-16m5 16 7-12"/></g>
+  </svg>`;
+}
+function encounterCardMarkup(last){
+  const hasAnimal=!!last?.species;
+  const title=last?.title||'Aún sin avistamientos';
+  const detail=last?.subtitle||'Busca animales para comenzar tu registro de campo.';
+  return `<div class="encounter-art ${hasAnimal?'animal-found':'empty-encounter'}"><div class="sprite-wrap">${last?.sprite || '<span class="field-binoculars" aria-hidden="true">🔭</span>'}</div></div>
+    <div class="encounter-copy"><strong>${title}</strong><div class="small subtitle">${detail}</div></div>`;
+}
 function renderField(){
   const region=currentRegion();
   const scene=regionLandscape(region.id);
-  const last=state.lastEncounter;
-  return `<div class="grid-2">
-    <section class="card stack">
-      <h3 class="section">🌿 Salida de campo</h3>
-      <div class="small">Elige hábitat, horario y estación. La búsqueda manual genera conocimiento y avistamientos. El equipo automático hace búsquedas periódicas.</div>
-      <div class="helper-row">
-        <button class="btn gold" data-action="field-aid" data-id="knowledge">+ conocimiento</button>
-        <button class="btn gold" data-action="field-aid" data-id="sightings">+ avistamientos</button>
-        <button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button>
+  const habitat=state.habitat;
+  const validBiomes=['bosque','pradera','rio','costa','tundra','montana','estepa','mediterraneo','desierto','humedal'];
+  const biome=validBiomes.includes(habitat)?habitat:'bosque';
+  const lights=['amanecer','dia','atardecer','noche'];
+  const light=lights.includes(state.time)?state.time:'dia';
+  return `<div class="field-v31 grid-2">
+    <section class="card field-expedition">
+      <div class="field-heading"><div><span class="field-eyebrow">CUADERNO DE CAMPO · ${region.code}</span><h3 class="section">${region.name}</h3></div><span class="field-compass" aria-hidden="true">✦</span></div>
+      <div class="field-condition-line" aria-label="Condiciones de búsqueda"><span>${habitatLabel(habitat)}</span><span>${timeLabel(state.time)}</span><span>${seasonLabel(state.season)}</span></div>
+      <div class="scene biome-${biome} light-${light}" id="fieldScene" role="group" aria-label="Paisaje de ${habitatLabel(habitat)}">
+        ${fieldBackdropMarkup(habitat)}
+        <div class="scene-top"><span class="scene-locale">✦ ${scene[3].replace(/[^\p{Extended_Pictographic}\s]/gu,'').trim()||'NATURALEZA'}</span><span class="scene-survey">OBSERVACIÓN Nº ${fmt(totalSightings()+1)}</span></div>
+        <div class="result-card" id="fieldResult" aria-live="polite">${encounterCardMarkup(state.lastEncounter)}</div>
+        <div class="scene-bottom"><span>El mundo natural espera ser documentado</span><span>1842 · ${region.code}</span></div>
       </div>
+      <button class="big-action field-observe" data-action="search-manual" type="button"><span aria-hidden="true">⌕</span> Observar fauna <span aria-hidden="true">✦</span></button>
       <div class="field-filter-block ${state.fieldFiltersOpen?'field-filter-open':''}">
-        <button class="field-filter-toggle" type="button" data-action="toggle-field-filters" aria-expanded="${!!state.fieldFiltersOpen}">
-          <span>⚙️ Configurar observación</span>
-          <span class="field-filter-summary">${habitatLabel(state.habitat)} · ${timeLabel(state.time)} · ${seasonLabel(state.season)}</span>
-          <span aria-hidden="true">${state.fieldFiltersOpen?'▴':'▾'}</span>
-        </button>
+        <button class="field-filter-toggle" type="button" data-action="toggle-field-filters" aria-expanded="${!!state.fieldFiltersOpen}"><span>⚙️ Condiciones de exploración</span><span class="field-filter-summary">${habitatLabel(habitat)} · ${timeLabel(state.time)} · ${seasonLabel(state.season)}</span><span aria-hidden="true">${state.fieldFiltersOpen?'▴':'▾'}</span></button>
         <div class="field-filter-controls">
-      <div>
-        <div class="small">Hábitat</div>
-        <div class="choice-row">${region.habitats.map(h=>`<button class="choice ${state.habitat===h?'active':''}" data-action="set-habitat" data-id="${h}">${habitatLabel(h)}</button>`).join('')}</div>
-      </div>
-      <div>
-        <div class="small">Horario</div>
-        <div class="choice-row">${['amanecer','dia','atardecer','noche'].map(t=>`<button class="choice ${state.time===t?'active':''}" data-action="set-time" data-id="${t}">${timeLabel(t)}</button>`).join('')}</div>
-      </div>
-      <div>
-        <div class="small">Estación</div>
-        <div class="choice-row">${['primavera','verano','otono','invierno'].map(s=>`<button class="choice ${state.season===s?'active':''}" data-action="set-season" data-id="${s}">${seasonLabel(s)}</button>`).join('')}</div>
-      </div>
+          <div><div class="small field-choice-label">HÁBITAT</div><div class="choice-row">${region.habitats.map(h=>`<button class="choice ${state.habitat===h?'active':''}" data-action="set-habitat" data-id="${h}">${habitatLabel(h)}</button>`).join('')}</div></div>
+          <div><div class="small field-choice-label">HORARIO</div><div class="choice-row">${['amanecer','dia','atardecer','noche'].map(t=>`<button class="choice ${state.time===t?'active':''}" data-action="set-time" data-id="${t}">${timeLabel(t)}</button>`).join('')}</div></div>
+          <div><div class="small field-choice-label">ESTACIÓN</div><div class="choice-row">${['primavera','verano','otono','invierno'].map(t=>`<button class="choice ${state.season===t?'active':''}" data-action="set-season" data-id="${t}">${seasonLabel(t)}</button>`).join('')}</div></div>
         </div>
       </div>
-      <div class="scene" style="background:linear-gradient(${scene[0]},${scene[1]} 57%,${scene[2]} 58%)">
-        <div class="scene-title">${scene[3]}</div>
-        <div class="result-card" id="fieldResult">
-          <div class="sprite-wrap">${last?.sprite || '<div style="font-size:42px">🔭</div>'}</div>
-          <h3>${last?.title || 'Sin avistamiento'}</h3>
-          <div class="small">${last?.subtitle || 'Explora para registrar animales, o usa las ayudas rápidas para acelerar el prototipo.'}</div>
-        </div>
-      </div>
-      <button class="big-action" data-action="search-manual">🔭 Buscar animales</button>
-      <div class="small">Cada encuentro suma conocimiento y 1 avistamiento. Variantes especiales opcionales.</div>
+      <details class="field-toolkit"><summary><span>🎒 Herramientas del naturalista</span><span>Ayudas de prueba · desplegar</span></summary>
+        <div class="helper-row"><button class="btn gold" data-action="field-aid" data-id="knowledge">+ conocimiento</button><button class="btn gold" data-action="field-aid" data-id="sightings">+ avistamientos</button><button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button></div>
+      </details>
     </section>
-    <section class="card stack">
-      <h3 class="section">📋 Diario</h3>
+    <section class="card field-diary"><div class="field-diary-head"><h3 class="section">✒️ Diario de expedición</h3><span class="field-diary-seal">REGISTRO</span></div>
       <div class="small" id="autoNotice">${currentAutoNotice||'Sin actividad automática reciente.'}</div>
       <div class="list" id="fieldLog">${state.log.map(x=>`<div class="log">${esc(x)}</div>`).join('')}</div>
     </section>
   </div>`;
 }
-
 function renderJournal(){
   const ids=currentRegion().species;
-  const selected=state.selectedJournal || ids[0];
-  if(!ids.includes(selected)) state.selectedJournal=ids[0];
+  if(!ids.includes(state.selectedJournal)) state.selectedJournal=ids.find(sid=>stage(sid)>=1)||ids[0];
   const id=state.selectedJournal || ids[0];
   const sp=SPECIES[id];
   const st=stage(id);
   const next=st<5?stageRequirements(id,st):null;
-  return `<div class="mobile-species-picker">
-    <label for="mobileJournalSpecies">📖 Especie del Cuaderno</label>
-    <select id="mobileJournalSpecies" data-journal-select>
-      ${ids.map((sid,i)=>`<option value="${sid}" ${sid===id?'selected':''}>${i+1}. ${visibleName(sid)}</option>`).join('')}
-    </select>
-  </div><div class="journal-grid">
-    <section class="card">
-      <h3 class="section">📖 Cuaderno</h3>
-      <div class="small">Especies identificadas en esta región: <b>${regionIdentifiedCount(state.currentRegion)}/${ids.length}</b></div>
-      <div class="species-grid">
-        ${ids.map(sid=>speciesCard(sid, sid===id)).join('')}
-      </div>
-    </section>
-    <section class="card stack journal-detail">
-      <h3 class="section">${visibleName(id)}</h3>
-      <div class="journal-head"><div class="sprite-wrap">${state.discovered[id]?getSpriteMarkup(id,'normal'):'<div style="font-size:34px">❔</div>'}</div><div class="meta"><div>${rarityBadge(sp.rare)}</div><div class="small" style="margin-top:4px">${visibleLatin(id)}</div><div class="small">Etapa ${st}/5</div></div></div>
-      <div class="stages">${Array.from({length:5},(_,i)=>`<div class="stage ${i<st?'done':''}"></div>`).join('')}</div>
-      <div class="fact-grid">
-        <div class="fact-card"><strong>Avistamientos</strong><span>${fmt(sight(id))}</span></div>
-        <div class="fact-card"><strong>Observaciones comiendo</strong><span>${fmt(feed(id))}/10</span></div>
-        <div class="fact-card"><strong>Especiales</strong><span>${fmt(specials(id))}</span></div>
-        <div class="fact-card"><strong>Dimorfismo</strong><span>${sp.dimorphism?`${dimorphismProgress(id)}/2`:'No aplica'}</span></div>
-      </div>
-      ${SEXUAL_DIMORPHISM[id]?renderSexComparison(id):''}
-      <div class="req"><strong>Variantes observadas</strong><div class="specials-row">${specialBadges(id)}</div></div>
-      ${next?`<div class="req"><strong>Siguiente hito: ${next.label}</strong>
-        <div class="compact-list small">
-          <div>Requiere <b>${next.needSight}</b> avistamientos.</div>
-          <div>Costo: <b>£${next.money}</b> y <b>${next.knowledge}</b> conocimiento.</div>
-          <div>Adicional: ${next.extra}</div>
-          <div>Estado: ${next.allOk?'✅ lista para investigar':'⏳ todavía no cumple todos los requisitos'}</div>
+  const isKnown=!!state.discovered[id];
+  const stamps=['I','II','III','IV','V'].map((mark,i)=>`<div class="journal-stamp ${i<st?'earned':''}" aria-label="Etapa ${i+1} ${i<st?'alcanzada':'pendiente'}"><span>${i<st?'✦':mark}</span><small>${['Vista','Nombre','Conducta','Hábitos','Estudio'][i]}</small></div>`).join('');
+  const railIds=journalSortMode==='sightings'
+    ? [...ids].sort((a,b)=>sight(b)-sight(a)||ids.indexOf(a)-ids.indexOf(b))
+    : ids;
+  return `<div class="journal-v31 journal-v311">
+    <div class="journal-index journal-v311-heading"><span>📖 Cuaderno de campo</span><span class="small">${currentRegion().name} · ${regionIdentifiedCount(state.currentRegion)}/${ids.length} identificadas</span></div>
+    <div class="journal-grid journal-v311-layout">
+      <aside class="journal-v311-directory" aria-label="Catálogo de especies de la región">
+        <div class="journal-v311-filters">
+          <label for="journalRailSearch" class="sr-only">Buscar especie en esta región</label>
+          <input id="journalRailSearch" type="search" placeholder="⌕ Buscar especie" autocomplete="off" value="${esc(journalRailQuery).replace(/"/g,'&quot;')}" aria-label="Buscar especie" />
+          <label for="journalRailSort" class="sr-only">Ordenar especies</label>
+          <select id="journalRailSort" aria-label="Ordenar especies"><option value="catalog" ${journalSortMode==='catalog'?'selected':''}>Orden del catálogo</option><option value="sightings" ${journalSortMode==='sightings'?'selected':''}>Más avistadas</option></select>
+          <div class="journal-v311-count" id="journalRailCount" aria-live="polite">${ids.length} especies</div>
         </div>
-        <div class="progress"><div style="width:${Math.min(100, sight(id)/next.needSight*100)}%"></div></div>
-      </div>
-      <button class="btn ${next.allOk?'':'alt'}" data-action="advance-species" data-id="${id}" ${next.allOk?'':'disabled'}>Investigar etapa ${st+1}/5</button>`:
-      `<div class="req"><strong>Monografía completa</strong><div class="small">La especie ya puede publicarse en Sociedad si aún no lo has hecho.</div></div>`}
-      <div class="req"><strong>Clasificación</strong><div class="small">${taxonomyText(id)}</div></div><div class="req"><strong>Condiciones conocidas</strong>
-        <div class="mini-conditions small">
-          <div><b>Hábitats:</b> ${stage(id)>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos'}</div>
-          <div><b>Horarios:</b> ${stage(id)>=3?sp.times.map(timeLabel).join(', '):'por estudiar'}</div>
-          <div><b>Estaciones:</b> ${stage(id)>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio'}</div>
-        </div>
-      </div>
-    </section>
+        <nav class="journal-v311-rail" id="journalSpeciesRail" aria-label="Lista de especies, desplazamiento independiente">
+          ${railIds.map(sid=>{
+            const known=!!state.discovered[sid];
+            const selected=sid===id;
+            const name=visibleName(sid);
+            return `<button type="button" class="journal-v311-animal ${selected?'selected':''}" data-action="select-journal" data-id="${sid}" ${selected?'aria-current="true"':''} aria-label="${esc(name).replace(/"/g,'&quot;')}, ${fmt(sight(sid))} avistamientos, etapa ${stage(sid)} de 5">
+              <span class="journal-v311-avatar">${known?getSpriteMarkup(sid,'normal'):'<span class="journal-v311-unknown" aria-hidden="true">?</span>'}</span>
+              <span class="journal-v311-animal-name">${esc(name)}</span>
+              <span class="journal-v311-sightings" aria-label="${fmt(sight(sid))} avistamientos">👁 <b>${fmt(sight(sid))}</b></span>
+              <span class="journal-v311-progress">${stage(sid)}/5</span>
+            </button>`;
+          }).join('')}
+        </nav>
+      </aside>
+      <section class="card journal-detail journal-sheet">
+        <div class="journal-sheet-top"><span>ARCHIVO DEL NATURALISTA</span><span>FOLIO ${String(ids.indexOf(id)+1).padStart(3,'0')}</span></div>
+        <div class="journal-cover"><div class="journal-portrait"><div class="sprite-wrap">${isKnown?getSpriteMarkup(id,'normal'):'<div class="qmark">?</div>'}</div><span>ILUSTRACIÓN DE CAMPO</span></div><div class="journal-identity"><div class="journal-rarity">${rarityBadge(sp.rare)}</div><h2>${visibleName(id)}</h2><em>${visibleLatin(id)}</em><div class="journal-stage-label">Investigación · ${st} de 5 etapas</div></div></div>
+        <section class="journal-research"><div class="journal-block-heading"><strong>✦ Progreso científico</strong><span>${Math.round(st/5*100)}%</span></div><div class="journal-stamps">${stamps}</div><div class="journal-track"><span style="width:${st/5*100}%"></span></div></section>
+        <div class="journal-facts"><div><span>AVISTAMIENTOS</span><strong>${fmt(sight(id))}</strong></div><div><span>ALIMENTACIÓN</span><strong>${fmt(feed(id))}/10</strong></div><div><span>ESPECIALES</span><strong>${fmt(specials(id))}</strong></div><div><span>DIMORFISMO</span><strong>${sp.dimorphism?dimorphismProgress(id)+'/2':'—'}</strong></div></div>
+        <section class="journal-collection"><div class="journal-block-heading"><strong>◈ Variantes observadas</strong></div><div class="journal-variants">${specialBadges(id)}</div></section>
+        ${SEXUAL_DIMORPHISM[id]?`<section class="journal-collection"><div class="journal-block-heading"><strong>⚤ Dimorfismo sexual</strong><span>${dimorphismProgress(id)}/2</span></div>${renderSexComparison(id)}</section>`:''}
+        <section class="journal-milestone ${next?.allOk?'milestone-ready':''}">
+          ${next?`<div class="journal-block-heading"><strong>✒️ Próximo estudio · ${next.label}</strong><span>${st+1}/5</span></div>
+          <div class="journal-milestone-meter"><span style="width:${Math.min(100,sight(id)/Math.max(1,next.needSight)*100)}%"></span></div>
+          <p>Se necesitan <b>${next.needSight} avistamientos</b>, £${next.money} y ${next.knowledge} puntos de conocimiento.</p><p class="small">${next.extra}</p>
+          <button class="btn ${next.allOk?'':'alt'}" data-action="advance-species" data-id="${id}" ${next.allOk?'':'disabled'}>${next.allOk?'✦ Investigar etapa '+(st+1):'Estudio aún no disponible'}</button>`:
+          `<div class="journal-block-heading"><strong>🏛️ Monografía completa</strong><span>Sello V</span></div><p>La especie puede publicarse en Sociedad si aún no lo has hecho.</p>`}
+        </section>
+        <details class="journal-reference"><summary><span>▤ Clasificación científica</span><span>Consultar ficha</span></summary><div class="journal-reference-content">${taxonomyText(id)}</div></details>
+        <details class="journal-reference"><summary><span>⌁ Ecología y condiciones conocidas</span><span>Consultar ficha</span></summary><div class="journal-reference-content mini-conditions"><div><b>Hábitats:</b> ${st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos'}</div><div><b>Horarios:</b> ${st>=3?sp.times.map(timeLabel).join(', '):'por estudiar'}</div><div><b>Estaciones:</b> ${st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio'}</div></div></details>
+        <div class="journal-folio-bottom">EL GRAN ATLAS · ARCHIVO CIENTÍFICO · 1842</div>
+      </section>
+    </div>
   </div>`;
 }
 
@@ -2635,10 +2674,22 @@ function researchNodeCard(node){
 }
 
 function bindPanel(){
-  panel.querySelector('[data-journal-select]')?.addEventListener('change',e=>{
-    const id=e.target.value;
-    if(currentRegion().species.includes(id)){state.selectedJournal=id;renderPanel();persist();}
+  const rail=panel.querySelector('#journalSpeciesRail');
+  const sheet=panel.querySelector('.journal-v311 .journal-sheet');
+  rail?.addEventListener('scroll',()=>{journalRailScrollTop=rail.scrollTop;},{passive:true});
+  sheet?.addEventListener('scroll',()=>{journalSheetScrollTop=sheet.scrollTop;},{passive:true});
+  panel.querySelector('#journalRailSearch')?.addEventListener('input',e=>{
+    journalRailQuery=e.target.value;
+    journalRailScrollTop=0;
+    if(rail)rail.scrollTop=0;
+    filterJournalRail();
   });
+  panel.querySelector('#journalRailSort')?.addEventListener('change',e=>{
+    journalSortMode=e.target.value==='sightings'?'sightings':'catalog';
+    journalRailScrollTop=0;
+    renderPanel();
+  });
+  filterJournalRail();
   panel.querySelectorAll('[data-action]').forEach(el=>el.addEventListener('click', e=>{
     const act=e.currentTarget.dataset.action; const id=e.currentTarget.dataset.id;
     if(act==='set-region') setRegion(id);
@@ -2652,7 +2703,7 @@ function bindPanel(){
     if(act==='set-season'){ state.season=id; renderPanel(); persist(); }
     if(act==='search-manual') { encounter('manual'); persist(); }
     if(act==='field-aid'){ fieldAid(id); }
-    if(act==='select-journal'){ state.selectedJournal=id; renderPanel(); persist(); }
+    if(act==='select-journal'){ if(!currentRegion().species.includes(id))return; state.selectedJournal=id; journalSheetScrollTop=0; renderPanel(); persist(); }
     if(act==='advance-species'){ advanceSpecies(id); }
     if(act==='buy-node'){ buyNode(id); }
     if(act==='publish'){ publishMonograph(id); }
