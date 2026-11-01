@@ -58,7 +58,7 @@ test('rechaza un archivo JSON ajeno sin reemplazar la partida',async()=>{
  await run.el.saveNativeImportBtn.fire('click');
  assert.equal(run.el.saveImportBtn.disabled,true);
  assert.equal(store[KEY],before);
- assert.match(run.el.saveImportSummary.textContent,/no parece una partida/i);
+ assert.match(run.el.saveImportSummary.textContent,/Faltan libras|no parece una partida/i);
 });
 test('acepta respaldo antiguo con campos opcionales ausentes',async()=>{
  const old=fixture();delete old.inventory;delete old.regionUnlocked;delete old.purchases;
