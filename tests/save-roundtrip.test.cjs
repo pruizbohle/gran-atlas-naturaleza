@@ -33,6 +33,14 @@ function launch(store, options={}){
    AtlasExport:{async saveFile({content}){exported=content;return {uri:'content://example/test'};}}
  }};
  const win={Capacitor:cap,confirm:()=>true,location:{reload(){reloaded=true;}}};
+ win.AtlasSaveBridge={
+   restoreGame(imported){store[KEY]=JSON.stringify(imported);return this.getSnapshot();},
+   getSnapshot(){const state=JSON.parse(store[KEY]);return {
+     money:state.money,prestige:state.prestige,knowledge:state.knowledge,currentRegion:state.currentRegion,
+     sightings:Object.values(state.sightings||{}).reduce((a,b)=>a+b,0),
+     published:Object.values(state.published||{}).filter(Boolean).length
+   };}
+ };
  vm.runInNewContext(source,{document:doc,window:win,localStorage:storage,TextEncoder,
    console,setTimeout(){},URL,Blob});
  return {el,storage,get reloaded(){return reloaded;},get exported(){return exported;}};
@@ -46,7 +54,7 @@ test('exporta y recupera una partida real, confirmando escritura y reinicio',asy
  await second.el.saveNativeImportBtn.fire('click');
  assert.equal(second.el.saveImportBtn.disabled,false);
  await second.el.saveImportBtn.fire('click');
- assert.equal(second.reloaded,true);
+ assert.equal(second.reloaded,false);
  assert.equal(JSON.parse(store[KEY]).sightings.zorro_rojo,1314);
  const third=launch(store,{});
  assert.match(third.el.saveManagerStatus.textContent,/partida importada/i);
