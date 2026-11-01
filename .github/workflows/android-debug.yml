@@ -57,6 +57,7 @@ jobs:
           node --check www/js/app.js
           node --check www/js/mobile-ui.js
           node --check www/js/save-manager.js
+          node --test tests/save-roundtrip.test.cjs
 
       - name: Instalar Capacitor
         run: npm install --no-audit --no-fund
