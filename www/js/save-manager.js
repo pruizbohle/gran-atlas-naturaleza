@@ -1,4 +1,4 @@
-/* El Gran Atlas 3.0.1 — respaldos portables, sin cuentas ni servicios externos. */
+/* El Gran Atlas 3.3 — respaldos JSON con exportación e importación Android nativa. */
 (() => {
   'use strict';
   const STORAGE_KEY = 'gran_atlas_v05';
@@ -14,6 +14,7 @@
   const downloadButton = document.getElementById('saveDownloadBtn');
   const importButton = document.getElementById('saveImportBtn');
   const fileInput = document.getElementById('saveImportFile');
+  const nativeImportButton = document.getElementById('saveNativeImportBtn');
   const summary = document.getElementById('saveImportSummary');
   const status = document.getElementById('saveManagerStatus');
   if (!root || !open || !exportButton || !fileInput || !importButton) return;
@@ -96,7 +97,7 @@
     if (!raw) throw new Error('No hay una partida guardada todavía.');
     const data = validateGame(JSON.parse(raw));
     return { text: JSON.stringify({
-      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.2.0',
+      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.3.0',
       exportedAt: new Date().toISOString(), game: data
     }, null, 2), name: fileName() };
   }
@@ -154,24 +155,70 @@
     }
   }
   exportButton.addEventListener('click', exportSave);
-  fileInput.addEventListener('change', async () => {
+  function prepareImport(text, name) {
     pending = null;
     importButton.disabled = true;
     summary.textContent = 'Comprobando archivo…';
-    const file = fileInput.files?.[0];
-    if (!file) { summary.textContent = 'Aún no seleccionaste un archivo.'; return; }
-    if (file.size > MAX_BYTES) { summary.textContent='Archivo demasiado grande (máximo 4 MB).';return; }
     try {
-      const data = parseBackup(await file.text());
+      const data = parseBackup(text.replace(/^\uFEFF/, ''));
       pending = data;
       const observations = Object.values(data.sightings).reduce((sum,n)=>sum+n,0);
       summary.textContent = 'Partida válida: ' + Math.floor(data.prestige) + ' prestigio · £' + Math.floor(data.money)
-        + ' · ' + Math.floor(observations) + ' avistamientos. Archivo: ' + file.name;
+        + ' · ' + Math.floor(observations) + ' avistamientos. Archivo: ' + name;
       importButton.disabled = false;
-      message('Archivo validado. Puedes restaurarlo o cerrar sin realizar cambios.');
+      message('Archivo validado. Presiona «Restaurar partida seleccionada» para confirmar.');
     } catch (error) {
-      summary.textContent = 'Respaldo rechazado: ' + (error?.message || error);
-      message('No se modificó tu partida actual.', true);
+      summary.textContent = 'No se pudo cargar el respaldo: ' + (error?.message || error);
+      message('Se conservó tu partida actual. No se ha importado nada.', true);
+    }
+  }
+  async function readBrowserFile(file) {
+    if (typeof file.text === 'function') return file.text();
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(String(reader.result || ''));
+      reader.onerror = () => reject(reader.error || new Error('Error de lectura'));
+      reader.readAsText(file);
+    });
+  }
+  fileInput.addEventListener('change', async () => {
+    pending = null;
+    importButton.disabled = true;
+    const file = fileInput.files?.[0];
+    if (!file) { summary.textContent = 'Aún no seleccionaste un archivo.'; return; }
+    if (file.size > MAX_BYTES) {
+      summary.textContent = 'El archivo supera los 4 MB permitidos.';
+      message('No se modificó tu partida.', true);
+      return;
+    }
+    try {
+      prepareImport(await readBrowserFile(file), file.name);
+    } catch (error) {
+      message('No fue posible abrir el archivo: ' + (error?.message || error), true);
+    } finally {
+      fileInput.value = '';
+    }
+  });
+  nativeImportButton?.addEventListener('click', async () => {
+    const cap=window.Capacitor;
+    if (cap?.getPlatform?.() !== 'android') {
+      fileInput.click(); return;
+    }
+    const reader=cap?.Plugins?.AtlasImport ||
+      (typeof cap?.registerPlugin === 'function' ? cap.registerPlugin('AtlasImport') : null);
+    if (!reader?.openFile) {
+      message('No se encontró el importador nativo. Prueba seleccionar el JSON con el botón inferior.', true);
+      return;
+    }
+    nativeImportButton.disabled = true;
+    try {
+      const selected=await reader.openFile();
+      prepareImport(selected.content, selected.name || 'Respaldo de Android');
+    } catch (error) {
+      if (error?.code === 'CANCELLED') message('No se eligió ningún archivo. La partida sigue intacta.');
+      else message('No se pudo leer el respaldo: ' + (error?.message || error), true);
+    } finally {
+      nativeImportButton.disabled = false;
     }
   });
   importButton.addEventListener('click', () => {

@@ -39,3 +39,11 @@ Al configurar los secretos, abre `Actions → Android APK firmado → Run workfl
 El menú 💾 ofrece dos opciones distintas: **⬇️ Guardar en el teléfono** abre el selector nativo Android para elegir una carpeta como Descargas y crear el archivo `.json` allí. **📤 Compartir respaldo** conserva el menú de compartir con otras aplicaciones. En navegador, Guardar solicita la descarga normal. La restauración desde un JSON sigue igual y no cambia la clave local de la partida.
 
 El selector Android usa `ACTION_CREATE_DOCUMENT` y no necesita acceso general al almacenamiento. Si cancelas el selector, no se modifica tu partida. Para incluirlo en la APK se utiliza `scripts/install-atlas-export.py` tras `npx cap sync android`.
+
+## v3.3 — Restauración Android desde Archivos
+
+- La opción **📁 Abrir archivo del teléfono** emplea el selector nativo de Android (ACTION_OPEN_DOCUMENT). Permite elegir el JSON de Descargas o Documentos y muestra un resumen antes de confirmar la restauración.
+- La opción previa de selección de archivos web permanece como alternativa.
+- La partida existente no se sobrescribe hasta confirmar; se guarda además una copia local de emergencia.
+- Si el archivo no se puede leer o validar, se muestra el motivo y no se altera el progreso.
+- En Investigación, Fondo Científico I/II/III habilitan los lotes ×1, ×10 y ×100 del cambio libras→conocimiento en Sociedad, manteniendo la equivalencia £100→70 conocimiento.

@@ -730,3 +730,55 @@ button,select{font:inherit}
  .atlas-v32-state{padding-bottom:5px}
  .atlas-v32-action .btn{min-height:42px}
 }
+
+/* v3.3 · Museo como sala victoriana y objetos de gabinete ilustrado */
+.museum-v33,.inventory-v33{min-width:0}
+.museum-v33-hall{background:linear-gradient(170deg,#fffaed,#eae0c9);gap:9px}
+.museum-v33-heading{display:grid;gap:3px;padding:10px 12px;border-radius:10px;background:linear-gradient(120deg,#234337,#436349);color:#f7e9cb}
+.museum-v33-heading .section{color:#f9ebc9;margin:0;font-size:19px}
+.museum-v33-heading .small{color:#e8dabb}
+.museum-v33-eyebrow,.inventory-v33-kicker{letter-spacing:.12em;font:800 9px/1.2 system-ui,sans-serif;color:#dbc28b}
+.museum-v33-scene{position:relative;display:flex;align-items:end;justify-content:space-around;background:linear-gradient(180deg,#d1dccb 0%,#f4e3c6 75%,#b8a47b 76%,#a18b68 100%);height:102px;border:2px solid #ad9b76;border-radius:11px;box-shadow:inset 0 2px 12px #ffffff88;overflow:hidden}
+.museum-v33-scene span{font-size:45px;filter:drop-shadow(0 4px 2px #3333)}
+.museum-v33-scene span:nth-child(2){font-size:82px;line-height:1.1;filter:drop-shadow(0 5px 2px #352c2244)}
+.museum-v33-showcases{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.museum-v33-vitrine{display:grid;justify-items:center;align-content:start;text-align:center;gap:5px;padding:11px 7px;background:linear-gradient(160deg,#f5e7c9,#e5d1a6);border:2px ridge #b99961;border-radius:12px;min-width:0}
+.museum-v33-frame{display:grid;place-items:center;width:min(100%,124px);aspect-ratio:1;background:radial-gradient(ellipse,#fff7e1 40%,#b1c6ac);border:6px ridge #b29a60;box-shadow:inset 0 0 0 2px #f4e4c3,0 3px 5px #4a3e2c33;border-radius:12px}
+.museum-v33-frame .sprite-wrap{width:95%;height:95%;display:grid;place-items:center}
+.museum-v33-frame svg{width:100%;height:100%;max-width:96px;max-height:96px}
+.museum-v33-vitrine strong{font:700 13px/1.13 Georgia,serif;overflow-wrap:anywhere}
+.museum-v33-vitrine .btn{min-height:32px;font-size:10px;padding:5px}
+.museum-v33-ledger{align-content:start;background:linear-gradient(175deg,#fdf4df,#e8dcc0)}
+.museum-v33-ledger .req{border-left:3px solid #6b8a66}
+.inventory-v33{padding:0 0 12px;overflow:hidden;gap:10px;background:linear-gradient(160deg,#fff7e8,#e8ddc7)}
+.inventory-v33-header{display:grid;gap:5px;padding:14px 16px 11px;background:linear-gradient(120deg,#2b4737,#476c4c);color:#ffeed3}
+.inventory-v33-header h3{color:#fff2d9;font:700 21px Georgia,serif;margin:0}
+.inventory-v33-stats{display:flex;gap:7px;flex-wrap:wrap}
+.inventory-v33-stats span{background:#193c2e8c;color:#f7e9d4;border-radius:8px;border:1px solid #68846c;padding:5px 8px;font:700 11px system-ui,sans-serif}
+.inventory-v33>p,.inventory-v33>.inventory-subtabs,.inventory-v33>.inventory-block,.inventory-v33>.inventory-equipment-layout{margin-left:12px;margin-right:12px}
+.inventory-v33 .inventory-block{background:linear-gradient(#f8ecda,#f1e3cb);border:1px solid #c4ad87;border-radius:10px;box-shadow:inset 0 0 0 2px #fff9ed}
+.inventory-v33 .inventory-slot{border:2px dashed #b59b6e;background:linear-gradient(#f8f1e4,#e9d9b9)}
+.inventory-v33 .inventory-slot-icon{background:#fffaed;border:3px double #bda377;box-shadow:0 2px 4px #75624322}
+.inventory-v33 .inventory-item{background:linear-gradient(135deg,#fff8eb,#eadbc0);border:1px solid #ccb58b;box-shadow:0 2px 4px #7c684121}
+.inventory-v33 .inventory-icon{border:3px double #bca074;background:radial-gradient(ellipse,#fbf4e1,#e5d1aa);border-radius:11px}
+.inventory-v33 .inventory-subtab.active{background:linear-gradient(#3d694d,#244a37)}
+@media(max-width:800px){
+ .museum-v33-showcases{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+ .museum-v33-scene{height:78px}.museum-v33-scene span{font-size:34px}.museum-v33-scene span:nth-child(2){font-size:65px}
+ .museum-v33-heading{padding:8px 10px}
+ .museum-v33-heading .section{font-size:17px}
+ .museum-v33-vitrine{padding:7px 4px;gap:4px}
+ .museum-v33-frame{max-width:104px;border-width:4px}
+ .museum-v33-vitrine strong{font-size:11px}
+ .inventory-v33-header{padding:10px}
+ .inventory-v33-header h3{font-size:18px}
+ .inventory-v33-stats span{font-size:9px;padding:4px 6px}
+ .inventory-v33>p,.inventory-v33>.inventory-subtabs,.inventory-v33>.inventory-block,.inventory-v33>.inventory-equipment-layout{margin-left:7px;margin-right:7px}
+ .inventory-v33 .inventory-item{padding:7px}
+ .inventory-v33 .inventory-icon{flex-basis:42px;width:42px;height:42px;font-size:23px}
+}
+@media(max-width:365px){
+ .museum-v33-showcases{grid-template-columns:1fr 1fr}
+ .museum-v33-vitrine .badge{font-size:10px}
+ .inventory-v33-stats{flex-direction:column;align-items:flex-start}
+}
