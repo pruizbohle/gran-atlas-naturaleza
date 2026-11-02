@@ -34,3 +34,11 @@
 - Dos reconocimientos dirigidos dentro de Expediciones: con Astillero, Cartografía naval II, Mapa de África y prestigio suficiente. Muestra garantizada, sin visitas ni avistamientos inventados.
 - Se conserva formato el-gran-atlas-save v1 y clave gran_atlas_v05; Beta 3.8 se instala de forma independiente en Android.
 - Próximos avances: expansión africana gradual y prototipo controlado de fósiles/relictos, sin romper la colección.
+
+
+## Beta 3.9 — África gradual y eliminación de círculos
+- Tres áreas: Montañas del Atlas (98), Bosques de miombo (101) y Costa de Mozambique (104), sujetas al mapa de África.
+- 12 especies nuevas: África alcanza 18 regiones, el catálogo mundial 377 animales.
+- Se elimina el círculo como sprite de último recurso. Familias sin retrato particular pasan a siluetas genéricas anatómicas. Ocho nuevos animales reciben retratos diferenciados.
+- La actualización no toca la economía, guardado gran_atlas_v05, JSON v1 ni progreso acumulado.
+- Siguiente versión: completar regiones africanas restantes, refinar sprites basados en familias y primer prototipo de colecciones de fósiles/relictos.

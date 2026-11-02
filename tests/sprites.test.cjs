@@ -48,3 +48,29 @@ test('Beta 3.7 oscurece pigmentos melánicos de mamíferos, reptiles y aves',()=
   assert.ok(fills.some(x=>lum(x)<42),id+' no tiene masa oscura');
  }
 });
+
+
+test('Beta 3.9 elimina los sprites circulares para todas las especies y variantes',()=>{
+ assert.ok(Object.keys(api.SPECIES).length>=377);
+ for(const [id] of Object.entries(api.SPECIES)){
+  for(const skin of skins){
+   const svg=api.getSpriteMarkup(id,skin);
+   const body=svg.replace(/^<svg[^>]*>/,'').replace(/<\/svg>$/,'');
+   assert.doesNotMatch(body,/^<circle\b[^>]*\/>$/,id+' '+skin+' círculo genérico');
+   assert.match(body,/<(?:path|ellipse|polygon|rect)\b/i,id+' '+skin+' sin anatomía');
+  }
+ }
+});
+
+test('Beta 3.9 fauna africana nueva tiene siluetas diferenciadas',()=>{
+ const named=['af_macaco_berberia','af_antilope_sable','af_calao_terrestre','af_pangolin_temminck','af_dugongo','af_manta_gigante','af_delfin_jorobado_indico','af_martin_malaquita'];
+ for(const id of named){
+   assert.ok(api.SPECIES[id],id+' sin ficha');
+   const svg=api.getSpriteMarkup(id,'normal');
+   assert.ok(svg.includes('<path'),id+' sin detalles propios');
+   assert.doesNotMatch(svg,/<circle cx="50" cy="50" r="24"/,id);
+   assert.notEqual(api.getSpriteMarkup(id,'melanico'),svg,id+' skin melánico ignorado');
+ }
+ const marine=['af_dugongo','af_manta_gigante','af_delfin_jorobado_indico'];
+ assert.equal(new Set(marine.map(id=>geometry(api.getSpriteMarkup(id)))).size,3,'mamíferos/pez pelágicos deben distinguirse');
+});
