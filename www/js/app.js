@@ -2961,8 +2961,12 @@ function sexSpriteMarkup(id,sex){
     if(spec.type==='ibex'){
       horns=male?'<path d="M60 35Q49 22 58 8m12 27Q83 23 75 8" stroke="#78583c" stroke-width="4.5" fill="none" stroke-linecap="round"/>':'<path d="M60 35Q56 29 58 21m12 14q5-5 4-13" stroke="#7c5c40" stroke-width="2.4" fill="none" stroke-linecap="round"/>';
     }
+    // Preserve the configured sexes while distinguishing moose palms and roe tines.
+    if(spec.type==='antlers' && male && id==='alce')horns='<path d="M60 34L49 23L43 12L42 25L34 18L39 31L54 38M72 34L82 23L87 12L88 25L95 18L91 32L76 38" fill="#a48c69" stroke="#715940" stroke-width="2.5" stroke-linejoin="round"/>';
+    if(spec.type==='antlers' && male && id==='corzo_europeo')horns='<path d="M60 34L57 19m2 9-6-4m4-3 4-5m11 18 4-15m-2 10 6-5m-4-3-3-5" fill="none" stroke="#715940" stroke-width="2.8" stroke-linecap="round"/>';
+    const ears='<path d="M58 40l-10-8 2 11m22-3 10-8-2 12" fill="'+body+'" stroke="'+line+'" stroke-width="2.2"/>';
     const chest=male?'#e0cba8':'#e8dac6';
-    return svgWrap(`<ellipse cx="43" cy="61" rx="24" ry="16" fill="${body}" stroke="${line}" stroke-width="3"/><ellipse cx="40" cy="57" rx="11" ry="5" fill="${shade(body,12)}"/><circle cx="66" cy="46" r="11" fill="${body}" stroke="${line}" stroke-width="3"/><ellipse cx="73" cy="53" rx="7" ry="4" fill="${chest}"/>${horns}<circle cx="69" cy="43" r="1.8" fill="#251c18"/>${legs}<path d="M21 58l-5-8" stroke="${dark}" stroke-width="3" stroke-linecap="round"/>`);
+    return svgWrap(`<ellipse cx="43" cy="61" rx="${male?24:22}" ry="${male?17:14}" fill="${body}" stroke="${line}" stroke-width="3"/><ellipse cx="40" cy="57" rx="11" ry="5" fill="${shade(body,12)}"/><circle cx="66" cy="46" r="11" fill="${body}" stroke="${line}" stroke-width="3"/><ellipse cx="73" cy="53" rx="7" ry="4" fill="${chest}"/>${ears}${horns}<circle cx="69" cy="43" r="1.8" fill="#251c18"/>${legs}<path d="M21 58l-5-8" stroke="${dark}" stroke-width="3" stroke-linecap="round"/>`);
   }
   // Distinctive bird silhouettes and plumage, with the same proportions as the other mini-sprites.
   const bird=(opts={})=>{
@@ -3005,7 +3009,8 @@ function getSpriteMarkup(id, skin='normal', sex=null){
   const sp=SPECIES[id];
   const baseSvg=(validSex?sexSpriteMarkup(id,validSex):null)||spriteFor(sp.kind,applySkin(sp.color,skin),skin,id);
   // All SVG paint values (even fixed feather/ear colors) must respect melanism.
-  const svg=skin==='melanico' ? enforceMelanicColors(baseSvg) : baseSvg;
+  const svg=skin==='melanico' ? enforceMelanicColors(baseSvg)
+    : skin==='albino' ? enforcePaleColors(baseSvg) : baseSvg;
   spriteCache.set(key,svg);
   return svg;
 }
@@ -3013,6 +3018,17 @@ function applySkin(base, skin){
   if(skin==='albino') return '#f2f3f4';
   if(skin==='melanico') return '#0c0f12';
   return base;
+}
+// Keep the original silhouette and subdued markings, including fixed-color feathers.
+// Albino/Leucístico already share the persisted skin token; this is paint only.
+function enforcePaleColors(svg){
+  return svg.replace(/(fill|stroke)="(#[0-9a-fA-F]{6})"/g,(_,attr,hex)=>{
+    if(hex.toLowerCase()==='#c85f6c')return `${attr}="${hex}"`;
+    const rgb=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16));
+    const lum=rgb[0]*.2126+rgb[1]*.7152+rgb[2]*.0722;
+    const paint=attr==='stroke'?'#796f78':lum<45?'#574b5a':lum<100?'#b9aeb9':lum<175?'#e1d8df':'#faf5f0';
+    return `${attr}="${paint}"`;
+  });
 }
 function enforceMelanicColors(svg){
   // Re-map *all* shape fills and strokes: individual species sometimes use
@@ -3024,7 +3040,7 @@ function enforceMelanicColors(svg){
     if(h.length!==6) return hex;
     const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
     const lum=0.2126*r+0.7152*g+0.0722*b;
-    if(stroke) return lum>175?'#262c33':lum>95?'#15191e':'#050709';
+    if(stroke) return lum>175?'#717d89':lum>95?'#505d6b':'#404b59';
     return lum>210?'#505963':lum>150?'#383f49':lum>80?'#262d35':lum>35?'#171c23':'#0c1015';
   };
   return svg.replace(/(fill|stroke)="(#[0-9a-fA-F]{6})"/g,(_,attr,hex)=>`${attr}="${ink(hex,attr==='stroke')}"`)
@@ -3037,7 +3053,7 @@ function shade(hex, amt){
   return '#'+[clamp(r+amt),clamp(g+amt),clamp(b+amt)].map(v=>v.toString(16).padStart(2,'0')).join('');
 }
 function svgWrap(content, glow=''){ return `<svg viewBox="0 0 100 100" aria-hidden="true">${glow}${content}</svg>`; }
-function alphaGlow(skin){ if(skin==='alfa') return '<circle cx="50" cy="50" r="42" fill="#f6df86" opacity="0.20"/><path d="M20 18l6 8 10 2-7 6 1 9-8-5-8 5 1-9-7-6 10-2z" fill="#ffe9a3" opacity="0.75"/><path d="M82 64l5 7 8 2-6 5 1 8-8-4-7 4 1-8-6-5 8-2z" fill="#ffe9a3" opacity="0.65"/>'; if(skin==='melanico') return '';  return ''; }
+function alphaGlow(skin){ if(skin==='alfa') return '<circle cx="50" cy="50" r="42" fill="#f6df86" opacity="0.20"/><path d="M20 18l6 8 10 2-7 6 1 9-8-5-8 5 1-9-7-6 10-2z" fill="#ffe9a3" stroke="#84612e" stroke-width="1.8" opacity="0.95"/><path d="M82 64l5 7 8 2-6 5 1 8-8-4-7 4 1-8-6-5 8-2z" fill="#ffe9a3" stroke="#84612e" stroke-width="1.8" opacity="0.95"/>'; if(skin==='melanico') return '';  return ''; }
 function eyeColor(skin){ if(skin==='albino') return '#c85f6c'; if(skin==='melanico') return '#d8c46b'; return '#1d1a17'; }
 function legSet(x1,x2,y=71){ return `<line x1="${x1}" y1="${y}" x2="${x1-1}" y2="86" stroke="#3a3026" stroke-width="3.3" stroke-linecap="round"/><line x1="${x2}" y1="${y}" x2="${x2+1}" y2="86" stroke="#3a3026" stroke-width="3.3" stroke-linecap="round"/>`; }
 function premiumSpeciesSprite(name,kind,body,skin,id){
@@ -3369,7 +3385,113 @@ function asiaV23Sprite(id,skin){
  return sp.kind==='forestbird'||sp.kind==='songbird'||sp.kind==='raptor'||sp.kind==='seabird'||sp.kind==='stork'?bird():body();
 }
 
+// Beta 3.6.1: presentation only. Shared 100×100 geometry; no species/save mutations.
+function polishedSpeciesSprite(id,skin){
+ const sp=SPECIES[id]; if(!sp)return null;
+ const n=sp.name.toLocaleLowerCase('es'),kind=sp.kind;
+ const c=applySkin(sp.color,skin),d=skin==='melanico'?'#39434f':shade(c,-36);
+ const l=skin==='melanico'?'#687582':shade(c,23),ink='#39332e';
+ const pale=skin==='melanico'?'#77818b':'#f1e7d4',eye=eyeColor(skin);
+ const path=(a,fill=c,width=2.8)=>`<path d="${a}" fill="${fill}" stroke="${ink}" stroke-width="${width}" stroke-linejoin="round" stroke-linecap="round"/>`;
+ const line=(a,color=ink,width=3)=>`<path d="${a}" fill="none" stroke="${color}" stroke-width="${width}" stroke-linecap="round" stroke-linejoin="round"/>`;
+ const ellipse=(x,y,rx,ry,fill=c,width=2.8)=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${fill}" stroke="${ink}" stroke-width="${width}"/>`;
+ const dot=(x,y,r=2,fill=eye)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}"/>`;
+ const wrap=a=>svgWrap(a,alphaGlow(skin));
+ const feet=(y=73)=>line(`M30 ${y}l-2 14m12-14v14m17-14l-1 14m12-16l3 16`,ink,3.8);
+ const spots=(rosettes=false)=>[[32,56],[44,62],[53,53],[58,67],[35,68]].map(([x,y])=>rosettes?ellipse(x,y,2.6,2.1,c,1.9):dot(x,y,2.1,d)).join('');
+ if(kind==='crocodile'){
+   const narrow=id==='af_cocodrilo_hocico';
+   return wrap(path('M36 62Q16 57 6 72Q20 68 29 75',d)+path('M24 62Q38 49 60 57L69 54L94 '+(narrow?'60':'57')+'L94 67L66 70Q45 81 25 73Z')+
+     line('M33 57l4-6 6 5 6-6 6 6 6-4',d,3.5)+line('M31 73l-7 10 11-1m18-8 6 9 8-1',ink,4)+line('M70 64h22',d,2.5)+dot(68,57,2.3)+dot(90,60,1.4,d)+line('M77 65l2 3m7-3 2 3',pale,2));
+ }
+ if(kind==='elephant'){
+   const forest=id==='af_elefante_bosque',africa=id.startsWith('af_');
+   return wrap(line('M24 56Q15 57 13 70',d,3)+feet()+ellipse(45,57,27,22)+
+     path('M60 38Q82 28 88 47L88 70Q95 73 94 62L97 63Q99 84 83 81L78 56Z')+
+     ellipse(africa?62:64,49,forest?14:africa?17:10,africa?20:14,l)+
+     path('M80 59Q88 65 94 54Q91 72 79 66Z',pale,1.8)+dot(81,45,2.2)+line('M32 85h7m18 0h7',l,2));
+ }
+ if(kind==='rhino'){
+   const white=id==='af_rinoceronte_blanco',indian=/indio/.test(n);
+   return wrap(feet()+ellipse(43,59,28,21)+path('M60 46L76 45L88 59L89 72L63 74L54 60Z')+
+     path('M78 58Q86 48 86 '+(white?'33':'39')+'L92 62Z',pale)+(!indian?path('M71 53l3-12 6 16Z',l,2):'')+
+     path('M63 47l-1-13 9 9m2 2 6-10 1 13',c,2.4)+dot(77,55)+line('M78 69h8',d,2.2)+
+     (indian?line('M34 40l-4 32m22-32 4 35',d,3):''));
+ }
+ if(kind==='hippo')return wrap(feet(76)+ellipse(43,60,28,23)+ellipse(72,59,19,19)+ellipse(78,68,17,11,l)+ellipse(61,42,4,5)+ellipse(78,41,4,5)+dot(66,52,2.4)+dot(79,51,2.4)+dot(73,65,2,d)+dot(85,65,2,d)+line('M68 74q9 3 18-1',d,2));
+ if(kind==='giraffe'){
+   const okapi=id==='af_okapi';
+   return wrap(line('M24 57L14 72',d,3)+feet()+ellipse(44,60,23,14)+path(okapi?'M56 56L61 33L70 31L74 61Z':'M55 57L63 19L72 18L71 60Z')+
+     ellipse(75,okapi?33:22,12,7)+path(okapi?'M65 29l-7-9 11 4m9 3 5-9 2 12':'M65 18l-6-8 10 4m8 2 8-7-3 11',l,2)+
+     line(okapi?'M69 26v-7m8 7 1-7':'M68 16V9m8 7V8',d,3)+dot(80,okapi?31:20)+
+     (okapi?line('M26 67l12 4m-10 4 11 3m17-10 13 1m-12 6 13 1',pale,3):line('M29 53l7 4m5-6 8 4m-14 8 7 4m8-8 6 4m7-25 6 2m-5-12 6 2m-8 20 6 2',d,4)));
+ }
+ if(kind==='zebra')return wrap(feet()+line('M23 58L12 74',d,3)+ellipse(44,58,25,17)+path('M57 52L65 28L76 24L85 40L77 49L68 63Z')+
+   path('M65 29l-3-12 7 7m4 1 3-13 5 13',c,2)+line('M61 47l4-18',d,5)+
+   line('M25 49l6 19m3-25 6 29m4-30 5 31m4-28 5 26m6-37 10 7m-12 2 12 6',d,3.5)+ellipse(80,43,6,5,d,2)+dot(77,34));
+ if(id==='af_hiena_manchada')return wrap(line('M25 57L12 67',d,5)+feet()+path('M22 55Q39 35 62 47L76 57L65 73L31 72Z')+
+   line('M35 47l5-7 6 5 5-5',d,4)+ellipse(72,47,13,12)+ellipse(63,35,5,6)+ellipse(77,34,5,6)+ellipse(81,53,9,6,l)+spots()+dot(76,44)+dot(88,52,2.6,ink));
+ if(kind==='cat' && id.startsWith('af_')){
+   const lion=id==='af_leon',cheetah=id==='af_guepardo',serval=id==='af_serval',caracal=id==='af_caracal',fosa=id==='af_fosa',civet=id==='af_civeta';
+   const tail=fosa?'M25 61Q3 79 8 39':serval?'M24 63Q12 62 13 73':'M25 62Q9 62 12 78Q18 84 24 77';
+   return wrap(line(tail,d,fosa?5:4)+feet(cheetah||serval?68:73)+ellipse(45,58,cheetah?25:23,cheetah?12:16)+
+     (lion?ellipse(69,45,18,20,d):'')+
+     ((cheetah||serval||civet)?spots():id==='af_leopardo'?spots(true):'')+
+     (serval?ellipse(61,30,6,10)+ellipse(75,29,6,10):path('M59 40l2-13 10 10 8-9 2 15',c,2.5))+
+     ellipse(70,45,12,11)+ellipse(75,51,8,5,pale,1.5)+dot(75,42)+dot(82,49,2,ink)+
+     (caracal?line('M61 28l-3-9m20 9 4-9',ink,3):'')+
+     (cheetah?line('M75 44l3 5',ink,2.4):'')+(civet?line('M63 43l14-1',d,4):'')+
+     (lion?dot(22,78,4,d):''));
+ }
+ if(kind==='canid'){
+   const fenec=id==='af_fenec',dog=id==='af_licaon',fox=/zorro|fénec/.test(n),arctic=/ártico/.test(n);
+   const coat=arctic&&skin==='normal'?'#dae1e7':c;
+   return wrap(path(fox?'M28 59Q10 44 8 61Q7 81 31 73Z':'M25 60Q9 54 10 68L27 73Z',d)+
+     (fox?path('M10 59Q6 75 20 76L17 67Z',pale,1.5):'')+feet()+ellipse(45,59,24,15,coat)+
+     (dog?path('M26 51l14-4 2 17-12 7Z',ink,1.5)+path('M49 49l10 5-5 16-10-4Z',pale,1.5):'')+
+     (dog?ellipse(60,30,7,8,d)+ellipse(77,30,7,8,d):path(fenec?'M57 42L52 12L68 34L79 13L82 43Z':fox?'M58 40l2-17 11 13 9-13 2 19Z':'M58 40l2-13 11 9 8-11 2 17Z',coat))+
+     ellipse(69,45,12,11,coat)+path('M70 46L90 51L78 58L65 53Z',pale,2)+dot(73,43)+dot(89,51,2.3,ink)+
+     (dog?line('M13 65l8 4',pale,5):''));
+ }
+ if(id.startsWith('af_')&&(kind==='deer'||kind==='bison')){
+   const oryx=id==='af_orix',bongo=id==='af_antilope_bongo',duiker=id==='af_duiker_azul',buffalo=id==='af_bufalo_cafre',gnu=id==='af_nu_azul',eland=id==='af_eland',arrui=id==='af_arrui';
+   const horns=duiker?'M65 34l-1-7m9 7 2-7':oryx?'M64 33L49 9m24 24L67 8':buffalo?'M65 37Q48 21 52 43Q60 48 67 39M70 38Q88 23 86 43Q80 49 70 38':gnu?'M62 36Q46 37 51 23m21 13q15 0 10-13':arrui?'M63 34Q45 13 56 14M72 34Q88 17 77 13':bongo||eland?'M64 33l-5-8 3-7-5-8m16 24-1-10 4-6-3-8':'M64 34Q53 19 60 12m13 22q9-14 2-22';
+   return wrap(feet()+line('M23 57L12 70',d,3)+ellipse(44,58,25,buffalo||gnu||eland?19:14)+path('M57 53l4-20 15 1 9 17-9 10-13 4Z')+
+     path('M61 36l-10-6 4 9m20-2 12-7-5 12',l,2)+line(horns,d,buffalo?4.5:3.2)+
+     (gnu||arrui?path('M64 58l3 16 8-13',d,2):'')+
+     (bongo?line('M29 48l2 20m8-24 2 26m8-24 2 24m7-20 1 14',pale,2.5):!buffalo&&!gnu?line('M28 63h29',pale,4):'')+
+     (oryx?line('M69 39l9 13',d,3):'')+dot(77,43)+ellipse(81,53,5,4,d,1.5));
+ }
+ // Bird family helper: species supply the head, bill, tail and bold plumage blocks.
+ const bird=(head=c,wing=d,marks='',bill='M76 37l14 3-14 5Z',tail='M32 58L13 72L20 53Z')=>wrap(
+   path(tail,d)+line('M43 74l-3 13h-5m19-13 3 13h5',ink,2.8)+ellipse(48,59,20,17)+
+   path('M34 52Q48 48 57 64L34 69Z',wing,2)+ellipse(67,37,11,11,head)+path(bill,'#c99b48',2)+marks+dot(71,35));
+ if(id==='af_aguila_pescadora'||id==='af_fosa_ave')return bird(pale,'#302e2c',
+   path('M58 41L74 44L66 58L54 53Z',pale,1.5)+line('M35 59l11 8m-12-1 9 7',l,2.6),
+   'M76 35Q91 32 87 43L82 46L82 40L76 42Z','M32 61L20 82L41 78Z');
+ if(id==='af_secretario')return wrap(line('M42 62l-4 27h-7m24-27 4 27h7',ink,3.4)+path('M34 55L17 79L36 70Z',d)+ellipse(48,50,18,14)+path('M56 47L60 22L69 22L67 49Z')+ellipse(66,21,9,8)+line('M59 17L48 12m11 8-12-2m12 6-12 1',ink,2.5)+path('M73 21l13 2-9 7-3-3Z',pale,2)+dot(70,20)+path('M35 45l14 2 3 14-16-4Z',d,2));
+ if(id==='af_avestruz')return wrap(line('M36 67l-4 22h-7m30-22 5 22h8',ink,3.5)+path('M28 44l-14-1 10 11Z',pale,2)+ellipse(45,51,23,18)+path('M59 45Q72 34 66 17L73 16Q81 39 65 56Z',l)+ellipse(69,15,8,6,l,2)+path('M77 15l12 3-12 3Z',pale,1.8)+path('M31 48q12-9 24 7l-21 8Z',pale,2)+dot(72,14));
+ if(id==='af_ibis_sagrado'||id==='af_ibis_eremita'||id==='af_garza_goliat'||id==='af_grulla_coronada'){
+   const ibis=/ibis/.test(id),crown=id==='af_grulla_coronada';
+   return wrap(line('M39 64l-3 24h-6m23-24 5 24h6',ink,2.8)+ellipse(45,53,23,15)+path('M55 47Q69 43 60 26Q58 17 68 17L72 24Q64 29 72 39L64 55Z',ibis?d:c)+ellipse(67,21,8,7,ibis?d:c,2.4)+
+     (ibis?line('M74 22Q91 24 89 44',d,3):path('M74 21L94 26L75 27Z',l,2))+
+     path('M28 48q12-6 23 9l-22 6Z',d,2)+
+     (crown?line('M61 14l-6-6m10 5-2-8m7 8 3-8m0 11 8-7','#c8a64d',3):'')+dot(70,20,1.8,ibis?'#d8c46b':eye));
+ }
+ if(['af_loro_gris','af_turaco','af_abejaruco_carmin'].includes(id)){
+   if(id==='af_loro_gris')return bird(c,d,path('M27 64l-8 11 15-2Z','#ba5147',2),'M76 36Q89 33 84 47L79 42L75 43Z');
+   if(id==='af_turaco')return bird(c,d,path('M59 28l-1-14 7 5 5-7 5 17Z',l,2)+line('M62 38l12 1',pale,2),'M77 37l9 4-10 4Z','M32 58L18 87L39 72Z');
+   return bird('#4d9e9c',d,line('M59 35l15 1',ink,3),'M76 36l18 4-18 3Z','M32 58L13 83L24 63L20 87L40 68Z');
+ }
+ if(id==='af_tortuga_laúd')return wrap(path('M36 52L15 36L23 61L15 78L40 69Z',d)+path('M62 51L81 38L73 65L85 78L62 70Z',d)+ellipse(50,59,20,26)+ellipse(73,43,8,7)+line('M40 39Q30 58 41 79m8-44q-8 24 1 48m8-46q5 22 0 42',l,2.3)+dot(77,42));
+ if(id==='af_tortuga_radiada')return wrap(line('M30 71l-8 12m20-9-2 11m20-11 5 11m6-17 9 10',ink,5)+ellipse(74,59,10,8)+path('M21 70Q21 36 46 36Q69 36 71 70Z',d)+[32,49,62].map((x,i)=>line(`M${x} 57l-7-12m7 12 7-13m-7 13-7 10m7-10 7 11`,pale,2)).join('')+dot(79,57));
+ if(id==='af_suricata')return wrap(line('M40 75Q23 85 16 77',d,4)+ellipse(49,63,12,22)+ellipse(51,34,12,10)+ellipse(40,30,4,5)+ellipse(61,29,4,5)+line('M44 79l-3 9m17-9 5 9m-24-38 6 12m16-12-6 12',ink,3)+line('M43 34h4m9 0h4',d,4)+dot(46,33,1.5)+dot(58,33,1.5)+dot(54,40,2,d));
+ if(id==='af_tenrec')return wrap(path('M18 70L20 49L27 53L31 39L39 49L47 38L54 49L64 45L74 59L86 69L74 76L31 78Z')+line('M27 58l7-10m3 17 8-15m4 17 8-13',pale,2.4)+dot(72,62)+dot(84,69,2,ink)+line('M32 77l-3 8m29-8 5 8',ink,3));
+ return null;
+}
+
 function spriteFor(kind,color,skin,id){
+ const polished=polishedSpeciesSprite(id,skin);if(polished)return polished;
  const newAsia=asiaV23Sprite(id,skin);if(newAsia)return newAsia;
  const herp=detailedHerpSprite(id,skin);if(herp)return herp;
  const v22=asiaV22Sprite(id,skin);if(v22)return v22;
@@ -3580,3 +3702,4 @@ function spriteFor(kind,color,skin,id){
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 render();
 })();
+
