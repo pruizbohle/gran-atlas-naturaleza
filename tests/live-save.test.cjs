@@ -38,10 +38,12 @@ function harness(store={}){
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
    Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,
    setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- vm.runInContext(GAME,ctx,{filename:'www/js/app.js'});
+ const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,claimScientificMission};\n})();');
+ assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
+ vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(SAVE,ctx,{filename:'www/js/save-manager.js'});
  return {window:w,store,doc,elements,localStorage,
-  evalInGame(code){return vm.runInContext(code,ctx);},
+  evalInGame(code){return vm.runInContext('window.__atlasTest.'+code,ctx);},
   tick(){assert.ok(tick,'motor debe tener guardado periódico');tick();},
   finishTimers(){for(const task of timeouts.splice(0))task();},
   async import(){await node('saveNativeImportBtn').fire('click');await node('saveImportBtn').fire('click');},
