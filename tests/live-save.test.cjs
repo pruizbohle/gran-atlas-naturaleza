@@ -38,9 +38,12 @@ function harness(store={}){
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
    Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,
    setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- vm.runInContext(GAME,ctx,{filename:'www/js/app.js'});
+ const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission};\n})();');
+ assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
+ vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(SAVE,ctx,{filename:'www/js/save-manager.js'});
  return {window:w,store,doc,elements,localStorage,
+  evalInGame(code){return vm.runInContext('window.__atlasTest.'+code,ctx);},
   tick(){assert.ok(tick,'motor debe tener guardado periódico');tick();},
   finishTimers(){for(const task of timeouts.splice(0))task();},
   async import(){await node('saveNativeImportBtn').fire('click');await node('saveImportBtn').fire('click');},
@@ -77,4 +80,71 @@ test('restaurar una partida no la sobrescribe con la sesión anterior',async()=>
  h.tick();
  assert.equal(h.window.AtlasSaveBridge.getSnapshot().prestige,4);
  assert.equal(h.imported.prestige,4);
+});
+
+
+test('ayudas de campo otorgan exactamente 500 conocimiento y 50 avistamientos confirmados',()=>{
+ const h=harness({});
+ const original=JSON.parse(h.store[KEY]);
+ h.evalInGame('fieldAid("knowledge")');
+ assert.equal(JSON.parse(h.store[KEY]).knowledge-original.knowledge,500);
+ const before=JSON.parse(h.store[KEY]);
+ h.evalInGame('fieldAid("sightings")');
+ const after=JSON.parse(h.store[KEY]);
+ const count=s=>Object.values(s.sightings).reduce((a,b)=>a+b,0);
+ assert.equal(count(after)-count(before),50);
+ h.tick();
+ const reboot=harness(h.store);
+ assert.equal(count(JSON.parse(reboot.store[KEY])),count(after));
+});
+
+test('Fondos científicos IV exige III y desbloquea canje x1000 por £100000',()=>{
+ const h=harness({});
+ const initial={...JSON.parse(h.store[KEY]),money:300000,knowledge:20000,
+    purchases:{fondos_x1:1,fondos_x10:1}};
+ h.window.AtlasSaveBridge.restoreGame(initial);
+ h.evalInGame('spendMoneyForKnowledge(1000)');
+ assert.equal(JSON.parse(h.store[KEY]).money,300000);
+ h.evalInGame('buyNode("fondos_x1000")');
+ assert.equal(JSON.parse(h.store[KEY]).purchases.fondos_x1000,undefined);
+ h.evalInGame('buyNode("fondos_x100")');
+ h.evalInGame('buyNode("fondos_x1000")');
+ const purchased=JSON.parse(h.store[KEY]);
+ assert.equal(purchased.purchases.fondos_x1000,1);
+ assert.equal(purchased.upgrades.fundingTier,1000);
+ assert.match(h.evalInGame('renderSociety()'),/×1000/);
+ h.evalInGame('spendMoneyForKnowledge(1000)');
+ const after=JSON.parse(h.store[KEY]);
+ assert.equal(after.money,purchased.money-100000);
+ assert.equal(after.knowledge,purchased.knowledge+70000);
+});
+
+test('coronas de laboratorio x5000 se canjean 1:1 y persisten',()=>{
+ const h=harness({});
+ h.evalInGame('buyCrownPack(5000)');
+ let current=JSON.parse(h.store[KEY]);
+ assert.equal(current.crownCoins,5000);
+ assert.match(h.evalInGame('renderCrown()'),/5.000 coronas/);
+ h.evalInGame('exchangeTrialCrowns(5000)');
+ current=JSON.parse(h.store[KEY]);
+ assert.equal(current.crownCoins,0);
+ assert.equal(current.money,5420);
+});
+
+test('primeras misiones científicas permiten cobrar una vez y conservar el premio',()=>{
+ const h=harness({});
+ assert.match(h.evalInGame('renderScientificMissions()'),/Primer censo de fauna/);
+ h.evalInGame('claimScientificMission("censo_50")');
+ assert.equal(JSON.parse(h.store[KEY]).purchases.mission_censo_50,undefined);
+ h.evalInGame('fieldAid("sightings")');
+ const before=JSON.parse(h.store[KEY]);
+ h.evalInGame('claimScientificMission("censo_50")');
+ const claimed=JSON.parse(h.store[KEY]);
+ assert.equal(claimed.purchases.mission_censo_50,1);
+ assert.equal(claimed.money-before.money,250);
+ assert.equal(claimed.knowledge-before.knowledge,150);
+ h.evalInGame('claimScientificMission("censo_50")');
+ assert.equal(JSON.parse(h.store[KEY]).money,claimed.money);
+ const reboot=harness(h.store);
+ assert.equal(JSON.parse(reboot.store[KEY]).purchases.mission_censo_50,1);
 });

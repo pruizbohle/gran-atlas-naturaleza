@@ -12,6 +12,7 @@ on:
       - fase3/museo-inventario-v3.3
       - fase4/respaldos-africa-v3.4
       - fase4/restauracion-memoria-africa-v3.5
+      - fase4/aceleradores-v3.6
     paths:
       - "www/**"
       - "tests/**"
@@ -59,7 +60,7 @@ jobs:
           node --check www/js/app.js
           node --check www/js/mobile-ui.js
           node --check www/js/save-manager.js
-          node --test tests/save-roundtrip.test.cjs tests/live-save.test.cjs tests/africa.test.cjs
+          node --test tests/*.test.cjs
 
       - name: Instalar Capacitor
         run: npm install --no-audit --no-fund

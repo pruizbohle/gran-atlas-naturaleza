@@ -1629,7 +1629,8 @@ const RESEARCH_NODES=[
 
   ,{id:'fondos_x1', name:'Fondos científicos I · ×1', desc:'Habilita el aporte básico £100 → 70 conocimiento en Sociedad', money:0, knowledge:0, once:true, effect(s){s.upgrades.fundingTier=1;}},
   {id:'fondos_x10', name:'Fondos científicos II · ×10', desc:'Permite aportes de £1.000 → 700 conocimiento en una operación', money:250, knowledge:150, req:'fondos_x1', once:true, effect(s){s.upgrades.fundingTier=10;}},
-  {id:'fondos_x100', name:'Fondos científicos III · ×100', desc:'Permite aportes de £10.000 → 7.000 conocimiento en una operación', money:1200, knowledge:650, req:'fondos_x10', once:true, effect(s){s.upgrades.fundingTier=100;}}
+  {id:'fondos_x100', name:'Fondos científicos III · ×100', desc:'Permite aportes de £10.000 → 7.000 conocimiento en una operación', money:1200, knowledge:650, req:'fondos_x10', once:true, effect(s){s.upgrades.fundingTier=100;}},
+  {id:'fondos_x1000', name:'Fondos científicos IV · ×1000', desc:'Permite aportes de £100.000 → 70.000 conocimiento en una operación', money:6000, knowledge:3000, req:'fondos_x100', once:true, effect(s){s.upgrades.fundingTier=1000;}}
 ];
 
 function initialState(){
@@ -1885,7 +1886,7 @@ function eligibleSpecies(regionId, habitat, time, season){
   });
 }
 
-function encounter(source='manual', at=Date.now()){
+function encounter(source='manual', at=Date.now(), guaranteed=false){
   // Hourly buckets are stored in the save; manual sightings never consume the automatic quota.
   const hour=Math.floor(at/3600000);
   const bucket=state.autoHourly;
@@ -1902,7 +1903,7 @@ function encounter(source='manual', at=Date.now()){
     return;
   }
   currentAutoNotice='';
-  if(!choices.length || Math.random()>chanceBase){
+  if(!choices.length || (!guaranteed && Math.random()>chanceBase)){
     const k=Math.round((manual?3:1.5)*knowledgeBonus());
     state.knowledge+=k;
     if(manual)state.lastEncounter={title:'Sin avistamiento', subtitle:`Se encontraron rastros. +${k} conocimiento`, sprite:null};
@@ -2117,6 +2118,7 @@ function renderCrown(){
       <button class="btn gold" data-action="buy-crown" data-id="100">+100 coronas</button>
       <button class="btn gold" data-action="buy-crown" data-id="500">+500 coronas</button>
       <button class="btn gold" data-action="buy-crown" data-id="1000">+1.000 coronas</button>
+      <button class="btn gold" data-action="buy-crown" data-id="5000">+5.000 coronas</button>
     </div>
     <div class="crown-quick-actions">
       <button class="btn" data-action="exchange-crown" data-id="100" ${coins<100?'disabled':''}>Canjear 100 → £100</button>
@@ -2197,22 +2199,40 @@ function unlockRegion(id){
 function travelToRegion(id){ setRegion(id); tab='field'; renderPanel(); persist(); }
 function fieldAid(kind){
   if(kind==='knowledge'){
-    state.knowledge+=150;
-    pushLog('📜 Ayuda de campo: +150 conocimiento.');
+    state.knowledge+=500;
+    pushLog('📜 Ayuda de campo: +500 conocimiento.');
     // Conservar abierto el panel <details> de herramientas.
     renderCounters(); updateFieldOutput(); persist();
     return;
   }
-  const runs = kind==='sightings'? 10 : 5;
+  if(kind==='sightings'){
+    // Son 50 avistamientos confirmados, no 50 intentos aleatorios.
+    if(!eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season).length){
+      pushLog('🔭 No hay fauna disponible con estos filtros; cambia las condiciones de exploración.');
+      renderCounters(); updateFieldOutput(); persist();
+      return;
+    }
+    const before=totalSightings();
+    batchingOffline=true;
+    try{for(let i=0;i<50;i++)encounter('manual',Date.now(),true);}
+    finally{batchingOffline=false;}
+    const gained=totalSightings()-before;
+    state.knowledge+=20;
+    pushLog('🔭 Ayuda de campo: +'+gained+' avistamientos confirmados.');
+    renderCounters(); updateFieldOutput(); persist();
+    return;
+  }
+  if(kind!=='guided') return;
   batchingOffline=true;
-  try{ for(let i=0;i<runs;i++) encounter('manual'); } finally { batchingOffline=false; }
-  if(kind==='sightings'){ state.knowledge+=20; pushLog('🔭 Apoyo de observación: varias búsquedas aceleradas.'); }
-  else { state.knowledge+=60; pushLog('🧭 Sesión guiada de campo completada.'); }
+  try{for(let i=0;i<5;i++)encounter('manual');}
+  finally{batchingOffline=false;}
+  state.knowledge+=60;
+  pushLog('🧭 Sesión guiada de campo completada.');
   renderCounters(); updateFieldOutput(); persist();
 }
 function spendMoneyForKnowledge(multiplier=1){
-  if(![1,10,100].includes(multiplier)) return;
-  const max=state.purchases.fondos_x100?100:state.purchases.fondos_x10?10:1;
+  if(![1,10,100,1000].includes(multiplier)) return;
+  const max=state.purchases.fondos_x1000?1000:state.purchases.fondos_x100?100:state.purchases.fondos_x10?10:1;
   if(multiplier>max) return;
   const cost=100*multiplier, gain=70*multiplier;
   if(state.money<cost) return;
@@ -2230,7 +2250,7 @@ function removeExhibit(id){
   delete state.museum.exhibits[id]; pushLog('🏛️ Se retiró de la sala: '+SPECIES[id].name); render();
 }
 function buyCrownPack(amount){
-  if(!Number.isSafeInteger(amount) || amount<=0 || amount>1000) return;
+  if(!Number.isSafeInteger(amount) || ![100,500,1000,5000].includes(amount)) return;
   state.crownCoins=(state.crownCoins||0)+amount;
   pushLog('👑 Prueba: +'+amount+' coronas sin costo real.');render();
 }
@@ -2358,7 +2378,7 @@ function renderField(){
         </div>
       </div>
       <details class="field-toolkit"><summary><span>🎒 Herramientas del naturalista</span><span>Ayudas de prueba · desplegar</span></summary>
-        <div class="helper-row"><button class="btn gold" data-action="field-aid" data-id="knowledge">+ conocimiento</button><button class="btn gold" data-action="field-aid" data-id="sightings">+ avistamientos</button><button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button></div>
+        <div class="helper-row"><button class="btn gold" data-action="field-aid" data-id="knowledge">+500 conocimiento</button><button class="btn gold" data-action="field-aid" data-id="sightings">+50 avistamientos</button><button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button></div>
       </details>
     </section>
     <section class="card field-diary"><div class="field-diary-head"><h3 class="section">✒️ Diario de expedición</h3><span class="field-diary-seal">REGISTRO</span></div>
@@ -2428,7 +2448,7 @@ function renderJournal(){
 
 function renderResearch(){
   const layout={
-    fondos_x1:[3,1],fondos_x10:[4,1],fondos_x100:[5,1],
+    fondos_x1:[3,1],fondos_x10:[4,1],fondos_x100:[5,1],fondos_x1000:[6,1],
     prismaticos_1:[1,1],prismaticos_2:[2,1],cuaderno_1:[1,2],sociedad_1:[2,2],sociedad_2:[3,2],gabinete_1:[4,2],
     metodo_1:[1,3],metodo_2:[2,3],metodo_3:[3,3],metodo_4:[4,3],
     novato:[1,4],capacitacion_1:[2,4],capacitacion_2:[3,4],astillero:[4,4],
@@ -2472,6 +2492,37 @@ function renderResearch(){
   </div>`;
 }
 
+
+const SCIENTIFIC_MISSIONS=[
+  {id:'censo_50', name:'Primer censo de fauna', desc:'Documenta 50 avistamientos.', target:50,
+    progress:()=>totalSightings(), money:250, knowledge:150},
+  {id:'especies_10', name:'Registro de biodiversidad', desc:'Descubre 10 especies diferentes.', target:10,
+    progress:()=>Object.values(state.discovered).filter(Boolean).length, money:500, knowledge:300},
+  {id:'publicacion_1', name:'Primera monografía', desc:'Publica una monografía en la Sociedad.', target:1,
+    progress:()=>Object.values(state.published).filter(Boolean).length, money:750, knowledge:400}
+];
+function claimScientificMission(id){
+  const mission=SCIENTIFIC_MISSIONS.find(m=>m.id===id);
+  if(!mission || state.purchases['mission_'+id] || mission.progress()<mission.target)return;
+  state.purchases['mission_'+id]=1;
+  state.money+=mission.money;
+  state.knowledge+=mission.knowledge;
+  pushLog('🎯 Encargo completado: '+mission.name+' · £'+fmt(mission.money)+' y '+fmt(mission.knowledge)+' conocimiento.');
+  render();
+}
+function renderScientificMissions(){
+  return '<div class="list">'+SCIENTIFIC_MISSIONS.map(m=>{
+    const done=!!state.purchases['mission_'+m.id];
+    const amount=Math.min(m.target,m.progress());
+    const available=!done && amount>=m.target;
+    return '<div class="atlas-region"><div><strong>'+m.name+'</strong><div class="small">'+m.desc+
+      '</div><div class="small">'+fmt(amount)+' / '+fmt(m.target)+' · Premio: £'+fmt(m.money)+
+      ' + '+fmt(m.knowledge)+' conocimiento</div></div><button class="btn '+(available?'gold':'alt')+
+      '" data-action="claim-mission" data-id="'+m.id+'" '+(available?'':'disabled')+'>'+
+      (done?'Completada':available?'Reclamar premio':'En progreso')+'</button></div>';
+  }).join('')+'</div>';
+}
+
 function renderSociety(){
   const publishable=Object.keys(state.discovered).filter(id=>stage(id)>=5 && !state.published[id]);
   const identified=Object.keys(state.discovered).length;
@@ -2486,7 +2537,7 @@ function renderSociety(){
     <div class="choice-row">
       <button class="btn gold" data-action="grant" ${Date.now()-state.lastGrant<60000 || !identified?'disabled':''}>Solicitar subvención</button>
       <button class="btn alt" data-action="exchange-notes" ${state.knowledge<40?'disabled':''}>Notas → Libras</button>
-      ${[1,10,100].map(mult=>'<button class="btn '+(mult===1?'gold':'alt')+'" data-action="money-to-knowledge" data-id="'+mult+'" '+(state.money<100*mult || (mult>1&&!state.purchases['fondos_x'+mult])?'disabled':'')+'>×'+mult+' · £'+fmt(100*mult)+' → '+fmt(70*mult)+' conoc.</button>').join('')}
+      ${[1,10,100,1000].map(mult=>'<button class="btn '+(mult===1?'gold':'alt')+'" data-action="money-to-knowledge" data-id="'+mult+'" '+(state.money<100*mult || (mult>1&&!state.purchases['fondos_x'+mult])?'disabled':'')+'>×'+mult+' · £'+fmt(100*mult)+' → '+fmt(70*mult)+' conoc.</button>').join('')}
     </div>
     <div class="small">Subvención disponible cada 60 s · Intercambio de libras por conocimiento para financiar estudios.</div>
     <div class="req"><strong>Fondos disponibles</strong><div class="small">£${fmt(state.money)} · ${fmt(state.knowledge)} conocimiento</div></div>
@@ -2500,7 +2551,7 @@ function renderSociety(){
     pubContent=`<div class="req"><strong>Atlas mundial</strong><div class="small">${publications} / ${Object.keys(SPECIES).length} monografías publicadas.</div><div class="progress"><div style="width:${Math.round(100*publications/Object.keys(SPECIES).length)}%"></div></div></div><div class="small">El atlas total recopila todas las especies conocidas; los continentes pendientes se incorporarán en versiones posteriores.</div>`;
   }
   const publicationsPane=`<div class="subtabs compact">${[['monographs','📜 Monografías'],['codex','📚 Códex'],['atlas','🌐 Atlas total']].map(([id,label])=>`<button class="subtab ${state.publicationView===id?'active':''}" data-action="publication-tab" data-id="${id}">${label}</button>`).join('')}</div>${pubContent}`;
-  const missions=`<div class="locked-panel"><div class="big-lock">🔒</div><div><strong>Misiones</strong><div class="small">Próximamente: encargos de investigación y objetivos científicos.</div></div></div>`;
+  const missions=renderScientificMissions();
   return `<div class="grid-2">
     <section class="card stack">
       <h3 class="section">🏛️ Real Sociedad de Historia Natural</h3>
@@ -2841,6 +2892,7 @@ function bindPanel(){
     if(act==='bestiary-sort'){state.bestiarySort=id; renderPanel(); persist();}
     if(act==='buy-crown'){buyCrownPack(Number(id)||0);}
     if(act==='exchange-crown'){exchangeTrialCrowns(id==='all'?Math.floor(Math.max(0,state.crownCoins||0)):Number(id));}
+    if(act==='claim-mission'){claimScientificMission(id);}
   }));
 }
 
