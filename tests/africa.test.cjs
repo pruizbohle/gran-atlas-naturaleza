@@ -27,18 +27,40 @@ test('Especies africanas tienen familias gráficas y condiciones válidas',()=>{
 
 test('ampliación v3.5 añade siete regiones y nuevas especies con sprites propios',()=>{
  const matches=[...s.matchAll(/REGIONS\.push\(\.\.\.(\[[^\n]+\])\);/g)];
- assert.equal(matches.length,2);
+ assert.equal(matches.length,3);
  const extra=JSON.parse(matches[1][1]);
  assert.equal(extra.length,7);
  assert.equal(new Set(extra.map(x=>x.id)).size,7);
  assert.equal(extra.at(-1).name,'Madagascar');
  assert.ok(extra.every(x=>x.unlock.prestige>59 && x.species.length>=7));
  const blocks=[...s.matchAll(/Object\.assign\(SPECIES,(\{"af_[^\n]+\})\);/g)];
- assert.equal(blocks.length,2);
+ assert.equal(blocks.length,3);
  const newSpecies=JSON.parse(blocks[1][1]);
  assert.ok(Object.keys(newSpecies).length>=40);
  assert.ok(['hippo','zebra','giraffe','lemur','ostrich'].every(kind=>Object.values(newSpecies).some(s=>s.kind===kind)));
  for(const r of extra){
    for(const id of r.species) assert.ok(newSpecies[id] || blocks[0][1].includes('"'+id+'"'), 'Especie desconocida '+id);
+ }
+});
+
+
+test('Beta 3.7 agrega tres regiones y fauna con hábitats válidos',()=>{
+ const areas=[...s.matchAll(/REGIONS\.push\(\.\.\.(\[[^\n]+\])\);/g)].map(x=>JSON.parse(x[1]));
+ assert.equal(areas.length,3);
+ const fresh=areas[2];
+ assert.deepEqual(fresh.map(r=>r.name),['Cuerno de África','Delta del Okavango','Bosques de Gabón']);
+ assert.deepEqual(fresh.map(r=>r.unlock.prestige),[83,86,89]);
+ assert.equal(new Set(areas.flat().map(r=>r.id)).size,13);
+ const species=[...s.matchAll(/Object\.assign\(SPECIES,(\{"af_[^\n]+\})\);/g)].map(x=>JSON.parse(x[1]));
+ assert.equal(species.length,3);
+ assert.equal(Object.keys(species[2]).length,10);
+ const catalog=Object.assign({},...species);
+ for(const r of fresh){
+  assert.equal(r.continent,'África');
+  assert.ok(r.species.length>=9);
+  for(const id of r.species){
+   assert.ok(catalog[id],id);
+   assert.ok(r.habitats.some(h=>catalog[id].habitats.includes(h)),'sin hábitat compartido '+id);
+  }
  }
 });

@@ -38,7 +38,7 @@ function harness(store={}){
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
    Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,
    setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission};\n})();');
+ const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS};\n})();');
  assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(SAVE,ctx,{filename:'www/js/save-manager.js'});
@@ -147,4 +147,41 @@ test('primeras misiones científicas permiten cobrar una vez y conservar el prem
  assert.equal(JSON.parse(h.store[KEY]).money,claimed.money);
  const reboot=harness(h.store);
  assert.equal(JSON.parse(reboot.store[KEY]).purchases.mission_censo_50,1);
+});
+
+
+test('Beta 3.7 registra visitas reales africanas, paga una vez y persiste',()=>{
+ const h=harness({});
+ const original=JSON.parse(h.store[KEY]);
+ assert.equal(original.regionsVisited['HX-01-09'],true);
+ const data={...original,prestige:100,inventory:{...original.inventory,africa_map:1},
+   regionUnlocked:{...original.regionUnlocked,'HX-07-12':true,'HX-10-09':true,'HX-08-10':true}};
+ h.window.AtlasSaveBridge.restoreGame(data);
+ h.evalInGame('setRegion("HX-07-12")');
+ h.evalInGame('setRegion("HX-10-09")');
+ h.evalInGame('setRegion("HX-08-10")');
+ const before=JSON.parse(h.store[KEY]);
+ for(const id of ['HX-07-12','HX-10-09','HX-08-10'])assert.equal(before.regionsVisited[id],true);
+ assert.match(h.evalInGame('renderScientificMissions()'),/Primer recorrido africano/);
+ h.evalInGame('claimScientificMission("africa_3_regiones")');
+ const paid=JSON.parse(h.store[KEY]);
+ assert.equal(paid.purchases.mission_africa_3_regiones,1);
+ assert.equal(paid.money-before.money,1600);
+ h.evalInGame('claimScientificMission("africa_3_regiones")');
+ assert.equal(JSON.parse(h.store[KEY]).money,paid.money);
+ h.tick();
+ const reopened=harness(h.store);
+ assert.equal(JSON.parse(reopened.store[KEY]).purchases.mission_africa_3_regiones,1);
+});
+
+test('Beta 3.7 ordena las vitrinas del Museo por precio de muestra',()=>{
+ const h=harness({});
+ const data={...JSON.parse(h.store[KEY]),museum:{wing:3,exhibits:{zorro_rojo:true,af_rinoceronte_blanco:true,af_leon:true}},
+  stages:{zorro_rojo:5,af_rinoceronte_blanco:5,af_leon:5},
+  published:{zorro_rojo:true,af_rinoceronte_blanco:true,af_leon:true}};
+ h.window.AtlasSaveBridge.restoreGame(data);
+ const html=h.evalInGame('renderMuseum()');
+ assert.match(html,/Muestras ordenadas por valor/);
+ assert.ok(html.indexOf('<strong>Rinoceronte blanco</strong>')<html.indexOf('<strong>Zorro rojo</strong>'));
+ assert.match(html,/muestra £150/i);
 });
