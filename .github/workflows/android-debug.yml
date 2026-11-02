@@ -15,6 +15,7 @@ on:
       - fase4/aceleradores-v3.6
       - fase4/sprites-v3.6.1
       - fase4/africa-misiones-v3.7
+      - fase4/africa-expediciones-v3.8
     paths:
       - "www/**"
       - "tests/**"
@@ -97,7 +98,7 @@ jobs:
       - name: Publicar APK de prueba
         uses: actions/upload-artifact@v4
         with:
-          name: El-Gran-Atlas-Beta-3.7-debug
+          name: El-Gran-Atlas-Beta-3.8-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 14

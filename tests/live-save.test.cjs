@@ -38,7 +38,7 @@ function harness(store={}){
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
    Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,
    setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS};\n})();');
+ const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES};\n})();');
  assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(SAVE,ctx,{filename:'www/js/save-manager.js'});
@@ -184,4 +184,46 @@ test('Beta 3.7 ordena las vitrinas del Museo por precio de muestra',()=>{
  assert.match(html,/Muestras ordenadas por valor/);
  assert.ok(html.indexOf('<strong>Rinoceronte blanco</strong>')<html.indexOf('<strong>Zorro rojo</strong>'));
  assert.match(html,/muestra £150/i);
+});
+
+
+test('Beta 3.8: reconocimientos africanos respetan mapa, prestigio, recursos y guardado',()=>{
+ const h=harness({});
+ const initial=JSON.parse(h.store[KEY]);
+ assert.equal(h.evalInGame('availableVoyages().some(v=>v.id==="ethiopia_survey")'),false);
+ h.evalInGame('sail("ethiopia_survey")');
+ assert.equal(JSON.parse(h.store[KEY]).voyages.length,0);
+ h.window.AtlasSaveBridge.restoreGame({...initial,money:5000,knowledge:5000,prestige:100,
+  inventory:{...initial.inventory,africa_map:1},
+  upgrades:{...initial.upgrades,shipyard:1,routeTier:2}});
+ assert.equal(h.evalInGame('availableVoyages().some(v=>v.id==="ethiopia_survey")'),true);
+ assert.equal(h.evalInGame('availableVoyages().some(v=>v.id==="namib_survey")'),true);
+ const before=JSON.parse(h.store[KEY]);
+ h.evalInGame('sail("ethiopia_survey")');
+ const underway=JSON.parse(h.store[KEY]);
+ assert.equal(underway.voyages.length,1);
+ assert.equal(underway.money,before.money-950);
+ assert.equal(underway.knowledge,before.knowledge-380);
+ h.evalInGame('finishVoyage('+underway.voyages[0].id+')');
+ const after=JSON.parse(h.store[KEY]);
+ assert.equal(after.voyages.length,0);
+ assert.equal(after.money,before.money-950+1400);
+ assert.equal(after.knowledge,before.knowledge-380+700);
+ assert.ok((after.inventory.animal_trace||0)>=(before.inventory.animal_trace||0)+1);
+ assert.deepEqual(after.sightings,before.sightings);
+ assert.deepEqual(after.regionUnlocked,before.regionUnlocked);
+ h.tick();
+ const reopened=harness(h.store);
+ const saved=JSON.parse(reopened.store[KEY]);
+ assert.equal(saved.money,after.money);
+ assert.ok(saved.inventory.animal_trace>=1);
+});
+
+test('Beta 3.8: no se puede enviar expedición africana sin Mapa de África',()=>{
+ const h=harness({});
+ const initial=JSON.parse(h.store[KEY]);
+ h.window.AtlasSaveBridge.restoreGame({...initial,money:5000,knowledge:5000,prestige:100,
+  upgrades:{...initial.upgrades,shipyard:1,routeTier:2}});
+ h.evalInGame('sail("namib_survey")');
+ assert.equal(JSON.parse(h.store[KEY]).voyages.length,0);
 });

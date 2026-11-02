@@ -26,3 +26,11 @@
 - Melánicos: paleta negra carbón global y contornos legibles, sin modificar siluetas ni rarezas.
 - Se conserva gran_atlas_v05, formato JSON versión 1. Beta 3.7 usa ID Android independiente para proteger la instalación Beta 3.6.1.
 - Próximos avances: Expediciones dirigidas, Fósiles/Relictos y expansión continental.
+
+
+## Beta 3.8 — África en etapas y expediciones dirigidas
+- Dos regiones: Tierras altas de Etiopía (prestigio 92) y Desierto del Namib (95); África llega a 15 regiones.
+- Diez especies nuevas; catálogo mundial pasa de 355 a 365.
+- Dos reconocimientos dirigidos dentro de Expediciones: con Astillero, Cartografía naval II, Mapa de África y prestigio suficiente. Muestra garantizada, sin visitas ni avistamientos inventados.
+- Se conserva formato el-gran-atlas-save v1 y clave gran_atlas_v05; Beta 3.8 se instala de forma independiente en Android.
+- Próximos avances: expansión africana gradual y prototipo controlado de fósiles/relictos, sin romper la colección.
