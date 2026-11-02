@@ -1966,7 +1966,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false){
 }
 function variantToSkin(variant){
   if(/albino|leuc/i.test(variant)) return 'albino';
-  if(/melan/i.test(variant)) return 'melanico';
+  if(/mel[aá]n/i.test(variant)) return 'melanico';
   if(/notable/i.test(variant)) return 'alfa';
   return 'normal';
 }
@@ -3060,22 +3060,29 @@ function enforcePaleColors(svg){
   });
 }
 function enforceMelanicColors(svg){
-  // Negro carbón tanto en pelajes como en colores literales de plumas y detalles.
-  // Solo se ajusta la pintura; silueta, proporciones y patrones siguen intactos.
+  // Final paint pass: literal species colors must never escape the melanic skin.
+  // Only small amber eye circles keep color; anatomy and transparency stay intact.
   const paint=(value,stroke)=>{
-    let h=value.toLowerCase();
-    if(h==='#d8c46b'||h==='#e2cb78')return '#d8c46b';
+    let h=value.trim().toLowerCase();
+    if(h==='none'||h==='transparent')return value;
     if(/^#[0-9a-f]{3}$/.test(h))h='#'+[...h.slice(1)].map(c=>c+c).join('');
-    if(!/^#[0-9a-f]{6}$/.test(h))return value;
-    const r=parseInt(h.slice(1,3),16),g=parseInt(h.slice(3,5),16),b=parseInt(h.slice(5,7),16);
-    const lum=.2126*r+.7152*g+.0722*b;
-    if(stroke)return lum>175?'#626c77':lum>90?'#39434e':'#141b24';
-    return lum>195?'#303945':lum>125?'#222b35':lum>65?'#141c25':'#090f16';
+    let lum=90;
+    if(/^#[0-9a-f]{6}$/.test(h)){
+      const rgb=[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
+      lum=.2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2];
+    }
+    if(stroke)return lum>175?'#626262':lum>90?'#393939':'#181818';
+    return lum>195?'#383838':lum>125?'#292929':lum>65?'#1c1c1c':'#101010';
   };
-  return svg.replace(/(fill|stroke)="(#[0-9a-fA-F]{3}(?:[0-9a-fA-F]{3})?)"/g,
-    (_,attr,color)=>attr+'="'+paint(color,attr==='stroke')+'"')
-    .replace(/(fill|stroke)="rgba?\([^"]*\)"/g,
-      (_,attr)=>attr+'="'+(attr==='fill'?'#151d26':'#141b24')+'"');
+  return svg.replace(/<[a-z][^>]*>/gi,tag=>{
+    const eye=/^<circle\b/i.test(tag) && /\br=["'](?:[0-2](?:\.\d+)?|3(?:\.0+)?)["']/.test(tag)
+      && /\bfill=["']#(?:d8c46b|e2cb78)["']/i.test(tag);
+    return tag.replace(/\b(fill|stroke|stop-color|color)\s*=\s*(["'])(.*?)\2/gi,
+      (_,attr,quote,value)=>attr+'='+quote+(eye&&attr.toLowerCase()==='fill'?'#d8c46b':paint(value,attr.toLowerCase()==='stroke'))+quote)
+      .replace(/\bstyle\s*=\s*(["'])(.*?)\1/gi,(_,quote,style)=>'style='+quote+
+        style.replace(/(^|;)\s*(fill|stroke|stop-color|color)\s*:\s*([^;]+)/gi,
+          (_,sep,attr,value)=>sep+attr+':'+paint(value,attr.toLowerCase()==='stroke'))+quote);
+  });
 }
 function shade(hex, amt){
   const h=hex.replace('#','');
@@ -3733,4 +3740,5 @@ function spriteFor(kind,color,skin,id){
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 render();
 })();
+
 
