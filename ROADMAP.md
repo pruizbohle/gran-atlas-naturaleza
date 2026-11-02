@@ -17,3 +17,12 @@
 - Los guardados deben persistir tras reiniciar la app; se preserva la prueba de motor y tick.
 - Android Beta 3.6 se instala de forma independiente de Beta 3.5; transferir por JSON.
 - El prestigio es acumulado y no se consume al viajar.
+
+
+## Beta 3.7 — Misiones, África y Museo
+- África: tres zonas nuevas (Cuerno 83, Okavango 86 y Gabón 89 de prestigio), diez especies nuevas. 13 zonas africanas y 355 especies globales.
+- Sociedad: siete nuevas misiones, incluyendo visitas reales a regiones africanas y colecciones del Museo. Premios únicos.
+- Museo: galería y candidatas ordenadas según mayor precio de muestra, sin modificar valores de renta/coste.
+- Melánicos: paleta negra carbón global y contornos legibles, sin modificar siluetas ni rarezas.
+- Se conserva gran_atlas_v05, formato JSON versión 1. Beta 3.7 usa ID Android independiente para proteger la instalación Beta 3.6.1.
+- Próximos avances: Expediciones dirigidas, Fósiles/Relictos y expansión continental.

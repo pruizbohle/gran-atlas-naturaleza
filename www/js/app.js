@@ -1064,6 +1064,8 @@ const REGIONS=[
 REGIONS.push(...[{"id":"HX-06-09","name":"Magreb","code":"HX-06-09","continent":"África","unlock":{"prestige":53},"habitats":["desierto","estepa","costa","pradera"],"species":["af_fenec","af_dromedario","af_gacela_dorcas","af_chacal_dorado","af_ibis_eremita","af_serval","af_cobra_egipcia","af_arrui"]},{"id":"HX-07-10","name":"Sabana de África oriental","code":"HX-07-10","continent":"África","unlock":{"prestige":56},"habitats":["pradera","estepa","rio","humedal"],"species":["af_leon","af_elefante_sabana","af_rinoceronte_blanco","af_bufalo_cafre","af_licaon","af_cocodrilo_nilo","af_aguila_pescadora","af_piton_africana","af_serval"]},{"id":"HX-08-11","name":"Cuenca del Congo","code":"HX-08-11","continent":"África","unlock":{"prestige":59},"habitats":["bosque","humedal","rio","pradera"],"species":["af_gorila_occidental","af_chimpance","af_pangolin_gigante","af_leopardo","af_elefante_bosque","af_loro_gris","af_colobo","af_cocodrilo_hocico"]}]);
 // v3.5 · nuevas zonas de África, sin modificar los registros anteriores.
 REGIONS.push(...[{"id":"HX-06-11","name":"Valle del Nilo","code":"HX-06-11","continent":"África","unlock":{"prestige":62},"habitats":["rio","humedal","estepa"],"species":["af_hipopotamo","af_cocodrilo_nilo","af_ibis_sagrado","af_garza_goliat","af_abejaruco_carmin","af_avestruz","af_cobra_egipcia"]},{"id":"HX-07-08","name":"Sahel occidental","code":"HX-07-08","continent":"África","unlock":{"prestige":65},"habitats":["estepa","desierto","pradera"],"species":["af_orix","af_zorro_palido","af_gacela_dorcas","af_chacal_dorado","af_arrui","af_jirafa","af_avestruz"]},{"id":"HX-08-08","name":"Bosques de África occidental","code":"HX-08-08","continent":"África","unlock":{"prestige":68},"habitats":["bosque","humedal","rio"],"species":["af_antilope_bongo","af_duiker_azul","af_civeta","af_mandril","af_turaco","af_chimpance","af_loro_gris","af_leopardo"]},{"id":"HX-09-11","name":"Grandes Lagos africanos","code":"HX-09-11","continent":"África","unlock":{"prestige":71},"habitats":["bosque","pradera","humedal"],"species":["af_gorila_montana","af_galago","af_babuino_oliva","af_grulla_coronada","af_bufalo_cafre","af_hipopotamo","af_cocodrilo_nilo","af_leopardo"]},{"id":"HX-10-10","name":"Kalahari y sabana austral","code":"HX-10-10","continent":"África","unlock":{"prestige":74},"habitats":["desierto","estepa","pradera"],"species":["af_suricata","af_caracal","af_springbok","af_guepardo","af_orix","af_hiena_manchada","af_nu_azul","af_cebra_llanura","af_avestruz"]},{"id":"HX-11-11","name":"Costa del Cabo","code":"HX-11-11","continent":"África","unlock":{"prestige":77},"habitats":["costa","pradera","estepa"],"species":["af_pinguino_africano","af_lobo_marino_cabo","af_tiburon_blanco","af_tortuga_laúd","af_eland","af_secretario","af_babuino_oliva"]},{"id":"HX-09-14","name":"Madagascar","code":"HX-09-14","continent":"África","unlock":{"prestige":80},"habitats":["bosque","pradera","costa"],"species":["af_lemur_colaanillada","af_sifaka","af_fosa","af_camaleon_pantera","af_gecko_diurno","af_tenrec","af_indri","af_tortuga_radiada","af_fosa_ave"]}]);
+// Beta 3.7: tres regiones nuevas de África.
+REGIONS.push(...[{"id":"HX-07-12","name":"Cuerno de África","code":"HX-07-12","continent":"África","unlock":{"prestige":83},"habitats":["estepa","desierto","pradera"],"species":["af_asno_somali","af_gerenuc","af_dikdik_guenther","af_babuino_hamadryas","af_gacela_dorcas","af_avestruz","af_caracal","af_hiena_manchada","af_orix"]},{"id":"HX-10-09","name":"Delta del Okavango","code":"HX-10-09","continent":"África","unlock":{"prestige":86},"habitats":["humedal","rio","pradera"],"species":["af_lechwe_rojo","af_jacana_africana","af_sitatunga","af_hipopotamo","af_cocodrilo_nilo","af_elefante_sabana","af_bufalo_cafre","af_grulla_coronada","af_aguila_pescadora","af_abejaruco_carmin"]},{"id":"HX-08-10","name":"Bosques de Gabón","code":"HX-08-10","continent":"África","unlock":{"prestige":89},"habitats":["bosque","humedal","rio"],"species":["af_potamoquero","af_mono_brazza","af_picatartes_gris","af_gorila_occidental","af_mandril","af_elefante_bosque","af_pangolin_gigante","af_antilope_bongo","af_loro_gris","af_duiker_azul"]}]);
 const SPECIES={
   "asia_esp_0287":{"name": "Grulla siberiana", "latin": "Leucogeranus leucogeranus", "rare": "Muy rara", "kind": "stork", "color": "#e8e5df", "habitats": ["rio", "pradera"], "times": ["amanecer", "dia"], "seasons": ["primavera", "verano", "otono"], "special": ["Notable"], "dimorphism": false},
   "asia_esp_0880":{"name": "Gallo lira", "latin": "Lyrurus tetrix", "rare": "Común", "kind": "forestbird", "color": "#292f36", "habitats": ["bosque", "pradera"], "times": ["amanecer", "dia"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Leucístico", "Notable"], "dimorphism": true},
@@ -1449,6 +1451,8 @@ const SEXUAL_DIMORPHISM={
 };
 Object.entries(SPECIES).forEach(([id,sp])=>{sp.dimorphism=!!SEXUAL_DIMORPHISM[id];});
 
+// Beta 3.7: diez especies nuevas, sin modificar las anteriores.
+Object.assign(SPECIES,{"af_asno_somali":{"name":"Asno salvaje somalí","latin":"Equus africanus somaliensis","rare":"Muy rara","kind":"zebra","color":"#b7a990","habitats":["desierto","estepa"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable"],"dimorphism":false},"af_gerenuc":{"name":"Gerenuc","latin":"Litocranius walleri","rare":"Poco común","kind":"deer","color":"#bd8a55","habitats":["estepa","pradera"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_dikdik_guenther":{"name":"Dicdic de Günther","latin":"Madoqua guentheri","rare":"Poco común","kind":"deer","color":"#a78368","habitats":["estepa","pradera"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_babuino_hamadryas":{"name":"Babuino hamadríade","latin":"Papio hamadryas","rare":"Raro","kind":"primate","color":"#b7afa0","habitats":["estepa","pradera"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_lechwe_rojo":{"name":"Lechwe rojo","latin":"Kobus leche","rare":"Poco común","kind":"deer","color":"#bd7855","habitats":["humedal","pradera"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_jacana_africana":{"name":"Jacana africana","latin":"Actophilornis africanus","rare":"Común","kind":"wader","color":"#966e4f","habitats":["humedal","rio"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_sitatunga":{"name":"Sitatunga","latin":"Tragelaphus spekii","rare":"Raro","kind":"deer","color":"#886e52","habitats":["humedal","rio"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_potamoquero":{"name":"Potamóquero rojo","latin":"Potamochoerus porcus","rare":"Poco común","kind":"boar","color":"#b25735","habitats":["bosque","humedal"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable","Melánico"],"dimorphism":false},"af_mono_brazza":{"name":"Mono de De Brazza","latin":"Cercopithecus neglectus","rare":"Raro","kind":"primate","color":"#757c71","habitats":["bosque","rio"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_picatartes_gris":{"name":"Picatartes de cuello gris","latin":"Picathartes oreas","rare":"Muy rara","kind":"songbird","color":"#817769","habitats":["bosque"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable"],"dimorphism":false}});
 const GLOBAL_BIOMES_FULL=['bosque','pradera','rio','costa','tundra','montana','humedal','mar_abierto','estepa','mediterraneo','desierto','selva','sabana'];
 const REGION_BIOMES={
   'HX-02-13':["bosque", "rio", "tundra", "pradera"],
@@ -1671,6 +1675,8 @@ if((state.asiaPricingVersion||2)<3){
 if(state.upgrades.asiaUnlocked && REGIONS.find(r=>r.id===state.currentRegion)?.continent==='Asia')state.regionUnlocked[state.currentRegion]=true;
 if(REGIONS.find(r=>r.id===state.currentRegion)?.continent==='Asia'&&!state.upgrades.asiaUnlocked)state.currentRegion='HX-01-09';
 state.regionUnlocked[state.currentRegion]=true;
+state.regionsVisited=state.regionsVisited&&typeof state.regionsVisited==='object'&&!Array.isArray(state.regionsVisited)?state.regionsVisited:{};
+state.regionsVisited[state.currentRegion]=true;
 // Migración reversible para progreso anterior: los dimorfismos completos no se pierden.
 state.sexSeen=state.sexSeen||{};
 Object.keys(SEXUAL_DIMORPHISM).forEach(id=>{
@@ -1761,6 +1767,8 @@ window.AtlasSaveBridge={
      };
      if(!REGIONS.some(r=>r.id===state.currentRegion))state.currentRegion=REGIONS[0].id;
      state.regionUnlocked[state.currentRegion]=true;
+     state.regionsVisited=state.regionsVisited&&typeof state.regionsVisited==='object'&&!Array.isArray(state.regionsVisited)?state.regionsVisited:{};
+     state.regionsVisited[state.currentRegion]=true;
      // Evitar calcular un intervalo offline obsoleto al actualizar la partida.
      state.lastTick=Date.now();
      autoAccum=0;autoDiaryBuffer={searches:0,hits:0,knowledge:0};
@@ -1836,6 +1844,9 @@ function renderSexComparison(id){
 }
 
 function regionLandscape(regionId){
+  if(regionId==='HX-07-12')return ['#e8d5ad','#f0dfb8','#be9e69','🏜️  🌾  🐐  🪨'];
+  if(regionId==='HX-10-09')return ['#afccba','#d9e5d4','#7a9b87','🌾  🐘  🌊  🐦'];
+  if(regionId==='HX-08-10')return ['#94bda0','#b9d5ac','#507b59','🌳  🌿  🐒  🌧️'];
   const V22_SCENES={
     'HX-02-15':['#bed1c5','#e5e9d7','#879e86','🌲  🪨  🌲  ⛰️  🍃'],
     'HX-03-16':['#cbd8df','#e5ede9','#8c9e94','🌲  ❄️  🐅  🌲  🏔️'],
@@ -2046,6 +2057,8 @@ function setRegion(id){
   const dest=REGIONS.find(r=>r.id===id);
   if(!dest || !(state.regionUnlocked[id] || id===state.currentRegion)) return;
   state.currentRegion=id;
+  state.regionsVisited=state.regionsVisited||{};
+  state.regionsVisited[id]=true;
   if(!dest.habitats.includes(state.habitat))state.habitat=dest.habitats[0];
   if(!eligibleSpecies(id,state.habitat,state.time,state.season).length){
     const prefs=['amanecer','dia','atardecer','noche'];
@@ -2499,7 +2512,21 @@ const SCIENTIFIC_MISSIONS=[
   {id:'especies_10', name:'Registro de biodiversidad', desc:'Descubre 10 especies diferentes.', target:10,
     progress:()=>Object.values(state.discovered).filter(Boolean).length, money:500, knowledge:300},
   {id:'publicacion_1', name:'Primera monografía', desc:'Publica una monografía en la Sociedad.', target:1,
-    progress:()=>Object.values(state.published).filter(Boolean).length, money:750, knowledge:400}
+    progress:()=>Object.values(state.published).filter(Boolean).length, money:750, knowledge:400},
+  {id:'africa_5',name:'Fauna africana',desc:'Descubre cinco especies africanas.',target:5,
+    progress:()=>Object.keys(state.discovered).filter(id=>id.startsWith('af_')&&state.discovered[id]).length,money:1100,knowledge:700},
+  {id:'africa_3_regiones',name:'Primer recorrido africano',desc:'Visita tres regiones de África.',target:3,
+    progress:()=>REGIONS.filter(r=>r.continent==='África'&&state.regionsVisited?.[r.id]).length,money:1600,knowledge:850},
+  {id:'africa_7_regiones',name:'Exploración continental',desc:'Visita siete regiones africanas.',target:7,
+    progress:()=>REGIONS.filter(r=>r.continent==='África'&&state.regionsVisited?.[r.id]).length,money:2800,knowledge:1500},
+  {id:'horn_2',name:'Naturalista del Cuerno',desc:'Descubre dos especies del Cuerno de África.',target:2,
+    progress:()=>REGIONS.find(r=>r.id==='HX-07-12').species.filter(id=>state.discovered[id]).length,money:1400,knowledge:900},
+  {id:'okavango_2',name:'Fauna del delta',desc:'Descubre dos especies del Okavango.',target:2,
+    progress:()=>REGIONS.find(r=>r.id==='HX-10-09').species.filter(id=>state.discovered[id]).length,money:1400,knowledge:900},
+  {id:'gabon_2',name:'Registro de selva',desc:'Descubre dos especies de los bosques de Gabón.',target:2,
+    progress:()=>REGIONS.find(r=>r.id==='HX-08-10').species.filter(id=>state.discovered[id]).length,money:1400,knowledge:900},
+  {id:'museo_3',name:'Colección de la Sociedad',desc:'Mantén tres especies expuestas en el Museo.',target:3,
+    progress:()=>Object.values(state.museum?.exhibits||{}).filter(Boolean).length,money:1800,knowledge:1200}
 ];
 function claimScientificMission(id){
   const mission=SCIENTIFIC_MISSIONS.find(m=>m.id===id);
@@ -2576,6 +2603,8 @@ const MUSEUM_WINGS = [
 function exhibitPrice(id){return ({'Común':45,'Poco común':70,'Raro':105,'Muy rara':150}[SPECIES[id].rare]||60);}
 function exhibitIncome(id){return ({'Común':0.16,'Poco común':0.24,'Raro':0.34,'Muy rara':0.5}[SPECIES[id].rare]||0.2);}
 function museumRate(){return Object.keys(state.museum.exhibits||{}).reduce((total,id)=>total+exhibitIncome(id),0);}
+// Orden de mayor precio de muestra a menor, sin cambiar la economía.
+function museumValueSort(a,b){return exhibitPrice(b)-exhibitPrice(a)||exhibitIncome(b)-exhibitIncome(a)||SPECIES[a].name.localeCompare(SPECIES[b].name,'es');}
 function museumCapacity(){return [0,3,7,12][state.museum.wing] || 12;}
 function expandMuseum(){
  const next=MUSEUM_WINGS[state.museum.wing];
@@ -2590,25 +2619,25 @@ function exhibitAnimal(id){
 }
 function renderMuseum(){
  const exhibits=state.museum.exhibits||{};
- const exhibitIds=Object.keys(exhibits);
+ const exhibitIds=Object.keys(exhibits).filter(id=>exhibits[id]&&SPECIES[id]).sort(museumValueSort);
  const count=exhibitIds.length;
  const next=MUSEUM_WINGS[state.museum.wing];
- const publishedIds=Object.keys(SPECIES).filter(id=>state.published[id] || exhibits[id]);
+ const publishedIds=Object.keys(SPECIES).filter(id=>state.published[id] || exhibits[id]).sort(museumValueSort);
  return `<div class="grid-2 museum-v33">
  <section class="card stack museum-v33-hall">
    <header class="museum-v33-heading"><span class="museum-v33-eyebrow">GABINETE DE HISTORIA NATURAL · 1842</span><h3 class="section">🏛️ Museo de Historia Natural</h3><p class="small">Colección científica · ${count} vitrinas ocupadas de ${museumCapacity()}</p></header>
    <div class="museum-v33-scene" aria-hidden="true"><span>🌿</span><span>🏛️</span><span>🪴</span></div>
   <div class="subtabs">${[['exhibitions','🖼️ Exposiciones'],['fossils','🦴 Fósiles'],['relicts','🗿 Relictos']].map(([id,label])=>`<button class="subtab ${state.museumView===id?'active':''}" data-action="museum-tab" data-id="${id}">${label}</button>`).join('')}</div>
   ${state.museumView==='exhibitions' ? `
-    <div class="small">Expón especies investigadas 5/5 y con monografía para producir libras automáticamente.</div>
+    <div class="small">Expón especies investigadas 5/5 y con monografía. Muestras ordenadas por valor de mayor a menor.</div>
     <div class="req"><strong>Galería nivel ${state.museum.wing}</strong>
       <div class="small">Capacidad: ${count}/${museumCapacity()} exposiciones</div>
       <div class="small">Ingresos: £${museumRate().toFixed(2)} por segundo (hasta 8 h offline)</div>
     </div>
     ${next?`<button class="btn" data-action="expand-museum" ${state.prestige<next.prestige||state.money<next.cost?'disabled':''}>Ampliar: ${next.name} · £${next.cost} y ${next.prestige} prestigio</button>`:`<div class="badge">Nivel máximo del prototipo</div>`}
-    <div class="showcase-grid museum-v33-showcases">${exhibitIds.length?exhibitIds.map(id=>`<div class="showpiece museum-v33-vitrine"><div class="museum-v33-frame"><div class="sprite-wrap">${getSpriteMarkup(id)}</div></div><strong>${SPECIES[id].name}</strong><div class="small">${SPECIES[id].rare}</div><div class="badge">£${exhibitIncome(id).toFixed(2)}/s</div><button class="btn alt" data-action="remove-exhibit" data-id="${id}">Cambiar especie</button></div>`).join(''):`<div class="small">Aún no has montado exposiciones.</div>`}</div>
+    <div class="showcase-grid museum-v33-showcases">${exhibitIds.length?exhibitIds.map(id=>`<div class="showpiece museum-v33-vitrine"><div class="museum-v33-frame"><div class="sprite-wrap">${getSpriteMarkup(id)}</div></div><strong>${SPECIES[id].name}</strong><div class="small">${SPECIES[id].rare} · muestra £${exhibitPrice(id)}</div><div class="badge">£${exhibitIncome(id).toFixed(2)}/s</div><button class="btn alt" data-action="remove-exhibit" data-id="${id}">Cambiar especie</button></div>`).join(''):`<div class="small">Aún no has montado exposiciones.</div>`}</div>
     <div class="divider"></div><h3 class="section">🐾 Animales con monografía</h3>
-    <div class="list">${publishedIds.map(id=>{ const owned=!!exhibits[id],complete=stage(id)===5 && !!state.published[id],price=exhibitPrice(id); return `<div class="atlas-region"><div class="head" style="display:flex;gap:8px;align-items:center"><div class="sprite-wrap">${getSpriteMarkup(id)}</div><div><strong>${visibleName(id)}</strong><div class="small">${stage(id)}/5 · ${owned?'Expuesto · £'+exhibitIncome(id).toFixed(2)+'/s':complete?'Elegible para exponer':'Investigación incompleta'}</div></div></div>${owned?'<span class="badge">En sala</span>':`<button class="btn" data-action="exhibit" data-id="${id}" ${!complete || count>=museumCapacity() || state.money<price?'disabled':''}>Exponer · £${price} · +£${exhibitIncome(id).toFixed(2)}/s</button>`}</div>`; }).join('')||'<div class="small">Publica monografías desde Sociedad para habilitar animales en el museo.</div>'}</div>
+    <div class="list">${publishedIds.map(id=>{ const owned=!!exhibits[id],complete=stage(id)===5 && !!state.published[id],price=exhibitPrice(id); return `<div class="atlas-region"><div class="head" style="display:flex;gap:8px;align-items:center"><div class="sprite-wrap">${getSpriteMarkup(id)}</div><div><strong>${visibleName(id)}</strong><div class="small">Muestra £${price} · ${stage(id)}/5 · ${owned?'Expuesto · £'+exhibitIncome(id).toFixed(2)+'/s':complete?'Elegible para exponer':'Investigación incompleta'}</div></div></div>${owned?'<span class="badge">En sala</span>':`<button class="btn" data-action="exhibit" data-id="${id}" ${!complete || count>=museumCapacity() || state.money<price?'disabled':''}>Exponer · £${price} · +£${exhibitIncome(id).toFixed(2)}/s</button>`}</div>`; }).join('')||'<div class="small">Publica monografías desde Sociedad para habilitar animales en el museo.</div>'}</div>
   ` : state.museumView==='fossils' ? `<div class="locked-panel"><div class="big-lock">🦴</div><div><strong>Fósiles</strong><div class="small">Aquí aparecerán las piezas paleontológicas y futuras salas temáticas.</div></div></div>` : `<div class="locked-panel"><div class="big-lock">🗿</div><div><strong>Relictos</strong><div class="small">Espacio reservado para hallazgos raros y piezas únicas de expedición.</div></div></div>`}
  </section><section class="card stack museum-v33-ledger"><h3 class="section">📊 Registro del museo</h3>
    <div class="req"><strong>Exposiciones activas</strong><div class="small">${count}</div></div>
@@ -3031,20 +3060,22 @@ function enforcePaleColors(svg){
   });
 }
 function enforceMelanicColors(svg){
-  // Re-map *all* shape fills and strokes: individual species sometimes use
-  // literal pink, orange or beige colors instead of the shared 'body' palette.
-  // Eyes remain amber so silhouettes stay readable at icon size.
-  const ink=(hex,stroke)=>{
-    const h=hex.slice(1).toLowerCase();
-    if(h==='d8c46b'||h==='e2cb78') return '#d8c46b';
-    if(h.length!==6) return hex;
-    const r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
-    const lum=0.2126*r+0.7152*g+0.0722*b;
-    if(stroke) return lum>175?'#717d89':lum>95?'#505d6b':'#404b59';
-    return lum>210?'#505963':lum>150?'#383f49':lum>80?'#262d35':lum>35?'#171c23':'#0c1015';
+  // Negro carbón tanto en pelajes como en colores literales de plumas y detalles.
+  // Solo se ajusta la pintura; silueta, proporciones y patrones siguen intactos.
+  const paint=(value,stroke)=>{
+    let h=value.toLowerCase();
+    if(h==='#d8c46b'||h==='#e2cb78')return '#d8c46b';
+    if(/^#[0-9a-f]{3}$/.test(h))h='#'+[...h.slice(1)].map(c=>c+c).join('');
+    if(!/^#[0-9a-f]{6}$/.test(h))return value;
+    const r=parseInt(h.slice(1,3),16),g=parseInt(h.slice(3,5),16),b=parseInt(h.slice(5,7),16);
+    const lum=.2126*r+.7152*g+.0722*b;
+    if(stroke)return lum>175?'#626c77':lum>90?'#39434e':'#141b24';
+    return lum>195?'#303945':lum>125?'#222b35':lum>65?'#141c25':'#090f16';
   };
-  return svg.replace(/(fill|stroke)="(#[0-9a-fA-F]{6})"/g,(_,attr,hex)=>`${attr}="${ink(hex,attr==='stroke')}"`)
-    .replace(/(fill|stroke)="rgba?\([^"]*\)"/g,(_,attr,value)=>`${attr}="${attr==='fill'?'#232931':'#0a0c0f'}"`);
+  return svg.replace(/(fill|stroke)="(#[0-9a-fA-F]{3}(?:[0-9a-fA-F]{3})?)"/g,
+    (_,attr,color)=>attr+'="'+paint(color,attr==='stroke')+'"')
+    .replace(/(fill|stroke)="rgba?\([^"]*\)"/g,
+      (_,attr)=>attr+'="'+(attr==='fill'?'#151d26':'#141b24')+'"');
 }
 function shade(hex, amt){
   const h=hex.replace('#','');
