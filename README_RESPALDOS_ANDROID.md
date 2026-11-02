@@ -53,3 +53,13 @@ El selector Android usa `ACTION_CREATE_DOCUMENT` y no necesita acceso general al
 La v3.4 guardaba el JSON en localStorage, pero **el motor seguía ejecutando el estado antiguo en memoria y lo escribía cada segundo**; se podía sobrescribir el progreso importado. v3.5 incorpora **AtlasSaveBridge.restoreGame()** que sustituye el estado activo, actualiza contadores y persistencia en una misma operación síncrona. Tras más de un segundo se verifica que el guardado automático no revirtió la restauración. Incluye prueba integrada del motor real con 12.139 avistamientos, £4.465 y 4 prestigio.
 
 La APK de prueba usa ID independiente `com.elgranatlas.naturaleza.beta35`. Mantén instalada la Beta 3.4 y la Alpha mientras validas el respaldo.
+
+
+## v3.6 — Aceleradores científicos y primeros encargos
+
+- Investigación: Fondos científicos IV (×1000) exige Fondos III, cuesta £6.000 + 3.000 conocimiento y habilita en Sociedad el canje £100.000 → 70.000 conocimiento. Los canjes ×1/×10/×100 no cambian.
+- Corona (laboratorio): paquete gratuito de 5.000 coronas, convertible a £5.000 (1:1). No representa dinero real.
+- Herramientas de Campo: +500 conocimiento y +50 avistamientos efectivos (no simples intentos). Se respeta la fauna elegible por bioma, hora y estación; si no hay fauna, no se inventan avistamientos.
+- Sociedad → Misiones: tres encargos iniciales completables con los datos ya guardados, con recompensas una sola vez: 50 avistamientos, 10 especies descubiertas y una monografía publicada.
+- Compatible con partidas antiguas: sigue usando clave local gran_atlas_v05 y JSON versión 1.
+- Beta 3.6 usa el identificador Android independiente com.elgranatlas.naturaleza.beta36 para no exigir desinstalar Beta 3.5. Migrar desde Beta 3.5 mediante exportación e importación JSON, conservando siempre la partida anterior.
