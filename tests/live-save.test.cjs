@@ -38,7 +38,7 @@ function harness(store={}){
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
    Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,
    setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,claimScientificMission};\n})();');
+ const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission};\n})();');
  assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(SAVE,ctx,{filename:'www/js/save-manager.js'});
@@ -133,7 +133,7 @@ test('coronas de laboratorio x5000 se canjean 1:1 y persisten',()=>{
 
 test('primeras misiones científicas permiten cobrar una vez y conservar el premio',()=>{
  const h=harness({});
- assert.match(h.evalInGame('renderSociety()'),/Primer censo de fauna/);
+ assert.match(h.evalInGame('renderScientificMissions()'),/Primer censo de fauna/);
  h.evalInGame('claimScientificMission("censo_50")');
  assert.equal(JSON.parse(h.store[KEY]).purchases.mission_censo_50,undefined);
  h.evalInGame('fieldAid("sightings")');
