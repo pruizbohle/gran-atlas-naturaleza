@@ -27,14 +27,14 @@ test('Especies africanas tienen familias gráficas y condiciones válidas',()=>{
 
 test('ampliación v3.5 añade siete regiones y nuevas especies con sprites propios',()=>{
  const matches=[...s.matchAll(/REGIONS\.push\(\.\.\.(\[[^\n]+\])\);/g)];
- assert.equal(matches.length,4);
+ assert.equal(matches.length,5);
  const extra=JSON.parse(matches[1][1]);
  assert.equal(extra.length,7);
  assert.equal(new Set(extra.map(x=>x.id)).size,7);
  assert.equal(extra.at(-1).name,'Madagascar');
  assert.ok(extra.every(x=>x.unlock.prestige>59 && x.species.length>=7));
  const blocks=[...s.matchAll(/Object\.assign\(SPECIES,(\{"af_[^\n]+\})\);/g)];
- assert.equal(blocks.length,4);
+ assert.equal(blocks.length,5);
  const newSpecies=JSON.parse(blocks[1][1]);
  assert.ok(Object.keys(newSpecies).length>=40);
  assert.ok(['hippo','zebra','giraffe','lemur','ostrich'].every(kind=>Object.values(newSpecies).some(s=>s.kind===kind)));
@@ -46,13 +46,13 @@ test('ampliación v3.5 añade siete regiones y nuevas especies con sprites propi
 
 test('Beta 3.7 agrega tres regiones y fauna con hábitats válidos',()=>{
  const areas=[...s.matchAll(/REGIONS\.push\(\.\.\.(\[[^\n]+\])\);/g)].map(x=>JSON.parse(x[1]));
- assert.equal(areas.length,4);
+ assert.equal(areas.length,5);
  const fresh=areas[2];
  assert.deepEqual(fresh.map(r=>r.name),['Cuerno de África','Delta del Okavango','Bosques de Gabón']);
  assert.deepEqual(fresh.map(r=>r.unlock.prestige),[83,86,89]);
- assert.equal(new Set(areas.flat().map(r=>r.id)).size,15);
+ assert.equal(new Set(areas.flat().map(r=>r.id)).size,18);
  const species=[...s.matchAll(/Object\.assign\(SPECIES,(\{"af_[^\n]+\})\);/g)].map(x=>JSON.parse(x[1]));
- assert.equal(species.length,4);
+ assert.equal(species.length,5);
  assert.equal(Object.keys(species[2]).length,10);
  const catalog=Object.assign({},...species);
  for(const r of fresh){
@@ -68,14 +68,14 @@ test('Beta 3.7 agrega tres regiones y fauna con hábitats válidos',()=>{
 
 test('Beta 3.8 agrega gradualmente dos áreas, 10 especies y mantiene sus requisitos',()=>{
  const areas=[...s.matchAll(/REGIONS\.push\(\.\.\.(\[[^\n]+\])\);/g)].map(m=>JSON.parse(m[1]));
- assert.equal(areas.length,4);
+ assert.equal(areas.length,5);
  const extra=areas[3];
  assert.deepEqual(extra.map(r=>r.name),['Tierras altas de Etiopía','Desierto del Namib']);
  assert.deepEqual(extra.map(r=>r.unlock.prestige),[92,95]);
- assert.equal(areas.flat().length,15);
- assert.equal(new Set(areas.flat().map(r=>r.id)).size,15);
+ assert.equal(areas.flat().length,18);
+ assert.equal(new Set(areas.flat().map(r=>r.id)).size,18);
  const blocks=[...s.matchAll(/Object\.assign\(SPECIES,(\{"af_[^\n]+\})\);/g)].map(m=>JSON.parse(m[1]));
- assert.equal(blocks.length,4);
+ assert.equal(blocks.length,5);
  assert.equal(Object.keys(blocks[3]).length,10);
  const catalog=Object.assign({},...blocks);
  const valid=new Set(['bosque','pradera','rio','costa','tundra','montana','estepa','mediterraneo','desierto','humedal']);
@@ -91,6 +91,39 @@ test('Beta 3.8 agrega gradualmente dos áreas, 10 especies y mantiene sus requis
   assert.ok(sp.latin && sp.name && sp.kind,id);
   assert.ok(sp.habitats.length && sp.habitats.every(h=>valid.has(h)),id);
   assert.ok(sp.times.length && sp.seasons.length && sp.special.length,id);
+ }
+ assert.match(s,/if\(r\.continent==='África'\).*africa_map/);
+});
+
+
+test('Beta 3.9 contiene 3 regiones nuevas, 12 especies y desbloqueo progresivo',()=>{
+ const areas=[...s.matchAll(/REGIONS\.push\(\.\.\.(\[[^\n]+\])\);/g)].map(m=>JSON.parse(m[1]));
+ assert.equal(areas.length,5);
+ const extra=areas[4];
+ assert.deepEqual(extra.map(r=>r.name),['Montañas del Atlas','Bosques de miombo','Costa de Mozambique']);
+ assert.deepEqual(extra.map(r=>r.unlock.prestige),[98,101,104]);
+ assert.equal(areas.flat().length,18);
+ assert.equal(new Set(areas.flat().map(r=>r.id)).size,18);
+ const blocks=[...s.matchAll(/Object\.assign\(SPECIES,(\{"af_[^\n]+\})\);/g)].map(m=>JSON.parse(m[1]));
+ assert.equal(blocks.length,5);
+ const added=blocks[4];
+ assert.equal(Object.keys(added).length,12);
+ const catalog=Object.assign({},...blocks);
+ const oldIds=new Set(Object.keys(Object.assign({},...blocks.slice(0,4))));
+ assert.ok(Object.keys(added).every(id=>!oldIds.has(id)),'ID sobreescrito');
+ const valid=new Set(['bosque','pradera','rio','costa','tundra','montana','estepa','mediterraneo','desierto','humedal']);
+ for(const region of extra){
+  assert.ok(region.species.length>=9);
+  assert.equal(region.continent,'África');
+  for(const id of region.species){
+   assert.ok(catalog[id],id+' sin datos');
+   assert.ok(region.habitats.some(h=>catalog[id].habitats.includes(h)),id+' no observable');
+  }
+ }
+ for(const [id,sp] of Object.entries(added)){
+  assert.ok(sp.latin&&sp.name&&sp.kind&&sp.color,id);
+  assert.ok(sp.habitats.length&&sp.habitats.every(h=>valid.has(h)),id);
+  assert.ok(sp.times.length&&sp.seasons.length&&sp.special.length,id);
  }
  assert.match(s,/if\(r\.continent==='África'\).*africa_map/);
 });
