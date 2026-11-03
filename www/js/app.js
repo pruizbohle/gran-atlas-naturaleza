@@ -1569,7 +1569,20 @@ function taxonomyText(id){
   if(st<3) return `Clase: ${t.className}`;
   return `Clase: ${t.className} · Grupo: ${t.subClass}`;
 }
+// Beta 3.10.1: preservar la ecología explícita de las dos regiones nuevas.
+// normalizeEcology() aplica perfiles por familia al catálogo global y puede
+// sobrescribir la ecología africana (p. ej., león/guepardo pasan a bosque).
+// Capturamos únicamente las fichas de Rift y Seychelles antes de normalizar:
+// sin tocar guardados, regiones previas ni sus ID.
+const V310_NEW_REGIONS=['HX-08-12','HX-07-14'];
+const V310_PRESERVED_ECO=Object.fromEntries(
+ [...new Set(REGIONS.filter(r=>V310_NEW_REGIONS.includes(r.id)).flatMap(r=>r.species))]
+ .filter(id=>!!SPECIES[id]).map(id=>[id,{
+  habitats:[...SPECIES[id].habitats],times:[...SPECIES[id].times],seasons:[...SPECIES[id].seasons]
+ }])
+);
 normalizeEcology();
+for(const [id,eco] of Object.entries(V310_PRESERVED_ECO))Object.assign(SPECIES[id],eco);
 // Colores de caparazón diferenciados: especies terrestres europeas.
 if(SPECIES['eu_esp_0505'])SPECIES['eu_esp_0505'].color='#997950';
 if(SPECIES['eu_esp_0506'])SPECIES['eu_esp_0506'].color='#a4a16f';

@@ -38,7 +38,7 @@ function harness(store={}){
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
    Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,
    setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady};\n})();');
+ const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES};\n})();');
  assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(SAVE,ctx,{filename:'www/js/save-manager.js'});
@@ -275,4 +275,35 @@ test('Beta 3.10: exportar e importar mantiene el registro del Museo, incluso con
  h.window.AtlasSaveBridge.restoreGame(noCollections);
  assert.match(h.evalInGame('renderMuseumCollections("fossils")'),/0\/2 piezas catalogadas/);
  assert.equal(JSON.parse(h.store[KEY]).museum.wing,2);
+});
+
+
+test('Beta 3.10.1: los 17 animales de Rift y Seychelles tienen condiciones accesibles',()=>{
+ const h=harness({});
+ const idsByRegion={
+  'HX-08-12':['af_flamenco_enano','af_pelicano_blanco','af_jirafa_rothschild','af_gran_kudu','af_hipopotamo','af_leon','af_bufalo_cafre','af_aguila_pescadora','af_guepardo'],
+  'HX-07-14':['af_tortuga_aldabra','af_loro_negro_seychelles','af_cernicalo_seychelles','af_tiburon_puntas_negras','af_tortuga_laúd','af_manta_gigante','af_dugongo','af_delfin_jorobado_indico']
+ };
+ for(const [region,ids] of Object.entries(idsByRegion)){
+  for(const id of ids){
+   const found=h.evalInGame('REGIONS.find(r=>r.id==="'+region+'").habitats.some(h=>window.__atlasTest.SPECIES["'+id+'"].habitats.includes(h))');
+   assert.ok(found,region+' '+id+' inaccesible');
+  }
+ }
+ for(const [id,region,habitat,time,season] of [
+  ['af_leon','HX-08-12','pradera','dia','invierno'],
+  ['af_guepardo','HX-08-12','estepa','dia','invierno'],
+  ['af_flamenco_enano','HX-08-12','humedal','dia','invierno'],
+  ['af_pelicano_blanco','HX-08-12','humedal','dia','invierno'],
+  ['af_aguila_pescadora','HX-08-12','rio','dia','invierno'],
+  ['af_tortuga_aldabra','HX-07-14','bosque','amanecer','invierno'],
+  ['af_cernicalo_seychelles','HX-07-14','bosque','dia','invierno'],
+  ['af_tiburon_puntas_negras','HX-07-14','costa','noche','invierno']
+ ]){
+  const answer=h.evalInGame('eligibleSpecies("'+region+'","'+habitat+'","'+time+'","'+season+'").includes("'+id+'")');
+  assert.ok(answer,id+' debería ser observable en '+region+' '+habitat+' '+time+' '+season);
+ }
+ const before=JSON.parse(h.store[KEY]);
+ h.tick();
+ assert.equal(JSON.parse(h.store[KEY]).prestige,before.prestige);
 });
