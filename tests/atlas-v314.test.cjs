@@ -66,16 +66,18 @@ test('Fauna de África: ninguna especie regional queda sin bioma ni horario posi
  const g=game();
  const africa=g.REGIONS.filter(r=>r.continent==='África');
  assert.equal(africa.length,24);
+ const ecologicalProblems=[];
  for(const r of africa){
   assert.ok(r.species.length>=8,r.name+' con fauna insuficiente');
   assert.equal(new Set(r.species).size,r.species.length,'duplicados en '+r.name);
   for(const id of r.species){
    const sp=g.SPECIES[id];
    assert.ok(sp,'ficha inexistente '+id);
-   assert.ok(sp.habitats.some(h=>r.habitats.includes(h)),sp.name+' no observable en '+r.name);
+   if(!sp.habitats.some(h=>r.habitats.includes(h)))ecologicalProblems.push(sp.name+' ['+id+'] no observable en '+r.name);
    assert.ok(sp.times.length>0&&sp.seasons.length>0,id+' sin horario o temporada');
   }
  }
+ assert.deepEqual(ecologicalProblems,[],ecologicalProblems.join('; '));
  const cape=africa.find(r=>r.name==='Costa del Cabo');
  assert.ok(cape.species.length>=10,'la costa del Cabo debe tener especies marinas propias');
  const serengeti=africa.find(r=>r.name==='Sabana de África oriental');
