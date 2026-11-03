@@ -367,7 +367,7 @@ test('Beta 3.11: 90 fragmentos, 1 cráneo y 10 dientes producen un T. rex único
 test('Beta 3.11: relictos no tributan al Atlas y se conservan en JSON',()=>{
  const h=harness({});
  const original=JSON.parse(h.store[KEY]);
- assert.equal(h.evalInGame('MUSEUM_RELICTS.length'),4);
+ assert.equal(h.evalInGame('MUSEUM_RELICTS.length'),6);
  assert.equal(h.evalInGame('recordMuseumRelict("coelacanth_indic")'),true);
  assert.equal(h.evalInGame('recordMuseumRelict("coelacanth_indic")'),false);
  assert.equal(h.evalInGame('recordMuseumRelict("invalid")'),false);
