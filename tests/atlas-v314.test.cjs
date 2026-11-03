@@ -61,3 +61,23 @@ test('Las investigaciones nuevas no modifican los códigos de África',()=>{
  assert.ok(g.RECIPES.oceanic_quadrant.requires.brass_shard>0);
  assert.equal(g.RECIPES.north_america_map.requires.north_america_map_piece,8);
 });
+
+test('Fauna de África: ninguna especie regional queda sin bioma ni horario posible',()=>{
+ const g=game();
+ const africa=g.REGIONS.filter(r=>r.continent==='África');
+ assert.equal(africa.length,24);
+ for(const r of africa){
+  assert.ok(r.species.length>=8,r.name+' con fauna insuficiente');
+  assert.equal(new Set(r.species).size,r.species.length,'duplicados en '+r.name);
+  for(const id of r.species){
+   const sp=g.SPECIES[id];
+   assert.ok(sp,'ficha inexistente '+id);
+   assert.ok(sp.habitats.some(h=>r.habitats.includes(h)),sp.name+' no observable en '+r.name);
+   assert.ok(sp.times.length>0&&sp.seasons.length>0,id+' sin horario o temporada');
+  }
+ }
+ const cape=africa.find(r=>r.name==='Costa del Cabo');
+ assert.ok(cape.species.length>=10,'la costa del Cabo debe tener especies marinas propias');
+ const serengeti=africa.find(r=>r.name==='Sabana de África oriental');
+ assert.ok(serengeti.species.length>=30,'conservar diversidad de la sabana');
+});
