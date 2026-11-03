@@ -42,7 +42,7 @@ test('Fauna añadida se integra sin perder fichas históricas ni hábitats',()=>
  }
  const ids=new Set(africa.flatMap(r=>r.species));
  for(const additions of Object.values(assignments))additions.forEach(id=>ids.add(id));
- for(const r of batches.at(-1))for(const id of r.species)
+ for(const r of batches.filter(a=>a.some(r=>r.continent==='África')).at(-1))for(const id of r.species)
    assert.ok(ids.has(id),'fauna nueva sin asignar: '+id);
 });
 
