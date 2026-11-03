@@ -51,7 +51,7 @@ test('Beta 3.7 oscurece pigmentos melánicos de mamíferos, reptiles y aves',()=
 
 
 test('Beta 3.9 elimina los sprites circulares para todas las especies y variantes',()=>{
- assert.ok(Object.keys(api.SPECIES).length>=385);
+ assert.ok(Object.keys(api.SPECIES).length>=406);
  for(const [id] of Object.entries(api.SPECIES)){
   for(const skin of skins){
    const svg=api.getSpriteMarkup(id,skin);
@@ -85,4 +85,17 @@ test('Beta 3.10 conserva sprites propios distinguibles y sin círculos',()=>{
   assert.notEqual(api.getSpriteMarkup(id,'melanico'),normal,id+' variante sin aplicar');
  }
  assert.equal(new Set(ids.map(id=>geometry(api.getSpriteMarkup(id)))).size,ids.length);
+});
+
+
+test('Beta 3.12: Norteamérica tiene cinco retratos SVG distintivos sin círculos genéricos',()=>{
+ const ids=['na_alce','na_castor_canadiense','na_aguila_calva','na_mapache','na_caribu'];
+ for(const id of ids){
+  assert.ok(api.SPECIES[id],id+' no existe');
+  const n=api.getSpriteMarkup(id,'normal');
+  assert.match(n,/<path\b/,id+' no tiene silueta');
+  assert.doesNotMatch(n,/<circle cx="50" cy="50" r="24"/,id+' es círculo');
+  assert.notEqual(n,api.getSpriteMarkup(id,'melanico'),id+' no cambia de color');
+ }
+ assert.equal(new Set(ids.map(id=>geometry(api.getSpriteMarkup(id,'normal')))).size,5);
 });

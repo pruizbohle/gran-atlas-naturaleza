@@ -38,7 +38,7 @@ function harness(store={}){
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
    Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,
    setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES,MUSEUM_FOSSIL_RECIPES,craftMuseumFossil,museumAssemblyReady,museumOtherExhibits,renderFossilWorkshop,renderMuseumRelicts,renderMuseumArtifacts,renderMuseumSamples,toggleMuseumDisplay,renderMuseumExtraGallery,MUSEUM_RELICTS,recordMuseumRelict,maybeMuseumFieldDiscovery,SCIENTIFIC_MISSIONS,resolveVoyageReward};\n})();');
+ const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES,MUSEUM_FOSSIL_RECIPES,craftMuseumFossil,museumAssemblyReady,museumOtherExhibits,renderFossilWorkshop,renderMuseumRelicts,renderMuseumArtifacts,renderMuseumSamples,toggleMuseumDisplay,renderMuseumExtraGallery,MUSEUM_RELICTS,recordMuseumRelict,maybeMuseumFieldDiscovery,SCIENTIFIC_MISSIONS,resolveVoyageReward,RESEARCH_NODES,ITEMS,RECIPES,ATLAS_CONTINENTS,buyNode,canBuy,craftItem,regionRequirementsMet,continentStatus,unlockRegion,museumCardArt};\n})();');
  assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(SAVE,ctx,{filename:'www/js/save-manager.js'});
@@ -435,4 +435,144 @@ test('Beta 3.11: taller impide fabricaciones sin materiales y múltiples ejempla
  assert.equal(h.evalInGame('craftMuseumFossil("nope",1)'),false);
  assert.equal(h.evalInGame('toggleMuseumDisplay("relict:coelacanth_indic")'),false);
  assert.match(h.evalInGame('renderFossilWorkshop()'),/Reconstrucción de T\. rex/);
+});
+
+
+test('Beta 3.12: mapa y artefacto activan Norteamérica en dos investigaciones',()=>{
+ const h=harness({});
+ const initial=JSON.parse(h.store[KEY]);
+ h.window.AtlasSaveBridge.restoreGame({...initial,prestige:150,money:30000,knowledge:25000,
+  purchases:{...initial.purchases,rutas_2:1},upgrades:{...initial.upgrades,routeTier:2,shipyard:1},
+  inventory:{...initial.inventory,africa_map:1,northamerica_map_piece:12,brass_gear:2,polished_lens:2,map_fragment:3,ancient_coin:1}});
+ assert.equal(h.evalInGame('ATLAS_CONTINENTS.find(c=>c.id==="Norteamérica").implemented'),true);
+ assert.equal(h.evalInGame('regionRequirementsMet(REGIONS.find(r=>r.id==="HX-02-03"))'),false);
+ h.evalInGame('buyNode("norteamerica_1")');
+ assert.equal(JSON.parse(h.store[KEY]).upgrades.northAmericaUnlocked,0);
+ h.evalInGame('buyNode("nuevo_mundo_1")');
+ assert.equal(JSON.parse(h.store[KEY]).upgrades.newWorldRoute,1);
+ assert.equal(h.evalInGame('availableVoyages().some(v=>v.id==="new_world_survey")'),true);
+ assert.equal(h.evalInGame('craftItem("northamerica_map")'),undefined);
+ assert.equal(JSON.parse(h.store[KEY]).inventory.northamerica_map,1);
+ h.evalInGame('buyNode("norteamerica_1")');
+ assert.equal(JSON.parse(h.store[KEY]).upgrades.northAmericaUnlocked,0,'no debería desbloquear sin artefacto');
+ assert.equal(h.evalInGame('catalogMuseumCollection("astrolabio_transatlantico")'),true);
+ const intermediate=JSON.parse(h.store[KEY]);
+ assert.equal(intermediate.museum.collections.astrolabio_transatlantico,true);
+ h.evalInGame('buyNode("norteamerica_1")');
+ const saved=JSON.parse(h.store[KEY]);
+ assert.equal(saved.upgrades.northAmericaUnlocked,1);
+ assert.equal(saved.inventory.northamerica_map,1,'el mapa debe conservarse');
+ assert.equal(saved.museum.collections.astrolabio_transatlantico,true,'el artefacto debe conservarse');
+ assert.equal(h.evalInGame('regionRequirementsMet(REGIONS.find(r=>r.id==="HX-02-03"))'),true);
+ assert.equal(h.evalInGame('regionRequirementsMet(REGIONS.find(r=>r.id==="HX-03-04"))'),true);
+ h.evalInGame('unlockRegion("HX-02-03")');
+ assert.equal(JSON.parse(h.store[KEY]).regionUnlocked['HX-02-03'],true);
+ h.tick();
+ const reboot=harness(h.store);
+ const again=JSON.parse(reboot.store[KEY]);
+ assert.equal(again.upgrades.northAmericaUnlocked,1);
+ assert.equal(again.inventory.northamerica_map,1);
+ assert.equal(again.museum.collections.astrolabio_transatlantico,true);
+});
+
+test('Beta 3.12: Africa anterior mantiene mapa, nuevas zonas requieren Estudios de África',()=>{
+ const h=harness({});
+ const initial=JSON.parse(h.store[KEY]);
+ h.window.AtlasSaveBridge.restoreGame({...initial,prestige:150,money:6000,knowledge:5000,
+  purchases:{...initial.purchases,rutas_2:1},inventory:{...initial.inventory,africa_map:1}});
+ assert.equal(h.evalInGame('regionRequirementsMet(REGIONS.find(r=>r.id==="HX-07-10"))'),true);
+ assert.equal(h.evalInGame('regionRequirementsMet(REGIONS.find(r=>r.id==="HX-11-10"))'),false);
+ assert.equal(h.evalInGame('regionRequirementsMet(REGIONS.find(r=>r.id==="HX-07-07"))'),false);
+ h.evalInGame('buyNode("africa_1")');
+ const now=JSON.parse(h.store[KEY]);
+ assert.equal(now.upgrades.africaResearch,1);
+ assert.equal(now.inventory.africa_map,1,'mapa previo no se consume');
+ assert.equal(h.evalInGame('regionRequirementsMet(REGIONS.find(r=>r.id==="HX-11-10"))'),true);
+ assert.equal(h.evalInGame('regionRequirementsMet(REGIONS.find(r=>r.id==="HX-07-07"))'),true);
+ h.evalInGame('unlockRegion("HX-11-10")');
+ assert.equal(JSON.parse(h.store[KEY]).regionUnlocked['HX-11-10'],true);
+});
+
+test('Beta 3.12: travesía entrega piezas del mapa y habilita misión de instrumental',()=>{
+ const h=harness({});
+ const initial=JSON.parse(h.store[KEY]);
+ h.window.AtlasSaveBridge.restoreGame({...initial,money:30000,knowledge:25000,prestige:150,
+  upgrades:{...initial.upgrades,shipyard:1,routeTier:2,newWorldRoute:1}});
+ for(let i=0;i<3;i++){
+  h.evalInGame('sail("new_world_survey")');
+  const active=JSON.parse(h.store[KEY]).voyages;
+  assert.equal(active.length,1);
+  h.evalInGame('finishVoyage('+active[0].id+')');
+ }
+ const earned=JSON.parse(h.store[KEY]);
+ assert.ok(earned.inventory.northamerica_map_piece>=6);
+ assert.ok(earned.inventory.ocean_chart_piece>=3);
+ assert.equal(earned.museum.newWorldVoyages,3);
+ const pre=JSON.parse(h.store[KEY]);
+ h.evalInGame('claimScientificMission("nuevo_mundo_viajes_3")');
+ const paid=JSON.parse(h.store[KEY]);
+ assert.equal(paid.inventory.brass_gear-(pre.inventory.brass_gear||0),2);
+ assert.equal(paid.inventory.polished_lens-(pre.inventory.polished_lens||0),2);
+ assert.equal(paid.inventory.map_fragment-(pre.inventory.map_fragment||0),3);
+ assert.equal(paid.inventory.ancient_coin-(pre.inventory.ancient_coin||0),1);
+ h.evalInGame('claimScientificMission("nuevo_mundo_viajes_3")');
+ const once=JSON.parse(h.store[KEY]);
+ assert.equal(once.inventory.brass_gear,paid.inventory.brass_gear);
+ assert.equal(once.inventory.ancient_coin,paid.inventory.ancient_coin);
+});
+
+test('Beta 3.12: dinosaurios adicionales son únicos, visibles y no tributan al Atlas',()=>{
+ const h=harness({});
+ const initial=JSON.parse(h.store[KEY]);
+ const list=[['triceratops_mount',{bone_long:12,bone_short:18,herbivore_skull:1}],
+             ['stegosaurus_mount',{bone_long:8,bone_short:16,fossil_plate:8}],
+             ['velociraptor_mount',{bone_long:6,bone_short:12,raptor_skull:1}]];
+ for(const [id,materials] of list){
+  const previous=JSON.parse(h.store[KEY]);
+  h.window.AtlasSaveBridge.restoreGame({...previous,inventory:{...previous.inventory,...materials}});
+  assert.equal(h.evalInGame('craftMuseumFossil("'+id+'",1)'),true,id);
+  assert.equal(h.evalInGame('craftMuseumFossil("'+id+'",1)'),false,'duplicated '+id);
+  assert.equal(JSON.parse(h.store[KEY]).museum.collections[id],true);
+  assert.match(h.evalInGame('museumCardArt("","'+id+'")'),/<path/);
+  for(const item of Object.keys(materials))assert.equal(JSON.parse(h.store[KEY]).inventory[item],0);
+ }
+ const after=JSON.parse(h.store[KEY]);
+ assert.deepEqual(after.sightings,initial.sightings);
+ assert.deepEqual(after.discovered,initial.discovered);
+ assert.equal(after.money,initial.money);
+ assert.equal(after.prestige,initial.prestige);
+ const gallery=h.evalInGame('renderMuseumExtraGallery()');
+ for(const id of ['Triceratops','Stegosaurus','Velociraptor'])assert.ok(gallery.includes(id),id);
+ h.tick();
+ const reboot=harness(h.store);
+ assert.equal(Object.values(JSON.parse(reboot.store[KEY]).museum.collections).filter(Boolean).length,3);
+});
+
+test('Beta 3.12: dos nuevos relictos y artefactos conservan guardados anteriores',()=>{
+ const h=harness({});
+ const initial=JSON.parse(h.store[KEY]);
+ h.window.AtlasSaveBridge.restoreGame({...initial,knowledge:5000,inventory:{...initial.inventory,
+  brass_gear:2,polished_lens:2,map_fragment:4,ancient_coin:1,
+  parchment_scrap:3,ocean_chart_piece:2},
+  museum:{wing:3,exhibits:{zorro_rojo:true},collections:{carta_historica:true,medallon_viajero:true}}});
+ assert.equal(h.evalInGame('MUSEUM_RELICTS.length'),6);
+ assert.equal(h.evalInGame('MUSEUM_COLLECTIONS.length'),6);
+ assert.equal(h.evalInGame('catalogMuseumCollection("astrolabio_transatlantico")'),true);
+ assert.equal(h.evalInGame('catalogMuseumCollection("diario_navegacion")'),true);
+ assert.equal(h.evalInGame('recordMuseumRelict("chad_lungfish")'),true);
+ assert.equal(h.evalInGame('recordMuseumRelict("gabon_goliath_frog")'),true);
+ const state=JSON.parse(h.store[KEY]);
+ assert.equal(state.museum.collections.carta_historica,true);
+ assert.equal(state.museum.collections.medallon_viajero,true);
+ assert.equal(state.museum.exhibits.zorro_rojo,true);
+ assert.equal(state.museum.collections.astrolabio_transatlantico,true);
+ assert.equal(state.museum.collections.diario_navegacion,true);
+ assert.equal(state.museum.relicts.chad_lungfish,true);
+ assert.equal(state.museum.relicts.gabon_goliath_frog,true);
+ assert.deepEqual(state.sightings,initial.sightings);
+ assert.deepEqual(state.discovered,initial.discovered);
+ assert.match(h.evalInGame('renderMuseumExtraGallery()'),/Astrolabio transatlántico/);
+ h.tick();
+ const reboot=harness(h.store);
+ assert.equal(JSON.parse(reboot.store[KEY]).museum.relicts.gabon_goliath_frog,true);
 });
