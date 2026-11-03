@@ -52,7 +52,7 @@ test('Beta 3.7 agrega tres regiones y fauna con hábitats válidos',()=>{
  assert.deepEqual(fresh.map(r=>r.unlock.prestige),[83,86,89]);
  assert.equal(new Set(areas.flat().map(r=>r.id)).size,20);
  const species=[...s.matchAll(/Object\.assign\(SPECIES,(\{"af_[^\n]+\})\);/g)].map(x=>JSON.parse(x[1]));
- assert.equal(species.length,5);
+ assert.equal(species.length,6);
  assert.equal(Object.keys(species[2]).length,10);
  const catalog=Object.assign({},...species);
  for(const r of fresh){
