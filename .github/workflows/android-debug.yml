@@ -19,6 +19,7 @@ on:
       - fase4/africa-sprites-v3.9
       - fase4/africa-museo-v3.10
       - fase4/ecologia-africa-v3.10.1
+      - fase4/museo-cinco-salas-v3.11
     paths:
       - "www/**"
       - "tests/**"
@@ -101,7 +102,7 @@ jobs:
       - name: Publicar APK de prueba
         uses: actions/upload-artifact@v4
         with:
-          name: El-Gran-Atlas-Beta-3.10.1-debug
+          name: El-Gran-Atlas-Beta-3.11-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 14
