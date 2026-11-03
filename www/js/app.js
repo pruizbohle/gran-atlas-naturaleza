@@ -1072,6 +1072,8 @@ REGIONS.push(...[{"id":"HX-07-13","name":"Tierras altas de Etiopía","code":"HX-
 REGIONS.push(...[{"id":"HX-06-08","name":"Montañas del Atlas","code":"HX-06-08","continent":"África","unlock":{"prestige":98},"habitats":["montana","bosque","estepa","desierto"],"species":["af_macaco_berberia","af_gato_montes_africano","af_ciervo_berberia","af_zorro_ruppell","af_arrui","af_fenec","af_chacal_dorado","af_gacela_dorcas","af_cobra_egipcia"]},{"id":"HX-09-09","name":"Bosques de miombo","code":"HX-09-09","continent":"África","unlock":{"prestige":101},"habitats":["bosque","pradera","estepa"],"species":["af_antilope_sable","af_calao_terrestre","af_pangolin_temminck","af_inseparable_lilian","af_elefante_sabana","af_licaon","af_leopardo","af_babuino_oliva","af_guepardo"]},{"id":"HX-10-12","name":"Costa de Mozambique","code":"HX-10-12","continent":"África","unlock":{"prestige":104},"habitats":["costa","rio","humedal"],"species":["af_dugongo","af_manta_gigante","af_delfin_jorobado_indico","af_martin_malaquita","af_tortuga_laúd","af_tiburon_blanco","af_cocodrilo_nilo","af_hipopotamo","af_garza_goliat","af_aguila_pescadora"]}]);
 // Beta 3.10: dos áreas africanas, sin modificar los IDs previos.
 REGIONS.push(...[{"id":"HX-08-12","name":"Lagos del Rift","code":"HX-08-12","continent":"África","unlock":{"prestige":107},"habitats":["humedal","rio","pradera","estepa"],"species":["af_flamenco_enano","af_pelicano_blanco","af_jirafa_rothschild","af_gran_kudu","af_hipopotamo","af_leon","af_bufalo_cafre","af_aguila_pescadora","af_guepardo"]},{"id":"HX-07-14","name":"Islas Seychelles y Aldabra","code":"HX-07-14","continent":"África","unlock":{"prestige":110},"habitats":["costa","bosque","pradera"],"species":["af_tortuga_aldabra","af_loro_negro_seychelles","af_cernicalo_seychelles","af_tiburon_puntas_negras","af_tortuga_laúd","af_manta_gigante","af_dugongo","af_delfin_jorobado_indico"]}]);
+// Beta 3.12: cerrar progresivamente África y abrir dos regiones del Nuevo Mundo.
+REGIONS.push(...[{"id":"HX-11-10","name":"Montañas Drakensberg","code":"HX-11-10","continent":"África","unlock":{"prestige":113},"habitats":["montana","pradera","bosque","rio"],"species":["af_daman_roquero","af_buitre_cabo","af_saltarrocas","af_quebrantahuesos","af_eland","af_babuino_oliva","af_antilope_sable","af_calao_terrestre","af_secretario"]},{"id":"HX-07-07","name":"Lago Chad y humedales","code":"HX-07-07","continent":"África","unlock":{"prestige":116},"habitats":["humedal","rio","estepa","pradera"],"species":["af_pato_silbon_cariblanco","af_ciguena_sillabada","af_pelicano_blanco","af_grulla_coronada","af_hipopotamo","af_cocodrilo_nilo","af_ibis_sagrado","af_garza_goliat","af_abejaruco_carmin"]},{"id":"HX-02-03","name":"Bosques boreales de Canadá","code":"HX-02-03","continent":"Norteamérica","unlock":{"prestige":119},"habitats":["bosque","rio","pradera","tundra"],"species":["na_alce","na_castor_canadiense","na_oso_negro","na_lince_canadiense","na_buho_nival","na_marta_americana","na_urogallo_canadiense","na_aguila_calva","na_caribu"]},{"id":"HX-03-04","name":"Bosques de los Grandes Lagos","code":"HX-03-04","continent":"Norteamérica","unlock":{"prestige":122},"habitats":["bosque","rio","pradera","humedal"],"species":["na_mapache","na_ciervo_cola_blanca","na_castor_canadiense","na_nutria_norteamericana","na_aguila_calva","na_tortuga_mordedora","na_zorro_gris","na_pavo_salvaje","na_lucio_norteamericano"]}]);
 const SPECIES={
   "asia_esp_0287":{"name": "Grulla siberiana", "latin": "Leucogeranus leucogeranus", "rare": "Muy rara", "kind": "stork", "color": "#e8e5df", "habitats": ["rio", "pradera"], "times": ["amanecer", "dia"], "seasons": ["primavera", "verano", "otono"], "special": ["Notable"], "dimorphism": false},
   "asia_esp_0880":{"name": "Gallo lira", "latin": "Lyrurus tetrix", "rare": "Común", "kind": "forestbird", "color": "#292f36", "habitats": ["bosque", "pradera"], "times": ["amanecer", "dia"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Leucístico", "Notable"], "dimorphism": true},
@@ -1465,6 +1467,8 @@ Object.assign(SPECIES,{"af_lobo_etiope":{"name":"Lobo etíope","latin":"Canis si
 Object.assign(SPECIES,{"af_macaco_berberia":{"name":"Macaco de Berbería","latin":"Macaca sylvanus","rare":"Raro","kind":"primate","color":"#ae987f","habitats":["bosque","montana"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_gato_montes_africano":{"name":"Gato montés africano","latin":"Felis lybica","rare":"Poco común","kind":"cat","color":"#b99a79","habitats":["desierto","estepa"],"times":["amanecer","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_ciervo_berberia":{"name":"Ciervo de Berbería","latin":"Cervus elaphus barbarus","rare":"Raro","kind":"deer","color":"#8a6747","habitats":["bosque","montana"],"times":["amanecer","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_zorro_ruppell":{"name":"Zorro de Rüppell","latin":"Vulpes rueppellii","rare":"Poco común","kind":"canid","color":"#d7b78b","habitats":["desierto","estepa"],"times":["atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_antilope_sable":{"name":"Antílope sable","latin":"Hippotragus niger","rare":"Raro","kind":"deer","color":"#46392d","habitats":["bosque","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable"],"dimorphism":false},"af_calao_terrestre":{"name":"Cálao terrestre sureño","latin":"Bucorvus leadbeateri","rare":"Raro","kind":"raptor","color":"#302c2d","habitats":["pradera","bosque"],"times":["amanecer","dia"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_pangolin_temminck":{"name":"Pangolín terrestre","latin":"Smutsia temminckii","rare":"Muy rara","kind":"pangolin","color":"#9f8061","habitats":["bosque","estepa"],"times":["atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable"],"dimorphism":false},"af_inseparable_lilian":{"name":"Inseparable de Lilian","latin":"Agapornis lilianae","rare":"Poco común","kind":"songbird","color":"#65a460","habitats":["bosque","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_dugongo":{"name":"Dugongo","latin":"Dugong dugon","rare":"Muy rara","kind":"sirenian","color":"#9caeac","habitats":["costa"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_manta_gigante":{"name":"Manta gigante","latin":"Mobula birostris","rare":"Raro","kind":"ray","color":"#334e59","habitats":["costa"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_delfin_jorobado_indico":{"name":"Delfín jorobado del Índico","latin":"Sousa plumbea","rare":"Raro","kind":"cetacean","color":"#859aab","habitats":["costa"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_martin_malaquita":{"name":"Martín pescador malaquita","latin":"Corythornis cristatus","rare":"Poco común","kind":"kingfisher","color":"#277c9b","habitats":["rio","humedal"],"times":["amanecer","dia"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false}});
 // Beta 3.10: ocho especies de los lagos del Rift y Seychelles/Aldabra.
 Object.assign(SPECIES,{"af_flamenco_enano":{"name":"Flamenco enano","latin":"Phoeniconaias minor","rare":"Poco común","kind":"wader","color":"#dd7e96","habitats":["humedal","rio"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_pelicano_blanco":{"name":"Pelícano blanco","latin":"Pelecanus onocrotalus","rare":"Poco común","kind":"pelican","color":"#ded9c8","habitats":["humedal","rio"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_jirafa_rothschild":{"name":"Jirafa de Rothschild","latin":"Giraffa camelopardalis rothschildi","rare":"Raro","kind":"giraffe","color":"#c49b61","habitats":["pradera","estepa"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable"],"dimorphism":false},"af_gran_kudu":{"name":"Gran kudú","latin":"Tragelaphus strepsiceros","rare":"Raro","kind":"deer","color":"#9f8870","habitats":["pradera","estepa"],"times":["amanecer","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_tortuga_aldabra":{"name":"Tortuga gigante de Aldabra","latin":"Aldabrachelys gigantea","rare":"Muy rara","kind":"tortoise","color":"#78845d","habitats":["pradera","bosque","costa"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable"],"dimorphism":false},"af_loro_negro_seychelles":{"name":"Loro negro de Seychelles","latin":"Coracopsis barklyi","rare":"Raro","kind":"forestbird","color":"#635e5a","habitats":["bosque"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_cernicalo_seychelles":{"name":"Cernícalo de Seychelles","latin":"Falco araeus","rare":"Raro","kind":"raptor","color":"#a88b6d","habitats":["bosque","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_tiburon_puntas_negras":{"name":"Tiburón de puntas negras de arrecife","latin":"Carcharhinus melanopterus","rare":"Poco común","kind":"fish","color":"#71868d","habitats":["costa"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable"],"dimorphism":false}});
+// Beta 3.12: fauna adicional de África y América del Norte.
+Object.assign(SPECIES,{"af_daman_roquero":{"name":"Damán roquero","latin":"Procavia capensis","rare":"Poco común","kind":"small","color":"#9b8b77","habitats":["montana","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_buitre_cabo":{"name":"Buitre del Cabo","latin":"Gyps coprotheres","rare":"Raro","kind":"raptor","color":"#bda789","habitats":["montana","pradera"],"times":["dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_saltarrocas":{"name":"Saltarrocas","latin":"Oreotragus oreotragus","rare":"Raro","kind":"deer","color":"#a18b78","habitats":["montana"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_pato_silbon_cariblanco":{"name":"Suirirí cariblanco","latin":"Dendrocygna viduata","rare":"Poco común","kind":"swan","color":"#9b714f","habitats":["humedal","rio"],"times":["amanecer","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_ciguena_sillabada":{"name":"Cigüeña de pico ensillado","latin":"Ephippiorhynchus senegalensis","rare":"Raro","kind":"stork","color":"#252a30","habitats":["humedal","rio"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_alce":{"name":"Alce americano","latin":"Alces alces","rare":"Raro","kind":"deer","color":"#715542","habitats":["bosque","rio","pradera"],"times":["amanecer","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"na_castor_canadiense":{"name":"Castor canadiense","latin":"Castor canadensis","rare":"Poco común","kind":"beaver","color":"#7b5945","habitats":["bosque","rio"],"times":["atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_oso_negro":{"name":"Oso negro americano","latin":"Ursus americanus","rare":"Raro","kind":"bear","color":"#322f2c","habitats":["bosque","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_lince_canadiense":{"name":"Lince canadiense","latin":"Lynx canadensis","rare":"Raro","kind":"cat","color":"#b8a78d","habitats":["bosque","tundra"],"times":["amanecer","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_buho_nival":{"name":"Búho nival","latin":"Bubo scandiacus","rare":"Raro","kind":"owl","color":"#e0dbd2","habitats":["tundra","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_marta_americana":{"name":"Marta americana","latin":"Martes americana","rare":"Poco común","kind":"mustelid","color":"#856448","habitats":["bosque"],"times":["amanecer","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_urogallo_canadiense":{"name":"Urogallo de Canadá","latin":"Canachites canadensis","rare":"Poco común","kind":"forestbird","color":"#66534a","habitats":["bosque"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_aguila_calva":{"name":"Águila calva","latin":"Haliaeetus leucocephalus","rare":"Raro","kind":"raptor","color":"#51463d","habitats":["rio","bosque","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_caribu":{"name":"Caribú","latin":"Rangifer tarandus caribou","rare":"Raro","kind":"deer","color":"#967861","habitats":["tundra","bosque"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_mapache":{"name":"Mapache boreal","latin":"Procyon lotor","rare":"Común","kind":"small","color":"#7e7671","habitats":["bosque","humedal"],"times":["atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_ciervo_cola_blanca":{"name":"Ciervo de cola blanca","latin":"Odocoileus virginianus","rare":"Poco común","kind":"deer","color":"#a07854","habitats":["bosque","pradera"],"times":["amanecer","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_nutria_norteamericana":{"name":"Nutria de río norteamericana","latin":"Lontra canadensis","rare":"Poco común","kind":"otter","color":"#775943","habitats":["rio"],"times":["amanecer","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_tortuga_mordedora":{"name":"Tortuga mordedora común","latin":"Chelydra serpentina","rare":"Raro","kind":"tortoise","color":"#556f54","habitats":["rio","humedal"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_zorro_gris":{"name":"Zorro gris","latin":"Urocyon cinereoargenteus","rare":"Poco común","kind":"canid","color":"#8a8581","habitats":["bosque","pradera"],"times":["amanecer","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"na_pavo_salvaje":{"name":"Pavo salvaje","latin":"Meleagris gallopavo","rare":"Poco común","kind":"forestbird","color":"#775e46","habitats":["bosque","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"na_lucio_norteamericano":{"name":"Lucio norteamericano","latin":"Esox lucius","rare":"Poco común","kind":"fish","color":"#7d8c76","habitats":["rio","humedal"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false}});
 const GLOBAL_BIOMES_FULL=['bosque','pradera','rio','costa','tundra','montana','humedal','mar_abierto','estepa','mediterraneo','desierto','selva','sabana'];
 const REGION_BIOMES={
   'HX-02-13':["bosque", "rio", "tundra", "pradera"],
@@ -1575,6 +1579,8 @@ function taxonomyText(id){
 // Capturamos únicamente las fichas de Rift y Seychelles antes de normalizar:
 // sin tocar guardados, regiones previas ni sus ID.
 const V310_NEW_REGIONS=['HX-08-12','HX-07-14'];
+const V312_NEW_IDS=Object.keys(SPECIES).filter(id=>id.startsWith('na_') || ['af_daman_roquero','af_buitre_cabo','af_saltarrocas','af_pato_silbon_cariblanco','af_ciguena_sillabada'].includes(id));
+const V312_ECO=Object.fromEntries(V312_NEW_IDS.map(id=>[id,{habitats:[...SPECIES[id].habitats],times:[...SPECIES[id].times],seasons:[...SPECIES[id].seasons]}]));
 const V310_PRESERVED_ECO=Object.fromEntries(
  [...new Set(REGIONS.filter(r=>V310_NEW_REGIONS.includes(r.id)).flatMap(r=>r.species))]
  .filter(id=>!!SPECIES[id]).map(id=>[id,{
@@ -1583,6 +1589,7 @@ const V310_PRESERVED_ECO=Object.fromEntries(
 );
 normalizeEcology();
 for(const [id,eco] of Object.entries(V310_PRESERVED_ECO))Object.assign(SPECIES[id],eco);
+for(const [id,eco] of Object.entries(V312_ECO))Object.assign(SPECIES[id],eco);
 // Colores de caparazón diferenciados: especies terrestres europeas.
 if(SPECIES['eu_esp_0505'])SPECIES['eu_esp_0505'].color='#997950';
 if(SPECIES['eu_esp_0506'])SPECIES['eu_esp_0506'].color='#a4a16f';
@@ -1654,7 +1661,10 @@ const RESEARCH_NODES=[
   {id:'casco_1', name:'Casco aligerado', desc:'Reduce 15% el tiempo de viaje', money:200, knowledge:170, req:'astillero', once:true, effect(s){s.upgrades.voyageTime=0.85;}},
   {id:'flota_1', name:'Segundo destacamento', desc:'Permite una expedición adicional simultánea', money:260, knowledge:220, req:'rutas_1', once:true, effect(s){s.upgrades.fleet=1;}},
   {id:'gabinete_1', name:'Gabinete de especímenes', desc:'Los animales pueden dejar coleccionables raros', money:520, knowledge:460, req:'sociedad_1', once:true, effect(s){s.upgrades.specimenDrops=1;}},
-  {id:'asia_1', name:'Cartografía de Asia', desc:'Desbloquea el acceso a Asia; cada región exige un prestigio mínimo acumulado, sin consumirlo', money:800, knowledge:650, req:'rutas_2', reqItem:'asia_map', reqItemQty:1, once:true, effect(s){s.upgrades.asiaUnlocked=1;}}
+  {id:'asia_1', name:'Cartografía de Asia', desc:'Desbloquea el acceso a Asia; cada región exige un prestigio mínimo acumulado, sin consumirlo', money:800, knowledge:650, req:'rutas_2', reqItem:'asia_map', reqItemQty:1, once:true, effect(s){s.upgrades.asiaUnlocked=1;}},
+  {id:'africa_1',name:'Estudios de África',desc:'Cartografía y gabinete africano: permite abrir las nuevas regiones Drakensberg y Lago Chad. Las anteriores se mantienen accesibles con su mapa.',money:1450,knowledge:1050,req:'rutas_2',reqItem:'africa_map',reqItemConsume:false,once:true,effect(s){s.upgrades.africaResearch=1;}},
+  {id:'nuevo_mundo_1',name:'Navegación al Nuevo Mundo',desc:'Habilita la ruta de exploración transatlántica y sus expediciones para reunir mapas norteamericanos.',money:1900,knowledge:1400,req:'rutas_2',once:true,effect(s){s.upgrades.newWorldRoute=1;}},
+  {id:'norteamerica_1',name:'Cartografía de Norteamérica',desc:'Desbloquea las primeras regiones norteamericanas. Requiere Mapa de Norteamérica y el Astrolabio transatlántico catalogado en Artefactos; ambos se conservan.',money:2900,knowledge:2200,req:'nuevo_mundo_1',reqItem:'northamerica_map',reqItemConsume:false,reqCollection:'astrolabio_transatlantico',once:true,effect(s){s.upgrades.northAmericaUnlocked=1;}}
 
   ,{id:'fondos_x1', name:'Fondos científicos I · ×1', desc:'Habilita el aporte básico £100 → 70 conocimiento en Sociedad', money:0, knowledge:0, once:true, effect(s){s.upgrades.fundingTier=1;}},
   {id:'fondos_x10', name:'Fondos científicos II · ×10', desc:'Permite aportes de £1.000 → 700 conocimiento en una operación', money:250, knowledge:150, req:'fondos_x1', once:true, effect(s){s.upgrades.fundingTier=10;}},
@@ -1669,8 +1679,8 @@ function initialState(){
     asiaPricingVersion:3, currentRegion:region, habitat:'bosque', time:'amanecer', season:'primavera',
     discovered:{}, sightings:{}, stages:{}, feedObs:{}, dimorphism:{}, sexSeen:{}, specialSeen:{}, specialFound:{}, published:{},
     log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial de prueba: £420. En Corona puedes simular más libras.'],
-    upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,fundingTier:1}, purchases:{},
-    regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', crownCoins:0, lastEncounter:null,
+    upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,africaResearch:0,newWorldRoute:0,northAmericaUnlocked:0,fundingTier:1}, purchases:{},
+    regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0,newWorldVoyages:0}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', crownCoins:0, lastEncounter:null,
     lastTick:Date.now(), lastGrant:0, autoHourly:{}, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
   };
 }
@@ -1686,6 +1696,7 @@ for(const field of ['collections','relicts','displays']){
  state.museum[field]=state.museum[field]&&typeof state.museum[field]==='object'&&!Array.isArray(state.museum[field])?state.museum[field]:{};
 }
 state.museum.voyagesCompleted=Math.max(0,Number(state.museum.voyagesCompleted)||0);
+state.museum.newWorldVoyages=Math.max(0,Number(state.museum.newWorldVoyages)||0);
 state.books=state.books||0;
 state.autoHourly=state.autoHourly||{};state.voyages=state.voyages||[];state.voyageSeq=state.voyageSeq||0;state.inventory=state.inventory||{};state.equipment=state.equipment||{instrument:null,hat:null,necklace:null};state.specialFound=state.specialFound||{};state.upgrades.asiaUnlocked=(state.upgrades.asiaUnlocked||state.purchases.asia_1)?1:0;state.atlasView=state.atlasView||'Europa';state.museumView=state.museumView||'exhibitions';state.societyView=state.societyView||'grants';state.publicationView=state.publicationView||'monographs';state.bestiarySort=state.bestiarySort||'alpha';state.crownCoins=state.crownCoins||0;
 // Migración v2.1->v2.2: zonas asiáticas previamente habilitadas conservan su acceso.
@@ -1784,7 +1795,7 @@ window.AtlasSaveBridge={
        discovered:{...(imported.discovered||{})},
        published:{...(imported.published||{})},
        inventory:{...(imported.inventory||{})},
-       museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0,...(imported.museum||{}),
+       museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0,newWorldVoyages:0,...(imported.museum||{}),
           exhibits:{...((imported.museum||{}).exhibits||{})},
           collections:{...((imported.museum||{}).collections||{})},
           relicts:{...((imported.museum||{}).relicts||{})},
@@ -1877,6 +1888,10 @@ function renderSexComparison(id){
 }
 
 function regionLandscape(regionId){
+  if(regionId==='HX-11-10')return ['#b7b9a5','#d8d1b5','#86896e','⛰️  🦅  🦌  🌿'];
+  if(regionId==='HX-07-07')return ['#b4d1bf','#dfd2ac','#89a289','🦆  🌊  🦢  🌾'];
+  if(regionId==='HX-02-03')return ['#bdd4d4','#e3e9d9','#627b70','🌲  🫎  🦉  🍂'];
+  if(regionId==='HX-03-04')return ['#abc9b7','#e2e3c5','#709b8c','🌳  🦫  🦅  🏞️'];
   if(regionId==='HX-08-12')return ['#e4d9bb','#bbd5ca','#819e88','🦩  🌊  🌾  🐦'];
   if(regionId==='HX-07-14')return ['#a9d4c5','#e0e5c1','#6aafa4','🏝️  🐢  🌊  🌳'];
   if(regionId==='HX-06-08')return ['#b8b6a0','#e3d5b8','#81785e','⛰️  🌲  🐒  🪨'];
@@ -2123,6 +2138,7 @@ function canBuy(node){
   if(node.max && (state.purchases[node.id]||0)>=node.max) return false;
   if(node.req && !state.purchases[node.req]) return false;
   if(node.reqItem && (state.inventory[node.reqItem]||0)<(node.reqItemQty||1)) return false;
+  if(node.reqCollection && !state.museum?.collections?.[node.reqCollection])return false;
   return state.money>=node.money && state.knowledge>=node.knowledge;
 }
 function buyNode(id){
@@ -2131,9 +2147,10 @@ function buyNode(id){
   if(node.max && (state.purchases[id]||0)>=node.max) return;
   if(node.req && !state.purchases[node.req]) return;
   if(node.reqItem && (state.inventory[node.reqItem]||0)<(node.reqItemQty||1)) return;
+  if(node.reqCollection && !state.museum?.collections?.[node.reqCollection])return;
   if(state.money<node.money || state.knowledge<node.knowledge) return;
   state.money-=node.money; state.knowledge-=node.knowledge;
-  if(node.reqItem) state.inventory[node.reqItem]=(state.inventory[node.reqItem]||0)-(node.reqItemQty||1);
+  if(node.reqItem && node.reqItemConsume!==false)state.inventory[node.reqItem]=(state.inventory[node.reqItem]||0)-(node.reqItemQty||1);
   state.purchases[id]=(state.purchases[id]||0)+1;
   node.effect(state);
   pushLog(`🔬 Investigación completada: ${node.name}.`);
@@ -2229,7 +2246,7 @@ const ATLAS_CONTINENTS=[
   {id:'Europa',label:'Europa',icon:'🇪🇺',implemented:true},
   {id:'Asia',label:'Asia',icon:'🌏',implemented:true},
   {id:'África',label:'África',icon:'🌍',implemented:true},
-  {id:'Norteamérica',label:'Norteamérica',icon:'🦬',implemented:false},
+  {id:'Norteamérica',label:'Norteamérica',icon:'🦬',implemented:true},
   {id:'Sudamérica',label:'Sudamérica',icon:'🦜',implemented:false},
   {id:'Oceanía',label:'Oceanía',icon:'🪃',implemented:false},
   {id:'Polos',label:'Polos',icon:'🧊',implemented:false},
@@ -2238,13 +2255,18 @@ const ATLAS_CONTINENTS=[
 function regionRequirementsMet(r){
   if(!r) return false;
   if(r.continent==='Asia') return !!(state.upgrades.asiaUnlocked && state.prestige>=r.unlock.prestige);
-  if(r.continent==='África') return !!(state.inventory?.africa_map && state.prestige>=r.unlock.prestige);
+  if(r.continent==='África'){
+    const newAfrica=r.id==='HX-11-10'||r.id==='HX-07-07';
+    return !!(state.inventory?.africa_map && (!newAfrica || state.upgrades.africaResearch) && state.prestige>=r.unlock.prestige);
+  }
+  if(r.continent==='Norteamérica')return !!(state.upgrades.northAmericaUnlocked && state.prestige>=r.unlock.prestige);
   return state.prestige>=r.unlock.prestige;
 }
 function continentStatus(continent){
   if(continent==='Europa') return 'available';
   if(continent==='Asia') return state.upgrades.asiaUnlocked?'available':'unlockable';
   if(continent==='África') return state.inventory?.africa_map?'available':'unlockable';
+  if(continent==='Norteamérica')return state.upgrades.northAmericaUnlocked?'available':'unlockable';
   return 'locked';
 }
 function unlockRegion(id){
@@ -2363,7 +2385,10 @@ function renderAtlas(){
   const condition=r.continent==='Asia'
     ? (state.upgrades.asiaUnlocked?'✓ Cartografía de Asia':'✕ Necesitas investigar Cartografía de Asia')+' · '+r.unlock.prestige+' prestigio mínimo'
     : r.continent==='África'
-      ? (state.inventory.africa_map?'✓ Mapa de África reunido':'✕ Fabrica el Mapa de África en Inventario')+' · '+r.unlock.prestige+' prestigio mínimo'
+      ? (state.inventory.africa_map?'✓ Mapa de África reunido':'✕ Fabrica el Mapa de África en Inventario')+
+        (['HX-11-10','HX-07-07'].includes(r.id)?(state.upgrades.africaResearch?' · ✓ Estudios de África':' · ✕ Investiga Estudios de África'):'')+
+        ' · '+r.unlock.prestige+' prestigio mínimo'
+      : r.continent==='Norteamérica' ? (state.upgrades.northAmericaUnlocked?'✓ Cartografía de Norteamérica':'✕ Investigación Cartografía de Norteamérica pendiente')+' · '+r.unlock.prestige+' prestigio mínimo'
       : r.unlock.prestige+' prestigio mínimo';
   const action=active?'<button class="btn gold" disabled>Explorando aquí</button>'
     :unlocked?'<button class="btn gold" data-action="travel-region" data-id="'+r.id+'">🧭 Viajar a Campo</button>'
@@ -2572,7 +2597,9 @@ const SCIENTIFIC_MISSIONS=[
   {id:'paleonto_campo_200',name:'Rastros del pasado',desc:'Registra 200 avistamientos para obtener materiales fósiles.',target:200,
     progress:()=>totalSightings(),money:300,knowledge:350,items:{fossil_fragment:6,fossil_tooth:2}},
   {id:'paleonto_viajes_3',name:'Primera prospección paleontológica',desc:'Completa tres expediciones desde esta actualización.',target:3,
-    progress:()=>state.museum?.voyagesCompleted||0,money:500,knowledge:400,items:{fossil_skull:1,fossil_tooth:3}}
+    progress:()=>state.museum?.voyagesCompleted||0,money:500,knowledge:400,items:{fossil_skull:1,fossil_tooth:3}},
+  {id:'nuevo_mundo_viajes_3',name:'Instrumental del navegante',desc:'Completa tres travesías al Nuevo Mundo para obtener componentes de astrolabio.',target:3,
+    progress:()=>state.museum?.newWorldVoyages||0,money:950,knowledge:650,items:{brass_gear:2,polished_lens:2,map_fragment:3,ancient_coin:1}}
 ];
 function claimScientificMission(id){
   const mission=SCIENTIFIC_MISSIONS.find(m=>m.id===id);
@@ -2649,19 +2676,28 @@ const MUSEUM_COLLECTIONS=[
  {id:'huella_paleontologica',tab:'fossils',name:'Registro de huellas antiguas',icon:'🐾',description:'Comparación de huellas con materiales paleontológicos.',requires:{fossil_fragment:2,animal_trace:2},knowledge:300},
  // Conserva los IDs de 3.10 para que las colecciones ya adquiridas no se pierdan.
  {id:'carta_historica',tab:'artifacts',name:'Carta cartográfica histórica',icon:'🗺️',description:'Montaje de mapas y monedas procedentes de viajes científicos.',requires:{map_fragment:2,ancient_coin:1},knowledge:180},
- {id:'medallon_viajero',tab:'artifacts',name:'Medallón de expedición',icon:'🪙',description:'Colección clasificada de objetos de un viajero del siglo XIX.',requires:{ancient_coin:2,parchment_scrap:1},knowledge:300}
+ {id:'medallon_viajero',tab:'artifacts',name:'Medallón de expedición',icon:'🪙',description:'Colección clasificada de objetos de un viajero del siglo XIX.',requires:{ancient_coin:2,parchment_scrap:1},knowledge:300},
+ {id:'astrolabio_transatlantico',tab:'artifacts',name:'Astrolabio transatlántico',icon:'🧭',description:'Instrumento histórico fabricado para preparar la cartografía norteamericana; obligatorio en la investigación Cartografía de Norteamérica.',requires:{brass_gear:2,polished_lens:2,map_fragment:3,ancient_coin:1},knowledge:700},
+ {id:'diario_navegacion',tab:'artifacts',name:'Diario de navegación',icon:'📖',description:'Relato cartográfico ensamblado con bitácoras y cartas de los viajes.',requires:{parchment_scrap:3,ocean_chart_piece:2,map_fragment:1},knowledge:400}
 ];
 const MUSEUM_FOSSIL_RECIPES=[
  {id:'bone_short',name:'Hueso corto',icon:'🦴',requires:{fossil_fragment:2}},
  {id:'bone_long',name:'Hueso largo',icon:'🦴',requires:{fossil_fragment:4}},
  {id:'carnivore_skull',name:'Cráneo carnívoro',icon:'💀',requires:{fossil_skull:1,fossil_tooth:10}},
- {id:'trex_mount',name:'Reconstrucción de T. rex',icon:'🦖',requires:{bone_long:10,bone_short:25,carnivore_skull:1},unique:true}
+ {id:'trex_mount',name:'Reconstrucción de T. rex',icon:'🦖',requires:{bone_long:10,bone_short:25,carnivore_skull:1},unique:true},
+ {id:'herbivore_skull',name:'Cráneo herbívoro',icon:'💀',requires:{fossil_skull:1,fossil_tooth:6}},
+ {id:'raptor_skull',name:'Cráneo de dromeosaurio',icon:'💀',requires:{fossil_skull:1,fossil_tooth:4}},
+ {id:'triceratops_mount',name:'Reconstrucción de Triceratops',icon:'🦕',requires:{bone_long:12,bone_short:18,herbivore_skull:1},unique:true},
+ {id:'stegosaurus_mount',name:'Reconstrucción de Stegosaurus',icon:'🦕',requires:{bone_long:8,bone_short:16,fossil_plate:8},unique:true},
+ {id:'velociraptor_mount',name:'Reconstrucción de Velociraptor',icon:'🦖',requires:{bone_long:6,bone_short:12,raptor_skull:1},unique:true}
 ];
 const MUSEUM_RELICTS=[
  {id:'coelacanth_indic',name:'Celacanto del Índico',latin:'Latimeria chalumnae',icon:'🐟',region:'HX-10-12',habitats:['costa'],times:['atardecer','noche'],desc:'Pez de linaje muy antiguo; hallazgo costero excepcional.',shape:'fish'},
  {id:'atlas_lion',name:'León del Atlas',latin:'Panthera leo leo',icon:'🦁',region:'HX-06-08',habitats:['montana','estepa'],times:['amanecer','atardecer','noche'],desc:'Población histórica norteafricana, desaparecida de la naturaleza en la actualidad.',shape:'lion'},
  {id:'seychelles_sheathbat',name:'Murciélago de Seychelles',latin:'Coleura seychellensis',icon:'🦇',region:'HX-07-14',habitats:['bosque'],times:['atardecer','noche'],desc:'Murciélago insular muy amenazado, de detección excepcional.',shape:'bat'},
- {id:'gabon_dwarf_croc',name:'Cocodrilo enano africano',latin:'Osteolaemus tetraspis',icon:'🐊',region:'HX-08-10',habitats:['rio','bosque','humedal'],times:['atardecer','noche'],desc:'Crocodílido forestal de distribución restringida.',shape:'croc'}
+ {id:'gabon_dwarf_croc',name:'Cocodrilo enano africano',latin:'Osteolaemus tetraspis',icon:'🐊',region:'HX-08-10',habitats:['rio','bosque','humedal'],times:['atardecer','noche'],desc:'Crocodílido forestal de distribución restringida.',shape:'croc'},
+ {id:'chad_lungfish',name:'Pez pulmonado africano',latin:'Protopterus annectens',icon:'🐟',region:'HX-07-07',habitats:['rio','humedal'],times:['atardecer','noche'],desc:'Pez pulmonado, representante de un linaje evolutivo antiguo.',shape:'lungfish'},
+ {id:'gabon_goliath_frog',name:'Rana goliat',latin:'Conraua goliath',icon:'🐸',region:'HX-08-10',habitats:['rio','bosque'],times:['atardecer','noche'],desc:'Anfibio de distribución limitada en bosques de África central; hallazgo excepcional.',shape:'frog'}
 ];
 function museumAssemblyReady(piece,qty=1){
  if(!piece||!Number.isInteger(qty)||qty<1||qty>100)return false;
@@ -2700,6 +2736,7 @@ function maybeMuseumFieldDiscovery(source){
  if(Math.random()<(manual?0.008:0.0015)){addInventory('fossil_fragment',1);found.push('fragmento fósil');}
  if(Math.random()<(manual?0.0015:0.00035)){addInventory('fossil_tooth',1);found.push('diente fósil');}
  if(Math.random()<(manual?0.00008:0.000015)){addInventory('fossil_skull',1);found.push('cráneo fósil');}
+ if(Math.random()<(manual?0.0007:0.00012)){addInventory('fossil_plate',1);found.push('placa fósil');}
  const candidates=MUSEUM_RELICTS.filter(r=>r.region===state.currentRegion &&
    r.habitats.includes(state.habitat)&&r.times.includes(state.time)&&!museumRelictOwned(r.id));
  if(candidates.length&&Math.random()<(manual?0.0006:0.00009)){
@@ -2713,7 +2750,7 @@ function museumIsDisplayed(kind,id){return state.museum?.displays?.[museumDispla
 function toggleMuseumDisplay(key){
  const [kind,id]=String(key).split(':');
  const valid=kind==='relict'?MUSEUM_RELICTS.some(r=>r.id===id)&&museumRelictOwned(id):
-  kind==='collection'?(id==='trex_mount'||MUSEUM_COLLECTIONS.some(p=>p.id===id))&&!!state.museum?.collections?.[id]:false;
+  kind==='collection'?(MUSEUM_FOSSIL_RECIPES.some(p=>p.id===id&&p.unique)||MUSEUM_COLLECTIONS.some(p=>p.id===id))&&!!state.museum?.collections?.[id]:false;
  if(!valid)return false;
  state.museum.displays=state.museum.displays||{};
  state.museum.displays[key]=!museumIsDisplayed(kind,id);
@@ -2762,6 +2799,36 @@ function museumCardArt(kind,id){
   '<path d="M35 44l3 18m4-21 7 18m2-20 6 15m-25-7-23 8" fill="none" stroke="#c7a67b" stroke-width="4"/>'+
   '<path d="M70 24Q83 12 96 24L89 39 75 38Z" fill="#d8c29d" stroke="#74583d" stroke-width="3"/>'+
   '<circle cx="88" cy="26" r="3" fill="#654d36"/>');
+
+ if(id==='triceratops_mount')return frame(
+ '<path d="M10 58q18-19 38-11l17-4 15 7 5 15-19 8-18-5-22 6Z" fill="#c4a982" stroke="#755b3d" stroke-width="3"/>'+
+ '<path d="M25 67l-3 19m18-14 0 15m19-18 5 16m-42 3h14m10 0h20" stroke="#735c41" stroke-width="5" fill="none"/>'+
+ '<path d="M70 36l16-12 4 17 8 7-10 24-17-6-11-14Z" fill="#e1ccaa" stroke="#745f43" stroke-width="3"/>'+
+ '<path d="M72 44L55 25m31 23 9-18m-17 32 13 3" stroke="#e7dbb9" stroke-width="4"/>'+
+ '<path d="M15 55l-9-14" stroke="#7b6044" stroke-width="4"/><circle cx="85" cy="53" r="2" fill="#5e4636"/>');
+ if(id==='stegosaurus_mount')return frame(
+ '<path d="M11 67q22-27 58-12l21 10-17 11-42 2Z" fill="#d0b98d" stroke="#745e40" stroke-width="3"/>'+
+ '<path d="M27 74l-4 15m22-13 1 13m15-14 5 13" stroke="#796242" stroke-width="5" fill="none"/>'+
+ '<path d="M22 55L25 30 39 51 43 22 53 49 61 30 69 53 74 38 77 59" fill="#d1af74" stroke="#796343" stroke-width="3"/>'+
+ '<path d="M12 64l-8 7m5-7-5-4" stroke="#796343" stroke-width="3"/>'+
+ '<circle cx="82" cy="62" r="2" fill="#604735"/>');
+ if(id==='velociraptor_mount')return frame(
+ '<path d="M14 61Q27 53 41 60L66 52 80 39 94 43 89 57 72 62 53 73Z" fill="#cbb18b" stroke="#755c43" stroke-width="3"/>'+
+ '<path d="M38 64L40 85 30 90m23-23 11 13 9-5m-24 5 9 9 8-7" fill="none" stroke="#755c43" stroke-width="5"/>'+
+ '<path d="M18 58L4 39l19 14m49-5 8-13 14 8m-17 11 7 3" fill="none" stroke="#9c7955" stroke-width="4"/>'+
+ '<path d="M65 55L56 42 62 38" fill="none" stroke="#74583d" stroke-width="3"/>'+
+ '<circle cx="86" cy="45" r="2" fill="#5b4733"/>');
+ if(id==='astrolabio_transatlantico')return frame(
+ '<circle cx="50" cy="55" r="30" fill="#e0c38a" stroke="#987344" stroke-width="5"/>'+
+ '<circle cx="50" cy="55" r="22" fill="none" stroke="#826c47" stroke-width="2"/>'+
+ '<path d="M50 18V9m-9 5 9-7 9 7M18 55h64m-32-30v60m-22-12 44-38M31 32 69 79" fill="none" stroke="#997548" stroke-width="3"/>'+
+ '<path d="M40 62l11-22 9 18-9 5Z" fill="#8db2a5" stroke="#5b776a" stroke-width="2"/>'+
+ '<circle cx="50" cy="55" r="4" fill="#735738"/>');
+ if(id==='diario_navegacion')return frame(
+ '<path d="M17 19Q32 11 50 23Q70 12 84 20V83Q63 75 50 87Q31 74 17 82Z" fill="#dfc898" stroke="#887149" stroke-width="4"/>'+
+ '<path d="M50 24v62M25 33l17 3m-17 9 17 3m-17 9 15 3m18-27 17-5m-17 17 15-4m-15 17 16-4" stroke="#9b865c" stroke-width="2"/>'+
+ '<path d="M61 70q5-12 12 0" fill="none" stroke="#68846f" stroke-width="3"/>');
+
  if(id==='carta_historica')return frame(
   '<path d="M18 20L39 25 62 17 84 22V78L62 72 39 80 18 74Z" fill="#e2cf9e" stroke="#8d764a" stroke-width="4"/>'+
   '<path d="M39 25v54m23-62v55" fill="none" stroke="#b09b6e" stroke-width="2"/>'+
@@ -2797,6 +2864,19 @@ function museumCardArt(kind,id){
   '<ellipse cx="50" cy="46" rx="9" ry="18" fill="#8b8070" stroke="#323a36" stroke-width="2"/>'+
   '<path d="M43 35L39 23l9 10m9 2 4-12 2 12" fill="#8b8070" stroke="#323a36" stroke-width="2"/>'+
   '<circle cx="47" cy="43" r="1.7" fill="#ddc581"/><circle cx="54" cy="43" r="1.7" fill="#ddc581"/>');
+
+ if(animal.shape==='lungfish')return frame(
+  '<path d="M12 54Q28 35 56 45Q77 36 90 52L77 66Q52 77 28 63L12 54Z" fill="#738274" stroke="#475444" stroke-width="3"/>'+
+  '<path d="M30 48Q38 24 56 31M37 65Q37 82 25 87M56 66Q67 84 76 89" stroke="#647e62" stroke-width="5" fill="none" stroke-linecap="round"/>'+
+  '<circle cx="81" cy="49" r="2.5" fill="#22332d"/><path d="M12 53L4 43m8 12L4 67" stroke="#4f684d" stroke-width="3"/>');
+ if(animal.shape==='frog')return frame(
+  '<path d="M29 58L15 47 7 65 23 78 38 69m29-8 17-14 10 19-16 12-20-11" fill="#84935d" stroke="#455a3b" stroke-width="3"/>'+
+  '<ellipse cx="50" cy="57" rx="24" ry="18" fill="#7f9866" stroke="#455a3b" stroke-width="3"/>'+
+  '<circle cx="40" cy="39" r="10" fill="#839e67" stroke="#455a3b" stroke-width="3"/>'+
+  '<circle cx="63" cy="39" r="10" fill="#839e67" stroke="#455a3b" stroke-width="3"/>'+
+  '<circle cx="41" cy="38" r="3" fill="#d8c371"/><circle cx="63" cy="38" r="3" fill="#d8c371"/>'+
+  '<path d="M38 66q12 8 26 0" fill="none" stroke="#43593d" stroke-width="3"/>');
+
  return frame(
   '<path d="M8 61Q24 47 45 49L70 45L95 54L92 65L70 69L44 72Q22 70 8 61Z" fill="#667d58" stroke="#384632" stroke-width="4"/>'+
   '<path d="M21 58l6-7 7 5 6-7 9 6 8-7" stroke="#45573b" stroke-width="3" fill="none"/>'+
@@ -2806,8 +2886,10 @@ function museumCardArt(kind,id){
 function museumOtherExhibits(){
  const pieces=MUSEUM_COLLECTIONS.filter(p=>state.museum?.collections?.[p.id]&&museumIsDisplayed('collection',p.id))
    .map(p=>({kind:p.tab==='artifacts'?'Artefacto':'Fósil',key:'collection:'+p.id,id:p.id,name:p.name,detail:p.description}));
- if(state.museum?.collections?.trex_mount&&museumIsDisplayed('collection','trex_mount'))
-   pieces.push({kind:'Fósil',key:'collection:trex_mount',id:'trex_mount',name:'Reconstrucción de T. rex',detail:'Esqueleto ensamblado · muestra paleontológica'});
+ for(const fossil of MUSEUM_FOSSIL_RECIPES.filter(p=>p.unique)){
+   if(state.museum?.collections?.[fossil.id]&&museumIsDisplayed('collection',fossil.id))
+    pieces.push({kind:'Fósil',key:'collection:'+fossil.id,id:fossil.id,name:fossil.name,detail:'Esqueleto ensamblado · muestra paleontológica'});
+ }
  for(const relict of MUSEUM_RELICTS){
   if(museumRelictOwned(relict.id)&&museumIsDisplayed('relict',relict.id))
    pieces.push({kind:'Relicto',key:'relict:'+relict.id,id:relict.id,name:relict.name,detail:relict.latin});
@@ -2945,7 +3027,9 @@ const VOYAGES=[
  {id:'carpathians',name:'Ruta científica a los Cárpatos',seconds:420,cost:260,knowledge:110,prize:380,notes:180,required:4,routeReq:1},
  {id:'balkans',name:'Ruta científica a los Balcanes',seconds:520,cost:340,knowledge:150,prize:500,notes:250,required:6,routeReq:2},
   {id:'ethiopia_survey',name:'Reconocimiento de las tierras altas etíopes',seconds:600,cost:950,knowledge:380,prize:1400,notes:700,required:92,routeReq:2,mapItem:'africa_map',sample:'animal_trace'},
-  {id:'namib_survey',name:'Reconocimiento del desierto del Namib',seconds:720,cost:1250,knowledge:460,prize:1750,notes:900,required:95,routeReq:2,mapItem:'africa_map',sample:'fossil_fragment'}
+  {id:'namib_survey',name:'Reconocimiento del desierto del Namib',seconds:720,cost:1250,knowledge:460,prize:1750,notes:900,required:95,routeReq:2,mapItem:'africa_map',sample:'fossil_fragment'},
+  {id:'new_world_survey',name:'Travesía al Nuevo Mundo',seconds:900,cost:1250,knowledge:550,prize:1950,notes:900,required:110,routeReq:2,reqUpgrade:'newWorldRoute',sample:'northamerica_map_piece',sampleQty:2,chartItem:'ocean_chart_piece'},
+  {id:'drakensberg_survey',name:'Prospección de Drakensberg',seconds:720,cost:1350,knowledge:520,prize:1850,notes:950,required:113,routeReq:2,mapItem:'africa_map',sample:'fossil_plate'}
 ];
 const ITEMS={
  binoculars:{name:'Prismáticos de viaje',emoji:'🔭',slot:'instrument',bonus:'+12% encuentros manuales',kind:'equip'},
@@ -2960,6 +3044,9 @@ const ITEMS={
  fossil_fragment:{name:'Fragmento fósil',emoji:'🦴',slot:null,bonus:'Hallazgo de expedición y campo',kind:'voyage'},
  fossil_skull:{name:'Cráneo fósil',emoji:'💀',slot:null,bonus:'Hallazgo paleontológico muy raro',kind:'fossil'},
  fossil_tooth:{name:'Diente fósil',emoji:'🦷',slot:null,bonus:'Hallazgo paleontológico raro',kind:'fossil'},
+ fossil_plate:{name:'Placa fósil',emoji:'🦴',slot:null,bonus:'Hallazgo usado en la reconstrucción de Stegosaurus',kind:'fossil'},
+ herbivore_skull:{name:'Cráneo herbívoro',emoji:'💀',slot:null,bonus:'Pieza ensamblada para Triceratops',kind:'fossil'},
+ raptor_skull:{name:'Cráneo de dromeosaurio',emoji:'💀',slot:null,bonus:'Pieza ensamblada para Velociraptor',kind:'fossil'},
  bone_short:{name:'Hueso corto',emoji:'🦴',slot:null,bonus:'Pieza reconstruida · taller del Museo',kind:'fossil'},
  bone_long:{name:'Hueso largo',emoji:'🦴',slot:null,bonus:'Pieza reconstruida · taller del Museo',kind:'fossil'},
  carnivore_skull:{name:'Cráneo carnívoro',emoji:'💀',slot:null,bonus:'Pieza compuesta · taller del Museo',kind:'fossil'},
@@ -2970,7 +3057,11 @@ const ITEMS={
  asia_map_piece:{name:'Parte de mapa de Asia',emoji:'🧭',slot:null,bonus:'Fragmento raro de expedición',kind:'voyage'},
  asia_map:{name:'Mapa de Asia',emoji:'🗺️',slot:null,bonus:'Mapa ensamblado para futuras exploraciones',kind:'voyage'},
  africa_map_piece:{name:'Parte de mapa de África',emoji:'🧩',slot:null,bonus:'Fragmento cartográfico de expedición',kind:'voyage'},
- africa_map:{name:'Mapa de África',emoji:'🗺️',slot:null,bonus:'Mapa ensamblado · África llegará en el futuro',kind:'voyage'},
+ africa_map:{name:'Mapa de África',emoji:'🗺️',slot:null,bonus:'Mapa ensamblado para abrir las regiones africanas',kind:'voyage'},
+ northamerica_map_piece:{name:'Fragmento de mapa norteamericano',emoji:'🧩',slot:null,bonus:'Reunir 12 piezas en el Nuevo Mundo',kind:'voyage'},
+ northamerica_map:{name:'Mapa de Norteamérica',emoji:'🗺️',slot:null,bonus:'Requerido en la investigación Cartografía de Norteamérica',kind:'voyage'},
+ brass_gear:{name:'Engranaje de latón',emoji:'⚙️',slot:null,bonus:'Componente de astrolabio histórico',kind:'voyage'},
+ ocean_chart_piece:{name:'Carta oceánica fragmentada',emoji:'📜',slot:null,bonus:'Componente de Diario de navegación',kind:'voyage'},
  parchment_scrap:{name:'Pergamino antiguo',emoji:'📜',slot:null,bonus:'Material de viaje',kind:'voyage'},
  river_pebble:{name:'Piedra de río pulida',emoji:'🪨',slot:null,bonus:'Material de viaje',kind:'voyage'},
  heron_feather:{name:'Pluma de garza',emoji:'🪶',slot:null,bonus:'Material animal',kind:'animal'},
@@ -3006,13 +3097,15 @@ const RECIPES={
  rain_hood:{requires:{pressed_flower:1,animal_trace:1}},
  binoculars:{requires:{polished_lens:2,map_fragment:1}},
  asia_map:{requires:{asia_map_piece:10}},
- africa_map:{requires:{africa_map_piece:10}}
+ africa_map:{requires:{africa_map_piece:10}},
+ northamerica_map:{requires:{northamerica_map_piece:12}}
 };
 function rollLoot(){
   const chance=0.35 + ((state.equipment.hat==='feather_cap')?0.06:0) + ((state.equipment.instrument==='sturdy_pack')?0.03:0);
   if(Math.random()>=chance)return null;
-  const ids=Object.keys(ITEMS).filter(id=>(ITEMS[id].kind==='voyage' || ITEMS[id].kind==='equip') && id!=='asia_map' && id!=='africa_map');
+  const ids=Object.keys(ITEMS).filter(id=>(ITEMS[id].kind==='voyage' || ITEMS[id].kind==='equip') && id!=='asia_map' && id!=='africa_map' && id!=='northamerica_map' && id!=='northamerica_map_piece');
   ids.push('asia_map_piece','africa_map_piece','africa_map_piece');
+  if(state.upgrades.newWorldRoute)ids.push('northamerica_map_piece','northamerica_map_piece');
   return ids[Math.floor(Math.random()*ids.length)];
 }
 function addInventory(id, qty=1){state.inventory[id]=(state.inventory[id]||0)+qty;}
@@ -3025,7 +3118,7 @@ function maybeSpeciesDrop(id, manual){
   addInventory(item,1);
   return item;
 }
-function availableVoyages(){return VOYAGES.filter(v=>(!v.routeReq||(state.upgrades.routeTier||0)>=v.routeReq) && (!v.mapItem || (state.inventory?.[v.mapItem]>0)))}
+function availableVoyages(){return VOYAGES.filter(v=>(!v.routeReq||(state.upgrades.routeTier||0)>=v.routeReq) && (!v.mapItem || (state.inventory?.[v.mapItem]>0)) && (!v.reqUpgrade||state.upgrades[v.reqUpgrade]))}
 function canCraft(id){
   const recipe=RECIPES[id]; if(!recipe) return false;
   return Object.entries(recipe.requires).every(([rid,qty])=>(state.inventory[rid]||0)>=qty);
@@ -3051,7 +3144,7 @@ function renderObjects(){
  const card=(id,item)=>`<div class="inventory-item"><span class="inventory-icon">${item.emoji}</span><div class="inventory-item-body"><strong>${item.name}</strong><div class="small">${item.bonus}</div><div class="inventory-item-bottom"><span class="badge inv-count">× ${state.inventory[id]||0}</span>${item.slot?`<button class="btn ${state.equipment[item.slot]===id?'gold':'alt'}" data-action="equip-item" data-id="${id}" ${(state.inventory[id]||0)?'':'disabled'}>${state.equipment[item.slot]===id?'Quitar':'Equipar'}</button>`:''}</div></div></div>`;
  const recipeCard=(id,recipe)=>{const item=ITEMS[id];return `<div class="inventory-item"><span class="inventory-icon">${item.emoji}</span><div class="inventory-item-body"><strong>${item.name}</strong><div class="small">${Object.entries(recipe.requires).map(([rid,qty])=>`${ITEMS[rid].emoji} ${ITEMS[rid].name} ${state.inventory[rid]||0}/${qty}`).join(' · ')}</div><div class="inventory-item-bottom"><span class="badge">En bolsa: ${state.inventory[id]||0}</span><button class="btn" data-action="craft-item" data-id="${id}" ${canCraft(id)?'':'disabled'}>Fabricar</button></div></div></div>`;};
  const all=Object.entries(ITEMS);
- const collectIds=new Set(['asia_map','africa_map','fossil_fragment','fossil_skull','fossil_tooth','bone_short','bone_long','carnivore_skull']);
+ const collectIds=new Set(['asia_map','africa_map','northamerica_map','fossil_fragment','fossil_skull','fossil_tooth','fossil_plate','bone_short','bone_long','carnivore_skull','herbivore_skull','raptor_skull']);
  let content='';
  if(selected==='equipo'){
    content=`<div class="inventory-equipment-layout"><section class="inventory-block"><h4>🎽 Slots de equipamiento</h4><div class="small">Un objeto por ranura. El equipo anterior permanece en tu inventario.</div><div class="inventory-slots">${slots}</div></section><section class="inventory-block"><h4>Equipo disponible</h4><div class="inventory-items">${all.filter(([,i])=>i.kind==='equip').map(([id,i])=>card(id,i)).join('')}</div></section></div><section class="inventory-block"><h4>🛠️ Fabricación de equipo</h4><div class="inventory-items">${Object.entries(RECIPES).filter(([id])=>ITEMS[id]?.kind==='equip').map(([id,recipe])=>recipeCard(id,recipe)).join('')}</div></section>`;
@@ -3060,8 +3153,8 @@ function renderObjects(){
  }else if(selected==='expedicion'){
    content=`<section class="inventory-block"><h4>🧭 Botín de expedición</h4><div class="small">Materiales, herramientas y fragmentos de mapa encontrados en viajes.</div><div class="inventory-items">${all.filter(([id,i])=>i.kind==='voyage'&&!collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div></section>`;
  }else{
-   const asia=state.inventory.asia_map_piece||0,africa=state.inventory.africa_map_piece||0;
-   content=`<section class="inventory-block"><h4>🏛️ Coleccionables y cartografía</h4><div class="small">Mapas fabricados, fósiles y piezas singulares. No ocupan slots de equipo.</div><div class="inventory-items">${all.filter(([id])=>collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div><div class="divider"></div><h4>🗺️ Fabricación de mapas</h4><div class="inventory-items">${['asia_map','africa_map'].map(id=>recipeCard(id,RECIPES[id])).join('')}</div><div class="small">Mapa de Asia: ${Math.min(10,asia)}/10 fragmentos disponibles · Mapa de África: ${Math.min(10,africa)}/10. El mapa de África permite desbloquear las primeras tres regiones.</div></section>`;
+   const asia=state.inventory.asia_map_piece||0,africa=state.inventory.africa_map_piece||0,north=state.inventory.northamerica_map_piece||0;
+   content=`<section class="inventory-block"><h4>🏛️ Coleccionables y cartografía</h4><div class="small">Mapas fabricados, fósiles y piezas singulares. No ocupan slots de equipo.</div><div class="inventory-items">${all.filter(([id])=>collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div><div class="divider"></div><h4>🗺️ Fabricación de mapas</h4><div class="inventory-items">${['asia_map','africa_map','northamerica_map'].map(id=>recipeCard(id,RECIPES[id])).join('')}</div><div class="small">Mapa de Asia: ${Math.min(10,asia)}/10 fragmentos disponibles · Mapa de África: ${Math.min(10,africa)}/10 · Norteamérica: ${Math.min(12,north)}/12. El mapa norteamericano, el Astrolabio transatlántico y dos investigaciones desbloquean el Nuevo Mundo.</div></section>`;
  }
  const ownedEntries=Object.entries(state.inventory).filter(([,qty])=>Number(qty)>0);
  const equipped=Object.values(state.equipment).filter(Boolean).length;
@@ -3073,6 +3166,7 @@ function sail(voyageId){
  const v=VOYAGES.find(x=>x.id===voyageId);
  if(!v||!state.upgrades.shipyard||state.voyages.length>=maxVoyages()||state.prestige<v.required||state.money<v.cost||state.knowledge<v.knowledge)return;
   if(v.mapItem && !(state.inventory?.[v.mapItem]>0))return;
+  if(v.reqUpgrade && !state.upgrades[v.reqUpgrade])return;
  if(v.routeReq && (state.upgrades.routeTier||0)<v.routeReq) return;
  state.money-=v.cost;state.knowledge-=v.knowledge;
  state.voyageSeq++;state.voyages.push({id:state.voyageSeq,type:v.id,endAt:Date.now()+voyageDuration(v.seconds)*1000});
@@ -3084,14 +3178,20 @@ function resolveVoyageReward(job){
   let notes=v.notes + ((state.equipment.instrument==='brass_compass')?Math.round(v.notes*0.04):0);
   state.money+=v.prize;state.knowledge+=notes;
   // Hallazgo seguro solo en reconocimientos dirigidos; las misiones antiguas no cambian.
-  if(v.sample && ITEMS[v.sample]){addInventory(v.sample,1);pushLog('🔎 Muestra recogida: '+ITEMS[v.sample].name+'.');}
+  if(v.sample && ITEMS[v.sample]){
+    const qty=Math.max(1,Math.min(10,Number(v.sampleQty)||1));
+    addInventory(v.sample,qty);pushLog('🔎 Muestra recogida: '+ITEMS[v.sample].name+' ×'+qty+'.');
+  }
+  if(v.chartItem && ITEMS[v.chartItem]){addInventory(v.chartItem,1);pushLog('📜 Carta recogida: '+ITEMS[v.chartItem].name+'.');}
   const loot=rollLoot();
   if(loot){addInventory(loot,1); pushLog('🎒 Hallazgo: '+ITEMS[loot].name);}
   // Prospección opcional, adicional al botín original. No altera premios de rutas.
   const paleontology=Math.random();
   if(paleontology<0.025){addInventory('fossil_skull',1);pushLog('💀 Hallazgo raro: cráneo fósil.');}
   else if(paleontology<0.23){addInventory('fossil_tooth',1);pushLog('🦷 Hallazgo: diente fósil.');}
+  if(Math.random()<0.12){addInventory('fossil_plate',1);pushLog('🦴 Hallazgo: placa fósil.');}
   state.museum.voyagesCompleted=(state.museum.voyagesCompleted||0)+1;
+  if(v.id==='new_world_survey')state.museum.newWorldVoyages=(state.museum.newWorldVoyages||0)+1;
   pushLog('⛵ Regresó '+v.name+': +£'+v.prize+' y +'+notes+' conocimiento.');
   return true;
 }
@@ -3116,9 +3216,9 @@ function renderExpeditions(){
  const active=state.voyages||[];
  const shown=availableVoyages();
  return `<div class="grid-2"><section class="card stack"><h3 class="section">⛵ Expediciones y astillero</h3>
- <div class="small">Los viajes consumen libras y conocimiento, y regresan con financiación, apuntes científicos y objetos. Los reconocimientos africanos requieren el Mapa de África y cartografía II; dan una muestra garantizada, pero no desbloquean regiones ni generan avistamientos.</div>
+ <div class="small">Los viajes consumen libras y conocimiento, y regresan con financiación, apuntes científicos y objetos. Los reconocimientos africanos requieren Mapa de África y cartografía II. La Travesía al Nuevo Mundo se habilita tras investigar Navegación al Nuevo Mundo; entrega fragmentos cartográficos norteamericanos y cartas oceánicas, pero no desbloquea zonas ni genera avistamientos.</div>
  <div class="req"><strong>⚒️ Astillero</strong><div class="small">${state.upgrades.shipyard?'Construido. Capacidad actual: '+maxVoyages()+' expediciones simultáneas.':'Bloqueado. Desbloquéalo desde Investigación → Astillero básico.'}</div></div>
- ${shown.map(v=>`<div class="atlas-region"><div><strong>${v.name}</strong><div class="small">${Math.round(voyageDuration(v.seconds)/6)/10} min · Coste £${v.cost} + ${v.knowledge} conocimiento</div><div class="small">Regreso: £${v.prize} + ${v.notes} conocimiento · prestigio requerido ${v.required}${v.routeReq?` · cartografía ${v.routeReq}`:''}${v.sample?' · muestra: '+ITEMS[v.sample].name:''}</div></div><button class="btn" data-action="sail" data-id="${v.id}" ${!state.upgrades.shipyard||active.length>=maxVoyages()||state.prestige<v.required||state.money<v.cost||state.knowledge<v.knowledge||(v.mapItem&&!(state.inventory?.[v.mapItem]>0))?'disabled':''}>Enviar</button></div>`).join('')}
+ ${shown.map(v=>`<div class="atlas-region"><div><strong>${v.name}</strong><div class="small">${Math.round(voyageDuration(v.seconds)/6)/10} min · Coste £${v.cost} + ${v.knowledge} conocimiento</div><div class="small">Regreso: £${v.prize} + ${v.notes} conocimiento · prestigio requerido ${v.required}${v.routeReq?` · cartografía ${v.routeReq}`:''}${v.sample?' · muestra: '+ITEMS[v.sample].name+' ×'+(v.sampleQty||1):''}${v.reqUpgrade?' · investigación requerida':''}${v.chartItem?' · carta oceánica':''}</div></div><button class="btn" data-action="sail" data-id="${v.id}" ${!state.upgrades.shipyard||active.length>=maxVoyages()||state.prestige<v.required||state.money<v.cost||state.knowledge<v.knowledge||(v.mapItem&&!(state.inventory?.[v.mapItem]>0))||(v.reqUpgrade&&!state.upgrades[v.reqUpgrade])?'disabled':''}>Enviar</button></div>`).join('')}
  </section><section class="card"><h3 class="section">🧭 Viajes en curso</h3>
  ${active.length?active.map(job=>{const v=VOYAGES.find(x=>x.id===job.type);return `<div class="req"><strong>${v.name}</strong><div class="small">Regresa en aprox. ${Math.max(0,Math.ceil((job.endAt-Date.now())/1000))} segundos.</div><button class="btn alt" data-action="finish-voyage" data-id="${job.id}">Finalizar ahora</button></div>`}).join(''):'<div class="small">No hay expediciones activas.</div>'}
  <div class="divider"></div><div class="small">Las expediciones continúan durante tu ausencia hasta un máximo de ocho horas contabilizadas.</div></section></div>`;
@@ -3166,7 +3266,7 @@ function researchNodeCard(node){
   const blocked = node.req && !state.purchases[node.req];
   const maxed = (node.once && bought) || (node.max && bought>=node.max);
   const disabled = blocked || maxed || !canBuy(node);
-  return `<div class="atlas-region"><div><strong>${node.name}${node.repeat?` (${bought}${node.max?`/${node.max}`:''})`:''}</strong><div class="small">${node.desc}</div><div class="small">Costo: £${node.money} + ${node.knowledge} conocimiento${node.req?` · requiere ${RESEARCH_NODES.find(n=>n.id===node.req).name}`:''}${node.reqItem?` · requiere ${ITEMS[node.reqItem].name} ×${node.reqItemQty||1}`:''}</div></div><button class="btn ${disabled?'alt':''}" data-action="buy-node" data-id="${node.id}" ${disabled?'disabled':''}>${maxed?'Adquirido':'Investigar'}</button></div>`;
+  return `<div class="atlas-region"><div><strong>${node.name}${node.repeat?` (${bought}${node.max?`/${node.max}`:''})`:''}</strong><div class="small">${node.desc}</div><div class="small">Costo: £${node.money} + ${node.knowledge} conocimiento${node.req?` · requiere ${RESEARCH_NODES.find(n=>n.id===node.req).name}`:''}${node.reqItem?` · requiere ${ITEMS[node.reqItem].name} ×${node.reqItemQty||1} ${node.reqItemConsume===false?'(se conserva)':''}`:''}${node.reqCollection?` · requiere ${MUSEUM_COLLECTIONS.find(p=>p.id===node.reqCollection)?.name||node.reqCollection} (Artefactos)` : ''}</div></div><button class="btn ${disabled?'alt':''}" data-action="buy-node" data-id="${node.id}" ${disabled?'disabled':''}>${maxed?'Adquirido':'Investigar'}</button></div>`;
 }
 
 function bindPanel(){
@@ -3951,7 +4051,52 @@ function africaV39Sprite(id,skin){
  return null;
 }
 
+
+// Beta 3.12: siluetas propias de especies emblemáticas del Nuevo Mundo.
+function newWorld312Sprite(id,skin){
+ const sp=SPECIES[id];if(!sp)return null;
+ const c=applySkin(sp.color,skin),light=shade(c,23),dark=shade(c,-27);
+ const ink='#3a332a',eye=eyeColor(skin),wrap=p=>svgWrap(p,alphaGlow(skin));
+ if(id==='na_alce')return wrap(
+  '<ellipse cx="41" cy="60" rx="26" ry="16" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M23 69l-4 21m23-15-2 15m18-19-1 19" fill="none" stroke="'+ink+'" stroke-width="5"/>'+
+  '<path d="M59 54L66 29 77 36 80 50 90 56 82 64 64 63Z" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M66 37L56 18L46 9L50 25L40 20L43 33L60 42m17-5L88 10 93 24 99 18 96 37 81 44" fill="'+dark+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<circle cx="77" cy="49" r="2" fill="'+eye+'"/>');
+ if(id==='na_castor_canadiense')return wrap(
+  '<path d="M30 67Q14 75 6 83Q24 95 35 75" fill="'+dark+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<ellipse cx="48" cy="62" rx="25" ry="17" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M64 56Q80 43 89 58L87 73 68 73Z" fill="'+light+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M40 73l-4 13m17-11 5 12" stroke="'+ink+'" stroke-width="5"/>'+
+  '<path d="M83 65l2 9m-6-8 1 8" stroke="#e4d3aa" stroke-width="3"/><circle cx="81" cy="55" r="2" fill="'+eye+'"/>');
+ if(id==='na_aguila_calva')return wrap(
+  '<path d="M15 62L4 79L27 70" fill="'+dark+'" stroke="'+ink+'" stroke-width="2"/>'+
+  '<ellipse cx="46" cy="58" rx="23" ry="20" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M33 52Q45 39 58 60L41 76Z" fill="'+dark+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M60 47L58 22Q74 11 83 35L81 49Z" fill="#e5dfcf" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M81 35L97 42L83 50" fill="#cdaa5a" stroke="'+ink+'" stroke-width="2.5"/>'+
+  '<path d="M43 75l-4 14m14-15 3 15" fill="none" stroke="'+ink+'" stroke-width="4"/>'+
+  '<circle cx="76" cy="33" r="2" fill="'+eye+'"/>');
+ if(id==='na_mapache')return wrap(
+  '<path d="M21 65Q10 51 7 61Q6 80 22 78" fill="none" stroke="'+dark+'" stroke-width="10" stroke-linecap="round"/>'+
+  '<path d="M11 60l-3 11m7-4-5 9" stroke="'+light+'" stroke-width="3"/>'+
+  '<ellipse cx="43" cy="60" rx="23" ry="16" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M29 70l-5 17m26-14 2 14" stroke="'+ink+'" stroke-width="5"/>'+
+  '<path d="M64 45L61 30 72 35 80 27 87 39 89 56 71 65Z" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M66 45q14-14 21-1l-3 9q-10 10-18-2Z" fill="'+dark+'"/>'+
+  '<circle cx="73" cy="46" r="2" fill="'+eye+'"/><circle cx="83" cy="46" r="2" fill="'+eye+'"/>'+
+  '<path d="M76 54q6 5 10 0" fill="none" stroke="'+ink+'" stroke-width="2"/>');
+ if(id==='na_caribu')return wrap(
+  '<ellipse cx="42" cy="59" rx="25" ry="15" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M29 70l-2 19m23-19 2 20m14-25 5 24" stroke="'+ink+'" stroke-width="4"/>'+
+  '<path d="M61 53L66 36 79 37 90 58 84 67 67 63Z" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M69 37L59 18 46 15 51 28 41 27m36 10 9-18 12-4-6 14 8-1" stroke="'+dark+'" stroke-width="4" fill="none" stroke-linecap="round"/>'+
+  '<circle cx="83" cy="52" r="2" fill="'+eye+'"/>');
+ return null;
+}
+
 function spriteFor(kind,color,skin,id){
+ const v312=newWorld312Sprite(id,skin);if(v312)return v312;
  const af310=africaV310Sprite(id,skin);if(af310)return af310;
  const af39=africaV39Sprite(id,skin);if(af39)return af39;
  const polished=polishedSpeciesSprite(id,skin);if(polished)return polished;

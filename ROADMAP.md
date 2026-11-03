@@ -66,3 +66,15 @@
 - Dos encargos científicos de prospección con materiales, una sola vez; botines nuevos en viajes/avistamientos conservan recompensas existentes.
 - Continúa sin alterar gran_atlas_v05, JSON v1, cap. de 12 exposiciones animales, ganancias previas y sprites originales. Android Beta 3.11 tiene appId independiente.
 - Próximo: ampliar fósiles (especies paleontológicas), mejorar dibujos de relictos y progreso de África.
+
+
+## Beta 3.12 — África avanzada y Nuevo Mundo
+- África suma Montañas Drakensberg (113 prestigio) y Lago Chad y humedales (116): 22 regiones africanas. Objetivo provisional de cierre: 24, quedan 2 (no existía un total fijo antes de esta versión).
+- Norteamérica se habilita como continente jugable en el Atlas con Bosques boreales de Canadá (119) y Grandes Lagos (122).
+- Se agregan 21 especies: cinco africanas y 16 norteamericanas; cinco retratos SVG propios de fauna norteamericana.
+- Investigación África: Estudios de África, requiere Mapa de África y Cartografía naval II; solo las nuevas zonas lo exigen. Las 20 regiones previas no pierden accesibilidad.
+- Nuevo Mundo: Navegación al Nuevo Mundo -> Travesía transatlántica con 2 fragmentos norteamericanos y carta oceánica garantizados -> fabricar Mapa de Norteamérica con 12 fragmentos -> catalogar Astrolabio transatlántico (Artefactos) -> Cartografía de Norteamérica. Mapa y artefacto se conservan.
+- Museo: reconstrucciones únicas de Triceratops, Stegosaurus y Velociraptor; cráneos herbívoro y de dromeosaurio, placas fósiles; dos nuevos relictos de África (pez pulmonado y rana goliat); dos artefactos nuevos (astrolabio y diario de navegación).
+- Nueva misión Instrumental del navegante (3 travesías transatlánticas) otorga componentes del astrolabio y evita bloqueos por azar.
+- Guardado gran_atlas_v05, formato JSON v1, monetización y exposiciones originales se mantienen; APK Beta 3.12 independiente.
+- Próximo paso: dos regiones africanas restantes, más regiones norteamericanas y mejoras visuales de fósiles/relictos.
