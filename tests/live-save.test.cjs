@@ -421,6 +421,7 @@ test('Beta 3.11: misiones otorgan objetos una sola vez y viajes registran avance
  assert.equal(again.inventory.fossil_tooth,5);
  assert.equal(again.inventory.fossil_skull,1);
  assert.equal(h.evalInGame('resolveVoyageReward({type:"coast"})'),true);
+ h.tick();
  assert.equal(JSON.parse(h.store[KEY]).museum.voyagesCompleted,4);
 });
 
