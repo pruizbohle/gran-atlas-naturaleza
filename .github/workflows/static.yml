@@ -24,6 +24,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Validar código y pruebas del Atlas
+        run: |
+          node --check www/js/app.js
+          node --check www/js/mobile-ui.js
+          node --check www/js/save-manager.js
+          node --test tests/*.test.cjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload game
