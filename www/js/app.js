@@ -1720,6 +1720,10 @@ const RESEARCH_NODES=[
   {id:'fondos_x1000', name:'Fondos científicos IV · ×1000', desc:'Permite aportes de £100.000 → 70.000 conocimiento en una operación', money:6000, knowledge:3000, req:'fondos_x100', once:true, effect(s){s.upgrades.fundingTier=1000;}}
 ];
 
+// Cadena África → Nuevo Mundo → Norteamérica. Los mapas y el artefacto se conservan.
+RESEARCH_NODES.push({id:"africa_1",name:"Estudios cartográficos de África",desc:"Investiga África; requiere conservar el Mapa de África.",money:1200,knowledge:900,req:"asia_1",reqItem:"africa_map",reqItemConsume:false,once:true,effect(s){s.upgrades.africaUnlocked=1;}},
+{id:"nuevo_mundo_1",name:"Navegación al Nuevo Mundo",desc:"Permite viajes atlánticos, exige Cuadrante transatlántico.",money:2200,knowledge:1800,req:"africa_1",reqItem:"oceanic_quadrant",reqItemConsume:false,once:true,effect(s){s.upgrades.newWorldUnlocked=1;}},
+{id:"norteamerica_1",name:"Cartografía de Norteamérica",desc:"Habilita Norteamérica; requiere mapa completo y navegación atlántica.",money:2800,knowledge:2400,req:"nuevo_mundo_1",reqItem:"north_america_map",reqItemConsume:false,once:true,effect(s){s.upgrades.northAmericaUnlocked=1;}});
 function initialState(){
   const region=REGIONS[0].id;
   return {
@@ -1727,7 +1731,7 @@ function initialState(){
     asiaPricingVersion:3, currentRegion:region, habitat:'bosque', time:'amanecer', season:'primavera',
     discovered:{}, sightings:{}, stages:{}, feedObs:{}, dimorphism:{}, sexSeen:{}, specialSeen:{}, specialFound:{}, published:{},
     log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial de prueba: £420. En Corona puedes simular más libras.'],
-    upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,fundingTier:1}, purchases:{},
+    upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,africaUnlocked:0,newWorldUnlocked:0,northAmericaUnlocked:0,fundingTier:1}, purchases:{},
     regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', crownCoins:0, lastEncounter:null,
     lastTick:Date.now(), lastGrant:0, autoHourly:{}, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
   };
@@ -1746,6 +1750,11 @@ for(const field of ['collections','relicts','displays']){
 state.museum.voyagesCompleted=Math.max(0,Number(state.museum.voyagesCompleted)||0);
 state.books=state.books||0;
 state.autoHourly=state.autoHourly||{};state.voyages=state.voyages||[];state.voyageSeq=state.voyageSeq||0;state.inventory=state.inventory||{};state.equipment=state.equipment||{instrument:null,hat:null,necklace:null};state.specialFound=state.specialFound||{};state.upgrades.asiaUnlocked=(state.upgrades.asiaUnlocked||state.purchases.asia_1)?1:0;state.atlasView=state.atlasView||'Europa';state.museumView=state.museumView||'exhibitions';state.societyView=state.societyView||'grants';state.publicationView=state.publicationView||'monographs';state.bestiarySort=state.bestiarySort||'alpha';state.crownCoins=state.crownCoins||0;
+// Migración v3.14: preservar las regiones africanas ya ganadas antes de esta investigación.
+if(Object.keys(state.regionUnlocked||{}).some(id=>REGIONS.find(r=>r.id===id)?.continent==='África')&&state.inventory.africa_map>0)state.purchases.africa_1=1;
+state.upgrades.africaUnlocked=!!state.purchases.africa_1;
+state.upgrades.newWorldUnlocked=!!state.purchases.nuevo_mundo_1;
+state.upgrades.northAmericaUnlocked=!!state.purchases.norteamerica_1;
 // Migración v2.1->v2.2: zonas asiáticas previamente habilitadas conservan su acceso.
 if((state.asiaPricingVersion||2)<3){
   if(state.upgrades.asiaUnlocked){
@@ -2196,7 +2205,7 @@ function buyNode(id){
   if(node.reqItem && (state.inventory[node.reqItem]||0)<(node.reqItemQty||1)) return;
   if(state.money<node.money || state.knowledge<node.knowledge) return;
   state.money-=node.money; state.knowledge-=node.knowledge;
-  if(node.reqItem) state.inventory[node.reqItem]=(state.inventory[node.reqItem]||0)-(node.reqItemQty||1);
+  if(node.reqItem && node.reqItemConsume!==false) state.inventory[node.reqItem]=(state.inventory[node.reqItem]||0)-(node.reqItemQty||1);
   state.purchases[id]=(state.purchases[id]||0)+1;
   node.effect(state);
   pushLog(`🔬 Investigación completada: ${node.name}.`);
@@ -2292,7 +2301,7 @@ const ATLAS_CONTINENTS=[
   {id:'Europa',label:'Europa',icon:'🇪🇺',implemented:true},
   {id:'Asia',label:'Asia',icon:'🌏',implemented:true},
   {id:'África',label:'África',icon:'🌍',implemented:true},
-  {id:'Norteamérica',label:'Norteamérica',icon:'🦬',implemented:false},
+  {id:'Norteamérica',label:'Norteamérica',icon:'🦬',implemented:true},
   {id:'Sudamérica',label:'Sudamérica',icon:'🦜',implemented:false},
   {id:'Oceanía',label:'Oceanía',icon:'🪃',implemented:false},
   {id:'Polos',label:'Polos',icon:'🧊',implemented:false},
@@ -2301,13 +2310,15 @@ const ATLAS_CONTINENTS=[
 function regionRequirementsMet(r){
   if(!r) return false;
   if(r.continent==='Asia') return !!(state.upgrades.asiaUnlocked && state.prestige>=r.unlock.prestige);
-  if(r.continent==='África') return !!(state.inventory?.africa_map && state.prestige>=r.unlock.prestige);
+  if(r.continent==='África') return !!(state.inventory?.africa_map && (state.upgrades.africaUnlocked || state.regionUnlocked[r.id]) && state.prestige>=r.unlock.prestige);
+   if(r.continent==='Norteamérica')return !!(state.upgrades.northAmericaUnlocked && state.inventory?.north_america_map && state.prestige>=r.unlock.prestige);
   return state.prestige>=r.unlock.prestige;
 }
 function continentStatus(continent){
   if(continent==='Europa') return 'available';
   if(continent==='Asia') return state.upgrades.asiaUnlocked?'available':'unlockable';
-  if(continent==='África') return state.inventory?.africa_map?'available':'unlockable';
+  if(continent==='África') return state.inventory?.africa_map&&state.upgrades.africaUnlocked?'available':'unlockable';
+  if(continent==='Norteamérica')return state.upgrades.northAmericaUnlocked?'available':'unlockable';
   return 'locked';
 }
 function unlockRegion(id){
@@ -2427,7 +2438,9 @@ function renderAtlas(){
     ? (state.upgrades.asiaUnlocked?'✓ Cartografía de Asia':'✕ Necesitas investigar Cartografía de Asia')+' · '+r.unlock.prestige+' prestigio mínimo'
     : r.continent==='África'
       ? (state.inventory.africa_map?'✓ Mapa de África reunido':'✕ Fabrica el Mapa de África en Inventario')+' · '+r.unlock.prestige+' prestigio mínimo'
-      : r.unlock.prestige+' prestigio mínimo';
+      : r.continent==='Norteamérica'
+         ? (state.upgrades.newWorldUnlocked?'✓ Ruta atlántica':'✕ Investiga Navegación al Nuevo Mundo')+' · '+(state.upgrades.northAmericaUnlocked?'✓ Cartografía':'✕ Investiga Cartografía de Norteamérica')+' · '+(state.inventory.north_america_map?'✓ Mapa reunido':'✕ Fabrica el mapa')+' · '+r.unlock.prestige+' prestigio mínimo'
+         : r.unlock.prestige+' prestigio mínimo';
   const action=active?'<button class="btn gold" disabled>Explorando aquí</button>'
     :unlocked?'<button class="btn gold" data-action="travel-region" data-id="'+r.id+'">🧭 Viajar a Campo</button>'
     :ready?'<button class="btn gold" data-action="unlock-region" data-id="'+r.id+'">🗝️ Desbloquear zona</button>'
@@ -2570,7 +2583,7 @@ function renderResearch(){
     prismaticos_1:[1,1],prismaticos_2:[2,1],cuaderno_1:[1,2],sociedad_1:[2,2],sociedad_2:[3,2],gabinete_1:[4,2],
     metodo_1:[1,3],metodo_2:[2,3],metodo_3:[3,3],metodo_4:[4,3],
     novato:[1,4],capacitacion_1:[2,4],capacitacion_2:[3,4],astillero:[4,4],
-    rutas_1:[5,4],rutas_2:[6,4],casco_1:[5,5],flota_1:[6,5],asia_1:[7,4]
+    rutas_1:[5,4],rutas_2:[6,4],casco_1:[5,5],flota_1:[6,5],asia_1:[7,4],africa_1:[7,5],nuevo_mundo_1:[7,6],norteamerica_1:[7,7]
   };
   const nodeMap=Object.fromEntries(RESEARCH_NODES.map(n=>[n.id,n]));
   const nodes=RESEARCH_NODES.map(node=>{
