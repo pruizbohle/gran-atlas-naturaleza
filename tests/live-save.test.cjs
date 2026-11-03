@@ -38,7 +38,7 @@ function harness(store={}){
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
    Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,
    setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES,MUSEUM_FOSSIL_RECIPES,craftMuseumFossil,museumAssemblyReady,museumOtherExhibits,renderFossilWorkshop,renderMuseumRelicts,renderMuseumArtifacts,renderMuseumSamples,toggleMuseumDisplay,renderMuseumExtraGallery,MUSEUM_RELICTS,recordMuseumRelict,maybeMuseumFieldDiscovery,SCIENTIFIC_MISSIONS,resolveVoyageReward};\n})();');
+ const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES,MUSEUM_FOSSIL_RECIPES,craftMuseumFossil,museumAssemblyReady,museumOtherExhibits,renderFossilWorkshop,renderMuseumRelicts,renderMuseumArtifacts,renderMuseumSamples,toggleMuseumDisplay,renderMuseumExtraGallery,MUSEUM_RELICTS,recordMuseumRelict,maybeMuseumFieldDiscovery,SCIENTIFIC_MISSIONS,resolveVoyageReward,museumCardArt,ITEMS};\n})();');
  assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(SAVE,ctx,{filename:'www/js/save-manager.js'});
@@ -435,4 +435,119 @@ test('Beta 3.11: taller impide fabricaciones sin materiales y múltiples ejempla
  assert.equal(h.evalInGame('craftMuseumFossil("nope",1)'),false);
  assert.equal(h.evalInGame('toggleMuseumDisplay("relict:coelacanth_indic")'),false);
  assert.match(h.evalInGame('renderFossilWorkshop()'),/Reconstrucción de T\. rex/);
+});
+
+
+test('Beta 3.12: tres dinosaurios nuevos se montan una única vez, sin afectar el Atlas',()=>{
+ const recipes=[
+  ['triceratops_mount',{bone_long:8,bone_short:18,herbivore_skull:1}],
+  ['stegosaurus_mount',{bone_long:12,bone_short:20,fossil_plate:5}],
+  ['spinosaurus_mount',{bone_long:14,bone_short:18,carnivore_skull:1,fossil_sail:3}]
+ ];
+ for(const [id,materials] of recipes){
+  const h=harness({}),old=JSON.parse(h.store[KEY]);
+  h.window.AtlasSaveBridge.restoreGame({...old,inventory:{...old.inventory,...materials}});
+  assert.equal(h.evalInGame('craftMuseumFossil("'+id+'",1)'),true,id);
+  const next=JSON.parse(h.store[KEY]);
+  assert.equal(next.museum.collections[id],true);
+  for(const key of Object.keys(materials))assert.equal(next.inventory[key],0,key);
+  assert.equal(h.evalInGame('craftMuseumFossil("'+id+'",1)'),false,id+' se duplica');
+  assert.match(h.evalInGame('renderMuseumExtraGallery()'),new RegExp(id==='triceratops_mount'?'Triceratops':id==='stegosaurus_mount'?'Estegosaurio':'Espinosaurio'));
+  assert.equal(h.evalInGame('toggleMuseumDisplay("collection:'+id+'")'),true);
+  assert.equal(h.evalInGame('toggleMuseumDisplay("collection:'+id+'")'),true);
+  assert.deepEqual(next.discovered,old.discovered);
+  assert.deepEqual(next.sightings,old.sightings);
+  assert.equal(next.money,old.money);
+  assert.equal(next.prestige,old.prestige);
+  h.tick();
+  const reboot=harness(h.store);
+  assert.equal(JSON.parse(reboot.store[KEY]).museum.collections[id],true);
+ }
+});
+
+test('Beta 3.12: piezas intermedias fósiles se fabrican con recetas explícitas',()=>{
+ const h=harness({}),old=JSON.parse(h.store[KEY]);
+ const inv={...old.inventory,fossil_fragment:25,fossil_skull:1,fossil_tooth:6};
+ h.window.AtlasSaveBridge.restoreGame({...old,inventory:inv});
+ assert.equal(h.evalInGame('craftMuseumFossil("herbivore_skull",1)'),true);
+ assert.equal(h.evalInGame('craftMuseumFossil("fossil_plate",2)'),true);
+ assert.equal(h.evalInGame('craftMuseumFossil("fossil_sail",1)'),true);
+ const now=JSON.parse(h.store[KEY]);
+ assert.equal(now.inventory.herbivore_skull,1);
+ assert.equal(now.inventory.fossil_plate,2);
+ assert.equal(now.inventory.fossil_sail,1);
+ assert.equal(now.inventory.fossil_skull,0);
+ assert.equal(now.inventory.fossil_tooth,0);
+ assert.equal(now.inventory.fossil_fragment,7);
+});
+
+test('Beta 3.12: artefactos consumen materiales y aparecen en vitrinas sin doble pago',()=>{
+ const h=harness({}),old=JSON.parse(h.store[KEY]);
+ h.window.AtlasSaveBridge.restoreGame({...old,knowledge:3000,inventory:{
+  ...old.inventory,brass_shard:5,old_ink:1,carved_wood:2,polished_lens:1,ancient_coin:1,parchment_scrap:3,map_fragment:6
+ }});
+ for(const id of ['astrolabio_laton','diario_explorador','globo_cartografico']){
+  assert.equal(h.evalInGame('catalogMuseumCollection("'+id+'")'),true,id);
+  assert.equal(h.evalInGame('catalogMuseumCollection("'+id+'")'),false,id+' doble fabricación');
+  assert.match(h.evalInGame('renderMuseumExtraGallery()'),id==='astrolabio_laton'?/Astrolabio de latón/:id==='diario_explorador'?/Diario de explorador/:/Globo cartográfico antiguo/);
+  assert.match(h.evalInGame('museumCardArt("","'+id+'")'),/<svg viewBox="0 0 100 100"/);
+ }
+ const after=JSON.parse(h.store[KEY]);
+ assert.equal(after.inventory.brass_shard,0);
+ assert.equal(after.inventory.old_ink,0);
+ assert.equal(after.inventory.carved_wood,0);
+ assert.equal(after.inventory.map_fragment,0);
+ assert.equal(after.museum.collections.astrolabio_laton,true);
+ assert.equal(after.museum.collections.diario_explorador,true);
+ assert.equal(after.museum.collections.globo_cartografico,true);
+ assert.equal(after.prestige,old.prestige);
+ h.tick();
+ const reboot=harness(h.store);
+ assert.equal(JSON.parse(reboot.store[KEY]).museum.collections.globo_cartografico,true);
+});
+
+test('Beta 3.12: dos relictos adicionales no entran en estadísticas del Atlas',()=>{
+ const h=harness({}),old=JSON.parse(h.store[KEY]);
+ assert.equal(h.evalInGame('MUSEUM_RELICTS.length'),6);
+ assert.equal(h.evalInGame('recordMuseumRelict("angonoka")'),true);
+ assert.equal(h.evalInGame('recordMuseumRelict("african_lungfish")'),true);
+ assert.equal(h.evalInGame('recordMuseumRelict("angonoka")'),false);
+ h.tick();
+ const after=JSON.parse(h.store[KEY]);
+ assert.equal(after.museum.relicts.angonoka,true);
+ assert.equal(after.museum.relicts.african_lungfish,true);
+ assert.deepEqual(after.discovered,old.discovered);
+ assert.deepEqual(after.sightings,old.sightings);
+ assert.equal(after.money,old.money);
+ assert.equal(after.prestige,old.prestige);
+ assert.match(h.evalInGame('renderMuseumRelicts()'),/Tortuga angonoka/);
+ assert.match(h.evalInGame('renderMuseumRelicts()'),/Pez pulmonado africano/);
+ const reboot=harness(h.store);
+ assert.equal(JSON.parse(reboot.store[KEY]).museum.relicts.angonoka,true);
+});
+
+test('Beta 3.12: misión de cinco viajes entrega materiales de artefactos una sola vez',()=>{
+ const h=harness({}),old=JSON.parse(h.store[KEY]);
+ h.window.AtlasSaveBridge.restoreGame({...old,museum:{...old.museum,voyagesCompleted:5}});
+ h.evalInGame('claimScientificMission("artifactos_viajes_5")');
+ const after=JSON.parse(h.store[KEY]);
+ assert.equal(after.inventory.brass_shard,2);
+ assert.equal(after.inventory.old_ink,1);
+ assert.equal(after.inventory.carved_wood,2);
+ assert.equal(after.inventory.map_fragment,2);
+ h.evalInGame('claimScientificMission("artifactos_viajes_5")');
+ assert.equal(JSON.parse(h.store[KEY]).inventory.brass_shard,2);
+});
+
+test('Beta 3.12: ecología nueva preserva observación de fauna de Bangweulu y Lowveld',()=>{
+ const h=harness({});
+ for(const [id,region,habitat,time,season] of [
+  ['af_picozapato','HX-09-12','humedal','dia','invierno'],
+  ['af_lechwe_negro','HX-09-12','humedal','dia','invierno'],
+  ['af_grulla_carunculada','HX-09-12','pradera','dia','invierno'],
+  ['af_impala','HX-11-10','pradera','dia','invierno'],
+  ['af_calao_trompetero','HX-11-10','bosque','dia','invierno']
+ ]){
+  assert.ok(h.evalInGame('eligibleSpecies("'+region+'","'+habitat+'","'+time+'","'+season+'").includes("'+id+'")'),id+' no observable');
+ }
 });
