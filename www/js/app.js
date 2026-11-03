@@ -3045,7 +3045,8 @@ const VOYAGES=[
  {id:'carpathians',name:'Ruta científica a los Cárpatos',seconds:420,cost:260,knowledge:110,prize:380,notes:180,required:4,routeReq:1},
  {id:'balkans',name:'Ruta científica a los Balcanes',seconds:520,cost:340,knowledge:150,prize:500,notes:250,required:6,routeReq:2},
   {id:'ethiopia_survey',name:'Reconocimiento de las tierras altas etíopes',seconds:600,cost:950,knowledge:380,prize:1400,notes:700,required:92,routeReq:2,mapItem:'africa_map',sample:'animal_trace'},
-  {id:'namib_survey',name:'Reconocimiento del desierto del Namib',seconds:720,cost:1250,knowledge:460,prize:1750,notes:900,required:95,routeReq:2,mapItem:'africa_map',sample:'fossil_fragment'}
+  {id:'namib_survey',name:'Reconocimiento del desierto del Namib',seconds:720,cost:1250,knowledge:460,prize:1750,notes:900,required:95,routeReq:2,mapItem:'africa_map',sample:'fossil_fragment'},
+  {id:'atlantic_survey',name:'Reconocimiento del Atlántico',seconds:720,cost:1700,knowledge:650,prize:2050,notes:850,required:116,routeReq:2,reqResearch:'nuevo_mundo_1',sample:'north_america_map_piece'}
 ];
 const ITEMS={
  binoculars:{name:'Prismáticos de viaje',emoji:'🔭',slot:'instrument',bonus:'+12% encuentros manuales',kind:'equip'},
@@ -3073,7 +3074,10 @@ const ITEMS={
  asia_map_piece:{name:'Parte de mapa de Asia',emoji:'🧭',slot:null,bonus:'Fragmento raro de expedición',kind:'voyage'},
  asia_map:{name:'Mapa de Asia',emoji:'🗺️',slot:null,bonus:'Mapa ensamblado para futuras exploraciones',kind:'voyage'},
  africa_map_piece:{name:'Parte de mapa de África',emoji:'🧩',slot:null,bonus:'Fragmento cartográfico de expedición',kind:'voyage'},
- africa_map:{name:'Mapa de África',emoji:'🗺️',slot:null,bonus:'Mapa ensamblado · África llegará en el futuro',kind:'voyage'},
+ africa_map:{name:'Mapa de África',emoji:'🗺️',slot:null,bonus:'Cartografía requerida en investigación de África',kind:'voyage'},
+ north_america_map_piece:{name:'Parte de mapa de Norteamérica',emoji:'🧩',slot:null,bonus:'Fragmento cartográfico de travesías atlánticas',kind:'voyage'},
+ north_america_map:{name:'Mapa de Norteamérica',emoji:'🗺️',slot:null,bonus:'Mapa para investigar el acceso a Norteamérica',kind:'voyage'},
+ oceanic_quadrant:{name:'Cuadrante transatlántico',emoji:'🧭',slot:null,bonus:'Artefacto necesario para investigar el Nuevo Mundo',kind:'artifact_material'},
  parchment_scrap:{name:'Pergamino antiguo',emoji:'📜',slot:null,bonus:'Material de viaje',kind:'voyage'},
  river_pebble:{name:'Piedra de río pulida',emoji:'🪨',slot:null,bonus:'Material de viaje',kind:'voyage'},
  heron_feather:{name:'Pluma de garza',emoji:'🪶',slot:null,bonus:'Material animal',kind:'animal'},
@@ -3112,13 +3116,16 @@ const RECIPES={
  rain_hood:{requires:{pressed_flower:1,animal_trace:1}},
  binoculars:{requires:{polished_lens:2,map_fragment:1}},
  asia_map:{requires:{asia_map_piece:10}},
- africa_map:{requires:{africa_map_piece:10}}
+ africa_map:{requires:{africa_map_piece:10}},
+ north_america_map:{requires:{north_america_map_piece:8}},
+ oceanic_quadrant:{requires:{brass_shard:3,polished_lens:2,map_fragment:2,parchment_scrap:1}}
 };
 function rollLoot(){
   const chance=0.35 + ((state.equipment.hat==='feather_cap')?0.06:0) + ((state.equipment.instrument==='sturdy_pack')?0.03:0);
   if(Math.random()>=chance)return null;
-  const ids=Object.keys(ITEMS).filter(id=>(ITEMS[id].kind==='voyage' || ITEMS[id].kind==='equip') && id!=='asia_map' && id!=='africa_map');
+  const ids=Object.keys(ITEMS).filter(id=>(ITEMS[id].kind==='voyage' || ITEMS[id].kind==='equip') && id!=='asia_map' && id!=='africa_map' && id!=='north_america_map' && id!=='north_america_map_piece');
   ids.push('asia_map_piece','africa_map_piece','africa_map_piece');
+ if(state.purchases.nuevo_mundo_1)ids.push('north_america_map_piece','north_america_map_piece');
   return ids[Math.floor(Math.random()*ids.length)];
 }
 function addInventory(id, qty=1){state.inventory[id]=(state.inventory[id]||0)+qty;}
@@ -3131,7 +3138,7 @@ function maybeSpeciesDrop(id, manual){
   addInventory(item,1);
   return item;
 }
-function availableVoyages(){return VOYAGES.filter(v=>(!v.routeReq||(state.upgrades.routeTier||0)>=v.routeReq) && (!v.mapItem || (state.inventory?.[v.mapItem]>0)))}
+function availableVoyages(){return VOYAGES.filter(v=>(!v.routeReq||(state.upgrades.routeTier||0)>=v.routeReq) && (!v.mapItem || (state.inventory?.[v.mapItem]>0)) && (!v.reqResearch || !!state.purchases[v.reqResearch]))}
 function canCraft(id){
   const recipe=RECIPES[id]; if(!recipe) return false;
   return Object.entries(recipe.requires).every(([rid,qty])=>(state.inventory[rid]||0)>=qty);
@@ -3157,7 +3164,7 @@ function renderObjects(){
  const card=(id,item)=>`<div class="inventory-item"><span class="inventory-icon">${item.emoji}</span><div class="inventory-item-body"><strong>${item.name}</strong><div class="small">${item.bonus}</div><div class="inventory-item-bottom"><span class="badge inv-count">× ${state.inventory[id]||0}</span>${item.slot?`<button class="btn ${state.equipment[item.slot]===id?'gold':'alt'}" data-action="equip-item" data-id="${id}" ${(state.inventory[id]||0)?'':'disabled'}>${state.equipment[item.slot]===id?'Quitar':'Equipar'}</button>`:''}</div></div></div>`;
  const recipeCard=(id,recipe)=>{const item=ITEMS[id];return `<div class="inventory-item"><span class="inventory-icon">${item.emoji}</span><div class="inventory-item-body"><strong>${item.name}</strong><div class="small">${Object.entries(recipe.requires).map(([rid,qty])=>`${ITEMS[rid].emoji} ${ITEMS[rid].name} ${state.inventory[rid]||0}/${qty}`).join(' · ')}</div><div class="inventory-item-bottom"><span class="badge">En bolsa: ${state.inventory[id]||0}</span><button class="btn" data-action="craft-item" data-id="${id}" ${canCraft(id)?'':'disabled'}>Fabricar</button></div></div></div>`;};
  const all=Object.entries(ITEMS);
- const collectIds=new Set(['asia_map','africa_map','fossil_fragment','fossil_skull','fossil_tooth','bone_short','bone_long','carnivore_skull','herbivore_skull','fossil_plate','fossil_sail']);
+ const collectIds=new Set(['asia_map','africa_map','north_america_map','oceanic_quadrant','fossil_fragment','fossil_skull','fossil_tooth','bone_short','bone_long','carnivore_skull','herbivore_skull','fossil_plate','fossil_sail']);
  let content='';
  if(selected==='equipo'){
    content=`<div class="inventory-equipment-layout"><section class="inventory-block"><h4>🎽 Slots de equipamiento</h4><div class="small">Un objeto por ranura. El equipo anterior permanece en tu inventario.</div><div class="inventory-slots">${slots}</div></section><section class="inventory-block"><h4>Equipo disponible</h4><div class="inventory-items">${all.filter(([,i])=>i.kind==='equip').map(([id,i])=>card(id,i)).join('')}</div></section></div><section class="inventory-block"><h4>🛠️ Fabricación de equipo</h4><div class="inventory-items">${Object.entries(RECIPES).filter(([id])=>ITEMS[id]?.kind==='equip').map(([id,recipe])=>recipeCard(id,recipe)).join('')}</div></section>`;
@@ -3166,8 +3173,8 @@ function renderObjects(){
  }else if(selected==='expedicion'){
    content=`<section class="inventory-block"><h4>🧭 Botín de expedición</h4><div class="small">Materiales, herramientas y fragmentos de mapa encontrados en viajes.</div><div class="inventory-items">${all.filter(([id,i])=>(i.kind==='voyage'||i.kind==='artifact_material')&&!collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div></section>`;
  }else{
-   const asia=state.inventory.asia_map_piece||0,africa=state.inventory.africa_map_piece||0;
-   content=`<section class="inventory-block"><h4>🏛️ Coleccionables y cartografía</h4><div class="small">Mapas fabricados, fósiles y piezas singulares. No ocupan slots de equipo.</div><div class="inventory-items">${all.filter(([id])=>collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div><div class="divider"></div><h4>🗺️ Fabricación de mapas</h4><div class="inventory-items">${['asia_map','africa_map'].map(id=>recipeCard(id,RECIPES[id])).join('')}</div><div class="small">Mapa de Asia: ${Math.min(10,asia)}/10 fragmentos disponibles · Mapa de África: ${Math.min(10,africa)}/10. El mapa de África permite desbloquear las primeras tres regiones.</div></section>`;
+   const asia=state.inventory.asia_map_piece||0,africa=state.inventory.africa_map_piece||0,namerica=state.inventory.north_america_map_piece||0;
+   content=`<section class="inventory-block"><h4>🏛️ Coleccionables y cartografía</h4><div class="small">Mapas fabricados, fósiles y piezas singulares. No ocupan slots de equipo.</div><div class="inventory-items">${all.filter(([id])=>collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div><div class="divider"></div><h4>🗺️ Fabricación de mapas</h4><div class="inventory-items">${['asia_map','africa_map','oceanic_quadrant','north_america_map'].map(id=>recipeCard(id,RECIPES[id])).join('')}</div><div class="small">Mapa de Asia: ${Math.min(10,asia)}/10 fragmentos disponibles · Mapa de África: ${Math.min(10,africa)}/10. El mapa africano permite investigar África. Ruta al Nuevo Mundo: cuadrante transatlántico → navegación atlántica → mapa de Norteamérica ${Math.min(8,namerica)}/8 piezas → investigación de Norteamérica.</div></section>`;
  }
  const ownedEntries=Object.entries(state.inventory).filter(([,qty])=>Number(qty)>0);
  const equipped=Object.values(state.equipment).filter(Boolean).length;
@@ -3180,6 +3187,7 @@ function sail(voyageId){
  if(!v||!state.upgrades.shipyard||state.voyages.length>=maxVoyages()||state.prestige<v.required||state.money<v.cost||state.knowledge<v.knowledge)return;
   if(v.mapItem && !(state.inventory?.[v.mapItem]>0))return;
  if(v.routeReq && (state.upgrades.routeTier||0)<v.routeReq) return;
+  if(v.reqResearch && !state.purchases[v.reqResearch])return;
  state.money-=v.cost;state.knowledge-=v.knowledge;
  state.voyageSeq++;state.voyages.push({id:state.voyageSeq,type:v.id,endAt:Date.now()+voyageDuration(v.seconds)*1000});
  pushLog('⛵ Zarpó una expedición: '+v.name);render();
