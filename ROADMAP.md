@@ -66,3 +66,13 @@
 - Dos encargos científicos de prospección con materiales, una sola vez; botines nuevos en viajes/avistamientos conservan recompensas existentes.
 - Continúa sin alterar gran_atlas_v05, JSON v1, cap. de 12 exposiciones animales, ganancias previas y sprites originales. Android Beta 3.11 tiene appId independiente.
 - Próximo: ampliar fósiles (especies paleontológicas), mejorar dibujos de relictos y progreso de África.
+
+
+## Beta 3.12 — Dinosaurios, artefactos, relictos y dos regiones africanas
+- 3 reconstrucciones nuevas: Triceratops, Estegosaurio y Espinosaurio, cada una con silueta SVG propia y receta única. Se añaden los componentes reutilizables: cráneo herbívoro, placa dorsal y espina de vela.
+- 3 artefactos con materiales encontrados en expediciones y misiones: Astrolabio de latón (piezas de latón, lente, moneda), Diario de explorador (tintero, pergaminos, mapas), Globo cartográfico (latón, madera tallada, mapas). Los artefactos anteriores permanecen intactos.
+- 2 relictos exclusivos del Museo: tortuga angonoka (Madagascar) y pez pulmonado africano (Grandes Lagos). Son extremadamente raros y nunca cuentan en Atlas.
+- 2 zonas africanas: Humedales de Bangweulu (113 prestigio) y Lowveld y Kruger (116), con 8 especies nuevas. Total África: 22; fauna mundial: 393. Meta orientativa de primera etapa: 24 regiones africanas, **2 por agregar** (no es un límite definitivo de expansión).
+- Pruebas ampliadas de recetas, persistencia, muestras, artefactos, nueva fauna/ecología y separación de estadísticas.
+- Retrocompatibilidad: clave gran_atlas_v05 y respaldo JSON v1. Android Beta 3.12 con identificador independiente para mantener Betas anteriores.
+- Próximo: 2 regiones africanas para cerrar la primera etapa, revisar sprites por familia y enriquecer piezas fósiles.

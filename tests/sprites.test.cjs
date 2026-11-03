@@ -51,7 +51,7 @@ test('Beta 3.7 oscurece pigmentos melánicos de mamíferos, reptiles y aves',()=
 
 
 test('Beta 3.9 elimina los sprites circulares para todas las especies y variantes',()=>{
- assert.ok(Object.keys(api.SPECIES).length>=385);
+ assert.ok(Object.keys(api.SPECIES).length>=393);
  for(const [id] of Object.entries(api.SPECIES)){
   for(const skin of skins){
    const svg=api.getSpriteMarkup(id,skin);
@@ -85,4 +85,18 @@ test('Beta 3.10 conserva sprites propios distinguibles y sin círculos',()=>{
   assert.notEqual(api.getSpriteMarkup(id,'melanico'),normal,id+' variante sin aplicar');
  }
  assert.equal(new Set(ids.map(id=>geometry(api.getSpriteMarkup(id)))).size,ids.length);
+});
+
+
+test('Beta 3.12: picozapato, lechwe negro y cálao tienen siluetas SVG propias',()=>{
+ const ids=['af_picozapato','af_lechwe_negro','af_calao_trompetero'];
+ const geometries=ids.map(id=>{
+  assert.ok(api.SPECIES[id],id);
+  const normal=api.getSpriteMarkup(id,'normal'),black=api.getSpriteMarkup(id,'melanico');
+  assert.match(normal,/<path/);
+  assert.doesNotMatch(normal,/<circle cx="50" cy="50" r="24"/);
+  assert.notEqual(normal,black,id+' variante melánica');
+  return geometry(normal);
+ });
+ assert.equal(new Set(geometries).size,3);
 });
