@@ -46,6 +46,7 @@ test('Investigaciones encadenadas requieren artefacto y mapa, sin consumirlos',(
  g.buyNode('africa_1');assert.equal(g.state.purchases.africa_1,1);assert.equal(g.state.inventory.africa_map,1);
  g.buyNode('nuevo_mundo_1');assert.equal(g.state.purchases.nuevo_mundo_1,undefined);
  g.state.inventory.oceanic_quadrant=1;
+ g.state.upgrades.shipyard=1;g.state.upgrades.routeTier=2;
  g.buyNode('nuevo_mundo_1');assert.equal(g.state.purchases.nuevo_mundo_1,1);assert.equal(g.state.inventory.oceanic_quadrant,1);
  assert.ok(g.availableVoyages().some(v=>v.id==='atlantic_survey'));
  g.craftItem('north_america_map');assert.equal(g.state.inventory.north_america_map,1);
