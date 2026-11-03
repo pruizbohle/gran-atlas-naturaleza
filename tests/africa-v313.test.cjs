@@ -24,7 +24,7 @@ test('Beta 3.13 contiene 24 zonas africanas sin cambiar los ID anteriores',()=>{
 });
 
 test('Fauna añadida se integra sin perder fichas históricas ni hábitats',()=>{
- assert.equal(Object.keys(fauna.at(-1)).length,38);
+ assert.equal(Object.keys(fauna.at(-2)).length,38);
  assert.ok(Object.hasOwn(species,'af_okapi')&&Object.hasOwn(species,'af_facoquero'));
  assert.ok(assignments['HX-08-11'].includes('af_okapi'));
  assert.ok(assignments['HX-07-08'].includes('af_facoquero'));
@@ -47,8 +47,8 @@ test('Fauna añadida se integra sin perder fichas históricas ni hábitats',()=>
 });
 
 test('Sin especies nuevas duplicadas por nombre científico',()=>{
- const newEntries=Object.entries(fauna.at(-1));
- const existing=new Set(Object.values(Object.assign({},...fauna.slice(0,-1))).map(s=>s.latin.toLowerCase()));
+ const newEntries=Object.entries(fauna.at(-2));
+ const existing=new Set(Object.values(Object.assign({},...fauna.slice(0,-2))).map(s=>s.latin.toLowerCase()));
  assert.equal(new Set(newEntries.map(([id,s])=>s.latin.toLowerCase())).size,newEntries.length);
  for(const [id,s] of newEntries)assert.ok(!existing.has(s.latin.toLowerCase()),id);
 });
