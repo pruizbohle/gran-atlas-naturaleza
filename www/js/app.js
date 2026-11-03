@@ -2449,7 +2449,7 @@ function renderAtlas(){
   const condition=r.continent==='Asia'
     ? (state.upgrades.asiaUnlocked?'✓ Cartografía de Asia':'✕ Necesitas investigar Cartografía de Asia')+' · '+r.unlock.prestige+' prestigio mínimo'
     : r.continent==='África'
-      ? (state.inventory.africa_map?'✓ Mapa de África reunido':'✕ Fabrica el Mapa de África en Inventario')+' · '+r.unlock.prestige+' prestigio mínimo'
+      ? (state.inventory.africa_map?'✓ Mapa de África reunido':'✕ Fabrica el Mapa de África en Inventario')+' · '+(state.upgrades.africaUnlocked?'✓ Estudios de África':'✕ Investiga Estudios cartográficos de África')+' · '+r.unlock.prestige+' prestigio mínimo'
       : r.continent==='Norteamérica'
          ? (state.upgrades.newWorldUnlocked?'✓ Ruta atlántica':'✕ Investiga Navegación al Nuevo Mundo')+' · '+(state.upgrades.northAmericaUnlocked?'✓ Cartografía':'✕ Investiga Cartografía de Norteamérica')+' · '+(state.inventory.north_america_map?'✓ Mapa reunido':'✕ Fabrica el mapa')+' · '+r.unlock.prestige+' prestigio mínimo'
          : r.unlock.prestige+' prestigio mínimo';
@@ -2630,6 +2630,9 @@ function renderResearch(){
       <div class="req"><strong>Astillero</strong><div class="small">${state.upgrades.shipyard?'Preparado para expediciones':'Aún no construido'}</div></div>
       <div class="req"><strong>Sociedad</strong><div class="small">Subvención +${Math.round((state.upgrades.grantBonus||0)*100)}% · canje de notas +${Math.round((state.upgrades.noteBonus||0)*100)}%</div></div>
       <div class="req"><strong>Expediciones</strong><div class="small">Rutas navales ${state.upgrades.routeTier||0} · tiempo ×${(state.upgrades.voyageTime||1).toFixed(2)} · destacamentos simultáneos ${maxVoyages()}</div></div>
+      <div class="req"><strong>África</strong><div class="small">${state.upgrades.africaUnlocked?'Estudios cartográficos completados.':'Pendiente: Mapa de África e investigación.'}</div></div>
+      <div class="req"><strong>Nuevo Mundo</strong><div class="small">${state.upgrades.newWorldUnlocked?'Navegación atlántica habilitada.':'Pendiente: Cuadrante transatlántico e investigación.'}</div></div>
+      <div class="req"><strong>Norteamérica</strong><div class="small">${state.upgrades.northAmericaUnlocked?'Cartografía investigada.':'Pendiente: fragmentos de mapa e investigación.'}</div></div>
       <div class="req"><strong>Asia</strong><div class="small">${state.upgrades.asiaUnlocked?'Cartografía completada.':'Aún bloqueada. Requiere el Mapa de Asia y la investigación final.'}</div></div>
     </section>
   </div>`;
