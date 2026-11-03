@@ -9,13 +9,13 @@ function game(){
  const doc={getElementById:get,querySelectorAll(){return []},addEventListener(){},body:{classList:{add(){},remove(){}},appendChild(){}}};
  const cache={};const storage={getItem:k=>cache[k]||null,setItem:(k,v)=>{cache[k]=String(v)},removeItem:k=>delete cache[k]};
  const ctx=vm.createContext({window:{confirm(){return true}},document:doc,localStorage:storage,TextEncoder,Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,setInterval(){return 1},setTimeout(){return 1}});
- const out=GAME.replace(/\n\}\)\(\);\s*$/,\`
+ const out=GAME.replace(/\n\}\)\(\);\s*$/,`
 window.__atlasTest={REGIONS,SPECIES,ITEMS,RECIPES,RESEARCH_NODES,
 canBuy,buyNode,craftItem,regionRequirementsMet,eligibleSpecies,rarityWeight,availableVoyages,sail,finishVoyage,
 get state(){return state},
 patch(data){Object.assign(state,data);},
 };
-})();\`);
+})();`);
  assert.notEqual(out,GAME,'No se inyectó interfaz de prueba');
  vm.runInContext(out,ctx,{filename:'www/js/app.js'});
  return ctx.window.__atlasTest;
