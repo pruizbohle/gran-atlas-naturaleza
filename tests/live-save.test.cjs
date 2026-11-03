@@ -286,7 +286,7 @@ test('Beta 3.10.1: los 17 animales de Rift y Seychelles tienen condiciones acces
  };
  for(const [region,ids] of Object.entries(idsByRegion)){
   for(const id of ids){
-   const found=h.evalInGame('REGIONS.find(r=>r.id==="'+region+'").habitats.some(h=>SPECIES["'+id+'"].habitats.includes(h))');
+   const found=h.evalInGame('REGIONS.find(r=>r.id==="'+region+'").habitats.some(h=>window.__atlasTest.SPECIES["'+id+'"].habitats.includes(h))');
    assert.ok(found,region+' '+id+' inaccesible');
   }
  }
