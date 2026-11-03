@@ -1070,6 +1070,8 @@ REGIONS.push(...[{"id":"HX-07-12","name":"Cuerno de África","code":"HX-07-12","
 REGIONS.push(...[{"id":"HX-07-13","name":"Tierras altas de Etiopía","code":"HX-07-13","continent":"África","unlock":{"prestige":92},"habitats":["montana","pradera","humedal","rio"],"species":["af_lobo_etiope","af_gelada","af_ibice_walia","af_quebrantahuesos","af_nyala_montana","af_ganso_alas_azules","af_babuino_oliva","af_ibis_sagrado"]},{"id":"HX-11-08","name":"Desierto del Namib","code":"HX-11-08","continent":"África","unlock":{"prestige":95},"habitats":["desierto","estepa","costa","pradera"],"species":["af_zorro_cabo","af_hiena_parda","af_camaleon_namaqua","af_geco_patas_palmeadas","af_orix","af_springbok","af_suricata","af_avestruz","af_caracal"]}]);
 // v3.9: nuevas zonas africanas, sin editar identificadores ni regiones anteriores.
 REGIONS.push(...[{"id":"HX-06-08","name":"Montañas del Atlas","code":"HX-06-08","continent":"África","unlock":{"prestige":98},"habitats":["montana","bosque","estepa","desierto"],"species":["af_macaco_berberia","af_gato_montes_africano","af_ciervo_berberia","af_zorro_ruppell","af_arrui","af_fenec","af_chacal_dorado","af_gacela_dorcas","af_cobra_egipcia"]},{"id":"HX-09-09","name":"Bosques de miombo","code":"HX-09-09","continent":"África","unlock":{"prestige":101},"habitats":["bosque","pradera","estepa"],"species":["af_antilope_sable","af_calao_terrestre","af_pangolin_temminck","af_inseparable_lilian","af_elefante_sabana","af_licaon","af_leopardo","af_babuino_oliva","af_guepardo"]},{"id":"HX-10-12","name":"Costa de Mozambique","code":"HX-10-12","continent":"África","unlock":{"prestige":104},"habitats":["costa","rio","humedal"],"species":["af_dugongo","af_manta_gigante","af_delfin_jorobado_indico","af_martin_malaquita","af_tortuga_laúd","af_tiburon_blanco","af_cocodrilo_nilo","af_hipopotamo","af_garza_goliat","af_aguila_pescadora"]}]);
+// Beta 3.10: dos áreas africanas, sin modificar los IDs previos.
+REGIONS.push(...[{"id":"HX-08-12","name":"Lagos del Rift","code":"HX-08-12","continent":"África","unlock":{"prestige":107},"habitats":["humedal","rio","pradera","estepa"],"species":["af_flamenco_enano","af_pelicano_blanco","af_jirafa_rothschild","af_gran_kudu","af_hipopotamo","af_leon","af_bufalo_cafre","af_aguila_pescadora","af_guepardo"]},{"id":"HX-07-14","name":"Islas Seychelles y Aldabra","code":"HX-07-14","continent":"África","unlock":{"prestige":110},"habitats":["costa","bosque","pradera"],"species":["af_tortuga_aldabra","af_loro_negro_seychelles","af_cernicalo_seychelles","af_tiburon_puntas_negras","af_tortuga_laúd","af_manta_gigante","af_dugongo","af_delfin_jorobado_indico"]}]);
 const SPECIES={
   "asia_esp_0287":{"name": "Grulla siberiana", "latin": "Leucogeranus leucogeranus", "rare": "Muy rara", "kind": "stork", "color": "#e8e5df", "habitats": ["rio", "pradera"], "times": ["amanecer", "dia"], "seasons": ["primavera", "verano", "otono"], "special": ["Notable"], "dimorphism": false},
   "asia_esp_0880":{"name": "Gallo lira", "latin": "Lyrurus tetrix", "rare": "Común", "kind": "forestbird", "color": "#292f36", "habitats": ["bosque", "pradera"], "times": ["amanecer", "dia"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Leucístico", "Notable"], "dimorphism": true},
@@ -1461,6 +1463,8 @@ Object.assign(SPECIES,{"af_asno_somali":{"name":"Asno salvaje somalí","latin":"
 Object.assign(SPECIES,{"af_lobo_etiope":{"name":"Lobo etíope","latin":"Canis simensis","rare":"Muy rara","kind":"canid","color":"#b75f40","habitats":["montana","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_gelada":{"name":"Gelada","latin":"Theropithecus gelada","rare":"Poco común","kind":"primate","color":"#8c7062","habitats":["montana","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_ibice_walia":{"name":"Íbice de Walia","latin":"Capra walie","rare":"Muy rara","kind":"deer","color":"#96734f","habitats":["montana"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_quebrantahuesos":{"name":"Quebrantahuesos","latin":"Gypaetus barbatus","rare":"Raro","kind":"raptor","color":"#bb8c5d","habitats":["montana"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_nyala_montana":{"name":"Nyala de montaña","latin":"Tragelaphus buxtoni","rare":"Muy rara","kind":"deer","color":"#90715f","habitats":["montana","pradera"],"times":["amanecer","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_ganso_alas_azules":{"name":"Ganso de alas azules","latin":"Cyanochen cyanoptera","rare":"Poco común","kind":"swan","color":"#807c72","habitats":["humedal","rio"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_zorro_cabo":{"name":"Zorro del Cabo","latin":"Vulpes chama","rare":"Común","kind":"canid","color":"#a99875","habitats":["desierto","estepa","pradera"],"times":["atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_hiena_parda":{"name":"Hiena parda","latin":"Parahyaena brunnea","rare":"Raro","kind":"canid","color":"#67503e","habitats":["desierto","estepa","pradera"],"times":["atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_camaleon_namaqua":{"name":"Camaleón de Namaqua","latin":"Chamaeleo namaquensis","rare":"Poco común","kind":"lizard","color":"#b3a16d","habitats":["desierto","costa"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_geco_patas_palmeadas":{"name":"Geco de patas palmeadas","latin":"Pachydactylus rangei","rare":"Poco común","kind":"lizard","color":"#e6be94","habitats":["desierto"],"times":["atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false}});
 // v3.9: fauna africana adicional, IDs nuevos para conservar registros existentes.
 Object.assign(SPECIES,{"af_macaco_berberia":{"name":"Macaco de Berbería","latin":"Macaca sylvanus","rare":"Raro","kind":"primate","color":"#ae987f","habitats":["bosque","montana"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_gato_montes_africano":{"name":"Gato montés africano","latin":"Felis lybica","rare":"Poco común","kind":"cat","color":"#b99a79","habitats":["desierto","estepa"],"times":["amanecer","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_ciervo_berberia":{"name":"Ciervo de Berbería","latin":"Cervus elaphus barbarus","rare":"Raro","kind":"deer","color":"#8a6747","habitats":["bosque","montana"],"times":["amanecer","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_zorro_ruppell":{"name":"Zorro de Rüppell","latin":"Vulpes rueppellii","rare":"Poco común","kind":"canid","color":"#d7b78b","habitats":["desierto","estepa"],"times":["atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_antilope_sable":{"name":"Antílope sable","latin":"Hippotragus niger","rare":"Raro","kind":"deer","color":"#46392d","habitats":["bosque","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable"],"dimorphism":false},"af_calao_terrestre":{"name":"Cálao terrestre sureño","latin":"Bucorvus leadbeateri","rare":"Raro","kind":"raptor","color":"#302c2d","habitats":["pradera","bosque"],"times":["amanecer","dia"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_pangolin_temminck":{"name":"Pangolín terrestre","latin":"Smutsia temminckii","rare":"Muy rara","kind":"pangolin","color":"#9f8061","habitats":["bosque","estepa"],"times":["atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable"],"dimorphism":false},"af_inseparable_lilian":{"name":"Inseparable de Lilian","latin":"Agapornis lilianae","rare":"Poco común","kind":"songbird","color":"#65a460","habitats":["bosque","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_dugongo":{"name":"Dugongo","latin":"Dugong dugon","rare":"Muy rara","kind":"sirenian","color":"#9caeac","habitats":["costa"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_manta_gigante":{"name":"Manta gigante","latin":"Mobula birostris","rare":"Raro","kind":"ray","color":"#334e59","habitats":["costa"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_delfin_jorobado_indico":{"name":"Delfín jorobado del Índico","latin":"Sousa plumbea","rare":"Raro","kind":"cetacean","color":"#859aab","habitats":["costa"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_martin_malaquita":{"name":"Martín pescador malaquita","latin":"Corythornis cristatus","rare":"Poco común","kind":"kingfisher","color":"#277c9b","habitats":["rio","humedal"],"times":["amanecer","dia"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false}});
+// Beta 3.10: ocho especies de los lagos del Rift y Seychelles/Aldabra.
+Object.assign(SPECIES,{"af_flamenco_enano":{"name":"Flamenco enano","latin":"Phoeniconaias minor","rare":"Poco común","kind":"wader","color":"#dd7e96","habitats":["humedal","rio"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_pelicano_blanco":{"name":"Pelícano blanco","latin":"Pelecanus onocrotalus","rare":"Poco común","kind":"pelican","color":"#ded9c8","habitats":["humedal","rio"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_jirafa_rothschild":{"name":"Jirafa de Rothschild","latin":"Giraffa camelopardalis rothschildi","rare":"Raro","kind":"giraffe","color":"#c49b61","habitats":["pradera","estepa"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable"],"dimorphism":false},"af_gran_kudu":{"name":"Gran kudú","latin":"Tragelaphus strepsiceros","rare":"Raro","kind":"deer","color":"#9f8870","habitats":["pradera","estepa"],"times":["amanecer","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Melánico","Notable"],"dimorphism":false},"af_tortuga_aldabra":{"name":"Tortuga gigante de Aldabra","latin":"Aldabrachelys gigantea","rare":"Muy rara","kind":"tortoise","color":"#78845d","habitats":["pradera","bosque","costa"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable"],"dimorphism":false},"af_loro_negro_seychelles":{"name":"Loro negro de Seychelles","latin":"Coracopsis barklyi","rare":"Raro","kind":"forestbird","color":"#635e5a","habitats":["bosque"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_cernicalo_seychelles":{"name":"Cernícalo de Seychelles","latin":"Falco araeus","rare":"Raro","kind":"raptor","color":"#a88b6d","habitats":["bosque","pradera"],"times":["amanecer","dia","atardecer"],"seasons":["primavera","verano","otono","invierno"],"special":["Leucístico","Notable"],"dimorphism":false},"af_tiburon_puntas_negras":{"name":"Tiburón de puntas negras de arrecife","latin":"Carcharhinus melanopterus","rare":"Poco común","kind":"fish","color":"#71868d","habitats":["costa"],"times":["amanecer","dia","atardecer","noche"],"seasons":["primavera","verano","otono","invierno"],"special":["Notable"],"dimorphism":false}});
 const GLOBAL_BIOMES_FULL=['bosque','pradera','rio','costa','tundra','montana','humedal','mar_abierto','estepa','mediterraneo','desierto','selva','sabana'];
 const REGION_BIOMES={
   'HX-02-13':["bosque", "rio", "tundra", "pradera"],
@@ -1665,6 +1669,7 @@ if(!REGIONS.some(r=>r.id===state.currentRegion)) state.currentRegion='HX-01-09';
 state.regionUnlocked=state.regionUnlocked||{};
 let tab='field';
 state.museum = state.museum || {wing:1, exhibits:{}};
+state.museum.collections=state.museum.collections&&typeof state.museum.collections==='object'&&!Array.isArray(state.museum.collections)?state.museum.collections:{};
 state.books=state.books||0;
 state.autoHourly=state.autoHourly||{};state.voyages=state.voyages||[];state.voyageSeq=state.voyageSeq||0;state.inventory=state.inventory||{};state.equipment=state.equipment||{instrument:null,hat:null,necklace:null};state.specialFound=state.specialFound||{};state.upgrades.asiaUnlocked=(state.upgrades.asiaUnlocked||state.purchases.asia_1)?1:0;state.atlasView=state.atlasView||'Europa';state.museumView=state.museumView||'exhibitions';state.societyView=state.societyView||'grants';state.publicationView=state.publicationView||'monographs';state.bestiarySort=state.bestiarySort||'alpha';state.crownCoins=state.crownCoins||0;
 // Migración v2.1->v2.2: zonas asiáticas previamente habilitadas conservan su acceso.
@@ -1852,6 +1857,8 @@ function renderSexComparison(id){
 }
 
 function regionLandscape(regionId){
+  if(regionId==='HX-08-12')return ['#e4d9bb','#bbd5ca','#819e88','🦩  🌊  🌾  🐦'];
+  if(regionId==='HX-07-14')return ['#a9d4c5','#e0e5c1','#6aafa4','🏝️  🐢  🌊  🌳'];
   if(regionId==='HX-06-08')return ['#b8b6a0','#e3d5b8','#81785e','⛰️  🌲  🐒  🪨'];
   if(regionId==='HX-09-09')return ['#a3c091','#e0dbac','#70835b','🌳  🦌  🍂  🌾'];
   if(regionId==='HX-10-12')return ['#a0cbd2','#d5e6dc','#5a9fb0','🌊  🐬  🐠  🏝️'];
@@ -2608,6 +2615,52 @@ function renderSociety(){
   </div>`;
 }
 
+
+// Beta 3.10: primer gabinete paleontológico y de relictos, sin renta pasiva.
+const MUSEUM_COLLECTIONS=[
+ {id:'fosil_catalogado',tab:'fossils',name:'Fósil catalogado',icon:'🦴',
+  description:'Ficha científica de fragmentos reunidos durante las expediciones.',
+  requires:{fossil_fragment:3},knowledge:180},
+ {id:'huella_paleontologica',tab:'fossils',name:'Registro de huellas antiguas',icon:'🐾',
+  description:'Comparación de huellas con materiales paleontológicos.',
+  requires:{fossil_fragment:2,animal_trace:2},knowledge:300},
+ {id:'carta_historica',tab:'relicts',name:'Carta cartográfica histórica',icon:'🗺️',
+  description:'Montaje de mapas y monedas procedentes de viajes científicos.',
+  requires:{map_fragment:2,ancient_coin:1},knowledge:180},
+ {id:'medallon_viajero',tab:'relicts',name:'Medallón de expedición',icon:'🪙',
+  description:'Colección clasificada de objetos de un viajero del siglo XIX.',
+  requires:{ancient_coin:2,parchment_scrap:1},knowledge:300}
+];
+function museumCollectionReady(piece){
+ return !!piece && !state.museum?.collections?.[piece.id] && state.knowledge>=piece.knowledge &&
+  Object.entries(piece.requires).every(([id,qty])=>(state.inventory?.[id]||0)>=qty);
+}
+function catalogMuseumCollection(id){
+ const piece=MUSEUM_COLLECTIONS.find(p=>p.id===id);
+ if(!museumCollectionReady(piece))return false;
+ state.museum.collections=state.museum.collections||{};
+ for(const [item,qty] of Object.entries(piece.requires))state.inventory[item]-=qty;
+ state.knowledge-=piece.knowledge;
+ state.museum.collections[id]=true;
+ pushLog('🏛️ Pieza catalogada: '+piece.name+'.');
+ render();
+ return true;
+}
+function renderMuseumCollections(tab){
+ const pieces=MUSEUM_COLLECTIONS.filter(p=>p.tab===tab);
+ const complete=pieces.filter(p=>state.museum?.collections?.[p.id]).length;
+ return '<div class="small">Gabinete de '+(tab==='fossils'?'fósiles':'relictos')+
+  ' · '+complete+'/'+pieces.length+' piezas catalogadas. Usa materiales de expediciones; no modifica ingresos del Museo.</div>'+
+  '<div class="list">'+pieces.map(p=>{
+   const saved=!!state.museum?.collections?.[p.id],ready=museumCollectionReady(p);
+   const materials=Object.entries(p.requires).map(([id,qty])=>ITEMS[id].name+' '+(state.inventory?.[id]||0)+'/'+qty).join(' · ');
+   return '<div class="atlas-region"><div><strong>'+p.icon+' '+p.name+'</strong><div class="small">'+
+     p.description+'</div><div class="small">'+materials+' · Conocimiento '+state.knowledge+'/'+p.knowledge+
+     '</div></div><button class="btn '+(saved?'alt':ready?'gold':'alt')+'" data-action="catalog-museum" data-id="'+p.id+
+     '" '+(ready?'':'disabled')+'>'+(saved?'Catalogada':ready?'Catalogar':'Pendiente')+'</button></div>';
+  }).join('')+'</div>';
+}
+
 const MUSEUM_WINGS = [
   {level:1,name:'Galería de fauna',cost:0,prestige:0},
   {level:2,name:'Sala de historia natural',cost:300,prestige:2},
@@ -2651,7 +2704,7 @@ function renderMuseum(){
     <div class="showcase-grid museum-v33-showcases">${exhibitIds.length?exhibitIds.map(id=>`<div class="showpiece museum-v33-vitrine"><div class="museum-v33-frame"><div class="sprite-wrap">${getSpriteMarkup(id)}</div></div><strong>${SPECIES[id].name}</strong><div class="small">${SPECIES[id].rare} · muestra £${exhibitPrice(id)}</div><div class="badge">£${exhibitIncome(id).toFixed(2)}/s</div><button class="btn alt" data-action="remove-exhibit" data-id="${id}">Cambiar especie</button></div>`).join(''):`<div class="small">Aún no has montado exposiciones.</div>`}</div>
     <div class="divider"></div><h3 class="section">🐾 Animales con monografía</h3>
     <div class="list">${publishedIds.map(id=>{ const owned=!!exhibits[id],complete=stage(id)===5 && !!state.published[id],price=exhibitPrice(id); return `<div class="atlas-region"><div class="head" style="display:flex;gap:8px;align-items:center"><div class="sprite-wrap">${getSpriteMarkup(id)}</div><div><strong>${visibleName(id)}</strong><div class="small">Muestra £${price} · ${stage(id)}/5 · ${owned?'Expuesto · £'+exhibitIncome(id).toFixed(2)+'/s':complete?'Elegible para exponer':'Investigación incompleta'}</div></div></div>${owned?'<span class="badge">En sala</span>':`<button class="btn" data-action="exhibit" data-id="${id}" ${!complete || count>=museumCapacity() || state.money<price?'disabled':''}>Exponer · £${price} · +£${exhibitIncome(id).toFixed(2)}/s</button>`}</div>`; }).join('')||'<div class="small">Publica monografías desde Sociedad para habilitar animales en el museo.</div>'}</div>
-  ` : state.museumView==='fossils' ? `<div class="locked-panel"><div class="big-lock">🦴</div><div><strong>Fósiles</strong><div class="small">Aquí aparecerán las piezas paleontológicas y futuras salas temáticas.</div></div></div>` : `<div class="locked-panel"><div class="big-lock">🗿</div><div><strong>Relictos</strong><div class="small">Espacio reservado para hallazgos raros y piezas únicas de expedición.</div></div></div>`}
+  ` : renderMuseumCollections(state.museumView==='fossils'?'fossils':'relicts')}
  </section><section class="card stack museum-v33-ledger"><h3 class="section">📊 Registro del museo</h3>
    <div class="req"><strong>Exposiciones activas</strong><div class="small">${count}</div></div>
    <div class="req"><strong>Capacidad total</strong><div class="small">${museumCapacity()}</div></div>
@@ -2929,6 +2982,7 @@ function bindPanel(){
     if(act==='craft-tome'){ craftTome(); }
     if(act==='expand-museum'){ expandMuseum(); }
     if(act==='museum-tab'){state.museumView=id; renderPanel(); persist();}
+    if(act==='catalog-museum'){catalogMuseumCollection(id);}
     if(act==='remove-exhibit'){removeExhibit(id);}
     if(act==='exhibit'){ exhibitAnimal(id); }
     if(act==='sail'){sail(id);}
@@ -3551,6 +3605,54 @@ function polishedSpeciesSprite(id,skin){
  * Beta 3.9: retratos propios para animales nuevos de África.
  * SVG 100x100; variantes claras/oscuras se pintan en getSpriteMarkup.
  */
+
+function africaV310Sprite(id,skin){
+ const sp=SPECIES[id];if(!sp)return null;
+ const c=applySkin(sp.color,skin),dark=shade(c,-27),light=shade(c,25);
+ const ink='#36342f',eye=eyeColor(skin);
+ const wrap=part=>svgWrap(part,alphaGlow(skin));
+ if(id==='af_flamenco_enano')return wrap(
+  '<path d="M34 67Q29 57 43 49Q59 44 63 56Q62 70 45 73Z" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M35 59Q46 49 54 62L44 71Z" fill="'+light+'" stroke="'+ink+'" stroke-width="2"/>'+
+  '<path d="M61 53Q79 43 73 30Q66 19 76 17Q86 15 84 27" fill="none" stroke="'+c+'" stroke-width="9" stroke-linecap="round"/>'+
+  '<path d="M61 53Q79 43 73 30Q66 19 76 17Q86 15 84 27" fill="none" stroke="'+ink+'" stroke-width="2"/>'+
+  '<path d="M84 26Q98 29 91 39L84 34Z" fill="'+dark+'" stroke="'+ink+'" stroke-width="2"/>'+
+  '<path d="M42 71l-6 19 8-4m9-15-2 18 8 1" fill="none" stroke="'+ink+'" stroke-width="2.5"/>'+
+  '<path d="M29 59L15 69L30 67" fill="'+dark+'" stroke="'+ink+'" stroke-width="2"/>'+
+  '<circle cx="82" cy="23" r="1.5" fill="'+eye+'"/>');
+ if(id==='af_pelicano_blanco')return wrap(
+  '<path d="M26 66L10 79L29 71" fill="'+dark+'" stroke="'+ink+'" stroke-width="2.5"/>'+
+  '<ellipse cx="46" cy="60" rx="25" ry="17" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M31 55Q45 50 60 61Q46 70 30 67Z" fill="'+light+'" stroke="'+ink+'" stroke-width="2"/>'+
+  '<path d="M60 55Q69 46 64 30Q62 18 75 18Q85 19 82 32L77 54Z" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M80 30L97 35L83 47Q92 58 79 60L72 45Z" fill="#c6a36d" stroke="'+ink+'" stroke-width="2.5"/>'+
+  '<path d="M40 76l-5 12m18-12 2 12" fill="none" stroke="'+ink+'" stroke-width="3"/>'+
+  '<circle cx="77" cy="27" r="1.8" fill="'+eye+'"/>');
+ if(id==='af_tortuga_aldabra')return wrap(
+  '<path d="M20 68l-7 16m26-7-4 13m23-13 4 13m11-22 7 16" fill="none" stroke="'+ink+'" stroke-width="8" stroke-linecap="round"/>'+
+  '<path d="M18 68Q19 34 48 34Q76 37 77 69Q52 84 22 74Z" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M34 41L45 54L30 67M48 36l-3 18 17 14m6-25-6 25m-32-1 15 9 17-8" fill="none" stroke="'+dark+'" stroke-width="3"/>'+
+  '<path d="M72 59Q82 49 91 56Q97 67 84 71L73 66Z" fill="'+light+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<circle cx="87" cy="59" r="1.8" fill="'+eye+'"/>');
+ if(id==='af_loro_negro_seychelles')return wrap(
+  '<path d="M30 66L18 89L37 73" fill="'+dark+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<ellipse cx="47" cy="58" rx="20" ry="18" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M35 52Q48 46 57 60Q51 70 37 68Z" fill="'+dark+'" stroke="'+ink+'" stroke-width="2"/>'+
+  '<circle cx="67" cy="41" r="13" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M76 43Q92 40 85 55L76 52Z" fill="'+light+'" stroke="'+ink+'" stroke-width="2.5"/>'+
+  '<path d="M40 74l-4 12m16-12 3 12" stroke="'+ink+'" stroke-width="3" fill="none"/>'+
+  '<circle cx="72" cy="38" r="2.1" fill="'+eye+'"/>');
+ if(id==='af_tiburon_puntas_negras')return wrap(
+  '<path d="M12 64Q31 43 56 47Q78 47 92 60L77 70Q51 79 25 68L12 64Z" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M45 49L53 24L68 48Z" fill="'+dark+'" stroke="'+ink+'" stroke-width="2.5"/>'+
+  '<path d="M18 63L4 46L11 63L3 84L23 70" fill="'+c+'" stroke="'+ink+'" stroke-width="3"/>'+
+  '<path d="M52 68L43 81L68 72" fill="'+dark+'" stroke="'+ink+'" stroke-width="2.5"/>'+
+  '<path d="M63 55l6 12m-4-14 7 11" fill="none" stroke="'+dark+'" stroke-width="2"/>'+
+  '<path d="M86 60l11-1-9 6" fill="'+dark+'" stroke="'+ink+'" stroke-width="2"/>'+
+  '<circle cx="81" cy="56" r="1.6" fill="'+eye+'"/>');
+ return null;
+}
+
 function africaV39Sprite(id,skin){
  const sp=SPECIES[id];if(!sp)return null;
  const c=applySkin(sp.color,skin),ink='#35342e',dark=shade(c,-28),light=shade(c,25);
@@ -3612,6 +3714,7 @@ function africaV39Sprite(id,skin){
 }
 
 function spriteFor(kind,color,skin,id){
+ const af310=africaV310Sprite(id,skin);if(af310)return af310;
  const af39=africaV39Sprite(id,skin);if(af39)return af39;
  const polished=polishedSpeciesSprite(id,skin);if(polished)return polished;
  const newAsia=asiaV23Sprite(id,skin);if(newAsia)return newAsia;

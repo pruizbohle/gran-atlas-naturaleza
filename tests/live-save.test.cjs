@@ -38,7 +38,7 @@ function harness(store={}){
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
    Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,
    setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES};\n})();');
+ const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady};\n})();');
  assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(SAVE,ctx,{filename:'www/js/save-manager.js'});
@@ -226,4 +226,53 @@ test('Beta 3.8: no se puede enviar expedición africana sin Mapa de África',()=
   upgrades:{...initial.upgrades,shipyard:1,routeTier:2}});
  h.evalInGame('sail("namib_survey")');
  assert.equal(JSON.parse(h.store[KEY]).voyages.length,0);
+});
+
+
+test('Beta 3.10: piezas del Museo requieren recursos y solo se catalogan una vez',()=>{
+ const h=harness({});
+ assert.equal(h.evalInGame('catalogMuseumCollection("fosil_catalogado")'),false);
+ const before=JSON.parse(h.store[KEY]);
+ h.window.AtlasSaveBridge.restoreGame({...before,knowledge:1300,inventory:{
+  ...before.inventory,fossil_fragment:5,animal_trace:2,ancient_coin:3,map_fragment:2,parchment_scrap:1
+ }});
+ assert.match(h.evalInGame('renderMuseumCollections("fossils")'),/Fósil catalogado/);
+ assert.match(h.evalInGame('renderMuseumCollections("relicts")'),/Carta cartográfica histórica/);
+ assert.equal(h.evalInGame('catalogMuseumCollection("fosil_catalogado")'),true);
+ const once=JSON.parse(h.store[KEY]);
+ assert.equal(once.inventory.fossil_fragment,2);
+ assert.equal(once.knowledge,1120);
+ assert.equal(once.museum.collections.fosil_catalogado,true);
+ assert.equal(h.evalInGame('catalogMuseumCollection("fosil_catalogado")'),false);
+ assert.equal(JSON.parse(h.store[KEY]).inventory.fossil_fragment,2);
+ assert.equal(h.evalInGame('catalogMuseumCollection("huella_paleontologica")'),true);
+ assert.equal(h.evalInGame('catalogMuseumCollection("carta_historica")'),true);
+ assert.equal(h.evalInGame('catalogMuseumCollection("medallon_viajero")'),true);
+ const now=JSON.parse(h.store[KEY]);
+ assert.equal(Object.values(now.museum.collections).filter(Boolean).length,4);
+ assert.equal(now.inventory.fossil_fragment,0);
+ assert.equal(now.inventory.animal_trace,0);
+ assert.equal(now.inventory.ancient_coin,0);
+ assert.equal(now.inventory.map_fragment,0);
+ assert.equal(now.inventory.parchment_scrap,0);
+ assert.equal(now.knowledge,340);
+ assert.match(h.evalInGame('renderMuseumCollections("fossils")'),/2\/2 piezas catalogadas/);
+ h.tick();
+ const reopened=harness(h.store);
+ const saved=JSON.parse(reopened.store[KEY]);
+ assert.equal(Object.values(saved.museum.collections).filter(Boolean).length,4);
+ assert.equal(saved.inventory.fossil_fragment,0);
+});
+
+test('Beta 3.10: exportar e importar mantiene el registro del Museo, incluso con guardado antiguo',()=>{
+ const h=harness({});
+ const old=JSON.parse(h.store[KEY]);
+ const incoming={...old,knowledge:750,museum:{wing:2,exhibits:{},collections:{fosil_catalogado:true}}};
+ h.window.AtlasSaveBridge.restoreGame(incoming);
+ h.tick();
+ assert.equal(JSON.parse(h.store[KEY]).museum.collections.fosil_catalogado,true);
+ const noCollections={...old,museum:{wing:2,exhibits:{}}};
+ h.window.AtlasSaveBridge.restoreGame(noCollections);
+ assert.match(h.evalInGame('renderMuseumCollections("fossils")'),/0\/2 piezas catalogadas/);
+ assert.equal(JSON.parse(h.store[KEY]).museum.wing,2);
 });
