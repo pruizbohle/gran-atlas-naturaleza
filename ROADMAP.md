@@ -50,3 +50,8 @@
 - Museo: Fósiles y Relictos ya permiten catalogar cuatro piezas utilizando materiales de expediciones y conocimiento; premio único por pieza, sin ingresos pasivos.
 - Compatible con `gran_atlas_v05`, exportación JSON formato 1 y demás avances; appId Android independiente `com.elgranatlas.naturaleza.beta310`.
 - Siguiente: continuar África de manera gradual, mejorar la presentación de colecciones y revisar equilibrio de expediciones.
+
+## Beta 3.10.1 — Ecología de Rift y Seychelles
+- Corrección de normalización de hábitats y horarios de las 17 especies de las dos regiones nuevas. Se mantienen intactas las fichas originales ya definidas para esas especies.
+- Evita que león y guepardo queden inaccesibles y restaura la distribución correcta del flamenco, pelícano y rapaces, incluso en invierno.
+- Sin cambios de rareza, economía, guardado, inventario ni nuevas mecánicas. APK Android independiente, traslado de JSON.
