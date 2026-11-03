@@ -16,8 +16,8 @@ const foreign=new Set(['asia_esp_0206','eu_esp_0219','eu_esp_0505']);
 test('Beta 3.13 contiene 24 zonas africanas sin cambiar los ID anteriores',()=>{
  assert.equal(africa.length,24);
  assert.equal(new Set(regions.map(r=>r.id)).size,regions.length);
- assert.deepEqual(batches.at(-1).map(r=>r.name),['Desierto del Sáhara','Sahel oriental']);
- assert.deepEqual(batches.at(-1).map(r=>r.unlock.prestige),[119,122]);
+ assert.deepEqual(batches.filter(a=>a.some(r=>r.continent==='África')).at(-1).map(r=>r.name),['Desierto del Sáhara','Sahel oriental']);
+ assert.deepEqual(batches.filter(a=>a.some(r=>r.continent==='África')).at(-1).map(r=>r.unlock.prestige),[119,122]);
  assert.ok(africa.every(r=>r.habitats.length&&r.species.length>=7));
  assert.ok(Object.keys(equivalents).includes('HX-06-07'));
  assert.equal(equivalents['HX-07-11'],'HX-05-12');
