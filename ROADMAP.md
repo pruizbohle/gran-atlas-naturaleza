@@ -55,3 +55,14 @@
 - Corrección de normalización de hábitats y horarios de las 17 especies de las dos regiones nuevas. Se mantienen intactas las fichas originales ya definidas para esas especies.
 - Evita que león y guepardo queden inaccesibles y restaura la distribución correcta del flamenco, pelícano y rapaces, incluso en invierno.
 - Sin cambios de rareza, economía, guardado, inventario ni nuevas mecánicas. APK Android independiente, traslado de JSON.
+
+
+## Beta 3.11 — Cinco salas del Museo
+- Cinco pestañas: Exposiciones (vitrinas visuales de todos los tipos), Muestras (especies con monografía 5/5 ordenadas por ingreso/segundo), Fósiles (taller), Relictos (hallazgos excepcionales sin Atlas) y Artefactos (colecciones históricas).
+- Los antiguos IDs carta_historica y medallon_viajero se presentan en Artefactos, conservando su registro y sin exigir recompra.
+- Materiales: diente fósil y cráneo fósil encontrados por expediciones, misiones y avistamientos; huesos cortos y largos y cráneo carnívoro en el taller.
+- Reconstrucción de T. rex: 10 huesos largos + 25 huesos cortos + 1 cráneo carnívoro. Requiere en total 90 fragmentos fósiles, un cráneo fósil y 10 dientes fósiles. Montaje único y exhibible, no figura en Atlas.
+- Cuatro relictos regionales de hallazgo muy raro: celacanto, león del Atlas, murciélago de Seychelles y cocodrilo enano de Gabón. No suman avistamientos ni especies a la colección principal.
+- Dos encargos científicos de prospección con materiales, una sola vez; botines nuevos en viajes/avistamientos conservan recompensas existentes.
+- Continúa sin alterar gran_atlas_v05, JSON v1, cap. de 12 exposiciones animales, ganancias previas y sprites originales. Android Beta 3.11 tiene appId independiente.
+- Próximo: ampliar fósiles (especies paleontológicas), mejorar dibujos de relictos y progreso de África.

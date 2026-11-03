@@ -789,3 +789,32 @@ button,select{font:inherit}
 .save-paste-fallback .small{margin:9px 0 6px}
 .save-paste-fallback textarea{display:block;box-sizing:border-box;width:100%;min-height:80px;padding:8px;border:1px solid #a99570;border-radius:7px;background:#fffdf7;color:#253c31;font:12px/1.4 monospace;resize:vertical}
 .save-paste-fallback button{margin-top:8px}
+
+
+/* Beta 3.11: taller paleontológico y cinco salas del Museo */
+.museum-v311-tabs{display:flex;gap:7px;flex-wrap:wrap;max-width:100%}
+.museum-v311-tabs .subtab{display:inline-flex;align-items:center;justify-content:center}
+.museum-v311-worklist{display:grid;gap:10px}
+.museum-v311-workpiece{display:flex;align-items:center;gap:12px;padding:12px;background:#f5ead3;border:1px solid #c9b183;border-radius:12px;min-width:0}
+.museum-v311-workicon{width:76px;height:76px;flex:0 0 76px;display:grid;place-items:center;background:#e5d3ad;border:4px ridge #b49a64;border-radius:12px;font-size:33px}
+.museum-v311-workicon svg{width:67px;height:67px}
+.museum-v311-workinfo{display:grid;gap:6px;min-width:0;flex:1}
+.museum-v311-workinfo strong{font:700 14px/1.2 Georgia,serif;color:#35513c}
+.museum-v311-workinfo .small{overflow-wrap:anywhere}
+.museum-v311-workactions{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.museum-v311-workactions .btn{min-width:42px;min-height:32px;padding:6px 10px}
+.museum-v311-special .museum-v33-frame{background:radial-gradient(circle at center,#fff5db,#b7b79a)}
+.museum-v311-special .small{overflow-wrap:anywhere}
+.museum-v311-kind{background:#d8ceb7;color:#52462d;border:1px solid #bcaa82}
+.museum-v311-sample .sprite-wrap{width:62px;height:62px;flex:0 0 62px}
+.museum-v311-sample .sprite-wrap svg{width:54px;height:54px}
+.museum-v311-sample .head{min-width:0}
+.museum-v311-sample strong{overflow-wrap:anywhere}
+@media(max-width:600px){
+ .museum-v311-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;overscroll-behavior-x:contain;padding-bottom:5px}
+ .museum-v311-tabs .subtab{flex:0 0 auto;white-space:nowrap}
+ .museum-v311-workpiece{padding:9px;gap:8px}
+ .museum-v311-workicon{width:55px;height:55px;flex-basis:55px;font-size:25px}
+ .museum-v311-workicon svg{width:48px;height:48px}
+ .museum-v311-workactions .btn{font-size:10px;min-height:30px}
+}

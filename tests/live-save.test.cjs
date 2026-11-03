@@ -38,7 +38,7 @@ function harness(store={}){
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
    Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,
    setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES};\n})();');
+ const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES,MUSEUM_FOSSIL_RECIPES,craftMuseumFossil,museumAssemblyReady,museumOtherExhibits,renderFossilWorkshop,renderMuseumRelicts,renderMuseumArtifacts,renderMuseumSamples,toggleMuseumDisplay,renderMuseumExtraGallery,MUSEUM_RELICTS,recordMuseumRelict,maybeMuseumFieldDiscovery,SCIENTIFIC_MISSIONS,resolveVoyageReward};\n})();');
  assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(SAVE,ctx,{filename:'www/js/save-manager.js'});
@@ -181,7 +181,7 @@ test('Beta 3.7 ordena las vitrinas del Museo por precio de muestra',()=>{
   published:{zorro_rojo:true,af_rinoceronte_blanco:true,af_leon:true}};
  h.window.AtlasSaveBridge.restoreGame(data);
  const html=h.evalInGame('renderMuseum()');
- assert.match(html,/Muestras ordenadas por valor/);
+ assert.match(html,/Galería nivel/);
  assert.ok(html.indexOf('<strong>Rinoceronte blanco</strong>')<html.indexOf('<strong>Zorro rojo</strong>'));
  assert.match(html,/muestra £150/i);
 });
@@ -237,7 +237,7 @@ test('Beta 3.10: piezas del Museo requieren recursos y solo se catalogan una vez
   ...before.inventory,fossil_fragment:5,animal_trace:2,ancient_coin:3,map_fragment:2,parchment_scrap:1
  }});
  assert.match(h.evalInGame('renderMuseumCollections("fossils")'),/Fósil catalogado/);
- assert.match(h.evalInGame('renderMuseumCollections("relicts")'),/Carta cartográfica histórica/);
+ assert.match(h.evalInGame('renderMuseumCollections("artifacts")'),/Carta cartográfica histórica/);
  assert.equal(h.evalInGame('catalogMuseumCollection("fosil_catalogado")'),true);
  const once=JSON.parse(h.store[KEY]);
  assert.equal(once.inventory.fossil_fragment,2);
@@ -306,4 +306,132 @@ test('Beta 3.10.1: los 17 animales de Rift y Seychelles tienen condiciones acces
  const before=JSON.parse(h.store[KEY]);
  h.tick();
  assert.equal(JSON.parse(h.store[KEY]).prestige,before.prestige);
+});
+
+
+test('Beta 3.11: cinco pestañas independientes y muestras por ingreso',()=>{
+ const h=harness({});
+ const initial=JSON.parse(h.store[KEY]);
+ h.window.AtlasSaveBridge.restoreGame({...initial,museum:{wing:3,exhibits:{zorro_rojo:true,af_rinoceronte_blanco:true,af_leon:true}},
+  published:{zorro_rojo:true,af_rinoceronte_blanco:true,af_leon:true},
+  stages:{zorro_rojo:5,af_rinoceronte_blanco:5,af_leon:5}});
+ const page=h.evalInGame('renderMuseum()');
+ for(const label of ['Exposiciones','Muestras','Fósiles','Relictos','Artefactos'])assert.ok(page.includes(label),label);
+ assert.equal((page.match(/data-action="museum-tab"/g)||[]).length,5);
+ const a=h.evalInGame('renderMuseumSamples({zorro_rojo:true,af_rinoceronte_blanco:true,af_leon:true},3)');
+ assert.ok(a.indexOf('Rinoceronte blanco')<a.indexOf('Zorro rojo'));
+ assert.match(a,/ordenados por ingresos £\/s/);
+ const gallery=h.evalInGame('renderMuseumExtraGallery()');
+ assert.match(gallery,/Cuando catalogues fósiles/);
+ const saved=JSON.parse(h.store[KEY]);
+ assert.equal(saved.museum.wing,3);
+ assert.equal(Object.values(saved.museum.exhibits).filter(Boolean).length,3);
+});
+
+test('Beta 3.11: 90 fragmentos, 1 cráneo y 10 dientes producen un T. rex único',()=>{
+ const h=harness({});
+ const initial=JSON.parse(h.store[KEY]);
+ h.window.AtlasSaveBridge.restoreGame({...initial,knowledge:2500,
+  inventory:{...initial.inventory,fossil_fragment:90,fossil_skull:1,fossil_tooth:10}});
+ assert.equal(h.evalInGame('craftMuseumFossil("bone_long",10)'),true);
+ assert.equal(h.evalInGame('craftMuseumFossil("bone_short",10)'),true);
+ assert.equal(h.evalInGame('craftMuseumFossil("bone_short",10)'),true);
+ assert.equal(h.evalInGame('craftMuseumFossil("bone_short",5)'),true);
+ assert.equal(h.evalInGame('craftMuseumFossil("carnivore_skull",1)'),true);
+ const assembled=JSON.parse(h.store[KEY]);
+ assert.equal(assembled.inventory.fossil_fragment,0);
+ assert.equal(assembled.inventory.fossil_tooth,0);
+ assert.equal(assembled.inventory.fossil_skull,0);
+ assert.equal(assembled.inventory.bone_long,10);
+ assert.equal(assembled.inventory.bone_short,25);
+ assert.equal(assembled.inventory.carnivore_skull,1);
+ assert.equal(h.evalInGame('craftMuseumFossil("trex_mount",1)'),true);
+ const after=JSON.parse(h.store[KEY]);
+ assert.equal(after.inventory.bone_short,0);
+ assert.equal(after.inventory.bone_long,0);
+ assert.equal(after.inventory.carnivore_skull,0);
+ assert.equal(after.museum.collections.trex_mount,true);
+ assert.equal(h.evalInGame('craftMuseumFossil("trex_mount",1)'),false);
+ assert.match(h.evalInGame('renderMuseumExtraGallery()'),/Reconstrucción de T\. rex/);
+ assert.deepEqual(after.sightings,initial.sightings);
+ assert.equal(after.money,initial.money);
+ assert.equal(after.prestige,initial.prestige);
+ assert.equal(h.evalInGame('toggleMuseumDisplay("collection:trex_mount")'),true);
+ assert.doesNotMatch(h.evalInGame('renderMuseumExtraGallery()'),/Reconstrucción de T\. rex/);
+ assert.equal(h.evalInGame('toggleMuseumDisplay("collection:trex_mount")'),true);
+ h.tick();
+ const reboot=harness(h.store);
+ assert.match(reboot.evalInGame('renderMuseumExtraGallery()'),/Reconstrucción de T\. rex/);
+});
+
+test('Beta 3.11: relictos no tributan al Atlas y se conservan en JSON',()=>{
+ const h=harness({});
+ const original=JSON.parse(h.store[KEY]);
+ assert.equal(h.evalInGame('MUSEUM_RELICTS.length'),4);
+ assert.equal(h.evalInGame('recordMuseumRelict("coelacanth_indic")'),true);
+ assert.equal(h.evalInGame('recordMuseumRelict("coelacanth_indic")'),false);
+ assert.equal(h.evalInGame('recordMuseumRelict("invalid")'),false);
+ const before=JSON.parse(h.store[KEY]);
+ h.tick();
+ const after=JSON.parse(h.store[KEY]);
+ assert.deepEqual(after.sightings,original.sightings);
+ assert.deepEqual(after.discovered,original.discovered);
+ assert.equal(after.money,original.money);
+ assert.equal(after.prestige,original.prestige);
+ assert.equal(after.museum.relicts.coelacanth_indic,true);
+ assert.match(h.evalInGame('renderMuseumRelicts()'),/Celacanto del Índico/);
+ assert.match(h.evalInGame('renderMuseumExtraGallery()'),/Celacanto del Índico/);
+ assert.equal(h.evalInGame('toggleMuseumDisplay("relict:coelacanth_indic")'),true);
+ assert.doesNotMatch(h.evalInGame('renderMuseumExtraGallery()'),/Celacanto del Índico/);
+ const reopened=harness(h.store);
+ assert.equal(JSON.parse(reopened.store[KEY]).museum.relicts.coelacanth_indic,true);
+});
+
+test('Beta 3.11: artefactos previos migran de pestaña sin consumir recursos ni borrar exhibiciones',()=>{
+ const h=harness({});
+ const old=JSON.parse(h.store[KEY]);
+ const save={...old,museum:{wing:3,exhibits:{zorro_rojo:true},
+   collections:{carta_historica:true,medallon_viajero:true,fosil_catalogado:true}}};
+ h.window.AtlasSaveBridge.restoreGame(save);
+ assert.match(h.evalInGame('renderMuseumArtifacts()'),/Carta cartográfica histórica/);
+ assert.match(h.evalInGame('renderMuseumArtifacts()'),/Medallón de expedición/);
+ assert.match(h.evalInGame('renderMuseumExtraGallery()'),/Fósil catalogado/);
+ assert.equal(h.evalInGame('renderMuseumCollections("relicts").includes("Medallón de expedición")'),false);
+ const after=JSON.parse(h.store[KEY]);
+ assert.equal(after.museum.collections.carta_historica,true);
+ assert.equal(after.museum.collections.medallon_viajero,true);
+ assert.equal(after.museum.exhibits.zorro_rojo,true);
+ assert.deepEqual(after.inventory,old.inventory);
+});
+
+test('Beta 3.11: misiones otorgan objetos una sola vez y viajes registran avances',()=>{
+ const h=harness({});
+ const old=JSON.parse(h.store[KEY]);
+ h.window.AtlasSaveBridge.restoreGame({...old,sightings:{zorro_rojo:200},museum:{...old.museum,voyagesCompleted:3}});
+ h.evalInGame('claimScientificMission("paleonto_campo_200")');
+ h.evalInGame('claimScientificMission("paleonto_viajes_3")');
+ const first=JSON.parse(h.store[KEY]);
+ assert.equal(first.inventory.fossil_fragment,6);
+ assert.equal(first.inventory.fossil_tooth,5);
+ assert.equal(first.inventory.fossil_skull,1);
+ h.evalInGame('claimScientificMission("paleonto_campo_200")');
+ h.evalInGame('claimScientificMission("paleonto_viajes_3")');
+ const again=JSON.parse(h.store[KEY]);
+ assert.equal(again.inventory.fossil_fragment,6);
+ assert.equal(again.inventory.fossil_tooth,5);
+ assert.equal(again.inventory.fossil_skull,1);
+ assert.equal(h.evalInGame('resolveVoyageReward({type:"coast"})'),true);
+ assert.equal(JSON.parse(h.store[KEY]).museum.voyagesCompleted,4);
+});
+
+test('Beta 3.11: taller impide fabricaciones sin materiales y múltiples ejemplares finales',()=>{
+ const h=harness({});
+ assert.equal(h.evalInGame('craftMuseumFossil("bone_short",1)'),false);
+ assert.equal(h.evalInGame('craftMuseumFossil("bone_short",0)'),false);
+ assert.equal(h.evalInGame('craftMuseumFossil("bone_short",-1)'),false);
+ assert.equal(h.evalInGame('craftMuseumFossil("bone_short",101)'),false);
+ assert.equal(h.evalInGame('craftMuseumFossil("trex_mount",5)'),false);
+ assert.equal(h.evalInGame('craftMuseumFossil("nope",1)'),false);
+ assert.equal(h.evalInGame('toggleMuseumDisplay("relict:coelacanth_indic")'),false);
+ assert.match(h.evalInGame('renderFossilWorkshop()'),/Reconstrucción de T\. rex/);
 });
