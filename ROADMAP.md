@@ -42,3 +42,11 @@
 - Se elimina el círculo como sprite de último recurso. Familias sin retrato particular pasan a siluetas genéricas anatómicas. Ocho nuevos animales reciben retratos diferenciados.
 - La actualización no toca la economía, guardado gran_atlas_v05, JSON v1 ni progreso acumulado.
 - Siguiente versión: completar regiones africanas restantes, refinar sprites basados en familias y primer prototipo de colecciones de fósiles/relictos.
+
+
+## Beta 3.10 — África y primer gabinete de colecciones
+- Dos regiones: Lagos del Rift (prestigio 107) e Islas Seychelles y Aldabra (110); África pasa a 20 regiones.
+- Ocho animales adicionales, catálogo mundial de 385 especies. Cinco nuevos retratos SVG propios.
+- Museo: Fósiles y Relictos ya permiten catalogar cuatro piezas utilizando materiales de expediciones y conocimiento; premio único por pieza, sin ingresos pasivos.
+- Compatible con `gran_atlas_v05`, exportación JSON formato 1 y demás avances; appId Android independiente `com.elgranatlas.naturaleza.beta310`.
+- Siguiente: continuar África de manera gradual, mejorar la presentación de colecciones y revisar equilibrio de expediciones.
