@@ -285,7 +285,6 @@ test('Beta 3.10.1: los 17 animales de Rift y Seychelles tienen condiciones acces
   'HX-07-14':['af_tortuga_aldabra','af_loro_negro_seychelles','af_cernicalo_seychelles','af_tiburon_puntas_negras','af_tortuga_laúd','af_manta_gigante','af_dugongo','af_delfin_jorobado_indico']
  };
  for(const [region,ids] of Object.entries(idsByRegion)){
-  const got=h.evalInGame('Object.fromEntries(REGIONS.filter(r=>r.id==="'+region+'").flatMap(r=>r.species.map(id=>[id,SPECIES[id]])))');
   for(const id of ids){
    const found=h.evalInGame('REGIONS.find(r=>r.id==="'+region+'").habitats.some(h=>SPECIES["'+id+'"].habitats.includes(h))');
    assert.ok(found,region+' '+id+' inaccesible');
