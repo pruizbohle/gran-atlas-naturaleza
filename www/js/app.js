@@ -1945,7 +1945,7 @@ function monographCount(){return Object.values(state.published).filter(Boolean).
 function autoInterval(){return [5,3,2,1,0.5][state.upgrades.autoTier]}
 function manualEncounterBonus(){return 1 + state.upgrades.prism*0.12+(state.equipment.instrument==='binoculars'?0.12:0)}
 function knowledgeBonus(){return 1 + state.upgrades.journal*0.25+(state.equipment.hat==='field_hat'?0.10:0)}
-function helperBonus(){return 1 + Math.min(0.45, state.helpers*0.03 + state.upgrades.training*0.08)+(state.equipment.necklace==='amulet'?0.08:0)}
+function helperBonus(){return 1 + Math.min(0.45,state.helpers*0.03+state.upgrades.training*0.08)+(state.equipment.necklace==='amulet'?0.08:0)+(state.equipment.hat==='rain_hood'?0.05:0)}
 
 function sight(id){return state.sightings[id]||0}
 function stage(id){return state.stages[id]||0}
@@ -2273,7 +2273,7 @@ function requestGrant(){
   if(now-state.lastGrant < 60000) return;
   const discovered=Object.keys(state.discovered).length;
   if(discovered===0) return;
-  const grant=Math.round((35+discovered*5)*(1+(state.upgrades.grantBonus||0)));
+  const grant=Math.round((35+discovered*5)*(1+(state.upgrades.grantBonus||0)+(state.equipment.necklace==='amber_charm'?0.05:0)));
   state.money+=grant;
   state.lastGrant=now;
   pushLog(`🏛️ La Sociedad concede una subvención de £${grant}.`);
@@ -3195,15 +3195,15 @@ const VOYAGES=[
   {id:'atlantic_survey',name:'Reconocimiento del Atlántico',seconds:720,cost:1700,knowledge:650,prize:2050,notes:850,required:116,routeReq:2,reqResearch:'nuevo_mundo_1',sample:'north_america_map_piece'}
 ];
 const ITEMS={
- binoculars:{name:'Prismáticos de viaje',emoji:'🔭',slot:'instrument',bonus:'+12% encuentros manuales',kind:'equip'},
- brass_compass:{name:'Brújula de latón',emoji:'🧭',slot:'instrument',bonus:'+4% conocimiento por expedición',kind:'equip'},
- sturdy_pack:{name:'Morral reforzado',emoji:'🎒',slot:'instrument',bonus:'+3% objetos en expediciones',kind:'equip'},
- field_hat:{name:'Sombrero de naturalista',emoji:'🎩',slot:'hat',bonus:'+10% conocimiento',kind:'equip'},
- feather_cap:{name:'Gorro emplumado',emoji:'🪶',slot:'hat',bonus:'+6% probabilidad de objetos',kind:'equip'},
- rain_hood:{name:'Capucha impermeable',emoji:'🧥',slot:'hat',bonus:'+5% búsquedas automáticas',kind:'equip'},
- amulet:{name:'Colgante del explorador',emoji:'📿',slot:'necklace',bonus:'+8% rendimiento del equipo',kind:'equip'},
- amber_charm:{name:'Amuleto de ámbar',emoji:'🟠',slot:'necklace',bonus:'+5% subvenciones',kind:'equip'},
- shell_necklace:{name:'Collar de conchas',emoji:'🐚',slot:'necklace',bonus:'+5% valor de viaje',kind:'equip'},
+ binoculars:{name:'Prismáticos de viaje',emoji:'🔭',slot:'instrument',bonus:'+12 % relativo de probabilidad de encuentro manual',kind:'equip'},
+ brass_compass:{name:'Brújula de latón',emoji:'🧭',slot:'instrument',bonus:'+4 % de conocimiento de expediciones (redondeado)',kind:'equip'},
+ sturdy_pack:{name:'Morral reforzado',emoji:'🎒',slot:'instrument',bonus:'+3 puntos porcentuales de probabilidad de botín de expedición',kind:'equip'},
+ field_hat:{name:'Sombrero de naturalista',emoji:'🎩',slot:'hat',bonus:'+10 % de conocimiento por búsquedas',kind:'equip'},
+ feather_cap:{name:'Gorro emplumado',emoji:'🪶',slot:'hat',bonus:'+6 puntos porcentuales de probabilidad de botín de expedición',kind:'equip'},
+ rain_hood:{name:'Capucha impermeable',emoji:'🧥',slot:'hat',bonus:'+5 % relativo de probabilidad de encuentro automático',kind:'equip'},
+ amulet:{name:'Colgante del explorador',emoji:'📿',slot:'necklace',bonus:'+8 % relativo de probabilidad de encuentro automático',kind:'equip'},
+ amber_charm:{name:'Amuleto de ámbar',emoji:'🟠',slot:'necklace',bonus:'+5 % relativo sobre la subvención base',kind:'equip'},
+ shell_necklace:{name:'Collar de conchas',emoji:'🐚',slot:'necklace',bonus:'+5 % de libras recibidas en expediciones',kind:'equip'},
  fossil_fragment:{name:'Fragmento fósil',emoji:'🦴',slot:null,bonus:'Hallazgo de expedición y campo',kind:'voyage'},
  fossil_skull:{name:'Cráneo fósil',emoji:'💀',slot:null,bonus:'Hallazgo paleontológico muy raro',kind:'fossil'},
  fossil_tooth:{name:'Diente fósil',emoji:'🦷',slot:null,bonus:'Hallazgo paleontológico raro',kind:'fossil'},
@@ -3338,11 +3338,15 @@ function sail(voyageId){
  state.voyageSeq++;state.voyages.push({id:state.voyageSeq,type:v.id,endAt:Date.now()+voyageDuration(v.seconds)*1000});
  pushLog('⛵ Zarpó una expedición: '+v.name);render();
 }
+// Efectos cuantificables del equipo, reutilizados por interfaz y cálculo de recompensas.
+function voyageMoneyReward(v){return Math.round(v.prize*(1+(state.equipment.necklace==='shell_necklace'?0.05:0)));}
+function voyageKnowledgeReward(v){return v.notes+(state.equipment.instrument==='brass_compass'?Math.round(v.notes*0.04):0);}
 function resolveVoyageReward(job){
   const v=VOYAGES.find(x=>x.id===job.type);
   if(!v) return false;
-  let notes=v.notes + ((state.equipment.instrument==='brass_compass')?Math.round(v.notes*0.04):0);
-  state.money+=v.prize;state.knowledge+=notes;
+  let notes=voyageKnowledgeReward(v);
+  const prize=voyageMoneyReward(v);
+  state.money+=prize;state.knowledge+=notes;
   // Hallazgo seguro solo en reconocimientos dirigidos; las misiones antiguas no cambian.
   if(v.sample && ITEMS[v.sample]){addInventory(v.sample,1);pushLog('🔎 Muestra recogida: '+ITEMS[v.sample].name+'.');}
   const loot=rollLoot();
@@ -3367,7 +3371,7 @@ function resolveVoyageReward(job){
   const artifactItem=artifactRoll<0.13?'brass_shard':artifactRoll<0.20?'old_ink':artifactRoll<0.31?'carved_wood':null;
   if(artifactItem){addInventory(artifactItem,1);pushLog('🏺 Material histórico: '+ITEMS[artifactItem].name+'.');}
   state.museum.voyagesCompleted=(state.museum.voyagesCompleted||0)+1;
-  pushLog('⛵ Regresó '+v.name+': +£'+v.prize+' y +'+notes+' conocimiento.');
+  pushLog('⛵ Regresó '+v.name+': +£'+prize+' y +'+notes+' conocimiento.');
   return true;
 }
 function processVoyages(now){
@@ -3393,7 +3397,7 @@ function renderExpeditions(){
  return `<div class="grid-2"><section class="card stack"><h3 class="section">⛵ Expediciones y astillero</h3>
  <div class="small">Los viajes consumen libras y conocimiento, y regresan con financiación, apuntes científicos y objetos. Los reconocimientos africanos requieren el Mapa de África y cartografía II; dan una muestra garantizada, pero no desbloquean regiones ni generan avistamientos.</div>
  <div class="req"><strong>⚒️ Astillero</strong><div class="small">${state.upgrades.shipyard?'Construido. Capacidad actual: '+maxVoyages()+' expediciones simultáneas.':'Bloqueado. Desbloquéalo desde Investigación → Astillero básico.'}</div></div>
- ${shown.map(v=>`<div class="atlas-region"><div><strong>${v.name}</strong><div class="small">${Math.round(voyageDuration(v.seconds)/6)/10} min · Coste £${v.cost} + ${v.knowledge} conocimiento</div><div class="small">Regreso: £${v.prize} + ${v.notes} conocimiento · prestigio requerido ${v.required}${v.routeReq?` · cartografía ${v.routeReq}`:''}${v.sample?' · muestra: '+ITEMS[v.sample].name:''}</div></div><button class="btn" data-action="sail" data-id="${v.id}" ${!state.upgrades.shipyard||active.length>=maxVoyages()||state.prestige<v.required||state.money<v.cost||state.knowledge<v.knowledge||(v.mapItem&&!(state.inventory?.[v.mapItem]>0))?'disabled':''}>Enviar</button></div>`).join('')}
+ ${shown.map(v=>`<div class="atlas-region"><div><strong>${v.name}</strong><div class="small">${Math.round(voyageDuration(v.seconds)/6)/10} min · Coste £${v.cost} + ${v.knowledge} conocimiento</div><div class="small">Regreso: £${voyageMoneyReward(v)} + ${voyageKnowledgeReward(v)} conocimiento · prestigio requerido ${v.required}${v.routeReq?` · cartografía ${v.routeReq}`:''}${v.sample?' · muestra: '+ITEMS[v.sample].name:''}</div></div><button class="btn" data-action="sail" data-id="${v.id}" ${!state.upgrades.shipyard||active.length>=maxVoyages()||state.prestige<v.required||state.money<v.cost||state.knowledge<v.knowledge||(v.mapItem&&!(state.inventory?.[v.mapItem]>0))?'disabled':''}>Enviar</button></div>`).join('')}
  </section><section class="card"><h3 class="section">🧭 Viajes en curso</h3>
  ${active.length?active.map(job=>{const v=VOYAGES.find(x=>x.id===job.type);return `<div class="req"><strong>${v.name}</strong><div class="small">Regresa en aprox. ${Math.max(0,Math.ceil((job.endAt-Date.now())/1000))} segundos.</div><button class="btn alt" data-action="finish-voyage" data-id="${job.id}">Finalizar ahora</button></div>`}).join(''):'<div class="small">No hay expediciones activas.</div>'}
  <div class="divider"></div><div class="small">Las expediciones continúan durante tu ausencia hasta un máximo de ocho horas contabilizadas.</div></section></div>`;
