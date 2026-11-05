@@ -25,7 +25,7 @@ function harness(){
  const append=[
  'window.__beta315={',
  'RESEARCH_NODES,RESEARCH_BRANCHES,RESEARCH_V315_BALANCE,REGIONS,SPECIES,',
- 'researchRarityWeight,researchEncounterTargets,researchCensusCount,',
+ 'researchRarityWeight,researchEncounterTargets,researchCensusCount,taxonomyInfo,fieldBuffSummaryMarkup,',
  'researchBranchOf,encounter,eligibleSpecies,automaticEligibleSpecies,automaticSearchCapacity,renderResearch,resolveVoyageReward,renderObjects,ITEMS,VOYAGES,manualSearchChance,automaticSearchChance,rollLoot,requestGrant,voyageMoneyReward,voyageKnowledgeReward,',
  'canBuy,buyNode,MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR,',
  'get state(){return state},',
@@ -209,4 +209,26 @@ test('Gorro +6 puntos o morral +3 puntos en el botín, solamente al equiparse',(
  g.state.equipment.instrument='sturdy_pack';
  random(0.37);
  assert.ok(g.rollLoot(),'con morral 38 %');
+});
+
+test('Especialidades: mamíferos, aves, reptiles y peces no se pierden por taxonomía incompleta',()=>{
+ const {api:g}=harness();
+ const classes={pangolin:'Mammalia',elephant:'Mammalia',giraffe:'Mammalia',rhino:'Mammalia',hippo:'Mammalia',
+  lemur:'Mammalia',zebra:'Mammalia',cetacean:'Mammalia',sirenian:'Mammalia',
+  ostrich:'Aves',crocodile:'Reptilia',ray:'Chondrichthyes'};
+ for(const [kind,wanted] of Object.entries(classes)){
+  const species=Object.keys(g.SPECIES).find(id=>g.SPECIES[id].kind===kind&&id.startsWith('af_'));
+  const id=species||Object.keys(g.SPECIES).find(id=>g.SPECIES[id].kind===kind&&!id.startsWith('asia_'));
+  assert.ok(id,'no existe especie con kind='+kind);
+  assert.equal(g.taxonomyInfo(id).className,wanted,kind+' '+id);
+ }
+});
+test('El panel muestra el ratio actual de búsqueda y diferencia manual y automático',()=>{
+ const {api:g}=harness();
+ assert.match(g.fieldBuffSummaryMarkup(),/Manual/);
+ assert.match(g.fieldBuffSummaryMarkup(),/50,0 %/);
+ g.state.helpers=10;g.state.upgrades.training=2;
+ g.state.equipment.hat='rain_hood';g.state.equipment.necklace='amulet';
+ assert.match(g.fieldBuffSummaryMarkup(),/60,0 %/);
+ assert.match(g.fieldBuffSummaryMarkup(),/100 registros por especie y hora/);
 });
