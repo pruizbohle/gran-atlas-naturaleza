@@ -1947,6 +1947,23 @@ function manualEncounterBonus(){return 1 + state.upgrades.prism*0.12+(state.equi
 function knowledgeBonus(){return 1 + state.upgrades.journal*0.25+(state.equipment.hat==='field_hat'?0.10:0)}
 function helperBonus(){return 1 + Math.min(0.45,state.helpers*0.03+state.upgrades.training*0.08)+(state.equipment.necklace==='amulet'?0.08:0)+(state.equipment.hat==='rain_hood'?0.05:0)}
 
+// Indicadores efectivos, calculados directamente de las mismas funciones que resuelven cada búsqueda.
+function pctBuff(value){return (value*100).toFixed(1).replace('.',',')+' %';}
+function manualSearchChance(){return Math.min(0.96,0.50*manualEncounterBonus());}
+function automaticSearchChance(){return state.helpers>0?Math.min(0.96,0.38*helperBonus()):0;}
+function automaticCensusRate(){return state.upgrades.autoCensus?2:1;}
+function manualCensusRate(){return state.upgrades.censusTier>=2?3:state.upgrades.censusTier?2:1;}
+function fieldBuffSummaryMarkup(){
+ const cap=automaticSearchCapacity();
+ const manualChoices=eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season).length;
+ const group=state.upgrades.groupTier||0;
+ const manualGroup=group===3?'25 % de 2 / 5 % de 3 especies':group===2?'20 % de 2 especies':group===1?'10 % de 2 especies':'1 especie por encuentro';
+ const autoGroup=state.upgrades.autoGroup?'12 % de 2 / 2 % de 3 especies':'1 especie por encuentro';
+ return `<div class="field-buff-row"><span>🔭 Manual <strong>${pctBuff(manualSearchChance())}</strong> · censo ×${manualCensusRate()} · ${manualGroup}</span>
+ <span>👨‍🔬 Equipo <strong>${state.helpers?pctBuff(automaticSearchChance()):'sin naturalistas'}</strong> · búsqueda cada ${autoInterval()} s · censo ×${automaticCensusRate()}</span></div>
+ <div class="field-buff-row secondary"><span>Manual: ${manualChoices} especies compatibles con filtros</span><span>Automático: ${cap.remaining}/${cap.total} especies con cupo · ${autoGroup}</span></div>
+ <div class="field-buff-note">Probabilidades por intento con fauna disponible. Las búsquedas automáticas se pausan al agotar 100 registros por especie y hora.</div>`;
+}
 function sight(id){return state.sightings[id]||0}
 function stage(id){return state.stages[id]||0}
 function feed(id){return state.feedObs[id]||0}
@@ -2368,6 +2385,8 @@ function updateFieldOutput(){
  const last=state.lastEncounter;
  const result=document.getElementById('fieldResult');
  if(result){const signature=(last?.title||'')+'|'+(last?.subtitle||'');if(signature!==lastPanelSignature){result.innerHTML=encounterCardMarkup(last);result.classList.remove('encounter-reveal');void result.offsetWidth;result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
+ const buffs=document.getElementById('fieldBuffSummary');
+ if(buffs){const next=fieldBuffSummaryMarkup();if(buffs.innerHTML!==next)buffs.innerHTML=next;}
  const autoNoticeEl=document.getElementById('autoNotice');
  if(autoNoticeEl){
   const text=currentAutoNotice||'Sin actividad automática reciente.';
@@ -2641,6 +2660,7 @@ function renderField(){
     <section class="card field-expedition">
       <div class="field-heading"><div><span class="field-eyebrow">CUADERNO DE CAMPO · ${region.code}</span><h3 class="section">${region.name}</h3></div><span class="field-compass" aria-hidden="true">✦</span></div>
       <div class="field-condition-line" aria-label="Condiciones de búsqueda"><span>${habitatLabel(habitat)}</span><span>${timeLabel(state.time)}</span><span>${seasonLabel(state.season)}</span></div>
+      <div class="field-buff-summary" id="fieldBuffSummary" aria-live="off">${fieldBuffSummaryMarkup()}</div>
       <div class="scene biome-${biome} light-${light}" id="fieldScene" role="group" aria-label="Paisaje de ${habitatLabel(habitat)}">
         ${fieldBackdropMarkup(habitat)}
         <div class="scene-top"><span class="scene-locale">✦ ${scene[3].replace(/[^\p{Extended_Pictographic}\s]/gu,'').trim()||'NATURALEZA'}</span><span class="scene-survey">OBSERVACIÓN Nº ${fmt(totalSightings()+1)}</span></div>
@@ -2762,6 +2782,11 @@ function renderResearch(){
    <nav class="research-branch-tabs" aria-label="Ramas de investigación">${tabs}</nav>
    <div class="research-branch-header"><strong>${branch.icon} ${branch.name}</strong><span class="small">${branch.description}</span></div>
    <div class="research-node-grid">${cards}</div>
+   <div class="research-live-buffs"><strong>📊 Bonificaciones actuales de tu equipo</strong>
+     <div class="small">Encuentro manual: ${pctBuff(manualSearchChance())} (${pctBuff(0.50)} de base). Automático: ${state.helpers?pctBuff(automaticSearchChance()):'inactivo: requiere naturalista'} (${pctBuff(0.38)} de base). Los porcentajes son por búsqueda, con fauna y cupo disponible.</div>
+     <div class="small">Equipo automático: ${state.helpers||0} naturalistas · búsqueda cada ${autoInterval()} s · bono de ayudantes/capacitación ${pctBuff(Math.min(0.45,(state.helpers||0)*0.03+(state.upgrades.training||0)*0.08))} (máximo 45 %), más objetos equipados.</div>
+     <div class="small">Censo manual ×${manualCensusRate()} · censo automático ×${automaticCensusRate()} · especializaciones aumentan el peso relativo de las especies poco comunes y raras, no la probabilidad base de encuentro.</div>
+   </div>
    <section class="research-progress-summary">
      <div><strong>🔭 Exploración</strong><span class="small">Grupos: nivel ${state.upgrades.groupTier||0}/3 · Censo: ${state.upgrades.censusTier>=2?'×3':state.upgrades.censusTier?'×2':'×1'} · Automático: ${state.upgrades.autoGroup?'grupos activos':'sin grupos'} / ${state.upgrades.autoCensus?'censo ×2':'sin multiplicador'}</span></div>
      <div><strong>🦉 Naturalismo</strong><span class="small">Mamíferos ${state.upgrades.mammalogy||0}/2 · Aves ${state.upgrades.ornithology||0}/2 · Herpetología ${state.upgrades.herpetology||0}/2 · Peces ${state.upgrades.ichthyology||0}/2 · Etología ${state.upgrades.ethology||0}/2</span></div>
@@ -3313,7 +3338,7 @@ function renderObjects(){
  const collectIds=new Set(['asia_map','africa_map','north_america_map','oceanic_quadrant','fossil_fragment','fossil_skull','fossil_tooth','bone_short','bone_long','carnivore_skull','herbivore_skull','fossil_plate','fossil_sail']);
  let content='';
  if(selected==='equipo'){
-   content=`<div class="inventory-equipment-layout"><section class="inventory-block"><h4>🎽 Slots de equipamiento</h4><div class="small">Un objeto por ranura. El equipo anterior permanece en tu inventario.</div><div class="inventory-slots">${slots}</div></section><section class="inventory-block"><h4>Equipo disponible</h4><div class="inventory-items">${all.filter(([,i])=>i.kind==='equip').map(([id,i])=>card(id,i)).join('')}</div></section></div><section class="inventory-block"><h4>🛠️ Fabricación de equipo</h4><div class="inventory-items">${Object.entries(RECIPES).filter(([id])=>ITEMS[id]?.kind==='equip').map(([id,recipe])=>recipeCard(id,recipe)).join('')}</div></section>`;
+   content=`<section class="inventory-block"><h4>📊 Bonificaciones efectivas</h4><div class="small">Encuentro manual: ${pctBuff(manualSearchChance())} · Encuentro automático: ${state.helpers?pctBuff(automaticSearchChance()):'inactivo (sin naturalistas)'} · Búsqueda automática cada ${autoInterval()} s.</div><div class="small">La probabilidad de botín de expedición parte en 35 %. El gorro emplumado añade 6 puntos porcentuales y el morral reforzado 3 puntos porcentuales. Los objetos solo dan su bono cuando están equipados.</div></section><div class="inventory-equipment-layout"><section class="inventory-block"><h4>🎽 Slots de equipamiento</h4><div class="small">Un objeto por ranura. El equipo anterior permanece en tu inventario.</div><div class="inventory-slots">${slots}</div></section><section class="inventory-block"><h4>Equipo disponible</h4><div class="inventory-items">${all.filter(([,i])=>i.kind==='equip').map(([id,i])=>card(id,i)).join('')}</div></section></div><section class="inventory-block"><h4>🛠️ Fabricación de equipo</h4><div class="inventory-items">${Object.entries(RECIPES).filter(([id])=>ITEMS[id]?.kind==='equip').map(([id,recipe])=>recipeCard(id,recipe)).join('')}</div></section>`;
  }else if(selected==='animales'){
    content=`<section class="inventory-block"><h4>🐾 Materiales de animales</h4><div class="small">Hallazgos acumulables obtenidos mediante avistamientos. No ocupan slots.</div><div class="inventory-items">${all.filter(([,i])=>i.kind==='animal').map(([id,i])=>card(id,i)).join('')}</div></section>`;
  }else if(selected==='expedicion'){
