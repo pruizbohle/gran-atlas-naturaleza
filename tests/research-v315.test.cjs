@@ -26,7 +26,7 @@ function harness(){
  'window.__beta315={',
  'RESEARCH_NODES,RESEARCH_BRANCHES,RESEARCH_V315_BALANCE,REGIONS,SPECIES,',
  'researchRarityWeight,researchEncounterTargets,researchCensusCount,',
- 'researchBranchOf,encounter,eligibleSpecies,automaticEligibleSpecies,automaticSearchCapacity,renderResearch,resolveVoyageReward,',
+ 'researchBranchOf,encounter,eligibleSpecies,automaticEligibleSpecies,automaticSearchCapacity,renderResearch,resolveVoyageReward,renderObjects,ITEMS,VOYAGES,manualSearchChance,automaticSearchChance,rollLoot,requestGrant,voyageMoneyReward,voyageKnowledgeReward,',
  'canBuy,buyNode,MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR,',
  'get state(){return state},',
  '};',
@@ -156,4 +156,57 @@ test('Diario: registra claramente la pausa automática sin alterar los avistamie
  assert.equal(Object.values(g.state.sightings).reduce((a,b)=>a+b,0),before);
  g.encounter('manual',now,true);
  assert.ok(Object.values(g.state.sightings).reduce((a,b)=>a+b,0)>before,'manual continúa disponible');
+});
+
+test('Equipo activo: probabilidades reales y ranuras, sin bonificaciones de objetos no equipados',()=>{
+ const {api:g}=harness();
+ assert.equal(g.manualSearchChance(),0.5);
+ assert.equal(g.automaticSearchChance(),0);
+ g.state.helpers=1;
+ assert.ok(Math.abs(g.automaticSearchChance()-0.3914)<1e-9);
+ g.state.upgrades.prism=2;
+ g.state.equipment.instrument='binoculars';
+ assert.ok(Math.abs(g.manualSearchChance()-0.68)<1e-9);
+ g.state.helpers=10;
+ g.state.upgrades.training=2;
+ assert.ok(Math.abs(g.automaticSearchChance()-0.551)<1e-9);
+ g.state.equipment.hat='rain_hood';
+ assert.ok(Math.abs(g.automaticSearchChance()-0.57)<1e-9);
+ g.state.equipment.necklace='amulet';
+ assert.ok(Math.abs(g.automaticSearchChance()-0.6004)<1e-9);
+ const html=g.renderObjects();
+ assert.match(html,/60,0 %/);
+ assert.match(html,/68,0 %/);
+ assert.match(g.ITEMS.rain_hood.bonus,/5 %/);
+});
+test('Amuleto de ámbar aplica +5 % al monto base de subvenciones',()=>{
+ const {api:g}=harness();
+ g.state.discovered={'zorro_rojo':true};
+ g.state.money=0;
+ g.state.upgrades.grantBonus=0.25;
+ g.state.equipment.necklace='amber_charm';
+ g.requestGrant();
+ assert.equal(g.state.money,52);
+});
+test('Collar de conchas +5 % libras al regreso; brújula +4 % conocimiento',()=>{
+ const {api:g}=harness();
+ const voyage=g.VOYAGES.find(v=>v.prize>=50&&v.notes>=20);
+ assert.ok(voyage);
+ assert.equal(g.voyageMoneyReward(voyage),voyage.prize);
+ assert.equal(g.voyageKnowledgeReward(voyage),voyage.notes);
+ g.state.equipment.necklace='shell_necklace';
+ g.state.equipment.instrument='brass_compass';
+ assert.equal(g.voyageMoneyReward(voyage),Math.round(voyage.prize*1.05));
+ assert.equal(g.voyageKnowledgeReward(voyage),voyage.notes+Math.round(voyage.notes*0.04));
+});
+test('Gorro +6 puntos o morral +3 puntos en el botín, solamente al equiparse',()=>{
+ const {api:g,random}=harness();
+ random(0.38);
+ assert.equal(g.rollLoot(),null,'sin accesorios es 35 %');
+ g.state.equipment.hat='feather_cap';
+ assert.ok(g.rollLoot(),'con gorro 41 %');
+ g.state.equipment.hat=null;
+ g.state.equipment.instrument='sturdy_pack';
+ random(0.37);
+ assert.ok(g.rollLoot(),'con morral 38 %');
 });
