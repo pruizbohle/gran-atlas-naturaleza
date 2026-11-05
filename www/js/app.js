@@ -2106,19 +2106,41 @@ function researchCensusCount(source){
  if(source==='auto')return state.upgrades.autoCensus?RESEARCH_V315_BALANCE.autoCensusMultiplier:1;
  return tier>=2?3:2;
 }
+// Beta 3.15.1: el equipo automático recorre todos los hábitats y horarios válidos
+// de la región actual, sin cambiar los filtros elegidos por quien observa manualmente.
+// Estación, distribución biogeográfica y cupo por especie/hora siguen vigentes.
+function automaticEligibleSpecies(regionId,season){
+ const region=REGIONS.find(r=>r.id===regionId);
+ if(!region)return [];
+ return [...new Set(region.species)].filter(id=>{
+  const sp=SPECIES[id];
+  return !!sp && sp.seasons.includes(season) && sp.times.length>0
+    && sp.habitats.some(h=>region.habitats.includes(h));
+ });
+}
+function automaticSearchCapacity(at=Date.now()){
+ const hour=Math.floor(at/3600000);
+ const ids=automaticEligibleSpecies(state.currentRegion,state.season);
+ const remaining=ids.filter(id=>(state.autoHourly[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR);
+ return {total:ids.length,remaining:remaining.length};
+}
 function encounter(source='manual', at=Date.now(), guaranteed=false){
  // Cada búsqueda permite una sola probabilidad de encuentro, independientemente de cuántas especies registre.
  const hour=Math.floor(at/3600000);
  const bucket=state.autoHourly;
  for(const key of Object.keys(bucket)){if(Number(key.split(':')[0])<hour-8)delete bucket[key];}
- const choices=eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season)
-   .filter(id=>source!=='auto'||(bucket[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR);
+ const baseChoices=source==='auto'
+  ?automaticEligibleSpecies(state.currentRegion,state.season)
+  :eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season);
+ const choices=baseChoices.filter(id=>source!=='auto'
+  ||(bucket[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR);
  const manual=source==='manual';
  let chanceBase=manual?0.50:0.38;
  chanceBase*=manual?manualEncounterBonus():helperBonus();
  chanceBase=Math.min(0.96,chanceBase);
  if(!choices.length&&!manual){
-  currentAutoNotice='Cupo automático de la hora alcanzado o sin especies disponibles en estas condiciones. La búsqueda manual continúa disponible.';
+  const reason=baseChoices.length?'Cupo horario de observación automática agotado para las especies disponibles.':'No hay fauna compatible con esta estación en la región.';
+  currentAutoNotice=reason+' El equipo reanudará avistamientos cuando corresponda; la búsqueda manual continúa disponible.';
   return;
  }
  currentAutoNotice='';
@@ -2346,9 +2368,19 @@ function updateFieldOutput(){
  const last=state.lastEncounter;
  const result=document.getElementById('fieldResult');
  if(result){const signature=(last?.title||'')+'|'+(last?.subtitle||'');if(signature!==lastPanelSignature){result.innerHTML=encounterCardMarkup(last);result.classList.remove('encounter-reveal');void result.offsetWidth;result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
- const autoNoticeEl=document.getElementById('autoNotice'); if(autoNoticeEl) autoNoticeEl.textContent=currentAutoNotice||'Sin actividad automática reciente.';
+ const autoNoticeEl=document.getElementById('autoNotice');
+ if(autoNoticeEl){
+  const text=currentAutoNotice||'Sin actividad automática reciente.';
+  if(autoNoticeEl.textContent!==text)autoNoticeEl.textContent=text;
+ }
  const log=document.getElementById('fieldLog');
- if(log && diaryDirty && Date.now()-lastDisplayRefresh>800){log.innerHTML=state.log.map(x=>`<div class="log">${esc(x)}</div>`).join('');lastDisplayRefresh=Date.now();diaryDirty=false;}
+ if(log && diaryDirty){
+  const wasNearTop=log.scrollTop<42;
+  log.innerHTML=state.log.map(x=>`<div class="log">${esc(x)}</div>`).join('');
+  if(wasNearTop)log.scrollTop=0;
+  lastDisplayRefresh=Date.now();
+  diaryDirty=false;
+ }
 }
 function render(){ renderCounters(); renderPanel(); persist(); }
 function renderCrown(){
@@ -3502,7 +3534,15 @@ function tick(){
      autoDiaryBuffer.searches+=searches;
      autoDiaryBuffer.hits+=gainS;
      autoDiaryBuffer.knowledge+=gainK;
-     currentAutoNotice=`Equipo automático: ${searches} búsquedas · ${gainS} avistamientos · +${gainK} conocimiento.`;
+     const capacity=automaticSearchCapacity(now);
+     const saturated=capacity.total>0 && capacity.remaining===0;
+     currentAutoNotice=`Equipo automático: ${searches} búsquedas · ${gainS} avistamientos · +${gainK} conocimiento.`
+       +(saturated?` Cupo horario completo: ${capacity.total} especies examinadas. Reanuda al cambiar la hora.`:'');
+     if(saturated && state.autoSaturationNoticeHour!==Math.floor(now/3600000)){
+       // Mensaje persistente por hora; no repetirlo cada segundo.
+       state.autoSaturationNoticeHour=Math.floor(now/3600000);
+       pushLog(`⏳ Equipo automático: completó el cupo horario de ${capacity.total} especies en ${currentRegion().name}. La búsqueda manual sigue disponible.`);
+     }
    }
    if(autoDiaryBuffer.searches>0 && (now-lastAutoDiaryFlush>5000 || autoDiaryBuffer.hits>0)){
      pushLog(`👨‍🔬 Equipo automático · ${autoDiaryBuffer.searches} búsquedas · ${autoDiaryBuffer.hits} avistamientos · +${autoDiaryBuffer.knowledge} conocimiento.`);
