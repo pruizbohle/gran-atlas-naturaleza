@@ -1736,6 +1736,46 @@ const RESEARCH_NODES=[
 RESEARCH_NODES.push({id:"africa_1",name:"Estudios cartográficos de África",desc:"Investiga África; requiere conservar el Mapa de África.",money:1200,knowledge:900,req:"asia_1",reqItem:"africa_map",reqItemConsume:false,once:true,effect(s){s.upgrades.africaUnlocked=1;}},
 {id:"nuevo_mundo_1",name:"Navegación al Nuevo Mundo",desc:"Permite viajes atlánticos, exige Cuadrante transatlántico.",money:2200,knowledge:1800,req:"africa_1",reqItem:"oceanic_quadrant",reqItemConsume:false,once:true,effect(s){s.upgrades.newWorldUnlocked=1;}},
 {id:"norteamerica_1",name:"Cartografía de Norteamérica",desc:"Habilita Norteamérica; requiere mapa completo y navegación atlántica.",money:2800,knowledge:2400,req:"nuevo_mundo_1",reqItem:"north_america_map",reqItemConsume:false,once:true,effect(s){s.upgrades.northAmericaUnlocked=1;}});
+// Beta 3.15: todos los costes y probabilidades se centralizan aquí para la futura nivelación.
+// Esta beta es deliberadamente más accesible; no se vinculan costes a contenido geográfico futuro.
+const RESEARCH_V315_BALANCE=Object.freeze({betaTest:true,manualDouble:[0,0.10,0.20,0.25],manualTriple:[0,0,0,0.05],autoDouble:0.12,autoTriple:0.02,autoCensusMultiplier:2,museumIncomeBonus:0.15});
+const RESEARCH_V315_NODES=[{id:"grupos_1",name:"Observación en grupo I",desc:"10 % de registrar una segunda especie por búsqueda manual.",branch:'exploracion',money:90,knowledge:70,req:"prismaticos_1",once:true,effect(s){s.upgrades.groupTier=1;}},
+{id:"grupos_2",name:"Observación en grupo II",desc:"20 % de registrar una segunda especie por búsqueda manual.",branch:'exploracion',money:170,knowledge:125,req:"grupos_1",once:true,effect(s){s.upgrades.groupTier=2;}},
+{id:"grupos_3",name:"Observación en grupo III",desc:"25 % de dos especies y 5 % de tres especies por búsqueda manual.",branch:'exploracion',money:300,knowledge:240,req:"grupos_2",once:true,effect(s){s.upgrades.groupTier=3;}},
+{id:"censo_campo_1",name:"Censo poblacional I",desc:"×2 avistamientos de la misma especie en búsquedas manuales.",branch:'exploracion',money:180,knowledge:130,req:"cuaderno_1",once:true,effect(s){s.upgrades.censusTier=1;}},
+{id:"censo_campo_2",name:"Censo poblacional II",desc:"×3 avistamientos de la misma especie en búsquedas manuales.",branch:'exploracion',money:430,knowledge:340,req:"censo_campo_1",once:true,effect(s){s.upgrades.censusTier=2;}},
+{id:"grupos_auto_1",name:"Patrullas de observación",desc:"Extiende encuentros múltiples al equipo automático con menor probabilidad.",branch:'exploracion',money:640,knowledge:490,req:"grupos_3",reqAll:["metodo_2"],once:true,effect(s){s.upgrades.autoGroup=1;}},
+{id:"censo_auto_1",name:"Censo automatizado",desc:"Autoriza censos automáticos ×2, con límite por especie y hora.",branch:'exploracion',money:780,knowledge:590,req:"censo_campo_2",reqAll:["metodo_3"],once:true,effect(s){s.upgrades.autoCensus=1;}},
+{id:"masto_1",name:"Mastozoología básica",desc:"Aumenta la ponderación de mamíferos poco comunes y raros.",branch:'naturalismo',money:85,knowledge:65,req:"cuaderno_1",once:true,effect(s){s.upgrades.mammalogy=1;}},
+{id:"masto_2",name:"Mastozoología media",desc:"Mejora la detección de mamíferos raros y muy raros.",branch:'naturalismo',money:185,knowledge:155,req:"masto_1",once:true,effect(s){s.upgrades.mammalogy=2;}},
+{id:"ornito_1",name:"Ornitología básica",desc:"Aumenta la ponderación de aves poco comunes y raras.",branch:'naturalismo',money:85,knowledge:65,req:"cuaderno_1",once:true,effect(s){s.upgrades.ornithology=1;}},
+{id:"ornito_2",name:"Ornitología media",desc:"Mejora la detección de aves raras y muy raras.",branch:'naturalismo',money:185,knowledge:155,req:"ornito_1",once:true,effect(s){s.upgrades.ornithology=2;}},
+{id:"herpeto_1",name:"Herpetología básica",desc:"Aumenta la detección de reptiles y anfibios poco comunes y raros.",branch:'naturalismo',money:85,knowledge:65,req:"cuaderno_1",once:true,effect(s){s.upgrades.herpetology=1;}},
+{id:"herpeto_2",name:"Herpetología media",desc:"Mejora la detección de reptiles y anfibios raros y muy raros.",branch:'naturalismo',money:185,knowledge:155,req:"herpeto_1",once:true,effect(s){s.upgrades.herpetology=2;}},
+{id:"ictio_1",name:"Ictiología básica",desc:"Aumenta la detección de peces poco comunes y raros.",branch:'naturalismo',money:85,knowledge:65,req:"cuaderno_1",once:true,effect(s){s.upgrades.ichthyology=1;}},
+{id:"ictio_2",name:"Ictiología media",desc:"Mejora la detección de peces raros y muy raros.",branch:'naturalismo',money:185,knowledge:155,req:"ictio_1",once:true,effect(s){s.upgrades.ichthyology=2;}},
+{id:"etologia_1",name:"Etología básica",desc:"Aumenta la posibilidad de reconocer el sexo en especies con dimorfismo.",branch:'naturalismo',money:100,knowledge:75,req:"cuaderno_1",once:true,effect(s){s.upgrades.ethology=1;}},
+{id:"etologia_2",name:"Etología media",desc:"Aumenta moderadamente las observaciones de variantes especiales.",branch:'naturalismo',money:235,knowledge:185,req:"etologia_1",once:true,effect(s){s.upgrades.ethology=2;}},
+{id:"paleontologia_1",name:"Paleontología básica",desc:"Permite prospecciones adicionales de fragmentos fósiles en expediciones.",branch:'museologia',money:100,knowledge:70,req:"astillero",once:true,effect(s){s.upgrades.paleoTier=1;}},
+{id:"paleontologia_2",name:"Paleontología media",desc:"Aumenta hallazgos paleontológicos y de dientes fósiles en expediciones.",branch:'museologia',money:195,knowledge:145,req:"paleontologia_1",once:true,effect(s){s.upgrades.paleoTier=2;}},
+{id:"paleontologia_3",name:"Paleontología avanzada",desc:"Mejora la probabilidad de hallar cráneos y restos excepcionales.",branch:'museologia',money:370,knowledge:280,req:"paleontologia_2",once:true,effect(s){s.upgrades.paleoTier=3;}},
+{id:"economia_museo_1",name:"Economía científica del Museo",desc:"Aumenta en 15 % el ingreso periódico de exposiciones.",branch:'museologia',money:260,knowledge:180,req:"gabinete_1",once:true,effect(s){s.upgrades.museumIncomeTier=1;}}];
+RESEARCH_NODES.push(...RESEARCH_V315_NODES);
+const RESEARCH_BRANCHES=[
+{id:'exploracion',name:'Exploración',icon:'🔭',description:'Búsquedas, censos y equipos de campo.'},
+{id:'naturalismo',name:'Naturalismo',icon:'🦉',description:'Disciplinas zoológicas y etología.'},
+{id:'expediciones',name:'Expediciones',icon:'⛵',description:'Astillero, rutas y cartografía.'},
+{id:'museologia',name:'Museología',icon:'🦴',description:'Prospección, gabinete y colecciones.'},
+{id:'sociedad',name:'Sociedad',icon:'🏛️',description:'Financiación y economía científica.'}
+];
+const RESEARCH_LEGACY_BRANCH={
+ prismaticos_1:'exploracion',prismaticos_2:'exploracion',metodo_1:'exploracion',metodo_2:'exploracion',metodo_3:'exploracion',metodo_4:'exploracion',novato:'exploracion',capacitacion_1:'exploracion',capacitacion_2:'exploracion',
+ cuaderno_1:'naturalismo',
+ astillero:'expediciones',rutas_1:'expediciones',rutas_2:'expediciones',casco_1:'expediciones',flota_1:'expediciones',asia_1:'expediciones',africa_1:'expediciones',nuevo_mundo_1:'expediciones',norteamerica_1:'expediciones',
+ gabinete_1:'museologia',
+ sociedad_1:'sociedad',sociedad_2:'sociedad',fondos_x1:'sociedad',fondos_x10:'sociedad',fondos_x100:'sociedad',fondos_x1000:'sociedad'
+};
+function researchBranchOf(node){return node.branch||RESEARCH_LEGACY_BRANCH[node.id]||'naturalismo';}
 function initialState(){
   const region=REGIONS[0].id;
   return {
@@ -1743,7 +1783,7 @@ function initialState(){
     asiaPricingVersion:3, currentRegion:region, habitat:'bosque', time:'amanecer', season:'primavera',
     discovered:{}, sightings:{}, stages:{}, feedObs:{}, dimorphism:{}, sexSeen:{}, specialSeen:{}, specialFound:{}, published:{},
     log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial de prueba: £420. En Corona puedes simular más libras.'],
-    upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,africaUnlocked:0,newWorldUnlocked:0,northAmericaUnlocked:0,fundingTier:1}, purchases:{},
+    upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,africaUnlocked:0,newWorldUnlocked:0,northAmericaUnlocked:0,fundingTier:1,groupTier:0,censusTier:0,autoGroup:0,autoCensus:0,mammalogy:0,ornithology:0,herpetology:0,ichthyology:0,ethology:0,paleoTier:0,museumIncomeTier:0}, purchases:{},
     regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', crownCoins:0, lastEncounter:null,
     lastTick:Date.now(), lastGrant:0, autoHourly:{}, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
   };
@@ -1767,6 +1807,8 @@ if(Object.keys(state.regionUnlocked||{}).some(id=>REGIONS.find(r=>r.id===id)?.co
 state.upgrades.africaUnlocked=!!state.purchases.africa_1;
 state.upgrades.newWorldUnlocked=!!state.purchases.nuevo_mundo_1;
 state.upgrades.northAmericaUnlocked=!!state.purchases.norteamerica_1;
+// Recuperación de efectos Beta 3.15 desde compras: respeta guardados antiguos y exportaciones.
+for(const node of RESEARCH_V315_NODES){if(state.purchases[node.id])node.effect(state);}
 // Migración v2.1->v2.2: zonas asiáticas previamente habilitadas conservan su acceso.
 if((state.asiaPricingVersion||2)<3){
   if(state.upgrades.asiaUnlocked){
@@ -2208,6 +2250,7 @@ function canBuy(node){
   if(node.once && state.purchases[node.id]) return false;
   if(node.max && (state.purchases[node.id]||0)>=node.max) return false;
   if(node.req && !state.purchases[node.req]) return false;
+  if(node.reqAll && !node.reqAll.every(id=>state.purchases[id]))return false;
   if(node.reqItem && (state.inventory[node.reqItem]||0)<(node.reqItemQty||1)) return false;
   return state.money>=node.money && state.knowledge>=node.knowledge;
 }
