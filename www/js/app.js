@@ -3526,22 +3526,38 @@ function tick(){
    autoAccum-=actualSearches*interval;
    const searches=Math.min(500,actualSearches);
    if(searches>0){
-     const k0=state.knowledge, s0=totalSightings();
-     batchingOffline=true;
-     try{for(let i=0;i<searches;i++)encounter('auto',startAt+elapsed*((i+.5)/searches));}finally{batchingOffline=false;}
-     const gainK=Math.max(0, Math.floor(state.knowledge-k0));
-     const gainS=Math.max(0, Math.floor(totalSightings()-s0));
-     autoDiaryBuffer.searches+=searches;
-     autoDiaryBuffer.hits+=gainS;
-     autoDiaryBuffer.knowledge+=gainK;
+     const before=automaticSearchCapacity(now);
+     const saturatedBefore=before.total>0&&before.remaining===0;
+     let performed=0,gainK=0,gainS=0;
+     if(!saturatedBefore){
+       const k0=state.knowledge,s0=totalSightings();
+       batchingOffline=true;
+       try{
+         for(let i=0;i<searches;i++){
+           // Al completar los cupos, detener el lote; no contar intentos ficticios.
+           if(automaticSearchCapacity(startAt+elapsed*((i+.5)/searches)).remaining===0)break;
+           encounter('auto',startAt+elapsed*((i+.5)/searches));
+           performed++;
+         }
+       }finally{batchingOffline=false;}
+       gainK=Math.max(0,Math.floor(state.knowledge-k0));
+       gainS=Math.max(0,Math.floor(totalSightings()-s0));
+     }
      const capacity=automaticSearchCapacity(now);
-     const saturated=capacity.total>0 && capacity.remaining===0;
-     currentAutoNotice=`Equipo automático: ${searches} búsquedas · ${gainS} avistamientos · +${gainK} conocimiento.`
-       +(saturated?` Cupo horario completo: ${capacity.total} especies examinadas. Reanuda al cambiar la hora.`:'');
-     if(saturated && state.autoSaturationNoticeHour!==Math.floor(now/3600000)){
-       // Mensaje persistente por hora; no repetirlo cada segundo.
+     const saturated=capacity.total>0&&capacity.remaining===0;
+     if(performed){
+       autoDiaryBuffer.searches+=performed;
+       autoDiaryBuffer.hits+=gainS;
+       autoDiaryBuffer.knowledge+=gainK;
+     }
+     currentAutoNotice=saturated
+       ?`Equipo automático en pausa: cupo horario completo de ${capacity.total} especies en ${currentRegion().name}. Se reanuda en la siguiente hora; la observación manual sigue disponible.`
+       :capacity.total===0
+         ?'Equipo automático en pausa: sin especies compatibles con la estación en esta región.'
+         :`Equipo automático: ${performed} búsquedas · ${gainS} avistamientos · +${gainK} conocimiento · ${capacity.remaining}/${capacity.total} especies con cupo.`;
+     if(saturated&&state.autoSaturationNoticeHour!==Math.floor(now/3600000)){
        state.autoSaturationNoticeHour=Math.floor(now/3600000);
-       pushLog(`⏳ Equipo automático: completó el cupo horario de ${capacity.total} especies en ${currentRegion().name}. La búsqueda manual sigue disponible.`);
+       pushLog(`⏳ Equipo automático en pausa: cupo horario de ${capacity.total} especies completo en ${currentRegion().name}.`);
      }
    }
    if(autoDiaryBuffer.searches>0 && (now-lastAutoDiaryFlush>5000 || autoDiaryBuffer.hits>0)){
