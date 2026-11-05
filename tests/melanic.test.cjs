@@ -54,5 +54,5 @@ test('observed variant cards render the requested skin, including the red fox re
  assert.ok(specialBadges('zorro_rojo').includes(api.getSpriteMarkup('zorro_rojo','melanico')));
  // Cuaderno renders the observed cards; Campo uses the same label conversion.
  assert.match(source,/specialBadges\(id\)/);
- assert.match(source,/sprite:variant\?getSpriteMarkup\(chosen,variantToSkin\(variant\)\)/);
+ assert.match(source,/getSpriteMarkup\(primary\.id,variantToSkin\(primary\.variant\)\)/);
 });
