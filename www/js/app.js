@@ -1959,7 +1959,8 @@ function hasDimorphism(id){return !!SEXUAL_DIMORPHISM[id] && dimorphismProgress(
 function recordSexObservation(id, manual){
   if(!SEXUAL_DIMORPHISM[id]) return null;
   // No todas las observaciones permiten distinguir el sexo desde lejos.
-  if(Math.random() >= (manual?0.18:0.12)) return null;
+  const ethology=state.upgrades.ethology||0;
+  if(Math.random() >= Math.min(0.45,(manual?0.18:0.12)+(ethology>=1?(manual?0.06:0.03):0)+(ethology>=2?(manual?0.03:0.015):0))) return null;
   const sex=Math.random()<0.5?'male':'female';
   const found=state.sexSeen[id]||(state.sexSeen[id]={male:false,female:false});
   const isNew=!found[sex];
@@ -2065,74 +2066,132 @@ function eligibleSpecies(regionId, habitat, time, season){
   });
 }
 
+// Beta 3.15: las especialidades cambian la ponderación, nunca la presencia de especies.
+function researchRarityWeight(id){
+ const sp=SPECIES[id],base=rarityWeight(sp.rare);
+ const levels=state.upgrades||{};
+ if(!levels.mammalogy&&!levels.ornithology&&!levels.herpetology&&!levels.ichthyology)return base;
+ const type=taxonomyInfo(id).className;
+ const tier=type==='Mammalia'?levels.mammalogy
+  :type==='Aves'?levels.ornithology
+  :(type==='Reptilia'||type==='Amphibia')?levels.herpetology
+  :type==='Actinopterygii'?levels.ichthyology:0;
+ if(!tier)return base;
+ const multiplier=sp.rare==='Muy rara'?(tier>=2?1.45:1.10)
+  :sp.rare==='Raro'?(tier>=2?1.65:1.30)
+  :sp.rare==='Poco común'?(tier>=2?1.25:1.12):1;
+ return base*multiplier;
+}
+function weightedSpeciesPick(ids){
+ const total=ids.reduce((sum,id)=>sum+researchRarityWeight(id),0);
+ let roll=Math.random()*total;
+ for(const id of ids){roll-=researchRarityWeight(id);if(roll<=0)return id;}
+ return ids[ids.length-1];
+}
+function researchEncounterTargets(source){
+ const tier=Math.min(3,Math.max(0,state.upgrades.groupTier||0));
+ if(!tier)return 1;
+ if(source==='auto'&&!state.upgrades.autoGroup)return 1;
+ const roll=Math.random();
+ if(source==='auto'){
+  if(tier===3&&roll<RESEARCH_V315_BALANCE.autoTriple)return 3;
+  return roll<(tier===3?RESEARCH_V315_BALANCE.autoDouble+RESEARCH_V315_BALANCE.autoTriple:RESEARCH_V315_BALANCE.autoDouble)?2:1;
+ }
+ if(tier===3&&roll<RESEARCH_V315_BALANCE.manualTriple[tier])return 3;
+ return roll<RESEARCH_V315_BALANCE.manualDouble[tier]+RESEARCH_V315_BALANCE.manualTriple[tier]?2:1;
+}
+function researchCensusCount(source){
+ const tier=Math.max(0,state.upgrades.censusTier||0);
+ if(!tier)return 1;
+ if(source==='auto')return state.upgrades.autoCensus?RESEARCH_V315_BALANCE.autoCensusMultiplier:1;
+ return tier>=2?3:2;
+}
 function encounter(source='manual', at=Date.now(), guaranteed=false){
-  // Hourly buckets are stored in the save; manual sightings never consume the automatic quota.
-  const hour=Math.floor(at/3600000);
-  const bucket=state.autoHourly;
-  for(const key of Object.keys(bucket)){if(Number(key.split(':')[0])<hour-8)delete bucket[key];}
-  const choices=eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season)
-    .filter(id=>source!=='auto'||(bucket[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR);
-  const manual=source==='manual';
-  let chanceBase=manual?0.50:0.38;
-  chanceBase*=manual?manualEncounterBonus():helperBonus();
-  chanceBase=Math.min(0.96,chanceBase);
-
-  if(!choices.length && !manual){
-    currentAutoNotice='Cupo automático de la hora alcanzado o sin especies disponibles en estas condiciones. La búsqueda manual continúa disponible.';
-    return;
+ // Cada búsqueda permite una sola probabilidad de encuentro, independientemente de cuántas especies registre.
+ const hour=Math.floor(at/3600000);
+ const bucket=state.autoHourly;
+ for(const key of Object.keys(bucket)){if(Number(key.split(':')[0])<hour-8)delete bucket[key];}
+ const choices=eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season)
+   .filter(id=>source!=='auto'||(bucket[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR);
+ const manual=source==='manual';
+ let chanceBase=manual?0.50:0.38;
+ chanceBase*=manual?manualEncounterBonus():helperBonus();
+ chanceBase=Math.min(0.96,chanceBase);
+ if(!choices.length&&!manual){
+  currentAutoNotice='Cupo automático de la hora alcanzado o sin especies disponibles en estas condiciones. La búsqueda manual continúa disponible.';
+  return;
+ }
+ currentAutoNotice='';
+ if(!choices.length||(!guaranteed&&Math.random()>chanceBase)){
+  const k=Math.round((manual?3:1.5)*knowledgeBonus());
+  state.knowledge+=k;
+  if(manual)state.lastEncounter={title:'Sin avistamiento',subtitle:`Se encontraron rastros. +${k} conocimiento`,sprite:null};
+  if(manual)pushLog(`🔭 Búsqueda sin avistamiento · +${k} conocimiento.`);
+  if(!batchingOffline){renderCounters();updateFieldOutput();}
+  return;
+ }
+ // Selección sin reemplazo: un encuentro múltiple siempre contiene especies diferentes.
+ const pool=[...choices],selected=[];
+ const maxSpecies=Math.min(pool.length,researchEncounterTargets(source));
+ for(let i=0;i<maxSpecies;i++){
+  const chosen=weightedSpeciesPick(pool);
+  selected.push(chosen);
+  pool.splice(pool.indexOf(chosen),1);
+ }
+ // El conocimiento y los botines del Museo se generan UNA vez por búsqueda,
+ // nunca una vez por individuo del censo (evita multiplicar objetos o variantes).
+ const knowledgeGain=Math.round((manual?5:3)*knowledgeBonus());
+ state.knowledge+=knowledgeGain;
+ const museumFinds=maybeMuseumFieldDiscovery(source);
+ const entries=[];
+ const census=researchCensusCount(source);
+ for(const chosen of selected){
+  const sp=SPECIES[chosen],first=!state.discovered[chosen];
+  let amount=census;
+  if(source==='auto'){
+   const key=hour+':'+chosen;
+   amount=Math.min(amount,MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR-(bucket[key]||0));
+   if(amount<1)continue;
+   bucket[key]=(bucket[key]||0)+amount;
   }
-  currentAutoNotice='';
-  if(!choices.length || (!guaranteed && Math.random()>chanceBase)){
-    const k=Math.round((manual?3:1.5)*knowledgeBonus());
-    state.knowledge+=k;
-    if(manual)state.lastEncounter={title:'Sin avistamiento', subtitle:`Se encontraron rastros. +${k} conocimiento`, sprite:null};
-    if(manual)pushLog(`🔭 Búsqueda sin avistamiento · +${k} conocimiento.`);
-    if(!batchingOffline){renderCounters();updateFieldOutput();}
-    return;
-  }
-
-  const totalW=choices.reduce((sum,id)=>sum+rarityWeight(SPECIES[id].rare),0);
-  let roll=Math.random()*totalW, chosen=choices[0];
-  for(const id of choices){ roll-=rarityWeight(SPECIES[id].rare); if(roll<=0){chosen=id;break;}}
-  const sp=SPECIES[chosen];
-  const first=!state.discovered[chosen];
   state.discovered[chosen]=true;
-  state.sightings[chosen]=sight(chosen)+1;
-  if(source==='auto'){const key=hour+':'+chosen;bucket[key]=(bucket[key]||0)+1;}
-  const knowledgeGain=Math.round((manual?5:3)*knowledgeBonus());
-  state.knowledge+=knowledgeGain;
-  if(first){ state.money += 15; pushLog(`🪙 Descubrimiento de ${visibleName(chosen)}: la Sociedad entrega £15.`); }
-
-  // behaviors and special observations
-  let note=[];
-  const museumFinds=maybeMuseumFieldDiscovery(source);
-  if(museumFinds.length)note.push(...museumFinds);
-  if(Math.random()<0.12){ state.feedObs[chosen]=feed(chosen)+1; note.push('comiendo'); }
+  state.sightings[chosen]=sight(chosen)+amount;
+  if(first){state.money+=15;pushLog(`🪙 Descubrimiento de ${visibleName(chosen)}: la Sociedad entrega £15.`);}
+  const note=[];
+  if(Math.random()<0.12){state.feedObs[chosen]=feed(chosen)+1;note.push('comiendo');}
   const sexObservation=recordSexObservation(chosen,manual);
   if(sexObservation){
-    const sexLabel=sexObservation.sex==='male'?'macho':'hembra';
-    if(sexObservation.isNew) note.push(`primera observación de ${sexLabel}`);
-    if(sexObservation.complete && sexObservation.isNew) note.push('dimorfismo documentado (2/2)');
+   const sexLabel=sexObservation.sex==='male'?'macho':'hembra';
+   if(sexObservation.isNew)note.push(`primera observación de ${sexLabel}`);
+   if(sexObservation.complete&&sexObservation.isNew)note.push('dimorfismo documentado (2/2)');
   }
   let variant='';
-  if(sp.special.length && Math.random()<0.01){
-    state.specialSeen[chosen]=specials(chosen)+1;
-    variant=sp.special[Math.floor(Math.random()*sp.special.length)];
-    state.specialFound[chosen]=state.specialFound[chosen]||{};
-    state.specialFound[chosen][variant]=true;
-    note.push(`espécimen especial: ${variant}`);
+  const variantChance=0.01+(state.upgrades.ethology>=2?0.005:0);
+  if(sp.special.length&&Math.random()<variantChance){
+   state.specialSeen[chosen]=specials(chosen)+1;
+   variant=sp.special[Math.floor(Math.random()*sp.special.length)];
+   state.specialFound[chosen]=state.specialFound[chosen]||{};
+   state.specialFound[chosen][variant]=true;
+   note.push(`espécimen especial: ${variant}`);
   }
-  const speciesDrop=maybeSpeciesDrop(chosen, manual);
-  if(speciesDrop) note.push(`muestra obtenida: ${ITEMS[speciesDrop].name}`);
-
-  if(manual || source==='auto') state.lastEncounter={
-    species:chosen,
-    title:`${first?'¡Nueva especie! ':'Avistamiento: '}${visibleName(chosen)}`,
-    subtitle:`${sp.rare}${variant?` · ${variant}`:''} · ${fmt(sight(chosen))} avistamientos · +${knowledgeGain} conocimiento${first?' · +£15':''}${note.length?' · '+note.join(', '):''}`,
-    sprite:variant?getSpriteMarkup(chosen,variantToSkin(variant)) : (sexObservation?getSpriteMarkup(chosen,'normal',sexObservation.sex):getSpriteMarkup(chosen))
-  };
-  if(manual) pushLog(`🔭 ${visibleName(chosen)} · ${fmt(sight(chosen))} avistamientos${note.length?' · '+note.join(', '):''}.`);
-  if(!batchingOffline){renderCounters();updateFieldOutput();}
+  // Una sola oportunidad de obtener muestra por búsqueda, aunque se observen 3 especies.
+  if(entries.length===0){
+   const drop=maybeSpeciesDrop(chosen,manual);
+   if(drop)note.push(`muestra obtenida: ${ITEMS[drop].name}`);
+   if(museumFinds.length)note.push(...museumFinds);
+  }
+  entries.push({id:chosen,first,amount,note,variant,sexObservation});
+ }
+ if(!entries.length)return;
+ const primary=entries[0],sp=SPECIES[primary.id],many=entries.length>1;
+ const title=many?`Encuentro múltiple: ${entries.length} especies`
+  :`${primary.first?'¡Nueva especie! ':'Avistamiento: '}${visibleName(primary.id)}`;
+ const summary=many?entries.map(e=>`${visibleName(e.id)} ×${e.amount}`).join(' · '):`${fmt(sight(primary.id))} avistamientos`;
+ const subtitle=`${many?summary:sp.rare+(primary.variant?` · ${primary.variant}`:'')+' · '+summary} · +${knowledgeGain} conocimiento${primary.first?' · +£15':''}${primary.note.length?' · '+primary.note.join(', '):''}`;
+ state.lastEncounter={species:primary.id,title,subtitle,sprite:primary.variant?getSpriteMarkup(primary.id,variantToSkin(primary.variant))
+   :(primary.sexObservation?getSpriteMarkup(primary.id,'normal',primary.sexObservation.sex):getSpriteMarkup(primary.id))};
+ if(manual)pushLog(`🔭 ${many?'Encuentro múltiple · ':''}${entries.map(e=>visibleName(e.id)+' ×'+e.amount).join(', ')}${primary.note.length?' · '+primary.note.join(', '):''}.`);
+ if(!batchingOffline){renderCounters();updateFieldOutput();}
 }
 function variantToSkin(variant){
   if(/albino|leuc/i.test(variant)) return 'albino';
@@ -3054,7 +3113,7 @@ const MUSEUM_WINGS = [
 ];
 function exhibitPrice(id){return ({'Común':45,'Poco común':70,'Raro':105,'Muy rara':150}[SPECIES[id].rare]||60);}
 function exhibitIncome(id){return ({'Común':0.16,'Poco común':0.24,'Raro':0.34,'Muy rara':0.5}[SPECIES[id].rare]||0.2);}
-function museumRate(){return Object.keys(state.museum.exhibits||{}).reduce((total,id)=>total+exhibitIncome(id),0);}
+function museumRate(){const base=Object.keys(state.museum.exhibits||{}).reduce((total,id)=>total+exhibitIncome(id),0);return base*(1+(state.upgrades.museumIncomeTier?RESEARCH_V315_BALANCE.museumIncomeBonus:0));}
 // Orden de mayor precio de muestra a menor, sin cambiar la economía.
 function museumValueSort(a,b){return exhibitPrice(b)-exhibitPrice(a)||exhibitIncome(b)-exhibitIncome(a)||SPECIES[a].name.localeCompare(SPECIES[b].name,'es');}
 function museumCapacity(){return [0,3,7,12][state.museum.wing] || 12;}
