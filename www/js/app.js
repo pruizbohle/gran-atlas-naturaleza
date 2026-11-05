@@ -1567,7 +1567,19 @@ function taxonomyInfo(id){
     stork:['Aves','Ciconiiformes'], swan:['Aves','Anátidas'], heron:['Aves','Ardeidas'], pelican:['Aves','Pelecaniformes'],
     kingfisher:['Aves','Coraciiformes'], wader:['Aves','Zancudas'], reptile:['Reptilia','Lagartos y anuros'],
     salamander:['Amphibia','Urodelos y anfibios'], snake:['Reptilia','Serpientes'], tortoise:['Reptilia','Quelonios'],
-    fish:['Actinopterygii','Peces óseos']
+    fish:['Actinopterygii','Peces óseos'],
+    ray:['Chondrichthyes','Rayas'],
+    pangolin:['Mammalia','Pangolines'],
+    elephant:['Mammalia','Proboscídeos'],
+    giraffe:['Mammalia','Jiráfidos'],
+    rhino:['Mammalia','Rinocerótidos'],
+    hippo:['Mammalia','Hipopotámidos'],
+    lemur:['Mammalia','Lémures'],
+    zebra:['Mammalia','Équidos'],
+    cetacean:['Mammalia','Cetáceos'],
+    sirenian:['Mammalia','Sirénidos'],
+    ostrich:['Aves','Estrucioniformes'],
+    crocodile:['Reptilia','Crocodilianos']
   };
   return {className:(table[k]||['Animalia','Vertebrados'])[0], subClass:(table[k]||['Animalia','Vertebrados'])[1]};
 }
@@ -2092,7 +2104,7 @@ function researchRarityWeight(id){
  const tier=type==='Mammalia'?levels.mammalogy
   :type==='Aves'?levels.ornithology
   :(type==='Reptilia'||type==='Amphibia')?levels.herpetology
-  :type==='Actinopterygii'?levels.ichthyology:0;
+  :(type==='Actinopterygii'||type==='Chondrichthyes')?levels.ichthyology:0;
  if(!tier)return base;
  const multiplier=sp.rare==='Muy rara'?(tier>=2?1.45:1.10)
   :sp.rare==='Raro'?(tier>=2?1.65:1.30)
