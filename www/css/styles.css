@@ -818,3 +818,42 @@ button,select{font:inherit}
  .museum-v311-workicon svg{width:48px;height:48px}
  .museum-v311-workactions .btn{font-size:10px;min-height:30px}
 }
+
+
+/* Beta 3.15 · Instituto de Historia Natural en cinco ramas */
+.research-v315{min-width:0;overflow:hidden;gap:12px;background:linear-gradient(155deg,#fff8e9,#eaddc5);border:1px solid #c7b28a}
+.research-v315 .section{margin:0;color:#304d3a}
+.research-branch-tabs{display:flex;gap:7px;overflow-x:auto;max-width:100%;padding:4px 1px 9px;scrollbar-width:thin;overscroll-behavior-x:contain}
+.research-branch-tab{display:flex;flex-direction:column;gap:3px;align-items:flex-start;justify-content:center;flex:1 0 auto;min-height:53px;padding:8px 11px;border:1px solid #b9aa89;border-radius:11px;background:#f6ead3;color:#36523e;font:700 12px/1.25 system-ui,sans-serif;cursor:pointer;white-space:nowrap}
+.research-branch-tab small{font:600 10px system-ui,sans-serif;opacity:.8}
+.research-branch-tab.active{background:linear-gradient(150deg,#345d44,#244733);color:#fff3dc;border-color:#2b5b41;box-shadow:0 3px 8px #334a3526}
+.research-branch-tab:focus-visible{outline:3px solid #daaf58;outline-offset:2px}
+.research-branch-header{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:9px 12px;background:#e6d7b9;border-left:4px solid #52765b;border-radius:7px}
+.research-branch-header strong{font:700 16px Georgia,serif;color:#294433}
+.research-node-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,255px),1fr));gap:9px}
+.research-node-v315{display:flex;flex-direction:column;gap:8px;min-width:0;padding:12px;background:#fff9ed;border:1px solid #cbbd9d;border-radius:11px;box-shadow:0 2px 5px #7e6c4520}
+.research-node-v315.completed{background:#eef3df;border-color:#a6bc9b}
+.research-node-heading{display:flex;gap:8px;align-items:flex-start;color:#2e4e37}
+.research-node-heading strong{font:700 14px/1.3 Georgia,serif}
+.research-node-mark{font-size:17px;color:#917b47;flex:0 0 20px;text-align:center}
+.research-node-v315.completed .research-node-mark{color:#3f8157}
+.research-node-v315>.small{line-height:1.4}
+.research-prerequisites{display:flex;flex-wrap:wrap;gap:4px}
+.research-prerequisite{display:inline-block;font:600 10px/1.35 system-ui,sans-serif;padding:3px 6px;border:1px solid #d4be9a;border-radius:6px;background:#f5ebd7;color:#75583a;overflow-wrap:anywhere}
+.research-prerequisite.complete{background:#e6eedc;color:#416349;border-color:#acc7a8}
+.research-node-footer{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;border-top:1px dashed #cfb98f;padding-top:8px}
+.research-node-footer .small{font-size:11px}
+.research-node-footer .btn{min-height:36px;flex:0 0 auto}
+.research-progress-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:8px}
+.research-progress-summary>div{display:flex;flex-direction:column;gap:4px;padding:9px 10px;border:1px solid #ccb998;border-radius:8px;background:#f4e9d3}
+.research-progress-summary strong{color:#31533c;font:700 12px system-ui,sans-serif}
+@media(max-width:650px){
+ .research-v315{padding:11px 8px}
+ .research-branch-tabs{margin-inline:-3px}
+ .research-branch-tab{min-height:44px;padding:6px 9px;font-size:11px}
+ .research-branch-header{padding:8px 9px}
+ .research-node-grid{grid-template-columns:1fr}
+ .research-node-v315{padding:10px}
+ .research-node-footer{flex-wrap:nowrap}
+ .research-node-footer .btn{min-width:93px}
+}
