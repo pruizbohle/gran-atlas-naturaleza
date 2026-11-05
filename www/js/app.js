@@ -3324,6 +3324,17 @@ function resolveVoyageReward(job){
   const paleontology=Math.random();
   if(paleontology<0.025){addInventory('fossil_skull',1);pushLog('💀 Hallazgo raro: cráneo fósil.');}
   else if(paleontology<0.23){addInventory('fossil_tooth',1);pushLog('🦷 Hallazgo: diente fósil.');}
+  // Beta 3.15: una prospección EXTRA por expedición según Paleontología.
+  // Las probabilidades fósiles originales permanecen intactas; nunca se multiplican por censos.
+  const tier=Math.min(3,Math.max(0,state.upgrades.paleoTier||0));
+  if(tier){
+   const roll=Math.random();
+   const skull=tier===3?0.025:tier===2?0.012:0;
+   const tooth=tier===3?0.12:tier===2?0.08:0.025;
+   const fragment=tier===3?0.52:tier===2?0.38:0.24;
+   const item=roll<skull?'fossil_skull':roll<skull+tooth?'fossil_tooth':roll<skull+tooth+fragment?'fossil_fragment':null;
+   if(item){addInventory(item,1);pushLog('🦴 Prospección científica: '+ITEMS[item].name+'.');}
+  }
   // Hallazgos de artefactos sin disminuir el botín original.
   const artifactRoll=Math.random();
   const artifactItem=artifactRoll<0.13?'brass_shard':artifactRoll<0.20?'old_ink':artifactRoll<0.31?'carved_wood':null;
