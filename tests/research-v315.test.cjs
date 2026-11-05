@@ -26,7 +26,7 @@ function harness(){
  'window.__beta315={',
  'RESEARCH_NODES,RESEARCH_BRANCHES,RESEARCH_V315_BALANCE,REGIONS,SPECIES,',
  'researchRarityWeight,researchEncounterTargets,researchCensusCount,',
- 'researchBranchOf,encounter,eligibleSpecies,renderResearch,resolveVoyageReward,',
+ 'researchBranchOf,encounter,eligibleSpecies,automaticEligibleSpecies,automaticSearchCapacity,renderResearch,resolveVoyageReward,',
  'canBuy,buyNode,MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR,',
  'get state(){return state},',
  '};',
@@ -91,7 +91,7 @@ test('Encuentro grupal manual: 3 especies distintas ×3 registros, con un botín
 test('Los censos automáticos no superan el límite de 100 registros por especie y hora',()=>{
  const {api:g,random}=harness();
  g.state.currentRegion='HX-01-09';g.state.habitat='bosque';g.state.time='amanecer';g.state.season='primavera';
- const first=g.eligibleSpecies(g.state.currentRegion,g.state.habitat,g.state.time,g.state.season)[0];
+ const first=g.automaticEligibleSpecies(g.state.currentRegion,g.state.season)[0];
  const at=Date.now(),hour=Math.floor(at/3600000);
  g.state.autoHourly[hour+':'+first]=99;
  g.state.upgrades.censusTier=2;g.state.upgrades.autoCensus=1;
@@ -121,4 +121,39 @@ test('Una disciplina mejora ponderación de raros sin borrar la posibilidad de o
  assert.ok(newer>old);
  const common=Object.keys(g.SPECIES).find(id=>g.SPECIES[id].kind==='cat'&&g.SPECIES[id].rare==='Común');
  if(common)assert.equal(g.researchRarityWeight(common),12);
+});
+
+test('Sáhara: el equipo busca por toda la región aunque el filtro manual sea desierto/día',()=>{
+ const {api:g,random}=harness();
+ const region='HX-06-07',season='verano',at=Date.now(),hour=Math.floor(at/3600000);
+ g.state.currentRegion=region;
+ g.state.habitat='desierto';g.state.time='dia';g.state.season=season;
+ g.state.upgrades.groupTier=3;g.state.upgrades.autoGroup=1;
+ g.state.upgrades.censusTier=2;g.state.upgrades.autoCensus=1;
+ const manual=g.eligibleSpecies(region,'desierto','dia',season);
+ const all=g.automaticEligibleSpecies(region,season);
+ assert.ok(all.length>manual.length,'debe incluir especies de otros horarios válidos');
+ const manualSnapshot=[g.state.habitat,g.state.time,g.state.season];
+ for(const id of manual)g.state.autoHourly[hour+':'+id]=100;
+ assert.ok(g.automaticSearchCapacity(at).remaining>0,'otras especies tienen cupos');
+ random(0);
+ g.encounter('auto',at,true);
+ assert.ok(Object.keys(g.state.sightings).length>=1,'se observan especies fuera del filtro manual saturado');
+ assert.deepEqual([g.state.habitat,g.state.time,g.state.season],manualSnapshot);
+ assert.ok(Object.values(g.state.autoHourly).every(v=>v<=100));
+});
+test('Diario: registra claramente la pausa automática sin alterar los avistamientos manuales',()=>{
+ const {api:g}=harness();
+ const now=Date.now(),hour=Math.floor(now/3600000);
+ g.state.currentRegion='HX-06-07';
+ g.state.season='verano';g.state.habitat='desierto';g.state.time='dia';
+ const ids=g.automaticEligibleSpecies(g.state.currentRegion,g.state.season);
+ assert.ok(ids.length>0);
+ for(const id of ids)g.state.autoHourly[hour+':'+id]=100;
+ assert.equal(g.automaticSearchCapacity(now).remaining,0);
+ const before=Object.values(g.state.sightings).reduce((a,b)=>a+b,0);
+ g.encounter('auto',now,true);
+ assert.equal(Object.values(g.state.sightings).reduce((a,b)=>a+b,0),before);
+ g.encounter('manual',now,true);
+ assert.ok(Object.values(g.state.sightings).reduce((a,b)=>a+b,0)>before,'manual continúa disponible');
 });
