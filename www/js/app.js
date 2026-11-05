@@ -2693,55 +2693,50 @@ function renderJournal(){
   </div>`;
 }
 
+// Beta 3.15: cinco ramas filtrables; los nodos antiguos conservan ID y compras.
+// La presentación por tarjetas sustituye al árbol de 7 columnas difícil de usar en móvil.
 function renderResearch(){
-  const layout={
-    fondos_x1:[3,1],fondos_x10:[4,1],fondos_x100:[5,1],fondos_x1000:[6,1],
-    prismaticos_1:[1,1],prismaticos_2:[2,1],cuaderno_1:[1,2],sociedad_1:[2,2],sociedad_2:[3,2],gabinete_1:[4,2],
-    metodo_1:[1,3],metodo_2:[2,3],metodo_3:[3,3],metodo_4:[4,3],
-    novato:[1,4],capacitacion_1:[2,4],capacitacion_2:[3,4],astillero:[4,4],
-    rutas_1:[5,4],rutas_2:[6,4],casco_1:[5,5],flota_1:[6,5],asia_1:[7,4],africa_1:[7,5],nuevo_mundo_1:[7,6],norteamerica_1:[7,7]
-  };
-  const nodeMap=Object.fromEntries(RESEARCH_NODES.map(n=>[n.id,n]));
-  const nodes=RESEARCH_NODES.map(node=>{
-    const [col,row]=layout[node.id]||[1,1];
-    const bought=state.purchases[node.id]||0;
-    const maxed=(node.once && bought) || (node.repeat && node.max && bought>=node.max);
-    const disabled=!canBuy(node) && !maxed;
-    return `<div class="skill-node ${maxed?'done':''} ${disabled?'locked':''}" style="grid-column:${col};grid-row:${row}" data-id="${node.id}">
-      <div class="skill-star">${maxed?'⭐':'✦'}</div>
-      <strong>${node.name}</strong>
-      <div class="small">${node.desc}</div>
-      <div class="tiny">£${node.money} · ${node.knowledge} conocimiento${node.reqItem?` · ${ITEMS[node.reqItem].name} ×${node.reqItemQty||1}`:''}${node.repeat?` · ${bought}/${node.max||'∞'}`:''}</div>
-      <button class="btn ${maxed?'gold':'alt'}" data-action="buy-node" data-id="${node.id}" ${disabled?'disabled':''}>${maxed?'Adquirido':'Investigar'}</button>
-    </div>`;
+ const selected=RESEARCH_BRANCHES.some(b=>b.id===state.researchBranch)?state.researchBranch:'exploracion';
+ const branch=RESEARCH_BRANCHES.find(b=>b.id===selected);
+ const branchNodes=RESEARCH_NODES.filter(n=>researchBranchOf(n)===selected);
+ const tabs=RESEARCH_BRANCHES.map(b=>{
+  const all=RESEARCH_NODES.filter(n=>researchBranchOf(n)===b.id);
+  const done=all.filter(n=>n.once?!!state.purchases[n.id]:n.max?(state.purchases[n.id]||0)>=n.max:!!state.purchases[n.id]).length;
+  return `<button type="button" class="research-branch-tab ${selected===b.id?'active':''}" data-action="research-branch" data-id="${b.id}" aria-pressed="${selected===b.id}"><span>${b.icon} ${b.name}</span><small>${done}/${all.length}</small></button>`;
+ }).join('');
+ const cards=branchNodes.map(node=>{
+  const bought=state.purchases[node.id]||0;
+  const maxed=!!((node.once&&bought)||(node.repeat&&node.max&&bought>=node.max));
+  const available=canBuy(node);
+  const reqs=[...(node.req?[node.req]:[]),...(node.reqAll||[])];
+  const requirement=reqs.map(id=>{
+   const found=RESEARCH_NODES.find(n=>n.id===id);
+   return `<span class="research-prerequisite ${state.purchases[id]?'complete':'pending'}">${state.purchases[id]?'✓':'🔒'} ${esc(found?.name||id)}</span>`;
   }).join('');
-  const links=RESEARCH_NODES.filter(n=>n.req).map(n=>{
-    const [c1,r1]=layout[n.req]||[1,1], [c2,r2]=layout[n.id]||[1,1];
-    return `<div class="skill-link" style="grid-column:${Math.min(c1,c2)}/${Math.max(c1,c2)+1};grid-row:${Math.min(r1,r2)}/${Math.max(r1,r2)+1}"></div>`;
-  }).join('');
-  return `<div class="grid-2 research-wrap">
-    <section class="card stack">
-      <h3 class="section">🔬 Investigación</h3>
-      <div class="small">El sistema ahora se muestra como un árbol de habilidades: observación, sociedad, automatización y cartografía.</div>
-      <div class="skill-tree"><div class="skill-tree-grid">${links}${nodes}</div></div>
-    </section>
-    <section class="card stack">
-      <h3 class="section">📐 Estado de desarrollo</h3>
-      <div class="req"><strong>Prismáticos</strong><div class="small">Nivel: ${state.upgrades.prism}</div></div>
-      <div class="req"><strong>Cuaderno</strong><div class="small">Mejora activa: ${state.upgrades.journal? 'Sí':'No'}</div></div>
-      <div class="req"><strong>Método de rastreo</strong><div class="small">Nivel: ${state.upgrades.autoTier} · intervalo actual: ${autoInterval()} s</div></div>
-      <div class="req"><strong>Capacitación</strong><div class="small">Nivel: ${state.upgrades.training}</div></div>
-      <div class="req"><strong>Astillero</strong><div class="small">${state.upgrades.shipyard?'Preparado para expediciones':'Aún no construido'}</div></div>
-      <div class="req"><strong>Sociedad</strong><div class="small">Subvención +${Math.round((state.upgrades.grantBonus||0)*100)}% · canje de notas +${Math.round((state.upgrades.noteBonus||0)*100)}%</div></div>
-      <div class="req"><strong>Expediciones</strong><div class="small">Rutas navales ${state.upgrades.routeTier||0} · tiempo ×${(state.upgrades.voyageTime||1).toFixed(2)} · destacamentos simultáneos ${maxVoyages()}</div></div>
-      <div class="req"><strong>África</strong><div class="small">${state.upgrades.africaUnlocked?'Estudios cartográficos completados.':'Pendiente: Mapa de África e investigación.'}</div></div>
-      <div class="req"><strong>Nuevo Mundo</strong><div class="small">${state.upgrades.newWorldUnlocked?'Navegación atlántica habilitada.':'Pendiente: Cuadrante transatlántico e investigación.'}</div></div>
-      <div class="req"><strong>Norteamérica</strong><div class="small">${state.upgrades.northAmericaUnlocked?'Cartografía investigada.':'Pendiente: fragmentos de mapa e investigación.'}</div></div>
-      <div class="req"><strong>Asia</strong><div class="small">${state.upgrades.asiaUnlocked?'Cartografía completada.':'Aún bloqueada. Requiere el Mapa de Asia y la investigación final.'}</div></div>
-    </section>
-  </div>`;
+  const item=node.reqItem?ITEMS[node.reqItem]:null;
+  const itemReq=item?`<span class="research-prerequisite ${(state.inventory[node.reqItem]||0)>=(node.reqItemQty||1)?'complete':'pending'}">${item.emoji} ${esc(item.name)} ${state.inventory[node.reqItem]||0}/${node.reqItemQty||1}${node.reqItemConsume===false?' · no se consume':''}</span>`:'';
+  return `<article class="research-node-v315 ${maxed?'completed':''}">
+    <div class="research-node-heading"><span class="research-node-mark">${maxed?'★':available?'✦':'○'}</span><strong>${esc(node.name)}</strong></div>
+    <div class="small">${esc(node.desc)}</div>
+    <div class="research-prerequisites">${requirement}${itemReq}</div>
+    <div class="research-node-footer"><span class="small">£${fmt(node.money)} · ${fmt(node.knowledge)} conocimiento${node.repeat?` · ${bought}/${node.max||'∞'}`:''}</span>
+      <button class="btn ${maxed?'gold':available?'':'alt'}" data-action="buy-node" data-id="${node.id}" ${maxed||!available?'disabled':''}>${maxed?'Investigado':available?'Investigar':'Bloqueado'}</button>
+    </div>
+   </article>`;
+ }).join('');
+ return `<section class="card stack research-v315">
+   <h3 class="section">🔬 Instituto de Historia Natural</h3>
+   <p class="small">Cinco ramas de investigación. Los descubrimientos y las compras de versiones anteriores se conservan. Los costes nuevos son provisionales para pruebas.</p>
+   <nav class="research-branch-tabs" aria-label="Ramas de investigación">${tabs}</nav>
+   <div class="research-branch-header"><strong>${branch.icon} ${branch.name}</strong><span class="small">${branch.description}</span></div>
+   <div class="research-node-grid">${cards}</div>
+   <section class="research-progress-summary">
+     <div><strong>🔭 Exploración</strong><span class="small">Grupos: nivel ${state.upgrades.groupTier||0}/3 · Censo: ${state.upgrades.censusTier>=2?'×3':state.upgrades.censusTier?'×2':'×1'} · Automático: ${state.upgrades.autoGroup?'grupos activos':'sin grupos'} / ${state.upgrades.autoCensus?'censo ×2':'sin multiplicador'}</span></div>
+     <div><strong>🦉 Naturalismo</strong><span class="small">Mamíferos ${state.upgrades.mammalogy||0}/2 · Aves ${state.upgrades.ornithology||0}/2 · Herpetología ${state.upgrades.herpetology||0}/2 · Peces ${state.upgrades.ichthyology||0}/2 · Etología ${state.upgrades.ethology||0}/2</span></div>
+     <div><strong>🦴 Museología</strong><span class="small">Paleontología ${state.upgrades.paleoTier||0}/3 · Ingresos del Museo ${state.upgrades.museumIncomeTier?'+15 %':'sin mejora'}</span></div>
+   </section>
+ </section>`;
 }
-
 
 const SCIENTIFIC_MISSIONS=[
   {id:'censo_50', name:'Primer censo de fauna', desc:'Documenta 50 avistamientos.', target:50,
@@ -3455,6 +3450,7 @@ function bindPanel(){
     if(act==='field-aid'){ fieldAid(id); }
     if(act==='select-journal'){ if(!currentRegion().species.includes(id))return; state.selectedJournal=id; journalSheetScrollTop=0; renderPanel(); persist(); }
     if(act==='advance-species'){ advanceSpecies(id); }
+    if(act==='research-branch' && RESEARCH_BRANCHES.some(b=>b.id===id)){state.researchBranch=id;renderPanel();persist();}
     if(act==='buy-node'){ buyNode(id); }
     if(act==='publish'){ publishMonograph(id); }
     if(act==='society-tab'){state.societyView=id; renderPanel(); persist();}
