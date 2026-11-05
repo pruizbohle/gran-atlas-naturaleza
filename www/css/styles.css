@@ -857,3 +857,20 @@ button,select{font:inherit}
  .research-node-footer{flex-wrap:nowrap}
  .research-node-footer .btn{min-width:93px}
 }
+
+/* Beta 3.15.2 · Indicadores de rendimiento calculados desde el motor */
+.field-buff-summary{padding:8px 10px;background:#f2e6cd;border:1px solid #cbb58d;border-radius:10px;margin:5px 0 8px;display:grid;gap:6px}
+.field-buff-row{display:flex;align-items:flex-start;justify-content:space-between;gap:5px 12px;flex-wrap:wrap;font:600 11px/1.4 system-ui,sans-serif;color:#31503b}
+.field-buff-row span{flex:1 1 210px;min-width:0}
+.field-buff-row strong{color:#1d5032}
+.field-buff-row.secondary{color:#6d624d;font-weight:500}
+.field-buff-note{font:500 10px/1.35 system-ui,sans-serif;color:#73664e}
+.research-live-buffs{padding:11px 12px;border:1px solid #acbd99;background:#eaf0df;border-radius:10px;display:grid;gap:5px;line-height:1.35}
+.research-live-buffs strong{color:#2e5338}
+.research-live-buffs .small{color:#435b44}
+@media(max-width:650px){
+ .field-buff-summary{padding:7px 8px;margin:5px 0 7px}
+ .field-buff-row{gap:4px;font-size:10px}
+ .field-buff-row span{flex-basis:100%}
+ .research-live-buffs{padding:9px}
+}
