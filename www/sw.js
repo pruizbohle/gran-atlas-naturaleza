@@ -1,5 +1,5 @@
-const CACHE='gran-atlas-v3.19.2-herpetologia-1';
-const ASSETS=['./','./index.html','./laboratorio-peces.html','./laboratorio-herpetologia.html','./js/herp-art-v3192.js','./js/fish-art-v3191.js','./css/styles.css','./js/app.js','./js/mobile-ui.js','./js/save-manager.js','./manifest.webmanifest','./icons/atlas-icon.svg','./icons/atlas-192.png','./icons/atlas-512.png'];
+const CACHE='gran-atlas-v3.19.2b-herpetologia-1';
+const ASSETS=['./','./index.html','./laboratorio-peces.html','./laboratorio-herpetologia.html','./js/herp-art-v3192.js','./js/lab/herp-art-v3192-before.js','./js/lab/herp-specimens-v3192b.js','./js/fish-art-v3191.js','./css/styles.css','./js/app.js','./js/mobile-ui.js','./js/save-manager.js','./manifest.webmanifest','./icons/atlas-icon.svg','./icons/atlas-192.png','./icons/atlas-512.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('gran-atlas-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
@@ -9,7 +9,7 @@ self.addEventListener('fetch',event=>{
  event.respondWith(fetch(event.request).then(response=>{
    if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy)).catch(()=>{});}
    return response;
- }).catch(()=>caches.match(event.request).then(saved=>saved||caches.match('./index.html'))));
+ }).catch(()=>caches.match(event.request,{ignoreSearch:true}).then(saved=>saved||caches.match('./index.html'))));
 });
 
 

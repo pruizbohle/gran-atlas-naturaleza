@@ -1,94 +1,63 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#294337">
-<title>Laboratorio de anfibios y reptiles · El Gran Atlas 3.19.2</title>
+<title>Laboratorio de anfibios y reptiles · El Gran Atlas 3.19.2b</title>
 <style>
-:root{font:15px/1.5 system-ui,sans-serif;background:#eae1cd;color:#283b32}
-*{box-sizing:border-box}body{margin:0 auto;padding:18px;max-width:1150px}
-h1,h2{font-family:Georgia,serif}h1{font-size:clamp(23px,4vw,34px);margin:0}
-small,.hint{color:#617267}.top{display:flex;justify-content:space-between;gap:12px;align-items:center}
-a,button{border:1px solid #365640;border-radius:9px;padding:9px 12px;text-decoration:none;font:inherit;background:#294938;color:white;cursor:pointer}
-.controls{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.status{font-weight:700;margin:8px 0 20px}
-.group{margin:22px 0 10px;font-size:19px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
-.card{background:#f9f1df;border:1px solid #d2c19c;border-radius:14px;padding:9px;min-width:0}
-.figure{height:125px;background:#e9dec6;border-radius:9px;display:grid;place-items:center}
-.figure svg{height:113px;width:113px}.card h3{margin:9px 0 1px;font:700 15px/1.2 Georgia,serif}
-.card p{margin:0;color:#677368;font-size:12px}.family{font:600 11px system-ui;color:#627b66}
-.silhouette .figure svg [fill]:not([fill="none"]){fill:#263139!important}
-.silhouette .figure svg [stroke]:not([stroke="none"]){stroke:#263139!important}
-.silhouette .figure svg circle{visibility:hidden}
-@media(max-width:600px){body{padding:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.figure{height:105px}.figure svg{width:90px;height:90px}}
-</style>
-</head><body><header class="top"><div><h1>Herpetario ilustrado</h1><small>El Gran Atlas · 3.19.2 · Anfibios y reptiles</small></div><a href="./">Volver al juego</a></header>
-<p>Control visual de siluetas, proporciones, colores y rasgos distintivos. La clasificación aquí es artística: no modifica los datos científicos ni el progreso guardado.</p>
-<div class="controls"><button id="toggle">Mostrar siluetas negras</button><button id="size">Ampliar dibujos</button></div>
-<div class="status" id="status">Cargando ilustraciones…</div><main id="gallery"></main>
+:root{font:15px/1.5 system-ui,sans-serif;background:#eae1cd;color:#283b32;--sprite-size:56px}
+*{box-sizing:border-box}body{margin:0 auto;padding:22px;max-width:1280px}h1,h2{font-family:Georgia,serif}h1{font-size:clamp(24px,4vw,36px);line-height:1.15;margin:4px 0}.edition{letter-spacing:.12em;text-transform:uppercase;font-size:11px;color:#617267}
+a{color:#294938}.top{display:flex;justify-content:space-between;gap:18px;align-items:center}.back{border:1px solid #365640;border-radius:8px;padding:9px 12px;text-decoration:none;white-space:nowrap}
+.intro{max-width:850px}.controls{display:flex;gap:12px 20px;flex-wrap:wrap;align-items:center;padding:16px;background:#f9f1df;border:1px solid #d2c19c;border-radius:12px}.controls label{display:flex;gap:7px;align-items:center;font-size:13px}select{font:inherit;color:inherit;background:#fffaf0;border:1px solid #a9ac96;border-radius:5px;padding:6px}input{accent-color:#365640}select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #bc8848;outline-offset:3px}
+.status{font-size:13px;color:#617267}.group{margin:28px 0 10px;font-size:21px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}.card{background:#f9f1df;border:1px solid #d2c19c;border-radius:12px;padding:12px;min-width:0}.figures{display:flex;align-items:stretch;gap:6px}.figure{flex:1;min-width:0;text-align:center;margin:0;background:#e9dec6;border-radius:7px;padding:6px 0}.art{height:130px;display:grid;place-items:center}.art svg{width:var(--sprite-size);height:var(--sprite-size);flex:none}figcaption{font-size:10px;letter-spacing:.04em;color:#617267}.card h3{margin:12px 0 3px;font:700 16px/1.2 Georgia,serif}.card p{margin:0;color:#617267;font-size:12px}.reference{display:inline-block;font-size:10px;color:#73552e;margin-top:5px}.before{display:none}.compare .before{display:block}
+.silhouette .art svg [data-herp-detail],.silhouette .art svg [data-herp-aura]{display:none}.silhouette .art svg [fill]:not([fill="none"]){fill:#263139!important}.silhouette .art svg [stroke]:not([stroke="none"]){stroke:#263139!important}
+footer{border-top:1px solid #d2c19c;margin-top:28px;padding-top:12px;font-size:12px;color:#617267}
+@media(max-width:600px){body{padding:12px}.top{align-items:flex-start}.back{font-size:12px}.grid{grid-template-columns:1fr}.controls{gap:12px}.card{padding:10px}.art{height:132px}}
+</style></head><body class="compare"><header class="top"><div><div class="edition">El Gran Atlas · revisión artística 3.19.2b</div><h1>Herpetario ilustrado</h1></div><a class="back" href="./">Volver al juego</a></header>
+<p class="intro">Compara contornos, postura y anatomía al tamaño del Bestiario. El dibujo anterior corresponde a 3.19.2. Las referencias anatómicas están identificadas y no añaden especies al juego.</p>
+<div class="controls" aria-label="Controles de revisión artística">
+<label>Tamaño <select id="size"><option value="56">56 px · Bestiario</option><option value="80">80 px</option><option value="120">120 px · detalle</option></select></label>
+<label>Coloración <select id="skin"><option value="normal">Normal</option><option value="albino">Albina / leucística</option><option value="melanico">Melánica</option><option value="alfa">Notable</option></select></label>
+<label>Familia <select id="family"><option value="">Todas</option></select></label>
+<label><input id="compare" type="checkbox" checked> Antes / después</label>
+<label><input id="silhouette" type="checkbox"> Silueta</label>
+<label><input id="references" type="checkbox" checked> Referencias anatómicas</label>
+</div>
+<p class="status" id="status" role="status" aria-live="polite">Cargando ilustraciones…</p><main id="gallery"></main>
 <noscript>Activa JavaScript para ver las ilustraciones.</noscript>
-<script src="js/herp-art-v3192.js?v=3.19.2"></script>
+<footer>Herramienta independiente de revisión. No accede a partidas guardadas. El juego utiliza exclusivamente el motor 3.19.2b; la copia anterior se carga solo en este laboratorio.</footer>
+<script src="js/herp-art-v3192.js?v=3.19.2b"></script>
+<script src="js/lab/herp-art-v3192-before.js?v=3.19.2"></script>
+<script src="js/lab/herp-specimens-v3192b.js?v=3.19.2b"></script>
 <script>
 (function(){
- const groups=[
- ['Anfibios',[
-  ['Rana bermeja','Rana temporaria','reptile','#8b9875'],
-  ['Rana goliat','Conraua goliath','salamander','#7a855d'],
-  ['Rana de uñas africana','Xenopus laevis','salamander','#778b88'],
-  ['Sapo corredor','Epidalea calamita','reptile','#a49c7a'],
-  ['Rana de lluvia del desierto','Breviceps macrops','salamander','#c0a881'],
-  ['Salamandra común','Salamandra salamandra','salamander','#424b3b'],
-  ['Salamandra gigante china','Andrias davidianus','salamander','#796d55'],
-  ['Tritón crestado','Triturus cristatus','salamander','#6e7e61']
- ]],
- ['Tortugas y cocodrilos',[
-  ['Tortuga mediterránea','Testudo hermanni','tortoise','#95875c'],
-  ['Tortuga radiada','Astrochelys radiata','tortoise','#a2945b'],
-  ['Tortuga laúd','Dermochelys coriacea','tortoise','#65788c'],
-  ['Galápago caspio','Mauremys caspica','tortoise','#697f69'],
-  ['Cocodrilo del Nilo','Crocodylus niloticus','crocodile','#63795d'],
-  ['Cocodrilo de hocico estrecho','Mecistops cataphractus','crocodile','#6b7158']
- ]],
- ['Serpientes',[
-  ['Cobra india','Naja naja','snake','#7a7964'],
-  ['Víbora cornuda','Cerastes cerastes','snake','#c3a474'],
-  ['Pitón reticulada','Malayopython reticulatus','reptile','#866f52'],
-  ['Mamba negra','Dendroaspis polylepis','snake','#546766'],
-  ['Krait común','Bungarus caeruleus','snake','#64727b'],
-  ['Culebra de collar','Natrix natrix','snake','#6a8668'],
-  ['Lución europeo','Anguis fragilis','reptile','#8c8066']
- ]],
- ['Lagartos y gecos',[
-  ['Camaleón pantera','Furcifer pardalis','lizard','#51969c'],
-  ['Camaleón de Jackson','Trioceros jacksonii','lizard','#6b9e76'],
-  ['Gecko tokay','Gekko gecko','lizard','#5b9eaa'],
-  ['Geco cola de hoja satánico','Uroplatus phantasticus','lizard','#816b55'],
-  ['Geco diurno gigante','Phelsuma grandis','lizard','#40a26b'],
-  ['Dragón volador común','Draco volans','reptile','#8ca785'],
-  ['Varano de Bengala','Varanus bengalensis','lizard','#6b805b'],
-  ['Dragón de Komodo','Varanus komodoensis','reptile','#7e7762'],
-  ['Lagarto egipcio de cola espinosa','Uromastyx aegyptia','lizard','#a98b64'],
-  ['Lagarto ocelado','Timon lepidus','reptile','#4f9878']
- ]]
- ];
- const out=document.getElementById('gallery'),status=document.getElementById('status'),fn=window.ATLAS_HERP_ART_V3192;
- if(typeof fn!=='function'){status.textContent='Error: no cargó js/herp-art-v3192.js';status.style.color='#a32d2d';return;}
- let count=0;
- for(const [title,items] of groups){
-  const h=document.createElement('h2');h.className='group';h.textContent=title;out.append(h);
-  const grid=document.createElement('section');grid.className='grid';out.append(grid);
-  for(const [name,latin,kind,color] of items){
-   const markup=fn({name,latin,kind,color},color,'normal');
-   const family=(markup&&markup.match(/data-herp-family="([^"]+)"/)||[])[1]||'sin clasificar';
-   if(markup)count++;
-   const card=document.createElement('article');card.className='card';
-   const image=document.createElement('div');image.className='figure';image.innerHTML=markup||'Sin sprite';
-   const label=document.createElement('h3');label.textContent=name;
-   const subtitle=document.createElement('p');subtitle.textContent=latin;
-   const tax=document.createElement('div');tax.className='family';tax.textContent=family;
-   card.append(image,label,subtitle,tax);grid.append(card);
+ 'use strict';
+ const $=id=>document.getElementById(id),fn=globalThis.ATLAS_HERP_ART_V3192,before=globalThis.ATLAS_HERP_ART_V3192_BEFORE;
+ const specimens=globalThis.ATLAS_HERP_LAB_SPECIMENS;
+ if(typeof fn!=='function'||typeof before!=='function'||!Array.isArray(specimens)){$('status').textContent='No se pudieron cargar las ilustraciones. Recarga la página.';return;}
+ const families=[['frog','Ranas'],['toad','Sapos y ranas de lluvia'],['salamander','Salamandras terrestres'],['newt','Tritones'],['giant-salamander','Salamandras gigantes'],['land-tortoise','Tortugas terrestres'],['pond-turtle','Tortugas semiacuáticas'],['sea-turtle','Tortugas marinas'],['cobra','Cobras'],['viper','Víboras'],['python','Pitones y boas'],['mamba','Mambas'],['krait','Kraits'],['snake','Culebras'],['glass-lizard','Lagartos sin patas'],['lizard','Lagartos'],['spiny-lizard','Lagartos de cola espinosa'],['monitor','Varanos'],['gecko','Gecos'],['chameleon','Camaleones'],['crocodile','Cocodrilos'],['slender-crocodile','Cocodrilos de hocico estrecho'],['flying-lizard','Lagartos voladores']];
+ const rows=specimens.map(sp=>({sp,family:fn(sp,sp.color,'normal').match(/data-herp-family="([^"]+)"/)[1]}));
+ for(const [id,title] of families){const option=document.createElement('option');option.value=id;option.textContent=title;$('family').append(option);}
+ function figure(markup,caption,old){const fig=document.createElement('figure');fig.className='figure'+(old?' before':'');const art=document.createElement('div');art.className='art';art.innerHTML=markup||'';const label=document.createElement('figcaption');label.textContent=caption;fig.append(art,label);return fig;}
+ function draw(){
+  $('gallery').replaceChildren();const skin=$('skin').value;let count=0,refs=0,groups=0;
+  for(const [id,title] of families){
+   if($('family').value&&$('family').value!==id)continue;
+   const items=rows.filter(row=>row.family===id&&($('references').checked||!row.sp.reference));if(!items.length)continue;
+   groups++;const heading=document.createElement('h2');heading.className='group';heading.textContent=title+' · '+items.length;const grid=document.createElement('section');grid.className='grid';grid.setAttribute('aria-label',title);$('gallery').append(heading,grid);
+   for(const {sp} of items){
+    if(sp.reference)refs++;else count++;
+    const color=skin==='albino'?'#f2f3f4':skin==='melanico'?'#0c0f12':sp.color;
+    const card=document.createElement('article');card.className='card';if(sp.id)card.dataset.speciesId=sp.id;
+    const figures=document.createElement('div');figures.className='figures';figures.append(figure(before(sp,color,skin),'Antes · 3.19.2',true),figure(fn(sp,color,skin),'Después · 3.19.2b',false));
+    const name=document.createElement('h3');name.textContent=sp.name;const latin=document.createElement('p');latin.textContent=sp.latin;card.append(figures,name,latin);
+    if(sp.reference){const tag=document.createElement('span');tag.className='reference';tag.textContent='Referencia anatómica · fuera del catálogo';card.append(tag);}grid.append(card);
+   }
   }
+  $('status').textContent=count+' especies del catálogo · '+refs+' referencias anatómicas · '+groups+' familias visuales · '+$('size').value+' × '+$('size').value+' px';
  }
- status.textContent=count+' de 31 ilustraciones cargadas. Versión de galería 3.19.2';
- document.getElementById('toggle').onclick=function(){document.body.classList.toggle('silhouette');this.textContent=document.body.classList.contains('silhouette')?'Restaurar colores':'Mostrar siluetas negras';};
- let big=false;document.getElementById('size').onclick=function(){big=!big;document.querySelectorAll('.figure').forEach(x=>x.style.height=big?'190px':'');document.querySelectorAll('.figure svg').forEach(x=>{x.style.height=big?'180px':'';x.style.width=big?'180px':'';});this.textContent=big?'Reducir dibujos':'Ampliar dibujos';};
+ $('size').onchange=()=>{document.documentElement.style.setProperty('--sprite-size',$('size').value+'px');draw();};
+ $('skin').onchange=$('family').onchange=$('references').onchange=draw;
+ $('compare').onchange=()=>document.body.classList.toggle('compare',$('compare').checked);
+ $('silhouette').onchange=()=>document.body.classList.toggle('silhouette',$('silhouette').checked);
+ draw();
 })();
-</script>
-</body></html>
+</script></body></html>

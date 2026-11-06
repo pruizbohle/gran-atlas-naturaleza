@@ -1,3 +1,7 @@
+# El Gran Atlas v3.19.2b · Herpetario ilustrado
+
+Pulido artístico de 45 especies del catálogo. [Cambios, revisión visual y validación](README_V3192b.md).
+
 # El Gran Atlas v2.3 — Asia completa / Inventario por pestañas
 
 - 11 zonas nuevas de Asia basadas en el Excel original: 21 regiones de Asia (31 regiones totales contando Europa).

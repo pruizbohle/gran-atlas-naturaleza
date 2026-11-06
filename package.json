@@ -1,6 +1,6 @@
 {
   "name": "el-gran-atlas-mobile",
-  "version": "3.19.2",
+  "version": "3.19.2-b",
   "private": true,
   "scripts": {
     "cap:add:android": "npx cap add android",
