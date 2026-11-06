@@ -1,0 +1,22 @@
+{
+  "validation": {
+    "checked": 3300,
+    "invalid": [],
+    "maxBytes": 4853
+  },
+  "contours": {
+    "unique": 269,
+    "duplicates": []
+  },
+  "comparisons": 10,
+  "ui": {
+    "field": 1,
+    "bestiary": 269,
+    "journal": 16,
+    "museum": 1
+  },
+  "offline": true,
+  "saveRoundtrip": true,
+  "mobileViewport": "390x844",
+  "errors": []
+}
