@@ -26,6 +26,80 @@ function art(sp,color,skin){
  const commonTail=p("M30 56L9 39Q16 56 9 74L30 61Z",dark);
  const commonFins=p("M45 46L51 32L60 48Z",dark)+p("M47 64L39 77L62 64Z",dark);
  const scales=(fill=dark)=>Array.from({length:9},(_,i)=>dot(40+(i%3)*8,51+Math.floor(i/3)*5,1.15,fill)).join("");
+
+ // Perfiles icónicos: dibujos amplios y específicos, legibles a 56 px.
+ // Un pez se distingue por contorno antes que por color, manchas o escamas.
+ const specific=(family,parts)=>wrap(family,parts,skin);
+ if(/tiburon blanco|carcharodon carcharias/.test(name+" "+latin)){
+  return specific("tiburon-blanco",
+    p("M9 62L3 42L19 51L29 49Q46 42 69 48L89 53L97 58L88 64Q61 73 29 66L19 65L4 80Z",base)
+    +p("M41 48L55 18L63 49Z",dark)+p("M49 67L42 83L66 67Z",dark)
+    +p("M33 62Q65 70 92 61Q64 77 31 67Z",belly,"none",0)
+    +gills(73,56,4)+eyeMark(84,53)
+    +line("M87 63l-2-2-2 2-2-2-2 2",ink,1.5));
+ }
+ if(/tiburon de puntas negras|carcharhinus melanopterus/.test(name+" "+latin)){
+  return specific("tiburon-arrecife",
+    p("M12 63L4 45L21 54Q42 45 68 52L88 56L97 60L86 65Q58 70 29 65L19 64L4 78Z",base)
+    +p("M43 51L53 25L62 52Z",pale)+p("M50 30L53 25L57 34Z","#252d38",ink,1)
+    +p("M49 65L43 77L62 65Z",dark)+p("M45 68L43 77L48 73Z","#252d38",ink,1)
+    +gills(73,57,4)+eyeMark(83,56)+line("M23 63Q54 70 87 64",belly,2.5));
+ }
+ if(/carpa comun|cyprinus carpio/.test(name+" "+latin)){
+  return specific("carpa",
+    p("M24 55L6 38L12 56L6 75Z",dark)
+    +p("M22 54Q26 36 48 33Q76 32 89 50Q92 64 74 74Q43 79 25 63Z",base)
+    +p("M36 38Q46 20 66 36Z",dark)
+    +p("M47 69L42 83L67 72Z",dark)
+    +p("M35 58Q55 67 80 56Q68 77 39 67Z",pale,"none",0)
+    +Array.from({length:15},(_,i)=>line("M"+(35+(i%5)*8)+" "+(43+Math.floor(i/5)*8)+"q4-2 5 3",dark,1.4)).join("")
+    +eyeMark(78,49)+line("M85 59q7 2 9 7m-9-5q7 0 11-3",dark,2));
+ }
+ if(/tenca|tinca tinca/.test(name+" "+latin)){
+  return specific("tenca",
+    p("M23 54L8 43L10 68Z",dark)
+    +p("M23 54Q31 42 53 40Q75 41 87 53Q89 70 62 73Q35 76 23 61Z",base)
+    +p("M47 41L54 33L65 43Z",dark)+p("M47 69L39 79L65 69Z",dark)
+    +p("M37 59Q60 66 83 59Q65 76 43 68Z",pale,"none",0)
+    +eyeMark(78,52)+line("M84 60q4 1 8 4",ink,2));
+ }
+ if(/perca europea|perca fluviatilis/.test(name+" "+latin)){
+  return specific("perca",
+    p("M25 55L8 40L9 73Z",dark)
+    +p("M24 53Q30 39 54 40Q77 42 88 55Q78 75 52 72Q34 69 24 60Z",base)
+    +p("M32 44L36 22L43 36L49 21L56 39L62 26L70 46Z",pale)
+    +p("M46 68L42 85L65 71Z",dark)
+    +Array.from({length:5},(_,i)=>line("M"+(39+i*8)+" "+(42+i%2*2)+"l-2 24",dark,3)).join("")
+    +p("M72 60Q83 64 89 58", "none",ink,2)+eyeMark(79,52));
+ }
+ if(/pez mandarin chino|siniperca chuatsi/.test(name+" "+latin)){
+  return specific("mandarin-chino",
+    p("M24 58L6 41L12 57L6 75Z",dark)
+    +p("M23 55Q34 39 51 40Q76 40 89 56L83 70Q49 76 29 66Z",base)
+    +p("M31 45L37 24L44 38L49 23L56 39L61 27L70 43Z",dark)
+    +p("M48 69L37 83L66 70Z",dark)
+    +Array.from({length:9},(_,i)=>dot(35+(i%3)*12,47+Math.floor(i/3)*8,i%2?2.6:3.5,dark)).join("")
+    +eyeMark(79,49)+line("M82 63l9-4",ink,2.4));
+ }
+ if(/pez mariposa africano|pantodon buchholzi/.test(name+" "+latin)){
+  return specific("pez-mariposa-africano",
+    p("M15 52L4 37L10 55L5 77L22 63Z",dark)
+    +p("M28 53Q36 37 58 45L85 54L89 60Q66 76 38 68Z",base)
+    +p("M37 52Q26 21 49 15Q62 26 67 49Z",pale)
+    +p("M41 63Q23 76 33 94L64 69Z",dark)
+    +p("M84 55L97 48L89 61Z",pale)
+    +line("M35 39Q50 42 55 54",dark,2.8)+eyeMark(78,52));
+ }
+ if(/esturion siberiano|acipenser baerii/.test(name+" "+latin)){
+  return specific("esturion-siberiano",
+    p("M20 58L6 38L12 57L5 77Z",dark)
+    +p("M20 57Q37 43 68 49L96 57L70 62Q38 70 20 62Z",base)
+    +p("M42 48L49 27L57 49Z",dark)
+    +p("M49 65L45 79L65 64Z",dark)
+    +Array.from({length:8},(_,i)=>p("M"+(25+i*7)+" 49l3-5 5 4-4 5Z",pale,ink,1)).join("")
+    +Array.from({length:6},(_,i)=>dot(28+i*9,63,2,pale)).join("")
+    +line("M83 62l0 10m-6-10l-3 8",dark,1.6)+eyeMark(84,53));
+ }
  let family,svg;
  if(sp.kind==="ray" || /manta|mantarraya|raya|raia|mobula|myliobat|dasyat|rajidae|aetobat/.test(name+" "+latin)){
    const manta=/manta|mobula/.test(name+" "+latin);
