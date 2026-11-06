@@ -4363,7 +4363,7 @@ function renderBestiary(){
    if(state.bestiaryDescending)ids.reverse();
   return `<section class="card">
     <div class="bestiary-head"><h3 class="section">🦉 Bestiario</h3><div class="badge">Identificadas ${identifiedCount()}/${total}</div></div>
-    <div class="small">Listado de especies descubiertas y pendientes. Haz clic en un criterio para ordenar y vuelve a pulsarlo para invertir el sentido.</div>
+    <div class="small">Listado de especies descubiertas y pendientes. Haz clic en un criterio para ordenar y vuelve a pulsarlo para invertir el sentido. · <a href="./laboratorio-peces.html" target="_blank" rel="noopener">🐟 Comprobar sprites 3.19.1c</a></div>
     <label class="bestiary-v317-filter"><input type="checkbox" data-action="bestiary-hide-monographs" ${state.bestiaryHideMonographs?'checked':''} aria-label="Ocultar especies con monografía publicada"> <span>Ocultar especies con monografía publicada</span><small>${ids.length} de ${total} visibles</small></label>
     <div class="subtabs compact">${[['alpha','Abecedario'],['rarity','Rareza'],['type','Tipo']].map(([id,label])=>`<button class="subtab ${sort===id?'active':''}" data-action="bestiary-sort" data-id="${id}" aria-label="Ordenar por ${label}; ${sort===id?(state.bestiaryDescending?'descendente':'ascendente'):'seleccionar'}">${label}${sort===id?(state.bestiaryDescending?' ↓':' ↑'):''}</button>`).join('')}</div>
     <div class="species-grid" style="margin-top:10px">${ids.map(id=>speciesCard(id,false,true)).join('')}</div>
