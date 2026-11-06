@@ -874,3 +874,32 @@ button,select{font:inherit}
  .field-buff-row span{flex-basis:100%}
  .research-live-buffs{padding:9px}
 }
+
+/* Beta 3.15.3: avistamientos grupales con sprites propios y censos visuales. */
+.field-v31 .result-card:has(.encounter-graphic-multi){width:min(96%,440px);max-width:440px;padding:12px 10px;gap:9px;min-height:220px}
+.field-v31 .result-card:has(.encounter-graphic-single){gap:7px}
+.encounter-graphic{width:100%;display:flex;flex-direction:column;gap:6px;align-items:center}
+.encounter-group-count{background:#304f3b;color:#fff5d8;border-radius:20px;padding:3px 10px;font:800 11px/1.25 system-ui,sans-serif;letter-spacing:.1em}
+.encounter-species-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;justify-content:center;gap:6px;width:100%}
+.encounter-graphic-single .encounter-species-grid{grid-template-columns:minmax(0,150px)}
+.encounter-graphic-multi .encounter-species-grid:has(> :only-child){grid-template-columns:minmax(0,150px)}
+.encounter-species{min-width:0;display:flex;align-items:center;flex-direction:column;gap:3px;animation:atlas-observed .4s both;animation-delay:calc(var(--encounter-index)*80ms)}
+.encounter-species-art{position:relative;width:100%;min-width:0;max-width:112px;aspect-ratio:1;background:#f9efd8b3;border:1px solid #cdbb9c;border-radius:14px;display:grid;place-items:center;filter:drop-shadow(0 4px 5px #4b4a3824)}
+.encounter-species-sprite{width:94%;height:94%;display:grid;place-items:center}
+.encounter-species-sprite svg{width:100%;height:100%;max-width:100%;max-height:100%}
+.encounter-graphic-single .encounter-species-art{max-width:132px}
+.encounter-multiplier{position:absolute;top:-9px;right:-10px;min-width:43px;height:39px;padding:2px 7px;border-radius:11px;background:linear-gradient(145deg,#e5ad45,#c57b1e);color:#fffdf0;border:2px solid #fff4d4;box-shadow:0 3px 8px #47331e66;display:grid;place-items:center;font:900 23px/1 system-ui,sans-serif;letter-spacing:-.04em;z-index:2;transform:rotate(6deg)}
+.encounter-graphic-single .encounter-multiplier{font-size:27px;min-width:50px;height:43px}
+.encounter-species-label{font:700 11px/1.18 Georgia,serif;max-width:100%;min-height:24px;text-align:center;color:#2b4434;overflow-wrap:anywhere}
+.encounter-variant-label{font:700 9px/1.15 system-ui,sans-serif;color:#815d2b}
+.field-v31 .result-card .encounter-graphic-copy>strong{font-size:15px;max-height:3em}
+.field-v31 .result-card .encounter-graphic-copy .subtitle{max-height:4.5em}
+@media(max-width:600px){
+ .field-v31 .result-card:has(.encounter-graphic-multi){width:min(98%,355px);padding:10px 8px;gap:6px}
+ .encounter-species-grid{gap:5px}
+ .encounter-species-art{border-radius:10px;max-width:93px}
+ .encounter-multiplier{min-width:36px;height:33px;font-size:19px;right:-6px;top:-6px}
+ .encounter-species-label{font-size:10px}
+ .encounter-graphic-copy>strong{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.encounter-species{animation:none}}
