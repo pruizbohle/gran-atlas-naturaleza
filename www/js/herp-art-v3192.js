@@ -206,7 +206,7 @@ function render(sp,color,skin="normal"){
   art=p(shape);
   if(krait){
    // Bands follow the body centerline. Each short cross-section stays inside its contour.
-   art+=detail(line("M20 64L25 67M26 52L31 57M36 47L37 54M45 52L40 57M50 64L44 65M50 75L47 78M59 77L60 84M70 72L74 78M77 61L83 63M78 51L84 52",bone,3.2));
+   art+=detail(line("M18.2 62.9L21.9 65.2M26 52L29.2 55.2M36 47.2L36.7 52.2M45.9 51.1L41.5 55.5M51.3 63.8L44.8 64.9M54.5 70.5L49.1 75.9M58.4 72.8L59.6 81.2M68.7 70.1L73.2 76.9M75.4 60.5L82.1 62.7M77.3 50.9L83.8 52",bone,3.2));
   }else if(python){
    art+=detail(retic?line("M20 61L24 52L31 50L37 55L31 61L24 55M38 72L43 77L50 84L58 85M63 84L69 80L76 82M82 70L87 65L83 59M70 36L75 40L81 35",dark,1.8):spots([[25,51],[38,58],[38,76],[53,87],[73,80],[84,64],[70,39]],3,dark));
   }else if(viper){

@@ -25,7 +25,7 @@ Se conservan `renderHerp`, `classifyHerp`, `ATLAS_HERP_ART_V3192`, `data-herp-fa
 
 La clasificación usa palabras completas: las tres musarañas y la liebre ibérica dejan de ser capturadas por «rana» y recuperan sus ilustraciones de mamífero. El lagarto cabeza de sapo sigue siendo lagarto; el pez cabeza de serpiente conserva el motor de peces. Para las otras 344 especies se compara el SVG de las cuatro coloraciones con la versión anterior, sin diferencias.
 
-Contornos principales de 2,6 unidades, detalles interiores más finos y sin filtros ni dependencias de renderizado. Los 53 SVG normales ocupan entre 812 y 2808 bytes (media 1939). La geometría se conserva entre coloraciones.
+Contornos principales de 2,6 unidades, detalles interiores más finos y sin filtros ni dependencias de renderizado. Los 53 SVG normales ocupan entre 812 y 2808 bytes (media 1940). La geometría se conserva entre coloraciones.
 
 El laboratorio no lee `localStorage`. Ofrece comparación 3.19.2/3.19.2b, siluetas sin marcas internas, tamaños exactos 56/80/120 px, coloraciones y filtro por familia. La copia anterior se carga exclusivamente en el laboratorio. Sus datos se regeneran con:
 
