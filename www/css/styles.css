@@ -989,3 +989,6 @@ button,select{font:inherit}
 
 /* v3.19.1c — fish scale: improve silhouette legibility in PC cards */
 @media(min-width:701px){.species-card .sprite-wrap svg[data-fish-family]{transform:scale(1.12);transform-origin:center}}
+
+/* 3.19.2: miniaturas herpetológicas legibles en PC, sin ampliar tarjetas ni modificar layout */
+@media(min-width:701px){.species-card .sprite-wrap svg[data-herp-family]{transform:scale(1.10);transform-origin:center}}

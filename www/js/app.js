@@ -4363,7 +4363,7 @@ function renderBestiary(){
    if(state.bestiaryDescending)ids.reverse();
   return `<section class="card">
     <div class="bestiary-head"><h3 class="section">🦉 Bestiario</h3><div class="badge">Identificadas ${identifiedCount()}/${total}</div></div>
-    <div class="small">Listado de especies descubiertas y pendientes. Haz clic en un criterio para ordenar y vuelve a pulsarlo para invertir el sentido. · <a href="./laboratorio-peces.html" target="_blank" rel="noopener">🐟 Comprobar sprites 3.19.1c</a></div>
+    <div class="small">Listado de especies descubiertas y pendientes. Haz clic en un criterio para ordenar y vuelve a pulsarlo para invertir el sentido. · <a href="./laboratorio-herpetologia.html" target="_blank" rel="noopener">🦎 Herpetario 3.19.2</a> · <a href="./laboratorio-peces.html" target="_blank" rel="noopener">🐟 Comprobar sprites 3.19.1c</a></div>
     <label class="bestiary-v317-filter"><input type="checkbox" data-action="bestiary-hide-monographs" ${state.bestiaryHideMonographs?'checked':''} aria-label="Ocultar especies con monografía publicada"> <span>Ocultar especies con monografía publicada</span><small>${ids.length} de ${total} visibles</small></label>
     <div class="subtabs compact">${[['alpha','Abecedario'],['rarity','Rareza'],['type','Tipo']].map(([id,label])=>`<button class="subtab ${sort===id?'active':''}" data-action="bestiary-sort" data-id="${id}" aria-label="Ordenar por ${label}; ${sort===id?(state.bestiaryDescending?'descendente':'ascendente'):'seleccionar'}">${label}${sort===id?(state.bestiaryDescending?' ↓':' ↑'):''}</button>`).join('')}</div>
     <div class="species-grid" style="margin-top:10px">${ids.map(id=>speciesCard(id,false,true)).join('')}</div>
@@ -5382,6 +5382,7 @@ function familyV3154Sprite(id,skin){
 
 function spriteFor(kind,color,skin,id){
  const fish3191=(typeof window!=='undefined' && typeof window.ATLAS_FISH_ART_V3191==='function') ? window.ATLAS_FISH_ART_V3191(SPECIES[id],color,skin) : null; if(fish3191)return fish3191;
+ const herp3192=(typeof window!=='undefined' && typeof window.ATLAS_HERP_ART_V3192==='function') ? window.ATLAS_HERP_ART_V3192(SPECIES[id],color,skin) : null; if(herp3192)return herp3192;
  const special3154=familyV3154Sprite(id,skin);if(special3154)return special3154;
  const unified=unifiedFamilySprite(id,skin);if(unified)return unified;
  const af310=africaV310Sprite(id,skin);if(af310)return af310;

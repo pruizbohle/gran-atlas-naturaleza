@@ -26,6 +26,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Validar código y pruebas del Atlas
         run: |
+          node --check www/js/herp-art-v3192.js
           node --check www/js/app.js
           node --check www/js/mobile-ui.js
           node --check www/js/save-manager.js
