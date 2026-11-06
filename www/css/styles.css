@@ -946,3 +946,43 @@ button,select{font:inherit}
  .museum-v317-dig{align-items:stretch;flex-direction:column;gap:9px;padding:10px}
  .museum-v317-dig .btn{align-self:stretch;width:100%;min-height:42px}
 }
+
+/* El Gran Atlas Beta 3.18 · Registro de hallazgos y nuevas mecánicas de relictos */
+.museum-v317-history{display:grid;gap:7px;max-height:420px;overflow-y:auto}
+.museum-v317-history .museum-v317-dig{background:#e8ead8;border-left:3px solid #79916d}
+[data-excavation-remaining],[data-relict-survey-remaining]{font-variant-numeric:tabular-nums;font-weight:800;color:#46674e;white-space:nowrap}
+.museum-v318-root{display:grid;gap:14px;min-width:0}
+.museum-v318-summary{display:grid;gap:10px;min-width:0;padding:12px;border:1px solid #d2c19f;border-radius:13px;background:#f3ead9}
+.museum-v318-summary h3,.museum-v318-root>.section{margin:0}
+.museum-v318-summary h4{margin:4px 0 0;font:700 14px Georgia,serif;color:#476249}
+.museum-v318-summary p{margin:0}
+.museum-v318-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.museum-v318-stats>span{display:flex;flex-direction:column;gap:3px;align-items:center;text-align:center;font:600 10px/1.35 system-ui,sans-serif;border:1px solid #d1c19f;border-radius:9px;background:#e9dcc5;padding:9px 5px}
+.museum-v318-stats strong{font:700 18px Georgia,serif;color:#355a43}
+.museum-v318-missions{display:grid;gap:7px}
+.museum-v318-mission{display:flex;gap:10px;align-items:center;justify-content:space-between;min-width:0;padding:10px;background:#f8edd9;border:1px solid #d5c4a6;border-radius:9px}
+.museum-v318-mission>div{min-width:0;flex:1}
+.museum-v318-mission strong{font:700 13px/1.3 Georgia,serif;color:#3a5442}
+.museum-v318-mission .small{margin-top:4px;overflow-wrap:anywhere}
+.museum-v318-mission .btn{flex:0 0 auto;min-height:39px;white-space:nowrap}
+.museum-v318-card{display:flex;flex-direction:column;gap:7px;min-width:0}
+.museum-v318-card .museum-v33-frame{align-self:center}
+.museum-v318-card .small{overflow-wrap:anywhere}
+.museum-v318-indicia{display:flex;flex-wrap:wrap;gap:7px;align-items:center;justify-content:space-between;padding:6px 8px;background:#e7dbc1;border-radius:7px;font:700 11px system-ui,sans-serif;color:#4c5845}
+.museum-v318-indicia>div{display:flex;gap:5px}
+.museum-v318-indicia>div span{height:10px;width:26px;border-radius:99px;background:#d0c1a6;border:1px solid #a69272}
+.museum-v318-indicia>div span.is-known{background:#547b59;border-color:#3a6746}
+.museum-v318-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.museum-v318-actions .btn{min-height:38px;flex:1;font-size:11px;padding:7px 9px}
+@media(max-width:760px){
+ .museum-v318-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .museum-v318-card{padding:9px}
+ .museum-v318-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .museum-v318-mission{flex-direction:column;align-items:stretch}
+ .museum-v318-mission .btn{align-self:stretch;width:100%;min-height:42px}
+}
+@media(max-width:390px){
+ .museum-v318-stats strong{font-size:15px}
+ .museum-v318-stats>span{font-size:9px}
+ .museum-v318-actions{grid-template-columns:1fr}
+}

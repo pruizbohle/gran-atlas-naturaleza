@@ -34,8 +34,8 @@ test('El Atlas mantiene las 487 especies y 57 zonas; nuevas recetas y coleccione
  assert.equal(Object.keys(g.SPECIES).length,487);
  assert.equal(g.REGIONS.length,57);
  assert.equal(g.MUSEUM_DIG_SITES.length,4);
- assert.equal(g.MUSEUM_FOSSIL_RECIPES.filter(p=>p.unique).length,6);
- assert.equal(g.MUSEUM_FOSSIL_SETS.length,2);
+ assert.equal(g.MUSEUM_FOSSIL_RECIPES.filter(p=>p.unique).length,8);
+ assert.equal(g.MUSEUM_FOSSIL_SETS.length,3);
  for(const list of [g.MUSEUM_FOSSIL_RECIPES,g.MUSEUM_COLLECTIONS,g.MUSEUM_CURATORIAL_PROJECTS]){
   for(const p of list){
    for(const [id,qty] of Object.entries(p.requires))
