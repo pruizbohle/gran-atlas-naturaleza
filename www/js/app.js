@@ -2302,8 +2302,13 @@ function encounter(source='manual', at=Date.now(), guaranteed=false){
   :`${primary.first?'¡Nueva especie! ':'Avistamiento: '}${visibleName(primary.id)}`;
  const summary=many?entries.map(e=>`${visibleName(e.id)} ×${e.amount}`).join(' · '):`${fmt(sight(primary.id))} avistamientos`;
  const subtitle=`${many?summary:sp.rare+(primary.variant?` · ${primary.variant}`:'')+' · '+summary} · +${knowledgeGain} conocimiento${primary.first?' · +£15':''}${primary.note.length?' · '+primary.note.join(', '):''}`;
+ // Guardar los integrantes de cada encuentro para representarlos gráficamente en Campo.
+ // Los IDs anteriores y el formato del respaldo siguen intactos.
+ state.encounterSequence=(state.encounterSequence||0)+1;
  state.lastEncounter={species:primary.id,title,subtitle,sprite:primary.variant?getSpriteMarkup(primary.id,variantToSkin(primary.variant))
-   :(primary.sexObservation?getSpriteMarkup(primary.id,'normal',primary.sexObservation.sex):getSpriteMarkup(primary.id))};
+   :(primary.sexObservation?getSpriteMarkup(primary.id,'normal',primary.sexObservation.sex):getSpriteMarkup(primary.id)),
+   sequence:state.encounterSequence,
+   entries:entries.map(e=>({id:e.id,amount:e.amount,variant:e.variant||'',sex:e.sexObservation?.sex||null,first:e.first}))};
  if(manual)pushLog(`🔭 ${many?'Encuentro múltiple · ':''}${entries.map(e=>visibleName(e.id)+' ×'+e.amount).join(', ')}${primary.note.length?' · '+primary.note.join(', '):''}.`);
  if(!batchingOffline){renderCounters();updateFieldOutput();}
 }
@@ -2459,7 +2464,7 @@ function updateFieldOutput(){
  if(tab!=='field')return;
  const last=state.lastEncounter;
  const result=document.getElementById('fieldResult');
- if(result){const signature=(last?.title||'')+'|'+(last?.subtitle||'');if(signature!==lastPanelSignature){result.innerHTML=encounterCardMarkup(last);result.classList.remove('encounter-reveal');void result.offsetWidth;result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
+ if(result){const signature=(last?.title||'')+'|'+(last?.subtitle||'')+'|'+(last?.sequence||'');if(signature!==lastPanelSignature){result.innerHTML=encounterCardMarkup(last);result.classList.remove('encounter-reveal');void result.offsetWidth;result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
  const buffs=document.getElementById('fieldBuffSummary');
  if(buffs){const next=fieldBuffSummaryMarkup();if(buffs.innerHTML!==next)buffs.innerHTML=next;}
  const autoNoticeEl=document.getElementById('autoNotice');
@@ -2717,11 +2722,36 @@ function fieldBackdropMarkup(habitat){
   </svg>`;
 }
 function encounterCardMarkup(last){
+  const entries=(Array.isArray(last?.entries)?last.entries:[]).filter(e=>SPECIES[e.id]).slice(0,3);
   const hasAnimal=!!last?.species;
   const title=last?.title||'Aún sin avistamientos';
   const detail=last?.subtitle||'Busca animales para comenzar tu registro de campo.';
+  if(entries.length){
+   const group=entries.length>1;
+   const thumbnails=entries.map((e,i)=>{
+    const skin=e.variant?variantToSkin(e.variant):'normal';
+    const image=getSpriteMarkup(e.id,skin,skin==='normal'?e.sex:null);
+    const number=Number(e.amount)||1;
+    const label=visibleName(e.id);
+    return `<div class="encounter-species ${group?'in-group':''}" style="--encounter-index:${i}">
+      <div class="encounter-species-art"><span class="encounter-species-sprite">${image}</span>
+       ${number>1?`<span class="encounter-multiplier" aria-label="${number} avistamientos">×${number}</span>`:''}
+      </div>
+      <div class="encounter-species-label">${esc(label)}</div>
+      ${e.variant?`<div class="encounter-variant-label">${esc(e.variant)}</div>`:''}
+     </div>`;
+   }).join('');
+   return `<div class="encounter-graphic ${group?'encounter-graphic-multi':'encounter-graphic-single'}" role="group" aria-label="${entries.length} ${entries.length===1?'especie observada':'especies observadas'}">
+      ${group?`<span class="encounter-group-count">${entries.length} ESPECIES</span>`:''}
+      <div class="encounter-species-grid">${thumbnails}</div>
+     </div>
+     <div class="encounter-copy encounter-graphic-copy"><strong>${esc(title)}</strong>
+      <div class="small subtitle">${esc(group?('+'+entries.reduce((acc,e)=>acc+(Number(e.amount)||1),0)+' avistamientos · '+(detail.match(/\\+\\d+ conocimiento/)||['Registro múltiple'])[0]):detail)}</div>
+     </div>`;
+  }
+  // Compatibilidad: partidas anteriores con resultado gráfico único, sin lista de especies.
   return `<div class="encounter-art ${hasAnimal?'animal-found':'empty-encounter'}"><div class="sprite-wrap">${last?.sprite || '<span class="field-binoculars" aria-hidden="true">🔭</span>'}</div></div>
-    <div class="encounter-copy"><strong>${title}</strong><div class="small subtitle">${detail}</div></div>`;
+    <div class="encounter-copy"><strong>${esc(title)}</strong><div class="small subtitle">${esc(detail)}</div></div>`;
 }
 function renderField(){
   const region=currentRegion();
