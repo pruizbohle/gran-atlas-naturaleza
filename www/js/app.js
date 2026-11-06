@@ -1100,7 +1100,7 @@ const SPECIES={
   tejon_europeo:{name:'Tejón europeo', latin:'Meles meles', rare:'Raro', kind:'mustelid', color:'#a58f76', habitats:['bosque'], times:['noche'], seasons:['primavera','verano','otono'], special:['Leucístico'], dimorphism:false},
   erizo_europeo:{name:'Erizo europeo', latin:'Erinaceus europaeus', rare:'Común', kind:'small', color:'#8f6e53', habitats:['bosque','pradera'], times:['atardecer','noche'], seasons:['primavera','verano','otono'], special:['Albino'], dimorphism:false},
   ciervo_rojo:{name:'Ciervo rojo', latin:'Cervus elaphus', rare:'Común', kind:'deer', color:'#a76b3b', habitats:['bosque','pradera'], times:['amanecer','atardecer'], seasons:['primavera','verano','otono','invierno'], special:['Notable'], dimorphism:true},
-  nutria_europea:{name:'Nutria europea', latin:'Lutra lutra', rare:'Común', kind:'otter', color:'#7b5b39', habitats:['rio'], times:['amanecer','atardecer'], seasons:['primavera','verano','otono','invierno'], special:[], dimorphism:false},
+  nutria_europea:{name:'Nutria europea', latin:'Lutra lutra', rare:'Común', kind:'otter', color:'#7b5b39', habitats:['rio'], times:['amanecer','atardecer'], seasons:['primavera','verano','otono','invierno'], special:['Leucístico','Melánico','Notable'], dimorphism:false},
   ardilla_roja:{name:'Ardilla roja', latin:'Sciurus vulgaris', rare:'Común', kind:'small', color:'#c76a2f', habitats:['bosque'], times:['amanecer','dia'], seasons:['primavera','verano','otono'], special:['Melánica'], dimorphism:false},
   frailecillo_atlantico:{name:'Frailecillo atlántico', latin:'Fratercula arctica', rare:'Muy rara', kind:'seabird', color:'#232323', habitats:['costa'], times:['dia','atardecer'], seasons:['primavera','verano'], special:['Notable'], dimorphism:false},
   buho_comun:{name:'Búho común', latin:'Asio otus', rare:'Poco común', kind:'owl', color:'#8d6a40', habitats:['bosque'], times:['atardecer','noche'], seasons:['primavera','verano','otono','invierno'], special:['Leucístico'], dimorphism:false},
@@ -1717,6 +1717,68 @@ for(const [rid,ids] of Object.entries(AFRICA_ECO_REBALANCE)){
  }
 }
 
+// Beta 3.15.3: un único taxón Gypaetus barbatus en las regiones europeas, asiáticas y africanas.
+// El ID europeo original se conserva para que los registros y las monografías previas sigan siendo válidos.
+for(const region of REGIONS){
+ region.species=[...new Set(region.species.map(id=>id==='af_quebrantahuesos'?'quebrantahuesos':id))];
+}
+delete SPECIES.af_quebrantahuesos;
+// Una antigua especie se había marcado como mustélido: clasificarla correctamente como anfibio.
+if(SPECIES.salamandra_alpina)SPECIES.salamandra_alpina.kind='salamander';
+
+function mergeHistoricalBeardedVulture(snapshot){
+ if(!snapshot||typeof snapshot!=='object')return snapshot;
+ const old='af_quebrantahuesos',current='quebrantahuesos';
+ const numFields=['sightings','specialSeen','feedObs'];
+ for(const field of numFields){
+  const data=snapshot[field];
+  if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
+  data[current]=(Number(data[current])||0)+(Number(data[old])||0);
+  delete data[old];
+ }
+ for(const field of ['stages']){
+  const data=snapshot[field];
+  if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
+  data[current]=Math.max(Number(data[current])||0,Number(data[old])||0);
+  delete data[old];
+ }
+ for(const field of ['discovered','published','dimorphism']){
+  const data=snapshot[field];
+  if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
+  data[current]=!!data[current]||!!data[old];
+  delete data[old];
+ }
+ for(const field of ['specialFound','sexSeen']){
+  const data=snapshot[field];
+  if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
+  data[current]={...(data[old]||{}),...(data[current]||{})};
+  delete data[old];
+ }
+ if(snapshot.autoHourly&&typeof snapshot.autoHourly==='object'){
+  for(const key of Object.keys(snapshot.autoHourly)){
+   if(!key.endsWith(':'+old))continue;
+   const replacement=key.slice(0,-old.length)+current;
+   snapshot.autoHourly[replacement]=Math.min(MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR,(Number(snapshot.autoHourly[replacement])||0)+(Number(snapshot.autoHourly[key])||0));
+   delete snapshot.autoHourly[key];
+  }
+ }
+ if(snapshot.selectedJournal===old)snapshot.selectedJournal=current;
+ if(snapshot.lastEncounter?.species===old)snapshot.lastEncounter.species=current;
+ if(snapshot.lastEncounter?.entries){
+  snapshot.lastEncounter.entries=snapshot.lastEncounter.entries.map(e=>e.id===old?{...e,id:current}:e);
+ }
+ const museum=snapshot.museum;
+ if(museum&&typeof museum==='object'){
+  for(const field of ['exhibits','collections','displays']){
+   const data=museum[field];
+   if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
+   if(!Object.prototype.hasOwnProperty.call(data,current))data[current]=data[old];
+   delete data[old];
+  }
+ }
+ return snapshot;
+}
+
 const RESEARCH_NODES=[
   {id:'prismaticos_1', name:'Prismáticos de latón', desc:'+12 % relativo sobre probabilidad base manual (50 % → 56 %)', money:25, knowledge:20, once:true, effect(s){s.upgrades.prism=1;}},
   {id:'prismaticos_2', name:'Lentes calibrados', desc:'+24 % relativo acumulado (50 % → 62 %, sin equipo)', money:50, knowledge:35, req:'prismaticos_1', once:true, effect(s){s.upgrades.prism=2;}},
@@ -1880,7 +1942,7 @@ function load(){
     }
     merged.asiaPricingVersion=Math.max(2, saved.asiaPricingVersion||2);
     merged.lastTick=Number.isFinite(saved.lastTick)?saved.lastTick:Date.now();
-    return merged;
+    return mergeHistoricalBeardedVulture(merged);
   }catch(e){
     console.error('El Gran Atlas: error al recuperar la partida guardada.',e);
     // El progreso defectuoso se conserva para intentar repararlo desde Respaldos.
@@ -1931,6 +1993,7 @@ window.AtlasSaveBridge={
        voyages:Array.isArray(imported.voyages)?imported.voyages:[],
        log:Array.isArray(imported.log)?imported.log:[]
      };
+     mergeHistoricalBeardedVulture(state);
      if(!REGIONS.some(r=>r.id===state.currentRegion))state.currentRegion=REGIONS[0].id;
      state.regionUnlocked[state.currentRegion]=true;
      state.regionsVisited=state.regionsVisited&&typeof state.regionsVisited==='object'&&!Array.isArray(state.regionsVisited)?state.regionsVisited:{};
