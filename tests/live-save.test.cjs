@@ -440,7 +440,7 @@ test('Beta 3.11: taller impide fabricaciones sin materiales y múltiples ejempla
 
 test('Beta 3.12: tres dinosaurios nuevos se montan una única vez, sin afectar el Atlas',()=>{
  const recipes=[
-  ['triceratops_mount',{bone_long:8,bone_short:18,herbivore_skull:1}],
+  ['triceratops_mount',{bone_long:8,bone_short:18,herbivore_skull:1,fossil_horn:3}],
   ['stegosaurus_mount',{bone_long:12,bone_short:20,fossil_plate:5}],
   ['spinosaurus_mount',{bone_long:14,bone_short:18,carnivore_skull:1,fossil_sail:3}]
  ];
