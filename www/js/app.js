@@ -2746,7 +2746,7 @@ function encounterCardMarkup(last){
       <div class="encounter-species-grid">${thumbnails}</div>
      </div>
      <div class="encounter-copy encounter-graphic-copy"><strong>${esc(title)}</strong>
-      <div class="small subtitle">${esc(group?('+'+entries.reduce((acc,e)=>acc+(Number(e.amount)||1),0)+' avistamientos · '+(detail.match(/\\+\\d+ conocimiento/)||['Registro múltiple'])[0]):detail)}</div>
+      <div class="small subtitle">${esc(group?('+'+entries.reduce((acc,e)=>acc+(Number(e.amount)||1),0)+' avistamientos · '+(detail.match(/\+\d+ conocimiento/)||['Registro múltiple'])[0]):detail)}</div>
      </div>`;
   }
   // Compatibilidad: partidas anteriores con resultado gráfico único, sin lista de especies.
