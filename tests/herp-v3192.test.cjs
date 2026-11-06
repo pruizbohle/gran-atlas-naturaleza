@@ -35,7 +35,8 @@ const specimens=[
 ['Dragón de Komodo','Varanus komodoensis','reptile','monitor'],
 ['Varano del Nilo','Varanus niloticus','lizard','monitor'],
 ['Lagarto egipcio de cola espinosa','Uromastyx aegyptia','lizard','spiny-lizard'],
-['Lagarto ocelado','Timon lepidus','reptile','lizard']
+['Lagarto ocelado','Timon lepidus','reptile','lizard'],
+['Lagarto cabeza de sapo','Phrynocephalus versicolor','lizard','lizard']
 ];
 function sprite(name,latin,kind,skin='normal'){return renderHerp({name,latin,kind,color:'#719c7a'},'#719c7a',skin);}
 test('3.19.2 classifies 33 representative herpetofauna without changing catalog categories',()=>{

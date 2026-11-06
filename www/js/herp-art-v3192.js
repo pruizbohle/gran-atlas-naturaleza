@@ -9,6 +9,7 @@ function classify(sp){
  if(!sp)return null;
  const k=sp.kind||"",n=norm(sp.name),l=norm(sp.latin),t=n+" "+l;
  if(k==="fish"||k==="ray")return null;
+ if(/lagarto cabeza de sapo|phrynocephalus/.test(t))return "lizard";
  if(/rana|sapo|escuerzo|conraua|xenopus|breviceps|epidalea|strauchbufo|sclerophrys|schismaderma|rana temporaria/.test(t))
    return /sapo|bufo|epidalea|sclerophrys|schismaderma|breviceps/.test(t)?"toad":"frog";
  if(/salamandra|triton|salaman|lissotriton|triturus|ichthyosaura|andrias/.test(t)||k==="salamander")
