@@ -28,7 +28,7 @@ test('Beta 3.16 mantiene catálogo, mapa y materiales de recetas coherentes',()=
  const x=game();
  assert.equal(Object.keys(x.SPECIES).length,487);
  assert.equal(x.REGIONS.length,57);
- assert.equal(Object.keys(x.ITEMS).length,47);
+ assert.ok(Object.keys(x.ITEMS).length>=47,'3.16 objects must persist as the museum expands');
  assert.ok(Object.keys(x.V316_MATERIAL_STUDIES).length>=8);
  for(const [name,recipe] of Object.entries(x.RECIPES)){
   assert.ok(x.ITEMS[name],'Producto de receta inexistente: '+name);

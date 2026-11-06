@@ -924,3 +924,25 @@ button,select{font:inherit}
  .inventory-v33 .inventory-subtabs{grid-template-columns:repeat(2,minmax(0,1fr))}
  .inventory-v33 .v316-study .inventory-item-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+/* Beta 3.17 · prospección, colecciones y filtro de monografías. */
+.bestiary-v317-filter{display:flex;flex-wrap:wrap;gap:9px;align-items:center;cursor:pointer;padding:10px 12px;margin:7px 0;background:#eae2d1;border:1px solid #c8b999;border-radius:11px;font:700 12px/1.35 system-ui,sans-serif;color:#3d5946}
+.bestiary-v317-filter input{accent-color:#385f47;width:18px;height:18px;flex:none;cursor:pointer}
+.bestiary-v317-filter small{margin-left:auto;font:600 11px system-ui,sans-serif;color:#7a6e59}
+.museum-v317-section{display:grid;gap:10px;padding:13px;margin-top:11px;border:1px solid #cbb995;border-radius:13px;background:linear-gradient(150deg,#f6ecd9,#ede0c4)}
+.museum-v317-section .section{margin:0;color:#3d5b48}
+.museum-v317-section h4{font:700 15px Georgia,serif;color:#66543c;margin:3px 0 0}
+.museum-v317-section p{margin:0}
+.museum-v317-digs{display:grid;grid-template-columns:1fr;gap:8px}
+.museum-v317-dig{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:11px 12px;min-width:0;background:#f4e8d3;border:1px solid #d0be9e;border-radius:10px}
+.museum-v317-dig>div{min-width:0;flex:1}
+.museum-v317-dig strong{font:700 13px/1.3 Georgia,serif;color:#395440}
+.museum-v317-dig .small{margin-top:4px;overflow-wrap:anywhere}
+.museum-v317-dig .btn{flex:none;min-height:39px;white-space:nowrap}
+@media(max-width:600px){
+ .bestiary-v317-filter{padding:11px 9px;gap:7px;font-size:11px}
+ .bestiary-v317-filter small{flex-basis:100%;margin-left:25px}
+ .museum-v317-section{padding:9px}
+ .museum-v317-dig{align-items:stretch;flex-direction:column;gap:9px;padding:10px}
+ .museum-v317-dig .btn{align-self:stretch;width:100%;min-height:42px}
+}

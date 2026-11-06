@@ -1894,6 +1894,13 @@ const RESEARCH_V315_NODES=[{id:"grupos_1",name:"Observación en grupo I",desc:"1
 {id:"paleontologia_3",name:"Paleontología avanzada",desc:"Por viaje, tirada extra: 52 % fragmento, 12 % diente o 2,5 % cráneo.",branch:'museologia',money:370,knowledge:280,req:"paleontologia_2",once:true,effect(s){s.upgrades.paleoTier=3;}},
 {id:"economia_museo_1",name:"Economía científica del Museo",desc:"Aumenta en 15 % el ingreso periódico de exposiciones.",branch:'museologia',money:260,knowledge:180,req:"gabinete_1",once:true,effect(s){s.upgrades.museumIncomeTier=1;}}];
 RESEARCH_NODES.push(...RESEARCH_V315_NODES);
+// Beta 3.17: desarrollo paleontológico con excavaciones y preparación de muestras.
+const RESEARCH_V317_NODES=[
+ {id:'excavaciones_1',name:'Excavaciones coordinadas',desc:'Permite 2 yacimientos simultáneos y añade 1 fragmento fósil garantizado en cada excavación.',branch:'museologia',money:255,knowledge:205,req:'paleontologia_1',once:true,effect(s){s.upgrades.excavationTier=1;}},
+ {id:'preparacion_fosiles_1',name:'Laboratorio de fósiles',desc:'Añade 10 puntos porcentuales a huellas fosilizadas y 5 puntos a garras fósiles en excavaciones.',branch:'museologia',money:430,knowledge:340,req:'excavaciones_1',reqAll:['paleontologia_2'],once:true,effect(s){s.upgrades.specimenPrep=1;}}
+];
+RESEARCH_NODES.push(...RESEARCH_V317_NODES);
+
 const RESEARCH_BRANCHES=[
 {id:'exploracion',name:'Exploración',icon:'🔭',description:'Búsquedas, censos y equipos de campo.'},
 {id:'naturalismo',name:'Naturalismo',icon:'🦉',description:'Disciplinas zoológicas y etología.'},
@@ -1916,8 +1923,8 @@ function initialState(){
     asiaPricingVersion:3, currentRegion:region, habitat:'bosque', time:'amanecer', season:'primavera',
     discovered:{}, sightings:{}, stages:{}, feedObs:{}, dimorphism:{}, sexSeen:{}, specialSeen:{}, specialFound:{}, published:{},
     log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial de prueba: £420. En Corona puedes simular más libras.'],
-    upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,africaUnlocked:0,newWorldUnlocked:0,northAmericaUnlocked:0,fundingTier:1,groupTier:0,censusTier:0,autoGroup:0,autoCensus:0,mammalogy:0,ornithology:0,herpetology:0,ichthyology:0,ethology:0,paleoTier:0,museumIncomeTier:0}, purchases:{},
-    regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', bestiaryDescending:false, crownCoins:0, lastEncounter:null,
+    upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,africaUnlocked:0,newWorldUnlocked:0,northAmericaUnlocked:0,fundingTier:1,groupTier:0,censusTier:0,autoGroup:0,autoCensus:0,mammalogy:0,ornithology:0,herpetology:0,ichthyology:0,ethology:0,paleoTier:0,museumIncomeTier:0,excavationTier:0,specimenPrep:0}, purchases:{},
+    regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0,excavations:[],excavationSeq:0,excavationsCompleted:0,curationPoints:0}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', bestiaryDescending:false, bestiaryHideMonographs:false, crownCoins:0, lastEncounter:null,
     lastTick:Date.now(), lastGrant:0, autoHourly:{}, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
   };
 }
@@ -1933,15 +1940,19 @@ for(const field of ['collections','relicts','displays']){
  state.museum[field]=state.museum[field]&&typeof state.museum[field]==='object'&&!Array.isArray(state.museum[field])?state.museum[field]:{};
 }
 state.museum.voyagesCompleted=Math.max(0,Number(state.museum.voyagesCompleted)||0);
+state.museum.excavations=Array.isArray(state.museum.excavations)?state.museum.excavations.filter(job=>job&&typeof job==='object'&&Number.isFinite(job.endAt)):[];
+state.museum.excavationSeq=Math.max(0,Number(state.museum.excavationSeq)||0);
+state.museum.excavationsCompleted=Math.max(0,Number(state.museum.excavationsCompleted)||0);
+state.museum.curationPoints=Math.max(0,Math.min(20,Number(state.museum.curationPoints)||0));
 state.books=state.books||0;
-state.autoHourly=state.autoHourly||{};state.voyages=state.voyages||[];state.voyageSeq=state.voyageSeq||0;state.inventory=state.inventory||{};state.equipment=state.equipment||{instrument:null,hat:null,necklace:null};state.specialFound=state.specialFound||{};state.upgrades.asiaUnlocked=(state.upgrades.asiaUnlocked||state.purchases.asia_1)?1:0;state.atlasView=state.atlasView||'Europa';state.museumView=state.museumView||'exhibitions';state.societyView=state.societyView||'grants';state.publicationView=state.publicationView||'monographs';state.bestiarySort=state.bestiarySort||'alpha';state.bestiaryDescending=!!state.bestiaryDescending;state.crownCoins=state.crownCoins||0;
+state.autoHourly=state.autoHourly||{};state.voyages=state.voyages||[];state.voyageSeq=state.voyageSeq||0;state.inventory=state.inventory||{};state.equipment=state.equipment||{instrument:null,hat:null,necklace:null};state.specialFound=state.specialFound||{};state.upgrades.asiaUnlocked=(state.upgrades.asiaUnlocked||state.purchases.asia_1)?1:0;state.atlasView=state.atlasView||'Europa';state.museumView=state.museumView||'exhibitions';state.societyView=state.societyView||'grants';state.publicationView=state.publicationView||'monographs';state.bestiarySort=state.bestiarySort||'alpha';state.bestiaryDescending=!!state.bestiaryDescending;state.bestiaryHideMonographs=!!state.bestiaryHideMonographs;state.crownCoins=state.crownCoins||0;
 // Migración v3.14: preservar las regiones africanas ya ganadas antes de esta investigación.
 if(Object.keys(state.regionUnlocked||{}).some(id=>REGIONS.find(r=>r.id===id)?.continent==='África')&&state.inventory.africa_map>0)state.purchases.africa_1=1;
 state.upgrades.africaUnlocked=!!state.purchases.africa_1;
 state.upgrades.newWorldUnlocked=!!state.purchases.nuevo_mundo_1;
 state.upgrades.northAmericaUnlocked=!!state.purchases.norteamerica_1;
 // Recuperación de efectos Beta 3.15 desde compras: respeta guardados antiguos y exportaciones.
-for(const node of RESEARCH_V315_NODES){if(state.purchases[node.id])node.effect(state);}
+for(const node of [...RESEARCH_V315_NODES,...RESEARCH_V317_NODES]){if(state.purchases[node.id])node.effect(state);}
 // Migración v2.1->v2.2: zonas asiáticas previamente habilitadas conservan su acceso.
 if((state.asiaPricingVersion||2)<3){
   if(state.upgrades.asiaUnlocked){
@@ -2038,11 +2049,12 @@ window.AtlasSaveBridge={
        discovered:{...(imported.discovered||{})},
        published:{...(imported.published||{})},
        inventory:{...(imported.inventory||{})},
-       museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0,...(imported.museum||{}),
+       museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0,excavations:[],excavationSeq:0,excavationsCompleted:0,curationPoints:0,...(imported.museum||{}),
           exhibits:{...((imported.museum||{}).exhibits||{})},
           collections:{...((imported.museum||{}).collections||{})},
           relicts:{...((imported.museum||{}).relicts||{})},
-          displays:{...((imported.museum||{}).displays||{})}},
+          displays:{...((imported.museum||{}).displays||{})},
+           excavations:Array.isArray((imported.museum||{}).excavations)?imported.museum.excavations.filter(job=>job&&Number.isFinite(job.endAt)):[]},
        equipment:{instrument:null,hat:null,necklace:null,...(imported.equipment||{})},
        sexSeen:{...(imported.sexSeen||{})},
        specialSeen:{...(imported.specialSeen||{})},
@@ -3062,6 +3074,8 @@ function renderSociety(){
 const MUSEUM_COLLECTIONS=[
  {id:'fosil_catalogado',tab:'fossils',name:'Fósil catalogado',icon:'🦴',description:'Ficha científica de fragmentos reunidos durante las expediciones.',requires:{fossil_fragment:3},knowledge:180},
  {id:'huella_paleontologica',tab:'fossils',name:'Registro de huellas antiguas',icon:'🐾',description:'Comparación de huellas con materiales paleontológicos.',requires:{fossil_fragment:2,animal_trace:2},knowledge:300},
+ {id:'huellas_teropodos',tab:'fossils',name:'Archivo de pisadas fósiles',icon:'🐾',description:'Conjunto de icnitas catalogadas y comparadas con huellas actuales.',requires:{fossil_track:3,animal_trace:2},knowledge:250},
+ {id:'sedimentos_estratos',tab:'fossils',name:'Estudio de estratos antiguos',icon:'🪨',description:'Registro de sedimentos y fragmentos en un archivo paleontológico.',requires:{fossil_fragment:4,river_pebble:3,old_ink:2},knowledge:310},
  // Conserva los IDs de 3.10 para que las colecciones ya adquiridas no se pierdan.
  {id:'carta_historica',tab:'artifacts',name:'Carta cartográfica histórica',icon:'🗺️',description:'Montaje de mapas y monedas procedentes de viajes científicos.',requires:{map_fragment:2,ancient_coin:1},knowledge:180},
  {id:'medallon_viajero',tab:'artifacts',name:'Medallón de expedición',icon:'🪙',description:'Colección clasificada de objetos de un viajero del siglo XIX.',requires:{ancient_coin:2,parchment_scrap:1},knowledge:300},
@@ -3079,7 +3093,10 @@ const MUSEUM_FOSSIL_RECIPES=[
  {id:"fossil_sail",name:"Espina de vela fósil",icon:"🦴",requires:{fossil_fragment:8,fossil_tooth:2}},
  {id:"triceratops_mount",name:"Reconstrucción de Triceratops",icon:"🦕",requires:{bone_long:8,bone_short:18,herbivore_skull:1},unique:true},
  {id:"stegosaurus_mount",name:"Reconstrucción de Estegosaurio",icon:"🦕",requires:{bone_long:12,bone_short:20,fossil_plate:5},unique:true},
- {id:"spinosaurus_mount",name:"Reconstrucción de Espinosaurio",icon:"🦖",requires:{bone_long:14,bone_short:18,carnivore_skull:1,fossil_sail:3},unique:true}
+ {id:"spinosaurus_mount",name:"Reconstrucción de Espinosaurio",icon:"🦖",requires:{bone_long:14,bone_short:18,carnivore_skull:1,fossil_sail:3},unique:true},
+ {id:"fossil_rib",name:"Costilla fósil",icon:"🦴",requires:{fossil_fragment:3}},
+ {id:"ankylosaurus_mount",name:"Reconstrucción de Anquilosaurio",icon:"🦕",requires:{bone_long:9,bone_short:15,fossil_plate:4,fossil_rib:4},unique:true},
+ {id:"iguanodon_mount",name:"Reconstrucción de Iguanodonte",icon:"🦕",requires:{bone_long:10,bone_short:13,herbivore_skull:1,fossil_rib:5,fossil_claw:2},unique:true}
 ];
 const MUSEUM_RELICTS=[
  {id:'coelacanth_indic',name:'Celacanto del Índico',latin:'Latimeria chalumnae',icon:'🐟',region:'HX-10-12',habitats:['costa'],times:['atardecer','noche'],desc:'Pez de linaje muy antiguo; hallazgo costero excepcional.',shape:'fish'},
@@ -3089,6 +3106,132 @@ const MUSEUM_RELICTS=[
  {id:"angonoka",name:"Tortuga angonoka",latin:"Astrochelys yniphora",icon:"🐢",region:"HX-09-14",habitats:["bosque","pradera"],times:["amanecer","dia","atardecer"],desc:"Tortuga endémica de Madagascar y gravemente amenazada; relicto insular extraordinario.",shape:"tortoise"},
  {id:"african_lungfish",name:"Pez pulmonado africano",latin:"Protopterus aethiopicus",icon:"🐟",region:"HX-09-11",habitats:["humedal"],times:["amanecer","atardecer","noche"],desc:"Pez de linaje antiguo capaz de respirar aire; hallazgo museístico extraordinario.",shape:"lungfish"}
 ];
+// Beta 3.17 · Yacimientos de investigación, sin sustituir las expediciones originales.
+const MUSEUM_DIG_SITES=[
+ {id:'british_cliffs',name:'Estratos de las Islas Británicas',region:'HX-01-09',seconds:180,money:55,knowledge:15,fragments:[2,3],tooth:0.12,track:0.24,claw:0.03,skull:0.004},
+ {id:'alpine_basin',name:'Cuenca sedimentaria alpina',region:'HX-02-09',seconds:300,money:135,knowledge:45,fragments:[3,5],tooth:0.20,track:0.32,claw:0.075,skull:0.009},
+ {id:'namib_rocks',name:'Estratos del desierto del Namib',region:'HX-11-08',seconds:540,money:550,knowledge:160,fragments:[5,8],tooth:0.30,track:0.43,claw:0.13,skull:0.025,reqResearch:'africa_1'},
+ {id:'canadian_rocks',name:'Sedimentos de Columbia Británica',region:'HX-02-02',seconds:660,money:750,knowledge:225,fragments:[6,9],tooth:0.32,track:0.50,claw:0.16,skull:0.035,reqResearch:'norteamerica_1'}
+];
+const MUSEUM_FOSSIL_SETS=[
+ {id:'comparative',name:'Dinosaurios contrastados',icon:'🦖',requires:['trex_mount','triceratops_mount'],bonus:0.05},
+ {id:'armored',name:'Galería de esqueletos',icon:'🦕',requires:['stegosaurus_mount','ankylosaurus_mount','iguanodon_mount'],bonus:0.05}
+];
+const MUSEUM_CURATORIAL_PROJECTS=[
+ {id:'cleaning',name:'Conservación de fragmentos',icon:'🧽',requires:{fossil_fragment:4,old_ink:1},knowledge:80,points:1},
+ {id:'tracks',name:'Análisis de huellas',icon:'🐾',requires:{fossil_track:2,animal_trace:1},knowledge:115,points:2},
+ {id:'restoration',name:'Restauración de esqueletos',icon:'🦴',requires:{bone_long:1,fossil_rib:2,carved_wood:1},knowledge:165,points:3}
+];
+function museumFossilMountCount(){return MUSEUM_FOSSIL_RECIPES.filter(p=>p.unique&&state.museum?.collections?.[p.id]).length;}
+function museumFossilSetBonus(){
+ return MUSEUM_FOSSIL_SETS.reduce((sum,set)=>
+  sum+(set.requires.every(id=>!!state.museum?.collections?.[id])?set.bonus:0),0);
+}
+function museumCurationBonus(){return Math.min(20,Math.max(0,Number(state.museum?.curationPoints)||0))*0.01;}
+function maxExcavations(){return state.upgrades.excavationTier?2:1;}
+function canStartExcavation(id){
+ const site=MUSEUM_DIG_SITES.find(x=>x.id===id);
+ return !!(site&&state.regionUnlocked?.[site.region]
+  &&(!site.reqResearch||state.purchases?.[site.reqResearch])
+  &&(state.museum?.excavations?.length||0)<maxExcavations()
+  &&state.money>=site.money&&state.knowledge>=site.knowledge);
+}
+function startExcavation(id,now=Date.now()){
+ const site=MUSEUM_DIG_SITES.find(x=>x.id===id);
+ if(!canStartExcavation(id)||!Number.isFinite(now))return false;
+ state.money-=site.money;state.knowledge-=site.knowledge;
+ state.museum.excavationSeq=(Number(state.museum.excavationSeq)||0)+1;
+ state.museum.excavations.push({id:state.museum.excavationSeq,site:id,endAt:now+site.seconds*1000});
+ pushLog('⛏️ Excavación iniciada: '+site.name+'.');render();
+ return true;
+}
+function collectExcavation(jobId,now=Date.now(),random=Math.random){
+ const jobs=state.museum?.excavations||[];
+ const index=jobs.findIndex(job=>String(job.id)===String(jobId));
+ if(index<0||!Number.isFinite(now))return false;
+ const job=jobs[index],site=MUSEUM_DIG_SITES.find(x=>x.id===job.site);
+ if(!site||now<job.endAt)return false;
+ // Retirar antes de entregar el botín impide reclamarlo dos veces.
+ jobs.splice(index,1);
+ const [lo,hi]=site.fragments;
+ const amount=lo+Math.floor(random()*(hi-lo+1))+(state.upgrades.excavationTier?1:0);
+ addInventory('fossil_fragment',amount);
+ const found=['fragmentos fósiles ×'+amount];
+ for(const [id,p,label] of [
+  ['fossil_tooth',site.tooth,'diente fósil'],
+  ['fossil_track',Math.min(1,site.track+(state.upgrades.specimenPrep?0.10:0)),'huella fosilizada'],
+  ['fossil_claw',Math.min(1,site.claw+(state.upgrades.specimenPrep?0.05:0)),'garra fósil'],
+  ['fossil_skull',site.skull,'cráneo fósil']
+ ]){
+  if(random()<p){addInventory(id,1);found.push(label);}
+ }
+ state.museum.excavationsCompleted=(Number(state.museum.excavationsCompleted)||0)+1;
+ pushLog('⛏️ Excavación finalizada · '+site.name+': '+found.join(', ')+'.');
+ render();
+ return true;
+}
+function canCurateMuseum(id){
+ const project=MUSEUM_CURATORIAL_PROJECTS.find(x=>x.id===id);
+ return !!(project&&museumFossilMountCount()>=1
+  &&Object.entries(project.requires).every(([item,qty])=>(state.inventory?.[item]||0)>=qty));
+}
+function curateMuseum(id){
+ const project=MUSEUM_CURATORIAL_PROJECTS.find(x=>x.id===id);
+ if(!canCurateMuseum(id))return false;
+ for(const [item,qty] of Object.entries(project.requires))state.inventory[item]-=qty;
+ state.knowledge+=project.knowledge;
+ state.museum.curationPoints=Math.min(20,(Number(state.museum.curationPoints)||0)+project.points);
+ pushLog('🗃️ Conservación: '+project.name+' · +'+project.knowledge+' conocimiento; índice de conservación '+state.museum.curationPoints+'/20.');
+ render();
+ return true;
+}
+function renderExcavations(){
+ const active=state.museum?.excavations||[],cap=maxExcavations();
+ const sites=MUSEUM_DIG_SITES.map(site=>{
+  const region=REGIONS.find(r=>r.id===site.region);
+  const unlocked=!!state.regionUnlocked?.[site.region]&&(!site.reqResearch||!!state.purchases?.[site.reqResearch]);
+  const can=canStartExcavation(site.id);
+  return '<div class="museum-v317-dig"><div><strong>⛏️ '+site.name+'</strong>'+
+   '<div class="small">'+(region?region.name:'Zona desconocida')+' · '+(site.seconds/60).toFixed(0)+' min · £'+site.money+' y '+site.knowledge+' conocimiento</div>'+
+   '<div class="small">Garantiza '+site.fragments[0]+'–'+site.fragments[1]+' fragmentos'+(state.upgrades.excavationTier?' +1 por investigación':'')+'; opción de obtener dientes, huellas y piezas raras.</div></div>'+
+   '<button class="btn '+(can?'':'alt')+'" data-action="start-excavation" data-id="'+site.id+'" '+(can?'':'disabled')+'>'+
+   (unlocked?'Excavar':'Zona bloqueada')+'</button></div>';
+ }).join('');
+ const running=active.map(job=>{
+  const site=MUSEUM_DIG_SITES.find(x=>x.id===job.site),ready=Date.now()>=job.endAt;
+  if(!site)return '';
+  return '<div class="museum-v317-dig"><div><strong>'+site.name+'</strong>'+
+   '<div class="small">'+(ready?'✅ Excavación concluida':'Finalización estimada: '+new Date(job.endAt).toLocaleTimeString('es-CL',{hour:'2-digit',minute:'2-digit'}))+'</div></div>'+
+   '<button class="btn '+(ready?'gold':'alt')+'" data-action="collect-excavation" data-id="'+job.id+'" '+(ready?'':'disabled')+'>'+
+   (ready?'Recoger fósiles':'En curso')+'</button></div>';
+ }).join('');
+ return '<section class="museum-v317-section"><h3 class="section">⛏️ Excavaciones</h3>'+
+  '<p class="small">Inicia prospecciones en las regiones desbloqueadas. Prosiguen mientras la app está cerrada; debes recoger los hallazgos al volver. No son búsquedas de animales ni modifican la economía de expediciones.</p>'+
+  '<div class="small"><b>Equipos activos:</b> '+active.length+'/'+cap+' · Excavaciones completadas: '+(state.museum.excavationsCompleted||0)+'</div>'+
+  (running?'<h4>Campañas activas</h4><div class="museum-v317-digs">'+running+'</div>':'')+
+  '<h4>Yacimientos disponibles</h4><div class="museum-v317-digs">'+sites+'</div></section>';
+}
+function renderMuseumCuration(){
+ const count=museumFossilMountCount(),points=state.museum?.curationPoints||0;
+ const sets=MUSEUM_FOSSIL_SETS.map(set=>{
+  const done=set.requires.filter(id=>state.museum?.collections?.[id]).length;
+  return '<div class="museum-v317-dig"><strong>'+set.icon+' '+set.name+'</strong>'+
+   '<div class="small">'+done+'/'+set.requires.length+' esqueletos completados · '+(done===set.requires.length?'+5 % de ingresos aplicado':'+5 % al completar la colección')+'</div></div>';
+ }).join('');
+ const studies=MUSEUM_CURATORIAL_PROJECTS.map(project=>{
+  const req=Object.entries(project.requires).map(([id,qty])=>ITEMS[id].name+' '+(state.inventory[id]||0)+'/'+qty).join(' · ');
+  return '<div class="museum-v317-dig"><div><strong>'+project.icon+' '+project.name+'</strong>'+
+   '<div class="small">'+req+'</div><div class="small">+'+project.knowledge+' conocimiento · +'+project.points+' punto(s) de conservación, hasta 20.</div></div>'+
+   '<button class="btn" data-action="curate-museum" data-id="'+project.id+'" '+(canCurateMuseum(project.id)?'':'disabled')+'>Investigar</button></div>';
+ }).join('');
+ return '<section class="museum-v317-section"><h3 class="section">📚 Colecciones y conservación</h3>'+
+  '<div class="small">Los esqueletos reunidos activan colecciones temáticas. Las piezas reconstruidas no producen dinero por sí solas, pero completarlas permite mejorar los ingresos de las muestras animales.</div>'+
+  '<div class="museum-v317-digs">'+sets+'</div><div class="divider"></div>'+
+  '<div class="small"><b>Conservación científica:</b> '+points+'/20 puntos · +'+Math.round(museumCurationBonus()*100)+' % de ingresos del Museo.</div>'+
+  '<p class="small">'+(count?'Tienes '+count+' esqueleto(s) montado(s): puedes repetir investigaciones usando excedentes.':'Monta al menos una reconstrucción de dinosaurio para iniciar estos proyectos.')+'</p>'+
+  '<div class="museum-v317-digs">'+studies+'</div></section>';
+}
+
 function museumAssemblyReady(piece,qty=1){
  if(!piece||!Number.isInteger(qty)||qty<1||qty>100)return false;
  if(piece.unique&&(qty!==1||state.museum?.collections?.[piece.id]))return false;
@@ -3186,6 +3329,27 @@ function renderMuseumCollections(tab){
 // las colecciones científicas tienen exhibición independiente, sin renta.
 function museumCardArt(kind,id){
  const frame=(paths)=>'<svg viewBox="0 0 100 100" aria-hidden="true">'+paths+'</svg>';
+ if(id==='ankylosaurus_mount')return frame(
+  '<path d="M20 64Q37 41 65 49Q85 55 80 70L43 75Z" fill="#d9c19a" stroke="#795d41" stroke-width="4"/>'+
+  '<path d="M29 49l7-16 10 17 9-21 10 22 11-11" fill="#bea17a" stroke="#795d41" stroke-width="3"/>'+
+  '<path d="M34 72l-4 15m17-14-1 14m15-15 3 14" stroke="#846647" stroke-width="6" fill="none"/>'+
+  '<path d="M21 63Q10 61 9 74L4 81" stroke="#896a4d" stroke-width="7" fill="none"/>'+
+  '<ellipse cx="9" cy="80" rx="8" ry="6" fill="#cbb28d" stroke="#72573e" stroke-width="3"/>'+
+  '<path d="M75 55l14-5 8 12-10 9-11-4Z" fill="#dfc9a3" stroke="#785c40" stroke-width="3"/>');
+ if(id==='iguanodon_mount')return frame(
+  '<path d="M17 53Q40 35 63 49L73 42Q87 36 95 47L85 59L62 62 39 66Z" fill="#d4b994" stroke="#775d42" stroke-width="4"/>'+
+  '<path d="M23 56L6 69M40 64l-8 24 15 0m16-30 8 30 13 0" fill="none" stroke="#85694b" stroke-width="6" stroke-linecap="round"/>'+
+  '<path d="M53 53l5 21 10 3m-10-3 4-9m-23-15 9 11" stroke="#765e44" stroke-width="4" fill="none"/>'+
+  '<path d="M76 39l8-9 13 5-1 13-12 7-9-5Z" fill="#e2cba5" stroke="#765a42" stroke-width="3"/>'+
+  '<circle cx="91" cy="40" r="2" fill="#5b452f"/>');
+ if(id==='huellas_teropodos')return frame(
+  '<rect x="14" y="16" width="72" height="70" rx="8" fill="#e1d0ad" stroke="#896d4e" stroke-width="4"/>'+
+  '<path d="M46 56L29 32m17 24-1-34m1 34 19-25m-19 25 3 16" stroke="#946e50" stroke-width="9" stroke-linecap="round"/>'+
+  '<path d="M25 77h50" stroke="#a68e68" stroke-width="3"/>');
+ if(id==='sedimentos_estratos')return frame(
+  '<path d="M14 25h72v51H14z" fill="#e4d5b6" stroke="#8c7453" stroke-width="3"/>'+
+  '<path d="M15 35h70m-70 13h70m-70 13h70m-70 13h70" stroke="#a58b66" stroke-width="6"/>'+
+  '<path d="M40 38q11-12 20 0q-8 15-20 0m0 22q10-11 21 0" fill="none" stroke="#665949" stroke-width="4"/>');
  if(id==='trex_mount')return frame(
   '<path d="M14 42Q33 16 57 35L73 25 85 31 76 42 60 47 39 52 22 48" fill="none" stroke="#73583d" stroke-width="7" stroke-linecap="round"/>'+
   '<path d="M31 51L20 86m26-36 2 32m-29 3 16 1m5-3 16 1" fill="none" stroke="#785b3b" stroke-width="6" stroke-linecap="round"/>'+
@@ -3296,12 +3460,12 @@ function renderFossilWorkshop(){
    (p.unique?'Pieza final de exposición':'Fabricado: '+owned)+' · '+requirements+
    '</div><div class="museum-v311-workactions">'+actions+'</div></div></div>';
  }).join('');
- return '<div class="small">Recoge fragmentos, cráneos y dientes fósiles mediante viajes, encargos o avistamientos. Fabrica huesos en tandas; el T. rex es una reconstrucción de Museo y no se suma al Atlas.</div>'+
+ return renderExcavations()+'<div class="small">Recoge fragmentos, cráneos y dientes fósiles mediante viajes, encargos y excavaciones. Fabrica huesos en tandas: los dinosaurios no suman al Atlas zoológico.</div>'+
   '<div class="req"><strong>Materiales paleontológicos</strong><div class="small">'+
   ['fossil_fragment','fossil_skull','fossil_tooth','animal_trace'].map(id=>itemName(id)+': '+(state.inventory?.[id]||0)).join(' · ')+
   '</div></div><h3 class="section">🦴 Taller de reconstrucción</h3>'+
   '<div class="museum-v311-worklist">'+craft+'</div><div class="divider"></div>'+
-  '<h3 class="section">📜 Registros fósiles anteriores</h3>'+renderMuseumCollections('fossils');
+  '<h3 class="section">📜 Registros y huellas fósiles</h3>'+renderMuseumCollections('fossils')+renderMuseumCuration();
 }
 function renderMuseumRelicts(){
  return '<div class="small">Encuentros excepcionales de poblaciones aisladas, amenazadas o linajes antiguos. Solo se registran en el Museo: no suman al Atlas, ni al prestigio, ni producen libras. </div>'+
@@ -3335,7 +3499,7 @@ const MUSEUM_WINGS = [
 ];
 function exhibitPrice(id){return ({'Común':45,'Poco común':70,'Raro':105,'Muy rara':150}[SPECIES[id].rare]||60);}
 function exhibitIncome(id){return ({'Común':0.16,'Poco común':0.24,'Raro':0.34,'Muy rara':0.5}[SPECIES[id].rare]||0.2);}
-function museumRate(){const base=Object.keys(state.museum.exhibits||{}).reduce((total,id)=>total+exhibitIncome(id),0);return base*(1+(state.upgrades.museumIncomeTier?RESEARCH_V315_BALANCE.museumIncomeBonus:0)+(state.equipment.necklace==='museum_medallion'?0.10:0));}
+function museumRate(){const base=Object.keys(state.museum.exhibits||{}).reduce((total,id)=>total+exhibitIncome(id),0);return base*(1+(state.upgrades.museumIncomeTier?RESEARCH_V315_BALANCE.museumIncomeBonus:0)+(state.equipment.necklace==='museum_medallion'?0.10:0)+museumFossilSetBonus()+museumCurationBonus());}
 // Orden de mayor precio de muestra a menor, sin cambiar la economía.
 function museumValueSort(a,b){return exhibitPrice(b)-exhibitPrice(a)||exhibitIncome(b)-exhibitIncome(a)||SPECIES[a].name.localeCompare(SPECIES[b].name,'es');}
 function museumCapacity(){return [0,3,7,12][state.museum.wing] || 12;}
@@ -3376,6 +3540,7 @@ function renderMuseum(){
    <div class="req"><strong>Capacidad de muestras animales</strong><div class="small">${museumCapacity()}</div></div>
    <div class="req"><strong>Colecciones científicas</strong><div class="small">${Object.values(state.museum.collections||{}).filter(Boolean).length} piezas · ${Object.values(state.museum.relicts||{}).filter(Boolean).length} relictos</div></div>
    <div class="req"><strong>Ingreso pasivo</strong><div class="small">£${museumRate().toFixed(2)} / segundo</div></div>
+   <div class="req"><strong>Paleontología</strong><div class="small">${state.museum.excavationsCompleted||0} excavaciones · ${museumFossilMountCount()} reconstrucciones · ${state.museum.curationPoints||0}/20 puntos de conservación</div></div>
    <div class="req"><strong>Notas</strong><div class="small">Los animales generan libras; las demás colecciones son exhibiciones permanentes sin renta. Administra todo desde las cinco pestañas.</div></div>
  </section></div>`;
 }
@@ -3436,7 +3601,10 @@ const ITEMS={
  scholar_hat:{name:'Sombrero académico',emoji:'🎓',slot:'hat',bonus:'+20 % de conocimiento por búsqueda',kind:'equip'},
  museum_medallion:{name:'Medallón de ámbar',emoji:'🏅',slot:'necklace',bonus:'+10 % de ingresos de las muestras expuestas en el Museo',kind:'equip'},
  fossil_amber:{name:'Ámbar fósil',emoji:'🟠',slot:null,bonus:'Hallazgo raro de expedición, para objetos de colección',kind:'rare'},
- river_pearl:{name:'Perla fluvial',emoji:'⚪',slot:null,bonus:'Hallazgo raro en ríos y costas durante observaciones',kind:'rare'}
+ river_pearl:{name:'Perla fluvial',emoji:'⚪',slot:null,bonus:'Hallazgo raro en ríos y costas durante observaciones',kind:'rare'},
+ fossil_track:{name:'Huella fosilizada',emoji:'🐾',slot:null,bonus:'Icnita paleontológica de excavación; colecciones y estudios',kind:'fossil'},
+ fossil_claw:{name:'Garra fósil',emoji:'🦴',slot:null,bonus:'Pieza rara de excavación; reconstrucción de Iguanodonte',kind:'fossil'},
+ fossil_rib:{name:'Costilla fósil',emoji:'🦴',slot:null,bonus:'Pieza reconstruida para nuevos esqueletos de Museo',kind:'fossil'}
 };
 const SPECIES_DROPS={
  lobo_gris:'wolf_tooth',
@@ -3519,6 +3687,9 @@ const V316_ORIGINS={
  scholar_hat:'Mejora de sombreros',museum_medallion:'Fabricación con ámbar y perla',
  fossil_amber:'Expedición excepcional; más probable en costa y Namib',
  river_pearl:'Campo, biomas Río o Costa, tras avistar fauna',
+ fossil_track:'Excavaciones paleontológicas; huellas conservadas en estratos',
+ fossil_claw:'Hallazgo raro en excavaciones; preparación para el Museo',
+ fossil_rib:'Reconstrucción de fósiles con fragmentos en el Taller del Museo',
  fossil_fragment:'Campo, expediciones y prospección',fossil_skull:'Excavaciones y hallazgos excepcionalmente raros',
  fossil_tooth:'Excavaciones y expediciones',animal_trace:'Botín de expedición y muestras de fauna',
  pressed_flower:'Expedición; registros botánicos',ancient_coin:'Expedición',
@@ -3625,7 +3796,7 @@ function renderObjects(){
  };
  const recipeCard=(id,recipe)=>{const item=ITEMS[id];return `<div class="inventory-item"><span class="inventory-icon">${item.emoji}</span><div class="inventory-item-body"><strong>${item.name}</strong><div class="small">${Object.entries(recipe.requires).map(([rid,qty])=>`${ITEMS[rid].emoji} ${ITEMS[rid].name} ${state.inventory[rid]||0}/${qty}`).join(' · ')}</div><div class="inventory-item-bottom"><span class="badge">En bolsa: ${state.inventory[id]||0}</span><button class="btn" data-action="craft-item" data-id="${id}" ${canCraft(id)?'':'disabled'}>Fabricar</button></div></div></div>`;};
  const all=Object.entries(ITEMS);
- const collectIds=new Set(['asia_map','africa_map','north_america_map','oceanic_quadrant','fossil_fragment','fossil_skull','fossil_tooth','bone_short','bone_long','carnivore_skull','herbivore_skull','fossil_plate','fossil_sail','fossil_amber','river_pearl']);
+ const collectIds=new Set(['asia_map','africa_map','north_america_map','oceanic_quadrant','fossil_fragment','fossil_skull','fossil_tooth','bone_short','bone_long','carnivore_skull','herbivore_skull','fossil_plate','fossil_sail','fossil_amber','river_pearl','fossil_track','fossil_claw','fossil_rib']);
  let content='';
  if(selected==='equipo'){
    content=`<section class="inventory-block"><h4>📊 Bonificaciones efectivas</h4><div class="small">Encuentro manual: ${pctBuff(manualSearchChance())} · Encuentro automático: ${state.helpers?pctBuff(automaticSearchChance()):'inactivo (sin naturalistas)'} · Búsqueda automática cada ${autoInterval()} s.</div><div class="small">La probabilidad de botín de expedición parte en 35 %. El gorro emplumado añade 6 puntos porcentuales y el morral reforzado 3 puntos porcentuales. Los objetos solo dan su bono cuando están equipados.</div></section><div class="inventory-equipment-layout"><section class="inventory-block"><h4>🎽 Slots de equipamiento</h4><div class="small">Un objeto por ranura. El equipo anterior permanece en tu inventario.</div><div class="inventory-slots">${slots}</div></section><section class="inventory-block"><h4>Equipo disponible</h4><div class="inventory-items">${all.filter(([,i])=>i.kind==='equip').map(([id,i])=>card(id,i)).join('')}</div></section></div><section class="inventory-block"><h4>🛠️ Fabricación de equipo</h4><div class="inventory-items">${Object.entries(RECIPES).filter(([id])=>ITEMS[id]?.kind==='equip').map(([id,recipe])=>recipeCard(id,recipe)).join('')}</div></section>`;
@@ -3744,15 +3915,18 @@ function renderExpeditions(){
 }
 
 function renderBestiary(){
+  const total=Object.keys(SPECIES).length;
   let ids=Object.keys(SPECIES);
+  if(state.bestiaryHideMonographs)ids=ids.filter(id=>!state.published?.[id]);
   const sort=state.bestiarySort||'alpha';
   if(sort==='alpha') ids.sort((a,b)=>SPECIES[a].name.localeCompare(SPECIES[b].name,'es'));
   if(sort==='rarity') ids.sort((a,b)=>({ 'Común':1,'Poco común':2,'Raro':3,'Muy rara':4 }[SPECIES[a].rare]-{ 'Común':1,'Poco común':2,'Raro':3,'Muy rara':4 }[SPECIES[b].rare] || SPECIES[a].name.localeCompare(SPECIES[b].name,'es')));
   if(sort==='type') ids.sort((a,b)=>bestiaryTypeBucket(a).localeCompare(bestiaryTypeBucket(b),'es') || SPECIES[a].name.localeCompare(SPECIES[b].name,'es'));
    if(state.bestiaryDescending)ids.reverse();
   return `<section class="card">
-    <div class="bestiary-head"><h3 class="section">🦉 Bestiario</h3><div class="badge">Identificadas ${identifiedCount()}/${ids.length}</div></div>
+    <div class="bestiary-head"><h3 class="section">🦉 Bestiario</h3><div class="badge">Identificadas ${identifiedCount()}/${total}</div></div>
     <div class="small">Listado de especies descubiertas y pendientes. Haz clic en un criterio para ordenar y vuelve a pulsarlo para invertir el sentido.</div>
+    <label class="bestiary-v317-filter"><input type="checkbox" data-action="bestiary-hide-monographs" ${state.bestiaryHideMonographs?'checked':''} aria-label="Ocultar especies con monografía publicada"> <span>Ocultar especies con monografía publicada</span><small>${ids.length} de ${total} visibles</small></label>
     <div class="subtabs compact">${[['alpha','Abecedario'],['rarity','Rareza'],['type','Tipo']].map(([id,label])=>`<button class="subtab ${sort===id?'active':''}" data-action="bestiary-sort" data-id="${id}" aria-label="Ordenar por ${label}; ${sort===id?(state.bestiaryDescending?'descendente':'ascendente'):'seleccionar'}">${label}${sort===id?(state.bestiaryDescending?' ↓':' ↑'):''}</button>`).join('')}</div>
     <div class="species-grid" style="margin-top:10px">${ids.map(id=>speciesCard(id,false,true)).join('')}</div>
   </section>`;
@@ -3841,6 +4015,9 @@ function bindPanel(){
     if(act==='museum-tab'){state.museumView=id; renderPanel(); persist();}
     if(act==='catalog-museum'){catalogMuseumCollection(id);}
     if(act==='craft-museum'){const [piece,qty]=String(id).split(':');craftMuseumFossil(piece,Number(qty));}
+    if(act==='start-excavation'){startExcavation(id);}
+    if(act==='collect-excavation'){collectExcavation(id);}
+    if(act==='curate-museum'){curateMuseum(id);}
     if(act==='museum-display'){toggleMuseumDisplay(id);}
     if(act==='remove-exhibit'){removeExhibit(id);}
     if(act==='exhibit'){ exhibitAnimal(id); }
@@ -3851,6 +4028,7 @@ function bindPanel(){
    if(act==='process-materials'){const [project,repeat]=String(id).split(':');processMaterials(project,Number(repeat));}
     if(act==='finish-voyage'){finishVoyage(id);}
     if(act==='bestiary-sort'){if(state.bestiarySort===id)state.bestiaryDescending=!state.bestiaryDescending;else{state.bestiarySort=id;state.bestiaryDescending=false;}renderPanel();persist();}
+    if(act==='bestiary-hide-monographs'){state.bestiaryHideMonographs=!state.bestiaryHideMonographs;renderPanel();persist();}
     if(act==='buy-crown'){buyCrownPack(Number(id)||0);}
     if(act==='exchange-crown'){exchangeTrialCrowns(id==='all'?Math.floor(Math.max(0,state.crownCoins||0)):Number(id));}
     if(act==='claim-mission'){claimScientificMission(id);}
@@ -3917,6 +4095,10 @@ function tick(){
  }
  if(museumRate()>0){state.money+=museumRate()*(elapsed/1000);}
  const returns=processVoyages(now);
+ if(tab==='museum'&&state.museumView==='fossils'){
+  const newlyReady=state.museum.excavations.filter(job=>job.endAt<=now&&!job.readyNotified);
+  if(newlyReady.length){newlyReady.forEach(job=>job.readyNotified=true);renderPanel();}
+ }
  renderCounters();
  updateFieldOutput();
  if(returns && tab==='expeditions')renderPanel();
