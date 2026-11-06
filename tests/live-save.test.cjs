@@ -256,7 +256,7 @@ test('Beta 3.10: piezas del Museo requieren recursos y solo se catalogan una vez
  assert.equal(now.inventory.map_fragment,0);
  assert.equal(now.inventory.parchment_scrap,0);
  assert.equal(now.knowledge,340);
- assert.match(h.evalInGame('renderMuseumCollections("fossils")'),/2\/2 piezas catalogadas/);
+ assert.match(h.evalInGame('renderMuseumCollections("fossils")'),/2\/4 piezas catalogadas/);
  h.tick();
  const reopened=harness(h.store);
  const saved=JSON.parse(reopened.store[KEY]);
@@ -273,7 +273,7 @@ test('Beta 3.10: exportar e importar mantiene el registro del Museo, incluso con
  assert.equal(JSON.parse(h.store[KEY]).museum.collections.fosil_catalogado,true);
  const noCollections={...old,museum:{wing:2,exhibits:{}}};
  h.window.AtlasSaveBridge.restoreGame(noCollections);
- assert.match(h.evalInGame('renderMuseumCollections("fossils")'),/0\/2 piezas catalogadas/);
+ assert.match(h.evalInGame('renderMuseumCollections("fossils")'),/0\/4 piezas catalogadas/);
  assert.equal(JSON.parse(h.store[KEY]).museum.wing,2);
 });
 
