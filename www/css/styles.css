@@ -986,3 +986,6 @@ button,select{font:inherit}
  .museum-v318-stats>span{font-size:9px}
  .museum-v318-actions{grid-template-columns:1fr}
 }
+
+/* v3.19.1c — fish scale: improve silhouette legibility in PC cards */
+@media(min-width:701px){.species-card .sprite-wrap svg[data-fish-family]{transform:scale(1.12);transform-origin:center}}
