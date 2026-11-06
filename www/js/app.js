@@ -2077,8 +2077,8 @@ function currentRegion(){return REGIONS.find(r=>r.id===state.currentRegion)||REG
 function totalSightings(){return Object.values(state.sightings).reduce((a,b)=>a+b,0)}
 function monographCount(){return Object.values(state.published).filter(Boolean).length}
 function autoInterval(){return [5,3,2,1,0.5][state.upgrades.autoTier]}
-function manualEncounterBonus(){return 1 + state.upgrades.prism*0.12+(state.equipment.instrument==='binoculars'?0.12:0)}
-function knowledgeBonus(){return 1 + state.upgrades.journal*0.25+(state.equipment.hat==='field_hat'?0.10:0)}
+function manualEncounterBonus(){return 1 + state.upgrades.prism*0.12+(state.equipment.instrument==='field_telescope'?0.24:state.equipment.instrument==='binoculars'?0.12:0)}
+function knowledgeBonus(){return 1 + state.upgrades.journal*0.25+(state.equipment.hat==='scholar_hat'?0.20:state.equipment.hat==='field_hat'?0.10:0)}
 function helperBonus(){return 1 + Math.min(0.45,state.helpers*0.03+state.upgrades.training*0.08)+(state.equipment.necklace==='amulet'?0.08:0)+(state.equipment.hat==='rain_hood'?0.05:0)}
 
 // Indicadores efectivos, calculados directamente de las mismas funciones que resuelven cada búsqueda.
@@ -3126,6 +3126,10 @@ function maybeMuseumFieldDiscovery(source){
  if(Math.random()<(manual?0.008:0.0015)){addInventory('fossil_fragment',1);found.push('fragmento fósil');}
  if(Math.random()<(manual?0.0015:0.00035)){addInventory('fossil_tooth',1);found.push('diente fósil');}
  if(Math.random()<(manual?0.00008:0.000015)){addInventory('fossil_skull',1);found.push('cráneo fósil');}
+  // Perlas: tirada independiente para ríos o costas; no aumenta avistamientos.
+  if(['rio','costa'].includes(state.habitat)&&Math.random()<(manual?0.012:0.0015)){
+   addInventory('river_pearl',1);found.push('perla fluvial');
+  }
  const candidates=MUSEUM_RELICTS.filter(r=>r.region===state.currentRegion &&
    r.habitats.includes(state.habitat)&&r.times.includes(state.time)&&!museumRelictOwned(r.id));
  if(candidates.length&&Math.random()<(manual?0.0006:0.00009)){
@@ -3331,7 +3335,7 @@ const MUSEUM_WINGS = [
 ];
 function exhibitPrice(id){return ({'Común':45,'Poco común':70,'Raro':105,'Muy rara':150}[SPECIES[id].rare]||60);}
 function exhibitIncome(id){return ({'Común':0.16,'Poco común':0.24,'Raro':0.34,'Muy rara':0.5}[SPECIES[id].rare]||0.2);}
-function museumRate(){const base=Object.keys(state.museum.exhibits||{}).reduce((total,id)=>total+exhibitIncome(id),0);return base*(1+(state.upgrades.museumIncomeTier?RESEARCH_V315_BALANCE.museumIncomeBonus:0));}
+function museumRate(){const base=Object.keys(state.museum.exhibits||{}).reduce((total,id)=>total+exhibitIncome(id),0);return base*(1+(state.upgrades.museumIncomeTier?RESEARCH_V315_BALANCE.museumIncomeBonus:0)+(state.equipment.necklace==='museum_medallion'?0.10:0));}
 // Orden de mayor precio de muestra a menor, sin cambiar la economía.
 function museumValueSort(a,b){return exhibitPrice(b)-exhibitPrice(a)||exhibitIncome(b)-exhibitIncome(a)||SPECIES[a].name.localeCompare(SPECIES[b].name,'es');}
 function museumCapacity(){return [0,3,7,12][state.museum.wing] || 12;}
@@ -3427,7 +3431,12 @@ const ITEMS={
  antler_fragment:{name:'Fragmento de cornamenta',emoji:'🦌',slot:null,bonus:'Trofeo de animal',kind:'animal'},
  otter_whisker:{name:'Bigote de nutria',emoji:'〰️',slot:null,bonus:'Trofeo de animal',kind:'animal'},
  boar_tusk:{name:'Colmillo de jabalí',emoji:'🦷',slot:null,bonus:'Trofeo de animal',kind:'animal'},
- beaver_tail_scale:{name:'Escama de cola de castor',emoji:'🪵',slot:null,bonus:'Trofeo de animal',kind:'animal'}
+ beaver_tail_scale:{name:'Escama de cola de castor',emoji:'🪵',slot:null,bonus:'Trofeo de animal',kind:'animal'},
+ field_telescope:{name:'Catalejo de precisión',emoji:'🔭',slot:'instrument',bonus:'+24 % relativo de encuentro manual (sustituye el bono de prismáticos)',kind:'equip'},
+ scholar_hat:{name:'Sombrero académico',emoji:'🎓',slot:'hat',bonus:'+20 % de conocimiento por búsqueda',kind:'equip'},
+ museum_medallion:{name:'Medallón de ámbar',emoji:'🏅',slot:'necklace',bonus:'+10 % de ingresos de las muestras expuestas en el Museo',kind:'equip'},
+ fossil_amber:{name:'Ámbar fósil',emoji:'🟠',slot:null,bonus:'Hallazgo raro de expedición, para objetos de colección',kind:'rare'},
+ river_pearl:{name:'Perla fluvial',emoji:'⚪',slot:null,bonus:'Hallazgo raro en ríos y costas durante observaciones',kind:'rare'}
 };
 const SPECIES_DROPS={
  lobo_gris:'wolf_tooth',
@@ -3441,9 +3450,10 @@ const SPECIES_DROPS={
  jabali:'boar_tusk',
  castor_europeo:'beaver_tail_scale',
  garza_real:'heron_feather',
- lince_boreal:'owl_feather'
+ lince_boreal:'animal_trace'
 };
 const RECIPES={
+ field_hat:{requires:{pressed_flower:2,parchment_scrap:2}},
  brass_compass:{requires:{ancient_coin:1,map_fragment:1}},
  feather_cap:{requires:{owl_feather:2,pressed_flower:1}},
  amulet:{requires:{ancient_coin:1,otter_whisker:1}},
@@ -3455,17 +3465,112 @@ const RECIPES={
  asia_map:{requires:{asia_map_piece:10}},
  africa_map:{requires:{africa_map_piece:10}},
  north_america_map:{requires:{north_america_map_piece:8}},
+ field_telescope:{requires:{binoculars:1,polished_lens:2,brass_shard:2,parchment_scrap:2}},
+ scholar_hat:{requires:{field_hat:1,feather_cap:1,old_ink:1,pressed_flower:3}},
+ museum_medallion:{requires:{amulet:1,fossil_amber:1,river_pearl:1,brass_shard:1}},
  oceanic_quadrant:{requires:{brass_shard:3,polished_lens:2,map_fragment:2,parchment_scrap:1}}
 };
-function rollLoot(){
-  const chance=0.35 + ((state.equipment.hat==='feather_cap')?0.06:0) + ((state.equipment.instrument==='sturdy_pack')?0.03:0);
-  if(Math.random()>=chance)return null;
-  const ids=Object.keys(ITEMS).filter(id=>(ITEMS[id].kind==='voyage' || ITEMS[id].kind==='equip') && id!=='asia_map' && id!=='africa_map' && id!=='north_america_map' && id!=='north_america_map_piece');
-  ids.push('asia_map_piece','africa_map_piece','africa_map_piece');
- if(state.purchases.nuevo_mundo_1)ids.push('north_america_map_piece','north_america_map_piece');
-  return ids[Math.floor(Math.random()*ids.length)];
+// Beta 3.16: botín por tipo de viaje. No aparecen herramientas terminadas al azar.
+const V316_LOOT_BASE=[
+ ['map_fragment',8],['parchment_scrap',7],['pressed_flower',7],
+ ['river_pebble',5],['animal_trace',6],['ancient_coin',3],
+ ['polished_lens',4],['fossil_fragment',3],['old_ink',2],
+ ['brass_shard',2],['carved_wood',3],['heron_feather',2]
+];
+const V316_LOOT_BY_ROUTE={
+ coast:[['pressed_flower',5],['river_pebble',5],['map_fragment',3],['asia_map_piece',2]],
+ north:[['asia_map_piece',15],['polished_lens',5],['map_fragment',5]],
+ alps:[['asia_map_piece',12],['fossil_fragment',7],['river_pebble',3]],
+ carpathians:[['asia_map_piece',7],['africa_map_piece',6],['animal_trace',4]],
+ balkans:[['asia_map_piece',5],['africa_map_piece',12],['map_fragment',5]],
+ ethiopia_survey:[['africa_map_piece',20],['animal_trace',7],['fossil_fragment',5]],
+ namib_survey:[['africa_map_piece',22],['fossil_fragment',7],['brass_shard',5]],
+ atlantic_survey:[['north_america_map_piece',28],['map_fragment',7],['polished_lens',4]]
+};
+function rollLoot(voyage=null,random=Math.random){
+ const chance=0.35 + ((state.equipment.hat==='feather_cap')?0.06:0)
+    + ((state.equipment.instrument==='sturdy_pack')?0.03:0);
+ if(random()>=chance)return null;
+ const route=typeof voyage==='string'?voyage:voyage?.id||'';
+ const weighted=V316_LOOT_BASE.concat(V316_LOOT_BY_ROUTE[route]||[]);
+ const total=weighted.reduce((sum,x)=>sum+x[1],0);
+ let roll=random()*total;
+ for(const [id,weight] of weighted){roll-=weight;if(roll<0)return id;}
+ return weighted[weighted.length-1][0];
 }
 function addInventory(id, qty=1){state.inventory[id]=(state.inventory[id]||0)+qty;}
+// Beta 3.16 · Taller, estudio de materiales repetidos y procedencia verificable.
+const V316_MATERIAL_STUDIES={
+ herbarium:{name:'Herbario de campo',emoji:'🌿',description:'Prensar y clasificar plantas recogidas.',requires:{pressed_flower:3,parchment_scrap:1},knowledge:40,money:0},
+ tracking:{name:'Archivo de rastros',emoji:'🐾',description:'Comparar huellas con sedimentos de río.',requires:{animal_trace:3,river_pebble:2},knowledge:55,money:0},
+ travel_notes:{name:'Informe cartográfico',emoji:'📜',description:'Ordenar croquis y tinta de expedición.',requires:{map_fragment:2,old_ink:1},knowledge:55,money:0},
+ timber:{name:'Donación de materiales',emoji:'🏛️',description:'Entregar excedentes a la Sociedad de Naturalistas.',requires:{carved_wood:2,river_pebble:3},knowledge:0,money:80},
+ fossil_report:{name:'Informe paleontológico',emoji:'🦴',description:'Estudiar restos antes de destinarlos a una exposición.',requires:{fossil_fragment:2,fossil_tooth:1},knowledge:120,money:0},
+ ornithology:{name:'Catálogo de plumajes',emoji:'🪶',description:'Clasificar muestras de distintas aves.',requires:{owl_feather:2,heron_feather:2},knowledge:90,money:0},
+ mammalogy:{name:'Cuaderno de mamíferos',emoji:'🦊',description:'Documentar rastros de carnívoros y ungulados.',requires:{wolf_tooth:1,boar_tusk:1,antler_fragment:1},knowledge:110,money:0},
+ river_mammals:{name:'Análisis de humedales',emoji:'🦦',description:'Estudiar señales de nutria y castor.',requires:{otter_whisker:1,beaver_tail_scale:1},knowledge:75,money:0}
+};
+const V316_ORIGINS={
+ binoculars:'Fabricación; mejora de prismáticos',brass_compass:'Fabricación en Equipo/Taller',
+ sturdy_pack:'Fabricación en Equipo/Taller',field_hat:'Fabricación con flores y pergamino',
+ feather_cap:'Fabricación con plumas',rain_hood:'Fabricación en Equipo/Taller',
+ amulet:'Fabricación en Equipo/Taller',amber_charm:'Fabricación en Equipo/Taller',
+ shell_necklace:'Fabricación en Equipo/Taller',field_telescope:'Mejora del equipo óptico',
+ scholar_hat:'Mejora de sombreros',museum_medallion:'Fabricación con ámbar y perla',
+ fossil_amber:'Expedición excepcional; más probable en costa y Namib',
+ river_pearl:'Campo, biomas Río o Costa, tras avistar fauna',
+ fossil_fragment:'Campo, expediciones y prospección',fossil_skull:'Excavaciones y hallazgos excepcionalmente raros',
+ fossil_tooth:'Excavaciones y expediciones',animal_trace:'Botín de expedición y muestras de fauna',
+ pressed_flower:'Expedición; registros botánicos',ancient_coin:'Expedición',
+ map_fragment:'Botín cartográfico de expediciones',asia_map_piece:'Expediciones europeas (especialmente Norte y Alpes)',
+ africa_map_piece:'Expediciones (especialmente rutas balcánicas y africanas)',
+ north_america_map_piece:'Reconocimiento del Atlántico',
+ asia_map:'Fabricar con 10 partes de mapa de Asia',africa_map:'Fabricar con 10 partes de mapa de África',
+ north_america_map:'Fabricar con 8 partes de mapa norteamericano',
+ oceanic_quadrant:'Fabricar con metal y materiales cartográficos',
+ polished_lens:'Expedición; material óptico',brass_shard:'Expediciones y materiales históricos',
+ old_ink:'Expediciones y materiales históricos',carved_wood:'Expediciones y materiales históricos',
+ parchment_scrap:'Expedición',river_pebble:'Expedición',
+ heron_feather:'Avistamiento con Gabinete de especímenes',
+ wolf_tooth:'Avistamiento con Gabinete de especímenes',
+ owl_feather:'Avistamiento con Gabinete de especímenes',
+ antler_fragment:'Avistamiento con Gabinete de especímenes',
+ otter_whisker:'Avistamiento con Gabinete de especímenes',
+ boar_tusk:'Avistamiento con Gabinete de especímenes',
+ beaver_tail_scale:'Avistamiento con Gabinete de especímenes'
+};
+function v316ItemUses(id){
+ const names=[];
+ for(const [out,recipe] of Object.entries(RECIPES))
+  if(recipe.requires[id])names.push(ITEMS[out].name);
+ for(const project of Object.values(V316_MATERIAL_STUDIES))
+  if(project.requires[id])names.push(project.name);
+ for(const project of MUSEUM_COLLECTIONS)
+  if(project.requires[id])names.push(project.name+' (Museo)');
+ for(const project of MUSEUM_FOSSIL_RECIPES)
+  if(project.requires[id])names.push(project.name+' (Museo)');
+ if(['asia_map','africa_map','north_america_map','oceanic_quadrant'].includes(id))
+  names.push('Investigaciones y acceso a continentes');
+ if(ITEMS[id]?.slot)names.push('Equipo activo: '+ITEMS[id].bonus);
+ return [...new Set(names)];
+}
+function canProcessMaterials(id,repeat=1){
+ const project=V316_MATERIAL_STUDIES[id];
+ if(!project||![1,5].includes(repeat))return false;
+ return Object.entries(project.requires).every(([item,qty])=>(state.inventory[item]||0)>=qty*repeat);
+}
+function processMaterials(id,repeat=1){
+ if(!canProcessMaterials(id,repeat))return false;
+ const project=V316_MATERIAL_STUDIES[id];
+ for(const [item,qty] of Object.entries(project.requires))
+  state.inventory[item]-=qty*repeat;
+ state.money+=(project.money||0)*repeat;
+ state.knowledge+=(project.knowledge||0)*repeat;
+ pushLog('📚 Taller · '+project.name+' ×'+repeat+' · +£'+(project.money||0)*repeat+' y +'+(project.knowledge||0)*repeat+' conocimiento.');
+ render();
+ return true;
+}
+
 function maybeSpeciesDrop(id, manual){
   if(!state.upgrades.specimenDrops) return null;
   const item=SPECIES_DROPS[id];
@@ -3483,7 +3588,14 @@ function canCraft(id){
 function craftItem(id){
   const item=ITEMS[id], recipe=RECIPES[id];
   if(!item || !recipe || !canCraft(id)) return;
-  Object.entries(recipe.requires).forEach(([rid,qty])=>{state.inventory[rid]=(state.inventory[rid]||0)-qty;});
+  Object.entries(recipe.requires).forEach(([rid,qty])=>{
+   state.inventory[rid]=(state.inventory[rid]||0)-qty;
+   // Una herramienta usada en la mejora deja de estar equipada si se agota.
+   if(state.inventory[rid]===0){
+    for(const slot of ['instrument','hat','necklace'])
+     if(state.equipment[slot]===rid)state.equipment[slot]=null;
+   }
+  });
   addInventory(id,1);
   pushLog('🛠️ Fabricado: '+item.name);
   render();
@@ -3491,17 +3603,29 @@ function craftItem(id){
 function equipItem(id){const item=ITEMS[id];if(!item||!item.slot||!(state.inventory[id]||0))return;state.equipment[item.slot]=state.equipment[item.slot]===id?null:id;pushLog('🎒 Equipo actualizado: '+item.name);render();}
 // v2.3: cuatro subpestañas internas; el Inventario mantiene su botón principal.
 function renderObjects(){
- const sections=[['equipo','🎽 Equipo'],['animales','🐾 Animales'],['expedicion','🧭 Expedición'],['coleccionables','🏛️ Coleccionables']];
+ const sections=[['equipo','🎽 Equipo'],['animales','🐾 Animales'],['expedicion','🧭 Expedición'],['coleccionables','🏛️ Coleccionables'],['taller','🛠️ Taller']];
  const selected=sections.some(([id])=>id===state.inventoryView)?state.inventoryView:'equipo';
  const equippedNames={instrument:'Instrumento',hat:'Gorro',necklace:'Collar'};
  const slots=Object.entries(equippedNames).map(([slot,label])=>{
    const itemId=state.equipment[slot];const item=itemId&&ITEMS[itemId];
    return `<div class="inventory-slot"><div class="inventory-slot-label">${label}</div><div class="inventory-slot-icon">${item?item.emoji:{instrument:'🔭',hat:'🎩',necklace:'📿'}[slot]}</div><strong>${item?item.name:'Vacío'}</strong><div class="small">${item?item.bonus:'Sin bonificación'}</div>${item?`<button class="btn alt" data-action="equip-item" data-id="${itemId}">Quitar</button>`:''}</div>`;
  }).join('');
- const card=(id,item)=>`<div class="inventory-item"><span class="inventory-icon">${item.emoji}</span><div class="inventory-item-body"><strong>${item.name}</strong><div class="small">${item.bonus}</div><div class="inventory-item-bottom"><span class="badge inv-count">× ${state.inventory[id]||0}</span>${item.slot?`<button class="btn ${state.equipment[item.slot]===id?'gold':'alt'}" data-action="equip-item" data-id="${id}" ${(state.inventory[id]||0)?'':'disabled'}>${state.equipment[item.slot]===id?'Quitar':'Equipar'}</button>`:''}</div></div></div>`;
+ const card=(id,item)=>{
+  const source=V316_ORIGINS[id]||(item.kind==='equip'?'Fabricación en Taller':item.kind==='animal'?'Avistamientos con Gabinete de especímenes':'Expediciones o Museo');
+  const uses=v316ItemUses(id);
+  return `<div class="inventory-item">`+
+   `<span class="inventory-icon">${item.emoji}</span><div class="inventory-item-body">`+
+   `<strong>${item.name}</strong><div class="small">${item.bonus}</div>`+
+   `<div class="small v316-origin"><b>Obtención:</b> ${source}</div>`+
+   `<div class="small v316-use"><b>Utilidad:</b> ${uses.slice(0,3).join(' · ')||'Material de colección'}</div>`+
+   `<div class="inventory-item-bottom"><span class="badge inv-count">× ${state.inventory[id]||0}</span>`+
+   (item.kind==='rare'?'<span class="badge">Raro</span>':'')+
+   (item.slot?`<button class="btn ${state.equipment[item.slot]===id?'gold':'alt'}" data-action="equip-item" data-id="${id}" ${(state.inventory[id]||0)?'':'disabled'}>${state.equipment[item.slot]===id?'Quitar':'Equipar'}</button>`:'')+
+   `</div></div></div>`;
+ };
  const recipeCard=(id,recipe)=>{const item=ITEMS[id];return `<div class="inventory-item"><span class="inventory-icon">${item.emoji}</span><div class="inventory-item-body"><strong>${item.name}</strong><div class="small">${Object.entries(recipe.requires).map(([rid,qty])=>`${ITEMS[rid].emoji} ${ITEMS[rid].name} ${state.inventory[rid]||0}/${qty}`).join(' · ')}</div><div class="inventory-item-bottom"><span class="badge">En bolsa: ${state.inventory[id]||0}</span><button class="btn" data-action="craft-item" data-id="${id}" ${canCraft(id)?'':'disabled'}>Fabricar</button></div></div></div>`;};
  const all=Object.entries(ITEMS);
- const collectIds=new Set(['asia_map','africa_map','north_america_map','oceanic_quadrant','fossil_fragment','fossil_skull','fossil_tooth','bone_short','bone_long','carnivore_skull','herbivore_skull','fossil_plate','fossil_sail']);
+ const collectIds=new Set(['asia_map','africa_map','north_america_map','oceanic_quadrant','fossil_fragment','fossil_skull','fossil_tooth','bone_short','bone_long','carnivore_skull','herbivore_skull','fossil_plate','fossil_sail','fossil_amber','river_pearl']);
  let content='';
  if(selected==='equipo'){
    content=`<section class="inventory-block"><h4>📊 Bonificaciones efectivas</h4><div class="small">Encuentro manual: ${pctBuff(manualSearchChance())} · Encuentro automático: ${state.helpers?pctBuff(automaticSearchChance()):'inactivo (sin naturalistas)'} · Búsqueda automática cada ${autoInterval()} s.</div><div class="small">La probabilidad de botín de expedición parte en 35 %. El gorro emplumado añade 6 puntos porcentuales y el morral reforzado 3 puntos porcentuales. Los objetos solo dan su bono cuando están equipados.</div></section><div class="inventory-equipment-layout"><section class="inventory-block"><h4>🎽 Slots de equipamiento</h4><div class="small">Un objeto por ranura. El equipo anterior permanece en tu inventario.</div><div class="inventory-slots">${slots}</div></section><section class="inventory-block"><h4>Equipo disponible</h4><div class="inventory-items">${all.filter(([,i])=>i.kind==='equip').map(([id,i])=>card(id,i)).join('')}</div></section></div><section class="inventory-block"><h4>🛠️ Fabricación de equipo</h4><div class="inventory-items">${Object.entries(RECIPES).filter(([id])=>ITEMS[id]?.kind==='equip').map(([id,recipe])=>recipeCard(id,recipe)).join('')}</div></section>`;
@@ -3509,13 +3633,34 @@ function renderObjects(){
    content=`<section class="inventory-block"><h4>🐾 Materiales de animales</h4><div class="small">Hallazgos acumulables obtenidos mediante avistamientos. No ocupan slots.</div><div class="inventory-items">${all.filter(([,i])=>i.kind==='animal').map(([id,i])=>card(id,i)).join('')}</div></section>`;
  }else if(selected==='expedicion'){
    content=`<section class="inventory-block"><h4>🧭 Botín de expedición</h4><div class="small">Materiales, herramientas y fragmentos de mapa encontrados en viajes.</div><div class="inventory-items">${all.filter(([id,i])=>(i.kind==='voyage'||i.kind==='artifact_material')&&!collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div></section>`;
+ }else if(selected==='taller'){
+  const projects=Object.entries(V316_MATERIAL_STUDIES).map(([id,project])=>{
+   const requirements=Object.entries(project.requires).map(([item,qty])=>
+    ITEMS[item].emoji+' '+ITEMS[item].name+' '+(state.inventory[item]||0)+'/'+qty).join(' · ');
+   const gain=(project.knowledge?('+'+project.knowledge+' conocimiento'):'')+
+    (project.knowledge&&project.money?' · ':'')+
+    (project.money?('+'+project.money+' libras'):'');
+   return '<div class="inventory-item v316-study"><span class="inventory-icon">'+project.emoji+'</span>'+
+    '<div class="inventory-item-body"><strong>'+project.name+'</strong><div class="small">'+project.description+'</div>'+
+    '<div class="small">'+requirements+'</div><div class="small"><b>Resultado por estudio:</b> '+gain+'</div>'+
+    '<div class="inventory-item-bottom"><button class="btn" data-action="process-materials" data-id="'+id+':1" '+
+    (canProcessMaterials(id,1)?'':'disabled')+'>Estudiar ×1</button>'+
+    '<button class="btn alt" data-action="process-materials" data-id="'+id+':5" '+
+    (canProcessMaterials(id,5)?'':'disabled')+'>Estudiar ×5</button></div></div></div>';
+  }).join('');
+  content='<section class="inventory-block"><h4>🛠️ Taller de herramientas</h4>'+
+   '<p class="small">Las mejoras consumen materiales y herramientas anteriores si están en su receta. Cuando se consume un instrumento equipado, su ranura se vacía y puedes colocar el nuevo.</p>'+
+   '<div class="inventory-items">'+Object.entries(RECIPES).filter(([id])=>ITEMS[id]?.kind==='equip').map(([id,r])=>recipeCard(id,r)).join('')+'</div></section>'+
+   '<section class="inventory-block"><h4>📚 Estudios de materiales repetidos</h4>'+
+   '<p class="small">Convierte excedentes en conocimiento o financiación. Reserva fósiles y piezas cartográficas que necesites para el Museo y las investigaciones.</p>'+
+   '<div class="inventory-items">'+projects+'</div></section>';
  }else{
    const asia=state.inventory.asia_map_piece||0,africa=state.inventory.africa_map_piece||0,namerica=state.inventory.north_america_map_piece||0;
    content=`<section class="inventory-block"><h4>🏛️ Coleccionables y cartografía</h4><div class="small">Mapas fabricados, fósiles y piezas singulares. No ocupan slots de equipo.</div><div class="inventory-items">${all.filter(([id])=>collectIds.has(id)).map(([id,i])=>card(id,i)).join('')}</div><div class="divider"></div><h4>🗺️ Fabricación de mapas</h4><div class="inventory-items">${['asia_map','africa_map','oceanic_quadrant','north_america_map'].map(id=>recipeCard(id,RECIPES[id])).join('')}</div><div class="small">Mapa de Asia: ${Math.min(10,asia)}/10 fragmentos disponibles · Mapa de África: ${Math.min(10,africa)}/10. El mapa africano permite investigar África. Ruta al Nuevo Mundo: cuadrante transatlántico → navegación atlántica → mapa de Norteamérica ${Math.min(8,namerica)}/8 piezas → investigación de Norteamérica.</div></section>`;
  }
  const ownedEntries=Object.entries(state.inventory).filter(([,qty])=>Number(qty)>0);
  const equipped=Object.values(state.equipment).filter(Boolean).length;
- return `<section class="card stack inventory-main inventory-v33"><header class="inventory-v33-header"><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3 class="section">🎒 Inventario</h3><div class="inventory-v33-stats"><span>📦 ${ownedEntries.length} tipos de objetos</span><span>🎽 ${equipped}/3 equipados</span></div></header><p class="small">Organiza tus hallazgos en cuatro pestañas. Solo el Equipo utiliza los tres slots activos.</p><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${sections.map(([id,label])=>`<button type="button" role="tab" aria-selected="${selected===id?'true':'false'}" class="inventory-subtab ${selected===id?'active':''}" data-action="inventory-tab" data-id="${id}">${label}</button>`).join('')}</div>${content}</section>`;
+ return `<section class="card stack inventory-main inventory-v33"><header class="inventory-v33-header"><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3 class="section">🎒 Inventario</h3><div class="inventory-v33-stats"><span>📦 ${ownedEntries.length} tipos de objetos</span><span>🎽 ${equipped}/3 equipados</span></div></header><p class="small">Organiza tus hallazgos en cinco pestañas. Solo el Equipo utiliza los tres slots activos; el Taller permite aprovechar excedentes.</p><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${sections.map(([id,label])=>`<button type="button" role="tab" aria-selected="${selected===id?'true':'false'}" class="inventory-subtab ${selected===id?'active':''}" data-action="inventory-tab" data-id="${id}">${label}</button>`).join('')}</div>${content}</section>`;
 }
 
 
@@ -3540,7 +3685,7 @@ function resolveVoyageReward(job){
   state.money+=prize;state.knowledge+=notes;
   // Hallazgo seguro solo en reconocimientos dirigidos; las misiones antiguas no cambian.
   if(v.sample && ITEMS[v.sample]){addInventory(v.sample,1);pushLog('🔎 Muestra recogida: '+ITEMS[v.sample].name+'.');}
-  const loot=rollLoot();
+  const loot=rollLoot(v);
   if(loot){addInventory(loot,1); pushLog('🎒 Hallazgo: '+ITEMS[loot].name);}
   // Prospección opcional, adicional al botín original. No altera premios de rutas.
   const paleontology=Math.random();
@@ -3561,6 +3706,10 @@ function resolveVoyageReward(job){
   const artifactRoll=Math.random();
   const artifactItem=artifactRoll<0.13?'brass_shard':artifactRoll<0.20?'old_ink':artifactRoll<0.31?'carved_wood':null;
   if(artifactItem){addInventory(artifactItem,1);pushLog('🏺 Material histórico: '+ITEMS[artifactItem].name+'.');}
+// Ámbar raro: expediciones de exploración, nunca como premio garantizado.
+const amberChance=(v.id==='coast'||v.id==='namib_survey')?0.035:0.014;
+if(Math.random()<amberChance){addInventory('fossil_amber',1);pushLog('🟠 Hallazgo raro: ámbar fósil.');}
+
   state.museum.voyagesCompleted=(state.museum.voyagesCompleted||0)+1;
   pushLog('⛵ Regresó '+v.name+': +£'+prize+' y +'+notes+' conocimiento.');
   return true;
@@ -3697,8 +3846,9 @@ function bindPanel(){
     if(act==='exhibit'){ exhibitAnimal(id); }
     if(act==='sail'){sail(id);}
     if(act==='equip-item'){equipItem(id);}
-    if(act==='inventory-tab' && ['equipo','animales','expedicion','coleccionables'].includes(id)){state.inventoryView=id;renderPanel();persist();}
+    if(act==='inventory-tab' && ['equipo','animales','expedicion','coleccionables','taller'].includes(id)){state.inventoryView=id;renderPanel();persist();}
     if(act==='craft-item'){craftItem(id);}
+   if(act==='process-materials'){const [project,repeat]=String(id).split(':');processMaterials(project,Number(repeat));}
     if(act==='finish-voyage'){finishVoyage(id);}
     if(act==='bestiary-sort'){if(state.bestiarySort===id)state.bestiaryDescending=!state.bestiaryDescending;else{state.bestiarySort=id;state.bestiaryDescending=false;}renderPanel();persist();}
     if(act==='buy-crown'){buyCrownPack(Number(id)||0);}

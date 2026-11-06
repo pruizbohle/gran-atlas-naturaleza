@@ -32,7 +32,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: android-debug-${{ github.ref }}
@@ -103,8 +103,27 @@ jobs:
       - name: Publicar APK de prueba
         uses: actions/upload-artifact@v4
         with:
-          name: El-Gran-Atlas-Beta-3.15.4-debug
+          name: El-Gran-Atlas-Beta-3.16-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 14
 
+
+      - name: Publicar APK beta con enlace directo
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          TAG="v${VERSION}"
+          FILE="El-Gran-Atlas-Beta-${VERSION}-debug.apk"
+          cp android/app/build/outputs/apk/debug/app-debug.apk "${FILE}"
+          if gh release view "${TAG}" >/dev/null 2>&1; then
+            gh release upload "${TAG}" "${FILE}" --clobber
+          else
+            gh release create "${TAG}" "${FILE}" \
+              --target "${GITHUB_SHA}" \
+              --prerelease \
+              --title "El Gran Atlas · Beta ${VERSION}" \
+              --notes "APK de depuración para pruebas de El Gran Atlas. Guarda un respaldo antes de actualizar. No es una versión definitiva."
+          fi

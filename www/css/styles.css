@@ -907,3 +907,20 @@ button,select{font:inherit}
 /* Beta 3.15.4: atmósferas distintas para biomas tropicales y sabana. */
 .field-v31 .scene.biome-selva{--biome-sky:#83b8a6;--biome-haze:#b8d9bd;--biome-far:#467d63;--biome-ground:#4c7953;--biome-grass:#315b3a;--biome-tree:#285a42;--biome-detail:#3d6c45}
 .field-v31 .scene.biome-sabana{--biome-sky:#c9d1c2;--biome-haze:#e7d2a4;--biome-far:#acb48d;--biome-ground:#b6a56b;--biome-grass:#9c9257;--biome-tree:#66734a;--biome-detail:#86744b}
+
+/* Beta 3.16 · Inventario, taller y procedencia de hallazgos. */
+.inventory-v33 .inventory-subtabs{grid-template-columns:repeat(5,minmax(0,1fr))}
+.inventory-v33 .v316-origin,.inventory-v33 .v316-use{font-size:11px;line-height:1.4;color:#5b614f;margin-top:5px;overflow-wrap:anywhere}
+.inventory-v33 .v316-origin b,.inventory-v33 .v316-use b{color:#3b513f}
+.inventory-v33 .v316-study{background:#f4ead8;border-left:3px solid #778c65}
+.inventory-v33 .v316-study .inventory-item-bottom{justify-content:flex-start}
+.inventory-v33 .v316-study .inventory-item-bottom .btn{min-height:38px}
+@media(max-width:760px){
+ .inventory-v33 .inventory-subtabs{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+ .inventory-v33 .inventory-subtab{font-size:11px;min-height:42px;padding:8px 4px}
+ .inventory-v33 .v316-study .inventory-item-bottom .btn{font-size:11px}
+}
+@media(max-width:400px){
+ .inventory-v33 .inventory-subtabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .inventory-v33 .v316-study .inventory-item-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+}
