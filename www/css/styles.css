@@ -903,3 +903,7 @@ button,select{font:inherit}
  .encounter-graphic-copy>strong{font-size:14px}
 }
 @media(prefers-reduced-motion:reduce){.encounter-species{animation:none}}
+
+/* Beta 3.15.4: atmósferas distintas para biomas tropicales y sabana. */
+.field-v31 .scene.biome-selva{--biome-sky:#83b8a6;--biome-haze:#b8d9bd;--biome-far:#467d63;--biome-ground:#4c7953;--biome-grass:#315b3a;--biome-tree:#285a42;--biome-detail:#3d6c45}
+.field-v31 .scene.biome-sabana{--biome-sky:#c9d1c2;--biome-haze:#e7d2a4;--biome-far:#acb48d;--biome-ground:#b6a56b;--biome-grass:#9c9257;--biome-tree:#66734a;--biome-detail:#86744b}

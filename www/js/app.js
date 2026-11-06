@@ -1545,43 +1545,53 @@ function normalizeEcology(){
 }
 
 const ASIA_V23_TAXONOMY={"asia_esp_0538":{"className":"Mammalia","subClass":"Cánidos"},"asia_esp_0206":{"className":"Mammalia","subClass":"Felinos"},"asia_esp_0214":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0383":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0519":{"className":"Reptilia","subClass":"Lagartos"},"asia_esp_0102":{"className":"Reptilia","subClass":"Serpientes"},"asia_esp_0205":{"className":"Mammalia","subClass":"Felinos"},"asia_esp_0300":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0065":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0910":{"className":"Actinopterygii","subClass":"Peces óseos"},"asia_esp_0327":{"className":"Reptilia","subClass":"Tortugas"},"asia_esp_0873":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0246":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0182":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0218":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0227":{"className":"Aves","subClass":"Aves acuáticas y marinas"},"asia_esp_0534":{"className":"Mammalia","subClass":"Cánidos"},"asia_esp_0321":{"className":"Mammalia","subClass":"Roedores y lagomorfos"},"asia_esp_0183":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0404":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0442":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0347":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0319":{"className":"Mammalia","subClass":"Roedores y lagomorfos"},"asia_esp_0468":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0891":{"className":"Aves","subClass":"Aves acuáticas y marinas"},"asia_esp_0890":{"className":"Aves","subClass":"Aves acuáticas y marinas"},"asia_esp_0226":{"className":"Aves","subClass":"Aves acuáticas y marinas"},"asia_esp_0878":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0422":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0842":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0824":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0915":{"className":"Actinopterygii","subClass":"Peces óseos"},"asia_esp_0911":{"className":"Actinopterygii","subClass":"Peces óseos"},"asia_esp_0888":{"className":"Aves","subClass":"Aves acuáticas y marinas"},"asia_esp_0868":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0872":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0410":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0874":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0816":{"className":"Mammalia","subClass":"Felinos"},"asia_esp_0176":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0852":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0336":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0860":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0853":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0476":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0833":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0050":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0061":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0063":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0830":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0465":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0825":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0900":{"className":"Reptilia","subClass":"Lagartos"},"asia_esp_0136":{"className":"Reptilia","subClass":"Otros reptiles"},"asia_esp_0906":{"className":"Reptilia","subClass":"Serpientes"},"asia_esp_0905":{"className":"Reptilia","subClass":"Serpientes"},"asia_esp_0351":{"className":"Reptilia","subClass":"Serpientes"},"asia_esp_0124":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0296":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0096":{"className":"Mammalia","subClass":"Felinos"},"asia_esp_0355":{"className":"Mammalia","subClass":"Felinos"},"asia_esp_0006":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0318":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0854":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0395":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0856":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0310":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0345":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0902":{"className":"Reptilia","subClass":"Lagartos"},"asia_esp_0016":{"className":"Amphibia","subClass":"Salamandras"},"asia_esp_0433":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0440":{"className":"Mammalia","subClass":"Felinos"},"asia_esp_0333":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0111":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0249":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0067":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0867":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0869":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0883":{"className":"Aves","subClass":"Rapaces"},"asia_esp_0849":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0858":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0238":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0857":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0317":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0859":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0251":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0352":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0436":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0491":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0165":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0834":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0498":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0901":{"className":"Reptilia","subClass":"Lagartos"},"asia_esp_0527":{"className":"Reptilia","subClass":"Lagartos"},"asia_esp_0316":{"className":"Reptilia","subClass":"Serpientes"},"asia_esp_0373":{"className":"Reptilia","subClass":"Serpientes"},"asia_esp_0877":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0494":{"className":"Aves","subClass":"Aves terrestres"},"asia_esp_0363":{"className":"Mammalia","subClass":"Cánidos"},"asia_esp_0414":{"className":"Mammalia","subClass":"Otros mamíferos"},"asia_esp_0308":{"className":"Mammalia","subClass":"Primates"},"asia_esp_0087":{"className":"Mammalia","subClass":"Ungulados"},"asia_esp_0017":{"className":"Amphibia","subClass":"Salamandras"}};
+// Beta 3.15.4: clases y grupos uniformes para cuaderno, bestiario e investigación.
 function taxonomyInfo(id){
-  if(ASIA_V23_TAXONOMY[id])return ASIA_V23_TAXONOMY[id];
-  const special=SPECIES[id];
-  if(special?.kind==='lizard')return {className:'Reptilia',subClass:'Lagartos'};
-  if(special?.kind==='amphibian')return {className:'Amphibia',subClass:'Anuros'};
-  if(special?.kind==='camel')return {className:'Mammalia',subClass:'Camélidos'};
-  if(special?.kind==='primate')return {className:'Mammalia',subClass:'Primates'};
-  if(id==='asia_esp_0899')return {className:'Amphibia',subClass:'Salamandras'};
-  if(id==='asia_esp_0898')return {className:'Amphibia',subClass:'Sapos'};
-  if(id==='asia_esp_0914')return {className:'Actinopterygii',subClass:'Esturiones'};
-  if(id==='asia_esp_0903')return {className:'Reptilia',subClass:'Lagartos ápodos'};
-  const sp=SPECIES[id];
-  const k=sp.kind;
-  const table={
-    canid:['Mammalia','Cánidos'], deer:['Mammalia','Cérvidos y bóvidos'], mustelid:['Mammalia','Mustélidos'],
-    small:['Mammalia','Pequeños mamíferos'], otter:['Mammalia','Mustélidos acuáticos'], cat:['Mammalia','Felinos'],
-    bear:['Mammalia','Úrsidos'], boar:['Mammalia','Suidos'], rabbit:['Mammalia','Lagomorfos'], hare:['Mammalia','Lagomorfos'],
-    beaver:['Mammalia','Roedores'], bison:['Mammalia','Bóvidos'], forestbird:['Aves','Aves terrestres'],
-    raptor:['Aves','Rapaces'], owl:['Aves','Estrigiformes'], seabird:['Aves','Aves marinas'], songbird:['Aves','Paseriformes'],
-    stork:['Aves','Ciconiiformes'], swan:['Aves','Anátidas'], heron:['Aves','Ardeidas'], pelican:['Aves','Pelecaniformes'],
-    kingfisher:['Aves','Coraciiformes'], wader:['Aves','Zancudas'], reptile:['Reptilia','Lagartos y anuros'],
-    salamander:['Amphibia','Urodelos y anfibios'], snake:['Reptilia','Serpientes'], tortoise:['Reptilia','Quelonios'],
-    fish:['Actinopterygii','Peces óseos'],
-    ray:['Chondrichthyes','Rayas'],
-    pangolin:['Mammalia','Pangolines'],
-    elephant:['Mammalia','Proboscídeos'],
-    giraffe:['Mammalia','Jiráfidos'],
-    rhino:['Mammalia','Rinocerótidos'],
-    hippo:['Mammalia','Hipopotámidos'],
-    lemur:['Mammalia','Lémures'],
-    zebra:['Mammalia','Équidos'],
-    cetacean:['Mammalia','Cetáceos'],
-    sirenian:['Mammalia','Sirénidos'],
-    ostrich:['Aves','Estrucioniformes'],
-    crocodile:['Reptilia','Crocodilianos']
-  };
-  return {className:(table[k]||['Animalia','Vertebrados'])[0], subClass:(table[k]||['Animalia','Vertebrados'])[1]};
+ const sp=SPECIES[id];if(!sp)return {className:'Animalia',subClass:'Sin clasificar'};
+ const kind=sp.kind,latin=sp.latin||'',name=sp.name.toLocaleLowerCase('es');
+ const genus=latin.split(' ')[0],g=(className,subClass)=>({className,subClass});
+ if(kind==='amphibian'||/^(Rana|Epidalea|Strauchbufo|Conraua|Xenopus|Sclerophrys|Breviceps|Schismaderma)$/.test(genus))
+  return g('Amphibia','Ranas y sapos');
+ if(kind==='salamander')return g('Amphibia','Salamandras y tritones');
+ if(kind==='ray')return g('Chondrichthyes','Rayas');
+ if(kind==='fish')return g('Actinopterygii','Peces óseos');
+ if(kind==='crocodile')return g('Reptilia','Cocodrilianos');
+ if(kind==='tortoise')return g('Reptilia','Tortugas');
+ if(kind==='snake')return g('Reptilia','Serpientes');
+ if(kind==='lizard'||kind==='reptile')return g('Reptilia','Lagartos');
+ if(kind==='raptor')return g('Aves','Aves rapaces');
+ if(kind==='owl')return g('Aves','Búhos y lechuzas');
+ if(kind==='seabird')return g('Aves','Aves marinas');
+ if(['heron','stork','wader','pelican','kingfisher'].includes(kind))return g('Aves','Aves acuáticas y ribereñas');
+ if(kind==='swan')return g('Aves','Anátidas');
+ if(kind==='ostrich')return g('Aves','Ratites');
+ if(genus==='Lagopus'||/perdiz|faisán|faisan|urogallo|codorniz/.test(name))return g('Aves','Galliformes');
+ if(/cálao|calao/.test(name)||genus==='Buceros')return g('Aves','Cálaos');
+ if(kind==='forestbird'||kind==='songbird')return g('Aves','Aves terrestres');
+ if(kind==='cat')return g('Mammalia','Felinos');
+ if(kind==='canid')return g('Mammalia','Cánidos');
+ if(kind==='bear')return g('Mammalia','Úrsidos');
+ if(kind==='mustelid'||kind==='otter')return g('Mammalia','Mustélidos');
+ if(kind==='rabbit'||kind==='hare'||genus==='Lepus')return g('Mammalia','Lagomorfos');
+ if(kind==='primate')return g('Mammalia','Primates');
+ if(kind==='lemur')return g('Mammalia','Lémures');
+ if(kind==='elephant')return g('Mammalia','Elefantes');
+ if(kind==='rhino')return g('Mammalia','Rinocerontes');
+ if(kind==='hippo')return g('Mammalia','Hipopótamos');
+ if(kind==='pangolin')return g('Mammalia','Pangolines');
+ if(kind==='giraffe')return g('Mammalia','Jirafas y afines');
+ if(kind==='cetacean')return g('Mammalia','Cetáceos');
+ if(kind==='sirenian')return g('Mammalia','Sirénidos');
+ if(kind==='beaver'||kind==='small'){
+  if(/murciélago|murcielago/.test(name))return g('Mammalia','Murciélagos');
+  if(/desmán|desman|musaraña|musarana|topo/.test(name))return g('Mammalia','Insectívoros');
+  return g('Mammalia','Roedores y pequeños mamíferos');
+ }
+ if(kind==='deer'||kind==='bison')return g('Mammalia','Ungulados');
+ if(kind==='zebra')return g('Mammalia','Équidos');
+ if(kind==='camel')return g('Mammalia','Camélidos');
+ if(kind==='boar')return g('Mammalia','Suidos');
+ return g('Mammalia','Otros mamíferos');
 }
 function taxonomyText(id){
   const st=stage(id); const t=taxonomyInfo(id);
@@ -1723,57 +1733,106 @@ for(const region of REGIONS){
  region.species=[...new Set(region.species.map(id=>id==='af_quebrantahuesos'?'quebrantahuesos':id))];
 }
 delete SPECIES.af_quebrantahuesos;
+// Beta 3.15.4: fauna compartida, registros huérfanos y clasificación corregida.
+const V3154_SPECIES_ALIASES={asia_esp_0088:'af_caracal',asia_esp_0538:'af_zorro_ruppell'};
+for(const region of REGIONS){
+ region.species=[...new Set(region.species.map(id=>V3154_SPECIES_ALIASES[id]||id))];
+}
+for(const alias of Object.keys(V3154_SPECIES_ALIASES))delete SPECIES[alias];
+// África posee Canis lupaster, distinto de Canis aureus euroasiático.
+Object.assign(SPECIES.af_chacal_dorado,{name:'Lobo dorado africano',latin:'Canis lupaster'});
+// El leopardo persa y el africano conservan sus fichas como subespecies.
+SPECIES.asia_esp_0401.latin='Panthera pardus tulliana';
+SPECIES.af_leopardo.latin='Panthera pardus pardus';
+SPECIES.eu_esp_0267.name='Lagópodo común'; // Lagopus lagopus; no confundir con Lagopus muta.
+SPECIES.asia_esp_0067.kind='forestbird'; // Cálao rinoceronte es un ave.
+SPECIES.eu_esp_0623.habitats=['rio','bosque'];
+SPECIES.eu_esp_0623.times=['amanecer','atardecer','noche'];
+for(const id of ['asia_esp_0898','eu_esp_0660','eu_esp_0659','af_xlsx_rana_goliat',
+ 'af_xlsx_lemur_etc','af_xlsx_131_sclerophrys_regularis',
+ 'af_xlsx_131_breviceps_macrops','af_xlsx_131_schismaderma_carens']){
+ if(SPECIES[id])SPECIES[id].kind='amphibian';
+}
+const V3154_REGION_SPECIES={
+ 'HX-02-12':['meloncillo','ciguena_blanca','martin_pescador'],
+ 'HX-02-11':['ciguena_blanca'],
+ 'HX-01-09':['martin_pescador'],
+ 'HX-03-09':['chacal_dorado']
+};
+for(const [rid,ids] of Object.entries(V3154_REGION_SPECIES)){
+ const region=REGIONS.find(r=>r.id===rid);
+ if(!region)throw Error('Región inexistente: '+rid);
+ for(const id of ids){
+  if(!SPECIES[id])throw Error('Especie inexistente: '+id);
+  if(!region.species.includes(id))region.species.push(id);
+  if(!SPECIES[id].habitats.some(h=>region.habitats.includes(h)))
+   SPECIES[id].habitats=[...new Set([...SPECIES[id].habitats,region.habitats[0]])];
+ }
+}
+const V3154_NA_COLORS={
+ na_esp_anser_caerulescens:'#e0e5e5',na_esp_corvus_corax:'#30383c',
+ na_esp_bubo_scandiacus:'#e8e8db',na_esp_falco_peregrinus:'#6f7882',
+ na_esp_dicrostonyx_groenlandicus:'#b8a88b',na_esp_lemmus_trimucronatus:'#9d8065',
+ na_esp_ursus_americanus:'#37332f',na_esp_castor_canadensis:'#80583e',
+ na_esp_ovibos_moschatus:'#4f4237',na_esp_ovis_dalli:'#e4d6bb',
+ na_esp_dryocopus_pileatus:'#292e31',na_esp_haliaeetus_leucocephalus:'#654f3c',
+ na_esp_puma_concolor:'#b79069',na_esp_lontra_canadensis:'#715942',
+ na_esp_marmota_vancouverensis:'#8f7659',na_esp_odocoileus_hemionus:'#a68061',
+ na_esp_oncorhynchus_mykiss:'#728d89'
+};
+for(const [id,color] of Object.entries(V3154_NA_COLORS))if(SPECIES[id])SPECIES[id].color=color;
+
 // Una antigua especie se había marcado como mustélido: clasificarla correctamente como anfibio.
 if(SPECIES.salamandra_alpina)SPECIES.salamandra_alpina.kind='salamander';
 
 function mergeHistoricalBeardedVulture(snapshot){
  if(!snapshot||typeof snapshot!=='object')return snapshot;
- const old='af_quebrantahuesos',current='quebrantahuesos';
- const numFields=['sightings','specialSeen','feedObs'];
- for(const field of numFields){
-  const data=snapshot[field];
-  if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
-  data[current]=(Number(data[current])||0)+(Number(data[old])||0);
-  delete data[old];
- }
- for(const field of ['stages']){
-  const data=snapshot[field];
-  if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
-  data[current]=Math.max(Number(data[current])||0,Number(data[old])||0);
-  delete data[old];
- }
- for(const field of ['discovered','published','dimorphism']){
-  const data=snapshot[field];
-  if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
-  data[current]=!!data[current]||!!data[old];
-  delete data[old];
- }
- for(const field of ['specialFound','sexSeen']){
-  const data=snapshot[field];
-  if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
-  data[current]={...(data[old]||{}),...(data[current]||{})};
-  delete data[old];
- }
- if(snapshot.autoHourly&&typeof snapshot.autoHourly==='object'){
-  for(const key of Object.keys(snapshot.autoHourly)){
-   if(!key.endsWith(':'+old))continue;
-   const replacement=key.slice(0,-old.length)+current;
-   snapshot.autoHourly[replacement]=Math.min(MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR,(Number(snapshot.autoHourly[replacement])||0)+(Number(snapshot.autoHourly[key])||0));
-   delete snapshot.autoHourly[key];
-  }
- }
- if(snapshot.selectedJournal===old)snapshot.selectedJournal=current;
- if(snapshot.lastEncounter?.species===old)snapshot.lastEncounter.species=current;
- if(snapshot.lastEncounter?.entries){
-  snapshot.lastEncounter.entries=snapshot.lastEncounter.entries.map(e=>e.id===old?{...e,id:current}:e);
- }
- const museum=snapshot.museum;
- if(museum&&typeof museum==='object'){
-  for(const field of ['exhibits','collections','displays']){
-   const data=museum[field];
+ // Incluye el quebrantahuesos de Beta 3.15.3 y los alias de 3.15.4.
+ for(const [old,current] of [
+  ['af_quebrantahuesos','quebrantahuesos'],...Object.entries(V3154_SPECIES_ALIASES)
+ ]){
+  for(const field of ['sightings','specialSeen','feedObs']){
+   const data=snapshot[field];
    if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
-   if(!Object.prototype.hasOwnProperty.call(data,current))data[current]=data[old];
+   data[current]=(Number(data[current])||0)+(Number(data[old])||0);
    delete data[old];
+  }
+  const stages=snapshot.stages;
+  if(stages&&Object.prototype.hasOwnProperty.call(stages,old)){
+   stages[current]=Math.max(Number(stages[current])||0,Number(stages[old])||0);
+   delete stages[old];
+  }
+  for(const field of ['discovered','published','dimorphism']){
+   const data=snapshot[field];
+   if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
+   data[current]=!!data[current]||!!data[old];delete data[old];
+  }
+  for(const field of ['specialFound','sexSeen']){
+   const data=snapshot[field];
+   if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
+   data[current]={...(data[old]||{}),...(data[current]||{})};delete data[old];
+  }
+  if(snapshot.autoHourly&&typeof snapshot.autoHourly==='object'){
+   for(const key of Object.keys(snapshot.autoHourly)){
+    if(!key.endsWith(':'+old))continue;
+    const replacement=key.slice(0,-old.length)+current;
+    snapshot.autoHourly[replacement]=Math.min(MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR,
+     (Number(snapshot.autoHourly[replacement])||0)+(Number(snapshot.autoHourly[key])||0));
+    delete snapshot.autoHourly[key];
+   }
+  }
+  if(snapshot.selectedJournal===old)snapshot.selectedJournal=current;
+  if(snapshot.lastEncounter?.species===old)snapshot.lastEncounter.species=current;
+  if(snapshot.lastEncounter?.entries){
+   snapshot.lastEncounter.entries=snapshot.lastEncounter.entries.map(e=>e.id===old?{...e,id:current}:e);
+  }
+  const museum=snapshot.museum;
+  if(museum&&typeof museum==='object'){
+   for(const field of ['exhibits','collections','displays']){
+    const data=museum[field];if(!data||!Object.prototype.hasOwnProperty.call(data,old))continue;
+    if(!Object.prototype.hasOwnProperty.call(data,current))data[current]=data[old];
+    delete data[old];
+   }
   }
  }
  return snapshot;
@@ -1858,7 +1917,7 @@ function initialState(){
     discovered:{}, sightings:{}, stages:{}, feedObs:{}, dimorphism:{}, sexSeen:{}, specialSeen:{}, specialFound:{}, published:{},
     log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial de prueba: £420. En Corona puedes simular más libras.'],
     upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,africaUnlocked:0,newWorldUnlocked:0,northAmericaUnlocked:0,fundingTier:1,groupTier:0,censusTier:0,autoGroup:0,autoCensus:0,mammalogy:0,ornithology:0,herpetology:0,ichthyology:0,ethology:0,paleoTier:0,museumIncomeTier:0}, purchases:{},
-    regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', crownCoins:0, lastEncounter:null,
+    regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', bestiaryDescending:false, crownCoins:0, lastEncounter:null,
     lastTick:Date.now(), lastGrant:0, autoHourly:{}, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
   };
 }
@@ -1875,7 +1934,7 @@ for(const field of ['collections','relicts','displays']){
 }
 state.museum.voyagesCompleted=Math.max(0,Number(state.museum.voyagesCompleted)||0);
 state.books=state.books||0;
-state.autoHourly=state.autoHourly||{};state.voyages=state.voyages||[];state.voyageSeq=state.voyageSeq||0;state.inventory=state.inventory||{};state.equipment=state.equipment||{instrument:null,hat:null,necklace:null};state.specialFound=state.specialFound||{};state.upgrades.asiaUnlocked=(state.upgrades.asiaUnlocked||state.purchases.asia_1)?1:0;state.atlasView=state.atlasView||'Europa';state.museumView=state.museumView||'exhibitions';state.societyView=state.societyView||'grants';state.publicationView=state.publicationView||'monographs';state.bestiarySort=state.bestiarySort||'alpha';state.crownCoins=state.crownCoins||0;
+state.autoHourly=state.autoHourly||{};state.voyages=state.voyages||[];state.voyageSeq=state.voyageSeq||0;state.inventory=state.inventory||{};state.equipment=state.equipment||{instrument:null,hat:null,necklace:null};state.specialFound=state.specialFound||{};state.upgrades.asiaUnlocked=(state.upgrades.asiaUnlocked||state.purchases.asia_1)?1:0;state.atlasView=state.atlasView||'Europa';state.museumView=state.museumView||'exhibitions';state.societyView=state.societyView||'grants';state.publicationView=state.publicationView||'monographs';state.bestiarySort=state.bestiarySort||'alpha';state.bestiaryDescending=!!state.bestiaryDescending;state.crownCoins=state.crownCoins||0;
 // Migración v3.14: preservar las regiones africanas ya ganadas antes de esta investigación.
 if(Object.keys(state.regionUnlocked||{}).some(id=>REGIONS.find(r=>r.id===id)?.continent==='África')&&state.inventory.africa_map>0)state.purchases.africa_1=1;
 state.upgrades.africaUnlocked=!!state.purchases.africa_1;
@@ -2643,7 +2702,7 @@ function bestiaryTypeBucket(id){
   const c=taxonomyInfo(id).className;
   if(c==='Mammalia') return 'Mamífero';
   if(c==='Aves') return 'Ave';
-  if(c==='Actinopterygii') return 'Pez';
+  if(c==='Actinopterygii'||c==='Chondrichthyes') return 'Pez';
   return 'Reptil/Anfibio';
 }
 // v3.2: mapa hexagonal esquemático: posiciones basadas en códigos HX, no geografía exacta.
@@ -2704,7 +2763,8 @@ function renderAtlas(){
 
 // v3.1: escenografía SVG ligera; no afecta encuentros, especies, guardados ni economía.
 function fieldBackdropMarkup(habitat){
-  const trees=habitat==='bosque'||habitat==='mediterraneo'||habitat==='humedal';
+  const trees=habitat==='bosque'||habitat==='mediterraneo'||habitat==='humedal'||habitat==='selva';
+  const savanna=habitat==='sabana';
   const wet=habitat==='rio'||habitat==='costa'||habitat==='humedal';
   const arid=habitat==='desierto'||habitat==='estepa';
   const peaks=habitat==='montana'||habitat==='tundra';
@@ -2715,6 +2775,7 @@ function fieldBackdropMarkup(habitat){
     <path d="M0 171 Q72 119 146 159 T315 156 T490 148 T640 166 V280 H0Z" fill="var(--biome-far)" opacity=".85"/>
     ${peaks?`<path d="M0 185 L97 65 188 177 306 70 415 191 513 82 640 179 V280 H0Z" fill="#667e81" opacity=".8"/><path d="M66 106 97 65 126 112 103 104 94 117Z M271 110 306 70 347 122 318 111 302 123Z M478 123 513 82 540 119 515 111 502 126Z" fill="#f0e9dd" opacity=".94"/>`:''}
     ${arid?`<path d="M0 210 Q94 169 204 200 T415 207 T640 191 V280 H0Z" fill="#b99e6e" opacity=".75"/><path d="M0 239 Q146 193 292 224 T640 210 V280 H0Z" fill="#b09567"/>`:''}
+    ${savanna?`<g fill="var(--biome-tree)" opacity=".92"><path d="M110 218v-65m-6 65h12M510 219v-78m-6 78h12" stroke="#715f3d" stroke-width="8"/><ellipse cx="108" cy="143" rx="57" ry="15"/><ellipse cx="510" cy="136" rx="65" ry="16"/></g>`:''}
     ${trees?`<g fill="var(--biome-tree)" opacity=".86"><path d="M20 207 V137 L-8 160 22 104 45 151 24 139 24 207Z"/><path d="M88 205 V143 L64 157 88 92 113 159 91 143 91 205Z"/><path d="M558 201 V138 L528 153 558 91 588 161 561 141 561 201Z"/><path d="M628 213 V128 L595 147 628 71 662 155 632 134 632 213Z"/><circle cx="148" cy="166" r="38"/><circle cx="480" cy="155" r="35"/></g><g stroke="#756b4e" stroke-width="6"><path d="M149 167v55 M480 160v60"/></g>`:''}
     <path d="M0 211 Q110 183 217 209 T436 209 T640 199 V280 H0Z" fill="var(--biome-ground)"/>
     ${wet?`<path d="M0 229 Q120 217 222 231 T434 228 T640 225 V280 H0Z" fill="#7cbbc1" opacity=".86"/><g fill="none" stroke="#e7f2e8" stroke-width="2" opacity=".62"><path d="M28 248q40-6 74 0 M252 261q35-5 75 0 M461 244q44-6 85 0"/></g>`:arid?`<path d="M0 260 Q165 223 312 251 T640 242V280H0Z" fill="#c8b080"/>`:`<g fill="var(--biome-grass)" opacity=".9"><path d="M0 245q115-18 207-3t240-9 193 3v44H0Z"/></g>`}
@@ -2757,7 +2818,7 @@ function renderField(){
   const region=currentRegion();
   const scene=regionLandscape(region.id);
   const habitat=state.habitat;
-  const validBiomes=['bosque','pradera','rio','costa','tundra','montana','estepa','mediterraneo','desierto','humedal'];
+  const validBiomes=['bosque','pradera','rio','costa','tundra','montana','estepa','mediterraneo','desierto','humedal','selva','sabana'];
   const biome=validBiomes.includes(habitat)?habitat:'bosque';
   const lights=['amanecer','dia','atardecer','noche'];
   const light=lights.includes(state.time)?state.time:'dia';
@@ -3539,15 +3600,16 @@ function renderBestiary(){
   if(sort==='alpha') ids.sort((a,b)=>SPECIES[a].name.localeCompare(SPECIES[b].name,'es'));
   if(sort==='rarity') ids.sort((a,b)=>({ 'Común':1,'Poco común':2,'Raro':3,'Muy rara':4 }[SPECIES[a].rare]-{ 'Común':1,'Poco común':2,'Raro':3,'Muy rara':4 }[SPECIES[b].rare] || SPECIES[a].name.localeCompare(SPECIES[b].name,'es')));
   if(sort==='type') ids.sort((a,b)=>bestiaryTypeBucket(a).localeCompare(bestiaryTypeBucket(b),'es') || SPECIES[a].name.localeCompare(SPECIES[b].name,'es'));
+   if(state.bestiaryDescending)ids.reverse();
   return `<section class="card">
     <div class="bestiary-head"><h3 class="section">🦉 Bestiario</h3><div class="badge">Identificadas ${identifiedCount()}/${ids.length}</div></div>
-    <div class="small">Listado de especies descubiertas y pendientes. Ahora puedes ordenarlo por abecedario, rareza o tipo general.</div>
-    <div class="subtabs compact">${[['alpha','Abecedario'],['rarity','Rareza'],['type','Tipo']].map(([id,label])=>`<button class="subtab ${sort===id?'active':''}" data-action="bestiary-sort" data-id="${id}">${label}</button>`).join('')}</div>
+    <div class="small">Listado de especies descubiertas y pendientes. Haz clic en un criterio para ordenar y vuelve a pulsarlo para invertir el sentido.</div>
+    <div class="subtabs compact">${[['alpha','Abecedario'],['rarity','Rareza'],['type','Tipo']].map(([id,label])=>`<button class="subtab ${sort===id?'active':''}" data-action="bestiary-sort" data-id="${id}" aria-label="Ordenar por ${label}; ${sort===id?(state.bestiaryDescending?'descendente':'ascendente'):'seleccionar'}">${label}${sort===id?(state.bestiaryDescending?' ↓':' ↑'):''}</button>`).join('')}</div>
     <div class="species-grid" style="margin-top:10px">${ids.map(id=>speciesCard(id,false,true)).join('')}</div>
   </section>`;
 }
 
-function habitatLabel(h){return ({bosque:'🌳 Bosque',pradera:'🌾 Pradera',rio:'🌊 Río',costa:'⛵ Costa',tundra:'❄️ Tundra',montana:'⛰️ Montaña',estepa:'🌾 Estepa',mediterraneo:'🌿 Mediterráneo',desierto:'🏜️ Desierto',humedal:'🪷 Humedal'}[h]||h)}
+function habitatLabel(h){return ({selva:'🌴 Selva',sabana:'🌾 Sabana',bosque:'🌳 Bosque',pradera:'🌾 Pradera',rio:'🌊 Río',costa:'⛵ Costa',tundra:'❄️ Tundra',montana:'⛰️ Montaña',estepa:'🌾 Estepa',mediterraneo:'🌿 Mediterráneo',desierto:'🏜️ Desierto',humedal:'🪷 Humedal'}[h]||h)}
 function timeLabel(t){return ({amanecer:'🌅 Amanecer',dia:'☀️ Día',atardecer:'🌇 Tarde',noche:'🌙 Noche'}[t]||t)}
 function seasonLabel(s){return ({primavera:'🌱 Primavera',verano:'☀️ Verano',otono:'🍂 Otoño',invierno:'❄️ Invierno'}[s]||s)}
 
@@ -3638,7 +3700,7 @@ function bindPanel(){
     if(act==='inventory-tab' && ['equipo','animales','expedicion','coleccionables'].includes(id)){state.inventoryView=id;renderPanel();persist();}
     if(act==='craft-item'){craftItem(id);}
     if(act==='finish-voyage'){finishVoyage(id);}
-    if(act==='bestiary-sort'){state.bestiarySort=id; renderPanel(); persist();}
+    if(act==='bestiary-sort'){if(state.bestiarySort===id)state.bestiaryDescending=!state.bestiaryDescending;else{state.bestiarySort=id;state.bestiaryDescending=false;}renderPanel();persist();}
     if(act==='buy-crown'){buyCrownPack(Number(id)||0);}
     if(act==='exchange-crown'){exchangeTrialCrowns(id==='all'?Math.floor(Math.max(0,state.crownCoins||0)):Number(id));}
     if(act==='claim-mission'){claimScientificMission(id);}
@@ -4021,7 +4083,7 @@ function detailedHerpSprite(id,skin){
  const c=applySkin(sp.color,skin),light=shade(c,19),dark=shade(c,-27),edge='#344033',eye=eyeColor(skin);
  const black=skin==='melanico',bone=black?'#5d6872':'#e6d6b5',g=alphaGlow(skin);
  const wrap=shape=>svgWrap(shape,g);
- const isTurtle=/tortuga|galápago|galapago|terrapin|testudo|emys|mauremys/.test(n+' '+sp.latin.toLowerCase()) || sp.kind==='tortoise';
+ const isTurtle=/tortuga|galápago|galapago|terrapin/.test(n) || /^(Testudo|Emys|Mauremys)\b/i.test(sp.latin) || sp.kind==='tortoise';
  const isLizard=/lagarto|lagartija|geco|gecko|eslizón|eslizon|salamanquesa|camaleón|camaleon|lagarto de cristal/.test(n)||sp.kind==='lizard';
  const isSalamander=/salamandra|tritón|triton/.test(n)||sp.kind==='salamander';
  const isToad=/sapo|rana|escuerzo/.test(n)||sp.kind==='amphibian';
@@ -4484,7 +4546,53 @@ function unifiedFamilySprite(id,skin){
    +whiskers+dot(81,55,1.9)+dot(91,63,1.7,dark));
 }
 
+// Beta 3.15.4 · Sprites por taxón antes de los renderizadores genéricos.
+function familyV3154Sprite(id,skin){
+ const sp=SPECIES[id];if(!sp)return null;
+ const latin=sp.latin||'',name=sp.name.toLowerCase(),body=applySkin(sp.color,skin);
+ const ink='#36302c',dark=shade(body,-25),light=shade(body,22),eye=eyeColor(skin),glow=alphaGlow(skin);
+ if(latin==='Buceros rhinoceros'||latin==='Galemys pyrenaicus')
+  return premiumSpeciesSprite(sp.name,sp.kind,body,skin,id);
+ if(/^(Naja|Ophiophagus)\b/.test(latin)){
+  const king=latin.startsWith('Ophiophagus'),indian=latin==='Naja naja',mozambique=latin==='Naja mossambica';
+  const hood=king?20:indian?17:mozambique?15:16;
+  const marking=indian
+   ?`<ellipse cx="56" cy="36" rx="7" ry="6" fill="none" stroke="${light}" stroke-width="2.5"/><circle cx="56" cy="36" r="2" fill="${dark}"/>`
+   :king
+    ?`<path d="M40 42l28 0m-25 8l22 0m-18 8l17 0" stroke="${light}" stroke-width="2.4" fill="none"/>`
+    :mozambique
+     ?`<path d="M42 49q10 8 24 0m-22 7q8 6 18 0" stroke="${dark}" stroke-width="2.5" fill="none"/>`
+     :`<path d="M45 48l19 0m-17 8l15 0" stroke="${light}" stroke-width="2.2" fill="none"/>`;
+  return svgWrap(`<g data-family="cobra">
+    <path d="M10 79Q20 64 34 74Q45 86 64 74Q77 64 70 55" fill="none" stroke="${ink}" stroke-width="16" stroke-linecap="round"/>
+    <path d="M10 79Q20 64 34 74Q45 86 64 74Q77 64 70 55" fill="none" stroke="${body}" stroke-width="11" stroke-linecap="round"/>
+    <path d="M56 67Q${56-hood} 59 ${56-hood} 40Q${56-hood} 19 56 19Q${56+hood} 19 ${56+hood} 40Q${56+hood} 59 56 67Z" fill="${body}" stroke="${ink}" stroke-width="3"/>
+    <path d="M50 31Q56 26 62 31L65 62Q56 68 47 62Z" fill="${light}" opacity=".65"/>
+    ${marking}<ellipse cx="56" cy="38" rx="9" ry="8" fill="${body}" stroke="${ink}" stroke-width="2.6"/>
+    <circle cx="51" cy="36" r="2.2" fill="${eye}"/><circle cx="61" cy="36" r="2.2" fill="${eye}"/>
+    <path d="M56 45l0 8m0 0l-5 3m5-3l5 3" stroke="#9d4a49" fill="none" stroke-width="1.7"/></g>`,glow);
+ }
+ if(/^Lepus\b/.test(latin)||sp.kind==='hare'){
+  const winter=/variable|nival/.test(name),fur=(winter&&skin==='normal')?'#e1ddd5':body;
+  const ear=skin==='melanico'?'#5c5557':'#e7bcab';
+  return svgWrap(`<g data-family="hare">
+   <path d="M19 66Q9 61 10 51" stroke="${dark}" stroke-width="5" fill="none" stroke-linecap="round"/>
+   <ellipse cx="46" cy="64" rx="25" ry="15" fill="${fur}" stroke="${ink}" stroke-width="3"/>
+   <path d="M32 74l-10 13m18-11l-3 12m18-14l7 13" stroke="${ink}" stroke-width="4" fill="none"/>
+   <circle cx="67" cy="51" r="11" fill="${fur}" stroke="${ink}" stroke-width="3"/>
+   <ellipse cx="61" cy="30" rx="5" ry="18" transform="rotate(-12 61 30)" fill="${fur}" stroke="${ink}" stroke-width="2.8"/>
+   <ellipse cx="73" cy="30" rx="5" ry="19" transform="rotate(10 73 30)" fill="${fur}" stroke="${ink}" stroke-width="2.8"/>
+   <ellipse cx="61" cy="30" rx="2" ry="12" transform="rotate(-12 61 30)" fill="${ear}"/>
+   <ellipse cx="73" cy="30" rx="2" ry="12" transform="rotate(10 73 30)" fill="${ear}"/>
+   <ellipse cx="69" cy="55" rx="7" ry="4" fill="${light}" opacity=".8"/>
+   <circle cx="70" cy="48" r="1.8" fill="${eye}"/>
+   <path d="M74 55l10 2m-10 1l8 6" stroke="${dark}" stroke-width="1.5"/></g>`,glow);
+ }
+ return null;
+}
+
 function spriteFor(kind,color,skin,id){
+ const special3154=familyV3154Sprite(id,skin);if(special3154)return special3154;
  const unified=unifiedFamilySprite(id,skin);if(unified)return unified;
  const af310=africaV310Sprite(id,skin);if(af310)return af310;
  const af39=africaV39Sprite(id,skin);if(af39)return af39;
