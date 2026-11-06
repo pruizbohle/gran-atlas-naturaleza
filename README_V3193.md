@@ -148,3 +148,13 @@ La revisión de navegador puede repetirse sirviendo `www` por HTTP en localhost 
 Las reglas de avistamientos, rarezas, inventario, investigación, mapas, regiones, economía, exploración y guardado no reciben modificaciones. Los motores de peces, anfibios, reptiles y mamíferos permanecen intactos. Las imágenes de este informe están fuera de `www` y no aumentan la descarga del juego.
 
 La publicación sigue el workflow existente **Deploy El Gran Atlas**, que valida el código y todas las pruebas antes del paso de GitHub Pages. El SHA y el resultado confirmado de la ejecución correspondiente se informan en la entrega del turno.
+
+
+## Incidencias observadas al publicar
+
+Las primeras publicaciones del commit artístico `d73ab9384513e58d333d73fe922930a623607629` aprobaron las 133 pruebas y la subida del sitio, pero el backend de Pages devolvió `Deployment failed, try again later` después de `deployment_queued`.
+
+- [Ejecución por push](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42267403277): primer intento con error del servicio; al reejecutar el job, `deploy-pages` encontró dos artefactos con el mismo nombre en esa ejecución.
+- [Ejecución nueva independiente](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42268701035): un único artefacto, 133 pruebas aprobadas y el mismo error del backend de Pages.
+
+Se comprobó que Pages sigue configurado como público, con HTTPS y `build_type: workflow`. Su API solo informa `deployment_failed`, sin un motivo adicional. El panel público de estado no mostraba incidentes. Esta revisión deja constancia de los resultados y provoca una publicación con un identificador de revisión nuevo; no modifica el contenido del juego ni el workflow. Solo el resultado final confirmado de Actions y la comprobación HTTP permiten considerar publicada la versión.
