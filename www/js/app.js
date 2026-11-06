@@ -4381,7 +4381,81 @@ function africaV39Sprite(id,skin){
  return null;
 }
 
+// Beta 3.15.3 · Identidad visual por familia zoológica.
+// Una base gráfica común preserva el estilo; siluetas, máscaras y colas distinguen especies.
+function unifiedFamilySprite(id,skin){
+ const sp=SPECIES[id];if(!sp)return null;
+ const latin=sp.latin||'',name=sp.name.toLocaleLowerCase('es');
+ const pangolin=/^(Manis|Phataginus|Smutsia)\b/i.test(latin)||/pangol[ií]n/.test(name);
+ const mustelid=/^(Lutra|Lontra|Enhydra|Lutrogale|Hydrictis|Meles|Martes|Mustela|Gulo|Mellivora|Aonyx|Neovison|Pekania)\b/i.test(latin);
+ if(!pangolin&&!mustelid)return null;
+ const c=applySkin(sp.color,skin);
+ const ink='#39332c',dark=shade(c,-30),mid=shade(c,-13),light=shade(c,25);
+ const pale=skin==='melanico'?'#647078':'#e8d7b7',eye=eyeColor(skin);
+ const shape=(d,fill=c,stroke=ink,w=2.8)=>'<path d="'+d+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round"/>';
+ const line=(d,col=ink,w=3)=>shape(d,'none',col,w);
+ const dot=(x,y,r=2,col=eye)=>'<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+col+'"/>';
+ const wrap=content=>svgWrap(content,alphaGlow(skin));
+ if(pangolin){
+  const giant=/gigante|gigante|gigante/i.test(name)||/giganteus/i.test(latin);
+  const tree=/arb[oó]r|tr[eé]boles|tricusp|tetradactyl/i.test(name+' '+latin);
+  // Escamas superpuestas: todas usan la misma retícula, con proporciones y colas diferenciadas.
+  const armor=giant?'M22 65Q20 37 47 34Q68 35 74 58Q70 76 43 76Q28 75 22 65Z'
+   :tree?'M24 68Q17 45 43 40Q66 39 74 61Q70 76 45 76Q31 75 24 68Z'
+   :'M23 66Q21 41 48 38Q69 40 77 60Q71 78 44 77Q29 75 23 66Z';
+  const tail=tree
+   ?shape('M24 65Q13 71 11 84Q7 94 17 94Q25 94 33 77L36 70Z',dark)
+   :giant?shape('M28 68Q15 70 5 84L15 86Q31 81 36 74Z',dark)
+   :shape('M27 68Q12 76 9 87L23 89Q36 79 37 72Z',dark);
+  const scales=[];
+  for(let row=0;row<3;row++)for(let col=0;col<4;col++){
+    const x=27+col*11+(row%2?5:0),y=47+row*9;
+    if(x>70)continue;
+    scales.push(shape('M'+x+' '+y+'q5-5 10 0l-4 8z',row%2?mid:light,dark,1.4));
+  }
+  return wrap(tail+shape('M36 71l-6 15m30-14 0 14', 'none',ink,4)
+   +shape(armor,c)+scales.join('')
+   +shape('M68 55Q78 50 91 61Q83 68 76 69L71 65Z',light)
+   +shape('M88 63l7 2-7 3z',pale,ink,1.8)+dot(79,59,1.8));
+ }
+ const otter=/^(Lutra|Lontra|Enhydra|Lutrogale|Hydrictis|Aonyx)\b/i.test(latin);
+ const badger=/^(Meles|Mellivora)\b/i.test(latin);
+ const wolverine=/^Gulo\b/i.test(latin);
+ const marten=/^(Martes|Pekania)\b/i.test(latin);
+ const weasel=/^(Mustela|Neovison)\b/i.test(latin);
+ const tail=otter?shape('M31 65Q17 65 7 82Q4 87 11 89Q23 79 37 75Z',dark)
+  :marten?shape('M31 66Q12 67 9 81Q10 89 19 87Q26 81 35 75Z',dark)
+  :badger?shape('M28 67Q15 69 13 76L28 78Z',dark)
+  :wolverine?shape('M27 65Q10 64 8 76Q9 86 20 84L32 74Z',dark)
+  :shape('M30 66Q14 65 10 79Q12 84 18 84Q23 77 36 73Z',dark);
+ const body=badger?'M23 67Q23 47 46 44Q63 45 74 63Q75 77 47 78Q26 78 23 67Z'
+  :wolverine?'M22 64Q21 44 43 42Q68 42 76 59Q79 75 56 78Q30 80 22 64Z'
+  :otter?'M20 66Q25 49 49 50Q66 47 76 60Q73 73 45 76Q25 77 20 66Z'
+  :marten?'M25 64Q26 47 49 47Q66 49 73 61Q70 72 49 75Q30 75 25 64Z'
+  :'M25 64Q24 51 49 51Q69 51 75 62Q73 72 45 73Q30 72 25 64Z';
+ const head=badger?'M60 47Q73 40 86 54Q91 63 82 69Q73 73 65 64Z'
+  :otter?'M65 52Q77 42 88 54Q94 62 84 68Q73 69 66 62Z'
+  :wolverine?'M61 47Q79 38 89 53Q95 65 84 69Q72 72 65 62Z'
+  :'M64 50Q76 42 88 52Q94 60 84 67Q72 69 65 62Z';
+ const ears=otter?'<circle cx="73" cy="49" r="4.5" fill="'+dark+'" stroke="'+ink+'" stroke-width="2"/>'
+  :badger?'<circle cx="73" cy="47" r="5" fill="'+dark+'" stroke="'+ink+'" stroke-width="2"/>'
+  :'<path d="M70 49l1-9 8 6m2 1 6-8 2 12" fill="'+dark+'" stroke="'+ink+'" stroke-width="2.5"/>';
+ const pattern=badger
+   ?shape('M67 49L76 43L87 54L86 65L79 65L77 54L71 66L66 60Z',pale,ink,1.2)
+   :wolverine?shape('M30 59Q44 49 62 54L72 60Q48 58 32 70Z',light,dark,1.5)
+   :marten?shape('M62 61Q70 67 80 63Q68 76 57 67Z',pale,ink,1.2)
+   :weasel?shape('M30 67Q51 70 68 62L69 68Q50 78 30 71Z',pale,dark,1.2)
+   :shape('M30 68Q50 74 71 61Q66 75 46 75Z',light,dark,1.2);
+ const legs=badger||wolverine?line('M36 73l-2 12m21-11 0 11m21-15 1 13',ink,4.8)
+  :line('M37 72l-2 12m18-12 1 12m20-18 0 15',ink,3.5);
+ const whiskers=otter?line('M81 65l10 1M81 63l10-4M78 66l5 9',ink,1.2):'';
+ return wrap(tail+shape(body,c)+pattern+legs+shape(head,c)+ears
+   +shape('M80 61Q88 61 93 62L88 68L82 67Z',pale,ink,1.5)
+   +whiskers+dot(81,55,1.9)+dot(91,63,1.7,dark));
+}
+
 function spriteFor(kind,color,skin,id){
+ const unified=unifiedFamilySprite(id,skin);if(unified)return unified;
  const af310=africaV310Sprite(id,skin);if(af310)return af310;
  const af39=africaV39Sprite(id,skin);if(af39)return af39;
  const polished=polishedSpeciesSprite(id,skin);if(polished)return polished;
