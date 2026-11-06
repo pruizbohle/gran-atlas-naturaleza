@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Laboratorio de peces · El Gran Atlas 3.19.1c</title>
+<style>
+:root{color-scheme:light;font:16px system-ui;background:#eae0cd;color:#243a35}
+*{box-sizing:border-box}body{margin:0;padding:18px;max-width:1100px;margin:auto}
+h1{font-family:Georgia,serif;margin:.2em 0;font-size:1.8rem}
+p{line-height:1.5}nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:16px 0}
+a,button{border-radius:10px;padding:9px 13px;background:#294c3c;color:#fff;border:0;text-decoration:none;cursor:pointer}
+button{font:inherit}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:12px}
+article{background:#fffaf0;border:1px solid #cdbd9f;border-radius:14px;padding:12px}
+.sprite{height:140px;display:grid;place-items:center;background:#efe6d3;border-radius:10px}
+.sprite svg{height:132px;width:132px}
+h2{font-family:Georgia,serif;font-size:1.15rem;margin:10px 0 4px}
+small{color:#52655f}code{font-size:11px}#status{font-weight:700}#status.error{color:#ac3939}
+.silhouette .sprite svg [fill]:not([fill="none"]){fill:#19282f!important}
+.silhouette .sprite svg [stroke]:not([stroke="none"]){stroke:#19282f!important}
+.silhouette .sprite svg circle{visibility:hidden}
+</style>
+</head><body>
+<h1>🐟 Laboratorio de siluetas · 3.19.1c</h1>
+<p>Esta página comprueba, de forma independiente del Bestiario, los diseños presentes en el repositorio. La forma de cada animal debería distinguirse por sus proporciones, aletas y cola, incluso sin colores.</p>
+<nav><a href="./">Volver al juego</a><button id="toggle" type="button">Mostrar solo siluetas</button><span id="status">Comprobando ilustraciones…</span></nav>
+<main class="grid" id="gallery"></main>
+<noscript>Activa JavaScript para ver las ilustraciones.</noscript>
+<script src="js/fish-art-v3191.js?v=3.19.1c"></script>
+<script>
+const specimens=[
+["Tiburón blanco","Carcharodon carcharias","fish","#788b99"],
+["Tiburón de puntas negras","Carcharhinus melanopterus","fish","#586e78"],
+["Manta gigante","Mobula birostris","ray","#46788b"],
+["Carpa común","Cyprinus carpio","fish","#a18b63"],
+["Tenca","Tinca tinca","fish","#778e60"],
+["Perca europea","Perca fluviatilis","fish","#6c928c"],
+["Pez mandarín chino","Siniperca chuatsi","fish","#688b7a"],
+["Pez mariposa africano","Pantodon buchholzi","fish","#a18b59"],
+["Esturión siberiano","Acipenser baerii","fish","#6d8184"],
+["Trucha común","Salmo trutta","fish","#77928e"]
+];
+const gallery=document.getElementById("gallery"),status=document.getElementById("status");
+if(typeof window.ATLAS_FISH_ART_V3191!=="function"){
+ status.className="error";status.textContent="Fallo: no se cargó el archivo de ilustraciones.";
+}else{
+ let valid=0;const cards=specimens.map(([name,latin,kind,color])=>{
+  const svg=window.ATLAS_FISH_ART_V3191({name,latin,kind,color},color,"normal");
+  if(svg&&svg.includes("data-fish-family="))valid++;
+  const family=(svg.match(/data-fish-family="([^"]+)"/)||[])[1]||"sin familia";
+  const card=document.createElement("article");
+  card.innerHTML='<div class="sprite">'+(svg||"SIN DIBUJO")+'</div><h2></h2><small></small>';
+  card.querySelector("h2").textContent=name;
+  card.querySelector("small").textContent=family;
+  return card;
+ });
+ gallery.replaceChildren(...cards);
+ status.textContent=valid+"/"+specimens.length+" siluetas SVG cargadas";
+ if(valid!==specimens.length)status.className="error";
+}
+document.getElementById("toggle").addEventListener("click",function(){
+ document.body.classList.toggle("silhouette");
+ this.textContent=document.body.classList.contains("silhouette")?"Mostrar colores":"Mostrar solo siluetas";
+});
+</script>
+</body></html>
