@@ -5381,7 +5381,7 @@ function familyV3154Sprite(id,skin){
 }
 
 function spriteFor(kind,color,skin,id){
- const fish3191=window.ATLAS_FISH_ART_V3191 && window.ATLAS_FISH_ART_V3191(SPECIES[id],color,skin); if(fish3191)return fish3191;
+ const fish3191=(typeof window!=='undefined' && typeof window.ATLAS_FISH_ART_V3191==='function') ? window.ATLAS_FISH_ART_V3191(SPECIES[id],color,skin) : null; if(fish3191)return fish3191;
  const special3154=familyV3154Sprite(id,skin);if(special3154)return special3154;
  const unified=unifiedFamilySprite(id,skin);if(unified)return unified;
  const af310=africaV310Sprite(id,skin);if(af310)return af310;
