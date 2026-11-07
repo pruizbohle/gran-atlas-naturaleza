@@ -1,0 +1,234 @@
+{
+  "reference": "c95c201",
+  "scenario": "Zorro rojo observado; 4 naturalistas; sin expansión secundaria",
+  "measurements": [
+    {
+      "width": 360,
+      "height": 740,
+      "documentHeight": 1017,
+      "verticalScroll": 277,
+      "dockTop": 689,
+      "action": {
+        "top": 393.5,
+        "bottom": 436.5,
+        "width": 328,
+        "height": 43,
+        "visible": true,
+        "text": "⌕ Observar fauna ✦"
+      },
+      "result": {
+        "top": 508.1875,
+        "bottom": 689.5,
+        "width": 260,
+        "height": 181.3125,
+        "visible": false,
+        "text": "Zorro rojo\n      \n     \n     \n     Avistamiento: Zorro rojo\n      Común · 42 avistamientos · +5 cono"
+      },
+      "scene": {
+        "top": 471.5,
+        "bottom": 726.5,
+        "width": 328,
+        "height": 255,
+        "visible": false,
+        "text": "✦ 🌳  🌊  🌿  🌾  🪶OBSERVACIÓN Nº 43\n        \n      \n      \n      \n       \n      \n      Zorro rojo\n"
+      },
+      "automatic": {
+        "top": 826.578125,
+        "bottom": 841.421875,
+        "width": 328,
+        "height": 14.84375,
+        "visible": false,
+        "text": "Sin actividad automática reciente."
+      },
+      "progress": null,
+      "horizontalOverflow": false,
+      "jsErrors": [],
+      "openTimings": {
+        "trialsMs": [
+          4.099999997764826,
+          3.600000001490116,
+          3.199999999254942,
+          3.300000000745058,
+          3.699999999254942,
+          3.5,
+          3.800000000745058,
+          3.800000000745058,
+          5.5
+        ],
+        "medianMs": 3.699999999254942,
+        "domNodes": 280
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "documentHeight": 1009,
+      "verticalScroll": 165,
+      "dockTop": 793,
+      "action": {
+        "top": 385.5,
+        "bottom": 428.5,
+        "width": 358,
+        "height": 43,
+        "visible": true,
+        "text": "⌕ Observar fauna ✦"
+      },
+      "result": {
+        "top": 500.1875,
+        "bottom": 681.5,
+        "width": 260,
+        "height": 181.3125,
+        "visible": true,
+        "text": "Zorro rojo\n      \n     \n     \n     Avistamiento: Zorro rojo\n      Común · 42 avistamientos · +5 cono"
+      },
+      "scene": {
+        "top": 463.5,
+        "bottom": 718.5,
+        "width": 358,
+        "height": 255,
+        "visible": true,
+        "text": "✦ 🌳  🌊  🌿  🌾  🪶OBSERVACIÓN Nº 43\n        \n      \n      \n      \n       \n      \n      Zorro rojo\n"
+      },
+      "automatic": {
+        "top": 818.578125,
+        "bottom": 833.421875,
+        "width": 358,
+        "height": 14.84375,
+        "visible": false,
+        "text": "Sin actividad automática reciente."
+      },
+      "progress": null,
+      "horizontalOverflow": false,
+      "jsErrors": [],
+      "openTimings": {
+        "trialsMs": [
+          3.5,
+          3.600000001490116,
+          4,
+          3.399999998509884,
+          3.300000000745058,
+          3.600000001490116,
+          5.799999997019768,
+          5.5,
+          3.900000002235174
+        ],
+        "medianMs": 3.600000001490116,
+        "domNodes": 280
+      }
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "documentHeight": 994,
+      "verticalScroll": 79,
+      "dockTop": 864,
+      "action": {
+        "top": 385.5,
+        "bottom": 428.5,
+        "width": 380,
+        "height": 43,
+        "visible": true,
+        "text": "⌕ Observar fauna ✦"
+      },
+      "result": {
+        "top": 500.1875,
+        "bottom": 681.5,
+        "width": 260,
+        "height": 181.3125,
+        "visible": true,
+        "text": "Zorro rojo\n      \n     \n     \n     Avistamiento: Zorro rojo\n      Común · 42 avistamientos · +5 cono"
+      },
+      "scene": {
+        "top": 463.5,
+        "bottom": 718.5,
+        "width": 380,
+        "height": 255,
+        "visible": true,
+        "text": "✦ 🌳  🌊  🌿  🌾  🪶OBSERVACIÓN Nº 43\n        \n      \n      \n      \n       \n      \n      Zorro rojo\n"
+      },
+      "automatic": {
+        "top": 818.578125,
+        "bottom": 833.421875,
+        "width": 380,
+        "height": 14.84375,
+        "visible": true,
+        "text": "Sin actividad automática reciente."
+      },
+      "progress": null,
+      "horizontalOverflow": false,
+      "jsErrors": [],
+      "openTimings": {
+        "trialsMs": [
+          4.300000000745058,
+          2.800000000745058,
+          2.800000000745058,
+          3,
+          2.7999999970197678,
+          2.7000000029802322,
+          3.699999999254942,
+          3.099999997764826,
+          3.7000000029802322
+        ],
+        "medianMs": 3,
+        "domNodes": 280
+      }
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "documentHeight": 1053,
+      "verticalScroll": 53,
+      "dockTop": 1000,
+      "action": {
+        "top": 863.3125,
+        "bottom": 918.3125,
+        "width": 418.5,
+        "height": 55,
+        "visible": true,
+        "text": "⌕ Observar fauna ✦"
+      },
+      "result": {
+        "top": 588.15625,
+        "bottom": 812.15625,
+        "width": 260,
+        "height": 224,
+        "visible": true,
+        "text": "Zorro rojo\n      \n     \n     \n     Avistamiento: Zorro rojo\n      Común · 42 avistamientos · +5 cono"
+      },
+      "scene": {
+        "top": 533.3125,
+        "bottom": 863.3125,
+        "width": 418.5,
+        "height": 330,
+        "visible": true,
+        "text": "✦ 🌳  🌊  🌿  🌾  🪶OBSERVACIÓN Nº 43\n        \n      \n      \n      \n       \n      \n      Zorro rojo\n"
+      },
+      "automatic": {
+        "top": 347,
+        "bottom": 364.390625,
+        "width": 418.5,
+        "height": 17.390625,
+        "visible": true,
+        "text": "Sin actividad automática reciente."
+      },
+      "progress": null,
+      "horizontalOverflow": false,
+      "jsErrors": [],
+      "openTimings": {
+        "trialsMs": [
+          4.600000001490116,
+          3.7999999970197678,
+          6.700000002980232,
+          4.799999997019768,
+          3.300000000745058,
+          3.199999999254942,
+          3.600000001490116,
+          4.300000000745058,
+          2.899999998509884
+        ],
+        "medianMs": 3.7999999970197678,
+        "domNodes": 280
+      }
+    }
+  ]
+}

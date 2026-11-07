@@ -17,7 +17,7 @@ function harness(){
  const localStorage={getItem:k=>cache[k]||null,setItem:(k,v)=>cache[k]=String(v),removeItem:k=>delete cache[k]};
  const fakeMath=Object.create(Math);
  fakeMath.random=()=>0.5;
- const context=vm.createContext({
+ const context=vm.createContext({AtlasFieldUI:require('../www/js/field-ui-v3210.js'),AtlasFieldScene:require('../www/js/field-scene-v3210.js'),
   window:{confirm(){return true}},document:doc,localStorage,TextEncoder,Date,
   Math:fakeMath,Number,JSON,Map,Set,console,URL,Blob,Intl,
   setInterval(){return 1},setTimeout(){return 1}

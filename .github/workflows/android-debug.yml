@@ -68,6 +68,9 @@ jobs:
           node --check www/js/app.js
           node --check www/js/mobile-ui.js
           node --check www/js/save-manager.js
+          node --check www/js/field-scene-v3210.js
+          node --check www/js/field-ui-v3210.js
+          node --check www/js/lab/field-lab-v3210.js
           node --test tests/*.test.cjs
 
       - name: Instalar Capacitor
@@ -103,7 +106,7 @@ jobs:
       - name: Publicar APK de prueba
         uses: actions/upload-artifact@v4
         with:
-          name: El-Gran-Atlas-Beta-3.18-debug
+          name: El-Gran-Atlas-Beta-3.21.0-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 14

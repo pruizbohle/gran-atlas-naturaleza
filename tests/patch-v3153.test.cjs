@@ -7,7 +7,7 @@ const css=fs.readFileSync('www/css/styles.css','utf8');
 function boot(){
  const cache={};
  const get=id=>({id,hidden:false,disabled:false,textContent:'',innerHTML:'',value:'',dataset:{},style:{},classList:{add(){},remove(){},toggle(){}},addEventListener(){},setAttribute(){},querySelector(){return null},querySelectorAll(){return []},focus(){},click(){}});
- const context=vm.createContext({window:{confirm(){return true}},document:{getElementById:get,querySelectorAll(){return []},addEventListener(){},body:{classList:{add(){},remove(){}},appendChild(){}}},localStorage:{getItem:k=>cache[k]||null,setItem:(k,v)=>cache[k]=String(v),removeItem:k=>delete cache[k]},TextEncoder,Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,setInterval(){return 1},setTimeout(){return 1}});
+ const context=vm.createContext({AtlasFieldUI:require('../www/js/field-ui-v3210.js'),AtlasFieldScene:require('../www/js/field-scene-v3210.js'),window:{confirm(){return true}},document:{getElementById:get,querySelectorAll(){return []},addEventListener(){},body:{classList:{add(){},remove(){}},appendChild(){}}},localStorage:{getItem:k=>cache[k]||null,setItem:(k,v)=>cache[k]=String(v),removeItem:k=>delete cache[k]},TextEncoder,Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,setInterval(){return 1},setTimeout(){return 1}});
  const expose=[
   'window.__patch={SPECIES,REGIONS,getSpriteMarkup,unifiedFamilySprite,encounterCardMarkup,mergeHistoricalBeardedVulture,variantToSkin,',
   'get state(){return state},',

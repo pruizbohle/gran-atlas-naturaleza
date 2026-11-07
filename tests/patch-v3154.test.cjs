@@ -9,7 +9,7 @@ function boot(){
  const get=id=>({id,hidden:false,disabled:false,textContent:'',innerHTML:'',value:'',dataset:{},style:{},
   classList:{add(){},remove(){},toggle(){}},addEventListener(){},setAttribute(){},
   querySelector(){return null},querySelectorAll(){return []},focus(){},click(){}});
- const context=vm.createContext({window:{confirm(){return true}},
+ const context=vm.createContext({AtlasFieldUI:require('../www/js/field-ui-v3210.js'),AtlasFieldScene:require('../www/js/field-scene-v3210.js'),window:{confirm(){return true}},
   document:{getElementById:get,querySelectorAll(){return []},addEventListener(){},
    body:{classList:{add(){},remove(){}},appendChild(){}} },
   localStorage:{getItem:k=>cache[k]||null,setItem:(k,v)=>cache[k]=String(v),removeItem:k=>delete cache[k]},
@@ -119,7 +119,7 @@ test('Bestiario permite invertir un mismo criterio y conserva selección',()=>{
  assert.match(g.renderBestiary(),/Tipo ↑/);
 });
 test('Selva y sabana presentan filtros y estilos propios',()=>{
- assert.match(src,/validBiomes=.*'selva','sabana'/);
+ const scene=require('../www/js/field-scene-v3210.js');assert.ok(scene.habitats.includes('selva'));assert.ok(scene.habitats.includes('sabana'));assert.notEqual(scene.render('selva'),scene.render('sabana'));
  assert.match(css,/\.scene\.biome-selva/);
  assert.match(css,/\.scene\.biome-sabana/);
  assert.match(src,/selva:'🌴 Selva'/);

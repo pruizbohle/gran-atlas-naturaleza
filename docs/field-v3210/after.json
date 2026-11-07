@@ -1,0 +1,262 @@
+{
+  "reference": "working",
+  "scenario": "Zorro rojo observado; 4 naturalistas; sin expansión secundaria",
+  "measurements": [
+    {
+      "width": 360,
+      "height": 740,
+      "documentHeight": 740,
+      "verticalScroll": 0,
+      "dockTop": 689,
+      "action": {
+        "top": 440.140625,
+        "bottom": 496.140625,
+        "width": 346,
+        "height": 56,
+        "visible": true,
+        "text": "⌕Observar faunaUna nueva página de tu expedición→"
+      },
+      "result": {
+        "top": 195.140625,
+        "bottom": 433.140625,
+        "width": 344,
+        "height": 238,
+        "visible": true,
+        "text": "OBSERVACIÓN REGISTRADAZorro rojo+1 avistamiento · +5 conocimiento"
+      },
+      "scene": {
+        "top": 194.140625,
+        "bottom": 434.140625,
+        "width": 346,
+        "height": 240,
+        "visible": true,
+        "text": "BosqueAmanecer · PrimaveraOBSERVACIÓN REGISTRADAZorro rojo+1 avistamiento · +5 conocimiento"
+      },
+      "automatic": {
+        "top": 578.609375,
+        "bottom": 593.609375,
+        "width": 275.65625,
+        "height": 15,
+        "visible": true,
+        "text": "4 naturalistas · explorando"
+      },
+      "progress": {
+        "top": 502.140625,
+        "bottom": 562.53125,
+        "width": 346,
+        "height": 60.390625,
+        "visible": true,
+        "text": "Zorro rojo2/5 etapas ›Observa 58 ejemplares más."
+      },
+      "horizontalOverflow": false,
+      "jsErrors": [],
+      "openTimings": {
+        "trialsMs": [
+          4.200000002980232,
+          12,
+          5.5,
+          2.699999999254942,
+          3.099999997764826,
+          3.300000000745058,
+          3.800000000745058,
+          3.300000000745058,
+          2.199999999254942
+        ],
+        "medianMs": 3.300000000745058,
+        "domNodes": 286
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "documentHeight": 844,
+      "verticalScroll": 0,
+      "dockTop": 793,
+      "action": {
+        "top": 519.140625,
+        "bottom": 575.140625,
+        "width": 376,
+        "height": 56,
+        "visible": true,
+        "text": "⌕Observar faunaUna nueva página de tu expedición→"
+      },
+      "result": {
+        "top": 197.140625,
+        "bottom": 511.140625,
+        "width": 374,
+        "height": 314,
+        "visible": true,
+        "text": "OBSERVACIÓN REGISTRADAZorro rojo+1 avistamiento · +5 conocimiento"
+      },
+      "scene": {
+        "top": 196.140625,
+        "bottom": 512.140625,
+        "width": 376,
+        "height": 316,
+        "visible": true,
+        "text": "BosqueAmanecer · PrimaveraOBSERVACIÓN REGISTRADAZorro rojo+1 avistamiento · +5 conocimiento"
+      },
+      "automatic": {
+        "top": 659.59375,
+        "bottom": 675.84375,
+        "width": 305.65625,
+        "height": 16.25,
+        "visible": true,
+        "text": "4 naturalistas · explorando"
+      },
+      "progress": {
+        "top": 582.140625,
+        "bottom": 643.140625,
+        "width": 376,
+        "height": 61,
+        "visible": true,
+        "text": "Zorro rojo2/5 etapas ›Observa 58 ejemplares más."
+      },
+      "horizontalOverflow": false,
+      "jsErrors": [],
+      "openTimings": {
+        "trialsMs": [
+          4.5,
+          3.5,
+          3.7999999970197678,
+          4.300000000745058,
+          3.5,
+          3.100000001490116,
+          6.199999999254942,
+          3.600000001490116,
+          3.5
+        ],
+        "medianMs": 3.600000001490116,
+        "domNodes": 286
+      }
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "documentHeight": 915,
+      "verticalScroll": 0,
+      "dockTop": 864,
+      "action": {
+        "top": 590.140625,
+        "bottom": 646.140625,
+        "width": 398,
+        "height": 56,
+        "visible": true,
+        "text": "⌕Observar faunaUna nueva página de tu expedición→"
+      },
+      "result": {
+        "top": 197.140625,
+        "bottom": 582.140625,
+        "width": 396,
+        "height": 385,
+        "visible": true,
+        "text": "OBSERVACIÓN REGISTRADAZorro rojo+1 avistamiento · +5 conocimiento"
+      },
+      "scene": {
+        "top": 196.140625,
+        "bottom": 583.140625,
+        "width": 398,
+        "height": 387,
+        "visible": true,
+        "text": "BosqueAmanecer · PrimaveraOBSERVACIÓN REGISTRADAZorro rojo+1 avistamiento · +5 conocimiento"
+      },
+      "automatic": {
+        "top": 730.59375,
+        "bottom": 746.84375,
+        "width": 327.65625,
+        "height": 16.25,
+        "visible": true,
+        "text": "4 naturalistas · explorando"
+      },
+      "progress": {
+        "top": 653.140625,
+        "bottom": 714.140625,
+        "width": 398,
+        "height": 61,
+        "visible": true,
+        "text": "Zorro rojo2/5 etapas ›Observa 58 ejemplares más."
+      },
+      "horizontalOverflow": false,
+      "jsErrors": [],
+      "openTimings": {
+        "trialsMs": [
+          5.100000001490116,
+          3.399999998509884,
+          2.800000000745058,
+          3.699999999254942,
+          3.900000002235174,
+          5.199999999254942,
+          5,
+          6.199999999254942,
+          3.800000000745058
+        ],
+        "medianMs": 3.900000002235174,
+        "domNodes": 286
+      }
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "documentHeight": 1020,
+      "verticalScroll": 20,
+      "dockTop": 1000,
+      "action": {
+        "top": 730.796875,
+        "bottom": 790.796875,
+        "width": 900,
+        "height": 60,
+        "visible": true,
+        "text": "⌕Observar faunaUna nueva página de tu expedición→"
+      },
+      "result": {
+        "top": 372.796875,
+        "bottom": 720.796875,
+        "width": 898,
+        "height": 348,
+        "visible": true,
+        "text": "OBSERVACIÓN REGISTRADAZorro rojo+1 avistamiento · +5 conocimiento"
+      },
+      "scene": {
+        "top": 371.796875,
+        "bottom": 721.796875,
+        "width": 900,
+        "height": 350,
+        "visible": true,
+        "text": "BosqueAmanecer · PrimaveraOBSERVACIÓN REGISTRADAZorro rojo+1 avistamiento · +5 conocimiento"
+      },
+      "automatic": {
+        "top": 886.25,
+        "bottom": 902.5,
+        "width": 826.671875,
+        "height": 16.25,
+        "visible": true,
+        "text": "4 naturalistas · explorando"
+      },
+      "progress": {
+        "top": 799.796875,
+        "bottom": 865.796875,
+        "width": 900,
+        "height": 66,
+        "visible": true,
+        "text": "Zorro rojo2/5 etapas ›Observa 58 ejemplares más."
+      },
+      "horizontalOverflow": false,
+      "jsErrors": [],
+      "openTimings": {
+        "trialsMs": [
+          8.300000000745058,
+          6.599999997764826,
+          3.5,
+          4.400000002235174,
+          2.900000002235174,
+          3.099999997764826,
+          5.100000001490116,
+          4.800000000745058,
+          3.099999997764826
+        ],
+        "medianMs": 4.400000002235174,
+        "domNodes": 286
+      }
+    }
+  ]
+}

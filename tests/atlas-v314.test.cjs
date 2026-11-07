@@ -8,7 +8,7 @@ function game(){
  const get=id=>nodes[id]||(nodes[id]={id,hidden:false,disabled:false,textContent:'',innerHTML:'',value:'',dataset:{},files:[],classList:{add(){},remove(){},toggle(){}},style:{},addEventListener(){},setAttribute(){},focus(){},click(){},querySelector(){return null},querySelectorAll(){return []}});
  const doc={getElementById:get,querySelectorAll(){return []},addEventListener(){},body:{classList:{add(){},remove(){}},appendChild(){}}};
  const cache={};const storage={getItem:k=>cache[k]||null,setItem:(k,v)=>{cache[k]=String(v)},removeItem:k=>delete cache[k]};
- const ctx=vm.createContext({window:{confirm(){return true}},document:doc,localStorage:storage,TextEncoder,Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,setInterval(){return 1},setTimeout(){return 1}});
+ const ctx=vm.createContext({AtlasFieldUI:require('../www/js/field-ui-v3210.js'),AtlasFieldScene:require('../www/js/field-scene-v3210.js'),window:{confirm(){return true}},document:doc,localStorage:storage,TextEncoder,Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,setInterval(){return 1},setTimeout(){return 1}});
  const out=GAME.replace(/\n\}\)\(\);\s*$/,`
 window.__atlasTest={REGIONS,SPECIES,ITEMS,RECIPES,RESEARCH_NODES,
 canBuy,buyNode,craftItem,regionRequirementsMet,eligibleSpecies,rarityWeight,availableVoyages,sail,finishVoyage,

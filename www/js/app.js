@@ -2745,14 +2745,21 @@ function updateFieldOutput(){
  if(tab!=='field')return;
  const last=state.lastEncounter;
  const result=document.getElementById('fieldResult');
- if(result){const signature=(last?.title||'')+'|'+(last?.subtitle||'')+'|'+(last?.sequence||'');if(signature!==lastPanelSignature){result.innerHTML=encounterCardMarkup(last);result.classList.remove('encounter-reveal');void result.offsetWidth;result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
+ if(result){const signature=fieldEncounterSignature(last);if(signature!==lastPanelSignature){result.innerHTML=encounterCardMarkup(last);result.classList.remove('encounter-reveal');void result.offsetWidth;result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
  const buffs=document.getElementById('fieldBuffSummary');
  if(buffs){const next=fieldBuffSummaryMarkup();if(buffs.innerHTML!==next)buffs.innerHTML=next;}
+ const automatic=fieldAutomaticModel();
  const autoNoticeEl=document.getElementById('autoNotice');
  if(autoNoticeEl){
-  const text=currentAutoNotice||'Sin actividad automática reciente.';
+  const text=automatic.summary;
   if(autoNoticeEl.textContent!==text)autoNoticeEl.textContent=text;
  }
+ const progress=document.getElementById('fieldProgress');
+ if(progress){const next=globalThis.AtlasFieldUI.progress(fieldProgressModel());if(progress.innerHTML!==next)progress.innerHTML=next;}
+ const cadence=document.getElementById('fieldAutoCadence');
+ if(cadence){const next=automatic.detail;if(cadence.textContent!==next)cadence.textContent=next;}
+ const autoDetail=document.getElementById('fieldAutoDetail');
+ if(autoDetail&&autoDetail.textContent!==currentAutoNotice)autoDetail.textContent=currentAutoNotice;
  const log=document.getElementById('fieldLog');
  if(log && diaryDirty){
   const wasNearTop=log.scrollTop<42;
@@ -2798,6 +2805,7 @@ function filterJournalRail(){
 }
 function renderPanel(){
   lastPanelSignature='';diaryDirty=true;
+  document.body.classList.toggle?.('field-active',tab==='field');
   document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
   // Renderizar solo el módulo activo: un error en otra pestaña no bloquea todas.
   const renderers={
@@ -2812,6 +2820,7 @@ function renderPanel(){
     panel.innerHTML='<section class="card stack"><h3>⚠️ No se pudo abrir este módulo</h3><p class="small">Puedes utilizar otra pestaña. Si el problema persiste, informa el nombre de la sección.</p></section>';
   }
   bindPanel();
+  if(tab==='field')lastPanelSignature=fieldEncounterSignature(state.lastEncounter);
   if(tab==='atlas'){
     const map=panel.querySelector('.atlas-v32-map-scroll');
     if(map)map.scrollLeft=atlasMapScrollLeft;
@@ -2983,96 +2992,37 @@ function renderAtlas(){
 }
 
 // v3.1: escenografía SVG ligera; no afecta encuentros, especies, guardados ni economía.
-function fieldBackdropMarkup(habitat){
-  const trees=habitat==='bosque'||habitat==='mediterraneo'||habitat==='humedal'||habitat==='selva';
-  const savanna=habitat==='sabana';
-  const wet=habitat==='rio'||habitat==='costa'||habitat==='humedal';
-  const arid=habitat==='desierto'||habitat==='estepa';
-  const peaks=habitat==='montana'||habitat==='tundra';
-  return `<svg class="field-backdrop" viewBox="0 0 640 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-    <defs><linearGradient id="fieldSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--biome-sky)"/><stop offset="1" stop-color="var(--biome-haze)"/></linearGradient></defs>
-    <rect width="640" height="280" fill="url(#fieldSky)"/>
-    <circle class="field-sun" cx="502" cy="57" r="26" fill="#fce4a7" opacity=".78"/>
-    <path d="M0 171 Q72 119 146 159 T315 156 T490 148 T640 166 V280 H0Z" fill="var(--biome-far)" opacity=".85"/>
-    ${peaks?`<path d="M0 185 L97 65 188 177 306 70 415 191 513 82 640 179 V280 H0Z" fill="#667e81" opacity=".8"/><path d="M66 106 97 65 126 112 103 104 94 117Z M271 110 306 70 347 122 318 111 302 123Z M478 123 513 82 540 119 515 111 502 126Z" fill="#f0e9dd" opacity=".94"/>`:''}
-    ${arid?`<path d="M0 210 Q94 169 204 200 T415 207 T640 191 V280 H0Z" fill="#b99e6e" opacity=".75"/><path d="M0 239 Q146 193 292 224 T640 210 V280 H0Z" fill="#b09567"/>`:''}
-    ${savanna?`<g fill="var(--biome-tree)" opacity=".92"><path d="M110 218v-65m-6 65h12M510 219v-78m-6 78h12" stroke="#715f3d" stroke-width="8"/><ellipse cx="108" cy="143" rx="57" ry="15"/><ellipse cx="510" cy="136" rx="65" ry="16"/></g>`:''}
-    ${trees?`<g fill="var(--biome-tree)" opacity=".86"><path d="M20 207 V137 L-8 160 22 104 45 151 24 139 24 207Z"/><path d="M88 205 V143 L64 157 88 92 113 159 91 143 91 205Z"/><path d="M558 201 V138 L528 153 558 91 588 161 561 141 561 201Z"/><path d="M628 213 V128 L595 147 628 71 662 155 632 134 632 213Z"/><circle cx="148" cy="166" r="38"/><circle cx="480" cy="155" r="35"/></g><g stroke="#756b4e" stroke-width="6"><path d="M149 167v55 M480 160v60"/></g>`:''}
-    <path d="M0 211 Q110 183 217 209 T436 209 T640 199 V280 H0Z" fill="var(--biome-ground)"/>
-    ${wet?`<path d="M0 229 Q120 217 222 231 T434 228 T640 225 V280 H0Z" fill="#7cbbc1" opacity=".86"/><g fill="none" stroke="#e7f2e8" stroke-width="2" opacity=".62"><path d="M28 248q40-6 74 0 M252 261q35-5 75 0 M461 244q44-6 85 0"/></g>`:arid?`<path d="M0 260 Q165 223 312 251 T640 242V280H0Z" fill="#c8b080"/>`:`<g fill="var(--biome-grass)" opacity=".9"><path d="M0 245q115-18 207-3t240-9 193 3v44H0Z"/></g>`}
-    <g stroke="var(--biome-detail)" stroke-width="2.2" stroke-linecap="round" opacity=".8"><path d="M62 263l-6-14m6 14 7-12 M206 276l-4-17m4 17 8-12 M423 268l-3-16m3 16 6-9 M591 265l-5-16m5 16 7-12"/></g>
-  </svg>`;
+function fieldBackdropMarkup(habitat){return globalThis.AtlasFieldScene.render(habitat,state.time);}
+function fieldEncounterModel(last){
+ const entries=(Array.isArray(last?.entries)?last.entries:[]).filter(e=>SPECIES[e.id]).slice(0,3).map((e,index)=>{
+  const individual=(e.category==='Legendario'||e.variant==='Legendario')?legendaryForSpecies(e.id):null;
+  return {...e,name:(individual?individual.name+' — ':'')+visibleName(e.id),image:specimenMarkup(e.id,e.variant,e.category,e.sex),amount:Number(e.amount)||1,sexLabel:e.sex==='male'?'macho':'hembra',sexNew:!!(index===0&&e.sex&&last?.subtitle?.includes('primera observación'))};
+ });
+ if(!entries.length&&last?.species&&SPECIES[last.species])entries.push({id:last.species,name:visibleName(last.species),image:last.sprite||getSpriteMarkup(last.species),amount:1});
+ const knowledge=(last?.subtitle||'').match(/\+\d+ conocimiento/),money=(last?.subtitle||'').match(/\+£\d+/),sample=(last?.subtitle||'').match(/muestra obtenida: ([^,·]+)/);
+ const count=entries.reduce((sum,e)=>sum+e.amount,0);
+ return {entries,title:last?.title||'Sigue los rastros',failed:!!last&&!last.species,legacyImage:!entries.length?last?.sprite:null,emptyImage:renderItemArt('binoculars'),reward:[count?('+'+count+' '+(count===1?'avistamiento':'avistamientos')):'',knowledge?.[0],money?.[0],sample?'Muestra: '+sample[1].trim():''].filter(Boolean).join(' · ')||'Observa y completa tu cuaderno de viaje.'};
 }
-function encounterCardMarkup(last){
-  const entries=(Array.isArray(last?.entries)?last.entries:[]).filter(e=>SPECIES[e.id]).slice(0,3);
-  const hasAnimal=!!last?.species;
-  const title=last?.title||'Aún sin avistamientos';
-  const detail=last?.subtitle||'Busca animales para comenzar tu registro de campo.';
-  if(entries.length){
-   const group=entries.length>1;
-   const thumbnails=entries.map((e,i)=>{
-    const image=specimenMarkup(e.id,e.variant,e.category,e.sex);
-    const number=Number(e.amount)||1;
-    const individual=(e.category==='Legendario'||e.variant==='Legendario')?legendaryForSpecies(e.id):null;
-    const label=(individual?individual.name+' — ':'')+visibleName(e.id);
-    return `<div class="encounter-species ${group?'in-group':''}" style="--encounter-index:${i}">
-      <div class="encounter-species-art"><span class="encounter-species-sprite">${image}</span>
-       ${number>1?`<span class="encounter-multiplier" aria-label="${number} avistamientos">×${number}</span>`:''}
-      </div>
-      <div class="encounter-species-label">${esc(label)}</div>
-      ${e.variant?`<div class="encounter-variant-label">${esc([...new Set([e.variant,e.category].filter(Boolean))].join(' · '))}</div>`:''}
-     </div>`;
-   }).join('');
-   return `<div class="encounter-graphic ${group?'encounter-graphic-multi':'encounter-graphic-single'}" role="group" aria-label="${entries.length} ${entries.length===1?'especie observada':'especies observadas'}">
-      ${group?`<span class="encounter-group-count">${entries.length} ESPECIES</span>`:''}
-      <div class="encounter-species-grid">${thumbnails}</div>
-     </div>
-     <div class="encounter-copy encounter-graphic-copy"><strong>${esc(title)}</strong>
-      <div class="small subtitle">${esc(group?('+'+entries.reduce((acc,e)=>acc+(Number(e.amount)||1),0)+' avistamientos · '+(detail.match(/\+\d+ conocimiento/)||['Registro múltiple'])[0]):detail)}</div>
-     </div>`;
-  }
-  // Compatibilidad: partidas anteriores con resultado gráfico único, sin lista de especies.
-  return `<div class="encounter-art ${hasAnimal?'animal-found':'empty-encounter'}"><div class="sprite-wrap">${last?.sprite || '<span class="field-binoculars" aria-hidden="true">🔭</span>'}</div></div>
-    <div class="encounter-copy"><strong>${esc(title)}</strong><div class="small subtitle">${esc(detail)}</div></div>`;
+function fieldEncounterSignature(last){return (last?.title||'')+'|'+(last?.subtitle||'')+'|'+(last?.sequence||'');}
+function encounterCardMarkup(last){return globalThis.AtlasFieldUI.encounter(fieldEncounterModel(last));}
+function fieldProgressModel(){
+ const region=currentRegion(),last=state.lastEncounter?.species;
+ const id=SPECIES[last]?last:region.species.find(id=>state.discovered[id]);
+ if(!id)return {name:'Cuaderno de campo',label:regionIdentifiedCount(region.id)+'/'+region.species.length+' identificadas',percent:100*regionIdentifiedCount(region.id)/region.species.length,goal:'Observa para comenzar tu primer registro.'};
+ const st=stage(id),req=st<5?stageRequirements(id,st):null;
+ let goal=st>=5?(state.published[id]?'Registro completo · sigue explorando.':'Tu monografía está lista para publicar.'):!req.sightOk?'Observa '+Math.max(0,req.needSight-sight(id))+' ejemplares más.':!req.extraOk?(st===3?'Documenta conducta o dimorfismo.':'Busca un espécimen especial.'):!req.moneyOk||!req.knowledgeOk?'Siguiente etapa: £'+req.money+' y '+req.knowledge+' conocimiento.':'Puedes avanzar una etapa en el Cuaderno.';
+ return {id,name:visibleName(id),label:st+'/5 etapas',percent:st>=5?100:Math.min(100,100*sight(id)/Math.max(1,req.needSight)),goal};
 }
-function renderField(){
-  const region=currentRegion();
-  const scene=regionLandscape(region.id);
-  const habitat=state.habitat;
-  const validBiomes=['bosque','pradera','rio','costa','tundra','montana','estepa','mediterraneo','desierto','humedal','selva','sabana'];
-  const biome=validBiomes.includes(habitat)?habitat:'bosque';
-  const lights=['amanecer','dia','atardecer','noche'];
-  const light=lights.includes(state.time)?state.time:'dia';
-  return `<div class="field-v31 grid-2">
-    <section class="card field-expedition">
-      <div class="field-heading"><div><span class="field-eyebrow">CUADERNO DE CAMPO · ${region.code}</span><h3 class="section">${region.name}</h3></div><span class="field-compass" aria-hidden="true">✦</span></div>
-      <div class="field-condition-line" aria-label="Condiciones de búsqueda"><span>${habitatLabel(habitat)}</span><span>${timeLabel(state.time)}</span><span>${seasonLabel(state.season)}</span></div>
-      <div class="field-buff-summary" id="fieldBuffSummary" aria-live="off">${fieldBuffSummaryMarkup()}</div>
-      <div class="scene biome-${biome} light-${light}" id="fieldScene" role="group" aria-label="Paisaje de ${habitatLabel(habitat)}">
-        ${fieldBackdropMarkup(habitat)}
-        <div class="scene-top"><span class="scene-locale">✦ ${scene[3].replace(/[^\p{Extended_Pictographic}\s]/gu,'').trim()||'NATURALEZA'}</span><span class="scene-survey">OBSERVACIÓN Nº ${fmt(totalSightings()+1)}</span></div>
-        <div class="result-card" id="fieldResult" aria-live="polite">${encounterCardMarkup(state.lastEncounter)}</div>
-        <div class="scene-bottom"><span>El mundo natural espera ser documentado</span><span>1842 · ${region.code}</span></div>
-      </div>
-      <button class="big-action field-observe" data-action="search-manual" type="button"><span aria-hidden="true">⌕</span> Observar fauna <span aria-hidden="true">✦</span></button>
-      <div class="field-filter-block ${state.fieldFiltersOpen?'field-filter-open':''}">
-        <button class="field-filter-toggle" type="button" data-action="toggle-field-filters" aria-expanded="${!!state.fieldFiltersOpen}"><span>⚙️ Condiciones de exploración</span><span class="field-filter-summary">${habitatLabel(habitat)} · ${timeLabel(state.time)} · ${seasonLabel(state.season)}</span><span aria-hidden="true">${state.fieldFiltersOpen?'▴':'▾'}</span></button>
-        <div class="field-filter-controls">
-          <div><div class="small field-choice-label">HÁBITAT</div><div class="choice-row">${region.habitats.map(h=>`<button class="choice ${state.habitat===h?'active':''}" data-action="set-habitat" data-id="${h}">${habitatLabel(h)}</button>`).join('')}</div></div>
-          <div><div class="small field-choice-label">HORARIO</div><div class="choice-row">${['amanecer','dia','atardecer','noche'].map(t=>`<button class="choice ${state.time===t?'active':''}" data-action="set-time" data-id="${t}">${timeLabel(t)}</button>`).join('')}</div></div>
-          <div><div class="small field-choice-label">ESTACIÓN</div><div class="choice-row">${['primavera','verano','otono','invierno'].map(t=>`<button class="choice ${state.season===t?'active':''}" data-action="set-season" data-id="${t}">${seasonLabel(t)}</button>`).join('')}</div></div>
-        </div>
-      </div>
-      <details class="field-toolkit"><summary><span>🎒 Herramientas del naturalista</span><span>Ayudas de prueba · desplegar</span></summary>
-        <div class="helper-row"><button class="btn gold" data-action="field-aid" data-id="knowledge">+500 conocimiento</button><button class="btn gold" data-action="field-aid" data-id="sightings">+50 avistamientos</button><button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button></div>
-      </details>
-    </section>
-    <section class="card field-diary"><div class="field-diary-head"><h3 class="section">✒️ Diario de expedición</h3><span class="field-diary-seal">REGISTRO</span></div>
-      <div class="small" id="autoNotice">${currentAutoNotice||'Sin actividad automática reciente.'}</div>
-      <div class="list" id="fieldLog">${state.log.map(x=>`<div class="log">${esc(x)}</div>`).join('')}</div>
-    </section>
-  </div>`;
+function fieldAutomaticModel(){
+ const cap=automaticSearchCapacity(),helpers=state.helpers||0;
+ const paused=helpers>0&&(!cap.total||!cap.remaining);
+ return {helpers,summary:helpers?(helpers+' naturalistas · '+(paused?'en pausa':'explorando')):'Explora con ayuda de naturalistas',detail:helpers?(paused?(cap.total?'Cupo horario completo · búsqueda manual disponible':'Sin fauna compatible con la estación'):'Cada '+autoInterval()+' s · censo ×'+automaticCensusRate()+' · '+cap.remaining+'/'+cap.total+' especies con cupo'):'Contrata tu equipo en Investigación',notice:currentAutoNotice};
 }
+function fieldViewModel(){
+ const region=currentRegion();
+ return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),progress:fieldProgressModel(),auto:fieldAutomaticModel(),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(),logHTML:state.log.map(x=>'<div class="log">'+esc(x)+'</div>').join(''),toolsHTML:'<div class="helper-row"><button class="btn gold" data-action="field-aid" data-id="knowledge">+500 conocimiento</button><button class="btn gold" data-action="field-aid" data-id="sightings">+50 avistamientos</button><button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button></div>',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
+}
+function renderField(){return globalThis.AtlasFieldUI.render(fieldViewModel());}
 function renderJournal(){
   const ids=currentRegion().species;
   if(!ids.includes(state.selectedJournal)) state.selectedJournal=ids.find(sid=>stage(sid)>=1)||ids[0];
@@ -4440,6 +4390,8 @@ function handlePanelAction(e){
     const el=e.target.closest?.('[data-action]');
     if(!el||!panel.contains(el)||el.disabled)return;
     const act=el.dataset.action; const id=el.dataset.id;
+    if(act==='field-journal'){if(id&&currentRegion().species.includes(id))state.selectedJournal=id;tab='journal';renderPanel();}
+    if(act==='field-research'){tab='research';renderPanel();}
     if(act==='set-region') setRegion(id);
     if(act==='travel-region') travelToRegion(id);
     if(act==='unlock-region') unlockRegion(id);

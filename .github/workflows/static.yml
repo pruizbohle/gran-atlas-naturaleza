@@ -39,6 +39,9 @@ jobs:
           node --check www/sw.js
           node --check www/js/mobile-ui.js
           node --check www/js/save-manager.js
+          node --check www/js/field-scene-v3210.js
+          node --check www/js/field-ui-v3210.js
+          node --check www/js/lab/field-lab-v3210.js
           node --check www/js/app.js
           node --test tests/*.test.cjs
       - name: Configure Pages

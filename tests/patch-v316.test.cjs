@@ -10,7 +10,7 @@ function game(){
   dataset:{},style:{},classList:{add(){},remove(){},toggle(){}},addEventListener(){},setAttribute(){},
   querySelector(){return null},querySelectorAll(){return []},focus(){},click(){}});
  const cache={};
- const context=vm.createContext({window:{confirm(){return true}},
+ const context=vm.createContext({AtlasFieldUI:require('../www/js/field-ui-v3210.js'),AtlasFieldScene:require('../www/js/field-scene-v3210.js'),window:{confirm(){return true}},
   document:{getElementById:node,querySelectorAll(){return []},addEventListener(){},
    body:{classList:{add(){},remove(){}},appendChild(){}}},
   localStorage:{getItem:k=>cache[k]||null,setItem:(k,v)=>cache[k]=String(v),removeItem:k=>delete cache[k]},

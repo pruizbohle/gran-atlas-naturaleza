@@ -17,7 +17,7 @@ function game(saved=null){
  const document={getElementById:get,querySelectorAll(){return []},addEventListener(){},
   body:{classList:{add(){},remove(){}},appendChild(){}}};
  const localStorage={getItem:k=>store[k]||null,setItem:(k,v)=>{store[k]=String(v)},removeItem:k=>delete store[k]};
- const context=vm.createContext({window:{confirm(){return true}},document,localStorage,
+ const context=vm.createContext({AtlasFieldUI:require('../www/js/field-ui-v3210.js'),AtlasFieldScene:require('../www/js/field-scene-v3210.js'),window:{confirm(){return true}},document,localStorage,
   TextEncoder,Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,setInterval(){return 1},setTimeout(){return 1}});
  const exposed=SOURCE.replace(/\nrender\(\);\s*\}\)\(\);\s*$/,
   '\nwindow.__v317={SPECIES,REGIONS,ITEMS,MUSEUM_COLLECTIONS,MUSEUM_FOSSIL_RECIPES,MUSEUM_DIG_SITES,'+

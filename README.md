@@ -1,3 +1,7 @@
+# El Gran Atlas v3.21.0 — Campo jugable
+
+Escenas de exploración para doce biomas, encuentros protagonistas y acción, progreso y naturalistas visibles en el primer pantallazo móvil. [Informe, mediciones y archivos](README_V3210.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio de Campo](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-campo-v3210.html).
+
 # El Gran Atlas v3.20.0 — Optimización y estabilidad
 
 Bestiario más ligero, caché de categorías, recuperación de guardados y actualización offline coherente. [Diagnóstico, mediciones y validación](README_V3200.md).
