@@ -1,0 +1,23 @@
+{
+  "1": {
+    "hash": "1f0e7f55c2d10895891053395050792d8088790a97cb3634ab0017207616d8c5",
+    "rngCalls": 19,
+    "sightings": 48700001,
+    "knowledge": 10000100,
+    "money": 10000239.291199997
+  },
+  "3600": {
+    "hash": "82e176346bbbdeed2e5adb1f582b09185916dd4951012b496dc4cfc436c1b64f",
+    "rngCalls": 2446,
+    "sightings": 48700265,
+    "knowledge": 10001362,
+    "money": 10012198.048399998
+  },
+  "28800": {
+    "hash": "7ecab2d8386f784549d1fd21e9b48daad88235e99b1cb4db610862e4155152c0",
+    "rngCalls": 2446,
+    "sightings": 48700265,
+    "knowledge": 10001362,
+    "money": 10095932.608399998
+  }
+}

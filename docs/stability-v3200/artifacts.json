@@ -1,0 +1,11 @@
+{
+  "beforeAppBytes": 613133,
+  "finalFiles": {
+    "www/js/app.js": 615979,
+    "www/js/mobile-ui.js": 3258,
+    "www/js/save-manager.js": 17117,
+    "www/sw.js": 2303,
+    "www/index.html": 8812
+  },
+  "screenshotsIdentical": true
+}

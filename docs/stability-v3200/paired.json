@@ -1,0 +1,722 @@
+{
+  "method": "Chromium Linux, 390x844, CDP CPU slowdown 4x; 5 trials, medians; advanced 487-species fixture; interval callbacks manually driven; no physical Android claim; interleaved ABBA ordering, 5 before and 5 after in one browser process",
+  "summary": {
+    "load": 691.8000000007451,
+    "coldSprites": 719,
+    "warmSprites": 336.30000000074506,
+    "cards": 218.5,
+    "bestiary": 2439.199999999255,
+    "nodes": 55162,
+    "svgs": 1499,
+    "tick30": 236.40000000037253,
+    "persist30": 152.40000000037253,
+    "cacheEntries": 2934,
+    "cacheUtf16Bytes": 19405300,
+    "saveBytes": 149194,
+    "jsHeapUsed": 8839900,
+    "tabs": {
+      "field": 118.90000000037253,
+      "journal": 140,
+      "museum": 136.90000000037253,
+      "objects": 80.40000000037253,
+      "research": 51,
+      "expeditions": 14.699999999254942,
+      "bestiary": 2339.300000000745
+    },
+    "moneyMutations": 30
+  },
+  "trials": [
+    {
+      "load": 691.8000000007451,
+      "coldSprites": 719,
+      "warmSprites": 364.59999999962747,
+      "cards": 270.80000000074506,
+      "bestiary": 3262.7999999988824,
+      "nodes": 55162,
+      "svgs": 1499,
+      "tabs": {
+        "field": 136.40000000037253,
+        "journal": 168.2000000011176,
+        "museum": 150.2999999988824,
+        "objects": 102.70000000111759,
+        "research": 58.09999999962747,
+        "expeditions": 14.699999999254942,
+        "bestiary": 3856.9000000003725
+      },
+      "tick30": 304.40000000037253,
+      "persist30": 218.40000000037253,
+      "cacheEntries": 1461,
+      "cacheUtf16Bytes": 9383068,
+      "counters": {
+        "moneyMutations": 30
+      },
+      "saveBytes": 149192,
+      "intervals": [
+        1000
+      ],
+      "jsHeapUsed": 8294932,
+      "variant": "before"
+    },
+    {
+      "load": 882.6000000014901,
+      "coldSprites": 705.0999999996275,
+      "warmSprites": 33.40000000037253,
+      "cards": 63,
+      "bestiary": 2128.5999999996275,
+      "nodes": 23256,
+      "svgs": 487,
+      "tabs": {
+        "field": 117.80000000074506,
+        "journal": 124.5,
+        "museum": 136.90000000037253,
+        "objects": 67.19999999925494,
+        "research": 55.29999999888241,
+        "expeditions": 19.5,
+        "bestiary": 1789.5
+      },
+      "tick30": 240,
+      "persist30": 101.90000000037253,
+      "cacheEntries": 2934,
+      "cacheUtf16Bytes": 19405300,
+      "counters": {
+        "moneyMutations": 1
+      },
+      "saveBytes": 149194,
+      "intervals": [
+        1000
+      ],
+      "jsHeapUsed": 8839900,
+      "variant": "after"
+    },
+    {
+      "load": 566.1999999992549,
+      "coldSprites": 653.5,
+      "warmSprites": 37.5,
+      "cards": 59,
+      "bestiary": 1712.2999999988824,
+      "nodes": 23256,
+      "svgs": 487,
+      "tabs": {
+        "field": 118.90000000037253,
+        "journal": 103.89999999850988,
+        "museum": 93.09999999962747,
+        "objects": 52.79999999888241,
+        "research": 33.59999999962747,
+        "expeditions": 10,
+        "bestiary": 1569.800000000745
+      },
+      "tick30": 206.80000000074506,
+      "persist30": 151.59999999962747,
+      "cacheEntries": 2934,
+      "cacheUtf16Bytes": 19405300,
+      "counters": {
+        "moneyMutations": 1
+      },
+      "saveBytes": 149194,
+      "intervals": [
+        1000
+      ],
+      "jsHeapUsed": 8840580,
+      "variant": "after"
+    },
+    {
+      "load": 1272.300000000745,
+      "coldSprites": 1052.0999999996275,
+      "warmSprites": 549.2000000011176,
+      "cards": 487,
+      "bestiary": 4625.5999999996275,
+      "nodes": 55162,
+      "svgs": 1499,
+      "tabs": {
+        "field": 169.60000000149012,
+        "journal": 242.59999999962747,
+        "museum": 206.2000000011176,
+        "objects": 138.09999999962747,
+        "research": 69.59999999962747,
+        "expeditions": 12.599999999627471,
+        "bestiary": 5636.800000000745
+      },
+      "tick30": 424.30000000074506,
+      "persist30": 347.40000000037253,
+      "cacheEntries": 1461,
+      "cacheUtf16Bytes": 9383068,
+      "counters": {
+        "moneyMutations": 30
+      },
+      "saveBytes": 149194,
+      "intervals": [
+        1000
+      ],
+      "jsHeapUsed": 8294480,
+      "variant": "before"
+    },
+    {
+      "load": 1040.5,
+      "coldSprites": 1248.6000000014901,
+      "warmSprites": 614.1999999992549,
+      "cards": 228.30000000074506,
+      "bestiary": 3449.199999999255,
+      "nodes": 55162,
+      "svgs": 1499,
+      "tabs": {
+        "field": 145,
+        "journal": 140,
+        "museum": 164.19999999925494,
+        "objects": 80.40000000037253,
+        "research": 47.80000000074506,
+        "expeditions": 14.900000000372529,
+        "bestiary": 3152.699999999255
+      },
+      "tick30": 216,
+      "persist30": 198,
+      "cacheEntries": 1461,
+      "cacheUtf16Bytes": 9383068,
+      "counters": {
+        "moneyMutations": 30
+      },
+      "saveBytes": 149194,
+      "intervals": [
+        1000
+      ],
+      "jsHeapUsed": 8294884,
+      "variant": "before"
+    },
+    {
+      "load": 588.2999999988824,
+      "coldSprites": 714.6999999992549,
+      "warmSprites": 28.59999999962747,
+      "cards": 87.5,
+      "bestiary": 1966.300000000745,
+      "nodes": 23256,
+      "svgs": 487,
+      "tabs": {
+        "field": 98.40000000037253,
+        "journal": 122.40000000037253,
+        "museum": 114.39999999850988,
+        "objects": 63.70000000111759,
+        "research": 38.29999999888241,
+        "expeditions": 16.600000001490116,
+        "bestiary": 1688
+      },
+      "tick30": 213.2000000011176,
+      "persist30": 123.59999999962747,
+      "cacheEntries": 2934,
+      "cacheUtf16Bytes": 19405300,
+      "counters": {
+        "moneyMutations": 1
+      },
+      "saveBytes": 149194,
+      "intervals": [
+        1000
+      ],
+      "jsHeapUsed": 8840004,
+      "variant": "after"
+    },
+    {
+      "load": 839.7999999988824,
+      "coldSprites": 768,
+      "warmSprites": 25,
+      "cards": 86.90000000037253,
+      "bestiary": 2177.699999999255,
+      "nodes": 23256,
+      "svgs": 487,
+      "tabs": {
+        "field": 109.5,
+        "journal": 145.90000000037253,
+        "museum": 104.09999999962747,
+        "objects": 87.59999999962747,
+        "research": 51,
+        "expeditions": 11.599999999627471,
+        "bestiary": 2054.199999999255
+      },
+      "tick30": 212.30000000074506,
+      "persist30": 152.40000000037253,
+      "cacheEntries": 2934,
+      "cacheUtf16Bytes": 19405300,
+      "counters": {
+        "moneyMutations": 1
+      },
+      "saveBytes": 149194,
+      "intervals": [
+        1000
+      ],
+      "jsHeapUsed": 8839916,
+      "variant": "after"
+    },
+    {
+      "load": 676.1000000014901,
+      "coldSprites": 579.0999999996275,
+      "warmSprites": 336.30000000074506,
+      "cards": 218.5,
+      "bestiary": 2439.199999999255,
+      "nodes": 55162,
+      "svgs": 1499,
+      "tabs": {
+        "field": 102,
+        "journal": 113.5,
+        "museum": 120.90000000037253,
+        "objects": 62.40000000037253,
+        "research": 41.899999998509884,
+        "expeditions": 11.400000000372529,
+        "bestiary": 2339.300000000745
+      },
+      "tick30": 236.40000000037253,
+      "persist30": 142.7000000011176,
+      "cacheEntries": 1461,
+      "cacheUtf16Bytes": 9383068,
+      "counters": {
+        "moneyMutations": 30
+      },
+      "saveBytes": 149192,
+      "intervals": [
+        1000
+      ],
+      "jsHeapUsed": 8292004,
+      "variant": "before"
+    },
+    {
+      "load": 689.9000000003725,
+      "coldSprites": 1667.699999999255,
+      "warmSprites": 533.5999999996275,
+      "cards": 362.2000000011176,
+      "bestiary": 4306.299999998882,
+      "nodes": 55162,
+      "svgs": 1499,
+      "tabs": {
+        "field": 167.40000000037253,
+        "journal": 196.69999999925494,
+        "museum": 182.59999999962747,
+        "objects": 107.5,
+        "research": 59.20000000111759,
+        "expeditions": 17.800000000745058,
+        "bestiary": 3974.699999999255
+      },
+      "tick30": 347.6000000014901,
+      "persist30": 211.80000000074506,
+      "cacheEntries": 1461,
+      "cacheUtf16Bytes": 9383068,
+      "counters": {
+        "moneyMutations": 30
+      },
+      "saveBytes": 149194,
+      "intervals": [
+        1000
+      ],
+      "jsHeapUsed": 8291996,
+      "variant": "before"
+    },
+    {
+      "load": 620.1000000014901,
+      "coldSprites": 559.2999999988824,
+      "warmSprites": 27.300000000745058,
+      "cards": 60.5,
+      "bestiary": 1550.199999999255,
+      "nodes": 23256,
+      "svgs": 487,
+      "tabs": {
+        "field": 92.80000000074506,
+        "journal": 105.70000000111759,
+        "museum": 114.59999999962747,
+        "objects": 62.40000000037253,
+        "research": 36.59999999962747,
+        "expeditions": 10.800000000745058,
+        "bestiary": 1664.199999999255
+      },
+      "tick30": 214.80000000074506,
+      "persist30": 125.79999999888241,
+      "cacheEntries": 2934,
+      "cacheUtf16Bytes": 19405300,
+      "counters": {
+        "moneyMutations": 1
+      },
+      "saveBytes": 149192,
+      "intervals": [
+        1000
+      ],
+      "jsHeapUsed": 8841288,
+      "variant": "after"
+    }
+  ],
+  "jsFiles": {
+    "app.js": 615979,
+    "bird-art-v3193.js": 50452,
+    "fish-art-v3191.js": 12846,
+    "herp-art-v3192.js": 24781,
+    "item-art-v3198.js": 12127,
+    "legendary-art-v3197.js": 11257,
+    "mammal-art-v3194.js": 92323,
+    "mobile-ui.js": 3258,
+    "relict-art-v3199.js": 7351,
+    "save-manager.js": 17117
+  },
+  "paired": {
+    "before": {
+      "summary": {
+        "load": 691.8000000007451,
+        "coldSprites": 1052.0999999996275,
+        "warmSprites": 533.5999999996275,
+        "cards": 270.80000000074506,
+        "bestiary": 3449.199999999255,
+        "nodes": 55162,
+        "svgs": 1499,
+        "tick30": 304.40000000037253,
+        "persist30": 211.80000000074506,
+        "cacheEntries": 1461,
+        "cacheUtf16Bytes": 9383068,
+        "saveBytes": 149194,
+        "jsHeapUsed": 8294480,
+        "tabs": {
+          "field": 145,
+          "journal": 168.2000000011176,
+          "museum": 164.19999999925494,
+          "objects": 102.70000000111759,
+          "research": 58.09999999962747,
+          "expeditions": 14.699999999254942,
+          "bestiary": 3856.9000000003725
+        },
+        "moneyMutations": 30
+      },
+      "trials": [
+        {
+          "load": 691.8000000007451,
+          "coldSprites": 719,
+          "warmSprites": 364.59999999962747,
+          "cards": 270.80000000074506,
+          "bestiary": 3262.7999999988824,
+          "nodes": 55162,
+          "svgs": 1499,
+          "tabs": {
+            "field": 136.40000000037253,
+            "journal": 168.2000000011176,
+            "museum": 150.2999999988824,
+            "objects": 102.70000000111759,
+            "research": 58.09999999962747,
+            "expeditions": 14.699999999254942,
+            "bestiary": 3856.9000000003725
+          },
+          "tick30": 304.40000000037253,
+          "persist30": 218.40000000037253,
+          "cacheEntries": 1461,
+          "cacheUtf16Bytes": 9383068,
+          "counters": {
+            "moneyMutations": 30
+          },
+          "saveBytes": 149192,
+          "intervals": [
+            1000
+          ],
+          "jsHeapUsed": 8294932,
+          "variant": "before"
+        },
+        {
+          "load": 1272.300000000745,
+          "coldSprites": 1052.0999999996275,
+          "warmSprites": 549.2000000011176,
+          "cards": 487,
+          "bestiary": 4625.5999999996275,
+          "nodes": 55162,
+          "svgs": 1499,
+          "tabs": {
+            "field": 169.60000000149012,
+            "journal": 242.59999999962747,
+            "museum": 206.2000000011176,
+            "objects": 138.09999999962747,
+            "research": 69.59999999962747,
+            "expeditions": 12.599999999627471,
+            "bestiary": 5636.800000000745
+          },
+          "tick30": 424.30000000074506,
+          "persist30": 347.40000000037253,
+          "cacheEntries": 1461,
+          "cacheUtf16Bytes": 9383068,
+          "counters": {
+            "moneyMutations": 30
+          },
+          "saveBytes": 149194,
+          "intervals": [
+            1000
+          ],
+          "jsHeapUsed": 8294480,
+          "variant": "before"
+        },
+        {
+          "load": 1040.5,
+          "coldSprites": 1248.6000000014901,
+          "warmSprites": 614.1999999992549,
+          "cards": 228.30000000074506,
+          "bestiary": 3449.199999999255,
+          "nodes": 55162,
+          "svgs": 1499,
+          "tabs": {
+            "field": 145,
+            "journal": 140,
+            "museum": 164.19999999925494,
+            "objects": 80.40000000037253,
+            "research": 47.80000000074506,
+            "expeditions": 14.900000000372529,
+            "bestiary": 3152.699999999255
+          },
+          "tick30": 216,
+          "persist30": 198,
+          "cacheEntries": 1461,
+          "cacheUtf16Bytes": 9383068,
+          "counters": {
+            "moneyMutations": 30
+          },
+          "saveBytes": 149194,
+          "intervals": [
+            1000
+          ],
+          "jsHeapUsed": 8294884,
+          "variant": "before"
+        },
+        {
+          "load": 676.1000000014901,
+          "coldSprites": 579.0999999996275,
+          "warmSprites": 336.30000000074506,
+          "cards": 218.5,
+          "bestiary": 2439.199999999255,
+          "nodes": 55162,
+          "svgs": 1499,
+          "tabs": {
+            "field": 102,
+            "journal": 113.5,
+            "museum": 120.90000000037253,
+            "objects": 62.40000000037253,
+            "research": 41.899999998509884,
+            "expeditions": 11.400000000372529,
+            "bestiary": 2339.300000000745
+          },
+          "tick30": 236.40000000037253,
+          "persist30": 142.7000000011176,
+          "cacheEntries": 1461,
+          "cacheUtf16Bytes": 9383068,
+          "counters": {
+            "moneyMutations": 30
+          },
+          "saveBytes": 149192,
+          "intervals": [
+            1000
+          ],
+          "jsHeapUsed": 8292004,
+          "variant": "before"
+        },
+        {
+          "load": 689.9000000003725,
+          "coldSprites": 1667.699999999255,
+          "warmSprites": 533.5999999996275,
+          "cards": 362.2000000011176,
+          "bestiary": 4306.299999998882,
+          "nodes": 55162,
+          "svgs": 1499,
+          "tabs": {
+            "field": 167.40000000037253,
+            "journal": 196.69999999925494,
+            "museum": 182.59999999962747,
+            "objects": 107.5,
+            "research": 59.20000000111759,
+            "expeditions": 17.800000000745058,
+            "bestiary": 3974.699999999255
+          },
+          "tick30": 347.6000000014901,
+          "persist30": 211.80000000074506,
+          "cacheEntries": 1461,
+          "cacheUtf16Bytes": 9383068,
+          "counters": {
+            "moneyMutations": 30
+          },
+          "saveBytes": 149194,
+          "intervals": [
+            1000
+          ],
+          "jsHeapUsed": 8291996,
+          "variant": "before"
+        }
+      ]
+    },
+    "after": {
+      "summary": {
+        "load": 620.1000000014901,
+        "coldSprites": 705.0999999996275,
+        "warmSprites": 28.59999999962747,
+        "cards": 63,
+        "bestiary": 1966.300000000745,
+        "nodes": 23256,
+        "svgs": 487,
+        "tick30": 213.2000000011176,
+        "persist30": 125.79999999888241,
+        "cacheEntries": 2934,
+        "cacheUtf16Bytes": 19405300,
+        "saveBytes": 149194,
+        "jsHeapUsed": 8840004,
+        "tabs": {
+          "field": 109.5,
+          "journal": 122.40000000037253,
+          "museum": 114.39999999850988,
+          "objects": 63.70000000111759,
+          "research": 38.29999999888241,
+          "expeditions": 11.599999999627471,
+          "bestiary": 1688
+        },
+        "moneyMutations": 1
+      },
+      "trials": [
+        {
+          "load": 882.6000000014901,
+          "coldSprites": 705.0999999996275,
+          "warmSprites": 33.40000000037253,
+          "cards": 63,
+          "bestiary": 2128.5999999996275,
+          "nodes": 23256,
+          "svgs": 487,
+          "tabs": {
+            "field": 117.80000000074506,
+            "journal": 124.5,
+            "museum": 136.90000000037253,
+            "objects": 67.19999999925494,
+            "research": 55.29999999888241,
+            "expeditions": 19.5,
+            "bestiary": 1789.5
+          },
+          "tick30": 240,
+          "persist30": 101.90000000037253,
+          "cacheEntries": 2934,
+          "cacheUtf16Bytes": 19405300,
+          "counters": {
+            "moneyMutations": 1
+          },
+          "saveBytes": 149194,
+          "intervals": [
+            1000
+          ],
+          "jsHeapUsed": 8839900,
+          "variant": "after"
+        },
+        {
+          "load": 566.1999999992549,
+          "coldSprites": 653.5,
+          "warmSprites": 37.5,
+          "cards": 59,
+          "bestiary": 1712.2999999988824,
+          "nodes": 23256,
+          "svgs": 487,
+          "tabs": {
+            "field": 118.90000000037253,
+            "journal": 103.89999999850988,
+            "museum": 93.09999999962747,
+            "objects": 52.79999999888241,
+            "research": 33.59999999962747,
+            "expeditions": 10,
+            "bestiary": 1569.800000000745
+          },
+          "tick30": 206.80000000074506,
+          "persist30": 151.59999999962747,
+          "cacheEntries": 2934,
+          "cacheUtf16Bytes": 19405300,
+          "counters": {
+            "moneyMutations": 1
+          },
+          "saveBytes": 149194,
+          "intervals": [
+            1000
+          ],
+          "jsHeapUsed": 8840580,
+          "variant": "after"
+        },
+        {
+          "load": 588.2999999988824,
+          "coldSprites": 714.6999999992549,
+          "warmSprites": 28.59999999962747,
+          "cards": 87.5,
+          "bestiary": 1966.300000000745,
+          "nodes": 23256,
+          "svgs": 487,
+          "tabs": {
+            "field": 98.40000000037253,
+            "journal": 122.40000000037253,
+            "museum": 114.39999999850988,
+            "objects": 63.70000000111759,
+            "research": 38.29999999888241,
+            "expeditions": 16.600000001490116,
+            "bestiary": 1688
+          },
+          "tick30": 213.2000000011176,
+          "persist30": 123.59999999962747,
+          "cacheEntries": 2934,
+          "cacheUtf16Bytes": 19405300,
+          "counters": {
+            "moneyMutations": 1
+          },
+          "saveBytes": 149194,
+          "intervals": [
+            1000
+          ],
+          "jsHeapUsed": 8840004,
+          "variant": "after"
+        },
+        {
+          "load": 839.7999999988824,
+          "coldSprites": 768,
+          "warmSprites": 25,
+          "cards": 86.90000000037253,
+          "bestiary": 2177.699999999255,
+          "nodes": 23256,
+          "svgs": 487,
+          "tabs": {
+            "field": 109.5,
+            "journal": 145.90000000037253,
+            "museum": 104.09999999962747,
+            "objects": 87.59999999962747,
+            "research": 51,
+            "expeditions": 11.599999999627471,
+            "bestiary": 2054.199999999255
+          },
+          "tick30": 212.30000000074506,
+          "persist30": 152.40000000037253,
+          "cacheEntries": 2934,
+          "cacheUtf16Bytes": 19405300,
+          "counters": {
+            "moneyMutations": 1
+          },
+          "saveBytes": 149194,
+          "intervals": [
+            1000
+          ],
+          "jsHeapUsed": 8839916,
+          "variant": "after"
+        },
+        {
+          "load": 620.1000000014901,
+          "coldSprites": 559.2999999988824,
+          "warmSprites": 27.300000000745058,
+          "cards": 60.5,
+          "bestiary": 1550.199999999255,
+          "nodes": 23256,
+          "svgs": 487,
+          "tabs": {
+            "field": 92.80000000074506,
+            "journal": 105.70000000111759,
+            "museum": 114.59999999962747,
+            "objects": 62.40000000037253,
+            "research": 36.59999999962747,
+            "expeditions": 10.800000000745058,
+            "bestiary": 1664.199999999255
+          },
+          "tick30": 214.80000000074506,
+          "persist30": 125.79999999888241,
+          "cacheEntries": 2934,
+          "cacheUtf16Bytes": 19405300,
+          "counters": {
+            "moneyMutations": 1
+          },
+          "saveBytes": 149192,
+          "intervals": [
+            1000
+          ],
+          "jsHeapUsed": 8841288,
+          "variant": "after"
+        }
+      ]
+    }
+  }
+}

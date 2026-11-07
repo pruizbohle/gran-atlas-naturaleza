@@ -1,0 +1,14 @@
+{
+  "version": "3.20.0",
+  "cards": 487,
+  "collapsedCollectionsDeferred": true,
+  "expandedCollectionRetained": true,
+  "sortFilterAndNestedActions": true,
+  "mobileWidth": 390,
+  "exportImportViaAndroidMock": true,
+  "offlineReopenAndPersist": true,
+  "missingScriptIsNotHTML": true,
+  "waitingUpgradeAndCacheIsolation": true,
+  "allRecordedProgressPreserved": true,
+  "jsErrors": []
+}

@@ -36,9 +36,10 @@ jobs:
           node --check www/js/lab/polish-review-v3199.js
           node --check www/js/item-art-v3198.js
           node --check www/js/lab/item-lab-v3198.js
-          node --check www/js/app.js
+          node --check www/sw.js
           node --check www/js/mobile-ui.js
           node --check www/js/save-manager.js
+          node --check www/js/app.js
           node --test tests/*.test.cjs
       - name: Configure Pages
         uses: actions/configure-pages@v5

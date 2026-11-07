@@ -1,0 +1,13 @@
+{
+  "catalog": "4cb144da11f2dd3324d77c813053b5848f4d93e66b65ac7ac697c58907eb02d0",
+  "sprites": "234e8b798d80549fc82b2ce6e591b7aa797b3ab46312bcadea69b0d069e1fc30",
+  "modules": {
+    "fish-art-v3191": "d1287aea496629827570cb2fdfdc3b9666c1b5a39a8b917af61b41da371cbd8c",
+    "herp-art-v3192": "a9d56f4e8d25fa00193e8fd0ffa63e310b1d0dfc6b0af135120c66fa2ff5b377",
+    "bird-art-v3193": "9475c214345fae86005eb18c1898ac201d31419d9b8d3948f2c43517581f1ef8",
+    "mammal-art-v3194": "d05187cd87cc1c6fd51117690f9afcbc16fe16bc56723659eb529ec8316d709a",
+    "legendary-art-v3197": "885a75fea726c7c1ce08ce73b0322e17c55d7d2c266c54ceaa1c71e9e98ff3a3",
+    "relict-art-v3199": "cb4e4807595d56b240a5dca4d82d8ed712bf8abd48303dad031f645cea605e82",
+    "item-art-v3198": "db3a8bc3e0aa6407ef5f453a92aef5c24fef80abb68d753e669e2ea427b6cf82"
+  }
+}

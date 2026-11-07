@@ -20,7 +20,6 @@
   const pasteInput = document.getElementById('savePasteJson');
   const pasteButton = document.getElementById('savePasteBtn');
   const receiptKey = 'gran_atlas_restore_receipt_v34';
-  const preImportKey = 'gran_atlas_backup_pre_import_v301';
   if (!root || !open || !exportButton || !fileInput || !importButton) return;
   let pending = null;
 
@@ -118,11 +117,12 @@
     return true;
   }
   function prepareBackup() {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const live = window.AtlasSaveBridge?.getSaveData?.();
+    const raw = live ? JSON.stringify(live) : localStorage.getItem(STORAGE_KEY);
     if (!raw) throw new Error('No hay una partida guardada todavía.');
     const data = normalizeGame(JSON.parse(raw));
     return { text: JSON.stringify({
-      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.19.7',
+      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.20.0',
       exportedAt: new Date().toISOString(), game: data
     }, null, 2), name: fileName() };
   }

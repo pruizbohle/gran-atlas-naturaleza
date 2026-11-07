@@ -1,3 +1,7 @@
+# El Gran Atlas v3.20.0 — Optimización y estabilidad
+
+Bestiario más ligero, caché de categorías, recuperación de guardados y actualización offline coherente. [Diagnóstico, mediciones y validación](README_V3200.md).
+
 # El Gran Atlas v3.19.9 — Pulido artístico definitivo
 
 Mamíferos, peces, Legendarios y relictos refinados. [Informe y validación](README_V3199.md) · [Laboratorio comparativo](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-pulido-v3199.html).

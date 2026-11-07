@@ -45,7 +45,7 @@
   const observer=new MutationObserver(sync);
   document.querySelectorAll('.tab').forEach(b=>observer.observe(b,{attributes:true,attributeFilter:['class']}));
   sync();
-  if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost')){
+  if('serviceWorker' in navigator && (location.protocol==='https:' || ['localhost','127.0.0.1','[::1]'].includes(location.hostname))){
     window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
   }
 })();

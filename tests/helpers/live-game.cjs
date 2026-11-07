@@ -14,7 +14,7 @@ function harness(store={},backup,options={}){
  const doc={getElementById:node,querySelectorAll(){return [];},
    addEventListener(){},body:{classList:{add(){},remove(){}},appendChild(){}}};
  const localStorage={
-  getItem(k){return Object.prototype.hasOwnProperty.call(store,k)?store[k]:null;},
+  getItem(k){if(options.storageReadError)throw new Error('SecurityError');return Object.prototype.hasOwnProperty.call(store,k)?store[k]:null;},
   setItem(k,v){store[k]=String(v);},removeItem(k){delete store[k];}
  };
  const w={confirm:()=>true,Capacitor:{getPlatform:()=> 'android',Plugins:{
@@ -22,10 +22,11 @@ function harness(store={},backup,options={}){
   AtlasExport:{async saveFile(){return {uri:'content://test'};}}
  }}};
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
-   Date,Math:Object.assign(Object.create(Math),options.rng?{random:options.rng}:{}),Number,JSON,Map,Set,console,URL,Blob,Intl,
+   Date:options.Date||Date,Math:Object.assign(Object.create(Math),options.rng?{random:options.rng}:{}),Number,JSON,Map,Set,console,URL,Blob,Intl,
    setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={get state(){return state},initialState,persist,encounter,rollSpecimen,recordSpecimen,specimenRates,specialBadges,renderLegendaryCollection,renderJournal,renderBestiary,LEGENDARY_SPECIMENS,SPECIMEN_CATEGORIES,SPECIMEN_LEVELS,fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES,MUSEUM_FOSSIL_RECIPES,craftMuseumFossil,museumAssemblyReady,museumOtherExhibits,renderFossilWorkshop,renderMuseumRelicts,renderMuseumArtifacts,renderMuseumSamples,toggleMuseumDisplay,renderMuseumExtraGallery,MUSEUM_RELICTS,recordMuseumRelict,maybeMuseumFieldDiscovery,SCIENTIFIC_MISSIONS,resolveVoyageReward,museumCardArt,ITEMS};\n})();');
- assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
+ const gameSource=options.gameSource||GAME;
+ const testGame=gameSource.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={get state(){return state},initialState,persist,encounter,rollSpecimen,recordSpecimen,specimenRates,specialBadges,renderLegendaryCollection,renderJournal,renderBestiary,LEGENDARY_SPECIMENS,SPECIMEN_CATEGORIES,SPECIMEN_LEVELS,fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES,MUSEUM_FOSSIL_RECIPES,craftMuseumFossil,museumAssemblyReady,museumOtherExhibits,renderFossilWorkshop,renderMuseumRelicts,renderMuseumArtifacts,renderMuseumSamples,toggleMuseumDisplay,renderMuseumExtraGallery,MUSEUM_RELICTS,recordMuseumRelict,maybeMuseumFieldDiscovery,SCIENTIFIC_MISSIONS,resolveVoyageReward,museumCardArt,ITEMS};\n})();');
+ assert.notEqual(testGame,gameSource,'debe inyectarse puente de pruebas');
  for(const engine of ['fish-art-v3191','relict-art-v3199'])vm.runInContext(fs.readFileSync('www/js/'+engine+'.js','utf8'),ctx);
  vm.runInContext(fs.readFileSync('www/js/item-art-v3198.js','utf8'),ctx);
  vm.runInContext(fs.readFileSync('www/js/legendary-art-v3197.js','utf8'),ctx);

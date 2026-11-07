@@ -1988,9 +1988,13 @@ const spriteCache=new Map();
 function getSpriteMarkup(id, skin='normal', sex=null){
   const category=Object.keys(SPECIMEN_LEVELS).find(c=>SPECIMEN_LEVELS[c].skin===skin);
   if(category){
+   const key=id+':'+skin+':base';
+   if(spriteCache.has(key))return spriteCache.get(key);
    const l=legendaryForSpecies(id);
    const base=category==='Legendario'&&l&&globalThis.ATLAS_LEGENDARY_ART?globalThis.ATLAS_LEGENDARY_ART.render(l.id):getSpriteMarkup(id,'normal');
-   return decorateSpecimen(base,category);
+   const svg=decorateSpecimen(base,category);
+   spriteCache.set(key,svg);
+   return svg;
   }
   const validSex=(skin==='normal' && SEXUAL_DIMORPHISM[id] && (sex==='male'||sex==='female'))?sex:null;
   const key=id+':'+skin+':'+(validSex||'base');

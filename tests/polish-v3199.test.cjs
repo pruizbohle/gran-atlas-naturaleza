@@ -1,9 +1,11 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto');
-const normalize=source=>source.slice(source.indexOf('(function(){\nconst STORAGE_KEY=')).replace(source.slice(source.indexOf('function museumCardArt('),source.indexOf('function museumOtherExhibits(')),'[MUSEUM ART]\n').replace(source.slice(source.indexOf('function sexSpriteMarkup('),source.indexOf('// initial unlock checks and migration')),'[ZOOLOGICAL ART]\n').replace(' · <a href="./laboratorio-pulido-v3199.html" target="_blank" rel="noopener">Pulido artístico 3.19.9</a>','');
 const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
 function api(){const ctx=vm.createContext({});for(const n of ['lab/polish-before-v3198','fish-art-v3191','herp-art-v3192','bird-art-v3193','mammal-art-v3194','legendary-art-v3197','relict-art-v3199','lab/dimorphism-production','lab/polish-production-v3199'])vm.runInContext(fs.readFileSync('www/js/'+n+'.js','utf8'),ctx);return ctx;}
-test('3.19.9 leaves every gameplay statement outside graphic renderers intact',()=>{assert.equal(hash(normalize(fs.readFileSync('www/js/app.js','utf8'))),'700c88ab1fc1ef5a42b25ef9c76154dc322304d860acfe6a5dd76168b2ad1e12');});
+test('gameplay operations retain their pre-optimization implementations',()=>{
+ const api=require('./helpers/live-game.cjs').harness().window.__atlasTest,expected=require('./fixtures/gameplay-functions-v3199.json');
+ for(const[name,digest]of Object.entries(expected))assert.equal(hash(api[name].toString()),digest,name);
+});
 test('487 species, all original dimorphism and 12 legendary/9 relict identities are unchanged',()=>{
  const c=api(),old=c.ATLAS_POLISH_BEFORE,next=c.ATLAS_POLISH_CURRENT;
  for(const key of ['SPECIES','SEXUAL_DIMORPHISM','LEGENDARY_SPECIMENS','MUSEUM_RELICTS'])assert.deepEqual(JSON.parse(JSON.stringify(next[key])),JSON.parse(JSON.stringify(old[key])),key);

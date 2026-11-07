@@ -2070,6 +2070,9 @@ function initialState(){
   };
 }
 
+let unreadableSave=false;
+let corruptSave=false;
+let storageFault=false;
 let state=load();
 const REGION_ALIASES={"hx0109": "HX-01-09", "hx0111": "HX-01-11", "hx0209": "HX-02-09", "hx0210": "HX-02-10", "hx0211": "HX-02-12", "hx0212": "HX-02-11", "hx0213": "HX-03-12", "hx0214": "HX-02-11", "eu_danube": "HX-03-09", "hx0215": "HX-03-10"};
 if(REGION_ALIASES[state.currentRegion]) state.currentRegion=REGION_ALIASES[state.currentRegion];
@@ -2132,7 +2135,6 @@ Object.keys(SEXUAL_DIMORPHISM).forEach(id=>{
 });
 try{if(!localStorage.getItem('gran_atlas_v07_backup_before_v08'))localStorage.setItem('gran_atlas_v07_backup_before_v08',JSON.stringify(state));}catch(e){}
 let autoAccum=0;
-let lastDisplayRefresh=0;
 let batchingOffline=false;
 let diaryDirty=false;
 let lastPanelSignature='';
@@ -2150,11 +2152,13 @@ const panel=document.getElementById('panel');
 const $=id=>document.getElementById(id);
 
 function load(){
+  let raw;
   try{
-    const raw=localStorage.getItem(STORAGE_KEY);
+    raw=localStorage.getItem(STORAGE_KEY);
     const base=initialState();
     if(!raw) return normalizeSpecialDiscoveries(base);
     const saved=JSON.parse(raw);
+    if(!saved||typeof saved!=='object'||Array.isArray(saved))throw new Error('Formato de partida ilegible');
     const merged={...base,...saved};
     merged.upgrades={...base.upgrades,...(saved.upgrades||{})};
     merged.purchases={...base.purchases,...(saved.purchases||{})};
@@ -2167,12 +2171,32 @@ function load(){
     merged.lastTick=Number.isFinite(saved.lastTick)?saved.lastTick:Date.now();
     return normalizeSpecialDiscoveries(mergeHistoricalBeardedVulture(merged));
   }catch(e){
+    unreadableSave=true;
+    corruptSave=typeof raw==='string'&&raw.length>0;
     console.error('El Gran Atlas: error al recuperar la partida guardada.',e);
     // El progreso defectuoso se conserva para intentar repararlo desde Respaldos.
     return normalizeSpecialDiscoveries(initialState());
   }
 }
-function persist(){localStorage.setItem(STORAGE_KEY, JSON.stringify(state));}
+function showStorageFault(message){
+ const status=document.getElementById('saveManagerStatus');
+ if(status){if(status.textContent!==message)status.textContent=message;status.classList.add('error');}
+ const button=document.getElementById('saveManagerOpen');
+ if(button){if(button.textContent!=='⚠️')button.textContent='⚠️';button.setAttribute('title',message);button.setAttribute('aria-label',message);}
+}
+function persist(){
+ if(unreadableSave){showStorageFault('La partida almacenada no se pudo leer y se conserva sin reemplazar. Abre Respaldos para recuperarla.');return false;}
+ try{
+  localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
+  if(storageFault){const button=document.getElementById('saveManagerOpen');if(button){button.textContent='💾';button.setAttribute('title','Respaldos');button.setAttribute('aria-label','Respaldos');}}
+  if(storageFault){const status=document.getElementById('saveManagerStatus');if(status?.textContent.startsWith('No se pudo guardar en este dispositivo.')){status.textContent='Guardado automático restablecido.';status.classList.remove('error');}}
+  storageFault=false;return true;
+ }catch(error){
+  storageFault=true;
+  showStorageFault('No se pudo guardar en este dispositivo. El progreso sigue en memoria: abre Respaldos y exporta la partida antes de cerrar.');
+  return false;
+ }
+}
 /**
  * v3.5: Restauración real de la sesión en ejecución.
  * El motor guarda cada segundo: nunca importar solo en localStorage sin actualizar state.
@@ -2187,12 +2211,15 @@ function atlasLiveReceipt(){
 }
 window.AtlasSaveBridge={
  getSnapshot:()=>atlasLiveReceipt(),
+ getSaveData:()=>{if(corruptSave)throw new Error('La partida almacenada no se pudo leer. Recupérala desde un respaldo válido.');return JSON.parse(JSON.stringify(state));},
  normalizeSpecialDiscoveries,
  restoreGame(imported){
    if(!imported || typeof imported!=='object'||!Number.isFinite(imported.money)||
        !Number.isFinite(imported.prestige)||!Number.isFinite(imported.knowledge))
      throw new Error('La partida que llegó al motor no es válida.');
    const before=state;
+   const wasUnreadable=unreadableSave,wasCorrupt=corruptSave;
+   const beforeRuntime={autoAccum,autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,tab};
    try{
      state={...initialState(),...imported,
        upgrades:{...initialState().upgrades,...(imported.upgrades||{})},
@@ -2236,10 +2263,14 @@ window.AtlasSaveBridge={
      autoAccum=0;autoDiaryBuffer={searches:0,hits:0,knowledge:0};
      lastAutoDiaryFlush=0;lastPanelSignature='';currentAutoNotice='';
      tab='field';
+     unreadableSave=false;corruptSave=false;
+     if(!persist())throw new Error('No se pudo guardar la partida restaurada. Conserva el archivo de respaldo y libera almacenamiento.');
      render();
      return atlasLiveReceipt();
    }catch(error){
      state=before;
+     unreadableSave=wasUnreadable;corruptSave=wasCorrupt;
+     ({autoAccum,autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,tab}=beforeRuntime);
      try{render();}catch(_){}
      throw error;
    }
@@ -2693,16 +2724,20 @@ function buyNode(id){
   render();
 }
 
+function setCounterText(id,text){
+ const node=$(id);
+ if(node.textContent!==text)node.textContent=text;
+}
 function renderCounters(){
-  $('statKnowledge').textContent=fmt(state.knowledge);
-  $('statMoney').textContent='£'+fmt(state.money);
-  $('statPrestige').textContent=fmt(state.prestige);
-  $('statHelpers').textContent=fmt(state.helpers);
-  $('statBooks').textContent=fmt(state.books);
-  $('statSightings').textContent=fmt(totalSightings());
-  $('statMonographs').textContent=fmt(monographCount());
+  setCounterText('statKnowledge',fmt(state.knowledge));
+  setCounterText('statMoney','£'+fmt(state.money));
+  setCounterText('statPrestige',fmt(state.prestige));
+  setCounterText('statHelpers',fmt(state.helpers));
+  setCounterText('statBooks',fmt(state.books));
+  setCounterText('statSightings',fmt(totalSightings()));
+  setCounterText('statMonographs',fmt(monographCount()));
   const region=currentRegion();
-  $('regionPill').textContent=`${region.name} · ${region.code}`;
+  setCounterText('regionPill',`${region.name} · ${region.code}`);
 }
 
 function renderIfOpen(tabs){ if(tabs.includes(tab)) renderPanel(); }
@@ -2723,7 +2758,6 @@ function updateFieldOutput(){
   const wasNearTop=log.scrollTop<42;
   log.innerHTML=state.log.map(x=>`<div class="log">${esc(x)}</div>`).join('');
   if(wasNearTop)log.scrollTop=0;
-  lastDisplayRefresh=Date.now();
   diaryDirty=false;
  }
 }
@@ -4344,7 +4378,7 @@ function renderBestiary(){
     <div class="small">Listado de especies descubiertas y pendientes. Haz clic en un criterio para ordenar y vuelve a pulsarlo para invertir el sentido. · <a href="./laboratorio-especiales.html" target="_blank" rel="noopener">Especímenes 3.19.7</a> · <a href="./laboratorio-pulido-v3199.html" target="_blank" rel="noopener">Pulido artístico 3.19.9</a> · <a href="./laboratorio-pigmentacion.html" target="_blank" rel="noopener">Pigmentación 3.19.6</a> · <a href="./laboratorio-dimorfismo.html" target="_blank" rel="noopener">⚤ Dimorfismo 3.19.5</a> · <a href="./laboratorio-mamiferos.html" target="_blank" rel="noopener">Mamíferos 3.19.4</a> · <a href="./laboratorio-aves.html" target="_blank" rel="noopener">Aviario 3.19.3</a> · <a href="./laboratorio-herpetologia.html" target="_blank" rel="noopener">🦎 Herpetario 3.19.2b</a> · <a href="./laboratorio-peces.html" target="_blank" rel="noopener">🐟 Comprobar sprites 3.19.1c</a></div>
     <label class="bestiary-v317-filter"><input type="checkbox" data-action="bestiary-hide-monographs" ${state.bestiaryHideMonographs?'checked':''} aria-label="Ocultar especies con monografía publicada"> <span>Ocultar especies con monografía publicada</span><small>${ids.length} de ${total} visibles</small></label>
     <div class="subtabs compact">${[['alpha','Abecedario'],['rarity','Rareza'],['type','Tipo']].map(([id,label])=>`<button class="subtab ${sort===id?'active':''}" data-action="bestiary-sort" data-id="${id}" aria-label="Ordenar por ${label}; ${sort===id?(state.bestiaryDescending?'descendente':'ascendente'):'seleccionar'}">${label}${sort===id?(state.bestiaryDescending?' ↓':' ↑'):''}</button>`).join('')}</div>
-    <div class="species-grid" style="margin-top:10px">${ids.map(id=>'<div class="bestiary-specimen-entry">'+speciesCard(id,false,true)+'<details><summary>Colección de especímenes</summary>'+specialBadges(id)+'</details></div>').join('')}</div>
+    <div class="species-grid" style="margin-top:10px">${ids.map(id=>'<div class="bestiary-specimen-entry">'+speciesCard(id,false,true)+'<details data-specimen-collection="'+id+'"><summary>Colección de especímenes</summary><div data-specimen-content></div></details></div>').join('')}</div>
   </section>`;
 }
 
@@ -4401,8 +4435,11 @@ function bindPanel(){
   panel.querySelectorAll('.atlas-v32-hex').forEach(el=>el.addEventListener('keydown',e=>{
     if(e.key==='Enter'||e.key===' '){e.preventDefault();el.dispatchEvent(new MouseEvent('click',{bubbles:true}));}
   }));
-  panel.querySelectorAll('[data-action]').forEach(el=>el.addEventListener('click', e=>{
-    const act=e.currentTarget.dataset.action; const id=e.currentTarget.dataset.id;
+}
+function handlePanelAction(e){
+    const el=e.target.closest?.('[data-action]');
+    if(!el||!panel.contains(el)||el.disabled)return;
+    const act=el.dataset.action; const id=el.dataset.id;
     if(act==='set-region') setRegion(id);
     if(act==='travel-region') travelToRegion(id);
     if(act==='unlock-region') unlockRegion(id);
@@ -4453,8 +4490,14 @@ function bindPanel(){
     if(act==='buy-crown'){buyCrownPack(Number(id)||0);}
     if(act==='exchange-crown'){exchangeTrialCrowns(id==='all'?Math.floor(Math.max(0,state.crownCoins||0)):Number(id));}
     if(act==='claim-mission'){claimScientificMission(id);}
-  }));
 }
+panel.addEventListener('click',handlePanelAction);
+panel.addEventListener('toggle',event=>{
+ const details=event.target;
+ if(!details.open||!details.dataset?.specimenCollection)return;
+ const content=details.querySelector('[data-specimen-content]');
+ if(content&&!content.hasChildNodes())content.innerHTML=specialBadges(details.dataset.specimenCollection);
+},true);
 
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{ tab=b.dataset.tab; renderPanel(); }));
 
@@ -4611,9 +4654,13 @@ const spriteCache=new Map();
 function getSpriteMarkup(id, skin='normal', sex=null){
   const category=Object.keys(SPECIMEN_LEVELS).find(c=>SPECIMEN_LEVELS[c].skin===skin);
   if(category){
+   const key=id+':'+skin+':base';
+   if(spriteCache.has(key))return spriteCache.get(key);
    const l=legendaryForSpecies(id);
    const base=category==='Legendario'&&l&&globalThis.ATLAS_LEGENDARY_ART?globalThis.ATLAS_LEGENDARY_ART.render(l.id):getSpriteMarkup(id,'normal');
-   return decorateSpecimen(base,category);
+   const svg=decorateSpecimen(base,category);
+   spriteCache.set(key,svg);
+   return svg;
   }
   const validSex=(skin==='normal' && SEXUAL_DIMORPHISM[id] && (sex==='male'||sex==='female'))?sex:null;
   const key=id+':'+skin+':'+(validSex||'base');

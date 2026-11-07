@@ -1,0 +1,15 @@
+# Diagnóstico previo a cambios
+
+Referencia: b08b8923b2d414d08c6f57d324d2c8b38e4373c9, v3.19.9. Arquitectura sin framework, 487 especies y siete motores gráficos. No se necesitan dependencias nuevas ni una división masiva del motor.
+
+Mediciones iniciales: Chromium Linux, viewport390×844, CPU ralentizada4× mediante CDP, cinco ejecuciones, medianas; fixture avanzada con todas las especies y variantes. No son cifras de un teléfono Android. Las cifras citadas a continuación corresponden a la primera pasada exploratoria. before.json y after.json conservan una repetición secuencial; paired.json registra la comparación final intercalada para reducir la influencia de variaciones del host.
+
+- Bestiario:3678.5ms de apertura (4056.3ms al volver tras otras pestañas),55162nodosDOM globales y1499SVG. También construye todas las variantes dentro de details cerrados. Prioridad: diferir solo esa colección hasta abrirla, conservando todas las tarjetas principales y su diseño; no virtualizar listas.
+- Sprites:855.5ms primera generación y447.3ms para cinco recorridos calientes de seis variantes×487especies. Las categorías especiales salen antes de consultar spriteCache: decoración repetida.1461entradas,9.38MB UTF-16 nominales; esa cifra no es el heap real ni representa bytes comprimidos de V8. Heap JS trasGC:8.29MB al terminar la secuencia de pestañas.
+- Bucle:30ticks sin naturalistas421ms. El contador de dinero sufre30mutaciones aunque conserve el valor. No hay temporizadores duplicados: un intervalo de1000ms. No cambiar frecuencia, fórmulas ni resultados.
+- persist30:211.9ms; estado serializado149194bytesUTF-16. Cada tick cambia lastTick, por lo que reducir escrituras mediante comparación de JSON no evitaría trabajo. Conservar frecuencia de persistencia; auditar errores.
+- Código:bindPanel instala handlers de acciones sobre cada elemento recién creado. La delegación puede evitar ese trabajo y permitir colecciones diferidas. Los listeners sobre nodos retirados son recolectables: no se ha demostrado una fuga.
+- Caché offline:network-first sustituye archivos individualmente dentro de una caché versionada y devuelve index.html incluso si falta un script. Esto puede mezclar revisiones o responderHTML comoJavaScript. Propuesta:precache íntegra y cache-first para recursos locales conocidos; activación por ciclo de cierre/reapertura, sin forzar una sesión abierta.
+- Guardado:load captura JSON corrupto pero devuelve una partida nueva que render guarda inmediatamente sobre el original; contradice el comentario de conservación. persist deja escapar errores de cuota/acceso y exportación toma la copia de disco, potencialmente obsoleta. Corregir preservación y recuperación sin cambiar claves ni formato.
+- Motores históricos:varios son fallbacks reales o referencias de laboratorios. No eliminarlos por antigüedad. Mantener ilustraciones y comprobar igualdad de cadenas SVG de todo el catálogo.
+- mobile-ui:MutationObserver observa clases de navegación, no todo el árbol; no se justifica sustituirlo sin evidencia. CSS no se eliminará mediante búsquedas de texto: las clases se crean dinámicamente y los laboratorios siguen vigentes.
