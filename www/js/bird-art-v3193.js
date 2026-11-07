@@ -109,8 +109,26 @@ function render(sp,color,skin='normal',sex=null){
  const family=classify(sp);if(!family)return null;
  const latin=sp.latin||'',t=norm(sp.name),female=sex==='female';
  let colors=(speciesPaint[latin]||palettes[family]).slice();
- if(female)colors=['#a5967c','#7e7761','#9d9277','#d5c3a2','#a69b7d'];
- if(female&&latin==='Pyrrhula pyrrhula')colors=['#9b9283','#526053','#35423e','#baac97','#676c59'];
+ // Adult females retain the markings and palette of their own taxon.
+ const femalePaint={
+ 'Pavo cristatus':['#998673','#6d6659','#6c9071','#d6c6ad','#a99b7d'],
+ 'Aix galericulata':['#9c9687','#696e66','#8c9086','#d5d2bf','#777c75'],
+ 'Spatula clypeata':['#a18b68','#756a54','#aa9571','#d5c2a0','#a68d56'],
+ 'Tetrao urogallus':['#a07d59','#715c45','#9a7857','#b97449','#a79973'],
+ 'Lyrurus tetrix':['#9a8767','#6e6350','#a59475','#c4b08b','#807e66'],
+ 'Phasianus colchicus':['#ad9777','#7e6c53','#a49273','#cfbc96','#b5a87c'],
+ 'Chrysolophus pictus':['#b19a76','#7c654b','#a78c69','#c6b08c','#a99e7e'],
+ 'Lophura nycthemera':['#8e7156','#65523e','#897356','#b39c79','#a99776'],
+ 'Fringilla coelebs':['#9b9b7d','#666f5d','#92967a','#c0b69b','#9b997b'],
+ 'Lophophorus impejanus':['#a79171','#695c4a','#8d8069','#cebe9e','#a8a58b'],
+ 'Lophophorus lhuysii':['#81745e','#514d40','#817961','#b8ad90','#989d88'],
+ 'Tragopan satyra':['#997657','#635343','#8e735c','#b29a7b','#a79c7e'],
+ 'Struthio camelus':['#928b7c','#b7af9e','#aa9a8d','#aca598','#ad9a80']};
+ if(female&&femalePaint[latin])colors=femalePaint[latin];
+ if(sex==='male'&&latin==='Struthio camelus')colors=['#343934','#e5e1d4','#b3a396','#ded9c8','#b4a18b'];
+ if(sex==='male'&&latin==='Lophophorus impejanus')colors=['#446b78','#596295','#47816b','#343f44','#aaa387'];
+ if(sex==='male'&&latin==='Tragopan satyra')colors=['#b95943','#8e4e3c','#353b36','#b8654a','#a79c7e'];
+ if(female&&latin==='Pyrrhula pyrrhula')colors=['#9b9283','#526053','#292d2d','#baac97','#676c59'];
  if(female&&latin==='Turdus merula')colors=['#8e8068','#685f4b','#8a7b63','#c4af8e','#b3a171'];
  if(female&&family==='oriole')colors=['#9aa67a','#687e64','#8c9e6d','#d4d5a1','#ad8b61'];
  const natural=skin==='normal'||skin==='alfa';
@@ -199,7 +217,7 @@ function render(sp,color,skin='normal',sex=null){
   art+=detail(p(swan?'M65 13Q71 8 77 15L73 24Q84 40 70 54L66 51Q78 36 65 26Z':corm?'M59 22L71 19L74 29L67 33L66 51L58 53Z':small?'M56 46Q68 37 75 46L71 56L60 59Z':'M56 43Q60 33 71 34Q79 35 79 45L71 55L59 52Z',h,'none',0));
   art+=wing(swan?'M24 61Q28 45 44 43L42 51L52 45Q54 56 64 61Q51 75 25 71Z':'M27 59Q42 49 62 61Q55 73 28 73Q23 67 27 59Z')+feather('M30 64Q44 67 56 61M30 70Q42 73 52 68');
   if(duck&&mand&&!female)art+=p('M43 62Q44 45 55 41Q62 53 59 66Z',gold,ink,1.6)+detail(p('M59 35L54 28Q68 25 77 38L64 39Z',red,'none',0)+line('M60 44L69 48L76 42',light,3)+p('M60 49L63 57L70 54L66 46Z',red,'none',0)+line('M29 60L39 64M29 66L37 69',light,2.4));
-  if(duck&&mand&&female)art+=detail(line('M62 39L70 40',light,2.2)+line('M58 43L63 42',light,1.8));
+  if(duck&&mand&&female)art+=detail(dot(68,36,4,light)+dot(68,36,2.3,w)+line('M70 37L77 39',light,1.8)+line('M62 39L70 40',light,2.2)+line('M58 43L63 42',light,1.8));
   if(duck&&(!mand||female))art+=detail(p('M27 68Q40 66 51 72L49 78Q35 79 27 73Z',female?b:red,'none',0));
   const beak=swan?'M76 15L91 19L78 24L74 21Z':corm?'M75 23L93 24Q98 25 94 31L91 33L91 28L75 29Z':duck&&!mand?'M79 43Q91 39 96 44L96 51Q89 57 77 51Z':duck?'M79 42L92 44Q92 49 79 50Z':family==='coot'?'M77 44L91 45L78 52Z':grebe?'M76 33L93 31L78 39Z':'M77 29L89 31L78 37Z';
   art+=p(small?'M75 46L86 47L76 52Z':beak,bill,ink,1.6)+eyes(swan?72:corm?69:grebe&&!small?70:72,swan?14:corm?22:grebe&&!small?30:small?45:39,1.6);
@@ -216,7 +234,7 @@ function render(sp,color,skin='normal',sex=null){
   art+=p(flam?'M28 49Q28 39 44 38Q55 38 58 46Q61 33 71 29Q78 25 73 19Q65 11 74 8Q84 6 86 16Q88 23 81 27Q68 34 65 48Q64 62 48 64Q29 65 28 53Z':heron?'M24 51Q30 37 48 40L60 35Q68 31 61 27Q50 22 59 14Q68 7 77 16L76 25L66 28Q79 35 69 48L65 59Q46 71 27 61Z':crane?'M23 49Q29 37 48 39L59 33L60 17Q58 9 67 9Q77 10 77 18L70 25L69 45Q72 58 54 65Q32 68 23 56Z':ibis?'M24 51Q29 39 49 40L56 29Q56 17 66 16Q77 17 77 27L69 38L67 53Q65 66 43 66Q27 66 24 57Z':jac?'M25 54Q32 44 50 44L57 31Q60 25 68 29Q77 32 75 40L68 46Q68 62 51 68Q32 70 25 59Z':pel?'M19 58Q22 43 49 45L58 36Q54 23 63 16Q75 10 81 20Q85 28 77 32L73 49Q79 68 58 77Q32 82 19 65Z':shoe?'M21 53Q26 38 48 42L57 29Q55 14 67 13Q81 12 82 25L76 38L70 56Q68 70 48 72Q29 72 21 60Z':ost?'M20 48Q22 30 43 31Q57 30 63 40Q75 29 68 18Q62 7 73 7Q83 7 83 17L77 23Q87 42 68 54Q64 70 43 70Q21 68 20 54Z':'M23 50Q29 38 48 40L59 33L60 19Q58 10 67 10Q77 10 78 20L71 28L70 47Q73 61 54 66Q32 69 23 57Z');
   art+=detail(p(heron?'M60 17Q69 10 75 17L73 24L61 25Z':ost?'M69 12L78 10L81 16L74 23Q82 41 65 50L60 46Q75 33 69 23Z':flam?'M76 11Q83 8 84 16L79 25L73 23Z':'M59 21Q60 13 69 13L76 20L72 28L64 31Z',h,'none',0));
   art+=wing(ost?'M26 44Q43 35 57 49Q49 65 26 60Z':flam?'M32 47Q42 41 53 49L48 59Q36 62 32 47Z':'M29 48Q45 39 61 52Q53 64 30 61Q26 55 29 48Z')+feather('M32 53Q43 58 54 51M33 59L48 58');
-  if(ost)art+=detail(p('M28 46Q40 39 52 48L50 55Q38 60 29 56Z',light,'none',0));
+  if(ost)art+=detail(p('M28 46Q40 39 52 48L50 55Q38 60 29 56Z',female?w:light,'none',0));
   const beak=flam?'M84 18Q95 17 94 26L88 33L82 29L86 24L82 23Z':ibis?'M76 22Q96 25 94 45Q90 31 75 28Z':pel?'M79 24L98 31Q97 48 83 50L74 34Z':shoe?'M79 24Q94 19 97 28L96 43L83 46L76 36Z':jac?'M74 35L90 38L74 41Z':ost?'M81 14L92 17L81 20Z':'M76 19L97 23L76 27Z';
   art+=p(beak,bill,ink,1.8)+eyes(ost?77:flam?81:heron?70:shoe?74:pel?73:jac?69:70,ost?13:flam?15:heron?17:shoe?22:pel?22:jac?32:18,1.6);
   if(flam)art+=detail(p('M89 24L94 24L88 33L83 30Z',dark,'none',0));
@@ -297,13 +315,19 @@ function render(sp,color,skin='normal',sex=null){
    art+=feet('M44 79L41 91L34 93M56 80L59 91L66 93',2.6)+p('M37 67Q35 58 45 54L47 41Q44 33 50 30Q59 26 64 34Q68 41 59 45L62 63Q69 78 54 84Q39 86 37 67Z',c)+wing('M39 64Q48 59 53 68L48 79Q39 77 39 64Z')+p('M62 35L74 39L62 43Z',bill,ink,1.5)+eyes(58,35,1.7)+line(latin==='Pavo muticus'?'M51 30L50 15M55 29L55 13M59 30L60 16':'M51 30L48 20M55 29L56 18M59 30L63 21',blue,2)+detail(line('M58 40L62 40',light,1.8));
   }else{
    let tail=par?'M29 62L17 65L31 73L39 64Z':mon?'M29 60Q10 61 8 74Q21 81 39 68Z':trag?'M29 62L17 78Q28 83 40 68Z':pea?'M30 59Q10 67 6 84L36 76L44 63Z':grouse&&!female?(lyre?'M32 59Q11 59 10 39Q10 32 16 30Q13 48 27 49Q29 37 26 28Q40 35 38 56Z':'M34 63Q9 58 9 38Q8 25 16 23L23 29L26 21L33 28L37 26Q46 42 43 60Z'):'M34 59Q17 68 5 90Q28 85 47 65Z';
+   if(female&&(golden||silver))tail=golden?'M31 60Q20 68 12 83L37 74L44 64Z':'M31 60L10 85L36 77L44 64Z';
    if(female&&grouse)tail='M31 61L13 79L36 77L43 65Z';
    art=p(tail,w)+feet(par?'M43 73L39 87L32 88M56 72L61 85L68 86':'M45 71L42 88L34 90M58 70L63 87L70 88',par?2.4:2.8);
    art+=p(snow&&latin==='Lagopus lagopus'?'M23 61Q22 43 45 42Q46 30 59 30Q74 30 76 44L72 57Q74 74 54 79Q31 83 23 67Z':par?'M24 61Q23 44 46 43Q48 33 61 33Q75 33 77 46L71 57Q72 73 54 79Q32 82 24 67Z':mon?'M23 58Q26 42 48 41L54 29Q59 22 69 26Q80 30 77 41L69 50Q72 65 56 74Q34 80 24 65Z':grouse?'M23 58Q25 39 48 42L54 29Q57 19 68 22Q81 25 77 38L69 50Q75 68 55 77Q31 81 23 65Z':trag?'M23 58Q23 39 47 40L53 30Q60 21 70 28Q80 33 75 44L68 52Q72 69 54 78Q31 82 23 65Z':'M25 56Q29 42 50 43L55 30Q61 22 71 28Q81 34 76 44L68 53Q71 67 55 75Q34 81 25 64Z');
    art+=detail(p('M54 34Q58 25 69 29L75 38L67 48L56 45Z',h,'none',0)+p('M55 48L66 48L65 62Q63 74 51 76L43 68Z',b,'none',0));
    art+=wing(par?'M29 52Q44 44 57 57Q52 70 29 70Q24 63 29 52Z':'M29 49Q45 41 59 55Q53 70 28 70Q24 61 29 49Z')+feather('M32 57Q44 62 52 53M31 64L48 61');
    art+=p(par?'M75 43L85 46L76 51Z':'M75 34Q87 32 85 40L77 44Z',bill,ink,1.5)+eyes(par?70:69,par?41:32,1.7);
-   if(mon&&!female)art+=line(/lhuysii/.test(latin)?'M59 26L53 11M64 25L66 7M67 26L73 13':'M59 26L56 15M64 25L65 13',blue,1.9)+detail(dot(56,14,2,blue)+dot(65,12,2,blue)+line('M29 69Q38 74 45 69',light,3));
+   if(mon&&!female&&sex==='male'){
+    if(/lhuysii/.test(latin))art+=p('M59 27Q42 10 47 7Q57 9 63 24L66 26Z',paint('#705176'),ink,1.3);
+    else art+=line('M59 26L56 15M64 25L65 13',paint('#538a77'),1.9)+detail(dot(56,14,2,paint('#538a77'))+dot(65,12,2,paint('#538a77')));
+    art+=detail(line('M29 69Q38 74 45 69',light,3));
+   }
+   if(mon&&!female&&sex!=='male')art+=line(/lhuysii/.test(latin)?'M59 26L53 11M64 25L66 7M67 26L73 13':'M59 26L56 15M64 25L65 13',blue,1.9)+detail(dot(56,14,2,blue)+dot(65,12,2,blue)+line('M29 69Q38 74 45 69',light,3));
    if(grouse&&!female)art+=detail(line('M65 27L72 28',red,3.5)+line('M31 73L42 73',light,2));
    if(golden&&!female)art+=p('M55 30Q51 19 66 20Q76 20 76 29Z',gold,ink,1.6)+p('M56 36L65 39L61 54L49 44Z',gold,ink,1.4)+detail(line('M53 39L62 43M54 44L60 47',dark,1.7));
    if(silver&&!female)art+=p('M57 28Q52 19 59 15L68 26Z',dark,ink,1.5)+detail(line('M31 54L51 58M30 61L48 64M14 81L30 74',dark,1.2));
@@ -311,6 +335,9 @@ function render(sp,color,skin='normal',sex=null){
    if(!par&&!mon&&!trag&&!grouse&&!pea)art+=detail(line('M14 83L19 86M20 76L26 80M26 70L33 74',female?b:gold,2.1));
    if(par&&!snow)art+=detail(p('M57 39Q68 31 75 40L71 48L64 49L59 44Z',light,'none',0)+line('M57 38Q58 51 69 54',dark,2.4)+line('M31 60L34 67M38 59L41 68M45 60L48 67',dark,2.3));
    if(pea&&female)art+=detail(p('M54 34Q59 27 68 31L70 42L64 50L57 46Z',paint('#709174'),'none',0))+line('M58 28L55 21M62 27L62 20',paint('#709174'),1.6)+eyes(69,32,1.7);
+   if(female&&mon)art+=detail(p('M59 39L68 40L65 49L58 47Z',light,'none',0)+line(/lhuysii/.test(latin)?'M32 52L37 56M40 58L45 62M33 65L38 69':'M30 52L35 54M39 55L44 57M48 59L52 61M32 64L37 66',b,1.8));
+   if(mon&&!female&&sex==='male')art+=detail(p('M54 28L62 31L57 43L51 42Z',paint('#b38b4e'),'none',0)+p(/lhuysii/.test(latin)?'M16 69L29 68L21 77L11 77Z':'M12 68L29 64L29 73L12 77Z',paint(/lhuysii/.test(latin)?'#749b91':'#a46d44'),'none',0));
+   if(female&&(golden||silver||grouse))art+=detail(line(golden?'M31 52L47 58M30 58L47 64M29 65L44 69':silver?'M32 53L37 56M42 59L48 62M33 65L38 68':'M30 51L45 55M29 58L48 62M31 66L46 70',b,1.8));
    if(female||snow&&latin==='Lagopus lagopus')art+=speckle([[33,53],[42,56],[49,61],[38,65],[54,68]],w);
   }
   flip=mon||par||silver||copper;

@@ -22,7 +22,7 @@ test('3.19.3 inventories all 136 birds, 136 taxa and 58 occupied visual families
  assert.equal(new Set(birds.map(([,s])=>classifyBird(s))).size,58);
  assert.equal(Object.keys(BIRD_FAMILIES).length,58);
  assert.deepEqual(birds.map(([id])=>id),Object.keys(baseline.SPECIES));
- for(const [id,sp] of birds){assert.equal(JSON.stringify(sp),JSON.stringify(baseline.SPECIES[id]),id+' persisted data');assert.ok(classifyBird(sp),id);}
+ for(const [id,sp] of birds){assert.equal(JSON.stringify({...sp,dimorphism:baseline.SPECIES[id].dimorphism}),JSON.stringify(baseline.SPECIES[id]),id+' persisted data');assert.ok(classifyBird(sp),id);}
 });
 
 test('taxa route before legacy kinds, including rhino, forestbird and raptor mistakes',()=>{
@@ -82,7 +82,7 @@ test('all configured variants change paint, preserve anatomy and respect pigment
 });
 
 test('the same 12 bird sex configurations use the new engine for both sexes',()=>{
- const configured=birds.filter(([id])=>current.SEXUAL_DIMORPHISM[id]);assert.equal(configured.length,12);
+ const configured=birds.filter(([id])=>baseline.SEXUAL_DIMORPHISM[id]);assert.equal(configured.length,12);
  assert.deepEqual(configured.map(([id])=>id).sort(),Object.keys(baseline.SEXUAL_DIMORPHISM).sort());
  for(const [id,sp] of configured){
   assert.equal(JSON.stringify(current.SEXUAL_DIMORPHISM[id]),JSON.stringify(baseline.SEXUAL_DIMORPHISM[id]));
@@ -105,10 +105,10 @@ test('shared names stay separate and use taxon-specific anatomy',()=>{
 test('entrypoint loads the art module first and every offline asset exists',()=>{
  const html=fs.readFileSync('www/index.html','utf8'),sw=fs.readFileSync('www/sw.js','utf8');
  assert.ok(html.indexOf('js/bird-art-v3193.js')<html.indexOf('js/app.js'));
- assert.match(sw,/gran-atlas-v3.19.4-mamiferos/);
+ assert.match(sw,/gran-atlas-v3.19.5-dimorfismo/);
  const assets=vm.runInNewContext(sw.slice(0,sw.indexOf("self.addEventListener"))+'\nASSETS');
  for(const asset of assets)assert.ok(fs.existsSync('www/'+asset.replace(/^\.\//,'')),asset);
  for(const path of ['laboratorio-aves.html','js/bird-art-v3193.js','js/lab/bird-lab-v3193.js'])assert.ok(assets.includes('./'+path));
  const lab=fs.readFileSync('www/laboratorio-aves.html','utf8');assert.ok(!lab.includes('src="js/app.js'));for(const n of [56,80,120])assert.ok(lab.includes('value="'+n+'"'));
- assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.19.4');assert.equal(JSON.parse(fs.readFileSync('capacitor.config.json')).appId,'com.elgranatlas.naturaleza.beta314');
+ assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.19.5');assert.equal(JSON.parse(fs.readFileSync('capacitor.config.json')).appId,'com.elgranatlas.naturaleza.beta314');
 });

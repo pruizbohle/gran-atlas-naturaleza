@@ -5,10 +5,11 @@ const api=sprites();
 const skins=['normal','albino','melanico','alfa'];
 const geometry=svg=>svg.replace(/(?:fill|stroke)="[^"]*"/g,'').replace(/opacity="[^"]*"/g,'');
 test('all species and configured sexes render in the existing SVG viewport',()=>{
+ const api=sprites(undefined,true);
  for(const [id,sp] of Object.entries(api.SPECIES)){
    for(const skin of skins){
      const svg=api.getSpriteMarkup(id,skin);
-     assert.match(svg,/^<svg viewBox="0 0 100 100" aria-hidden="true">/);
+     assert.match(svg,/^<svg viewBox="0 0 100 100" aria-hidden="true"/);
      assert.ok(svg.endsWith('</svg>'),id);
      assert.doesNotMatch(svg,/NaN|undefined|Infinity|<script|<foreignObject/,id+':'+skin);
      assert.equal(api.getSpriteMarkup(id,skin),svg,'cache must remain deterministic');
