@@ -67,14 +67,15 @@ test('cards collapse historical aliases and display one discovered Albino',()=>{
  const badge=source.slice(source.indexOf('function specialBadges('),source.indexOf('\nfunction ',source.indexOf('function specialBadges(')+1));
  const variant=source.slice(source.indexOf('function variantToSkin('),source.indexOf('function pushLog('));
  const cards=vm.runInNewContext(source.slice(source.indexOf('function specialVariantName('),source.indexOf('Object.values(SPECIES).forEach(sp=>{sp.special='))+variant+badge+'\n;specialBadges("fox")',{SPECIES:{fox:{special:['Leucístico','Albino','Leucística','Melánico']}},state:{specialFound:{fox:{'Leucístico':true}}},getSpriteMarkup:()=>'<svg/>'});
- assert.equal((cards.match(/variant-card/g)||[]).length,2);assert.equal((cards.match(/>Albino</g)||[]).length,1);assert.doesNotMatch(cards,/Leucíst/);
+ assert.equal((cards.match(/variant-card/g)||[]).length,2);assert.equal((cards.match(/>Albino(?: · registro histórico)?</g)||[]).length,1);assert.doesNotMatch(cards,/Leucíst/);
 });
-test('encounter probabilities, ethology and collection selection remain exact',()=>{
- assert.match(source,/const variantChance=0\.01\+\(state\.upgrades\.ethology>=2\?0\.005:0\)/);
- assert.match(source,/variant=sp\.special\[Math\.floor\(Math\.random\(\)\*sp\.special\.length\)\]/);
+test('historical pigmentation weights and ethology remain exact in the independent sampler',()=>{
+ assert.match(source,/oldRate=\.01\+\(snapshot\.upgrades\?\.ethology>=2\?\.005:0\)/);
+ assert.match(source,/cursor\+=oldRate\/sp\.special\.length/);
+ assert.match(source,/const specimen=rollSpecimen\(chosen,state\)/);
 });
 test('lab bundle is reproducible and isolated from game progress; offline resources are complete',()=>{
  const lab=fs.readFileSync('www/js/lab/dimorphism-production.js','utf8'),gallery=fs.readFileSync('www/js/lab/pigmentation-lab-v3196.js','utf8');assert.doesNotMatch(lab+gallery,/localStorage|recordSexObservation|setInterval|state\.specialFound/);
  require('node:child_process').execFileSync(process.execPath,['scripts/build-dimorphism-lab.cjs','--check']);
- const sw=fs.readFileSync('www/sw.js','utf8');assert.match(sw,/gran-atlas-v3\.19\.6-pigmentacion/);for(const asset of ['laboratorio-pigmentacion.html','js/lab/pigmentation-lab-v3196.js'])assert.ok(sw.includes("'./"+asset+"'"));
+ const sw=fs.readFileSync('www/sw.js','utf8');assert.match(sw,/gran-atlas-v3\.19\.7-especimenes/);for(const asset of ['laboratorio-pigmentacion.html','js/lab/pigmentation-lab-v3196.js'])assert.ok(sw.includes("'./"+asset+"'"));
 });

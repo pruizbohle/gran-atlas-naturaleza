@@ -1,6 +1,6 @@
 const assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
 const GAME=fs.readFileSync('www/js/app.js','utf8'),SAVE=fs.readFileSync('www/js/save-manager.js','utf8'),KEY='gran_atlas_v05';
-function harness(store={},backup){
+function harness(store={},backup,options={}){
  const elements={};const timeouts=[];let tick=null;
  function node(id){
   if(!elements[id])elements[id]={
@@ -22,10 +22,11 @@ function harness(store={},backup){
   AtlasExport:{async saveFile(){return {uri:'content://test'};}}
  }}};
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
-   Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,
+   Date,Math:Object.assign(Object.create(Math),options.rng?{random:options.rng}:{}),Number,JSON,Map,Set,console,URL,Blob,Intl,
    setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES,MUSEUM_FOSSIL_RECIPES,craftMuseumFossil,museumAssemblyReady,museumOtherExhibits,renderFossilWorkshop,renderMuseumRelicts,renderMuseumArtifacts,renderMuseumSamples,toggleMuseumDisplay,renderMuseumExtraGallery,MUSEUM_RELICTS,recordMuseumRelict,maybeMuseumFieldDiscovery,SCIENTIFIC_MISSIONS,resolveVoyageReward,museumCardArt,ITEMS};\n})();');
+ const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={get state(){return state},initialState,persist,encounter,rollSpecimen,recordSpecimen,specimenRates,specialBadges,renderLegendaryCollection,renderJournal,renderBestiary,LEGENDARY_SPECIMENS,SPECIMEN_CATEGORIES,SPECIMEN_LEVELS,fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES,MUSEUM_FOSSIL_RECIPES,craftMuseumFossil,museumAssemblyReady,museumOtherExhibits,renderFossilWorkshop,renderMuseumRelicts,renderMuseumArtifacts,renderMuseumSamples,toggleMuseumDisplay,renderMuseumExtraGallery,MUSEUM_RELICTS,recordMuseumRelict,maybeMuseumFieldDiscovery,SCIENTIFIC_MISSIONS,resolveVoyageReward,museumCardArt,ITEMS};\n})();');
  assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
+ vm.runInContext(fs.readFileSync('www/js/legendary-art-v3197.js','utf8'),ctx);
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(SAVE,ctx,{filename:'www/js/save-manager.js'});
  return {window:w,store,doc,elements,localStorage,

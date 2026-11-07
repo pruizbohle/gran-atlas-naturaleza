@@ -1,0 +1,480 @@
+{
+  "version": "3.19.7",
+  "seed": 3197,
+  "observations": 1000000,
+  "species": "zorro_rojo",
+  "independent": {
+    "Notable": 9970,
+    "Épico": 2033,
+    "Excepcional": 400,
+    "Legendario": 91,
+    "Albino": 3303,
+    "Melánico": 3181
+  },
+  "expected": {
+    "Notable": 10000,
+    "Épico": 2000,
+    "Excepcional": 400,
+    "Legendario": 100,
+    "Albino": 3333.3333333333335,
+    "Melánico": 3333.3333333333335
+  },
+  "sixSigmaTolerance": {
+    "Notable": 596.992462263972,
+    "Épico": 268.05969484426413,
+    "Excepcional": 119.97599759951987,
+    "Legendario": 59.996999924996246,
+    "Albino": 345.8323293158117,
+    "Melánico": 345.8323293158117
+  },
+  "singlePartida": {
+    "Notable": 9912,
+    "Épico": 1924,
+    "Excepcional": 378,
+    "Legendario": 1,
+    "Albino": 3465,
+    "Melánico": 3369
+  },
+  "configuredCounts": {
+    "Notable": 455,
+    "Épico": 24,
+    "Excepcional": 14,
+    "Legendario": 12
+  },
+  "legendaryIndividuals": 12,
+  "regionalAssumptions": "One species per search, census x1, no specialization or ethology. Manual illustrative rate one click/second (no enforced cooldown). Auto one helper, interval five seconds. Static regional pools before hourly caps; caps and pool exhaustion can change actual rates. Legendary expectations describe the first discovery, not repeatable yields.",
+  "regional": [
+    {
+      "id": "silverback",
+      "speciesId": "af_gorila_montana",
+      "name": "Silverback",
+      "species": "Gorila de montaña",
+      "region": "HX-09-11",
+      "season": "primavera",
+      "manualFilter": {
+        "habitat": "bosque",
+        "time": "noche",
+        "pool": 6
+      },
+      "autoPool": 23,
+      "manualSpeciesShare": 0.017543859649122806,
+      "autoSpeciesShare": 0.003831417624521074,
+      "manualEligiblePerHour": 31.57894736842105,
+      "autoEligiblePerHour": 1.079724137931035,
+      "perManualSearch": {
+        "Notable": 0.00008771929824561403,
+        "Épico": 0.000017543859649122806,
+        "Excepcional": 0.0000035087719298245615,
+        "Legendario": 8.771929824561404e-7
+      },
+      "perAutoSearch": {
+        "Notable": 0.000014996168582375483,
+        "Épico": 0.000002999233716475097,
+        "Excepcional": 5.998467432950194e-7,
+        "Legendario": 1.4996168582375484e-7
+      },
+      "legendaryHourly": {
+        "manualExpected": 0.003157894736842105,
+        "manualChance": 0.003152915212433105,
+        "autoExpected": 0.0001079724137931035,
+        "autoChance": 0.00010796659309353362
+      }
+    },
+    {
+      "id": "ambar",
+      "speciesId": "asia_esp_0402",
+      "name": "Ámbar",
+      "species": "Tigre siberiano",
+      "region": "HX-03-16",
+      "season": "primavera",
+      "manualFilter": {
+        "habitat": "tundra",
+        "time": "noche",
+        "pool": 2
+      },
+      "autoPool": 11,
+      "manualSpeciesShare": 0.8181818181818181,
+      "autoSpeciesShare": 0.026162790697674417,
+      "manualEligiblePerHour": 1472.7272727272725,
+      "autoEligiblePerHour": 7.372883720930234,
+      "perManualSearch": {
+        "Notable": 0.00409090909090909,
+        "Épico": 0.0008181818181818182,
+        "Excepcional": 0.00016363636363636363,
+        "Legendario": 0.00004090909090909091
+      },
+      "perAutoSearch": {
+        "Notable": 0.00010240116279069768,
+        "Épico": 0.000020480232558139535,
+        "Excepcional": 0.000004096046511627907,
+        "Legendario": 0.0000010240116279069768
+      },
+      "legendaryHourly": {
+        "manualExpected": 0.14727272727272725,
+        "manualChance": 0.1369440342342385,
+        "autoExpected": 0.0007372883720930234,
+        "autoChance": 0.000737017019046049
+      }
+    },
+    {
+      "id": "niebla",
+      "speciesId": "asia_esp_0403",
+      "name": "Niebla",
+      "species": "Leopardo de las nieves",
+      "region": "HX-04-15",
+      "season": "primavera",
+      "manualFilter": {
+        "habitat": "montana",
+        "time": "noche",
+        "pool": 3
+      },
+      "autoPool": 18,
+      "manualSpeciesShare": 0.05555555555555556,
+      "autoSpeciesShare": 0.0031897926634768745,
+      "manualEligiblePerHour": 100,
+      "autoEligiblePerHour": 0.8989090909090912,
+      "perManualSearch": {
+        "Notable": 0.0002777777777777778,
+        "Épico": 0.00005555555555555556,
+        "Excepcional": 0.000011111111111111112,
+        "Legendario": 0.000002777777777777778
+      },
+      "perAutoSearch": {
+        "Notable": 0.000012484848484848489,
+        "Épico": 0.0000024969696969696975,
+        "Excepcional": 4.993939393939395e-7,
+        "Legendario": 1.2484848484848488e-7
+      },
+      "legendaryHourly": {
+        "manualExpected": 0.01,
+        "manualChance": 0.009950180001614295,
+        "autoExpected": 0.00008989090909090913,
+        "autoChance": 0.00008988687466038314
+      }
+    },
+    {
+      "id": "fenrir",
+      "speciesId": "lobo_gris",
+      "name": "Fenrir",
+      "species": "Lobo gris",
+      "region": "HX-01-11",
+      "season": "primavera",
+      "manualFilter": {
+        "habitat": "bosque",
+        "time": "noche",
+        "pool": 4
+      },
+      "autoPool": 14,
+      "manualSpeciesShare": 0.17307692307692307,
+      "autoSpeciesShare": 0.016453382084095067,
+      "manualEligiblePerHour": 311.53846153846155,
+      "autoEligiblePerHour": 4.636694698354663,
+      "perManualSearch": {
+        "Notable": 0.0008653846153846154,
+        "Épico": 0.00017307692307692307,
+        "Excepcional": 0.00003461538461538462,
+        "Legendario": 0.000008653846153846155
+      },
+      "perAutoSearch": {
+        "Notable": 0.0000643985374771481,
+        "Épico": 0.00001287970749542962,
+        "Excepcional": 0.000002575941499085924,
+        "Legendario": 6.43985374771481e-7
+      },
+      "legendaryHourly": {
+        "manualExpected": 0.031153846153846157,
+        "manualChance": 0.03067369620604743,
+        "autoExpected": 0.00046366946983546637,
+        "autoChance": 0.0004635621410115087
+      }
+    },
+    {
+      "id": "atlas",
+      "speciesId": "af_elefante_sabana",
+      "name": "Atlas",
+      "species": "Elefante africano de sabana",
+      "region": "HX-07-10",
+      "season": "primavera",
+      "manualFilter": {
+        "habitat": "rio",
+        "time": "noche",
+        "pool": 5
+      },
+      "autoPool": 35,
+      "manualSpeciesShare": 0.0967741935483871,
+      "autoSpeciesShare": 0.009544008483563097,
+      "manualEligiblePerHour": 174.19354838709677,
+      "autoEligiblePerHour": 2.6895779427359496,
+      "perManualSearch": {
+        "Notable": 0.0004838709677419355,
+        "Épico": 0.0000967741935483871,
+        "Excepcional": 0.00001935483870967742,
+        "Legendario": 0.000004838709677419355
+      },
+      "perAutoSearch": {
+        "Notable": 0.00003735524920466597,
+        "Épico": 0.000007471049840933194,
+        "Excepcional": 0.0000014942099681866388,
+        "Legendario": 3.735524920466597e-7
+      },
+      "legendaryHourly": {
+        "manualExpected": 0.017419354838709676,
+        "manualChance": 0.017268556407228686,
+        "autoExpected": 0.000268957794273595,
+        "autoChance": 0.00026892167859238203
+      }
+    },
+    {
+      "id": "centinela",
+      "speciesId": "aguila_real",
+      "name": "Centinela",
+      "species": "Águila real",
+      "region": "HX-02-09",
+      "season": "primavera",
+      "manualFilter": {
+        "habitat": "montana",
+        "time": "dia",
+        "pool": 6
+      },
+      "autoPool": 13,
+      "manualSpeciesShare": 0.36363636363636365,
+      "autoSpeciesShare": 0.1671309192200557,
+      "manualEligiblePerHour": 654.5454545454546,
+      "autoEligiblePerHour": 47.09883008356547,
+      "perManualSearch": {
+        "Notable": 0.0018181818181818182,
+        "Épico": 0.00036363636363636367,
+        "Excepcional": 0.00007272727272727273,
+        "Legendario": 0.000018181818181818182
+      },
+      "perAutoSearch": {
+        "Notable": 0.0006541504178272981,
+        "Épico": 0.0001308300835654596,
+        "Excepcional": 0.000026166016713091922,
+        "Legendario": 0.000006541504178272981
+      },
+      "legendaryHourly": {
+        "manualExpected": 0.06545454545454546,
+        "manualChance": 0.06335893693587036,
+        "autoExpected": 0.004709883008356547,
+        "autoChance": 0.0046988242346249764
+      }
+    },
+    {
+      "id": "basalto",
+      "speciesId": "asia_esp_0527",
+      "name": "Basalto",
+      "species": "Dragón de Komodo",
+      "region": "HX-06-17",
+      "season": "primavera",
+      "manualFilter": {
+        "habitat": "selva",
+        "time": "dia",
+        "pool": 27
+      },
+      "autoPool": 35,
+      "manualSpeciesShare": 0.07326007326007326,
+      "autoSpeciesShare": 0.05576208178438661,
+      "manualEligiblePerHour": 131.86813186813188,
+      "autoEligiblePerHour": 15.714200743494425,
+      "perManualSearch": {
+        "Notable": 0.0003663003663003663,
+        "Épico": 0.00007326007326007326,
+        "Excepcional": 0.000014652014652014653,
+        "Legendario": 0.000003663003663003663
+      },
+      "perAutoSearch": {
+        "Notable": 0.0002182527881040892,
+        "Épico": 0.000043650557620817844,
+        "Excepcional": 0.00000873011152416357,
+        "Legendario": 0.0000021825278810408923
+      },
+      "legendaryHourly": {
+        "manualExpected": 0.013186813186813189,
+        "manualChance": 0.013100271925020723,
+        "autoExpected": 0.0015714200743494426,
+        "autoChance": 0.0015701877524831875
+      }
+    },
+    {
+      "id": "seda",
+      "speciesId": "asia_esp_0373",
+      "name": "Seda",
+      "species": "Cobra real",
+      "region": "HX-06-17",
+      "season": "primavera",
+      "manualFilter": {
+        "habitat": "selva",
+        "time": "dia",
+        "pool": 27
+      },
+      "autoPool": 35,
+      "manualSpeciesShare": 0.07326007326007326,
+      "autoSpeciesShare": 0.05576208178438661,
+      "manualEligiblePerHour": 131.86813186813188,
+      "autoEligiblePerHour": 15.714200743494425,
+      "perManualSearch": {
+        "Notable": 0.0003663003663003663,
+        "Épico": 0.00007326007326007326,
+        "Excepcional": 0.000014652014652014653,
+        "Legendario": 0.000003663003663003663
+      },
+      "perAutoSearch": {
+        "Notable": 0.0002182527881040892,
+        "Épico": 0.000043650557620817844,
+        "Excepcional": 0.00000873011152416357,
+        "Legendario": 0.0000021825278810408923
+      },
+      "legendaryHourly": {
+        "manualExpected": 0.013186813186813189,
+        "manualChance": 0.013100271925020723,
+        "autoExpected": 0.0015714200743494426,
+        "autoChance": 0.0015701877524831875
+      }
+    },
+    {
+      "id": "junco",
+      "speciesId": "af_cocodrilo_nilo",
+      "name": "Junco",
+      "species": "Cocodrilo del Nilo",
+      "region": "HX-07-10",
+      "season": "primavera",
+      "manualFilter": {
+        "habitat": "humedal",
+        "time": "noche",
+        "pool": 3
+      },
+      "autoPool": 35,
+      "manualSpeciesShare": 0.15254237288135591,
+      "autoSpeciesShare": 0.009544008483563097,
+      "manualEligiblePerHour": 274.57627118644064,
+      "autoEligiblePerHour": 2.6895779427359496,
+      "perManualSearch": {
+        "Notable": 0.0007627118644067796,
+        "Épico": 0.00015254237288135592,
+        "Excepcional": 0.000030508474576271185,
+        "Legendario": 0.000007627118644067796
+      },
+      "perAutoSearch": {
+        "Notable": 0.00003735524920466597,
+        "Épico": 0.000007471049840933194,
+        "Excepcional": 0.0000014942099681866388,
+        "Legendario": 3.735524920466597e-7
+      },
+      "legendaryHourly": {
+        "manualExpected": 0.027457627118644065,
+        "manualChance": 0.027084194945577456,
+        "autoExpected": 0.000268957794273595,
+        "autoChance": 0.00026892167859238203
+      }
+    },
+    {
+      "id": "ancora",
+      "speciesId": "af_tortuga_aldabra",
+      "name": "Áncora",
+      "species": "Tortuga gigante de Aldabra",
+      "region": "HX-07-14",
+      "season": "primavera",
+      "manualFilter": {
+        "habitat": "pradera",
+        "time": "amanecer",
+        "pool": 2
+      },
+      "autoPool": 8,
+      "manualSpeciesShare": 0.18181818181818182,
+      "autoSpeciesShare": 0.027027027027027025,
+      "manualEligiblePerHour": 327.2727272727273,
+      "autoEligiblePerHour": 7.6164324324324335,
+      "perManualSearch": {
+        "Notable": 0.0009090909090909091,
+        "Épico": 0.00018181818181818183,
+        "Excepcional": 0.000036363636363636364,
+        "Legendario": 0.000009090909090909091
+      },
+      "perAutoSearch": {
+        "Notable": 0.00010578378378378378,
+        "Épico": 0.00002115675675675676,
+        "Excepcional": 0.000004231351351351352,
+        "Legendario": 0.000001057837837837838
+      },
+      "legendaryHourly": {
+        "manualExpected": 0.03272727272727273,
+        "manualChance": 0.03219767424389197,
+        "autoExpected": 0.0007616432432432434,
+        "autoChance": 0.0007613536692248069
+      }
+    },
+    {
+      "id": "ascua",
+      "speciesId": "zorro_rojo",
+      "name": "Ascua",
+      "species": "Zorro rojo",
+      "region": "HX-01-09",
+      "season": "primavera",
+      "manualFilter": {
+        "habitat": "bosque",
+        "time": "noche",
+        "pool": 12
+      },
+      "autoPool": 33,
+      "manualSpeciesShare": 0.12145748987854252,
+      "autoSpeciesShare": 0.03809523809523809,
+      "manualEligiblePerHour": 218.62348178137654,
+      "autoEligiblePerHour": 10.735542857142859,
+      "perManualSearch": {
+        "Notable": 0.0006072874493927126,
+        "Épico": 0.00012145748987854252,
+        "Excepcional": 0.000024291497975708505,
+        "Legendario": 0.000006072874493927126
+      },
+      "perAutoSearch": {
+        "Notable": 0.00014910476190476188,
+        "Épico": 0.00002982095238095238,
+        "Excepcional": 0.000005964190476190476,
+        "Legendario": 0.000001491047619047619
+      },
+      "legendaryHourly": {
+        "manualExpected": 0.021862348178137654,
+        "manualChance": 0.021625164078351355,
+        "autoExpected": 0.001073554285714286,
+        "autoChance": 0.0010729790319687904
+      }
+    },
+    {
+      "id": "remonte",
+      "speciesId": "asia_esp_0369",
+      "name": "Remonte",
+      "species": "Salmón rosado",
+      "region": "HX-03-18",
+      "season": "primavera",
+      "manualFilter": {
+        "habitat": "rio",
+        "time": "dia",
+        "pool": 2
+      },
+      "autoPool": 9,
+      "manualSpeciesShare": 0.5,
+      "autoSpeciesShare": 0.0859106529209622,
+      "manualEligiblePerHour": 900,
+      "autoEligiblePerHour": 24.21030927835052,
+      "perManualSearch": {
+        "Notable": 0.0025,
+        "Épico": 0.0005,
+        "Excepcional": 0.0001,
+        "Legendario": 0.000025
+      },
+      "perAutoSearch": {
+        "Notable": 0.00033625429553264607,
+        "Épico": 0.00006725085910652921,
+        "Excepcional": 0.000013450171821305844,
+        "Legendario": 0.000003362542955326461
+      },
+      "legendaryHourly": {
+        "manualExpected": 0.09000000000000001,
+        "manualChance": 0.08606984291808695,
+        "autoExpected": 0.002421030927835052,
+        "autoChance": 0.0024181066566855147
+      }
+    }
+  ]
+}

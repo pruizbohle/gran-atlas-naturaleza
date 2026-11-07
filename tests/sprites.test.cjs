@@ -34,7 +34,7 @@ test('special skins preserve the normal anatomy and add readable contrast',()=>{
      assert.equal(geometry(normal),geometry(pale),id+' pale anatomy');
      assert.equal(geometry(normal),geometry(dark),id+' dark anatomy');
    }
-   assert.match(notable,/stroke="#84612e"/,id+' outlined Notable mark');
+   assert.match(notable,/data-specimen-halo="Notable"/,id+' outlined Notable mark');
  }
 });
 

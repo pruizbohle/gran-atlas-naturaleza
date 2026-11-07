@@ -1988,11 +1988,91 @@ function specialVariantName(value){
  if(key==='notable')return 'Notable';
  return value;
 }
-function configuredSpecials(sp){return [...new Set((sp.special||[]).map(specialVariantName))];}
-Object.values(SPECIES).forEach(sp=>{sp.special=configuredSpecials(sp);});
+// Presentation eligibility is deliberately independent of base rarity and catalog records.
+const SPECIMEN_LEVELS={Notable:{skin:'alfa',color:'#b57949',rate:.01},'Épico':{skin:'epico',color:'#aab9c7',rate:.002},Excepcional:{skin:'excepcional',color:'#d1ad45',rate:.0004},Legendario:{skin:'legendario',color:'#8cafa2',rate:.0001}};
+const LEGENDARY_SPECIMENS=[
+ ['silverback','af_gorila_montana','Silverback','Un adulto de espalda plateada, mirada serena y cresta pronunciada.'],
+ ['ambar','asia_esp_0402','Ámbar','Rayas anchas y un pelaje invernal denso en una pausa vigilante.'],
+ ['niebla','asia_esp_0403','Niebla','Rosetas abiertas y una larga cola que acompaña el borde de la roca.'],
+ ['fenrir','lobo_gris','Fenrir','Un lobo de manto gris, pecho claro y perfil atento.'],
+ ['atlas','af_elefante_sabana','Atlas','Orejas desplegadas y colmillos asimétricos de crecimiento natural.'],
+ ['centinela','aguila_real','Centinela','La nuca dorada destaca sobre las alas recogidas de este vigilante.'],
+ ['basalto','asia_esp_0527','Basalto','Escamas oscuras y patas robustas sostienen una silueta rasante.'],
+ ['seda','asia_esp_0373','Seda','Una cobra de capucha estrecha se eleva entre sus propios anillos.'],
+ ['junco','af_cocodrilo_nilo','Junco','Escudos dorsales irregulares y un hocico surcado por viejas cicatrices.'],
+ ['ancora','af_tortuga_aldabra','Áncora','Caparazón de anillos marcados y cuello extendido sobre patas columnares.'],
+ ['ascua','zorro_rojo','Ascua','Un zorro de pecho marfil se sienta envuelto en su cola rojiza.'],
+ ['remonte','asia_esp_0369','Remonte','Un salmón de dorso moteado y mandíbula curva en plena remontada.']
+].map(([id,speciesId,name,description])=>({id,speciesId,name,description}));
+const SPECIMEN_SELECTION={
+ epico:['zorro_rojo','lobo_gris','aguila_real','reno','buho_real','jabali','af_gran_kudu','af_pangolin_gigante','af_gorila_montana','af_elefante_sabana','af_cocodrilo_nilo','af_tortuga_aldabra','asia_esp_0402','asia_esp_0403','asia_esp_0527','asia_esp_0373','asia_esp_0369','af_hipopotamo','af_jirafa','af_leon','af_suricata','af_secretario','af_picozapato','af_piton_africana'],
+ excepcional:['zorro_rojo','lobo_gris','aguila_real','af_gran_kudu','af_pangolin_gigante','af_gorila_montana','af_elefante_sabana','af_cocodrilo_nilo','af_tortuga_aldabra','asia_esp_0402','asia_esp_0403','asia_esp_0527','asia_esp_0373','asia_esp_0369']
+};
+function canonicalTaxon(id){return (SPECIES[id]?.latin||'').toLowerCase().trim().split(/\s+/).slice(0,2).join(' ');}
+function legendaryForSpecies(id){return LEGENDARY_SPECIMENS.find(l=>SPECIES[l.speciesId]&&canonicalTaxon(id)&&canonicalTaxon(l.speciesId)===canonicalTaxon(id));}
+const SPECIMEN_CATEGORIES=Object.fromEntries(Object.keys(SPECIES).map(id=>{
+ const categories=[];
+ if(SPECIES[id].special.some(v=>specialVariantName(v)==='Notable'))categories.push('Notable');
+ if(SPECIMEN_SELECTION.epico.includes(id)||legendaryForSpecies(id))categories.push('Épico');
+ if(SPECIMEN_SELECTION.excepcional.includes(id)||legendaryForSpecies(id))categories.push('Excepcional');
+ if(legendaryForSpecies(id))categories.push('Legendario');
+ return [id,categories];
+}));
+function configuredSpecials(sp){
+ const id=Object.keys(SPECIES).find(id=>SPECIES[id]===sp);
+ return [...new Set([...(sp.special||[]).map(specialVariantName),...(SPECIMEN_CATEGORIES[id]||[])])];
+}
+// Keep the v3.19.6 array intact: its length defines each pigmentation probability.
+Object.values(SPECIES).forEach(sp=>{sp.special=[...new Set((sp.special||[]).map(specialVariantName))];});
+function specimenRates(id,ethology=0){
+ const multiplier=ethology>=2?1.5:1;
+ return Object.fromEntries((SPECIMEN_CATEGORIES[id]||[]).map(c=>[c,SPECIMEN_LEVELS[c].rate*multiplier]));
+}
+function rollSpecimen(id,snapshot,rng=Math.random){
+ const sp=SPECIES[id],oldRate=.01+(snapshot.upgrades?.ethology>=2?.005:0);
+ // An independent interval per historical pigment keeps exactly oldRate / old array length.
+ let pigment='',cursor=0,draw=rng();
+ for(const label of sp.special){if(label!=='Albino'&&label!=='Melánico')continue;
+  cursor+=oldRate/sp.special.length;if(draw<cursor){pigment=label;break;}}
+ let category='';cursor=0;draw=rng();
+ for(const [label,rate] of Object.entries(specimenRates(id,snapshot.upgrades?.ethology))){
+  const legendary=label==='Legendario'?legendaryForSpecies(id):null;
+  if(legendary&&snapshot.legendaryFound?.[legendary.id])continue;
+  cursor+=rate;if(draw<cursor){category=label;break;}
+ }
+ return {pigment,category};
+}
+function recordSpecimen(id,result,snapshot){
+ const labels=[result.pigment,result.category].filter(label=>label&&(label!=='Legendario'||!snapshot.legendaryFound?.[legendaryForSpecies(id)?.id]));if(!labels.length)return;
+ snapshot.specialSeen=snapshot.specialSeen||{};snapshot.specialSeen[id]=(snapshot.specialSeen[id]||0)+1;
+ snapshot.specialFound=snapshot.specialFound||{};snapshot.specialFound[id]=snapshot.specialFound[id]||{};
+ snapshot.specialCounts=snapshot.specialCounts||{};snapshot.specialCounts[id]=snapshot.specialCounts[id]||{};
+ for(const label of labels){
+  if(label==='Legendario'){
+   const l=legendaryForSpecies(id);snapshot.legendaryFound=snapshot.legendaryFound||{};
+   if(l&&!snapshot.legendaryFound[l.id])snapshot.legendaryFound[l.id]={id:l.id,speciesId:l.speciesId};
+  }else{snapshot.specialFound[id][label]=true;snapshot.specialCounts[id][label]=(snapshot.specialCounts[id][label]||0)+1;}
+ }
+}
+function specimenMarkup(id,variant='',category='',sex=null){
+ if(category==='Legendario'||variant==='Legendario')return getSpriteMarkup(id,'legendario');
+ const svg=getSpriteMarkup(id,variantToSkin(variant),!variant?sex:null);
+ return category&&SPECIMEN_LEVELS[category]&&variantToSkin(variant)!==SPECIMEN_LEVELS[category].skin?decorateSpecimen(svg,category):svg;
+}
+function decorateSpecimen(svg,category){
+ const level=SPECIMEN_LEVELS[category];if(!level)return svg;
+ return svg.replace('>',` data-specimen-category="${category}">`+specimenHalo(category));
+}
+function specimenHalo(category){
+ const color=SPECIMEN_LEVELS[category]?.color;if(!color)return '';
+ return `<g data-specimen-halo="${category}" fill="none" stroke="${color}" stroke-width="1.5"><circle cx="50" cy="50" r="46" opacity=".6"/>${category==='Notable'?'':`<path d="M78 17l-2-7 5 3 3-5 3 5 5-3-2 7z" fill="${color}" stroke-width=".7"/>`}</g>`;
+}
 
 function normalizeSpecialDiscoveries(snapshot){
  if(!snapshot||typeof snapshot!=='object')return snapshot;
+ snapshot.collectionId=snapshot.collectionId||('atlas-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2));
+ snapshot.legendaryFound={...(snapshot.legendaryFound||{})};
+ snapshot.specialCounts=Object.fromEntries(Object.entries(snapshot.specialCounts||{}).map(([id,counts])=>[id,{...counts}]));
  // Copy nested records: importing must not mutate the supplied backup or rollback state.
  if(snapshot.specialFound&&typeof snapshot.specialFound==='object'){
   const records={};
@@ -2257,7 +2337,7 @@ function load(){
   try{
     const raw=localStorage.getItem(STORAGE_KEY);
     const base=initialState();
-    if(!raw) return base;
+    if(!raw) return normalizeSpecialDiscoveries(base);
     const saved=JSON.parse(raw);
     const merged={...base,...saved};
     merged.upgrades={...base.upgrades,...(saved.upgrades||{})};
@@ -2273,7 +2353,7 @@ function load(){
   }catch(e){
     console.error('El Gran Atlas: error al recuperar la partida guardada.',e);
     // El progreso defectuoso se conserva para intentar repararlo desde Respaldos.
-    return initialState();
+    return normalizeSpecialDiscoveries(initialState());
   }
 }
 function persist(){localStorage.setItem(STORAGE_KEY, JSON.stringify(state));}
@@ -2320,6 +2400,9 @@ window.AtlasSaveBridge={
            relictAchievements:{...((imported.museum||{}).relictAchievements||{})}},
        equipment:{instrument:null,hat:null,necklace:null,...(imported.equipment||{})},
        sexSeen:{...(imported.sexSeen||{})},
+       // Same-partida backup rollback cannot reactivate its already discovered individuals.
+       legendaryFound:{...(imported.legendaryFound||{}),...(imported.collectionId&&imported.collectionId===before.collectionId?before.legendaryFound||{}:{})},
+       specialCounts:Object.fromEntries(Object.entries(imported.specialCounts||{}).map(([id,counts])=>[id,{...counts}])),
        specialSeen:{...(imported.specialSeen||{})},
        specialFound:{...(imported.specialFound||{})},
        feedObs:{...(imported.feedObs||{})},
@@ -2407,9 +2490,16 @@ function specialBadges(id){
  if(!variants.length)return '<div class="small">sin variantes configuradas</div>';
  const found=state.specialFound[id]||{};
  return '<div class="special-grid">'+variants.map(v=>{
-  const seen=Object.entries(found).some(([label,value])=>value&&specialVariantName(label)===v);
-  return `<div class="variant-card ${seen?'seen':'unknown'}"><div class="sprite-wrap">${seen?getSpriteMarkup(id,variantToSkin(v)):'<div class="qmark">?</div>'}</div><div class="small">${seen?v:'?'}</div></div>`;
+  const l=v==='Legendario'?legendaryForSpecies(id):null;
+  const seen=l?!!state.legendaryFound?.[l.id]:Object.entries(found).some(([label,value])=>value&&specialVariantName(label)===v);
+  const count=state.specialCounts?.[id]?.[v];
+  const caption=seen?(l?l.name+' — '+SPECIES[id].name:v):v+' · sin descubrir';
+  return `<div class="variant-card ${seen?'seen':'unknown'}"><div class="sprite-wrap">${seen?getSpriteMarkup(id,variantToSkin(v)):'<div class="qmark">?</div>'}</div><div class="small">${caption}${seen?(l?' · descubierto (1/1)':count?' · '+count+' encuentros desde v3.19.7':' · registro histórico'):''}</div></div>`;
  }).join('')+'</div>';
+}
+function renderLegendaryCollection(){
+ const found=LEGENDARY_SPECIMENS.filter(l=>state.legendaryFound?.[l.id]);
+ return `<section class="card legendary-collection"><h3>Individuos legendarios · ${found.length}/${LEGENDARY_SPECIMENS.length}</h3><p class="small">Identidades ficticias del atlas naturalista. Cada individuo aparece una sola vez por partida. Colección visual sin bonificaciones.</p><div class="species-grid">${found.map(l=>`<article class="variant-card"><div class="sprite-wrap">${getSpriteMarkup(l.speciesId,'legendario')}</div><strong>${l.name} — ${SPECIES[l.speciesId].name}</strong><p>Legendario · descubierto</p><p class="small">${l.description}</p></article>`).join('')||'<p class="small">Los individuos se revelarán después de encontrarlos en Campo.</p>'}</div></section>`;
 }
 
 // Comparación en el Cuaderno: se revela cada sexo solo al observarlo.
@@ -2620,22 +2710,18 @@ function encounter(source='manual', at=Date.now(), guaranteed=false){
    if(sexObservation.isNew)note.push(`primera observación de ${sexLabel}`);
    if(sexObservation.complete&&sexObservation.isNew)note.push('dimorfismo documentado (2/2)');
   }
-  let variant='';
-  const variantChance=0.01+(state.upgrades.ethology>=2?0.005:0);
-  if(sp.special.length&&Math.random()<variantChance){
-   state.specialSeen[chosen]=specials(chosen)+1;
-   variant=sp.special[Math.floor(Math.random()*sp.special.length)];
-   state.specialFound[chosen]=state.specialFound[chosen]||{};
-   state.specialFound[chosen][variant]=true;
-   note.push(`espécimen especial: ${variant}`);
-  }
+  const specimen=rollSpecimen(chosen,state);
+  const variant=specimen.pigment||specimen.category,category=specimen.category;
+  recordSpecimen(chosen,specimen,state);
+  if(variant)note.push(`espécimen especial: ${[specimen.pigment,category].filter(Boolean).join(' · ')}`);
+  if(category==='Legendario')note.push(legendaryForSpecies(chosen).name);
   // Una sola oportunidad de obtener muestra por búsqueda, aunque se observen 3 especies.
   if(entries.length===0){
    const drop=maybeSpeciesDrop(chosen,manual);
    if(drop)note.push(`muestra obtenida: ${ITEMS[drop].name}`);
    if(museumFinds.length)note.push(...museumFinds);
   }
-  entries.push({id:chosen,first,amount,note,variant,sexObservation});
+  entries.push({id:chosen,first,amount,note,variant,category,sexObservation});
  }
  if(!entries.length)return;
  const primary=entries[0],sp=SPECIES[primary.id],many=entries.length>1;
@@ -2646,10 +2732,10 @@ function encounter(source='manual', at=Date.now(), guaranteed=false){
  // Guardar los integrantes de cada encuentro para representarlos gráficamente en Campo.
  // Los IDs anteriores y el formato del respaldo siguen intactos.
  state.encounterSequence=(state.encounterSequence||0)+1;
- state.lastEncounter={species:primary.id,title,subtitle,sprite:primary.variant?getSpriteMarkup(primary.id,variantToSkin(primary.variant))
+ state.lastEncounter={species:primary.id,title,subtitle,sprite:primary.variant?specimenMarkup(primary.id,primary.variant,primary.category)
    :(primary.sexObservation?getSpriteMarkup(primary.id,'normal',primary.sexObservation.sex):getSpriteMarkup(primary.id)),
    sequence:state.encounterSequence,
-   entries:entries.map(e=>({id:e.id,amount:e.amount,variant:e.variant||'',sex:e.sexObservation?.sex||null,first:e.first}))};
+   entries:entries.map(e=>({id:e.id,amount:e.amount,variant:e.variant||'',category:e.category||'',sex:e.sexObservation?.sex||null,first:e.first}))};
  if(manual)pushLog(`🔭 ${many?'Encuentro múltiple · ':''}${entries.map(e=>visibleName(e.id)+' ×'+e.amount).join(', ')}${primary.note.length?' · '+primary.note.join(', '):''}.`);
  if(!batchingOffline){renderCounters();updateFieldOutput();}
 }
@@ -2657,6 +2743,9 @@ function variantToSkin(variant){
   if(/albino|leuc/i.test(variant)) return 'albino';
   if(/mel[aá]n/i.test(variant)) return 'melanico';
   if(/notable/i.test(variant)) return 'alfa';
+  if(/épico/i.test(variant)) return 'epico';
+  if(/excepcional/i.test(variant)) return 'excepcional';
+  if(/legendario/i.test(variant)) return 'legendario';
   return 'normal';
 }
 
@@ -3072,16 +3161,16 @@ function encounterCardMarkup(last){
   if(entries.length){
    const group=entries.length>1;
    const thumbnails=entries.map((e,i)=>{
-    const skin=e.variant?variantToSkin(e.variant):'normal';
-    const image=getSpriteMarkup(e.id,skin,skin==='normal'?e.sex:null);
+    const image=specimenMarkup(e.id,e.variant,e.category,e.sex);
     const number=Number(e.amount)||1;
-    const label=visibleName(e.id);
+    const individual=(e.category==='Legendario'||e.variant==='Legendario')?legendaryForSpecies(e.id):null;
+    const label=(individual?individual.name+' — ':'')+visibleName(e.id);
     return `<div class="encounter-species ${group?'in-group':''}" style="--encounter-index:${i}">
       <div class="encounter-species-art"><span class="encounter-species-sprite">${image}</span>
        ${number>1?`<span class="encounter-multiplier" aria-label="${number} avistamientos">×${number}</span>`:''}
       </div>
       <div class="encounter-species-label">${esc(label)}</div>
-      ${e.variant?`<div class="encounter-variant-label">${esc(e.variant)}</div>`:''}
+      ${e.variant?`<div class="encounter-variant-label">${esc([...new Set([e.variant,e.category].filter(Boolean))].join(' · '))}</div>`:''}
      </div>`;
    }).join('');
    return `<div class="encounter-graphic ${group?'encounter-graphic-multi':'encounter-graphic-single'}" role="group" aria-label="${entries.length} ${entries.length===1?'especie observada':'especies observadas'}">
@@ -4016,7 +4105,7 @@ function renderMuseum(){
  const exhibitIds=Object.keys(exhibits).filter(id=>exhibits[id]&&SPECIES[id]).sort(museumValueSort);
  const count=exhibitIds.length;
  const next=MUSEUM_WINGS[state.museum.wing];
- return `<div class="grid-2 museum-v33">
+ return renderLegendaryCollection()+`<div class="grid-2 museum-v33">
  <section class="card stack museum-v33-hall">
    <header class="museum-v33-heading"><span class="museum-v33-eyebrow">GABINETE DE HISTORIA NATURAL · 1842</span><h3 class="section">🏛️ Museo de Historia Natural</h3><p class="small">Colección científica · ${count} vitrinas ocupadas de ${museumCapacity()}</p></header>
    <div class="museum-v33-scene" aria-hidden="true"><span>🌿</span><span>🏛️</span><span>🪴</span></div>
@@ -4426,10 +4515,10 @@ function renderBestiary(){
    if(state.bestiaryDescending)ids.reverse();
   return `<section class="card">
     <div class="bestiary-head"><h3 class="section">🦉 Bestiario</h3><div class="badge">Identificadas ${identifiedCount()}/${total}</div></div>
-    <div class="small">Listado de especies descubiertas y pendientes. Haz clic en un criterio para ordenar y vuelve a pulsarlo para invertir el sentido. · <a href="./laboratorio-pigmentacion.html" target="_blank" rel="noopener">Pigmentación 3.19.6</a> · <a href="./laboratorio-dimorfismo.html" target="_blank" rel="noopener">⚤ Dimorfismo 3.19.5</a> · <a href="./laboratorio-mamiferos.html" target="_blank" rel="noopener">Mamíferos 3.19.4</a> · <a href="./laboratorio-aves.html" target="_blank" rel="noopener">Aviario 3.19.3</a> · <a href="./laboratorio-herpetologia.html" target="_blank" rel="noopener">🦎 Herpetario 3.19.2b</a> · <a href="./laboratorio-peces.html" target="_blank" rel="noopener">🐟 Comprobar sprites 3.19.1c</a></div>
+    <div class="small">Listado de especies descubiertas y pendientes. Haz clic en un criterio para ordenar y vuelve a pulsarlo para invertir el sentido. · <a href="./laboratorio-especiales.html" target="_blank" rel="noopener">Especímenes 3.19.7</a> · <a href="./laboratorio-pigmentacion.html" target="_blank" rel="noopener">Pigmentación 3.19.6</a> · <a href="./laboratorio-dimorfismo.html" target="_blank" rel="noopener">⚤ Dimorfismo 3.19.5</a> · <a href="./laboratorio-mamiferos.html" target="_blank" rel="noopener">Mamíferos 3.19.4</a> · <a href="./laboratorio-aves.html" target="_blank" rel="noopener">Aviario 3.19.3</a> · <a href="./laboratorio-herpetologia.html" target="_blank" rel="noopener">🦎 Herpetario 3.19.2b</a> · <a href="./laboratorio-peces.html" target="_blank" rel="noopener">🐟 Comprobar sprites 3.19.1c</a></div>
     <label class="bestiary-v317-filter"><input type="checkbox" data-action="bestiary-hide-monographs" ${state.bestiaryHideMonographs?'checked':''} aria-label="Ocultar especies con monografía publicada"> <span>Ocultar especies con monografía publicada</span><small>${ids.length} de ${total} visibles</small></label>
     <div class="subtabs compact">${[['alpha','Abecedario'],['rarity','Rareza'],['type','Tipo']].map(([id,label])=>`<button class="subtab ${sort===id?'active':''}" data-action="bestiary-sort" data-id="${id}" aria-label="Ordenar por ${label}; ${sort===id?(state.bestiaryDescending?'descendente':'ascendente'):'seleccionar'}">${label}${sort===id?(state.bestiaryDescending?' ↓':' ↑'):''}</button>`).join('')}</div>
-    <div class="species-grid" style="margin-top:10px">${ids.map(id=>speciesCard(id,false,true)).join('')}</div>
+    <div class="species-grid" style="margin-top:10px">${ids.map(id=>'<div class="bestiary-specimen-entry">'+speciesCard(id,false,true)+'<details><summary>Colección de especímenes</summary>'+specialBadges(id)+'</details></div>').join('')}</div>
   </section>`;
 }
 
@@ -4694,6 +4783,12 @@ function sexSpriteMarkup(id,sex){
 
 const spriteCache=new Map();
 function getSpriteMarkup(id, skin='normal', sex=null){
+  const category=Object.keys(SPECIMEN_LEVELS).find(c=>SPECIMEN_LEVELS[c].skin===skin);
+  if(category){
+   const l=legendaryForSpecies(id);
+   const base=category==='Legendario'&&l&&globalThis.ATLAS_LEGENDARY_ART?globalThis.ATLAS_LEGENDARY_ART.render(l.id):getSpriteMarkup(id,'normal');
+   return decorateSpecimen(base,category);
+  }
   const validSex=(skin==='normal' && SEXUAL_DIMORPHISM[id] && (sex==='male'||sex==='female'))?sex:null;
   const key=id+':'+skin+':'+(validSex||'base');
   if(spriteCache.has(key))return spriteCache.get(key);
@@ -4777,7 +4872,7 @@ function shade(hex, amt){
   return '#'+[clamp(r+amt),clamp(g+amt),clamp(b+amt)].map(v=>v.toString(16).padStart(2,'0')).join('');
 }
 function svgWrap(content, glow=''){ return `<svg viewBox="0 0 100 100" aria-hidden="true">${glow}${content}</svg>`; }
-function alphaGlow(skin){ if(skin==='alfa') return '<circle cx="50" cy="50" r="42" fill="#f6df86" opacity="0.20"/><path d="M20 18l6 8 10 2-7 6 1 9-8-5-8 5 1-9-7-6 10-2z" fill="#ffe9a3" stroke="#84612e" stroke-width="1.8" opacity="0.95"/><path d="M82 64l5 7 8 2-6 5 1 8-8-4-7 4 1-8-6-5 8-2z" fill="#ffe9a3" stroke="#84612e" stroke-width="1.8" opacity="0.95"/>'; if(skin==='melanico') return '';  return ''; }
+function alphaGlow(skin){return '';} // Category presentation is composed outside the zoological SVG.
 function eyeColor(skin){ if(skin==='albino') return '#c85f6c'; if(skin==='melanico') return '#d8c46b'; return '#1d1a17'; }
 function legSet(x1,x2,y=71){ return `<line x1="${x1}" y1="${y}" x2="${x1-1}" y2="86" stroke="#3a3026" stroke-width="3.3" stroke-linecap="round"/><line x1="${x2}" y1="${y}" x2="${x2+1}" y2="86" stroke="#3a3026" stroke-width="3.3" stroke-linecap="round"/>`; }
 function premiumSpeciesSprite(name,kind,body,skin,id){

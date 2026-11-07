@@ -8,7 +8,7 @@ const engine=fs.readFileSync('www/js/herp-art-v3192.js','utf8');
 const oldEngine=fs.readFileSync('www/js/lab/herp-art-v3192-before.js','utf8').replace('ATLAS_HERP_ART_V3192_BEFORE','ATLAS_HERP_ART_V3192');
 const fish=fs.readFileSync('www/js/fish-art-v3191.js','utf8');
 const source=fs.readFileSync('www/js/app.js','utf8');
-const data=source.slice(source.indexOf('const SPECIES={'),source.indexOf('const GLOBAL_BIOMES_FULL='));
+const data=source.slice(source.indexOf('const SPECIES={'),source.indexOf('const GLOBAL_BIOMES_FULL='))+'\n'+source.slice(source.indexOf('function specialVariantName('),source.indexOf('function normalizeSpecialDiscoveries('));
 const graphics=source.slice(source.indexOf('function sexSpriteMarkup('),source.indexOf('// initial unlock checks and migration'));
 function api(art=engine,browser=true){
  const context=vm.createContext({});if(browser)context.window=context;
@@ -97,7 +97,7 @@ test('family silhouettes and requested species morphologies have distinct contou
 
 test('standalone laboratory catalog is reproducible and offline assets exist',()=>{
  execFileSync(process.execPath,['scripts/herp-lab-specimens.cjs','--check']);
- const sw=fs.readFileSync('www/sw.js','utf8');assert.match(sw,/gran-atlas-v3\.19\.6-/);assert.match(sw,/ignoreSearch:true/);
+ const sw=fs.readFileSync('www/sw.js','utf8');assert.match(sw,/gran-atlas-v3\.19\.7-/);assert.match(sw,/ignoreSearch:true/);
  for(const path of ['./js/lab/herp-art-v3192-before.js','./js/lab/herp-specimens-v3192b.js']){
   assert.ok(sw.includes("'"+path+"'"));assert.ok(fs.existsSync('www/'+path));
  }

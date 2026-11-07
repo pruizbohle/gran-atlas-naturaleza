@@ -13,7 +13,7 @@ const current=api(),fallback=api(''),browser=api(engine,true);
 const bc=vm.createContext({});vm.runInContext(engine+'\n'+fs.readFileSync('www/js/lab/dimorphism-production.js','utf8')+'\n'+fs.readFileSync('www/js/lab/mammal-sprites-v3193-before.js','utf8'),bc);const lab=bc.ATLAS_MAMMAL_LAB;
 // Independent inventory from every effective record, not the historical kind labels.
 const mammals=Object.entries(current.SPECIES).filter(([,sp])=>!classifyBird(sp)&&!classifyHerp(sp)&&!['fish','ray'].includes(sp.kind));
-const geom=svg=>[...svg.replace(/<defs>[\s\S]*?<\/defs>/g,'').replace(/<g data-mammal-aura="true">[\s\S]*?<\/g>/g,'').matchAll(/\b(?:d|cx|cy|r|rx|ry|transform)="([^"]+)"/g)].map(x=>x[0]).join('|');
+const geom=svg=>[...svg.replace(/ data-specimen-category="[^"]*"/g,'').replace(/<g data-specimen-halo="[^"]*"[\s\S]*?<\/g>/g,'').replace(/<defs>[\s\S]*?<\/defs>/g,'').replace(/<g data-mammal-aura="true">[\s\S]*?<\/g>/g,'').matchAll(/\b(?:d|cx|cy|r|rx|ry|transform)="([^"]+)"/g)].map(x=>x[0]).join('|');
 const contour=svg=>{let hidden=0;return geom(svg.replace(/<[^>]+>|[^<]+/g,token=>{
  if(hidden){if(/^<g\b/.test(token))hidden++;else if(token.startsWith('</g'))hidden--;return '';}
  if(/^<g\b[^>]*data-mammal-detail="true"/.test(token)){hidden=1;return '';}
@@ -116,12 +116,12 @@ test('every existing mammal receives actual new anatomical paths rather than a r
 
 test('the game, current labs and offline cache include the new art in the existing architecture',()=>{
  const html=fs.readFileSync('www/index.html','utf8'),sw=fs.readFileSync('www/sw.js','utf8');
- assert.ok(html.indexOf('js/mammal-art-v3194.js')<html.indexOf('js/app.js'));assert.match(sw,/gran-atlas-v3.19.6-pigmentacion/);
+ assert.ok(html.indexOf('js/mammal-art-v3194.js')<html.indexOf('js/app.js'));assert.match(sw,/gran-atlas-v3.19.7-especimenes/);
  const assets=vm.runInNewContext(sw.slice(0,sw.indexOf('self.addEventListener'))+'\nASSETS');
  for(const path of assets)assert.ok(fs.existsSync('www/'+path.replace(/^\.\//,'')),path);
  for(const path of ['laboratorio-mamiferos.html','js/mammal-art-v3194.js','js/lab/mammal-lab-v3194.js'])assert.ok(assets.includes('./'+path));
  for(const path of ['laboratorio-aves.html','laboratorio-herpetologia.html','laboratorio-peces.html'])assert.ok(assets.includes('./'+path));
  const labSource=fs.readFileSync('www/laboratorio-mamiferos.html','utf8');assert.ok(!labSource.includes('src="js/app.js'));for(const n of [56,80,120])assert.ok(labSource.includes('value="'+n+'"'));assert.ok(labSource.includes('id="similar"'));
  require('node:child_process').execFileSync(process.execPath,['scripts/mammal-inventory.cjs','--check']);
- assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.19.6');assert.equal(JSON.parse(fs.readFileSync('capacitor.config.json')).appId,'com.elgranatlas.naturaleza.beta314');
+ assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.19.7');assert.equal(JSON.parse(fs.readFileSync('capacitor.config.json')).appId,'com.elgranatlas.naturaleza.beta314');
 });

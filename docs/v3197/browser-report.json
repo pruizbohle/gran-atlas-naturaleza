@@ -1,0 +1,19 @@
+{
+  "version": "3.19.7",
+  "svgValidation": 505,
+  "legendaryPlates": 12,
+  "sizes": [
+    56,
+    120
+  ],
+  "mobileWidth": 390,
+  "labIsolation": true,
+  "simulation": "100000 observations, one legendary",
+  "save": "real JSON import, reload, offline boot, canonical identity",
+  "screenshots": [
+    "legendary-120.png",
+    "legendary-56.png",
+    "mobile.png"
+  ],
+  "jsErrors": []
+}

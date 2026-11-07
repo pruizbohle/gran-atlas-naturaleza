@@ -993,3 +993,7 @@ button,select{font:inherit}
 /* 3.19.2b: miniaturas herpetológicas legibles en PC, sin ampliar tarjetas ni modificar layout */
 /* La nueva anatomía ya ocupa el viewBox: evita recortar dedos y colas. */
 .species-card .sprite-wrap svg[data-herp-family]{transform:none}
+
+/* v3.19.7: visual collection furniture, independent of museum economics. */
+.bestiary-specimen-entry{min-width:0}.bestiary-specimen-entry>.species-card{width:100%}.bestiary-specimen-entry details{margin-top:6px}.bestiary-specimen-entry summary{cursor:pointer;font-size:12px;color:var(--green)}
+.legendary-collection .sprite-wrap,.legendary-collection .sprite-wrap svg{width:120px;height:120px}.legendary-collection .variant-card{padding:14px;min-width:0}

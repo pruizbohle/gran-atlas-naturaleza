@@ -1,3 +1,7 @@
+# El Gran Atlas v3.19.7 — Especímenes excepcionales
+
+Cuatro categorías visuales, 12 individuos legendarios con ilustraciones propias y aparición única por partida. [Informe y probabilidades](README_V3197.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-especiales.html).
+
 # El Gran Atlas v3.19.6 — Albinismo y melanismo
 
 Pigmentación centralizada, conservación de anatomía y migración segura de descubrimientos históricos. [Informe de versión](README_V3196.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-pigmentacion.html).
