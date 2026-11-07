@@ -66,7 +66,7 @@ test('normalization is idempotent, retains unknown historical keys and canonical
 test('cards collapse historical aliases and display one discovered Albino',()=>{
  const badge=source.slice(source.indexOf('function specialBadges('),source.indexOf('\nfunction ',source.indexOf('function specialBadges(')+1));
  const variant=source.slice(source.indexOf('function variantToSkin('),source.indexOf('function pushLog('));
- const cards=vm.runInNewContext(source.slice(source.indexOf('function specialVariantName('),source.indexOf('Object.values(SPECIES).forEach(sp=>{sp.special='))+variant+badge+';specialBadges("fox")',{SPECIES:{fox:{special:['Leucístico','Albino','Leucística','Melánico']}},state:{specialFound:{fox:{'Leucístico':true}}},getSpriteMarkup:()=>'<svg/>'});
+ const cards=vm.runInNewContext(source.slice(source.indexOf('function specialVariantName('),source.indexOf('Object.values(SPECIES).forEach(sp=>{sp.special='))+variant+badge+'\n;specialBadges("fox")',{SPECIES:{fox:{special:['Leucístico','Albino','Leucística','Melánico']}},state:{specialFound:{fox:{'Leucístico':true}}},getSpriteMarkup:()=>'<svg/>'});
  assert.equal((cards.match(/variant-card/g)||[]).length,2);assert.equal((cards.match(/>Albino</g)||[]).length,1);assert.doesNotMatch(cards,/Leucíst/);
 });
 test('encounter probabilities, ethology and collection selection remain exact',()=>{
