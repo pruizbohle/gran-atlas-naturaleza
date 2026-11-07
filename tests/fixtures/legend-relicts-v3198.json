@@ -1,0 +1,28 @@
+{
+  "baseline": "bacffc91dc39fecfbba850f0d4bcfc10ba36398f",
+  "legendary": {
+    "silverback": "fc4d9d24f3f1e05ae424553ed100a5e9f0762dcd6cbbb6b1143c53c9b7f57d5b",
+    "ambar": "deb6bed0eef10932ecfe3c8ff908e9f01da140e85e505d38b7ac0187083ccf61",
+    "niebla": "cd2e35b4604990860baa3d0d311061bf8340c806d5a3287ac99330d5dc17df69",
+    "fenrir": "ad1da145da0b0a79f5c54c8da75de40bd39dea944bfcbc417a167884f051c491",
+    "atlas": "5275194094dfc7ad0f33700eaebb1f334372b5d8397ffcab074790e80d869479",
+    "centinela": "d5def620054132d97e811b85beffcaffea41f818c4ccad23dc246cae47b050bc",
+    "basalto": "c042e76930101f052697c37129b736ccb7dfd3890ec18c65e620d3fc3c77f124",
+    "seda": "5825b1f1291bd634034a5e38ab39a2efa4db02cf30da5c433b36ceed29caad7b",
+    "junco": "3b38978251278e4f782d3f17481c16e5af83bc10cbc45703added05da9245899",
+    "ancora": "e402b35e4ec9777f4df779735fb4c1690ef016f6a45b46790ab29ba6b230728e",
+    "ascua": "07c23ccfa4485f2bb84b9df782afcba5ede1d738b7d22a79b5b92912f5f260a5",
+    "remonte": "9f15b09355ad8447daea816c95c29687603910b5e59e0989fa981650b502b33f"
+  },
+  "relicts": {
+    "coelacanth_indic": "25590b133687a34710b87fe662fd7b783f4bf8854bb156fa26fc7bbe4a21274f",
+    "atlas_lion": "6ad6e69d5a0937148c063c2e17fed819d5277d0b073c7df2691296fc2ae25d46",
+    "seychelles_sheathbat": "63dc671f367e12aac536a81d84435931cebda0e3c2cd12dc8f3c18b6d42b4062",
+    "gabon_dwarf_croc": "adc17e409d5d925110e3e39444f86e8aab2d244a14d45466131316afc8039557",
+    "angonoka": "b072fa4343e25705a78a4bada83409443349298a3b104082e5c266b264222ce2",
+    "african_lungfish": "30e85d8b3cac9cb2c99c30ff6012e951ed00db62adbd488fa54a6e4a041a3f3e",
+    "white_sturgeon": "8132b716ad1eb21599c3483c96d4c620a5f51a1db46d5e386bead6924c68f35f",
+    "gharial": "243273e210960f39bf7fc4e18aaca7398429a844ddc61f0a2337f37822b95564",
+    "olm_balkans": "0728a04be6af8ec28e67be54de1a5ebe3ec1708d0ed196c976507f6da786cc1c"
+  }
+}

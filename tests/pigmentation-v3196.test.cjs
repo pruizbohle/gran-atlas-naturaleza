@@ -14,9 +14,9 @@ test('canonical labels, catalog inventory and duplicate-free options preserve co
  for(const sp of species){assert.equal(sp.special.length,new Set(sp.special).size);for(const label of sp.special)assert.ok(['Albino','Melánico','Notable'].includes(label));}
  assert.equal(Object.keys(api.SEXUAL_DIMORPHISM).length,32);
 });
-test('every normal and all 64 sexual sprites match v3.19.5 byte-for-byte',()=>{
- const baseline=require('./fixtures/normal-sprites-v3195.json');assert.deepEqual(Object.keys(api.SPECIES),Object.keys(baseline));
- for(const [id,sexes]of Object.entries(baseline))for(const [sex,expected]of Object.entries(sexes))assert.equal(crypto.createHash('sha256').update(api.getSpriteMarkup(id,'normal',sex==='base'?null:sex)).digest('hex'),expected,id+':'+sex);
+test('all normal and sexual sprites match their approved geometry baseline',()=>{
+ const baseline=require('./fixtures/normal-sprites-v3195.json'),refined=require('./fixtures/normal-sprites-v3199.json');assert.deepEqual(Object.keys(api.SPECIES),Object.keys(baseline));
+ for(const [id,sexes]of Object.entries(baseline))for(const [sex,original]of Object.entries(sexes)){const sp=api.SPECIES[id],target=ctx.ATLAS_MAMMAL_ART_V3194.classify(sp,id)||ctx.ATLAS_FISH_ART_V3191.classify(sp),expected=target?refined[id][sex]:original;assert.equal(crypto.createHash('sha256').update(api.getSpriteMarkup(id,'normal',sex==='base'?null:sex)).digest('hex'),expected,id+':'+sex);}
 });
 test('all variants share full normal geometry, patterns, opacity and clipping, with one cached paint pass',()=>{
  for(const id of Object.keys(api.SPECIES)){
@@ -77,5 +77,5 @@ test('historical pigmentation weights and ethology remain exact in the independe
 test('lab bundle is reproducible and isolated from game progress; offline resources are complete',()=>{
  const lab=fs.readFileSync('www/js/lab/dimorphism-production.js','utf8'),gallery=fs.readFileSync('www/js/lab/pigmentation-lab-v3196.js','utf8');assert.doesNotMatch(lab+gallery,/localStorage|recordSexObservation|setInterval|state\.specialFound/);
  require('node:child_process').execFileSync(process.execPath,['scripts/build-dimorphism-lab.cjs','--check']);
- const sw=fs.readFileSync('www/sw.js','utf8');assert.match(sw,/gran-atlas-v3\.19\.8-inventario/);for(const asset of ['laboratorio-pigmentacion.html','js/lab/pigmentation-lab-v3196.js'])assert.ok(sw.includes("'./"+asset+"'"));
+ const sw=fs.readFileSync('www/sw.js','utf8');assert.match(sw,/gran-atlas-v3\.19\.9-pulido/);for(const asset of ['laboratorio-pigmentacion.html','js/lab/pigmentation-lab-v3196.js'])assert.ok(sw.includes("'./"+asset+"'"));
 });

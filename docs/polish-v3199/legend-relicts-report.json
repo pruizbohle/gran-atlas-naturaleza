@@ -1,0 +1,36 @@
+{
+  "baseline": "bacffc91dc39fecfbba850f0d4bcfc10ba36398f",
+  "legendary": [
+    "silverback",
+    "ambar",
+    "niebla",
+    "fenrir",
+    "atlas",
+    "centinela",
+    "basalto",
+    "seda",
+    "junco",
+    "ancora",
+    "ascua",
+    "remonte"
+  ],
+  "relicts": [
+    "coelacanth_indic",
+    "atlas_lion",
+    "seychelles_sheathbat",
+    "gabon_dwarf_croc",
+    "angonoka",
+    "african_lungfish",
+    "white_sturgeon",
+    "gharial",
+    "olm_balkans"
+  ],
+  "sizes": [
+    56,
+    80,
+    120
+  ],
+  "allSVGsParse": true,
+  "allGeometryInsideViewport": true,
+  "uniqueSVGIds": true
+}

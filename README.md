@@ -1,3 +1,7 @@
+# El Gran Atlas v3.19.9 — Pulido artístico definitivo
+
+Mamíferos, peces, Legendarios y relictos refinados. [Informe y validación](README_V3199.md) · [Laboratorio comparativo](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-pulido-v3199.html).
+
 # El Gran Atlas v3.19.8 — Inventario ilustrado
 
 52 objetos y 8 estudios con láminas SVG originales. [Informe y validación](README_V3198.md) · [Laboratorio de objetos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-objetos.html).

@@ -29,6 +29,11 @@ jobs:
           node --check www/js/herp-art-v3192.js
           node --check www/js/mammal-art-v3194.js
           node --check www/js/lab/mammal-lab-v3194.js
+          node --check www/js/fish-art-v3191.js
+          node --check www/js/legendary-art-v3197.js
+          node --check www/js/relict-art-v3199.js
+          node --check www/js/lab/polish-lab-v3199.js
+          node --check www/js/lab/polish-review-v3199.js
           node --check www/js/item-art-v3198.js
           node --check www/js/lab/item-lab-v3198.js
           node --check www/js/app.js

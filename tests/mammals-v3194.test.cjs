@@ -67,7 +67,7 @@ test('all 218 non-mammals retain exactly their previous sprites, skins and confi
  for(const [path,sha] of [
  ['www/js/bird-art-v3193.js','9475c214345fae86005eb18c1898ac201d31419d9b8d3948f2c43517581f1ef8'],
  ['www/js/herp-art-v3192.js','a9d56f4e8d25fa00193e8fd0ffa63e310b1d0dfc6b0af135120c66fa2ff5b377'],
- ['www/js/fish-art-v3191.js','9a68a8ee02f89b0a22b8956e6292d2f43d253782c4a69e21de5e6398314720c6']
+ ['www/js/item-art-v3198.js','db3a8bc3e0aa6407ef5f453a92aef5c24fef80abb68d753e669e2ea427b6cf82']
  ])assert.equal(digest(fs.readFileSync(path)),sha,path+' untouched');
 });
 
@@ -116,12 +116,12 @@ test('every existing mammal receives actual new anatomical paths rather than a r
 
 test('the game, current labs and offline cache include the new art in the existing architecture',()=>{
  const html=fs.readFileSync('www/index.html','utf8'),sw=fs.readFileSync('www/sw.js','utf8');
- assert.ok(html.indexOf('js/mammal-art-v3194.js')<html.indexOf('js/app.js'));assert.match(sw,/gran-atlas-v3.19.8-inventario/);
+ assert.ok(html.indexOf('js/mammal-art-v3194.js')<html.indexOf('js/app.js'));assert.match(sw,/gran-atlas-v3.19.9-pulido/);
  const assets=vm.runInNewContext(sw.slice(0,sw.indexOf('self.addEventListener'))+'\nASSETS');
  for(const path of assets)assert.ok(fs.existsSync('www/'+path.replace(/^\.\//,'')),path);
  for(const path of ['laboratorio-mamiferos.html','js/mammal-art-v3194.js','js/lab/mammal-lab-v3194.js'])assert.ok(assets.includes('./'+path));
  for(const path of ['laboratorio-aves.html','laboratorio-herpetologia.html','laboratorio-peces.html'])assert.ok(assets.includes('./'+path));
  const labSource=fs.readFileSync('www/laboratorio-mamiferos.html','utf8');assert.ok(!labSource.includes('src="js/app.js'));for(const n of [56,80,120])assert.ok(labSource.includes('value="'+n+'"'));assert.ok(labSource.includes('id="similar"'));
  require('node:child_process').execFileSync(process.execPath,['scripts/mammal-inventory.cjs','--check']);
- assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.19.8');assert.equal(JSON.parse(fs.readFileSync('capacitor.config.json')).appId,'com.elgranatlas.naturaleza.beta314');
+ assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.19.9');assert.equal(JSON.parse(fs.readFileSync('capacitor.config.json')).appId,'com.elgranatlas.naturaleza.beta314');
 });

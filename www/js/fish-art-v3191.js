@@ -1,183 +1,108 @@
-/* El Gran Atlas 3.19.1 — lámina de ictiofauna.
- * Solo dibujo: no altera especies, inventario, avistamientos ni persistencia.
- * Siluetas por grupo y variación de patrones por nombre científico/común.
+/* El Gran Atlas v3.19.9 — ictiofauna de producción.
+ * Rutas anatómicas originales: aletas con inserción continua, bocas y colas propias.
+ * El catálogo y las probabilidades permanecen fuera de este módulo.
  */
-(function(){
-"use strict";
-function esc(v){return String(v||"").toLocaleLowerCase("es").normalize("NFD").replace(/[\u0300-\u036f]/g,"");}
-function shift(hex,delta){
- const h=/^#[0-9a-f]{6}$/i.test(hex||"")?hex:"#60899b";
- return "#"+[1,3,5].map(i=>Math.max(0,Math.min(255,parseInt(h.slice(i,i+2),16)+delta)).toString(16).padStart(2,"0")).join("");
-}
-function wrap(family,parts,skin){
- const glow=skin==="alfa"?'<circle cx="50" cy="50" r="43" fill="#f4d678" opacity=".24"/>':"";
- return '<svg viewBox="0 0 100 100" aria-hidden="true" data-fish-family="'+family+'">'+glow+parts+'</svg>';
-}
-function art(sp,color,skin){
- if(!sp || (sp.kind!=="fish" && sp.kind!=="ray"))return null;
- const name=esc(sp.name),latin=esc(sp.latin),ink="#34424a",base=color||"#668d94",
- dark=shift(base,-34),pale=shift(base,29),belly=skin==="melanico"?"#6a7479":skin==="albino"?"#f2eeeb":"#d5ded5",
- eye=skin==="albino"?"#c85f6c":skin==="melanico"?"#d8c46b":"#18272d";
- const p=(d,fill=base,stroke=ink,w=2.6)=>'<path d="'+d+'" fill="'+fill+'" stroke="'+stroke+'" stroke-width="'+w+'" stroke-linejoin="round" stroke-linecap="round"/>';
- const line=(d,stroke=dark,w=1.8)=>'<path d="'+d+'" fill="none" stroke="'+stroke+'" stroke-width="'+w+'" stroke-linecap="round"/>';
- const dot=(x,y,r,fill)=>'<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+fill+'"/>';
- const eyeMark=(x=77,y=51)=>dot(x,y,2.2,eye)+dot(x+.55,y-.6,.6,"#ffffff");
- const gills=(x=69,y=54,n=3)=>Array.from({length:n},(_,i)=>line('M'+(x-i*3)+' '+(y-5)+'q-2 6 0 12',dark,1.5)).join("");
- const commonTail=p("M30 56L9 39Q16 56 9 74L30 61Z",dark);
- const commonFins=p("M45 46L51 32L60 48Z",dark)+p("M47 64L39 77L62 64Z",dark);
- const scales=(fill=dark)=>Array.from({length:9},(_,i)=>dot(40+(i%3)*8,51+Math.floor(i/3)*5,1.15,fill)).join("");
-
- // Perfiles icónicos: dibujos amplios y específicos, legibles a 56 px.
- // Un pez se distingue por contorno antes que por color, manchas o escamas.
- const specific=(family,parts)=>wrap(family,parts,skin);
- if(/tiburon blanco|carcharodon carcharias/.test(name+" "+latin)){
-  return specific("tiburon-blanco",
-    p("M9 62L3 42L19 51L29 49Q46 42 69 48L89 53L97 58L88 64Q61 73 29 66L19 65L4 80Z",base)
-    +p("M41 48L55 18L63 49Z",dark)+p("M49 67L42 83L66 67Z",dark)
-    +p("M33 62Q65 70 92 61Q64 77 31 67Z",belly,"none",0)
-    +gills(73,56,4)+eyeMark(84,53)
-    +line("M87 63l-2-2-2 2-2-2-2 2",ink,1.5));
- }
- if(/tiburon de puntas negras|carcharhinus melanopterus/.test(name+" "+latin)){
-  return specific("tiburon-arrecife",
-    p("M12 63L4 45L21 54Q42 45 68 52L88 56L97 60L86 65Q58 70 29 65L19 64L4 78Z",base)
-    +p("M43 51L53 25L62 52Z",pale)+p("M50 30L53 25L57 34Z","#252d38",ink,1)
-    +p("M49 65L43 77L62 65Z",dark)+p("M45 68L43 77L48 73Z","#252d38",ink,1)
-    +gills(73,57,4)+eyeMark(83,56)+line("M23 63Q54 70 87 64",belly,2.5));
- }
- if(/carpa comun|cyprinus carpio/.test(name+" "+latin)){
-  return specific("carpa",
-    p("M24 55L6 38L12 56L6 75Z",dark)
-    +p("M22 54Q26 36 48 33Q76 32 89 50Q92 64 74 74Q43 79 25 63Z",base)
-    +p("M36 38Q46 20 66 36Z",dark)
-    +p("M47 69L42 83L67 72Z",dark)
-    +p("M35 58Q55 67 80 56Q68 77 39 67Z",pale,"none",0)
-    +Array.from({length:15},(_,i)=>line("M"+(35+(i%5)*8)+" "+(43+Math.floor(i/5)*8)+"q4-2 5 3",dark,1.4)).join("")
-    +eyeMark(78,49)+line("M85 59q7 2 9 7m-9-5q7 0 11-3",dark,2));
- }
- if(/tenca|tinca tinca/.test(name+" "+latin)){
-  return specific("tenca",
-    p("M23 54L8 43L10 68Z",dark)
-    +p("M23 54Q31 42 53 40Q75 41 87 53Q89 70 62 73Q35 76 23 61Z",base)
-    +p("M47 41L54 33L65 43Z",dark)+p("M47 69L39 79L65 69Z",dark)
-    +p("M37 59Q60 66 83 59Q65 76 43 68Z",pale,"none",0)
-    +eyeMark(78,52)+line("M84 60q4 1 8 4",ink,2));
- }
- if(/perca europea|perca fluviatilis/.test(name+" "+latin)){
-  return specific("perca",
-    p("M25 55L8 40L9 73Z",dark)
-    +p("M24 53Q30 39 54 40Q77 42 88 55Q78 75 52 72Q34 69 24 60Z",base)
-    +p("M32 44L36 22L43 36L49 21L56 39L62 26L70 46Z",pale)
-    +p("M46 68L42 85L65 71Z",dark)
-    +Array.from({length:5},(_,i)=>line("M"+(39+i*8)+" "+(42+i%2*2)+"l-2 24",dark,3)).join("")
-    +p("M72 60Q83 64 89 58", "none",ink,2)+eyeMark(79,52));
- }
- if(/pez mandarin chino|siniperca chuatsi/.test(name+" "+latin)){
-  return specific("mandarin-chino",
-    p("M24 58L6 41L12 57L6 75Z",dark)
-    +p("M23 55Q34 39 51 40Q76 40 89 56L83 70Q49 76 29 66Z",base)
-    +p("M31 45L37 24L44 38L49 23L56 39L61 27L70 43Z",dark)
-    +p("M48 69L37 83L66 70Z",dark)
-    +Array.from({length:9},(_,i)=>dot(35+(i%3)*12,47+Math.floor(i/3)*8,i%2?2.6:3.5,dark)).join("")
-    +eyeMark(79,49)+line("M82 63l9-4",ink,2.4));
- }
- if(/pez mariposa africano|pantodon buchholzi/.test(name+" "+latin)){
-  return specific("pez-mariposa-africano",
-    p("M15 52L4 37L10 55L5 77L22 63Z",dark)
-    +p("M28 53Q36 37 58 45L85 54L89 60Q66 76 38 68Z",base)
-    +p("M37 52Q26 21 49 15Q62 26 67 49Z",pale)
-    +p("M41 63Q23 76 33 94L64 69Z",dark)
-    +p("M84 55L97 48L89 61Z",pale)
-    +line("M35 39Q50 42 55 54",dark,2.8)+eyeMark(78,52));
- }
- if(/esturion siberiano|acipenser baerii/.test(name+" "+latin)){
-  return specific("esturion-siberiano",
-    p("M20 58L6 38L12 57L5 77Z",dark)
-    +p("M20 57Q37 43 68 49L96 57L70 62Q38 70 20 62Z",base)
-    +p("M42 48L49 27L57 49Z",dark)
-    +p("M49 65L45 79L65 64Z",dark)
-    +Array.from({length:8},(_,i)=>p("M"+(25+i*7)+" 49l3-5 5 4-4 5Z",pale,ink,1)).join("")
-    +Array.from({length:6},(_,i)=>dot(28+i*9,63,2,pale)).join("")
-    +line("M83 62l0 10m-6-10l-3 8",dark,1.6)+eyeMark(84,53));
- }
- let family,svg;
- if(sp.kind==="ray" || /manta|mantarraya|raya|raia|mobula|myliobat|dasyat|rajidae|aetobat/.test(name+" "+latin)){
-   const manta=/manta|mobula/.test(name+" "+latin);
-   family=manta?"manta":"raya";
-   svg=p(manta?"M50 43Q33 40 5 27Q13 51 33 61Q41 66 50 63Q59 66 67 61Q88 51 95 27Q68 40 50 43Z":"M50 35Q35 38 9 28Q12 49 31 68Q43 79 50 73Q58 79 69 68Q88 49 91 28Q65 38 50 35Z",base)
-     +p("M46 66Q48 83 48 96L52 96Q54 82 54 66Z",dark,ink,1.8)
-     +p("M34 50Q50 44 66 50Q63 61 50 63Q37 61 34 50Z",pale,"none",0)
-     +line("M21 42Q30 50 39 52M79 42Q70 50 61 52",dark,1.7)
-     +dot(43,52,2,eye)+dot(57,52,2,eye)
-     +line("M47 59q3 2 6 0",ink,1.4);
- }else if(/tiburon|carcharodon|carcharhin|tr iaenodon|triaenodon|sphyrna|selachim|galeocerdo|isurus/.test(name+" "+latin)){
-   const hammer=/martillo|sphyrna/.test(name+" "+latin);
-   family=hammer?"tiburon-martillo":"tiburon";
-   svg=p("M12 60Q32 45 58 50Q73 51 85 54L94 58L84 63Q64 71 38 66L23 66Z",base)
-     +p("M15 59L5 45Q15 51 22 53L20 61L6 78Z",dark)
-     +p("M43 49L55 25L63 51Z",dark)
-     +p("M54 65L47 78L67 64Z",dark)
-     +p("M76 54L70 43L82 53Z",pale)
-     +p("M31 64Q63 75 86 62Q64 71 36 67Z",belly,"none",0)
-     +gills(70,57,4)+eyeMark(79,54);
-   if(hammer)svg+=p("M82 54L91 39L98 42L90 58Z",base)+dot(95,42,1.7,eye);
-   if(/blanco|carcharodon/.test(name+" "+latin))svg+=line("M41 66Q64 71 86 62",belly,3);
-   if(/puntas negras/.test(name))svg+=p("M53 29L55 25L58 31Z","#27343c",ink,1);
- }else if(/anguila|morena|congrio|lamprea|eel|anguilla|muraena|conger/.test(name+" "+latin)){
-   family="anguilliforme";
-   svg=p("M8 65Q20 39 43 48Q63 55 75 43Q87 35 93 49Q96 58 88 60Q77 65 60 59Q40 50 27 63Q20 72 9 74Z",base)
-      +p("M11 66Q23 57 37 55Q57 60 76 49Q81 43 89 46", "none",dark,2)
-      +p("M9 65Q4 76 12 83L17 69Z",dark)
-      +eyeMark(86,47)+line("M81 55l7 1",ink,1.3);
- }else if(/caballito de mar|hippocampus/.test(name+" "+latin)){
-   family="caballito-mar";
-   svg=p("M64 25Q79 23 79 36L72 44Q82 52 71 66Q63 72 54 67Q44 61 48 75Q54 87 62 80Q64 77 60 75",base,ink,6)
-      +p("M73 30L88 28L80 35Z",pale)
-      +p("M60 47L45 34L48 62Z",dark)
-      +line("M61 38l-10-5m9 12l-11-4m10 12l-10-3",pale,2)
-      +eyeMark(73,31);
- }else if(/lenguado|rodaballo|platija|solea|pleuronect|scophthalm/.test(name+" "+latin)){
-   family="pez-plano";
-   svg=p("M17 55Q33 24 62 35Q89 43 82 61Q62 88 30 70Z",base)
-      +p("M19 55L8 43L10 72Z",dark)
-      +p("M31 43Q51 27 72 45Q49 39 31 51Z",pale,"none",0)
-      +scales()+dot(63,46,2,eye)+dot(69,51,2,eye);
- }else if(/esturion|acipenser|huso huso/.test(name+" "+latin)){
-   family="esturion";
-   svg=p("M24 55Q45 40 70 49L92 55L76 61Q51 68 26 61Z",base)
-      +p("M23 55L8 35L14 54L7 75L26 61Z",dark)
-      +p("M42 46L47 31L55 46Z",dark)
-      +p("M49 63L43 76L63 63Z",dark)
-      +Array.from({length:7},(_,i)=>p("M"+(33+i*7)+" 49l4-3 4 4-4 4Z",pale,ink,1)).join("")
-      +line("M75 59l4 9m-9-9 1 8",dark,1.5)+eyeMark(81,52);
+(function(root){
+'use strict';
+const normal=s=>String(s||'').toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+const profiles={
+ 'acipenser baerii':{family:'esturion-siberiano',body:'M19 55Q37 43 65 46Q79 47 93 55L80 59Q56 69 20 62Z',tail:'M24 55Q14 47 7 30Q12 51 13 58L6 73Q15 71 25 61Z',dorsal:'M30 50Q35 38 42 34L48 47Z',ventral:'M41 63Q42 76 48 78L53 64Z',color:'#758b82',fin:'#62776d'},
+ 'salmo trutta':{family:'trucha-comun',body:'M22 52Q39 39 63 42Q81 43 91 51L92 57Q75 68 52 66Q32 65 22 60Z',tail:'M26 51Q15 46 7 42L11 55 8 69Q18 65 27 61Z',dorsal:'M41 44Q43 32 54 29L62 43Z',ventral:'M43 64Q43 74 51 77L56 65Z',color:'#8d9473',fin:'#a38665'},
+ 'barbus barbus':{family:'barbo',body:'M21 54Q43 40 66 44Q82 46 92 54L90 60Q67 70 43 65L22 61Z',tail:'M24 53Q14 45 6 38Q8 53 14 57L6 75Q16 70 25 61Z',dorsal:'M42 45Q45 32 51 26L60 44Z',ventral:'M44 64Q42 74 49 78L56 66Z',color:'#9f9b72',fin:'#a18458'},
+ 'tinca tinca':{family:'tenca',body:'M21 52Q29 37 52 37Q78 37 89 51L90 59Q81 74 56 73Q30 72 21 61Z',tail:'M25 51Q16 43 9 45Q6 56 10 69Q17 68 25 62Z',dorsal:'M43 39Q48 25 57 31Q62 34 64 39Z',ventral:'M43 70Q40 81 50 83Q58 81 60 71Z',color:'#768258',fin:'#827648'},
+ 'perca fluviatilis':{family:'perca',body:'M24 51Q36 36 57 39Q78 40 91 51L91 58Q77 73 53 72Q36 70 24 60Z',tail:'M27 51Q18 43 8 40L12 55 7 73Q19 70 28 62Z',dorsal:'M31 45L34 27 39 32 43 23 48 31 52 25 58 40Q65 29 72 39L77 44Z',ventral:'M46 69Q44 79 49 82L61 71Z',color:'#8d9d69',fin:'#be835c'},
+ 'oncorhynchus gorbuscha':{family:'salmon-rosado',body:'M22 54Q34 42 44 32Q54 26 66 40Q81 44 91 52L93 59Q76 69 53 67Q35 66 22 61Z',tail:'M25 53Q15 44 7 39L12 55 6 74Q17 68 26 62Z',dorsal:'M39 36Q42 25 48 24L56 34Z',ventral:'M44 65Q44 74 52 78L58 67Z',color:'#a08c85',fin:'#7b7770'},
+ 'oncorhynchus nerka':{family:'salmon-rojo',body:'M21 52Q40 37 65 42Q82 43 91 53L92 58Q76 70 52 68Q35 66 21 60Z',tail:'M25 51Q15 46 7 37L12 55 7 75Q19 67 26 62Z',dorsal:'M43 42Q45 30 53 27L62 42Z',ventral:'M43 65Q43 76 52 79L58 66Z',color:'#a96257',fin:'#8b6b59'},
+ 'cyprinus carpio':{family:'carpa',body:'M22 53Q29 31 55 31Q79 31 89 49L91 58Q81 78 56 77Q30 75 22 63Z',tail:'M26 51Q15 46 6 35L12 55 7 78Q20 70 27 63Z',dorsal:'M32 38Q39 23 49 25Q60 26 70 35L73 40Z',ventral:'M45 73Q43 84 51 86L62 75Z',color:'#a29b68',fin:'#99825a'},
+ 'channa argus':{family:'cabeza-serpiente',body:'M17 50Q45 37 75 42Q87 42 94 49L94 58Q84 69 62 68Q37 67 17 61Z',tail:'M21 50Q12 44 8 48Q3 58 9 68Q15 69 22 62Z',dorsal:'M25 47Q39 31 52 34Q68 34 79 42L78 46Z',ventral:'M27 63Q41 78 66 72L76 65Z',color:'#7b8467',fin:'#686f56'},
+ 'siniperca chuatsi':{family:'mandarin-chino',body:'M22 51Q34 34 56 37Q78 36 91 48L94 57Q81 76 56 75Q34 72 22 61Z',tail:'M26 51Q16 43 8 44Q5 57 9 72Q20 70 27 62Z',dorsal:'M31 43L34 26 39 32 43 23 48 31 53 26 58 37Q68 27 74 37L80 45Z',ventral:'M44 70Q43 82 52 85L65 73Z',color:'#b0a17a',fin:'#8b8d65'},
+ 'carcharodon carcharias':{family:'tiburon-blanco',body:'M18 54Q38 41 61 43Q80 43 94 53L91 60Q75 73 47 69Q29 66 19 62Z',tail:'M23 53Q11 45 7 24Q8 46 12 57L5 79Q15 77 25 63Z',dorsal:'M39 46Q42 27 51 17Q53 36 63 45Z',ventral:'M50 66Q47 80 37 86Q59 81 67 67Z',color:'#82938f',fin:'#657e7d'},
+ 'mobula birostris':{family:'manta',color:'#556f73',fin:'#455e65'},
+ 'carcharhinus melanopterus':{family:'tiburon-arrecife',body:'M19 54Q42 45 66 48Q81 48 94 55L92 60Q72 70 49 66L19 62Z',tail:'M24 54Q13 43 8 26L12 56 5 79Q18 72 26 63Z',dorsal:'M43 49Q45 33 52 23Q54 41 62 49Z',ventral:'M52 65Q50 76 42 81Q57 77 67 66Z',color:'#899b90',fin:'#6c8581'},
+ 'oreochromis niloticus':{family:'tilapia',body:'M22 52Q35 30 60 34Q79 36 90 51L91 59Q78 79 54 77Q32 74 22 62Z',tail:'M27 51Q15 39 8 44Q5 58 10 74Q20 70 28 63Z',dorsal:'M29 44L32 30 37 34 41 25 47 30 52 24 58 29 63 26Q75 28 79 42Z',ventral:'M42 72Q44 85 57 85Q67 81 70 72Z',color:'#8e9781',fin:'#899381'},
+ 'hydrocynus goliath':{family:'tigre-goliat',body:'M20 53Q39 37 63 39Q79 39 92 50L95 58Q79 73 55 70Q33 67 20 62Z',tail:'M25 52Q13 44 5 32L12 56 6 79Q19 71 26 63Z',dorsal:'M42 42Q45 29 54 24L63 42Z',ventral:'M45 67Q45 79 53 81L61 69Z',color:'#a4ad9e',fin:'#ac8b68'},
+ 'pantodon buchholzi':{family:'pez-mariposa-africano',body:'M21 49Q42 39 66 44L89 50 93 57Q76 69 53 68Q35 65 21 59Z',tail:'M26 48Q15 40 9 44L8 55 6 71Q20 69 28 61Z',dorsal:'M34 44Q33 35 40 33L49 43Z',ventral:'M34 62Q22 76 34 85Q50 82 61 66Z',color:'#a79676',fin:'#aa9270'},
+ 'hydrocynus vittatus':{family:'tigre-africano',body:'M20 53Q40 41 65 44Q81 44 93 53L94 59Q77 71 54 67Q33 65 20 61Z',tail:'M24 52Q14 44 6 34L12 56 7 77Q18 68 25 62Z',dorsal:'M42 44Q45 33 53 28L62 44Z',ventral:'M45 65Q45 76 54 79L62 67Z',color:'#a0ac99',fin:'#b08e67'},
+ 'oncorhynchus mykiss':{family:'trucha-arcoiris',body:'M21 53Q40 40 63 43Q81 44 91 52L92 58Q78 69 54 66Q35 65 21 61Z',tail:'M25 52Q14 47 7 40L12 55 7 71Q17 66 26 62Z',dorsal:'M43 44Q44 32 53 29L62 44Z',ventral:'M44 64Q43 75 51 78L59 66Z',color:'#859c87',fin:'#8c9184'}
+};
+const aliases={'tiburon blanco':'carcharodon carcharias','tiburon de puntas negras':'carcharhinus melanopterus','carpa comun':'cyprinus carpio','tenca':'tinca tinca','perca europea':'perca fluviatilis','pez mandarin chino':'siniperca chuatsi','pez mariposa africano':'pantodon buchholzi','esturion siberiano':'acipenser baerii','trucha comun':'salmo trutta','manta gigante':'mobula birostris'};
+function scientificKey(sp){if(!sp)return null;const latin=normal(sp.latin).trim();if(latin)return Object.hasOwn(profiles,latin)?latin:null;return aliases[normal(sp.name).trim()]||null;}
+function classifyFish(sp){const key=scientificKey(sp);return key?profiles[key].family:null;}
+function shift(hex,amount){return '#'+[1,3,5].map(i=>Math.max(0,Math.min(255,parseInt(hex.slice(i,i+2),16)+amount)).toString(16).padStart(2,'0')).join('');}
+function renderFish(sp,color,skin='normal'){
+ const key=scientificKey(sp);if(!key)return null;const q=profiles[key];
+ const pigment=hex=>{const v=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)),lum=(v[0]*.2126+v[1]*.7152+v[2]*.0722)/255;return skin==='albino'?'#'+[218+lum*30,211+lum*31,203+lum*35].map(x=>Math.round(x).toString(16).padStart(2,'0')).join(''):skin==='melanico'?'#'+[18+lum*30,26+lum*31,31+lum*33].map(x=>Math.round(x).toString(16).padStart(2,'0')).join(''):hex;};
+ const ink=pigment('#3b4b48'),base=pigment(q.color),fin=pigment(q.fin),shade=pigment(shift(q.color,-28)),light=pigment(shift(q.color,24)),belly=pigment('#d9dbbf'),pattern=pigment('#596956'),eye=skin==='albino'?'#ad858d':skin==='melanico'?'#c3ac71':'#27332f';
+ const p=(d,fill=base,w=2.4,stroke=ink)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+ const line=(d,stroke=shade,w=1.25)=>p(d,'none',w,stroke);
+ const dot=(x,y,r,fill=pattern)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}"/>`;
+ const eyes=(x,y,r=1.7)=>`<g data-fish-eye="true">${dot(x,y,r,eye)}${dot(x+.4,y-.4,.45,'#f6f1dc')}</g>`;
+ const wrap=parts=>`<svg viewBox="0 0 100 100" aria-hidden="true" data-fish-family="${q.family}" data-fish-version="3.19.9">${parts}</svg>`;
+ if(q.family==='manta')return wrap(
+  p('M42 40Q34 42 24 32Q15 25 7 20Q8 46 27 62Q38 73 49 69Q61 74 74 60Q90 44 94 20Q82 26 72 34Q61 43 57 40L56 31Q51 28 47 31L45 41Z')+
+  p('M47 67Q50 82 46 94Q53 87 52 68Z',fin,1.6)+
+  p('M42 39Q38 31 40 26Q45 25 47 32L46 40M55 39Q60 31 58 26Q53 25 52 32L53 40',fin,1.8)+
+  p('M35 48Q50 40 66 49Q64 64 51 66Q36 63 35 48Z',light,0,'none')+
+  line('M17 33Q24 48 37 55M83 33Q76 48 64 55',shade,1.8)+
+  eyes(42,41,1.5)+eyes(59,41,1.5)+line('M45 46q5 2 11 0',ink,1.2));
+ const shark=q.family.startsWith('tiburon'),sturgeon=q.family.startsWith('esturion'),salmon=/salmon|trucha/.test(q.family),carp=q.family==='carpa'||q.family==='barbo'||q.family==='tenca',perch=q.family==='perca'||q.family==='mandarin-chino'||q.family==='tilapia';
+ let svg=p(q.tail,fin)+p(q.dorsal,fin)+p(q.ventral,fin);
+ if(shark){
+  svg+=p('M28 63Q26 70 19 73Q31 73 37 66Z',fin)+p('M28 49Q30 43 35 43L39 48Z',fin);
  }else{
-   const salmon=/salmon|trucha|oncorhynch|salmo |salvelinus/.test(name+" "+latin),
-   carp=/carpa|barbo|tenca|cyprinus|barbus|tinca/.test(name+" "+latin),
-   deep=/pez mariposa|pez angel|chaetodon|pomacanth|butterfly/.test(name+" "+latin),
-   predator=/pez tigre|lucio|perca|tilapia|lates |hydrocyn|siniperca|channa/.test(name+" "+latin);
-   family=salmon?"salmonido":carp?"ciprinido":deep?"arrecife":predator?"depredador-oseo":"pez-oseo";
-   const shape=deep?"M26 54Q31 31 52 32Q75 38 80 54Q74 77 51 76Q31 72 26 54Z":
-     carp?"M25 55Q34 38 55 41Q81 43 86 54Q78 67 55 69Q35 67 25 55Z":
-     predator?"M24 55Q37 42 62 46L88 53L92 59Q68 69 39 64Z":
-     "M24 55Q41 43 61 47Q75 48 87 54L91 58Q75 67 54 65Q35 65 24 55Z";
-   svg=commonTail+p(shape,base)+commonFins
-     +p(deep?"M47 47Q57 41 65 51Q62 62 48 66Z":"M42 57Q53 51 63 57Q53 65 42 57Z",pale,"none",0)
-     +p("M39 62Q48 70 61 64Z",belly,"none",0)
-     +line("M72 48Q67 54 72 61",dark,1.6)
-     +eyeMark(deep?69:78,52);
-   if(salmon){
-     svg+=Array.from({length:8},(_,i)=>dot(38+(i%4)*8,49+Math.floor(i/4)*8,1.15,dark)).join("");
-     if(/rojo|rosado|nerka|gorbuscha/.test(name+" "+latin))svg+=p("M41 57Q54 62 67 56", "none",pale,2);
-   }else if(carp){
-     svg+=scales()+line("M83 56q6 3 8 7m-7-6q6 1 10-1",dark,1.3);
-   }else if(deep){
-     svg+=line("M42 39Q48 54 40 68",dark,4)+line("M58 36Q65 54 56 71",dark,3.6);
-   }else if(predator){
-     svg+=line("M84 60l-2 3-3-3-3 3-3-3",ink,1.4);
-     if(/tigre/.test(name))svg+=Array.from({length:4},(_,i)=>line("M"+(43+i*8)+" 47l-4 16",dark,2.5)).join("");
-   }else svg+=scales();
+  svg+=p(q.family==='cabeza-serpiente'?'M32 64Q39 73 59 74L67 67Z':'M30 62Q29 71 35 75L42 65Z',fin);
+  if(salmon||q.family.startsWith('tigre-'))svg+=p('M29 48Q29 40 34 40L38 45Z',fin,1.8);
  }
- return wrap(family,svg,skin);
+ svg+=p(q.body);
+ // The belly follows the body contour rather than floating over it.
+ svg+=p(sturgeon?'M23 59Q51 65 82 55Q65 69 24 62Z':shark?'M25 60Q59 64 92 55Q77 72 48 67Q32 64 25 60Z':q.family==='carpa'?'M29 62Q56 72 86 54Q79 77 54 74Q39 73 29 62Z':'M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z',belly,0,'none');
+ // Pattern fields are inside the body; each taxon has its own markings.
+ if(q.family==='carpa'){
+  for(let row=0;row<4;row++)for(let col=0;col<5;col++){const x=32+col*8+(row%2)*3,y=43+row*7;if(row===3&&col===0)continue;svg+=line(`M${x} ${y}q4 5 8 0`,pattern,1.1);}
+ }else if(q.family==='tenca')svg+=line('M33 48Q54 40 71 46',light,2)+line('M38 61Q53 65 68 61',shade,1.1);
+ else if(q.family==='perca')for(let i=0;i<5;i++)svg+=p(`M${36+i*8} ${43+(i%2)*2}q4 4 1 ${21-(i%2)*3}l-4-5Z`,pattern,0,'none');
+ else if(q.family==='mandarin-chino'){
+  for(const [x,y,r]of [[33,52,3],[43,45,3],[51,53,4],[61,47,2.7],[66,60,4],[38,63,2],[53,67,2.4],[73,51,3.2]])svg+=p(`M${x-r} ${y}q${r} ${-r*2} ${r*2} -1l-1 ${r*2}q${-r} 1 ${-r*2} -1Z`,pattern,0,'none');
+ }else if(q.family==='tilapia'){
+  for(let i=0;i<6;i++)svg+=line(`M${34+i*7} ${43+i%2*2}q3 12 0 25`,shade,1.6);
+  svg+=line('M12 48q3 8 0 18m5-17q3 8 0 15',shade,1.1);
+ }else if(q.family==='cabeza-serpiente'){
+  for(let i=0;i<7;i++)svg+=p(`M${27+i*8} ${48+i%2*4}l5-3 4 7-5 5-4-3Z`,pattern,0,'none');
+  svg+=line('M31 38l-2 8m10-10-1 9m10-10v9m10-8 1 8m8-6 2 5',shade,1);
+ }else if(q.family==='pez-mariposa-africano'){
+  svg+=p('M63 52Q49 24 24 23Q23 38 36 50Q49 59 63 57Z',fin)+p('M62 55Q45 64 32 80Q53 82 70 63Z',light);
+  svg+=line('M62 54L31 29m29 26L29 38m28 18-22-9m26 12L39 76m24-15L50 77',shade,1.25)+line('M41 66l-3 22m7-20 3 21',shade,1.2);
+ }else if(q.family==='tigre-africano'){
+  for(let i=0;i<4;i++)svg+=line(`M${29+i*2} ${51+i*4}Q50 ${43+i*6} 72 ${49+i*4}`,shade,1.4);
+ }else if(salmon||q.family==='tigre-goliat'){
+  if(q.family==='trucha-arcoiris')svg+=p('M28 56Q50 50 75 51L77 57Q50 60 28 59Z',pigment('#be8b83'),0,'none');
+  if(q.family==='salmon-rojo')svg+=p('M75 45Q85 47 91 53L91 57 78 60Z',pigment('#7b8a66'),0,'none');
+  const spots=q.family==='salmon-rojo'?[]:q.family==='salmon-rosado'?[[31,51,2],[42,43,2.1],[51,38,2],[61,47,2],[69,50,1.8],[50,57,1.8],[35,59,1.3]]:q.family==='tigre-goliat'?[[40,50,.8],[50,47,.8],[59,49,.8]]:[[32,51,1.1],[40,47,1.1],[49,45,1.4],[58,47,1.2],[66,50,1.3],[43,57,1.1],[55,55,1.1],[64,59,1],[74,51,.9]];
+  for(const [x,y,r]of spots)svg+=dot(x,y,r,q.family==='trucha-comun'&&x%2===0?pigment('#985f4f'):pattern);
+ }
+ if(sturgeon){
+  for(let i=0;i<7;i++){const x=28+i*7;svg+=p(`M${x} ${50-i%2}l3-5 4 4-3 4Z`,light,1.1);}
+  svg+=line('M32 60l4-2m5 3 4-2m5 2 4-2m5 2 4-2m5 1 4-2',light,2.2)+line('M79 59l-1 7m-4-6-1 6',ink,1.15)+line('M83 57q2 3 4 0',ink,1.2);
+ }else if(shark){
+  for(let i=0;i<5;i++)svg+=line(`M${70-i*2.8} 51q-2 4 0 9`,ink,1.15);
+  svg+=line('M83 61q5 0 8-4',ink,1.3);
+  if(q.family==='tiburon-arrecife')svg+=p('M49 28L52 23Q53 31 55 34Z',pigment('#3e4d48'),0,'none')+p('M44 77l-2 4 8-4Z',pigment('#3e4d48'),0,'none');
+ }else{
+  const y=q.family==='carpa'?52:53;
+  svg+=line(`M77 ${y-9}Q70 ${y} 77 ${y+11}`,shade,1.5);
+  // Pectoral fin rooted immediately behind the operculum, tapering backward.
+  if(q.family!=='pez-mariposa-africano')svg+=p(q.family==='cabeza-serpiente'?'M74 55Q60 56 62 66Q72 65 77 59Z':'M73 56Q63 57 59 66Q69 68 77 59Z',fin,1.4)+line('M73 58l-9 6',shade,1);
+  svg+=line(q.family==='carpa'?'M85 57q4 1 6-2':q.family==='tigre-goliat'?'M82 56l11-1':q.family==='cabeza-serpiente'?'M82 57l12-2':'M84 57q5 0 7-2',ink,1.3);
+  if(carp)svg+=line(q.family==='barbo'?'M88 59q5 3 7 8m-9-7q-2 5 1 8':'M87 59q7 3 7 7',shade,1.1);
+  if(q.family.startsWith('tigre-'))svg+=line('M83 57l1 4 2-4 2 3 2-4',ink,1.1);
+ }
+ svg+=eyes(sturgeon?82:q.family==='carpa'?81:84,sturgeon?52:q.family==='carpa'?48:50,shark?1.45:1.7);
+ // A few continuous rays communicate fin surfaces without dense textures.
+ if(!shark&&q.family!=='pez-mariposa-africano')svg+=line(sturgeon?'M35 47l5-8m1 7 2-6':q.family==='tenca'?'M49 37l3-5m4 5 1-4':q.family==='cabeza-serpiente'?'M35 45l3-8m7 7 1-8m9 7v-6m9 6v-3':'M47 42l3-8m5 8 1-8',shade,1.1);
+ if(salmon||carp||q.family.startsWith('tigre-'))svg+=line('M19 55L10 45m9 13-9 9',shade,1.15);
+ return wrap(svg);
 }
-window.ATLAS_FISH_ART_V3191=art;
-})();
+renderFish.classify=classifyFish;
+root.ATLAS_FISH_ART_V3191=renderFish;
+if(typeof module==='object'&&module.exports)module.exports={renderFish,classifyFish};
+})(typeof globalThis!=='undefined'?globalThis:this);

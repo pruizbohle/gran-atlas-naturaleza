@@ -1,0 +1,16 @@
+{
+  "version": "3.19.9",
+  "inventory": {
+    "mammals": 269,
+    "fish": 18,
+    "legendary": 12,
+    "relicts": 9
+  },
+  "svgXmlAndViewport": 308,
+  "allComparisonPagesCaptured": true,
+  "mobileWidth": 390,
+  "labStorageUntouched": true,
+  "oldSaveInventoryEquipmentLegendsRelictsPreserved": true,
+  "offlineGameAndLab": true,
+  "jsErrors": []
+}

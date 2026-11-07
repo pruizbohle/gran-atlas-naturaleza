@@ -2772,7 +2772,7 @@ function familyV3154Sprite(id,skin){
 function spriteFor(kind,color,skin,id){
  const mammal3194=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_MAMMAL_ART_V3194==='function') ? globalThis.ATLAS_MAMMAL_ART_V3194(SPECIES[id],color,skin,null,id) : null; if(mammal3194)return mammal3194;
  const bird3193=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_BIRD_ART_V3193==='function') ? globalThis.ATLAS_BIRD_ART_V3193(SPECIES[id],color,skin) : null; if(bird3193)return bird3193;
- const fish3191=(typeof window!=='undefined' && typeof window.ATLAS_FISH_ART_V3191==='function') ? window.ATLAS_FISH_ART_V3191(SPECIES[id],color,skin) : null; if(fish3191)return fish3191;
+ const fish3191=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_FISH_ART_V3191==='function') ? globalThis.ATLAS_FISH_ART_V3191(SPECIES[id],color,skin) : null; if(fish3191)return fish3191;
  const herp3192=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_HERP_ART_V3192==='function') ? globalThis.ATLAS_HERP_ART_V3192(SPECIES[id],color,skin) : null; if(herp3192)return herp3192;
  const special3154=familyV3154Sprite(id,skin);if(special3154)return special3154;
  const unified=unifiedFamilySprite(id,skin);if(unified)return unified;
