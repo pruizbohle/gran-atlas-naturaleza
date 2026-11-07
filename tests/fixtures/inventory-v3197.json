@@ -1,0 +1,852 @@
+{
+  "ITEMS": {
+    "binoculars": {
+      "name": "Prismáticos de viaje",
+      "emoji": "🔭",
+      "slot": "instrument",
+      "bonus": "+12 % relativo de probabilidad de encuentro manual",
+      "kind": "equip"
+    },
+    "brass_compass": {
+      "name": "Brújula de latón",
+      "emoji": "🧭",
+      "slot": "instrument",
+      "bonus": "+4 % de conocimiento de expediciones (redondeado)",
+      "kind": "equip"
+    },
+    "sturdy_pack": {
+      "name": "Morral reforzado",
+      "emoji": "🎒",
+      "slot": "instrument",
+      "bonus": "+3 puntos porcentuales de probabilidad de botín de expedición",
+      "kind": "equip"
+    },
+    "field_hat": {
+      "name": "Sombrero de naturalista",
+      "emoji": "🎩",
+      "slot": "hat",
+      "bonus": "+10 % de conocimiento por búsquedas",
+      "kind": "equip"
+    },
+    "feather_cap": {
+      "name": "Gorro emplumado",
+      "emoji": "🪶",
+      "slot": "hat",
+      "bonus": "+6 puntos porcentuales de probabilidad de botín de expedición",
+      "kind": "equip"
+    },
+    "rain_hood": {
+      "name": "Capucha impermeable",
+      "emoji": "🧥",
+      "slot": "hat",
+      "bonus": "+5 % relativo de probabilidad de encuentro automático",
+      "kind": "equip"
+    },
+    "amulet": {
+      "name": "Colgante del explorador",
+      "emoji": "📿",
+      "slot": "necklace",
+      "bonus": "+8 % relativo de probabilidad de encuentro automático",
+      "kind": "equip"
+    },
+    "amber_charm": {
+      "name": "Amuleto de ámbar",
+      "emoji": "🟠",
+      "slot": "necklace",
+      "bonus": "+5 % relativo sobre la subvención base",
+      "kind": "equip"
+    },
+    "shell_necklace": {
+      "name": "Collar de conchas",
+      "emoji": "🐚",
+      "slot": "necklace",
+      "bonus": "+5 % de libras recibidas en expediciones",
+      "kind": "equip"
+    },
+    "fossil_fragment": {
+      "name": "Fragmento fósil",
+      "emoji": "🦴",
+      "slot": null,
+      "bonus": "Hallazgo de expedición y campo",
+      "kind": "voyage"
+    },
+    "fossil_skull": {
+      "name": "Cráneo fósil",
+      "emoji": "💀",
+      "slot": null,
+      "bonus": "Hallazgo paleontológico muy raro",
+      "kind": "fossil"
+    },
+    "fossil_tooth": {
+      "name": "Diente fósil",
+      "emoji": "🦷",
+      "slot": null,
+      "bonus": "Hallazgo paleontológico raro",
+      "kind": "fossil"
+    },
+    "bone_short": {
+      "name": "Hueso corto",
+      "emoji": "🦴",
+      "slot": null,
+      "bonus": "Pieza reconstruida · taller del Museo",
+      "kind": "fossil"
+    },
+    "bone_long": {
+      "name": "Hueso largo",
+      "emoji": "🦴",
+      "slot": null,
+      "bonus": "Pieza reconstruida · taller del Museo",
+      "kind": "fossil"
+    },
+    "carnivore_skull": {
+      "name": "Cráneo carnívoro",
+      "emoji": "💀",
+      "slot": null,
+      "bonus": "Pieza compuesta · taller del Museo",
+      "kind": "fossil"
+    },
+    "herbivore_skull": {
+      "name": "Cráneo herbívoro",
+      "emoji": "💀",
+      "slot": null,
+      "bonus": "Pieza compuesta · taller del Museo",
+      "kind": "fossil"
+    },
+    "fossil_plate": {
+      "name": "Placa fósil dorsal",
+      "emoji": "🦴",
+      "slot": null,
+      "bonus": "Componente de reconstrucción",
+      "kind": "fossil"
+    },
+    "fossil_sail": {
+      "name": "Espina de vela fósil",
+      "emoji": "🦴",
+      "slot": null,
+      "bonus": "Componente de reconstrucción",
+      "kind": "fossil"
+    },
+    "animal_trace": {
+      "name": "Muestra de huellas",
+      "emoji": "🐾",
+      "slot": null,
+      "bonus": "Hallazgo de expedición",
+      "kind": "voyage"
+    },
+    "pressed_flower": {
+      "name": "Flor prensada",
+      "emoji": "🌼",
+      "slot": null,
+      "bonus": "Hallazgo de expedición",
+      "kind": "voyage"
+    },
+    "ancient_coin": {
+      "name": "Moneda antigua",
+      "emoji": "🪙",
+      "slot": null,
+      "bonus": "Hallazgo de expedición",
+      "kind": "voyage"
+    },
+    "map_fragment": {
+      "name": "Fragmento de mapa",
+      "emoji": "🗺️",
+      "slot": null,
+      "bonus": "Hallazgo de expedición",
+      "kind": "voyage"
+    },
+    "asia_map_piece": {
+      "name": "Parte de mapa de Asia",
+      "emoji": "🧭",
+      "slot": null,
+      "bonus": "Fragmento raro de expedición",
+      "kind": "voyage"
+    },
+    "asia_map": {
+      "name": "Mapa de Asia",
+      "emoji": "🗺️",
+      "slot": null,
+      "bonus": "Mapa ensamblado para futuras exploraciones",
+      "kind": "voyage"
+    },
+    "africa_map_piece": {
+      "name": "Parte de mapa de África",
+      "emoji": "🧩",
+      "slot": null,
+      "bonus": "Fragmento cartográfico de expedición",
+      "kind": "voyage"
+    },
+    "africa_map": {
+      "name": "Mapa de África",
+      "emoji": "🗺️",
+      "slot": null,
+      "bonus": "Cartografía requerida en investigación de África",
+      "kind": "voyage"
+    },
+    "north_america_map_piece": {
+      "name": "Parte de mapa de Norteamérica",
+      "emoji": "🧩",
+      "slot": null,
+      "bonus": "Fragmento cartográfico de travesías atlánticas",
+      "kind": "voyage"
+    },
+    "north_america_map": {
+      "name": "Mapa de Norteamérica",
+      "emoji": "🗺️",
+      "slot": null,
+      "bonus": "Mapa para investigar el acceso a Norteamérica",
+      "kind": "voyage"
+    },
+    "oceanic_quadrant": {
+      "name": "Cuadrante transatlántico",
+      "emoji": "🧭",
+      "slot": null,
+      "bonus": "Artefacto necesario para investigar el Nuevo Mundo",
+      "kind": "artifact_material"
+    },
+    "parchment_scrap": {
+      "name": "Pergamino antiguo",
+      "emoji": "📜",
+      "slot": null,
+      "bonus": "Material de viaje",
+      "kind": "voyage"
+    },
+    "river_pebble": {
+      "name": "Piedra de río pulida",
+      "emoji": "🪨",
+      "slot": null,
+      "bonus": "Material de viaje",
+      "kind": "voyage"
+    },
+    "heron_feather": {
+      "name": "Pluma de garza",
+      "emoji": "🪶",
+      "slot": null,
+      "bonus": "Material animal",
+      "kind": "animal"
+    },
+    "polished_lens": {
+      "name": "Lente pulida",
+      "emoji": "🔍",
+      "slot": null,
+      "bonus": "Material de fabricación",
+      "kind": "voyage"
+    },
+    "brass_shard": {
+      "name": "Pieza de latón antiguo",
+      "emoji": "⚙️",
+      "slot": null,
+      "bonus": "Material histórico hallado en viajes",
+      "kind": "artifact_material"
+    },
+    "old_ink": {
+      "name": "Tintero antiguo",
+      "emoji": "🖋️",
+      "slot": null,
+      "bonus": "Material de encuadernación",
+      "kind": "artifact_material"
+    },
+    "carved_wood": {
+      "name": "Madera tallada",
+      "emoji": "🪵",
+      "slot": null,
+      "bonus": "Material de montaje histórico",
+      "kind": "artifact_material"
+    },
+    "wolf_tooth": {
+      "name": "Diente de lobo",
+      "emoji": "🦷",
+      "slot": null,
+      "bonus": "Trofeo de animal",
+      "kind": "animal"
+    },
+    "owl_feather": {
+      "name": "Pluma de rapaz",
+      "emoji": "🪶",
+      "slot": null,
+      "bonus": "Trofeo de animal",
+      "kind": "animal"
+    },
+    "antler_fragment": {
+      "name": "Fragmento de cornamenta",
+      "emoji": "🦌",
+      "slot": null,
+      "bonus": "Trofeo de animal",
+      "kind": "animal"
+    },
+    "otter_whisker": {
+      "name": "Bigote de nutria",
+      "emoji": "〰️",
+      "slot": null,
+      "bonus": "Trofeo de animal",
+      "kind": "animal"
+    },
+    "boar_tusk": {
+      "name": "Colmillo de jabalí",
+      "emoji": "🦷",
+      "slot": null,
+      "bonus": "Trofeo de animal",
+      "kind": "animal"
+    },
+    "beaver_tail_scale": {
+      "name": "Escama de cola de castor",
+      "emoji": "🪵",
+      "slot": null,
+      "bonus": "Trofeo de animal",
+      "kind": "animal"
+    },
+    "field_telescope": {
+      "name": "Catalejo de precisión",
+      "emoji": "🔭",
+      "slot": "instrument",
+      "bonus": "+24 % relativo de encuentro manual (sustituye el bono de prismáticos)",
+      "kind": "equip"
+    },
+    "scholar_hat": {
+      "name": "Sombrero académico",
+      "emoji": "🎓",
+      "slot": "hat",
+      "bonus": "+20 % de conocimiento por búsqueda",
+      "kind": "equip"
+    },
+    "museum_medallion": {
+      "name": "Medallón de ámbar",
+      "emoji": "🏅",
+      "slot": "necklace",
+      "bonus": "+10 % de ingresos de las muestras expuestas en el Museo",
+      "kind": "equip"
+    },
+    "fossil_amber": {
+      "name": "Ámbar fósil",
+      "emoji": "🟠",
+      "slot": null,
+      "bonus": "Hallazgo raro de expedición, para objetos de colección",
+      "kind": "rare"
+    },
+    "river_pearl": {
+      "name": "Perla fluvial",
+      "emoji": "⚪",
+      "slot": null,
+      "bonus": "Hallazgo raro en ríos y costas durante observaciones",
+      "kind": "rare"
+    },
+    "fossil_track": {
+      "name": "Huella fosilizada",
+      "emoji": "🐾",
+      "slot": null,
+      "bonus": "Icnita paleontológica de excavación; colecciones y estudios",
+      "kind": "fossil"
+    },
+    "fossil_claw": {
+      "name": "Garra fósil",
+      "emoji": "🦴",
+      "slot": null,
+      "bonus": "Pieza rara de excavación; reconstrucción de Iguanodonte",
+      "kind": "fossil"
+    },
+    "fossil_rib": {
+      "name": "Costilla fósil",
+      "emoji": "🦴",
+      "slot": null,
+      "bonus": "Pieza reconstruida para nuevos esqueletos de Museo",
+      "kind": "fossil"
+    },
+    "fossil_horn": {
+      "name": "Cuerno fósil",
+      "emoji": "🦴",
+      "slot": null,
+      "bonus": "Pieza ensamblada de fragmentos y dientes; Triceratops y Carnotauro",
+      "kind": "fossil"
+    },
+    "hard_bone": {
+      "name": "Hueso duro",
+      "emoji": "🪨",
+      "slot": null,
+      "bonus": "Material fósil denso; Anquilosaurio y Paquicefalosaurio",
+      "kind": "fossil"
+    }
+  },
+  "RECIPES": {
+    "field_hat": {
+      "requires": {
+        "pressed_flower": 2,
+        "parchment_scrap": 2
+      }
+    },
+    "brass_compass": {
+      "requires": {
+        "ancient_coin": 1,
+        "map_fragment": 1
+      }
+    },
+    "feather_cap": {
+      "requires": {
+        "owl_feather": 2,
+        "pressed_flower": 1
+      }
+    },
+    "amulet": {
+      "requires": {
+        "ancient_coin": 1,
+        "otter_whisker": 1
+      }
+    },
+    "amber_charm": {
+      "requires": {
+        "pressed_flower": 1,
+        "wolf_tooth": 1
+      }
+    },
+    "sturdy_pack": {
+      "requires": {
+        "animal_trace": 2,
+        "beaver_tail_scale": 1
+      }
+    },
+    "shell_necklace": {
+      "requires": {
+        "ancient_coin": 1,
+        "fossil_fragment": 1
+      }
+    },
+    "rain_hood": {
+      "requires": {
+        "pressed_flower": 1,
+        "animal_trace": 1
+      }
+    },
+    "binoculars": {
+      "requires": {
+        "polished_lens": 2,
+        "map_fragment": 1
+      }
+    },
+    "asia_map": {
+      "requires": {
+        "asia_map_piece": 10
+      }
+    },
+    "africa_map": {
+      "requires": {
+        "africa_map_piece": 10
+      }
+    },
+    "north_america_map": {
+      "requires": {
+        "north_america_map_piece": 8
+      }
+    },
+    "field_telescope": {
+      "requires": {
+        "binoculars": 1,
+        "polished_lens": 2,
+        "brass_shard": 2,
+        "parchment_scrap": 2
+      }
+    },
+    "scholar_hat": {
+      "requires": {
+        "field_hat": 1,
+        "feather_cap": 1,
+        "old_ink": 1,
+        "pressed_flower": 3
+      }
+    },
+    "museum_medallion": {
+      "requires": {
+        "amulet": 1,
+        "fossil_amber": 1,
+        "river_pearl": 1,
+        "brass_shard": 1
+      }
+    },
+    "oceanic_quadrant": {
+      "requires": {
+        "brass_shard": 3,
+        "polished_lens": 2,
+        "map_fragment": 2,
+        "parchment_scrap": 1
+      }
+    }
+  },
+  "V316_MATERIAL_STUDIES": {
+    "herbarium": {
+      "name": "Herbario de campo",
+      "emoji": "🌿",
+      "description": "Prensar y clasificar plantas recogidas.",
+      "requires": {
+        "pressed_flower": 3,
+        "parchment_scrap": 1
+      },
+      "knowledge": 40,
+      "money": 0
+    },
+    "tracking": {
+      "name": "Archivo de rastros",
+      "emoji": "🐾",
+      "description": "Comparar huellas con sedimentos de río.",
+      "requires": {
+        "animal_trace": 3,
+        "river_pebble": 2
+      },
+      "knowledge": 55,
+      "money": 0
+    },
+    "travel_notes": {
+      "name": "Informe cartográfico",
+      "emoji": "📜",
+      "description": "Ordenar croquis y tinta de expedición.",
+      "requires": {
+        "map_fragment": 2,
+        "old_ink": 1
+      },
+      "knowledge": 55,
+      "money": 0
+    },
+    "timber": {
+      "name": "Donación de materiales",
+      "emoji": "🏛️",
+      "description": "Entregar excedentes a la Sociedad de Naturalistas.",
+      "requires": {
+        "carved_wood": 2,
+        "river_pebble": 3
+      },
+      "knowledge": 0,
+      "money": 80
+    },
+    "fossil_report": {
+      "name": "Informe paleontológico",
+      "emoji": "🦴",
+      "description": "Estudiar restos antes de destinarlos a una exposición.",
+      "requires": {
+        "fossil_fragment": 2,
+        "fossil_tooth": 1
+      },
+      "knowledge": 120,
+      "money": 0
+    },
+    "ornithology": {
+      "name": "Catálogo de plumajes",
+      "emoji": "🪶",
+      "description": "Clasificar muestras de distintas aves.",
+      "requires": {
+        "owl_feather": 2,
+        "heron_feather": 2
+      },
+      "knowledge": 90,
+      "money": 0
+    },
+    "mammalogy": {
+      "name": "Cuaderno de mamíferos",
+      "emoji": "🦊",
+      "description": "Documentar rastros de carnívoros y ungulados.",
+      "requires": {
+        "wolf_tooth": 1,
+        "boar_tusk": 1,
+        "antler_fragment": 1
+      },
+      "knowledge": 110,
+      "money": 0
+    },
+    "river_mammals": {
+      "name": "Análisis de humedales",
+      "emoji": "🦦",
+      "description": "Estudiar señales de nutria y castor.",
+      "requires": {
+        "otter_whisker": 1,
+        "beaver_tail_scale": 1
+      },
+      "knowledge": 75,
+      "money": 0
+    }
+  },
+  "MUSEUM_FOSSIL_RECIPES": [
+    {
+      "id": "bone_short",
+      "name": "Hueso corto",
+      "icon": "🦴",
+      "requires": {
+        "fossil_fragment": 2
+      }
+    },
+    {
+      "id": "bone_long",
+      "name": "Hueso largo",
+      "icon": "🦴",
+      "requires": {
+        "fossil_fragment": 4
+      }
+    },
+    {
+      "id": "carnivore_skull",
+      "name": "Cráneo carnívoro",
+      "icon": "💀",
+      "requires": {
+        "fossil_skull": 1,
+        "fossil_tooth": 10
+      }
+    },
+    {
+      "id": "trex_mount",
+      "name": "Reconstrucción de T. rex",
+      "icon": "🦖",
+      "requires": {
+        "bone_long": 10,
+        "bone_short": 25,
+        "carnivore_skull": 1
+      },
+      "unique": true
+    },
+    {
+      "id": "herbivore_skull",
+      "name": "Cráneo herbívoro",
+      "icon": "💀",
+      "requires": {
+        "fossil_skull": 1,
+        "fossil_tooth": 4
+      }
+    },
+    {
+      "id": "fossil_horn",
+      "name": "Cuerno fósil",
+      "icon": "🦴",
+      "requires": {
+        "fossil_fragment": 4,
+        "fossil_tooth": 2
+      }
+    },
+    {
+      "id": "hard_bone",
+      "name": "Hueso duro",
+      "icon": "🪨",
+      "requires": {
+        "fossil_fragment": 6,
+        "river_pebble": 2
+      }
+    },
+    {
+      "id": "fossil_plate",
+      "name": "Placa fósil dorsal",
+      "icon": "🦴",
+      "requires": {
+        "fossil_fragment": 5
+      }
+    },
+    {
+      "id": "fossil_sail",
+      "name": "Espina de vela fósil",
+      "icon": "🦴",
+      "requires": {
+        "fossil_fragment": 8,
+        "fossil_tooth": 2
+      }
+    },
+    {
+      "id": "triceratops_mount",
+      "name": "Reconstrucción de Triceratops",
+      "icon": "🦕",
+      "requires": {
+        "bone_long": 8,
+        "bone_short": 18,
+        "herbivore_skull": 1,
+        "fossil_horn": 3
+      },
+      "unique": true
+    },
+    {
+      "id": "stegosaurus_mount",
+      "name": "Reconstrucción de Estegosaurio",
+      "icon": "🦕",
+      "requires": {
+        "bone_long": 12,
+        "bone_short": 20,
+        "fossil_plate": 5
+      },
+      "unique": true
+    },
+    {
+      "id": "spinosaurus_mount",
+      "name": "Reconstrucción de Espinosaurio",
+      "icon": "🦖",
+      "requires": {
+        "bone_long": 14,
+        "bone_short": 18,
+        "carnivore_skull": 1,
+        "fossil_sail": 3
+      },
+      "unique": true
+    },
+    {
+      "id": "fossil_rib",
+      "name": "Costilla fósil",
+      "icon": "🦴",
+      "requires": {
+        "fossil_fragment": 3
+      }
+    },
+    {
+      "id": "ankylosaurus_mount",
+      "name": "Reconstrucción de Anquilosaurio",
+      "icon": "🦕",
+      "requires": {
+        "bone_long": 9,
+        "bone_short": 15,
+        "fossil_plate": 4,
+        "fossil_rib": 4,
+        "hard_bone": 4
+      },
+      "unique": true
+    },
+    {
+      "id": "iguanodon_mount",
+      "name": "Reconstrucción de Iguanodonte",
+      "icon": "🦕",
+      "requires": {
+        "bone_long": 10,
+        "bone_short": 13,
+        "herbivore_skull": 1,
+        "fossil_rib": 5,
+        "fossil_claw": 2
+      },
+      "unique": true
+    },
+    {
+      "id": "pachycephalosaurus_mount",
+      "name": "Reconstrucción de Paquicefalosaurio",
+      "icon": "🦖",
+      "requires": {
+        "bone_long": 7,
+        "bone_short": 13,
+        "herbivore_skull": 1,
+        "hard_bone": 6,
+        "fossil_rib": 3
+      },
+      "unique": true
+    },
+    {
+      "id": "carnotaurus_mount",
+      "name": "Reconstrucción de Carnotauro",
+      "icon": "🦖",
+      "requires": {
+        "bone_long": 9,
+        "bone_short": 15,
+        "carnivore_skull": 1,
+        "fossil_horn": 2,
+        "fossil_claw": 3
+      },
+      "unique": true
+    }
+  ],
+  "MUSEUM_COLLECTIONS": [
+    {
+      "id": "fosil_catalogado",
+      "tab": "fossils",
+      "name": "Fósil catalogado",
+      "icon": "🦴",
+      "description": "Ficha científica de fragmentos reunidos durante las expediciones.",
+      "requires": {
+        "fossil_fragment": 3
+      },
+      "knowledge": 180
+    },
+    {
+      "id": "huella_paleontologica",
+      "tab": "fossils",
+      "name": "Registro de huellas antiguas",
+      "icon": "🐾",
+      "description": "Comparación de huellas con materiales paleontológicos.",
+      "requires": {
+        "fossil_fragment": 2,
+        "animal_trace": 2
+      },
+      "knowledge": 300
+    },
+    {
+      "id": "huellas_teropodos",
+      "tab": "fossils",
+      "name": "Archivo de pisadas fósiles",
+      "icon": "🐾",
+      "description": "Conjunto de icnitas catalogadas y comparadas con huellas actuales.",
+      "requires": {
+        "fossil_track": 3,
+        "animal_trace": 2
+      },
+      "knowledge": 250
+    },
+    {
+      "id": "sedimentos_estratos",
+      "tab": "fossils",
+      "name": "Estudio de estratos antiguos",
+      "icon": "🪨",
+      "description": "Registro de sedimentos y fragmentos en un archivo paleontológico.",
+      "requires": {
+        "fossil_fragment": 4,
+        "river_pebble": 3,
+        "old_ink": 2
+      },
+      "knowledge": 310
+    },
+    {
+      "id": "carta_historica",
+      "tab": "artifacts",
+      "name": "Carta cartográfica histórica",
+      "icon": "🗺️",
+      "description": "Montaje de mapas y monedas procedentes de viajes científicos.",
+      "requires": {
+        "map_fragment": 2,
+        "ancient_coin": 1
+      },
+      "knowledge": 180
+    },
+    {
+      "id": "medallon_viajero",
+      "tab": "artifacts",
+      "name": "Medallón de expedición",
+      "icon": "🪙",
+      "description": "Colección clasificada de objetos de un viajero del siglo XIX.",
+      "requires": {
+        "ancient_coin": 2,
+        "parchment_scrap": 1
+      },
+      "knowledge": 300
+    },
+    {
+      "id": "astrolabio_laton",
+      "tab": "artifacts",
+      "name": "Astrolabio de latón",
+      "icon": "⚙️",
+      "description": "Instrumento astronómico histórico ensamblado con metal y óptica de viaje.",
+      "requires": {
+        "brass_shard": 3,
+        "polished_lens": 1,
+        "ancient_coin": 1
+      },
+      "knowledge": 420
+    },
+    {
+      "id": "diario_explorador",
+      "tab": "artifacts",
+      "name": "Diario de explorador",
+      "icon": "📖",
+      "description": "Cuaderno ilustrado y encuadernado con tinta y mapas antiguos.",
+      "requires": {
+        "old_ink": 1,
+        "parchment_scrap": 3,
+        "map_fragment": 2
+      },
+      "knowledge": 350
+    },
+    {
+      "id": "globo_cartografico",
+      "tab": "artifacts",
+      "name": "Globo cartográfico antiguo",
+      "icon": "🌐",
+      "description": "Esfera cartográfica montada sobre madera tallada y metal.",
+      "requires": {
+        "brass_shard": 2,
+        "carved_wood": 2,
+        "map_fragment": 4
+      },
+      "knowledge": 500
+    }
+  ]
+}

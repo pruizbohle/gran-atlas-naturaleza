@@ -1,0 +1,19 @@
+{
+  "version": "3.19.8",
+  "plates": 60,
+  "items": 52,
+  "studies": 8,
+  "sizes": [
+    32,
+    48,
+    64,
+    96
+  ],
+  "svgXmlAndBounds": true,
+  "mobileWidth": 390,
+  "oldInventoryPreserved": true,
+  "equipAndCraftButtons": true,
+  "offlineGameAndLab": true,
+  "labStorageUntouched": true,
+  "jsErrors": []
+}

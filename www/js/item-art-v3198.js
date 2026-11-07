@@ -1,0 +1,72 @@
+/* El Gran Atlas — gabinete de objetos, 1842. Original vector plates, no external assets. */
+(function(root){
+'use strict';
+const ink='#604a35',bone='#e5d3ab',gold='#b68a40',paper='#f0dfb8',leather='#886044';
+const path=(d,fill=bone,width=2)=>`<path d="${d}" fill="${fill}" stroke="${ink}" stroke-width="${width}" stroke-linejoin="round" stroke-linecap="round"/>`;
+const line=(d,color=ink,width=2)=>`<path d="${d}" fill="none" stroke="${color}" stroke-width="${width}" stroke-linecap="round" stroke-linejoin="round"/>`;
+const ellipse=(x,y,rx,ry,fill)=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${fill}" stroke="${ink}" stroke-width="2"/>`;
+const rect=(x,y,w,h,fill,r=3)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}" stroke="${ink}" stroke-width="2"/>`;
+const sheet=()=>path('M22 13L74 13 80 87 18 87Z',paper)+line('M27 76h22m-22 5h32','#bca57e',1.5);
+const feather=(robust=false)=>path(robust?'M27 83Q15 44 63 14Q91 37 38 80Z':'M33 85Q20 51 66 9Q78 49 33 85Z',robust?'#9d7959':'#e8e3cc')+line('M25 91L65 21')+line(robust?'M38 65l-10-8m18-4-12-8m20-3-9-7':'M41 64l-8-5m16-7-10-3m16-9-8-2','#78634a',2);
+const cord=()=>line('M24 12Q22 44 50 60Q79 42 76 12',leather,3);
+const tooth=(d)=>path(d)+line('M43 50Q50 54 59 48','#b4966e');
+const plate={};
+plate.binoculars=path('M24 23L39 26 37 68 16 64Z','#3d514c')+path('M61 26L76 23 84 64 63 68Z','#3d514c')+rect(36,34,28,12,gold)+ellipse(26,66,13,9,gold)+ellipse(74,66,13,9,gold)+ellipse(26,66,9,6,'#9bb9b6')+ellipse(74,66,9,6,'#9bb9b6')+line('M23 63l6 4m42-4 6 4','#e6efe1')+rect(24,18,13,10,leather)+rect(63,18,13,10,leather);
+plate.brass_compass=ellipse(50,17,7,8,gold)+ellipse(50,53,34,34,gold)+ellipse(50,53,28,28,paper)+line('M50 28v5m0 40v5M25 53h5m40 0h5')+path('M50 32L44 55 50 53 56 51Z','#854438')+path('M50 74L44 55 50 53 56 51Z','#d0c9b0')+ellipse(50,53,3,3,gold);
+plate.sturdy_pack=line('M28 34Q14 5 50 14Q85 5 74 37',leather,6)+rect(20,29,60,55,'#9d8a5c',10)+path('M20 30Q48 19 80 30L75 53 26 53Z',leather)+line('M27 72h46','#c9b17a')+rect(31,45,8,18,gold)+rect(61,45,8,18,gold)+line('M35 48v11m30-11v11');
+plate.field_hat=ellipse(50,67,42,13,'#b89b65')+path('M28 63L32 28Q50 18 68 28L73 63Q50 73 28 63Z','#c9af7c')+path('M29 54Q50 64 71 54L73 63Q50 73 28 63Z',leather)+line('M39 31Q49 28 60 32','#e1c79a');
+plate.feather_cap=path('M18 69Q23 39 44 34Q68 31 77 61L87 73Q50 85 18 69Z','#53634c')+path('M28 65Q49 71 79 65L86 73Q50 85 18 69Z',leather)+`<g transform="translate(45 -2) scale(.5)">${feather()}</g>`;
+plate.rain_hood=path('M17 79Q26 62 27 43Q29 16 52 13Q77 18 75 47L85 82 62 88 37 86Z','#65766a')+path('M34 62Q30 30 51 25Q71 33 63 65L52 77Z','#34463e')+line('M52 77v9m-12-6-4 8m23-8 8 7','#c2c0a0')+line('M33 29Q40 16 54 19','#98a18a');
+plate.amulet=cord()+ellipse(50,69,15,18,gold)+path('M50 56L59 68 50 81 41 68Z','#648177')+ellipse(50,50,4,5,gold);
+plate.amber_charm=cord()+path('M45 54L59 56 66 73 53 87 37 76 36 63Z','#c68b30')+path('M44 60L54 60 45 74 41 69Z','#f3c365',0)+ellipse(50,53,4,5,gold);
+plate.shell_necklace=line('M20 22Q12 90 50 86Q88 90 80 22',leather,3)+[[-26,-16],[-15,-3],[0,3],[15,-3],[26,-16]].map(([x,y])=>`<g transform="translate(${x} ${y})">`+path('M42 70Q34 58 41 53Q49 47 58 53Q67 59 57 70L50 77Z','#e5ccb0')+line('M50 73l-6-18m6 18 1-21m-1 21 6-18','#ae9070',1.5)+'</g>').join('');
+plate.field_telescope=`<g transform="rotate(-27 50 50)">`+rect(12,37,60,24,gold)+rect(31,35,22,28,'#996a39')+rect(65,33,19,32,gold)+ellipse(85,49,5,16,'#9eb8ad')+rect(9,40,9,18,leather)+line('M18 41h10m28-3h7','#edcf8f',3)+'</g>';
+plate.scholar_hat=ellipse(49,70,42,11,'#433e35')+path('M24 64L30 28Q48 20 68 28L74 64Q50 76 24 64Z','#555046')+path('M28 53Q51 61 71 53L73 63Q50 74 25 63Z','#7b4332')+rect(54,53,10,10,gold)+line('M37 32l-2 14','#817665',3);
+plate.museum_medallion=cord()+ellipse(50,67,23,25,gold)+ellipse(50,67,17,19,'#d99c38')+path('M44 53Q36 66 43 73L49 56Z','#f5cd75',0)+line('M51 58l6 9-5 9m0-9-6 2','#865b29',1.5)+[30,70].map(x=>ellipse(x,67,3,4,gold)).join('');
+plate.fossil_fragment=path('M16 68L28 29 55 18 84 45 72 79 38 85Z','#b49b77')+path('M28 54L37 37 50 41 48 52 71 58 67 69 43 63 36 69Z',bone)+line('M19 67l15 11m24-53 13 14','#d7c29b');
+plate.fossil_skull=path('M20 59Q13 25 42 18Q71 10 82 39L79 61 66 63 65 77 33 77 30 64Z',bone)+ellipse(36,46,10,12,'#665646')+ellipse(64,44,11,11,'#665646')+path('M48 59l5-9 6 10Z','#8d785b')+line('M38 68v8m10-8v9m10-9v9');
+plate.fossil_tooth=tooth('M29 21Q49 11 68 23L66 47 58 62 53 87 44 64 34 57Z');
+plate.bone_short=path('M28 33Q13 23 16 42L32 52 48 68Q47 84 61 79Q81 87 81 72L65 59 48 41Q45 24 28 33Z',bone)+line('M34 47l23 22','#b49b74',3);
+plate.bone_long=path('M17 23Q10 11 24 11L36 19 70 65Q88 63 88 76Q93 92 78 88L66 80 27 34Q10 39 17 23Z',bone)+line('M32 29l38 46','#b69e79',3);
+plate.carnivore_skull=path('M13 40Q22 19 48 22L64 35 88 42 84 56 62 58 48 52 26 64 15 56Z',bone)+ellipse(37,39,10,9,'#6d5942')+path('M60 47l7-4 4 7Z','#796348')+path('M31 64L83 59 74 74 38 77Z',bone)+path('M56 55l4 12 5-10m8-3 4 10 4-10',bone)+line('M41 69l29-4');
+plate.herbivore_skull=path('M18 22L42 18 59 32 77 58 86 66 76 79 51 77 36 57 19 51Z',bone)+ellipse(34,35,9,10,'#766347')+path('M53 55L67 57 72 67 57 65Z','#a48d67')+line('M29 51l14 20 30 3M49 62l3 9m4-6 2 7m4-4 2 5');
+plate.fossil_plate=path('M19 74L22 50Q25 26 45 13L68 30 82 59 76 79 48 87Z',bone)+line('M47 78L45 23m2 43-19-13m20 4 19-13m-21-2-9-8','#b69b71',2.5);
+plate.fossil_sail=path('M34 84L43 27Q42 8 52 9Q63 11 58 31L59 77 68 85 63 92 39 92Z',bone)+line('M48 79l3-56','#b49a70',3);
+plate.fossil_track=path('M15 23L76 16 88 78 25 87 12 62Z','#b49b7c')+line('M48 64L31 39m17 25-2-37m2 37 22-29m-22 29 3 11','#705c46',7)+line('M22 29l10-2m40 45 7-3','#d3bd98');
+plate.fossil_claw=path('M23 73Q13 34 55 19Q72 13 87 17Q55 33 52 59Q44 82 23 73Z',bone)+line('M29 66Q29 38 65 24','#b19972',3)+ellipse(29,66,6,5,'#baa17c');
+plate.fossil_rib=path('M19 80Q-1 21 53 15Q95 14 82 60Q79 38 63 35Q24 25 31 76L29 86Z',bone)+line('M23 70Q10 32 41 24','#b49b73',2.5);
+plate.fossil_horn=path('M25 83Q49 50 43 15Q86 53 64 80L51 87Z',bone)+line('M35 78Q59 58 49 30m-9 41 21 3m-15-13 18 2','#b59c76',2);
+plate.hard_bone=path('M24 19L49 14 60 30 77 43 83 73 64 87 38 78 21 52Z','#c3ac83')+path('M25 20L43 28 38 50 22 51Z','#f0dfb9')+ellipse(62,69,13,10,'#927654')+ellipse(62,69,7,5,'#63523e')+line('M43 39l19 13m-25 8 12 10','#967950',3);
+plate.heron_feather=feather();plate.owl_feather=feather(true);
+plate.wolf_tooth=path('M35 16Q49 26 62 19L65 40Q65 65 38 86Q48 58 37 48Z','#f0e0bc')+line('M39 42l22-4','#b89d76');
+plate.antler_fragment=path('M24 85L37 56 32 32 35 16 41 36 47 45 61 27 63 12 68 28 62 42 79 32 87 34 63 51 47 63 38 89Z','#b59a72')+line('M31 80l13-23 17-14','#dec69e',3);
+plate.otter_whisker=sheet()+line('M29 62Q55 22 70 30m-39 33Q53 33 70 43m-38 21Q49 46 68 54','#504637',1.6)+rect(27,61,12,5,'#c6b48b',0);
+plate.boar_tusk=path('M23 30Q11 61 35 79Q72 95 84 40Q63 68 44 63Q27 54 32 34Z','#eee0bd')+line('M27 48Q22 73 47 77','#bea781',3)+path('M23 30l9 4 2 10-13-3Z','#bfa580');
+plate.beaver_tail_scale=path('M31 19Q61 9 78 38L72 77 51 87 24 64 20 39Z','#6c5741')+line('M30 30l36 42m-42-25 32 36m-11-63 29 34M27 58l33-35M35 73l40-38M48 82l24-25','#a28a63',2);
+plate.animal_trace=rect(17,20,67,64,'#c4ae88',7)+ellipse(51,58,15,12,'#876d50')+[[33,40],[47,33],[62,35],[71,46]].map(([x,y])=>ellipse(x,y,5,7,'#876d50')).join('');
+plate.pressed_flower=sheet()+line('M45 70l10-37','#66724d',3)+path('M49 56Q30 39 31 56Q35 65 49 56m3-8Q73 35 69 50Q64 58 52 48Z','#89905e')+[[48,28],[61,28],[44,39],[63,39],[54,45]].map(([x,y])=>ellipse(x,y,7,8,'#b78b65')).join('')+ellipse(54,35,6,6,'#d2ac52');
+plate.ancient_coin=ellipse(50,52,32,33,'#9e7a43')+ellipse(50,51,26,27,'#be9b58')+path('M39 69L42 58Q30 52 38 40Q44 29 57 36L59 47 66 52 58 56 57 66Z','#98713c')+line('M33 31l5-3m28 8 4 5m-1 24-4 5m-33-3-3-5','#e0bf77',2);
+const mapShape={asia:'M30 32l15-5 12 7 16-3 5 14-15 4-4 17-11-12-9 4-12-14Z',africa:'M36 29l23-2 13 16-11 7-2 17-12 12-9-21-9-11Z',north_america:'M24 30l16-9 27 9 9 13-19 4-8 10 7 17-8-4-13-23-14-5Z',generic:'M26 42l18-15 13 7 13-5 6 20-20 8-3 17-17-8Z'};
+function map(continent,fragment){return path(fragment?'M20 19L73 14 79 39 68 48 81 64 63 81 40 77 20 86 25 62 14 49Z':'M12 22L36 16 62 23 87 16 88 79 62 86 36 79 13 85Z',paper)+line('M36 22v51m26-44v48','#c2ae85',1)+path(mapShape[continent],'#8b9871',1.5)+line('M23 66Q43 38 72 55','#a7804c',1.5)+(fragment?'':line('M76 65v10m-4-5h8','#7e6744',1.5));}
+plate.map_fragment=map('generic',true);
+for(const continent of ['asia','africa','north_america']){plate[continent+'_map']=map(continent,false);plate[continent+'_map_piece']=map(continent,true);}
+plate.parchment_scrap=path('M22 17Q47 23 77 14L72 69Q84 78 70 84L21 84Q12 80 22 69Z',paper)+path('M22 69Q36 73 30 83H21Q12 80 22 69Z','#c6ad7d')+line('M32 31l30-3m-30 14 27-3m-29 14 29-3m-29 14 20-2','#a68b61');
+plate.river_pebble=path('M14 62Q12 29 45 22Q76 13 86 50Q94 75 65 82Q28 90 14 62Z','#95978b')+path('M19 52Q28 23 56 27Q68 29 72 39Q35 32 19 52Z','#bfc0ad',0)+line('M27 71Q52 82 75 64','#72796d',3);
+plate.polished_lens=ellipse(50,49,32,31,'#a8c5bd')+ellipse(50,49,28,27,'#c8d9cd')+line('M29 49Q29 30 48 29m-15 9 7-5','#f3f1d5',5)+line('M58 72Q73 65 74 53','#8aa99f',3);
+plate.oceanic_quadrant=path('M18 20L83 23Q81 80 20 85Z',gold)+path('M28 32L69 34Q66 64 29 71Z',paper)+line('M21 24l48 48m-44 7 1-6m15 3-2-5m16-2-3-5m15-4-4-3m10-12-5-2')+line('M20 23L40 68','#364b47',3)+ellipse(21,23,5,5,leather)+rect(13,16,33,8,leather)+ellipse(40,69,3,5,gold);
+plate.brass_shard=path('M17 38L28 23 78 32 84 51 68 76 24 68Z',gold)+ellipse(33,43,7,7,'#67533a')+ellipse(66,50,6,6,'#67533a')+line('M23 62l41 8M39 30l29 5','#ddbc76',3);
+plate.old_ink=rect(28,39,42,40,'#48635d',7)+rect(34,31,30,13,gold)+ellipse(49,31,15,5,'#3b3b32')+rect(34,51,30,18,paper)+line('M40 61h18')+path('M61 37Q62 13 86 11L78 31Z','#d3c8a6')+line('M57 49l24-31');
+plate.carved_wood=path('M18 27L73 18 84 69 29 83Z','#9a6e47')+path('M29 83L18 72 9 30 18 27Z','#704d35')+line('M28 39Q53 20 67 39Q74 56 47 59Q28 62 39 71m-6-27Q49 31 58 41Q62 49 48 51','#d0a675',3)+line('M74 64l-41 12','#5c422f');
+plate.fossil_amber=path('M21 37L44 15 72 22 86 50 73 80 43 88 17 69Z','#c68b32')+path('M25 38L44 22 60 25 37 41 27 60Z','#f2c46a',0)+line('M48 49l13 13m-3-13-7 12m-2-5-9 1m21 5 7-1','#805a29',2)+ellipse(54,55,4,6,'#8f652e');
+plate.river_pearl=path('M18 72Q47 57 82 70L73 85 34 87Z','#b6aa96')+ellipse(51,50,26,25,'#d2cbb8')+ellipse(48,46,21,20,'#e9dfcb')+ellipse(42,39,9,6,'#faf4e1')+line('M40 67Q59 74 72 56','#b5b7ac',3);
+// Study plates combine the same specimens on a numbered archival folio.
+const studies={herbarium:'pressed_flower',tracking:'animal_trace',travel_notes:'asia_map',timber:'carved_wood',fossil_report:'fossil_skull',ornithology:'owl_feather',mammalogy:'antler_fragment',river_mammals:'beaver_tail_scale'};
+for(const [id,item] of Object.entries(studies))plate['study:'+id]=rect(10,10,67,80,'#73583f',4)+rect(16,10,65,76,paper,2)+line('M23 20h22m-22 6h15m19 47h14m-14 5h14','#a58a61',1.5)+`<g transform="translate(9 17) scale(.66)">${plate[item]}</g>`+line('M22 10v75','#c1a77d',1);
+const slots={instrument:line('M24 65l39-39m-42 32 12 12m23-48 12 12',ink,8),hat:line('M16 69Q50 82 84 69M29 68l5-35q16-9 32 0l5 35',ink,4),necklace:line('M24 20Q18 62 50 76Q82 62 76 20',ink,4)+ellipse(50,76,8,10,'none')};
+const cache=new Map();
+function renderItemArt(id){if(!Object.hasOwn(plate,id))return '';if(!cache.has(id))cache.set(id,`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true" focusable="false" data-item-art="${id}">${plate[id]}</svg>`);return cache.get(id);}
+function renderEmptySlot(slot){return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true" focusable="false" data-empty-slot="${Object.hasOwn(slots,slot)?slot:'unknown'}"><g opacity=".3">${slots[slot]||''}</g></svg>`;}
+const api=Object.freeze({renderItemArt,renderEmptySlot,ids:Object.freeze(Object.keys(plate))});
+if(typeof module==='object'&&module.exports)module.exports=api;
+root.AtlasItemArt=api;
+})(typeof globalThis!=='undefined'?globalThis:this);

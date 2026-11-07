@@ -1,3 +1,7 @@
+# El Gran Atlas v3.19.8 — Inventario ilustrado
+
+52 objetos y 8 estudios con láminas SVG originales. [Informe y validación](README_V3198.md) · [Laboratorio de objetos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-objetos.html).
+
 # El Gran Atlas v3.19.7 — Especímenes excepcionales
 
 Cuatro categorías visuales, 12 individuos legendarios con ilustraciones propias y aparición única por partida. [Informe y probabilidades](README_V3197.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-especiales.html).

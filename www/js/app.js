@@ -3303,7 +3303,7 @@ function renderResearch(){
    return `<span class="research-prerequisite ${state.purchases[id]?'complete':'pending'}">${state.purchases[id]?'✓':'🔒'} ${esc(found?.name||id)}</span>`;
   }).join('');
   const item=node.reqItem?ITEMS[node.reqItem]:null;
-  const itemReq=item?`<span class="research-prerequisite ${(state.inventory[node.reqItem]||0)>=(node.reqItemQty||1)?'complete':'pending'}">${item.emoji} ${esc(item.name)} ${state.inventory[node.reqItem]||0}/${node.reqItemQty||1}${node.reqItemConsume===false?' · no se consume':''}</span>`:'';
+  const itemReq=item?`<span class="research-prerequisite ${(state.inventory[node.reqItem]||0)>=(node.reqItemQty||1)?'complete':'pending'}">${itemArtInline(node.reqItem)} ${esc(item.name)} ${state.inventory[node.reqItem]||0}/${node.reqItemQty||1}${node.reqItemConsume===false?' · no se consume':''}</span>`:'';
   return `<article class="research-node-v315 ${maxed?'completed':''}">
     <div class="research-node-heading"><span class="research-node-mark">${maxed?'★':available?'✦':'○'}</span><strong>${esc(node.name)}</strong></div>
     <div class="small">${esc(node.desc)}</div>
@@ -3598,7 +3598,7 @@ function renderExcavations(){
    [...state.museum.excavationHistory].reverse().map(entry=>{
     const site=MUSEUM_DIG_SITES.find(a=>a.id===entry.site);
     const rewards=Object.entries(entry.rewards||{}).filter(([id,qty])=>ITEMS[id]&&qty>0)
-     .map(([id,qty])=>ITEMS[id].emoji+' '+ITEMS[id].name+' ×'+qty).join(' · ');
+     .map(([id,qty])=>itemArtInline(id)+' '+ITEMS[id].name+' ×'+qty).join(' · ');
     return '<div class="museum-v317-dig"><div><strong>'+(site?.name||'Yacimiento histórico')+'</strong>'+
      '<div class="small">'+new Date(entry.at).toLocaleString('es-CL')+'</div>'+
      '<div class="small"><b>Obtenido:</b> '+(rewards||'Sin recompensas registradas')+'</div></div></div>';
@@ -3614,7 +3614,7 @@ function renderMuseumCuration(){
    '<div class="small">'+done+'/'+set.requires.length+' esqueletos completados · '+(done===set.requires.length?'+'+(set.bonus*100).toFixed(1).replace('.',',')+' % de ingresos aplicado':'+'+(set.bonus*100).toFixed(1).replace('.',',')+' % al completar la colección')+'</div></div>';
  }).join('');
  const studies=MUSEUM_CURATORIAL_PROJECTS.map(project=>{
-  const req=Object.entries(project.requires).map(([id,qty])=>ITEMS[id].name+' '+(state.inventory[id]||0)+'/'+qty).join(' · ');
+  const req=Object.entries(project.requires).map(([id,qty])=>itemArtInline(id)+' '+ITEMS[id].name+' '+(state.inventory[id]||0)+'/'+qty).join(' · ');
   return '<div class="museum-v317-dig"><div><strong>'+project.icon+' '+project.name+'</strong>'+
    '<div class="small">'+req+'</div><div class="small">+'+project.knowledge+' conocimiento · +'+project.points+' punto(s) de conservación, hasta 20.</div></div>'+
    '<button class="btn" data-action="curate-museum" data-id="'+project.id+'" '+(canCurateMuseum(project.id)?'':'disabled')+'>Investigar</button></div>';
@@ -3820,7 +3820,7 @@ function renderMuseumCollections(tab){
   ' · '+complete+'/'+pieces.length+' piezas catalogadas. Usa materiales de expediciones; no modifica ingresos del Museo.</div>'+
   '<div class="list">'+pieces.map(p=>{
    const saved=!!state.museum?.collections?.[p.id],ready=museumCollectionReady(p);
-   const materials=Object.entries(p.requires).map(([id,qty])=>ITEMS[id].name+' '+(state.inventory?.[id]||0)+'/'+qty).join(' · ');
+   const materials=Object.entries(p.requires).map(([id,qty])=>itemArtInline(id)+' '+ITEMS[id].name+' '+(state.inventory?.[id]||0)+'/'+qty).join(' · ');
    return '<div class="atlas-region"><div><strong>'+p.icon+' '+p.name+'</strong><div class="small">'+
      p.description+'</div><div class="small">'+materials+' · Conocimiento '+state.knowledge+'/'+p.knowledge+
      '</div></div><div class="museum-v311-workactions"><button class="btn '+(saved?'alt':ready?'gold':'alt')+'" data-action="catalog-museum" data-id="'+p.id+
@@ -3983,19 +3983,19 @@ function renderFossilWorkshop(){
  const itemName=id=>(ITEMS[id]&&ITEMS[id].name)||id;
  const craft=MUSEUM_FOSSIL_RECIPES.map(p=>{
   const owned=p.unique?!!state.museum?.collections?.[p.id]:(state.inventory?.[p.id]||0);
-  const requirements=Object.entries(p.requires).map(([id,n])=>itemName(id)+' '+(state.inventory?.[id]||0)+'/'+n).join(' · ');
+  const requirements=Object.entries(p.requires).map(([id,n])=>itemArtInline(id)+' '+itemName(id)+' '+(state.inventory?.[id]||0)+'/'+n).join(' · ');
   const actions=p.unique?'<button class="btn" data-action="craft-museum" data-id="'+p.id+':1" '+
     (museumAssemblyReady(p)?'':'disabled')+'>'+(owned?'En la colección':'Montar pieza')+'</button>':
     [1,5,10].map(q=>'<button class="btn alt" data-action="craft-museum" data-id="'+p.id+':'+q+'" '+
     (museumAssemblyReady(p,q)?'':'disabled')+'>×'+q+'</button>').join('');
-  return '<div class="museum-v311-workpiece"><div class="museum-v311-workicon">'+(p.unique?museumCardArt('',p.id):p.icon)+'</div>'+
+  return '<div class="museum-v311-workpiece"><div class="museum-v311-workicon">'+(p.unique?museumCardArt('',p.id):renderItemArt(p.id))+'</div>'+
    '<div class="museum-v311-workinfo"><strong>'+p.name+'</strong><div class="small">'+
    (p.unique?'Pieza final de exposición':'Fabricado: '+owned)+' · '+requirements+
    '</div><div class="museum-v311-workactions">'+actions+'</div></div></div>';
  }).join('');
  return renderExcavations()+'<div class="small">Recoge fragmentos, cráneos y dientes fósiles mediante viajes, encargos y excavaciones. Fabrica huesos en tandas: los dinosaurios no suman al Atlas zoológico.</div>'+
   '<div class="req"><strong>Materiales paleontológicos</strong><div class="small">'+
-  ['fossil_fragment','fossil_skull','fossil_tooth','animal_trace'].map(id=>itemName(id)+': '+(state.inventory?.[id]||0)).join(' · ')+
+  ['fossil_fragment','fossil_skull','fossil_tooth','animal_trace'].map(id=>itemArtInline(id)+' '+itemName(id)+': '+(state.inventory?.[id]||0)).join(' · ')+
   '</div></div><h3 class="section">🦴 Taller de reconstrucción</h3>'+
   '<div class="museum-v311-worklist">'+craft+'</div><div class="divider"></div>'+
   '<h3 class="section">📜 Registros y huellas fósiles</h3>'+renderMuseumCollections('fossils')+renderMuseumCuration();
@@ -4363,19 +4363,27 @@ function craftItem(id){
 }
 function equipItem(id){const item=ITEMS[id];if(!item||!item.slot||!(state.inventory[id]||0))return;state.equipment[item.slot]=state.equipment[item.slot]===id?null:id;pushLog('🎒 Equipo actualizado: '+item.name);render();}
 // v2.3: cuatro subpestañas internas; el Inventario mantiene su botón principal.
+// Presentation only: no inventory or equipment mutations.
+function renderItemArt(id){
+ return globalThis.AtlasItemArt?globalThis.AtlasItemArt.renderItemArt(id):'<svg viewBox="0 0 100 100" aria-hidden="true"></svg>';
+}
+function itemArtInline(id){return '<span class="item-art-inline">'+renderItemArt(id)+'</span>';}
+function renderEmptyItemSlot(slot){
+ return globalThis.AtlasItemArt?globalThis.AtlasItemArt.renderEmptySlot(slot):'<svg viewBox="0 0 100 100" aria-hidden="true"></svg>';
+}
 function renderObjects(){
  const sections=[['equipo','🎽 Equipo'],['animales','🐾 Animales'],['expedicion','🧭 Expedición'],['coleccionables','🏛️ Coleccionables'],['taller','🛠️ Taller']];
  const selected=sections.some(([id])=>id===state.inventoryView)?state.inventoryView:'equipo';
  const equippedNames={instrument:'Instrumento',hat:'Gorro',necklace:'Collar'};
  const slots=Object.entries(equippedNames).map(([slot,label])=>{
    const itemId=state.equipment[slot];const item=itemId&&ITEMS[itemId];
-   return `<div class="inventory-slot"><div class="inventory-slot-label">${label}</div><div class="inventory-slot-icon">${item?item.emoji:{instrument:'🔭',hat:'🎩',necklace:'📿'}[slot]}</div><strong>${item?item.name:'Vacío'}</strong><div class="small">${item?item.bonus:'Sin bonificación'}</div>${item?`<button class="btn alt" data-action="equip-item" data-id="${itemId}">Quitar</button>`:''}</div>`;
+   return `<div class="inventory-slot"><div class="inventory-slot-label">${label}</div><div class="inventory-slot-icon">${item?renderItemArt(itemId):renderEmptyItemSlot(slot)}</div><strong>${item?item.name:'Vacío'}</strong><div class="small">${item?item.bonus:'Sin bonificación'}</div>${item?`<button class="btn alt" data-action="equip-item" data-id="${itemId}">Quitar</button>`:''}</div>`;
  }).join('');
  const card=(id,item)=>{
   const source=V316_ORIGINS[id]||(item.kind==='equip'?'Fabricación en Taller':item.kind==='animal'?'Avistamientos con Gabinete de especímenes':'Expediciones o Museo');
   const uses=v316ItemUses(id);
   return `<div class="inventory-item">`+
-   `<span class="inventory-icon">${item.emoji}</span><div class="inventory-item-body">`+
+   `<span class="inventory-icon">${renderItemArt(id)}</span><div class="inventory-item-body">`+
    `<strong>${item.name}</strong><div class="small">${item.bonus}</div>`+
    `<div class="small v316-origin"><b>Obtención:</b> ${source}</div>`+
    `<div class="small v316-use"><b>Utilidad:</b> ${uses.slice(0,3).join(' · ')||'Material de colección'}</div>`+
@@ -4384,7 +4392,7 @@ function renderObjects(){
    (item.slot?`<button class="btn ${state.equipment[item.slot]===id?'gold':'alt'}" data-action="equip-item" data-id="${id}" ${(state.inventory[id]||0)?'':'disabled'}>${state.equipment[item.slot]===id?'Quitar':'Equipar'}</button>`:'')+
    `</div></div></div>`;
  };
- const recipeCard=(id,recipe)=>{const item=ITEMS[id];return `<div class="inventory-item"><span class="inventory-icon">${item.emoji}</span><div class="inventory-item-body"><strong>${item.name}</strong><div class="small">${Object.entries(recipe.requires).map(([rid,qty])=>`${ITEMS[rid].emoji} ${ITEMS[rid].name} ${state.inventory[rid]||0}/${qty}`).join(' · ')}</div><div class="inventory-item-bottom"><span class="badge">En bolsa: ${state.inventory[id]||0}</span><button class="btn" data-action="craft-item" data-id="${id}" ${canCraft(id)?'':'disabled'}>Fabricar</button></div></div></div>`;};
+ const recipeCard=(id,recipe)=>{const item=ITEMS[id];return `<div class="inventory-item"><span class="inventory-icon">${renderItemArt(id)}</span><div class="inventory-item-body"><strong>${item.name}</strong><div class="small">${Object.entries(recipe.requires).map(([rid,qty])=>`${itemArtInline(rid)} ${ITEMS[rid].name} ${state.inventory[rid]||0}/${qty}`).join(' · ')}</div><div class="inventory-item-bottom"><span class="badge">En bolsa: ${state.inventory[id]||0}</span><button class="btn" data-action="craft-item" data-id="${id}" ${canCraft(id)?'':'disabled'}>Fabricar</button></div></div></div>`;};
  const all=Object.entries(ITEMS);
  const collectIds=new Set(['asia_map','africa_map','north_america_map','oceanic_quadrant','fossil_fragment','fossil_skull','fossil_tooth','bone_short','bone_long','carnivore_skull','herbivore_skull','fossil_plate','fossil_sail','fossil_amber','river_pearl','fossil_track','fossil_claw','fossil_rib','fossil_horn','hard_bone']);
  let content='';
@@ -4397,11 +4405,11 @@ function renderObjects(){
  }else if(selected==='taller'){
   const projects=Object.entries(V316_MATERIAL_STUDIES).map(([id,project])=>{
    const requirements=Object.entries(project.requires).map(([item,qty])=>
-    ITEMS[item].emoji+' '+ITEMS[item].name+' '+(state.inventory[item]||0)+'/'+qty).join(' · ');
+    itemArtInline(item)+' '+ITEMS[item].name+' '+(state.inventory[item]||0)+'/'+qty).join(' · ');
    const gain=(project.knowledge?('+'+project.knowledge+' conocimiento'):'')+
     (project.knowledge&&project.money?' · ':'')+
     (project.money?('+'+project.money+' libras'):'');
-   return '<div class="inventory-item v316-study"><span class="inventory-icon">'+project.emoji+'</span>'+
+   return '<div class="inventory-item v316-study"><span class="inventory-icon">'+renderItemArt('study:'+id)+'</span>'+
     '<div class="inventory-item-body"><strong>'+project.name+'</strong><div class="small">'+project.description+'</div>'+
     '<div class="small">'+requirements+'</div><div class="small"><b>Resultado por estudio:</b> '+gain+'</div>'+
     '<div class="inventory-item-bottom"><button class="btn" data-action="process-materials" data-id="'+id+':1" '+
@@ -4421,7 +4429,7 @@ function renderObjects(){
  }
  const ownedEntries=Object.entries(state.inventory).filter(([,qty])=>Number(qty)>0);
  const equipped=Object.values(state.equipment).filter(Boolean).length;
- return `<section class="card stack inventory-main inventory-v33"><header class="inventory-v33-header"><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3 class="section">🎒 Inventario</h3><div class="inventory-v33-stats"><span>📦 ${ownedEntries.length} tipos de objetos</span><span>🎽 ${equipped}/3 equipados</span></div></header><p class="small">Organiza tus hallazgos en cinco pestañas. Solo el Equipo utiliza los tres slots activos; el Taller permite aprovechar excedentes.</p><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${sections.map(([id,label])=>`<button type="button" role="tab" aria-selected="${selected===id?'true':'false'}" class="inventory-subtab ${selected===id?'active':''}" data-action="inventory-tab" data-id="${id}">${label}</button>`).join('')}</div>${content}</section>`;
+ return `<section class="card stack inventory-main inventory-v33"><header class="inventory-v33-header"><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3 class="section">🎒 Inventario</h3><a class="small" href="./laboratorio-objetos.html" target="_blank" rel="noopener">Ver láminas del gabinete</a><div class="inventory-v33-stats"><span>📦 ${ownedEntries.length} tipos de objetos</span><span>🎽 ${equipped}/3 equipados</span></div></header><p class="small">Organiza tus hallazgos en cinco pestañas. Solo el Equipo utiliza los tres slots activos; el Taller permite aprovechar excedentes.</p><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${sections.map(([id,label])=>`<button type="button" role="tab" aria-selected="${selected===id?'true':'false'}" class="inventory-subtab ${selected===id?'active':''}" data-action="inventory-tab" data-id="${id}">${label}</button>`).join('')}</div>${content}</section>`;
 }
 
 

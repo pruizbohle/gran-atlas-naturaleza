@@ -29,6 +29,8 @@ jobs:
           node --check www/js/herp-art-v3192.js
           node --check www/js/mammal-art-v3194.js
           node --check www/js/lab/mammal-lab-v3194.js
+          node --check www/js/item-art-v3198.js
+          node --check www/js/lab/item-lab-v3198.js
           node --check www/js/app.js
           node --check www/js/mobile-ui.js
           node --check www/js/save-manager.js
