@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 const {sprites}=require('./helpers/sprites.cjs');
 const api=sprites();
 const skins=['normal','albino','melanico','alfa'];
-const geometry=svg=>svg.replace(/(?:fill|stroke)="[^"]*"/g,'').replace(/opacity="[^"]*"/g,'');
+const geometry=svg=>svg.replace(/ data-pigmentation="[^"]*"/g,'').replace(/(?:fill|stroke)="[^"]*"/g,'').replace(/opacity="[^"]*"/g,'');
 test('all species and configured sexes render in the existing SVG viewport',()=>{
  const api=sprites(undefined,true);
  for(const [id,sp] of Object.entries(api.SPECIES)){
@@ -43,10 +43,10 @@ test('Beta 3.7 oscurece pigmentos melánicos de mamíferos, reptiles y aves',()=
  const lum=hex=>{const x=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16));return .2126*x[0]+.7152*x[1]+.0722*x[2];};
  for(const id of ['af_leon','af_cocodrilo_nilo','af_gerenuc','af_jacana_africana','zorro_rojo','af_turaco']){
   const svg=api.getSpriteMarkup(id,'melanico');
-  const fills=[...svg.matchAll(/fill="(#[0-9a-fA-F]{6})"/g)].map(x=>x[1].toLowerCase()).filter(x=>x!=='#d8c46b');
+  const fills=[...svg.matchAll(/fill="(#[0-9a-fA-F]{6})"/g)].map(x=>x[1].toLowerCase()).filter(x=>x!=='#c3ac71');
   assert.ok(fills.length>0,id+' no tiene superficies');
   assert.ok(fills.every(x=>lum(x)<86),id+' tiene superficies claras '+fills.join(','));
-  assert.ok(fills.some(x=>lum(x)<42),id+' no tiene masa oscura');
+  assert.ok(fills.some(x=>lum(x)<56),id+' no tiene masa oscura');
  }
 });
 

@@ -14,42 +14,7 @@ const backup={format:'el-gran-atlas-save',formatVersion:1,game:{
  regionUnlocked:{'HX-01-09':true},inventory:{},equipment:{instrument:null,hat:null,necklace:null},
  helpers:0,sexSeen:{},voyages:[],log:[]
 }};
-function harness(store={}){
- const elements={};const timeouts=[];let tick=null;
- function node(id){
-  if(!elements[id])elements[id]={
-    id,hidden:id==='saveManager',disabled:id==='saveImportBtn',textContent:'',innerHTML:'',value:'',
-    dataset:{},files:[],classList:{add(){},remove(){},toggle(){}},style:{},
-    listeners:{},addEventListener(type,cb){(this.listeners[type]||=[]).push(cb);},
-    async fire(type){for(const cb of this.listeners[type]||[])await cb({target:this,currentTarget:this});},
-    setAttribute(){},focus(){},click(){},querySelector(){return null;},querySelectorAll(){return [];}};
-  return elements[id];
- }
- const doc={getElementById:node,querySelectorAll(){return [];},
-   addEventListener(){},body:{classList:{add(){},remove(){}},appendChild(){}}};
- const localStorage={
-  getItem(k){return Object.prototype.hasOwnProperty.call(store,k)?store[k]:null;},
-  setItem(k,v){store[k]=String(v);},removeItem(k){delete store[k];}
- };
- const w={confirm:()=>true,Capacitor:{getPlatform:()=> 'android',Plugins:{
-  AtlasImport:{async openFile(){return {content:JSON.stringify(backup),name:'partida-real.json'};}},
-  AtlasExport:{async saveFile(){return {uri:'content://test'};}}
- }}};
- const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
-   Date,Math,Number,JSON,Map,Set,console,URL,Blob,Intl,
-   setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
- const testGame=GAME.replace(/\n\}\)\(\);\s*$/, '\nwindow.__atlasTest={fieldAid,spendMoneyForKnowledge,buyNode,buyCrownPack,exchangeTrialCrowns,renderCrown,renderSociety,renderScientificMissions,claimScientificMission,renderMuseum,museumValueSort,exhibitPrice,setRegion,REGIONS,availableVoyages,sail,finishVoyage,VOYAGES,MUSEUM_COLLECTIONS,catalogMuseumCollection,renderMuseumCollections,museumCollectionReady,eligibleSpecies,SPECIES,MUSEUM_FOSSIL_RECIPES,craftMuseumFossil,museumAssemblyReady,museumOtherExhibits,renderFossilWorkshop,renderMuseumRelicts,renderMuseumArtifacts,renderMuseumSamples,toggleMuseumDisplay,renderMuseumExtraGallery,MUSEUM_RELICTS,recordMuseumRelict,maybeMuseumFieldDiscovery,SCIENTIFIC_MISSIONS,resolveVoyageReward,museumCardArt,ITEMS};\n})();');
- assert.notEqual(testGame,GAME,'debe inyectarse puente de pruebas');
- vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
- vm.runInContext(SAVE,ctx,{filename:'www/js/save-manager.js'});
- return {window:w,store,doc,elements,localStorage,
-  evalInGame(code){return vm.runInContext('window.__atlasTest.'+code,ctx);},
-  tick(){assert.ok(tick,'motor debe tener guardado periódico');tick();},
-  finishTimers(){for(const task of timeouts.splice(0))task();},
-  async import(){await node('saveNativeImportBtn').fire('click');await node('saveImportBtn').fire('click');},
-  get imported(){return JSON.parse(store[KEY]);}
- };
-}
+const harness=store=>require('./helpers/live-game.cjs').harness(store,backup);
 test('motor completo mantiene 12139 avistamientos, £4465 y prestigio 4 después del tick',async()=>{
  const store={};
  const h=harness(store);

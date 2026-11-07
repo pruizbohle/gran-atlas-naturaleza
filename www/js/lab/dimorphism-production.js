@@ -1797,6 +1797,48 @@ if(SPECIES.salamandra_alpina)SPECIES.salamandra_alpina.kind='salamander';
 // Reconcile eligibility only after all catalog extensions; never touches observations.
 Object.entries(SPECIES).forEach(([id,sp])=>{sp.dimorphism=!!SEXUAL_DIMORPHISM[id];});
 
+// v3.19.6: nomenclatura del juego; no implica equivalencia biológica.
+function specialVariantName(value){
+ const key=String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ if(/^(albino|albina|leucistico|leucistica)$/.test(key))return 'Albino';
+ if(/^melanic[oa]$/.test(key))return 'Melánico';
+ if(key==='notable')return 'Notable';
+ return value;
+}
+function configuredSpecials(sp){return [...new Set((sp.special||[]).map(specialVariantName))];}
+Object.values(SPECIES).forEach(sp=>{sp.special=configuredSpecials(sp);});
+
+function normalizeSpecialDiscoveries(snapshot){
+ if(!snapshot||typeof snapshot!=='object')return snapshot;
+ // Copy nested records: importing must not mutate the supplied backup or rollback state.
+ if(snapshot.specialFound&&typeof snapshot.specialFound==='object'){
+  const records={};
+  for(const [id,found] of Object.entries(snapshot.specialFound)){
+   if(!found||typeof found!=='object'||Array.isArray(found)){records[id]=found;continue;}
+   const unified={};
+   for(const [label,seen] of Object.entries(found)){
+    const name=specialVariantName(label);
+    unified[name]=Object.prototype.hasOwnProperty.call(unified,name)?!!unified[name]||!!seen:seen;
+   }
+   records[id]=unified;
+  }
+  snapshot.specialFound=records;
+ }
+ // Historical diary text and last encounter must not expose a second category.
+ const text=value=>typeof value==='string'?value.replace(/leucístic[oa]/gi,'Albino'):value;
+ if(Array.isArray(snapshot.log))snapshot.log=snapshot.log.map(text);
+ if(snapshot.lastEncounter&&typeof snapshot.lastEncounter==='object'){
+  const encounter={...snapshot.lastEncounter};
+  encounter.title=text(encounter.title);encounter.subtitle=text(encounter.subtitle);
+  if(encounter.variant)encounter.variant=specialVariantName(encounter.variant);
+  if(Array.isArray(encounter.entries))encounter.entries=encounter.entries.map(entry=>({...entry,
+   ...(entry.variant?{variant:specialVariantName(entry.variant)}:{}),
+   ...(Array.isArray(entry.note)?{note:entry.note.map(text)}:{})}));
+  snapshot.lastEncounter=encounter;
+ }
+ return snapshot;
+}
+
 
 function sexSpriteMarkup(id,sex){
   const spec=SEXUAL_DIMORPHISM[id];
@@ -1868,10 +1910,13 @@ function getSpriteMarkup(id, skin='normal', sex=null){
   const key=id+':'+skin+':'+(validSex||'base');
   if(spriteCache.has(key))return spriteCache.get(key);
   const sp=SPECIES[id];
-  const baseSvg=(validSex?sexSpriteMarkup(id,validSex):null)||spriteFor(sp.kind,applySkin(sp.color,skin),skin,id);
-  // All SVG paint values (even fixed feather/ear colors) must respect melanism.
-  const svg=skin==='melanico' ? enforceMelanicColors(baseSvg)
-    : skin==='albino' ? enforcePaleColors(baseSvg) : baseSvg;
+  // Pigment variants always start from the unmodified production illustration.
+  // Specialized engines receive normal exactly once; anatomy and markings are shared.
+  const pigment=skin==='albino'||skin==='melanico';
+  const baseSvg=pigment?getSpriteMarkup(id,'normal'):
+    (validSex?sexSpriteMarkup(id,validSex):null)||spriteFor(sp.kind,sp.color,skin,id);
+  const svg=skin==='melanico'?enforceMelanicColors(baseSvg):
+    skin==='albino'?enforcePaleColors(baseSvg):baseSvg;
   spriteCache.set(key,svg);
   return svg;
 }
@@ -1880,41 +1925,62 @@ function applySkin(base, skin){
   if(skin==='melanico') return '#0c0f12';
   return base;
 }
-// Keep the original silhouette and subdued markings, including fixed-color feathers.
-// Albino/Leucístico already share the persisted skin token; this is paint only.
-function enforcePaleColors(svg){
-  return svg.replace(/(fill|stroke)="(#[0-9a-fA-F]{6})"/g,(_,attr,hex)=>{
-    if(hex.toLowerCase()==='#c85f6c')return `${attr}="${hex}"`;
-    const rgb=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16));
-    const lum=rgb[0]*.2126+rgb[1]*.7152+rgb[2]*.0722;
-    const paint=attr==='stroke'?'#796f78':lum<45?'#574b5a':lum<100?'#b9aeb9':lum<175?'#e1d8df':'#faf5f0';
-    return `${attr}="${paint}"`;
-  });
-}
-function enforceMelanicColors(svg){
-  // Final paint pass: literal species colors must never escape the melanic skin.
-  // Only small amber eye circles keep color; anatomy and transparency stay intact.
-  const paint=(value,stroke)=>{
-    let h=value.trim().toLowerCase();
-    if(h==='none'||h==='transparent')return value;
-    if(/^#[0-9a-f]{3}$/.test(h))h='#'+[...h.slice(1)].map(c=>c+c).join('');
-    let lum=90;
-    if(/^#[0-9a-f]{6}$/.test(h)){
-      const rgb=[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
-      lum=.2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2];
-    }
-    if(stroke)return lum>175?'#626262':lum>90?'#393939':'#181818';
-    return lum>195?'#383838':lum>125?'#292929':lum>65?'#1c1c1c':'#101010';
-  };
-  return svg.replace(/<[a-z][^>]*>/gi,tag=>{
-    const eye=/^<circle\b/i.test(tag) && /\br=["'](?:[0-2](?:\.\d+)?|3(?:\.0+)?)["']/.test(tag)
-      && /\bfill=["']#(?:d8c46b|e2cb78)["']/i.test(tag);
-    return tag.replace(/\b(fill|stroke|stop-color|color)\s*=\s*(["'])(.*?)\2/gi,
-      (_,attr,quote,value)=>attr+'='+quote+(eye&&attr.toLowerCase()==='fill'?'#d8c46b':paint(value,attr.toLowerCase()==='stroke'))+quote)
-      .replace(/\bstyle\s*=\s*(["'])(.*?)\1/gi,(_,quote,style)=>'style='+quote+
-        style.replace(/(^|;)\s*(fill|stroke|stop-color|color)\s*:\s*([^;]+)/gi,
-          (_,sep,attr,value)=>sep+attr+':'+paint(value,attr.toLowerCase()==='stroke'))+quote);
-  });
+// Single lightweight paint pass: continuous values preserve shadows and patterns.
+function enforcePaleColors(svg){return transformPigmentation(svg,'albino');}
+function enforceMelanicColors(svg){return transformPigmentation(svg,'melanico');}
+function transformPigmentation(svg,skin){
+ if(/data-pigmentation=/.test(svg))return svg;
+ const pale=skin==='albino';
+ const morph=(svg.match(/data-mammal-morph="([^"]+)"/)||[])[1]||'';
+ const hex=rgb=>'#'+rgb.map(v=>Math.round(Math.max(0,Math.min(255,v))).toString(16).padStart(2,'0')).join('');
+ const rgb=value=>{
+  let h=value.trim().toLowerCase();
+  if(/^#[0-9a-f]{3}$/.test(h))h='#'+[...h.slice(1)].map(c=>c+c).join('');
+  if(/^#[0-9a-f]{6}(?:[0-9a-f]{2})?$/.test(h))return [1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
+  const hsl=h.match(/^hsla?\(\s*([-\d.]+)(?:deg)?[ ,]+([\d.]+)%[ ,]+([\d.]+)%(?:\s*[,/]\s*([\d.]+))?\s*\)$/);
+  if(hsl){
+   const hue=((Number(hsl[1])%360)+360)%360/30,saturation=Number(hsl[2])/100,light=Number(hsl[3])/100;
+   const amplitude=saturation*Math.min(light,1-light);
+   return [0,8,4].map(offset=>{const k=(offset+hue)%12;return 255*(light-amplitude*Math.max(-1,Math.min(k-3,9-k,1)));});
+  }
+  const named={white:'#ffffff',black:'#000000',red:'#ff0000',orange:'#ffa500',gray:'#808080',grey:'#808080'};
+  if(named[h])return rgb(named[h]);
+  const m=h.match(/^rgba?\(\s*([\d.]+)[ ,]+([\d.]+)[ ,]+([\d.]+)(?:\s*[,/]\s*([\d.]+))?\s*\)$/);
+  if(m)return m.slice(1,4).map(Number);
+  return null;
+ };
+ const paint=(value,stroke,eye,highlight,coatPattern=false)=>{
+  if(/^(none|transparent|inherit|currentColor)$|^url\(/i.test(value.trim()))return value;
+  if(eye)return pale?'#ad858d':'#c3ac71';
+  if(highlight)return pale?'#faf4eb':'#8d969c';
+  const channels=rgb(value);if(!channels)return value;
+  const lum=(channels[0]*.2126+channels[1]*.7152+channels[2]*.0722)/255;
+  // Keratin retains a separate warm value: horns and antlers cannot merge into fur.
+  if(/^#a39881$/i.test(value))return pale?'#b0a38d':'#817967';
+  if(pale&&/^#(?:bc9d87|b07861|d7b389|c85f6c)$/i.test(value))return '#d7b9b8';
+  // Felid coat marks use pigment values, independently from the outer contour.
+  // Rosettes remain ghost patterns; tiger stripes remain stripes on the same paths.
+  if(coatPattern)return pale?hex([207+lum*39,202+lum*39,199+lum*39]):hex([19+lum*43,25+lum*43,33+lum*43]);
+  const out=stroke?(pale?hex([131+lum*30,125+lum*30,127+lum*30]):hex([65+lum*22,75+lum*22,84+lum*22])):
+   pale?hex([207+lum*39,202+lum*39,199+lum*39]):hex([23+lum*57,29+lum*57,37+lum*57]);
+  // Preserve alpha in literal rgba paints; SVG opacity attributes are never touched.
+  if(/^#[0-9a-f]{8}$/i.test(value))return out+value.slice(7);
+  const alpha=value.match(/^(?:rgba|hsla)\([^,]+,[^,]+,[^,]+,\s*([\d.]+)\s*\)$/i);
+  return alpha?'rgba('+rgb(out).join(',')+','+alpha[1]+')':out;
+ };
+ const output=svg.replace(/<[a-z][^>]*>/gi,tag=>{
+  // Normal eye inks are deliberately distinct from species pattern paints.
+  const small=/^<circle\b/i.test(tag)&&/\br=["'](?:[0-2](?:\.\d+)?|3(?:\.0+)?)["']/.test(tag);
+  const eye=small&&/\bfill=["']#(?:302e26|23352d|202d29|18272d|1d1a17|c85f6c|d8c46b|e2cb78)["']/i.test(tag);
+  const highlight=small&&/\br=["']0?\.[0-9]+["']/.test(tag);
+  const coatPattern=(/leopard|snowcat/.test(morph)&&/stroke-width="1\.[67]"/.test(tag))||(morph==='tiger'&&/stroke="#39382f"/.test(tag)&&/stroke-width="3\.2"/.test(tag));
+  return tag.replace(/\b(fill|stroke|stop-color|color)\s*=\s*(["'])(.*?)\2/gi,
+   (_,attr,quote,value)=>attr+'='+quote+paint(value,attr.toLowerCase()==='stroke',eye&&attr==='fill',highlight&&attr==='fill',coatPattern&&attr==='stroke')+quote)
+   .replace(/\bstyle\s*=\s*(["'])(.*?)\1/gi,(_,quote,style)=>'style='+quote+
+    style.replace(/(^|;)\s*(fill|stroke|stop-color|color)\s*:\s*([^;]+)/gi,
+     (_,sep,attr,value)=>sep+attr+':'+paint(value,attr.toLowerCase()==='stroke',false,false))+quote);
+ });
+ return output.replace(/<svg\b[^>]*>/,tag=>tag.slice(0,-1)+' data-pigmentation="'+skin+'">');
 }
 function shade(hex, amt){
   const h=hex.replace('#','');

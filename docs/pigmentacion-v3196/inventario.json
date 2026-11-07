@@ -1,0 +1,5996 @@
+{
+  "summary": {
+    "version": "3.19.6",
+    "catalog": 487,
+    "albino": 251,
+    "melanico": 256,
+    "notable": 455,
+    "historicalLabels": {
+      "Notable": 455,
+      "Leucístico": 241,
+      "Albino": 7,
+      "Leucística": 3,
+      "Melánico": 252,
+      "Melánica": 4
+    },
+    "historicalPaleAliases": 244,
+    "newVariants": 0,
+    "controls": [
+      {
+        "id": "asia_esp_0914",
+        "name": "Esturión siberiano",
+        "latin": "Acipenser baerii",
+        "group": "Peces",
+        "family": "fish",
+        "variants": [
+          "Albino"
+        ],
+        "control": true
+      },
+      {
+        "id": "zorro_rojo",
+        "name": "Zorro rojo",
+        "latin": "Vulpes vulpes",
+        "group": "Mamíferos",
+        "family": "canid",
+        "variants": [
+          "Melánico",
+          "Albino",
+          "Notable"
+        ],
+        "control": true
+      },
+      {
+        "id": "erizo_europeo",
+        "name": "Erizo europeo",
+        "latin": "Erinaceus europaeus",
+        "group": "Mamíferos",
+        "family": "hedgehog",
+        "variants": [
+          "Albino"
+        ],
+        "control": true
+      },
+      {
+        "id": "reno",
+        "name": "Reno",
+        "latin": "Rangifer tarandus",
+        "group": "Mamíferos",
+        "family": "deer",
+        "variants": [
+          "Albino"
+        ],
+        "control": true
+      },
+      {
+        "id": "lince_boreal",
+        "name": "Lince boreal",
+        "latin": "Lynx lynx",
+        "group": "Mamíferos",
+        "family": "felid",
+        "variants": [
+          "Melánico"
+        ],
+        "control": true
+      },
+      {
+        "id": "buho_real",
+        "name": "Búho real",
+        "latin": "Bubo bubo",
+        "group": "Aves",
+        "family": "horned-owl",
+        "variants": [
+          "Albino"
+        ],
+        "control": true
+      },
+      {
+        "id": "eu_esp_0506",
+        "name": "Tortuga mediterránea",
+        "latin": "Testudo hermanni",
+        "group": "Reptiles y anfibios",
+        "family": "land-tortoise",
+        "variants": [
+          "Melánico",
+          "Notable"
+        ],
+        "control": true
+      },
+      {
+        "id": "asia_esp_0402",
+        "name": "Tigre siberiano",
+        "latin": "Panthera tigris",
+        "group": "Mamíferos",
+        "family": "felid",
+        "variants": [
+          "Albino",
+          "Melánico",
+          "Notable"
+        ],
+        "control": true
+      },
+      {
+        "id": "asia_esp_0410",
+        "name": "Pavo real común",
+        "latin": "Pavo cristatus",
+        "group": "Aves",
+        "family": "peafowl",
+        "variants": [
+          "Notable"
+        ],
+        "control": true
+      },
+      {
+        "id": "asia_esp_0351",
+        "name": "Cobra india",
+        "latin": "Naja naja",
+        "group": "Reptiles y anfibios",
+        "family": "cobra",
+        "variants": [
+          "Melánico",
+          "Notable"
+        ],
+        "control": true
+      },
+      {
+        "id": "asia_esp_0067",
+        "name": "Cálao rinoceronte",
+        "latin": "Buceros rhinoceros",
+        "group": "Aves",
+        "family": "hornbill",
+        "variants": [
+          "Melánico",
+          "Notable"
+        ],
+        "control": true
+      },
+      {
+        "id": "af_leopardo",
+        "name": "Leopardo africano",
+        "latin": "Panthera pardus pardus",
+        "group": "Mamíferos",
+        "family": "felid",
+        "variants": [
+          "Albino",
+          "Melánico",
+          "Notable"
+        ],
+        "control": true
+      }
+    ]
+  },
+  "species": [
+    {
+      "id": "asia_esp_0287",
+      "name": "Grulla siberiana",
+      "latin": "Leucogeranus leucogeranus",
+      "group": "Aves",
+      "family": "crane",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0880",
+      "name": "Gallo lira",
+      "latin": "Lyrurus tetrix",
+      "group": "Aves",
+      "family": "grouse",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0861",
+      "name": "Arrendajo de Siberia",
+      "latin": "Perisoreus infaustus",
+      "group": "Aves",
+      "family": "corvid",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0886",
+      "name": "Azor común",
+      "latin": "Accipiter gentilis",
+      "group": "Aves",
+      "family": "accipiter",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0326",
+      "name": "Marta cibelina",
+      "latin": "Martes zibellina",
+      "group": "Mamíferos",
+      "family": "marten",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0843",
+      "name": "Ardilla voladora siberiana",
+      "latin": "Pteromys volans",
+      "group": "Mamíferos",
+      "family": "flying-squirrel",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0914",
+      "name": "Esturión siberiano",
+      "latin": "Acipenser baerii",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Albino"
+      ],
+      "control": true
+    },
+    {
+      "id": "asia_esp_0899",
+      "name": "Salamandra siberiana",
+      "latin": "Salamandrella keyserlingii",
+      "group": "Reptiles y anfibios",
+      "family": "salamander",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0020",
+      "name": "Grulla damisela",
+      "latin": "Anthropoides virgo",
+      "group": "Aves",
+      "family": "crane",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0030",
+      "name": "Águila esteparia",
+      "latin": "Aquila nipalensis",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0887",
+      "name": "Halcón sacre",
+      "latin": "Falco cherrug",
+      "group": "Aves",
+      "family": "falcon",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0533",
+      "name": "Zorro corsac",
+      "latin": "Vulpes corsac",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0387",
+      "name": "Manul",
+      "latin": "Otocolobus manul",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0323",
+      "name": "Marmota siberiana",
+      "latin": "Marmota sibirica",
+      "group": "Mamíferos",
+      "family": "marmot",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0184",
+      "name": "Caballo de Przewalski",
+      "latin": "Equus przewalskii",
+      "group": "Mamíferos",
+      "family": "equid",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0441",
+      "name": "Gacela de Mongolia",
+      "latin": "Procapra gutturosa",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0898",
+      "name": "Sapo mongol",
+      "latin": "Strauchbufo raddei",
+      "group": "Reptiles y anfibios",
+      "family": "toad",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "zorro_rojo",
+      "name": "Zorro rojo",
+      "latin": "Vulpes vulpes",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Melánico",
+        "Albino",
+        "Notable"
+      ],
+      "control": true
+    },
+    {
+      "id": "tejon_europeo",
+      "name": "Tejón europeo",
+      "latin": "Meles meles",
+      "group": "Mamíferos",
+      "family": "badger",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "erizo_europeo",
+      "name": "Erizo europeo",
+      "latin": "Erinaceus europaeus",
+      "group": "Mamíferos",
+      "family": "hedgehog",
+      "variants": [
+        "Albino"
+      ],
+      "control": true
+    },
+    {
+      "id": "ciervo_rojo",
+      "name": "Ciervo rojo",
+      "latin": "Cervus elaphus",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "nutria_europea",
+      "name": "Nutria europea",
+      "latin": "Lutra lutra",
+      "group": "Mamíferos",
+      "family": "otter",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "ardilla_roja",
+      "name": "Ardilla roja",
+      "latin": "Sciurus vulgaris",
+      "group": "Mamíferos",
+      "family": "squirrel",
+      "variants": [
+        "Melánico"
+      ],
+      "control": false
+    },
+    {
+      "id": "frailecillo_atlantico",
+      "name": "Frailecillo atlántico",
+      "latin": "Fratercula arctica",
+      "group": "Aves",
+      "family": "puffin",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "buho_comun",
+      "name": "Búho común",
+      "latin": "Asio otus",
+      "group": "Aves",
+      "family": "horned-owl",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "corzo_europeo",
+      "name": "Corzo europeo",
+      "latin": "Capreolus capreolus",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "alce",
+      "name": "Alce",
+      "latin": "Alces alces",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "reno",
+      "name": "Reno",
+      "latin": "Rangifer tarandus",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Albino"
+      ],
+      "control": true
+    },
+    {
+      "id": "lince_boreal",
+      "name": "Lince boreal",
+      "latin": "Lynx lynx",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Melánico"
+      ],
+      "control": true
+    },
+    {
+      "id": "gloton",
+      "name": "Glotón",
+      "latin": "Gulo gulo",
+      "group": "Mamíferos",
+      "family": "wolverine",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "oso_pardo",
+      "name": "Oso pardo",
+      "latin": "Ursus arctos",
+      "group": "Mamíferos",
+      "family": "bear",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "zorro_artico",
+      "name": "Zorro ártico",
+      "latin": "Vulpes lagopus",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "urogallo_comun",
+      "name": "Urogallo común",
+      "latin": "Tetrao urogallus",
+      "group": "Aves",
+      "family": "grouse",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "perdiz_nival",
+      "name": "Perdiz nival",
+      "latin": "Lagopus muta",
+      "group": "Aves",
+      "family": "partridge",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "lobo_gris",
+      "name": "Lobo gris",
+      "latin": "Canis lupus",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "ibice_alpino",
+      "name": "Íbice alpino",
+      "latin": "Capra ibex",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "rebeco_alpino",
+      "name": "Rebeco alpino",
+      "latin": "Rupicapra rupicapra",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "marmota_alpina",
+      "name": "Marmota alpina",
+      "latin": "Marmota marmota",
+      "group": "Mamíferos",
+      "family": "marmot",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "aguila_real",
+      "name": "Águila real",
+      "latin": "Aquila chrysaetos",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "quebrantahuesos",
+      "name": "Quebrantahuesos",
+      "latin": "Gypaetus barbatus",
+      "group": "Aves",
+      "family": "bearded-vulture",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "liebre_variable",
+      "name": "Liebre variable",
+      "latin": "Lepus timidus",
+      "group": "Mamíferos",
+      "family": "lagomorph",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "salamandra_alpina",
+      "name": "Salamandra alpina",
+      "latin": "Salamandra atra",
+      "group": "Reptiles y anfibios",
+      "family": "salamander",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "jabali",
+      "name": "Jabalí",
+      "latin": "Sus scrofa",
+      "group": "Mamíferos",
+      "family": "pig",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "gato_montes",
+      "name": "Gato montés europeo",
+      "latin": "Felis silvestris",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Melánico"
+      ],
+      "control": false
+    },
+    {
+      "id": "buho_real",
+      "name": "Búho real",
+      "latin": "Bubo bubo",
+      "group": "Aves",
+      "family": "horned-owl",
+      "variants": [
+        "Albino"
+      ],
+      "control": true
+    },
+    {
+      "id": "salamandra_comun",
+      "name": "Salamandra común",
+      "latin": "Salamandra salamandra",
+      "group": "Reptiles y anfibios",
+      "family": "salamander",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "petirrojo",
+      "name": "Petirrojo europeo",
+      "latin": "Erithacus rubecula",
+      "group": "Aves",
+      "family": "robin",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "lince_iberico",
+      "name": "Lince ibérico",
+      "latin": "Lynx pardinus",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Melánico"
+      ],
+      "control": false
+    },
+    {
+      "id": "cabra_montes_iberica",
+      "name": "Cabra montés ibérica",
+      "latin": "Capra pyrenaica",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "buitre_leonado",
+      "name": "Buitre leonado",
+      "latin": "Gyps fulvus",
+      "group": "Aves",
+      "family": "vulture",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "aguila_imperial_iberica",
+      "name": "Águila imperial ibérica",
+      "latin": "Aquila adalberti",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "lagarto_ocelado",
+      "name": "Lagarto ocelado",
+      "latin": "Timon lepidus",
+      "group": "Reptiles y anfibios",
+      "family": "lizard",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "meloncillo",
+      "name": "Meloncillo",
+      "latin": "Herpestes ichneumon",
+      "group": "Mamíferos",
+      "family": "mongoose",
+      "variants": [
+        "Melánico"
+      ],
+      "control": false
+    },
+    {
+      "id": "conejo_europeo",
+      "name": "Conejo europeo",
+      "latin": "Oryctolagus cuniculus",
+      "group": "Mamíferos",
+      "family": "lagomorph",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "flamenco_comun",
+      "name": "Flamenco común",
+      "latin": "Phoenicopterus roseus",
+      "group": "Aves",
+      "family": "flamingo",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "bisonte_europeo",
+      "name": "Bisonte europeo",
+      "latin": "Bison bonasus",
+      "group": "Mamíferos",
+      "family": "bovine",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "ciguena_negra",
+      "name": "Cigüeña negra",
+      "latin": "Ciconia nigra",
+      "group": "Aves",
+      "family": "stork",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "vibora_aspid",
+      "name": "Víbora áspid",
+      "latin": "Vipera aspis",
+      "group": "Reptiles y anfibios",
+      "family": "viper",
+      "variants": [
+        "Melánico"
+      ],
+      "control": false
+    },
+    {
+      "id": "chacal_dorado",
+      "name": "Chacal dorado",
+      "latin": "Canis aureus",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Melánico"
+      ],
+      "control": false
+    },
+    {
+      "id": "castor_europeo",
+      "name": "Castor europeo",
+      "latin": "Castor fiber",
+      "group": "Mamíferos",
+      "family": "beaver",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "pelicano_cenudo",
+      "name": "Pelícano ceñudo",
+      "latin": "Pelecanus crispus",
+      "group": "Aves",
+      "family": "pelican",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "ciguena_blanca",
+      "name": "Cigüeña blanca",
+      "latin": "Ciconia ciconia",
+      "group": "Aves",
+      "family": "stork",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "milano_real",
+      "name": "Milano real",
+      "latin": "Milvus milvus",
+      "group": "Aves",
+      "family": "kite",
+      "variants": [
+        "Albino",
+        "Melánico"
+      ],
+      "control": false
+    },
+    {
+      "id": "liebre_europea",
+      "name": "Liebre europea",
+      "latin": "Lepus europaeus",
+      "group": "Mamíferos",
+      "family": "lagomorph",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "garza_real",
+      "name": "Garza real",
+      "latin": "Ardea cinerea",
+      "group": "Aves",
+      "family": "heron",
+      "variants": [
+        "Albino"
+      ],
+      "control": false
+    },
+    {
+      "id": "cisne_vulgar",
+      "name": "Cisne vulgar",
+      "latin": "Cygnus olor",
+      "group": "Aves",
+      "family": "swan",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "martin_pescador",
+      "name": "Martín pescador común",
+      "latin": "Alcedo atthis",
+      "group": "Aves",
+      "family": "kingfisher",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0654",
+      "name": "Cormorán grande",
+      "latin": "Phalacrocorax carbo",
+      "group": "Aves",
+      "family": "cormorant",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0649",
+      "name": "Pato cuchara europeo",
+      "latin": "Spatula clypeata",
+      "group": "Aves",
+      "family": "duck",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0636",
+      "name": "Alondra común",
+      "latin": "Alauda arvensis",
+      "group": "Aves",
+      "family": "lark",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0631",
+      "name": "Herrerillo común",
+      "latin": "Cyanistes caeruleus",
+      "group": "Aves",
+      "family": "tit",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0629",
+      "name": "Pinzón vulgar",
+      "latin": "Fringilla coelebs",
+      "group": "Aves",
+      "family": "finch",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0628",
+      "name": "Mirlo común",
+      "latin": "Turdus merula",
+      "group": "Aves",
+      "family": "thrush",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0637",
+      "name": "Zorzal común",
+      "latin": "Turdus philomelos",
+      "group": "Aves",
+      "family": "thrush",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0643",
+      "name": "Busardo ratonero",
+      "latin": "Buteo buteo",
+      "group": "Aves",
+      "family": "buzzard",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0646",
+      "name": "Lechuza común",
+      "latin": "Tyto alba",
+      "group": "Aves",
+      "family": "barn-owl",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0617",
+      "name": "Comadreja común",
+      "latin": "Mustela nivalis",
+      "group": "Mamíferos",
+      "family": "weasel",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0619",
+      "name": "Turón europeo",
+      "latin": "Mustela putorius",
+      "group": "Mamíferos",
+      "family": "weasel",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0614",
+      "name": "Murciélago común",
+      "latin": "Pipistrellus pipistrellus",
+      "group": "Mamíferos",
+      "family": "bat",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0612",
+      "name": "Musaraña común",
+      "latin": "Sorex araneus",
+      "group": "Mamíferos",
+      "family": "shrew",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0613",
+      "name": "Musaraña enana",
+      "latin": "Sorex minutus",
+      "group": "Mamíferos",
+      "family": "shrew",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0611",
+      "name": "Topo europeo",
+      "latin": "Talpa europaea",
+      "group": "Mamíferos",
+      "family": "mole",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0604",
+      "name": "Topillo agreste",
+      "latin": "Microtus agrestis",
+      "group": "Mamíferos",
+      "family": "vole",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0606",
+      "name": "Lirón avellano",
+      "latin": "Muscardinus avellanarius",
+      "group": "Mamíferos",
+      "family": "dormouse",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0669",
+      "name": "Trucha común",
+      "latin": "Salmo trutta",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0661",
+      "name": "Lución europeo",
+      "latin": "Anguis fragilis",
+      "group": "Reptiles y anfibios",
+      "family": "glass-lizard",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0660",
+      "name": "Rana bermeja",
+      "latin": "Rana temporaria",
+      "group": "Reptiles y anfibios",
+      "family": "frog",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0656",
+      "name": "Tritón palmeado",
+      "latin": "Lissotriton helveticus",
+      "group": "Reptiles y anfibios",
+      "family": "newt",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0655",
+      "name": "Tritón crestado",
+      "latin": "Triturus cristatus",
+      "group": "Reptiles y anfibios",
+      "family": "newt",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0640",
+      "name": "Ampelis europeo",
+      "latin": "Bombycilla garrulus",
+      "group": "Aves",
+      "family": "waxwing",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0267",
+      "name": "Lagópodo común",
+      "latin": "Lagopus lagopus",
+      "group": "Aves",
+      "family": "partridge",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0639",
+      "name": "Camachuelo común",
+      "latin": "Pyrrhula pyrrhula",
+      "group": "Aves",
+      "family": "finch",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0621",
+      "name": "Marta europea",
+      "latin": "Martes martes",
+      "group": "Mamíferos",
+      "family": "marten",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0618",
+      "name": "Armiño",
+      "latin": "Mustela erminea",
+      "group": "Mamíferos",
+      "family": "weasel",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0610",
+      "name": "Lemming noruego",
+      "latin": "Lemmus lemmus",
+      "group": "Mamíferos",
+      "family": "vole",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0642",
+      "name": "Perdiz griega",
+      "latin": "Alectoris graeca",
+      "group": "Aves",
+      "family": "partridge",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0609",
+      "name": "Topillo nival",
+      "latin": "Chionomys nivalis",
+      "group": "Mamíferos",
+      "family": "vole",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0657",
+      "name": "Tritón alpino",
+      "latin": "Ichthyosaura alpestris",
+      "group": "Reptiles y anfibios",
+      "family": "newt",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0652",
+      "name": "Focha común",
+      "latin": "Fulica atra",
+      "group": "Aves",
+      "family": "coot",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0650",
+      "name": "Somormujo lavanco",
+      "latin": "Podiceps cristatus",
+      "group": "Aves",
+      "family": "grebe",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0653",
+      "name": "Zampullín común",
+      "latin": "Tachybaptus ruficollis",
+      "group": "Aves",
+      "family": "grebe",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0632",
+      "name": "Arrendajo euroasiático",
+      "latin": "Garrulus glandarius",
+      "group": "Aves",
+      "family": "corvid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0630",
+      "name": "Carbonero común",
+      "latin": "Parus major",
+      "group": "Aves",
+      "family": "tit",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0644",
+      "name": "Gavilán común",
+      "latin": "Accipiter nisus",
+      "group": "Aves",
+      "family": "accipiter",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0645",
+      "name": "Mochuelo europeo",
+      "latin": "Athene noctua",
+      "group": "Aves",
+      "family": "little-owl",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0615",
+      "name": "Murciélago hortelano",
+      "latin": "Eptesicus serotinus",
+      "group": "Mamíferos",
+      "family": "bat",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0620",
+      "name": "Garduña",
+      "latin": "Martes foina",
+      "group": "Mamíferos",
+      "family": "marten",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0622",
+      "name": "Visón europeo",
+      "latin": "Mustela lutreola",
+      "group": "Mamíferos",
+      "family": "weasel",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0616",
+      "name": "Murciélago de herradura grande",
+      "latin": "Rhinolophus ferrumequinum",
+      "group": "Mamíferos",
+      "family": "bat",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0601",
+      "name": "Lirón careto",
+      "latin": "Eliomys quercinus",
+      "group": "Mamíferos",
+      "family": "dormouse",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0602",
+      "name": "Lirón gris",
+      "latin": "Glis glis",
+      "group": "Mamíferos",
+      "family": "dormouse",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0603",
+      "name": "Topillo común",
+      "latin": "Microtus arvalis",
+      "group": "Mamíferos",
+      "family": "vole",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0605",
+      "name": "Topillo rojo",
+      "latin": "Myodes glareolus",
+      "group": "Mamíferos",
+      "family": "vole",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0668",
+      "name": "Barbo común",
+      "latin": "Barbus barbus",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0667",
+      "name": "Tenca",
+      "latin": "Tinca tinca",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0659",
+      "name": "Sapo corredor",
+      "latin": "Epidalea calamita",
+      "group": "Reptiles y anfibios",
+      "family": "toad",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0666",
+      "name": "Culebra viperina",
+      "latin": "Natrix maura",
+      "group": "Reptiles y anfibios",
+      "family": "snake",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0665",
+      "name": "Culebra de collar",
+      "latin": "Natrix natrix",
+      "group": "Reptiles y anfibios",
+      "family": "snake",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0638",
+      "name": "Oropéndola europea",
+      "latin": "Oriolus oriolus",
+      "group": "Aves",
+      "family": "oriole",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0159",
+      "name": "Pico picapinos",
+      "latin": "Dendrocopos major",
+      "group": "Aves",
+      "family": "woodpecker",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0608",
+      "name": "Ardilla terrestre europea",
+      "latin": "Spermophilus citellus",
+      "group": "Mamíferos",
+      "family": "squirrel",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0641",
+      "name": "Perdiz roja",
+      "latin": "Alectoris rufa",
+      "group": "Aves",
+      "family": "partridge",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0633",
+      "name": "Rabilargo ibérico",
+      "latin": "Cyanopica cooki",
+      "group": "Aves",
+      "family": "corvid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0635",
+      "name": "Abejaruco europeo",
+      "latin": "Merops apiaster",
+      "group": "Aves",
+      "family": "bee-eater",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0634",
+      "name": "Abubilla europea",
+      "latin": "Upupa epops",
+      "group": "Aves",
+      "family": "hoopoe",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0647",
+      "name": "Halcón de Eleonor",
+      "latin": "Falco eleonorae",
+      "group": "Aves",
+      "family": "falcon",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0623",
+      "name": "Desmán ibérico",
+      "latin": "Galemys pyrenaicus",
+      "group": "Mamíferos",
+      "family": "desman",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0219",
+      "name": "Gineta",
+      "latin": "Genetta genetta",
+      "group": "Mamíferos",
+      "family": "viverrid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0607",
+      "name": "Liebre ibérica",
+      "latin": "Lepus granatensis",
+      "group": "Mamíferos",
+      "family": "lagomorph",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0626",
+      "name": "Rebeco pirenaico",
+      "latin": "Rupicapra pyrenaica",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0116",
+      "name": "Camaleón común",
+      "latin": "Chamaeleo chamaeleon",
+      "group": "Reptiles y anfibios",
+      "family": "chameleon",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0029",
+      "name": "Águila imperial oriental",
+      "latin": "Aquila heliaca",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0624",
+      "name": "Desmán ruso",
+      "latin": "Desmana moschata",
+      "group": "Mamíferos",
+      "family": "desman",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0625",
+      "name": "Gato almizclero europeo",
+      "latin": "Vormela peregusna",
+      "group": "Mamíferos",
+      "family": "weasel",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0670",
+      "name": "Perca europea",
+      "latin": "Perca fluviatilis",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0204",
+      "name": "Cernícalo vulgar",
+      "latin": "Falco tinnunculus",
+      "group": "Aves",
+      "family": "falcon",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0253",
+      "name": "Puercoespín crestado",
+      "latin": "Hystrix cristata",
+      "group": "Mamíferos",
+      "family": "porcupine",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0627",
+      "name": "Muflón europeo",
+      "latin": "Ovis gmelini",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0506",
+      "name": "Tortuga mediterránea",
+      "latin": "Testudo hermanni",
+      "group": "Reptiles y anfibios",
+      "family": "land-tortoise",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": true
+    },
+    {
+      "id": "eu_esp_0144",
+      "name": "Cisne cantor",
+      "latin": "Cygnus cygnus",
+      "group": "Aves",
+      "family": "swan",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0232",
+      "name": "Águila marina europea",
+      "latin": "Haliaeetus albicilla",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "eu_esp_0505",
+      "name": "Tortuga griega",
+      "latin": "Testudo graeca",
+      "group": "Reptiles y anfibios",
+      "family": "land-tortoise",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0401",
+      "name": "Leopardo persa",
+      "latin": "Panthera pardus tulliana",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0081",
+      "name": "Tur del Cáucaso oriental",
+      "latin": "Capra cylindricornis",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0149",
+      "name": "Gamo",
+      "latin": "Dama dama",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Melánico",
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0903",
+      "name": "Lagarto de cristal oriental",
+      "latin": "Pseudopus apodus",
+      "group": "Reptiles y anfibios",
+      "family": "glass-lizard",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0080",
+      "name": "Cabra salvaje",
+      "latin": "Capra aegagrus",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0402",
+      "name": "Tigre siberiano",
+      "latin": "Panthera tigris",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": true
+    },
+    {
+      "id": "asia_esp_0086",
+      "name": "Corzo siberiano",
+      "latin": "Capreolus pygargus",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0344",
+      "name": "Ciervo almizclero siberiano",
+      "latin": "Moschus moschiferus",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0209",
+      "name": "Frailecillo corniculado",
+      "latin": "Fratercula corniculata",
+      "group": "Aves",
+      "family": "puffin",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0203",
+      "name": "Halcón gerifalte",
+      "latin": "Falco rusticolus",
+      "group": "Aves",
+      "family": "falcon",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0234",
+      "name": "Águila marina de Steller",
+      "latin": "Haliaeetus pelagicus",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0177",
+      "name": "Nutria marina",
+      "latin": "Enhydra lutris",
+      "group": "Mamíferos",
+      "family": "otter",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0369",
+      "name": "Salmón rosado",
+      "latin": "Oncorhynchus gorbuscha",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0371",
+      "name": "Salmón rojo",
+      "latin": "Oncorhynchus nerka",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0881",
+      "name": "Collalba del desierto",
+      "latin": "Oenanthe deserti",
+      "group": "Aves",
+      "family": "robin",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0194",
+      "name": "Jerbo de orejas largas",
+      "latin": "Euchoreutes naso",
+      "group": "Mamíferos",
+      "family": "jerboa",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0073",
+      "name": "Camello bactriano salvaje",
+      "latin": "Camelus ferus",
+      "group": "Mamíferos",
+      "family": "camel",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0431",
+      "name": "Lagarto cabeza de sapo",
+      "latin": "Phrynocephalus versicolor",
+      "group": "Reptiles y anfibios",
+      "family": "lizard",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0863",
+      "name": "Perdiz de las nieves del Himalaya",
+      "latin": "Lerwa lerwa",
+      "group": "Aves",
+      "family": "partridge",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0294",
+      "name": "Monal del Himalaya",
+      "latin": "Lophophorus impejanus",
+      "group": "Aves",
+      "family": "monal",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0864",
+      "name": "Faisán monal chino",
+      "latin": "Lophophorus lhuysii",
+      "group": "Aves",
+      "family": "monal",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0503",
+      "name": "Mosquero del paraíso asiático",
+      "latin": "Terpsiphone paradisi",
+      "group": "Aves",
+      "family": "flycatcher",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0865",
+      "name": "Tragopán sátiro",
+      "latin": "Tragopan satyra",
+      "group": "Aves",
+      "family": "tragopan",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0820",
+      "name": "Cuón",
+      "latin": "Cuon alpinus",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0403",
+      "name": "Leopardo de las nieves",
+      "latin": "Panthera uncia",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0007",
+      "name": "Panda rojo",
+      "latin": "Ailurus fulgens",
+      "group": "Mamíferos",
+      "family": "red-panda",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0855",
+      "name": "Macaco rhesus",
+      "latin": "Macaca mulatta",
+      "group": "Mamíferos",
+      "family": "macaque",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0850",
+      "name": "Marta de garganta amarilla",
+      "latin": "Martes flavigula",
+      "group": "Mamíferos",
+      "family": "marten",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0844",
+      "name": "Ardilla voladora gigante roja",
+      "latin": "Petaurista petaurista",
+      "group": "Mamíferos",
+      "family": "flying-squirrel",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0523",
+      "name": "Oso negro asiático",
+      "latin": "Ursus thibetanus",
+      "group": "Mamíferos",
+      "family": "bear",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0062",
+      "name": "Yak salvaje",
+      "latin": "Bos mutus",
+      "group": "Mamíferos",
+      "family": "bovine",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0821",
+      "name": "Takin",
+      "latin": "Budorcas taxicolor",
+      "group": "Mamíferos",
+      "family": "bovine",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0240",
+      "name": "Tahr del Himalaya",
+      "latin": "Hemitragus jemlahicus",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0445",
+      "name": "Bharal",
+      "latin": "Pseudois nayaur",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0206",
+      "name": "Gato de las arenas",
+      "latin": "Felis margarita",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0214",
+      "name": "Gacela de Arabia",
+      "latin": "Gazella arabica",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0383",
+      "name": "Órix árabe",
+      "latin": "Oryx leucoryx",
+      "group": "Mamíferos",
+      "family": "oryx",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0519",
+      "name": "Lagarto egipcio de cola espinosa",
+      "latin": "Uromastyx aegyptia",
+      "group": "Reptiles y anfibios",
+      "family": "spiny-lizard",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0102",
+      "name": "Víbora cornuda árabe",
+      "latin": "Cerastes gasperettii",
+      "group": "Reptiles y anfibios",
+      "family": "viper",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0205",
+      "name": "Gato de la jungla",
+      "latin": "Felis chaus",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0300",
+      "name": "Nutria lisa",
+      "latin": "Lutrogale perspicillata",
+      "group": "Mamíferos",
+      "family": "otter",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0065",
+      "name": "Búfalo de agua",
+      "latin": "Bubalus bubalis",
+      "group": "Mamíferos",
+      "family": "bovine",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0910",
+      "name": "Carpa común",
+      "latin": "Cyprinus carpio",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0327",
+      "name": "Galápago caspio",
+      "latin": "Mauremys caspica",
+      "group": "Reptiles y anfibios",
+      "family": "pond-turtle",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0873",
+      "name": "Abejaruco verde",
+      "latin": "Merops orientalis",
+      "group": "Aves",
+      "family": "bee-eater",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0246",
+      "name": "Hiena rayada",
+      "latin": "Hyaena hyaena",
+      "group": "Mamíferos",
+      "family": "hyena",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0182",
+      "name": "Onagro",
+      "latin": "Equus hemionus",
+      "group": "Mamíferos",
+      "family": "equid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0218",
+      "name": "Gacela persa",
+      "latin": "Gazella subgutturosa",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0227",
+      "name": "Grulla de cuello negro",
+      "latin": "Grus nigricollis",
+      "group": "Aves",
+      "family": "crane",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0534",
+      "name": "Zorro tibetano",
+      "latin": "Vulpes ferrilata",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0321",
+      "name": "Marmota del Himalaya",
+      "latin": "Marmota himalayana",
+      "group": "Mamíferos",
+      "family": "marmot",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0183",
+      "name": "Kiang",
+      "latin": "Equus kiang",
+      "group": "Mamíferos",
+      "family": "equid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0404",
+      "name": "Antílope tibetano",
+      "latin": "Pantholops hodgsonii",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0442",
+      "name": "Gacela tibetana",
+      "latin": "Procapra picticaudata",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0347",
+      "name": "Turón estepario",
+      "latin": "Mustela eversmanii",
+      "group": "Mamíferos",
+      "family": "weasel",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0319",
+      "name": "Marmota bobak",
+      "latin": "Marmota bobak",
+      "group": "Mamíferos",
+      "family": "marmot",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0468",
+      "name": "Antílope saiga",
+      "latin": "Saiga tatarica",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0891",
+      "name": "Pato mandarín",
+      "latin": "Aix galericulata",
+      "group": "Aves",
+      "family": "duck",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0890",
+      "name": "Cigüeña blanca oriental",
+      "latin": "Ciconia boyciana",
+      "group": "Aves",
+      "family": "stork",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0226",
+      "name": "Grulla de coronilla roja",
+      "latin": "Grus japonensis",
+      "group": "Aves",
+      "family": "crane",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0878",
+      "name": "Urraca de pico azul",
+      "latin": "Cyanopica cyanus",
+      "group": "Aves",
+      "family": "corvid",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0422",
+      "name": "Faisán común",
+      "latin": "Phasianus colchicus",
+      "group": "Aves",
+      "family": "pheasant",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0842",
+      "name": "Liebre china",
+      "latin": "Lepus sinensis",
+      "group": "Mamíferos",
+      "family": "lagomorph",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0824",
+      "name": "Ciervo del padre David",
+      "latin": "Elaphurus davidianus",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0915",
+      "name": "Pez cabeza de serpiente del norte",
+      "latin": "Channa argus",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0911",
+      "name": "Pez mandarín chino",
+      "latin": "Siniperca chuatsi",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0888",
+      "name": "Pelícano blanco oriental",
+      "latin": "Pelecanus philippensis",
+      "group": "Aves",
+      "family": "pelican",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0868",
+      "name": "Cálao bicorne",
+      "latin": "Buceros bicornis",
+      "group": "Aves",
+      "family": "hornbill",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0872",
+      "name": "Carraca india",
+      "latin": "Coracias benghalensis",
+      "group": "Aves",
+      "family": "roller",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0410",
+      "name": "Pavo real común",
+      "latin": "Pavo cristatus",
+      "group": "Aves",
+      "family": "peafowl",
+      "variants": [
+        "Notable"
+      ],
+      "control": true
+    },
+    {
+      "id": "asia_esp_0874",
+      "name": "Bubul",
+      "latin": "Pycnonotus cafer",
+      "group": "Aves",
+      "family": "bulbul",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0816",
+      "name": "Gato pescador",
+      "latin": "Prionailurus viverrinus",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0176",
+      "name": "Elefante asiático",
+      "latin": "Elephas maximus",
+      "group": "Mamíferos",
+      "family": "elephant",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0852",
+      "name": "Pangolín indio",
+      "latin": "Manis crassicaudata",
+      "group": "Mamíferos",
+      "family": "pangolin",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0336",
+      "name": "Oso bezudo",
+      "latin": "Melursus ursinus",
+      "group": "Mamíferos",
+      "family": "bear",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0860",
+      "name": "Loris lento de Bengala",
+      "latin": "Nycticebus bengalensis",
+      "group": "Mamíferos",
+      "family": "loris",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0853",
+      "name": "Musaraña almizclera",
+      "latin": "Suncus murinus",
+      "group": "Mamíferos",
+      "family": "shrew",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0476",
+      "name": "Langur gris",
+      "latin": "Semnopithecus entellus",
+      "group": "Mamíferos",
+      "family": "langur",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0833",
+      "name": "Antílope negro",
+      "latin": "Antilope cervicapra",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0050",
+      "name": "Ciervo chital",
+      "latin": "Axis axis",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0061",
+      "name": "Gaur",
+      "latin": "Bos gaurus",
+      "group": "Mamíferos",
+      "family": "bovine",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0063",
+      "name": "Nilgó",
+      "latin": "Boselaphus tragocamelus",
+      "group": "Mamíferos",
+      "family": "antelope",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0830",
+      "name": "Búfalo salvaje asiático",
+      "latin": "Bubalus arnee",
+      "group": "Mamíferos",
+      "family": "bovine",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0465",
+      "name": "Rinoceronte indio",
+      "latin": "Rhinoceros unicornis",
+      "group": "Mamíferos",
+      "family": "rhino",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0825",
+      "name": "Ciervo sambar",
+      "latin": "Rusa unicolor",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0900",
+      "name": "Varano de Bengala",
+      "latin": "Varanus bengalensis",
+      "group": "Reptiles y anfibios",
+      "family": "monitor",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0136",
+      "name": "Cocodrilo de las marismas",
+      "latin": "Crocodylus palustris",
+      "group": "Reptiles y anfibios",
+      "family": "crocodile",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0906",
+      "name": "Krait común",
+      "latin": "Bungarus caeruleus",
+      "group": "Reptiles y anfibios",
+      "family": "krait",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0905",
+      "name": "Víbora de Russell",
+      "latin": "Daboia russelii",
+      "group": "Reptiles y anfibios",
+      "family": "viper",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0351",
+      "name": "Cobra india",
+      "latin": "Naja naja",
+      "group": "Reptiles y anfibios",
+      "family": "cobra",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": true
+    },
+    {
+      "id": "asia_esp_0124",
+      "name": "Faisán dorado",
+      "latin": "Chrysolophus pictus",
+      "group": "Aves",
+      "family": "pheasant",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0296",
+      "name": "Faisán plateado",
+      "latin": "Lophura nycthemera",
+      "group": "Aves",
+      "family": "pheasant",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0096",
+      "name": "Gato dorado asiático",
+      "latin": "Catopuma temminckii",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0355",
+      "name": "Leopardo nublado",
+      "latin": "Neofelis nebulosa",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0006",
+      "name": "Panda gigante",
+      "latin": "Ailuropoda melanoleuca",
+      "group": "Mamíferos",
+      "family": "bear",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0318",
+      "name": "Pangolín chino",
+      "latin": "Manis pentadactyla",
+      "group": "Mamíferos",
+      "family": "pangolin",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0854",
+      "name": "Gibón de cresta negra",
+      "latin": "Nomascus concolor",
+      "group": "Mamíferos",
+      "family": "gibbon",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0395",
+      "name": "Civeta de las palmeras enmascarada",
+      "latin": "Paguma larvata",
+      "group": "Mamíferos",
+      "family": "viverrid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0856",
+      "name": "Mono de nariz chata dorado",
+      "latin": "Rhinopithecus roxellana",
+      "group": "Mamíferos",
+      "family": "langur",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0310",
+      "name": "Macaco tibetano",
+      "latin": "Macaca thibetana",
+      "group": "Mamíferos",
+      "family": "macaque",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0345",
+      "name": "Muntíaco de Reeves",
+      "latin": "Muntiacus reevesi",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0902",
+      "name": "Gecko tokay",
+      "latin": "Gekko gecko",
+      "group": "Reptiles y anfibios",
+      "family": "gecko",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0016",
+      "name": "Salamandra gigante china",
+      "latin": "Andrias davidianus",
+      "group": "Reptiles y anfibios",
+      "family": "giant-salamander",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0433",
+      "name": "Urraca oriental",
+      "latin": "Pica serica",
+      "group": "Aves",
+      "family": "corvid",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0440",
+      "name": "Gato leopardo",
+      "latin": "Prionailurus bengalensis",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0333",
+      "name": "Tejón asiático",
+      "latin": "Meles leucurus",
+      "group": "Mamíferos",
+      "family": "badger",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0111",
+      "name": "Ciervo sika",
+      "latin": "Cervus nippon",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0249",
+      "name": "Ciervo acuático chino",
+      "latin": "Hydropotes inermis",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0067",
+      "name": "Cálao rinoceronte",
+      "latin": "Buceros rhinoceros",
+      "group": "Aves",
+      "family": "hornbill",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": true
+    },
+    {
+      "id": "asia_esp_0867",
+      "name": "Pavo verde",
+      "latin": "Pavo muticus",
+      "group": "Aves",
+      "family": "peafowl",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0869",
+      "name": "Cálao de casco",
+      "latin": "Rhinoplax vigil",
+      "group": "Aves",
+      "family": "hornbill",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0883",
+      "name": "Águila de las Filipinas",
+      "latin": "Pithecophaga jefferyi",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0849",
+      "name": "Binturong",
+      "latin": "Arctictis binturong",
+      "group": "Mamíferos",
+      "family": "viverrid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0858",
+      "name": "Tarsio filipino",
+      "latin": "Carlito syrichta",
+      "group": "Mamíferos",
+      "family": "tarsier",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0238",
+      "name": "Oso malayo",
+      "latin": "Helarctos malayanus",
+      "group": "Mamíferos",
+      "family": "bear",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0857",
+      "name": "Macaco de cola de cerdo",
+      "latin": "Macaca nemestrina",
+      "group": "Mamíferos",
+      "family": "macaque",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0317",
+      "name": "Pangolín malayo",
+      "latin": "Manis javanica",
+      "group": "Mamíferos",
+      "family": "pangolin",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0859",
+      "name": "Tarsio de espectro",
+      "latin": "Tarsius tarsier",
+      "group": "Mamíferos",
+      "family": "tarsier",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0251",
+      "name": "Gibón de manos blancas",
+      "latin": "Hylobates lar",
+      "group": "Mamíferos",
+      "family": "gibbon",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0352",
+      "name": "Mono narigudo",
+      "latin": "Nasalis larvatus",
+      "group": "Mamíferos",
+      "family": "proboscis-monkey",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0436",
+      "name": "Orangután de Borneo",
+      "latin": "Pongo pygmaeus",
+      "group": "Mamíferos",
+      "family": "ape",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0491",
+      "name": "Gibón siamango",
+      "latin": "Symphalangus syndactylus",
+      "group": "Mamíferos",
+      "family": "gibbon",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0165",
+      "name": "Rinoceronte de Sumatra",
+      "latin": "Dicerorhinus sumatrensis",
+      "group": "Mamíferos",
+      "family": "rhino",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0834",
+      "name": "Jabalí barbudo",
+      "latin": "Sus barbatus",
+      "group": "Mamíferos",
+      "family": "pig",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0498",
+      "name": "Tapir malayo",
+      "latin": "Tapirus indicus",
+      "group": "Mamíferos",
+      "family": "tapir",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0901",
+      "name": "Dragón volador común",
+      "latin": "Draco volans",
+      "group": "Reptiles y anfibios",
+      "family": "flying-lizard",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0527",
+      "name": "Dragón de Komodo",
+      "latin": "Varanus komodoensis",
+      "group": "Reptiles y anfibios",
+      "family": "monitor",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0316",
+      "name": "Pitón reticulada",
+      "latin": "Malayopython reticulatus",
+      "group": "Reptiles y anfibios",
+      "family": "python",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0373",
+      "name": "Cobra real",
+      "latin": "Ophiophagus hannah",
+      "group": "Reptiles y anfibios",
+      "family": "cobra",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0877",
+      "name": "Petirrojo japonés",
+      "latin": "Larvivora akahige",
+      "group": "Aves",
+      "family": "robin",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0494",
+      "name": "Faisán cobrizo",
+      "latin": "Syrmaticus soemmerringii",
+      "group": "Aves",
+      "family": "pheasant",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0363",
+      "name": "Tanuki",
+      "latin": "Nyctereutes procyonoides",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0414",
+      "name": "Conejo de Amami",
+      "latin": "Pentalagus furnessi",
+      "group": "Mamíferos",
+      "family": "lagomorph",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0308",
+      "name": "Macaco japonés",
+      "latin": "Macaca fuscata",
+      "group": "Mamíferos",
+      "family": "macaque",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0087",
+      "name": "Serau japonés",
+      "latin": "Capricornis crispus",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "asia_esp_0017",
+      "name": "Salamandra gigante japonesa",
+      "latin": "Andrias japonicus",
+      "group": "Reptiles y anfibios",
+      "family": "giant-salamander",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_fenec",
+      "name": "Fénec",
+      "latin": "Vulpes zerda",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_dromedario",
+      "name": "Dromedario",
+      "latin": "Camelus dromedarius",
+      "group": "Mamíferos",
+      "family": "camel",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_gacela_dorcas",
+      "name": "Gacela dorcas",
+      "latin": "Gazella dorcas",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_chacal_dorado",
+      "name": "Lobo dorado africano",
+      "latin": "Canis lupaster",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_ibis_eremita",
+      "name": "Ibis eremita",
+      "latin": "Geronticus eremita",
+      "group": "Aves",
+      "family": "ibis",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_serval",
+      "name": "Serval",
+      "latin": "Leptailurus serval",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_cobra_egipcia",
+      "name": "Cobra egipcia",
+      "latin": "Naja haje",
+      "group": "Reptiles y anfibios",
+      "family": "cobra",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_arrui",
+      "name": "Arruí",
+      "latin": "Ammotragus lervia",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_leon",
+      "name": "León africano",
+      "latin": "Panthera leo",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_elefante_sabana",
+      "name": "Elefante africano de sabana",
+      "latin": "Loxodonta africana",
+      "group": "Mamíferos",
+      "family": "elephant",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_rinoceronte_blanco",
+      "name": "Rinoceronte blanco",
+      "latin": "Ceratotherium simum",
+      "group": "Mamíferos",
+      "family": "rhino",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_bufalo_cafre",
+      "name": "Búfalo cafre",
+      "latin": "Syncerus caffer",
+      "group": "Mamíferos",
+      "family": "bovine",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_licaon",
+      "name": "Licaón",
+      "latin": "Lycaon pictus",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_cocodrilo_nilo",
+      "name": "Cocodrilo del Nilo",
+      "latin": "Crocodylus niloticus",
+      "group": "Reptiles y anfibios",
+      "family": "crocodile",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_aguila_pescadora",
+      "name": "Pigargo vocinglero",
+      "latin": "Icthyophaga vocifer",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_piton_africana",
+      "name": "Pitón de Seba",
+      "latin": "Python sebae",
+      "group": "Reptiles y anfibios",
+      "family": "python",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_gorila_occidental",
+      "name": "Gorila occidental",
+      "latin": "Gorilla gorilla",
+      "group": "Mamíferos",
+      "family": "ape",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_chimpance",
+      "name": "Chimpancé común",
+      "latin": "Pan troglodytes",
+      "group": "Mamíferos",
+      "family": "ape",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_pangolin_gigante",
+      "name": "Pangolín gigante",
+      "latin": "Smutsia gigantea",
+      "group": "Mamíferos",
+      "family": "pangolin",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_leopardo",
+      "name": "Leopardo africano",
+      "latin": "Panthera pardus pardus",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": true
+    },
+    {
+      "id": "af_elefante_bosque",
+      "name": "Elefante africano de bosque",
+      "latin": "Loxodonta cyclotis",
+      "group": "Mamíferos",
+      "family": "elephant",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_loro_gris",
+      "name": "Loro gris africano",
+      "latin": "Psittacus erithacus",
+      "group": "Aves",
+      "family": "parrot",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_colobo",
+      "name": "Colobo blanco y negro",
+      "latin": "Colobus guereza",
+      "group": "Mamíferos",
+      "family": "langur",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_cocodrilo_hocico",
+      "name": "Cocodrilo de hocico estrecho",
+      "latin": "Mecistops cataphractus",
+      "group": "Reptiles y anfibios",
+      "family": "slender-crocodile",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_hipopotamo",
+      "name": "Hipopótamo común",
+      "latin": "Hippopotamus amphibius",
+      "group": "Mamíferos",
+      "family": "hippo",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_avestruz",
+      "name": "Avestruz común",
+      "latin": "Struthio camelus",
+      "group": "Aves",
+      "family": "ostrich",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_ibis_sagrado",
+      "name": "Ibis sagrado africano",
+      "latin": "Threskiornis aethiopicus",
+      "group": "Aves",
+      "family": "ibis",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_garza_goliat",
+      "name": "Garza goliat",
+      "latin": "Ardea goliath",
+      "group": "Aves",
+      "family": "heron",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_abejaruco_carmin",
+      "name": "Abejaruco carmín",
+      "latin": "Merops nubicus",
+      "group": "Aves",
+      "family": "bee-eater",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_jirafa",
+      "name": "Jirafa",
+      "latin": "Giraffa camelopardalis",
+      "group": "Mamíferos",
+      "family": "giraffe",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_cebra_llanura",
+      "name": "Cebra de llanura",
+      "latin": "Equus quagga",
+      "group": "Mamíferos",
+      "family": "equid",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_facoquero",
+      "name": "Facóquero común",
+      "latin": "Phacochoerus africanus",
+      "group": "Mamíferos",
+      "family": "pig",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_nu_azul",
+      "name": "Ñu azul",
+      "latin": "Connochaetes taurinus",
+      "group": "Mamíferos",
+      "family": "wildebeest",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_grulla_coronada",
+      "name": "Grulla coronada gris",
+      "latin": "Balearica regulorum",
+      "group": "Aves",
+      "family": "crane",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_hiena_manchada",
+      "name": "Hiena manchada",
+      "latin": "Crocuta crocuta",
+      "group": "Mamíferos",
+      "family": "hyena",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_orix",
+      "name": "Órix del Cabo",
+      "latin": "Oryx gazella",
+      "group": "Mamíferos",
+      "family": "oryx",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_zorro_palido",
+      "name": "Zorro pálido",
+      "latin": "Vulpes pallida",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_antilope_bongo",
+      "name": "Bongo",
+      "latin": "Tragelaphus eurycerus",
+      "group": "Mamíferos",
+      "family": "spiral-antelope",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_duiker_azul",
+      "name": "Duíquer azul",
+      "latin": "Philantomba monticola",
+      "group": "Mamíferos",
+      "family": "small-antelope",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_civeta",
+      "name": "Civeta africana",
+      "latin": "Civettictis civetta",
+      "group": "Mamíferos",
+      "family": "viverrid",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_mandril",
+      "name": "Mandril",
+      "latin": "Mandrillus sphinx",
+      "group": "Mamíferos",
+      "family": "baboon",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_turaco",
+      "name": "Turaco verde",
+      "latin": "Tauraco persa",
+      "group": "Aves",
+      "family": "turaco",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_okapi",
+      "name": "Okapi",
+      "latin": "Okapia johnstoni",
+      "group": "Mamíferos",
+      "family": "okapi",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_gorila_montana",
+      "name": "Gorila de montaña",
+      "latin": "Gorilla beringei beringei",
+      "group": "Mamíferos",
+      "family": "ape",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_galago",
+      "name": "Gálago senegalés",
+      "latin": "Galago senegalensis",
+      "group": "Mamíferos",
+      "family": "galago",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_babuino_oliva",
+      "name": "Babuino oliva",
+      "latin": "Papio anubis",
+      "group": "Mamíferos",
+      "family": "baboon",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_caracal",
+      "name": "Caracal",
+      "latin": "Caracal caracal",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_suricata",
+      "name": "Suricata",
+      "latin": "Suricata suricatta",
+      "group": "Mamíferos",
+      "family": "meerkat",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_springbok",
+      "name": "Springbok",
+      "latin": "Antidorcas marsupialis",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_guepardo",
+      "name": "Guepardo",
+      "latin": "Acinonyx jubatus",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_pinguino_africano",
+      "name": "Pingüino africano",
+      "latin": "Spheniscus demersus",
+      "group": "Aves",
+      "family": "penguin",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_lobo_marino_cabo",
+      "name": "Lobo marino del Cabo",
+      "latin": "Arctocephalus pusillus",
+      "group": "Mamíferos",
+      "family": "pinniped",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_tiburon_blanco",
+      "name": "Tiburón blanco",
+      "latin": "Carcharodon carcharias",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_tortuga_laúd",
+      "name": "Tortuga laúd",
+      "latin": "Dermochelys coriacea",
+      "group": "Reptiles y anfibios",
+      "family": "sea-turtle",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_eland",
+      "name": "Eland común",
+      "latin": "Taurotragus oryx",
+      "group": "Mamíferos",
+      "family": "spiral-antelope",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_secretario",
+      "name": "Ave secretaria",
+      "latin": "Sagittarius serpentarius",
+      "group": "Aves",
+      "family": "secretary",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_lemur_colaanillada",
+      "name": "Lémur de cola anillada",
+      "latin": "Lemur catta",
+      "group": "Mamíferos",
+      "family": "lemur",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_sifaka",
+      "name": "Sifaca de Verreaux",
+      "latin": "Propithecus verreauxi",
+      "group": "Mamíferos",
+      "family": "lemur",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_fosa",
+      "name": "Fosa",
+      "latin": "Cryptoprocta ferox",
+      "group": "Mamíferos",
+      "family": "fossa",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_camaleon_pantera",
+      "name": "Camaleón pantera",
+      "latin": "Furcifer pardalis",
+      "group": "Reptiles y anfibios",
+      "family": "chameleon",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_gecko_diurno",
+      "name": "Geco diurno de Madagascar",
+      "latin": "Phelsuma madagascariensis",
+      "group": "Reptiles y anfibios",
+      "family": "gecko",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_tenrec",
+      "name": "Tenrec común",
+      "latin": "Tenrec ecaudatus",
+      "group": "Mamíferos",
+      "family": "tenrec",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_indri",
+      "name": "Indri",
+      "latin": "Indri indri",
+      "group": "Mamíferos",
+      "family": "lemur",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_tortuga_radiada",
+      "name": "Tortuga radiada",
+      "latin": "Astrochelys radiata",
+      "group": "Reptiles y anfibios",
+      "family": "land-tortoise",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_fosa_ave",
+      "name": "Águila pescadora de Madagascar",
+      "latin": "Haliaeetus vociferoides",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_asno_somali",
+      "name": "Asno salvaje somalí",
+      "latin": "Equus africanus somaliensis",
+      "group": "Mamíferos",
+      "family": "equid",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_gerenuc",
+      "name": "Gerenuc",
+      "latin": "Litocranius walleri",
+      "group": "Mamíferos",
+      "family": "gerenuk",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_dikdik_guenther",
+      "name": "Dicdic de Günther",
+      "latin": "Madoqua guentheri",
+      "group": "Mamíferos",
+      "family": "small-antelope",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_babuino_hamadryas",
+      "name": "Babuino hamadríade",
+      "latin": "Papio hamadryas",
+      "group": "Mamíferos",
+      "family": "baboon",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_lechwe_rojo",
+      "name": "Lechwe rojo",
+      "latin": "Kobus leche",
+      "group": "Mamíferos",
+      "family": "antelope",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_jacana_africana",
+      "name": "Jacana africana",
+      "latin": "Actophilornis africanus",
+      "group": "Aves",
+      "family": "jacana",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_sitatunga",
+      "name": "Sitatunga",
+      "latin": "Tragelaphus spekii",
+      "group": "Mamíferos",
+      "family": "spiral-antelope",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_potamoquero",
+      "name": "Potamóquero rojo",
+      "latin": "Potamochoerus porcus",
+      "group": "Mamíferos",
+      "family": "pig",
+      "variants": [
+        "Notable",
+        "Melánico"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_mono_brazza",
+      "name": "Mono de De Brazza",
+      "latin": "Cercopithecus neglectus",
+      "group": "Mamíferos",
+      "family": "guenon",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_picatartes_gris",
+      "name": "Picatartes de cuello gris",
+      "latin": "Picathartes oreas",
+      "group": "Aves",
+      "family": "rockfowl",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_lobo_etiope",
+      "name": "Lobo etíope",
+      "latin": "Canis simensis",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_gelada",
+      "name": "Gelada",
+      "latin": "Theropithecus gelada",
+      "group": "Mamíferos",
+      "family": "baboon",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_ibice_walia",
+      "name": "Íbice de Walia",
+      "latin": "Capra walie",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_nyala_montana",
+      "name": "Nyala de montaña",
+      "latin": "Tragelaphus buxtoni",
+      "group": "Mamíferos",
+      "family": "spiral-antelope",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_ganso_alas_azules",
+      "name": "Ganso de alas azules",
+      "latin": "Cyanochen cyanoptera",
+      "group": "Aves",
+      "family": "goose",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_zorro_cabo",
+      "name": "Zorro del Cabo",
+      "latin": "Vulpes chama",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_hiena_parda",
+      "name": "Hiena parda",
+      "latin": "Parahyaena brunnea",
+      "group": "Mamíferos",
+      "family": "hyena",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_camaleon_namaqua",
+      "name": "Camaleón de Namaqua",
+      "latin": "Chamaeleo namaquensis",
+      "group": "Reptiles y anfibios",
+      "family": "chameleon",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_geco_patas_palmeadas",
+      "name": "Geco de patas palmeadas",
+      "latin": "Pachydactylus rangei",
+      "group": "Reptiles y anfibios",
+      "family": "gecko",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_macaco_berberia",
+      "name": "Macaco de Berbería",
+      "latin": "Macaca sylvanus",
+      "group": "Mamíferos",
+      "family": "macaque",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_gato_montes_africano",
+      "name": "Gato montés africano",
+      "latin": "Felis lybica",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_ciervo_berberia",
+      "name": "Ciervo de Berbería",
+      "latin": "Cervus elaphus barbarus",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_zorro_ruppell",
+      "name": "Zorro de Rüppell",
+      "latin": "Vulpes rueppellii",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_antilope_sable",
+      "name": "Antílope sable",
+      "latin": "Hippotragus niger",
+      "group": "Mamíferos",
+      "family": "horse-antelope",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_calao_terrestre",
+      "name": "Cálao terrestre sureño",
+      "latin": "Bucorvus leadbeateri",
+      "group": "Aves",
+      "family": "hornbill",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_pangolin_temminck",
+      "name": "Pangolín terrestre",
+      "latin": "Smutsia temminckii",
+      "group": "Mamíferos",
+      "family": "pangolin",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_inseparable_lilian",
+      "name": "Inseparable de Lilian",
+      "latin": "Agapornis lilianae",
+      "group": "Aves",
+      "family": "parrot",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_dugongo",
+      "name": "Dugongo",
+      "latin": "Dugong dugon",
+      "group": "Mamíferos",
+      "family": "sirenian",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_manta_gigante",
+      "name": "Manta gigante",
+      "latin": "Mobula birostris",
+      "group": "Peces",
+      "family": "ray",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_delfin_jorobado_indico",
+      "name": "Delfín jorobado del Índico",
+      "latin": "Sousa plumbea",
+      "group": "Mamíferos",
+      "family": "cetacean",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_martin_malaquita",
+      "name": "Martín pescador malaquita",
+      "latin": "Corythornis cristatus",
+      "group": "Aves",
+      "family": "kingfisher",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_flamenco_enano",
+      "name": "Flamenco enano",
+      "latin": "Phoeniconaias minor",
+      "group": "Aves",
+      "family": "flamingo",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_pelicano_blanco",
+      "name": "Pelícano blanco",
+      "latin": "Pelecanus onocrotalus",
+      "group": "Aves",
+      "family": "pelican",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_jirafa_rothschild",
+      "name": "Jirafa de Rothschild",
+      "latin": "Giraffa camelopardalis rothschildi",
+      "group": "Mamíferos",
+      "family": "giraffe",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_gran_kudu",
+      "name": "Gran kudú",
+      "latin": "Tragelaphus strepsiceros",
+      "group": "Mamíferos",
+      "family": "spiral-antelope",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_tortuga_aldabra",
+      "name": "Tortuga gigante de Aldabra",
+      "latin": "Aldabrachelys gigantea",
+      "group": "Reptiles y anfibios",
+      "family": "land-tortoise",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_loro_negro_seychelles",
+      "name": "Loro negro de Seychelles",
+      "latin": "Coracopsis barklyi",
+      "group": "Aves",
+      "family": "parrot",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_cernicalo_seychelles",
+      "name": "Cernícalo de Seychelles",
+      "latin": "Falco araeus",
+      "group": "Aves",
+      "family": "falcon",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_tiburon_puntas_negras",
+      "name": "Tiburón de puntas negras de arrecife",
+      "latin": "Carcharhinus melanopterus",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_picozapato",
+      "name": "Picozapato",
+      "latin": "Balaeniceps rex",
+      "group": "Aves",
+      "family": "shoebill",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_lechwe_negro",
+      "name": "Lechwe negro",
+      "latin": "Kobus leche smithemani",
+      "group": "Mamíferos",
+      "family": "antelope",
+      "variants": [
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_grulla_carunculada",
+      "name": "Grulla carunculada",
+      "latin": "Grus carunculata",
+      "group": "Aves",
+      "family": "crane",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_puku",
+      "name": "Puku",
+      "latin": "Kobus vardonii",
+      "group": "Mamíferos",
+      "family": "antelope",
+      "variants": [
+        "Melánico",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_impala",
+      "name": "Impala",
+      "latin": "Aepyceros melampus",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_nyala_comun",
+      "name": "Niala común",
+      "latin": "Tragelaphus angasii",
+      "group": "Mamíferos",
+      "family": "spiral-antelope",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_mangosta_enana",
+      "name": "Mangosta enana africana",
+      "latin": "Helogale parvula",
+      "group": "Mamíferos",
+      "family": "mongoose",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_calao_trompetero",
+      "name": "Cálao trompetero",
+      "latin": "Bycanistes bucinator",
+      "group": "Aves",
+      "family": "hornbill",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_sahara_buitre",
+      "name": "Buitre orejudo",
+      "latin": "Torgos tracheliotos",
+      "group": "Aves",
+      "family": "vulture",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_jerbo",
+      "name": "Jerbo egipcio",
+      "latin": "Jaculus jaculus",
+      "group": "Mamíferos",
+      "family": "jerboa",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_addax",
+      "name": "Addax",
+      "latin": "Addax nasomaculatus",
+      "group": "Mamíferos",
+      "family": "oryx",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_geco_desierto",
+      "name": "Geco del desierto",
+      "latin": "Stenodactylus sthenodactylus",
+      "group": "Reptiles y anfibios",
+      "family": "gecko",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_vibora_cornuda",
+      "name": "Víbora cornuda",
+      "latin": "Cerastes cerastes",
+      "group": "Reptiles y anfibios",
+      "family": "viper",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_alcefalo",
+      "name": "Alcéfalo común",
+      "latin": "Alcelaphus buselaphus",
+      "group": "Mamíferos",
+      "family": "hartebeest",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_gacela_frente_roja",
+      "name": "Gacela de frente roja",
+      "latin": "Eudorcas rufifrons",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_orix_cimitarra",
+      "name": "Órix de cuernos de cimitarra",
+      "latin": "Oryx dammah",
+      "group": "Mamíferos",
+      "family": "oryx",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_gacela_cuvier",
+      "name": "Gacela de Cuvier",
+      "latin": "Gazella cuvieri",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_garceta",
+      "name": "Garceta común",
+      "latin": "Egretta garzetta",
+      "group": "Aves",
+      "family": "heron",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_tilapia",
+      "name": "Tilapia del Nilo",
+      "latin": "Oreochromis niloticus",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_varano_nilo",
+      "name": "Varano del Nilo",
+      "latin": "Varanus niloticus",
+      "group": "Reptiles y anfibios",
+      "family": "monitor",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_martin_pio",
+      "name": "Martín pescador pío",
+      "latin": "Ceryle rudis",
+      "group": "Aves",
+      "family": "kingfisher",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_bonobo",
+      "name": "Bonobo",
+      "latin": "Pan paniscus",
+      "group": "Mamíferos",
+      "family": "ape",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_cocodrilo_enano",
+      "name": "Cocodrilo enano africano",
+      "latin": "Osteolaemus tetraspis",
+      "group": "Reptiles y anfibios",
+      "family": "crocodile",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_pez_tigre_goliat",
+      "name": "Pez tigre goliat",
+      "latin": "Hydrocynus goliath",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_piton_bola",
+      "name": "Pitón bola",
+      "latin": "Python regius",
+      "group": "Reptiles y anfibios",
+      "family": "python",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_rana_goliat",
+      "name": "Rana goliat",
+      "latin": "Conraua goliath",
+      "group": "Reptiles y anfibios",
+      "family": "frog",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_hipopotamo_pigmeo",
+      "name": "Hipopótamo pigmeo",
+      "latin": "Choeropsis liberiensis",
+      "group": "Mamíferos",
+      "family": "hippo",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_gato_dorado",
+      "name": "Gato dorado africano",
+      "latin": "Caracal aurata",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_ayeaye",
+      "name": "Aye-aye",
+      "latin": "Daubentonia madagascariensis",
+      "group": "Mamíferos",
+      "family": "aye-aye",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_lemur_raton",
+      "name": "Lémur ratón gris",
+      "latin": "Microcebus murinus",
+      "group": "Mamíferos",
+      "family": "lemur",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_lemur_rufo",
+      "name": "Lémur rufo rojo",
+      "latin": "Varecia rubra",
+      "group": "Mamíferos",
+      "family": "lemur",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_vanga_azul",
+      "name": "Vanga azul",
+      "latin": "Cyanolanius madagascarinus",
+      "group": "Aves",
+      "family": "vanga",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_camaleon_parson",
+      "name": "Camaleón de Parson",
+      "latin": "Calumma parsonii",
+      "group": "Reptiles y anfibios",
+      "family": "chameleon",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_gecko_hoja",
+      "name": "Geco cola de hoja satánico",
+      "latin": "Uroplatus phantasticus",
+      "group": "Reptiles y anfibios",
+      "family": "gecko",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_boa_madagascar",
+      "name": "Boa de Madagascar",
+      "latin": "Sanzinia madagascariensis",
+      "group": "Reptiles y anfibios",
+      "family": "python",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_rinoceronte_negro",
+      "name": "Rinoceronte negro",
+      "latin": "Diceros bicornis",
+      "group": "Mamíferos",
+      "family": "rhino",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_cerdo_hormiguero",
+      "name": "Cerdo hormiguero",
+      "latin": "Orycteropus afer",
+      "group": "Mamíferos",
+      "family": "aardvark",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_mamba_negra",
+      "name": "Mamba negra",
+      "latin": "Dendroaspis polylepis",
+      "group": "Reptiles y anfibios",
+      "family": "mamba",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_gacela_thomson",
+      "name": "Gacela de Thomson",
+      "latin": "Eudorcas thomsonii",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_topi",
+      "name": "Topi",
+      "latin": "Damaliscus lunatus",
+      "group": "Mamíferos",
+      "family": "hartebeest",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_avestruz_somali",
+      "name": "Avestruz somalí",
+      "latin": "Struthio molybdophanes",
+      "group": "Aves",
+      "family": "ostrich",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_gacela_speke",
+      "name": "Gacela de Speke",
+      "latin": "Gazella spekei",
+      "group": "Mamíferos",
+      "family": "gazelle",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_jirafa_reticulada",
+      "name": "Jirafa reticulada",
+      "latin": "Giraffa reticulata",
+      "group": "Mamíferos",
+      "family": "giraffe",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_orix_beisa",
+      "name": "Órix beisa",
+      "latin": "Oryx beisa",
+      "group": "Mamíferos",
+      "family": "oryx",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_rata_topo",
+      "name": "Rata topo gigante",
+      "latin": "Tachyoryctes macrocephalus",
+      "group": "Mamíferos",
+      "family": "mole-rat",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_lemur_etc",
+      "name": "Rana de uñas africana",
+      "latin": "Xenopus laevis",
+      "group": "Reptiles y anfibios",
+      "family": "frog",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_aquila_fasciata",
+      "name": "Águila perdicera",
+      "latin": "Aquila fasciata",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_circaetus_gallicus",
+      "name": "Águila culebrera",
+      "latin": "Circaetus gallicus",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_neophron_percnopterus",
+      "name": "Alimoche común",
+      "latin": "Neophron percnopterus",
+      "group": "Aves",
+      "family": "vulture",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_atelerix_algirus",
+      "name": "Erizo argelino",
+      "latin": "Atelerix algirus",
+      "group": "Mamíferos",
+      "family": "hedgehog",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_pandion_haliaetus",
+      "name": "Águila pescadora",
+      "latin": "Pandion haliaetus",
+      "group": "Aves",
+      "family": "osprey",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_sclerophrys_regularis",
+      "name": "Sapo común africano",
+      "latin": "Sclerophrys regularis",
+      "group": "Reptiles y anfibios",
+      "family": "toad",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_ceratogymna_atrata",
+      "name": "Cálao de casquete negro",
+      "latin": "Ceratogymna atrata",
+      "group": "Aves",
+      "family": "hornbill",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_musophaga_violacea",
+      "name": "Turaco violeta",
+      "latin": "Musophaga violacea",
+      "group": "Aves",
+      "family": "turaco",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_ploceus_cucullatus",
+      "name": "Tejedor común",
+      "latin": "Ploceus cucullatus",
+      "group": "Aves",
+      "family": "weaver",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_chlorocebus_sabaeus",
+      "name": "Mono verde",
+      "latin": "Chlorocebus sabaeus",
+      "group": "Mamíferos",
+      "family": "guenon",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_phataginus_tricuspis",
+      "name": "Pangolín arborícola",
+      "latin": "Phataginus tricuspis",
+      "group": "Mamíferos",
+      "family": "pangolin",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_cercopithecus_diana",
+      "name": "Mono diana",
+      "latin": "Cercopithecus diana",
+      "group": "Mamíferos",
+      "family": "guenon",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_colobus_polykomos",
+      "name": "Colobo occidental blanco y negro",
+      "latin": "Colobus polykomos",
+      "group": "Mamíferos",
+      "family": "langur",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_cephalophus_zebra",
+      "name": "Duíquer cebra",
+      "latin": "Cephalophus zebra",
+      "group": "Mamíferos",
+      "family": "small-antelope",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_pantodon_buchholzi",
+      "name": "Pez mariposa africano",
+      "latin": "Pantodon buchholzi",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_agama_agama",
+      "name": "Agama común",
+      "latin": "Agama agama",
+      "group": "Reptiles y anfibios",
+      "family": "lizard",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_gyps_africanus",
+      "name": "Buitre dorsiblanco africano",
+      "latin": "Gyps africanus",
+      "group": "Aves",
+      "family": "vulture",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_lepus_capensis",
+      "name": "Liebre del Cabo",
+      "latin": "Lepus capensis",
+      "group": "Mamíferos",
+      "family": "lagomorph",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_hippotragus_equinus",
+      "name": "Antílope ruano",
+      "latin": "Hippotragus equinus",
+      "group": "Mamíferos",
+      "family": "horse-antelope",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_bitis_arietans",
+      "name": "Víbora bufadora",
+      "latin": "Bitis arietans",
+      "group": "Reptiles y anfibios",
+      "family": "viper",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_equus_africanus",
+      "name": "Asno salvaje africano",
+      "latin": "Equus africanus",
+      "group": "Mamíferos",
+      "family": "equid",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_madoqua_saltiana",
+      "name": "Dicdic de Salt",
+      "latin": "Madoqua saltiana",
+      "group": "Mamíferos",
+      "family": "small-antelope",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_corythaeola_cristata",
+      "name": "Turaco gigante",
+      "latin": "Corythaeola cristata",
+      "group": "Aves",
+      "family": "turaco",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_coracias_caudatus",
+      "name": "Carraca lila",
+      "latin": "Coracias caudatus",
+      "group": "Aves",
+      "family": "roller",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_polemaetus_bellicosus",
+      "name": "Águila marcial",
+      "latin": "Polemaetus bellicosus",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_lupulella_mesomelas",
+      "name": "Chacal de lomo negro",
+      "latin": "Lupulella mesomelas",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_mungos_mungo",
+      "name": "Mangosta rayada",
+      "latin": "Mungos mungo",
+      "group": "Mamíferos",
+      "family": "mongoose",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_lepus_fagani",
+      "name": "Liebre etíope",
+      "latin": "Lepus fagani",
+      "group": "Mamíferos",
+      "family": "lagomorph",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_otocyon_megalotis",
+      "name": "Zorro orejudo",
+      "latin": "Otocyon megalotis",
+      "group": "Mamíferos",
+      "family": "canid",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_geosciurus_inauris",
+      "name": "Ardilla terrestre del Cabo",
+      "latin": "Geosciurus inauris",
+      "group": "Mamíferos",
+      "family": "squirrel",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_hystrix_africaeaustralis",
+      "name": "Puercoespín sudafricano",
+      "latin": "Hystrix africaeaustralis",
+      "group": "Mamíferos",
+      "family": "porcupine",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_mellivora_capensis",
+      "name": "Tejón melero",
+      "latin": "Mellivora capensis",
+      "group": "Mamíferos",
+      "family": "badger",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_breviceps_macrops",
+      "name": "Rana de lluvia del desierto",
+      "latin": "Breviceps macrops",
+      "group": "Reptiles y anfibios",
+      "family": "toad",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_schismaderma_carens",
+      "name": "Sapo de vientre rojo",
+      "latin": "Schismaderma carens",
+      "group": "Reptiles y anfibios",
+      "family": "toad",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_naja_mossambica",
+      "name": "Cobra escupidora de Mozambique",
+      "latin": "Naja mossambica",
+      "group": "Reptiles y anfibios",
+      "family": "cobra",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_hydrictis_maculicollis",
+      "name": "Nutria de cuello manchado",
+      "latin": "Hydrictis maculicollis",
+      "group": "Mamíferos",
+      "family": "otter",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_hydrocynus_vittatus",
+      "name": "Pez tigre africano",
+      "latin": "Hydrocynus vittatus",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_trioceros_jacksonii",
+      "name": "Camaleón de Jackson",
+      "latin": "Trioceros jacksonii",
+      "group": "Reptiles y anfibios",
+      "family": "chameleon",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_xlsx_131_phelsuma_grandis",
+      "name": "Geco diurno gigante",
+      "latin": "Phelsuma grandis",
+      "group": "Reptiles y anfibios",
+      "family": "gecko",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_anser_caerulescens",
+      "name": "Ánsar nival",
+      "latin": "Anser caerulescens",
+      "group": "Aves",
+      "family": "goose",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_corvus_corax",
+      "name": "Cuervo común",
+      "latin": "Corvus corax",
+      "group": "Aves",
+      "family": "corvid",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_bubo_scandiacus",
+      "name": "Búho nival",
+      "latin": "Bubo scandiacus",
+      "group": "Aves",
+      "family": "horned-owl",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_falco_peregrinus",
+      "name": "Halcón peregrino",
+      "latin": "Falco peregrinus",
+      "group": "Aves",
+      "family": "falcon",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_dicrostonyx_groenlandicus",
+      "name": "Lemming de collar ártico",
+      "latin": "Dicrostonyx groenlandicus",
+      "group": "Mamíferos",
+      "family": "vole",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_lemmus_trimucronatus",
+      "name": "Lemming pardo",
+      "latin": "Lemmus trimucronatus",
+      "group": "Mamíferos",
+      "family": "vole",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_ursus_americanus",
+      "name": "Oso negro americano",
+      "latin": "Ursus americanus",
+      "group": "Mamíferos",
+      "family": "bear",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_castor_canadensis",
+      "name": "Castor canadiense",
+      "latin": "Castor canadensis",
+      "group": "Mamíferos",
+      "family": "beaver",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_ovibos_moschatus",
+      "name": "Buey almizclero",
+      "latin": "Ovibos moschatus",
+      "group": "Mamíferos",
+      "family": "bovine",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_ovis_dalli",
+      "name": "Borrego de Dall",
+      "latin": "Ovis dalli",
+      "group": "Mamíferos",
+      "family": "caprine",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_dryocopus_pileatus",
+      "name": "Píleo",
+      "latin": "Dryocopus pileatus",
+      "group": "Aves",
+      "family": "woodpecker",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_haliaeetus_leucocephalus",
+      "name": "Águila calva",
+      "latin": "Haliaeetus leucocephalus",
+      "group": "Aves",
+      "family": "eagle",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_puma_concolor",
+      "name": "Puma",
+      "latin": "Puma concolor",
+      "group": "Mamíferos",
+      "family": "felid",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_lontra_canadensis",
+      "name": "Nutria de río norteamericana",
+      "latin": "Lontra canadensis",
+      "group": "Mamíferos",
+      "family": "otter",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_marmota_vancouverensis",
+      "name": "Marmota de Vancouver",
+      "latin": "Marmota vancouverensis",
+      "group": "Mamíferos",
+      "family": "marmot",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_odocoileus_hemionus",
+      "name": "Ciervo mulo",
+      "latin": "Odocoileus hemionus",
+      "group": "Mamíferos",
+      "family": "deer",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "na_esp_oncorhynchus_mykiss",
+      "name": "Trucha arcoíris",
+      "latin": "Oncorhynchus mykiss",
+      "group": "Peces",
+      "family": "fish",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_alcatraz_cabo",
+      "name": "Alcatraz del Cabo",
+      "latin": "Morus capensis",
+      "group": "Aves",
+      "family": "gannet",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_cormoran_cabo",
+      "name": "Cormorán del Cabo",
+      "latin": "Phalacrocorax capensis",
+      "group": "Aves",
+      "family": "cormorant",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    },
+    {
+      "id": "af_ostrero_africano",
+      "name": "Ostrero africano",
+      "latin": "Haematopus moquini",
+      "group": "Aves",
+      "family": "oystercatcher",
+      "variants": [
+        "Albino",
+        "Notable"
+      ],
+      "control": false
+    }
+  ]
+}

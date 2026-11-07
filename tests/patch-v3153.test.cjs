@@ -21,7 +21,7 @@ function boot(){
 }
 test('Nutria europea: variantes configuradas, con sprites distintos y SVG válido',()=>{
  const g=boot();
- assert.deepEqual(Array.from(g.SPECIES.nutria_europea.special),['Leucístico','Melánico','Notable']);
+ assert.deepEqual(Array.from(g.SPECIES.nutria_europea.special),['Albino','Melánico','Notable']);
  const normal=g.getSpriteMarkup('nutria_europea');
  for(const variant of g.SPECIES.nutria_europea.special){
   const skin=g.variantToSkin(variant),image=g.getSpriteMarkup('nutria_europea',skin);

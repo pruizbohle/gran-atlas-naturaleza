@@ -1053,9 +1053,7 @@ function spriteFor(kind,color,skin,id){
 
 root.ATLAS_MAMMAL_LAB={SPECIES,SEXUAL_DIMORPHISM,before:getSpriteMarkup,
  after(id,skin='normal',sex=null){
-  const validSex=skin==='normal'&&SEXUAL_DIMORPHISM[id]&&(sex==='male'||sex==='female')?sex:null;
-  const svg=root.ATLAS_MAMMAL_ART_V3194(SPECIES[id],applySkin(SPECIES[id].color,skin),skin,validSex,id);
-  return skin==='melanico'?enforceMelanicColors(svg):skin==='albino'?enforcePaleColors(svg):svg;
+  return root.ATLAS_DIMORPHISM_LAB.getSpriteMarkup(id,skin,sex);
  },
  previousRenderer(id){
   const sp=SPECIES[id];

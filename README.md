@@ -1,3 +1,7 @@
+# El Gran Atlas v3.19.6 — Albinismo y melanismo
+
+Pigmentación centralizada, conservación de anatomía y migración segura de descubrimientos históricos. [Informe de versión](README_V3196.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-pigmentacion.html).
+
 # El Gran Atlas v3.19.2b · Herpetario ilustrado
 
 Pulido artístico de 45 especies del catálogo. [Cambios, revisión visual y validación](README_V3192b.md).

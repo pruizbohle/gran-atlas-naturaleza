@@ -1,3 +1,4 @@
+const {normalizedRecord}=require('./helpers/variant-labels.cjs');
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto');
 const {catalogSource,catalog}=require('./helpers/catalog.cjs');
@@ -9,7 +10,7 @@ const {classifyBird}=require('../www/js/bird-art-v3193.js'),{classifyHerp}=requi
 const digest=x=>crypto.createHash('sha256').update(x).digest('hex');
 function api(art=engine,browser=false){const ctx=vm.createContext({});if(browser)ctx.window=ctx;vm.runInContext(bird+'\n'+herp+'\n'+art+'\n'+catalogSource(source)+'\n'+graphics+'\nglobalThis.testAPI={SPECIES,SEXUAL_DIMORPHISM,getSpriteMarkup,sexSpriteMarkup,spriteFor};',ctx);return ctx.testAPI;}
 const current=api(),fallback=api(''),browser=api(engine,true);
-const bc=vm.createContext({});vm.runInContext(engine+'\n'+fs.readFileSync('www/js/lab/mammal-sprites-v3193-before.js','utf8'),bc);const lab=bc.ATLAS_MAMMAL_LAB;
+const bc=vm.createContext({});vm.runInContext(engine+'\n'+fs.readFileSync('www/js/lab/dimorphism-production.js','utf8')+'\n'+fs.readFileSync('www/js/lab/mammal-sprites-v3193-before.js','utf8'),bc);const lab=bc.ATLAS_MAMMAL_LAB;
 // Independent inventory from every effective record, not the historical kind labels.
 const mammals=Object.entries(current.SPECIES).filter(([,sp])=>!classifyBird(sp)&&!classifyHerp(sp)&&!['fish','ray'].includes(sp.kind));
 const geom=svg=>[...svg.replace(/<defs>[\s\S]*?<\/defs>/g,'').replace(/<g data-mammal-aura="true">[\s\S]*?<\/g>/g,'').matchAll(/\b(?:d|cx|cy|r|rx|ry|transform)="([^"]+)"/g)].map(x=>x[0]).join('|');
@@ -24,13 +25,13 @@ test('3.19.4 inventories all 269 mammals in the effective 487-species catalog',(
  assert.equal(Object.keys(current.SPECIES).length,487);assert.equal(mammals.length,269);assert.equal(Object.keys(MAMMAL_FAMILIES).length,68);
  assert.equal(new Set(mammals.map(([id,sp])=>classifyMammal(sp,id))).size,68);
  assert.deepEqual(mammals.map(([id])=>id),Object.keys(lab.SPECIES));
- for(const [id,sp] of mammals){assert.ok(classifyMammal(sp,id),id);assert.equal(JSON.stringify({...sp,dimorphism:lab.SPECIES[id].dimorphism}),JSON.stringify(lab.SPECIES[id]),id+' original record');}
+ for(const [id,sp] of mammals){assert.ok(classifyMammal(sp,id),id);assert.equal(JSON.stringify({...sp,dimorphism:lab.SPECIES[id].dimorphism}),JSON.stringify(normalizedRecord(lab.SPECIES[id])),id+' original record');}
 });
 
 test('gameplay catalog fields and original 24 IDs survive the dimorphism update',()=>{
  const data=catalog();
  const old=require('./fixtures/catalog-v3194.json');
- for(const [id,sp]of Object.entries(data.SPECIES))assert.deepEqual(JSON.parse(JSON.stringify({...sp,dimorphism:old.SPECIES[id].dimorphism})),old.SPECIES[id]);
+ for(const [id,sp]of Object.entries(data.SPECIES))assert.deepEqual(JSON.parse(JSON.stringify({...sp,dimorphism:old.SPECIES[id].dimorphism})),normalizedRecord(old.SPECIES[id]));
  for(const id of Object.keys(old.SEXUAL_DIMORPHISM))assert.ok(data.SEXUAL_DIMORPHISM[id],id);
 });
 
@@ -91,8 +92,8 @@ test('normal, pale, melanic and notable skins preserve mammal anatomy and apply 
  for(const [id,sp] of mammals){const normal=current.getSpriteMarkup(id);
   for(const skin of skins.slice(1)){const svg=current.getSpriteMarkup(id,skin);assert.equal(geom(svg),geom(normal),id+' '+skin+' anatomy');assert.notEqual(svg,normal);
    if(skin==='melanico')for(const tag of svg.match(/<[^>]+>/g)){
-    const eye=tag.startsWith('<circle ')&&/fill="#d8c46b"/.test(tag);
-    for(const [,hex] of tag.matchAll(/(?:fill|stroke)="(#[\da-f]{6})"/g)){if(eye&&hex==='#d8c46b')continue;const rgb=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16));assert.ok(Math.max(...rgb)-Math.min(...rgb)<=1,id+' fixed colored accent '+hex);}
+    const eye=tag.startsWith('<circle ')&&/fill="#c3ac71"/.test(tag);
+    for(const [,hex] of tag.matchAll(/(?:fill|stroke)="(#[\da-f]{6})"/g)){if(eye&&hex==='#c3ac71')continue;const rgb=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16));assert.ok(Math.max(...rgb)-Math.min(...rgb)<=30&&Math.max(...rgb)<=156,id+' fixed colored accent '+hex);}
    }
   }
   const snapshot=JSON.stringify(sp);renderMammal(Object.freeze(sp),sp.color);assert.equal(JSON.stringify(sp),snapshot);
@@ -115,12 +116,12 @@ test('every existing mammal receives actual new anatomical paths rather than a r
 
 test('the game, current labs and offline cache include the new art in the existing architecture',()=>{
  const html=fs.readFileSync('www/index.html','utf8'),sw=fs.readFileSync('www/sw.js','utf8');
- assert.ok(html.indexOf('js/mammal-art-v3194.js')<html.indexOf('js/app.js'));assert.match(sw,/gran-atlas-v3.19.5-dimorfismo/);
+ assert.ok(html.indexOf('js/mammal-art-v3194.js')<html.indexOf('js/app.js'));assert.match(sw,/gran-atlas-v3.19.6-pigmentacion/);
  const assets=vm.runInNewContext(sw.slice(0,sw.indexOf('self.addEventListener'))+'\nASSETS');
  for(const path of assets)assert.ok(fs.existsSync('www/'+path.replace(/^\.\//,'')),path);
  for(const path of ['laboratorio-mamiferos.html','js/mammal-art-v3194.js','js/lab/mammal-lab-v3194.js'])assert.ok(assets.includes('./'+path));
  for(const path of ['laboratorio-aves.html','laboratorio-herpetologia.html','laboratorio-peces.html'])assert.ok(assets.includes('./'+path));
  const labSource=fs.readFileSync('www/laboratorio-mamiferos.html','utf8');assert.ok(!labSource.includes('src="js/app.js'));for(const n of [56,80,120])assert.ok(labSource.includes('value="'+n+'"'));assert.ok(labSource.includes('id="similar"'));
  require('node:child_process').execFileSync(process.execPath,['scripts/mammal-inventory.cjs','--check']);
- assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.19.5');assert.equal(JSON.parse(fs.readFileSync('capacitor.config.json')).appId,'com.elgranatlas.naturaleza.beta314');
+ assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.19.6');assert.equal(JSON.parse(fs.readFileSync('capacitor.config.json')).appId,'com.elgranatlas.naturaleza.beta314');
 });

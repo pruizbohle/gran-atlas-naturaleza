@@ -1,3 +1,4 @@
+const {normalizedRecord}=require('./helpers/variant-labels.cjs');
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const {catalog,catalogSource}=require('./helpers/catalog.cjs');
@@ -18,7 +19,7 @@ test('32 valid distinct IDs preserve all 24 originals and every gameplay catalog
  assert.deepEqual(Object.keys(data.SEXUAL_DIMORPHISM).filter(id=>!old.SEXUAL_DIMORPHISM[id]).sort(),added.slice().sort());
  for(const id of Object.keys(old.SEXUAL_DIMORPHISM))assert.ok(data.SEXUAL_DIMORPHISM[id]);
  assert.deepEqual(Object.keys(data.SPECIES),Object.keys(old.SPECIES));
- for(const [id,sp]of Object.entries(data.SPECIES))assert.deepEqual(JSON.parse(JSON.stringify({...sp,dimorphism:old.SPECIES[id].dimorphism})),old.SPECIES[id]);
+ for(const [id,sp]of Object.entries(data.SPECIES))assert.deepEqual(JSON.parse(JSON.stringify({...sp,dimorphism:old.SPECIES[id].dimorphism})),normalizedRecord(old.SPECIES[id]));
 });
 test('all 64 sexual SVGs are valid, specialized and deterministic; variants keep priority',()=>{
  for(const id of Object.keys(data.SEXUAL_DIMORPHISM)){

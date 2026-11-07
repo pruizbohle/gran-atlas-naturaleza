@@ -22,7 +22,7 @@ const assert=require('node:assert/strict'),{chromium}=require('playwright');
  assert.ok(output.comparison.includes(output.male));assert.ok(output.comparison.includes(output.female));
  console.log('checking service worker');await page.evaluate(async()=>{await Promise.race([navigator.serviceWorker.ready,new Promise((_,reject)=>setTimeout(()=>reject(Error('SW ready timeout')),15000))]);});await page.reload();await page.waitForFunction(()=>!!navigator.serviceWorker.controller);
  await page.unroute('**/js/app.js*');await page.context().setOffline(true);await page.reload();await page.waitForFunction(()=>document.getElementById('panel').children.length>0);
- assert.equal(await page.title(),'El Gran Atlas v3.19.5 · Campo y Cuaderno');assert.deepEqual(errors,[]);
+ assert.equal(await page.title(),'El Gran Atlas v3.19.6 · Campo y Cuaderno');assert.deepEqual(errors,[]);
  console.log('PASS: 64 SVG/XML/bounds; controls 56/80/120; 24+8 filters; lab storage isolation; game/journal; offline reload; no JS errors.');
  }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

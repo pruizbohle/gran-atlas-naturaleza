@@ -1,0 +1,11 @@
+'use strict';
+const fs=require('node:fs');
+const {SPECIES}=require('../tests/helpers/catalog.cjs').catalog();
+const old=require('../tests/fixtures/catalog-v3194.json').SPECIES;
+const {classifyMammal}=require('../www/js/mammal-art-v3194.js'),{classifyBird}=require('../www/js/bird-art-v3193.js'),{classifyHerp}=require('../www/js/herp-art-v3192.js');
+const historicalLabels={};for(const sp of Object.values(old))for(const label of sp.special)historicalLabels[label]=(historicalLabels[label]||0)+1;
+const controls=new Set(['af_leopardo','asia_esp_0402','zorro_rojo','lince_boreal','reno','erizo_europeo','asia_esp_0410','buho_real','asia_esp_0067','asia_esp_0351','eu_esp_0506','asia_esp_0914']);
+const species=Object.entries(SPECIES).map(([id,sp])=>{const m=classifyMammal(sp,id),b=classifyBird(sp),h=classifyHerp(sp);return {id,name:sp.name,latin:sp.latin,group:m?'Mamíferos':b?'Aves':h?'Reptiles y anfibios':'Peces',family:m||b||h||sp.kind,variants:sp.special,control:controls.has(id)};});
+const summary={version:'3.19.6',catalog:species.length,albino:species.filter(s=>s.variants.includes('Albino')).length,melanico:species.filter(s=>s.variants.includes('Melánico')).length,notable:species.filter(s=>s.variants.includes('Notable')).length,historicalLabels,historicalPaleAliases:historicalLabels['Leucístico']+historicalLabels['Leucística'],newVariants:0,controls:species.filter(s=>s.control)};
+const path='docs/pigmentacion-v3196/inventario.json',content=JSON.stringify({summary,species},null,2)+'\n';
+if(process.argv.includes('--check')){if(fs.readFileSync(path,'utf8')!==content)throw Error('Stale pigmentation inventory');}else{fs.mkdirSync('docs/pigmentacion-v3196',{recursive:true});fs.writeFileSync(path,content);}console.log(JSON.stringify(summary,null,2));

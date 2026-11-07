@@ -82,7 +82,7 @@
     if (!base.regionUnlocked[base.currentRegion]) base.regionUnlocked[base.currentRegion]=true;
     if (!base.voyages) base.voyages=[];
     if (!base.equipment) base.equipment={instrument:null,hat:null,necklace:null};
-    return base;
+    return window.AtlasSaveBridge?.normalizeSpecialDiscoveries?.(base)||base;
   }
   function parseBackup(text) {
     if (typeof text !== 'string') throw new Error('No se pudo leer el contenido del documento.');
@@ -122,7 +122,7 @@
     if (!raw) throw new Error('No hay una partida guardada todavía.');
     const data = normalizeGame(JSON.parse(raw));
     return { text: JSON.stringify({
-      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.5.0',
+      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.19.6',
       exportedAt: new Date().toISOString(), game: data
     }, null, 2), name: fileName() };
   }
