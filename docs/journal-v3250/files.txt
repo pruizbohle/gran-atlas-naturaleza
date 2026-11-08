@@ -11,6 +11,7 @@ docs/journal-v3250/5-320.png
 docs/journal-v3250/5-360.png
 docs/journal-v3250/5-390.png
 docs/journal-v3250/5-412.png
+docs/journal-v3250/android-report.json
 docs/journal-v3250/android-signing-baseline.json
 docs/journal-v3250/before-320.png
 docs/journal-v3250/before-390.png
@@ -22,6 +23,7 @@ docs/journal-v3250/dimorphism.png
 docs/journal-v3250/files.txt
 docs/journal-v3250/integrity-report.json
 docs/journal-v3250/performance-report.json
+docs/journal-v3250/publication.json
 docs/journal-v3250/published-320.png
 docs/journal-v3250/published-360.png
 docs/journal-v3250/published-390.png

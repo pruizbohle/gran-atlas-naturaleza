@@ -88,8 +88,22 @@ ATLAS_UPGRADE_FROM=3.21.2 NODE_PATH=/workspace/atlas-tools/node_modules node scr
 
 ## Publicación
 
-Pendiente de verificar el commit, ambos workflows y el APK descargado. La comprobación nativa revisará versión 3.25.0/código 32500, ID de Capacitor estable, todos los recursos web y plugins de respaldo. El workflow usa firma de depuración: la compatibilidad con un APK instalado depende de conservar el certificado; no se garantiza hasta compararlos. Respalda siempre la partida antes de cualquier cambio de instalación.
+**Publicación verificada.** Commit de código [`364e1b5`](https://github.com/pruizbohle/gran-atlas-naturaleza/commit/364e1b58a19a9d75fcdbf7cc2145fa38f0afc61f), etiqueta `v3.25.0`. Ambos workflows finalizaron correctamente:
+
+- [Deploy El Gran Atlas · 42536827226](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42536827226): **SUCCESS**.
+- [Android APK de prueba · 42536827243](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42536827243): **SUCCESS**.
+
+Se descargó el APK público: **5.866.130 bytes**, versión **3.25.0**, código **32500**, ID `com.elgranatlas.naturaleza.beta314`. Los **93 archivos web coinciden byte a byte** con producción y los plugins nativos de importación/exportación están presentes. SHA-256: `fffc53aa23fc2c2b96a5b7f625190bb57dea222432484721f57bc52cb18cfb0d`.
+
+**Firma Android:** el certificado `7d0e11134bc9a9d4fcb22f4d2862c448c34ed275ee65a9919fbadda2a21f8c0b` difiere del APK verificado de 3.24.0. No se garantiza instalación directa sobre ese APK. Conserva una exportación comprobada de tu partida antes de cambiar de instalación; no desinstales sin respaldo. El formato de partida y los plugins de recuperación permanecen intactos. No se realizó instalación en un dispositivo físico.
+
+El proxy de este entorno bloquea la apertura directa de `github.io` antes de alcanzar el sitio. El despliegue se confirma por el workflow exitoso y la URL de destino que registra GitHub; no se presenta como una navegación directa verificada del sitio público.
+
+La confirmación se registra en un commit posterior **solo documental** con `[skip ci]`: no recompila ni sustituye el APK ya verificado. La etiqueta conserva el commit de código indicado.
+
+[Informe de publicación](docs/journal-v3250/publication.json) · [Verificación del APK](docs/journal-v3250/android-report.json).
 
 - [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/).
 - [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-cuaderno-v3250.html).
 - [Actualizar conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3250.html).
+- [Descargar APK 3.25.0 verificado](https://github.com/pruizbohle/gran-atlas-naturaleza/releases/download/v3.25.0/El-Gran-Atlas-Beta-3.25.0-debug.apk).
