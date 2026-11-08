@@ -31,3 +31,5 @@ body.atlas-active .region-pill{display:none}
 .atlas-game[data-continent="Norteamérica"] .atlas-continent-picker{flex-basis:168px;min-width:168px}
 
 .atlas-land-cell.atlas-ice>polygon{fill:#e1eeed;stroke:#a7c2bf}.atlas-context-name{fill:#6b7768;font:12px Georgia}
+
+.atlas-context-name{font-size:9px}

@@ -575,15 +575,15 @@
     },
     {
       "continent": "África",
-      "cells": 14,
-      "playableCells": 14,
+      "cells": 24,
+      "playableCells": 24,
       "regions": 24,
       "additionalCells": 0,
-      "groupedCells": 6,
-      "groupedRegions": 16,
+      "groupedCells": 0,
+      "groupedRegions": 0,
       "radius": 46,
       "neighborDistance": 79.67433714816835,
-      "neighborPairs": 23,
+      "neighborPairs": 45,
       "maxError": 2.842170943040401e-14,
       "maxEdgeError": 5.684341886080802e-14,
       "edgeErrors": [],
@@ -622,7 +622,23 @@
         },
         {
           "a": "africa-2-0",
+          "b": "africa-3-0",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-2-0",
           "b": "africa-2-1",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-3-0",
+          "b": "africa-3-1",
           "distance": 79.67433714816835,
           "error": 0,
           "sharedVertices": 2,
@@ -643,14 +659,6 @@
           "error": 1.4210854715202004e-14,
           "sharedVertices": 2,
           "edgeError": 1.4210854715202004e-14
-        },
-        {
-          "a": "africa-0-1",
-          "b": "africa-0-2",
-          "distance": 79.67433714816835,
-          "error": 0,
-          "sharedVertices": 2,
-          "edgeError": 7.105427357601002e-15
         },
         {
           "a": "africa-0-1",
@@ -702,6 +710,14 @@
         },
         {
           "a": "africa-2-1",
+          "b": "africa-3-2",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-2-1",
           "b": "africa-2-2",
           "distance": 79.67433714816835,
           "error": 0,
@@ -709,12 +725,44 @@
           "edgeError": 2.842170943040401e-14
         },
         {
-          "a": "africa-0-2",
-          "b": "africa-1-2",
+          "a": "africa-2-1",
+          "b": "africa-3-0",
           "distance": 79.67433714816836,
           "error": 1.4210854715202004e-14,
           "sharedVertices": 2,
-          "edgeError": 1.4210854715202004e-14
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-3-1",
+          "b": "africa-4-1",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-3-1",
+          "b": "africa-4-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-3-1",
+          "b": "africa-3-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-4-1",
+          "b": "africa-4-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
         },
         {
           "a": "africa-1-2",
@@ -734,7 +782,31 @@
         },
         {
           "a": "africa-2-2",
+          "b": "africa-3-2",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-2-2",
           "b": "africa-2-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-3-2",
+          "b": "africa-4-2",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-3-2",
+          "b": "africa-3-3",
           "distance": 79.67433714816835,
           "error": 0,
           "sharedVertices": 2,
@@ -758,6 +830,14 @@
         },
         {
           "a": "africa-1-3",
+          "b": "africa-1-4",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "africa-1-3",
           "b": "africa-2-2",
           "distance": 79.67433714816835,
           "error": 0,
@@ -766,25 +846,121 @@
         },
         {
           "a": "africa-2-3",
+          "b": "africa-3-3",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-2-3",
+          "b": "africa-3-4",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-2-3",
           "b": "africa-2-4",
           "distance": 79.67433714816835,
           "error": 0,
           "sharedVertices": 2,
           "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "africa-2-3",
+          "b": "africa-3-2",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-3-3",
+          "b": "africa-3-4",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-3-3",
+          "b": "africa-4-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-1-4",
+          "b": "africa-2-4",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-2-4",
+          "b": "africa-3-4",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-2-4",
+          "b": "africa-2-5",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-3-4",
+          "b": "africa-3-5",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-2-5",
+          "b": "africa-3-5",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-2-5",
+          "b": "africa-2-6",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "africa-2-5",
+          "b": "africa-3-4",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
         }
       ]
     },
     {
       "continent": "Norteamérica",
-      "cells": 9,
+      "cells": 14,
       "playableCells": 2,
       "regions": 2,
-      "additionalCells": 7,
+      "additionalCells": 12,
       "groupedCells": 0,
       "groupedRegions": 0,
       "radius": 46,
       "neighborDistance": 79.67433714816835,
-      "neighborPairs": 12,
+      "neighborPairs": 24,
       "maxError": 2.842170943040401e-14,
       "maxEdgeError": 5.684341886080802e-14,
       "edgeErrors": [],
@@ -863,11 +1039,51 @@
         },
         {
           "a": "norteamerica-2-1",
+          "b": "norteamerica-3-2",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "norteamerica-2-1",
           "b": "norteamerica-2-2",
           "distance": 79.67433714816835,
           "error": 0,
           "sharedVertices": 2,
           "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "norteamerica-3-1",
+          "b": "norteamerica-4-1",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "norteamerica-3-1",
+          "b": "norteamerica-4-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "norteamerica-3-1",
+          "b": "norteamerica-3-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "norteamerica-4-1",
+          "b": "norteamerica-4-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
         },
         {
           "a": "norteamerica-1-2",
@@ -879,7 +1095,63 @@
         },
         {
           "a": "norteamerica-2-2",
+          "b": "norteamerica-3-2",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "norteamerica-2-2",
           "b": "norteamerica-2-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "norteamerica-3-2",
+          "b": "norteamerica-4-2",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "norteamerica-3-2",
+          "b": "norteamerica-3-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "norteamerica-2-3",
+          "b": "norteamerica-3-3",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "norteamerica-2-3",
+          "b": "norteamerica-3-2",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "norteamerica-3-3",
+          "b": "norteamerica-4-4",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "norteamerica-3-3",
+          "b": "norteamerica-4-2",
           "distance": 79.67433714816835,
           "error": 0,
           "sharedVertices": 2,
@@ -1425,13 +1697,13 @@
         "y": 108
       },
       "after": {
-        "q": 0,
+        "q": 1,
         "r": 0,
-        "x": 61.837168574084174,
+        "x": 141.51150572225254,
         "y": 68
       },
-      "cellId": "africa-0-0",
-      "reason": "Noroeste mediterráneo; comparte sector con la cordillera del Atlas."
+      "cellId": "africa-1-0",
+      "reason": "Noroeste mediterráneo, al este de la celda del Atlas."
     },
     {
       "name": "Sabana de África oriental",
@@ -1442,13 +1714,13 @@
         "y": 453
       },
       "after": {
-        "q": 1,
+        "q": 2,
         "r": 2,
-        "x": 221.18584287042086,
+        "x": 300.86018001858923,
         "y": 206
       },
-      "cellId": "africa-2-2",
-      "reason": "Sector compartido del África centro-oriental, al este del Congo."
+      "cellId": "africa-3-2",
+      "reason": "África centro-oriental: celda propia junto a la cuenca del Congo."
     },
     {
       "name": "Cuenca del Congo",
@@ -1459,12 +1731,12 @@
         "y": 453
       },
       "after": {
-        "q": 0,
+        "q": 1,
         "r": 2,
-        "x": 141.51150572225254,
+        "x": 221.18584287042086,
         "y": 206
       },
-      "cellId": "africa-1-2",
+      "cellId": "africa-2-2",
       "reason": "Centro ecuatorial, al sur del Sahel y al oeste de los Grandes Lagos."
     },
     {
@@ -1476,12 +1748,12 @@
         "y": 177
       },
       "after": {
-        "q": 2,
+        "q": 3,
         "r": 0,
-        "x": 221.18584287042086,
+        "x": 300.86018001858923,
         "y": 68
       },
-      "cellId": "africa-2-0",
+      "cellId": "africa-3-0",
       "reason": "Noreste africano, al norte de Etiopía y del África oriental."
     },
     {
@@ -1493,12 +1765,12 @@
         "y": 315
       },
       "after": {
-        "q": 0,
+        "q": 1,
         "r": 1,
-        "x": 101.67433714816835,
+        "x": 181.3486742963367,
         "y": 137
       },
-      "cellId": "africa-0-1",
+      "cellId": "africa-1-1",
       "reason": "Franja bajo el Sahara occidental y sobre los bosques occidentales."
     },
     {
@@ -1510,13 +1782,13 @@
         "y": 384
       },
       "after": {
-        "q": -1,
-        "r": 2,
-        "x": 61.837168574084174,
-        "y": 206
+        "q": 0,
+        "r": 1,
+        "x": 101.67433714816835,
+        "y": 137
       },
-      "cellId": "africa-0-2",
-      "reason": "Sector de bosques atlánticos al oeste de la cuenca del Congo."
+      "cellId": "africa-0-1",
+      "reason": "Bosques atlánticos al oeste de la cuenca del Congo."
     },
     {
       "name": "Grandes Lagos africanos",
@@ -1528,12 +1800,12 @@
       },
       "after": {
         "q": 1,
-        "r": 2,
-        "x": 221.18584287042086,
-        "y": 206
+        "r": 3,
+        "x": 261.023011444505,
+        "y": 275
       },
-      "cellId": "africa-2-2",
-      "reason": "Sector compartido del África centro-oriental, al este del Congo."
+      "cellId": "africa-2-3",
+      "reason": "África centro-oriental: celda propia junto a la cuenca del Congo."
     },
     {
       "name": "Kalahari y sabana austral",
@@ -1545,12 +1817,12 @@
       },
       "after": {
         "q": 0,
-        "r": 3,
-        "x": 181.3486742963367,
-        "y": 275
+        "r": 5,
+        "x": 261.023011444505,
+        "y": 413
       },
-      "cellId": "africa-1-3",
-      "reason": "Sector compartido del interior austral; sus regiones se eligen por separado."
+      "cellId": "africa-2-5",
+      "reason": "Interior austral: posición aproximada, con una celda propia para esta región."
     },
     {
       "name": "Costa del Cabo",
@@ -1561,12 +1833,12 @@
         "y": 798
       },
       "after": {
-        "q": 0,
-        "r": 4,
+        "q": -1,
+        "r": 6,
         "x": 221.18584287042086,
-        "y": 344
+        "y": 482
       },
-      "cellId": "africa-2-4",
+      "cellId": "africa-2-6",
       "reason": "Extremo meridional, bajo el interior austral."
     },
     {
@@ -1579,12 +1851,12 @@
       },
       "after": {
         "q": 3,
-        "r": 3,
-        "x": 420.3716857408417,
-        "y": 275
+        "r": 4,
+        "x": 460.2088543149259,
+        "y": 344
       },
-      "cellId": "africa-4-3",
-      "reason": "Sector insular del Índico frente al sureste africano; regiones seleccionables por separado."
+      "cellId": "africa-5-4",
+      "reason": "Isla del Índico separada del continente, frente al sureste africano."
     },
     {
       "name": "Cuerno de África",
@@ -1595,12 +1867,12 @@
         "y": 384
       },
       "after": {
-        "q": 3,
+        "q": 4,
         "r": 1,
-        "x": 340.6973485926734,
+        "x": 420.3716857408417,
         "y": 137
       },
-      "cellId": "africa-3-1",
+      "cellId": "africa-4-1",
       "reason": "Proyección oriental al océano Índico, al este de Etiopía."
     },
     {
@@ -1613,12 +1885,12 @@
       },
       "after": {
         "q": 0,
-        "r": 3,
-        "x": 181.3486742963367,
-        "y": 275
+        "r": 4,
+        "x": 221.18584287042086,
+        "y": 344
       },
-      "cellId": "africa-1-3",
-      "reason": "Sector compartido del interior austral; sus regiones se eligen por separado."
+      "cellId": "africa-2-4",
+      "reason": "Interior austral: posición aproximada, con una celda propia para esta región."
     },
     {
       "name": "Bosques de Gabón",
@@ -1629,13 +1901,13 @@
         "y": 453
       },
       "after": {
-        "q": -1,
+        "q": 0,
         "r": 2,
-        "x": 61.837168574084174,
+        "x": 141.51150572225254,
         "y": 206
       },
-      "cellId": "africa-0-2",
-      "reason": "Sector de bosques atlánticos al oeste de la cuenca del Congo."
+      "cellId": "africa-1-2",
+      "reason": "Bosques atlánticos al oeste de la cuenca del Congo."
     },
     {
       "name": "Tierras altas de Etiopía",
@@ -1646,12 +1918,12 @@
         "y": 315
       },
       "after": {
-        "q": 2,
+        "q": 3,
         "r": 1,
-        "x": 261.023011444505,
+        "x": 340.6973485926734,
         "y": 137
       },
-      "cellId": "africa-2-1",
+      "cellId": "africa-3-1",
       "reason": "Noreste elevado, al oeste del Cuerno de África."
     },
     {
@@ -1663,13 +1935,13 @@
         "y": 729
       },
       "after": {
-        "q": 0,
-        "r": 3,
-        "x": 181.3486742963367,
-        "y": 275
+        "q": -1,
+        "r": 4,
+        "x": 141.51150572225254,
+        "y": 344
       },
-      "cellId": "africa-1-3",
-      "reason": "Sector compartido del interior austral; sus regiones se eligen por separado."
+      "cellId": "africa-1-4",
+      "reason": "Interior austral: posición aproximada, con una celda propia para esta región."
     },
     {
       "name": "Montañas del Atlas",
@@ -1686,7 +1958,7 @@
         "y": 68
       },
       "cellId": "africa-0-0",
-      "reason": "Cordillera del Magreb; sector compartido sin fusionar regiones."
+      "reason": "Cordillera del Magreb: celda propia en el extremo noroeste."
     },
     {
       "name": "Bosques de miombo",
@@ -1703,7 +1975,7 @@
         "y": 275
       },
       "cellId": "africa-1-3",
-      "reason": "Sector compartido del interior austral; sus regiones se eligen por separado."
+      "reason": "Interior austral: posición aproximada, con una celda propia para esta región."
     },
     {
       "name": "Costa de Mozambique",
@@ -1714,13 +1986,13 @@
         "y": 660
       },
       "after": {
-        "q": 1,
+        "q": 2,
         "r": 3,
-        "x": 261.023011444505,
+        "x": 340.6973485926734,
         "y": 275
       },
-      "cellId": "africa-2-3",
-      "reason": "Sector compartido del sureste africano, al este del interior austral."
+      "cellId": "africa-3-3",
+      "reason": "Sureste africano, al este del interior austral."
     },
     {
       "name": "Lagos del Rift",
@@ -1731,13 +2003,13 @@
         "y": 522
       },
       "after": {
-        "q": 1,
+        "q": 3,
         "r": 2,
-        "x": 221.18584287042086,
+        "x": 380.53451716675755,
         "y": 206
       },
-      "cellId": "africa-2-2",
-      "reason": "Sector compartido del África centro-oriental, al este del Congo."
+      "cellId": "africa-4-2",
+      "reason": "África centro-oriental: celda propia junto a la cuenca del Congo."
     },
     {
       "name": "Islas Seychelles y Aldabra",
@@ -1748,13 +2020,13 @@
         "y": 522
       },
       "after": {
-        "q": 3,
-        "r": 3,
-        "x": 420.3716857408417,
-        "y": 275
+        "q": 5,
+        "r": 2,
+        "x": 539.8831914630942,
+        "y": 206
       },
-      "cellId": "africa-4-3",
-      "reason": "Sector insular del Índico compartido con Madagascar, separado del continente."
+      "cellId": "africa-6-2",
+      "reason": "Islas del Índico separadas del continente y de Madagascar, al noreste."
     },
     {
       "name": "Humedales de Bangweulu",
@@ -1765,13 +2037,13 @@
         "y": 591
       },
       "after": {
-        "q": 0,
-        "r": 3,
-        "x": 181.3486742963367,
-        "y": 275
+        "q": 1,
+        "r": 4,
+        "x": 300.86018001858923,
+        "y": 344
       },
-      "cellId": "africa-1-3",
-      "reason": "Sector compartido del interior austral; sus regiones se eligen por separado."
+      "cellId": "africa-3-4",
+      "reason": "Interior austral: posición aproximada, con una celda propia para esta región."
     },
     {
       "name": "Lowveld y Kruger",
@@ -1783,12 +2055,12 @@
       },
       "after": {
         "q": 1,
-        "r": 3,
-        "x": 261.023011444505,
-        "y": 275
+        "r": 5,
+        "x": 340.6973485926734,
+        "y": 413
       },
-      "cellId": "africa-2-3",
-      "reason": "Sector compartido del sureste africano, al este del interior austral."
+      "cellId": "africa-3-5",
+      "reason": "Sureste africano, al este del interior austral."
     },
     {
       "name": "Desierto del Sáhara",
@@ -1799,12 +2071,12 @@
         "y": 246
       },
       "after": {
-        "q": 1,
+        "q": 2,
         "r": 0,
-        "x": 141.51150572225254,
+        "x": 221.18584287042086,
         "y": 68
       },
-      "cellId": "africa-1-0",
+      "cellId": "africa-2-0",
       "reason": "Gran franja septentrional, al norte del Sahel y del Congo."
     },
     {
@@ -1816,12 +2088,12 @@
         "y": 315
       },
       "after": {
-        "q": 1,
+        "q": 2,
         "r": 1,
-        "x": 181.3486742963367,
+        "x": 261.023011444505,
         "y": 137
       },
-      "cellId": "africa-1-1",
+      "cellId": "africa-2-1",
       "reason": "Continuación oriental del Sahel, bajo el Sahara y al oeste de Etiopía."
     },
     {

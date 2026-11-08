@@ -24,7 +24,7 @@ function tile(region,selected){
 function cellMarkup(cell,selectedId){
  if(cell.playable){const r=cell.regions.find(r=>r.status==='actual')||cell.regions.find(r=>r.id===selectedId)||cell.regions[0];return tile({...r,id:cell.regionIds.includes(selectedId)?selectedId:r.id,x:cell.x,y:cell.y,terrain:cell.terrain,cellId:cell.cellId,regionIds:cell.regionIds},cell.regionIds.includes(selectedId));}
  const kind=cell.kind==='ice'?'atlas-ice':'atlas-reserved';
- return '<g class="atlas-land-cell '+kind+'" transform="translate('+cell.x+' '+cell.y+')" data-cell-id="'+esc(cell.cellId)+'" data-kind="'+cell.kind+'" aria-hidden="true"><polygon points="'+geo.polygon()+'"/>'+(cell.label?'<text class="atlas-context-name" y="4" text-anchor="middle">'+esc(cell.label)+'</text>':'')+'</g>';
+ return '<g class="atlas-land-cell '+kind+'" transform="translate('+cell.x+' '+cell.y+')" data-cell-id="'+esc(cell.cellId)+'" data-kind="'+cell.kind+'" aria-hidden="true">'+(cell.label?'<title>'+esc(cell.label)+'</title>':'')+'<polygon points="'+geo.polygon()+'"/>'+(cell.label?'<text class="atlas-context-name" y="4" text-anchor="middle">'+esc(cell.shortLabel||cell.label)+'</text>':'')+'</g>';
 }
 function regionPanel(region){
  if(!region)return '<div class="atlas-region-kicker">RUMBO A LO DESCONOCIDO</div><h3>Territorio pendiente de exploración</h3><p class="atlas-region-summary">Esta cartografía todavía no está disponible.</p><button class="atlas-primary" type="button" disabled>Territorio no cartografiado</button>';

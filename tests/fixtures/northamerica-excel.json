@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Alaska",
+    "sourceId": "HX-01-05"
+  },
+  {
+    "name": "Columbia Británica",
+    "sourceId": "HX-02-02"
+  },
+  {
+    "name": "Bosques boreales de Canadá",
+    "sourceId": "HX-02-03"
+  },
+  {
+    "name": "Montañas Rocosas",
+    "sourceId": "HX-02-04"
+  },
+  {
+    "name": "Grandes Llanuras",
+    "sourceId": "HX-02-05"
+  },
+  {
+    "name": "Yukón",
+    "sourceId": "HX-02-06"
+  },
+  {
+    "name": "Región de los Grandes Lagos",
+    "sourceId": "HX-03-02"
+  },
+  {
+    "name": "Costa del Pacífico",
+    "sourceId": "HX-03-03"
+  },
+  {
+    "name": "Bosques del este norteamericano",
+    "sourceId": "HX-03-04"
+  },
+  {
+    "name": "Desierto de Sonora",
+    "sourceId": "HX-03-05"
+  },
+  {
+    "name": "Sierra Madre",
+    "sourceId": "HX-04-02"
+  },
+  {
+    "name": "Península de Yucatán",
+    "sourceId": "HX-04-03"
+  },
+  {
+    "name": "Costa del golfo de México",
+    "sourceId": "HX-04-04"
+  },
+  {
+    "name": "América Central",
+    "sourceId": "HX-05-04"
+  }
+]
