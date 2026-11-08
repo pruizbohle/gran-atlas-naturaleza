@@ -1,0 +1,483 @@
+{
+  "species": 710,
+  "regions": 79,
+  "presences": 1329,
+  "allSpeciesReachable": true,
+  "duplicateScientificIdentities": 0,
+  "regionsDetail": [
+    {
+      "id": "HX-01-09",
+      "name": "Islas Británicas",
+      "continent": "Europa",
+      "presences": 33
+    },
+    {
+      "id": "HX-01-11",
+      "name": "Escandinavia",
+      "continent": "Europa",
+      "presences": 18
+    },
+    {
+      "id": "HX-02-09",
+      "name": "Alpes",
+      "continent": "Europa",
+      "presences": 13
+    },
+    {
+      "id": "HX-02-10",
+      "name": "Europa Occidental",
+      "continent": "Europa",
+      "presences": 52
+    },
+    {
+      "id": "HX-02-11",
+      "name": "Europa Central",
+      "continent": "Europa",
+      "presences": 38
+    },
+    {
+      "id": "HX-02-12",
+      "name": "Península Ibérica",
+      "continent": "Europa",
+      "presences": 32
+    },
+    {
+      "id": "HX-03-09",
+      "name": "Europa Oriental",
+      "continent": "Europa",
+      "presences": 18
+    },
+    {
+      "id": "HX-03-10",
+      "name": "Península Itálica",
+      "continent": "Europa",
+      "presences": 16
+    },
+    {
+      "id": "HX-03-11",
+      "name": "Región del mar Báltico",
+      "continent": "Europa",
+      "presences": 20
+    },
+    {
+      "id": "HX-03-12",
+      "name": "Balcanes",
+      "continent": "Europa",
+      "presences": 16
+    },
+    {
+      "id": "HX-03-13",
+      "name": "Cáucaso",
+      "continent": "Asia",
+      "presences": 10
+    },
+    {
+      "id": "HX-03-15",
+      "name": "Anatolia",
+      "continent": "Asia",
+      "presences": 10
+    },
+    {
+      "id": "HX-02-13",
+      "name": "Siberia Occidental",
+      "continent": "Asia",
+      "presences": 14
+    },
+    {
+      "id": "HX-03-14",
+      "name": "Siberia Central",
+      "continent": "Asia",
+      "presences": 15
+    },
+    {
+      "id": "HX-04-13",
+      "name": "Mongolia",
+      "continent": "Asia",
+      "presences": 10
+    },
+    {
+      "id": "HX-02-15",
+      "name": "Montes Urales",
+      "continent": "Asia",
+      "presences": 8
+    },
+    {
+      "id": "HX-03-16",
+      "name": "Siberia Oriental",
+      "continent": "Asia",
+      "presences": 12
+    },
+    {
+      "id": "HX-03-18",
+      "name": "Kamchatka",
+      "continent": "Asia",
+      "presences": 10
+    },
+    {
+      "id": "HX-04-14",
+      "name": "Desierto de Gobi",
+      "continent": "Asia",
+      "presences": 9
+    },
+    {
+      "id": "HX-04-15",
+      "name": "Himalaya",
+      "continent": "Asia",
+      "presences": 18
+    },
+    {
+      "id": "HX-03-17",
+      "name": "Península Arábiga",
+      "continent": "Asia",
+      "presences": 8
+    },
+    {
+      "id": "HX-04-12",
+      "name": "Mesopotamia",
+      "continent": "Asia",
+      "presences": 10
+    },
+    {
+      "id": "HX-04-16",
+      "name": "Meseta de Irán",
+      "continent": "Asia",
+      "presences": 11
+    },
+    {
+      "id": "HX-04-17",
+      "name": "Meseta del Tíbet",
+      "continent": "Asia",
+      "presences": 10
+    },
+    {
+      "id": "HX-04-18",
+      "name": "Estepas de Asia Central",
+      "continent": "Asia",
+      "presences": 10
+    },
+    {
+      "id": "HX-05-15",
+      "name": "China Septentrional",
+      "continent": "Asia",
+      "presences": 17
+    },
+    {
+      "id": "HX-05-16",
+      "name": "Subcontinente Indio",
+      "continent": "Asia",
+      "presences": 28
+    },
+    {
+      "id": "HX-05-17",
+      "name": "China Meridional",
+      "continent": "Asia",
+      "presences": 19
+    },
+    {
+      "id": "HX-06-16",
+      "name": "Península de Corea",
+      "continent": "Asia",
+      "presences": 13
+    },
+    {
+      "id": "HX-06-17",
+      "name": "Sudeste Asiático",
+      "continent": "Asia",
+      "presences": 35
+    },
+    {
+      "id": "HX-06-18",
+      "name": "Archipiélago Japonés",
+      "continent": "Asia",
+      "presences": 14
+    },
+    {
+      "id": "HX-06-09",
+      "name": "Magreb",
+      "continent": "África",
+      "presences": 18
+    },
+    {
+      "id": "HX-07-10",
+      "name": "Sabana de África oriental",
+      "continent": "África",
+      "presences": 35
+    },
+    {
+      "id": "HX-08-11",
+      "name": "Cuenca del Congo",
+      "continent": "África",
+      "presences": 21
+    },
+    {
+      "id": "HX-06-11",
+      "name": "Valle del Nilo",
+      "continent": "África",
+      "presences": 15
+    },
+    {
+      "id": "HX-07-08",
+      "name": "Sahel occidental",
+      "continent": "África",
+      "presences": 18
+    },
+    {
+      "id": "HX-08-08",
+      "name": "Bosques de África occidental",
+      "continent": "África",
+      "presences": 24
+    },
+    {
+      "id": "HX-09-11",
+      "name": "Grandes Lagos africanos",
+      "continent": "África",
+      "presences": 23
+    },
+    {
+      "id": "HX-10-10",
+      "name": "Kalahari y sabana austral",
+      "continent": "África",
+      "presences": 16
+    },
+    {
+      "id": "HX-11-11",
+      "name": "Costa del Cabo",
+      "continent": "África",
+      "presences": 10
+    },
+    {
+      "id": "HX-09-14",
+      "name": "Madagascar",
+      "continent": "África",
+      "presences": 17
+    },
+    {
+      "id": "HX-07-12",
+      "name": "Cuerno de África",
+      "continent": "África",
+      "presences": 15
+    },
+    {
+      "id": "HX-10-09",
+      "name": "Delta del Okavango",
+      "continent": "África",
+      "presences": 12
+    },
+    {
+      "id": "HX-08-10",
+      "name": "Bosques de Gabón",
+      "continent": "África",
+      "presences": 17
+    },
+    {
+      "id": "HX-07-13",
+      "name": "Tierras altas de Etiopía",
+      "continent": "África",
+      "presences": 11
+    },
+    {
+      "id": "HX-11-08",
+      "name": "Desierto del Namib",
+      "continent": "África",
+      "presences": 12
+    },
+    {
+      "id": "HX-06-08",
+      "name": "Montañas del Atlas",
+      "continent": "África",
+      "presences": 11
+    },
+    {
+      "id": "HX-09-09",
+      "name": "Bosques de miombo",
+      "continent": "África",
+      "presences": 12
+    },
+    {
+      "id": "HX-10-12",
+      "name": "Costa de Mozambique",
+      "continent": "África",
+      "presences": 11
+    },
+    {
+      "id": "HX-08-12",
+      "name": "Lagos del Rift",
+      "continent": "África",
+      "presences": 12
+    },
+    {
+      "id": "HX-07-14",
+      "name": "Islas Seychelles y Aldabra",
+      "continent": "África",
+      "presences": 8
+    },
+    {
+      "id": "HX-09-12",
+      "name": "Humedales de Bangweulu",
+      "continent": "África",
+      "presences": 12
+    },
+    {
+      "id": "HX-11-10",
+      "name": "Lowveld y Kruger",
+      "continent": "África",
+      "presences": 35
+    },
+    {
+      "id": "HX-06-07",
+      "name": "Desierto del Sáhara",
+      "continent": "África",
+      "presences": 8
+    },
+    {
+      "id": "HX-07-11",
+      "name": "Sahel oriental",
+      "continent": "África",
+      "presences": 11
+    },
+    {
+      "id": "HX-01-05",
+      "name": "Alaska",
+      "continent": "Norteamérica",
+      "presences": 17
+    },
+    {
+      "id": "HX-02-02",
+      "name": "Columbia Británica",
+      "continent": "Norteamérica",
+      "presences": 11
+    },
+    {
+      "id": "HX-02-03",
+      "name": "Bosques boreales de Canadá",
+      "continent": "Norteamérica",
+      "presences": 13
+    },
+    {
+      "id": "HX-02-04",
+      "name": "Montañas Rocosas",
+      "continent": "Norteamérica",
+      "presences": 16
+    },
+    {
+      "id": "HX-02-05",
+      "name": "Grandes Llanuras",
+      "continent": "Norteamérica",
+      "presences": 15
+    },
+    {
+      "id": "HX-02-06",
+      "name": "Yukón",
+      "continent": "Norteamérica",
+      "presences": 14
+    },
+    {
+      "id": "HX-03-02",
+      "name": "Región de los Grandes Lagos",
+      "continent": "Norteamérica",
+      "presences": 17
+    },
+    {
+      "id": "HX-03-03",
+      "name": "Costa del Pacífico",
+      "continent": "Norteamérica",
+      "presences": 14
+    },
+    {
+      "id": "HX-03-04",
+      "name": "Bosques del este norteamericano",
+      "continent": "Norteamérica",
+      "presences": 17
+    },
+    {
+      "id": "HX-03-05",
+      "name": "Desierto de Sonora",
+      "continent": "Norteamérica",
+      "presences": 13
+    },
+    {
+      "id": "HX-04-02",
+      "name": "Sierra Madre",
+      "continent": "Norteamérica",
+      "presences": 11
+    },
+    {
+      "id": "HX-04-03",
+      "name": "Península de Yucatán",
+      "continent": "Norteamérica",
+      "presences": 15
+    },
+    {
+      "id": "HX-04-04",
+      "name": "Costa del golfo de México",
+      "continent": "Norteamérica",
+      "presences": 11
+    },
+    {
+      "id": "HX-05-04",
+      "name": "América Central",
+      "continent": "Norteamérica",
+      "presences": 22
+    },
+    {
+      "id": "sa_caribe_sudamericano",
+      "name": "Caribe sudamericano",
+      "continent": "Sudamérica",
+      "presences": 18
+    },
+    {
+      "id": "sa_llanos_del_orinoco",
+      "name": "Llanos del Orinoco",
+      "continent": "Sudamérica",
+      "presences": 11
+    },
+    {
+      "id": "sa_andes_centrales",
+      "name": "Andes Centrales",
+      "continent": "Sudamérica",
+      "presences": 11
+    },
+    {
+      "id": "sa_andes_del_norte",
+      "name": "Andes del Norte",
+      "continent": "Sudamérica",
+      "presences": 16
+    },
+    {
+      "id": "sa_amazonia",
+      "name": "Amazonía",
+      "continent": "Sudamérica",
+      "presences": 41
+    },
+    {
+      "id": "sa_pantanal",
+      "name": "Pantanal",
+      "continent": "Sudamérica",
+      "presences": 26
+    },
+    {
+      "id": "sa_cerrado_brasileno",
+      "name": "Cerrado brasileño",
+      "continent": "Sudamérica",
+      "presences": 17
+    },
+    {
+      "id": "sa_pampas",
+      "name": "Pampas",
+      "continent": "Sudamérica",
+      "presences": 22
+    },
+    {
+      "id": "sa_desierto_de_atacama",
+      "name": "Desierto de Atacama",
+      "continent": "Sudamérica",
+      "presences": 10
+    },
+    {
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "name": "Patagonia y Tierra del Fuego",
+      "continent": "Sudamérica",
+      "presences": 20
+    }
+  ]
+}

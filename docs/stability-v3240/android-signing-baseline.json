@@ -1,0 +1,9 @@
+{
+  "version": "3.23.1",
+  "artifactURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/releases/download/v3.23.1/El-Gran-Atlas-Beta-3.23.1-debug.apk",
+  "apkSha256": "a2876217b10f476e6a6091458c4b8e0518314d22f1ab9391164d44e6ab822c92",
+  "publicSignerCertificateSha256": [
+    "4b4c32f250a4fd1af440e86bcbcbf718553b3da3bbc786fc12bb8c9c5676d8c3"
+  ],
+  "workflowKeyStorage": "Existing debug workflow uses the runner debug keystore; no persistent release keystore configured."
+}

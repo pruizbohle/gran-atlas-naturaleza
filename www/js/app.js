@@ -4337,6 +4337,10 @@ function renderExpeditions(){
  <div class="divider"></div><div class="small">Las expediciones continúan durante tu ausencia hasta un máximo de ocho horas contabilizadas.</div></section></div>`;
 }
 
+// AM-06 BEGIN bestiary-state
+const BESTIARY_PAGE_SIZE=32;
+let bestiaryPage=0;
+// AM-06 END bestiary-state
 function renderBestiary(){
   const total=Object.keys(SPECIES).length;
   let ids=Object.keys(SPECIES);
@@ -4346,12 +4350,18 @@ function renderBestiary(){
   if(sort==='rarity') ids.sort((a,b)=>({ 'Común':1,'Poco común':2,'Raro':3,'Muy rara':4 }[SPECIES[a].rare]-{ 'Común':1,'Poco común':2,'Raro':3,'Muy rara':4 }[SPECIES[b].rare] || SPECIES[a].name.localeCompare(SPECIES[b].name,'es')));
   if(sort==='type') ids.sort((a,b)=>bestiaryTypeBucket(a).localeCompare(bestiaryTypeBucket(b),'es') || SPECIES[a].name.localeCompare(SPECIES[b].name,'es'));
    if(state.bestiaryDescending)ids.reverse();
+// AM-06 BEGIN bestiary-pagination
+  const pages=Math.max(1,Math.ceil(ids.length/BESTIARY_PAGE_SIZE));
+  bestiaryPage=Math.max(0,Math.min(bestiaryPage,pages-1));
+  const start=bestiaryPage*BESTIARY_PAGE_SIZE,end=Math.min(ids.length,start+BESTIARY_PAGE_SIZE);
+  const pagination=`<nav data-bestiary-pager data-page="${bestiaryPage}" data-pages="${pages}" data-total="${ids.length}" aria-label="Páginas del Bestiario" style="display:grid;grid-template-columns:1fr auto 1fr;gap:6px;align-items:center;margin-top:10px"><button class="btn alt" data-action="bestiary-page" data-id="${bestiaryPage-1}" ${bestiaryPage===0?'disabled':''} aria-label="Página anterior del Bestiario" style="padding:8px 6px;font-size:11px">← Anterior</button><span class="small" role="status" style="text-align:center">Página ${bestiaryPage+1}/${pages}<br>${ids.length?start+1:0}–${end} de ${ids.length}</span><button class="btn alt" data-action="bestiary-page" data-id="${bestiaryPage+1}" ${bestiaryPage===pages-1?'disabled':''} aria-label="Página siguiente del Bestiario" style="padding:8px 6px;font-size:11px">Siguiente →</button></nav>`;
+// AM-06 END bestiary-pagination
   return `<section class="card">
     <div class="bestiary-head"><h3 class="section">🦉 Bestiario</h3><div class="badge">Identificadas ${identifiedCount()}/${total}</div></div>
     <div class="small">Listado de especies descubiertas y pendientes. Haz clic en un criterio para ordenar y vuelve a pulsarlo para invertir el sentido. · <a href="./laboratorio-especiales.html" target="_blank" rel="noopener">Especímenes 3.19.7</a> · <a href="./laboratorio-pulido-v3199.html" target="_blank" rel="noopener">Pulido artístico 3.19.9</a> · <a href="./laboratorio-pigmentacion.html" target="_blank" rel="noopener">Pigmentación 3.19.6</a> · <a href="./laboratorio-dimorfismo.html" target="_blank" rel="noopener">⚤ Dimorfismo 3.19.5</a> · <a href="./laboratorio-mamiferos.html" target="_blank" rel="noopener">Mamíferos 3.19.4</a> · <a href="./laboratorio-aves.html" target="_blank" rel="noopener">Aviario 3.19.3</a> · <a href="./laboratorio-herpetologia.html" target="_blank" rel="noopener">🦎 Herpetario 3.19.2b</a> · <a href="./laboratorio-peces.html" target="_blank" rel="noopener">🐟 Comprobar sprites 3.19.1c</a></div>
     <label class="bestiary-v317-filter"><input type="checkbox" data-action="bestiary-hide-monographs" ${state.bestiaryHideMonographs?'checked':''} aria-label="Ocultar especies con monografía publicada"> <span>Ocultar especies con monografía publicada</span><small>${ids.length} de ${total} visibles</small></label>
     <div class="subtabs compact">${[['alpha','Abecedario'],['rarity','Rareza'],['type','Tipo']].map(([id,label])=>`<button class="subtab ${sort===id?'active':''}" data-action="bestiary-sort" data-id="${id}" aria-label="Ordenar por ${label}; ${sort===id?(state.bestiaryDescending?'descendente':'ascendente'):'seleccionar'}">${label}${sort===id?(state.bestiaryDescending?' ↓':' ↑'):''}</button>`).join('')}</div>
-    <div class="species-grid" style="margin-top:10px">${ids.map(id=>'<div class="bestiary-specimen-entry">'+speciesCard(id,false,true)+'<details data-specimen-collection="'+id+'"><summary>Colección de especímenes</summary><div data-specimen-content></div></details></div>').join('')}</div>
+    ${/* AM-06 BEGIN top-controls */pagination/* AM-06 END top-controls */}<div class="species-grid" style="margin-top:10px">${ids/* AM-06 BEGIN visible-slice */.slice(start,end)/* AM-06 END visible-slice */.map(id=>'<div class="bestiary-specimen-entry">'+speciesCard(id,false,true)+'<details data-specimen-collection="'+id+'"><summary>Colección de especímenes</summary><div data-specimen-content></div></details></div>').join('')}</div>${/* AM-06 BEGIN bottom-controls */pagination/* AM-06 END bottom-controls */}
   </section>`;
 }
 
@@ -4470,6 +4480,12 @@ function handlePanelAction(e){
     if(act==='finish-voyage'){finishVoyage(id);}
     if(act==='bestiary-sort'){if(state.bestiarySort===id)state.bestiaryDescending=!state.bestiaryDescending;else{state.bestiarySort=id;state.bestiaryDescending=false;}renderPanel();persist();}
     if(act==='bestiary-hide-monographs'){state.bestiaryHideMonographs=!state.bestiaryHideMonographs;renderPanel();persist();}
+// AM-06 BEGIN bestiary-navigation
+    if(act==='bestiary-page'){
+      const page=Number(id);if(!Number.isInteger(page)||page<0)return;
+      bestiaryPage=page;renderPanel();window.scrollTo?.({top:0,behavior:'instant'});
+    }
+// AM-06 END bestiary-navigation
     if(act==='buy-crown'){buyCrownPack(Number(id)||0);}
     if(act==='exchange-crown'){exchangeTrialCrowns(id==='all'?Math.floor(Math.max(0,state.crownCoins||0)):Number(id));}
     if(act==='claim-mission'){claimScientificMission(id);}

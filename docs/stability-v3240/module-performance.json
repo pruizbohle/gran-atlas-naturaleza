@@ -1,0 +1,314 @@
+{
+  "catalogSpecies": 710,
+  "cpuSlowdown": 4,
+  "viewport": "390 × 844",
+  "method": "Supplement to the Bestiary benchmark: same context/page/CDP, ABBA, three warm samples per visit, workers blocked and timers paused equally. Field is already rendered during initial startup; firstClick is not an SVG-cold startup measurement.",
+  "cases": [
+    {
+      "version": "3.23.1",
+      "modules": {
+        "field": {
+          "firstClickMs": 15,
+          "warmMs": [
+            12.600000001490116,
+            9.799999997019768,
+            15.199999995529652
+          ]
+        },
+        "atlas": {
+          "firstClickMs": 98.39999999850988,
+          "warmMs": [
+            21.299999997019768,
+            25.599999994039536,
+            23.30000000447035
+          ]
+        },
+        "journal": {
+          "firstClickMs": 226.70000000298023,
+          "warmMs": [
+            74.79999999701977,
+            73.60000000149012,
+            71.69999999552965
+          ]
+        },
+        "museum": {
+          "firstClickMs": 37.80000000447035,
+          "warmMs": [
+            10.600000001490116,
+            12.199999995529652,
+            9.599999994039536
+          ]
+        },
+        "research": {
+          "firstClickMs": 48.19999999552965,
+          "warmMs": [
+            25.399999998509884,
+            21.799999997019768,
+            25.700000002980232
+          ]
+        },
+        "expeditions": {
+          "firstClickMs": 24.100000001490116,
+          "warmMs": [
+            7.5,
+            6.700000002980232,
+            6.5
+          ]
+        },
+        "objects": {
+          "firstClickMs": 75.39999999850988,
+          "warmMs": [
+            41.100000001490116,
+            45.899999998509884,
+            44.900000005960464
+          ]
+        }
+      }
+    },
+    {
+      "version": "3.24.0",
+      "modules": {
+        "field": {
+          "firstClickMs": 9.299999997019768,
+          "warmMs": [
+            14.199999995529652,
+            11.100000001490116,
+            10.800000004470348
+          ]
+        },
+        "atlas": {
+          "firstClickMs": 47,
+          "warmMs": [
+            35.400000005960464,
+            26.5,
+            27.100000001490116
+          ]
+        },
+        "journal": {
+          "firstClickMs": 159.5,
+          "warmMs": [
+            60.79999999701977,
+            63,
+            63.899999998509884
+          ]
+        },
+        "museum": {
+          "firstClickMs": 25,
+          "warmMs": [
+            9.899999998509884,
+            14.600000001490116,
+            15.699999995529652
+          ]
+        },
+        "research": {
+          "firstClickMs": 49.70000000298023,
+          "warmMs": [
+            19.5,
+            23.30000000447035,
+            22.799999997019768
+          ]
+        },
+        "expeditions": {
+          "firstClickMs": 11.300000004470348,
+          "warmMs": [
+            10.100000001490116,
+            6.5,
+            12
+          ]
+        },
+        "objects": {
+          "firstClickMs": 52.100000001490116,
+          "warmMs": [
+            37.5,
+            46.600000001490116,
+            41.399999998509884
+          ]
+        }
+      }
+    },
+    {
+      "version": "3.24.0",
+      "modules": {
+        "field": {
+          "firstClickMs": 13.700000002980232,
+          "warmMs": [
+            28.5,
+            8.299999997019768,
+            11
+          ]
+        },
+        "atlas": {
+          "firstClickMs": 40.900000005960464,
+          "warmMs": [
+            29.200000002980232,
+            39.20000000298023,
+            29.099999994039536
+          ]
+        },
+        "journal": {
+          "firstClickMs": 117.09999999403954,
+          "warmMs": [
+            63.400000005960464,
+            70.89999999850988,
+            74.79999999701977
+          ]
+        },
+        "museum": {
+          "firstClickMs": 15.300000004470348,
+          "warmMs": [
+            11,
+            14.399999998509884,
+            5.299999997019768
+          ]
+        },
+        "research": {
+          "firstClickMs": 18.700000002980232,
+          "warmMs": [
+            18,
+            22.69999999552965,
+            22.399999998509884
+          ]
+        },
+        "expeditions": {
+          "firstClickMs": 9.899999998509884,
+          "warmMs": [
+            8.899999998509884,
+            14,
+            6.600000001490116
+          ]
+        },
+        "objects": {
+          "firstClickMs": 56,
+          "warmMs": [
+            37,
+            51.20000000298023,
+            71.20000000298023
+          ]
+        }
+      }
+    },
+    {
+      "version": "3.23.1",
+      "modules": {
+        "field": {
+          "firstClickMs": 10.5,
+          "warmMs": [
+            11.600000001490116,
+            16.400000005960464,
+            12.5
+          ]
+        },
+        "atlas": {
+          "firstClickMs": 44.399999998509884,
+          "warmMs": [
+            31.399999998509884,
+            26.200000002980232,
+            27.600000001490116
+          ]
+        },
+        "journal": {
+          "firstClickMs": 113.59999999403954,
+          "warmMs": [
+            70.10000000149012,
+            78.10000000149012,
+            64.89999999850988
+          ]
+        },
+        "museum": {
+          "firstClickMs": 18.100000001490116,
+          "warmMs": [
+            11,
+            13.599999994039536,
+            10.5
+          ]
+        },
+        "research": {
+          "firstClickMs": 42.899999998509884,
+          "warmMs": [
+            19.299999997019768,
+            22.899999998509884,
+            17.299999997019768
+          ]
+        },
+        "expeditions": {
+          "firstClickMs": 13.300000004470348,
+          "warmMs": [
+            7.300000004470348,
+            8.900000005960464,
+            7
+          ]
+        },
+        "objects": {
+          "firstClickMs": 62.70000000298023,
+          "warmMs": [
+            37,
+            33.20000000298023,
+            32
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "3.23.1": {
+      "field": {
+        "firstClickMedianMs": 12.75,
+        "warmMedianMs": 12.550000000745058
+      },
+      "atlas": {
+        "firstClickMedianMs": 71.39999999850988,
+        "warmMedianMs": 25.899999998509884
+      },
+      "journal": {
+        "firstClickMedianMs": 170.14999999850988,
+        "warmMedianMs": 72.64999999850988
+      },
+      "museum": {
+        "firstClickMedianMs": 27.950000002980232,
+        "warmMedianMs": 10.800000000745058
+      },
+      "research": {
+        "firstClickMedianMs": 45.54999999701977,
+        "warmMedianMs": 22.349999997764826
+      },
+      "expeditions": {
+        "firstClickMedianMs": 18.700000002980232,
+        "warmMedianMs": 7.150000002235174
+      },
+      "objects": {
+        "firstClickMedianMs": 69.05000000074506,
+        "warmMedianMs": 39.05000000074506
+      }
+    },
+    "3.24.0": {
+      "field": {
+        "firstClickMedianMs": 11.5,
+        "warmMedianMs": 11.050000000745058
+      },
+      "atlas": {
+        "firstClickMedianMs": 43.95000000298023,
+        "warmMedianMs": 29.149999998509884
+      },
+      "journal": {
+        "firstClickMedianMs": 138.29999999701977,
+        "warmMedianMs": 63.650000002235174
+      },
+      "museum": {
+        "firstClickMedianMs": 20.150000002235174,
+        "warmMedianMs": 12.699999999254942
+      },
+      "research": {
+        "firstClickMedianMs": 34.20000000298023,
+        "warmMedianMs": 22.549999997019768
+      },
+      "expeditions": {
+        "firstClickMedianMs": 10.600000001490116,
+        "warmMedianMs": 9.5
+      },
+      "objects": {
+        "firstClickMedianMs": 54.05000000074506,
+        "warmMedianMs": 44
+      }
+    }
+  }
+}

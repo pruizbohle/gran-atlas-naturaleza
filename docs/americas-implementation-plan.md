@@ -1,6 +1,25 @@
+# Estado actualizado · Cierre de AM-01 a AM-06
+
+La serie está implementada y validada técnicamente en **3.24.0**: 710 especies, 79 regiones y cinco continentes. El cierre de publicación exige ambos workflows correctos del commit final; sus resultados y APK se verifican en la entrega. No se detectaron fallos críticos en las 294 pruebas ejecutadas.
+
+| Fase | Resultado |
+|---|---|
+| AM-01 | Auditoría de 398 presencias americanas y trazabilidad conservada. |
+| AM-02 | Norteamérica: 14 regiones y 206 presencias. |
+| AM-03 | Pulido norteamericano y regresiones gráficas. |
+| AM-04 | Sudamérica: diez regiones y 192 presencias. |
+| AM-05 | Revisión de las 131 ilustraciones sudamericanas. |
+| AM-06 | Bestiario paginado, progresión global, guardados, PWA, rendimiento y regresión integral. |
+
+[Informe 3.24.0](../README_V3240.md) · [Estado y pendientes no críticos](stability-v3240/STATUS.md) · [Mediciones](stability-v3240/performance-report.json). Las siguientes etapas pueden abordar evolución visual y jugable; esta versión no las implementa.
+
+---
+
 # Américas · Plan posterior a AM-01
 
-**Documento de planificación. Ninguna etapa de implementación se ejecuta con esta auditoría.** Catálogo de referencia: 3.21.2, 487 especies y 57 regiones funcionales. [Informe AM-01](americas-audit.md) · [Inventario de especies](americas-species-audit.csv) · [Inventario de regiones](americas-regions-audit.csv).
+## Plan original conservado como referencia histórica
+
+**El contenido siguiente corresponde a la planificación AM-01 anterior a las implementaciones.** Catálogo de referencia: 3.21.2, 487 especies y 57 regiones funcionales. [Informe AM-01](americas-audit.md) · [Inventario de especies](americas-species-audit.csv) · [Inventario de regiones](americas-regions-audit.csv).
 
 ## Condiciones previas y contrato de datos
 

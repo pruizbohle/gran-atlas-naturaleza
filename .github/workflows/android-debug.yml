@@ -66,6 +66,9 @@ jobs:
       - name: Verificar JavaScript del juego
         run: |
           node --check www/js/app.js
+          node --check scripts/benchmark-stability-v3240.cjs
+          node --check scripts/check-stability-browser-v3240.cjs
+          node --check tests/helpers/legacy-source.cjs
           node --check www/js/mobile-ui.js
           node --check www/sw.js
           node --check www/js/southamerica-data-v3230.js
@@ -131,7 +134,7 @@ jobs:
       - name: Publicar APK de prueba
         uses: actions/upload-artifact@v4
         with:
-          name: El-Gran-Atlas-Beta-3.23.1-debug
+          name: El-Gran-Atlas-Beta-3.24.0-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 14

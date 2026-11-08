@@ -1,0 +1,1145 @@
+{
+  "version": "3.24.0",
+  "device": "Chromium mobile emulation; no physical Android device",
+  "modules": [
+    {
+      "width": 320,
+      "height": 640,
+      "name": "field",
+      "openViaAutomationMs": 109,
+      "horizontal": false,
+      "error": false,
+      "dock": 589
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "name": "atlas",
+      "openViaAutomationMs": 107,
+      "horizontal": false,
+      "error": false,
+      "dock": 589
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "name": "journal",
+      "openViaAutomationMs": 140,
+      "horizontal": false,
+      "error": false,
+      "dock": 589
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "name": "bestiary",
+      "openViaAutomationMs": 156,
+      "horizontal": false,
+      "error": false,
+      "dock": 589
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "name": "museum",
+      "openViaAutomationMs": 92,
+      "horizontal": false,
+      "error": false,
+      "dock": 589
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "name": "research",
+      "openViaAutomationMs": 65,
+      "horizontal": false,
+      "error": false,
+      "dock": 589
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "name": "expeditions",
+      "openViaAutomationMs": 65,
+      "horizontal": false,
+      "error": false,
+      "dock": 589
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "name": "objects",
+      "openViaAutomationMs": 98,
+      "horizontal": false,
+      "error": false,
+      "dock": 589
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "name": "field",
+      "openViaAutomationMs": 39,
+      "horizontal": false,
+      "error": false,
+      "dock": 689
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "name": "atlas",
+      "openViaAutomationMs": 43,
+      "horizontal": false,
+      "error": false,
+      "dock": 689
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "name": "journal",
+      "openViaAutomationMs": 61,
+      "horizontal": false,
+      "error": false,
+      "dock": 689
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "name": "bestiary",
+      "openViaAutomationMs": 97,
+      "horizontal": false,
+      "error": false,
+      "dock": 689
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "name": "museum",
+      "openViaAutomationMs": 80,
+      "horizontal": false,
+      "error": false,
+      "dock": 689
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "name": "research",
+      "openViaAutomationMs": 37,
+      "horizontal": false,
+      "error": false,
+      "dock": 689
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "name": "expeditions",
+      "openViaAutomationMs": 78,
+      "horizontal": false,
+      "error": false,
+      "dock": 689
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "name": "objects",
+      "openViaAutomationMs": 104,
+      "horizontal": false,
+      "error": false,
+      "dock": 689
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "field",
+      "openViaAutomationMs": 60,
+      "horizontal": false,
+      "error": false,
+      "dock": 793
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "atlas",
+      "openViaAutomationMs": 82,
+      "horizontal": false,
+      "error": false,
+      "dock": 793
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "journal",
+      "openViaAutomationMs": 86,
+      "horizontal": false,
+      "error": false,
+      "dock": 793
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "bestiary",
+      "openViaAutomationMs": 126,
+      "horizontal": false,
+      "error": false,
+      "dock": 793
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "museum",
+      "openViaAutomationMs": 67,
+      "horizontal": false,
+      "error": false,
+      "dock": 793
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "research",
+      "openViaAutomationMs": 34,
+      "horizontal": false,
+      "error": false,
+      "dock": 793
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "expeditions",
+      "openViaAutomationMs": 79,
+      "horizontal": false,
+      "error": false,
+      "dock": 793
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "name": "objects",
+      "openViaAutomationMs": 84,
+      "horizontal": false,
+      "error": false,
+      "dock": 793
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "name": "field",
+      "openViaAutomationMs": 39,
+      "horizontal": false,
+      "error": false,
+      "dock": 864
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "name": "atlas",
+      "openViaAutomationMs": 50,
+      "horizontal": false,
+      "error": false,
+      "dock": 864
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "name": "journal",
+      "openViaAutomationMs": 68,
+      "horizontal": false,
+      "error": false,
+      "dock": 864
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "name": "bestiary",
+      "openViaAutomationMs": 127,
+      "horizontal": false,
+      "error": false,
+      "dock": 864
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "name": "museum",
+      "openViaAutomationMs": 77,
+      "horizontal": false,
+      "error": false,
+      "dock": 864
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "name": "research",
+      "openViaAutomationMs": 41,
+      "horizontal": false,
+      "error": false,
+      "dock": 864
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "name": "expeditions",
+      "openViaAutomationMs": 69,
+      "horizontal": false,
+      "error": false,
+      "dock": 864
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "name": "objects",
+      "openViaAutomationMs": 77,
+      "horizontal": false,
+      "error": false,
+      "dock": 864
+    }
+  ],
+  "atlas": [
+    {
+      "width": 320,
+      "height": 640,
+      "continent": "Europa",
+      "tiles": 10,
+      "wholeMap": true,
+      "buttonBottom": 569,
+      "dockTop": 589,
+      "scroll": 0
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "continent": "Asia",
+      "tiles": 21,
+      "wholeMap": true,
+      "buttonBottom": 569,
+      "dockTop": 589,
+      "scroll": 0
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "continent": "África",
+      "tiles": 24,
+      "wholeMap": true,
+      "buttonBottom": 569,
+      "dockTop": 589,
+      "scroll": 0
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "continent": "Norteamérica",
+      "tiles": 14,
+      "wholeMap": true,
+      "buttonBottom": 569,
+      "dockTop": 589,
+      "scroll": 0
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "continent": "Sudamérica",
+      "tiles": 10,
+      "wholeMap": true,
+      "buttonBottom": 569,
+      "dockTop": 589,
+      "scroll": 0
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "continent": "Europa",
+      "tiles": 10,
+      "wholeMap": true,
+      "buttonBottom": 669,
+      "dockTop": 689,
+      "scroll": 0
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "continent": "Asia",
+      "tiles": 21,
+      "wholeMap": true,
+      "buttonBottom": 669,
+      "dockTop": 689,
+      "scroll": 0
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "continent": "África",
+      "tiles": 24,
+      "wholeMap": true,
+      "buttonBottom": 669,
+      "dockTop": 689,
+      "scroll": 0
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "continent": "Norteamérica",
+      "tiles": 14,
+      "wholeMap": true,
+      "buttonBottom": 669,
+      "dockTop": 689,
+      "scroll": 0
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "continent": "Sudamérica",
+      "tiles": 10,
+      "wholeMap": true,
+      "buttonBottom": 669,
+      "dockTop": 689,
+      "scroll": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "continent": "Europa",
+      "tiles": 10,
+      "wholeMap": true,
+      "buttonBottom": 773,
+      "dockTop": 793,
+      "scroll": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "continent": "Asia",
+      "tiles": 21,
+      "wholeMap": true,
+      "buttonBottom": 773,
+      "dockTop": 793,
+      "scroll": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "continent": "África",
+      "tiles": 24,
+      "wholeMap": true,
+      "buttonBottom": 773,
+      "dockTop": 793,
+      "scroll": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "continent": "Norteamérica",
+      "tiles": 14,
+      "wholeMap": true,
+      "buttonBottom": 773,
+      "dockTop": 793,
+      "scroll": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "continent": "Sudamérica",
+      "tiles": 10,
+      "wholeMap": true,
+      "buttonBottom": 773,
+      "dockTop": 793,
+      "scroll": 0
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "continent": "Europa",
+      "tiles": 10,
+      "wholeMap": true,
+      "buttonBottom": 844,
+      "dockTop": 864,
+      "scroll": 0
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "continent": "Asia",
+      "tiles": 21,
+      "wholeMap": true,
+      "buttonBottom": 844,
+      "dockTop": 864,
+      "scroll": 0
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "continent": "África",
+      "tiles": 24,
+      "wholeMap": true,
+      "buttonBottom": 844,
+      "dockTop": 864,
+      "scroll": 0
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "continent": "Norteamérica",
+      "tiles": 14,
+      "wholeMap": true,
+      "buttonBottom": 844,
+      "dockTop": 864,
+      "scroll": 0
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "continent": "Sudamérica",
+      "tiles": 10,
+      "wholeMap": true,
+      "buttonBottom": 844,
+      "dockTop": 864,
+      "scroll": 0
+    }
+  ],
+  "regions": [
+    {
+      "id": "HX-01-09",
+      "continent": "Europa",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 15,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-01-11",
+      "continent": "Europa",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 12,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-02-09",
+      "continent": "Europa",
+      "manual": 1,
+      "manualAttempts": 3,
+      "automatic": 18,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-02-10",
+      "continent": "Europa",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 11,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-02-11",
+      "continent": "Europa",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 7,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-02-12",
+      "continent": "Europa",
+      "manual": 1,
+      "manualAttempts": 5,
+      "automatic": 15,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-09",
+      "continent": "Europa",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 19,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-10",
+      "continent": "Europa",
+      "manual": 1,
+      "manualAttempts": 3,
+      "automatic": 19,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-11",
+      "continent": "Europa",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 10,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-12",
+      "continent": "Europa",
+      "manual": 1,
+      "manualAttempts": 4,
+      "automatic": 11,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-13",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 9,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-15",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 4,
+      "automatic": 14,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-02-13",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 17,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-14",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 13,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-04-13",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 4,
+      "automatic": 13,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-02-15",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 14,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-16",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 8,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-18",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 4,
+      "automatic": 13,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-04-14",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 18,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-04-15",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 16,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-17",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 9,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-04-12",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 7,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-04-16",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 13,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-04-17",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 18,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-04-18",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 12,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-05-15",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 11,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-05-16",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 14,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-05-17",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 10,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-06-16",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 14,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-06-17",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 10,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-06-18",
+      "continent": "Asia",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 12,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-06-09",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 17,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-07-10",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 11,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-08-11",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 7,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-06-11",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 15,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-07-08",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 8,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-08-08",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 8,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-09-11",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 13,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-10-10",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 13,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-11-11",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 12,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-09-14",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 18,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-07-12",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 14,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-10-09",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 11,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-08-10",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 13,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-07-13",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 15,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-11-08",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 3,
+      "automatic": 15,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-06-08",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 12,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-09-09",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 4,
+      "automatic": 15,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-10-12",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 12,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-08-12",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 12,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-07-14",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 14,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-09-12",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 3,
+      "automatic": 12,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-11-10",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 11,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-06-07",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 12,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-07-11",
+      "continent": "África",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 10,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-01-05",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 14,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-02-02",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 17,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-02-03",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 4,
+      "automatic": 13,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-02-04",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 3,
+      "automatic": 11,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-02-05",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 16,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-02-06",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 15,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-02",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 14,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-03",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 9,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-04",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 18,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-03-05",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 12,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-04-02",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 11,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-04-03",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 14,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-04-04",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 14,
+      "autoTrials": 1
+    },
+    {
+      "id": "HX-05-04",
+      "continent": "Norteamérica",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 11,
+      "autoTrials": 1
+    },
+    {
+      "id": "sa_caribe_sudamericano",
+      "continent": "Sudamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 8,
+      "autoTrials": 1
+    },
+    {
+      "id": "sa_llanos_del_orinoco",
+      "continent": "Sudamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 15,
+      "autoTrials": 1
+    },
+    {
+      "id": "sa_andes_centrales",
+      "continent": "Sudamérica",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 16,
+      "autoTrials": 1
+    },
+    {
+      "id": "sa_andes_del_norte",
+      "continent": "Sudamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 11,
+      "autoTrials": 1
+    },
+    {
+      "id": "sa_amazonia",
+      "continent": "Sudamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 14,
+      "autoTrials": 1
+    },
+    {
+      "id": "sa_pantanal",
+      "continent": "Sudamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 10,
+      "autoTrials": 1
+    },
+    {
+      "id": "sa_cerrado_brasileno",
+      "continent": "Sudamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 13,
+      "autoTrials": 1
+    },
+    {
+      "id": "sa_pampas",
+      "continent": "Sudamérica",
+      "manual": 1,
+      "manualAttempts": 1,
+      "automatic": 13,
+      "autoTrials": 1
+    },
+    {
+      "id": "sa_desierto_de_atacama",
+      "continent": "Sudamérica",
+      "manual": 1,
+      "manualAttempts": 5,
+      "automatic": 12,
+      "autoTrials": 1
+    },
+    {
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "continent": "Sudamérica",
+      "manual": 1,
+      "manualAttempts": 2,
+      "automatic": 13,
+      "autoTrials": 1
+    }
+  ],
+  "all79RegionsTravelManualAutomaticAndJournal": true,
+  "bestiaryPages": 23,
+  "all710Accessible": true,
+  "sortAndFilterUI": true,
+  "monographFilterClampsPage": true,
+  "collectionsLazyAndStable": true,
+  "pagingDoesNotPersistOrAlterProgress": {
+    "stateUnchanged": true,
+    "rawUnchanged": true
+  },
+  "pageSurvivesTabsButNotReload": true,
+  "saveReloadPreservesProgress": true,
+  "museumSections": 5,
+  "offlineAllEightModulesAndFiveContinents": true,
+  "errors": []
+}

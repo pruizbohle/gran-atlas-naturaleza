@@ -1,3 +1,7 @@
+# El Gran Atlas v3.24.0 — Estabilización global
+
+Cierre de AM-01 a AM-06: 710 especies, 79 regiones y cinco continentes. Bestiario de 32 tarjetas por página, con una reducción medida del 91,9 % en apertura y 95,5 % en reapertura bajo CPU ×4. 294 pruebas de regresión aprobadas. [Informe y evidencia](README_V3240.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3240.html).
+
 # El Gran Atlas v3.23.1 — Sudamérica pulida
 
 131 especies auditadas, 36 ilustraciones conservadas y 95 intervenidas. Se mantienen las diez regiones, las 192 presencias y el catálogo mundial de 710 especies. [Informe y evidencia visual](README_V3231.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio comparativo](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-sudamerica-v3230.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3231.html).

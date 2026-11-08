@@ -1,4 +1,5 @@
 'use strict';
+const {withoutBestiaryPagination}=require('./helpers/legacy-source.cjs');
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto');
 const {catalog}=require('../scripts/load-southamerica-review-v3231.cjs'),{harness}=require('./helpers/live-game.cjs');
 const context=catalog(),after=context.AtlasSouthReview,before=context.AtlasSouthBefore3231,data=context.AtlasSouthAmerica3230;
@@ -8,7 +9,7 @@ const geometry=svg=>[...svg.matchAll(/\b(?:d|cx|cy|r|rx|ry|points|transform)="([
 const skins=id=>['normal',...(after.species[id].special.includes('Albino')?['albino']:[]),...(after.species[id].special.includes('Melánico')?['melanico']:[]),...(after.categories[id]||[]).map(c=>({Notable:'alfa','Épico':'epico',Excepcional:'excepcional',Legendario:'legendario'}[c]))];
 
 test('AM-05 preserves the complete gameplay source, 710 identities, 79 regions, ten South American regions and all 192 source records',()=>{
- for(const[file,digest]of Object.entries(require('./fixtures/southamerica-protected-v3230.json')))assert.equal(hash(fs.readFileSync(file)),digest,file);
+ for(const[file,digest]of Object.entries(require('./fixtures/southamerica-protected-v3230.json')))assert.equal(hash(file==='www/js/app.js'?withoutBestiaryPagination(fs.readFileSync(file,'utf8')):fs.readFileSync(file)),digest,file);
  assert.equal(Object.keys(after.species).length,710);assert.equal(after.regions.length,10);assert.equal(after.regions.reduce((n,r)=>n+r.species.length,0),192);assert.equal(ids.length,131);assert.equal(Object.keys(data.species).length,121);
  assert.equal(harness().window.__atlasTest.REGIONS.length,79);assert.equal(new Set(data.presences.map(p=>p.row)).size,192);
  assert.deepEqual(json(data.regions.map(r=>r.unlock.prestige).sort((a,b)=>a-b)),[167,170,173,176,179,182,185,188,191,194]);
@@ -54,10 +55,10 @@ test('3.23.0 South American progress, old regions, inventory, museum, variants a
  const h=harness(),a=h.window.__atlasTest,s=a.state;Object.assign(s,{currentRegion:'sa_amazonia',prestige:200,money:123456,knowledge:98765});for(const r of data.regions)s.regionUnlocked[r.id]=true;s.regionUnlocked['HX-06-07']=true;s.regionUnlocked['HX-02-09']=true;s.purchases.sudamerica_1=1;s.purchases.norteamerica_1=1;s.upgrades.southAmericaUnlocked=true;s.inventory.north_america_map=1;
  const id=data.ids['Hydrochoerus hydrochaeris'];s.sightings[id]=71;s.stages[id]=5;s.published[id]=true;s.specialFound[id]={Albino:true,Notable:true};s.museum.exhibits[id]=true;s.sexSeen[data.ids['Vultur gryphus']]={male:true,female:true};a.persist();const saved=JSON.parse(h.store.gran_atlas_v05),loaded=harness(h.store),b=loaded.window.__atlasTest;
  for(const key of ['currentRegion','regionUnlocked','prestige','money','knowledge','sightings','stages','published','inventory','museum','voyages','specialFound','legendaryFound','sexSeen','purchases'])assert.deepEqual(json(b.state[key]),saved[key],key);
- let exported;loaded.window.Capacitor.Plugins.AtlasExport.saveFile=async({content})=>(exported=JSON.parse(content),{uri:'content://test'});await loaded.elements.saveDownloadBtn.fire('click');assert.equal(exported.gameVersion,'3.23.1');const restored=harness();restored.window.AtlasSaveBridge.restoreGame(exported.game);assert.equal(restored.window.__atlasTest.state.currentRegion,'sa_amazonia');assert.equal(restored.window.__atlasTest.state.sightings[id],71);assert.deepEqual(json(restored.window.__atlasTest.state.specialFound[id]),saved.specialFound[id]);
+ let exported;loaded.window.Capacitor.Plugins.AtlasExport.saveFile=async({content})=>(exported=JSON.parse(content),{uri:'content://test'});await loaded.elements.saveDownloadBtn.fire('click');assert.equal(exported.gameVersion,'3.24.0');const restored=harness();restored.window.AtlasSaveBridge.restoreGame(exported.game);assert.equal(restored.window.__atlasTest.state.currentRegion,'sa_amazonia');assert.equal(restored.window.__atlasTest.state.sightings[id],71);assert.deepEqual(json(restored.window.__atlasTest.state.specialFound[id]),saved.specialFound[id]);
 });
 test('the new release precaches production polish, exact comparisons, visual ledger and an independent safe updater',()=>{
- const sw=fs.readFileSync('www/sw.js','utf8'),html=fs.readFileSync('www/index.html','utf8'),lab=fs.readFileSync('www/laboratorio-sudamerica-v3230.html','utf8');assert.match(sw,/gran-atlas-v3\.23\.1-sudamerica-1/);assert.equal(require('../www/atlas-release.json').version,'3.23.1');
+ const sw=fs.readFileSync('www/sw.js','utf8'),html=fs.readFileSync('www/index.html','utf8'),lab=fs.readFileSync('www/laboratorio-sudamerica-v3230.html','utf8');assert.match(sw,/gran-atlas-v3\.24\.0-stability-1/);assert.equal(require('../www/atlas-release.json').version,'3.24.0');
  for(const path of ['actualizar-v3231.html','js/southamerica-polish-v3231.js','js/lab/southamerica-art-before-v3231.js','js/lab/southamerica-before-v3231.js','js/lab/southamerica-audit-v3231.js'])assert.ok(sw.includes("'./"+path+"'"),path);
  assert.ok(html.indexOf('southamerica-polish-v3231.js')<html.indexOf('southamerica-art-v3230.js'));assert.doesNotMatch(html,/southamerica-before-v3231/);assert.doesNotMatch(lab,/src="js\/app\.js/);for(const value of ['compare','before','sex-pair','similar','64','80','120'])assert.ok(lab.includes('value="'+value+'"'));
  for(const path of ['www/js/southamerica-polish-v3231.js','www/js/lab/southamerica-lab-v3230.js'])assert.doesNotMatch(fs.readFileSync(path,'utf8'),/localStorage|sessionStorage|setInterval|setTimeout|Math\.random/);

@@ -1,0 +1,326 @@
+{
+  "regions": 79,
+  "presences": 1329,
+  "manualAndAutomaticCases": 2658,
+  "all710Discovered": true,
+  "originalRewardsVerified": true,
+  "method": "Deterministic selection of each original weighted interval; production probabilities and algorithms unchanged",
+  "detail": [
+    {
+      "id": "HX-01-09",
+      "successfulCases": 66
+    },
+    {
+      "id": "HX-01-11",
+      "successfulCases": 36
+    },
+    {
+      "id": "HX-02-09",
+      "successfulCases": 26
+    },
+    {
+      "id": "HX-02-10",
+      "successfulCases": 104
+    },
+    {
+      "id": "HX-02-11",
+      "successfulCases": 76
+    },
+    {
+      "id": "HX-02-12",
+      "successfulCases": 64
+    },
+    {
+      "id": "HX-03-09",
+      "successfulCases": 36
+    },
+    {
+      "id": "HX-03-10",
+      "successfulCases": 32
+    },
+    {
+      "id": "HX-03-11",
+      "successfulCases": 40
+    },
+    {
+      "id": "HX-03-12",
+      "successfulCases": 32
+    },
+    {
+      "id": "HX-03-13",
+      "successfulCases": 20
+    },
+    {
+      "id": "HX-03-15",
+      "successfulCases": 20
+    },
+    {
+      "id": "HX-02-13",
+      "successfulCases": 28
+    },
+    {
+      "id": "HX-03-14",
+      "successfulCases": 30
+    },
+    {
+      "id": "HX-04-13",
+      "successfulCases": 20
+    },
+    {
+      "id": "HX-02-15",
+      "successfulCases": 16
+    },
+    {
+      "id": "HX-03-16",
+      "successfulCases": 24
+    },
+    {
+      "id": "HX-03-18",
+      "successfulCases": 20
+    },
+    {
+      "id": "HX-04-14",
+      "successfulCases": 18
+    },
+    {
+      "id": "HX-04-15",
+      "successfulCases": 36
+    },
+    {
+      "id": "HX-03-17",
+      "successfulCases": 16
+    },
+    {
+      "id": "HX-04-12",
+      "successfulCases": 20
+    },
+    {
+      "id": "HX-04-16",
+      "successfulCases": 22
+    },
+    {
+      "id": "HX-04-17",
+      "successfulCases": 20
+    },
+    {
+      "id": "HX-04-18",
+      "successfulCases": 20
+    },
+    {
+      "id": "HX-05-15",
+      "successfulCases": 34
+    },
+    {
+      "id": "HX-05-16",
+      "successfulCases": 56
+    },
+    {
+      "id": "HX-05-17",
+      "successfulCases": 38
+    },
+    {
+      "id": "HX-06-16",
+      "successfulCases": 26
+    },
+    {
+      "id": "HX-06-17",
+      "successfulCases": 70
+    },
+    {
+      "id": "HX-06-18",
+      "successfulCases": 28
+    },
+    {
+      "id": "HX-06-09",
+      "successfulCases": 36
+    },
+    {
+      "id": "HX-07-10",
+      "successfulCases": 70
+    },
+    {
+      "id": "HX-08-11",
+      "successfulCases": 42
+    },
+    {
+      "id": "HX-06-11",
+      "successfulCases": 30
+    },
+    {
+      "id": "HX-07-08",
+      "successfulCases": 36
+    },
+    {
+      "id": "HX-08-08",
+      "successfulCases": 48
+    },
+    {
+      "id": "HX-09-11",
+      "successfulCases": 46
+    },
+    {
+      "id": "HX-10-10",
+      "successfulCases": 32
+    },
+    {
+      "id": "HX-11-11",
+      "successfulCases": 20
+    },
+    {
+      "id": "HX-09-14",
+      "successfulCases": 34
+    },
+    {
+      "id": "HX-07-12",
+      "successfulCases": 30
+    },
+    {
+      "id": "HX-10-09",
+      "successfulCases": 24
+    },
+    {
+      "id": "HX-08-10",
+      "successfulCases": 34
+    },
+    {
+      "id": "HX-07-13",
+      "successfulCases": 22
+    },
+    {
+      "id": "HX-11-08",
+      "successfulCases": 24
+    },
+    {
+      "id": "HX-06-08",
+      "successfulCases": 22
+    },
+    {
+      "id": "HX-09-09",
+      "successfulCases": 24
+    },
+    {
+      "id": "HX-10-12",
+      "successfulCases": 22
+    },
+    {
+      "id": "HX-08-12",
+      "successfulCases": 24
+    },
+    {
+      "id": "HX-07-14",
+      "successfulCases": 16
+    },
+    {
+      "id": "HX-09-12",
+      "successfulCases": 24
+    },
+    {
+      "id": "HX-11-10",
+      "successfulCases": 70
+    },
+    {
+      "id": "HX-06-07",
+      "successfulCases": 16
+    },
+    {
+      "id": "HX-07-11",
+      "successfulCases": 22
+    },
+    {
+      "id": "HX-01-05",
+      "successfulCases": 34
+    },
+    {
+      "id": "HX-02-02",
+      "successfulCases": 22
+    },
+    {
+      "id": "HX-02-03",
+      "successfulCases": 26
+    },
+    {
+      "id": "HX-02-04",
+      "successfulCases": 32
+    },
+    {
+      "id": "HX-02-05",
+      "successfulCases": 30
+    },
+    {
+      "id": "HX-02-06",
+      "successfulCases": 28
+    },
+    {
+      "id": "HX-03-02",
+      "successfulCases": 34
+    },
+    {
+      "id": "HX-03-03",
+      "successfulCases": 28
+    },
+    {
+      "id": "HX-03-04",
+      "successfulCases": 34
+    },
+    {
+      "id": "HX-03-05",
+      "successfulCases": 26
+    },
+    {
+      "id": "HX-04-02",
+      "successfulCases": 22
+    },
+    {
+      "id": "HX-04-03",
+      "successfulCases": 30
+    },
+    {
+      "id": "HX-04-04",
+      "successfulCases": 22
+    },
+    {
+      "id": "HX-05-04",
+      "successfulCases": 44
+    },
+    {
+      "id": "sa_caribe_sudamericano",
+      "successfulCases": 36
+    },
+    {
+      "id": "sa_llanos_del_orinoco",
+      "successfulCases": 22
+    },
+    {
+      "id": "sa_andes_centrales",
+      "successfulCases": 22
+    },
+    {
+      "id": "sa_andes_del_norte",
+      "successfulCases": 32
+    },
+    {
+      "id": "sa_amazonia",
+      "successfulCases": 82
+    },
+    {
+      "id": "sa_pantanal",
+      "successfulCases": 52
+    },
+    {
+      "id": "sa_cerrado_brasileno",
+      "successfulCases": 34
+    },
+    {
+      "id": "sa_pampas",
+      "successfulCases": 44
+    },
+    {
+      "id": "sa_desierto_de_atacama",
+      "successfulCases": 20
+    },
+    {
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "successfulCases": 40
+    }
+  ]
+}

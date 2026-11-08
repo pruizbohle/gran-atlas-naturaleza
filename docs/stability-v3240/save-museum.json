@@ -1,0 +1,12 @@
+{
+  "scenario": "museum",
+  "sourceVersion": "3.23.0",
+  "sourceRef": "d045c1f",
+  "sourceSha256": "2cfbd49c6f9fa656a72a08d8cdf54b5e99cc008ef58f50f986777943e8b4d520",
+  "rawSha256": "9f13611fd752a43a926db68421bcba46c0d6ef66736d7b95d04fe131ac9c94dd",
+  "startup": true,
+  "nativeImport": true,
+  "nativeExport": true,
+  "allCriticalFieldsPreserved": true,
+  "formatChanged": false
+}

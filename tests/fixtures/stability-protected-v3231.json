@@ -1,0 +1,21 @@
+{
+  "www/js/app.js": "2cfbd49c6f9fa656a72a08d8cdf54b5e99cc008ef58f50f986777943e8b4d520",
+  "www/css/styles.css": "91cbb8c4f54f13e24cf900d7493aa26fb8331f1aa68351b073dbf8ba02e10bd4",
+  "www/css/atlas-v3211.css": "86f5099282e8b76dcf01c4c67563b70a2af6b8b8e4a8d6256d3a56165928bfc7",
+  "www/css/field-v3210.css": "44ff1de118c0e92b08238b76338cb710e31e676b8e6cdc0696f453a07db093e3",
+  "www/js/southamerica-data-v3230.js": "0ca138926288feeffafe7065dd1bc4e133abe77d81a80926d6577810691dafdd",
+  "www/js/northamerica-data-v3220.js": "069cec890536e4a09125370eab1a6bde117d596e7e1865ed28d45d0ca5840039",
+  "www/js/southamerica-geography-v3230.js": "18e9679f7563044ede3694b1486612080a5fb0940d9f5a581e40d9f6bf1c38ea",
+  "www/js/atlas-geography-v3211b.js": "7b199ef602b19454bf03e115e1976cc6a96603c4c3c13668b78b5482df559863",
+  "www/js/bird-art-v3193.js": "9475c214345fae86005eb18c1898ac201d31419d9b8d3948f2c43517581f1ef8",
+  "www/js/fish-art-v3191.js": "d1287aea496629827570cb2fdfdc3b9666c1b5a39a8b917af61b41da371cbd8c",
+  "www/js/herp-art-v3192.js": "a9d56f4e8d25fa00193e8fd0ffa63e310b1d0dfc6b0af135120c66fa2ff5b377",
+  "www/js/item-art-v3198.js": "db3a8bc3e0aa6407ef5f453a92aef5c24fef80abb68d753e669e2ea427b6cf82",
+  "www/js/legendary-art-v3197.js": "885a75fea726c7c1ce08ce73b0322e17c55d7d2c266c54ceaa1c71e9e98ff3a3",
+  "www/js/mammal-art-v3194.js": "d05187cd87cc1c6fd51117690f9afcbc16fe16bc56723659eb529ec8316d709a",
+  "www/js/northamerica-art-v3220.js": "956997ff98a42be9ab83728f3e4d0f4f89383e9a454e00ac8188c2ede46ced6e",
+  "www/js/northamerica-polish-v3221.js": "ce2f3661335fd704291f3b17420401f5dde8b03d7b299216305f0e19ce1c13f8",
+  "www/js/relict-art-v3199.js": "cb4e4807595d56b240a5dca4d82d8ed712bf8abd48303dad031f645cea605e82",
+  "www/js/southamerica-art-v3230.js": "d0520fe625819e433cf5c7997565538da10e771f039cc4222a98c1104c0eef9a",
+  "www/js/southamerica-polish-v3231.js": "622f19061770e3c2c17fbc725dd43c6cd1c0d91758eba04467233fde749af2c8"
+}

@@ -1,0 +1,12 @@
+{
+  "scenario": "africa",
+  "sourceVersion": "3.21.2",
+  "sourceRef": "07a6f06",
+  "sourceSha256": "2590624407af150260ae7f1d64b446363f429da0b603545289e79c02e5660be8",
+  "rawSha256": "0445e2131a01ba7092ede90908a8065360b8af984a184a344c28167424a204d5",
+  "startup": true,
+  "nativeImport": true,
+  "nativeExport": true,
+  "allCriticalFieldsPreserved": true,
+  "formatChanged": false
+}

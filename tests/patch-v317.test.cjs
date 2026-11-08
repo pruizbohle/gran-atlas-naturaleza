@@ -55,10 +55,10 @@ test('Bestiario oculta solo monografías, no especies 5/5 sin publicación',()=>
  g.state.stages.lobo_gris=5;
  g.state.published.zorro_rojo=true;
  let all=g.renderBestiary();
- assert.equal((all.match(/class="species-card\b/g)||[]).length,487);
+ assert.equal((all.match(/class="species-card\b/g)||[]).length,32);
  g.state.bestiaryHideMonographs=true;
  let incomplete=g.renderBestiary();
- assert.equal((incomplete.match(/class="species-card\b/g)||[]).length,486);
+ assert.equal((incomplete.match(/class="species-card\b/g)||[]).length,32);
  assert.match(incomplete,/486 de 487 visibles/);
  assert.match(incomplete,/data-action="bestiary-hide-monographs" checked/);
  assert.match(incomplete,/Identificadas/);

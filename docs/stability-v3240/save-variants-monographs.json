@@ -1,0 +1,12 @@
+{
+  "scenario": "variants-monographs",
+  "sourceVersion": "3.22.1",
+  "sourceRef": "78daf2d",
+  "sourceSha256": "168dabe986d21d46d3d3543bf3680202e29fc072e9cf01e02398c978da5113b1",
+  "rawSha256": "c0e4e189a9a46347f3bd53003d1fe361d4717c62d3852c1af33329a3bde469ca",
+  "startup": true,
+  "nativeImport": true,
+  "nativeExport": true,
+  "allCriticalFieldsPreserved": true,
+  "formatChanged": false
+}

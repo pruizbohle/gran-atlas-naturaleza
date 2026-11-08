@@ -1,0 +1,12 @@
+{
+  "scenario": "northamerica",
+  "sourceVersion": "3.22.1",
+  "sourceRef": "78daf2d",
+  "sourceSha256": "168dabe986d21d46d3d3543bf3680202e29fc072e9cf01e02398c978da5113b1",
+  "rawSha256": "44a24c8f32cf8c62976d504453882ef382a2df7c41530e14339cbcd783d96dff",
+  "startup": true,
+  "nativeImport": true,
+  "nativeExport": true,
+  "allCriticalFieldsPreserved": true,
+  "formatChanged": false
+}

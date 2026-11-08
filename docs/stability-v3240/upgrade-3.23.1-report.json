@@ -1,0 +1,17 @@
+{
+  "from": "3.23.1",
+  "to": "3.24.0",
+  "oldPlayableCells": 14,
+  "northAmericaPlayableCells": 14,
+  "southAmericaPlayableCells": 10,
+  "oldWorkerReproduced": true,
+  "otherWindowsGuard": true,
+  "exactBackup": true,
+  "oldProgressPreserved": true,
+  "saharaIDAndProgressPreserved": true,
+  "unlockedRegionsPreserved": true,
+  "southAmericanProgressPreserved": true,
+  "offlineAfterUpgrade": true,
+  "jsErrors": [],
+  "newSouthAmericanRegionsRemainLocked": false
+}
