@@ -1,0 +1,286 @@
+{
+  "reference": "27a71e1",
+  "scenario": "Europa; región actual; partida inicial; detalles cerrados",
+  "measurements": [
+    {
+      "width": 320,
+      "height": 640,
+      "dockTop": 589,
+      "documentHeight": 1110,
+      "verticalScroll": 470,
+      "horizontalOverflow": false,
+      "header": {
+        "top": 212.828125,
+        "bottom": 256.828125,
+        "width": 306,
+        "height": 44,
+        "visible": true,
+        "text": "🇪🇺 Europa🌏 Asia🌍 África🦬 Norteamérica🦜 Sudamérica 🔒🪃 Oceanía 🔒🧊 Polos 🔒🌊 Océanos 🔒"
+      },
+      "map": {
+        "top": 300.828125,
+        "bottom": 598.828125,
+        "width": 296,
+        "height": 298,
+        "visible": false,
+        "text": "📍Islas Británicas0/33🔒Escandinavia0/18🔒Alpes0/13🔒Europa Occidental0/52🔒Europa Central0/38🔒Pení"
+      },
+      "region": {
+        "top": 633.828125,
+        "bottom": 962.5,
+        "width": 306,
+        "height": 328.671875,
+        "visible": false,
+        "text": "FICHA DE REGIÓN · HX-01-09Islas Británicas📍 Zona actual0 / 33 especies identificadas0 prestigio mín"
+      },
+      "action": {
+        "top": 870.8125,
+        "bottom": 912.8125,
+        "width": 280,
+        "height": 42,
+        "visible": false,
+        "text": "Explorando aquí"
+      },
+      "openTimings": {
+        "trialsMs": [
+          3.2000000029802322,
+          2.5999999940395355,
+          2.8000000044703484,
+          3.600000001490116,
+          3.5999999940395355,
+          3.8000000044703484,
+          3.899999998509884,
+          4,
+          3.399999998509884
+        ],
+        "medianMs": 3.5999999940395355,
+        "domNodes": 247
+      },
+      "jsErrors": []
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "dockTop": 689,
+      "documentHeight": 1094,
+      "verticalScroll": 354,
+      "horizontalOverflow": false,
+      "header": {
+        "top": 197.140625,
+        "bottom": 241.140625,
+        "width": 346,
+        "height": 44,
+        "visible": true,
+        "text": "🇪🇺 Europa🌏 Asia🌍 África🦬 Norteamérica🦜 Sudamérica 🔒🪃 Oceanía 🔒🧊 Polos 🔒🌊 Océanos 🔒"
+      },
+      "map": {
+        "top": 285.140625,
+        "bottom": 583.140625,
+        "width": 336,
+        "height": 298,
+        "visible": true,
+        "text": "📍Islas Británicas0/33🔒Escandinavia0/18🔒Alpes0/13🔒Europa Occidental0/52🔒Europa Central0/38🔒Pení"
+      },
+      "region": {
+        "top": 618.140625,
+        "bottom": 946.8125,
+        "width": 346,
+        "height": 328.671875,
+        "visible": false,
+        "text": "FICHA DE REGIÓN · HX-01-09Islas Británicas📍 Zona actual0 / 33 especies identificadas0 prestigio mín"
+      },
+      "action": {
+        "top": 855.125,
+        "bottom": 897.125,
+        "width": 320,
+        "height": 42,
+        "visible": false,
+        "text": "Explorando aquí"
+      },
+      "openTimings": {
+        "trialsMs": [
+          3.399999998509884,
+          2.600000001490116,
+          2.399999998509884,
+          3.600000001490116,
+          7.399999998509884,
+          4.399999998509884,
+          4.200000002980232,
+          7.699999995529652,
+          4.600000001490116
+        ],
+        "medianMs": 4.200000002980232,
+        "domNodes": 247
+      },
+      "jsErrors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "dockTop": 793,
+      "documentHeight": 1079,
+      "verticalScroll": 235,
+      "horizontalOverflow": false,
+      "header": {
+        "top": 197.140625,
+        "bottom": 241.140625,
+        "width": 376,
+        "height": 44,
+        "visible": true,
+        "text": "🇪🇺 Europa🌏 Asia🌍 África🦬 Norteamérica🦜 Sudamérica 🔒🪃 Oceanía 🔒🧊 Polos 🔒🌊 Océanos 🔒"
+      },
+      "map": {
+        "top": 285.140625,
+        "bottom": 583.140625,
+        "width": 366,
+        "height": 298,
+        "visible": true,
+        "text": "📍Islas Británicas0/33🔒Escandinavia0/18🔒Alpes0/13🔒Europa Occidental0/52🔒Europa Central0/38🔒Pení"
+      },
+      "region": {
+        "top": 618.140625,
+        "bottom": 931.96875,
+        "width": 376,
+        "height": 313.828125,
+        "visible": false,
+        "text": "FICHA DE REGIÓN · HX-01-09Islas Británicas📍 Zona actual0 / 33 especies identificadas0 prestigio mín"
+      },
+      "action": {
+        "top": 855.125,
+        "bottom": 897.125,
+        "width": 350,
+        "height": 42,
+        "visible": false,
+        "text": "Explorando aquí"
+      },
+      "openTimings": {
+        "trialsMs": [
+          2.600000001490116,
+          2.2999999970197678,
+          2.7000000029802322,
+          2.399999998509884,
+          2.5,
+          3.600000001490116,
+          3.7000000029802322,
+          4.5,
+          4.5999999940395355
+        ],
+        "medianMs": 2.7000000029802322,
+        "domNodes": 247
+      },
+      "jsErrors": []
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "dockTop": 864,
+      "documentHeight": 1065,
+      "verticalScroll": 150,
+      "horizontalOverflow": false,
+      "header": {
+        "top": 197.140625,
+        "bottom": 241.140625,
+        "width": 398,
+        "height": 44,
+        "visible": true,
+        "text": "🇪🇺 Europa🌏 Asia🌍 África🦬 Norteamérica🦜 Sudamérica 🔒🪃 Oceanía 🔒🧊 Polos 🔒🌊 Océanos 🔒"
+      },
+      "map": {
+        "top": 285.140625,
+        "bottom": 583.140625,
+        "width": 388,
+        "height": 298,
+        "visible": true,
+        "text": "📍Islas Británicas0/33🔒Escandinavia0/18🔒Alpes0/13🔒Europa Occidental0/52🔒Europa Central0/38🔒Pení"
+      },
+      "region": {
+        "top": 618.140625,
+        "bottom": 931.96875,
+        "width": 398,
+        "height": 313.828125,
+        "visible": false,
+        "text": "FICHA DE REGIÓN · HX-01-09Islas Británicas📍 Zona actual0 / 33 especies identificadas0 prestigio mín"
+      },
+      "action": {
+        "top": 855.125,
+        "bottom": 897.125,
+        "width": 372,
+        "height": 42,
+        "visible": false,
+        "text": "Explorando aquí"
+      },
+      "openTimings": {
+        "trialsMs": [
+          3.100000001490116,
+          2.7000000029802322,
+          2.5,
+          3.2999999970197678,
+          2.899999998509884,
+          3,
+          2.4000000059604645,
+          2.5999999940395355,
+          2.3000000044703484
+        ],
+        "medianMs": 2.7000000029802322,
+        "domNodes": 247
+      },
+      "jsErrors": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "dockTop": 1000,
+      "documentHeight": 1000,
+      "verticalScroll": 0,
+      "horizontalOverflow": false,
+      "header": {
+        "top": 361,
+        "bottom": 404.1875,
+        "width": 900,
+        "height": 43.1875,
+        "visible": true,
+        "text": "🇪🇺 Europa🌏 Asia🌍 África🦬 Norteamérica🦜 Sudamérica 🔒🪃 Oceanía 🔒🧊 Polos 🔒🌊 Océanos 🔒"
+      },
+      "map": {
+        "top": 454.1875,
+        "bottom": 813.453125,
+        "width": 516,
+        "height": 359.265625,
+        "visible": true,
+        "text": "📍Islas Británicas0/33🔒Escandinavia0/18🔒Alpes0/13🔒Europa Occidental0/52🔒Europa Central0/38🔒Pení"
+      },
+      "region": {
+        "top": 445.1875,
+        "bottom": 847.453125,
+        "width": 356,
+        "height": 402.265625,
+        "visible": true,
+        "text": "FICHA DE REGIÓN · HX-01-09Islas Británicas📍 Zona actual0 / 33 especies identificadas0 prestigio mín"
+      },
+      "action": {
+        "top": 741.671875,
+        "bottom": 785.671875,
+        "width": 322,
+        "height": 44,
+        "visible": true,
+        "text": "Explorando aquí"
+      },
+      "openTimings": {
+        "trialsMs": [
+          3.0999999940395355,
+          2,
+          2.100000001490116,
+          2.100000001490116,
+          2,
+          2.899999998509884,
+          2.600000001490116,
+          3.899999998509884,
+          3.100000001490116
+        ],
+        "medianMs": 2.600000001490116,
+        "domNodes": 247
+      },
+      "jsErrors": []
+    }
+  ]
+}

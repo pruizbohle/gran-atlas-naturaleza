@@ -2143,7 +2143,7 @@ let currentAutoNotice='';
 let journalRailQuery='';
 let journalSortMode='catalog';
 let journalRailScrollTop=0;
-let atlasMapScrollLeft=0;
+const atlasViewportViews=new Map();
 let journalSheetScrollTop=0;
 
 let autoDiaryBuffer={searches:0,hits:0,knowledge:0};
@@ -2804,8 +2804,10 @@ function filterJournalRail(){
   if(counter)counter.textContent=count===0?'Sin resultados':count+' especies';
 }
 function renderPanel(){
+  rememberAtlasViewport();
   lastPanelSignature='';diaryDirty=true;
   document.body.classList.toggle?.('field-active',tab==='field');
+  document.body.classList.toggle?.('atlas-active',tab==='atlas');
   document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
   // Renderizar solo el módulo activo: un error en otra pestaña no bloquea todas.
   const renderers={
@@ -2822,8 +2824,8 @@ function renderPanel(){
   bindPanel();
   if(tab==='field')lastPanelSignature=fieldEncounterSignature(state.lastEncounter);
   if(tab==='atlas'){
-    const map=panel.querySelector('.atlas-v32-map-scroll');
-    if(map)map.scrollLeft=atlasMapScrollLeft;
+    const root=panel.querySelector('.atlas-game');
+    if(root)globalThis.AtlasMap.restore(root,atlasViewportViews.get(state.atlasView));
   }
   if(tab==='journal'){
     const rail=panel.querySelector('#journalSpeciesRail');
@@ -2935,60 +2937,40 @@ function bestiaryTypeBucket(id){
   if(c==='Actinopterygii'||c==='Chondrichthyes') return 'Pez';
   return 'Reptil/Anfibio';
 }
-// v3.2: mapa hexagonal esquemático: posiciones basadas en códigos HX, no geografía exacta.
-function renderAtlas(){
-  const selected=ATLAS_CONTINENTS.some(c=>c.id===state.atlasView)?state.atlasView:'Europa';
-  const continent=ATLAS_CONTINENTS.find(c=>c.id===selected)||ATLAS_CONTINENTS[0];
-  const regions=REGIONS.filter(r=>r.continent===selected);
-  const chosen=regions.find(r=>r.id===state.atlasSelectedRegion)
-    ||regions.find(r=>r.id===state.currentRegion)||regions[0];
-  const tabs=ATLAS_CONTINENTS.map(c=>'<button type="button" class="subtab '+(selected===c.id?'active ':'')+(!c.implemented?'muted':'')+'" data-action="atlas-tab" data-id="'+c.id+'">'+c.icon+' '+c.label+(!c.implemented?' 🔒':'')+'</button>').join('');
-  const countReady=regions.filter(r=>!!state.regionUnlocked[r.id]||r.id===state.currentRegion).length;
-  if(!continent.implemented)return '<section class="atlas-v32 stack"><header class="atlas-v32-title"><span>🗺️ Atlas de expediciones</span><small>Cartografía del naturalista · 1842</small></header><div class="subtabs atlas-v32-continents">'+tabs+'</div><div class="card atlas-v32-future"><div class="big-lock">🔒</div><h3>'+continent.icon+' '+continent.label+'</h3><p class="small">Continente reservado para una futura expedición. Europa y Asia están disponibles en la versión actual.</p></div></section>';
-  const xs=regions.map(r=>Number(r.code.split('-')[2]));
-  const ys=regions.map(r=>Number(r.code.split('-')[1]));
-  const minCol=Math.min(...xs),maxCol=Math.max(...xs),minRow=Math.min(...ys),maxRow=Math.max(...ys);
-  const w=164+(maxCol-minCol)*88, h=144+(maxRow-minRow)*77;
-  const coords=r=>{
-    const parts=r.code.split('-'); const row=Number(parts[1]),col=Number(parts[2]);
-    return {x:79+(col-minCol)*88+(row%2?39:0),y:68+(row-minRow)*77};
-  };
-  const tiles=regions.map(r=>{
-    const {x,y}=coords(r);
-    const active=r.id===state.currentRegion, chosenTile=r.id===chosen?.id;
-    const unlocked=!!state.regionUnlocked[r.id]||active, ready=!unlocked&&regionRequirementsMet(r);
-    const status=active?'actual':unlocked?'abierta':ready?'disponible':'bloqueada';
-    const label=r.name.length>17?r.name.slice(0,16)+'…':r.name;
-    const points=[[-41,0],[-21,-36],[21,-36],[41,0],[21,36],[-21,36]].map(([dx,dy])=>(x+dx)+','+(y+dy)).join(' ');
-    const count=r.species.filter(id=>stage(id)>=1).length;
-    return '<g class="atlas-v32-hex atlas-v32-'+status+(chosenTile?' atlas-v32-selected':'')+'" role="button" tabindex="0" data-action="atlas-select-region" data-id="'+r.id+'" aria-label="'+esc(r.name)+'. '+count+' de '+r.species.length+' especies identificadas. '+status+'"><polygon points="'+points+'"/><text class="atlas-v32-hex-symbol" x="'+x+'" y="'+(y-11)+'" text-anchor="middle">'+(active?'📍':unlocked?'✓':ready?'🗝':'🔒')+'</text><text class="atlas-v32-hex-name" x="'+x+'" y="'+(y+7)+'" text-anchor="middle">'+esc(label)+'</text><text class="atlas-v32-hex-code" x="'+x+'" y="'+(y+23)+'" text-anchor="middle">'+count+'/'+r.species.length+'</text></g>';
-  }).join('');
-  const r=chosen;
-  const active=r.id===state.currentRegion;
-  const unlocked=!!state.regionUnlocked[r.id]||active;
-  const ready=regionRequirementsMet(r);
-  const identified=r.species.filter(id=>stage(id)>=1).length;
-  const progress=Math.round(100*identified/Math.max(1,r.species.length));
-  const status=active?'📍 Zona actual':unlocked?'✅ Ruta habilitada':ready?'🗝️ Puedes desbloquear esta zona':'🔒 Región bloqueada';
-  const condition=r.continent==='Asia'
-    ? (state.upgrades.asiaUnlocked?'✓ Cartografía de Asia':'✕ Necesitas investigar Cartografía de Asia')+' · '+r.unlock.prestige+' prestigio mínimo'
-    : r.continent==='África'
-      ? (state.inventory.africa_map?'✓ Mapa de África reunido':'✕ Fabrica el Mapa de África en Inventario')+' · '+(state.upgrades.africaUnlocked?'✓ Estudios de África':'✕ Investiga Estudios cartográficos de África')+' · '+r.unlock.prestige+' prestigio mínimo'
-      : r.continent==='Norteamérica'
-         ? (state.upgrades.newWorldUnlocked?'✓ Ruta atlántica':'✕ Investiga Navegación al Nuevo Mundo')+' · '+(state.upgrades.northAmericaUnlocked?'✓ Cartografía':'✕ Investiga Cartografía de Norteamérica')+' · '+(state.inventory.north_america_map?'✓ Mapa reunido':'✕ Fabrica el mapa')+' · '+r.unlock.prestige+' prestigio mínimo'
-         : r.unlock.prestige+' prestigio mínimo';
-  const action=active?'<button class="btn gold" disabled>Explorando aquí</button>'
-    :unlocked?'<button class="btn gold" data-action="travel-region" data-id="'+r.id+'">🧭 Viajar a Campo</button>'
-    :ready?'<button class="btn gold" data-action="unlock-region" data-id="'+r.id+'">🗝️ Desbloquear zona</button>'
-    :'<button class="btn alt" disabled>🔒 Requisitos pendientes</button>';
-  const areas=r.habitats.map(x=>'<span class="atlas-v32-chip">'+esc(x.charAt(0).toUpperCase()+x.slice(1))+'</span>').join('');
-  return '<section class="atlas-v32 stack"><header class="atlas-v32-title"><span>🗺️ Atlas de expediciones</span><small>Cartografía del naturalista · 1842</small></header>'
-    +'<div class="subtabs atlas-v32-continents">'+tabs+'</div>'
-    +'<div class="atlas-v32-legend"><span>'+continent.icon+' '+continent.label+' · '+regions.length+' zonas</span><span>✅ '+countReady+' habilitadas</span></div>'
-    +'<div class="atlas-v32-layout">'
-    +'<section class="atlas-v32-map-card" aria-label="Mapa hexagonal de '+continent.label+'"><div class="atlas-v32-map-scroll"><svg class="atlas-v32-svg" style="--atlas-board-width:'+w+'px" viewBox="0 0 '+w+' '+h+'" aria-label="Selecciona una región en el mapa"><defs><linearGradient id="atlasMapPaper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f2e7ce"/><stop offset="1" stop-color="#d9c6a1"/></linearGradient><pattern id="atlasGrid" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M18 0H0V18" fill="none" stroke="#b19e7d" stroke-opacity=".16"/></pattern></defs><rect width="'+w+'" height="'+h+'" rx="13" fill="url(#atlasMapPaper)"/><rect width="'+w+'" height="'+h+'" rx="13" fill="url(#atlasGrid)"/><path d="M7 '+(h-42)+' Q'+Math.round(w*.23)+' '+Math.round(h*.34)+' '+Math.round(w*.45)+' '+(h-38)+' T'+(w-9)+' '+Math.round(h*.42)+'" fill="none" stroke="#b9ab87" stroke-width="2" stroke-dasharray="7 9" opacity=".44"/>'+tiles+'</svg></div><div class="atlas-v32-map-foot"><span><i class="atlas-dot atlas-dot-active"></i> Actual</span><span><i class="atlas-dot atlas-dot-open"></i> Accesible</span><span><i class="atlas-dot atlas-dot-ready"></i> Desbloquear</span><span><i class="atlas-dot atlas-dot-locked"></i> Bloqueada</span></div></section>'
-    +'<section class="card atlas-v32-details" aria-live="polite"><div class="atlas-v32-eyebrow">FICHA DE REGIÓN · '+r.code+'</div><h3>'+esc(r.name)+'</h3><div class="atlas-v32-state">'+status+'</div><div class="atlas-v32-count">'+identified+' <small>/ '+r.species.length+' especies identificadas</small></div><div class="progress"><div style="width:'+progress+'%"></div></div><div class="atlas-v32-req">'+esc(condition)+'</div><div class="atlas-v32-subtitle">Hábitats registrados</div><div class="atlas-v32-chips">'+areas+'</div><div class="atlas-v32-action">'+action+'</div><div class="small">El prestigio acumulado no se consume al desbloquear una región.</div></section></div>'
-    +'<div class="atlas-v32-note">Toca un hexágono para inspeccionarlo. Desliza el mapa horizontalmente si necesitas ver más zonas. Las coordenadas HX corresponden al esquema del juego, no a un mapa geográfico a escala.</div></section>';
+// Atlas 3.21.1: presentation reads the existing requirements; it never unlocks regions.
+function atlasRegionModel(r){
+ const active=r.id===state.currentRegion,unlocked=!!state.regionUnlocked[r.id]||active,ready=regionRequirementsMet(r);
+ const identified=r.species.filter(id=>stage(id)>=1).length;
+ const requirements=[];
+ if(r.continent==='Asia')requirements.push({label:'Cartografía de Asia',met:!!state.upgrades.asiaUnlocked});
+ if(r.continent==='África')requirements.push({label:'Mapa de África reunido',met:!!state.inventory?.africa_map},{label:'Estudios de África o ruta ya habilitada',met:!!(state.upgrades.africaUnlocked||state.regionUnlocked[r.id])});
+ if(r.continent==='Norteamérica')requirements.push({label:'Navegación al Nuevo Mundo · antecedente de la cartografía',met:!!state.upgrades.newWorldUnlocked,context:true},{label:'Cartografía de Norteamérica',met:!!state.upgrades.northAmericaUnlocked},{label:'Mapa de Norteamérica reunido',met:!!state.inventory?.north_america_map});
+ requirements.push({label:r.unlock.prestige+' de prestigio · tienes '+fmt(state.prestige),met:state.prestige>=r.unlock.prestige});
+ const missing=requirements.find(req=>!req.met&&!req.context);
+ return {id:r.id,code:r.code,name:r.name,habitats:r.habitats,speciesCount:r.species.length,identified,progress:Math.round(100*identified/Math.max(1,r.species.length)),status:active?'actual':unlocked?'abierta':ready?'disponible':'bloqueada',requirements,summary:active?'Estás explorando esta región':unlocked?'Ruta habilitada':ready?'Requisitos reunidos':missing?.label||'Requisitos pendientes'};
+}
+function atlasViewModel(){
+ const selected=ATLAS_CONTINENTS.some(c=>c.id===state.atlasView)?state.atlasView:'Europa';
+ const continent=ATLAS_CONTINENTS.find(c=>c.id===selected),source=REGIONS.filter(r=>r.continent===selected);
+ const chosen=source.find(r=>r.id===state.atlasSelectedRegion)||source.find(r=>r.id===state.currentRegion)||source[0];
+ const xs=source.map(r=>Number(r.code.split('-')[2])),ys=source.map(r=>Number(r.code.split('-')[1]));
+ const minCol=source.length?Math.min(...xs):0,minRow=source.length?Math.min(...ys):0;
+ const regions=source.map(r=>({...atlasRegionModel(r),x:79+(Number(r.code.split('-')[2])-minCol)*88+(Number(r.code.split('-')[1])%2?39:0),y:68+(Number(r.code.split('-')[1])-minRow)*77}));
+ const ids=[...new Set(source.flatMap(r=>r.species))];
+ return {continent:{...continent,status:continentStatus(selected)},continents:ATLAS_CONTINENTS.map(c=>({...c,status:continentStatus(c.id)})),regions,selectedId:chosen?.id,currentId:state.currentRegion,readyCount:regions.filter(r=>r.status==='actual'||r.status==='abierta').length,identified:ids.filter(id=>stage(id)>=1).length,total:ids.length,board:{width:source.length?164+(Math.max(...xs)-minCol)*88:428,height:source.length?144+(Math.max(...ys)-minRow)*77:298}};
+}
+function renderAtlas(){return globalThis.AtlasUI.render(atlasViewModel());}
+function rememberAtlasViewport(){
+ const root=panel.querySelector('.atlas-game');if(!root)return;
+ const continent=root.dataset.continent||state.atlasView;
+ atlasViewportViews.set(continent,globalThis.AtlasMap.capture(root));
+}
+function selectAtlasRegion(id){
+ if(!REGIONS.some(r=>r.id===id&&r.continent===state.atlasView))return;
+ state.atlasSelectedRegion=id;
+ const root=panel.querySelector('.atlas-game');
+ if(root){globalThis.AtlasMap.select(root,id,globalThis.AtlasUI.regionPanel(atlasRegionModel(REGIONS.find(r=>r.id===id))));}
+ persist();
 }
 
 // v3.1: escenografía SVG ligera; no afecta encuentros, especies, guardados ni economía.
@@ -4365,7 +4347,11 @@ function researchNodeCard(node){
 
 function bindPanel(){
   const atlasMap=panel.querySelector('.atlas-v32-map-scroll');
-  atlasMap?.addEventListener('scroll',()=>{atlasMapScrollLeft=atlasMap.scrollLeft;},{passive:true});
+  atlasMap?.addEventListener('scroll',rememberAtlasViewport,{passive:true});
+  panel.querySelector('[data-atlas-continent]')?.addEventListener('change',e=>{
+    if(!ATLAS_CONTINENTS.some(c=>c.id===e.target.value))return;
+    rememberAtlasViewport();state.atlasView=e.target.value;renderPanel();persist();
+  });
   const rail=panel.querySelector('#journalSpeciesRail');
   const sheet=panel.querySelector('.journal-v311 .journal-sheet');
   rail?.addEventListener('scroll',()=>{journalRailScrollTop=rail.scrollTop;},{passive:true});
@@ -4384,6 +4370,7 @@ function bindPanel(){
   filterJournalRail();
   panel.querySelectorAll('.atlas-v32-hex').forEach(el=>el.addEventListener('keydown',e=>{
     if(e.key==='Enter'||e.key===' '){e.preventDefault();el.dispatchEvent(new MouseEvent('click',{bubbles:true}));}
+    else globalThis.AtlasMap.keyboard(e,el);
   }));
 }
 function handlePanelAction(e){
@@ -4395,8 +4382,11 @@ function handlePanelAction(e){
     if(act==='set-region') setRegion(id);
     if(act==='travel-region') travelToRegion(id);
     if(act==='unlock-region') unlockRegion(id);
-    if(act==='atlas-tab'){state.atlasView=id; atlasMapScrollLeft=0; renderPanel(); persist();}
-    if(act==='atlas-select-region'){if(REGIONS.some(r=>r.id===id&&r.continent===state.atlasView)){state.atlasSelectedRegion=id;renderPanel();persist();}}
+    if(act==='atlas-tab'&&ATLAS_CONTINENTS.some(c=>c.id===id)){rememberAtlasViewport();state.atlasView=id;renderPanel();persist();}
+    if(act==='atlas-select-region')selectAtlasRegion(id);
+    if(act==='atlas-requirements'){const details=panel.querySelector('.atlas-requirements');if(details){details.open=!details.open;if(details.open)details.querySelector('summary')?.focus({preventScroll:true});}}
+    if(act==='atlas-center'){const current=currentRegion();if(state.atlasView!==current.continent){rememberAtlasViewport();state.atlasView=current.continent;state.atlasSelectedRegion=current.id;renderPanel();}else selectAtlasRegion(current.id);const root=panel.querySelector('.atlas-game');if(root)globalThis.AtlasMap.center(root,current.id);rememberAtlasViewport();persist();}
+    if(act==='atlas-zoom'){const root=panel.querySelector('.atlas-game');if(root)globalThis.AtlasMap.zoom(root,id);rememberAtlasViewport();}
 
     if(act==='toggle-field-filters'){state.fieldFiltersOpen=!state.fieldFiltersOpen;renderPanel();persist();}
     if(act==='set-habitat'){ state.habitat=id; renderPanel(); persist(); }

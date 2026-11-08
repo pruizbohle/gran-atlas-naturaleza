@@ -1,0 +1,18 @@
+{
+  "reference": "27a71e169970f8af876186e1aa1e74c7c2fba2aa",
+  "functions": {
+    "regionRequirementsMet": "e7670b6a92920e45a63b5390b28edaa8fa26b74b1feeeb342bac94b953c509ec",
+    "continentStatus": "af88d529fc3cf35d32601046ed01f47acec00e94d8ade25ae4c82efb80d696d1",
+    "unlockRegion": "e7091cc3deb2b873db5a9eb8d4f3796c4afab271933f47bb5705a5335cfc74f5",
+    "travelToRegion": "c9fce5a44f590ff57f8f8e9664c2e5f0d5991ea5b0128cd7ee09768fb5b875b2",
+    "setRegion": "bf5172a6b062f93e503ff33b98714c4cc6b86cd3aa12b44ef9fece63bcb58315"
+  },
+  "catalog": "30a5352f1c714a24e9fb82c3301f38c81dde63e46028b171c56890fe1efdcc08",
+  "continents": "92f5add8ff340530d778e67fc9c0ce6eb4d223028faa46d3007e83017a2c46d4",
+  "fieldProjection": "8106458e36475e08cf6fdf4595d300edecccb6f0669ba85df3b430be01328157",
+  "files": {
+    "www/css/field-v3210.css": "44ff1de118c0e92b08238b76338cb710e31e676b8e6cdc0696f453a07db093e3",
+    "www/js/field-scene-v3210.js": "bc6476d17d32450caef39fb64f3c634ae482bf8ff539755c4a05f1c38aba50a5",
+    "www/js/field-ui-v3210.js": "877041f5ed69653db398de589348e3a277e107cae0649e51f213a00759491fd7"
+  }
+}

@@ -1,3 +1,7 @@
+# El Gran Atlas v3.21.1 — Atlas interactivo
+
+Cartografía jugable con selección parcial de hexágonos, desplazamiento táctil, zoom y ficha compacta. [Informe, medidas y archivos](README_V3211.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio del Atlas](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-atlas-v3211.html).
+
 # El Gran Atlas v3.21.0 — Campo jugable
 
 Escenas de exploración para doce biomas, encuentros protagonistas y acción, progreso y naturalistas visibles en el primer pantallazo móvil. [Informe, mediciones y archivos](README_V3210.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio de Campo](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-campo-v3210.html).

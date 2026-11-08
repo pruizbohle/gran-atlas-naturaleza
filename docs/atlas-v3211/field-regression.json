@@ -1,0 +1,1735 @@
+{
+  "releaseVersion": "3.21.1",
+  "feature": "Campo v3.21.0 regression",
+  "report": {
+    "version": "3.21.0",
+    "sizes": 4,
+    "scenarios": 11,
+    "responsiveChecks": [
+      {
+        "size": "360x740",
+        "scenario": "empty",
+        "key": "360x740|bosque|dia|empty|4",
+        "viewport": [
+          360,
+          740
+        ],
+        "dockTop": 689,
+        "pageHeight": 740,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 440,
+            "bottom": 496,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 360,
+            "bottom": 426,
+            "height": 66,
+            "visible": true
+          },
+          "progress": {
+            "top": 502,
+            "bottom": 563,
+            "height": 60,
+            "visible": true
+          },
+          "automatic": {
+            "top": 569,
+            "bottom": 621,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "360x740",
+        "scenario": "normal",
+        "key": "360x740|bosque|dia|normal|4",
+        "viewport": [
+          360,
+          740
+        ],
+        "dockTop": 689,
+        "pageHeight": 740,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 440,
+            "bottom": 496,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 360,
+            "bottom": 426,
+            "height": 66,
+            "visible": true
+          },
+          "progress": {
+            "top": 502,
+            "bottom": 563,
+            "height": 60,
+            "visible": true
+          },
+          "automatic": {
+            "top": 569,
+            "bottom": 621,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "360x740",
+        "scenario": "new",
+        "key": "360x740|bosque|dia|new|4",
+        "viewport": [
+          360,
+          740
+        ],
+        "dockTop": 689,
+        "pageHeight": 740,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 440,
+            "bottom": 496,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 360,
+            "bottom": 426,
+            "height": 66,
+            "visible": true
+          },
+          "progress": {
+            "top": 502,
+            "bottom": 563,
+            "height": 60,
+            "visible": true
+          },
+          "automatic": {
+            "top": 569,
+            "bottom": 621,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "360x740",
+        "scenario": "census",
+        "key": "360x740|bosque|dia|census|4",
+        "viewport": [
+          360,
+          740
+        ],
+        "dockTop": 689,
+        "pageHeight": 740,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 440,
+            "bottom": 496,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 360,
+            "bottom": 426,
+            "height": 66,
+            "visible": true
+          },
+          "progress": {
+            "top": 502,
+            "bottom": 563,
+            "height": 60,
+            "visible": true
+          },
+          "automatic": {
+            "top": 569,
+            "bottom": 621,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "360x740",
+        "scenario": "group",
+        "key": "360x740|bosque|dia|group|4",
+        "viewport": [
+          360,
+          740
+        ],
+        "dockTop": 689,
+        "pageHeight": 740,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 440,
+            "bottom": 496,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 360,
+            "bottom": 426,
+            "height": 66,
+            "visible": true
+          },
+          "progress": {
+            "top": 502,
+            "bottom": 563,
+            "height": 60,
+            "visible": true
+          },
+          "automatic": {
+            "top": 569,
+            "bottom": 621,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "360x740",
+        "scenario": "albino",
+        "key": "360x740|bosque|dia|albino|4",
+        "viewport": [
+          360,
+          740
+        ],
+        "dockTop": 689,
+        "pageHeight": 740,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 440,
+            "bottom": 496,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 356,
+            "bottom": 426,
+            "height": 70,
+            "visible": true
+          },
+          "progress": {
+            "top": 502,
+            "bottom": 563,
+            "height": 60,
+            "visible": true
+          },
+          "automatic": {
+            "top": 569,
+            "bottom": 621,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "360x740",
+        "scenario": "melanico",
+        "key": "360x740|bosque|dia|melanico|4",
+        "viewport": [
+          360,
+          740
+        ],
+        "dockTop": 689,
+        "pageHeight": 740,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 440,
+            "bottom": 496,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 356,
+            "bottom": 426,
+            "height": 70,
+            "visible": true
+          },
+          "progress": {
+            "top": 502,
+            "bottom": 563,
+            "height": 60,
+            "visible": true
+          },
+          "automatic": {
+            "top": 569,
+            "bottom": 621,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "360x740",
+        "scenario": "epic",
+        "key": "360x740|bosque|dia|epic|4",
+        "viewport": [
+          360,
+          740
+        ],
+        "dockTop": 689,
+        "pageHeight": 740,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 440,
+            "bottom": 496,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 356,
+            "bottom": 426,
+            "height": 70,
+            "visible": true
+          },
+          "progress": {
+            "top": 502,
+            "bottom": 563,
+            "height": 60,
+            "visible": true
+          },
+          "automatic": {
+            "top": 569,
+            "bottom": 621,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "360x740",
+        "scenario": "legendary",
+        "key": "360x740|bosque|dia|legendary|4",
+        "viewport": [
+          360,
+          740
+        ],
+        "dockTop": 689,
+        "pageHeight": 740,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 440,
+            "bottom": 496,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 354,
+            "bottom": 426,
+            "height": 72,
+            "visible": true
+          },
+          "progress": {
+            "top": 502,
+            "bottom": 563,
+            "height": 60,
+            "visible": true
+          },
+          "automatic": {
+            "top": 569,
+            "bottom": 621,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "360x740",
+        "scenario": "sex",
+        "key": "360x740|bosque|dia|sex|4",
+        "viewport": [
+          360,
+          740
+        ],
+        "dockTop": 689,
+        "pageHeight": 740,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 440,
+            "bottom": 496,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 356,
+            "bottom": 426,
+            "height": 70,
+            "visible": true
+          },
+          "progress": {
+            "top": 502,
+            "bottom": 563,
+            "height": 60,
+            "visible": true
+          },
+          "automatic": {
+            "top": 569,
+            "bottom": 621,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "360x740",
+        "scenario": "miss",
+        "key": "360x740|bosque|dia|miss|4",
+        "viewport": [
+          360,
+          740
+        ],
+        "dockTop": 689,
+        "pageHeight": 740,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 440,
+            "bottom": 496,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 360,
+            "bottom": 426,
+            "height": 66,
+            "visible": true
+          },
+          "progress": {
+            "top": 502,
+            "bottom": 563,
+            "height": 60,
+            "visible": true
+          },
+          "automatic": {
+            "top": 569,
+            "bottom": 621,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "390x844",
+        "scenario": "empty",
+        "key": "390x844|bosque|dia|empty|4",
+        "viewport": [
+          390,
+          844
+        ],
+        "dockTop": 793,
+        "pageHeight": 844,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 519,
+            "bottom": 575,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 437,
+            "bottom": 504,
+            "height": 67,
+            "visible": true
+          },
+          "progress": {
+            "top": 582,
+            "bottom": 643,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 650,
+            "bottom": 702,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "390x844",
+        "scenario": "normal",
+        "key": "390x844|bosque|dia|normal|4",
+        "viewport": [
+          390,
+          844
+        ],
+        "dockTop": 793,
+        "pageHeight": 844,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 519,
+            "bottom": 575,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 437,
+            "bottom": 504,
+            "height": 67,
+            "visible": true
+          },
+          "progress": {
+            "top": 582,
+            "bottom": 643,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 650,
+            "bottom": 702,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "390x844",
+        "scenario": "new",
+        "key": "390x844|bosque|dia|new|4",
+        "viewport": [
+          390,
+          844
+        ],
+        "dockTop": 793,
+        "pageHeight": 844,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 519,
+            "bottom": 575,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 437,
+            "bottom": 504,
+            "height": 67,
+            "visible": true
+          },
+          "progress": {
+            "top": 582,
+            "bottom": 643,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 650,
+            "bottom": 702,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "390x844",
+        "scenario": "census",
+        "key": "390x844|bosque|dia|census|4",
+        "viewport": [
+          390,
+          844
+        ],
+        "dockTop": 793,
+        "pageHeight": 844,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 519,
+            "bottom": 575,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 437,
+            "bottom": 504,
+            "height": 67,
+            "visible": true
+          },
+          "progress": {
+            "top": 582,
+            "bottom": 643,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 650,
+            "bottom": 702,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "390x844",
+        "scenario": "group",
+        "key": "390x844|bosque|dia|group|4",
+        "viewport": [
+          390,
+          844
+        ],
+        "dockTop": 793,
+        "pageHeight": 844,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 519,
+            "bottom": 575,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 437,
+            "bottom": 504,
+            "height": 67,
+            "visible": true
+          },
+          "progress": {
+            "top": 582,
+            "bottom": 643,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 650,
+            "bottom": 702,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "390x844",
+        "scenario": "albino",
+        "key": "390x844|bosque|dia|albino|4",
+        "viewport": [
+          390,
+          844
+        ],
+        "dockTop": 793,
+        "pageHeight": 844,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 519,
+            "bottom": 575,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 433,
+            "bottom": 504,
+            "height": 71,
+            "visible": true
+          },
+          "progress": {
+            "top": 582,
+            "bottom": 643,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 650,
+            "bottom": 702,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "390x844",
+        "scenario": "melanico",
+        "key": "390x844|bosque|dia|melanico|4",
+        "viewport": [
+          390,
+          844
+        ],
+        "dockTop": 793,
+        "pageHeight": 844,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 519,
+            "bottom": 575,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 433,
+            "bottom": 504,
+            "height": 71,
+            "visible": true
+          },
+          "progress": {
+            "top": 582,
+            "bottom": 643,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 650,
+            "bottom": 702,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "390x844",
+        "scenario": "epic",
+        "key": "390x844|bosque|dia|epic|4",
+        "viewport": [
+          390,
+          844
+        ],
+        "dockTop": 793,
+        "pageHeight": 844,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 519,
+            "bottom": 575,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 433,
+            "bottom": 504,
+            "height": 71,
+            "visible": true
+          },
+          "progress": {
+            "top": 582,
+            "bottom": 643,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 650,
+            "bottom": 702,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "390x844",
+        "scenario": "legendary",
+        "key": "390x844|bosque|dia|legendary|4",
+        "viewport": [
+          390,
+          844
+        ],
+        "dockTop": 793,
+        "pageHeight": 844,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 519,
+            "bottom": 575,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 431,
+            "bottom": 504,
+            "height": 73,
+            "visible": true
+          },
+          "progress": {
+            "top": 582,
+            "bottom": 643,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 650,
+            "bottom": 702,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "390x844",
+        "scenario": "sex",
+        "key": "390x844|bosque|dia|sex|4",
+        "viewport": [
+          390,
+          844
+        ],
+        "dockTop": 793,
+        "pageHeight": 844,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 519,
+            "bottom": 575,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 433,
+            "bottom": 504,
+            "height": 71,
+            "visible": true
+          },
+          "progress": {
+            "top": 582,
+            "bottom": 643,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 650,
+            "bottom": 702,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "390x844",
+        "scenario": "miss",
+        "key": "390x844|bosque|dia|miss|4",
+        "viewport": [
+          390,
+          844
+        ],
+        "dockTop": 793,
+        "pageHeight": 844,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 519,
+            "bottom": 575,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 437,
+            "bottom": 504,
+            "height": 67,
+            "visible": true
+          },
+          "progress": {
+            "top": 582,
+            "bottom": 643,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 650,
+            "bottom": 702,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "412x915",
+        "scenario": "empty",
+        "key": "412x915|bosque|dia|empty|4",
+        "viewport": [
+          412,
+          915
+        ],
+        "dockTop": 864,
+        "pageHeight": 915,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 590,
+            "bottom": 646,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 508,
+            "bottom": 575,
+            "height": 67,
+            "visible": true
+          },
+          "progress": {
+            "top": 653,
+            "bottom": 714,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 721,
+            "bottom": 773,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "412x915",
+        "scenario": "normal",
+        "key": "412x915|bosque|dia|normal|4",
+        "viewport": [
+          412,
+          915
+        ],
+        "dockTop": 864,
+        "pageHeight": 915,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 590,
+            "bottom": 646,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 508,
+            "bottom": 575,
+            "height": 67,
+            "visible": true
+          },
+          "progress": {
+            "top": 653,
+            "bottom": 714,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 721,
+            "bottom": 773,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "412x915",
+        "scenario": "new",
+        "key": "412x915|bosque|dia|new|4",
+        "viewport": [
+          412,
+          915
+        ],
+        "dockTop": 864,
+        "pageHeight": 915,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 590,
+            "bottom": 646,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 508,
+            "bottom": 575,
+            "height": 67,
+            "visible": true
+          },
+          "progress": {
+            "top": 653,
+            "bottom": 714,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 721,
+            "bottom": 773,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "412x915",
+        "scenario": "census",
+        "key": "412x915|bosque|dia|census|4",
+        "viewport": [
+          412,
+          915
+        ],
+        "dockTop": 864,
+        "pageHeight": 915,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 590,
+            "bottom": 646,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 508,
+            "bottom": 575,
+            "height": 67,
+            "visible": true
+          },
+          "progress": {
+            "top": 653,
+            "bottom": 714,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 721,
+            "bottom": 773,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "412x915",
+        "scenario": "group",
+        "key": "412x915|bosque|dia|group|4",
+        "viewport": [
+          412,
+          915
+        ],
+        "dockTop": 864,
+        "pageHeight": 915,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 590,
+            "bottom": 646,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 508,
+            "bottom": 575,
+            "height": 67,
+            "visible": true
+          },
+          "progress": {
+            "top": 653,
+            "bottom": 714,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 721,
+            "bottom": 773,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "412x915",
+        "scenario": "albino",
+        "key": "412x915|bosque|dia|albino|4",
+        "viewport": [
+          412,
+          915
+        ],
+        "dockTop": 864,
+        "pageHeight": 915,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 590,
+            "bottom": 646,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 504,
+            "bottom": 575,
+            "height": 71,
+            "visible": true
+          },
+          "progress": {
+            "top": 653,
+            "bottom": 714,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 721,
+            "bottom": 773,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "412x915",
+        "scenario": "melanico",
+        "key": "412x915|bosque|dia|melanico|4",
+        "viewport": [
+          412,
+          915
+        ],
+        "dockTop": 864,
+        "pageHeight": 915,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 590,
+            "bottom": 646,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 504,
+            "bottom": 575,
+            "height": 71,
+            "visible": true
+          },
+          "progress": {
+            "top": 653,
+            "bottom": 714,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 721,
+            "bottom": 773,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "412x915",
+        "scenario": "epic",
+        "key": "412x915|bosque|dia|epic|4",
+        "viewport": [
+          412,
+          915
+        ],
+        "dockTop": 864,
+        "pageHeight": 915,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 590,
+            "bottom": 646,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 504,
+            "bottom": 575,
+            "height": 71,
+            "visible": true
+          },
+          "progress": {
+            "top": 653,
+            "bottom": 714,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 721,
+            "bottom": 773,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "412x915",
+        "scenario": "legendary",
+        "key": "412x915|bosque|dia|legendary|4",
+        "viewport": [
+          412,
+          915
+        ],
+        "dockTop": 864,
+        "pageHeight": 915,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 590,
+            "bottom": 646,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 502,
+            "bottom": 575,
+            "height": 73,
+            "visible": true
+          },
+          "progress": {
+            "top": 653,
+            "bottom": 714,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 721,
+            "bottom": 773,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "412x915",
+        "scenario": "sex",
+        "key": "412x915|bosque|dia|sex|4",
+        "viewport": [
+          412,
+          915
+        ],
+        "dockTop": 864,
+        "pageHeight": 915,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 590,
+            "bottom": 646,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 504,
+            "bottom": 575,
+            "height": 71,
+            "visible": true
+          },
+          "progress": {
+            "top": 653,
+            "bottom": 714,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 721,
+            "bottom": 773,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "412x915",
+        "scenario": "miss",
+        "key": "412x915|bosque|dia|miss|4",
+        "viewport": [
+          412,
+          915
+        ],
+        "dockTop": 864,
+        "pageHeight": 915,
+        "scroll": 0,
+        "boxes": {
+          "action": {
+            "top": 590,
+            "bottom": 646,
+            "height": 56,
+            "visible": true
+          },
+          "result": {
+            "top": 508,
+            "bottom": 575,
+            "height": 67,
+            "visible": true
+          },
+          "progress": {
+            "top": 653,
+            "bottom": 714,
+            "height": 61,
+            "visible": true
+          },
+          "automatic": {
+            "top": 721,
+            "bottom": 773,
+            "height": 52,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "1024x900",
+        "scenario": "empty",
+        "key": "1024x900|bosque|dia|empty|4",
+        "viewport": [
+          1024,
+          900
+        ],
+        "dockTop": 900,
+        "pageHeight": 952,
+        "scroll": 52,
+        "boxes": {
+          "action": {
+            "top": 681,
+            "bottom": 741,
+            "height": 60,
+            "visible": true
+          },
+          "result": {
+            "top": 584,
+            "bottom": 661,
+            "height": 77,
+            "visible": true
+          },
+          "progress": {
+            "top": 750,
+            "bottom": 816,
+            "height": 66,
+            "visible": true
+          },
+          "automatic": {
+            "top": 825,
+            "bottom": 881,
+            "height": 56,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "1024x900",
+        "scenario": "normal",
+        "key": "1024x900|bosque|dia|normal|4",
+        "viewport": [
+          1024,
+          900
+        ],
+        "dockTop": 900,
+        "pageHeight": 952,
+        "scroll": 52,
+        "boxes": {
+          "action": {
+            "top": 681,
+            "bottom": 741,
+            "height": 60,
+            "visible": true
+          },
+          "result": {
+            "top": 584,
+            "bottom": 661,
+            "height": 77,
+            "visible": true
+          },
+          "progress": {
+            "top": 750,
+            "bottom": 816,
+            "height": 66,
+            "visible": true
+          },
+          "automatic": {
+            "top": 825,
+            "bottom": 881,
+            "height": 56,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "1024x900",
+        "scenario": "new",
+        "key": "1024x900|bosque|dia|new|4",
+        "viewport": [
+          1024,
+          900
+        ],
+        "dockTop": 900,
+        "pageHeight": 952,
+        "scroll": 52,
+        "boxes": {
+          "action": {
+            "top": 681,
+            "bottom": 741,
+            "height": 60,
+            "visible": true
+          },
+          "result": {
+            "top": 584,
+            "bottom": 661,
+            "height": 77,
+            "visible": true
+          },
+          "progress": {
+            "top": 750,
+            "bottom": 816,
+            "height": 66,
+            "visible": true
+          },
+          "automatic": {
+            "top": 825,
+            "bottom": 881,
+            "height": 56,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "1024x900",
+        "scenario": "census",
+        "key": "1024x900|bosque|dia|census|4",
+        "viewport": [
+          1024,
+          900
+        ],
+        "dockTop": 900,
+        "pageHeight": 952,
+        "scroll": 52,
+        "boxes": {
+          "action": {
+            "top": 681,
+            "bottom": 741,
+            "height": 60,
+            "visible": true
+          },
+          "result": {
+            "top": 584,
+            "bottom": 661,
+            "height": 77,
+            "visible": true
+          },
+          "progress": {
+            "top": 750,
+            "bottom": 816,
+            "height": 66,
+            "visible": true
+          },
+          "automatic": {
+            "top": 825,
+            "bottom": 881,
+            "height": 56,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "1024x900",
+        "scenario": "group",
+        "key": "1024x900|bosque|dia|group|4",
+        "viewport": [
+          1024,
+          900
+        ],
+        "dockTop": 900,
+        "pageHeight": 952,
+        "scroll": 52,
+        "boxes": {
+          "action": {
+            "top": 681,
+            "bottom": 741,
+            "height": 60,
+            "visible": true
+          },
+          "result": {
+            "top": 584,
+            "bottom": 661,
+            "height": 77,
+            "visible": true
+          },
+          "progress": {
+            "top": 750,
+            "bottom": 816,
+            "height": 66,
+            "visible": true
+          },
+          "automatic": {
+            "top": 825,
+            "bottom": 881,
+            "height": 56,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "1024x900",
+        "scenario": "albino",
+        "key": "1024x900|bosque|dia|albino|4",
+        "viewport": [
+          1024,
+          900
+        ],
+        "dockTop": 900,
+        "pageHeight": 952,
+        "scroll": 52,
+        "boxes": {
+          "action": {
+            "top": 681,
+            "bottom": 741,
+            "height": 60,
+            "visible": true
+          },
+          "result": {
+            "top": 580,
+            "bottom": 661,
+            "height": 81,
+            "visible": true
+          },
+          "progress": {
+            "top": 750,
+            "bottom": 816,
+            "height": 66,
+            "visible": true
+          },
+          "automatic": {
+            "top": 825,
+            "bottom": 881,
+            "height": 56,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "1024x900",
+        "scenario": "melanico",
+        "key": "1024x900|bosque|dia|melanico|4",
+        "viewport": [
+          1024,
+          900
+        ],
+        "dockTop": 900,
+        "pageHeight": 952,
+        "scroll": 52,
+        "boxes": {
+          "action": {
+            "top": 681,
+            "bottom": 741,
+            "height": 60,
+            "visible": true
+          },
+          "result": {
+            "top": 580,
+            "bottom": 661,
+            "height": 81,
+            "visible": true
+          },
+          "progress": {
+            "top": 750,
+            "bottom": 816,
+            "height": 66,
+            "visible": true
+          },
+          "automatic": {
+            "top": 825,
+            "bottom": 881,
+            "height": 56,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "1024x900",
+        "scenario": "epic",
+        "key": "1024x900|bosque|dia|epic|4",
+        "viewport": [
+          1024,
+          900
+        ],
+        "dockTop": 900,
+        "pageHeight": 952,
+        "scroll": 52,
+        "boxes": {
+          "action": {
+            "top": 681,
+            "bottom": 741,
+            "height": 60,
+            "visible": true
+          },
+          "result": {
+            "top": 580,
+            "bottom": 661,
+            "height": 81,
+            "visible": true
+          },
+          "progress": {
+            "top": 750,
+            "bottom": 816,
+            "height": 66,
+            "visible": true
+          },
+          "automatic": {
+            "top": 825,
+            "bottom": 881,
+            "height": 56,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "1024x900",
+        "scenario": "legendary",
+        "key": "1024x900|bosque|dia|legendary|4",
+        "viewport": [
+          1024,
+          900
+        ],
+        "dockTop": 900,
+        "pageHeight": 952,
+        "scroll": 52,
+        "boxes": {
+          "action": {
+            "top": 681,
+            "bottom": 741,
+            "height": 60,
+            "visible": true
+          },
+          "result": {
+            "top": 578,
+            "bottom": 661,
+            "height": 83,
+            "visible": true
+          },
+          "progress": {
+            "top": 750,
+            "bottom": 816,
+            "height": 66,
+            "visible": true
+          },
+          "automatic": {
+            "top": 825,
+            "bottom": 881,
+            "height": 56,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "1024x900",
+        "scenario": "sex",
+        "key": "1024x900|bosque|dia|sex|4",
+        "viewport": [
+          1024,
+          900
+        ],
+        "dockTop": 900,
+        "pageHeight": 952,
+        "scroll": 52,
+        "boxes": {
+          "action": {
+            "top": 681,
+            "bottom": 741,
+            "height": 60,
+            "visible": true
+          },
+          "result": {
+            "top": 580,
+            "bottom": 661,
+            "height": 81,
+            "visible": true
+          },
+          "progress": {
+            "top": 750,
+            "bottom": 816,
+            "height": 66,
+            "visible": true
+          },
+          "automatic": {
+            "top": 825,
+            "bottom": 881,
+            "height": 56,
+            "visible": true
+          }
+        },
+        "pass": true
+      },
+      {
+        "size": "1024x900",
+        "scenario": "miss",
+        "key": "1024x900|bosque|dia|miss|4",
+        "viewport": [
+          1024,
+          900
+        ],
+        "dockTop": 900,
+        "pageHeight": 952,
+        "scroll": 52,
+        "boxes": {
+          "action": {
+            "top": 681,
+            "bottom": 741,
+            "height": 60,
+            "visible": true
+          },
+          "result": {
+            "top": 584,
+            "bottom": 661,
+            "height": 77,
+            "visible": true
+          },
+          "progress": {
+            "top": 750,
+            "bottom": 816,
+            "height": 66,
+            "visible": true
+          },
+          "automatic": {
+            "top": 825,
+            "bottom": 881,
+            "height": 56,
+            "visible": true
+          }
+        },
+        "pass": true
+      }
+    ],
+    "biomes": 12,
+    "sceneChecks": 48,
+    "helperStates": 3,
+    "labStorageUntouched": true,
+    "manualAndSecondaryActions": true,
+    "noIdleEncounterRedraw": true,
+    "offlineGameAndLab": true,
+    "jsErrors": []
+  }
+}
