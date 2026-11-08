@@ -1,0 +1,347 @@
+[
+  {
+    "sourceRow": 755,
+    "sourceScientific": "Saimiri sciureus",
+    "region": "Caribe sudamericano",
+    "issues": [
+      "AM01-005",
+      "AM01-030"
+    ],
+    "originalAlert": "Precisar límites geográficos y taxonómicos de Saimiri; no asignar a toda la costa caribeña.",
+    "decision": "Concepto amplio de la planilla, con localidad caribeña sin determinar. MDD restringe sciureus y separa otros Saimiri; no se asigna automáticamente cassiquiarensis ni se declara presencia en toda la costa.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 756,
+    "sourceScientific": "Tamandua mexicana",
+    "region": "Caribe sudamericano",
+    "issues": [
+      "AM01-031"
+    ],
+    "originalAlert": "Limitar a su ámbito al oeste/noroeste andino; no sustituir T. tetradactyla en toda Sudamérica.",
+    "decision": "Bosques y laderas bajas del noroeste, principalmente al oeste de los Andes; no ambientes altoandinos ni sustitución general de Tamandua tetradactyla.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 760,
+    "sourceScientific": "Ctenosaura similis",
+    "region": "Caribe sudamericano",
+    "issues": [
+      "AM01-029",
+      "AM01-055"
+    ],
+    "originalAlert": "Verificar el extremo noroccidental de Sudamérica frente al resto del Caribe; distinguir poblaciones nativas de introducidas.",
+    "decision": "Extremo noroccidental de la región caribeña; el registro no certifica origen nativo frente a introducciones locales ni presencia en toda la costa sudamericana.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 908,
+    "sourceScientific": "Primolius couloni",
+    "region": "Andes del Norte",
+    "issues": [
+      "AM01-018"
+    ],
+    "originalAlert": "Revisar la delimitación norte/central y vertiente oriental: su ámbito conocido se centra en Perú, Bolivia y Brasil occidental, no en una región andina norteña genérica.",
+    "decision": "Presencia de fuente conservada, con localidad sin resolver. AM-01 señala el ámbito peruano-boliviano-brasileño, que no permite certificar esta asignación a Andes del Norte. No se inventa un traslado ni una población altoandina.",
+    "status": "source-locality-unresolved"
+  },
+  {
+    "sourceRow": 913,
+    "sourceScientific": "Ateles belzebuth",
+    "region": "Andes del Norte",
+    "issues": [
+      "AM01-033"
+    ],
+    "originalAlert": "Precisar piedemonte/vertiente amazónica y elevación; no toda la franja de bosque nublado.",
+    "decision": "Piedemonte y bosques de la vertiente amazónica de la región andina amplia; no páramo ni toda la franja de elevación.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 915,
+    "sourceScientific": "Tamandua mexicana",
+    "region": "Andes del Norte",
+    "issues": [
+      "AM01-032"
+    ],
+    "originalAlert": "Precisar laderas y bosques de menor elevación; no asignar indistintamente a ambientes altoandinos.",
+    "decision": "Bosques y laderas bajas del noroeste, principalmente al oeste de los Andes; no ambientes altoandinos ni sustitución general de Tamandua tetradactyla.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 921,
+    "sourceScientific": "Phyllobates terribilis",
+    "region": "Andes del Norte",
+    "issues": [
+      "AM01-017"
+    ],
+    "originalAlert": "La especie se asocia a selvas húmedas bajas del Pacífico colombiano; bosque nublado montano es una asignación que requiere corrección documentada o subárea explícita.",
+    "decision": "Selvas húmedas bajas del Pacífico colombiano incluidas en la vertiente occidental de la región amplia; no páramo ni toda la cordillera.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 931,
+    "sourceScientific": "Inia geoffrensis",
+    "region": "Amazonía",
+    "issues": [
+      "AM01-008",
+      "AM01-035",
+      "AM01-065"
+    ],
+    "originalAlert": "Delimitar cuencas y evitar solapamiento artificial con Inia boliviensis si se adopta un concepto amplio.",
+    "decision": "Cuencas amazónicas compatibles con el concepto restringido de MDD, excluyendo el ámbito contabilizado como Inia boliviensis; no toda Amazonía ni otros Inia separados.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 940,
+    "sourceScientific": "Cyclopes didactylus",
+    "region": "Amazonía",
+    "issues": [
+      "AM01-006",
+      "AM01-038",
+      "AM01-065"
+    ],
+    "originalAlert": "Revisar la distribución del complejo tras sus divisiones; preservar el registro sin inventar especies sustitutas.",
+    "decision": "Sectores septentrionales y guayaneses compatibles con didactylus restringido por MDD; no todas las especies ni toda la distribución histórica amplia de Cyclopes.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 941,
+    "sourceScientific": "Inia boliviensis",
+    "region": "Amazonía",
+    "issues": [
+      "AM01-007",
+      "AM01-034",
+      "AM01-065"
+    ],
+    "originalAlert": "Delimitar cuenca alta del Madeira y tratamiento taxonómico respecto de Inia geoffrensis.",
+    "decision": "Cuenca alta del Madeira y ámbitos compatibles de Bolivia/Brasil bajo el concepto separado de MDD; no se aplica el concepto amplio de geoffrensis a esta misma subárea.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 945,
+    "sourceScientific": "Saguinus imperator",
+    "region": "Amazonía",
+    "issues": [
+      "AM01-040",
+      "AM01-065"
+    ],
+    "originalAlert": "Precisar Amazonía suroccidental; no todo el continente.",
+    "decision": "Amazonía suroccidental y bosques compatibles del ámbito fronterizo Perú/Bolivia/Brasil; no toda Amazonía.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 948,
+    "sourceScientific": "Ateles paniscus",
+    "region": "Amazonía",
+    "issues": [
+      "AM01-039",
+      "AM01-065"
+    ],
+    "originalAlert": "Precisar área guayanesa/norte del Amazonas; no toda Amazonía.",
+    "decision": "Ámbito guayanés y sectores al norte del Amazonas; no se generaliza a toda Amazonía.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 955,
+    "sourceScientific": "Electrophorus electricus",
+    "region": "Amazonía",
+    "issues": [
+      "AM01-009",
+      "AM01-036",
+      "AM01-065"
+    ],
+    "originalAlert": "Revisar el concepto restringido tras reconocer otras especies de Electrophorus; no toda la cuenca.",
+    "decision": "Concepto de fuente para sistemas acuáticos amazónicos, pendiente de delimitar localidad y concepto moderno; no toda la cuenca ni una equivalencia inventada con voltai o varii.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 959,
+    "sourceScientific": "Dendrobates tinctorius",
+    "region": "Amazonía",
+    "issues": [
+      "AM01-037",
+      "AM01-065"
+    ],
+    "originalAlert": "Verificar ámbito guayanés y la forma azul limitada; nombre común y color no describen toda la especie.",
+    "decision": "Ámbito guayanés. La forma azul representada es una forma local, no la coloración uniforme de todas las poblaciones de la especie.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1159,
+    "sourceScientific": "Colossoma macropomum",
+    "region": "Pantanal",
+    "issues": [
+      "AM01-019"
+    ],
+    "originalAlert": "Distinguir distribución nativa Amazonas/Orinoco de cultivo o introducción en la cuenca del Paraguay; no asumir fauna nativa del Pantanal.",
+    "decision": "Presencia de fuente conservada, con origen local sin resolver. La distribución nativa Amazonas/Orinoco no demuestra presencia nativa en Pantanal: se requiere distinguir cultivo o introducción en la cuenca del Paraguay. No se certifica una localidad concreta.",
+    "status": "source-locality-unresolved"
+  },
+  {
+    "sourceRow": 1180,
+    "sourceScientific": "Tolypeutes tricinctus",
+    "region": "Cerrado brasileño",
+    "issues": [
+      "AM01-041"
+    ],
+    "originalAlert": "Precisar sectores de Caatinga/Cerrado nororiental; no generalizar a todo Cerrado.",
+    "decision": "Sectores nororientales de transición Caatinga/Cerrado; no toda la sabana brasileña.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1184,
+    "sourceScientific": "Micrurus corallinus",
+    "region": "Cerrado brasileño",
+    "issues": [
+      "AM01-042"
+    ],
+    "originalAlert": "Verificar bosque atlántico y ecotonos frente a sabana interior; no asumir presencia general en Cerrado.",
+    "decision": "Bosques y ecotonos orientales vinculados al ámbito atlántico dentro de la región ilustrativa amplia. La fuente no aporta localidad; no se generaliza a la sabana interior abierta.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1334,
+    "sourceScientific": "Leopardus colocola",
+    "region": "Pampas",
+    "issues": [
+      "AM01-002",
+      "AM01-043"
+    ],
+    "originalAlert": "La especie pertinente depende de la revisión del complejo de gatos de las pampas; no reemplazar por otra sin registrar la decisión.",
+    "decision": "Concepto histórico amplio de la planilla, pendiente de determinación regional. MDD separa varios taxones del complejo; no se afirma que colocola sensu stricto ocupe uniformemente Pampas o Patagonia.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1346,
+    "sourceScientific": "Phoenicoparrus andinus",
+    "region": "Desierto de Atacama",
+    "issues": [
+      "AM01-045"
+    ],
+    "originalAlert": "Requiere humedales/salares altoandinos; desierto costero no basta. Definir si la región incluye altiplano.",
+    "decision": "Salares y humedales del altiplano incluidos en el margen oriental de la región amplia; no suelo desértico costero sin agua.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1347,
+    "sourceScientific": "Phoenicopterus chilensis",
+    "region": "Desierto de Atacama",
+    "issues": [
+      "AM01-046"
+    ],
+    "originalAlert": "Restringir a humedales adecuados; no suelo desértico sin agua.",
+    "decision": "Lagunas, salares y humedales adecuados; no dunas ni suelo hiperárido sin agua.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1349,
+    "sourceScientific": "Chinchilla lanigera",
+    "region": "Desierto de Atacama",
+    "issues": [
+      "AM01-049"
+    ],
+    "originalAlert": "Precisar poblaciones y roquedos del norte chico; no generalizar al desierto hiperárido.",
+    "decision": "Roquedos y laderas secas del norte chico/borde austral de la región amplia; no todo el desierto hiperárido.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1350,
+    "sourceScientific": "Lagidium viscacia",
+    "region": "Desierto de Atacama",
+    "issues": [
+      "AM01-048"
+    ],
+    "originalAlert": "Requiere roquedos/altura; precisar ámbito dentro de la región costera de la fuente.",
+    "decision": "Roquedos de altura del borde andino; no planicies costeras uniformes.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1351,
+    "sourceScientific": "Octodon degus",
+    "region": "Desierto de Atacama",
+    "issues": [
+      "AM01-022"
+    ],
+    "originalAlert": "Revisar borde sur y matorral de Chile central: no generalizar su presencia al núcleo hiperárido del desierto costero.",
+    "decision": "Matorral del borde austral/norte chico bajo el concepto amplio de la región; no el núcleo hiperárido. El filtro desierto es una simplificación de juego, no una afirmación de ocupación uniforme.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1353,
+    "sourceScientific": "Vicugna vicugna",
+    "region": "Desierto de Atacama",
+    "issues": [
+      "AM01-047"
+    ],
+    "originalAlert": "Precisar altiplano/puna; no costa desértica generalizada.",
+    "decision": "Puna y altiplano del margen cordillerano; no costa desértica generalizada.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1355,
+    "sourceScientific": "Microlophus atacamensis",
+    "region": "Desierto de Atacama",
+    "issues": [
+      "AM01-050"
+    ],
+    "originalAlert": "Hábitat litoral rocoso/intermareal: incluir costa en la planificación, sin trasladarlo a dunas interiores.",
+    "decision": "Litoral rocoso e intermareal del Pacífico; no dunas o desierto interior.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1465,
+    "sourceScientific": "Lycalopex fulvipes",
+    "region": "Patagonia y Tierra del Fuego",
+    "issues": [
+      "AM01-021"
+    ],
+    "originalAlert": "Especie restringida a bosques templados de Chile; precisar si la región incluye su ámbito norteño. No presentarla como distribuida por Tierra del Fuego o toda la estepa.",
+    "decision": "Bosques templados del margen noroccidental chileno, en el ámbito de Chiloé dentro del concepto regional amplio; no toda la estepa ni Tierra del Fuego.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1466,
+    "sourceScientific": "Leopardus colocola",
+    "region": "Patagonia y Tierra del Fuego",
+    "issues": [
+      "AM01-002",
+      "AM01-044"
+    ],
+    "originalAlert": "Verificar el taxón patagónico bajo la autoridad elegida para el complejo; no aceptar colocola sensu stricto por defecto.",
+    "decision": "Concepto histórico amplio de la planilla, pendiente de determinación regional. MDD separa varios taxones del complejo; no se afirma que colocola sensu stricto ocupe uniformemente Pampas o Patagonia.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1469,
+    "sourceScientific": "Lontra felina",
+    "region": "Patagonia y Tierra del Fuego",
+    "issues": [
+      "AM01-053"
+    ],
+    "originalAlert": "Precisar litoral rocoso del Pacífico; no tratarla como nutria continental de ríos o costa atlántica.",
+    "decision": "Litoral rocoso del Pacífico; no ríos interiores ni costa atlántica generalizada.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1470,
+    "sourceScientific": "Pudu puda",
+    "region": "Patagonia y Tierra del Fuego",
+    "issues": [
+      "AM01-052"
+    ],
+    "originalAlert": "Precisar bosques templados del norte patagónico; no toda la estepa o Tierra del Fuego.",
+    "decision": "Bosques templados del norte y occidente patagónico; no toda la estepa ni Tierra del Fuego.",
+    "status": "kept-with-explicit-subarea"
+  },
+  {
+    "sourceRow": 1474,
+    "sourceScientific": "Rhinoderma darwinii",
+    "region": "Patagonia y Tierra del Fuego",
+    "issues": [
+      "AM01-051"
+    ],
+    "originalAlert": "Restringir a bosques templados húmedos de su ámbito norteño; no estepa ni Tierra del Fuego completa.",
+    "decision": "Bosques templados húmedos del margen norpatagónico de su ámbito; no estepa seca ni toda Tierra del Fuego.",
+    "status": "kept-with-explicit-subarea"
+  }
+]

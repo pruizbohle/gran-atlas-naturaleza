@@ -1,0 +1,86 @@
+{
+  "cpuSlowdown": 4,
+  "device": "Chromium desktop with one CPU throttling session; not a physical Android benchmark",
+  "method": "One context/page/CDP session, ABBA navigation order, wait for worker readiness before measuring. Three warm synchronous render/layout samples per visit.",
+  "cases": [
+    {
+      "version": "3.22.1",
+      "species": 589,
+      "bestiaryColdMs": 2593.5,
+      "bestiarySynchronousWarmTrialsMs": [
+        1797.7000000011176,
+        1892,
+        1889.699999999255
+      ],
+      "averageSerializeMs": 0.9340000000037253,
+      "bytes": 29528,
+      "heapUsedBytes": 5977304
+    },
+    {
+      "version": "3.23.0",
+      "species": 710,
+      "bestiaryColdMs": 2695.300000000745,
+      "bestiarySynchronousWarmTrialsMs": [
+        3320.300000000745,
+        4663.699999999255,
+        2809.5
+      ],
+      "averageSerializeMs": 0.43899999998509887,
+      "bytes": 37277,
+      "heapUsedBytes": 6921504
+    },
+    {
+      "version": "3.23.0",
+      "species": 710,
+      "bestiaryColdMs": 4466.9000000003725,
+      "bestiarySynchronousWarmTrialsMs": [
+        3557.199999999255,
+        3864.199999999255,
+        2942.4000000003725
+      ],
+      "averageSerializeMs": 1.5790000000037252,
+      "bytes": 37276,
+      "heapUsedBytes": 7374660
+    },
+    {
+      "version": "3.22.1",
+      "species": 589,
+      "bestiaryColdMs": 4563.9000000003725,
+      "bestiarySynchronousWarmTrialsMs": [
+        3133.699999999255,
+        1986.5,
+        2526.60000000149
+      ],
+      "averageSerializeMs": 0.8769999999925494,
+      "bytes": 29529,
+      "heapUsedBytes": 6023268
+    }
+  ],
+  "lab3221": {
+    "defaultCards": 32,
+    "defaultNodes": 1430,
+    "renderRemainingMs": 29.5,
+    "svgWarmAllMs": 1.5599999999627472
+  },
+  "lab3230": {
+    "defaultCards": 32,
+    "defaultNodes": 1165,
+    "renderRemainingMs": 16.299999998882413,
+    "svgWarmAllMs": 0.5,
+    "allCards": 131,
+    "allNodes": 4001
+  },
+  "summary": {
+    "3.22.1": {
+      "warmMedianMs": 1939.25,
+      "serializeMedianMs": 0.9054999999981374
+    },
+    "3.23.0": {
+      "warmMedianMs": 3438.75,
+      "serializeMedianMs": 1.008999999994412
+    }
+  },
+  "offlineAssets": 80,
+  "offlineUncompressedBytes": 4651613,
+  "note": "Raw timing samples are retained. Summary uses the standard median, including averaging the two central values for even sample counts. Offline byte total refreshed after provenance-note edits."
+}

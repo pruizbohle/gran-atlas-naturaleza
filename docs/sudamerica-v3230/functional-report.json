@@ -1,0 +1,1746 @@
+{
+  "version": "3.23.0",
+  "regions": [
+    {
+      "id": "sa_caribe_sudamericano",
+      "name": "Caribe sudamericano",
+      "sourceHexId": "HX-05-05",
+      "presences": 18,
+      "prestige": 167,
+      "habitats": [
+        "selva",
+        "bosque",
+        "costa",
+        "rio"
+      ],
+      "reachableCombinations": [
+        {
+          "id": "na_esp_pelecanus_occidentalis",
+          "scientific": "Pelecanus occidentalis",
+          "habitat": "costa",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_phoenicopterus_ruber",
+          "scientific": "Phoenicopterus ruber",
+          "habitat": "costa",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_amazona_amazonica",
+          "scientific": "Amazona amazonica",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_ara_ararauna",
+          "scientific": "Ara ararauna",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_pteroglossus_torquatus",
+          "scientific": "Pteroglossus torquatus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_cerdocyon_thous",
+          "scientific": "Cerdocyon thous",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_hydrochoerus_hydrochaeris",
+          "scientific": "Hydrochoerus hydrochaeris",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_myrmecophaga_tridactyla",
+          "scientific": "Myrmecophaga tridactyla",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_noctilio_leporinus",
+          "scientific": "Noctilio leporinus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_saimiri_sciureus",
+          "scientific": "Saimiri sciureus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tamandua_mexicana",
+          "scientific": "Tamandua mexicana",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_cebus_olivaceus",
+          "scientific": "Cebus olivaceus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_dicotyles_tajacu",
+          "scientific": "Dicotyles tajacu",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tayassu_pecari",
+          "scientific": "Tayassu pecari",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ctenosaura_similis",
+          "scientific": "Ctenosaura similis",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_iguana_iguana",
+          "scientific": "Iguana iguana",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_caiman_crocodilus",
+          "scientific": "Caiman crocodilus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_rhinella_marina",
+          "scientific": "Rhinella marina",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "sa_llanos_del_orinoco",
+      "name": "Llanos del Orinoco",
+      "sourceHexId": "HX-06-04",
+      "presences": 11,
+      "prestige": 170,
+      "habitats": [
+        "sabana",
+        "bosque",
+        "rio",
+        "humedal"
+      ],
+      "reachableCombinations": [
+        {
+          "id": "sa_esp_ardea_cocoi",
+          "scientific": "Ardea cocoi",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_eudocimus_ruber",
+          "scientific": "Eudocimus ruber",
+          "habitat": "humedal",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_panthera_onca",
+          "scientific": "Panthera onca",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_hydrochoerus_hydrochaeris",
+          "scientific": "Hydrochoerus hydrochaeris",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_myrmecophaga_tridactyla",
+          "scientific": "Myrmecophaga tridactyla",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_odocoileus_virginianus",
+          "scientific": "Odocoileus virginianus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_pygocentrus_nattereri",
+          "scientific": "Pygocentrus nattereri",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_caiman_crocodilus",
+          "scientific": "Caiman crocodilus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_crocodylus_intermedius",
+          "scientific": "Crocodylus intermedius",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_crotalus_durissus",
+          "scientific": "Crotalus durissus",
+          "habitat": "sabana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_eunectes_murinus",
+          "scientific": "Eunectes murinus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "sa_andes_centrales",
+      "name": "Andes Centrales",
+      "sourceHexId": "HX-06-05",
+      "presences": 11,
+      "prestige": 176,
+      "habitats": [
+        "montana",
+        "pradera",
+        "estepa",
+        "humedal"
+      ],
+      "reachableCombinations": [
+        {
+          "id": "sa_esp_phoenicoparrus_andinus",
+          "scientific": "Phoenicoparrus andinus",
+          "habitat": "humedal",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_rhea_pennata",
+          "scientific": "Rhea pennata",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_geranoaetus_melanoleucus",
+          "scientific": "Geranoaetus melanoleucus",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_vultur_gryphus",
+          "scientific": "Vultur gryphus",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lycalopex_culpaeus",
+          "scientific": "Lycalopex culpaeus",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_leopardus_jacobita",
+          "scientific": "Leopardus jacobita",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_chinchilla_chinchilla",
+          "scientific": "Chinchilla chinchilla",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lagidium_viscacia",
+          "scientific": "Lagidium viscacia",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_hippocamelus_antisensis",
+          "scientific": "Hippocamelus antisensis",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lama_guanicoe",
+          "scientific": "Lama guanicoe",
+          "habitat": "estepa",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_vicugna_vicugna",
+          "scientific": "Vicugna vicugna",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "sa_andes_del_norte",
+      "name": "Andes del Norte",
+      "sourceHexId": "HX-06-06",
+      "presences": 16,
+      "prestige": 173,
+      "habitats": [
+        "montana",
+        "bosque",
+        "selva",
+        "rio"
+      ],
+      "reachableCombinations": [
+        {
+          "id": "sa_esp_andigena_hypoglauca",
+          "scientific": "Andigena hypoglauca",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_ensifera_ensifera",
+          "scientific": "Ensifera ensifera",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_primolius_couloni",
+          "scientific": "Primolius couloni",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_rupicola_peruvianus",
+          "scientific": "Rupicola peruvianus",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_vultur_gryphus",
+          "scientific": "Vultur gryphus",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_leopardus_tigrinus",
+          "scientific": "Leopardus tigrinus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_puma_concolor",
+          "scientific": "Puma concolor",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_ateles_belzebuth",
+          "scientific": "Ateles belzebuth",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_pudella_mephistophiles",
+          "scientific": "Pudella mephistophiles",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tamandua_mexicana",
+          "scientific": "Tamandua mexicana",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tremarctos_ornatus",
+          "scientific": "Tremarctos ornatus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lagothrix_lagothricha",
+          "scientific": "Lagothrix lagothricha",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_mazama_americana",
+          "scientific": "Mazama americana",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tapirus_pinchaque",
+          "scientific": "Tapirus pinchaque",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_gastrotheca_riobambae",
+          "scientific": "Gastrotheca riobambae",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_phyllobates_terribilis",
+          "scientific": "Phyllobates terribilis",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "sa_amazonia",
+      "name": "Amazonía",
+      "sourceHexId": "HX-06-07",
+      "presences": 41,
+      "prestige": 179,
+      "habitats": [
+        "selva",
+        "bosque",
+        "rio",
+        "humedal"
+      ],
+      "reachableCombinations": [
+        {
+          "id": "sa_esp_cairina_moschata",
+          "scientific": "Cairina moschata",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_amazona_amazonica",
+          "scientific": "Amazona amazonica",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_ara_chloropterus",
+          "scientific": "Ara chloropterus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ara_macao",
+          "scientific": "Ara macao",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_opisthocomus_hoazin",
+          "scientific": "Opisthocomus hoazin",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_penelope_jacquacu",
+          "scientific": "Penelope jacquacu",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_primolius_couloni",
+          "scientific": "Primolius couloni",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_ramphastos_tucanus",
+          "scientific": "Ramphastos tucanus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_harpia_harpyja",
+          "scientific": "Harpia harpyja",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_inia_geoffrensis",
+          "scientific": "Inia geoffrensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_atelocynus_microtis",
+          "scientific": "Atelocynus microtis",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_speothos_venaticus",
+          "scientific": "Speothos venaticus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_leopardus_tigrinus",
+          "scientific": "Leopardus tigrinus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_panthera_onca",
+          "scientific": "Panthera onca",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_aotus_trivirgatus",
+          "scientific": "Aotus trivirgatus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_ateles_belzebuth",
+          "scientific": "Ateles belzebuth",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_bradypus_variegatus",
+          "scientific": "Bradypus variegatus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_choloepus_didactylus",
+          "scientific": "Choloepus didactylus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_cyclopes_didactylus",
+          "scientific": "Cyclopes didactylus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_inia_boliviensis",
+          "scientific": "Inia boliviensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_myrmecophaga_tridactyla",
+          "scientific": "Myrmecophaga tridactyla",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_noctilio_leporinus",
+          "scientific": "Noctilio leporinus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_pteronura_brasiliensis",
+          "scientific": "Pteronura brasiliensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_saguinus_imperator",
+          "scientific": "Saguinus imperator",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_saimiri_sciureus",
+          "scientific": "Saimiri sciureus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tamandua_tetradactyla",
+          "scientific": "Tamandua tetradactyla",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_ateles_paniscus",
+          "scientific": "Ateles paniscus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_dicotyles_tajacu",
+          "scientific": "Dicotyles tajacu",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_mazama_americana",
+          "scientific": "Mazama americana",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tapirus_terrestris",
+          "scientific": "Tapirus terrestris",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tayassu_pecari",
+          "scientific": "Tayassu pecari",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_arapaima_gigas",
+          "scientific": "Arapaima gigas",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_colossoma_macropomum",
+          "scientific": "Colossoma macropomum",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_electrophorus_electricus",
+          "scientific": "Electrophorus electricus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_paracheirodon_axelrodi",
+          "scientific": "Paracheirodon axelrodi",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_symphysodon_aequifasciatus",
+          "scientific": "Symphysodon aequifasciatus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_melanosuchus_niger",
+          "scientific": "Melanosuchus niger",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_dendrobates_tinctorius",
+          "scientific": "Dendrobates tinctorius",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_rhinella_marina",
+          "scientific": "Rhinella marina",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_epicrates_cenchria",
+          "scientific": "Epicrates cenchria",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_eunectes_murinus",
+          "scientific": "Eunectes murinus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "sa_pantanal",
+      "name": "Pantanal",
+      "sourceHexId": "HX-07-05",
+      "presences": 26,
+      "prestige": 182,
+      "habitats": [
+        "humedal",
+        "rio",
+        "sabana",
+        "bosque"
+      ],
+      "reachableCombinations": [
+        {
+          "id": "sa_esp_cairina_moschata",
+          "scientific": "Cairina moschata",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_chauna_torquata",
+          "scientific": "Chauna torquata",
+          "habitat": "humedal",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_jabiru_mycteria",
+          "scientific": "Jabiru mycteria",
+          "habitat": "humedal",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_jacana_jacana",
+          "scientific": "Jacana jacana",
+          "habitat": "humedal",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_anodorhynchus_hyacinthinus",
+          "scientific": "Anodorhynchus hyacinthinus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_ara_chloropterus",
+          "scientific": "Ara chloropterus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_speothos_venaticus",
+          "scientific": "Speothos venaticus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_panthera_onca",
+          "scientific": "Panthera onca",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_euphractus_sexcinctus",
+          "scientific": "Euphractus sexcinctus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_hydrochoerus_hydrochaeris",
+          "scientific": "Hydrochoerus hydrochaeris",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_myrmecophaga_tridactyla",
+          "scientific": "Myrmecophaga tridactyla",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_pteronura_brasiliensis",
+          "scientific": "Pteronura brasiliensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tamandua_tetradactyla",
+          "scientific": "Tamandua tetradactyla",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_myocastor_coypus",
+          "scientific": "Myocastor coypus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_blastocerus_dichotomus",
+          "scientific": "Blastocerus dichotomus",
+          "habitat": "humedal",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_dicotyles_tajacu",
+          "scientific": "Dicotyles tajacu",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tayassu_pecari",
+          "scientific": "Tayassu pecari",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_colossoma_macropomum",
+          "scientific": "Colossoma macropomum",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_pseudoplatystoma_corruscans",
+          "scientific": "Pseudoplatystoma corruscans",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_pygocentrus_nattereri",
+          "scientific": "Pygocentrus nattereri",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_salminus_brasiliensis",
+          "scientific": "Salminus brasiliensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_salvator_merianae",
+          "scientific": "Salvator merianae",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_caiman_yacare",
+          "scientific": "Caiman yacare",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_bothrops_alternatus",
+          "scientific": "Bothrops alternatus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_epicrates_cenchria",
+          "scientific": "Epicrates cenchria",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_eunectes_notaeus",
+          "scientific": "Eunectes notaeus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "sa_cerrado_brasileno",
+      "name": "Cerrado brasileño",
+      "sourceHexId": "HX-07-06",
+      "presences": 17,
+      "prestige": 185,
+      "habitats": [
+        "sabana",
+        "pradera",
+        "bosque",
+        "rio"
+      ],
+      "reachableCombinations": [
+        {
+          "id": "sa_esp_cariama_cristata",
+          "scientific": "Cariama cristata",
+          "habitat": "sabana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_colaptes_campestris",
+          "scientific": "Colaptes campestris",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_ramphastos_toco",
+          "scientific": "Ramphastos toco",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_rhea_americana",
+          "scientific": "Rhea americana",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_buteogallus_coronatus",
+          "scientific": "Buteogallus coronatus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_cerdocyon_thous",
+          "scientific": "Cerdocyon thous",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_chrysocyon_brachyurus",
+          "scientific": "Chrysocyon brachyurus",
+          "habitat": "sabana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_panthera_onca",
+          "scientific": "Panthera onca",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_euphractus_sexcinctus",
+          "scientific": "Euphractus sexcinctus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_myrmecophaga_tridactyla",
+          "scientific": "Myrmecophaga tridactyla",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_priodontes_maximus",
+          "scientific": "Priodontes maximus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tamandua_tetradactyla",
+          "scientific": "Tamandua tetradactyla",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tolypeutes_tricinctus",
+          "scientific": "Tolypeutes tricinctus",
+          "habitat": "sabana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_ozotoceros_bezoarticus",
+          "scientific": "Ozotoceros bezoarticus",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_tapirus_terrestris",
+          "scientific": "Tapirus terrestris",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_crotalus_durissus",
+          "scientific": "Crotalus durissus",
+          "habitat": "sabana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_micrurus_corallinus",
+          "scientific": "Micrurus corallinus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "sa_pampas",
+      "name": "Pampas",
+      "sourceHexId": "HX-08-05",
+      "presences": 22,
+      "prestige": 191,
+      "habitats": [
+        "pradera",
+        "humedal",
+        "rio",
+        "bosque"
+      ],
+      "reachableCombinations": [
+        {
+          "id": "sa_esp_chauna_torquata",
+          "scientific": "Chauna torquata",
+          "habitat": "humedal",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_cygnus_melancoryphus",
+          "scientific": "Cygnus melancoryphus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_vanellus_chilensis",
+          "scientific": "Vanellus chilensis",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_agelaioides_badius",
+          "scientific": "Agelaioides badius",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_colaptes_campestris",
+          "scientific": "Colaptes campestris",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_rhea_americana",
+          "scientific": "Rhea americana",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_asio_flammeus",
+          "scientific": "Asio flammeus",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_buteogallus_coronatus",
+          "scientific": "Buteogallus coronatus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_caracara_plancus",
+          "scientific": "Caracara plancus",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lycalopex_gymnocercus",
+          "scientific": "Lycalopex gymnocercus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_leopardus_colocola",
+          "scientific": "Leopardus colocola",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_leopardus_geoffroyi",
+          "scientific": "Leopardus geoffroyi",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_chaetophractus_villosus",
+          "scientific": "Chaetophractus villosus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_dasypus_septemcinctus",
+          "scientific": "Dasypus septemcinctus",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lagostomus_maximus",
+          "scientific": "Lagostomus maximus",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_myocastor_coypus",
+          "scientific": "Myocastor coypus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_ozotoceros_bezoarticus",
+          "scientific": "Ozotoceros bezoarticus",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_odontesthes_bonariensis",
+          "scientific": "Odontesthes bonariensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_salminus_brasiliensis",
+          "scientific": "Salminus brasiliensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_salvator_merianae",
+          "scientific": "Salvator merianae",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_ceratophrys_ornata",
+          "scientific": "Ceratophrys ornata",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_bothrops_alternatus",
+          "scientific": "Bothrops alternatus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "sa_desierto_de_atacama",
+      "name": "Desierto de Atacama",
+      "sourceHexId": "HX-08-06",
+      "presences": 10,
+      "prestige": 188,
+      "habitats": [
+        "desierto",
+        "costa",
+        "montana",
+        "humedal"
+      ],
+      "reachableCombinations": [
+        {
+          "id": "sa_esp_phoenicoparrus_andinus",
+          "scientific": "Phoenicoparrus andinus",
+          "habitat": "humedal",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_phoenicopterus_chilensis",
+          "scientific": "Phoenicopterus chilensis",
+          "habitat": "humedal",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lycalopex_culpaeus",
+          "scientific": "Lycalopex culpaeus",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_chinchilla_lanigera",
+          "scientific": "Chinchilla lanigera",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lagidium_viscacia",
+          "scientific": "Lagidium viscacia",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_octodon_degus",
+          "scientific": "Octodon degus",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lama_guanicoe",
+          "scientific": "Lama guanicoe",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_vicugna_vicugna",
+          "scientific": "Vicugna vicugna",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_liolaemus_atacamensis",
+          "scientific": "Liolaemus atacamensis",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_microlophus_atacamensis",
+          "scientific": "Microlophus atacamensis",
+          "habitat": "costa",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "name": "Patagonia y Tierra del Fuego",
+      "sourceHexId": "HX-09-05",
+      "presences": 20,
+      "prestige": 194,
+      "habitats": [
+        "pradera",
+        "bosque",
+        "costa",
+        "humedal"
+      ],
+      "reachableCombinations": [
+        {
+          "id": "sa_esp_cygnus_melancoryphus",
+          "scientific": "Cygnus melancoryphus",
+          "habitat": "humedal",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_spheniscus_magellanicus",
+          "scientific": "Spheniscus magellanicus",
+          "habitat": "costa",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_campephilus_magellanicus",
+          "scientific": "Campephilus magellanicus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_enicognathus_ferrugineus",
+          "scientific": "Enicognathus ferrugineus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_rhea_pennata",
+          "scientific": "Rhea pennata",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_scelorchilus_rubecula",
+          "scientific": "Scelorchilus rubecula",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_caracara_plancus",
+          "scientific": "Caracara plancus",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_geranoaetus_melanoleucus",
+          "scientific": "Geranoaetus melanoleucus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_vultur_gryphus",
+          "scientific": "Vultur gryphus",
+          "habitat": "costa",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lycalopex_culpaeus",
+          "scientific": "Lycalopex culpaeus",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lycalopex_fulvipes",
+          "scientific": "Lycalopex fulvipes",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_leopardus_colocola",
+          "scientific": "Leopardus colocola",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_puma_concolor",
+          "scientific": "Puma concolor",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_conepatus_chinga",
+          "scientific": "Conepatus chinga",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lontra_felina",
+          "scientific": "Lontra felina",
+          "habitat": "costa",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_pudu_puda",
+          "scientific": "Pudu puda",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_dolichotis_patagonum",
+          "scientific": "Dolichotis patagonum",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_hippocamelus_bisulcus",
+          "scientific": "Hippocamelus bisulcus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_lama_guanicoe",
+          "scientific": "Lama guanicoe",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "sa_esp_rhinoderma_darwinii",
+          "scientific": "Rhinoderma darwinii",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    }
+  ],
+  "sourcePresences": 192,
+  "sourceNames": 131,
+  "canonicalTaxa": 131,
+  "newSpecies": 121,
+  "reusedSpecies": 10,
+  "globalSpecies": 710,
+  "globalRegions": 79,
+  "aliases": {
+    "Pudu mephistophiles": "Pudella mephistophiles",
+    "Dasypus hybridus": "Dasypus septemcinctus",
+    "Conepatus humboldtii": "Conepatus chinga"
+  },
+  "newVariants": {
+    "identities": 121,
+    "albino": 21,
+    "melanic": 2,
+    "dimorphism": 11,
+    "notable": 121,
+    "epic": 7,
+    "exceptional": 2
+  },
+  "allSouthAmericanVariants": {
+    "identities": 131,
+    "albino": 24,
+    "melanic": 4,
+    "dimorphism": 12,
+    "notable": 131,
+    "epic": 8,
+    "exceptional": 3
+  },
+  "research": {
+    "researchId": "sudamerica_1",
+    "requires": "norteamerica_1",
+    "money": 3400,
+    "knowledge": 3000,
+    "regionPrestige": {
+      "min": 167,
+      "max": 194
+    },
+    "newItems": []
+  },
+  "geography": {
+    "continent": "Sudamérica",
+    "cells": 10,
+    "playableCells": 10,
+    "regions": 10,
+    "additionalCells": 0,
+    "groupedCells": 0,
+    "groupedRegions": 0,
+    "radius": 46,
+    "neighborDistance": 79.67433714816835,
+    "neighborPairs": 18,
+    "maxError": 2.842170943040401e-14,
+    "maxEdgeError": 5.684341886080802e-14,
+    "edgeErrors": [],
+    "pairs": [
+      {
+        "a": "sudamerica-sa_caribe_sudamericano",
+        "b": "sudamerica-sa_llanos_del_orinoco",
+        "distance": 79.67433714816835,
+        "error": 0,
+        "sharedVertices": 2,
+        "edgeError": 2.842170943040401e-14
+      },
+      {
+        "a": "sudamerica-sa_andes_del_norte",
+        "b": "sudamerica-sa_caribe_sudamericano",
+        "distance": 79.67433714816835,
+        "error": 0,
+        "sharedVertices": 2,
+        "edgeError": 7.105427357601002e-15
+      },
+      {
+        "a": "sudamerica-sa_amazonia",
+        "b": "sudamerica-sa_cerrado_brasileno",
+        "distance": 79.67433714816832,
+        "error": 2.842170943040401e-14,
+        "sharedVertices": 2,
+        "edgeError": 5.684341886080802e-14
+      },
+      {
+        "a": "sudamerica-sa_amazonia",
+        "b": "sudamerica-sa_pantanal",
+        "distance": 79.67433714816835,
+        "error": 0,
+        "sharedVertices": 2,
+        "edgeError": 2.842170943040401e-14
+      },
+      {
+        "a": "sudamerica-sa_amazonia",
+        "b": "sudamerica-sa_andes_centrales",
+        "distance": 79.67433714816836,
+        "error": 1.4210854715202004e-14,
+        "sharedVertices": 2,
+        "edgeError": 0
+      },
+      {
+        "a": "sudamerica-sa_amazonia",
+        "b": "sudamerica-sa_andes_del_norte",
+        "distance": 79.67433714816836,
+        "error": 1.4210854715202004e-14,
+        "sharedVertices": 2,
+        "edgeError": 1.4210854715202004e-14
+      },
+      {
+        "a": "sudamerica-sa_amazonia",
+        "b": "sudamerica-sa_caribe_sudamericano",
+        "distance": 79.67433714816836,
+        "error": 1.4210854715202004e-14,
+        "sharedVertices": 2,
+        "edgeError": 1.4210854715202004e-14
+      },
+      {
+        "a": "sudamerica-sa_amazonia",
+        "b": "sudamerica-sa_llanos_del_orinoco",
+        "distance": 79.67433714816835,
+        "error": 0,
+        "sharedVertices": 2,
+        "edgeError": 2.842170943040401e-14
+      },
+      {
+        "a": "sudamerica-sa_cerrado_brasileno",
+        "b": "sudamerica-sa_pantanal",
+        "distance": 79.67433714816835,
+        "error": 0,
+        "sharedVertices": 2,
+        "edgeError": 2.842170943040401e-14
+      },
+      {
+        "a": "sudamerica-sa_cerrado_brasileno",
+        "b": "sudamerica-sa_llanos_del_orinoco",
+        "distance": 79.67433714816835,
+        "error": 0,
+        "sharedVertices": 2,
+        "edgeError": 2.842170943040401e-14
+      },
+      {
+        "a": "sudamerica-sa_andes_centrales",
+        "b": "sudamerica-sa_pantanal",
+        "distance": 79.67433714816835,
+        "error": 0,
+        "sharedVertices": 2,
+        "edgeError": 2.842170943040401e-14
+      },
+      {
+        "a": "sudamerica-sa_andes_centrales",
+        "b": "sudamerica-sa_pampas",
+        "distance": 79.67433714816836,
+        "error": 1.4210854715202004e-14,
+        "sharedVertices": 2,
+        "edgeError": 1.4210854715202004e-14
+      },
+      {
+        "a": "sudamerica-sa_andes_centrales",
+        "b": "sudamerica-sa_desierto_de_atacama",
+        "distance": 79.67433714816835,
+        "error": 0,
+        "sharedVertices": 2,
+        "edgeError": 7.105427357601002e-15
+      },
+      {
+        "a": "sudamerica-sa_andes_centrales",
+        "b": "sudamerica-sa_andes_del_norte",
+        "distance": 79.67433714816835,
+        "error": 0,
+        "sharedVertices": 2,
+        "edgeError": 0
+      },
+      {
+        "a": "sudamerica-sa_desierto_de_atacama",
+        "b": "sudamerica-sa_pampas",
+        "distance": 79.67433714816836,
+        "error": 1.4210854715202004e-14,
+        "sharedVertices": 2,
+        "edgeError": 1.4210854715202004e-14
+      },
+      {
+        "a": "sudamerica-sa_desierto_de_atacama",
+        "b": "sudamerica-sa_patagonia_y_tierra_del_fuego",
+        "distance": 79.67433714816835,
+        "error": 0,
+        "sharedVertices": 2,
+        "edgeError": 0
+      },
+      {
+        "a": "sudamerica-sa_pampas",
+        "b": "sudamerica-sa_patagonia_y_tierra_del_fuego",
+        "distance": 79.67433714816836,
+        "error": 1.4210854715202004e-14,
+        "sharedVertices": 2,
+        "edgeError": 0
+      },
+      {
+        "a": "sudamerica-sa_pampas",
+        "b": "sudamerica-sa_pantanal",
+        "distance": 79.67433714816835,
+        "error": 0,
+        "sharedVertices": 2,
+        "edgeError": 2.842170943040401e-14
+      }
+    ]
+  },
+  "validation": {
+    "productionEncounters": 384,
+    "allNewMonographs": 121,
+    "northAmericanSVGsProtected": 382,
+    "manualAndAutomaticGroups10Regions": true,
+    "unlockAndTravelAll10Regions": true,
+    "sourceWorkbook": "source-verification.json",
+    "browser": "browser-report.json",
+    "northAmericaRegression": "northamerica-regression/browser-report.json",
+    "updates": [
+      "upgrade-3.21.2-report.json",
+      "upgrade-3.22.1-report.json"
+    ],
+    "performance": "performance-report.json"
+  },
+  "scope": {
+    "oldSpeciesAndRegionsUnchanged": true,
+    "oldMeshesUnchanged": true,
+    "northAmericanProductionAndLaboratoryFilesUnchanged": true,
+    "oldResearchRecipesItemsVoyagesLegendaryUnchanged": true,
+    "globalObservationAlgorithmsUnchanged": true
+  },
+  "limitations": {
+    "taxonomicSourceConceptsUnresolved": [
+      "Arapaima gigas",
+      "Electrophorus electricus",
+      "Leopardus colocola",
+      "Leopardus tigrinus",
+      "Saimiri sciureus"
+    ],
+    "geographicPresencesUnresolved": [
+      {
+        "row": 908,
+        "species": "Primolius couloni",
+        "region": "sa_andes_del_norte"
+      },
+      {
+        "row": 1159,
+        "species": "Colossoma macropomum",
+        "region": "sa_pantanal"
+      }
+    ],
+    "physicalAndroidTested": false,
+    "finalArtAudit": "AM-05 (not performed in AM-04)"
+  }
+}

@@ -1,0 +1,580 @@
+{
+  "authority": "ASM Mammal Diversity Database, current taxonomy 2026-07-28",
+  "repositoryCommit": "749c2de16a949099cfc13ccbd2b86d427641e844",
+  "source": "https://raw.githubusercontent.com/mammaldiversity/mammaldiversity.github.io/749c2de16a949099cfc13ccbd2b86d427641e844/_data/mdd.csv",
+  "sha256": "0d07a7e9409712fa86c1e3afadcf4c67bf4f9e16d5693a878e11ec1bf6860493",
+  "consulted": "2026-11-08",
+  "license": "MIT, Copyright (c) 2020 ASM Mammal Diversity Database",
+  "rows": [
+    {
+      "sciName": "Chaetophractus_villosus",
+      "id": "1000411",
+      "family": "Euphractidae",
+      "countryDistribution": "Argentina|Bolivia|Chile|Paraguay",
+      "taxonomyNotes": "moved from Dasypodidae to Chlamyphoridae, and more recently from Chlamyphoridae to Euphractidae",
+      "taxonomyNotesCitation": "Gibb, G.C., Condamine, F.L., Kuch, M., Enk, J., Moraes-Barros, N., Superina, M., Poinar, H.N. and Delsuc, F. 2016. Shotgun mitogenomics provides a reference phylogenetic framework and timescale for living xenarthrans. Molecular Biology and Evolution 33(3):621-642. doi:10.1093/molbev/msv250|Casali, D. de M., Castro, M.C., Ciancio, M.R., Gaudin, T.J., Bramblett, J.L., Boscaini, A., Perini, F.A. and Langer, M.C. 2026. Unravelling the phylogeny of armadillos and their kin (Mammalia, Xenarthra, Cingulata) combining morphological, molecular, and stratigraphic data. Cladistics (in press). doi:10.1111/cla.70048",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Euphractus_sexcinctus",
+      "id": "1000412",
+      "family": "Euphractidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Paraguay|Suriname|Uruguay",
+      "taxonomyNotes": "may include cryptic species diversity; moved from Dasypodidae to Chlamyphoridae, and more recently from Chlamyphoridae to Euphractidae",
+      "taxonomyNotesCitation": "Gibb, G.C., Condamine, F.L., Kuch, M., Enk, J., Moraes-Barros, N., Superina, M., Poinar, H.N. and Delsuc, F. 2016. Shotgun mitogenomics provides a reference phylogenetic framework and timescale for living xenarthrans. Molecular Biology and Evolution 33(3):621-642. doi:10.1093/molbev/msv250|Ferreiro, A.M., Poljak, S., Plum, L., Sanchez, J. and González-Ittig, R.E. 2026. At the edge of the burrow: The mitochondrial genetic structure and range dynamics of the yellow armadillo _Euphractus sexcinctus_ in southern South America. Journal of Mammalian Evolution 33(1):8. doi:10.1007/s10914-026-09812-8|Casali, D. de M., Castro, M.C., Ciancio, M.R., Gaudin, T.J., Bramblett, J.L., Boscaini, A., Perini, F.A. and Langer, M.C. 2026. Unravelling the phylogeny of armadillos and their kin (Mammalia, Xenarthra, Cingulata) combining morphological, molecular, and stratigraphic data. Cladistics (in press). doi:10.1111/cla.70048",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Priodontes_maximus",
+      "id": "1000418",
+      "family": "Tolypeutidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Colombia|Ecuador|French Guiana|Guyana|Paraguay|Peru|Suriname|Venezuela",
+      "taxonomyNotes": "moved from Dasypodidae to Chlamyphoridae, and more recently from Chlamyphoridae to Tolypeutidae",
+      "taxonomyNotesCitation": "Gibb, G.C., Condamine, F.L., Kuch, M., Enk, J., Moraes-Barros, N., Superina, M., Poinar, H.N. and Delsuc, F. 2016. Shotgun mitogenomics provides a reference phylogenetic framework and timescale for living xenarthrans. Molecular Biology and Evolution 33(3):621-642. doi:10.1093/molbev/msv250|Casali, D. de M., Castro, M.C., Ciancio, M.R., Gaudin, T.J., Bramblett, J.L., Boscaini, A., Perini, F.A. and Langer, M.C. 2026. Unravelling the phylogeny of armadillos and their kin (Mammalia, Xenarthra, Cingulata) combining morphological, molecular, and stratigraphic data. Cladistics (in press). doi:10.1111/cla.70048",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Tolypeutes_tricinctus",
+      "id": "1000420",
+      "family": "Tolypeutidae",
+      "countryDistribution": "Brazil",
+      "taxonomyNotes": "moved from Dasypodidae to Chlamyphoridae, and more recently from Chlamyphoridae to Tolypeutidae",
+      "taxonomyNotesCitation": "Gibb, G.C., Condamine, F.L., Kuch, M., Enk, J., Moraes-Barros, N., Superina, M., Poinar, H.N. and Delsuc, F. 2016. Shotgun mitogenomics provides a reference phylogenetic framework and timescale for living xenarthrans. Molecular Biology and Evolution 33(3):621-642. doi:10.1093/molbev/msv250|Casali, D. de M., Castro, M.C., Ciancio, M.R., Gaudin, T.J., Bramblett, J.L., Boscaini, A., Perini, F.A. and Langer, M.C. 2026. Unravelling the phylogeny of armadillos and their kin (Mammalia, Xenarthra, Cingulata) combining morphological, molecular, and stratigraphic data. Cladistics (in press). doi:10.1111/cla.70048",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Dasypus_septemcinctus",
+      "id": "1000428",
+      "family": "Dasypodidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Paraguay|Uruguay",
+      "taxonomyNotes": "includes hybridus as a subspecies",
+      "taxonomyNotesCitation": "Feijó, J.A., Patterson, B.D. and Cordeiro-Estrela, P. 2018. Taxonomic revision of the long-nosed armadillos, Genus _Dasypus_ Linnaeus, 1758 (Mammalia, Cingulata). PLoS ONE 13(4):e0195084. doi:10.1371/journal.pone.0195084|Casali, D. de M., Castro, M.C., Ciancio, M.R., Gaudin, T.J., Bramblett, J.L., Boscaini, A., Perini, F.A. and Langer, M.C. 2026. Unravelling the phylogeny of armadillos and their kin (Mammalia, Xenarthra, Cingulata) combining morphological, molecular, and stratigraphic data. Cladistics (in press). doi:10.1111/cla.70048",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Bradypus_variegatus",
+      "id": "1000432",
+      "family": "Bradypodidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Colombia|Costa Rica|Ecuador|Honduras|Nicaragua|Panama|Paraguay|Peru|Venezuela",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Choloepus_didactylus",
+      "id": "1000433",
+      "family": "Choloepodidae",
+      "countryDistribution": "Brazil|Colombia|Ecuador|French Guiana|Guyana|Peru|Suriname|Venezuela",
+      "taxonomyNotes": "moved from Megalonychidae to Choloepidae based on recent molecular data",
+      "taxonomyNotesCitation": "Delsuc, F., Kuch, M., Gibb, G.C., Karpinski, E., Hackenberger, D., Szpak, P., Martínez, J.G., Mead, J.I., McDonald, H.G., MacPhee, R.D.E., Billet, G., Hautier, L. and Poinar, H.N. 2019. Ancient mitogenomes reveal the evolutionary history and biogeography of sloths. Current Biology 29(12):2031-2042. doi:10.1016/j.cub.2019.05.043|Presslee, S., Slater, G.J., Pujos, F., Forasiepi, A.M., Fischer, R., Molloy, K., Mackie, M., Olsen, J.V., Kramarz, A., Taglioretti, M.L., Scaglia, F., Lezcano, M., Lanata, J.L., Southon, J., Feranec, R., Bloch, J., Hajduk, A., Martin, F.M., Salas-Gismondi, R.M., Reguero, M.A., Muizon, C. de, Greenwood, A., Chait, B.T., Penkman, K., Collins, M. and MacPhee, R.D.E. 2019. Palaeoproteomics resolves sloth relationships. Nature Ecology & Evolution 3(7):1121-1130. doi:10.1038/s41559-019-0909-z",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Cyclopes_didactylus",
+      "id": "1000436",
+      "family": "Cyclopedidae",
+      "countryDistribution": "Brazil|Colombia|French Guiana|Guyana|Suriname|Trinidad and Tobago|Venezuela",
+      "taxonomyNotes": "previously included C. catellus, C. dorsalis, C. ida, and the populations now attributed to C. rufus, C. thomasi, and C. xinguensis",
+      "taxonomyNotesCitation": "Miranda, F.R., Casali, D. de M., Perini, F.A., Machado, F.A. and Santos, F.R. 2017. Taxonomic review of the genus _Cyclopes_ Gray, 1821 (Xenarthra: Pilosa), with the revalidation and description of new species. Zoological Journal of the Linnean Society 183(3):687-721. doi:10.1093/zoolinnean/zlx079",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Myrmecophaga_tridactyla",
+      "id": "1000442",
+      "family": "Myrmecophagidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Colombia|Costa Rica|Ecuador|French Guiana|Guyana|Honduras|Nicaragua|Panama|Paraguay|Peru|Suriname|Venezuela|Belize?|El Salvador?|Guatemala?|Uruguay?",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Tamandua_mexicana",
+      "id": "1000443",
+      "family": "Myrmecophagidae",
+      "countryDistribution": "Belize|Colombia|Costa Rica|Ecuador|El Salvador|Guatemala|Honduras|Mexico|Nicaragua|Panama|Peru|Venezuela",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Tamandua_tetradactyla",
+      "id": "1000444",
+      "family": "Myrmecophagidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Colombia|Ecuador|French Guiana|Guyana|Paraguay|Peru|Suriname|Trinidad and Tobago|Uruguay|Venezuela",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Aotus_trivirgatus",
+      "id": "1000752",
+      "family": "Aotidae",
+      "countryDistribution": "Brazil|Colombia|Venezuela",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Ateles_belzebuth",
+      "id": "1000767",
+      "family": "Atelidae",
+      "countryDistribution": "Brazil|Colombia|Ecuador|Peru|Venezuela",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Ateles_paniscus",
+      "id": "1000773",
+      "family": "Atelidae",
+      "countryDistribution": "Brazil|French Guiana|Guyana|Suriname",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Lagothrix_lagothricha",
+      "id": "1000777",
+      "family": "Atelidae",
+      "countryDistribution": "Bolivia|Brazil|Colombia|Ecuador|Peru|Venezuela",
+      "taxonomyNotes": "includes lugens, cana, and poeppigii ",
+      "taxonomyNotesCitation": "Ruiz-García, M., Pinedo-Castro, M. and Shostell, J.M. 2014. How many genera and species of woolly monkeys (Atelidae, Platyrrhine, Primates) are there? The first molecular analysis of _Lagothrix flavicauda_, an endemic Peruvian primate species. Molecular Phylogenetics and Evolution 79:179-198. doi:10.1016/j.ympev.2014.05.034",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Saguinus_imperator",
+      "id": "1000812",
+      "family": "Callitrichidae",
+      "countryDistribution": "Brazil|Peru",
+      "taxonomyNotes": "previously included S. subgrisescens; recently moved from Tamarinus to Leontocebus, however, some recent publications have suggested retaining all species traditionally contained in Saguinus under distinct subgenera (Saguinus, Leontocebus, Tamarinus, and Oedipomidas) rather than genera, which is tentatively followed here pending further discussion",
+      "taxonomyNotesCitation": "Gutiérrez, E.E. and Marinho-Filho, J. 2017. The mammalian faunas endemic to the Cerrado and the Caatinga. ZooKeys 644:105-157. doi:10.3897/zookeys.644.10827|Garbino, G.S.T. and Martins-Junior, A.M.G. 2018. Phenotypic evolution in marmoset and tamarin monkeys (Cebidae, Callitrichinae) and a revised genus-level classification. Molecular Phylogenetics and Evolution 118:156-171. doi:10.1016/j.ympev.2017.10.002|Teta, P. 2019. The usage of subgenera in mammalian taxonomy. Mammalia 83(3):209-211. doi:10.1515/mammalia-2018-0059|Brcko, I.C., Carneiro, J., Ruiz-García, M., Boubli, J.P., Silva Júnior, J. de S. e, Farias, I.P., Hrbek, T., Schneider, H. and Sampaio, I. 2022. Phylogenetics and an updated taxonomic status of the tamarins (Callitrichinae, Cebidae). Molecular Phylogenetics and Evolution 173:107504. doi:10.1016/j.ympev.2022.107504|Gregorin, R., Athaydes, D., Santos Júnior, J.E. and Ayoub, T.B. 2023. Taxonomic status of _Tamarinus imperator subgrisescens_ (Lönnberg, 1940) (Cebidae, Callitrichinae). Papéis Avulsos de Zoologia 63:e202363005. doi:10.11606/1807-0205/2023.63.005|Lopes, G.P., Röhe, F., Bertuol, F., Polo, É., Valsecchi, J., Santos, T.C.M., Silva, F.E., Lima, I.J., Sampaio, R., Silva, M.N.F. da, Silva, C.R., Boubli, J.P., Costa-Araújo, R., de Thoisy, B., Ruiz-García, M., Gordo, M., Sampaio, I., Farias, I.P. and Hrbek, T. 2023. Molecular systematics of tamarins with emphasis on genus _Tamarinus_ (Primates, Callitrichidae). Zoologica Scripta 52:556-570. doi:10.1111/zsc.12617",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Cebus_olivaceus",
+      "id": "1000839",
+      "family": "Cebidae",
+      "countryDistribution": "Brazil|French Guiana|Guyana|Suriname|Trinidad and Tobago|Venezuela",
+      "taxonomyNotes": "tentatively includes castaneus and brunneus (which has included the name trinitatis, which is treated under C. albifrons here), which are considered distinct species by some authors, but are retained under C. olivaceus here because of the limited data used to demonstrate their species status and the confusion currently surrunding Cebus taxonomy, which is in need of a thorough revision",
+      "taxonomyNotesCitation": "Boubli, J.P., Rylands, A.B., Farias, I.P., Alfaro, M.E. and Lynch Alfaro, J.W. 2012. _Cebus_ phylogenetic relationships: A preliminary reassessment of the diversity of the untufted capuchin monkeys. American Journal of Primatology 74(4):381-393. doi:10.1002/ajp.21998|Mittermeier, R.A., Rylands, A.B. and Wilson, D.E. 2013. Handbook of the Mammals of the World. Volume 3. Primates. Lynx, Barcelona, 952 pp. a#59513|Ruiz-García, M., Sánchez-Castillo, S., Castillo, M.I., Luengas, K., Ortega, J.M., Moreno, P., Albuja, L., Pinto, C.M. and Shostell, J.M. 2018. How many species, taxa, or lineages of _Cebus albifrons_ (Platyrrhini, Primates) inhabit Ecuador? Insights from mitogenomics. International Journal of Primatology 39(6):1068-1104. doi:10.1007/s10764-018-0062-6",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Saimiri_sciureus",
+      "id": "1000855",
+      "family": "Cebidae",
+      "countryDistribution": "Brazil|French Guiana|Guyana|Suriname",
+      "taxonomyNotes": "previously included S. cassiquiarensis, S. collinsi, and S. macrodon",
+      "taxonomyNotesCitation": "Mittermeier, R.A., Rylands, A.B. and Wilson, D.E. 2013. Handbook of the Mammals of the World. Volume 3. Primates. Lynx, Barcelona, 952 pp. a#59513|Lynch Alfaro, J.W., Boubli, J.P., Paim, F.P., Ribas, C.C., Silva, M.N.F. da, Messias, M.R., Röhe, F., Mercês, M.P., Silva Júnior, J. de S. e, Silva, C.R. da, Pinho, G.M., Koshkarian, G., Nguyen, M.T.T., Harada, M.L., Rabelo, R.M., Queiroz, H.L. de, Alfaro, M.E. and Farias, I.P. 2015. Biogeography of squirrel monkeys (genus _Saimiri_): South-central Amazon origin and rapid pan-Amazonian diversification of a lowland primate. Molecular Phylogenetics and Evolution 82:436-454. doi:10.1016/j.ympev.2014.09.004",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Dolichotis_patagonum",
+      "id": "1001207",
+      "family": "Caviidae",
+      "countryDistribution": "Argentina|Chile?",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Hydrochoerus_hydrochaeris",
+      "id": "1001209",
+      "family": "Caviidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Colombia|Ecuador|French Guiana|Guyana|Paraguay|Peru|Suriname|Uruguay|Venezuela",
+      "taxonomyNotes": "may include H. isthmius, but the species is tentatively retained here",
+      "taxonomyNotesCitation": "Byrne, M.S., Ruiz-García, M. and Túnez, J.I. 2022. Phylogeography of the capybara, _Hydrochoerus hydrochaeris_, in a large portion of its distribution area in South America. Journal of Mammalian Evolution 29(1):191-206. doi:10.1007/s10914-021-09569-2",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Chinchilla_chinchilla",
+      "id": "1001230",
+      "family": "Chinchillidae",
+      "countryDistribution": "Chile|Argentina?|Bolivia?",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Lagidium_viscacia",
+      "id": "1001233",
+      "family": "Chinchillidae",
+      "countryDistribution": "Argentina|Bolivia|Chile|Peru",
+      "taxonomyNotes": "has included L. peruanum as a synonym or subspecies, but molecular and morphological data tentatively support the species status of L. peruanum for the time being",
+      "taxonomyNotesCitation": "Spotorno, Á.E. and Patton, J.L. 2015. Superfamily Chinchilloidea Bennett, 1833. Pp. 762–783 in Patton, J.L., Pardiñas, U.F.J. and D'Elía, G. (eds.). Mammals of South America, Volume 2: Rodents. University of Chicago Press, Chicago, 1290 pp. a#25372|Teta, P. and Lucero, S.O. 2017. Notes on the taxonomy of mountain viscachas of the genus _Lagidium_ Meyen 1833 (Rodentia: Chinchillidae). Therya 8(1):27-33. doi:10.12933/therya-17-479",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Lagostomus_maximus",
+      "id": "1001236",
+      "family": "Chinchillidae",
+      "countryDistribution": "Argentina|Bolivia|Paraguay",
+      "taxonomyNotes": "includes crassus based on morphological data, which has generally been considered a distinct extinct species based on a single skull from Peru",
+      "taxonomyNotesCitation": "Hadler, P., Galliari, C.A. and Pardiñas, U.F.J. 2024. Chancy history of a supposedly vanished South American rodent, _Lagostomus crassus_, with remarks on recent extinctions in caviomorphs. Pp. 81–97 in Rasia, L.L., Barbeito, C.G. and Acuña, F. (eds.). Plains Vizcachas. Springer, Cham, 386 pp. doi:10.1007/978-3-031-49487-1_6",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Myocastor_coypus",
+      "id": "1001446",
+      "family": "Echimyidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Chile|Paraguay|Uruguay",
+      "taxonomyNotes": "moved from Myocastoridae to Echimyidae",
+      "taxonomyNotesCitation": "Galewski, T., Mauffrey, J.-F., Leite, Y.L.R., Patton, J.L. and Douzery, E.J.P. 2005. Ecomorphological diversification among South American spiny rats (Rodentia; Echimyidae): a phylogenetic and chronological approach. Molecular Phylogenetics and Evolution 34(3):601-615. doi:10.1016/j.ympev.2004.11.015",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Octodon_degus",
+      "id": "1001494",
+      "family": "Octodontidae",
+      "countryDistribution": "Chile",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Noctilio_leporinus",
+      "id": "1004871",
+      "family": "Noctilionidae",
+      "countryDistribution": "Anguilla|Antigua and Barbuda|Argentina|Aruba|Bahamas|Barbados|Belize|Bolivia|Brazil|British Virgin Islands|Colombia|Costa Rica|Cuba|Dominica|Dominican Republic|Ecuador|El Salvador|French Guiana|Grenada|Guadeloupe|Guatemala|Guyana|Haiti|Honduras|Jamaica|Martinique|Mexico|Montserrat|Nicaragua|Panama|Paraguay|Peru|Puerto Rico|Saint Kitts and Nevis|Saint Lucia|Saint Vincent and the Grenadines|Sint Maarten|Suriname|Trinidad and Tobago|United States Virgin Islands|Venezuela",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Conepatus_chinga",
+      "id": "1005804",
+      "family": "Mephitidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Chile|Paraguay|Peru|Uruguay",
+      "taxonomyNotes": "includes humboldtii; also includes feuillei, rex, and the recently described carloschebezi; recent morphological studies have suggested that C. chinga may represent 8 species (chinga, budini, feuillei, humboldtii, inca, quitensis, rex, and suffocans), although an integrative taxonomic revision of Conepatus is needed to clarify the species boundaries within the genus and these species are not recognized here tentatively",
+      "taxonomyNotesCitation": "Feijó, J.A. and Langguth, A.R. 2013. Mamíferos de médio e grande porte do nordeste do Brasil: distribuição e taxonomia, com descrição de novas espécies. Revista Nordestina de Biología 22(1-2):3-225. a#24383|Rodrigues, M.L. da F. 2013. História evolutiva de _Conepatus_ (Carnivora: Mephitidae): padrões biogeográficos de diversificação, investigação filogenética e revisão taxonômica do gênero. PhD thesis, Pontifícia Universidade Católica do Rio Grande do Sul, 150 pp. a#37338|Schiaffini, M.I., Gabrielli, M., Prevosti, F.J., Cardoso, Y.P., Castillo, D., Bo, R., Casanave, E. and Lizarralde, M. 2013. Taxonomic status of southern South American _Conepatus_ (Carnivora: Mephitidae). Zoological Journal of the Linnean Society 167(2):327-344. doi:10.1111/zoj.12006|Agnolín, F.L., Derguy, M.R., Godoy, I.N. and Chimento, N.R. 2019. Mamíferos argentinos: descripción de nuevas especies de las colecciones de Elio Massoia y Julio R. Contreras (Rodentia, Chiroptera, Carnivora). Historia Natural (3)9(2):107-181. a#50570|Teta, P., D'Elía, G., Jayat, J.P., Gonçalves, P.R., Libardi, G.S., Oliveira, J.A. de, Moratelli, R., Percequillo, A.R., Rodrigues do Prado, J., Ortiz, P.E., Hurtado, N., Schiaffini, M.I., Abreu-Júnior, E.F. de, Chiquito, E. de A., Giménez, A.L. and Torres, J. 2020. On the distinction and availability of the new taxa proposed by Agnolin et al. 2019. Mastozoología Neotropical 27(1):155-171. doi:10.31687/saremMN.20.27.1.0.20|Quintela, F.M., Da Rosa, C.A. and Feijó, J.A. 2020. Updated and annotated checklist of recent mammals from Brazil. Anais da Academia Brasileira de Ciências 92(Suppl. 2):1-57. doi:10.1590/0001-3765202020191004|Molinari, J. 2026. A provisional classification of Hog-nosed Skunks, genus _Conepatus_ Gray, 1837 (Mammalia, Carnivora, Mephitidae), from the Nearctic and Neotropical regions. Anartia, Publicación del Museo de Biología de la Universidad del Zulia 42:63-106. a#73106",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Lontra_felina",
+      "id": "1005845",
+      "family": "Mustelidae",
+      "countryDistribution": "Argentina|Chile|Peru",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Pteronura_brasiliensis",
+      "id": "1005852",
+      "family": "Mustelidae",
+      "countryDistribution": "Bolivia|Brazil|Colombia|Ecuador|French Guiana|Guyana|Paraguay|Peru|Suriname|Venezuela|Argentina?|Uruguay?",
+      "taxonomyNotes": "the authority of the species is typically referenced from J. F. Gmelin, 1788, but the oldest legitimate use of the name was actually in E. A. W. Zimmermann, 1780, which is used here",
+      "taxonomyNotesCitation": "Noonan, P., Prout, S. and Hayssen, V. 2017. _Pteronura brasiliensis_ (Carnivora: Mustelidae). Mammalian Species 49(953):97-108. doi:10.1093/mspecies/sex012",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Tremarctos_ornatus",
+      "id": "1005931",
+      "family": "Ursidae",
+      "countryDistribution": "Bolivia|Colombia|Ecuador|Peru|Venezuela|Argentina?",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Atelocynus_microtis",
+      "id": "1005938",
+      "family": "Canidae",
+      "countryDistribution": "Bolivia|Brazil|Colombia|Ecuador|Peru",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Cerdocyon_thous",
+      "id": "1005947",
+      "family": "Canidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Colombia|Ecuador|French Guiana|Guyana|Paraguay|Suriname|Uruguay|Venezuela",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Chrysocyon_brachyurus",
+      "id": "1005948",
+      "family": "Canidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Paraguay|Peru|Uruguay",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Lycalopex_culpaeus",
+      "id": "1005954",
+      "family": "Canidae",
+      "countryDistribution": "Argentina|Bolivia|Chile|Colombia|Ecuador|Peru",
+      "taxonomyNotes": "Lycalopex has priority over Pseudalopex, although some publications use Pseudalopex",
+      "taxonomyNotesCitation": "Favarini, M.O., Simão, T.L.L., Macedo, G.S., Garcez, F.S., Oliveira, L.R., Cárdenas-Alayza, S., Cardeña Mormontoy, M., Angulo, F., Kasper, C.B., Johnson, W.E. and Eizirik, E. 2022. Complex evolutionary history of the South American fox genus _Lycalopex_ (Mammalia, Carnivora, Canidae) inferred from multiple mitochondrial and nuclear markers. Diversity 14(8):642. doi:10.3390/d14080642",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Lycalopex_fulvipes",
+      "id": "1005955",
+      "family": "Canidae",
+      "countryDistribution": "Chile",
+      "taxonomyNotes": "Lycalopex has priority over Pseudalopex, although some publications use Pseudalopex",
+      "taxonomyNotesCitation": "Favarini, M.O., Simão, T.L.L., Macedo, G.S., Garcez, F.S., Oliveira, L.R., Cárdenas-Alayza, S., Cardeña Mormontoy, M., Angulo, F., Kasper, C.B., Johnson, W.E. and Eizirik, E. 2022. Complex evolutionary history of the South American fox genus _Lycalopex_ (Mammalia, Carnivora, Canidae) inferred from multiple mitochondrial and nuclear markers. Diversity 14(8):642. doi:10.3390/d14080642",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Speothos_venaticus",
+      "id": "1005964",
+      "family": "Canidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Colombia|Costa Rica|Ecuador|French Guiana|Guyana|Panama|Paraguay|Peru|Suriname|Venezuela",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Leopardus_colocola",
+      "id": "1005993",
+      "family": "Felidae",
+      "countryDistribution": "Chile",
+      "taxonomyNotes": "previously included L. braccatus, L. garleppi, L. munoai, and L. pajeros; L. braccatus and L. pajeros were initially considered distinct species, although later authors lumped them together; most recent molecular and morphological studies separated the colocola complex into the five species listed here",
+      "taxonomyNotesCitation": "Cossíos, D., Lucherini, M., Ruiz-García, M. and Angers, B. 2009. Influence of ancient glacial periods on the Andean fauna: the case of the pampas cat (_Leopardus colocolo_). BMC Evolutionary Biology 9(1):68. doi:10.1186/1471-2148-9-68|Feijó, J.A., Cheng, J.-l. and Nascimento, F.O. do. 2021. Taxonomic revision of the pampas cat _Leopardus colocola_ complex (Carnivora: Felidae): an integrative approach. Zoological Journal of the Linnean Society 191(2):575-611. doi:10.1093/zoolinnean/zlaa043|Lescroart, J., Bonilla-Sánchez, A., Napolitano, C., Buitrago-Torres, D.L., Ramírez-Chaves, H.E., Pulido-Santacruz, P., Murphy, W.J., Svardal, H. and Eizirik, E. 2023. Extensive phylogenomic discordance and the complex evolutionary history of the Neotropical cat genus _Leopardus_. Molecular Biology and Evolution 40(12):msad255. doi:10.1093/molbev/msad255",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Leopardus_geoffroyi",
+      "id": "1005996",
+      "family": "Felidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Chile|Paraguay|Uruguay",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "Lescroart, J., Bonilla-Sánchez, A., Napolitano, C., Buitrago-Torres, D.L., Ramírez-Chaves, H.E., Pulido-Santacruz, P., Murphy, W.J., Svardal, H. and Eizirik, E. 2023. Extensive phylogenomic discordance and the complex evolutionary history of the Neotropical cat genus _Leopardus_. Molecular Biology and Evolution 40(12):msad255. doi:10.1093/molbev/msad255",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Leopardus_jacobita",
+      "id": "1005999",
+      "family": "Felidae",
+      "countryDistribution": "Argentina|Bolivia|Chile|Peru",
+      "taxonomyNotes": "spelling changed for gender agreement",
+      "taxonomyNotesCitation": "Lescroart, J., Bonilla-Sánchez, A., Napolitano, C., Buitrago-Torres, D.L., Ramírez-Chaves, H.E., Pulido-Santacruz, P., Murphy, W.J., Svardal, H. and Eizirik, E. 2023. Extensive phylogenomic discordance and the complex evolutionary history of the Neotropical cat genus _Leopardus_. Molecular Biology and Evolution 40(12):msad255. doi:10.1093/molbev/msad255",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Leopardus_tigrinus",
+      "id": "1006003",
+      "family": "Felidae",
+      "countryDistribution": "Brazil|French Guiana|Guyana|Suriname|Venezuela|Bolivia?|Paraguay?",
+      "taxonomyNotes": "previously included L. pardinoides (although sometimes still refered to as a subspecies of L. tigrinus) and L. guttulus and may include additional unrecognized species diversity; the name emiliae has been considered a distinct species, but recent work has desmonstrated that this name represents true L. tigrinus",
+      "taxonomyNotesCitation": "Kitchener, A.C., Breitenmoser-Würsten, C., Eizirik, E., Gentry, A., Werdelin, L., Wilting, A., Yamaguchi, N., Abramov, A.V., Christiansen, P., Driscoll, C.A., Duckworth, J.W., Johnson, W., Luo, S.-j., Meijaard, E., O'Donoghue, P., Sanderson, J., Seymour, K., Bruford, M., Groves, C.P., Hoffmann, M., Nowell, K., Timmons, Z. and Tobe, S.S. 2017. A revised taxonomy of the Felidae. The final report of the Cat Classification Task Force of the IUCN/ SSC Cat Specialist Group. Cat News Special Issue 11:1-80. a#35407|Lescroart, J., Bonilla-Sánchez, A., Napolitano, C., Buitrago-Torres, D.L., Ramírez-Chaves, H.E., Pulido-Santacruz, P., Murphy, W.J., Svardal, H. and Eizirik, E. 2023. Extensive phylogenomic discordance and the complex evolutionary history of the Neotropical cat genus _Leopardus_. Molecular Biology and Evolution 40(12):msad255. doi:10.1093/molbev/msad255|Oliveira, T.G. de, Fox-Rosales, L.A., Ramírez-Fernández, J.D., Cepeda-Duque, J.C., Zug, R., Sanchez-Lalinde, C., Oliveira, M.J.R., Marinho, P.H.D., Bonilla-Sánchez, A., Marques, M.C., Cassaro, K., Moreno, R., Rumiz, D., Peters, F.B., Ortega, J., Cavalcanti, G., Mooring, M.S., Blankenship, S.R., Brenes-Mora, E., Dias, D., Mazim, F.D., Eizirik, E., Diehl, J.L., Marques, R.V., Ribeiro, A.C.C., Cruz, R.A., Pasa, E., Meira, L.P.C., Pereira, A., Ferreira, G.B., de Pinho, F.F., Sena, L.M.M., de Morais, V.R., Ribeiro Luiz, M., Moura, V.E.C., Favarini, M.O., Leal, K.P.G., Wagner, P.G.C., dos Santos, M.C., Sanderson, J., Araújo, E.P. and Rodrigues, F.H.G. 2024. Ecological modeling, biogeography, and phenotypic analyses setting the tiger cats' hyperdimensional niches reveal a new species. Scientific Reports 14(1):2395. doi:10.1038/s41598-024-52379-8|Bonilla-Sánchez, A., Sartor, C.C., Fox-Rosales, L.A., Feijó, J.A., Ramírez-Fernández, J.D., Brenes-Mora, E., Mooring, M.S., Blankenship, S.R., Sánchez-Lalinde, C., Nascimento, F.O. do, Zug, R., Oliveira, M.J., Dantas Marinho, P.H., Braga Ferreira, G., Solari, S., Oliveira, T.G. de and Eizirik, E. 2024. Ecological niche modeling of the _Leopardus tigrinus_ complex sheds light on its elusive evolutionary history. Journal of Mammalogy 105(5):953-964. doi:10.1093/jmammal/gyae074|Buitrago-Torres, D.L., Bonilla-Sánchez, A., Pereira, I.T.F., Sartor, C.C., Trigo, T.C., Oliveira, G.M.T.D., Oliveira, T.G.D., Angulo, F., Larrazábal, L.B., Moreno, G.R., Ramirez, J.L., Mavila, M., Quevedo, T., Ramírez-Chaves, H.E., Pulido-Santacruz, P., Oliveira, L.R. and Eizirik, E. 2026. Strong evidence of mitochondrial polyphyly of the _Leopardus tigrinus_ (Mammalia, Felidae) species complex revealed by expanded analyses of Andean populations. Genetics and Molecular Biology 49(2):e20250231. doi:10.1590/1678-4685-GMB-2025-0231",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Puma_concolor",
+      "id": "1006017",
+      "family": "Felidae",
+      "countryDistribution": "Argentina|Belize|Bolivia|Brazil|Canada|Chile|Colombia|Costa Rica|Ecuador|El Salvador|French Guiana|Guatemala|Guyana|Honduras|Mexico|Nicaragua|Panama|Paraguay|Peru|Suriname|United States|Venezuela|Uruguay?",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Panthera_onca",
+      "id": "1006021",
+      "family": "Felidae",
+      "countryDistribution": "Argentina|Belize|Bolivia|Brazil|Colombia|Costa Rica|Ecuador|French Guiana|Guatemala|Guyana|Honduras|Mexico|Nicaragua|Panama|Paraguay|Peru|Suriname|United States|Venezuela",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Tapirus_pinchaque",
+      "id": "1006118",
+      "family": "Tapiridae",
+      "countryDistribution": "Colombia|Ecuador|Peru",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Tapirus_terrestris",
+      "id": "1006119",
+      "family": "Tapiridae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Colombia|Ecuador|French Guiana|Guyana|Paraguay|Peru|Suriname|Venezuela",
+      "taxonomyNotes": "includes kabomani Cozzuol, Clozato, Holanda, Rodrigues, Nienow, Thoisy, Redondo, & F. R. Santos, 2013 and pygmaeus M. G. M. van Roosmalen & van Hooft in M. G. M. van Roosmalen, 2013; if kabomani is considered a distinct species, the name pygmaeus may have priority",
+      "taxonomyNotesCitation": "Cozzuol, M.A., Clozato, C.L., Holanda, E.C., Rodrigues, F.H.G., Nienow, S., de Thoisy, B., Redondo, R.A.F. and Santos, F.R. 2013. A new species of tapir from the Amazon. Journal of Mammalogy 94(6):1331-1345. doi:10.1644/12-MAMM-A-169.1|Ruiz-García, M., Vásquez, C., Sandoval, S., Kaston, F., Luengas-Villamil, K. and Shostell, J.M. 2016. Phylogeography and spatial structure of the lowland tapir (_Tapirus terrestris_, Perissodactyla: Tapiridae) in South America. Mitochondrial DNA (A)27(4):2334-2342. doi:10.3109/19401736.2015.1022766|Roosmalen, M.G.M. van. 2014. Case 3650. _Tapirus pygmaeus_ Van Roosmalen & Van Hooft in Van Roosmalen, 2013 (Mammalia, Perissodactyla, tapiridae): proposed confirmation of availability of the specific name and of the book in which this nominal species was proposed. Bulletin of Zoological Nomenclature 71(2):84-87. doi:10.21805/bzn.v71i2.a8",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Inia_boliviensis",
+      "id": "1006455",
+      "family": "Iniidae",
+      "countryDistribution": "Bolivia|Brazil",
+      "taxonomyNotes": "split from I. geoffrensis; some authors do not recognized four species within Inia based on the lack of data from where the species come in contact, however, pending further studies into these species contact zones, they are continually recognized",
+      "taxonomyNotesCitation": "Ruiz-García, M., Caballero, S., Martinez-Agüero, M. and Shostell, J.M. 2008. Molecular differentiation among _Inia geoffrensis_ and _Inia boliviensis_ (Iniidae, Cetacea) by means of nuclear intron sequences. Pp. 177–223 in Koven, V.T. (eds.). Population Genetics Research Progress. Nova Biomedical, New York, 362 pp. a#72108|Hrbek, T., Silva, V.M.F. da, Dutra, N., Gravena, W., Martin, A.R. and Farias, I.P. 2014. A new species of river dolphin from Brazil or: how little do we know our biodiversity. PLoS ONE 9(1):e83623. doi:10.1371/journal.pone.0083623|Emin-Lima, R., Machado, F.A., Siciliano, S., Gravena, W., Aliaga-Rossel, E., de Sousa e Silva, J., Hingst-Zaher, E. and de Oliveira, L.R. 2022. Morphological disparity in the skull of Amazon River dolphins of the genus _Inia_ (Cetacea, Iniidae) is inconsistent with a single taxon. Journal of Mammalogy 103(6):1278-1289. doi:10.1093/jmammal/gyac039|Tenille, A. F. C. J. S., e Silva, D. J. D. S., & de Oliveira, J. L. R. New genetic data extend the range of river dolphins Inia in the Amazon Delta.",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Inia_geoffrensis",
+      "id": "1006456",
+      "family": "Iniidae",
+      "countryDistribution": "Brazil|Colombia|Ecuador|Peru|Venezuela",
+      "taxonomyNotes": "previously included I. boliviensis, I. humboldtiana, and the populations now attributed to I. araguaiaensis; some authors do not recognized four species within Inia based on the lack of data from where the species come in contact, however, pending further studies into these species contact zones, they are continually recognized",
+      "taxonomyNotesCitation": "Ruiz-García, M., Caballero, S., Martinez-Agüero, M. and Shostell, J.M. 2008. Molecular differentiation among _Inia geoffrensis_ and _Inia boliviensis_ (Iniidae, Cetacea) by means of nuclear intron sequences. Pp. 177–223 in Koven, V.T. (eds.). Population Genetics Research Progress. Nova Biomedical, New York, 362 pp. a#72108|Hrbek, T., Silva, V.M.F. da, Dutra, N., Gravena, W., Martin, A.R. and Farias, I.P. 2014. A new species of river dolphin from Brazil or: how little do we know our biodiversity. PLoS ONE 9(1):e83623. doi:10.1371/journal.pone.0083623|Emin-Lima, R., Machado, F.A., Siciliano, S., Gravena, W., Aliaga-Rossel, E., de Sousa e Silva, J., Hingst-Zaher, E. and de Oliveira, L.R. 2022. Morphological disparity in the skull of Amazon River dolphins of the genus _Inia_ (Cetacea, Iniidae) is inconsistent with a single taxon. Journal of Mammalogy 103(6):1278-1289. doi:10.1093/jmammal/gyac039|Tenille, A. F. C. J. S., e Silva, D. J. D. S., & de Oliveira, J. L. R. New genetic data extend the range of river dolphins Inia in the Amazon Delta.",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Blastocerus_dichotomus",
+      "id": "1006289",
+      "family": "Cervidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Paraguay|Peru",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Hippocamelus_antisensis",
+      "id": "1006290",
+      "family": "Cervidae",
+      "countryDistribution": "Argentina|Bolivia|Chile|Peru",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Hippocamelus_bisulcus",
+      "id": "1006291",
+      "family": "Cervidae",
+      "countryDistribution": "Argentina|Chile",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Mazama_americana",
+      "id": "1006292",
+      "family": "Cervidae",
+      "countryDistribution": "Bolivia|Brazil|Colombia|Ecuador|French Guiana|Guyana|Peru|Suriname|Trinidad and Tobago|Venezuela",
+      "taxonomyNotes": "previously included the name jucunda, which is now used for the species previously known as 'bororo', and previously included M. rufa and M. zetta; includes gualea, trinitatis, whitelyi, and zamora, which were recognized as distinct in Groves & Grubb 2011; for additional information regarding the MDD's decision to not follow the Groves & Grubb 2011 Ungulate Taxonomy, see 'Subjective decisions' on the 'About' tab",
+      "taxonomyNotesCitation": "Groves, C.P. and Grubb, P. 2011. Ungulate Taxonomy. Johns Hopkins University Press, Baltimore, 309 pp. doi:10.56021/9781421400938|Mantellatto, A.M.B., González, S. and Duarte, J.M.B. 2022. Cytochrome _b_ sequence of the _Mazama americana_ jucunda Thomas, 1913 holotype reveals _Mazama bororo_ Duarte, 1996 as its junior synonym. Genetics and Molecular Biology 45(1):e20210093. doi:10.1590/1678-4685-GMB-2021-0093|Peres, P.H.F., Luduvério, D.J., Bernegossi, A.M., Galindo, D.J., Nascimento, G.B., Oliveira, M.L., Sandoval, E.D.P., Vozdova, M., Kubickova, S., Cernohorska, H. and Duarte, J.M.B. 2021. Revalidation of _Mazama rufa_ (Illiger 1815) (Artiodactyla: Cervidae) as a distinct species out of the complex _Mazama americana_ (Erxleben 1777). Frontiers in Genetics 12(742870):1-18. doi:10.3389/fgene.2021.742870|Escobedo-Morales, L.A., Castañeda-Rico, S., Mandujano, S., León-Paniagua, L.S., Martínez-Meyer, E. and Maldonado, J.E. 2025. Mitochondrial genome and ultraconserved elements reveal a species complex within the Central American brocket deer _Mazama temama_ (Artiodactyla: Cervidae). Molecular Phylogenetics and Evolution 211:108400. doi:10.1016/j.ympev.2025.108400",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Odocoileus_virginianus",
+      "id": "1006302",
+      "family": "Cervidae",
+      "countryDistribution": "Belize|Brazil|Canada|Colombia|Costa Rica|Curaçao|Ecuador|El Salvador|French Guiana|Guatemala|Guyana|Honduras|Mexico|Nicaragua|Panama|Peru|Suriname|United States|Venezuela",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Ozotoceros_bezoarticus",
+      "id": "1006303",
+      "family": "Cervidae",
+      "countryDistribution": "Argentina|Bolivia|Brazil|Paraguay|Uruguay",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Pudella_mephistophiles",
+      "id": "1006304",
+      "family": "Cervidae",
+      "countryDistribution": "Colombia|Ecuador|Peru",
+      "taxonomyNotes": "previously included populations now recognized as P. carlae",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Pudu_puda",
+      "id": "1006305",
+      "family": "Cervidae",
+      "countryDistribution": "Argentina|Chile",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Dicotyles_tajacu",
+      "id": "1006380",
+      "family": "Tayassuidae",
+      "countryDistribution": "Argentina|Belize|Bolivia|Brazil|Colombia|Costa Rica|Ecuador|El Salvador|French Guiana|Guatemala|Guyana|Honduras|Mexico|Nicaragua|Panama|Paraguay|Peru|Suriname|Trinidad and Tobago|United States|Venezuela",
+      "taxonomyNotes": "includes crassus and angulatus, which were considered distinct by Groves & Grubb 2011; also includes the recently described maximus; generic name changed from Pecari to Dicotyles based on recent nomenclatural decisions; for additional information regarding the MDD's decision to not follow the Groves & Grubb 2011 Ungulate Taxonomy, see 'Subjective decisions' on the 'About' tab",
+      "taxonomyNotesCitation": "Groves, C.P. and Grubb, P. 2011. Ungulate Taxonomy. Johns Hopkins University Press, Baltimore, 309 pp. doi:10.56021/9781421400938|Gongora, J., Biondo, C., Cooper, J.D., Taber, A., Keuroghlian, A., Altrichter, M., Nascimento, F.F. do, Chong, A.Y., Miyaki, C.Y., Bodmer, R., Mayor, P. and González, S. 2011. Revisiting the species status of _Pecari maximus_ van Roosmalen et al., 2007 (Mammalia) from the Brazilian Amazon. Bonn zoological Bulletin 60(1):95-101. a#1184|Acosta, L.E., Garbino, G.S.T., Gasparini, G.M. and Parisi Dutra, R. 2020. Unraveling the nomenclatural puzzle of the collared and white-lipped peccaries (Mammalia, Cetartiodactyla, Tayassuidae). Zootaxa 4851(1):60-80. doi:10.11646/zootaxa.4851.1.2",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Tayassu_pecari",
+      "id": "1006381",
+      "family": "Tayassuidae",
+      "countryDistribution": "Argentina|Belize|Bolivia|Brazil|Colombia|Costa Rica|Ecuador|French Guiana|Guatemala|Guyana|Honduras|Mexico|Nicaragua|Panama|Paraguay|Peru|Suriname|Venezuela",
+      "taxonomyNotes": "NA",
+      "taxonomyNotesCitation": "NA",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    },
+    {
+      "sciName": "Lama_guanicoe",
+      "id": "1006386",
+      "family": "Camelidae",
+      "countryDistribution": "Argentina|Bolivia|Chile|Peru",
+      "taxonomyNotes": "wild form of L. glama; previously included under L. glama",
+      "taxonomyNotesCitation": "Gentry, A., Clutton-Brock, J. and Groves, C.P. 2004. The naming of wild animal species and their domestic derivatives. Journal of Archaeological Science 31(5):645-651. doi:10.1016/j.jas.2003.10.006|González, B.A., Palma, R.E., Zapata, B. and Marín, J.C. 2006. Taxonomic and biogeographical status of guanaco _Lama guanicoe_ (Artiodactyla, Camelidae). Mammal Review 36(2):157-178. doi:10.1111/j.1365-2907.2006.00084.x",
+      "distributionNotes": "",
+      "distributionNotesCitation": ""
+    }
+  ]
+}

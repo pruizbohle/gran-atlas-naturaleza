@@ -1985,6 +1985,17 @@ if(northAmerica3220){
 }
 // END AM-02 catalog installation.
 
+// AM-04 BEGIN catalog
+const southAmerica3230=typeof globalThis!=='undefined'?globalThis.AtlasSouthAmerica3230:null;
+if(southAmerica3230){
+ for(const [id,profile] of Object.entries(southAmerica3230.species)){if(SPECIES[id])throw Error('Duplicate South American species: '+id);SPECIES[id]=JSON.parse(JSON.stringify(profile));}
+ for(const region of southAmerica3230.regions){if(REGIONS.some(r=>r.id===region.id))throw Error('Duplicate South American region: '+region.id);REGIONS.push(JSON.parse(JSON.stringify(region)));}
+ Object.assign(SEXUAL_DIMORPHISM,southAmerica3230.dimorphism);
+ for(const [id,categories] of Object.entries(southAmerica3230.categories))SPECIMEN_CATEGORIES[id]=categories.slice();
+ const previousTaxonomy=taxonomyInfo;
+ taxonomyInfo=function(id){return SPECIES[id]?.origin==='sa3230'?SPECIES[id].taxonomy:previousTaxonomy(id);};
+}
+// AM-04 END catalog
 const RESEARCH_NODES=[
   {id:'prismaticos_1', name:'Prismáticos de latón', desc:'+12 % relativo sobre probabilidad base manual (50 % → 56 %)', money:25, knowledge:20, once:true, effect(s){s.upgrades.prism=1;}},
   {id:'prismaticos_2', name:'Lentes calibrados', desc:'+24 % relativo acumulado (50 % → 62 %, sin equipo)', money:50, knowledge:35, req:'prismaticos_1', once:true, effect(s){s.upgrades.prism=2;}},
@@ -2016,6 +2027,9 @@ const RESEARCH_NODES=[
 RESEARCH_NODES.push({id:"africa_1",name:"Estudios cartográficos de África",desc:"Investiga África; requiere conservar el Mapa de África.",money:1200,knowledge:900,req:"asia_1",reqItem:"africa_map",reqItemConsume:false,once:true,effect(s){s.upgrades.africaUnlocked=1;}},
 {id:"nuevo_mundo_1",name:"Navegación al Nuevo Mundo",desc:"Permite viajes atlánticos, exige Cuadrante transatlántico.",money:2200,knowledge:1800,req:"africa_1",reqItem:"oceanic_quadrant",reqItemConsume:false,once:true,effect(s){s.upgrades.newWorldUnlocked=1;}},
 {id:"norteamerica_1",name:"Cartografía de Norteamérica",desc:"Habilita Norteamérica; requiere mapa completo y navegación atlántica.",money:2800,knowledge:2400,req:"nuevo_mundo_1",reqItem:"north_america_map",reqItemConsume:false,once:true,effect(s){s.upgrades.northAmericaUnlocked=1;}});
+// AM-04 BEGIN research
+if(southAmerica3230)RESEARCH_NODES.push({id:'sudamerica_1',name:'Cartografía de Sudamérica',desc:'Extiende la cartografía del Nuevo Mundo hacia el sur. Cada región exige prestigio acumulado, sin consumirlo.',branch:'expediciones',money:southAmerica3230.access.money,knowledge:southAmerica3230.access.knowledge,req:'norteamerica_1',once:true,effect(s){s.upgrades.southAmericaUnlocked=1;}});
+// AM-04 END research
 // Beta 3.15: todos los costes y probabilidades se centralizan aquí para la futura nivelación.
 // Esta beta es deliberadamente más accesible; no se vinculan costes a contenido geográfico futuro.
 const RESEARCH_V315_BALANCE=Object.freeze({betaTest:true,manualDouble:[0,0.10,0.20,0.25],manualTriple:[0,0,0,0.05],autoDouble:0.12,autoTriple:0.02,autoCensusMultiplier:2,museumIncomeBonus:0.15});
@@ -2119,6 +2133,9 @@ if(Object.keys(state.regionUnlocked||{}).some(id=>REGIONS.find(r=>r.id===id)?.co
 state.upgrades.africaUnlocked=!!state.purchases.africa_1;
 state.upgrades.newWorldUnlocked=!!state.purchases.nuevo_mundo_1;
 state.upgrades.northAmericaUnlocked=!!state.purchases.norteamerica_1;
+// AM-04 BEGIN save-flag
+if(southAmerica3230)state.upgrades.southAmericaUnlocked=!!state.purchases.sudamerica_1;
+// AM-04 END save-flag
 // Recuperación de efectos Beta 3.15 desde compras: respeta guardados antiguos y exportaciones.
 for(const node of [...RESEARCH_V315_NODES,...RESEARCH_V317_NODES,...RESEARCH_V318_NODES]){if(state.purchases[node.id])node.effect(state);}
 // Migración v2.1->v2.2: zonas asiáticas previamente habilitadas conservan su acceso.
@@ -2858,6 +2875,9 @@ const ATLAS_CONTINENTS=[
   {id:'Polos',label:'Polos',icon:'🧊',implemented:false},
   {id:'Océanos',label:'Océanos',icon:'🌊',implemented:false}
 ];
+// AM-04 BEGIN continent
+if(southAmerica3230)ATLAS_CONTINENTS.find(c=>c.id==='Sudamérica').implemented=true;
+// AM-04 END continent
 function regionRequirementsMet(r){
   if(!r) return false;
   if(r.continent==='Asia') return !!(state.upgrades.asiaUnlocked && state.prestige>=r.unlock.prestige);
@@ -2973,6 +2993,14 @@ function atlasViewModel(){
  return {continent:{...continent,status:continentStatus(selected)},continents:ATLAS_CONTINENTS.map(c=>({...c,status:continentStatus(c.id)})),regions,cells:mesh.cells.map(c=>({...c,regions:c.regionIds.map(id=>regions.find(r=>r.id===id))})),selectedId:chosen?.id,currentId:state.currentRegion,readyCount:regions.filter(r=>r.status==='actual'||r.status==='abierta').length,identified:ids.filter(id=>stage(id)>=1).length,total:ids.length,board:mesh.board};
 }
 function renderAtlas(){return globalThis.AtlasUI.render(atlasViewModel());}
+// AM-04 BEGIN atlas-access
+if(southAmerica3230){
+ const previousRequirements=regionRequirementsMet,previousContinentStatus=continentStatus,previousRegionModel=atlasRegionModel;
+ regionRequirementsMet=function(r){return r?.continent==='Sudamérica'?!!(state.upgrades.southAmericaUnlocked&&state.prestige>=r.unlock.prestige):previousRequirements(r);};
+ continentStatus=function(continent){return continent==='Sudamérica'?(state.upgrades.southAmericaUnlocked?'available':'unlockable'):previousContinentStatus(continent);};
+ atlasRegionModel=function(r){const model=previousRegionModel(r);if(r.continent==='Sudamérica'){model.requirements.unshift({label:'Cartografía de Sudamérica',met:!!state.upgrades.southAmericaUnlocked});if(model.status==='bloqueada')model.summary=model.requirements.find(x=>!x.met)?.label||'Requisitos pendientes';}return model;};
+}
+// AM-04 END atlas-access
 function rememberAtlasViewport(){
  const root=panel.querySelector('.atlas-game');if(!root)return;
  const continent=root.dataset.continent||state.atlasView;
@@ -4543,6 +4571,9 @@ setInterval(tick,1000);
 
 // Sprites simplificados para ejemplares macho y hembra. No son variantes raras.
 function sexSpriteMarkup(id,sex){
+// AM-04 BEGIN sex-art
+ if(SPECIES[id]?.origin==='sa3230'&&SEXUAL_DIMORPHISM[id])return globalThis.ATLAS_SOUTH_ART_V3230?.(SPECIES[id],SPECIES[id].color,'normal',sex)||null;
+// AM-04 END sex-art
  if(SPECIES[id]?.origin==='na3220'&&SEXUAL_DIMORPHISM[id])return globalThis.ATLAS_NORTH_ART_V3220?.(SPECIES[id],SPECIES[id].color,'normal',sex)||null;
   const spec=SEXUAL_DIMORPHISM[id];
   if(!spec) return null;
@@ -5397,6 +5428,9 @@ function familyV3154Sprite(id,skin){
 }
 
 function spriteFor(kind,color,skin,id){
+// AM-04 BEGIN art
+ const southArt=globalThis.ATLAS_SOUTH_ART_V3230?.(SPECIES[id],color,skin);if(southArt)return southArt;
+// AM-04 END art
  const northArt=globalThis.ATLAS_NORTH_ART_V3220?.(SPECIES[id],color,skin);if(northArt)return northArt;
  const mammal3194=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_MAMMAL_ART_V3194==='function') ? globalThis.ATLAS_MAMMAL_ART_V3194(SPECIES[id],color,skin,null,id) : null; if(mammal3194)return mammal3194;
  const bird3193=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_BIRD_ART_V3193==='function') ? globalThis.ATLAS_BIRD_ART_V3193(SPECIES[id],color,skin) : null; if(bird3193)return bird3193;

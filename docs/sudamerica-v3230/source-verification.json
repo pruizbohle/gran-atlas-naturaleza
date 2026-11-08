@@ -1,0 +1,19 @@
+{
+  "workbook": "Atlas_Fauna_Hexagonal_209_900_Especies.xlsx",
+  "sha256": "5cd22412e6b251d8f02a90e4c8303e02946d5e5d26855589d2c6750649fe4350",
+  "sheets": [
+    "Resumen",
+    "Mapa",
+    "Hexágonos",
+    "Fauna",
+    "Catálogo especies",
+    "Metodología y fuentes"
+  ],
+  "faunaPresences": 192,
+  "sourceBinomials": 131,
+  "am01RowsMatchOriginalWorkbook": true,
+  "hexagonsRegionsMatchOriginalWorkbook": true,
+  "catalogSpeciesIDsAndScientificNamesMatch": true,
+  "geographicCoordinates": "New axial composition; original map cell coordinates are provenance only.",
+  "mapSheetUse": "Consultado como esquema de procedencia; su geometría no se importó. La retícula nueva se define matemáticamente en diez celdas."
+}

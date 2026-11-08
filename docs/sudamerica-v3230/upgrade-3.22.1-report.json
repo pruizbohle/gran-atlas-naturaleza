@@ -1,0 +1,15 @@
+{
+  "from": "3.22.1",
+  "to": "3.23.0",
+  "oldPlayableCells": 14,
+  "northAmericaPlayableCells": 14,
+  "southAmericaPlayableCells": 10,
+  "oldWorkerReproduced": true,
+  "otherWindowsGuard": true,
+  "exactBackup": true,
+  "oldProgressPreserved": true,
+  "saharaIDAndProgressPreserved": true,
+  "newRegionsRemainUnopened": true,
+  "offlineAfterUpgrade": true,
+  "jsErrors": []
+}

@@ -1,0 +1,146 @@
+{
+  "aliases": {
+    "Pudu mephistophiles": "Pudella mephistophiles",
+    "Dasypus hybridus": "Dasypus septemcinctus",
+    "Conepatus humboldtii": "Conepatus chinga"
+  },
+  "decisions": [
+    {
+      "sourceScientific": "Pudu mephistophiles",
+      "usedScientific": "Pudella mephistophiles",
+      "status": "accepted-name",
+      "decision": "Pudella mephistophiles según MDD; separado de P. carlae y Pudu puda. No se amplía a todos los Andes.",
+      "sourceRows": [
+        914
+      ],
+      "authority": "ASM MDD current taxonomy, commit 749c2de",
+      "consulted": "2026-11-08"
+    },
+    {
+      "sourceScientific": "Dasypus hybridus",
+      "usedScientific": "Dasypus septemcinctus",
+      "status": "accepted-synonym",
+      "decision": "MDD incluye hybridus como subespecie de Dasypus septemcinctus. Una identidad; se conserva la fila original de Pampas.",
+      "sourceRows": [
+        1337
+      ],
+      "authority": "ASM MDD current taxonomy, commit 749c2de",
+      "consulted": "2026-11-08"
+    },
+    {
+      "sourceScientific": "Conepatus humboldtii",
+      "usedScientific": "Conepatus chinga",
+      "status": "accepted-synonym",
+      "decision": "MDD incluye humboldtii en Conepatus chinga. Se conserva la población patagónica de la planilla sin generalizarla a todo el género.",
+      "sourceRows": [
+        1468
+      ],
+      "authority": "ASM MDD current taxonomy, commit 749c2de",
+      "consulted": "2026-11-08"
+    },
+    {
+      "sourceScientific": "Leopardus colocola",
+      "usedScientific": "Leopardus colocola",
+      "status": "source-concept-unresolved",
+      "decision": "Se conserva el concepto amplio de la planilla en Pampas/Patagonia. MDD restringe L. colocola a Chile y separa pajeros/fasciatus/garleppi; las filas no permiten determinar un sustituto de forma unívoca. No equivale a afirmar presencia de colocola sensu stricto en todas esas áreas.",
+      "sourceRows": [
+        1334,
+        1466
+      ],
+      "authority": "ASM MDD current taxonomy, commit 749c2de",
+      "consulted": "2026-11-08"
+    },
+    {
+      "sourceScientific": "Leopardus tigrinus",
+      "usedScientific": "Leopardus tigrinus",
+      "status": "source-concept-unresolved",
+      "decision": "MDD separa pardinoides y guttulus. La fila Andes del Norte no identifica localidad: se conserva tigrinus sensu planilla, pendiente de determinación. No se fusiona con wiedii ni se inventa una equivalencia con pardinoides.",
+      "sourceRows": [
+        911,
+        934
+      ],
+      "authority": "ASM MDD current taxonomy, commit 749c2de",
+      "consulted": "2026-11-08"
+    },
+    {
+      "sourceScientific": "Mazama americana",
+      "usedScientific": "Mazama americana",
+      "status": "accepted-restricted",
+      "decision": "MDD reconoce americana y separa rufa/zetta. Se conserva la identidad para las subáreas amazónicas/vertientes bajas de la fuente, con alcance regional no certificado.",
+      "sourceRows": [
+        918,
+        950
+      ],
+      "authority": "ASM MDD current taxonomy, commit 749c2de",
+      "consulted": "2026-11-08"
+    },
+    {
+      "sourceScientific": "Saimiri sciureus",
+      "usedScientific": "Saimiri sciureus",
+      "status": "source-concept-unresolved",
+      "decision": "MDD restringe sciureus y separa cassiquiarensis/collinsi/macrodon. La fila Caribe no permite elegir un taxón moderno inequívoco. Se conserva el concepto de la planilla, no una distribución costera general.",
+      "sourceRows": [
+        755,
+        946
+      ],
+      "authority": "ASM MDD current taxonomy, commit 749c2de",
+      "consulted": "2026-11-08"
+    },
+    {
+      "sourceScientific": "Cyclopes didactylus",
+      "usedScientific": "Cyclopes didactylus",
+      "status": "accepted-restricted",
+      "decision": "MDD reconoce varias especies de Cyclopes. Se conserva didactylus restringido al ámbito guayanés/norte oriental; no se atribuye a toda Amazonía.",
+      "sourceRows": [
+        940
+      ],
+      "authority": "ASM MDD current taxonomy, commit 749c2de",
+      "consulted": "2026-11-08"
+    },
+    {
+      "sourceScientific": "Inia boliviensis",
+      "usedScientific": "Inia boliviensis",
+      "status": "accepted-restricted",
+      "decision": "MDD reconoce boliviensis separado de geoffrensis. Subárea: cuenca alta del Madeira, Bolivia/Brasil; no se duplica una localidad entre conceptos amplios.",
+      "sourceRows": [
+        941
+      ],
+      "authority": "ASM MDD current taxonomy, commit 749c2de",
+      "consulted": "2026-11-08"
+    },
+    {
+      "sourceScientific": "Inia geoffrensis",
+      "usedScientific": "Inia geoffrensis",
+      "status": "accepted-restricted",
+      "decision": "MDD reconoce geoffrensis separado de boliviensis, humboldtiana y araguaiaensis. Subárea: cuencas amazónicas compatibles, excluyendo el concepto de boliviensis.",
+      "sourceRows": [
+        931
+      ],
+      "authority": "ASM MDD current taxonomy, commit 749c2de",
+      "consulted": "2026-11-08"
+    },
+    {
+      "sourceScientific": "Electrophorus electricus",
+      "usedScientific": "Electrophorus electricus",
+      "status": "source-concept-unresolved",
+      "decision": "Se conserva electricus sensu fuente. No se añaden voltai/varii ni se asume que toda Amazonía corresponda al concepto restringido; requiere localidad y autoridad ictiológica accesible.",
+      "sourceRows": [
+        955
+      ],
+      "authority": "AM-01 + concepto de fuente; Catalog of Fishes no accesible",
+      "consulted": "2026-11-08"
+    },
+    {
+      "sourceScientific": "Arapaima gigas",
+      "usedScientific": "Arapaima gigas",
+      "status": "source-concept-unresolved",
+      "decision": "Se conserva gigas sensu fuente; sin localidad no se reasigna a otras Arapaima descritas. La consulta en línea al Catalog of Fishes fue bloqueada por la política de red del entorno, no por ausencia de la especie.",
+      "sourceRows": [
+        953
+      ],
+      "authority": "AM-01 + concepto de fuente; Catalog of Fishes no accesible",
+      "consulted": "2026-11-08"
+    }
+  ],
+  "note": "Las decisiones de identidad no certifican cada presencia geográfica del Excel. Los estados no resueltos conservan expresamente el registro de origen."
+}

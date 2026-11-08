@@ -1,6 +1,6 @@
 'use strict';
 const fs=require('node:fs'),{catalogSource}=require('../tests/helpers/catalog.cjs');
-const source=fs.readFileSync('www/js/app.js','utf8');
+const source=fs.readFileSync('www/js/app.js','utf8').replace(/\/\/ AM-04 BEGIN [^\n]+\n[\s\S]*?\/\/ AM-04 END [^\n]+\n/g,'');
 const extension=source.slice(source.indexOf('// AM-02: additive catalog'),source.indexOf('// END AM-02 catalog installation.')+'// END AM-02 catalog installation.'.length);
 const graphics=source.slice(source.indexOf('function sexSpriteMarkup('),source.indexOf('// initial unlock checks and migration'));
 const output=`/* Generated production catalog and exact sprite router. Isolated; no storage or live game. */

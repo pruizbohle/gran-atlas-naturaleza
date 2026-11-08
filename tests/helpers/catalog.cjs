@@ -6,9 +6,10 @@ function catalogSource(source){
  if(start<0||end<start)throw Error('Cannot locate the complete production catalog');
  return source.slice(start,end);
 }
-function catalog(source=fs.readFileSync('www/js/app.js','utf8'), expanded=false){
- const prelude=expanded?fs.readFileSync('www/js/northamerica-data-v3220.js','utf8'):'';
+function catalog(source=fs.readFileSync('www/js/app.js','utf8'), expanded=false,southamerica=true){
+ const prelude=expanded?fs.readFileSync('www/js/northamerica-data-v3220.js','utf8')+(southamerica?'\n'+fs.readFileSync('www/js/southamerica-data-v3230.js','utf8'):''):'';
  const extension=expanded?source.slice(source.indexOf('// AM-02: additive catalog'),source.indexOf('// END AM-02 catalog installation.')+'// END AM-02 catalog installation.'.length):'';
- return vm.runInNewContext(prelude+'\n'+catalogSource(source)+'\n'+extension+'\n({SPECIES,SEXUAL_DIMORPHISM,REGIONS})');
+ const south=expanded&&southamerica?source.match(/\/\/ AM-04 BEGIN catalog\n[\s\S]*?\/\/ AM-04 END catalog\n/)[0]:'';
+ return vm.runInNewContext(prelude+'\n'+catalogSource(source)+'\n'+extension+'\n'+south+'\n({SPECIES,SEXUAL_DIMORPHISM,REGIONS})');
 }
 module.exports={catalog,catalogSource};
