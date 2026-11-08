@@ -34,7 +34,7 @@ La comparación del laboratorio muestra la propuesta de 406 celdas frente a esta
 
 ## Archivos y reproducción
 
-Los cambios se concentran en `atlas-geography-v3211b.js`, el dibujo del Atlas, sus estilos y el laboratorio. Los snapshots de la propuesta anterior solo se cargan en la comparación. La revisión final incorpora la petición de conservar las 14 celdas norteamericanas del Excel y las 24 regiones africanas independientes. Se actualizan la caché offline y las referencias de recursos; la versión visible continúa siendo 3.21.1b.
+Los cambios se concentran en `atlas-geography-v3211b.js`, el dibujo del Atlas, sus estilos y el laboratorio. Los snapshots de la propuesta anterior solo se cargan en la comparación. La revisión final incorpora la petición de conservar las 14 celdas norteamericanas del Excel y las 24 regiones africanas independientes. Se actualizan la caché offline y las referencias de recursos; la precarga pide archivos frescos para evitar reutilizar una revisión HTTP anterior; la versión visible continúa siendo 3.21.1b.
 
 ```sh
 node --test tests/*.test.cjs
