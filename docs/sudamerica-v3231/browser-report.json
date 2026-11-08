@@ -1,0 +1,1177 @@
+{
+  "version": "3.23.1",
+  "researchBoughtThroughUI": true,
+  "atlasChecks": [
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_caribe_sudamericano",
+      "actionBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_llanos_del_orinoco",
+      "actionBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_andes_centrales",
+      "actionBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_andes_del_norte",
+      "actionBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_amazonia",
+      "actionBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_pantanal",
+      "actionBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_cerrado_brasileno",
+      "actionBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_pampas",
+      "actionBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_desierto_de_atacama",
+      "actionBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "actionBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_caribe_sudamericano",
+      "actionBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_llanos_del_orinoco",
+      "actionBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_andes_centrales",
+      "actionBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_andes_del_norte",
+      "actionBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_amazonia",
+      "actionBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_pantanal",
+      "actionBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_cerrado_brasileno",
+      "actionBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_pampas",
+      "actionBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_desierto_de_atacama",
+      "actionBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "actionBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_caribe_sudamericano",
+      "actionBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_llanos_del_orinoco",
+      "actionBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_andes_centrales",
+      "actionBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_andes_del_norte",
+      "actionBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_amazonia",
+      "actionBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_pantanal",
+      "actionBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_cerrado_brasileno",
+      "actionBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_pampas",
+      "actionBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_desierto_de_atacama",
+      "actionBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "actionBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_caribe_sudamericano",
+      "actionBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_llanos_del_orinoco",
+      "actionBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_andes_centrales",
+      "actionBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_andes_del_norte",
+      "actionBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_amazonia",
+      "actionBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_pantanal",
+      "actionBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_cerrado_brasileno",
+      "actionBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_pampas",
+      "actionBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_desierto_de_atacama",
+      "actionBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "actionBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "wholeContinentVisible": true
+    }
+  ],
+  "fieldChecks": [
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_caribe_sudamericano",
+      "actionBottom": 493.828125,
+      "animalBottom": 431.828125,
+      "progressBottom": 560.21875,
+      "dockTop": 589,
+      "horizontal": false
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_llanos_del_orinoco",
+      "actionBottom": 493.828125,
+      "animalBottom": 431.828125,
+      "progressBottom": 560.21875,
+      "dockTop": 589,
+      "horizontal": false
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_andes_centrales",
+      "actionBottom": 493.828125,
+      "animalBottom": 431.828125,
+      "progressBottom": 560.21875,
+      "dockTop": 589,
+      "horizontal": false
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_andes_del_norte",
+      "actionBottom": 493.828125,
+      "animalBottom": 431.828125,
+      "progressBottom": 560.21875,
+      "dockTop": 589,
+      "horizontal": false
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_amazonia",
+      "actionBottom": 493.828125,
+      "animalBottom": 431.828125,
+      "progressBottom": 560.21875,
+      "dockTop": 589,
+      "horizontal": false
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_pantanal",
+      "actionBottom": 493.828125,
+      "animalBottom": 431.828125,
+      "progressBottom": 560.21875,
+      "dockTop": 589,
+      "horizontal": false
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_cerrado_brasileno",
+      "actionBottom": 493.828125,
+      "animalBottom": 431.828125,
+      "progressBottom": 560.21875,
+      "dockTop": 589,
+      "horizontal": false
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_pampas",
+      "actionBottom": 493.828125,
+      "animalBottom": 431.828125,
+      "progressBottom": 560.21875,
+      "dockTop": 589,
+      "horizontal": false
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_desierto_de_atacama",
+      "actionBottom": 493.828125,
+      "animalBottom": 431.828125,
+      "progressBottom": 560.21875,
+      "dockTop": 589,
+      "horizontal": false
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "actionBottom": 493.828125,
+      "animalBottom": 431.828125,
+      "progressBottom": 560.21875,
+      "dockTop": 589,
+      "horizontal": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_caribe_sudamericano",
+      "actionBottom": 496.140625,
+      "animalBottom": 434.140625,
+      "progressBottom": 562.53125,
+      "dockTop": 689,
+      "horizontal": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_llanos_del_orinoco",
+      "actionBottom": 496.140625,
+      "animalBottom": 434.140625,
+      "progressBottom": 562.53125,
+      "dockTop": 689,
+      "horizontal": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_andes_centrales",
+      "actionBottom": 496.140625,
+      "animalBottom": 434.140625,
+      "progressBottom": 562.53125,
+      "dockTop": 689,
+      "horizontal": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_andes_del_norte",
+      "actionBottom": 496.140625,
+      "animalBottom": 434.140625,
+      "progressBottom": 562.53125,
+      "dockTop": 689,
+      "horizontal": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_amazonia",
+      "actionBottom": 496.140625,
+      "animalBottom": 434.140625,
+      "progressBottom": 562.53125,
+      "dockTop": 689,
+      "horizontal": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_pantanal",
+      "actionBottom": 496.140625,
+      "animalBottom": 434.140625,
+      "progressBottom": 562.53125,
+      "dockTop": 689,
+      "horizontal": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_cerrado_brasileno",
+      "actionBottom": 496.140625,
+      "animalBottom": 434.140625,
+      "progressBottom": 562.53125,
+      "dockTop": 689,
+      "horizontal": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_pampas",
+      "actionBottom": 496.140625,
+      "animalBottom": 434.140625,
+      "progressBottom": 562.53125,
+      "dockTop": 689,
+      "horizontal": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_desierto_de_atacama",
+      "actionBottom": 496.140625,
+      "animalBottom": 434.140625,
+      "progressBottom": 562.53125,
+      "dockTop": 689,
+      "horizontal": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "actionBottom": 496.140625,
+      "animalBottom": 434.140625,
+      "progressBottom": 562.53125,
+      "dockTop": 689,
+      "horizontal": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_caribe_sudamericano",
+      "actionBottom": 575.140625,
+      "animalBottom": 512.140625,
+      "progressBottom": 643.140625,
+      "dockTop": 793,
+      "horizontal": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_llanos_del_orinoco",
+      "actionBottom": 575.140625,
+      "animalBottom": 512.140625,
+      "progressBottom": 643.140625,
+      "dockTop": 793,
+      "horizontal": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_andes_centrales",
+      "actionBottom": 575.140625,
+      "animalBottom": 512.140625,
+      "progressBottom": 643.140625,
+      "dockTop": 793,
+      "horizontal": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_andes_del_norte",
+      "actionBottom": 575.140625,
+      "animalBottom": 512.140625,
+      "progressBottom": 643.140625,
+      "dockTop": 793,
+      "horizontal": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_amazonia",
+      "actionBottom": 575.140625,
+      "animalBottom": 512.140625,
+      "progressBottom": 643.140625,
+      "dockTop": 793,
+      "horizontal": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_pantanal",
+      "actionBottom": 575.140625,
+      "animalBottom": 512.140625,
+      "progressBottom": 643.140625,
+      "dockTop": 793,
+      "horizontal": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_cerrado_brasileno",
+      "actionBottom": 575.140625,
+      "animalBottom": 512.140625,
+      "progressBottom": 643.140625,
+      "dockTop": 793,
+      "horizontal": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_pampas",
+      "actionBottom": 575.140625,
+      "animalBottom": 512.140625,
+      "progressBottom": 643.140625,
+      "dockTop": 793,
+      "horizontal": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_desierto_de_atacama",
+      "actionBottom": 575.140625,
+      "animalBottom": 512.140625,
+      "progressBottom": 643.140625,
+      "dockTop": 793,
+      "horizontal": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "actionBottom": 575.140625,
+      "animalBottom": 512.140625,
+      "progressBottom": 643.140625,
+      "dockTop": 793,
+      "horizontal": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_caribe_sudamericano",
+      "actionBottom": 646.140625,
+      "animalBottom": 583.140625,
+      "progressBottom": 714.140625,
+      "dockTop": 864,
+      "horizontal": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_llanos_del_orinoco",
+      "actionBottom": 646.140625,
+      "animalBottom": 583.140625,
+      "progressBottom": 714.140625,
+      "dockTop": 864,
+      "horizontal": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_andes_centrales",
+      "actionBottom": 646.140625,
+      "animalBottom": 583.140625,
+      "progressBottom": 714.140625,
+      "dockTop": 864,
+      "horizontal": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_andes_del_norte",
+      "actionBottom": 646.140625,
+      "animalBottom": 583.140625,
+      "progressBottom": 714.140625,
+      "dockTop": 864,
+      "horizontal": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_amazonia",
+      "actionBottom": 646.140625,
+      "animalBottom": 583.140625,
+      "progressBottom": 714.140625,
+      "dockTop": 864,
+      "horizontal": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_pantanal",
+      "actionBottom": 646.140625,
+      "animalBottom": 583.140625,
+      "progressBottom": 714.140625,
+      "dockTop": 864,
+      "horizontal": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_cerrado_brasileno",
+      "actionBottom": 646.140625,
+      "animalBottom": 583.140625,
+      "progressBottom": 714.140625,
+      "dockTop": 864,
+      "horizontal": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_pampas",
+      "actionBottom": 646.140625,
+      "animalBottom": 583.140625,
+      "progressBottom": 714.140625,
+      "dockTop": 864,
+      "horizontal": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_desierto_de_atacama",
+      "actionBottom": 646.140625,
+      "animalBottom": 583.140625,
+      "progressBottom": 714.140625,
+      "dockTop": 864,
+      "horizontal": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "actionBottom": 646.140625,
+      "animalBottom": 583.140625,
+      "progressBottom": 714.140625,
+      "dockTop": 864,
+      "horizontal": false
+    }
+  ],
+  "variantChecks": [
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_esp_hydrochoerus_hydrochaeris",
+      "variant": "Albino",
+      "sex": "",
+      "svgWidth": 180,
+      "svgHeight": 129.125,
+      "actionBottom": 493.828125,
+      "dockTop": 589
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_esp_leopardus_geoffroyi",
+      "variant": "Melánico",
+      "sex": "",
+      "svgWidth": 180,
+      "svgHeight": 129.125,
+      "actionBottom": 493.828125,
+      "dockTop": 589
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_esp_arapaima_gigas",
+      "variant": "Excepcional",
+      "sex": "",
+      "svgWidth": 180,
+      "svgHeight": 129.125,
+      "actionBottom": 493.828125,
+      "dockTop": 589
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "sa_esp_vultur_gryphus",
+      "variant": "",
+      "sex": "female",
+      "svgWidth": 180,
+      "svgHeight": 133.125,
+      "actionBottom": 493.828125,
+      "dockTop": 589
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_esp_hydrochoerus_hydrochaeris",
+      "variant": "Albino",
+      "sex": "",
+      "svgWidth": 180,
+      "svgHeight": 129.125,
+      "actionBottom": 496.140625,
+      "dockTop": 689
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_esp_leopardus_geoffroyi",
+      "variant": "Melánico",
+      "sex": "",
+      "svgWidth": 180,
+      "svgHeight": 129.125,
+      "actionBottom": 496.140625,
+      "dockTop": 689
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_esp_arapaima_gigas",
+      "variant": "Excepcional",
+      "sex": "",
+      "svgWidth": 180,
+      "svgHeight": 129.125,
+      "actionBottom": 496.140625,
+      "dockTop": 689
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "sa_esp_vultur_gryphus",
+      "variant": "",
+      "sex": "female",
+      "svgWidth": 180,
+      "svgHeight": 133.125,
+      "actionBottom": 496.140625,
+      "dockTop": 689
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_esp_hydrochoerus_hydrochaeris",
+      "variant": "Albino",
+      "sex": "",
+      "svgWidth": 180,
+      "svgHeight": 180,
+      "actionBottom": 575.140625,
+      "dockTop": 793
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_esp_leopardus_geoffroyi",
+      "variant": "Melánico",
+      "sex": "",
+      "svgWidth": 180,
+      "svgHeight": 180,
+      "actionBottom": 575.140625,
+      "dockTop": 793
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_esp_arapaima_gigas",
+      "variant": "Excepcional",
+      "sex": "",
+      "svgWidth": 180,
+      "svgHeight": 180,
+      "actionBottom": 575.140625,
+      "dockTop": 793
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "sa_esp_vultur_gryphus",
+      "variant": "",
+      "sex": "female",
+      "svgWidth": 180,
+      "svgHeight": 180,
+      "actionBottom": 575.140625,
+      "dockTop": 793
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_esp_hydrochoerus_hydrochaeris",
+      "variant": "Albino",
+      "sex": "",
+      "svgWidth": 180,
+      "svgHeight": 180,
+      "actionBottom": 646.140625,
+      "dockTop": 864
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_esp_leopardus_geoffroyi",
+      "variant": "Melánico",
+      "sex": "",
+      "svgWidth": 180,
+      "svgHeight": 180,
+      "actionBottom": 646.140625,
+      "dockTop": 864
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_esp_arapaima_gigas",
+      "variant": "Excepcional",
+      "sex": "",
+      "svgWidth": 180,
+      "svgHeight": 180,
+      "actionBottom": 646.140625,
+      "dockTop": 864
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "sa_esp_vultur_gryphus",
+      "variant": "",
+      "sex": "female",
+      "svgWidth": 180,
+      "svgHeight": 180,
+      "actionBottom": 646.140625,
+      "dockTop": 864
+    }
+  ],
+  "labChecks": [
+    {
+      "width": 320,
+      "height": 640,
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "size": "64",
+      "mode": "compare",
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "size": "80",
+      "mode": "compare",
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "size": "120",
+      "mode": "compare",
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "size": "64",
+      "mode": "compare",
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "size": "80",
+      "mode": "compare",
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "size": "120",
+      "mode": "compare",
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "size": "64",
+      "mode": "compare",
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "size": "80",
+      "mode": "compare",
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "size": "120",
+      "mode": "compare",
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "size": "64",
+      "mode": "compare",
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "size": "80",
+      "mode": "compare",
+      "horizontal": false,
+      "small": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "size": "120",
+      "mode": "compare",
+      "horizontal": false,
+      "small": false
+    }
+  ],
+  "automaticRegions": [
+    {
+      "id": "sa_caribe_sudamericano",
+      "before": 83,
+      "after": 89
+    },
+    {
+      "id": "sa_llanos_del_orinoco",
+      "before": 89,
+      "after": 96
+    },
+    {
+      "id": "sa_andes_centrales",
+      "before": 96,
+      "after": 100
+    },
+    {
+      "id": "sa_andes_del_norte",
+      "before": 100,
+      "after": 107
+    },
+    {
+      "id": "sa_amazonia",
+      "before": 107,
+      "after": 112
+    },
+    {
+      "id": "sa_pantanal",
+      "before": 112,
+      "after": 118
+    },
+    {
+      "id": "sa_cerrado_brasileno",
+      "before": 118,
+      "after": 124
+    },
+    {
+      "id": "sa_pampas",
+      "before": 124,
+      "after": 132
+    },
+    {
+      "id": "sa_desierto_de_atacama",
+      "before": 132,
+      "after": 135
+    },
+    {
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "before": 135,
+      "after": 144
+    }
+  ],
+  "touchPan": true,
+  "manualUIAll10Regions": true,
+  "journalAll10Regions": true,
+  "oldSavePreserved": true,
+  "labStorageUntouched": true,
+  "labFiltersAndPagination131": true,
+  "xmlVariants": 357,
+  "xmlWorldSpecies": 710,
+  "labAuditModes": true,
+  "labGradeFilters": true,
+  "labComparisonAllMobileSizes": true,
+  "bestiarySpecies": 710,
+  "bestiaryColdMs": 750,
+  "bestiaryWarmMs": 466,
+  "offlineGameAndLab": true,
+  "northAmerica14CellsOffline": true,
+  "jsErrors": []
+}

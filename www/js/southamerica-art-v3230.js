@@ -8,6 +8,7 @@ const palettes={
 };
 function render(sp,color,skin='normal',sex=null){
  if(!sp||sp.origin!=='sa3230')return null;
+ const polished=root.ATLAS_SOUTH_POLISH_V3231?.(sp,color,skin,sex);if(polished)return polished;
  const n=sp.latin,g=n.split(' ')[0],f=sp.family,cls=sp.taxonomy.className,female=sex==='female';
  let [b,c,d]=palettes[f]||[sp.color||color||'#9da587','#e3dbbb','#5e795a'];
  const ink='#395243',p=(s,fill=b,w=1.8,stroke=ink)=>`<path d="${s}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`,l=(s,fill=d,w=1.1)=>p(s,'none',w,fill),e=(x,y,rx,ry,fill=b,w=1.3)=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${fill}" stroke="${ink}" stroke-width="${w}"/>`,dot=(x,y,r,fill=d)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}"/>`,eye=(x,y,r=1.4)=>dot(x,y,r,'#23352d')+dot(x-.35,y-.35,.38,'#f3e8ca'),spots=(coords,fill=d,r=1.2)=>coords.map(([x,y])=>dot(x,y,r,fill)).join(''),toes=(x,y)=>l(`M${x} ${y}l-4 2m4-2 4 2m-4-2 0 3`,d,.85);
@@ -167,7 +168,8 @@ function render(sp,color,skin='normal',sex=null){
    a+=eye(discus?81:90,discus?44:48,1.4)+l(discus?'M85 54L92 52':catfish?'M91 55L99 54':'M90 56L98 54',d,.8)+l(discus?'M76 37Q69 54 77 65':'M81 45Q75 54 81 63',d,.9);profile=arapaima?'arapaima':discus?'discus':piranha?'red-bellied-piranha':tambaqui?'tambaqui':tetra?'cardinal-tetra':silverside?'silverside':catfish?'surubi':'golden-dorado';}
  }else return null;
  const type={Mammalia:'mammal',Aves:'bird',Reptilia:'herp',Amphibia:'herp',Actinopterygii:'fish'}[cls];
- return `<svg viewBox="0 0 100 100" aria-hidden="true" data-sa-version="3.23.0" data-sa-profile="${sp.artProfile}" data-sa-morphology="${profile}" data-zoological-family="${f}" data-${type}-family="${f}"${sex?` data-sa-sex="${sex}"`:''}>${a}</svg>`;
+ const svg=`<svg viewBox="0 0 100 100" aria-hidden="true" data-sa-version="3.23.0" data-sa-profile="${sp.artProfile}" data-sa-morphology="${profile}" data-zoological-family="${f}" data-${type}-family="${f}"${sex?` data-sa-sex="${sex}"`:''}>${a}</svg>`;
+ return root.ATLAS_SOUTH_DETAIL_V3231?.(sp,svg,sex)||svg;
 }
 root.ATLAS_SOUTH_ART_V3230=render;if(typeof module==='object'&&module.exports)module.exports={renderSouthAmerican:render};
 })(typeof globalThis!=='undefined'?globalThis:this);

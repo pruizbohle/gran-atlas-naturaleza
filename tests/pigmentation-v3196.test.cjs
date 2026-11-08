@@ -77,5 +77,5 @@ test('historical pigmentation weights and ethology remain exact in the independe
 test('lab bundle is reproducible and isolated from game progress; offline resources are complete',()=>{
  const lab=fs.readFileSync('www/js/lab/dimorphism-production.js','utf8'),gallery=fs.readFileSync('www/js/lab/pigmentation-lab-v3196.js','utf8');assert.doesNotMatch(lab+gallery,/localStorage|recordSexObservation|setInterval|state\.specialFound/);
  require('node:child_process').execFileSync(process.execPath,['scripts/build-dimorphism-lab.cjs','--check']);
- const sw=fs.readFileSync('www/sw.js','utf8');assert.match(sw,/gran-atlas-v3\.23\.0-sudamerica/);for(const asset of ['laboratorio-pigmentacion.html','js/lab/pigmentation-lab-v3196.js'])assert.ok(sw.includes("'./"+asset+"'"));
+ const sw=fs.readFileSync('www/sw.js','utf8');assert.match(sw,/gran-atlas-v3\.23\.1-sudamerica/);for(const asset of ['laboratorio-pigmentacion.html','js/lab/pigmentation-lab-v3196.js'])assert.ok(sw.includes("'./"+asset+"'"));
 });

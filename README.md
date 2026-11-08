@@ -1,3 +1,7 @@
+# El Gran Atlas v3.23.1 — Sudamérica pulida
+
+131 especies auditadas, 36 ilustraciones conservadas y 95 intervenidas. Se mantienen las diez regiones, las 192 presencias y el catálogo mundial de 710 especies. [Informe y evidencia visual](README_V3231.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio comparativo](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-sudamerica-v3230.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3231.html).
+
 # El Gran Atlas v3.22.0 — Norteamérica completa
 
 14 regiones jugables, 206 asignaciones del Excel y 128 identidades taxonómicas (129 binomios de origen, con Pecari/Dicotyles como sinónimos). [Informe y validación](README_V3220.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-norteamerica-v3220.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3220.html).

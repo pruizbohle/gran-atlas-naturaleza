@@ -1,0 +1,1312 @@
+[
+  {
+    "id": "na_esp_pelecanus_occidentalis",
+    "name": "Pelícano pardo",
+    "latin": "Pelecanus occidentalis",
+    "className": "Aves",
+    "family": "Pelecanidae",
+    "reused": true,
+    "sha256": "dac9787974d1164dad638c32c69936b241466a5d5dce7816515e40f558a34ccb",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_phoenicopterus_ruber",
+    "name": "Flamenco del Caribe",
+    "latin": "Phoenicopterus ruber",
+    "className": "Aves",
+    "family": "Phoenicopteridae",
+    "reused": false,
+    "sha256": "1fbbb2c0b4f61f6ab07a357555bd857c427d901444c0b7ec1536e017aec9f2d7",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_amazona_amazonica",
+    "name": "Loro amazónico",
+    "latin": "Amazona amazonica",
+    "className": "Aves",
+    "family": "Psittacidae",
+    "reused": false,
+    "sha256": "4f5cf66ca9d7e0fa570c9d2943298e4b50be7a4b02c17ad1ab44c01d9d93098b",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_ara_ararauna",
+    "name": "Guacamaya azulamarilla",
+    "latin": "Ara ararauna",
+    "className": "Aves",
+    "family": "Psittacidae",
+    "reused": false,
+    "sha256": "68901a9ec8ec594184100304b6ecb13163eefef66d706b5a5cd9b09a4dea5e8a",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_pteroglossus_torquatus",
+    "name": "Arasarí de collar",
+    "latin": "Pteroglossus torquatus",
+    "className": "Aves",
+    "family": "Ramphastidae",
+    "reused": false,
+    "sha256": "de9c6ac3c38a5ff76deddde2d6cc553810fe39708e17c083c7008ea0b5f9b1d5",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_cerdocyon_thous",
+    "name": "Zorro cangrejero",
+    "latin": "Cerdocyon thous",
+    "className": "Mammalia",
+    "family": "Canidae",
+    "reused": false,
+    "sha256": "dba6eb04516c8cfc4067ca00f44366e676e766ce5381ac6634829e039945a060",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_hydrochoerus_hydrochaeris",
+    "name": "Chigüiro",
+    "latin": "Hydrochoerus hydrochaeris",
+    "className": "Mammalia",
+    "family": "Caviidae",
+    "reused": false,
+    "sha256": "08a13034b09d79ffec5d9d79034f38e09d72d6488bf97f8fa78133700b227d9b",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "na_esp_myrmecophaga_tridactyla",
+    "name": "Oso hormiguero gigante",
+    "latin": "Myrmecophaga tridactyla",
+    "className": "Mammalia",
+    "family": "Myrmecophagidae",
+    "reused": true,
+    "sha256": "df57131c57939b514e66cb43347b09bd70adf83b0935e385cf5d30267683baf3",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_noctilio_leporinus",
+    "name": "Murciélago pescador",
+    "latin": "Noctilio leporinus",
+    "className": "Mammalia",
+    "family": "Noctilionidae",
+    "reused": false,
+    "sha256": "d776064e0c1906b56ef7140125faaf4724df70085bb88ed64930caf668456843",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_saimiri_sciureus",
+    "name": "Mono ardilla",
+    "latin": "Saimiri sciureus",
+    "className": "Mammalia",
+    "family": "Cebidae",
+    "reused": false,
+    "sha256": "363a4d295059be83adf6e2873ae619a27bd8fe4d4b81812bd1bb5c891077d330",
+    "taxonomicStatus": "source-concept-unresolved"
+  },
+  {
+    "id": "sa_esp_tamandua_mexicana",
+    "name": "Tamandúa norteño",
+    "latin": "Tamandua mexicana",
+    "className": "Mammalia",
+    "family": "Myrmecophagidae",
+    "reused": false,
+    "sha256": "85d0a531d39f77559d686c76ef07d6816d3ce92d5623a1b07b3bc8171e9cc3fc",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_cebus_olivaceus",
+    "name": "Mono capuchino",
+    "latin": "Cebus olivaceus",
+    "className": "Mammalia",
+    "family": "Cebidae",
+    "reused": false,
+    "sha256": "83d77f504603f93606f456154b6780b88254e28311d9b10bed0208103bb6edd4",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "na_esp_dicotyles_tajacu",
+    "name": "Pecarí de collar",
+    "latin": "Dicotyles tajacu",
+    "className": "Mammalia",
+    "family": "Tayassuidae",
+    "reused": true,
+    "sha256": "ad769e233dc3ccfcee2bd21705b6a35b7f8a04c504c5cc1f44086adac03bae47",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_tayassu_pecari",
+    "name": "Pecarí de labios blancos",
+    "latin": "Tayassu pecari",
+    "className": "Mammalia",
+    "family": "Tayassuidae",
+    "reused": false,
+    "sha256": "ae1288f25052bcd4edf799981251d125d0cdcbcbc9b6af5144a98702c59afccc",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "na_esp_ctenosaura_similis",
+    "name": "Iguana negra de cola espinosa",
+    "latin": "Ctenosaura similis",
+    "className": "Reptilia",
+    "family": "Iguanidae",
+    "reused": true,
+    "sha256": "9f6437ea9211e8c0a46f57d3291fe7ef7ad2b1dd7c11a2ce7dbe18d198489394",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_iguana_iguana",
+    "name": "Iguana verde",
+    "latin": "Iguana iguana",
+    "className": "Reptilia",
+    "family": "Iguanidae",
+    "reused": false,
+    "sha256": "4869845c8dd40a47736b6c41acfd7364c79a5ae310a7ce50eea41b5671e1bfb1",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_caiman_crocodilus",
+    "name": "Caimán de anteojos",
+    "latin": "Caiman crocodilus",
+    "className": "Reptilia",
+    "family": "Alligatoridae",
+    "reused": false,
+    "sha256": "2728cad450637f0e7964952b43b9236659d2683dc41c93bd52632a1ac697084d",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_rhinella_marina",
+    "name": "Sapo gigante",
+    "latin": "Rhinella marina",
+    "className": "Amphibia",
+    "family": "Bufonidae",
+    "reused": false,
+    "sha256": "633f7794d3804ddf1170bf809c58948a6f5597dc03686aed5e1f70c8d6e93a38",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_ardea_cocoi",
+    "name": "Garza cocoi",
+    "latin": "Ardea cocoi",
+    "className": "Aves",
+    "family": "Ardeidae",
+    "reused": false,
+    "sha256": "3b2c75ec56833fd6e8345492d2b3d76faffa830c4a74986e2667191976e36f27",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_eudocimus_ruber",
+    "name": "Corocora roja",
+    "latin": "Eudocimus ruber",
+    "className": "Aves",
+    "family": "Threskiornithidae",
+    "reused": false,
+    "sha256": "90e2fe5ef457b549dfca09da987809c84c219148ebbdd6098f123683bc410e24",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "na_esp_panthera_onca",
+    "name": "Jaguar",
+    "latin": "Panthera onca",
+    "className": "Mammalia",
+    "family": "Felidae",
+    "reused": true,
+    "sha256": "5c96ee2e5484844a40e4a686b18845d0cdfa5268c8b1145302edb3fa83a9cf6d",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "na_esp_odocoileus_virginianus",
+    "name": "Venado de cola blanca",
+    "latin": "Odocoileus virginianus",
+    "className": "Mammalia",
+    "family": "Cervidae",
+    "reused": true,
+    "sha256": "729a9c19f53ae0cf733885e206003c4dd69a669bba10961448725a86ef894980",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_pygocentrus_nattereri",
+    "name": "Piraña de vientre rojo",
+    "latin": "Pygocentrus nattereri",
+    "className": "Actinopterygii",
+    "family": "Serrasalmidae",
+    "reused": false,
+    "sha256": "3b8b20bd632f709efcc04dd49aeb3f9aa3c24adb967aa1d911336e63fd67affa",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_crocodylus_intermedius",
+    "name": "Caimán del Orinoco",
+    "latin": "Crocodylus intermedius",
+    "className": "Reptilia",
+    "family": "Crocodylidae",
+    "reused": false,
+    "sha256": "afcc872583064ba92854a1a0bb1eb1fbf6d948089bb85a1f2b1688e31ae01489",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_crotalus_durissus",
+    "name": "Cascabel sudamericana",
+    "latin": "Crotalus durissus",
+    "className": "Reptilia",
+    "family": "Viperidae",
+    "reused": false,
+    "sha256": "372a6ade29c8e520c8d8f6005f63edb17667a9a0a73ceaa9eda156457b4e0304",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_eunectes_murinus",
+    "name": "Anaconda verde",
+    "latin": "Eunectes murinus",
+    "className": "Reptilia",
+    "family": "Boidae",
+    "reused": false,
+    "sha256": "5725732f06e343e50728f9300a01a97769b4b663e0bfb810ec7ec9959d76658e",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_phoenicoparrus_andinus",
+    "name": "Flamenco andino",
+    "latin": "Phoenicoparrus andinus",
+    "className": "Aves",
+    "family": "Phoenicopteridae",
+    "reused": false,
+    "sha256": "c63a758bdb51b2513724ea3b52a9ea6d043070dc521f8308937547dd0ce62e68",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_rhea_pennata",
+    "name": "Suri",
+    "latin": "Rhea pennata",
+    "className": "Aves",
+    "family": "Rheidae",
+    "reused": false,
+    "sha256": "ac974a44e308984dbe4ace3ead90a022d2633773a7fa6db15336062db05fa3bc",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_geranoaetus_melanoleucus",
+    "name": "Águila mora",
+    "latin": "Geranoaetus melanoleucus",
+    "className": "Aves",
+    "family": "Accipitridae",
+    "reused": false,
+    "sha256": "b0a00e4ad8107625330e4da545413d96d94d12825d510c144899501eb3492e92",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_vultur_gryphus",
+    "name": "Cóndor andino",
+    "latin": "Vultur gryphus",
+    "className": "Aves",
+    "family": "Cathartidae",
+    "reused": false,
+    "sha256": "cd6d0d05532e1994fe7b0f9a19c1cc04256f5c0598d4b57dd49fcd83625a0974",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_lycalopex_culpaeus",
+    "name": "Zorro culpeo",
+    "latin": "Lycalopex culpaeus",
+    "className": "Mammalia",
+    "family": "Canidae",
+    "reused": false,
+    "sha256": "3785445a435414c75ca6f6d59a47871fc06dd2246035edde336de40b37055f01",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_leopardus_jacobita",
+    "name": "Gato andino",
+    "latin": "Leopardus jacobita",
+    "className": "Mammalia",
+    "family": "Felidae",
+    "reused": false,
+    "sha256": "d1943d5d2168963b43caf813529c08f35ef0b3e25d0ed1ed06a492c46767d98a",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_chinchilla_chinchilla",
+    "name": "Chinchilla de cola corta",
+    "latin": "Chinchilla chinchilla",
+    "className": "Mammalia",
+    "family": "Chinchillidae",
+    "reused": false,
+    "sha256": "62e9e39399cb0645ea23e40e42b0f9d2762c5e158e8b935e42958eef33e9dcc9",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_lagidium_viscacia",
+    "name": "Vizcacha andina",
+    "latin": "Lagidium viscacia",
+    "className": "Mammalia",
+    "family": "Chinchillidae",
+    "reused": false,
+    "sha256": "e938dfb6a6d0b0fbb720d4ecee04780b6d55cea62ffa8ad8f65e858aa8f49d6a",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_hippocamelus_antisensis",
+    "name": "Taruca",
+    "latin": "Hippocamelus antisensis",
+    "className": "Mammalia",
+    "family": "Cervidae",
+    "reused": false,
+    "sha256": "fca53334897021c4fc4c1a3869c1b4668b0669992f226116c03c4942d05e7189",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_lama_guanicoe",
+    "name": "Guanaco",
+    "latin": "Lama guanicoe",
+    "className": "Mammalia",
+    "family": "Camelidae",
+    "reused": false,
+    "sha256": "e722897188603bfc2b9f7a3323dbe08aa375dd40b841f8ad6baa8a00b7d7340f",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_vicugna_vicugna",
+    "name": "Vicuña",
+    "latin": "Vicugna vicugna",
+    "className": "Mammalia",
+    "family": "Camelidae",
+    "reused": false,
+    "sha256": "b8effd9cde0687ae0083c39f42ade53e5fcfd30a7f7a86f0987d74c7170e3ede",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_andigena_hypoglauca",
+    "name": "Tucán andino pechigris",
+    "latin": "Andigena hypoglauca",
+    "className": "Aves",
+    "family": "Ramphastidae",
+    "reused": false,
+    "sha256": "4c65c2a9035d2f1df49551fc755da6cbc737ba6fa8912180b3eafa92da94ad27",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_ensifera_ensifera",
+    "name": "Colibrí picoespada",
+    "latin": "Ensifera ensifera",
+    "className": "Aves",
+    "family": "Trochilidae",
+    "reused": false,
+    "sha256": "d5cd3d956fdd46af72d7a970e7cf9ebd9a92d1f7031c299c1211c3b0aa072847",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_primolius_couloni",
+    "name": "Guacamayo cabeza azul",
+    "latin": "Primolius couloni",
+    "className": "Aves",
+    "family": "Psittacidae",
+    "reused": false,
+    "sha256": "4413a6e1b7958b51537dbde6449cd244d2918de82cd3e72004756dbe7d8cea63",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_rupicola_peruvianus",
+    "name": "Gallito de las rocas andino",
+    "latin": "Rupicola peruvianus",
+    "className": "Aves",
+    "family": "Cotingidae",
+    "reused": false,
+    "sha256": "879ed305305a4dd25cad520d21e94845a0e782667d9d3a60c54abb8bb20b5655",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_leopardus_tigrinus",
+    "name": "Tigrillo",
+    "latin": "Leopardus tigrinus",
+    "className": "Mammalia",
+    "family": "Felidae",
+    "reused": false,
+    "sha256": "46e8aa59184af1b42b64235abb52ab80486e5be68bc8646b2f7fee91915c4380",
+    "taxonomicStatus": "source-concept-unresolved"
+  },
+  {
+    "id": "na_esp_puma_concolor",
+    "name": "Puma",
+    "latin": "Puma concolor",
+    "className": "Mammalia",
+    "family": "Felidae",
+    "reused": true,
+    "sha256": "61e50f9ceab051c7691ba47f436858fda33d7afddcd50d25869429df717442e1",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_ateles_belzebuth",
+    "name": "Mono araña de vientre blanco",
+    "latin": "Ateles belzebuth",
+    "className": "Mammalia",
+    "family": "Atelidae",
+    "reused": false,
+    "sha256": "8e8f1211f020d5832241286448921fdb1b91eb922b9f122610bfb95e35013407",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_pudella_mephistophiles",
+    "name": "Pudu del norte",
+    "latin": "Pudella mephistophiles",
+    "className": "Mammalia",
+    "family": "Cervidae",
+    "reused": false,
+    "sha256": "6e6e6279ef4ca1edfd0c21c5cb723f43991f68f352e94a305b1fdfbddca7d2db",
+    "taxonomicStatus": "accepted-name"
+  },
+  {
+    "id": "sa_esp_tremarctos_ornatus",
+    "name": "Oso de anteojos",
+    "latin": "Tremarctos ornatus",
+    "className": "Mammalia",
+    "family": "Ursidae",
+    "reused": false,
+    "sha256": "c438a688209b04433d83270af388d0a304bef00831484e395d0f09d9600ff986",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_lagothrix_lagothricha",
+    "name": "Mono lanudo marrón",
+    "latin": "Lagothrix lagothricha",
+    "className": "Mammalia",
+    "family": "Atelidae",
+    "reused": false,
+    "sha256": "d6e911e674554e8a4b4487d7158d5a37c7ec400c038043e1ef6a2cd05f03f926",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_mazama_americana",
+    "name": "Venado colorado",
+    "latin": "Mazama americana",
+    "className": "Mammalia",
+    "family": "Cervidae",
+    "reused": false,
+    "sha256": "fcc15a09a633f5cc501a0a62aa7f4f08eb0adcf42d4ed468899869676b1dbcf0",
+    "taxonomicStatus": "accepted-restricted"
+  },
+  {
+    "id": "sa_esp_tapirus_pinchaque",
+    "name": "Tapir de montaña",
+    "latin": "Tapirus pinchaque",
+    "className": "Mammalia",
+    "family": "Tapiridae",
+    "reused": false,
+    "sha256": "a8df69f7f4c94441d7698cbff7b803efe3ed8abc885bc26cef18d399dfe41df2",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_gastrotheca_riobambae",
+    "name": "Rana marsupial andina",
+    "latin": "Gastrotheca riobambae",
+    "className": "Amphibia",
+    "family": "Hemiphractidae",
+    "reused": false,
+    "sha256": "d30a842df346506ccb6d43de606316fd42c80dd624704f16356f7a4b9598e296",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_phyllobates_terribilis",
+    "name": "Rana venenosa dorada",
+    "latin": "Phyllobates terribilis",
+    "className": "Amphibia",
+    "family": "Dendrobatidae",
+    "reused": false,
+    "sha256": "ed4fb56d6a15eee8885ec88a4e9553ebe7b59436a51ae7ae677cca00fcc5aad3",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_cairina_moschata",
+    "name": "Pato real",
+    "latin": "Cairina moschata",
+    "className": "Aves",
+    "family": "Anatidae",
+    "reused": false,
+    "sha256": "fd6a295537d7bd2353287df9e69ce66dae1d0072fd13349cb916d53f251594ef",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_ara_chloropterus",
+    "name": "Guacamayo rojo y verde",
+    "latin": "Ara chloropterus",
+    "className": "Aves",
+    "family": "Psittacidae",
+    "reused": false,
+    "sha256": "ce879a10e37a0d8fd5b3f65137cc4aed64c45671682755b4bf49e1968f0d3cd8",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "na_esp_ara_macao",
+    "name": "Guacamaya roja",
+    "latin": "Ara macao",
+    "className": "Aves",
+    "family": "Psittacidae",
+    "reused": true,
+    "sha256": "18fee09f0515003e69bf9a721932f612c2f7deb9616121d99fc5a6582bea02ee",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_opisthocomus_hoazin",
+    "name": "Hoacín",
+    "latin": "Opisthocomus hoazin",
+    "className": "Aves",
+    "family": "Opisthocomidae",
+    "reused": false,
+    "sha256": "01b2e7e1d9c774e1a2dd589d23d3cfecdd457f4d175721201bad70c87a844aea",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_penelope_jacquacu",
+    "name": "Pava amazónica",
+    "latin": "Penelope jacquacu",
+    "className": "Aves",
+    "family": "Cracidae",
+    "reused": false,
+    "sha256": "ab3d0178699f55ae44d6f97de16ce8a6164bbba181b64c3100a96055ec7d5f19",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_ramphastos_tucanus",
+    "name": "Tucán de garganta blanca",
+    "latin": "Ramphastos tucanus",
+    "className": "Aves",
+    "family": "Ramphastidae",
+    "reused": false,
+    "sha256": "842a7bea77f5671c18f4dccf7771b40515f7a8b32f7038d8b8f4f6b3cd4203cc",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_harpia_harpyja",
+    "name": "Águila harpía",
+    "latin": "Harpia harpyja",
+    "className": "Aves",
+    "family": "Accipitridae",
+    "reused": false,
+    "sha256": "334a057a250cfa68529a1db4c402e6d9acda4708852f0de2cb73b85ed921cebd",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_inia_geoffrensis",
+    "name": "Delfín rosado",
+    "latin": "Inia geoffrensis",
+    "className": "Mammalia",
+    "family": "Iniidae",
+    "reused": false,
+    "sha256": "99275b4cd1611acb6273fd223940088d523cc63da94b6e86536466457f462645",
+    "taxonomicStatus": "accepted-restricted"
+  },
+  {
+    "id": "sa_esp_atelocynus_microtis",
+    "name": "Zorro de orejas cortas",
+    "latin": "Atelocynus microtis",
+    "className": "Mammalia",
+    "family": "Canidae",
+    "reused": false,
+    "sha256": "587b4629e1fa9d9d6f34dd832e11064e7a478c7de94019e35cee6c0ac84fb3b3",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_speothos_venaticus",
+    "name": "Perro de monte",
+    "latin": "Speothos venaticus",
+    "className": "Mammalia",
+    "family": "Canidae",
+    "reused": false,
+    "sha256": "573112a0bd8a07137fd206a7a2cae3ca5e8ab41e2249f18eb5b3a4f0cb87e490",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_aotus_trivirgatus",
+    "name": "Mono nocturno",
+    "latin": "Aotus trivirgatus",
+    "className": "Mammalia",
+    "family": "Aotidae",
+    "reused": false,
+    "sha256": "2fc39ec734c5d136cee96b3e5bca24522fedb97a315fdd51f6c96b08550e2d73",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "na_esp_bradypus_variegatus",
+    "name": "Perezoso de tres dedos",
+    "latin": "Bradypus variegatus",
+    "className": "Mammalia",
+    "family": "Bradypodidae",
+    "reused": true,
+    "sha256": "683957649ce8fc1ceb399a7ae7a07826fc2e5442ee6511ef818e2166c0c0ab71",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_choloepus_didactylus",
+    "name": "Perezoso de dos dedos",
+    "latin": "Choloepus didactylus",
+    "className": "Mammalia",
+    "family": "Choloepodidae",
+    "reused": false,
+    "sha256": "d239610d732bcf83c9b766fc49940b09bbbd6fde9dc6055ce9a52a1e2bddee9b",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_cyclopes_didactylus",
+    "name": "Oso hormiguero enano",
+    "latin": "Cyclopes didactylus",
+    "className": "Mammalia",
+    "family": "Cyclopedidae",
+    "reused": false,
+    "sha256": "e2f76cefa511f5088085187ddf1f05e57a189738d6bb8621cf30a8b93d6f65b8",
+    "taxonomicStatus": "accepted-restricted"
+  },
+  {
+    "id": "sa_esp_inia_boliviensis",
+    "name": "Delfín de río boliviano",
+    "latin": "Inia boliviensis",
+    "className": "Mammalia",
+    "family": "Iniidae",
+    "reused": false,
+    "sha256": "0405a99f3b78a81931058a3c74a14c665443c7b66c14d9b19d025efb7b54075c",
+    "taxonomicStatus": "accepted-restricted"
+  },
+  {
+    "id": "sa_esp_pteronura_brasiliensis",
+    "name": "Nutria gigante",
+    "latin": "Pteronura brasiliensis",
+    "className": "Mammalia",
+    "family": "Mustelidae",
+    "reused": false,
+    "sha256": "9f4b0f400b8a6ba5a0095809e594acd404245314516666266cddc0af759e2f23",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_saguinus_imperator",
+    "name": "Mono tití emperador",
+    "latin": "Saguinus imperator",
+    "className": "Mammalia",
+    "family": "Callitrichidae",
+    "reused": false,
+    "sha256": "5963e4bd130fd6947619d9a9ea5b6fca3fc2e67f3c376c7a28c6b47b7b4cafe4",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_tamandua_tetradactyla",
+    "name": "Tamandúa sureño",
+    "latin": "Tamandua tetradactyla",
+    "className": "Mammalia",
+    "family": "Myrmecophagidae",
+    "reused": false,
+    "sha256": "6160c008fefe1acf816cb633415629ba8cf22528350557d23de752c4c3b02bb9",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_ateles_paniscus",
+    "name": "Mono araña negro",
+    "latin": "Ateles paniscus",
+    "className": "Mammalia",
+    "family": "Atelidae",
+    "reused": false,
+    "sha256": "bfdb909457eeac354f93b2b1e3107e2a198a9783be3349c61467357463d48573",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_tapirus_terrestris",
+    "name": "Tapir amazónico",
+    "latin": "Tapirus terrestris",
+    "className": "Mammalia",
+    "family": "Tapiridae",
+    "reused": false,
+    "sha256": "e9a8f7eb701627c80401c3690e241b66d4c0c9dcc53b6e218a88dcb6b3571a19",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_arapaima_gigas",
+    "name": "Arapaima",
+    "latin": "Arapaima gigas",
+    "className": "Actinopterygii",
+    "family": "Arapaimidae",
+    "reused": false,
+    "sha256": "860854a9c61366d1e6bf16b732b2e5f3250a9fc7f5586644f00444b7f082b963",
+    "taxonomicStatus": "source-concept-unresolved"
+  },
+  {
+    "id": "sa_esp_colossoma_macropomum",
+    "name": "Pacu negro",
+    "latin": "Colossoma macropomum",
+    "className": "Actinopterygii",
+    "family": "Serrasalmidae",
+    "reused": false,
+    "sha256": "097a07c390d9ac2cb1197684325f826e5da19dba4c3f3b420a19c4e8e30478bf",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_electrophorus_electricus",
+    "name": "Pez eléctrico amazónico",
+    "latin": "Electrophorus electricus",
+    "className": "Actinopterygii",
+    "family": "Gymnotidae",
+    "reused": false,
+    "sha256": "51c38bae9475dafeea54bee1959079fa2dff1a02a1278369bf19269ade64b71d",
+    "taxonomicStatus": "source-concept-unresolved"
+  },
+  {
+    "id": "sa_esp_paracheirodon_axelrodi",
+    "name": "Tetra cardenal",
+    "latin": "Paracheirodon axelrodi",
+    "className": "Actinopterygii",
+    "family": "Characidae",
+    "reused": false,
+    "sha256": "8c003ccf920e9e89d51b5158349ca34406fea31c3c306e1c14d096667c3a91db",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_symphysodon_aequifasciatus",
+    "name": "Pez disco",
+    "latin": "Symphysodon aequifasciatus",
+    "className": "Actinopterygii",
+    "family": "Cichlidae",
+    "reused": false,
+    "sha256": "ca5dacf70abad5cfdf78180edb8a9d3e1ccbe7a492bec6a08aec5c25c42a93ca",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_melanosuchus_niger",
+    "name": "Caimán negro",
+    "latin": "Melanosuchus niger",
+    "className": "Reptilia",
+    "family": "Alligatoridae",
+    "reused": false,
+    "sha256": "77cf827da355500fed9358898b14ca6d9971c95779e8800682bb9bf5e71ecea9",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_dendrobates_tinctorius",
+    "name": "Rana dardo azul",
+    "latin": "Dendrobates tinctorius",
+    "className": "Amphibia",
+    "family": "Dendrobatidae",
+    "reused": false,
+    "sha256": "ce84819af14cd37eda7b0cc6190956921ff0a30be2e61a3032ca6691e7a4d866",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_epicrates_cenchria",
+    "name": "Boa arcoíris",
+    "latin": "Epicrates cenchria",
+    "className": "Reptilia",
+    "family": "Boidae",
+    "reused": false,
+    "sha256": "7c5afd403e398a1dc339eeb7a7493cd0dc8e16cb5795538b826aef8912b51ec0",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_chauna_torquata",
+    "name": "Chajá",
+    "latin": "Chauna torquata",
+    "className": "Aves",
+    "family": "Anhimidae",
+    "reused": false,
+    "sha256": "2736b5745e0bdcc6499eace8a4226c2ea1d9f88724dd7557178f00605e597bf2",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_jabiru_mycteria",
+    "name": "Jabirú",
+    "latin": "Jabiru mycteria",
+    "className": "Aves",
+    "family": "Ciconiidae",
+    "reused": false,
+    "sha256": "63077eb5822afa80fe4d1a56303ddc50b1c971b9f012b7d9e39e9c5061580e74",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_jacana_jacana",
+    "name": "Jacana común",
+    "latin": "Jacana jacana",
+    "className": "Aves",
+    "family": "Jacanidae",
+    "reused": false,
+    "sha256": "3102e1f22c627c3f3a85979bcf6c9580f991c83e331d9bee367c4a642f10c182",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_anodorhynchus_hyacinthinus",
+    "name": "Guacamayo jacinto",
+    "latin": "Anodorhynchus hyacinthinus",
+    "className": "Aves",
+    "family": "Psittacidae",
+    "reused": false,
+    "sha256": "ea249b6f60d12d76a9268b71057e9b0650cc08f50aeeb00e25a4b01e2dd46a9e",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_euphractus_sexcinctus",
+    "name": "Armadillo de seis bandas",
+    "latin": "Euphractus sexcinctus",
+    "className": "Mammalia",
+    "family": "Chlamyphoridae",
+    "reused": false,
+    "sha256": "32efa2d59ea7feb853c19fecd576bd362b79b3c928847dd884577198d1c1fd42",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_myocastor_coypus",
+    "name": "Coipo",
+    "latin": "Myocastor coypus",
+    "className": "Mammalia",
+    "family": "Echimyidae",
+    "reused": false,
+    "sha256": "fbcead841ff3843c31303241c5cd9355226db94331597b254c98f1696cbd5d46",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_blastocerus_dichotomus",
+    "name": "Ciervo de los pantanos",
+    "latin": "Blastocerus dichotomus",
+    "className": "Mammalia",
+    "family": "Cervidae",
+    "reused": false,
+    "sha256": "1ca57ac5ba7410d54d8c4843b9eee538da4623e275df69e006a6c5291ff15422",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_pseudoplatystoma_corruscans",
+    "name": "Bagre surubí",
+    "latin": "Pseudoplatystoma corruscans",
+    "className": "Actinopterygii",
+    "family": "Pimelodidae",
+    "reused": false,
+    "sha256": "b6cea4677e4f3f7d1292887bb80dec69f388714b99fdc05ce822029679ef67d2",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_salminus_brasiliensis",
+    "name": "Dorado del río",
+    "latin": "Salminus brasiliensis",
+    "className": "Actinopterygii",
+    "family": "Bryconidae",
+    "reused": false,
+    "sha256": "f31eba3632cd86e774db425f34fd91f081e4e73b506eb8e8cd7e690424f109a4",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_salvator_merianae",
+    "name": "Lagarto overo",
+    "latin": "Salvator merianae",
+    "className": "Reptilia",
+    "family": "Teiidae",
+    "reused": false,
+    "sha256": "67dc5e6074dc07a5dce98f6595c5cf25ccc56ab7b4b08dd4abb6b7fcbaec5adf",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_caiman_yacare",
+    "name": "Caimán yacaré",
+    "latin": "Caiman yacare",
+    "className": "Reptilia",
+    "family": "Alligatoridae",
+    "reused": false,
+    "sha256": "51c20c03e416ea1759ca760d01b981950a2c1e006fb16ac7773d113f98f94420",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_bothrops_alternatus",
+    "name": "Bothrops yarará",
+    "latin": "Bothrops alternatus",
+    "className": "Reptilia",
+    "family": "Viperidae",
+    "reused": false,
+    "sha256": "aec0c85fb4a3912a80bc4a881c753e0e40fe817cb446fb2a7e72c5b167c5694f",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_eunectes_notaeus",
+    "name": "Anaconda amarilla",
+    "latin": "Eunectes notaeus",
+    "className": "Reptilia",
+    "family": "Boidae",
+    "reused": false,
+    "sha256": "9f3b64a8e93cd3138da7ab10182164eea1d6f5f6616f3116e33f43aa98fd1eac",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_cariama_cristata",
+    "name": "Seriema de patas rojas",
+    "latin": "Cariama cristata",
+    "className": "Aves",
+    "family": "Cariamidae",
+    "reused": false,
+    "sha256": "8fb685c5b4b1c89c6627ad4130f81e41ed6c358ce2f796629418a686ef661ee6",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_colaptes_campestris",
+    "name": "Carpintero campestre",
+    "latin": "Colaptes campestris",
+    "className": "Aves",
+    "family": "Picidae",
+    "reused": false,
+    "sha256": "76235dce8182ff45b47c685fef246b510a1425a0375db005582b993558f13f6b",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_ramphastos_toco",
+    "name": "Tucán toco",
+    "latin": "Ramphastos toco",
+    "className": "Aves",
+    "family": "Ramphastidae",
+    "reused": false,
+    "sha256": "60a65ed3ff3cd7d3123d985361b8b2e7b246cf2c408b15da68dc4dda178e7f3c",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_rhea_americana",
+    "name": "Ñandú",
+    "latin": "Rhea americana",
+    "className": "Aves",
+    "family": "Rheidae",
+    "reused": false,
+    "sha256": "6feeeb4e4e68887a6e2eb13f66778036bd06834074d748d1cb2564c03452c892",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_buteogallus_coronatus",
+    "name": "Águila coronada",
+    "latin": "Buteogallus coronatus",
+    "className": "Aves",
+    "family": "Accipitridae",
+    "reused": false,
+    "sha256": "df09418562e63188a0c79335cb60cbaa3f369e1a87e794255a5b743d9badeadb",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_chrysocyon_brachyurus",
+    "name": "Lobo de crin",
+    "latin": "Chrysocyon brachyurus",
+    "className": "Mammalia",
+    "family": "Canidae",
+    "reused": false,
+    "sha256": "6c3ae6dc6d354ec578b72fbe90b8e600df95f812dc0cfec0668e5a6229f501ae",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_priodontes_maximus",
+    "name": "Armadillo gigante",
+    "latin": "Priodontes maximus",
+    "className": "Mammalia",
+    "family": "Chlamyphoridae",
+    "reused": false,
+    "sha256": "1dd3dd98f8545f6b3a90898ee2ce5551ca269d19c5c19d9febd3821b685e48a8",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_tolypeutes_tricinctus",
+    "name": "Armadillo de tres bandas",
+    "latin": "Tolypeutes tricinctus",
+    "className": "Mammalia",
+    "family": "Chlamyphoridae",
+    "reused": false,
+    "sha256": "1d82a2e5c5aa47a3c7e898f1d88796edbe50ca6cfb2d74917344ca1058668eec",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_ozotoceros_bezoarticus",
+    "name": "Venado de las pampas",
+    "latin": "Ozotoceros bezoarticus",
+    "className": "Mammalia",
+    "family": "Cervidae",
+    "reused": false,
+    "sha256": "6ed6b3c0679aff77002dfaae905f9cf146bb2b973353071e59058fc68f8d025d",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_micrurus_corallinus",
+    "name": "Serpiente coral común",
+    "latin": "Micrurus corallinus",
+    "className": "Reptilia",
+    "family": "Elapidae",
+    "reused": false,
+    "sha256": "b1769f4d70e6b0ff1d0ef4dcfd70c4a0b993f59b4329374888a644001ebd9d72",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_cygnus_melancoryphus",
+    "name": "Cisne de cuello negro",
+    "latin": "Cygnus melancoryphus",
+    "className": "Aves",
+    "family": "Anatidae",
+    "reused": false,
+    "sha256": "3b5549012cff1bc92ebfeaf3ddc28ca18506a3e5865dee63219b0b400746bd9f",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_vanellus_chilensis",
+    "name": "Tero",
+    "latin": "Vanellus chilensis",
+    "className": "Aves",
+    "family": "Charadriidae",
+    "reused": false,
+    "sha256": "471c339fcc4e236538a3ecd10d913ce5adfc1ce66c0e21e30733bc6f7813eaf6",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_agelaioides_badius",
+    "name": "Tordo músico",
+    "latin": "Agelaioides badius",
+    "className": "Aves",
+    "family": "Icteridae",
+    "reused": false,
+    "sha256": "02529ad8902f7970b8290f7790fc64e2b8ea08107c1aa66b5dc1faca384fb653",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_asio_flammeus",
+    "name": "Lechuzón de campo",
+    "latin": "Asio flammeus",
+    "className": "Aves",
+    "family": "Strigidae",
+    "reused": false,
+    "sha256": "00fe0e28ccb808e95095179ed82a7a2d550d50f23049ef48e487b0477c8d7073",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "na_esp_caracara_plancus",
+    "name": "Caracara quebrantahuesos",
+    "latin": "Caracara plancus",
+    "className": "Aves",
+    "family": "Falconidae",
+    "reused": true,
+    "sha256": "b818a1b96c7ef6afccdbb937fda34f787dc2b02a97298764e1e55b1ea62510ed",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_lycalopex_gymnocercus",
+    "name": "Zorro pampeano",
+    "latin": "Lycalopex gymnocercus",
+    "className": "Mammalia",
+    "family": "Canidae",
+    "reused": false,
+    "sha256": "11fa51ba5974abab05933f9c61b62aa727d08191d0a97c5d8459343d7cceab83",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_leopardus_colocola",
+    "name": "Gato de las pampas",
+    "latin": "Leopardus colocola",
+    "className": "Mammalia",
+    "family": "Felidae",
+    "reused": false,
+    "sha256": "3f5103ffb303acbabb28312e34cfb166fccb595c44bf444b476b53da4e25dc71",
+    "taxonomicStatus": "source-concept-unresolved"
+  },
+  {
+    "id": "sa_esp_leopardus_geoffroyi",
+    "name": "Gato montés",
+    "latin": "Leopardus geoffroyi",
+    "className": "Mammalia",
+    "family": "Felidae",
+    "reused": false,
+    "sha256": "749ef583448287115ec85c0aa46f9868dbbf87512cafeb14f3bb0297a17a86e0",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_chaetophractus_villosus",
+    "name": "Armadillo peludo",
+    "latin": "Chaetophractus villosus",
+    "className": "Mammalia",
+    "family": "Chlamyphoridae",
+    "reused": false,
+    "sha256": "54bd6cef874ecff017f800ea12569deb4b0a2348a90d286db97b002f734ece44",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_dasypus_septemcinctus",
+    "name": "Mulita",
+    "latin": "Dasypus septemcinctus",
+    "className": "Mammalia",
+    "family": "Dasypodidae",
+    "reused": false,
+    "sha256": "60c6c3125fefd7d7d1cd5d61b03333ac9c774e190642c67a35bed6b3a90c8517",
+    "taxonomicStatus": "accepted-synonym"
+  },
+  {
+    "id": "sa_esp_lagostomus_maximus",
+    "name": "Vizcacha de las pampas",
+    "latin": "Lagostomus maximus",
+    "className": "Mammalia",
+    "family": "Chinchillidae",
+    "reused": false,
+    "sha256": "71a6263267b45c343b017cc4cb73313a549f7a030489941e1f757b49698e80ed",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_odontesthes_bonariensis",
+    "name": "Pejerrey argentino",
+    "latin": "Odontesthes bonariensis",
+    "className": "Actinopterygii",
+    "family": "Atherinopsidae",
+    "reused": false,
+    "sha256": "24af4eb4cd778b12f54fc91b56f727a929799ffded8694c4eec3376678cfe556",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_ceratophrys_ornata",
+    "name": "Rana cornuda argentina",
+    "latin": "Ceratophrys ornata",
+    "className": "Amphibia",
+    "family": "Ceratophryidae",
+    "reused": false,
+    "sha256": "49971feec0bbfeb104bd18166184ee6617c6e9085664687a76bbc46926f76221",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_phoenicopterus_chilensis",
+    "name": "Flamenco chileno",
+    "latin": "Phoenicopterus chilensis",
+    "className": "Aves",
+    "family": "Phoenicopteridae",
+    "reused": false,
+    "sha256": "bc7024e67912f1b3f9cc4511d52a13753c996b213c515984dace2c8290e466ca",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_chinchilla_lanigera",
+    "name": "Chinchilla de cola larga",
+    "latin": "Chinchilla lanigera",
+    "className": "Mammalia",
+    "family": "Chinchillidae",
+    "reused": false,
+    "sha256": "c34a69fcdf22771f6165e81af9d87fb202ee60b0af8c7d63f4c674cc69497967",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_octodon_degus",
+    "name": "Degú",
+    "latin": "Octodon degus",
+    "className": "Mammalia",
+    "family": "Octodontidae",
+    "reused": false,
+    "sha256": "64c5629a8e7fd9e7dd26bc0ff07d74b7714261fbc642e6dec444ddd0414522f9",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_liolaemus_atacamensis",
+    "name": "Lagarto de Atacama",
+    "latin": "Liolaemus atacamensis",
+    "className": "Reptilia",
+    "family": "Liolaemidae",
+    "reused": false,
+    "sha256": "bc3062385464f23e551ada13eb0296913302375b9cf00229464d142d916f263a",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_microlophus_atacamensis",
+    "name": "Lagartija de lava",
+    "latin": "Microlophus atacamensis",
+    "className": "Reptilia",
+    "family": "Tropiduridae",
+    "reused": false,
+    "sha256": "ca9a0a90dc39a836e3dc094813feb67a7c30f0fc3f60d15f85fa05d0f18896f7",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_spheniscus_magellanicus",
+    "name": "Pingüino de Magallanes",
+    "latin": "Spheniscus magellanicus",
+    "className": "Aves",
+    "family": "Spheniscidae",
+    "reused": false,
+    "sha256": "ce477b45152086fa90317fdffc4beab47148d0dbdabcd26ce8cc5fceee869552",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_campephilus_magellanicus",
+    "name": "Carpintero negro",
+    "latin": "Campephilus magellanicus",
+    "className": "Aves",
+    "family": "Picidae",
+    "reused": false,
+    "sha256": "039be012a96b97bb4a32ae7277b80410ed7f1ea786e8360edcb1023f7d6ac5a1",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_enicognathus_ferrugineus",
+    "name": "Cachaña",
+    "latin": "Enicognathus ferrugineus",
+    "className": "Aves",
+    "family": "Psittacidae",
+    "reused": false,
+    "sha256": "b62a734e32b4dde82acae7262d50ba674166e9b5de94ce2e625904ebd0357ac2",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_scelorchilus_rubecula",
+    "name": "Chucao",
+    "latin": "Scelorchilus rubecula",
+    "className": "Aves",
+    "family": "Rhinocryptidae",
+    "reused": false,
+    "sha256": "247013aa8df8c379b6976b8249d58c15d2c427f95bb6f7867d09d26c7c38eb43",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_lycalopex_fulvipes",
+    "name": "Zorro de Darwin",
+    "latin": "Lycalopex fulvipes",
+    "className": "Mammalia",
+    "family": "Canidae",
+    "reused": false,
+    "sha256": "19358d62be4a4cb97bb5c0d70701ce7263ddc48e5581795e0cf1a8d37fbff4a9",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_conepatus_chinga",
+    "name": "Chingue patagónico",
+    "latin": "Conepatus chinga",
+    "className": "Mammalia",
+    "family": "Mephitidae",
+    "reused": false,
+    "sha256": "03b564c87525743ddbb8e797266b3cbef9b54e8cccf66198f8528ac8cfba87ef",
+    "taxonomicStatus": "accepted-synonym"
+  },
+  {
+    "id": "sa_esp_lontra_felina",
+    "name": "Chungungo",
+    "latin": "Lontra felina",
+    "className": "Mammalia",
+    "family": "Mustelidae",
+    "reused": false,
+    "sha256": "cddc6340934bf1e789510622983db2b0abd13c8e5f3b188b0cfce8682235153d",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_pudu_puda",
+    "name": "Pudú del sur",
+    "latin": "Pudu puda",
+    "className": "Mammalia",
+    "family": "Cervidae",
+    "reused": false,
+    "sha256": "4c7548d7fae86356c2aca6e96c61e07af2c058c3161ecf2070973e9145af2652",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_dolichotis_patagonum",
+    "name": "Mara patagónica",
+    "latin": "Dolichotis patagonum",
+    "className": "Mammalia",
+    "family": "Caviidae",
+    "reused": false,
+    "sha256": "3b2881207e38aca2326efce239a9b4d366e7c4d3f2bd3ba7d8f367e55a25ca27",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_hippocamelus_bisulcus",
+    "name": "Huemul",
+    "latin": "Hippocamelus bisulcus",
+    "className": "Mammalia",
+    "family": "Cervidae",
+    "reused": false,
+    "sha256": "f4084e3ea2e8d76228ba74ac693672d22aadba373d7421287781b1bd1153fc84",
+    "taxonomicStatus": "source-retained"
+  },
+  {
+    "id": "sa_esp_rhinoderma_darwinii",
+    "name": "Ranita de Darwin",
+    "latin": "Rhinoderma darwinii",
+    "className": "Amphibia",
+    "family": "Rhinodermatidae",
+    "reused": false,
+    "sha256": "dbe305aa048bbb56c400f10bb08cf7f25312e2166c067b5a9cf918ca59d58260",
+    "taxonomicStatus": "source-retained"
+  }
+]

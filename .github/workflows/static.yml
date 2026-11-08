@@ -38,9 +38,12 @@ jobs:
           node --check www/js/lab/item-lab-v3198.js
           node --check www/js/southamerica-data-v3230.js
           node --check www/js/southamerica-art-v3230.js
+          node --check www/js/southamerica-polish-v3231.js
+          node --check www/js/lab/southamerica-audit-v3231.js
           node --check www/js/southamerica-geography-v3230.js
           node --check www/js/lab/southamerica-lab-v3230.js
           node scripts/build-southamerica-lab-v3230.cjs --check
+          node scripts/build-southamerica-audit-v3231.cjs --check
           node --check www/js/northamerica-data-v3220.js
           node --check www/js/northamerica-art-v3220.js
           node --check www/js/northamerica-polish-v3221.js
