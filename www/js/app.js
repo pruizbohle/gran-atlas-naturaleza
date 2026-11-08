@@ -2821,6 +2821,16 @@ function renderCrown(){
 }
 
 function filterJournalRail(){
+  // J-3250 BEGIN filter
+  if(panel.querySelector('.journal-v3250')){
+   const q=globalThis.AtlasJournalUI.normalize(journalRailQuery);let count=0;
+   panel.querySelectorAll('[data-action="select-journal"][data-journal-slot]').forEach(button=>{
+    const sid=currentRegion().species[Number(button.dataset.journalSlot)];
+    button.hidden=!!q&&!globalThis.AtlasJournalUI.normalize(visibleName(sid)).includes(q);if(!button.hidden)count++;
+   });
+   const counter=panel.querySelector('#journalRailCount');if(counter)counter.textContent=count?count+' especies':'Sin resultados';return;
+  }
+  // J-3250 END filter
   const rail=panel.querySelector('#journalSpeciesRail');
   if(!rail)return;
   const q=journalRailQuery.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
@@ -3054,6 +3064,9 @@ function renderJournal(){
   const st=stage(id);
   const next=st<5?stageRequirements(id,st):null;
   const isKnown=!!state.discovered[id];
+  // J-3250 BEGIN render
+  if(globalThis.AtlasJournalUI)return globalThis.AtlasJournalUI.render(journalViewModel3250());
+  // J-3250 END render
   const stamps=['I','II','III','IV','V'].map((mark,i)=>`<div class="journal-stamp ${i<st?'earned':''}" aria-label="Etapa ${i+1} ${i<st?'alcanzada':'pendiente'}"><span>${i<st?'✦':mark}</span><small>${['Vista','Nombre','Conducta','Hábitos','Estudio'][i]}</small></div>`).join('');
   const railIds=journalSortMode==='sightings'
     ? [...ids].sort((a,b)=>sight(b)-sight(a)||ids.indexOf(a)-ids.indexOf(b))
@@ -3105,6 +3118,29 @@ function renderJournal(){
   </div>`;
 }
 
+// J-3250 BEGIN model
+function journalViewModel3250(detailOnly=false){
+ const ids=currentRegion().species,id=state.selectedJournal||ids[0],sp=SPECIES[id],st=stage(id),next=st<5?stageRequirements(id,st):null;
+ const items=ids.map((sid,slot)=>({slot,name:visibleName(sid),stage:stage(sid),sightings:sight(sid),discovered:!!state.discovered[sid],sprite:state.discovered[sid]&&(!detailOnly||sid===id)?getSpriteMarkup(sid,'normal'):''}));
+ if(journalSortMode==='sightings')items.sort((a,b)=>b.sightings-a.sightings||a.slot-b.slot);
+ const foundVariants=specialBadges(id).replace(/<div class="variant-card unknown">[\s\S]*?<\/div><\/div><div class="small">[\s\S]*?<\/div><\/div>/g,'');
+ const observedVariants=foundVariants.includes('variant-card seen')?foundVariants.replaceAll(sp.name,visibleName(id)):'';
+ return {region:currentRegion().name,identified:regionIdentifiedCount(state.currentRegion),query:journalRailQuery,sort:journalSortMode,items,money:fmt(state.money),knowledge:fmt(state.knowledge),selected:{...items.find(p=>p.slot===ids.indexOf(id)),name:visibleName(id),latin:visibleLatin(id),rarity:sp.rare,next,published:!!state.published[id],food:feed(id),specials:specials(id),sexProgress:sp.dimorphism?dimorphismProgress(id)+'/2':'—',extraLabel:st===3?(sp.dimorphism?'Alimentación o sexos':'Alimentación'):'Espécimen especial',extraProgress:st===3?(sp.dimorphism?feed(id)+'/10 · '+dimorphismProgress(id)+'/2 sexos':feed(id)+'/10'):specials(id)+'/1',taxonomy:taxonomyText(id),habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',variants:observedVariants,sexes:SEXUAL_DIMORPHISM[id]?renderSexComparison(id):''}};
+}
+let journalRailScrollLeft3250=0,journalRailRegion3250='',journalRailSelection3250='';
+function refreshJournalSheet3250(){
+ const container=panel.querySelector('#journalSelectedSheet');
+ if(!container)return false;
+ container.innerHTML=globalThis.AtlasJournalUI.sheet(journalViewModel3250(true));
+ journalRailSelection3250=state.selectedJournal;
+ panel.querySelectorAll('[data-action="select-journal"][data-journal-slot]').forEach(button=>{
+  const selected=currentRegion().species[Number(button.dataset.journalSlot)]===state.selectedJournal;
+  button.classList.toggle('selected',selected);
+  if(selected)button.setAttribute('aria-current','true');else button.removeAttribute('aria-current');
+ });
+ return true;
+}
+// J-3250 END model
 // Beta 3.15: cinco ramas filtrables; los nodos antiguos conservan ID y compras.
 // La presentación por tarjetas sustituye al árbol de 7 columnas difícil de usar en móvil.
 function renderResearch(){
@@ -4405,6 +4441,18 @@ function bindPanel(){
   });
   const rail=panel.querySelector('#journalSpeciesRail');
   const sheet=panel.querySelector('.journal-v311 .journal-sheet');
+  // J-3250 BEGIN rail
+  if(panel.querySelector('.journal-v3250')&&rail){
+    rail.scrollLeft=journalRailScrollLeft3250;
+    if(journalRailRegion3250!==state.currentRegion||journalRailSelection3250!==state.selectedJournal){
+      const selected=rail.querySelector('.selected');
+      if(selected){if(rail.scrollHeight>rail.clientHeight+2)journalRailScrollTop=Math.max(0,selected.offsetTop-rail.offsetTop-rail.clientHeight/2);else rail.scrollLeft=Math.max(0,selected.offsetLeft-rail.offsetLeft-(rail.clientWidth-selected.offsetWidth)/2);}
+      journalRailRegion3250=state.currentRegion;journalRailSelection3250=state.selectedJournal;
+    }
+    journalRailScrollLeft3250=rail.scrollLeft;
+    rail.addEventListener('scroll',()=>{journalRailScrollLeft3250=rail.scrollLeft;},{passive:true});
+  }
+  // J-3250 END rail
   rail?.addEventListener('scroll',()=>{journalRailScrollTop=rail.scrollTop;},{passive:true});
   sheet?.addEventListener('scroll',()=>{journalSheetScrollTop=sheet.scrollTop;},{passive:true});
   panel.querySelector('#journalRailSearch')?.addEventListener('input',e=>{
@@ -4428,6 +4476,16 @@ function handlePanelAction(e){
     const el=e.target.closest?.('[data-action]');
     if(!el||!panel.contains(el)||el.disabled)return;
     const act=el.dataset.action; const id=el.dataset.id;
+    // J-3250 BEGIN actions
+    if(el.dataset.journalSlot!==undefined&&(act==='select-journal'||act==='advance-species')){
+      const slot=Number(el.dataset.journalSlot);if(!Number.isInteger(slot)||slot<0)return;
+      const sid=currentRegion().species[slot];if(!sid)return;
+      if(act==='select-journal'){state.selectedJournal=sid;if(!refreshJournalSheet3250())renderPanel();persist();}
+      else advanceSpecies(sid);
+      return;
+    }
+    if(act==='journal-society'){state.societyView='publications';state.publicationView='monographs';tab='society';renderPanel();return;}
+    // J-3250 END actions
     if(act==='field-journal'){if(id&&currentRegion().species.includes(id))state.selectedJournal=id;tab='journal';renderPanel();}
     if(act==='field-research'){tab='research';renderPanel();}
     if(act==='set-region') setRegion(id);

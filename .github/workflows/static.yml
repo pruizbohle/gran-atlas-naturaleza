@@ -63,6 +63,8 @@ jobs:
           node --check www/js/atlas-ui-v3211.js
           node --check www/js/atlas-map-v3211.js
           node --check www/js/lab/atlas-lab-v3211.js
+          node --check www/js/journal-ui-v3250.js
+          node --check www/js/lab/journal-lab-v3250.js
           node --check www/js/app.js
           node --check scripts/benchmark-stability-v3240.cjs
           node --check scripts/check-stability-browser-v3240.cjs

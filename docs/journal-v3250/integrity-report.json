@@ -1,0 +1,16 @@
+{
+  "version": "3.25.0",
+  "baselineCommit": "b35caa6c8c7625df1b5095d6777db78968923c87",
+  "catalogSpecies": 710,
+  "playableRegions": 79,
+  "continents": 5,
+  "originalAppSha256": "137929ede561607c7c45164be019afd22a89031db96b9714b2aed0f44a8b5839",
+  "allOriginalGameplayBytesPreservedAfterRemovingAdditivePresentation": true,
+  "protectedArtworkCatalogGeographyAndCSSFixturesUnchanged": true,
+  "saveKey": "gran_atlas_v05",
+  "newPersistentFields": 0,
+  "newPeriodicTasks": 0,
+  "testCount": 306,
+  "testFailures": 0,
+  "physicalAndroidTested": false
+}

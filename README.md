@@ -1,3 +1,7 @@
+# El Gran Atlas v3.25.0 — Cuaderno del naturalista
+
+Cuaderno renovado como diario naturalista: lámina protagonista, selector móvil compacto y cinco sellos con objetivos reales de investigación. Se conservan las 710 especies, 79 regiones, reglas y partidas. [Informe, comparación y pruebas](README_V3250.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-cuaderno-v3250.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3250.html).
+
 # El Gran Atlas v3.24.0 — Estabilización global
 
 Cierre de AM-01 a AM-06: 710 especies, 79 regiones y cinco continentes. Bestiario de 32 tarjetas por página, con una reducción medida del 91,9 % en apertura y 95,5 % en reapertura bajo CPU ×4. 294 pruebas de regresión aprobadas. [Informe y evidencia](README_V3240.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3240.html).
