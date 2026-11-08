@@ -2953,11 +2953,11 @@ function atlasViewModel(){
  const selected=ATLAS_CONTINENTS.some(c=>c.id===state.atlasView)?state.atlasView:'Europa';
  const continent=ATLAS_CONTINENTS.find(c=>c.id===selected),source=REGIONS.filter(r=>r.continent===selected);
  const chosen=source.find(r=>r.id===state.atlasSelectedRegion)||source.find(r=>r.id===state.currentRegion)||source[0];
- const xs=source.map(r=>Number(r.code.split('-')[2])),ys=source.map(r=>Number(r.code.split('-')[1]));
- const minCol=source.length?Math.min(...xs):0,minRow=source.length?Math.min(...ys):0;
- const regions=source.map(r=>({...atlasRegionModel(r),x:79+(Number(r.code.split('-')[2])-minCol)*88+(Number(r.code.split('-')[1])%2?39:0),y:68+(Number(r.code.split('-')[1])-minRow)*77}));
+ const mesh=globalThis.AtlasGeography.layout(selected,source);
+ const regions=source.map(r=>({...atlasRegionModel(r),...mesh.positions[r.id]}));
+ for(const r of regions){const cell=mesh.cells.find(c=>c.cellId===r.cellId);if(cell.regionIds.length>1)r.group=cell.regionIds.map(id=>({id,name:regions.find(x=>x.id===id).name}));}
  const ids=[...new Set(source.flatMap(r=>r.species))];
- return {continent:{...continent,status:continentStatus(selected)},continents:ATLAS_CONTINENTS.map(c=>({...c,status:continentStatus(c.id)})),regions,selectedId:chosen?.id,currentId:state.currentRegion,readyCount:regions.filter(r=>r.status==='actual'||r.status==='abierta').length,identified:ids.filter(id=>stage(id)>=1).length,total:ids.length,board:{width:source.length?164+(Math.max(...xs)-minCol)*88:428,height:source.length?144+(Math.max(...ys)-minRow)*77:298}};
+ return {continent:{...continent,status:continentStatus(selected)},continents:ATLAS_CONTINENTS.map(c=>({...c,status:continentStatus(c.id)})),regions,cells:mesh.cells.map(c=>({...c,regions:c.regionIds.map(id=>regions.find(r=>r.id===id))})),selectedId:chosen?.id,currentId:state.currentRegion,readyCount:regions.filter(r=>r.status==='actual'||r.status==='abierta').length,identified:ids.filter(id=>stage(id)>=1).length,total:ids.length,board:mesh.board};
 }
 function renderAtlas(){return globalThis.AtlasUI.render(atlasViewModel());}
 function rememberAtlasViewport(){
@@ -2969,7 +2969,7 @@ function selectAtlasRegion(id){
  if(!REGIONS.some(r=>r.id===id&&r.continent===state.atlasView))return;
  state.atlasSelectedRegion=id;
  const root=panel.querySelector('.atlas-game');
- if(root){globalThis.AtlasMap.select(root,id,globalThis.AtlasUI.regionPanel(atlasRegionModel(REGIONS.find(r=>r.id===id))));}
+ if(root){globalThis.AtlasMap.select(root,id,globalThis.AtlasUI.regionPanel(atlasViewModel().regions.find(r=>r.id===id)));}
  persist();
 }
 
@@ -4434,6 +4434,7 @@ function handlePanelAction(e){
     if(act==='claim-mission'){claimScientificMission(id);}
 }
 panel.addEventListener('click',handlePanelAction);
+panel.addEventListener('change',event=>{if(event.target.matches?.('[data-atlas-region]'))selectAtlasRegion(event.target.value);});
 panel.addEventListener('toggle',event=>{
  const details=event.target;
  if(!details.open||!details.dataset?.specimenCollection)return;

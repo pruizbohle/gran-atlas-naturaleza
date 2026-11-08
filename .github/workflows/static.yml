@@ -42,6 +42,8 @@ jobs:
           node --check www/js/field-scene-v3210.js
           node --check www/js/field-ui-v3210.js
           node --check www/js/lab/field-lab-v3210.js
+          node --check www/js/atlas-geography-v3211b.js
+          node --check www/js/lab/geography-lab-v3211b.js
           node --check www/js/atlas-ui-v3211.js
           node --check www/js/atlas-map-v3211.js
           node --check www/js/lab/atlas-lab-v3211.js

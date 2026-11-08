@@ -1,0 +1,286 @@
+{
+  "reference": "working",
+  "scenario": "Europa; región actual; partida inicial; detalles cerrados",
+  "measurements": [
+    {
+      "width": 320,
+      "height": 640,
+      "dockTop": 589,
+      "documentHeight": 640,
+      "verticalScroll": 0,
+      "horizontalOverflow": false,
+      "header": {
+        "top": 59,
+        "bottom": 108,
+        "width": 306,
+        "height": 49,
+        "visible": true,
+        "text": "ATLAS DE EXPEDICIONES · 18421/10 regiones habilitadasCambiar continenteEuropaAsiaÁfricaNorteaméricaS"
+      },
+      "map": {
+        "top": 115,
+        "bottom": 308.796875,
+        "width": 304,
+        "height": 193.796875,
+        "visible": true,
+        "text": "NEscandinavia · Región bloqueadaEscandinavia0/18Islas Británicas · Región actualIslas Británi…0/33Re"
+      },
+      "region": {
+        "top": 405.484375,
+        "bottom": 579,
+        "width": 306,
+        "height": 173.515625,
+        "visible": true,
+        "text": "REGISTRO DE EXPEDICIÓNIslas BritánicasRegión actualEstás explorando esta región0/33 especies identif"
+      },
+      "action": {
+        "top": 525,
+        "bottom": 569,
+        "width": 201,
+        "height": 44,
+        "visible": true,
+        "text": "Explorando aquí✓"
+      },
+      "openTimings": {
+        "trialsMs": [
+          10.199999995529652,
+          7.4000000059604645,
+          8.399999998509884,
+          7.299999997019768,
+          12,
+          13.200000002980232,
+          8.699999995529652,
+          8.800000004470348,
+          11
+        ],
+        "medianMs": 8.800000004470348,
+        "domNodes": 598
+      },
+      "jsErrors": []
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "dockTop": 689,
+      "documentHeight": 740,
+      "verticalScroll": 0,
+      "horizontalOverflow": false,
+      "header": {
+        "top": 59,
+        "bottom": 108,
+        "width": 346,
+        "height": 49,
+        "visible": true,
+        "text": "ATLAS DE EXPEDICIONES · 18421/10 regiones habilitadasCambiar continenteEuropaAsiaÁfricaNorteaméricaS"
+      },
+      "map": {
+        "top": 115,
+        "bottom": 426.375,
+        "width": 344,
+        "height": 311.375,
+        "visible": true,
+        "text": "NEscandinavia · Región bloqueadaEscandinavia0/18Islas Británicas · Región actualIslas Británi…0/33Re"
+      },
+      "region": {
+        "top": 504.375,
+        "bottom": 679,
+        "width": 346,
+        "height": 174.625,
+        "visible": true,
+        "text": "REGISTRO DE EXPEDICIÓNIslas BritánicasRegión actualEstás explorando esta región0/33 especies identif"
+      },
+      "action": {
+        "top": 625,
+        "bottom": 669,
+        "width": 241,
+        "height": 44,
+        "visible": true,
+        "text": "Explorando aquí✓"
+      },
+      "openTimings": {
+        "trialsMs": [
+          8,
+          7.5,
+          9.199999995529652,
+          6.800000004470348,
+          9.699999995529652,
+          9.300000004470348,
+          10.299999997019768,
+          7.600000001490116,
+          8.600000001490116
+        ],
+        "medianMs": 8.600000001490116,
+        "domNodes": 598
+      },
+      "jsErrors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "dockTop": 793,
+      "documentHeight": 844,
+      "verticalScroll": 0,
+      "horizontalOverflow": false,
+      "header": {
+        "top": 59,
+        "bottom": 108,
+        "width": 376,
+        "height": 49,
+        "visible": true,
+        "text": "ATLAS DE EXPEDICIONES · 18421/10 regiones habilitadasCambiar continenteEuropaAsiaÁfricaNorteaméricaS"
+      },
+      "map": {
+        "top": 115,
+        "bottom": 530.375,
+        "width": 374,
+        "height": 415.375,
+        "visible": true,
+        "text": "NEscandinavia · Región bloqueadaEscandinavia0/18Islas Británicas · Región actualIslas Británi…0/33Re"
+      },
+      "region": {
+        "top": 608.375,
+        "bottom": 783,
+        "width": 376,
+        "height": 174.625,
+        "visible": true,
+        "text": "REGISTRO DE EXPEDICIÓNIslas BritánicasRegión actualEstás explorando esta región0/33 especies identif"
+      },
+      "action": {
+        "top": 729,
+        "bottom": 773,
+        "width": 271,
+        "height": 44,
+        "visible": true,
+        "text": "Explorando aquí✓"
+      },
+      "openTimings": {
+        "trialsMs": [
+          8.299999997019768,
+          7.299999997019768,
+          7,
+          7.9000000059604645,
+          8.5,
+          6.5999999940395355,
+          7.700000002980232,
+          8.299999997019768,
+          8.700000002980232
+        ],
+        "medianMs": 7.9000000059604645,
+        "domNodes": 598
+      },
+      "jsErrors": []
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "dockTop": 864,
+      "documentHeight": 915,
+      "verticalScroll": 0,
+      "horizontalOverflow": false,
+      "header": {
+        "top": 59,
+        "bottom": 108,
+        "width": 398,
+        "height": 49,
+        "visible": true,
+        "text": "ATLAS DE EXPEDICIONES · 18421/10 regiones habilitadasCambiar continenteEuropaAsiaÁfricaNorteaméricaS"
+      },
+      "map": {
+        "top": 115,
+        "bottom": 601.375,
+        "width": 396,
+        "height": 486.375,
+        "visible": true,
+        "text": "NEscandinavia · Región bloqueadaEscandinavia0/18Islas Británicas · Región actualIslas Británi…0/33Re"
+      },
+      "region": {
+        "top": 679.375,
+        "bottom": 854,
+        "width": 398,
+        "height": 174.625,
+        "visible": true,
+        "text": "REGISTRO DE EXPEDICIÓNIslas BritánicasRegión actualEstás explorando esta región0/33 especies identif"
+      },
+      "action": {
+        "top": 800,
+        "bottom": 844,
+        "width": 293,
+        "height": 44,
+        "visible": true,
+        "text": "Explorando aquí✓"
+      },
+      "openTimings": {
+        "trialsMs": [
+          14.799999997019768,
+          10.400000005960464,
+          11.099999994039536,
+          15.5,
+          10,
+          8.300000004470348,
+          8.5,
+          9.699999995529652,
+          8.200000002980232
+        ],
+        "medianMs": 10,
+        "domNodes": 598
+      },
+      "jsErrors": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "dockTop": 1000,
+      "documentHeight": 1000,
+      "verticalScroll": 0,
+      "horizontalOverflow": false,
+      "header": {
+        "top": 306,
+        "bottom": 358,
+        "width": 900,
+        "height": 52,
+        "visible": true,
+        "text": "ATLAS DE EXPEDICIONES · 18421/10 regiones habilitadasCambiar continenteEuropaAsiaÁfricaNorteaméricaS"
+      },
+      "map": {
+        "top": 368,
+        "bottom": 779,
+        "width": 568.84375,
+        "height": 411,
+        "visible": true,
+        "text": "NEscandinavia · Región bloqueadaEscandinavia0/18Islas Británicas · Región actualIslas Británi…0/33Re"
+      },
+      "region": {
+        "top": 367,
+        "bottom": 583.28125,
+        "width": 317.140625,
+        "height": 216.28125,
+        "visible": true,
+        "text": "REGISTRO DE EXPEDICIÓNIslas BritánicasRegión actualEstás explorando esta región0/33 especies identif"
+      },
+      "action": {
+        "top": 522.28125,
+        "bottom": 568.28125,
+        "width": 201.140625,
+        "height": 46,
+        "visible": true,
+        "text": "Explorando aquí✓"
+      },
+      "openTimings": {
+        "trialsMs": [
+          11.199999995529652,
+          7.9000000059604645,
+          7.5999999940395355,
+          6.4000000059604645,
+          8.599999994039536,
+          11.100000001490116,
+          7.899999998509884,
+          7.300000004470348,
+          7.5
+        ],
+        "medianMs": 7.899999998509884,
+        "domNodes": 598
+      },
+      "jsErrors": []
+    }
+  ]
+}

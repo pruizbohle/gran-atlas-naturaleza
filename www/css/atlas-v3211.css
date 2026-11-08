@@ -15,3 +15,17 @@
 .atlas-map-key>span{display:flex;align-items:center;gap:3px}.atlas-map-key svg{width:11px;height:12px;flex-shrink:0}
 
 .atlas-actual .atlas-tile-progress{stroke:none}
+/* 3.21.1b: one regular lattice for land, reservations and playable sectors. */
+body.atlas-active .region-pill{display:none}
+.atlas-map-viewport{display:flex}.atlas-map-board{margin:auto}
+.atlas-land-cell{pointer-events:none;color:#9ca582}.atlas-land-cell>polygon{fill:#e3dfc0;stroke:#9ba78c;stroke-width:.7;vector-effect:non-scaling-stroke}
+.atlas-land-cell .atlas-terrain{opacity:.25}.atlas-land-cell.atlas-reserved>polygon{fill:#e3e0d1;stroke:#aab3a4}.atlas-reserved-mark{fill:none;stroke:#899a8a;stroke-width:1.1;opacity:.55}
+.atlas-game .atlas-tile .atlas-territory{stroke-width:.8;vector-effect:non-scaling-stroke}.atlas-game .atlas-tile.atlas-actual .atlas-territory{stroke-width:1.2}
+.atlas-game .atlas-tile .atlas-selection-ring{stroke-width:2;stroke-dasharray:none;vector-effect:non-scaling-stroke;stroke:#214d52}
+.atlas-group-indicator{font:650 8px system-ui;fill:currentColor;stroke:none}
+.atlas-region-picker select{width:100%;min-height:44px;padding:6px 25px 6px 8px;color:#304d38;background:#fbf5e5;border:1px solid #c7b58d;border-radius:7px;font:700 17px Georgia}
+.atlas-game[data-overview=true] .atlas-tile-name,.atlas-game[data-overview=true] .atlas-tile-progress,.atlas-game[data-overview=true] .atlas-group-indicator{visibility:hidden}
+.atlas-game[data-overview=true] .atlas-tile .atlas-terrain{opacity:.25}
+
+.atlas-overview-icon{display:none}.atlas-game[data-overview=true] .atlas-overview-icon{display:block}.atlas-marker-disc{fill:#f7f0db;stroke:#607760;stroke-width:1}.atlas-actual .atlas-marker-disc{fill:#41654e;stroke:#f3eac5}
+.atlas-game[data-continent="Norteamérica"] .atlas-continent-picker{flex-basis:168px;min-width:168px}
