@@ -1,0 +1,143 @@
+{
+  "reference": "07a6f06cfea22daa573b8a841fca6b2c603bba93",
+  "geographySourceSha256": "b018f89d90c36fdc26772e4999af2de70820839572e41671ad402e7f04c71b1d",
+  "mesh": {
+    "radius": 46,
+    "board": {
+      "width": 482.2088543149259,
+      "height": 412
+    },
+    "origin": {
+      "x": 39.837168574084174,
+      "y": 46
+    },
+    "cells": [
+      {
+        "cellId": "norteamerica-0-0",
+        "q": 0,
+        "r": 0,
+        "column": 0,
+        "x": 61.837168574084174,
+        "y": 68,
+        "sourceId": "HX-01-05"
+      },
+      {
+        "cellId": "norteamerica-1-0",
+        "q": 1,
+        "r": 0,
+        "column": 1,
+        "x": 141.51150572225254,
+        "y": 68,
+        "sourceId": "HX-02-06"
+      },
+      {
+        "cellId": "norteamerica-2-0",
+        "q": 2,
+        "r": 0,
+        "column": 2,
+        "x": 221.18584287042086,
+        "y": 68,
+        "sourceId": "HX-02-03"
+      },
+      {
+        "cellId": "norteamerica-1-1",
+        "q": 1,
+        "r": 1,
+        "column": 1,
+        "x": 181.3486742963367,
+        "y": 137,
+        "sourceId": "HX-02-02"
+      },
+      {
+        "cellId": "norteamerica-2-1",
+        "q": 2,
+        "r": 1,
+        "column": 2,
+        "x": 261.023011444505,
+        "y": 137,
+        "sourceId": "HX-02-04"
+      },
+      {
+        "cellId": "norteamerica-3-1",
+        "q": 3,
+        "r": 1,
+        "column": 3,
+        "x": 340.6973485926734,
+        "y": 137,
+        "sourceId": "HX-02-05"
+      },
+      {
+        "cellId": "norteamerica-4-1",
+        "q": 4,
+        "r": 1,
+        "column": 4,
+        "x": 420.3716857408417,
+        "y": 137,
+        "sourceId": "HX-03-02"
+      },
+      {
+        "cellId": "norteamerica-1-2",
+        "q": 0,
+        "r": 2,
+        "column": 1,
+        "x": 141.51150572225254,
+        "y": 206,
+        "sourceId": "HX-03-03"
+      },
+      {
+        "cellId": "norteamerica-2-2",
+        "q": 1,
+        "r": 2,
+        "column": 2,
+        "x": 221.18584287042086,
+        "y": 206,
+        "sourceId": "HX-03-05"
+      },
+      {
+        "cellId": "norteamerica-3-2",
+        "q": 2,
+        "r": 2,
+        "column": 3,
+        "x": 300.86018001858923,
+        "y": 206,
+        "sourceId": "HX-04-04"
+      },
+      {
+        "cellId": "norteamerica-4-2",
+        "q": 3,
+        "r": 2,
+        "column": 4,
+        "x": 380.53451716675755,
+        "y": 206,
+        "sourceId": "HX-03-04"
+      },
+      {
+        "cellId": "norteamerica-2-3",
+        "q": 1,
+        "r": 3,
+        "column": 2,
+        "x": 261.023011444505,
+        "y": 275,
+        "sourceId": "HX-04-02"
+      },
+      {
+        "cellId": "norteamerica-3-3",
+        "q": 2,
+        "r": 3,
+        "column": 3,
+        "x": 340.6973485926734,
+        "y": 275,
+        "sourceId": "HX-04-03"
+      },
+      {
+        "cellId": "norteamerica-4-4",
+        "q": 2,
+        "r": 4,
+        "column": 4,
+        "x": 380.53451716675755,
+        "y": 344,
+        "sourceId": "HX-05-04"
+      }
+    ]
+  }
+}
