@@ -1,6 +1,6 @@
 'use strict';
 const fs=require('node:fs'),{catalog}=require('../tests/helpers/catalog.cjs');
-const source=fs.readFileSync('www/js/app.js','utf8'),regions=catalog(source).REGIONS;
+const source=fs.readFileSync('www/js/app.js','utf8'),regions=catalog(source,true).REGIONS;
 const continents=source.slice(source.indexOf('const ATLAS_CONTINENTS='),source.indexOf('function regionRequirementsMet('));
 const rules=source.slice(source.indexOf('function regionRequirementsMet('),source.indexOf('function unlockRegion(',source.indexOf('function regionRequirementsMet(')));
 const projection=source.slice(source.indexOf('function atlasRegionModel('),source.indexOf('function renderAtlas('));

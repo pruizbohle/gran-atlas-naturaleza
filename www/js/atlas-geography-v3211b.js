@@ -80,7 +80,19 @@ const anchors={
  ],
  Norteamérica:[
  ['Alaska',0,0,'Extremo noroccidental de Norteamérica.'],
- ['Columbia Británica',1,1,'Costa occidental canadiense, al sureste de Alaska.']
+ ['Columbia Británica',1,1,'Costa occidental canadiense, al sureste de Alaska.'],
+ ['Bosques boreales de Canadá',2,0,'Celda original conservada; vínculo jugable AM-02.'],
+ ['Montañas Rocosas',2,1,'Celda original conservada; vínculo jugable AM-02.'],
+ ['Grandes Llanuras',3,1,'Celda original conservada; vínculo jugable AM-02.'],
+ ['Yukón',1,0,'Celda original conservada; vínculo jugable AM-02.'],
+ ['Región de los Grandes Lagos',4,1,'Celda original conservada; vínculo jugable AM-02.'],
+ ['Costa del Pacífico',1,2,'Celda original conservada; vínculo jugable AM-02.'],
+ ['Bosques del este norteamericano',4,2,'Celda original conservada; vínculo jugable AM-02.'],
+ ['Desierto de Sonora',2,2,'Celda original conservada; vínculo jugable AM-02.'],
+ ['Sierra Madre',2,3,'Celda original conservada; vínculo jugable AM-02.'],
+ ['Península de Yucatán',3,3,'Celda original conservada; vínculo jugable AM-02.'],
+ ['Costa del golfo de México',3,2,'Celda original conservada; vínculo jugable AM-02.'],
+ ['América Central',4,4,'Celda original conservada; vínculo jugable AM-02.']
  ]
 };
 const northAmericanSourceCells=[{"name":"Alaska","sourceId":"HX-01-05","column":0,"row":0,"shortLabel":"Alaska"},{"name":"Columbia Británica","sourceId":"HX-02-02","column":1,"row":1,"shortLabel":"Columbia Británica"},{"name":"Bosques boreales de Canadá","sourceId":"HX-02-03","column":2,"row":0,"shortLabel":"Canadá boreal"},{"name":"Montañas Rocosas","sourceId":"HX-02-04","column":2,"row":1,"shortLabel":"Rocosas"},{"name":"Grandes Llanuras","sourceId":"HX-02-05","column":3,"row":1,"shortLabel":"Llanuras"},{"name":"Yukón","sourceId":"HX-02-06","column":1,"row":0,"shortLabel":"Yukón"},{"name":"Región de los Grandes Lagos","sourceId":"HX-03-02","column":4,"row":1,"shortLabel":"G. Lagos"},{"name":"Costa del Pacífico","sourceId":"HX-03-03","column":1,"row":2,"shortLabel":"Pacífico"},{"name":"Bosques del este norteamericano","sourceId":"HX-03-04","column":4,"row":2,"shortLabel":"Bosques este"},{"name":"Desierto de Sonora","sourceId":"HX-03-05","column":2,"row":2,"shortLabel":"Sonora"},{"name":"Sierra Madre","sourceId":"HX-04-02","column":2,"row":3,"shortLabel":"Sierra Madre"},{"name":"Península de Yucatán","sourceId":"HX-04-03","column":3,"row":3,"shortLabel":"Yucatán"},{"name":"Costa del golfo de México","sourceId":"HX-04-04","column":3,"row":2,"shortLabel":"Golfo México"},{"name":"América Central","sourceId":"HX-05-04","column":4,"row":4,"shortLabel":"A. Central"}];

@@ -122,7 +122,7 @@
     if (!raw) throw new Error('No hay una partida guardada todavía.');
     const data = normalizeGame(JSON.parse(raw));
     return { text: JSON.stringify({
-      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.21.2',
+      format: FORMAT, formatVersion: FORMAT_VERSION, gameVersion: '3.22.0',
       exportedAt: new Date().toISOString(), game: data
     }, null, 2), name: fileName() };
   }

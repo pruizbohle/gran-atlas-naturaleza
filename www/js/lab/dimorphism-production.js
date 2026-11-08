@@ -1921,6 +1921,7 @@ function normalizeSpecialDiscoveries(snapshot){
 
 
 function sexSpriteMarkup(id,sex){
+ if(SPECIES[id]?.origin==='na3220'&&SEXUAL_DIMORPHISM[id])return globalThis.ATLAS_NORTH_ART_V3220?.(SPECIES[id],SPECIES[id].color,'normal',sex)||null;
   const spec=SEXUAL_DIMORPHISM[id];
   if(!spec) return null;
   const bird3193=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_BIRD_ART_V3193==='function') ? globalThis.ATLAS_BIRD_ART_V3193(SPECIES[id],SPECIES[id].color,'normal',sex) : null;
@@ -2774,6 +2775,7 @@ function familyV3154Sprite(id,skin){
 }
 
 function spriteFor(kind,color,skin,id){
+ const northArt=globalThis.ATLAS_NORTH_ART_V3220?.(SPECIES[id],color,skin);if(northArt)return northArt;
  const mammal3194=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_MAMMAL_ART_V3194==='function') ? globalThis.ATLAS_MAMMAL_ART_V3194(SPECIES[id],color,skin,null,id) : null; if(mammal3194)return mammal3194;
  const bird3193=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_BIRD_ART_V3193==='function') ? globalThis.ATLAS_BIRD_ART_V3193(SPECIES[id],color,skin) : null; if(bird3193)return bird3193;
  const fish3191=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_FISH_ART_V3191==='function') ? globalThis.ATLAS_FISH_ART_V3191(SPECIES[id],color,skin) : null; if(fish3191)return fish3191;

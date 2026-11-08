@@ -1973,6 +1973,18 @@ function mergeHistoricalBeardedVulture(snapshot){
  return snapshot;
 }
 
+// AM-02: additive catalog installation. Historical records, regions and saved IDs are untouched.
+const northAmerica3220=typeof globalThis!=='undefined'?globalThis.AtlasNorthAmerica3220:null;
+if(northAmerica3220){
+ for(const [id,profile] of Object.entries(northAmerica3220.species)){if(SPECIES[id])throw Error('Duplicate North American species: '+id);SPECIES[id]=JSON.parse(JSON.stringify(profile));}
+ for(const region of northAmerica3220.regions){if(REGIONS.some(r=>r.id===region.id))throw Error('Duplicate North American region: '+region.id);REGIONS.push(JSON.parse(JSON.stringify(region)));}
+ Object.assign(SEXUAL_DIMORPHISM,northAmerica3220.dimorphism);
+ for(const [id,categories] of Object.entries(northAmerica3220.categories))SPECIMEN_CATEGORIES[id]=categories.slice();
+ const legacyTaxonomy=taxonomyInfo;
+ taxonomyInfo=function(id){return SPECIES[id]?.origin==='na3220'?SPECIES[id].taxonomy:legacyTaxonomy(id);};
+}
+// END AM-02 catalog installation.
+
 const RESEARCH_NODES=[
   {id:'prismaticos_1', name:'Prismáticos de latón', desc:'+12 % relativo sobre probabilidad base manual (50 % → 56 %)', money:25, knowledge:20, once:true, effect(s){s.upgrades.prism=1;}},
   {id:'prismaticos_2', name:'Lentes calibrados', desc:'+24 % relativo acumulado (50 % → 62 %, sin equipo)', money:50, knowledge:35, req:'prismaticos_1', once:true, effect(s){s.upgrades.prism=2;}},
@@ -4531,6 +4543,7 @@ setInterval(tick,1000);
 
 // Sprites simplificados para ejemplares macho y hembra. No son variantes raras.
 function sexSpriteMarkup(id,sex){
+ if(SPECIES[id]?.origin==='na3220'&&SEXUAL_DIMORPHISM[id])return globalThis.ATLAS_NORTH_ART_V3220?.(SPECIES[id],SPECIES[id].color,'normal',sex)||null;
   const spec=SEXUAL_DIMORPHISM[id];
   if(!spec) return null;
   const bird3193=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_BIRD_ART_V3193==='function') ? globalThis.ATLAS_BIRD_ART_V3193(SPECIES[id],SPECIES[id].color,'normal',sex) : null;
@@ -5384,6 +5397,7 @@ function familyV3154Sprite(id,skin){
 }
 
 function spriteFor(kind,color,skin,id){
+ const northArt=globalThis.ATLAS_NORTH_ART_V3220?.(SPECIES[id],color,skin);if(northArt)return northArt;
  const mammal3194=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_MAMMAL_ART_V3194==='function') ? globalThis.ATLAS_MAMMAL_ART_V3194(SPECIES[id],color,skin,null,id) : null; if(mammal3194)return mammal3194;
  const bird3193=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_BIRD_ART_V3193==='function') ? globalThis.ATLAS_BIRD_ART_V3193(SPECIES[id],color,skin) : null; if(bird3193)return bird3193;
  const fish3191=(typeof globalThis!=='undefined' && typeof globalThis.ATLAS_FISH_ART_V3191==='function') ? globalThis.ATLAS_FISH_ART_V3191(SPECIES[id],color,skin) : null; if(fish3191)return fish3191;

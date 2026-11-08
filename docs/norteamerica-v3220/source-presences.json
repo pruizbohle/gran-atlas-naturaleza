@@ -1,0 +1,1444 @@
+[
+  {
+    "row": 2,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0577",
+    "scientific": "Anser caerulescens",
+    "id": "na_esp_anser_caerulescens"
+  },
+  {
+    "row": 3,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0576",
+    "scientific": "Corvus corax",
+    "id": "na_esp_corvus_corax"
+  },
+  {
+    "row": 4,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0027",
+    "scientific": "Aquila chrysaetos",
+    "id": "aguila_real"
+  },
+  {
+    "row": 5,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0583",
+    "scientific": "Bubo scandiacus",
+    "id": "na_esp_bubo_scandiacus"
+  },
+  {
+    "row": 6,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0582",
+    "scientific": "Falco peregrinus",
+    "id": "na_esp_falco_peregrinus"
+  },
+  {
+    "row": 7,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0078",
+    "scientific": "Canis lupus",
+    "id": "lobo_gris"
+  },
+  {
+    "row": 8,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0539",
+    "scientific": "Vulpes vulpes",
+    "id": "zorro_rojo"
+  },
+  {
+    "row": 9,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0563",
+    "scientific": "Dicrostonyx groenlandicus",
+    "id": "na_esp_dicrostonyx_groenlandicus"
+  },
+  {
+    "row": 10,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0228",
+    "scientific": "Gulo gulo",
+    "id": "gloton"
+  },
+  {
+    "row": 11,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0562",
+    "scientific": "Lemmus trimucronatus",
+    "id": "na_esp_lemmus_trimucronatus"
+  },
+  {
+    "row": 12,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0520",
+    "scientific": "Ursus americanus",
+    "id": "na_esp_ursus_americanus"
+  },
+  {
+    "row": 13,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0521",
+    "scientific": "Ursus arctos",
+    "id": "oso_pardo"
+  },
+  {
+    "row": 14,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0093",
+    "scientific": "Castor canadensis",
+    "id": "na_esp_castor_canadensis"
+  },
+  {
+    "row": 15,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0008",
+    "scientific": "Alces alces",
+    "id": "alce"
+  },
+  {
+    "row": 16,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0547",
+    "scientific": "Ovibos moschatus",
+    "id": "na_esp_ovibos_moschatus"
+  },
+  {
+    "row": 17,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0548",
+    "scientific": "Ovis dalli",
+    "id": "na_esp_ovis_dalli"
+  },
+  {
+    "row": 18,
+    "hex": "HX-01-05",
+    "sourceSpeciesId": "ESP-0461",
+    "scientific": "Rangifer tarandus",
+    "id": "reno"
+  },
+  {
+    "row": 92,
+    "hex": "HX-02-02",
+    "sourceSpeciesId": "ESP-0173",
+    "scientific": "Dryocopus pileatus",
+    "id": "na_esp_dryocopus_pileatus"
+  },
+  {
+    "row": 93,
+    "hex": "HX-02-02",
+    "sourceSpeciesId": "ESP-0233",
+    "scientific": "Haliaeetus leucocephalus",
+    "id": "na_esp_haliaeetus_leucocephalus"
+  },
+  {
+    "row": 94,
+    "hex": "HX-02-02",
+    "sourceSpeciesId": "ESP-0078",
+    "scientific": "Canis lupus",
+    "id": "lobo_gris"
+  },
+  {
+    "row": 95,
+    "hex": "HX-02-02",
+    "sourceSpeciesId": "ESP-0451",
+    "scientific": "Puma concolor",
+    "id": "na_esp_puma_concolor"
+  },
+  {
+    "row": 96,
+    "hex": "HX-02-02",
+    "sourceSpeciesId": "ESP-0292",
+    "scientific": "Lontra canadensis",
+    "id": "na_esp_lontra_canadensis"
+  },
+  {
+    "row": 97,
+    "hex": "HX-02-02",
+    "sourceSpeciesId": "ESP-0520",
+    "scientific": "Ursus americanus",
+    "id": "na_esp_ursus_americanus"
+  },
+  {
+    "row": 98,
+    "hex": "HX-02-02",
+    "sourceSpeciesId": "ESP-0521",
+    "scientific": "Ursus arctos",
+    "id": "oso_pardo"
+  },
+  {
+    "row": 99,
+    "hex": "HX-02-02",
+    "sourceSpeciesId": "ESP-0093",
+    "scientific": "Castor canadensis",
+    "id": "na_esp_castor_canadensis"
+  },
+  {
+    "row": 100,
+    "hex": "HX-02-02",
+    "sourceSpeciesId": "ESP-0324",
+    "scientific": "Marmota vancouverensis",
+    "id": "na_esp_marmota_vancouverensis"
+  },
+  {
+    "row": 101,
+    "hex": "HX-02-02",
+    "sourceSpeciesId": "ESP-0366",
+    "scientific": "Odocoileus hemionus",
+    "id": "na_esp_odocoileus_hemionus"
+  },
+  {
+    "row": 102,
+    "hex": "HX-02-02",
+    "sourceSpeciesId": "ESP-0597",
+    "scientific": "Oncorhynchus mykiss",
+    "id": "na_esp_oncorhynchus_mykiss"
+  },
+  {
+    "row": 103,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0578",
+    "scientific": "Anas platyrhynchos",
+    "id": "na_esp_anas_platyrhynchos"
+  },
+  {
+    "row": 104,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0577",
+    "scientific": "Anser caerulescens",
+    "id": "na_esp_anser_caerulescens"
+  },
+  {
+    "row": 105,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0202",
+    "scientific": "Falcipennis canadensis",
+    "id": "na_esp_falcipennis_canadensis"
+  },
+  {
+    "row": 106,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0416",
+    "scientific": "Perisoreus canadensis",
+    "id": "na_esp_perisoreus_canadensis"
+  },
+  {
+    "row": 107,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0078",
+    "scientific": "Canis lupus",
+    "id": "lobo_gris"
+  },
+  {
+    "row": 108,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0304",
+    "scientific": "Lynx canadensis",
+    "id": "na_esp_lynx_canadensis"
+  },
+  {
+    "row": 109,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0325",
+    "scientific": "Martes americana",
+    "id": "na_esp_martes_americana"
+  },
+  {
+    "row": 110,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0556",
+    "scientific": "Sorex cinereus",
+    "id": "na_esp_sorex_cinereus"
+  },
+  {
+    "row": 111,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0093",
+    "scientific": "Castor canadensis",
+    "id": "na_esp_castor_canadensis"
+  },
+  {
+    "row": 112,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0281",
+    "scientific": "Lepus americanus",
+    "id": "na_esp_lepus_americanus"
+  },
+  {
+    "row": 113,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0008",
+    "scientific": "Alces alces",
+    "id": "alce"
+  },
+  {
+    "row": 114,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0461",
+    "scientific": "Rangifer tarandus",
+    "id": "reno"
+  },
+  {
+    "row": 115,
+    "hex": "HX-02-03",
+    "sourceSpeciesId": "ESP-0587",
+    "scientific": "Lithobates sylvaticus",
+    "id": "na_esp_lithobates_sylvaticus"
+  },
+  {
+    "row": 116,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0576",
+    "scientific": "Corvus corax",
+    "id": "na_esp_corvus_corax"
+  },
+  {
+    "row": 117,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0570",
+    "scientific": "Pica hudsonia",
+    "id": "na_esp_pica_hudsonia"
+  },
+  {
+    "row": 118,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0027",
+    "scientific": "Aquila chrysaetos",
+    "id": "aguila_real"
+  },
+  {
+    "row": 119,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0584",
+    "scientific": "Bubo virginianus",
+    "id": "na_esp_bubo_virginianus"
+  },
+  {
+    "row": 120,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0582",
+    "scientific": "Falco peregrinus",
+    "id": "na_esp_falco_peregrinus"
+  },
+  {
+    "row": 121,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0307",
+    "scientific": "Lynx rufus",
+    "id": "na_esp_lynx_rufus"
+  },
+  {
+    "row": 122,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0451",
+    "scientific": "Puma concolor",
+    "id": "na_esp_puma_concolor"
+  },
+  {
+    "row": 123,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0558",
+    "scientific": "Brachylagus idahoensis",
+    "id": "na_esp_brachylagus_idahoensis"
+  },
+  {
+    "row": 124,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0520",
+    "scientific": "Ursus americanus",
+    "id": "na_esp_ursus_americanus"
+  },
+  {
+    "row": 125,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0320",
+    "scientific": "Marmota flaviventris",
+    "id": "na_esp_marmota_flaviventris"
+  },
+  {
+    "row": 126,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0364",
+    "scientific": "Ochotona princeps",
+    "id": "na_esp_ochotona_princeps"
+  },
+  {
+    "row": 127,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0109",
+    "scientific": "Cervus canadensis",
+    "id": "na_esp_cervus_canadensis"
+  },
+  {
+    "row": 128,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0375",
+    "scientific": "Oreamnos americanus",
+    "id": "na_esp_oreamnos_americanus"
+  },
+  {
+    "row": 129,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0389",
+    "scientific": "Ovis canadensis",
+    "id": "na_esp_ovis_canadensis"
+  },
+  {
+    "row": 130,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0548",
+    "scientific": "Ovis dalli",
+    "id": "na_esp_ovis_dalli"
+  },
+  {
+    "row": 131,
+    "hex": "HX-02-04",
+    "sourceSpeciesId": "ESP-0597",
+    "scientific": "Oncorhynchus mykiss",
+    "id": "na_esp_oncorhynchus_mykiss"
+  },
+  {
+    "row": 132,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0581",
+    "scientific": "Pelecanus erythrorhynchos",
+    "id": "na_esp_pelecanus_erythrorhynchos"
+  },
+  {
+    "row": 133,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0570",
+    "scientific": "Pica hudsonia",
+    "id": "na_esp_pica_hudsonia"
+  },
+  {
+    "row": 134,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0566",
+    "scientific": "Tympanuchus cupido",
+    "id": "na_esp_tympanuchus_cupido"
+  },
+  {
+    "row": 135,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0048",
+    "scientific": "Athene cunicularia",
+    "id": "na_esp_athene_cunicularia"
+  },
+  {
+    "row": 136,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0126",
+    "scientific": "Circus hudsonius",
+    "id": "na_esp_circus_hudsonius"
+  },
+  {
+    "row": 137,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0077",
+    "scientific": "Canis latrans",
+    "id": "na_esp_canis_latrans"
+  },
+  {
+    "row": 138,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0551",
+    "scientific": "Mephitis mephitis",
+    "id": "na_esp_mephitis_mephitis"
+  },
+  {
+    "row": 139,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0348",
+    "scientific": "Mustela nigripes",
+    "id": "na_esp_mustela_nigripes"
+  },
+  {
+    "row": 140,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0557",
+    "scientific": "Sylvilagus floridanus",
+    "id": "na_esp_sylvilagus_floridanus"
+  },
+  {
+    "row": 141,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0145",
+    "scientific": "Cynomys ludovicianus",
+    "id": "na_esp_cynomys_ludovicianus"
+  },
+  {
+    "row": 142,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0282",
+    "scientific": "Lepus californicus",
+    "id": "na_esp_lepus_californicus"
+  },
+  {
+    "row": 143,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0021",
+    "scientific": "Antilocapra americana",
+    "id": "na_esp_antilocapra_americana"
+  },
+  {
+    "row": 144,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0056",
+    "scientific": "Bison bison",
+    "id": "na_esp_bison_bison"
+  },
+  {
+    "row": 145,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0591",
+    "scientific": "Phrynosoma cornutum",
+    "id": "na_esp_phrynosoma_cornutum"
+  },
+  {
+    "row": 146,
+    "hex": "HX-02-05",
+    "sourceSpeciesId": "ESP-0140",
+    "scientific": "Crotalus viridis",
+    "id": "na_esp_crotalus_viridis"
+  },
+  {
+    "row": 147,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0576",
+    "scientific": "Corvus corax",
+    "id": "na_esp_corvus_corax"
+  },
+  {
+    "row": 148,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0267",
+    "scientific": "Lagopus lagopus",
+    "id": "eu_esp_0267"
+  },
+  {
+    "row": 149,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0583",
+    "scientific": "Bubo scandiacus",
+    "id": "na_esp_bubo_scandiacus"
+  },
+  {
+    "row": 150,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0078",
+    "scientific": "Canis lupus",
+    "id": "lobo_gris"
+  },
+  {
+    "row": 151,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0304",
+    "scientific": "Lynx canadensis",
+    "id": "na_esp_lynx_canadensis"
+  },
+  {
+    "row": 152,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0228",
+    "scientific": "Gulo gulo",
+    "id": "gloton"
+  },
+  {
+    "row": 153,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0562",
+    "scientific": "Lemmus trimucronatus",
+    "id": "na_esp_lemmus_trimucronatus"
+  },
+  {
+    "row": 154,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0186",
+    "scientific": "Erethizon dorsatum",
+    "id": "na_esp_erethizon_dorsatum"
+  },
+  {
+    "row": 155,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0281",
+    "scientific": "Lepus americanus",
+    "id": "na_esp_lepus_americanus"
+  },
+  {
+    "row": 156,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0008",
+    "scientific": "Alces alces",
+    "id": "alce"
+  },
+  {
+    "row": 157,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0547",
+    "scientific": "Ovibos moschatus",
+    "id": "na_esp_ovibos_moschatus"
+  },
+  {
+    "row": 158,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0548",
+    "scientific": "Ovis dalli",
+    "id": "na_esp_ovis_dalli"
+  },
+  {
+    "row": 159,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0461",
+    "scientific": "Rangifer tarandus",
+    "id": "reno"
+  },
+  {
+    "row": 160,
+    "hex": "HX-02-06",
+    "sourceSpeciesId": "ESP-0587",
+    "scientific": "Lithobates sylvaticus",
+    "id": "na_esp_lithobates_sylvaticus"
+  },
+  {
+    "row": 314,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0579",
+    "scientific": "Aix sponsa",
+    "id": "na_esp_aix_sponsa"
+  },
+  {
+    "row": 315,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0578",
+    "scientific": "Anas platyrhynchos",
+    "id": "na_esp_anas_platyrhynchos"
+  },
+  {
+    "row": 316,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0581",
+    "scientific": "Pelecanus erythrorhynchos",
+    "id": "na_esp_pelecanus_erythrorhynchos"
+  },
+  {
+    "row": 317,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0572",
+    "scientific": "Archilochus colubris",
+    "id": "na_esp_archilochus_colubris"
+  },
+  {
+    "row": 318,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0233",
+    "scientific": "Haliaeetus leucocephalus",
+    "id": "na_esp_haliaeetus_leucocephalus"
+  },
+  {
+    "row": 319,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0292",
+    "scientific": "Lontra canadensis",
+    "id": "na_esp_lontra_canadensis"
+  },
+  {
+    "row": 320,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0551",
+    "scientific": "Mephitis mephitis",
+    "id": "na_esp_mephitis_mephitis"
+  },
+  {
+    "row": 321,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0443",
+    "scientific": "Procyon lotor",
+    "id": "na_esp_procyon_lotor"
+  },
+  {
+    "row": 322,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0557",
+    "scientific": "Sylvilagus floridanus",
+    "id": "na_esp_sylvilagus_floridanus"
+  },
+  {
+    "row": 323,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0093",
+    "scientific": "Castor canadensis",
+    "id": "na_esp_castor_canadensis"
+  },
+  {
+    "row": 324,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0367",
+    "scientific": "Odocoileus virginianus",
+    "id": "na_esp_odocoileus_virginianus"
+  },
+  {
+    "row": 325,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0192",
+    "scientific": "Esox lucius",
+    "id": "na_esp_esox_lucius"
+  },
+  {
+    "row": 326,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0415",
+    "scientific": "Perca flavescens",
+    "id": "na_esp_perca_flavescens"
+  },
+  {
+    "row": 327,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0598",
+    "scientific": "Salvelinus fontinalis",
+    "id": "na_esp_salvelinus_fontinalis"
+  },
+  {
+    "row": 328,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0289",
+    "scientific": "Lithobates clamitans",
+    "id": "na_esp_lithobates_clamitans"
+  },
+  {
+    "row": 329,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0013",
+    "scientific": "Ambystoma tigrinum",
+    "id": "na_esp_ambystoma_tigrinum"
+  },
+  {
+    "row": 330,
+    "hex": "HX-03-02",
+    "sourceSpeciesId": "ESP-0122",
+    "scientific": "Chrysemys picta",
+    "id": "na_esp_chrysemys_picta"
+  },
+  {
+    "row": 331,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0567",
+    "scientific": "Callipepla californica",
+    "id": "na_esp_callipepla_californica"
+  },
+  {
+    "row": 332,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0573",
+    "scientific": "Calypte anna",
+    "id": "na_esp_calypte_anna"
+  },
+  {
+    "row": 333,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0582",
+    "scientific": "Falco peregrinus",
+    "id": "na_esp_falco_peregrinus"
+  },
+  {
+    "row": 334,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0233",
+    "scientific": "Haliaeetus leucocephalus",
+    "id": "na_esp_haliaeetus_leucocephalus"
+  },
+  {
+    "row": 335,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0486",
+    "scientific": "Strix occidentalis",
+    "id": "na_esp_strix_occidentalis"
+  },
+  {
+    "row": 336,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0539",
+    "scientific": "Vulpes vulpes",
+    "id": "zorro_rojo"
+  },
+  {
+    "row": 337,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0451",
+    "scientific": "Puma concolor",
+    "id": "na_esp_puma_concolor"
+  },
+  {
+    "row": 338,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0292",
+    "scientific": "Lontra canadensis",
+    "id": "na_esp_lontra_canadensis"
+  },
+  {
+    "row": 339,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0552",
+    "scientific": "Spilogale gracilis",
+    "id": "na_esp_spilogale_gracilis"
+  },
+  {
+    "row": 340,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0520",
+    "scientific": "Ursus americanus",
+    "id": "na_esp_ursus_americanus"
+  },
+  {
+    "row": 341,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0093",
+    "scientific": "Castor canadensis",
+    "id": "na_esp_castor_canadensis"
+  },
+  {
+    "row": 342,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0366",
+    "scientific": "Odocoileus hemionus",
+    "id": "na_esp_odocoileus_hemionus"
+  },
+  {
+    "row": 343,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0164",
+    "scientific": "Dicamptodon tenebrosus",
+    "id": "na_esp_dicamptodon_tenebrosus"
+  },
+  {
+    "row": 344,
+    "hex": "HX-03-03",
+    "sourceSpeciesId": "ESP-0595",
+    "scientific": "Lampropeltis californiae",
+    "id": "na_esp_lampropeltis_californiae"
+  },
+  {
+    "row": 345,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0579",
+    "scientific": "Aix sponsa",
+    "id": "na_esp_aix_sponsa"
+  },
+  {
+    "row": 346,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0572",
+    "scientific": "Archilochus colubris",
+    "id": "na_esp_archilochus_colubris"
+  },
+  {
+    "row": 347,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0091",
+    "scientific": "Cardinalis cardinalis",
+    "id": "na_esp_cardinalis_cardinalis"
+  },
+  {
+    "row": 348,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0173",
+    "scientific": "Dryocopus pileatus",
+    "id": "na_esp_dryocopus_pileatus"
+  },
+  {
+    "row": 349,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0252",
+    "scientific": "Hylocichla mustelina",
+    "id": "na_esp_hylocichla_mustelina"
+  },
+  {
+    "row": 350,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0584",
+    "scientific": "Bubo virginianus",
+    "id": "na_esp_bubo_virginianus"
+  },
+  {
+    "row": 351,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0518",
+    "scientific": "Urocyon cinereoargenteus",
+    "id": "na_esp_urocyon_cinereoargenteus"
+  },
+  {
+    "row": 352,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0168",
+    "scientific": "Didelphis virginiana",
+    "id": "na_esp_didelphis_virginiana"
+  },
+  {
+    "row": 353,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0551",
+    "scientific": "Mephitis mephitis",
+    "id": "na_esp_mephitis_mephitis"
+  },
+  {
+    "row": 354,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0443",
+    "scientific": "Procyon lotor",
+    "id": "na_esp_procyon_lotor"
+  },
+  {
+    "row": 355,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0557",
+    "scientific": "Sylvilagus floridanus",
+    "id": "na_esp_sylvilagus_floridanus"
+  },
+  {
+    "row": 356,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0520",
+    "scientific": "Ursus americanus",
+    "id": "na_esp_ursus_americanus"
+  },
+  {
+    "row": 357,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0473",
+    "scientific": "Sciurus carolinensis",
+    "id": "na_esp_sciurus_carolinensis"
+  },
+  {
+    "row": 358,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0367",
+    "scientific": "Odocoileus virginianus",
+    "id": "na_esp_odocoileus_virginianus"
+  },
+  {
+    "row": 359,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0598",
+    "scientific": "Salvelinus fontinalis",
+    "id": "na_esp_salvelinus_fontinalis"
+  },
+  {
+    "row": 360,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0012",
+    "scientific": "Ambystoma maculatum",
+    "id": "na_esp_ambystoma_maculatum"
+  },
+  {
+    "row": 361,
+    "hex": "HX-03-04",
+    "sourceSpeciesId": "ESP-0594",
+    "scientific": "Crotalus horridus",
+    "id": "na_esp_crotalus_horridus"
+  },
+  {
+    "row": 362,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0220",
+    "scientific": "Geococcyx californianus",
+    "id": "na_esp_geococcyx_californianus"
+  },
+  {
+    "row": 363,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0574",
+    "scientific": "Micrathene whitneyi",
+    "id": "na_esp_micrathene_whitneyi"
+  },
+  {
+    "row": 364,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0077",
+    "scientific": "Canis latrans",
+    "id": "na_esp_canis_latrans"
+  },
+  {
+    "row": 365,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0536",
+    "scientific": "Vulpes macrotis",
+    "id": "na_esp_vulpes_macrotis"
+  },
+  {
+    "row": 366,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0561",
+    "scientific": "Dipodomys merriami",
+    "id": "na_esp_dipodomys_merriami"
+  },
+  {
+    "row": 367,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0552",
+    "scientific": "Spilogale gracilis",
+    "id": "na_esp_spilogale_gracilis"
+  },
+  {
+    "row": 368,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0559",
+    "scientific": "Sylvilagus audubonii",
+    "id": "na_esp_sylvilagus_audubonii"
+  },
+  {
+    "row": 369,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0411",
+    "scientific": "Pecari tajacu",
+    "id": "na_esp_dicotyles_tajacu"
+  },
+  {
+    "row": 370,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0239",
+    "scientific": "Heloderma suspectum",
+    "id": "na_esp_heloderma_suspectum"
+  },
+  {
+    "row": 371,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0591",
+    "scientific": "Phrynosoma cornutum",
+    "id": "na_esp_phrynosoma_cornutum"
+  },
+  {
+    "row": 372,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0588",
+    "scientific": "Incilius alvarius",
+    "id": "na_esp_incilius_alvarius"
+  },
+  {
+    "row": 373,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0139",
+    "scientific": "Crotalus atrox",
+    "id": "na_esp_crotalus_atrox"
+  },
+  {
+    "row": 374,
+    "hex": "HX-03-05",
+    "sourceSpeciesId": "ESP-0222",
+    "scientific": "Gopherus agassizii",
+    "id": "na_esp_gopherus_agassizii"
+  },
+  {
+    "row": 558,
+    "hex": "HX-04-02",
+    "sourceSpeciesId": "ESP-0033",
+    "scientific": "Ara militaris",
+    "id": "na_esp_ara_militaris"
+  },
+  {
+    "row": 559,
+    "hex": "HX-04-02",
+    "sourceSpeciesId": "ESP-0331",
+    "scientific": "Meleagris gallopavo",
+    "id": "na_esp_meleagris_gallopavo"
+  },
+  {
+    "row": 560,
+    "hex": "HX-04-02",
+    "sourceSpeciesId": "ESP-0078",
+    "scientific": "Canis lupus",
+    "id": "lobo_gris"
+  },
+  {
+    "row": 561,
+    "hex": "HX-04-02",
+    "sourceSpeciesId": "ESP-0400",
+    "scientific": "Panthera onca",
+    "id": "na_esp_panthera_onca"
+  },
+  {
+    "row": 562,
+    "hex": "HX-04-02",
+    "sourceSpeciesId": "ESP-0451",
+    "scientific": "Puma concolor",
+    "id": "na_esp_puma_concolor"
+  },
+  {
+    "row": 563,
+    "hex": "HX-04-02",
+    "sourceSpeciesId": "ESP-0353",
+    "scientific": "Nasua narica",
+    "id": "na_esp_nasua_narica"
+  },
+  {
+    "row": 564,
+    "hex": "HX-04-02",
+    "sourceSpeciesId": "ESP-0559",
+    "scientific": "Sylvilagus audubonii",
+    "id": "na_esp_sylvilagus_audubonii"
+  },
+  {
+    "row": 565,
+    "hex": "HX-04-02",
+    "sourceSpeciesId": "ESP-0501",
+    "scientific": "Taxidea taxus",
+    "id": "na_esp_taxidea_taxus"
+  },
+  {
+    "row": 566,
+    "hex": "HX-04-02",
+    "sourceSpeciesId": "ESP-0520",
+    "scientific": "Ursus americanus",
+    "id": "na_esp_ursus_americanus"
+  },
+  {
+    "row": 567,
+    "hex": "HX-04-02",
+    "sourceSpeciesId": "ESP-0367",
+    "scientific": "Odocoileus virginianus",
+    "id": "na_esp_odocoileus_virginianus"
+  },
+  {
+    "row": 568,
+    "hex": "HX-04-02",
+    "sourceSpeciesId": "ESP-0586",
+    "scientific": "Ambystoma mexicanum",
+    "id": "na_esp_ambystoma_mexicanum"
+  },
+  {
+    "row": 569,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0332",
+    "scientific": "Meleagris ocellata",
+    "id": "na_esp_meleagris_ocellata"
+  },
+  {
+    "row": 570,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0458",
+    "scientific": "Ramphastos sulfuratus",
+    "id": "na_esp_ramphastos_sulfuratus"
+  },
+  {
+    "row": 571,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0564",
+    "scientific": "Herpailurus yagouaroundi",
+    "id": "na_esp_herpailurus_yagouaroundi"
+  },
+  {
+    "row": 572,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0279",
+    "scientific": "Leopardus pardalis",
+    "id": "na_esp_leopardus_pardalis"
+  },
+  {
+    "row": 573,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0565",
+    "scientific": "Leopardus wiedii",
+    "id": "na_esp_leopardus_wiedii"
+  },
+  {
+    "row": 574,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0400",
+    "scientific": "Panthera onca",
+    "id": "na_esp_panthera_onca"
+  },
+  {
+    "row": 575,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0142",
+    "scientific": "Cuniculus paca",
+    "id": "na_esp_cuniculus_paca"
+  },
+  {
+    "row": 576,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0353",
+    "scientific": "Nasua narica",
+    "id": "na_esp_nasua_narica"
+  },
+  {
+    "row": 577,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0560",
+    "scientific": "Procyon pygmaeus",
+    "id": "na_esp_procyon_pygmaeus"
+  },
+  {
+    "row": 578,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0011",
+    "scientific": "Alouatta pigra",
+    "id": "na_esp_alouatta_pigra"
+  },
+  {
+    "row": 579,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0046",
+    "scientific": "Ateles geoffroyi",
+    "id": "na_esp_ateles_geoffroyi"
+  },
+  {
+    "row": 580,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0167",
+    "scientific": "Dicotyles tajacu",
+    "id": "na_esp_dicotyles_tajacu"
+  },
+  {
+    "row": 581,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0497",
+    "scientific": "Tapirus bairdii",
+    "id": "na_esp_tapirus_bairdii"
+  },
+  {
+    "row": 582,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0593",
+    "scientific": "Ctenosaura similis",
+    "id": "na_esp_ctenosaura_similis"
+  },
+  {
+    "row": 583,
+    "hex": "HX-04-03",
+    "sourceSpeciesId": "ESP-0059",
+    "scientific": "Boa imperator",
+    "id": "na_esp_boa_imperator"
+  },
+  {
+    "row": 584,
+    "hex": "HX-04-04",
+    "sourceSpeciesId": "ESP-0039",
+    "scientific": "Ardea herodias",
+    "id": "na_esp_ardea_herodias"
+  },
+  {
+    "row": 585,
+    "hex": "HX-04-04",
+    "sourceSpeciesId": "ESP-0413",
+    "scientific": "Pelecanus occidentalis",
+    "id": "na_esp_pelecanus_occidentalis"
+  },
+  {
+    "row": 586,
+    "hex": "HX-04-04",
+    "sourceSpeciesId": "ESP-0434",
+    "scientific": "Platalea ajaja",
+    "id": "na_esp_platalea_ajaja"
+  },
+  {
+    "row": 587,
+    "hex": "HX-04-04",
+    "sourceSpeciesId": "ESP-0398",
+    "scientific": "Pandion haliaetus",
+    "id": "af_xlsx_131_pandion_haliaetus"
+  },
+  {
+    "row": 588,
+    "hex": "HX-04-04",
+    "sourceSpeciesId": "ESP-0517",
+    "scientific": "Trichechus manatus",
+    "id": "na_esp_trichechus_manatus"
+  },
+  {
+    "row": 589,
+    "hex": "HX-04-04",
+    "sourceSpeciesId": "ESP-0555",
+    "scientific": "Dasypus novemcinctus",
+    "id": "na_esp_dasypus_novemcinctus"
+  },
+  {
+    "row": 590,
+    "hex": "HX-04-04",
+    "sourceSpeciesId": "ESP-0168",
+    "scientific": "Didelphis virginiana",
+    "id": "na_esp_didelphis_virginiana"
+  },
+  {
+    "row": 591,
+    "hex": "HX-04-04",
+    "sourceSpeciesId": "ESP-0292",
+    "scientific": "Lontra canadensis",
+    "id": "na_esp_lontra_canadensis"
+  },
+  {
+    "row": 592,
+    "hex": "HX-04-04",
+    "sourceSpeciesId": "ESP-0443",
+    "scientific": "Procyon lotor",
+    "id": "na_esp_procyon_lotor"
+  },
+  {
+    "row": 593,
+    "hex": "HX-04-04",
+    "sourceSpeciesId": "ESP-0009",
+    "scientific": "Alligator mississippiensis",
+    "id": "na_esp_alligator_mississippiensis"
+  },
+  {
+    "row": 594,
+    "hex": "HX-04-04",
+    "sourceSpeciesId": "ESP-0504",
+    "scientific": "Terrapene carolina",
+    "id": "na_esp_terrapene_carolina"
+  },
+  {
+    "row": 724,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0032",
+    "scientific": "Ara macao",
+    "id": "na_esp_ara_macao"
+  },
+  {
+    "row": 725,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0420",
+    "scientific": "Pharomachrus mocinno",
+    "id": "na_esp_pharomachrus_mocinno"
+  },
+  {
+    "row": 726,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0458",
+    "scientific": "Ramphastos sulfuratus",
+    "id": "na_esp_ramphastos_sulfuratus"
+  },
+  {
+    "row": 727,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0585",
+    "scientific": "Caracara plancus",
+    "id": "na_esp_caracara_plancus"
+  },
+  {
+    "row": 728,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0564",
+    "scientific": "Herpailurus yagouaroundi",
+    "id": "na_esp_herpailurus_yagouaroundi"
+  },
+  {
+    "row": 729,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0279",
+    "scientific": "Leopardus pardalis",
+    "id": "na_esp_leopardus_pardalis"
+  },
+  {
+    "row": 730,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0565",
+    "scientific": "Leopardus wiedii",
+    "id": "na_esp_leopardus_wiedii"
+  },
+  {
+    "row": 731,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0400",
+    "scientific": "Panthera onca",
+    "id": "na_esp_panthera_onca"
+  },
+  {
+    "row": 732,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0064",
+    "scientific": "Bradypus variegatus",
+    "id": "na_esp_bradypus_variegatus"
+  },
+  {
+    "row": 733,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0142",
+    "scientific": "Cuniculus paca",
+    "id": "na_esp_cuniculus_paca"
+  },
+  {
+    "row": 734,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0555",
+    "scientific": "Dasypus novemcinctus",
+    "id": "na_esp_dasypus_novemcinctus"
+  },
+  {
+    "row": 735,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0554",
+    "scientific": "Didelphis marsupialis",
+    "id": "na_esp_didelphis_marsupialis"
+  },
+  {
+    "row": 736,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0350",
+    "scientific": "Myrmecophaga tridactyla",
+    "id": "na_esp_myrmecophaga_tridactyla"
+  },
+  {
+    "row": 737,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0353",
+    "scientific": "Nasua narica",
+    "id": "na_esp_nasua_narica"
+  },
+  {
+    "row": 738,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0010",
+    "scientific": "Alouatta palliata",
+    "id": "na_esp_alouatta_palliata"
+  },
+  {
+    "row": 739,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0097",
+    "scientific": "Cebus imitator",
+    "id": "na_esp_cebus_imitator"
+  },
+  {
+    "row": 740,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0497",
+    "scientific": "Tapirus bairdii",
+    "id": "na_esp_tapirus_bairdii"
+  },
+  {
+    "row": 741,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0054",
+    "scientific": "Basiliscus plumifrons",
+    "id": "na_esp_basiliscus_plumifrons"
+  },
+  {
+    "row": 742,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0593",
+    "scientific": "Ctenosaura similis",
+    "id": "na_esp_ctenosaura_similis"
+  },
+  {
+    "row": 743,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0005",
+    "scientific": "Agalychnis callidryas",
+    "id": "na_esp_agalychnis_callidryas"
+  },
+  {
+    "row": 744,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0589",
+    "scientific": "Hyalinobatrachium fleischmanni",
+    "id": "na_esp_hyalinobatrachium_fleischmanni"
+  },
+  {
+    "row": 745,
+    "hex": "HX-05-04",
+    "sourceSpeciesId": "ESP-0596",
+    "scientific": "Leptophis ahaetulla",
+    "id": "na_esp_leptophis_ahaetulla"
+  }
+]

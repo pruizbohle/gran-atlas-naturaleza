@@ -1,0 +1,577 @@
+{
+  "version": "3.22.0",
+  "responsiveChecks": [
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-01-05",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-02-02",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-02-03",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-02-04",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-02-05",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-02-06",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-03-02",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-03-03",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-03-04",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-03-05",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-04-02",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-04-03",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-04-04",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "id": "HX-05-04",
+      "primaryBottom": 569,
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-01-05",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-02-02",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-02-03",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-02-04",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-02-05",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-02-06",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-03-02",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-03-03",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-03-04",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-03-05",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-04-02",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-04-03",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-04-04",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "id": "HX-05-04",
+      "primaryBottom": 669,
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-01-05",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-02-02",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-02-03",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-02-04",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-02-05",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-02-06",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-03-02",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-03-03",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-03-04",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-03-05",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-04-02",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-04-03",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-04-04",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "id": "HX-05-04",
+      "primaryBottom": 773,
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-01-05",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-02-02",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-02-03",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-02-04",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-02-05",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-02-06",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-03-02",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-03-03",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-03-04",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-03-05",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-04-02",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-04-03",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-04-04",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "id": "HX-05-04",
+      "primaryBottom": 844,
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontal": false,
+      "allCellsVisible": true
+    }
+  ],
+  "all14RegionsTravel": true,
+  "manualUIAllRegions": true,
+  "automaticTick": true,
+  "touchPan": true,
+  "oldSavePreserved": true,
+  "labStorageUntouched": true,
+  "xmlVariants": 240,
+  "bestiarySpecies": 589,
+  "bestiaryColdMs": 536,
+  "bestiaryWarmMs": 439,
+  "offlineGameAndLab": true,
+  "jsErrors": []
+}

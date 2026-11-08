@@ -1,0 +1,13 @@
+{
+  "from": "3.21.2",
+  "to": "3.22.0",
+  "oldPlayableCells": 2,
+  "newPlayableCells": 14,
+  "oldWorkerReproduced": true,
+  "otherWindowsGuard": true,
+  "exactBackup": true,
+  "oldProgressPreserved": true,
+  "newRegionsRemainUnopened": true,
+  "offlineAfterUpgrade": true,
+  "jsErrors": []
+}

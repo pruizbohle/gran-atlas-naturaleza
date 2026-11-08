@@ -1,3 +1,7 @@
+# El Gran Atlas v3.22.0 — Norteamérica completa
+
+14 regiones jugables, 206 asignaciones del Excel y 128 identidades taxonómicas (129 binomios de origen, con Pecari/Dicotyles como sinónimos). [Informe y validación](README_V3220.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-norteamerica-v3220.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3220.html).
+
 ## Auditoría AM-01 · Preparación de las Américas
 
 [Informe de fauna, regiones e ilustraciones](docs/americas-audit.md) · [Plan AM-02 a AM-06](docs/americas-implementation-plan.md). Fase documental: no incorpora especies ni cambia la versión jugable.

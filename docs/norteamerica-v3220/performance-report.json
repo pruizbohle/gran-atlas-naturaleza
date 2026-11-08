@@ -1,0 +1,26 @@
+{
+  "cpuSlowdown": 4,
+  "device": "Chromium desktop with CPU emulation; not a physical Android benchmark",
+  "cases": [
+    {
+      "version": "3.21.2",
+      "species": 487,
+      "bestiaryColdMs": 4282,
+      "bestiaryWarmMs": 2128,
+      "heapUsedBytes": 11163856,
+      "averageSerializeMs": 1.5149999999906867,
+      "bytes": 23145
+    },
+    {
+      "version": "3.22.0",
+      "species": 589,
+      "bestiaryColdMs": 3103,
+      "bestiaryWarmMs": 2134,
+      "heapUsedBytes": 7028096,
+      "averageSerializeMs": 0.4900000000139698,
+      "bytes": 29529
+    }
+  ],
+  "offlineAssets": 68,
+  "offlineUncompressedBytes": 3392912
+}
