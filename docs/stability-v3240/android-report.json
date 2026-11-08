@@ -1,0 +1,24 @@
+{
+  "version": "3.24.0",
+  "manifest": {
+    "versionCode": 32400,
+    "versionName": "3.24.0",
+    "compileSdkVersion": 35,
+    "compileSdkVersionCodename": "15",
+    "package": "com.elgranatlas.naturaleza.beta314",
+    "platformBuildVersionCode": 35,
+    "platformBuildVersionName": 15
+  },
+  "apkBytes": 5684424,
+  "sha256": "049752a791f162671f02f1210cef1848352f800a663aa4036346f904c289072f",
+  "allWebFilesMatchProduction": true,
+  "webFilesVerified": 87,
+  "nativeImportExportPluginsPresent": true,
+  "physicalDeviceInstallationTested": false,
+  "signing": "Debug build; compatibility with an earlier installation also requires the same signing key.",
+  "publicSignerCertificateSha256": [
+    "f353a70b0cfe4392cba5bc70e4a50bbc4db10d75b644891b35dae00a4fe1ce75"
+  ],
+  "sameSignerAs3231": false,
+  "previousApkSha256": "a2876217b10f476e6a6091458c4b8e0518314d22f1ab9391164d44e6ab822c92"
+}

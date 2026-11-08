@@ -1,6 +1,6 @@
 # Archivos de AM-06
 
-100 archivos añadidos o modificados. Ningún fixture histórico de datos, arte, comportamiento o guardados se cambia.
+102 archivos añadidos o modificados. Ningún fixture histórico de datos, arte, comportamiento o guardados se cambia. Los informes de publicación se añaden en un commit posterior de documentación; el código compilado es b35caa6.
 
 - `.github/workflows/android-debug.yml`
 - `.github/workflows/static.yml`
@@ -11,6 +11,7 @@
 - `docs/stability-v3240/FILES.md`
 - `docs/stability-v3240/REPORT.md`
 - `docs/stability-v3240/STATUS.md`
+- `docs/stability-v3240/android-report.json`
 - `docs/stability-v3240/android-signing-baseline.json`
 - `docs/stability-v3240/atlas-320.png`
 - `docs/stability-v3240/atlas-360.png`
@@ -45,6 +46,7 @@
 - `docs/stability-v3240/node-tests.txt`
 - `docs/stability-v3240/offline-simulation.json`
 - `docs/stability-v3240/performance-report.json`
+- `docs/stability-v3240/publication.json`
 - `docs/stability-v3240/pwa-report.json`
 - `docs/stability-v3240/save-africa.json`
 - `docs/stability-v3240/save-europe.json`

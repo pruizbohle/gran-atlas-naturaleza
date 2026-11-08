@@ -1,6 +1,6 @@
 # Estado actualizado · Cierre de AM-01 a AM-06
 
-La serie está implementada y validada técnicamente en **3.24.0**: 710 especies, 79 regiones y cinco continentes. El cierre de publicación exige ambos workflows correctos del commit final; sus resultados y APK se verifican en la entrega. No se detectaron fallos críticos en las 294 pruebas ejecutadas.
+La serie queda **cerrada en 3.24.0**: 710 especies, 79 regiones y cinco continentes. Código `b35caa6`, ambos workflows finalizados correctamente y APK descargado/verificado. No se detectaron fallos críticos en las 294 pruebas ejecutadas. [Publicación y firma Android](stability-v3240/publication.json).
 
 | Fase | Resultado |
 |---|---|

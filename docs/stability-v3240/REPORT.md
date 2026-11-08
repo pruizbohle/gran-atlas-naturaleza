@@ -47,4 +47,4 @@ Las capturas antes/después muestran las mismas tarjetas y estilos, con los cont
 
 ## Publicación y límites
 
-Los resultados reales de Actions, commit, certificado del APK y comparación de todos sus archivos web se verifican tras publicar. El repositorio incluye herramientas reproducibles y certificado público del APK 3.23.1 como referencia, sin ninguna clave privada. El estado técnico y pendientes están en [STATUS.md](STATUS.md).
+Publicación verificada: código `b35caa6`, ambos workflows SUCCESS, APK 3.24.0/32400 con 87 archivos web idénticos y plugins nativos presentes. La firma difiere de 3.23.1. Los resultados reales están en [publication.json](publication.json) y [android-report.json](android-report.json). El repositorio incluye herramientas reproducibles y certificado público del APK 3.23.1 como referencia, sin ninguna clave privada. El estado técnico y pendientes están en [STATUS.md](STATUS.md).

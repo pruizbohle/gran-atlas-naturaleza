@@ -1,0 +1,67 @@
+{
+  "version": "3.24.0",
+  "seriesAM01ToAM06": "closed; local tests and both publication workflows verified",
+  "actions": [
+    {
+      "name": "Deploy El Gran Atlas",
+      "id": "42531264195",
+      "url": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42531264195",
+      "state": {
+        "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+        "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+      },
+      "commitURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/commit/b35caa6c8c7625df1b5095d6777db78968923c87"
+    },
+    {
+      "name": "Android APK de prueba",
+      "id": "42531264157",
+      "url": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42531264157",
+      "state": {
+        "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+        "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+      },
+      "commitURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/commit/b35caa6c8c7625df1b5095d6777db78968923c87"
+    }
+  ],
+  "gameURL": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "safeUpdaterURL": "https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3240.html",
+  "apkURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/releases/download/v3.24.0/El-Gran-Atlas-Beta-3.24.0-debug.apk",
+  "directPagesCheck": {
+    "verified": false,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+    "note": "Direct Pages connection is restricted in this cloud environment; deployment is checked through Actions."
+  },
+  "pagesDeploymentVerifiedThroughRunPage": true,
+  "apkVerification": {
+    "version": "3.24.0",
+    "manifest": {
+      "versionCode": 32400,
+      "versionName": "3.24.0",
+      "compileSdkVersion": 35,
+      "compileSdkVersionCodename": "15",
+      "package": "com.elgranatlas.naturaleza.beta314",
+      "platformBuildVersionCode": 35,
+      "platformBuildVersionName": 15
+    },
+    "apkBytes": 5684424,
+    "sha256": "049752a791f162671f02f1210cef1848352f800a663aa4036346f904c289072f",
+    "allWebFilesMatchProduction": true,
+    "webFilesVerified": 87,
+    "nativeImportExportPluginsPresent": true,
+    "physicalDeviceInstallationTested": false,
+    "signing": "Debug build; compatibility with an earlier installation also requires the same signing key.",
+    "publicSignerCertificateSha256": [
+      "f353a70b0cfe4392cba5bc70e4a50bbc4db10d75b644891b35dae00a4fe1ce75"
+    ],
+    "sameSignerAs3231": false,
+    "previousApkSha256": "a2876217b10f476e6a6091458c4b8e0518314d22f1ab9391164d44e6ab822c92"
+  },
+  "nodeTests": {
+    "passed": 294,
+    "failed": 0
+  },
+  "knownCriticalFailures": 0,
+  "mainAndTagMatchedAtCodePublication": true,
+  "publishedCodeCommit": "b35caa6c8c7625df1b5095d6777db78968923c87",
+  "documentationFollowup": "Verification documentation only; www and the verified APK are unchanged."
+}
