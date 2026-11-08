@@ -116,7 +116,7 @@ test('every existing mammal receives actual new anatomical paths rather than a r
 
 test('the game, current labs and offline cache include the new art in the existing architecture',()=>{
  const html=fs.readFileSync('www/index.html','utf8'),sw=fs.readFileSync('www/sw.js','utf8');
- assert.ok(html.indexOf('js/mammal-art-v3194.js')<html.indexOf('js/app.js'));assert.match(sw,/gran-atlas-v3.21.1b-geografia/);
+ assert.ok(html.indexOf('js/mammal-art-v3194.js')<html.indexOf('js/app.js'));assert.match(sw,/gran-atlas-v3.21.1b-simple/);
  const assets=vm.runInNewContext(sw.slice(0,sw.indexOf('self.addEventListener'))+'\nASSETS');
  for(const path of assets)assert.ok(fs.existsSync('www/'+path.replace(/^\.\//,'')),path);
  for(const path of ['laboratorio-mamiferos.html','js/mammal-art-v3194.js','js/lab/mammal-lab-v3194.js'])assert.ok(assets.includes('./'+path));

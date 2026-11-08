@@ -1,6 +1,6 @@
-# El Gran Atlas v3.21.1b — Malla continental reconstruida
+# El Gran Atlas v3.21.1b — Atlas continental simple
 
-Cuatro continentes con siluetas hexagonales continuas, coordenadas geográficas independientes y 57 regiones conservadas. [Informe y auditoría](README_V3211B.md) · [Comparación cartográfica](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-atlas-v3211b.html) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/).
+Corrección de alcance: 58 celdas en lugar de 406, siluetas compactas y las 57 regiones conservadas. [Informe de la corrección](README_ATLAS_SIMPLE.md) · [Comparación cartográfica](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-atlas-v3211b.html) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/).
 
 # El Gran Atlas v3.21.1 — Atlas interactivo
 

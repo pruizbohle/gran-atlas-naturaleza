@@ -1,0 +1,382 @@
+{
+  "file": "Atlas_Fauna_Hexagonal_209_900_Especies.xlsx",
+  "sha256": "5cd22412e6b251d8f02a90e4c8303e02946d5e5d26855589d2c6750649fe4350",
+  "sheets": [
+    "Resumen",
+    "Mapa",
+    "Hexágonos",
+    "Fauna",
+    "Catálogo especies",
+    "Metodología y fuentes"
+  ],
+  "hexagonRecords": 209,
+  "countsByContinentOrMedium": {
+    "Mar": 84,
+    "América del Norte": 14,
+    "Hielo": 29,
+    "Europa": 10,
+    "Asia": 21,
+    "Mar profundo": 17,
+    "África": 14,
+    "América del Sur": 10,
+    "Oceanía": 8,
+    "Mar abisal": 2
+  },
+  "use": "Referencia de cobertura y nombres; no se importan filas, fauna, rarezas ni requisitos al juego.",
+  "relevantRegions": [
+    {
+      "continent": "América del Norte",
+      "name": "Alaska",
+      "originalRow": 1,
+      "originalColumn": 5
+    },
+    {
+      "continent": "Europa",
+      "name": "Islas Británicas",
+      "originalRow": 1,
+      "originalColumn": 9
+    },
+    {
+      "continent": "Europa",
+      "name": "Escandinavia",
+      "originalRow": 1,
+      "originalColumn": 11
+    },
+    {
+      "continent": "América del Norte",
+      "name": "Columbia Británica",
+      "originalRow": 2,
+      "originalColumn": 2
+    },
+    {
+      "continent": "América del Norte",
+      "name": "Bosques boreales de Canadá",
+      "originalRow": 2,
+      "originalColumn": 3
+    },
+    {
+      "continent": "América del Norte",
+      "name": "Montañas Rocosas",
+      "originalRow": 2,
+      "originalColumn": 4
+    },
+    {
+      "continent": "América del Norte",
+      "name": "Grandes Llanuras",
+      "originalRow": 2,
+      "originalColumn": 5
+    },
+    {
+      "continent": "América del Norte",
+      "name": "Yukón",
+      "originalRow": 2,
+      "originalColumn": 6
+    },
+    {
+      "continent": "Europa",
+      "name": "Alpes",
+      "originalRow": 2,
+      "originalColumn": 9
+    },
+    {
+      "continent": "Europa",
+      "name": "Europa Occidental",
+      "originalRow": 2,
+      "originalColumn": 10
+    },
+    {
+      "continent": "Europa",
+      "name": "Europa Central",
+      "originalRow": 2,
+      "originalColumn": 11
+    },
+    {
+      "continent": "Europa",
+      "name": "Península Ibérica",
+      "originalRow": 2,
+      "originalColumn": 12
+    },
+    {
+      "continent": "Asia",
+      "name": "Siberia Occidental",
+      "originalRow": 2,
+      "originalColumn": 13
+    },
+    {
+      "continent": "Asia",
+      "name": "Montes Urales",
+      "originalRow": 2,
+      "originalColumn": 15
+    },
+    {
+      "continent": "América del Norte",
+      "name": "Región de los Grandes Lagos",
+      "originalRow": 3,
+      "originalColumn": 2
+    },
+    {
+      "continent": "América del Norte",
+      "name": "Costa del Pacífico",
+      "originalRow": 3,
+      "originalColumn": 3
+    },
+    {
+      "continent": "América del Norte",
+      "name": "Bosques del este norteamericano",
+      "originalRow": 3,
+      "originalColumn": 4
+    },
+    {
+      "continent": "América del Norte",
+      "name": "Desierto de Sonora",
+      "originalRow": 3,
+      "originalColumn": 5
+    },
+    {
+      "continent": "Europa",
+      "name": "Europa Oriental",
+      "originalRow": 3,
+      "originalColumn": 9
+    },
+    {
+      "continent": "Europa",
+      "name": "Península Itálica",
+      "originalRow": 3,
+      "originalColumn": 10
+    },
+    {
+      "continent": "Europa",
+      "name": "Región del mar Báltico",
+      "originalRow": 3,
+      "originalColumn": 11
+    },
+    {
+      "continent": "Europa",
+      "name": "Balcanes",
+      "originalRow": 3,
+      "originalColumn": 12
+    },
+    {
+      "continent": "Asia",
+      "name": "Cáucaso",
+      "originalRow": 3,
+      "originalColumn": 13
+    },
+    {
+      "continent": "Asia",
+      "name": "Siberia Central",
+      "originalRow": 3,
+      "originalColumn": 14
+    },
+    {
+      "continent": "Asia",
+      "name": "Anatolia",
+      "originalRow": 3,
+      "originalColumn": 15
+    },
+    {
+      "continent": "Asia",
+      "name": "Siberia Oriental",
+      "originalRow": 3,
+      "originalColumn": 16
+    },
+    {
+      "continent": "Asia",
+      "name": "Península Arábiga",
+      "originalRow": 3,
+      "originalColumn": 17
+    },
+    {
+      "continent": "Asia",
+      "name": "Kamchatka",
+      "originalRow": 3,
+      "originalColumn": 18
+    },
+    {
+      "continent": "América del Norte",
+      "name": "Sierra Madre",
+      "originalRow": 4,
+      "originalColumn": 2
+    },
+    {
+      "continent": "América del Norte",
+      "name": "Península de Yucatán",
+      "originalRow": 4,
+      "originalColumn": 3
+    },
+    {
+      "continent": "América del Norte",
+      "name": "Costa del golfo de México",
+      "originalRow": 4,
+      "originalColumn": 4
+    },
+    {
+      "continent": "África",
+      "name": "Desierto del Sáhara",
+      "originalRow": 4,
+      "originalColumn": 9
+    },
+    {
+      "continent": "África",
+      "name": "Magreb",
+      "originalRow": 4,
+      "originalColumn": 10
+    },
+    {
+      "continent": "África",
+      "name": "Valle del Nilo",
+      "originalRow": 4,
+      "originalColumn": 11
+    },
+    {
+      "continent": "Asia",
+      "name": "Mesopotamia",
+      "originalRow": 4,
+      "originalColumn": 12
+    },
+    {
+      "continent": "Asia",
+      "name": "Mongolia",
+      "originalRow": 4,
+      "originalColumn": 13
+    },
+    {
+      "continent": "Asia",
+      "name": "Desierto de Gobi",
+      "originalRow": 4,
+      "originalColumn": 14
+    },
+    {
+      "continent": "Asia",
+      "name": "Himalaya",
+      "originalRow": 4,
+      "originalColumn": 15
+    },
+    {
+      "continent": "Asia",
+      "name": "Meseta de Irán",
+      "originalRow": 4,
+      "originalColumn": 16
+    },
+    {
+      "continent": "Asia",
+      "name": "Meseta del Tíbet",
+      "originalRow": 4,
+      "originalColumn": 17
+    },
+    {
+      "continent": "Asia",
+      "name": "Estepas de Asia Central",
+      "originalRow": 4,
+      "originalColumn": 18
+    },
+    {
+      "continent": "América del Norte",
+      "name": "América Central",
+      "originalRow": 5,
+      "originalColumn": 4
+    },
+    {
+      "continent": "África",
+      "name": "Selvas de Guinea",
+      "originalRow": 5,
+      "originalColumn": 9
+    },
+    {
+      "continent": "África",
+      "name": "Sahel Occidental",
+      "originalRow": 5,
+      "originalColumn": 10
+    },
+    {
+      "continent": "África",
+      "name": "Cuerno de África",
+      "originalRow": 5,
+      "originalColumn": 11
+    },
+    {
+      "continent": "África",
+      "name": "Sahel Oriental",
+      "originalRow": 5,
+      "originalColumn": 12
+    },
+    {
+      "continent": "Asia",
+      "name": "China Septentrional",
+      "originalRow": 5,
+      "originalColumn": 15
+    },
+    {
+      "continent": "Asia",
+      "name": "Subcontinente Indio",
+      "originalRow": 5,
+      "originalColumn": 16
+    },
+    {
+      "continent": "Asia",
+      "name": "China Meridional",
+      "originalRow": 5,
+      "originalColumn": 17
+    },
+    {
+      "continent": "África",
+      "name": "Cuenca del Congo",
+      "originalRow": 6,
+      "originalColumn": 10
+    },
+    {
+      "continent": "África",
+      "name": "Sabana del Serengeti",
+      "originalRow": 6,
+      "originalColumn": 11
+    },
+    {
+      "continent": "África",
+      "name": "Tierras Altas de Etiopía",
+      "originalRow": 6,
+      "originalColumn": 12
+    },
+    {
+      "continent": "Asia",
+      "name": "Península de Corea",
+      "originalRow": 6,
+      "originalColumn": 16
+    },
+    {
+      "continent": "Asia",
+      "name": "Sudeste Asiático",
+      "originalRow": 6,
+      "originalColumn": 17
+    },
+    {
+      "continent": "Asia",
+      "name": "Archipiélago Japonés",
+      "originalRow": 6,
+      "originalColumn": 18
+    },
+    {
+      "continent": "África",
+      "name": "Desierto del Kalahari",
+      "originalRow": 7,
+      "originalColumn": 10
+    },
+    {
+      "continent": "África",
+      "name": "África Austral",
+      "originalRow": 7,
+      "originalColumn": 11
+    },
+    {
+      "continent": "África",
+      "name": "Grandes Lagos Africanos",
+      "originalRow": 7,
+      "originalColumn": 12
+    },
+    {
+      "continent": "África",
+      "name": "Madagascar",
+      "originalRow": 8,
+      "originalColumn": 11
+    }
+  ]
+}

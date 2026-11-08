@@ -106,7 +106,7 @@ test('shared names stay separate and use taxon-specific anatomy',()=>{
 test('entrypoint loads the art module first and every offline asset exists',()=>{
  const html=fs.readFileSync('www/index.html','utf8'),sw=fs.readFileSync('www/sw.js','utf8');
  assert.ok(html.indexOf('js/bird-art-v3193.js')<html.indexOf('js/app.js'));
- assert.match(sw,/gran-atlas-v3.21.1b-geografia/);
+ assert.match(sw,/gran-atlas-v3.21.1b-simple/);
  const assets=vm.runInNewContext(sw.slice(0,sw.indexOf("self.addEventListener"))+'\nASSETS');
  for(const asset of assets)assert.ok(fs.existsSync('www/'+asset.replace(/^\.\//,'')),asset);
  for(const path of ['laboratorio-aves.html','js/bird-art-v3193.js','js/lab/bird-lab-v3193.js'])assert.ok(assets.includes('./'+path));

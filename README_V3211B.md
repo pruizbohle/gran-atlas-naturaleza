@@ -1,4 +1,6 @@
-# El Gran Atlas v3.21.1b — Malla continental reconstruida
+# El Gran Atlas v3.21.1b — Propuesta inicial archivada
+
+Esta propuesta de 406 celdas fue sustituida por la [corrección de alcance: Atlas simple](README_ATLAS_SIMPLE.md). Las mediciones de este documento describen la propuesta anterior. La planilla Excel se facilitó después y se revisó durante la corrección.
 
 La cartografía ya no se deriva de los códigos HX ni de la cantidad de regiones jugables. Cada continente tiene una máscara geográfica propia sobre una retícula axial regular. Se conservan las 57 regiones funcionales y sus datos completos.
 

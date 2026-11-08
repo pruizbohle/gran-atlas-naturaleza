@@ -1,0 +1,1862 @@
+{
+  "reference": "fc2a4ab5237cfb2a3c2bad0cefe1c574db0a28c8",
+  "sources": {
+    "spreadsheetsAvailable": true,
+    "spreadsheetsSearched": [
+      "Atlas_Fauna_Hexagonal_209.xlsx",
+      "Atlas_Fauna_Hexagonal_209_900_Especies.xlsx"
+    ],
+    "existingSources": [
+      "REGIONS",
+      "ATLAS_CONTINENTS",
+      "ASIA_V21_DATOS.json",
+      "ASIA_V22_DATOS.json",
+      "ASIA_V23_DATOS.json",
+      "README_V3131.md",
+      "README_V314.md"
+    ]
+  },
+  "radius": 46,
+  "neighborDistance": 79.67433714816835,
+  "continents": [
+    {
+      "continent": "Europa",
+      "cells": 10,
+      "playableCells": 10,
+      "regions": 10,
+      "additionalCells": 0,
+      "groupedCells": 0,
+      "groupedRegions": 0,
+      "radius": 46,
+      "neighborDistance": 79.67433714816835,
+      "neighborPairs": 14,
+      "maxError": 2.842170943040401e-14,
+      "maxEdgeError": 5.684341886080802e-14,
+      "edgeErrors": [],
+      "pairs": [
+        {
+          "a": "europa-3-0",
+          "b": "europa-3-1",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "europa-3-1",
+          "b": "europa-4-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "europa-3-1",
+          "b": "europa-3-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "europa-2-2",
+          "b": "europa-3-2",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "europa-2-2",
+          "b": "europa-2-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "europa-3-2",
+          "b": "europa-4-2",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "europa-3-2",
+          "b": "europa-3-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "europa-1-3",
+          "b": "europa-2-3",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "europa-1-3",
+          "b": "europa-2-4",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "europa-1-3",
+          "b": "europa-2-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "europa-2-3",
+          "b": "europa-3-3",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "europa-2-3",
+          "b": "europa-2-4",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "europa-2-3",
+          "b": "europa-3-2",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "europa-3-3",
+          "b": "europa-4-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        }
+      ]
+    },
+    {
+      "continent": "Asia",
+      "cells": 25,
+      "playableCells": 21,
+      "regions": 21,
+      "additionalCells": 4,
+      "groupedCells": 0,
+      "groupedRegions": 0,
+      "radius": 46,
+      "neighborDistance": 79.67433714816835,
+      "neighborPairs": 51,
+      "maxError": 2.842170943040401e-14,
+      "maxEdgeError": 5.684341886080802e-14,
+      "edgeErrors": [],
+      "pairs": [
+        {
+          "a": "asia-2-0",
+          "b": "asia-3-0",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-2-0",
+          "b": "asia-2-1",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-3-0",
+          "b": "asia-4-0",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-3-0",
+          "b": "asia-3-1",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-4-0",
+          "b": "asia-5-0",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-4-0",
+          "b": "asia-4-1",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-5-0",
+          "b": "asia-5-1",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-1-1",
+          "b": "asia-2-1",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-1-1",
+          "b": "asia-2-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "asia-1-1",
+          "b": "asia-1-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "asia-1-1",
+          "b": "asia-2-0",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "asia-2-1",
+          "b": "asia-3-1",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-2-1",
+          "b": "asia-3-2",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-2-1",
+          "b": "asia-2-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "asia-2-1",
+          "b": "asia-3-0",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-3-1",
+          "b": "asia-4-1",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-3-1",
+          "b": "asia-4-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-3-1",
+          "b": "asia-3-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-3-1",
+          "b": "asia-4-0",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-4-1",
+          "b": "asia-5-1",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-4-1",
+          "b": "asia-5-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-4-1",
+          "b": "asia-4-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-4-1",
+          "b": "asia-5-0",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-5-1",
+          "b": "asia-5-2",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-0-2",
+          "b": "asia-1-2",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 1.4210854715202004e-14
+        },
+        {
+          "a": "asia-0-2",
+          "b": "asia-0-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-1-2",
+          "b": "asia-2-2",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-1-2",
+          "b": "asia-1-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "asia-2-2",
+          "b": "asia-3-2",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-2-2",
+          "b": "asia-2-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-3-2",
+          "b": "asia-4-2",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-3-2",
+          "b": "asia-3-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-4-2",
+          "b": "asia-5-2",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-4-2",
+          "b": "asia-4-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-0-3",
+          "b": "asia-1-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "asia-0-3",
+          "b": "asia-1-4",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 1.4210854715202004e-14
+        },
+        {
+          "a": "asia-0-3",
+          "b": "asia-1-2",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-1-3",
+          "b": "asia-2-3",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-1-3",
+          "b": "asia-1-4",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "asia-1-3",
+          "b": "asia-2-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "asia-2-3",
+          "b": "asia-3-3",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-2-3",
+          "b": "asia-3-4",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-2-3",
+          "b": "asia-3-2",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "asia-3-3",
+          "b": "asia-4-3",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-3-3",
+          "b": "asia-4-4",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-3-3",
+          "b": "asia-3-4",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-3-3",
+          "b": "asia-4-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-4-3",
+          "b": "asia-4-4",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-4-3",
+          "b": "asia-5-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-3-4",
+          "b": "asia-4-4",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "asia-2-5",
+          "b": "asia-3-4",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        }
+      ]
+    },
+    {
+      "continent": "África",
+      "cells": 14,
+      "playableCells": 14,
+      "regions": 24,
+      "additionalCells": 0,
+      "groupedCells": 6,
+      "groupedRegions": 16,
+      "radius": 46,
+      "neighborDistance": 79.67433714816835,
+      "neighborPairs": 23,
+      "maxError": 2.842170943040401e-14,
+      "maxEdgeError": 5.684341886080802e-14,
+      "edgeErrors": [],
+      "pairs": [
+        {
+          "a": "africa-0-0",
+          "b": "africa-1-0",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 1.4210854715202004e-14
+        },
+        {
+          "a": "africa-0-0",
+          "b": "africa-0-1",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-1-0",
+          "b": "africa-2-0",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-1-0",
+          "b": "africa-1-1",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "africa-2-0",
+          "b": "africa-2-1",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-0-1",
+          "b": "africa-1-1",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "africa-0-1",
+          "b": "africa-1-2",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 1.4210854715202004e-14
+        },
+        {
+          "a": "africa-0-1",
+          "b": "africa-0-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 7.105427357601002e-15
+        },
+        {
+          "a": "africa-0-1",
+          "b": "africa-1-0",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-1-1",
+          "b": "africa-2-1",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-1-1",
+          "b": "africa-2-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "africa-1-1",
+          "b": "africa-1-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "africa-1-1",
+          "b": "africa-2-0",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "africa-2-1",
+          "b": "africa-3-1",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-2-1",
+          "b": "africa-2-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "africa-0-2",
+          "b": "africa-1-2",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 1.4210854715202004e-14
+        },
+        {
+          "a": "africa-1-2",
+          "b": "africa-2-2",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-1-2",
+          "b": "africa-1-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "africa-2-2",
+          "b": "africa-2-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "africa-1-3",
+          "b": "africa-2-3",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "africa-1-3",
+          "b": "africa-2-4",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "africa-1-3",
+          "b": "africa-2-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "africa-2-3",
+          "b": "africa-2-4",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        }
+      ]
+    },
+    {
+      "continent": "Norteamérica",
+      "cells": 9,
+      "playableCells": 2,
+      "regions": 2,
+      "additionalCells": 7,
+      "groupedCells": 0,
+      "groupedRegions": 0,
+      "radius": 46,
+      "neighborDistance": 79.67433714816835,
+      "neighborPairs": 12,
+      "maxError": 2.842170943040401e-14,
+      "maxEdgeError": 5.684341886080802e-14,
+      "edgeErrors": [],
+      "pairs": [
+        {
+          "a": "norteamerica-0-0",
+          "b": "norteamerica-1-0",
+          "distance": 79.67433714816836,
+          "error": 1.4210854715202004e-14,
+          "sharedVertices": 2,
+          "edgeError": 1.4210854715202004e-14
+        },
+        {
+          "a": "norteamerica-1-0",
+          "b": "norteamerica-2-0",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "norteamerica-1-0",
+          "b": "norteamerica-1-1",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "norteamerica-2-0",
+          "b": "norteamerica-2-1",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        },
+        {
+          "a": "norteamerica-1-1",
+          "b": "norteamerica-2-1",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "norteamerica-1-1",
+          "b": "norteamerica-2-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "norteamerica-1-1",
+          "b": "norteamerica-1-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "norteamerica-1-1",
+          "b": "norteamerica-2-0",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "norteamerica-2-1",
+          "b": "norteamerica-3-1",
+          "distance": 79.67433714816838,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "norteamerica-2-1",
+          "b": "norteamerica-2-2",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 2.842170943040401e-14
+        },
+        {
+          "a": "norteamerica-1-2",
+          "b": "norteamerica-2-2",
+          "distance": 79.67433714816832,
+          "error": 2.842170943040401e-14,
+          "sharedVertices": 2,
+          "edgeError": 5.684341886080802e-14
+        },
+        {
+          "a": "norteamerica-2-2",
+          "b": "norteamerica-2-3",
+          "distance": 79.67433714816835,
+          "error": 0,
+          "sharedVertices": 2,
+          "edgeError": 0
+        }
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "name": "Islas Británicas",
+      "continent": "Europa",
+      "legacyId": "HX-01-09",
+      "before": {
+        "x": 261.1858428704208,
+        "y": 384
+      },
+      "after": {
+        "q": 0,
+        "r": 1,
+        "x": 61.837168574084174,
+        "y": 137
+      },
+      "cellId": "europa-0-1",
+      "reason": "Islas al noroeste de Francia, separadas del continente."
+    },
+    {
+      "name": "Escandinavia",
+      "continent": "Europa",
+      "legacyId": "HX-01-11",
+      "before": {
+        "x": 659.5575286112626,
+        "y": 246
+      },
+      "after": {
+        "q": 3,
+        "r": 0,
+        "x": 261.0230114445051,
+        "y": 68
+      },
+      "cellId": "europa-3-0",
+      "reason": "Península septentrional, al norte de Europa central y del Báltico."
+    },
+    {
+      "name": "Alpes",
+      "continent": "Europa",
+      "legacyId": "HX-02-09",
+      "before": {
+        "x": 699.3946971853468,
+        "y": 591
+      },
+      "after": {
+        "q": 1,
+        "r": 3,
+        "x": 221.18584287042086,
+        "y": 275
+      },
+      "cellId": "europa-2-3",
+      "reason": "Arco montañoso al norte de Italia y al sur de Europa central."
+    },
+    {
+      "name": "Europa Occidental",
+      "continent": "Europa",
+      "legacyId": "HX-02-10",
+      "before": {
+        "x": 500.2088543149259,
+        "y": 522
+      },
+      "after": {
+        "q": 1,
+        "r": 2,
+        "x": 181.3486742963367,
+        "y": 206
+      },
+      "cellId": "europa-2-2",
+      "reason": "Francia y su entorno, al este de las islas y al norte de Iberia."
+    },
+    {
+      "name": "Europa Central",
+      "continent": "Europa",
+      "legacyId": "HX-02-11",
+      "before": {
+        "x": 739.231865759431,
+        "y": 522
+      },
+      "after": {
+        "q": 2,
+        "r": 2,
+        "x": 261.0230114445051,
+        "y": 206
+      },
+      "cellId": "europa-3-2",
+      "reason": "Al este de Francia, al norte de los Alpes y al oeste de Europa oriental."
+    },
+    {
+      "name": "Península Ibérica",
+      "continent": "Europa",
+      "legacyId": "HX-02-12",
+      "before": {
+        "x": 340.86018001858923,
+        "y": 660
+      },
+      "after": {
+        "q": 0,
+        "r": 3,
+        "x": 141.51150572225254,
+        "y": 275
+      },
+      "cellId": "europa-1-3",
+      "reason": "Península suroccidental, al sur de Francia."
+    },
+    {
+      "name": "Europa Oriental",
+      "continent": "Europa",
+      "legacyId": "HX-03-09",
+      "before": {
+        "x": 1057.9292143521043,
+        "y": 522
+      },
+      "after": {
+        "q": 3,
+        "r": 2,
+        "x": 340.6973485926734,
+        "y": 206
+      },
+      "cellId": "europa-4-2",
+      "reason": "Llanuras orientales, al este de Europa central."
+    },
+    {
+      "name": "Península Itálica",
+      "continent": "Europa",
+      "legacyId": "HX-03-10",
+      "before": {
+        "x": 659.5575286112626,
+        "y": 660
+      },
+      "after": {
+        "q": 0,
+        "r": 4,
+        "x": 181.3486742963367,
+        "y": 344
+      },
+      "cellId": "europa-2-4",
+      "reason": "Península mediterránea bajo los Alpes, al oeste de los Balcanes."
+    },
+    {
+      "name": "Región del mar Báltico",
+      "continent": "Europa",
+      "legacyId": "HX-03-11",
+      "before": {
+        "x": 818.9062029075992,
+        "y": 384
+      },
+      "after": {
+        "q": 3,
+        "r": 1,
+        "x": 300.86018001858923,
+        "y": 137
+      },
+      "cellId": "europa-3-1",
+      "reason": "Cuenca al este de Escandinavia y al noreste de Europa central."
+    },
+    {
+      "name": "Balcanes",
+      "continent": "Europa",
+      "legacyId": "HX-03-12",
+      "before": {
+        "x": 898.5805400557676,
+        "y": 660
+      },
+      "after": {
+        "q": 2,
+        "r": 3,
+        "x": 300.86018001858923,
+        "y": 275
+      },
+      "cellId": "europa-3-3",
+      "reason": "Sureste europeo, al este de Italia y al sur de Europa oriental."
+    },
+    {
+      "name": "Cáucaso",
+      "continent": "Asia",
+      "legacyId": "HX-03-13",
+      "before": {
+        "x": 301.023011444505,
+        "y": 453
+      },
+      "after": {
+        "q": -1,
+        "r": 2,
+        "x": 61.837168574084174,
+        "y": 206
+      },
+      "cellId": "asia-0-2",
+      "reason": "Entre mar Negro y Caspio, al noreste de Anatolia."
+    },
+    {
+      "name": "Anatolia",
+      "continent": "Asia",
+      "legacyId": "HX-03-15",
+      "before": {
+        "x": 181.51150572225254,
+        "y": 522
+      },
+      "after": {
+        "q": -1,
+        "r": 3,
+        "x": 101.67433714816835,
+        "y": 275
+      },
+      "cellId": "asia-0-3",
+      "reason": "Extremo occidental de Asia, al oeste de Irán."
+    },
+    {
+      "name": "Siberia Occidental",
+      "continent": "Asia",
+      "legacyId": "HX-02-13",
+      "before": {
+        "x": 579.8831914630944,
+        "y": 246
+      },
+      "after": {
+        "q": 2,
+        "r": 1,
+        "x": 261.023011444505,
+        "y": 137
+      },
+      "cellId": "asia-2-1",
+      "reason": "Franja norte, al este de los Urales y al oeste de Siberia central."
+    },
+    {
+      "name": "Siberia Central",
+      "continent": "Asia",
+      "legacyId": "HX-03-14",
+      "before": {
+        "x": 898.5805400557676,
+        "y": 246
+      },
+      "after": {
+        "q": 3,
+        "r": 1,
+        "x": 340.6973485926734,
+        "y": 137
+      },
+      "cellId": "asia-3-1",
+      "reason": "Franja norte entre Siberia occidental y oriental."
+    },
+    {
+      "name": "Mongolia",
+      "continent": "Asia",
+      "legacyId": "HX-04-13",
+      "before": {
+        "x": 978.2548772039361,
+        "y": 384
+      },
+      "after": {
+        "q": 1,
+        "r": 2,
+        "x": 221.18584287042086,
+        "y": 206
+      },
+      "cellId": "asia-2-2",
+      "reason": "Franja de Mongolia al sur de Siberia y al oeste del Gobi y China."
+    },
+    {
+      "name": "Montes Urales",
+      "continent": "Asia",
+      "legacyId": "HX-02-15",
+      "before": {
+        "x": 380.6973485926734,
+        "y": 315
+      },
+      "after": {
+        "q": 1,
+        "r": 1,
+        "x": 181.3486742963367,
+        "y": 137
+      },
+      "cellId": "asia-1-1",
+      "reason": "Borde occidental de Siberia, al noroeste de Asia central."
+    },
+    {
+      "name": "Siberia Oriental",
+      "continent": "Asia",
+      "legacyId": "HX-03-16",
+      "before": {
+        "x": 1217.2778886484411,
+        "y": 246
+      },
+      "after": {
+        "q": 4,
+        "r": 1,
+        "x": 420.3716857408417,
+        "y": 137
+      },
+      "cellId": "asia-4-1",
+      "reason": "Franja nororiental, al este de Siberia central."
+    },
+    {
+      "name": "Kamchatka",
+      "continent": "Asia",
+      "legacyId": "HX-03-18",
+      "before": {
+        "x": 1535.9752372411144,
+        "y": 384
+      },
+      "after": {
+        "q": 5,
+        "r": 1,
+        "x": 500.0460228890101,
+        "y": 137
+      },
+      "cellId": "asia-5-1",
+      "reason": "Península del Pacífico nororiental, al norte de Japón."
+    },
+    {
+      "name": "Desierto de Gobi",
+      "continent": "Asia",
+      "legacyId": "HX-04-14",
+      "before": {
+        "x": 1018.0920457780202,
+        "y": 453
+      },
+      "after": {
+        "q": 2,
+        "r": 2,
+        "x": 300.86018001858923,
+        "y": 206
+      },
+      "cellId": "asia-3-2",
+      "reason": "Franja del Gobi entre Mongolia y China septentrional, en la escala simplificada."
+    },
+    {
+      "name": "Himalaya",
+      "continent": "Asia",
+      "legacyId": "HX-04-15",
+      "before": {
+        "x": 779.0690343335152,
+        "y": 591
+      },
+      "after": {
+        "q": 1,
+        "r": 4,
+        "x": 300.86018001858923,
+        "y": 344
+      },
+      "cellId": "asia-3-4",
+      "reason": "Al sur de Asia central y del Tíbet, al norte de India."
+    },
+    {
+      "name": "Península Arábiga",
+      "continent": "Asia",
+      "legacyId": "HX-03-17",
+      "before": {
+        "x": 301.023011444505,
+        "y": 729
+      },
+      "after": {
+        "q": -1,
+        "r": 4,
+        "x": 141.51150572225254,
+        "y": 344
+      },
+      "cellId": "asia-1-4",
+      "reason": "Península suroccidental, al sur de Mesopotamia."
+    },
+    {
+      "name": "Mesopotamia",
+      "continent": "Asia",
+      "legacyId": "HX-04-12",
+      "before": {
+        "x": 301.023011444505,
+        "y": 591
+      },
+      "after": {
+        "q": 0,
+        "r": 3,
+        "x": 181.3486742963367,
+        "y": 275
+      },
+      "cellId": "asia-1-3",
+      "reason": "Al sureste de Anatolia, al oeste de Irán y al norte de Arabia."
+    },
+    {
+      "name": "Meseta de Irán",
+      "continent": "Asia",
+      "legacyId": "HX-04-16",
+      "before": {
+        "x": 460.3716857408417,
+        "y": 591
+      },
+      "after": {
+        "q": 1,
+        "r": 3,
+        "x": 261.023011444505,
+        "y": 275
+      },
+      "cellId": "asia-2-3",
+      "reason": "Entre Mesopotamia y Asia central, al noroeste de India."
+    },
+    {
+      "name": "Meseta del Tíbet",
+      "continent": "Asia",
+      "legacyId": "HX-04-17",
+      "before": {
+        "x": 818.9062029075993,
+        "y": 522
+      },
+      "after": {
+        "q": 2,
+        "r": 3,
+        "x": 340.6973485926734,
+        "y": 275
+      },
+      "cellId": "asia-3-3",
+      "reason": "Al norte del Himalaya y al oeste de China."
+    },
+    {
+      "name": "Estepas de Asia Central",
+      "continent": "Asia",
+      "legacyId": "HX-04-18",
+      "before": {
+        "x": 699.3946971853468,
+        "y": 453
+      },
+      "after": {
+        "q": 0,
+        "r": 2,
+        "x": 141.51150572225254,
+        "y": 206
+      },
+      "cellId": "asia-1-2",
+      "reason": "Al sur de Siberia y al oeste de Mongolia."
+    },
+    {
+      "name": "China Septentrional",
+      "continent": "Asia",
+      "legacyId": "HX-05-15",
+      "before": {
+        "x": 1137.6035515002727,
+        "y": 522
+      },
+      "after": {
+        "q": 3,
+        "r": 2,
+        "x": 380.53451716675755,
+        "y": 206
+      },
+      "cellId": "asia-4-2",
+      "reason": "Al sur del Gobi y al oeste de Corea."
+    },
+    {
+      "name": "Subcontinente Indio",
+      "continent": "Asia",
+      "legacyId": "HX-05-16",
+      "before": {
+        "x": 699.3946971853468,
+        "y": 729
+      },
+      "after": {
+        "q": 0,
+        "r": 5,
+        "x": 261.023011444505,
+        "y": 413
+      },
+      "cellId": "asia-2-5",
+      "reason": "Proyección meridional al sur del Himalaya."
+    },
+    {
+      "name": "China Meridional",
+      "continent": "Asia",
+      "legacyId": "HX-05-17",
+      "before": {
+        "x": 1137.6035515002727,
+        "y": 660
+      },
+      "after": {
+        "q": 3,
+        "r": 3,
+        "x": 420.3716857408417,
+        "y": 275
+      },
+      "cellId": "asia-4-3",
+      "reason": "Al sur de China septentrional y al noreste del Sudeste Asiático."
+    },
+    {
+      "name": "Península de Corea",
+      "continent": "Asia",
+      "legacyId": "HX-06-16",
+      "before": {
+        "x": 1296.9522257966094,
+        "y": 522
+      },
+      "after": {
+        "q": 4,
+        "r": 2,
+        "x": 460.2088543149259,
+        "y": 206
+      },
+      "cellId": "asia-5-2",
+      "reason": "Costa oriental al este de China, al oeste de Japón."
+    },
+    {
+      "name": "Sudeste Asiático",
+      "continent": "Asia",
+      "legacyId": "HX-06-17",
+      "before": {
+        "x": 1057.9292143521043,
+        "y": 798
+      },
+      "after": {
+        "q": 2,
+        "r": 4,
+        "x": 380.53451716675755,
+        "y": 344
+      },
+      "cellId": "asia-4-4",
+      "reason": "Al sur de China y al este de India."
+    },
+    {
+      "name": "Archipiélago Japonés",
+      "continent": "Asia",
+      "legacyId": "HX-06-18",
+      "before": {
+        "x": 1496.1380686670302,
+        "y": 591
+      },
+      "after": {
+        "q": 5,
+        "r": 3,
+        "x": 579.7203600371785,
+        "y": 275
+      },
+      "cellId": "asia-6-3",
+      "reason": "Islas separadas al este de Corea y al sur de Kamchatka."
+    },
+    {
+      "name": "Magreb",
+      "continent": "África",
+      "legacyId": "HX-06-09",
+      "before": {
+        "x": 261.18584287042086,
+        "y": 108
+      },
+      "after": {
+        "q": 0,
+        "r": 0,
+        "x": 61.837168574084174,
+        "y": 68
+      },
+      "cellId": "africa-0-0",
+      "reason": "Noroeste mediterráneo; comparte sector con la cordillera del Atlas."
+    },
+    {
+      "name": "Sabana de África oriental",
+      "continent": "África",
+      "legacyId": "HX-07-10",
+      "before": {
+        "x": 699.3946971853468,
+        "y": 453
+      },
+      "after": {
+        "q": 1,
+        "r": 2,
+        "x": 221.18584287042086,
+        "y": 206
+      },
+      "cellId": "africa-2-2",
+      "reason": "Sector compartido del África centro-oriental, al este del Congo."
+    },
+    {
+      "name": "Cuenca del Congo",
+      "continent": "África",
+      "legacyId": "HX-08-11",
+      "before": {
+        "x": 460.3716857408417,
+        "y": 453
+      },
+      "after": {
+        "q": 0,
+        "r": 2,
+        "x": 141.51150572225254,
+        "y": 206
+      },
+      "cellId": "africa-1-2",
+      "reason": "Centro ecuatorial, al sur del Sahel y al oeste de los Grandes Lagos."
+    },
+    {
+      "name": "Valle del Nilo",
+      "continent": "África",
+      "legacyId": "HX-06-11",
+      "before": {
+        "x": 699.3946971853468,
+        "y": 177
+      },
+      "after": {
+        "q": 2,
+        "r": 0,
+        "x": 221.18584287042086,
+        "y": 68
+      },
+      "cellId": "africa-2-0",
+      "reason": "Noreste africano, al norte de Etiopía y del África oriental."
+    },
+    {
+      "name": "Sahel occidental",
+      "continent": "África",
+      "legacyId": "HX-07-08",
+      "before": {
+        "x": 301.023011444505,
+        "y": 315
+      },
+      "after": {
+        "q": 0,
+        "r": 1,
+        "x": 101.67433714816835,
+        "y": 137
+      },
+      "cellId": "africa-0-1",
+      "reason": "Franja bajo el Sahara occidental y sobre los bosques occidentales."
+    },
+    {
+      "name": "Bosques de África occidental",
+      "continent": "África",
+      "legacyId": "HX-08-08",
+      "before": {
+        "x": 181.51150572225254,
+        "y": 384
+      },
+      "after": {
+        "q": -1,
+        "r": 2,
+        "x": 61.837168574084174,
+        "y": 206
+      },
+      "cellId": "africa-0-2",
+      "reason": "Sector de bosques atlánticos al oeste de la cuenca del Congo."
+    },
+    {
+      "name": "Grandes Lagos africanos",
+      "continent": "África",
+      "legacyId": "HX-09-11",
+      "before": {
+        "x": 579.8831914630944,
+        "y": 522
+      },
+      "after": {
+        "q": 1,
+        "r": 2,
+        "x": 221.18584287042086,
+        "y": 206
+      },
+      "cellId": "africa-2-2",
+      "reason": "Sector compartido del África centro-oriental, al este del Congo."
+    },
+    {
+      "name": "Kalahari y sabana austral",
+      "continent": "África",
+      "legacyId": "HX-10-10",
+      "before": {
+        "x": 420.53451716675755,
+        "y": 660
+      },
+      "after": {
+        "q": 0,
+        "r": 3,
+        "x": 181.3486742963367,
+        "y": 275
+      },
+      "cellId": "africa-1-3",
+      "reason": "Sector compartido del interior austral; sus regiones se eligen por separado."
+    },
+    {
+      "name": "Costa del Cabo",
+      "continent": "África",
+      "legacyId": "HX-11-11",
+      "before": {
+        "x": 420.53451716675755,
+        "y": 798
+      },
+      "after": {
+        "q": 0,
+        "r": 4,
+        "x": 221.18584287042086,
+        "y": 344
+      },
+      "cellId": "africa-2-4",
+      "reason": "Extremo meridional, bajo el interior austral."
+    },
+    {
+      "name": "Madagascar",
+      "continent": "África",
+      "legacyId": "HX-09-14",
+      "before": {
+        "x": 818.9062029075993,
+        "y": 660
+      },
+      "after": {
+        "q": 3,
+        "r": 3,
+        "x": 420.3716857408417,
+        "y": 275
+      },
+      "cellId": "africa-4-3",
+      "reason": "Sector insular del Índico frente al sureste africano; regiones seleccionables por separado."
+    },
+    {
+      "name": "Cuerno de África",
+      "continent": "África",
+      "legacyId": "HX-07-12",
+      "before": {
+        "x": 898.5805400557676,
+        "y": 384
+      },
+      "after": {
+        "q": 3,
+        "r": 1,
+        "x": 340.6973485926734,
+        "y": 137
+      },
+      "cellId": "africa-3-1",
+      "reason": "Proyección oriental al océano Índico, al este de Etiopía."
+    },
+    {
+      "name": "Delta del Okavango",
+      "continent": "África",
+      "legacyId": "HX-10-09",
+      "before": {
+        "x": 460.3716857408417,
+        "y": 591
+      },
+      "after": {
+        "q": 0,
+        "r": 3,
+        "x": 181.3486742963367,
+        "y": 275
+      },
+      "cellId": "africa-1-3",
+      "reason": "Sector compartido del interior austral; sus regiones se eligen por separado."
+    },
+    {
+      "name": "Bosques de Gabón",
+      "continent": "África",
+      "legacyId": "HX-08-10",
+      "before": {
+        "x": 301.023011444505,
+        "y": 453
+      },
+      "after": {
+        "q": -1,
+        "r": 2,
+        "x": 61.837168574084174,
+        "y": 206
+      },
+      "cellId": "africa-0-2",
+      "reason": "Sector de bosques atlánticos al oeste de la cuenca del Congo."
+    },
+    {
+      "name": "Tierras altas de Etiopía",
+      "continent": "África",
+      "legacyId": "HX-07-13",
+      "before": {
+        "x": 779.0690343335152,
+        "y": 315
+      },
+      "after": {
+        "q": 2,
+        "r": 1,
+        "x": 261.023011444505,
+        "y": 137
+      },
+      "cellId": "africa-2-1",
+      "reason": "Noreste elevado, al oeste del Cuerno de África."
+    },
+    {
+      "name": "Desierto del Namib",
+      "continent": "África",
+      "legacyId": "HX-11-08",
+      "before": {
+        "x": 380.6973485926734,
+        "y": 729
+      },
+      "after": {
+        "q": 0,
+        "r": 3,
+        "x": 181.3486742963367,
+        "y": 275
+      },
+      "cellId": "africa-1-3",
+      "reason": "Sector compartido del interior austral; sus regiones se eligen por separado."
+    },
+    {
+      "name": "Montañas del Atlas",
+      "continent": "África",
+      "legacyId": "HX-06-08",
+      "before": {
+        "x": 261.18584287042086,
+        "y": 108
+      },
+      "after": {
+        "q": 0,
+        "r": 0,
+        "x": 61.837168574084174,
+        "y": 68
+      },
+      "cellId": "africa-0-0",
+      "reason": "Cordillera del Magreb; sector compartido sin fusionar regiones."
+    },
+    {
+      "name": "Bosques de miombo",
+      "continent": "África",
+      "legacyId": "HX-09-09",
+      "before": {
+        "x": 420.53451716675755,
+        "y": 522
+      },
+      "after": {
+        "q": 0,
+        "r": 3,
+        "x": 181.3486742963367,
+        "y": 275
+      },
+      "cellId": "africa-1-3",
+      "reason": "Sector compartido del interior austral; sus regiones se eligen por separado."
+    },
+    {
+      "name": "Costa de Mozambique",
+      "continent": "África",
+      "legacyId": "HX-10-12",
+      "before": {
+        "x": 579.8831914630944,
+        "y": 660
+      },
+      "after": {
+        "q": 1,
+        "r": 3,
+        "x": 261.023011444505,
+        "y": 275
+      },
+      "cellId": "africa-2-3",
+      "reason": "Sector compartido del sureste africano, al este del interior austral."
+    },
+    {
+      "name": "Lagos del Rift",
+      "continent": "África",
+      "legacyId": "HX-08-12",
+      "before": {
+        "x": 579.8831914630944,
+        "y": 522
+      },
+      "after": {
+        "q": 1,
+        "r": 2,
+        "x": 221.18584287042086,
+        "y": 206
+      },
+      "cellId": "africa-2-2",
+      "reason": "Sector compartido del África centro-oriental, al este del Congo."
+    },
+    {
+      "name": "Islas Seychelles y Aldabra",
+      "continent": "África",
+      "legacyId": "HX-07-14",
+      "before": {
+        "x": 978.2548772039361,
+        "y": 522
+      },
+      "after": {
+        "q": 3,
+        "r": 3,
+        "x": 420.3716857408417,
+        "y": 275
+      },
+      "cellId": "africa-4-3",
+      "reason": "Sector insular del Índico compartido con Madagascar, separado del continente."
+    },
+    {
+      "name": "Humedales de Bangweulu",
+      "continent": "África",
+      "legacyId": "HX-09-12",
+      "before": {
+        "x": 540.0460228890101,
+        "y": 591
+      },
+      "after": {
+        "q": 0,
+        "r": 3,
+        "x": 181.3486742963367,
+        "y": 275
+      },
+      "cellId": "africa-1-3",
+      "reason": "Sector compartido del interior austral; sus regiones se eligen por separado."
+    },
+    {
+      "name": "Lowveld y Kruger",
+      "continent": "África",
+      "legacyId": "HX-11-10",
+      "before": {
+        "x": 540.0460228890101,
+        "y": 729
+      },
+      "after": {
+        "q": 1,
+        "r": 3,
+        "x": 261.023011444505,
+        "y": 275
+      },
+      "cellId": "africa-2-3",
+      "reason": "Sector compartido del sureste africano, al este del interior austral."
+    },
+    {
+      "name": "Desierto del Sáhara",
+      "continent": "África",
+      "legacyId": "HX-06-07",
+      "before": {
+        "x": 420.53451716675755,
+        "y": 246
+      },
+      "after": {
+        "q": 1,
+        "r": 0,
+        "x": 141.51150572225254,
+        "y": 68
+      },
+      "cellId": "africa-1-0",
+      "reason": "Gran franja septentrional, al norte del Sahel y del Congo."
+    },
+    {
+      "name": "Sahel oriental",
+      "continent": "África",
+      "legacyId": "HX-07-11",
+      "before": {
+        "x": 619.7203600371785,
+        "y": 315
+      },
+      "after": {
+        "q": 1,
+        "r": 1,
+        "x": 181.3486742963367,
+        "y": 137
+      },
+      "cellId": "africa-1-1",
+      "reason": "Continuación oriental del Sahel, bajo el Sahara y al oeste de Etiopía."
+    },
+    {
+      "name": "Alaska",
+      "continent": "Norteamérica",
+      "legacyId": "HX-01-05",
+      "before": {
+        "x": 181.51150572225254,
+        "y": 246
+      },
+      "after": {
+        "q": 0,
+        "r": 0,
+        "x": 61.837168574084174,
+        "y": 68
+      },
+      "cellId": "norteamerica-0-0",
+      "reason": "Extremo noroccidental de Norteamérica."
+    },
+    {
+      "name": "Columbia Británica",
+      "continent": "Norteamérica",
+      "legacyId": "HX-02-02",
+      "before": {
+        "x": 420.53451716675755,
+        "y": 384
+      },
+      "after": {
+        "q": 1,
+        "r": 1,
+        "x": 181.3486742963367,
+        "y": 137
+      },
+      "cellId": "norteamerica-1-1",
+      "reason": "Costa occidental canadiense, al sureste de Alaska."
+    }
+  ]
+}

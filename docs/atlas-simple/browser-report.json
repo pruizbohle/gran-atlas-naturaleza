@@ -1,0 +1,4981 @@
+{
+  "version": "3.21.1b",
+  "responsiveChecks": [
+    {
+      "size": "320x640",
+      "continent": "Europa",
+      "profile": "current",
+      "key": "320x640|Europa|current|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 327.484375,
+          "width": 304,
+          "height": 212.484375,
+          "visible": true
+        },
+        "region": {
+          "top": 405.484375,
+          "bottom": 579,
+          "width": 306,
+          "height": 173.515625,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 327.484375,
+          "bottom": 378.484375,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Europa",
+      "profile": "open",
+      "key": "320x640|Europa|open|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 327.484375,
+          "width": 304,
+          "height": 212.484375,
+          "visible": true
+        },
+        "region": {
+          "top": 405.484375,
+          "bottom": 579,
+          "width": 306,
+          "height": 173.515625,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 327.484375,
+          "bottom": 378.484375,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Europa",
+      "profile": "ready",
+      "key": "320x640|Europa|ready|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 327.484375,
+          "width": 304,
+          "height": 212.484375,
+          "visible": true
+        },
+        "region": {
+          "top": 405.484375,
+          "bottom": 579,
+          "width": 306,
+          "height": 173.515625,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 327.484375,
+          "bottom": 378.484375,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Europa",
+      "profile": "locked",
+      "key": "320x640|Europa|locked|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 327.484375,
+          "width": 304,
+          "height": 212.484375,
+          "visible": true
+        },
+        "region": {
+          "top": 405.484375,
+          "bottom": 579,
+          "width": 306,
+          "height": 173.515625,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 327.484375,
+          "bottom": 378.484375,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Asia",
+      "profile": "current",
+      "key": "320x640|Asia|current|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 327.484375,
+          "width": 304,
+          "height": 212.484375,
+          "visible": true
+        },
+        "region": {
+          "top": 405.484375,
+          "bottom": 579,
+          "width": 306,
+          "height": 173.515625,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 327.484375,
+          "bottom": 378.484375,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Asia",
+      "profile": "open",
+      "key": "320x640|Asia|open|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 327.484375,
+          "width": 304,
+          "height": 212.484375,
+          "visible": true
+        },
+        "region": {
+          "top": 405.484375,
+          "bottom": 579,
+          "width": 306,
+          "height": 173.515625,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 327.484375,
+          "bottom": 378.484375,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Asia",
+      "profile": "ready",
+      "key": "320x640|Asia|ready|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 327.484375,
+          "width": 304,
+          "height": 212.484375,
+          "visible": true
+        },
+        "region": {
+          "top": 405.484375,
+          "bottom": 579,
+          "width": 306,
+          "height": 173.515625,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 327.484375,
+          "bottom": 378.484375,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Asia",
+      "profile": "locked",
+      "key": "320x640|Asia|locked|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 327.484375,
+          "width": 304,
+          "height": 212.484375,
+          "visible": true
+        },
+        "region": {
+          "top": 405.484375,
+          "bottom": 579,
+          "width": 306,
+          "height": 173.515625,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 327.484375,
+          "bottom": 378.484375,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "África",
+      "profile": "current",
+      "key": "320x640|África|current|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 322.5625,
+          "width": 304,
+          "height": 207.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 400.5625,
+          "bottom": 579,
+          "width": 306,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 322.5625,
+          "bottom": 373.5625,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "África",
+      "profile": "open",
+      "key": "320x640|África|open|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 322.5625,
+          "width": 304,
+          "height": 207.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 400.5625,
+          "bottom": 579,
+          "width": 306,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 322.5625,
+          "bottom": 373.5625,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "África",
+      "profile": "ready",
+      "key": "320x640|África|ready|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 322.5625,
+          "width": 304,
+          "height": 207.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 400.5625,
+          "bottom": 579,
+          "width": 306,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 322.5625,
+          "bottom": 373.5625,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "África",
+      "profile": "locked",
+      "key": "320x640|África|locked|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 322.5625,
+          "width": 304,
+          "height": 207.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 400.5625,
+          "bottom": 579,
+          "width": 306,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 322.5625,
+          "bottom": 373.5625,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Norteamérica",
+      "profile": "current",
+      "key": "320x640|Norteamérica|current|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 327.484375,
+          "width": 304,
+          "height": 212.484375,
+          "visible": true
+        },
+        "region": {
+          "top": 405.484375,
+          "bottom": 579,
+          "width": 306,
+          "height": 173.515625,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 327.484375,
+          "bottom": 378.484375,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Norteamérica",
+      "profile": "open",
+      "key": "320x640|Norteamérica|open|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 327.484375,
+          "width": 304,
+          "height": 212.484375,
+          "visible": true
+        },
+        "region": {
+          "top": 405.484375,
+          "bottom": 579,
+          "width": 306,
+          "height": 173.515625,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 327.484375,
+          "bottom": 378.484375,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Norteamérica",
+      "profile": "ready",
+      "key": "320x640|Norteamérica|ready|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 327.484375,
+          "width": 304,
+          "height": 212.484375,
+          "visible": true
+        },
+        "region": {
+          "top": 405.484375,
+          "bottom": 579,
+          "width": 306,
+          "height": 173.515625,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 327.484375,
+          "bottom": 378.484375,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Norteamérica",
+      "profile": "locked",
+      "key": "320x640|Norteamérica|locked|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 327.484375,
+          "width": 304,
+          "height": 212.484375,
+          "visible": true
+        },
+        "region": {
+          "top": 405.484375,
+          "bottom": 579,
+          "width": 306,
+          "height": 173.515625,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 201,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 327.484375,
+          "bottom": 378.484375,
+          "width": 304,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Sudamérica",
+      "profile": "locked",
+      "key": "320x640|Sudamérica|locked|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 406.1875,
+          "width": 304,
+          "height": 291.1875,
+          "visible": true
+        },
+        "region": {
+          "top": 414.1875,
+          "bottom": 579,
+          "width": 306,
+          "height": 164.8125,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 284,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Oceanía",
+      "profile": "locked",
+      "key": "320x640|Oceanía|locked|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 406.1875,
+          "width": 304,
+          "height": 291.1875,
+          "visible": true
+        },
+        "region": {
+          "top": 414.1875,
+          "bottom": 579,
+          "width": 306,
+          "height": 164.8125,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 284,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Polos",
+      "profile": "locked",
+      "key": "320x640|Polos|locked|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 406.1875,
+          "width": 304,
+          "height": 291.1875,
+          "visible": true
+        },
+        "region": {
+          "top": 414.1875,
+          "bottom": 579,
+          "width": 306,
+          "height": 164.8125,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 284,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "320x640",
+      "continent": "Océanos",
+      "profile": "locked",
+      "key": "320x640|Océanos|locked|after",
+      "viewport": [
+        320,
+        640
+      ],
+      "dockTop": 589,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 306,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 406.1875,
+          "width": 304,
+          "height": 291.1875,
+          "visible": true
+        },
+        "region": {
+          "top": 414.1875,
+          "bottom": 579,
+          "width": 306,
+          "height": 164.8125,
+          "visible": true
+        },
+        "action": {
+          "top": 525,
+          "bottom": 569,
+          "width": 284,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Europa",
+      "profile": "current",
+      "key": "360x740|Europa|current|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 426.375,
+          "width": 344,
+          "height": 311.375,
+          "visible": true
+        },
+        "region": {
+          "top": 504.375,
+          "bottom": 679,
+          "width": 346,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 426.375,
+          "bottom": 477.375,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Europa",
+      "profile": "open",
+      "key": "360x740|Europa|open|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 426.375,
+          "width": 344,
+          "height": 311.375,
+          "visible": true
+        },
+        "region": {
+          "top": 504.375,
+          "bottom": 679,
+          "width": 346,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 426.375,
+          "bottom": 477.375,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Europa",
+      "profile": "ready",
+      "key": "360x740|Europa|ready|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 426.375,
+          "width": 344,
+          "height": 311.375,
+          "visible": true
+        },
+        "region": {
+          "top": 504.375,
+          "bottom": 679,
+          "width": 346,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 426.375,
+          "bottom": 477.375,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Europa",
+      "profile": "locked",
+      "key": "360x740|Europa|locked|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 426.375,
+          "width": 344,
+          "height": 311.375,
+          "visible": true
+        },
+        "region": {
+          "top": 504.375,
+          "bottom": 679,
+          "width": 346,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 426.375,
+          "bottom": 477.375,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Asia",
+      "profile": "current",
+      "key": "360x740|Asia|current|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 426.375,
+          "width": 344,
+          "height": 311.375,
+          "visible": true
+        },
+        "region": {
+          "top": 504.375,
+          "bottom": 679,
+          "width": 346,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 426.375,
+          "bottom": 477.375,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Asia",
+      "profile": "open",
+      "key": "360x740|Asia|open|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 426.375,
+          "width": 344,
+          "height": 311.375,
+          "visible": true
+        },
+        "region": {
+          "top": 504.375,
+          "bottom": 679,
+          "width": 346,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 426.375,
+          "bottom": 477.375,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Asia",
+      "profile": "ready",
+      "key": "360x740|Asia|ready|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 426.375,
+          "width": 344,
+          "height": 311.375,
+          "visible": true
+        },
+        "region": {
+          "top": 504.375,
+          "bottom": 679,
+          "width": 346,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 426.375,
+          "bottom": 477.375,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Asia",
+      "profile": "locked",
+      "key": "360x740|Asia|locked|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 426.375,
+          "width": 344,
+          "height": 311.375,
+          "visible": true
+        },
+        "region": {
+          "top": 504.375,
+          "bottom": 679,
+          "width": 346,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 426.375,
+          "bottom": 477.375,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "África",
+      "profile": "current",
+      "key": "360x740|África|current|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 422.5625,
+          "width": 344,
+          "height": 307.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 500.5625,
+          "bottom": 679,
+          "width": 346,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 422.5625,
+          "bottom": 473.5625,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "África",
+      "profile": "open",
+      "key": "360x740|África|open|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 422.5625,
+          "width": 344,
+          "height": 307.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 500.5625,
+          "bottom": 679,
+          "width": 346,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 422.5625,
+          "bottom": 473.5625,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "África",
+      "profile": "ready",
+      "key": "360x740|África|ready|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 422.5625,
+          "width": 344,
+          "height": 307.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 500.5625,
+          "bottom": 679,
+          "width": 346,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 422.5625,
+          "bottom": 473.5625,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "África",
+      "profile": "locked",
+      "key": "360x740|África|locked|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 422.5625,
+          "width": 344,
+          "height": 307.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 500.5625,
+          "bottom": 679,
+          "width": 346,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 422.5625,
+          "bottom": 473.5625,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Norteamérica",
+      "profile": "current",
+      "key": "360x740|Norteamérica|current|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 426.375,
+          "width": 344,
+          "height": 311.375,
+          "visible": true
+        },
+        "region": {
+          "top": 504.375,
+          "bottom": 679,
+          "width": 346,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 426.375,
+          "bottom": 477.375,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Norteamérica",
+      "profile": "open",
+      "key": "360x740|Norteamérica|open|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 426.375,
+          "width": 344,
+          "height": 311.375,
+          "visible": true
+        },
+        "region": {
+          "top": 504.375,
+          "bottom": 679,
+          "width": 346,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 426.375,
+          "bottom": 477.375,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Norteamérica",
+      "profile": "ready",
+      "key": "360x740|Norteamérica|ready|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 426.375,
+          "width": 344,
+          "height": 311.375,
+          "visible": true
+        },
+        "region": {
+          "top": 504.375,
+          "bottom": 679,
+          "width": 346,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 426.375,
+          "bottom": 477.375,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Norteamérica",
+      "profile": "locked",
+      "key": "360x740|Norteamérica|locked|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 426.375,
+          "width": 344,
+          "height": 311.375,
+          "visible": true
+        },
+        "region": {
+          "top": 504.375,
+          "bottom": 679,
+          "width": 346,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 241,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 426.375,
+          "bottom": 477.375,
+          "width": 344,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Sudamérica",
+      "profile": "locked",
+      "key": "360x740|Sudamérica|locked|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 506.1875,
+          "width": 344,
+          "height": 391.1875,
+          "visible": true
+        },
+        "region": {
+          "top": 514.1875,
+          "bottom": 679,
+          "width": 346,
+          "height": 164.8125,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 324,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Oceanía",
+      "profile": "locked",
+      "key": "360x740|Oceanía|locked|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 506.1875,
+          "width": 344,
+          "height": 391.1875,
+          "visible": true
+        },
+        "region": {
+          "top": 514.1875,
+          "bottom": 679,
+          "width": 346,
+          "height": 164.8125,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 324,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Polos",
+      "profile": "locked",
+      "key": "360x740|Polos|locked|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 506.1875,
+          "width": 344,
+          "height": 391.1875,
+          "visible": true
+        },
+        "region": {
+          "top": 514.1875,
+          "bottom": 679,
+          "width": 346,
+          "height": 164.8125,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 324,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "360x740",
+      "continent": "Océanos",
+      "profile": "locked",
+      "key": "360x740|Océanos|locked|after",
+      "viewport": [
+        360,
+        740
+      ],
+      "dockTop": 689,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 346,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 506.1875,
+          "width": 344,
+          "height": 391.1875,
+          "visible": true
+        },
+        "region": {
+          "top": 514.1875,
+          "bottom": 679,
+          "width": 346,
+          "height": 164.8125,
+          "visible": true
+        },
+        "action": {
+          "top": 625,
+          "bottom": 669,
+          "width": 324,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Europa",
+      "profile": "current",
+      "key": "390x844|Europa|current|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 530.375,
+          "width": 374,
+          "height": 415.375,
+          "visible": true
+        },
+        "region": {
+          "top": 608.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 530.375,
+          "bottom": 581.375,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Europa",
+      "profile": "open",
+      "key": "390x844|Europa|open|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 530.375,
+          "width": 374,
+          "height": 415.375,
+          "visible": true
+        },
+        "region": {
+          "top": 608.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 530.375,
+          "bottom": 581.375,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Europa",
+      "profile": "ready",
+      "key": "390x844|Europa|ready|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 530.375,
+          "width": 374,
+          "height": 415.375,
+          "visible": true
+        },
+        "region": {
+          "top": 608.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 530.375,
+          "bottom": 581.375,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Europa",
+      "profile": "locked",
+      "key": "390x844|Europa|locked|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 530.375,
+          "width": 374,
+          "height": 415.375,
+          "visible": true
+        },
+        "region": {
+          "top": 608.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 530.375,
+          "bottom": 581.375,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Asia",
+      "profile": "current",
+      "key": "390x844|Asia|current|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 530.375,
+          "width": 374,
+          "height": 415.375,
+          "visible": true
+        },
+        "region": {
+          "top": 608.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 530.375,
+          "bottom": 581.375,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Asia",
+      "profile": "open",
+      "key": "390x844|Asia|open|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 530.375,
+          "width": 374,
+          "height": 415.375,
+          "visible": true
+        },
+        "region": {
+          "top": 608.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 530.375,
+          "bottom": 581.375,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Asia",
+      "profile": "ready",
+      "key": "390x844|Asia|ready|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 530.375,
+          "width": 374,
+          "height": 415.375,
+          "visible": true
+        },
+        "region": {
+          "top": 608.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 530.375,
+          "bottom": 581.375,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Asia",
+      "profile": "locked",
+      "key": "390x844|Asia|locked|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 530.375,
+          "width": 374,
+          "height": 415.375,
+          "visible": true
+        },
+        "region": {
+          "top": 608.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 530.375,
+          "bottom": 581.375,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "África",
+      "profile": "current",
+      "key": "390x844|África|current|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 526.5625,
+          "width": 374,
+          "height": 411.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 604.5625,
+          "bottom": 783,
+          "width": 376,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 526.5625,
+          "bottom": 577.5625,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "África",
+      "profile": "open",
+      "key": "390x844|África|open|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 526.5625,
+          "width": 374,
+          "height": 411.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 604.5625,
+          "bottom": 783,
+          "width": 376,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 526.5625,
+          "bottom": 577.5625,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "África",
+      "profile": "ready",
+      "key": "390x844|África|ready|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 526.5625,
+          "width": 374,
+          "height": 411.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 604.5625,
+          "bottom": 783,
+          "width": 376,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 526.5625,
+          "bottom": 577.5625,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "África",
+      "profile": "locked",
+      "key": "390x844|África|locked|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 526.5625,
+          "width": 374,
+          "height": 411.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 604.5625,
+          "bottom": 783,
+          "width": 376,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 526.5625,
+          "bottom": 577.5625,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Norteamérica",
+      "profile": "current",
+      "key": "390x844|Norteamérica|current|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 530.375,
+          "width": 374,
+          "height": 415.375,
+          "visible": true
+        },
+        "region": {
+          "top": 608.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 530.375,
+          "bottom": 581.375,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Norteamérica",
+      "profile": "open",
+      "key": "390x844|Norteamérica|open|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 530.375,
+          "width": 374,
+          "height": 415.375,
+          "visible": true
+        },
+        "region": {
+          "top": 608.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 530.375,
+          "bottom": 581.375,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Norteamérica",
+      "profile": "ready",
+      "key": "390x844|Norteamérica|ready|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 530.375,
+          "width": 374,
+          "height": 415.375,
+          "visible": true
+        },
+        "region": {
+          "top": 608.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 530.375,
+          "bottom": 581.375,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Norteamérica",
+      "profile": "locked",
+      "key": "390x844|Norteamérica|locked|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 530.375,
+          "width": 374,
+          "height": 415.375,
+          "visible": true
+        },
+        "region": {
+          "top": 608.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 271,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 530.375,
+          "bottom": 581.375,
+          "width": 374,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Sudamérica",
+      "profile": "locked",
+      "key": "390x844|Sudamérica|locked|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 634.375,
+          "width": 374,
+          "height": 519.375,
+          "visible": true
+        },
+        "region": {
+          "top": 642.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 140.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 354,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Oceanía",
+      "profile": "locked",
+      "key": "390x844|Oceanía|locked|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 634.375,
+          "width": 374,
+          "height": 519.375,
+          "visible": true
+        },
+        "region": {
+          "top": 642.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 140.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 354,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Polos",
+      "profile": "locked",
+      "key": "390x844|Polos|locked|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 634.375,
+          "width": 374,
+          "height": 519.375,
+          "visible": true
+        },
+        "region": {
+          "top": 642.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 140.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 354,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "390x844",
+      "continent": "Océanos",
+      "profile": "locked",
+      "key": "390x844|Océanos|locked|after",
+      "viewport": [
+        390,
+        844
+      ],
+      "dockTop": 793,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 376,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 634.375,
+          "width": 374,
+          "height": 519.375,
+          "visible": true
+        },
+        "region": {
+          "top": 642.375,
+          "bottom": 783,
+          "width": 376,
+          "height": 140.625,
+          "visible": true
+        },
+        "action": {
+          "top": 729,
+          "bottom": 773,
+          "width": 354,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Europa",
+      "profile": "current",
+      "key": "412x915|Europa|current|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 601.375,
+          "width": 396,
+          "height": 486.375,
+          "visible": true
+        },
+        "region": {
+          "top": 679.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 601.375,
+          "bottom": 652.375,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Europa",
+      "profile": "open",
+      "key": "412x915|Europa|open|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 601.375,
+          "width": 396,
+          "height": 486.375,
+          "visible": true
+        },
+        "region": {
+          "top": 679.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 601.375,
+          "bottom": 652.375,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Europa",
+      "profile": "ready",
+      "key": "412x915|Europa|ready|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 601.375,
+          "width": 396,
+          "height": 486.375,
+          "visible": true
+        },
+        "region": {
+          "top": 679.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 601.375,
+          "bottom": 652.375,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Europa",
+      "profile": "locked",
+      "key": "412x915|Europa|locked|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 601.375,
+          "width": 396,
+          "height": 486.375,
+          "visible": true
+        },
+        "region": {
+          "top": 679.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 601.375,
+          "bottom": 652.375,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Asia",
+      "profile": "current",
+      "key": "412x915|Asia|current|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 601.375,
+          "width": 396,
+          "height": 486.375,
+          "visible": true
+        },
+        "region": {
+          "top": 679.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 601.375,
+          "bottom": 652.375,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Asia",
+      "profile": "open",
+      "key": "412x915|Asia|open|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 601.375,
+          "width": 396,
+          "height": 486.375,
+          "visible": true
+        },
+        "region": {
+          "top": 679.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 601.375,
+          "bottom": 652.375,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Asia",
+      "profile": "ready",
+      "key": "412x915|Asia|ready|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 601.375,
+          "width": 396,
+          "height": 486.375,
+          "visible": true
+        },
+        "region": {
+          "top": 679.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 601.375,
+          "bottom": 652.375,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Asia",
+      "profile": "locked",
+      "key": "412x915|Asia|locked|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 601.375,
+          "width": 396,
+          "height": 486.375,
+          "visible": true
+        },
+        "region": {
+          "top": 679.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 601.375,
+          "bottom": 652.375,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "África",
+      "profile": "current",
+      "key": "412x915|África|current|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 597.5625,
+          "width": 396,
+          "height": 482.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 675.5625,
+          "bottom": 854,
+          "width": 398,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 597.5625,
+          "bottom": 648.5625,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "África",
+      "profile": "open",
+      "key": "412x915|África|open|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 597.5625,
+          "width": 396,
+          "height": 482.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 675.5625,
+          "bottom": 854,
+          "width": 398,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 597.5625,
+          "bottom": 648.5625,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "África",
+      "profile": "ready",
+      "key": "412x915|África|ready|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 597.5625,
+          "width": 396,
+          "height": 482.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 675.5625,
+          "bottom": 854,
+          "width": 398,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 597.5625,
+          "bottom": 648.5625,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "África",
+      "profile": "locked",
+      "key": "412x915|África|locked|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 597.5625,
+          "width": 396,
+          "height": 482.5625,
+          "visible": true
+        },
+        "region": {
+          "top": 675.5625,
+          "bottom": 854,
+          "width": 398,
+          "height": 178.4375,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 597.5625,
+          "bottom": 648.5625,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Norteamérica",
+      "profile": "current",
+      "key": "412x915|Norteamérica|current|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 601.375,
+          "width": 396,
+          "height": 486.375,
+          "visible": true
+        },
+        "region": {
+          "top": 679.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 601.375,
+          "bottom": 652.375,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Norteamérica",
+      "profile": "open",
+      "key": "412x915|Norteamérica|open|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 601.375,
+          "width": 396,
+          "height": 486.375,
+          "visible": true
+        },
+        "region": {
+          "top": 679.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 601.375,
+          "bottom": 652.375,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Norteamérica",
+      "profile": "ready",
+      "key": "412x915|Norteamérica|ready|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 601.375,
+          "width": 396,
+          "height": 486.375,
+          "visible": true
+        },
+        "region": {
+          "top": 679.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 601.375,
+          "bottom": 652.375,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Norteamérica",
+      "profile": "locked",
+      "key": "412x915|Norteamérica|locked|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 601.375,
+          "width": 396,
+          "height": 486.375,
+          "visible": true
+        },
+        "region": {
+          "top": 679.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 174.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 293,
+          "height": 44,
+          "visible": true
+        },
+        "controls": {
+          "top": 601.375,
+          "bottom": 652.375,
+          "width": 396,
+          "height": 51,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Sudamérica",
+      "profile": "locked",
+      "key": "412x915|Sudamérica|locked|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 705.375,
+          "width": 396,
+          "height": 590.375,
+          "visible": true
+        },
+        "region": {
+          "top": 713.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 140.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 376,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Oceanía",
+      "profile": "locked",
+      "key": "412x915|Oceanía|locked|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 705.375,
+          "width": 396,
+          "height": 590.375,
+          "visible": true
+        },
+        "region": {
+          "top": 713.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 140.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 376,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Polos",
+      "profile": "locked",
+      "key": "412x915|Polos|locked|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 705.375,
+          "width": 396,
+          "height": 590.375,
+          "visible": true
+        },
+        "region": {
+          "top": 713.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 140.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 376,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "412x915",
+      "continent": "Océanos",
+      "profile": "locked",
+      "key": "412x915|Océanos|locked|after",
+      "viewport": [
+        412,
+        915
+      ],
+      "dockTop": 864,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 59,
+          "bottom": 108,
+          "width": 398,
+          "height": 49,
+          "visible": true
+        },
+        "map": {
+          "top": 115,
+          "bottom": 705.375,
+          "width": 396,
+          "height": 590.375,
+          "visible": true
+        },
+        "region": {
+          "top": 713.375,
+          "bottom": 854,
+          "width": 398,
+          "height": 140.625,
+          "visible": true
+        },
+        "action": {
+          "top": 800,
+          "bottom": 844,
+          "width": 376,
+          "height": 44,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Europa",
+      "profile": "current",
+      "key": "1440x1000|Europa|current|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 583.28125,
+          "width": 317.140625,
+          "height": 216.28125,
+          "visible": true
+        },
+        "action": {
+          "top": 522.28125,
+          "bottom": 568.28125,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Europa",
+      "profile": "open",
+      "key": "1440x1000|Europa|open|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 583.28125,
+          "width": 317.140625,
+          "height": 216.28125,
+          "visible": true
+        },
+        "action": {
+          "top": 522.28125,
+          "bottom": 568.28125,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Europa",
+      "profile": "ready",
+      "key": "1440x1000|Europa|ready|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 583.28125,
+          "width": 317.140625,
+          "height": 216.28125,
+          "visible": true
+        },
+        "action": {
+          "top": 522.28125,
+          "bottom": 568.28125,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Europa",
+      "profile": "locked",
+      "key": "1440x1000|Europa|locked|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 583.28125,
+          "width": 317.140625,
+          "height": 216.28125,
+          "visible": true
+        },
+        "action": {
+          "top": 522.28125,
+          "bottom": 568.28125,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Asia",
+      "profile": "current",
+      "key": "1440x1000|Asia|current|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 583.28125,
+          "width": 317.140625,
+          "height": 216.28125,
+          "visible": true
+        },
+        "action": {
+          "top": 522.28125,
+          "bottom": 568.28125,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Asia",
+      "profile": "open",
+      "key": "1440x1000|Asia|open|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 583.28125,
+          "width": 317.140625,
+          "height": 216.28125,
+          "visible": true
+        },
+        "action": {
+          "top": 522.28125,
+          "bottom": 568.28125,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Asia",
+      "profile": "ready",
+      "key": "1440x1000|Asia|ready|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 583.28125,
+          "width": 317.140625,
+          "height": 216.28125,
+          "visible": true
+        },
+        "action": {
+          "top": 522.28125,
+          "bottom": 568.28125,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Asia",
+      "profile": "locked",
+      "key": "1440x1000|Asia|locked|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 583.28125,
+          "width": 317.140625,
+          "height": 216.28125,
+          "visible": true
+        },
+        "action": {
+          "top": 522.28125,
+          "bottom": 568.28125,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "África",
+      "profile": "current",
+      "key": "1440x1000|África|current|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 577.25,
+          "width": 317.140625,
+          "height": 210.25,
+          "visible": true
+        },
+        "action": {
+          "top": 516.25,
+          "bottom": 562.25,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "África",
+      "profile": "open",
+      "key": "1440x1000|África|open|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 577.25,
+          "width": 317.140625,
+          "height": 210.25,
+          "visible": true
+        },
+        "action": {
+          "top": 516.25,
+          "bottom": 562.25,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "África",
+      "profile": "ready",
+      "key": "1440x1000|África|ready|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 577.25,
+          "width": 317.140625,
+          "height": 210.25,
+          "visible": true
+        },
+        "action": {
+          "top": 516.25,
+          "bottom": 562.25,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "África",
+      "profile": "locked",
+      "key": "1440x1000|África|locked|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 577.25,
+          "width": 317.140625,
+          "height": 210.25,
+          "visible": true
+        },
+        "action": {
+          "top": 516.25,
+          "bottom": 562.25,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Norteamérica",
+      "profile": "current",
+      "key": "1440x1000|Norteamérica|current|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 583.28125,
+          "width": 317.140625,
+          "height": 216.28125,
+          "visible": true
+        },
+        "action": {
+          "top": 522.28125,
+          "bottom": 568.28125,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Norteamérica",
+      "profile": "open",
+      "key": "1440x1000|Norteamérica|open|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 583.28125,
+          "width": 317.140625,
+          "height": 216.28125,
+          "visible": true
+        },
+        "action": {
+          "top": 522.28125,
+          "bottom": 568.28125,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Norteamérica",
+      "profile": "ready",
+      "key": "1440x1000|Norteamérica|ready|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 583.28125,
+          "width": 317.140625,
+          "height": 216.28125,
+          "visible": true
+        },
+        "action": {
+          "top": 522.28125,
+          "bottom": 568.28125,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Norteamérica",
+      "profile": "locked",
+      "key": "1440x1000|Norteamérica|locked|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 779,
+          "width": 568.84375,
+          "height": 411,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 583.28125,
+          "width": 317.140625,
+          "height": 216.28125,
+          "visible": true
+        },
+        "action": {
+          "top": 522.28125,
+          "bottom": 568.28125,
+          "width": 201.140625,
+          "height": 46,
+          "visible": true
+        },
+        "controls": {
+          "top": 779,
+          "bottom": 832,
+          "width": 568.84375,
+          "height": 53,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Sudamérica",
+      "profile": "locked",
+      "key": "1440x1000|Sudamérica|locked|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 855,
+          "width": 568.84375,
+          "height": 487,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 553.71875,
+          "width": 317.140625,
+          "height": 186.71875,
+          "visible": true
+        },
+        "action": {
+          "top": 492.71875,
+          "bottom": 538.71875,
+          "width": 287.140625,
+          "height": 46,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Oceanía",
+      "profile": "locked",
+      "key": "1440x1000|Oceanía|locked|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 855,
+          "width": 568.84375,
+          "height": 487,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 553.71875,
+          "width": 317.140625,
+          "height": 186.71875,
+          "visible": true
+        },
+        "action": {
+          "top": 492.71875,
+          "bottom": 538.71875,
+          "width": 287.140625,
+          "height": 46,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Polos",
+      "profile": "locked",
+      "key": "1440x1000|Polos|locked|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 855,
+          "width": 568.84375,
+          "height": 487,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 553.71875,
+          "width": 317.140625,
+          "height": 186.71875,
+          "visible": true
+        },
+        "action": {
+          "top": 492.71875,
+          "bottom": 538.71875,
+          "width": 287.140625,
+          "height": 46,
+          "visible": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": "1440x1000",
+      "continent": "Océanos",
+      "profile": "locked",
+      "key": "1440x1000|Océanos|locked|after",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "dockTop": 1000,
+      "scroll": 0,
+      "horizontalOverflow": false,
+      "boxes": {
+        "header": {
+          "top": 306,
+          "bottom": 358,
+          "width": 900,
+          "height": 52,
+          "visible": true
+        },
+        "map": {
+          "top": 368,
+          "bottom": 855,
+          "width": 568.84375,
+          "height": 487,
+          "visible": true
+        },
+        "region": {
+          "top": 367,
+          "bottom": 553.71875,
+          "width": 317.140625,
+          "height": 186.71875,
+          "visible": true
+        },
+        "action": {
+          "top": 492.71875,
+          "bottom": 538.71875,
+          "width": 287.140625,
+          "height": 46,
+          "visible": true
+        }
+      },
+      "pass": true
+    }
+  ],
+  "continents": 8,
+  "profiles": 4,
+  "regionChecks": 57,
+  "touchPan": true,
+  "geographicComparison": true,
+  "groupedRegionSelection": true,
+  "groupTravel": true,
+  "labStorageUntouched": true,
+  "partialSelection": true,
+  "viewportAndZoomMemory": true,
+  "keyboard": true,
+  "travelAndUnlock": true,
+  "neighboringScreens": true,
+  "noIdleMapRedraw": true,
+  "offlineGameAndLab": true,
+  "jsErrors": []
+}
