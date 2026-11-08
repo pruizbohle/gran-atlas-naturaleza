@@ -1,0 +1,200 @@
+{
+  "americas": {
+    "adapt_existing_bases_estimate": 114,
+    "candidate_classifier_missing": 156,
+    "categories": {
+      "A": 19,
+      "B": 7,
+      "C": 209,
+      "D": 1,
+      "E": 14
+    },
+    "distribution_findings": 38,
+    "existing_art_reuse": 25,
+    "existing_art_review": 1,
+    "existing_dimorphism_taxa": 2,
+    "existing_taxa": 26,
+    "new_art_profiles_estimate": 109,
+    "new_dimorphism_review_taxa": 26,
+    "planning_alias_groups": 1,
+    "planning_taxa_after_one_alias": 249,
+    "rarity_conflicts": [
+      "Alces alces",
+      "Canis lupus",
+      "Gulo gulo",
+      "Pandion haliaetus",
+      "Ursus arctos"
+    ],
+    "shared_scientific_names_between_continents": [
+      "Ara macao",
+      "Bradypus variegatus",
+      "Caracara plancus",
+      "Ctenosaura similis",
+      "Dicotyles tajacu",
+      "Myrmecophaga tridactyla",
+      "Odocoileus virginianus",
+      "Panthera onca",
+      "Pelecanus occidentalis",
+      "Puma concolor"
+    ],
+    "source_presences": 398,
+    "source_scientific_names": 250,
+    "taxonomic_review_taxa": 14,
+    "without_game_identity": 223
+  },
+  "checks": {
+    "all_american_regions_accounted_for": true,
+    "all_existing_ids_resolve": true,
+    "all_fauna_hex_ids_resolve": true,
+    "all_fauna_species_ids_resolve": true,
+    "all_hex_counts_match": true,
+    "all_original_presence_fields_preserved": true,
+    "american_source_rows_preserved_once": true,
+    "both_existing_regions_match_source": true,
+    "catalog_names_match_presences": true,
+    "catalog_presence_counts_match": true,
+    "map_cell_counts_match_hexes": true,
+    "map_has_exactly_all_hexes": true,
+    "new_region_ids_do_not_replace_existing": true,
+    "no_exact_species_region_duplicates": true,
+    "proposed_ids_are_one_per_taxon": true,
+    "proposed_region_ids_are_unique": true,
+    "source_hex_ids_are_unique": true,
+    "source_species_ids_are_unique": true
+  },
+  "common_name_ambiguities": {
+    "perdiz nival": [
+      "Lagopus lagopus",
+      "Lagopus muta"
+    ]
+  },
+  "continents": {
+    "América del Norte": {
+      "art_workload_by_planning_taxon": {
+        "ADAPTAR_BASE": 59,
+        "NUEVO_PERFIL": 43,
+        "REUTILIZAR_EXISTENTE": 25,
+        "REVISAR_EXISTENTE": 1
+      },
+      "categories_by_source_name": {
+        "A": 19,
+        "B": 7,
+        "C": 100,
+        "D": 1,
+        "E": 2
+      },
+      "existing_taxa": 26,
+      "missing_functional_regions": 12,
+      "planning_taxa_after_alias": 128,
+      "presences": 206,
+      "regions": 14,
+      "source_unique_scientific_names": 129,
+      "taxonomic_review_taxa": 2,
+      "without_game_identity": 102
+    },
+    "América del Sur": {
+      "art_workload_by_planning_taxon": {
+        "ADAPTAR_BASE": 59,
+        "NUEVO_PERFIL": 71,
+        "REUTILIZAR_EXISTENTE": 1
+      },
+      "categories_by_source_name": {
+        "A": 1,
+        "C": 118,
+        "E": 12
+      },
+      "existing_taxa": 1,
+      "missing_functional_regions": 10,
+      "planning_taxa_after_alias": 131,
+      "presences": 192,
+      "regions": 10,
+      "source_unique_scientific_names": 131,
+      "taxonomic_review_taxa": 12,
+      "without_game_identity": 130
+    }
+  },
+  "game_catalog": {
+    "functional_regions": 57,
+    "species": 487
+  },
+  "game_version": "3.21.2",
+  "global_source": {
+    "catalog_entries": 900,
+    "fauna_presences": 1574,
+    "hexagons": 209,
+    "scientific_names": 900
+  },
+  "limitations": [
+    "No se verificaron externamente taxonomía ni registros georreferenciados. Cribado razonado con casos pendientes explícitos.",
+    "Las familias de referencia, posiciones y bases artísticas son propuestas manuales, no columnas del Excel.",
+    "La unión Pecari/Dicotyles es una propuesta de identidad para planificar; no se fusionaron datos del juego.",
+    "Las cifras de nuevas identidades y perfiles están condicionadas por 14 revisiones taxonómicas; no constituyen una importación aprobada."
+  ],
+  "production_base_commit": "07a6f06cfea22daa573b8a841fca6b2c603bba93",
+  "runtime_sources": [
+    {
+      "path": "www/js/app.js",
+      "sha256": "2590624407af150260ae7f1d64b446363f429da0b603545289e79c02e5660be8"
+    },
+    {
+      "path": "www/js/mammal-art-v3194.js",
+      "sha256": "d05187cd87cc1c6fd51117690f9afcbc16fe16bc56723659eb529ec8316d709a"
+    },
+    {
+      "path": "www/js/bird-art-v3193.js",
+      "sha256": "9475c214345fae86005eb18c1898ac201d31419d9b8d3948f2c43517581f1ef8"
+    },
+    {
+      "path": "www/js/herp-art-v3192.js",
+      "sha256": "a9d56f4e8d25fa00193e8fd0ffa63e310b1d0dfc6b0af135120c66fa2ff5b377"
+    },
+    {
+      "path": "www/js/fish-art-v3191.js",
+      "sha256": "d1287aea496629827570cb2fdfdc3b9666c1b5a39a8b917af61b41da371cbd8c"
+    }
+  ],
+  "source_workbook": {
+    "file": "Atlas_Fauna_Hexagonal_209_900_Especies.xlsx",
+    "requested_filename": "Atlas_Fauna_Hexagonal_209_900_Especies(3).xlsx",
+    "sha256": "5cd22412e6b251d8f02a90e4c8303e02946d5e5d26855589d2c6750649fe4350",
+    "sheets": [
+      {
+        "columns": null,
+        "name": "Resumen",
+        "nonempty_rows": 26,
+        "physical_max_row": null
+      },
+      {
+        "columns": null,
+        "name": "Mapa",
+        "nonempty_rows": 23,
+        "physical_max_row": null
+      },
+      {
+        "columns": null,
+        "name": "Hexágonos",
+        "nonempty_rows": 210,
+        "physical_max_row": null
+      },
+      {
+        "columns": null,
+        "name": "Fauna",
+        "nonempty_rows": 1575,
+        "physical_max_row": null
+      },
+      {
+        "columns": null,
+        "name": "Catálogo especies",
+        "nonempty_rows": 901,
+        "physical_max_row": null
+      },
+      {
+        "columns": null,
+        "name": "Metodología y fuentes",
+        "nonempty_rows": 30,
+        "physical_max_row": null
+      }
+    ],
+    "user_confirmed_previous_file": true
+  }
+}

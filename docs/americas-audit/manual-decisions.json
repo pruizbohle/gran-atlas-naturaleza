@@ -1,0 +1,885 @@
+{
+  "schema": "AM-01/manual-review-v1",
+  "authority_status": "Familias y observaciones son referencias de planificación; no se han consultado ni validado registros taxonómicos o de presencia externos. La fuente califica sus consultas GBIF como sin validar. Resolver incidencias antes de importar.",
+  "family_by_genus": {
+    "Agalychnis": "Phyllomedusidae",
+    "Agelaioides": "Icteridae",
+    "Aix": "Anatidae",
+    "Anas": "Anatidae",
+    "Anser": "Anatidae",
+    "Cairina": "Anatidae",
+    "Cygnus": "Anatidae",
+    "Alces": "Cervidae",
+    "Blastocerus": "Cervidae",
+    "Cervus": "Cervidae",
+    "Hippocamelus": "Cervidae",
+    "Mazama": "Cervidae",
+    "Odocoileus": "Cervidae",
+    "Ozotoceros": "Cervidae",
+    "Pudu": "Cervidae",
+    "Rangifer": "Cervidae",
+    "Alligator": "Alligatoridae",
+    "Caiman": "Alligatoridae",
+    "Melanosuchus": "Alligatoridae",
+    "Alouatta": "Atelidae",
+    "Ateles": "Atelidae",
+    "Lagothrix": "Atelidae",
+    "Amazona": "Psittacidae",
+    "Anodorhynchus": "Psittacidae",
+    "Ara": "Psittacidae",
+    "Enicognathus": "Psittacidae",
+    "Primolius": "Psittacidae",
+    "Ambystoma": "Ambystomatidae",
+    "Dicamptodon": "Ambystomatidae",
+    "Andigena": "Ramphastidae",
+    "Pteroglossus": "Ramphastidae",
+    "Ramphastos": "Ramphastidae",
+    "Antilocapra": "Antilocapridae",
+    "Aotus": "Aotidae",
+    "Aquila": "Accipitridae",
+    "Buteogallus": "Accipitridae",
+    "Circus": "Accipitridae",
+    "Geranoaetus": "Accipitridae",
+    "Haliaeetus": "Accipitridae",
+    "Harpia": "Accipitridae",
+    "Arapaima": "Arapaimidae",
+    "Archilochus": "Trochilidae",
+    "Calypte": "Trochilidae",
+    "Ensifera": "Trochilidae",
+    "Ardea": "Ardeidae",
+    "Asio": "Strigidae",
+    "Athene": "Strigidae",
+    "Bubo": "Strigidae",
+    "Micrathene": "Strigidae",
+    "Strix": "Strigidae",
+    "Atelocynus": "Canidae",
+    "Canis": "Canidae",
+    "Cerdocyon": "Canidae",
+    "Chrysocyon": "Canidae",
+    "Lycalopex": "Canidae",
+    "Speothos": "Canidae",
+    "Urocyon": "Canidae",
+    "Vulpes": "Canidae",
+    "Basiliscus": "Corytophanidae",
+    "Bison": "Bovidae",
+    "Oreamnos": "Bovidae",
+    "Ovibos": "Bovidae",
+    "Ovis": "Bovidae",
+    "Boa": "Boidae",
+    "Epicrates": "Boidae",
+    "Eunectes": "Boidae",
+    "Bothrops": "Viperidae",
+    "Crotalus": "Viperidae",
+    "Brachylagus": "Leporidae",
+    "Lepus": "Leporidae",
+    "Sylvilagus": "Leporidae",
+    "Bradypus": "Bradypodidae",
+    "Choloepus": "Choloepodidae",
+    "Callipepla": "Odontophoridae",
+    "Caracara": "Falconidae",
+    "Falco": "Falconidae",
+    "Cardinalis": "Cardinalidae",
+    "Cariama": "Cariamidae",
+    "Castor": "Castoridae",
+    "Cebus": "Cebidae",
+    "Saimiri": "Cebidae",
+    "Ceratophrys": "Ceratophryidae",
+    "Chaetophractus": "Chlamyphoridae",
+    "Euphractus": "Chlamyphoridae",
+    "Priodontes": "Chlamyphoridae",
+    "Tolypeutes": "Chlamyphoridae",
+    "Chauna": "Anhimidae",
+    "Chinchilla": "Chinchillidae",
+    "Lagidium": "Chinchillidae",
+    "Lagostomus": "Chinchillidae",
+    "Chrysemys": "Emydidae",
+    "Terrapene": "Emydidae",
+    "Campephilus": "Picidae",
+    "Colaptes": "Picidae",
+    "Dryocopus": "Picidae",
+    "Colossoma": "Serrasalmidae",
+    "Pygocentrus": "Serrasalmidae",
+    "Conepatus": "Mephitidae",
+    "Mephitis": "Mephitidae",
+    "Spilogale": "Mephitidae",
+    "Corvus": "Corvidae",
+    "Perisoreus": "Corvidae",
+    "Pica": "Corvidae",
+    "Crocodylus": "Crocodylidae",
+    "Ctenosaura": "Iguanidae",
+    "Iguana": "Iguanidae",
+    "Cuniculus": "Cuniculidae",
+    "Cyclopes": "Cyclopedidae",
+    "Cynomys": "Sciuridae",
+    "Marmota": "Sciuridae",
+    "Sciurus": "Sciuridae",
+    "Dasypus": "Dasypodidae",
+    "Dendrobates": "Dendrobatidae",
+    "Phyllobates": "Dendrobatidae",
+    "Dicotyles": "Tayassuidae",
+    "Pecari": "Tayassuidae",
+    "Tayassu": "Tayassuidae",
+    "Dicrostonyx": "Cricetidae",
+    "Lemmus": "Cricetidae",
+    "Didelphis": "Didelphidae",
+    "Dipodomys": "Heteromyidae",
+    "Dolichotis": "Caviidae",
+    "Hydrochoerus": "Caviidae",
+    "Electrophorus": "Gymnotidae",
+    "Erethizon": "Erethizontidae",
+    "Esox": "Esocidae",
+    "Eudocimus": "Threskiornithidae",
+    "Platalea": "Threskiornithidae",
+    "Falcipennis": "Phasianidae",
+    "Lagopus": "Phasianidae",
+    "Meleagris": "Phasianidae",
+    "Tympanuchus": "Phasianidae",
+    "Gastrotheca": "Hemiphractidae",
+    "Geococcyx": "Cuculidae",
+    "Gopherus": "Testudinidae",
+    "Gulo": "Mustelidae",
+    "Lontra": "Mustelidae",
+    "Martes": "Mustelidae",
+    "Mustela": "Mustelidae",
+    "Pteronura": "Mustelidae",
+    "Taxidea": "Mustelidae",
+    "Heloderma": "Helodermatidae",
+    "Herpailurus": "Felidae",
+    "Leopardus": "Felidae",
+    "Lynx": "Felidae",
+    "Panthera": "Felidae",
+    "Puma": "Felidae",
+    "Hyalinobatrachium": "Centrolenidae",
+    "Hylocichla": "Turdidae",
+    "Incilius": "Bufonidae",
+    "Rhinella": "Bufonidae",
+    "Inia": "Iniidae",
+    "Jabiru": "Ciconiidae",
+    "Jacana": "Jacanidae",
+    "Lama": "Camelidae",
+    "Vicugna": "Camelidae",
+    "Lampropeltis": "Colubridae",
+    "Leptophis": "Colubridae",
+    "Liolaemus": "Liolaemidae",
+    "Lithobates": "Ranidae",
+    "Microlophus": "Tropiduridae",
+    "Micrurus": "Elapidae",
+    "Myocastor": "Echimyidae",
+    "Myrmecophaga": "Myrmecophagidae",
+    "Tamandua": "Myrmecophagidae",
+    "Nasua": "Procyonidae",
+    "Procyon": "Procyonidae",
+    "Noctilio": "Noctilionidae",
+    "Ochotona": "Ochotonidae",
+    "Octodon": "Octodontidae",
+    "Odontesthes": "Atherinopsidae",
+    "Oncorhynchus": "Salmonidae",
+    "Salvelinus": "Salmonidae",
+    "Opisthocomus": "Opisthocomidae",
+    "Pandion": "Pandionidae",
+    "Paracheirodon": "Characidae",
+    "Pelecanus": "Pelecanidae",
+    "Penelope": "Cracidae",
+    "Perca": "Percidae",
+    "Pharomachrus": "Trogonidae",
+    "Phoenicoparrus": "Phoenicopteridae",
+    "Phoenicopterus": "Phoenicopteridae",
+    "Phrynosoma": "Phrynosomatidae",
+    "Pseudoplatystoma": "Pimelodidae",
+    "Rhea": "Rheidae",
+    "Rhinoderma": "Rhinodermatidae",
+    "Rupicola": "Cotingidae",
+    "Saguinus": "Callitrichidae",
+    "Salminus": "Bryconidae",
+    "Scelorchilus": "Rhinocryptidae",
+    "Sorex": "Soricidae",
+    "Spheniscus": "Spheniscidae",
+    "Symphysodon": "Cichlidae",
+    "Tapirus": "Tapiridae",
+    "Tremarctos": "Ursidae",
+    "Ursus": "Ursidae",
+    "Trichechus": "Trichechidae",
+    "Vanellus": "Charadriidae",
+    "Vultur": "Cathartidae",
+    "Salvator": "Teiidae"
+  },
+  "taxonomic_reviews": {
+    "Pudu mephistophiles": "Revisar Pudella mephistophiles y delimitaciones recientes del pudú del norte; no mezclar con Pudu puda ni asignar el mismo ID por nombre común.",
+    "Leopardus colocola": "Complejo de gatos de las pampas: tratamientos divididos cambian el alcance de colocola, pajeros, munoai y braccatus. La presencia en Pampas/Patagonia depende de la autoridad elegida.",
+    "Leopardus tigrinus": "Complejo de tigrillos: revisar delimitación frente a L. guttulus y L. pardinoides, en especial Andes del Norte; no fusionar con L. wiedii.",
+    "Mazama americana": "Complejo de venados colorados; fijar autoridad y alcance regional antes de asignar una identidad definitiva.",
+    "Saimiri sciureus": "Complejo de monos ardilla; verificar los límites de sciureus frente a otros Saimiri en Caribe y Amazonía.",
+    "Cyclopes didactylus": "Las revisiones de Cyclopes separan varios taxones; el binomio original no garantiza cobertura de toda Amazonía.",
+    "Inia boliviensis": "Tratamientos como especie o como taxón de Inia geoffrensis; resolver conjuntamente con geoffrensis y limitar a la cuenca correspondiente.",
+    "Inia geoffrensis": "Resolver con Inia boliviensis el criterio de especie/subespecie para impedir dos IDs que contabilicen el mismo taxón en una misma localidad.",
+    "Electrophorus electricus": "Revisar la delimitación frente a E. voltai y E. varii; la denominación histórica amplia no debe extenderse automáticamente a toda Amazonía.",
+    "Dasypus novemcinctus": "Complejo con revisiones recientes, incluido el tratamiento de poblaciones mesoamericanas; fijar autoridad antes de convertir sus dos presencias norteamericanas.",
+    "Dasypus hybridus": "Revisar el tratamiento de hybridus frente a D. septemcinctus; conservar la fila de Pampas durante la decisión.",
+    "Conepatus humboldtii": "Revisar el tratamiento frente a C. chinga y el alcance patagónico según la autoridad elegida.",
+    "Spilogale gracilis": "Complejo de zorrillos occidentales; las presencias Costa del Pacífico/Sonora pueden corresponder a delimitaciones diferentes.",
+    "Arapaima gigas": "Revisar el alcance de gigas frente a otras especies descritas de Arapaima; conservar el concepto de la fuente hasta la revisión."
+  },
+  "taxon_alias_notes": {
+    "Pecari tajacu": "Candidato de sinonimia genérica con Dicotyles tajacu: fuente ESP-0411 frente a ESP-0167. Proponer un solo taxón, conservar ambos IDs de fuente y todas las regiones; validar la autoridad antes de importar.",
+    "Dicotyles tajacu": "Identidad de planificación para el grupo Dicotyles/Pecari tajacu. La hoja usa dos binomios y dos IDs; no crear dos especies.",
+    "Herpailurus yagouaroundi": "Puma yagouaroundi es una combinación alternativa a revisar en futuras fuentes; no es Puma concolor.",
+    "Falcipennis canadensis": "Revisar combinación Canachites canadensis al fijar autoridad; no confundir con Tetrao urogallus.",
+    "Lithobates sylvaticus": "Rana sylvatica es una combinación alternativa; mantener una identidad por taxón.",
+    "Lithobates clamitans": "Rana clamitans es una combinación alternativa; no fusionar por el nombre común Rana verde.",
+    "Cervus canadensis": "Mantener separado de Cervus elaphus; compartir género o parentesco no basta para fusionar especies.",
+    "Alces alces": "La fuente y el juego usan el mismo concepto; cualquier adopción de Alces americanus exige decidir autoridad y alcance, sin crear un segundo ID automático.",
+    "Rangifer tarandus": "Caribú y Reno son nombres comunes compatibles con el concepto de la fuente. Reutilizar reno; no generar ID adicional por continente.",
+    "Lagopus lagopus": "La fuente dice Perdiz nival; el juego usa Lagópodo común. No confundir con perdiz_nival = Lagopus muta.",
+    "Dendrobates tinctorius": "El nombre común Rana dardo azul describe una forma limitada; no presentar toda la especie como si fuese siempre azul.",
+    "Terrapene carolina": "Tortuga de caja de Florida es más específico que el binomio de la fuente; comprobar el alcance del nombre común y taxón infraespecífico.",
+    "Boa imperator": "Mantener separado de Boa constrictor salvo revisión justificada; una ruta visual llamada python no identifica su familia zoológica."
+  },
+  "planning_aliases": {
+    "Pecari tajacu": "Dicotyles tajacu"
+  },
+  "compatible_bases": {
+    "Anatidae": "bird:duck/goose/swan",
+    "Cervidae": "mammal:deer",
+    "Accipitridae": "bird:eagle/buzzard/accipiter",
+    "Ardeidae": "bird:heron",
+    "Strigidae": "bird:horned-owl/little-owl",
+    "Canidae": "mammal:canid",
+    "Bovidae": "mammal:bovine/caprine",
+    "Leporidae": "mammal:lagomorph",
+    "Falconidae": "bird:falcon; caracara requiere morfología propia",
+    "Castoridae": "mammal:beaver",
+    "Picidae": "bird:woodpecker",
+    "Corvidae": "bird:corvid",
+    "Sciuridae": "mammal:squirrel/marmot; Cynomys requiere detalle propio",
+    "Cricetidae": "mammal:vole",
+    "Phasianidae": "bird:partridge/grouse; Meleagris requiere perfil propio",
+    "Testudinidae": "herp:land-tortoise",
+    "Mustelidae": "mammal:otter/marten/weasel/badger",
+    "Felidae": "mammal:felid; añadir Leopardus/Herpailurus sin copiar rasgos de leopardo",
+    "Bufonidae": "herp:toad",
+    "Ciconiidae": "bird:stork",
+    "Jacanidae": "bird:jacana",
+    "Colubridae": "herp:snake",
+    "Ranidae": "herp:frog",
+    "Salmonidae": "fish:salmon/trucha",
+    "Pandionidae": "bird:osprey",
+    "Pelecanidae": "bird:pelican",
+    "Percidae": "fish:perca; ampliar clave científica",
+    "Phoenicopteridae": "bird:flamingo; revisar pico/patas de Phoenicoparrus",
+    "Soricidae": "mammal:shrew",
+    "Spheniscidae": "bird:penguin",
+    "Tapiridae": "mammal:tapir; diferenciar especies americanas del tapir malayo",
+    "Ursidae": "mammal:bear; Tremarctos con máscara propia",
+    "Camelidae": "mammal:camel; crear anatomía sin joroba para Lama/Vicugna",
+    "Crocodylidae": "herp:crocodile; hocico de intermedius",
+    "Viperidae": "herp:viper; añadir cascabel para Crotalus",
+    "Elapidae": "herp:krait/snake; coral sin capucha",
+    "Liolaemidae": "herp:lizard; anatomía propia sin convertir en agama",
+    "Tropiduridae": "herp:lizard; perfil litoral específico",
+    "Phrynosomatidae": "herp:lizard; cuernos y cuerpo aplanado propios",
+    "Phyllomedusidae": "herp:frog; postura arborícola y discos digitales",
+    "Dendrobatidae": "herp:frog; proporciones y patrones por especie",
+    "Threskiornithidae": "bird:ibis; Platalea necesita pico espatulado",
+    "Turdidae": "bird:thrush; ampliar género y moteado",
+    "Charadriidae": "bird:oystercatcher/wader; Vanellus con anatomía y máscara propias",
+    "Psittacidae": "bird:parrot; guacamayos necesitan cola y pico específicos",
+    "Ambystomatidae": "herp:salamander; axolote con branquias y Dicamptodon propio",
+    "Boidae": "herp:python solo como geometría auxiliar; boas con anatomía/patrones propios",
+    "Alligatoridae": "herp:crocodile solo como base auxiliar; hocico/escudos de aligátor o caimán",
+    "Emydidae": "herp:pond-turtle/land-tortoise auxiliares; caparazón/charneras propios",
+    "Cichlidae": "fish:tilapia; disco con cuerpo casi circular",
+    "Noctilionidae": "mammal:bat; patas/pies de murciélago pescador propios",
+    "Teiidae": "herp:lizard; cuerpo y patrón de tegu, sin copiar anatomía de varano"
+  },
+  "new_profile_species": [
+    "Alligator mississippiensis",
+    "Ambystoma mexicanum",
+    "Anodorhynchus hyacinthinus",
+    "Ara ararauna",
+    "Ara chloropterus",
+    "Ara macao",
+    "Ara militaris",
+    "Caiman crocodilus",
+    "Caiman yacare",
+    "Chrysemys picta",
+    "Lama guanicoe",
+    "Melanosuchus niger",
+    "Meleagris gallopavo",
+    "Meleagris ocellata",
+    "Noctilio leporinus",
+    "Phrynosoma cornutum",
+    "Platalea ajaja",
+    "Primolius couloni",
+    "Symphysodon aequifasciatus",
+    "Terrapene carolina",
+    "Vicugna vicugna"
+  ],
+  "unsafe_art_routes": {
+    "Chrysemys picta": "El clasificador devuelve land-tortoise para una tortuga acuática de Emydidae; no aceptar como tortuga terrestre.",
+    "Ctenosaura similis": "Devuelve spiny-lizard por cola espinosa: esa ruta representa Uromastyx (Agamidae), no una iguana Iguanidae.",
+    "Dicamptodon tenebrosus": "Devuelve giant-salamander por el nombre gigante; revisar cuerpo de Dicamptodon, sin reutilizar automáticamente Andrias.",
+    "Boa imperator": "Devuelve python; Boidae no equivale a Pythonidae. Requiere perfil de boa.",
+    "Epicrates cenchria": "Devuelve python; diseñar perfil de boa arcoíris y patrón propio.",
+    "Caiman crocodilus": "Devuelve crocodile genérico; revisar hocico y escudos de Alligatoridae.",
+    "Caiman yacare": "Devuelve crocodile genérico; revisar hocico, mandíbula y patrón de yacaré.",
+    "Melanosuchus niger": "Devuelve crocodile genérico; revisar anatomía de caimán negro.",
+    "Bubo scandiacus": "Ruta actual horned-owl/eagle-owl: comprobar que el búho nival no herede penachos auriculares de otros Bubo. Es revisión pendiente, no defecto visual demostrado."
+  },
+  "sexual_review_by_genus": {
+    "Aix": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Anas": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Cairina": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Alces": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Cervus": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Odocoileus": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Hippocamelus": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Blastocerus": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Ozotoceros": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Mazama": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Pudu": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Rangifer": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Ovis": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Bison": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Ovibos": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Antilocapra": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Meleagris": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Callipepla": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Falcipennis": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Tympanuchus": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Cardinalis": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Archilochus": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Calypte": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Ensifera": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen.",
+    "Rhea": "Dimorfismo visible candidato (plumaje, astas/cuernos o tamaño); revisar por especie y estación antes de habilitar sexSeen."
+  },
+  "regions": {
+    "Alaska": {
+      "conceptual_latitude": 64,
+      "conceptual_longitude": -153,
+      "suggested_position": "extremo noroeste",
+      "proposed_habitats": [
+        "bosque",
+        "tundra",
+        "montana",
+        "rio"
+      ]
+    },
+    "Columbia Británica": {
+      "conceptual_latitude": 54,
+      "conceptual_longitude": -125,
+      "suggested_position": "oeste, bajo Alaska/Yukón; incluye Vancouver",
+      "proposed_habitats": [
+        "bosque",
+        "rio",
+        "costa",
+        "montana"
+      ]
+    },
+    "Bosques boreales de Canadá": {
+      "conceptual_latitude": 56,
+      "conceptual_longitude": -100,
+      "suggested_position": "franja norte central",
+      "proposed_habitats": [
+        "bosque",
+        "tundra",
+        "rio",
+        "humedal"
+      ]
+    },
+    "Montañas Rocosas": {
+      "conceptual_latitude": 44,
+      "conceptual_longitude": -111,
+      "suggested_position": "cordillera occidental interior",
+      "proposed_habitats": [
+        "montana",
+        "bosque",
+        "pradera",
+        "rio"
+      ]
+    },
+    "Grandes Llanuras": {
+      "conceptual_latitude": 42,
+      "conceptual_longitude": -101,
+      "suggested_position": "centro, al este de Rocosas",
+      "proposed_habitats": [
+        "pradera",
+        "estepa",
+        "rio"
+      ]
+    },
+    "Yukón": {
+      "conceptual_latitude": 65,
+      "conceptual_longitude": -136,
+      "suggested_position": "noroeste interior, junto a Alaska",
+      "proposed_habitats": [
+        "bosque",
+        "tundra",
+        "montana",
+        "rio"
+      ]
+    },
+    "Región de los Grandes Lagos": {
+      "conceptual_latitude": 45,
+      "conceptual_longitude": -84,
+      "suggested_position": "centro oriental",
+      "proposed_habitats": [
+        "bosque",
+        "rio",
+        "humedal"
+      ]
+    },
+    "Costa del Pacífico": {
+      "conceptual_latitude": 40,
+      "conceptual_longitude": -124,
+      "suggested_position": "borde occidental, bajo Columbia",
+      "proposed_habitats": [
+        "bosque",
+        "costa",
+        "rio",
+        "montana"
+      ]
+    },
+    "Bosques del este norteamericano": {
+      "conceptual_latitude": 38,
+      "conceptual_longitude": -78,
+      "suggested_position": "este continental",
+      "proposed_habitats": [
+        "bosque",
+        "rio",
+        "humedal"
+      ]
+    },
+    "Desierto de Sonora": {
+      "conceptual_latitude": 31,
+      "conceptual_longitude": -112,
+      "suggested_position": "suroeste, frontera EEUU/México",
+      "proposed_habitats": [
+        "desierto",
+        "estepa",
+        "rio"
+      ]
+    },
+    "Sierra Madre": {
+      "conceptual_latitude": 24,
+      "conceptual_longitude": -104,
+      "suggested_position": "sur interior mexicano",
+      "proposed_habitats": [
+        "montana",
+        "bosque",
+        "rio",
+        "humedal"
+      ]
+    },
+    "Península de Yucatán": {
+      "conceptual_latitude": 19,
+      "conceptual_longitude": -89,
+      "suggested_position": "saliente sureste; Cozumel como subárea",
+      "proposed_habitats": [
+        "selva",
+        "bosque",
+        "humedal",
+        "costa"
+      ]
+    },
+    "Costa del golfo de México": {
+      "conceptual_latitude": 28,
+      "conceptual_longitude": -91,
+      "suggested_position": "costa sureste, sobre Yucatán",
+      "proposed_habitats": [
+        "costa",
+        "humedal",
+        "rio",
+        "bosque"
+      ]
+    },
+    "América Central": {
+      "conceptual_latitude": 12,
+      "conceptual_longitude": -85,
+      "suggested_position": "estrechamiento sur de Norteamérica",
+      "proposed_habitats": [
+        "selva",
+        "bosque",
+        "rio",
+        "montana"
+      ]
+    },
+    "Caribe sudamericano": {
+      "conceptual_latitude": 10,
+      "conceptual_longitude": -70,
+      "suggested_position": "franja norte costera",
+      "proposed_habitats": [
+        "selva",
+        "bosque",
+        "costa",
+        "rio"
+      ]
+    },
+    "Llanos del Orinoco": {
+      "conceptual_latitude": 7,
+      "conceptual_longitude": -67,
+      "suggested_position": "norte interior, al este de Andes",
+      "proposed_habitats": [
+        "sabana",
+        "pradera",
+        "rio",
+        "humedal"
+      ]
+    },
+    "Andes Centrales": {
+      "conceptual_latitude": -18,
+      "conceptual_longitude": -69,
+      "suggested_position": "oeste central y altoandino",
+      "proposed_habitats": [
+        "montana",
+        "pradera",
+        "estepa",
+        "humedal"
+      ]
+    },
+    "Andes del Norte": {
+      "conceptual_latitude": 1,
+      "conceptual_longitude": -77,
+      "suggested_position": "noroeste cordillerano",
+      "proposed_habitats": [
+        "montana",
+        "bosque",
+        "selva",
+        "rio"
+      ]
+    },
+    "Amazonía": {
+      "conceptual_latitude": -5,
+      "conceptual_longitude": -62,
+      "suggested_position": "gran interior norte y este de Andes",
+      "proposed_habitats": [
+        "selva",
+        "bosque",
+        "rio",
+        "humedal"
+      ]
+    },
+    "Pantanal": {
+      "conceptual_latitude": -18,
+      "conceptual_longitude": -57,
+      "suggested_position": "centro sur, cuenca Paraguay",
+      "proposed_habitats": [
+        "humedal",
+        "rio",
+        "sabana",
+        "bosque"
+      ]
+    },
+    "Cerrado brasileño": {
+      "conceptual_latitude": -15,
+      "conceptual_longitude": -48,
+      "suggested_position": "centro oriental, al este del Pantanal",
+      "proposed_habitats": [
+        "sabana",
+        "pradera",
+        "bosque",
+        "rio"
+      ]
+    },
+    "Pampas": {
+      "conceptual_latitude": -35,
+      "conceptual_longitude": -61,
+      "suggested_position": "sureste templado",
+      "proposed_habitats": [
+        "pradera",
+        "humedal",
+        "rio",
+        "bosque"
+      ]
+    },
+    "Desierto de Atacama": {
+      "conceptual_latitude": -24,
+      "conceptual_longitude": -70,
+      "suggested_position": "costa occidental árida; precisar si incluye altiplano",
+      "proposed_habitats": [
+        "desierto",
+        "costa",
+        "montana",
+        "humedal"
+      ]
+    },
+    "Patagonia y Tierra del Fuego": {
+      "conceptual_latitude": -48,
+      "conceptual_longitude": -70,
+      "suggested_position": "extremo sur estrecho, bosque y ambas costas",
+      "proposed_habitats": [
+        "estepa",
+        "bosque",
+        "costa",
+        "rio"
+      ]
+    }
+  },
+  "distribution_screening": [
+    {
+      "region": "Sierra Madre",
+      "scientific_name": "Ambystoma mexicanum",
+      "severity": "alta",
+      "reason": "Endemismo lacustre del sistema de Xochimilco: bosque montano de coníferas no describe su hábitat. Revisar subárea lacustre y región; no ampliar al conjunto de Sierra Madre.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Andes del Norte",
+      "scientific_name": "Phyllobates terribilis",
+      "severity": "alta",
+      "reason": "La especie se asocia a selvas húmedas bajas del Pacífico colombiano; bosque nublado montano es una asignación que requiere corrección documentada o subárea explícita.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Andes del Norte",
+      "scientific_name": "Primolius couloni",
+      "severity": "alta",
+      "reason": "Revisar la delimitación norte/central y vertiente oriental: su ámbito conocido se centra en Perú, Bolivia y Brasil occidental, no en una región andina norteña genérica.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Pantanal",
+      "scientific_name": "Colossoma macropomum",
+      "severity": "alta",
+      "reason": "Distinguir distribución nativa Amazonas/Orinoco de cultivo o introducción en la cuenca del Paraguay; no asumir fauna nativa del Pantanal.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Desierto de Sonora",
+      "scientific_name": "Gopherus agassizii",
+      "severity": "alta",
+      "reason": "Verificar el límite con Gopherus morafkai al este del Colorado y el alcance de la región Sonora. No trasladar automáticamente el concepto antiguo amplio de agassizii.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Patagonia y Tierra del Fuego",
+      "scientific_name": "Lycalopex fulvipes",
+      "severity": "alta",
+      "reason": "Especie restringida a bosques templados de Chile; precisar si la región incluye su ámbito norteño. No presentarla como distribuida por Tierra del Fuego o toda la estepa.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Desierto de Atacama",
+      "scientific_name": "Octodon degus",
+      "severity": "alta",
+      "reason": "Revisar borde sur y matorral de Chile central: no generalizar su presencia al núcleo hiperárido del desierto costero.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Península de Yucatán",
+      "scientific_name": "Procyon pygmaeus",
+      "severity": "subarea",
+      "reason": "Endémico de Cozumel: documentar subárea insular dentro de la región, sin añadir hexágonos en esta fase.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Columbia Británica",
+      "scientific_name": "Marmota vancouverensis",
+      "severity": "subarea",
+      "reason": "Restringir a la isla de Vancouver y praderas montanas; no toda Columbia Británica.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Alaska",
+      "scientific_name": "Ovibos moschatus",
+      "severity": "subarea",
+      "reason": "Verificar tundra ártica y poblaciones reintroducidas/localizadas, separándolas del bosque boreal.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Yukón",
+      "scientific_name": "Ovibos moschatus",
+      "severity": "subarea",
+      "reason": "Verificar extremo ártico/localidades concretas; no bosque boreal generalizado.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Montañas Rocosas",
+      "scientific_name": "Brachylagus idahoensis",
+      "severity": "habitat",
+      "reason": "Revisar cuencas de artemisa y matorral del oeste: bosque montano/pradera alpina es una descripción insuficiente.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Costa del golfo de México",
+      "scientific_name": "Terrapene carolina",
+      "severity": "nombre",
+      "reason": "El nombre común Florida es más estrecho que el binomio; fijar localidad/subespecie y hábitat terrestre, no solo humedal.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Caribe sudamericano",
+      "scientific_name": "Ctenosaura similis",
+      "severity": "subarea",
+      "reason": "Verificar el extremo noroccidental de Sudamérica frente al resto del Caribe; distinguir poblaciones nativas de introducidas.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Caribe sudamericano",
+      "scientific_name": "Saimiri sciureus",
+      "severity": "taxon_y_subarea",
+      "reason": "Precisar límites geográficos y taxonómicos de Saimiri; no asignar a toda la costa caribeña.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Caribe sudamericano",
+      "scientific_name": "Tamandua mexicana",
+      "severity": "subarea",
+      "reason": "Limitar a su ámbito al oeste/noroeste andino; no sustituir T. tetradactyla en toda Sudamérica.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Andes del Norte",
+      "scientific_name": "Tamandua mexicana",
+      "severity": "habitat",
+      "reason": "Precisar laderas y bosques de menor elevación; no asignar indistintamente a ambientes altoandinos.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Andes del Norte",
+      "scientific_name": "Ateles belzebuth",
+      "severity": "habitat",
+      "reason": "Precisar piedemonte/vertiente amazónica y elevación; no toda la franja de bosque nublado.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Amazonía",
+      "scientific_name": "Inia boliviensis",
+      "severity": "taxon_y_subarea",
+      "reason": "Delimitar cuenca alta del Madeira y tratamiento taxonómico respecto de Inia geoffrensis.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Amazonía",
+      "scientific_name": "Inia geoffrensis",
+      "severity": "taxon_y_subarea",
+      "reason": "Delimitar cuencas y evitar solapamiento artificial con Inia boliviensis si se adopta un concepto amplio.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Amazonía",
+      "scientific_name": "Electrophorus electricus",
+      "severity": "taxon_y_subarea",
+      "reason": "Revisar el concepto restringido tras reconocer otras especies de Electrophorus; no toda la cuenca.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Amazonía",
+      "scientific_name": "Dendrobates tinctorius",
+      "severity": "nombre_y_subarea",
+      "reason": "Verificar ámbito guayanés y la forma azul limitada; nombre común y color no describen toda la especie.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Amazonía",
+      "scientific_name": "Cyclopes didactylus",
+      "severity": "taxon_y_subarea",
+      "reason": "Revisar la distribución del complejo tras sus divisiones; preservar el registro sin inventar especies sustitutas.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Amazonía",
+      "scientific_name": "Ateles paniscus",
+      "severity": "subarea",
+      "reason": "Precisar área guayanesa/norte del Amazonas; no toda Amazonía.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Amazonía",
+      "scientific_name": "Saguinus imperator",
+      "severity": "subarea",
+      "reason": "Precisar Amazonía suroccidental; no todo el continente.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Cerrado brasileño",
+      "scientific_name": "Tolypeutes tricinctus",
+      "severity": "subarea",
+      "reason": "Precisar sectores de Caatinga/Cerrado nororiental; no generalizar a todo Cerrado.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Cerrado brasileño",
+      "scientific_name": "Micrurus corallinus",
+      "severity": "subarea",
+      "reason": "Verificar bosque atlántico y ecotonos frente a sabana interior; no asumir presencia general en Cerrado.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Pampas",
+      "scientific_name": "Leopardus colocola",
+      "severity": "taxon_y_subarea",
+      "reason": "La especie pertinente depende de la revisión del complejo de gatos de las pampas; no reemplazar por otra sin registrar la decisión.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Patagonia y Tierra del Fuego",
+      "scientific_name": "Leopardus colocola",
+      "severity": "taxon_y_subarea",
+      "reason": "Verificar el taxón patagónico bajo la autoridad elegida para el complejo; no aceptar colocola sensu stricto por defecto.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Desierto de Atacama",
+      "scientific_name": "Phoenicoparrus andinus",
+      "severity": "habitat",
+      "reason": "Requiere humedales/salares altoandinos; desierto costero no basta. Definir si la región incluye altiplano.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Desierto de Atacama",
+      "scientific_name": "Phoenicopterus chilensis",
+      "severity": "habitat",
+      "reason": "Restringir a humedales adecuados; no suelo desértico sin agua.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Desierto de Atacama",
+      "scientific_name": "Vicugna vicugna",
+      "severity": "habitat",
+      "reason": "Precisar altiplano/puna; no costa desértica generalizada.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Desierto de Atacama",
+      "scientific_name": "Lagidium viscacia",
+      "severity": "habitat",
+      "reason": "Requiere roquedos/altura; precisar ámbito dentro de la región costera de la fuente.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Desierto de Atacama",
+      "scientific_name": "Chinchilla lanigera",
+      "severity": "subarea",
+      "reason": "Precisar poblaciones y roquedos del norte chico; no generalizar al desierto hiperárido.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Desierto de Atacama",
+      "scientific_name": "Microlophus atacamensis",
+      "severity": "habitat",
+      "reason": "Hábitat litoral rocoso/intermareal: incluir costa en la planificación, sin trasladarlo a dunas interiores.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Patagonia y Tierra del Fuego",
+      "scientific_name": "Rhinoderma darwinii",
+      "severity": "habitat",
+      "reason": "Restringir a bosques templados húmedos de su ámbito norteño; no estepa ni Tierra del Fuego completa.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Patagonia y Tierra del Fuego",
+      "scientific_name": "Pudu puda",
+      "severity": "habitat",
+      "reason": "Precisar bosques templados del norte patagónico; no toda la estepa o Tierra del Fuego.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    },
+    {
+      "region": "Patagonia y Tierra del Fuego",
+      "scientific_name": "Lontra felina",
+      "severity": "habitat",
+      "reason": "Precisar litoral rocoso del Pacífico; no tratarla como nutria continental de ríos o costa atlántica.",
+      "validation": "Cribado biogeográfico razonado; pendiente contraste con autoridad de distribución y localidades. No eliminación automática."
+    }
+  ]
+}

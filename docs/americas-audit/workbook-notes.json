@@ -1,0 +1,675 @@
+{
+  "map_data_cells": 209,
+  "map_scope": "Hoja Mapa inspeccionada en lectura; coordenadas originales no son las coordenadas del Atlas compacto.",
+  "methodology_rows": [
+    {
+      "row": 1,
+      "values": [
+        "CRITERIOS · FUENTES · ALCANCE DEL PROTOTIPO",
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "row": 4,
+      "values": [
+        "Sección",
+        "Parámetro",
+        "Descripción",
+        "Aplicación",
+        "Observaciones",
+        "Fuente / URL"
+      ]
+    },
+    {
+      "row": 5,
+      "values": [
+        "Cobertura",
+        "Mapamundi",
+        "209 hexágonos (11 filas x 19 columnas)",
+        "77 continente / 29 hielo / 84 mar / 17 profundo / 2 abisal",
+        "Reconstruido a partir de la imagen original",
+        "Imagen de la conversación"
+      ]
+    },
+    {
+      "row": 6,
+      "values": [
+        "Cobertura",
+        "Hexágonos terrestres",
+        "77 de 77 con fauna",
+        "6 continentes, según clasificación fijada en conversación",
+        "Nombre geográfico ≠ bioma",
+        "—"
+      ]
+    },
+    {
+      "row": 7,
+      "values": [
+        "Cobertura",
+        "Hielo y mares",
+        "Hielo y mares con fauna seleccionada; el resto permanece reservado",
+        "Los 77 hexágonos continentales mantienen fauna",
+        "No equivale a un inventario exhaustivo de cada océano",
+        "—"
+      ]
+    },
+    {
+      "row": 8,
+      "values": [
+        "Fauna",
+        "Unidad de registro",
+        "Animal × hexágono",
+        "La misma especie puede estar presente en varios hexágonos",
+        "No confundir registros con especies distintas",
+        "—"
+      ]
+    },
+    {
+      "row": 9,
+      "values": [
+        "Fauna",
+        "Nombres científicos",
+        "Binomios elegidos manualmente",
+        "Consulta GBIF disponible en cada fila",
+        "Búsqueda NO equivale a verificación taxonómica individual",
+        "https://www.gbif.org/"
+      ]
+    },
+    {
+      "row": 10,
+      "values": [
+        "Fauna",
+        "Distribución geográfica",
+        "Asignación ilustrativa de fauna regional",
+        "Correlación amplia entre especie y hábitat",
+        "No validado mediante registros georreferenciados caso a caso",
+        "https://techdocs.gbif.org/en/data-use/api-downloads"
+      ]
+    },
+    {
+      "row": 11,
+      "values": [
+        "Biomas",
+        "Tipos genéricos",
+        "Bosques, praderas, selvas, desiertos, humedales, océanos, hielo",
+        "La región geográfica tiene su propia columna",
+        "Adaptación simplificada de clasificación de biomas",
+        "https://files.worldwildlife.org/wwfcmsprod/files/Publication/file/o0z7qqe0l_Ecoregions_Map.pdf"
+      ]
+    },
+    {
+      "row": 12,
+      "values": [
+        "Riqueza",
+        "Índice 1",
+        "Muy baja",
+        "Abisal, fosas oceánicas",
+        "Escala relativa lúdica, no medida científica",
+        "—"
+      ]
+    },
+    {
+      "row": 13,
+      "values": [
+        "Riqueza",
+        "Índice 2",
+        "Baja",
+        "Tundra, hielo, desierto, océano profundo, alta montaña",
+        "Escala relativa lúdica, no medida científica",
+        "—"
+      ]
+    },
+    {
+      "row": 14,
+      "values": [
+        "Riqueza",
+        "Índice 3",
+        "Media",
+        "Bosque templado, pradera, océano pelágico",
+        "Escala relativa lúdica, no medida científica",
+        "—"
+      ]
+    },
+    {
+      "row": 15,
+      "values": [
+        "Riqueza",
+        "Índice 4",
+        "Alta",
+        "Bosque tropical y subtropical, sabana tropical",
+        "Escala relativa lúdica, no medida científica",
+        "—"
+      ]
+    },
+    {
+      "row": 16,
+      "values": [
+        "Riqueza",
+        "Índice 5",
+        "Muy alta",
+        "Selva tropical húmeda, arrecifes, algunos humedales",
+        "Escala relativa lúdica, no medida científica",
+        "—"
+      ]
+    },
+    {
+      "row": 17,
+      "values": [
+        "Rareza",
+        "Común",
+        "Encuentro frecuente",
+        "Categoría lúdica",
+        "No representa abundancia natural",
+        "—"
+      ]
+    },
+    {
+      "row": 18,
+      "values": [
+        "Rareza",
+        "Poco común",
+        "Encuentro menos frecuente",
+        "Categoría lúdica",
+        "No representa abundancia natural",
+        "—"
+      ]
+    },
+    {
+      "row": 19,
+      "values": [
+        "Rareza",
+        "Raro",
+        "Encuentro infrecuente",
+        "Categoría lúdica",
+        "NO equivale a amenaza UICN",
+        "https://iucn.org/resources/conservation-tool/iucn-red-list-threatened-species"
+      ]
+    },
+    {
+      "row": 20,
+      "values": [
+        "Rareza",
+        "Muy raro",
+        "Encuentro extraordinario",
+        "Categoría lúdica",
+        "NO equivale a amenaza UICN",
+        "https://iucn.org/resources/conservation-tool/iucn-red-list-threatened-species"
+      ]
+    },
+    {
+      "row": 21,
+      "values": [
+        "Proyección",
+        "Muy raro",
+        "Encuentro extraordinario",
+        "No se completó estado IUCN por especie",
+        "Evita mezclar niveles de juego con categoría científica",
+        "https://iucn.org/resources/conservation-tool/iucn-red-list-threatened-species"
+      ]
+    },
+    {
+      "row": 22,
+      "values": [
+        "Calidad",
+        "Distribución",
+        "Algunos animales comparten biomas pero habitan solo zonas puntuales",
+        "Revisar fronteras biogeográficas y nombres comunes chilenos",
+        "Base conceptual para prototipar, no atlas validado",
+        "—"
+      ]
+    },
+    {
+      "row": 23,
+      "values": [
+        "Calidad",
+        "Ambientes polares",
+        "Especies asociadas a hielo y bordes costeros",
+        "No implica presencia en el interior de casquetes helados",
+        "También hay fauna pelágica del entorno",
+        "—"
+      ]
+    },
+    {
+      "row": 24,
+      "values": [
+        "Calidad",
+        "Mares abisales",
+        "Taxones de profundidad variable, con ejemplos de fosas",
+        "Afinar rangos batimétricos por especie",
+        "La simplificación es para jugabilidad",
+        "—"
+      ]
+    },
+    {
+      "row": 25,
+      "values": [
+        "Juego",
+        "Rareza asignada",
+        "Combinación de especies emblemáticas y asignación reproducible",
+        "Se mantiene fija por especie, incluso entre zonas",
+        "Modificarla sin afectar nombres ni biomas",
+        "—"
+      ]
+    },
+    {
+      "row": 26,
+      "values": [
+        "Exportación",
+        "Fecha de creación",
+        "Depuración a 900 especies únicas (140 especies añadidas previamente retiradas)",
+        "Archivo editable, filtrable y escalable",
+        "Las fórmulas recalculan al añadir registros dentro de los rangos actuales",
+        "—"
+      ]
+    },
+    {
+      "row": 27,
+      "values": [
+        null,
+        null,
+        "2026-10-26 (catálogo depurado)"
+      ]
+    },
+    {
+      "row": 28,
+      "values": [
+        "Actualización",
+        "Selección taxonómica",
+        "Excluidos insectos, arácnidos y demás invertebrados",
+        "Mantener solo pulpos y calamares entre los invertebrados",
+        "Se conservaron las 6 especies anteriores de cefalópodos",
+        "https://oumnh.web.ox.ac.uk/learn-mollusca"
+      ]
+    },
+    {
+      "row": 29,
+      "values": [
+        "Actualización",
+        "Cefalópodos",
+        "Se clasifican como Peces en el juego",
+        "Subgrupo Cefalópodos; excepción explícita a la taxonomía real",
+        "Pulpos y calamares son moluscos, no peces",
+        "https://oumnh.web.ox.ac.uk/learn-mollusca"
+      ]
+    },
+    {
+      "row": 30,
+      "values": [
+        "Actualización",
+        "Rareza",
+        "Legendario se reemplaza por Muy raro",
+        "Cambio de categoría sin alterar lógica de zonas",
+        "Los niveles son de jugabilidad, no la Lista Roja",
+        "https://nrl.iucnredlist.org/es/resources/spatial-data-download"
+      ]
+    },
+    {
+      "row": 31,
+      "values": [
+        "Actualización",
+        "Diversidad regional",
+        "Incremento de especies repartido entre los seis continentes",
+        "Reforzados micromamíferos en Europa Occidental",
+        "Distribución propuesta, sujeta a validación taxonómica y local",
+        "https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c"
+      ]
+    },
+    {
+      "row": 32,
+      "values": [
+        "Actualización",
+        "Control de cambios",
+        "900 especies únicas / 1574 registros de presencia animal-zona",
+        "209 hexágonos / 77 continentales / nombres y biomas originales",
+        "Se priorizó reconocimiento de especies y diversidad por zona; criterio lúdico",
+        "—"
+      ]
+    }
+  ],
+  "summary_rows": [
+    {
+      "row": 1,
+      "values": [
+        "ATLAS DE FAUNA · MAPA HEXAGONAL",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "row": 3,
+      "values": [
+        "Versión depurada · 900 especies únicas · 140 especies rebuscadas retiradas · Cefalópodos y biomas conservados",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "row": 5,
+      "values": [
+        "HEXÁGONOS",
+        null,
+        null,
+        null,
+        "ZONAS CON FAUNA",
+        null,
+        null,
+        null,
+        "REGISTROS FAUNA",
+        null,
+        null,
+        null,
+        "ESPECIES DISTINTAS",
+        null,
+        null
+      ]
+    },
+    {
+      "row": 6,
+      "values": [
+        209,
+        null,
+        null,
+        null,
+        103,
+        null,
+        null,
+        null,
+        1574,
+        null,
+        null,
+        null,
+        900,
+        null,
+        null
+      ]
+    },
+    {
+      "row": 11,
+      "values": [
+        "CONTINENTE / MEDIO",
+        "HEXÁGONOS",
+        "POBLADOS",
+        "REGISTROS",
+        "ESP. POR HEX. POBLADO"
+      ]
+    },
+    {
+      "row": 12,
+      "values": [
+        "América del Norte",
+        14,
+        14,
+        206,
+        14.714285714285714
+      ]
+    },
+    {
+      "row": 13,
+      "values": [
+        "América del Sur",
+        10,
+        10,
+        192,
+        19.2
+      ]
+    },
+    {
+      "row": 14,
+      "values": [
+        "Europa",
+        10,
+        10,
+        250,
+        25
+      ]
+    },
+    {
+      "row": 15,
+      "values": [
+        "África",
+        14,
+        14,
+        220,
+        15.714285714285714
+      ]
+    },
+    {
+      "row": 16,
+      "values": [
+        "Asia",
+        21,
+        21,
+        291,
+        13.857142857142858
+      ]
+    },
+    {
+      "row": 17,
+      "values": [
+        "Oceanía",
+        8,
+        8,
+        131,
+        16.375
+      ]
+    },
+    {
+      "row": 18,
+      "values": [
+        "Hielo",
+        29,
+        7,
+        45,
+        6.428571428571429
+      ]
+    },
+    {
+      "row": 19,
+      "values": [
+        "Mar",
+        84,
+        12,
+        192,
+        16
+      ]
+    },
+    {
+      "row": 20,
+      "values": [
+        "Mar profundo",
+        17,
+        5,
+        44,
+        8.8
+      ]
+    },
+    {
+      "row": 21,
+      "values": [
+        "Mar abisal",
+        2,
+        2,
+        3,
+        1.5
+      ]
+    },
+    {
+      "row": 22,
+      "values": [
+        "TOTAL",
+        209,
+        103,
+        1574,
+        15.281553398058252
+      ]
+    },
+    {
+      "row": 25,
+      "values": [
+        "RAREZA DE JUEGO",
+        "REGISTROS",
+        "PROPORCIÓN"
+      ]
+    },
+    {
+      "row": 26,
+      "values": [
+        "Común",
+        803,
+        0.5101651842439644
+      ]
+    },
+    {
+      "row": 27,
+      "values": [
+        "Poco común",
+        426,
+        0.27064803049555275
+      ]
+    },
+    {
+      "row": 28,
+      "values": [
+        "Raro",
+        276,
+        0.17534942820838628
+      ]
+    },
+    {
+      "row": 29,
+      "values": [
+        "Muy raro",
+        69,
+        0.04383735705209657
+      ]
+    },
+    {
+      "row": 31,
+      "values": [
+        "LECTURA IMPORTANTE",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "row": 32,
+      "values": [
+        "La densidad/riqueza es una escala de diseño del juego (1–5), no una medición real de biodiversidad, abundancia o probabilidad de observar animales.",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "row": 33,
+      "values": [
+        "Las rarezas Común, Poco común, Raro y Muy raro son de juego y NO indican el estado de conservación UICN.",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "row": 34,
+      "values": [
+        "Los 77 hexágonos continentales conservan fauna; mares y hielos siguen cargados selectivamente.",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "row": 35,
+      "values": [
+        "Pulpos y calamares se incluyen en Peces → Cefalópodos solo como convención del juego (son moluscos).",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  ]
+}

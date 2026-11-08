@@ -1,0 +1,161 @@
+{
+  "atlantic_voyage": {
+    "cost": 1700,
+    "id": "atlantic_survey",
+    "knowledge": 650,
+    "name": "Reconocimiento del Atlántico",
+    "notes": 850,
+    "prize": 2050,
+    "reqResearch": "nuevo_mundo_1",
+    "required": 116,
+    "routeReq": 2,
+    "sample": "north_america_map_piece",
+    "seconds": 720
+  },
+  "existing_continent_flags": [
+    {
+      "icon": "🇪🇺",
+      "id": "Europa",
+      "implemented": true,
+      "label": "Europa"
+    },
+    {
+      "icon": "🌏",
+      "id": "Asia",
+      "implemented": true,
+      "label": "Asia"
+    },
+    {
+      "icon": "🌍",
+      "id": "África",
+      "implemented": true,
+      "label": "África"
+    },
+    {
+      "icon": "🦬",
+      "id": "Norteamérica",
+      "implemented": true,
+      "label": "Norteamérica"
+    },
+    {
+      "icon": "🦜",
+      "id": "Sudamérica",
+      "implemented": false,
+      "label": "Sudamérica"
+    },
+    {
+      "icon": "🪃",
+      "id": "Oceanía",
+      "implemented": false,
+      "label": "Oceanía"
+    },
+    {
+      "icon": "🧊",
+      "id": "Polos",
+      "implemented": false,
+      "label": "Polos"
+    },
+    {
+      "icon": "🌊",
+      "id": "Océanos",
+      "implemented": false,
+      "label": "Océanos"
+    }
+  ],
+  "existing_recipes": {
+    "africa_map": {
+      "requires": {
+        "africa_map_piece": 10
+      }
+    },
+    "asia_map": {
+      "requires": {
+        "asia_map_piece": 10
+      }
+    },
+    "north_america_map": {
+      "requires": {
+        "north_america_map_piece": 8
+      }
+    },
+    "oceanic_quadrant": {
+      "requires": {
+        "brass_shard": 3,
+        "map_fragment": 2,
+        "parchment_scrap": 1,
+        "polished_lens": 2
+      }
+    }
+  },
+  "existing_research": [
+    {
+      "desc": "Desbloquea el acceso a Asia; cada región exige un prestigio mínimo acumulado, sin consumirlo",
+      "id": "asia_1",
+      "knowledge": 650,
+      "money": 800,
+      "name": "Cartografía de Asia",
+      "once": true,
+      "req": "rutas_2",
+      "reqItem": "asia_map",
+      "reqItemQty": 1
+    },
+    {
+      "desc": "Investiga África; requiere conservar el Mapa de África.",
+      "id": "africa_1",
+      "knowledge": 900,
+      "money": 1200,
+      "name": "Estudios cartográficos de África",
+      "once": true,
+      "req": "asia_1",
+      "reqItem": "africa_map",
+      "reqItemConsume": false
+    },
+    {
+      "desc": "Permite viajes atlánticos, exige Cuadrante transatlántico.",
+      "id": "nuevo_mundo_1",
+      "knowledge": 1800,
+      "money": 2200,
+      "name": "Navegación al Nuevo Mundo",
+      "once": true,
+      "req": "africa_1",
+      "reqItem": "oceanic_quadrant",
+      "reqItemConsume": false
+    },
+    {
+      "desc": "Habilita Norteamérica; requiere mapa completo y navegación atlántica.",
+      "id": "norteamerica_1",
+      "knowledge": 2400,
+      "money": 2800,
+      "name": "Cartografía de Norteamérica",
+      "once": true,
+      "req": "nuevo_mundo_1",
+      "reqItem": "north_america_map",
+      "reqItemConsume": false
+    }
+  ],
+  "missing_source_fields": [
+    "Familia zoológica formal",
+    "Horarios y estaciones por especie",
+    "Biomas específicos de cada especie (Bioma es genérico de región)",
+    "Dimorfismo e ilustraciones por sexo",
+    "Variantes y probabilidades de pigmentación",
+    "Costes, prestigio y requisitos de regiones nuevas",
+    "Autoridad taxonómica validada y evidencia de presencia georreferenciada"
+  ],
+  "north_american_unlocks": [
+    {
+      "id": "HX-01-05",
+      "name": "Alaska",
+      "unlock": {
+        "prestige": 125
+      }
+    },
+    {
+      "id": "HX-02-02",
+      "name": "Columbia Británica",
+      "unlock": {
+        "prestige": 128
+      }
+    }
+  ]
+}

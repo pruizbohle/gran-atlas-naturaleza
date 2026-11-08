@@ -1,3 +1,7 @@
+## Auditoría AM-01 · Preparación de las Américas
+
+[Informe de fauna, regiones e ilustraciones](docs/americas-audit.md) · [Plan AM-02 a AM-06](docs/americas-implementation-plan.md). Fase documental: no incorpora especies ni cambia la versión jugable.
+
 # El Gran Atlas v3.21.2 — Actualización de navegador y PWA
 
 Corrige las instalaciones que seguían mostrando la malla anterior desde su caché. [Actualizar conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar.html?version=3.21.2) · [Diagnóstico y verificación](README_V3212.md).
