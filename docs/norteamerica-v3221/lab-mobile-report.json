@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "width": 320,
+      "height": 640,
+      "mode": "after",
+      "horizontal": false,
+      "cards": 32,
+      "invalidSvgs": 0
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "mode": "pair",
+      "horizontal": false,
+      "cards": 32,
+      "invalidSvgs": 0
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "mode": "after",
+      "horizontal": false,
+      "cards": 32,
+      "invalidSvgs": 0
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "mode": "pair",
+      "horizontal": false,
+      "cards": 32,
+      "invalidSvgs": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mode": "after",
+      "horizontal": false,
+      "cards": 32,
+      "invalidSvgs": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "mode": "pair",
+      "horizontal": false,
+      "cards": 32,
+      "invalidSvgs": 0
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "mode": "after",
+      "horizontal": false,
+      "cards": 32,
+      "invalidSvgs": 0
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "mode": "pair",
+      "horizontal": false,
+      "cards": 32,
+      "invalidSvgs": 0
+    }
+  ],
+  "jsErrors": []
+}

@@ -1,0 +1,85 @@
+{
+  "cpuSlowdown": 4,
+  "device": "Chromium desktop with one CPU throttling session; not a physical Android benchmark",
+  "method": "One context/page/CDP session, ABBA navigation order, wait for worker readiness before measuring. Three warm synchronous render/layout samples per visit.",
+  "cases": [
+    {
+      "version": "3.22.0",
+      "species": 589,
+      "bestiaryColdMs": 7402,
+      "bestiarySynchronousWarmTrialsMs": [
+        4180.5999999996275,
+        4228.700000000186,
+        3354.5
+      ],
+      "averageSerializeMs": 0.8129999999981373,
+      "bytes": 29529,
+      "heapUsedBytes": 8999516
+    },
+    {
+      "version": "3.22.1",
+      "species": 589,
+      "bestiaryColdMs": 2047.6000000005588,
+      "bestiarySynchronousWarmTrialsMs": [
+        1923.1000000005588,
+        1749.8999999994412,
+        2636.7999999998137
+      ],
+      "averageSerializeMs": 0.9829999999981374,
+      "bytes": 29529,
+      "heapUsedBytes": 14016464
+    },
+    {
+      "version": "3.22.1",
+      "species": 589,
+      "bestiaryColdMs": 1381.8999999994412,
+      "bestiarySynchronousWarmTrialsMs": [
+        2286.5999999996275,
+        1151.8999999994412,
+        1269.7000000001863
+      ],
+      "averageSerializeMs": 0.6159999999962747,
+      "bytes": 29529,
+      "heapUsedBytes": 28603880
+    },
+    {
+      "version": "3.22.0",
+      "species": 589,
+      "bestiaryColdMs": 4094.2000000001863,
+      "bestiarySynchronousWarmTrialsMs": [
+        2321.4000000003725,
+        1404.5999999996275,
+        1279.8999999994412
+      ],
+      "averageSerializeMs": 0.5790000000037253,
+      "bytes": 29529,
+      "heapUsedBytes": 31557044
+    }
+  ],
+  "lab3220": {
+    "defaultCards": 128,
+    "defaultNodes": 4135,
+    "renderRemaining128Ms": 2.3999999994412065,
+    "svgWarm128Ms": 0.27999999998137354
+  },
+  "lab3221": {
+    "defaultCards": 32,
+    "defaultNodes": 1430,
+    "renderRemaining128Ms": 7.2999999998137355,
+    "svgWarm128Ms": 0.37000000001862643,
+    "allCards": 128,
+    "allNodes": 4523
+  },
+  "summary": {
+    "3.22.0": {
+      "warmMedianMs": 3354.5,
+      "serializeMedianMs": 0.8129999999981373
+    },
+    "3.22.1": {
+      "warmMedianMs": 1923.1000000005588,
+      "serializeMedianMs": 0.9829999999981374
+    }
+  },
+  "offlineAssets": 73,
+  "offlineUncompressedBytes": 3953472
+}

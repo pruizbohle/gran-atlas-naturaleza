@@ -1,0 +1,1642 @@
+{
+  "version": "3.22.1",
+  "regions": [
+    {
+      "id": "HX-01-05",
+      "name": "Alaska",
+      "presences": 17,
+      "prestige": 125,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_anser_caerulescens",
+          "latin": "Anser caerulescens",
+          "habitat": "tundra",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_corvus_corax",
+          "latin": "Corvus corax",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "aguila_real",
+          "latin": "Aquila chrysaetos",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_bubo_scandiacus",
+          "latin": "Bubo scandiacus",
+          "habitat": "tundra",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_falco_peregrinus",
+          "latin": "Falco peregrinus",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "lobo_gris",
+          "latin": "Canis lupus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "zorro_rojo",
+          "latin": "Vulpes vulpes",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_dicrostonyx_groenlandicus",
+          "latin": "Dicrostonyx groenlandicus",
+          "habitat": "tundra",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "gloton",
+          "latin": "Gulo gulo",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lemmus_trimucronatus",
+          "latin": "Lemmus trimucronatus",
+          "habitat": "tundra",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ursus_americanus",
+          "latin": "Ursus americanus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "oso_pardo",
+          "latin": "Ursus arctos",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_castor_canadensis",
+          "latin": "Castor canadensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "alce",
+          "latin": "Alces alces",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "verano"
+        },
+        {
+          "id": "na_esp_ovibos_moschatus",
+          "latin": "Ovibos moschatus",
+          "habitat": "tundra",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ovis_dalli",
+          "latin": "Ovis dalli",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "reno",
+          "latin": "Rangifer tarandus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "verano"
+        }
+      ]
+    },
+    {
+      "id": "HX-02-02",
+      "name": "Columbia Británica",
+      "presences": 11,
+      "prestige": 128,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_dryocopus_pileatus",
+          "latin": "Dryocopus pileatus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_haliaeetus_leucocephalus",
+          "latin": "Haliaeetus leucocephalus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "lobo_gris",
+          "latin": "Canis lupus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_puma_concolor",
+          "latin": "Puma concolor",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lontra_canadensis",
+          "latin": "Lontra canadensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ursus_americanus",
+          "latin": "Ursus americanus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "oso_pardo",
+          "latin": "Ursus arctos",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_castor_canadensis",
+          "latin": "Castor canadensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_marmota_vancouverensis",
+          "latin": "Marmota vancouverensis",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_odocoileus_hemionus",
+          "latin": "Odocoileus hemionus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_oncorhynchus_mykiss",
+          "latin": "Oncorhynchus mykiss",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "HX-02-03",
+      "name": "Bosques boreales de Canadá",
+      "presences": 13,
+      "prestige": 134,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_anas_platyrhynchos",
+          "latin": "Anas platyrhynchos",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_anser_caerulescens",
+          "latin": "Anser caerulescens",
+          "habitat": "tundra",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_falcipennis_canadensis",
+          "latin": "Falcipennis canadensis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_perisoreus_canadensis",
+          "latin": "Perisoreus canadensis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "lobo_gris",
+          "latin": "Canis lupus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lynx_canadensis",
+          "latin": "Lynx canadensis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_martes_americana",
+          "latin": "Martes americana",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_sorex_cinereus",
+          "latin": "Sorex cinereus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_castor_canadensis",
+          "latin": "Castor canadensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lepus_americanus",
+          "latin": "Lepus americanus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "alce",
+          "latin": "Alces alces",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "verano"
+        },
+        {
+          "id": "reno",
+          "latin": "Rangifer tarandus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "verano"
+        },
+        {
+          "id": "na_esp_lithobates_sylvaticus",
+          "latin": "Lithobates sylvaticus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "HX-02-04",
+      "name": "Montañas Rocosas",
+      "presences": 16,
+      "prestige": 137,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_corvus_corax",
+          "latin": "Corvus corax",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_pica_hudsonia",
+          "latin": "Pica hudsonia",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "aguila_real",
+          "latin": "Aquila chrysaetos",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_bubo_virginianus",
+          "latin": "Bubo virginianus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_falco_peregrinus",
+          "latin": "Falco peregrinus",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lynx_rufus",
+          "latin": "Lynx rufus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_puma_concolor",
+          "latin": "Puma concolor",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_brachylagus_idahoensis",
+          "latin": "Brachylagus idahoensis",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ursus_americanus",
+          "latin": "Ursus americanus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_marmota_flaviventris",
+          "latin": "Marmota flaviventris",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ochotona_princeps",
+          "latin": "Ochotona princeps",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_cervus_canadensis",
+          "latin": "Cervus canadensis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_oreamnos_americanus",
+          "latin": "Oreamnos americanus",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ovis_canadensis",
+          "latin": "Ovis canadensis",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ovis_dalli",
+          "latin": "Ovis dalli",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_oncorhynchus_mykiss",
+          "latin": "Oncorhynchus mykiss",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "HX-02-05",
+      "name": "Grandes Llanuras",
+      "presences": 15,
+      "prestige": 140,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_pelecanus_erythrorhynchos",
+          "latin": "Pelecanus erythrorhynchos",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_pica_hudsonia",
+          "latin": "Pica hudsonia",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_tympanuchus_cupido",
+          "latin": "Tympanuchus cupido",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_athene_cunicularia",
+          "latin": "Athene cunicularia",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_circus_hudsonius",
+          "latin": "Circus hudsonius",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_canis_latrans",
+          "latin": "Canis latrans",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_mephitis_mephitis",
+          "latin": "Mephitis mephitis",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_mustela_nigripes",
+          "latin": "Mustela nigripes",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_sylvilagus_floridanus",
+          "latin": "Sylvilagus floridanus",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_cynomys_ludovicianus",
+          "latin": "Cynomys ludovicianus",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lepus_californicus",
+          "latin": "Lepus californicus",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_antilocapra_americana",
+          "latin": "Antilocapra americana",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_bison_bison",
+          "latin": "Bison bison",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_phrynosoma_cornutum",
+          "latin": "Phrynosoma cornutum",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_crotalus_viridis",
+          "latin": "Crotalus viridis",
+          "habitat": "pradera",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "HX-02-06",
+      "name": "Yukón",
+      "presences": 14,
+      "prestige": 131,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_corvus_corax",
+          "latin": "Corvus corax",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "eu_esp_0267",
+          "latin": "Lagopus lagopus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "invierno"
+        },
+        {
+          "id": "na_esp_bubo_scandiacus",
+          "latin": "Bubo scandiacus",
+          "habitat": "tundra",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "lobo_gris",
+          "latin": "Canis lupus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lynx_canadensis",
+          "latin": "Lynx canadensis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "gloton",
+          "latin": "Gulo gulo",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lemmus_trimucronatus",
+          "latin": "Lemmus trimucronatus",
+          "habitat": "tundra",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_erethizon_dorsatum",
+          "latin": "Erethizon dorsatum",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lepus_americanus",
+          "latin": "Lepus americanus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "alce",
+          "latin": "Alces alces",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "verano"
+        },
+        {
+          "id": "na_esp_ovibos_moschatus",
+          "latin": "Ovibos moschatus",
+          "habitat": "tundra",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ovis_dalli",
+          "latin": "Ovis dalli",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "reno",
+          "latin": "Rangifer tarandus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "verano"
+        },
+        {
+          "id": "na_esp_lithobates_sylvaticus",
+          "latin": "Lithobates sylvaticus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "HX-03-02",
+      "name": "Región de los Grandes Lagos",
+      "presences": 17,
+      "prestige": 143,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_aix_sponsa",
+          "latin": "Aix sponsa",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_anas_platyrhynchos",
+          "latin": "Anas platyrhynchos",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_pelecanus_erythrorhynchos",
+          "latin": "Pelecanus erythrorhynchos",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_archilochus_colubris",
+          "latin": "Archilochus colubris",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_haliaeetus_leucocephalus",
+          "latin": "Haliaeetus leucocephalus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lontra_canadensis",
+          "latin": "Lontra canadensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_mephitis_mephitis",
+          "latin": "Mephitis mephitis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_procyon_lotor",
+          "latin": "Procyon lotor",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_sylvilagus_floridanus",
+          "latin": "Sylvilagus floridanus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_castor_canadensis",
+          "latin": "Castor canadensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_odocoileus_virginianus",
+          "latin": "Odocoileus virginianus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_esox_lucius",
+          "latin": "Esox lucius",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_perca_flavescens",
+          "latin": "Perca flavescens",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_salvelinus_fontinalis",
+          "latin": "Salvelinus fontinalis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lithobates_clamitans",
+          "latin": "Lithobates clamitans",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ambystoma_tigrinum",
+          "latin": "Ambystoma tigrinum",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_chrysemys_picta",
+          "latin": "Chrysemys picta",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "HX-03-03",
+      "name": "Costa del Pacífico",
+      "presences": 14,
+      "prestige": 149,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_callipepla_californica",
+          "latin": "Callipepla californica",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_calypte_anna",
+          "latin": "Calypte anna",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_falco_peregrinus",
+          "latin": "Falco peregrinus",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_haliaeetus_leucocephalus",
+          "latin": "Haliaeetus leucocephalus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_strix_occidentalis",
+          "latin": "Strix occidentalis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "zorro_rojo",
+          "latin": "Vulpes vulpes",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_puma_concolor",
+          "latin": "Puma concolor",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lontra_canadensis",
+          "latin": "Lontra canadensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_spilogale_gracilis",
+          "latin": "Spilogale gracilis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ursus_americanus",
+          "latin": "Ursus americanus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_castor_canadensis",
+          "latin": "Castor canadensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_odocoileus_hemionus",
+          "latin": "Odocoileus hemionus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_dicamptodon_tenebrosus",
+          "latin": "Dicamptodon tenebrosus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lampropeltis_californiae",
+          "latin": "Lampropeltis californiae",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "HX-03-04",
+      "name": "Bosques del este norteamericano",
+      "presences": 17,
+      "prestige": 146,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_aix_sponsa",
+          "latin": "Aix sponsa",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_archilochus_colubris",
+          "latin": "Archilochus colubris",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_cardinalis_cardinalis",
+          "latin": "Cardinalis cardinalis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_dryocopus_pileatus",
+          "latin": "Dryocopus pileatus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_hylocichla_mustelina",
+          "latin": "Hylocichla mustelina",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_bubo_virginianus",
+          "latin": "Bubo virginianus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_urocyon_cinereoargenteus",
+          "latin": "Urocyon cinereoargenteus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_didelphis_virginiana",
+          "latin": "Didelphis virginiana",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_mephitis_mephitis",
+          "latin": "Mephitis mephitis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_procyon_lotor",
+          "latin": "Procyon lotor",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_sylvilagus_floridanus",
+          "latin": "Sylvilagus floridanus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ursus_americanus",
+          "latin": "Ursus americanus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_sciurus_carolinensis",
+          "latin": "Sciurus carolinensis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_odocoileus_virginianus",
+          "latin": "Odocoileus virginianus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_salvelinus_fontinalis",
+          "latin": "Salvelinus fontinalis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ambystoma_maculatum",
+          "latin": "Ambystoma maculatum",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_crotalus_horridus",
+          "latin": "Crotalus horridus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "HX-03-05",
+      "name": "Desierto de Sonora",
+      "presences": 13,
+      "prestige": 152,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_geococcyx_californianus",
+          "latin": "Geococcyx californianus",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_micrathene_whitneyi",
+          "latin": "Micrathene whitneyi",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_canis_latrans",
+          "latin": "Canis latrans",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_vulpes_macrotis",
+          "latin": "Vulpes macrotis",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_dipodomys_merriami",
+          "latin": "Dipodomys merriami",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_spilogale_gracilis",
+          "latin": "Spilogale gracilis",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_sylvilagus_audubonii",
+          "latin": "Sylvilagus audubonii",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_dicotyles_tajacu",
+          "latin": "Dicotyles tajacu",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_heloderma_suspectum",
+          "latin": "Heloderma suspectum",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_phrynosoma_cornutum",
+          "latin": "Phrynosoma cornutum",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_incilius_alvarius",
+          "latin": "Incilius alvarius",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_crotalus_atrox",
+          "latin": "Crotalus atrox",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_gopherus_agassizii",
+          "latin": "Gopherus agassizii",
+          "habitat": "desierto",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "HX-04-02",
+      "name": "Sierra Madre",
+      "presences": 11,
+      "prestige": 155,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_ara_militaris",
+          "latin": "Ara militaris",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_meleagris_gallopavo",
+          "latin": "Meleagris gallopavo",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "lobo_gris",
+          "latin": "Canis lupus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_panthera_onca",
+          "latin": "Panthera onca",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_puma_concolor",
+          "latin": "Puma concolor",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_nasua_narica",
+          "latin": "Nasua narica",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_sylvilagus_audubonii",
+          "latin": "Sylvilagus audubonii",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_taxidea_taxus",
+          "latin": "Taxidea taxus",
+          "habitat": "montana",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ursus_americanus",
+          "latin": "Ursus americanus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_odocoileus_virginianus",
+          "latin": "Odocoileus virginianus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ambystoma_mexicanum",
+          "latin": "Ambystoma mexicanum",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "HX-04-03",
+      "name": "Península de Yucatán",
+      "presences": 15,
+      "prestige": 161,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_meleagris_ocellata",
+          "latin": "Meleagris ocellata",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ramphastos_sulfuratus",
+          "latin": "Ramphastos sulfuratus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_herpailurus_yagouaroundi",
+          "latin": "Herpailurus yagouaroundi",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_leopardus_pardalis",
+          "latin": "Leopardus pardalis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_leopardus_wiedii",
+          "latin": "Leopardus wiedii",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_panthera_onca",
+          "latin": "Panthera onca",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_cuniculus_paca",
+          "latin": "Cuniculus paca",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_nasua_narica",
+          "latin": "Nasua narica",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_procyon_pygmaeus",
+          "latin": "Procyon pygmaeus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_alouatta_pigra",
+          "latin": "Alouatta pigra",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ateles_geoffroyi",
+          "latin": "Ateles geoffroyi",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_dicotyles_tajacu",
+          "latin": "Dicotyles tajacu",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_tapirus_bairdii",
+          "latin": "Tapirus bairdii",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ctenosaura_similis",
+          "latin": "Ctenosaura similis",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_boa_imperator",
+          "latin": "Boa imperator",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "HX-04-04",
+      "name": "Costa del golfo de México",
+      "presences": 11,
+      "prestige": 158,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_ardea_herodias",
+          "latin": "Ardea herodias",
+          "habitat": "humedal",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_pelecanus_occidentalis",
+          "latin": "Pelecanus occidentalis",
+          "habitat": "costa",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_platalea_ajaja",
+          "latin": "Platalea ajaja",
+          "habitat": "humedal",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "af_xlsx_131_pandion_haliaetus",
+          "latin": "Pandion haliaetus",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_trichechus_manatus",
+          "latin": "Trichechus manatus",
+          "habitat": "costa",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_dasypus_novemcinctus",
+          "latin": "Dasypus novemcinctus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_didelphis_virginiana",
+          "latin": "Didelphis virginiana",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_lontra_canadensis",
+          "latin": "Lontra canadensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_procyon_lotor",
+          "latin": "Procyon lotor",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_alligator_mississippiensis",
+          "latin": "Alligator mississippiensis",
+          "habitat": "rio",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_terrapene_carolina",
+          "latin": "Terrapene carolina",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    },
+    {
+      "id": "HX-05-04",
+      "name": "América Central",
+      "presences": 22,
+      "prestige": 164,
+      "gates": [
+        "northAmericaUnlocked",
+        "inventory.north_america_map"
+      ],
+      "presencesChecked": [
+        {
+          "id": "na_esp_ara_macao",
+          "latin": "Ara macao",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_pharomachrus_mocinno",
+          "latin": "Pharomachrus mocinno",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ramphastos_sulfuratus",
+          "latin": "Ramphastos sulfuratus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_caracara_plancus",
+          "latin": "Caracara plancus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_herpailurus_yagouaroundi",
+          "latin": "Herpailurus yagouaroundi",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_leopardus_pardalis",
+          "latin": "Leopardus pardalis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_leopardus_wiedii",
+          "latin": "Leopardus wiedii",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_panthera_onca",
+          "latin": "Panthera onca",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_bradypus_variegatus",
+          "latin": "Bradypus variegatus",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_cuniculus_paca",
+          "latin": "Cuniculus paca",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_dasypus_novemcinctus",
+          "latin": "Dasypus novemcinctus",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_didelphis_marsupialis",
+          "latin": "Didelphis marsupialis",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_myrmecophaga_tridactyla",
+          "latin": "Myrmecophaga tridactyla",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_nasua_narica",
+          "latin": "Nasua narica",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_alouatta_palliata",
+          "latin": "Alouatta palliata",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_cebus_imitator",
+          "latin": "Cebus imitator",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_tapirus_bairdii",
+          "latin": "Tapirus bairdii",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_basiliscus_plumifrons",
+          "latin": "Basiliscus plumifrons",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_ctenosaura_similis",
+          "latin": "Ctenosaura similis",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_agalychnis_callidryas",
+          "latin": "Agalychnis callidryas",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_hyalinobatrachium_fleischmanni",
+          "latin": "Hyalinobatrachium fleischmanni",
+          "habitat": "selva",
+          "time": "amanecer",
+          "season": "primavera"
+        },
+        {
+          "id": "na_esp_leptophis_ahaetulla",
+          "latin": "Leptophis ahaetulla",
+          "habitat": "bosque",
+          "time": "amanecer",
+          "season": "primavera"
+        }
+      ]
+    }
+  ],
+  "globalSpecies": 589,
+  "canonicalTaxa": 128,
+  "sourceNames": 129,
+  "regionalPresences": 206,
+  "newSpecies": 0,
+  "changedSprites": 97,
+  "configuredSince3220": {
+    "albino": 26,
+    "melanic": 4,
+    "dimorphism": 9,
+    "notable": 102,
+    "epic": 4,
+    "exceptional": 2
+  },
+  "evidence": {
+    "tests": "node --test tests/*.test.cjs (250/250)",
+    "reachability": "412 successful deterministic encounters: manual + automatic for each of 206 presences. Existing guaranteed argument bypasses only the chance of no sighting in this test; weighted selection and recording are production code.",
+    "groups": "14 regions × manual/automatic: 3 distinct species, manual census ×3, automatic ×2; hourly cap and persistence.",
+    "ecology": "Representative valid combination listed per presence; production data remains unchanged.",
+    "progression": "All 14 thresholds tested one point below and at requirement; no prestige consumption.",
+    "pwa": [
+      "upgrade-3.21.2-report.json",
+      "upgrade-3.22.0-report.json"
+    ],
+    "mobile": "browser-report.json",
+    "labMobile": "lab-mobile-report.json"
+  }
+}

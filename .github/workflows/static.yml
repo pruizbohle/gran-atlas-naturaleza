@@ -38,6 +38,8 @@ jobs:
           node --check www/js/lab/item-lab-v3198.js
           node --check www/js/northamerica-data-v3220.js
           node --check www/js/northamerica-art-v3220.js
+          node --check www/js/northamerica-polish-v3221.js
+          node --check www/js/lab/northamerica-lab-v3220.js
           node --check www/js/pwa-update-v3220.js
           node scripts/build-northamerica-lab-v3220.cjs --check
           node --check www/js/pwa-update-v3212.js

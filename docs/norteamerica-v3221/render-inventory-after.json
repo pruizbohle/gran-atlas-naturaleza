@@ -1,0 +1,1282 @@
+[
+  {
+    "id": "na_esp_anser_caerulescens",
+    "name": "Ánsar nival",
+    "latin": "Anser caerulescens",
+    "className": "Aves",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "82c6656640ca61e1a3dfc7050c20a2f8f1649b2974b2b5f8581c9087d21a2aaa",
+    "afterSha256": "82c6656640ca61e1a3dfc7050c20a2f8f1649b2974b2b5f8581c9087d21a2aaa"
+  },
+  {
+    "id": "na_esp_corvus_corax",
+    "name": "Cuervo común",
+    "latin": "Corvus corax",
+    "className": "Aves",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "7efd0f4f797b498b39a57827412137763066a7fc8fd2e1b501e3507f078d221a",
+    "afterSha256": "7efd0f4f797b498b39a57827412137763066a7fc8fd2e1b501e3507f078d221a"
+  },
+  {
+    "id": "aguila_real",
+    "name": "Águila real",
+    "latin": "Aquila chrysaetos",
+    "className": "Aves",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "933dee3949d96f608cd101a61c7e98ebac73db5eb41587c1b2401a84e010ea15",
+    "afterSha256": "933dee3949d96f608cd101a61c7e98ebac73db5eb41587c1b2401a84e010ea15"
+  },
+  {
+    "id": "na_esp_bubo_scandiacus",
+    "name": "Búho nival",
+    "latin": "Bubo scandiacus",
+    "className": "Aves",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "b2b37c889a125af96771b8b47f22f380acb2ea66b54839f17622f9c98089758b",
+    "afterSha256": "b2b37c889a125af96771b8b47f22f380acb2ea66b54839f17622f9c98089758b"
+  },
+  {
+    "id": "na_esp_falco_peregrinus",
+    "name": "Halcón peregrino",
+    "latin": "Falco peregrinus",
+    "className": "Aves",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "6c66c307b05ebdd6913bf0e1e5b223cc5375c3041927395217f1d88b69273185",
+    "afterSha256": "6c66c307b05ebdd6913bf0e1e5b223cc5375c3041927395217f1d88b69273185"
+  },
+  {
+    "id": "lobo_gris",
+    "name": "Lobo gris",
+    "latin": "Canis lupus",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "83a2741d2d3bcf4b562b0edb5f4a22e6a749a9665afd5420ad4bea3145c6ad2f",
+    "afterSha256": "83a2741d2d3bcf4b562b0edb5f4a22e6a749a9665afd5420ad4bea3145c6ad2f"
+  },
+  {
+    "id": "zorro_rojo",
+    "name": "Zorro rojo",
+    "latin": "Vulpes vulpes",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "df2757210a4fa6dac8f8dbcabb747a3509c826b25eaf87450a55660b6f5d63c7",
+    "afterSha256": "df2757210a4fa6dac8f8dbcabb747a3509c826b25eaf87450a55660b6f5d63c7"
+  },
+  {
+    "id": "na_esp_dicrostonyx_groenlandicus",
+    "name": "Lemming de collar ártico",
+    "latin": "Dicrostonyx groenlandicus",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "1ff58acdfb1c93f5788aac6819b8476b5c790f70357f578b4560e0a6f322d5bb",
+    "afterSha256": "1ff58acdfb1c93f5788aac6819b8476b5c790f70357f578b4560e0a6f322d5bb"
+  },
+  {
+    "id": "gloton",
+    "name": "Glotón",
+    "latin": "Gulo gulo",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "3bf99de57efb3a192d9cf6dd62d10e79c7bf35fbbfb4e1e193f2c475c48b8112",
+    "afterSha256": "3bf99de57efb3a192d9cf6dd62d10e79c7bf35fbbfb4e1e193f2c475c48b8112"
+  },
+  {
+    "id": "na_esp_lemmus_trimucronatus",
+    "name": "Lemming pardo",
+    "latin": "Lemmus trimucronatus",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "543a597eec18faa31384af6681524d2559be275029d91958018a2236cfaf69c9",
+    "afterSha256": "543a597eec18faa31384af6681524d2559be275029d91958018a2236cfaf69c9"
+  },
+  {
+    "id": "na_esp_ursus_americanus",
+    "name": "Oso negro americano",
+    "latin": "Ursus americanus",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "5df7d710c6b2a0fcbf0755897afb4e4e81110fafa0e09cf41c8671c72238f16e",
+    "afterSha256": "5df7d710c6b2a0fcbf0755897afb4e4e81110fafa0e09cf41c8671c72238f16e"
+  },
+  {
+    "id": "oso_pardo",
+    "name": "Oso pardo",
+    "latin": "Ursus arctos",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "d2a31684ebe0457ee5179b386f17d2c3d7c4d3bb2f8a28cab836834cbda44e5a",
+    "afterSha256": "d2a31684ebe0457ee5179b386f17d2c3d7c4d3bb2f8a28cab836834cbda44e5a"
+  },
+  {
+    "id": "na_esp_castor_canadensis",
+    "name": "Castor canadiense",
+    "latin": "Castor canadensis",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "de575c9a6d3823afa0079bb4cfb343596ae51009dfe3e05069d3aba70ef7f811",
+    "afterSha256": "de575c9a6d3823afa0079bb4cfb343596ae51009dfe3e05069d3aba70ef7f811"
+  },
+  {
+    "id": "alce",
+    "name": "Alce",
+    "latin": "Alces alces",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "1e8883790426aea68d26b57952109e6672d8ea364d70e9692a29e5a465aa425a",
+    "afterSha256": "1e8883790426aea68d26b57952109e6672d8ea364d70e9692a29e5a465aa425a"
+  },
+  {
+    "id": "na_esp_ovibos_moschatus",
+    "name": "Buey almizclero",
+    "latin": "Ovibos moschatus",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "560653722423f3adf45bced886bd39ebf93233e3ee20fac792d8361a12aac1f9",
+    "afterSha256": "560653722423f3adf45bced886bd39ebf93233e3ee20fac792d8361a12aac1f9"
+  },
+  {
+    "id": "na_esp_ovis_dalli",
+    "name": "Borrego de Dall",
+    "latin": "Ovis dalli",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "716e0b42da34fe900b6785827a12fa77100af53969f364f8c5924236d40d8ca7",
+    "afterSha256": "716e0b42da34fe900b6785827a12fa77100af53969f364f8c5924236d40d8ca7"
+  },
+  {
+    "id": "reno",
+    "name": "Reno",
+    "latin": "Rangifer tarandus",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "66653cb524dc93feda321547b3332dfa0b04844d83d23d63f6707bd59b4cffe2",
+    "afterSha256": "66653cb524dc93feda321547b3332dfa0b04844d83d23d63f6707bd59b4cffe2"
+  },
+  {
+    "id": "na_esp_dryocopus_pileatus",
+    "name": "Píleo",
+    "latin": "Dryocopus pileatus",
+    "className": "Aves",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "91d0d6613cdacc787bef7fb3624492d1f393e889baa6cfd2fc0d2be064257586",
+    "afterSha256": "91d0d6613cdacc787bef7fb3624492d1f393e889baa6cfd2fc0d2be064257586"
+  },
+  {
+    "id": "na_esp_haliaeetus_leucocephalus",
+    "name": "Águila calva",
+    "latin": "Haliaeetus leucocephalus",
+    "className": "Aves",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "7945bfafc57d3e2ae09797fe8fc519b65bbd92d58a9d0ce3201ab96d45e78efd",
+    "afterSha256": "7945bfafc57d3e2ae09797fe8fc519b65bbd92d58a9d0ce3201ab96d45e78efd"
+  },
+  {
+    "id": "na_esp_puma_concolor",
+    "name": "Puma",
+    "latin": "Puma concolor",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "61e50f9ceab051c7691ba47f436858fda33d7afddcd50d25869429df717442e1",
+    "afterSha256": "61e50f9ceab051c7691ba47f436858fda33d7afddcd50d25869429df717442e1"
+  },
+  {
+    "id": "na_esp_lontra_canadensis",
+    "name": "Nutria de río norteamericana",
+    "latin": "Lontra canadensis",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "4cb21b892b048ea9da4ab150aa21e1939f0964d68709c68d9276ef73cdf82e9f",
+    "afterSha256": "4cb21b892b048ea9da4ab150aa21e1939f0964d68709c68d9276ef73cdf82e9f"
+  },
+  {
+    "id": "na_esp_marmota_vancouverensis",
+    "name": "Marmota de Vancouver",
+    "latin": "Marmota vancouverensis",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "75cc288bfe998b2b9eeab00c02e5314a6f920b7190a27db5dc6d8cd486ebca0c",
+    "afterSha256": "75cc288bfe998b2b9eeab00c02e5314a6f920b7190a27db5dc6d8cd486ebca0c"
+  },
+  {
+    "id": "na_esp_odocoileus_hemionus",
+    "name": "Ciervo mulo",
+    "latin": "Odocoileus hemionus",
+    "className": "Mammalia",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "d7edd42dde48cb4ace1af302b14713740e311834de32dbe33fee5085a511373c",
+    "afterSha256": "d7edd42dde48cb4ace1af302b14713740e311834de32dbe33fee5085a511373c"
+  },
+  {
+    "id": "na_esp_oncorhynchus_mykiss",
+    "name": "Trucha arcoíris",
+    "latin": "Oncorhynchus mykiss",
+    "className": "Actinopterygii",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "6379ebb6fdea1d2c64a9d46c00cfcddabcec7fa96e66a18492aff394759eae7f",
+    "afterSha256": "6379ebb6fdea1d2c64a9d46c00cfcddabcec7fa96e66a18492aff394759eae7f"
+  },
+  {
+    "id": "na_esp_anas_platyrhynchos",
+    "name": "Ánade real",
+    "latin": "Anas platyrhynchos",
+    "className": "Aves",
+    "family": "Anatidae",
+    "origin": "na3220",
+    "beforeSha256": "877a35c2359c7820f625f95737592364d9a87c3e2043a77632d9f8530a568166",
+    "afterSha256": "14bdcb1b5349da22a1495cdcaab015b3801ab9fad89d7768f492975972064812"
+  },
+  {
+    "id": "na_esp_falcipennis_canadensis",
+    "name": "Urogallo de Canadá",
+    "latin": "Falcipennis canadensis",
+    "className": "Aves",
+    "family": "Phasianidae",
+    "origin": "na3220",
+    "beforeSha256": "d1461ec87f8ed6b55dfa1c2094bc11717786fdad9af9395b2f6fc8295393c5e9",
+    "afterSha256": "24eb0b795ad8f5856ef396a617e764d04912fdf72122dab36c34b1aacdcf82bf"
+  },
+  {
+    "id": "na_esp_perisoreus_canadensis",
+    "name": "Arrendajo canadiense",
+    "latin": "Perisoreus canadensis",
+    "className": "Aves",
+    "family": "Corvidae",
+    "origin": "na3220",
+    "beforeSha256": "a1c907d21ffde0c0e51e5bc4a6349060562e5f5a3d7681ad2a7017d91ff4596f",
+    "afterSha256": "5e35afa75d7498e40c0db91a62e3a19e4831efbb4cb0814b1264b8e5f8ff6679"
+  },
+  {
+    "id": "na_esp_lynx_canadensis",
+    "name": "Lince canadiense",
+    "latin": "Lynx canadensis",
+    "className": "Mammalia",
+    "family": "Felidae",
+    "origin": "na3220",
+    "beforeSha256": "1b5750110303fe093d7226bf90cd7c95553d27b8f42b8749c0ef964fbc4184f0",
+    "afterSha256": "76c9f378d80f1855070b22b4e3182823ae3aa271311496a3d163a85493f64b46"
+  },
+  {
+    "id": "na_esp_martes_americana",
+    "name": "Marta americana",
+    "latin": "Martes americana",
+    "className": "Mammalia",
+    "family": "Mustelidae",
+    "origin": "na3220",
+    "beforeSha256": "2bc81f3a87f12157ebbe8a6aa346eaa6283322ca76d2a97034eeb3b92a58d9da",
+    "afterSha256": "2bc81f3a87f12157ebbe8a6aa346eaa6283322ca76d2a97034eeb3b92a58d9da"
+  },
+  {
+    "id": "na_esp_sorex_cinereus",
+    "name": "Musaraña enmascarada",
+    "latin": "Sorex cinereus",
+    "className": "Mammalia",
+    "family": "Soricidae",
+    "origin": "na3220",
+    "beforeSha256": "655942f663a16521a3ef4d79e62e35c57b8f9ea191968070b4432265a9046f2a",
+    "afterSha256": "655942f663a16521a3ef4d79e62e35c57b8f9ea191968070b4432265a9046f2a"
+  },
+  {
+    "id": "na_esp_lepus_americanus",
+    "name": "Liebre americana",
+    "latin": "Lepus americanus",
+    "className": "Mammalia",
+    "family": "Leporidae",
+    "origin": "na3220",
+    "beforeSha256": "cc052ce160abfb874190acff3453be29a320d75cf33d0362a4a43eed2d31a915",
+    "afterSha256": "cc052ce160abfb874190acff3453be29a320d75cf33d0362a4a43eed2d31a915"
+  },
+  {
+    "id": "na_esp_lithobates_sylvaticus",
+    "name": "Rana de bosque",
+    "latin": "Lithobates sylvaticus",
+    "className": "Amphibia",
+    "family": "Ranidae",
+    "origin": "na3220",
+    "beforeSha256": "97a5ac8b5a3ec6ce7c988aa76f2fa795e11132f8fdbcab3da9f81e0b090de470",
+    "afterSha256": "29829fe3f54aa67eb2d362fc9edd6a9bfda4f516724d2a514e3dda8dd634b76f"
+  },
+  {
+    "id": "na_esp_pica_hudsonia",
+    "name": "Urraca de pico negro",
+    "latin": "Pica hudsonia",
+    "className": "Aves",
+    "family": "Corvidae",
+    "origin": "na3220",
+    "beforeSha256": "fc96626ee4bff47d03454ce5bc0aed1d5f5288095a4828fb4fde0740bd9d1d3d",
+    "afterSha256": "f998856134c067a563272ae0fd4d6589898cdf884f81ccec395a71693ebcafc8"
+  },
+  {
+    "id": "na_esp_bubo_virginianus",
+    "name": "Búho cornudo",
+    "latin": "Bubo virginianus",
+    "className": "Aves",
+    "family": "Strigidae",
+    "origin": "na3220",
+    "beforeSha256": "590904537e6a1d394a7493f311fc145e513cfbf3edc84144253b3063b4e78042",
+    "afterSha256": "2bcf79c390af17985daa2741a65ea2178a4b30c2df91a0a29a713be284bc70d7"
+  },
+  {
+    "id": "na_esp_lynx_rufus",
+    "name": "Lince rojo",
+    "latin": "Lynx rufus",
+    "className": "Mammalia",
+    "family": "Felidae",
+    "origin": "na3220",
+    "beforeSha256": "26d1ca2d9250246415d2ff632010f3fc7532e223fe92758d7b62c44341a40361",
+    "afterSha256": "d2720beaa39110317cd209a5acf424a887727bc4e63ba16fd3357c8b9cdaccdd"
+  },
+  {
+    "id": "na_esp_brachylagus_idahoensis",
+    "name": "Conejo pigmeo",
+    "latin": "Brachylagus idahoensis",
+    "className": "Mammalia",
+    "family": "Leporidae",
+    "origin": "na3220",
+    "beforeSha256": "f24499a7cc9f34edbdd1442b39ecd8a480a2e07624b4704d42e6b7310a9f0db8",
+    "afterSha256": "55243b81175b3966132884481361cba52ee27a1a2f81530dd52200ca7cb7c301"
+  },
+  {
+    "id": "na_esp_marmota_flaviventris",
+    "name": "Marmota de vientre amarillo",
+    "latin": "Marmota flaviventris",
+    "className": "Mammalia",
+    "family": "Sciuridae",
+    "origin": "na3220",
+    "beforeSha256": "991c5f63be56ea984573c470908d5bd3482b811d1398a571190c61a39654383e",
+    "afterSha256": "36b9862d55a7cd252ef48c7691b56befd4df4d23955e51c192874cdb777125d1"
+  },
+  {
+    "id": "na_esp_ochotona_princeps",
+    "name": "Pica americana",
+    "latin": "Ochotona princeps",
+    "className": "Mammalia",
+    "family": "Ochotonidae",
+    "origin": "na3220",
+    "beforeSha256": "8dcf68b51896446fb792185df3bc884bf81e157ffdfa2e0859aa9fe60dff406a",
+    "afterSha256": "fab3a30310d9f1c711f88d732825a49f5cae9949c300f574d60efcbaf47c347e"
+  },
+  {
+    "id": "na_esp_cervus_canadensis",
+    "name": "Wapití",
+    "latin": "Cervus canadensis",
+    "className": "Mammalia",
+    "family": "Cervidae",
+    "origin": "na3220",
+    "beforeSha256": "1fa288a7149b352a0c30b3b7578a07172e237bf1be58c8e797a23b4b54efc31b",
+    "afterSha256": "f1ecd0b3a4141b19349ccf7b1049257d535f4477e8507bcd6e9952faa595f405"
+  },
+  {
+    "id": "na_esp_oreamnos_americanus",
+    "name": "Cabra de las Rocosas",
+    "latin": "Oreamnos americanus",
+    "className": "Mammalia",
+    "family": "Bovidae",
+    "origin": "na3220",
+    "beforeSha256": "aa5bfd428c2fa686d5f3f2b4e0adb855744fdbb6282cecc954cb49f995e8e550",
+    "afterSha256": "ec4db9d33c8ff84539055ed546958135ec780fcd4565e561669c6a046c8f872f"
+  },
+  {
+    "id": "na_esp_ovis_canadensis",
+    "name": "Borrego cimarrón",
+    "latin": "Ovis canadensis",
+    "className": "Mammalia",
+    "family": "Bovidae",
+    "origin": "na3220",
+    "beforeSha256": "ef1cdec90eab0a2ead594289be50bedefb5fef12c0d2c3e42861bd6a92ccea36",
+    "afterSha256": "889e3e789878c61f20775a9d6d421270657cad81baa07e92e05373afb546b7dd"
+  },
+  {
+    "id": "na_esp_pelecanus_erythrorhynchos",
+    "name": "Pelícano blanco americano",
+    "latin": "Pelecanus erythrorhynchos",
+    "className": "Aves",
+    "family": "Pelecanidae",
+    "origin": "na3220",
+    "beforeSha256": "af006530764f214fa635a5df3da9300f93672163b58d5ea9187c06c50180f330",
+    "afterSha256": "c39118d74cb49ae7320356feeef3389f355730ae9e3de122ef7af6db31712974"
+  },
+  {
+    "id": "na_esp_tympanuchus_cupido",
+    "name": "Perdiz de las praderas",
+    "latin": "Tympanuchus cupido",
+    "className": "Aves",
+    "family": "Phasianidae",
+    "origin": "na3220",
+    "beforeSha256": "8d51e666f94b7590e73daa8a086b523a7e2a8cbcc39d25786e1a1b402f7335da",
+    "afterSha256": "dc6894c07fa95e57ac05e3c6f441e8f91eae2413c3f244de632996ad3020a057"
+  },
+  {
+    "id": "na_esp_athene_cunicularia",
+    "name": "Lechuza llanera",
+    "latin": "Athene cunicularia",
+    "className": "Aves",
+    "family": "Strigidae",
+    "origin": "na3220",
+    "beforeSha256": "3dd53f3331ed4be145bec03872a035d126704925d38e82c259eb5ab4caa61397",
+    "afterSha256": "e7274b122e6ef60b1ccb86cf1d64b45e37a7bd85754ae8557ec7055a4c9a3d0c"
+  },
+  {
+    "id": "na_esp_circus_hudsonius",
+    "name": "Aguilucho pálido",
+    "latin": "Circus hudsonius",
+    "className": "Aves",
+    "family": "Accipitridae",
+    "origin": "na3220",
+    "beforeSha256": "e8d4d3f43ae7fd359e227d5a1c06c528491e4b6f9ae8084939749ab70f0a857f",
+    "afterSha256": "2e6cc030adef266efd9ca19b9cc35577815d200858c98b4a0a286b6c6c12327b"
+  },
+  {
+    "id": "na_esp_canis_latrans",
+    "name": "Coyote",
+    "latin": "Canis latrans",
+    "className": "Mammalia",
+    "family": "Canidae",
+    "origin": "na3220",
+    "beforeSha256": "b4ff97b3f049edcf7d3d2f0ea82a9572a2e61bf383a7a9130881f83e960c67c6",
+    "afterSha256": "2f75ee7c45628c1a4b5916bd2f8c8d7c3817020359a6ce0f94f22d5a3d22904e"
+  },
+  {
+    "id": "na_esp_mephitis_mephitis",
+    "name": "Zorrillo rayado",
+    "latin": "Mephitis mephitis",
+    "className": "Mammalia",
+    "family": "Mephitidae",
+    "origin": "na3220",
+    "beforeSha256": "33a231d431cf4f760b81e7798276434006d754fb9cc7a400cae33960ffd8176f",
+    "afterSha256": "6fb5e1698d78fcfce960bfa793753d2cfa9f4d667aa70a85bff72291bd14e436"
+  },
+  {
+    "id": "na_esp_mustela_nigripes",
+    "name": "Hurón de patas negras",
+    "latin": "Mustela nigripes",
+    "className": "Mammalia",
+    "family": "Mustelidae",
+    "origin": "na3220",
+    "beforeSha256": "96f022065b391842062a761264b7afa27a7c8ea49519ea056d341d92a14fa52c",
+    "afterSha256": "78faf54c48a3dbce0ca2b255857c29e791ddb63c34b1f6de225b5fabc2b3ffdd"
+  },
+  {
+    "id": "na_esp_sylvilagus_floridanus",
+    "name": "Conejo de cola de algodón oriental",
+    "latin": "Sylvilagus floridanus",
+    "className": "Mammalia",
+    "family": "Leporidae",
+    "origin": "na3220",
+    "beforeSha256": "074bdd457eac1acee31211a2d6e6b8decb3156c935d59852a936f78f2fd5d551",
+    "afterSha256": "b540aa009e3ef47d6883efb6e02e67882142aae9e73d607e3d9e747c4a1d5b7b"
+  },
+  {
+    "id": "na_esp_cynomys_ludovicianus",
+    "name": "Perrito de las praderas de cola negra",
+    "latin": "Cynomys ludovicianus",
+    "className": "Mammalia",
+    "family": "Sciuridae",
+    "origin": "na3220",
+    "beforeSha256": "c4700d2d25ee1bcb6c8d9e2321fcd3d32d06526fc0ed8c8a730508bb57bd4e64",
+    "afterSha256": "972040ca81b7d7e9b448d7183abd6ddfa8a7016f2ece912fceccf7f5b50b3678"
+  },
+  {
+    "id": "na_esp_lepus_californicus",
+    "name": "Liebre de cola negra",
+    "latin": "Lepus californicus",
+    "className": "Mammalia",
+    "family": "Leporidae",
+    "origin": "na3220",
+    "beforeSha256": "66a5d0e50a93c9186520f35ec9219773e9f00399f89233fc2213c8e432d8cc24",
+    "afterSha256": "66a5d0e50a93c9186520f35ec9219773e9f00399f89233fc2213c8e432d8cc24"
+  },
+  {
+    "id": "na_esp_antilocapra_americana",
+    "name": "Berrendo",
+    "latin": "Antilocapra americana",
+    "className": "Mammalia",
+    "family": "Antilocapridae",
+    "origin": "na3220",
+    "beforeSha256": "ce51991e71b01a8c92221c8401580c6bfad8002ad7a9a2c5a2880034e0fe1718",
+    "afterSha256": "d77e6d2881de0375fc6f49f4c8e8c2f320e17924a342864a92ac4f7ad4582de4"
+  },
+  {
+    "id": "na_esp_bison_bison",
+    "name": "Bisonte americano",
+    "latin": "Bison bison",
+    "className": "Mammalia",
+    "family": "Bovidae",
+    "origin": "na3220",
+    "beforeSha256": "34ce467806d5142853a9c203ac68771f07922cd3a2780887d9779e913b2a875b",
+    "afterSha256": "1910151e9db231376ce9489a06f3dfff1dc38a77c42526140c3bc76a9e3f6650"
+  },
+  {
+    "id": "na_esp_phrynosoma_cornutum",
+    "name": "Lagarto cornudo de Texas",
+    "latin": "Phrynosoma cornutum",
+    "className": "Reptilia",
+    "family": "Phrynosomatidae",
+    "origin": "na3220",
+    "beforeSha256": "1b53c668f26a00c4413037deca11418b1f6308ea8b0d88c15f5d733e5b632ac8",
+    "afterSha256": "7d19565289ed43e8f90347cf340348c535cef5246fdb52919486b5fec482e5ac"
+  },
+  {
+    "id": "na_esp_crotalus_viridis",
+    "name": "Serpiente de cascabel de pradera",
+    "latin": "Crotalus viridis",
+    "className": "Reptilia",
+    "family": "Viperidae",
+    "origin": "na3220",
+    "beforeSha256": "85efcfbcf9e17d75866b80a70d221340fc78f1c0b608b49c7c48d83c7c17cdb3",
+    "afterSha256": "b1956be75517b0f5b9e3d169cdb8f3f92c8611050bb5761179f9b5077408e557"
+  },
+  {
+    "id": "eu_esp_0267",
+    "name": "Lagópodo común",
+    "latin": "Lagopus lagopus",
+    "className": "Aves",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "72cc62636a64d97829339b1d6dcbb6ffac47537fbaad6bdd21bbd034eea89de0",
+    "afterSha256": "72cc62636a64d97829339b1d6dcbb6ffac47537fbaad6bdd21bbd034eea89de0"
+  },
+  {
+    "id": "na_esp_erethizon_dorsatum",
+    "name": "Puercoespín norteamericano",
+    "latin": "Erethizon dorsatum",
+    "className": "Mammalia",
+    "family": "Erethizontidae",
+    "origin": "na3220",
+    "beforeSha256": "e56af0cb08757968f980d0447cf5e3474a60e91b28ff273afe62ee7a9b438204",
+    "afterSha256": "ca3e045caa902b35f024d0a4a92f4dfdb9be0af94197e97f24c2504906025c88"
+  },
+  {
+    "id": "na_esp_aix_sponsa",
+    "name": "Pato joyuyo",
+    "latin": "Aix sponsa",
+    "className": "Aves",
+    "family": "Anatidae",
+    "origin": "na3220",
+    "beforeSha256": "a0da74d2697abd349d9dcd2bcce68c528eafb24bab3e369d33641d94ab2cdd2f",
+    "afterSha256": "fa546504bce5a621212e3c2832d68a641848f202d182581ade544b569dec2c43"
+  },
+  {
+    "id": "na_esp_archilochus_colubris",
+    "name": "Colibrí garganta rubí",
+    "latin": "Archilochus colubris",
+    "className": "Aves",
+    "family": "Trochilidae",
+    "origin": "na3220",
+    "beforeSha256": "8507e3397be1657d0f140f2dea117393e8fda734efbdf4bc13b17d2cb759c309",
+    "afterSha256": "aa2554c9c5d51eacfbb0a10701a6ae74bf316a840f0a3753b29384cad1ef4312"
+  },
+  {
+    "id": "na_esp_procyon_lotor",
+    "name": "Mapache",
+    "latin": "Procyon lotor",
+    "className": "Mammalia",
+    "family": "Procyonidae",
+    "origin": "na3220",
+    "beforeSha256": "1278857262f5db1230bd741dcca59361dcc8ea7316a399776e7e8d7e42790af5",
+    "afterSha256": "5aeee80d6d12fe253eb2fc900989e9752493b9c1ed505d924a54599c44818ac3"
+  },
+  {
+    "id": "na_esp_odocoileus_virginianus",
+    "name": "Venado de cola blanca",
+    "latin": "Odocoileus virginianus",
+    "className": "Mammalia",
+    "family": "Cervidae",
+    "origin": "na3220",
+    "beforeSha256": "0225fc8bba60d9533d274440e0e78791fb62082eb4c5fa38579522feb9576002",
+    "afterSha256": "729a9c19f53ae0cf733885e206003c4dd69a669bba10961448725a86ef894980"
+  },
+  {
+    "id": "na_esp_esox_lucius",
+    "name": "Lucio del norte",
+    "latin": "Esox lucius",
+    "className": "Actinopterygii",
+    "family": "Esocidae",
+    "origin": "na3220",
+    "beforeSha256": "4e356c18e8f86522d8d03bfa12a9d1b06ea24ab26ae98e7e04bc0299866170d4",
+    "afterSha256": "182d88152781c26dab253c36e9a306de1972330ac0d79ffc4ac7c5972fb6f4e3"
+  },
+  {
+    "id": "na_esp_perca_flavescens",
+    "name": "Perca amarilla",
+    "latin": "Perca flavescens",
+    "className": "Actinopterygii",
+    "family": "Percidae",
+    "origin": "na3220",
+    "beforeSha256": "63b43a1b89075f8269e04cbc7b06bf00a36f661231031dd77c21edf06ec474f8",
+    "afterSha256": "436cf74070a93723148b08d861e0f783365fb0e6ed2a5fe78f5e50f202e9a853"
+  },
+  {
+    "id": "na_esp_salvelinus_fontinalis",
+    "name": "Trucha de arroyo",
+    "latin": "Salvelinus fontinalis",
+    "className": "Actinopterygii",
+    "family": "Salmonidae",
+    "origin": "na3220",
+    "beforeSha256": "3a232173eeed196db7f2261caa341265be3eb59e0444a323030bb890538012bd",
+    "afterSha256": "8ec8fdaba8bac6a0dc7fce2add53a31a7181e8ffabb6c25464194980866fd246"
+  },
+  {
+    "id": "na_esp_lithobates_clamitans",
+    "name": "Rana verde",
+    "latin": "Lithobates clamitans",
+    "className": "Amphibia",
+    "family": "Ranidae",
+    "origin": "na3220",
+    "beforeSha256": "2e64ae2f85d6f24755f9d65eff7781333400cbc29226426b4ad81f02a2b49877",
+    "afterSha256": "2c40cfd8d3f8180c621d561406832222ef3ec303f32da7a868ae42e19befd026"
+  },
+  {
+    "id": "na_esp_ambystoma_tigrinum",
+    "name": "Salamandra tigre",
+    "latin": "Ambystoma tigrinum",
+    "className": "Amphibia",
+    "family": "Ambystomatidae",
+    "origin": "na3220",
+    "beforeSha256": "03cc8c7e745f3462b944a2edf672d3979f2b9c671193b847a9c7db190bd79d4d",
+    "afterSha256": "89a2824473b9a49c37bdf4c032109692809f54742ea1637b20d90a4b4d1569a5"
+  },
+  {
+    "id": "na_esp_chrysemys_picta",
+    "name": "Tortuga pintada",
+    "latin": "Chrysemys picta",
+    "className": "Reptilia",
+    "family": "Emydidae",
+    "origin": "na3220",
+    "beforeSha256": "fc134ac6fc094ed6a41738400dfda817b4f9b7958f7de5e3d741ad2662536ed4",
+    "afterSha256": "24001f88a0b67222d184600e5722410e4193c3a6eb5c7962be53a9511a1bcbc0"
+  },
+  {
+    "id": "na_esp_callipepla_californica",
+    "name": "Codorniz de California",
+    "latin": "Callipepla californica",
+    "className": "Aves",
+    "family": "Odontophoridae",
+    "origin": "na3220",
+    "beforeSha256": "2e37edddab15824395b4ce2a43b9571fb3860dd59ce2246dbf93b9d02ef8cee8",
+    "afterSha256": "8127a5739c6d286fc8c4a02469ae14e99bfb5006968d91d51fcc8dbc45ae9d5b"
+  },
+  {
+    "id": "na_esp_calypte_anna",
+    "name": "Colibrí de Ana",
+    "latin": "Calypte anna",
+    "className": "Aves",
+    "family": "Trochilidae",
+    "origin": "na3220",
+    "beforeSha256": "35638948ad3068efb2d38bf2b8aadc43cf1e0ab9c3766b233f9e0e3e299b8687",
+    "afterSha256": "7c8e2a6c855363b4f10a2a9a19a671f0614e9801d2b8b5772d9a9c4ca9a8e785"
+  },
+  {
+    "id": "na_esp_strix_occidentalis",
+    "name": "Búho moteado",
+    "latin": "Strix occidentalis",
+    "className": "Aves",
+    "family": "Strigidae",
+    "origin": "na3220",
+    "beforeSha256": "af3fee2247ccf02f24a5acf6903f82bf02c17ada05579b375f10b7120c663de8",
+    "afterSha256": "d5c4ab2e14dc04926b5268802ee6987f66c367821f77daeca4d49ef24d4b8790"
+  },
+  {
+    "id": "na_esp_spilogale_gracilis",
+    "name": "Zorrillo moteado occidental",
+    "latin": "Spilogale gracilis",
+    "className": "Mammalia",
+    "family": "Mephitidae",
+    "origin": "na3220",
+    "beforeSha256": "2622f104e82f092de2c19b814c0f808e78d5220e606e63b0f9d332f191a4619e",
+    "afterSha256": "292c50a1f49b19d2d278e6e4d6b605adf028ff1e40cd2d04a85bb8c212242eab"
+  },
+  {
+    "id": "na_esp_dicamptodon_tenebrosus",
+    "name": "Salamandra gigante del Pacífico",
+    "latin": "Dicamptodon tenebrosus",
+    "className": "Amphibia",
+    "family": "Ambystomatidae",
+    "origin": "na3220",
+    "beforeSha256": "3c8436fdcc7a20be83be108bb459dd2e7665b5dbaaada23ad297c5df8e8746e7",
+    "afterSha256": "39b917fc27e7f37ce8f20084078f5f113e45b69a30a19f100321b3bea4bc6bf5"
+  },
+  {
+    "id": "na_esp_lampropeltis_californiae",
+    "name": "Serpiente rey de California",
+    "latin": "Lampropeltis californiae",
+    "className": "Reptilia",
+    "family": "Colubridae",
+    "origin": "na3220",
+    "beforeSha256": "df4bfebad48b7767f13a4e1e48ffd7551efd8662fddcba70e71e30843c612132",
+    "afterSha256": "f0c2f11e148ae8c218be64cd3fa73ada797284a7ee967c56e5015e6d93a44744"
+  },
+  {
+    "id": "na_esp_cardinalis_cardinalis",
+    "name": "Cardenal rojo",
+    "latin": "Cardinalis cardinalis",
+    "className": "Aves",
+    "family": "Cardinalidae",
+    "origin": "na3220",
+    "beforeSha256": "f67533e8cc3ba057dec6ddb937d301ab30c8bad20567023b089ed03a8e74626c",
+    "afterSha256": "2ed736a4bed59ef51f2892e9306db7720520391e30c754b555dc8b0e2b4826bf"
+  },
+  {
+    "id": "na_esp_hylocichla_mustelina",
+    "name": "Zorzal maculado",
+    "latin": "Hylocichla mustelina",
+    "className": "Aves",
+    "family": "Turdidae",
+    "origin": "na3220",
+    "beforeSha256": "24597525dea53313d9524304d3c248a3afd7418bbf0354d4474ba8be9ba2e796",
+    "afterSha256": "cb2e02ef9777a69926a08ab55c1b30d6f3cfa7804de20285c5e716a0d1659823"
+  },
+  {
+    "id": "na_esp_urocyon_cinereoargenteus",
+    "name": "Zorro gris",
+    "latin": "Urocyon cinereoargenteus",
+    "className": "Mammalia",
+    "family": "Canidae",
+    "origin": "na3220",
+    "beforeSha256": "d0ce3e8f93f1ca0f8204177f4e93e651bf4214d1a6e383712e4809d80c808067",
+    "afterSha256": "7570fdd8dfad1298a27426d48ec780a07745b33509c3034963e672f7906dc519"
+  },
+  {
+    "id": "na_esp_didelphis_virginiana",
+    "name": "Zarigüeya de Virginia",
+    "latin": "Didelphis virginiana",
+    "className": "Mammalia",
+    "family": "Didelphidae",
+    "origin": "na3220",
+    "beforeSha256": "16dfb3a084e3f8dcf3fd88ae4684e5d87d1b1e2fc9733b90608b08f03c89f3da",
+    "afterSha256": "c7667382484b17949abadce2f7634b68822a96273ba7d0c6d877100c26efef23"
+  },
+  {
+    "id": "na_esp_sciurus_carolinensis",
+    "name": "Ardilla gris oriental",
+    "latin": "Sciurus carolinensis",
+    "className": "Mammalia",
+    "family": "Sciuridae",
+    "origin": "na3220",
+    "beforeSha256": "e92844131b61ab1aea99b47a2d172f5604e23988036c70ea582ee272ac6aea8c",
+    "afterSha256": "e92844131b61ab1aea99b47a2d172f5604e23988036c70ea582ee272ac6aea8c"
+  },
+  {
+    "id": "na_esp_ambystoma_maculatum",
+    "name": "Salamandra de manchas amarillas",
+    "latin": "Ambystoma maculatum",
+    "className": "Amphibia",
+    "family": "Ambystomatidae",
+    "origin": "na3220",
+    "beforeSha256": "048d55e9d5e5f5e487d7f8ac96395c8d6614c11d54fc0a1d19e77b182ab12a00",
+    "afterSha256": "d623b2c7ef2dbd0108da3767c928dc703a5a9aa9da6d8ce59d9f252b955092b9"
+  },
+  {
+    "id": "na_esp_crotalus_horridus",
+    "name": "Serpiente de cascabel del bosque",
+    "latin": "Crotalus horridus",
+    "className": "Reptilia",
+    "family": "Viperidae",
+    "origin": "na3220",
+    "beforeSha256": "fd1a33fa3997e3410e6931b6594b25cb2650c77dabb24888fe4183060d7f1c65",
+    "afterSha256": "7cd2fe37d0b5d0065c0d85d26f1c5b2593d52efdab2420f8a101ccb5737ffc0c"
+  },
+  {
+    "id": "na_esp_geococcyx_californianus",
+    "name": "Correcaminos mayor",
+    "latin": "Geococcyx californianus",
+    "className": "Aves",
+    "family": "Cuculidae",
+    "origin": "na3220",
+    "beforeSha256": "c72e15efd88b1e162e7ed8a956d81beec2e52d7a2cd1a2d382f38cdeb501c92e",
+    "afterSha256": "a84b132a8ee5f3d502fc23eb9ae8f5869f13d8aa8402dc9213992de037f0d722"
+  },
+  {
+    "id": "na_esp_micrathene_whitneyi",
+    "name": "Tecolote enano",
+    "latin": "Micrathene whitneyi",
+    "className": "Aves",
+    "family": "Strigidae",
+    "origin": "na3220",
+    "beforeSha256": "413a6e6c445b0ff930c59ec0a2b817b142563f72d70cb99ea0e9b7695bc7fea1",
+    "afterSha256": "690f0d07e98ea683a50c5468e715bf7dfbd3cd5a1ff07b8c66f1caa6eb975782"
+  },
+  {
+    "id": "na_esp_vulpes_macrotis",
+    "name": "Zorro kit",
+    "latin": "Vulpes macrotis",
+    "className": "Mammalia",
+    "family": "Canidae",
+    "origin": "na3220",
+    "beforeSha256": "91a07b5c55cff96ef5052b2d61b13b10c2f1f969bab3c08423001d99ce17a2d9",
+    "afterSha256": "a83568a9b57941ebae14f55ce2c55be559737659c7590b567d1195137bfa6522"
+  },
+  {
+    "id": "na_esp_dipodomys_merriami",
+    "name": "Rata canguro de Merriam",
+    "latin": "Dipodomys merriami",
+    "className": "Mammalia",
+    "family": "Heteromyidae",
+    "origin": "na3220",
+    "beforeSha256": "4380b54b34a0a17da4a8aec18d8ad92fc9e2369aaddcff0d555a3a667753ab85",
+    "afterSha256": "230712e8185114d2c2a7731965b7f5fc35da2cc0b9881615f80da085eca06b1b"
+  },
+  {
+    "id": "na_esp_sylvilagus_audubonii",
+    "name": "Conejo del desierto",
+    "latin": "Sylvilagus audubonii",
+    "className": "Mammalia",
+    "family": "Leporidae",
+    "origin": "na3220",
+    "beforeSha256": "42adf3c4ea1d3804154a7ba3e4a4b4710de2f15576538199d37d2c73e40b540c",
+    "afterSha256": "067a74b9e986b550bbce0c944051172d5bdb7219e711f5383c9491b5d480d4f5"
+  },
+  {
+    "id": "na_esp_dicotyles_tajacu",
+    "name": "Pecarí de collar",
+    "latin": "Dicotyles tajacu",
+    "className": "Mammalia",
+    "family": "Tayassuidae",
+    "origin": "na3220",
+    "beforeSha256": "35dff2f39272acd61a91b358bdab673bd9811539949032760d274b8bd1e2e0cb",
+    "afterSha256": "ad769e233dc3ccfcee2bd21705b6a35b7f8a04c504c5cc1f44086adac03bae47"
+  },
+  {
+    "id": "na_esp_heloderma_suspectum",
+    "name": "Monstruo de Gila",
+    "latin": "Heloderma suspectum",
+    "className": "Reptilia",
+    "family": "Helodermatidae",
+    "origin": "na3220",
+    "beforeSha256": "4cb919dd91590cbf87beb665941f9447e031ec082839d516749efed47f063e98",
+    "afterSha256": "d3b1276642b37437c809ea121667f3911a27189a51a7e5fd38ef62d43d409197"
+  },
+  {
+    "id": "na_esp_incilius_alvarius",
+    "name": "Sapo del desierto de Sonora",
+    "latin": "Incilius alvarius",
+    "className": "Amphibia",
+    "family": "Bufonidae",
+    "origin": "na3220",
+    "beforeSha256": "1280332df7fcd0b4348bd6636f783dc2d1d1dded7b11007b8a80bd797b5f737e",
+    "afterSha256": "236bea917e443cb6c504c7d6214795c9c7045df658a9c8c8939a08151b5eac57"
+  },
+  {
+    "id": "na_esp_crotalus_atrox",
+    "name": "Serpiente de cascabel diamante occidental",
+    "latin": "Crotalus atrox",
+    "className": "Reptilia",
+    "family": "Viperidae",
+    "origin": "na3220",
+    "beforeSha256": "62953c42ca2af270b865ca56ee79239de1d44d5cbf848aad1a5f45d80467fa0e",
+    "afterSha256": "a7d69c8ec32bec2e8bcd313e085780b4f9b7920cd8ee2c092d4f7de91fa42bf8"
+  },
+  {
+    "id": "na_esp_gopherus_agassizii",
+    "name": "Tortuga del desierto",
+    "latin": "Gopherus agassizii",
+    "className": "Reptilia",
+    "family": "Testudinidae",
+    "origin": "na3220",
+    "beforeSha256": "8bd63768bf88eba740689aee2697e80102c98b33acf910daa906c4bb27eb96c4",
+    "afterSha256": "be397d15ae26497ead92d604c7cd4a0c0558f2c2afc45003d1f3cfa1980cc6c1"
+  },
+  {
+    "id": "na_esp_ara_militaris",
+    "name": "Guacamaya verde",
+    "latin": "Ara militaris",
+    "className": "Aves",
+    "family": "Psittacidae",
+    "origin": "na3220",
+    "beforeSha256": "0bd01bb306e315e93c02355ab5101d968cd2f393a8569ee0ff1cfd08624e17b3",
+    "afterSha256": "be93b63fe45cde026b03418f2251d64a4fcd01190d4aa54eb3cccaf9823e59c7"
+  },
+  {
+    "id": "na_esp_meleagris_gallopavo",
+    "name": "Guajolote silvestre",
+    "latin": "Meleagris gallopavo",
+    "className": "Aves",
+    "family": "Phasianidae",
+    "origin": "na3220",
+    "beforeSha256": "566394a6dd21810e5fb8194529b6df9222ea30d25d482a52b44de01b4d815a61",
+    "afterSha256": "156324905d1303208c3d4bd20b087f1b24817474c3bf23f903f50f80ef17293c"
+  },
+  {
+    "id": "na_esp_panthera_onca",
+    "name": "Jaguar",
+    "latin": "Panthera onca",
+    "className": "Mammalia",
+    "family": "Felidae",
+    "origin": "na3220",
+    "beforeSha256": "222412ba0cab6102e28b001d4863c8607ce5e1c01b5ebf337db3fb0ddfc237b4",
+    "afterSha256": "5c96ee2e5484844a40e4a686b18845d0cdfa5268c8b1145302edb3fa83a9cf6d"
+  },
+  {
+    "id": "na_esp_nasua_narica",
+    "name": "Coatí de nariz blanca",
+    "latin": "Nasua narica",
+    "className": "Mammalia",
+    "family": "Procyonidae",
+    "origin": "na3220",
+    "beforeSha256": "5d8ce977d3ad9f106b8346d9c4d2b0f2fddf54cfe6f1d861e1c19e4d21b7a4bb",
+    "afterSha256": "bf373ea408bd13625f59b3e210d361014569850fe673a56b4fda8e16f7db2633"
+  },
+  {
+    "id": "na_esp_taxidea_taxus",
+    "name": "Tejón americano",
+    "latin": "Taxidea taxus",
+    "className": "Mammalia",
+    "family": "Mustelidae",
+    "origin": "na3220",
+    "beforeSha256": "a1b8e36b16fc352a8ca9d4cda0fe75feaa98d84048b8af8d3930fbdebcc5ae84",
+    "afterSha256": "40d834d1e741ced261e0d65a47363e72c3a654a4050057ad8cc5d5438e585206"
+  },
+  {
+    "id": "na_esp_ambystoma_mexicanum",
+    "name": "Ajolote mexicano",
+    "latin": "Ambystoma mexicanum",
+    "className": "Amphibia",
+    "family": "Ambystomatidae",
+    "origin": "na3220",
+    "beforeSha256": "d4880618c5780c8d6a3b968decda5d1e317328abc4d85f8b4f55e10763db22fd",
+    "afterSha256": "ae35c498ea588c7d26cc753276f2bf7b0a25ddfe25a18c0aa5e032fd5c4667b5"
+  },
+  {
+    "id": "na_esp_meleagris_ocellata",
+    "name": "Pavo ocelado",
+    "latin": "Meleagris ocellata",
+    "className": "Aves",
+    "family": "Phasianidae",
+    "origin": "na3220",
+    "beforeSha256": "7ab45d0ec23250c761e075a9a1ff5287b322af9ec5a8d1d44091ce92cda20994",
+    "afterSha256": "e90a62f4500d8493cea41cbc35716499d525efc0ff08617efd5dceb36e88ca9f"
+  },
+  {
+    "id": "na_esp_ramphastos_sulfuratus",
+    "name": "Tucán pico iris",
+    "latin": "Ramphastos sulfuratus",
+    "className": "Aves",
+    "family": "Ramphastidae",
+    "origin": "na3220",
+    "beforeSha256": "3ba651a424527c804e288b7404458533f85dfc537b30e0fdccaa09da773fd496",
+    "afterSha256": "c462b79aa255b732a456fd4cafb2c42a00d13c248404b2d85cd58bdb33b12dff"
+  },
+  {
+    "id": "na_esp_herpailurus_yagouaroundi",
+    "name": "Jaguarundi",
+    "latin": "Herpailurus yagouaroundi",
+    "className": "Mammalia",
+    "family": "Felidae",
+    "origin": "na3220",
+    "beforeSha256": "0bad8e56bf3917604a345183e3575c3cd457c7b1c91e9d1f32c791eff081e53a",
+    "afterSha256": "3e0a8e977fbc2f817d018101527843424b9ebe34a2306c7247a88307ef14654d"
+  },
+  {
+    "id": "na_esp_leopardus_pardalis",
+    "name": "Ocelote",
+    "latin": "Leopardus pardalis",
+    "className": "Mammalia",
+    "family": "Felidae",
+    "origin": "na3220",
+    "beforeSha256": "3444c87cf9824aa416ddb0a1b381f15a28015e9f106026fb1484f404e57d9693",
+    "afterSha256": "db8e55fb6811633691eaaff29531ba2ba9f7aabf1e3546be5df9a1c498f80593"
+  },
+  {
+    "id": "na_esp_leopardus_wiedii",
+    "name": "Tigrillo margay",
+    "latin": "Leopardus wiedii",
+    "className": "Mammalia",
+    "family": "Felidae",
+    "origin": "na3220",
+    "beforeSha256": "c43f32a12bcd680aac3bc13365b3c4f2d25513f5a6f5753449dc525f24f16991",
+    "afterSha256": "2859542e1a244ce32b42d647ab987c52e2b84cf003d65cceb70ec6f82d74796a"
+  },
+  {
+    "id": "na_esp_cuniculus_paca",
+    "name": "Tepezcuintle",
+    "latin": "Cuniculus paca",
+    "className": "Mammalia",
+    "family": "Cuniculidae",
+    "origin": "na3220",
+    "beforeSha256": "0061851f7d022eb96c412aafb8f7aa8db2bd81f5f14b01b7c531802543eedb06",
+    "afterSha256": "07f228fd3893d674ccfa0cbce52f2825a4e6f2612bd3b29d3db3849c4ed4d6d6"
+  },
+  {
+    "id": "na_esp_procyon_pygmaeus",
+    "name": "Mapache de Cozumel",
+    "latin": "Procyon pygmaeus",
+    "className": "Mammalia",
+    "family": "Procyonidae",
+    "origin": "na3220",
+    "beforeSha256": "ccaa74ae923be9d61db53b5f80e5f8685e8785bf6b2836de58964a9d014068bd",
+    "afterSha256": "4c125d0eaabf6b23b160c50d70c94e5926688f28bd4a0a9d4bc0fb1a51996678"
+  },
+  {
+    "id": "na_esp_alouatta_pigra",
+    "name": "Mono aullador negro",
+    "latin": "Alouatta pigra",
+    "className": "Mammalia",
+    "family": "Atelidae",
+    "origin": "na3220",
+    "beforeSha256": "ffceff03ba59b24a10c1582aa9098362278990e729123c335090ac4d19a6cd47",
+    "afterSha256": "5c1b0183f5696badf22c8dba9b6cedde17d68e0139def86cbcf8ae3352583584"
+  },
+  {
+    "id": "na_esp_ateles_geoffroyi",
+    "name": "Mono araña de Geoffroy",
+    "latin": "Ateles geoffroyi",
+    "className": "Mammalia",
+    "family": "Atelidae",
+    "origin": "na3220",
+    "beforeSha256": "0b586b3e5f54c8a65b6144396dae9c58b343d5d69410fccadf6ad00a3cd3a654",
+    "afterSha256": "bb715829a8a0f26b41749b34c7f37d71eb81b1ace687cf131ec0f894db7e7729"
+  },
+  {
+    "id": "na_esp_tapirus_bairdii",
+    "name": "Tapir centroamericano",
+    "latin": "Tapirus bairdii",
+    "className": "Mammalia",
+    "family": "Tapiridae",
+    "origin": "na3220",
+    "beforeSha256": "b1544d581354cc3a12664c38296913cabf6c380456e63ac120bd9969434bec8b",
+    "afterSha256": "da31e842671b59e91bb3210b7c749b424e0c69f904babde02f8ab7419611a5e9"
+  },
+  {
+    "id": "na_esp_ctenosaura_similis",
+    "name": "Iguana negra de cola espinosa",
+    "latin": "Ctenosaura similis",
+    "className": "Reptilia",
+    "family": "Iguanidae",
+    "origin": "na3220",
+    "beforeSha256": "224e6e59fd1e26e56f77ca22e9abd9a7885d25e3cd1ada9c00ffc5b0dfd5b558",
+    "afterSha256": "9f6437ea9211e8c0a46f57d3291fe7ef7ad2b1dd7c11a2ce7dbe18d198489394"
+  },
+  {
+    "id": "na_esp_boa_imperator",
+    "name": "Boa común",
+    "latin": "Boa imperator",
+    "className": "Reptilia",
+    "family": "Boidae",
+    "origin": "na3220",
+    "beforeSha256": "271cbf91ad225f57ac1e2e6890c525cc4fb275657854ffa2ca2b0a9cdef6c9d9",
+    "afterSha256": "9c0cd33a368707a2977c3a880a4def088b1ce595229a2878947cdda7b4a72baf"
+  },
+  {
+    "id": "na_esp_ardea_herodias",
+    "name": "Garza azulada",
+    "latin": "Ardea herodias",
+    "className": "Aves",
+    "family": "Ardeidae",
+    "origin": "na3220",
+    "beforeSha256": "f23316a70c1621c6ef09a25b399a04052f62ffd5dc51c398f4a477e230c7ce58",
+    "afterSha256": "78b2ac6848082c5895541b675980defbb1d518fc803dd2f86b2e27acd6e55e52"
+  },
+  {
+    "id": "na_esp_pelecanus_occidentalis",
+    "name": "Pelícano pardo",
+    "latin": "Pelecanus occidentalis",
+    "className": "Aves",
+    "family": "Pelecanidae",
+    "origin": "na3220",
+    "beforeSha256": "68f9beb78f95bc5a8fe25e6f27975fd46ae8cb7795643af6768df3e9ed78e0bd",
+    "afterSha256": "dac9787974d1164dad638c32c69936b241466a5d5dce7816515e40f558a34ccb"
+  },
+  {
+    "id": "na_esp_platalea_ajaja",
+    "name": "Espátula rosada",
+    "latin": "Platalea ajaja",
+    "className": "Aves",
+    "family": "Threskiornithidae",
+    "origin": "na3220",
+    "beforeSha256": "55e195b0af630522ee1852eee6a7f2549c48aeb85ee56c0aaff8e80d68eb7614",
+    "afterSha256": "317cd9d5f23fad6d8d31746000fb9b58b5e5e69b1039a7791c2222c2d8e327f2"
+  },
+  {
+    "id": "af_xlsx_131_pandion_haliaetus",
+    "name": "Águila pescadora",
+    "latin": "Pandion haliaetus",
+    "className": "Aves",
+    "family": "",
+    "origin": "existing",
+    "beforeSha256": "7bc23753f787866d8f73fcc16e726c3082fe3a6c3b15c7f5e4cab3394f9bb37d",
+    "afterSha256": "7bc23753f787866d8f73fcc16e726c3082fe3a6c3b15c7f5e4cab3394f9bb37d"
+  },
+  {
+    "id": "na_esp_trichechus_manatus",
+    "name": "Manatí antillano",
+    "latin": "Trichechus manatus",
+    "className": "Mammalia",
+    "family": "Trichechidae",
+    "origin": "na3220",
+    "beforeSha256": "d5679ccb24bf0e5e6e59222e5300a680e3718c6c3bcff7bd365077fd3ab3649e",
+    "afterSha256": "9312991dbf75c03bebcdb33714c3c76f26345acdf1a2b8dcbd53ae4a3f91b11d"
+  },
+  {
+    "id": "na_esp_dasypus_novemcinctus",
+    "name": "Armadillo de nueve bandas",
+    "latin": "Dasypus novemcinctus",
+    "className": "Mammalia",
+    "family": "Dasypodidae",
+    "origin": "na3220",
+    "beforeSha256": "42e626bdfc5b27ce6b81f5c8fd13c2eec3fb38785e6a4420c614b589b0bad971",
+    "afterSha256": "280a23d5e9af9a42870a08636bd2a5479b9c96bddc5bb7a6bb3047da85b2d1f9"
+  },
+  {
+    "id": "na_esp_alligator_mississippiensis",
+    "name": "Aligátor americano",
+    "latin": "Alligator mississippiensis",
+    "className": "Reptilia",
+    "family": "Alligatoridae",
+    "origin": "na3220",
+    "beforeSha256": "b1f5978e4b62f99b7896be842bd1c927dc5097a3dbadef3c00fc39d19a3ce0c3",
+    "afterSha256": "714be69b44328add1d68e501ad9040bb1d00759bcc42f9fa771a58b8d7e85107"
+  },
+  {
+    "id": "na_esp_terrapene_carolina",
+    "name": "Tortuga de caja de Florida",
+    "latin": "Terrapene carolina",
+    "className": "Reptilia",
+    "family": "Emydidae",
+    "origin": "na3220",
+    "beforeSha256": "9ee835fe64355dd78bd5d579e1f08044e7e60e445b885dbccf0a2c739d937914",
+    "afterSha256": "de45e314c61c147e541364bbaeea130ed5ed524c94ad327fe3b8eb07740d7788"
+  },
+  {
+    "id": "na_esp_ara_macao",
+    "name": "Guacamaya roja",
+    "latin": "Ara macao",
+    "className": "Aves",
+    "family": "Psittacidae",
+    "origin": "na3220",
+    "beforeSha256": "9f0dd60a5abe7b97297b51f77845d6b2b09f254533ae4ede77b06902a7c4c289",
+    "afterSha256": "18fee09f0515003e69bf9a721932f612c2f7deb9616121d99fc5a6582bea02ee"
+  },
+  {
+    "id": "na_esp_pharomachrus_mocinno",
+    "name": "Quetzal resplandeciente",
+    "latin": "Pharomachrus mocinno",
+    "className": "Aves",
+    "family": "Trogonidae",
+    "origin": "na3220",
+    "beforeSha256": "17d4baca2e89f58e4d9d493163de5bcd58a70e046faf53b27d65a0281853d674",
+    "afterSha256": "33ece900be2f6c025056d00919ed6d9f4bae962a2d84f7aa60638ffe65f036b8"
+  },
+  {
+    "id": "na_esp_caracara_plancus",
+    "name": "Caracara quebrantahuesos",
+    "latin": "Caracara plancus",
+    "className": "Aves",
+    "family": "Falconidae",
+    "origin": "na3220",
+    "beforeSha256": "526e8bd76100f93a376061561ab8bbc5a741efc13edeec6d0c774f73bb28367a",
+    "afterSha256": "b818a1b96c7ef6afccdbb937fda34f787dc2b02a97298764e1e55b1ea62510ed"
+  },
+  {
+    "id": "na_esp_bradypus_variegatus",
+    "name": "Perezoso de tres dedos",
+    "latin": "Bradypus variegatus",
+    "className": "Mammalia",
+    "family": "Bradypodidae",
+    "origin": "na3220",
+    "beforeSha256": "4aab4493805611cdf82fc8fa22c797e85eedab58c4eb140fa34e0f70e7c2d0e0",
+    "afterSha256": "683957649ce8fc1ceb399a7ae7a07826fc2e5442ee6511ef818e2166c0c0ab71"
+  },
+  {
+    "id": "na_esp_didelphis_marsupialis",
+    "name": "Zarigüeya común",
+    "latin": "Didelphis marsupialis",
+    "className": "Mammalia",
+    "family": "Didelphidae",
+    "origin": "na3220",
+    "beforeSha256": "74d051636f5df5b660c59245bfe2b093834820fadc4731dee7bd06b2c63a9b5c",
+    "afterSha256": "a56202cbfc0b7c68033ead2999a16fff3065a885c4f4de9d23cc635e00313cb7"
+  },
+  {
+    "id": "na_esp_myrmecophaga_tridactyla",
+    "name": "Oso hormiguero gigante",
+    "latin": "Myrmecophaga tridactyla",
+    "className": "Mammalia",
+    "family": "Myrmecophagidae",
+    "origin": "na3220",
+    "beforeSha256": "56f4780104cfb0ca12f286416272ec260aac6363040833a3639e54fd779b98cb",
+    "afterSha256": "df57131c57939b514e66cb43347b09bd70adf83b0935e385cf5d30267683baf3"
+  },
+  {
+    "id": "na_esp_alouatta_palliata",
+    "name": "Mono aullador de manto",
+    "latin": "Alouatta palliata",
+    "className": "Mammalia",
+    "family": "Atelidae",
+    "origin": "na3220",
+    "beforeSha256": "b45bdd8496dd94557106433bd90392430786f7134bade98d83ea91c4abd93c50",
+    "afterSha256": "ad35ad1d23133ee6ef801baf64a56e0af0b90807e94bc75c09f50c40484b88b6"
+  },
+  {
+    "id": "na_esp_cebus_imitator",
+    "name": "Mono capuchino cariblanco",
+    "latin": "Cebus imitator",
+    "className": "Mammalia",
+    "family": "Cebidae",
+    "origin": "na3220",
+    "beforeSha256": "9c67e53e0cb382155eb82a591ac77d4e9d636904873904c5ef9b09e16f4c9a0a",
+    "afterSha256": "20a3c6071444f725a776e9eb15291a43b8184306338dcffa18a38f4504f51800"
+  },
+  {
+    "id": "na_esp_basiliscus_plumifrons",
+    "name": "Basilisco verde",
+    "latin": "Basiliscus plumifrons",
+    "className": "Reptilia",
+    "family": "Corytophanidae",
+    "origin": "na3220",
+    "beforeSha256": "9bae22a93b402914c60640405088dd9b6a27c082b5cbc78e5748388ec08ed8eb",
+    "afterSha256": "86c0c741e0a09df7d81b78b4559e2d7e3bd4cf62adda90ea62404557d7c10cc0"
+  },
+  {
+    "id": "na_esp_agalychnis_callidryas",
+    "name": "Rana de ojos rojos",
+    "latin": "Agalychnis callidryas",
+    "className": "Amphibia",
+    "family": "Phyllomedusidae",
+    "origin": "na3220",
+    "beforeSha256": "b29506306b1023a687b763c8c15d8ba121e74c1d7165f2dcf8e09a5cddc2d9cb",
+    "afterSha256": "bcb06e8dae6a792c9148c0f2a46d0be513531acb19e5ecfa478880508c4c10bc"
+  },
+  {
+    "id": "na_esp_hyalinobatrachium_fleischmanni",
+    "name": "Rana de cristal",
+    "latin": "Hyalinobatrachium fleischmanni",
+    "className": "Amphibia",
+    "family": "Centrolenidae",
+    "origin": "na3220",
+    "beforeSha256": "9f46af50cea114f53d39054bd6750f31c1565bd28230744dab91a89fef73f372",
+    "afterSha256": "622cdb6ac4576d8a0a5a45a4fb3f45fa97d1996b6d83e7faaf9792df05352f4d"
+  },
+  {
+    "id": "na_esp_leptophis_ahaetulla",
+    "name": "Serpiente arborícola verde",
+    "latin": "Leptophis ahaetulla",
+    "className": "Reptilia",
+    "family": "Colubridae",
+    "origin": "na3220",
+    "beforeSha256": "0023397e77cac92c851402ba5bc019c4c770693be5531acc0294a2217d98b521",
+    "afterSha256": "69a9d4e3c62e73badceef2f190db416330361696b78b3258ecb26ad76e5ab2a8"
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "cpuSlowdown": 4,
+  "device": "Chromium desktop with CPU emulation; not a physical Android benchmark",
+  "cases": [
+    {
+      "version": "3.22.0",
+      "species": 589,
+      "bestiaryColdMs": 7822,
+      "bestiaryWarmMs": 2409,
+      "bestiarySynchronousWarmTrialsMs": [
+        2289.2999999998137,
+        1435,
+        1410,
+        1752.2000000001863,
+        1752.7000000001863
+      ],
+      "bestiarySynchronousWarmMedianMs": 1752.2000000001863,
+      "heapUsedBytes": 10206308,
+      "averageSerializeMs": 0.8399999999906868,
+      "bytes": 29529,
+      "labDefaultCards": 128,
+      "labRenderRemaining128Ms": 0.09999999962747097,
+      "svgWarm128Ms": 0.42999999998137356,
+      "labDefaultNodes": 4135
+    },
+    {
+      "version": "3.22.1",
+      "species": 589,
+      "bestiaryColdMs": 7551,
+      "bestiaryWarmMs": 5416,
+      "bestiarySynchronousWarmTrialsMs": [
+        5010,
+        4567.199999999255,
+        4573.4000000003725,
+        5229.299999999814,
+        4703.600000000559
+      ],
+      "bestiarySynchronousWarmMedianMs": 4703.600000000559,
+      "heapUsedBytes": 10694212,
+      "averageSerializeMs": 2.3799999999813735,
+      "bytes": 29529,
+      "labDefaultCards": 32,
+      "labRenderRemaining128Ms": 168.29999999981374,
+      "svgWarm128Ms": 0.5099999999627471,
+      "labDefaultNodes": 1434,
+      "labAllCards": 128,
+      "labAllNodes": 4704
+    }
+  ],
+  "offlineAssets": 73,
+  "offlineUncompressedBytes": 3953222
+}

@@ -5,6 +5,7 @@
 'use strict';
 function render(sp,color,skin='normal',sex=null){
  if(!sp||sp.origin!=='na3220')return null;
+ const polished=root.ATLAS_NORTH_POLISH_V3221?.(sp,color,skin,sex);if(polished)return polished;
  const latin=sp.latin,g=latin.split(' ')[0],family=sp.family,female=sex==='female';
  // Existing family engines supply continuous anatomy where the real taxon is already supported.
  const mammal=root.ATLAS_MAMMAL_ART_V3194;
