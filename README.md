@@ -1,3 +1,7 @@
+# El Gran Atlas v3.21.2 — Actualización de navegador y PWA
+
+Corrige las instalaciones que seguían mostrando la malla anterior desde su caché. [Actualizar conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar.html?version=3.21.2) · [Diagnóstico y verificación](README_V3212.md).
+
 # El Gran Atlas v3.21.1b — Atlas continental simple
 
 Corrección de alcance: 73 celdas en lugar de 406, siluetas compactas y las 57 regiones conservadas. [Informe de la corrección](README_ATLAS_SIMPLE.md) · [Comparación cartográfica](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-atlas-v3211b.html) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/).

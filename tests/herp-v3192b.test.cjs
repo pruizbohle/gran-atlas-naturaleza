@@ -97,7 +97,7 @@ test('family silhouettes and requested species morphologies have distinct contou
 
 test('standalone laboratory catalog is reproducible and offline assets exist',()=>{
  execFileSync(process.execPath,['scripts/herp-lab-specimens.cjs','--check']);
- const sw=fs.readFileSync('www/sw.js','utf8');assert.match(sw,/gran-atlas-v3\.21\.1b-/);assert.match(sw,/url.search=''/);
+ const sw=fs.readFileSync('www/sw.js','utf8');assert.match(sw,/gran-atlas-v3\.21\.2-/);assert.match(sw,/url.search=''/);
  for(const path of ['./js/lab/herp-art-v3192-before.js','./js/lab/herp-specimens-v3192b.js']){
   assert.ok(sw.includes("'"+path+"'"));assert.ok(fs.existsSync('www/'+path));
  }

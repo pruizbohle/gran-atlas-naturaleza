@@ -1,0 +1,19 @@
+{
+  "version": "3.21.2",
+  "oldDenseInstallReproduced": true,
+  "reloadAloneStillOld": true,
+  "otherWindowsGuard": true,
+  "explicitUpdaterRecovered": true,
+  "atlasCells": [
+    10,
+    25,
+    24,
+    14
+  ],
+  "missingSaveGuard": true,
+  "exactSaveBackup": true,
+  "progressPreserved": true,
+  "unrelatedDataPreserved": true,
+  "offlineAfterUpdate": true,
+  "jsErrors": []
+}

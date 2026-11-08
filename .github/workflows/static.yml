@@ -36,6 +36,8 @@ jobs:
           node --check www/js/lab/polish-review-v3199.js
           node --check www/js/item-art-v3198.js
           node --check www/js/lab/item-lab-v3198.js
+          node --check www/js/pwa-update-v3212.js
+          node --check www/js/update-client-v3212.js
           node --check www/sw.js
           node --check www/js/mobile-ui.js
           node --check www/js/save-manager.js

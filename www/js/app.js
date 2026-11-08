@@ -2210,6 +2210,7 @@ function atlasLiveReceipt(){
  };
 }
 window.AtlasSaveBridge={
+ persistBeforeUpdate:persist,
  getSnapshot:()=>atlasLiveReceipt(),
  getSaveData:()=>{if(corruptSave)throw new Error('La partida almacenada no se pudo leer. Recupérala desde un respaldo válido.');return JSON.parse(JSON.stringify(state));},
  normalizeSpecialDiscoveries,
