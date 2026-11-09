@@ -1,0 +1,38 @@
+{
+  "version": "3.28.0",
+  "codeCommit": "7ca276ba4d92e13ed51be71667b663b194d6aae4",
+  "tag": "v3.28.0",
+  "verifiedAtUTC": "2026-11-09T16:38:12.132736+00:00",
+  "verifiedAtAmericaSantiago": "2026-11-09T13:38:12.132736-03:00",
+  "workflows": [
+    {
+      "name": "Android APK de prueba",
+      "id": "42655978573",
+      "url": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42655978573",
+      "state": {
+        "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+        "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+      },
+      "commitURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/commit/7ca276ba4d92e13ed51be71667b663b194d6aae4"
+    },
+    {
+      "name": "Deploy El Gran Atlas",
+      "id": "42655978335",
+      "url": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42655978335",
+      "state": {
+        "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+        "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+      },
+      "commitURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/commit/7ca276ba4d92e13ed51be71667b663b194d6aae4"
+    }
+  ],
+  "bothWorkflowsSuccessful": true,
+  "gameURL": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "safeUpdateURL": "https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3280.html",
+  "laboratoryURL": "https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-expediciones-investigaciones-v3280.html",
+  "apkURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/releases/download/v3.28.0/El-Gran-Atlas-Beta-3.28.0-debug.apk",
+  "apkDownloadedAndVerified": true,
+  "codeAndTagMatchedRemote": true,
+  "physicalAndroidTested": false,
+  "pagesVerification": "Actual successful Pages workflow and published URL confirmed in run HTML. Direct github.io HTTP request blocked by environment proxy with CONNECT403. Production rendering and offline/update tested separately in local Chromium."
+}

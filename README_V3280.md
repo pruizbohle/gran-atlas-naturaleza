@@ -65,8 +65,36 @@ La medición usa CPU ×4, una misma partida y secuencia ABBA repetida dos veces.
 
 Preparado para **3.28.0 / Android 32800**, conservando `com.elgranatlas.naturaleza.beta314` y el actualizador seguro con respaldo. Nueva entrada: [actualizar-v3280.html](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3280.html).
 
-**Antes de publicar:** validación local completada; todavía no se declara éxito de Actions ni disponibilidad del APK 3.28.0. El resultado final se documentará tras verificar ambos workflows, descargar el paquete y comparar su firma con 3.27.0.
+**Publicación verificada el 9 de noviembre de 2026:**
 
-Pendiente no bloqueante: pruebas físicas de instalación, ergonomía y rendimiento Android. La firma debug puede cambiar entre compilaciones; no se garantiza una actualización directa sin comparar el certificado. Exportar el respaldo antes de cambiar de instalación.
+| Entrega | Resultado real |
+| --- | --- |
+| Código y etiqueta | [`7ca276ba4d92e13ed51be71667b663b194d6aae4`](https://github.com/pruizbohle/gran-atlas-naturaleza/commit/7ca276ba4d92e13ed51be71667b663b194d6aae4) en `main`, etiqueta `v3.28.0` |
+| Deploy El Gran Atlas | [SUCCESS · 42655978335](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42655978335), URL de Pages confirmada |
+| Android APK de prueba | [SUCCESS · 42655978573](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42655978573), compilación y publicación terminadas |
+| Juego | [El Gran Atlas](https://pruizbohle.github.io/gran-atlas-naturaleza/) |
+| Actualización web segura | [Actualizar 3.28.0 con respaldo previo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3280.html) |
+| Laboratorio | [Expediciones e Investigaciones](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-expediciones-investigaciones-v3280.html) |
+| APK descargado y verificado | [El-Gran-Atlas-Beta-3.28.0-debug.apk](https://github.com/pruizbohle/gran-atlas-naturaleza/releases/download/v3.28.0/El-Gran-Atlas-Beta-3.28.0-debug.apk) |
+
+El paquete real mide **6.454.714 bytes**, declara **3.28.0 / 32800** y conserva el ID histórico. Sus **113 archivos web coinciden byte a byte con producción**; ambos plugins nativos de respaldo están presentes en DEX. SHA-256:
+
+```text
+69a4c116ffd2c37aa8cfc5e39b5da22732724f12cacc7272291887cbe1a3d5ba
+```
+
+**La firma debug cambió frente al APK 3.27.0 verificado.** Certificado nuevo: `1cc8de77e7ba88cb1b033224b326a075821c9e7b3d2c282da3882d1a63932efc`; certificado anterior: `fdf68e11a705fb1f309a4f235ccb1405e1d3c9b0e4b64335f14b6f759f8fe0d9`. Android no acepta este APK como sustitución directa de una instalación con la otra firma. Exportar y comprobar el respaldo desde la aplicación antes de cambiar de instalación. No desinstalar una partida para resolver la firma sin respaldo. La compatibilidad del archivo de guardado no implica continuidad de certificado.
+
+[Manifiesto, recursos, plugins y firma](docs/expeditions-research-v3280/android-report.json) · [Registro de publicación](docs/expeditions-research-v3280/release-report.json).
+
+El acceso HTTP directo a `github.io` está bloqueado por el proxy de este entorno (CONNECT 403). Se verificaron el workflow Pages finalizado y su URL real; las comprobaciones visuales, funcionales y offline utilizaron los recursos de producción en Chromium local. No se presenta eso como una visita directa al sitio público.
+
+Pendiente no bloqueante: instalación, ergonomía y rendimiento en Android físico. Permanecen documentados los incrementos de tiempo, memoria y serialización medidos; no se alteró el balance para mejorar cifras.
 
 Esta entrega cierra la renovación de presentación de los módulos actuales. La serie **GM — Globo Mundial** queda como siguiente etapa; no se inicia en esta versión.
+
+## Archivos y alcance de la entrega
+
+[Lista completa de archivos modificados](docs/expeditions-research-v3280/files-changed.txt). Producción se concentra en la presentación de los dos módulos, los bloques `E-3280`, estilos, laboratorio y metadatos/offline. Los fixtures científicos e históricos no se cambian; las comprobaciones anteriores se ajustan solo a metadatos de versión y a las diferencias autorizadas y verificadas por las nuevas pruebas.
+
+El commit documental final registrará los resultados de Actions y del APK sin cambiar los recursos de producción ni volver a compilar el paquete.

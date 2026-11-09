@@ -11,6 +11,7 @@ docs/expeditions-research-v3280/after-research-320.png
 docs/expeditions-research-v3280/after-research-360.png
 docs/expeditions-research-v3280/after-research-390.png
 docs/expeditions-research-v3280/after-research-412.png
+docs/expeditions-research-v3280/android-report.json
 docs/expeditions-research-v3280/android-signing-baseline.json
 docs/expeditions-research-v3280/architecture.md
 docs/expeditions-research-v3280/before-expeditions-390.png
@@ -52,6 +53,7 @@ docs/expeditions-research-v3280/offline-simulation.json
 docs/expeditions-research-v3280/performance-report.json
 docs/expeditions-research-v3280/performance.md
 docs/expeditions-research-v3280/pwa-update-report.json
+docs/expeditions-research-v3280/release-report.json
 docs/expeditions-research-v3280/reproduce.md
 docs/expeditions-research-v3280/research-available.png
 docs/expeditions-research-v3280/research-multiple-dependency.png
