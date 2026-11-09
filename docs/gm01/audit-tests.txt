@@ -1,0 +1,25 @@
+test_full_scientific_name_is_required (__main__.MatchingRules.test_full_scientific_name_is_required) ... ok
+test_multiple_exact_matches_are_not_arbitrarily_resolved (__main__.MatchingRules.test_multiple_exact_matches_are_not_arbitrarily_resolved) ... ok
+test_only_explicit_aliases_match (__main__.MatchingRules.test_only_explicit_aliases_match) ... ok
+test_partial_african_crosswalk_keeps_its_scope (__main__.MatchingRules.test_partial_african_crosswalk_keeps_its_scope) ... ok
+test_region_match_requires_continent_and_not_hx_identity (__main__.MatchingRules.test_region_match_requires_continent_and_not_hx_identity) ... ok
+test_reserved_cell_is_not_a_region_even_when_its_id_is_occupied (__main__.MatchingRules.test_reserved_cell_is_not_a_region_even_when_its_id_is_occupied) ... ok
+test_whitespace_case_and_unicode_normalization (__main__.MatchingRules.test_whitespace_case_and_unicode_normalization) ... ok
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Unknown extension is not supported and will be removed
+  warn(msg)
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Conditional Formatting extension is not supported and will be removed
+  warn(msg)
+test_all_original_columns_and_rows_survive_each_table (__main__.ReportsAndSafety.test_all_original_columns_and_rows_survive_each_table) ... ok
+test_all_reported_checks_and_input_hashes_are_current (__main__.ReportsAndSafety.test_all_reported_checks_and_input_hashes_are_current) ... ok
+test_every_effective_id_region_and_pair_is_accounted_for (__main__.ReportsAndSafety.test_every_effective_id_region_and_pair_is_accounted_for) ... ok
+test_every_unmatched_source_has_preliminary_art_but_no_approved_new_id (__main__.ReportsAndSafety.test_every_unmatched_source_has_preliminary_art_but_no_approved_new_id) ... ok
+test_output_cannot_point_to_game_or_other_repository_directories (__main__.ReportsAndSafety.test_output_cannot_point_to_game_or_other_repository_directories) ... ok
+test_phase_sets_independently_cover_source_without_double_counting (__main__.ReportsAndSafety.test_phase_sets_independently_cover_source_without_double_counting) ... ok
+test_preserved_subarea_decisions_and_aureus_lupaster_distinction (__main__.ReportsAndSafety.test_preserved_subarea_decisions_and_aureus_lupaster_distinction) ... ok
+test_reproduction_and_check_are_byte_identical_without_production_writes (__main__.ReportsAndSafety.test_reproduction_and_check_are_byte_identical_without_production_writes) ... ok
+test_wrong_or_missing_source_cannot_generate_reports (__main__.ReportsAndSafety.test_wrong_or_missing_source_cannot_generate_reports) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 5.352s
+
+OK

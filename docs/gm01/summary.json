@@ -1,0 +1,1142 @@
+{
+  "art_workload_preliminary": {
+    "ADAPTAR_BASE": 61,
+    "BLOQUEADO_IDENTIDAD": 3,
+    "PERFIL_ESPECIFICO": 172
+  },
+  "audit_input_manifest": {
+    "docs/americas-audit/manual-decisions.json": "cd4e1f23bbc9ffcaf881fb2a24eee7dfd51eb947deb9b99538d8ac9152fccf3f",
+    "docs/expeditions-research-v3280/catalog-integrity.json": "e4e46e760d736cce5958059026b68f402a43b8079a2d5581d9656bd25b36e423",
+    "docs/gm01/decisions.json": "37bcc1c011ec11b5cbd9ffb997497ecd63bf62246d4df3cd39b65d8f68984834",
+    "docs/sudamerica-v3230/TAXONOMY.md": "ab8720b1fd380424c57dff2c68b1f72f0b266fa8d8267fc6c68ed3f6508d2e5a",
+    "docs/sudamerica-v3230/source-presences.json": "467c660bb116542f25d33789e1cba270f411c88747aa78741a5912a0ef2d4aa9",
+    "scripts/audit-world-gm01.py": "72e7b953f23022f717b11301dbe5a3224c87bd50b4f8919e7f82ca15063e443a",
+    "scripts/export-world-runtime-gm01.cjs": "894f0356e68ee68ef9fbb1f9a3502061e099443179ca44939119c100b62fdd3f",
+    "scripts/verify-world-gm01.py": "4a0c40a59a422abce5c9837ee48bcbca45fd915a5c15b052f142c742d18ce797"
+  },
+  "base_commit": "85f151aa40b5d93f8db33adb8297b1a6356560d0",
+  "base_game_commit": "7ca276ba4d92e13ed51be71667b663b194d6aae4",
+  "by_source_medium": {
+    "América del Norte": {
+      "current_reusable_ids": 128,
+      "mapped_source_regions": 14,
+      "pending_regions": 0,
+      "reserved_without_fauna": 0,
+      "source_cells": 14,
+      "source_nominal_taxa": 128,
+      "source_presences": 206,
+      "source_regions_with_fauna": 14,
+      "statuses": {
+        "implementada": 206
+      },
+      "unmatched_source_concepts": 0
+    },
+    "América del Sur": {
+      "current_reusable_ids": 131,
+      "mapped_source_regions": 10,
+      "pending_regions": 0,
+      "reserved_without_fauna": 0,
+      "source_cells": 10,
+      "source_nominal_taxa": 131,
+      "source_presences": 192,
+      "source_regions_with_fauna": 10,
+      "statuses": {
+        "implementada": 192
+      },
+      "unmatched_source_concepts": 0
+    },
+    "Asia": {
+      "current_reusable_ids": 172,
+      "mapped_source_regions": 21,
+      "pending_regions": 0,
+      "reserved_without_fauna": 0,
+      "source_cells": 21,
+      "source_nominal_taxa": 173,
+      "source_presences": 291,
+      "source_regions_with_fauna": 21,
+      "statuses": {
+        "conflicto_identidad": 5,
+        "implementada": 286
+      },
+      "unmatched_source_concepts": 1
+    },
+    "Europa": {
+      "current_reusable_ids": 118,
+      "mapped_source_regions": 10,
+      "pending_regions": 0,
+      "reserved_without_fauna": 0,
+      "source_cells": 10,
+      "source_nominal_taxa": 118,
+      "source_presences": 250,
+      "source_regions_with_fauna": 10,
+      "statuses": {
+        "implementada": 250
+      },
+      "unmatched_source_concepts": 0
+    },
+    "Hielo": {
+      "current_reusable_ids": 1,
+      "mapped_source_regions": 0,
+      "pending_regions": 7,
+      "reserved_without_fauna": 22,
+      "source_cells": 29,
+      "source_nominal_taxa": 22,
+      "source_presences": 45,
+      "source_regions_with_fauna": 7,
+      "statuses": {
+        "pendiente_region_nueva_identidad": 43,
+        "pendiente_region_reutilizar": 2
+      },
+      "unmatched_source_concepts": 21
+    },
+    "Mar": {
+      "current_reusable_ids": 8,
+      "mapped_source_regions": 0,
+      "pending_regions": 12,
+      "reserved_without_fauna": 72,
+      "source_cells": 84,
+      "source_nominal_taxa": 112,
+      "source_presences": 192,
+      "source_regions_with_fauna": 12,
+      "statuses": {
+        "pendiente_region_nueva_identidad": 178,
+        "pendiente_region_reutilizar": 14
+      },
+      "unmatched_source_concepts": 104
+    },
+    "Mar abisal": {
+      "current_reusable_ids": 0,
+      "mapped_source_regions": 0,
+      "pending_regions": 2,
+      "reserved_without_fauna": 0,
+      "source_cells": 2,
+      "source_nominal_taxa": 3,
+      "source_presences": 3,
+      "source_regions_with_fauna": 2,
+      "statuses": {
+        "pendiente_region_nueva_identidad": 3
+      },
+      "unmatched_source_concepts": 3
+    },
+    "Mar profundo": {
+      "current_reusable_ids": 0,
+      "mapped_source_regions": 0,
+      "pending_regions": 5,
+      "reserved_without_fauna": 12,
+      "source_cells": 17,
+      "source_nominal_taxa": 24,
+      "source_presences": 44,
+      "source_regions_with_fauna": 5,
+      "statuses": {
+        "pendiente_region_nueva_identidad": 44
+      },
+      "unmatched_source_concepts": 24
+    },
+    "Oceanía": {
+      "current_reusable_ids": 0,
+      "mapped_source_regions": 0,
+      "pending_regions": 8,
+      "reserved_without_fauna": 0,
+      "source_cells": 8,
+      "source_nominal_taxa": 97,
+      "source_presences": 131,
+      "source_regions_with_fauna": 8,
+      "statuses": {
+        "pendiente_region_identidad_revision": 2,
+        "pendiente_region_nueva_identidad": 129
+      },
+      "unmatched_source_concepts": 97
+    },
+    "África": {
+      "current_reusable_ids": 152,
+      "mapped_source_regions": 14,
+      "pending_regions": 0,
+      "reserved_without_fauna": 0,
+      "source_cells": 14,
+      "source_nominal_taxa": 154,
+      "source_presences": 220,
+      "source_regions_with_fauna": 14,
+      "statuses": {
+        "conflicto_identidad": 5,
+        "diferencia_distribucion_taxonomica_documentada": 1,
+        "implementada": 214
+      },
+      "unmatched_source_concepts": 2
+    }
+  },
+  "checks": {
+    "all_1329_game_pairs_accounted": true,
+    "all_710_game_identities_represented": true,
+    "all_79_functional_regions_represented": true,
+    "all_pending_art_rows_accounted": true,
+    "all_source_fields_preserved": true,
+    "all_source_references_valid": true,
+    "existing_integrity_report_agrees": true,
+    "five_playable_continents": true,
+    "map_counts_agree": true,
+    "map_covers_all_source_cells": true,
+    "no_duplicate_runtime_ids_or_pairs": true,
+    "no_duplicate_runtime_scientific_strings": true,
+    "no_duplicate_source_pairs": true,
+    "phase_new_sets_disjoint_and_complete": true,
+    "planning_ids_do_not_collide": true,
+    "planning_ids_unique": true,
+    "runtime_all_presences_manual_and_auto_reachable": true,
+    "runtime_all_references_valid": true,
+    "runtime_counts_match": true,
+    "runtime_version_and_key": true,
+    "source_catalog_presence_counts_agree": true,
+    "source_catalog_rows_preserved_once": true,
+    "source_counts_match": true,
+    "source_hash_matches": true,
+    "source_hex_presence_counts_agree": true,
+    "source_hex_rows_preserved_once": true,
+    "source_presence_rows_preserved_once": true,
+    "source_regions_and_media_agree": true,
+    "source_scientific_names_agree": true,
+    "source_scientific_names_unique": true,
+    "summary_totals_agree": true,
+    "unique_source_hex_ids": true,
+    "unique_source_species_ids": true
+  },
+  "comparison": {
+    "additional_functional_regions_without_1to1_source": 10,
+    "additional_game_pairs_without_source": 171,
+    "candidate_pairs_NOT_PROVEN_EQUIVALENCES": 10,
+    "confirmed_game_pairs": 1148,
+    "current_canonical_ids_reused": 663,
+    "documented_alias_records": 4,
+    "documented_taxonomic_distribution_differences": 1,
+    "game_ids_without_source_canonical_equivalence": 47,
+    "pending_distribution_in_existing_regions": 0,
+    "pending_new_region_presences": 415,
+    "pending_populated_regions": 34,
+    "source_categories": {
+      "A": 316,
+      "B": 306,
+      "C": 219,
+      "D": 4,
+      "E": 55
+    },
+    "source_concepts_without_proven_current_identity": 236,
+    "source_names_without_exact_full_name": 240,
+    "source_presence_statuses": {
+      "conflicto_identidad": 10,
+      "diferencia_distribucion_taxonomica_documentada": 1,
+      "implementada": 1148,
+      "pendiente_region_identidad_revision": 2,
+      "pendiente_region_nueva_identidad": 397,
+      "pendiente_region_reutilizar": 16
+    },
+    "source_records_with_proven_game_identity": 664,
+    "unrepresented_concepts_without_rank_or_intent_block": 233,
+    "unresolved_rank_or_intent_concepts": [
+      "Canis familiaris",
+      "Gorilla beringei",
+      "Panthera pardus"
+    ]
+  },
+  "issues": {
+    "by_type": {
+      "colision_id_region": 24,
+      "concepto_taxonomico": 14,
+      "diferencia_catalogo": 310,
+      "diferencia_distribucion_taxonomica": 1,
+      "distribucion_heredada": 38,
+      "distribucion_preliminar": 10,
+      "equivalencia_documentada": 4,
+      "equivalencia_geografica_parcial": 4,
+      "identidad_o_rango_no_resuelto": 3,
+      "solapamiento_rango_juego": 5
+    },
+    "total": 413
+  },
+  "phases": [
+    {
+      "approved_new_ids": 0,
+      "art_workload": {
+        "ADAPTAR_BASE": 35,
+        "PERFIL_ESPECIFICO": 61
+      },
+      "blocked_count": 1,
+      "blocked_identity_concepts": [
+        "Canis familiaris"
+      ],
+      "current_reusable_count": 0,
+      "current_reusable_ids": [],
+      "current_reusable_species": [],
+      "media": [
+        "Oceanía"
+      ],
+      "new_count_under_declared_source_concepts": 96,
+      "new_unrepresented_source_concepts": [
+        "Acanthophis antarcticus",
+        "Apteryx haastii",
+        "Apteryx mantelli",
+        "Apteryx owenii",
+        "Aquila audax",
+        "Arctocephalus forsteri",
+        "Assa darlingtoni",
+        "Cacatua galerita",
+        "Callaeas wilsoni",
+        "Calyptorhynchus banksii",
+        "Casuarius casuarius",
+        "Cephalorhynchus hectori",
+        "Chlamydosaurus kingii",
+        "Cicinnurus regius",
+        "Cicinnurus respublica",
+        "Crocodylus johnstoni",
+        "Crocodylus novaeguineae",
+        "Crocodylus porosus",
+        "Cygnus atratus",
+        "Dacelo leachii",
+        "Dacelo novaeguineae",
+        "Dactylopsila trivirgata",
+        "Dasycercus cristicauda",
+        "Dasyurus viverrinus",
+        "Dendrolagus goodfellowi",
+        "Dendrolagus lumholtzi",
+        "Dendrolagus matschiei",
+        "Diomedea epomophora",
+        "Dromaius novaehollandiae",
+        "Eolophus roseicapilla",
+        "Gallirallus australis",
+        "Gymnorhina tibicen",
+        "Harpyopsis novaeguineae",
+        "Hemiphaga novaeseelandiae",
+        "Intellagama lesueurii",
+        "Lates calcarifer",
+        "Lophorina superba",
+        "Macropus fuliginosus",
+        "Macropus giganteus",
+        "Macrotis lagotis",
+        "Megadyptes antipodes",
+        "Melopsittacus undulatus",
+        "Menura novaehollandiae",
+        "Moloch horridus",
+        "Morelia spilota",
+        "Morelia viridis",
+        "Myrmecobius fasciatus",
+        "Neophema chrysogaster",
+        "Nestor meridionalis",
+        "Nestor notabilis",
+        "Ninox strenua",
+        "Notamacropus agilis",
+        "Notamacropus eugenii",
+        "Notamacropus rufogriseus",
+        "Notechis scutatus",
+        "Nymphicus hollandicus",
+        "Ornithorhynchus anatinus",
+        "Osphranter rufus",
+        "Oxyuranus microlepidotus",
+        "Oxyuranus scutellatus",
+        "Paradisaea apoda",
+        "Pelecanus conspicillatus",
+        "Petauroides volans",
+        "Petaurus breviceps",
+        "Petrogale mareeba",
+        "Petroica australis",
+        "Phalanger orientalis",
+        "Phascolarctos cinereus",
+        "Phylidonyris novaehollandiae",
+        "Pogona vitticeps",
+        "Porphyrio hochstetteri",
+        "Pseudophryne corroboree",
+        "Pteropus conspicillatus",
+        "Pteropus poliocephalus",
+        "Ptilonorhynchus violaceus",
+        "Ranoidea caerulea",
+        "Rhipidura fuliginosa",
+        "Sarcophilus harrisii",
+        "Seleucidis melanoleucus",
+        "Setonix brachyurus",
+        "Sphenodon punctatus",
+        "Spilocuscus maculatus",
+        "Strigops habroptilus",
+        "Tachyglossus aculeatus",
+        "Thylogale billardierii",
+        "Tiliqua scincoides",
+        "Trichoglossus haematodus",
+        "Trichoglossus moluccanus",
+        "Trichosurus vulpecula",
+        "Varanus giganteus",
+        "Varanus gouldii",
+        "Varanus salvadorii",
+        "Vombatus ursinus",
+        "Wallabia bicolor",
+        "Zaglossus bartoni",
+        "Zanda latirostris"
+      ],
+      "pending_region_records": [
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "oc_nueva_guinea",
+          "source_hex_id": "HX-06-19",
+          "source_name": "Nueva Guinea",
+          "source_presence_count": 18
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "oc_costa_nordeste_australiana",
+          "source_hex_id": "HX-07-17",
+          "source_name": "Costa nordeste australiana",
+          "source_presence_count": 13
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "oc_norte_tropical_australiano",
+          "source_hex_id": "HX-07-18",
+          "source_name": "Norte Tropical Australiano",
+          "source_presence_count": 14
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "oc_desierto_australiano",
+          "source_hex_id": "HX-07-19",
+          "source_name": "Desierto Australiano",
+          "source_presence_count": 14
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "oc_tasmania",
+          "source_hex_id": "HX-08-17",
+          "source_name": "Tasmania",
+          "source_presence_count": 12
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "oc_australia_occidental",
+          "source_hex_id": "HX-08-18",
+          "source_name": "Australia Occidental",
+          "source_presence_count": 17
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "oc_australia_oriental",
+          "source_hex_id": "HX-08-19",
+          "source_name": "Australia Oriental",
+          "source_presence_count": 26
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "oc_nueva_zelanda",
+          "source_hex_id": "HX-09-18",
+          "source_name": "Nueva Zelanda",
+          "source_presence_count": 17
+        }
+      ],
+      "phase": "GM-02",
+      "presences": 131,
+      "regions": 8,
+      "reused_concepts_from_prior_phases": [],
+      "reused_from_prior_count": 0
+    },
+    {
+      "approved_new_ids": 0,
+      "art_workload": {
+        "ADAPTAR_BASE": 4,
+        "PERFIL_ESPECIFICO": 17
+      },
+      "blocked_count": 0,
+      "blocked_identity_concepts": [],
+      "current_reusable_count": 1,
+      "current_reusable_ids": [
+        "zorro_artico"
+      ],
+      "current_reusable_species": [
+        {
+          "common": "Zorro ártico",
+          "id": "zorro_artico",
+          "scientific": "Vulpes lagopus"
+        }
+      ],
+      "media": [
+        "Hielo"
+      ],
+      "new_count_under_declared_source_concepts": 21,
+      "new_unrepresented_source_concepts": [
+        "Aptenodytes forsteri",
+        "Balaena mysticetus",
+        "Delphinapterus leucas",
+        "Erignathus barbatus",
+        "Gonatus fabricii",
+        "Hydrurga leptonyx",
+        "Leptonychotes weddellii",
+        "Lobodon carcinophaga",
+        "Mirounga leonina",
+        "Monodon monoceros",
+        "Odobenus rosmarus",
+        "Ommatophoca rossii",
+        "Pagodroma nivea",
+        "Pagophila eburnea",
+        "Pusa hispida",
+        "Pygoscelis adeliae",
+        "Somateria mollissima",
+        "Somniosus microcephalus",
+        "Stercorarius maccormicki",
+        "Sterna paradisaea",
+        "Ursus maritimus"
+      ],
+      "pending_region_records": [
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "polar_hielo_artico_occidental",
+          "source_hex_id": "HX-01-08",
+          "source_name": "Hielo ártico occidental",
+          "source_presence_count": 10
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "polar_hielo_artico_central",
+          "source_hex_id": "HX-01-14",
+          "source_name": "Hielo ártico central",
+          "source_presence_count": 7
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "polar_hielo_artico_oriental",
+          "source_hex_id": "HX-01-17",
+          "source_name": "Hielo ártico oriental",
+          "source_presence_count": 6
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "polar_hielo_antartico_occidental",
+          "source_hex_id": "HX-11-04",
+          "source_name": "Hielo antártico occidental",
+          "source_presence_count": 5
+        },
+        {
+          "id_collision_game_id": "HX-11-11",
+          "proposed_id_NOT_IMPLEMENTED": "polar_hielo_antartico_central",
+          "source_hex_id": "HX-11-11",
+          "source_name": "Hielo antártico central",
+          "source_presence_count": 4
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "polar_hielo_antartico_costero",
+          "source_hex_id": "HX-11-13",
+          "source_name": "Hielo antártico costero",
+          "source_presence_count": 7
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "polar_hielo_antartico_oriental",
+          "source_hex_id": "HX-11-16",
+          "source_name": "Hielo antártico oriental",
+          "source_presence_count": 6
+        }
+      ],
+      "phase": "GM-03",
+      "presences": 45,
+      "regions": 7,
+      "reused_concepts_from_prior_phases": [],
+      "reused_from_prior_count": 0
+    },
+    {
+      "approved_new_ids": 0,
+      "art_workload": {
+        "ADAPTAR_BASE": 22,
+        "PERFIL_ESPECIFICO": 94
+      },
+      "blocked_count": 0,
+      "blocked_identity_concepts": [],
+      "current_reusable_count": 8,
+      "current_reusable_ids": [
+        "af_dugongo",
+        "af_manta_gigante",
+        "af_tiburon_blanco",
+        "af_tiburon_puntas_negras",
+        "af_tortuga_laúd",
+        "asia_esp_0177",
+        "frailecillo_atlantico",
+        "sa_esp_spheniscus_magellanicus"
+      ],
+      "current_reusable_species": [
+        {
+          "common": "Dugongo",
+          "id": "af_dugongo",
+          "scientific": "Dugong dugon"
+        },
+        {
+          "common": "Manta gigante",
+          "id": "af_manta_gigante",
+          "scientific": "Mobula birostris"
+        },
+        {
+          "common": "Tiburón blanco",
+          "id": "af_tiburon_blanco",
+          "scientific": "Carcharodon carcharias"
+        },
+        {
+          "common": "Tiburón de puntas negras de arrecife",
+          "id": "af_tiburon_puntas_negras",
+          "scientific": "Carcharhinus melanopterus"
+        },
+        {
+          "common": "Tortuga laúd",
+          "id": "af_tortuga_laúd",
+          "scientific": "Dermochelys coriacea"
+        },
+        {
+          "common": "Nutria marina",
+          "id": "asia_esp_0177",
+          "scientific": "Enhydra lutris"
+        },
+        {
+          "common": "Frailecillo atlántico",
+          "id": "frailecillo_atlantico",
+          "scientific": "Fratercula arctica"
+        },
+        {
+          "common": "Pingüino de Magallanes",
+          "id": "sa_esp_spheniscus_magellanicus",
+          "scientific": "Spheniscus magellanicus"
+        }
+      ],
+      "media": [
+        "Mar",
+        "Mar abisal",
+        "Mar profundo"
+      ],
+      "new_count_under_declared_source_concepts": 116,
+      "new_unrepresented_source_concepts": [
+        "Aetobatus narinari",
+        "Alopias vulpinus",
+        "Amphioctopus marginatus",
+        "Amphiprion ocellaris",
+        "Anoplogaster brachycera",
+        "Anoplogaster cornuta",
+        "Aptenodytes patagonicus",
+        "Architeuthis dux",
+        "Arctocephalus gazella",
+        "Ardenna grisea",
+        "Argyropelecus aculeatus",
+        "Balaenoptera acutorostrata",
+        "Balaenoptera edeni",
+        "Balaenoptera musculus",
+        "Balaenoptera physalus",
+        "Balistoides conspicillum",
+        "Bathypterois grallator",
+        "Benthosema glaciale",
+        "Bolbometopon muricatum",
+        "Carcharhinus longimanus",
+        "Ceratias holboelli",
+        "Cetorhinus maximus",
+        "Chaenocephalus aceratus",
+        "Chauliodus macouni",
+        "Cheilinus undulatus",
+        "Chelonia mydas",
+        "Chlamydoselachus anguineus",
+        "Clupea harengus",
+        "Delphinus delphis",
+        "Diomedea exulans",
+        "Dissostichus eleginoides",
+        "Dissostichus mawsoni",
+        "Dosidicus gigas",
+        "Enteroctopus dofleini",
+        "Epinephelus lanceolatus",
+        "Eretmochelys imbricata",
+        "Eschrichtius robustus",
+        "Eubalaena australis",
+        "Eudyptes chrysocome",
+        "Eumetopias jubatus",
+        "Eurypharynx pelecanoides",
+        "Exocoetus volitans",
+        "Fregata magnificens",
+        "Gadus macrocephalus",
+        "Gadus morhua",
+        "Globicephala macrorhynchus",
+        "Globicephala melas",
+        "Grampus griseus",
+        "Grimpoteuthis umbellata",
+        "Halichoerus grypus",
+        "Haliphron atlanticus",
+        "Hapalochlaena lunulata",
+        "Hippocampus comes",
+        "Histioteuthis reversa",
+        "Idiacanthus antrostomus",
+        "Isistius brasiliensis",
+        "Istiophorus platypterus",
+        "Isurus oxyrinchus",
+        "Lagenorhynchus albirostris",
+        "Lagenorhynchus obliquidens",
+        "Lagenorhynchus obscurus",
+        "Lamna ditropis",
+        "Laticauda colubrina",
+        "Loligo vulgaris",
+        "Macronectes giganteus",
+        "Macropinna microstoma",
+        "Megaptera novaeangliae",
+        "Mesonychoteuthis hamiltoni",
+        "Mirounga angustirostris",
+        "Mitsukurina owstoni",
+        "Mobula alfredi",
+        "Mobula mobular",
+        "Mola alexandrini",
+        "Mola mola",
+        "Morus bassanus",
+        "Notoliparis kermadecensis",
+        "Octopus bimaculoides",
+        "Octopus cyanea",
+        "Octopus vulgaris",
+        "Oncorhynchus keta",
+        "Oncorhynchus tshawytscha",
+        "Onykia ingens",
+        "Orcinus orca",
+        "Otaria flavescens",
+        "Paracanthurus hepatus",
+        "Phoca vitulina",
+        "Phocoena phocoena",
+        "Phoebastria immutabilis",
+        "Physeter macrocephalus",
+        "Pomacanthus imperator",
+        "Prionace glauca",
+        "Pseudoliparis swirei",
+        "Pseudorca crassidens",
+        "Pygoscelis antarcticus",
+        "Pygoscelis papua",
+        "Rhincodon typus",
+        "Sardina pilchardus",
+        "Scomber scombrus",
+        "Sepioteuthis lessoniana",
+        "Sphyrna lewini",
+        "Stenella longirostris",
+        "Stomias boa",
+        "Synanceia verrucosa",
+        "Thalassarche melanophris",
+        "Thunnus alalunga",
+        "Thunnus albacares",
+        "Thunnus thynnus",
+        "Thysanoteuthis rhombus",
+        "Trachurus murphyi",
+        "Trachurus novaezelandiae",
+        "Tremoctopus violaceus",
+        "Tursiops truncatus",
+        "Vampyroteuthis infernalis",
+        "Xiphias gladius",
+        "Zalophus californianus",
+        "Ziphius cavirostris"
+      ],
+      "pending_region_records": [
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "profundo_atlantico_profundo_norte",
+          "source_hex_id": "HX-03-07",
+          "source_name": "Atlántico profundo norte",
+          "source_presence_count": 10
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "mar_atlantico_septentrional",
+          "source_hex_id": "HX-03-08",
+          "source_name": "Atlántico septentrional",
+          "source_presence_count": 28
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "mar_pacifico_noroccidental",
+          "source_hex_id": "HX-03-19",
+          "source_name": "Pacífico noroccidental",
+          "source_presence_count": 11
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "mar_pacifico_nororiental",
+          "source_hex_id": "HX-05-01",
+          "source_name": "Pacífico nororiental",
+          "source_presence_count": 18
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "mar_oceano_indico_tropical",
+          "source_hex_id": "HX-06-13",
+          "source_name": "Océano Índico tropical",
+          "source_presence_count": 17
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "mar_mar_tropical_asiatico",
+          "source_hex_id": "HX-06-15",
+          "source_name": "Mar tropical asiático",
+          "source_presence_count": 18
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "profundo_pacifico_profundo_oriental",
+          "source_hex_id": "HX-07-01",
+          "source_name": "Pacífico profundo oriental",
+          "source_presence_count": 8
+        },
+        {
+          "id_collision_game_id": "HX-07-13",
+          "proposed_id_NOT_IMPLEMENTED": "mar_indico_meridional",
+          "source_hex_id": "HX-07-13",
+          "source_name": "Índico meridional",
+          "source_presence_count": 15
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "mar_archipielagos_tropicales",
+          "source_hex_id": "HX-07-16",
+          "source_name": "Archipiélagos tropicales",
+          "source_presence_count": 21
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "abisal_fosa_oceanica_occidental",
+          "source_hex_id": "HX-08-02",
+          "source_name": "Fosa oceánica occidental",
+          "source_presence_count": 2
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "profundo_indico_profundo",
+          "source_hex_id": "HX-08-13",
+          "source_name": "Índico profundo",
+          "source_presence_count": 10
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "mar_pacifico_austral",
+          "source_hex_id": "HX-09-03",
+          "source_name": "Pacífico austral",
+          "source_presence_count": 19
+        },
+        {
+          "id_collision_game_id": "HX-09-11",
+          "proposed_id_NOT_IMPLEMENTED": "mar_atlantico_austral",
+          "source_hex_id": "HX-09-11",
+          "source_name": "Atlántico austral",
+          "source_presence_count": 10
+        },
+        {
+          "id_collision_game_id": "HX-09-14",
+          "proposed_id_NOT_IMPLEMENTED": "abisal_fosa_oceanica_oriental",
+          "source_hex_id": "HX-09-14",
+          "source_name": "Fosa oceánica oriental",
+          "source_presence_count": 1
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "profundo_pacifico_profundo_suroccidental",
+          "source_hex_id": "HX-09-15",
+          "source_name": "Pacífico profundo suroccidental",
+          "source_presence_count": 10
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "mar_oceano_austral_occidental",
+          "source_hex_id": "HX-10-05",
+          "source_name": "Océano Austral occidental",
+          "source_presence_count": 12
+        },
+        {
+          "id_collision_game_id": "HX-10-10",
+          "proposed_id_NOT_IMPLEMENTED": "mar_oceano_austral_central",
+          "source_hex_id": "HX-10-10",
+          "source_name": "Océano Austral central",
+          "source_presence_count": 12
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "mar_pacifico_suroccidental",
+          "source_hex_id": "HX-10-18",
+          "source_name": "Pacífico suroccidental",
+          "source_presence_count": 11
+        },
+        {
+          "id_collision_game_id": "",
+          "proposed_id_NOT_IMPLEMENTED": "profundo_oceano_austral_profundo",
+          "source_hex_id": "HX-11-18",
+          "source_name": "Océano Austral profundo",
+          "source_presence_count": 6
+        }
+      ],
+      "phase": "GM-04",
+      "presences": 239,
+      "regions": 19,
+      "reused_concepts_from_prior_phases": [
+        "Aptenodytes forsteri",
+        "Arctocephalus forsteri",
+        "Cephalorhynchus hectori",
+        "Diomedea epomophora",
+        "Gonatus fabricii",
+        "Leptonychotes weddellii",
+        "Lobodon carcinophaga",
+        "Megadyptes antipodes",
+        "Mirounga leonina",
+        "Somateria mollissima",
+        "Somniosus microcephalus",
+        "Sterna paradisaea"
+      ],
+      "reused_from_prior_count": 12
+    }
+  ],
+  "production_manifest": {
+    "capacitor.config.json": "0c2754e8419be741c21b2805b8893b05501b04d700c0c53b85998e59dc2688ab",
+    "package.json": "a6986ddd93acfb53d02e51ab96eb8a58b4c5e3016ad564c3a7df7fb34eca4fc3",
+    "www/actualizar-v3220.html": "23f8082c8b4faa0274d07fafc07b922d39c992db013511936ec170f3e8b43fa2",
+    "www/actualizar-v3221.html": "23f8082c8b4faa0274d07fafc07b922d39c992db013511936ec170f3e8b43fa2",
+    "www/actualizar-v3230.html": "9cde3171dc822d276e2361145efc0fb3d53a5575eec3ec96ef625e75faef2372",
+    "www/actualizar-v3231.html": "a64022ef64435b3ae525c31f5d88d814fb49026588a68126df553d1be03ecbda",
+    "www/actualizar-v3240.html": "35f32c7239d5ba3879ee9af6ca0c9d412af861522de4cd52be2656e70bcf7980",
+    "www/actualizar-v3250.html": "4281e4f2093e18488302f9cde1c49912cfd077af8dc67190dda7c833cd5fc9aa",
+    "www/actualizar-v3260.html": "26f8a9a2b8e724d00d16d97c968ab60d4739fb410412327dbe2c2b3d16ef3c09",
+    "www/actualizar-v3260b.html": "26f8a9a2b8e724d00d16d97c968ab60d4739fb410412327dbe2c2b3d16ef3c09",
+    "www/actualizar-v3270.html": "af1d9593574cc52c7ff4d428fee7190156e91ac2d72c0c45e1270da724c6b55c",
+    "www/actualizar-v3280.html": "9dcbf7a23e7afcbef24a922faceb3971cc63db32891c70a357c17941caa32f7b",
+    "www/actualizar.html": "26f8a9a2b8e724d00d16d97c968ab60d4739fb410412327dbe2c2b3d16ef3c09",
+    "www/atlas-release.json": "65a924b470f7ccefe6c934822532ab9ec5a820f2120fe0da3e6d78288fd9a638",
+    "www/css/atlas-v3211.css": "86f5099282e8b76dcf01c4c67563b70a2af6b8b8e4a8d6256d3a56165928bfc7",
+    "www/css/bestiary-v3260.css": "93c643b6dc42967fee352f0249d043ee05ef15ccc429d6b1f4b31040a36f3692",
+    "www/css/expeditions-research-v3280.css": "f1d62bc49be80ac2b85666ef85acb022c3e74a22998741db9e23196479c5b449",
+    "www/css/field-v3210.css": "44ff1de118c0e92b08238b76338cb710e31e676b8e6cdc0696f453a07db093e3",
+    "www/css/journal-v3250.css": "0143c30e7fa9d42a154d8e630dc5b4bc731e1cbeeef9c8cf7a2b1d510a22274d",
+    "www/css/museum-v3270.css": "465e9f3507b5a88055e0f5bd712463b18dd6e522c44b8675cd5f88f97f0143a7",
+    "www/css/styles.css": "91cbb8c4f54f13e24cf900d7493aa26fb8331f1aa68351b073dbf8ba02e10bd4",
+    "www/icons/atlas-192.png": "1c56dc358e912a2d40f996570ff156ac76007b98e9793f889a2cbdabe71d6ecc",
+    "www/icons/atlas-512.png": "a90a3ebbbb33f34acb1148bbb89e2ddeca064f552dfd8079c37d5314d43c7179",
+    "www/icons/atlas-icon.svg": "5ef0633308f672e2ed71b90f179245f8f2e0b1fb2536aa1f413bf768f0e53aa5",
+    "www/index.html": "1dca08cb6c82148af1cc5198506106361bf4cb598346cfeabd96ed07f5cf8c58",
+    "www/js/app.js": "641d8fc2b10851409fadb75968d26140ed52487e1f14a5b1571a3241d0794f22",
+    "www/js/atlas-geography-v3211b.js": "7b199ef602b19454bf03e115e1976cc6a96603c4c3c13668b78b5482df559863",
+    "www/js/atlas-map-v3211.js": "911552353c79321db0c80d02616651d23afd3c942bee7ad9b1dee4952e63018d",
+    "www/js/atlas-ui-v3211.js": "133ecd834b1579484655ea5423dcc903f9dc9889077ec04947032f426ff92c89",
+    "www/js/bestiary-ui-v3260.js": "50623ab93e950272cc2aced4ba78d4cd2f2474308521d81825216f653ce88d05",
+    "www/js/bird-art-v3193.js": "9475c214345fae86005eb18c1898ac201d31419d9b8d3948f2c43517581f1ef8",
+    "www/js/expeditions-research-ui-v3280.js": "8835163f8e939f2e1630da368aa65f31459e03be6947d620f6140a4e47a5e19d",
+    "www/js/field-scene-v3210.js": "bc6476d17d32450caef39fb64f3c634ae482bf8ff539755c4a05f1c38aba50a5",
+    "www/js/field-ui-v3210.js": "877041f5ed69653db398de589348e3a277e107cae0649e51f213a00759491fd7",
+    "www/js/fish-art-v3191.js": "d1287aea496629827570cb2fdfdc3b9666c1b5a39a8b917af61b41da371cbd8c",
+    "www/js/herp-art-v3192.js": "a9d56f4e8d25fa00193e8fd0ffa63e310b1d0dfc6b0af135120c66fa2ff5b377",
+    "www/js/item-art-v3198.js": "db3a8bc3e0aa6407ef5f453a92aef5c24fef80abb68d753e669e2ea427b6cf82",
+    "www/js/journal-ui-v3250.js": "925e2050eb85c4200163eb191df0e048c1065178a3f21ac1e36558996e098050",
+    "www/js/lab/atlas-catalog-before-v3211b.js": "97b75ea1d376e1981abe63c4f27669bcabe9d3fcc56b9849c28f0bdf337b256b",
+    "www/js/lab/atlas-catalog-v3211.js": "7b68c2006dca81d99f7ae5f55faa57ea4353518b3c4f5bb1689be37f053df1de",
+    "www/js/lab/atlas-geography-before-simple.js": "060eed518873e006312cbdf1c348e6c21c5bb55c6f637b3c2f8c57e979b7bf13",
+    "www/js/lab/atlas-lab-v3211.js": "82a5fbe575a4552bbba934f51ad93901ea046849f0d12820b5516f051716e3b1",
+    "www/js/lab/atlas-ui-before-v3211b.js": "9c4fd419ce34abe270660ee3310f779c0d62904f8395a6ed701904bd52c73e39",
+    "www/js/lab/bestiary-app-before-v3250.js": "1fd6d35f93f898f8db7d2cc00c73aa853208a5a0d1c53d9a2907f9e28ba7e101",
+    "www/js/lab/bestiary-lab-v3260.js": "3570a0e61cd26c926d349806dfd2c64e0f89e430f2931711350129a0fc72faa3",
+    "www/js/lab/bird-lab-v3193.js": "ab717382542c1f501581545f2e9c17333a02f3fae017849778c1d6658f992de3",
+    "www/js/lab/bird-sprites-v3192b-before.js": "6cb68639784b2bf68da77b9f345a51bac66b97a7f13d2413fc8f7b83be5e7974",
+    "www/js/lab/dimorphism-lab-v3195.js": "3b7051063e8f733d556317e7bd62e2768302842102e028a59e6c8c85e28203b2",
+    "www/js/lab/dimorphism-production.js": "fc87f4202e5f39c7a4ba1a6b1c312e032f3e0cf5b845ce536bfa01609bc82bce",
+    "www/js/lab/expeditions-app-before-v3270.js": "bd8c672c73002aa034bb91e28e6c4bb6be2ba2ec89768fae6c09547bace642dc",
+    "www/js/lab/expeditions-research-lab-v3280.js": "316671d93107b3c90cbdd76c5533316efc12221355dc5b816799898234067fdb",
+    "www/js/lab/field-lab-v3210.js": "09f6767f0383e94fee8655a01284b0b3be3b1499757330e12ccac0cb6c35b8dc",
+    "www/js/lab/geography-lab-v3211b.js": "9430b0a1eccd5ec39c8fe525c8ac585b21a829f30437a41faaa22137970470b4",
+    "www/js/lab/herp-art-v3192-before.js": "ffd5962abeb21536c3ef8d31de14b44ffa3cb27ca23361571a244082fd2c145c",
+    "www/js/lab/herp-specimens-v3192b.js": "b73d0c5a2eceb9fd0f3de7ea6ea8c3ac01efb3b9138201b0645150e53ca91415",
+    "www/js/lab/item-lab-v3198.js": "58c752528d17796e8ab577f91a2b8e8aded00d8f67aa19e79b49e1421b2ccecc",
+    "www/js/lab/journal-app-before-v3240.js": "137929ede561607c7c45164be019afd22a89031db96b9714b2aed0f44a8b5839",
+    "www/js/lab/journal-lab-v3250.js": "f75d12911fa25fc5bd30349d703d28e70d117b6cf7d2d7160e30c3b6e9a80146",
+    "www/js/lab/mammal-lab-v3194.js": "0271dd98d359693d534a155c8d499219785d81c1394bf61e0f38eb7b14edb87e",
+    "www/js/lab/mammal-sprites-v3193-before.js": "6a9acbe593ad0359bfa6dd82c2a4f8db05b87bb4420f20971f66633f444d2c2e",
+    "www/js/lab/museum-app-before-v3260.js": "b10346f80d120657428d41891aa7efb7f638bdee86053240064465322d903f15",
+    "www/js/lab/museum-lab-v3270.js": "a5d1e40e578ab6ab75bc109c6c3471ade516416f8740e0036a03757c132a61c2",
+    "www/js/lab/northamerica-art-before-v3221.js": "7a093d0eba364d2e786b3d18a0c99a8968e35d23f15f95011fb50df258e9b410",
+    "www/js/lab/northamerica-audit-v3221.js": "3142a48bd08d77d922ce52294c550beb35de6ce1a3243c8d997066861ea4562a",
+    "www/js/lab/northamerica-before-v3221.js": "0586cc285f5d1062613f6ede4f01a9884497a748b86d6ee15e336d8785e89163",
+    "www/js/lab/northamerica-catalog-v3220.js": "9bd87a0155d8ccf46cdfb338a5435950f4c67de7d0ed867ec8ee4e7b93873cf4",
+    "www/js/lab/northamerica-lab-v3220.js": "9c3e25cf9ab1d7153cfeac27104ba4ef7197c92acaadcc8637c6ce85bac5481f",
+    "www/js/lab/pigmentation-lab-v3196.js": "5332cc412aca104beb8720ba79b176fbefa5cb62f2cf929195f1ce3678e9b175",
+    "www/js/lab/polish-before-v3198.js": "959ffea92592002a6cc8c4770de59002d36a913e4e09f762186cc5a3c0b3faf4",
+    "www/js/lab/polish-lab-v3199.js": "acae4c417056af484f8663bc18cc9e4ba1c470803d64783dd8a744fa199ef048",
+    "www/js/lab/polish-production-v3199.js": "1e591e0db3fd7ac1d590049a315d203fef6baa84b5062b45ab46dc4165e3dbea",
+    "www/js/lab/polish-review-v3199.js": "3a03bef11a0a86473486f0901b958c7c6ca2133b841d048f44b1f9a757796eef",
+    "www/js/lab/southamerica-art-before-v3231.js": "51a41b373535f63924e3511d38cbba1e6655e51348e7256501078da6fea36f24",
+    "www/js/lab/southamerica-audit-v3231.js": "3db214c50c1eaf31e5fd2d665be28f361da0cfacfe5760d85d73c36867dc183b",
+    "www/js/lab/southamerica-before-v3231.js": "06fa5d8a37dc6a8cdac65f6a30637031ad2a8a96720d9c727ae1a695298b828a",
+    "www/js/lab/southamerica-catalog-v3230.js": "c8873fbac609fa9aeb84093dc282b9880661f5d6235958011d498d65dff6d050",
+    "www/js/lab/southamerica-lab-v3230.js": "2d63665d41989ffe88db2069b7cc0a62fc4ccf9bc0f33acf83d11638a4b0dfc7",
+    "www/js/lab/special-lab-v3197.js": "851f5a1fa60b3da8205ef6a8dc05736590a73ca6529111c85a95b5ca538b3f38",
+    "www/js/legendary-art-v3197.js": "885a75fea726c7c1ce08ce73b0322e17c55d7d2c266c54ceaa1c71e9e98ff3a3",
+    "www/js/mammal-art-v3194.js": "d05187cd87cc1c6fd51117690f9afcbc16fe16bc56723659eb529ec8316d709a",
+    "www/js/mobile-ui.js": "3453e0c6f2258c547dff65a6b1c515183f150941a35eca4c3513cf4165fd3ead",
+    "www/js/museum-ui-v3270.js": "bbcb5916086c1e9437bf3c45dfee8f44d63d36da834708f777514468a33223ba",
+    "www/js/northamerica-art-v3220.js": "956997ff98a42be9ab83728f3e4d0f4f89383e9a454e00ac8188c2ede46ced6e",
+    "www/js/northamerica-data-v3220.js": "069cec890536e4a09125370eab1a6bde117d596e7e1865ed28d45d0ca5840039",
+    "www/js/northamerica-polish-v3221.js": "ce2f3661335fd704291f3b17420401f5dde8b03d7b299216305f0e19ce1c13f8",
+    "www/js/pwa-update-v3212.js": "c3a13ce3fc9d34ceac074af33f416270f800ac5414ba93ee3a6c5a330c0ed5f2",
+    "www/js/pwa-update-v3220.js": "0950af660171c8438d508a34e1a7db94498b48884bbc3b4ea59b154e3f15a224",
+    "www/js/pwa-update-v3260.js": "8af86d5c7485e17d85814a43107d2230bc641575c4dc11650258be86407b996d",
+    "www/js/relict-art-v3199.js": "cb4e4807595d56b240a5dca4d82d8ed712bf8abd48303dad031f645cea605e82",
+    "www/js/save-manager.js": "d0e9649c36d37c73144c21f641377ade63c1b38976b0d17089d1ceedfdfb7ca5",
+    "www/js/southamerica-art-v3230.js": "d0520fe625819e433cf5c7997565538da10e771f039cc4222a98c1104c0eef9a",
+    "www/js/southamerica-data-v3230.js": "0ca138926288feeffafe7065dd1bc4e133abe77d81a80926d6577810691dafdd",
+    "www/js/southamerica-geography-v3230.js": "18e9679f7563044ede3694b1486612080a5fb0940d9f5a581e40d9f6bf1c38ea",
+    "www/js/southamerica-polish-v3231.js": "622f19061770e3c2c17fbc725dd43c6cd1c0d91758eba04467233fde749af2c8",
+    "www/js/update-client-v3212.js": "81201e206a94727ecbed68e058b996d28b6766eede76702b3ebeb30995b910d0",
+    "www/laboratorio-atlas-v3211.html": "05ae765de873b83bee48948469e20828c3e983803eba921fa58ccd10a68f4227",
+    "www/laboratorio-atlas-v3211b.html": "88187f3c1ebd6152654b5660c7ca8e807d60b78f8af9875f847cbaafa33595b9",
+    "www/laboratorio-aves.html": "764f23170242529b740684c0ca637986321c936e4da7f7034c2a3d86a6bcbfb8",
+    "www/laboratorio-bestiario-v3260.html": "7754bd83ffaa2274f860b7caaeac178d43c59388cc1c03cb2b1825d60c340591",
+    "www/laboratorio-campo-v3210.html": "c476ce63707f75d8ec49866b558e0bb34b1bc4076bf6c76a8cc104664f1d1e91",
+    "www/laboratorio-cuaderno-v3250.html": "3320a8043182a6dc12ed1f063c8ddb53bafb0ce6ed709306244318feba0e4ece",
+    "www/laboratorio-dimorfismo.html": "eab42d40f0f0e5ff7e947a41535017b714fc5349639308f01ee0ce318a4e7066",
+    "www/laboratorio-especiales.html": "3c9a908713ad9b60be79c43267e69e885b3deef7e15a37b6106c4c80d676d027",
+    "www/laboratorio-expediciones-investigaciones-v3280.html": "75ddd2efa8947dd91215c19d98fa8c9aef061b5c5f8bcd9751211a6afdd27af7",
+    "www/laboratorio-herpetologia.html": "0f31c8a3960ab93e04b087406a927aed9f70a91f3423ac5e84f96eb0aeef8b21",
+    "www/laboratorio-mamiferos.html": "fcd9310b48f2a8fd380122620eb517a74a68686b9650b55aae7701b56408882d",
+    "www/laboratorio-museo-v3270.html": "5b443542a1b426d5441602ed7171c6ef558fa455d9f889210ac3dc2b89688058",
+    "www/laboratorio-norteamerica-v3220.html": "ee673a3dbb304d1b545f6797e9061f589738a6b80cd7e0db5af1abeaa1fcb6bc",
+    "www/laboratorio-objetos.html": "03e73307d269fc7061eb415b9fb7f6a93849dc7035dcd9019bade60e38313356",
+    "www/laboratorio-peces.html": "35cc4d56daacab8d676fcaded576a09826fa80d51860192c5cc1f4987e3051b1",
+    "www/laboratorio-pigmentacion.html": "68b1aee4dff97cb3e22e246a6e1a6e5246508b8fbcf7b3cd89bd5bf00f020569",
+    "www/laboratorio-pulido-v3199.html": "79e0eaf6d88908f07d70015da3ef5d2f816c4f689ca2a18bc57d9d7a232f129c",
+    "www/laboratorio-sudamerica-v3230.html": "5cadb68c8ebb5789173d8bb6808db140d0d0e1f7b9964505853215b963c6a46b",
+    "www/manifest.webmanifest": "dd5726aa17379dd1bd7a16a74b97f49f55a618148a32b8b63cea6d53fb3920a0",
+    "www/sw.js": "34aa5b888152eea3b7ca37f0c93faf451fd2c4bd31bc59c2dc2e6eb410944ebb"
+  },
+  "reproduction": "python scripts/audit-world-gm01.py /path/to/Atlas_Fauna_Hexagonal_209_900_Especies.xlsx --check",
+  "runtime": {
+    "catalog_identities": 710,
+    "duplicate_full_scientific_names": 0,
+    "functional_regions": 79,
+    "implemented_continents": [
+      "Europa",
+      "Asia",
+      "África",
+      "Norteamérica",
+      "Sudamérica"
+    ],
+    "presences": 1329,
+    "rank_overlaps": {
+      "cervus elaphus": [
+        "ciervo_rojo",
+        "af_ciervo_berberia"
+      ],
+      "equus africanus": [
+        "af_asno_somali",
+        "af_xlsx_131_equus_africanus"
+      ],
+      "giraffa camelopardalis": [
+        "af_jirafa",
+        "af_jirafa_rothschild"
+      ],
+      "kobus leche": [
+        "af_lechwe_rojo",
+        "af_lechwe_negro"
+      ],
+      "panthera pardus": [
+        "asia_esp_0401",
+        "af_leopardo"
+      ]
+    },
+    "save_key": "gran_atlas_v05",
+    "source_manifest": [
+      {
+        "path": "www/js/app.js",
+        "sha256": "641d8fc2b10851409fadb75968d26140ed52487e1f14a5b1571a3241d0794f22"
+      },
+      {
+        "path": "www/js/northamerica-data-v3220.js",
+        "sha256": "069cec890536e4a09125370eab1a6bde117d596e7e1865ed28d45d0ca5840039"
+      },
+      {
+        "path": "www/js/southamerica-data-v3230.js",
+        "sha256": "0ca138926288feeffafe7065dd1bc4e133abe77d81a80926d6577810691dafdd"
+      },
+      {
+        "path": "www/js/northamerica-art-v3220.js",
+        "sha256": "956997ff98a42be9ab83728f3e4d0f4f89383e9a454e00ac8188c2ede46ced6e"
+      },
+      {
+        "path": "www/js/northamerica-polish-v3221.js",
+        "sha256": "ce2f3661335fd704291f3b17420401f5dde8b03d7b299216305f0e19ce1c13f8"
+      },
+      {
+        "path": "www/js/southamerica-art-v3230.js",
+        "sha256": "d0520fe625819e433cf5c7997565538da10e771f039cc4222a98c1104c0eef9a"
+      },
+      {
+        "path": "www/js/southamerica-polish-v3231.js",
+        "sha256": "622f19061770e3c2c17fbc725dd43c6cd1c0d91758eba04467233fde749af2c8"
+      },
+      {
+        "path": "www/js/mammal-art-v3194.js",
+        "sha256": "d05187cd87cc1c6fd51117690f9afcbc16fe16bc56723659eb529ec8316d709a"
+      },
+      {
+        "path": "www/js/bird-art-v3193.js",
+        "sha256": "9475c214345fae86005eb18c1898ac201d31419d9b8d3948f2c43517581f1ef8"
+      },
+      {
+        "path": "www/js/herp-art-v3192.js",
+        "sha256": "a9d56f4e8d25fa00193e8fd0ffa63e310b1d0dfc6b0af135120c66fa2ff5b377"
+      },
+      {
+        "path": "www/js/fish-art-v3191.js",
+        "sha256": "d1287aea496629827570cb2fdfdc3b9666c1b5a39a8b917af61b41da371cbd8c"
+      },
+      {
+        "path": "www/js/atlas-geography-v3211b.js",
+        "sha256": "7b199ef602b19454bf03e115e1976cc6a96603c4c3c13668b78b5482df559863"
+      },
+      {
+        "path": "www/js/southamerica-geography-v3230.js",
+        "sha256": "18e9679f7563044ede3694b1486612080a5fb0940d9f5a581e40d9f6bf1c38ea"
+      },
+      {
+        "path": "tests/helpers/live-game.cjs",
+        "sha256": "c9e8c31f6a3559dd7ed2df461e17bc5594cefd79e2d638f35d72de6079f865fe"
+      }
+    ],
+    "version": "3.28.0",
+    "visual_cells": 83,
+    "visual_nonfunctional_cells": 4
+  },
+  "scope": "GM-01 documental. No se aprueban altas ni equivalencias no demostradas.",
+  "source": {
+    "filename": "Atlas_Fauna_Hexagonal_209_900_Especies.xlsx",
+    "hexagons": 209,
+    "populated_cells": 209,
+    "presences": 1574,
+    "reserved_cells": 0,
+    "scientific_validation": "Fuente ilustrativa con consultas GBIF sin validar; GM-01 no certifica ocurrencias.",
+    "sha256": "5cd22412e6b251d8f02a90e4c8303e02946d5e5d26855589d2c6750649fe4350",
+    "sheets": [
+      {
+        "columns": 15,
+        "name": "Resumen",
+        "nonempty_rows": 26,
+        "physical_rows": 35
+      },
+      {
+        "columns": 20,
+        "name": "Mapa",
+        "nonempty_rows": 23,
+        "physical_rows": 26
+      },
+      {
+        "columns": 15,
+        "name": "Hexágonos",
+        "nonempty_rows": 210,
+        "physical_rows": 210
+      },
+      {
+        "columns": 12,
+        "name": "Fauna",
+        "nonempty_rows": 1575,
+        "physical_rows": 1778
+      },
+      {
+        "columns": 9,
+        "name": "Catálogo especies",
+        "nonempty_rows": 901,
+        "physical_rows": 1041
+      },
+      {
+        "columns": 6,
+        "name": "Metodología y fuentes",
+        "nonempty_rows": 30,
+        "physical_rows": 32
+      }
+    ],
+    "species_records": 900
+  },
+  "status": "AUDITORIA_COMPARATIVA_COMPLETA_CON_REVISIONES_EXPLICITAS"
+}

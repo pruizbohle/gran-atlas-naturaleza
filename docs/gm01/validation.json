@@ -1,0 +1,49 @@
+{
+  "scope": "GM-01 documentary audit only",
+  "base_commit": "85f151aa40b5d93f8db33adb8297b1a6356560d0",
+  "version": "3.28.0",
+  "runtime": {
+    "species": 710,
+    "regions": 79,
+    "presences": 1329,
+    "save_key": "gran_atlas_v05"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "openpyxl": "3.1.5",
+    "node": "v24.22.1"
+  },
+  "regression": {
+    "command": "node --test tests/*.test.cjs",
+    "tests": 383,
+    "passed": 383,
+    "failed": 0,
+    "skipped": 0,
+    "duration_ms": 41669.739862,
+    "log": "regression-tests.txt"
+  },
+  "audit_verification": {
+    "command": "python scripts/verify-world-gm01.py /path/to/original.xlsx",
+    "tests": 16,
+    "passed": 16,
+    "failed": 0,
+    "duration_seconds": 5.352,
+    "log": "audit-tests.txt",
+    "reproduction": "--check made no writes; all 10 reports regenerated into a temporary directory matched byte for byte",
+    "source_tables": "All original columns of Hexágonos, Catálogo especies and Fauna preserved with physical rows",
+    "guards": "Missing or different source rejected; output to production, scripts, tests, .git or repository root rejected"
+  },
+  "production": {
+    "tracked_diff_against_base": [],
+    "manifest_files_unchanged": 115,
+    "game_version_unchanged": true,
+    "save_format_changed": false,
+    "original_xlsx_unchanged": true,
+    "original_xlsx_published": false,
+    "apk_generated": false,
+    "new_game_release_published": false,
+    "new_physical_android_tests": false,
+    "explanation": "Documentation/tools only. Existing regression suites were run in Node; current game data and all production file hashes are unchanged."
+  },
+  "scientific_limits": "No new external authority consultation; unresolved concepts, partial regional scope and distribution decisions are explicit. Classifiers are preliminary, not visual approval."
+}

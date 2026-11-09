@@ -1,0 +1,1562 @@
+[
+  {
+    "column": 1,
+    "row": 1,
+    "sheet": "Resumen",
+    "value": "ATLAS DE FAUNA · MAPA HEXAGONAL"
+  },
+  {
+    "column": 1,
+    "row": 3,
+    "sheet": "Resumen",
+    "value": "Versión depurada · 900 especies únicas · 140 especies rebuscadas retiradas · Cefalópodos y biomas conservados"
+  },
+  {
+    "column": 1,
+    "row": 5,
+    "sheet": "Resumen",
+    "value": "HEXÁGONOS"
+  },
+  {
+    "column": 5,
+    "row": 5,
+    "sheet": "Resumen",
+    "value": "ZONAS CON FAUNA"
+  },
+  {
+    "column": 9,
+    "row": 5,
+    "sheet": "Resumen",
+    "value": "REGISTROS FAUNA"
+  },
+  {
+    "column": 13,
+    "row": 5,
+    "sheet": "Resumen",
+    "value": "ESPECIES DISTINTAS"
+  },
+  {
+    "column": 1,
+    "row": 6,
+    "sheet": "Resumen",
+    "value": 209
+  },
+  {
+    "column": 5,
+    "row": 6,
+    "sheet": "Resumen",
+    "value": 103
+  },
+  {
+    "column": 9,
+    "row": 6,
+    "sheet": "Resumen",
+    "value": 1574
+  },
+  {
+    "column": 13,
+    "row": 6,
+    "sheet": "Resumen",
+    "value": 900
+  },
+  {
+    "column": 1,
+    "row": 11,
+    "sheet": "Resumen",
+    "value": "CONTINENTE / MEDIO"
+  },
+  {
+    "column": 2,
+    "row": 11,
+    "sheet": "Resumen",
+    "value": "HEXÁGONOS"
+  },
+  {
+    "column": 3,
+    "row": 11,
+    "sheet": "Resumen",
+    "value": "POBLADOS"
+  },
+  {
+    "column": 4,
+    "row": 11,
+    "sheet": "Resumen",
+    "value": "REGISTROS"
+  },
+  {
+    "column": 5,
+    "row": 11,
+    "sheet": "Resumen",
+    "value": "ESP. POR HEX. POBLADO"
+  },
+  {
+    "column": 1,
+    "row": 12,
+    "sheet": "Resumen",
+    "value": "América del Norte"
+  },
+  {
+    "column": 2,
+    "row": 12,
+    "sheet": "Resumen",
+    "value": 14
+  },
+  {
+    "column": 3,
+    "row": 12,
+    "sheet": "Resumen",
+    "value": 14
+  },
+  {
+    "column": 4,
+    "row": 12,
+    "sheet": "Resumen",
+    "value": 206
+  },
+  {
+    "column": 5,
+    "row": 12,
+    "sheet": "Resumen",
+    "value": 14.714285714285714
+  },
+  {
+    "column": 1,
+    "row": 13,
+    "sheet": "Resumen",
+    "value": "América del Sur"
+  },
+  {
+    "column": 2,
+    "row": 13,
+    "sheet": "Resumen",
+    "value": 10
+  },
+  {
+    "column": 3,
+    "row": 13,
+    "sheet": "Resumen",
+    "value": 10
+  },
+  {
+    "column": 4,
+    "row": 13,
+    "sheet": "Resumen",
+    "value": 192
+  },
+  {
+    "column": 5,
+    "row": 13,
+    "sheet": "Resumen",
+    "value": 19.2
+  },
+  {
+    "column": 1,
+    "row": 14,
+    "sheet": "Resumen",
+    "value": "Europa"
+  },
+  {
+    "column": 2,
+    "row": 14,
+    "sheet": "Resumen",
+    "value": 10
+  },
+  {
+    "column": 3,
+    "row": 14,
+    "sheet": "Resumen",
+    "value": 10
+  },
+  {
+    "column": 4,
+    "row": 14,
+    "sheet": "Resumen",
+    "value": 250
+  },
+  {
+    "column": 5,
+    "row": 14,
+    "sheet": "Resumen",
+    "value": 25
+  },
+  {
+    "column": 1,
+    "row": 15,
+    "sheet": "Resumen",
+    "value": "África"
+  },
+  {
+    "column": 2,
+    "row": 15,
+    "sheet": "Resumen",
+    "value": 14
+  },
+  {
+    "column": 3,
+    "row": 15,
+    "sheet": "Resumen",
+    "value": 14
+  },
+  {
+    "column": 4,
+    "row": 15,
+    "sheet": "Resumen",
+    "value": 220
+  },
+  {
+    "column": 5,
+    "row": 15,
+    "sheet": "Resumen",
+    "value": 15.714285714285714
+  },
+  {
+    "column": 1,
+    "row": 16,
+    "sheet": "Resumen",
+    "value": "Asia"
+  },
+  {
+    "column": 2,
+    "row": 16,
+    "sheet": "Resumen",
+    "value": 21
+  },
+  {
+    "column": 3,
+    "row": 16,
+    "sheet": "Resumen",
+    "value": 21
+  },
+  {
+    "column": 4,
+    "row": 16,
+    "sheet": "Resumen",
+    "value": 291
+  },
+  {
+    "column": 5,
+    "row": 16,
+    "sheet": "Resumen",
+    "value": 13.857142857142858
+  },
+  {
+    "column": 1,
+    "row": 17,
+    "sheet": "Resumen",
+    "value": "Oceanía"
+  },
+  {
+    "column": 2,
+    "row": 17,
+    "sheet": "Resumen",
+    "value": 8
+  },
+  {
+    "column": 3,
+    "row": 17,
+    "sheet": "Resumen",
+    "value": 8
+  },
+  {
+    "column": 4,
+    "row": 17,
+    "sheet": "Resumen",
+    "value": 131
+  },
+  {
+    "column": 5,
+    "row": 17,
+    "sheet": "Resumen",
+    "value": 16.375
+  },
+  {
+    "column": 1,
+    "row": 18,
+    "sheet": "Resumen",
+    "value": "Hielo"
+  },
+  {
+    "column": 2,
+    "row": 18,
+    "sheet": "Resumen",
+    "value": 29
+  },
+  {
+    "column": 3,
+    "row": 18,
+    "sheet": "Resumen",
+    "value": 7
+  },
+  {
+    "column": 4,
+    "row": 18,
+    "sheet": "Resumen",
+    "value": 45
+  },
+  {
+    "column": 5,
+    "row": 18,
+    "sheet": "Resumen",
+    "value": 6.428571428571429
+  },
+  {
+    "column": 1,
+    "row": 19,
+    "sheet": "Resumen",
+    "value": "Mar"
+  },
+  {
+    "column": 2,
+    "row": 19,
+    "sheet": "Resumen",
+    "value": 84
+  },
+  {
+    "column": 3,
+    "row": 19,
+    "sheet": "Resumen",
+    "value": 12
+  },
+  {
+    "column": 4,
+    "row": 19,
+    "sheet": "Resumen",
+    "value": 192
+  },
+  {
+    "column": 5,
+    "row": 19,
+    "sheet": "Resumen",
+    "value": 16
+  },
+  {
+    "column": 1,
+    "row": 20,
+    "sheet": "Resumen",
+    "value": "Mar profundo"
+  },
+  {
+    "column": 2,
+    "row": 20,
+    "sheet": "Resumen",
+    "value": 17
+  },
+  {
+    "column": 3,
+    "row": 20,
+    "sheet": "Resumen",
+    "value": 5
+  },
+  {
+    "column": 4,
+    "row": 20,
+    "sheet": "Resumen",
+    "value": 44
+  },
+  {
+    "column": 5,
+    "row": 20,
+    "sheet": "Resumen",
+    "value": 8.8
+  },
+  {
+    "column": 1,
+    "row": 21,
+    "sheet": "Resumen",
+    "value": "Mar abisal"
+  },
+  {
+    "column": 2,
+    "row": 21,
+    "sheet": "Resumen",
+    "value": 2
+  },
+  {
+    "column": 3,
+    "row": 21,
+    "sheet": "Resumen",
+    "value": 2
+  },
+  {
+    "column": 4,
+    "row": 21,
+    "sheet": "Resumen",
+    "value": 3
+  },
+  {
+    "column": 5,
+    "row": 21,
+    "sheet": "Resumen",
+    "value": 1.5
+  },
+  {
+    "column": 1,
+    "row": 22,
+    "sheet": "Resumen",
+    "value": "TOTAL"
+  },
+  {
+    "column": 2,
+    "row": 22,
+    "sheet": "Resumen",
+    "value": 209
+  },
+  {
+    "column": 3,
+    "row": 22,
+    "sheet": "Resumen",
+    "value": 103
+  },
+  {
+    "column": 4,
+    "row": 22,
+    "sheet": "Resumen",
+    "value": 1574
+  },
+  {
+    "column": 5,
+    "row": 22,
+    "sheet": "Resumen",
+    "value": 15.281553398058252
+  },
+  {
+    "column": 1,
+    "row": 25,
+    "sheet": "Resumen",
+    "value": "RAREZA DE JUEGO"
+  },
+  {
+    "column": 2,
+    "row": 25,
+    "sheet": "Resumen",
+    "value": "REGISTROS"
+  },
+  {
+    "column": 3,
+    "row": 25,
+    "sheet": "Resumen",
+    "value": "PROPORCIÓN"
+  },
+  {
+    "column": 1,
+    "row": 26,
+    "sheet": "Resumen",
+    "value": "Común"
+  },
+  {
+    "column": 2,
+    "row": 26,
+    "sheet": "Resumen",
+    "value": 803
+  },
+  {
+    "column": 3,
+    "row": 26,
+    "sheet": "Resumen",
+    "value": 0.5101651842439644
+  },
+  {
+    "column": 1,
+    "row": 27,
+    "sheet": "Resumen",
+    "value": "Poco común"
+  },
+  {
+    "column": 2,
+    "row": 27,
+    "sheet": "Resumen",
+    "value": 426
+  },
+  {
+    "column": 3,
+    "row": 27,
+    "sheet": "Resumen",
+    "value": 0.27064803049555275
+  },
+  {
+    "column": 1,
+    "row": 28,
+    "sheet": "Resumen",
+    "value": "Raro"
+  },
+  {
+    "column": 2,
+    "row": 28,
+    "sheet": "Resumen",
+    "value": 276
+  },
+  {
+    "column": 3,
+    "row": 28,
+    "sheet": "Resumen",
+    "value": 0.17534942820838628
+  },
+  {
+    "column": 1,
+    "row": 29,
+    "sheet": "Resumen",
+    "value": "Muy raro"
+  },
+  {
+    "column": 2,
+    "row": 29,
+    "sheet": "Resumen",
+    "value": 69
+  },
+  {
+    "column": 3,
+    "row": 29,
+    "sheet": "Resumen",
+    "value": 0.04383735705209657
+  },
+  {
+    "column": 1,
+    "row": 31,
+    "sheet": "Resumen",
+    "value": "LECTURA IMPORTANTE"
+  },
+  {
+    "column": 1,
+    "row": 32,
+    "sheet": "Resumen",
+    "value": "La densidad/riqueza es una escala de diseño del juego (1–5), no una medición real de biodiversidad, abundancia o probabilidad de observar animales."
+  },
+  {
+    "column": 1,
+    "row": 33,
+    "sheet": "Resumen",
+    "value": "Las rarezas Común, Poco común, Raro y Muy raro son de juego y NO indican el estado de conservación UICN."
+  },
+  {
+    "column": 1,
+    "row": 34,
+    "sheet": "Resumen",
+    "value": "Los 77 hexágonos continentales conservan fauna; mares y hielos siguen cargados selectivamente."
+  },
+  {
+    "column": 1,
+    "row": 35,
+    "sheet": "Resumen",
+    "value": "Pulpos y calamares se incluyen en Peces → Cefalópodos solo como convención del juego (son moluscos)."
+  },
+  {
+    "column": 1,
+    "row": 1,
+    "sheet": "Metodología y fuentes",
+    "value": "CRITERIOS · FUENTES · ALCANCE DEL PROTOTIPO"
+  },
+  {
+    "column": 1,
+    "row": 4,
+    "sheet": "Metodología y fuentes",
+    "value": "Sección"
+  },
+  {
+    "column": 2,
+    "row": 4,
+    "sheet": "Metodología y fuentes",
+    "value": "Parámetro"
+  },
+  {
+    "column": 3,
+    "row": 4,
+    "sheet": "Metodología y fuentes",
+    "value": "Descripción"
+  },
+  {
+    "column": 4,
+    "row": 4,
+    "sheet": "Metodología y fuentes",
+    "value": "Aplicación"
+  },
+  {
+    "column": 5,
+    "row": 4,
+    "sheet": "Metodología y fuentes",
+    "value": "Observaciones"
+  },
+  {
+    "column": 6,
+    "row": 4,
+    "sheet": "Metodología y fuentes",
+    "value": "Fuente / URL"
+  },
+  {
+    "column": 1,
+    "row": 5,
+    "sheet": "Metodología y fuentes",
+    "value": "Cobertura"
+  },
+  {
+    "column": 2,
+    "row": 5,
+    "sheet": "Metodología y fuentes",
+    "value": "Mapamundi"
+  },
+  {
+    "column": 3,
+    "row": 5,
+    "sheet": "Metodología y fuentes",
+    "value": "209 hexágonos (11 filas x 19 columnas)"
+  },
+  {
+    "column": 4,
+    "row": 5,
+    "sheet": "Metodología y fuentes",
+    "value": "77 continente / 29 hielo / 84 mar / 17 profundo / 2 abisal"
+  },
+  {
+    "column": 5,
+    "row": 5,
+    "sheet": "Metodología y fuentes",
+    "value": "Reconstruido a partir de la imagen original"
+  },
+  {
+    "column": 6,
+    "row": 5,
+    "sheet": "Metodología y fuentes",
+    "value": "Imagen de la conversación"
+  },
+  {
+    "column": 1,
+    "row": 6,
+    "sheet": "Metodología y fuentes",
+    "value": "Cobertura"
+  },
+  {
+    "column": 2,
+    "row": 6,
+    "sheet": "Metodología y fuentes",
+    "value": "Hexágonos terrestres"
+  },
+  {
+    "column": 3,
+    "row": 6,
+    "sheet": "Metodología y fuentes",
+    "value": "77 de 77 con fauna"
+  },
+  {
+    "column": 4,
+    "row": 6,
+    "sheet": "Metodología y fuentes",
+    "value": "6 continentes, según clasificación fijada en conversación"
+  },
+  {
+    "column": 5,
+    "row": 6,
+    "sheet": "Metodología y fuentes",
+    "value": "Nombre geográfico ≠ bioma"
+  },
+  {
+    "column": 6,
+    "row": 6,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 7,
+    "sheet": "Metodología y fuentes",
+    "value": "Cobertura"
+  },
+  {
+    "column": 2,
+    "row": 7,
+    "sheet": "Metodología y fuentes",
+    "value": "Hielo y mares"
+  },
+  {
+    "column": 3,
+    "row": 7,
+    "sheet": "Metodología y fuentes",
+    "value": "Hielo y mares con fauna seleccionada; el resto permanece reservado"
+  },
+  {
+    "column": 4,
+    "row": 7,
+    "sheet": "Metodología y fuentes",
+    "value": "Los 77 hexágonos continentales mantienen fauna"
+  },
+  {
+    "column": 5,
+    "row": 7,
+    "sheet": "Metodología y fuentes",
+    "value": "No equivale a un inventario exhaustivo de cada océano"
+  },
+  {
+    "column": 6,
+    "row": 7,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 8,
+    "sheet": "Metodología y fuentes",
+    "value": "Fauna"
+  },
+  {
+    "column": 2,
+    "row": 8,
+    "sheet": "Metodología y fuentes",
+    "value": "Unidad de registro"
+  },
+  {
+    "column": 3,
+    "row": 8,
+    "sheet": "Metodología y fuentes",
+    "value": "Animal × hexágono"
+  },
+  {
+    "column": 4,
+    "row": 8,
+    "sheet": "Metodología y fuentes",
+    "value": "La misma especie puede estar presente en varios hexágonos"
+  },
+  {
+    "column": 5,
+    "row": 8,
+    "sheet": "Metodología y fuentes",
+    "value": "No confundir registros con especies distintas"
+  },
+  {
+    "column": 6,
+    "row": 8,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 9,
+    "sheet": "Metodología y fuentes",
+    "value": "Fauna"
+  },
+  {
+    "column": 2,
+    "row": 9,
+    "sheet": "Metodología y fuentes",
+    "value": "Nombres científicos"
+  },
+  {
+    "column": 3,
+    "row": 9,
+    "sheet": "Metodología y fuentes",
+    "value": "Binomios elegidos manualmente"
+  },
+  {
+    "column": 4,
+    "row": 9,
+    "sheet": "Metodología y fuentes",
+    "value": "Consulta GBIF disponible en cada fila"
+  },
+  {
+    "column": 5,
+    "row": 9,
+    "sheet": "Metodología y fuentes",
+    "value": "Búsqueda NO equivale a verificación taxonómica individual"
+  },
+  {
+    "column": 6,
+    "row": 9,
+    "sheet": "Metodología y fuentes",
+    "value": "https://www.gbif.org/"
+  },
+  {
+    "column": 1,
+    "row": 10,
+    "sheet": "Metodología y fuentes",
+    "value": "Fauna"
+  },
+  {
+    "column": 2,
+    "row": 10,
+    "sheet": "Metodología y fuentes",
+    "value": "Distribución geográfica"
+  },
+  {
+    "column": 3,
+    "row": 10,
+    "sheet": "Metodología y fuentes",
+    "value": "Asignación ilustrativa de fauna regional"
+  },
+  {
+    "column": 4,
+    "row": 10,
+    "sheet": "Metodología y fuentes",
+    "value": "Correlación amplia entre especie y hábitat"
+  },
+  {
+    "column": 5,
+    "row": 10,
+    "sheet": "Metodología y fuentes",
+    "value": "No validado mediante registros georreferenciados caso a caso"
+  },
+  {
+    "column": 6,
+    "row": 10,
+    "sheet": "Metodología y fuentes",
+    "value": "https://techdocs.gbif.org/en/data-use/api-downloads"
+  },
+  {
+    "column": 1,
+    "row": 11,
+    "sheet": "Metodología y fuentes",
+    "value": "Biomas"
+  },
+  {
+    "column": 2,
+    "row": 11,
+    "sheet": "Metodología y fuentes",
+    "value": "Tipos genéricos"
+  },
+  {
+    "column": 3,
+    "row": 11,
+    "sheet": "Metodología y fuentes",
+    "value": "Bosques, praderas, selvas, desiertos, humedales, océanos, hielo"
+  },
+  {
+    "column": 4,
+    "row": 11,
+    "sheet": "Metodología y fuentes",
+    "value": "La región geográfica tiene su propia columna"
+  },
+  {
+    "column": 5,
+    "row": 11,
+    "sheet": "Metodología y fuentes",
+    "value": "Adaptación simplificada de clasificación de biomas"
+  },
+  {
+    "column": 6,
+    "row": 11,
+    "sheet": "Metodología y fuentes",
+    "value": "https://files.worldwildlife.org/wwfcmsprod/files/Publication/file/o0z7qqe0l_Ecoregions_Map.pdf"
+  },
+  {
+    "column": 1,
+    "row": 12,
+    "sheet": "Metodología y fuentes",
+    "value": "Riqueza"
+  },
+  {
+    "column": 2,
+    "row": 12,
+    "sheet": "Metodología y fuentes",
+    "value": "Índice 1"
+  },
+  {
+    "column": 3,
+    "row": 12,
+    "sheet": "Metodología y fuentes",
+    "value": "Muy baja"
+  },
+  {
+    "column": 4,
+    "row": 12,
+    "sheet": "Metodología y fuentes",
+    "value": "Abisal, fosas oceánicas"
+  },
+  {
+    "column": 5,
+    "row": 12,
+    "sheet": "Metodología y fuentes",
+    "value": "Escala relativa lúdica, no medida científica"
+  },
+  {
+    "column": 6,
+    "row": 12,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 13,
+    "sheet": "Metodología y fuentes",
+    "value": "Riqueza"
+  },
+  {
+    "column": 2,
+    "row": 13,
+    "sheet": "Metodología y fuentes",
+    "value": "Índice 2"
+  },
+  {
+    "column": 3,
+    "row": 13,
+    "sheet": "Metodología y fuentes",
+    "value": "Baja"
+  },
+  {
+    "column": 4,
+    "row": 13,
+    "sheet": "Metodología y fuentes",
+    "value": "Tundra, hielo, desierto, océano profundo, alta montaña"
+  },
+  {
+    "column": 5,
+    "row": 13,
+    "sheet": "Metodología y fuentes",
+    "value": "Escala relativa lúdica, no medida científica"
+  },
+  {
+    "column": 6,
+    "row": 13,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 14,
+    "sheet": "Metodología y fuentes",
+    "value": "Riqueza"
+  },
+  {
+    "column": 2,
+    "row": 14,
+    "sheet": "Metodología y fuentes",
+    "value": "Índice 3"
+  },
+  {
+    "column": 3,
+    "row": 14,
+    "sheet": "Metodología y fuentes",
+    "value": "Media"
+  },
+  {
+    "column": 4,
+    "row": 14,
+    "sheet": "Metodología y fuentes",
+    "value": "Bosque templado, pradera, océano pelágico"
+  },
+  {
+    "column": 5,
+    "row": 14,
+    "sheet": "Metodología y fuentes",
+    "value": "Escala relativa lúdica, no medida científica"
+  },
+  {
+    "column": 6,
+    "row": 14,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 15,
+    "sheet": "Metodología y fuentes",
+    "value": "Riqueza"
+  },
+  {
+    "column": 2,
+    "row": 15,
+    "sheet": "Metodología y fuentes",
+    "value": "Índice 4"
+  },
+  {
+    "column": 3,
+    "row": 15,
+    "sheet": "Metodología y fuentes",
+    "value": "Alta"
+  },
+  {
+    "column": 4,
+    "row": 15,
+    "sheet": "Metodología y fuentes",
+    "value": "Bosque tropical y subtropical, sabana tropical"
+  },
+  {
+    "column": 5,
+    "row": 15,
+    "sheet": "Metodología y fuentes",
+    "value": "Escala relativa lúdica, no medida científica"
+  },
+  {
+    "column": 6,
+    "row": 15,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 16,
+    "sheet": "Metodología y fuentes",
+    "value": "Riqueza"
+  },
+  {
+    "column": 2,
+    "row": 16,
+    "sheet": "Metodología y fuentes",
+    "value": "Índice 5"
+  },
+  {
+    "column": 3,
+    "row": 16,
+    "sheet": "Metodología y fuentes",
+    "value": "Muy alta"
+  },
+  {
+    "column": 4,
+    "row": 16,
+    "sheet": "Metodología y fuentes",
+    "value": "Selva tropical húmeda, arrecifes, algunos humedales"
+  },
+  {
+    "column": 5,
+    "row": 16,
+    "sheet": "Metodología y fuentes",
+    "value": "Escala relativa lúdica, no medida científica"
+  },
+  {
+    "column": 6,
+    "row": 16,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 17,
+    "sheet": "Metodología y fuentes",
+    "value": "Rareza"
+  },
+  {
+    "column": 2,
+    "row": 17,
+    "sheet": "Metodología y fuentes",
+    "value": "Común"
+  },
+  {
+    "column": 3,
+    "row": 17,
+    "sheet": "Metodología y fuentes",
+    "value": "Encuentro frecuente"
+  },
+  {
+    "column": 4,
+    "row": 17,
+    "sheet": "Metodología y fuentes",
+    "value": "Categoría lúdica"
+  },
+  {
+    "column": 5,
+    "row": 17,
+    "sheet": "Metodología y fuentes",
+    "value": "No representa abundancia natural"
+  },
+  {
+    "column": 6,
+    "row": 17,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 18,
+    "sheet": "Metodología y fuentes",
+    "value": "Rareza"
+  },
+  {
+    "column": 2,
+    "row": 18,
+    "sheet": "Metodología y fuentes",
+    "value": "Poco común"
+  },
+  {
+    "column": 3,
+    "row": 18,
+    "sheet": "Metodología y fuentes",
+    "value": "Encuentro menos frecuente"
+  },
+  {
+    "column": 4,
+    "row": 18,
+    "sheet": "Metodología y fuentes",
+    "value": "Categoría lúdica"
+  },
+  {
+    "column": 5,
+    "row": 18,
+    "sheet": "Metodología y fuentes",
+    "value": "No representa abundancia natural"
+  },
+  {
+    "column": 6,
+    "row": 18,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 19,
+    "sheet": "Metodología y fuentes",
+    "value": "Rareza"
+  },
+  {
+    "column": 2,
+    "row": 19,
+    "sheet": "Metodología y fuentes",
+    "value": "Raro"
+  },
+  {
+    "column": 3,
+    "row": 19,
+    "sheet": "Metodología y fuentes",
+    "value": "Encuentro infrecuente"
+  },
+  {
+    "column": 4,
+    "row": 19,
+    "sheet": "Metodología y fuentes",
+    "value": "Categoría lúdica"
+  },
+  {
+    "column": 5,
+    "row": 19,
+    "sheet": "Metodología y fuentes",
+    "value": "NO equivale a amenaza UICN"
+  },
+  {
+    "column": 6,
+    "row": 19,
+    "sheet": "Metodología y fuentes",
+    "value": "https://iucn.org/resources/conservation-tool/iucn-red-list-threatened-species"
+  },
+  {
+    "column": 1,
+    "row": 20,
+    "sheet": "Metodología y fuentes",
+    "value": "Rareza"
+  },
+  {
+    "column": 2,
+    "row": 20,
+    "sheet": "Metodología y fuentes",
+    "value": "Muy raro"
+  },
+  {
+    "column": 3,
+    "row": 20,
+    "sheet": "Metodología y fuentes",
+    "value": "Encuentro extraordinario"
+  },
+  {
+    "column": 4,
+    "row": 20,
+    "sheet": "Metodología y fuentes",
+    "value": "Categoría lúdica"
+  },
+  {
+    "column": 5,
+    "row": 20,
+    "sheet": "Metodología y fuentes",
+    "value": "NO equivale a amenaza UICN"
+  },
+  {
+    "column": 6,
+    "row": 20,
+    "sheet": "Metodología y fuentes",
+    "value": "https://iucn.org/resources/conservation-tool/iucn-red-list-threatened-species"
+  },
+  {
+    "column": 1,
+    "row": 21,
+    "sheet": "Metodología y fuentes",
+    "value": "Proyección"
+  },
+  {
+    "column": 2,
+    "row": 21,
+    "sheet": "Metodología y fuentes",
+    "value": "Muy raro"
+  },
+  {
+    "column": 3,
+    "row": 21,
+    "sheet": "Metodología y fuentes",
+    "value": "Encuentro extraordinario"
+  },
+  {
+    "column": 4,
+    "row": 21,
+    "sheet": "Metodología y fuentes",
+    "value": "No se completó estado IUCN por especie"
+  },
+  {
+    "column": 5,
+    "row": 21,
+    "sheet": "Metodología y fuentes",
+    "value": "Evita mezclar niveles de juego con categoría científica"
+  },
+  {
+    "column": 6,
+    "row": 21,
+    "sheet": "Metodología y fuentes",
+    "value": "https://iucn.org/resources/conservation-tool/iucn-red-list-threatened-species"
+  },
+  {
+    "column": 1,
+    "row": 22,
+    "sheet": "Metodología y fuentes",
+    "value": "Calidad"
+  },
+  {
+    "column": 2,
+    "row": 22,
+    "sheet": "Metodología y fuentes",
+    "value": "Distribución"
+  },
+  {
+    "column": 3,
+    "row": 22,
+    "sheet": "Metodología y fuentes",
+    "value": "Algunos animales comparten biomas pero habitan solo zonas puntuales"
+  },
+  {
+    "column": 4,
+    "row": 22,
+    "sheet": "Metodología y fuentes",
+    "value": "Revisar fronteras biogeográficas y nombres comunes chilenos"
+  },
+  {
+    "column": 5,
+    "row": 22,
+    "sheet": "Metodología y fuentes",
+    "value": "Base conceptual para prototipar, no atlas validado"
+  },
+  {
+    "column": 6,
+    "row": 22,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 23,
+    "sheet": "Metodología y fuentes",
+    "value": "Calidad"
+  },
+  {
+    "column": 2,
+    "row": 23,
+    "sheet": "Metodología y fuentes",
+    "value": "Ambientes polares"
+  },
+  {
+    "column": 3,
+    "row": 23,
+    "sheet": "Metodología y fuentes",
+    "value": "Especies asociadas a hielo y bordes costeros"
+  },
+  {
+    "column": 4,
+    "row": 23,
+    "sheet": "Metodología y fuentes",
+    "value": "No implica presencia en el interior de casquetes helados"
+  },
+  {
+    "column": 5,
+    "row": 23,
+    "sheet": "Metodología y fuentes",
+    "value": "También hay fauna pelágica del entorno"
+  },
+  {
+    "column": 6,
+    "row": 23,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 24,
+    "sheet": "Metodología y fuentes",
+    "value": "Calidad"
+  },
+  {
+    "column": 2,
+    "row": 24,
+    "sheet": "Metodología y fuentes",
+    "value": "Mares abisales"
+  },
+  {
+    "column": 3,
+    "row": 24,
+    "sheet": "Metodología y fuentes",
+    "value": "Taxones de profundidad variable, con ejemplos de fosas"
+  },
+  {
+    "column": 4,
+    "row": 24,
+    "sheet": "Metodología y fuentes",
+    "value": "Afinar rangos batimétricos por especie"
+  },
+  {
+    "column": 5,
+    "row": 24,
+    "sheet": "Metodología y fuentes",
+    "value": "La simplificación es para jugabilidad"
+  },
+  {
+    "column": 6,
+    "row": 24,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 25,
+    "sheet": "Metodología y fuentes",
+    "value": "Juego"
+  },
+  {
+    "column": 2,
+    "row": 25,
+    "sheet": "Metodología y fuentes",
+    "value": "Rareza asignada"
+  },
+  {
+    "column": 3,
+    "row": 25,
+    "sheet": "Metodología y fuentes",
+    "value": "Combinación de especies emblemáticas y asignación reproducible"
+  },
+  {
+    "column": 4,
+    "row": 25,
+    "sheet": "Metodología y fuentes",
+    "value": "Se mantiene fija por especie, incluso entre zonas"
+  },
+  {
+    "column": 5,
+    "row": 25,
+    "sheet": "Metodología y fuentes",
+    "value": "Modificarla sin afectar nombres ni biomas"
+  },
+  {
+    "column": 6,
+    "row": 25,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 1,
+    "row": 26,
+    "sheet": "Metodología y fuentes",
+    "value": "Exportación"
+  },
+  {
+    "column": 2,
+    "row": 26,
+    "sheet": "Metodología y fuentes",
+    "value": "Fecha de creación"
+  },
+  {
+    "column": 3,
+    "row": 26,
+    "sheet": "Metodología y fuentes",
+    "value": "Depuración a 900 especies únicas (140 especies añadidas previamente retiradas)"
+  },
+  {
+    "column": 4,
+    "row": 26,
+    "sheet": "Metodología y fuentes",
+    "value": "Archivo editable, filtrable y escalable"
+  },
+  {
+    "column": 5,
+    "row": 26,
+    "sheet": "Metodología y fuentes",
+    "value": "Las fórmulas recalculan al añadir registros dentro de los rangos actuales"
+  },
+  {
+    "column": 6,
+    "row": 26,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  },
+  {
+    "column": 3,
+    "row": 27,
+    "sheet": "Metodología y fuentes",
+    "value": "2026-10-26 (catálogo depurado)"
+  },
+  {
+    "column": 1,
+    "row": 28,
+    "sheet": "Metodología y fuentes",
+    "value": "Actualización"
+  },
+  {
+    "column": 2,
+    "row": 28,
+    "sheet": "Metodología y fuentes",
+    "value": "Selección taxonómica"
+  },
+  {
+    "column": 3,
+    "row": 28,
+    "sheet": "Metodología y fuentes",
+    "value": "Excluidos insectos, arácnidos y demás invertebrados"
+  },
+  {
+    "column": 4,
+    "row": 28,
+    "sheet": "Metodología y fuentes",
+    "value": "Mantener solo pulpos y calamares entre los invertebrados"
+  },
+  {
+    "column": 5,
+    "row": 28,
+    "sheet": "Metodología y fuentes",
+    "value": "Se conservaron las 6 especies anteriores de cefalópodos"
+  },
+  {
+    "column": 6,
+    "row": 28,
+    "sheet": "Metodología y fuentes",
+    "value": "https://oumnh.web.ox.ac.uk/learn-mollusca"
+  },
+  {
+    "column": 1,
+    "row": 29,
+    "sheet": "Metodología y fuentes",
+    "value": "Actualización"
+  },
+  {
+    "column": 2,
+    "row": 29,
+    "sheet": "Metodología y fuentes",
+    "value": "Cefalópodos"
+  },
+  {
+    "column": 3,
+    "row": 29,
+    "sheet": "Metodología y fuentes",
+    "value": "Se clasifican como Peces en el juego"
+  },
+  {
+    "column": 4,
+    "row": 29,
+    "sheet": "Metodología y fuentes",
+    "value": "Subgrupo Cefalópodos; excepción explícita a la taxonomía real"
+  },
+  {
+    "column": 5,
+    "row": 29,
+    "sheet": "Metodología y fuentes",
+    "value": "Pulpos y calamares son moluscos, no peces"
+  },
+  {
+    "column": 6,
+    "row": 29,
+    "sheet": "Metodología y fuentes",
+    "value": "https://oumnh.web.ox.ac.uk/learn-mollusca"
+  },
+  {
+    "column": 1,
+    "row": 30,
+    "sheet": "Metodología y fuentes",
+    "value": "Actualización"
+  },
+  {
+    "column": 2,
+    "row": 30,
+    "sheet": "Metodología y fuentes",
+    "value": "Rareza"
+  },
+  {
+    "column": 3,
+    "row": 30,
+    "sheet": "Metodología y fuentes",
+    "value": "Legendario se reemplaza por Muy raro"
+  },
+  {
+    "column": 4,
+    "row": 30,
+    "sheet": "Metodología y fuentes",
+    "value": "Cambio de categoría sin alterar lógica de zonas"
+  },
+  {
+    "column": 5,
+    "row": 30,
+    "sheet": "Metodología y fuentes",
+    "value": "Los niveles son de jugabilidad, no la Lista Roja"
+  },
+  {
+    "column": 6,
+    "row": 30,
+    "sheet": "Metodología y fuentes",
+    "value": "https://nrl.iucnredlist.org/es/resources/spatial-data-download"
+  },
+  {
+    "column": 1,
+    "row": 31,
+    "sheet": "Metodología y fuentes",
+    "value": "Actualización"
+  },
+  {
+    "column": 2,
+    "row": 31,
+    "sheet": "Metodología y fuentes",
+    "value": "Diversidad regional"
+  },
+  {
+    "column": 3,
+    "row": 31,
+    "sheet": "Metodología y fuentes",
+    "value": "Incremento de especies repartido entre los seis continentes"
+  },
+  {
+    "column": 4,
+    "row": 31,
+    "sheet": "Metodología y fuentes",
+    "value": "Reforzados micromamíferos en Europa Occidental"
+  },
+  {
+    "column": 5,
+    "row": 31,
+    "sheet": "Metodología y fuentes",
+    "value": "Distribución propuesta, sujeta a validación taxonómica y local"
+  },
+  {
+    "column": 6,
+    "row": 31,
+    "sheet": "Metodología y fuentes",
+    "value": "https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c"
+  },
+  {
+    "column": 1,
+    "row": 32,
+    "sheet": "Metodología y fuentes",
+    "value": "Actualización"
+  },
+  {
+    "column": 2,
+    "row": 32,
+    "sheet": "Metodología y fuentes",
+    "value": "Control de cambios"
+  },
+  {
+    "column": 3,
+    "row": 32,
+    "sheet": "Metodología y fuentes",
+    "value": "900 especies únicas / 1574 registros de presencia animal-zona"
+  },
+  {
+    "column": 4,
+    "row": 32,
+    "sheet": "Metodología y fuentes",
+    "value": "209 hexágonos / 77 continentales / nombres y biomas originales"
+  },
+  {
+    "column": 5,
+    "row": 32,
+    "sheet": "Metodología y fuentes",
+    "value": "Se priorizó reconocimiento de especies y diversidad por zona; criterio lúdico"
+  },
+  {
+    "column": 6,
+    "row": 32,
+    "sheet": "Metodología y fuentes",
+    "value": "—"
+  }
+]

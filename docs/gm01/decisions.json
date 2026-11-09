@@ -1,0 +1,1684 @@
+{
+  "base_commit": "85f151aa40b5d93f8db33adb8297b1a6356560d0",
+  "base_game_commit": "7ca276ba4d92e13ed51be71667b663b194d6aae4",
+  "expected_source_sha256": "5cd22412e6b251d8f02a90e4c8303e02946d5e5d26855589d2c6750649fe4350",
+  "source_filename": "Atlas_Fauna_Hexagonal_209_900_Especies.xlsx",
+  "authority_status": "Equivalencias existentes documentadas; referencias de familia y perfiles artísticos son propuestas editoriales preliminares, no validación taxonómica externa nueva.",
+  "aliases": {
+    "Pecari tajacu": {
+      "canonical": "Dicotyles tajacu",
+      "evidence": "docs/norteamerica-v3220/source-presences.json; docs/americas-audit.md; identidad única conservada en AM-02"
+    },
+    "Pudu mephistophiles": {
+      "canonical": "Pudella mephistophiles",
+      "evidence": "docs/sudamerica-v3230/TAXONOMY.md; sourceScientific/sourceSpeciesIds del catálogo efectivo"
+    },
+    "Dasypus hybridus": {
+      "canonical": "Dasypus septemcinctus",
+      "evidence": "docs/sudamerica-v3230/TAXONOMY.md; decisión AM-04 conservada"
+    },
+    "Conepatus humboldtii": {
+      "canonical": "Conepatus chinga",
+      "evidence": "docs/sudamerica-v3230/TAXONOMY.md; decisión AM-04 conservada"
+    }
+  },
+  "rank_or_identity_ambiguities": {
+    "Panthera pardus": {
+      "candidates": [
+        "asia_esp_0401",
+        "af_leopardo"
+      ],
+      "reason": "La fuente llama Leopardo persa a Panthera pardus y lo distribuye en Asia y África. El juego conserva P. p. tulliana y P. p. pardus. No reducir automáticamente subespecies a binomio ni crear un tercer leopardo amplio para igualar la fuente."
+    },
+    "Gorilla beringei": {
+      "candidates": [
+        "af_gorila_montana"
+      ],
+      "reason": "La fuente nombra Gorila de montaña pero usa el rango especie G. beringei; el juego usa G. b. beringei. Correspondencia parcial de rango; no certifica cobertura del gorila oriental de llanura."
+    },
+    "Canis familiaris": {
+      "candidates": [],
+      "reason": "Nombre común Dingo frente a Canis familiaris. Identidad/intención de la fila no demostrada. No asociar al lobo Canis lupus ni crear un perro doméstico por similitud de género; decidir autoridad y concepto de dingo antes de GM-02."
+    }
+  },
+  "africa_crosswalk": {
+    "HX-04-09": {
+      "id": "HX-06-07",
+      "scope": "equivalente"
+    },
+    "HX-04-10": {
+      "id": "HX-06-09",
+      "scope": "equivalente"
+    },
+    "HX-04-11": {
+      "id": "HX-06-11",
+      "scope": "equivalente"
+    },
+    "HX-05-09": {
+      "id": "HX-08-08",
+      "scope": "parcial",
+      "note": "Selvas de Guinea → Bosques de África occidental; región ampliada, correspondencia editorial explícita, no mera coincidencia de fauna."
+    },
+    "HX-05-10": {
+      "id": "HX-07-08",
+      "scope": "equivalente"
+    },
+    "HX-05-11": {
+      "id": "HX-07-12",
+      "scope": "equivalente"
+    },
+    "HX-05-12": {
+      "id": "HX-07-11",
+      "scope": "equivalente"
+    },
+    "HX-06-10": {
+      "id": "HX-08-11",
+      "scope": "equivalente"
+    },
+    "HX-06-11": {
+      "id": "HX-07-10",
+      "scope": "parcial",
+      "note": "Serengeti → Sabana de África oriental; ámbito actual más amplio."
+    },
+    "HX-06-12": {
+      "id": "HX-07-13",
+      "scope": "equivalente"
+    },
+    "HX-07-10": {
+      "id": "HX-10-10",
+      "scope": "parcial",
+      "note": "Desierto del Kalahari → Kalahari y sabana austral; no equivalencia exacta de bioma."
+    },
+    "HX-07-11": {
+      "id": "HX-11-10",
+      "scope": "parcial",
+      "note": "África Austral → Lowveld y Kruger conserva el núcleo de la fauna de la fuente (contrastar las presencias), pero restringe un nombre mucho más amplio. No declarar que toda África austral sea Kruger."
+    },
+    "HX-07-12": {
+      "id": "HX-09-11",
+      "scope": "equivalente"
+    },
+    "HX-08-11": {
+      "id": "HX-09-14",
+      "scope": "equivalente"
+    }
+  },
+  "taxonomic_reviews": {
+    "Leopardus colocola": "Concepto amplio conservado por AM-04; no sustituir automáticamente por pajeros/fasciatus/garleppi.",
+    "Leopardus tigrinus": "Complejo de tigrillos; AM-04 conserva concepto fuente sin asignar pardinoides/guttulus.",
+    "Saimiri sciureus": "Concepto fuente amplio, circunscripción y población de Caribe pendientes según AM-04.",
+    "Electrophorus electricus": "No asignar voltai/varii sin localidad y autoridad; incertidumbre AM-04 conservada.",
+    "Arapaima gigas": "Concepto fuente; no elegir otra Arapaima sin evidencia de localidad y autoridad.",
+    "Aetobatus narinari": "Complejo de rayas águila: revisar ámbitos atlántico e indopacífico frente a A. ocellatus, sin equivalencia automática.",
+    "Balaenoptera edeni": "Revisar delimitación edeni/brydei y localidad; conservar fuente hasta decisión.",
+    "Octopus vulgaris": "Complejo de pulpos comunes; una etiqueta fuente amplia no acredita presencia global de vulgaris sensu stricto.",
+    "Apteryx haastii": "Revisar nomenclatura haastii/maxima con autoridad aviar; no hay una equivalencia actual del juego que reutilizar.",
+    "Eudyptes chrysocome": "Revisar ámbito y tratamiento de rockhoppers segregados antes de ampliar distribución.",
+    "Lophorina superba": "Complejo de aves del paraíso; revisar ámbito de superba y segregados.",
+    "Crocodylus novaeguineae": "Revisar ámbito respecto de C. halli; no mezclar poblaciones sin localidad.",
+    "Petauroides volans": "Revisar delimitaciones recientes de Petauroides, sin fusionar géneros de petauros.",
+    "Trichoglossus haematodus": "Revisar alcance respecto de T. moluccanus; conservar ambos registros, sin fusión presupuesta."
+  },
+  "distribution_rules": [
+    {
+      "taxon": "Aetobatus narinari",
+      "exclude_region_contains": "Atlántico",
+      "reason": "Si la región no es atlántica, revisar el complejo de rayas águila y no extender automáticamente narinari al Indo-Pacífico."
+    },
+    {
+      "taxon": "Ursus maritimus",
+      "region_contains": "antár",
+      "reason": "Oso polar en área antártica: incompatibilidad biogeográfica; revisar fila sin borrarla."
+    },
+    {
+      "taxon": "Istiophorus platypterus",
+      "reason": "Revisar océano/localidad y el tratamiento atlántico frente a I. albicans; no validar por el nombre pez vela."
+    },
+    {
+      "taxon": "Crocodylus porosus",
+      "reason": "Precisar costa/estuario/isla compatible; no generalizar a todo el océano pelágico."
+    },
+    {
+      "taxon": "Laticauda colubrina",
+      "reason": "Precisar arrecifes/costas e islas; no inferir presencia pelágica continua."
+    },
+    {
+      "taxon": "Chelonia mydas",
+      "reason": "Separar costas/arrecifes y desplazamientos; distribución de juego no equivale a cualquier profundidad."
+    },
+    {
+      "taxon": "Eretmochelys imbricata",
+      "reason": "Precisar hábitat arrecifal; no extender a aguas profundas/abisales."
+    }
+  ],
+  "art_genus_profiles_preliminary": [
+    {
+      "genera": [
+        "Balaenoptera",
+        "Megaptera"
+      ],
+      "family_reference": "Balaenopteridae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Cetáceo existente solo como punto de partida; crear barbas, garganta, aletas y proporciones de rorcual.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Balaena",
+        "Eubalaena"
+      ],
+      "family_reference": "Balaenidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Perfil de ballena franca, cabeza arqueada, sin dorsal; no delfín recoloreado.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Eschrichtius"
+      ],
+      "family_reference": "Eschrichtiidae/Balaenopteridae (según autoridad)",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Ballena gris: jorobas dorsales, rostro y moteado propios.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Cephalorhynchus",
+        "Delphinus",
+        "Globicephala",
+        "Grampus",
+        "Lagenorhynchus",
+        "Orcinus",
+        "Pseudorca",
+        "Stenella",
+        "Tursiops"
+      ],
+      "family_reference": "Delphinidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "cetacean: adaptar hocico, melón, dorsal y patrón específicos.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar aleta dorsal/tamaño en Orcinus; no usar únicamente recoloración."
+    },
+    {
+      "genera": [
+        "Delphinapterus",
+        "Monodon"
+      ],
+      "family_reference": "Monodontidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Cetáceo sin dorsal; beluga/narval requieren cuello, melón y colmillo específicos.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Physeter"
+      ],
+      "family_reference": "Physeteridae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Cachalote: cabeza maciza, mandíbula inferior y espiráculo asimétrico.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Phocoena"
+      ],
+      "family_reference": "Phocoenidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Cetáceo de rostro corto y dorsal triangular; no delfín de hocico largo.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Ziphius"
+      ],
+      "family_reference": "Ziphiidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Zifio: pico corto, cabeza y dorsal propios; revisar dientes expuestos por sexo.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Arctocephalus",
+        "Eumetopias",
+        "Otaria",
+        "Zalophus"
+      ],
+      "family_reference": "Otariidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "pinniped: base de otárido; proporciones, melena, orejas y aletas por especie.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar tamaño, cuello y melena macho/hembra de cada otárido."
+    },
+    {
+      "genera": [
+        "Erignathus",
+        "Halichoerus",
+        "Hydrurga",
+        "Leptonychotes",
+        "Lobodon",
+        "Mirounga",
+        "Ommatophoca",
+        "Phoca",
+        "Pusa"
+      ],
+      "family_reference": "Phocidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Foca sin pabellón auricular, postura y aletas posteriores propias; no otárido terrestre.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar trompa/tamaño en Mirounga y otros dimorfismos documentados."
+    },
+    {
+      "genera": [
+        "Odobenus"
+      ],
+      "family_reference": "Odobenidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Morsa: colmillos, vibrisas, cuello y aletas específicos.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Dendrolagus",
+        "Macropus",
+        "Notamacropus",
+        "Osphranter",
+        "Petrogale",
+        "Setonix",
+        "Thylogale",
+        "Wallabia"
+      ],
+      "family_reference": "Macropodidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Nueva base macrópodo: miembros posteriores y cola de apoyo; Dendrolagus arbóreo separado.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Dasycercus",
+        "Dasyurus",
+        "Sarcophilus"
+      ],
+      "family_reference": "Dasyuridae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Marsupial carnívoro; diferenciar diablo, quol y mulgara de cánidos y mustélidos.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Myrmecobius"
+      ],
+      "family_reference": "Myrmecobiidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Numbat: hocico fino, franjas, orejas y cola penachada.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Macrotis"
+      ],
+      "family_reference": "Thylacomyidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Bilby: hocico alargado, grandes orejas y cola bicolor.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Ornithorhynchus"
+      ],
+      "family_reference": "Ornithorhynchidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Ornitorrinco: pico, cuerpo aplanado y pies palmeados; no castor.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Tachyglossus",
+        "Zaglossus"
+      ],
+      "family_reference": "Tachyglossidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Equidnas: espinas y rostro; distinguir hocico largo de Zaglossus, no erizo/pangolín.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Dactylopsila",
+        "Petaurus"
+      ],
+      "family_reference": "Petauridae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Petauros: cara y cola, patagio donde corresponda; no ardilla voladora genérica.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Petauroides"
+      ],
+      "family_reference": "Pseudocheiridae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Planeador mayor: patagio, orejas y proporciones específicas.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Phalanger",
+        "Spilocuscus",
+        "Trichosurus"
+      ],
+      "family_reference": "Phalangeridae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Cuscús/falangeros: cola prensil o peluda según género, postura propia.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Phascolarctos"
+      ],
+      "family_reference": "Phascolarctidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Koala: nariz, orejas y manos; no oso.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Vombatus"
+      ],
+      "family_reference": "Vombatidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "Wombat: cuerpo bajo, hocico ancho, patas excavadoras y cola corta.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Pteropus"
+      ],
+      "family_reference": "Pteropodidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "bat: ampliar anatomía de megamurciélago, hocico y alas.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Ursus"
+      ],
+      "family_reference": "Ursidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "bear: cuello, cabeza y proporción de oso polar; no simple oso pardo blanco.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Canis"
+      ],
+      "family_reference": "Canidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "canid: solo después de resolver intención del registro de dingo.",
+      "workload": "BLOQUEADO_IDENTIDAD",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Gorilla"
+      ],
+      "family_reference": "Hominidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "ape existente del gorila de montaña, solo si se confirma alcance de rango.",
+      "workload": "BLOQUEADO_IDENTIDAD",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Panthera"
+      ],
+      "family_reference": "Felidae",
+      "class_reference": "Mammalia",
+      "engine": "Mamíferos",
+      "compatible_profile": "felid: perfiles de leopardos actuales candidatos, sin fusionarlos.",
+      "workload": "BLOQUEADO_IDENTIDAD",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Aptenodytes",
+        "Eudyptes",
+        "Megadyptes",
+        "Pygoscelis"
+      ],
+      "family_reference": "Spheniscidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "penguin: ampliar la morfología africana existente; tamaño, crestas y patrón propios.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "El perfil actual de pingüino es africano; un clasificador penguin no valida siete especies polares.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Apteryx"
+      ],
+      "family_reference": "Apterygidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Kiwi: pico largo, narinas y plumaje piloso; no paseriforme/avestruz.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Casuarius"
+      ],
+      "family_reference": "Casuariidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Casuario: casco, carúnculas, cuello, patas y plumas propios.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Dromaius"
+      ],
+      "family_reference": "Casuariidae/Dromaiidae (según autoridad)",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Emú: proporciones y plumaje; adaptar base ratite sin copiar avestruz.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Aquila",
+        "Harpyopsis"
+      ],
+      "family_reference": "Accipitridae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "eagle: adaptar pico, cresta y proporciones de cada rapaz.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Ardenna",
+        "Macronectes",
+        "Pagodroma"
+      ],
+      "family_reference": "Procellariidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Petrel/pardela: narinas tubulares, vuelo y forma de pico marino específicos.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Diomedea",
+        "Phoebastria",
+        "Thalassarche"
+      ],
+      "family_reference": "Diomedeidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Albatros: alas muy largas, pico ganchudo con placas córneas y narinas tubulares; proporciones propias.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Cacatua",
+        "Calyptorhynchus",
+        "Eolophus",
+        "Nymphicus",
+        "Zanda"
+      ],
+      "family_reference": "Cacatuidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "parrot: cresta, pico y cola de cacatúa específicos.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Cicinnurus",
+        "Lophorina",
+        "Paradisaea",
+        "Seleucidis"
+      ],
+      "family_reference": "Paradisaeidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Perfiles de aves del paraíso: plumas ornamentales, cola y dimorfismo de cada género.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar plumaje ornamental del macho y plumaje/forma de hembra; no color genérico."
+    },
+    {
+      "genera": [
+        "Cygnus",
+        "Somateria"
+      ],
+      "family_reference": "Anatidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "swan/duck: anatomía y plumaje de cisne negro o eider.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar plumaje y pico de eider; no imponer dimorfismo ornamental a cisne negro."
+    },
+    {
+      "genera": [
+        "Dacelo"
+      ],
+      "family_reference": "Alcedinidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "kingfisher: cabeza/pico y proporciones de cucaburra.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Fregata"
+      ],
+      "family_reference": "Fregatidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Fragata: alas, cola ahorquillada, pico y saco gular.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar saco gular del macho y plumaje de cada sexo."
+    },
+    {
+      "genera": [
+        "Gallirallus",
+        "Porphyrio"
+      ],
+      "family_reference": "Rallidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "coot como referencia parcial; nuevas proporciones de weka/takahé, pies y pico.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Gymnorhina"
+      ],
+      "family_reference": "Artamidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Paseriforme robusto de pico propio; no asignar Corvidae por llamarse urraca.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Callaeas"
+      ],
+      "family_reference": "Callaeidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Kokako: carúnculas, cola y pico específicos.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Hemiphaga"
+      ],
+      "family_reference": "Columbidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Paloma de cuerpo grande y patrón iridiscente; base aviar sin familia incorrecta.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Melopsittacus",
+        "Neophema",
+        "Trichoglossus"
+      ],
+      "family_reference": "Psittaculidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "parrot: adaptar pico, cola y patrón de periquitos y loris.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Nestor",
+        "Strigops"
+      ],
+      "family_reference": "Strigopidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "parrot: kea/kaká y kakapo requieren perfiles y posturas diferentes.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "No usar un guacamayo: kakapo terrestre robusto, Nestor con pico y cola propios.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Ninox"
+      ],
+      "family_reference": "Strigidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "little-owl/horned-owl: adaptar silueta de Ninox sin penachos falsos.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Morus"
+      ],
+      "family_reference": "Sulidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "gannet: patrón y cabeza del alcatraz atlántico.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Pelecanus"
+      ],
+      "family_reference": "Pelecanidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "pelican: ajustar saco, pico y patrón australiano.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Petroica"
+      ],
+      "family_reference": "Petroicidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Paseriforme de Petroica; no homologar familia con petirrojo europeo.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Phylidonyris"
+      ],
+      "family_reference": "Meliphagidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Mielero: pico, patrón facial y postura propios.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Rhipidura"
+      ],
+      "family_reference": "Rhipiduridae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Cola en abanico y pico insectívoro; no copiar un mosquero del paraíso.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Menura"
+      ],
+      "family_reference": "Menuridae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Ave lira: patas y cola ornamental en lira.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar cola del macho frente a hembra; patrón estructural."
+    },
+    {
+      "genera": [
+        "Ptilonorhynchus"
+      ],
+      "family_reference": "Ptilonorhynchidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Ave de emparrado: forma y plumaje por sexo; no córvido genérico.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar macho satinado/hembra moteada."
+    },
+    {
+      "genera": [
+        "Pagophila",
+        "Sterna"
+      ],
+      "family_reference": "Laridae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Gaviota/charrán: alas, patas y cola específica; no alcatraz.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Stercorarius"
+      ],
+      "family_reference": "Stercorariidae",
+      "class_reference": "Aves",
+      "engine": "Aves",
+      "compatible_profile": "Págalo: cuerpo y pico de depredador marino; no rapaz terrestre.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Acanthophis",
+        "Notechis",
+        "Oxyuranus",
+        "Laticauda"
+      ],
+      "family_reference": "Elapidae",
+      "class_reference": "Reptilia",
+      "engine": "Herpetofauna",
+      "compatible_profile": "Serpiente elápida propia; Acanthophis sin cuernos de víbora, Laticauda con cola natatoria.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Nombres como víbora o krait pueden activar perfiles de otro grupo; revisar anatomía real.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Assa",
+        "Pseudophryne"
+      ],
+      "family_reference": "Myobatrachidae",
+      "class_reference": "Amphibia",
+      "engine": "Herpetofauna",
+      "compatible_profile": "frog: tamaño, patrón y postura de cada rana australiana.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Ranoidea"
+      ],
+      "family_reference": "Pelodryadidae/Hylidae (según autoridad)",
+      "class_reference": "Amphibia",
+      "engine": "Herpetofauna",
+      "compatible_profile": "frog: rana arborícola de cuerpo robusto y discos digitales.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Chelonia",
+        "Eretmochelys"
+      ],
+      "family_reference": "Cheloniidae",
+      "class_reference": "Reptilia",
+      "engine": "Herpetofauna",
+      "compatible_profile": "sea-turtle: caparazón, pico y escudos propios de verde/carey.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Chlamydosaurus",
+        "Intellagama",
+        "Moloch",
+        "Pogona"
+      ],
+      "family_reference": "Agamidae",
+      "class_reference": "Reptilia",
+      "engine": "Herpetofauna",
+      "compatible_profile": "lizard: perfiles específicos de gola, barba, cresta o espinas según especie.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Moloch y Chlamydosaurus necesitan silueta propia, no solo color de lagarto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Crocodylus"
+      ],
+      "family_reference": "Crocodylidae",
+      "class_reference": "Reptilia",
+      "engine": "Herpetofauna",
+      "compatible_profile": "crocodile: ajustar hocico, crestas y proporciones; novaeguineae requiere ámbito revisado.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Morelia"
+      ],
+      "family_reference": "Pythonidae",
+      "class_reference": "Reptilia",
+      "engine": "Herpetofauna",
+      "compatible_profile": "python: postura arborícola y patrón por especie, sin capucha de cobra.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Sphenodon"
+      ],
+      "family_reference": "Sphenodontidae",
+      "class_reference": "Reptilia",
+      "engine": "Herpetofauna",
+      "compatible_profile": "Tuatara: rincocefáleo; no afirmar que es un lagarto por conveniencia gráfica.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Tiliqua"
+      ],
+      "family_reference": "Scincidae",
+      "class_reference": "Reptilia",
+      "engine": "Herpetofauna",
+      "compatible_profile": "Escinco: cuerpo ancho, patas cortas y lengua azul.",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Varanus"
+      ],
+      "family_reference": "Varanidae",
+      "class_reference": "Reptilia",
+      "engine": "Herpetofauna",
+      "compatible_profile": "monitor: cuello, hocico, cola y proporción por especie.",
+      "workload": "ADAPTAR_BASE",
+      "risk": "La coincidencia de un clasificador no valida anatomía ni patrón de la especie.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Aetobatus"
+      ],
+      "family_reference": "Aetobatidae",
+      "class_reference": "Chondrichthyes",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Raya águila: aletas, cabeza y cola larga; taxón regional pendiente",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Mobula"
+      ],
+      "family_reference": "Mobulidae",
+      "class_reference": "Chondrichthyes",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Manta/raya mobúlida: lóbulos cefálicos y ancho corporal",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Alopias"
+      ],
+      "family_reference": "Alopiidae",
+      "class_reference": "Chondrichthyes",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Tiburón zorro: lóbulo superior caudal extremadamente largo",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Carcharhinus",
+        "Prionace"
+      ],
+      "family_reference": "Carcharhinidae",
+      "class_reference": "Chondrichthyes",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Tiburón: aletas, hocico y color de especie",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Cetorhinus"
+      ],
+      "family_reference": "Cetorhinidae",
+      "class_reference": "Chondrichthyes",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Peregrino: boca y branquias, no tiburón genérico",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Chlamydoselachus"
+      ],
+      "family_reference": "Chlamydoselachidae",
+      "class_reference": "Chondrichthyes",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Tiburón anguila: cuerpo y branquias propios",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Isistius"
+      ],
+      "family_reference": "Dalatiidae",
+      "class_reference": "Chondrichthyes",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Tiburón cigarro: cuerpo corto y boca ventral",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Isurus",
+        "Lamna"
+      ],
+      "family_reference": "Lamnidae",
+      "class_reference": "Chondrichthyes",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Lámnido: cuerpo fusiforme y cola semilunar",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Mitsukurina"
+      ],
+      "family_reference": "Mitsukurinidae",
+      "class_reference": "Chondrichthyes",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Duende: rostro laminar y mandíbula propia",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Rhincodon"
+      ],
+      "family_reference": "Rhincodontidae",
+      "class_reference": "Chondrichthyes",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Tiburón ballena: cabeza ancha, boca terminal y puntos",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Somniosus"
+      ],
+      "family_reference": "Somniosidae",
+      "class_reference": "Chondrichthyes",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Tiburón de Groenlandia: cuerpo pesado y dorsales pequeñas",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Sphyrna"
+      ],
+      "family_reference": "Sphyrnidae",
+      "class_reference": "Chondrichthyes",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Cefalofolio de martillo, no cabeza de tiburón fusiforme",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Amphiprion"
+      ],
+      "family_reference": "Pomacentridae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez payaso: cuerpo y bandas",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Anoplogaster"
+      ],
+      "family_reference": "Anoplogastridae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Dientes y cabeza de pez profundo",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Argyropelecus"
+      ],
+      "family_reference": "Sternoptychidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez hacha: cuerpo comprimido y fotóforos",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Balistoides"
+      ],
+      "family_reference": "Balistidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez ballesta: perfil, boca y aletas",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Bathypterois"
+      ],
+      "family_reference": "Ipnopidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez trípode: radios alargados y postura",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Benthosema"
+      ],
+      "family_reference": "Myctophidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez linterna: fotóforos y aletas",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Bolbometopon",
+        "Cheilinus"
+      ],
+      "family_reference": "Labridae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Lábrido: boca y joroba propias, no misma figura entre géneros",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Ceratias"
+      ],
+      "family_reference": "Ceratiidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Rape abisal: boca y señuelo; dimorfismo extremo por revisar",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Chaenocephalus"
+      ],
+      "family_reference": "Channichthyidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez hielo: cabeza y dorsales",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Chauliodus",
+        "Idiacanthus",
+        "Stomias"
+      ],
+      "family_reference": "Stomiidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez dragón/víbora: fotóforos, dientes y cuerpo por género",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Clupea",
+        "Sardina"
+      ],
+      "family_reference": "Clupeidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Clupeido: quilla, escamas y aletas",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Dissostichus"
+      ],
+      "family_reference": "Nototheniidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Bacalao austral: boca, cuerpo y aletas propias",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Epinephelus"
+      ],
+      "family_reference": "Serranidae/Epinephelidae (según autoridad)",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Mero: boca y cuerpo robustos",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Eurypharynx"
+      ],
+      "family_reference": "Eurypharyngidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Anguila pelícano: boca desproporcionada y cola filamentosa",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Exocoetus"
+      ],
+      "family_reference": "Exocoetidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez volador: pectorales extendidas",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Gadus"
+      ],
+      "family_reference": "Gadidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Bacalao: tres dorsales y barbillón",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Hippocampus"
+      ],
+      "family_reference": "Syngnathidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Caballito: postura vertical, placas y cola prensil",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Istiophorus"
+      ],
+      "family_reference": "Istiophoridae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez vela: rostro y gran dorsal",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Lates"
+      ],
+      "family_reference": "Latidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Barramundi: boca y dorsales",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Macropinna"
+      ],
+      "family_reference": "Opisthoproctidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Cabeza transparente y ojos tubulares; perfil específico",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Mola"
+      ],
+      "family_reference": "Molidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez luna: cuerpo truncado y clavus, no cola convencional",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Notoliparis",
+        "Pseudoliparis"
+      ],
+      "family_reference": "Liparidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez caracol: cuerpo y aletas continuas, revisar profundidad",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Oncorhynchus"
+      ],
+      "family_reference": "Salmonidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Salmón: perfil específico y adiposa, adaptar bases de salmónidos",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Paracanthurus"
+      ],
+      "family_reference": "Acanthuridae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Cirujano: cuerpo comprimido y patrón",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Pomacanthus"
+      ],
+      "family_reference": "Pomacanthidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez ángel: cuerpo alto y patrón",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Scomber",
+        "Thunnus"
+      ],
+      "family_reference": "Scombridae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Escómbrido: cuerpo fusiforme, pínnulas y cola",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Synanceia"
+      ],
+      "family_reference": "Synanceiidae/Scorpaenidae (según autoridad)",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez piedra: cuerpo verrugoso, boca y espinas",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Trachurus"
+      ],
+      "family_reference": "Carangidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Jurel: línea lateral, aletas y escudetes",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Xiphias"
+      ],
+      "family_reference": "Xiphiidae",
+      "class_reference": "Actinopterygii",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pez espada: rostro y aletas propios",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "El motor global de peces usa perfiles científicos explícitos; una base genérica no garantiza anatomía ni render correcto.",
+      "dimorphism_review": "Revisar dimorfismo por especie; no habilitar variantes automáticamente."
+    },
+    {
+      "genera": [
+        "Amphioctopus",
+        "Hapalochlaena",
+        "Octopus"
+      ],
+      "family_reference": "Octopodidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pulpo: ocho brazos sin tentáculos de calamar",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Enteroctopus"
+      ],
+      "family_reference": "Enteroctopodidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pulpo gigante: ocho brazos y proporciones",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Grimpoteuthis"
+      ],
+      "family_reference": "Grimpoteuthididae/Opisthoteuthidae (según autoridad)",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pulpo cirrado con aletas y membranas",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Haliphron"
+      ],
+      "family_reference": "Alloposidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pulpo de siete brazos aparentes; no pez",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Tremoctopus"
+      ],
+      "family_reference": "Tremoctopodidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Pulpo manta: membranas y dimorfismo extremo",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Vampyroteuthis"
+      ],
+      "family_reference": "Vampyroteuthidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Vampiro: membranas, aletas y filamentos",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Architeuthis"
+      ],
+      "family_reference": "Architeuthidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Calamar gigante: ocho brazos y dos tentáculos",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Mesonychoteuthis"
+      ],
+      "family_reference": "Cranchiidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Calamar colosal: cuerpo, aletas y ganchos",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Dosidicus"
+      ],
+      "family_reference": "Ommastrephidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Calamar de Humboldt: aletas y patrón",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Gonatus"
+      ],
+      "family_reference": "Gonatidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Calamar: brazos, tentáculos y aletas",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Histioteuthis"
+      ],
+      "family_reference": "Histioteuthidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Calamar de ojos asimétricos/fotóforos",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Loligo",
+        "Sepioteuthis"
+      ],
+      "family_reference": "Loliginidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Calamar costero: aletas distintas por género",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Onykia"
+      ],
+      "family_reference": "Onychoteuthidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Calamar de ganchos: aletas y brazos",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    },
+    {
+      "genera": [
+        "Thysanoteuthis"
+      ],
+      "family_reference": "Thysanoteuthidae",
+      "class_reference": "Cephalopoda",
+      "engine": "Peces (categoría jugable)",
+      "compatible_profile": "Calamar diamante: aletas romboidales",
+      "workload": "PERFIL_ESPECIFICO",
+      "risk": "Convención jugable Peces/Cefalópodos: son moluscos. No usar silueta de pez ni asumir ocho brazos idénticos a diez apéndices de calamar.",
+      "dimorphism_review": "Revisar dimorfismo por especie, especialmente Tremoctopus; sin configuraciones nuevas en GM-01."
+    }
+  ],
+  "presence_differences": {
+    "607": {
+      "source_taxon": "Canis aureus",
+      "source_hex": "HX-04-10",
+      "source_row": 607,
+      "current_region": "HX-06-09",
+      "different_current_species_id": "af_chacal_dorado",
+      "different_current_scientific": "Canis lupaster",
+      "status": "diferencia_distribucion_taxonomica_documentada",
+      "reason": "La fuente ubica Canis aureus en Magreb; el juego conserva allí Canis lupaster (lobo dorado africano), explícitamente distinto de Canis aureus euroasiático. Es una corrección taxonómica histórica documentada en el código, no una equivalencia aureus/lupaster ni una indicación de añadir Canis aureus al Magreb. Revisar científicamente el registro fuente antes de cualquier ampliación.",
+      "evidence": "www/js/app.js: comentario África posee Canis lupaster, distinto de Canis aureus euroasiático y Object.assign(SPECIES.af_chacal_dorado,...)"
+    }
+  }
+}
