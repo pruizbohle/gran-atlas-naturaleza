@@ -2741,6 +2741,9 @@ function canBuy(node){
 }
 function buyNode(id){
   const node=RESEARCH_NODES.find(n=>n.id===id); if(!node) return;
+ // E-3280 BEGIN purchase-validation
+  if(!canBuy(node))return;
+ // E-3280 END purchase-validation
   if(node.once && state.purchases[id]) return;
   if(node.max && (state.purchases[id]||0)>=node.max) return;
   if(node.req && !state.purchases[node.req]) return;
@@ -3150,6 +3153,9 @@ function refreshJournalSheet3250(){
 // Beta 3.15: cinco ramas filtrables; los nodos antiguos conservan ID y compras.
 // La presentación por tarjetas sustituye al árbol de 7 columnas difícil de usar en móvil.
 function renderResearch(){
+ // E-3280 BEGIN research-render
+ if(globalThis.AtlasDevelopmentUI)return globalThis.AtlasDevelopmentUI.research(researchView3280());
+ // E-3280 END research-render
  const selected=RESEARCH_BRANCHES.some(b=>b.id===state.researchBranch)?state.researchBranch:'exploracion';
  const branch=RESEARCH_BRANCHES.find(b=>b.id===selected);
  const branchNodes=RESEARCH_NODES.filter(n=>researchBranchOf(n)===selected);
@@ -4441,14 +4447,21 @@ function sail(voyageId){
   if(v.reqResearch && !state.purchases[v.reqResearch])return;
  state.money-=v.cost;state.knowledge-=v.knowledge;
  state.voyageSeq++;state.voyages.push({id:state.voyageSeq,type:v.id,endAt:Date.now()+voyageDuration(v.seconds)*1000});
+ // E-3280 BEGIN departure
+ const newJob=state.voyages[state.voyages.length-1];
+ newJob.startedAt=newJob.endAt-voyageDuration(v.seconds)*1000;
+ // E-3280 END departure
  pushLog('⛵ Zarpó una expedición: '+v.name);render();
 }
 // Efectos cuantificables del equipo, reutilizados por interfaz y cálculo de recompensas.
 function voyageMoneyReward(v){return Math.round(v.prize*(1+(state.equipment.necklace==='shell_necklace'?0.05:0)));}
 function voyageKnowledgeReward(v){return v.notes+(state.equipment.instrument==='brass_compass'?Math.round(v.notes*0.04):0);}
-function resolveVoyageReward(job){
+function resolveVoyageReward(job/* E-3280 BEGIN receipt-time */,resolvedAt=Date.now()/* E-3280 END receipt-time */){
   const v=VOYAGES.find(x=>x.id===job.type);
   if(!v) return false;
+ // E-3280 BEGIN receipt-before
+  const inventoryBefore={...state.inventory};
+ // E-3280 END receipt-before
   let notes=voyageKnowledgeReward(v);
   const prize=voyageMoneyReward(v);
   state.money+=prize;state.knowledge+=notes;
@@ -4481,18 +4494,34 @@ if(Math.random()<amberChance){addInventory('fossil_amber',1);pushLog('🟠 Halla
 
   state.museum.voyagesCompleted=(state.museum.voyagesCompleted||0)+1;
   pushLog('⛵ Regresó '+v.name+': +£'+prize+' y +'+notes+' conocimiento.');
+ // E-3280 BEGIN receipt-after
+  const received=Object.fromEntries(Object.entries(state.inventory).filter(([id,n])=>ITEMS[id]&&n>(Number(inventoryBefore[id])||0)).map(([id,n])=>[id,n-(Number(inventoryBefore[id])||0)]));
+  const guaranteed=v.sample&&received[v.sample]?{[v.sample]:1}:{};
+  const found=Object.fromEntries(Object.entries(received).map(([id,n])=>[id,n-(guaranteed[id]||0)]).filter(([,n])=>n>0));
+  state.voyageHistory=(Array.isArray(state.voyageHistory)?state.voyageHistory:[]).concat([{jobId:job.id??null,type:v.id,at:resolvedAt,money:prize,knowledge:notes,guaranteed,found}]).slice(-12);
+ // E-3280 END receipt-after
   return true;
 }
 function processVoyages(now){
+ // E-3280 BEGIN clock-validation
+ if(!Number.isFinite(now))return 0;
+ // E-3280 END clock-validation
  let count=0;
  state.voyages=state.voyages.filter(job=>{
+ // E-3280 BEGIN historical-date-validation
+  if(!job||!Number.isFinite(job.endAt))return true;
+ // E-3280 END historical-date-validation
   if(job.endAt>now)return true;
-  if(resolveVoyageReward(job)) count++;
+  if(resolveVoyageReward(job/* E-3280 BEGIN process-time */,now/* E-3280 END process-time */)) count++;
   return false;
  });
  return count;
 }
 function finishVoyage(jobId){
+ // E-3280 BEGIN return-validation
+ const candidate=state.voyages.find(v=>String(v.id)===String(jobId));
+ if(!candidate||!Number.isFinite(candidate.endAt)||Date.now()<candidate.endAt)return false;
+ // E-3280 END return-validation
  const idx=state.voyages.findIndex(v=>String(v.id)===String(jobId));
  if(idx<0) return;
  const [job]=state.voyages.splice(idx,1);
@@ -4501,6 +4530,9 @@ function finishVoyage(jobId){
 }
 
 function renderExpeditions(){
+ // E-3280 BEGIN expeditions-render
+ if(globalThis.AtlasDevelopmentUI)return globalThis.AtlasDevelopmentUI.expeditions(expeditionsView3280());
+ // E-3280 END expeditions-render
  const active=state.voyages||[];
  const shown=availableVoyages();
  return `<div class="grid-2"><section class="card stack"><h3 class="section">⛵ Expediciones y astillero</h3>
@@ -4512,6 +4544,93 @@ function renderExpeditions(){
  <div class="divider"></div><div class="small">Las expediciones continúan durante tu ausencia hasta un máximo de ocho horas contabilizadas.</div></section></div>`;
 }
 
+// E-3280 BEGIN presentation
+const developmentUI3280={route:'coast',filter:'all',projects:{},folds:{},scrolls:{},restore:null,focus:null,item:null,branchLeft:0,lastBranch:null};
+const researchIndex3280=new Map(RESEARCH_NODES.map(n=>[n.id,n]));
+let specialtyExamples3280=null;
+function developmentItem3280(id,qty=1,illustrated=true){return {id,name:ITEMS[id]?.name||'Material histórico',qty,art:illustrated?renderItemArt(id):''};}
+function developmentDate3280(at){return Number.isFinite(at)?new Date(at).toLocaleString('es-CL',{timeZone:'America/Santiago',dateStyle:'short',timeStyle:'short'}):'Fecha no registrada';}
+function developmentTime3280(endAt,now=Date.now()){return Number.isFinite(endAt)?formatMuseumTimeRemaining(endAt,now):'Fecha de regreso no válida';}
+function voyageConditions3280(v){return [
+ {label:'Astillero básico',met:!!state.upgrades.shipyard,research:'astillero'},
+ {label:v.required+' de prestigio · tienes '+fmt(state.prestige),met:state.prestige>=v.required},
+ ...(v.routeReq?[{label:'Cartografía naval '+(v.routeReq===1?'I':'II'),met:(state.upgrades.routeTier||0)>=v.routeReq,research:'rutas_'+v.routeReq}]:[]),
+ ...(v.reqResearch?[{label:researchIndex3280.get(v.reqResearch)?.name||'Investigación requerida',met:!!state.purchases[v.reqResearch],research:v.reqResearch}]:[]),
+ ...(v.mapItem?[{label:ITEMS[v.mapItem].name+' · se conserva',met:(state.inventory[v.mapItem]||0)>0,item:v.mapItem}]:[])
+ ];}
+function voyageRoute3280(v){
+ const conditions=voyageConditions3280(v),missing=conditions.find(r=>!r.met),full=state.voyages.length>=maxVoyages(),money=state.money>=v.cost,knowledge=state.knowledge>=v.knowledge;
+ return {id:v.id,name:v.name,seconds:voyageDuration(v.seconds),cost:v.cost,knowledge:v.knowledge,moneyMet:money,knowledgeMet:knowledge,conditions,status:missing?'Ruta bloqueada':full?'Flota completa':!money||!knowledge?'Recursos insuficientes':'Ruta disponible',ready:!missing&&!full&&money&&knowledge,missing:missing?.label||'',research:missing?.research||null,item:missing?.item||null,reward:{money:voyageMoneyReward(v),knowledge:voyageKnowledgeReward(v),sample:v.sample?developmentItem3280(v.sample,1,false):null},symbol:['coast','north','atlantic_survey'].includes(v.id)?'ship':'compass'};
+}
+function voyageJob3280(job,now=Date.now()){
+ const v=VOYAGES.find(v=>v.id===job?.type),valid=Number.isFinite(job?.endAt),start=job?.startedAt,hasStart=valid&&Number.isFinite(start)&&start>0&&start<job.endAt;
+ return {id:job?.id,endAt:job?.endAt,name:v?.name||'Ruta histórica no registrada',valid,ready:valid&&now>=job.endAt,remaining:developmentTime3280(job?.endAt,now),date:developmentDate3280(job?.endAt),progress:hasStart?Math.max(0,Math.min(1,(now-start)/(job.endAt-start))):null,reward:v?{money:voyageMoneyReward(v),knowledge:voyageKnowledgeReward(v)}:null};
+}
+function voyageHistory3280(){return (Array.isArray(state.voyageHistory)?state.voyageHistory:[]).slice(-12).filter(h=>h&&VOYAGES.some(v=>v.id===h.type)&&Number.isFinite(h.at)&&Number.isFinite(h.money)&&Number.isFinite(h.knowledge));}
+function voyageReceipt3280(index,illustrated=false){
+ const h=voyageHistory3280()[index];if(!h)return null;
+ const items=object=>Object.entries(object||{}).filter(([id,n])=>ITEMS[id]&&Number.isFinite(n)&&n>0).map(([id,n])=>developmentItem3280(id,n,illustrated));
+ return {index,key:'receipt:'+h.at+':'+(h.jobId??index)+':'+h.type,name:VOYAGES.find(v=>v.id===h.type).name,date:developmentDate3280(h.at),money:h.money,knowledge:h.knowledge,guaranteed:items(h.guaranteed),found:items(h.found)};
+}
+function voyagePossibilities3280(id){
+ const v=VOYAGES.find(v=>v.id===id);if(!v)return null;
+ const ids=[...new Set(V316_LOOT_BASE.concat(V316_LOOT_BY_ROUTE[v.id]||[]).map(([id])=>id).concat(['fossil_skull','fossil_tooth','brass_shard','old_ink','carved_wood','fossil_amber'],state.upgrades.paleoTier?['fossil_fragment']:[]))];
+ const gear=['brass_compass','shell_necklace','sturdy_pack','feather_cap'].filter(id=>state.equipment[ITEMS[id].slot]===id).map(id=>({name:ITEMS[id].name,effect:ITEMS[id].bonus}));
+ const paleo=researchIndex3280.get('paleontologia_'+Math.min(3,Math.max(0,state.upgrades.paleoTier||0)));
+ return {items:ids.map(id=>developmentItem3280(id)),gear,paleo:paleo?.desc||'Sin prospección paleontológica adicional. Se conservan los hallazgos fósiles originales.',hull:state.upgrades.voyageTime===1?'Sin reducción de tiempo de casco.':'Duraciones calculadas con Casco aligerado: '+voyageDuration(v.seconds)+' s.'};
+}
+function expeditionsView3280(){
+ const selected=VOYAGES.find(v=>v.id===developmentUI3280.route)||VOYAGES[0];developmentUI3280.route=selected.id;
+ const active=(state.voyages||[]).map(j=>voyageJob3280(j)).sort((a,b)=>(a.valid?a.endAt:Infinity)-(b.valid?b.endAt:Infinity));
+ const route=voyageRoute3280(selected),history=voyageHistory3280();
+ const liveReceipts=new Set(history.map((h,i)=>voyageReceipt3280(i).key));for(const key of Object.keys(developmentUI3280.folds))if(key.startsWith('receipt:')&&!liveReceipts.has(key))delete developmentUI3280.folds[key];
+ return {route,routes:VOYAGES.map(v=>({id:v.id,name:v.name})),shipyard:!!state.upgrades.shipyard,used:state.voyages.length,capacity:maxVoyages(),available:VOYAGES.filter(v=>voyageConditions3280(v).every(r=>r.met)).length,next:active.find(j=>j.valid)?.remaining||'Sin viajes',active,history:history.map((h,i)=>{const r=voyageReceipt3280(i);return developmentUI3280.folds[r.key]?voyageReceipt3280(i,true):r;}).reverse(),folds:developmentUI3280.folds,possibilities:developmentUI3280.folds['voyage-possibilities']?voyagePossibilities3280(selected.id):null};
+}
+function researchComplete3280(node){return node.once?!!state.purchases[node.id]:node.max?(state.purchases[node.id]||0)>=node.max:!!state.purchases[node.id];}
+function researchNode3280(node,illustrated=true){
+ const count=state.purchases[node.id]||0,complete=researchComplete3280(node),reqs=[...new Set([...(node.req?[node.req]:[]),...(node.reqAll||[])])].map(id=>({id,name:researchIndex3280.get(id)?.name||'Proyecto previo',met:!!state.purchases[id]}));
+ const material=node.reqItem?{...developmentItem3280(node.reqItem,node.reqItemQty||1,illustrated),have:state.inventory[node.reqItem]||0,met:(state.inventory[node.reqItem]||0)>=(node.reqItemQty||1),consumed:node.reqItemConsume!==false}:null;
+ const blocked=reqs.some(r=>!r.met)||!!(material&&!material.met),ready=canBuy(node);
+ return {id:node.id,name:node.name,description:node.desc,branch:researchBranchOf(node),count,max:node.max||(node.once?1:null),repeat:!!node.repeat,complete,ready,status:complete?(node.repeat?'Nivel máximo':'Investigada'):blocked?'Bloqueada':!ready?'Recursos insuficientes':node.repeat?'Repetible':'Disponible',money:node.money,knowledge:node.knowledge,moneyMet:state.money>=node.money,knowledgeMet:state.knowledge>=node.knowledge,requirements:reqs,material};
+}
+function researchQuery3280(){
+ const branch=RESEARCH_BRANCHES.find(b=>b.id===state.researchBranch)||RESEARCH_BRANCHES[0],all=RESEARCH_NODES.filter(n=>researchBranchOf(n)===branch.id),filter=developmentUI3280.filter;
+ const nodes=all.filter(n=>filter==='available'?canBuy(n):filter==='pending'?!researchComplete3280(n):filter==='completed'?researchComplete3280(n):true);
+ let selected=nodes.find(n=>n.id===developmentUI3280.projects[branch.id])||nodes[0]||null;
+ if(selected)developmentUI3280.projects[branch.id]=selected.id;
+ return {branch,all,nodes,selected,filter};
+}
+function researchView3280(){
+ const q=researchQuery3280();return {branch:q.branch,filter:q.filter,total:q.all.length,done:q.all.filter(researchComplete3280).length,branches:RESEARCH_BRANCHES.map(b=>{const nodes=RESEARCH_NODES.filter(n=>researchBranchOf(n)===b.id);return {id:b.id,name:b.name,total:nodes.length,done:nodes.filter(researchComplete3280).length};}),projects:q.nodes.map(n=>({id:n.id,name:n.name,complete:researchComplete3280(n),status:researchComplete3280(n)?'Investigada':canBuy(n)?n.repeat?'Repetible':'Disponible':'Pendiente'})),selected:q.selected?researchNode3280(q.selected):null,folds:developmentUI3280.folds,buffs:developmentUI3280.folds['research-buffs']?researchBuffs3280():null};
+}
+function researchBuffs3280(){
+ const u=state.upgrades,tier=Math.min(3,Math.max(0,u.groupTier||0));
+ if(!specialtyExamples3280){specialtyExamples3280={};for(const id of Object.keys(SPECIES)){const sp=SPECIES[id],c=taxonomyInfo(id).className,key=c==='Mammalia'?'mammalogy':c==='Aves'?'ornithology':c==='Reptilia'||c==='Amphibia'?'herpetology':c==='Actinopterygii'||c==='Chondrichthyes'?'ichthyology':null;if(key)(specialtyExamples3280[key]||=(Object.create(null)))[sp.rare]??=id;}}
+ const specialties=[['mammalogy','Mamíferos'],['ornithology','Aves'],['herpetology','Reptiles y anfibios'],['ichthyology','Peces']].map(([key,label])=>({label,level:u[key]||0,weights:['Poco común','Raro','Muy rara'].map(r=>{const id=specialtyExamples3280[key]?.[r];return r+': ×'+(id?(researchRarityWeight(id)/rarityWeight(SPECIES[id].rare)).toFixed(2):'—');}).join(' · ')}));
+ return {manual:pctBuff(manualSearchChance()),automatic:state.helpers?pctBuff(automaticSearchChance()):'Inactivo: sin naturalistas',helpers:state.helpers||0,interval:autoInterval(),knowledge:'×'+knowledgeBonus().toFixed(2),manualCensus:researchCensusCount('manual'),autoCensus:researchCensusCount('auto'),manualGroup:tier?`${pctBuff(RESEARCH_V315_BALANCE.manualDouble[tier])} de dos · ${pctBuff(RESEARCH_V315_BALANCE.manualTriple[tier])} de tres`:'Una especie',autoGroup:tier&&u.autoGroup?`${pctBuff(RESEARCH_V315_BALANCE.autoDouble)} de dos · ${pctBuff(tier===3?RESEARCH_V315_BALANCE.autoTriple:0)} de tres`:'Una especie',specialties,museum:'£'+museumRate().toFixed(2)+'/s · conservación '+Math.round(museumCurationBonus()*100)+' % · conjuntos fósiles '+(museumFossilSetBonus()*100).toFixed(1)+' % · conjuntos de relictos '+(museumRelictSetBonus()*100).toFixed(1)+' %',paleo:u.paleoTier||0,ethology:u.ethology||0,museumIncome:u.museumIncomeTier?RESEARCH_V315_BALANCE.museumIncomeBonus*100:0,excavations:maxExcavations(),surveys:maxRelictSurveys()};
+}
+function developmentDetail3280(key){if(key==='voyage-possibilities')return voyagePossibilities3280(developmentUI3280.route);if(key==='research-buffs')return researchBuffs3280();if(key.startsWith('receipt:')){const i=voyageHistory3280().findIndex((h,i)=>voyageReceipt3280(i).key===key);return i<0?null:voyageReceipt3280(i,true);}return null;}
+function developmentChange3280(key,value){
+ if(key==='route'&&VOYAGES.some(v=>v.id===value))developmentUI3280.route=value;
+ else if(key==='filter'&&['all','available','pending','completed'].includes(value))developmentUI3280.filter=value;
+ else if(key==='project'&&RESEARCH_NODES.some(n=>n.id===value&&researchBranchOf(n)===(RESEARCH_BRANCHES.find(b=>b.id===state.researchBranch)||RESEARCH_BRANCHES[0]).id))developmentUI3280.projects[(RESEARCH_BRANCHES.find(b=>b.id===state.researchBranch)||RESEARCH_BRANCHES[0]).id]=value;
+ else return;
+ const top=globalThis.scrollY||0;renderPanel();globalThis.scrollTo?.({top,behavior:'instant'});panel.querySelector('[data-er28-change="'+key+'"]')?.focus({preventScroll:true});
+}
+function developmentNavigate3280(target){developmentUI3280.scrolls[tab]=globalThis.scrollY||0;tab=target;developmentUI3280.restore=developmentUI3280.scrolls[target]||0;renderPanel();}
+function developmentAction3280(action,id){
+ if(action==='er28-research'&&researchIndex3280.has(id)){const n=researchIndex3280.get(id);state.researchBranch=researchBranchOf(n);developmentUI3280.filter='all';developmentUI3280.projects[state.researchBranch]=id;developmentUI3280.scrolls[tab]=globalThis.scrollY||0;tab='research';developmentUI3280.restore=0;developmentUI3280.focus='#er28-project';renderPanel();persist();}
+ if(action==='er28-expeditions')developmentNavigate3280('expeditions');
+ if(action==='er28-refresh')renderPanel();
+ if(action==='er28-inventory'&&ITEMS[id]){developmentUI3280.item=id;state.inventoryView=['asia_map','africa_map','north_america_map','oceanic_quadrant','fossil_fragment','fossil_skull','fossil_tooth','fossil_amber','fossil_track','fossil_claw','fossil_rib','fossil_horn','hard_bone'].includes(id)?'coleccionables':ITEMS[id].kind==='animal'?'animales':ITEMS[id].kind==='equip'?'equipo':'expedicion';developmentNavigate3280('objects');persist();}
+ if(action==='er28-project'&&researchIndex3280.has(id)){const n=researchIndex3280.get(id);if(!researchQuery3280().nodes.includes(n))developmentUI3280.filter='all';state.researchBranch=researchBranchOf(n);developmentUI3280.projects[state.researchBranch]=id;renderPanel();panel.querySelector('#er28-project')?.scrollIntoView({block:'nearest'});}
+}
+function syncDevelopment3280(now=Date.now()){
+ if(tab==='expeditions'){const v=VOYAGES.find(v=>v.id===developmentUI3280.route);globalThis.AtlasDevelopmentUI.syncExpeditions(panel,{jobs:state.voyages.map(j=>voyageJob3280(j,now)),route:v?voyageRoute3280(v):null});}
+ if(tab==='research'){const branch=(RESEARCH_BRANCHES.find(b=>b.id===state.researchBranch)||RESEARCH_BRANCHES[0]).id,node=researchIndex3280.get(developmentUI3280.projects[branch]);if(node)globalThis.AtlasDevelopmentUI.syncResearch(panel,researchNode3280(node,false));}
+}
+
+// E-3280 END presentation
 // AM-06 BEGIN bestiary-state
 const BESTIARY_PAGE_SIZE=32;
 let bestiaryPage=0;
@@ -4687,6 +4806,16 @@ function researchNodeCard(node){
 }
 
 function bindPanel(){
+ // E-3280 BEGIN binding
+ const development=panel.querySelector('.er28-root');
+ if(development){
+  const nav=development.querySelector('.er28-branches');if(nav){const selected=nav.querySelector('.selected');nav.scrollLeft=developmentUI3280.branchLeft;if(developmentUI3280.lastBranch!==state.researchBranch&&selected)nav.scrollLeft=Math.max(0,selected.offsetLeft-nav.offsetLeft-(nav.clientWidth-selected.offsetWidth)/2);developmentUI3280.lastBranch=state.researchBranch;developmentUI3280.branchLeft=nav.scrollLeft;nav.addEventListener('scroll',()=>{developmentUI3280.branchLeft=nav.scrollLeft;},{passive:true});}
+  globalThis.AtlasDevelopmentUI.bind(development,{change:developmentChange3280,fold:(key,open)=>developmentUI3280.folds[key]=open,load:developmentDetail3280});
+  if(developmentUI3280.focus){panel.querySelector(developmentUI3280.focus)?.focus({preventScroll:true});developmentUI3280.focus=null;}
+ }
+ if(developmentUI3280.restore!==null){const top=developmentUI3280.restore;developmentUI3280.restore=null;globalThis.requestAnimationFrame?.(()=>globalThis.scrollTo?.({top,behavior:'instant'}));}
+ if(tab==='objects'&&developmentUI3280.item){const name=ITEMS[developmentUI3280.item]?.name;developmentUI3280.item=null;globalThis.requestAnimationFrame?.(()=>{const entry=[...panel.querySelectorAll('.inventory-item strong')].find(el=>el.textContent===name);entry?.closest('.inventory-item')?.scrollIntoView({block:'center'});});}
+ // E-3280 END binding
   // M-3270 BEGIN binding
   const museumRoot=panel.querySelector('.m27-root');
   if(museumRoot){
@@ -4744,6 +4873,9 @@ function handlePanelAction(e){
     const el=e.target.closest?.('[data-action]');
     if(!el||!panel.contains(el)||el.disabled)return;
     const act=el.dataset.action; const id=el.dataset.id;
+ // E-3280 BEGIN actions
+    if(act.startsWith('er28-')){developmentAction3280(act,id);return;}
+ // E-3280 END actions
     // M-3270 BEGIN actions
     if(globalThis.AtlasMuseumUI&&tab==='museum'){
       if(act==='museum-tab'){museumAction3270(act,id);return;}
@@ -4919,6 +5051,9 @@ function tick(){
  }
  renderCounters();
  syncMuseumTimers(now);
+ // E-3280 BEGIN tick-display
+ if(globalThis.AtlasDevelopmentUI)syncDevelopment3280(now);
+ // E-3280 END tick-display
  updateFieldOutput();
  if(returns && tab==='expeditions')renderPanel();
  persist();

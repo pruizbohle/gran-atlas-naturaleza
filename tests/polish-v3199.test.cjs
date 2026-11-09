@@ -2,9 +2,9 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto');
 const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
 function api(){const ctx=vm.createContext({});for(const n of ['lab/polish-before-v3198','fish-art-v3191','herp-art-v3192','bird-art-v3193','mammal-art-v3194','legendary-art-v3197','relict-art-v3199','lab/dimorphism-production','lab/polish-production-v3199'])vm.runInContext(fs.readFileSync('www/js/'+n+'.js','utf8'),ctx);return ctx;}
-test('gameplay operations retain their pre-optimization implementations',()=>{
+test('historical gameplay function bodies remain exact outside the explicitly tested 3.28 validation/receipt additions',()=>{
  const api=require('./helpers/live-game.cjs').harness().window.__atlasTest,expected=require('./fixtures/gameplay-functions-v3199.json');
- for(const[name,digest]of Object.entries(expected))assert.equal(hash(api[name].toString()),digest,name);
+ for(const[name,digest]of Object.entries(expected))assert.equal(hash(require('./helpers/legacy-source.cjs').withoutDevelopment3280(api[name].toString())),digest,name);
 });
 test('487 species, all original dimorphism and 12 legendary/9 relict identities are unchanged',()=>{
  const c=api(),old=c.ATLAS_POLISH_BEFORE,next=c.ATLAS_POLISH_CURRENT;

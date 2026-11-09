@@ -1,0 +1,12 @@
+{
+  "from": "3.27.0",
+  "to": "3.28.0",
+  "device": "Chromium service worker integration, not physical Android",
+  "explicitUserActionRequired": true,
+  "oldControllerBeforeAcceptance": true,
+  "exactBackupBeforeActivation": true,
+  "newWorkerControllerHandoff": true,
+  "allSaveFieldsUnchanged": true,
+  "expeditionsOfflineAfterUpdate": true,
+  "errors": []
+}

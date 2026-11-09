@@ -1,0 +1,8 @@
+{
+  "hours": 8,
+  "catalogSpecies": 710,
+  "exactStateMatches3231": true,
+  "exactRandomCallsMatch": true,
+  "rngCalls": 2797,
+  "stateSha256": "130c89d4b19154d576a18462ec190e4b18b065610c51587df792b61e0afe5008"
+}

@@ -1,3 +1,7 @@
+# El Gran Atlas v3.28.0 — Expediciones del naturalista
+
+Mesa de navegación e Instituto renovados, con ocho rutas, cinco ramas y correcciones de finalización anticipada y dependencias múltiples. Mantiene 710 especies, 79 regiones, recompensas y partidas. [Informe, capturas y pruebas](README_V3280.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-expediciones-investigaciones-v3280.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3280.html).
+
 # El Gran Atlas v3.27.0 — Museo de Historia Natural
 
 Cinco salas renovadas con vitrinas ilustradas, fichas interactivas y Muestras paginadas. Se conservan 710 especies, 79 regiones, economía y partidas. [Informe, capturas y pruebas](README_V3270.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-museo-v3270.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3270.html).

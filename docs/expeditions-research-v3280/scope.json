@@ -1,0 +1,16 @@
+{
+  "baseline": "3.27.0 / 71d4f4eb96b27264afa0108805074d9b0730ad45",
+  "baselineAppSha256": "bd8c672c73002aa034bb91e28e6c4bb6be2ba2ec89768fae6c09547bace642dc",
+  "normalizedAppSha256": "bd8c672c73002aa034bb91e28e6c4bb6be2ba2ec89768fae6c09547bace642dc",
+  "entirePreviousAppExactOutsideE3280Blocks": true,
+  "authorizedDifferences": [
+    "Expeditions/Research presentation and navigation",
+    "finishVoyage deadline validation; invalid clocks/dates cannot award",
+    "buyNode reuses canBuy including reqAll",
+    "Additive real departure timestamp and compact result receipts",
+    "Existing tick display hook, no new timer"
+  ],
+  "all64RewardCasesMatchPreviousResourcesAndRng": true,
+  "catalogArtGeographyAndOtherModulePresentationsUnchanged": true,
+  "historicalFixturesChanged": false
+}

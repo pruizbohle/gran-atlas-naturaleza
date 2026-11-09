@@ -1,0 +1,174 @@
+{
+  "continents": [
+    "Europa",
+    "Asia",
+    "África",
+    "Nuevo Mundo",
+    "Norteamérica",
+    "Sudamérica"
+  ],
+  "researchPurchased": [
+    "capacitacion_1",
+    "astillero",
+    "rutas_1",
+    "rutas_2",
+    "asia_1",
+    "africa_1",
+    "nuevo_mundo_1",
+    "norteamerica_1",
+    "sudamerica_1"
+  ],
+  "researchNodesChecked": 52,
+  "cycles": 0,
+  "materialSourceVoyages": [
+    {
+      "route": "north",
+      "item": "asia_map_piece"
+    },
+    {
+      "route": "north",
+      "item": "asia_map_piece"
+    },
+    {
+      "route": "north",
+      "item": "asia_map_piece"
+    },
+    {
+      "route": "north",
+      "item": "asia_map_piece"
+    },
+    {
+      "route": "north",
+      "item": "asia_map_piece"
+    },
+    {
+      "route": "north",
+      "item": "asia_map_piece"
+    },
+    {
+      "route": "north",
+      "item": "asia_map_piece"
+    },
+    {
+      "route": "north",
+      "item": "asia_map_piece"
+    },
+    {
+      "route": "north",
+      "item": "asia_map_piece"
+    },
+    {
+      "route": "north",
+      "item": "asia_map_piece"
+    },
+    {
+      "route": "balkans",
+      "item": "africa_map_piece"
+    },
+    {
+      "route": "balkans",
+      "item": "africa_map_piece"
+    },
+    {
+      "route": "balkans",
+      "item": "africa_map_piece"
+    },
+    {
+      "route": "balkans",
+      "item": "africa_map_piece"
+    },
+    {
+      "route": "balkans",
+      "item": "africa_map_piece"
+    },
+    {
+      "route": "balkans",
+      "item": "africa_map_piece"
+    },
+    {
+      "route": "balkans",
+      "item": "africa_map_piece"
+    },
+    {
+      "route": "balkans",
+      "item": "africa_map_piece"
+    },
+    {
+      "route": "balkans",
+      "item": "africa_map_piece"
+    },
+    {
+      "route": "balkans",
+      "item": "africa_map_piece"
+    },
+    {
+      "route": "coast",
+      "item": "brass_shard"
+    },
+    {
+      "route": "coast",
+      "item": "brass_shard"
+    },
+    {
+      "route": "coast",
+      "item": "brass_shard"
+    },
+    {
+      "route": "coast",
+      "item": "polished_lens"
+    },
+    {
+      "route": "coast",
+      "item": "polished_lens"
+    },
+    {
+      "route": "coast",
+      "item": "map_fragment"
+    },
+    {
+      "route": "coast",
+      "item": "map_fragment"
+    },
+    {
+      "route": "coast",
+      "item": "parchment_scrap"
+    },
+    {
+      "route": "atlantic_survey",
+      "item": "north_america_map_piece"
+    },
+    {
+      "route": "atlantic_survey",
+      "item": "north_america_map_piece"
+    },
+    {
+      "route": "atlantic_survey",
+      "item": "north_america_map_piece"
+    },
+    {
+      "route": "atlantic_survey",
+      "item": "north_america_map_piece"
+    },
+    {
+      "route": "atlantic_survey",
+      "item": "north_america_map_piece"
+    },
+    {
+      "route": "atlantic_survey",
+      "item": "north_america_map_piece"
+    },
+    {
+      "route": "atlantic_survey",
+      "item": "north_america_map_piece"
+    },
+    {
+      "route": "atlantic_survey",
+      "item": "north_america_map_piece"
+    }
+  ],
+  "regionsTravelled": 79,
+  "prestigeConsumed": 0,
+  "automaticExpansionUnlocks": 0,
+  "mapConsumption": "Asia consumes its map as in 3.23.1; Africa and North America retain theirs",
+  "savedPurchasesAndDestinationsPreserved": true
+}

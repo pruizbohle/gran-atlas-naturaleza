@@ -1,0 +1,26 @@
+{
+  "version": "3.28.0",
+  "command": "ATLAS_EVIDENCE_DIR=docs/expeditions-research-v3280 node --test tests/*.test.cjs",
+  "tests": 383,
+  "passed": 383,
+  "failed": 0,
+  "skipped": 0,
+  "specificTests": 31,
+  "unchangedRewardComparisons": 64,
+  "reqAllNodesTested": [
+    "grupos_auto_1",
+    "censo_auto_1",
+    "preparacion_fosiles_1",
+    "relictos_2"
+  ],
+  "historicalFixturesChanged": false,
+  "species": 710,
+  "regions": 79,
+  "routes": 8,
+  "researchBranches": 5,
+  "researchNodes": 52,
+  "authorizedPersistentAdditions": [
+    "voyages[].startedAt",
+    "voyageHistory (maximum12)"
+  ]
+}

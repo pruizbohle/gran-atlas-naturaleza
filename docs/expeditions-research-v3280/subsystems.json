@@ -1,0 +1,9 @@
+{
+  "museumSections": 5,
+  "exhibitCapacityVerified": true,
+  "incomeAndEquipmentVerified": true,
+  "excavationTimersRewardsAndHistory": true,
+  "noDuplicateRewards": true,
+  "expeditionPersistenceAndCompletion": true,
+  "existingSpecialistSuitesAlsoRequired": true
+}

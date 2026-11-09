@@ -1,6 +1,7 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto');
 const {harness}=require('./helpers/live-game.cjs'),{catalogSource}=require('./helpers/catalog.cjs'),golden=require('./fixtures/stability-v3199.json'),source=fs.readFileSync('www/js/app.js','utf8');
+const {historicalVoyageState}=require('./helpers/legacy-source.cjs');
 const hash=x=>crypto.createHash('sha256').update(x).digest('hex');
 test('entire catalog, 3473 sprite combinations and seven art modules remain exactly unchanged',()=>{
  assert.equal(hash(catalogSource(source)),golden.catalog);const c=vm.createContext({});for(const n of Object.keys(golden.modules)){const file=fs.readFileSync('www/js/'+n+'.js');assert.equal(hash(file),golden.modules[n],n);vm.runInContext(file.toString(),c);}
@@ -11,18 +12,18 @@ test('an unreadable stored save survives startup and ticks verbatim, and a valid
 });
 test('storage failure keeps the live session exportable and failed imports roll back in memory',async()=>{
  const h=harness(),a=h.window.__atlasTest;h.localStorage.setItem=()=>{throw new Error('QuotaExceededError');};a.state.money=5678;a.state.inventory.fossil_fragment=77;assert.equal(a.persist(),false);assert.doesNotThrow(()=>h.tick());assert.equal(a.state.money,5678);const imported=a.initialState();imported.money=99999;assert.throws(()=>h.window.AtlasSaveBridge.restoreGame(imported),/No se pudo guardar/);assert.equal(a.state.money,5678);
- let exported;h.window.Capacitor.Plugins.AtlasExport.saveFile=async({content})=>{exported=JSON.parse(content);return {uri:'content://test'};};await h.elements.saveDownloadBtn.fire('click');assert.equal(exported.game.money,5678);assert.equal(exported.game.inventory.fossil_fragment,77);assert.equal(exported.gameVersion,'3.27.0');
+ let exported;h.window.Capacitor.Plugins.AtlasExport.saveFile=async({content})=>{exported=JSON.parse(content);return {uri:'content://test'};};await h.elements.saveDownloadBtn.fire('click');assert.equal(exported.game.money,5678);assert.equal(exported.game.inventory.fossil_fragment,77);assert.equal(exported.gameVersion,'3.28.0');
  h.localStorage.setItem=(key,value)=>h.store[key]=String(value);assert.equal(a.persist(),true);assert.equal(JSON.parse(h.store.gran_atlas_v05).money,5678);
 });
 test('representative advanced exports and restores preserve all progress subsystems',async()=>{
  const h=harness(),a=h.window.__atlasTest,s=a.state;for(const id of Object.keys(a.SPECIES)){s.discovered[id]=true;s.sightings[id]=100000;s.stages[id]=5;s.published[id]=true;}s.inventory={fossil_fragment:55,north_america_map:1,field_telescope:1};s.equipment.instrument='field_telescope';for(const l of a.LEGENDARY_SPECIMENS)a.recordSpecimen(l.speciesId,{pigment:'Albino',category:'Legendario'},s);for(const r of a.MUSEUM_RELICTS)s.museum.relicts[r.id]=true;s.sexSeen.reno={male:true,female:true};s.dimorphism.reno=true;a.persist();
  const before=h.window.AtlasSaveBridge.getSaveData();let exported;h.window.Capacitor.Plugins.AtlasExport.saveFile=async({content})=>{exported=JSON.parse(content);return {uri:'content://test'};};await h.elements.saveDownloadBtn.fire('click');const next=harness();next.window.AtlasSaveBridge.restoreGame(exported.game);next.tick();const after=next.window.AtlasSaveBridge.getSaveData();for(const key of ['discovered','sightings','stages','published','inventory','equipment','sexSeen','dimorphism','specialFound','legendaryFound','purchases','museum','voyages'])assert.deepEqual(after[key],before[key],key);
 });
-test('seeded automatic stress at 1s, 1h and 8h matches every saved byte and RNG call of v3.19.9',()=>{
- const {advanced}=require('./helpers/advanced-v3200.cjs'),expected=require('./fixtures/advanced-behavior-v3199.json');for(const [seconds,golden]of Object.entries(expected)){const result=advanced(Number(seconds));assert.equal(hash(JSON.stringify(result.state)),golden.hash,'complete state '+seconds+'s');assert.equal(result.calls,golden.rngCalls,'random draws '+seconds+'s');}
+test('seeded automatic stress at 1s, 1h and 8h matches historical gameplay bytes and RNG calls of v3.19.9, excluding the additive 3.28 voyage receipts',()=>{
+ const {advanced}=require('./helpers/advanced-v3200.cjs'),expected=require('./fixtures/advanced-behavior-v3199.json');for(const [seconds,golden]of Object.entries(expected)){const result=advanced(Number(seconds));assert.equal(hash(JSON.stringify(historicalVoyageState(result.state))),golden.hash,'complete state '+seconds+'s');assert.equal(result.calls,golden.rngCalls,'random draws '+seconds+'s');}
 });
 test('offline worker serves its immutable revision first and never turns missing scripts into HTML',async()=>{
- const callbacks={},cache=new Map(),scope='https://atlas.example/game/',deleted=[],version='gran-atlas-v3.27.0-museum-1';let fetches=0;
+ const callbacks={},cache=new Map(),scope='https://atlas.example/game/',deleted=[],version='gran-atlas-v3.28.0-expeditions-1';let fetches=0;
  const storage={async addAll(assets){for(const asset of assets){assert.equal(asset.cache,'reload','precache bypasses stale HTTP revisions');assert.ok(asset.url.startsWith(scope));cache.set(asset.url,'cached:./'+asset.url.slice(scope.length));}},async match(key){return cache.get(String(key));}};
  const ctx=vm.createContext({URL,Set,Promise,Request,Response,self:{registration:{scope},location:{origin:'https://atlas.example'},clients:{async claim(){}},addEventListener(name,fn){callbacks[name]=fn;}},caches:{async open(){return storage;},async keys(){return [version,'gran-atlas-v3.19.9-pulido-1','unrelated'];},async delete(key){deleted.push(key);}},async fetch(){fetches++;throw new Error('offline');}});
  vm.runInContext(fs.readFileSync('www/sw.js','utf8'),ctx);let install;callbacks.install({waitUntil(p){install=p;}});await install;

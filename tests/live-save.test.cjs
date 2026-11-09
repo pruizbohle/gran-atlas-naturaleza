@@ -169,7 +169,11 @@ test('Beta 3.8: reconocimientos africanos respetan mapa, prestigio, recursos y g
  assert.equal(underway.voyages.length,1);
  assert.equal(underway.money,before.money-950);
  assert.equal(underway.knowledge,before.knowledge-380);
+ // 3.28: early resolution is rejected; simulate the existing automatic return at its real deadline.
  h.evalInGame('finishVoyage('+underway.voyages[0].id+')');
+ assert.equal(JSON.parse(h.store[KEY]).voyages.length,1);
+ h.evalInGame('processVoyages('+underway.voyages[0].endAt+')');
+ h.evalInGame('persist()');
  const after=JSON.parse(h.store[KEY]);
  assert.equal(after.voyages.length,0);
  assert.equal(after.money,before.money-950+1400);

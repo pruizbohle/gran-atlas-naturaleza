@@ -1,0 +1,8 @@
+{
+  "scenario": "northamerica",
+  "sourceVersion": "3.22.1",
+  "rawSha256": "44a24c8f32cf8c62976d504453882ef382a2df7c41530e14339cbcd783d96dff",
+  "allFiveProductionRoomsReadOnly": true,
+  "nativeImportExportPreserved": true,
+  "noSaveFormatChange": true
+}

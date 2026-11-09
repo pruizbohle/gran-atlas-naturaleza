@@ -1,0 +1,9 @@
+{
+  "regions": 79,
+  "groupEncounters": 158,
+  "manualCensus": 3,
+  "automaticCensus": 2,
+  "hourlyCapPerSpecies": 100,
+  "bonusesVerified": true,
+  "observerSpeedUnchanged": true
+}

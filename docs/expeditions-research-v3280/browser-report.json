@@ -1,0 +1,97 @@
+{
+  "version": "3.28.0",
+  "device": "Chromium mobile/touch emulation; not physical Android",
+  "screens": [
+    {
+      "width": 320,
+      "height": 640,
+      "module": "expeditions",
+      "actionBottom": 530.40625,
+      "dockTop": 589,
+      "horizontalOverflow": false,
+      "mainActionVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "module": "research",
+      "actionBottom": 516.09375,
+      "dockTop": 589,
+      "horizontalOverflow": false,
+      "mainActionVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "module": "expeditions",
+      "actionBottom": 532.71875,
+      "dockTop": 689,
+      "horizontalOverflow": false,
+      "mainActionVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "module": "research",
+      "actionBottom": 502.46875,
+      "dockTop": 689,
+      "horizontalOverflow": false,
+      "mainActionVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "module": "expeditions",
+      "actionBottom": 542.25,
+      "dockTop": 793,
+      "horizontalOverflow": false,
+      "mainActionVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "module": "research",
+      "actionBottom": 510,
+      "dockTop": 793,
+      "horizontalOverflow": false,
+      "mainActionVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "module": "expeditions",
+      "actionBottom": 542.25,
+      "dockTop": 864,
+      "horizontalOverflow": false,
+      "mainActionVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "module": "research",
+      "actionBottom": 510,
+      "dockTop": 864,
+      "horizontalOverflow": false,
+      "mainActionVisible": true
+    }
+  ],
+  "routes": 8,
+  "researchBranches": 5,
+  "manualEarlyFinishRejected": true,
+  "automaticReturnAndExactOneTimeReceipt": true,
+  "realLootInventoryNavigation": true,
+  "requiredResearchNavigationNoAutoPurchase": true,
+  "routeContextPreserved": true,
+  "reqAllRealPurchaseGuarded": true,
+  "repeatablePurchase": true,
+  "allBranchesAndFilters": true,
+  "effectiveBonusesLazy": true,
+  "timerUpdatesRetainDOM": true,
+  "oldJobsWithoutInventedStarts": true,
+  "newJobsAndReceiptsPersist": true,
+  "otherFiveModulesRegressions": true,
+  "isolatedLab16States": true,
+  "noLabRealStorageAccess": true,
+  "offlineBothViewsAndLab": true,
+  "errors": []
+}

@@ -1,0 +1,8 @@
+{
+  "scenario": "africa",
+  "sourceVersion": "3.21.2",
+  "rawSha256": "0445e2131a01ba7092ede90908a8065360b8af984a184a344c28167424a204d5",
+  "allFiveProductionRoomsReadOnly": true,
+  "nativeImportExportPreserved": true,
+  "noSaveFormatChange": true
+}

@@ -1,0 +1,11 @@
+{
+  "version": "3.28.0",
+  "cache": "gran-atlas-v3.28.0-expeditions-1",
+  "precacheEntries": 112,
+  "missingAssets": [],
+  "uncachedResourcesExcludingWorkerAndRelease": [],
+  "allPreviousRecoveryEntrypointsRetained": true,
+  "capacitorAppId": "com.elgranatlas.naturaleza.beta314",
+  "androidVersionName": "3.28.0",
+  "androidVersionCode": 32800
+}
