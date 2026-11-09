@@ -1,0 +1,3155 @@
+{
+  "status": "candidate-game-configuration; not scientific occurrence certification; not installed",
+  "profiles": {
+    "oc_esp_acanthophis_antarcticus": {
+      "artProfile": "death-adder",
+      "kind": "snake",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "desierto",
+        "humedal"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#9c8b65",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Serpientes"
+      },
+      "family": "Elapidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_apteryx_haastii": {
+      "artProfile": "kiwi",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "times": [
+        "noche"
+      ],
+      "color": "#9a896b",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Paleognatas"
+      },
+      "family": "Apterygidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "pending-authority-review"
+    },
+    "oc_esp_apteryx_mantelli": {
+      "artProfile": "kiwi",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "times": [
+        "noche"
+      ],
+      "color": "#9a896b",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Paleognatas"
+      },
+      "family": "Apterygidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_apteryx_owenii": {
+      "artProfile": "kiwi",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "times": [
+        "noche"
+      ],
+      "color": "#9a896b",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Paleognatas"
+      },
+      "family": "Apterygidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_aquila_audax": {
+      "artProfile": "eagle",
+      "kind": "raptor",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "montana"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#746d55",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves rapaces"
+      },
+      "family": "Accipitridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_arctocephalus_forsteri": {
+      "artProfile": "fur-seal",
+      "kind": "pinniped",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "color": "#6a6858",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Otáridos"
+      },
+      "family": "Otariidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_assa_darlingtoni": {
+      "artProfile": "pouched-frog",
+      "kind": "amphibian",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#8ca15e",
+      "taxonomy": {
+        "className": "Amphibia",
+        "subClass": "Ranas y sapos"
+      },
+      "family": "Myobatrachidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_cacatua_galerita": {
+      "artProfile": "cockatoo",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "mediterraneo",
+        "sabana"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#e1dfc8",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psitaciformes"
+      },
+      "family": "Cacatuidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_callaeas_wilsoni": {
+      "artProfile": "forest-bird",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#798572",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves forestales"
+      },
+      "family": "Callaeidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_calyptorhynchus_banksii": {
+      "artProfile": "cockatoo",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "mediterraneo",
+        "sabana"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#414b42",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psitaciformes"
+      },
+      "family": "Cacatuidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_canis_familiaris": {
+      "artProfile": "dingo",
+      "kind": "canid",
+      "habitats": [
+        "sabana",
+        "pradera",
+        "desierto",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#bd925d",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Cánidos"
+      },
+      "family": "Canidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada. Solo las poblaciones de dingo indicadas por las dos filas, no todos los perros domésticos.",
+      "scientificStatus": "MDD-dingo-resolved"
+    },
+    "oc_esp_casuarius_casuarius": {
+      "artProfile": "cassowary",
+      "kind": "ostrich",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#454c42",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Paleognatas"
+      },
+      "family": "Casuariidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_cephalorhynchus_hectori": {
+      "artProfile": "hector-dolphin",
+      "kind": "cetacean",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "color": "#899c9c",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Cetáceos"
+      },
+      "family": "Delphinidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_chlamydosaurus_kingii": {
+      "artProfile": "frilled-lizard",
+      "kind": "lizard",
+      "habitats": [
+        "bosque",
+        "sabana"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#999261",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Lagartos"
+      },
+      "family": "Agamidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_cicinnurus_regius": {
+      "artProfile": "bird-of-paradise",
+      "kind": "forestbird",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#ac7660",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves del paraíso"
+      },
+      "family": "Paradisaeidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": {
+        "type": "oc3290",
+        "description": "Plumaje y estructuras ornamentales propios de macho y hembra; perfil gráfico sujeto a revisión renderizada."
+      },
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_cicinnurus_respublica": {
+      "artProfile": "bird-of-paradise",
+      "kind": "forestbird",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#ac795e",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves del paraíso"
+      },
+      "family": "Paradisaeidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": {
+        "type": "oc3290",
+        "description": "Plumaje y estructuras ornamentales propios de macho y hembra; perfil gráfico sujeto a revisión renderizada."
+      },
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_crocodylus_johnstoni": {
+      "artProfile": "crocodile",
+      "kind": "crocodile",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#788568",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Cocodrilianos"
+      },
+      "family": "Crocodylidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_crocodylus_novaeguineae": {
+      "artProfile": "crocodile",
+      "kind": "crocodile",
+      "habitats": [
+        "rio",
+        "humedal",
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#788568",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Cocodrilianos"
+      },
+      "family": "Crocodylidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "pending-authority-review"
+    },
+    "oc_esp_crocodylus_porosus": {
+      "artProfile": "crocodile",
+      "kind": "crocodile",
+      "habitats": [
+        "rio",
+        "humedal",
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#788568",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Cocodrilianos"
+      },
+      "family": "Crocodylidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_cygnus_atratus": {
+      "artProfile": "black-swan",
+      "kind": "swan",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "times": [
+        "dia",
+        "atardecer"
+      ],
+      "color": "#484d47",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Anátidas"
+      },
+      "family": "Anatidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Albino"
+      ],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_dacelo_leachii": {
+      "artProfile": "kookaburra",
+      "kind": "kingfisher",
+      "habitats": [
+        "bosque",
+        "selva",
+        "sabana"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#afae8c",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Alcedínidos"
+      },
+      "family": "Alcedinidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_dacelo_novaeguineae": {
+      "artProfile": "kookaburra",
+      "kind": "kingfisher",
+      "habitats": [
+        "bosque",
+        "selva",
+        "sabana"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#afae8c",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Alcedínidos"
+      },
+      "family": "Alcedinidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_dactylopsila_trivirgata": {
+      "artProfile": "possum",
+      "kind": "small",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#ddd5b6",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Petauridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_dasycercus_cristicauda": {
+      "artProfile": "mulgara",
+      "kind": "small",
+      "habitats": [
+        "desierto"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#bba27c",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Dasyuridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_dasyurus_viverrinus": {
+      "artProfile": "quoll",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#7c7468",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Dasyuridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_dendrolagus_goodfellowi": {
+      "artProfile": "tree-kangaroo",
+      "kind": "small",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "color": "#ac7949",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_dendrolagus_lumholtzi": {
+      "artProfile": "tree-kangaroo",
+      "kind": "small",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "color": "#817c63",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_dendrolagus_matschiei": {
+      "artProfile": "tree-kangaroo",
+      "kind": "small",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "color": "#ae8954",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_diomedea_epomophora": {
+      "artProfile": "albatross",
+      "kind": "seabird",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#dedfcc",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves marinas"
+      },
+      "family": "Diomedeidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_dromaius_novaehollandiae": {
+      "artProfile": "emu",
+      "kind": "ostrich",
+      "habitats": [
+        "pradera",
+        "sabana",
+        "desierto",
+        "bosque"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#8a8571",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Paleognatas"
+      },
+      "family": "Casuariidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_eolophus_roseicapilla": {
+      "artProfile": "cockatoo",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "mediterraneo",
+        "sabana"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#b58b8c",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psitaciformes"
+      },
+      "family": "Cacatuidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_gallirallus_australis": {
+      "artProfile": "rail",
+      "kind": "wader",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "color": "#847c61",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Rálidos"
+      },
+      "family": "Rallidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_gymnorhina_tibicen": {
+      "artProfile": "forest-bird",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#798572",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves forestales"
+      },
+      "family": "Artamidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_harpyopsis_novaeguineae": {
+      "artProfile": "eagle",
+      "kind": "raptor",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "montana"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#746d55",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves rapaces"
+      },
+      "family": "Accipitridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_hemiphaga_novaeseelandiae": {
+      "artProfile": "forest-bird",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#798572",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves forestales"
+      },
+      "family": "Columbidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_intellagama_lesueurii": {
+      "artProfile": "water-dragon",
+      "kind": "lizard",
+      "habitats": [
+        "bosque",
+        "rio"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#999261",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Lagartos"
+      },
+      "family": "Agamidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_lates_calcarifer": {
+      "artProfile": "barramundi",
+      "kind": "fish",
+      "habitats": [
+        "rio",
+        "costa",
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#a1aba0",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Peces óseos"
+      },
+      "family": "Latidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_lophorina_superba": {
+      "artProfile": "bird-of-paradise",
+      "kind": "forestbird",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#465d45",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves del paraíso"
+      },
+      "family": "Paradisaeidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": {
+        "type": "oc3290",
+        "description": "Plumaje y estructuras ornamentales propios de macho y hembra; perfil gráfico sujeto a revisión renderizada."
+      },
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "pending-authority-review"
+    },
+    "oc_esp_macropus_fuliginosus": {
+      "artProfile": "macropod",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "mediterraneo",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#9c8870",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_macropus_giganteus": {
+      "artProfile": "macropod",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "mediterraneo",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#9c8870",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Albino"
+      ],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_macrotis_lagotis": {
+      "artProfile": "bilby",
+      "kind": "small",
+      "habitats": [
+        "desierto"
+      ],
+      "times": [
+        "noche"
+      ],
+      "color": "#a8a397",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Thylacomyidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_megadyptes_antipodes": {
+      "artProfile": "yellow-eyed-penguin",
+      "kind": "seabird",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#5b665a",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Pingüinos"
+      },
+      "family": "Spheniscidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_melopsittacus_undulatus": {
+      "artProfile": "parrot",
+      "kind": "forestbird",
+      "habitats": [
+        "pradera",
+        "desierto",
+        "sabana"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#8ea55e",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psitaciformes"
+      },
+      "family": "Psittaculidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_menura_novaehollandiae": {
+      "artProfile": "forest-bird",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#798572",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves forestales"
+      },
+      "family": "Menuridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_moloch_horridus": {
+      "artProfile": "thorny-devil",
+      "kind": "lizard",
+      "habitats": [
+        "desierto"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#999261",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Lagartos"
+      },
+      "family": "Agamidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_morelia_spilota": {
+      "artProfile": "python",
+      "kind": "snake",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#6d7160",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Serpientes"
+      },
+      "family": "Pythonidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_morelia_viridis": {
+      "artProfile": "green-tree-python",
+      "kind": "snake",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#799b5f",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Serpientes"
+      },
+      "family": "Pythonidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_myrmecobius_fasciatus": {
+      "artProfile": "numbat",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "mediterraneo"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#a4835d",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Myrmecobiidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_neophema_chrysogaster": {
+      "artProfile": "parrot",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "mediterraneo"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#789459",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psitaciformes"
+      },
+      "family": "Psittaculidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_nestor_meridionalis": {
+      "artProfile": "parrot",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "mediterraneo"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#80765b",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psitaciformes"
+      },
+      "family": "Strigopidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_nestor_notabilis": {
+      "artProfile": "parrot",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "mediterraneo"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#8d9060",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psitaciformes"
+      },
+      "family": "Strigopidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_ninox_strenua": {
+      "artProfile": "owl",
+      "kind": "owl",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#857c65",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Búhos y lechuzas"
+      },
+      "family": "Strigidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_notamacropus_agilis": {
+      "artProfile": "macropod",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "mediterraneo",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#9c8870",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_notamacropus_eugenii": {
+      "artProfile": "macropod",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "mediterraneo",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#9c8870",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_notamacropus_rufogriseus": {
+      "artProfile": "macropod",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "mediterraneo",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#9c8870",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_notechis_scutatus": {
+      "artProfile": "tiger-snake",
+      "kind": "snake",
+      "habitats": [
+        "bosque",
+        "humedal",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "color": "#9c8b65",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Serpientes"
+      },
+      "family": "Elapidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_nymphicus_hollandicus": {
+      "artProfile": "cockatoo",
+      "kind": "forestbird",
+      "habitats": [
+        "pradera",
+        "sabana",
+        "desierto"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#999b8c",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psitaciformes"
+      },
+      "family": "Cacatuidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": {
+        "type": "oc3290",
+        "description": "Plumaje y estructuras ornamentales propios de macho y hembra; perfil gráfico sujeto a revisión renderizada."
+      },
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_ornithorhynchus_anatinus": {
+      "artProfile": "platypus",
+      "kind": "small",
+      "habitats": [
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#80664e",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Monotremas"
+      },
+      "family": "Ornithorhynchidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_osphranter_rufus": {
+      "artProfile": "macropod",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "mediterraneo",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#b28a65",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Albino"
+      ],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_oxyuranus_microlepidotus": {
+      "artProfile": "elapid",
+      "kind": "snake",
+      "habitats": [
+        "desierto",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "color": "#9c8b65",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Serpientes"
+      },
+      "family": "Elapidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_oxyuranus_scutellatus": {
+      "artProfile": "elapid",
+      "kind": "snake",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "desierto",
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "color": "#9c8b65",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Serpientes"
+      },
+      "family": "Elapidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_paradisaea_apoda": {
+      "artProfile": "bird-of-paradise",
+      "kind": "forestbird",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#465d45",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves del paraíso"
+      },
+      "family": "Paradisaeidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": {
+        "type": "oc3290",
+        "description": "Plumaje y estructuras ornamentales propios de macho y hembra; perfil gráfico sujeto a revisión renderizada."
+      },
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_pelecanus_conspicillatus": {
+      "artProfile": "australian-pelican",
+      "kind": "pelican",
+      "habitats": [
+        "costa",
+        "rio",
+        "humedal"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#e0dfcb",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Pelícanos"
+      },
+      "family": "Pelecanidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_petauroides_volans": {
+      "artProfile": "glider",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "noche"
+      ],
+      "color": "#89908a",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Pseudocheiridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada. Australia Oriental: bosques de eucaliptos del este/sureste; no toda la región ni distribuciones de P. minor/armillatus.",
+      "scientificStatus": "MDD-source-concept-resolved"
+    },
+    "oc_esp_petaurus_breviceps": {
+      "artProfile": "glider",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "noche"
+      ],
+      "color": "#89908a",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Petauridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_petrogale_mareeba": {
+      "artProfile": "macropod",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "mediterraneo",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#9c8870",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_petroica_australis": {
+      "artProfile": "forest-bird",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#798572",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves forestales"
+      },
+      "family": "Petroicidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_phalanger_orientalis": {
+      "artProfile": "possum",
+      "kind": "small",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#a39a7d",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Phalangeridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_phascolarctos_cinereus": {
+      "artProfile": "koala",
+      "kind": "small",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#96968c",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Phascolarctidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_phylidonyris_novaehollandiae": {
+      "artProfile": "forest-bird",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#798572",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves forestales"
+      },
+      "family": "Meliphagidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_pogona_vitticeps": {
+      "artProfile": "bearded-dragon",
+      "kind": "lizard",
+      "habitats": [
+        "desierto",
+        "pradera"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#999261",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Lagartos"
+      },
+      "family": "Agamidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_porphyrio_hochstetteri": {
+      "artProfile": "rail",
+      "kind": "wader",
+      "habitats": [
+        "pradera",
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "color": "#847c61",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Rálidos"
+      },
+      "family": "Rallidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_pseudophryne_corroboree": {
+      "artProfile": "corroboree-frog",
+      "kind": "amphibian",
+      "habitats": [
+        "humedal",
+        "montana"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#b9ac55",
+      "taxonomy": {
+        "className": "Amphibia",
+        "subClass": "Ranas y sapos"
+      },
+      "family": "Myobatrachidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_pteropus_conspicillatus": {
+      "artProfile": "flying-fox",
+      "kind": "bat",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#655e4e",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Murciélagos"
+      },
+      "family": "Pteropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_pteropus_poliocephalus": {
+      "artProfile": "flying-fox",
+      "kind": "bat",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#655e4e",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Murciélagos"
+      },
+      "family": "Pteropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_ptilonorhynchus_violaceus": {
+      "artProfile": "forest-bird",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#798572",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves forestales"
+      },
+      "family": "Ptilonorhynchidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": {
+        "type": "oc3290",
+        "description": "Plumaje y estructuras ornamentales propios de macho y hembra; perfil gráfico sujeto a revisión renderizada."
+      },
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_ranoidea_caerulea": {
+      "artProfile": "tree-frog",
+      "kind": "amphibian",
+      "habitats": [
+        "bosque",
+        "selva",
+        "rio",
+        "humedal"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#8ca15e",
+      "taxonomy": {
+        "className": "Amphibia",
+        "subClass": "Ranas y sapos"
+      },
+      "family": "Pelodryadidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_rhipidura_fuliginosa": {
+      "artProfile": "forest-bird",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#798572",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves forestales"
+      },
+      "family": "Rhipiduridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_sarcophilus_harrisii": {
+      "artProfile": "tasmanian-devil",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#474b43",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Dasyuridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_seleucidis_melanoleucus": {
+      "artProfile": "bird-of-paradise",
+      "kind": "forestbird",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#465d45",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Aves del paraíso"
+      },
+      "family": "Paradisaeidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": {
+        "type": "oc3290",
+        "description": "Plumaje y estructuras ornamentales propios de macho y hembra; perfil gráfico sujeto a revisión renderizada."
+      },
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_setonix_brachyurus": {
+      "artProfile": "macropod",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "mediterraneo",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#9c8870",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_sphenodon_punctatus": {
+      "artProfile": "tuatara",
+      "kind": "lizard",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#999261",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Rincocéfalos"
+      },
+      "family": "Sphenodontidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_spilocuscus_maculatus": {
+      "artProfile": "possum",
+      "kind": "small",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#c4bfa3",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Phalangeridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_strigops_habroptilus": {
+      "artProfile": "kakapo",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "noche"
+      ],
+      "color": "#789459",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psitaciformes"
+      },
+      "family": "Strigopidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_tachyglossus_aculeatus": {
+      "artProfile": "echidna",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "desierto",
+        "mediterraneo"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "color": "#a18c68",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Monotremas"
+      },
+      "family": "Tachyglossidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_thylogale_billardierii": {
+      "artProfile": "macropod",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "mediterraneo",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#9c8870",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_tiliqua_scincoides": {
+      "artProfile": "blue-tongued-skink",
+      "kind": "lizard",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#999261",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Lagartos"
+      },
+      "family": "Scincidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_trichoglossus_haematodus": {
+      "artProfile": "parrot",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "mediterraneo"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#75945b",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psitaciformes"
+      },
+      "family": "Psittaculidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "pending-authority-review"
+    },
+    "oc_esp_trichoglossus_moluccanus": {
+      "artProfile": "parrot",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "mediterraneo"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#76955b",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psitaciformes"
+      },
+      "family": "Psittaculidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_trichosurus_vulpecula": {
+      "artProfile": "possum",
+      "kind": "small",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#a39a7d",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Phalangeridae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_varanus_giganteus": {
+      "artProfile": "perentie",
+      "kind": "lizard",
+      "habitats": [
+        "desierto",
+        "pradera"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#999261",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Lagartos"
+      },
+      "family": "Varanidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_varanus_gouldii": {
+      "artProfile": "sand-monitor",
+      "kind": "lizard",
+      "habitats": [
+        "desierto",
+        "pradera",
+        "bosque"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#999261",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Lagartos"
+      },
+      "family": "Varanidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_varanus_salvadorii": {
+      "artProfile": "arboreal-monitor",
+      "kind": "lizard",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#999261",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Lagartos"
+      },
+      "family": "Varanidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_vombatus_ursinus": {
+      "artProfile": "wombat",
+      "kind": "small",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#8c806b",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Vombatidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Albino"
+      ],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_wallabia_bicolor": {
+      "artProfile": "macropod",
+      "kind": "small",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "color": "#646456",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Marsupiales"
+      },
+      "family": "Macropodidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_zaglossus_bartoni": {
+      "artProfile": "long-beaked-echidna",
+      "kind": "small",
+      "habitats": [
+        "selva",
+        "bosque",
+        "montana"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "color": "#746958",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Monotremas"
+      },
+      "family": "Tachyglossidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    },
+    "oc_esp_zanda_latirostris": {
+      "artProfile": "cockatoo",
+      "kind": "forestbird",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "mediterraneo",
+        "sabana"
+      ],
+      "times": [
+        "dia"
+      ],
+      "color": "#484e46",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psitaciformes"
+      },
+      "family": "Cacatuidae",
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [],
+      "categories": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "scientificStatus": "source-concept-retained"
+    }
+  },
+  "regionHabitats": {
+    "oc_nueva_guinea": [
+      "selva",
+      "bosque",
+      "montana",
+      "rio",
+      "humedal",
+      "costa"
+    ],
+    "oc_costa_nordeste_australiana": [
+      "bosque",
+      "selva",
+      "rio",
+      "costa",
+      "humedal",
+      "pradera"
+    ],
+    "oc_norte_tropical_australiano": [
+      "sabana",
+      "bosque",
+      "rio",
+      "costa",
+      "humedal",
+      "pradera"
+    ],
+    "oc_desierto_australiano": [
+      "desierto",
+      "pradera"
+    ],
+    "oc_tasmania": [
+      "bosque",
+      "pradera",
+      "rio",
+      "humedal",
+      "costa"
+    ],
+    "oc_australia_occidental": [
+      "mediterraneo",
+      "bosque",
+      "pradera",
+      "desierto",
+      "rio",
+      "humedal",
+      "costa"
+    ],
+    "oc_australia_oriental": [
+      "bosque",
+      "pradera",
+      "rio",
+      "humedal",
+      "montana",
+      "costa"
+    ],
+    "oc_nueva_zelanda": [
+      "bosque",
+      "pradera",
+      "humedal",
+      "rio",
+      "costa"
+    ]
+  }
+}

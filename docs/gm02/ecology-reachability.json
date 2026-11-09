@@ -1,0 +1,919 @@
+[
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_casuarius_casuarius",
+    "time": "dia"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_cicinnurus_regius",
+    "time": "dia"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_cicinnurus_respublica",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_dacelo_leachii",
+    "time": "dia"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_lophorina_superba",
+    "time": "dia"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_paradisaea_apoda",
+    "time": "dia"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_seleucidis_melanoleucus",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_trichoglossus_haematodus",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_harpyopsis_novaeguineae",
+    "time": "dia"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_dendrolagus_goodfellowi",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_dendrolagus_matschiei",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_phalanger_orientalis",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_spilocuscus_maculatus",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_zaglossus_bartoni",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_morelia_viridis",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_varanus_salvadorii",
+    "time": "dia"
+  },
+  {
+    "habitat": "rio",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_crocodylus_novaeguineae",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_guinea",
+    "season": "primavera",
+    "speciesId": "oc_esp_oxyuranus_scutellatus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_casuarius_casuarius",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_dacelo_novaeguineae",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_trichoglossus_moluccanus",
+    "time": "dia"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_dactylopsila_trivirgata",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "selva",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_dendrolagus_lumholtzi",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_petrogale_mareeba",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "rio",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_ornithorhynchus_anatinus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_pteropus_conspicillatus",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_tachyglossus_aculeatus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_chlamydosaurus_kingii",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_intellagama_lesueurii",
+    "time": "dia"
+  },
+  {
+    "habitat": "rio",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_crocodylus_porosus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_costa_nordeste_australiana",
+    "season": "primavera",
+    "speciesId": "oc_esp_ranoidea_caerulea",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "costa",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_pelecanus_conspicillatus",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_calyptorhynchus_banksii",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_dacelo_novaeguineae",
+    "time": "dia"
+  },
+  {
+    "habitat": "pradera",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_dromaius_novaehollandiae",
+    "time": "dia"
+  },
+  {
+    "habitat": "sabana",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_canis_familiaris",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_notamacropus_agilis",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_osphranter_rufus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_tachyglossus_aculeatus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "rio",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_lates_calcarifer",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_chlamydosaurus_kingii",
+    "time": "dia"
+  },
+  {
+    "habitat": "rio",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_crocodylus_johnstoni",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "rio",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_crocodylus_porosus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_ranoidea_caerulea",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_norte_tropical_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_oxyuranus_scutellatus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "pradera",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_dromaius_novaehollandiae",
+    "time": "dia"
+  },
+  {
+    "habitat": "pradera",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_eolophus_roseicapilla",
+    "time": "dia"
+  },
+  {
+    "habitat": "pradera",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_melopsittacus_undulatus",
+    "time": "dia"
+  },
+  {
+    "habitat": "pradera",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_nymphicus_hollandicus",
+    "time": "dia"
+  },
+  {
+    "habitat": "pradera",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_aquila_audax",
+    "time": "dia"
+  },
+  {
+    "habitat": "pradera",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_canis_familiaris",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "desierto",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_dasycercus_cristicauda",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "desierto",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_macrotis_lagotis",
+    "time": "noche"
+  },
+  {
+    "habitat": "pradera",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_osphranter_rufus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "desierto",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_moloch_horridus",
+    "time": "dia"
+  },
+  {
+    "habitat": "desierto",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_pogona_vitticeps",
+    "time": "dia"
+  },
+  {
+    "habitat": "desierto",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_varanus_giganteus",
+    "time": "dia"
+  },
+  {
+    "habitat": "desierto",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_varanus_gouldii",
+    "time": "dia"
+  },
+  {
+    "habitat": "desierto",
+    "regionId": "oc_desierto_australiano",
+    "season": "primavera",
+    "speciesId": "oc_esp_oxyuranus_microlepidotus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "rio",
+    "regionId": "oc_tasmania",
+    "season": "primavera",
+    "speciesId": "oc_esp_cygnus_atratus",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_tasmania",
+    "season": "primavera",
+    "speciesId": "oc_esp_neophema_chrysogaster",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_tasmania",
+    "season": "primavera",
+    "speciesId": "oc_esp_aquila_audax",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_tasmania",
+    "season": "primavera",
+    "speciesId": "oc_esp_dasyurus_viverrinus",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_tasmania",
+    "season": "primavera",
+    "speciesId": "oc_esp_macropus_giganteus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_tasmania",
+    "season": "primavera",
+    "speciesId": "oc_esp_notamacropus_rufogriseus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_tasmania",
+    "season": "primavera",
+    "speciesId": "oc_esp_sarcophilus_harrisii",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_tasmania",
+    "season": "primavera",
+    "speciesId": "oc_esp_thylogale_billardierii",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_tasmania",
+    "season": "primavera",
+    "speciesId": "oc_esp_trichosurus_vulpecula",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_tasmania",
+    "season": "primavera",
+    "speciesId": "oc_esp_vombatus_ursinus",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "rio",
+    "regionId": "oc_tasmania",
+    "season": "primavera",
+    "speciesId": "oc_esp_ornithorhynchus_anatinus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_tasmania",
+    "season": "primavera",
+    "speciesId": "oc_esp_tachyglossus_aculeatus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "rio",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_cygnus_atratus",
+    "time": "dia"
+  },
+  {
+    "habitat": "costa",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_pelecanus_conspicillatus",
+    "time": "dia"
+  },
+  {
+    "habitat": "pradera",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_dromaius_novaehollandiae",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_eolophus_roseicapilla",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_gymnorhina_tibicen",
+    "time": "dia"
+  },
+  {
+    "habitat": "pradera",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_nymphicus_hollandicus",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_phylidonyris_novaehollandiae",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_zanda_latirostris",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_aquila_audax",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_macropus_fuliginosus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_myrmecobius_fasciatus",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_notamacropus_eugenii",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_setonix_brachyurus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_tachyglossus_aculeatus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "desierto",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_moloch_horridus",
+    "time": "dia"
+  },
+  {
+    "habitat": "desierto",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_varanus_gouldii",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_occidental",
+    "season": "primavera",
+    "speciesId": "oc_esp_acanthophis_antarcticus",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "rio",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_cygnus_atratus",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_cacatua_galerita",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_dacelo_novaeguineae",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_gymnorhina_tibicen",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_menura_novaehollandiae",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_ptilonorhynchus_violaceus",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_trichoglossus_moluccanus",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_ninox_strenua",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_macropus_giganteus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_notamacropus_rufogriseus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_petauroides_volans",
+    "time": "noche"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_petaurus_breviceps",
+    "time": "noche"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_trichosurus_vulpecula",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_vombatus_ursinus",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_wallabia_bicolor",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "rio",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_ornithorhynchus_anatinus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_phascolarctos_cinereus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_pteropus_poliocephalus",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_tachyglossus_aculeatus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_intellagama_lesueurii",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_tiliqua_scincoides",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_assa_darlingtoni",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "humedal",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_pseudophryne_corroboree",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_acanthophis_antarcticus",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_morelia_spilota",
+    "time": "atardecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_australia_oriental",
+    "season": "primavera",
+    "speciesId": "oc_esp_notechis_scutatus",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "costa",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_diomedea_epomophora",
+    "time": "dia"
+  },
+  {
+    "habitat": "costa",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_megadyptes_antipodes",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_apteryx_haastii",
+    "time": "noche"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_apteryx_mantelli",
+    "time": "noche"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_apteryx_owenii",
+    "time": "noche"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_callaeas_wilsoni",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_gallirallus_australis",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_hemiphaga_novaeseelandiae",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_nestor_meridionalis",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_nestor_notabilis",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_petroica_australis",
+    "time": "dia"
+  },
+  {
+    "habitat": "pradera",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_porphyrio_hochstetteri",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_rhipidura_fuliginosa",
+    "time": "dia"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_strigops_habroptilus",
+    "time": "noche"
+  },
+  {
+    "habitat": "costa",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_cephalorhynchus_hectori",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "costa",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_arctocephalus_forsteri",
+    "time": "amanecer"
+  },
+  {
+    "habitat": "bosque",
+    "regionId": "oc_nueva_zelanda",
+    "season": "primavera",
+    "speciesId": "oc_esp_sphenodon_punctatus",
+    "time": "atardecer"
+  }
+]

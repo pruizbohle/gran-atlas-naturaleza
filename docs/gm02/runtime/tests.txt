@@ -1,0 +1,15 @@
+✔ isolated actual engine installs exactly 97 additional identities, eight regions and 131 presences (206.299317ms)
+✔ all 131 candidate presences are reachable through actual manual and automatic eligibility in every configured season (87.072693ms)
+✔ existing research chain gates candidate travel; thresholds are gradual and prestige is never spent (62.873388ms)
+✔ manual and automatic encounters in all eight regions record real sightings, currency, knowledge and journal progress (108.344026ms)
+✔ all 97 candidate identities retain the five actual research stages, publication and normal collection flow (191.552207ms)
+✔ candidate save/load and Android export/import preserve old data and newly researched destinations in memory (265.66856ms)
+✔ runtime generation is deterministic, explicitly unapproved and absent from public entry/cache (49.374374ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1081.964097
