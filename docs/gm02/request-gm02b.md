@@ -2,10 +2,10 @@
 
 Continúa el desarrollo de **El Gran Atlas** desde el trabajo realizado en GM-02A.
 
-**Repositorio:** `pruizbohle/gran-atlas-naturaleza`  
-**Rama de trabajo:** `gm02/oceania`  
-**Commit de referencia:** `9bf3ebf`  
-**Versión jugable actual:** 3.28.0  
+**Repositorio:** `pruizbohle/gran-atlas-naturaleza`
+**Rama de trabajo:** `gm02/oceania`
+**Commit de referencia:** `9bf3ebf`
+**Versión jugable actual:** 3.28.0
 **Versión objetivo:** 3.29.0 — Oceanía
 
 ## 1. Instrucción principal
