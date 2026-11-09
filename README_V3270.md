@@ -65,6 +65,34 @@ También hay regresiones pequeñas: Artefactos en frío **35,35 → 42,80 ms**; 
 
 El código queda preparado para Pages y Capacitor **3.27.0 / 32700**, conservando `com.elgranatlas.naturaleza.beta314`, los plugins de respaldo y el actualizador seguro. La nueva entrada web es [actualizar-v3270.html](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3270.html). Las entradas de recuperación anteriores permanecen disponibles.
 
-**Estado previo a publicación:** validación local completada; todavía no se declara éxito de los workflows ni disponibilidad de un APK 3.27.0. El registro final de publicación se añadirá después de comprobar ambos workflows y descargar/verificar el APK real.
+**Publicación verificada el 9 de noviembre de 2026:**
 
-Pendiente no bloqueante: prueba de instalación, ergonomía y rendimiento en un Android físico. La firma debug debe compararse con el APK anterior; una compilación correcta no garantiza actualización directa si la firma cambia. Mantener un respaldo antes de cualquier cambio de instalación.
+| Entrega | Resultado real |
+| --- | --- |
+| Código | [`71d4f4eb96b27264afa0108805074d9b0730ad45`](https://github.com/pruizbohle/gran-atlas-naturaleza/commit/71d4f4eb96b27264afa0108805074d9b0730ad45), publicado en `main` y etiquetado `v3.27.0` |
+| Deploy El Gran Atlas | [SUCCESS · 42622174643](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42622174643), enlace Pages confirmado en el resultado del workflow |
+| Android APK de prueba | [SUCCESS · 42622177827](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42622177827), compilación y publicación beta terminadas |
+| Juego | [El Gran Atlas](https://pruizbohle.github.io/gran-atlas-naturaleza/) |
+| Actualizar conservando la partida web | [Entrada segura 3.27.0](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3270.html) |
+| Laboratorio | [Museo 3.26.0 / 3.27.0](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-museo-v3270.html) |
+| APK descargado y verificado | [El-Gran-Atlas-Beta-3.27.0-debug.apk](https://github.com/pruizbohle/gran-atlas-naturaleza/releases/download/v3.27.0/El-Gran-Atlas-Beta-3.27.0-debug.apk) |
+
+El APK real mide **6.253.032 bytes**. Manifiesto **3.27.0 / 32700**, ID histórico conservado, **107 archivos web idénticos byte a byte a producción** y ambos plugins nativos de importación/exportación presentes. SHA-256:
+
+```text
+a1e6ba3aa513e88b6175ff242a5b941187f5dd412b5c6214f0b6c4837bc367db
+```
+
+**La firma debug cambió frente al APK 3.26.0 verificado.** La huella del certificado nuevo es `fdf68e11a705fb1f309a4f235ccb1405e1d3c9b0e4b64335f14b6f759f8fe0d9`; la anterior era `deeea615979458ebc3f8bfc3e2ff178c1dddc65a040ec9918d4cfdfe27978adb`. Android no aceptará este archivo como sustitución directa de esa instalación firmada con la clave anterior. Exportar y comprobar el respaldo desde la aplicación antes de cambiar de instalación; no desinstalar una partida para resolver la firma sin respaldo. La compatibilidad del archivo de partida y la continuidad de firma son comprobaciones distintas.
+
+[Manifiesto, recursos, plugins y firma del APK](docs/museum-v3270/android-report.json) · [Registro real de publicación](docs/museum-v3270/release-report.json).
+
+El acceso HTTP directo a `github.io` desde este entorno está bloqueado por el proxy (CONNECT 403). El despliegue se verificó mediante el workflow Pages finalizado y su URL de publicación; la presentación y la actualización offline se probaron con los recursos reales en Chromium local. No se presenta esa comprobación como una visita al sitio público desde este entorno.
+
+Pendiente no bloqueante: instalación, ergonomía y rendimiento en un Android físico. El aumento pequeño de memoria retenida y las dos regresiones de tiempo registradas quedan documentados para futuras mediciones; no se ocultan ni requieren modificar mecánicas.
+
+## Archivos entregados
+
+Cambios de producción concentrados en `museum-ui-v3270.js`, `museum-v3270.css` y los bloques aditivos de `app.js`; laboratorio con el renderer anterior congelado, prueba específica, scripts de medición/verificación, recursos offline, versión, workflows y documentación. Los cambios a pruebas antiguas solo actualizan metadatos de la versión vigente y la normalización explícita de los bloques aditivos. No cambian sus fixtures históricos ni científicos.
+
+[Lista completa de archivos](docs/museum-v3270/files-changed.txt) · [Contrato de alcance y huellas](docs/museum-v3270/scope.json). El commit documental posterior incorpora únicamente resultados de publicación y no modifica los recursos desplegados ni vuelve a generar el APK.

@@ -1,5 +1,19 @@
 {
-  "baseline": "3.23.1 / 1cda484",
-  "onlyGameplaySourceDifference": "Additive Bestiary pagination and temporary visual page",
-  "approvedArtCatalogGeographyAndStylesUnchanged": true
+  "baseline": "3.26.0 / a12d7edc8901899bb4986da048d9fb5e71c22b56",
+  "comparedCodeCommit": "71d4f4eb96b27264afa0108805074d9b0730ad45",
+  "baselineAppSha256": "b10346f80d120657428d41891aa7efb7f638bdee86053240064465322d903f15",
+  "normalized3270AppSha256": "b10346f80d120657428d41891aa7efb7f638bdee86053240064465322d903f15",
+  "normalization": "Remove only additive M-3270 presentation/action/binding/progress blocks",
+  "entireHistoricalAppExact": true,
+  "gameplaySaveArtCatalogGeographyAndOtherModulePresentationUnchanged": true,
+  "legacySuiteAlsoPassed": {
+    "baseline": "3.23.1 / 1cda484",
+    "normalizationChain": [
+      "M-3270 Museum presentation",
+      "B-3260 Bestiary presentation",
+      "J-3250 Journal presentation",
+      "AM-06 pagination"
+    ],
+    "historicalFixturesChanged": false
+  }
 }

@@ -23,6 +23,7 @@ docs/museum-v3270/after-samples-320.png
 docs/museum-v3270/after-samples-360.png
 docs/museum-v3270/after-samples-390.png
 docs/museum-v3270/after-samples-412.png
+docs/museum-v3270/android-report.json
 docs/museum-v3270/android-signing-baseline.json
 docs/museum-v3270/architecture.md
 docs/museum-v3270/before-artifacts-390.png
@@ -78,6 +79,7 @@ docs/museum-v3270/offline-simulation.json
 docs/museum-v3270/performance-report.json
 docs/museum-v3270/performance.md
 docs/museum-v3270/pwa-update-report.json
+docs/museum-v3270/release-report.json
 docs/museum-v3270/reproduce.md
 docs/museum-v3270/resources-report.json
 docs/museum-v3270/save-africa.json

@@ -1,0 +1,36 @@
+{
+  "version": "3.27.0",
+  "codeCommit": "71d4f4eb96b27264afa0108805074d9b0730ad45",
+  "tag": "v3.27.0",
+  "verifiedAtUTC": "2026-11-09T13:08:05.716167+00:00",
+  "workflows": [
+    {
+      "name": "Android APK de prueba",
+      "id": "42622177827",
+      "url": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42622177827",
+      "state": {
+        "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+        "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+      },
+      "commitURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/commit/71d4f4eb96b27264afa0108805074d9b0730ad45"
+    },
+    {
+      "name": "Deploy El Gran Atlas",
+      "id": "42622174643",
+      "url": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42622174643",
+      "state": {
+        "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+        "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+      },
+      "commitURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/commit/71d4f4eb96b27264afa0108805074d9b0730ad45"
+    }
+  ],
+  "bothWorkflowsSuccessful": true,
+  "gameURL": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "safeUpdateURL": "https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3270.html",
+  "laboratoryURL": "https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-museo-v3270.html",
+  "apkURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/releases/download/v3.27.0/El-Gran-Atlas-Beta-3.27.0-debug.apk",
+  "directPagesHTTPCheck": "Blocked by environment network proxy: CONNECT HTTP 403. Deployment verified through the actual successful Pages workflow; local production rendering/offline verified separately.",
+  "apkDownloadedAndVerified": true,
+  "physicalAndroidTested": false
+}
