@@ -1,0 +1,84 @@
+{
+  "version": "3.26.0",
+  "status": "published; final workflows and downloaded APK verified",
+  "publishedCodeCommit": "a12d7edc8901899bb4986da048d9fb5e71c22b56",
+  "initialFeatureCommit": "e9a1ece9aa6c2f56635a20e2af8b409177160c02",
+  "tag": "v3.26.0",
+  "mainAndTagMatchedAtCodePublication": true,
+  "verifiedAtUTC": "2026-11-09T02:42:19.976158+00:00",
+  "actions": [
+    {
+      "name": "Deploy El Gran Atlas",
+      "id": "42551964730",
+      "url": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42551964730",
+      "state": {
+        "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+        "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+      },
+      "commitURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/commit/a12d7edc8901899bb4986da048d9fb5e71c22b56"
+    },
+    {
+      "name": "Android APK de prueba",
+      "id": "42551964650",
+      "url": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42551964650",
+      "state": {
+        "status": "WORKFLOW_RUN_STATUS_COMPLETED",
+        "conclusion": "WORKFLOW_RUN_CONCLUSION_SUCCESS"
+      },
+      "commitURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/commit/a12d7edc8901899bb4986da048d9fb5e71c22b56"
+    }
+  ],
+  "pages": {
+    "workflowURL": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42551964730",
+    "deploymentURL": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+    "deploymentURLPresentInWorkflowPage": true,
+    "directHTTPCheck": {
+      "verified": false,
+      "limitation": "github.io is blocked by the managed environment proxy (previously observed tunnel HTTP 403, unchanged network policy). Deployment is verified through GitHub Actions and its recorded deployment URL."
+    }
+  },
+  "links": {
+    "game": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+    "laboratory": "https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-bestiario-v3260.html",
+    "safeUpdate": "https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3260b.html",
+    "apk": "https://github.com/pruizbohle/gran-atlas-naturaleza/releases/download/v3.26.0/El-Gran-Atlas-Beta-3.26.0-debug.apk?verified=a12d7ed"
+  },
+  "apkVerification": {
+    "version": "3.26.0",
+    "manifest": {
+      "versionCode": 32600,
+      "versionName": "3.26.0",
+      "compileSdkVersion": 35,
+      "compileSdkVersionCodename": "15",
+      "package": "com.elgranatlas.naturaleza.beta314",
+      "platformBuildVersionCode": 35,
+      "platformBuildVersionName": 15
+    },
+    "apkBytes": 6056292,
+    "sha256": "bd7933993acac660a8fa640d7b311817dcd4174d7530351b828c48ae9731c482",
+    "allWebFilesMatchProduction": true,
+    "webFilesVerified": 101,
+    "nativeImportExportPluginsPresent": true,
+    "physicalDeviceInstallationTested": false,
+    "signing": "Debug build; compatibility with an earlier installation also requires the same signing key.",
+    "publicSignerCertificateSha256": [
+      "deeea615979458ebc3f8bfc3e2ff178c1dddc65a040ec9918d4cfdfe27978adb"
+    ],
+    "sameSignerAs3250": false,
+    "previousApkSha256": "fffc53aa23fc2c2b96a5b7f625190bb57dea222432484721f57bc52cb18cfb0d"
+  },
+  "nodeTests": {
+    "passed": 327,
+    "failed": 0,
+    "skipped": 0
+  },
+  "mobileGroupSizeCombinations": 16,
+  "isolatedLaboratoryStates": 12,
+  "physicalAndroidTested": false,
+  "originalGameplayPreserved": true,
+  "saveKey": "gran_atlas_v05",
+  "newPermanentFields": 0,
+  "pwaCache": "gran-atlas-v3.26.0-bestiary-2",
+  "sameVersionWorkerHandoffVerified": true,
+  "documentationFollowup": "Verification documentation only, committed with [skip ci]; www and the verified APK remain unchanged. The release tag points to the final code commit."
+}

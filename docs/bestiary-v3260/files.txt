@@ -3,6 +3,7 @@
 README.md
 README_V3260.md
 capacitor.config.json
+docs/bestiary-v3260/android-report.json
 docs/bestiary-v3260/android-signing-baseline.json
 docs/bestiary-v3260/atlas-blocked-region.png
 docs/bestiary-v3260/before-320.png
@@ -44,6 +45,7 @@ docs/bestiary-v3260/observed-variants.png
 docs/bestiary-v3260/partially-identified.png
 docs/bestiary-v3260/performance-exploratory.json
 docs/bestiary-v3260/performance-report.json
+docs/bestiary-v3260/publication.json
 docs/bestiary-v3260/recorded-dimorphism.png
 docs/bestiary-v3260/tests.txt
 docs/bestiary-v3260/undiscovered.png
