@@ -1,0 +1,163 @@
+{
+  "version": "3.27.0",
+  "device": "Chromium mobile/touch emulation, not physical Android",
+  "screens": [
+    {
+      "width": 320,
+      "height": 640,
+      "room": "exhibitions",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "room": "samples",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "room": "fossils",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "room": "relicts",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 320,
+      "height": 640,
+      "room": "artifacts",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "room": "exhibitions",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "room": "samples",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "room": "fossils",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "room": "relicts",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "room": "artifacts",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "room": "exhibitions",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "room": "samples",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "room": "fossils",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "room": "relicts",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "room": "artifacts",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "room": "exhibitions",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "room": "samples",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "room": "fossils",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "room": "relicts",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "room": "artifacts",
+      "horizontalOverflow": false,
+      "firstControlVisible": true
+    }
+  ],
+  "all710SamplesAccessible": true,
+  "pages": 23,
+  "pageSize": 32,
+  "fiveRooms": true,
+  "modalFocusRestoreTrapEscape": true,
+  "backgroundScrollLocked": true,
+  "onlyOwnedScientificModals": true,
+  "filtersPreserved": true,
+  "exhibitRemoveOriginalCosts": true,
+  "lazyWorkshopsAndDelegatedCrafting": true,
+  "timerSyncNoAutoClaim": true,
+  "scientificDisplayKeepsBonusesAndCapacity": true,
+  "historicalSaveReload": true,
+  "noLabOriginStorageReadsOrWrites": true,
+  "isolatedLab12States": true,
+  "offlineMuseumModalWorkshopAndLab": true,
+  "errors": []
+}

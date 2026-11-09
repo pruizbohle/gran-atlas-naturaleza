@@ -1,0 +1,12 @@
+{
+  "version": "3.27.0",
+  "cache": "gran-atlas-v3.27.0-museum-1",
+  "precacheEntries": 106,
+  "missingAssets": [],
+  "uncachedWebResourcesExcludingWorkerAndRelease": [],
+  "allHistoricalUpdateEntrypointsRetained": true,
+  "explicitBackupAndAcceptanceRetained": true,
+  "capacitorAppId": "com.elgranatlas.naturaleza.beta314",
+  "androidVersionName": "3.27.0",
+  "androidVersionCode": 32700
+}

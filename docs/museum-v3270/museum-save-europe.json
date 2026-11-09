@@ -1,0 +1,8 @@
+{
+  "scenario": "europe",
+  "sourceVersion": "3.19.9",
+  "rawSha256": "7d52779ee107a3c26355a601c6be3b90f09d45dff2397b25757012a492d3c370",
+  "allFiveProductionRoomsReadOnly": true,
+  "nativeImportExportPreserved": true,
+  "noSaveFormatChange": true
+}

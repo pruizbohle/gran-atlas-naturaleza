@@ -1,0 +1,12 @@
+{
+  "scenario": "europe",
+  "sourceVersion": "3.19.9",
+  "sourceRef": "b08b892",
+  "sourceSha256": "218bc041b8a1c9ef2e1b9df0844ea837fcb16967137ab3c087f05f972836e46d",
+  "rawSha256": "7d52779ee107a3c26355a601c6be3b90f09d45dff2397b25757012a492d3c370",
+  "startup": true,
+  "nativeImport": true,
+  "nativeExport": true,
+  "allCriticalFieldsPreserved": true,
+  "formatChanged": false
+}

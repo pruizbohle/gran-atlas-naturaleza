@@ -1,0 +1,8 @@
+{
+  "scenario": "variants-monographs",
+  "sourceVersion": "3.22.1",
+  "rawSha256": "c0e4e189a9a46347f3bd53003d1fe361d4717c62d3852c1af33329a3bde469ca",
+  "allFiveProductionRoomsReadOnly": true,
+  "nativeImportExportPreserved": true,
+  "noSaveFormatChange": true
+}

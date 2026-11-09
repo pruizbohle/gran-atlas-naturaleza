@@ -1,0 +1,15 @@
+{
+  "version": "3.27.0",
+  "command": "ATLAS_EVIDENCE_DIR=docs/museum-v3270 node --test tests/*.test.cjs",
+  "tests": 352,
+  "passed": 352,
+  "failed": 0,
+  "skipped": 0,
+  "museumSpecificTests": 25,
+  "historicalFixtureValuesChanged": false,
+  "catalogSpecies": 710,
+  "playableRegions": 79,
+  "rooms": 5,
+  "source3260Sha256": "b10346f80d120657428d41891aa7efb7f638bdee86053240064465322d903f15",
+  "originalGameSourceExactAfterRemovingAdditiveMuseumBlocks": true
+}

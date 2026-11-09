@@ -2844,6 +2844,9 @@ function filterJournalRail(){
   if(counter)counter.textContent=count===0?'Sin resultados':count+' especies';
 }
 function renderPanel(){
+  // M-3270 BEGIN close-on-render
+  globalThis.AtlasMuseumUI?.close({restore:false});
+  // M-3270 END close-on-render
   // B-3260 BEGIN close-on-navigation
   globalThis.AtlasBestiaryUI?.close({restore:false});
   // B-3260 END close-on-navigation
@@ -3965,6 +3968,9 @@ function exhibitAnimal(id){
  pushLog('🏛️ Exposición inaugurada: '+SPECIES[id].name);render();
 }
 function renderMuseum(){
+ // M-3270 BEGIN render
+ if(globalThis.AtlasMuseumUI)return globalThis.AtlasMuseumUI.render(museumViewModel3270());
+ // M-3270 END render
  const exhibits=state.museum.exhibits||{};
  const exhibitIds=Object.keys(exhibits).filter(id=>exhibits[id]&&SPECIES[id]).sort(museumValueSort);
  const count=exhibitIds.length;
@@ -3994,6 +4000,136 @@ function renderMuseum(){
    <div class="req"><strong>Notas</strong><div class="small">Los animales generan ingresos directos; las colecciones fósiles y de relictos ofrecen bonificaciones cuando se completan, sin ocupar vitrinas de animales. Administra todo desde las cinco pestañas.</div></div>
  </section></div>`;
 }
+// M-3270 BEGIN presentation
+const museumUI3270={filter:'all',sort:'income-desc',samplePage:0,galleryPage:0,folds:{},scrolls:{},navLeft:0,lastRoom:null,restore:null,focusRoom:false,modal:null};
+const museumTokens3270=new Map(),museumTokenKeys3270=new Map();
+function museumToken3270(kind,id){
+ const key=kind+':'+id;if(museumTokenKeys3270.has(key))return museumTokenKeys3270.get(key);
+ const token=kind+':'+museumTokens3270.size;museumTokens3270.set(token,{kind,id});museumTokenKeys3270.set(key,token);return token;
+}
+function museumResolve3270(token){
+ if(typeof token!=='string')return null;
+ const parts=token.split(':'),number=Number(parts[1]);
+ if(parts.length===2&&Number.isInteger(number)&&number>=0){
+  if(parts[0]==='dig')return state.museum.excavations.find(j=>j.id===number)?{kind:'dig',id:number}:null;
+  if(parts[0]==='survey')return state.museum.relictSurveys.find(j=>j.id===number)?{kind:'survey',id:number}:null;
+ }
+ return museumTokens3270.get(token)||null;
+}
+function museumRoom3270(){return ['exhibitions','samples','fossils','relicts','artifacts'].includes(state.museumView)?state.museumView:'exhibitions';}
+function museumMaterials3270(requirements){return Object.entries(requirements||{}).map(([id,need])=>({name:ITEMS[id]?.name||id,have:state.inventory[id]||0,need,met:(state.inventory[id]||0)>=need,art:renderItemArt(id)}));}
+function museumCanExhibit3270(id){return !!(SPECIES[id]&&stage(id)===5&&state.published[id]&&!state.museum.exhibits[id]&&Object.keys(state.museum.exhibits).length<museumCapacity()&&state.money>=exhibitPrice(id));}
+function museumAnimal3270(id){
+ const sp=SPECIES[id],owned=!!state.museum.exhibits[id],token=museumToken3270('animal',id),available=museumCanExhibit3270(id),full=Object.keys(state.museum.exhibits).length>=museumCapacity();
+ return {token,kind:'Muestra animal',name:visibleName(id),latin:visibleLatin(id),art:getSpriteMarkup(id),owned,open:true,status:owned?'Actualmente expuesta':available?'Disponible para exponer':full?'Sin capacidad':'Recursos insuficientes',detail:`${sp.rare} · ${stage(id)}/5 · ${state.published[id]?'Monografía publicada':'Registro histórico'} · £${exhibitPrice(id)} · £${exhibitIncome(id).toFixed(2)}/s base`,description:'Las bonificaciones se aplican al ingreso total del Museo. Retirar una muestra no reembolsa su costo.',actions:owned?[{action:'remove-exhibit',token,label:'Retirar muestra',alt:true}]:[{action:'exhibit',token,label:'Exponer · £'+exhibitPrice(id),enabled:available}]};
+}
+function museumRecipe3270(p){
+ const owned=p.unique?!!state.museum.collections[p.id]:(state.inventory[p.id]||0)>0,displayed=!!(p.unique&&owned&&museumIsDisplayed('collection',p.id)),token=museumToken3270('recipe',p.id),ready=museumAssemblyReady(p);
+ const req=museumMaterials3270(p.requires);
+ return {token,kind:p.unique?'Reconstrucción paleontológica':'Componente fósil',name:p.name,art:p.unique?museumCardArt('',p.id):renderItemArt(p.id),owned,open:!!(p.unique&&owned),silhouette:!!(p.unique&&!owned),status:p.unique?(owned?displayed?'En exposición':'Reconstruido':ready?'Materiales reunidos':'Pendiente'):'Existencias: '+(state.inventory[p.id]||0),detail:p.unique?'Pieza paleontológica · sin renta individual':'Fabricación en lotes · receta original',materials:owned&&p.unique?[]:req,referenceMaterials:req,description:'La exposición científica es independiente de las vitrinas animales. Sus conjuntos conservan las bonificaciones originales.',actions:p.unique?(owned?[{action:'museum-display',token,label:displayed?'Retirar vitrina':'Exponer',alt:true}]:[{action:'craft-museum',token,qty:1,label:'Montar pieza',enabled:ready}]):[1,5,10].map(qty=>({action:'craft-museum',token,qty,label:'×'+qty,enabled:museumAssemblyReady(p,qty),alt:true}))};
+}
+function museumCollection3270(p){
+ const owned=!!state.museum.collections[p.id],displayed=owned&&museumIsDisplayed('collection',p.id),ready=museumCollectionReady(p),token=museumToken3270('collection',p.id),req=museumMaterials3270(p.requires);
+ return {token,kind:p.tab==='artifacts'?'Artefacto histórico':'Registro paleontológico',name:p.name,owned,open:owned,art:museumCardArt('',p.id),silhouette:!owned,status:owned?displayed?'En exposición':'Catalogado':ready?'Disponible para catalogar':'Pendiente',description:p.description,materials:owned?[]:req,referenceMaterials:req,knowledge:owned?null:{have:state.knowledge,need:p.knowledge,met:state.knowledge>=p.knowledge},detail:owned?'Pieza conservada · exposición independiente':p.description,actions:owned?[{action:'museum-display',token,label:displayed?'Retirar vitrina':'Exponer',alt:true}]:[{action:'catalog-museum',token,label:'Catalogar',enabled:ready}]};
+}
+function museumRelictName3270(r){return museumRelictOwned(r.id)||relictLeadCount(r.id)>0?r.name:'Relicto desconocido';}
+function museumRelict3270(r){
+ const owned=museumRelictOwned(r.id),leads=owned?3:relictLeadCount(r.id),displayed=owned&&museumIsDisplayed('relict',r.id),known=owned||leads>0,token=museumToken3270('relict',r.id),survey=relictSurveySpec(r.id),region=REGIONS.find(z=>z.id===r.region),ready=canCatalogRelict(r.id);
+ return {token,kind:'Relicto del gabinete',name:museumRelictName3270(r),latin:owned?r.latin:'',owned,open:owned,art:owned?museumCardArt('',r.id):'',status:owned?displayed?'En exposición':'Catalogado':ready?'Disponible para catalogar':leads?'Indicios encontrados':'Desconocido',leads,description:known?r.desc:'Expediente pendiente de identificación.',detail:(region?.name||'Región no registrada')+(owned?' · registro conservado':leads>=3?' · indicios completos':' · prospección documental'),materials:!owned&&leads>=3?museumMaterials3270({old_ink:1,parchment_scrap:2}):[],knowledge:!owned&&leads>=3?{have:state.knowledge,need:140,met:state.knowledge>=140}:null,actions:owned?[{action:'museum-display',token,label:displayed?'Retirar vitrina':'Exponer',alt:true}]:leads>=3?[{action:'catalog-relict',token,label:'Catalogar',enabled:ready}]:[{action:'start-relict-survey',token,label:survey?'Investigar · £'+survey.money+' / '+survey.knowledge+' K':'Archivo no disponible',enabled:canStartRelictSurvey(r.id),alt:true}]};
+}
+function museumSampleQuery3270(){
+ let ids=Object.keys(SPECIES).filter(id=>(stage(id)===5&&state.published[id])||state.museum.exhibits[id]);const eligible=ids.length;
+ const f=museumUI3270.filter;
+ if(f==='available')ids=ids.filter(museumCanExhibit3270);else if(f==='exhibited')ids=ids.filter(id=>!!state.museum.exhibits[id]);else if(f!=='all')ids=ids.filter(id=>stage(id)>=2&&bestiaryTypeBucket(id)===f);
+ const alphabet=(a,b)=>visibleName(a).localeCompare(visibleName(b),'es');
+ ids.sort(museumUI3270.sort==='alpha'?alphabet:museumUI3270.sort==='income-asc'?(a,b)=>exhibitIncome(a)-exhibitIncome(b)||alphabet(a,b):(a,b)=>exhibitIncome(b)-exhibitIncome(a)||alphabet(a,b));
+ const pages=Math.max(1,Math.ceil(ids.length/32));museumUI3270.samplePage=Math.max(0,Math.min(museumUI3270.samplePage,pages-1));
+ return {ids,eligible,total:ids.length,page:museumUI3270.samplePage,pages,filter:f,sort:museumUI3270.sort,emptyMessage:eligible?'Sin coincidencias. Cambia el filtro; puede faltar capacidad o recursos.':'Completa un estudio 5/5 y publica la monografía para habilitar una muestra.'};
+}
+function museumSamples3270(){const q=museumSampleQuery3270();return {...q,pieces:q.ids.slice(q.page*32,(q.page+1)*32).map(museumAnimal3270)};}
+function museumTimer3270(job,spec,type,now){
+ const end=Number(job.endAt),valid=Number.isFinite(end),explicit=Number(job.startAt??job.startedAt),seconds=Number(spec?.seconds),hasStart=Number.isFinite(explicit)&&explicit<end&&explicit>0;
+ const duration=hasStart?end-explicit:Number.isFinite(seconds)&&seconds>0?seconds*1000:null;
+ const progress=valid&&duration?Math.max(0,Math.min(1,(now-(hasStart?explicit:end-duration))/duration)):null;
+ return {id:job.id,type,ready:valid&&now>=end,progress,remaining:valid?formatMuseumTimeRemaining(end,now):'Fecha de término no válida',progressNote:hasStart?'Según inicio y término registrados':duration?'Según duración definida para este yacimiento':'Duración no registrada'};
+}
+function museumTimerModels3270(now=Date.now()){
+ return [...state.museum.excavations.map(j=>museumTimer3270(j,MUSEUM_DIG_SITES.find(s=>s.id===j.site),'dig',now)),...state.museum.relictSurveys.map(j=>museumTimer3270(j,relictSurveySpec(j.relict),'survey',now))];
+}
+function museumJobs3270(type,now=Date.now()){
+ return (type==='dig'?state.museum.excavations:state.museum.relictSurveys).flatMap(job=>{
+  const p=type==='dig'?MUSEUM_DIG_SITES.find(s=>s.id===job.site):MUSEUM_RELICTS.find(r=>r.id===job.relict);if(!p)return [];
+  const spec=type==='dig'?p:relictSurveySpec(p.id),t=museumTimer3270(job,spec,type,now),region=REGIONS.find(r=>r.id===p.region);
+  return [{...t,kind:type==='dig'?'Excavación':'Prospección documental',name:type==='dig'?p.name:museumRelictName3270(p),region:region?.name||'Región no registrada',finished:type==='dig'?'Excavación finalizada — Recoger hallazgos':'Prospección finalizada — Recoger indicios',reward:type==='dig'?`Fragmentos ${p.fragments[0]}–${p.fragments[1]}${state.upgrades.excavationTier?' +1 por investigación':''}; posibles dientes, huellas, garras y cráneos.`:`Hasta ${state.upgrades.relictSurveyTier?2:1} indicio(s), con límite de 3; posible muestra de huellas.`,actions:[{action:type==='dig'?'collect-excavation':'collect-relict-survey',token:type+':'+job.id,label:t.ready?'Recoger hallazgos':'En curso',enabled:t.ready}]}];
+ });
+}
+function museumDate3270(at){return Number.isFinite(Number(at))&&Number(at)>0?new Date(Number(at)).toLocaleString('es-CL',{timeZone:'America/Santiago',dateStyle:'short',timeStyle:'short'}):'Fecha no registrada';}
+function museumSetModels3270(sets,relicts=false){return sets.map(set=>{const done=set.requires.filter(id=>relicts?museumRelictOwned(id):!!state.museum.collections[id]).length;return {name:set.name,done,total:set.requires.length,complete:done===set.requires.length,label:'+'+(set.bonus*100).toFixed(1)+' % de ingresos '+(done===set.requires.length?'activo':'al completar')};});}
+function museumViewModel3270(loadFold=null){
+ const load=key=>loadFold?loadFold===key:!!museumUI3270.folds[key];
+ const room=museumRoom3270(),exhibits=state.museum.exhibits||{},ids=Object.keys(exhibits).filter(id=>exhibits[id]&&SPECIES[id]).sort(museumValueSort),used=Object.keys(exhibits).length,capacity=museumCapacity(),next=MUSEUM_WINGS[state.museum.wing],extra=museumOtherExhibits();
+ let view;
+ if(room==='samples')view=museumSamples3270();
+ else if(room==='exhibitions'){
+  const pages=Math.max(1,Math.ceil(extra.length/12));museumUI3270.galleryPage=Math.max(0,Math.min(museumUI3270.galleryPage,pages-1));
+  const pieces=extra.slice(museumUI3270.galleryPage*12,(museumUI3270.galleryPage+1)*12).map(p=>{const recipe=MUSEUM_FOSSIL_RECIPES.find(r=>r.unique&&r.id===p.id),collection=MUSEUM_COLLECTIONS.find(r=>r.id===p.id);return p.kind==='Relicto'?museumRelict3270(MUSEUM_RELICTS.find(r=>r.id===p.id)):recipe?museumRecipe3270(recipe):museumCollection3270(collection);});
+  view={animals:ids.map(museumAnimal3270),emptySlots:Math.max(0,capacity-used),expand:next?{action:'expand-museum',label:'Ampliar · £'+next.cost+' / '+next.prestige+' prestigio',enabled:state.money>=next.cost&&state.prestige>=next.prestige}:null,extra:{page:museumUI3270.galleryPage,pages,total:extra.length,pieces}};
+ }else if(room==='fossils'){
+  const sets=museumSetModels3270(MUSEUM_FOSSIL_SETS);
+  view={folds:museumUI3270.folds,jobs:museumJobs3270('dig'),activeJobs:state.museum.excavations.length,maxJobs:maxExcavations(),sites:MUSEUM_DIG_SITES.map(p=>({name:p.name,region:REGIONS.find(r=>r.id===p.region)?.name||'Región no registrada',minutes:p.seconds/60,money:p.money,knowledge:p.knowledge,reward:`Fragmentos ${p.fragments[0]}–${p.fragments[1]}; opción de dientes, huellas, garras y cráneos.`,actions:[{action:'start-excavation',token:museumToken3270('site',p.id),label:canStartExcavation(p.id)?'Iniciar excavación':'Requisitos pendientes',enabled:canStartExcavation(p.id)}]})),mountCount:museumFossilMountCount(),mounts:loadFold?[]:MUSEUM_FOSSIL_RECIPES.filter(p=>p.unique).map(museumRecipe3270),components:load('components')?MUSEUM_FOSSIL_RECIPES.filter(p=>!p.unique).map(museumRecipe3270):[],records:load('fossil-records')?MUSEUM_COLLECTIONS.filter(p=>p.tab==='fossils').map(museumCollection3270):[],curation:{points:Math.min(20,Math.max(0,Number(state.museum.curationPoints)||0)),bonus:Math.round(museumCurationBonus()*100),active:sets.filter(s=>s.complete),pending:sets.filter(s=>!s.complete),projects:!load('curation')?[]:MUSEUM_CURATORIAL_PROJECTS.map(p=>({name:p.name,materials:museumMaterials3270(p.requires),reward:p.knowledge,points:p.points,actions:[{action:'curate-museum',token:museumToken3270('project',p.id),label:'Investigar conservación',enabled:canCurateMuseum(p.id)}]}))},completedJobs:state.museum.excavationsCompleted||0,history:[...state.museum.excavationHistory].reverse().map(entry=>({name:MUSEUM_DIG_SITES.find(s=>s.id===entry.site)?.name||'Yacimiento histórico',date:museumDate3270(entry.at),detail:Object.entries(entry.rewards||{}).filter(([id,n])=>ITEMS[id]&&n>0).map(([id,n])=>ITEMS[id].name+' ×'+n).join(' · ')||'Sin recompensas registradas'}))};
+ }else if(room==='relicts'){
+  const sets=museumSetModels3270(MUSEUM_RELICT_SETS,true),owned=relicMuseumCount();
+  view={folds:museumUI3270.folds,owned,jobs:museumJobs3270('survey'),activeJobs:state.museum.relictSurveys.length,maxJobs:maxRelictSurveys(),pieces:MUSEUM_RELICTS.map(museumRelict3270),activeSets:sets.filter(s=>s.complete),pendingSets:sets.filter(s=>!s.complete),milestones:MUSEUM_RELICT_MILESTONES.map(p=>({name:p.name,done:Math.min(owned,p.count),total:p.count,claimed:!!state.museum.relictAchievements[p.id],knowledge:p.knowledge,actions:[{action:'claim-relict-milestone',token:museumToken3270('milestone',p.id),label:state.museum.relictAchievements[p.id]?'Logro obtenido':'Reclamar hito',enabled:canClaimRelictMilestone(p.id),alt:true}]})),research:{points:state.museum.relictResearchPoints||0,bonus:Math.round(relictResearchBonus()*100),achievementBonus:Math.round(relictAchievementBonus()*100),actions:[{action:'research-relict',label:'Analizar registros',enabled:canResearchRelict()}]},history:[...state.museum.relictSurveyHistory].reverse().map(entry=>{const r=MUSEUM_RELICTS.find(p=>p.id===entry.relict);return {name:r?museumRelictName3270(r):'Prospección histórica',date:museumDate3270(entry.at),detail:(Number.isFinite(entry.leads)?entry.leads+' indicio(s) registrados':'Sin cantidad registrada')+(entry.material&&ITEMS[entry.material]?' · '+ITEMS[entry.material].name:'')};})};
+ }else{const pieces=MUSEUM_COLLECTIONS.filter(p=>p.tab==='artifacts').map(museumCollection3270);view={pieces,owned:pieces.filter(p=>p.owned).length};}
+ return {room,view,level:state.museum.wing,wingName:MUSEUM_WINGS.find(w=>w.level===state.museum.wing)?.name||'Galería histórica',used,capacity,rate:museumRate(),collections:Object.values(state.museum.collections).filter(Boolean).length,relicts:relicMuseumCount(),cataloged:Object.values(state.museum.collections).filter(Boolean).length+relicMuseumCount(),otherCount:extra.length,legendaryCount:LEGENDARY_SPECIMENS.filter(l=>state.legendaryFound?.[l.id]).length,expandInfo:next?'Ampliación: '+next.name+' · £'+next.cost+' · '+next.prestige+' prestigio (no se consume).':null,folds:museumUI3270.folds};
+}
+function museumModalModel3270(token){
+ const p=museumResolve3270(token);if(!p)return null;
+ let model;
+ if(p.kind==='animal'&&SPECIES[p.id]&&(state.museum.exhibits[p.id]||(stage(p.id)===5&&state.published[p.id])))model=museumAnimal3270(p.id);
+ if(p.kind==='recipe'){const recipe=MUSEUM_FOSSIL_RECIPES.find(r=>r.unique&&r.id===p.id);if(recipe&&state.museum.collections[p.id])model=museumRecipe3270(recipe);}
+ if(p.kind==='collection'){const collection=MUSEUM_COLLECTIONS.find(r=>r.id===p.id);if(collection&&state.museum.collections[p.id])model=museumCollection3270(collection);}
+ if(p.kind==='relict'){const relict=MUSEUM_RELICTS.find(r=>r.id===p.id);if(relict&&museumRelictOwned(p.id))model=museumRelict3270(relict);}
+ if(!model)return null;
+ model.materials=model.referenceMaterials||model.materials||[];
+ if(p.kind==='animal')model.actions.push({action:'m27-candidates',label:'Ver Muestras',alt:true});
+ else if(p.kind==='recipe')model.actions.push({action:'m27-workshop',token,label:'Consultar reconstrucción',alt:true});
+ return model;
+}
+function museumSetRoom3270(room,focusToken=null){
+ if(!['exhibitions','samples','fossils','relicts','artifacts'].includes(room))return;
+ museumUI3270.scrolls[museumRoom3270()]=globalThis.scrollY||0;globalThis.AtlasMuseumUI.close({restore:false});state.museumView=room;museumUI3270.restore=museumUI3270.scrolls[room]||0;museumUI3270.focusRoom=true;renderPanel();persist();
+ if(focusToken)globalThis.requestAnimationFrame?.(()=>panel.querySelector('[data-m27-card="'+focusToken+'"]')?.scrollIntoView({block:'center'}));
+}
+function museumFilter3270(key,value){
+ if(key==='filter'&&['all','available','exhibited','Mamífero','Ave','Reptil/Anfibio','Pez'].includes(value))museumUI3270.filter=value;else if(key==='sort'&&['income-desc','income-asc','alpha'].includes(value))museumUI3270.sort=value;else return;
+ museumUI3270.samplePage=0;const target=panel.querySelector('#m27-samples-result');if(target)target.innerHTML=globalThis.AtlasMuseumUI.samples(museumSamples3270());
+}
+function museumAction3270(action,token,quantity,source){
+ if(tab!=='museum'||!globalThis.AtlasMuseumUI)return;
+ if(action==='museum-tab'){museumSetRoom3270(token);return;}
+ if(action==='m27-candidates'){museumUI3270.filter='available';museumUI3270.samplePage=0;museumSetRoom3270('samples');return;}
+ if(action==='m27-page'||action==='m27-next'){
+  if(!['samples','gallery'].includes(token))return;const key=token==='samples'?'samplePage':'galleryPage';museumUI3270[key]=Math.max(0,museumUI3270[key]+(action==='m27-next'?1:-1));
+  if(token==='samples'){const target=panel.querySelector('#m27-samples-result');if(target)target.innerHTML=globalThis.AtlasMuseumUI.samples(museumSamples3270());}else renderPanel();return;
+ }
+ const p=museumResolve3270(token);if(!p)return;
+ if(action==='m27-open'){const model=museumModalModel3270(token);if(!model)return;museumUI3270.modal=token;globalThis.AtlasMuseumUI.show(model,{action:museumAction3270,close:()=>{museumUI3270.modal=null;}},source);return;}
+ if(action==='m27-workshop'){if(museumModalModel3270(token))museumSetRoom3270('fossils',token);return;}
+ if(action==='exhibit'&&p.kind==='animal'&&museumCanExhibit3270(p.id)){globalThis.AtlasMuseumUI.close({restore:false});exhibitAnimal(p.id);}
+ if(action==='remove-exhibit'&&p.kind==='animal'&&state.museum.exhibits[p.id]){globalThis.AtlasMuseumUI.close({restore:false});removeExhibit(p.id);}
+ if(action==='museum-display'&&['collection','recipe','relict'].includes(p.kind)){globalThis.AtlasMuseumUI.close({restore:false});toggleMuseumDisplay((p.kind==='relict'?'relict':'collection')+':'+p.id);}
+ if(action==='craft-museum'&&p.kind==='recipe'&&[1,5,10].includes(Number(quantity)))craftMuseumFossil(p.id,Number(quantity));
+ if(action==='catalog-museum'&&p.kind==='collection')catalogMuseumCollection(p.id);
+ if(action==='start-excavation'&&p.kind==='site')startExcavation(p.id);
+ if(action==='collect-excavation'&&p.kind==='dig')collectExcavation(p.id);
+ if(action==='curate-museum'&&p.kind==='project')curateMuseum(p.id);
+ if(action==='start-relict-survey'&&p.kind==='relict')startRelictSurvey(p.id);
+ if(action==='collect-relict-survey'&&p.kind==='survey')collectRelictSurvey(p.id);
+ if(action==='catalog-relict'&&p.kind==='relict')catalogRelict(p.id);
+ if(action==='claim-relict-milestone'&&p.kind==='milestone')claimRelictMilestone(p.id);
+}
+// M-3270 END presentation
 const VOYAGES=[
  {id:'coast',name:'Reconocimiento costero',seconds:90,cost:35,knowledge:10,prize:65,notes:25,required:0},
  {id:'north',name:'Cartografía del mar del Norte',seconds:180,cost:90,knowledge:35,prize:150,notes:70,required:1},
@@ -4551,6 +4687,16 @@ function researchNodeCard(node){
 }
 
 function bindPanel(){
+  // M-3270 BEGIN binding
+  const museumRoot=panel.querySelector('.m27-root');
+  if(museumRoot){
+   globalThis.AtlasMuseumUI.bind(museumRoot,{filter:museumFilter3270,fold:(key,open)=>{museumUI3270.folds[key]=open;},legendary:renderLegendaryCollection,loadFold:key=>museumViewModel3270(key).view});
+   const nav=museumRoot.querySelector('.m27-rooms'),selected=nav?.querySelector('.selected');
+   if(nav){nav.scrollLeft=museumUI3270.navLeft;if(museumUI3270.lastRoom!==museumRoom3270()&&selected)nav.scrollLeft=Math.max(0,selected.offsetLeft-nav.offsetLeft-(nav.clientWidth-selected.offsetWidth)/2);museumUI3270.navLeft=nav.scrollLeft;nav.addEventListener('scroll',()=>{museumUI3270.navLeft=nav.scrollLeft;},{passive:true});}
+   museumUI3270.lastRoom=museumRoom3270();if(museumUI3270.focusRoom){selected?.focus({preventScroll:true});museumUI3270.focusRoom=false;}
+   if(museumUI3270.restore!==null){const top=museumUI3270.restore;museumUI3270.restore=null;globalThis.requestAnimationFrame?.(()=>globalThis.scrollTo?.({top,behavior:'instant'}));}
+  }
+  // M-3270 END binding
   // B-3260 BEGIN binding
   const bestiaryRoot=panel.querySelector('.b26-root');
   if(bestiaryRoot){globalThis.AtlasBestiaryUI.bind(bestiaryRoot,changeBestiaryFilter3260,bestiaryCollection3260);if(bestiaryReturnScroll3260!==null){const top=bestiaryReturnScroll3260;bestiaryReturnScroll3260=null;globalThis.requestAnimationFrame?.(()=>globalThis.scrollTo?.({top,behavior:'instant'}));}}
@@ -4598,6 +4744,12 @@ function handlePanelAction(e){
     const el=e.target.closest?.('[data-action]');
     if(!el||!panel.contains(el)||el.disabled)return;
     const act=el.dataset.action; const id=el.dataset.id;
+    // M-3270 BEGIN actions
+    if(globalThis.AtlasMuseumUI&&tab==='museum'){
+      if(act==='museum-tab'){museumAction3270(act,id);return;}
+      if(el.dataset.m27Token!==undefined||act.startsWith('m27-')){museumAction3270(act,el.dataset.m27Token,el.dataset.m27Qty,el);return;}
+    }
+    // M-3270 END actions
     // B-3260 BEGIN actions
     if(globalThis.AtlasBestiaryUI){
       if(act==='b26-open'){openBestiaryModal3260(Number(el.dataset.b26Slot),el);return;}
@@ -4695,6 +4847,9 @@ function syncMuseumTimers(now=Date.now()){
    state.museum.relictSurveys.find(x=>String(x.id)===el.dataset.relictSurveyRemaining);
   if(job)el.textContent=formatMuseumTimeRemaining(job.endAt,now);
  });
+ // M-3270 BEGIN progress
+ if(globalThis.AtlasMuseumUI)globalThis.AtlasMuseumUI.sync(panel,museumTimerModels3270(now));
+ // M-3270 END progress
 }
 function tick(){
  const now=Date.now();

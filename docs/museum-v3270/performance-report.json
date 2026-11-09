@@ -1,0 +1,1148 @@
+{
+  "versions": [
+    "3.26.0",
+    "3.27.0"
+  ],
+  "catalogSpecies": 710,
+  "cpuSlowdown": 4,
+  "viewport": "390 × 844",
+  "device": "Chromium emulation, not physical Android",
+  "method": "Same browser/context/page/CDP session; ABBA repeated twice (four trials/version). Identical full 710-publication save, gallery3,12 animal exhibits,all26 scientific pieces,1000 of each material. Actual released a12d7ed versus working3.27; workers blocked and intervals paused only for measurement. Cold clears sprite cache, warm repeats three times. Production click handlers plus forced layout. Opening and room timings use synchronous handlers plus layout, excluding screen painting. Heap and save metrics are taken in the same final Exposiciones room after garbage collection. No missing trials discarded.",
+  "trials": [
+    {
+      "version": "3.26.0",
+      "timings": {
+        "initialOpen": [
+          509.5
+        ],
+        "exhibitionsCold": [
+          413.79999999981374
+        ],
+        "exhibitionsWarm": [
+          318.5,
+          351.80000000074506,
+          305.59999999962747
+        ],
+        "samplesCold": [
+          2335.7999999998137
+        ],
+        "samplesWarm": [
+          1593.7999999998137,
+          1350.7999999998137,
+          1438.2999999998137
+        ],
+        "fossilsCold": [
+          200.5
+        ],
+        "fossilsWarm": [
+          80.20000000018626,
+          60,
+          72.90000000037253
+        ],
+        "relictsCold": [
+          144.40000000037253
+        ],
+        "relictsWarm": [
+          48.90000000037253,
+          62,
+          66
+        ],
+        "artifactsCold": [
+          36.59999999962747
+        ],
+        "artifactsWarm": [
+          41.799999999813735,
+          26.699999999254942,
+          69.6000000005588
+        ],
+        "samplePage": [],
+        "sampleFilter": [],
+        "modalOpen": [],
+        "modalClose": [],
+        "lazyComponents": [],
+        "serialize": [
+          3.2350000000093133,
+          3.925,
+          2.6200000000186265,
+          3.3449999999720603,
+          3.290000000037253
+        ]
+      },
+      "svg": {
+        "exhibitions": {
+          "calls": 12,
+          "ms": 7.699999999254942
+        },
+        "samples": {
+          "calls": 710,
+          "ms": 349.1000000052154
+        },
+        "fossils": {
+          "calls": 0,
+          "ms": 0
+        },
+        "relicts": {
+          "calls": 0,
+          "ms": 0
+        },
+        "artifacts": {
+          "calls": 0,
+          "ms": 0
+        }
+      },
+      "cards": {
+        "exhibitions": 0,
+        "samples": 0,
+        "fossils": 0,
+        "relicts": 0,
+        "artifacts": 0
+      },
+      "domNodes": 1008,
+      "saveBytes": 75889,
+      "cacheSize": 12,
+      "heapBytes": 4757548
+    },
+    {
+      "version": "3.27.0",
+      "timings": {
+        "initialOpen": [
+          216.6000000005588
+        ],
+        "exhibitionsCold": [
+          97.70000000018626
+        ],
+        "exhibitionsWarm": [
+          65.5,
+          56.700000000186265,
+          61.200000000186265
+        ],
+        "samplesCold": [
+          212.3999999994412
+        ],
+        "samplesWarm": [
+          144,
+          118.59999999962747,
+          142.6000000005588
+        ],
+        "fossilsCold": [
+          52.39999999944121
+        ],
+        "fossilsWarm": [
+          31,
+          43.299999999813735,
+          30.100000000558794
+        ],
+        "relictsCold": [
+          68.79999999981374
+        ],
+        "relictsWarm": [
+          68.90000000037253,
+          68.8999999994412,
+          60.60000000055879
+        ],
+        "artifactsCold": [
+          47.69999999925494
+        ],
+        "artifactsWarm": [
+          26.200000000186265,
+          48.40000000037253,
+          15.700000000186265
+        ],
+        "samplePage": [
+          121,
+          112.80000000074506,
+          150.8999999994412
+        ],
+        "sampleFilter": [
+          139.5,
+          106.5,
+          208.40000000037253
+        ],
+        "modalOpen": [
+          151.5,
+          35.299999999813735,
+          38.09999999962747
+        ],
+        "modalClose": [
+          84.3999999994412,
+          84.30000000074506,
+          60.90000000037253
+        ],
+        "lazyComponents": [
+          152.09999999962747
+        ],
+        "serialize": [
+          4.7,
+          2.815000000037253,
+          4.46999999997206,
+          3.6100000000093133,
+          3.4549999999813736
+        ]
+      },
+      "svg": {
+        "exhibitions": {
+          "calls": 12,
+          "ms": 3.2000000001862645
+        },
+        "samples": {
+          "calls": 32,
+          "ms": 62
+        },
+        "fossils": {
+          "calls": 0,
+          "ms": 0
+        },
+        "relicts": {
+          "calls": 0,
+          "ms": 0
+        },
+        "artifacts": {
+          "calls": 0,
+          "ms": 0
+        }
+      },
+      "cards": {
+        "exhibitions": 24,
+        "samples": 32,
+        "fossils": 8,
+        "relicts": 9,
+        "artifacts": 5
+      },
+      "domNodes": 749,
+      "saveBytes": 75889,
+      "cacheSize": 137,
+      "heapBytes": 5282856
+    },
+    {
+      "version": "3.27.0",
+      "timings": {
+        "initialOpen": [
+          259.5
+        ],
+        "exhibitionsCold": [
+          119.30000000074506
+        ],
+        "exhibitionsWarm": [
+          92.79999999981374,
+          70.69999999925494,
+          47.700000000186265
+        ],
+        "samplesCold": [
+          201.70000000018626
+        ],
+        "samplesWarm": [
+          159,
+          114.79999999981374,
+          130.30000000074506
+        ],
+        "fossilsCold": [
+          60.40000000037253
+        ],
+        "fossilsWarm": [
+          45.39999999944121,
+          40.30000000074506,
+          56.09999999962747
+        ],
+        "relictsCold": [
+          88.09999999962747
+        ],
+        "relictsWarm": [
+          78,
+          107.3999999994412,
+          69.29999999981374
+        ],
+        "artifactsCold": [
+          57.299999999813735
+        ],
+        "artifactsWarm": [
+          41.59999999962747,
+          42.90000000037253,
+          26.5
+        ],
+        "samplePage": [
+          172.5,
+          196.90000000037253,
+          210
+        ],
+        "sampleFilter": [
+          190.70000000018626,
+          103.09999999962747,
+          124.70000000018626
+        ],
+        "modalOpen": [
+          79.29999999981374,
+          50.60000000055879,
+          34.40000000037253
+        ],
+        "modalClose": [
+          70.29999999981374,
+          54.59999999962747,
+          60.799999999813735
+        ],
+        "lazyComponents": [
+          120.09999999962747
+        ],
+        "serialize": [
+          3.2,
+          2.9600000000093134,
+          1.6649999999906868,
+          2.1950000000186263,
+          1.7050000000279397
+        ]
+      },
+      "svg": {
+        "exhibitions": {
+          "calls": 12,
+          "ms": 9.400000000372529
+        },
+        "samples": {
+          "calls": 32,
+          "ms": 52.90000000130385
+        },
+        "fossils": {
+          "calls": 0,
+          "ms": 0
+        },
+        "relicts": {
+          "calls": 0,
+          "ms": 0
+        },
+        "artifacts": {
+          "calls": 0,
+          "ms": 0
+        }
+      },
+      "cards": {
+        "exhibitions": 24,
+        "samples": 32,
+        "fossils": 8,
+        "relicts": 9,
+        "artifacts": 5
+      },
+      "domNodes": 749,
+      "saveBytes": 75889,
+      "cacheSize": 137,
+      "heapBytes": 5300600
+    },
+    {
+      "version": "3.26.0",
+      "timings": {
+        "initialOpen": [
+          501.40000000037253
+        ],
+        "exhibitionsCold": [
+          328.90000000037253
+        ],
+        "exhibitionsWarm": [
+          289,
+          314.8999999994412,
+          391
+        ],
+        "samplesCold": [
+          2332.4000000003725
+        ],
+        "samplesWarm": [
+          2134.800000000745,
+          2137.0999999996275,
+          1876
+        ],
+        "fossilsCold": [
+          224.29999999981374
+        ],
+        "fossilsWarm": [
+          97.80000000074506,
+          111.29999999981374,
+          59.700000000186265
+        ],
+        "relictsCold": [
+          86.40000000037253
+        ],
+        "relictsWarm": [
+          106.8999999994412,
+          128.59999999962747,
+          65.29999999981374
+        ],
+        "artifactsCold": [
+          34.10000000055879
+        ],
+        "artifactsWarm": [
+          33.299999999813735,
+          33.5,
+          36
+        ],
+        "samplePage": [],
+        "sampleFilter": [],
+        "modalOpen": [],
+        "modalClose": [],
+        "lazyComponents": [],
+        "serialize": [
+          3.6149999999906868,
+          3.3,
+          3.4850000000093133,
+          2.2649999999906867,
+          2.3950000000186265
+        ]
+      },
+      "svg": {
+        "exhibitions": {
+          "calls": 12,
+          "ms": 2.599999999627471
+        },
+        "samples": {
+          "calls": 710,
+          "ms": 395.9000000022352
+        },
+        "fossils": {
+          "calls": 0,
+          "ms": 0
+        },
+        "relicts": {
+          "calls": 0,
+          "ms": 0
+        },
+        "artifacts": {
+          "calls": 0,
+          "ms": 0
+        }
+      },
+      "cards": {
+        "exhibitions": 0,
+        "samples": 0,
+        "fossils": 0,
+        "relicts": 0,
+        "artifacts": 0
+      },
+      "domNodes": 1008,
+      "saveBytes": 75889,
+      "cacheSize": 12,
+      "heapBytes": 4847456
+    },
+    {
+      "version": "3.26.0",
+      "timings": {
+        "initialOpen": [
+          1420.3999999994412
+        ],
+        "exhibitionsCold": [
+          441.90000000037253
+        ],
+        "exhibitionsWarm": [
+          373.20000000018626,
+          325.70000000018626,
+          442.20000000018626
+        ],
+        "samplesCold": [
+          2950.7000000001863
+        ],
+        "samplesWarm": [
+          1651.7999999998137,
+          1655.6000000005588,
+          1522.5999999996275
+        ],
+        "fossilsCold": [
+          207.20000000018626
+        ],
+        "fossilsWarm": [
+          90,
+          143.29999999981374,
+          51.5
+        ],
+        "relictsCold": [
+          68.79999999981374
+        ],
+        "relictsWarm": [
+          59.700000000186265,
+          37.40000000037253,
+          32.40000000037253
+        ],
+        "artifactsCold": [
+          25.699999999254942
+        ],
+        "artifactsWarm": [
+          48.799999999813735,
+          23.09999999962747,
+          58.40000000037253
+        ],
+        "samplePage": [],
+        "sampleFilter": [],
+        "modalOpen": [],
+        "modalClose": [],
+        "lazyComponents": [],
+        "serialize": [
+          4.054999999981374,
+          3.8950000000186265,
+          2,
+          2.425,
+          2.7549999999813735
+        ]
+      },
+      "svg": {
+        "exhibitions": {
+          "calls": 12,
+          "ms": 8.200000000186265
+        },
+        "samples": {
+          "calls": 710,
+          "ms": 435.99999999348074
+        },
+        "fossils": {
+          "calls": 0,
+          "ms": 0
+        },
+        "relicts": {
+          "calls": 0,
+          "ms": 0
+        },
+        "artifacts": {
+          "calls": 0,
+          "ms": 0
+        }
+      },
+      "cards": {
+        "exhibitions": 0,
+        "samples": 0,
+        "fossils": 0,
+        "relicts": 0,
+        "artifacts": 0
+      },
+      "domNodes": 1008,
+      "saveBytes": 75889,
+      "cacheSize": 12,
+      "heapBytes": 4862876
+    },
+    {
+      "version": "3.27.0",
+      "timings": {
+        "initialOpen": [
+          216.80000000074506
+        ],
+        "exhibitionsCold": [
+          71
+        ],
+        "exhibitionsWarm": [
+          81.69999999925494,
+          101.40000000037253,
+          73.79999999981374
+        ],
+        "samplesCold": [
+          208
+        ],
+        "samplesWarm": [
+          118.69999999925494,
+          129.69999999925494,
+          270.8999999994412
+        ],
+        "fossilsCold": [
+          608.6000000005588
+        ],
+        "fossilsWarm": [
+          40.700000000186265,
+          99.59999999962747,
+          37.09999999962747
+        ],
+        "relictsCold": [
+          72.80000000074506
+        ],
+        "relictsWarm": [
+          42.700000000186265,
+          47.299999999813735,
+          58.39999999944121
+        ],
+        "artifactsCold": [
+          30.100000000558794
+        ],
+        "artifactsWarm": [
+          17,
+          22.90000000037253,
+          32.90000000037253
+        ],
+        "samplePage": [
+          208.09999999962747,
+          134.30000000074506,
+          195
+        ],
+        "sampleFilter": [
+          200.09999999962747,
+          89,
+          154.19999999925494
+        ],
+        "modalOpen": [
+          179.1000000005588,
+          57.299999999813735,
+          59.299999999813735
+        ],
+        "modalClose": [
+          106,
+          81.09999999962747,
+          64.79999999981374
+        ],
+        "lazyComponents": [
+          126.5
+        ],
+        "serialize": [
+          3.575,
+          1.7450000000186265,
+          3.009999999962747,
+          3.275,
+          3.2600000000093132
+        ]
+      },
+      "svg": {
+        "exhibitions": {
+          "calls": 12,
+          "ms": 5.000000000931323
+        },
+        "samples": {
+          "calls": 32,
+          "ms": 69.5
+        },
+        "fossils": {
+          "calls": 0,
+          "ms": 0
+        },
+        "relicts": {
+          "calls": 0,
+          "ms": 0
+        },
+        "artifacts": {
+          "calls": 0,
+          "ms": 0
+        }
+      },
+      "cards": {
+        "exhibitions": 24,
+        "samples": 32,
+        "fossils": 8,
+        "relicts": 9,
+        "artifacts": 5
+      },
+      "domNodes": 749,
+      "saveBytes": 75889,
+      "cacheSize": 137,
+      "heapBytes": 5348744
+    },
+    {
+      "version": "3.27.0",
+      "timings": {
+        "initialOpen": [
+          206.59999999962747
+        ],
+        "exhibitionsCold": [
+          130.30000000074506
+        ],
+        "exhibitionsWarm": [
+          77.20000000018626,
+          95.80000000074506,
+          81.5
+        ],
+        "samplesCold": [
+          183.29999999981374
+        ],
+        "samplesWarm": [
+          117.59999999962747,
+          107.90000000037253,
+          111
+        ],
+        "fossilsCold": [
+          33.09999999962747
+        ],
+        "fossilsWarm": [
+          44.60000000055879,
+          40,
+          32.40000000037253
+        ],
+        "relictsCold": [
+          55.09999999962747
+        ],
+        "relictsWarm": [
+          65,
+          56.10000000055879,
+          104.3999999994412
+        ],
+        "artifactsCold": [
+          37.90000000037253
+        ],
+        "artifactsWarm": [
+          39,
+          21.5,
+          21.5
+        ],
+        "samplePage": [
+          167.40000000037253,
+          210.20000000018626,
+          137.8999999994412
+        ],
+        "sampleFilter": [
+          130.20000000018626,
+          109.30000000074506,
+          109.8999999994412
+        ],
+        "modalOpen": [
+          82.29999999981374,
+          45.09999999962747,
+          75.6000000005588
+        ],
+        "modalClose": [
+          81.1000000005588,
+          70.29999999981374,
+          101.69999999925494
+        ],
+        "lazyComponents": [
+          117.5
+        ],
+        "serialize": [
+          8.304999999981373,
+          3.2350000000093133,
+          2.964999999990687,
+          2.8600000000093133,
+          2.3899999999906867
+        ]
+      },
+      "svg": {
+        "exhibitions": {
+          "calls": 12,
+          "ms": 7.3999999994412065
+        },
+        "samples": {
+          "calls": 32,
+          "ms": 52.79999999888241
+        },
+        "fossils": {
+          "calls": 0,
+          "ms": 0
+        },
+        "relicts": {
+          "calls": 0,
+          "ms": 0
+        },
+        "artifacts": {
+          "calls": 0,
+          "ms": 0
+        }
+      },
+      "cards": {
+        "exhibitions": 24,
+        "samples": 32,
+        "fossils": 8,
+        "relicts": 9,
+        "artifacts": 5
+      },
+      "domNodes": 749,
+      "saveBytes": 75889,
+      "cacheSize": 137,
+      "heapBytes": 5365892
+    },
+    {
+      "version": "3.26.0",
+      "timings": {
+        "initialOpen": [
+          594.2000000001863
+        ],
+        "exhibitionsCold": [
+          385.70000000018626
+        ],
+        "exhibitionsWarm": [
+          346.20000000018626,
+          273.40000000037253,
+          284.19999999925494
+        ],
+        "samplesCold": [
+          2142.5999999996275
+        ],
+        "samplesWarm": [
+          2090.899999999441,
+          2325.7000000001863,
+          3242.100000000559
+        ],
+        "fossilsCold": [
+          648.3000000007451
+        ],
+        "fossilsWarm": [
+          275.40000000037253,
+          171,
+          463.40000000037253
+        ],
+        "relictsCold": [
+          370.29999999981374
+        ],
+        "relictsWarm": [
+          108.80000000074506,
+          562.1000000005588,
+          416.79999999981374
+        ],
+        "artifactsCold": [
+          106
+        ],
+        "artifactsWarm": [
+          83,
+          58.299999999813735,
+          180.40000000037253
+        ],
+        "samplePage": [],
+        "sampleFilter": [],
+        "modalOpen": [],
+        "modalClose": [],
+        "lazyComponents": [],
+        "serialize": [
+          7.389999999990687,
+          4.96999999997206,
+          5.90500000002794,
+          3.73000000002794,
+          6.6049999999813735
+        ]
+      },
+      "svg": {
+        "exhibitions": {
+          "calls": 12,
+          "ms": 4.2000000001862645
+        },
+        "samples": {
+          "calls": 710,
+          "ms": 496.80000000074506
+        },
+        "fossils": {
+          "calls": 0,
+          "ms": 0
+        },
+        "relicts": {
+          "calls": 0,
+          "ms": 0
+        },
+        "artifacts": {
+          "calls": 0,
+          "ms": 0
+        }
+      },
+      "cards": {
+        "exhibitions": 0,
+        "samples": 0,
+        "fossils": 0,
+        "relicts": 0,
+        "artifacts": 0
+      },
+      "domNodes": 1008,
+      "saveBytes": 75889,
+      "cacheSize": 12,
+      "heapBytes": 4912356
+    }
+  ],
+  "summary": {
+    "3.26.0": {
+      "medianMs": {
+        "initialOpen": 551.8500000000931,
+        "exhibitionsCold": 399.75,
+        "exhibitionsWarm": 322.10000000009313,
+        "samplesCold": 2334.100000000093,
+        "samplesWarm": 1765.8000000002794,
+        "fossilsCold": 215.75,
+        "fossilsWarm": 93.90000000037253,
+        "relictsCold": 115.40000000037253,
+        "relictsWarm": 65.64999999990687,
+        "artifactsCold": 35.35000000009313,
+        "artifactsWarm": 45.299999999813735,
+        "samplePage": null,
+        "sampleFilter": null,
+        "modalOpen": null,
+        "modalClose": null,
+        "lazyComponents": null,
+        "serialize": 3.4149999999906866
+      },
+      "spriteMedianMs": {
+        "exhibitions": 5.949999999720603,
+        "samples": 415.94999999785796,
+        "fossils": 0,
+        "relicts": 0,
+        "artifacts": 0
+      },
+      "spriteCalls": [
+        {
+          "exhibitions": {
+            "calls": 12,
+            "ms": 7.699999999254942
+          },
+          "samples": {
+            "calls": 710,
+            "ms": 349.1000000052154
+          },
+          "fossils": {
+            "calls": 0,
+            "ms": 0
+          },
+          "relicts": {
+            "calls": 0,
+            "ms": 0
+          },
+          "artifacts": {
+            "calls": 0,
+            "ms": 0
+          }
+        },
+        {
+          "exhibitions": {
+            "calls": 12,
+            "ms": 2.599999999627471
+          },
+          "samples": {
+            "calls": 710,
+            "ms": 395.9000000022352
+          },
+          "fossils": {
+            "calls": 0,
+            "ms": 0
+          },
+          "relicts": {
+            "calls": 0,
+            "ms": 0
+          },
+          "artifacts": {
+            "calls": 0,
+            "ms": 0
+          }
+        },
+        {
+          "exhibitions": {
+            "calls": 12,
+            "ms": 8.200000000186265
+          },
+          "samples": {
+            "calls": 710,
+            "ms": 435.99999999348074
+          },
+          "fossils": {
+            "calls": 0,
+            "ms": 0
+          },
+          "relicts": {
+            "calls": 0,
+            "ms": 0
+          },
+          "artifacts": {
+            "calls": 0,
+            "ms": 0
+          }
+        },
+        {
+          "exhibitions": {
+            "calls": 12,
+            "ms": 4.2000000001862645
+          },
+          "samples": {
+            "calls": 710,
+            "ms": 496.80000000074506
+          },
+          "fossils": {
+            "calls": 0,
+            "ms": 0
+          },
+          "relicts": {
+            "calls": 0,
+            "ms": 0
+          },
+          "artifacts": {
+            "calls": 0,
+            "ms": 0
+          }
+        }
+      ],
+      "medianHeapBytes": 4855166,
+      "saveBytes": [
+        75889,
+        75889,
+        75889,
+        75889
+      ],
+      "cards": [
+        {
+          "exhibitions": 0,
+          "samples": 0,
+          "fossils": 0,
+          "relicts": 0,
+          "artifacts": 0
+        },
+        {
+          "exhibitions": 0,
+          "samples": 0,
+          "fossils": 0,
+          "relicts": 0,
+          "artifacts": 0
+        },
+        {
+          "exhibitions": 0,
+          "samples": 0,
+          "fossils": 0,
+          "relicts": 0,
+          "artifacts": 0
+        },
+        {
+          "exhibitions": 0,
+          "samples": 0,
+          "fossils": 0,
+          "relicts": 0,
+          "artifacts": 0
+        }
+      ]
+    },
+    "3.27.0": {
+      "medianMs": {
+        "initialOpen": 216.70000000065193,
+        "exhibitionsCold": 108.50000000046566,
+        "exhibitionsWarm": 75.5,
+        "samplesCold": 204.85000000009313,
+        "samplesWarm": 124.19999999925494,
+        "fossilsCold": 56.39999999990687,
+        "fossilsWarm": 40.50000000046566,
+        "relictsCold": 70.8000000002794,
+        "relictsWarm": 66.9499999997206,
+        "artifactsCold": 42.799999999813735,
+        "artifactsWarm": 26.350000000093132,
+        "samplePage": 169.95000000018626,
+        "sampleFilter": 127.45000000018626,
+        "modalOpen": 58.299999999813735,
+        "modalClose": 75.6999999997206,
+        "lazyComponents": 123.29999999981374,
+        "serialize": 3.1049999999813735
+      },
+      "spriteMedianMs": {
+        "exhibitions": 6.2000000001862645,
+        "samples": 57.450000000651926,
+        "fossils": 0,
+        "relicts": 0,
+        "artifacts": 0
+      },
+      "spriteCalls": [
+        {
+          "exhibitions": {
+            "calls": 12,
+            "ms": 3.2000000001862645
+          },
+          "samples": {
+            "calls": 32,
+            "ms": 62
+          },
+          "fossils": {
+            "calls": 0,
+            "ms": 0
+          },
+          "relicts": {
+            "calls": 0,
+            "ms": 0
+          },
+          "artifacts": {
+            "calls": 0,
+            "ms": 0
+          }
+        },
+        {
+          "exhibitions": {
+            "calls": 12,
+            "ms": 9.400000000372529
+          },
+          "samples": {
+            "calls": 32,
+            "ms": 52.90000000130385
+          },
+          "fossils": {
+            "calls": 0,
+            "ms": 0
+          },
+          "relicts": {
+            "calls": 0,
+            "ms": 0
+          },
+          "artifacts": {
+            "calls": 0,
+            "ms": 0
+          }
+        },
+        {
+          "exhibitions": {
+            "calls": 12,
+            "ms": 5.000000000931323
+          },
+          "samples": {
+            "calls": 32,
+            "ms": 69.5
+          },
+          "fossils": {
+            "calls": 0,
+            "ms": 0
+          },
+          "relicts": {
+            "calls": 0,
+            "ms": 0
+          },
+          "artifacts": {
+            "calls": 0,
+            "ms": 0
+          }
+        },
+        {
+          "exhibitions": {
+            "calls": 12,
+            "ms": 7.3999999994412065
+          },
+          "samples": {
+            "calls": 32,
+            "ms": 52.79999999888241
+          },
+          "fossils": {
+            "calls": 0,
+            "ms": 0
+          },
+          "relicts": {
+            "calls": 0,
+            "ms": 0
+          },
+          "artifacts": {
+            "calls": 0,
+            "ms": 0
+          }
+        }
+      ],
+      "medianHeapBytes": 5324672,
+      "saveBytes": [
+        75889,
+        75889,
+        75889,
+        75889
+      ],
+      "cards": [
+        {
+          "exhibitions": 24,
+          "samples": 32,
+          "fossils": 8,
+          "relicts": 9,
+          "artifacts": 5
+        },
+        {
+          "exhibitions": 24,
+          "samples": 32,
+          "fossils": 8,
+          "relicts": 9,
+          "artifacts": 5
+        },
+        {
+          "exhibitions": 24,
+          "samples": 32,
+          "fossils": 8,
+          "relicts": 9,
+          "artifacts": 5
+        },
+        {
+          "exhibitions": 24,
+          "samples": 32,
+          "fossils": 8,
+          "relicts": 9,
+          "artifacts": 5
+        }
+      ]
+    }
+  },
+  "coldRoomChangePercent": {
+    "exhibitions": -72.85803627255393,
+    "samples": -91.22359796066642,
+    "fossils": -73.85863267675232,
+    "relicts": -38.64818024259026,
+    "artifacts": 21.07496463847518
+  }
+}
