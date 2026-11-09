@@ -1,0 +1,27 @@
+{
+  "status": "passed unpublished split-module 3.29 preview",
+  "baseVersion": "3.28.0",
+  "targetVersion": "3.29.0",
+  "channel": "unpublished-preview",
+  "scientificBlockers": [
+    "scientific:Apteryx haastii",
+    "scientific:Crocodylus novaeguineae",
+    "scientific:Lophorina superba",
+    "scientific:Trichoglossus haematodus",
+    "candidate-not-approved",
+    "final-art-and-release-validation-missing"
+  ],
+  "otherWindowBlocksActivation": true,
+  "noBackupWrittenBeforeAcceptance": true,
+  "exactRawBackupPreserved": true,
+  "oldSaveFieldsPreserved": true,
+  "newResearchAndTravelThroughUI": true,
+  "prestigeNotSpent": true,
+  "offlineMapCells": 8,
+  "offlineArtCards": 24,
+  "cache": "gran-atlas-v3.29.0-oceania-preview-7d5b996e36",
+  "cacheAssetCount": 122,
+  "errors": [],
+  "physicalAndroid": false,
+  "publicCheckoutChanged": false
+}

@@ -1,0 +1,12 @@
+✔ release gate names the four scientific blockers and cannot materialize an unvalidated release (2.502427ms)
+✔ external split-module preview has coherent version, safe updater paths, full offline resources and stable Capacitor identity (86.163676ms)
+✔ staging refuses output inside the repository and never changes the public version (0.394829ms)
+✔ staging preserves native import/export installers and configures Android version 32900 without changing app ID (157.24687ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 375.255763

@@ -6,6 +6,10 @@
 
 Base integrada: `main`, commit `564c63c341465f79b556a0a589e0515ef8361e6a` (GM-01). La versión instalada continúa en **3.28.0**, con **710 identidades, 79 regiones y 1.329 presencias**. El contrato nuevo está preparado para integración y no se incluye en `index.html`, service worker ni instaladores del catálogo.
 
+## Preparación productiva más reciente
+
+El pulido técnico/visual de esta pasada está cerrado para el candidato. Hay un generador de paquete externo 3.29 con módulos separados, metadatos y Capacitor coherentes, caché PWA completa y actualización 3.28→3.29 de previsualización verificada con respaldo exacto. No se publica aún: permanecen las cuatro revisiones científicas y la validación final de lanzamiento/APK. [Estado concreto, intervención necesaria y siguiente paso ejecutable](docs/gm02/release/README.md).
+
 ## Entregas y límites
 
 Se divide el trabajo según la sección 11 del [prompt conservado](docs/gm02/request.md), porque la integración exige revisar realmente 35 adaptaciones y 61 perfiles específicos, resolver los avisos científicos y probar los sistemas jugables antes de publicar. No se sustituyen esas tareas por comprobar JSON o SVG válido.

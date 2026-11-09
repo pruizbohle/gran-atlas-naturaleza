@@ -1,0 +1,96 @@
+{
+  "status": "prepublication package prepared and tested; no deployment",
+  "branch": "gm02/oceania",
+  "publicVersion": "3.28.0",
+  "previewTargetVersion": "3.29.0",
+  "publicFilesUnchanged": 115,
+  "sourceSaveKey": "gran_atlas_v05",
+  "regression": {
+    "tests": 413,
+    "passed": 413,
+    "failed": 0,
+    "duration_ms": 33383.687824,
+    "log": "regression-tests.txt",
+    "packagingTests": 4,
+    "pigmentRegressionAdded": 1
+  },
+  "artPolish": {
+    "identities": 97,
+    "combinations": 212,
+    "visualPassCompleteForCandidate": true,
+    "sourceArtSha256": "7d5b996e369408a6ea803c8e77439a33a2c1be4e5dd7640eac11467d3e7f7140",
+    "report": "../art/polish-review.json"
+  },
+  "packagedUpdate": {
+    "status": "passed unpublished split-module 3.29 preview",
+    "baseVersion": "3.28.0",
+    "targetVersion": "3.29.0",
+    "channel": "unpublished-preview",
+    "scientificBlockers": [
+      "scientific:Apteryx haastii",
+      "scientific:Crocodylus novaeguineae",
+      "scientific:Lophorina superba",
+      "scientific:Trichoglossus haematodus",
+      "candidate-not-approved",
+      "final-art-and-release-validation-missing"
+    ],
+    "otherWindowBlocksActivation": true,
+    "noBackupWrittenBeforeAcceptance": true,
+    "exactRawBackupPreserved": true,
+    "oldSaveFieldsPreserved": true,
+    "newResearchAndTravelThroughUI": true,
+    "prestigeNotSpent": true,
+    "offlineMapCells": 8,
+    "offlineArtCards": 24,
+    "cache": "gran-atlas-v3.29.0-oceania-preview-7d5b996e36",
+    "cacheAssetCount": 122,
+    "errors": [],
+    "physicalAndroid": false,
+    "publicCheckoutChanged": false
+  },
+  "readinessNow": {
+    "approved": false,
+    "blockers": [
+      "scientific:Apteryx haastii",
+      "scientific:Crocodylus novaeguineae",
+      "scientific:Lophorina superba",
+      "scientific:Trichoglossus haematodus",
+      "candidate-not-approved",
+      "final-release-validation-missing"
+    ]
+  },
+  "network": {
+    "observationsCurrent": true,
+    "activePolicy": "enforced",
+    "activeCustomAllowedHosts": [],
+    "freshProbe": "api.gbif.org: curl exit 56, CONNECT tunnel failed, response 403",
+    "publishedConfigurationAppliedToThisSession": false,
+    "userAction": "Review/save draft and Publish gran-atlas-naturaleza environment; if already published, select that version in a new session and resume gm02/oceania."
+  },
+  "android": {
+    "appIdUnchanged": true,
+    "preparedVersionName": "3.29.0",
+    "preparedVersionCode": 32900,
+    "nativePluginRegistrationTested": true,
+    "sdkConfigured": false,
+    "apkBuilt": false,
+    "signatureVerified": false
+  },
+  "deployment": {
+    "mergedToMain": false,
+    "workflowRunsTriggered": false,
+    "webPublished": false,
+    "apkPublished": false
+  },
+  "sourceHashes": {
+    "scripts/build-oceania-release-v3290.cjs": "a6b9912d891d4ab8706ee54e7eefbeaf44e954fdb3f7d7d7b938ef88dd393bdf",
+    "scripts/check-oceania-packaged-upgrade-v3290.cjs": "5a524b6a5c78a0d9824bc120e879714368cc772d2a57b5f322791a335bf2fa69",
+    "www/js/oceania-art-v3290.js": "7d5b996e369408a6ea803c8e77439a33a2c1be4e5dd7640eac11467d3e7f7140",
+    "www/js/oceania-runtime-v3290.js": "25e1ee957813c7fb4704e69c1b0ec3b078dae52ff77fea7b49252cb8d7a809a2",
+    "www/js/app.js": "641d8fc2b10851409fadb75968d26140ed52487e1f14a5b1571a3241d0794f22",
+    "www/sw.js": "34aa5b888152eea3b7ca37f0c93faf451fd2c4bd31bc59c2dc2e6eb410944ebb",
+    "www/index.html": "1dca08cb6c82148af1cc5198506106361bf4cb598346cfeabd96ed07f5cf8c58",
+    "package.json": "a6986ddd93acfb53d02e51ab96eb8a58b4c5e3016ad564c3a7df7fb34eca4fc3",
+    "capacitor.config.json": "0c2754e8419be741c21b2805b8893b05501b04d700c0c53b85998e59dc2688ab"
+  }
+}
