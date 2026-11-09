@@ -1,0 +1,22 @@
+{
+  "version": "3.26.0",
+  "catalogSpecies": 710,
+  "regions": 79,
+  "continents": 5,
+  "cardsPerPage": 32,
+  "pagesWithFullCatalog": 23,
+  "originalApp3250Sha256": "1fd6d35f93f898f8db7d2cc00c73aa853208a5a0d1c53d9a2907f9e28ba7e101",
+  "originalAppBytesPreservedAfterRemovingPresentation": true,
+  "originalSpriteGeometryAndTaxonomyPreserved": true,
+  "all710IllustrationsHideScientificClipIDs": true,
+  "allPaintReferencesValid": true,
+  "regionalDistributionDerivedWithoutManualTable": true,
+  "uniqueRegionalIndexBuiltOnceOnDemand": true,
+  "saveKey": "gran_atlas_v05",
+  "newPermanentSaveFields": 0,
+  "newPeriodicTasks": 0,
+  "nodeTestsPassed": 326,
+  "nodeTestsFailed": 0,
+  "mobileGroupSizeCombinations": 16,
+  "physicalAndroidTested": false
+}

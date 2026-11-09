@@ -2844,6 +2844,9 @@ function filterJournalRail(){
   if(counter)counter.textContent=count===0?'Sin resultados':count+' especies';
 }
 function renderPanel(){
+  // B-3260 BEGIN close-on-navigation
+  globalThis.AtlasBestiaryUI?.close({restore:false});
+  // B-3260 END close-on-navigation
   rememberAtlasViewport();
   lastPanelSignature='';diaryDirty=true;
   document.body.classList.toggle?.('field-active',tab==='field');
@@ -4378,6 +4381,9 @@ const BESTIARY_PAGE_SIZE=32;
 let bestiaryPage=0;
 // AM-06 END bestiary-state
 function renderBestiary(){
+  // B-3260 BEGIN render
+  if(globalThis.AtlasBestiaryUI)return globalThis.AtlasBestiaryUI.render(bestiaryViewModel3260());
+  // B-3260 END render
   const total=Object.keys(SPECIES).length;
   let ids=Object.keys(SPECIES);
   if(state.bestiaryHideMonographs)ids=ids.filter(id=>!state.published?.[id]);
@@ -4401,6 +4407,118 @@ function renderBestiary(){
   </section>`;
 }
 
+// B-3260 BEGIN presentation
+let bestiaryFilters3260=null,bestiaryCatalog3260=null,bestiaryModalId3260=null,bestiaryReturnScroll3260=null;
+function bestiaryData3260(){
+ if(bestiaryCatalog3260)return bestiaryCatalog3260;
+ const ids=Object.keys(SPECIES),buckets={Mammalia:'Mamífero',Aves:'Ave',Actinopterygii:'Pez',Chondrichthyes:'Pez'},rarities={'Común':1,'Poco común':2,'Raro':3,'Muy rara':4};
+ // Same presentation buckets as bestiaryTypeBucket(), one taxonomy lookup.
+ bestiaryCatalog3260={ids,regions:null,entries:ids.map((id,slot)=>{const taxonomy=taxonomyInfo(id);return {id,slot,taxonomy,group:buckets[taxonomy.className]||'Reptil/Anfibio',rarity:rarities[SPECIES[id].rare]||0};})};
+ return bestiaryCatalog3260;
+}
+function bestiaryRegions3260(){
+ const data=bestiaryData3260();if(data.regions)return data.regions;
+ const regions=new Map(data.ids.map(id=>[id,[]]));
+ for(const region of REGIONS)for(const id of new Set(region.species)){if(regions.has(id))regions.get(id).push(region);}
+ data.regions=regions;return regions;
+}
+function bestiaryFilterState3260(){
+ return bestiaryFilters3260||(bestiaryFilters3260={query:'',group:'all',subgroup:'all',sightings:'all',progress:'all',sort:['alpha','rarity','type','sightings'].includes(state.bestiarySort)?state.bestiarySort:'alpha',descending:!!state.bestiaryDescending,hide:!!state.bestiaryHideMonographs});
+}
+function bestiaryQuery3260(){
+ const f=bestiaryFilterState3260(),data=bestiaryData3260(),normalize=globalThis.AtlasBestiaryUI.normalize;
+ const entries=data.entries.map(entry=>{
+  const id=entry.id,discovered=!!state.discovered[id],st=stage(id);
+  return {...entry,discovered,stage:st,name:discovered&&st>=1?visibleName(id):'No identificado',latin:discovered&&st>=2?visibleLatin(id):'por identificar',knownGroup:discovered&&st>=2?entry.group:null,knownSubgroup:discovered&&st>=3?entry.taxonomy.subClass:null,sightings:sight(id),published:!!state.published[id]};
+ });
+ const subgroups=[...new Set(entries.filter(p=>p.knownSubgroup&&(f.group==='all'||p.knownGroup===f.group)).map(p=>p.knownSubgroup))].sort((a,b)=>a.localeCompare(b,'es'));
+ if(f.subgroup!=='all'&&!subgroups.includes(f.subgroup))f.subgroup='all';
+ const q=normalize(f.query);
+ let visible=entries.filter(p=>{
+  if(q&&!normalize([p.discovered&&p.stage>=1?p.name:'',p.discovered&&p.stage>=2?p.latin:''].join(' ')).includes(q))return false;
+  if(f.group!=='all'&&p.knownGroup!==f.group||f.subgroup!=='all'&&p.knownSubgroup!==f.subgroup)return false;
+  if(f.sightings==='zero'&&p.sightings!==0||!['all','zero'].includes(f.sightings)&&p.sightings<Number(f.sightings))return false;
+  if(f.hide&&p.published)return false;
+  if(f.progress==='unknown'&&p.discovered||f.progress==='discovered'&&!p.discovered||f.progress==='incomplete'&&(!p.discovered||p.stage>=5)||f.progress==='complete'&&(!p.discovered||p.stage!==5)||f.progress==='published'&&(!p.discovered||!p.published))return false;
+  return true;
+ });
+ const alpha=(a,b)=>a.name.localeCompare(b.name,'es')||a.slot-b.slot;
+ visible.sort((a,b)=>{
+  // Unknown names cannot be alphabetized by their hidden identity. Keep their
+  // opaque entries after observed animals in either alphabetical direction.
+  if(f.sort==='alpha'&&a.discovered!==b.discovered)return a.discovered?-1:1;
+  const comparison=f.sort==='sightings'?a.sightings-b.sightings||alpha(a,b):f.sort==='rarity'?a.rarity-b.rarity||alpha(a,b):f.sort==='type'?(a.knownGroup||'Por estudiar').localeCompare(b.knownGroup||'Por estudiar','es')||alpha(a,b):alpha(a,b);
+  return f.descending?-comparison:comparison;
+ });
+ return {entries:visible,subgroups,filters:{...f},total:data.ids.length};
+}
+function bestiaryViewModel3260(){
+ const query=bestiaryQuery3260(),pages=Math.max(1,Math.ceil(query.entries.length/BESTIARY_PAGE_SIZE));
+ bestiaryPage=Math.max(0,Math.min(bestiaryPage,pages-1));
+ const cards=query.entries.slice(bestiaryPage*BESTIARY_PAGE_SIZE,(bestiaryPage+1)*BESTIARY_PAGE_SIZE).map(p=>({slot:p.slot,name:p.name,latin:p.latin,stage:p.stage,sightings:p.sightings,discovered:p.discovered,published:p.discovered&&p.published,sprite:p.discovered?getSpriteMarkup(p.id,'normal'):''}));
+ return {total:query.total,identified:identifiedCount(),matches:query.entries.length,page:bestiaryPage,pages,filters:query.filters,subgroups:query.subgroups,cards};
+}
+function changeBestiaryFilter3260(key,value){
+ const f=bestiaryFilterState3260();
+ if(key==='query')f.query=String(value).slice(0,120);
+ else if(key==='group'&&['all','Mamífero','Ave','Reptil/Anfibio','Pez'].includes(value)){f.group=value;}
+ else if(key==='subgroup'&&(value==='all'||bestiaryQuery3260().subgroups.includes(value)))f.subgroup=value;
+ else if(key==='sightings'&&['all','zero','1','10','50','100','200','500'].includes(value))f.sightings=value;
+ else if(key==='progress'&&['all','unknown','discovered','incomplete','complete','published'].includes(value))f.progress=value;
+ else if(key==='sort'&&['alpha','rarity','type','sightings'].includes(value)){f.sort=value;f.descending=value==='sightings';}
+ else if(key==='hide')f.hide=!!value;
+ else if(key==='direction')f.descending=!f.descending;
+ else if(key==='clear'){Object.assign(f,{query:'',group:'all',subgroup:'all',sightings:'all',progress:'all',sort:'alpha',descending:false,hide:false});}
+ else return;
+ bestiaryPage=0;
+ const root=panel.querySelector('.b26-root');if(root)globalThis.AtlasBestiaryUI.refresh(root,bestiaryViewModel3260());
+}
+function bestiaryDistribution3260(id){
+ if(!state.discovered[id])return [];
+ return (bestiaryRegions3260().get(id)||[]).map(r=>{
+  const current=r.id===state.currentRegion,accessible=regionAccessible(r),ready=regionRequirementsMet(r);
+  return {slot:REGIONS.indexOf(r),name:r.name,continent:r.continent,current,accessible,ready,statusLabel:current?'Ya estás aquí':accessible?'Disponible para viajar':ready?'Disponible para desbloquear':'Región bloqueada',rank:current?0:accessible?1:ready?2:3};
+ }).sort((a,b)=>a.rank-b.rank||a.continent.localeCompare(b.continent,'es')||a.name.localeCompare(b.name,'es'));
+}
+function bestiaryObservedVariants3260(id){
+ const found=state.specialFound[id]||{};
+ return configuredSpecials(SPECIES[id]).filter(v=>v==='Legendario'?!!state.legendaryFound?.[legendaryForSpecies(id)?.id]:Object.entries(found).some(([label,value])=>value&&specialVariantName(label)===v));
+}
+function bestiaryModalModel3260(id){
+ if(!SPECIES[id]||!state.discovered[id])return null;
+ const sp=SPECIES[id],st=stage(id),t=taxonomyInfo(id),sex=state.sexSeen[id]||{};
+ return {name:visibleName(id),latin:visibleLatin(id),stage:st,sightings:sight(id),sprite:getSpriteMarkup(id,'normal'),rarity:sp.rare,group:st>=2?bestiaryTypeBucket(id):null,taxonomy:taxonomyText(id),food:feed(id),published:!!state.published[id],variants:bestiaryObservedVariants3260(id),sexes:SEXUAL_DIMORPHISM[id]?[(sex.male?'Macho observado':'Macho pendiente'),(sex.female?'Hembra observada':'Hembra pendiente')].join(' · '):'Sin registros de dimorfismo.',habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',regions:bestiaryDistribution3260(id),journalAvailable:currentRegion().species.includes(id)};
+}
+function openBestiaryModal3260(slot,source){
+ if(!Number.isInteger(slot)||slot<0)return;
+ const id=bestiaryData3260().ids[slot],model=bestiaryModalModel3260(id);if(!model)return;
+ bestiaryModalId3260=id;globalThis.AtlasBestiaryUI.show(model,{action:bestiaryModalAction3260,close:()=>{bestiaryModalId3260=null;}},source);
+}
+function bestiaryModalAction3260(action,slot){
+ const id=bestiaryModalId3260;if(!id||!state.discovered[id])return;
+ if(action==='b26-journal'){
+  if(!currentRegion().species.includes(id))return;
+  bestiaryReturnScroll3260=globalThis.scrollY||0;globalThis.AtlasBestiaryUI.close({restore:false});state.selectedJournal=id;tab='journal';renderPanel();persist();return;
+ }
+ const index=Number(slot);if(!Number.isInteger(index)||index<0)return;
+ const r=REGIONS[index];if(!r||!bestiaryRegions3260().get(id)?.includes(r))return;
+ if(action==='b26-travel'){
+  if(!regionAccessible(r)){globalThis.AtlasBestiaryUI.show(bestiaryModalModel3260(id),{action:bestiaryModalAction3260,close:()=>{bestiaryModalId3260=null;}});return;}
+  bestiaryReturnScroll3260=globalThis.scrollY||0;globalThis.AtlasBestiaryUI.close({restore:false});travelToRegion(r.id);return;
+ }
+ if(action==='b26-atlas'){
+  bestiaryReturnScroll3260=globalThis.scrollY||0;globalThis.AtlasBestiaryUI.close({restore:false});rememberAtlasViewport();state.atlasView=r.continent;state.atlasSelectedRegion=r.id;tab='atlas';renderPanel();selectAtlasRegion(r.id);
+  const root=panel.querySelector('.atlas-game');if(root)globalThis.AtlasMap.center(root,r.id);
+  const requirements=panel.querySelector('.atlas-requirements');if(requirements&&!regionAccessible(r))requirements.open=true;
+  panel.querySelector('.atlas-primary')?.focus({preventScroll:true});
+ }
+}
+function bestiaryCollection3260(slot){
+ const id=bestiaryData3260().ids[slot];if(!id||!state.discovered[id])return '<p class="small">Sin especímenes observados.</p>';
+ const found=specialBadges(id).replace(/<div class="variant-card unknown">[\s\S]*?<\/div><\/div><div class="small">[\s\S]*?<\/div><\/div>/g,'');
+ return found.includes('variant-card seen')?globalThis.AtlasBestiaryUI.illustration(found.replaceAll(SPECIES[id].name,visibleName(id))):'<p class="small">Sin variantes observadas.</p>';
+}
+// B-3260 END presentation
 function habitatLabel(h){return ({selva:'🌴 Selva',sabana:'🌾 Sabana',bosque:'🌳 Bosque',pradera:'🌾 Pradera',rio:'🌊 Río',costa:'⛵ Costa',tundra:'❄️ Tundra',montana:'⛰️ Montaña',estepa:'🌾 Estepa',mediterraneo:'🌿 Mediterráneo',desierto:'🏜️ Desierto',humedal:'🪷 Humedal'}[h]||h)}
 function timeLabel(t){return ({amanecer:'🌅 Amanecer',dia:'☀️ Día',atardecer:'🌇 Tarde',noche:'🌙 Noche'}[t]||t)}
 function seasonLabel(s){return ({primavera:'🌱 Primavera',verano:'☀️ Verano',otono:'🍂 Otoño',invierno:'❄️ Invierno'}[s]||s)}
@@ -4433,6 +4551,10 @@ function researchNodeCard(node){
 }
 
 function bindPanel(){
+  // B-3260 BEGIN binding
+  const bestiaryRoot=panel.querySelector('.b26-root');
+  if(bestiaryRoot){globalThis.AtlasBestiaryUI.bind(bestiaryRoot,changeBestiaryFilter3260,bestiaryCollection3260);if(bestiaryReturnScroll3260!==null){const top=bestiaryReturnScroll3260;bestiaryReturnScroll3260=null;globalThis.requestAnimationFrame?.(()=>globalThis.scrollTo?.({top,behavior:'instant'}));}}
+  // B-3260 END binding
   const atlasMap=panel.querySelector('.atlas-v32-map-scroll');
   atlasMap?.addEventListener('scroll',rememberAtlasViewport,{passive:true});
   panel.querySelector('[data-atlas-continent]')?.addEventListener('change',e=>{
@@ -4476,6 +4598,12 @@ function handlePanelAction(e){
     const el=e.target.closest?.('[data-action]');
     if(!el||!panel.contains(el)||el.disabled)return;
     const act=el.dataset.action; const id=el.dataset.id;
+    // B-3260 BEGIN actions
+    if(globalThis.AtlasBestiaryUI){
+      if(act==='b26-open'){openBestiaryModal3260(Number(el.dataset.b26Slot),el);return;}
+      if(act==='b26-clear'||act==='b26-direction'){changeBestiaryFilter3260(act==='b26-clear'?'clear':'direction');return;}
+    }
+    // B-3260 END actions
     // J-3250 BEGIN actions
     if(el.dataset.journalSlot!==undefined&&(act==='select-journal'||act==='advance-species')){
       const slot=Number(el.dataset.journalSlot);if(!Number.isInteger(slot)||slot<0)return;

@@ -7,5 +7,6 @@ function withoutBestiaryPagination(source){return withoutJournalPresentation(sou
  .replace(/\/\* AM-06 BEGIN [^*]*\*\/[\s\S]*?\/\* AM-06 END [^*]*\*\//g,'')
  .replace(/\/\/ AM-06 BEGIN [^\n]+\n[\s\S]*?\/\/ AM-06 END [^\n]+\n/gm,'');}
 // The 3.25 journal is additive; historical gameplay/art fixtures remain exact.
-function withoutJournalPresentation(source){return source.replace(/^[ \t]*\/\/ J-3250 BEGIN [^\n]+\n[\s\S]*?\/\/ J-3250 END [^\n]+\n/gm,'');}
-module.exports={withoutBestiaryPagination,withoutJournalPresentation};
+function withoutJournalPresentation(source){return withoutBestiaryPresentation(source).replace(/^[ \t]*\/\/ J-3250 BEGIN [^\n]+\n[\s\S]*?\/\/ J-3250 END [^\n]+\n/gm,'');}
+function withoutBestiaryPresentation(source){return source.replace(/^[ \t]*\/\/ B-3260 BEGIN [^\n]+\n[\s\S]*?\/\/ B-3260 END [^\n]+\n/gm,'');}
+module.exports={withoutBestiaryPagination,withoutJournalPresentation,withoutBestiaryPresentation};
