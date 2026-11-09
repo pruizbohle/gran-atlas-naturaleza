@@ -1,0 +1,66 @@
+'use strict';
+// Capture the actually rendered candidate, not classifier guesses. Visual observations are explicit.
+const fs=require('node:fs'),crypto=require('node:crypto'),{reviewHarness,candidate}=require('../tests/helpers/oceania-review.cjs');
+const a=reviewHarness().window.__atlasTest;
+const notes={
+ macropod:'Cola de apoyo continua, muslo y pie posterior desarrollados; orejas largas. Tammar/pademelón más compactos, marca facial de Macropus y cola de Petrogale diferenciadas.',
+ 'tree-kangaroo':'Postura de agarre sobre rama, orejas redondeadas, manos y cola larga; Goodfellow con franjas dorsales.',
+ koala:'Orejas grandes con borde claro, nariz ancha y manos alrededor del tronco; conserva morfología de marsupial.',
+ wombat:'Cuerpo bajo sin cola larga, hocico ancho y extremidades cortas con articulación curvada.',
+ echidna:'Espinas dorsales, hocico fino y extremidades excavadoras; no plantilla de erizo.',
+ 'long-beaked-echidna':'Rostro más largo y curvado que Tachyglossus; espinas diferenciadas del pelaje oscuro.',
+ platypus:'Pico aplanado, pies con membranas y cola ancha; deben conservarse los detalles del pico a 64 px.',
+ possum:'Cola prensil enrollada o cola de cepillo según género; Dactylopsila listado y Spilocuscus moteado.',
+ glider:'Patagio y cola continuos; Petauroides con orejas mayores que Petaurus.',
+ mulgara:'Pequeño marsupial de hocico alargado y cresta caudal; patas curvadas tras primera inspección.',
+ quoll:'Pelaje con manchas claras, hocico puntiagudo y cola; patas curvadas tras primera inspección.',
+ 'tasmanian-devil':'Cabeza robusta, cuerpo compacto y marcas pectorales claras; no plantilla canina.',
+ numbat:'Hocico fino, barras corporales claras y cola levantada; sin espinas de monotremo.',
+ bilby:'Orejas largas, rostro estrecho y cola bicolor; patas corregidas para evitar bloques rectos.',
+ dingo:'Base canina compatible reutilizada; identidad MDD de dingo mantenida aparte del lobo.',
+ 'flying-fox':'Alas membranosas con radios, rostro de megamurciélago; anillos faciales o cabeza gris según especie.',
+ 'fur-seal':'Base de otárido reutilizada; pabellón auricular y postura de aletas, no foca verdadera.',
+ 'hector-dolphin':'Aleta dorsal redondeada, cuerpo corto y patrón oscuro/claro; detalles de hocico conservados.',
+ kiwi:'Pico largo con narina distal, cuerpo sin alas visibles y plumaje fino; moteados y forma grande diferenciados.',
+ cassowary:'Casco, cuello coloreado y carúnculas, cuerpo oscuro y patas largas.',
+ emu:'Cuello largo sin casco, plumaje de trazos ondulados y patas largas.',
+ eagle:'Aquila usa motor compatible; Harpyopsis recibe perfil propio con cresta, ala amplia y garras.',
+ owl:'Discos faciales y ojos frontales sin penachos falsos para Ninox.',
+ albatross:'Corregido el primer perfil: alas plegadas largas con puntas oscuras y pico ganchudo, no paseriforme.',
+ 'australian-pelican':'Corregido el primer perfil: pico y bolsa gular alargados, plumaje blanco/oscuro y cuerpo ancho.',
+ 'black-swan':'Cuello curvo, plumaje negro, pico rojizo y remiges claras; pigmento albino usa el pase central.',
+ cockatoo:'Crestitas y picos de psitácida; cola larga y cara de Nymphicus, marcas caudales de cacatúas negras.',
+ parrot:'Pico curvo, alas plegadas; bandas, cabeza, pecho y cola según género/especie; Nestor con pico largo.',
+ kakapo:'Cuerpo pesado, disco facial, alas cortas y plumaje moteado; no loro volador de cola larga.',
+ 'bird-of-paradise':'Ornamentos propios por género; hembra sin las estructuras de exhibición del macho. Lophorina lleva capa y falsos ocelos azules sin asignar rasgos de segregados.',
+ 'forest-bird':'Rasgos de cada género: cola en abanico, cola lira, carúnculas, pecho de paloma, patrón de mielero o plumaje de jardinera.',
+ kookaburra:'Cabeza y pico robustos, banda facial; alas azules o patrón gris según especie.',
+ rail:'Pies y cuerpo terrestres de rálido; pico, plumaje y cabeza propios de takahé/weka.',
+ 'yellow-eyed-penguin':'Postura de pingüino, aletas laterales, vientre claro y banda ocular amarilla.',
+ elapid:'Cuerpo continuo sin capucha ni cuernos; taipán interior con perfil cefálico diferenciado.',
+ 'tiger-snake':'Anillos corporales sobre cuerpo continuo; anatomía elápida.',
+ 'death-adder':'Cabeza ancha y cuerpo corto con bandas; no se añaden cuernos de víbora.',
+ python:'Cuerpo continuo con manchas, sin capucha de cobra.',
+ 'green-tree-python':'Cuerpo verde apoyado en curva y puntos claros; continúa clasificada como serpiente.',
+ crocodile:'Hocico y escudos dorsales; anchura escalonada entre Johnstoni, Novaeguineae y Porosus.',
+ frog:'Anfibio con patas posteriores plegadas y ojos elevados.',
+ 'pouched-frog':'Rana pequeña de bosque, sin membranas de reptil ni branquias de salamandra.',
+ 'tree-frog':'Discos digitales, cuerpo arborícola y cabeza ancha; boca neutral tras inspección.',
+ 'corroboree-frog':'Patrón de franjas oscuras sobre fondo amarillo; patas plegadas y cabeza de anfibio.',
+ lizard:'Extremidades laterales y cola continua.',
+ 'frilled-lizard':'Collar cervical curvo corregido tras primera inspección; no cresta aislada en la cabeza.',
+ 'water-dragon':'Cresta y cola alargada; extremidades laterales con articulaciones curvadas.',
+ 'thorny-devil':'Espinas dorsales y corporales propias, cabeza y patas de lagarto.',
+ 'bearded-dragon':'Barba y borde dorsal diferenciados de Moloch.',
+ tuatara:'Cresta y cabeza de rincocéfalo; se conserva su clasificación específica.',
+ 'blue-tongued-skink':'Cuerpo ancho, patas cortas, bandas y lengua azul.',
+ perentie:'Rostro prolongado, cola larga y moteado del varano.',
+ 'sand-monitor':'Marca temporal clara/oscura, moteado y extremidades de varano.',
+ 'arboreal-monitor':'Cola larga y anillada, cuello y hocico de varano; sin plantilla de iguana.',
+ barramundi:'Cuerpo alargado, boca amplia, dos dorsales, radios y opérculo; no silueta de serpiente.'
+};
+const fixes={ 'Setonix brachyurus':'Primer candidato parecía un ualabí de cola larga; se corrigieron cola, orejas, mejilla y proporciones.', 'Aquila audax':'Primer candidato tenía cuerpo genérico; sustituido por base de rapaz compatible.', 'Harpyopsis novaeguineae':'Primer candidato tenía cuerpo genérico; perfil de águila con cresta, garras y ala propios.', 'Diomedea epomophora':'Primer candidato tenía alas/pico demasiado genéricos; corregidos.', 'Pelecanus conspicillatus':'Primer candidato tenía bolsa/pico cortos; corregidos.', 'Lophorina superba':'Los falsos ocelos del primer candidato quedaban poco legibles; se añadieron marcas azules.', 'Macropus fuliginosus':'Se distinguió rostro y paleta respecto de Macropus giganteus.', 'Oxyuranus microlepidotus':'El primer candidato duplicaba visualmente el taipán costero; se diferenció el perfil cefálico.' };
+const rows=Object.entries(candidate.species).map(([id,sp])=>{const label={Mammalia:'mammals',Aves:'birds',Reptilia:'reptiles',Amphibia:'amphibians',Actinopterygii:'fish'}[sp.taxonomy.className];if(!notes[sp.artProfile])throw Error(sp.artProfile);return{id,scientific:sp.latin,family:sp.family,profile:sp.artProfile,normalSheet:label+'.png',visualInspection:'Render normal inspeccionado en lámina; candidato, no aprobación final de publicación.',observation:notes[sp.artProfile],firstCandidateCorrection:fixes[sp.latin]||'Se creó perfil compatible y se revisó su render; no existía ilustración anterior instalada.',configuredAlbino:sp.special.includes('Albino'),configuredSex:!!sp.dimorphism,scientificStatus:sp.taxonomicStatus,productionApproved:false,normalSvgSha256:crypto.createHash('sha256').update(a.getSpriteMarkup(id)).digest('hex')};});
+const output=JSON.stringify({status:'97 candidate identities visually reviewed; scientific and final release approval remain pending',reusedCompatibleBases:['Canis familiaris','Arctocephalus forsteri','Aquila audax'],before:'No installed illustration existed for these identities. Corrections refer to the first candidate render, not to prior public artwork.',limitations:'Some new profiles still use simplified volume and shared family structures. This is an incremental candidate review, not an independent zoological certification or physical Android review.',rows},null,2)+'\n';
+const file='docs/gm02/art/review-ledger.json';if(process.argv.includes('--check')){if(fs.readFileSync(file,'utf8')!==output)throw Error('Art ledger differs from candidate SVGs');}else fs.writeFileSync(file,output);
+console.log('97 inspected candidate render hashes and explicit profile observations recorded.');

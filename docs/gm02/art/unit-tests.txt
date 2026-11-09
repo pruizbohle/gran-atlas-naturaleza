@@ -1,0 +1,14 @@
+✔ all 97 candidate profiles and configured sex/pigment/specimen routes generate scoped finite SVGs (172.421701ms)
+✔ every identity has a distinct actual illustration after removing identity metadata (79.49738ms)
+✔ candidate routing changes none of the 710 previous species, their variants, sexes or game state (429.76094ms)
+✔ the seven configured sexual profiles use species-specific ornament or plumage differences (73.217661ms)
+✔ candidate SVG generation draws no RNG, reuses the actual cache and leaves scientific blockers unresolved (62.076568ms)
+✔ isolated art catalog reproduces the exact candidate production router and does not access storage (207.55817ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1152.432517

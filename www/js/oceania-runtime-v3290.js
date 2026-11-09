@@ -335,7 +335,7 @@ const data={
     }
   },
   "inputs": {
-    "docs/gm02/ecology-profiles.json": "b2a7f7ab7b8a995729c3cabd980e1db1566e48034bc27593ca031a299fd42516",
+    "docs/gm02/ecology-profiles.json": "0cc58781a805468b5bbc4083d957da61a014ecb29e3c319b2fbdb57ea1df7f15",
     "docs/gm02/source-contract.json": "236857ee8f45b34dc010b36571449eb84fd046975895b3df4a8b2538f9f3eac9",
     "scripts/build-oceania-runtime-v3290.py": "7cb8217f76093f6cc7177b3e2f9a046da961c1496663f598f33abcab5411767b"
   },
@@ -2020,7 +2020,7 @@ const data={
     },
     "oc_esp_macropus_fuliginosus": {
       "artProfile": "macropod",
-      "color": "#9c8870",
+      "color": "#93826b",
       "dimorphism": false,
       "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
       "family": "Macropodidae",
@@ -2060,7 +2060,7 @@ const data={
     },
     "oc_esp_macropus_giganteus": {
       "artProfile": "macropod",
-      "color": "#9c8870",
+      "color": "#959b8e",
       "dimorphism": false,
       "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
       "family": "Macropodidae",

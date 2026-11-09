@@ -1,0 +1,21 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict'),{chromium}=require('playwright');
+const out='docs/gm02/art';fs.mkdirSync(out,{recursive:true});
+const server=http.createServer((req,res)=>{const file=path.resolve('www','.'+new URL(req.url,'http://review').pathname);if(!file.startsWith(path.resolve('www')+path.sep))return res.writeHead(403).end();try{res.setHeader('Content-Type',file.endsWith('.js')?'application/javascript':file.endsWith('.css')?'text/css':'text/html');res.end(fs.readFileSync(file));}catch{res.writeHead(404).end();}});
+(async()=>{await new Promise(r=>server.listen(0,'127.0.0.1',r));const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});try{
+ const page=await browser.newPage({viewport:{width:1100,height:900}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.addInitScript(()=>{for(const name of ['localStorage','sessionStorage'])Object.defineProperty(window,name,{get(){throw Error('Art laboratory accessed '+name);}});});
+ await page.goto('http://127.0.0.1:'+server.address().port+'/laboratorio-arte-oceania-v3290.html');await page.waitForFunction(()=>!!globalThis.OceaniaArtLab);
+ assert.equal(await page.locator('.specimen').count(),24);await page.selectOption('#limit','97');await page.selectOption('#size','120');
+ const plates=[];
+ for(const[group,label,count]of [['Mammalia','mammals',34],['Aves','birds',41],['Reptilia','reptiles',18],['Amphibia','amphibians',3],['Actinopterygii','fish',1]]){
+  await page.selectOption('#group',group);assert.equal(await page.locator('.specimen').count(),count);await page.screenshot({path:out+'/'+label+'.png',fullPage:true});plates.push({label,count});
+ }
+ await page.selectOption('#group','');
+ for(const[variant,count]of [['albino',4],['male',7],['female',7],['alfa',97]]){await page.selectOption('#variant',variant);assert.equal(await page.locator('.specimen').count(),count);await page.screenshot({path:out+'/'+variant+'.png',fullPage:true});plates.push({label:variant,count});}
+ await page.selectOption('#variant','normal');await page.selectOption('#compare','reference');await page.selectOption('#family','Canidae');assert.equal(await page.locator('.specimen svg').count(),2);await page.screenshot({path:out+'/compatible-canid-reference.png',fullPage:true});await page.selectOption('#compare','none');await page.selectOption('#family','');await page.selectOption('#mode','similar');await page.selectOption('#family','Macropodidae');await page.screenshot({path:out+'/similar-macropods.png',fullPage:true});await page.selectOption('#family','');await page.selectOption('#mode','pending');assert.equal(await page.locator('.specimen').count(),4);
+ const xml=await page.evaluate(()=>{const d=AtlasOceaniaRuntime3290,a=AtlasOceaniaArtReview,failures=[];let count=0;for(const[id,sp]of Object.entries(d.species))for(const skin of ['normal','alfa',...(sp.special.includes('Albino')?['albino']:[])])for(const sex of skin==='normal'&&sp.dimorphism?[null,'male','female']:[null]){const svg=a.sprite(id,skin,sex),doc=new DOMParser().parseFromString(svg,'image/svg+xml');count++;if(doc.querySelector('parsererror')||/NaN|undefined|Infinity|<script|<foreignObject|<image/.test(svg))failures.push({id,skin,sex});}return{count,failures};});assert.deepEqual(xml.failures,[]);
+ const mobile=[];await page.selectOption('#mode','name');await page.selectOption('#limit','24');await page.selectOption('#size','80');
+ for(const[width,height]of [[320,640],[360,740],[390,844],[412,915]]){await page.setViewportSize({width,height});await page.screenshot({path:out+'/mobile-'+width+'.png',fullPage:true});const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);assert.equal(overflow,false);mobile.push({width,height,overflow});}
+ assert.deepEqual(errors,[]);fs.writeFileSync(out+'/browser-results.json',JSON.stringify({status:'candidate rendering inspected separately, not production approval',plates,xml,mobile,errors,renderer:'exact isolated production SVG router + Oceanian candidate',storage:'no reads or writes',android:'Chromium emulation only'},null,2)+'\n');console.log(JSON.stringify({plates,xml,mobile}));
+}finally{await browser.close();server.close();}})().catch(e=>{console.error(e);server.close();process.exitCode=1;});
