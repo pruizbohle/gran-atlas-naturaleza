@@ -1,0 +1,18 @@
+{
+  "from": "3.26.0",
+  "to": "3.26.0",
+  "cache": "gran-atlas-v3.26.0-bestiary-2",
+  "oldPlayableCells": 14,
+  "northAmericaPlayableCells": 14,
+  "southAmericaPlayableCells": 10,
+  "oldWorkerReproduced": true,
+  "otherWindowsGuard": true,
+  "exactBackup": true,
+  "oldProgressPreserved": true,
+  "saharaIDAndProgressPreserved": true,
+  "unlockedRegionsPreserved": true,
+  "southAmericanProgressPreserved": true,
+  "newSouthAmericanRegionsRemainLocked": false,
+  "offlineAfterUpgrade": true,
+  "jsErrors": []
+}

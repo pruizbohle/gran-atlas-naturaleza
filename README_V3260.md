@@ -44,7 +44,7 @@ Los criterios y el estado abierto/cerrado son temporales. Se leen las preferenci
 | 4/5 | Estaciones autorizadas |
 | 5/5 | Estudio completo; publicación solo si existe en la partida |
 
-Se utilizan `visibleName()`, `visibleLatin()`, `taxonomyText()` y las mismas puertas del Cuaderno. Las búsquedas nunca indexan nombres pendientes ni permiten filtrar por una clasificación todavía oculta. Las variantes y los sexos muestran únicamente registros obtenidos o su condición pendiente.
+Se utilizan `visibleName()`, `visibleLatin()`, `taxonomyText()` y las mismas puertas del Cuaderno. Las búsquedas nunca indexan nombres pendientes ni permiten filtrar por una clasificación todavía oculta. Las variantes y los sexos muestran únicamente registros obtenidos. Si no se registró ningún sexo, la ficha usa una nota genérica sin revelar la configuración.
 
 Se retiraron metadatos gráficos en la presentación, incluidos nombres científicos que aparecían dentro de IDs de recortes SVG. Las definiciones y sus referencias se renombran juntas mediante identificadores opacos únicos por ilustración. **Las 710 geometrías se comparan y todos los recortes conservan sus referencias válidas.** No se modifica ningún motor ni el Cuaderno 3.25.0.
 
@@ -67,7 +67,7 @@ Los botones utilizan posiciones opacas, sin exponer IDs científicos. Se rechaza
 
 ## Pruebas e integridad
 
-**326 pruebas aprobadas, cero fallos y cero omitidas.** Veinte pruebas nuevas comprueban búsqueda, taxonomía progresiva, órdenes, filtros, paginación, SVG, distribución completa, persistencia, rutas válidas y bloqueadas. Las 306 pruebas anteriores siguen comprobando todas las regiones, las cinco etapas de las 710 especies, guardados históricos, Museo, inventario, expediciones, variantes y economía.
+**327 pruebas aprobadas, cero fallos y cero omitidas.** Veintiuna pruebas nuevas comprueban búsqueda, taxonomía progresiva, órdenes, filtros, paginación, SVG, distribución completa, persistencia, rutas válidas y bloqueadas. Las 306 pruebas anteriores siguen comprobando todas las regiones, las cinco etapas de las 710 especies, guardados históricos, Museo, inventario, expediciones, variantes y economía.
 
 El `app.js` publicado en 3.25.0 se conserva íntegro como referencia. Al retirar exclusivamente las inserciones delimitadas `B-3260`, **el código original coincide byte a byte**. Las suites históricas conservan sus fixtures de fauna, arte, geometría y progresión; solamente cambian sus aserciones de metadatos de publicación. El harness histórico puede ejecutar la presentación anterior y las pruebas nuevas activan explícitamente el módulo 3.26. El navegador y el laboratorio ejecutan la presentación de producción.
 
@@ -79,11 +79,12 @@ Se probaron **320 × 640, 360 × 740, 390 × 844 y 412 × 915**, con los cuatro 
 
 Se utiliza **emulación de Chromium, no un Android físico**. El catálogo admite desplazamiento vertical; la ficha conserva su cierre y sus acciones fuera de la navegación inferior.
 
-El catálogo, las fichas y el laboratorio funcionan offline. La actualización segura se probó desde 3.25.0 y 3.21.2: worker anterior coherente hasta aceptación explícita, protección ante otras ventanas, respaldo exacto y conservación de la partida.
+El catálogo, las fichas y el laboratorio funcionan offline. La entrada fresca `actualizar-v3260b.html` y el helper 3.26 esperan al worker concreto preparado, incluso si el número de versión coincide con el anterior. Se conservan intactos los helpers históricos. La actualización segura se probó desde 3.25.0 y 3.21.2: worker anterior coherente hasta aceptación explícita, protección ante otras ventanas, respaldo exacto y conservación de la partida.
 
 - [Informe responsive y funcional](docs/bestiary-v3260/browser-report.json).
 - [PWA 3.25.0 → 3.26.0](docs/bestiary-v3260/upgrade-3.25.0-report.json).
 - [PWA 3.21.2 → 3.26.0](docs/bestiary-v3260/upgrade-3.21.2-report.json).
+- [Revisión inicial 3.26.0 → caché final 2](docs/bestiary-v3260/upgrade-3.26.0-report.json): respaldo exacto y activación explícita incluso sin cambiar el número de versión.
 
 ## Rendimiento
 
@@ -140,4 +141,4 @@ Pendiente de verificar commit, ambos workflows y el APK descargado. Se comprobar
 
 - [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/).
 - [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-bestiario-v3260.html).
-- [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3260.html).
+- [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3260b.html).

@@ -53,6 +53,9 @@ docs/bestiary-v3260/upgrade-3.21.2-report.json
 docs/bestiary-v3260/upgrade-3.25.0-after.png
 docs/bestiary-v3260/upgrade-3.25.0-before.png
 docs/bestiary-v3260/upgrade-3.25.0-report.json
+docs/bestiary-v3260/upgrade-3.26.0-after.png
+docs/bestiary-v3260/upgrade-3.26.0-before.png
+docs/bestiary-v3260/upgrade-3.26.0-report.json
 package.json
 scripts/benchmark-bestiary-v3260.cjs
 scripts/check-bestiary-browser-v3260.cjs
@@ -74,6 +77,7 @@ tests/southamerica-v3230.test.cjs
 tests/southamerica-v3231.test.cjs
 tests/stability-v3200.test.cjs
 www/actualizar-v3260.html
+www/actualizar-v3260b.html
 www/actualizar.html
 www/atlas-release.json
 www/css/bestiary-v3260.css
@@ -84,6 +88,7 @@ www/js/lab/atlas-catalog-v3211.js
 www/js/lab/bestiary-app-before-v3250.js
 www/js/lab/bestiary-lab-v3260.js
 www/js/mobile-ui.js
+www/js/pwa-update-v3260.js
 www/js/save-manager.js
 www/js/update-client-v3212.js
 www/laboratorio-bestiario-v3260.html

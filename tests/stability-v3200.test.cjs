@@ -22,7 +22,7 @@ test('seeded automatic stress at 1s, 1h and 8h matches every saved byte and RNG 
  const {advanced}=require('./helpers/advanced-v3200.cjs'),expected=require('./fixtures/advanced-behavior-v3199.json');for(const [seconds,golden]of Object.entries(expected)){const result=advanced(Number(seconds));assert.equal(hash(JSON.stringify(result.state)),golden.hash,'complete state '+seconds+'s');assert.equal(result.calls,golden.rngCalls,'random draws '+seconds+'s');}
 });
 test('offline worker serves its immutable revision first and never turns missing scripts into HTML',async()=>{
- const callbacks={},cache=new Map(),scope='https://atlas.example/game/',deleted=[],version='gran-atlas-v3.26.0-bestiary-1';let fetches=0;
+ const callbacks={},cache=new Map(),scope='https://atlas.example/game/',deleted=[],version='gran-atlas-v3.26.0-bestiary-2';let fetches=0;
  const storage={async addAll(assets){for(const asset of assets){assert.equal(asset.cache,'reload','precache bypasses stale HTTP revisions');assert.ok(asset.url.startsWith(scope));cache.set(asset.url,'cached:./'+asset.url.slice(scope.length));}},async match(key){return cache.get(String(key));}};
  const ctx=vm.createContext({URL,Set,Promise,Request,Response,self:{registration:{scope},location:{origin:'https://atlas.example'},clients:{async claim(){}},addEventListener(name,fn){callbacks[name]=fn;}},caches:{async open(){return storage;},async keys(){return [version,'gran-atlas-v3.19.9-pulido-1','unrelated'];},async delete(key){deleted.push(key);}},async fetch(){fetches++;throw new Error('offline');}});
  vm.runInContext(fs.readFileSync('www/sw.js','utf8'),ctx);let install;callbacks.install({waitUntil(p){install=p;}});await install;

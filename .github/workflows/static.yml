@@ -65,6 +65,7 @@ jobs:
           node --check www/js/lab/atlas-lab-v3211.js
           node --check www/js/journal-ui-v3250.js
           node --check www/js/lab/journal-lab-v3250.js
+          node --check www/js/pwa-update-v3260.js
           node --check www/js/bestiary-ui-v3260.js
           node --check www/js/lab/bestiary-lab-v3260.js
           node --check www/js/app.js

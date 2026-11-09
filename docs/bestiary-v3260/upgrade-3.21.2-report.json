@@ -1,6 +1,7 @@
 {
   "from": "3.21.2",
   "to": "3.26.0",
+  "cache": "gran-atlas-v3.26.0-bestiary-2",
   "oldPlayableCells": 2,
   "northAmericaPlayableCells": 14,
   "southAmericaPlayableCells": 10,

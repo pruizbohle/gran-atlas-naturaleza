@@ -15,8 +15,12 @@
   "saveKey": "gran_atlas_v05",
   "newPermanentSaveFields": 0,
   "newPeriodicTasks": 0,
-  "nodeTestsPassed": 326,
+  "nodeTestsPassed": 327,
   "nodeTestsFailed": 0,
   "mobileGroupSizeCombinations": 16,
-  "physicalAndroidTested": false
+  "physicalAndroidTested": false,
+  "onlyObservedSexLabels": true,
+  "sameVersionWorkerHandoffVerified": true,
+  "pwaCache": "gran-atlas-v3.26.0-bestiary-2",
+  "freshUpdateEntry": "actualizar-v3260b.html"
 }
