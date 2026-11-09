@@ -1,0 +1,99 @@
+{
+  "status": "GM-02B incomplete, publication blocked; candidate cartography tested",
+  "version": "3.28.0 unchanged",
+  "installed": {
+    "species": 710,
+    "regions": 79,
+    "presences": 1329
+  },
+  "prepared": {
+    "identities": 97,
+    "sourceRegions": 8,
+    "sourcePresences": 131
+  },
+  "completedThisIncrement": [
+    "candidate geometry with eight cells and no decorative cells",
+    "all five previous meshes unchanged",
+    "isolated map laboratory with shipped AtlasUI and AtlasMap",
+    "Petauroides volans source treatment supported by pinned MDD evidence"
+  ],
+  "regression": {
+    "tests": 394,
+    "passed": 394,
+    "failed": 0,
+    "duration_ms": 47524.622114,
+    "command": "node --test tests/*.test.cjs",
+    "log": "regression-gm02b.txt"
+  },
+  "browser": {
+    "command": "node scripts/check-oceania-map-v3290.cjs",
+    "viewports": [
+      [
+        320,
+        640
+      ],
+      [
+        360,
+        740
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        412,
+        915
+      ]
+    ],
+    "scope": "candidate map only; actual shipped geometry, presentation and map controller",
+    "environment": "Chromium emulation, not physical Android",
+    "errors": 0,
+    "allEightCellsSelectable": true,
+    "actionVisible": true,
+    "horizontalOverflow": false,
+    "storageAccess": "forbidden by test; no access observed",
+    "results": "cartography/browser-results.json"
+  },
+  "existingProductionFileHashesUnchanged": 115,
+  "publication": {
+    "webReleased": false,
+    "apkGenerated": false,
+    "mergedToMain": false,
+    "workflowsTriggered": false
+  },
+  "remainingScientificReviews": [
+    "Apteryx haastii",
+    "Lophorina superba",
+    "Crocodylus novaeguineae",
+    "Trichoglossus haematodus"
+  ],
+  "network": {
+    "failure": "curl exit 56: CONNECT tunnel failed, response 403; no authority content received",
+    "testedDomains": [
+      "api.gbif.org",
+      "www.worldbirdnames.org",
+      "reptile-database.reptarium.cz",
+      "api.github.com"
+    ],
+    "draftSaved": true,
+    "requiresPublish": true,
+    "allowedDomainsProposed": [
+      "api.gbif.org",
+      "worldbirdnames.org",
+      "www.worldbirdnames.org",
+      "reptile-database.reptarium.cz",
+      "api.github.com",
+      "pruizbohle.github.io"
+    ],
+    "policyCurrentlyApplied": false
+  },
+  "remainingImplementation": [
+    "ecology and classification configuration",
+    "97 production species profiles",
+    "SVG drawings and rendered artistic audit",
+    "progression and production installation",
+    "actual encounters, journal, bestiary, museum integration tests",
+    "performance and offline validation of expanded catalog",
+    "Android build/signature and publication verification"
+  ]
+}

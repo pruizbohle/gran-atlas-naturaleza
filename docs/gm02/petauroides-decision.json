@@ -1,0 +1,18 @@
+{
+  "authority": "ASM Mammal Diversity Database",
+  "revision": "749c2de16a949099cfc13ccbd2b86d427641e844",
+  "source": "https://raw.githubusercontent.com/mammaldiversity/mammaldiversity.github.io/749c2de16a949099cfc13ccbd2b86d427641e844/_data/mdd.csv",
+  "sha256": "0d07a7e9409712fa86c1e3afadcf4c67bf4f9e16d5693a878e11ec1bf6860493",
+  "record": {
+    "sciName": "Petauroides_volans",
+    "id": "1000351",
+    "family": "Pseudocheiridae",
+    "taxonomyNotes": "previously included P. armillatus and P. minor, although this arrangement has not received widespread support and some authors maintain both species under P. volans",
+    "taxonomyNotesCitation": "Jackson, S. 2012. Gliding Mammals of the World. CSIRO Publishing, Collingwood, 215 pp. a#64138|Jackson, S. and Groves, C.P. 2015. Taxonomy of Australian Mammals. CSIRO Publishing, Clayton South, 529 pp. a#34474|McGregor, D.C., Padovan, A., Georges, A., Krockenberger, A., Yoon, H.-J. and Youngentob, K.N. 2020. Genetic evidence supports three previously described species of greater glider, _Petauroides volans_, _P. minor_, and _P. armillatus_. Scientific Reports 10(1):19284. doi:10.1038/s41598-020-76364-z",
+    "countryDistribution": "Australia"
+  },
+  "sourceRow": 1420,
+  "sourceSpeciesId": "ESP-0925",
+  "decision": "Retain Petauroides volans under the cited MDD treatment for the source record in Australia Oriental. Interpret the broad game region as compatible southeastern/eastern eucalypt forest subareas, not every part of eastern Australia. No inferred records for P. minor or P. armillatus, and no extra identities.",
+  "scope": "Identity treatment resolved for the existing source concept; species ecology and graphical profile still pending production integration."
+}

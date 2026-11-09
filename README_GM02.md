@@ -1,6 +1,8 @@
 # GM-02 · Oceanía — avance GM-02A, expansión no terminada
 
-**Estado: GM-02A preparada y probada; GM-02B pendiente. No se publica 3.29.0 ni APK.**
+**Estado: GM-02A preparada; GM-02B iniciada, incompleta y sin publicación. Se mantiene 3.28.0.**
+
+[Avance de GM-02B, evidencias y bloqueo de red](docs/gm02/progress-gm02b.md). Cartografía candidata validada en cuatro resoluciones y Petauroides resuelto con MDD; cuatro revisiones científicas siguen abiertas. Este avance no incorpora fauna jugable. Las secciones siguientes conservan el alcance de preparación de GM-02A; los resultados actuales están en el informe enlazado.
 
 Base integrada: `main`, commit `564c63c341465f79b556a0a589e0515ef8361e6a` (GM-01). La versión instalada continúa en **3.28.0**, con **710 identidades, 79 regiones y 1.329 presencias**. El contrato nuevo está preparado para integración y no se incluye en `index.html`, service worker ni instaladores del catálogo.
 

@@ -1,0 +1,47 @@
+{
+  "status": "candidate cartography only, not Oceanía gameplay",
+  "engine": "Chromium emulation; no physical Android test",
+  "results": [
+    {
+      "width": 320,
+      "height": 640,
+      "horizontalOverflow": false,
+      "mapFitsWidth": true,
+      "mapFitsHeight": true,
+      "actionVisible": true,
+      "selected": "oc_nueva_zelanda",
+      "edgeErrors": 0
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "horizontalOverflow": false,
+      "mapFitsWidth": true,
+      "mapFitsHeight": true,
+      "actionVisible": true,
+      "selected": "oc_nueva_zelanda",
+      "edgeErrors": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "horizontalOverflow": false,
+      "mapFitsWidth": true,
+      "mapFitsHeight": true,
+      "actionVisible": true,
+      "selected": "oc_nueva_zelanda",
+      "edgeErrors": 0
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "horizontalOverflow": false,
+      "mapFitsWidth": true,
+      "mapFitsHeight": true,
+      "actionVisible": true,
+      "selected": "oc_nueva_zelanda",
+      "edgeErrors": 0
+    }
+  ],
+  "errors": []
+}
