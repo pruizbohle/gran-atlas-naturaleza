@@ -1,0 +1,61 @@
+{
+  "stage": "GM-02A complete; GM-02B pending; Oceanía NOT playable",
+  "baseCommit": "564c63c341465f79b556a0a589e0515ef8361e6a",
+  "versionUnchanged": "3.28.0",
+  "prepared": {
+    "regions": 8,
+    "presences": 131,
+    "GM01Concepts": 96,
+    "resolvedDingo": 1,
+    "identities": 97,
+    "reusedIds": 0
+  },
+  "installed": {
+    "species": 710,
+    "regions": 79,
+    "presences": 1329,
+    "newOceaniaSpecies": 0,
+    "newOceaniaRegions": 0
+  },
+  "tests": {
+    "command": "node --test tests/*.test.cjs",
+    "total": 390,
+    "passed": 390,
+    "failed": 0,
+    "skipped": 0,
+    "duration_ms": 29897.388197,
+    "GM02Specific": 7
+  },
+  "reproduction": {
+    "command": "python scripts/build-oceania-gm02.py --check",
+    "passed": true
+  },
+  "compatibility": {
+    "previousProductionFilesHashChecked": 115,
+    "previousProductionFilesChanged": 0,
+    "addedModule": "www/js/oceania-data-v3290.js",
+    "moduleInstalledOrLoaded": false,
+    "saveKey": "gran_atlas_v05",
+    "saveFormatChanged": false
+  },
+  "publication": {
+    "newWebVersionPublished": false,
+    "apkBuilt": false,
+    "newActionsTriggered": false,
+    "mobileTestsForOceaniaPerformed": false,
+    "performanceForOceaniaMeasured": false,
+    "liveBaseVersionProbe": "GitHub Pages direct HTTP returned 403; repository base verified as 3.28.0"
+  },
+  "pending": [
+    "five original taxonomic reviews",
+    "ecology configuration",
+    "sprites and rendered visual audit",
+    "compact map",
+    "progression",
+    "production integration",
+    "laboratory",
+    "functional Oceania tests",
+    "mobile/offline/performance tests",
+    "release and APK/signature verification"
+  ]
+}

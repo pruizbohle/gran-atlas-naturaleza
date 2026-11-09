@@ -1,0 +1,30 @@
+{
+  "authority": "ASM Mammal Diversity Database",
+  "repositoryCommit": "749c2de16a949099cfc13ccbd2b86d427641e844",
+  "source": "https://raw.githubusercontent.com/mammaldiversity/mammaldiversity.github.io/749c2de16a949099cfc13ccbd2b86d427641e844/_data/mdd.csv",
+  "sha256": "0d07a7e9409712fa86c1e3afadcf4c67bf4f9e16d5693a878e11ec1bf6860493",
+  "consulted": "2026-11-09",
+  "license": "MIT; see MDD-LICENSE.txt",
+  "rows": [
+    {
+      "sciName": "Canis_familiaris",
+      "id": "1005940",
+      "mainCommonName": "Domestic Dog",
+      "otherCommonNames": "Dog|Dingo|Feral Dog|New Guinea Singing Dog|Village Dog",
+      "family": "Canidae",
+      "domestic": "1",
+      "taxonomyNotes": "domestic form of Canis lupus; includes dingo as a synonym",
+      "taxonomyNotesCitation": "Gentry, A., Clutton-Brock, J. and Groves, C.P. 2004. The naming of wild animal species and their domestic derivatives. Journal of Archaeological Science 31(5):645-651. doi:10.1016/j.jas.2003.10.006"
+    },
+    {
+      "sciName": "Canis_lupus",
+      "id": "1005943",
+      "mainCommonName": "Gray Wolf",
+      "otherCommonNames": "Wolf|Timber Wolf|Tundra Wolf|Arctic Wolf",
+      "family": "Canidae",
+      "domestic": "0",
+      "taxonomyNotes": "previously included C. lycaon and C. rufus; the subspecies chanco from the Tibetan Plateau has been considered by some to represent a distinct species, although this requires further investigation; wild form of Canis familiaris",
+      "taxonomyNotesCitation": "Gentry, A., Clutton-Brock, J. and Groves, C.P. 2004. The naming of wild animal species and their domestic derivatives. Journal of Archaeological Science 31(5):645-651. doi:10.1016/j.jas.2003.10.006|vonHoldt, B.M., Cahill, J.A., Fan, Z.-x., Gronau, I., Robinson, J., Pollinger, J.P., Shapiro, B., Wall, J. and Wayne, R.K. 2016. Whole-genome sequence analysis shows that two endemic species of North American wolf are admixtures of the coyote and gray wolf. Science Advances 2(7):e1501714. doi:10.1126/sciadv.1501714|Viranta, S., Werhahn, G. and Machado, F.A. 2025. Morphometric evidence for the differentiation of the Himalayan wolf _Canis lupus chanco_ (Canidae; Carnivora). Mammal Research 70(2):195-203. doi:10.1007/s13364-025-00793-2"
+    }
+  ]
+}

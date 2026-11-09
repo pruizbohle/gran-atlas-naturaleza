@@ -1,0 +1,22 @@
+{
+  "sourceScientific": "Canis familiaris",
+  "sourceSpeciesId": "ESP-0076",
+  "sourceFaunaRows": [
+    1298,
+    1313
+  ],
+  "sourceHexIds": [
+    "HX-07-18",
+    "HX-07-19"
+  ],
+  "scientific": "Canis familiaris",
+  "common": "Dingo",
+  "id": "oc_esp_canis_familiaris",
+  "authority": "ASM Mammal Diversity Database, fixed revision 749c2de16a949099cfc13ccbd2b86d427641e844, id 1005940",
+  "evidence": "authority-mdd.json: Canis_familiaris; taxonomyNotes includes dingo as a synonym; otherCommonNames includes Dingo",
+  "concept": "Australian dingo populations represented by the two source rows; not all domestic dogs in Australia.",
+  "treatment": "Retain source scientific name under the cited MDD treatment. Do not create Canis dingo or Canis lupus dingo as additional identities. Do not attach either presence to the existing Canis lupus ID.",
+  "futureIdentityRule": "Any future source record for the same accepted Canis familiaris identity must reuse this ID and retain population-level provenance. No second domestic-dog identity.",
+  "scientificLimit": "An explicit adopted authority treatment, not a claim of universal taxonomic consensus.",
+  "status": "resolved_for_integration_not_installed"
+}
