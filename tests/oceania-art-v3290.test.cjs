@@ -39,3 +39,10 @@ test('isolated art catalog reproduces the exact candidate production router and 
  const a=reviewHarness().window.__atlasTest;
  for(const[id,sp]of Object.entries(candidate.species))for(const skin of ['normal','alfa',...(sp.special.includes('Albino')?['albino']:[])])assert.equal(context.AtlasOceaniaArtReview.sprite(id,skin),a.getSpriteMarkup(id,skin));
 });
+test('new eye ink follows the existing pigment contract so configured albinos retain visible pupils',()=>{
+ const a=reviewHarness().window.__atlasTest;
+ for(const[id,sp]of Object.entries(candidate.species).filter(([,s])=>s.special.includes('Albino'))){
+  assert.match(a.getSpriteMarkup(id,'normal'),/<circle[^>]*fill="#202d29"/);
+  assert.match(a.getSpriteMarkup(id,'albino'),/<circle[^>]*fill="#ad858d"/);
+ }
+});

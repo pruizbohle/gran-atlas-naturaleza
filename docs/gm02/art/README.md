@@ -12,6 +12,12 @@ Son dibujos candidatos, todavía sin aprobación de publicación. Varios perfile
 
 Las especies nuevas no tenían una ilustración pública anterior: el laboratorio muestra expresamente esa ausencia. Su modo de comparación ofrece **referencias de estilo de otras identidades compatibles** (lobo gris, lobo marino del Cabo y águila real), sin sugerir que sean sinónimos ni mezclar progresos. Las correcciones mencionadas se refieren al primer render candidato, no a supuestos errores del catálogo anterior.
 
+## Cierre del pulido técnico y visual de esta etapa
+
+Se cerró una pasada adicional sobre las pupilas (círculos compatibles con el pase de pigmentación real), volumen local de wombat/ornitorrinco, trazos de pelaje/dedos y pies articulados de emú/casuario. Se inspeccionaron también las láminas a 64 px: [albinos](polished-albino-64.png) y [mamíferos](polished-mammals-64.png). [Resultado y hash del arte](polish-review.json). El contraste albino sigue la paleta suave del juego, conservando ahora las pupilas; no se modifica la pigmentación de los animales anteriores.
+
+Esta pasada queda terminada para el candidato. La aprobación de lanzamiento sigue separada y bloqueada por las revisiones científicas y verificaciones finales de distribución. No requiere una nueva aprobación manual del usuario para seguir desarrollando.
+
 ## Laboratorio y evidencias
 
 `www/laboratorio-arte-oceania-v3290.html` es independiente de partidas; no lee ni escribe almacenamiento. Comparte exactamente el catálogo, el router SVG, caché, pigmentación y decoración de especímenes del candidato integrado en el motor. No es una maqueta con otro renderizador.

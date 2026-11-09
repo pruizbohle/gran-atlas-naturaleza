@@ -1,0 +1,27 @@
+{
+  "stage": "final technical/visual polish pass for the candidate",
+  "artSha256": "7d5b996e369408a6ea803c8e77439a33a2c1be4e5dd7640eac11467d3e7f7140",
+  "identitiesReviewed": 97,
+  "configuredSvgCombinations": 212,
+  "visualReviewCompleteForCandidate": true,
+  "releaseValidated": false,
+  "scientificPending": [
+    "Apteryx haastii",
+    "Lophorina superba",
+    "Crocodylus novaeguineae",
+    "Trichoglossus haematodus"
+  ],
+  "changes": [
+    "Eye circles use the production pigment contract; albino pupils remain visible without changing the global pigment engine.",
+    "Local volume/shading on wombat and platypus; fine coat/digit marks on selected mammal and reptile profiles.",
+    "Articulated legs and distinct toes for emu/cassowary instead of triangular foot blocks."
+  ],
+  "evidence": [
+    "polished-albino-64.png",
+    "polished-mammals-64.png",
+    "mammals.png",
+    "birds.png",
+    "albino.png"
+  ],
+  "limitations": "The drawings remain stylized atlas illustrations. This closes the requested candidate polish pass, not a zoological certification or permission to publish unresolved concepts."
+}

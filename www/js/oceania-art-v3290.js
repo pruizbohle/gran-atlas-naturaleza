@@ -8,7 +8,7 @@ function render(sp,color,skin='normal',sex=null){
  const profile=sp.artProfile,g=sp.latin.split(' ')[0],latin=sp.latin,female=sex==='female';
  const ink='#37463b',c=color||sp.color,light='#d9d4b8',dark='#58634e',black='#38473f',white='#e8e3cd',blue='#658c9b',yellow='#c8b36d',red='#b27d66';
  const p=(d,fill=c,w=1.2,stroke=ink)=>`<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linejoin="round" stroke-linecap="round"/>`;
- const l=(d,col=ink,w=1.1)=>p(d,'none',w,col),e=(x,y,rx,ry,fill=c,w=1.1)=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${fill}" stroke="${ink}" stroke-width="${w}"/>`,eye=(x,y,r=1.4)=>e(x,y,r,r,ink,.4)+e(x-.35,y-.4,.35,.35,white,0);
+ const l=(d,col=ink,w=1.1)=>p(d,'none',w,col),e=(x,y,rx,ry,fill=c,w=1.1)=>`<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${fill}" stroke="${ink}" stroke-width="${w}"/>`,eye=(x,y,r=1.4)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="#202d29" stroke="${ink}" stroke-width=".4"/><circle cx="${x-.35}" cy="${y-.4}" r=".35" fill="#faf4eb"/>`;
  const spots=(points,fill=light,r=1.5)=>points.map(([x,y])=>e(x,y,r,r,fill,.3)).join('');
  let a='',route=profile;
  // Reuse the exact compatible canid/otariid anatomy rather than another marsupial body.
@@ -84,7 +84,7 @@ function render(sp,color,skin='normal',sex=null){
    for(let x=25;x<59;x+=5)a+=l(`M${x} 45q-3 8 0 16m3-12q-2 7 0 14`,speckled?light:dark,.8);
    a+=e(96,57,.65,.65,ink,.2);
   }else if(ratite){
-   a+=p('M23 68Q12 57 20 41Q29 27 50 31L64 41L66 62Q55 78 33 75Z',c)+p('M54 43Q62 34 62 22Q61 10 72 12L80 18L79 24Q68 26 68 44L62 57Z',profile==='cassowary'?blue:c)+p('M69 16L81 17L89 22L79 24L71 23Z',dark)+eye(74,17,1.2)+p('M35 70L37 87L27 94L46 92M52 69L55 87L48 94L65 92',c);
+   a+=p('M23 68Q12 57 20 41Q29 27 50 31L64 41L66 62Q55 78 33 75Z',c)+p('M54 43Q62 34 62 22Q61 10 72 12L80 18L79 24Q68 26 68 44L62 57Z',profile==='cassowary'?blue:c)+p('M69 16L81 17L89 22L79 24L71 23Z',dark)+eye(74,17,1.2)+p('M34 70Q34 79 37 86L36 90L41 90L41 85L39 72M51 69Q51 78 55 85L54 90L59 90L59 85L56 71',c)+l('M38 89L29 94M38 89L39 95M39 89L47 92M56 89L49 94M56 89L58 95M57 89L65 92',dark,1.3);
    for(let x=23;x<53;x+=5)a+=l(`M${x} 39q-3 6 0 11q-2 9 2 18`,light,.7);
    if(profile==='cassowary')a+=p('M64 14Q68 1 76 5L79 16Z','#9d9270')+p('M66 28L64 42L68 41L71 28Z',red,.5);else a+=l('M65 27L65 39',dark,3);
   }else if(penguin){
@@ -202,6 +202,12 @@ function render(sp,color,skin='normal',sex=null){
  }else if(profile==='barramundi'){
   a+=p('M25 52L5 34L11 55L5 75L26 64Z',dark)+p('M20 52Q44 29 75 42L95 48L99 55L91 61L75 71Q43 78 20 65Z',c)+p('M36 42L41 25L47 38L53 29L58 40M63 40Q75 25 82 37L84 44Z',dark)+p('M41 69L47 84L58 74L61 69M74 60Q62 55 58 69L73 69Z',dark)+eye(86,48,2)+l('M78 43Q69 55 79 67M89 56L98 53M89 56L96 61',dark,1)+l('M27 54Q49 43 69 48M29 63Q50 70 70 64',light,1.1);
  }else throw Error('Unimplemented Oceanian art profile: '+profile);
+ const shift=(hex,n)=>'#'+[1,3,5].map(i=>Math.max(0,Math.min(255,parseInt(hex.slice(i,i+2),16)+n)).toString(16).padStart(2,'0')).join('');
+ if(profile==='wombat')a+=p('M23 45Q42 33 62 42L60 47Q41 39 24 50Z',shift(c,12),0,'none')+p('M28 65Q45 73 65 66L61 71Q43 76 29 71Z',shift(c,-10),0,'none');
+ if(profile==='platypus')a+=p('M30 50Q48 40 68 47L66 51Q47 45 32 54Z',shift(c,13),0,'none')+p('M34 65Q54 73 75 62L72 67Q53 76 37 69Z',shift(c,-10),0,'none');
+ if(profile==='macropod'&&g!=='Setonix')a+=l('M43 46l2-3m-2 8 2-3m1 8 1-3M56 57l1 3',shift(c,-16),.65);
+ if(profile==='tree-kangaroo')a+=l('M76 65l3 2m-6-1 3 2M49 80l3 1m2-3 3 1',light,.7);
+ if(['frilled-lizard','bearded-dragon','water-dragon','tuatara','blue-tongued-skink'].includes(profile))a+=l('M35 79l-3 3m5-3-1 4m3-4 1 3M81 73l2 3m0-3 3 2',ink,.65);
  // Species-specific, deterministic fine marks follow anatomy; never use RNG or species-ID hashes.
  if(a==='')throw Error('Empty Oceanian illustration: '+sp.latin);
  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true" data-oc-profile="${route}" data-oc-species="${sp.latin.replace(/ /g,'-')}" data-zoological-family="${sp.family}" data-oc-sex="${sex||'base'}"><g stroke-linecap="round" stroke-linejoin="round">${a}</g></svg>`;

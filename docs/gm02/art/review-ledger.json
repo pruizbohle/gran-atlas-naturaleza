@@ -21,7 +21,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "d1cd72dd86f4d67b8b8f5bf3f6854980a28ede945043f10617a36fc1ec611c0d"
+      "normalSvgSha256": "eb66c747cec01e937c45137bb1aeec1a4105200fc76e3dbf4d9735c97dde8e64"
     },
     {
       "id": "oc_esp_apteryx_haastii",
@@ -36,7 +36,7 @@
       "configuredSex": false,
       "scientificStatus": "pending-authority-review",
       "productionApproved": false,
-      "normalSvgSha256": "e5f6f919217a6dc4da0355d85e57afdf180691e314240144bd8f53a2dcbd6d77"
+      "normalSvgSha256": "980f1e5af3d5336d60c73d88b2f3385933acf9e95b57312c460811a02614ab49"
     },
     {
       "id": "oc_esp_apteryx_mantelli",
@@ -51,7 +51,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "7b0c2a4979479d97c06f5fc630f220503ee64752630982a2d2411aec8aec0ac0"
+      "normalSvgSha256": "e1c47562950ad781b07689ec802e5b709b4ce7d04ec2abcd21ea8458def5fdec"
     },
     {
       "id": "oc_esp_apteryx_owenii",
@@ -66,7 +66,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "49a19d3542b85a020e117f6bbe2dbb59af38427cdfdf9c71736712db1c6256fd"
+      "normalSvgSha256": "c13d222d324d62572847547e34cfed5011da3453d1e48cb62a6ba73d9bd03ced"
     },
     {
       "id": "oc_esp_aquila_audax",
@@ -111,7 +111,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "7d3ccfc54425e5a5592e7e89d5982c8c39e3696e7514473a7cc091304b317fe1"
+      "normalSvgSha256": "a55d8f6c1cb0b3628dc4ddd40ea8267bdbf6c38c65bb29e186099b46b6ecd055"
     },
     {
       "id": "oc_esp_cacatua_galerita",
@@ -126,7 +126,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "da0f7646b047c2dbb019904e0b5b9d58cd47d618610992bed47f60916c4215fc"
+      "normalSvgSha256": "82c46442919109d1225fdd2866fadd7606aa1288e9b41e4db2a0f4c80d292786"
     },
     {
       "id": "oc_esp_callaeas_wilsoni",
@@ -141,7 +141,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "ad2e3caf3dfea37060bdc01f3775aafa9fb2eaf8fc7c84a0ff374590c60beaec"
+      "normalSvgSha256": "7db65c9a796e17a60b3673ef020ab18de9ed1ffbf242f705c9adde792aed9906"
     },
     {
       "id": "oc_esp_calyptorhynchus_banksii",
@@ -156,7 +156,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "16ad493b6589f433d5859b4d6d0c73a32b6a45e34ebf4dae415ea0c12ecd8ba2"
+      "normalSvgSha256": "25b94a09ee340936394f367793a9ff78a2a238399e35f7eabef0cb757f633da6"
     },
     {
       "id": "oc_esp_canis_familiaris",
@@ -186,7 +186,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "3b04cdd8b1fd8d4f0c8d3093e6bed57d1179baa4a779827a2d74c3fdf0529326"
+      "normalSvgSha256": "8ee3ac43cb12a87ae0112d5b5f7522aeab9aeeb8406eff87e7d87514eddae953"
     },
     {
       "id": "oc_esp_cephalorhynchus_hectori",
@@ -201,7 +201,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "d2764f7c5ad58d1cbc10c9c19d83b68d449fd45c3b9e81b1983303d453771e11"
+      "normalSvgSha256": "54c5768ca6bff4a7f97d0df0e2ebf8c5f26d41af749b62a2330ddf70b9c013b8"
     },
     {
       "id": "oc_esp_chlamydosaurus_kingii",
@@ -216,7 +216,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "2af19679b1ccdd1218068ef2f00ffd74f6366d190ef1c326393e8af26e57c441"
+      "normalSvgSha256": "4b04b947b1a8002111a0621cc386afa73ba984665f6edb0b5f331c809c2af766"
     },
     {
       "id": "oc_esp_cicinnurus_regius",
@@ -231,7 +231,7 @@
       "configuredSex": true,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "aa680280cf3fba8b1ed22ab1854e2d27361ca0a463ad330d712c571dda2e3321"
+      "normalSvgSha256": "979d93bd1a94e6cf4a11cef32b1bf3dcc35fceaa3850693e99fa0bfa5f4e337c"
     },
     {
       "id": "oc_esp_cicinnurus_respublica",
@@ -246,7 +246,7 @@
       "configuredSex": true,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "75dade8790ddba4865c3e9d1f09845f5a1ff7c09750c5f89ad99645e5abfaac8"
+      "normalSvgSha256": "ad3977f839e59c221ea877e08f247ef4291828ed8102d6bf8abc4a4d12c11c0c"
     },
     {
       "id": "oc_esp_crocodylus_johnstoni",
@@ -261,7 +261,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "2777e8aab28ec92bf93f2bf6834ad4e2b22b69c163c513cb88403bc6985f96d3"
+      "normalSvgSha256": "dea7fb3c69a51f79ee8df451232191a6c79d1e9482a1755e0067fb47abafca57"
     },
     {
       "id": "oc_esp_crocodylus_novaeguineae",
@@ -276,7 +276,7 @@
       "configuredSex": false,
       "scientificStatus": "pending-authority-review",
       "productionApproved": false,
-      "normalSvgSha256": "16a294d5097365ea0dc851e82fddec760c00f4522a2b2ea8f4900dc51ea46ebf"
+      "normalSvgSha256": "cb35acd11fbafd63c2dea4070ce1f878cedfb2cd9290c31416fc611c51957b9c"
     },
     {
       "id": "oc_esp_crocodylus_porosus",
@@ -291,7 +291,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "f681263ab6894ac5a78ba4063b2bc924e712c3595877b13f3e26fa5e34e25853"
+      "normalSvgSha256": "52d3a3ddd10573fc2b1d73c2f704b7305a54ef0dca9a2021fb62586a43f7a048"
     },
     {
       "id": "oc_esp_cygnus_atratus",
@@ -306,7 +306,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "605b0aa9bdd594f210c1d38b387a101e98133e5bf4f282faedf278d1a0650790"
+      "normalSvgSha256": "74dccf52052b98e28e85f1ef82ae822643d0b4a1428f24d41857da664f5082ec"
     },
     {
       "id": "oc_esp_dacelo_leachii",
@@ -321,7 +321,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "147ccb92dc8f56a87e58e12df1353b012be7320fd47db6fbda8b687a4f2219bf"
+      "normalSvgSha256": "7bade6890ef20fcd5aa95207c017a6c94c6da8e60f31fc73213e9e784ec51404"
     },
     {
       "id": "oc_esp_dacelo_novaeguineae",
@@ -336,7 +336,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "1297413a4dea635e2cabd6883ac6fd2f75a181526450a8ed481daf53c3b28b7a"
+      "normalSvgSha256": "8bb34c06e96d89893b0383d7d48ab994830cd8fe1d167758ca82c608922b5db9"
     },
     {
       "id": "oc_esp_dactylopsila_trivirgata",
@@ -351,7 +351,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "a02e2d53d6d987bf55adadbb89015efa7e412e2b2edd906e01169bbbddcb21d4"
+      "normalSvgSha256": "6baaac5689f4c97711efc0b6f1a5422c00e8617a0af6341b1a1c20674142c423"
     },
     {
       "id": "oc_esp_dasycercus_cristicauda",
@@ -366,7 +366,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "9c14cb03614bac4dc73b05ccf51278c5bb30599c3a68525596113f79c7a5dede"
+      "normalSvgSha256": "4ec0b9037ea595544424bc8faa613e8a6ae3ad2f9474bdb5a3408ca054b56cf3"
     },
     {
       "id": "oc_esp_dasyurus_viverrinus",
@@ -381,7 +381,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "8512a0f5edf677c1764589b4c1314361788b724045f9b27e880681f7753d2eb0"
+      "normalSvgSha256": "18095f3fe7d1f02dd90b280b9ef5da89988783e1dfa79933fc35af73eaea568e"
     },
     {
       "id": "oc_esp_dendrolagus_goodfellowi",
@@ -396,7 +396,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "738eaa649082074718bfb6740728a5a60ca4f350b7dcabd79094f478de93205a"
+      "normalSvgSha256": "42cba95e22cf0bd729959f72dd6425ea0a7f2f47ba3c7b133754c7f027d9e1aa"
     },
     {
       "id": "oc_esp_dendrolagus_lumholtzi",
@@ -411,7 +411,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "49098722109a51c2a1af598e9ee1bfe552e7cfd3aa9690ec552d08bc708dc9c1"
+      "normalSvgSha256": "ec574b3242906597c181a767b532790117ff404cdfd1b47ac654550e7e0588c2"
     },
     {
       "id": "oc_esp_dendrolagus_matschiei",
@@ -426,7 +426,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "a7cfd2eb5594f9d94a361bd66b60e664725440d9f4841abe93561d3637e01c2b"
+      "normalSvgSha256": "9a9bee213b1a9c7454a93675d225dcea0bea1eaa5e0aba888362057b000214d4"
     },
     {
       "id": "oc_esp_diomedea_epomophora",
@@ -441,7 +441,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "3f4031ccb90d51be2b796ad17ff596ed9555dc3de50e659253ad134d94fd9705"
+      "normalSvgSha256": "c4b0dcf4ffc1790529b514602867df7a09179fd3e5d89a55daa38c7e1c1541de"
     },
     {
       "id": "oc_esp_dromaius_novaehollandiae",
@@ -456,7 +456,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "c5ff4a5fedbdbd3f0996c84e8008ee487ad7336d192ef27b7b81eed1adefe6c5"
+      "normalSvgSha256": "b8297c32d70343af778f0e2336b53608650cf5ffa384c15e0b248f81e3525c28"
     },
     {
       "id": "oc_esp_eolophus_roseicapilla",
@@ -471,7 +471,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "85231f55b8deceb1aad3c9f0c6fa29c3f2a92fefc002e92962c030f6c465d5f3"
+      "normalSvgSha256": "0c7616d2916d25f9bbc5b01b06e5e4c4010f9e3c9411db098885079485c78368"
     },
     {
       "id": "oc_esp_gallirallus_australis",
@@ -486,7 +486,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "eb96990b3139439b095e17bd0585d50192ce00019bfececf0a30f46281903c0f"
+      "normalSvgSha256": "7967ddcdf0e112b785ffb99e5f86a08cfbe1f8762a31e18ad03a7c989b8257ec"
     },
     {
       "id": "oc_esp_gymnorhina_tibicen",
@@ -501,7 +501,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "b6b1cbf0b70bf0ccea94392d0e49346e89a8ccf7b68e7ef0f1852db64396509f"
+      "normalSvgSha256": "4849f125471f4a5a72b9475fac0a641bb543820130113216ac2ae6c5c669287d"
     },
     {
       "id": "oc_esp_harpyopsis_novaeguineae",
@@ -516,7 +516,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "6f3e9ac04451cc1e6402d4c3c491e479210e52c576a223bf3287e37c484393a9"
+      "normalSvgSha256": "e6bd32f2200f4f64f8b43ee9878bd4c6c21cd1872d202fc44f6b2e96b516933a"
     },
     {
       "id": "oc_esp_hemiphaga_novaeseelandiae",
@@ -531,7 +531,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "70b185de12e26334832dd5e0b42d2fbc29f3698c5a97e3ed379a9d7e229dc467"
+      "normalSvgSha256": "b95f97c44b91ff6376cef5f0c3b60e8eabb4c0980c3b44ba9a7fdfaf83eb3b1b"
     },
     {
       "id": "oc_esp_intellagama_lesueurii",
@@ -546,7 +546,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "993b86c8ac03955e120628deea11e1177fcf2972a8c71fcabe5cf64990accb0b"
+      "normalSvgSha256": "3a059868fbabd25e66492f6489ccc235ea4c95824ab5356ff7abcde79bfada81"
     },
     {
       "id": "oc_esp_lates_calcarifer",
@@ -561,7 +561,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "bb617c49f46cdc82fe4972702b39407fb54644df5c7bd5e6c34df13b095a6612"
+      "normalSvgSha256": "d633b1d9b0cac4e793775ba608d2089422f819a193dc07eff496a75353cbea83"
     },
     {
       "id": "oc_esp_lophorina_superba",
@@ -591,7 +591,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "075e883855004499eb7f1b417579c77d99e4c981fbbd48fe464c85bf7416d539"
+      "normalSvgSha256": "5b815ad7518f275a0cdbe7f9ebf8054d9b4ca7442f0cab13b328e13881e6938a"
     },
     {
       "id": "oc_esp_macropus_giganteus",
@@ -606,7 +606,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "3c3065b924a22e14291c7a4293242772523c18a4c1e9141b99ab12321132a6cb"
+      "normalSvgSha256": "0c42060d83836d91c1ef1e67c64bcbdc94c4a18e49091eb951390ac9b36eae3f"
     },
     {
       "id": "oc_esp_macrotis_lagotis",
@@ -621,7 +621,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "23063efb1eb62f2db172fa755c436ca7f13dd2cf989338cc4d66a1359cb9a0e1"
+      "normalSvgSha256": "0ecd0478e5e7e912a3960dee797b2377be7290d94dd866eca420d4982ae94d50"
     },
     {
       "id": "oc_esp_megadyptes_antipodes",
@@ -636,7 +636,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "5678f79fb2b24321768790d4908c0b3477ab8b249509ea11dccc3d07e83d50c2"
+      "normalSvgSha256": "e31bd3863aca3121a514ac07cf572d22461f52867dbfe9ee48529b9e49249ef3"
     },
     {
       "id": "oc_esp_melopsittacus_undulatus",
@@ -651,7 +651,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "8e4a4c9ea6f5a84c2dfb0679e2ec076ba4d85b4760047c662016651977c7ae57"
+      "normalSvgSha256": "6df27538aaf29d8a13f0df7d3d6b78849e75a350b668c033a0b78936524c2572"
     },
     {
       "id": "oc_esp_menura_novaehollandiae",
@@ -666,7 +666,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "3caececf5462faba2e1f36583926e6fd01b9860127119a56d1f17538a1382b9e"
+      "normalSvgSha256": "59a8348f23f453f1a44d3b4d3b75b1d7e0786b9e812a786076cd8a1bc9a2f18b"
     },
     {
       "id": "oc_esp_moloch_horridus",
@@ -681,7 +681,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "fdd943e898dcda6eb7c23840e38135b30d8394bf11eaea3cdea1c89dd966c94b"
+      "normalSvgSha256": "52e015b40de2d9e2e2f30917f88717c54f312b9e3a44a4e2a98800dd31749f30"
     },
     {
       "id": "oc_esp_morelia_spilota",
@@ -696,7 +696,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "bb1c1748154c2436e9c23715bcff779fd7ead454c989fe90b16eb36b1330d2c5"
+      "normalSvgSha256": "5f8a9d1230df8c745b22b78e0300f6f942ee8a63cb0fa536ee1f8f9b46b0dcec"
     },
     {
       "id": "oc_esp_morelia_viridis",
@@ -711,7 +711,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "2ab92f1e094c8c31cb5b62e9a02bb3e07ba2731bc1b125c5c40f26167f21c5fb"
+      "normalSvgSha256": "6b15326a86403975a609cbebe0b4114d6c708955d6eadb473887be42d5ab2576"
     },
     {
       "id": "oc_esp_myrmecobius_fasciatus",
@@ -726,7 +726,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "2d70bfa4d44baa1fc29d8742f6d95a2ac214d889506c43b47dcd15697c947339"
+      "normalSvgSha256": "ead9a9ec4e4b9eff413e9a9703b7de47a25893decfdab0ef582c26299b6f045f"
     },
     {
       "id": "oc_esp_neophema_chrysogaster",
@@ -741,7 +741,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "08e777b18f2ca9d2042ec7d13d6650e3be23b1275ec51f5c255a1b90b99286da"
+      "normalSvgSha256": "28f8a3c75d6dacfeebf719b7f42cf3f6f28667394c8457e0af2a8a499caad4a5"
     },
     {
       "id": "oc_esp_nestor_meridionalis",
@@ -756,7 +756,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "38b5686af28360747363ef4ef199665eb24fc9238d1964bc463367491877a31b"
+      "normalSvgSha256": "46f87201ce71745d7bcdada576504a608e328356e4ba839b0dcb4dc1ce5f193b"
     },
     {
       "id": "oc_esp_nestor_notabilis",
@@ -771,7 +771,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "4b8bdc3ef527237b7506bc0f01d5939de6573d532a2d899f334e6c4302f62eef"
+      "normalSvgSha256": "871be0374a0eb2a6f9a3dca5c27ba06c955b6008121682b48861918223dd9a76"
     },
     {
       "id": "oc_esp_ninox_strenua",
@@ -786,7 +786,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "5eef945a83749557f6bdc3853c7da67e1c2c06383873b791e4a2a29ef8fb610e"
+      "normalSvgSha256": "9ae5d69f4633d3173b4f3d174428437818177464322e26e5b371e989c077ae30"
     },
     {
       "id": "oc_esp_notamacropus_agilis",
@@ -801,7 +801,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "16020bfd7ba2d8c8200079bb3120c89b466570d8ca331907a9a722b9f9a00f43"
+      "normalSvgSha256": "b1a9175c2c798afbb71b6b8144eada6a72654a3658161860757a3141e3f1bdfd"
     },
     {
       "id": "oc_esp_notamacropus_eugenii",
@@ -816,7 +816,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "19debf73ec59295954d509e6d251766c576daa12662d57e3e398bb4da0573a78"
+      "normalSvgSha256": "c14e296728445169bdf8c8402a1d91f71ba7958b554f59d9d151e33e7abc37fc"
     },
     {
       "id": "oc_esp_notamacropus_rufogriseus",
@@ -831,7 +831,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "082279774cf2e43d3596628ea89262ad2b6c358277ad67443bcde6a11a3a2ef2"
+      "normalSvgSha256": "d0bdd848054a27790f4584420674a9a64018fbc0da2e853b91882fd23da53739"
     },
     {
       "id": "oc_esp_notechis_scutatus",
@@ -846,7 +846,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "7ca97fc5adcd6cdf554fe94ce4b8bf5a8c2598ccfa1747c82c798575bfe59f46"
+      "normalSvgSha256": "61e212519de18420e144f7b9600fbcb6275c14a2372859c0ee841fa554150f68"
     },
     {
       "id": "oc_esp_nymphicus_hollandicus",
@@ -861,7 +861,7 @@
       "configuredSex": true,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "d04c000eda0588b834b2938d7dff6a4bd21eba6ebf51e835df019d8378a17527"
+      "normalSvgSha256": "20e7bc632e030c409fea112a194f146c25d05cd4f1533a97e70c11c6f42f8f05"
     },
     {
       "id": "oc_esp_ornithorhynchus_anatinus",
@@ -876,7 +876,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "b654d69aa9172c2be38261bcc96308a616d591998eb7aa6f4354893ec56d4849"
+      "normalSvgSha256": "aef2eb1e35d3177ae98089c9f8e88ed80127a473f4016bc7f8aad323ba13473a"
     },
     {
       "id": "oc_esp_osphranter_rufus",
@@ -891,7 +891,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "4a50d9a178332fd247c08e172072ca2e84b938dbc0abe2ea21ea919cb021610d"
+      "normalSvgSha256": "b0673a97b2747d534235e64f87da068e2818c6dea69bc110bc2c5736fe1774dd"
     },
     {
       "id": "oc_esp_oxyuranus_microlepidotus",
@@ -906,7 +906,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "732cb28dcbc1760a6471e1b109892cb7f2a9e5bd571335ad6417144ef28e753c"
+      "normalSvgSha256": "ebd15eddb04f15cda5f43157cdbc25f83f53ed974f50a0c357da797038f5b576"
     },
     {
       "id": "oc_esp_oxyuranus_scutellatus",
@@ -921,7 +921,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "6ee852661f76fe8ff87b9aa31d35074409d4a513e727644df8c05948e24a0d83"
+      "normalSvgSha256": "a299d89326233c58543efa30cf78c069856873e0f24e65545700c81616206741"
     },
     {
       "id": "oc_esp_paradisaea_apoda",
@@ -936,7 +936,7 @@
       "configuredSex": true,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "9aaa1615908269f48e6dcd1e1d3a82986405f95f0ab3b2720708ea6c2eb5ea9b"
+      "normalSvgSha256": "1255a29a2f634303d8051ade17124e632f75937bb9b618868e64ce8cb85cc6e4"
     },
     {
       "id": "oc_esp_pelecanus_conspicillatus",
@@ -951,7 +951,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "0a585df4ab29ef26f0f5574827aaee03fe67edd21bb8abda4e17d25396506adf"
+      "normalSvgSha256": "05012c873b46461d0c1cf208ee4744c3630df7b64069de8cc3c7215c6964788c"
     },
     {
       "id": "oc_esp_petauroides_volans",
@@ -966,7 +966,7 @@
       "configuredSex": false,
       "scientificStatus": "MDD-source-concept-resolved",
       "productionApproved": false,
-      "normalSvgSha256": "4a360fb285af7a42ae8f472132cc8601ca6e006445e83c76ee3de3746dc13028"
+      "normalSvgSha256": "1490749ded20308e42a582afb926dfa3c8f85c21fe74f709a9356a1aafb689f5"
     },
     {
       "id": "oc_esp_petaurus_breviceps",
@@ -981,7 +981,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "c0c4ac413d9dac6815040146fa83b4b449e235b65abea76402952dcf3ed4c7b7"
+      "normalSvgSha256": "73631f4005200ace6ebf2ad10e087999b7fd2079b47863ed493f0580dfa2235c"
     },
     {
       "id": "oc_esp_petrogale_mareeba",
@@ -996,7 +996,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "959e6a3ba125b929398e5a759fc78517c577bcbc781d4e48b181cb20803ec154"
+      "normalSvgSha256": "a3a10b1dd700855f05d595d0ef216d5ac32fcb1a9583a573be0975954a5f61ba"
     },
     {
       "id": "oc_esp_petroica_australis",
@@ -1011,7 +1011,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "14483f6f37d17f20230130b376e27fa900a3dcbe3713bf0415b5c1b0b15e88dd"
+      "normalSvgSha256": "1cad69909a7b4c5955d53b1f5da2946378ea880b7ca40bcabf8ebbd924863957"
     },
     {
       "id": "oc_esp_phalanger_orientalis",
@@ -1026,7 +1026,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "0310272b094424e69af23fca8ae65d7668bb8e532de35bf125b5d14c722ac72d"
+      "normalSvgSha256": "78aa5b4ad0fac1b0791f0479a0287739b399ef70aa9bd1adbd85b3f7a4c576f7"
     },
     {
       "id": "oc_esp_phascolarctos_cinereus",
@@ -1041,7 +1041,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "04feabf2010d7e527e02fe69969984dca100128684500ab8bd9421a7f9ef8b23"
+      "normalSvgSha256": "d2f839b41a521a98d1cbb92dfac84910b9b822f49cc6e19e1d3d5538a77ac606"
     },
     {
       "id": "oc_esp_phylidonyris_novaehollandiae",
@@ -1056,7 +1056,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "43336a659bcb5248cc5c27f2d1a2092531f673856d01c4b361cfeacb7a896e5f"
+      "normalSvgSha256": "c8350eaeab4c6a2fca80dc143cf3bae0119a426962b2f462de5ffc05fc995a62"
     },
     {
       "id": "oc_esp_pogona_vitticeps",
@@ -1071,7 +1071,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "11c3445b8f12646ad027b516cfbff0bff0a9ae740813eb1cdb063749b08f79eb"
+      "normalSvgSha256": "35cb8d7115a96b27df71115442c549326fb32f5ad970d7c49e87dc8e546b97b9"
     },
     {
       "id": "oc_esp_porphyrio_hochstetteri",
@@ -1086,7 +1086,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "c05d3886f23a9112c2a4bac906444505416f132de5203dc6ffea8439bc62a09e"
+      "normalSvgSha256": "ee8efd020f431b9a3e5be81dd2f0792269ea9068bd71ba3dc99ee106e30999c7"
     },
     {
       "id": "oc_esp_pseudophryne_corroboree",
@@ -1101,7 +1101,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "8bc93a9111a1952227e327e8966e9073dc79b573d025cb06d8071a27c7b48b14"
+      "normalSvgSha256": "024b7f3b8914654b0f33f75ab69e367a5f3d9698250225def4445cfe204d7f63"
     },
     {
       "id": "oc_esp_pteropus_conspicillatus",
@@ -1116,7 +1116,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "58bb13c2ccab2480218b2dff203d708bbbe6c09b5c556e289acfb4cde0113349"
+      "normalSvgSha256": "e2ea277d9542dd397c83ab26523bc75ccb329a6b372fb79dfc28ef1ea54ccb8f"
     },
     {
       "id": "oc_esp_pteropus_poliocephalus",
@@ -1131,7 +1131,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "a6055cb93caf79acea5a6c2519cdfec8ef63b73eacb23679976c46e52d2d75d7"
+      "normalSvgSha256": "a1059cfcad310d70ab2079661ea3e5118d4de7e9280252ebfa2caef6682d1ebd"
     },
     {
       "id": "oc_esp_ptilonorhynchus_violaceus",
@@ -1146,7 +1146,7 @@
       "configuredSex": true,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "6152ce49701925214bedc5eefddd581026e440f1c5cbe4a99b5effb8dd9ec2a3"
+      "normalSvgSha256": "c708adba6aa44751f244a85b6c0552e70ad05bf8107ea42053b0c2870e3cef1a"
     },
     {
       "id": "oc_esp_ranoidea_caerulea",
@@ -1161,7 +1161,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "37e161c1edb57676e06a8915dd7aaf753fb6dbf1508f20511363bece9498dc9c"
+      "normalSvgSha256": "f2c58030f76c8a5e024952ff2cb683e25a128f12ad3f0e97034d58c0209d217e"
     },
     {
       "id": "oc_esp_rhipidura_fuliginosa",
@@ -1176,7 +1176,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "f44f4fd8a5481c27ff403edf985c3b89ed480f75b8dd45a3eed013ea2352b21d"
+      "normalSvgSha256": "72638eb2a5ddc5685a34f93f06b3f36852e7e5900b35f8562587dcc64970409b"
     },
     {
       "id": "oc_esp_sarcophilus_harrisii",
@@ -1191,7 +1191,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "a8248db128f367dd51dc81b9f7b2cf9a1a0258422e93b71a25a162839b0af428"
+      "normalSvgSha256": "3dbb6bc788e76a54a5b9078fc215eecd036b832c2cc3e30bd4ee25f1add2e913"
     },
     {
       "id": "oc_esp_seleucidis_melanoleucus",
@@ -1206,7 +1206,7 @@
       "configuredSex": true,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "2ef743efea666dceef4659b6eeb54920adb75bcc6f88429e3d31fb642464000b"
+      "normalSvgSha256": "84649299bdf1b36ade93ad715cee5df992d6c87bffc98fc4a3f374ca2e26f11e"
     },
     {
       "id": "oc_esp_setonix_brachyurus",
@@ -1221,7 +1221,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "8e28fa605f900a1c27b0cbf512d25db7c6104d99e009e54108f4de9b1fc3b49b"
+      "normalSvgSha256": "d8e22e27a5121fdb6d28147cb134b48e33a2d7776aecf0e9017fc606654cfd33"
     },
     {
       "id": "oc_esp_sphenodon_punctatus",
@@ -1236,7 +1236,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "537e18a97f9c9a1acee3c70285cdc47c390a6914d30d7d0ac3b185cfef95c2f0"
+      "normalSvgSha256": "ab9c7f568cfdb8374d198945136f0310b67d61bd5e45895aa8a32494a5c69fe2"
     },
     {
       "id": "oc_esp_spilocuscus_maculatus",
@@ -1251,7 +1251,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "ab6bcc30a9ae16ed5be18fe7f848cc30eca297aa9c7c9db7933300ea9a902e3b"
+      "normalSvgSha256": "9337ac2231cae37f018f500fe4c52febfea56d8dee6c05322c4029ba6660d183"
     },
     {
       "id": "oc_esp_strigops_habroptilus",
@@ -1266,7 +1266,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "88f25b510b5e30c9c5c8a487c4e31694cd46b57eba4550ceb1bfcd39d071546d"
+      "normalSvgSha256": "7f23056e311327ef8f5877b600628b256a7ec1ef4076092e76646ae3e4e7c588"
     },
     {
       "id": "oc_esp_tachyglossus_aculeatus",
@@ -1281,7 +1281,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "3e73348561cab6cd8ea87c6f00f2efb56bda9e8ed9549073309e2b38bcfe1a90"
+      "normalSvgSha256": "9025baa8fe6aa2b92222963e9ebc41eccd67ef971e1627eca532dacf3986ff42"
     },
     {
       "id": "oc_esp_thylogale_billardierii",
@@ -1296,7 +1296,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "62bee2c9f4e4a342f5f0019e67d1b69ed7e31b887a1f083d240446f88d6523e6"
+      "normalSvgSha256": "af4f90b46d0d9712df423c0a8db98ccdac01a7fd2d151d7ec9f56b4e616d99dd"
     },
     {
       "id": "oc_esp_tiliqua_scincoides",
@@ -1311,7 +1311,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "0266b0715aa9ff768fc693c62e4438feaed5ba6827fc8e219959aded0e47484d"
+      "normalSvgSha256": "972ba07bf93786ec5afc0754a5aa595f4e7f24b7064ffd8d745a60d2be3d6a27"
     },
     {
       "id": "oc_esp_trichoglossus_haematodus",
@@ -1326,7 +1326,7 @@
       "configuredSex": false,
       "scientificStatus": "pending-authority-review",
       "productionApproved": false,
-      "normalSvgSha256": "638cf7b34f216a0afe9f501d0e49f1a83593978c8cf17d5708bc0d203232118d"
+      "normalSvgSha256": "b47b98706e51b1aed47a51363f816c2561c8f347a44363c925159f93c3fe0a82"
     },
     {
       "id": "oc_esp_trichoglossus_moluccanus",
@@ -1341,7 +1341,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "6f5297c754250297243a60affb93122004e20fa0fdff939c6fb7fb0f247665dc"
+      "normalSvgSha256": "35604f76963b1b1d8dc19cac6d5c0acaed7fdecf083a9a969c43786fce6f6ed4"
     },
     {
       "id": "oc_esp_trichosurus_vulpecula",
@@ -1356,7 +1356,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "647ed4c329d4ae1f14081be6102903d5f42fc4e713537386d82fecb6064e7d5d"
+      "normalSvgSha256": "7450caa12ab7aaecaef982b3729cc5e9b2cb8228486921e369a7b076b7af8b3b"
     },
     {
       "id": "oc_esp_varanus_giganteus",
@@ -1371,7 +1371,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "098b94f32784ccc71028398676c7fbf6b4a15fb3509f5adf41109f7191f7b593"
+      "normalSvgSha256": "028c4596f827fbf809ba07efeec1899a6e21f609ae467dd8a0478000449ca299"
     },
     {
       "id": "oc_esp_varanus_gouldii",
@@ -1386,7 +1386,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "a1feab4cc208afb0dc567d1b0fc8086976b5d4f5ae2371bfae9a712bcafb3110"
+      "normalSvgSha256": "12c30ad877ff88797eab0ed3da98c59a287aaaa0c59b29d25c2ebd8806e9bfe6"
     },
     {
       "id": "oc_esp_varanus_salvadorii",
@@ -1401,7 +1401,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "8667bff8050a823abd3b3833847fcb3776a1ff4559a016060d045802bb048c9a"
+      "normalSvgSha256": "e0ae0bd8286b3dd012bba3820d895f9cf3251bb68bb47ce612877de66b1c81a4"
     },
     {
       "id": "oc_esp_vombatus_ursinus",
@@ -1416,7 +1416,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "20ef98773c973c16281f679d17e0931e17484e4479cdfdeee6474895727075ef"
+      "normalSvgSha256": "a42b54683293175214bbe4fac7e60ce65c4b2dc541c9377489e488f4adef4217"
     },
     {
       "id": "oc_esp_wallabia_bicolor",
@@ -1431,7 +1431,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "bda49225e9df78881d2f1540c703fff7c49c7320628aab80dc680a6825eb73be"
+      "normalSvgSha256": "7f6beceb223e97fa959bd80d67a2b4f2e4e83f797202d14ab48f10b2f4035655"
     },
     {
       "id": "oc_esp_zaglossus_bartoni",
@@ -1446,7 +1446,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "82354ab263ccbde573b71cccdda712a2781297b9e9458010d2158ca076110ef3"
+      "normalSvgSha256": "e8c15f919db993e167f06523115f3cb946b6398b4d219dcc7d09bc9f3d6098bf"
     },
     {
       "id": "oc_esp_zanda_latirostris",
@@ -1461,7 +1461,7 @@
       "configuredSex": false,
       "scientificStatus": "source-concept-retained",
       "productionApproved": false,
-      "normalSvgSha256": "9e0d9451d4154dc68ff516d696d7356e3e4f8eb1a5c84d5f77472357fbc06695"
+      "normalSvgSha256": "b767b28da7364db2211e029ad2620f139c79489044cc5133916ba1ea4e69fe89"
     }
   ]
 }
