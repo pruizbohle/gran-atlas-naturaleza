@@ -62,3 +62,10 @@ test('runtime generation is deterministic, explicitly unapproved and absent from
  for(const path of ['www/index.html','www/sw.js'])assert.ok(!fs.readFileSync(path,'utf8').includes('oceania-runtime-v3290'));
  assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.28.0');
 });
+test('candidate additions preserve global observation rates and naturalist interval, and enter existing museum exhibitions',()=>{
+ const old=harness().window.__atlasTest,a=reviewHarness({},null,{museum3270:true}).window.__atlasTest;
+ for(const key of ['autoInterval','manualSearchChance','automaticSearchChance','manualEncounterBonus','helperBonus','knowledgeBonus'])assert.deepEqual(json(a[key]()),json(old[key]()),key);
+ const s=a.state,id='oc_esp_ornithorhynchus_anatinus';s.money=1e6;s.discovered[id]=true;s.stages[id]=5;s.published[id]=true;s.sightings[id]=500;
+ const before=s.money,rate=a.museumRate(),price=a.exhibitPrice(id);a.exhibitAnimal(id);
+ assert.equal(s.museum.exhibits[id],true);assert.equal(s.money,before-price);assert.ok(a.museumRate()>rate);assert.ok(a.renderMuseumSamples(s.museum.exhibits,1).includes('Ornitorrinco'));s.museumView='samples';assert.ok(a.renderMuseum().includes('Ornitorrinco'));
+});

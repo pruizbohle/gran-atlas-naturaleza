@@ -1,0 +1,15 @@
+{
+  "status": "passed isolated offline candidate",
+  "after": {
+    "region": "oc_nueva_zelanda",
+    "sightings": 42,
+    "unlocked": true,
+    "research": 1,
+    "species": 807,
+    "regions": 87,
+    "controller": true
+  },
+  "errors": [],
+  "scope": "Production 3.28 worker/asset URL list served from a private test origin. Candidate app response includes its new modules inline. No real save or public worker modified. Final split-module 3.29 PWA packaging is not approved or validated by this test.",
+  "environment": "Chromium emulation only"
+}

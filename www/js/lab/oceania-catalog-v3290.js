@@ -1954,7 +1954,7 @@ if(southAmerica3230){
  Object.assign(SEXUAL_DIMORPHISM,oceaniaReview.dimorphism);Object.assign(SPECIMEN_CATEGORIES,oceaniaReview.categories);
  const previousOceaniaTaxonomy=taxonomyInfo;
  taxonomyInfo=function(id){return SPECIES[id]?.origin==='oc3290'?SPECIES[id].taxonomy:previousOceaniaTaxonomy(id);};
- 
+
 
 
 function sexSpriteMarkup(id,sex){
