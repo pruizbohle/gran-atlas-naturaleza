@@ -2313,6 +2313,9 @@ window.AtlasSaveBridge={
      state.regionUnlocked[state.currentRegion]=true;
      state.regionsVisited=state.regionsVisited&&typeof state.regionsVisited==='object'&&!Array.isArray(state.regionsVisited)?state.regionsVisited:{};
      state.regionsVisited[state.currentRegion]=true;
+ // EC3300 BEGIN import-commerce
+     normalizeCommerce3300(state);
+ // EC3300 END import-commerce
      // Evitar calcular un intervalo offline obsoleto al actualizar la partida.
      state.lastTick=Date.now();
      autoAccum=0;autoDiaryBuffer={searches:0,hits:0,knowledge:0};
@@ -4911,6 +4914,9 @@ function handlePanelAction(e){
     const el=e.target.closest?.('[data-action]');
     if(!el||!panel.contains(el)||el.disabled)return;
     const act=el.dataset.action; const id=el.dataset.id;
+ // EC3300 BEGIN actions
+    if(act.startsWith('trade-')){tradeAction3300(act,id);return;}
+ // EC3300 END actions
  // E-3280 BEGIN actions
     if(act.startsWith('er28-')){developmentAction3280(act,id);return;}
  // E-3280 END actions
@@ -5079,6 +5085,10 @@ function tick(){
  }
  if(museumRate()>0){state.money+=museumRate()*(elapsed/1000);}
  const returns=processVoyages(now);
+ // EC3300 BEGIN tick
+ const tradeReturns=settleTrade3300(now);syncTrade3300(now);
+ if(tradeReturns&&tab==='expeditions'&&navigationTab3300==='commerce')renderPanel();
+ // EC3300 END tick
  if(tab==='museum'&&state.museumView==='relicts'){
   const ready=state.museum.relictSurveys.filter(job=>job.endAt<=now&&!job.readyNotified);
   if(ready.length){ready.forEach(job=>job.readyNotified=true);renderPanel();}
@@ -6195,6 +6205,92 @@ function spriteFor(kind,color,skin,id){
 }
 
 // initial unlock checks and migration
+// EC3300 BEGIN commerce
+const TRADE_ROUTES=[
+ {id:'coastal_trade',name:'Cabotaje de suministros',hours:4,cost:120,knowledge:20,prestige:0,money:180,rewards:{parchment_scrap:3,pressed_flower:2,river_pebble:3}},
+ {id:'workshop_trade',name:'Proveedores del taller',hours:8,cost:280,knowledge:50,prestige:10,money:420,rewards:{polished_lens:2,brass_shard:2,carved_wood:3}},
+ {id:'archive_trade',name:'Caravana de cartógrafos',hours:12,cost:500,knowledge:90,prestige:53,money:750,rewards:{old_ink:2,parchment_scrap:5,brass_shard:3,polished_lens:2}},
+ {id:'ocean_trade',name:'Travesía de abastecimiento',hours:24,cost:900,knowledge:160,prestige:125,money:1350,rewards:{brass_shard:5,polished_lens:4,old_ink:3,carved_wood:6}}
+];
+const TRADE_MARKET={parchment_scrap:45,pressed_flower:40,river_pebble:30,carved_wood:80,polished_lens:160,brass_shard:200,old_ink:180};
+const TRADE_BARTERS=[
+ {id:'stone_lens',requires:{river_pebble:8},rewards:{polished_lens:1}},
+ {id:'coin_brass',requires:{ancient_coin:4},rewards:{brass_shard:1}},
+ {id:'flower_ink',requires:{pressed_flower:6},rewards:{old_ink:1}},
+ {id:'wood_paper',requires:{carved_wood:3},rewards:{parchment_scrap:2}},
+ {id:'trace_feather',requires:{animal_trace:6},rewards:{owl_feather:1}}
+];
+let navigationTab3300='expeditions';
+function normalizeCommerce3300(s){
+ const c=s.commerce&&typeof s.commerce==='object'&&!Array.isArray(s.commerce)?s.commerce:{};
+ c.jobs=Array.isArray(c.jobs)?c.jobs.filter(j=>j&&TRADE_ROUTES.some(r=>r.id===j.route)&&Number.isSafeInteger(j.id)&&j.id>0&&Number.isFinite(j.startedAt)&&Number.isFinite(j.endAt)&&j.endAt-j.startedAt===TRADE_ROUTES.find(r=>r.id===j.route).hours*3600000):[];
+ // A duplicate job id is a single departure, never another reward.
+ c.jobs=c.jobs.filter((j,i,a)=>a.findIndex(x=>x.id===j.id)===i);
+ c.history=Array.isArray(c.history)?c.history.filter(j=>j&&Number.isSafeInteger(j.id)).slice(-12):[];
+ c.seq=Math.max(0,Number.isSafeInteger(c.seq)?c.seq:0,...c.jobs.map(j=>j.id),...c.history.map(j=>j.id));
+ c.jobs=c.jobs.filter(j=>!c.history.some(h=>h.id===j.id));
+ s.commerce=c;return c;
+}
+function tradeTransaction3300(change){
+ const before={money:state.money,knowledge:state.knowledge,inventory:{...state.inventory},commerce:JSON.parse(JSON.stringify(state.commerce))};
+ if(!change())return false;
+ if(!persist()){Object.assign(state,before);return false;}
+ return true;
+}
+function tradeCanStart3300(route){return !!route&&!!state.upgrades.shipyard&&state.commerce.jobs.length<1&&state.prestige>=route.prestige&&state.money>=route.cost&&state.knowledge>=route.knowledge;}
+function startTrade3300(id){
+ const r=TRADE_ROUTES.find(r=>r.id===id);if(!tradeCanStart3300(r))return false;
+ const now=Date.now();if(!Number.isFinite(now))return false;
+ return tradeTransaction3300(()=>{state.money-=r.cost;state.knowledge-=r.knowledge;state.commerce.jobs.push({id:++state.commerce.seq,route:r.id,startedAt:now,endAt:now+r.hours*3600000});return true;});
+}
+function settleTrade3300(now=Date.now()){
+ if(!Number.isFinite(now))return false;
+ // Never accept a caller's future clock as authorization for an early reward.
+ now=Math.min(now,Date.now());
+ const due=state.commerce.jobs.filter(j=>j.endAt<=now);if(!due.length)return false;
+ return tradeTransaction3300(()=>{
+  for(const j of due){
+   const r=TRADE_ROUTES.find(r=>r.id===j.route);if(!r||state.commerce.history.some(h=>h.id===j.id))continue;
+   state.money+=r.money;for(const[id,n]of Object.entries(r.rewards))addInventory(id,n);
+   state.commerce.history.push({id:j.id,route:r.id,at:now,money:r.money,rewards:{...r.rewards}});
+  }
+  const ids=new Set(due.map(j=>j.id));state.commerce.jobs=state.commerce.jobs.filter(j=>!ids.has(j.id));state.commerce.history=state.commerce.history.slice(-12);return true;
+ });
+}
+function buyTrade3300(id){
+ const cost=Object.hasOwn(TRADE_MARKET,id)?TRADE_MARKET[id]:0;if(!state.upgrades.shipyard||!cost||state.money<cost)return false;
+ return tradeTransaction3300(()=>{state.money-=cost;addInventory(id,1);return true;});
+}
+function barterTrade3300(id){
+ const r=TRADE_BARTERS.find(r=>r.id===id);if(!state.upgrades.shipyard||!r||!Object.entries(r.requires).every(([id,n])=>(state.inventory[id]||0)>=n))return false;
+ return tradeTransaction3300(()=>{for(const[id,n]of Object.entries(r.requires))state.inventory[id]-=n;for(const[id,n]of Object.entries(r.rewards))addInventory(id,n);return true;});
+}
+function tradeMaterials3300(items){return Object.entries(items).map(([id,n])=>`${esc(ITEMS[id].name)} ×${n}`).join(' · ');}
+function tradeCountdown3300(end,now=Date.now()){const s=Math.max(0,Math.ceil((end-now)/1000));return `${Math.floor(s/3600)} h ${String(Math.floor(s/60)%60).padStart(2,'0')} min ${String(s%60).padStart(2,'0')} s`;}
+function navigationTabs3300(){return `<nav class="trade-tabs" aria-label="Mesa de navegación"><button class="btn ${navigationTab3300==='expeditions'?'':'alt'}" data-action="trade-tab" data-id="expeditions" aria-pressed="${navigationTab3300==='expeditions'}">Expediciones</button><button class="btn ${navigationTab3300==='commerce'?'':'alt'}" data-action="trade-tab" data-id="commerce" aria-pressed="${navigationTab3300==='commerce'}">Comercio</button></nav>`;}
+function renderTrade3300(){
+ const c=state.commerce,ship=!!state.upgrades.shipyard;
+ const button=(action,id,label,enabled)=>`<button class="btn" data-action="trade-${action}" data-id="${id}" ${enabled?'':'disabled'}>${label}</button>`;
+ return `<section class="card trade-root"><h3>Mesa de navegación · Comercio</h3><p class="small">Una plaza comercial independiente. Plazos de tiempo real, incluso sin conexión y con el juego cerrado. El prestigio no se consume. ${ship?'Astillero construido.':'Requiere investigar Astillero básico.'}</p><div class="trade-links">${button('inventory','taller','Materiales y recetas',true)}${button('research','astillero','Consultar astillero',true)}</div><h4>Expediciones comerciales</h4><div class="trade-grid">${TRADE_ROUTES.map(r=>`<article class="req trade-route"><strong>${r.name}</strong><p class="small">${r.hours} horas · £${r.cost} + ${r.knowledge} conocimiento<br>Requiere astillero, plaza libre y ${r.prestige} prestigio.<br>Regreso garantizado: £${r.money} · ${tradeMaterials3300(r.rewards)}</p>${button('start',r.id,'Enviar · '+r.hours+' h',tradeCanStart3300(r))}</article>`).join('')}</div><h4>En curso · ${c.jobs.length}/1</h4>${c.jobs.map(j=>`<article class="req"><strong>${TRADE_ROUTES.find(r=>r.id===j.route).name}</strong><p class="small" data-trade-countdown="${j.endAt}">${tradeCountdown3300(j.endAt)}</p><span class="small">Abono automático al regresar.</span></article>`).join('')||'<p class="small">No hay viajes comerciales activos.</p>'}<h4>Mercado</h4><p class="small">Compra de una unidad por operación. Los mapas y el prestigio se obtienen explorando. Sin venta de objetos ni dinero real.</p><div class="trade-grid">${Object.entries(TRADE_MARKET).map(([id,cost])=>`<article class="req"><strong>${ITEMS[id].name}</strong><p class="small">Tienes <span data-trade-stock="${id}">${state.inventory[id]||0}</span> · £${cost}/unidad</p>${button('buy',id,'Comprar · £'+cost,ship&&state.money>=cost)}</article>`).join('')}</div><h4>Trueque</h4><p class="small">Equivalencias fijas en un solo sentido; no generan libras.</p><div class="trade-grid">${TRADE_BARTERS.map(r=>`<article class="req"><p class="small">${tradeMaterials3300(r.requires)} → <strong>${tradeMaterials3300(r.rewards)}</strong></p>${button('barter',r.id,'Intercambiar',ship&&Object.entries(r.requires).every(([id,n])=>(state.inventory[id]||0)>=n))}</article>`).join('')}</div><h4>Libro de comercio</h4>${[...c.history].reverse().map(h=>`<article class="req"><strong>${esc(TRADE_ROUTES.find(r=>r.id===h.route)?.name||'Viaje histórico')}</strong><p class="small">${developmentDate3280(h.at)} · £${h.money} · ${tradeMaterials3300(h.rewards||{})}</p></article>`).join('')||'<p class="small">Aún no hay regresos comerciales.</p>'}</section>`;
+}
+const scientificExpeditions3300=renderExpeditions;
+renderExpeditions=function(){return navigationTabs3300()+(navigationTab3300==='commerce'?renderTrade3300():scientificExpeditions3300());};
+function tradeAction3300(action,id){
+ if(action==='trade-tab'){navigationTab3300=id==='commerce'?'commerce':'expeditions';renderPanel();return;}
+ if(action==='trade-inventory'){state.inventoryView='taller';tab='objects';renderPanel();return;}
+ if(action==='trade-research'){developmentAction3280('er28-research','astillero');return;}
+ const changed=action==='trade-start'?startTrade3300(id):action==='trade-buy'?buyTrade3300(id):action==='trade-barter'?barterTrade3300(id):false;
+ if(changed){renderCounters();renderPanel();}
+}
+function syncTrade3300(now){
+ if(tab!=='expeditions'||navigationTab3300!=='commerce')return;
+ for(const node of panel.querySelectorAll('[data-trade-countdown]')){const value=tradeCountdown3300(Number(node.dataset.tradeCountdown),now);if(node.textContent!==value)node.textContent=value;}
+ for(const node of panel.querySelectorAll('[data-action="trade-start"], [data-action="trade-buy"], [data-action="trade-barter"]')){
+  const id=node.dataset.id;node.disabled=node.dataset.action==='trade-start'?!tradeCanStart3300(TRADE_ROUTES.find(r=>r.id===id)):node.dataset.action==='trade-buy'?!state.upgrades.shipyard||state.money<TRADE_MARKET[id]:!state.upgrades.shipyard||!Object.entries(TRADE_BARTERS.find(r=>r.id===id).requires).every(([id,n])=>(state.inventory[id]||0)>=n);
+ }
+}
+normalizeCommerce3300(state);
+// EC3300 END commerce
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 render();
 })();

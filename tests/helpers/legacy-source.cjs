@@ -17,5 +17,7 @@ function historicalVoyageState(snapshot){const s=JSON.parse(JSON.stringify(snaps
 module.exports={withoutDevelopment3280,historicalVoyageState,withoutBestiaryPagination,withoutJournalPresentation,withoutBestiaryPresentation,withoutMuseumPresentation};
 
 // Remove only marked additive 3.29 installation/routing seams for immutable older fixtures.
-function withoutOceania3290(source){return source.replace(/\n\/\/ OC3290 BEGIN [^\n]+\n[\s\S]*?\n\/\/ OC3290 END [^\n]+\n/g,'').replace(/\n[ \t]*\/\* OC3290 BEGIN (art|sex) \*\/[\s\S]*?\/\* OC3290 END \1 \*\//g,'').replaceAll('3.29.0','3.28.0');}
+function withoutCommerce3300(source){return source.replace(/^[ \t]*\/\/ EC3300 BEGIN [^\n]+\n[\s\S]*?\/\/ EC3300 END [^\n]+\n/gm,'').replaceAll('3.30.0','3.29.0');}
+module.exports.withoutCommerce3300=withoutCommerce3300;
+function withoutOceania3290(source){return withoutCommerce3300(source).replace(/\n\/\/ OC3290 BEGIN [^\n]+\n[\s\S]*?\n\/\/ OC3290 END [^\n]+\n/g,'').replace(/\n[ \t]*\/\* OC3290 BEGIN (art|sex) \*\/[\s\S]*?\/\* OC3290 END \1 \*\//g,'').replaceAll('3.29.0','3.28.0');}
 module.exports.withoutOceania3290=withoutOceania3290;
