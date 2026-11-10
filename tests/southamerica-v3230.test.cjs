@@ -1,7 +1,10 @@
 'use strict';
 const {withoutBestiaryPagination}=require('./helpers/legacy-source.cjs');
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto'),cp=require('node:child_process');
-const {harness}=require('./helpers/live-game.cjs'),data=require('../www/js/southamerica-data-v3230.js'),source=require('./fixtures/southamerica-fauna-excel.json'),baseline=require('./fixtures/catalog-before-southamerica-v3221.json'),geo=require('../www/js/southamerica-geography-v3230.js'),oldGeo=require('../www/js/atlas-geography-v3211b.js');
+// Historical expansion contract; 3.30 progression is tested in commerce-v3300.test.cjs.
+const historicalHarness=require('./helpers/live-game.cjs').harness;
+const harness=(store,backup,options={})=>historicalHarness(store,backup,{...options,commerce3300:false});
+const data=require('../www/js/southamerica-data-v3230.js'),source=require('./fixtures/southamerica-fauna-excel.json'),baseline=require('./fixtures/catalog-before-southamerica-v3221.json'),geo=require('../www/js/southamerica-geography-v3230.js'),oldGeo=require('../www/js/atlas-geography-v3211b.js');
 const json=x=>JSON.parse(JSON.stringify(x)),hash=x=>crypto.createHash('sha256').update(x).digest('hex'),g=harness().window.__atlasTest,regions=g.REGIONS.filter(r=>r.continent==='Sudamérica'),ids=[...new Set(regions.flatMap(r=>r.species))];
 function review(){const c=vm.createContext({});for(const n of ['fish-art-v3191','herp-art-v3192','bird-art-v3193','mammal-art-v3194','legendary-art-v3197','northamerica-data-v3220','northamerica-polish-v3221','northamerica-art-v3220','southamerica-data-v3230','southamerica-polish-v3231','southamerica-art-v3230','lab/southamerica-catalog-v3230'])vm.runInContext(fs.readFileSync('www/js/'+n+'.js','utf8'),c);return c;}
 const skins=id=>['normal',...(g.SPECIES[id].special.includes('Albino')?['albino']:[]),...(g.SPECIES[id].special.includes('Melánico')?['melanico']:[]),...(g.SPECIMEN_CATEGORIES[id]||[]).map(c=>({Notable:'alfa','Épico':'epico',Excepcional:'excepcional',Legendario:'legendario'}[c]))];

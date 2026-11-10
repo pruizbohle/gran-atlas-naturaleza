@@ -2113,6 +2113,9 @@ function initialState(){
     log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial de prueba: £420. En Corona puedes simular más libras.'],
     upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,africaUnlocked:0,newWorldUnlocked:0,northAmericaUnlocked:0,fundingTier:1,groupTier:0,censusTier:0,autoGroup:0,autoCensus:0,mammalogy:0,ornithology:0,herpetology:0,ichthyology:0,ethology:0,paleoTier:0,museumIncomeTier:0,excavationTier:0,specimenPrep:0,relictSurveyTier:0,relictFieldTier:0}, purchases:{},
     regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0,excavations:[],excavationSeq:0,excavationsCompleted:0,curationPoints:0,excavationHistory:[],relictLeads:{},relictSurveys:[],relictSurveySeq:0,relictSurveyHistory:[],relictResearchPoints:0,relictAchievements:{}}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', bestiaryDescending:false, bestiaryHideMonographs:false, crownCoins:0, lastEncounter:null,
+ // EC3300 BEGIN initial-commerce
+    commerce:{seq:0,jobs:[],history:[]},craftedItems:{},
+ // EC3300 END initial-commerce
     lastTick:Date.now(), lastGrant:0, autoHourly:{}, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
   };
 }
@@ -2314,7 +2317,7 @@ window.AtlasSaveBridge={
      state.regionsVisited=state.regionsVisited&&typeof state.regionsVisited==='object'&&!Array.isArray(state.regionsVisited)?state.regionsVisited:{};
      state.regionsVisited[state.currentRegion]=true;
  // EC3300 BEGIN import-commerce
-     normalizeCommerce3300(state);
+     normalizeCommerce3300(state);migrateProgression3300(state);
  // EC3300 END import-commerce
      // Evitar calcular un intervalo offline obsoleto al actualizar la partida.
      state.lastTick=Date.now();
@@ -4405,6 +4408,9 @@ function craftItem(id){
    }
   });
   addInventory(id,1);
+ // EC3300 BEGIN crafted-credit
+  state.craftedItems=state.craftedItems||{};state.craftedItems[id]=true;
+ // EC3300 END crafted-credit
   pushLog('🛠️ Fabricado: '+item.name);
   render();
 }
@@ -6271,13 +6277,13 @@ function navigationTabs3300(){return `<nav class="trade-tabs" aria-label="Mesa d
 function renderTrade3300(){
  const c=state.commerce,ship=!!state.upgrades.shipyard;
  const button=(action,id,label,enabled)=>`<button class="btn" data-action="trade-${action}" data-id="${id}" ${enabled?'':'disabled'}>${label}</button>`;
- return `<section class="card trade-root"><h3>Mesa de navegación · Comercio</h3><p class="small">Una plaza comercial independiente. Plazos de tiempo real, incluso sin conexión y con el juego cerrado. El prestigio no se consume. ${ship?'Astillero construido.':'Requiere investigar Astillero básico.'}</p><div class="trade-links">${button('inventory','taller','Materiales y recetas',true)}${button('research','astillero','Consultar astillero',true)}</div><h4>Expediciones comerciales</h4><div class="trade-grid">${TRADE_ROUTES.map(r=>`<article class="req trade-route"><strong>${r.name}</strong><p class="small">${r.hours} horas · £${r.cost} + ${r.knowledge} conocimiento<br>Requiere astillero, plaza libre y ${r.prestige} prestigio.<br>Regreso garantizado: £${r.money} · ${tradeMaterials3300(r.rewards)}</p>${button('start',r.id,'Enviar · '+r.hours+' h',tradeCanStart3300(r))}</article>`).join('')}</div><h4>En curso · ${c.jobs.length}/1</h4>${c.jobs.map(j=>`<article class="req"><strong>${TRADE_ROUTES.find(r=>r.id===j.route).name}</strong><p class="small" data-trade-countdown="${j.endAt}">${tradeCountdown3300(j.endAt)}</p><span class="small">Abono automático al regresar.</span></article>`).join('')||'<p class="small">No hay viajes comerciales activos.</p>'}<h4>Mercado</h4><p class="small">Compra de una unidad por operación. Los mapas y el prestigio se obtienen explorando. Sin venta de objetos ni dinero real.</p><div class="trade-grid">${Object.entries(TRADE_MARKET).map(([id,cost])=>`<article class="req"><strong>${ITEMS[id].name}</strong><p class="small">Tienes <span data-trade-stock="${id}">${state.inventory[id]||0}</span> · £${cost}/unidad</p>${button('buy',id,'Comprar · £'+cost,ship&&state.money>=cost)}</article>`).join('')}</div><h4>Trueque</h4><p class="small">Equivalencias fijas en un solo sentido; no generan libras.</p><div class="trade-grid">${TRADE_BARTERS.map(r=>`<article class="req"><p class="small">${tradeMaterials3300(r.requires)} → <strong>${tradeMaterials3300(r.rewards)}</strong></p>${button('barter',r.id,'Intercambiar',ship&&Object.entries(r.requires).every(([id,n])=>(state.inventory[id]||0)>=n))}</article>`).join('')}</div><h4>Libro de comercio</h4>${[...c.history].reverse().map(h=>`<article class="req"><strong>${esc(TRADE_ROUTES.find(r=>r.id===h.route)?.name||'Viaje histórico')}</strong><p class="small">${developmentDate3280(h.at)} · £${h.money} · ${tradeMaterials3300(h.rewards||{})}</p></article>`).join('')||'<p class="small">Aún no hay regresos comerciales.</p>'}</section>`;
+ return `<section class="card trade-root"><h3>Mesa de navegación · Comercio</h3><p class="small">Una plaza comercial independiente. Plazos de tiempo real, incluso sin conexión y con el juego cerrado. El prestigio no se consume. ${ship?'Astillero construido.':'Requiere investigar Astillero básico.'}</p><div class="trade-links">${button('inventory','taller','Materiales y recetas',true)}${button('inventory','coleccionables','Cuadrante y mapas',true)}${button('research','astillero','Consultar astillero',true)}</div><h4>Expediciones comerciales</h4><div class="trade-grid">${TRADE_ROUTES.map(r=>`<article class="req trade-route"><strong>${r.name}</strong><p class="small">${r.hours} horas · £${r.cost} + ${r.knowledge} conocimiento<br>Requiere astillero, plaza libre y ${r.prestige} prestigio.<br>Regreso garantizado: £${r.money} · ${tradeMaterials3300(r.rewards)}</p>${button('start',r.id,'Enviar · '+r.hours+' h',tradeCanStart3300(r))}</article>`).join('')}</div><h4>En curso · ${c.jobs.length}/1</h4>${c.jobs.map(j=>`<article class="req"><strong>${TRADE_ROUTES.find(r=>r.id===j.route).name}</strong><p class="small" data-trade-countdown="${j.endAt}">${tradeCountdown3300(j.endAt)}</p><span class="small">Abono automático al regresar.</span></article>`).join('')||'<p class="small">No hay viajes comerciales activos.</p>'}<h4>Mercado</h4><p class="small">Compra de una unidad por operación. Los mapas y el prestigio se obtienen explorando. Sin venta de objetos ni dinero real.</p><div class="trade-grid">${Object.entries(TRADE_MARKET).map(([id,cost])=>`<article class="req"><strong>${ITEMS[id].name}</strong><p class="small">Tienes <span data-trade-stock="${id}">${state.inventory[id]||0}</span> · £${cost}/unidad</p>${button('buy',id,'Comprar · £'+cost,ship&&state.money>=cost)}</article>`).join('')}</div><h4>Trueque</h4><p class="small">Equivalencias fijas en un solo sentido; no generan libras.</p><div class="trade-grid">${TRADE_BARTERS.map(r=>`<article class="req"><p class="small">${tradeMaterials3300(r.requires)} → <strong>${tradeMaterials3300(r.rewards)}</strong></p>${button('barter',r.id,'Intercambiar',ship&&Object.entries(r.requires).every(([id,n])=>(state.inventory[id]||0)>=n))}</article>`).join('')}</div><h4>Libro de comercio</h4>${[...c.history].reverse().map(h=>`<article class="req"><strong>${esc(TRADE_ROUTES.find(r=>r.id===h.route)?.name||'Viaje histórico')}</strong><p class="small">${developmentDate3280(h.at)} · £${h.money} · ${tradeMaterials3300(h.rewards||{})}</p></article>`).join('')||'<p class="small">Aún no hay regresos comerciales.</p>'}</section>`;
 }
 const scientificExpeditions3300=renderExpeditions;
 renderExpeditions=function(){return navigationTabs3300()+(navigationTab3300==='commerce'?renderTrade3300():scientificExpeditions3300());};
 function tradeAction3300(action,id){
  if(action==='trade-tab'){navigationTab3300=id==='commerce'?'commerce':'expeditions';renderPanel();return;}
- if(action==='trade-inventory'){state.inventoryView='taller';tab='objects';renderPanel();return;}
+ if(action==='trade-inventory'){state.inventoryView=id==='coleccionables'?'coleccionables':'taller';tab='objects';renderPanel();return;}
  if(action==='trade-research'){developmentAction3280('er28-research','astillero');return;}
  const changed=action==='trade-start'?startTrade3300(id):action==='trade-buy'?buyTrade3300(id):action==='trade-barter'?barterTrade3300(id):false;
  if(changed){renderCounters();renderPanel();}
@@ -6291,6 +6297,60 @@ function syncTrade3300(now){
 }
 normalizeCommerce3300(state);
 // EC3300 END commerce
+// EC3300 BEGIN progression
+const CONTINENT_RULES3300={
+ 'Europa':{initial:0,step:1,items:[]},
+ 'Asia':{initial:10,step:2,items:[]},
+ 'África':{initial:53,step:3,items:['brass_compass']},
+ 'Norteamérica':{initial:125,step:4,items:['brass_compass','oceanic_quadrant']},
+ 'Sudamérica':{initial:182,step:5,items:['brass_compass','oceanic_quadrant','field_telescope']},
+ 'Oceanía':{initial:233,step:6,items:['brass_compass','oceanic_quadrant','field_telescope','scholar_hat']}
+};
+const CONTINENT_RESEARCH3300={asia_1:'Asia',africa_1:'África',norteamerica_1:'Norteamérica',sudamerica_1:'Sudamérica',oceania_1:'Oceanía'};
+// Oceanía installs frozen source records; clone runtime records before changing requirements.
+for(let i=0;i<REGIONS.length;i++)if(Object.isFrozen(REGIONS[i]))REGIONS[i]={...REGIONS[i],unlock:{...REGIONS[i].unlock}};
+const historicalPrestige3300=new Map(REGIONS.map(r=>[r.id,r.unlock.prestige]));
+for(const [continent,rule]of Object.entries(CONTINENT_RULES3300)){
+ const ordered=REGIONS.filter(r=>r.continent===continent).sort((a,b)=>historicalPrestige3300.get(a.id)-historicalPrestige3300.get(b.id));
+ ordered.forEach((r,i)=>{r.unlock={...r.unlock,prestige:rule.initial+i*rule.step};});
+}
+function craftedRequirements3300(continent){return CONTINENT_RULES3300[continent]?.items||[];}
+function craftedReady3300(continent){return craftedRequirements3300(continent).every(id=>state.craftedItems?.[id]===true);}
+function migrateProgression3300(s){
+ s.craftedItems=s.craftedItems&&typeof s.craftedItems==='object'&&!Array.isArray(s.craftedItems)?s.craftedItems:{};
+ if(s.progressionVersion3300!==1){
+  for(const id of Object.keys(RECIPES))if((s.inventory?.[id]||0)>0||Object.values(s.equipment||{}).includes(id))s.craftedItems[id]=true;
+  // Existing continental access proves the historical preparation. Do not revoke it.
+  for(const [node,c]of Object.entries(CONTINENT_RESEARCH3300)){
+   if(s.purchases?.[node]||REGIONS.some(r=>r.continent===c&&(s.regionUnlocked?.[r.id]||s.currentRegion===r.id)))for(const id of craftedRequirements3300(c))s.craftedItems[id]=true;
+  }
+  if(s.purchases?.nuevo_mundo_1)s.craftedItems.oceanic_quadrant=true;
+  s.progressionVersion3300=1;
+ }
+ return s;
+}
+const previousRegionAccess3300=regionRequirementsMet;
+regionRequirementsMet=function(r){if(!r)return false;if(state.regionUnlocked?.[r.id]||r.id===state.currentRegion)return true;return craftedReady3300(r.continent)&&previousRegionAccess3300(r);};
+const previousAtlasModel3300=atlasRegionModel;
+atlasRegionModel=function(r){
+ const m=previousAtlasModel3300(r);
+ m.requirements.push(...craftedRequirements3300(r.continent).map(id=>({label:'Fabricado: '+ITEMS[id].name+' · acreditación permanente',met:state.craftedItems?.[id]===true})));
+ if(m.status==='bloqueada')m.summary=m.requirements.find(x=>!x.met&&!x.context)?.label||'Requisitos pendientes';
+ return m;
+};
+const previousCanBuy3300=canBuy;
+canBuy=function(node){const c=CONTINENT_RESEARCH3300[node?.id];return (!c||craftedReady3300(c))&&previousCanBuy3300(node);};
+for(const [node,c]of Object.entries(CONTINENT_RESEARCH3300)){
+ const n=RESEARCH_NODES.find(n=>n.id===node),items=craftedRequirements3300(c);
+ if(n&&items.length)n.desc+=' Preparación acumulativa fabricada (no se consume): '+items.map(id=>ITEMS[id].name).join(', ')+'.';
+}
+const previousObjects3300=renderObjects;
+renderObjects=function(){
+ const requirements=Object.entries(CONTINENT_RULES3300).filter(([,r])=>r.items.length).map(([c,r])=>`<p class="small"><b>${c}</b>: ${r.items.map(id=>`${state.craftedItems?.[id]===true?'✓':'○'} ${ITEMS[id].name}`).join(' · ')}</p>`).join('');
+ return `<section class="trade-requirements"><strong>Preparación continental · objetos fabricados</strong><p class="small">Acreditación permanente, incluso si mejoras o utilizas el objeto. Prestigio y objetos no se consumen al abrir regiones. Las recetas están en Taller.</p>${requirements}</section>`+previousObjects3300();
+};
+migrateProgression3300(state);
+// EC3300 END progression
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 render();
 })();

@@ -1,6 +1,9 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),cp=require('node:child_process'),crypto=require('node:crypto');
-const {harness}=require('./helpers/live-game.cjs'),data=require('../www/js/northamerica-data-v3220.js'),source=require('./fixtures/northamerica-fauna-excel.json'),geo=require('../www/js/atlas-geography-v3211b.js');
+// Historical expansion contract; 3.30 progression is tested in commerce-v3300.test.cjs.
+const historicalHarness=require('./helpers/live-game.cjs').harness;
+const harness=(store,backup,options={})=>historicalHarness(store,backup,{...options,commerce3300:false});
+const data=require('../www/js/northamerica-data-v3220.js'),source=require('./fixtures/northamerica-fauna-excel.json'),geo=require('../www/js/atlas-geography-v3211b.js');
 const json=x=>JSON.parse(JSON.stringify(x)),old=harness({},null,{legacy:true}).window.__atlasTest,game=harness().window.__atlasTest;
 const regions=game.REGIONS.filter(r=>r.continent==='Norteamérica'),newIDs=Object.keys(data.species),allIDs=[...new Set(regions.flatMap(r=>r.species))];
 test('North America preserves all 206 original Excel presences, 14 names and 129 source binomials as 128 canonical identities',()=>{
