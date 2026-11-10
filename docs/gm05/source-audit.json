@@ -1,0 +1,120 @@
+{
+  "baseline": "9da9808",
+  "production": {
+    "identities": 945,
+    "regions": 113,
+    "presences": 1744,
+    "unreachable": 0
+  },
+  "source": {
+    "catalogRows": 900,
+    "faunaRows": 1574,
+    "cells": 209,
+    "populated": 103,
+    "reserved": 106
+  },
+  "sourceStatuses": {
+    "implementada": 1148,
+    "incorporada_posteriormente": 415,
+    "conflicto_identidad": 10,
+    "diferencia_distribucion_taxonomica_documentada": 1
+  },
+  "canonicalRuntimeIds": 898,
+  "retained47WithoutCanonicalSource": [
+    "af_aguila_pescadora",
+    "af_alcatraz_cabo",
+    "af_arrui",
+    "af_asno_somali",
+    "af_calao_trompetero",
+    "af_camaleon_namaqua",
+    "af_cernicalo_seychelles",
+    "af_chacal_dorado",
+    "af_ciervo_berberia",
+    "af_cobra_egipcia",
+    "af_cocodrilo_hocico",
+    "af_colobo",
+    "af_cormoran_cabo",
+    "af_delfin_jorobado_indico",
+    "af_dikdik_guenther",
+    "af_dromedario",
+    "af_fosa_ave",
+    "af_ganso_alas_azules",
+    "af_gato_montes_africano",
+    "af_gecko_diurno",
+    "af_geco_patas_palmeadas",
+    "af_gorila_montana",
+    "af_grulla_carunculada",
+    "af_inseparable_lilian",
+    "af_jacana_africana",
+    "af_jirafa_rothschild",
+    "af_lechwe_negro",
+    "af_lechwe_rojo",
+    "af_leopardo",
+    "af_lobo_marino_cabo",
+    "af_loro_gris",
+    "af_loro_negro_seychelles",
+    "af_martin_malaquita",
+    "af_nyala_comun",
+    "af_ostrero_africano",
+    "af_picatartes_gris",
+    "af_pinguino_africano",
+    "af_potamoquero",
+    "af_puku",
+    "af_sitatunga",
+    "af_springbok",
+    "af_tortuga_aldabra",
+    "af_zorro_cabo",
+    "asia_esp_0401",
+    "ciguena_blanca",
+    "martin_pescador",
+    "meloncillo"
+  ],
+  "issues": {
+    "Contexto histórico": 59,
+    "Resuelta": 21,
+    "Pendiente": 22,
+    "Sin defecto demostrado": 311
+  },
+  "historicalCounterDiscrepancy": {
+    "file": "docs/gm01/summary.json",
+    "stored": [
+      209,
+      0
+    ],
+    "correctDerivedView": [
+      103,
+      106
+    ],
+    "historyUnchanged": true
+  },
+  "historicalManifest": {
+    "docs/gm01/README.md": "745700d4ac129ce1207b154bff0498c9ce77ea81d7799f73c26c7d40bf1dce15",
+    "docs/gm01/art-audit.csv": "2d625cc9472720f75773a4397fc159d8bed9bcfa8c5e7aa1e7b9ec0a4d7df57f",
+    "docs/gm01/audit-tests.txt": "a47c01939caa1ea9d3c46b59f141f2197e879b5502079053b655f7bd138f032f",
+    "docs/gm01/decisions.json": "37bcc1c011ec11b5cbd9ffb997497ecd63bf62246d4df3cd39b65d8f68984834",
+    "docs/gm01/game-snapshot.json": "462d5439a656c70ec095008c553c47294a449c46715161eae9fadc6b587143eb",
+    "docs/gm01/implementation-plan.md": "7be8ac0d30d004bdb860f06a5a68b861041d7a79d3544d6d1f8f9d15d0d6b490",
+    "docs/gm01/issues.csv": "fb844559f9c970bde7318b21d6ff0817bded543d86858e0bb5656622e0e034b2",
+    "docs/gm01/presences.csv": "c3825c69907708351c7a93a541a2dd82fcd4edbcedaa6762d2e44dfcf174606c",
+    "docs/gm01/regions.csv": "b1008de75c70bbae3a236deb30f64d9a82fe8c7d8629ffb349e3f241bc186702",
+    "docs/gm01/regression-tests.txt": "245fb61704b782cd12393f39902bb651bec6c0ceae0bbd030c94bb0f0b37e2d1",
+    "docs/gm01/source-notes.json": "4a6086ccc9331638ac1518139123ccbad83646343cd7bd001cd5812f35246ff9",
+    "docs/gm01/species.csv": "200c577405bd29d2ab5ce33af231bb0f011e725299929b2ee7ac1f1f5f5ea3b8",
+    "docs/gm01/summary.json": "3f744eba873b7c0edce8d0cc40ee1fea4e7744f764e7eea22337e1c27e6f6799",
+    "docs/gm01/summary.md": "b39594f375dac0d1d735d94121c043459f1b5de80a28f15687dce35d28aa8c4c",
+    "docs/gm01/validation.json": "e25ac2b6f39e9cf2ff0848259f5fb7b1c5594a1be62c5fead1243815ca3db796"
+  },
+  "subsequentCommits": {
+    "GM02": "09c0d82d5c12cf453feba1bec10ae32868978ddd",
+    "GM03": "efe8ede1dc04437526558146be66570d9911e9db",
+    "GM04A": "1a8d00c5ad9d23f1087eef027acbb7b991900b61",
+    "GM04B": "83cc4acf358a0dc1d72d5b3fe6f0f4d8cd972d6e",
+    "GM04C": "0fe4f672162a93e7a8676dba59f24ef15dea604d"
+  },
+  "limits": [
+    "No identity merged, deleted or added.",
+    "945 structural/runtime records checked; individual current external authorities not consulted for every taxon.",
+    "Family is not explicitly represented in 487 legacy identities; no inferred family is certified.",
+    "Range conflicts and uncertain source localities remain pending."
+  ]
+}

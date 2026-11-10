@@ -1,0 +1,142 @@
+[
+  {
+    "query": "Panthera pardus",
+    "authority": "GBIF species matching API, response preserved in evidence/gbif-priority.json; previous decisions in frozen GM01 and AM04 consulted",
+    "productionIds": [
+      "asia_esp_0401",
+      "af_leopardo"
+    ],
+    "regions": [
+      "HX-03-13",
+      "HX-03-16",
+      "HX-04-16",
+      "HX-05-15",
+      "HX-05-16",
+      "HX-07-10",
+      "HX-08-08",
+      "HX-08-11",
+      "HX-09-09",
+      "HX-09-11",
+      "HX-11-10"
+    ],
+    "evidenceQueries": [
+      "Panthera pardus",
+      "Panthera pardus tulliana",
+      "Panthera pardus pardus"
+    ],
+    "status": "pending-source-intent-or-locality",
+    "decision": "Keep existing IDs, scientific concepts and distributions; no merge, removal or inferred population.",
+    "specificLimit": "HIGHERRANK result for tulliana does not establish subspecies synonymy.",
+    "gameConsequences": "No save migration or fauna change."
+  },
+  {
+    "query": "Gorilla beringei",
+    "authority": "GBIF species matching API, response preserved in evidence/gbif-priority.json; previous decisions in frozen GM01 and AM04 consulted",
+    "productionIds": [
+      "af_gorila_montana"
+    ],
+    "regions": [
+      "HX-09-11"
+    ],
+    "evidenceQueries": [
+      "Gorilla beringei",
+      "Gorilla beringei beringei"
+    ],
+    "status": "pending-source-intent-or-locality",
+    "decision": "Keep existing IDs, scientific concepts and distributions; no merge, removal or inferred population.",
+    "specificLimit": "Source species rank does not certify coverage of all eastern gorillas.",
+    "gameConsequences": "No save migration or fauna change."
+  },
+  {
+    "query": "Canis aureus",
+    "authority": "GBIF species matching API, response preserved in evidence/gbif-priority.json; previous decisions in frozen GM01 and AM04 consulted",
+    "productionIds": [
+      "chacal_dorado",
+      "af_chacal_dorado"
+    ],
+    "regions": [
+      "HX-03-09",
+      "HX-06-08",
+      "HX-06-09",
+      "HX-07-08"
+    ],
+    "evidenceQueries": [
+      "Canis aureus",
+      "Canis lupaster"
+    ],
+    "status": "difference-documented; no alias",
+    "decision": "Keep existing IDs, scientific concepts and distributions; no merge, removal or inferred population.",
+    "specificLimit": "aureus and lupaster match different accepted species; Maghreb source row is a documented difference.",
+    "gameConsequences": "No save migration or fauna change."
+  },
+  {
+    "query": "Arapaima gigas",
+    "authority": "GBIF species matching API, response preserved in evidence/gbif-priority.json; previous decisions in frozen GM01 and AM04 consulted",
+    "productionIds": [
+      "sa_esp_arapaima_gigas"
+    ],
+    "regions": [
+      "sa_amazonia"
+    ],
+    "evidenceQueries": [
+      "Arapaima gigas"
+    ],
+    "status": "pending-source-intent-or-locality",
+    "decision": "Keep existing IDs, scientific concepts and distributions; no merge, removal or inferred population.",
+    "specificLimit": "Accepted name matching does not resolve geographic or species-complex delimitation.",
+    "gameConsequences": "No save migration or fauna change."
+  },
+  {
+    "query": "Electrophorus electricus",
+    "authority": "GBIF species matching API, response preserved in evidence/gbif-priority.json; previous decisions in frozen GM01 and AM04 consulted",
+    "productionIds": [
+      "sa_esp_electrophorus_electricus"
+    ],
+    "regions": [
+      "sa_amazonia"
+    ],
+    "evidenceQueries": [
+      "Electrophorus electricus"
+    ],
+    "status": "pending-source-intent-or-locality",
+    "decision": "Keep existing IDs, scientific concepts and distributions; no merge, removal or inferred population.",
+    "specificLimit": "Accepted name matching does not resolve geographic or species-complex delimitation.",
+    "gameConsequences": "No save migration or fauna change."
+  },
+  {
+    "query": "Leopardus colocola",
+    "authority": "GBIF species matching API, response preserved in evidence/gbif-priority.json; previous decisions in frozen GM01 and AM04 consulted",
+    "productionIds": [
+      "sa_esp_leopardus_colocola"
+    ],
+    "regions": [
+      "sa_pampas",
+      "sa_patagonia_y_tierra_del_fuego"
+    ],
+    "evidenceQueries": [
+      "Leopardus colocola"
+    ],
+    "status": "pending-source-intent-or-locality",
+    "decision": "Keep existing IDs, scientific concepts and distributions; no merge, removal or inferred population.",
+    "specificLimit": "GBIF treats colocola as synonym of colocolo; this does not resolve the inherited broad pampas/Patagonia concept or support reallocating records.",
+    "gameConsequences": "No save migration or fauna change."
+  },
+  {
+    "query": "Leopardus tigrinus",
+    "authority": "GBIF species matching API, response preserved in evidence/gbif-priority.json; previous decisions in frozen GM01 and AM04 consulted",
+    "productionIds": [
+      "sa_esp_leopardus_tigrinus"
+    ],
+    "regions": [
+      "sa_amazonia",
+      "sa_andes_del_norte"
+    ],
+    "evidenceQueries": [
+      "Leopardus tigrinus"
+    ],
+    "status": "pending-source-intent-or-locality",
+    "decision": "Keep existing IDs, scientific concepts and distributions; no merge, removal or inferred population.",
+    "specificLimit": "Accepted name matching does not resolve geographic or species-complex delimitation.",
+    "gameConsequences": "No save migration or fauna change."
+  }
+]

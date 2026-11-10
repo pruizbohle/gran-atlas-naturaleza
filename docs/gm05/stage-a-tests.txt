@@ -1,0 +1,31 @@
+✔ 945 unique identities,113 regions,1744 presences; all943 profiles and111 regions byte-equal (188.180112ms)
+✔ exact three source rows, accepted combination alias one identity, HX09-14 Madagascar untouched (60.162296ms)
+✔ nineteen cells,17 previous positions exact; actual16 neighbor pairs share two vertices (7.248474ms)
+✔ three conservative depth windows and localities; no tripod in hadal nor snailfish in wrong trench (49.610575ms)
+✔ all three presences attainable with permitted method and turn filters, sondeo cannot bypass (49.090535ms)
+✔ 475/485 thresholds,research6800/5800 after deep and same six nonconsumed crafts,old unlocks retained (45.834925ms)
+✔ all former1741 manual and automatic eligibility conditions exact,deep protocols and global rates unchanged (158.879096ms)
+✔ commercial routes,recipes,items,old research,old continent requirements and scientific voyages exactly unchanged (87.544748ms)
+✔ direct/manual and guaranteed flag blocked; meaningful extraordinary300s,cost60/10,one shared queue (50.203345ms)
+✔ actual paid seeded operations attain all3 presences using each method,failures and valid evidence exist (48.832357ms)
+✔ naturalist automatic encounters attain all3 assignments while respecting selected stratum and hourly cap (100.575523ms)
+✔ real one-second ticker settles extraordinary work once; naturalists use same production ticker (53.922574ms)
+✔ restart resolves same seed/context,away completion preserves region and previous Field output (215.312066ms)
+✔ quota failures roll back entire start/resolution,deterministic retry and receipt preserve stratum on reload (111.830119ms)
+✔ old pending60s scientific operation occupies same queue in a trench,then completes correctly (44.031865ms)
+✔ 3.33 advanced save preserves all resources,old60s job and24h trade through export/import and72h return (243.280773ms)
+✔ both new species five notebook stages,publish once,Museum and paginated Bestiary945 integrate (73.603165ms)
+✔ all943 previous SVGs and variants/sexes byte-equal,tripod exact,two new nonluminous plates have distinct anatomy (277.62395ms)
+✔ normalization retains valid300s work and rejects wrongduration/unknown habitat/duplicate receipts (44.514399ms)
+✔ changing to eastern trench selects compatible extraordinary method;insufficient resources never negative (46.805058ms)
+✔ GM05 checks all 945 identities/113 regions/1744 real pairs, retaining rank distinctions (108.900901ms)
+✔ all1744 source/runtime witnesses remain reachable by actual current manual and automatic filters (66.766607ms)
+✔ source reconciliation has1574 preserved rows,413 distinct issue IDs,103/106 source cells and no invented range equality (3.20906ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2033.293522
