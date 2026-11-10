@@ -39,7 +39,18 @@
   "pwa": "pwa/browser-report.json",
   "stability": "stability/browser-report.json",
   "economy": "economy-simulations.json",
-  "publication": "pending workflow and HTTPS verification",
+  "publication": {
+    "status": "verified",
+    "commit": "cf7739dbbf7a3fd443555ad6bf86753509fa0320",
+    "url": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+    "workflow": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42901603329",
+    "actions": "published-actions.json",
+    "hashes": "published-report.json",
+    "browser": "published-browser.json",
+    "webFilesVerified": 157,
+    "hashMismatches": 0,
+    "browserErrors": 0
+  },
   "physicalAndroid": false,
   "apkBuilt": false
 }

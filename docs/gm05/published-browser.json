@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "version": "3.35.0",
+  "url": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "isolatedContext": true,
+  "explicitProxyCATrust": true,
+  "nineteenMapCells": true,
+  "unlockTravelThroughUI": true,
+  "offlineDeepRegionAndLab": true,
+  "pendingScientificOperationPreserved": true,
+  "viewport": 360,
+  "artPlates": 3,
+  "worldCatalog": 945,
+  "worldLabOfflineCards": 80,
+  "classificationCorrectionsVerified": true,
+  "cache": {
+    "name": "gran-atlas-v3.35.0-world-bbafa554534e",
+    "assets": 156
+  },
+  "errors": [],
+  "physicalAndroid": false
+}

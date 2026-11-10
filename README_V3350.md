@@ -50,7 +50,9 @@ Exportadores reales3.28–3.34 e importador actual conservan monedas/conocimient
 
 [Actualización PWA3.34→3.35](docs/gm05/pwa/browser-report.json): respaldo exacto, rechazo con otra ventana, viaje comercial24 h y operación científica pendientes conservados, resolución única, acceso/viaje por UI, cinco anchuras y juego/laboratorios offline. El laboratorio mundial abre945 identidades y80 tarjetas iniciales offline.
 
-Hay157 archivos web con hashes y155 recursos únicos offline. La revisión de caché deriva de sus contenidos. La verificación de Pages y de los archivos servidos se añade tras el despliegue; no se declara publicada únicamente por crear este README.
+Publicación verificada del commit `cf7739d`: [GitHub Actions](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42901603329) terminó correctamente. Los [157 archivos públicos](docs/gm05/published-report.json) coinciden con sus hashes. La [prueba Chromium sobre Pages](docs/gm05/published-browser.json) pasó sin errores JavaScript: caché `gran-atlas-v3.35.0-world-bbafa554534e`, viaje por la interfaz, operación pendiente conservada, juego y laboratorios offline, catálogo mundial de 945 identidades y las tres clasificaciones corregidas. Hay 155 recursos únicos declarados offline; la navegación pública añade una entrada de raíz y la caché observada contiene 156. La revisión de caché deriva del contenido.
+
+[Jugar 3.35.0](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio mundial](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-mundial-v3350.html).
 
 Reproducción principal:
 
