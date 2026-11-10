@@ -19,5 +19,12 @@
     "Compare APK certificate with previous distributed APK",
     "Activate already validated external final files after APK verification; adjust current-version test contracts",
     "Main merge and Pages verification"
-  ]
+  ],
+  "regression": {
+    "passed": 414,
+    "failed": 0,
+    "log": "release/regression-final.txt",
+    "sha256": "d2b0997a5bfb5626aa0bd6e3760b2b84bfc0621c1b33219e3e63d1a3eee9b3fa"
+  },
+  "publicationStatus": "release-final/publication-status.json"
 }

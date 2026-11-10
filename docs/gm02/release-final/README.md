@@ -15,7 +15,7 @@ Las cuatro decisiones están en [scientific-decisions.json](../scientific-decisi
 
 ## Bloqueo observado y acción exacta
 
-El [workflow firmado 42739927891](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42739927891) falló en **Verificar secretos de firma**, antes de compilar. La API de listado de secretos devuelve 403; no permite determinar cuál faltaba con la versión original del workflow. La versión nueva informa cada nombre ausente sin exponer valores.
+El [workflow firmado 42739927891](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42739927891) falló en **Verificar secretos de firma**, antes de compilar. La API de listado de secretos devuelve 403; no permite determinar cuál faltaba con la versión original del workflow. La [segunda ejecución 42740710245](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42740710245), sobre `09c0d82`, confirmó mediante anotaciones que **faltan los cuatro secretos**, individualmente. No se mostraron valores. No existe un problema de red pendiente ni se necesita conceder acceso de listado de secretos al agente para continuar.
 
 En el repositorio, abrir **Settings → Secrets and variables → Actions** y configurar los secretos `ATLAS_ANDROID_KEYSTORE_BASE64`, `ATLAS_ANDROID_STORE_PASSWORD`, `ATLAS_ANDROID_KEY_ALIAS` y `ATLAS_ANDROID_KEY_PASSWORD`. Usar el almacén que firmó el APK distribuido, sin enviar secretos al chat.
 
@@ -26,5 +26,7 @@ Para actualizar esa instalación conservando la identidad Android se necesita su
 ## Trabajo que permanece abierto
 
 Construir el APK 3.29, verificar su firma real y continuidad, activar los archivos finales en `www/` y los contratos de versión de las pruebas, integrar en `main`, ejecutar Pages y verificar los recursos servidos y enlace del APK. Se conserva la entrada pública 3.28.0 para evitar publicar una integración parcial mientras la firma está bloqueada. No se ha integrado a main, publicado la web ni generado un APK final. GM-03 no se inicia.
+
+Verificación HTTPS posterior: `atlas-release.json` servido devuelve `version=3.28.0`; `main` sigue en `564c63c341465f79b556a0a589e0515ef8361e6a`. No se disparó Pages.
 
 Juego público anterior: https://pruizbohle.github.io/gran-atlas-naturaleza/ . APK anterior: https://github.com/pruizbohle/gran-atlas-naturaleza/releases/tag/v3.28.0 . No se presentan como enlaces de Oceanía publicada.

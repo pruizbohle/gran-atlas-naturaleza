@@ -1,0 +1,32 @@
+{
+  "observedAt": "2026-11-10T02:10:20.924312+00:00",
+  "webVersionServed": "3.28.0",
+  "webMetadataUrl": "https://pruizbohle.github.io/gran-atlas-naturaleza/atlas-release.json",
+  "mainCommit": "564c63c341465f79b556a0a589e0515ef8361e6a",
+  "workCommit": "09c0d82d5c12cf453feba1bec10ae32868978ddd",
+  "signedWorkflow": {
+    "runId": 42740710245,
+    "url": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42740710245",
+    "status": "completed",
+    "conclusion": "failure",
+    "failedStep": "Verificar secretos de firma",
+    "checkRunId": 129580760733,
+    "missingSecrets": [
+      "ATLAS_ANDROID_KEYSTORE_BASE64",
+      "ATLAS_ANDROID_STORE_PASSWORD",
+      "ATLAS_ANDROID_KEY_ALIAS",
+      "ATLAS_ANDROID_KEY_PASSWORD"
+    ],
+    "apkBuilt": false
+  },
+  "finalPackage": {
+    "path": "/workspace/gran-atlas-3290-final-validated",
+    "version": "3.29.0",
+    "channel": "release",
+    "manifest": "staging-manifest.json"
+  },
+  "web329Published": false,
+  "mainMerged": false,
+  "apk329SignatureVerified": false,
+  "requiresUserAction": "Configure the four repository Actions signing secrets using the original keystore of the distributed APK. If unavailable, decide a backup-and-reinstall migration with a stable signing key; a new key cannot update the existing installation."
+}
