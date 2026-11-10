@@ -1,3 +1,7 @@
+# El Gran Atlas 3.35.0 · Consolidación mundial
+
+945 identidades, 113 regiones y 1744 presencias. Tres clasificaciones corregidas, cuatro tiburones diferenciados y laboratorio mundial; sin altas, eliminaciones ni cambios globales de economía. Guardado `gran_atlas_v05` conservado. [Diagnóstico completo, pruebas y límites](README_V3350.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualización PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3350.html) · [Laboratorio mundial](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-mundial-v3350.html).
+
 # El Gran Atlas 3.34.0 — Fosas abisales
 
 GM-04 queda completo con dos fosas, sondeo extraordinario y tres presencias trazadas: **945 especies, 113 regiones y 1744 presencias**. El Atlas oceánico reúne 12 mares superficiales, 5 sectores profundos y 2 fosas. Se reutilizan el pez trípode y el equipo científico; las muestras hadales son reconstrucciones lúdicas que exceden las capacidades históricas de 1842. Las partidas y operaciones de 3.33.0 siguen siendo compatibles.

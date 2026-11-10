@@ -1,0 +1,45 @@
+{
+  "reference": "9da9808",
+  "version": "3.35.0",
+  "species": 945,
+  "regions": 113,
+  "presences": 1744,
+  "sourceRows": 1574,
+  "sourceCatalogRows": 900,
+  "sourceCells": {
+    "populated": 103,
+    "reserved": 106
+  },
+  "sourceHistoricalFilesUnchanged": true,
+  "tests": {
+    "historical": 473,
+    "current": 37,
+    "total": 510,
+    "failures": 0,
+    "suiteCounts": [
+      430,
+      11,
+      12,
+      20,
+      20,
+      17
+    ],
+    "logSha256": "81a0159282995e18f5e25043f84d1d917e2d2ebfce572b8bbf981a573b1c6146"
+  },
+  "issues": {
+    "Contexto histórico": 59,
+    "Resuelta": 21,
+    "Pendiente": 22,
+    "Sin defecto demostrado": 311
+  },
+  "classificationCorrections": 3,
+  "artIdentitiesCorrected": 4,
+  "unchangedArtIdentities": 941,
+  "configuredArtRoutesCompared": 2605,
+  "pwa": "pwa/browser-report.json",
+  "stability": "stability/browser-report.json",
+  "economy": "economy-simulations.json",
+  "publication": "pending workflow and HTTPS verification",
+  "physicalAndroid": false,
+  "apkBuilt": false
+}

@@ -55,8 +55,8 @@ jobs:
           node --check www/js/abyssal-geography-v3340.js
           node --check www/js/abyssal-art-v3340.js
           node --check www/js/lab/abyssal-lab-v3340.js
-          node scripts/build-abyssal-release-v3340.cjs
-          node scripts/validate-abyssal-v3340.cjs
+          node scripts/build-world-release-v3350.cjs
+          node scripts/validate-world-v3350.cjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload game
