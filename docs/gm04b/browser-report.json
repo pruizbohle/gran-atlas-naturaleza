@@ -1,0 +1,22 @@
+{
+  "version": "3.33.0",
+  "upgrade": "3.32.0 -> 3.33.0",
+  "historicalBackupExact": true,
+  "otherWindowBlocksUpdate": true,
+  "pendingCommercePreserved": true,
+  "sixCraftsResearchUnlockTravelThroughUI": true,
+  "scientificOperationStartCountdownReloadOfflineAndUniqueReceipt": true,
+  "prestigeNotConsumed": true,
+  "offlineGameAndLab": true,
+  "viewports": [
+    320,
+    360,
+    390,
+    412,
+    1280
+  ],
+  "artPlates": 20,
+  "atlasOpenMeanMs": 41.69268260000017,
+  "errors": [],
+  "physicalAndroid": false
+}

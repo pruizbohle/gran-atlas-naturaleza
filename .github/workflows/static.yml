@@ -47,8 +47,12 @@ jobs:
           node --check www/js/polar-geography-v3310.js
           node --check www/js/save-manager.js
           node --check www/sw.js
-          node scripts/build-marine-release-v3320.cjs
-          node scripts/validate-marine-v3320.cjs
+          node --check www/js/deep-data-v3330.js
+          node --check www/js/deep-geography-v3330.js
+          node --check www/js/deep-art-v3330.js
+          node --check www/js/lab/deep-lab-v3330.js
+          node scripts/build-deep-release-v3330.cjs
+          node scripts/validate-deep-v3330.cjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload game

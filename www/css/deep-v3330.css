@@ -1,1 +1,3 @@
 .atlas-game[data-continent="Océanos"] [data-id^="profundo_"] .atlas-territory{fill:#738f9f;stroke:#294857;stroke-width:2}.atlas-game[data-continent="Océanos"] [data-id^="profundo_"] .atlas-terrain{color:#193d53}.deep-protocols{display:flex;flex-wrap:wrap;gap:8px}.deep-protocols .btn{min-height:48px;flex:1 1 220px;white-space:normal;line-height:1.4}.deep-panel{border-color:#7c96a4}.deep-panel details{margin:12px 0}.deep-panel summary{min-height:44px;cursor:pointer;line-height:1.5}.deep-field .field-scene{background:#d4d5c5}.deep-panel p{overflow-wrap:anywhere}
+
+.deep-field .field-explore:disabled{opacity:.55;cursor:wait;filter:saturate(.5)}

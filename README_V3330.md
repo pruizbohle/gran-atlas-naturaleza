@@ -34,4 +34,6 @@ Comandos reproducibles:
 - `node scripts/check-deep-pwa-v3330.cjs`
 - `node scripts/build-deep-release-v3330.cjs`
 
-La publicación y las pruebas PWA/HTTPS se documentan al finalizar la verificación.
+La prueba PWA local3.32.0→3.33.0 pasó:respaldo exacto, bloqueo con otra ventana, partida y viaje24h conservados; fabricación, investigación, desbloqueo, viaje y operación desde la UI. La cuenta regresiva cambia sin reconstruir el panel; tras recargar offline, la operación conserva su semilla y termina una sola vez mediante el ticker. Atlas, Campo y laboratorio se prueban a320/360/390/412/1280px sin desbordamiento. [Informe](docs/gm04b/browser-report.json).
+
+Publicación preparada con145 recursos offline y147 archivos web identificados por SHA-256. El Service Worker descarga la revisión completa antes de activarse y mantiene la clave `gran_atlas_v05`. La verificación del sitio público se añadirá tras concluir Actions.
