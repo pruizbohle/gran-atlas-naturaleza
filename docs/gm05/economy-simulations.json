@@ -1,0 +1,3674 @@
+{
+  "baseline": "9da9808",
+  "seeds": [
+    19,
+    71,
+    503
+  ],
+  "horizonHours": 336,
+  "method": "Actual engine and seeded RNG, hourly real ticker; manual attempts at 2s spacing in one active block/hour, one grant/hour, up to3 naturalists hired by real research;advanced starts with6 inherited helpers and explicit permanent maps, scientific voyages filled hourly, one commercial slot, real research/recursive dependency crafting/legal material market purchases/monographs/exhibits; no forced encounters or injected earnings. Intermediate/advanced are synthetic explicit saved-progress fixtures, not zero-to-world timing claims.",
+  "limits": [
+    "Simulated clock time is not human gameplay time.",
+    "Hourly ticks invoke the inherited500-search and8-hour offline caps.",
+    "Unreached areas are right-censored, not estimated completion dates.",
+    "The target policy rotates among accessible surface regions; deep/hadal protocols are benchmarked separately; it is not an optimal player policy.",
+    "No cost/reward/probability adjustment justified solely by these samples."
+  ],
+  "prestige": [
+    {
+      "area": "Europa",
+      "step": 1,
+      "minimum": 0,
+      "maximum": 9,
+      "regions": 10,
+      "values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "area": "Asia",
+      "step": 2,
+      "minimum": 10,
+      "maximum": 50,
+      "regions": 21,
+      "values": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50
+      ]
+    },
+    {
+      "area": "África",
+      "step": 3,
+      "minimum": 53,
+      "maximum": 122,
+      "regions": 24,
+      "values": [
+        53,
+        56,
+        59,
+        62,
+        65,
+        68,
+        71,
+        74,
+        77,
+        80,
+        83,
+        86,
+        89,
+        92,
+        95,
+        98,
+        101,
+        104,
+        107,
+        110,
+        113,
+        116,
+        119,
+        122
+      ]
+    },
+    {
+      "area": "Norteamérica",
+      "step": 4,
+      "minimum": 125,
+      "maximum": 177,
+      "regions": 14,
+      "values": [
+        125,
+        129,
+        133,
+        137,
+        141,
+        145,
+        149,
+        153,
+        157,
+        161,
+        165,
+        169,
+        173,
+        177
+      ]
+    },
+    {
+      "area": "Sudamérica",
+      "step": 5,
+      "minimum": 182,
+      "maximum": 227,
+      "regions": 10,
+      "values": [
+        182,
+        187,
+        192,
+        197,
+        202,
+        207,
+        212,
+        217,
+        222,
+        227
+      ]
+    },
+    {
+      "area": "Oceanía",
+      "step": 6,
+      "minimum": 233,
+      "maximum": 275,
+      "regions": 8,
+      "values": [
+        233,
+        239,
+        245,
+        251,
+        257,
+        263,
+        269,
+        275
+      ]
+    },
+    {
+      "area": "Polos",
+      "step": 7,
+      "minimum": 282,
+      "maximum": 324,
+      "regions": 7,
+      "values": [
+        282,
+        289,
+        296,
+        303,
+        310,
+        317,
+        324
+      ]
+    },
+    {
+      "area": "Océanos",
+      "step": 8,
+      "minimum": 332,
+      "maximum": 420,
+      "regions": 12,
+      "values": [
+        332,
+        340,
+        348,
+        356,
+        364,
+        372,
+        380,
+        388,
+        396,
+        404,
+        412,
+        420
+      ]
+    },
+    {
+      "area": "Océanos profundos",
+      "step": 9,
+      "minimum": 429,
+      "maximum": 465,
+      "regions": 5,
+      "values": [
+        429,
+        438,
+        447,
+        456,
+        465
+      ]
+    },
+    {
+      "area": "Fosas abisales",
+      "step": 10,
+      "minimum": 475,
+      "maximum": 485,
+      "regions": 2,
+      "values": [
+        475,
+        485
+      ]
+    }
+  ],
+  "researchChecked": 57,
+  "recipesChecked": 18,
+  "trade": [
+    {
+      "id": "coastal_trade",
+      "hours": 4,
+      "netPounds": 60,
+      "netPoundsPerHour": 15,
+      "knowledgeCost": 20,
+      "knowledgeCostPerHour": 5,
+      "materials": {
+        "parchment_scrap": 3,
+        "pressed_flower": 2,
+        "river_pebble": 3
+      }
+    },
+    {
+      "id": "workshop_trade",
+      "hours": 8,
+      "netPounds": 140,
+      "netPoundsPerHour": 17.5,
+      "knowledgeCost": 50,
+      "knowledgeCostPerHour": 6.25,
+      "materials": {
+        "polished_lens": 2,
+        "brass_shard": 2,
+        "carved_wood": 3
+      }
+    },
+    {
+      "id": "archive_trade",
+      "hours": 12,
+      "netPounds": 250,
+      "netPoundsPerHour": 20.833333333333332,
+      "knowledgeCost": 90,
+      "knowledgeCostPerHour": 7.5,
+      "materials": {
+        "old_ink": 2,
+        "parchment_scrap": 5,
+        "brass_shard": 3,
+        "polished_lens": 2
+      }
+    },
+    {
+      "id": "ocean_trade",
+      "hours": 24,
+      "netPounds": 450,
+      "netPoundsPerHour": 18.75,
+      "knowledgeCost": 160,
+      "knowledgeCostPerHour": 6.666666666666667,
+      "materials": {
+        "brass_shard": 5,
+        "polished_lens": 4,
+        "old_ink": 3,
+        "carved_wood": 6
+      }
+    }
+  ],
+  "museumBasePaybackSeconds": [
+    281.25,
+    291.6666666666667,
+    308.8235294117647,
+    300
+  ],
+  "runs": [
+    {
+      "cohort": "zero",
+      "seed": 19,
+      "manualPerHour": 10,
+      "hours": 336,
+      "initial": {
+        "money": 420,
+        "knowledge": 0,
+        "prestige": 0,
+        "helpers": 0,
+        "published": 0
+      },
+      "final": {
+        "money": 410088,
+        "knowledge": 11094,
+        "prestige": 12,
+        "published": 12,
+        "identified": 62,
+        "helpers": 3
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 322
+      },
+      "notReached": [
+        "África",
+        "Norteamérica",
+        "Sudamérica",
+        "Oceanía",
+        "Polos",
+        "Océanos",
+        "Océanos profundos",
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 141,
+      "manualAttempts": 3360,
+      "scientificDepartures": 517,
+      "tradeDepartures": 64,
+      "materialPurchases": 17,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 390,
+          "knowledge": 1757,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 48,
+          "money": 2850,
+          "knowledge": 5400,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 72,
+          "money": 6270,
+          "knowledge": 6378,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 96,
+          "money": 9160,
+          "knowledge": 2159,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 120,
+          "money": 12800,
+          "knowledge": 3947,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 144,
+          "money": 18043,
+          "knowledge": 5604,
+          "prestige": 1,
+          "identified": 33,
+          "published": 1,
+          "helpers": 3,
+          "museumPerSecond": 0.16
+        },
+        {
+          "hour": 168,
+          "money": 55036,
+          "knowledge": 1561,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 192,
+          "money": 105402,
+          "knowledge": 3036,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 216,
+          "money": 156178,
+          "knowledge": 5890,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 240,
+          "money": 206314,
+          "knowledge": 2856,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 264,
+          "money": 256740,
+          "knowledge": 3568,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 288,
+          "money": 307606,
+          "knowledge": 6222,
+          "prestige": 5,
+          "identified": 62,
+          "published": 5,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 312,
+          "money": 358142,
+          "knowledge": 2994,
+          "prestige": 9,
+          "identified": 62,
+          "published": 9,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 336,
+          "money": 410088,
+          "knowledge": 11094,
+          "prestige": 12,
+          "identified": 62,
+          "published": 12,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        }
+      ]
+    },
+    {
+      "cohort": "zero",
+      "seed": 71,
+      "manualPerHour": 10,
+      "hours": 336,
+      "initial": {
+        "money": 420,
+        "knowledge": 0,
+        "prestige": 0,
+        "helpers": 0,
+        "published": 0
+      },
+      "final": {
+        "money": 410288,
+        "knowledge": 3626,
+        "prestige": 13,
+        "published": 13,
+        "identified": 62,
+        "helpers": 3
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 317
+      },
+      "notReached": [
+        "África",
+        "Norteamérica",
+        "Sudamérica",
+        "Oceanía",
+        "Polos",
+        "Océanos",
+        "Océanos profundos",
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 144,
+      "manualAttempts": 3360,
+      "scientificDepartures": 522,
+      "tradeDepartures": 65,
+      "materialPurchases": 18,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 310,
+          "knowledge": 1753,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 48,
+          "money": 2430,
+          "knowledge": 5625,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 72,
+          "money": 5350,
+          "knowledge": 1559,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 96,
+          "money": 8770,
+          "knowledge": 2401,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 120,
+          "money": 12410,
+          "knowledge": 4257,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 144,
+          "money": 16200,
+          "knowledge": 10685,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 168,
+          "money": 53076,
+          "knowledge": 5237,
+          "prestige": 3,
+          "identified": 62,
+          "published": 3,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 192,
+          "money": 103382,
+          "knowledge": 2413,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 216,
+          "money": 154258,
+          "knowledge": 6059,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 240,
+          "money": 204544,
+          "knowledge": 3210,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 264,
+          "money": 254940,
+          "knowledge": 3896,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 288,
+          "money": 304816,
+          "knowledge": 5104,
+          "prestige": 5,
+          "identified": 62,
+          "published": 5,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 312,
+          "money": 357452,
+          "knowledge": 4222,
+          "prestige": 9,
+          "identified": 62,
+          "published": 9,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 336,
+          "money": 410288,
+          "knowledge": 3626,
+          "prestige": 13,
+          "identified": 62,
+          "published": 13,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        }
+      ]
+    },
+    {
+      "cohort": "zero",
+      "seed": 503,
+      "manualPerHour": 10,
+      "hours": 336,
+      "initial": {
+        "money": 420,
+        "knowledge": 0,
+        "prestige": 0,
+        "helpers": 0,
+        "published": 0
+      },
+      "final": {
+        "money": 459008,
+        "knowledge": 3684,
+        "prestige": 13,
+        "published": 13,
+        "identified": 62,
+        "helpers": 3
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 317
+      },
+      "notReached": [
+        "África",
+        "Norteamérica",
+        "Sudamérica",
+        "Oceanía",
+        "Polos",
+        "Océanos",
+        "Océanos profundos",
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 144,
+      "manualAttempts": 3360,
+      "scientificDepartures": 524,
+      "tradeDepartures": 65,
+      "materialPurchases": 18,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 300,
+          "knowledge": 1561,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 48,
+          "money": 2740,
+          "knowledge": 5531,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 72,
+          "money": 5980,
+          "knowledge": 6373,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 96,
+          "money": 8900,
+          "knowledge": 2221,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 120,
+          "money": 12420,
+          "knowledge": 4225,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 144,
+          "money": 16440,
+          "knowledge": 11221,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 168,
+          "money": 53892,
+          "knowledge": 10469,
+          "prestige": 3,
+          "identified": 62,
+          "published": 3,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 192,
+          "money": 110400,
+          "knowledge": 3425,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 216,
+          "money": 168258,
+          "knowledge": 6519,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 240,
+          "money": 225166,
+          "knowledge": 3291,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 264,
+          "money": 282854,
+          "knowledge": 6061,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 288,
+          "money": 339632,
+          "knowledge": 6283,
+          "prestige": 5,
+          "identified": 62,
+          "published": 5,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 312,
+          "money": 399180,
+          "knowledge": 4312,
+          "prestige": 9,
+          "identified": 62,
+          "published": 9,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 336,
+          "money": 459008,
+          "knowledge": 3684,
+          "prestige": 13,
+          "identified": 62,
+          "published": 13,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        }
+      ]
+    },
+    {
+      "cohort": "zero",
+      "seed": 19,
+      "manualPerHour": 30,
+      "hours": 336,
+      "initial": {
+        "money": 420,
+        "knowledge": 0,
+        "prestige": 0,
+        "helpers": 0,
+        "published": 0
+      },
+      "final": {
+        "money": 428416,
+        "knowledge": 9364,
+        "prestige": 16,
+        "published": 16,
+        "identified": 62,
+        "helpers": 3
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 298
+      },
+      "notReached": [
+        "África",
+        "Norteamérica",
+        "Sudamérica",
+        "Oceanía",
+        "Polos",
+        "Océanos",
+        "Océanos profundos",
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 135,
+      "manualAttempts": 10080,
+      "scientificDepartures": 527,
+      "tradeDepartures": 63,
+      "materialPurchases": 10,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 280,
+          "knowledge": 1802,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 48,
+          "money": 2710,
+          "knowledge": 5562,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 72,
+          "money": 5430,
+          "knowledge": 3956,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 96,
+          "money": 8170,
+          "knowledge": 2278,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 120,
+          "money": 11640,
+          "knowledge": 6062,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 144,
+          "money": 22202,
+          "knowledge": 5879,
+          "prestige": 2,
+          "identified": 33,
+          "published": 2,
+          "helpers": 3,
+          "museumPerSecond": 0.32
+        },
+        {
+          "hour": 168,
+          "money": 69954,
+          "knowledge": 1571,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 192,
+          "money": 120260,
+          "knowledge": 4801,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 216,
+          "money": 170386,
+          "knowledge": 3383,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 240,
+          "money": 219812,
+          "knowledge": 2369,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 264,
+          "money": 270388,
+          "knowledge": 5419,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 288,
+          "money": 322544,
+          "knowledge": 5778,
+          "prestige": 8,
+          "identified": 62,
+          "published": 8,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 312,
+          "money": 375260,
+          "knowledge": 7546,
+          "prestige": 12,
+          "identified": 62,
+          "published": 12,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 336,
+          "money": 428416,
+          "knowledge": 9364,
+          "prestige": 16,
+          "identified": 62,
+          "published": 16,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        }
+      ]
+    },
+    {
+      "cohort": "zero",
+      "seed": 71,
+      "manualPerHour": 30,
+      "hours": 336,
+      "initial": {
+        "money": 420,
+        "knowledge": 0,
+        "prestige": 0,
+        "helpers": 0,
+        "published": 0
+      },
+      "final": {
+        "money": 428787,
+        "knowledge": 9473,
+        "prestige": 16,
+        "published": 16,
+        "identified": 62,
+        "helpers": 3
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 298
+      },
+      "notReached": [
+        "África",
+        "Norteamérica",
+        "Sudamérica",
+        "Oceanía",
+        "Polos",
+        "Océanos",
+        "Océanos profundos",
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 135,
+      "manualAttempts": 10080,
+      "scientificDepartures": 530,
+      "tradeDepartures": 63,
+      "materialPurchases": 14,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 510,
+          "knowledge": 1762,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 48,
+          "money": 2610,
+          "knowledge": 5626,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 72,
+          "money": 5530,
+          "knowledge": 4074,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 96,
+          "money": 8450,
+          "knowledge": 2460,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 120,
+          "money": 11920,
+          "knowledge": 6296,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 144,
+          "money": 22602,
+          "knowledge": 6047,
+          "prestige": 2,
+          "identified": 33,
+          "published": 2,
+          "helpers": 3,
+          "museumPerSecond": 0.32
+        },
+        {
+          "hour": 168,
+          "money": 70095,
+          "knowledge": 1630,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 192,
+          "money": 120671,
+          "knowledge": 4872,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 216,
+          "money": 169887,
+          "knowledge": 2207,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 240,
+          "money": 220283,
+          "knowledge": 2325,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 264,
+          "money": 270579,
+          "knowledge": 4609,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 288,
+          "money": 322615,
+          "knowledge": 5889,
+          "prestige": 8,
+          "identified": 62,
+          "published": 8,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 312,
+          "money": 375511,
+          "knowledge": 7631,
+          "prestige": 12,
+          "identified": 62,
+          "published": 12,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        },
+        {
+          "hour": 336,
+          "money": 428787,
+          "knowledge": 9473,
+          "prestige": 16,
+          "identified": 62,
+          "published": 16,
+          "helpers": 3,
+          "museumPerSecond": 0.48
+        }
+      ]
+    },
+    {
+      "cohort": "zero",
+      "seed": 503,
+      "manualPerHour": 30,
+      "hours": 336,
+      "initial": {
+        "money": 420,
+        "knowledge": 0,
+        "prestige": 0,
+        "helpers": 0,
+        "published": 0
+      },
+      "final": {
+        "money": 482943,
+        "knowledge": 9840,
+        "prestige": 16,
+        "published": 16,
+        "identified": 62,
+        "helpers": 3
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 297
+      },
+      "notReached": [
+        "África",
+        "Norteamérica",
+        "Sudamérica",
+        "Oceanía",
+        "Polos",
+        "Océanos",
+        "Océanos profundos",
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 135,
+      "manualAttempts": 10080,
+      "scientificDepartures": 533,
+      "tradeDepartures": 63,
+      "materialPurchases": 18,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 405,
+          "knowledge": 1532,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 48,
+          "money": 2925,
+          "knowledge": 4618,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 72,
+          "money": 5305,
+          "knowledge": 3970,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 96,
+          "money": 8225,
+          "knowledge": 2330,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 120,
+          "money": 11245,
+          "knowledge": 1850,
+          "prestige": 0,
+          "identified": 33,
+          "published": 0,
+          "helpers": 3,
+          "museumPerSecond": 0
+        },
+        {
+          "hour": 144,
+          "money": 22377,
+          "knowledge": 6147,
+          "prestige": 2,
+          "identified": 33,
+          "published": 2,
+          "helpers": 3,
+          "museumPerSecond": 0.32
+        },
+        {
+          "hour": 168,
+          "money": 75947,
+          "knowledge": 1934,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 192,
+          "money": 133085,
+          "knowledge": 1610,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 216,
+          "money": 189793,
+          "knowledge": 3174,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 240,
+          "money": 246691,
+          "knowledge": 2775,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 264,
+          "money": 304279,
+          "knowledge": 7077,
+          "prestige": 4,
+          "identified": 62,
+          "published": 4,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 288,
+          "money": 363227,
+          "knowledge": 6345,
+          "prestige": 8,
+          "identified": 62,
+          "published": 8,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 312,
+          "money": 422975,
+          "knowledge": 8161,
+          "prestige": 12,
+          "identified": 62,
+          "published": 12,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        },
+        {
+          "hour": 336,
+          "money": 482943,
+          "knowledge": 9840,
+          "prestige": 16,
+          "identified": 62,
+          "published": 16,
+          "helpers": 3,
+          "museumPerSecond": 0.56
+        }
+      ]
+    },
+    {
+      "cohort": "intermediate",
+      "seed": 19,
+      "manualPerHour": 10,
+      "hours": 336,
+      "initial": {
+        "money": 6000,
+        "knowledge": 4000,
+        "prestige": 180,
+        "helpers": 3,
+        "published": 180
+      },
+      "final": {
+        "money": 1463713,
+        "knowledge": 2986,
+        "prestige": 188,
+        "published": 188,
+        "identified": 259,
+        "helpers": 3
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 0,
+        "África": 0,
+        "Norteamérica": 0,
+        "Sudamérica": 165
+      },
+      "notReached": [
+        "Oceanía",
+        "Polos",
+        "Océanos",
+        "Océanos profundos",
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 153,
+      "manualAttempts": 3360,
+      "scientificDepartures": 667,
+      "tradeDepartures": 14,
+      "materialPurchases": 14,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 104287,
+          "knowledge": 3054,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 48,
+          "money": 203737,
+          "knowledge": 5064,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 72,
+          "money": 306187,
+          "knowledge": 6328,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 96,
+          "money": 408187,
+          "knowledge": 2994,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 120,
+          "money": 510737,
+          "knowledge": 5134,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 144,
+          "money": 612787,
+          "knowledge": 2306,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 168,
+          "money": 716501,
+          "knowledge": 1790,
+          "prestige": 182,
+          "identified": 228,
+          "published": 182,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 192,
+          "money": 821135,
+          "knowledge": 5348,
+          "prestige": 182,
+          "identified": 228,
+          "published": 182,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 216,
+          "money": 925499,
+          "knowledge": 3622,
+          "prestige": 185,
+          "identified": 228,
+          "published": 185,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 240,
+          "money": 1030173,
+          "knowledge": 5954,
+          "prestige": 187,
+          "identified": 228,
+          "published": 187,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 264,
+          "money": 1136873,
+          "knowledge": 1631,
+          "prestige": 188,
+          "identified": 259,
+          "published": 188,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 288,
+          "money": 1246043,
+          "knowledge": 4403,
+          "prestige": 188,
+          "identified": 259,
+          "published": 188,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 312,
+          "money": 1354663,
+          "knowledge": 1626,
+          "prestige": 188,
+          "identified": 259,
+          "published": 188,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 336,
+          "money": 1463713,
+          "knowledge": 2986,
+          "prestige": 188,
+          "identified": 259,
+          "published": 188,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        }
+      ]
+    },
+    {
+      "cohort": "intermediate",
+      "seed": 71,
+      "manualPerHour": 10,
+      "hours": 336,
+      "initial": {
+        "money": 6000,
+        "knowledge": 4000,
+        "prestige": 180,
+        "helpers": 3,
+        "published": 180
+      },
+      "final": {
+        "money": 1470090,
+        "knowledge": 2877,
+        "prestige": 186,
+        "published": 186,
+        "identified": 259,
+        "helpers": 3
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 0,
+        "África": 0,
+        "Norteamérica": 0,
+        "Sudamérica": 165
+      },
+      "notReached": [
+        "Oceanía",
+        "Polos",
+        "Océanos",
+        "Océanos profundos",
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 153,
+      "manualAttempts": 3360,
+      "scientificDepartures": 662,
+      "tradeDepartures": 14,
+      "materialPurchases": 16,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 100570,
+          "knowledge": 1542,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 48,
+          "money": 202940,
+          "knowledge": 2183,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 72,
+          "money": 305690,
+          "knowledge": 6331,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 96,
+          "money": 407740,
+          "knowledge": 3673,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 120,
+          "money": 510240,
+          "knowledge": 5279,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 144,
+          "money": 612290,
+          "knowledge": 2307,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 168,
+          "money": 716304,
+          "knowledge": 5015,
+          "prestige": 182,
+          "identified": 228,
+          "published": 182,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 192,
+          "money": 820638,
+          "knowledge": 5663,
+          "prestige": 182,
+          "identified": 228,
+          "published": 182,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 216,
+          "money": 925443,
+          "knowledge": 4029,
+          "prestige": 185,
+          "identified": 257,
+          "published": 185,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 240,
+          "money": 1034370,
+          "knowledge": 3711,
+          "prestige": 185,
+          "identified": 259,
+          "published": 185,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 264,
+          "money": 1143400,
+          "knowledge": 4669,
+          "prestige": 185,
+          "identified": 259,
+          "published": 185,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 288,
+          "money": 1252250,
+          "knowledge": 3905,
+          "prestige": 185,
+          "identified": 259,
+          "published": 185,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 312,
+          "money": 1361490,
+          "knowledge": 6169,
+          "prestige": 186,
+          "identified": 259,
+          "published": 186,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 336,
+          "money": 1470090,
+          "knowledge": 2877,
+          "prestige": 186,
+          "identified": 259,
+          "published": 186,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        }
+      ]
+    },
+    {
+      "cohort": "intermediate",
+      "seed": 503,
+      "manualPerHour": 10,
+      "hours": 336,
+      "initial": {
+        "money": 6000,
+        "knowledge": 4000,
+        "prestige": 180,
+        "helpers": 3,
+        "published": 180
+      },
+      "final": {
+        "money": 1467755,
+        "knowledge": 2277,
+        "prestige": 188,
+        "published": 188,
+        "identified": 259,
+        "helpers": 3
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 0,
+        "África": 0,
+        "Norteamérica": 0,
+        "Sudamérica": 160
+      },
+      "notReached": [
+        "Oceanía",
+        "Polos",
+        "Océanos",
+        "Océanos profundos",
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 152,
+      "manualAttempts": 3360,
+      "scientificDepartures": 670,
+      "tradeDepartures": 14,
+      "materialPurchases": 13,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 104340,
+          "knowledge": 2096,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 48,
+          "money": 203590,
+          "knowledge": 2344,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 72,
+          "money": 305840,
+          "knowledge": 1504,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 96,
+          "money": 408390,
+          "knowledge": 3744,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 120,
+          "money": 510890,
+          "knowledge": 5638,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 144,
+          "money": 612940,
+          "knowledge": 2966,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 168,
+          "money": 716780,
+          "knowledge": 8598,
+          "prestige": 182,
+          "identified": 228,
+          "published": 182,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 192,
+          "money": 820604,
+          "knowledge": 3250,
+          "prestige": 183,
+          "identified": 228,
+          "published": 183,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 216,
+          "money": 925178,
+          "knowledge": 4382,
+          "prestige": 185,
+          "identified": 228,
+          "published": 185,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 240,
+          "money": 1031915,
+          "knowledge": 1748,
+          "prestige": 187,
+          "identified": 259,
+          "published": 187,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 264,
+          "money": 1140915,
+          "knowledge": 2739,
+          "prestige": 187,
+          "identified": 259,
+          "published": 187,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 288,
+          "money": 1250065,
+          "knowledge": 4881,
+          "prestige": 187,
+          "identified": 259,
+          "published": 187,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 312,
+          "money": 1359115,
+          "knowledge": 5961,
+          "prestige": 187,
+          "identified": 259,
+          "published": 187,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 336,
+          "money": 1467755,
+          "knowledge": 2277,
+          "prestige": 188,
+          "identified": 259,
+          "published": 188,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        }
+      ]
+    },
+    {
+      "cohort": "intermediate",
+      "seed": 19,
+      "manualPerHour": 30,
+      "hours": 336,
+      "initial": {
+        "money": 6000,
+        "knowledge": 4000,
+        "prestige": 180,
+        "helpers": 3,
+        "published": 180
+      },
+      "final": {
+        "money": 1465058,
+        "knowledge": 2189,
+        "prestige": 190,
+        "published": 190,
+        "identified": 259,
+        "helpers": 3
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 0,
+        "África": 0,
+        "Norteamérica": 0,
+        "Sudamérica": 154
+      },
+      "notReached": [
+        "Oceanía",
+        "Polos",
+        "Océanos",
+        "Océanos profundos",
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 143,
+      "manualAttempts": 10080,
+      "scientificDepartures": 672,
+      "tradeDepartures": 14,
+      "materialPurchases": 13,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 104242,
+          "knowledge": 4081,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 48,
+          "money": 203142,
+          "knowledge": 3191,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 72,
+          "money": 305292,
+          "knowledge": 3823,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 96,
+          "money": 407292,
+          "knowledge": 2877,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 120,
+          "money": 509342,
+          "knowledge": 2527,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 144,
+          "money": 611482,
+          "knowledge": 2247,
+          "prestige": 181,
+          "identified": 215,
+          "published": 181,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 168,
+          "money": 715869,
+          "knowledge": 3571,
+          "prestige": 182,
+          "identified": 228,
+          "published": 182,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 192,
+          "money": 820253,
+          "knowledge": 6239,
+          "prestige": 183,
+          "identified": 228,
+          "published": 183,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 216,
+          "money": 924607,
+          "knowledge": 6001,
+          "prestige": 187,
+          "identified": 228,
+          "published": 187,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 240,
+          "money": 1030368,
+          "knowledge": 4393,
+          "prestige": 188,
+          "identified": 259,
+          "published": 188,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 264,
+          "money": 1139178,
+          "knowledge": 5519,
+          "prestige": 188,
+          "identified": 259,
+          "published": 188,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 288,
+          "money": 1247478,
+          "knowledge": 1747,
+          "prestige": 188,
+          "identified": 259,
+          "published": 188,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 312,
+          "money": 1356228,
+          "knowledge": 2455,
+          "prestige": 188,
+          "identified": 259,
+          "published": 188,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 336,
+          "money": 1465058,
+          "knowledge": 2189,
+          "prestige": 190,
+          "identified": 259,
+          "published": 190,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        }
+      ]
+    },
+    {
+      "cohort": "intermediate",
+      "seed": 71,
+      "manualPerHour": 30,
+      "hours": 336,
+      "initial": {
+        "money": 6000,
+        "knowledge": 4000,
+        "prestige": 180,
+        "helpers": 3,
+        "published": 180
+      },
+      "final": {
+        "money": 1470572,
+        "knowledge": 1640,
+        "prestige": 188,
+        "published": 188,
+        "identified": 259,
+        "helpers": 3
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 0,
+        "África": 0,
+        "Norteamérica": 0,
+        "Sudamérica": 155
+      },
+      "notReached": [
+        "Oceanía",
+        "Polos",
+        "Océanos",
+        "Océanos profundos",
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 143,
+      "manualAttempts": 10080,
+      "scientificDepartures": 669,
+      "tradeDepartures": 14,
+      "materialPurchases": 13,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 103996,
+          "knowledge": 2067,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 48,
+          "money": 203166,
+          "knowledge": 4116,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 72,
+          "money": 305216,
+          "knowledge": 3742,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 96,
+          "money": 407266,
+          "knowledge": 3516,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 120,
+          "money": 509266,
+          "knowledge": 2508,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 144,
+          "money": 611406,
+          "knowledge": 2038,
+          "prestige": 181,
+          "identified": 215,
+          "published": 181,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 168,
+          "money": 715680,
+          "knowledge": 2498,
+          "prestige": 182,
+          "identified": 228,
+          "published": 182,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 192,
+          "money": 820164,
+          "knowledge": 6212,
+          "prestige": 183,
+          "identified": 228,
+          "published": 183,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 216,
+          "money": 926922,
+          "knowledge": 2054,
+          "prestige": 185,
+          "identified": 259,
+          "published": 185,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 240,
+          "money": 1035902,
+          "knowledge": 4884,
+          "prestige": 185,
+          "identified": 259,
+          "published": 185,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 264,
+          "money": 1144452,
+          "knowledge": 3664,
+          "prestige": 185,
+          "identified": 259,
+          "published": 185,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 288,
+          "money": 1253602,
+          "knowledge": 8226,
+          "prestige": 185,
+          "identified": 259,
+          "published": 185,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 312,
+          "money": 1361932,
+          "knowledge": 2878,
+          "prestige": 187,
+          "identified": 259,
+          "published": 187,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 336,
+          "money": 1470572,
+          "knowledge": 1640,
+          "prestige": 188,
+          "identified": 259,
+          "published": 188,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        }
+      ]
+    },
+    {
+      "cohort": "intermediate",
+      "seed": 503,
+      "manualPerHour": 30,
+      "hours": 336,
+      "initial": {
+        "money": 6000,
+        "knowledge": 4000,
+        "prestige": 180,
+        "helpers": 3,
+        "published": 180
+      },
+      "final": {
+        "money": 1467182,
+        "knowledge": 1699,
+        "prestige": 189,
+        "published": 189,
+        "identified": 259,
+        "helpers": 3
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 0,
+        "África": 0,
+        "Norteamérica": 0,
+        "Sudamérica": 150
+      },
+      "notReached": [
+        "Oceanía",
+        "Polos",
+        "Océanos",
+        "Océanos profundos",
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 143,
+      "manualAttempts": 10080,
+      "scientificDepartures": 666,
+      "tradeDepartures": 14,
+      "materialPurchases": 17,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 100295,
+          "knowledge": 1964,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 48,
+          "money": 202595,
+          "knowledge": 4202,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 72,
+          "money": 304645,
+          "knowledge": 3766,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 96,
+          "money": 406645,
+          "knowledge": 2942,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 120,
+          "money": 508695,
+          "knowledge": 2884,
+          "prestige": 180,
+          "identified": 215,
+          "published": 180,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 144,
+          "money": 610835,
+          "knowledge": 2594,
+          "prestige": 181,
+          "identified": 215,
+          "published": 181,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 168,
+          "money": 714838,
+          "knowledge": 4128,
+          "prestige": 183,
+          "identified": 228,
+          "published": 183,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 192,
+          "money": 819132,
+          "knowledge": 6830,
+          "prestige": 183,
+          "identified": 228,
+          "published": 183,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 216,
+          "money": 923876,
+          "knowledge": 4318,
+          "prestige": 187,
+          "identified": 257,
+          "published": 187,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 240,
+          "money": 1032332,
+          "knowledge": 2144,
+          "prestige": 187,
+          "identified": 259,
+          "published": 187,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 264,
+          "money": 1141152,
+          "knowledge": 3783,
+          "prestige": 187,
+          "identified": 259,
+          "published": 187,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 288,
+          "money": 1249802,
+          "knowledge": 3401,
+          "prestige": 187,
+          "identified": 259,
+          "published": 187,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 312,
+          "money": 1358632,
+          "knowledge": 3047,
+          "prestige": 189,
+          "identified": 259,
+          "published": 189,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        },
+        {
+          "hour": 336,
+          "money": 1467182,
+          "knowledge": 1699,
+          "prestige": 189,
+          "identified": 259,
+          "published": 189,
+          "helpers": 3,
+          "museumPerSecond": 0.8200000000000001
+        }
+      ]
+    },
+    {
+      "cohort": "advanced",
+      "seed": 19,
+      "manualPerHour": 10,
+      "hours": 336,
+      "initial": {
+        "money": 25000,
+        "knowledge": 18000,
+        "prestige": 440,
+        "helpers": 6,
+        "published": 440
+      },
+      "final": {
+        "money": 3714735,
+        "knowledge": 5077,
+        "prestige": 455,
+        "published": 455,
+        "identified": 508,
+        "helpers": 6
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 0,
+        "África": 0,
+        "Norteamérica": 0,
+        "Sudamérica": 0,
+        "Oceanía": 0,
+        "Polos": 0,
+        "Océanos": 0,
+        "Océanos profundos": 0
+      },
+      "notReached": [
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 156,
+      "manualAttempts": 3360,
+      "scientificDepartures": 672,
+      "tradeDepartures": 14,
+      "materialPurchases": 0,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 277676,
+          "knowledge": 2573,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 48,
+          "money": 540814,
+          "knowledge": 2951,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 72,
+          "money": 804112,
+          "knowledge": 4921,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 96,
+          "money": 1067010,
+          "knowledge": 2899,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 120,
+          "money": 1330308,
+          "knowledge": 5147,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 144,
+          "money": 1593106,
+          "knowledge": 2317,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 168,
+          "money": 1857184,
+          "knowledge": 10395,
+          "prestige": 442,
+          "identified": 481,
+          "published": 442,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 192,
+          "money": 2120442,
+          "knowledge": 8463,
+          "prestige": 446,
+          "identified": 481,
+          "published": 446,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 216,
+          "money": 2383600,
+          "knowledge": 5457,
+          "prestige": 450,
+          "identified": 481,
+          "published": 450,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 240,
+          "money": 2646758,
+          "knowledge": 2359,
+          "prestige": 454,
+          "identified": 481,
+          "published": 454,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 264,
+          "money": 2912993,
+          "knowledge": 2003,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 288,
+          "money": 3180427,
+          "knowledge": 4765,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 312,
+          "money": 3447281,
+          "knowledge": 1981,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 336,
+          "money": 3714735,
+          "knowledge": 5077,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        }
+      ]
+    },
+    {
+      "cohort": "advanced",
+      "seed": 71,
+      "manualPerHour": 10,
+      "hours": 336,
+      "initial": {
+        "money": 25000,
+        "knowledge": 18000,
+        "prestige": 440,
+        "helpers": 6,
+        "published": 440
+      },
+      "final": {
+        "money": 3715214,
+        "knowledge": 6342,
+        "prestige": 455,
+        "published": 455,
+        "identified": 508,
+        "helpers": 6
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 0,
+        "África": 0,
+        "Norteamérica": 0,
+        "Sudamérica": 0,
+        "Oceanía": 0,
+        "Polos": 0,
+        "Océanos": 0,
+        "Océanos profundos": 0
+      },
+      "notReached": [
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 156,
+      "manualAttempts": 3360,
+      "scientificDepartures": 669,
+      "tradeDepartures": 14,
+      "materialPurchases": 0,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 277741,
+          "knowledge": 3296,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 48,
+          "money": 540779,
+          "knowledge": 2825,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 72,
+          "money": 804077,
+          "knowledge": 5057,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 96,
+          "money": 1066975,
+          "knowledge": 3067,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 120,
+          "money": 1330323,
+          "knowledge": 5541,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 144,
+          "money": 1593071,
+          "knowledge": 1999,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 168,
+          "money": 1857149,
+          "knowledge": 9875,
+          "prestige": 442,
+          "identified": 481,
+          "published": 442,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 192,
+          "money": 2120407,
+          "knowledge": 7899,
+          "prestige": 446,
+          "identified": 481,
+          "published": 446,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 216,
+          "money": 2383665,
+          "knowledge": 5661,
+          "prestige": 450,
+          "identified": 481,
+          "published": 450,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 240,
+          "money": 2646923,
+          "knowledge": 3663,
+          "prestige": 454,
+          "identified": 481,
+          "published": 454,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 264,
+          "money": 2913342,
+          "knowledge": 1675,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 288,
+          "money": 3180506,
+          "knowledge": 2312,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 312,
+          "money": 3447860,
+          "knowledge": 4188,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 336,
+          "money": 3715214,
+          "knowledge": 6342,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        }
+      ]
+    },
+    {
+      "cohort": "advanced",
+      "seed": 503,
+      "manualPerHour": 10,
+      "hours": 336,
+      "initial": {
+        "money": 25000,
+        "knowledge": 18000,
+        "prestige": 440,
+        "helpers": 6,
+        "published": 440
+      },
+      "final": {
+        "money": 3714545,
+        "knowledge": 1744,
+        "prestige": 455,
+        "published": 455,
+        "identified": 508,
+        "helpers": 6
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 0,
+        "África": 0,
+        "Norteamérica": 0,
+        "Sudamérica": 0,
+        "Oceanía": 0,
+        "Polos": 0,
+        "Océanos": 0,
+        "Océanos profundos": 0
+      },
+      "notReached": [
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 156,
+      "manualAttempts": 3360,
+      "scientificDepartures": 671,
+      "tradeDepartures": 14,
+      "materialPurchases": 0,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 277664,
+          "knowledge": 2949,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 48,
+          "money": 540782,
+          "knowledge": 3367,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 72,
+          "money": 804070,
+          "knowledge": 5221,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 96,
+          "money": 1066968,
+          "knowledge": 3165,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 120,
+          "money": 1330366,
+          "knowledge": 6255,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 144,
+          "money": 1593164,
+          "knowledge": 3347,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 168,
+          "money": 1857142,
+          "knowledge": 10223,
+          "prestige": 442,
+          "identified": 481,
+          "published": 442,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 192,
+          "money": 2120400,
+          "knowledge": 8349,
+          "prestige": 446,
+          "identified": 481,
+          "published": 446,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 216,
+          "money": 2383628,
+          "knowledge": 6332,
+          "prestige": 450,
+          "identified": 481,
+          "published": 450,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 240,
+          "money": 2646786,
+          "knowledge": 3346,
+          "prestige": 454,
+          "identified": 481,
+          "published": 454,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 264,
+          "money": 2913093,
+          "knowledge": 1788,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 288,
+          "money": 3180237,
+          "knowledge": 1620,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 312,
+          "money": 3447591,
+          "knowledge": 3720,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 336,
+          "money": 3714545,
+          "knowledge": 1744,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        }
+      ]
+    },
+    {
+      "cohort": "advanced",
+      "seed": 19,
+      "manualPerHour": 30,
+      "hours": 336,
+      "initial": {
+        "money": 25000,
+        "knowledge": 18000,
+        "prestige": 440,
+        "helpers": 6,
+        "published": 440
+      },
+      "final": {
+        "money": 3714693,
+        "knowledge": 10746,
+        "prestige": 456,
+        "published": 456,
+        "identified": 508,
+        "helpers": 6
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 0,
+        "África": 0,
+        "Norteamérica": 0,
+        "Sudamérica": 0,
+        "Oceanía": 0,
+        "Polos": 0,
+        "Océanos": 0,
+        "Océanos profundos": 0
+      },
+      "notReached": [
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 146,
+      "manualAttempts": 10080,
+      "scientificDepartures": 671,
+      "tradeDepartures": 14,
+      "materialPurchases": 0,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 277630,
+          "knowledge": 4400,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 48,
+          "money": 540628,
+          "knowledge": 5838,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 72,
+          "money": 803226,
+          "knowledge": 3116,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 96,
+          "money": 1066024,
+          "knowledge": 2704,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 120,
+          "money": 1328772,
+          "knowledge": 1878,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 144,
+          "money": 1592120,
+          "knowledge": 6902,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 168,
+          "money": 1855378,
+          "knowledge": 7486,
+          "prestige": 444,
+          "identified": 481,
+          "published": 444,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 192,
+          "money": 2118636,
+          "knowledge": 8008,
+          "prestige": 448,
+          "identified": 481,
+          "published": 448,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 216,
+          "money": 2381794,
+          "knowledge": 7526,
+          "prestige": 452,
+          "identified": 481,
+          "published": 452,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 240,
+          "money": 2646057,
+          "knowledge": 1618,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 264,
+          "money": 2913391,
+          "knowledge": 5898,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 288,
+          "money": 3180245,
+          "knowledge": 5360,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 312,
+          "money": 3447199,
+          "knowledge": 6036,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 336,
+          "money": 3714693,
+          "knowledge": 10746,
+          "prestige": 456,
+          "identified": 508,
+          "published": 456,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        }
+      ]
+    },
+    {
+      "cohort": "advanced",
+      "seed": 71,
+      "manualPerHour": 30,
+      "hours": 336,
+      "initial": {
+        "money": 25000,
+        "knowledge": 18000,
+        "prestige": 440,
+        "helpers": 6,
+        "published": 440
+      },
+      "final": {
+        "money": 3714365,
+        "knowledge": 9338,
+        "prestige": 456,
+        "published": 456,
+        "identified": 508,
+        "helpers": 6
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 0,
+        "África": 0,
+        "Norteamérica": 0,
+        "Sudamérica": 0,
+        "Oceanía": 0,
+        "Polos": 0,
+        "Océanos": 0,
+        "Océanos profundos": 0
+      },
+      "notReached": [
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 146,
+      "manualAttempts": 10080,
+      "scientificDepartures": 669,
+      "tradeDepartures": 14,
+      "materialPurchases": 0,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 277684,
+          "knowledge": 5058,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 48,
+          "money": 540622,
+          "knowledge": 5736,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 72,
+          "money": 803090,
+          "knowledge": 2391,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 96,
+          "money": 1065988,
+          "knowledge": 2733,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 120,
+          "money": 1328836,
+          "knowledge": 2683,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 144,
+          "money": 1592054,
+          "knowledge": 6612,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 168,
+          "money": 1855312,
+          "knowledge": 7016,
+          "prestige": 444,
+          "identified": 481,
+          "published": 444,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 192,
+          "money": 2118570,
+          "knowledge": 7364,
+          "prestige": 448,
+          "identified": 481,
+          "published": 448,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 216,
+          "money": 2381728,
+          "knowledge": 6738,
+          "prestige": 452,
+          "identified": 481,
+          "published": 452,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 240,
+          "money": 2645939,
+          "knowledge": 1750,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 264,
+          "money": 2913063,
+          "knowledge": 4200,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 288,
+          "money": 3179917,
+          "knowledge": 3736,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 312,
+          "money": 3446871,
+          "knowledge": 4268,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 336,
+          "money": 3714365,
+          "knowledge": 9338,
+          "prestige": 456,
+          "identified": 508,
+          "published": 456,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        }
+      ]
+    },
+    {
+      "cohort": "advanced",
+      "seed": 503,
+      "manualPerHour": 30,
+      "hours": 336,
+      "initial": {
+        "money": 25000,
+        "knowledge": 18000,
+        "prestige": 440,
+        "helpers": 6,
+        "published": 440
+      },
+      "final": {
+        "money": 3714327,
+        "knowledge": 9544,
+        "prestige": 456,
+        "published": 456,
+        "identified": 508,
+        "helpers": 6
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 0,
+        "África": 0,
+        "Norteamérica": 0,
+        "Sudamérica": 0,
+        "Oceanía": 0,
+        "Polos": 0,
+        "Océanos": 0,
+        "Océanos profundos": 0
+      },
+      "notReached": [
+        "Fosas abisales"
+      ],
+      "maxHoursWithoutPrestigeGain": 146,
+      "manualAttempts": 10080,
+      "scientificDepartures": 669,
+      "tradeDepartures": 14,
+      "materialPurchases": 0,
+      "samples": [
+        {
+          "hour": 24,
+          "money": 277515,
+          "knowledge": 3291,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 48,
+          "money": 540233,
+          "knowledge": 2095,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 72,
+          "money": 803131,
+          "knowledge": 2501,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 96,
+          "money": 1066029,
+          "knowledge": 2965,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 120,
+          "money": 1328777,
+          "knowledge": 1973,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 144,
+          "money": 1592175,
+          "knowledge": 7443,
+          "prestige": 440,
+          "identified": 481,
+          "published": 440,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 168,
+          "money": 1855383,
+          "knowledge": 7359,
+          "prestige": 444,
+          "identified": 481,
+          "published": 444,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 192,
+          "money": 2118641,
+          "knowledge": 7869,
+          "prestige": 448,
+          "identified": 481,
+          "published": 448,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 216,
+          "money": 2381899,
+          "knowledge": 8281,
+          "prestige": 452,
+          "identified": 481,
+          "published": 452,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 240,
+          "money": 2645941,
+          "knowledge": 1921,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 264,
+          "money": 2913115,
+          "knowledge": 4523,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 288,
+          "money": 3179939,
+          "knowledge": 3970,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 312,
+          "money": 3446893,
+          "knowledge": 4660,
+          "prestige": 455,
+          "identified": 508,
+          "published": 455,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        },
+        {
+          "hour": 336,
+          "money": 3714327,
+          "knowledge": 9544,
+          "prestige": 456,
+          "identified": 508,
+          "published": 456,
+          "helpers": 6,
+          "museumPerSecond": 2.2199999999999998
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "method": "sondeo",
+      "seed": 19,
+      "attempts": 100,
+      "records": 243,
+      "simulatedSeconds": 6000,
+      "chargedPounds": 1000,
+      "chargedKnowledge": 200,
+      "moneyNetSpent": 940,
+      "knowledgeNet": 320,
+      "notableFound": 0
+    },
+    {
+      "method": "sondeo",
+      "seed": 71,
+      "attempts": 100,
+      "records": 282,
+      "simulatedSeconds": 6000,
+      "chargedPounds": 1000,
+      "chargedKnowledge": 200,
+      "moneyNetSpent": 940,
+      "knowledgeNet": 336,
+      "notableFound": 2
+    },
+    {
+      "method": "sondeo",
+      "seed": 503,
+      "attempts": 100,
+      "records": 189,
+      "simulatedSeconds": 6000,
+      "chargedPounds": 1000,
+      "chargedKnowledge": 200,
+      "moneyNetSpent": 940,
+      "knowledgeNet": 300,
+      "notableFound": 0
+    },
+    {
+      "method": "muestreo",
+      "seed": 19,
+      "attempts": 100,
+      "records": 243,
+      "simulatedSeconds": 18000,
+      "chargedPounds": 3000,
+      "chargedKnowledge": 500,
+      "moneyNetSpent": 2895,
+      "knowledgeNet": 20,
+      "notableFound": 0
+    },
+    {
+      "method": "muestreo",
+      "seed": 71,
+      "attempts": 100,
+      "records": 282,
+      "simulatedSeconds": 18000,
+      "chargedPounds": 3000,
+      "chargedKnowledge": 500,
+      "moneyNetSpent": 2895,
+      "knowledgeNet": 36,
+      "notableFound": 2
+    },
+    {
+      "method": "muestreo",
+      "seed": 503,
+      "attempts": 100,
+      "records": 189,
+      "simulatedSeconds": 18000,
+      "chargedPounds": 3000,
+      "chargedKnowledge": 500,
+      "moneyNetSpent": 2895,
+      "knowledgeNet": 0,
+      "notableFound": 0
+    },
+    {
+      "method": "extraordinario",
+      "seed": 19,
+      "attempts": 100,
+      "records": 180,
+      "simulatedSeconds": 30000,
+      "chargedPounds": 6000,
+      "chargedKnowledge": 1000,
+      "moneyNetSpent": 5985,
+      "knowledgeNet": -480,
+      "notableFound": 0
+    },
+    {
+      "method": "extraordinario",
+      "seed": 71,
+      "attempts": 100,
+      "records": 204,
+      "simulatedSeconds": 30000,
+      "chargedPounds": 6000,
+      "chargedKnowledge": 1000,
+      "moneyNetSpent": 5985,
+      "knowledgeNet": -464,
+      "notableFound": 1
+    },
+    {
+      "method": "extraordinario",
+      "seed": 503,
+      "attempts": 100,
+      "records": 150,
+      "simulatedSeconds": 30000,
+      "chargedPounds": 6000,
+      "chargedKnowledge": 1000,
+      "moneyNetSpent": 5985,
+      "knowledgeNet": -500,
+      "notableFound": 0
+    }
+  ]
+}

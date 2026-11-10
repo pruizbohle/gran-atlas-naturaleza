@@ -1,0 +1,10 @@
+✔ GM05 preserves all economic definitions, rates, five stage costs and research prices from9da9808 (164.078031ms)
+✔ 18 seeded campaign trajectories and900 timed operations respect balances and documented prestige steps (0.842991ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 212.267731
