@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "version": "3.30.0",
+  "url": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "isolatedContext": true,
+  "certificateTrust": "Explicit supplied environment proxy CA SPKI; no global certificate bypass",
+  "marketPurchaseThroughUI": true,
+  "real24HourDepartureThroughUI": true,
+  "offlinePendingTradeAndInventoryPreserved": true,
+  "offlineLaboratory": true,
+  "viewport": 360,
+  "cache": {
+    "name": "gran-atlas-v3.30.0-comercio-fad104a96686",
+    "assets": 126
+  },
+  "errors": [],
+  "physicalAndroid": false
+}

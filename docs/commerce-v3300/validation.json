@@ -21,5 +21,13 @@
     "regions": 87,
     "presences": 1460
   },
-  "android": "No APK built; permanent signing remains independent"
+  "android": "No APK built; permanent signing remains independent",
+  "remoteCI": {
+    "run": 42816057959,
+    "status": "success",
+    "nodeTestsPassed": 430,
+    "deploymentCommit": "33e6aacb347abcb12862a84506fd54d1e75816c5"
+  },
+  "publishedHashReport": "published-report.json",
+  "publishedBrowserReport": "published-browser.json"
 }
