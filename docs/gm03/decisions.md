@@ -1,0 +1,11 @@
+# GM-03A · decisiones de integración sobre 33c99b3 (3.30.0)
+
+Se consumen los CSV GM-01 existentes, sin reauditar el Excel. Base comprobada: 807 identidades, 87 regiones, 1460 presencias; 430 pruebas aprobadas. Incorporación: 21 identidades, siete IDs semánticos del plan y 45 filas Fauna trazadas en catalog.json. Se conserva `zorro_artico` íntegro, incluida su rareza Raro frente a Poco común en fuente (GM01-0405). Sin alias nuevos ni conceptos bloqueados. Todas las identidades nuevas conservan el binomio fuente; no se declaran sinonimias ni se infiere validación por URL GBIF. IDs estables reutilizables en futuros océanos; GM-04 no se inicia.
+
+HX-11-11 antártico usa `polar_hielo_antartico_central`; Costa del Cabo conserva HX-11-11. Solo siete celdas jugables, ninguna de las 22 reservadas. Ártico y Antártida tendrán grupos cartográficos separados.
+
+Corrección editorial explícita: las cuatro presencias del sector antártico central no justifican pingüinos Adelia ni págalos en el casquete interior. Se conservan las cuatro filas fuente y el alcance del sector, separando enclaves rocosos interiores (petrel níveo), costa (Adelia/págalo) y banquisa (emperador). El sector es un transecto de subáreas, no una afirmación de presencia en el interior glacial. Mamíferos marinos, calamar y tiburón se observan únicamente en agua próxima al hielo o plataformas de descanso, nunca en hielo interior. No se extrapolan nuevas presencias. El zorro usa condiciones por presencia sin modificar sus hábitats históricos.
+
+Sin albinismo, melanismo ni dimorfismo nuevos: no hay autorización científica previa para asignarlos. Las láminas compararán perfiles normales y conservarán las variantes históricas del zorro.
+
+Plan de acceso: Oceanía termina en 275; Polos comienza en 282 y termina en 324, incremento +7. Investigación tras Oceanía, £4500 y 4000 conocimiento. Quinta preparación: abrigo polar, con receta de capucha impermeable, morral reforzado, tres maderas talladas y dos pergaminos. Todo obtenible en Europa, sin recursos polares. Los cuatro objetos anteriores se acumulan y se acreditan permanentemente. Se evalúa ruta comercial fría, pero los suministros actuales ya cubren la receta; se conserva íntegramente Comercio sin agregar otra ruta redundante.
