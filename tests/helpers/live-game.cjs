@@ -40,6 +40,7 @@ function harness(store={},backup,options={}){
  vm.runInContext(fs.readFileSync('www/js/legendary-art-v3197.js','utf8'),ctx);
  if(!options.legacy&&options.southamerica!==false)vm.runInContext(fs.readFileSync('www/js/southamerica-geography-v3230.js','utf8'),ctx);
  if(gameSource.includes('const oceaniaReview=globalThis.'))for(const name of ['oceania-runtime-v3290','oceania-art-v3290','oceania-geography-v3290'])vm.runInContext(fs.readFileSync('www/js/'+name+'.js','utf8'),ctx);
+ if(gameSource.includes('const polar3310=globalThis.'))for(const name of ['polar-data-v3310','polar-geography-v3310','polar-art-v3310'])vm.runInContext(fs.readFileSync('www/js/'+name+'.js','utf8'),ctx);
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(options.saveSource||SAVE,ctx,{filename:'www/js/save-manager.js'});
  return {window:w,store,doc,elements,localStorage,

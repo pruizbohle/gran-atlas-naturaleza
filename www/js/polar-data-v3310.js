@@ -876,7 +876,7 @@
       "code": "HX-11-04",
       "sourceHexId": "HX-11-04",
       "continent": "Polos",
-      "pole": "Ártico",
+      "pole": "Antártida",
       "unlock": {
         "prestige": 303
       },
@@ -900,7 +900,7 @@
       "code": "HX-11-11",
       "sourceHexId": "HX-11-11",
       "continent": "Polos",
-      "pole": "Ártico",
+      "pole": "Antártida",
       "unlock": {
         "prestige": 310
       },
@@ -923,7 +923,7 @@
       "code": "HX-11-13",
       "sourceHexId": "HX-11-13",
       "continent": "Polos",
-      "pole": "Ártico",
+      "pole": "Antártida",
       "unlock": {
         "prestige": 317
       },
@@ -949,7 +949,7 @@
       "code": "HX-11-16",
       "sourceHexId": "HX-11-16",
       "continent": "Polos",
-      "pole": "Ártico",
+      "pole": "Antártida",
       "unlock": {
         "prestige": 324
       },
@@ -1594,27 +1594,27 @@
     }
   ],
   "ids": {
-    "Balaena mysticetus": "polar_esp_balaena_mysticetus",
-    "Erignathus barbatus": "polar_esp_erignathus_barbatus",
-    "Aptenodytes forsteri": "polar_esp_aptenodytes_forsteri",
-    "Sterna paradisaea": "polar_esp_sterna_paradisaea",
-    "Ommatophoca rossii": "polar_esp_ommatophoca_rossii",
-    "Lobodon carcinophaga": "polar_esp_lobodon_carcinophaga",
-    "Gonatus fabricii": "polar_esp_gonatus_fabricii",
-    "Mirounga leonina": "polar_esp_mirounga_leonina",
-    "Monodon monoceros": "polar_esp_monodon_monoceros",
-    "Pagophila eburnea": "polar_esp_pagophila_eburnea",
-    "Pagodroma nivea": "polar_esp_pagodroma_nivea",
-    "Somateria mollissima": "polar_esp_somateria_mollissima",
-    "Ursus maritimus": "polar_esp_ursus_maritimus",
-    "Vulpes lagopus": "zorro_artico",
-    "Stercorarius maccormicki": "polar_esp_stercorarius_maccormicki",
-    "Delphinapterus leucas": "polar_esp_delphinapterus_leucas",
     "Hydrurga leptonyx": "polar_esp_hydrurga_leptonyx",
+    "Delphinapterus leucas": "polar_esp_delphinapterus_leucas",
+    "Ursus maritimus": "polar_esp_ursus_maritimus",
+    "Monodon monoceros": "polar_esp_monodon_monoceros",
+    "Ommatophoca rossii": "polar_esp_ommatophoca_rossii",
+    "Sterna paradisaea": "polar_esp_sterna_paradisaea",
     "Pusa hispida": "polar_esp_pusa_hispida",
-    "Leptonychotes weddellii": "polar_esp_leptonychotes_weddellii",
-    "Pygoscelis adeliae": "polar_esp_pygoscelis_adeliae",
+    "Mirounga leonina": "polar_esp_mirounga_leonina",
+    "Somateria mollissima": "polar_esp_somateria_mollissima",
+    "Stercorarius maccormicki": "polar_esp_stercorarius_maccormicki",
+    "Erignathus barbatus": "polar_esp_erignathus_barbatus",
+    "Lobodon carcinophaga": "polar_esp_lobodon_carcinophaga",
+    "Pagodroma nivea": "polar_esp_pagodroma_nivea",
+    "Balaena mysticetus": "polar_esp_balaena_mysticetus",
+    "Odobenus rosmarus": "polar_esp_odobenus_rosmarus",
+    "Pagophila eburnea": "polar_esp_pagophila_eburnea",
     "Somniosus microcephalus": "polar_esp_somniosus_microcephalus",
-    "Odobenus rosmarus": "polar_esp_odobenus_rosmarus"
+    "Pygoscelis adeliae": "polar_esp_pygoscelis_adeliae",
+    "Gonatus fabricii": "polar_esp_gonatus_fabricii",
+    "Aptenodytes forsteri": "polar_esp_aptenodytes_forsteri",
+    "Leptonychotes weddellii": "polar_esp_leptonychotes_weddellii",
+    "Vulpes lagopus": "zorro_artico"
   }
 };root.AtlasPolar3310=data;if(typeof module!=="undefined")module.exports=data;})(globalThis);

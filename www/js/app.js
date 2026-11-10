@@ -2104,6 +2104,15 @@ const RESEARCH_LEGACY_BRANCH={
  sociedad_1:'sociedad',sociedad_2:'sociedad',fondos_x1:'sociedad',fondos_x10:'sociedad',fondos_x100:'sociedad',fondos_x1000:'sociedad'
 };
 function researchBranchOf(node){return node.branch||RESEARCH_LEGACY_BRANCH[node.id]||'naturalismo';}
+// GM3310 BEGIN catalog
+const polar3310=globalThis.AtlasPolar3310;
+if(!polar3310)throw Error('Faltan los datos polares 3.31.0');
+for(const[id,sp]of Object.entries(polar3310.species)){if(SPECIES[id])throw Error('Identidad polar duplicada');SPECIES[id]=sp;}
+for(const r of polar3310.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región polar duplicada');REGIONS.push(r);}
+const taxonomyBefore3310=taxonomyInfo;
+taxonomyInfo=function(id){return SPECIES[id]?.origin==='polar3310'?SPECIES[id].taxonomy:taxonomyBefore3310(id);};
+RESEARCH_NODES.push({id:'polos_1',name:'Exploración de las regiones polares',desc:'Ártico y Antártida: sectores separados. Requiere las cinco preparaciones fabricadas, sin consumirlas.',branch:'expediciones',money:4500,knowledge:4000,req:'oceania_1',once:true,effect(s){s.upgrades.polarUnlocked=1;}});
+// GM3310 END catalog
 function initialState(){
   const region=REGIONS[0].id;
   return {
@@ -2318,6 +2327,9 @@ window.AtlasSaveBridge={
      state.regionsVisited[state.currentRegion]=true;
  // EC3300 BEGIN import-commerce
      normalizeCommerce3300(state);migrateProgression3300(state);
+ // GM3310 BEGIN import
+     migratePolar3310(state);
+ // GM3310 END import
  // EC3300 END import-commerce
      // Evitar calcular un intervalo offline obsoleto al actualizar la partida.
      state.lastTick=Date.now();
@@ -6351,6 +6363,27 @@ renderObjects=function(){
 };
 migrateProgression3300(state);
 // EC3300 END progression
+// GM3310 BEGIN gameplay
+ITEMS.polar_coat={name:'Abrigo de expedición polar',emoji:'🧥',slot:null,bonus:'Preparación permanente para expediciones frías',kind:'artifact_material'};
+RECIPES.polar_coat={requires:{rain_hood:1,sturdy_pack:1,carved_wood:3,parchment_scrap:2}};
+CONTINENT_RULES3300.Polos={initial:282,step:7,items:[...CONTINENT_RULES3300['Oceanía'].items,'polar_coat']};
+CONTINENT_RESEARCH3300.polos_1='Polos';
+ATLAS_CONTINENTS.find(c=>c.id==='Polos').implemented=true;
+function migratePolar3310(s){s.upgrades.polarUnlocked=!!s.purchases.polos_1;return s;}
+migratePolar3310(state);
+const regionBefore3310=regionRequirementsMet,statusBefore3310=continentStatus,modelBefore3310=atlasRegionModel;
+regionRequirementsMet=function(r){if(r?.continent!=='Polos')return regionBefore3310(r);return !!state.regionUnlocked[r.id]||r.id===state.currentRegion||!!(state.upgrades.polarUnlocked&&craftedReady3300('Polos')&&state.prestige>=r.unlock.prestige);};
+continentStatus=function(c){return c==='Polos'?(state.upgrades.polarUnlocked?'available':'unlockable'):statusBefore3310(c);};
+atlasRegionModel=function(r){const m=modelBefore3310(r);if(r.continent==='Polos'){m.name=(r.pole==='Ártico'?'❄ Ártico · ':'🐧 Antártida · ')+r.name.replace(/^Hielo (ártico|antártico) /,'');m.requirements.unshift({label:'Investigación de exploración polar',met:!!state.upgrades.polarUnlocked});if(m.status==='bloqueada')m.summary=m.requirements.find(x=>!x.met)?.label||'Preparación pendiente';}return m;};
+const eligibleBefore3310=eligibleSpecies,autoBefore3310=automaticEligibleSpecies;
+function polarPresence3310(region,id){return polar3310.presences.find(p=>p.regionId===region&&p.speciesId===id);}
+eligibleSpecies=function(region,habitat,time,season){if(!region.startsWith('polar_'))return eligibleBefore3310(region,habitat,time,season);return REGIONS.find(r=>r.id===region)?.species.filter(id=>polarPresence3310(region,id).habitats.includes(habitat)&&SPECIES[id].times.includes(time)&&SPECIES[id].seasons.includes(season))||[];};
+automaticEligibleSpecies=function(region,season){if(!region.startsWith('polar_'))return autoBefore3310(region,season);return REGIONS.find(r=>r.id===region)?.species.filter(id=>SPECIES[id].seasons.includes(season)&&SPECIES[id].times.length&&polarPresence3310(region,id).habitats.length)||[];};
+const habitatBefore3310=habitatLabel;
+habitatLabel=function(h){return ({agua_polar:'🌊 Aguas junto al hielo',banquisa_artica:'❄ Banquisa ártica',banquisa_antartica:'🧊 Banquisa antártica',costa_antartica:'🐧 Costa antártica',hielo_interior:'🏔 Enclaves rocosos interiores'}[h]||habitatBefore3310(h));};
+const objectsBefore3310=renderObjects;
+renderObjects=function(){return objectsBefore3310()+`<section class="card"><h3>Preparación polar · quinta herramienta</h3><p class="small">Abrigo de expedición polar: Capucha impermeable ×1 + Morral reforzado ×1 + Madera tallada ×3 + Pergamino antiguo ×2. Acreditación permanente; no se consume al abrir regiones.</p><button class="btn" data-action="craft-item" data-id="polar_coat" ${canCraft('polar_coat')?'':'disabled'}>Fabricar abrigo polar</button><p class="small">La capucha y el morral se fabrican en Taller. Sus materiales se obtienen en Europa. Los suministros comerciales actuales apoyan la preparación sin cambiar sus cuatro rutas.</p></section>`;};
+// GM3310 END gameplay
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 render();
 })();

@@ -1,0 +1,25 @@
+/* GM-03: three Arctic cells, four Antarctic cells; separated groups. */
+(function(root){'use strict';
+const base=root.AtlasGeography||(typeof module==='object'&&module.exports?require('./oceania-geography-v3290.js'):null);
+if(!base)throw Error('Oceania requires the existing Atlas geometry');
+// Axial q/r are a compact visual composition, independent of source HX identifiers.
+const cells=Object.freeze([
+ ['polar_hielo_artico_occidental',0,0,'Ártico occidental','Ártico'],['polar_hielo_artico_central',1,0,'Ártico central','Ártico'],['polar_hielo_artico_oriental',2,0,'Ártico oriental','Ártico'],
+ ['polar_hielo_antartico_occidental',0,3,'Antártida oeste','Antártida'],['polar_hielo_antartico_central',1,3,'Antártida central','Antártida'],['polar_hielo_antartico_costero',0,4,'Antártida costa','Antártida'],['polar_hielo_antartico_oriental',1,4,'Antártida este','Antártida']
+].map(c=>Object.freeze(c)));
+function layout(continent,regions=[]){
+ if(continent!=='Polos')return base.layout(continent,regions);
+ const padding=22,raw=cells.map(([regionId,q,r,shortLabel,reason])=>({regionId,q,r,shortLabel,reason,...base.point(q,r)}));
+ const origin={x:padding+base.dx/2-Math.min(...raw.map(c=>c.x)),y:padding+base.radius-Math.min(...raw.map(c=>c.y))},positions={};
+ const mesh=raw.map(c=>{const region=regions.find(r=>r.id===c.regionId);const cell={cellId:'polar-'+c.regionId,continent,q:c.q,r:c.r,column:c.q+(c.r-(c.r&1))/2,x:c.x+origin.x,y:c.y+origin.y,sourceId:c.regionId,shortLabel:c.shortLabel,label:region?.name||c.shortLabel,terrain:region?.habitats[0]||'bosque',regionIds:region?[region.id]:[],playable:!!region,kind:region?'playable':'reserved'};if(region)positions[region.id]={cellId:cell.cellId,q:cell.q,r:cell.r,x:cell.x,y:cell.y,reason:c.reason};return cell;});
+ for(const r of regions)if(!positions[r.id])throw Error('Unknown polar region: '+r.id);
+ return {cells:mesh,positions,origin,board:{width:Math.max(...mesh.map(c=>c.x))+base.dx/2+padding,height:Math.max(...mesh.map(c=>c.y))+base.radius+padding},radius:base.radius};
+}
+function audit(continent,regions=[]){
+ if(continent!=='Polos')return base.audit(continent,regions);
+ const mesh=layout(continent,regions),index=new Map(mesh.cells.map(c=>[c.q+','+c.r,c])),pairs=[],edgeErrors=[];
+ for(const a of mesh.cells)for(const[dq,dr]of base.directions){const b=index.get((a.q+dq)+','+(a.r+dr));if(!b||b.cellId<=a.cellId)continue;const av=base.vertices().map(([x,y])=>[a.x+x,a.y+y]),bv=base.vertices().map(([x,y])=>[b.x+x,b.y+y]),distance=Math.hypot(a.x-b.x,a.y-b.y),error=Math.abs(distance-base.dx),sharedVertices=av.filter(v=>bv.some(w=>Math.hypot(v[0]-w[0],v[1]-w[1])<1e-8)).length,edgeError=av.flatMap(v=>bv.map(w=>Math.hypot(v[0]-w[0],v[1]-w[1]))).sort((a,b)=>a-b)[1],pair={a:a.cellId,b:b.cellId,distance,error,sharedVertices,edgeError};pairs.push(pair);if(error>1e-8||edgeError>1e-8||sharedVertices!==2)edgeErrors.push(pair);}
+ return {continent,cells:mesh.cells.length,playableCells:mesh.cells.filter(c=>c.playable).length,regions:regions.length,additionalCells:mesh.cells.filter(c=>!c.playable).length,groupedCells:0,groupedRegions:0,radius:base.radius,neighborDistance:base.dx,neighborPairs:pairs.length,maxError:Math.max(0,...pairs.map(p=>p.error)),maxEdgeError:Math.max(0,...pairs.map(p=>p.edgeError)),edgeErrors,pairs};
+}
+const api=Object.freeze({...base,layout,audit,polarCells:cells});root.AtlasGeography=api;if(typeof module==='object'&&module.exports)module.exports=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
