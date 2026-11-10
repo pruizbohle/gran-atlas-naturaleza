@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "version": "3.33.0",
+  "url": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "isolatedContext": true,
+  "explicitProxyCATrust": true,
+  "seventeenMapCells": true,
+  "unlockTravelThroughUI": true,
+  "offlineDeepRegionAndLab": true,
+  "pendingScientificOperationPreserved": true,
+  "viewport": 360,
+  "artPlates": 20,
+  "cache": {
+    "name": "gran-atlas-v3.33.0-deep-dc9155ae8e05",
+    "assets": 146
+  },
+  "errors": [],
+  "physicalAndroid": false
+}
