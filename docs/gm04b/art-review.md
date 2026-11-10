@@ -1,0 +1,7 @@
+# Revisión de láminas GM-04B.3
+
+20 SVG originales /17 familias, renderizados en Chromium, contacto general y comparación por familia a64/80/120. Inspección visual realizada sobre el tablero completo y los pares Anoplogaster /Stomiidae. Tras la primera revisión se alargó el perfil de Idiacanthus, se afinó la silueta anguilliforme de Chlamydoselachus, se reforzaron los colmillos inferiores de A.cornuta y se añadieron cirros al pulpo cirrado. Nueva captura y comprobación de límites después de las correcciones.
+
+Rasgos: escudo/ojos tubulares de Macropinna sin emisión luminosa; esca solo en Ceratias; radio dorsal anterior de Chauliodus sin barbilla copiada; barbilla en Stomias/Idiacanthus; ojos heteromorfos y fotóforos en Histioteuthis; membrana, ocho brazos y dos filamentos en Vampyroteuthis; aletas de dumbo y cirros en Grimpoteuthis; tres radios sustentadores y pectorales alargadas en Bathypterois. Haliphron conserva ocho brazos anatómicos pese a su nombre común. Calamar colosal con manto robusto, grandes aletas, ganchos y luz ocular localizada. No se representan variantes sexuales jugables ni pigmentaciones nuevas. Las luces son marcas discretas de órganos, no brillo de toda la silueta.
+
+Los923 SVG anteriores y todas sus variantes/sexos se comparan literalmente contra3.32.0 en la regresión actual. Las capturas por familia y `art-report.json` documentan escalas, ausencia de desbordamiento y búsqueda. Son láminas esquemáticas reconstruidas, no fotografías ni representaciones de observación directa desde cubierta.
