@@ -1,3 +1,13 @@
+# El Gran Atlas 3.32.0 — Mares superficiales
+
+Doce mares jugables, 192 registros originales y 95 identidades nuevas: **923 especies, 106 regiones y 1.697 presencias**. Incluye todos los continentes y Polos, Comercio offline y prestigio +8 sin consumirlo. Las cinco preparaciones anteriores y el Cuadrante transatlántico siguen siendo útiles.
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Informe 3.32.0](README_V3320.md) · [Actualizar con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3320.html) · [Laboratorio marino](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-marino-v3320.html)
+
+Android y su firma estable permanecen independientes. No se generan APK debug. Las regiones profundas y abisales siguen fuera de esta versión.
+
+## Historial
+
 # El Gran Atlas 3.31.0 — Regiones polares
 
 Siete regiones jugables separadas entre Ártico y Antártida, 21 identidades nuevas y 45 presencias. Catálogo mundial: **828 especies, 94 regiones y 1.505 presencias**. Incluye Comercio 3.30.0, preparación polar fabricada y prestigio +7 sin consumirlo. Partidas y viajes pendientes compatibles.

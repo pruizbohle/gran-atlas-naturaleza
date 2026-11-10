@@ -23,5 +23,9 @@
   "old828SpeciesAndAllSVGVariantsPreserved": true,
   "tradePendingAndAdvancedSavesPreserved": true,
   "art": "art-report.json",
-  "performance": "performance-report.json"
+  "performance": "performance-report.json",
+  "browser": "browser-report.json",
+  "pwaUpgrade": "3.31.0 -> 3.32.0, exact backup and pending commerce preserved",
+  "releaseManifest": "release-manifest.json",
+  "workflowLocalCommands": "passed"
 }

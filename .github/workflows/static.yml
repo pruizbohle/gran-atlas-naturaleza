@@ -39,12 +39,16 @@ jobs:
         run: |
           node --check www/js/app.js
           node --check www/js/polar-data-v3310.js
+          node --check www/js/marine-data-v3320.js
+          node --check www/js/marine-geography-v3320.js
+          node --check www/js/marine-art-v3320.js
+          node --check www/js/lab/marine-lab-v3320.js
           node --check www/js/polar-art-v3310.js
           node --check www/js/polar-geography-v3310.js
           node --check www/js/save-manager.js
           node --check www/sw.js
-          node scripts/build-polar-release-v3310.cjs
-          node scripts/validate-polar-v3310.cjs
+          node scripts/build-marine-release-v3320.cjs
+          node scripts/validate-marine-v3320.cjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload game

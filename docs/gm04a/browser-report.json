@@ -1,0 +1,21 @@
+{
+  "version": "3.32.0",
+  "upgrade": "3.31.0 -> 3.32.0",
+  "historicalBackupExact": true,
+  "otherWindowBlocksUpdate": true,
+  "pendingCommercePreserved": true,
+  "fiveHistoricalCraftsResearchUnlockTravelThroughUI": true,
+  "prestigeNotConsumed": true,
+  "offlineGameAndLab": true,
+  "viewports": [
+    320,
+    360,
+    390,
+    412,
+    1280
+  ],
+  "artPlates": 95,
+  "atlasOpenMeanMs": 40.70459379999984,
+  "errors": [],
+  "physicalAndroid": false
+}

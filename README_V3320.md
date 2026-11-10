@@ -31,13 +31,15 @@ Comandos reproducibles:
 - `node scripts/check-marine-art-v3320.cjs`
 - `node scripts/check-marine-performance-v3320.cjs`
 - `python3 scripts/build-marine-data-v3320.py`
+- `node scripts/check-marine-pwa-v3320.cjs`
+- `node scripts/build-marine-release-v3320.cjs`
 
 Las pruebas móviles son Chromium emulado. Android y su firma permanente permanecen independientes.
 
 ## Publicación
 
-Pendiente de actualización PWA final, GitHub Actions y comprobación del paquete publicado.
+La prueba PWA 3.31.0→3.32.0 pasó localmente: rechazo con otra ventana, respaldo exacto, viaje comercial pendiente conservado, investigación/desbloqueo/viaje desde UI y juego/laboratorio offline. Navegación probada a 320, 360, 390, 412 y 1280 px sin desbordamiento. [Informe](docs/gm04a/browser-report.json). Paquete con caché íntegra nueva y actualizador seguro preparado; publicación y hashes públicos pendientes de GitHub Pages.
 
 ## Recursos para GM-04B, sin iniciar esa fase
 
-Se podrán reutilizar el índice de presencias por región, IDs marinos estables, filtros temporales, plantillas familiares de cetáceos/cefalópodos, laboratorio con búsqueda y escalas, mapas delegados, catálogo trazado, migración aditiva y comprobación de viajes pendientes. Los cinco sectores profundos y sus 44 filas permanecen fuera de esta implementación; no se añaden datos, regiones ni métodos de inmersión para ellos.
+Se podrán reutilizar el índice de presencias por región, IDs marinos estables, filtros temporales, plantillas familiares de cetáceos/cefalópodos, laboratorio con búsqueda y escalas, mapas delegados, catálogo trazado, migración aditiva y comprobación de viajes pendientes. [Resumen específico de reutilización](docs/gm04a/reuse-for-gm04b.md). Los cinco sectores profundos y sus 44 filas permanecen fuera de esta implementación; no se añaden datos, regiones ni métodos de inmersión para ellos.
