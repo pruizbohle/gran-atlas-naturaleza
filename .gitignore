@@ -1,0 +1,4 @@
+# Android signing material stays outside the repository.
+*.jks
+*.keystore
+atlas-release.base64

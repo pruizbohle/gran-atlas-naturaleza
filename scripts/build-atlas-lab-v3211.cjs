@@ -1,10 +1,10 @@
 'use strict';
 const fs=require('node:fs'),{catalog}=require('../tests/helpers/catalog.cjs');
-const source=fs.readFileSync('www/js/app.js','utf8'),regions=catalog(source,true).REGIONS;
+const source=require('../tests/helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8')),regions=catalog(source,true).REGIONS;
 const continents=source.slice(source.indexOf('const ATLAS_CONTINENTS='),source.indexOf('function regionRequirementsMet('));
 const rules=source.slice(source.indexOf('function regionRequirementsMet('),source.indexOf('function unlockRegion(',source.indexOf('function regionRequirementsMet(')));
 const projection=source.slice(source.indexOf('function atlasRegionModel('),source.indexOf('function renderAtlas('));
-const shell=fs.readFileSync('www/index.html','utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'');
+const shell=fs.readFileSync('tests/fixtures/release-v3280/www/index.html','utf8').replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'');
 const output=`/* Generated from the production catalog, unlock predicates and view projection.
  * Isolated sample state only. Run node scripts/build-atlas-lab-v3211.cjs to regenerate. */
 (function(root){'use strict';

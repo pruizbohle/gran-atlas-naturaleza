@@ -1,7 +1,7 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),crypto=require('node:crypto');
 const {catalogSource}=require('./helpers/catalog.cjs'),{harness}=require('./helpers/live-game.cjs');
-const source=fs.readFileSync('www/js/app.js','utf8'),ctx=vm.createContext({});ctx.window=ctx;
+const source=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8')),ctx=vm.createContext({});ctx.window=ctx;
 for(const n of ['fish-art-v3191','herp-art-v3192','bird-art-v3193','mammal-art-v3194'])vm.runInContext(fs.readFileSync('www/js/'+n+'.js','utf8'),ctx);
 vm.runInContext(catalogSource(source)+'\n'+source.slice(source.indexOf('function sexSpriteMarkup('),source.indexOf('// initial unlock checks and migration'))+'\nglobalThis.api={SPECIES,SEXUAL_DIMORPHISM,getSpriteMarkup,enforcePaleColors,enforceMelanicColors,configuredSpecials,specialVariantName,normalizeSpecialDiscoveries};',ctx);
 const api=ctx.api,KEY='gran_atlas_v05',clone=x=>JSON.parse(JSON.stringify(x));
@@ -77,5 +77,5 @@ test('historical pigmentation weights and ethology remain exact in the independe
 test('lab bundle is reproducible and isolated from game progress; offline resources are complete',()=>{
  const lab=fs.readFileSync('www/js/lab/dimorphism-production.js','utf8'),gallery=fs.readFileSync('www/js/lab/pigmentation-lab-v3196.js','utf8');assert.doesNotMatch(lab+gallery,/localStorage|recordSexObservation|setInterval|state\.specialFound/);
  require('node:child_process').execFileSync(process.execPath,['scripts/build-dimorphism-lab.cjs','--check']);
- const sw=fs.readFileSync('www/sw.js','utf8');assert.match(sw,/gran-atlas-v3\.28\.0-expeditions/);for(const asset of ['laboratorio-pigmentacion.html','js/lab/pigmentation-lab-v3196.js'])assert.ok(sw.includes("'./"+asset+"'"));
+ const sw=fs.readFileSync('www/sw.js','utf8');assert.match(sw,/gran-atlas-v3\.29\.0-oceania/);for(const asset of ['laboratorio-pigmentacion.html','js/lab/pigmentation-lab-v3196.js'])assert.ok(sw.includes("'./"+asset+"'"));
 });

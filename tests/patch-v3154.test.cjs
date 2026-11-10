@@ -2,7 +2,7 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
-const src=fs.readFileSync('www/js/app.js','utf8');
+const src=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
 const css=fs.readFileSync('www/css/styles.css','utf8');
 function boot(){
  const cache={};

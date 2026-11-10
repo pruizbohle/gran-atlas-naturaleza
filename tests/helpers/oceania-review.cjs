@@ -4,8 +4,8 @@
 const fs=require('node:fs'),{harness}=require('./live-game.cjs');
 const candidate=require('../../www/js/oceania-runtime-v3290.js');
 function candidateGameSource(){
- let code=fs.readFileSync('www/js/app.js','utf8');
- const after=(marker,text)=>{if(code.split(marker).length!==2)throw Error('Review seam changed: '+marker);code=code.replace(marker,marker+'\n'+text+'\n');};
+ let code=fs.readFileSync('tests/fixtures/release-v3280/www/js/app.js','utf8');
+ const after=(marker,text)=>{if(code.split(marker).length!==2)throw Error('Review seam changed: '+marker);code=code.replace(marker,marker+'\n// OC3290 BEGIN '+marker.slice(3)+'\n'+text.replace(/^[ \t]+$/gm,'')+'\n// OC3290 END '+marker.slice(3)+'\n');};
  after('// AM-04 END catalog',`
  const oceaniaReview=${JSON.stringify(candidate)};
  for(const[id,sp]of Object.entries(oceaniaReview.species)){
@@ -31,10 +31,11 @@ function candidateGameSource(){
  const art='www/js/oceania-art-v3290.js';
  if(fs.existsSync(art)){
   code=fs.readFileSync(art,'utf8')+'\n'+code;
-  code=code.replace('function spriteFor(kind,color,skin,id){','function spriteFor(kind,color,skin,id){\n const oc=globalThis.AtlasOceaniaArt3290?.render(SPECIES[id],color,skin);if(oc)return oc;');
-  code=code.replace('function sexSpriteMarkup(id,sex){',"function sexSpriteMarkup(id,sex){\n if(SPECIES[id]?.origin==='oc3290')return globalThis.AtlasOceaniaArt3290?.render(SPECIES[id],SPECIES[id].color,'normal',sex)||null;");
+  code=code.replace('function spriteFor(kind,color,skin,id){','function spriteFor(kind,color,skin,id){\n/* OC3290 BEGIN art */ const oc=globalThis.AtlasOceaniaArt3290?.render(SPECIES[id],color,skin);if(oc)return oc; /* OC3290 END art */');
+  code=code.replace('function sexSpriteMarkup(id,sex){',"function sexSpriteMarkup(id,sex){\n /* OC3290 BEGIN sex */ if(SPECIES[id]?.origin==='oc3290')return globalThis.AtlasOceaniaArt3290?.render(SPECIES[id],SPECIES[id].color,'normal',sex)||null; /* OC3290 END sex */");
  }
  return fs.readFileSync('www/js/oceania-geography-v3290.js','utf8')+'\n'+code;
 }
 function reviewHarness(store={},backup,options={}){return harness(store,backup,{...options,gameSource:candidateGameSource()});}
-module.exports={reviewHarness,candidateGameSource,candidate};
+function baselineHarness(store={},backup,options={}){return harness(store,backup,{saveSource:fs.readFileSync('tests/fixtures/release-v3280/www/js/save-manager.js','utf8'),...options,gameSource:fs.readFileSync('tests/fixtures/release-v3280/www/js/app.js','utf8')});}
+module.exports={reviewHarness,candidateGameSource,candidate,baselineHarness};

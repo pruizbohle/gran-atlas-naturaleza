@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),cp=require('node:child_process');
-const {reviewHarness,candidate}=require('./helpers/oceania-review.cjs'),{harness}=require('./helpers/live-game.cjs');
+const {reviewHarness,candidate}=require('./helpers/oceania-review.cjs'),{baselineHarness:harness}=require('./helpers/oceania-review.cjs');
 const json=x=>JSON.parse(JSON.stringify(x));
 test('isolated actual engine installs exactly 97 additional identities, eight regions and 131 presences',()=>{
  const a=reviewHarness().window.__atlasTest;
@@ -57,10 +57,10 @@ test('candidate save/load and Android export/import preserve old data and newly 
  const reload=reviewHarness({...h.store});assert.equal(reload.window.__atlasTest.state.currentRegion,first.id);assert.equal(reload.window.__atlasTest.state.upgrades.oceaniaUnlocked,true);assert.equal(reload.window.__atlasTest.state.sightings[first.species[0]],42);
  let exported;reload.window.Capacitor.Plugins.AtlasExport.saveFile=async payload=>{exported=payload;return{uri:'content://review'};};await reload.elements.saveDownloadBtn.fire('click');assert.ok(exported);const envelope=JSON.parse(exported.content);assert.equal(envelope.game.currentRegion,first.id);const imported=reviewHarness({},envelope);await imported.import();assert.equal(imported.window.__atlasTest.state.currentRegion,first.id);assert.equal(imported.window.__atlasTest.state.sightings[first.species[0]],42);
 });
-test('runtime generation is deterministic, scientifically approved and absent from public entry/cache',()=>{
+test('runtime generation is deterministic, scientifically approved and loaded by public entry/cache',()=>{
  cp.execFileSync('python',['scripts/build-oceania-runtime-v3290.py','--check']);assert.equal(candidate.approvedForProduction,true);
- for(const path of ['www/index.html','www/sw.js'])assert.ok(!fs.readFileSync(path,'utf8').includes('oceania-runtime-v3290'));
- assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.28.0');
+ for(const path of ['www/index.html','www/sw.js'])assert.ok(fs.readFileSync(path,'utf8').includes('oceania-runtime-v3290'));
+ assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.29.0');
 });
 test('candidate additions preserve global observation rates and naturalist interval, and enter existing museum exhibitions',()=>{
  const old=harness().window.__atlasTest,a=reviewHarness({},null,{museum3270:true}).window.__atlasTest;

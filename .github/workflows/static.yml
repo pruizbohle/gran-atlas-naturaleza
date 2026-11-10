@@ -27,7 +27,11 @@ jobs:
       - name: Evitar desplegar una rama Oceanía aún sin activar
         if: github.ref == 'refs/heads/gm02/oceania'
         run: |
-          node -e "if(require('./package.json').version!=='3.29.0')throw Error('Oceanía aún no está activada en www; completar firma e integración antes de desplegar')"
+          node -e "if(require('./package.json').version!=='3.29.0')throw Error('Oceanía aún no está activada en www; completar integración web antes de desplegar')"
+      - name: Preparar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Validar código y pruebas del Atlas
         run: |
           node --check www/js/herp-art-v3192.js
@@ -79,6 +83,11 @@ jobs:
           node --check scripts/check-expeditions-research-v3280.cjs
           node --check scripts/check-development-update-v3280.cjs
           node --check scripts/benchmark-expeditions-research-v3280.cjs
+          node --check www/js/oceania-runtime-v3290.js
+          node --check www/js/oceania-art-v3290.js
+          node --check www/js/oceania-geography-v3290.js
+          node scripts/build-oceania-art-lab-v3290.cjs --check
+          python3 scripts/build-oceania-runtime-v3290.py --check
           node --check www/js/app.js
           node --check scripts/benchmark-museum-v3270.cjs
           node --check scripts/check-museum-browser-v3270.cjs

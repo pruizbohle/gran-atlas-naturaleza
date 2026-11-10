@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "sha256": null,
+  "alias": "atlas-release",
+  "policy": "Permanent certificate for every future Android release; pin the public SHA-256 before the first build.",
+  "migration": "3.28.0 debug to permanent release requires manual backup, uninstall, reinstall and restore; no automatic data deletion."
+}

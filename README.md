@@ -1,3 +1,9 @@
+# El Gran Atlas v3.29.0 — Oceanía
+
+Ocho regiones, 97 identidades y 131 presencias nuevas; catálogo mundial de 807 identidades y 87 regiones. Guardados compatibles, PWA con actualización segura y funcionamiento offline. [Informe y pruebas](README_V3290.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3290.html) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-arte-oceania-v3290.html).
+
+Android adopta una firma permanente nueva y una migración manual con respaldo/restauración. La web se publica independientemente; el APK final espera clave y validación en dispositivo. [Pasos desde tu PC](README_ANDROID_FIRMA_PERMANENTE.md).
+
 # El Gran Atlas v3.28.0 — Expediciones del naturalista
 
 Mesa de navegación e Instituto renovados, con ocho rutas, cinco ramas y correcciones de finalización anticipada y dependencias múltiples. Mantiene 710 especies, 79 regiones, recompensas y partidas. [Informe, capturas y pruebas](README_V3280.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-expediciones-investigaciones-v3280.html) · [Actualización segura](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3280.html).

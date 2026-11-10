@@ -32,5 +32,5 @@ test('graphic generation never consumes gameplay random draws or mutates the sav
 test('the compact audit laboratory, frozen comparison engines and new art are available offline without touching saves',()=>{
  const html=fs.readFileSync('www/laboratorio-norteamerica-v3220.html','utf8'),sw=fs.readFileSync('www/sw.js','utf8');for(const id of ['family','engine','grade','similar','compare','size','limit','prev','next'])assert.ok(html.includes('id="'+id+'"'));
  for(const n of ['northamerica-polish-v3221','lab/northamerica-art-before-v3221','lab/northamerica-before-v3221','lab/northamerica-audit-v3221']){assert.ok(html.includes('js/'+n+'.js'));assert.ok(sw.includes('./js/'+n+'.js'));assert.doesNotMatch(fs.readFileSync('www/js/'+n+'.js','utf8'),/localStorage|sessionStorage|setInterval|fetch\(/);}
- assert.ok(html.indexOf('northamerica-polish-v3221.js')<html.indexOf('northamerica-art-v3220.js'));assert.ok(sw.includes('actualizar-v3221.html'));assert.equal(JSON.parse(fs.readFileSync('www/atlas-release.json')).version,'3.28.0');
+ assert.ok(html.indexOf('northamerica-polish-v3221.js')<html.indexOf('northamerica-art-v3220.js'));assert.ok(sw.includes('actualizar-v3221.html'));assert.equal(JSON.parse(fs.readFileSync('www/atlas-release.json')).version,'3.29.0');
 });

@@ -1,0 +1,67 @@
+name: Publicar Android validado
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_run_id:
+        description: Run ID del candidato firmado cuya restauración fue validada
+        required: true
+        type: string
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verificar origen del candidato
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_RUN: ${{ inputs.candidate_run_id }}
+        run: |
+          [[ "$CANDIDATE_RUN" =~ ^[0-9]+$ ]]
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$CANDIDATE_RUN" > candidate-run.json
+          python3 - <<'PY'
+          import json
+          run=json.load(open('candidate-run.json'))
+          assert run['status']=='completed' and run['conclusion']=='success'
+          assert run['path']=='.github/workflows/android-signed.yml'
+          assert run['head_branch']=='main', 'Usar un candidato generado desde main'
+          PY
+      - name: Descargar el mismo APK ya probado · no recompilar
+        uses: actions/download-artifact@v4
+        with:
+          name: Atlas-Android-candidato-${{ inputs.candidate_run_id }}
+          run-id: ${{ inputs.candidate_run_id }}
+          github-token: ${{ github.token }}
+          path: candidate
+      - name: Verificar evidencia de restauración y contenido exacto
+        env:
+          CANDIDATE_RUN: ${{ inputs.candidate_run_id }}
+        run: |
+          APK=candidate/android/app/build/outputs/apk/release/app-release.apk
+          APKSIGNER=$(find "$ANDROID_HOME/build-tools" -name apksigner | sort -V | tail -1)
+          AAPT=$(find "$ANDROID_HOME/build-tools" -name aapt | sort -V | tail -1)
+          "$APKSIGNER" verify --verbose --print-certs "$APK" > candidate/apk-signature.txt
+          "$AAPT" dump badging "$APK" > candidate/apk-badging.txt
+          python3 scripts/verify-android-release.py "$APK" candidate/apk-badging.txt candidate/apk-signature.txt
+          python3 scripts/verify-android-restoration.py "$APK" "$CANDIDATE_RUN"
+      - name: Publicar APK de firma permanente
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          FILE="El-Gran-Atlas-${VERSION}-firmado.apk"
+          cp candidate/android/app/build/outputs/apk/release/app-release.apk "$FILE"
+          if gh release view "v$VERSION" >/dev/null 2>&1; then
+            gh release upload "v$VERSION" "$FILE"
+          else
+            gh release create "v$VERSION" "$FILE" --target "$GITHUB_SHA" --prerelease --title "El Gran Atlas $VERSION · firma permanente" --notes-file docs/android/release-notes.md
+          fi

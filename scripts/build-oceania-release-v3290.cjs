@@ -24,6 +24,10 @@ function build(output,{preview=false}={}){
  if(fs.existsSync(out))throw Error('Staging output must not exist; no destructive replacement is allowed');
  const parent=fs.realpathSync(path.dirname(out));if(parent===ROOT||parent.startsWith(ROOT+path.sep))throw Error('Output parent resolves inside repository');
  const www=path.join(out,'www');fs.mkdirSync(www,{recursive:true});fs.cpSync(path.join(ROOT,'www'),www,{recursive:true});
+ const baseline=path.join(ROOT,'tests/fixtures/release-v3280');
+ const frozen=JSON.parse(fs.readFileSync(path.join(baseline,'manifest.json')));
+ for(const[file,hash]of Object.entries(frozen)){if(sha(fs.readFileSync(path.join(baseline,file)))!==hash)throw Error('Historical baseline changed: '+file);if(file.startsWith('www/'))fs.copyFileSync(path.join(baseline,file),path.join(out,file));}
+
  let app=candidateGameSource();const marker="(function(){\nconst STORAGE_KEY=";const start=app.indexOf(marker);if(start<0)throw Error('Cannot locate production app start');app=app.slice(start);
  const literal='const oceaniaReview='+JSON.stringify(candidate)+';';if(app.split(literal).length!==2)throw Error('Candidate catalog seam changed');
  app=app.replace(literal,`const oceaniaReview=globalThis.AtlasOceaniaRuntime3290;\nif(!oceaniaReview||(!oceaniaReview.approvedForProduction&&!${preview}))throw Error('Oceanian release is not approved');`);
@@ -41,7 +45,7 @@ function build(output,{preview=false}={}){
  fs.writeFileSync(path.join(www,'actualizar-v3290.html'),update);fs.writeFileSync(path.join(www,'actualizar.html'),update);
  const release=JSON.parse(fs.readFileSync(path.join(www,'atlas-release.json')));release.version='3.29.0';release.channel=preview?'unpublished-preview':'release';release.cells.Oceanía=8;release.oceania={regions:8,taxa:97,presences:131};fs.writeFileSync(path.join(www,'atlas-release.json'),JSON.stringify(release)+'\n');
  let sw=fs.readFileSync(path.join(www,'sw.js'),'utf8');
- const oldCache=sw.match(/const CACHE='([^']+)'/)[1],revision='gran-atlas-v3.29.0-oceania-'+(preview?'preview-':'')+sha(fs.readFileSync(path.join(www,'js/oceania-art-v3290.js'))).slice(0,10);
+ const oldCache=sw.match(/const CACHE='([^']+)'/)[1],revision='gran-atlas-v3.29.0-oceania-'+(preview?'preview-':'')+sha(['js/app.js','js/oceania-runtime-v3290.js','js/oceania-art-v3290.js','js/oceania-geography-v3290.js','js/lab/oceania-catalog-v3290.js'].map(file=>fs.readFileSync(path.join(www,file),'utf8')).join('\n')).slice(0,10);
  sw=sw.replace(oldCache,revision).replaceAll('3.28.0','3.29.0');
  const assets=['actualizar-v3290.html','js/oceania-runtime-v3290.js','js/oceania-art-v3290.js','js/oceania-geography-v3290.js','laboratorio-oceania-v3290.html','laboratorio-arte-oceania-v3290.html','js/oceania-data-v3290.js','js/lab/oceania-map-v3290.js','js/lab/oceania-catalog-v3290.js','js/lab/oceania-art-lab-v3290.js'];
  sw=sw.replace('const ASSETS=[','const ASSETS=['+assets.map(p=>JSON.stringify('./'+p)).join(',')+',');

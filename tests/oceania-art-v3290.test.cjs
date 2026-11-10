@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),crypto=require('node:crypto'),fs=require('node:fs'),cp=require('node:child_process'),vm=require('node:vm');
-const {reviewHarness,candidate}=require('./helpers/oceania-review.cjs'),{harness}=require('./helpers/live-game.cjs');
+const {reviewHarness,candidate}=require('./helpers/oceania-review.cjs'),{baselineHarness:harness}=require('./helpers/oceania-review.cjs');
 const art=require('../www/js/oceania-art-v3290.js'),json=x=>JSON.parse(JSON.stringify(x)),hash=s=>crypto.createHash('sha256').update(s).digest('hex');
 test('all 97 candidate profiles and configured sex/pigment/specimen routes generate scoped finite SVGs',()=>{
  const a=reviewHarness().window.__atlasTest;let count=0;

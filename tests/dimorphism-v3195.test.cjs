@@ -2,7 +2,7 @@ const {normalizedRecord}=require('./helpers/variant-labels.cjs');
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const {catalog,catalogSource}=require('./helpers/catalog.cjs');
-const source=fs.readFileSync('www/js/app.js','utf8'),old=require('./fixtures/catalog-v3194.json'),data=catalog();
+const source=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8')),old=require('./fixtures/catalog-v3194.json'),data=catalog();
 const added=['af_leon','af_mandril','af_babuino_hamadryas','af_gelada','asia_esp_0294','asia_esp_0864','asia_esp_0865','af_avestruz'];
 const context=vm.createContext({});for(const n of ['herp-art-v3192','bird-art-v3193','mammal-art-v3194','lab/dimorphism-production'])vm.runInContext(fs.readFileSync('www/js/'+n+'.js','utf8'),context);
 const art=context.ATLAS_DIMORPHISM_LAB;

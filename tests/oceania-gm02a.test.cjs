@@ -46,15 +46,15 @@ test('all declared audit and authority inputs retain their hashes; generation is
  cp.execFileSync('python',['scripts/build-oceania-gm02.py','--check']);
  assert.deepEqual(JSON.parse(fs.readFileSync('docs/gm02/source-contract.json')),data);
 });
-test('production remains 3.28.0 with 710 identities, 79 regions, 1329 pairs and the original save key',()=>{
- assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.28.0');
+test('production 3.29.0 installs 807 identities, 87 regions, 1460 pairs and the original save key',()=>{
+ assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.29.0');
  assert.equal(data.productionReady,false);
  assert.ok(!fs.readFileSync('www/index.html','utf8').includes('oceania-data-v3290.js'));
- assert.ok(!fs.readFileSync('www/sw.js','utf8').includes('oceania-data-v3290.js'));
+ assert.ok(fs.readFileSync('www/sw.js','utf8').includes('oceania-data-v3290.js'));
  const app=fs.readFileSync('www/js/app.js','utf8');
  assert.match(app,/const STORAGE_KEY='gran_atlas_v05'/);
  const h=harness({},null,{bridge:'\nwindow.__atlasTest={SPECIES,REGIONS};\n})();'});
- assert.equal(Object.keys(h.window.__atlasTest.SPECIES).length,710);
- assert.equal(h.window.__atlasTest.REGIONS.length,79);
- assert.equal(h.window.__atlasTest.REGIONS.reduce((n,r)=>n+r.species.length,0),1329);
+ assert.equal(Object.keys(h.window.__atlasTest.SPECIES).length,807);
+ assert.equal(h.window.__atlasTest.REGIONS.length,87);
+ assert.equal(h.window.__atlasTest.REGIONS.reduce((n,r)=>n+r.species.length,0),1460);
 });

@@ -1,0 +1,12 @@
+{
+  "www/js/app.js": "641d8fc2b10851409fadb75968d26140ed52487e1f14a5b1571a3241d0794f22",
+  "www/index.html": "1dca08cb6c82148af1cc5198506106361bf4cb598346cfeabd96ed07f5cf8c58",
+  "www/sw.js": "34aa5b888152eea3b7ca37f0c93faf451fd2c4bd31bc59c2dc2e6eb410944ebb",
+  "www/js/save-manager.js": "d0e9649c36d37c73144c21f641377ade63c1b38976b0d17089d1ceedfdfb7ca5",
+  "www/js/mobile-ui.js": "3453e0c6f2258c547dff65a6b1c515183f150941a35eca4c3513cf4165fd3ead",
+  "www/js/update-client-v3212.js": "81201e206a94727ecbed68e058b996d28b6766eede76702b3ebeb30995b910d0",
+  "www/atlas-release.json": "65a924b470f7ccefe6c934822532ab9ec5a820f2120fe0da3e6d78288fd9a638",
+  "www/actualizar.html": "26f8a9a2b8e724d00d16d97c968ab60d4739fb410412327dbe2c2b3d16ef3c09",
+  "package.json": "a6986ddd93acfb53d02e51ab96eb8a58b4c5e3016ad564c3a7df7fb34eca4fc3",
+  "capacitor.config.json": "0c2754e8419be741c21b2805b8893b05501b04d700c0c53b85998e59dc2688ab"
+}

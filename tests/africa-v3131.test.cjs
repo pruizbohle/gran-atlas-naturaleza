@@ -1,7 +1,7 @@
 const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
-const src=fs.readFileSync('www/js/app.js','utf8');
+const src=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
 const regionBase=JSON.parse(src.match(/const REGIONS=(\[[\s\S]*?\n\]);/)[1]);
 const regionUpdates=[...src.matchAll(/REGIONS\.push\(\.\.\.(\[[^\n]+\])\);/g)].flatMap(m=>JSON.parse(m[1]));
 const regions=[...regionBase,...regionUpdates];

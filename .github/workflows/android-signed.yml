@@ -1,4 +1,4 @@
-name: Android APK firmado
+name: Android APK firmado · candidato de validación
 
 on:
   workflow_dispatch:
@@ -43,14 +43,14 @@ jobs:
           done
           exit "$missing"
 
-      - name: Materializar candidato Oceanía validado sin desplegar
-        if: github.ref == 'refs/heads/gm02/oceania'
+      - name: Validar release web y certificado permanente fijado
         run: |
-          node --test tests/oceania-scientific-v3290.test.cjs tests/oceania-runtime-v3290.test.cjs tests/oceania-art-v3290.test.cjs tests/oceania-release-v3290.test.cjs
-          node scripts/build-oceania-release-v3290.cjs --output "$RUNNER_TEMP/atlas-3290" > "$RUNNER_TEMP/atlas-staging-manifest.json"
-          cp -a "$RUNNER_TEMP/atlas-3290/www/." www/
-          cp "$RUNNER_TEMP/atlas-3290/package.json" package.json
-          cp "$RUNNER_TEMP/atlas-3290/capacitor.config.json" capacitor.config.json
+          node --test tests/*.test.cjs
+          python3 - <<'PYCODE'
+          import json,re
+          pin=json.load(open('docs/android/signing-certificate.json'))
+          assert len(re.sub('[^0-9a-f]','',(pin.get('sha256') or '').lower()))==64, 'Fijar la huella pública del certificado permanente antes de compilar'
+          PYCODE
 
       - name: Instalar Capacitor
         run: npm install --no-audit --no-fund
@@ -137,10 +137,18 @@ jobs:
             apk-sha256.txt
           if-no-files-found: error
 
-      - name: Publicar APK firmado
+      - name: Guardar candidato para probar restauración · sin GitHub Release
         uses: actions/upload-artifact@v4
         with:
-          name: El-Gran-Atlas-Android-Firmado
-          path: android/app/build/outputs/apk/release/app-release.apk
+          name: Atlas-Android-candidato-${{ github.run_id }}
+          path: |
+            android/app/build/outputs/apk/release/app-release.apk
+            apk-signature.txt
+            apk-badging.txt
+            apk-sha256.txt
           if-no-files-found: error
-          retention-days: 14
+          retention-days: 30
+
+      - name: Retirar copia temporal del almacén de firma
+        if: always()
+        run: rm -f "$RUNNER_TEMP/atlas-signing/atlas-release.jks"

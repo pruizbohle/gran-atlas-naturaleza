@@ -2,7 +2,7 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
-const SRC=fs.readFileSync('www/js/app.js','utf8');
+const SRC=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
 const CSS=fs.readFileSync('www/css/styles.css','utf8');
 function game(){
  const dom={};

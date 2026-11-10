@@ -1,7 +1,7 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const {catalogSource}=require('./helpers/catalog.cjs'),{harness}=require('./helpers/live-game.cjs');
-const source=fs.readFileSync('www/js/app.js','utf8'),ctx=vm.createContext({});
+const source=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8')),ctx=vm.createContext({});
 for(const n of ['herp-art-v3192','bird-art-v3193','mammal-art-v3194','legendary-art-v3197'])vm.runInContext(fs.readFileSync('www/js/'+n+'.js','utf8'),ctx);
 vm.runInContext(catalogSource(source)+'\n'+source.slice(source.indexOf('function sexSpriteMarkup('),source.indexOf('// initial unlock checks and migration'))+'\napi={SPECIES,SPECIMEN_LEVELS,SPECIMEN_CATEGORIES,SPECIMEN_SELECTION,LEGENDARY_SPECIMENS,legendaryForSpecies,configuredSpecials,rollSpecimen,recordSpecimen,specimenRates,normalizeSpecialDiscoveries,getSpriteMarkup};',ctx);
 const a=ctx.api,clone=x=>JSON.parse(JSON.stringify(x)),KEY='gran_atlas_v05';
@@ -108,7 +108,7 @@ test('production manual and automatic censuses draw once, discover once, and nev
   // Isolate an existing species in a real region; only this disposable test catalog is modified.
   const region=api.REGIONS.find(r=>r.species.includes('zorro_rojo'));s.currentRegion=region.id;
   const fox=api.SPECIES.zorro_rojo;s.habitat=fox.habitats[0];s.time=fox.times[0];s.season=fox.seasons[0];
-  for(const [id,sp]of Object.entries(api.SPECIES))if(id!=='zorro_rojo')sp.seasons=[];
+  for(const [id,sp]of Object.entries(api.SPECIES))if(id!=='zorro_rojo')api.SPECIES[id]={...sp,seasons:[]};
   Object.assign(s.upgrades,{groupTier:0,censusTier,autoCensus:1});
   const beforeMoney=s.money;
   api.encounter(sourceName,Date.now(),true);

@@ -2,7 +2,7 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
-const GAME=fs.readFileSync('www/js/app.js','utf8');
+const GAME=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
 function game(){
  const nodes={};
  const get=id=>nodes[id]||(nodes[id]={id,hidden:false,disabled:false,textContent:'',innerHTML:'',value:'',dataset:{},files:[],classList:{add(){},remove(){},toggle(){}},style:{},addEventListener(){},setAttribute(){},focus(){},click(){},querySelector(){return null},querySelectorAll(){return []}});

@@ -1,0 +1,20 @@
+{
+  "status": "passed final external split-module 3.29 package",
+  "baseVersion": "3.28.0",
+  "targetVersion": "3.29.0",
+  "channel": "release",
+  "scientificBlockers": [],
+  "otherWindowBlocksActivation": true,
+  "noBackupWrittenBeforeAcceptance": true,
+  "exactRawBackupPreserved": true,
+  "oldSaveFieldsPreserved": true,
+  "newResearchAndTravelThroughUI": true,
+  "prestigeNotSpent": true,
+  "offlineMapCells": 8,
+  "offlineArtCards": 24,
+  "cache": "gran-atlas-v3.29.0-oceania-868e7c7381",
+  "cacheAssetCount": 122,
+  "errors": [],
+  "physicalAndroid": false,
+  "publicCheckoutChanged": false
+}

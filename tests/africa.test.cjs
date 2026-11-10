@@ -1,7 +1,7 @@
 const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
-const s=fs.readFileSync('www/js/app.js','utf8');
+const s=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
 test('África agrega tres zonas sin alterar Europa y Asia',()=>{
  const match=s.match(/REGIONS\.push\(\.\.\.(\[[^\n]+\])\);/);
  assert.ok(match,'No se encontraron regiones africanas');

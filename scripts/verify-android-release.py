@@ -18,7 +18,11 @@ with zipfile.ZipFile(apk) as z:
  assert b'AtlasExportPlugin' in dex and b'AtlasImportPlugin' in dex,'Missing native save plugins'
 print(f'APK identity, version {version}/{code}, all web resources and native save plugins verified.')
 
-previous=json.loads(Path('docs/gm02/release-final/previous-apk.json').read_text())
+pin=json.loads(Path('docs/android/signing-certificate.json').read_text())
+expected=re.sub('[^0-9a-f]','',(pin.get('sha256') or '').lower())
+assert len(expected)==64, 'Pin the permanent public certificate SHA-256 in docs/android/signing-certificate.json before building.'
 certs=re.findall(r'certificate SHA-256 digest: ([0-9a-fA-F]+)',signature.read_text())
-assert previous['certificateSha256'] in [c.lower() for c in certs], 'APK certificate differs from distributed 3.28.0; in-place Android update is not verified. Recover its signing keystore or explicitly decide a migration/reinstallation path.'
-print('Signing certificate matches distributed 3.28.0 APK.')
+assert len(certs)==1 and certs[0].lower()==expected, 'APK does not use the pinned permanent signing certificate.'
+previous=json.loads(Path('docs/gm02/release-final/previous-apk.json').read_text())
+assert expected!=previous['certificateSha256'], 'The old debug certificate is retired.'
+print('APK uses the pinned permanent certificate; migration from the old debug installation requires manual backup/reinstall/restore.')

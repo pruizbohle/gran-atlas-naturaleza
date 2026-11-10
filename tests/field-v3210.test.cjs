@@ -14,7 +14,7 @@ test('new field modules execute without browser globals, external libraries or m
  const ctx=vm.createContext({});for(const file of ['field-ui-v3210','field-scene-v3210'])vm.runInContext(fs.readFileSync('www/js/'+file+'.js','utf8'),ctx);assert.equal(typeof ctx.document,'undefined');assert.equal(typeof ctx.window,'undefined');assert.equal(ctx.AtlasFieldScene.habitats.length,12);
 });
 test('production field projection is read-only and preserves hidden names for unidentified specimens',()=>{
- const source=fs.readFileSync('www/js/app.js','utf8'),expose=source.replace(/\n\}\)\(\);\s*$/, '\nwindow.__field={get state(){return state},fieldViewModel,fieldProgressModel,fieldEncounterModel};\n})();');
+ const source=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8')),expose=source.replace(/\n\}\)\(\);\s*$/, '\nwindow.__field={get state(){return state},fieldViewModel,fieldProgressModel,fieldEncounterModel};\n})();');
  const h=harness({},null,{gameSource:expose}),a=h.window.__field,s=a.state;s.lastEncounter={species:'zorro_rojo',title:'¡Nueva especie! No identificado',subtitle:'+5 conocimiento',sequence:1,entries:[{id:'zorro_rojo',amount:3,first:true,variant:'',sex:null}]};s.discovered.zorro_rojo=true;
  const before=JSON.stringify(s),view=a.fieldViewModel();assert.equal(JSON.stringify(s),before);assert.equal(view.encounter.entries[0].name,'No identificado');assert.equal(view.encounter.entries[0].amount,3);assert.equal(view.auto.helpers,0);assert.equal(view.progress.label,'0/5 etapas');
  s.stages.zorro_rojo=2;assert.equal(a.fieldEncounterModel(s.lastEncounter).entries[0].name,'Zorro rojo');s.helpers=4;assert.match(a.fieldViewModel().auto.summary,/4 naturalistas/);

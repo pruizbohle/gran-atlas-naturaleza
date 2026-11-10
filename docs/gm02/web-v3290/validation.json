@@ -1,0 +1,25 @@
+{
+  "version": "3.29.0",
+  "validatedAt": "2026-11-10T02:33:10.651184+00:00",
+  "regression": {
+    "passed": 416,
+    "failed": 0,
+    "log": "regression-tests.txt",
+    "sha256": "b110d2b025b9607f7b6856229fbc66f7b9bf552dc85420b5d601ed1d4ffd9b59"
+  },
+  "pwa": "upgrade-results.json",
+  "installedPackageEqualsGenerated": true,
+  "scienceArtAndCartographyRepeated": false,
+  "production": {
+    "species": 807,
+    "regions": 87,
+    "presences": 1460
+  },
+  "android": {
+    "debugWorkflowDisabled": true,
+    "permanentKeyPending": true,
+    "deviceRestorationPending": true,
+    "apkPublished": false
+  },
+  "publication": "pending Pages workflow and served resource verification"
+}

@@ -1996,6 +1996,21 @@ if(southAmerica3230){
  taxonomyInfo=function(id){return SPECIES[id]?.origin==='sa3230'?SPECIES[id].taxonomy:previousTaxonomy(id);};
 }
 // AM-04 END catalog
+// OC3290 BEGIN AM-04 END catalog
+
+ const oceaniaReview=globalThis.AtlasOceaniaRuntime3290;
+if(!oceaniaReview||(!oceaniaReview.approvedForProduction&&!false))throw Error('Oceanian release is not approved');
+ for(const[id,sp]of Object.entries(oceaniaReview.species)){
+  if(SPECIES[id]||Object.values(SPECIES).some(s=>s.latin===sp.latin))throw Error('Oceanian collision: '+id);
+  SPECIES[id]=sp;
+ }
+ for(const region of oceaniaReview.regions){if(REGIONS.some(r=>r.id===region.id))throw Error('Oceanian region collision');REGIONS.push(region);}
+ Object.assign(SEXUAL_DIMORPHISM,oceaniaReview.dimorphism);Object.assign(SPECIMEN_CATEGORIES,oceaniaReview.categories);
+ const previousOceaniaTaxonomy=taxonomyInfo;
+ taxonomyInfo=function(id){return SPECIES[id]?.origin==='oc3290'?SPECIES[id].taxonomy:previousOceaniaTaxonomy(id);};
+
+// OC3290 END AM-04 END catalog
+
 const RESEARCH_NODES=[
   {id:'prismaticos_1', name:'Prismáticos de latón', desc:'+12 % relativo sobre probabilidad base manual (50 % → 56 %)', money:25, knowledge:20, once:true, effect(s){s.upgrades.prism=1;}},
   {id:'prismaticos_2', name:'Lentes calibrados', desc:'+24 % relativo acumulado (50 % → 62 %, sin equipo)', money:50, knowledge:35, req:'prismaticos_1', once:true, effect(s){s.upgrades.prism=2;}},
@@ -2030,6 +2045,12 @@ RESEARCH_NODES.push({id:"africa_1",name:"Estudios cartográficos de África",des
 // AM-04 BEGIN research
 if(southAmerica3230)RESEARCH_NODES.push({id:'sudamerica_1',name:'Cartografía de Sudamérica',desc:'Extiende la cartografía del Nuevo Mundo hacia el sur. Cada región exige prestigio acumulado, sin consumirlo.',branch:'expediciones',money:southAmerica3230.access.money,knowledge:southAmerica3230.access.knowledge,req:'norteamerica_1',once:true,effect(s){s.upgrades.southAmericaUnlocked=1;}});
 // AM-04 END research
+// OC3290 BEGIN AM-04 END research
+
+ RESEARCH_NODES.push({id:'oceania_1',name:'Cartografía de Oceanía',desc:'Rutas del Pacífico; prestigio acumulado, sin consumirlo.',branch:'expediciones',money:oceaniaReview.access.money,knowledge:oceaniaReview.access.knowledge,req:'sudamerica_1',once:true,effect(s){s.upgrades.oceaniaUnlocked=1;}});
+
+// OC3290 END AM-04 END research
+
 // Beta 3.15: todos los costes y probabilidades se centralizan aquí para la futura nivelación.
 // Esta beta es deliberadamente más accesible; no se vinculan costes a contenido geográfico futuro.
 const RESEARCH_V315_BALANCE=Object.freeze({betaTest:true,manualDouble:[0,0.10,0.20,0.25],manualTriple:[0,0,0,0.05],autoDouble:0.12,autoTriple:0.02,autoCensusMultiplier:2,museumIncomeBonus:0.15});
@@ -2136,6 +2157,10 @@ state.upgrades.northAmericaUnlocked=!!state.purchases.norteamerica_1;
 // AM-04 BEGIN save-flag
 if(southAmerica3230)state.upgrades.southAmericaUnlocked=!!state.purchases.sudamerica_1;
 // AM-04 END save-flag
+// OC3290 BEGIN AM-04 END save-flag
+state.upgrades.oceaniaUnlocked=!!state.purchases.oceania_1;
+// OC3290 END AM-04 END save-flag
+
 // Recuperación de efectos Beta 3.15 desde compras: respeta guardados antiguos y exportaciones.
 for(const node of [...RESEARCH_V315_NODES,...RESEARCH_V317_NODES,...RESEARCH_V318_NODES]){if(state.purchases[node.id])node.effect(state);}
 // Migración v2.1->v2.2: zonas asiáticas previamente habilitadas conservan su acceso.
@@ -2897,6 +2922,10 @@ const ATLAS_CONTINENTS=[
 // AM-04 BEGIN continent
 if(southAmerica3230)ATLAS_CONTINENTS.find(c=>c.id==='Sudamérica').implemented=true;
 // AM-04 END continent
+// OC3290 BEGIN AM-04 END continent
+ATLAS_CONTINENTS.find(c=>c.id==='Oceanía').implemented=true;
+// OC3290 END AM-04 END continent
+
 function regionRequirementsMet(r){
   if(!r) return false;
   if(r.continent==='Asia') return !!(state.upgrades.asiaUnlocked && state.prestige>=r.unlock.prestige);
@@ -3020,6 +3049,15 @@ if(southAmerica3230){
  atlasRegionModel=function(r){const model=previousRegionModel(r);if(r.continent==='Sudamérica'){model.requirements.unshift({label:'Cartografía de Sudamérica',met:!!state.upgrades.southAmericaUnlocked});if(model.status==='bloqueada')model.summary=model.requirements.find(x=>!x.met)?.label||'Requisitos pendientes';}return model;};
 }
 // AM-04 END atlas-access
+// OC3290 BEGIN AM-04 END atlas-access
+
+ const previousOceaniaRequirements=regionRequirementsMet,previousOceaniaStatus=continentStatus,previousOceaniaModel=atlasRegionModel;
+ regionRequirementsMet=function(r){return r?.continent==='Oceanía'?!!(state.upgrades.oceaniaUnlocked&&state.prestige>=r.unlock.prestige):previousOceaniaRequirements(r);};
+ continentStatus=function(c){return c==='Oceanía'?(state.upgrades.oceaniaUnlocked?'available':'unlockable'):previousOceaniaStatus(c);};
+ atlasRegionModel=function(r){const m=previousOceaniaModel(r);if(r.continent==='Oceanía'){m.requirements.unshift({label:'Cartografía de Oceanía',met:!!state.upgrades.oceaniaUnlocked});if(m.status==='bloqueada')m.summary=m.requirements.find(x=>!x.met)?.label||'Requisitos pendientes';}return m;};
+
+// OC3290 END AM-04 END atlas-access
+
 function rememberAtlasViewport(){
  const root=panel.querySelector('.atlas-game');if(!root)return;
  const continent=root.dataset.continent||state.atlasView;
@@ -5063,6 +5101,7 @@ setInterval(tick,1000);
 
 // Sprites simplificados para ejemplares macho y hembra. No son variantes raras.
 function sexSpriteMarkup(id,sex){
+ /* OC3290 BEGIN sex */ if(SPECIES[id]?.origin==='oc3290')return globalThis.AtlasOceaniaArt3290?.render(SPECIES[id],SPECIES[id].color,'normal',sex)||null; /* OC3290 END sex */
 // AM-04 BEGIN sex-art
  if(SPECIES[id]?.origin==='sa3230'&&SEXUAL_DIMORPHISM[id])return globalThis.ATLAS_SOUTH_ART_V3230?.(SPECIES[id],SPECIES[id].color,'normal',sex)||null;
 // AM-04 END sex-art
@@ -5920,6 +5959,7 @@ function familyV3154Sprite(id,skin){
 }
 
 function spriteFor(kind,color,skin,id){
+/* OC3290 BEGIN art */ const oc=globalThis.AtlasOceaniaArt3290?.render(SPECIES[id],color,skin);if(oc)return oc; /* OC3290 END art */
 // AM-04 BEGIN art
  const southArt=globalThis.ATLAS_SOUTH_ART_V3230?.(SPECIES[id],color,skin);if(southArt)return southArt;
 // AM-04 END art

@@ -2,7 +2,7 @@ const {normalizedRecord}=require('./helpers/variant-labels.cjs');
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const engine=fs.readFileSync('www/js/bird-art-v3193.js','utf8');
-const source=fs.readFileSync('www/js/app.js','utf8');
+const source=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
 const data=require('./helpers/catalog.cjs').catalogSource(source);
 const graphics=source.slice(source.indexOf('function sexSpriteMarkup('),source.indexOf('// initial unlock checks and migration'));
 const {renderBird,classifyBird,BIRD_FAMILIES}=require('../www/js/bird-art-v3193.js');
@@ -106,10 +106,10 @@ test('shared names stay separate and use taxon-specific anatomy',()=>{
 test('entrypoint loads the art module first and every offline asset exists',()=>{
  const html=fs.readFileSync('www/index.html','utf8'),sw=fs.readFileSync('www/sw.js','utf8');
  assert.ok(html.indexOf('js/bird-art-v3193.js')<html.indexOf('js/app.js'));
- assert.match(sw,/gran-atlas-v3.28.0-expeditions/);
+ assert.match(sw,/gran-atlas-v3.29.0-oceania/);
  const assets=vm.runInNewContext(sw.slice(0,sw.indexOf("self.addEventListener"))+'\nASSETS');
  for(const asset of assets)assert.ok(fs.existsSync('www/'+asset.replace(/^\.\//,'')),asset);
  for(const path of ['laboratorio-aves.html','js/bird-art-v3193.js','js/lab/bird-lab-v3193.js'])assert.ok(assets.includes('./'+path));
  const lab=fs.readFileSync('www/laboratorio-aves.html','utf8');assert.ok(!lab.includes('src="js/app.js'));for(const n of [56,80,120])assert.ok(lab.includes('value="'+n+'"'));
- assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.28.0');assert.equal(JSON.parse(fs.readFileSync('capacitor.config.json')).appId,'com.elgranatlas.naturaleza.beta314');
+ assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.29.0');assert.equal(JSON.parse(fs.readFileSync('capacitor.config.json')).appId,'com.elgranatlas.naturaleza.beta314');
 });

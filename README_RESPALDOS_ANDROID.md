@@ -1,3 +1,5 @@
+> **Política vigente desde 3.29.0:** firma permanente nueva y migración manual desde el APK debug anterior. El workflow debug está desactivado. Sigue la [guía actual paso a paso](README_ANDROID_FIRMA_PERMANENTE.md); las notas siguientes se conservan como historial.
+
 # El Gran Atlas v3.0.1 — Respaldo y firma Android
 
 ## Respaldos de partida
