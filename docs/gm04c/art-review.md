@@ -1,0 +1,7 @@
+# GM-04C.3 · revisión de SVG renderizados
+
+Tres láminas: dos nuevas de Liparidae y reutilización literal del trípode de GM-04B. Laboratorio con búsqueda por nombre actual o fuente, dos familias y escalas 64/80/120 px. Se inspeccionaron las capturas de las tres identidades y la comparación Liparidae, además de comprobar límites SVG y desbordamiento a 320/360/390/412/1280 px.
+
+Las nuevas siluetas tienen cabeza anterior redondeada y baja, ojo pequeño, tronco blando sin escamas dibujadas, cola afinada sin bifurcación, aletas medianas continuas y disco pélvico ventral. Swirei muestra pectoral escotada con lóbulo inferior separado; Kermadec tiene pectoral corta y sin esa escotadura. Referencias: descripción original de Gerringer et al. 2017, figs. 2–4; redescripción de Stein 2016 y material de referencia del tratamiento de Stein 2012. Se desplazó ligeramente el disco de swirei tras la primera captura para que se distinguiera del contorno abdominal; se repitieron los renders.
+
+No se asigna bioluminiscencia ni se añaden dientes grandes, señuelos, pigmentaciones o dimorfismos ficticios. Los colores pálidos son esquemáticos y no una clave diagnóstica. Las proporciones varían con edad, conservación y estado abdominal; una silueta de 64 px no sustituye merística ni diagnóstico de espécimen. La misma anatomía se usa para la categoría Notable. Los 943 SVG anteriores y sus variantes/sexos se comparan literalmente contra 3.33.0 en las pruebas actuales.

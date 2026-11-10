@@ -5242,6 +5242,7 @@ function sexSpriteMarkup(id,sex){
 const spriteCache=new Map();
 function getSpriteMarkup(id, skin='normal', sex=null){
  // GM3330 BEGIN art
+ if(SPECIES[id]?.origin==='abyssal3340')return globalThis.AtlasAbyssalArt3340.render(SPECIES[id]);
  if(SPECIES[id]?.origin==='deep3330')return globalThis.AtlasDeepArt3330.render(SPECIES[id]);
  // GM3330 END art
  // GM3320 BEGIN art

@@ -1,0 +1,23 @@
+{
+  "species": 3,
+  "families": 2,
+  "reviewScreenshots": [
+    "Ipnopidae",
+    "Liparidae"
+  ],
+  "viewports": [
+    320,
+    360,
+    390,
+    412,
+    1280
+  ],
+  "sizes": [
+    64,
+    80,
+    120
+  ],
+  "search": true,
+  "svgBounds": true,
+  "errors": []
+}
