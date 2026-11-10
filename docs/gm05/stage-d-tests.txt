@@ -1,0 +1,24 @@
+✔ all2605 configured routes retained; only four explicitly reviewed sharks change drawings (3.426608ms)
+✔ the four formerly identical shark plates have distinct anatomy, not just labels or attributes (61.095152ms)
+✔ GM05 actual export/import from3.28 preserves progress and all pending supported jobs (162.273835ms)
+✔ GM05 actual export/import from3.29 preserves progress and all pending supported jobs (157.193794ms)
+✔ GM05 actual export/import from3.30 preserves progress and all pending supported jobs (129.252869ms)
+✔ GM05 actual export/import from3.31 preserves progress and all pending supported jobs (142.794765ms)
+✔ GM05 actual export/import from3.32 preserves progress and all pending supported jobs (140.37227ms)
+✔ GM05 actual export/import from3.33 preserves progress and all pending supported jobs (139.732325ms)
+✔ GM05 actual export/import from3.34 preserves progress and all pending supported jobs (139.255205ms)
+✔ 8/24/72/168-hour return preserves not-yet-due jobs and settles due work once and conserves unrelated progress (261.403241ms)
+✔ GM05 preserves all economic definitions, rates, five stage costs and research prices from9da9808 (219.457341ms)
+✔ 18 seeded campaign trajectories and900 timed operations respect balances and documented prestige steps (0.948511ms)
+✔ GM05 checks all 945 identities/113 regions/1744 real pairs, retaining rank distinctions (119.93891ms)
+✔ all1744 source/runtime witnesses remain reachable by actual current manual and automatic filters (68.263735ms)
+✔ source reconciliation has1574 preserved rows,413 distinct issue IDs,103/106 source cells and no invented range equality (3.906492ms)
+✔ woodpecker and two legacy sharks use documented classes/families without altering identities or state (61.760867ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1339.911892

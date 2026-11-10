@@ -1,0 +1,16 @@
+✔ GM05 actual export/import from3.28 preserves progress and all pending supported jobs (145.813146ms)
+✔ GM05 actual export/import from3.29 preserves progress and all pending supported jobs (133.88089ms)
+✔ GM05 actual export/import from3.30 preserves progress and all pending supported jobs (134.185839ms)
+✔ GM05 actual export/import from3.31 preserves progress and all pending supported jobs (121.285562ms)
+✔ GM05 actual export/import from3.32 preserves progress and all pending supported jobs (127.012814ms)
+✔ GM05 actual export/import from3.33 preserves progress and all pending supported jobs (126.617276ms)
+✔ GM05 actual export/import from3.34 preserves progress and all pending supported jobs (133.231205ms)
+✔ 8/24/72/168-hour return preserves not-yet-due jobs and settles due work once and conserves unrelated progress (267.8545ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1264.857716

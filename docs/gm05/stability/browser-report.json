@@ -1,0 +1,328 @@
+{
+  "baseline": "9da9808",
+  "method": "Chromium, CPU×4 for ten fully-identified Bestiary opens; CPU×1 for real panel/ticker cycling, GC-controlled heap/DOM.200cycles at390px represent virtual200minutes, not200human minutes. Separate engine tests cover8/24/72/168-hour returns. No physical Android.",
+  "results": [
+    {
+      "mode": "before",
+      "width": 320,
+      "cpuRate": 4,
+      "bestiaryCards": 32,
+      "firstMs": 170.80000000447035,
+      "reopenMedianMs": 95.69999999552965,
+      "samples": [
+        170.80000000447035,
+        82.90000000596046,
+        87.10000000149012,
+        81.5,
+        91.5,
+        98.70000000298023,
+        158,
+        126.29999999701977,
+        95.70000000298023,
+        95.69999999552965
+      ],
+      "memory": [],
+      "cycles": 5,
+      "virtualSessionMinutes": 5,
+      "activeIntervals": 1,
+      "errors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "mode": "before",
+      "width": 360,
+      "cpuRate": 4,
+      "bestiaryCards": 32,
+      "firstMs": 199.5,
+      "reopenMedianMs": 79.5,
+      "samples": [
+        199.5,
+        85.30000000447035,
+        83.79999999701977,
+        79.69999999552965,
+        79.5,
+        76.80000000447035,
+        77.90000000596046,
+        82.60000000149012,
+        75.89999999850988,
+        76.80000000447035
+      ],
+      "memory": [],
+      "cycles": 5,
+      "virtualSessionMinutes": 5,
+      "activeIntervals": 1,
+      "errors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "mode": "before",
+      "width": 390,
+      "cpuRate": 4,
+      "bestiaryCards": 32,
+      "firstMs": 154.89999999850988,
+      "reopenMedianMs": 73.29999999701977,
+      "samples": [
+        154.89999999850988,
+        72.69999999552965,
+        69.69999999552965,
+        71.89999999850988,
+        84.10000000149012,
+        78.29999999701977,
+        80.5,
+        78.70000000298023,
+        72.80000000447035,
+        73.29999999701977
+      ],
+      "memory": [
+        {
+          "cycle": 25,
+          "heapBytes": 5907592,
+          "dom": {
+            "documents": 1,
+            "nodes": 735,
+            "jsEventListeners": 81
+          },
+          "activeIntervals": 1
+        },
+        {
+          "cycle": 100,
+          "heapBytes": 6100068,
+          "dom": {
+            "documents": 1,
+            "nodes": 735,
+            "jsEventListeners": 81
+          },
+          "activeIntervals": 1
+        },
+        {
+          "cycle": 200,
+          "heapBytes": 6130768,
+          "dom": {
+            "documents": 1,
+            "nodes": 735,
+            "jsEventListeners": 81
+          },
+          "activeIntervals": 1
+        }
+      ],
+      "cycles": 200,
+      "virtualSessionMinutes": 200,
+      "activeIntervals": 1,
+      "errors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "mode": "before",
+      "width": 412,
+      "cpuRate": 4,
+      "bestiaryCards": 32,
+      "firstMs": 148.60000000149012,
+      "reopenMedianMs": 75.60000000149012,
+      "samples": [
+        148.60000000149012,
+        72.70000000298023,
+        76.10000000149012,
+        71.10000000149012,
+        75.60000000149012,
+        69.60000000149012,
+        70.60000000149012,
+        81.5,
+        97.69999999552965,
+        111.69999999552965
+      ],
+      "memory": [],
+      "cycles": 5,
+      "virtualSessionMinutes": 5,
+      "activeIntervals": 1,
+      "errors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "mode": "before",
+      "width": 1280,
+      "cpuRate": 4,
+      "bestiaryCards": 32,
+      "firstMs": 137.79999999701977,
+      "reopenMedianMs": 68.10000000149012,
+      "samples": [
+        137.79999999701977,
+        65.90000000596046,
+        62.20000000298023,
+        69.80000000447035,
+        68.10000000149012,
+        59.099999994039536,
+        69.5,
+        72.80000000447035,
+        65.89999999850988,
+        83.79999999701977
+      ],
+      "memory": [],
+      "cycles": 5,
+      "virtualSessionMinutes": 5,
+      "activeIntervals": 1,
+      "errors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "mode": "after",
+      "width": 320,
+      "cpuRate": 4,
+      "bestiaryCards": 32,
+      "firstMs": 165.89999999850988,
+      "reopenMedianMs": 78.10000000149012,
+      "samples": [
+        165.89999999850988,
+        89.19999999552965,
+        81.40000000596046,
+        78.10000000149012,
+        72.30000000447035,
+        76.10000000149012,
+        69.29999999701977,
+        73.60000000149012,
+        87.29999999701977,
+        106.19999999552965
+      ],
+      "memory": [],
+      "cycles": 5,
+      "virtualSessionMinutes": 5,
+      "activeIntervals": 1,
+      "errors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "mode": "after",
+      "width": 360,
+      "cpuRate": 4,
+      "bestiaryCards": 32,
+      "firstMs": 155.39999999850988,
+      "reopenMedianMs": 63.70000000298023,
+      "samples": [
+        155.39999999850988,
+        70.20000000298023,
+        62.5,
+        62.5,
+        70.89999999850988,
+        61.100000001490116,
+        63.70000000298023,
+        66.29999999701977,
+        60.29999999701977,
+        71.39999999850988
+      ],
+      "memory": [],
+      "cycles": 5,
+      "virtualSessionMinutes": 5,
+      "activeIntervals": 1,
+      "errors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "mode": "after",
+      "width": 390,
+      "cpuRate": 4,
+      "bestiaryCards": 32,
+      "firstMs": 166.29999999701977,
+      "reopenMedianMs": 67.90000000596046,
+      "samples": [
+        166.29999999701977,
+        70.5,
+        61.899999998509884,
+        68.10000000149012,
+        72.79999999701977,
+        62.69999999552965,
+        59.70000000298023,
+        59.29999999701977,
+        69.60000000149012,
+        67.90000000596046
+      ],
+      "memory": [
+        {
+          "cycle": 25,
+          "heapBytes": 5909380,
+          "dom": {
+            "documents": 1,
+            "nodes": 735,
+            "jsEventListeners": 81
+          },
+          "activeIntervals": 1
+        },
+        {
+          "cycle": 100,
+          "heapBytes": 6101012,
+          "dom": {
+            "documents": 1,
+            "nodes": 735,
+            "jsEventListeners": 81
+          },
+          "activeIntervals": 1
+        },
+        {
+          "cycle": 200,
+          "heapBytes": 6130740,
+          "dom": {
+            "documents": 1,
+            "nodes": 735,
+            "jsEventListeners": 81
+          },
+          "activeIntervals": 1
+        }
+      ],
+      "cycles": 200,
+      "virtualSessionMinutes": 200,
+      "activeIntervals": 1,
+      "errors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "mode": "after",
+      "width": 412,
+      "cpuRate": 4,
+      "bestiaryCards": 32,
+      "firstMs": 163.29999999701977,
+      "reopenMedianMs": 71.5,
+      "samples": [
+        163.29999999701977,
+        78.30000000447035,
+        81.39999999850988,
+        71.5,
+        69.69999999552965,
+        66.29999999701977,
+        66.59999999403954,
+        73.89999999850988,
+        75.69999999552965,
+        66.89999999850988
+      ],
+      "memory": [],
+      "cycles": 5,
+      "virtualSessionMinutes": 5,
+      "activeIntervals": 1,
+      "errors": [],
+      "horizontalOverflow": false
+    },
+    {
+      "mode": "after",
+      "width": 1280,
+      "cpuRate": 4,
+      "bestiaryCards": 32,
+      "firstMs": 152.80000000447035,
+      "reopenMedianMs": 71.29999999701977,
+      "samples": [
+        152.80000000447035,
+        66.10000000149012,
+        65.19999999552965,
+        71.5,
+        77,
+        71.29999999701977,
+        66.5,
+        76.29999999701977,
+        70.70000000298023,
+        78.80000000447035
+      ],
+      "memory": [],
+      "cycles": 5,
+      "virtualSessionMinutes": 5,
+      "activeIntervals": 1,
+      "errors": [],
+      "horizontalOverflow": false
+    }
+  ]
+}

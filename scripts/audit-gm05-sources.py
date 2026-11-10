@@ -7,7 +7,7 @@ def read(name):
  with (ROOT/'docs/gm01'/f'{name}.csv').open() as f:return list(csv.DictReader(f))
 def write(name,rows):
  with (OUT/name).open('w',newline='') as f:
-  w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+  w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n');w.writeheader();w.writerows(rows)
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 runtime=json.loads((OUT/'runtime-audit.json').read_text());species=runtime['species'];regions={r['id']:r for r in runtime['regions']};witness={(p['regionId'],p['speciesId']):p for p in runtime['presences']}
 closure=json.loads((ROOT/'docs/gm04c/world-closure.json').read_text());planned=closure['source']['plannedPhaseRows'];sr=[x for x in read('species') if x['row_kind']=='source'];pr=[x for x in read('presences') if x['row_kind']=='source'];gr=[x for x in read('regions') if x['row_kind']=='source'];issues=read('issues');frozen={}
