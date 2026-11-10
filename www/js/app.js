@@ -2169,6 +2169,19 @@ let unreadableSave=false;
 let corruptSave=false;
 let storageFault=false;
 let state=load();
+// ACH3360: el catálogo y la persistencia viven en el módulo independiente.
+let achievementReady3360=false;
+const achievementDirty3360=new Set();
+let achievementNotices3360=[];
+function achievementContext3360(){return {species:SPECIES,regions:REGIONS,research:RESEARCH_NODES,recipes:RECIPES,collections:MUSEUM_COLLECTIONS,fossilRecipes:MUSEUM_FOSSIL_RECIPES,relicts:MUSEUM_RELICTS,voyages:VOYAGES,taxonomy:taxonomyInfo,specials:configuredSpecials};}
+function achievementMark3360(...groups){for(const g of groups)achievementDirty3360.add(g);}
+function achievementIncrement3360(key){globalThis.AtlasAchievements3360?.increment(state,key);achievementMark3360('navigation');}
+function achievementRecord3360(type,data){globalThis.AtlasAchievements3360?.record(state,type,data);achievementMark3360('navigation','exploration');}
+function achievementFlush3360(){
+ if(!achievementReady3360||!achievementDirty3360.size)return;
+ achievementNotices3360.push(...globalThis.AtlasAchievements3360.evaluate(state,achievementContext3360(),[...achievementDirty3360]));achievementDirty3360.clear();
+ globalThis.AtlasSociety3360?.refresh(state,achievementContext3360());
+}
 const REGION_ALIASES={"hx0109": "HX-01-09", "hx0111": "HX-01-11", "hx0209": "HX-02-09", "hx0210": "HX-02-10", "hx0211": "HX-02-12", "hx0212": "HX-02-11", "hx0213": "HX-03-12", "hx0214": "HX-02-11", "eu_danube": "HX-03-09", "hx0215": "HX-03-10"};
 if(REGION_ALIASES[state.currentRegion]) state.currentRegion=REGION_ALIASES[state.currentRegion];
 if(!REGIONS.some(r=>r.id===state.currentRegion)) state.currentRegion='HX-01-09';
@@ -2287,12 +2300,15 @@ function showStorageFault(message){
  if(button){if(button.textContent!=='⚠️')button.textContent='⚠️';button.setAttribute('title',message);button.setAttribute('aria-label',message);}
 }
 function persist(){
+ achievementFlush3360();
  if(unreadableSave){showStorageFault('La partida almacenada no se pudo leer y se conserva sin reemplazar. Abre Respaldos para recuperarla.');return false;}
  try{
   localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
   if(storageFault){const button=document.getElementById('saveManagerOpen');if(button){button.textContent='💾';button.setAttribute('title','Respaldos');button.setAttribute('aria-label','Respaldos');}}
   if(storageFault){const status=document.getElementById('saveManagerStatus');if(status?.textContent.startsWith('No se pudo guardar en este dispositivo.')){status.textContent='Guardado automático restablecido.';status.classList.remove('error');}}
-  storageFault=false;return true;
+  storageFault=false;
+  if(achievementNotices3360.length&&globalThis.AtlasSociety3360){const notices=achievementNotices3360.splice(0);globalThis.AtlasSociety3360.notify(notices);}
+  return true;
  }catch(error){
   storageFault=true;
   showStorageFault('No se pudo guardar en este dispositivo. El progreso sigue en memoria: abre Respaldos y exporta la partida antes de cerrar.');
@@ -2373,6 +2389,8 @@ window.AtlasSaveBridge={
  // GM3320 END import
  // GM3310 END import
  // EC3300 END import-commerce
+     // Importar no reproduce notificaciones de medallas ni inventa acciones antiguas.
+     if(achievementReady3360){achievementNotices3360=[];achievementDirty3360.clear();globalThis.AtlasSociety3360?.clearNotifications();globalThis.AtlasAchievements3360.initialize(state,achievementContext3360(),{silent:true});}
      // Evitar calcular un intervalo offline obsoleto al actualizar la partida.
      state.lastTick=Date.now();
      autoAccum=0;autoDiaryBuffer={searches:0,hits:0,knowledge:0};
@@ -4594,6 +4612,7 @@ const amberChance=(v.id==='coast'||v.id==='namib_survey')?0.035:0.014;
 if(Math.random()<amberChance){addInventory('fossil_amber',1);pushLog('🟠 Hallazgo raro: ámbar fósil.');}
 
   state.museum.voyagesCompleted=(state.museum.voyagesCompleted||0)+1;
+  achievementRecord3360('voyage',{type:v.id});
   pushLog('⛵ Regresó '+v.name+': +£'+prize+' y +'+notes+' conocimiento.');
  // E-3280 BEGIN receipt-after
   const received=Object.fromEntries(Object.entries(state.inventory).filter(([id,n])=>ITEMS[id]&&n>(Number(inventoryBefore[id])||0)).map(([id,n])=>[id,n-(Number(inventoryBefore[id])||0)]));
@@ -6310,9 +6329,9 @@ function normalizeCommerce3300(s){
  s.commerce=c;return c;
 }
 function tradeTransaction3300(change){
- const before={money:state.money,knowledge:state.knowledge,inventory:{...state.inventory},commerce:JSON.parse(JSON.stringify(state.commerce))};
+ const before={money:state.money,knowledge:state.knowledge,inventory:{...state.inventory},commerce:JSON.parse(JSON.stringify(state.commerce)),achievements:JSON.parse(JSON.stringify(state.achievements||null))};
  if(!change())return false;
- if(!persist()){Object.assign(state,before);return false;}
+ if(!persist()){Object.assign(state,before);achievementNotices3360=[];achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360?.categories||{}));return false;}
  return true;
 }
 function tradeCanStart3300(route){return !!route&&!!state.upgrades.shipyard&&state.commerce.jobs.length<1&&state.prestige>=route.prestige&&state.money>=route.cost&&state.knowledge>=route.knowledge;}
@@ -6330,6 +6349,7 @@ function settleTrade3300(now=Date.now()){
   for(const j of due){
    const r=TRADE_ROUTES.find(r=>r.id===j.route);if(!r||state.commerce.history.some(h=>h.id===j.id))continue;
    state.money+=r.money;for(const[id,n]of Object.entries(r.rewards))addInventory(id,n);
+   achievementIncrement3360('trade');if(r.hours===24)achievementIncrement3360('trade24');
    state.commerce.history.push({id:j.id,route:r.id,at:now,money:r.money,rewards:{...r.rewards}});
   }
   const ids=new Set(due.map(j=>j.id));state.commerce.jobs=state.commerce.jobs.filter(j=>!ids.has(j.id));state.commerce.history=state.commerce.history.slice(-12);return true;
@@ -6337,11 +6357,11 @@ function settleTrade3300(now=Date.now()){
 }
 function buyTrade3300(id){
  const cost=Object.hasOwn(TRADE_MARKET,id)?TRADE_MARKET[id]:0;if(!state.upgrades.shipyard||!cost||state.money<cost)return false;
- return tradeTransaction3300(()=>{state.money-=cost;addInventory(id,1);return true;});
+ return tradeTransaction3300(()=>{state.money-=cost;addInventory(id,1);achievementIncrement3360('market');return true;});
 }
 function barterTrade3300(id){
  const r=TRADE_BARTERS.find(r=>r.id===id);if(!state.upgrades.shipyard||!r||!Object.entries(r.requires).every(([id,n])=>(state.inventory[id]||0)>=n))return false;
- return tradeTransaction3300(()=>{for(const[id,n]of Object.entries(r.requires))state.inventory[id]-=n;for(const[id,n]of Object.entries(r.rewards))addInventory(id,n);return true;});
+ return tradeTransaction3300(()=>{for(const[id,n]of Object.entries(r.requires))state.inventory[id]-=n;for(const[id,n]of Object.entries(r.rewards))addInventory(id,n);achievementIncrement3360('barter');return true;});
 }
 function tradeMaterials3300(items){return Object.entries(items).map(([id,n])=>`${esc(ITEMS[id].name)} ×${n}`).join(' · ');}
 function tradeCountdown3300(end,now=Date.now()){const s=Math.max(0,Math.ceil((end-now)/1000));return `${Math.floor(s/3600)} h ${String(Math.floor(s/60)%60).padStart(2,'0')} min ${String(s%60).padStart(2,'0')} s`;}
@@ -6510,7 +6530,7 @@ encounter=function(source='manual',at=Date.now(),guaranteed=false){
  if(state.lastEncounter!==last){state.lastEncounter.deepEvidence={method:state.deepSurvey.method,region:state.currentRegion,direct:false,...(abyssalRegionIndex3340.has(state.currentRegion)?{depthTier:'abisal',stratum:state.habitat}: {})};state.lastEncounter.title=state.lastEncounter.entries?.length?'Registro indirecto de muestra':'Muestra sin identificación';state.lastEncounter.subtitle='Examen a bordo · '+(state.lastEncounter.subtitle||'').replace(/avistamientos/g,'registros').replace(/comiendo/g,'contenido digestivo examinado');}
  if(!batch){renderCounters();updateFieldOutput();}return state.lastEncounter!==last;
 };
-function deepTransaction3330(change){const before=JSON.parse(JSON.stringify(state));try{if(!change())return false;if(!persist()){state=before;return false;}return true;}catch(error){state=before;throw error;}}
+function deepTransaction3330(change){const before=JSON.parse(JSON.stringify(state));try{if(!change())return false;if(!persist()){state=before;achievementNotices3360=[];achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360?.categories||{}));return false;}return true;}catch(error){state=before;achievementNotices3360=[];throw error;}}
 function canStartDeep3330(method=state.deepSurvey.method){const m=Object.hasOwn(DEEP_METHODS3330,method)?DEEP_METHODS3330[method]:null;return !!m&&deepReady3330()&&state.deepSurvey.jobs.length<1&&state.deepSurvey.seq<Number.MAX_SAFE_INTEGER&&state.money>=m.money&&state.knowledge>=m.knowledge&&deepPresenceIndex3330.get(state.currentRegion).some(p=>p.methods.includes(method)&&p.habitats.includes(state.habitat)&&p.times.includes(state.time)&&p.seasons.includes(state.season));}
 function startDeep3330(method=state.deepSurvey.method){if(!canStartDeep3330(method))return false;const m=DEEP_METHODS3330[method],at=Date.now();if(!Number.isFinite(at))return false;return deepTransaction3330(()=>{state.money-=m.money;state.knowledge-=m.knowledge;state.deepSurvey.method=method;state.deepSurvey.jobs.push({id:++state.deepSurvey.seq,method,region:state.currentRegion,habitat:state.habitat,time:state.time,season:state.season,startedAt:at,endAt:at+m.seconds*1000,seed:Math.floor(Math.random()*4294967296)});return true;});}
 function processDeep3330(now=Date.now()){
@@ -6518,7 +6538,7 @@ function processDeep3330(now=Date.now()){
  return deepTransaction3330(()=>{for(const j of due){if(state.deepSurvey.history.some(h=>h.id===j.id))continue;const context={currentRegion:state.currentRegion,habitat:state.habitat,time:state.time,season:state.season},method=state.deepSurvey.method,last=state.lastEncounter,before={...state.sightings},random=Math.random,batch=batchingOffline;let seed=j.seed;
   try{Object.assign(state,{currentRegion:j.region,habitat:j.habitat,time:j.time,season:j.season});state.deepSurvey.method=j.method;deepResolving3330=true;batchingOffline=true;Math.random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};encounter('manual',j.endAt,false);}
   finally{Math.random=random;deepResolving3330=false;batchingOffline=batch;Object.assign(state,context);state.deepSurvey.method=method;if(context.currentRegion!==j.region)state.lastEncounter=last;}
-  const records=Object.fromEntries(deepRegionIndex3330.get(j.region).species.map(id=>[id,(state.sightings[id]||0)-(before[id]||0)]).filter(([,n])=>n>0));state.deepSurvey.history.push({id:j.id,method:j.method,region:j.region,at:now,records,...(abyssalRegionIndex3340.has(j.region)?{stratum:j.habitat}: {})});
+  const records=Object.fromEntries(deepRegionIndex3330.get(j.region).species.map(id=>[id,(state.sightings[id]||0)-(before[id]||0)]).filter(([,n])=>n>0));achievementRecord3360('deep',{method:j.method,records,abyss:abyssalRegionIndex3340.has(j.region)});state.deepSurvey.history.push({id:j.id,method:j.method,region:j.region,at:now,records,...(abyssalRegionIndex3340.has(j.region)?{stratum:j.habitat}: {})});
  }const ids=new Set(due.map(j=>j.id));state.deepSurvey.jobs=state.deepSurvey.jobs.filter(j=>!ids.has(j.id));state.deepSurvey.history=state.deepSurvey.history.slice(-12);return true;});
 }
 function deepAction3330(action,id){if(action==='deep-method'&&Object.hasOwn(DEEP_METHODS3330,id)){state.deepSurvey.method=id;renderPanel();persist();return;}if(action==='deep-start'){if(startDeep3330()){renderCounters();renderPanel();}return;}if(action==='deep-craft'){craftItem('sounding_kit');return;}}
@@ -6568,6 +6588,19 @@ renderJournal=function(){const view=journalBefore3340();return abyssalRegionInde
 // GM3340 END gameplay
 
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
+// ACH3360 BEGIN event integration. No timer and no per-render achievement mutations.
+if(globalThis.AtlasAchievements3360){
+ achievementNotices3360=globalThis.AtlasAchievements3360.initialize(state,achievementContext3360());achievementReady3360=true;
+ const watch=(fn,groups)=>function(...args){achievementMark3360(...groups);return fn.apply(this,args);};
+ encounter=watch(encounter,['zoology','specimens','museum']);
+ recordSpecimen=watch(recordSpecimen,['specimens']);
+ setRegion=watch(setRegion,['exploration']);unlockRegion=watch(unlockRegion,['exploration']);
+ buyNode=watch(buyNode,['research','exploration','museum']);craftItem=watch(craftItem,['research']);
+ advanceSpecies=watch(advanceSpecies,['zoology','specimens']);publishMonograph=watch(publishMonograph,['zoology']);
+ exhibitAnimal=watch(exhibitAnimal,['museum']);catalogMuseumCollection=watch(catalogMuseumCollection,['museum']);
+ craftMuseumFossil=watch(craftMuseumFossil,['museum']);recordMuseumRelict=watch(recordMuseumRelict,['museum']);
+}
+// ACH3360 END event integration
 render();
 })();
 

@@ -58,5 +58,33 @@ function metrics(s,ctx){
  for(const method of ['sondeo','muestreo'])m['method:'+method]=(e.methods||[]).includes(method)||deep.some(h=>h.method===method)?1:0;
  return m;
 }
-root.AtlasAchievements3360=Object.freeze({categories,catalog:Object.freeze(catalog),metrics,group});
+const object=o=>o&&typeof o==='object'&&!Array.isArray(o)?o:{};
+function normalize(s){
+ const old=object(s.achievements),e=object(old.evidence);
+ s.achievements={...old,version:1,unlocked:{...object(old.unlocked)},notified:{...object(old.notified)},recognized:{...object(old.recognized)},counters:Object.fromEntries(['trade','trade24','market','barter'].map(k=>[k,safe(old.counters?.[k])])),evidence:{...e,voyageTypes:[...new Set([...(Array.isArray(e.voyageTypes)?e.voyageTypes:[]),...(s.voyageHistory||[]).map(h=>h.type)])],methods:[...new Set([...(Array.isArray(e.methods)?e.methods:[]),...(s.deepSurvey?.history||[]).map(h=>h.method)])],deepCompleted:Math.max(safe(e.deepCompleted),(s.deepSurvey?.history||[]).length),abyssRecords:safe(e.abyssRecords)},featured:typeof old.featured==='string'?old.featured:''};
+ return s.achievements;
+}
+function evaluate(s,ctx,selected=Object.keys(categories),options={}){
+ const a=s.achievements,m=metrics(s,ctx),notices=[],now=options.now??Date.now();
+ for(const d of catalog){if(!selected.includes(d.category)||a.unlocked[d.id]||(m[d.metric]||0)<d.target)continue;
+  a.unlocked[d.id]={earnedAt:options.retroactive?null:now,observedAt:now,retroactive:!!options.retroactive};
+  a.recognized[d.id]=true;a.notified[d.id]=true;notices.push(d.id);
+ }
+ return options.silent?[]:notices;
+}
+function initialize(s,ctx,{silent=false,now=Date.now()}={}){
+ const first=!s.achievements||s.achievements.version!==1;normalize(s);
+ const before=Object.keys(s.achievements.unlocked).length;
+ evaluate(s,ctx,Object.keys(categories),{silent:true,retroactive:first,now});
+ for(const id of Object.keys(s.achievements.unlocked))s.achievements.notified[id]=true;
+ const gained=Object.keys(s.achievements.unlocked).length-before;
+ return first&&gained&&!silent?[{summary:gained}]:[];
+}
+function increment(s,key,n=1){if(!['trade','trade24','market','barter'].includes(key)||!s.achievements)return;const a=s.achievements;a.counters[key]=Math.min(Number.MAX_SAFE_INTEGER,safe(a.counters[key])+safe(n));}
+function record(s,type,data={}){
+ if(!s.achievements)return;const e=s.achievements.evidence;
+ if(type==='voyage'&&!e.voyageTypes.includes(data.type))e.voyageTypes.push(data.type);
+ if(type==='deep'){e.deepCompleted=Math.min(Number.MAX_SAFE_INTEGER,e.deepCompleted+1);if(!e.methods.includes(data.method))e.methods.push(data.method);if(data.abyss&&Object.values(data.records||{}).some(n=>n>0))e.abyssRecords=Math.min(Number.MAX_SAFE_INTEGER,e.abyssRecords+1);}
+}
+root.AtlasAchievements3360=Object.freeze({categories,catalog:Object.freeze(catalog),metrics,group,normalize,evaluate,initialize,increment,record});
 })(globalThis);
