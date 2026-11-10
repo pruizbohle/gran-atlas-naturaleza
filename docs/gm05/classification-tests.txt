@@ -1,0 +1,32 @@
+✔ 945 unique identities,113 regions,1744 presences; all943 profiles and111 regions byte-equal (167.12969ms)
+✔ exact three source rows, accepted combination alias one identity, HX09-14 Madagascar untouched (57.874079ms)
+✔ nineteen cells,17 previous positions exact; actual16 neighbor pairs share two vertices (6.671993ms)
+✔ three conservative depth windows and localities; no tripod in hadal nor snailfish in wrong trench (46.847107ms)
+✔ all three presences attainable with permitted method and turn filters, sondeo cannot bypass (50.307626ms)
+✔ 475/485 thresholds,research6800/5800 after deep and same six nonconsumed crafts,old unlocks retained (50.76801ms)
+✔ all former1741 manual and automatic eligibility conditions exact,deep protocols and global rates unchanged (169.217174ms)
+✔ commercial routes,recipes,items,old research,old continent requirements and scientific voyages exactly unchanged (88.637535ms)
+✔ direct/manual and guaranteed flag blocked; meaningful extraordinary300s,cost60/10,one shared queue (51.672545ms)
+✔ actual paid seeded operations attain all3 presences using each method,failures and valid evidence exist (50.46932ms)
+✔ naturalist automatic encounters attain all3 assignments while respecting selected stratum and hourly cap (98.937772ms)
+✔ real one-second ticker settles extraordinary work once; naturalists use same production ticker (53.748116ms)
+✔ restart resolves same seed/context,away completion preserves region and previous Field output (229.274632ms)
+✔ quota failures roll back entire start/resolution,deterministic retry and receipt preserve stratum on reload (100.021617ms)
+✔ old pending60s scientific operation occupies same queue in a trench,then completes correctly (47.094931ms)
+✔ 3.33 advanced save preserves all resources,old60s job and24h trade through export/import and72h return (222.942986ms)
+✔ both new species five notebook stages,publish once,Museum and paginated Bestiary945 integrate (62.975304ms)
+✔ all943 previous SVGs and variants/sexes byte-equal,tripod exact,two new nonluminous plates have distinct anatomy (253.533561ms)
+✔ normalization retains valid300s work and rejects wrongduration/unknown habitat/duplicate receipts (48.322251ms)
+✔ changing to eastern trench selects compatible extraordinary method;insufficient resources never negative (103.510507ms)
+✔ GM05 checks all 945 identities/113 regions/1744 real pairs, retaining rank distinctions (105.868551ms)
+✔ all1744 source/runtime witnesses remain reachable by actual current manual and automatic filters (74.894254ms)
+✔ source reconciliation has1574 preserved rows,413 distinct issue IDs,103/106 source cells and no invented range equality (3.291725ms)
+✔ woodpecker and two legacy sharks use documented classes/families without altering identities or state (58.115854ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2037.183719

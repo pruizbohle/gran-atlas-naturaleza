@@ -1,0 +1,56 @@
+[
+  {
+    "issueId": "GM05-CLASS-001",
+    "id": "eu_esp_0159",
+    "scientific": "Dendrocopos major",
+    "before": {
+      "className": "Mammalia",
+      "subClass": "Roedores y pequeños mamíferos"
+    },
+    "afterClass": "Aves",
+    "family": "Picidae",
+    "evidence": "evidence/dendrocopos-major.json",
+    "regions": [
+      "HX-02-11"
+    ],
+    "saveEffect": "No migration: unchanged ID, save fields, rarity, habitats and encounters. Classification/family labels corrected only."
+  },
+  {
+    "issueId": "GM05-CLASS-002",
+    "id": "af_tiburon_blanco",
+    "scientific": "Carcharodon carcharias",
+    "before": {
+      "className": "Actinopterygii",
+      "subClass": "Peces óseos"
+    },
+    "afterClass": "Chondrichthyes",
+    "family": "Lamnidae",
+    "evidence": "evidence/legacy-shark-classification.json",
+    "regions": [
+      "HX-11-11",
+      "HX-10-12",
+      "mar_pacifico_nororiental",
+      "mar_pacifico_suroccidental"
+    ],
+    "saveEffect": "No migration: unchanged ID, save fields, rarity, habitats and encounters. Classification/family labels corrected only."
+  },
+  {
+    "issueId": "GM05-CLASS-003",
+    "id": "af_tiburon_puntas_negras",
+    "scientific": "Carcharhinus melanopterus",
+    "before": {
+      "className": "Actinopterygii",
+      "subClass": "Peces óseos"
+    },
+    "afterClass": "Chondrichthyes",
+    "family": "Carcharhinidae",
+    "evidence": "evidence/legacy-shark-classification.json",
+    "regions": [
+      "HX-07-14",
+      "mar_oceano_indico_tropical",
+      "mar_mar_tropical_asiatico",
+      "mar_archipielagos_tropicales"
+    ],
+    "saveEffect": "No migration: unchanged ID, save fields, rarity, habitats and encounters. Classification/family labels corrected only."
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "consultedAt": "2026-11-10T20:27:36.869966+00:00",
+  "records": [
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Carcharodon%20carcharias",
+      "query": "Carcharodon carcharias",
+      "response": {
+        "usageKey": 2420694,
+        "scientificName": "Carcharodon carcharias (Linnaeus, 1758)",
+        "canonicalName": "Carcharodon carcharias",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 99,
+        "matchType": "EXACT",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "order": "Lamniformes",
+        "family": "Lamnidae",
+        "genus": "Carcharodon",
+        "species": "Carcharodon carcharias",
+        "kingdomKey": 1,
+        "phylumKey": 44,
+        "classKey": 121,
+        "orderKey": 885,
+        "familyKey": 5888,
+        "genusKey": 2420693,
+        "speciesKey": 2420694,
+        "class": "Elasmobranchii"
+      }
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Carcharhinus%20melanopterus",
+      "query": "Carcharhinus melanopterus",
+      "response": {
+        "usageKey": 2417981,
+        "scientificName": "Carcharhinus melanopterus (Quoy & Gaimard, 1824)",
+        "canonicalName": "Carcharhinus melanopterus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 99,
+        "matchType": "EXACT",
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "order": "Carcharhiniformes",
+        "family": "Carcharhinidae",
+        "genus": "Carcharhinus",
+        "species": "Carcharhinus melanopterus",
+        "kingdomKey": 1,
+        "phylumKey": 44,
+        "classKey": 121,
+        "orderKey": 887,
+        "familyKey": 2211,
+        "genusKey": 2417963,
+        "speciesKey": 2417981,
+        "class": "Elasmobranchii"
+      }
+    }
+  ]
+}

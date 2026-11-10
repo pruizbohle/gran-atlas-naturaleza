@@ -1,0 +1,27 @@
+{
+  "url": "https://api.gbif.org/v1/species/match?name=Dendrocopos%20major",
+  "consultedAt": "2026-11-10T20:25:06.068544+00:00",
+  "response": {
+    "usageKey": 2477968,
+    "scientificName": "Dendrocopos major (Linnaeus, 1758)",
+    "canonicalName": "Dendrocopos major",
+    "rank": "SPECIES",
+    "status": "ACCEPTED",
+    "confidence": 99,
+    "matchType": "EXACT",
+    "kingdom": "Animalia",
+    "phylum": "Chordata",
+    "order": "Piciformes",
+    "family": "Picidae",
+    "genus": "Dendrocopos",
+    "species": "Dendrocopos major",
+    "kingdomKey": 1,
+    "phylumKey": 44,
+    "classKey": 212,
+    "orderKey": 724,
+    "familyKey": 9333,
+    "genusKey": 2477899,
+    "speciesKey": 2477968,
+    "class": "Aves"
+  }
+}
