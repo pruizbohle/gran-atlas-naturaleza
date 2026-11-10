@@ -1,0 +1,42 @@
+{
+  "widths": [
+    {
+      "width": 320,
+      "cards": 80,
+      "noOverflow": true,
+      "filters": true,
+      "legacyPanes": true
+    },
+    {
+      "width": 360,
+      "cards": 80,
+      "noOverflow": true,
+      "filters": true,
+      "legacyPanes": true
+    },
+    {
+      "width": 390,
+      "cards": 80,
+      "noOverflow": true,
+      "filters": true,
+      "legacyPanes": true
+    },
+    {
+      "width": 412,
+      "cards": 80,
+      "noOverflow": true,
+      "filters": true,
+      "legacyPanes": true
+    },
+    {
+      "width": 1280,
+      "cards": 80,
+      "noOverflow": true,
+      "filters": true,
+      "legacyPanes": true
+    }
+  ],
+  "errors": [],
+  "physicalAndroid": false,
+  "labIsolated": true
+}

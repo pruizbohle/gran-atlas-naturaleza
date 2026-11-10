@@ -3363,7 +3363,7 @@ function renderScientificMissions(){
     const amount=Math.min(m.target,m.progress());
     const available=!done && amount>=m.target;
     return '<div class="atlas-region"><div><strong>'+m.name+'</strong><div class="small">'+m.desc+
-      '</div><div class="small">'+fmt(amount)+' / '+fmt(m.target)+' · Premio: £'+fmt(m.money)+
+      '</div><progress class="society-mission-progress" max="'+m.target+'" value="'+amount+'" aria-label="Progreso de la misión"></progress><div class="small">'+fmt(amount)+' / '+fmt(m.target)+' · Premio: £'+fmt(m.money)+
       ' + '+fmt(m.knowledge)+' conocimiento'+Object.entries(m.items||{}).map(([item,qty])=>' · '+ITEMS[item].name+' ×'+qty).join('')+'</div></div><button class="btn '+(available?'gold':'alt')+
       '" data-action="claim-mission" data-id="'+m.id+'" '+(available?'':'disabled')+'>'+
       (done?'Completada':available?'Reclamar premio':'En progreso')+'</button></div>';

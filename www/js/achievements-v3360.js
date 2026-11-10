@@ -23,7 +23,7 @@ for(const [label,slug]of [['Épico','epic'],['Excepcional','exceptional'],['Lege
 add('specimens','special_groups','Variación de la naturaleza','specialGroups',4,'Registra un espécimen especial en cada uno de los cuatro grandes grupos.','Oro');
 add('specimens','special_100','Archivo de singularidades','specialTotal',100,'Reúne 100 registros especiales conservados en tu partida.','Oro');
 add('specimens','special_stage_10','Diez estudios completos','stage:5',10,'Alcanza la quinta etapa de diez especies, incluidos sus requisitos especiales reales.','Platino');
-for(const n of [1,3,10,30])add('museum','exhibit_'+n,'Galería de '+n+' especies','exhibits',n,'Mantén '+n+' especies expuestas en el Museo.',n<10?'Bronce':'Oro');
+for(const n of [1,3,7,12])add('museum','exhibit_'+n,'Galería de '+n+' especies','exhibits',n,'Mantén '+n+' especies expuestas en el Museo.',n<7?'Bronce':'Oro');
 add('museum','fossil_catalog','Archivo fósil','fossils',1,'Completa una colección de fósiles catalogados.','Plata');
 for(const n of [1,3])add('museum','artifact_'+n,'Gabinete de artefactos · '+n,'artifacts',n,'Completa '+n+' colecciones de artefactos históricos.',n===1?'Plata':'Oro');
 for(const n of [1,3])add('museum','dinosaur_'+n,'Montaje paleontológico · '+n,'dinosaurs',n,'Completa '+n+' reconstrucciones únicas de dinosaurios.',n===1?'Oro':'Platino');
