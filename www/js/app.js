@@ -3399,6 +3399,7 @@ function renderSociety(){
   }
   const publicationsPane=`<div class="subtabs compact">${[['monographs','📜 Monografías'],['codex','📚 Códex'],['atlas','🌐 Atlas total']].map(([id,label])=>`<button class="subtab ${state.publicationView===id?'active':''}" data-action="publication-tab" data-id="${id}">${label}</button>`).join('')}</div>${pubContent}`;
   const missions=renderScientificMissions();
+  if(globalThis.AtlasSociety3360){const content=state.societyView==='achievements'?globalThis.AtlasSociety3360.render(state,achievementContext3360()):state.societyView==='grants'?grants:state.societyView==='publications'?publicationsPane:missions;return globalThis.AtlasSociety3360.layout(state,achievementContext3360(),content);}
   return `<div class="grid-2">
     <section class="card stack">
       <h3 class="section">🏛️ Real Sociedad de Historia Natural</h3>
@@ -6591,6 +6592,7 @@ if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 // ACH3360 BEGIN event integration. No timer and no per-render achievement mutations.
 if(globalThis.AtlasAchievements3360){
  achievementNotices3360=globalThis.AtlasAchievements3360.initialize(state,achievementContext3360());achievementReady3360=true;
+ globalThis.AtlasSociety3360?.mount({state:()=>state,context:achievementContext3360,save:persist,render:renderPanel,open(){tab='society';state.societyView='achievements';renderPanel();persist();}});
  const watch=(fn,groups)=>function(...args){achievementMark3360(...groups);return fn.apply(this,args);};
  encounter=watch(encounter,['zoology','specimens','museum']);
  recordSpecimen=watch(recordSpecimen,['specimens']);
