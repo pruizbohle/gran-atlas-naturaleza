@@ -5199,6 +5199,9 @@ function sexSpriteMarkup(id,sex){
 
 const spriteCache=new Map();
 function getSpriteMarkup(id, skin='normal', sex=null){
+ // GM3310 BEGIN art
+ if(SPECIES[id]?.origin==='polar3310')return globalThis.AtlasPolarArt3310.render(SPECIES[id]);
+ // GM3310 END art
   const category=Object.keys(SPECIMEN_LEVELS).find(c=>SPECIMEN_LEVELS[c].skin===skin);
   if(category){
    const key=id+':'+skin+':base';
