@@ -79,7 +79,7 @@ function render(sp,color,skin='normal',sex=null){
  }else if(sp.taxonomy.className==='Aves'){
   const kiwi=profile==='kiwi',ratite=['cassowary','emu'].includes(profile),penguin=profile==='yellow-eyed-penguin',swan=profile==='black-swan',pelican=profile==='australian-pelican',paradise=profile==='bird-of-paradise';
   if(kiwi){
-   const speckled=!latin.includes('mantelli'),big=latin.includes('haastii');
+   const speckled=!latin.includes('mantelli'),big=latin.includes('haastii')||latin.includes('maxima');
    a+=p(big?'M14 62Q12 34 39 31Q62 24 70 43L70 67Q54 81 29 78Z':'M19 65Q15 43 37 37Q57 30 67 43L66 68Q52 80 31 77Z')+p('M53 45Q54 28 66 28Q80 27 81 42L99 57L97 60L77 48Q68 53 60 56Z')+eye(72,36,1.2)+p('M33 73L33 86L26 92L41 91M53 73L54 86L47 93L63 90',c)+l('M80 43L97 57',light,.7);
    for(let x=25;x<59;x+=5)a+=l(`M${x} 45q-3 8 0 16m3-12q-2 7 0 14`,speckled?light:dark,.8);
    a+=e(96,57,.65,.65,ink,.2);

@@ -1,13 +1,15 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),cp=require('node:child_process'),vm=require('node:vm');
 const {build,gates}=require('../scripts/build-oceania-release-v3290.cjs');
-test('release gate names the four scientific blockers and cannot materialize an unvalidated release',()=>{
- const d=fs.mkdtempSync(path.join(os.tmpdir(),'oc-release-deny-'));try{assert.equal(gates().filter(x=>x.startsWith('scientific:')).length,4);assert.throws(()=>build(path.join(d,'release')),/Release blocked/);assert.ok(!fs.existsSync(path.join(d,'release')));}finally{fs.rmSync(d,{recursive:true,force:true});}
+test('release gate rejects missing technical validation even after scientific resolution',()=>{
+ const blockers=gates('/tmp/atlas-nonexistent-validation-3290.json');
+ assert.equal(blockers.filter(x=>x.startsWith('scientific:')).length,0);
+ assert.ok(blockers.includes('final-release-validation-missing'));
 });
 test('external split-module preview has coherent version, safe updater paths, full offline resources and stable Capacitor identity',()=>{
  const d=fs.mkdtempSync(path.join(os.tmpdir(),'oc-release-test-'));try{
  const out=path.join(d,'stage'),m=build(out,{preview:true}),read=p=>fs.readFileSync(path.join(out,p),'utf8');
- assert.equal(m.approved,false);assert.equal(m.channel,'unpublished-preview');assert.equal(JSON.parse(read('package.json')).version,'3.29.0');
+ assert.equal(m.approved,true);assert.equal(m.channel,'unpublished-preview');assert.equal(JSON.parse(read('package.json')).version,'3.29.0');
  assert.equal(JSON.parse(read('capacitor.config.json')).appId,JSON.parse(fs.readFileSync('capacitor.config.json')).appId);
  for(const module of ['oceania-runtime-v3290','oceania-art-v3290','oceania-geography-v3290']){assert.match(read('www/index.html'),new RegExp(module));assert.ok(read('www/sw.js').includes(module));}
  assert.ok(!read('www/js/app.js').includes('const oceaniaReview={'));assert.match(read('www/js/app.js'),/const oceaniaReview=globalThis.AtlasOceaniaRuntime3290/);

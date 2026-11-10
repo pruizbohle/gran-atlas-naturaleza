@@ -1,0 +1,23 @@
+{
+  "status": "code-and-external-package-validated; Android signature and publication pending",
+  "artValidated": true,
+  "releaseValidated": true,
+  "runtimeSha256": "b6d1f3b6af95887126e36ade7615a882d1443ee95c8bdf15d186add0c55ffb51",
+  "artSha256": "7fa5a19711e57f4592525444d36b081456c1a41a1957da48f9e5002a3be8751e",
+  "scientificDecisionsSha256": "065a50d84dd88c2160c044f13d498f932df0826c78fa4d708f028fd705b95895",
+  "baselineCommit": "7e6319f25a6dc68e8242d2dc25ef54adae256828",
+  "generatedAt": "2026-11-10T02:04:57.252680+00:00",
+  "scope": "External final package authorization; no claim of public activation, Android build or certificate continuity",
+  "evidence": [
+    "art-final/browser-results.json",
+    "release-scientific-preview/upgrade-results.json",
+    "release-final/upgrade-results.json",
+    "release/regression-final.txt"
+  ],
+  "pending": [
+    "APK signed build",
+    "Compare APK certificate with previous distributed APK",
+    "Activate already validated external final files after APK verification; adjust current-version test contracts",
+    "Main merge and Pages verification"
+  ]
+}

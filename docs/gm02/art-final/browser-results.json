@@ -1,0 +1,71 @@
+{
+  "status": "candidate rendering inspected separately, not production approval",
+  "plates": [
+    {
+      "label": "mammals",
+      "count": 34
+    },
+    {
+      "label": "birds",
+      "count": 41
+    },
+    {
+      "label": "reptiles",
+      "count": 18
+    },
+    {
+      "label": "amphibians",
+      "count": 3
+    },
+    {
+      "label": "fish",
+      "count": 1
+    },
+    {
+      "label": "albino",
+      "count": 4
+    },
+    {
+      "label": "male",
+      "count": 7
+    },
+    {
+      "label": "female",
+      "count": 7
+    },
+    {
+      "label": "alfa",
+      "count": 97
+    }
+  ],
+  "xml": {
+    "count": 212,
+    "failures": []
+  },
+  "mobile": [
+    {
+      "width": 320,
+      "height": 640,
+      "overflow": false
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "renderer": "exact isolated production SVG router + Oceanian candidate",
+  "storage": "no reads or writes",
+  "android": "Chromium emulation only"
+}

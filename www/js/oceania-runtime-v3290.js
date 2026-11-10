@@ -10,7 +10,7 @@ const data={
     "requires": "sudamerica_1",
     "researchId": "oceania_1"
   },
-  "approvedForProduction": false,
+  "approvedForProduction": true,
   "categories": {
     "oc_esp_acanthophis_antarcticus": [
       "Notable"
@@ -335,16 +335,12 @@ const data={
     }
   },
   "inputs": {
-    "docs/gm02/ecology-profiles.json": "0cc58781a805468b5bbc4083d957da61a014ecb29e3c319b2fbdb57ea1df7f15",
+    "docs/gm02/ecology-profiles.json": "b8f92c129d61b9b261fa5778995f3bfcd829662664df63553c6e9c5182398d60",
+    "docs/gm02/scientific-decisions.json": "065a50d84dd88c2160c044f13d498f932df0826c78fa4d708f028fd705b95895",
     "docs/gm02/source-contract.json": "236857ee8f45b34dc010b36571449eb84fd046975895b3df4a8b2538f9f3eac9",
-    "scripts/build-oceania-runtime-v3290.py": "7cb8217f76093f6cc7177b3e2f9a046da961c1496663f598f33abcab5411767b"
+    "scripts/build-oceania-runtime-v3290.py": "20b7f6acbf17d8be8e33736e17330055e0923b03317d19ce6fb7bd9bfe72b2e3"
   },
-  "pendingScientificReviews": [
-    "Apteryx haastii",
-    "Crocodylus novaeguineae",
-    "Lophorina superba",
-    "Trichoglossus haematodus"
-  ],
+  "pendingScientificReviews": [],
   "regions": [
     {
       "code": "OC-01",
@@ -677,14 +673,14 @@ const data={
       "artProfile": "kiwi",
       "color": "#9a896b",
       "dimorphism": false,
-      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada. Great Spotted Kiwi; montane northern South Island, New Zealand. Source name Apteryx haastii retained in provenance; IOC resurrects maxima because haastii syntypes are hybrids, not an ordinary synonym substitution.",
       "family": "Apterygidae",
       "habitats": [
         "bosque",
         "pradera"
       ],
       "kind": "forestbird",
-      "latin": "Apteryx haastii",
+      "latin": "Apteryx maxima",
       "name": "Kiwi moteado grande",
       "origin": "oc3290",
       "rare": "Poco común",
@@ -699,7 +695,7 @@ const data={
         "ESP-0023"
       ],
       "special": [],
-      "taxonomicStatus": "pending-authority-review",
+      "taxonomicStatus": "authority-reviewed",
       "taxonomy": {
         "className": "Aves",
         "subClass": "Paleognatas"
@@ -1253,7 +1249,7 @@ const data={
       "artProfile": "crocodile",
       "color": "#788568",
       "dimorphism": false,
-      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada. Freshwater populations north of New Guinea central highlands. Excludes southern C. halli; regional presence is not a claim of occurrence throughout the hexagon.",
       "family": "Crocodylidae",
       "habitats": [
         "rio",
@@ -1276,7 +1272,7 @@ const data={
         "ESP-0135"
       ],
       "special": [],
-      "taxonomicStatus": "pending-authority-review",
+      "taxonomicStatus": "authority-reviewed",
       "taxonomy": {
         "className": "Reptilia",
         "subClass": "Cocodrilianos"
@@ -1987,7 +1983,7 @@ const data={
       "artProfile": "bird-of-paradise",
       "color": "#465d45",
       "dimorphism": true,
-      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada. Vogelkop Lophorina in montane northwestern New Guinea (Bird’s Head and Wondiwoi). Excludes L. latipennis and L. minor. IOC restored traditional classification in 14.2; GBIF uses a different authority/circumscription. Adopt IOC explicitly, without asserting universal consensus.",
       "family": "Paradisaeidae",
       "habitats": [
         "selva",
@@ -2009,7 +2005,7 @@ const data={
         "ESP-0295"
       ],
       "special": [],
-      "taxonomicStatus": "pending-authority-review",
+      "taxonomicStatus": "authority-reviewed",
       "taxonomy": {
         "className": "Aves",
         "subClass": "Aves del paraíso"
@@ -3827,7 +3823,7 @@ const data={
       "artProfile": "parrot",
       "color": "#75945b",
       "dimorphism": false,
-      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada. Coconut Lorikeet in compatible New Guinea lowland forest subareas. Excludes Australian T. moluccanus and T. rubritorquis and Biak T. rosenbergii; no extra identities or presences.",
       "family": "Psittaculidae",
       "habitats": [
         "bosque",
@@ -3851,7 +3847,7 @@ const data={
         "ESP-0943"
       ],
       "special": [],
-      "taxonomicStatus": "pending-authority-review",
+      "taxonomicStatus": "authority-reviewed",
       "taxonomy": {
         "className": "Aves",
         "subClass": "Psitaciformes"
@@ -4188,7 +4184,7 @@ const data={
       ]
     }
   },
-  "status": "isolated-review-candidate"
+  "status": "validated-release-candidate"
 };
 function freeze(v){if(v&&typeof v==="object"){Object.values(v).forEach(freeze);Object.freeze(v);}return v;}
 freeze(data);

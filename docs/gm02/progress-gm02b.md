@@ -1,3 +1,5 @@
+> **Actualización posterior a 7e6319f:** red verificada y cuatro revisiones resueltas; validación final externa completada. Bloqueo actual: firma Android. Véase [estado vigente](release-final/README.md). El contenido siguiente se conserva como registro histórico.
+
 # GM-02B · integración aislada avanzada, sin publicación
 
 **Se mantiene la versión pública 3.28.0.** Rama `gm02/oceania`, sobre el trabajo existente; no se reinició GM-01 ni GM-02A. La fuente sigue siendo el contrato de 97 identidades, ocho regiones y 131 presencias. [Prompt GM-02B](request-gm02b.md).

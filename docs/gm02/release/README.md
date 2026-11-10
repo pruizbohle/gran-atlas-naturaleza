@@ -1,3 +1,5 @@
+> **Actualización posterior a 7e6319f:** red verificada y cuatro revisiones resueltas; validación final externa completada. Bloqueo actual: firma Android. Véase [estado vigente](../release-final/README.md). El contenido siguiente se conserva como registro histórico.
+
 # Paquete de prepublicación 3.29.0 y actualización segura
 
 **Preparado y probado; no publicado.** El checkout público sigue en 3.28.0. La salida se materializa fuera del repositorio y se identifica como `unpublished-preview`, con marca visual de previsualización. No se ejecutan deploys ni se construye un APK al generar este paquete.

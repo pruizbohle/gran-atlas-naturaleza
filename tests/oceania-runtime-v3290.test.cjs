@@ -22,7 +22,7 @@ test('all 131 candidate presences are reachable through actual manual and automa
  assert.equal(count,131);
  assert.equal(a.SPECIES.oc_esp_morelia_viridis.kind,'snake');
  assert.equal(a.taxonomyInfo('oc_esp_sphenodon_punctatus').subClass,'Rincocéfalos');
- assert.deepEqual(candidate.pendingScientificReviews,['Apteryx haastii','Crocodylus novaeguineae','Lophorina superba','Trichoglossus haematodus']);
+ assert.deepEqual(candidate.pendingScientificReviews,[]);
 });
 test('existing research chain gates candidate travel; thresholds are gradual and prestige is never spent',()=>{
  const a=reviewHarness().window.__atlasTest,s=a.state,first=candidate.regions.find(r=>r.unlock.prestige===197);
@@ -57,8 +57,8 @@ test('candidate save/load and Android export/import preserve old data and newly 
  const reload=reviewHarness({...h.store});assert.equal(reload.window.__atlasTest.state.currentRegion,first.id);assert.equal(reload.window.__atlasTest.state.upgrades.oceaniaUnlocked,true);assert.equal(reload.window.__atlasTest.state.sightings[first.species[0]],42);
  let exported;reload.window.Capacitor.Plugins.AtlasExport.saveFile=async payload=>{exported=payload;return{uri:'content://review'};};await reload.elements.saveDownloadBtn.fire('click');assert.ok(exported);const envelope=JSON.parse(exported.content);assert.equal(envelope.game.currentRegion,first.id);const imported=reviewHarness({},envelope);await imported.import();assert.equal(imported.window.__atlasTest.state.currentRegion,first.id);assert.equal(imported.window.__atlasTest.state.sightings[first.species[0]],42);
 });
-test('runtime generation is deterministic, explicitly unapproved and absent from public entry/cache',()=>{
- cp.execFileSync('python',['scripts/build-oceania-runtime-v3290.py','--check']);assert.equal(candidate.approvedForProduction,false);
+test('runtime generation is deterministic, scientifically approved and absent from public entry/cache',()=>{
+ cp.execFileSync('python',['scripts/build-oceania-runtime-v3290.py','--check']);assert.equal(candidate.approvedForProduction,true);
  for(const path of ['www/index.html','www/sw.js'])assert.ok(!fs.readFileSync(path,'utf8').includes('oceania-runtime-v3290'));
  assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.28.0');
 });

@@ -1,0 +1,9 @@
+{
+  "version": "3.28.0",
+  "url": "https://github.com/pruizbohle/gran-atlas-naturaleza/releases/download/v3.28.0/El-Gran-Atlas-Beta-3.28.0-debug.apk",
+  "apkSha256": "69a4c116ffd2c37aa8cfc5e39b5da22732724f12cacc7272291887cbe1a3d5ba",
+  "certificateSha256": "1cc8de77e7ba88cb1b033224b326a075821c9e7b3d2c282da3882d1a63932efc",
+  "certificateType": "Android Debug",
+  "evidence": "previous-apk-certificate.txt",
+  "limitation": "keytool reads the signing certificate; this is not an apksigner verification of APK v2/v3 signatures."
+}

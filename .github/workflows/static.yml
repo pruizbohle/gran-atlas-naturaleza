@@ -24,6 +24,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Evitar desplegar una rama Oceanía aún sin activar
+        if: github.ref == 'refs/heads/gm02/oceania'
+        run: |
+          node -e "if(require('./package.json').version!=='3.29.0')throw Error('Oceanía aún no está activada en www; completar firma e integración antes de desplegar')"
       - name: Validar código y pruebas del Atlas
         run: |
           node --check www/js/herp-art-v3192.js

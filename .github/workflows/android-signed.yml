@@ -32,10 +32,25 @@ jobs:
           KEY_ALIAS: ${{ secrets.ATLAS_ANDROID_KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.ATLAS_ANDROID_KEY_PASSWORD }}
         run: |
-          if [ -z "$KEYSTORE" ] || [ -z "$STORE_PASSWORD" ] || [ -z "$KEY_ALIAS" ] || [ -z "$KEY_PASSWORD" ]; then
-            echo "::error::Faltan secretos de firma Android. Consulta README_RESPALDOS_ANDROID.md"
-            exit 1
-          fi
+          missing=0
+          for pair in KEYSTORE:ATLAS_ANDROID_KEYSTORE_BASE64 STORE_PASSWORD:ATLAS_ANDROID_STORE_PASSWORD KEY_ALIAS:ATLAS_ANDROID_KEY_ALIAS KEY_PASSWORD:ATLAS_ANDROID_KEY_PASSWORD; do
+            variable=${pair%%:*}
+            secret_name=${pair#*:}
+            if [ -z "${!variable}" ]; then
+              echo "::error::Falta el secreto ${secret_name} en Settings > Secrets and variables > Actions"
+              missing=1
+            fi
+          done
+          exit "$missing"
+
+      - name: Materializar candidato Oceanía validado sin desplegar
+        if: github.ref == 'refs/heads/gm02/oceania'
+        run: |
+          node --test tests/oceania-scientific-v3290.test.cjs tests/oceania-runtime-v3290.test.cjs tests/oceania-art-v3290.test.cjs tests/oceania-release-v3290.test.cjs
+          node scripts/build-oceania-release-v3290.cjs --output "$RUNNER_TEMP/atlas-3290" > "$RUNNER_TEMP/atlas-staging-manifest.json"
+          cp -a "$RUNNER_TEMP/atlas-3290/www/." www/
+          cp "$RUNNER_TEMP/atlas-3290/package.json" package.json
+          cp "$RUNNER_TEMP/atlas-3290/capacitor.config.json" capacitor.config.json
 
       - name: Instalar Capacitor
         run: npm install --no-audit --no-fund
@@ -47,6 +62,9 @@ jobs:
 
       - name: Habilitar exportación e importación nativa de partidas
         run: python3 scripts/install-atlas-export.py
+
+      - name: Configurar versión Android
+        run: python3 scripts/configure-android-version.py
 
       - name: Preparar almacén de firma
         env:
@@ -98,6 +116,26 @@ jobs:
           chmod +x android/gradlew
           cd android
           ./gradlew assembleRelease --no-daemon
+
+      - name: Verificar firma, identidad, versión y recursos del APK
+        run: |
+          APK=android/app/build/outputs/apk/release/app-release.apk
+          APKSIGNER=$(find "$ANDROID_HOME/build-tools" -name apksigner | sort -V | tail -1)
+          AAPT=$(find "$ANDROID_HOME/build-tools" -name aapt | sort -V | tail -1)
+          "$APKSIGNER" verify --verbose --print-certs "$APK" | tee apk-signature.txt
+          "$AAPT" dump badging "$APK" > apk-badging.txt
+          python3 scripts/verify-android-release.py "$APK" apk-badging.txt apk-signature.txt
+          sha256sum "$APK" > apk-sha256.txt
+
+      - name: Guardar evidencia de firma y versión
+        uses: actions/upload-artifact@v4
+        with:
+          name: Atlas-Android-verification
+          path: |
+            apk-signature.txt
+            apk-badging.txt
+            apk-sha256.txt
+          if-no-files-found: error
 
       - name: Publicar APK firmado
         uses: actions/upload-artifact@v4

@@ -27,10 +27,10 @@ test('the seven configured sexual profiles use species-specific ornament or plum
  const male=a.getSpriteMarkup('oc_esp_lophorina_superba','normal','male'),female=a.getSpriteMarkup('oc_esp_lophorina_superba','normal','female');assert.ok(male.length!==female.length);
  assert.match(a.getSpriteMarkup('oc_esp_nymphicus_hollandicus','normal','female'),/M10 87L17 87/);
 });
-test('candidate SVG generation draws no RNG, reuses the actual cache and leaves scientific blockers unresolved',()=>{
+test('candidate SVG generation draws no RNG, reuses the actual cache and retains resolved scientific treatment',()=>{
  let calls=0;const h=reviewHarness({},null,{rng:()=>{calls++;return .5;}}),a=h.window.__atlasTest,before=calls;
  for(const id of Object.keys(candidate.species)){const svg=a.getSpriteMarkup(id);assert.equal(a.getSpriteMarkup(id),svg);}
- assert.equal(calls,before);assert.equal(candidate.approvedForProduction,false);assert.equal(candidate.pendingScientificReviews.length,4);
+ assert.equal(calls,before);assert.equal(candidate.approvedForProduction,true);assert.equal(candidate.pendingScientificReviews.length,0);
 });
 test('isolated art catalog reproduces the exact candidate production router and does not access storage',()=>{
  cp.execFileSync(process.execPath,['scripts/build-oceania-art-lab-v3290.cjs','--check']);

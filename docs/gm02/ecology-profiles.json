@@ -62,8 +62,8 @@
         "Notable"
       ],
       "dimorphism": false,
-      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
-      "scientificStatus": "pending-authority-review"
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada. Great Spotted Kiwi; montane northern South Island, New Zealand. Source name Apteryx haastii retained in provenance; IOC resurrects maxima because haastii syntypes are hybrids, not an ordinary synonym substitution.",
+      "scientificStatus": "authority-reviewed"
     },
     "oc_esp_apteryx_mantelli": {
       "artProfile": "kiwi",
@@ -568,8 +568,8 @@
         "Notable"
       ],
       "dimorphism": false,
-      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
-      "scientificStatus": "pending-authority-review"
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada. Freshwater populations north of New Guinea central highlands. Excludes southern C. halli; regional presence is not a claim of occurrence throughout the hexagon.",
+      "scientificStatus": "authority-reviewed"
     },
     "oc_esp_crocodylus_porosus": {
       "artProfile": "crocodile",
@@ -1201,8 +1201,8 @@
         "type": "oc3290",
         "description": "Plumaje y estructuras ornamentales propios de macho y hembra; perfil gráfico sujeto a revisión renderizada."
       },
-      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
-      "scientificStatus": "pending-authority-review"
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada. Vogelkop Lophorina in montane northwestern New Guinea (Bird’s Head and Wondiwoi). Excludes L. latipennis and L. minor. IOC restored traditional classification in 14.2; GBIF uses a different authority/circumscription. Adopt IOC explicitly, without asserting universal consensus.",
+      "scientificStatus": "authority-reviewed"
     },
     "oc_esp_macropus_fuliginosus": {
       "artProfile": "macropod",
@@ -2805,8 +2805,8 @@
         "Notable"
       ],
       "dimorphism": false,
-      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada.",
-      "scientificStatus": "pending-authority-review"
+      "ecologyNote": "Configuración de juego para las subáreas compatibles de los registros fuente; no certifica presencia en todo el hexágono. Las cuatro estaciones representan acceso jugable sin imponer una migración no documentada. Coconut Lorikeet in compatible New Guinea lowland forest subareas. Excludes Australian T. moluccanus and T. rubritorquis and Biak T. rosenbergii; no extra identities or presences.",
+      "scientificStatus": "authority-reviewed"
     },
     "oc_esp_trichoglossus_moluccanus": {
       "artProfile": "parrot",

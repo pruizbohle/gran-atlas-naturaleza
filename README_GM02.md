@@ -1,3 +1,13 @@
+# Estado actual GM-02B · continuación desde 7e6319f
+
+**Cuatro revisiones científicas resueltas; paquete externo 3.29.0 validado. Publicación y APK final pendientes por secretos/continuidad de firma. La entrada pública permanece en 3.28.0.**
+
+[Resultados actuales, evidencia y acción exacta necesaria](docs/gm02/release-final/README.md). El candidato conserva 97 IDs, ocho regiones y 131 presencias; total 807 identidades, 87 regiones y 1.460 presencias. Pasan 414 pruebas y la actualización PWA del paquete final. No se ha publicado ni integrado en main.
+
+---
+
+## Informe histórico anterior a esta continuación
+
 # GM-02 · Oceanía — avance GM-02A, expansión no terminada
 
 **Estado: GM-02A preparada; GM-02B iniciada, incompleta y sin publicación. Se mantiene 3.28.0.**

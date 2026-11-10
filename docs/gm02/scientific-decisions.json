@@ -1,0 +1,80 @@
+{
+  "retrievedAt": "2026-11-10T02:01:15.397060+00:00",
+  "baseline": "7e6319f25a6dc68e8242d2dc25ef54adae256828",
+  "evidence": {
+    "ioc-15.2-extract.json": "f3cdaff8ecea3b3f16324ee233a849a5cc3bd4b74b788a13f79096315e3fbbdc",
+    "Crocodylus_novaeguineae.json": "3e4ce0773d2904c8767a51a37c3ebac865367f82c550a15d1f6a672e3a23735d",
+    "Apteryx_haastii.json": "f652ced524f789b0f6b0d29ac9596927e8acdb935a35727332b1af245fd0b5bd",
+    "Apteryx_maxima.json": "0fe05da4891703c7dd7eeed26f92aa157ec64febfeff6f496d28cfb24e2562ba",
+    "Lophorina_superba.json": "3740d43f9dd9a2dc9d706b3da3300e2d63423cc9d9dea6665bc4e14df3b68b54",
+    "Trichoglossus_haematodus.json": "f70bc54b14d6029df320c7958232e0d4030f3020896ed0d70f0c492461080a43",
+    "crocodylus-novaeguineae.html": "a73ef5c604359f069362e85676397cc2f1357fee7ca2da11e0a6fd80eaf33fe0",
+    "ioc-master-15.2.xlsx": "cbe406f71656323fafc6e30114385337c8c1cba54223b35fc668b3827bf28324"
+  },
+  "decisions": [
+    {
+      "id": "oc_esp_apteryx_haastii",
+      "sourceScientific": "Apteryx haastii",
+      "acceptedScientific": "Apteryx maxima",
+      "authority": "IOC 15.2, Master row 37",
+      "scope": "Great Spotted Kiwi; montane northern South Island, New Zealand. Source name Apteryx haastii retained in provenance; IOC resurrects maxima because haastii syntypes are hybrids, not an ordinary synonym substitution.",
+      "sourceSpeciesId": "ESP-0023",
+      "sourceCatalogRow": 47,
+      "sourceFaunaRows": [
+        "1498"
+      ],
+      "sourceHexIds": [
+        "HX-09-18"
+      ],
+      "status": "authority-reviewed"
+    },
+    {
+      "id": "oc_esp_lophorina_superba",
+      "sourceScientific": "Lophorina superba",
+      "acceptedScientific": "Lophorina superba",
+      "authority": "IOC 15.2, Master rows 20359–20367",
+      "scope": "Vogelkop Lophorina in montane northwestern New Guinea (Bird’s Head and Wondiwoi). Excludes L. latipennis and L. minor. IOC restored traditional classification in 14.2; GBIF uses a different authority/circumscription. Adopt IOC explicitly, without asserting universal consensus.",
+      "sourceSpeciesId": "ESP-0295",
+      "sourceCatalogRow": 462,
+      "sourceFaunaRows": [
+        "1120"
+      ],
+      "sourceHexIds": [
+        "HX-06-19"
+      ],
+      "status": "authority-reviewed"
+    },
+    {
+      "id": "oc_esp_trichoglossus_haematodus",
+      "sourceScientific": "Trichoglossus haematodus",
+      "acceptedScientific": "Trichoglossus haematodus",
+      "authority": "IOC 15.2, Master rows 12218–12231",
+      "scope": "Coconut Lorikeet in compatible New Guinea lowland forest subareas. Excludes Australian T. moluccanus and T. rubritorquis and Biak T. rosenbergii; no extra identities or presences.",
+      "sourceSpeciesId": "ESP-0943",
+      "sourceCatalogRow": 855,
+      "sourceFaunaRows": [
+        "1123"
+      ],
+      "sourceHexIds": [
+        "HX-06-19"
+      ],
+      "status": "authority-reviewed"
+    },
+    {
+      "id": "oc_esp_crocodylus_novaeguineae",
+      "sourceScientific": "Crocodylus novaeguineae",
+      "acceptedScientific": "Crocodylus novaeguineae",
+      "authority": "Reptile Database; Murray et al. 2019, doi:10.1643/CG-19-240",
+      "scope": "Freshwater populations north of New Guinea central highlands. Excludes southern C. halli; regional presence is not a claim of occurrence throughout the hexagon.",
+      "sourceSpeciesId": "ESP-0135",
+      "sourceCatalogRow": 217,
+      "sourceFaunaRows": [
+        "1132"
+      ],
+      "sourceHexIds": [
+        "HX-06-19"
+      ],
+      "status": "authority-reviewed"
+    }
+  ]
+}

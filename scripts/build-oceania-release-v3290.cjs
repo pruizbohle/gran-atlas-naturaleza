@@ -3,13 +3,14 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const {candidateGameSource,candidate}=require('../tests/helpers/oceania-review.cjs');
 const ROOT=path.resolve(__dirname,'..'),sha=s=>crypto.createHash('sha256').update(s).digest('hex');
-function gates(){
+function gates(validationFile=path.join(ROOT,'docs/gm02/release-validation.json')){
  const blockers=candidate.pendingScientificReviews.map(name=>'scientific:'+name);
  if(!candidate.approvedForProduction)blockers.push('candidate-not-approved');
- const file=path.join(ROOT,'docs/gm02/release-validation.json');
+ const file=validationFile;
  if(!fs.existsSync(file))blockers.push('final-release-validation-missing');
  else{
   const approval=JSON.parse(fs.readFileSync(file));
+  if(approval.scientificDecisionsSha256!==sha(fs.readFileSync(path.join(ROOT,'docs/gm02/scientific-decisions.json'))))blockers.push('scientific-validation-hash-does-not-match');
   if(approval.artValidated!==true||approval.releaseValidated!==true)blockers.push('final-validation-false');
   if(approval.runtimeSha256!==sha(fs.readFileSync(path.join(ROOT,'www/js/oceania-runtime-v3290.js')))||approval.artSha256!==sha(fs.readFileSync(path.join(ROOT,'www/js/oceania-art-v3290.js'))))blockers.push('validation-hashes-do-not-match');
  }
