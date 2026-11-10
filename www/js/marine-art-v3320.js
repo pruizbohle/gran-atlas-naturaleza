@@ -53,9 +53,23 @@ else if(['albatross','petrel','gannet','frigatebird'].includes(p)){
 else {
  const shark=['thresher','requiem_shark','mako','basking_shark','whale_shark','hammerhead','cookiecutter'].includes(p);
  if(shark){
+  // GM3350: four formerly identical plates now use actual distinct silhouettes.
+  const revised={
+   'Carcharhinus longimanus':{color:'#708f9a',body:'M7 53Q18 40 45 46L74 54 92 34 86 56 96 69 78 65Q43 78 10 65Q5 61 7 53Z',fins:'M42 46Q43 25 51 27Q56 30 58 49Z M37 64Q50 76 65 85Q66 91 58 88L40 70Z'},
+   'Isurus oxyrinchus':{color:'#537b8b',body:'M2 57L21 44Q43 33 65 49L77 55 95 34 87 57 96 78 77 64Q42 78 16 65Z',fins:'M44 44L51 33 55 48Z M40 64L51 76 57 72 49 62Z'},
+   'Lamna ditropis':{color:'#526d77',body:'M10 52Q20 34 45 38Q64 40 74 54L81 56 95 35 87 57 96 78 78 65Q49 80 18 69Q9 64 10 52Z',fins:'M40 41L49 26 56 45Z M37 65L51 79 58 72 48 63Z'},
+   'Prionace glauca':{color:'#5e91a6',body:'M3 56L20 49Q44 43 71 54L80 56 95 36 88 58 97 72 79 64Q47 73 14 64Z',fins:'M47 48L56 35 59 51Z M37 64L65 90 69 88 46 62Z'}
+  }[n];
+  if(revised){b=path(revised.body,revised.color)+path(revised.fins,revised.color)+eye(n==='Isurus oxyrinchus'?17:19,53)+line('M26 51L29 61M31 50L34 62M36 50L39 63');
+   if(n==='Carcharhinus longimanus')b+=path('M44 32Q48 25 52 30L54 34Z',white)+path('M57 83L64 85Q67 90 60 88Z',white);
+   if(n==='Lamna ditropis')b+=path('M16 62Q41 72 72 61L65 70Q42 79 21 69Z',white)+[27,35,43,51].map((x,i)=>eye(x,68+i%2*2,.9,ink)).join('');
+   if(n==='Isurus oxyrinchus'||n==='Prionace glauca')b+=path('M13 62Q40 70 71 62L63 69Q39 75 18 66Z',white);
+  }else{
   const color=p==='whale_shark'?'#5e8291':p==='cookiecutter'?'#887e6b':'#708f9a';
   b=path(p==='whale_shark'?'M6 49Q13 35 35 41L74 50 92 26 86 53 97 68 81 63Q46 77 9 64Z':p==='cookiecutter'?'M7 52Q14 42 32 47L78 53 92 44 88 57 95 67 80 63Q44 69 9 62Z':p==='thresher'?'M7 54Q23 40 47 47L72 54Q84 25 95 10L87 55 97 65 78 65Q47 76 13 64Z':'M5 56Q22 37 49 46L75 54 93 32 86 56 97 69 78 65Q43 77 12 65Z',color);
   b+=path(p==='cookiecutter'?'M61 48L66 41 69 51M71 52L77 45 80 54Z':'M43 45L53 27 57 48M38 64L54 80 60 66Z',color)+eye(18,53)+line('M26 51L29 61M31 50L34 62M36 50L39 63');if(p==='hammerhead')b+=path('M8 48L20 40 26 44 18 52 18 61 29 68 21 73 6 65Z',color)+eye(20,44)+eye(21,68);if(p==='whale_shark')b+=spots()+spots('#b9d3d5')+line('M6 59L20 59');if(p==='basking_shark')b+=path('M7 55Q17 47 23 51L23 62 10 65Z','#263d45')+line('M31 48L35 64M36 48L40 65M41 49L45 65');if(p==='cookiecutter')b+=path('M23 47L31 48 32 65 24 64Z','#485351');
+
+  }
  }else if(p==='sunfish')b=path('M18 50Q20 29 49 33L58 14 67 13 64 39 81 48 79 64 63 72 66 91 57 88 48 73Q21 75 18 50Z','#9cadaa')+eye(27,47)+path('M44 55L58 61 46 67Z',blue)+line('M73 46L69 52 75 58 69 65M20 57L28 57');
  else if(p==='seahorse')b=path('M59 14L75 24 72 31 61 30 59 39Q40 49 48 65Q59 79 44 90Q21 99 26 78Q29 67 36 74Q26 90 43 83Q47 75 37 65Q22 46 44 32L43 21Z','#c0a075')+eye(59,23)+path('M36 40L23 43 29 57 38 53Z','#9c9f80')+line('M45 40L53 43M40 47L49 49M39 55L47 57');
  else if(p==='sailfish'||p==='swordfish')b=path('M1 54L26 49Q43 41 70 51L87 54 97 37 91 57 98 71 84 64Q48 72 27 61L2 58Z',blue)+path(p==='sailfish'?'M30 46L39 15 49 18 55 29 62 27 69 47Z':'M54 48L61 31 66 51Z',p==='sailfish'?'#4d7da2':blue)+eye(30,54)+path('M42 63L59 80 63 67Z',blue);

@@ -1,7 +1,7 @@
 {
   "baseline": "9da9808",
   "version": "3.34.0",
-  "productionAppSha256": "2f3977707e5428446027ba067e1043d53e0af7bec9218bb652b47ef90be7473f",
+  "productionAppSha256": "29b4c65564494ed8984824a1a04daaf056d4418e191237ba2af678d5b8e274b6",
   "species": {
     "asia_esp_0287": {
       "name": "Grulla siberiana",
@@ -30,6 +30,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -67,6 +68,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -104,6 +106,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -143,6 +146,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -181,6 +185,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -220,6 +225,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -258,6 +264,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -297,6 +304,7 @@
         "className": "Amphibia",
         "subClass": "Salamandras y tritones"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -337,6 +345,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -375,6 +384,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -413,6 +423,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -452,6 +463,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -493,6 +505,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -531,6 +544,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -568,6 +582,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -606,6 +621,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -644,6 +660,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -684,6 +701,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Albino",
@@ -736,6 +754,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -773,6 +792,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -810,6 +830,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -853,6 +874,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -893,6 +915,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico"
       ],
@@ -929,6 +952,7 @@
         "className": "Aves",
         "subClass": "Aves marinas"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -966,6 +990,7 @@
         "className": "Aves",
         "subClass": "Búhos y lechuzas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -1003,6 +1028,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -1044,6 +1070,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -1089,6 +1116,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Épico"
@@ -1134,6 +1162,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico"
       ],
@@ -1182,6 +1211,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -1223,6 +1253,7 @@
         "className": "Mammalia",
         "subClass": "Úrsidos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -1274,6 +1305,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -1316,6 +1348,7 @@
         "className": "Aves",
         "subClass": "Galliformes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -1358,6 +1391,7 @@
         "className": "Aves",
         "subClass": "Galliformes"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -1395,6 +1429,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable",
         "Épico",
@@ -1459,6 +1494,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -1497,6 +1533,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -1535,6 +1572,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -1572,6 +1610,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Notable",
         "Épico",
@@ -1620,6 +1659,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -1660,6 +1700,7 @@
         "className": "Mammalia",
         "subClass": "Lagomorfos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -1699,6 +1740,7 @@
         "className": "Amphibia",
         "subClass": "Salamandras y tritones"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -1737,6 +1779,7 @@
         "className": "Mammalia",
         "subClass": "Suidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable",
@@ -1787,6 +1830,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico"
       ],
@@ -1827,6 +1871,7 @@
         "className": "Aves",
         "subClass": "Búhos y lechuzas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Épico"
@@ -1866,6 +1911,7 @@
         "className": "Amphibia",
         "subClass": "Salamandras y tritones"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -1903,6 +1949,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -1940,6 +1987,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico"
       ],
@@ -1978,6 +2026,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -2015,6 +2064,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -2053,6 +2103,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -2089,6 +2140,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -2126,6 +2178,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico"
       ],
@@ -2163,6 +2216,7 @@
         "className": "Mammalia",
         "subClass": "Lagomorfos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -2199,6 +2253,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -2237,6 +2292,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -2275,6 +2331,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -2312,6 +2369,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico"
       ],
@@ -2351,6 +2409,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico"
       ],
@@ -2387,6 +2446,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -2427,6 +2487,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -2465,6 +2526,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -2505,6 +2567,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico"
@@ -2545,6 +2608,7 @@
         "className": "Mammalia",
         "subClass": "Lagomorfos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -2583,6 +2647,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino"
       ],
@@ -2620,6 +2685,7 @@
         "className": "Aves",
         "subClass": "Anátidas"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -2659,6 +2725,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -2698,6 +2765,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -2738,6 +2806,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -2777,6 +2846,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -2816,6 +2886,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -2855,6 +2926,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -2895,6 +2967,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -2935,6 +3008,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -2976,6 +3050,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3016,6 +3091,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3056,6 +3132,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3095,6 +3172,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3134,6 +3212,7 @@
         "className": "Mammalia",
         "subClass": "Murciélagos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3174,6 +3253,7 @@
         "className": "Mammalia",
         "subClass": "Insectívoros"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3214,6 +3294,7 @@
         "className": "Mammalia",
         "subClass": "Insectívoros"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3252,6 +3333,7 @@
         "className": "Mammalia",
         "subClass": "Insectívoros"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3292,6 +3374,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3331,6 +3414,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3370,6 +3454,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3410,6 +3495,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3449,6 +3535,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3490,6 +3577,7 @@
         "className": "Amphibia",
         "subClass": "Salamandras y tritones"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3530,6 +3618,7 @@
         "className": "Amphibia",
         "subClass": "Salamandras y tritones"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3570,6 +3659,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3610,6 +3700,7 @@
         "className": "Aves",
         "subClass": "Galliformes"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -3648,6 +3739,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3687,6 +3779,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3727,6 +3820,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3767,6 +3861,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3805,6 +3900,7 @@
         "className": "Aves",
         "subClass": "Galliformes"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3844,6 +3940,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -3884,6 +3981,7 @@
         "className": "Amphibia",
         "subClass": "Salamandras y tritones"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3923,6 +4021,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -3961,6 +4060,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4000,6 +4100,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4039,6 +4140,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4079,6 +4181,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4120,6 +4223,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4160,6 +4264,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4198,6 +4303,7 @@
         "className": "Mammalia",
         "subClass": "Murciélagos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4237,6 +4343,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4277,6 +4384,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4315,6 +4423,7 @@
         "className": "Mammalia",
         "subClass": "Murciélagos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4353,6 +4462,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4391,6 +4501,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4431,6 +4542,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4471,6 +4583,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4511,6 +4624,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4550,6 +4664,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4589,6 +4704,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4628,6 +4744,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4667,6 +4784,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4707,6 +4825,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4743,9 +4862,11 @@
       ],
       "dimorphism": false,
       "taxonomyEffective": {
-        "className": "Mammalia",
-        "subClass": "Roedores y pequeños mamíferos"
+        "className": "Aves",
+        "subClass": "Aves terrestres",
+        "family": "Picidae"
       },
+      "familyEffective": "Picidae",
       "variants": [
         "Melánico",
         "Notable"
@@ -4784,6 +4905,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4823,6 +4945,7 @@
         "className": "Aves",
         "subClass": "Galliformes"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4862,6 +4985,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4900,6 +5024,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4939,6 +5064,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -4980,6 +5106,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5019,6 +5146,7 @@
         "className": "Mammalia",
         "subClass": "Insectívoros"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5057,6 +5185,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5096,6 +5225,7 @@
         "className": "Mammalia",
         "subClass": "Lagomorfos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5135,6 +5265,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5173,6 +5304,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5212,6 +5344,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5250,6 +5383,7 @@
         "className": "Mammalia",
         "subClass": "Insectívoros"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5288,6 +5422,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5327,6 +5462,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5367,6 +5503,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5405,6 +5542,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5443,6 +5581,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5482,6 +5621,7 @@
         "className": "Reptilia",
         "subClass": "Tortugas"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5521,6 +5661,7 @@
         "className": "Aves",
         "subClass": "Anátidas"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5560,6 +5701,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5598,6 +5740,7 @@
         "className": "Reptilia",
         "subClass": "Tortugas"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5641,6 +5784,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -5684,6 +5828,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -5724,6 +5869,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Albino",
@@ -5763,6 +5909,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -5804,6 +5951,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -5848,6 +5996,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -5898,6 +6047,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -5943,6 +6093,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -5983,6 +6134,7 @@
         "className": "Aves",
         "subClass": "Aves marinas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -6025,6 +6177,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6066,6 +6219,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6105,6 +6259,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6146,6 +6301,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -6189,6 +6345,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -6230,6 +6387,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6274,6 +6432,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -6316,6 +6475,7 @@
         "className": "Mammalia",
         "subClass": "Camélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6355,6 +6515,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6394,6 +6555,7 @@
         "className": "Aves",
         "subClass": "Galliformes"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -6433,6 +6595,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6473,6 +6636,7 @@
         "className": "Aves",
         "subClass": "Galliformes"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6514,6 +6678,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6554,6 +6719,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6596,6 +6762,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6638,6 +6805,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable",
         "Épico",
@@ -6684,6 +6852,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -6727,6 +6896,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6770,6 +6940,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6814,6 +6985,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -6858,6 +7030,7 @@
         "className": "Mammalia",
         "subClass": "Úrsidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6903,6 +7076,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6946,6 +7120,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -6991,6 +7166,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -7035,6 +7211,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -7076,6 +7253,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7117,6 +7295,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7155,6 +7334,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -7192,6 +7372,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7230,6 +7411,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7268,6 +7450,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7307,6 +7490,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7344,6 +7528,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -7381,6 +7566,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -7421,6 +7607,7 @@
         "className": "Reptilia",
         "subClass": "Tortugas"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7460,6 +7647,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -7499,6 +7687,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7539,6 +7728,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7578,6 +7768,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7616,6 +7807,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7654,6 +7846,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7692,6 +7885,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -7731,6 +7925,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7769,6 +7964,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -7807,6 +8003,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7845,6 +8042,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7883,6 +8081,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -7921,6 +8120,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -7958,6 +8158,7 @@
         "className": "Aves",
         "subClass": "Anátidas"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -7998,6 +8199,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -8038,6 +8240,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -8078,6 +8281,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -8117,6 +8321,7 @@
         "className": "Aves",
         "subClass": "Galliformes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -8155,6 +8360,7 @@
         "className": "Mammalia",
         "subClass": "Lagomorfos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -8194,6 +8400,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -8232,6 +8439,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -8271,6 +8479,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -8311,6 +8520,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -8351,6 +8561,7 @@
         "className": "Aves",
         "subClass": "Cálaos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -8390,6 +8601,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -8427,6 +8639,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -8464,6 +8677,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -8502,6 +8716,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -8540,6 +8755,7 @@
         "className": "Mammalia",
         "subClass": "Elefantes"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -8577,6 +8793,7 @@
         "className": "Mammalia",
         "subClass": "Pangolines"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -8614,6 +8831,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -8653,6 +8871,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -8693,6 +8912,7 @@
         "className": "Mammalia",
         "subClass": "Insectívoros"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -8732,6 +8952,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -8770,6 +8991,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -8808,6 +9030,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -8846,6 +9069,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -8883,6 +9107,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -8919,6 +9144,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -8956,6 +9182,7 @@
         "className": "Mammalia",
         "subClass": "Rinocerontes"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -8994,6 +9221,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -9031,6 +9259,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9070,6 +9299,7 @@
         "className": "Reptilia",
         "subClass": "Cocodrilianos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9107,6 +9337,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9144,6 +9375,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9181,6 +9413,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9219,6 +9452,7 @@
         "className": "Aves",
         "subClass": "Galliformes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -9257,6 +9491,7 @@
         "className": "Aves",
         "subClass": "Galliformes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -9295,6 +9530,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -9333,6 +9569,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9372,6 +9609,7 @@
         "className": "Mammalia",
         "subClass": "Úrsidos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -9409,6 +9647,7 @@
         "className": "Mammalia",
         "subClass": "Pangolines"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9447,6 +9686,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -9485,6 +9725,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9523,6 +9764,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -9561,6 +9803,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9599,6 +9842,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9637,6 +9881,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9674,6 +9919,7 @@
         "className": "Amphibia",
         "subClass": "Salamandras y tritones"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -9710,6 +9956,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -9748,6 +9995,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9787,6 +10035,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9826,6 +10075,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9865,6 +10115,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9903,6 +10154,7 @@
         "className": "Aves",
         "subClass": "Cálaos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -9940,6 +10192,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -9976,6 +10229,7 @@
         "className": "Aves",
         "subClass": "Cálaos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -10012,6 +10266,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -10049,6 +10304,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -10086,6 +10342,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -10122,6 +10379,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -10160,6 +10418,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -10198,6 +10457,7 @@
         "className": "Mammalia",
         "subClass": "Pangolines"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -10235,6 +10495,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -10273,6 +10534,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -10312,6 +10574,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -10349,6 +10612,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -10387,6 +10651,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -10424,6 +10689,7 @@
         "className": "Mammalia",
         "subClass": "Rinocerontes"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -10461,6 +10727,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -10499,6 +10766,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -10535,6 +10803,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -10571,6 +10840,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable",
@@ -10611,6 +10881,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -10648,6 +10919,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable",
@@ -10689,6 +10961,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -10727,6 +11000,7 @@
         "className": "Aves",
         "subClass": "Galliformes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -10765,6 +11039,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -10803,6 +11078,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -10842,6 +11118,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -10880,6 +11157,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -10918,6 +11196,7 @@
         "className": "Amphibia",
         "subClass": "Salamandras y tritones"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -10959,6 +11238,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11003,6 +11283,7 @@
         "className": "Mammalia",
         "subClass": "Camélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11045,6 +11326,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11091,6 +11373,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11134,6 +11417,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11177,6 +11461,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11219,6 +11504,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11262,6 +11548,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11306,6 +11593,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11352,6 +11640,7 @@
         "className": "Mammalia",
         "subClass": "Elefantes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11401,6 +11690,7 @@
         "className": "Mammalia",
         "subClass": "Rinocerontes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11444,6 +11734,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11490,6 +11781,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11535,6 +11827,7 @@
         "className": "Reptilia",
         "subClass": "Cocodrilianos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11586,6 +11879,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11630,6 +11924,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11674,6 +11969,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11716,6 +12012,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11760,6 +12057,7 @@
         "className": "Mammalia",
         "subClass": "Pangolines"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11805,6 +12103,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11852,6 +12151,7 @@
         "className": "Mammalia",
         "subClass": "Elefantes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11894,6 +12194,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11937,6 +12238,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -11979,6 +12281,7 @@
         "className": "Reptilia",
         "subClass": "Cocodrilianos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12021,6 +12324,7 @@
         "className": "Mammalia",
         "subClass": "Hipopótamos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12070,6 +12374,7 @@
         "className": "Aves",
         "subClass": "Ratites"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12117,6 +12422,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12159,6 +12465,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12203,6 +12510,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12247,6 +12555,7 @@
         "className": "Mammalia",
         "subClass": "Jirafas y afines"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12292,6 +12601,7 @@
         "className": "Mammalia",
         "subClass": "Équidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12334,6 +12644,7 @@
         "className": "Mammalia",
         "subClass": "Suidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12379,6 +12690,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12422,6 +12734,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12466,6 +12779,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12511,6 +12825,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12555,6 +12870,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12596,6 +12912,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12639,6 +12956,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12682,6 +13000,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12725,6 +13044,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12767,6 +13087,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12808,6 +13129,7 @@
         "className": "Mammalia",
         "subClass": "Jirafas y afines"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12850,6 +13172,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12895,6 +13218,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12939,6 +13263,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -12985,6 +13310,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13033,6 +13359,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13077,6 +13404,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13120,6 +13448,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13162,6 +13491,7 @@
         "className": "Aves",
         "subClass": "Aves marinas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13203,6 +13533,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13241,9 +13572,11 @@
       ],
       "dimorphism": false,
       "taxonomyEffective": {
-        "className": "Actinopterygii",
-        "subClass": "Peces óseos"
+        "className": "Chondrichthyes",
+        "subClass": "Escualos y rayas",
+        "family": "Lamnidae"
       },
+      "familyEffective": "Lamnidae",
       "variants": [
         "Albino",
         "Melánico",
@@ -13288,6 +13621,7 @@
         "className": "Reptilia",
         "subClass": "Tortugas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13332,6 +13666,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13375,6 +13710,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13420,6 +13756,7 @@
         "className": "Mammalia",
         "subClass": "Lémures"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13461,6 +13798,7 @@
         "className": "Mammalia",
         "subClass": "Lémures"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13502,6 +13840,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13545,6 +13884,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13586,6 +13926,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13626,6 +13967,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13667,6 +14009,7 @@
         "className": "Mammalia",
         "subClass": "Lémures"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13707,6 +14050,7 @@
         "className": "Reptilia",
         "subClass": "Tortugas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13748,6 +14092,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Melánico",
@@ -13788,6 +14133,7 @@
         "className": "Mammalia",
         "subClass": "Équidos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -13826,6 +14172,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -13865,6 +14212,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -13905,6 +14253,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -13944,6 +14293,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -13984,6 +14334,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -14026,6 +14377,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -14065,6 +14417,7 @@
         "className": "Mammalia",
         "subClass": "Suidos"
       },
+      "familyEffective": "",
       "variants": [
         "Notable",
         "Melánico"
@@ -14105,6 +14458,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -14143,6 +14497,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -14181,6 +14536,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -14220,6 +14576,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -14260,6 +14617,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -14299,6 +14657,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -14338,6 +14697,7 @@
         "className": "Aves",
         "subClass": "Anátidas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -14377,6 +14737,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -14416,6 +14777,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -14457,6 +14819,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -14494,6 +14857,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -14534,6 +14898,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -14574,6 +14939,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -14613,6 +14979,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -14652,6 +15019,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -14691,6 +15059,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -14730,6 +15099,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -14769,6 +15139,7 @@
         "className": "Mammalia",
         "subClass": "Pangolines"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -14807,6 +15178,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -14845,6 +15217,7 @@
         "className": "Mammalia",
         "subClass": "Sirénidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -14887,6 +15260,7 @@
         "className": "Chondrichthyes",
         "subClass": "Rayas"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -14927,6 +15301,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -14967,6 +15342,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15006,6 +15382,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15047,6 +15424,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15089,6 +15467,7 @@
         "className": "Mammalia",
         "subClass": "Jirafas y afines"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -15127,6 +15506,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable",
@@ -15169,6 +15549,7 @@
         "className": "Reptilia",
         "subClass": "Tortugas"
       },
+      "familyEffective": "",
       "variants": [
         "Notable",
         "Épico",
@@ -15209,6 +15590,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15248,6 +15630,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15283,9 +15666,11 @@
       ],
       "dimorphism": false,
       "taxonomyEffective": {
-        "className": "Actinopterygii",
-        "subClass": "Peces óseos"
+        "className": "Chondrichthyes",
+        "subClass": "Escualos y rayas",
+        "family": "Carcharhinidae"
       },
+      "familyEffective": "Carcharhinidae",
       "variants": [
         "Notable"
       ],
@@ -15326,6 +15711,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Notable",
         "Épico"
@@ -15365,6 +15751,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Notable"
       ],
@@ -15403,6 +15790,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15442,6 +15830,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Melánico",
         "Notable"
@@ -15481,6 +15870,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15520,6 +15910,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15559,6 +15950,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15598,6 +15990,7 @@
         "className": "Aves",
         "subClass": "Cálaos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15637,6 +16030,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15676,6 +16070,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15715,6 +16110,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15753,6 +16149,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15791,6 +16188,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15830,6 +16228,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15871,6 +16270,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15910,6 +16310,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15949,6 +16350,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -15989,6 +16391,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16028,6 +16431,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16068,6 +16472,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16108,6 +16513,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16146,6 +16552,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16186,6 +16593,7 @@
         "className": "Reptilia",
         "subClass": "Cocodrilianos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16225,6 +16633,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16264,6 +16673,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16304,6 +16714,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16343,6 +16754,7 @@
         "className": "Mammalia",
         "subClass": "Hipopótamos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16381,6 +16793,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16420,6 +16833,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16458,6 +16872,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16496,6 +16911,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16534,6 +16950,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16572,6 +16989,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16610,6 +17028,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16648,6 +17067,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16687,6 +17107,7 @@
         "className": "Mammalia",
         "subClass": "Rinocerontes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16726,6 +17147,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16766,6 +17188,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16806,6 +17229,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16844,6 +17268,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16883,6 +17308,7 @@
         "className": "Aves",
         "subClass": "Ratites"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16922,6 +17348,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -16961,6 +17388,7 @@
         "className": "Mammalia",
         "subClass": "Jirafas y afines"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17000,6 +17428,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17039,6 +17468,7 @@
         "className": "Mammalia",
         "subClass": "Insectívoros"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17078,6 +17508,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17117,6 +17548,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17156,6 +17588,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17196,6 +17629,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17236,6 +17670,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17275,6 +17710,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17316,6 +17752,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17354,6 +17791,7 @@
         "className": "Aves",
         "subClass": "Cálaos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17393,6 +17831,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17433,6 +17872,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17473,6 +17913,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17512,6 +17953,7 @@
         "className": "Mammalia",
         "subClass": "Pangolines"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17550,6 +17992,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17588,6 +18031,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17627,6 +18071,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17666,6 +18111,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17708,6 +18154,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17748,6 +18195,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17788,6 +18236,7 @@
         "className": "Mammalia",
         "subClass": "Lagomorfos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17827,6 +18276,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17868,6 +18318,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17909,6 +18360,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17948,6 +18400,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -17986,6 +18439,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18026,6 +18480,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18066,6 +18521,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18106,6 +18562,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18146,6 +18603,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18187,6 +18645,7 @@
         "className": "Mammalia",
         "subClass": "Lagomorfos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18226,6 +18685,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18267,6 +18727,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18308,6 +18769,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18349,6 +18811,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18389,6 +18852,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18428,6 +18892,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18467,6 +18932,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18506,6 +18972,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18545,6 +19012,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18584,6 +19052,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18622,6 +19091,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18661,6 +19131,7 @@
         "className": "Aves",
         "subClass": "Anátidas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18701,6 +19172,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18742,6 +19214,7 @@
         "className": "Aves",
         "subClass": "Búhos y lechuzas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18782,6 +19255,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18822,6 +19296,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18860,6 +19335,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18899,6 +19375,7 @@
         "className": "Mammalia",
         "subClass": "Úrsidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18942,6 +19419,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -18984,6 +19462,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -19024,6 +19503,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -19064,6 +19544,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -19105,6 +19586,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -19146,6 +19628,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -19190,6 +19673,7 @@
         "className": "Mammalia",
         "subClass": "Mustélidos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -19232,6 +19716,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y pequeños mamíferos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -19271,6 +19756,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -19310,6 +19796,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -19349,6 +19836,7 @@
         "className": "Aves",
         "subClass": "Aves marinas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -19387,6 +19875,7 @@
         "className": "Aves",
         "subClass": "Aves marinas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -19426,6 +19915,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y ribereñas"
       },
+      "familyEffective": "",
       "variants": [
         "Albino",
         "Notable"
@@ -19475,6 +19965,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Phyllomedusidae",
       "variants": [
         "Notable"
       ],
@@ -19523,6 +20014,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Anatidae",
       "variants": [
         "Albino",
         "Notable"
@@ -19573,6 +20065,7 @@
         "className": "Reptilia",
         "subClass": "Otros reptiles"
       },
+      "familyEffective": "Alligatoridae",
       "variants": [
         "Albino",
         "Notable",
@@ -19622,6 +20115,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "Atelidae",
       "variants": [
         "Notable"
       ],
@@ -19669,6 +20163,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "Atelidae",
       "variants": [
         "Notable"
       ],
@@ -19716,6 +20211,7 @@
         "className": "Amphibia",
         "subClass": "Salamandras y tritones"
       },
+      "familyEffective": "Ambystomatidae",
       "variants": [
         "Notable"
       ],
@@ -19764,6 +20260,7 @@
         "className": "Amphibia",
         "subClass": "Salamandras y tritones"
       },
+      "familyEffective": "Ambystomatidae",
       "variants": [
         "Albino",
         "Notable"
@@ -19813,6 +20310,7 @@
         "className": "Amphibia",
         "subClass": "Salamandras y tritones"
       },
+      "familyEffective": "Ambystomatidae",
       "variants": [
         "Notable"
       ],
@@ -19861,6 +20359,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Anatidae",
       "variants": [
         "Albino",
         "Notable"
@@ -19910,6 +20409,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Antilocapridae",
       "variants": [
         "Notable"
       ],
@@ -19958,6 +20458,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Psittacidae",
       "variants": [
         "Notable"
       ],
@@ -20007,6 +20508,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Psittacidae",
       "variants": [
         "Notable"
       ],
@@ -20053,6 +20555,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Trochilidae",
       "variants": [
         "Notable"
       ],
@@ -20102,6 +20605,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Ardeidae",
       "variants": [
         "Notable"
       ],
@@ -20149,6 +20653,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "Atelidae",
       "variants": [
         "Notable"
       ],
@@ -20195,6 +20700,7 @@
         "className": "Aves",
         "subClass": "Búhos y lechuzas"
       },
+      "familyEffective": "Strigidae",
       "variants": [
         "Notable"
       ],
@@ -20242,6 +20748,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Corytophanidae",
       "variants": [
         "Notable"
       ],
@@ -20289,6 +20796,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Bovidae",
       "variants": [
         "Albino",
         "Notable",
@@ -20339,6 +20847,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Boidae",
       "variants": [
         "Notable"
       ],
@@ -20386,6 +20895,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Leporidae",
       "variants": [
         "Notable"
       ],
@@ -20433,6 +20943,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Bradypodidae",
       "variants": [
         "Notable"
       ],
@@ -20480,6 +20991,7 @@
         "className": "Aves",
         "subClass": "Búhos y lechuzas"
       },
+      "familyEffective": "Strigidae",
       "variants": [
         "Notable"
       ],
@@ -20527,6 +21039,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Odontophoridae",
       "variants": [
         "Notable"
       ],
@@ -20574,6 +21087,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Trochilidae",
       "variants": [
         "Notable"
       ],
@@ -20624,6 +21138,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "Canidae",
       "variants": [
         "Albino",
         "Melánico",
@@ -20674,6 +21189,7 @@
         "className": "Aves",
         "subClass": "Rapaces"
       },
+      "familyEffective": "Falconidae",
       "variants": [
         "Notable"
       ],
@@ -20723,6 +21239,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Cardinalidae",
       "variants": [
         "Albino",
         "Notable"
@@ -20771,6 +21288,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "Cebidae",
       "variants": [
         "Notable"
       ],
@@ -20819,6 +21337,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Cervidae",
       "variants": [
         "Albino",
         "Notable"
@@ -20869,6 +21388,7 @@
         "className": "Reptilia",
         "subClass": "Tortugas"
       },
+      "familyEffective": "Emydidae",
       "variants": [
         "Albino",
         "Notable"
@@ -20917,6 +21437,7 @@
         "className": "Aves",
         "subClass": "Rapaces"
       },
+      "familyEffective": "Accipitridae",
       "variants": [
         "Notable"
       ],
@@ -20964,6 +21485,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Viperidae",
       "variants": [
         "Albino",
         "Notable"
@@ -21011,6 +21533,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Viperidae",
       "variants": [
         "Notable"
       ],
@@ -21058,6 +21581,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Viperidae",
       "variants": [
         "Notable"
       ],
@@ -21105,6 +21629,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Iguanidae",
       "variants": [
         "Notable"
       ],
@@ -21155,6 +21680,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Cuniculidae",
       "variants": [
         "Notable"
       ],
@@ -21202,6 +21728,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Sciuridae",
       "variants": [
         "Notable"
       ],
@@ -21249,6 +21776,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Dasypodidae",
       "variants": [
         "Albino",
         "Notable"
@@ -21298,6 +21826,7 @@
         "className": "Amphibia",
         "subClass": "Salamandras y tritones"
       },
+      "familyEffective": "Ambystomatidae",
       "variants": [
         "Notable"
       ],
@@ -21346,6 +21875,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Tayassuidae",
       "variants": [
         "Notable"
       ],
@@ -21396,6 +21926,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Didelphidae",
       "variants": [
         "Notable"
       ],
@@ -21443,6 +21974,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Didelphidae",
       "variants": [
         "Albino",
         "Notable"
@@ -21492,6 +22024,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Heteromyidae",
       "variants": [
         "Notable"
       ],
@@ -21538,6 +22071,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Erethizontidae",
       "variants": [
         "Notable"
       ],
@@ -21585,6 +22119,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Esocidae",
       "variants": [
         "Albino",
         "Notable"
@@ -21632,6 +22167,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Phasianidae",
       "variants": [
         "Notable"
       ],
@@ -21678,6 +22214,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Cuculidae",
       "variants": [
         "Notable"
       ],
@@ -21724,6 +22261,7 @@
         "className": "Reptilia",
         "subClass": "Tortugas"
       },
+      "familyEffective": "Testudinidae",
       "variants": [
         "Notable"
       ],
@@ -21771,6 +22309,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Helodermatidae",
       "variants": [
         "Notable"
       ],
@@ -21817,6 +22356,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "Felidae",
       "variants": [
         "Notable"
       ],
@@ -21865,6 +22405,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Centrolenidae",
       "variants": [
         "Notable"
       ],
@@ -21910,6 +22451,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Turdidae",
       "variants": [
         "Notable"
       ],
@@ -21957,6 +22499,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Bufonidae",
       "variants": [
         "Notable"
       ],
@@ -22005,6 +22548,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Colubridae",
       "variants": [
         "Albino",
         "Notable"
@@ -22052,6 +22596,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "Felidae",
       "variants": [
         "Notable"
       ],
@@ -22099,6 +22644,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "Felidae",
       "variants": [
         "Notable"
       ],
@@ -22147,6 +22693,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Colubridae",
       "variants": [
         "Notable"
       ],
@@ -22195,6 +22742,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Leporidae",
       "variants": [
         "Albino",
         "Notable"
@@ -22244,6 +22792,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Leporidae",
       "variants": [
         "Notable"
       ],
@@ -22291,6 +22840,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Ranidae",
       "variants": [
         "Notable"
       ],
@@ -22339,6 +22889,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Ranidae",
       "variants": [
         "Notable"
       ],
@@ -22387,6 +22938,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "Felidae",
       "variants": [
         "Notable"
       ],
@@ -22435,6 +22987,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "Felidae",
       "variants": [
         "Albino",
         "Notable"
@@ -22483,6 +23036,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Sciuridae",
       "variants": [
         "Notable"
       ],
@@ -22530,6 +23084,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Mustelidae",
       "variants": [
         "Notable"
       ],
@@ -22577,6 +23132,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Phasianidae",
       "variants": [
         "Albino",
         "Notable"
@@ -22624,6 +23180,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Phasianidae",
       "variants": [
         "Notable"
       ],
@@ -22673,6 +23230,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Mephitidae",
       "variants": [
         "Albino",
         "Notable"
@@ -22722,6 +23280,7 @@
         "className": "Aves",
         "subClass": "Búhos y lechuzas"
       },
+      "familyEffective": "Strigidae",
       "variants": [
         "Notable"
       ],
@@ -22768,6 +23327,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Mustelidae",
       "variants": [
         "Notable"
       ],
@@ -22815,6 +23375,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Myrmecophagidae",
       "variants": [
         "Notable"
       ],
@@ -22868,6 +23429,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Procyonidae",
       "variants": [
         "Notable"
       ],
@@ -22916,6 +23478,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Ochotonidae",
       "variants": [
         "Notable"
       ],
@@ -22966,6 +23529,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Cervidae",
       "variants": [
         "Albino",
         "Melánico",
@@ -23017,6 +23581,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Bovidae",
       "variants": [
         "Notable"
       ],
@@ -23064,6 +23629,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Bovidae",
       "variants": [
         "Albino",
         "Notable"
@@ -23113,6 +23679,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "Felidae",
       "variants": [
         "Albino",
         "Melánico",
@@ -23171,6 +23738,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Pelecanidae",
       "variants": [
         "Notable"
       ],
@@ -23220,6 +23788,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Pelecanidae",
       "variants": [
         "Notable"
       ],
@@ -23267,6 +23836,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Percidae",
       "variants": [
         "Notable"
       ],
@@ -23313,6 +23883,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Corvidae",
       "variants": [
         "Notable"
       ],
@@ -23361,6 +23932,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Trogonidae",
       "variants": [
         "Notable",
         "Épico"
@@ -23410,6 +23982,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Phrynosomatidae",
       "variants": [
         "Notable"
       ],
@@ -23458,6 +24031,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Corvidae",
       "variants": [
         "Notable"
       ],
@@ -23506,6 +24080,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Threskiornithidae",
       "variants": [
         "Notable"
       ],
@@ -23555,6 +24130,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Procyonidae",
       "variants": [
         "Albino",
         "Notable"
@@ -23606,6 +24182,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Procyonidae",
       "variants": [
         "Notable"
       ],
@@ -23653,6 +24230,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Ramphastidae",
       "variants": [
         "Notable"
       ],
@@ -23701,6 +24279,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Salmonidae",
       "variants": [
         "Albino",
         "Notable"
@@ -23751,6 +24330,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Sciuridae",
       "variants": [
         "Albino",
         "Melánico",
@@ -23799,6 +24379,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Soricidae",
       "variants": [
         "Notable"
       ],
@@ -23846,6 +24427,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Mephitidae",
       "variants": [
         "Notable"
       ],
@@ -23893,6 +24475,7 @@
         "className": "Aves",
         "subClass": "Búhos y lechuzas"
       },
+      "familyEffective": "Strigidae",
       "variants": [
         "Notable"
       ],
@@ -23941,6 +24524,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Leporidae",
       "variants": [
         "Notable"
       ],
@@ -23991,6 +24575,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Leporidae",
       "variants": [
         "Albino",
         "Notable"
@@ -24040,6 +24625,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Tapiridae",
       "variants": [
         "Notable"
       ],
@@ -24089,6 +24675,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Mustelidae",
       "variants": [
         "Notable"
       ],
@@ -24135,6 +24722,7 @@
         "className": "Reptilia",
         "subClass": "Tortugas"
       },
+      "familyEffective": "Emydidae",
       "variants": [
         "Notable"
       ],
@@ -24184,6 +24772,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Trichechidae",
       "variants": [
         "Albino",
         "Notable"
@@ -24231,6 +24820,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Phasianidae",
       "variants": [
         "Notable"
       ],
@@ -24277,6 +24867,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "Canidae",
       "variants": [
         "Notable"
       ],
@@ -24323,6 +24914,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "Canidae",
       "variants": [
         "Notable"
       ],
@@ -24373,6 +24965,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Icteridae",
       "variants": [
         "Notable"
       ],
@@ -24424,6 +25017,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Psittacidae",
       "variants": [
         "Notable"
       ],
@@ -24475,6 +25069,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Ramphastidae",
       "variants": [
         "Notable"
       ],
@@ -24526,6 +25121,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Psittacidae",
       "variants": [
         "Notable",
         "Épico"
@@ -24577,6 +25173,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Aotidae",
       "variants": [
         "Notable"
       ],
@@ -24628,6 +25225,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Psittacidae",
       "variants": [
         "Notable"
       ],
@@ -24679,6 +25277,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Psittacidae",
       "variants": [
         "Notable"
       ],
@@ -24731,6 +25330,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Arapaimidae",
       "variants": [
         "Albino",
         "Notable",
@@ -24785,6 +25385,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Ardeidae",
       "variants": [
         "Notable"
       ],
@@ -24836,6 +25437,7 @@
         "className": "Aves",
         "subClass": "Rapaces"
       },
+      "familyEffective": "Strigidae",
       "variants": [
         "Notable"
       ],
@@ -24886,6 +25488,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Atelidae",
       "variants": [
         "Notable"
       ],
@@ -24937,6 +25540,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "Atelidae",
       "variants": [
         "Notable"
       ],
@@ -24987,6 +25591,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "Canidae",
       "variants": [
         "Notable"
       ],
@@ -25037,6 +25642,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Cervidae",
       "variants": [
         "Notable"
       ],
@@ -25088,6 +25694,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Viperidae",
       "variants": [
         "Notable"
       ],
@@ -25141,6 +25748,7 @@
         "className": "Aves",
         "subClass": "Rapaces"
       },
+      "familyEffective": "Accipitridae",
       "variants": [
         "Notable"
       ],
@@ -25193,6 +25801,7 @@
         "className": "Reptilia",
         "subClass": "Otros reptiles"
       },
+      "familyEffective": "Alligatoridae",
       "variants": [
         "Albino",
         "Notable"
@@ -25246,6 +25855,7 @@
         "className": "Reptilia",
         "subClass": "Otros reptiles"
       },
+      "familyEffective": "Alligatoridae",
       "variants": [
         "Albino",
         "Notable"
@@ -25298,6 +25908,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Anatidae",
       "variants": [
         "Albino",
         "Notable"
@@ -25349,6 +25960,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Picidae",
       "variants": [
         "Notable"
       ],
@@ -25399,6 +26011,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Cariamidae",
       "variants": [
         "Notable"
       ],
@@ -25449,6 +26062,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "Cebidae",
       "variants": [
         "Notable"
       ],
@@ -25499,6 +26113,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Ceratophryidae",
       "variants": [
         "Notable"
       ],
@@ -25551,6 +26166,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "Canidae",
       "variants": [
         "Notable"
       ],
@@ -25603,6 +26219,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Chlamyphoridae",
       "variants": [
         "Notable"
       ],
@@ -25653,6 +26270,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Anhimidae",
       "variants": [
         "Notable"
       ],
@@ -25705,6 +26323,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Chinchillidae",
       "variants": [
         "Albino",
         "Notable"
@@ -25757,6 +26376,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Chinchillidae",
       "variants": [
         "Albino",
         "Notable"
@@ -25808,6 +26428,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Choloepodidae",
       "variants": [
         "Notable"
       ],
@@ -25858,6 +26479,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "Canidae",
       "variants": [
         "Notable"
       ],
@@ -25908,6 +26530,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Picidae",
       "variants": [
         "Notable"
       ],
@@ -25959,6 +26582,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Serrasalmidae",
       "variants": [
         "Notable"
       ],
@@ -26011,6 +26635,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Mephitidae",
       "variants": [
         "Notable"
       ],
@@ -26061,6 +26686,7 @@
         "className": "Reptilia",
         "subClass": "Otros reptiles"
       },
+      "familyEffective": "Crocodylidae",
       "variants": [
         "Notable"
       ],
@@ -26111,6 +26737,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Viperidae",
       "variants": [
         "Notable"
       ],
@@ -26162,6 +26789,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Cyclopedidae",
       "variants": [
         "Notable"
       ],
@@ -26213,6 +26841,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Anatidae",
       "variants": [
         "Albino",
         "Notable"
@@ -26266,6 +26895,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Dasypodidae",
       "variants": [
         "Albino",
         "Notable"
@@ -26316,6 +26946,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Dendrobatidae",
       "variants": [
         "Notable"
       ],
@@ -26366,6 +26997,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Caviidae",
       "variants": [
         "Notable"
       ],
@@ -26416,6 +27048,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Gymnotidae",
       "variants": [
         "Notable"
       ],
@@ -26467,6 +27100,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Psittacidae",
       "variants": [
         "Notable"
       ],
@@ -26517,6 +27151,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Trochilidae",
       "variants": [
         "Notable"
       ],
@@ -26568,6 +27203,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Boidae",
       "variants": [
         "Albino",
         "Notable"
@@ -26621,6 +27257,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Threskiornithidae",
       "variants": [
         "Notable"
       ],
@@ -26672,6 +27309,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Boidae",
       "variants": [
         "Albino",
         "Notable",
@@ -26726,6 +27364,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Boidae",
       "variants": [
         "Albino",
         "Notable"
@@ -26779,6 +27418,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Chlamyphoridae",
       "variants": [
         "Albino",
         "Notable"
@@ -26831,6 +27471,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Hemiphractidae",
       "variants": [
         "Notable"
       ],
@@ -26883,6 +27524,7 @@
         "className": "Aves",
         "subClass": "Rapaces"
       },
+      "familyEffective": "Accipitridae",
       "variants": [
         "Notable"
       ],
@@ -26933,6 +27575,7 @@
         "className": "Aves",
         "subClass": "Rapaces"
       },
+      "familyEffective": "Accipitridae",
       "variants": [
         "Notable",
         "Épico",
@@ -26985,6 +27628,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Cervidae",
       "variants": [
         "Notable"
       ],
@@ -27035,6 +27679,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Cervidae",
       "variants": [
         "Notable"
       ],
@@ -27087,6 +27732,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Caviidae",
       "variants": [
         "Albino",
         "Notable",
@@ -27142,6 +27788,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Iguanidae",
       "variants": [
         "Albino",
         "Notable"
@@ -27192,6 +27839,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Iniidae",
       "variants": [
         "Notable"
       ],
@@ -27241,6 +27889,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Iniidae",
       "variants": [
         "Notable"
       ],
@@ -27291,6 +27940,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Ciconiidae",
       "variants": [
         "Notable"
       ],
@@ -27341,6 +27991,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Jacanidae",
       "variants": [
         "Notable"
       ],
@@ -27390,6 +28041,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Chinchillidae",
       "variants": [
         "Notable"
       ],
@@ -27440,6 +28092,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Chinchillidae",
       "variants": [
         "Notable"
       ],
@@ -27490,6 +28143,7 @@
         "className": "Mammalia",
         "subClass": "Primates"
       },
+      "familyEffective": "Atelidae",
       "variants": [
         "Notable"
       ],
@@ -27541,6 +28195,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Camelidae",
       "variants": [
         "Notable"
       ],
@@ -27594,6 +28249,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "Felidae",
       "variants": [
         "Notable"
       ],
@@ -27648,6 +28304,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "Felidae",
       "variants": [
         "Melánico",
         "Notable"
@@ -27699,6 +28356,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "Felidae",
       "variants": [
         "Notable"
       ],
@@ -27750,6 +28408,7 @@
         "className": "Mammalia",
         "subClass": "Felinos"
       },
+      "familyEffective": "Felidae",
       "variants": [
         "Melánico",
         "Notable"
@@ -27801,6 +28460,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Liolaemidae",
       "variants": [
         "Notable"
       ],
@@ -27850,6 +28510,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Mustelidae",
       "variants": [
         "Notable"
       ],
@@ -27902,6 +28563,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "Canidae",
       "variants": [
         "Notable"
       ],
@@ -27953,6 +28615,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "Canidae",
       "variants": [
         "Notable"
       ],
@@ -28005,6 +28668,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "Canidae",
       "variants": [
         "Notable"
       ],
@@ -28055,6 +28719,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Cervidae",
       "variants": [
         "Notable"
       ],
@@ -28107,6 +28772,7 @@
         "className": "Reptilia",
         "subClass": "Otros reptiles"
       },
+      "familyEffective": "Alligatoridae",
       "variants": [
         "Albino",
         "Notable"
@@ -28157,6 +28823,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Tropiduridae",
       "variants": [
         "Notable"
       ],
@@ -28206,6 +28873,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Elapidae",
       "variants": [
         "Notable"
       ],
@@ -28257,6 +28925,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Echimyidae",
       "variants": [
         "Albino",
         "Notable"
@@ -28309,6 +28978,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Noctilionidae",
       "variants": [
         "Notable"
       ],
@@ -28359,6 +29029,7 @@
         "className": "Mammalia",
         "subClass": "Roedores y lagomorfos"
       },
+      "familyEffective": "Octodontidae",
       "variants": [
         "Notable"
       ],
@@ -28409,6 +29080,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Atherinopsidae",
       "variants": [
         "Notable"
       ],
@@ -28459,6 +29131,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Opisthocomidae",
       "variants": [
         "Notable"
       ],
@@ -28509,6 +29182,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Cervidae",
       "variants": [
         "Notable"
       ],
@@ -28560,6 +29234,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Characidae",
       "variants": [
         "Notable"
       ],
@@ -28610,6 +29285,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Cracidae",
       "variants": [
         "Notable"
       ],
@@ -28659,6 +29335,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Phoenicopteridae",
       "variants": [
         "Notable"
       ],
@@ -28709,6 +29386,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Phoenicopteridae",
       "variants": [
         "Notable"
       ],
@@ -28759,6 +29437,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Phoenicopteridae",
       "variants": [
         "Notable"
       ],
@@ -28808,6 +29487,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Dendrobatidae",
       "variants": [
         "Notable"
       ],
@@ -28859,6 +29539,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Psittacidae",
       "variants": [
         "Notable"
       ],
@@ -28911,6 +29592,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Chlamyphoridae",
       "variants": [
         "Notable"
       ],
@@ -28961,6 +29643,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Pimelodidae",
       "variants": [
         "Notable"
       ],
@@ -29011,6 +29694,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Ramphastidae",
       "variants": [
         "Notable"
       ],
@@ -29061,6 +29745,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Mustelidae",
       "variants": [
         "Notable"
       ],
@@ -29112,6 +29797,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Cervidae",
       "variants": [
         "Notable"
       ],
@@ -29161,6 +29847,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Cervidae",
       "variants": [
         "Notable"
       ],
@@ -29211,6 +29898,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Serrasalmidae",
       "variants": [
         "Notable"
       ],
@@ -29262,6 +29950,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Ramphastidae",
       "variants": [
         "Notable"
       ],
@@ -29312,6 +30001,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Ramphastidae",
       "variants": [
         "Notable"
       ],
@@ -29364,6 +30054,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Rheidae",
       "variants": [
         "Albino",
         "Notable"
@@ -29418,6 +30109,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Rheidae",
       "variants": [
         "Albino",
         "Notable"
@@ -29472,6 +30164,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Bufonidae",
       "variants": [
         "Albino",
         "Notable"
@@ -29524,6 +30217,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Rhinodermatidae",
       "variants": [
         "Notable"
       ],
@@ -29574,6 +30268,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Cotingidae",
       "variants": [
         "Notable"
       ],
@@ -29624,6 +30319,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Callitrichidae",
       "variants": [
         "Notable"
       ],
@@ -29674,6 +30370,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Cebidae",
       "variants": [
         "Notable"
       ],
@@ -29725,6 +30422,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Bryconidae",
       "variants": [
         "Notable"
       ],
@@ -29778,6 +30476,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Teiidae",
       "variants": [
         "Albino",
         "Notable"
@@ -29829,6 +30528,7 @@
         "className": "Aves",
         "subClass": "Aves terrestres"
       },
+      "familyEffective": "Rhinocryptidae",
       "variants": [
         "Notable"
       ],
@@ -29880,6 +30580,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "Canidae",
       "variants": [
         "Notable"
       ],
@@ -29930,6 +30631,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Spheniscidae",
       "variants": [
         "Notable"
       ],
@@ -29981,6 +30683,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Cichlidae",
       "variants": [
         "Notable"
       ],
@@ -30031,6 +30734,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Myrmecophagidae",
       "variants": [
         "Notable"
       ],
@@ -30083,6 +30787,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Myrmecophagidae",
       "variants": [
         "Notable"
       ],
@@ -30135,6 +30840,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Tapiridae",
       "variants": [
         "Notable"
       ],
@@ -30187,6 +30893,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Tapiridae",
       "variants": [
         "Albino",
         "Notable"
@@ -30240,6 +30947,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Tayassuidae",
       "variants": [
         "Notable"
       ],
@@ -30292,6 +31000,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Chlamyphoridae",
       "variants": [
         "Notable"
       ],
@@ -30342,6 +31051,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Ursidae",
       "variants": [
         "Notable",
         "Épico"
@@ -30394,6 +31104,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Charadriidae",
       "variants": [
         "Notable"
       ],
@@ -30444,6 +31155,7 @@
         "className": "Mammalia",
         "subClass": "Ungulados"
       },
+      "familyEffective": "Camelidae",
       "variants": [
         "Notable"
       ],
@@ -30496,6 +31208,7 @@
         "className": "Aves",
         "subClass": "Rapaces"
       },
+      "familyEffective": "Cathartidae",
       "variants": [
         "Notable",
         "Épico"
@@ -30549,6 +31262,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Elapidae",
       "variants": [
         "Notable"
       ],
@@ -30596,6 +31310,7 @@
         "className": "Aves",
         "subClass": "Paleognatas"
       },
+      "familyEffective": "Apterygidae",
       "variants": [
         "Notable"
       ],
@@ -30642,6 +31357,7 @@
         "className": "Aves",
         "subClass": "Paleognatas"
       },
+      "familyEffective": "Apterygidae",
       "variants": [
         "Notable"
       ],
@@ -30688,6 +31404,7 @@
         "className": "Aves",
         "subClass": "Paleognatas"
       },
+      "familyEffective": "Apterygidae",
       "variants": [
         "Notable"
       ],
@@ -30736,6 +31453,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "Accipitridae",
       "variants": [
         "Notable"
       ],
@@ -30785,6 +31503,7 @@
         "className": "Mammalia",
         "subClass": "Otáridos"
       },
+      "familyEffective": "Otariidae",
       "variants": [
         "Notable"
       ],
@@ -30832,6 +31551,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Myobatrachidae",
       "variants": [
         "Notable"
       ],
@@ -30880,6 +31600,7 @@
         "className": "Aves",
         "subClass": "Psitaciformes"
       },
+      "familyEffective": "Cacatuidae",
       "variants": [
         "Notable"
       ],
@@ -30927,6 +31648,7 @@
         "className": "Aves",
         "subClass": "Aves forestales"
       },
+      "familyEffective": "Callaeidae",
       "variants": [
         "Notable"
       ],
@@ -30975,6 +31697,7 @@
         "className": "Aves",
         "subClass": "Psitaciformes"
       },
+      "familyEffective": "Cacatuidae",
       "variants": [
         "Notable"
       ],
@@ -31025,6 +31748,7 @@
         "className": "Mammalia",
         "subClass": "Cánidos"
       },
+      "familyEffective": "Canidae",
       "variants": [
         "Notable"
       ],
@@ -31072,6 +31796,7 @@
         "className": "Aves",
         "subClass": "Paleognatas"
       },
+      "familyEffective": "Casuariidae",
       "variants": [
         "Notable"
       ],
@@ -31120,6 +31845,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Delphinidae",
       "variants": [
         "Notable"
       ],
@@ -31167,6 +31893,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Agamidae",
       "variants": [
         "Notable"
       ],
@@ -31214,6 +31941,7 @@
         "className": "Aves",
         "subClass": "Aves del paraíso"
       },
+      "familyEffective": "Paradisaeidae",
       "variants": [
         "Notable"
       ],
@@ -31260,6 +31988,7 @@
         "className": "Aves",
         "subClass": "Aves del paraíso"
       },
+      "familyEffective": "Paradisaeidae",
       "variants": [
         "Notable"
       ],
@@ -31309,6 +32038,7 @@
         "className": "Reptilia",
         "subClass": "Cocodrilianos"
       },
+      "familyEffective": "Crocodylidae",
       "variants": [
         "Notable"
       ],
@@ -31359,6 +32089,7 @@
         "className": "Reptilia",
         "subClass": "Cocodrilianos"
       },
+      "familyEffective": "Crocodylidae",
       "variants": [
         "Notable"
       ],
@@ -31409,6 +32140,7 @@
         "className": "Reptilia",
         "subClass": "Cocodrilianos"
       },
+      "familyEffective": "Crocodylidae",
       "variants": [
         "Notable"
       ],
@@ -31459,6 +32191,7 @@
         "className": "Aves",
         "subClass": "Anátidas"
       },
+      "familyEffective": "Anatidae",
       "variants": [
         "Albino",
         "Notable"
@@ -31509,6 +32242,7 @@
         "className": "Aves",
         "subClass": "Alcedínidos"
       },
+      "familyEffective": "Alcedinidae",
       "variants": [
         "Notable"
       ],
@@ -31556,6 +32290,7 @@
         "className": "Aves",
         "subClass": "Alcedínidos"
       },
+      "familyEffective": "Alcedinidae",
       "variants": [
         "Notable"
       ],
@@ -31605,6 +32340,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Petauridae",
       "variants": [
         "Notable"
       ],
@@ -31651,6 +32387,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Dasyuridae",
       "variants": [
         "Notable"
       ],
@@ -31698,6 +32435,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Dasyuridae",
       "variants": [
         "Notable"
       ],
@@ -31746,6 +32484,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Notable"
       ],
@@ -31794,6 +32533,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Notable"
       ],
@@ -31842,6 +32582,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Notable"
       ],
@@ -31887,6 +32628,7 @@
         "className": "Aves",
         "subClass": "Aves marinas"
       },
+      "familyEffective": "Diomedeidae",
       "variants": [
         "Notable"
       ],
@@ -31936,6 +32678,7 @@
         "className": "Aves",
         "subClass": "Paleognatas"
       },
+      "familyEffective": "Casuariidae",
       "variants": [
         "Notable"
       ],
@@ -31986,6 +32729,7 @@
         "className": "Aves",
         "subClass": "Psitaciformes"
       },
+      "familyEffective": "Cacatuidae",
       "variants": [
         "Notable"
       ],
@@ -32036,6 +32780,7 @@
         "className": "Aves",
         "subClass": "Rálidos"
       },
+      "familyEffective": "Rallidae",
       "variants": [
         "Notable"
       ],
@@ -32083,6 +32828,7 @@
         "className": "Aves",
         "subClass": "Aves forestales"
       },
+      "familyEffective": "Artamidae",
       "variants": [
         "Notable"
       ],
@@ -32132,6 +32878,7 @@
         "className": "Aves",
         "subClass": "Aves rapaces"
       },
+      "familyEffective": "Accipitridae",
       "variants": [
         "Notable"
       ],
@@ -32179,6 +32926,7 @@
         "className": "Aves",
         "subClass": "Aves forestales"
       },
+      "familyEffective": "Columbidae",
       "variants": [
         "Notable"
       ],
@@ -32225,6 +32973,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Agamidae",
       "variants": [
         "Notable"
       ],
@@ -32275,6 +33024,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Latidae",
       "variants": [
         "Notable"
       ],
@@ -32321,6 +33071,7 @@
         "className": "Aves",
         "subClass": "Aves del paraíso"
       },
+      "familyEffective": "Paradisaeidae",
       "variants": [
         "Notable"
       ],
@@ -32372,6 +33123,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Notable"
       ],
@@ -32425,6 +33177,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Albino",
         "Notable"
@@ -32472,6 +33225,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Thylacomyidae",
       "variants": [
         "Notable"
       ],
@@ -32517,6 +33271,7 @@
         "className": "Aves",
         "subClass": "Pingüinos"
       },
+      "familyEffective": "Spheniscidae",
       "variants": [
         "Notable"
       ],
@@ -32565,6 +33320,7 @@
         "className": "Aves",
         "subClass": "Psitaciformes"
       },
+      "familyEffective": "Psittaculidae",
       "variants": [
         "Notable"
       ],
@@ -32612,6 +33368,7 @@
         "className": "Aves",
         "subClass": "Aves forestales"
       },
+      "familyEffective": "Menuridae",
       "variants": [
         "Notable"
       ],
@@ -32657,6 +33414,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Agamidae",
       "variants": [
         "Notable"
       ],
@@ -32705,6 +33463,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Pythonidae",
       "variants": [
         "Notable"
       ],
@@ -32752,6 +33511,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Pythonidae",
       "variants": [
         "Notable"
       ],
@@ -32798,6 +33558,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Myrmecobiidae",
       "variants": [
         "Notable"
       ],
@@ -32846,6 +33607,7 @@
         "className": "Aves",
         "subClass": "Psitaciformes"
       },
+      "familyEffective": "Psittaculidae",
       "variants": [
         "Notable"
       ],
@@ -32894,6 +33656,7 @@
         "className": "Aves",
         "subClass": "Psitaciformes"
       },
+      "familyEffective": "Strigopidae",
       "variants": [
         "Notable"
       ],
@@ -32942,6 +33705,7 @@
         "className": "Aves",
         "subClass": "Psitaciformes"
       },
+      "familyEffective": "Strigopidae",
       "variants": [
         "Notable"
       ],
@@ -32988,6 +33752,7 @@
         "className": "Aves",
         "subClass": "Búhos y lechuzas"
       },
+      "familyEffective": "Strigidae",
       "variants": [
         "Notable"
       ],
@@ -33039,6 +33804,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Notable"
       ],
@@ -33090,6 +33856,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Notable"
       ],
@@ -33141,6 +33908,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Notable"
       ],
@@ -33191,6 +33959,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Elapidae",
       "variants": [
         "Notable"
       ],
@@ -33238,6 +34007,7 @@
         "className": "Aves",
         "subClass": "Psitaciformes"
       },
+      "familyEffective": "Cacatuidae",
       "variants": [
         "Notable"
       ],
@@ -33286,6 +34056,7 @@
         "className": "Mammalia",
         "subClass": "Monotremas"
       },
+      "familyEffective": "Ornithorhynchidae",
       "variants": [
         "Notable"
       ],
@@ -33341,6 +34112,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Albino",
         "Notable"
@@ -33391,6 +34163,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Elapidae",
       "variants": [
         "Notable"
       ],
@@ -33442,6 +34215,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Elapidae",
       "variants": [
         "Notable"
       ],
@@ -33489,6 +34263,7 @@
         "className": "Aves",
         "subClass": "Aves del paraíso"
       },
+      "familyEffective": "Paradisaeidae",
       "variants": [
         "Notable"
       ],
@@ -33536,6 +34311,7 @@
         "className": "Aves",
         "subClass": "Pelícanos"
       },
+      "familyEffective": "Pelecanidae",
       "variants": [
         "Notable"
       ],
@@ -33583,6 +34359,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Pseudocheiridae",
       "variants": [
         "Notable"
       ],
@@ -33629,6 +34406,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Petauridae",
       "variants": [
         "Notable"
       ],
@@ -33680,6 +34458,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Notable"
       ],
@@ -33727,6 +34506,7 @@
         "className": "Aves",
         "subClass": "Aves forestales"
       },
+      "familyEffective": "Petroicidae",
       "variants": [
         "Notable"
       ],
@@ -33774,6 +34554,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Phalangeridae",
       "variants": [
         "Notable"
       ],
@@ -33821,6 +34602,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Phascolarctidae",
       "variants": [
         "Notable"
       ],
@@ -33868,6 +34650,7 @@
         "className": "Aves",
         "subClass": "Aves forestales"
       },
+      "familyEffective": "Meliphagidae",
       "variants": [
         "Notable"
       ],
@@ -33914,6 +34697,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Agamidae",
       "variants": [
         "Notable"
       ],
@@ -33962,6 +34746,7 @@
         "className": "Aves",
         "subClass": "Rálidos"
       },
+      "familyEffective": "Rallidae",
       "variants": [
         "Notable"
       ],
@@ -34009,6 +34794,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Myobatrachidae",
       "variants": [
         "Notable"
       ],
@@ -34056,6 +34842,7 @@
         "className": "Mammalia",
         "subClass": "Murciélagos"
       },
+      "familyEffective": "Pteropodidae",
       "variants": [
         "Notable"
       ],
@@ -34103,6 +34890,7 @@
         "className": "Mammalia",
         "subClass": "Murciélagos"
       },
+      "familyEffective": "Pteropodidae",
       "variants": [
         "Notable"
       ],
@@ -34150,6 +34938,7 @@
         "className": "Aves",
         "subClass": "Aves forestales"
       },
+      "familyEffective": "Ptilonorhynchidae",
       "variants": [
         "Notable"
       ],
@@ -34199,6 +34988,7 @@
         "className": "Amphibia",
         "subClass": "Ranas y sapos"
       },
+      "familyEffective": "Pelodryadidae",
       "variants": [
         "Notable"
       ],
@@ -34247,6 +35037,7 @@
         "className": "Aves",
         "subClass": "Aves forestales"
       },
+      "familyEffective": "Rhipiduridae",
       "variants": [
         "Notable"
       ],
@@ -34294,6 +35085,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Dasyuridae",
       "variants": [
         "Notable"
       ],
@@ -34340,6 +35132,7 @@
         "className": "Aves",
         "subClass": "Aves del paraíso"
       },
+      "familyEffective": "Paradisaeidae",
       "variants": [
         "Notable"
       ],
@@ -34391,6 +35184,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Notable"
       ],
@@ -34438,6 +35232,7 @@
         "className": "Reptilia",
         "subClass": "Rincocéfalos"
       },
+      "familyEffective": "Sphenodontidae",
       "variants": [
         "Notable"
       ],
@@ -34485,6 +35280,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Phalangeridae",
       "variants": [
         "Notable"
       ],
@@ -34530,6 +35326,7 @@
         "className": "Aves",
         "subClass": "Psitaciformes"
       },
+      "familyEffective": "Strigopidae",
       "variants": [
         "Notable"
       ],
@@ -34580,6 +35377,7 @@
         "className": "Mammalia",
         "subClass": "Monotremas"
       },
+      "familyEffective": "Tachyglossidae",
       "variants": [
         "Notable"
       ],
@@ -34635,6 +35433,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Notable"
       ],
@@ -34682,6 +35481,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Scincidae",
       "variants": [
         "Notable"
       ],
@@ -34730,6 +35530,7 @@
         "className": "Aves",
         "subClass": "Psitaciformes"
       },
+      "familyEffective": "Psittaculidae",
       "variants": [
         "Notable"
       ],
@@ -34778,6 +35579,7 @@
         "className": "Aves",
         "subClass": "Psitaciformes"
       },
+      "familyEffective": "Psittaculidae",
       "variants": [
         "Notable"
       ],
@@ -34826,6 +35628,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Phalangeridae",
       "variants": [
         "Notable"
       ],
@@ -34873,6 +35676,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Varanidae",
       "variants": [
         "Notable"
       ],
@@ -34920,6 +35724,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Varanidae",
       "variants": [
         "Notable"
       ],
@@ -34967,6 +35772,7 @@
         "className": "Reptilia",
         "subClass": "Lagartos"
       },
+      "familyEffective": "Varanidae",
       "variants": [
         "Notable"
       ],
@@ -35016,6 +35822,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Vombatidae",
       "variants": [
         "Albino",
         "Notable"
@@ -35065,6 +35872,7 @@
         "className": "Mammalia",
         "subClass": "Marsupiales"
       },
+      "familyEffective": "Macropodidae",
       "variants": [
         "Notable"
       ],
@@ -35113,6 +35921,7 @@
         "className": "Mammalia",
         "subClass": "Monotremas"
       },
+      "familyEffective": "Tachyglossidae",
       "variants": [
         "Notable"
       ],
@@ -35161,6 +35970,7 @@
         "className": "Aves",
         "subClass": "Psitaciformes"
       },
+      "familyEffective": "Cacatuidae",
       "variants": [
         "Notable"
       ],
@@ -35210,6 +36020,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Spheniscidae",
       "variants": [
         "Notable"
       ],
@@ -35262,6 +36073,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Balaenidae",
       "variants": [
         "Notable"
       ],
@@ -35311,6 +36123,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Monodontidae",
       "variants": [
         "Notable"
       ],
@@ -35360,6 +36173,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Phocidae",
       "variants": [
         "Notable"
       ],
@@ -35408,6 +36222,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Gonatidae",
       "variants": [
         "Notable"
       ],
@@ -35458,6 +36273,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Phocidae",
       "variants": [
         "Notable"
       ],
@@ -35507,6 +36323,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Phocidae",
       "variants": [
         "Notable"
       ],
@@ -35559,6 +36376,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Phocidae",
       "variants": [
         "Notable"
       ],
@@ -35609,6 +36427,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Phocidae",
       "variants": [
         "Notable"
       ],
@@ -35659,6 +36478,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Monodontidae",
       "variants": [
         "Notable"
       ],
@@ -35709,6 +36529,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Odobenidae",
       "variants": [
         "Notable"
       ],
@@ -35759,6 +36580,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Phocidae",
       "variants": [
         "Notable"
       ],
@@ -35810,6 +36632,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Procellariidae",
       "variants": [
         "Notable"
       ],
@@ -35862,6 +36685,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Laridae",
       "variants": [
         "Notable"
       ],
@@ -35912,6 +36736,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Phocidae",
       "variants": [
         "Notable"
       ],
@@ -35963,6 +36788,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Spheniscidae",
       "variants": [
         "Notable"
       ],
@@ -36015,6 +36841,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Anatidae",
       "variants": [
         "Notable"
       ],
@@ -36064,6 +36891,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Somniosidae",
       "variants": [
         "Notable"
       ],
@@ -36114,6 +36942,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Stercorariidae",
       "variants": [
         "Notable"
       ],
@@ -36164,6 +36993,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Laridae",
       "variants": [
         "Notable"
       ],
@@ -36214,6 +37044,7 @@
         "className": "Mammalia",
         "subClass": "Otros mamíferos"
       },
+      "familyEffective": "Ursidae",
       "variants": [
         "Notable"
       ],
@@ -36264,6 +37095,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Myliobatidae",
       "variants": [
         "Notable"
       ],
@@ -36314,6 +37146,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Alopiidae",
       "variants": [
         "Notable"
       ],
@@ -36364,6 +37197,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Octopodidae",
       "variants": [
         "Notable"
       ],
@@ -36414,6 +37248,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Pomacentridae",
       "variants": [
         "Notable"
       ],
@@ -36465,6 +37300,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Spheniscidae",
       "variants": [
         "Notable"
       ],
@@ -36514,6 +37350,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Architeuthidae",
       "variants": [
         "Notable"
       ],
@@ -36564,6 +37401,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Otariidae",
       "variants": [
         "Notable"
       ],
@@ -36614,6 +37452,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Procellariidae",
       "variants": [
         "Notable"
       ],
@@ -36663,6 +37502,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Balaenopteridae",
       "variants": [
         "Notable"
       ],
@@ -36712,6 +37552,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Balaenopteridae",
       "variants": [
         "Notable"
       ],
@@ -36762,6 +37603,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Balaenopteridae",
       "variants": [
         "Notable"
       ],
@@ -36813,6 +37655,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Balaenopteridae",
       "variants": [
         "Notable"
       ],
@@ -36863,6 +37706,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Balistidae",
       "variants": [
         "Notable"
       ],
@@ -36912,6 +37756,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Scaridae",
       "variants": [
         "Notable"
       ],
@@ -36960,6 +37805,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Carcharhinidae",
       "variants": [
         "Notable"
       ],
@@ -36967,7 +37813,7 @@
         "mar_oceano_indico_tropical",
         "mar_indico_meridional"
       ],
-      "normalSpriteSha256": "023241403730534f2f9b68d3ff185a42b4302a2882db0f9afac4612a9f7753fa"
+      "normalSpriteSha256": "730d06455d2b3a2bd8137dac4f183b7a8a4f8e34caea290674328b6a191fd73a"
     },
     "mar_esp_cetorhinus_maximus": {
       "name": "Tiburón peregrino",
@@ -37010,6 +37856,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Cetorhinidae",
       "variants": [
         "Notable"
       ],
@@ -37059,6 +37906,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Channichthyidae",
       "variants": [
         "Notable"
       ],
@@ -37107,6 +37955,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Labridae",
       "variants": [
         "Notable"
       ],
@@ -37156,6 +38005,7 @@
         "className": "Reptilia",
         "subClass": "Tortugas"
       },
+      "familyEffective": "Cheloniidae",
       "variants": [
         "Notable"
       ],
@@ -37205,6 +38055,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Clupeidae",
       "variants": [
         "Notable"
       ],
@@ -37254,6 +38105,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Delphinidae",
       "variants": [
         "Notable"
       ],
@@ -37305,6 +38157,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Diomedeidae",
       "variants": [
         "Notable"
       ],
@@ -37354,6 +38207,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Nototheniidae",
       "variants": [
         "Notable"
       ],
@@ -37403,6 +38257,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Ommastrephidae",
       "variants": [
         "Notable"
       ],
@@ -37453,6 +38308,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Enteroctopodidae",
       "variants": [
         "Notable"
       ],
@@ -37502,6 +38358,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Serranidae",
       "variants": [
         "Notable"
       ],
@@ -37552,6 +38409,7 @@
         "className": "Reptilia",
         "subClass": "Tortugas"
       },
+      "familyEffective": "Cheloniidae",
       "variants": [
         "Notable"
       ],
@@ -37600,6 +38458,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Eschrichtiidae",
       "variants": [
         "Notable"
       ],
@@ -37649,6 +38508,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Balaenidae",
       "variants": [
         "Notable"
       ],
@@ -37699,6 +38559,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Spheniscidae",
       "variants": [
         "Notable"
       ],
@@ -37748,6 +38609,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Otariidae",
       "variants": [
         "Notable"
       ],
@@ -37798,6 +38660,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Exocoetidae",
       "variants": [
         "Notable"
       ],
@@ -37848,6 +38711,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Fregatidae",
       "variants": [
         "Notable"
       ],
@@ -37897,6 +38761,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Gadidae",
       "variants": [
         "Notable"
       ],
@@ -37945,6 +38810,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Gadidae",
       "variants": [
         "Notable"
       ],
@@ -37993,6 +38859,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Delphinidae",
       "variants": [
         "Notable"
       ],
@@ -38042,6 +38909,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Delphinidae",
       "variants": [
         "Notable"
       ],
@@ -38092,6 +38960,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Delphinidae",
       "variants": [
         "Notable"
       ],
@@ -38141,6 +39010,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Phocidae",
       "variants": [
         "Notable"
       ],
@@ -38189,6 +39059,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Octopodidae",
       "variants": [
         "Notable"
       ],
@@ -38237,6 +39108,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Syngnathidae",
       "variants": [
         "Notable"
       ],
@@ -38282,6 +39154,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Dalatiidae",
       "variants": [
         "Notable"
       ],
@@ -38331,6 +39204,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Istiophoridae",
       "variants": [
         "Notable"
       ],
@@ -38379,6 +39253,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Lamnidae",
       "variants": [
         "Notable"
       ],
@@ -38386,7 +39261,7 @@
         "mar_atlantico_septentrional",
         "mar_pacifico_austral"
       ],
-      "normalSpriteSha256": "e0afbee56ed2a237760c586128317917bd913b11f43752d81a628f5fd0b9957d"
+      "normalSpriteSha256": "10c9a6b358f6e02ded0cd811db8002d119ef68a485f88e647b06edf0352250b2"
     },
     "mar_esp_lagenorhynchus_albirostris": {
       "name": "Delfín de hocico blanco",
@@ -38428,6 +39303,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Delphinidae",
       "variants": [
         "Notable"
       ],
@@ -38476,6 +39352,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Delphinidae",
       "variants": [
         "Notable"
       ],
@@ -38524,6 +39401,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Delphinidae",
       "variants": [
         "Notable"
       ],
@@ -38572,13 +39450,14 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Lamnidae",
       "variants": [
         "Notable"
       ],
       "regions": [
         "mar_pacifico_noroccidental"
       ],
-      "normalSpriteSha256": "1af7201a69338f3aa0776eacae105f44482e870da7742902e7a336acd9635810"
+      "normalSpriteSha256": "2a0d92623b593d625096f017c136082429c2860988ac55608fc3ac3c4fb4c4a2"
     },
     "mar_esp_laticauda_colubrina": {
       "name": "Serpiente marina de labios amarillos",
@@ -38621,6 +39500,7 @@
         "className": "Reptilia",
         "subClass": "Serpientes"
       },
+      "familyEffective": "Elapidae",
       "variants": [
         "Notable"
       ],
@@ -38670,6 +39550,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Loliginidae",
       "variants": [
         "Notable"
       ],
@@ -38719,6 +39600,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Procellariidae",
       "variants": [
         "Notable"
       ],
@@ -38768,6 +39650,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Balaenopteridae",
       "variants": [
         "Notable"
       ],
@@ -38819,6 +39702,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Phocidae",
       "variants": [
         "Notable"
       ],
@@ -38868,6 +39752,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Myliobatidae",
       "variants": [
         "Notable"
       ],
@@ -38918,6 +39803,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Myliobatidae",
       "variants": [
         "Notable"
       ],
@@ -38966,6 +39852,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Molidae",
       "variants": [
         "Notable"
       ],
@@ -39015,6 +39902,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Molidae",
       "variants": [
         "Notable"
       ],
@@ -39065,6 +39953,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Sulidae",
       "variants": [
         "Notable"
       ],
@@ -39114,6 +40003,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Octopodidae",
       "variants": [
         "Notable"
       ],
@@ -39163,6 +40053,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Octopodidae",
       "variants": [
         "Notable"
       ],
@@ -39213,6 +40104,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Octopodidae",
       "variants": [
         "Notable"
       ],
@@ -39262,6 +40154,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Octopodidae",
       "variants": [
         "Notable"
       ],
@@ -39310,6 +40203,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Salmonidae",
       "variants": [
         "Notable"
       ],
@@ -39358,6 +40252,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Salmonidae",
       "variants": [
         "Notable"
       ],
@@ -39407,6 +40302,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Delphinidae",
       "variants": [
         "Notable"
       ],
@@ -39462,6 +40358,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Otariidae",
       "variants": [
         "Notable"
       ],
@@ -39510,6 +40407,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Acanthuridae",
       "variants": [
         "Notable"
       ],
@@ -39558,6 +40456,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Phocidae",
       "variants": [
         "Notable"
       ],
@@ -39606,6 +40505,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Phocoenidae",
       "variants": [
         "Notable"
       ],
@@ -39656,6 +40556,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Diomedeidae",
       "variants": [
         "Notable"
       ],
@@ -39704,6 +40605,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Physeteridae",
       "variants": [
         "Notable"
       ],
@@ -39754,6 +40656,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Pomacanthidae",
       "variants": [
         "Notable"
       ],
@@ -39803,6 +40706,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Carcharhinidae",
       "variants": [
         "Notable"
       ],
@@ -39811,7 +40715,7 @@
         "mar_pacifico_austral",
         "mar_atlantico_austral"
       ],
-      "normalSpriteSha256": "48770dcba382303a6c7bf125ecdb7427c544cdb20a7fa5181818b917cd78f731"
+      "normalSpriteSha256": "bfba125a1d0982394e2963c2636c2d9a4511933936f280e264e362f0a20b41f9"
     },
     "mar_esp_pseudorca_crassidens": {
       "name": "Falsa orca",
@@ -39853,6 +40757,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Delphinidae",
       "variants": [
         "Notable"
       ],
@@ -39903,6 +40808,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Spheniscidae",
       "variants": [
         "Notable"
       ],
@@ -39952,6 +40858,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Spheniscidae",
       "variants": [
         "Notable"
       ],
@@ -40001,6 +40908,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Rhincodontidae",
       "variants": [
         "Notable"
       ],
@@ -40051,6 +40959,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Clupeidae",
       "variants": [
         "Notable"
       ],
@@ -40099,6 +41008,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Scombridae",
       "variants": [
         "Notable"
       ],
@@ -40147,6 +41057,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Loliginidae",
       "variants": [
         "Notable"
       ],
@@ -40196,6 +41107,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Sphyrnidae",
       "variants": [
         "Notable"
       ],
@@ -40245,6 +41157,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Delphinidae",
       "variants": [
         "Notable"
       ],
@@ -40293,6 +41206,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Synanceiidae",
       "variants": [
         "Notable"
       ],
@@ -40343,6 +41257,7 @@
         "className": "Aves",
         "subClass": "Aves acuáticas y marinas"
       },
+      "familyEffective": "Diomedeidae",
       "variants": [
         "Notable"
       ],
@@ -40392,6 +41307,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Scombridae",
       "variants": [
         "Notable"
       ],
@@ -40441,6 +41357,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Scombridae",
       "variants": [
         "Notable"
       ],
@@ -40490,6 +41407,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Scombridae",
       "variants": [
         "Notable"
       ],
@@ -40538,6 +41456,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Thysanoteuthidae",
       "variants": [
         "Notable"
       ],
@@ -40587,6 +41506,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Carangidae",
       "variants": [
         "Notable"
       ],
@@ -40635,6 +41555,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Carangidae",
       "variants": [
         "Notable"
       ],
@@ -40683,6 +41604,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Tremoctopodidae",
       "variants": [
         "Notable"
       ],
@@ -40732,6 +41654,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Delphinidae",
       "variants": [
         "Notable"
       ],
@@ -40782,6 +41705,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Xiphiidae",
       "variants": [
         "Notable"
       ],
@@ -40832,6 +41756,7 @@
         "className": "Mammalia",
         "subClass": "Mamíferos marinos"
       },
+      "familyEffective": "Otariidae",
       "variants": [
         "Notable"
       ],
@@ -40881,6 +41806,7 @@
         "className": "Mammalia",
         "subClass": "Cetáceos"
       },
+      "familyEffective": "Hyperoodontidae",
       "variants": [
         "Notable"
       ],
@@ -40932,6 +41858,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Alloposidae",
       "variants": [
         "Notable"
       ],
@@ -40983,6 +41910,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Mitsukurinidae",
       "variants": [
         "Notable"
       ],
@@ -41035,6 +41963,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Sternoptychidae",
       "variants": [
         "Notable"
       ],
@@ -41086,6 +42015,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Myctophidae",
       "variants": [
         "Notable"
       ],
@@ -41137,6 +42067,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Ceratiidae",
       "variants": [
         "Notable"
       ],
@@ -41189,6 +42120,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Eurypharyngidae",
       "variants": [
         "Notable"
       ],
@@ -41242,6 +42174,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Stomiidae",
       "variants": [
         "Notable"
       ],
@@ -41294,6 +42227,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Vampyroteuthidae",
       "variants": [
         "Notable"
       ],
@@ -41347,6 +42281,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Anoplogastridae",
       "variants": [
         "Notable"
       ],
@@ -41400,6 +42335,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Stomiidae",
       "variants": [
         "Notable"
       ],
@@ -41451,6 +42387,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Stomiidae",
       "variants": [
         "Notable"
       ],
@@ -41502,6 +42439,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Opisthoproctidae",
       "variants": [
         "Notable"
       ],
@@ -41553,6 +42491,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Histioteuthidae",
       "variants": [
         "Notable"
       ],
@@ -41605,6 +42544,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Onychoteuthidae",
       "variants": [
         "Notable"
       ],
@@ -41656,6 +42596,7 @@
         "className": "Chondrichthyes",
         "subClass": "Escualos y rayas"
       },
+      "familyEffective": "Chlamydoselachidae",
       "variants": [
         "Notable"
       ],
@@ -41706,6 +42647,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Anoplogastridae",
       "variants": [
         "Notable"
       ],
@@ -41757,6 +42699,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Ipnopidae",
       "variants": [
         "Notable"
       ],
@@ -41808,6 +42751,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Grimpoteuthidae",
       "variants": [
         "Notable"
       ],
@@ -41858,6 +42802,7 @@
         "className": "Cephalopoda",
         "subClass": "Cefalópodos"
       },
+      "familyEffective": "Cranchiidae",
       "variants": [
         "Notable"
       ],
@@ -41908,6 +42853,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Nototheniidae",
       "variants": [
         "Notable"
       ],
@@ -41959,6 +42905,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Liparidae",
       "variants": [
         "Notable"
       ],
@@ -42010,6 +42957,7 @@
         "className": "Actinopterygii",
         "subClass": "Peces óseos"
       },
+      "familyEffective": "Liparidae",
       "variants": [
         "Notable"
       ],
@@ -73739,12 +74687,6 @@
       "mar_esp_balaenoptera_physalus"
     ],
     [
-      "mar_esp_carcharhinus_longimanus",
-      "mar_esp_isurus_oxyrinchus",
-      "mar_esp_lamna_ditropis",
-      "mar_esp_prionace_glauca"
-    ],
-    [
       "mar_esp_clupea_harengus",
       "mar_esp_sardina_pilchardus"
     ],
@@ -73800,5 +74742,5 @@
       "mar_esp_trachurus_novaezelandiae"
     ]
   ],
-  "familiesExplicit": 458
+  "familiesExplicit": 461
 }

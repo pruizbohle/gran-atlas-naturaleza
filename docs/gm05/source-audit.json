@@ -114,7 +114,7 @@
   "limits": [
     "No identity merged, deleted or added.",
     "945 structural/runtime records checked; individual current external authorities not consulted for every taxon.",
-    "Family is not explicitly represented in 487 legacy identities; no inferred family is certified.",
+    "Family is not explicitly represented in 484 legacy identities; no inferred family is certified.",
     "Range conflicts and uncertain source localities remain pending."
   ]
 }

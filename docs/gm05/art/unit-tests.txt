@@ -1,0 +1,14 @@
+✔ all2605 configured routes retained; only four explicitly reviewed sharks change drawings (2.966997ms)
+✔ the four formerly identical shark plates have distinct anatomy, not just labels or attributes (52.783604ms)
+✔ GM05 checks all 945 identities/113 regions/1744 real pairs, retaining rank distinctions (93.040634ms)
+✔ all1744 source/runtime witnesses remain reachable by actual current manual and automatic filters (63.962224ms)
+✔ source reconciliation has1574 preserved rows,413 distinct issue IDs,103/106 source cells and no invented range equality (3.353981ms)
+✔ woodpecker and two legacy sharks use documented classes/families without altering identities or state (55.579544ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 352.709721
