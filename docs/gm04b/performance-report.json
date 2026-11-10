@@ -1,0 +1,41 @@
+{
+  "method": "Chromium CPU×4, fully identified catalog, DOM click to two animation frames, eight opens; emulation not physical Android",
+  "samples": [
+    {
+      "version": "3.32.0",
+      "identities": 923,
+      "cardsPerPage": 32,
+      "firstPaintMs": 294,
+      "reopenMedianMs": 175.90000000223517,
+      "samplesMs": [
+        294,
+        182.30000000074506,
+        172.69999999925494,
+        142.5,
+        175.90000000223517,
+        141.10000000149012,
+        188.5,
+        178.59999999776483
+      ],
+      "heapMetrics": []
+    },
+    {
+      "version": "3.33.0",
+      "identities": 943,
+      "cardsPerPage": 32,
+      "firstPaintMs": 314.5999999977648,
+      "reopenMedianMs": 136.90000000223517,
+      "samplesMs": [
+        314.5999999977648,
+        163.60000000149012,
+        147.30000000074506,
+        122.70000000298023,
+        136.90000000223517,
+        130.19999999925494,
+        143.39999999850988,
+        134.40000000223517
+      ],
+      "heapMetrics": []
+    }
+  ]
+}

@@ -6502,7 +6502,11 @@ function processDeep3330(now=Date.now()){
 }
 function deepAction3330(action,id){if(action==='deep-method'&&Object.hasOwn(DEEP_METHODS3330,id)){state.deepSurvey.method=id;renderPanel();persist();return;}if(action==='deep-start'){if(startDeep3330()){renderCounters();renderPanel();}return;}if(action==='deep-craft'){craftItem('sounding_kit');return;}}
 const modelEvidenceBefore3330=fieldEncounterModel;
-fieldEncounterModel=function(last){const m=modelEvidenceBefore3330(last);if(last?.deepEvidence){m.entries=m.entries.map(e=>({...e,name:'Muestra · '+e.name}));m.reward='Registro indirecto; lámina de referencia. '+m.reward;}return m;};
+fieldEncounterModel=function(last){const m=modelEvidenceBefore3330(last);if(last?.deepEvidence){m.failed=!m.entries.length;m.entries=m.entries.map(e=>({...e,name:'Muestra · '+e.name}));m.reward='Registro indirecto; lámina de referencia. '+m.reward;}return m;};
+const encounterMarkupBefore3330=encounterCardMarkup;
+encounterCardMarkup=function(last){const html=encounterMarkupBefore3330(last);return last?.deepEvidence?html.replace('RASTROS EN EL SENDERO','MUESTRA SIN IDENTIFICACIÓN').replace('OBSERVACIÓN REGISTRADA','REGISTRO INDIRECTO').replace('NUEVA ESPECIE','NUEVA EVIDENCIA'):html;};
+const journalBefore3330=renderJournal;
+renderJournal=function(){const view=journalBefore3330();return deepRegionIndex3330.has(state.currentRegion)||SPECIES[state.selectedJournal]?.origin==='deep3330'?'<section class="card"><p class="small">Registro naturalista indirecto: muestras, diagnóstico anatómico y evidencias alimentarias. Los cinco niveles y las monografías comparten identidad con otras modalidades. La lámina no representa visión directa desde cubierta.</p></section>'+view:view;};
 const automaticModelBefore3330=fieldAutomaticModel;
 fieldAutomaticModel=function(){const m=automaticModelBefore3330();if(deepRegionIndex3330.has(state.currentRegion)){m.summary=m.helpers?m.helpers+' naturalistas · clasificación de muestras':'Equipo naturalista para clasificar muestras';m.detail='Protocolo: '+DEEP_METHODS3330[state.deepSurvey.method].name+' · misma cadencia y cupo horario';m.notice='Registros indirectos obtenidos por la expedición, no observación desde cubierta.';}return m;};
 const stageBefore3330=stageRequirements;
