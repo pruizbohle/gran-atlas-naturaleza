@@ -42,6 +42,7 @@ function harness(store={},backup,options={}){
  if(gameSource.includes('const oceaniaReview=globalThis.'))for(const name of ['oceania-runtime-v3290','oceania-art-v3290','oceania-geography-v3290'])vm.runInContext(fs.readFileSync('www/js/'+name+'.js','utf8'),ctx);
  if(gameSource.includes('const polar3310=globalThis.'))for(const name of ['polar-data-v3310','polar-geography-v3310','polar-art-v3310'])vm.runInContext(fs.readFileSync('www/js/'+name+'.js','utf8'),ctx);
  if(gameSource.includes('const marine3320=globalThis.'))for(const name of ['marine-data-v3320','marine-geography-v3320','marine-art-v3320'])vm.runInContext(fs.readFileSync('www/js/'+name+'.js','utf8'),ctx);
+ if(gameSource.includes('const deep3330=globalThis.'))for(const name of ['deep-data-v3330','deep-geography-v3330','deep-art-v3330'])vm.runInContext(fs.readFileSync('www/js/'+name+'.js','utf8'),ctx);
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(options.saveSource||SAVE,ctx,{filename:'www/js/save-manager.js'});
  return {window:w,store,doc,elements,localStorage,

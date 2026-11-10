@@ -2122,6 +2122,15 @@ const taxonomyBefore3320=taxonomyInfo;
 taxonomyInfo=function(id){return SPECIES[id]?.origin==='marine3320'?SPECIES[id].taxonomy:taxonomyBefore3320(id);};
 RESEARCH_NODES.push({id:'mares_superficiales_1',name:'Navegación de mares superficiales',desc:'Doce sectores de superficie; requiere las cinco preparaciones acreditadas. Se reutiliza el Cuadrante transatlántico. No habilita mares profundos ni abisales.',branch:'expediciones',money:5200,knowledge:4600,req:'polos_1',once:true,effect(s){s.upgrades.surfaceSeasUnlocked=1;}});
 // GM3320 END catalog
+// GM3330 BEGIN catalog
+const deep3330=globalThis.AtlasDeep3330;
+if(!deep3330)throw Error('Faltan datos de océanos profundos');
+for(const[id,sp]of Object.entries(deep3330.species)){if(SPECIES[id]||Object.values(SPECIES).some(s=>s.latin===sp.latin))throw Error('Identidad profunda duplicada');SPECIES[id]=sp;SPECIMEN_CATEGORIES[id]=['Notable'];}
+for(const r of deep3330.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región profunda duplicada');REGIONS.push(r);}
+const taxonomyBefore3330=taxonomyInfo;
+taxonomyInfo=function(id){return SPECIES[id]?.origin==='deep3330'?SPECIES[id].taxonomy:taxonomyBefore3330(id);};
+RESEARCH_NODES.push({id:'exploracion_profunda_1',name:'Sondeo y muestreo de océanos profundos',desc:'Red vertical, cabo graduado y examen de muestras; no observación directa desde cubierta. Requiere equipo de sondeo fabricado.',branch:'expediciones',money:6000,knowledge:5200,req:'mares_superficiales_1',once:true,effect(s){s.upgrades.deepUnlocked=1;}});
+// GM3330 END catalog
 function initialState(){
   const region=REGIONS[0].id;
   return {
@@ -2340,6 +2349,9 @@ window.AtlasSaveBridge={
      migratePolar3310(state);
  // GM3320 BEGIN import
      migrateMarine3320(state);
+ // GM3330 BEGIN import
+     normalizeDeep3330(state);
+ // GM3330 END import
  // GM3320 END import
  // GM3310 END import
  // EC3300 END import-commerce
@@ -4944,6 +4956,10 @@ function handlePanelAction(e){
     const el=e.target.closest?.('[data-action]');
     if(!el||!panel.contains(el)||el.disabled)return;
     const act=el.dataset.action; const id=el.dataset.id;
+ // GM3330 BEGIN actions
+    if(act.startsWith('deep-')){deepAction3330(act,id);return;}
+    if(deepRegionIndex3330.has(state.currentRegion)&&(act==='search-manual'||act==='field-aid')){if(act==='search-manual')deepAction3330('deep-start');return;}
+ // GM3330 END actions
  // EC3300 BEGIN actions
     if(act.startsWith('trade-')){tradeAction3300(act,id);return;}
  // EC3300 END actions
@@ -5116,6 +5132,10 @@ function tick(){
  if(museumRate()>0){state.money+=museumRate()*(elapsed/1000);}
  const returns=processVoyages(now);
  // EC3300 BEGIN tick
+ // GM3330 BEGIN tick
+ const deepReturns=processDeep3330(now);syncDeep3330(now);
+ if(deepReturns&&tab==='field'&&deepRegionIndex3330.has(state.currentRegion))renderPanel();
+ // GM3330 END tick
  const tradeReturns=settleTrade3300(now);syncTrade3300(now);
  if(tradeReturns&&tab==='expeditions'&&navigationTab3300==='commerce')renderPanel();
  // EC3300 END tick
@@ -5211,6 +5231,9 @@ function sexSpriteMarkup(id,sex){
 
 const spriteCache=new Map();
 function getSpriteMarkup(id, skin='normal', sex=null){
+ // GM3330 BEGIN art
+ if(SPECIES[id]?.origin==='deep3330')return globalThis.AtlasDeepArt3330.render(SPECIES[id]);
+ // GM3330 END art
  // GM3320 BEGIN art
  if(SPECIES[id]?.origin==='marine3320')return globalThis.AtlasMarineArt3320.render(SPECIES[id]);
  // GM3320 END art
@@ -6427,6 +6450,72 @@ fieldBackdropMarkup=function(h){if(!['costa_marina','arrecife','archipielago','o
 const renderFieldBefore3320=renderField;
 renderField=function(){const view=renderFieldBefore3320(),ps=presenceIndex3320.get(state.currentRegion);if(!ps)return view;const notes=[...new Set(ps.map(p=>p.note))];return view+'<section class="card"><details><summary>Métodos y subáreas de observación marina</summary>'+notes.map(n=>'<p class="small">'+esc(n)+'</p>').join('')+'<p class="small">Cefalópodos: categoría jugable Peces; clase biológica Cephalopoda. Las láminas son referencias anatómicas, no retratos de cada estadio observado.</p></details></section>';};
 // GM3320 END gameplay
+// GM3330 BEGIN gameplay
+const deepRegionIndex3330=new Map(deep3330.regions.map(r=>[r.id,r]));
+const deepPresenceIndex3330=new Map(deep3330.regions.map(r=>[r.id,deep3330.presences.filter(p=>p.regionId===r.id)]));
+const DEEP_METHODS3330={sondeo:{name:'Sondeo y red de columna',seconds:60,money:10,knowledge:2},muestreo:{name:'Muestreo científico',seconds:180,money:30,knowledge:5}};
+ITEMS.sounding_kit={name:'Equipo de sondeo y muestreo',emoji:'⚓',slot:null,kind:'artifact_material',bonus:'Habilita red de columna, draga y examen indirecto de muestras profundas'};
+RECIPES.sounding_kit={requires:{brass_shard:4,carved_wood:4,parchment_scrap:3,sturdy_pack:1}};
+CONTINENT_RULES3300['Océanos profundos']={initial:429,step:9,items:[...CONTINENT_RULES3300['Océanos'].items,'sounding_kit']};
+CONTINENT_RESEARCH3300.exploracion_profunda_1='Océanos profundos';
+function normalizeDeep3330(s){
+ const d=s.deepSurvey&&typeof s.deepSurvey==='object'&&!Array.isArray(s.deepSurvey)?s.deepSurvey:{};
+ d.method=Object.hasOwn(DEEP_METHODS3330,d.method)?d.method:'sondeo';
+ d.jobs=Array.isArray(d.jobs)?d.jobs.filter(j=>j&&Number.isSafeInteger(j.id)&&j.id>0&&Object.hasOwn(DEEP_METHODS3330,j.method)&&deepRegionIndex3330.has(j.region)&&deepRegionIndex3330.get(j.region).habitats.includes(j.habitat)&&['amanecer','dia','atardecer','noche'].includes(j.time)&&['primavera','verano','otono','invierno'].includes(j.season)&&Number.isFinite(j.startedAt)&&Number.isFinite(j.endAt)&&j.endAt-j.startedAt===DEEP_METHODS3330[j.method].seconds*1000&&Number.isInteger(j.seed)&&j.seed>=0&&j.seed<=4294967295):[];
+ d.jobs=d.jobs.filter((j,i,a)=>a.findIndex(x=>x.id===j.id)===i);
+ d.history=Array.isArray(d.history)?d.history.filter(h=>h&&Number.isSafeInteger(h.id)&&deepRegionIndex3330.has(h.region)&&Object.hasOwn(DEEP_METHODS3330,h.method)&&Number.isFinite(h.at)).slice(-12).map(h=>({id:h.id,region:h.region,method:h.method,at:h.at,records:Object.fromEntries(Object.entries(h.records||{}).filter(([id,n])=>SPECIES[id]&&Number.isSafeInteger(n)&&n>0))})):[];
+ d.jobs=d.jobs.filter(j=>!d.history.some(h=>h.id===j.id));d.seq=Math.max(0,Number.isSafeInteger(d.seq)?d.seq:0,...d.jobs.map(j=>j.id),...d.history.map(h=>h.id));s.deepSurvey=d;s.upgrades.deepUnlocked=!!s.purchases.exploracion_profunda_1;return d;
+}
+normalizeDeep3330(state);
+function deepReady3330(region=state.currentRegion){return deepRegionIndex3330.has(region)&&regionAccessible(deepRegionIndex3330.get(region))&&!!state.upgrades.deepUnlocked&&state.craftedItems?.sounding_kit===true;}
+const regionBefore3330=regionRequirementsMet,modelBefore3330=atlasRegionModel;
+regionRequirementsMet=function(r){if(!deepRegionIndex3330.has(r?.id))return regionBefore3330(r);return !!state.regionUnlocked[r.id]||r.id===state.currentRegion||!!(state.upgrades.deepUnlocked&&craftedReady3330()&&state.prestige>=r.unlock.prestige);};
+function craftedReady3330(){return CONTINENT_RULES3300['Océanos profundos'].items.every(id=>state.craftedItems?.[id]===true);}
+atlasRegionModel=function(r){const m=modelBefore3330(r);if(deepRegionIndex3330.has(r.id)){m.name='⚓ '+r.name;m.requirements.unshift({label:'Investigación de sondeo profundo',met:!!state.upgrades.deepUnlocked},{label:'Equipo de sondeo acreditado',met:state.craftedItems?.sounding_kit===true});m.requirements=m.requirements.filter(x=>!x.label.includes('sin navegación profunda'));if(m.status==='bloqueada')m.summary=m.requirements.find(x=>!x.met)?.label||'Preparación pendiente';}return m;};
+const eligibleBefore3330=eligibleSpecies,autoBefore3330=automaticEligibleSpecies;
+function deepChoices3330(region,habitat,time,season,automatic=false){const ps=deepPresenceIndex3330.get(region);if(!ps)return [];const method=state.deepSurvey?.method||'sondeo';return ps.filter(p=>p.methods.includes(method)&&p.seasons.includes(season)&&(automatic||p.habitats.includes(habitat)&&p.times.includes(time))).map(p=>p.speciesId);}
+eligibleSpecies=function(region,habitat,time,season){return deepRegionIndex3330.has(region)?deepChoices3330(region,habitat,time,season):eligibleBefore3330(region,habitat,time,season);};
+automaticEligibleSpecies=function(region,season){return deepRegionIndex3330.has(region)?deepReady3330(region)?deepChoices3330(region,null,null,season,true):[]:autoBefore3330(region,season);};
+const habitatBefore3330=habitatLabel;
+habitatLabel=function(h){return ({columna_mesopelagica:'⚓ Columna mesopelágica',columna_batial:'⚓ Aguas batiales',columna_profunda_fria:'❄ Columna profunda fría',fondo_batial:'⚓ Fondo batial',fondo_profundo_frio:'❄ Fondo profundo frío'}[h]||habitatBefore3330(h));};
+let deepResolving3330=false;
+const encounterBefore3330=encounter;
+encounter=function(source='manual',at=Date.now(),guaranteed=false){
+ if(!deepRegionIndex3330.has(state.currentRegion))return encounterBefore3330(source,at,guaranteed);
+ if(!deepReady3330()||source==='manual'&&!deepResolving3330)return false;
+ const last=state.lastEncounter,batch=batchingOffline,logs=new Set(state.log);batchingOffline=true;
+ try{encounterBefore3330(source,at,false);}finally{batchingOffline=batch;}
+ state.log=state.log.map(x=>logs.has(x)?x:x.replace(/comiendo/g,'evidencia alimentaria').replace(/Avistamiento/g,'Registro indirecto'));
+ if(state.lastEncounter!==last){state.lastEncounter.deepEvidence={method:state.deepSurvey.method,region:state.currentRegion,direct:false};state.lastEncounter.title=state.lastEncounter.entries?.length?'Registro indirecto de muestra':'Muestra sin identificación';state.lastEncounter.subtitle='Examen a bordo · '+(state.lastEncounter.subtitle||'').replace(/avistamientos/g,'registros').replace(/comiendo/g,'contenido digestivo examinado');}
+ if(!batch){renderCounters();updateFieldOutput();}return state.lastEncounter!==last;
+};
+function deepTransaction3330(change){const before=JSON.parse(JSON.stringify(state));try{if(!change())return false;if(!persist()){state=before;return false;}return true;}catch(error){state=before;throw error;}}
+function canStartDeep3330(method=state.deepSurvey.method){const m=Object.hasOwn(DEEP_METHODS3330,method)?DEEP_METHODS3330[method]:null;return !!m&&deepReady3330()&&state.deepSurvey.jobs.length<1&&state.deepSurvey.seq<Number.MAX_SAFE_INTEGER&&state.money>=m.money&&state.knowledge>=m.knowledge&&deepPresenceIndex3330.get(state.currentRegion).some(p=>p.methods.includes(method)&&p.habitats.includes(state.habitat)&&p.times.includes(state.time)&&p.seasons.includes(state.season));}
+function startDeep3330(method=state.deepSurvey.method){if(!canStartDeep3330(method))return false;const m=DEEP_METHODS3330[method],at=Date.now();if(!Number.isFinite(at))return false;return deepTransaction3330(()=>{state.money-=m.money;state.knowledge-=m.knowledge;state.deepSurvey.method=method;state.deepSurvey.jobs.push({id:++state.deepSurvey.seq,method,region:state.currentRegion,habitat:state.habitat,time:state.time,season:state.season,startedAt:at,endAt:at+m.seconds*1000,seed:Math.floor(Math.random()*4294967296)});return true;});}
+function processDeep3330(now=Date.now()){
+ if(!Number.isFinite(now))return false;now=Math.min(now,Date.now());const due=state.deepSurvey.jobs.filter(j=>j.endAt<=now);if(!due.length)return false;
+ return deepTransaction3330(()=>{for(const j of due){if(state.deepSurvey.history.some(h=>h.id===j.id))continue;const context={currentRegion:state.currentRegion,habitat:state.habitat,time:state.time,season:state.season},method=state.deepSurvey.method,last=state.lastEncounter,before={...state.sightings},random=Math.random,batch=batchingOffline;let seed=j.seed;
+  try{Object.assign(state,{currentRegion:j.region,habitat:j.habitat,time:j.time,season:j.season});state.deepSurvey.method=j.method;deepResolving3330=true;batchingOffline=true;Math.random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};encounter('manual',j.endAt,false);}
+  finally{Math.random=random;deepResolving3330=false;batchingOffline=batch;Object.assign(state,context);state.deepSurvey.method=method;if(context.currentRegion!==j.region)state.lastEncounter=last;}
+  const records=Object.fromEntries(deepRegionIndex3330.get(j.region).species.map(id=>[id,(state.sightings[id]||0)-(before[id]||0)]).filter(([,n])=>n>0));state.deepSurvey.history.push({id:j.id,method:j.method,region:j.region,at:now,records});
+ }const ids=new Set(due.map(j=>j.id));state.deepSurvey.jobs=state.deepSurvey.jobs.filter(j=>!ids.has(j.id));state.deepSurvey.history=state.deepSurvey.history.slice(-12);return true;});
+}
+function deepAction3330(action,id){if(action==='deep-method'&&Object.hasOwn(DEEP_METHODS3330,id)){state.deepSurvey.method=id;renderPanel();persist();return;}if(action==='deep-start'){if(startDeep3330()){renderCounters();renderPanel();}return;}if(action==='deep-craft'){craftItem('sounding_kit');return;}}
+const modelEvidenceBefore3330=fieldEncounterModel;
+fieldEncounterModel=function(last){const m=modelEvidenceBefore3330(last);if(last?.deepEvidence){m.entries=m.entries.map(e=>({...e,name:'Muestra · '+e.name}));m.reward='Registro indirecto; lámina de referencia. '+m.reward;}return m;};
+const automaticModelBefore3330=fieldAutomaticModel;
+fieldAutomaticModel=function(){const m=automaticModelBefore3330();if(deepRegionIndex3330.has(state.currentRegion)){m.summary=m.helpers?m.helpers+' naturalistas · clasificación de muestras':'Equipo naturalista para clasificar muestras';m.detail='Protocolo: '+DEEP_METHODS3330[state.deepSurvey.method].name+' · misma cadencia y cupo horario';m.notice='Registros indirectos obtenidos por la expedición, no observación desde cubierta.';}return m;};
+const stageBefore3330=stageRequirements;
+stageRequirements=function(id,index){const req=stageBefore3330(id,index);if(index===3&&(SPECIES[id]?.origin==='deep3330'||deepRegionIndex3330.has(state.currentRegion)&&deepRegionIndex3330.get(state.currentRegion).species.includes(id)))req.extra='10 evidencias de dieta (contenido digestivo/registro de expedición), o dimorfismo documentado si corresponde.';return req;};
+const backdropBefore3330=fieldBackdropMarkup;const deepScenes3330=new Map();
+fieldBackdropMarkup=function(h){if(!['columna_mesopelagica','columna_batial','columna_profunda_fria','fondo_batial','fondo_profundo_frio'].includes(h))return backdropBefore3330(h);if(deepScenes3330.has(h))return deepScenes3330.get(h);const svg='<svg xmlns="http://www.w3.org/2000/svg" class="field-backdrop" viewBox="0 0 640 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path fill="#d4d5c5" d="M0 0H640V280H0Z"/><path fill="#567183" d="M0 0H110V280H0Z"/><path stroke="#dccda7" stroke-width="3" d="M48 0V220M41 32h14m-14 35h14m-14 35h14m-14 35h14m-14 35h14"/><path fill="#d8e5df" stroke="#294352" stroke-width="2" d="M30 216h37l-7 25H37Z"/><path fill="#faf3df" stroke="#9b947c" d="M143 36L605 28 610 250 147 258Z"/><path stroke="#d2c6a5" d="M161 231H591M162 218H591"/></svg>';deepScenes3330.set(h,svg);return svg;};
+function renderDeepPanel3330(){const d=state.deepSurvey;return '<section class="card deep-panel"><h3>Cuaderno de sondeo profundo</h3><p class="small">Sonda lastrada, red vertical y draga. Evidencias y muestras examinadas a bordo; las imágenes son láminas de referencia, no animales vistos desde cubierta. Cada operación es un intento sin hallazgo garantizado.</p><div class="deep-protocols">'+Object.entries(DEEP_METHODS3330).map(([id,m])=>'<button class="btn '+(d.method===id?'':'alt')+'" data-action="deep-method" data-id="'+id+'" aria-pressed="'+(d.method===id)+'">'+m.name+' · '+m.seconds+' s · £'+m.money+' + '+m.knowledge+' conocimiento</button>').join('')+'</div><p class="small">Cupo: '+d.jobs.length+'/1. Equipo de sondeo '+(state.craftedItems.sounding_kit?'acreditado':'pendiente de fabricar')+'.</p>'+d.jobs.map(j=>'<p data-deep-countdown="'+j.endAt+'" class="small">'+DEEP_METHODS3330[j.method].name+' · '+tradeCountdown3300(j.endAt)+'</p>').join('')+'<details><summary>Registros de expedición</summary>'+[...d.history].reverse().map(h=>'<p class="small">'+DEEP_METHODS3330[h.method].name+' · '+esc(deepRegionIndex3330.get(h.region).name)+' · '+(Object.entries(h.records).map(([id,n])=>esc(visibleName(id))+' ×'+n).join(' · ')||'Muestra sin identificación')+'</p>').join('')+'</details><details><summary>Condiciones y métodos de este sector</summary>'+deepPresenceIndex3330.get(state.currentRegion).map(p=>'<p class="small">'+esc(visibleName(p.speciesId))+' · '+p.methods.map(m=>DEEP_METHODS3330[m].name).join(' / ')+' · '+esc(p.evidenceNote)+'</p>').join('')+'</details></section>';}
+const fieldRenderBefore3330=renderField;
+renderField=function(){const view=fieldRenderBefore3330();if(!deepRegionIndex3330.has(state.currentRegion))return view;return renderDeepPanel3330()+view.replace('class="field-game"','class="field-game deep-field"').replace('data-action="search-manual"','data-action="deep-start" '+(canStartDeep3330()?'':'disabled')).replace('Observar fauna','Preparar operación').replace('Una nueva página de tu expedición','Sondeo o muestreo: examen indirecto a bordo').replace(/<button class="btn[^>]*data-action="field-aid"[^>]*>[\s\S]*?<\/button>/g,'');};
+const objectsBefore3330=renderObjects;
+renderObjects=function(){return objectsBefore3330()+'<section class="card"><h3>Equipo de sondeo y muestreo</h3><p class="small">Cuatro latones, cuatro maderas talladas, tres pergaminos y un morral reforzado. Componentes obtenibles en Europa y mediante Comercio. Acreditación permanente: habilita métodos profundos sin consumir el equipo al abrir regiones.</p><button class="btn" data-action="deep-craft" '+(canCraft('sounding_kit')?'':'disabled')+'>Fabricar equipo de sondeo</button></section>';};
+function syncDeep3330(now){if(tab!=='field'||!deepRegionIndex3330.has(state.currentRegion))return;for(const node of panel.querySelectorAll('[data-deep-countdown]')){const text=tradeCountdown3300(Number(node.dataset.deepCountdown),now);if(node.textContent!==text)node.textContent=text;}const button=panel.querySelector('[data-action="deep-start"]');if(button)button.disabled=!canStartDeep3330();}
+// GM3330 END gameplay
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 render();
 })();
