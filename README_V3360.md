@@ -68,4 +68,12 @@ node scripts/check-society-v3360.cjs
 node scripts/check-society-session-v3360.cjs
 ```
 
-La validación de publicación y los enlaces comprobados se incorporan después del despliegue de GitHub Pages.
+## Publicación comprobada
+
+[GitHub Actions](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42914953307) desplegó correctamente el commit `a5c0ea1`. Los [163 archivos públicos](docs/ach3360/published-report.json) coinciden con sus hashes, incluido el actualizador y el laboratorio. La [verificación Chromium sobre la URL pública](docs/ach3360/published-browser.json) pasó sin errores JavaScript: caché `gran-atlas-v3.36.0-society-63638c2f45ca`, operación pendiente conservada, juego offline, laboratorio mundial de 945 identidades y laboratorio de Sociedad con 80 tarjetas y reconocimiento retroactivo silencioso. Se declaran 161 archivos únicos offline; la entrada adicional de navegación raíz eleva a 162 las entradas observadas.
+
+- [Juego 3.36.0](https://pruizbohle.github.io/gran-atlas-naturaleza/).
+- [Actualizar conservando la partida y con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3360.html).
+- [Laboratorio de Sociedad aislado](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-sociedad-v3360.html).
+
+La rama `feat/achievements-v3360` y `main` incluyen las cinco etapas y sus evidencias. Android no fue compilado ni publicado.
