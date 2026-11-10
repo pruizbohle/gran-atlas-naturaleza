@@ -8,8 +8,8 @@ const cet=['rorqual','blue_whale','brydes_whale','humpback','right_whale','grey_
 if(cet.includes(p)){
  let fill=p==='orca'?'#243b45':p==='rissos'?'#a7b3b4':p==='right_whale'?'#45565f':p==='blue_whale'?'#779ca9':'#607d8a';
  const sperm=p==='sperm_whale',right=p==='right_whale',dolphin=['dolphin','porpoise','orca','pilot_whale','rissos','false_killer','beaked_whale'].includes(p),beak=p==='dolphin'||p==='beaked_whale';
- b=path(sperm?'M7 39L38 34Q56 35 72 53L84 54 96 42 93 55 98 62 84 61Q47 76 8 66Z':right?'M7 56Q12 26 41 33Q61 32 78 54L87 55 97 44 94 56 98 63 84 61Q50 83 13 68Z':beak?'M4 56L16 51Q23 34 41 41Q60 41 77 56L86 56 97 44 94 57 98 64 84 63Q46 78 17 64L4 61Z':'M7 56Q17 34 40 40Q62 39 79 55L86 56 97 45 94 56 98 63 84 63Q50 78 14 65Z',fill);
- if(!right&&p!=='grey_whale'&&!sperm)b+=path(dolphin?'M51 43Q61 25 64 34L65 49Z':'M65 48L72 35 76 53Z',fill);
+ b=path(p==='porpoise'?'M10 57Q12 38 34 43Q58 40 77 56L85 58 96 48 93 59 97 65 83 65Q45 77 15 66Z':sperm?'M7 39L38 34Q56 35 72 53L84 54 96 42 93 55 98 62 84 61Q47 76 8 66Z':right?'M7 56Q12 26 41 33Q61 32 78 54L87 55 97 44 94 56 98 63 84 61Q50 83 13 68Z':beak?'M4 56L16 51Q23 34 41 41Q60 41 77 56L86 56 97 44 94 57 98 64 84 63Q46 78 17 64L4 61Z':'M7 56Q17 34 40 40Q62 39 79 55L86 56 97 45 94 56 98 63 84 63Q50 78 14 65Z',fill);
+ if(!right&&p!=='grey_whale'&&!sperm)b+=path(p==='porpoise'?'M51 44L59 31 66 48Z':dolphin?'M51 43Q61 25 64 34L65 49Z':'M65 48L72 35 76 53Z',fill);
  if(p==='grey_whale')b+=path('M62 48l4-5 4 7 5-1 4 6',fill);
  b+=path(p==='humpback'?'M36 62Q55 89 66 81L48 59Z':'M37 62L49 78 57 75 49 61Z',p==='humpback'?white:fill)+eye(sperm?29:beak?21:20,54)+line(sperm?'M10 64L31 64':'M10 60Q24 66 34 61');
  if(!dolphin&&!right&&p!=='grey_whale'&&!sperm)b+=line('M17 64Q40 75 65 64M21 66Q39 78 59 69M26 69Q40 80 53 71');
@@ -34,13 +34,13 @@ else if(['sea_lion','seal','elephant_seal'].includes(p)){
 }
 else if(['octopus','giant_octopus','blanket_octopus','blue_ring_octopus','coconut_octopus','bimac_octopus','day_octopus'].includes(p)){
  const color=p==='blue_ring_octopus'?'#c2ad62':p==='coconut_octopus'?'#927d66':p==='giant_octopus'?'#b27e66':'#ac9188';
- b=path('M35 42Q30 13 50 13Q73 13 66 43L60 54 40 54Z',color);
+ b=path(p==='giant_octopus'?'M31 42Q23 7 50 9Q78 9 70 43L61 55 38 55Z':'M35 42Q30 13 50 13Q73 13 66 43L60 54 40 54Z',color);
  if(p==='blanket_octopus')b+=path('M39 48L6 75 42 65 50 92 58 66 93 75 62 47Z','#b88c9f');
  for(let i=0;i<8;i++){const start=35+i*4.2,end=5+i*12.5,y=70+(i%3)*9;b+=path(`M${start} 48Q${end} 65 ${end} ${y}Q${end+8} ${y+12} ${end+6} ${y-1}`,'none',`stroke="${color}" stroke-width="5"`);}
  b+=eye(40,43,2.5)+eye(61,43,2.5);if(p==='blue_ring_octopus')b+=[34,42,50,58,66].map((x,i)=>`<circle cx="${x}" cy="${31+i%2*9}" r="2.8" stroke="#3675b5" stroke-width="1.6" fill="none"/>`).join('');if(p==='bimac_octopus')b+=eye(34,46,3,'#426a9d')+eye(66,46,3,'#426a9d');
 }
 else if(['giant_squid','reef_squid','jumbo_squid','diamond_squid'].includes(p)){
- const diamond=p==='diamond_squid',reef=p==='reef_squid';b=path(diamond?'M28 38L62 9 94 42 65 69 29 56Z':reef?'M27 41Q43 10 81 24L94 48Q62 79 28 57Z':'M27 42L80 25Q96 46 80 65L27 58Z',p==='jumbo_squid'?'#bc7d73':'#c4aba3');if(!diamond)b+=path('M64 29L80 17 85 35M64 64L80 78 86 59Z','#ab929b');
+ const diamond=p==='diamond_squid',reef=p==='reef_squid';b=path(p==='giant_squid'?'M25 44L92 35Q99 47 92 58L25 57Z':diamond?'M28 38L62 9 94 42 65 69 29 56Z':reef?'M27 41Q43 10 81 24L94 48Q62 79 28 57Z':'M27 42L80 25Q96 46 80 65L27 58Z',p==='jumbo_squid'?'#bc7d73':'#c4aba3');if(!diamond)b+=path(p==='giant_squid'?'M79 37L90 27 95 41M79 57L90 67 95 53Z':'M64 29L80 17 85 35M64 64L80 78 86 59Z','#ab929b');
  for(let i=0;i<8;i++)b+=path(`M30 ${43+i*2}Q${4+i*2} ${20+i*8} ${9+i} ${27+i*7}`,'none');b+=path('M29 46Q2 1 3 13M29 56Q2 98 4 86','none')+eye(32,49,2.5);
 }
 else if(['penguin','rockhopper','chinstrap','gentoo','king_penguin'].includes(p)){
@@ -63,6 +63,8 @@ else {
  else {
  const deep=['triggerfish','angelfish','surgeonfish','parrotfish','wrasse','grouper','clownfish'].includes(p);const color=p==='clownfish'?'#d69b5b':p==='surgeonfish'?'#467fbb':p==='angelfish'?'#4c82a5':p==='parrotfish'?'#79a295':p==='triggerfish'?'#405865':p==='grouper'?'#8c9c86':'#8fafb3';
  b=path(deep?p==='wrasse'?'M9 53Q12 24 32 28Q56 30 76 49L93 38 90 56 96 74 76 64Q33 88 12 65Z':p==='triggerfish'?'M11 55L31 32 67 36 79 51 96 38 91 57 96 74 77 65 35 76Z':'M9 55Q23 29 50 36L76 50 93 39 90 57 96 74 75 66Q36 85 12 65Z':p==='cod'?'M6 55Q18 44 47 47L77 55 94 45 90 59 97 70 76 65Q35 76 10 65Z':p==='icefish'?'M8 57Q17 39 34 44L73 55 95 46 91 60 97 70 75 65Q39 74 12 66Z':'M6 56Q28 42 52 47L78 55 95 36 89 58 97 75 77 65Q35 77 10 66Z',color)+eye(19,54)+line('M10 63L24 64M27 51Q34 59 27 66');
+ const familyBodies={grouper:'M6 60L12 42 29 33Q52 29 78 52L94 43 90 60 96 75 75 67Q44 83 12 70Z',parrotfish:'M8 51L22 33Q37 30 51 40L76 52 93 42 90 58 95 72 75 65Q47 83 17 70L8 61Z',clownfish:'M10 53Q16 34 37 36Q60 33 76 51L92 44 91 61 96 71 76 66Q56 82 30 74L13 64Z',angelfish:'M8 56L28 34 50 28 69 36 79 51 95 40 90 58 95 76 77 68 58 80 29 76Z',surgeonfish:'M8 57Q13 38 37 33Q59 29 77 51L94 40 90 58 96 74 76 66Q48 84 20 72Z',jack:'M7 57L28 44 48 39 70 49 80 55 96 39 90 58 97 73 77 65 46 76 22 70Z',herring:'M6 57Q22 49 46 49L78 57 95 44 90 59 97 72 77 65Q38 71 10 64Z',salmon:'M6 56Q24 40 44 44Q65 45 78 55L95 38 90 58 97 74 77 66Q39 76 11 65Z',tuna:'M6 56Q30 36 52 45L78 55 96 35 89 58 97 76 77 65Q36 79 10 65Z',albacore:'M6 56Q30 36 52 45L78 55 96 35 89 58 97 76 77 65Q36 79 10 65Z',mackerel:'M6 56Q30 42 52 47L78 55 96 35 89 58 97 76 77 65Q36 75 10 65Z'};
+ if(familyBodies[p])b=path(familyBodies[p],color)+eye(19,54)+line('M10 63L24 64M27 51Q34 59 27 66');
  if(['tuna','albacore','mackerel'].includes(p))b+=path(p==='albacore'?'M36 60L66 82 64 72 45 58Z':'M36 61L50 74 52 64Z',blue)+path('M39 47L46 30 51 48M60 51L65 41 70 54Z',blue)+line('M71 52l3-5m1 8 3-5M72 65l3 5m2-6 4 4');
  else if(p==='cod')b+=path('M34 47L39 37 47 47M51 49L59 38 64 51M67 53L72 46 76 55Z',blue)+line('M20 65L19 75');
  else if(p==='flyingfish')b+=path('M28 56L68 18 75 19 51 66Z','#afc8ca')+path('M48 64L72 82 75 77 60 61Z','#bed6d0');
