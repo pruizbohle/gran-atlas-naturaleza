@@ -38,7 +38,11 @@ Las pruebas móviles son Chromium emulado. Android y su firma permanente permane
 
 ## Publicación
 
-La prueba PWA 3.31.0→3.32.0 pasó localmente: rechazo con otra ventana, respaldo exacto, viaje comercial pendiente conservado, investigación/desbloqueo/viaje desde UI y juego/laboratorio offline. Navegación probada a 320, 360, 390, 412 y 1280 px sin desbordamiento. [Informe](docs/gm04a/browser-report.json). Paquete con caché íntegra nueva y actualizador seguro preparado; publicación y hashes públicos pendientes de GitHub Pages.
+La prueba PWA 3.31.0→3.32.0 pasó localmente: rechazo con otra ventana, respaldo exacto, viaje comercial pendiente conservado, investigación/desbloqueo/viaje desde UI y juego/laboratorio offline. Navegación probada a 320, 360, 390, 412 y 1280 px sin desbordamiento. [Informe](docs/gm04a/browser-report.json). **Publicada y verificada en GitHub Pages** mediante el [workflow correcto](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42841464204), commit desplegado `0ca9ede8f87d33639e5e1483a0be9a5330de95b9`. Se comprobaron los **140 archivos web** contra el manifiesto, sin diferencias de hash. La prueba HTTPS del sitio publicado confirmó 12 celdas, desbloqueo y viaje a Archipiélagos tropicales, persistencia offline del sector y laboratorio de 95 láminas, sin errores de JavaScript. [Hashes publicados](docs/gm04a/published-report.json) · [Prueba pública](docs/gm04a/published-browser.json).
+
+Enlaces comprobados: [Juego 3.32.0](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio marino](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-marino-v3320.html) · [Actualizar con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3320.html).
+
+Verificación repetible: `python3 scripts/check-marine-published-hashes-v3320.py` y `node scripts/check-marine-published-v3320.cjs`.
 
 ## Recursos para GM-04B, sin iniciar esa fase
 

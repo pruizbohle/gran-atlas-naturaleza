@@ -24,3 +24,5 @@ Los CSV GM-01 documentan 44 filas y cinco regiones profundas. Aquí solo se enum
 Los siguientes nombres pertenecen al alcance futuro y no se agregan a datos productivos en GM-04A: Anoplogaster brachycera, Anoplogaster cornuta, Argyropelecus aculeatus, Bathypterois grallator, Benthosema glaciale, Ceratias holboelli, Chauliodus macouni, Chlamydoselachus anguineus, Dissostichus mawsoni, Eurypharynx pelecanoides, Grimpoteuthis umbellata, Haliphron atlanticus, Histioteuthis reversa, Idiacanthus antrostomus, Macropinna microstoma, Mesonychoteuthis hamiltoni, Mitsukurina owstoni, Onykia ingens, Stomias boa, Vampyroteuthis infernalis.
 
 Las dos fosas abisales y sus tres filas siguen igualmente sin implementación. No se fija aquí un umbral, investigación, objeto o mecánica de GM-04B/C.
+
+Revisión final después de verificar la publicación 3.32.0: este documento sigue siendo solo un inventario de reutilización. No hay implementación de GM-04B/C ni cambios en sus regiones o datos productivos.

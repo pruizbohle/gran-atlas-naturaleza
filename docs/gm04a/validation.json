@@ -27,5 +27,20 @@
   "browser": "browser-report.json",
   "pwaUpgrade": "3.31.0 -> 3.32.0, exact backup and pending commerce preserved",
   "releaseManifest": "release-manifest.json",
-  "workflowLocalCommands": "passed"
+  "workflowLocalCommands": "passed",
+  "remoteCI": {
+    "status": "success",
+    "run": 42841464204,
+    "deploymentCommit": "0ca9ede8f87d33639e5e1483a0be9a5330de95b9",
+    "historical3300Passed": 430,
+    "historical3310Passed": 11,
+    "current3320Passed": 12
+  },
+  "publication": {
+    "webFilesVerified": 140,
+    "hashMismatches": 0,
+    "browser": "passed",
+    "report": "published-report.json",
+    "browserReport": "published-browser.json"
+  }
 }
