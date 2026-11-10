@@ -24,6 +24,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Migration tests compare the real 3.29.0 commit with the new runtime.
+          fetch-depth: 0
       - name: Evitar desplegar una rama Oceanía aún sin activar
         if: github.ref == 'refs/heads/gm02/oceania'
         run: |
