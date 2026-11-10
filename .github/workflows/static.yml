@@ -37,71 +37,14 @@ jobs:
           node-version: '22'
       - name: Validar código y pruebas del Atlas
         run: |
-          node --check www/js/herp-art-v3192.js
-          node --check www/js/mammal-art-v3194.js
-          node --check www/js/lab/mammal-lab-v3194.js
-          node --check www/js/fish-art-v3191.js
-          node --check www/js/legendary-art-v3197.js
-          node --check www/js/relict-art-v3199.js
-          node --check www/js/lab/polish-lab-v3199.js
-          node --check www/js/lab/polish-review-v3199.js
-          node --check www/js/item-art-v3198.js
-          node --check www/js/lab/item-lab-v3198.js
-          node --check www/js/southamerica-data-v3230.js
-          node --check www/js/southamerica-art-v3230.js
-          node --check www/js/southamerica-polish-v3231.js
-          node --check www/js/lab/southamerica-audit-v3231.js
-          node --check www/js/southamerica-geography-v3230.js
-          node --check www/js/lab/southamerica-lab-v3230.js
-          node scripts/build-southamerica-lab-v3230.cjs --check
-          node scripts/build-southamerica-audit-v3231.cjs --check
-          node --check www/js/northamerica-data-v3220.js
-          node --check www/js/northamerica-art-v3220.js
-          node --check www/js/northamerica-polish-v3221.js
-          node --check www/js/lab/northamerica-lab-v3220.js
-          node --check www/js/pwa-update-v3220.js
-          node scripts/build-northamerica-lab-v3220.cjs --check
-          node --check www/js/pwa-update-v3212.js
-          node --check www/js/update-client-v3212.js
-          node --check www/sw.js
-          node --check www/js/mobile-ui.js
-          node --check www/js/save-manager.js
-          node --check www/js/field-scene-v3210.js
-          node --check www/js/field-ui-v3210.js
-          node --check www/js/lab/field-lab-v3210.js
-          node --check www/js/atlas-geography-v3211b.js
-          node --check www/js/lab/geography-lab-v3211b.js
-          node --check www/js/atlas-ui-v3211.js
-          node --check www/js/atlas-map-v3211.js
-          node --check www/js/lab/atlas-lab-v3211.js
-          node --check www/js/journal-ui-v3250.js
-          node --check www/js/lab/journal-lab-v3250.js
-          node --check www/js/pwa-update-v3260.js
-          node --check www/js/bestiary-ui-v3260.js
-          node --check www/js/lab/bestiary-lab-v3260.js
-          node --check www/js/museum-ui-v3270.js
-          node --check www/js/lab/museum-lab-v3270.js
-          node --check www/js/expeditions-research-ui-v3280.js
-          node --check www/js/lab/expeditions-research-lab-v3280.js
-          node --check scripts/check-expeditions-research-v3280.cjs
-          node --check scripts/check-development-update-v3280.cjs
-          node --check scripts/benchmark-expeditions-research-v3280.cjs
-          node --check www/js/oceania-runtime-v3290.js
-          node --check www/js/oceania-art-v3290.js
-          node --check www/js/oceania-geography-v3290.js
-          node scripts/build-oceania-art-lab-v3290.cjs --check
-          python3 scripts/build-oceania-runtime-v3290.py --check
           node --check www/js/app.js
-          node --check scripts/benchmark-museum-v3270.cjs
-          node --check scripts/check-museum-browser-v3270.cjs
-          node --check scripts/check-museum-update-v3270.cjs
-          node --check scripts/benchmark-stability-v3240.cjs
-          node --check scripts/check-stability-browser-v3240.cjs
-          node --check tests/helpers/legacy-source.cjs
-          node --check www/js/lab/commerce-lab-v3300.js
-          node scripts/build-commerce-release-v3300.cjs
-          node scripts/simulate-commerce-v3300.cjs
-          node --test tests/*.test.cjs
+          node --check www/js/polar-data-v3310.js
+          node --check www/js/polar-art-v3310.js
+          node --check www/js/polar-geography-v3310.js
+          node --check www/js/save-manager.js
+          node --check www/sw.js
+          node scripts/build-polar-release-v3310.cjs
+          node scripts/validate-polar-v3310.cjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload game

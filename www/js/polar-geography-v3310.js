@@ -11,7 +11,7 @@ function layout(continent,regions=[]){
  if(continent!=='Polos')return base.layout(continent,regions);
  const padding=22,raw=cells.map(([regionId,q,r,shortLabel,reason])=>({regionId,q,r,shortLabel,reason,...base.point(q,r)}));
  const origin={x:padding+base.dx/2-Math.min(...raw.map(c=>c.x)),y:padding+base.radius-Math.min(...raw.map(c=>c.y))},positions={};
- const mesh=raw.map(c=>{const region=regions.find(r=>r.id===c.regionId);const cell={cellId:'polar-'+c.regionId,continent,q:c.q,r:c.r,column:c.q+(c.r-(c.r&1))/2,x:c.x+origin.x,y:c.y+origin.y,sourceId:c.regionId,shortLabel:c.shortLabel,label:region?.name||c.shortLabel,terrain:region?.habitats[0]||'bosque',regionIds:region?[region.id]:[],playable:!!region,kind:region?'playable':'reserved'};if(region)positions[region.id]={cellId:cell.cellId,q:cell.q,r:cell.r,x:cell.x,y:cell.y,reason:c.reason};return cell;});
+ const mesh=raw.map(c=>{const region=regions.find(r=>r.id===c.regionId);const cell={cellId:'polar-'+c.regionId,continent,q:c.q,r:c.r,column:c.q+(c.r-(c.r&1))/2,x:c.x+origin.x,y:c.y+origin.y,sourceId:c.regionId,shortLabel:c.shortLabel,label:region?.name||c.shortLabel,terrain:region?.pole==='Ártico'?'tundra':'montana',regionIds:region?[region.id]:[],playable:!!region,kind:region?'playable':'reserved'};if(region)positions[region.id]={cellId:cell.cellId,q:cell.q,r:cell.r,x:cell.x,y:cell.y,reason:c.reason};return cell;});
  for(const r of regions)if(!positions[r.id])throw Error('Unknown polar region: '+r.id);
  return {cells:mesh,positions,origin,board:{width:Math.max(...mesh.map(c=>c.x))+base.dx/2+padding,height:Math.max(...mesh.map(c=>c.y))+base.radius+padding},radius:base.radius};
 }

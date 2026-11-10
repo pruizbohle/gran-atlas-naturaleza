@@ -2107,7 +2107,7 @@ function researchBranchOf(node){return node.branch||RESEARCH_LEGACY_BRANCH[node.
 // GM3310 BEGIN catalog
 const polar3310=globalThis.AtlasPolar3310;
 if(!polar3310)throw Error('Faltan los datos polares 3.31.0');
-for(const[id,sp]of Object.entries(polar3310.species)){if(SPECIES[id])throw Error('Identidad polar duplicada');SPECIES[id]=sp;}
+for(const[id,sp]of Object.entries(polar3310.species)){if(SPECIES[id])throw Error('Identidad polar duplicada');SPECIES[id]=sp;SPECIMEN_CATEGORIES[id]=['Notable'];}
 for(const r of polar3310.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región polar duplicada');REGIONS.push(r);}
 const taxonomyBefore3310=taxonomyInfo;
 taxonomyInfo=function(id){return SPECIES[id]?.origin==='polar3310'?SPECIES[id].taxonomy:taxonomyBefore3310(id);};
@@ -6386,6 +6386,8 @@ const habitatBefore3310=habitatLabel;
 habitatLabel=function(h){return ({agua_polar:'🌊 Aguas junto al hielo',banquisa_artica:'❄ Banquisa ártica',banquisa_antartica:'🧊 Banquisa antártica',costa_antartica:'🐧 Costa antártica',hielo_interior:'🏔 Enclaves rocosos interiores'}[h]||habitatBefore3310(h));};
 const objectsBefore3310=renderObjects;
 renderObjects=function(){return objectsBefore3310()+`<section class="card"><h3>Preparación polar · quinta herramienta</h3><p class="small">Abrigo de expedición polar: Capucha impermeable ×1 + Morral reforzado ×1 + Madera tallada ×3 + Pergamino antiguo ×2. Acreditación permanente; no se consume al abrir regiones.</p><button class="btn" data-action="craft-item" data-id="polar_coat" ${canCraft('polar_coat')?'':'disabled'}>Fabricar abrigo polar</button><p class="small">La capucha y el morral se fabrican en Taller. Sus materiales se obtienen en Europa. Los suministros comerciales actuales apoyan la preparación sin cambiar sus cuatro rutas.</p></section>`;};
+const fieldBefore3310=fieldBackdropMarkup,polarScenes3310=new Map();
+fieldBackdropMarkup=function(h){if(!['agua_polar','banquisa_artica','banquisa_antartica','costa_antartica','hielo_interior'].includes(h))return fieldBefore3310(h);const key=h+state.time;if(polarScenes3310.has(key))return polarScenes3310.get(key);const night=state.time==='noche',water=h==='agua_polar',interior=h==='hielo_interior';const svg=`<svg xmlns="http://www.w3.org/2000/svg" class="field-backdrop" viewBox="0 0 640 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path fill="${night?'#233e50':'#b7d6df'}" d="M0 0H640V280H0Z"/><path fill="#7198aa" d="M0 158L90 110 158 149 240 75 340 157 480 97 640 162V280H0Z"/><path fill="${water?'#416d85':'#d4e6e5'}" d="M0 180Q180 159 320 183T640 177V280H0Z"/><path fill="#eff5eb" d="${interior?'M0 218L70 190 150 230 250 189 335 228 447 192 640 220V280H0Z':'M0 225L80 210 170 230 130 253 0 260ZM365 240L450 219 550 230 510 249Z'}"/></svg>`;polarScenes3310.set(key,svg);return svg;};
 // GM3310 END gameplay
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 render();

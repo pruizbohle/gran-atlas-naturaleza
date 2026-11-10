@@ -1,3 +1,13 @@
+# El Gran Atlas 3.31.0 — Regiones polares
+
+Siete regiones jugables separadas entre Ártico y Antártida, 21 identidades nuevas y 45 presencias. Catálogo mundial: **828 especies, 94 regiones y 1.505 presencias**. Incluye Comercio 3.30.0, preparación polar fabricada y prestigio +7 sin consumirlo. Partidas y viajes pendientes compatibles.
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Informe 3.31.0](README_V3310.md) · [Actualización con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3310.html) · [Laboratorio polar](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-polar-v3310.html)
+
+Android y su firma permanente continúan como trabajo independiente; no se genera APK debug.
+
+## Historial de versiones
+
 # El Gran Atlas v3.29.0 — Oceanía
 
 Ocho regiones, 97 identidades y 131 presencias nuevas; catálogo mundial de 807 identidades y 87 regiones. Guardados compatibles, PWA con actualización segura y funcionamiento offline. [Informe y pruebas](README_V3290.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3290.html) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-arte-oceania-v3290.html).
