@@ -36,4 +36,6 @@ Comandos reproducibles:
 - `node scripts/check-abyssal-pwa-v3340.cjs`
 - `node scripts/build-abyssal-release-v3340.cjs`
 
-La publicación y la verificación PWA/HTTPS se documentarán al finalizar esas comprobaciones.
+La actualización PWA local 3.33.0→3.34.0 pasó con respaldo exacto y rechazo al existir otra ventana. Conserva una operación científica de 180 s y un viaje de 24 h. La operación antigua se completa una vez; investigación, desbloqueo de ambas fosas, subárea hadal y sondeo extraordinario se ejecutan desde UI. Se conserva la cola compartida, el contador cambia sin reconstruir el panel y, después de recargar offline, se resuelve una operación desde otra fosa y otra local con recibos únicos. Atlas, Campo y laboratorio se comprueban a 320/360/390/412/1280 px. [Informe](docs/gm04c/browser-report.json).
+
+Preparados 154 archivos web con SHA-256 y 152 archivos únicos offline. El guardado sigue en `gran_atlas_v05`. README principal y páginas de actualización actuales anuncian 3.34.0; las páginas numeradas anteriores conservan su contexto histórico. La verificación HTTPS se añadirá tras publicar en Pages.

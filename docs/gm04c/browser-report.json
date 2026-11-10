@@ -1,0 +1,26 @@
+{
+  "version": "3.34.0",
+  "upgrade": "3.33.0 -> 3.34.0",
+  "historicalBackupExact": true,
+  "otherWindowBlocksUpdate": true,
+  "pending24hCommerceAnd180sSciencePreserved": true,
+  "legacyOperationSettledOnce": true,
+  "researchAndBothUnlockTravelThroughUI": true,
+  "prestigeNotConsumed": true,
+  "hadalProtocolAndHabitatThroughUI": true,
+  "sharedQueueAndCountdown": true,
+  "offlineGameAndLab": true,
+  "awayAndLocalScientificReceiptsOnce": true,
+  "viewports": [
+    320,
+    360,
+    390,
+    412,
+    1280
+  ],
+  "artPlates": 3,
+  "atlasOpenMeanMs": 49.18973200000028,
+  "clock": "isolated test clock advanced to absolute deadlines; production timer unchanged",
+  "errors": [],
+  "physicalAndroid": false
+}

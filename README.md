@@ -1,3 +1,17 @@
+# El Gran Atlas 3.34.0 — Fosas abisales
+
+GM-04 queda completo con dos fosas, sondeo extraordinario y tres presencias trazadas: **945 especies, 113 regiones y 1744 presencias**. El Atlas oceánico reúne 12 mares superficiales, 5 sectores profundos y 2 fosas. Se reutilizan el pez trípode y el equipo científico; las muestras hadales son reconstrucciones lúdicas que exceden las capacidades históricas de 1842. Las partidas y operaciones de 3.33.0 siguen siendo compatibles.
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Informe 3.34.0](README_V3340.md) · [Actualizar con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3340.html) · [Laboratorio abisal](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-abisal-v3340.html)
+
+Prestigio 475/485, sin consumirlo. No se genera APK ni se interviene la firma Android. El diagnóstico de cierre GM-01–GM-04 se entregará tras verificar la publicación; GM-05 no se inicia automáticamente.
+
+## Historial
+
+### 3.33.0 — Océanos profundos
+
+Cinco regiones profundas, 44 presencias y 20 identidades nuevas: 943 especies, 111 regiones y 1741 presencias. Sondeo y muestreo científico con operaciones persistentes, equipo de sondeo y progresión +9 hasta 465. [Informe 3.33.0](README_V3330.md).
+
 # El Gran Atlas 3.32.0 — Mares superficiales
 
 Doce mares jugables, 192 registros originales y 95 identidades nuevas: **923 especies, 106 regiones y 1.697 presencias**. Incluye todos los continentes y Polos, Comercio offline y prestigio +8 sin consumirlo. Las cinco preparaciones anteriores y el Cuadrante transatlántico siguen siendo útiles.

@@ -51,8 +51,12 @@ jobs:
           node --check www/js/deep-geography-v3330.js
           node --check www/js/deep-art-v3330.js
           node --check www/js/lab/deep-lab-v3330.js
-          node scripts/build-deep-release-v3330.cjs
-          node scripts/validate-deep-v3330.cjs
+          node --check www/js/abyssal-data-v3340.js
+          node --check www/js/abyssal-geography-v3340.js
+          node --check www/js/abyssal-art-v3340.js
+          node --check www/js/lab/abyssal-lab-v3340.js
+          node scripts/build-abyssal-release-v3340.cjs
+          node scripts/validate-abyssal-v3340.cjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload game
