@@ -2113,6 +2113,15 @@ const taxonomyBefore3310=taxonomyInfo;
 taxonomyInfo=function(id){return SPECIES[id]?.origin==='polar3310'?SPECIES[id].taxonomy:taxonomyBefore3310(id);};
 RESEARCH_NODES.push({id:'polos_1',name:'Exploración de las regiones polares',desc:'Ártico y Antártida: sectores separados. Requiere las cinco preparaciones fabricadas, sin consumirlas.',branch:'expediciones',money:4500,knowledge:4000,req:'oceania_1',once:true,effect(s){s.upgrades.polarUnlocked=1;}});
 // GM3310 END catalog
+// GM3320 BEGIN catalog
+const marine3320=globalThis.AtlasMarine3320;
+if(!marine3320)throw Error('Faltan los datos marinos superficiales 3.32.0');
+for(const[id,sp]of Object.entries(marine3320.species)){if(SPECIES[id]||Object.values(SPECIES).some(s=>s.latin===sp.latin))throw Error('Identidad marina duplicada');SPECIES[id]=sp;SPECIMEN_CATEGORIES[id]=['Notable'];}
+for(const r of marine3320.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región marina duplicada');REGIONS.push(r);}
+const taxonomyBefore3320=taxonomyInfo;
+taxonomyInfo=function(id){return SPECIES[id]?.origin==='marine3320'?SPECIES[id].taxonomy:taxonomyBefore3320(id);};
+RESEARCH_NODES.push({id:'mares_superficiales_1',name:'Navegación de mares superficiales',desc:'Doce sectores de superficie; requiere las cinco preparaciones acreditadas. Se reutiliza el Cuadrante transatlántico. No habilita mares profundos ni abisales.',branch:'expediciones',money:5200,knowledge:4600,req:'polos_1',once:true,effect(s){s.upgrades.surfaceSeasUnlocked=1;}});
+// GM3320 END catalog
 function initialState(){
   const region=REGIONS[0].id;
   return {
@@ -2329,6 +2338,9 @@ window.AtlasSaveBridge={
      normalizeCommerce3300(state);migrateProgression3300(state);
  // GM3310 BEGIN import
      migratePolar3310(state);
+ // GM3320 BEGIN import
+     migrateMarine3320(state);
+ // GM3320 END import
  // GM3310 END import
  // EC3300 END import-commerce
      // Evitar calcular un intervalo offline obsoleto al actualizar la partida.
@@ -5199,6 +5211,9 @@ function sexSpriteMarkup(id,sex){
 
 const spriteCache=new Map();
 function getSpriteMarkup(id, skin='normal', sex=null){
+ // GM3320 BEGIN art
+ if(SPECIES[id]?.origin==='marine3320')return globalThis.AtlasMarineArt3320.render(SPECIES[id]);
+ // GM3320 END art
  // GM3310 BEGIN art
  if(SPECIES[id]?.origin==='polar3310')return globalThis.AtlasPolarArt3310.render(SPECIES[id]);
  // GM3310 END art
@@ -6389,6 +6404,29 @@ renderObjects=function(){return objectsBefore3310()+`<section class="card"><h3>P
 const fieldBefore3310=fieldBackdropMarkup,polarScenes3310=new Map();
 fieldBackdropMarkup=function(h){if(!['agua_polar','banquisa_artica','banquisa_antartica','costa_antartica','hielo_interior'].includes(h))return fieldBefore3310(h);const key=h+state.time;if(polarScenes3310.has(key))return polarScenes3310.get(key);const night=state.time==='noche',water=h==='agua_polar',interior=h==='hielo_interior';const svg=`<svg xmlns="http://www.w3.org/2000/svg" class="field-backdrop" viewBox="0 0 640 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path fill="${night?'#233e50':'#b7d6df'}" d="M0 0H640V280H0Z"/><path fill="#7198aa" d="M0 158L90 110 158 149 240 75 340 157 480 97 640 162V280H0Z"/><path fill="${water?'#416d85':'#d4e6e5'}" d="M0 180Q180 159 320 183T640 177V280H0Z"/><path fill="#eff5eb" d="${interior?'M0 218L70 190 150 230 250 189 335 228 447 192 640 220V280H0Z':'M0 225L80 210 170 230 130 253 0 260ZM365 240L450 219 550 230 510 249Z'}"/></svg>`;polarScenes3310.set(key,svg);return svg;};
 // GM3310 END gameplay
+// GM3320 BEGIN gameplay
+CONTINENT_RULES3300['Océanos']={initial:332,step:8,items:[...CONTINENT_RULES3300.Polos.items]};
+CONTINENT_RESEARCH3300.mares_superficiales_1='Océanos';
+ATLAS_CONTINENTS.find(c=>c.id==='Océanos').implemented=true;
+function migrateMarine3320(s){s.upgrades.surfaceSeasUnlocked=!!s.purchases.mares_superficiales_1;return s;}
+migrateMarine3320(state);
+const regionBefore3320=regionRequirementsMet,statusBefore3320=continentStatus,modelBefore3320=atlasRegionModel;
+regionRequirementsMet=function(r){if(r?.continent!=='Océanos')return regionBefore3320(r);return !!state.regionUnlocked[r.id]||r.id===state.currentRegion||!!(state.upgrades.surfaceSeasUnlocked&&craftedReady3300('Océanos')&&state.prestige>=r.unlock.prestige);};
+continentStatus=function(c){return c==='Océanos'?(state.upgrades.surfaceSeasUnlocked?'available':'unlockable'):statusBefore3320(c);};
+atlasRegionModel=function(r){const m=modelBefore3320(r);if(r.continent==='Océanos'){m.requirements.unshift({label:'Investigación de navegación superficial',met:!!state.upgrades.surfaceSeasUnlocked});m.requirements.push({label:'Esquema de cuencas y subáreas; sin navegación profunda',met:true,context:true});if(m.status==='bloqueada')m.summary=m.requirements.find(x=>!x.met)?.label||'Preparación pendiente';}return m;};
+const presenceIndex3320=new Map(marine3320.regions.map(r=>[r.id,marine3320.presences.filter(p=>p.regionId===r.id)]));
+const eligibleBefore3320=eligibleSpecies,autoBefore3320=automaticEligibleSpecies;
+eligibleSpecies=function(region,habitat,time,season){const ps=presenceIndex3320.get(region);return ps?ps.filter(p=>p.habitats.includes(habitat)&&p.times.includes(time)&&p.seasons.includes(season)).map(p=>p.speciesId):eligibleBefore3320(region,habitat,time,season);};
+automaticEligibleSpecies=function(region,season){const ps=presenceIndex3320.get(region);return ps?ps.filter(p=>p.seasons.includes(season)&&p.times.length&&p.habitats.length).map(p=>p.speciesId):autoBefore3320(region,season);};
+const habitatBefore3320=habitatLabel;
+habitatLabel=function(h){return ({costa_marina:'⛵ Costa y praderas marinas',arrecife:'🪸 Arrecife',archipielago:'🏝 Archipiélago',oceano_abierto:'🌊 Océano abierto',mar_austral:'🌬 Mar austral',plataforma_marina:'🐟 Plataforma marina'}[h]||habitatBefore3320(h));};
+const bucketBefore3320=bestiaryTypeBucket;
+bestiaryTypeBucket=function(id){return taxonomyInfo(id).className==='Cephalopoda'?'Pez':bucketBefore3320(id);};
+const fieldBefore3320=fieldBackdropMarkup,marineScenes3320=new Map();
+fieldBackdropMarkup=function(h){if(!['costa_marina','arrecife','archipielago','oceano_abierto','mar_austral','plataforma_marina'].includes(h))return fieldBefore3320(h);const key=h+state.time;if(marineScenes3320.has(key))return marineScenes3320.get(key);const night=state.time==='noche',austral=h==='mar_austral',coast=h==='costa_marina'||h==='archipielago';const svg=`<svg xmlns="http://www.w3.org/2000/svg" class="field-backdrop" viewBox="0 0 640 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path fill="${night?'#193b57':austral?'#b9d1d6':'#bddfe2'}" d="M0 0H640V280H0Z"/><path fill="${austral?'#4e788d':'#388aa0'}" d="M0 145Q160 136 320 150T640 143V280H0Z"/><path fill="none" stroke="#a8dce0" stroke-width="3" d="M0 177q40-12 80 0t80 0t80 0t80 0t80 0t80 0t80 0t80 0M20 235q50-12 100 0t100 0t100 0t100 0t100 0"/>${coast?'<path fill="#ead6a1" d="M0 195L67 158 143 188 198 280H0ZM510 190L578 151 640 176V280H590Z"/>':''}${h==='arrecife'?'<path fill="#cf9c94" stroke="#c3736d" stroke-width="9" stroke-linecap="round" d="M40 280v-55m0 30-19-20m20 9 20-18m510 54v-50m0 25-17-18m18 9 19-26"/>':''}${austral?'<path fill="#e4f1ef" d="M30 216L53 187 79 211 138 220ZM484 243L517 201 555 239 608 247Z"/>':''}</svg>`;marineScenes3320.set(key,svg);return svg;};
+const renderFieldBefore3320=renderField;
+renderField=function(){const view=renderFieldBefore3320(),ps=presenceIndex3320.get(state.currentRegion);if(!ps)return view;const notes=[...new Set(ps.map(p=>p.note))];return view+'<section class="card"><details><summary>Métodos y subáreas de observación marina</summary>'+notes.map(n=>'<p class="small">'+esc(n)+'</p>').join('')+'<p class="small">Cefalópodos: categoría jugable Peces; clase biológica Cephalopoda. Las láminas son referencias anatómicas, no retratos de cada estadio observado.</p></details></section>';};
+// GM3320 END gameplay
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 render();
 })();
