@@ -1,0 +1,30 @@
+{
+  "historical": [
+    {
+      "version": "3.30.0",
+      "commit": "33c99b3",
+      "passed": 430
+    },
+    {
+      "version": "3.31.0",
+      "commit": "043a9e5",
+      "passed": 11
+    },
+    {
+      "version": "3.32.0",
+      "commit": "28deed5",
+      "passed": 12
+    },
+    {
+      "version": "3.33.0",
+      "commit": "e060d0f",
+      "passed": 20
+    }
+  ],
+  "current": {
+    "version": "3.34.0",
+    "passed": 20,
+    "failed": 0
+  },
+  "historicalSourcesUnchanged": true
+}

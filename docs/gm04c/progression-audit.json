@@ -1,0 +1,944 @@
+{
+  "base": "e060d0f",
+  "oldRequirementsUnchanged": [
+    {
+      "id": "HX-01-09",
+      "continent": "Europa",
+      "unlock": {
+        "prestige": 0
+      }
+    },
+    {
+      "id": "HX-01-11",
+      "continent": "Europa",
+      "unlock": {
+        "prestige": 1
+      }
+    },
+    {
+      "id": "HX-02-09",
+      "continent": "Europa",
+      "unlock": {
+        "prestige": 2
+      }
+    },
+    {
+      "id": "HX-02-10",
+      "continent": "Europa",
+      "unlock": {
+        "prestige": 3
+      }
+    },
+    {
+      "id": "HX-02-11",
+      "continent": "Europa",
+      "unlock": {
+        "prestige": 4
+      }
+    },
+    {
+      "id": "HX-02-12",
+      "continent": "Europa",
+      "unlock": {
+        "prestige": 5
+      }
+    },
+    {
+      "id": "HX-03-09",
+      "continent": "Europa",
+      "unlock": {
+        "prestige": 6
+      }
+    },
+    {
+      "id": "HX-03-10",
+      "continent": "Europa",
+      "unlock": {
+        "prestige": 7
+      }
+    },
+    {
+      "id": "HX-03-11",
+      "continent": "Europa",
+      "unlock": {
+        "prestige": 8
+      }
+    },
+    {
+      "id": "HX-03-12",
+      "continent": "Europa",
+      "unlock": {
+        "prestige": 9
+      }
+    },
+    {
+      "id": "HX-03-13",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 10
+      }
+    },
+    {
+      "id": "HX-03-15",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 12
+      }
+    },
+    {
+      "id": "HX-02-13",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 14
+      }
+    },
+    {
+      "id": "HX-03-14",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 16
+      }
+    },
+    {
+      "id": "HX-04-13",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 18
+      }
+    },
+    {
+      "id": "HX-02-15",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 20
+      }
+    },
+    {
+      "id": "HX-03-16",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 22
+      }
+    },
+    {
+      "id": "HX-03-18",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 24
+      }
+    },
+    {
+      "id": "HX-04-14",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 26
+      }
+    },
+    {
+      "id": "HX-04-15",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 28
+      }
+    },
+    {
+      "id": "HX-03-17",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 30
+      }
+    },
+    {
+      "id": "HX-04-12",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 32
+      }
+    },
+    {
+      "id": "HX-04-16",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 34
+      }
+    },
+    {
+      "id": "HX-04-17",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 36
+      }
+    },
+    {
+      "id": "HX-04-18",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 38
+      }
+    },
+    {
+      "id": "HX-05-15",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 40
+      }
+    },
+    {
+      "id": "HX-05-16",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 42
+      }
+    },
+    {
+      "id": "HX-05-17",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 44
+      }
+    },
+    {
+      "id": "HX-06-16",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 46
+      }
+    },
+    {
+      "id": "HX-06-17",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 48
+      }
+    },
+    {
+      "id": "HX-06-18",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 50
+      }
+    },
+    {
+      "id": "HX-06-09",
+      "continent": "África",
+      "unlock": {
+        "prestige": 53
+      }
+    },
+    {
+      "id": "HX-07-10",
+      "continent": "África",
+      "unlock": {
+        "prestige": 56
+      }
+    },
+    {
+      "id": "HX-08-11",
+      "continent": "África",
+      "unlock": {
+        "prestige": 59
+      }
+    },
+    {
+      "id": "HX-06-11",
+      "continent": "África",
+      "unlock": {
+        "prestige": 62
+      }
+    },
+    {
+      "id": "HX-07-08",
+      "continent": "África",
+      "unlock": {
+        "prestige": 65
+      }
+    },
+    {
+      "id": "HX-08-08",
+      "continent": "África",
+      "unlock": {
+        "prestige": 68
+      }
+    },
+    {
+      "id": "HX-09-11",
+      "continent": "África",
+      "unlock": {
+        "prestige": 71
+      }
+    },
+    {
+      "id": "HX-10-10",
+      "continent": "África",
+      "unlock": {
+        "prestige": 74
+      }
+    },
+    {
+      "id": "HX-11-11",
+      "continent": "África",
+      "unlock": {
+        "prestige": 77
+      }
+    },
+    {
+      "id": "HX-09-14",
+      "continent": "África",
+      "unlock": {
+        "prestige": 80
+      }
+    },
+    {
+      "id": "HX-07-12",
+      "continent": "África",
+      "unlock": {
+        "prestige": 83
+      }
+    },
+    {
+      "id": "HX-10-09",
+      "continent": "África",
+      "unlock": {
+        "prestige": 86
+      }
+    },
+    {
+      "id": "HX-08-10",
+      "continent": "África",
+      "unlock": {
+        "prestige": 89
+      }
+    },
+    {
+      "id": "HX-07-13",
+      "continent": "África",
+      "unlock": {
+        "prestige": 92
+      }
+    },
+    {
+      "id": "HX-11-08",
+      "continent": "África",
+      "unlock": {
+        "prestige": 95
+      }
+    },
+    {
+      "id": "HX-06-08",
+      "continent": "África",
+      "unlock": {
+        "prestige": 98
+      }
+    },
+    {
+      "id": "HX-09-09",
+      "continent": "África",
+      "unlock": {
+        "prestige": 101
+      }
+    },
+    {
+      "id": "HX-10-12",
+      "continent": "África",
+      "unlock": {
+        "prestige": 104
+      }
+    },
+    {
+      "id": "HX-08-12",
+      "continent": "África",
+      "unlock": {
+        "prestige": 107
+      }
+    },
+    {
+      "id": "HX-07-14",
+      "continent": "África",
+      "unlock": {
+        "prestige": 110
+      }
+    },
+    {
+      "id": "HX-09-12",
+      "continent": "África",
+      "unlock": {
+        "prestige": 113
+      }
+    },
+    {
+      "id": "HX-11-10",
+      "continent": "África",
+      "unlock": {
+        "prestige": 116
+      }
+    },
+    {
+      "id": "HX-06-07",
+      "continent": "África",
+      "unlock": {
+        "prestige": 119
+      }
+    },
+    {
+      "id": "HX-07-11",
+      "continent": "África",
+      "unlock": {
+        "prestige": 122
+      }
+    },
+    {
+      "id": "HX-01-05",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 125
+      }
+    },
+    {
+      "id": "HX-02-02",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 129
+      }
+    },
+    {
+      "id": "HX-02-03",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 137
+      }
+    },
+    {
+      "id": "HX-02-04",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 141
+      }
+    },
+    {
+      "id": "HX-02-05",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 145
+      }
+    },
+    {
+      "id": "HX-02-06",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 133
+      }
+    },
+    {
+      "id": "HX-03-02",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 149
+      }
+    },
+    {
+      "id": "HX-03-03",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 157
+      }
+    },
+    {
+      "id": "HX-03-04",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 153
+      }
+    },
+    {
+      "id": "HX-03-05",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 161
+      }
+    },
+    {
+      "id": "HX-04-02",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 165
+      }
+    },
+    {
+      "id": "HX-04-03",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 173
+      }
+    },
+    {
+      "id": "HX-04-04",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 169
+      }
+    },
+    {
+      "id": "HX-05-04",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 177
+      }
+    },
+    {
+      "id": "sa_caribe_sudamericano",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 182
+      }
+    },
+    {
+      "id": "sa_llanos_del_orinoco",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 187
+      }
+    },
+    {
+      "id": "sa_andes_centrales",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 197
+      }
+    },
+    {
+      "id": "sa_andes_del_norte",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 192
+      }
+    },
+    {
+      "id": "sa_amazonia",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 202
+      }
+    },
+    {
+      "id": "sa_pantanal",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 207
+      }
+    },
+    {
+      "id": "sa_cerrado_brasileno",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 212
+      }
+    },
+    {
+      "id": "sa_pampas",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 222
+      }
+    },
+    {
+      "id": "sa_desierto_de_atacama",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 217
+      }
+    },
+    {
+      "id": "sa_patagonia_y_tierra_del_fuego",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 227
+      }
+    },
+    {
+      "id": "oc_nueva_guinea",
+      "continent": "Oceanía",
+      "unlock": {
+        "prestige": 269
+      }
+    },
+    {
+      "id": "oc_costa_nordeste_australiana",
+      "continent": "Oceanía",
+      "unlock": {
+        "prestige": 239
+      }
+    },
+    {
+      "id": "oc_norte_tropical_australiano",
+      "continent": "Oceanía",
+      "unlock": {
+        "prestige": 233
+      }
+    },
+    {
+      "id": "oc_desierto_australiano",
+      "continent": "Oceanía",
+      "unlock": {
+        "prestige": 251
+      }
+    },
+    {
+      "id": "oc_tasmania",
+      "continent": "Oceanía",
+      "unlock": {
+        "prestige": 263
+      }
+    },
+    {
+      "id": "oc_australia_occidental",
+      "continent": "Oceanía",
+      "unlock": {
+        "prestige": 257
+      }
+    },
+    {
+      "id": "oc_australia_oriental",
+      "continent": "Oceanía",
+      "unlock": {
+        "prestige": 245
+      }
+    },
+    {
+      "id": "oc_nueva_zelanda",
+      "continent": "Oceanía",
+      "unlock": {
+        "prestige": 275
+      }
+    },
+    {
+      "id": "polar_hielo_artico_occidental",
+      "continent": "Polos",
+      "unlock": {
+        "prestige": 282
+      }
+    },
+    {
+      "id": "polar_hielo_artico_central",
+      "continent": "Polos",
+      "unlock": {
+        "prestige": 289
+      }
+    },
+    {
+      "id": "polar_hielo_artico_oriental",
+      "continent": "Polos",
+      "unlock": {
+        "prestige": 296
+      }
+    },
+    {
+      "id": "polar_hielo_antartico_occidental",
+      "continent": "Polos",
+      "unlock": {
+        "prestige": 303
+      }
+    },
+    {
+      "id": "polar_hielo_antartico_central",
+      "continent": "Polos",
+      "unlock": {
+        "prestige": 310
+      }
+    },
+    {
+      "id": "polar_hielo_antartico_costero",
+      "continent": "Polos",
+      "unlock": {
+        "prestige": 317
+      }
+    },
+    {
+      "id": "polar_hielo_antartico_oriental",
+      "continent": "Polos",
+      "unlock": {
+        "prestige": 324
+      }
+    },
+    {
+      "id": "mar_atlantico_septentrional",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 332
+      }
+    },
+    {
+      "id": "mar_pacifico_noroccidental",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 340
+      }
+    },
+    {
+      "id": "mar_pacifico_nororiental",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 348
+      }
+    },
+    {
+      "id": "mar_oceano_indico_tropical",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 356
+      }
+    },
+    {
+      "id": "mar_mar_tropical_asiatico",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 364
+      }
+    },
+    {
+      "id": "mar_indico_meridional",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 372
+      }
+    },
+    {
+      "id": "mar_archipielagos_tropicales",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 380
+      }
+    },
+    {
+      "id": "mar_pacifico_austral",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 388
+      }
+    },
+    {
+      "id": "mar_atlantico_austral",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 396
+      }
+    },
+    {
+      "id": "mar_oceano_austral_occidental",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 404
+      }
+    },
+    {
+      "id": "mar_oceano_austral_central",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 412
+      }
+    },
+    {
+      "id": "mar_pacifico_suroccidental",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 420
+      }
+    },
+    {
+      "id": "profundo_atlantico_profundo_norte",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 429
+      }
+    },
+    {
+      "id": "profundo_pacifico_profundo_oriental",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 438
+      }
+    },
+    {
+      "id": "profundo_indico_profundo",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 447
+      }
+    },
+    {
+      "id": "profundo_pacifico_profundo_suroccidental",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 456
+      }
+    },
+    {
+      "id": "profundo_oceano_austral_profundo",
+      "continent": "Océanos",
+      "unlock": {
+        "prestige": 465
+      }
+    }
+  ],
+  "abyssal": [
+    {
+      "id": "abisal_fosa_oceanica_occidental",
+      "prestige": 475
+    },
+    {
+      "id": "abisal_fosa_oceanica_oriental",
+      "prestige": 485
+    }
+  ],
+  "priorDeepMaximum": 465,
+  "abyssalStep": 10,
+  "crafts": [
+    "brass_compass",
+    "oceanic_quadrant",
+    "field_telescope",
+    "scholar_hat",
+    "polar_coat",
+    "sounding_kit"
+  ],
+  "soundingRecipe": {
+    "requires": {
+      "brass_shard": 4,
+      "carved_wood": 4,
+      "parchment_scrap": 3,
+      "sturdy_pack": 1
+    }
+  },
+  "priorMaterials": {
+    "sturdy_pack": {
+      "requires": {
+        "animal_trace": 2,
+        "beaver_tail_scale": 1
+      }
+    },
+    "tradeMarket": {
+      "parchment_scrap": 45,
+      "pressed_flower": 40,
+      "river_pebble": 30,
+      "carved_wood": 80,
+      "polished_lens": 160,
+      "brass_shard": 200,
+      "old_ink": 180
+    },
+    "barters": [
+      {
+        "id": "stone_lens",
+        "requires": {
+          "river_pebble": 8
+        },
+        "rewards": {
+          "polished_lens": 1
+        }
+      },
+      {
+        "id": "coin_brass",
+        "requires": {
+          "ancient_coin": 4
+        },
+        "rewards": {
+          "brass_shard": 1
+        }
+      },
+      {
+        "id": "flower_ink",
+        "requires": {
+          "pressed_flower": 6
+        },
+        "rewards": {
+          "old_ink": 1
+        }
+      },
+      {
+        "id": "wood_paper",
+        "requires": {
+          "carved_wood": 3
+        },
+        "rewards": {
+          "parchment_scrap": 2
+        }
+      },
+      {
+        "id": "trace_feather",
+        "requires": {
+          "animal_trace": 6
+        },
+        "rewards": {
+          "owl_feather": 1
+        }
+      }
+    ]
+  },
+  "commercialRoutes": [
+    {
+      "id": "coastal_trade",
+      "name": "Cabotaje de suministros",
+      "hours": 4,
+      "cost": 120,
+      "knowledge": 20,
+      "prestige": 0,
+      "money": 180,
+      "rewards": {
+        "parchment_scrap": 3,
+        "pressed_flower": 2,
+        "river_pebble": 3
+      }
+    },
+    {
+      "id": "workshop_trade",
+      "name": "Proveedores del taller",
+      "hours": 8,
+      "cost": 280,
+      "knowledge": 50,
+      "prestige": 10,
+      "money": 420,
+      "rewards": {
+        "polished_lens": 2,
+        "brass_shard": 2,
+        "carved_wood": 3
+      }
+    },
+    {
+      "id": "archive_trade",
+      "name": "Caravana de cartógrafos",
+      "hours": 12,
+      "cost": 500,
+      "knowledge": 90,
+      "prestige": 53,
+      "money": 750,
+      "rewards": {
+        "old_ink": 2,
+        "parchment_scrap": 5,
+        "brass_shard": 3,
+        "polished_lens": 2
+      }
+    },
+    {
+      "id": "ocean_trade",
+      "name": "Travesía de abastecimiento",
+      "hours": 24,
+      "cost": 900,
+      "knowledge": 160,
+      "prestige": 125,
+      "money": 1350,
+      "rewards": {
+        "brass_shard": 5,
+        "polished_lens": 4,
+        "old_ink": 3,
+        "carved_wood": 6
+      }
+    }
+  ],
+  "research": {
+    "id": "exploracion_abisal_1",
+    "name": "Sondeo extraordinario de fosas",
+    "desc": "Planicie abisal y sectores hadales separados. Reutiliza el equipo de sondeo. Las reconstrucciones hadales son una abstracción lúdica que excede las capacidades reales de 1842.",
+    "branch": "expediciones",
+    "money": 6800,
+    "knowledge": 5800,
+    "req": "exploracion_profunda_1",
+    "once": true
+  }
+}
