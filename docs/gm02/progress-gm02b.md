@@ -1,3 +1,5 @@
+> **Estado vigente posterior:** Oceanía web 3.29.0 publicada y verificada. El propietario autorizó nueva firma permanente Android y migración manual; la web ya no depende de ese bloqueo. [Verificación actual](web-v3290/validation.json). El informe siguiente conserva el estado histórico anterior.
+
 > **Actualización posterior a 7e6319f:** red verificada y cuatro revisiones resueltas; validación final externa completada. Bloqueo actual: firma Android. Véase [estado vigente](release-final/README.md). El contenido siguiente se conserva como registro histórico.
 
 # GM-02B · integración aislada avanzada, sin publicación

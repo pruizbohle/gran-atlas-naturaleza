@@ -21,5 +21,16 @@
     "deviceRestorationPending": true,
     "apkPublished": false
   },
-  "publication": "pending Pages workflow and served resource verification"
+  "publication": {
+    "status": "verified",
+    "workflowRunId": 42743558336,
+    "conclusion": "success",
+    "releaseCommit": "513c273f182dc0109badaf4e62374d4a41232be8",
+    "url": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+    "matchingResourceHashes": 123,
+    "resourceEvidence": "published-resources.json",
+    "browserEvidence": "published-browser.json",
+    "mainIntegrated": true
+  },
+  "verifiedAt": "2026-11-10T02:38:09.667487+00:00"
 }

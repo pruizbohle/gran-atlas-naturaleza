@@ -15,10 +15,10 @@
     "release/regression-final.txt"
   ],
   "pending": [
-    "APK signed build",
-    "Compare APK certificate with previous distributed APK",
-    "Activate already validated external final files after APK verification; adjust current-version test contracts",
-    "Main merge and Pages verification"
+    "Create and back up permanent Android key on user PC; configure four Actions secrets and pin public certificate hash",
+    "Build verified signed Android candidate",
+    "Validate native restoration on physical Android using manual backup/reinstallation/import",
+    "Publish exact verified APK only after device restoration evidence"
   ],
   "regression": {
     "passed": 414,
@@ -26,5 +26,6 @@
     "log": "release/regression-final.txt",
     "sha256": "d2b0997a5bfb5626aa0bd6e3760b2b84bfc0621c1b33219e3e63d1a3eee9b3fa"
   },
-  "publicationStatus": "release-final/publication-status.json"
+  "publicationStatus": "web-v3290/validation.json",
+  "androidPolicy": "New permanent certificate and manual migration authorized by owner; web deployment independent"
 }

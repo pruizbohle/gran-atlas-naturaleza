@@ -1,6 +1,6 @@
 # Estado actual GM-02B · Oceanía web 3.29.0
 
-**Integración web completada y validada; publicación Pages en verificación. Android separado, con firma permanente y migración autorizadas por el propietario.**
+**Oceanía web 3.29.0 publicada y verificada en GitHub Pages. Android separado, con firma permanente y migración autorizadas por el propietario.**
 
 [Informe 3.29.0, pruebas y enlaces](README_V3290.md) · [Creación de clave y migración Android paso a paso](README_ANDROID_FIRMA_PERMANENTE.md). La web instalada conserva 97 IDs, ocho regiones y 131 presencias nuevas: total 807 identidades, 87 regiones y 1.460 presencias. Pasan 416 pruebas y la actualización PWA 3.28→3.29. El APK no se declara publicado ni validado en un dispositivo.
 

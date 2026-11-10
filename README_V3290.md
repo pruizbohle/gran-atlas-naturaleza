@@ -25,3 +25,11 @@ El propietario autorizó una firma permanente nueva y la migración manual con r
 Faltan crear/resguardar la clave en el PC, configurar los cuatro secretos, fijar la huella pública, compilar el candidato y validar la restauración en un Android real. El workflow de publicación exige evidencia asociada al SHA256 de ese APK y descarga ese mismo binario, sin recompilar. No se borra ningún guardado ni se desinstala automáticamente.
 
 El cierre Android permanece pendiente de esas comprobaciones. La web no depende de ellas. GM-03 no se inicia.
+
+## Publicación web verificada
+
+[GitHub Actions 42743558336](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42743558336) terminó en `success` sobre `513c273f182dc0109badaf4e62374d4a41232be8`, integrado en `main`. La misma ejecución aprobó las 416 pruebas antes de desplegar.
+
+[Verificación HTTPS de recursos](docs/gm02/web-v3290/published-resources.json): 123 de 123 archivos coinciden con sus hashes. [Navegador real del sitio servido](docs/gm02/web-v3290/published-browser.json): contexto nuevo y aislado, validación de certificados HTTPS activa, investigación/desbloqueo/viaje desde la UI, prestigio conservado, ocho celdas y 24 tarjetas del laboratorio offline; ningún error de JavaScript. La CA pública del proxy suministrada por el entorno se registró en el almacén de confianza usado por esa prueba; no se desactivó la validación TLS. No se usaron partidas personales.
+
+No se ejecutó ningún workflow Android con esta publicación. El APK 3.29.0 continúa pendiente de clave permanente y restauración real.

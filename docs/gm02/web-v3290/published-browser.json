@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "observedAt": "2026-11-10T02:36:59.279Z",
+  "url": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "version": "3.29.0",
+  "freshIsolatedContext": true,
+  "httpsCertificateValidation": true,
+  "researchThroughUI": true,
+  "travelThroughUI": true,
+  "prestigeNotSpent": true,
+  "offlineMapCells": 8,
+  "offlineLabCards": 24,
+  "preservedSightings": 73,
+  "cache": {
+    "name": "gran-atlas-v3.29.0-oceania-868e7c7381",
+    "assets": 122
+  },
+  "errors": [],
+  "physicalAndroid": false
+}

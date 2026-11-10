@@ -1,0 +1,872 @@
+{
+  "status": "passed",
+  "observedAt": "2026-11-10T02:37:16.230458+00:00",
+  "url": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "releaseCommit": "513c273f182dc0109badaf4e62374d4a41232be8",
+  "filesChecked": 123,
+  "matching": 123,
+  "totalBytes": 9004310,
+  "files": [
+    {
+      "file": "actualizar-v3220.html",
+      "status": 200,
+      "bytes": 1887,
+      "sha256": "23f8082c8b4faa0274d07fafc07b922d39c992db013511936ec170f3e8b43fa2",
+      "match": true
+    },
+    {
+      "file": "actualizar-v3221.html",
+      "status": 200,
+      "bytes": 1887,
+      "sha256": "23f8082c8b4faa0274d07fafc07b922d39c992db013511936ec170f3e8b43fa2",
+      "match": true
+    },
+    {
+      "file": "actualizar-v3230.html",
+      "status": 200,
+      "bytes": 1906,
+      "sha256": "9cde3171dc822d276e2361145efc0fb3d53a5575eec3ec96ef625e75faef2372",
+      "match": true
+    },
+    {
+      "file": "actualizar-v3231.html",
+      "status": 200,
+      "bytes": 1905,
+      "sha256": "a64022ef64435b3ae525c31f5d88d814fb49026588a68126df553d1be03ecbda",
+      "match": true
+    },
+    {
+      "file": "actualizar-v3240.html",
+      "status": 200,
+      "bytes": 1909,
+      "sha256": "35f32c7239d5ba3879ee9af6ca0c9d412af861522de4cd52be2656e70bcf7980",
+      "match": true
+    },
+    {
+      "file": "actualizar-v3250.html",
+      "status": 200,
+      "bytes": 1911,
+      "sha256": "4281e4f2093e18488302f9cde1c49912cfd077af8dc67190dda7c833cd5fc9aa",
+      "match": true
+    },
+    {
+      "file": "actualizar-v3260.html",
+      "status": 200,
+      "bytes": 1912,
+      "sha256": "26f8a9a2b8e724d00d16d97c968ab60d4739fb410412327dbe2c2b3d16ef3c09",
+      "match": true
+    },
+    {
+      "file": "actualizar-v3260b.html",
+      "status": 200,
+      "bytes": 1912,
+      "sha256": "26f8a9a2b8e724d00d16d97c968ab60d4739fb410412327dbe2c2b3d16ef3c09",
+      "match": true
+    },
+    {
+      "file": "actualizar-v3270.html",
+      "status": 200,
+      "bytes": 1912,
+      "sha256": "af1d9593574cc52c7ff4d428fee7190156e91ac2d72c0c45e1270da724c6b55c",
+      "match": true
+    },
+    {
+      "file": "actualizar-v3280.html",
+      "status": 200,
+      "bytes": 1915,
+      "sha256": "9dcbf7a23e7afcbef24a922faceb3971cc63db32891c70a357c17941caa32f7b",
+      "match": true
+    },
+    {
+      "file": "actualizar-v3290.html",
+      "status": 200,
+      "bytes": 1909,
+      "sha256": "873d1f7745ec1e1f2c2db92e35072077d511535dc22ef898b28035b87fec9623",
+      "match": true
+    },
+    {
+      "file": "actualizar.html",
+      "status": 200,
+      "bytes": 1909,
+      "sha256": "873d1f7745ec1e1f2c2db92e35072077d511535dc22ef898b28035b87fec9623",
+      "match": true
+    },
+    {
+      "file": "atlas-release.json",
+      "status": 200,
+      "bytes": 388,
+      "sha256": "c5f10fd669eb0ecb5ee68b5e78e48ac296229dffaf273de1a6c8e40ac8ae47ad",
+      "match": true
+    },
+    {
+      "file": "css/atlas-v3211.css",
+      "status": 200,
+      "bytes": 12005,
+      "sha256": "86f5099282e8b76dcf01c4c67563b70a2af6b8b8e4a8d6256d3a56165928bfc7",
+      "match": true
+    },
+    {
+      "file": "css/bestiary-v3260.css",
+      "status": 200,
+      "bytes": 8546,
+      "sha256": "93c643b6dc42967fee352f0249d043ee05ef15ccc429d6b1f4b31040a36f3692",
+      "match": true
+    },
+    {
+      "file": "css/expeditions-research-v3280.css",
+      "status": 200,
+      "bytes": 10510,
+      "sha256": "f1d62bc49be80ac2b85666ef85acb022c3e74a22998741db9e23196479c5b449",
+      "match": true
+    },
+    {
+      "file": "css/field-v3210.css",
+      "status": 200,
+      "bytes": 10452,
+      "sha256": "44ff1de118c0e92b08238b76338cb710e31e676b8e6cdc0696f453a07db093e3",
+      "match": true
+    },
+    {
+      "file": "css/journal-v3250.css",
+      "status": 200,
+      "bytes": 11070,
+      "sha256": "0143c30e7fa9d42a154d8e630dc5b4bc731e1cbeeef9c8cf7a2b1d510a22274d",
+      "match": true
+    },
+    {
+      "file": "css/museum-v3270.css",
+      "status": 200,
+      "bytes": 11747,
+      "sha256": "465e9f3507b5a88055e0f5bd712463b18dd6e522c44b8675cd5f88f97f0143a7",
+      "match": true
+    },
+    {
+      "file": "css/styles.css",
+      "status": 200,
+      "bytes": 87827,
+      "sha256": "91cbb8c4f54f13e24cf900d7493aa26fb8331f1aa68351b073dbf8ba02e10bd4",
+      "match": true
+    },
+    {
+      "file": "icons/atlas-192.png",
+      "status": 200,
+      "bytes": 13248,
+      "sha256": "1c56dc358e912a2d40f996570ff156ac76007b98e9793f889a2cbdabe71d6ecc",
+      "match": true
+    },
+    {
+      "file": "icons/atlas-512.png",
+      "status": 200,
+      "bytes": 38277,
+      "sha256": "a90a3ebbbb33f34acb1148bbb89e2ddeca064f552dfd8079c37d5314d43c7179",
+      "match": true
+    },
+    {
+      "file": "icons/atlas-icon.svg",
+      "status": 200,
+      "bytes": 558,
+      "sha256": "5ef0633308f672e2ed71b90f179245f8f2e0b1fb2536aa1f413bf768f0e53aa5",
+      "match": true
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "bytes": 10602,
+      "sha256": "2dbf93c213ed89e73453a823b2aa097bce1299b6e0a19bb09456a169afafe09f",
+      "match": true
+    },
+    {
+      "file": "js/app.js",
+      "status": 200,
+      "bytes": 671331,
+      "sha256": "9a024f5ea050caa9f485bea07063108a90e17038c49cd81fdb99deca3291e5ae",
+      "match": true
+    },
+    {
+      "file": "js/atlas-geography-v3211b.js",
+      "status": 200,
+      "bytes": 12437,
+      "sha256": "7b199ef602b19454bf03e115e1976cc6a96603c4c3c13668b78b5482df559863",
+      "match": true
+    },
+    {
+      "file": "js/atlas-map-v3211.js",
+      "status": 200,
+      "bytes": 4151,
+      "sha256": "911552353c79321db0c80d02616651d23afd3c942bee7ad9b1dee4952e63018d",
+      "match": true
+    },
+    {
+      "file": "js/atlas-ui-v3211.js",
+      "status": 200,
+      "bytes": 12670,
+      "sha256": "133ecd834b1579484655ea5423dcc903f9dc9889077ec04947032f426ff92c89",
+      "match": true
+    },
+    {
+      "file": "js/bestiary-ui-v3260.js",
+      "status": 200,
+      "bytes": 11887,
+      "sha256": "50623ab93e950272cc2aced4ba78d4cd2f2474308521d81825216f653ce88d05",
+      "match": true
+    },
+    {
+      "file": "js/bird-art-v3193.js",
+      "status": 200,
+      "bytes": 50452,
+      "sha256": "9475c214345fae86005eb18c1898ac201d31419d9b8d3948f2c43517581f1ef8",
+      "match": true
+    },
+    {
+      "file": "js/expeditions-research-ui-v3280.js",
+      "status": 200,
+      "bytes": 15686,
+      "sha256": "8835163f8e939f2e1630da368aa65f31459e03be6947d620f6140a4e47a5e19d",
+      "match": true
+    },
+    {
+      "file": "js/field-scene-v3210.js",
+      "status": 200,
+      "bytes": 10382,
+      "sha256": "bc6476d17d32450caef39fb64f3c634ae482bf8ff539755c4a05f1c38aba50a5",
+      "match": true
+    },
+    {
+      "file": "js/field-ui-v3210.js",
+      "status": 200,
+      "bytes": 5540,
+      "sha256": "877041f5ed69653db398de589348e3a277e107cae0649e51f213a00759491fd7",
+      "match": true
+    },
+    {
+      "file": "js/fish-art-v3191.js",
+      "status": 200,
+      "bytes": 12846,
+      "sha256": "d1287aea496629827570cb2fdfdc3b9666c1b5a39a8b917af61b41da371cbd8c",
+      "match": true
+    },
+    {
+      "file": "js/herp-art-v3192.js",
+      "status": 200,
+      "bytes": 24781,
+      "sha256": "a9d56f4e8d25fa00193e8fd0ffa63e310b1d0dfc6b0af135120c66fa2ff5b377",
+      "match": true
+    },
+    {
+      "file": "js/item-art-v3198.js",
+      "status": 200,
+      "bytes": 12127,
+      "sha256": "db3a8bc3e0aa6407ef5f453a92aef5c24fef80abb68d753e669e2ea427b6cf82",
+      "match": true
+    },
+    {
+      "file": "js/journal-ui-v3250.js",
+      "status": 200,
+      "bytes": 6347,
+      "sha256": "925e2050eb85c4200163eb191df0e048c1065178a3f21ac1e36558996e098050",
+      "match": true
+    },
+    {
+      "file": "js/lab/atlas-catalog-before-v3211b.js",
+      "status": 200,
+      "bytes": 41075,
+      "sha256": "97b75ea1d376e1981abe63c4f27669bcabe9d3fcc56b9849c28f0bdf337b256b",
+      "match": true
+    },
+    {
+      "file": "js/lab/atlas-catalog-v3211.js",
+      "status": 200,
+      "bytes": 56803,
+      "sha256": "7b68c2006dca81d99f7ae5f55faa57ea4353518b3c4f5bb1689be37f053df1de",
+      "match": true
+    },
+    {
+      "file": "js/lab/atlas-geography-before-simple.js",
+      "status": 200,
+      "bytes": 10094,
+      "sha256": "060eed518873e006312cbdf1c348e6c21c5bb55c6f637b3c2f8c57e979b7bf13",
+      "match": true
+    },
+    {
+      "file": "js/lab/atlas-lab-v3211.js",
+      "status": 200,
+      "bytes": 4784,
+      "sha256": "82a5fbe575a4552bbba934f51ad93901ea046849f0d12820b5516f051716e3b1",
+      "match": true
+    },
+    {
+      "file": "js/lab/atlas-ui-before-v3211b.js",
+      "status": 200,
+      "bytes": 12858,
+      "sha256": "9c4fd419ce34abe270660ee3310f779c0d62904f8395a6ed701904bd52c73e39",
+      "match": true
+    },
+    {
+      "file": "js/lab/bestiary-app-before-v3250.js",
+      "status": 200,
+      "bytes": 619812,
+      "sha256": "1fd6d35f93f898f8db7d2cc00c73aa853208a5a0d1c53d9a2907f9e28ba7e101",
+      "match": true
+    },
+    {
+      "file": "js/lab/bestiary-lab-v3260.js",
+      "status": 200,
+      "bytes": 5583,
+      "sha256": "3570a0e61cd26c926d349806dfd2c64e0f89e430f2931711350129a0fc72faa3",
+      "match": true
+    },
+    {
+      "file": "js/lab/bird-lab-v3193.js",
+      "status": 200,
+      "bytes": 3719,
+      "sha256": "ab717382542c1f501581545f2e9c17333a02f3fae017849778c1d6658f992de3",
+      "match": true
+    },
+    {
+      "file": "js/lab/bird-sprites-v3192b-before.js",
+      "status": 200,
+      "bytes": 185928,
+      "sha256": "6cb68639784b2bf68da77b9f345a51bac66b97a7f13d2413fc8f7b83be5e7974",
+      "match": true
+    },
+    {
+      "file": "js/lab/dimorphism-lab-v3195.js",
+      "status": 200,
+      "bytes": 3702,
+      "sha256": "3b7051063e8f733d556317e7bd62e2768302842102e028a59e6c8c85e28203b2",
+      "match": true
+    },
+    {
+      "file": "js/lab/dimorphism-production.js",
+      "status": 200,
+      "bytes": 403820,
+      "sha256": "fc87f4202e5f39c7a4ba1a6b1c312e032f3e0cf5b845ce536bfa01609bc82bce",
+      "match": true
+    },
+    {
+      "file": "js/lab/expeditions-app-before-v3270.js",
+      "status": 200,
+      "bytes": 651878,
+      "sha256": "bd8c672c73002aa034bb91e28e6c4bb6be2ba2ec89768fae6c09547bace642dc",
+      "match": true
+    },
+    {
+      "file": "js/lab/expeditions-research-lab-v3280.js",
+      "status": 200,
+      "bytes": 6203,
+      "sha256": "316671d93107b3c90cbdd76c5533316efc12221355dc5b816799898234067fdb",
+      "match": true
+    },
+    {
+      "file": "js/lab/field-lab-v3210.js",
+      "status": 200,
+      "bytes": 7341,
+      "sha256": "09f6767f0383e94fee8655a01284b0b3be3b1499757330e12ccac0cb6c35b8dc",
+      "match": true
+    },
+    {
+      "file": "js/lab/geography-lab-v3211b.js",
+      "status": 200,
+      "bytes": 9068,
+      "sha256": "9430b0a1eccd5ec39c8fe525c8ac585b21a829f30437a41faaa22137970470b4",
+      "match": true
+    },
+    {
+      "file": "js/lab/herp-art-v3192-before.js",
+      "status": 200,
+      "bytes": 13689,
+      "sha256": "ffd5962abeb21536c3ef8d31de14b44ffa3cb27ca23361571a244082fd2c145c",
+      "match": true
+    },
+    {
+      "file": "js/lab/herp-specimens-v3192b.js",
+      "status": 200,
+      "bytes": 8112,
+      "sha256": "b73d0c5a2eceb9fd0f3de7ea6ea8c3ac01efb3b9138201b0645150e53ca91415",
+      "match": true
+    },
+    {
+      "file": "js/lab/item-lab-v3198.js",
+      "status": 200,
+      "bytes": 9632,
+      "sha256": "58c752528d17796e8ab577f91a2b8e8aded00d8f67aa19e79b49e1421b2ccecc",
+      "match": true
+    },
+    {
+      "file": "js/lab/journal-app-before-v3240.js",
+      "status": 200,
+      "bytes": 615124,
+      "sha256": "137929ede561607c7c45164be019afd22a89031db96b9714b2aed0f44a8b5839",
+      "match": true
+    },
+    {
+      "file": "js/lab/journal-lab-v3250.js",
+      "status": 200,
+      "bytes": 5105,
+      "sha256": "f75d12911fa25fc5bd30349d703d28e70d117b6cf7d2d7160e30c3b6e9a80146",
+      "match": true
+    },
+    {
+      "file": "js/lab/mammal-lab-v3194.js",
+      "status": 200,
+      "bytes": 5089,
+      "sha256": "0271dd98d359693d534a155c8d499219785d81c1394bf61e0f38eb7b14edb87e",
+      "match": true
+    },
+    {
+      "file": "js/lab/mammal-sprites-v3193-before.js",
+      "status": 200,
+      "bytes": 227008,
+      "sha256": "6a9acbe593ad0359bfa6dd82c2a4f8db05b87bb4420f20971f66633f444d2c2e",
+      "match": true
+    },
+    {
+      "file": "js/lab/museum-app-before-v3260.js",
+      "status": 200,
+      "bytes": 630314,
+      "sha256": "b10346f80d120657428d41891aa7efb7f638bdee86053240064465322d903f15",
+      "match": true
+    },
+    {
+      "file": "js/lab/museum-lab-v3270.js",
+      "status": 200,
+      "bytes": 5937,
+      "sha256": "a5d1e40e578ab6ab75bc109c6c3471ade516416f8740e0036a03757c132a61c2",
+      "match": true
+    },
+    {
+      "file": "js/lab/northamerica-art-before-v3221.js",
+      "status": 200,
+      "bytes": 30490,
+      "sha256": "7a093d0eba364d2e786b3d18a0c99a8968e35d23f15f95011fb50df258e9b410",
+      "match": true
+    },
+    {
+      "file": "js/lab/northamerica-audit-v3221.js",
+      "status": 200,
+      "bytes": 72845,
+      "sha256": "3142a48bd08d77d922ce52294c550beb35de6ce1a3243c8d997066861ea4562a",
+      "match": true
+    },
+    {
+      "file": "js/lab/northamerica-before-v3221.js",
+      "status": 200,
+      "bytes": 405200,
+      "sha256": "0586cc285f5d1062613f6ede4f01a9884497a748b86d6ee15e336d8785e89163",
+      "match": true
+    },
+    {
+      "file": "js/lab/northamerica-catalog-v3220.js",
+      "status": 200,
+      "bytes": 404834,
+      "sha256": "9bd87a0155d8ccf46cdfb338a5435950f4c67de7d0ed867ec8ee4e7b93873cf4",
+      "match": true
+    },
+    {
+      "file": "js/lab/northamerica-lab-v3220.js",
+      "status": 200,
+      "bytes": 4467,
+      "sha256": "9c3e25cf9ab1d7153cfeac27104ba4ef7197c92acaadcc8637c6ce85bac5481f",
+      "match": true
+    },
+    {
+      "file": "js/lab/oceania-art-lab-v3290.js",
+      "status": 200,
+      "bytes": 2985,
+      "sha256": "77022ebd6e2531aac19dc3a46302357969ade5d43861ddadeb08fb5f60c688b3",
+      "match": true
+    },
+    {
+      "file": "js/lab/oceania-catalog-v3290.js",
+      "status": 200,
+      "bytes": 494330,
+      "sha256": "a9d4b0f76c2f56f939f35be27fd5abd1e6b39ecb57b7000945f2bf20df11269c",
+      "match": true
+    },
+    {
+      "file": "js/lab/oceania-map-v3290.js",
+      "status": 200,
+      "bytes": 2289,
+      "sha256": "058be056cbfd495bd7752dde5a38f04e5eb67434ebad784a63ccc71ce6ddd963",
+      "match": true
+    },
+    {
+      "file": "js/lab/pigmentation-lab-v3196.js",
+      "status": 200,
+      "bytes": 3285,
+      "sha256": "5332cc412aca104beb8720ba79b176fbefa5cb62f2cf929195f1ce3678e9b175",
+      "match": true
+    },
+    {
+      "file": "js/lab/polish-before-v3198.js",
+      "status": 200,
+      "bytes": 598291,
+      "sha256": "959ffea92592002a6cc8c4770de59002d36a913e4e09f762186cc5a3c0b3faf4",
+      "match": true
+    },
+    {
+      "file": "js/lab/polish-lab-v3199.js",
+      "status": 200,
+      "bytes": 6347,
+      "sha256": "acae4c417056af484f8663bc18cc9e4ba1c470803d64783dd8a744fa199ef048",
+      "match": true
+    },
+    {
+      "file": "js/lab/polish-production-v3199.js",
+      "status": 200,
+      "bytes": 16032,
+      "sha256": "1e591e0db3fd7ac1d590049a315d203fef6baa84b5062b45ab46dc4165e3dbea",
+      "match": true
+    },
+    {
+      "file": "js/lab/polish-review-v3199.js",
+      "status": 200,
+      "bytes": 101418,
+      "sha256": "3a03bef11a0a86473486f0901b958c7c6ca2133b841d048f44b1f9a757796eef",
+      "match": true
+    },
+    {
+      "file": "js/lab/southamerica-art-before-v3231.js",
+      "status": 200,
+      "bytes": 38096,
+      "sha256": "51a41b373535f63924e3511d38cbba1e6655e51348e7256501078da6fea36f24",
+      "match": true
+    },
+    {
+      "file": "js/lab/southamerica-audit-v3231.js",
+      "status": 200,
+      "bytes": 75249,
+      "sha256": "3db214c50c1eaf31e5fd2d665be28f361da0cfacfe5760d85d73c36867dc183b",
+      "match": true
+    },
+    {
+      "file": "js/lab/southamerica-before-v3231.js",
+      "status": 200,
+      "bytes": 406131,
+      "sha256": "06fa5d8a37dc6a8cdac65f6a30637031ad2a8a96720d9c727ae1a695298b828a",
+      "match": true
+    },
+    {
+      "file": "js/lab/southamerica-catalog-v3230.js",
+      "status": 200,
+      "bytes": 406028,
+      "sha256": "c8873fbac609fa9aeb84093dc282b9880661f5d6235958011d498d65dff6d050",
+      "match": true
+    },
+    {
+      "file": "js/lab/southamerica-lab-v3230.js",
+      "status": 200,
+      "bytes": 6113,
+      "sha256": "2d63665d41989ffe88db2069b7cc0a62fc4ccf9bc0f33acf83d11638a4b0dfc7",
+      "match": true
+    },
+    {
+      "file": "js/lab/special-lab-v3197.js",
+      "status": 200,
+      "bytes": 5037,
+      "sha256": "851f5a1fa60b3da8205ef6a8dc05736590a73ca6529111c85a95b5ca538b3f38",
+      "match": true
+    },
+    {
+      "file": "js/legendary-art-v3197.js",
+      "status": 200,
+      "bytes": 11257,
+      "sha256": "885a75fea726c7c1ce08ce73b0322e17c55d7d2c266c54ceaa1c71e9e98ff3a3",
+      "match": true
+    },
+    {
+      "file": "js/mammal-art-v3194.js",
+      "status": 200,
+      "bytes": 92323,
+      "sha256": "d05187cd87cc1c6fd51117690f9afcbc16fe16bc56723659eb529ec8316d709a",
+      "match": true
+    },
+    {
+      "file": "js/mobile-ui.js",
+      "status": 200,
+      "bytes": 3291,
+      "sha256": "161d6ed638502e43333e6c80482d915bd878071408105aa970089d51afb14f96",
+      "match": true
+    },
+    {
+      "file": "js/museum-ui-v3270.js",
+      "status": 200,
+      "bytes": 16547,
+      "sha256": "bbcb5916086c1e9437bf3c45dfee8f44d63d36da834708f777514468a33223ba",
+      "match": true
+    },
+    {
+      "file": "js/northamerica-art-v3220.js",
+      "status": 200,
+      "bytes": 30580,
+      "sha256": "956997ff98a42be9ab83728f3e4d0f4f89383e9a454e00ac8188c2ede46ced6e",
+      "match": true
+    },
+    {
+      "file": "js/northamerica-data-v3220.js",
+      "status": 200,
+      "bytes": 91493,
+      "sha256": "069cec890536e4a09125370eab1a6bde117d596e7e1865ed28d45d0ca5840039",
+      "match": true
+    },
+    {
+      "file": "js/northamerica-polish-v3221.js",
+      "status": 200,
+      "bytes": 46508,
+      "sha256": "ce2f3661335fd704291f3b17420401f5dde8b03d7b299216305f0e19ce1c13f8",
+      "match": true
+    },
+    {
+      "file": "js/oceania-art-v3290.js",
+      "status": 200,
+      "bytes": 26344,
+      "sha256": "7fa5a19711e57f4592525444d36b081456c1a41a1957da48f9e5002a3be8751e",
+      "match": true
+    },
+    {
+      "file": "js/oceania-data-v3290.js",
+      "status": 200,
+      "bytes": 410893,
+      "sha256": "8d56c3d9e4ff3477a35d051642123f521c1350ec3f93c5f791c0e2512919ea1e",
+      "match": true
+    },
+    {
+      "file": "js/oceania-geography-v3290.js",
+      "status": 200,
+      "bytes": 3952,
+      "sha256": "d35f2f556ad8f07590d525c44da444785c33d06d51e633ad622eac8dcad2ed06",
+      "match": true
+    },
+    {
+      "file": "js/oceania-runtime-v3290.js",
+      "status": 200,
+      "bytes": 120896,
+      "sha256": "b6d1f3b6af95887126e36ade7615a882d1443ee95c8bdf15d186add0c55ffb51",
+      "match": true
+    },
+    {
+      "file": "js/pwa-update-v3212.js",
+      "status": 200,
+      "bytes": 4284,
+      "sha256": "c3a13ce3fc9d34ceac074af33f416270f800ac5414ba93ee3a6c5a330c0ed5f2",
+      "match": true
+    },
+    {
+      "file": "js/pwa-update-v3220.js",
+      "status": 200,
+      "bytes": 4535,
+      "sha256": "0950af660171c8438d508a34e1a7db94498b48884bbc3b4ea59b154e3f15a224",
+      "match": true
+    },
+    {
+      "file": "js/pwa-update-v3260.js",
+      "status": 200,
+      "bytes": 4457,
+      "sha256": "8af86d5c7485e17d85814a43107d2230bc641575c4dc11650258be86407b996d",
+      "match": true
+    },
+    {
+      "file": "js/relict-art-v3199.js",
+      "status": 200,
+      "bytes": 7351,
+      "sha256": "cb4e4807595d56b240a5dca4d82d8ed712bf8abd48303dad031f645cea605e82",
+      "match": true
+    },
+    {
+      "file": "js/save-manager.js",
+      "status": 200,
+      "bytes": 17117,
+      "sha256": "246b2552e4675c1cc35b1669aaa09ebeb9e4889ccc216cc87d6c642b3276fcbb",
+      "match": true
+    },
+    {
+      "file": "js/southamerica-art-v3230.js",
+      "status": 200,
+      "bytes": 38246,
+      "sha256": "d0520fe625819e433cf5c7997565538da10e771f039cc4222a98c1104c0eef9a",
+      "match": true
+    },
+    {
+      "file": "js/southamerica-data-v3230.js",
+      "status": 200,
+      "bytes": 226426,
+      "sha256": "0ca138926288feeffafe7065dd1bc4e133abe77d81a80926d6577810691dafdd",
+      "match": true
+    },
+    {
+      "file": "js/southamerica-geography-v3230.js",
+      "status": 200,
+      "bytes": 3963,
+      "sha256": "18e9679f7563044ede3694b1486612080a5fb0940d9f5a581e40d9f6bf1c38ea",
+      "match": true
+    },
+    {
+      "file": "js/southamerica-polish-v3231.js",
+      "status": 200,
+      "bytes": 41086,
+      "sha256": "622f19061770e3c2c17fbc725dd43c6cd1c0d91758eba04467233fde749af2c8",
+      "match": true
+    },
+    {
+      "file": "js/update-client-v3212.js",
+      "status": 200,
+      "bytes": 1481,
+      "sha256": "b7ce049742e98eb8b8f9dce7b26fcd371d9a3ec8ca3abfaba7d518ef438149b0",
+      "match": true
+    },
+    {
+      "file": "laboratorio-arte-oceania-v3290.html",
+      "status": 200,
+      "bytes": 4148,
+      "sha256": "c90320ba572420d4c4cb8e401f8f08109c080eafa3f02aefa1d4dee3c7147a76",
+      "match": true
+    },
+    {
+      "file": "laboratorio-atlas-v3211.html",
+      "status": 200,
+      "bytes": 2544,
+      "sha256": "05ae765de873b83bee48948469e20828c3e983803eba921fa58ccd10a68f4227",
+      "match": true
+    },
+    {
+      "file": "laboratorio-atlas-v3211b.html",
+      "status": 200,
+      "bytes": 4059,
+      "sha256": "88187f3c1ebd6152654b5660c7ca8e807d60b78f8af9875f847cbaafa33595b9",
+      "match": true
+    },
+    {
+      "file": "laboratorio-aves.html",
+      "status": 200,
+      "bytes": 5445,
+      "sha256": "764f23170242529b740684c0ca637986321c936e4da7f7034c2a3d86a6bcbfb8",
+      "match": true
+    },
+    {
+      "file": "laboratorio-bestiario-v3260.html",
+      "status": 200,
+      "bytes": 3470,
+      "sha256": "7754bd83ffaa2274f860b7caaeac178d43c59388cc1c03cb2b1825d60c340591",
+      "match": true
+    },
+    {
+      "file": "laboratorio-campo-v3210.html",
+      "status": 200,
+      "bytes": 3332,
+      "sha256": "c476ce63707f75d8ec49866b558e0bb34b1bc4076bf6c76a8cc104664f1d1e91",
+      "match": true
+    },
+    {
+      "file": "laboratorio-cuaderno-v3250.html",
+      "status": 200,
+      "bytes": 3441,
+      "sha256": "3320a8043182a6dc12ed1f063c8ddb53bafb0ce6ed709306244318feba0e4ece",
+      "match": true
+    },
+    {
+      "file": "laboratorio-dimorfismo.html",
+      "status": 200,
+      "bytes": 2476,
+      "sha256": "eab42d40f0f0e5ff7e947a41535017b714fc5349639308f01ee0ce318a4e7066",
+      "match": true
+    },
+    {
+      "file": "laboratorio-especiales.html",
+      "status": 200,
+      "bytes": 5066,
+      "sha256": "3c9a908713ad9b60be79c43267e69e885b3deef7e15a37b6106c4c80d676d027",
+      "match": true
+    },
+    {
+      "file": "laboratorio-expediciones-investigaciones-v3280.html",
+      "status": 200,
+      "bytes": 3718,
+      "sha256": "75ddd2efa8947dd91215c19d98fa8c9aef061b5c5f8bcd9751211a6afdd27af7",
+      "match": true
+    },
+    {
+      "file": "laboratorio-herpetologia.html",
+      "status": 200,
+      "bytes": 8107,
+      "sha256": "0f31c8a3960ab93e04b087406a927aed9f70a91f3423ac5e84f96eb0aeef8b21",
+      "match": true
+    },
+    {
+      "file": "laboratorio-mamiferos.html",
+      "status": 200,
+      "bytes": 5641,
+      "sha256": "fcd9310b48f2a8fd380122620eb517a74a68686b9650b55aae7701b56408882d",
+      "match": true
+    },
+    {
+      "file": "laboratorio-museo-v3270.html",
+      "status": 200,
+      "bytes": 3412,
+      "sha256": "5b443542a1b426d5441602ed7171c6ef558fa455d9f889210ac3dc2b89688058",
+      "match": true
+    },
+    {
+      "file": "laboratorio-norteamerica-v3220.html",
+      "status": 200,
+      "bytes": 5380,
+      "sha256": "ee673a3dbb304d1b545f6797e9061f589738a6b80cd7e0db5af1abeaa1fcb6bc",
+      "match": true
+    },
+    {
+      "file": "laboratorio-objetos.html",
+      "status": 200,
+      "bytes": 3110,
+      "sha256": "03e73307d269fc7061eb415b9fb7f6a93849dc7035dcd9019bade60e38313356",
+      "match": true
+    },
+    {
+      "file": "laboratorio-oceania-v3290.html",
+      "status": 200,
+      "bytes": 1314,
+      "sha256": "de7830c9e2298d6f4191461f22c610c06b1b9e58649b990b8e31503bf92c8f96",
+      "match": true
+    },
+    {
+      "file": "laboratorio-peces.html",
+      "status": 200,
+      "bytes": 3746,
+      "sha256": "35cc4d56daacab8d676fcaded576a09826fa80d51860192c5cc1f4987e3051b1",
+      "match": true
+    },
+    {
+      "file": "laboratorio-pigmentacion.html",
+      "status": 200,
+      "bytes": 3842,
+      "sha256": "68b1aee4dff97cb3e22e246a6e1a6e5246508b8fbcf7b3cd89bd5bf00f020569",
+      "match": true
+    },
+    {
+      "file": "laboratorio-pulido-v3199.html",
+      "status": 200,
+      "bytes": 4876,
+      "sha256": "79e0eaf6d88908f07d70015da3ef5d2f816c4f689ca2a18bc57d9d7a232f129c",
+      "match": true
+    },
+    {
+      "file": "laboratorio-sudamerica-v3230.html",
+      "status": 200,
+      "bytes": 5975,
+      "sha256": "5cadb68c8ebb5789173d8bb6808db140d0d0e1f7b9964505853215b963c6a46b",
+      "match": true
+    },
+    {
+      "file": "manifest.webmanifest",
+      "status": 200,
+      "bytes": 506,
+      "sha256": "dd5726aa17379dd1bd7a16a74b97f49f55a618148a32b8b63cea6d53fb3920a0",
+      "match": true
+    },
+    {
+      "file": "sw.js",
+      "status": 200,
+      "bytes": 6786,
+      "sha256": "57fcff771cbc1d1265f66054769561c8aa25c15683cdc221716fa81903ed5c6c",
+      "match": true
+    }
+  ]
+}

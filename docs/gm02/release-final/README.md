@@ -1,3 +1,5 @@
+> **Estado vigente posterior:** Oceanía web 3.29.0 publicada y verificada. El propietario autorizó nueva firma permanente Android y migración manual; la web ya no depende de ese bloqueo. [Verificación actual](../web-v3290/validation.json). El informe siguiente conserva el estado histórico anterior.
+
 # GM-02B desde 7e6319f: paquete 3.29 validado; publicación bloqueada por firma
 
 La política publicada está aplicada (`observations_current=true`, `network_policy.state=enforced`, revisión 1). Conexiones nuevas a GBIF, IOC y Reptile Database devolvieron HTTP 200. No se repitieron GM-01, dingo, Petauroides, ni la implementación anterior de Oceanía.
