@@ -24,5 +24,19 @@
   "browser": "browser-report.json",
   "manifest": "release-manifest.json",
   "science": "decisions.md",
-  "android": "No APK; touch emulation only"
+  "android": "No APK; touch emulation only",
+  "remoteCI": {
+    "status": "success",
+    "run": 42822199192,
+    "deploymentCommit": "efe8ede1dc04437526558146be66570d9911e9db",
+    "historicalPassed": 430,
+    "currentPassed": 11
+  },
+  "publication": {
+    "filesVerified": 133,
+    "hashMismatches": 0,
+    "publicBrowser": "passed",
+    "hashReport": "published-report.json",
+    "browserReport": "published-browser.json"
+  }
 }

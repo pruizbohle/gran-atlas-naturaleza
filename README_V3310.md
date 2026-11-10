@@ -25,6 +25,8 @@ Resultado local: **430/430 pruebas históricas y 11/11 pruebas del runtime actua
 - `node scripts/build-polar-release-v3310.cjs`: manifiesto y revisión de caché reproducibles.
 - `python3 scripts/build-polar-data-v3310.py`: regeneración trazable desde GM-01, sin leer el Excel.
 
-Evidencias en `docs/gm03`. Las pruebas móviles son emulación Chromium táctil, no pruebas en Android físico. Publicación pendiente de validación final y GitHub Pages.
+Evidencias en `docs/gm03`. Las pruebas móviles son emulación Chromium táctil, no pruebas en Android físico. Publicada en [GitHub Pages](https://pruizbohle.github.io/gran-atlas-naturaleza/). [GitHub Actions correcto](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42822199192), commit desplegado `efe8ede1dc04437526558146be66570d9911e9db`. Verificados los hashes de los **133 archivos web**, sin diferencias. La prueba pública confirma siete celdas, desbloqueo/viaje a costa antártica desde la interfaz y persistencia offline del sector y laboratorio de 21 láminas, sin errores de JavaScript. Informes: `published-report.json` y `published-browser.json`.
+
+Comprobación pública repetible: `python3 scripts/check-polar-published-hashes-v3310.py` y `node scripts/check-polar-published-v3310.cjs`.
 
 El navegador completó la actualización con otra ventana bloqueando correctamente el primer intento; al cerrarla se guardó el respaldo exacto. Se comprobó la continuidad del viaje comercial, fabricación del abrigo, investigación, desbloqueo sin gastar prestigio, viaje al Ártico y recarga offline. El informe registra diez aperturas de Atlas con latencia de automatización incluida; no es una medida en teléfono físico ni una comparación de rendimiento humano.
