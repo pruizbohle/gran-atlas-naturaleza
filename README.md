@@ -4,7 +4,7 @@ GM-04 queda completo con dos fosas, sondeo extraordinario y tres presencias traz
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Informe 3.34.0](README_V3340.md) · [Actualizar con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3340.html) · [Laboratorio abisal](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-abisal-v3340.html)
 
-Prestigio 475/485, sin consumirlo. No se genera APK ni se interviene la firma Android. El diagnóstico de cierre GM-01–GM-04 se entregará tras verificar la publicación; GM-05 no se inicia automáticamente.
+Prestigio 475/485, sin consumirlo. No se genera APK ni se interviene la firma Android. [Diagnóstico de cierre GM-01–GM-04](docs/gm04c/world-closure.md): totales, cobertura e incidencias para priorizar GM-05, sin iniciarlo automáticamente.
 
 ## Historial
 

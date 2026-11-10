@@ -1,0 +1,2746 @@
+{
+  "version": "3.34.0",
+  "deployedCommit": "bdca479e5bb953ce83c11598112b6520f1fecd3f",
+  "workflow": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42869520485",
+  "gm05Started": false,
+  "final": {
+    "species": 945,
+    "regions": 113,
+    "presences": 1744,
+    "fullScientificStringsUnique": true,
+    "visualCells": 117,
+    "visualNonfunctionalCells": 4,
+    "geometryByContinent": [
+      {
+        "continent": "Europa",
+        "cells": 10
+      },
+      {
+        "continent": "Asia",
+        "cells": 25
+      },
+      {
+        "continent": "África",
+        "cells": 24
+      },
+      {
+        "continent": "Norteamérica",
+        "cells": 14
+      },
+      {
+        "continent": "Sudamérica",
+        "cells": 10
+      },
+      {
+        "continent": "Oceanía",
+        "cells": 8
+      },
+      {
+        "continent": "Polos",
+        "cells": 7
+      },
+      {
+        "continent": "Océanos",
+        "cells": 19
+      }
+    ]
+  },
+  "baselineGM01": {
+    "version": "3.28.0",
+    "species": 710,
+    "regions": 79,
+    "presences": 1329
+  },
+  "phases": [
+    {
+      "phase": "GM02",
+      "newSpecies": 97,
+      "reusedIds": [],
+      "sourcePresences": 131,
+      "regions": 8
+    },
+    {
+      "phase": "GM03",
+      "newSpecies": 21,
+      "reusedIds": [
+        "zorro_artico"
+      ],
+      "sourcePresences": 45,
+      "regions": 7
+    },
+    {
+      "phase": "GM04A",
+      "newSpecies": 95,
+      "reusedIds": [
+        "af_dugongo",
+        "af_manta_gigante",
+        "af_tiburon_blanco",
+        "af_tiburon_puntas_negras",
+        "af_tortuga_laúd",
+        "asia_esp_0177",
+        "frailecillo_atlantico",
+        "oc_esp_arctocephalus_forsteri",
+        "oc_esp_cephalorhynchus_hectori",
+        "oc_esp_diomedea_epomophora",
+        "oc_esp_megadyptes_antipodes",
+        "polar_esp_aptenodytes_forsteri",
+        "polar_esp_leptonychotes_weddellii",
+        "polar_esp_lobodon_carcinophaga",
+        "polar_esp_mirounga_leonina",
+        "polar_esp_somateria_mollissima",
+        "polar_esp_sterna_paradisaea",
+        "sa_esp_spheniscus_magellanicus"
+      ],
+      "sourcePresences": 192,
+      "regions": 12
+    },
+    {
+      "phase": "GM04B",
+      "newSpecies": 20,
+      "reusedIds": [
+        "mar_esp_architeuthis_dux",
+        "mar_esp_isistius_brasiliensis",
+        "polar_esp_gonatus_fabricii",
+        "polar_esp_somniosus_microcephalus"
+      ],
+      "sourcePresences": 44,
+      "regions": 5
+    },
+    {
+      "phase": "GM04C",
+      "newSpecies": 2,
+      "reusedIds": [
+        "deep_esp_bathypterois_grallator"
+      ],
+      "sourcePresences": 3,
+      "regions": 2
+    }
+  ],
+  "addedSinceGM01": {
+    "species": 235,
+    "regions": 34,
+    "presences": 415
+  },
+  "gm04Combined": {
+    "regions": 19,
+    "presences": 239,
+    "newSpecies": 117,
+    "distinctEffectiveSpecies": 137,
+    "distinctIdsReusedFromBeforeGM04": 20
+  },
+  "source": {
+    "catalogRows": 900,
+    "faunaRowsPreserved": 1574,
+    "cells": 209,
+    "cellsWithFaunaRecounted": 103,
+    "cellsWithoutFaunaRecounted": 106,
+    "plannedPhaseRowsNowImplemented": 415,
+    "plannedPhaseRows": {
+      "19": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_occidental",
+        "speciesId": "polar_esp_pagophila_eburnea",
+        "sourceScientific": "Pagophila eburnea"
+      },
+      "20": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_occidental",
+        "speciesId": "polar_esp_somateria_mollissima",
+        "sourceScientific": "Somateria mollissima"
+      },
+      "21": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_occidental",
+        "speciesId": "polar_esp_sterna_paradisaea",
+        "sourceScientific": "Sterna paradisaea"
+      },
+      "22": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_occidental",
+        "speciesId": "polar_esp_balaena_mysticetus",
+        "sourceScientific": "Balaena mysticetus"
+      },
+      "23": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_occidental",
+        "speciesId": "zorro_artico",
+        "sourceScientific": "Vulpes lagopus"
+      },
+      "24": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_occidental",
+        "speciesId": "polar_esp_odobenus_rosmarus",
+        "sourceScientific": "Odobenus rosmarus"
+      },
+      "25": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_occidental",
+        "speciesId": "polar_esp_pusa_hispida",
+        "sourceScientific": "Pusa hispida"
+      },
+      "26": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_occidental",
+        "speciesId": "polar_esp_ursus_maritimus",
+        "sourceScientific": "Ursus maritimus"
+      },
+      "27": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_occidental",
+        "speciesId": "polar_esp_gonatus_fabricii",
+        "sourceScientific": "Gonatus fabricii"
+      },
+      "28": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_occidental",
+        "speciesId": "polar_esp_somniosus_microcephalus",
+        "sourceScientific": "Somniosus microcephalus"
+      },
+      "79": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_central",
+        "speciesId": "polar_esp_pagophila_eburnea",
+        "sourceScientific": "Pagophila eburnea"
+      },
+      "80": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_central",
+        "speciesId": "polar_esp_balaena_mysticetus",
+        "sourceScientific": "Balaena mysticetus"
+      },
+      "81": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_central",
+        "speciesId": "polar_esp_delphinapterus_leucas",
+        "sourceScientific": "Delphinapterus leucas"
+      },
+      "82": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_central",
+        "speciesId": "polar_esp_monodon_monoceros",
+        "sourceScientific": "Monodon monoceros"
+      },
+      "83": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_central",
+        "speciesId": "polar_esp_erignathus_barbatus",
+        "sourceScientific": "Erignathus barbatus"
+      },
+      "84": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_central",
+        "speciesId": "polar_esp_pusa_hispida",
+        "sourceScientific": "Pusa hispida"
+      },
+      "85": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_central",
+        "speciesId": "polar_esp_ursus_maritimus",
+        "sourceScientific": "Ursus maritimus"
+      },
+      "86": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_oriental",
+        "speciesId": "polar_esp_sterna_paradisaea",
+        "sourceScientific": "Sterna paradisaea"
+      },
+      "87": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_oriental",
+        "speciesId": "polar_esp_monodon_monoceros",
+        "sourceScientific": "Monodon monoceros"
+      },
+      "88": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_oriental",
+        "speciesId": "zorro_artico",
+        "sourceScientific": "Vulpes lagopus"
+      },
+      "89": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_oriental",
+        "speciesId": "polar_esp_odobenus_rosmarus",
+        "sourceScientific": "Odobenus rosmarus"
+      },
+      "90": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_oriental",
+        "speciesId": "polar_esp_pusa_hispida",
+        "sourceScientific": "Pusa hispida"
+      },
+      "91": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_artico_oriental",
+        "speciesId": "polar_esp_ursus_maritimus",
+        "sourceScientific": "Ursus maritimus"
+      },
+      "1548": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_occidental",
+        "speciesId": "polar_esp_aptenodytes_forsteri",
+        "sourceScientific": "Aptenodytes forsteri"
+      },
+      "1549": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_occidental",
+        "speciesId": "polar_esp_pagodroma_nivea",
+        "sourceScientific": "Pagodroma nivea"
+      },
+      "1550": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_occidental",
+        "speciesId": "polar_esp_pygoscelis_adeliae",
+        "sourceScientific": "Pygoscelis adeliae"
+      },
+      "1551": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_occidental",
+        "speciesId": "polar_esp_stercorarius_maccormicki",
+        "sourceScientific": "Stercorarius maccormicki"
+      },
+      "1552": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_occidental",
+        "speciesId": "polar_esp_leptonychotes_weddellii",
+        "sourceScientific": "Leptonychotes weddellii"
+      },
+      "1553": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_central",
+        "speciesId": "polar_esp_aptenodytes_forsteri",
+        "sourceScientific": "Aptenodytes forsteri"
+      },
+      "1554": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_central",
+        "speciesId": "polar_esp_pagodroma_nivea",
+        "sourceScientific": "Pagodroma nivea"
+      },
+      "1555": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_central",
+        "speciesId": "polar_esp_pygoscelis_adeliae",
+        "sourceScientific": "Pygoscelis adeliae"
+      },
+      "1556": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_central",
+        "speciesId": "polar_esp_stercorarius_maccormicki",
+        "sourceScientific": "Stercorarius maccormicki"
+      },
+      "1557": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_costero",
+        "speciesId": "polar_esp_aptenodytes_forsteri",
+        "sourceScientific": "Aptenodytes forsteri"
+      },
+      "1558": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_costero",
+        "speciesId": "polar_esp_pagodroma_nivea",
+        "sourceScientific": "Pagodroma nivea"
+      },
+      "1559": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_costero",
+        "speciesId": "polar_esp_pygoscelis_adeliae",
+        "sourceScientific": "Pygoscelis adeliae"
+      },
+      "1560": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_costero",
+        "speciesId": "polar_esp_leptonychotes_weddellii",
+        "sourceScientific": "Leptonychotes weddellii"
+      },
+      "1561": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_costero",
+        "speciesId": "polar_esp_lobodon_carcinophaga",
+        "sourceScientific": "Lobodon carcinophaga"
+      },
+      "1562": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_costero",
+        "speciesId": "polar_esp_mirounga_leonina",
+        "sourceScientific": "Mirounga leonina"
+      },
+      "1563": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_costero",
+        "speciesId": "polar_esp_ommatophoca_rossii",
+        "sourceScientific": "Ommatophoca rossii"
+      },
+      "1564": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_oriental",
+        "speciesId": "polar_esp_aptenodytes_forsteri",
+        "sourceScientific": "Aptenodytes forsteri"
+      },
+      "1565": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_oriental",
+        "speciesId": "polar_esp_pagodroma_nivea",
+        "sourceScientific": "Pagodroma nivea"
+      },
+      "1566": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_oriental",
+        "speciesId": "polar_esp_pygoscelis_adeliae",
+        "sourceScientific": "Pygoscelis adeliae"
+      },
+      "1567": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_oriental",
+        "speciesId": "polar_esp_hydrurga_leptonyx",
+        "sourceScientific": "Hydrurga leptonyx"
+      },
+      "1568": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_oriental",
+        "speciesId": "polar_esp_leptonychotes_weddellii",
+        "sourceScientific": "Leptonychotes weddellii"
+      },
+      "1569": {
+        "phase": "GM03",
+        "regionId": "polar_hielo_antartico_oriental",
+        "speciesId": "polar_esp_ommatophoca_rossii",
+        "sourceScientific": "Ommatophoca rossii"
+      },
+      "385": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "frailecillo_atlantico",
+        "sourceScientific": "Fratercula arctica"
+      },
+      "386": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_morus_bassanus",
+        "sourceScientific": "Morus bassanus"
+      },
+      "387": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "polar_esp_somateria_mollissima",
+        "sourceScientific": "Somateria mollissima"
+      },
+      "388": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_balaenoptera_acutorostrata",
+        "sourceScientific": "Balaenoptera acutorostrata"
+      },
+      "389": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_balaenoptera_musculus",
+        "sourceScientific": "Balaenoptera musculus"
+      },
+      "390": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_balaenoptera_physalus",
+        "sourceScientific": "Balaenoptera physalus"
+      },
+      "391": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_globicephala_melas",
+        "sourceScientific": "Globicephala melas"
+      },
+      "392": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_grampus_griseus",
+        "sourceScientific": "Grampus griseus"
+      },
+      "393": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_lagenorhynchus_albirostris",
+        "sourceScientific": "Lagenorhynchus albirostris"
+      },
+      "394": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_megaptera_novaeangliae",
+        "sourceScientific": "Megaptera novaeangliae"
+      },
+      "395": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_orcinus_orca",
+        "sourceScientific": "Orcinus orca"
+      },
+      "396": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_phocoena_phocoena",
+        "sourceScientific": "Phocoena phocoena"
+      },
+      "397": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_tursiops_truncatus",
+        "sourceScientific": "Tursiops truncatus"
+      },
+      "398": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_ziphius_cavirostris",
+        "sourceScientific": "Ziphius cavirostris"
+      },
+      "399": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_halichoerus_grypus",
+        "sourceScientific": "Halichoerus grypus"
+      },
+      "400": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_loligo_vulgaris",
+        "sourceScientific": "Loligo vulgaris"
+      },
+      "401": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_octopus_vulgaris",
+        "sourceScientific": "Octopus vulgaris"
+      },
+      "402": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_alopias_vulpinus",
+        "sourceScientific": "Alopias vulpinus"
+      },
+      "403": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_cetorhinus_maximus",
+        "sourceScientific": "Cetorhinus maximus"
+      },
+      "404": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_isurus_oxyrinchus",
+        "sourceScientific": "Isurus oxyrinchus"
+      },
+      "405": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_mobula_mobular",
+        "sourceScientific": "Mobula mobular"
+      },
+      "406": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_clupea_harengus",
+        "sourceScientific": "Clupea harengus"
+      },
+      "407": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_gadus_morhua",
+        "sourceScientific": "Gadus morhua"
+      },
+      "408": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_mola_mola",
+        "sourceScientific": "Mola mola"
+      },
+      "409": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_sardina_pilchardus",
+        "sourceScientific": "Sardina pilchardus"
+      },
+      "410": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_scomber_scombrus",
+        "sourceScientific": "Scomber scombrus"
+      },
+      "411": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_thunnus_alalunga",
+        "sourceScientific": "Thunnus alalunga"
+      },
+      "412": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_septentrional",
+        "speciesId": "mar_esp_thunnus_thynnus",
+        "sourceScientific": "Thunnus thynnus"
+      },
+      "547": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_noroccidental",
+        "speciesId": "mar_esp_balaenoptera_acutorostrata",
+        "sourceScientific": "Balaenoptera acutorostrata"
+      },
+      "548": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_noroccidental",
+        "speciesId": "mar_esp_eschrichtius_robustus",
+        "sourceScientific": "Eschrichtius robustus"
+      },
+      "549": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_noroccidental",
+        "speciesId": "mar_esp_lagenorhynchus_obliquidens",
+        "sourceScientific": "Lagenorhynchus obliquidens"
+      },
+      "550": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_noroccidental",
+        "speciesId": "mar_esp_orcinus_orca",
+        "sourceScientific": "Orcinus orca"
+      },
+      "551": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_noroccidental",
+        "speciesId": "mar_esp_phocoena_phocoena",
+        "sourceScientific": "Phocoena phocoena"
+      },
+      "552": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_noroccidental",
+        "speciesId": "asia_esp_0177",
+        "sourceScientific": "Enhydra lutris"
+      },
+      "553": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_noroccidental",
+        "speciesId": "mar_esp_eumetopias_jubatus",
+        "sourceScientific": "Eumetopias jubatus"
+      },
+      "554": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_noroccidental",
+        "speciesId": "mar_esp_enteroctopus_dofleini",
+        "sourceScientific": "Enteroctopus dofleini"
+      },
+      "555": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_noroccidental",
+        "speciesId": "mar_esp_lamna_ditropis",
+        "sourceScientific": "Lamna ditropis"
+      },
+      "556": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_noroccidental",
+        "speciesId": "mar_esp_gadus_macrocephalus",
+        "sourceScientific": "Gadus macrocephalus"
+      },
+      "557": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_noroccidental",
+        "speciesId": "mar_esp_oncorhynchus_keta",
+        "sourceScientific": "Oncorhynchus keta"
+      },
+      "706": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_fregata_magnificens",
+        "sourceScientific": "Fregata magnificens"
+      },
+      "707": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_phoebastria_immutabilis",
+        "sourceScientific": "Phoebastria immutabilis"
+      },
+      "708": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_delphinus_delphis",
+        "sourceScientific": "Delphinus delphis"
+      },
+      "709": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_eschrichtius_robustus",
+        "sourceScientific": "Eschrichtius robustus"
+      },
+      "710": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_globicephala_macrorhynchus",
+        "sourceScientific": "Globicephala macrorhynchus"
+      },
+      "711": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_orcinus_orca",
+        "sourceScientific": "Orcinus orca"
+      },
+      "712": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_physeter_macrocephalus",
+        "sourceScientific": "Physeter macrocephalus"
+      },
+      "713": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "asia_esp_0177",
+        "sourceScientific": "Enhydra lutris"
+      },
+      "714": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_eumetopias_jubatus",
+        "sourceScientific": "Eumetopias jubatus"
+      },
+      "715": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_mirounga_angustirostris",
+        "sourceScientific": "Mirounga angustirostris"
+      },
+      "716": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_phoca_vitulina",
+        "sourceScientific": "Phoca vitulina"
+      },
+      "717": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_zalophus_californianus",
+        "sourceScientific": "Zalophus californianus"
+      },
+      "718": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_dosidicus_gigas",
+        "sourceScientific": "Dosidicus gigas"
+      },
+      "719": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_enteroctopus_dofleini",
+        "sourceScientific": "Enteroctopus dofleini"
+      },
+      "720": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_octopus_bimaculoides",
+        "sourceScientific": "Octopus bimaculoides"
+      },
+      "721": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_alopias_vulpinus",
+        "sourceScientific": "Alopias vulpinus"
+      },
+      "722": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "af_tiburon_blanco",
+        "sourceScientific": "Carcharodon carcharias"
+      },
+      "723": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_nororiental",
+        "speciesId": "mar_esp_oncorhynchus_tshawytscha",
+        "sourceScientific": "Oncorhynchus tshawytscha"
+      },
+      "1019": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_balaenoptera_edeni",
+        "sourceScientific": "Balaenoptera edeni"
+      },
+      "1020": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_globicephala_macrorhynchus",
+        "sourceScientific": "Globicephala macrorhynchus"
+      },
+      "1021": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_pseudorca_crassidens",
+        "sourceScientific": "Pseudorca crassidens"
+      },
+      "1022": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_stenella_longirostris",
+        "sourceScientific": "Stenella longirostris"
+      },
+      "1023": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "af_dugongo",
+        "sourceScientific": "Dugong dugon"
+      },
+      "1024": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_thysanoteuthis_rhombus",
+        "sourceScientific": "Thysanoteuthis rhombus"
+      },
+      "1025": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_tremoctopus_violaceus",
+        "sourceScientific": "Tremoctopus violaceus"
+      },
+      "1026": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_carcharhinus_longimanus",
+        "sourceScientific": "Carcharhinus longimanus"
+      },
+      "1027": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "af_tiburon_puntas_negras",
+        "sourceScientific": "Carcharhinus melanopterus"
+      },
+      "1028": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_isistius_brasiliensis",
+        "sourceScientific": "Isistius brasiliensis"
+      },
+      "1029": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_mobula_alfredi",
+        "sourceScientific": "Mobula alfredi"
+      },
+      "1030": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_rhincodon_typus",
+        "sourceScientific": "Rhincodon typus"
+      },
+      "1031": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_amphiprion_ocellaris",
+        "sourceScientific": "Amphiprion ocellaris"
+      },
+      "1032": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_exocoetus_volitans",
+        "sourceScientific": "Exocoetus volitans"
+      },
+      "1033": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_istiophorus_platypterus",
+        "sourceScientific": "Istiophorus platypterus"
+      },
+      "1034": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_thunnus_albacares",
+        "sourceScientific": "Thunnus albacares"
+      },
+      "1035": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_indico_tropical",
+        "speciesId": "mar_esp_eretmochelys_imbricata",
+        "sourceScientific": "Eretmochelys imbricata"
+      },
+      "1036": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "af_dugongo",
+        "sourceScientific": "Dugong dugon"
+      },
+      "1037": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_amphioctopus_marginatus",
+        "sourceScientific": "Amphioctopus marginatus"
+      },
+      "1038": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_hapalochlaena_lunulata",
+        "sourceScientific": "Hapalochlaena lunulata"
+      },
+      "1039": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_octopus_cyanea",
+        "sourceScientific": "Octopus cyanea"
+      },
+      "1040": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_sepioteuthis_lessoniana",
+        "sourceScientific": "Sepioteuthis lessoniana"
+      },
+      "1041": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_aetobatus_ocellatus",
+        "sourceScientific": "Aetobatus narinari"
+      },
+      "1042": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "af_tiburon_puntas_negras",
+        "sourceScientific": "Carcharhinus melanopterus"
+      },
+      "1043": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_mobula_alfredi",
+        "sourceScientific": "Mobula alfredi"
+      },
+      "1044": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_rhincodon_typus",
+        "sourceScientific": "Rhincodon typus"
+      },
+      "1045": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_sphyrna_lewini",
+        "sourceScientific": "Sphyrna lewini"
+      },
+      "1046": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_amphiprion_ocellaris",
+        "sourceScientific": "Amphiprion ocellaris"
+      },
+      "1047": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_balistoides_conspicillum",
+        "sourceScientific": "Balistoides conspicillum"
+      },
+      "1048": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_cheilinus_undulatus",
+        "sourceScientific": "Cheilinus undulatus"
+      },
+      "1049": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_epinephelus_lanceolatus",
+        "sourceScientific": "Epinephelus lanceolatus"
+      },
+      "1050": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_hippocampus_comes",
+        "sourceScientific": "Hippocampus comes"
+      },
+      "1051": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_pomacanthus_imperator",
+        "sourceScientific": "Pomacanthus imperator"
+      },
+      "1052": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_laticauda_colubrina",
+        "sourceScientific": "Laticauda colubrina"
+      },
+      "1053": {
+        "phase": "GM04A",
+        "regionId": "mar_mar_tropical_asiatico",
+        "speciesId": "mar_esp_chelonia_mydas",
+        "sourceScientific": "Chelonia mydas"
+      },
+      "1245": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_thalassarche_melanophris",
+        "sourceScientific": "Thalassarche melanophris"
+      },
+      "1246": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_balaenoptera_edeni",
+        "sourceScientific": "Balaenoptera edeni"
+      },
+      "1247": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_delphinus_delphis",
+        "sourceScientific": "Delphinus delphis"
+      },
+      "1248": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_megaptera_novaeangliae",
+        "sourceScientific": "Megaptera novaeangliae"
+      },
+      "1249": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_physeter_macrocephalus",
+        "sourceScientific": "Physeter macrocephalus"
+      },
+      "1250": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_tursiops_truncatus",
+        "sourceScientific": "Tursiops truncatus"
+      },
+      "1251": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_tremoctopus_violaceus",
+        "sourceScientific": "Tremoctopus violaceus"
+      },
+      "1252": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_carcharhinus_longimanus",
+        "sourceScientific": "Carcharhinus longimanus"
+      },
+      "1253": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "af_manta_gigante",
+        "sourceScientific": "Mobula birostris"
+      },
+      "1254": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_prionace_glauca",
+        "sourceScientific": "Prionace glauca"
+      },
+      "1255": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_mola_alexandrini",
+        "sourceScientific": "Mola alexandrini"
+      },
+      "1256": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_thunnus_alalunga",
+        "sourceScientific": "Thunnus alalunga"
+      },
+      "1257": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_thunnus_albacares",
+        "sourceScientific": "Thunnus albacares"
+      },
+      "1258": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "mar_esp_xiphias_gladius",
+        "sourceScientific": "Xiphias gladius"
+      },
+      "1259": {
+        "phase": "GM04A",
+        "regionId": "mar_indico_meridional",
+        "speciesId": "af_tortuga_laúd",
+        "sourceScientific": "Dermochelys coriacea"
+      },
+      "1260": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_fregata_magnificens",
+        "sourceScientific": "Fregata magnificens"
+      },
+      "1261": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "af_dugongo",
+        "sourceScientific": "Dugong dugon"
+      },
+      "1262": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_amphioctopus_marginatus",
+        "sourceScientific": "Amphioctopus marginatus"
+      },
+      "1263": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_octopus_cyanea",
+        "sourceScientific": "Octopus cyanea"
+      },
+      "1264": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_sepioteuthis_lessoniana",
+        "sourceScientific": "Sepioteuthis lessoniana"
+      },
+      "1265": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_thysanoteuthis_rhombus",
+        "sourceScientific": "Thysanoteuthis rhombus"
+      },
+      "1266": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_aetobatus_ocellatus",
+        "sourceScientific": "Aetobatus narinari"
+      },
+      "1267": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "af_tiburon_puntas_negras",
+        "sourceScientific": "Carcharhinus melanopterus"
+      },
+      "1268": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_mobula_alfredi",
+        "sourceScientific": "Mobula alfredi"
+      },
+      "1269": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_rhincodon_typus",
+        "sourceScientific": "Rhincodon typus"
+      },
+      "1270": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_sphyrna_lewini",
+        "sourceScientific": "Sphyrna lewini"
+      },
+      "1271": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_amphiprion_ocellaris",
+        "sourceScientific": "Amphiprion ocellaris"
+      },
+      "1272": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_balistoides_conspicillum",
+        "sourceScientific": "Balistoides conspicillum"
+      },
+      "1273": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_bolbometopon_muricatum",
+        "sourceScientific": "Bolbometopon muricatum"
+      },
+      "1274": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_epinephelus_lanceolatus",
+        "sourceScientific": "Epinephelus lanceolatus"
+      },
+      "1275": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_exocoetus_volitans",
+        "sourceScientific": "Exocoetus volitans"
+      },
+      "1276": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_paracanthurus_hepatus",
+        "sourceScientific": "Paracanthurus hepatus"
+      },
+      "1277": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_pomacanthus_imperator",
+        "sourceScientific": "Pomacanthus imperator"
+      },
+      "1278": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_synanceia_verrucosa",
+        "sourceScientific": "Synanceia verrucosa"
+      },
+      "1279": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_laticauda_colubrina",
+        "sourceScientific": "Laticauda colubrina"
+      },
+      "1280": {
+        "phase": "GM04A",
+        "regionId": "mar_archipielagos_tropicales",
+        "speciesId": "mar_esp_chelonia_mydas",
+        "sourceScientific": "Chelonia mydas"
+      },
+      "1436": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_ardenna_grisea",
+        "sourceScientific": "Ardenna grisea"
+      },
+      "1437": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_diomedea_exulans",
+        "sourceScientific": "Diomedea exulans"
+      },
+      "1438": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_eudyptes_filholi",
+        "sourceScientific": "Eudyptes chrysocome"
+      },
+      "1439": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_balaenoptera_musculus",
+        "sourceScientific": "Balaenoptera musculus"
+      },
+      "1440": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_balaenoptera_physalus",
+        "sourceScientific": "Balaenoptera physalus"
+      },
+      "1441": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_delphinus_delphis",
+        "sourceScientific": "Delphinus delphis"
+      },
+      "1442": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_grampus_griseus",
+        "sourceScientific": "Grampus griseus"
+      },
+      "1443": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_megaptera_novaeangliae",
+        "sourceScientific": "Megaptera novaeangliae"
+      },
+      "1444": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_orcinus_orca",
+        "sourceScientific": "Orcinus orca"
+      },
+      "1445": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_ziphius_cavirostris",
+        "sourceScientific": "Ziphius cavirostris"
+      },
+      "1446": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_architeuthis_dux",
+        "sourceScientific": "Architeuthis dux"
+      },
+      "1447": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_dosidicus_gigas",
+        "sourceScientific": "Dosidicus gigas"
+      },
+      "1448": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_octopus_tetricus",
+        "sourceScientific": "Octopus vulgaris"
+      },
+      "1449": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_isurus_oxyrinchus",
+        "sourceScientific": "Isurus oxyrinchus"
+      },
+      "1450": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_prionace_glauca",
+        "sourceScientific": "Prionace glauca"
+      },
+      "1451": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_mola_alexandrini",
+        "sourceScientific": "Mola alexandrini"
+      },
+      "1452": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_mola_mola",
+        "sourceScientific": "Mola mola"
+      },
+      "1453": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_trachurus_murphyi",
+        "sourceScientific": "Trachurus murphyi"
+      },
+      "1454": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_austral",
+        "speciesId": "mar_esp_xiphias_gladius",
+        "sourceScientific": "Xiphias gladius"
+      },
+      "1475": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_austral",
+        "speciesId": "sa_esp_spheniscus_magellanicus",
+        "sourceScientific": "Spheniscus magellanicus"
+      },
+      "1476": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_austral",
+        "speciesId": "mar_esp_thalassarche_melanophris",
+        "sourceScientific": "Thalassarche melanophris"
+      },
+      "1477": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_austral",
+        "speciesId": "mar_esp_eubalaena_australis",
+        "sourceScientific": "Eubalaena australis"
+      },
+      "1478": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_austral",
+        "speciesId": "mar_esp_globicephala_melas",
+        "sourceScientific": "Globicephala melas"
+      },
+      "1479": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_austral",
+        "speciesId": "mar_esp_lagenorhynchus_obscurus",
+        "sourceScientific": "Lagenorhynchus obscurus"
+      },
+      "1480": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_austral",
+        "speciesId": "mar_esp_orcinus_orca",
+        "sourceScientific": "Orcinus orca"
+      },
+      "1481": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_austral",
+        "speciesId": "mar_esp_physeter_macrocephalus",
+        "sourceScientific": "Physeter macrocephalus"
+      },
+      "1482": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_austral",
+        "speciesId": "mar_esp_otaria_flavescens",
+        "sourceScientific": "Otaria flavescens"
+      },
+      "1483": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_austral",
+        "speciesId": "mar_esp_prionace_glauca",
+        "sourceScientific": "Prionace glauca"
+      },
+      "1484": {
+        "phase": "GM04A",
+        "regionId": "mar_atlantico_austral",
+        "speciesId": "mar_esp_xiphias_gladius",
+        "sourceScientific": "Xiphias gladius"
+      },
+      "1513": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_occidental",
+        "speciesId": "mar_esp_aptenodytes_patagonicus",
+        "sourceScientific": "Aptenodytes patagonicus"
+      },
+      "1514": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_occidental",
+        "speciesId": "mar_esp_ardenna_grisea",
+        "sourceScientific": "Ardenna grisea"
+      },
+      "1515": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_occidental",
+        "speciesId": "mar_esp_diomedea_exulans",
+        "sourceScientific": "Diomedea exulans"
+      },
+      "1516": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_occidental",
+        "speciesId": "mar_esp_pygoscelis_papua",
+        "sourceScientific": "Pygoscelis papua"
+      },
+      "1517": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_occidental",
+        "speciesId": "mar_esp_balaenoptera_physalus",
+        "sourceScientific": "Balaenoptera physalus"
+      },
+      "1518": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_occidental",
+        "speciesId": "mar_esp_megaptera_novaeangliae",
+        "sourceScientific": "Megaptera novaeangliae"
+      },
+      "1519": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_occidental",
+        "speciesId": "mar_esp_orcinus_orca",
+        "sourceScientific": "Orcinus orca"
+      },
+      "1520": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_occidental",
+        "speciesId": "mar_esp_arctocephalus_gazella",
+        "sourceScientific": "Arctocephalus gazella"
+      },
+      "1521": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_occidental",
+        "speciesId": "polar_esp_lobodon_carcinophaga",
+        "sourceScientific": "Lobodon carcinophaga"
+      },
+      "1522": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_occidental",
+        "speciesId": "polar_esp_mirounga_leonina",
+        "sourceScientific": "Mirounga leonina"
+      },
+      "1523": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_occidental",
+        "speciesId": "mar_esp_chaenocephalus_aceratus",
+        "sourceScientific": "Chaenocephalus aceratus"
+      },
+      "1524": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_occidental",
+        "speciesId": "mar_esp_dissostichus_eleginoides",
+        "sourceScientific": "Dissostichus eleginoides"
+      },
+      "1525": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_central",
+        "speciesId": "polar_esp_aptenodytes_forsteri",
+        "sourceScientific": "Aptenodytes forsteri"
+      },
+      "1526": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_central",
+        "speciesId": "mar_esp_aptenodytes_patagonicus",
+        "sourceScientific": "Aptenodytes patagonicus"
+      },
+      "1527": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_central",
+        "speciesId": "mar_esp_eudyptes_filholi",
+        "sourceScientific": "Eudyptes chrysocome"
+      },
+      "1528": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_central",
+        "speciesId": "mar_esp_macronectes_giganteus",
+        "sourceScientific": "Macronectes giganteus"
+      },
+      "1529": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_central",
+        "speciesId": "mar_esp_pygoscelis_antarcticus",
+        "sourceScientific": "Pygoscelis antarcticus"
+      },
+      "1530": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_central",
+        "speciesId": "polar_esp_sterna_paradisaea",
+        "sourceScientific": "Sterna paradisaea"
+      },
+      "1531": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_central",
+        "speciesId": "mar_esp_balaenoptera_musculus",
+        "sourceScientific": "Balaenoptera musculus"
+      },
+      "1532": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_central",
+        "speciesId": "mar_esp_orcinus_orca",
+        "sourceScientific": "Orcinus orca"
+      },
+      "1533": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_central",
+        "speciesId": "mar_esp_arctocephalus_gazella",
+        "sourceScientific": "Arctocephalus gazella"
+      },
+      "1534": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_central",
+        "speciesId": "polar_esp_leptonychotes_weddellii",
+        "sourceScientific": "Leptonychotes weddellii"
+      },
+      "1535": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_central",
+        "speciesId": "polar_esp_mirounga_leonina",
+        "sourceScientific": "Mirounga leonina"
+      },
+      "1536": {
+        "phase": "GM04A",
+        "regionId": "mar_oceano_austral_central",
+        "speciesId": "mar_esp_dissostichus_eleginoides",
+        "sourceScientific": "Dissostichus eleginoides"
+      },
+      "1537": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_suroccidental",
+        "speciesId": "oc_esp_diomedea_epomophora",
+        "sourceScientific": "Diomedea epomophora"
+      },
+      "1538": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_suroccidental",
+        "speciesId": "oc_esp_megadyptes_antipodes",
+        "sourceScientific": "Megadyptes antipodes"
+      },
+      "1539": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_suroccidental",
+        "speciesId": "oc_esp_cephalorhynchus_hectori",
+        "sourceScientific": "Cephalorhynchus hectori"
+      },
+      "1540": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_suroccidental",
+        "speciesId": "mar_esp_eubalaena_australis",
+        "sourceScientific": "Eubalaena australis"
+      },
+      "1541": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_suroccidental",
+        "speciesId": "mar_esp_orcinus_orca",
+        "sourceScientific": "Orcinus orca"
+      },
+      "1542": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_suroccidental",
+        "speciesId": "mar_esp_pseudorca_crassidens",
+        "sourceScientific": "Pseudorca crassidens"
+      },
+      "1543": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_suroccidental",
+        "speciesId": "mar_esp_tursiops_truncatus",
+        "sourceScientific": "Tursiops truncatus"
+      },
+      "1544": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_suroccidental",
+        "speciesId": "oc_esp_arctocephalus_forsteri",
+        "sourceScientific": "Arctocephalus forsteri"
+      },
+      "1545": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_suroccidental",
+        "speciesId": "af_tiburon_blanco",
+        "sourceScientific": "Carcharodon carcharias"
+      },
+      "1546": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_suroccidental",
+        "speciesId": "mar_esp_cetorhinus_maximus",
+        "sourceScientific": "Cetorhinus maximus"
+      },
+      "1547": {
+        "phase": "GM04A",
+        "regionId": "mar_pacifico_suroccidental",
+        "speciesId": "mar_esp_trachurus_novaezelandiae",
+        "sourceScientific": "Trachurus novaezelandiae"
+      },
+      "375": {
+        "phase": "GM04B",
+        "regionId": "profundo_atlantico_profundo_norte",
+        "speciesId": "mar_esp_architeuthis_dux",
+        "sourceScientific": "Architeuthis dux"
+      },
+      "376": {
+        "phase": "GM04B",
+        "regionId": "profundo_atlantico_profundo_norte",
+        "speciesId": "polar_esp_gonatus_fabricii",
+        "sourceScientific": "Gonatus fabricii"
+      },
+      "377": {
+        "phase": "GM04B",
+        "regionId": "profundo_atlantico_profundo_norte",
+        "speciesId": "deep_esp_haliphron_atlanticus",
+        "sourceScientific": "Haliphron atlanticus"
+      },
+      "378": {
+        "phase": "GM04B",
+        "regionId": "profundo_atlantico_profundo_norte",
+        "speciesId": "deep_esp_mitsukurina_owstoni",
+        "sourceScientific": "Mitsukurina owstoni"
+      },
+      "379": {
+        "phase": "GM04B",
+        "regionId": "profundo_atlantico_profundo_norte",
+        "speciesId": "polar_esp_somniosus_microcephalus",
+        "sourceScientific": "Somniosus microcephalus"
+      },
+      "380": {
+        "phase": "GM04B",
+        "regionId": "profundo_atlantico_profundo_norte",
+        "speciesId": "deep_esp_argyropelecus_aculeatus",
+        "sourceScientific": "Argyropelecus aculeatus"
+      },
+      "381": {
+        "phase": "GM04B",
+        "regionId": "profundo_atlantico_profundo_norte",
+        "speciesId": "deep_esp_benthosema_glaciale",
+        "sourceScientific": "Benthosema glaciale"
+      },
+      "382": {
+        "phase": "GM04B",
+        "regionId": "profundo_atlantico_profundo_norte",
+        "speciesId": "deep_esp_ceratias_holboelli",
+        "sourceScientific": "Ceratias holboelli"
+      },
+      "383": {
+        "phase": "GM04B",
+        "regionId": "profundo_atlantico_profundo_norte",
+        "speciesId": "deep_esp_eurypharynx_pelecanoides",
+        "sourceScientific": "Eurypharynx pelecanoides"
+      },
+      "384": {
+        "phase": "GM04B",
+        "regionId": "profundo_atlantico_profundo_norte",
+        "speciesId": "deep_esp_stomias_boa",
+        "sourceScientific": "Stomias boa"
+      },
+      "1134": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_oriental",
+        "speciesId": "mar_esp_architeuthis_dux",
+        "sourceScientific": "Architeuthis dux"
+      },
+      "1135": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_oriental",
+        "speciesId": "deep_esp_vampyroteuthis_infernalis",
+        "sourceScientific": "Vampyroteuthis infernalis"
+      },
+      "1136": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_oriental",
+        "speciesId": "mar_esp_isistius_brasiliensis",
+        "sourceScientific": "Isistius brasiliensis"
+      },
+      "1137": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_oriental",
+        "speciesId": "deep_esp_anoplogaster_cornuta",
+        "sourceScientific": "Anoplogaster cornuta"
+      },
+      "1138": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_oriental",
+        "speciesId": "deep_esp_chauliodus_macouni",
+        "sourceScientific": "Chauliodus macouni"
+      },
+      "1139": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_oriental",
+        "speciesId": "deep_esp_eurypharynx_pelecanoides",
+        "sourceScientific": "Eurypharynx pelecanoides"
+      },
+      "1140": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_oriental",
+        "speciesId": "deep_esp_idiacanthus_antrostomus",
+        "sourceScientific": "Idiacanthus antrostomus"
+      },
+      "1141": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_oriental",
+        "speciesId": "deep_esp_macropinna_microstoma",
+        "sourceScientific": "Macropinna microstoma"
+      },
+      "1371": {
+        "phase": "GM04B",
+        "regionId": "profundo_indico_profundo",
+        "speciesId": "deep_esp_haliphron_atlanticus",
+        "sourceScientific": "Haliphron atlanticus"
+      },
+      "1372": {
+        "phase": "GM04B",
+        "regionId": "profundo_indico_profundo",
+        "speciesId": "deep_esp_histioteuthis_reversa",
+        "sourceScientific": "Histioteuthis reversa"
+      },
+      "1373": {
+        "phase": "GM04B",
+        "regionId": "profundo_indico_profundo",
+        "speciesId": "deep_esp_moroteuthopsis_ingens",
+        "sourceScientific": "Onykia ingens"
+      },
+      "1374": {
+        "phase": "GM04B",
+        "regionId": "profundo_indico_profundo",
+        "speciesId": "deep_esp_vampyroteuthis_infernalis",
+        "sourceScientific": "Vampyroteuthis infernalis"
+      },
+      "1375": {
+        "phase": "GM04B",
+        "regionId": "profundo_indico_profundo",
+        "speciesId": "deep_esp_chlamydoselachus_anguineus",
+        "sourceScientific": "Chlamydoselachus anguineus"
+      },
+      "1376": {
+        "phase": "GM04B",
+        "regionId": "profundo_indico_profundo",
+        "speciesId": "deep_esp_anoplogaster_brachycera",
+        "sourceScientific": "Anoplogaster brachycera"
+      },
+      "1377": {
+        "phase": "GM04B",
+        "regionId": "profundo_indico_profundo",
+        "speciesId": "deep_esp_anoplogaster_cornuta",
+        "sourceScientific": "Anoplogaster cornuta"
+      },
+      "1378": {
+        "phase": "GM04B",
+        "regionId": "profundo_indico_profundo",
+        "speciesId": "deep_esp_bathypterois_grallator",
+        "sourceScientific": "Bathypterois grallator"
+      },
+      "1379": {
+        "phase": "GM04B",
+        "regionId": "profundo_indico_profundo",
+        "speciesId": "deep_esp_ceratias_holboelli",
+        "sourceScientific": "Ceratias holboelli"
+      },
+      "1380": {
+        "phase": "GM04B",
+        "regionId": "profundo_indico_profundo",
+        "speciesId": "deep_esp_eurypharynx_pelecanoides",
+        "sourceScientific": "Eurypharynx pelecanoides"
+      },
+      "1486": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_suroccidental",
+        "speciesId": "deep_esp_grimpoteuthis_abyssicola",
+        "sourceScientific": "Grimpoteuthis umbellata"
+      },
+      "1487": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_suroccidental",
+        "speciesId": "deep_esp_histioteuthis_reversa",
+        "sourceScientific": "Histioteuthis reversa"
+      },
+      "1488": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_suroccidental",
+        "speciesId": "deep_esp_vampyroteuthis_infernalis",
+        "sourceScientific": "Vampyroteuthis infernalis"
+      },
+      "1489": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_suroccidental",
+        "speciesId": "deep_esp_mitsukurina_owstoni",
+        "sourceScientific": "Mitsukurina owstoni"
+      },
+      "1490": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_suroccidental",
+        "speciesId": "deep_esp_anoplogaster_brachycera",
+        "sourceScientific": "Anoplogaster brachycera"
+      },
+      "1491": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_suroccidental",
+        "speciesId": "deep_esp_anoplogaster_cornuta",
+        "sourceScientific": "Anoplogaster cornuta"
+      },
+      "1492": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_suroccidental",
+        "speciesId": "deep_esp_chauliodus_macouni",
+        "sourceScientific": "Chauliodus macouni"
+      },
+      "1493": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_suroccidental",
+        "speciesId": "deep_esp_eurypharynx_pelecanoides",
+        "sourceScientific": "Eurypharynx pelecanoides"
+      },
+      "1494": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_suroccidental",
+        "speciesId": "deep_esp_macropinna_microstoma",
+        "sourceScientific": "Macropinna microstoma"
+      },
+      "1495": {
+        "phase": "GM04B",
+        "regionId": "profundo_pacifico_profundo_suroccidental",
+        "speciesId": "deep_esp_stomias_boa",
+        "sourceScientific": "Stomias boa"
+      },
+      "1570": {
+        "phase": "GM04B",
+        "regionId": "profundo_oceano_austral_profundo",
+        "speciesId": "deep_esp_mesonychoteuthis_hamiltoni",
+        "sourceScientific": "Mesonychoteuthis hamiltoni"
+      },
+      "1571": {
+        "phase": "GM04B",
+        "regionId": "profundo_oceano_austral_profundo",
+        "speciesId": "deep_esp_moroteuthopsis_ingens",
+        "sourceScientific": "Onykia ingens"
+      },
+      "1572": {
+        "phase": "GM04B",
+        "regionId": "profundo_oceano_austral_profundo",
+        "speciesId": "deep_esp_vampyroteuthis_infernalis",
+        "sourceScientific": "Vampyroteuthis infernalis"
+      },
+      "1573": {
+        "phase": "GM04B",
+        "regionId": "profundo_oceano_austral_profundo",
+        "speciesId": "deep_esp_argyropelecus_aculeatus",
+        "sourceScientific": "Argyropelecus aculeatus"
+      },
+      "1574": {
+        "phase": "GM04B",
+        "regionId": "profundo_oceano_austral_profundo",
+        "speciesId": "deep_esp_ceratias_holboelli",
+        "sourceScientific": "Ceratias holboelli"
+      },
+      "1575": {
+        "phase": "GM04B",
+        "regionId": "profundo_oceano_austral_profundo",
+        "speciesId": "deep_esp_dissostichus_mawsoni",
+        "sourceScientific": "Dissostichus mawsoni"
+      },
+      "1322": {
+        "phase": "GM04C",
+        "regionId": "abisal_fosa_oceanica_occidental",
+        "speciesId": "deep_esp_bathypterois_grallator",
+        "sourceScientific": "Bathypterois grallator"
+      },
+      "1323": {
+        "phase": "GM04C",
+        "regionId": "abisal_fosa_oceanica_occidental",
+        "speciesId": "abisal_esp_pseudoliparis_swirei",
+        "sourceScientific": "Pseudoliparis swirei"
+      },
+      "1485": {
+        "phase": "GM04C",
+        "regionId": "abisal_fosa_oceanica_oriental",
+        "speciesId": "abisal_esp_pseudoliparis_kermadecensis",
+        "sourceScientific": "Notoliparis kermadecensis"
+      },
+      "1116": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_casuarius_casuarius",
+        "sourceScientific": "Casuarius casuarius"
+      },
+      "1117": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_cicinnurus_regius",
+        "sourceScientific": "Cicinnurus regius"
+      },
+      "1118": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_cicinnurus_respublica",
+        "sourceScientific": "Cicinnurus respublica"
+      },
+      "1119": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_dacelo_leachii",
+        "sourceScientific": "Dacelo leachii"
+      },
+      "1120": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_lophorina_superba",
+        "sourceScientific": "Lophorina superba"
+      },
+      "1121": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_paradisaea_apoda",
+        "sourceScientific": "Paradisaea apoda"
+      },
+      "1122": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_seleucidis_melanoleucus",
+        "sourceScientific": "Seleucidis melanoleucus"
+      },
+      "1123": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_trichoglossus_haematodus",
+        "sourceScientific": "Trichoglossus haematodus"
+      },
+      "1124": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_harpyopsis_novaeguineae",
+        "sourceScientific": "Harpyopsis novaeguineae"
+      },
+      "1125": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_dendrolagus_goodfellowi",
+        "sourceScientific": "Dendrolagus goodfellowi"
+      },
+      "1126": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_dendrolagus_matschiei",
+        "sourceScientific": "Dendrolagus matschiei"
+      },
+      "1127": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_phalanger_orientalis",
+        "sourceScientific": "Phalanger orientalis"
+      },
+      "1128": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_spilocuscus_maculatus",
+        "sourceScientific": "Spilocuscus maculatus"
+      },
+      "1129": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_zaglossus_bartoni",
+        "sourceScientific": "Zaglossus bartoni"
+      },
+      "1130": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_morelia_viridis",
+        "sourceScientific": "Morelia viridis"
+      },
+      "1131": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_varanus_salvadorii",
+        "sourceScientific": "Varanus salvadorii"
+      },
+      "1132": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_crocodylus_novaeguineae",
+        "sourceScientific": "Crocodylus novaeguineae"
+      },
+      "1133": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_guinea",
+        "speciesId": "oc_esp_oxyuranus_scutellatus",
+        "sourceScientific": "Oxyuranus scutellatus"
+      },
+      "1281": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_casuarius_casuarius",
+        "sourceScientific": "Casuarius casuarius"
+      },
+      "1282": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_dacelo_novaeguineae",
+        "sourceScientific": "Dacelo novaeguineae"
+      },
+      "1283": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_trichoglossus_moluccanus",
+        "sourceScientific": "Trichoglossus moluccanus"
+      },
+      "1284": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_dactylopsila_trivirgata",
+        "sourceScientific": "Dactylopsila trivirgata"
+      },
+      "1285": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_dendrolagus_lumholtzi",
+        "sourceScientific": "Dendrolagus lumholtzi"
+      },
+      "1286": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_petrogale_mareeba",
+        "sourceScientific": "Petrogale mareeba"
+      },
+      "1287": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_ornithorhynchus_anatinus",
+        "sourceScientific": "Ornithorhynchus anatinus"
+      },
+      "1288": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_pteropus_conspicillatus",
+        "sourceScientific": "Pteropus conspicillatus"
+      },
+      "1289": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_tachyglossus_aculeatus",
+        "sourceScientific": "Tachyglossus aculeatus"
+      },
+      "1290": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_chlamydosaurus_kingii",
+        "sourceScientific": "Chlamydosaurus kingii"
+      },
+      "1291": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_intellagama_lesueurii",
+        "sourceScientific": "Intellagama lesueurii"
+      },
+      "1292": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_crocodylus_porosus",
+        "sourceScientific": "Crocodylus porosus"
+      },
+      "1293": {
+        "phase": "GM02",
+        "regionId": "oc_costa_nordeste_australiana",
+        "speciesId": "oc_esp_ranoidea_caerulea",
+        "sourceScientific": "Ranoidea caerulea"
+      },
+      "1294": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_pelecanus_conspicillatus",
+        "sourceScientific": "Pelecanus conspicillatus"
+      },
+      "1295": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_calyptorhynchus_banksii",
+        "sourceScientific": "Calyptorhynchus banksii"
+      },
+      "1296": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_dacelo_novaeguineae",
+        "sourceScientific": "Dacelo novaeguineae"
+      },
+      "1297": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_dromaius_novaehollandiae",
+        "sourceScientific": "Dromaius novaehollandiae"
+      },
+      "1298": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_canis_familiaris",
+        "sourceScientific": "Canis familiaris"
+      },
+      "1299": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_notamacropus_agilis",
+        "sourceScientific": "Notamacropus agilis"
+      },
+      "1300": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_osphranter_rufus",
+        "sourceScientific": "Osphranter rufus"
+      },
+      "1301": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_tachyglossus_aculeatus",
+        "sourceScientific": "Tachyglossus aculeatus"
+      },
+      "1302": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_lates_calcarifer",
+        "sourceScientific": "Lates calcarifer"
+      },
+      "1303": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_chlamydosaurus_kingii",
+        "sourceScientific": "Chlamydosaurus kingii"
+      },
+      "1304": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_crocodylus_johnstoni",
+        "sourceScientific": "Crocodylus johnstoni"
+      },
+      "1305": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_crocodylus_porosus",
+        "sourceScientific": "Crocodylus porosus"
+      },
+      "1306": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_ranoidea_caerulea",
+        "sourceScientific": "Ranoidea caerulea"
+      },
+      "1307": {
+        "phase": "GM02",
+        "regionId": "oc_norte_tropical_australiano",
+        "speciesId": "oc_esp_oxyuranus_scutellatus",
+        "sourceScientific": "Oxyuranus scutellatus"
+      },
+      "1308": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_dromaius_novaehollandiae",
+        "sourceScientific": "Dromaius novaehollandiae"
+      },
+      "1309": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_eolophus_roseicapilla",
+        "sourceScientific": "Eolophus roseicapilla"
+      },
+      "1310": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_melopsittacus_undulatus",
+        "sourceScientific": "Melopsittacus undulatus"
+      },
+      "1311": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_nymphicus_hollandicus",
+        "sourceScientific": "Nymphicus hollandicus"
+      },
+      "1312": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_aquila_audax",
+        "sourceScientific": "Aquila audax"
+      },
+      "1313": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_canis_familiaris",
+        "sourceScientific": "Canis familiaris"
+      },
+      "1314": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_dasycercus_cristicauda",
+        "sourceScientific": "Dasycercus cristicauda"
+      },
+      "1315": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_macrotis_lagotis",
+        "sourceScientific": "Macrotis lagotis"
+      },
+      "1316": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_osphranter_rufus",
+        "sourceScientific": "Osphranter rufus"
+      },
+      "1317": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_moloch_horridus",
+        "sourceScientific": "Moloch horridus"
+      },
+      "1318": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_pogona_vitticeps",
+        "sourceScientific": "Pogona vitticeps"
+      },
+      "1319": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_varanus_giganteus",
+        "sourceScientific": "Varanus giganteus"
+      },
+      "1320": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_varanus_gouldii",
+        "sourceScientific": "Varanus gouldii"
+      },
+      "1321": {
+        "phase": "GM02",
+        "regionId": "oc_desierto_australiano",
+        "speciesId": "oc_esp_oxyuranus_microlepidotus",
+        "sourceScientific": "Oxyuranus microlepidotus"
+      },
+      "1381": {
+        "phase": "GM02",
+        "regionId": "oc_tasmania",
+        "speciesId": "oc_esp_cygnus_atratus",
+        "sourceScientific": "Cygnus atratus"
+      },
+      "1382": {
+        "phase": "GM02",
+        "regionId": "oc_tasmania",
+        "speciesId": "oc_esp_neophema_chrysogaster",
+        "sourceScientific": "Neophema chrysogaster"
+      },
+      "1383": {
+        "phase": "GM02",
+        "regionId": "oc_tasmania",
+        "speciesId": "oc_esp_aquila_audax",
+        "sourceScientific": "Aquila audax"
+      },
+      "1384": {
+        "phase": "GM02",
+        "regionId": "oc_tasmania",
+        "speciesId": "oc_esp_dasyurus_viverrinus",
+        "sourceScientific": "Dasyurus viverrinus"
+      },
+      "1385": {
+        "phase": "GM02",
+        "regionId": "oc_tasmania",
+        "speciesId": "oc_esp_macropus_giganteus",
+        "sourceScientific": "Macropus giganteus"
+      },
+      "1386": {
+        "phase": "GM02",
+        "regionId": "oc_tasmania",
+        "speciesId": "oc_esp_notamacropus_rufogriseus",
+        "sourceScientific": "Notamacropus rufogriseus"
+      },
+      "1387": {
+        "phase": "GM02",
+        "regionId": "oc_tasmania",
+        "speciesId": "oc_esp_sarcophilus_harrisii",
+        "sourceScientific": "Sarcophilus harrisii"
+      },
+      "1388": {
+        "phase": "GM02",
+        "regionId": "oc_tasmania",
+        "speciesId": "oc_esp_thylogale_billardierii",
+        "sourceScientific": "Thylogale billardierii"
+      },
+      "1389": {
+        "phase": "GM02",
+        "regionId": "oc_tasmania",
+        "speciesId": "oc_esp_trichosurus_vulpecula",
+        "sourceScientific": "Trichosurus vulpecula"
+      },
+      "1390": {
+        "phase": "GM02",
+        "regionId": "oc_tasmania",
+        "speciesId": "oc_esp_vombatus_ursinus",
+        "sourceScientific": "Vombatus ursinus"
+      },
+      "1391": {
+        "phase": "GM02",
+        "regionId": "oc_tasmania",
+        "speciesId": "oc_esp_ornithorhynchus_anatinus",
+        "sourceScientific": "Ornithorhynchus anatinus"
+      },
+      "1392": {
+        "phase": "GM02",
+        "regionId": "oc_tasmania",
+        "speciesId": "oc_esp_tachyglossus_aculeatus",
+        "sourceScientific": "Tachyglossus aculeatus"
+      },
+      "1393": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_cygnus_atratus",
+        "sourceScientific": "Cygnus atratus"
+      },
+      "1394": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_pelecanus_conspicillatus",
+        "sourceScientific": "Pelecanus conspicillatus"
+      },
+      "1395": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_dromaius_novaehollandiae",
+        "sourceScientific": "Dromaius novaehollandiae"
+      },
+      "1396": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_eolophus_roseicapilla",
+        "sourceScientific": "Eolophus roseicapilla"
+      },
+      "1397": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_gymnorhina_tibicen",
+        "sourceScientific": "Gymnorhina tibicen"
+      },
+      "1398": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_nymphicus_hollandicus",
+        "sourceScientific": "Nymphicus hollandicus"
+      },
+      "1399": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_phylidonyris_novaehollandiae",
+        "sourceScientific": "Phylidonyris novaehollandiae"
+      },
+      "1400": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_zanda_latirostris",
+        "sourceScientific": "Zanda latirostris"
+      },
+      "1401": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_aquila_audax",
+        "sourceScientific": "Aquila audax"
+      },
+      "1402": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_macropus_fuliginosus",
+        "sourceScientific": "Macropus fuliginosus"
+      },
+      "1403": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_myrmecobius_fasciatus",
+        "sourceScientific": "Myrmecobius fasciatus"
+      },
+      "1404": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_notamacropus_eugenii",
+        "sourceScientific": "Notamacropus eugenii"
+      },
+      "1405": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_setonix_brachyurus",
+        "sourceScientific": "Setonix brachyurus"
+      },
+      "1406": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_tachyglossus_aculeatus",
+        "sourceScientific": "Tachyglossus aculeatus"
+      },
+      "1407": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_moloch_horridus",
+        "sourceScientific": "Moloch horridus"
+      },
+      "1408": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_varanus_gouldii",
+        "sourceScientific": "Varanus gouldii"
+      },
+      "1409": {
+        "phase": "GM02",
+        "regionId": "oc_australia_occidental",
+        "speciesId": "oc_esp_acanthophis_antarcticus",
+        "sourceScientific": "Acanthophis antarcticus"
+      },
+      "1410": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_cygnus_atratus",
+        "sourceScientific": "Cygnus atratus"
+      },
+      "1411": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_cacatua_galerita",
+        "sourceScientific": "Cacatua galerita"
+      },
+      "1412": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_dacelo_novaeguineae",
+        "sourceScientific": "Dacelo novaeguineae"
+      },
+      "1413": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_gymnorhina_tibicen",
+        "sourceScientific": "Gymnorhina tibicen"
+      },
+      "1414": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_menura_novaehollandiae",
+        "sourceScientific": "Menura novaehollandiae"
+      },
+      "1415": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_ptilonorhynchus_violaceus",
+        "sourceScientific": "Ptilonorhynchus violaceus"
+      },
+      "1416": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_trichoglossus_moluccanus",
+        "sourceScientific": "Trichoglossus moluccanus"
+      },
+      "1417": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_ninox_strenua",
+        "sourceScientific": "Ninox strenua"
+      },
+      "1418": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_macropus_giganteus",
+        "sourceScientific": "Macropus giganteus"
+      },
+      "1419": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_notamacropus_rufogriseus",
+        "sourceScientific": "Notamacropus rufogriseus"
+      },
+      "1420": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_petauroides_volans",
+        "sourceScientific": "Petauroides volans"
+      },
+      "1421": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_petaurus_breviceps",
+        "sourceScientific": "Petaurus breviceps"
+      },
+      "1422": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_trichosurus_vulpecula",
+        "sourceScientific": "Trichosurus vulpecula"
+      },
+      "1423": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_vombatus_ursinus",
+        "sourceScientific": "Vombatus ursinus"
+      },
+      "1424": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_wallabia_bicolor",
+        "sourceScientific": "Wallabia bicolor"
+      },
+      "1425": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_ornithorhynchus_anatinus",
+        "sourceScientific": "Ornithorhynchus anatinus"
+      },
+      "1426": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_phascolarctos_cinereus",
+        "sourceScientific": "Phascolarctos cinereus"
+      },
+      "1427": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_pteropus_poliocephalus",
+        "sourceScientific": "Pteropus poliocephalus"
+      },
+      "1428": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_tachyglossus_aculeatus",
+        "sourceScientific": "Tachyglossus aculeatus"
+      },
+      "1429": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_intellagama_lesueurii",
+        "sourceScientific": "Intellagama lesueurii"
+      },
+      "1430": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_tiliqua_scincoides",
+        "sourceScientific": "Tiliqua scincoides"
+      },
+      "1431": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_assa_darlingtoni",
+        "sourceScientific": "Assa darlingtoni"
+      },
+      "1432": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_pseudophryne_corroboree",
+        "sourceScientific": "Pseudophryne corroboree"
+      },
+      "1433": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_acanthophis_antarcticus",
+        "sourceScientific": "Acanthophis antarcticus"
+      },
+      "1434": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_morelia_spilota",
+        "sourceScientific": "Morelia spilota"
+      },
+      "1435": {
+        "phase": "GM02",
+        "regionId": "oc_australia_oriental",
+        "speciesId": "oc_esp_notechis_scutatus",
+        "sourceScientific": "Notechis scutatus"
+      },
+      "1496": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_diomedea_epomophora",
+        "sourceScientific": "Diomedea epomophora"
+      },
+      "1497": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_megadyptes_antipodes",
+        "sourceScientific": "Megadyptes antipodes"
+      },
+      "1498": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_apteryx_haastii",
+        "sourceScientific": "Apteryx haastii"
+      },
+      "1499": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_apteryx_mantelli",
+        "sourceScientific": "Apteryx mantelli"
+      },
+      "1500": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_apteryx_owenii",
+        "sourceScientific": "Apteryx owenii"
+      },
+      "1501": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_callaeas_wilsoni",
+        "sourceScientific": "Callaeas wilsoni"
+      },
+      "1502": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_gallirallus_australis",
+        "sourceScientific": "Gallirallus australis"
+      },
+      "1503": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_hemiphaga_novaeseelandiae",
+        "sourceScientific": "Hemiphaga novaeseelandiae"
+      },
+      "1504": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_nestor_meridionalis",
+        "sourceScientific": "Nestor meridionalis"
+      },
+      "1505": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_nestor_notabilis",
+        "sourceScientific": "Nestor notabilis"
+      },
+      "1506": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_petroica_australis",
+        "sourceScientific": "Petroica australis"
+      },
+      "1507": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_porphyrio_hochstetteri",
+        "sourceScientific": "Porphyrio hochstetteri"
+      },
+      "1508": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_rhipidura_fuliginosa",
+        "sourceScientific": "Rhipidura fuliginosa"
+      },
+      "1509": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_strigops_habroptilus",
+        "sourceScientific": "Strigops habroptilus"
+      },
+      "1510": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_cephalorhynchus_hectori",
+        "sourceScientific": "Cephalorhynchus hectori"
+      },
+      "1511": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_arctocephalus_forsteri",
+        "sourceScientific": "Arctocephalus forsteri"
+      },
+      "1512": {
+        "phase": "GM02",
+        "regionId": "oc_nueva_zelanda",
+        "speciesId": "oc_esp_sphenodon_punctatus",
+        "sourceScientific": "Sphenodon punctatus"
+      }
+    },
+    "oldSourcePresenceStatusesUnchanged": {
+      "implementada": 1148,
+      "conflicto_identidad": 10,
+      "diferencia_distribucion_taxonomica_documentada": 1
+    },
+    "sourceCanonicalRuntimeIds": 898,
+    "retainedRuntimeIdsWithoutApprovedCanonicalSourceRecord": 47,
+    "unresolvedRankConcepts": [
+      {
+        "sourceSpeciesId": "ESP-0223",
+        "scientific": "Gorilla beringei",
+        "issueIds": "GM01-0087"
+      },
+      {
+        "sourceSpeciesId": "ESP-0401",
+        "scientific": "Panthera pardus",
+        "issueIds": "GM01-0092"
+      }
+    ],
+    "metadataDiscrepancy": {
+      "file": "docs/gm01/summary.json",
+      "field": "source.populated_cells / source.reserved_cells",
+      "stored": [
+        209,
+        0
+      ],
+      "recounted": [
+        103,
+        106
+      ],
+      "sourceCSVNotModified": true
+    }
+  },
+  "sprites": {
+    "allNormalPlatesPresent": true,
+    "previous943AndAllConfiguredVariantsSexesLiteralComparison": "passed in current production tests",
+    "new3340": 2,
+    "new3340BiologicalVariants": 0,
+    "new3340NotableProbabilityPerSpecimen": 0.01,
+    "configuredDimorphicIdentities": 59
+  },
+  "prestige": [
+    {
+      "area": "Europa",
+      "regions": 10,
+      "minimum": 0,
+      "maximum": 9
+    },
+    {
+      "area": "Asia",
+      "regions": 21,
+      "minimum": 10,
+      "maximum": 50
+    },
+    {
+      "area": "África",
+      "regions": 24,
+      "minimum": 53,
+      "maximum": 122
+    },
+    {
+      "area": "Norteamérica",
+      "regions": 14,
+      "minimum": 125,
+      "maximum": 177
+    },
+    {
+      "area": "Sudamérica",
+      "regions": 10,
+      "minimum": 182,
+      "maximum": 227
+    },
+    {
+      "area": "Oceanía",
+      "regions": 8,
+      "minimum": 233,
+      "maximum": 275
+    },
+    {
+      "area": "Polos",
+      "regions": 7,
+      "minimum": 282,
+      "maximum": 324
+    },
+    {
+      "area": "Mares superficiales",
+      "regions": 12,
+      "minimum": 332,
+      "maximum": 420
+    },
+    {
+      "area": "Océanos profundos",
+      "regions": 5,
+      "minimum": 429,
+      "maximum": 465
+    },
+    {
+      "area": "Fosas",
+      "regions": 2,
+      "minimum": 475,
+      "maximum": 485
+    }
+  ],
+  "tests": {
+    "historical": 473,
+    "current3340": 20,
+    "pwaUpgrade": "3.33.0 -> 3.34.0 passed",
+    "publicWebHashes": 154,
+    "publicBrowser": "passed",
+    "physicalAndroid": false
+  },
+  "notes": [
+    "Source correspondence is not validation of every distribution.",
+    "No historical GM01 issue file was marked globally resolved.",
+    "No GM05 gameplay, taxonomy, economy or signature changes performed."
+  ]
+}
