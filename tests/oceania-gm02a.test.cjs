@@ -46,8 +46,8 @@ test('all declared audit and authority inputs retain their hashes; generation is
  cp.execFileSync('python',['scripts/build-oceania-gm02.py','--check']);
  assert.deepEqual(JSON.parse(fs.readFileSync('docs/gm02/source-contract.json')),data);
 });
-test('production 3.29.0 installs 807 identities, 87 regions, 1460 pairs and the original save key',()=>{
- assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.29.0');
+test('production 3.30.0 installs 807 identities, 87 regions, 1460 pairs and the original save key',()=>{
+ assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.30.0');
  assert.equal(data.productionReady,false);
  assert.ok(!fs.readFileSync('www/index.html','utf8').includes('oceania-data-v3290.js'));
  assert.ok(fs.readFileSync('www/sw.js','utf8').includes('oceania-data-v3290.js'));

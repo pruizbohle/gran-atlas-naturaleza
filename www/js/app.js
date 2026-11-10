@@ -6232,7 +6232,7 @@ function normalizeCommerce3300(s){
  c.jobs=Array.isArray(c.jobs)?c.jobs.filter(j=>j&&TRADE_ROUTES.some(r=>r.id===j.route)&&Number.isSafeInteger(j.id)&&j.id>0&&Number.isFinite(j.startedAt)&&Number.isFinite(j.endAt)&&j.endAt-j.startedAt===TRADE_ROUTES.find(r=>r.id===j.route).hours*3600000):[];
  // A duplicate job id is a single departure, never another reward.
  c.jobs=c.jobs.filter((j,i,a)=>a.findIndex(x=>x.id===j.id)===i);
- c.history=Array.isArray(c.history)?c.history.filter(j=>j&&Number.isSafeInteger(j.id)).slice(-12):[];
+ c.history=Array.isArray(c.history)?c.history.filter(j=>j&&Number.isSafeInteger(j.id)&&j.id>0&&Number.isFinite(j.at)&&TRADE_ROUTES.some(r=>r.id===j.route)).slice(-12).map(j=>{const r=TRADE_ROUTES.find(r=>r.id===j.route);return {id:j.id,route:r.id,at:j.at,money:r.money,rewards:{...r.rewards}};}):[];
  c.seq=Math.max(0,Number.isSafeInteger(c.seq)?c.seq:0,...c.jobs.map(j=>j.id),...c.history.map(j=>j.id));
  c.jobs=c.jobs.filter(j=>!c.history.some(h=>h.id===j.id));
  s.commerce=c;return c;

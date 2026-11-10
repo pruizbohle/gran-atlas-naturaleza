@@ -22,7 +22,7 @@ test('external split-module preview has coherent version, safe updater paths, fu
 });
 test('staging refuses output inside the repository and never changes the public version',()=>{
  assert.throws(()=>build(path.resolve('www/release-test'),{preview:true}),/outside repository/);
- assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.29.0');
+ assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.30.0');
 });
 test('staging preserves native import/export installers and configures Android version 32900 without changing app ID',()=>{
  const temp=fs.mkdtempSync(path.join(os.tmpdir(),'oc-native-'));try{

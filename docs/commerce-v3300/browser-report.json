@@ -1,0 +1,19 @@
+{
+  "version": "3.30.0",
+  "viewports": [
+    320,
+    360,
+    390,
+    412,
+    1280
+  ],
+  "device": "Chromium con emulación táctil, no dispositivo Android físico",
+  "real24HourDeadline": true,
+  "earlyPayRejected": true,
+  "offline72HoursAndReloadUniqueReward": true,
+  "recipeNavigation": true,
+  "timerDOMRetained100Updates": true,
+  "timerMeanMs": 0.03199999999953434,
+  "offlineIsolatedLab8States": true,
+  "errors": []
+}

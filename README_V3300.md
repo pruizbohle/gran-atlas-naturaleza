@@ -18,4 +18,23 @@ Una plaza comercial, astillero requerido. Rutas 4/8/12/24 h, sin bonificaciones 
 
 ## Validación y publicación
 
-Pendiente de implementación y pruebas. No se ha publicado 3.30.0.
+EC-01B y EC-01C implementados en commits independientes. Ningún objeto nuevo: se reutilizan cuatro recetas y sus materiales. Campos aditivos: `commerce` (secuencia, trabajos, doce recibos), `craftedItems` y `progressionVersion3300`. La migración histórica acredita preparaciones inferidas por acceso continental previo; posteriores adquisiciones directas no acreditan fabricación. Las regiones permanecen en sus posiciones y se conserva el catálogo fuente congelado; los requisitos se aplican a copias de sus registros en ejecución.
+
+Resultados locales: 430/430 pruebas Node pasan, incluidas 14 pruebas nuevas de comercio, progresión, migración real 3.29.0 y exportación/importación. Se conservan los contratos históricos de expansiones anteriores mediante extracción de los bloques EC3300, y se prueba la progresión vigente por separado. La prueba global recorre investigación, materiales, fabricación y 87 regiones sin consumir prestigio.
+
+Chromium: 320, 360, 390, 412 y 1280 px sin desbordamiento; navegación a Taller y Cuadrante; 24 h pendientes, 72 h offline, reinicio y pago único. Cien actualizaciones conservan el nodo del contador. Laboratorio aislado de ocho escenarios, disponible offline, sin acceso al almacenamiento real. Emulación táctil, sin prueba en Android físico. Evidencias y capturas en `docs/commerce-v3300`.
+
+Simulación reproducible: `node scripts/simulate-commerce-v3300.cjs`. Tres estados de 72 h, diez búsquedas manuales y una salida científica por hora, subvención horaria y Museo con 0/3/8 especies. Libras finales: temprana £12.120, intermedia £231.724, avanzada £615.259. Los grandes ingresos intermedios/avanzados proceden del Museo existente, no de Comercio; no se cambiaron. El informe declara recursos y supuestos, sin afirmar un tiempo humano de completitud. Todas las recetas obligatorias tienen fuentes europeas; el máximo requisito 275 es inferior a las 807 monografías posibles.
+
+Control de arbitraje: potencial monetario estricto en cinco trueques y ocho estudios existentes, incluyendo donación de madera y conversión de notas. Comprar los materiales de una donación cuesta £250 para recuperar £80. Comprar flores y pergamino para 40 conocimientos cuesta £165 para recuperar £25 al canjear notas. El ciclo £100 → 70 conocimiento → £43,75 es deficitario. No se venden mapas continentales ni herramientas terminadas; las salidas rentables requieren tiempo real.
+
+Rendimiento: 200 renderizados comerciales medidos en Node VM y 100 sincronizaciones del contador medidas en Chromium (véase informe; no son tiempos de dispositivo real). Comercio no genera SVG ni agrega temporizadores: usa el tick existente. Las transacciones comerciales revierten la mutación en memoria si falla el guardado duradero, y permiten reintentar el regreso.
+
+Comandos de validación:
+
+- `node --test tests/*.test.cjs`
+- `node scripts/check-commerce-v3300.cjs`
+- `node scripts/simulate-commerce-v3300.cjs`
+- `node scripts/build-commerce-release-v3300.cjs` (caché y manifiesto reproducibles)
+
+Actualización web: versión 3.30.0 en entrada, exportaciones, configuración y metadatos; caché íntegra nueva, conservando las rutas de actualización anteriores. El actualizador persiste y requiere cerrar otras pestañas antes de activar la nueva caché. No se genera ni firma APK. Publicación pendiente de push y comprobación de GitHub Pages.

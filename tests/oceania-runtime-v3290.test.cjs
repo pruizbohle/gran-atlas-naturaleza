@@ -60,7 +60,7 @@ test('candidate save/load and Android export/import preserve old data and newly 
 test('runtime generation is deterministic, scientifically approved and loaded by public entry/cache',()=>{
  cp.execFileSync('python',['scripts/build-oceania-runtime-v3290.py','--check']);assert.equal(candidate.approvedForProduction,true);
  for(const path of ['www/index.html','www/sw.js'])assert.ok(fs.readFileSync(path,'utf8').includes('oceania-runtime-v3290'));
- assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.29.0');
+ assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.30.0');
 });
 test('candidate additions preserve global observation rates and naturalist interval, and enter existing museum exhibitions',()=>{
  const old=harness().window.__atlasTest,a=reviewHarness({},null,{museum3270:true}).window.__atlasTest;

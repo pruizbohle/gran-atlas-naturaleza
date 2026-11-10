@@ -1,0 +1,25 @@
+{
+  "version": "3.30.0",
+  "baseCommit": "07cf5d8cf94785346cfd5fa777d8edefaf4d2084",
+  "stages": [
+    "EC-01A",
+    "EC-01B",
+    "EC-01C",
+    "EC-01D"
+  ],
+  "nodeTests": {
+    "total": 430,
+    "passed": 430,
+    "failed": 0
+  },
+  "workflowLocalValidation": "All commands from static.yml validation step passed",
+  "browserReport": "browser-report.json",
+  "economyReport": "economy-report.json",
+  "releaseManifest": "release-manifest.json",
+  "catalog": {
+    "species": 807,
+    "regions": 87,
+    "presences": 1460
+  },
+  "android": "No APK built; permanent signing remains independent"
+}

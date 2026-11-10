@@ -12,7 +12,7 @@ test('an unreadable stored save survives startup and ticks verbatim, and a valid
 });
 test('storage failure keeps the live session exportable and failed imports roll back in memory',async()=>{
  const h=harness(),a=h.window.__atlasTest;h.localStorage.setItem=()=>{throw new Error('QuotaExceededError');};a.state.money=5678;a.state.inventory.fossil_fragment=77;assert.equal(a.persist(),false);assert.doesNotThrow(()=>h.tick());assert.equal(a.state.money,5678);const imported=a.initialState();imported.money=99999;assert.throws(()=>h.window.AtlasSaveBridge.restoreGame(imported),/No se pudo guardar/);assert.equal(a.state.money,5678);
- let exported;h.window.Capacitor.Plugins.AtlasExport.saveFile=async({content})=>{exported=JSON.parse(content);return {uri:'content://test'};};await h.elements.saveDownloadBtn.fire('click');assert.equal(exported.game.money,5678);assert.equal(exported.game.inventory.fossil_fragment,77);assert.equal(exported.gameVersion,'3.29.0');
+ let exported;h.window.Capacitor.Plugins.AtlasExport.saveFile=async({content})=>{exported=JSON.parse(content);return {uri:'content://test'};};await h.elements.saveDownloadBtn.fire('click');assert.equal(exported.game.money,5678);assert.equal(exported.game.inventory.fossil_fragment,77);assert.equal(exported.gameVersion,'3.30.0');
  h.localStorage.setItem=(key,value)=>h.store[key]=String(value);assert.equal(a.persist(),true);assert.equal(JSON.parse(h.store.gran_atlas_v05).money,5678);
 });
 test('representative advanced exports and restores preserve all progress subsystems',async()=>{

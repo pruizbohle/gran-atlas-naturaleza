@@ -1,0 +1,205 @@
+{
+  "version": "3.30.0",
+  "assumptions": "72 horas por escenario,10 búsquedas manuales y una salida científica por hora,subvención horaria,una plaza comercial; muestras de 0/3/8 especies expuestas. No estima días humanos para completar el mundo.",
+  "scenarios": [
+    {
+      "name": "temprana",
+      "hours": 72,
+      "initial": {
+        "money": 420,
+        "knowledge": 200
+      },
+      "final": {
+        "money": 12120,
+        "knowledge": 4520
+      },
+      "manualSearches": 720,
+      "scientificDepartures": 72,
+      "tradeDepartures": 18,
+      "tradeReceipts": 12,
+      "museumPoundsPerSecond": 0,
+      "inventory": {
+        "pressed_flower": 37,
+        "brass_shard": 16,
+        "fossil_fragment": 8,
+        "map_fragment": 6,
+        "parchment_scrap": 59,
+        "river_pebble": 58,
+        "fossil_tooth": 14,
+        "fossil_amber": 4,
+        "carved_wood": 3,
+        "old_ink": 6,
+        "animal_trace": 2,
+        "fossil_skull": 1
+      },
+      "negativeBalances": false
+    },
+    {
+      "name": "intermedia",
+      "hours": 72,
+      "initial": {
+        "money": 6000,
+        "knowledge": 4000
+      },
+      "final": {
+        "money": 231724,
+        "knowledge": 8140
+      },
+      "manualSearches": 720,
+      "scientificDepartures": 72,
+      "tradeDepartures": 6,
+      "tradeReceipts": 6,
+      "museumPoundsPerSecond": 0.8200000000000001,
+      "inventory": {
+        "fossil_tooth": 16,
+        "fossil_fragment": 7,
+        "river_pebble": 6,
+        "carved_wood": 14,
+        "old_ink": 15,
+        "parchment_scrap": 36,
+        "brass_shard": 28,
+        "polished_lens": 12,
+        "pressed_flower": 3,
+        "map_fragment": 3,
+        "ancient_coin": 1,
+        "asia_map_piece": 1,
+        "fossil_skull": 1,
+        "animal_trace": 1
+      },
+      "negativeBalances": false
+    },
+    {
+      "name": "avanzada",
+      "hours": 72,
+      "initial": {
+        "money": 25000,
+        "knowledge": 18000
+      },
+      "final": {
+        "money": 615259,
+        "knowledge": 22200
+      },
+      "manualSearches": 720,
+      "scientificDepartures": 72,
+      "tradeDepartures": 3,
+      "tradeReceipts": 3,
+      "museumPoundsPerSecond": 2.2199999999999998,
+      "inventory": {
+        "pressed_flower": 3,
+        "fossil_tooth": 12,
+        "fossil_amber": 2,
+        "carved_wood": 27,
+        "fossil_fragment": 5,
+        "polished_lens": 13,
+        "river_pebble": 5,
+        "old_ink": 17,
+        "brass_shard": 24,
+        "ancient_coin": 1,
+        "fossil_skull": 3,
+        "animal_trace": 6,
+        "map_fragment": 3
+      },
+      "negativeBalances": false
+    }
+  ],
+  "arbitrage": {
+    "potentialValues": {
+      "animal_trace": 35,
+      "ancient_coin": 60,
+      "map_fragment": 45,
+      "fossil_fragment": 25,
+      "fossil_tooth": 35,
+      "owl_feather": 50,
+      "heron_feather": 40,
+      "wolf_tooth": 35,
+      "boar_tusk": 35,
+      "antler_fragment": 35,
+      "otter_whisker": 35,
+      "beaver_tail_scale": 35,
+      "parchment_scrap": 45,
+      "pressed_flower": 40,
+      "river_pebble": 30,
+      "carved_wood": 80,
+      "polished_lens": 160,
+      "brass_shard": 200,
+      "old_ink": 180
+    },
+    "barterChecks": [
+      {
+        "id": "stone_lens",
+        "inputValue": 240,
+        "outputValue": 160
+      },
+      {
+        "id": "coin_brass",
+        "inputValue": 240,
+        "outputValue": 200
+      },
+      {
+        "id": "flower_ink",
+        "inputValue": 240,
+        "outputValue": 180
+      },
+      {
+        "id": "wood_paper",
+        "inputValue": 240,
+        "outputValue": 90
+      },
+      {
+        "id": "trace_feather",
+        "inputValue": 210,
+        "outputValue": 50
+      }
+    ],
+    "studyChecks": [
+      {
+        "id": "herbarium",
+        "inputValue": 165,
+        "outputValue": 25
+      },
+      {
+        "id": "tracking",
+        "inputValue": 165,
+        "outputValue": 34.375
+      },
+      {
+        "id": "travel_notes",
+        "inputValue": 270,
+        "outputValue": 34.375
+      },
+      {
+        "id": "timber",
+        "inputValue": 250,
+        "outputValue": 80
+      },
+      {
+        "id": "fossil_report",
+        "inputValue": 85,
+        "outputValue": 75
+      },
+      {
+        "id": "ornithology",
+        "inputValue": 180,
+        "outputValue": 56.25
+      },
+      {
+        "id": "mammalogy",
+        "inputValue": 105,
+        "outputValue": 68.75
+      },
+      {
+        "id": "river_mammals",
+        "inputValue": 70,
+        "outputValue": 46.875
+      }
+    ],
+    "moneyKnowledgeCycleReturnPer100": 43.75,
+    "noImmediatePositiveCycle": true,
+    "tradeRequiresRealTime": true
+  },
+  "performance": {
+    "environment": "Node VM con DOM simulado; retención de DOM también verificada en Chromium",
+    "renderMeanMs": 0.040742989999999965,
+    "renderIterations": 200
+  }
+}
