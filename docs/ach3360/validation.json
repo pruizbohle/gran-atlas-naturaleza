@@ -1,0 +1,35 @@
+{
+  "reference": "90fc5c0",
+  "version": "3.36.0",
+  "counts": {
+    "species": 945,
+    "regions": 113,
+    "presences": 1744,
+    "achievements": 80,
+    "scientificMissions": 13
+  },
+  "tests": {
+    "historical": 473,
+    "current": 51,
+    "total": 524,
+    "failures": 0,
+    "suiteCounts": [
+      430,
+      11,
+      12,
+      20,
+      20,
+      17,
+      14
+    ],
+    "logSha256": "86b1d8b89aef944b1781c5e05543960e0880ebf665f7456d1f953f971694266f",
+    "deterministicAttainabilityLog": "deterministic-attainability-tests.txt"
+  },
+  "pwa": "pwa/browser-report.json",
+  "browser": "browser/report.json",
+  "session": "browser/session-report.json",
+  "attainability": "attainability.json",
+  "publication": "pending verification",
+  "apkBuilt": false,
+  "physicalAndroid": false
+}

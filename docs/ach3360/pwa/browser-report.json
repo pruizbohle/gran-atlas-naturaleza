@@ -1,0 +1,32 @@
+{
+  "version": "3.36.0",
+  "upgrade": "3.35.0 -> 3.36.0",
+  "historicalBackupExact": true,
+  "otherWindowBlocksUpdate": true,
+  "pending24hCommerceAnd180sSciencePreserved": true,
+  "legacyOperationSettledOnce": true,
+  "researchAndBothUnlockTravelThroughUI": true,
+  "prestigeNotConsumed": true,
+  "hadalProtocolAndHabitatThroughUI": true,
+  "sharedQueueAndCountdown": true,
+  "offlineGameAndLab": true,
+  "awayAndLocalScientificReceiptsOnce": true,
+  "viewports": [
+    320,
+    360,
+    390,
+    412,
+    1280
+  ],
+  "artPlates": 3,
+  "worldLabCatalog": 945,
+  "worldLabOfflineCards": 80,
+  "societyLabOfflineCards": 80,
+  "achievementsPersistent": true,
+  "migrationSingleSummary": true,
+  "importsSilent": true,
+  "atlasOpenMeanMs": 43.97547937499985,
+  "clock": "isolated test clock advanced to absolute deadlines; production timer unchanged",
+  "errors": [],
+  "physicalAndroid": false
+}

@@ -1,1 +1,94 @@
-{"version": "3.35.0", "atlas": "simple", "cells": {"Europa": 10, "Asia": 25, "África": 24, "Norteamérica": 14, "Sudamérica": 10, "Oceanía": 8, "Polos": 7, "Océanos": 19}, "northAmerica": {"regions": 14, "sourceNames": 129, "taxa": 128, "presences": 206}, "southAmerica": {"regions": 10, "sourceNames": 131, "taxa": 131, "newSpecies": 121, "reusedSpecies": 10, "presences": 192}, "channel": "release", "oceania": {"regions": 8, "taxa": 97, "presences": 131}, "polar": {"regions": 7, "newSpecies": 21, "presences": 45}, "surfaceSeas": {"regions": 12, "newSpecies": 95, "reusedSpecies": 18, "presences": 192, "totalSpecies": 923, "totalRegions": 106, "totalPresences": 1697}, "deepOceans": {"regions": 5, "newSpecies": 20, "reusedSpecies": 4, "presences": 44, "totalSpecies": 943, "totalRegions": 111, "totalPresences": 1741, "methods": ["sondeo", "muestreo"]}, "abyssalTrenches": {"regions": 2, "newSpecies": 2, "reusedSpecies": 1, "presences": 3, "totalSpecies": 945, "totalRegions": 113, "totalPresences": 1744, "methods": ["muestreo", "extraordinario"]}, "consolidation": {"identities": 945, "regions": 113, "presences": 1744, "classificationCorrections": 3, "artCorrections": 4}}
+{
+  "version": "3.36.0",
+  "atlas": "simple",
+  "cells": {
+    "Europa": 10,
+    "Asia": 25,
+    "África": 24,
+    "Norteamérica": 14,
+    "Sudamérica": 10,
+    "Oceanía": 8,
+    "Polos": 7,
+    "Océanos": 19
+  },
+  "northAmerica": {
+    "regions": 14,
+    "sourceNames": 129,
+    "taxa": 128,
+    "presences": 206
+  },
+  "southAmerica": {
+    "regions": 10,
+    "sourceNames": 131,
+    "taxa": 131,
+    "newSpecies": 121,
+    "reusedSpecies": 10,
+    "presences": 192
+  },
+  "channel": "release",
+  "oceania": {
+    "regions": 8,
+    "taxa": 97,
+    "presences": 131
+  },
+  "polar": {
+    "regions": 7,
+    "newSpecies": 21,
+    "presences": 45
+  },
+  "surfaceSeas": {
+    "regions": 12,
+    "newSpecies": 95,
+    "reusedSpecies": 18,
+    "presences": 192,
+    "totalSpecies": 923,
+    "totalRegions": 106,
+    "totalPresences": 1697
+  },
+  "deepOceans": {
+    "regions": 5,
+    "newSpecies": 20,
+    "reusedSpecies": 4,
+    "presences": 44,
+    "totalSpecies": 943,
+    "totalRegions": 111,
+    "totalPresences": 1741,
+    "methods": [
+      "sondeo",
+      "muestreo"
+    ]
+  },
+  "abyssalTrenches": {
+    "regions": 2,
+    "newSpecies": 2,
+    "reusedSpecies": 1,
+    "presences": 3,
+    "totalSpecies": 945,
+    "totalRegions": 113,
+    "totalPresences": 1744,
+    "methods": [
+      "muestreo",
+      "extraordinario"
+    ]
+  },
+  "consolidation": {
+    "identities": 945,
+    "regions": 113,
+    "presences": 1744,
+    "classificationCorrections": 3,
+    "artCorrections": 4
+  },
+  "achievements": {
+    "total": 80,
+    "categories": 6,
+    "tiers": [
+      "Bronce",
+      "Plata",
+      "Oro",
+      "Platino"
+    ],
+    "economicRewards": false,
+    "storage": "gran_atlas_v05",
+    "retroactive": true
+  }
+}

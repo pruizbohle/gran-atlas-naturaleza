@@ -1,0 +1,49 @@
+{
+  "version": "3.36.0",
+  "viewport": 390,
+  "method": "Chromium CPU x1, 200 cycles / 800 Society pane switches, full80-card catalogue, post-GC metrics; elapsed measured batch time, not human session hours.",
+  "points": [
+    {
+      "cycles": 0,
+      "tabSwitches": 0,
+      "batchMs": 0,
+      "heapMB": 3.767876,
+      "intervals": 1,
+      "cards": 80,
+      "nodes": 1344,
+      "overflow": false
+    },
+    {
+      "cycles": 25,
+      "tabSwitches": 100,
+      "batchMs": 149,
+      "heapMB": 3.877396,
+      "intervals": 1,
+      "cards": 80,
+      "nodes": 1344,
+      "overflow": false
+    },
+    {
+      "cycles": 100,
+      "tabSwitches": 400,
+      "batchMs": 338.79999999701977,
+      "heapMB": 3.867112,
+      "intervals": 1,
+      "cards": 80,
+      "nodes": 1344,
+      "overflow": false
+    },
+    {
+      "cycles": 200,
+      "tabSwitches": 800,
+      "batchMs": 476.1000000014901,
+      "heapMB": 4.01526,
+      "intervals": 1,
+      "cards": 80,
+      "nodes": 1344,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "physicalAndroid": false
+}

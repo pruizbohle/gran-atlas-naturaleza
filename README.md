@@ -1,3 +1,7 @@
+# 3.36.0 · Logros y Sociedad
+
+80 reconocimientos permanentes, seis categorías y cuatro pestañas internas de Sociedad. Se conservan las misiones y las partidas anteriores. [Informe y validación](README_V3360.md).
+
 # El Gran Atlas 3.35.0 · Consolidación mundial
 
 945 identidades, 113 regiones y 1744 presencias. Tres clasificaciones corregidas, cuatro tiburones diferenciados y laboratorio mundial; sin altas, eliminaciones ni cambios globales de economía. Guardado `gran_atlas_v05` conservado. [Diagnóstico completo, pruebas y límites](README_V3350.md) · [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualización PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3350.html) · [Laboratorio mundial](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-mundial-v3350.html).
