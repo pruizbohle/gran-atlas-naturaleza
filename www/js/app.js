@@ -2170,11 +2170,28 @@ let corruptSave=false;
 let storageFault=false;
 let state=load();
 // ACH3360: el catálogo y la persistencia viven en el módulo independiente.
+let commissionReady3370=false,commissionDirty3370=false,commissionClaiming3370=false;
+let commissionNotices3370=[];
+function commissionContext3370(){return {...achievementContext3360(),legacy:SCIENTIFIC_MISSIONS};}
+function commissionFlush3370(){if(!commissionReady3370||!commissionDirty3370)return;commissionNotices3370.push(...globalThis.AtlasCommissions3370.sync(state,commissionContext3370()));commissionDirty3370=false;globalThis.AtlasCommissionsUI3370?.refresh(state,commissionContext3370());}
+function commissionClaim3370(id,legacyClaim){
+ const api=globalThis.AtlasCommissions3370,ctx=commissionContext3370();
+ if(!api||commissionClaiming3370)return false;
+ const original=ctx.legacy.find(d=>d.id===id);
+ if(original?(!!state.purchases['mission_'+id]||!!state.commissions.legacyClaims[id]||original.progress()<original.target):(!state.commissions.ready[id]||!!state.commissions.claimed[id]))return false;
+ const before=JSON.parse(JSON.stringify(state)),achNotices=achievementNotices3360.slice(),encNotices=commissionNotices3370.slice();
+ commissionClaiming3370=true;
+ try{if(original){legacyClaim(id);state.commissions.legacyClaims[id]={claimedAt:Date.now(),source:'original-claim'};state.commissions.tracked=state.commissions.tracked.filter(x=>x!==id);}else{if(!api.pay(state,id))return false;pushLog('📋 Encargo reclamado: '+api.catalog.find(d=>d.id===id).name+'.');}}
+ catch(error){state=before;throw error;}finally{commissionClaiming3370=false;}
+ achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360.categories));
+ if(!persist()){state=before;achievementNotices3360=achNotices;commissionNotices3370=encNotices;achievementDirty3360.clear();commissionDirty3370=true;renderCounters();renderPanel();return false;}
+ renderCounters();renderPanel();return true;
+}
 let achievementReady3360=false;
 const achievementDirty3360=new Set();
 let achievementNotices3360=[];
 function achievementContext3360(){return {species:SPECIES,regions:REGIONS,research:RESEARCH_NODES,recipes:RECIPES,collections:MUSEUM_COLLECTIONS,fossilRecipes:MUSEUM_FOSSIL_RECIPES,relicts:MUSEUM_RELICTS,voyages:VOYAGES,taxonomy:taxonomyInfo,specials:configuredSpecials};}
-function achievementMark3360(...groups){for(const g of groups)achievementDirty3360.add(g);}
+function achievementMark3360(...groups){for(const g of groups)achievementDirty3360.add(g);commissionDirty3370=true;}
 function achievementIncrement3360(key){globalThis.AtlasAchievements3360?.increment(state,key);achievementMark3360('navigation');}
 function achievementRecord3360(type,data){globalThis.AtlasAchievements3360?.record(state,type,data);achievementMark3360('navigation','exploration');}
 function achievementFlush3360(){
@@ -2300,13 +2317,15 @@ function showStorageFault(message){
  if(button){if(button.textContent!=='⚠️')button.textContent='⚠️';button.setAttribute('title',message);button.setAttribute('aria-label',message);}
 }
 function persist(){
- achievementFlush3360();
+ if(commissionClaiming3370)return true;
+ achievementFlush3360();commissionFlush3370();
  if(unreadableSave){showStorageFault('La partida almacenada no se pudo leer y se conserva sin reemplazar. Abre Respaldos para recuperarla.');return false;}
  try{
   localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
   if(storageFault){const button=document.getElementById('saveManagerOpen');if(button){button.textContent='💾';button.setAttribute('title','Respaldos');button.setAttribute('aria-label','Respaldos');}}
   if(storageFault){const status=document.getElementById('saveManagerStatus');if(status?.textContent.startsWith('No se pudo guardar en este dispositivo.')){status.textContent='Guardado automático restablecido.';status.classList.remove('error');}}
   storageFault=false;
+  if(commissionNotices3370.length&&globalThis.AtlasCommissionsUI3370)globalThis.AtlasCommissionsUI3370.notify(commissionNotices3370.splice(0));
   if(achievementNotices3360.length&&globalThis.AtlasSociety3360){const notices=achievementNotices3360.splice(0);globalThis.AtlasSociety3360.notify(notices);}
   return true;
  }catch(error){
@@ -2391,6 +2410,7 @@ window.AtlasSaveBridge={
  // EC3300 END import-commerce
      // Importar no reproduce notificaciones de medallas ni inventa acciones antiguas.
      if(achievementReady3360){achievementNotices3360=[];achievementDirty3360.clear();globalThis.AtlasSociety3360?.clearNotifications();globalThis.AtlasAchievements3360.initialize(state,achievementContext3360(),{silent:true});}
+     if(commissionReady3370){commissionNotices3370=[];globalThis.AtlasCommissionsUI3370?.clearNotifications();globalThis.AtlasCommissions3370.mergeReceipts(state,before,commissionContext3370());globalThis.AtlasCommissions3370.initialize(state,commissionContext3370());commissionDirty3370=false;}
      // Evitar calcular un intervalo offline obsoleto al actualizar la partida.
      state.lastTick=Date.now();
      autoAccum=0;autoDiaryBuffer={searches:0,hits:0,knowledge:0};
@@ -6330,9 +6350,9 @@ function normalizeCommerce3300(s){
  s.commerce=c;return c;
 }
 function tradeTransaction3300(change){
- const before={money:state.money,knowledge:state.knowledge,inventory:{...state.inventory},commerce:JSON.parse(JSON.stringify(state.commerce)),achievements:JSON.parse(JSON.stringify(state.achievements||null))};
+ const before={money:state.money,knowledge:state.knowledge,inventory:{...state.inventory},commerce:JSON.parse(JSON.stringify(state.commerce)),commissions:JSON.parse(JSON.stringify(state.commissions||null)),achievements:JSON.parse(JSON.stringify(state.achievements||null))};
  if(!change())return false;
- if(!persist()){Object.assign(state,before);achievementNotices3360=[];achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360?.categories||{}));return false;}
+ if(!persist()){Object.assign(state,before);achievementNotices3360=[];commissionNotices3370=[];achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360?.categories||{}));return false;}
  return true;
 }
 function tradeCanStart3300(route){return !!route&&!!state.upgrades.shipyard&&state.commerce.jobs.length<1&&state.prestige>=route.prestige&&state.money>=route.cost&&state.knowledge>=route.knowledge;}
@@ -6531,7 +6551,7 @@ encounter=function(source='manual',at=Date.now(),guaranteed=false){
  if(state.lastEncounter!==last){state.lastEncounter.deepEvidence={method:state.deepSurvey.method,region:state.currentRegion,direct:false,...(abyssalRegionIndex3340.has(state.currentRegion)?{depthTier:'abisal',stratum:state.habitat}: {})};state.lastEncounter.title=state.lastEncounter.entries?.length?'Registro indirecto de muestra':'Muestra sin identificación';state.lastEncounter.subtitle='Examen a bordo · '+(state.lastEncounter.subtitle||'').replace(/avistamientos/g,'registros').replace(/comiendo/g,'contenido digestivo examinado');}
  if(!batch){renderCounters();updateFieldOutput();}return state.lastEncounter!==last;
 };
-function deepTransaction3330(change){const before=JSON.parse(JSON.stringify(state));try{if(!change())return false;if(!persist()){state=before;achievementNotices3360=[];achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360?.categories||{}));return false;}return true;}catch(error){state=before;achievementNotices3360=[];throw error;}}
+function deepTransaction3330(change){const before=JSON.parse(JSON.stringify(state));try{if(!change())return false;if(!persist()){state=before;achievementNotices3360=[];commissionNotices3370=[];achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360?.categories||{}));return false;}return true;}catch(error){state=before;achievementNotices3360=[];commissionNotices3370=[];throw error;}}
 function canStartDeep3330(method=state.deepSurvey.method){const m=Object.hasOwn(DEEP_METHODS3330,method)?DEEP_METHODS3330[method]:null;return !!m&&deepReady3330()&&state.deepSurvey.jobs.length<1&&state.deepSurvey.seq<Number.MAX_SAFE_INTEGER&&state.money>=m.money&&state.knowledge>=m.knowledge&&deepPresenceIndex3330.get(state.currentRegion).some(p=>p.methods.includes(method)&&p.habitats.includes(state.habitat)&&p.times.includes(state.time)&&p.seasons.includes(state.season));}
 function startDeep3330(method=state.deepSurvey.method){if(!canStartDeep3330(method))return false;const m=DEEP_METHODS3330[method],at=Date.now();if(!Number.isFinite(at))return false;return deepTransaction3330(()=>{state.money-=m.money;state.knowledge-=m.knowledge;state.deepSurvey.method=method;state.deepSurvey.jobs.push({id:++state.deepSurvey.seq,method,region:state.currentRegion,habitat:state.habitat,time:state.time,season:state.season,startedAt:at,endAt:at+m.seconds*1000,seed:Math.floor(Math.random()*4294967296)});return true;});}
 function processDeep3330(now=Date.now()){
@@ -6603,6 +6623,14 @@ if(globalThis.AtlasAchievements3360){
  craftMuseumFossil=watch(craftMuseumFossil,['museum']);recordMuseumRelict=watch(recordMuseumRelict,['museum']);
 }
 // ACH3360 END event integration
+// ENC3370: additional state, existing event stream, and transactional original claims.
+if(globalThis.AtlasCommissions3370){
+ globalThis.AtlasCommissions3370.initialize(state,commissionContext3370());commissionReady3370=true;commissionDirty3370=false;
+ const originalClaim3370=claimScientificMission;
+ claimScientificMission=function(id){return commissionClaim3370(id,originalClaim3370);};
+ const mark3370=fn=>function(...args){commissionDirty3370=true;return fn.apply(this,args);};
+ addInventory=mark3370(addInventory);collectExcavation=mark3370(collectExcavation);
+}
 render();
 })();
 

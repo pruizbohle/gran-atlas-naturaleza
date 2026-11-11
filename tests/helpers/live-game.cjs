@@ -45,6 +45,7 @@ function harness(store={},backup,options={}){
  if(gameSource.includes('const deep3330=globalThis.'))for(const name of ['deep-data-v3330','deep-geography-v3330','deep-art-v3330'])vm.runInContext(fs.readFileSync('www/js/'+name+'.js','utf8'),ctx);
  if(gameSource.includes('const abyssal3340=globalThis.'))for(const name of ['abyssal-data-v3340','abyssal-geography-v3340','abyssal-art-v3340'])vm.runInContext(fs.readFileSync('www/js/'+name+'.js','utf8'),ctx);
  if(gameSource.includes('AtlasAchievements3360'))vm.runInContext(fs.readFileSync('www/js/achievements-v3360.js','utf8'),ctx);
+ if(gameSource.includes('AtlasCommissions3370'))vm.runInContext(fs.readFileSync('www/js/commissions-v3370.js','utf8'),ctx);
  vm.runInContext(testGame,ctx,{filename:'www/js/app.js'});
  vm.runInContext(options.saveSource||SAVE,ctx,{filename:'www/js/save-manager.js'});
  return {window:w,store,doc,elements,localStorage,

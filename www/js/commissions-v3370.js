@@ -42,5 +42,38 @@ function metrics(s,ctx){
 }
 function objective(d,m){const requirements=d.requirements.map(r=>({...r,value:Math.min(r.target,Math.max(0,Number(m[r.metric])||0))}));return {requirements,complete:requirements.every(r=>r.value>=r.target),fraction:requirements.reduce((n,r)=>n+r.value/r.target,0)/requirements.length};}
 function evaluate(s,ctx){const m=metrics(s,ctx),c=s.commissions||{};return catalog.map(d=>{const p=objective(d,m),satisfied=!!c.satisfied?.[d.id]||p.complete,available=!d.previous||!!c.ready?.[d.previous]||!!c.claimed?.[d.previous];return {definition:d,...p,satisfied,available,ready:!!c.ready?.[d.id]||satisfied&&available,claimed:!!c.claimed?.[d.id]};});}
-root.AtlasCommissions3370=Object.freeze({categories,catalog:Object.freeze(catalog),metrics,objective,evaluate});
+const object=o=>o&&typeof o==='object'&&!Array.isArray(o)?o:{};
+const copy=o=>JSON.parse(JSON.stringify(object(o)));
+function normalize(s,ctx){const old=object(s.commissions);s.commissions={...old,version:1,satisfied:copy(old.satisfied),ready:copy(old.ready),claimed:copy(old.claimed),legacyClaims:copy(old.legacyClaims),notified:{...object(old.notified)},tracked:[...new Set(Array.isArray(old.tracked)?old.tracked:[])].filter(id=>catalog.some(d=>d.id===id)||ctx.legacy.some(d=>d.id===id)).slice(0,3)};
+ for(const d of ctx.legacy)if(s.purchases?.['mission_'+d.id])s.commissions.legacyClaims[d.id]??={claimedAt:null,source:'historical-marker'};
+ return s.commissions;
+}
+function mergeReceipts(s,before,ctx){
+ normalize(s,ctx);if(!s.collectionId||s.collectionId!==before?.collectionId)return;
+ const old=object(before.commissions);s.commissions.claimed={...s.commissions.claimed,...copy(old.claimed)};s.commissions.legacyClaims={...s.commissions.legacyClaims,...copy(old.legacyClaims)};
+ for(const d of ctx.legacy)if(before.purchases?.['mission_'+d.id])s.commissions.legacyClaims[d.id]??={claimedAt:null,source:'same-game-marker'};
+ for(const id of Object.keys(s.commissions.legacyClaims))if(ctx.legacy.some(d=>d.id===id))s.purchases['mission_'+id]=1;
+}
+function sync(s,ctx,{silent=false,retroactive=false,now=Date.now()}={}){
+ const c=s.commissions,notices=[],m=metrics(s,ctx);
+ for(const d of catalog)if(!c.satisfied[d.id]&&objective(d,m).complete)c.satisfied[d.id]={observedAt:now,completedAt:retroactive?null:now};
+ // Ordered DAG: a predecessor's fulfilled objective enables its successor, without forcing a claim.
+ for(const d of catalog){if(!c.ready[d.id]&&c.satisfied[d.id]&&(!d.previous||c.ready[d.previous]||c.claimed[d.previous]))c.ready[d.id]={observedAt:now,completedAt:retroactive?null:now};
+  if(c.ready[d.id]&&!c.claimed[d.id]&&!c.notified[d.id]){c.notified[d.id]=true;notices.push(d.id);}}
+ for(const d of ctx.legacy){const key='legacy:'+d.id;if(!s.purchases['mission_'+d.id]&&d.progress()>=d.target&&!c.notified[key]){c.notified[key]=true;notices.push(key);}}
+ return silent?[]:notices;
+}
+function initialize(s,ctx){normalize(s,ctx);sync(s,ctx,{silent:true,retroactive:true});}
+function pay(s,id,now=Date.now()){
+ const d=catalog.find(d=>d.id===id),c=s.commissions;if(!d||!c?.ready[id]||c.claimed[id])return false;
+ c.claimed[id]={claimedAt:now,reward:{money:d.reward.money,knowledge:d.reward.knowledge,items:{...d.reward.items}}};
+ s.money+=d.reward.money;s.knowledge+=d.reward.knowledge;for(const [item,n]of Object.entries(d.reward.items))s.inventory[item]=(s.inventory[item]||0)+n;
+ c.tracked=c.tracked.filter(x=>x!==id);return true;
+}
+function track(s,id,ctx){const c=s.commissions;if(!c||!(catalog.some(d=>d.id===id)||ctx?.legacy.some(d=>d.id===id)))return false;const i=c.tracked.indexOf(id);if(i>=0){c.tracked.splice(i,1);return true;}if(c.tracked.length>=3||c.claimed[id]||s.purchases?.['mission_'+id])return false;c.tracked.push(id);return true;}
+function models(s,ctx){const list=evaluate(s,ctx).map(x=>({...x,id:x.definition.id,legacy:false,tracked:s.commissions.tracked.includes(x.definition.id)}));
+ for(const d of ctx.legacy){const value=Math.min(d.target,Math.max(0,d.progress())),claimed=!!s.purchases['mission_'+d.id];list.push({id:d.id,definition:{id:d.id,line:'legacy',name:d.name,description:d.desc,module:d.id.includes('museo')||d.id.includes('paleonto')?'museum':d.id.includes('viajes')?'expeditions':d.id.includes('publicacion')?'society':'field',reward:{money:d.money,knowledge:d.knowledge,items:d.items||{}}},legacy:true,requirements:[{metric:'legacy:'+d.id,target:d.target,value,label:d.desc}],fraction:value/d.target,satisfied:value>=d.target,available:true,ready:value>=d.target,claimed,tracked:s.commissions.tracked.includes(d.id)});}
+ return list;
+}
+root.AtlasCommissions3370=Object.freeze({categories,catalog:Object.freeze(catalog),metrics,objective,evaluate,normalize,mergeReceipts,sync,initialize,pay,track,models});
 })(globalThis);
