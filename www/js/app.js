@@ -2172,7 +2172,7 @@ let state=load();
 // ACH3360: el catálogo y la persistencia viven en el módulo independiente.
 let commissionReady3370=false,commissionDirty3370=false,commissionClaiming3370=false;
 let commissionNotices3370=[];
-function commissionContext3370(){return {...achievementContext3360(),legacy:SCIENTIFIC_MISSIONS};}
+function commissionContext3370(){return {...achievementContext3360(),legacy:SCIENTIFIC_MISSIONS,items:ITEMS};}
 function commissionFlush3370(){if(!commissionReady3370||!commissionDirty3370)return;commissionNotices3370.push(...globalThis.AtlasCommissions3370.sync(state,commissionContext3370()));commissionDirty3370=false;globalThis.AtlasCommissionsUI3370?.refresh(state,commissionContext3370());}
 function commissionClaim3370(id,legacyClaim){
  const api=globalThis.AtlasCommissions3370,ctx=commissionContext3370();
@@ -2186,6 +2186,19 @@ function commissionClaim3370(id,legacyClaim){
  achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360.categories));
  if(!persist()){state=before;achievementNotices3360=achNotices;commissionNotices3370=encNotices;achievementDirty3360.clear();commissionDirty3370=true;renderCounters();renderPanel();return false;}
  renderCounters();renderPanel();return true;
+}
+function commissionAction3370(action,id){
+ const api=globalThis.AtlasCommissions3370;if(!api)return;
+ const ctx=commissionContext3370(),model=api.models(state,ctx).find(m=>m.id===id);if(!model)return;
+ if(action==='enc-track'){const before=state.commissions.tracked.slice();if(api.track(state,id,ctx)&&!persist())state.commissions.tracked=before;renderPanel();return;}
+ if(action==='enc-find'){globalThis.AtlasCommissionsUI3370?.find(id);return;}
+ const d=model.definition,region=action==='enc-locate'?REGIONS.find(r=>r.id===d.locate):null;
+ const destination=region?'atlas':d.module;
+ if(!['field','journal','museum','research','expeditions','objects','atlas','society'].includes(destination))return;
+ if(region){state.atlasView=region.continent;state.atlasSelectedRegion=region.id;}
+ if(destination==='society'){state.societyView='publications';state.publicationView='monographs';}
+ if(destination==='expeditions')navigationTab3300=d.since?'commerce':'expeditions';
+ tab=destination;renderPanel();persist();
 }
 let achievementReady3360=false;
 const achievementDirty3360=new Set();
@@ -3378,6 +3391,7 @@ function claimScientificMission(id){
   render();
 }
 function renderScientificMissions(){
+  if(globalThis.AtlasCommissionsUI3370&&commissionReady3370)return globalThis.AtlasCommissionsUI3370.render(state,commissionContext3370());
   return '<div class="list">'+SCIENTIFIC_MISSIONS.map(m=>{
     const done=!!state.purchases['mission_'+m.id];
     const amount=Math.min(m.target,m.progress());
@@ -5106,6 +5120,7 @@ function handlePanelAction(e){
 // AM-06 END bestiary-navigation
     if(act==='buy-crown'){buyCrownPack(Number(id)||0);}
     if(act==='exchange-crown'){exchangeTrialCrowns(id==='all'?Math.floor(Math.max(0,state.crownCoins||0)):Number(id));}
+    if(act.startsWith('enc-')){commissionAction3370(act,id);return;}
     if(act==='claim-mission'){claimScientificMission(id);}
 }
 panel.addEventListener('click',handlePanelAction);
@@ -6626,6 +6641,7 @@ if(globalThis.AtlasAchievements3360){
 // ENC3370: additional state, existing event stream, and transactional original claims.
 if(globalThis.AtlasCommissions3370){
  globalThis.AtlasCommissions3370.initialize(state,commissionContext3370());commissionReady3370=true;commissionDirty3370=false;
+ globalThis.AtlasCommissionsUI3370?.mount({state:()=>state,context:commissionContext3370,render:renderPanel,open(){tab='society';state.societyView='missions';renderPanel();persist();}});
  const originalClaim3370=claimScientificMission;
  claimScientificMission=function(id){return commissionClaim3370(id,originalClaim3370);};
  const mark3370=fn=>function(...args){commissionDirty3370=true;return fn.apply(this,args);};

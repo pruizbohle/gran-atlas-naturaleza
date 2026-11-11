@@ -1,0 +1,67 @@
+{
+  "widths": [
+    {
+      "width": 320,
+      "all37": true,
+      "original13": true,
+      "filters": true,
+      "trackedLimit3": true,
+      "silentImport": true,
+      "liveGroupedNotice": true,
+      "explicitUniqueClaim": true,
+      "contextualNavigation": true,
+      "noOverflow": true
+    },
+    {
+      "width": 360,
+      "all37": true,
+      "original13": true,
+      "filters": true,
+      "trackedLimit3": true,
+      "silentImport": true,
+      "liveGroupedNotice": true,
+      "explicitUniqueClaim": true,
+      "contextualNavigation": true,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "all37": true,
+      "original13": true,
+      "filters": true,
+      "trackedLimit3": true,
+      "silentImport": true,
+      "liveGroupedNotice": true,
+      "explicitUniqueClaim": true,
+      "contextualNavigation": true,
+      "noOverflow": true
+    },
+    {
+      "width": 412,
+      "all37": true,
+      "original13": true,
+      "filters": true,
+      "trackedLimit3": true,
+      "silentImport": true,
+      "liveGroupedNotice": true,
+      "explicitUniqueClaim": true,
+      "contextualNavigation": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1280,
+      "all37": true,
+      "original13": true,
+      "filters": true,
+      "trackedLimit3": true,
+      "silentImport": true,
+      "liveGroupedNotice": true,
+      "explicitUniqueClaim": true,
+      "contextualNavigation": true,
+      "noOverflow": true
+    }
+  ],
+  "errors": [],
+  "physicalAndroid": false,
+  "labIsolated": true
+}
