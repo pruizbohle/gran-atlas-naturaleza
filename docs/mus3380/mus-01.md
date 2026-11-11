@@ -1,0 +1,17 @@
+# MUS-01 · auditoría desde b5286e8
+
+Se revisaron museum-ui-v3270.js, museum-v3270.css, las funciones y catálogos del motor y README_V3270/3350/3360/3370. Permanecen cinco salas: exhibitions, samples, fossils, relicts, artifacts. No hay una sala nueva.
+
+Capacidad animal: 3/7/12; ampliaciones £300 con prestigio2 y £900 con prestigio5. Una muestra se habilita por etapa5 y monografía publicada, o se conserva si ya estaba expuesta históricamente. Exponer exige además dinero, capacidad y no estar ya expuesta. No hay una unidad nueva de inventario «muestra»: no se inventa. Se separarán descubrimiento, publicación, muestra habilitada, disponibilidad inmediata y exposición actual.
+
+Se mantienen ocho montajes únicos, nueve componentes, nueve relictos (tres indicios, prospecciones, catalogación, análisis hasta12, conjuntos e hitos), cinco artefactos y cuatro registros fósiles. Las piezas científicas usan displays/collections/relicts y gabinetes independientes. displays=false solo retira la pieza; no pierde propiedad ni elimina bonificaciones por conjunto. Conservación: máximo20, tres proyectos originales repetibles que otorgan conocimiento y puntos; no se duplican ni se renombran como proyectos temáticos.
+
+Renta base animal £0,16/0,24/0,34/0,50 por segundo, precios £45/70/105/150 y valor alternativo histórico £60/0,20. museumRate mantiene investigación, medallón, conjuntos fósiles, conservación y conjuntos de relictos. Los proyectos nuevos no conceden renta, conocimiento, libras, materiales ni prestigio: solo diploma y acreditación permanente. No se necesita una simulación de premios económicos nuevos porque su efecto monetario es cero; se verificará la equivalencia del motor y retornos offline.
+
+Doce temas propuestos con selectores sobre el catálogo existente, sin duplicarlo: Islas Británicas; aves; grandes felinos Panthera; catálogo de la Sabana de África oriental (incluye sus aguas); Asia; Madagascar/Seychelles/Aldabra; cetáceos y mamíferos marinos; polos; muestras profundas reconstruidas; reptiles actuales y montajes paleontológicos; archivo de relictos; instrumentos y artefactos históricos. Los relictos del juego no se describen todos como «fósiles vivientes»; los montajes paleontológicos no se presentan como fauna coetánea. No se revisa la distribución zoológica ya auditada ni se certifican rangos pendientes.
+
+Cada acreditación requiere cumplir simultáneamente los requisitos, incluida la disposición actual de las piezas y la capacidad real. No se infieren vitrinas históricas a partir de una colección catalogada. La migración reconoce solo el montaje verificable del respaldo, sin fecha inventada. Después se conserva la acreditación aunque cambie la distribución, y se distingue de si el montaje cumple hoy.
+
+Persistencia aditiva: museum.curation, creado al existir una acreditación o contenido curatorial persistente, no un segundo guardado. Guardará IDs, evidencia del montaje, diploma y fecha conocida o null. Las consultas y filtros no mutan la partida. El título destacado no compra, monta, retira ni consume piezas. Eventos marcan evaluación pendiente; no se recorre el catálogo en ticks inactivos. Muestras mantiene paginación32 y SVG diferidos; los candidatos temáticos se consultan por páginas pequeñas.
+
+Los 80 achievements y las37 misiones conservarán sus catálogos y premios. Se añadirá únicamente un acceso desde encargos del Museo a Exposiciones temáticas. Los respaldos3.28–3.37 se probarán con sus exportadores reales, incluidos trabajos, conservación, colecciones y recursos.
