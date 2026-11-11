@@ -1,0 +1,51 @@
+{
+  "version": "3.38.0",
+  "catalog": 945,
+  "method": "Chromium CPU x1, full945 eligible monographs,12 animal vitrines and all scientific pieces.200cycles/1000 room switches, post-GC metrics; not human session hours or physical Android.",
+  "points": [
+    {
+      "cycles": 0,
+      "roomSwitches": 0,
+      "batchMs": 0,
+      "heapMB": 5.047976,
+      "intervals": 1,
+      "nodes": 913,
+      "renderedProjectCards": 4,
+      "overflow": false
+    },
+    {
+      "cycles": 25,
+      "roomSwitches": 125,
+      "batchMs": 727.5,
+      "heapMB": 5.899472,
+      "intervals": 1,
+      "nodes": 913,
+      "renderedProjectCards": 4,
+      "overflow": false
+    },
+    {
+      "cycles": 100,
+      "roomSwitches": 500,
+      "batchMs": 2105.2000000029802,
+      "heapMB": 5.9984,
+      "intervals": 1,
+      "nodes": 913,
+      "renderedProjectCards": 4,
+      "overflow": false
+    },
+    {
+      "cycles": 200,
+      "roomSwitches": 1000,
+      "batchMs": 2953.6999999955297,
+      "heapMB": 6.105792,
+      "intervals": 1,
+      "nodes": 913,
+      "renderedProjectCards": 4,
+      "overflow": false
+    }
+  ],
+  "samplesPerPage": 32,
+  "projectCardsPerPage": 4,
+  "errors": [],
+  "physicalAndroid": false
+}

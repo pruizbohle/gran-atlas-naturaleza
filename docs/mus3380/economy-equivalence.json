@@ -1,0 +1,40 @@
+{
+  "reference": "b5286e8",
+  "zeroEconomicRewards": true,
+  "originalRateFunctionIdentical": true,
+  "all945PricesAndRatesIdentical": true,
+  "oldCatalogsUnchanged": true,
+  "scenarios": [
+    {
+      "scenario": 0,
+      "rate": 0.9,
+      "after8h": 35920
+    },
+    {
+      "scenario": 1,
+      "rate": 1.2149999999999999,
+      "after8h": 44991.99999999999
+    },
+    {
+      "scenario": 2,
+      "rate": 1.0125,
+      "after8h": 39160
+    },
+    {
+      "scenario": 3,
+      "rate": 1.4175,
+      "after8h": 50824
+    },
+    {
+      "scenario": 4,
+      "rate": 1.161,
+      "after8h": 43436.8
+    },
+    {
+      "scenario": 5,
+      "rate": 1.476,
+      "after8h": 52508.8
+    }
+  ],
+  "physicalAndroid": false
+}

@@ -1,0 +1,784 @@
+{
+  "seed": 3380,
+  "method": "Synthetic financing, ingredients and observation records; real crafting, research, stages, monographs, cataloguing, mounting, relict analysis and animal vitrine actions. No human campaign duration inferred.",
+  "projects": 12,
+  "studiedIdentities": 39,
+  "extraMoney": 0,
+  "extraKnowledge": 0,
+  "extraPrestige": 0,
+  "witnesses": [
+    {
+      "id": "british",
+      "requirements": [
+        {
+          "kind": "discovered",
+          "target": 5,
+          "label": "Identidades descubiertas del catálogo",
+          "raw": 5,
+          "value": 5,
+          "met": true,
+          "witnesses": [
+            "zorro_rojo",
+            "tejon_europeo",
+            "erizo_europeo",
+            "ciervo_rojo",
+            "nutria_europea"
+          ]
+        },
+        {
+          "kind": "published",
+          "target": 2,
+          "label": "Monografías publicadas del catálogo",
+          "raw": 5,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "zorro_rojo",
+            "tejon_europeo",
+            "erizo_europeo",
+            "ciervo_rojo",
+            "nutria_europea"
+          ]
+        },
+        {
+          "kind": "exhibited",
+          "target": 2,
+          "label": "Muestras del catálogo actualmente expuestas",
+          "raw": 2,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "zorro_rojo",
+            "tejon_europeo"
+          ]
+        }
+      ],
+      "capacity": 3,
+      "used": 2
+    },
+    {
+      "id": "birds",
+      "requirements": [
+        {
+          "kind": "discovered",
+          "target": 6,
+          "label": "Identidades descubiertas del catálogo",
+          "raw": 7,
+          "value": 6,
+          "met": true,
+          "witnesses": [
+            "asia_esp_0287",
+            "asia_esp_0880",
+            "asia_esp_0861",
+            "asia_esp_0886",
+            "asia_esp_0020",
+            "asia_esp_0030",
+            "polar_esp_aptenodytes_forsteri"
+          ]
+        },
+        {
+          "kind": "published",
+          "target": 3,
+          "label": "Monografías publicadas del catálogo",
+          "raw": 7,
+          "value": 3,
+          "met": true,
+          "witnesses": [
+            "asia_esp_0287",
+            "asia_esp_0880",
+            "asia_esp_0861",
+            "asia_esp_0886",
+            "asia_esp_0020",
+            "asia_esp_0030",
+            "polar_esp_aptenodytes_forsteri"
+          ]
+        },
+        {
+          "kind": "exhibited",
+          "target": 2,
+          "label": "Muestras del catálogo actualmente expuestas",
+          "raw": 2,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "asia_esp_0287",
+            "asia_esp_0880"
+          ]
+        },
+        {
+          "kind": "research",
+          "target": 1,
+          "label": "Investigación relacionada",
+          "id": "ornito_1",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "ornito_1"
+          ]
+        }
+      ],
+      "capacity": 3,
+      "used": 2
+    },
+    {
+      "id": "panthera",
+      "requirements": [
+        {
+          "kind": "discovered",
+          "target": 3,
+          "label": "Identidades descubiertas del catálogo",
+          "raw": 4,
+          "value": 3,
+          "met": true,
+          "witnesses": [
+            "asia_esp_0401",
+            "asia_esp_0402",
+            "asia_esp_0403",
+            "af_leon"
+          ]
+        },
+        {
+          "kind": "published",
+          "target": 2,
+          "label": "Monografías publicadas del catálogo",
+          "raw": 4,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "asia_esp_0401",
+            "asia_esp_0402",
+            "asia_esp_0403",
+            "af_leon"
+          ]
+        },
+        {
+          "kind": "exhibited",
+          "target": 2,
+          "label": "Muestras del catálogo actualmente expuestas",
+          "raw": 2,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "asia_esp_0401",
+            "asia_esp_0402"
+          ]
+        },
+        {
+          "kind": "research",
+          "target": 1,
+          "label": "Investigación relacionada",
+          "id": "masto_1",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "masto_1"
+          ]
+        }
+      ],
+      "capacity": 3,
+      "used": 2
+    },
+    {
+      "id": "savanna",
+      "requirements": [
+        {
+          "kind": "discovered",
+          "target": 5,
+          "label": "Identidades descubiertas del catálogo",
+          "raw": 5,
+          "value": 5,
+          "met": true,
+          "witnesses": [
+            "af_serval",
+            "af_leon",
+            "af_elefante_sabana",
+            "af_rinoceronte_blanco",
+            "af_bufalo_cafre"
+          ]
+        },
+        {
+          "kind": "published",
+          "target": 2,
+          "label": "Monografías publicadas del catálogo",
+          "raw": 5,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "af_serval",
+            "af_leon",
+            "af_elefante_sabana",
+            "af_rinoceronte_blanco",
+            "af_bufalo_cafre"
+          ]
+        },
+        {
+          "kind": "exhibited",
+          "target": 2,
+          "label": "Muestras del catálogo actualmente expuestas",
+          "raw": 2,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "af_serval",
+            "af_leon"
+          ]
+        },
+        {
+          "kind": "research",
+          "target": 1,
+          "label": "Investigación relacionada",
+          "id": "masto_1",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "masto_1"
+          ]
+        }
+      ],
+      "capacity": 3,
+      "used": 2
+    },
+    {
+      "id": "asia",
+      "requirements": [
+        {
+          "kind": "discovered",
+          "target": 6,
+          "label": "Identidades descubiertas del catálogo",
+          "raw": 12,
+          "value": 6,
+          "met": true,
+          "witnesses": [
+            "asia_esp_0287",
+            "asia_esp_0880",
+            "asia_esp_0861",
+            "asia_esp_0886",
+            "asia_esp_0326",
+            "asia_esp_0843",
+            "asia_esp_0020",
+            "asia_esp_0030",
+            "zorro_rojo",
+            "asia_esp_0401",
+            "asia_esp_0402",
+            "asia_esp_0403"
+          ]
+        },
+        {
+          "kind": "published",
+          "target": 3,
+          "label": "Monografías publicadas del catálogo",
+          "raw": 12,
+          "value": 3,
+          "met": true,
+          "witnesses": [
+            "asia_esp_0287",
+            "asia_esp_0880",
+            "asia_esp_0861",
+            "asia_esp_0886",
+            "asia_esp_0326",
+            "asia_esp_0843",
+            "asia_esp_0020",
+            "asia_esp_0030",
+            "zorro_rojo",
+            "asia_esp_0401",
+            "asia_esp_0402",
+            "asia_esp_0403"
+          ]
+        },
+        {
+          "kind": "exhibited",
+          "target": 2,
+          "label": "Muestras del catálogo actualmente expuestas",
+          "raw": 2,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "asia_esp_0287",
+            "asia_esp_0880"
+          ]
+        },
+        {
+          "kind": "research",
+          "target": 1,
+          "label": "Investigación relacionada",
+          "id": "asia_1",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "asia_1"
+          ]
+        }
+      ],
+      "capacity": 3,
+      "used": 2
+    },
+    {
+      "id": "islands",
+      "requirements": [
+        {
+          "kind": "discovered",
+          "target": 4,
+          "label": "Identidades descubiertas del catálogo",
+          "raw": 5,
+          "value": 4,
+          "met": true,
+          "witnesses": [
+            "af_tortuga_laúd",
+            "af_lemur_colaanillada",
+            "af_sifaka",
+            "af_fosa",
+            "af_delfin_jorobado_indico"
+          ]
+        },
+        {
+          "kind": "published",
+          "target": 2,
+          "label": "Monografías publicadas del catálogo",
+          "raw": 5,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "af_tortuga_laúd",
+            "af_lemur_colaanillada",
+            "af_sifaka",
+            "af_fosa",
+            "af_delfin_jorobado_indico"
+          ]
+        },
+        {
+          "kind": "exhibited",
+          "target": 2,
+          "label": "Muestras del catálogo actualmente expuestas",
+          "raw": 2,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "af_tortuga_laúd",
+            "af_lemur_colaanillada"
+          ]
+        },
+        {
+          "kind": "research",
+          "target": 1,
+          "label": "Investigación relacionada",
+          "id": "masto_1",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "masto_1"
+          ]
+        }
+      ],
+      "capacity": 3,
+      "used": 2
+    },
+    {
+      "id": "marine_mammals",
+      "requirements": [
+        {
+          "kind": "discovered",
+          "target": 4,
+          "label": "Identidades descubiertas del catálogo",
+          "raw": 6,
+          "value": 4,
+          "met": true,
+          "witnesses": [
+            "af_delfin_jorobado_indico",
+            "na_esp_trichechus_manatus",
+            "sa_esp_inia_geoffrensis",
+            "oc_esp_cephalorhynchus_hectori",
+            "polar_esp_balaena_mysticetus",
+            "polar_esp_delphinapterus_leucas"
+          ]
+        },
+        {
+          "kind": "published",
+          "target": 2,
+          "label": "Monografías publicadas del catálogo",
+          "raw": 6,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "af_delfin_jorobado_indico",
+            "na_esp_trichechus_manatus",
+            "sa_esp_inia_geoffrensis",
+            "oc_esp_cephalorhynchus_hectori",
+            "polar_esp_balaena_mysticetus",
+            "polar_esp_delphinapterus_leucas"
+          ]
+        },
+        {
+          "kind": "exhibited",
+          "target": 2,
+          "label": "Muestras del catálogo actualmente expuestas",
+          "raw": 2,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "af_delfin_jorobado_indico",
+            "na_esp_trichechus_manatus"
+          ]
+        },
+        {
+          "kind": "research",
+          "target": 1,
+          "label": "Investigación relacionada",
+          "id": "masto_1",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "masto_1"
+          ]
+        }
+      ],
+      "capacity": 3,
+      "used": 2
+    },
+    {
+      "id": "polar",
+      "requirements": [
+        {
+          "kind": "discovered",
+          "target": 4,
+          "label": "Identidades descubiertas del catálogo",
+          "raw": 6,
+          "value": 4,
+          "met": true,
+          "witnesses": [
+            "zorro_artico",
+            "polar_esp_aptenodytes_forsteri",
+            "polar_esp_balaena_mysticetus",
+            "polar_esp_delphinapterus_leucas",
+            "polar_esp_gonatus_fabricii",
+            "polar_esp_somniosus_microcephalus"
+          ]
+        },
+        {
+          "kind": "published",
+          "target": 2,
+          "label": "Monografías publicadas del catálogo",
+          "raw": 6,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "zorro_artico",
+            "polar_esp_aptenodytes_forsteri",
+            "polar_esp_balaena_mysticetus",
+            "polar_esp_delphinapterus_leucas",
+            "polar_esp_gonatus_fabricii",
+            "polar_esp_somniosus_microcephalus"
+          ]
+        },
+        {
+          "kind": "exhibited",
+          "target": 2,
+          "label": "Muestras del catálogo actualmente expuestas",
+          "raw": 2,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "zorro_artico",
+            "polar_esp_aptenodytes_forsteri"
+          ]
+        },
+        {
+          "kind": "research",
+          "target": 1,
+          "label": "Investigación relacionada",
+          "id": "polos_1",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "polos_1"
+          ]
+        }
+      ],
+      "capacity": 3,
+      "used": 2
+    },
+    {
+      "id": "depths",
+      "requirements": [
+        {
+          "kind": "discovered",
+          "target": 4,
+          "label": "Identidades descubiertas del catálogo",
+          "raw": 4,
+          "value": 4,
+          "met": true,
+          "witnesses": [
+            "polar_esp_gonatus_fabricii",
+            "polar_esp_somniosus_microcephalus",
+            "mar_esp_architeuthis_dux",
+            "mar_esp_isistius_brasiliensis"
+          ]
+        },
+        {
+          "kind": "published",
+          "target": 2,
+          "label": "Monografías publicadas del catálogo",
+          "raw": 4,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "polar_esp_gonatus_fabricii",
+            "polar_esp_somniosus_microcephalus",
+            "mar_esp_architeuthis_dux",
+            "mar_esp_isistius_brasiliensis"
+          ]
+        },
+        {
+          "kind": "exhibited",
+          "target": 1,
+          "label": "Muestras del catálogo actualmente expuestas",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "polar_esp_gonatus_fabricii"
+          ]
+        },
+        {
+          "kind": "research",
+          "target": 1,
+          "label": "Investigación relacionada",
+          "id": "exploracion_profunda_1",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "exploracion_profunda_1"
+          ]
+        }
+      ],
+      "capacity": 3,
+      "used": 1
+    },
+    {
+      "id": "reptiles",
+      "requirements": [
+        {
+          "kind": "discovered",
+          "target": 2,
+          "label": "Identidades descubiertas del catálogo",
+          "raw": 3,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "lagarto_ocelado",
+            "vibora_aspid",
+            "af_tortuga_laúd"
+          ]
+        },
+        {
+          "kind": "published",
+          "target": 1,
+          "label": "Monografías publicadas del catálogo",
+          "raw": 3,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "lagarto_ocelado",
+            "vibora_aspid",
+            "af_tortuga_laúd"
+          ]
+        },
+        {
+          "kind": "exhibited",
+          "target": 1,
+          "label": "Muestras del catálogo actualmente expuestas",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "lagarto_ocelado"
+          ]
+        },
+        {
+          "kind": "research",
+          "target": 1,
+          "label": "Investigación relacionada",
+          "id": "herpeto_1",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "herpeto_1"
+          ]
+        },
+        {
+          "kind": "fossils",
+          "target": 3,
+          "label": "Reconstrucciones montadas y conservadas",
+          "raw": 8,
+          "value": 3,
+          "met": true,
+          "witnesses": [
+            "trex_mount",
+            "triceratops_mount",
+            "stegosaurus_mount",
+            "spinosaurus_mount",
+            "ankylosaurus_mount",
+            "iguanodon_mount",
+            "pachycephalosaurus_mount",
+            "carnotaurus_mount"
+          ]
+        },
+        {
+          "kind": "displayFossils",
+          "target": 2,
+          "label": "Reconstrucciones actualmente exhibidas",
+          "raw": 8,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "trex_mount",
+            "triceratops_mount",
+            "stegosaurus_mount",
+            "spinosaurus_mount",
+            "ankylosaurus_mount",
+            "iguanodon_mount",
+            "pachycephalosaurus_mount",
+            "carnotaurus_mount"
+          ]
+        },
+        {
+          "kind": "research",
+          "target": 1,
+          "label": "Investigación de Paleontología",
+          "id": "paleontologia_1",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "paleontologia_1"
+          ]
+        }
+      ],
+      "capacity": 3,
+      "used": 1
+    },
+    {
+      "id": "relicts",
+      "requirements": [
+        {
+          "kind": "relicts",
+          "target": 3,
+          "label": "Relictos catalogados",
+          "raw": 9,
+          "value": 3,
+          "met": true,
+          "witnesses": [
+            "coelacanth_indic",
+            "atlas_lion",
+            "seychelles_sheathbat",
+            "gabon_dwarf_croc",
+            "angonoka",
+            "african_lungfish",
+            "white_sturgeon",
+            "gharial",
+            "olm_balkans"
+          ]
+        },
+        {
+          "kind": "displayRelicts",
+          "target": 2,
+          "label": "Relictos actualmente exhibidos",
+          "raw": 9,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "coelacanth_indic",
+            "atlas_lion",
+            "seychelles_sheathbat",
+            "gabon_dwarf_croc",
+            "angonoka",
+            "african_lungfish",
+            "white_sturgeon",
+            "gharial",
+            "olm_balkans"
+          ]
+        },
+        {
+          "kind": "relictAnalysis",
+          "target": 1,
+          "label": "Análisis comparativo de relictos",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": []
+        }
+      ],
+      "capacity": 3,
+      "used": 0
+    },
+    {
+      "id": "instruments",
+      "requirements": [
+        {
+          "kind": "artifacts",
+          "target": 3,
+          "label": "Artefactos catalogados",
+          "raw": 5,
+          "value": 3,
+          "met": true,
+          "witnesses": [
+            "carta_historica",
+            "medallon_viajero",
+            "astrolabio_laton",
+            "diario_explorador",
+            "globo_cartografico"
+          ]
+        },
+        {
+          "kind": "displayArtifacts",
+          "target": 2,
+          "label": "Artefactos actualmente exhibidos",
+          "raw": 5,
+          "value": 2,
+          "met": true,
+          "witnesses": [
+            "carta_historica",
+            "medallon_viajero",
+            "astrolabio_laton",
+            "diario_explorador",
+            "globo_cartografico"
+          ]
+        },
+        {
+          "kind": "crafted",
+          "target": 1,
+          "label": "Brújula de latón fabricada",
+          "id": "brass_compass",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "brass_compass"
+          ]
+        },
+        {
+          "kind": "crafted",
+          "target": 1,
+          "label": "Cuadrante fabricado",
+          "id": "oceanic_quadrant",
+          "raw": 1,
+          "value": 1,
+          "met": true,
+          "witnesses": [
+            "oceanic_quadrant"
+          ]
+        }
+      ],
+      "capacity": 3,
+      "used": 0
+    }
+  ]
+}

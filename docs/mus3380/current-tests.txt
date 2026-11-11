@@ -1,0 +1,34 @@
+✔ MUS01 conserva catálogos de80 logros/37 misiones y renderer base de cinco salas (138.797928ms)
+✔ MUS02 doce temas reales sin IDs repetidos, requisitos posibles y solo diplomas (116.507833ms)
+✔ MUS02 descubrir no publica, no habilita una muestra y no implica una vitrina (73.483071ms)
+✔ MUS02 piezas catalogadas y mostradas son estados distintos; no consumen vitrinas (80.284349ms)
+✔ MUS05 exportador auténtico 3.28.0 preserva todas las piezas, avances y campañas pendientes (161.852133ms)
+✔ MUS05 exportador auténtico 3.29.0 preserva todas las piezas, avances y campañas pendientes (136.444292ms)
+✔ MUS05 exportador auténtico 3.30.0 preserva todas las piezas, avances y campañas pendientes (132.569433ms)
+✔ MUS05 exportador auténtico 3.31.0 preserva todas las piezas, avances y campañas pendientes (134.914915ms)
+✔ MUS05 exportador auténtico 3.32.0 preserva todas las piezas, avances y campañas pendientes (142.016987ms)
+✔ MUS05 exportador auténtico 3.33.0 preserva todas las piezas, avances y campañas pendientes (144.008691ms)
+✔ MUS05 exportador auténtico 3.34.0 preserva todas las piezas, avances y campañas pendientes (164.464121ms)
+✔ MUS05 exportador auténtico 3.35.0 preserva todas las piezas, avances y campañas pendientes (172.198983ms)
+✔ MUS05 exportador auténtico 3.36.0 preserva todas las piezas, avances y campañas pendientes (178.570632ms)
+✔ MUS05 exportador auténtico 3.37.0 preserva todas las piezas, avances y campañas pendientes (190.768226ms)
+✔ MUS05 un fallo de guardado revierte destacar una exposición sin perder acreditaciones (84.084729ms)
+✔ MUS05 doce proyectos alcanzables con estudio, publicación y montaje reales, sin pagos ni propiedad nueva (809.120329ms)
+✔ MUS05 capacidad3/7/12 sigue siendo límite del motor y un montaje imposible no obtiene diploma (118.142136ms)
+✔ MUS05 recetas, conjuntos, capacidad, costes e ingresos permanecen idénticos; equivalencia8h con seis escenarios (1101.143181ms)
+✔ MUS03 retroactividad acredita solo montaje verificable sin fecha inventada ni cambios económicos (212.188654ms)
+✔ MUS03 publicar o catalogar sin exhibir no acredita vitrinas pasadas; no crea campo vacío (174.203323ms)
+✔ MUS03 acreditación permanente y montaje actual son independientes; destacar no duplica propiedad ni renta (162.081379ms)
+✔ MUS03 diplomas de misma partida sobreviven al respaldo anterior; no se mezclan partidas distintas (150.938739ms)
+✔ MUS03 diploma en vivo se registra una sola vez con fecha conocida (139.48434ms)
+✔ MUS03 ticks inactivos no evalúan proyectos (73.951488ms)
+✔ MUS04 vista pura compacta cuatro proyectos; consultas de12 y ninguna SVG masiva (110.88253ms)
+✔ MUS04 muestras temáticas filtran antes de paginar y atajos no consumen ni organizan piezas (105.390437ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2270.041761
