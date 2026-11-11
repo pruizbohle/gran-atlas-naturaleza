@@ -1,0 +1,3 @@
+'use strict';const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),cp=require('node:child_process');
+const old=f=>cp.execFileSync('git',['show','0e28edf:'+f],{maxBuffer:8e6}).toString();
+test('ENC01 conserva literalmente las 13 definiciones y el premio original, y los 80 criterios',()=>{const source=fs.readFileSync('www/js/app.js','utf8'),extract=s=>s.slice(s.indexOf('const SCIENTIFIC_MISSIONS='),s.indexOf('function renderScientificMissions'));assert.equal(extract(source),extract(old('www/js/app.js')));assert.equal(fs.readFileSync('www/js/achievements-v3360.js','utf8'),old('www/js/achievements-v3360.js'));assert.equal(fs.readFileSync('www/js/society-achievements-ui-v3360.js','utf8'),old('www/js/society-achievements-ui-v3360.js'));});
