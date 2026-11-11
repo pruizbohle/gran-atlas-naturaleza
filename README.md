@@ -1,3 +1,7 @@
+# 3.38.0 · Museo avanzado
+
+Doce exposiciones temáticas dentro de las cinco salas originales, con diplomas permanentes y montaje actual diferenciado. Sin premios económicos ni cambios de renta. [Informe y validación](README_V3380.md).
+
 # 3.37.0 · Encargos del naturalista
 
 Sociedad → Misiones: 24 encargos nuevos y 13 originales, cadenas, tres destacados y premios únicos. Se conservan los 80 logros y las partidas anteriores. [Informe y validación](README_V3370.md).

@@ -1,0 +1,49 @@
+{
+  "reference": "b5286e8",
+  "version": "3.38.0",
+  "catalog": {
+    "species": 945,
+    "regions": 113,
+    "presences": 1744,
+    "achievements": 80,
+    "missions": 37,
+    "museumRooms": 5,
+    "thematicProjects": 12,
+    "fossilMounts": 8,
+    "relicts": 9,
+    "artifacts": 5,
+    "animalCapacity": [
+      3,
+      7,
+      12
+    ]
+  },
+  "tests": {
+    "historical": 473,
+    "current": 93,
+    "total": 566,
+    "failures": 0,
+    "suiteCounts": [
+      430,
+      11,
+      12,
+      20,
+      20,
+      17,
+      14,
+      16,
+      26
+    ],
+    "logSha256": "58896869eb108aac0f32ed75fd3a4ac71ae1cf1e4af199b6abb5f15caf86ed2b"
+  },
+  "economy": "economy-equivalence.json",
+  "newEconomicRewards": 0,
+  "playability": "playability.json",
+  "pwa": "pwa/browser-report.json",
+  "browser": "browser/report.json",
+  "session": "browser/session-report.json",
+  "publication": "pending verification",
+  "apkBuilt": false,
+  "androidSigningChanged": false,
+  "physicalAndroid": false
+}

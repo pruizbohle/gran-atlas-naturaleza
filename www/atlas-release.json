@@ -1,5 +1,5 @@
 {
-  "version": "3.37.0",
+  "version": "3.38.0",
   "atlas": "simple",
   "cells": {
     "Europa": 10,
@@ -103,5 +103,17 @@
       "prestige": 0
     },
     "commercialEvidenceSince": "3.36.0"
+  },
+  "museumCuration": {
+    "projects": 12,
+    "rooms": 5,
+    "animalCapacity": [
+      3,
+      7,
+      12
+    ],
+    "economicRewards": 0,
+    "newFauna": 0,
+    "newScientificPieces": 0
   }
 }
