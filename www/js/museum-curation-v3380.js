@@ -35,5 +35,17 @@ function candidates(s,ctx,id,{page=0,status='all'}={}){
  const rows=ids.map(id=>{const exhibited=!!s.museum?.exhibits?.[id],published=!!s.published?.[id],enabled=s.stages?.[id]===5&&published;return {id,discovered:!!s.discovered?.[id],published,enabled,exhibited,available:enabled&&!exhibited&&used<ctx.capacity&&s.money>=ctx.price(id)};}).filter(r=>status==='all'||status==='enabled'&&(r.enabled||r.exhibited)||status==='exhibited'&&r.exhibited||status==='available'&&r.available);
  const pages=Math.max(1,Math.ceil(rows.length/12)),current=Math.max(0,Math.min(Number.isSafeInteger(page)?page:0,pages-1));return {rows:rows.slice(current*12,(current+1)*12),page:current,pages,total:rows.length};
 }
-root.AtlasMuseumCuration3380=Object.freeze({projects:Object.freeze(projects),index,progress,models,record,candidates,ownership});
+const object=o=>o&&typeof o==='object'&&!Array.isArray(o)?o:{};
+const copy=o=>JSON.parse(JSON.stringify(object(o)));
+function normalize(s){if(!s.museum?.curation)return;const r=object(s.museum.curation);s.museum.curation={...r,version:1,completed:copy(r.completed),featured:typeof r.featured==='string'?r.featured:''};}
+function sync(s,ctx,{retroactive=false,now=Date.now()}={}){
+ const ready=models(s,ctx).filter(m=>m.complete&&!m.accredited);if(!ready.length)return [];
+ if(!s.museum.curation)s.museum.curation={version:1,completed:{},featured:''};
+ for(const m of ready)s.museum.curation.completed[m.project.id]={completedAt:retroactive?null:now,observedAt:now,retroactive,diploma:m.project.id,requirements:m.requirements.map(r=>({kind:r.kind,id:r.id||null,target:r.target,value:r.raw,witnesses:[...r.witnesses]})),capacity:ctx.capacity,usedAnimalVitrines:Object.keys(s.museum.exhibits||{}).length};
+ return ready.map(m=>m.project.id);
+}
+function initialize(s,ctx){normalize(s);return sync(s,ctx,{retroactive:true});}
+function merge(s,before){if(!s.collectionId||s.collectionId!==before?.collectionId||!before.museum?.curation)return;const current=record(s),previous=record(before);s.museum.curation={...copy(current),version:1,completed:{...copy(current.completed),...copy(previous.completed)},featured:current.featured||previous.featured||''};}
+function feature(s,id){const r=record(s);if(id&&!projects.some(p=>p.id===id&&r.completed?.[id]))return false;if(!s.museum.curation)return false;s.museum.curation.featured=r.featured===id?'':id;return true;}
+root.AtlasMuseumCuration3380=Object.freeze({projects:Object.freeze(projects),index,progress,models,record,candidates,ownership,normalize,sync,initialize,merge,feature});
 })(globalThis);

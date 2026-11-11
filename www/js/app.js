@@ -2170,6 +2170,9 @@ let corruptSave=false;
 let storageFault=false;
 let state=load();
 // ACH3360: el catálogo y la persistencia viven en el módulo independiente.
+let curationReady3380=false,curationDirty3380=false;
+function curationContext3380(){return {...achievementContext3360(),capacity:museumCapacity(),price:exhibitPrice};}
+function curationFlush3380(){if(!curationReady3380||!curationDirty3380)return;globalThis.AtlasMuseumCuration3380.sync(state,curationContext3380());curationDirty3380=false;globalThis.AtlasMuseumCurationUI3380?.refresh(state,curationContext3380());}
 let commissionReady3370=false,commissionDirty3370=false,commissionClaiming3370=false;
 let commissionNotices3370=[];
 function commissionContext3370(){return {...achievementContext3360(),legacy:SCIENTIFIC_MISSIONS,items:ITEMS};}
@@ -2204,7 +2207,7 @@ let achievementReady3360=false;
 const achievementDirty3360=new Set();
 let achievementNotices3360=[];
 function achievementContext3360(){return {species:SPECIES,regions:REGIONS,research:RESEARCH_NODES,recipes:RECIPES,collections:MUSEUM_COLLECTIONS,fossilRecipes:MUSEUM_FOSSIL_RECIPES,relicts:MUSEUM_RELICTS,voyages:VOYAGES,taxonomy:taxonomyInfo,specials:configuredSpecials};}
-function achievementMark3360(...groups){for(const g of groups)achievementDirty3360.add(g);commissionDirty3370=true;}
+function achievementMark3360(...groups){for(const g of groups)achievementDirty3360.add(g);commissionDirty3370=true;if(groups.some(g=>['museum','research','zoology'].includes(g)))curationDirty3380=true;}
 function achievementIncrement3360(key){globalThis.AtlasAchievements3360?.increment(state,key);achievementMark3360('navigation');}
 function achievementRecord3360(type,data){globalThis.AtlasAchievements3360?.record(state,type,data);achievementMark3360('navigation','exploration');}
 function achievementFlush3360(){
@@ -2331,7 +2334,7 @@ function showStorageFault(message){
 }
 function persist(){
  if(commissionClaiming3370)return true;
- achievementFlush3360();commissionFlush3370();
+ achievementFlush3360();commissionFlush3370();curationFlush3380();
  if(unreadableSave){showStorageFault('La partida almacenada no se pudo leer y se conserva sin reemplazar. Abre Respaldos para recuperarla.');return false;}
  try{
   localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
@@ -2424,6 +2427,7 @@ window.AtlasSaveBridge={
      // Importar no reproduce notificaciones de medallas ni inventa acciones antiguas.
      if(achievementReady3360){achievementNotices3360=[];achievementDirty3360.clear();globalThis.AtlasSociety3360?.clearNotifications();globalThis.AtlasAchievements3360.initialize(state,achievementContext3360(),{silent:true});}
      if(commissionReady3370){commissionNotices3370=[];globalThis.AtlasCommissionsUI3370?.clearNotifications();globalThis.AtlasCommissions3370.mergeReceipts(state,before,commissionContext3370());globalThis.AtlasCommissions3370.initialize(state,commissionContext3370());commissionDirty3370=false;}
+     if(curationReady3380){globalThis.AtlasMuseumCuration3380.merge(state,before);globalThis.AtlasMuseumCuration3380.initialize(state,curationContext3380());curationDirty3380=false;}
      // Evitar calcular un intervalo offline obsoleto al actualizar la partida.
      state.lastTick=Date.now();
      autoAccum=0;autoDiaryBuffer={searches:0,hits:0,knowledge:0};
@@ -6646,6 +6650,12 @@ if(globalThis.AtlasCommissions3370){
  claimScientificMission=function(id){return commissionClaim3370(id,originalClaim3370);};
  const mark3370=fn=>function(...args){commissionDirty3370=true;return fn.apply(this,args);};
  addInventory=mark3370(addInventory);collectExcavation=mark3370(collectExcavation);
+}
+// MUS3380: evaluate only after relevant events; diplomas have zero economic effect.
+if(globalThis.AtlasMuseumCuration3380){
+ globalThis.AtlasMuseumCuration3380.initialize(state,curationContext3380());curationReady3380=true;curationDirty3380=false;
+ const mark3380=fn=>function(...args){curationDirty3380=true;return fn.apply(this,args);};
+ removeExhibit=mark3380(removeExhibit);toggleMuseumDisplay=mark3380(toggleMuseumDisplay);researchRelict=mark3380(researchRelict);
 }
 render();
 })();
