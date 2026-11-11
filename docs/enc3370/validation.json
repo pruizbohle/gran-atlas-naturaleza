@@ -34,7 +34,21 @@
   "pwa": "pwa/browser-report.json",
   "browser": "browser/report.json",
   "session": "browser/session-report.json",
-  "publication": "pending verification",
+  "publication": {
+    "status": "verified",
+    "commit": "07f4688462b6bf2813749f920afba9e3223e8629",
+    "workflow": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42943619506",
+    "url": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+    "actions": "published-actions.json",
+    "hashes": "published-report.json",
+    "browser": "published-browser.json",
+    "webFilesVerified": 169,
+    "hashMismatches": 0,
+    "browserErrors": 0,
+    "cache": "gran-atlas-v3.37.0-commissions-f9f7f8ab0083",
+    "declaredUniqueOfflineFiles": 167,
+    "observedCacheEntries": 168
+  },
   "apkBuilt": false,
   "androidSigningChanged": false,
   "physicalAndroid": false

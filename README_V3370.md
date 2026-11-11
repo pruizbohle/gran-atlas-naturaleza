@@ -64,4 +64,12 @@ node scripts/check-commissions-v3370.cjs
 node scripts/check-commissions-session-v3370.cjs
 ```
 
-La evidencia y los enlaces comprobados de GitHub Pages se incorporan tras el despliegue. **Android no se compila ni se modifica su firma permanente.**
+## Publicación verificada
+
+[GitHub Actions](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42943619506) validó y desplegó el commit `07f4688`. Los [169 archivos públicos](docs/enc3370/published-report.json) coinciden con sus hashes. La [prueba Chromium sobre Pages](docs/enc3370/published-browser.json) pasó sin errores JavaScript: caché `gran-atlas-v3.37.0-commissions-f9f7f8ab0083`, juego y laboratorios offline, operación pendiente conservada, catálogo mundial de 945 identidades, 80 medallas y tablón de 37 encargos con reclamación explícita única en su partida aislada. Se declaran 167 archivos únicos offline; la navegación raíz añade una entrada y se observaron 168 en caché.
+
+- [Juego 3.37.0](https://pruizbohle.github.io/gran-atlas-naturaleza/).
+- [Actualizar conservando la partida y con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3370.html).
+- [Laboratorio aislado de Misiones](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-misiones-v3370.html).
+
+Las seis etapas están integradas en `main` y `feat/encargos-v3370`, con sus evidencias. **Android no se compiló y su firma permanente no se modificó.**
