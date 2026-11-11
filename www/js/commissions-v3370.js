@@ -44,7 +44,7 @@ function objective(d,m){const requirements=d.requirements.map(r=>({...r,value:Ma
 function evaluate(s,ctx){const m=metrics(s,ctx),c=s.commissions||{};return catalog.map(d=>{const p=objective(d,m),satisfied=!!c.satisfied?.[d.id]||p.complete,available=!d.previous||!!c.ready?.[d.previous]||!!c.claimed?.[d.previous];return {definition:d,...p,satisfied,available,ready:!!c.ready?.[d.id]||satisfied&&available,claimed:!!c.claimed?.[d.id]};});}
 const object=o=>o&&typeof o==='object'&&!Array.isArray(o)?o:{};
 const copy=o=>JSON.parse(JSON.stringify(object(o)));
-function normalize(s,ctx){const old=object(s.commissions);s.commissions={...old,version:1,satisfied:copy(old.satisfied),ready:copy(old.ready),claimed:copy(old.claimed),legacyClaims:copy(old.legacyClaims),notified:{...object(old.notified)},tracked:[...new Set(Array.isArray(old.tracked)?old.tracked:[])].filter(id=>catalog.some(d=>d.id===id)||ctx.legacy.some(d=>d.id===id)).slice(0,3)};
+function normalize(s,ctx){const old=object(s.commissions);s.commissions={...old,version:1,satisfied:copy(old.satisfied),ready:copy(old.ready),claimed:copy(old.claimed),legacyClaims:copy(old.legacyClaims),notified:{...object(old.notified)},tracked:[...new Set(Array.isArray(old.tracked)?old.tracked:[])].filter(id=>(catalog.some(d=>d.id===id)||ctx.legacy.some(d=>d.id===id))&&!old.claimed?.[id]&&!s.purchases?.['mission_'+id]).slice(0,3)};
  for(const d of ctx.legacy)if(s.purchases?.['mission_'+d.id])s.commissions.legacyClaims[d.id]??={claimedAt:null,source:'historical-marker'};
  return s.commissions;
 }

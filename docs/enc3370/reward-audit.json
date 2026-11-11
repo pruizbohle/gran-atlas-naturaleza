@@ -1,0 +1,29 @@
+{
+  "new24": {
+    "money": 3560,
+    "knowledge": 4750,
+    "items": {
+      "parchment_scrap": 9,
+      "pressed_flower": 1,
+      "river_pebble": 2,
+      "carved_wood": 2,
+      "fossil_fragment": 3,
+      "fossil_tooth": 2,
+      "brass_shard": 1
+    }
+  },
+  "original13": {
+    "money": 14450,
+    "knowledge": 9000
+  },
+  "newMoneyAsFractionOfOriginal": 0.24636678200692042,
+  "initialFunds": 420,
+  "firstReward": {
+    "money": 40,
+    "knowledge": 50
+  },
+  "continentsRequireNoCommissions": true,
+  "prestigeReward": 0,
+  "permanentInstrumentsConsumed": 0,
+  "scope": "24 one-shot rewards over early to abyssal progression, not repeatable income. No passive or probability changes."
+}

@@ -1,0 +1,505 @@
+{
+  "seed": 3370,
+  "method": "Synthetic resources/observations; real craft, research, study, publication, Museum, excavation, travel, four trade durations, purchases, barters and deep/abyssal resolvers. Not human completion time.",
+  "unlocked": 24,
+  "claims": 24,
+  "tradeDurationsHours": [
+    4,
+    8,
+    12,
+    24
+  ],
+  "abyssAttempts": 2,
+  "paidOnce": {
+    "money": 3560,
+    "knowledge": 4750
+  },
+  "missions": [
+    {
+      "id": "enc_studies_1",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "discovered",
+          "target": 3,
+          "label": "Identidades descubiertas",
+          "value": 3
+        },
+        {
+          "metric": "sightings",
+          "target": 20,
+          "label": "Avistamientos conservados",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "id": "enc_studies_2",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "stage:1",
+          "target": 3,
+          "label": "Especies en etapa 1 o superior",
+          "value": 3
+        },
+        {
+          "metric": "stage:2",
+          "target": 1,
+          "label": "Especies en etapa 2 o superior",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "enc_studies_3",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "published",
+          "target": 2,
+          "label": "Monografías publicadas",
+          "value": 2
+        },
+        {
+          "metric": "stage:3",
+          "target": 3,
+          "label": "Especies en etapa 3 o superior",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "enc_studies_4",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "visited",
+          "target": 2,
+          "label": "Regiones visitadas",
+          "value": 2
+        },
+        {
+          "metric": "studiedVisited",
+          "target": 2,
+          "label": "Catálogos visitados con dos especies estudiadas",
+          "value": 2
+        },
+        {
+          "metric": "stage:1",
+          "target": 4,
+          "label": "Especies estudiadas distintas",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "enc_world_1",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "visited",
+          "target": 3,
+          "label": "Regiones visitadas",
+          "value": 3
+        },
+        {
+          "metric": "studiedVisited",
+          "target": 2,
+          "label": "Catálogos visitados con dos especies estudiadas",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "enc_world_2",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "studiedContinents",
+          "target": 2,
+          "label": "Continentes visitados con dos especies estudiadas",
+          "value": 2
+        },
+        {
+          "metric": "stage:2",
+          "target": 5,
+          "label": "Especies en etapa 2 o superior",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "id": "enc_world_3",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "voyageTypes",
+          "target": 3,
+          "label": "Tipos científicos acreditados",
+          "value": 3
+        },
+        {
+          "metric": "voyages",
+          "target": 4,
+          "label": "Expediciones científicas completadas",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "enc_world_4",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "visited",
+          "target": 8,
+          "label": "Regiones visitadas",
+          "value": 8
+        },
+        {
+          "metric": "regional",
+          "target": 2,
+          "label": "Catálogos regionales descubiertos completos",
+          "value": 2
+        },
+        {
+          "metric": "published",
+          "target": 5,
+          "label": "Monografías publicadas",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "id": "enc_museum_1",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "exhibits",
+          "target": 2,
+          "label": "Especies expuestas",
+          "value": 2
+        },
+        {
+          "metric": "stage:3",
+          "target": 2,
+          "label": "Especies en etapa 3 o superior",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "enc_museum_2",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "fossils",
+          "target": 1,
+          "label": "Colecciones fósiles",
+          "value": 1
+        },
+        {
+          "metric": "stock:bone_short",
+          "target": 4,
+          "label": "Huesos cortos disponibles",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "enc_museum_3",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "excavations",
+          "target": 2,
+          "label": "Excavaciones completadas",
+          "value": 2
+        },
+        {
+          "metric": "fossils",
+          "target": 1,
+          "label": "Colecciones fósiles",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "enc_museum_4",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "dinosaurs",
+          "target": 1,
+          "label": "Reconstrucciones únicas",
+          "value": 1
+        },
+        {
+          "metric": "artifacts",
+          "target": 1,
+          "label": "Artefactos catalogados",
+          "value": 1
+        },
+        {
+          "metric": "branch:museologia",
+          "target": 2,
+          "label": "Investigaciones de Museología",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "enc_institute_1",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "branch:exploracion",
+          "target": 2,
+          "label": "Investigaciones de Exploración",
+          "value": 2
+        },
+        {
+          "metric": "craft:field_hat",
+          "target": 1,
+          "label": "Sombrero de campo fabricado",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "enc_institute_2",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "craft:brass_compass",
+          "target": 1,
+          "label": "Brújula fabricada",
+          "value": 1
+        },
+        {
+          "metric": "craft:binoculars",
+          "target": 1,
+          "label": "Prismáticos fabricados",
+          "value": 1
+        },
+        {
+          "metric": "branch:naturalismo",
+          "target": 1,
+          "label": "Investigaciones de Naturalismo",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "enc_institute_3",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "stock:parchment_scrap",
+          "target": 8,
+          "label": "Pergaminos",
+          "value": 8
+        },
+        {
+          "metric": "stock:carved_wood",
+          "target": 4,
+          "label": "Maderas talladas",
+          "value": 4
+        },
+        {
+          "metric": "stock:polished_lens",
+          "target": 2,
+          "label": "Lentes pulidas",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "enc_institute_4",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "craft:field_telescope",
+          "target": 1,
+          "label": "Telescopio fabricado",
+          "value": 1
+        },
+        {
+          "metric": "craft:scholar_hat",
+          "target": 1,
+          "label": "Sombrero de estudioso fabricado",
+          "value": 1
+        },
+        {
+          "metric": "research",
+          "target": 12,
+          "label": "Nodos de investigación distintos",
+          "value": 12
+        }
+      ]
+    },
+    {
+      "id": "enc_navigation_1",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "voyages",
+          "target": 4,
+          "label": "Retornos científicos",
+          "value": 4
+        },
+        {
+          "metric": "voyageTypes",
+          "target": 2,
+          "label": "Tipos científicos acreditados",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "enc_navigation_2",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "counter:trade",
+          "target": 2,
+          "label": "Retornos comerciales desde 3.36.0",
+          "value": 2
+        },
+        {
+          "metric": "counter:market",
+          "target": 3,
+          "label": "Compras desde 3.36.0",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "enc_navigation_3",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "counter:barter",
+          "target": 2,
+          "label": "Trueques desde 3.36.0",
+          "value": 2
+        },
+        {
+          "metric": "counter:market",
+          "target": 5,
+          "label": "Compras desde 3.36.0",
+          "value": 5
+        }
+      ]
+    },
+    {
+      "id": "enc_navigation_4",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "counter:trade",
+          "target": 4,
+          "label": "Retornos comerciales desde 3.36.0",
+          "value": 4
+        },
+        {
+          "metric": "counter:trade24",
+          "target": 1,
+          "label": "Retorno de ruta de 24 h desde 3.36.0",
+          "value": 1
+        },
+        {
+          "metric": "voyageTypes",
+          "target": 3,
+          "label": "Tipos científicos acreditados",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "enc_extreme_1",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "groups",
+          "target": 4,
+          "label": "Grupos zoológicos descubiertos",
+          "value": 4
+        },
+        {
+          "metric": "stage:3",
+          "target": 8,
+          "label": "Especies en etapa 3 o superior",
+          "value": 8
+        }
+      ]
+    },
+    {
+      "id": "enc_extreme_2",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "variant:Notable",
+          "target": 3,
+          "label": "Identidades con Notable",
+          "value": 3
+        },
+        {
+          "metric": "specialGroups",
+          "target": 2,
+          "label": "Grupos con especiales registrados",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "enc_extreme_3",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "deepCompleted",
+          "target": 3,
+          "label": "Operaciones profundas acreditadas",
+          "value": 3
+        },
+        {
+          "metric": "method:sondeo",
+          "target": 1,
+          "label": "Sondeo acreditado",
+          "value": 1
+        },
+        {
+          "metric": "method:muestreo",
+          "target": 1,
+          "label": "Muestreo acreditado",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "enc_extreme_4",
+      "ready": true,
+      "requirements": [
+        {
+          "metric": "abyssVisited",
+          "target": 1,
+          "label": "Sector abisal visitado",
+          "value": 1
+        },
+        {
+          "metric": "abyssRecords",
+          "target": 1,
+          "label": "Identificación de operación abisal",
+          "value": 1
+        },
+        {
+          "metric": "abyssStudies",
+          "target": 2,
+          "label": "Especies del catálogo abisal en etapa 3",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}

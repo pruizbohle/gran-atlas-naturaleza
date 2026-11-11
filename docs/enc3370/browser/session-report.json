@@ -1,0 +1,49 @@
+{
+  "version": "3.37.0",
+  "viewport": 390,
+  "method": "Chromium CPU x1, 200 cycles / 800 Society pane switches, all37 missions and80 achievements, post-GC metrics; elapsed measured batch time, not human session hours.",
+  "points": [
+    {
+      "cycles": 0,
+      "tabSwitches": 0,
+      "batchMs": 0,
+      "heapMB": 3.915412,
+      "intervals": 1,
+      "cards": 37,
+      "nodes": 1056,
+      "overflow": false
+    },
+    {
+      "cycles": 25,
+      "tabSwitches": 100,
+      "batchMs": 211.29999999701977,
+      "heapMB": 4.115376,
+      "intervals": 1,
+      "cards": 37,
+      "nodes": 1056,
+      "overflow": false
+    },
+    {
+      "cycles": 100,
+      "tabSwitches": 400,
+      "batchMs": 543.1000000014901,
+      "heapMB": 4.136432,
+      "intervals": 1,
+      "cards": 37,
+      "nodes": 1056,
+      "overflow": false
+    },
+    {
+      "cycles": 200,
+      "tabSwitches": 800,
+      "batchMs": 713.2000000029802,
+      "heapMB": 4.198208,
+      "intervals": 1,
+      "cards": 37,
+      "nodes": 1056,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "physicalAndroid": false
+}

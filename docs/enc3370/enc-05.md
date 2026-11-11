@@ -1,0 +1,15 @@
+# ENC-05 · jugabilidad, premios y estabilidad
+
+Las 24 condiciones tienen testigos con acciones reales del motor: fabricación, investigación, viaje, estudio, publicación, Museo, dos excavaciones, cuatro duraciones comerciales (4/8/12/24 h), compras, trueques y protocolos profundos/abisales. Se usan financiación, materiales y observaciones sintéticos explícitos; la semilla es 3370. No se presenta la prueba como tiempo humano de campaña. Cada premio se reclamó una vez y se intentó reclamar de nuevo sin alterar recursos. Véase playability.json.
+
+Presupuesto total finito: £3.560, 4.750 conocimiento, 9 pergaminos, 1 flor prensada, 2 guijarros, 2 maderas talladas, 3 fragmentos fósiles, 2 dientes fósiles y 1 fragmento de latón. Los 13 premios originales suman £14.450 y 9.000 conocimiento, además de sus materiales sin cambios. El efectivo nuevo equivale al 24,6 % del original; el conocimiento al 52,8 %. No son ingresos repetibles ni una fuente pasiva.
+
+La primera recompensa es £40 y 50 conocimiento, frente a £420 iniciales; las cuatro tareas tempranas suman £290 y 330 conocimiento y exigen avanzar hasta dos publicaciones. Los cuatro encargos extremos suman £1.090 y 1.580 conocimiento, distribuidos hasta el catálogo abisal. Los materiales nuevos con precio de mercado conocido equivalen a £865; los fósiles sin precio de mercado no reciben una valoración inventada. No se consumen instrumentos permanentes ni se entrega prestigio. El coste de sondeos, viajes y estudios sigue siendo el de 3.36. Esta comparación de presupuesto no equivale a demostrar balance universal en todas las partidas.
+
+Las 16 pruebas nuevas cubren catálogos originales intactos, cadenas, progreso de objetivos bloqueados, límite de destacados, eventos, premios únicos, rollback, recibos al restaurar la misma partida y separación de partidas distintas. Los exportadores auténticos de 3.35 y 3.36 preservan viajes y operaciones pendientes, medallas y título destacado al importar. La función y las definiciones originales de premios permanecen literales; un envoltorio añade la transacción sin reescribir sus condiciones.
+
+El navegador comprobó 320, 360, 390, 412 y 1280 px: las 37 tarjetas, 13 originales, filtros, tres destacados, aviso agrupado, reclamación explícita, persistencia, archivo y atajos sin gasto ni viaje automático. Sin errores JavaScript ni desbordamientos. Solo Misiones compacta su cabecera y deja las recomendaciones desplegables; las demás pestañas mantienen el diseño de 3.36.
+
+Sesión de 200 ciclos y 800 cambios entre pestañas: todas las 37 misiones y 80 medallas, un intervalo activo y 1.056 nodos al terminar cada punto de medición. Heap tras GC: 3,92 / 4,12 / 4,14 / 4,20 MB. Son ciclos automatizados en Chromium, no horas humanas ni Android físico. No se añade un intervalo. El tick inactivo se instrumenta y no llama a la evaluación de encargos.
+
+Los archivos achievements-v3360.js y society-achievements-ui-v3360.js son idénticos byte por byte al commit de referencia. La extensión de UI se monta desde un archivo nuevo. El helper de pruebas solo añade la carga del módulo productivo nuevo; no se cambian expectativas de pruebas anteriores.

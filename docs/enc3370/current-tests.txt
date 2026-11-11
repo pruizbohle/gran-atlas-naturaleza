@@ -1,0 +1,24 @@
+✔ ENC01 conserva literalmente las 13 definiciones y el premio original, y los 80 criterios (13.990133ms)
+✔ ENC02 catálogo24, seis líneas de4, IDs y dependencias acíclicas, solo premios limitados (1.049522ms)
+✔ ENC02 progreso puro compuesto, sin reducir objetivos a una medalla existente (0.349457ms)
+✔ ENC05 los24 objetivos y cadenas se alcanzan con acciones reales y cada premio se abona una sola vez (712.779651ms)
+✔ ENC05 presupuesto finito y conservación de probabilidades, rutas, recetas y costes de3.36 (176.143929ms)
+✔ ENC03 premio nuevo único, guardado, recarga e importación del mismo respaldo (201.78684ms)
+✔ ENC03 restaurar respaldo anterior de misma partida conserva recibos nuevos y originales, sin duplicar pago (97.343774ms)
+✔ ENC03 premios nuevo y original revierten ante fallo de guardado y pueden reintentarse una sola vez (81.853269ms)
+✔ ENC03 cadenas guardan objetivo satisfecho aunque esté bloqueado y los materiales desaparezcan (90.109916ms)
+✔ ENC03 tres destacadas no activan objetivos y los cálculos/render no mutan estado (93.190036ms)
+✔ ENC03 migración 3.35/3.36 no inventa retornos, fabricación, visitas ni fechas, preserva medallas y títulos (281.151766ms)
+✔ ENC03 recibos de una partida distinta no contaminan el reemplazo (138.491792ms)
+✔ ENC05 tick inactivo no recorre encargos; los eventos activan su evaluación (77.683341ms)
+✔ ENC05 exportación/importación auténtica3.35 y3.36 conserva trabajos, título, logros y premios originales (279.302999ms)
+✔ ENC04 tablón puro incluye37 modelos, filtros y atajos existentes; archiva premios pagados (135.291587ms)
+✔ ENC04 atajos solo cambian vistas, incluidas localizaciones bloqueadas del Atlas (99.605993ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1439.625311
