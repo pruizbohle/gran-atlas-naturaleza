@@ -2,7 +2,7 @@
 (async()=>{
 const frame=document.getElementById('engine'),status=document.getElementById('status');let ready=false;
 const send=(type,scenario)=>{if(ready)frame.contentWindow.postMessage({type,scenario},'*');};
-window.addEventListener('message',e=>{if(e.source!==frame.contentWindow)return;if(e.data?.type==='enc3370-ready'){ready=true;status.textContent='Motor aislado listo · 37 encargos · datos en memoria';}if(e.data?.type==='enc3370-state'){window.CommissionsLab3370=e.data;status.textContent='Demostración: '+e.data.unlocked+' / 37 encargos · '+e.data.scenario;}});
+window.addEventListener('message',e=>{if(e.source!==frame.contentWindow)return;if(e.data?.type==='enc3370-ready'){ready=true;status.textContent='Motor aislado listo · 37 encargos · datos en memoria';}if(e.data?.type==='enc3370-state'){window.CommissionsLab3370=e.data;status.textContent='Demostración: '+e.data.ready+' listos · '+e.data.claimed+' reclamados · '+e.data.scenario;}});
 document.getElementById('scenario').onchange=e=>send('enc3370-scenario',e.target.value);document.getElementById('encounter').onclick=()=>send('enc3370-encounter');
 try{const html=await(await fetch('index.html')).text(),source=await(await fetch('js/app.js')).text();const urls=[...new Set([...html.matchAll(/(?:src|href)="((?:js|css)\/[^"]+)"/g)].map(m=>m[1]).filter(u=>!/^js\/(?:app\.js|save-manager|update-client)/.test(u)))];const resources=new Map(await Promise.all(urls.map(async u=>{const r=await fetch(u);if(!r.ok)throw Error(u+':'+r.status);return[u,await r.text()];})));
 const bridge=`

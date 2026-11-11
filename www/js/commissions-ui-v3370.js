@@ -4,7 +4,7 @@
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const api=()=>root.AtlasCommissions3370;let status='available',line='',bridge=null,banner=null,timer=null;
 const lines=()=>({...api().categories,legacy:{name:'13 encargos originales',icon:'📜'}});
-const modules={field:'Campo',journal:'Cuaderno',museum:'Museo',research:'Investigación',expeditions:'Expediciones',objects:'Inventario',atlas:'Atlas',society:'Publicaciones'};
+const modules={bestiary:'Bestiario',field:'Campo',journal:'Cuaderno',museum:'Museo',research:'Investigación',expeditions:'Expediciones',objects:'Inventario',atlas:'Atlas',society:'Publicaciones'};
 function reward(d,ctx){const r=d.reward;return '£'+r.money+' · '+r.knowledge+' conocimiento'+Object.entries(r.items).map(([id,n])=>' · '+esc(ctx.items?.[id]?.name||id)+' ×'+n).join('');}
 function counts(models){return {claimed:models.filter(m=>m.claimed).length,ready:models.filter(m=>m.ready&&!m.claimed).length,active:models.filter(m=>m.available&&!m.ready&&!m.claimed).length,locked:models.filter(m=>!m.available&&!m.claimed).length};}
 function summary(s,models){const n=counts(models);return '<div class="enc-summary"><span><b>'+n.claimed+'/'+models.length+'</b> reclamados</span><span><b>'+n.ready+'</b> para reclamar</span><span><b>'+n.active+'</b> en progreso</span><span><b>'+n.locked+'</b> bloqueados</span></div><p class="small">Destacados '+s.commissions.tracked.length+'/3. Todos los encargos avanzan sin activarlos. Las recompensas se reclaman expresamente.</p>';}

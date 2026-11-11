@@ -1,3 +1,7 @@
+# 3.37.0 · Encargos del naturalista
+
+Sociedad → Misiones: 24 encargos nuevos y 13 originales, cadenas, tres destacados y premios únicos. Se conservan los 80 logros y las partidas anteriores. [Informe y validación](README_V3370.md).
+
 # 3.36.0 · Logros y Sociedad
 
 80 reconocimientos permanentes, seis categorías y cuatro pestañas internas de Sociedad. Se conservan las misiones y las partidas anteriores. [Informe y validación](README_V3360.md).

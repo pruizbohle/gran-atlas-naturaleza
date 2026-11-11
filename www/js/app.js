@@ -2194,7 +2194,7 @@ function commissionAction3370(action,id){
  if(action==='enc-find'){globalThis.AtlasCommissionsUI3370?.find(id);return;}
  const d=model.definition,region=action==='enc-locate'?REGIONS.find(r=>r.id===d.locate):null;
  const destination=region?'atlas':d.module;
- if(!['field','journal','museum','research','expeditions','objects','atlas','society'].includes(destination))return;
+ if(!['field','journal','museum','research','expeditions','objects','atlas','society','bestiary'].includes(destination))return;
  if(region){state.atlasView=region.continent;state.atlasSelectedRegion=region.id;}
  if(destination==='society'){state.societyView='publications';state.publicationView='monographs';}
  if(destination==='expeditions')navigationTab3300=d.since?'commerce':'expeditions';

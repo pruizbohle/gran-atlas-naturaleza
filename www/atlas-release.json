@@ -1,5 +1,5 @@
 {
-  "version": "3.36.0",
+  "version": "3.37.0",
   "atlas": "simple",
   "cells": {
     "Europa": 10,
@@ -90,5 +90,18 @@
     "economicRewards": false,
     "storage": "gran_atlas_v05",
     "retroactive": true
+  },
+  "commissions": {
+    "original": 13,
+    "new": 24,
+    "total": 37,
+    "lines": 6,
+    "trackedLimit": 3,
+    "newRewards": {
+      "money": 3560,
+      "knowledge": 4750,
+      "prestige": 0
+    },
+    "commercialEvidenceSince": "3.36.0"
   }
 }

@@ -1,0 +1,41 @@
+{
+  "reference": "0e28edf",
+  "version": "3.37.0",
+  "catalog": {
+    "species": 945,
+    "regions": 113,
+    "presences": 1744,
+    "achievements": 80,
+    "originalMissions": 13,
+    "newCommissions": 24,
+    "totalMissions": 37
+  },
+  "tests": {
+    "historical": 473,
+    "current": 67,
+    "total": 540,
+    "failures": 0,
+    "suiteCounts": [
+      430,
+      11,
+      12,
+      20,
+      20,
+      17,
+      14,
+      16
+    ],
+    "logSha256": "67c84e5cc0812d5045582bcfc9fc1f02b5a7f0d512d27a49530b6941553ca6fc"
+  },
+  "achievementsCriteriaUnchanged": true,
+  "originalDefinitionsAndRewardsUnchanged": true,
+  "rewards": "reward-audit.json",
+  "playability": "playability.json",
+  "pwa": "pwa/browser-report.json",
+  "browser": "browser/report.json",
+  "session": "browser/session-report.json",
+  "publication": "pending verification",
+  "apkBuilt": false,
+  "androidSigningChanged": false,
+  "physicalAndroid": false
+}
