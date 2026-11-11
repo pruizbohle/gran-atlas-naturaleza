@@ -2171,7 +2171,21 @@ let storageFault=false;
 let state=load();
 // ACH3360: el catálogo y la persistencia viven en el módulo independiente.
 let curationReady3380=false,curationDirty3380=false;
-function curationContext3380(){return {...achievementContext3360(),capacity:museumCapacity(),price:exhibitPrice};}
+let curationSampleProject3380=null;
+function curationContext3380(){return {...achievementContext3360(),capacity:museumCapacity(),price:exhibitPrice,name:visibleName};}
+function curationAction3380(action,id='',source=null){
+ const api=globalThis.AtlasMuseumCuration3380;if(!api)return;
+ const parts=String(id).split('|'),project=api.projects.find(p=>p.id===parts[0]);
+ if(action==='curate-clear'){curationSampleProject3380=null;museumUI3270.samplePage=0;renderPanel();return;}
+ if(['curate-prev','curate-next','curate-piece-prev','curate-piece-next'].includes(action)){globalThis.AtlasMuseumCurationUI3380?.action(action,id);return;}
+ if(action==='curate-related'){tab='museum';state.museumView='exhibitions';renderPanel();globalThis.AtlasMuseumCurationUI3380?.action('curate-find',id==='enc_museum_1'||id==='museo_3'?'british':'reptiles');persist();return;}
+ if(!project)return;
+ if(action==='curate-feature'){if(!state.museum.curation?.completed?.[project.id])return;const before=JSON.parse(JSON.stringify(state.museum.curation));if(api.feature(state,project.id)&&!persist())state.museum.curation=before;renderPanel();return;}
+ if(action==='curate-open'){const animal=parts[1],pool=api.index(curationContext3380()).get(project.id);if(!pool.includes(animal)||!(state.museum.exhibits[animal]||stage(animal)===5&&state.published[animal]))return;museumAction3270('m27-open',museumToken3270('animal',animal),null,source);return;}
+ const room=action==='curate-samples'?'samples':parts[1];if(!['samples','fossils','relicts','artifacts','journal','bestiary','research'].includes(room))return;
+ if(action==='curate-samples'){curationSampleProject3380=project.id;museumUI3270.filter='all';museumUI3270.samplePage=0;}
+ if(['samples','fossils','relicts','artifacts'].includes(room)){tab='museum';museumSetRoom3270(room);}else{tab=room;renderPanel();persist();}
+}
 function curationFlush3380(){if(!curationReady3380||!curationDirty3380)return;globalThis.AtlasMuseumCuration3380.sync(state,curationContext3380());curationDirty3380=false;globalThis.AtlasMuseumCurationUI3380?.refresh(state,curationContext3380());}
 let commissionReady3370=false,commissionDirty3370=false,commissionClaiming3370=false;
 let commissionNotices3370=[];
@@ -5124,6 +5138,7 @@ function handlePanelAction(e){
 // AM-06 END bestiary-navigation
     if(act==='buy-crown'){buyCrownPack(Number(id)||0);}
     if(act==='exchange-crown'){exchangeTrialCrowns(id==='all'?Math.floor(Math.max(0,state.crownCoins||0)):Number(id));}
+    if(act.startsWith('curate-')){curationAction3380(act,id,el);return;}
     if(act.startsWith('enc-')){commissionAction3370(act,id);return;}
     if(act==='claim-mission'){claimScientificMission(id);}
 }
@@ -6654,6 +6669,9 @@ if(globalThis.AtlasCommissions3370){
 // MUS3380: evaluate only after relevant events; diplomas have zero economic effect.
 if(globalThis.AtlasMuseumCuration3380){
  globalThis.AtlasMuseumCuration3380.initialize(state,curationContext3380());curationReady3380=true;curationDirty3380=false;
+ globalThis.AtlasMuseumCurationUI3380?.mount({state:()=>state,context:curationContext3380,sampleProject:()=>curationSampleProject3380});
+ const originalSampleQuery3380=museumSampleQuery3270;
+ museumSampleQuery3270=function(){const q=originalSampleQuery3380();if(!curationSampleProject3380)return q;const pool=new Set(globalThis.AtlasMuseumCuration3380.index(curationContext3380()).get(curationSampleProject3380)||[]),ids=q.ids.filter(id=>pool.has(id)),pages=Math.max(1,Math.ceil(ids.length/32));museumUI3270.samplePage=Math.max(0,Math.min(museumUI3270.samplePage,pages-1));return {...q,ids,total:ids.length,pages,page:museumUI3270.samplePage,emptyMessage:'No hay muestras de este proyecto que cumplan el filtro actual. Requieren estudio5/5 y publicación, o una exposición histórica conservada.'};};
  const mark3380=fn=>function(...args){curationDirty3380=true;return fn.apply(this,args);};
  removeExhibit=mark3380(removeExhibit);toggleMuseumDisplay=mark3380(toggleMuseumDisplay);researchRelict=mark3380(researchRelict);
 }

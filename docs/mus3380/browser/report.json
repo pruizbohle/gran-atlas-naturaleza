@@ -1,0 +1,74 @@
+{
+  "widths": [
+    {
+      "width": 320,
+      "fiveRooms": true,
+      "fourProjectCards": true,
+      "candidates12": true,
+      "originalModal": true,
+      "capacity3": true,
+      "liveAccreditation": true,
+      "diplomaPersists": true,
+      "featuredNoResourceChange": true,
+      "societyLink": true,
+      "noOverflow": true
+    },
+    {
+      "width": 360,
+      "fiveRooms": true,
+      "fourProjectCards": true,
+      "candidates12": true,
+      "originalModal": true,
+      "capacity3": true,
+      "liveAccreditation": true,
+      "diplomaPersists": true,
+      "featuredNoResourceChange": true,
+      "societyLink": true,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "fiveRooms": true,
+      "fourProjectCards": true,
+      "candidates12": true,
+      "originalModal": true,
+      "capacity3": true,
+      "liveAccreditation": true,
+      "diplomaPersists": true,
+      "featuredNoResourceChange": true,
+      "societyLink": true,
+      "noOverflow": true
+    },
+    {
+      "width": 412,
+      "fiveRooms": true,
+      "fourProjectCards": true,
+      "candidates12": true,
+      "originalModal": true,
+      "capacity3": true,
+      "liveAccreditation": true,
+      "diplomaPersists": true,
+      "featuredNoResourceChange": true,
+      "societyLink": true,
+      "noOverflow": true
+    },
+    {
+      "width": 1280,
+      "fiveRooms": true,
+      "fourProjectCards": true,
+      "candidates12": true,
+      "originalModal": true,
+      "capacity3": true,
+      "liveAccreditation": true,
+      "diplomaPersists": true,
+      "featuredNoResourceChange": true,
+      "societyLink": true,
+      "noOverflow": true
+    }
+  ],
+  "errors": [],
+  "clock": "Frozen Date.now in isolated contexts; production timer and rates unchanged.",
+  "physicalAndroid": false,
+  "isolatedLab": true,
+  "full945Paged32": true
+}
