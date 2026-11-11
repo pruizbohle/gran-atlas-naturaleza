@@ -92,4 +92,14 @@ node scripts/check-museum-curation-v3380.cjs
 node scripts/check-museum-curation-session-v3380.cjs
 ```
 
-La evidencia y los enlaces verificados de GitHub Pages se incorporan tras el despliegue. No se genera APK ni se modifica la firma permanente Android.
+## Publicación verificada
+
+[GitHub Actions](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/42951488626) validó y desplegó el commit `0c9feb2`. Los [175 archivos públicos](docs/mus3380/published-report.json) coinciden con sus hashes. La [prueba Chromium sobre Pages](docs/mus3380/published-browser.json) pasó sin errores JavaScript: cinco salas del Museo, diploma retroactivo y destacado persistentes, juego y laboratorios offline, y acreditaciones conservadas después de retirar un montaje en el laboratorio aislado.
+
+Caché `gran-atlas-v3.38.0-museum-54e86426b664`:173 archivos únicos declarados offline y174 entradas observadas al añadir la navegación raíz.
+
+- [Juego3.38.0](https://pruizbohle.github.io/gran-atlas-naturaleza/).
+- [Actualizar conservando la partida y con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3380.html).
+- [Laboratorio aislado del Museo](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-museo-v3380.html).
+
+Las seis etapas y las evidencias están integradas en `main` y `feat/museo-avanzado-v3380`. No se generó APK ni se modificó la firma permanente Android.

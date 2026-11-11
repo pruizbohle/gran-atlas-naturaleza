@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "version": "3.38.0",
+  "url": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "isolatedContext": true,
+  "explicitProxyCATrust": true,
+  "nineteenMapCells": true,
+  "unlockTravelThroughUI": true,
+  "offlineDeepRegionAndLab": true,
+  "pendingScientificOperationPreserved": true,
+  "viewport": 360,
+  "artPlates": 3,
+  "worldCatalog": 945,
+  "worldLabOfflineCards": 80,
+  "classificationCorrectionsVerified": true,
+  "societyOfflineCards": 80,
+  "missionsOffline37": true,
+  "museumFiveRooms": true,
+  "curationLabOffline": true,
+  "featuredAndDiplomasPersist": true,
+  "diplomaDistinctFromCurrentMount": true,
+  "explicitUniqueClaim": true,
+  "silentMissionMigration": true,
+  "retroactiveRecognitions": true,
+  "silentImport": true,
+  "cache": {
+    "name": "gran-atlas-v3.38.0-museum-54e86426b664",
+    "assets": 174
+  },
+  "errors": [],
+  "physicalAndroid": false
+}
