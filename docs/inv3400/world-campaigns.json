@@ -1,0 +1,426 @@
+{
+  "version": "3.40.0",
+  "method": "Fresh initialState: £420, zero knowledge/prestige, no inventory or heritage. Actual seeded encounters, legal map/gear recipes, scientific voyages, research, grants (one/minute), paid Society funding, publications, Museum and minute ticks. Five manual attempts/minute, ordinary automatic caps, three hired helpers. Only presentation is suppressed. No injected money, materials, sightings, specimens, research or prestige. Date advances virtually; timings describe an automated policy, not human play or an optimal campaign.",
+  "runs": [
+    {
+      "seed": 19,
+      "initial": {
+        "money": 420,
+        "knowledge": 0,
+        "prestige": 0
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 36,
+        "África": 39,
+        "Norteamérica": 77,
+        "Sudamérica": 115,
+        "Oceanía": 138,
+        "Polos": 159,
+        "Océanos": 172,
+        "Océanos profundos": 216,
+        "Fosas abisales": 260
+      },
+      "maps": {
+        "asia_map": {
+          "hour": 7,
+          "prestige": 5,
+          "beforeDestination": true
+        },
+        "africa_map": {
+          "hour": 15,
+          "prestige": 20,
+          "beforeDestination": true
+        },
+        "north_america_map": {
+          "hour": 67,
+          "prestige": 118,
+          "beforeDestination": true
+        },
+        "south_america_map": {
+          "hour": 69,
+          "prestige": 119,
+          "beforeDestination": true
+        },
+        "oceania_map": {
+          "hour": 70,
+          "prestige": 120,
+          "beforeDestination": true
+        },
+        "polar_map": {
+          "hour": 71,
+          "prestige": 121,
+          "beforeDestination": true
+        },
+        "world_map": {
+          "hour": 71,
+          "beforeSeas": true
+        }
+      },
+      "notReached": [],
+      "manualAttempts": 78000,
+      "scientificDepartures": 21833,
+      "materialPurchases": 13,
+      "final": {
+        "prestige": 475,
+        "money": 16810873.00000147,
+        "knowledge": 67217,
+        "published": 475
+      },
+      "samples": [
+        {
+          "hour": 24,
+          "prestige": 36,
+          "money": 1,
+          "knowledge": 21399,
+          "published": 36
+        },
+        {
+          "hour": 48,
+          "prestige": 80,
+          "money": 7139,
+          "knowledge": 48885,
+          "published": 80
+        },
+        {
+          "hour": 72,
+          "prestige": 121,
+          "money": 491812,
+          "knowledge": 55903,
+          "published": 121
+        },
+        {
+          "hour": 96,
+          "prestige": 146,
+          "money": 1429124,
+          "knowledge": 67857,
+          "published": 146
+        },
+        {
+          "hour": 120,
+          "prestige": 192,
+          "money": 2178197,
+          "knowledge": 106747,
+          "published": 192
+        },
+        {
+          "hour": 144,
+          "prestige": 247,
+          "money": 3255828,
+          "knowledge": 66799,
+          "published": 247
+        },
+        {
+          "hour": 168,
+          "prestige": 326,
+          "money": 4503330,
+          "knowledge": 4801,
+          "published": 326
+        },
+        {
+          "hour": 192,
+          "prestige": 382,
+          "money": 6770319,
+          "knowledge": 41951,
+          "published": 382
+        },
+        {
+          "hour": 216,
+          "prestige": 429,
+          "money": 9700991,
+          "knowledge": 117533,
+          "published": 429
+        },
+        {
+          "hour": 240,
+          "prestige": 449,
+          "money": 13624276,
+          "knowledge": 67371,
+          "published": 449
+        }
+      ]
+    },
+    {
+      "seed": 71,
+      "initial": {
+        "money": 420,
+        "knowledge": 0,
+        "prestige": 0
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 19,
+        "África": 29,
+        "Norteamérica": 69,
+        "Sudamérica": 108,
+        "Oceanía": 133,
+        "Polos": 153,
+        "Océanos": 166,
+        "Océanos profundos": 212,
+        "Fosas abisales": 255
+      },
+      "maps": {
+        "asia_map": {
+          "hour": 7,
+          "prestige": 6,
+          "beforeDestination": true
+        },
+        "africa_map": {
+          "hour": 14,
+          "prestige": 20,
+          "beforeDestination": true
+        },
+        "north_america_map": {
+          "hour": 60,
+          "prestige": 118,
+          "beforeDestination": true
+        },
+        "south_america_map": {
+          "hour": 62,
+          "prestige": 119,
+          "beforeDestination": true
+        },
+        "oceania_map": {
+          "hour": 63,
+          "prestige": 120,
+          "beforeDestination": true
+        },
+        "polar_map": {
+          "hour": 64,
+          "prestige": 121,
+          "beforeDestination": true
+        },
+        "world_map": {
+          "hour": 64,
+          "beforeSeas": true
+        }
+      },
+      "notReached": [],
+      "manualAttempts": 76500,
+      "scientificDepartures": 21453,
+      "materialPurchases": 13,
+      "final": {
+        "prestige": 475,
+        "money": 17092418.999998324,
+        "knowledge": 63121,
+        "published": 475
+      },
+      "samples": [
+        {
+          "hour": 24,
+          "prestige": 41,
+          "money": 48772,
+          "knowledge": 10077,
+          "published": 41
+        },
+        {
+          "hour": 48,
+          "prestige": 90,
+          "money": 229500,
+          "knowledge": 16563,
+          "published": 90
+        },
+        {
+          "hour": 72,
+          "prestige": 126,
+          "money": 800086,
+          "knowledge": 62603,
+          "published": 126
+        },
+        {
+          "hour": 96,
+          "prestige": 157,
+          "money": 1723965,
+          "knowledge": 54527,
+          "published": 157
+        },
+        {
+          "hour": 120,
+          "prestige": 200,
+          "money": 2709684,
+          "knowledge": 61033,
+          "published": 200
+        },
+        {
+          "hour": 144,
+          "prestige": 252,
+          "money": 3812791,
+          "knowledge": 69897,
+          "published": 252
+        },
+        {
+          "hour": 168,
+          "prestige": 346,
+          "money": 5044414,
+          "knowledge": 1147,
+          "published": 346
+        },
+        {
+          "hour": 192,
+          "prestige": 390,
+          "money": 7614464,
+          "knowledge": 78605,
+          "published": 390
+        },
+        {
+          "hour": 216,
+          "prestige": 436,
+          "money": 10820418,
+          "knowledge": 30403,
+          "published": 436
+        },
+        {
+          "hour": 240,
+          "prestige": 455,
+          "money": 14681546,
+          "knowledge": 85903,
+          "published": 455
+        }
+      ]
+    },
+    {
+      "seed": 503,
+      "initial": {
+        "money": 420,
+        "knowledge": 0,
+        "prestige": 0
+      },
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 43,
+        "África": 43,
+        "Norteamérica": 77,
+        "Sudamérica": 116,
+        "Oceanía": 138,
+        "Polos": 159,
+        "Océanos": 172,
+        "Océanos profundos": 215,
+        "Fosas abisales": 259
+      },
+      "maps": {
+        "asia_map": {
+          "hour": 8,
+          "prestige": 8,
+          "beforeDestination": true
+        },
+        "africa_map": {
+          "hour": 22,
+          "prestige": 35,
+          "beforeDestination": true
+        },
+        "north_america_map": {
+          "hour": 66,
+          "prestige": 118,
+          "beforeDestination": true
+        },
+        "south_america_map": {
+          "hour": 68,
+          "prestige": 119,
+          "beforeDestination": true
+        },
+        "oceania_map": {
+          "hour": 69,
+          "prestige": 119,
+          "beforeDestination": true
+        },
+        "polar_map": {
+          "hour": 70,
+          "prestige": 120,
+          "beforeDestination": true
+        },
+        "world_map": {
+          "hour": 70,
+          "beforeSeas": true
+        }
+      },
+      "notReached": [],
+      "manualAttempts": 77700,
+      "scientificDepartures": 21314,
+      "materialPurchases": 11,
+      "final": {
+        "prestige": 477,
+        "money": 16593008.000001388,
+        "knowledge": 74198,
+        "published": 477
+      },
+      "samples": [
+        {
+          "hour": 24,
+          "prestige": 39,
+          "money": 6018,
+          "knowledge": 48,
+          "published": 39
+        },
+        {
+          "hour": 48,
+          "prestige": 82,
+          "money": 52913,
+          "knowledge": 3736,
+          "published": 82
+        },
+        {
+          "hour": 72,
+          "prestige": 121,
+          "money": 452856,
+          "knowledge": 89492,
+          "published": 121
+        },
+        {
+          "hour": 96,
+          "prestige": 146,
+          "money": 1390156,
+          "knowledge": 101874,
+          "published": 146
+        },
+        {
+          "hour": 120,
+          "prestige": 190,
+          "money": 2224512,
+          "knowledge": 89756,
+          "published": 190
+        },
+        {
+          "hour": 144,
+          "prestige": 247,
+          "money": 3185196,
+          "knowledge": 100596,
+          "published": 247
+        },
+        {
+          "hour": 168,
+          "prestige": 324,
+          "money": 4543462,
+          "knowledge": 2890,
+          "published": 324
+        },
+        {
+          "hour": 192,
+          "prestige": 384,
+          "money": 6704817,
+          "knowledge": 50396,
+          "published": 384
+        },
+        {
+          "hour": 216,
+          "prestige": 429,
+          "money": 9741597,
+          "knowledge": 36366,
+          "published": 429
+        },
+        {
+          "hour": 240,
+          "prestige": 452,
+          "money": 13572705,
+          "knowledge": 66972,
+          "published": 452
+        }
+      ]
+    }
+  ],
+  "allReached": true,
+  "seeds": [
+    19,
+    71,
+    503
+  ]
+}

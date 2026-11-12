@@ -1,0 +1,411 @@
+{
+  "version": "3.40.0",
+  "base": "4496003",
+  "traditionalOffersUnchanged": 14,
+  "originalConversionsUnchanged": 5,
+  "regional": [
+    {
+      "id": "asian_spices",
+      "continent": "Asia",
+      "name": "Especias de gabinete oriental",
+      "input": {
+        "pressed_flower": 50
+      },
+      "ratio": "50:1",
+      "output": {
+        "asian_spices": 1
+      },
+      "inputReplacementPotential": 2000,
+      "returnMoney": 0,
+      "returnKnowledge": 0,
+      "returnPrestige": 0,
+      "terminal": true,
+      "obtainableFromMarket": true,
+      "obtainableFromBaseLoot": true
+    },
+    {
+      "id": "asian_trade_folio",
+      "continent": "Asia",
+      "name": "Folio de comercio asiático",
+      "input": {
+        "parchment_scrap": 100
+      },
+      "ratio": "100:1",
+      "output": {
+        "asian_trade_folio": 1
+      },
+      "inputReplacementPotential": 4500,
+      "returnMoney": 0,
+      "returnKnowledge": 0,
+      "returnPrestige": 0,
+      "terminal": true,
+      "obtainableFromMarket": true,
+      "obtainableFromBaseLoot": true
+    },
+    {
+      "id": "african_textile_sample",
+      "continent": "África",
+      "name": "Muestra textil de gabinete africano",
+      "input": {
+        "carved_wood": 50
+      },
+      "ratio": "50:1",
+      "output": {
+        "african_textile_sample": 1
+      },
+      "inputReplacementPotential": 4000,
+      "returnMoney": 0,
+      "returnKnowledge": 0,
+      "returnPrestige": 0,
+      "terminal": true,
+      "obtainableFromMarket": true,
+      "obtainableFromBaseLoot": true
+    },
+    {
+      "id": "north_american_trade_document",
+      "continent": "Norteamérica",
+      "name": "Documento comercial norteamericano",
+      "input": {
+        "parchment_scrap": 50
+      },
+      "ratio": "50:1",
+      "output": {
+        "north_american_trade_document": 1
+      },
+      "inputReplacementPotential": 2250,
+      "returnMoney": 0,
+      "returnKnowledge": 0,
+      "returnPrestige": 0,
+      "terminal": true,
+      "obtainableFromMarket": true,
+      "obtainableFromBaseLoot": true
+    },
+    {
+      "id": "south_american_cacao",
+      "continent": "Sudamérica",
+      "name": "Cacao de colección botánica",
+      "input": {
+        "pressed_flower": 100
+      },
+      "ratio": "100:1",
+      "output": {
+        "south_american_cacao": 1
+      },
+      "inputReplacementPotential": 4000,
+      "returnMoney": 0,
+      "returnKnowledge": 0,
+      "returnPrestige": 0,
+      "terminal": true,
+      "obtainableFromMarket": true,
+      "obtainableFromBaseLoot": true
+    },
+    {
+      "id": "oceanian_nacre",
+      "continent": "Oceanía",
+      "name": "Nácar insular histórico",
+      "input": {
+        "river_pebble": 100
+      },
+      "ratio": "100:1",
+      "output": {
+        "oceanian_nacre": 1
+      },
+      "inputReplacementPotential": 3000,
+      "returnMoney": 0,
+      "returnKnowledge": 0,
+      "returnPrestige": 0,
+      "terminal": true,
+      "obtainableFromMarket": true,
+      "obtainableFromBaseLoot": true
+    },
+    {
+      "id": "polar_geology_record",
+      "continent": "Polos",
+      "name": "Registro geológico polar",
+      "input": {
+        "carved_wood": 100
+      },
+      "ratio": "100:1",
+      "output": {
+        "polar_geology_record": 1
+      },
+      "inputReplacementPotential": 8000,
+      "returnMoney": 0,
+      "returnKnowledge": 0,
+      "returnPrestige": 0,
+      "terminal": true,
+      "obtainableFromMarket": true,
+      "obtainableFromBaseLoot": true
+    }
+  ],
+  "oldOfferPotential": [
+    {
+      "id": "herbarium",
+      "input": 295,
+      "output": 107.5
+    },
+    {
+      "id": "tracks",
+      "input": 230,
+      "output": 110
+    },
+    {
+      "id": "fossils",
+      "input": 285,
+      "output": 172.5
+    },
+    {
+      "id": "teeth",
+      "input": 195,
+      "output": 130
+    },
+    {
+      "id": "optics",
+      "input": 520,
+      "output": 162.5
+    },
+    {
+      "id": "binding",
+      "input": 600,
+      "output": 192.5
+    },
+    {
+      "id": "crates",
+      "input": 500,
+      "output": 196.25
+    },
+    {
+      "id": "field",
+      "input": 340,
+      "output": 152.5
+    },
+    {
+      "id": "archive_supply",
+      "input": 430,
+      "output": 110
+    },
+    {
+      "id": "museum_supply",
+      "input": 560,
+      "output": 152.5
+    },
+    {
+      "id": "documentation",
+      "input": 360,
+      "output": 143.75
+    },
+    {
+      "id": "instruments",
+      "input": 360,
+      "output": 170
+    },
+    {
+      "id": "natural",
+      "input": 380,
+      "output": 162.5
+    },
+    {
+      "id": "museum",
+      "input": 420,
+      "output": 225
+    }
+  ],
+  "witness": {
+    "method": "Synthetic supplied stock for transaction witnesses; real engine performs 140 regional barters. Separate full campaigns begin at £420 without injected resources.",
+    "trades": 140,
+    "moneyKnowledgePrestigeUnchanged": true,
+    "permanentReceipts": 140
+  },
+  "cycleProof": "Regional outputs are terminal collectibles: no sale, recipe, research input, ordinary reward or barter consumes them. Every new edge removes 50 or 100 replenishable supplies and returns no money, knowledge, prestige or productive object. It cannot close a new profitable production cycle.",
+  "maps": [
+    {
+      "continent": "Asia",
+      "map": "asia_map",
+      "piece": "asia_map_piece",
+      "quantity": 10,
+      "research": "asia_1"
+    },
+    {
+      "continent": "África",
+      "map": "africa_map",
+      "piece": "africa_map_piece",
+      "quantity": 10,
+      "research": "africa_1"
+    },
+    {
+      "continent": "Norteamérica",
+      "map": "north_america_map",
+      "piece": "north_america_map_piece",
+      "quantity": 8,
+      "research": "norteamerica_1"
+    },
+    {
+      "continent": "Sudamérica",
+      "map": "south_america_map",
+      "piece": "south_america_map_piece",
+      "quantity": 10,
+      "research": "sudamerica_1",
+      "sourceResearch": "norteamerica_1",
+      "routes": [
+        "atlantic_survey"
+      ]
+    },
+    {
+      "continent": "Oceanía",
+      "map": "oceania_map",
+      "piece": "oceania_map_piece",
+      "quantity": 10,
+      "research": "oceania_1",
+      "sourceResearch": "sudamerica_1",
+      "routes": [
+        "atlantic_survey",
+        "north",
+        "alps"
+      ]
+    },
+    {
+      "continent": "Polos",
+      "map": "polar_map",
+      "piece": "polar_map_piece",
+      "quantity": 8,
+      "research": "polos_1",
+      "sourceResearch": "oceania_1",
+      "routes": [
+        "north",
+        "alps"
+      ]
+    }
+  ],
+  "campaignSeeds": [
+    19,
+    71,
+    503
+  ],
+  "mapWitnesses": [
+    {
+      "seed": 19,
+      "maps": {
+        "asia_map": {
+          "hour": 7,
+          "prestige": 5,
+          "beforeDestination": true
+        },
+        "africa_map": {
+          "hour": 15,
+          "prestige": 20,
+          "beforeDestination": true
+        },
+        "north_america_map": {
+          "hour": 67,
+          "prestige": 118,
+          "beforeDestination": true
+        },
+        "south_america_map": {
+          "hour": 69,
+          "prestige": 119,
+          "beforeDestination": true
+        },
+        "oceania_map": {
+          "hour": 70,
+          "prestige": 120,
+          "beforeDestination": true
+        },
+        "polar_map": {
+          "hour": 71,
+          "prestige": 121,
+          "beforeDestination": true
+        },
+        "world_map": {
+          "hour": 71,
+          "beforeSeas": true
+        }
+      },
+      "worldReachedHour": 260
+    },
+    {
+      "seed": 71,
+      "maps": {
+        "asia_map": {
+          "hour": 7,
+          "prestige": 6,
+          "beforeDestination": true
+        },
+        "africa_map": {
+          "hour": 14,
+          "prestige": 20,
+          "beforeDestination": true
+        },
+        "north_america_map": {
+          "hour": 60,
+          "prestige": 118,
+          "beforeDestination": true
+        },
+        "south_america_map": {
+          "hour": 62,
+          "prestige": 119,
+          "beforeDestination": true
+        },
+        "oceania_map": {
+          "hour": 63,
+          "prestige": 120,
+          "beforeDestination": true
+        },
+        "polar_map": {
+          "hour": 64,
+          "prestige": 121,
+          "beforeDestination": true
+        },
+        "world_map": {
+          "hour": 64,
+          "beforeSeas": true
+        }
+      },
+      "worldReachedHour": 255
+    },
+    {
+      "seed": 503,
+      "maps": {
+        "asia_map": {
+          "hour": 8,
+          "prestige": 8,
+          "beforeDestination": true
+        },
+        "africa_map": {
+          "hour": 22,
+          "prestige": 35,
+          "beforeDestination": true
+        },
+        "north_america_map": {
+          "hour": 66,
+          "prestige": 118,
+          "beforeDestination": true
+        },
+        "south_america_map": {
+          "hour": 68,
+          "prestige": 119,
+          "beforeDestination": true
+        },
+        "oceania_map": {
+          "hour": 69,
+          "prestige": 119,
+          "beforeDestination": true
+        },
+        "polar_map": {
+          "hour": 70,
+          "prestige": 120,
+          "beforeDestination": true
+        },
+        "world_map": {
+          "hour": 70,
+          "beforeSeas": true
+        }
+      },
+      "worldReachedHour": 259
+    }
+  ],
+  "limits": [
+    "Virtual clock and automated policy, not human completion time.",
+    "Existing one-minute grants, funding and Museum economy are retained; their global balance is outside this update.",
+    "Historical access does not count as a physical map for Mapamundi."
+  ]
+}

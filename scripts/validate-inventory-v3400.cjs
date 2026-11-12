@@ -1,0 +1,5 @@
+'use strict';
+const cp=require('node:child_process'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const root=path.resolve(__dirname,'..'),temp=fs.mkdtempSync(path.join(os.tmpdir(),'atlas-3390-reference-')),checkout=path.join(temp,'source');
+try{cp.execFileSync('git',['worktree','add','--detach',checkout,'4496003'],{cwd:root,stdio:'inherit'});console.log('BASELINE: 599 unchanged tests on exact 3.39 source (473 older historical + 126 at 3.39). New map gates intentionally supersede old access/54-object expectations.');cp.execFileSync(process.execPath,['scripts/validate-logistics-v3390.cjs'],{cwd:checkout,stdio:'inherit'});}finally{try{cp.execFileSync('git',['worktree','remove','--force',checkout],{cwd:root,stdio:'inherit'});}finally{fs.rmSync(temp,{recursive:true,force:true});}}
+const files=fs.readdirSync(root+'/tests').filter(f=>/^inv3400-.*\.test\.cjs$/.test(f)).sort().map(f=>'tests/'+f);console.log('CURRENT 3.40: inventory, actual sources, geographic gates, full-world witnesses, regional barters, migrations 3.28–3.39, rollback, integrity and PWA.');cp.execFileSync(process.execPath,['--test',...files],{cwd:root,stdio:'inherit'});

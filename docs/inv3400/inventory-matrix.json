@@ -1,0 +1,2110 @@
+{
+  "version": "3.40.0",
+  "originalObjects": 54,
+  "totalObjects": 68,
+  "rows": [
+    {
+      "id": "binoculars",
+      "name": "Prismáticos de viaje",
+      "sources": [
+        "Taller: Lente pulida ×2 · Fragmento de mapa ×1",
+        "Fabricación; mejora de prismáticos"
+      ],
+      "uses": [
+        {
+          "name": "Catalejo de precisión",
+          "module": "recipe",
+          "target": "field_telescope"
+        },
+        {
+          "name": "Equipar: +12 % relativo de probabilidad de encuentro manual",
+          "module": "equipment",
+          "target": "binoculars"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "polished_lens": 2,
+          "map_fragment": 1
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "brass_compass",
+      "name": "Brújula de latón",
+      "sources": [
+        "Taller: Moneda antigua ×1 · Fragmento de mapa ×1",
+        "Fabricación en Equipo/Taller"
+      ],
+      "uses": [
+        {
+          "name": "Preparación continental permanente",
+          "module": "progression",
+          "target": "atlas"
+        },
+        {
+          "name": "Equipar: +4 % de conocimiento de expediciones (redondeado)",
+          "module": "equipment",
+          "target": "brass_compass"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "ancient_coin": 1,
+          "map_fragment": 1
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "sturdy_pack",
+      "name": "Morral reforzado",
+      "sources": [
+        "Taller: Muestra de huellas ×2 · Escama de cola de castor ×1",
+        "Fabricación en Equipo/Taller"
+      ],
+      "uses": [
+        {
+          "name": "Abrigo de expedición polar",
+          "module": "recipe",
+          "target": "polar_coat"
+        },
+        {
+          "name": "Equipo de sondeo y muestreo",
+          "module": "recipe",
+          "target": "sounding_kit"
+        },
+        {
+          "name": "Equipar: +3 puntos porcentuales de probabilidad de botín de expedición",
+          "module": "equipment",
+          "target": "sturdy_pack"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "animal_trace": 2,
+          "beaver_tail_scale": 1
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "field_hat",
+      "name": "Sombrero de naturalista",
+      "sources": [
+        "Taller: Flor prensada ×2 · Pergamino antiguo ×2",
+        "Fabricación con flores y pergamino"
+      ],
+      "uses": [
+        {
+          "name": "Sombrero académico",
+          "module": "recipe",
+          "target": "scholar_hat"
+        },
+        {
+          "name": "Equipar: +10 % de conocimiento por búsquedas",
+          "module": "equipment",
+          "target": "field_hat"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "pressed_flower": 2,
+          "parchment_scrap": 2
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "feather_cap",
+      "name": "Gorro emplumado",
+      "sources": [
+        "Taller: Pluma de rapaz ×2 · Flor prensada ×1",
+        "Fabricación con plumas"
+      ],
+      "uses": [
+        {
+          "name": "Sombrero académico",
+          "module": "recipe",
+          "target": "scholar_hat"
+        },
+        {
+          "name": "Equipar: +6 puntos porcentuales de probabilidad de botín de expedición",
+          "module": "equipment",
+          "target": "feather_cap"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "owl_feather": 2,
+          "pressed_flower": 1
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "rain_hood",
+      "name": "Capucha impermeable",
+      "sources": [
+        "Taller: Flor prensada ×1 · Muestra de huellas ×1",
+        "Fabricación en Equipo/Taller"
+      ],
+      "uses": [
+        {
+          "name": "Abrigo de expedición polar",
+          "module": "recipe",
+          "target": "polar_coat"
+        },
+        {
+          "name": "Equipar: +5 % relativo de probabilidad de encuentro automático",
+          "module": "equipment",
+          "target": "rain_hood"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "pressed_flower": 1,
+          "animal_trace": 1
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "amulet",
+      "name": "Colgante del explorador",
+      "sources": [
+        "Taller: Moneda antigua ×1 · Bigote de nutria ×1",
+        "Fabricación en Equipo/Taller"
+      ],
+      "uses": [
+        {
+          "name": "Medallón de ámbar",
+          "module": "recipe",
+          "target": "museum_medallion"
+        },
+        {
+          "name": "Equipar: +8 % relativo de probabilidad de encuentro automático",
+          "module": "equipment",
+          "target": "amulet"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "ancient_coin": 1,
+          "otter_whisker": 1
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "amber_charm",
+      "name": "Amuleto de ámbar",
+      "sources": [
+        "Taller: Flor prensada ×1 · Diente de lobo ×1",
+        "Fabricación en Equipo/Taller"
+      ],
+      "uses": [
+        {
+          "name": "Equipar: +5 % relativo sobre la subvención base",
+          "module": "equipment",
+          "target": "amber_charm"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "pressed_flower": 1,
+          "wolf_tooth": 1
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "shell_necklace",
+      "name": "Collar de conchas",
+      "sources": [
+        "Taller: Moneda antigua ×1 · Fragmento fósil ×1",
+        "Fabricación en Equipo/Taller"
+      ],
+      "uses": [
+        {
+          "name": "Equipar: +5 % de libras recibidas en expediciones",
+          "module": "equipment",
+          "target": "shell_necklace"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "ancient_coin": 1,
+          "fossil_fragment": 1
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "fossil_fragment",
+      "name": "Fragmento fósil",
+      "sources": [
+        "Campo, expediciones y prospección",
+        "Botín común de las ocho expediciones (probabilidad variable)",
+        "Misión a los Alpes · botín posible",
+        "Reconocimiento de las tierras altas etíopes · botín posible",
+        "Reconocimiento del desierto del Namib · muestra garantizada",
+        "Misión científica: Rastros del pasado · 6 unidades (premio único)",
+        "Encargo científico: Dos vitrinas documentadas · 1 unidades (premio único)",
+        "Encargo científico: Archivo y componentes · 2 unidades (premio único)"
+      ],
+      "uses": [
+        {
+          "name": "Collar de conchas",
+          "module": "recipe",
+          "target": "shell_necklace"
+        },
+        {
+          "name": "Informe paleontológico",
+          "module": "research",
+          "target": ""
+        },
+        {
+          "name": "Fósil catalogado",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Registro de huellas antiguas",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Estudio de estratos antiguos",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Hueso corto",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Hueso largo",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Cuerno fósil",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Hueso duro",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Placa fósil dorsal",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Espina de vela fósil",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Costilla fósil",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Conservación de fragmentos",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Serie de fragmentos",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Suministros museológicos",
+          "module": "commerce",
+          "target": "routes"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "fossil_skull",
+      "name": "Cráneo fósil",
+      "sources": [
+        "Excavaciones y hallazgos excepcionalmente raros",
+        "Misión científica: Primera prospección paleontológica · 1 unidades (premio único)"
+      ],
+      "uses": [
+        {
+          "name": "Cráneo carnívoro",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Cráneo herbívoro",
+          "module": "museum",
+          "target": "fossils"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "fossil_tooth",
+      "name": "Diente fósil",
+      "sources": [
+        "Excavaciones y expediciones",
+        "Misión científica: Rastros del pasado · 2 unidades (premio único)",
+        "Misión científica: Primera prospección paleontológica · 3 unidades (premio único)",
+        "Encargo científico: Doble excavación documentada · 2 unidades (premio único)"
+      ],
+      "uses": [
+        {
+          "name": "Informe paleontológico",
+          "module": "research",
+          "target": ""
+        },
+        {
+          "name": "Cráneo carnívoro",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Cráneo herbívoro",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Cuerno fósil",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Espina de vela fósil",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Dentición comparada",
+          "module": "commerce",
+          "target": "contracts"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "bone_short",
+      "name": "Hueso corto",
+      "sources": [
+        "Taller del Museo: Hueso corto"
+      ],
+      "uses": [
+        {
+          "name": "Reconstrucción de T. rex",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Triceratops",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Estegosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Espinosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Anquilosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Iguanodonte",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Paquicefalosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Carnotauro",
+          "module": "museum",
+          "target": "fossils"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "bone_long",
+      "name": "Hueso largo",
+      "sources": [
+        "Taller del Museo: Hueso largo"
+      ],
+      "uses": [
+        {
+          "name": "Reconstrucción de T. rex",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Triceratops",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Estegosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Espinosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Anquilosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Iguanodonte",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Paquicefalosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Carnotauro",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Restauración de esqueletos",
+          "module": "museum",
+          "target": "fossils"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "carnivore_skull",
+      "name": "Cráneo carnívoro",
+      "sources": [
+        "Taller del Museo: Cráneo carnívoro"
+      ],
+      "uses": [
+        {
+          "name": "Reconstrucción de T. rex",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Espinosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Carnotauro",
+          "module": "museum",
+          "target": "fossils"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "herbivore_skull",
+      "name": "Cráneo herbívoro",
+      "sources": [
+        "Taller del Museo: Cráneo herbívoro"
+      ],
+      "uses": [
+        {
+          "name": "Reconstrucción de Triceratops",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Iguanodonte",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Paquicefalosaurio",
+          "module": "museum",
+          "target": "fossils"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "fossil_plate",
+      "name": "Placa fósil dorsal",
+      "sources": [
+        "Taller del Museo: Placa fósil dorsal"
+      ],
+      "uses": [
+        {
+          "name": "Reconstrucción de Estegosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Anquilosaurio",
+          "module": "museum",
+          "target": "fossils"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "fossil_sail",
+      "name": "Espina de vela fósil",
+      "sources": [
+        "Taller del Museo: Espina de vela fósil"
+      ],
+      "uses": [
+        {
+          "name": "Reconstrucción de Espinosaurio",
+          "module": "museum",
+          "target": "fossils"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "animal_trace",
+      "name": "Muestra de huellas",
+      "sources": [
+        "Botín de expedición y muestras de fauna",
+        "Botín común de las ocho expediciones (probabilidad variable)",
+        "Ruta científica a los Cárpatos · botín posible",
+        "Reconocimiento de las tierras altas etíopes · muestra garantizada",
+        "Gabinete de especímenes: Lince boreal"
+      ],
+      "uses": [
+        {
+          "name": "Morral reforzado",
+          "module": "recipe",
+          "target": "sturdy_pack"
+        },
+        {
+          "name": "Capucha impermeable",
+          "module": "recipe",
+          "target": "rain_hood"
+        },
+        {
+          "name": "Archivo de rastros",
+          "module": "research",
+          "target": ""
+        },
+        {
+          "name": "Registro de huellas antiguas",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Archivo de pisadas fósiles",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Análisis de huellas",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Archivo comparado de rastros",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Conversión: Pluma de rapaz ×1",
+          "module": "commerce",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 5
+    },
+    {
+      "id": "pressed_flower",
+      "name": "Flor prensada",
+      "sources": [
+        "Expedición; registros botánicos",
+        "Botín común de las ocho expediciones (probabilidad variable)",
+        "Reconocimiento costero · botín posible",
+        "Comercio: Cabotaje de suministros · 2 unidades por viaje",
+        "Mercado: £40 por unidad",
+        "Encargo científico: Del apunte a la ficha · 1 unidades (premio único)"
+      ],
+      "uses": [
+        {
+          "name": "Sombrero de naturalista",
+          "module": "recipe",
+          "target": "field_hat"
+        },
+        {
+          "name": "Gorro emplumado",
+          "module": "recipe",
+          "target": "feather_cap"
+        },
+        {
+          "name": "Amuleto de ámbar",
+          "module": "recipe",
+          "target": "amber_charm"
+        },
+        {
+          "name": "Capucha impermeable",
+          "module": "recipe",
+          "target": "rain_hood"
+        },
+        {
+          "name": "Sombrero académico",
+          "module": "recipe",
+          "target": "scholar_hat"
+        },
+        {
+          "name": "Herbario de campo",
+          "module": "research",
+          "target": ""
+        },
+        {
+          "name": "Pliegos para el herbario",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Serie de referencia natural",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Suministro de correspondencia",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Materiales naturales",
+          "module": "commerce",
+          "target": "routes"
+        },
+        {
+          "name": "Conversión: Tintero antiguo ×1",
+          "module": "commerce",
+          "target": "barters"
+        },
+        {
+          "name": "Especias de gabinete oriental · 50:1",
+          "module": "commerce",
+          "target": "barters"
+        },
+        {
+          "name": "Cacao de colección botánica · 100:1",
+          "module": "commerce",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 7
+    },
+    {
+      "id": "ancient_coin",
+      "name": "Moneda antigua",
+      "sources": [
+        "Expedición",
+        "Botín común de las ocho expediciones (probabilidad variable)"
+      ],
+      "uses": [
+        {
+          "name": "Brújula de latón",
+          "module": "recipe",
+          "target": "brass_compass"
+        },
+        {
+          "name": "Colgante del explorador",
+          "module": "recipe",
+          "target": "amulet"
+        },
+        {
+          "name": "Collar de conchas",
+          "module": "recipe",
+          "target": "shell_necklace"
+        },
+        {
+          "name": "Carta cartográfica histórica",
+          "module": "museum",
+          "target": "artifacts"
+        },
+        {
+          "name": "Medallón de expedición",
+          "module": "museum",
+          "target": "artifacts"
+        },
+        {
+          "name": "Astrolabio de latón",
+          "module": "museum",
+          "target": "artifacts"
+        },
+        {
+          "name": "Conversión: Pieza de latón antiguo ×1",
+          "module": "commerce",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 1
+    },
+    {
+      "id": "map_fragment",
+      "name": "Fragmento de mapa",
+      "sources": [
+        "Botín cartográfico de expediciones",
+        "Botín común de las ocho expediciones (probabilidad variable)",
+        "Reconocimiento costero · botín posible",
+        "Cartografía del mar del Norte · botín posible",
+        "Ruta científica a los Balcanes · botín posible",
+        "Reconocimiento del Atlántico · botín posible",
+        "Misión científica: Rescate de instrumentos históricos · 2 unidades (premio único)"
+      ],
+      "uses": [
+        {
+          "name": "Brújula de latón",
+          "module": "recipe",
+          "target": "brass_compass"
+        },
+        {
+          "name": "Prismáticos de viaje",
+          "module": "recipe",
+          "target": "binoculars"
+        },
+        {
+          "name": "Cuadrante transatlántico",
+          "module": "recipe",
+          "target": "oceanic_quadrant"
+        },
+        {
+          "name": "Informe cartográfico",
+          "module": "research",
+          "target": ""
+        },
+        {
+          "name": "Carta cartográfica histórica",
+          "module": "museum",
+          "target": "artifacts"
+        },
+        {
+          "name": "Diario de explorador",
+          "module": "museum",
+          "target": "artifacts"
+        },
+        {
+          "name": "Globo cartográfico antiguo",
+          "module": "museum",
+          "target": "artifacts"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 4
+    },
+    {
+      "id": "asia_map_piece",
+      "name": "Parte de mapa de Asia",
+      "sources": [
+        "Expediciones europeas (especialmente Norte y Alpes)",
+        "Reconocimiento costero · botín posible",
+        "Cartografía del mar del Norte · botín posible",
+        "Misión a los Alpes · botín posible",
+        "Ruta científica a los Cárpatos · botín posible",
+        "Ruta científica a los Balcanes · botín posible"
+      ],
+      "uses": [
+        {
+          "name": "Mapa de Asia",
+          "module": "recipe",
+          "target": "asia_map"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 10
+    },
+    {
+      "id": "asia_map",
+      "name": "Mapa de Asia",
+      "sources": [
+        "Taller: Parte de mapa de Asia ×10",
+        "Fabricar con 10 partes de mapa de Asia"
+      ],
+      "uses": [
+        {
+          "name": "Mapamundi",
+          "module": "recipe",
+          "target": "world_map"
+        },
+        {
+          "name": "Cartografía de Asia",
+          "module": "research",
+          "target": "asia_1"
+        },
+        {
+          "name": "Cartografía de Asia",
+          "module": "progression",
+          "target": "Asia"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "asia_map_piece": 10
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "africa_map_piece",
+      "name": "Parte de mapa de África",
+      "sources": [
+        "Expediciones (especialmente rutas balcánicas y africanas)",
+        "Ruta científica a los Cárpatos · botín posible",
+        "Ruta científica a los Balcanes · botín posible",
+        "Reconocimiento de las tierras altas etíopes · botín posible",
+        "Reconocimiento del desierto del Namib · botín posible"
+      ],
+      "uses": [
+        {
+          "name": "Mapa de África",
+          "module": "recipe",
+          "target": "africa_map"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 10
+    },
+    {
+      "id": "africa_map",
+      "name": "Mapa de África",
+      "sources": [
+        "Taller: Parte de mapa de África ×10",
+        "Fabricar con 10 partes de mapa de África"
+      ],
+      "uses": [
+        {
+          "name": "Mapamundi",
+          "module": "recipe",
+          "target": "world_map"
+        },
+        {
+          "name": "Estudios cartográficos de África",
+          "module": "research",
+          "target": "africa_1"
+        },
+        {
+          "name": "Cartografía de África",
+          "module": "progression",
+          "target": "África"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "africa_map_piece": 10
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "north_america_map_piece",
+      "name": "Parte de mapa de Norteamérica",
+      "sources": [
+        "Reconocimiento del Atlántico",
+        "Reconocimiento del Atlántico · muestra garantizada"
+      ],
+      "uses": [
+        {
+          "name": "Mapa de Norteamérica",
+          "module": "recipe",
+          "target": "north_america_map"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 8
+    },
+    {
+      "id": "north_america_map",
+      "name": "Mapa de Norteamérica",
+      "sources": [
+        "Taller: Parte de mapa de Norteamérica ×8",
+        "Fabricar con 8 partes de mapa norteamericano"
+      ],
+      "uses": [
+        {
+          "name": "Mapamundi",
+          "module": "recipe",
+          "target": "world_map"
+        },
+        {
+          "name": "Cartografía de Norteamérica",
+          "module": "research",
+          "target": "norteamerica_1"
+        },
+        {
+          "name": "Cartografía de Norteamérica",
+          "module": "progression",
+          "target": "Norteamérica"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "north_america_map_piece": 8
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "oceanic_quadrant",
+      "name": "Cuadrante transatlántico",
+      "sources": [
+        "Taller: Pieza de latón antiguo ×3 · Lente pulida ×2 · Fragmento de mapa ×2 · Pergamino antiguo ×1",
+        "Fabricar con metal y materiales cartográficos"
+      ],
+      "uses": [
+        {
+          "name": "Navegación al Nuevo Mundo",
+          "module": "research",
+          "target": "nuevo_mundo_1"
+        },
+        {
+          "name": "Preparación continental permanente",
+          "module": "progression",
+          "target": "atlas"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "brass_shard": 3,
+          "polished_lens": 2,
+          "map_fragment": 2,
+          "parchment_scrap": 1
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "parchment_scrap",
+      "name": "Pergamino antiguo",
+      "sources": [
+        "Expedición",
+        "Botín común de las ocho expediciones (probabilidad variable)",
+        "Comercio: Cabotaje de suministros · 3 unidades por viaje",
+        "Comercio: Caravana de cartógrafos · 5 unidades por viaje",
+        "Mercado: £45 por unidad",
+        "Conversión de suministros: Madera tallada ×3",
+        "Encargo científico: Tres páginas de campo · 1 unidades (premio único)",
+        "Encargo científico: Itinerario comparado · 2 unidades (premio único)",
+        "Encargo científico: Método y equipo de campo · 2 unidades (premio único)",
+        "Encargo científico: Mesa de correspondencia naval · 2 unidades (premio único)",
+        "Encargo científico: Cuaderno de métodos profundos · 2 unidades (premio único)"
+      ],
+      "uses": [
+        {
+          "name": "Sombrero de naturalista",
+          "module": "recipe",
+          "target": "field_hat"
+        },
+        {
+          "name": "Catalejo de precisión",
+          "module": "recipe",
+          "target": "field_telescope"
+        },
+        {
+          "name": "Cuadrante transatlántico",
+          "module": "recipe",
+          "target": "oceanic_quadrant"
+        },
+        {
+          "name": "Abrigo de expedición polar",
+          "module": "recipe",
+          "target": "polar_coat"
+        },
+        {
+          "name": "Equipo de sondeo y muestreo",
+          "module": "recipe",
+          "target": "sounding_kit"
+        },
+        {
+          "name": "Herbario de campo",
+          "module": "research",
+          "target": ""
+        },
+        {
+          "name": "Medallón de expedición",
+          "module": "museum",
+          "target": "artifacts"
+        },
+        {
+          "name": "Diario de explorador",
+          "module": "museum",
+          "target": "artifacts"
+        },
+        {
+          "name": "Pliegos para el herbario",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Dentición comparada",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Cajas y etiquetas",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Suministro de correspondencia",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Documentación científica",
+          "module": "commerce",
+          "target": "routes"
+        },
+        {
+          "name": "Folio de comercio asiático · 100:1",
+          "module": "commerce",
+          "target": "barters"
+        },
+        {
+          "name": "Documento comercial norteamericano · 50:1",
+          "module": "commerce",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 10
+    },
+    {
+      "id": "river_pebble",
+      "name": "Piedra de río pulida",
+      "sources": [
+        "Expedición",
+        "Botín común de las ocho expediciones (probabilidad variable)",
+        "Reconocimiento costero · botín posible",
+        "Misión a los Alpes · botín posible",
+        "Comercio: Cabotaje de suministros · 3 unidades por viaje",
+        "Mercado: £30 por unidad",
+        "Encargo científico: Dos cuadernos de territorio · 2 unidades (premio único)"
+      ],
+      "uses": [
+        {
+          "name": "Archivo de rastros",
+          "module": "research",
+          "target": ""
+        },
+        {
+          "name": "Donación de materiales",
+          "module": "research",
+          "target": ""
+        },
+        {
+          "name": "Estudio de estratos antiguos",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Hueso duro",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Archivo comparado de rastros",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Serie de referencia natural",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Soportes de gabinete",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Materiales naturales",
+          "module": "commerce",
+          "target": "routes"
+        },
+        {
+          "name": "Conversión: Lente pulida ×1",
+          "module": "commerce",
+          "target": "barters"
+        },
+        {
+          "name": "Nácar insular histórico · 100:1",
+          "module": "commerce",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "heron_feather",
+      "name": "Pluma de garza",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Botín común de las ocho expediciones (probabilidad variable)",
+        "Gabinete de especímenes: Garza real"
+      ],
+      "uses": [
+        {
+          "name": "Catálogo de plumajes",
+          "module": "research",
+          "target": ""
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "polished_lens",
+      "name": "Lente pulida",
+      "sources": [
+        "Expedición; material óptico",
+        "Botín común de las ocho expediciones (probabilidad variable)",
+        "Cartografía del mar del Norte · botín posible",
+        "Reconocimiento del Atlántico · botín posible",
+        "Comercio: Proveedores del taller · 2 unidades por viaje",
+        "Comercio: Caravana de cartógrafos · 2 unidades por viaje",
+        "Comercio: Travesía de abastecimiento · 4 unidades por viaje",
+        "Mercado: £160 por unidad",
+        "Conversión de suministros: Piedra de río pulida ×8"
+      ],
+      "uses": [
+        {
+          "name": "Prismáticos de viaje",
+          "module": "recipe",
+          "target": "binoculars"
+        },
+        {
+          "name": "Catalejo de precisión",
+          "module": "recipe",
+          "target": "field_telescope"
+        },
+        {
+          "name": "Cuadrante transatlántico",
+          "module": "recipe",
+          "target": "oceanic_quadrant"
+        },
+        {
+          "name": "Astrolabio de latón",
+          "module": "museum",
+          "target": "artifacts"
+        },
+        {
+          "name": "Banco de óptica",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Instrumentación",
+          "module": "commerce",
+          "target": "routes"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 6
+    },
+    {
+      "id": "brass_shard",
+      "name": "Pieza de latón antiguo",
+      "sources": [
+        "Expediciones y materiales históricos",
+        "Botín común de las ocho expediciones (probabilidad variable)",
+        "Reconocimiento del desierto del Namib · botín posible",
+        "Comercio: Proveedores del taller · 2 unidades por viaje",
+        "Comercio: Caravana de cartógrafos · 3 unidades por viaje",
+        "Comercio: Travesía de abastecimiento · 5 unidades por viaje",
+        "Mercado: £200 por unidad",
+        "Conversión de suministros: Moneda antigua ×4",
+        "Misión científica: Rescate de instrumentos históricos · 2 unidades (premio único)",
+        "Encargo científico: Reserva del taller · 1 unidades (premio único)"
+      ],
+      "uses": [
+        {
+          "name": "Catalejo de precisión",
+          "module": "recipe",
+          "target": "field_telescope"
+        },
+        {
+          "name": "Medallón de ámbar",
+          "module": "recipe",
+          "target": "museum_medallion"
+        },
+        {
+          "name": "Cuadrante transatlántico",
+          "module": "recipe",
+          "target": "oceanic_quadrant"
+        },
+        {
+          "name": "Equipo de sondeo y muestreo",
+          "module": "recipe",
+          "target": "sounding_kit"
+        },
+        {
+          "name": "Astrolabio de latón",
+          "module": "museum",
+          "target": "artifacts"
+        },
+        {
+          "name": "Globo cartográfico antiguo",
+          "module": "museum",
+          "target": "artifacts"
+        },
+        {
+          "name": "Banco de óptica",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Instrumentación",
+          "module": "commerce",
+          "target": "routes"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 9
+    },
+    {
+      "id": "old_ink",
+      "name": "Tintero antiguo",
+      "sources": [
+        "Expediciones y materiales históricos",
+        "Botín común de las ocho expediciones (probabilidad variable)",
+        "Comercio: Caravana de cartógrafos · 2 unidades por viaje",
+        "Comercio: Travesía de abastecimiento · 3 unidades por viaje",
+        "Mercado: £180 por unidad",
+        "Conversión de suministros: Flor prensada ×6",
+        "Misión científica: Rescate de instrumentos históricos · 1 unidades (premio único)"
+      ],
+      "uses": [
+        {
+          "name": "Sombrero académico",
+          "module": "recipe",
+          "target": "scholar_hat"
+        },
+        {
+          "name": "Informe cartográfico",
+          "module": "research",
+          "target": ""
+        },
+        {
+          "name": "Estudio de estratos antiguos",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Diario de explorador",
+          "module": "museum",
+          "target": "artifacts"
+        },
+        {
+          "name": "Conservación de fragmentos",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Encuadernación del archivo",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Documentación científica",
+          "module": "commerce",
+          "target": "routes"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 1
+    },
+    {
+      "id": "carved_wood",
+      "name": "Madera tallada",
+      "sources": [
+        "Expediciones y materiales históricos",
+        "Botín común de las ocho expediciones (probabilidad variable)",
+        "Comercio: Proveedores del taller · 3 unidades por viaje",
+        "Comercio: Travesía de abastecimiento · 6 unidades por viaje",
+        "Mercado: £80 por unidad",
+        "Misión científica: Rescate de instrumentos históricos · 2 unidades (premio único)",
+        "Encargo científico: Tres rutas de investigación · 1 unidades (premio único)",
+        "Encargo científico: Libro de equivalencias · 1 unidades (premio único)"
+      ],
+      "uses": [
+        {
+          "name": "Abrigo de expedición polar",
+          "module": "recipe",
+          "target": "polar_coat"
+        },
+        {
+          "name": "Equipo de sondeo y muestreo",
+          "module": "recipe",
+          "target": "sounding_kit"
+        },
+        {
+          "name": "Donación de materiales",
+          "module": "research",
+          "target": ""
+        },
+        {
+          "name": "Globo cartográfico antiguo",
+          "module": "museum",
+          "target": "artifacts"
+        },
+        {
+          "name": "Restauración de esqueletos",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Serie de fragmentos",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Encuadernación del archivo",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Cajas y etiquetas",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Soportes de gabinete",
+          "module": "commerce",
+          "target": "contracts"
+        },
+        {
+          "name": "Suministros museológicos",
+          "module": "commerce",
+          "target": "routes"
+        },
+        {
+          "name": "Conversión: Pergamino antiguo ×2",
+          "module": "commerce",
+          "target": "barters"
+        },
+        {
+          "name": "Muestra textil de gabinete africano · 50:1",
+          "module": "commerce",
+          "target": "barters"
+        },
+        {
+          "name": "Registro geológico polar · 100:1",
+          "module": "commerce",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 7
+    },
+    {
+      "id": "wolf_tooth",
+      "name": "Diente de lobo",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Gabinete de especímenes: Lobo gris"
+      ],
+      "uses": [
+        {
+          "name": "Amuleto de ámbar",
+          "module": "recipe",
+          "target": "amber_charm"
+        },
+        {
+          "name": "Cuaderno de mamíferos",
+          "module": "research",
+          "target": ""
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "owl_feather",
+      "name": "Pluma de rapaz",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Conversión de suministros: Muestra de huellas ×6",
+        "Gabinete de especímenes: Búho real",
+        "Gabinete de especímenes: Búho común",
+        "Gabinete de especímenes: Águila real",
+        "Gabinete de especímenes: Milano real"
+      ],
+      "uses": [
+        {
+          "name": "Gorro emplumado",
+          "module": "recipe",
+          "target": "feather_cap"
+        },
+        {
+          "name": "Catálogo de plumajes",
+          "module": "research",
+          "target": ""
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 2
+    },
+    {
+      "id": "antler_fragment",
+      "name": "Fragmento de cornamenta",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Gabinete de especímenes: Ciervo rojo",
+        "Gabinete de especímenes: Corzo europeo"
+      ],
+      "uses": [
+        {
+          "name": "Cuaderno de mamíferos",
+          "module": "research",
+          "target": ""
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "otter_whisker",
+      "name": "Bigote de nutria",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Gabinete de especímenes: Nutria europea"
+      ],
+      "uses": [
+        {
+          "name": "Colgante del explorador",
+          "module": "recipe",
+          "target": "amulet"
+        },
+        {
+          "name": "Análisis de humedales",
+          "module": "research",
+          "target": ""
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "boar_tusk",
+      "name": "Colmillo de jabalí",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Gabinete de especímenes: Jabalí"
+      ],
+      "uses": [
+        {
+          "name": "Cuaderno de mamíferos",
+          "module": "research",
+          "target": ""
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "beaver_tail_scale",
+      "name": "Escama de cola de castor",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Gabinete de especímenes: Castor europeo"
+      ],
+      "uses": [
+        {
+          "name": "Morral reforzado",
+          "module": "recipe",
+          "target": "sturdy_pack"
+        },
+        {
+          "name": "Análisis de humedales",
+          "module": "research",
+          "target": ""
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 2
+    },
+    {
+      "id": "field_telescope",
+      "name": "Catalejo de precisión",
+      "sources": [
+        "Taller: Prismáticos de viaje ×1 · Lente pulida ×2 · Pieza de latón antiguo ×2 · Pergamino antiguo ×2",
+        "Mejora del equipo óptico"
+      ],
+      "uses": [
+        {
+          "name": "Preparación continental permanente",
+          "module": "progression",
+          "target": "atlas"
+        },
+        {
+          "name": "Equipar: +24 % relativo de encuentro manual (sustituye el bono de prismáticos)",
+          "module": "equipment",
+          "target": "field_telescope"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "binoculars": 1,
+          "polished_lens": 2,
+          "brass_shard": 2,
+          "parchment_scrap": 2
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "scholar_hat",
+      "name": "Sombrero académico",
+      "sources": [
+        "Taller: Sombrero de naturalista ×1 · Gorro emplumado ×1 · Tintero antiguo ×1 · Flor prensada ×3",
+        "Mejora de sombreros"
+      ],
+      "uses": [
+        {
+          "name": "Preparación continental permanente",
+          "module": "progression",
+          "target": "atlas"
+        },
+        {
+          "name": "Equipar: +20 % de conocimiento por búsqueda",
+          "module": "equipment",
+          "target": "scholar_hat"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "field_hat": 1,
+          "feather_cap": 1,
+          "old_ink": 1,
+          "pressed_flower": 3
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "museum_medallion",
+      "name": "Medallón de ámbar",
+      "sources": [
+        "Taller: Colgante del explorador ×1 · Ámbar fósil ×1 · Perla fluvial ×1 · Pieza de latón antiguo ×1",
+        "Fabricación con ámbar y perla"
+      ],
+      "uses": [
+        {
+          "name": "Equipar: +10 % de ingresos de las muestras expuestas en el Museo",
+          "module": "equipment",
+          "target": "museum_medallion"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "amulet": 1,
+          "fossil_amber": 1,
+          "river_pearl": 1,
+          "brass_shard": 1
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "fossil_amber",
+      "name": "Ámbar fósil",
+      "sources": [
+        "Expedición excepcional; más probable en costa y Namib"
+      ],
+      "uses": [
+        {
+          "name": "Medallón de ámbar",
+          "module": "recipe",
+          "target": "museum_medallion"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "river_pearl",
+      "name": "Perla fluvial",
+      "sources": [
+        "Campo, biomas Río o Costa, tras avistar fauna"
+      ],
+      "uses": [
+        {
+          "name": "Medallón de ámbar",
+          "module": "recipe",
+          "target": "museum_medallion"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "fossil_track",
+      "name": "Huella fosilizada",
+      "sources": [
+        "Excavaciones paleontológicas; huellas conservadas en estratos"
+      ],
+      "uses": [
+        {
+          "name": "Archivo de pisadas fósiles",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Análisis de huellas",
+          "module": "museum",
+          "target": "fossils"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "fossil_claw",
+      "name": "Garra fósil",
+      "sources": [
+        "Hallazgo raro en excavaciones; preparación para el Museo"
+      ],
+      "uses": [
+        {
+          "name": "Reconstrucción de Iguanodonte",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Carnotauro",
+          "module": "museum",
+          "target": "fossils"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "fossil_rib",
+      "name": "Costilla fósil",
+      "sources": [
+        "Reconstrucción de fósiles con fragmentos en el Taller del Museo",
+        "Taller del Museo: Costilla fósil"
+      ],
+      "uses": [
+        {
+          "name": "Reconstrucción de Anquilosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Iguanodonte",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Paquicefalosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Restauración de esqueletos",
+          "module": "museum",
+          "target": "fossils"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "fossil_horn",
+      "name": "Cuerno fósil",
+      "sources": [
+        "Fabricación en Museo: 4 fragmentos y 2 dientes fósiles",
+        "Taller del Museo: Cuerno fósil"
+      ],
+      "uses": [
+        {
+          "name": "Reconstrucción de Triceratops",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Carnotauro",
+          "module": "museum",
+          "target": "fossils"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "hard_bone",
+      "name": "Hueso duro",
+      "sources": [
+        "Fabricación en Museo: 6 fragmentos y 2 piedras de río",
+        "Taller del Museo: Hueso duro"
+      ],
+      "uses": [
+        {
+          "name": "Reconstrucción de Anquilosaurio",
+          "module": "museum",
+          "target": "fossils"
+        },
+        {
+          "name": "Reconstrucción de Paquicefalosaurio",
+          "module": "museum",
+          "target": "fossils"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "polar_coat",
+      "name": "Abrigo de expedición polar",
+      "sources": [
+        "Taller: Capucha impermeable ×1 · Morral reforzado ×1 · Madera tallada ×3 · Pergamino antiguo ×2"
+      ],
+      "uses": [
+        {
+          "name": "Preparación continental permanente",
+          "module": "progression",
+          "target": "atlas"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "rain_hood": 1,
+          "sturdy_pack": 1,
+          "carved_wood": 3,
+          "parchment_scrap": 2
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "sounding_kit",
+      "name": "Equipo de sondeo y muestreo",
+      "sources": [
+        "Taller: Pieza de latón antiguo ×4 · Madera tallada ×4 · Pergamino antiguo ×3 · Morral reforzado ×1"
+      ],
+      "uses": [
+        {
+          "name": "Preparación continental permanente",
+          "module": "progression",
+          "target": "atlas"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "brass_shard": 4,
+          "carved_wood": 4,
+          "parchment_scrap": 3,
+          "sturdy_pack": 1
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "south_america_map_piece",
+      "name": "Parte de mapa de Sudamérica",
+      "sources": [
+        "Capa cartográfica: Reconocimiento del Atlántico, tras Cartografía de Norteamérica. 50 % por expedición; tirada independiente fijada al partir."
+      ],
+      "uses": [
+        {
+          "name": "Mapa de Sudamérica",
+          "module": "recipe",
+          "target": "south_america_map"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 10
+    },
+    {
+      "id": "south_america_map",
+      "name": "Mapa de Sudamérica",
+      "sources": [
+        "Taller: Parte de mapa de Sudamérica ×10",
+        "Taller: 10 partes propias de Sudamérica"
+      ],
+      "uses": [
+        {
+          "name": "Mapamundi",
+          "module": "recipe",
+          "target": "world_map"
+        },
+        {
+          "name": "Cartografía de Sudamérica",
+          "module": "progression",
+          "target": "Sudamérica"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "south_america_map_piece": 10
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "oceania_map_piece",
+      "name": "Parte de mapa de Oceanía",
+      "sources": [
+        "Capa cartográfica: Reconocimiento del Atlántico / Cartografía del mar del Norte / Misión a los Alpes, tras Cartografía de Sudamérica. 50 % por expedición; tirada independiente fijada al partir."
+      ],
+      "uses": [
+        {
+          "name": "Mapa de Oceanía",
+          "module": "recipe",
+          "target": "oceania_map"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 10
+    },
+    {
+      "id": "oceania_map",
+      "name": "Mapa de Oceanía",
+      "sources": [
+        "Taller: Parte de mapa de Oceanía ×10",
+        "Taller: 10 partes propias de Oceanía"
+      ],
+      "uses": [
+        {
+          "name": "Mapamundi",
+          "module": "recipe",
+          "target": "world_map"
+        },
+        {
+          "name": "Cartografía de Oceanía",
+          "module": "progression",
+          "target": "Oceanía"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "oceania_map_piece": 10
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "polar_map_piece",
+      "name": "Parte de mapa de regiones polares",
+      "sources": [
+        "Capa cartográfica: Cartografía del mar del Norte / Misión a los Alpes, tras Cartografía de Oceanía. 50 % por expedición; tirada independiente fijada al partir."
+      ],
+      "uses": [
+        {
+          "name": "Mapa de regiones polares",
+          "module": "recipe",
+          "target": "polar_map"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 8
+    },
+    {
+      "id": "polar_map",
+      "name": "Mapa de regiones polares",
+      "sources": [
+        "Taller: Parte de mapa de regiones polares ×8",
+        "Taller: 8 partes propias de regiones polares"
+      ],
+      "uses": [
+        {
+          "name": "Mapamundi",
+          "module": "recipe",
+          "target": "world_map"
+        },
+        {
+          "name": "Cartografía de Polos",
+          "module": "progression",
+          "target": "Polos"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "polar_map_piece": 8
+        }
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "world_map",
+      "name": "Mapamundi",
+      "sources": [
+        "Taller: Mapa de Asia ×1 · Mapa de África ×1 · Mapa de Norteamérica ×1 · Mapa de Sudamérica ×1 · Mapa de Oceanía ×1 · Mapa de regiones polares ×1",
+        "Taller: reunir físicamente los seis mapas completos. Ensamblaje no destructivo; no admite fragmentos sueltos ni acreditaciones históricas."
+      ],
+      "uses": [
+        {
+          "name": "Acceso a mares, océanos profundos y fosas",
+          "module": "progression",
+          "target": "Océanos"
+        }
+      ],
+      "recipe": {
+        "requires": {
+          "asia_map": 1,
+          "africa_map": 1,
+          "north_america_map": 1,
+          "south_america_map": 1,
+          "oceania_map": 1,
+          "polar_map": 1
+        },
+        "preserveInputs": true
+      },
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "asian_spices",
+      "name": "Especias de gabinete oriental",
+      "sources": [
+        "Exclusivo de Comercio → Trueques regionales · Asia: Flor prensada ×50."
+      ],
+      "uses": [
+        {
+          "name": "Colección de mercancías históricas",
+          "module": "collection",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "asian_trade_folio",
+      "name": "Folio de comercio asiático",
+      "sources": [
+        "Exclusivo de Comercio → Trueques regionales · Asia: Pergamino antiguo ×100."
+      ],
+      "uses": [
+        {
+          "name": "Colección de mercancías históricas",
+          "module": "collection",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "african_textile_sample",
+      "name": "Muestra textil de gabinete africano",
+      "sources": [
+        "Exclusivo de Comercio → Trueques regionales · África: Madera tallada ×50."
+      ],
+      "uses": [
+        {
+          "name": "Colección de mercancías históricas",
+          "module": "collection",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "north_american_trade_document",
+      "name": "Documento comercial norteamericano",
+      "sources": [
+        "Exclusivo de Comercio → Trueques regionales · Norteamérica: Pergamino antiguo ×50."
+      ],
+      "uses": [
+        {
+          "name": "Colección de mercancías históricas",
+          "module": "collection",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "south_american_cacao",
+      "name": "Cacao de colección botánica",
+      "sources": [
+        "Exclusivo de Comercio → Trueques regionales · Sudamérica: Flor prensada ×100."
+      ],
+      "uses": [
+        {
+          "name": "Colección de mercancías históricas",
+          "module": "collection",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "oceanian_nacre",
+      "name": "Nácar insular histórico",
+      "sources": [
+        "Exclusivo de Comercio → Trueques regionales · Oceanía: Piedra de río pulida ×100."
+      ],
+      "uses": [
+        {
+          "name": "Colección de mercancías históricas",
+          "module": "collection",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    },
+    {
+      "id": "polar_geology_record",
+      "name": "Registro geológico polar",
+      "sources": [
+        "Exclusivo de Comercio → Trueques regionales · Polos: Madera tallada ×100."
+      ],
+      "uses": [
+        {
+          "name": "Colección de mercancías históricas",
+          "module": "collection",
+          "target": "barters"
+        }
+      ],
+      "recipe": null,
+      "initialProgressionReserve": 0
+    }
+  ]
+}

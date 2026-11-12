@@ -6866,6 +6866,18 @@ researchNode3280=function(node,illustrated=true){const model=researchNodeBefore3
 migrateCartography3400(state);
 // INV3400 END access and historical compatibility
 
+// INV3400 BEGIN protected cartography
+const reserveBeforeCartography3400=supplyReserve3390;
+supplyReserve3390=function(s=state){
+ const reserve=reserveBeforeCartography3400(s);
+ if(!s.craftedItems?.world_map)for(const d of CARTOGRAPHY3400){
+  if((s.inventory[d.map]||0)>0)reserve[d.map]=1;
+  else reserve[d.piece]=(reserve[d.piece]||0)+d.quantity;
+ }
+ return reserve;
+};
+// INV3400 END protected cartography
+
 // INV3400 BEGIN regional barter
 const REGIONAL_BARTERS3400=[
  {id:'asian_spices',continent:'Asia',name:'Especias de gabinete oriental',material:'pressed_flower',quantity:50,description:'Pliego documental con muestras aromáticas conservadas de redes comerciales asiáticas; colección botánica, sin bono de consumo.'},
@@ -6929,13 +6941,15 @@ function inventorySources3400(id){
  for(const b of TRADE_BARTERS)if(b.rewards[id])sources.push('Conversión de suministros: '+tradeMaterials3300(b.requires));
  for(const [sp,item]of Object.entries(SPECIES_DROPS))if(item===id)sources.push('Gabinete de especímenes: '+SPECIES[sp].name);
  for(const r of MUSEUM_FOSSIL_RECIPES)if(r.id===id)sources.push('Taller del Museo: '+r.name);
+ for(const mission of SCIENTIFIC_MISSIONS)if(mission.items?.[id])sources.push('Misión científica: '+mission.name+' · '+mission.items[id]+' unidades (premio único)');
+ for(const mission of globalThis.AtlasCommissions3370?.catalog||[])if(mission.reward.items[id])sources.push('Encargo científico: '+mission.name+' · '+mission.reward.items[id]+' unidades (premio único)');
  return [...new Set(sources)];
 }
 function inventoryUses3400(id){
  const uses=[];
  for(const [out,r]of Object.entries(RECIPES))if(r.requires[id])uses.push({name:ITEMS[out].name,action:'recipe',id:out,kind:'recipe'});
  for(const p of Object.values(V316_MATERIAL_STUDIES))if(p.requires[id])uses.push({name:p.name,action:'studies',id:'',kind:'research'});
- for(const p of [...MUSEUM_COLLECTIONS,...MUSEUM_FOSSIL_RECIPES,...MUSEUM_CURATORIAL_PROJECTS])if(p.requires[id])uses.push({name:p.name,action:'goto',id:'museum',kind:'museum'});
+ for(const p of [...MUSEUM_COLLECTIONS,...MUSEUM_FOSSIL_RECIPES,...MUSEUM_CURATORIAL_PROJECTS])if(p.requires[id])uses.push({name:p.name,action:'museum',id:p.tab==='artifacts'?'artifacts':'fossils',kind:'museum'});
  for(const n of RESEARCH_NODES)if(n.reqItem===id)uses.push({name:n.name,action:'research',id:n.id,kind:'research'});
  for(const c of SUPPLY_CONTRACTS3390)if(c.requires[id])uses.push({name:c.name,action:'commerce',id:'contracts',kind:'commerce'});
  for(const m of CARGO_MANIFESTS3390)if(m.requires[id])uses.push({name:m.name,action:'commerce',id:'routes',kind:'commerce'});
@@ -6995,7 +7009,7 @@ function inventoryDetail3400(id){
 function inventoryStudies3400(){return `<details class="inv340-studies"><summary>Estudios de materiales repetidos · 8 proyectos</summary><p class="small">Conservan sus costos y resultados. Comprueba las reservas antes de utilizar suministros.</p>${Object.entries(V316_MATERIAL_STUDIES).map(([id,p])=>`<details><summary>${p.name}</summary><p class="small">${p.description} · £${p.money||0} y ${p.knowledge||0} conocimiento.</p>${inventoryMaterials3400(p.requires)}${[1,5].map(n=>`<button class="btn alt" data-action="process-materials" data-id="${id}:${n}" ${canProcessMaterials(id,n)?'':'disabled'}>Estudiar ×${n}</button>`).join('')}</details>`).join('')}</details>`;}
 renderObjects=function(){
  const q=inventoryQuery3400(),ui=inventoryUI3400,id=ITEMS[ui.selected]?ui.selected:q.shown[0];
- return `<section class="card inventory-main inv340-root"><header><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3>Inventario y Taller</h3><p class="small">${Object.values(state.inventory).filter(n=>n>0).length} tipos de objetos · ${Object.values(state.equipment).filter(Boolean).length}/3 ranuras activas.</p></header><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${INVENTORY_SECTIONS3400.map(([key,name])=>`<button class="inventory-subtab ${state.inventoryView===key?'active':''}" data-action="inventory-tab" data-id="${key}" role="tab" aria-selected="${state.inventoryView===key}">${name}</button>`).join('')}</div>${state.inventoryView==='equipo'?`<details><summary>Equipo activo y bonificaciones</summary><p class="small">Manual ${pctBuff(manualSearchChance())} · automático ${state.helpers?pctBuff(automaticSearchChance()):'inactivo'} · cada ${autoInterval()} s. Los bonos originales solo se aplican al equipar.</p><ul>${Object.entries(state.equipment).map(([slot,item])=>`<li>${{instrument:'Instrumento',hat:'Gorro',necklace:'Collar'}[slot]}: ${item?ITEMS[item].name:'Vacío'}</li>`).join('')}</ul></details>`:''}<label class="inv340-search">Buscar objetos<input type="search" data-inv-filter="query" value="${esc(ui.query)}" placeholder="Nombre del objeto" maxlength="80"></label><details class="inv340-filters" ${ui.filtersOpen?'open':''}><summary>Filtros y orden</summary><div class="inv340-controls">${inventorySelect3400('category','Categoría',[['all','Todas'],['equip','Equipo'],['animal','Animal'],['materials','Materiales'],['fossil','Fósiles y raros'],['cartography','Cartografía'],['regional','Mercancías regionales']])}${inventorySelect3400('owned','Posesión',[['all','Todos'],['owned','En bolsa'],['missing','Sin existencias']])}${inventorySelect3400('use','Utilidad',[['all','Todas'],['recipe','Fabricación'],['progression','Progresión'],['research','Investigación'],['museum','Museo'],['commerce','Comercio'],['collection','Colección']])}${inventorySelect3400('craft','Fabricación',[['all','Todas'],['ready','Fabricable ahora'],['missing','Faltan materiales'],['made','Fabricado antes']])}${inventorySelect3400('sort','Orden',[['alpha','Alfabético'],['quantity','Mayor cantidad']])}</div><button class="btn alt" data-action="inv-reset">Limpiar filtros</button></details>${state.inventoryView==='coleccionables'&&typeof renderCartography3400==='function'?renderCartography3400():''}<p class="small" aria-live="polite">${q.total} resultados · página ${q.page+1}/${q.pages}</p><div class="inv340-grid">${q.shown.map(key=>`<button class="inv340-card ${key===id?'selected':''}" data-action="inv-item" data-id="${key}" aria-pressed="${key===id}">${itemArtInline(key)}<strong>${ITEMS[key].name}</strong><span>×${state.inventory[key]||0}${state.inventoryView==='taller'?' · '+(canCraft(key)?'Fabricable':'Faltan materiales'):''}</span></button>`).join('')||'<p>No hay objetos con estos filtros.</p>'}</div><nav class="inv340-pages" aria-label="Páginas de objetos"><button class="btn alt" data-action="inv-page" data-id="${q.page-1}" ${q.page===0?'disabled':''}>Anterior</button><span>${q.page+1}/${q.pages}</span><button class="btn" data-action="inv-page" data-id="${q.page+1}" ${q.page+1>=q.pages?'disabled':''}>Siguiente</button></nav>${id?inventoryDetail3400(id):''}${state.inventoryView==='taller'?inventoryStudies3400():''}</section>`;
+ return `<section class="card inventory-main inv340-root"><header><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3>Inventario y Taller</h3><p class="small">${Object.values(state.inventory).filter(n=>n>0).length} tipos de objetos · ${Object.values(state.equipment).filter(Boolean).length}/3 ranuras activas.</p></header><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${INVENTORY_SECTIONS3400.map(([key,name])=>`<button class="inventory-subtab ${state.inventoryView===key?'active':''}" data-action="inventory-tab" data-id="${key}" role="tab" aria-selected="${state.inventoryView===key}">${name}</button>`).join('')}</div>${state.inventoryView==='equipo'?`<details><summary>Equipo activo y bonificaciones</summary><p class="small">Manual ${pctBuff(manualSearchChance())} · automático ${state.helpers?pctBuff(automaticSearchChance()):'inactivo'} · cada ${autoInterval()} s. Los bonos originales solo se aplican al equipar.</p><ul>${Object.entries(state.equipment).map(([slot,item])=>`<li>${{instrument:'Instrumento',hat:'Gorro',necklace:'Collar'}[slot]}: ${item?ITEMS[item].name:'Vacío'}</li>`).join('')}</ul></details>`:''}<label class="inv340-search">Buscar objetos<input type="search" data-inv-filter="query" value="${esc(ui.query).replace(/"/g,'&quot;')}" placeholder="Nombre del objeto" maxlength="80"></label><details class="inv340-filters" ${ui.filtersOpen?'open':''}><summary>Filtros y orden</summary><div class="inv340-controls">${inventorySelect3400('category','Categoría',[['all','Todas'],['equip','Equipo'],['animal','Animal'],['materials','Materiales'],['fossil','Fósiles y raros'],['cartography','Cartografía'],['regional','Mercancías regionales']])}${inventorySelect3400('owned','Posesión',[['all','Todos'],['owned','En bolsa'],['missing','Sin existencias']])}${inventorySelect3400('use','Utilidad',[['all','Todas'],['recipe','Fabricación'],['progression','Progresión'],['research','Investigación'],['museum','Museo'],['commerce','Comercio'],['collection','Colección']])}${inventorySelect3400('craft','Fabricación',[['all','Todas'],['ready','Fabricable ahora'],['missing','Faltan materiales'],['made','Fabricado antes']])}${inventorySelect3400('sort','Orden',[['alpha','Alfabético'],['quantity','Mayor cantidad']])}</div><button class="btn alt" data-action="inv-reset">Limpiar filtros</button></details>${state.inventoryView==='coleccionables'&&typeof renderCartography3400==='function'?renderCartography3400():''}<p class="small" aria-live="polite">${q.total} resultados · página ${q.page+1}/${q.pages}</p><div class="inv340-grid">${q.shown.map(key=>`<button class="inv340-card ${key===id?'selected':''}" data-action="inv-item" data-id="${key}" aria-pressed="${key===id}">${itemArtInline(key)}<strong>${ITEMS[key].name}</strong><span>×${state.inventory[key]||0}${state.inventoryView==='taller'?' · '+(canCraft(key)?'Fabricable':'Faltan materiales'):''}</span></button>`).join('')||'<p>No hay objetos con estos filtros.</p>'}</div><nav class="inv340-pages" aria-label="Páginas de objetos"><button class="btn alt" data-action="inv-page" data-id="${q.page-1}" ${q.page===0?'disabled':''}>Anterior</button><span>${q.page+1}/${q.pages}</span><button class="btn" data-action="inv-page" data-id="${q.page+1}" ${q.page+1>=q.pages?'disabled':''}>Siguiente</button></nav>${id?inventoryDetail3400(id):''}${state.inventoryView==='taller'?inventoryStudies3400():''}</section>`;
 };
 craftItem=function(id){
  if(!ITEMS[id]||!canCraft(id))return false;
@@ -7020,6 +7034,7 @@ function inventoryAction3400(action,id=''){
  else if(action==='inv-studies')state.inventoryView='taller';
  else if(action==='inv-equip'){equipItem(id);return;}
  else if(action==='inv-research'){developmentAction3280('er28-research',id);return;}
+ else if(action==='inv-museum'&&['fossils','artifacts'].includes(id)){tab='museum';museumSetRoom3270(id);return;}
  else if(action==='inv-commerce'){tab='expeditions';navigationTab3300='commerce';tradeSection3390=id;}
  else if(action==='inv-map-atlas'&&ATLAS_CONTINENTS.some(c=>c.id===id)){state.atlasView=id;state.atlasSelectedRegion=REGIONS.find(r=>r.continent===id)?.id;tab='atlas';}
  else if(action==='inv-goto'&&['museum','atlas','research','expeditions'].includes(id))tab=id;
@@ -7031,6 +7046,29 @@ panel.addEventListener('input',event=>{
 });
 panel.addEventListener('change',event=>{const key=event.target.dataset?.invFilter;if(!key||key==='query'||!Object.hasOwn(inventoryUI3400,key))return;inventoryUI3400.filtersOpen=!!panel.querySelector('.inv340-filters')?.open;inventoryUI3400[key]=event.target.value;inventoryUI3400.page=0;inventoryUI3400.selected=null;renderPanel();});
 // INV3400 END inventory and workshop
+// INV3400 BEGIN atomic scientific departures and research
+// These original engine actions call render(), which normally saves. Suppress only
+// that presentation during the synchronous transaction, then persist once in the
+// existing commerce transaction boundary. No asynchronous work runs in the scope.
+function inventoryAtomicAction3400(change){const show=render;let ok=false;render=()=>{};try{ok=tradeTransaction3300(change);}finally{render=show;}renderCounters();renderPanel();return ok;}
+const sailBeforeInventory3400=sail;
+sail=function(id){
+ const v=VOYAGES.find(v=>v.id===id);
+ if(!v||!state.upgrades.shipyard||state.voyages.length>=maxVoyages()||state.prestige<v.required||state.money<v.cost||state.knowledge<v.knowledge||v.routeReq&&(state.upgrades.routeTier||0)<v.routeReq||v.mapItem&&!(state.inventory[v.mapItem]>0)||v.reqResearch&&!state.purchases[v.reqResearch])return false;
+ return inventoryAtomicAction3400(()=>{const n=state.voyages.length;sailBeforeInventory3400(id);return state.voyages.length>n;});
+};
+const buyBeforeInventory3400=buyNode;
+buyNode=function(id){const node=RESEARCH_NODES.find(n=>n.id===id);if(!node||!canBuy(node))return false;return inventoryAtomicAction3400(()=>{const n=state.purchases[id]||0;buyBeforeInventory3400(id);return (state.purchases[id]||0)>n;});};
+const processBeforeInventory3400=processVoyages;
+processVoyages=function(now){
+ if(!Number.isFinite(now))return 0;
+ if(!state.voyages.some(j=>j.cartography&&Number.isFinite(j.endAt)&&j.endAt<=now))return processBeforeInventory3400(now);
+ let count=0;const ok=tradeTransaction3300(()=>{count=processBeforeInventory3400(now);return true;});return ok?count:0;
+};
+const finishBeforeInventory3400=finishVoyage;
+finishVoyage=function(id){const job=state.voyages.find(j=>String(j.id)===String(id));if(!job?.cartography)return finishBeforeInventory3400(id);if(!Number.isFinite(job.endAt)||Date.now()<job.endAt)return false;const ok=tradeTransaction3300(()=>{state.voyages=state.voyages.filter(j=>j!==job);return resolveVoyageReward(job);});renderCounters();renderPanel();return ok;};
+// INV3400 END atomic scientific departures and research
+
 
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 // ACH3360 BEGIN event integration. No timer and no per-render achievement mutations.
