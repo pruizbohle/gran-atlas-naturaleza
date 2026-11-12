@@ -1,0 +1,63 @@
+{
+  "version": "3.40.0",
+  "workflow": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/43225239681",
+  "runId": 43225239681,
+  "jobId": 131206614636,
+  "commit": "3416324ef65dc49bde1d027f8831ae36b5113155",
+  "conclusion": "success",
+  "tests": {
+    "tests": 666,
+    "pass": 666,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "campaigns": [
+    {
+      "seed": 19,
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 36,
+        "África": 39,
+        "Norteamérica": 77,
+        "Sudamérica": 115,
+        "Oceanía": 138,
+        "Polos": 159,
+        "Océanos": 172,
+        "Océanos profundos": 216,
+        "Fosas abisales": 260
+      }
+    },
+    {
+      "seed": 71,
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 19,
+        "África": 29,
+        "Norteamérica": 69,
+        "Sudamérica": 108,
+        "Oceanía": 133,
+        "Polos": 153,
+        "Océanos": 166,
+        "Océanos profundos": 212,
+        "Fosas abisales": 255
+      }
+    },
+    {
+      "seed": 503,
+      "milestonesHours": {
+        "Europa": 0,
+        "Asia": 43,
+        "África": 43,
+        "Norteamérica": 77,
+        "Sudamérica": 116,
+        "Oceanía": 138,
+        "Polos": 159,
+        "Océanos": 172,
+        "Océanos profundos": 215,
+        "Fosas abisales": 259
+      }
+    }
+  ],
+  "pagesDeployed": true
+}

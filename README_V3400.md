@@ -2,7 +2,7 @@
 
 Inventario mantiene sus cinco pestañas y añade búsqueda, filtros, orden por nombre/cantidad, seis tarjetas por página, fichas de procedencia/usos y un planificador recursivo. Taller reúne todas las recetas, incluidos abrigo polar y equipo de sondeo, sin duplicar botones. Las recetas consumidoras, Investigación, Museo y Comercio se consultan desde cada objeto. [Matriz de 68 objetos](docs/inv3400/inventory-matrix.json).
 
-Estado de publicación: candidato completo y validado localmente; verificación pública pendiente.
+**Publicación verificada.** El commit [`3416324`](https://github.com/pruizbohle/gran-atlas-naturaleza/commit/3416324ef65dc49bde1d027f8831ae36b5113155) integra INV-01–INV-08 en `main` y `feat/inventario-cartografia-v3400`. [GitHub Actions](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/43225239681) aprobó las **666/666 pruebas**, repitió las tres campañas mundiales desde cero y desplegó Pages. [182/182 hashes de producción](docs/inv3400/published-report.json) coinciden, sin diferencias. La [comprobación Chromium en producción](docs/inv3400/published-browser/report.json) pasó en las cinco resoluciones, con Mapamundi persistente/no destructivo, confirmaciones de trueques, laboratorio aislado, reversión ante error y juego/laboratorio offline. Caché `gran-atlas-v3.40.0-inventory-b23829f28eb9`, 180 archivos offline. [Evidencia de Actions](docs/inv3400/actions-report.json) · [Cierre de etapas](docs/inv3400/closure.md).
 
 ## Cartografía
 

@@ -1,0 +1,106 @@
+{
+  "version": "3.40.0",
+  "base": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "widths": [
+    {
+      "width": 320,
+      "tabs": 5,
+      "maxCards": 6,
+      "worldMapNonDestructive": true,
+      "worldMapSurvivesReload": true,
+      "searchFiltersAndPlanner": true,
+      "regionalCancelAndConfirm": true,
+      "legacyConversions": 5,
+      "noOverflow": true,
+      "confirms": 2,
+      "performance": {
+        "renders": 100,
+        "totalMs": 160.59999999962747,
+        "nodes": 454,
+        "initialNodes": 454,
+        "intervals": 1
+      }
+    },
+    {
+      "width": 360,
+      "tabs": 5,
+      "maxCards": 6,
+      "worldMapNonDestructive": true,
+      "worldMapSurvivesReload": true,
+      "searchFiltersAndPlanner": true,
+      "regionalCancelAndConfirm": true,
+      "legacyConversions": 5,
+      "noOverflow": true,
+      "confirms": 2,
+      "performance": {
+        "renders": 100,
+        "totalMs": 104.29999999981374,
+        "nodes": 454,
+        "initialNodes": 454,
+        "intervals": 1
+      }
+    },
+    {
+      "width": 390,
+      "tabs": 5,
+      "maxCards": 6,
+      "worldMapNonDestructive": true,
+      "worldMapSurvivesReload": true,
+      "searchFiltersAndPlanner": true,
+      "regionalCancelAndConfirm": true,
+      "legacyConversions": 5,
+      "noOverflow": true,
+      "confirms": 2,
+      "performance": {
+        "renders": 100,
+        "totalMs": 117.59999999962747,
+        "nodes": 454,
+        "initialNodes": 454,
+        "intervals": 1
+      }
+    },
+    {
+      "width": 412,
+      "tabs": 5,
+      "maxCards": 6,
+      "worldMapNonDestructive": true,
+      "worldMapSurvivesReload": true,
+      "searchFiltersAndPlanner": true,
+      "regionalCancelAndConfirm": true,
+      "legacyConversions": 5,
+      "noOverflow": true,
+      "confirms": 2,
+      "performance": {
+        "renders": 100,
+        "totalMs": 158.29999999981374,
+        "nodes": 454,
+        "initialNodes": 454,
+        "intervals": 1
+      }
+    },
+    {
+      "width": 1280,
+      "tabs": 5,
+      "maxCards": 6,
+      "worldMapNonDestructive": true,
+      "worldMapSurvivesReload": true,
+      "searchFiltersAndPlanner": true,
+      "regionalCancelAndConfirm": true,
+      "legacyConversions": 5,
+      "noOverflow": true,
+      "confirms": 2,
+      "performance": {
+        "renders": 100,
+        "totalMs": 115.40000000037253,
+        "nodes": 454,
+        "initialNodes": 454,
+        "intervals": 1
+      }
+    }
+  ],
+  "errors": [],
+  "physicalAndroid": false,
+  "isolatedLabStorageRollback": true,
+  "isolatedLabExplicitConfirmations": true,
+  "offlineGameAndIsolatedLab": true
+}
