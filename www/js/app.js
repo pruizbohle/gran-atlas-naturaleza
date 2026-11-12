@@ -6372,6 +6372,56 @@ const TRADE_BARTERS=[
  {id:'wood_paper',requires:{carved_wood:3},rewards:{parchment_scrap:2}},
  {id:'trace_feather',requires:{animal_trace:6},rewards:{owl_feather:1}}
 ];
+// LOG3390 BEGIN contracts
+const SUPPLY_GROUPS3390={cabinet:'Gabinete del naturalista',museum:'Museo y paleontología',workshop:'Taller e instrumentos',expedition:'Abastecimiento de expediciones'};
+const SUPPLY_CONTRACTS3390=[
+ {id:'herbarium',group:'cabinet',institution:'Gabinete de Botánica',name:'Pliegos para el herbario',description:'Remitir plantas prensadas y papel para ordenar el archivo botánico.',requires:{pressed_flower:4,parchment_scrap:3},prestige:0,money:70,knowledge:60},
+ {id:'tracks',group:'cabinet',institution:'Sociedad de Naturalistas',name:'Archivo comparado de rastros',description:'Entregar huellas y sedimentos para el estudio de campo.',requires:{animal_trace:4,river_pebble:3},prestige:0,money:60,knowledge:80},
+ {id:'fossils',group:'museum',institution:'Gabinete Paleontológico',name:'Serie de fragmentos',description:'Ceder fragmentos y soportes para una colección de enseñanza.',requires:{fossil_fragment:5,carved_wood:2},prestige:10,money:110,knowledge:100},
+ {id:'teeth',group:'museum',institution:'Museo de Historia Natural',name:'Dentición comparada',description:'Documentar una serie de dientes fósiles en láminas de estudio.',requires:{fossil_tooth:3,parchment_scrap:2},prestige:10,money:80,knowledge:80},
+ {id:'optics',group:'workshop',institution:'Taller de Instrumentos',name:'Banco de óptica',description:'Suministrar lentes y latón para el banco de instrumentos científicos.',requires:{polished_lens:2,brass_shard:1},prestige:53,money:100,knowledge:100},
+ {id:'binding',group:'workshop',institution:'Archivo del Instituto',name:'Encuadernación del archivo',description:'Proveer tinta y madera para conservar los cuadernos de expedición.',requires:{old_ink:2,carved_wood:3},prestige:53,money:130,knowledge:100},
+ {id:'crates',group:'expedition',institution:'Junta de Expediciones',name:'Cajas y etiquetas',description:'Preparar madera y pergaminos para identificar las remesas científicas.',requires:{carved_wood:4,parchment_scrap:4},prestige:125,money:140,knowledge:90},
+ {id:'field',group:'expedition',institution:'Estación de Campo',name:'Serie de referencia natural',description:'Remitir muestras vegetales y piedras pulidas para comparar hallazgos.',requires:{pressed_flower:4,river_pebble:6},prestige:125,money:90,knowledge:100},
+ {id:'archive_supply',group:'cabinet',institution:'Secretaría de la Sociedad',name:'Suministro de correspondencia',description:'Reponer papel y pliegos botánicos; cada entrega exige nuevas mercancías.',requires:{parchment_scrap:6,pressed_flower:4},prestige:53,money:60,knowledge:80,repeatable:true},
+ {id:'museum_supply',group:'museum',institution:'Taller del Museo',name:'Soportes de gabinete',description:'Reponer madera y piedras de apoyo para el trabajo del conservador.',requires:{carved_wood:4,river_pebble:8},prestige:125,money:90,knowledge:100,repeatable:true}
+];
+// Reserve the recursive recipe inputs of all six uncredited progression preparations.
+// Existing intermediate objects cover their own recipe, but are never delivered.
+function supplyReserve3390(s=state){
+ const reserve={},stock={...s.inventory};
+ function need(id,n,root=false){
+  if(!root){const used=Math.min(n,Math.max(0,stock[id]||0));if(RECIPES[id]){stock[id]=(stock[id]||0)-used;n-=used;}}
+  if(!n)return;
+  if(RECIPES[id]){for(const [mat,q]of Object.entries(RECIPES[id].requires))need(mat,n*q);}
+  else reserve[id]=(reserve[id]||0)+n;
+ }
+ const preparations=[...new Set(Object.values(CONTINENT_RULES3300).flatMap(r=>r.items||[]))];
+ for(const id of preparations)if(!s.craftedItems?.[id])need(id,1,true);
+ return reserve;
+}
+function supplyStock3390(requires,s=state){const reserve=supplyReserve3390(s);return Object.entries(requires).every(([id,n])=>(s.inventory[id]||0)-n>=(reserve[id]||0));}
+function contractStatus3390(d,s=state){
+ if(!d)return 'unavailable';
+ if(!d.repeatable&&s.commerce.deliveries?.some(h=>h.contract===d.id))return 'completed';
+ if(!s.upgrades.shipyard||s.prestige<d.prestige)return 'locked';
+ return supplyStock3390(d.requires,s)?'ready':'short';
+}
+function deliverContract3390(id,sequence){
+ const d=SUPPLY_CONTRACTS3390.find(d=>d.id===id),seq=state.commerce.deliverySeq||0;
+ if(sequence!==seq||contractStatus3390(d)!=='ready')return false;
+ if(!window.confirm(`${d.institution} · ${d.name}\nEntregar: ${tradeMaterials3300(d.requires)}\nRecibir: £${d.money} y ${d.knowledge} conocimiento.\nLa entrega consume estas mercancías. ¿Confirmar?`))return false;
+ if(sequence!==(state.commerce.deliverySeq||0)||contractStatus3390(d)!=='ready')return false;
+ return tradeTransaction3300(()=>{
+  for(const [mat,n]of Object.entries(d.requires))state.inventory[mat]-=n;
+  state.money+=d.money;state.knowledge+=d.knowledge;
+  const c=state.commerce;c.deliverySeq=seq+1;c.deliveries??=[];
+  c.deliveries.push({id:c.deliverySeq,contract:d.id,at:Date.now(),requires:{...d.requires},money:d.money,knowledge:d.knowledge});
+  return true;
+ });
+}
+// LOG3390 END contracts
+
 let navigationTab3300='expeditions';
 function normalizeCommerce3300(s){
  const c=s.commerce&&typeof s.commerce==='object'&&!Array.isArray(s.commerce)?s.commerce:{};
