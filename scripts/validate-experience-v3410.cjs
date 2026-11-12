@@ -1,0 +1,5 @@
+'use strict';
+const cp=require('node:child_process'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const root=path.resolve(__dirname,'..'),temp=fs.mkdtempSync(path.join(os.tmpdir(),'atlas-3400-reference-')),checkout=path.join(temp,'source');
+try{cp.execFileSync('git',['worktree','add','--detach',checkout,'0b48f6030b5fc4c78e930ec40c9d9d18f58f1a78'],{cwd:root,stdio:'inherit'});console.log('REFERENCE: 666 unchanged tests on exact 3.40.0 and their original historical sources.');cp.execFileSync(process.execPath,['scripts/validate-inventory-v3400.cjs'],{cwd:checkout,stdio:'inherit'});}finally{try{cp.execFileSync('git',['worktree','remove','--force',checkout],{cwd:root,stdio:'inherit'});}finally{fs.rmSync(temp,{recursive:true,force:true});}}
+const files=fs.readdirSync(root+'/tests').filter(f=>/^ux3410-.*\.test\.cjs$/.test(f)).sort().map(f=>'tests/'+f);console.log('CURRENT 3.41: orientation, safe navigation, mobile continuity, notifications, historical cartography and integrity.');cp.execFileSync(process.execPath,['--test',...files],{cwd:root,stdio:'inherit'});

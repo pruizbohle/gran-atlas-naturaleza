@@ -1,5 +1,5 @@
 {
-  "version": "3.40.0",
+  "version": "3.41.0",
   "atlas": "simple",
   "cells": {
     "Europa": 10,
@@ -143,5 +143,13 @@
     ],
     "historicalAccessPreserved": true,
     "storage": "gran_atlas_v05"
+  },
+  "experience": {
+    "compass": "contextual and optional",
+    "safeShortcuts": true,
+    "achievementPageSize": 8,
+    "missionPageSize": 4,
+    "newCatalogEntries": 0,
+    "physicalAndroidValidated": false
   }
 }

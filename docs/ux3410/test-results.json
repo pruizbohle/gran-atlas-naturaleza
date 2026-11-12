@@ -1,0 +1,27 @@
+{
+  "version": "3.41.0",
+  "referenceCommit": "0b48f6030b5fc4c78e930ec40c9d9d18f58f1a78",
+  "referenceSuites": [
+    430,
+    11,
+    12,
+    20,
+    20,
+    17,
+    14,
+    16,
+    26,
+    33,
+    67
+  ],
+  "unchangedReferenceTests": 666,
+  "currentTests": 54,
+  "totalDistinctTests": 720,
+  "failures": 0,
+  "historicalSuitesRunOnExactHistoricalSources": true,
+  "currentCandidateEquivalenceWithBase": true,
+  "browserEvidence": "browser/report.json",
+  "pwaEvidence": "pwa/report.json",
+  "labEvidence": "lab/report.json",
+  "physicalAndroid": false
+}

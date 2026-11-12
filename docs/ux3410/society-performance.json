@@ -1,0 +1,47 @@
+{
+  "method": "Advanced synthetic state, 390 px. Explicit Achievements and All missions, 30 actual DOM handler dispatches per subsection, synchronous handler time only.",
+  "versions": [
+    {
+      "version": "3.40.0",
+      "sections": [
+        {
+          "section": "achievements",
+          "p50": 10.900000000372529,
+          "p95": 18.899999998509884,
+          "nodes": 1407,
+          "cards": 80,
+          "svg": 80
+        },
+        {
+          "section": "missions",
+          "p50": 6.400000000372529,
+          "p95": 7.900000000372529,
+          "nodes": 1079,
+          "cards": 37,
+          "svg": 0
+        }
+      ]
+    },
+    {
+      "version": "3.41.0",
+      "sections": [
+        {
+          "section": "achievements",
+          "p50": 9.199999999254942,
+          "p95": 14.5,
+          "nodes": 366,
+          "cards": 8,
+          "svg": 8
+        },
+        {
+          "section": "missions",
+          "p50": 6.799999998882413,
+          "p95": 10.900000000372529,
+          "nodes": 373,
+          "cards": 4,
+          "svg": 0
+        }
+      ]
+    }
+  ]
+}

@@ -46,6 +46,8 @@ jobs:
           node --check www/js/museum-curation-v3380.js
           node --check www/js/museum-curation-ui-v3380.js
           node --check www/js/lab/museum-curation-lab-v3380.js
+          node --check www/js/experience-v3410.js
+          node --check www/js/lab/experience-lab-v3410.js
           node --check www/js/app.js
           node --check www/js/polar-data-v3310.js
           node --check www/js/marine-data-v3320.js
@@ -66,12 +68,10 @@ jobs:
           node --check www/js/lab/abyssal-lab-v3340.js
           node --check www/js/lab/logistics-lab-v3390.js
           node --check www/js/lab/inventory-lab-v3400.js
-          node scripts/build-inventory-release-v3400.cjs
-          node scripts/validate-inventory-v3400.cjs
-      - name: Simular tres campañas mundiales desde cero
-        run: |
-          node scripts/simulate-inventory-world-v3400.cjs
-          node scripts/audit-inventory-v3400.cjs
+          node scripts/build-experience-release-v3410.cjs
+          node scripts/validate-experience-v3410.cjs
+      - name: Auditar preparación Android sin generar APK
+        run: python3 scripts/audit-android-readiness-v3410.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload game

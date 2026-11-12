@@ -1,3 +1,7 @@
+# 3.41.0 · Experiencia del naturalista y estabilidad móvil
+
+Brújula opcional en Atlas, atajos informativos con retorno, Sociedad paginada y avisos agrupados. Sin cambios de catálogos, economía ni partidas. [Informe, mediciones y estado Android](README_V3410.md).
+
 # 3.40.0 · Inventario, Cartografía y Trueques Regionales
 
 Inventario con buscador, filtros y planificador; mapas de Sudamérica, Oceanía y Polos; Mapamundi no destructivo y siete mercancías exclusivas de trueques regionales. Se conservan los accesos históricos y el guardado. [Informe, campañas y validación](README_V3400.md).
