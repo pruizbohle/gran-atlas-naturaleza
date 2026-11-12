@@ -1,0 +1,103 @@
+{
+  "version": "3.40.0",
+  "base": "http://127.0.0.1:8768/",
+  "widths": [
+    {
+      "width": 320,
+      "tabs": 5,
+      "maxCards": 6,
+      "worldMapNonDestructive": true,
+      "worldMapSurvivesReload": true,
+      "searchFiltersAndPlanner": true,
+      "regionalCancelAndConfirm": true,
+      "legacyConversions": 5,
+      "noOverflow": true,
+      "confirms": 2,
+      "performance": {
+        "renders": 100,
+        "totalMs": 155.6999999997206,
+        "nodes": 454,
+        "initialNodes": 454,
+        "intervals": 1
+      }
+    },
+    {
+      "width": 360,
+      "tabs": 5,
+      "maxCards": 6,
+      "worldMapNonDestructive": true,
+      "worldMapSurvivesReload": true,
+      "searchFiltersAndPlanner": true,
+      "regionalCancelAndConfirm": true,
+      "legacyConversions": 5,
+      "noOverflow": true,
+      "confirms": 2,
+      "performance": {
+        "renders": 100,
+        "totalMs": 104.20000000018626,
+        "nodes": 454,
+        "initialNodes": 454,
+        "intervals": 1
+      }
+    },
+    {
+      "width": 390,
+      "tabs": 5,
+      "maxCards": 6,
+      "worldMapNonDestructive": true,
+      "worldMapSurvivesReload": true,
+      "searchFiltersAndPlanner": true,
+      "regionalCancelAndConfirm": true,
+      "legacyConversions": 5,
+      "noOverflow": true,
+      "confirms": 2,
+      "performance": {
+        "renders": 100,
+        "totalMs": 103,
+        "nodes": 454,
+        "initialNodes": 454,
+        "intervals": 1
+      }
+    },
+    {
+      "width": 412,
+      "tabs": 5,
+      "maxCards": 6,
+      "worldMapNonDestructive": true,
+      "worldMapSurvivesReload": true,
+      "searchFiltersAndPlanner": true,
+      "regionalCancelAndConfirm": true,
+      "legacyConversions": 5,
+      "noOverflow": true,
+      "confirms": 2,
+      "performance": {
+        "renders": 100,
+        "totalMs": 116,
+        "nodes": 454,
+        "initialNodes": 454,
+        "intervals": 1
+      }
+    },
+    {
+      "width": 1280,
+      "tabs": 5,
+      "maxCards": 6,
+      "worldMapNonDestructive": true,
+      "worldMapSurvivesReload": true,
+      "searchFiltersAndPlanner": true,
+      "regionalCancelAndConfirm": true,
+      "legacyConversions": 5,
+      "noOverflow": true,
+      "confirms": 2,
+      "performance": {
+        "renders": 100,
+        "totalMs": 118.5,
+        "nodes": 454,
+        "initialNodes": 454,
+        "intervals": 1
+      }
+    }
+  ],
+  "errors": [],
+  "physicalAndroid": false
+}
