@@ -1,0 +1,339 @@
+{
+  "version": "3.39.0",
+  "baseline": "45137aa",
+  "reviewed": [
+    "docs/gm05/economy-simulations.json",
+    "docs/commerce-v3300/economy-report.json"
+  ],
+  "method": "Synthetic funded stock, actual transactions and deadlines over72h. Every new immediate offer strictly decreases the3.30 replacement potential; knowledge valued at25/40 pounds. Existing barter/study inequalities retained. Buying and delivering each repeat100 times cannot grow combined money/knowledge. This is a cycle proof plus bounded engine witnesses, not a claim of human campaign duration or optimal play.",
+  "potentialValues": {
+    "animal_trace": 35,
+    "ancient_coin": 60,
+    "map_fragment": 45,
+    "fossil_fragment": 25,
+    "fossil_tooth": 35,
+    "owl_feather": 50,
+    "heron_feather": 40,
+    "wolf_tooth": 35,
+    "boar_tusk": 35,
+    "antler_fragment": 35,
+    "otter_whisker": 35,
+    "beaver_tail_scale": 35,
+    "parchment_scrap": 45,
+    "pressed_flower": 40,
+    "river_pebble": 30,
+    "carved_wood": 80,
+    "polished_lens": 160,
+    "brass_shard": 200,
+    "old_ink": 180
+  },
+  "offers": [
+    {
+      "id": "herbarium",
+      "kind": "contract",
+      "repeatable": false,
+      "inputPotential": 295,
+      "rewardPounds": 70,
+      "rewardKnowledge": 60,
+      "rewardPotential": 107.5,
+      "loss": 187.5
+    },
+    {
+      "id": "tracks",
+      "kind": "contract",
+      "repeatable": false,
+      "inputPotential": 230,
+      "rewardPounds": 60,
+      "rewardKnowledge": 80,
+      "rewardPotential": 110,
+      "loss": 120
+    },
+    {
+      "id": "fossils",
+      "kind": "contract",
+      "repeatable": false,
+      "inputPotential": 285,
+      "rewardPounds": 110,
+      "rewardKnowledge": 100,
+      "rewardPotential": 172.5,
+      "loss": 112.5
+    },
+    {
+      "id": "teeth",
+      "kind": "contract",
+      "repeatable": false,
+      "inputPotential": 195,
+      "rewardPounds": 80,
+      "rewardKnowledge": 80,
+      "rewardPotential": 130,
+      "loss": 65
+    },
+    {
+      "id": "optics",
+      "kind": "contract",
+      "repeatable": false,
+      "inputPotential": 520,
+      "rewardPounds": 100,
+      "rewardKnowledge": 100,
+      "rewardPotential": 162.5,
+      "loss": 357.5
+    },
+    {
+      "id": "binding",
+      "kind": "contract",
+      "repeatable": false,
+      "inputPotential": 600,
+      "rewardPounds": 130,
+      "rewardKnowledge": 100,
+      "rewardPotential": 192.5,
+      "loss": 407.5
+    },
+    {
+      "id": "crates",
+      "kind": "contract",
+      "repeatable": false,
+      "inputPotential": 500,
+      "rewardPounds": 140,
+      "rewardKnowledge": 90,
+      "rewardPotential": 196.25,
+      "loss": 303.75
+    },
+    {
+      "id": "field",
+      "kind": "contract",
+      "repeatable": false,
+      "inputPotential": 340,
+      "rewardPounds": 90,
+      "rewardKnowledge": 100,
+      "rewardPotential": 152.5,
+      "loss": 187.5
+    },
+    {
+      "id": "archive_supply",
+      "kind": "contract",
+      "repeatable": true,
+      "inputPotential": 430,
+      "rewardPounds": 60,
+      "rewardKnowledge": 80,
+      "rewardPotential": 110,
+      "loss": 320
+    },
+    {
+      "id": "museum_supply",
+      "kind": "contract",
+      "repeatable": true,
+      "inputPotential": 560,
+      "rewardPounds": 90,
+      "rewardKnowledge": 100,
+      "rewardPotential": 152.5,
+      "loss": 407.5
+    },
+    {
+      "id": "documentation",
+      "kind": "manifest",
+      "repeatable": false,
+      "inputPotential": 360,
+      "rewardPounds": 100,
+      "rewardKnowledge": 70,
+      "rewardPotential": 143.75,
+      "loss": 216.25
+    },
+    {
+      "id": "instruments",
+      "kind": "manifest",
+      "repeatable": false,
+      "inputPotential": 360,
+      "rewardPounds": 120,
+      "rewardKnowledge": 80,
+      "rewardPotential": 170,
+      "loss": 190
+    },
+    {
+      "id": "natural",
+      "kind": "manifest",
+      "repeatable": false,
+      "inputPotential": 380,
+      "rewardPounds": 100,
+      "rewardKnowledge": 100,
+      "rewardPotential": 162.5,
+      "loss": 217.5
+    },
+    {
+      "id": "museum",
+      "kind": "manifest",
+      "repeatable": false,
+      "inputPotential": 420,
+      "rewardPounds": 150,
+      "rewardKnowledge": 120,
+      "rewardPotential": 225,
+      "loss": 195
+    }
+  ],
+  "uniqueRewardTotal": {
+    "money": 780,
+    "knowledge": 710
+  },
+  "repeatRuns": [
+    {
+      "contract": "archive_supply",
+      "purchasesAndDeliveries": 100,
+      "initial": {
+        "money": 100000,
+        "knowledge": 100000
+      },
+      "final": {
+        "money": 63000,
+        "knowledge": 108000
+      },
+      "combinedLoss": 32000,
+      "permanentReceipts": 100
+    },
+    {
+      "contract": "museum_supply",
+      "purchasesAndDeliveries": 100,
+      "initial": {
+        "money": 100000,
+        "knowledge": 100000
+      },
+      "final": {
+        "money": 53000,
+        "knowledge": 110000
+      },
+      "combinedLoss": 40750,
+      "permanentReceipts": 100
+    }
+  ],
+  "scenarios": [
+    {
+      "hours": 4,
+      "runs": [
+        {
+          "withManifest": false,
+          "moneyGain": 1080,
+          "knowledgeDelta": -360,
+          "departures": 18,
+          "tradeCounter": 18,
+          "inventoryDelta": {
+            "pressed_flower": 36,
+            "parchment_scrap": 54,
+            "river_pebble": 54
+          }
+        },
+        {
+          "withManifest": true,
+          "moneyGain": 2880,
+          "knowledgeDelta": 900,
+          "departures": 18,
+          "tradeCounter": 18,
+          "inventoryDelta": {
+            "pressed_flower": 36,
+            "parchment_scrap": -18,
+            "river_pebble": 54,
+            "old_ink": -18
+          }
+        }
+      ]
+    },
+    {
+      "hours": 8,
+      "runs": [
+        {
+          "withManifest": false,
+          "moneyGain": 1260,
+          "knowledgeDelta": -450,
+          "departures": 9,
+          "tradeCounter": 9,
+          "inventoryDelta": {
+            "polished_lens": 18,
+            "brass_shard": 18,
+            "carved_wood": 27
+          }
+        },
+        {
+          "withManifest": true,
+          "moneyGain": 2340,
+          "knowledgeDelta": 270,
+          "departures": 9,
+          "tradeCounter": 9,
+          "inventoryDelta": {
+            "polished_lens": 9,
+            "brass_shard": 9,
+            "carved_wood": 27
+          }
+        }
+      ]
+    },
+    {
+      "hours": 12,
+      "runs": [
+        {
+          "withManifest": false,
+          "moneyGain": 1500,
+          "knowledgeDelta": -540,
+          "departures": 6,
+          "tradeCounter": 6,
+          "inventoryDelta": {
+            "parchment_scrap": 30,
+            "polished_lens": 12,
+            "brass_shard": 18,
+            "old_ink": 12
+          }
+        },
+        {
+          "withManifest": true,
+          "moneyGain": 2100,
+          "knowledgeDelta": 60,
+          "departures": 6,
+          "tradeCounter": 6,
+          "inventoryDelta": {
+            "pressed_flower": -30,
+            "parchment_scrap": 30,
+            "river_pebble": -36,
+            "polished_lens": 12,
+            "brass_shard": 18,
+            "old_ink": 12
+          }
+        }
+      ]
+    },
+    {
+      "hours": 24,
+      "runs": [
+        {
+          "withManifest": false,
+          "moneyGain": 1350,
+          "knowledgeDelta": -480,
+          "departures": 3,
+          "tradeCounter": 3,
+          "inventoryDelta": {
+            "polished_lens": 12,
+            "brass_shard": 15,
+            "old_ink": 9,
+            "carved_wood": 18
+          }
+        },
+        {
+          "withManifest": true,
+          "moneyGain": 1800,
+          "knowledgeDelta": -120,
+          "departures": 3,
+          "tradeCounter": 3,
+          "inventoryDelta": {
+            "fossil_fragment": -12,
+            "polished_lens": 12,
+            "brass_shard": 15,
+            "old_ink": 9,
+            "carved_wood": 6
+          }
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No new resource generator without input or real time.",
+    "Manifests add fixed rewards after original4/8/12/24h, consuming stock once.",
+    "Existing Museum passive income and campaign probabilities unchanged.",
+    "Reserve protects six preparations; optional Museum and material studies still compete for stock.",
+    "Source availability does not imply uniform drop frequency."
+  ]
+}

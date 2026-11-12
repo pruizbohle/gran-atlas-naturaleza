@@ -6437,7 +6437,7 @@ function validCargo3390(m,route){const d=CARGO_MANIFESTS3390.find(d=>d.id===m?.i
 function normalizeLogistics3390(s){
  const c=s.commerce;
  if(Array.isArray(c.deliveries)){
-  c.deliveries=c.deliveries.filter(h=>h&&Number.isSafeInteger(h.id)&&h.id>0&&Number.isFinite(h.at)&&SUPPLY_CONTRACTS3390.some(d=>d.id===h.contract)).filter((h,i,a)=>a.findIndex(x=>x.id===h.id)===i).map(h=>{const d=SUPPLY_CONTRACTS3390.find(d=>d.id===h.contract);return {id:h.id,contract:d.id,at:h.at,requires:{...d.requires},money:d.money,knowledge:d.knowledge};});
+  c.deliveries=c.deliveries.filter(h=>h&&Number.isSafeInteger(h.id)&&h.id>0&&Number.isFinite(h.at)&&SUPPLY_CONTRACTS3390.some(d=>d.id===h.contract)).filter((h,i,a)=>a.findIndex(x=>x.id===h.id&&x.contract===h.contract)===i).map(h=>{const d=SUPPLY_CONTRACTS3390.find(d=>d.id===h.contract);return {id:h.id,contract:d.id,at:h.at,requires:{...d.requires},money:d.money,knowledge:d.knowledge};});
   c.deliverySeq=Math.max(Number.isSafeInteger(c.deliverySeq)?c.deliverySeq:0,0,...c.deliveries.map(h=>h.id));
  }
  if(Array.isArray(c.tradeReceipts)){
@@ -6452,8 +6452,9 @@ function mergeLogistics3390(s,before){
  if(!s.collectionId||s.collectionId!==before?.collectionId)return;
  const c=s.commerce,old=before.commerce||{};
  for(const key of ['deliveries','tradeReceipts'])if(Array.isArray(old[key])&&old[key].length){
-  const records=new Map((c[key]||[]).map(h=>[h.id,h]));
-  for(const h of old[key])records.set(h.id,JSON.parse(JSON.stringify(h)));
+  const receiptKey=h=>key==='deliveries'?h.contract+':'+h.id:String(h.id);
+  const records=new Map((c[key]||[]).map(h=>[receiptKey(h),h]));
+  for(const h of old[key])records.set(receiptKey(h),JSON.parse(JSON.stringify(h)));
   c[key]=[...records.values()].sort((a,b)=>a.id-b.id);
  }
  c.seq=Math.max(c.seq,old.seq||0);
@@ -6464,7 +6465,7 @@ function mergeLogistics3390(s,before){
 
 let navigationTab3300='expeditions';
 function normalizeCommerce3300(s){
- const c=s.commerce&&typeof s.commerce==='object'&&!Array.isArray(s.commerce)?s.commerce:{};
+ const c=s.commerce&&typeof s.commerce==='object'&&!Array.isArray(s.commerce)?JSON.parse(JSON.stringify(s.commerce)):{};
  c.jobs=Array.isArray(c.jobs)?c.jobs.filter(j=>j&&TRADE_ROUTES.some(r=>r.id===j.route)&&Number.isSafeInteger(j.id)&&j.id>0&&Number.isFinite(j.startedAt)&&Number.isFinite(j.endAt)&&j.endAt-j.startedAt===TRADE_ROUTES.find(r=>r.id===j.route).hours*3600000):[];
  // A duplicate job id is a single departure, never another reward.
  c.jobs=c.jobs.filter((j,i,a)=>a.findIndex(x=>x.id===j.id)===i);
@@ -6507,7 +6508,7 @@ function settleTrade3300(now=Date.now()){
    const m=validCargo3390(j.manifest,j.route)?j.manifest:null;
    if(m){state.money+=m.money;state.knowledge+=m.knowledge;}
    const receipt={id:j.id,route:r.id,at:now,money:r.money,rewards:{...r.rewards},...(m?{manifest:JSON.parse(JSON.stringify(m))}:{})};
-   state.commerce.history.push(receipt);state.commerce.tradeReceipts??=[];state.commerce.tradeReceipts.push(JSON.parse(JSON.stringify(receipt)));
+   state.commerce.tradeReceipts??=JSON.parse(JSON.stringify(state.commerce.history));state.commerce.history.push(receipt);state.commerce.tradeReceipts.push(JSON.parse(JSON.stringify(receipt)));
   }
   const ids=new Set(due.map(j=>j.id));state.commerce.jobs=state.commerce.jobs.filter(j=>!ids.has(j.id));state.commerce.history=state.commerce.history.slice(-12);return true;
  });
@@ -6536,7 +6537,7 @@ function renderTrade3300(){
  if(tradeSection3390==='contracts'){
   const all=SUPPLY_CONTRACTS3390.filter(d=>(contractGroup3390==='all'||d.group===contractGroup3390)&&(contractFilter3390==='all'||contractStatus3390(d)===contractFilter3390));
   const pages=Math.max(1,Math.ceil(all.length/4)),page=Math.min(contractPage3390,pages-1);
-  body=`<p class="small">Mercancías entregadas voluntariamente a instituciones científicas. Los contratos consumen materiales; las misiones de Sociedad registran actividades. Reserva protegida para las seis preparaciones continentales aún pendientes, incluidas sus recetas intermedias.</p><details class="supply-filters"><summary>Filtrar contratos · ${all.length} resultados</summary><div class="trade-links">${b('group','all','Todos los gabinetes',true,`aria-pressed="${contractGroup3390==='all'}"`)}${Object.entries(SUPPLY_GROUPS3390).map(([id,name])=>b('group',id,name,true,`aria-pressed="${contractGroup3390===id}"`)).join('')}</div><div class="trade-links">${[['all','Todos los estados'],['ready','Listos para entregar'],['short','Sin recursos'],['completed','Completados'],['locked','Requisitos pendientes']].map(([id,name])=>b('filter',id,name,true,`aria-pressed="${contractFilter3390===id}"`)).join('')}</div></details><div class="trade-grid">${all.slice(page*4,page*4+4).map(d=>{const status=contractStatus3390(d),receipts=c.deliveries?.filter(h=>h.contract===d.id)||[];return `<article class="req supply-contract" data-supply-contract="${d.id}"><strong>${esc(d.name)}</strong><span class="supply-status" data-contract-status="${d.id}">${SUPPLY_STATUS3390[status]}</span><p class="small">${esc(d.institution)} · ${SUPPLY_GROUPS3390[d.group]}<br>${esc(d.description)}</p>${supplyMaterials3390(d.requires)}<p class="small">Premio: £${d.money} y ${d.knowledge} conocimiento.<br>Acceso: Astillero y ${d.prestige} prestigio. ${d.repeatable?'Repetible · requiere nuevas mercancías':'Entrega única'}.</p>${b('deliver',d.id+'|'+(c.deliverySeq||0),'Revisar y confirmar entrega',status==='ready',`data-trade-contract="${d.id}"`)}${receipts.length?`<details><summary>Entregas registradas · ${receipts.length}</summary><p class="small">Última: ${developmentDate3280(receipts.at(-1).at)} · £${receipts.at(-1).money} y ${receipts.at(-1).knowledge} conocimiento. Todos los recibos se conservan en el respaldo.</p></details>`:''}</article>`;}).join('')||'<p class="small">No hay contratos con estos filtros.</p>'}</div><div class="trade-links">${b('page',String(page-1),'Anterior',page>0)}<span class="small">Página ${page+1}/${pages}</span>${b('page',String(page+1),'Siguiente',page<pages-1)}</div>`;
+  body=`<p class="small">Mercancías entregadas voluntariamente a instituciones científicas. Los contratos consumen materiales; las misiones de Sociedad registran actividades. Reserva protegida para las seis preparaciones continentales aún pendientes, incluidas sus recetas intermedias.</p><details class="supply-filters"><summary>Filtrar contratos · ${all.length} resultados</summary><div class="trade-links">${b('group','all','Todos los gabinetes',true,`aria-pressed="${contractGroup3390==='all'}"`)}${Object.entries(SUPPLY_GROUPS3390).map(([id,name])=>b('group',id,name,true,`aria-pressed="${contractGroup3390===id}"`)).join('')}</div><div class="trade-links">${[['all','Todos los estados'],['ready','Listos para entregar'],['short','Sin recursos'],['completed','Completados'],['locked','Requisitos pendientes']].map(([id,name])=>b('filter',id,name,true,`aria-pressed="${contractFilter3390===id}"`)).join('')}</div></details><div class="trade-grid">${all.slice(page*4,page*4+4).map(d=>{const status=contractStatus3390(d),receipts=c.deliveries?.filter(h=>h.contract===d.id)||[];return `<details class="req supply-contract" data-supply-contract="${d.id}"><summary><strong>${esc(d.name)}</strong><span class="supply-status" data-contract-status="${d.id}">${SUPPLY_STATUS3390[status]}</span><span class="small supply-summary-materials">${tradeMaterials3300(d.requires)}</span></summary><p class="small">${esc(d.institution)} · ${SUPPLY_GROUPS3390[d.group]}<br>${esc(d.description)}</p>${supplyMaterials3390(d.requires)}<p class="small">Premio: £${d.money} y ${d.knowledge} conocimiento.<br>Acceso: Astillero y ${d.prestige} prestigio. ${d.repeatable?'Repetible · requiere nuevas mercancías':'Entrega única'}.</p>${b('deliver',d.id+'|'+(c.deliverySeq||0),'Revisar y confirmar entrega',status==='ready',`data-trade-contract="${d.id}"`)}${receipts.length?`<details><summary>Entregas registradas · ${receipts.length}</summary><p class="small">Última: ${developmentDate3280(receipts.at(-1).at)} · £${receipts.at(-1).money} y ${receipts.at(-1).knowledge} conocimiento. Todos los recibos se conservan en el respaldo.</p></details>`:''}</details>`;}).join('')||'<p class="small">No hay contratos con estos filtros.</p>'}</div><div class="trade-links">${b('page',String(page-1),'Anterior',page>0)}<span class="small">Página ${page+1}/${pages}</span>${b('page',String(page+1),'Siguiente',page<pages-1)}</div>`;
  }
  if(tradeSection3390==='market')body=`<p class="small">Una unidad por compra. Los mapas se obtienen explorando.</p><div class="trade-grid">${Object.entries(TRADE_MARKET).map(([id,cost])=>`<article class="req"><strong>${esc(ITEMS[id].name)}</strong><p class="small">Tienes <span data-trade-stock="${id}">${state.inventory[id]||0}</span> · £${cost}/unidad</p>${b('buy',id,'Comprar · £'+cost,ship&&state.money>=cost)}</article>`).join('')}</div>`;
  if(tradeSection3390==='barters')body=`<p class="small">Cinco equivalencias fijas en un solo sentido.</p><div class="trade-grid">${TRADE_BARTERS.map(r=>`<article class="req">${supplyMaterials3390(r.requires)}<p class="small">Recibir: ${tradeMaterials3300(r.rewards)}</p>${b('barter',r.id,'Intercambiar',ship&&Object.entries(r.requires).every(([id,n])=>(state.inventory[id]||0)>=n))}</article>`).join('')}</div>`;

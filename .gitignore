@@ -2,3 +2,6 @@
 *.jks
 *.keystore
 atlas-release.base64
+
+# Task scratch files, test servers and intermediate logs.
+/work/

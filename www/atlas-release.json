@@ -1,5 +1,5 @@
 {
-  "version": "3.38.0",
+  "version": "3.39.0",
   "atlas": "simple",
   "cells": {
     "Europa": 10,
@@ -115,5 +115,20 @@
     "economicRewards": 0,
     "newFauna": 0,
     "newScientificPieces": 0
+  },
+  "logistics": {
+    "contracts": 10,
+    "uniqueContracts": 8,
+    "repeatableContracts": 2,
+    "manifests": 4,
+    "originalTradeHours": [
+      4,
+      8,
+      12,
+      24
+    ],
+    "storage": "gran_atlas_v05",
+    "permanentReceipts": true,
+    "progressionReserve": 6
   }
 }

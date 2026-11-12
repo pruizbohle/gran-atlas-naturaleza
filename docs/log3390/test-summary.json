@@ -1,0 +1,13 @@
+{
+  "version": "3.39.0",
+  "baselineTests": 566,
+  "historicalExactRuntime": 473,
+  "retainedCurrentRuntime": 93,
+  "newCurrentRuntime": 33,
+  "totalCurrentRuntime": 126,
+  "total": 599,
+  "passed": 599,
+  "failed": 0,
+  "changedHistoricalTests": false,
+  "validator": "node scripts/validate-logistics-v3390.cjs"
+}

@@ -1,3 +1,7 @@
+# 3.39.0 · Expediciones y Comercio II
+
+Diez contratos científicos y cuatro manifiestos opcionales, con reserva de progresión, confirmaciones y recibos permanentes. Se conservan los retornos originales, el catálogo mundial y las partidas. [Informe y validación](README_V3390.md).
+
 # 3.38.0 · Museo avanzado
 
 Doce exposiciones temáticas dentro de las cinco salas originales, con diplomas permanentes y montaje actual diferenciado. Sin premios económicos ni cambios de renta. [Informe y validación](README_V3380.md).

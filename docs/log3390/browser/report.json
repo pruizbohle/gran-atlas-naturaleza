@@ -1,0 +1,106 @@
+{
+  "version": "3.39.0",
+  "base": "http://127.0.0.1:8768/",
+  "widths": [
+    {
+      "width": 320,
+      "sections": 5,
+      "contractCardsMax": 4,
+      "market": 7,
+      "barters": 5,
+      "cancelNoDelivery": true,
+      "deliveryConfirmedOnce": true,
+      "manifest24hPersists": true,
+      "confirms": 3,
+      "renderBenchmark": {
+        "renders": 200,
+        "totalMs": 92,
+        "nodes": 305,
+        "initialNodes": 305,
+        "intervals": 1
+      },
+      "noOverflow": true
+    },
+    {
+      "width": 360,
+      "sections": 5,
+      "contractCardsMax": 4,
+      "market": 7,
+      "barters": 5,
+      "cancelNoDelivery": true,
+      "deliveryConfirmedOnce": true,
+      "manifest24hPersists": true,
+      "confirms": 3,
+      "renderBenchmark": {
+        "renders": 200,
+        "totalMs": 166.19999999995343,
+        "nodes": 305,
+        "initialNodes": 305,
+        "intervals": 1
+      },
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "sections": 5,
+      "contractCardsMax": 4,
+      "market": 7,
+      "barters": 5,
+      "cancelNoDelivery": true,
+      "deliveryConfirmedOnce": true,
+      "manifest24hPersists": true,
+      "confirms": 3,
+      "renderBenchmark": {
+        "renders": 200,
+        "totalMs": 130.70000000018626,
+        "nodes": 305,
+        "initialNodes": 305,
+        "intervals": 1
+      },
+      "noOverflow": true
+    },
+    {
+      "width": 412,
+      "sections": 5,
+      "contractCardsMax": 4,
+      "market": 7,
+      "barters": 5,
+      "cancelNoDelivery": true,
+      "deliveryConfirmedOnce": true,
+      "manifest24hPersists": true,
+      "confirms": 3,
+      "renderBenchmark": {
+        "renders": 200,
+        "totalMs": 93.10000000009313,
+        "nodes": 305,
+        "initialNodes": 305,
+        "intervals": 1
+      },
+      "noOverflow": true
+    },
+    {
+      "width": 1280,
+      "sections": 5,
+      "contractCardsMax": 4,
+      "market": 7,
+      "barters": 5,
+      "cancelNoDelivery": true,
+      "deliveryConfirmedOnce": true,
+      "manifest24hPersists": true,
+      "confirms": 3,
+      "renderBenchmark": {
+        "renders": 200,
+        "totalMs": 176.39999999990687,
+        "nodes": 305,
+        "initialNodes": 305,
+        "intervals": 1
+      },
+      "noOverflow": true
+    }
+  ],
+  "errors": [],
+  "physicalAndroid": false,
+  "isolatedExplicitConfirmation": true,
+  "isolatedStorageRollback": true,
+  "offlineGameAndIsolatedLab": true
+}
