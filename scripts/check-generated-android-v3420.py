@@ -15,6 +15,7 @@ for name in ['AtlasExport','AtlasImport']:
  require(main.count('registerPlugin('+name+'Plugin.class)')==1,'Native plugin registration missing/duplicate')
  require((java/(name+'Plugin.java')).read_text()==Path('android-native/'+name+'Plugin.java').read_text().replace('__PACKAGE__',info['appId']),'Generated native source mismatch')
 require('WindowInsetsCompat.Type.systemBars()' in main,'Fullscreen setup missing')
+strings=ET.parse(base/'res/values/strings.xml');require(strings.find("string[@name='app_name']").text=='El Gran Atlas','Generated visible app name mismatch')
 plugins=json.loads((base/'assets/capacitor.plugins.json').read_text());require({p['pkg'] for p in plugins}=={'@capacitor/filesystem','@capacitor/share'},'Native sharing plugins missing')
 report={**info,'webFilesVerified':len(files),'emptyCordovaBridgeFiles':len(actual-set(files)),'nativePluginsRegistered':True,'portraitConfigured':True,'fullscreenSourceConfigured':True,'generatedProjectOnly':True,'apkCompiled':False,'physicalAndroid':False}
 if len(sys.argv)>1:Path(sys.argv[1]).write_text(json.dumps(report,indent=2)+'\n')

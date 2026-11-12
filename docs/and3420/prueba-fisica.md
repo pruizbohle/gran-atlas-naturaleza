@@ -38,7 +38,7 @@ Copiar del manifiesto exacto: `version`, `versionCode`, `appId`, `workflowRunId`
 
 Registrar datos reales: `testedAt` en ISO 8601 con zona horaria, `device`, `androidVersion`, `webViewVersion`, `sourceVersion`, `previousCertificateSha256`, `migrationMode` (`same-certificate` o `different-certificate`), `externalBackupCopies` (al menos dos) y `notes` sin contenido privado de la partida.
 
-Solo marcar true después de comprobar cada resultado: `physicalAndroid`, `ownerAuthorizedTransition`, `backupValidatedBeforeTransition`, `roundtripValidatedBeforeTransition`, `nativeExport`, `nativeShare`, `nativeImportRestored`, `fileOrTextFallback`, `tenModules`, `fieldExplored`, `closedAndReopened`, `reopenedOffline`, `progressCompared`, `exportedAgain`, `noDuplicateRewards`, `touchReviewed`.
+Solo marcar true después de comprobar cada resultado: `physicalAndroid`, `portraitAndFullscreen`, `performanceReviewed`, `invalidImportPreserved`, `ownerAuthorizedTransition`, `backupValidatedBeforeTransition`, `roundtripValidatedBeforeTransition`, `nativeExport`, `nativeShare`, `nativeImportRestored`, `fileOrTextFallback`, `tenModules`, `fieldExplored`, `closedAndReopened`, `reopenedOffline`, `progressCompared`, `exportedAgain`, `noDuplicateRewards`, `touchReviewed`.
 
 Con certificados distintos se requiere `manualReinstall: true` tras la autorización y respaldos. Con el mismo certificado se requiere `normalUpdatePreserved: true`. `sameCertificateUpdate` registra `status: passed` y `previousApkSha256` cuando la actualización se probó; únicamente para la primera transición desde otra firma puede usarse `status: not-applicable-first-permanent` con `reason` real que explique la falta de segundo candidato.
 

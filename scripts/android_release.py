@@ -28,6 +28,7 @@ def payload_hash(files):return sha(json.dumps(files,sort_keys=True,separators=('
 def verify_apk(apk,badging,signature,root=Path('.')):
  info=project(root);pin=certificate(root);packages=re.findall(r'^package: (.+)$',badging,re.M);require(len(packages)==1,'Expected one Android package')
  for field,value in [('name',info['appId']),('versionName',info['version']),('versionCode',str(info['versionCode']))]:require(bool(re.search(r"\b"+field+"='"+re.escape(value)+"'",packages[0])),'Wrong '+field)
+ require(bool(re.search(r"^application-label:'El Gran Atlas'\s*$",badging,re.M)),'Wrong visible application label')
  require('application-debuggable' not in badging,'Debuggable APK is forbidden');require('Verifies' in signature,'Missing successful apksigner verification');require(not re.search(r'Android\s*Debug',signature,re.I),'Temporary debug signing is forbidden')
  certs=re.findall(r'^Signer #\d+ certificate SHA-256 digest: ([0-9a-fA-F]+)\s*$',signature,re.M)
  require(len(certs)==1 and fingerprint(certs[0])==pin,'APK certificate does not match the pinned permanent certificate');files=web_files(root)
@@ -54,7 +55,7 @@ def verify_candidate(manifest,apk,run,source,root=Path('.')):
 def verify_physical(proof,manifest):
  require(proof.get('schema')==2,'Missing schema 2 physical evidence')
  for key in ['version','versionCode','appId','workflowRunId','sourceCommit','certificateSha256','apkSha256','payloadSha256']:require(proof.get(key)==manifest[key],'Physical proof mismatch: '+key)
- for key in ['physicalAndroid','ownerAuthorizedTransition','backupValidatedBeforeTransition','roundtripValidatedBeforeTransition','nativeExport','nativeShare','nativeImportRestored','fileOrTextFallback','tenModules','fieldExplored','closedAndReopened','reopenedOffline','progressCompared','exportedAgain','noDuplicateRewards','touchReviewed']:require(proof.get(key) is True,'Missing observed device result: '+key)
+ for key in ['physicalAndroid','portraitAndFullscreen','performanceReviewed','invalidImportPreserved','ownerAuthorizedTransition','backupValidatedBeforeTransition','roundtripValidatedBeforeTransition','nativeExport','nativeShare','nativeImportRestored','fileOrTextFallback','tenModules','fieldExplored','closedAndReopened','reopenedOffline','progressCompared','exportedAgain','noDuplicateRewards','touchReviewed']:require(proof.get(key) is True,'Missing observed device result: '+key)
  require(type(proof.get('externalBackupCopies')) is int and proof['externalBackupCopies']>=2,'Two external backup copies required')
  require(isinstance(proof.get('testedAt'),str) and bool(re.fullmatch(r'\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:Z|[+-]\d\d:\d\d)',proof['testedAt'])),'Record real test time with timezone')
  for key in ['device','androidVersion','webViewVersion','sourceVersion','notes']:require(isinstance(proof.get(key),str) and bool(proof[key].strip()),'Missing observed metadata: '+key)

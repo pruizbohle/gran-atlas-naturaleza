@@ -14,7 +14,7 @@ class Guards(unittest.TestCase):
   (self.root/'www').mkdir();(self.root/'www/index.html').write_text('SIMULATED web fixture');(self.root/'www/sw.js').write_text('SIMULATED worker')
   self.entries={'assets/public/index.html':b'SIMULATED web fixture','assets/public/sw.js':b'SIMULATED worker','assets/public/cordova.js':b'','assets/public/cordova_plugins.js':b'','assets/capacitor.config.json':(self.root/'capacitor.config.json').read_bytes(),'assets/capacitor.plugins.json':json.dumps([{'classpath':'com.capacitorjs.plugins.filesystem.FilesystemPlugin'},{'classpath':'com.capacitorjs.plugins.share.SharePlugin'}]).encode(),'classes.dex':('SIMULATED descriptors only: L'+a.APP_ID.replace('.','/')+'/AtlasExportPlugin; L'+a.APP_ID.replace('.','/')+'/AtlasImportPlugin;').encode()}
   self.archive=self.root/'simulated-container.zip';self.pack()
-  self.badging="package: name='%s' versionCode='34200' versionName='3.42.0'\n"%a.APP_ID
+  self.badging="package: name='%s' versionCode='34200' versionName='3.42.0'\napplication-label:'El Gran Atlas'\n"%a.APP_ID
   self.signature='Verifies\nSigner #1 certificate DN: CN=SIMULATED UNIT FIXTURE\nSigner #1 certificate SHA-256 digest: '+TEST_PIN+'\n'
   self.run={'id':123,'status':'completed','conclusion':'success','path':'.github/workflows/android-signed.yml','event':'workflow_dispatch','head_branch':'main','head_sha':SOURCE,'repository':{'full_name':'pruizbohle/gran-atlas-naturaleza'},'head_repository':{'full_name':'pruizbohle/gran-atlas-naturaleza'}}
  def tearDown(self):self.temp.cleanup()
@@ -106,7 +106,7 @@ class Guards(unittest.TestCase):
  def test_two_external_copies_required(self):
   m=self.manifest();p=self.proof(m);p['externalBackupCopies']=1
   with self.assertRaisesRegex(ValueError,'Two external'):a.verify_physical(p,m)
-FLAGS=['physicalAndroid','ownerAuthorizedTransition','backupValidatedBeforeTransition','roundtripValidatedBeforeTransition','nativeExport','nativeShare','nativeImportRestored','fileOrTextFallback','tenModules','fieldExplored','closedAndReopened','reopenedOffline','progressCompared','exportedAgain','noDuplicateRewards','touchReviewed']
+FLAGS=['physicalAndroid','portraitAndFullscreen','performanceReviewed','invalidImportPreserved','ownerAuthorizedTransition','backupValidatedBeforeTransition','roundtripValidatedBeforeTransition','nativeExport','nativeShare','nativeImportRestored','fileOrTextFallback','tenModules','fieldExplored','closedAndReopened','reopenedOffline','progressCompared','exportedAgain','noDuplicateRewards','touchReviewed']
 def missing_flag(flag):
  def test(self):
   m=self.manifest();p=self.proof(m);p[flag]=False

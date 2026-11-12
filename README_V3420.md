@@ -37,7 +37,7 @@ Las pruebas actuales recorren exportadores reales de 3.28–3.41, partidas avanz
 
 [Comparación con 3.41](docs/and3420/AND-04-rendimiento.md): ocho estados, cinco anchos, diez módulos y ráfagas de 600 cambios/200 guardados. No se observa otra regresión grave en esos recorridos; los tiempos de guardado aumentaron en esta ejecución y quedan registrados. Nodos y escuchadores permanecen estables y no se añade otro intervalo. No se reduce la frecuencia de guardado ni se refactoriza el juego. No se atribuyen cifras Chromium a teléfonos.
 
-Las **720 pruebas históricas** se conservan sin modificaciones y se ejecutan sobre sus fuentes exactas. Se agregan **94 pruebas actuales**: 40 Node para configuración, respaldo, migraciones e integridad y 54 Python de guardas de firma/contenido/candidato/evidencia. Otras 41 regresiones de 3.41 se repiten en el candidato: se cuentan como repeticiones, no como pruebas nuevas. Son **814 pruebas distintas y 855 ejecuciones**. Las guardas Python utilizan ZIP y reportes sintéticos, nunca una firma o un teléfono reales.
+Las **720 pruebas históricas** se conservan sin modificaciones y se ejecutan sobre sus fuentes exactas. Se agregan **97 pruebas actuales**: 40 Node para configuración, respaldo, migraciones e integridad y 57 Python de guardas de firma/contenido/candidato/evidencia. Otras 41 regresiones de 3.41 se repiten en el candidato: se cuentan como repeticiones, no como pruebas nuevas. Son **817 pruebas distintas y 858 ejecuciones**. Las guardas Python utilizan ZIP y reportes sintéticos, nunca una firma o un teléfono reales.
 
 ```sh
 npm ci --no-audit --no-fund
