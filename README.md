@@ -1,3 +1,7 @@
+# 3.40.0 · Inventario, Cartografía y Trueques Regionales
+
+Inventario con buscador, filtros y planificador; mapas de Sudamérica, Oceanía y Polos; Mapamundi no destructivo y siete mercancías exclusivas de trueques regionales. Se conservan los accesos históricos y el guardado. [Informe, campañas y validación](README_V3400.md).
+
 # 3.39.0 · Expediciones y Comercio II
 
 Diez contratos científicos y cuatro manifiestos opcionales, con reserva de progresión, confirmaciones y recibos permanentes. Se conservan los retornos originales, el catálogo mundial y las partidas. [Informe y validación](README_V3390.md).

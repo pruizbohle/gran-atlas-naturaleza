@@ -1,5 +1,5 @@
 {
-  "version": "3.39.0",
+  "version": "3.40.0",
   "atlas": "simple",
   "cells": {
     "Europa": 10,
@@ -130,5 +130,18 @@
     "storage": "gran_atlas_v05",
     "permanentReceipts": true,
     "progressionReserve": 6
+  },
+  "inventoryCartography": {
+    "originalItems": 54,
+    "totalItems": 68,
+    "newMaps": 3,
+    "worldMap": true,
+    "regionalBarters": 7,
+    "ratios": [
+      50,
+      100
+    ],
+    "historicalAccessPreserved": true,
+    "storage": "gran_atlas_v05"
   }
 }

@@ -65,8 +65,13 @@ jobs:
           node --check www/js/abyssal-art-v3340.js
           node --check www/js/lab/abyssal-lab-v3340.js
           node --check www/js/lab/logistics-lab-v3390.js
-          node scripts/build-logistics-release-v3390.cjs
-          node scripts/validate-logistics-v3390.cjs
+          node --check www/js/lab/inventory-lab-v3400.js
+          node scripts/build-inventory-release-v3400.cjs
+          node scripts/validate-inventory-v3400.cjs
+      - name: Simular tres campañas mundiales desde cero
+        run: |
+          node scripts/simulate-inventory-world-v3400.cjs
+          node scripts/audit-inventory-v3400.cjs
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload game

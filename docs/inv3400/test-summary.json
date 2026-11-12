@@ -1,0 +1,17 @@
+{
+  "version": "3.40.0",
+  "baseline": "4496003",
+  "unchangedReference": 599,
+  "historicalSubruntimes": 473,
+  "exact339Runtime": 126,
+  "current340Runtime": 67,
+  "total": 666,
+  "passed": 666,
+  "failed": 0,
+  "historicalTestsModified": false,
+  "freshWorldSeeds": [
+    19,
+    71,
+    503
+  ]
+}

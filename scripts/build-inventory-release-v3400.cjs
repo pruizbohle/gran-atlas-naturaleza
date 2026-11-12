@@ -1,0 +1,13 @@
+'use strict';
+const fs=require('node:fs'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const swPath='www/sw.js',source=fs.readFileSync(swPath,'utf8'),assets=JSON.parse('['+source.match(/const ASSETS=\[([^;]+)\];/)[1].replace(/'([^']*)'/g,(_,s)=>JSON.stringify(s))+']');
+const files=[...new Set(assets.map(p=>p==='./'?'index.html':p.replace(/^\.\//,'')))].sort();for(const f of files)assert.ok(fs.existsSync('www/'+f),'missing offline file '+f);
+assert.ok(source.includes("version:'3.40.0'"),'service worker status version');assert.ok(source.includes("new URL('./actualizar-v3400.html'"),'updater allowlist');for(const f of ['css/inventory-v3400.css','js/lab/inventory-lab-v3400.js','laboratorio-inventario-v3400.html','actualizar-v3400.html'])assert.ok(files.includes(f),'offline inventory file '+f);assert.equal(JSON.parse(fs.readFileSync('package.json')).version,'3.40.0');assert.equal(JSON.parse(fs.readFileSync('www/atlas-release.json')).version,'3.40.0');assert.equal(JSON.parse(fs.readFileSync('capacitor.config.json')).appId,'com.elgranatlas.naturaleza.beta314');
+const revision='gran-atlas-v3.40.0-inventory-'+sha(files.filter(f=>f!=='sw.js').map(f=>f+':'+sha(fs.readFileSync('www/'+f))).join('\n')).slice(0,12);
+const next=source.replace(/const CACHE='[^']+'/,"const CACHE='"+revision+"'");
+if(process.argv.includes('--write'))fs.writeFileSync(swPath,next);else assert.equal(source,next,'cache revision stale; run with --write');
+const paths=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?paths(dir+'/'+e.name):[dir+'/'+e.name]);
+const manifest={version:'3.40.0',cache:revision,catalog:{species:945,regions:113,presences:1744},offlineFiles:files.length,files:Object.fromEntries(paths('www').sort().map(p=>[p.slice(4),sha(fs.readFileSync(p))]))};
+const dest='docs/inv3400/release-manifest.json';if(process.argv.includes('--write'))fs.writeFileSync(dest,JSON.stringify(manifest,null,2)+'\n');else assert.deepEqual(JSON.parse(fs.readFileSync(dest)),manifest);
+console.log(JSON.stringify({version:manifest.version,cache:revision,offlineFiles:files.length,webFiles:Object.keys(manifest.files).length,verified:true}));
