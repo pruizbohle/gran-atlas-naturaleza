@@ -6422,6 +6422,17 @@ function deliverContract3390(id,sequence){
 }
 // LOG3390 END contracts
 
+// LOG3390 BEGIN manifests
+const CARGO_MANIFESTS3390=[
+ {id:'documentation',route:'coastal_trade',name:'Documentación científica',requires:{parchment_scrap:4,old_ink:1},money:100,knowledge:70},
+ {id:'instruments',route:'workshop_trade',name:'Instrumentación',requires:{polished_lens:1,brass_shard:1},money:120,knowledge:80},
+ {id:'natural',route:'archive_trade',name:'Materiales naturales',requires:{pressed_flower:5,river_pebble:6},money:100,knowledge:100},
+ {id:'museum',route:'ocean_trade',name:'Suministros museológicos',requires:{carved_wood:4,fossil_fragment:4},money:150,knowledge:120}
+];
+function cargoSnapshot3390(d){return {id:d.id,requires:{...d.requires},money:d.money,knowledge:d.knowledge};}
+function validCargo3390(m,route){const d=CARGO_MANIFESTS3390.find(d=>d.id===m?.id&&d.route===route);return !!d&&m.money===d.money&&m.knowledge===d.knowledge&&Object.keys(m.requires||{}).length===Object.keys(d.requires).length&&Object.entries(d.requires).every(([id,n])=>m.requires[id]===n);}
+// LOG3390 END manifests
+
 let navigationTab3300='expeditions';
 function normalizeCommerce3300(s){
  const c=s.commerce&&typeof s.commerce==='object'&&!Array.isArray(s.commerce)?s.commerce:{};
@@ -6440,10 +6451,16 @@ function tradeTransaction3300(change){
  return true;
 }
 function tradeCanStart3300(route){return !!route&&!!state.upgrades.shipyard&&state.commerce.jobs.length<1&&state.prestige>=route.prestige&&state.money>=route.cost&&state.knowledge>=route.knowledge;}
-function startTrade3300(id){
- const r=TRADE_ROUTES.find(r=>r.id===id);if(!tradeCanStart3300(r))return false;
+function startTrade3300(id,manifestId=null,sequence=state.commerce.seq){
+ const r=TRADE_ROUTES.find(r=>r.id===id),m=manifestId?CARGO_MANIFESTS3390.find(m=>m.id===manifestId&&m.route===id):null;
+ if(!tradeCanStart3300(r)||sequence!==state.commerce.seq||manifestId&&!m||m&&!supplyStock3390(m.requires))return false;
+ if(m&&!window.confirm(`${r.name} · ${r.hours} horas\nCosto original: £${r.cost} y ${r.knowledge} conocimiento.\nManifiesto: ${m.name}\nConsumir: ${tradeMaterials3300(m.requires)}\nRetorno adicional exacto: £${m.money} y ${m.knowledge} conocimiento.\n¿Confirmar salida y consumo?`))return false;
+ if(!tradeCanStart3300(r)||sequence!==state.commerce.seq||m&&!supplyStock3390(m.requires))return false;
  const now=Date.now();if(!Number.isFinite(now))return false;
- return tradeTransaction3300(()=>{state.money-=r.cost;state.knowledge-=r.knowledge;state.commerce.jobs.push({id:++state.commerce.seq,route:r.id,startedAt:now,endAt:now+r.hours*3600000});return true;});
+ return tradeTransaction3300(()=>{state.money-=r.cost;state.knowledge-=r.knowledge;
+  if(m)for(const [mat,n]of Object.entries(m.requires))state.inventory[mat]-=n;
+  state.commerce.jobs.push({id:++state.commerce.seq,route:r.id,startedAt:now,endAt:now+r.hours*3600000,...(m?{manifest:cargoSnapshot3390(m)}:{})});return true;
+ });
 }
 function settleTrade3300(now=Date.now()){
  if(!Number.isFinite(now))return false;
@@ -6452,10 +6469,13 @@ function settleTrade3300(now=Date.now()){
  const due=state.commerce.jobs.filter(j=>j.endAt<=now);if(!due.length)return false;
  return tradeTransaction3300(()=>{
   for(const j of due){
-   const r=TRADE_ROUTES.find(r=>r.id===j.route);if(!r||state.commerce.history.some(h=>h.id===j.id))continue;
+   const r=TRADE_ROUTES.find(r=>r.id===j.route);if(!r||state.commerce.history.some(h=>h.id===j.id)||state.commerce.tradeReceipts?.some(h=>h.id===j.id))continue;
    state.money+=r.money;for(const[id,n]of Object.entries(r.rewards))addInventory(id,n);
    achievementIncrement3360('trade');if(r.hours===24)achievementIncrement3360('trade24');
-   state.commerce.history.push({id:j.id,route:r.id,at:now,money:r.money,rewards:{...r.rewards}});
+   const m=validCargo3390(j.manifest,j.route)?j.manifest:null;
+   if(m){state.money+=m.money;state.knowledge+=m.knowledge;}
+   const receipt={id:j.id,route:r.id,at:now,money:r.money,rewards:{...r.rewards},...(m?{manifest:JSON.parse(JSON.stringify(m))}:{})};
+   state.commerce.history.push(receipt);state.commerce.tradeReceipts??=[];state.commerce.tradeReceipts.push(JSON.parse(JSON.stringify(receipt)));
   }
   const ids=new Set(due.map(j=>j.id));state.commerce.jobs=state.commerce.jobs.filter(j=>!ids.has(j.id));state.commerce.history=state.commerce.history.slice(-12);return true;
  });
