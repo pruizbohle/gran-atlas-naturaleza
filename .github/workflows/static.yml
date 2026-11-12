@@ -35,6 +35,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+          cache: npm
+      - name: Instalar dependencias exactas
+        run: npm ci --no-audit --no-fund
       - name: Validar código y pruebas del Atlas
         run: |
           node --check www/js/achievements-v3360.js
@@ -68,10 +71,18 @@ jobs:
           node --check www/js/lab/abyssal-lab-v3340.js
           node --check www/js/lab/logistics-lab-v3390.js
           node --check www/js/lab/inventory-lab-v3400.js
-          node scripts/build-experience-release-v3410.cjs
-          node scripts/validate-experience-v3410.cjs
+          node scripts/build-android-web-release-v3420.cjs
+          node scripts/validate-android-v3420.cjs
+      - name: Verificar proyecto nativo generado sin compilar ni firmar APK
+        run: |
+          npx --no-install cap add android
+          npx --no-install cap sync android
+          python3 scripts/install-atlas-export.py
+          python3 scripts/configure-android-version.py
+          python3 scripts/configure-android-project.py
+          python3 scripts/check-generated-android-v3420.py
       - name: Auditar preparación Android sin generar APK
-        run: python3 scripts/audit-android-readiness-v3410.py
+        run: python3 scripts/audit-android-readiness-v3420.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload game

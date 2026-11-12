@@ -1,5 +1,5 @@
 {
-  "version": "3.41.0",
+  "version": "3.42.0",
   "atlas": "simple",
   "cells": {
     "Europa": 10,
@@ -151,5 +151,10 @@
     "missionPageSize": 4,
     "newCatalogEntries": 0,
     "physicalAndroidValidated": false
+  },
+  "androidDistribution": {
+    "appId": "com.elgranatlas.naturaleza.beta314",
+    "versionCode": 34200,
+    "policy": "Permanent certificate and exact-candidate physical restoration required before Android publication"
   }
 }

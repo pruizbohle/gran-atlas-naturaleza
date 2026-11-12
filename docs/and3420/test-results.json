@@ -1,0 +1,19 @@
+{
+  "version": "3.42.0",
+  "referenceCommit": "3422b10265fd230de03e6f4160245ce362cf25e8",
+  "unchangedHistoricalReferenceTests": 720,
+  "currentNodeTests": 40,
+  "currentPythonGuardTests": 54,
+  "distinctTests": 814,
+  "currentRegressionReplays": 41,
+  "totalTestExecutions": 855,
+  "failures": 0,
+  "realApkCompiled": false,
+  "realApkSignatureVerified": false,
+  "physicalAndroidTestPerformed": false,
+  "guardFixtures": "Synthetic ZIP/report fixtures only; never an actual signed APK or physical proof",
+  "browserReport": "browser/report.json",
+  "backupsReport": "backups-browser/report.json",
+  "pwaReport": "pwa/report.json",
+  "generatedProjectReport": "generated-project-verification.json"
+}

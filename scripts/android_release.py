@@ -22,7 +22,7 @@ def certificate(root=Path('.')):
 def web_files(root=Path('.')):return {p.relative_to(root/'www').as_posix():sha(p.read_bytes()) for p in sorted((root/'www').rglob('*')) if p.is_file()}
 def payload_files(root=Path('.')):
  paths=[p for folder in ['www','android-native'] for p in (root/folder).rglob('*') if p.is_file()]
- paths += [root/p for p in ['package.json','package-lock.json','capacitor.config.json','.github/workflows/android-signed.yml','scripts/android_release.py','scripts/configure-android-version.py','scripts/configure-android-project.py','scripts/install-atlas-export.py','scripts/verify-android-release.py','scripts/create-android-candidate.py','scripts/verify-android-candidate.py','scripts/verify-android-restoration.py','.github/workflows/android-publish.yml']]
+ paths += [root/p for p in ['package.json','package-lock.json','capacitor.config.json','.github/workflows/android-signed.yml','scripts/android_release.py','scripts/configure-android-version.py','scripts/configure-android-project.py','scripts/install-atlas-export.py','scripts/verify-android-release.py','scripts/create-android-candidate.py','scripts/verify-android-candidate.py','scripts/verify-android-restoration.py','scripts/check-generated-android-v3420.py','.github/workflows/android-publish.yml']]
  return {p.relative_to(root).as_posix():sha(p.read_bytes()) for p in sorted(paths)}
 def payload_hash(files):return sha(json.dumps(files,sort_keys=True,separators=(',',':')).encode())
 def verify_apk(apk,badging,signature,root=Path('.')):

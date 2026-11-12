@@ -1,0 +1,13 @@
+{
+  "version": "3.42.0",
+  "versionCode": 34200,
+  "appId": "com.elgranatlas.naturaleza.beta314",
+  "webFilesVerified": 188,
+  "emptyCordovaBridgeFiles": 2,
+  "nativePluginsRegistered": true,
+  "portraitConfigured": true,
+  "fullscreenSourceConfigured": true,
+  "generatedProjectOnly": true,
+  "apkCompiled": false,
+  "physicalAndroid": false
+}

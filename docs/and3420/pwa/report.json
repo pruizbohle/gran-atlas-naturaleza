@@ -1,0 +1,18 @@
+{
+  "version": "3.42.0",
+  "upgrade": "3.41.0 -> 3.42.0",
+  "exactBackup": true,
+  "otherWindowBlocksActivation": true,
+  "pending24hAndScientificVoyage": true,
+  "pendingDigSurveyAndDeepOperation": true,
+  "allPreviousFieldsCompared": true,
+  "ninetyDaysOffline": true,
+  "oldTradePaidOnce": true,
+  "manualMuseumCollectionOnce": true,
+  "newManifestAndContractSurviveOfflineReload": true,
+  "singleTradeCounters": true,
+  "isolatedLabOffline": true,
+  "historicalOceanAccessWithoutPhysicalMaps": true,
+  "errors": [],
+  "physicalAndroid": false
+}

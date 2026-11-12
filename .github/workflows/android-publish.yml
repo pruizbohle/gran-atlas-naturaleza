@@ -54,9 +54,9 @@ jobs:
           set -euo pipefail
           APKSIGNER=$(find "$ANDROID_HOME/build-tools" -name apksigner | sort -V | tail -1)
           AAPT=$(find "$ANDROID_HOME/build-tools" -name aapt | sort -V | tail -1)
-          "$APKSIGNER" verify --verbose --print-certs candidate/atlas-candidate.apk > candidate/apk-signature-current.txt
+          "$APKSIGNER" verify --verbose --print-certs candidate/atlas-candidate.apk > "$RUNNER_TEMP/atlas-apk-signature-full.txt"
           "$AAPT" dump badging candidate/atlas-candidate.apk > candidate/apk-badging-current.txt
-          python3 scripts/verify-android-release.py candidate/atlas-candidate.apk candidate/apk-badging-current.txt candidate/apk-signature-current.txt
+          python3 scripts/verify-android-release.py candidate/atlas-candidate.apk candidate/apk-badging-current.txt "$RUNNER_TEMP/atlas-apk-signature-full.txt"
           python3 scripts/verify-android-candidate.py candidate/atlas-candidate.apk candidate/candidate-manifest.json candidate-run.json "$SOURCE_COMMIT"
           python3 scripts/verify-android-restoration.py candidate/atlas-candidate.apk "$CANDIDATE_RUN" candidate/candidate-manifest.json candidate-run.json "$SOURCE_COMMIT"
       - name: Publicar únicamente el artefacto físico verificado
@@ -72,3 +72,6 @@ jobs:
           fi
           cp candidate/atlas-candidate.apk "$FILE"
           gh release create "v$VERSION" "$FILE" --target "$SOURCE_COMMIT" --title "El Gran Atlas $VERSION · Android verificado" --notes-file docs/android/release-notes.md
+      - name: Retirar reporte transitorio de certificado
+        if: always()
+        run: rm -f "$RUNNER_TEMP/atlas-apk-signature-full.txt"

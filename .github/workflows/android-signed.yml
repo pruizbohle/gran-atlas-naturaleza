@@ -45,6 +45,8 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+      - name: Preparar SDK Android requerido por Capacitor 7
+        run: '"$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-35" "build-tools;35.0.0"'
       - name: Generar y sincronizar Android y sus plugins de respaldo
         run: |
           npx --no-install cap add android
@@ -52,6 +54,7 @@ jobs:
           python3 scripts/install-atlas-export.py
           python3 scripts/configure-android-version.py
           python3 scripts/configure-android-project.py --signing
+          python3 scripts/check-generated-android-v3420.py
       - name: Preparar almacén privado y comprobar su certificado público
         env:
           KEYSTORE: ${{ secrets.ATLAS_ANDROID_KEYSTORE_BASE64 }}
@@ -87,10 +90,15 @@ jobs:
           cp android/app/build/outputs/apk/release/app-release.apk candidate/atlas-candidate.apk
           APKSIGNER=$(find "$ANDROID_HOME/build-tools" -name apksigner | sort -V | tail -1)
           AAPT=$(find "$ANDROID_HOME/build-tools" -name aapt | sort -V | tail -1)
-          "$APKSIGNER" verify --verbose --print-certs candidate/atlas-candidate.apk > candidate/apk-signature.txt
+          "$APKSIGNER" verify --verbose --print-certs candidate/atlas-candidate.apk > "$RUNNER_TEMP/atlas-apk-signature-full.txt"
           "$AAPT" dump badging candidate/atlas-candidate.apk > candidate/apk-badging.txt
-          python3 scripts/verify-android-release.py candidate/atlas-candidate.apk candidate/apk-badging.txt candidate/apk-signature.txt
+          python3 scripts/verify-android-release.py candidate/atlas-candidate.apk candidate/apk-badging.txt "$RUNNER_TEMP/atlas-apk-signature-full.txt"
           python3 scripts/create-android-candidate.py candidate/atlas-candidate.apk "$GITHUB_RUN_ID" "$GITHUB_SHA" candidate/candidate-manifest.json
+          python3 - <<'PYCODE'
+          from pathlib import Path
+          from scripts.android_release import certificate
+          Path('candidate/apk-signature.txt').write_text('Verifies\nSigner #1 certificate SHA-256 digest: '+certificate()+'\n')
+          PYCODE
           sha256sum candidate/atlas-candidate.apk > candidate/apk-sha256.txt
       - name: Guardar candidato · no publicar release
         uses: actions/upload-artifact@v4
@@ -101,4 +109,6 @@ jobs:
           retention-days: 30
       - name: Retirar copia temporal del almacén privado
         if: always()
-        run: rm -rf "$RUNNER_TEMP/atlas-signing"
+        run: |
+          rm -rf "$RUNNER_TEMP/atlas-signing"
+          rm -f "$RUNNER_TEMP/atlas-apk-signature-full.txt"

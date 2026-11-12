@@ -37,7 +37,7 @@ Abre https://github.com/pruizbohle/gran-atlas-naturaleza/settings/secrets/action
 | --- | --- |
 | `ATLAS_ANDROID_KEYSTORE_BASE64` | El archivo `atlas-release.jks` completo codificado en Base64 |
 | `ATLAS_ANDROID_STORE_PASSWORD` | Contraseña del almacén |
-| `ATLAS_ANDROID_KEY_ALIAS` | `atlas-release` |
+| `ATLAS_ANDROID_KEY_ALIAS` | Alias real del almacén existente; `atlas-release` si utilizaste los comandos anteriores |
 | `ATLAS_ANDROID_KEY_PASSWORD` | Contraseña de la clave (la del almacén si elegiste la misma) |
 
 Para copiar el Base64 directamente al portapapeles en PowerShell, sin imprimirlo ni crear otro archivo privado:

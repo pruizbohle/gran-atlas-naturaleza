@@ -1,0 +1,7 @@
+'use strict';
+const cp=require('node:child_process'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const root=path.resolve(__dirname,'..'),temp=fs.mkdtempSync(path.join(os.tmpdir(),'atlas-3410-reference-')),checkout=path.join(temp,'source');
+try{cp.execFileSync('git',['worktree','add','--detach',checkout,'3422b10265fd230de03e6f4160245ce362cf25e8'],{cwd:root,stdio:'inherit'});console.log('REFERENCE: 720 unchanged tests on exact 3.41.0 and its historical sources.');cp.execFileSync(process.execPath,['scripts/validate-experience-v3410.cjs'],{cwd:checkout,stdio:'inherit'});}finally{try{cp.execFileSync('git',['worktree','remove','--force',checkout],{cwd:root,stdio:'inherit'});}finally{fs.rmSync(temp,{recursive:true,force:true});}}
+console.log('CURRENT REPLAYS: 41 orientation/navigation/economy regressions on the candidate (not new distinct tests).');cp.execFileSync(process.execPath,['--test',...['compass','navigation','events','integrity'].map(s=>'tests/ux3410-'+s+'.test.cjs')],{cwd:root,stdio:'inherit'});
+console.log('CURRENT 3.42: native setup, safe backups, candidate and publication guards; no physical evidence inferred.');const files=fs.readdirSync(root+'/tests').filter(f=>/^and3420-.*\.test\.cjs$/.test(f)).sort().map(f=>'tests/'+f);cp.execFileSync(process.execPath,['--test',...files],{cwd:root,stdio:'inherit'});
+cp.execFileSync('python3',['-m','unittest','discover','-s','tests/android3420','-p','test_*.py','-v'],{cwd:root,stdio:'inherit'});

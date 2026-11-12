@@ -1,3 +1,7 @@
+# 3.42.0 · Android preparado y continuidad de partidas
+
+Respaldo e importación reforzados, dependencias fijas y candidato vinculado a firma, contenido, run y commit. Android sigue pendiente del certificado real y la prueba física; no hay APK 3.42.0 publicado. [Informe y pasos del propietario](README_V3420.md).
+
 # 3.41.0 · Experiencia del naturalista y estabilidad móvil
 
 Brújula opcional en Atlas, atajos informativos con retorno, Sociedad paginada y avisos agrupados. Sin cambios de catálogos, economía ni partidas. [Informe, mediciones y estado Android](README_V3410.md).

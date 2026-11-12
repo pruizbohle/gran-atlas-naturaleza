@@ -1,0 +1,35 @@
+{
+  "version": "3.42.0",
+  "versionCode": 34200,
+  "appId": "com.elgranatlas.naturaleza.beta314",
+  "state": "Android preparado, pendiente de certificado y validaci\u00f3n f\u00edsica",
+  "permanentPublicCertificatePinned": false,
+  "remoteSigningSecrets": "not inspected; configure the four named secrets in GitHub Settings",
+  "nativeProjectGeneratedLocally": true,
+  "installedCapacitor": {
+    "core": "7.6.10",
+    "android": "7.6.10",
+    "cli": "7.6.10",
+    "filesystem": "7.1.9",
+    "share": "7.0.4"
+  },
+  "javaRequirement": 21,
+  "minSdk": 23,
+  "compileSdk": 35,
+  "targetSdk": 35,
+  "adbInstalled": false,
+  "physicalDeviceTestPerformed": false,
+  "candidateWorkflowDispatched": false,
+  "apkCompiled": false,
+  "apkSignatureVerified": false,
+  "apkPublished": false,
+  "actualRestorationEvidencePresent": false,
+  "pending": [
+    "Owner pins the real public permanent certificate SHA-256",
+    "Owner configures the four signing secrets privately in GitHub Actions",
+    "Generate a candidate from main only after those prerequisites",
+    "Owner authorizes any certificate transition after validating two external backups",
+    "Record real device results for the exact candidate manifest, hash, run and source commit",
+    "Publish the same artifact only after all gates pass"
+  ]
+}
