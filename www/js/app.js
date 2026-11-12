@@ -5054,6 +5054,7 @@ function handlePanelAction(e){
     const el=e.target.closest?.('[data-action]');
     if(!el||!panel.contains(el)||el.disabled)return;
     const act=el.dataset.action; const id=el.dataset.id;
+    if(act.startsWith('ux-')){compassAction3410(act,id);return;}
     if(act.startsWith('inv-')){inventoryAction3400(act,id);return;}
  // GM3330 BEGIN actions
     if(act.startsWith('deep-')){deepAction3330(act,id);return;}
@@ -5248,6 +5249,7 @@ function tick(){
   const newlyReady=state.museum.excavations.filter(job=>job.endAt<=now&&!job.readyNotified);
   if(newlyReady.length){newlyReady.forEach(job=>job.readyNotified=true);renderPanel();}
  }
+ syncCompass3410(now);
  renderCounters();
  syncMuseumTimers(now);
  // E-3280 BEGIN tick-display
@@ -7069,6 +7071,67 @@ const finishBeforeInventory3400=finishVoyage;
 finishVoyage=function(id){const job=state.voyages.find(j=>String(j.id)===String(id));if(!job?.cartography)return finishBeforeInventory3400(id);if(!Number.isFinite(job.endAt)||Date.now()<job.endAt)return false;const ok=tradeTransaction3300(()=>{state.voyages=state.voyages.filter(j=>j!==job);return resolveVoyageReward(job);});renderCounters();renderPanel();return ok;};
 // INV3400 END atomic scientific departures and research
 
+
+// UX3410 BEGIN contextual orientation
+var uxRuntime3410={revision:0,lastCompass:null,lastStamp:null,sourceState:null};
+function uxSources3410(id){
+ const out=[],market=TRADE_MARKET[id],shipyard=!!state.upgrades.shipyard;
+ const routeSource=(v,label,extraResearch=null)=>{const prerequisite=extraResearch&&!state.purchases[extraResearch]?extraResearch:v.reqResearch&&!state.purchases[v.reqResearch]?v.reqResearch:(v.routeReq&&(state.upgrades.routeTier||0)<v.routeReq?'rutas_'+v.routeReq:null);const reachable=shipyard&&!prerequisite&&(!v.mapItem||state.inventory[v.mapItem]>0);out.push({type:'voyage',id:v.id,label,available:reachable&&state.prestige>=v.required,reachable,prestige:v.required,research:!shipyard?'astillero':prerequisite});};
+ for(const v of VOYAGES)if(v.sample===id||V316_LOOT_BASE.some(([i])=>i===id)||V316_LOOT_BY_ROUTE[v.id]?.some(([i])=>i===id))routeSource(v,v.name+(v.sample===id?' · muestra garantizada':' · hallazgo posible'));
+ const chart=CARTOGRAPHY3400.find(d=>d.piece===id&&d.sourceResearch);if(chart)for(const route of chart.routes)routeSource(VOYAGES.find(v=>v.id===route),'Prospección cartográfica · '+VOYAGES.find(v=>v.id===route).name,chart.sourceResearch);
+ if(id==='fossil_amber'||['fossil_tooth','fossil_skull','brass_shard','old_ink','carved_wood'].includes(id))for(const v of VOYAGES)if(!out.some(q=>q.type==='voyage'&&q.id===v.id))routeSource(v,v.name+' · hallazgo adicional posible');
+ const animals=Object.entries(SPECIES_DROPS).filter(([,item])=>item===id).map(([species])=>species);
+ for(const r of REGIONS)if(regionAccessible(r)&&r.species.some(sp=>animals.includes(sp)))out.push({type:r.id===state.currentRegion?'field':'atlas',id:r.id,label:'Campo: '+r.name+' · Gabinete de especímenes',available:!!state.upgrades.specimenDrops,reachable:true,research:state.upgrades.specimenDrops?null:'gabinete_1'});
+ if(['fossil_fragment','fossil_tooth','fossil_skull','river_pearl'].includes(id)&&(id!=='river_pearl'||currentRegion().habitats.some(h=>['rio','costa'].includes(h))))out.push({type:'field',id:state.currentRegion,label:'Campo: '+currentRegion().name+' · hallazgo posible en condiciones compatibles',available:true,reachable:true});
+ for(const site of MUSEUM_DIG_SITES)if(['fossil_fragment','fossil_tooth','fossil_skull','fossil_track','fossil_claw'].includes(id)&&state.regionUnlocked[site.region])out.push({type:'museum',id:'fossils',label:'Museo: '+site.name+' · excavación',available:state.money>=site.money&&state.knowledge>=site.knowledge,reachable:true});
+ if(MUSEUM_FOSSIL_RECIPES.some(r=>r.id===id))out.push({type:'museum',id:'fossils',label:'Taller de fósiles del Museo',available:true,reachable:true});
+ if(market)out.push({type:'trade',id:'market',label:'Mercado: £'+market+' por unidad',available:shipyard&&state.money>=market,reachable:shipyard,research:shipyard?null:'astillero'});
+ return out;
+}
+function compassContext3410(){
+ const api=globalThis.AtlasCommissions3370,claimable=api?api.models(state,commissionContext3370()).filter(m=>m.ready&&!m.claimed&&m.available).map(m=>({id:m.id})):[];
+ const regions=REGIONS.map(r=>({id:r.id,name:r.name,continent:r.continent,key:cartographicContinent3400(r),prestige:r.unlock.prestige,ready:regionRequirementsMet(r),accessible:regionAccessible(r)}));
+ const current=currentRegion(),seen=current.species.filter(id=>state.discovered[id]);
+ const studies=seen.map(id=>({id,name:visibleName(id),stage:stage(id),published:!!state.published[id],inCurrent:true,ready:stage(id)<5&&stageRequirements(id,stage(id)).allOk,label:stage(id)<5?stageRequirements(id,stage(id)).label:'Monografía'}));
+ const finished=[...(state.museum.excavations||[]).filter(j=>j.endAt<=Date.now()).map(()=>({type:'museum',id:'fossils',label:'Excavación lista'})),...(state.museum.relictSurveys||[]).filter(j=>j.endAt<=Date.now()).map(()=>({type:'museum',id:'relicts',label:'Prospección lista'})),...state.voyages.filter(j=>j.endAt<=Date.now()&&VOYAGES.some(v=>v.id===j.type)).map(j=>({type:'voyage',id:j.type,label:'Expedición científica finalizada'})),...state.commerce.jobs.filter(j=>j.endAt<=Date.now()).map(()=>({type:'trade',id:'routes',label:'Ruta comercial finalizada'}))];
+ const stages=Object.entries(CONTINENT_RESEARCH3300).map(([research,key])=>({key,research,tools:craftedRequirements3300(key),map:CARTOGRAPHIC_GATES3400[key]||null,cartographyReady:cartographyReady3400(key)}));
+ return {items:ITEMS,recipes:RECIPES,research:RESEARCH_NODES,regions,stages,studies,claimable,finished,canBuy:id=>canBuy(RESEARCH_NODES.find(n=>n.id===id)),canCraft,sources:uxSources3410,openRegions:regions.filter(r=>r.accessible).length,explorationSummary:regions.filter(r=>r.accessible).length+' de '+REGIONS.length+' regiones habilitadas · '+Object.values(state.published).filter(Boolean).length+' monografías publicadas.'};
+}
+function compassModel3410(){return globalThis.AtlasExperience3410?.suggest(state,compassContext3410())||null;}
+function uxCompassPreference3410(){return ['visible','collapsed','hidden'].includes(state.ux3410?.compass)?state.ux3410.compass:'visible';}
+function uxRenderCompass3410(){const m=compassModel3410();uxRuntime3410.lastCompass=m;const html=m?globalThis.AtlasExperience3410.render(m,uxCompassPreference3410()):'';uxRuntime3410.lastHtml=html;return html;}
+function syncCompass3410(now){
+ if(tab!=='atlas'||!globalThis.AtlasExperience3410||uxCompassPreference3410()!=='visible')return;
+ const due=[...state.voyages,...state.commerce.jobs,...state.museum.excavations,...state.museum.relictSurveys].filter(j=>j.endAt<=now).length;
+ const stamp=[Math.floor(state.money),Math.floor(state.knowledge),state.prestige,Object.keys(state.published).length,Object.keys(state.regionUnlocked).length,Object.keys(state.purchases).length,Object.keys(state.craftedItems).length,Object.keys(state.commissions?.ready||{}).length,Object.keys(state.commissions?.claimed||{}).length,Object.entries(state.inventory).map(([id,n])=>id+':'+n).join(','),due,uxRuntime3410.revision].join('|');
+ if(uxRuntime3410.sourceState===state&&stamp===uxRuntime3410.lastStamp)return;
+ uxRuntime3410.sourceState=state;uxRuntime3410.lastStamp=stamp;
+ const m=compassModel3410(),html=globalThis.AtlasExperience3410.render(m,'visible');
+ if(html!==uxRuntime3410.lastHtml){const root=panel.querySelector('[data-ux-compass]');if(root)root.outerHTML=html;uxRuntime3410.lastHtml=html;}uxRuntime3410.lastCompass=m;
+}
+const atlasBeforeExperience3410=renderAtlas;
+renderAtlas=function(){return uxRenderCompass3410()+atlasBeforeExperience3410();};
+function uxInventoryTarget3410(id,recipe=false){if(!ITEMS[id])return false;state.inventoryView=recipe?'taller':inventoryCategory3400(id)==='animal'?'animales':['cartography','fossil','regional'].includes(inventoryCategory3400(id))?'coleccionables':ITEMS[id].slot?'equipo':'expedicion';Object.assign(inventoryUI3400,{query:'',category:'all',owned:'all',use:'all',craft:'all',page:0,selected:id});tab='objects';return true;}
+function uxNavigate3410(type,id){
+ if(type==='recipe'||type==='item'){if(!uxInventoryTarget3410(id,type==='recipe'))return false;}
+ else if(type==='research'){if(!researchIndex3280.has(id))return false;developmentAction3280('er28-research',id);return true;}
+ else if(type==='atlas'){const r=REGIONS.find(r=>r.id===id);if(!r)return false;state.atlasView=r.continent;state.atlasSelectedRegion=r.id;tab='atlas';}
+ else if(type==='field'){tab='field';}
+ else if(type==='journal'){if(!SPECIES[id]||!currentRegion().species.includes(id)||!state.discovered[id])return false;state.selectedJournal=id;tab='journal';}
+ else if(type==='publication'){if(!SPECIES[id]||stage(id)<5||state.published[id])return false;state.societyView='publications';state.publicationView='monographs';tab='society';}
+ else if(type==='mission'){if(!globalThis.AtlasCommissions3370?.models(state,commissionContext3370()).some(m=>m.id===id))return false;state.societyView='missions';tab='society';renderPanel();globalThis.AtlasCommissionsUI3370?.find(id);return true;}
+ else if(type==='museum'){if(!['exhibitions','samples','fossils','relicts','artifacts'].includes(id))return false;tab='museum';museumSetRoom3270(id);return true;}
+ else if(type==='trade'){if(!['routes','contracts','barters','market','register'].includes(id))return false;tab='expeditions';navigationTab3300='commerce';tradeSection3390=id;}
+ else if(type==='voyage'){if(!VOYAGES.some(v=>v.id===id))return false;tab='expeditions';navigationTab3300='expeditions';developmentUI3280.route=id;}
+ else if(type==='society'){if(!['grants','missions','publications','achievements'].includes(id))return false;state.societyView=id;tab='society';}
+ else return false;
+ renderPanel();return true;
+}
+function compassAction3410(action,id){
+ if(action==='ux-compass-go'){const m=compassModel3410();if(m&&m.key===id)return uxNavigate3410(m.action.type,m.action.id);return false;}
+ const previous=state.ux3410,next=action==='ux-compass-hide'?'hidden':action==='ux-compass-show'?'visible':uxCompassPreference3410()==='collapsed'?'visible':'collapsed';state.ux3410={...(previous&&typeof previous==='object'?previous:{}),compass:next};if(!persist()){if(previous===undefined)delete state.ux3410;else state.ux3410=previous;return false;}const root=panel.querySelector('[data-ux-compass],.ux3410-show');if(root)root.outerHTML=uxRenderCompass3410();return true;
+}
+// UX3410 END contextual orientation
 
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 // ACH3360 BEGIN event integration. No timer and no per-render achievement mutations.
