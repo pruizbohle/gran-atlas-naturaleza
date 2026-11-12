@@ -1,0 +1,1030 @@
+{
+  "base": "45137aa",
+  "preparations": [
+    "brass_compass",
+    "oceanic_quadrant",
+    "field_telescope",
+    "scholar_hat",
+    "polar_coat",
+    "sounding_kit"
+  ],
+  "cycles": "Ningún ciclo en recetas de fabricación/Museo. Los cinco trueques son unidireccionales; ver potencial económico.",
+  "rows": [
+    {
+      "id": "binoculars",
+      "material": "Prismáticos de viaje",
+      "sources": [
+        "Fabricación; mejora de prismáticos"
+      ],
+      "fabrication": [
+        "Catalejo de precisión"
+      ],
+      "research": [
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "brass_compass",
+      "material": "Brújula de latón",
+      "sources": [
+        "Fabricación en Equipo/Taller"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "sturdy_pack",
+      "material": "Morral reforzado",
+      "sources": [
+        "Fabricación en Equipo/Taller"
+      ],
+      "fabrication": [
+        "Abrigo de expedición polar",
+        "Equipo de sondeo y muestreo"
+      ],
+      "research": [
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "field_hat",
+      "material": "Sombrero de naturalista",
+      "sources": [
+        "Fabricación con flores y pergamino"
+      ],
+      "fabrication": [
+        "Sombrero académico"
+      ],
+      "research": [
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "feather_cap",
+      "material": "Gorro emplumado",
+      "sources": [
+        "Fabricación con plumas"
+      ],
+      "fabrication": [
+        "Sombrero académico"
+      ],
+      "research": [
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "rain_hood",
+      "material": "Capucha impermeable",
+      "sources": [
+        "Fabricación en Equipo/Taller"
+      ],
+      "fabrication": [
+        "Abrigo de expedición polar"
+      ],
+      "research": [
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "amulet",
+      "material": "Colgante del explorador",
+      "sources": [
+        "Fabricación en Equipo/Taller"
+      ],
+      "fabrication": [
+        "Medallón de ámbar"
+      ],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "amber_charm",
+      "material": "Amuleto de ámbar",
+      "sources": [
+        "Fabricación en Equipo/Taller"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "shell_necklace",
+      "material": "Collar de conchas",
+      "sources": [
+        "Fabricación en Equipo/Taller"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "fossil_fragment",
+      "material": "Fragmento fósil",
+      "sources": [
+        "Campo, expediciones y prospección",
+        "Botín base de las ocho expediciones",
+        "Botín de alps",
+        "Botín de ethiopia_survey",
+        "Botín de namib_survey"
+      ],
+      "fabrication": [
+        "Collar de conchas"
+      ],
+      "research": [
+        "Informe paleontológico"
+      ],
+      "museum": [
+        "Fósil catalogado",
+        "Registro de huellas antiguas",
+        "Estudio de estratos antiguos",
+        "Hueso corto",
+        "Hueso largo",
+        "Cuerno fósil",
+        "Hueso duro",
+        "Placa fósil dorsal",
+        "Espina de vela fósil",
+        "Costilla fósil",
+        "Conservación de fragmentos"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Contrato o manifiesto voluntario, solo sobre reserva continental"
+    },
+    {
+      "id": "fossil_skull",
+      "material": "Cráneo fósil",
+      "sources": [
+        "Excavaciones y hallazgos excepcionalmente raros"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [
+        "Cráneo carnívoro",
+        "Cráneo herbívoro"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "fossil_tooth",
+      "material": "Diente fósil",
+      "sources": [
+        "Excavaciones y expediciones"
+      ],
+      "fabrication": [],
+      "research": [
+        "Informe paleontológico"
+      ],
+      "museum": [
+        "Cráneo carnívoro",
+        "Cráneo herbívoro",
+        "Cuerno fósil",
+        "Espina de vela fósil"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Contrato o manifiesto voluntario, solo sobre reserva continental"
+    },
+    {
+      "id": "bone_short",
+      "material": "Hueso corto",
+      "sources": [
+        "Fabricación: bone_short"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [
+        "Reconstrucción de T. rex",
+        "Reconstrucción de Triceratops",
+        "Reconstrucción de Estegosaurio",
+        "Reconstrucción de Espinosaurio",
+        "Reconstrucción de Anquilosaurio",
+        "Reconstrucción de Iguanodonte",
+        "Reconstrucción de Paquicefalosaurio",
+        "Reconstrucción de Carnotauro"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "bone_long",
+      "material": "Hueso largo",
+      "sources": [
+        "Fabricación: bone_long"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [
+        "Reconstrucción de T. rex",
+        "Reconstrucción de Triceratops",
+        "Reconstrucción de Estegosaurio",
+        "Reconstrucción de Espinosaurio",
+        "Reconstrucción de Anquilosaurio",
+        "Reconstrucción de Iguanodonte",
+        "Reconstrucción de Paquicefalosaurio",
+        "Reconstrucción de Carnotauro",
+        "Restauración de esqueletos"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "carnivore_skull",
+      "material": "Cráneo carnívoro",
+      "sources": [
+        "Fabricación: carnivore_skull"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [
+        "Reconstrucción de T. rex",
+        "Reconstrucción de Espinosaurio",
+        "Reconstrucción de Carnotauro"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "herbivore_skull",
+      "material": "Cráneo herbívoro",
+      "sources": [
+        "Fabricación: herbivore_skull"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [
+        "Reconstrucción de Triceratops",
+        "Reconstrucción de Iguanodonte",
+        "Reconstrucción de Paquicefalosaurio"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "fossil_plate",
+      "material": "Placa fósil dorsal",
+      "sources": [
+        "Fabricación: fossil_plate"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [
+        "Reconstrucción de Estegosaurio",
+        "Reconstrucción de Anquilosaurio"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "fossil_sail",
+      "material": "Espina de vela fósil",
+      "sources": [
+        "Fabricación: fossil_sail"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [
+        "Reconstrucción de Espinosaurio"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "animal_trace",
+      "material": "Muestra de huellas",
+      "sources": [
+        "Botín de expedición y muestras de fauna",
+        "Botín base de las ocho expediciones",
+        "Botín de carpathians",
+        "Botín de ethiopia_survey",
+        "Avistamiento de lince_boreal con gabinete"
+      ],
+      "fabrication": [
+        "Morral reforzado",
+        "Capucha impermeable"
+      ],
+      "research": [
+        "Archivo de rastros",
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [
+        "Registro de huellas antiguas",
+        "Archivo de pisadas fósiles",
+        "Análisis de huellas"
+      ],
+      "commerce": [
+        "Trueque trace_feather"
+      ],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Contrato o manifiesto voluntario, solo sobre reserva continental"
+    },
+    {
+      "id": "pressed_flower",
+      "material": "Flor prensada",
+      "sources": [
+        "Expedición; registros botánicos",
+        "Botín base de las ocho expediciones",
+        "Botín de coast",
+        "Mercado £40",
+        "Ruta 4 h: 2"
+      ],
+      "fabrication": [
+        "Sombrero de naturalista",
+        "Gorro emplumado",
+        "Amuleto de ámbar",
+        "Capucha impermeable",
+        "Sombrero académico"
+      ],
+      "research": [
+        "Herbario de campo",
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [],
+      "commerce": [
+        "Trueque flower_ink"
+      ],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Contrato o manifiesto voluntario, solo sobre reserva continental"
+    },
+    {
+      "id": "ancient_coin",
+      "material": "Moneda antigua",
+      "sources": [
+        "Expedición",
+        "Botín base de las ocho expediciones"
+      ],
+      "fabrication": [
+        "Brújula de latón",
+        "Colgante del explorador",
+        "Collar de conchas"
+      ],
+      "research": [
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [
+        "Carta cartográfica histórica",
+        "Medallón de expedición",
+        "Astrolabio de latón"
+      ],
+      "commerce": [
+        "Trueque coin_brass"
+      ],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "map_fragment",
+      "material": "Fragmento de mapa",
+      "sources": [
+        "Botín cartográfico de expediciones",
+        "Botín base de las ocho expediciones",
+        "Botín de coast",
+        "Botín de north",
+        "Botín de balkans",
+        "Botín de atlantic_survey"
+      ],
+      "fabrication": [
+        "Brújula de latón",
+        "Prismáticos de viaje",
+        "Cuadrante transatlántico"
+      ],
+      "research": [
+        "Informe cartográfico",
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [
+        "Carta cartográfica histórica",
+        "Diario de explorador",
+        "Globo cartográfico antiguo"
+      ],
+      "commerce": [],
+      "surplus": "Cartografía excluida de entregas",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "asia_map_piece",
+      "material": "Parte de mapa de Asia",
+      "sources": [
+        "Expediciones europeas (especialmente Norte y Alpes)",
+        "Botín de coast",
+        "Botín de north",
+        "Botín de alps",
+        "Botín de carpathians",
+        "Botín de balkans"
+      ],
+      "fabrication": [
+        "Mapa de Asia"
+      ],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Cartografía excluida de entregas",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "asia_map",
+      "material": "Mapa de Asia",
+      "sources": [
+        "Fabricar con 10 partes de mapa de Asia"
+      ],
+      "fabrication": [],
+      "research": [
+        "Cartografía de Asia"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Cartografía excluida de entregas",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "africa_map_piece",
+      "material": "Parte de mapa de África",
+      "sources": [
+        "Expediciones (especialmente rutas balcánicas y africanas)",
+        "Botín de carpathians",
+        "Botín de balkans",
+        "Botín de ethiopia_survey",
+        "Botín de namib_survey"
+      ],
+      "fabrication": [
+        "Mapa de África"
+      ],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Cartografía excluida de entregas",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "africa_map",
+      "material": "Mapa de África",
+      "sources": [
+        "Fabricar con 10 partes de mapa de África"
+      ],
+      "fabrication": [],
+      "research": [
+        "Estudios cartográficos de África"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Cartografía excluida de entregas",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "north_america_map_piece",
+      "material": "Parte de mapa de Norteamérica",
+      "sources": [
+        "Reconocimiento del Atlántico",
+        "Botín de atlantic_survey"
+      ],
+      "fabrication": [
+        "Mapa de Norteamérica"
+      ],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Cartografía excluida de entregas",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "north_america_map",
+      "material": "Mapa de Norteamérica",
+      "sources": [
+        "Fabricar con 8 partes de mapa norteamericano"
+      ],
+      "fabrication": [],
+      "research": [
+        "Cartografía de Norteamérica"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Cartografía excluida de entregas",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "oceanic_quadrant",
+      "material": "Cuadrante transatlántico",
+      "sources": [
+        "Fabricar con metal y materiales cartográficos"
+      ],
+      "fabrication": [],
+      "research": [
+        "Navegación al Nuevo Mundo"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "parchment_scrap",
+      "material": "Pergamino antiguo",
+      "sources": [
+        "Expedición",
+        "Botín base de las ocho expediciones",
+        "Mercado £45",
+        "Ruta 4 h: 3",
+        "Ruta 12 h: 5"
+      ],
+      "fabrication": [
+        "Sombrero de naturalista",
+        "Catalejo de precisión",
+        "Cuadrante transatlántico",
+        "Abrigo de expedición polar",
+        "Equipo de sondeo y muestreo"
+      ],
+      "research": [
+        "Herbario de campo",
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [
+        "Medallón de expedición",
+        "Diario de explorador"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Contrato o manifiesto voluntario, solo sobre reserva continental"
+    },
+    {
+      "id": "river_pebble",
+      "material": "Piedra de río pulida",
+      "sources": [
+        "Expedición",
+        "Botín base de las ocho expediciones",
+        "Botín de coast",
+        "Botín de alps",
+        "Mercado £30",
+        "Ruta 4 h: 3"
+      ],
+      "fabrication": [],
+      "research": [
+        "Archivo de rastros",
+        "Donación de materiales"
+      ],
+      "museum": [
+        "Estudio de estratos antiguos",
+        "Hueso duro"
+      ],
+      "commerce": [
+        "Trueque stone_lens"
+      ],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Contrato o manifiesto voluntario, solo sobre reserva continental"
+    },
+    {
+      "id": "heron_feather",
+      "material": "Pluma de garza",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Botín base de las ocho expediciones",
+        "Avistamiento de garza_real con gabinete"
+      ],
+      "fabrication": [],
+      "research": [
+        "Catálogo de plumajes"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "polished_lens",
+      "material": "Lente pulida",
+      "sources": [
+        "Expedición; material óptico",
+        "Botín base de las ocho expediciones",
+        "Botín de north",
+        "Botín de atlantic_survey",
+        "Mercado £160",
+        "Ruta 8 h: 2",
+        "Ruta 12 h: 2",
+        "Ruta 24 h: 4"
+      ],
+      "fabrication": [
+        "Prismáticos de viaje",
+        "Catalejo de precisión",
+        "Cuadrante transatlántico"
+      ],
+      "research": [
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [
+        "Astrolabio de latón"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Contrato o manifiesto voluntario, solo sobre reserva continental"
+    },
+    {
+      "id": "brass_shard",
+      "material": "Pieza de latón antiguo",
+      "sources": [
+        "Expediciones y materiales históricos",
+        "Botín base de las ocho expediciones",
+        "Botín de namib_survey",
+        "Mercado £200",
+        "Ruta 8 h: 2",
+        "Ruta 12 h: 3",
+        "Ruta 24 h: 5"
+      ],
+      "fabrication": [
+        "Catalejo de precisión",
+        "Medallón de ámbar",
+        "Cuadrante transatlántico",
+        "Equipo de sondeo y muestreo"
+      ],
+      "research": [
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [
+        "Astrolabio de latón",
+        "Globo cartográfico antiguo"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Contrato o manifiesto voluntario, solo sobre reserva continental"
+    },
+    {
+      "id": "old_ink",
+      "material": "Tintero antiguo",
+      "sources": [
+        "Expediciones y materiales históricos",
+        "Botín base de las ocho expediciones",
+        "Mercado £180",
+        "Ruta 12 h: 2",
+        "Ruta 24 h: 3"
+      ],
+      "fabrication": [
+        "Sombrero académico"
+      ],
+      "research": [
+        "Informe cartográfico",
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [
+        "Estudio de estratos antiguos",
+        "Diario de explorador",
+        "Conservación de fragmentos"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Contrato o manifiesto voluntario, solo sobre reserva continental"
+    },
+    {
+      "id": "carved_wood",
+      "material": "Madera tallada",
+      "sources": [
+        "Expediciones y materiales históricos",
+        "Botín base de las ocho expediciones",
+        "Mercado £80",
+        "Ruta 8 h: 3",
+        "Ruta 24 h: 6"
+      ],
+      "fabrication": [
+        "Abrigo de expedición polar",
+        "Equipo de sondeo y muestreo"
+      ],
+      "research": [
+        "Donación de materiales",
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [
+        "Globo cartográfico antiguo",
+        "Restauración de esqueletos"
+      ],
+      "commerce": [
+        "Trueque wood_paper"
+      ],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Contrato o manifiesto voluntario, solo sobre reserva continental"
+    },
+    {
+      "id": "wolf_tooth",
+      "material": "Diente de lobo",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Avistamiento de lobo_gris con gabinete"
+      ],
+      "fabrication": [
+        "Amuleto de ámbar"
+      ],
+      "research": [
+        "Cuaderno de mamíferos"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "owl_feather",
+      "material": "Pluma de rapaz",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Avistamiento de buho_real con gabinete",
+        "Avistamiento de buho_comun con gabinete",
+        "Avistamiento de aguila_real con gabinete",
+        "Avistamiento de milano_real con gabinete"
+      ],
+      "fabrication": [
+        "Gorro emplumado"
+      ],
+      "research": [
+        "Catálogo de plumajes",
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "antler_fragment",
+      "material": "Fragmento de cornamenta",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Avistamiento de ciervo_rojo con gabinete",
+        "Avistamiento de corzo_europeo con gabinete"
+      ],
+      "fabrication": [],
+      "research": [
+        "Cuaderno de mamíferos"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "otter_whisker",
+      "material": "Bigote de nutria",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Avistamiento de nutria_europea con gabinete"
+      ],
+      "fabrication": [
+        "Colgante del explorador"
+      ],
+      "research": [
+        "Análisis de humedales"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "boar_tusk",
+      "material": "Colmillo de jabalí",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Avistamiento de jabali con gabinete"
+      ],
+      "fabrication": [],
+      "research": [
+        "Cuaderno de mamíferos"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "beaver_tail_scale",
+      "material": "Escama de cola de castor",
+      "sources": [
+        "Avistamiento con Gabinete de especímenes",
+        "Avistamiento de castor_europeo con gabinete"
+      ],
+      "fabrication": [
+        "Morral reforzado"
+      ],
+      "research": [
+        "Análisis de humedales",
+        "Preparaciones permanentes continentales (reserva propuesta)"
+      ],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "field_telescope",
+      "material": "Catalejo de precisión",
+      "sources": [
+        "Mejora del equipo óptico"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "scholar_hat",
+      "material": "Sombrero académico",
+      "sources": [
+        "Mejora de sombreros"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "museum_medallion",
+      "material": "Medallón de ámbar",
+      "sources": [
+        "Fabricación con ámbar y perla"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "fossil_amber",
+      "material": "Ámbar fósil",
+      "sources": [
+        "Expedición excepcional; más probable en costa y Namib"
+      ],
+      "fabrication": [
+        "Medallón de ámbar"
+      ],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "river_pearl",
+      "material": "Perla fluvial",
+      "sources": [
+        "Campo, biomas Río o Costa, tras avistar fauna"
+      ],
+      "fabrication": [
+        "Medallón de ámbar"
+      ],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Potencial tras fabricar; conservar Museo y estudios opcionales",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "fossil_track",
+      "material": "Huella fosilizada",
+      "sources": [
+        "Excavaciones paleontológicas; huellas conservadas en estratos"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [
+        "Archivo de pisadas fósiles",
+        "Análisis de huellas"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "fossil_claw",
+      "material": "Garra fósil",
+      "sources": [
+        "Hallazgo raro en excavaciones; preparación para el Museo"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [
+        "Reconstrucción de Iguanodonte",
+        "Reconstrucción de Carnotauro"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "fossil_rib",
+      "material": "Costilla fósil",
+      "sources": [
+        "Reconstrucción de fósiles con fragmentos en el Taller del Museo"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [
+        "Reconstrucción de Anquilosaurio",
+        "Reconstrucción de Iguanodonte",
+        "Reconstrucción de Paquicefalosaurio",
+        "Restauración de esqueletos"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "fossil_horn",
+      "material": "Cuerno fósil",
+      "sources": [
+        "Fabricación en Museo: 4 fragmentos y 2 dientes fósiles"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [
+        "Reconstrucción de Triceratops",
+        "Reconstrucción de Carnotauro"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "hard_bone",
+      "material": "Hueso duro",
+      "sources": [
+        "Fabricación en Museo: 6 fragmentos y 2 piedras de río"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [
+        "Reconstrucción de Anquilosaurio",
+        "Reconstrucción de Paquicefalosaurio"
+      ],
+      "commerce": [],
+      "surplus": "Potencial tras completar colecciones y estudios",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "polar_coat",
+      "material": "Abrigo de expedición polar",
+      "sources": [
+        "Fabricación: polar_coat"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    },
+    {
+      "id": "sounding_kit",
+      "material": "Equipo de sondeo y muestreo",
+      "sources": [
+        "Fabricación: sounding_kit"
+      ],
+      "fabrication": [],
+      "research": [],
+      "museum": [],
+      "commerce": [],
+      "surplus": "Equipo permanente; no solicitar",
+      "additional": "Sin consumo nuevo"
+    }
+  ]
+}
