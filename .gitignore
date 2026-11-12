@@ -5,3 +5,8 @@ atlas-release.base64
 
 # Task scratch files, test servers and intermediate logs.
 /work/
+
+# Reproducible dependencies and generated native project.
+/node_modules/
+/android/
+__pycache__/
