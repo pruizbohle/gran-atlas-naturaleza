@@ -6,6 +6,7 @@
 
 - Descargar únicamente el artefacto del workflow manual de main que terminó correctamente. Conservar `atlas-candidate.apk`, `candidate-manifest.json`, `apk-sha256.txt`, `apk-signature.txt` y `apk-badging.txt`.
 - Comprobar en PowerShell `Get-FileHash .\atlas-candidate.apk -Algorithm SHA256` y comparar con el manifiesto. Verificar versión 3.42.0, código 34200, ID histórico, run, commit completo y certificado permanente reales. No renombrar otro binario para simularlos.
+- Comprobar también la versión visible dentro del juego y el `gameVersion` del JSON exportado: deben corresponder a 3.42.0, no solo la información del paquete Android. Si no coinciden, detener la validación sin borrar datos.
 - Registrar privadamente modelo, Android y versión de Android System WebView. Obtener autorización expresa del propietario antes de una transición de certificado.
 - Validar al menos dos copias externas del JSON y una restauración/reexportación en un perfil aislado siguiendo [el procedimiento de respaldo](respaldo-y-migracion.md). Comparar todos los campos relevantes. Si falla, conservar la instalación original y detener la transición.
 - Comparar certificados. Si coinciden, instalar como actualización sin borrar datos. Si difieren, Android no admite actualización directa: solo el propietario autorizado puede realizar la reinstalación manual después de validar las copias. Ningún script de este proyecto desinstala.

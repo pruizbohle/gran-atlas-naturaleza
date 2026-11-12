@@ -1,0 +1,21 @@
+{
+  "version": "3.42.0",
+  "base": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "realBrowserJSONDownloadAndImport": true,
+  "allAdvancedFieldsCompared": true,
+  "accessFlagNormalization": "Existing engine normalizes continental 1/true flags to booleans on reload; equivalence compared only for those access flags",
+  "previewBeforeExplicitConfirm": true,
+  "cancelPreservesOriginal": true,
+  "exactEmergencyCopy": true,
+  "restoredGameReopensOffline": true,
+  "simulatedNativeBridge": {
+    "export": true,
+    "share": true,
+    "cancelNewSelectionInvalidatesOld": true,
+    "noWebServiceWorkerInAndroid": true,
+    "pwaUpdaterHidden": true
+  },
+  "physicalAndroid": false,
+  "apkBuilt": false,
+  "errors": []
+}

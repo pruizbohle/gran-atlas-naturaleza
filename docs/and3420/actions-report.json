@@ -1,0 +1,38 @@
+{
+  "version": "3.42.0",
+  "workflowRunId": 43273738003,
+  "jobId": 131376669941,
+  "commit": "8ecafed107567a9ff988ee17d0eb1bf223417194",
+  "url": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/43273738003",
+  "conclusion": "success",
+  "nodeTestsPerSuite": [
+    430,
+    11,
+    12,
+    20,
+    20,
+    17,
+    14,
+    16,
+    26,
+    33,
+    67,
+    54,
+    41,
+    40
+  ],
+  "pythonGuardTests": [
+    57
+  ],
+  "historicalTests": 720,
+  "newDistinctTests": 97,
+  "distinctTests": 817,
+  "currentRegressionReplays": 41,
+  "totalExecutions": 858,
+  "failures": 0,
+  "exactDependenciesInstalled": true,
+  "nativeProjectGeneratedAndChecked": true,
+  "pagesDeployment": "success",
+  "apkCompiled": false,
+  "physicalAndroid": false
+}

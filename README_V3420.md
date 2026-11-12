@@ -4,13 +4,15 @@ Esta versión conserva íntegramente el juego y prepara una distribución Androi
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualizar la PWA con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3420.html) · [Laboratorio UX aislado conservado](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-experiencia-v3410.html)
 
-**Estado antes del despliegue:** web candidata validándose; Android preparado, pendiente de huella permanente y prueba física. No hay APK 3.42.0 compilado, firmado, candidato ni estable. La publicación web y sus enlaces se verificarán después de Actions.
+**Web publicada y verificada.** El commit [`8ecafed`](https://github.com/pruizbohle/gran-atlas-naturaleza/commit/8ecafed107567a9ff988ee17d0eb1bf223417194) está integrado en main. [GitHub Actions](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/43273738003) aprobó las **858 ejecuciones**: 720 referencias, 97 pruebas nuevas y 41 regresiones repetidas, sin fallos. También instaló las dependencias exactas y generó/verificó el proyecto nativo sin compilar APK. Los [188/188 hashes publicados](docs/and3420/published-report.json) coinciden; caché `gran-atlas-v3.42.0-android-d63bd336d9e5`, 186 recursos offline. La [navegación pública en cinco anchos](docs/and3420/published-browser/report.json) y los [respaldos y reapertura offline](docs/and3420/published-backups/report.json) pasaron sin errores JavaScript.
+
+**Android preparado, pendiente de certificado y validación física.** No se ha generado candidato ni APK estable; no se ha ejecutado el workflow de firma ni publicado un APK 3.42.0.
 
 ## Cuatro estados distintos
 
 | Estado | Resultado |
 |---|---|
-| Web 3.42.0 | Preparada para Pages; comprobación publicada pendiente |
+| Web 3.42.0 | **Publicada y verificada en GitHub Pages** |
 | Android preparado | Configuración, dependencias, generación/sincronización, respaldo y automatización comprobados en lo que permite el entorno |
 | Android candidato | **Pendiente:** falta fijar la huella pública real y configurar/verificar los secretos privadamente |
 | Android estable | **Pendiente:** no existe candidato exacto probado en un dispositivo físico ni publicación autorizada de ese binario |
