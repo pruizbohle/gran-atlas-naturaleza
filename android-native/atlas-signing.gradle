@@ -1,0 +1,16 @@
+// No fallback key and no secrets in source. Used only by the manual candidate workflow.
+android {
+    signingConfigs {
+        atlasStable {
+            storeFile file(System.getenv('ATLAS_ANDROID_KEYSTORE_PATH'))
+            storePassword System.getenv('ATLAS_ANDROID_STORE_PASSWORD')
+            keyAlias System.getenv('ATLAS_ANDROID_KEY_ALIAS')
+            keyPassword System.getenv('ATLAS_ANDROID_KEY_PASSWORD')
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.atlasStable
+        }
+    }
+}

@@ -1,8 +1,10 @@
 # Android: firma permanente y migración desde 3.28.0
 
-La web 3.29.0 se publica independientemente de Android. El antiguo workflow debug ya no compila ni distribuye APK. El APK 3.28.0 distribuido tenía una firma debug; se adopta una clave permanente nueva por decisión del propietario. No se intentará instalarla como actualización sobre esa firma anterior.
+La web 3.42.0 se publica independientemente de Android. El workflow debug no compila ni distribuye APK. La huella permanente sigue pendiente; no se ha generado un candidato 3.42.0 ni se ha validado un teléfono. Si ya existe una clave permanente, se reutiliza: no se crea otra. La firma debug 3.28.0 conocida es distinta de la permanente prevista; cualquier transición exige respaldos validados y autorización del propietario.
 
-## 1. Crear la clave en tu PC Windows, una sola vez
+## 1. Reutilizar la clave existente o crearla privadamente en Windows una sola vez
+
+Primero comprueba si ya conservas una clave permanente. Si existe, utiliza esa misma ruta y certificado en los comandos de inspección del paso 4; no ejecutes genkeypair ni la sustituyas. Solo si nunca hubo una clave permanente, el propietario puede crearla en su propio PC:
 
 1. Instala un JDK 21 de una fuente oficial (por ejemplo Eclipse Temurin). Abre una ventana nueva de PowerShell y comprueba `keytool -help`. Si no aparece, usa el `keytool.exe` de la carpeta `bin` del JDK instalado.
 2. Elige una carpeta privada **fuera del repositorio**. Estos comandos usan una carpeta en tu perfil:
@@ -70,33 +72,15 @@ La ejecución debe terminar en verde. Descarga el artefacto `Atlas-Android-candi
 4. Si el archivo no abre, no se valida o faltan datos, **detente y conserva la aplicación vieja**. Puedes probar el respaldo alternativo y la opción de pegar JSON completo. No continúes con un archivo incompleto ni con un enlace al APK en lugar del JSON.
 5. Solo cuando tengas las copias y la restauración verificada, **tú** desinstala manualmente el APK debug anterior desde Ajustes de Android. Esa desinstalación elimina su almacenamiento privado; por eso los respaldos deben estar fuera. Si prefieres conservarlo, pospón la migración; no hay una acción automática.
 6. Instala el APK candidato firmado y abre **Partida → Importar partida**. Selecciona el JSON guardado, revisa la previsualización y confirma la restauración. Si el selector falla, usa la alternativa de pegar JSON completo. No necesitas iniciar una partida desde cero.
-7. Compara los campos anotados, entra al Atlas, Campo, Cuaderno y Museo, cierra y vuelve a abrir. Comprueba también la reapertura offline. Exporta una nueva copia desde 3.29.0 y valida que vuelve a importarse en un perfil de prueba. Conserva los respaldos 3.28 hasta terminar todo el proceso.
+7. Compara los campos anotados, entra al Atlas, Campo, Cuaderno y Museo, cierra y vuelve a abrir. Comprueba también la reapertura offline. Exporta una nueva copia desde el candidato probado y valida que vuelve a importarse en un perfil de prueba. Conserva los respaldos 3.28 hasta terminar todo el proceso.
 8. Las futuras versiones con este **mismo certificado** e ID se instalarán como actualización; no necesitarán repetir la desinstalación. Mantén una copia del guardado antes de actualizar igualmente.
 
 ## 5. Publicar únicamente el APK que pasó la restauración
 
-Después de probar un Android real, registra en `docs/android/restoration-validation.json` la evidencia de **ese candidato exacto**, sin datos personales ni contenido del guardado. El archivo no se crea con resultados inventados. Debe contener:
+Después de probar un Android real, registra únicamente resultados observados en `docs/android/restoration-validation.json`, según la [lista física y los campos schema 2](docs/and3420/prueba-fisica.md). El archivo no se crea con valores ficticios ni con pruebas Chromium. Su versión, versionCode, appId, run, commit, certificado, hash APK y payload deben copiarse del manifiesto del candidato exacto.
 
-```json
-{
-  "version": "3.29.0",
-  "workflowRunId": 123456789,
-  "apkSha256": "hash SHA256 de ese APK, obtenido de apk-sha256.txt",
-  "certificateSha256": "huella pública permanente sin dos puntos",
-  "physicalAndroid": true,
-  "backupExportedFrom328": true,
-  "backupValidatedBeforeUninstall": true,
-  "manualReinstall": true,
-  "nativeImportRestored": true,
-  "progressCompared": true,
-  "reopenedOffline": true,
-  "exportedAgain": true,
-  "testedAt": "fecha real con zona horaria",
-  "device": "modelo y versión Android",
-  "notes": "resultado observado de la comparación; sin contenido privado"
-}
-```
+Puede añadirse ese registro mediante un commit posterior de documentación: todos los recursos web, plugins, configuración, lockfile, scripts nativos/verificadores y workflows Android deben permanecer idénticos al candidato. Cambiar cualquiera de ellos exige otro APK y repetir la validación.
 
-Guarda esa evidencia en `main` solo cuando sea real. Después ejecuta **Actions → Publicar Android validado**, introduciendo el `candidate_run_id` correspondiente. El workflow descarga **el mismo APK**, vuelve a verificar firma, recursos y evidencia de restauración y crea el enlace de release; no recompila otro binario y no reemplaza silenciosamente un APK ya publicado. Si cambian recursos o certificado, se rechaza y hace falta un candidato y validación nuevos.
+Ejecuta **Actions → Publicar Android validado** desde main e introduce `candidate_run_id` y el SHA completo `candidate_source_commit` del manifiesto. La publicación consulta el run de GitHub, exige que proceda del workflow manual de main y del commit declarado, descarga el mismo artefacto y vuelve a comprobar firma, contenido, hashes y prueba física. No recompila ni reemplaza una release existente; la etiqueta apunta al commit de origen del binario.
 
-La web puede estar operativa mientras estos pasos Android permanecen pendientes. No se declarará cerrado el componente Android sin el candidato firmado y la restauración comprobada.
+La web continúa operativa mientras Android espera la intervención del propietario. [Estado y bloqueos 3.42.0](docs/and3420/AND-06-candidato-pendiente.md).

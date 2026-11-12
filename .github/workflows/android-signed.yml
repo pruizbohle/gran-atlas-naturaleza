@@ -1,113 +1,76 @@
 name: Android APK firmado · candidato de validación
-
 on:
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
   signed-release:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
-      - name: Descargar proyecto
-        uses: actions/checkout@v4
-
-      - name: Preparar Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
         with:
           node-version: '22'
-
-      - name: Preparar Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: '21'
-
-      - name: Verificar secretos de firma
+          cache: npm
+      - name: Validar identidad, versión y certificado permanente antes de firmar
+        run: |
+          python3 -c "from scripts.android_release import project,certificate; print(project()); certificate(); print('Huella pública permanente configurada')"
+      - name: Verificar presencia de secretos sin imprimir valores
         env:
           KEYSTORE: ${{ secrets.ATLAS_ANDROID_KEYSTORE_BASE64 }}
           STORE_PASSWORD: ${{ secrets.ATLAS_ANDROID_STORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.ATLAS_ANDROID_KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.ATLAS_ANDROID_KEY_PASSWORD }}
         run: |
+          set -euo pipefail
           missing=0
           for pair in KEYSTORE:ATLAS_ANDROID_KEYSTORE_BASE64 STORE_PASSWORD:ATLAS_ANDROID_STORE_PASSWORD KEY_ALIAS:ATLAS_ANDROID_KEY_ALIAS KEY_PASSWORD:ATLAS_ANDROID_KEY_PASSWORD; do
             variable=${pair%%:*}
             secret_name=${pair#*:}
             if [ -z "${!variable}" ]; then
-              echo "::error::Falta el secreto ${secret_name} en Settings > Secrets and variables > Actions"
+              echo "::error::Falta el secreto $secret_name. Configurarlo en Settings > Secrets and variables > Actions."
               missing=1
             fi
           done
           exit "$missing"
-
-      - name: Validar release web y certificado permanente fijado
+      - name: Instalar el árbol exacto del lockfile
+        run: npm ci --no-audit --no-fund
+      - name: Validar la release actual y todas las referencias históricas
+        run: npm run release:verify
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Generar y sincronizar Android y sus plugins de respaldo
         run: |
-          python3 - <<'PYCODE'
-          import json,re
-          pin=json.load(open('docs/android/signing-certificate.json'))
-          assert len(re.sub('[^0-9a-f]','',(pin.get('sha256') or '').lower()))==64, 'Fijar la huella pública del certificado permanente antes de compilar'
-          PYCODE
-          node scripts/build-experience-release-v3410.cjs
-          node scripts/validate-experience-v3410.cjs
-
-      - name: Instalar Capacitor
-        run: npm install --no-audit --no-fund
-
-      - name: Crear proyecto Android
-        run: |
-          npx cap add android
-          npx cap sync android
-
-      - name: Habilitar exportación e importación nativa de partidas
-        run: python3 scripts/install-atlas-export.py
-
-      - name: Configurar versión Android
-        run: python3 scripts/configure-android-version.py
-
-      - name: Preparar almacén de firma
+          npx --no-install cap add android
+          npx --no-install cap sync android
+          python3 scripts/install-atlas-export.py
+          python3 scripts/configure-android-version.py
+          python3 scripts/configure-android-project.py --signing
+      - name: Preparar almacén privado y comprobar su certificado público
         env:
           KEYSTORE: ${{ secrets.ATLAS_ANDROID_KEYSTORE_BASE64 }}
+          ATLAS_ANDROID_STORE_PASSWORD: ${{ secrets.ATLAS_ANDROID_STORE_PASSWORD }}
+          ATLAS_ANDROID_KEY_ALIAS: ${{ secrets.ATLAS_ANDROID_KEY_ALIAS }}
         run: |
+          set -euo pipefail
+          umask 077
           mkdir -p "$RUNNER_TEMP/atlas-signing"
           printf '%s' "$KEYSTORE" | base64 --decode > "$RUNNER_TEMP/atlas-signing/atlas-release.jks"
-          chmod 600 "$RUNNER_TEMP/atlas-signing/atlas-release.jks"
-
-      - name: Configurar firma y verticalidad
-        run: |
+          keytool -exportcert -keystore "$RUNNER_TEMP/atlas-signing/atlas-release.jks" -alias "$ATLAS_ANDROID_KEY_ALIAS" -storepass:env ATLAS_ANDROID_STORE_PASSWORD -file "$RUNNER_TEMP/atlas-signing/certificate.der"
           python3 - <<'PY'
+          import os
           from pathlib import Path
-          manifest=Path('android/app/src/main/AndroidManifest.xml')
-          s=manifest.read_text()
-          if 'android:screenOrientation=' not in s:
-              assert 'android:name=".MainActivity"' in s
-              s=s.replace('android:name=".MainActivity"', 'android:name=".MainActivity"\n            android:screenOrientation="portrait"', 1)
-          manifest.write_text(s)
-          app=Path('android/app/build.gradle')
-          txt=app.read_text()
-          txt+='''
-          android {
-            signingConfigs {
-              atlasStable {
-                storeFile file(System.getenv('ATLAS_ANDROID_KEYSTORE_PATH'))
-                storePassword System.getenv('ATLAS_ANDROID_STORE_PASSWORD')
-                keyAlias System.getenv('ATLAS_ANDROID_KEY_ALIAS')
-                keyPassword System.getenv('ATLAS_ANDROID_KEY_PASSWORD')
-              }
-            }
-            buildTypes {
-              release {
-                signingConfig signingConfigs.atlasStable
-              }
-            }
-          }
-          '''
-          app.write_text(txt)
+          from scripts.android_release import sha,certificate,require
+          require(sha((Path(os.environ['RUNNER_TEMP'])/'atlas-signing/certificate.der').read_bytes())==certificate(),'El almacén no usa el certificado permanente fijado')
+          print('Certificado del almacén coincide con la huella pública permanente.')
           PY
-
-      - name: Compilar APK release firmado
+      - name: Compilar únicamente release con firma permanente
         env:
           ATLAS_ANDROID_KEYSTORE_PATH: ${{ runner.temp }}/atlas-signing/atlas-release.jks
           ATLAS_ANDROID_STORE_PASSWORD: ${{ secrets.ATLAS_ANDROID_STORE_PASSWORD }}
@@ -116,40 +79,26 @@ jobs:
         run: |
           chmod +x android/gradlew
           cd android
-          ./gradlew assembleRelease --no-daemon
-
-      - name: Verificar firma, identidad, versión y recursos del APK
+          ./gradlew assembleRelease --no-daemon --console=plain
+      - name: Verificar APK real y vincularlo al run y commit exactos
         run: |
-          APK=android/app/build/outputs/apk/release/app-release.apk
+          set -euo pipefail
+          mkdir candidate
+          cp android/app/build/outputs/apk/release/app-release.apk candidate/atlas-candidate.apk
           APKSIGNER=$(find "$ANDROID_HOME/build-tools" -name apksigner | sort -V | tail -1)
           AAPT=$(find "$ANDROID_HOME/build-tools" -name aapt | sort -V | tail -1)
-          "$APKSIGNER" verify --verbose --print-certs "$APK" | tee apk-signature.txt
-          "$AAPT" dump badging "$APK" > apk-badging.txt
-          python3 scripts/verify-android-release.py "$APK" apk-badging.txt apk-signature.txt
-          sha256sum "$APK" > apk-sha256.txt
-
-      - name: Guardar evidencia de firma y versión
-        uses: actions/upload-artifact@v4
-        with:
-          name: Atlas-Android-verification
-          path: |
-            apk-signature.txt
-            apk-badging.txt
-            apk-sha256.txt
-          if-no-files-found: error
-
-      - name: Guardar candidato para probar restauración · sin GitHub Release
+          "$APKSIGNER" verify --verbose --print-certs candidate/atlas-candidate.apk > candidate/apk-signature.txt
+          "$AAPT" dump badging candidate/atlas-candidate.apk > candidate/apk-badging.txt
+          python3 scripts/verify-android-release.py candidate/atlas-candidate.apk candidate/apk-badging.txt candidate/apk-signature.txt
+          python3 scripts/create-android-candidate.py candidate/atlas-candidate.apk "$GITHUB_RUN_ID" "$GITHUB_SHA" candidate/candidate-manifest.json
+          sha256sum candidate/atlas-candidate.apk > candidate/apk-sha256.txt
+      - name: Guardar candidato · no publicar release
         uses: actions/upload-artifact@v4
         with:
           name: Atlas-Android-candidato-${{ github.run_id }}
-          path: |
-            android/app/build/outputs/apk/release/app-release.apk
-            apk-signature.txt
-            apk-badging.txt
-            apk-sha256.txt
+          path: candidate/
           if-no-files-found: error
           retention-days: 30
-
-      - name: Retirar copia temporal del almacén de firma
+      - name: Retirar copia temporal del almacén privado
         if: always()
-        run: rm -f "$RUNNER_TEMP/atlas-signing/atlas-release.jks"
+        run: rm -rf "$RUNNER_TEMP/atlas-signing"
