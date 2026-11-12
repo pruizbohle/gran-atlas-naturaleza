@@ -21,7 +21,8 @@
   const pasteButton = document.getElementById('savePasteBtn');
   const receiptKey = 'gran_atlas_restore_receipt_v34';
   if (!root || !open || !exportButton || !fileInput || !importButton) return;
-  let pending = null;
+  let pending = null, selectionVersion = 0;
+  function clearPending() { pending=null;importButton.disabled=true;return ++selectionVersion; }
 
   function message(text, isError = false) {
     status.textContent = text;
@@ -89,6 +90,15 @@
     let parsed;
     try { parsed = JSON.parse(text.replace(/^\uFEFF/, '')); }
     catch (_) { throw new Error('El documento no es JSON válido. Selecciona el archivo el-gran-atlas-partida-*.json, no el APK.'); }
+    function safeKeys(value) {
+      if(!value || typeof value!=='object')return;
+      for(const key of Object.keys(value)){
+        if(['__proto__','constructor','prototype'].includes(key))throw new Error('El archivo contiene campos no permitidos.');
+        safeKeys(value[key]);
+      }
+    }
+    safeKeys(parsed);
+    if(plainObject(parsed) && parsed.format!==undefined && parsed.format!==FORMAT)throw new Error('Formato de respaldo no compatible.');
     let data=parsed;
     if (plainObject(parsed) && parsed.format === FORMAT) {
       if (!Number.isInteger(parsed.formatVersion)||parsed.formatVersion>FORMAT_VERSION||parsed.formatVersion<1)
@@ -109,8 +119,8 @@
   }
   async function nativeShare(text, name) {
     const capacitor = window.Capacitor;
-    const fs = capacitor?.Plugins?.Filesystem;
-    const share = capacitor?.Plugins?.Share;
+    const fs = capacitor?.Plugins?.Filesystem || capacitor?.registerPlugin?.('Filesystem');
+    const share = capacitor?.Plugins?.Share || capacitor?.registerPlugin?.('Share');
     if (capacitor?.getPlatform?.() !== 'android' || !fs || !share) return false;
     const out = await fs.writeFile({ path: name, data: text, directory: 'CACHE', encoding: 'utf8' });
     await share.share({ title: 'Partida de El Gran Atlas', text: 'Copia de seguridad del juego', url: out.uri, dialogTitle: 'Guardar o compartir respaldo' });
@@ -180,7 +190,9 @@
     }
   }
   exportButton.addEventListener('click', exportSave);
-  function prepareImport(text, name) {
+  function prepareImport(text, name, requestVersion) {
+    if(requestVersion!==undefined && requestVersion!==selectionVersion)return;
+    if(requestVersion===undefined)clearPending();
     pending = null;
     importButton.disabled = true;
     summary.textContent = 'Comprobando archivo…';
@@ -207,8 +219,7 @@
     });
   }
   fileInput.addEventListener('change', async () => {
-    pending = null;
-    importButton.disabled = true;
+    const requestVersion=clearPending();
     const file = fileInput.files?.[0];
     if (!file) { summary.textContent = 'Aún no seleccionaste un archivo.'; return; }
     if (file.size > MAX_BYTES) {
@@ -217,14 +228,16 @@
       return;
     }
     try {
-      prepareImport(await readBrowserFile(file), file.name);
+      prepareImport(await readBrowserFile(file), file.name, requestVersion);
     } catch (error) {
-      message('No fue posible abrir el archivo: ' + (error?.message || error), true);
+      if(requestVersion===selectionVersion)message('No fue posible abrir el archivo: ' + (error?.message || error), true);
     } finally {
       fileInput.value = '';
     }
   });
   nativeImportButton?.addEventListener('click', async () => {
+    const requestVersion=clearPending();
+    summary.textContent='Selecciona un respaldo nuevo; todavía no se ha importado nada.';
     const cap=window.Capacitor;
     if (cap?.getPlatform?.() !== 'android') {
       fileInput.click(); return;
@@ -238,8 +251,9 @@
     nativeImportButton.disabled = true;
     try {
       const selected=await reader.openFile();
-      prepareImport(selected.content, selected.name || 'Respaldo de Android');
+      prepareImport(selected.content, selected.name || 'Respaldo de Android', requestVersion);
     } catch (error) {
+      if(requestVersion!==selectionVersion)return;
       if (error?.code === 'CANCELLED') message('No se eligió ningún archivo. La partida sigue intacta.');
       else message('No se pudo leer el respaldo: ' + (error?.message || error), true);
     } finally {
@@ -294,12 +308,15 @@
       message('No se pudo conectar con el motor del juego. La partida actual NO fue reemplazada.',true);
       return;
     }
-    const old=localStorage.getItem(STORAGE_KEY);
+    let old=null,applied=false;
+    const restoreVersion=++selectionVersion;
     const expected=receiptSnapshot(pending);
     const pendingMoney=pending.money;
     try {
+      old=localStorage.getItem(STORAGE_KEY);
       // Copia de emergencia ANTES de cualquier modificación a estado o almacenamiento.
       if(old) localStorage.setItem(EMERGENCY_KEY,old);
+      applied=true;
       const actual=bridge.restoreGame(pending);
       if(!matchImported({...expected,money:pending.money},actual)){
         throw new Error('El motor no adoptó los avistamientos, prestigio o libras de la partida.');
@@ -318,6 +335,7 @@
       importButton.disabled=true;
       // Tick del motor se ejecuta cada 1000 ms: confirmar luego de al menos un ciclo.
       setTimeout(()=>{
+        if(restoreVersion!==selectionVersion)return;
         try {
           const inMemory=bridge.getSnapshot();
           const onDisk=receiptSnapshot(normalizeGame(JSON.parse(localStorage.getItem(STORAGE_KEY))));
@@ -330,8 +348,9 @@
       },1400);
     } catch(error){
       message('Fallo al aplicar la partida: '+(error?.message||error)+'. No elimines tu archivo JSON.',true);
-      if(old && bridge && typeof bridge.restoreGame==='function'){
-        try{bridge.restoreGame(normalizeGame(JSON.parse(old)));}catch(_){}
+      if(applied && old && bridge && typeof bridge.restoreGame==='function'){
+        try{bridge.restoreGame(normalizeGame(JSON.parse(old)));localStorage.setItem(STORAGE_KEY,old);}
+        catch(_){message('No se pudo completar la recuperación anterior. Conserva las copias externas y la copia de emergencia; no desinstales la aplicación.',true);}
       }
     }
   }
