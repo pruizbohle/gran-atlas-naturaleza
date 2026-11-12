@@ -1,0 +1,76 @@
+{
+  "baseline": "3422b10 / 3.41.0",
+  "candidate": "3.42.0",
+  "method": "Same Chromium, eight synthetic stages, five widths and ten modules; 600 module changes and 200 persistence calls. No physical Android timing. Existing 20-minute reference sessions are retained; no new real-time duration is claimed.",
+  "comparison": [
+    {
+      "width": 390,
+      "before": {
+        "p50": 5.300000000745058,
+        "p95": 16.599999997764826,
+        "persist200Ms": 290.30000000074506,
+        "domBefore": {
+          "documents": 1,
+          "nodes": 533,
+          "jsEventListeners": 73
+        },
+        "domAfter": {
+          "documents": 1,
+          "nodes": 533,
+          "jsEventListeners": 73
+        }
+      },
+      "after": {
+        "p50": 5.5,
+        "p95": 16.699999999254942,
+        "persist200Ms": 326.8999999985099,
+        "domBefore": {
+          "documents": 1,
+          "nodes": 533,
+          "jsEventListeners": 73
+        },
+        "domAfter": {
+          "documents": 1,
+          "nodes": 533,
+          "jsEventListeners": 73
+        }
+      }
+    },
+    {
+      "width": 1280,
+      "before": {
+        "p50": 4.900000002235174,
+        "p95": 12.600000001490116,
+        "persist200Ms": 274.4000000022352,
+        "domBefore": {
+          "documents": 1,
+          "nodes": 532,
+          "jsEventListeners": 73
+        },
+        "domAfter": {
+          "documents": 1,
+          "nodes": 532,
+          "jsEventListeners": 73
+        }
+      },
+      "after": {
+        "p50": 4.900000002235174,
+        "p95": 13.800000000745058,
+        "persist200Ms": 333.80000000074506,
+        "domBefore": {
+          "documents": 1,
+          "nodes": 532,
+          "jsEventListeners": 73
+        },
+        "domAfter": {
+          "documents": 1,
+          "nodes": 532,
+          "jsEventListeners": 73
+        }
+      }
+    }
+  ],
+  "rendererUnchanged": true,
+  "timersAdded": 0,
+  "physicalAndroid": false
+}
