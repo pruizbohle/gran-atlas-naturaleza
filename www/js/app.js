@@ -2160,6 +2160,7 @@ function initialState(){
     regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0,excavations:[],excavationSeq:0,excavationsCompleted:0,curationPoints:0,excavationHistory:[],relictLeads:{},relictSurveys:[],relictSurveySeq:0,relictSurveyHistory:[],relictResearchPoints:0,relictAchievements:{}}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', bestiaryDescending:false, bestiaryHideMonographs:false, crownCoins:0, lastEncounter:null,
  // EC3300 BEGIN initial-commerce
     commerce:{seq:0,jobs:[],history:[]},craftedItems:{},
+    cartography3400:{version:1,historicalAccess:{}},
  // EC3300 END initial-commerce
     lastTick:Date.now(), lastGrant:0, autoHourly:{}, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
   };
@@ -2321,7 +2322,7 @@ function load(){
     if(!raw) return normalizeSpecialDiscoveries(base);
     const saved=JSON.parse(raw);
     if(!saved||typeof saved!=='object'||Array.isArray(saved))throw new Error('Formato de partida ilegible');
-    const merged={...base,...saved};
+    const merged={...base,...saved,cartography3400:saved.cartography3400};
     merged.upgrades={...base.upgrades,...(saved.upgrades||{})};
     merged.purchases={...base.purchases,...(saved.purchases||{})};
     merged.regionUnlocked={...base.regionUnlocked,...(saved.regionUnlocked||{})};
@@ -2434,6 +2435,7 @@ window.AtlasSaveBridge={
      migrateMarine3320(state);
  // GM3330 BEGIN import
      normalizeDeep3330(state);
+     migrateCartography3400(state,imported,before);
  // GM3330 END import
  // GM3320 END import
  // GM3310 END import
@@ -2864,6 +2866,45 @@ inventoryUses3400=function(id){const uses=usesBeforeCartography3400(id),d=CARTOG
 const possibilitiesBefore3400=voyagePossibilities3280;
 voyagePossibilities3280=function(id){const model=possibilitiesBefore3400(id);if(model)for(const d of cartographicSources3400(id))model.items.push(developmentItem3280(d.piece));return model;};
 // INV3400 END cartographic catalogue and voyage layer
+
+// INV3400 BEGIN access and historical compatibility
+const CARTOGRAPHIC_GATES3400={Sudamérica:'south_america_map','Oceanía':'oceania_map',Polos:'polar_map','Océanos':'world_map','Océanos profundos':'world_map','Fosas abisales':'world_map'};
+for(const [continent,map]of Object.entries(CARTOGRAPHIC_GATES3400))CONTINENT_RULES3300[continent].cartography=map;
+function cartographicContinent3400(r){return abyssalRegionIndex3340.has(r?.id)?'Fosas abisales':deepRegionIndex3330.has(r?.id)?'Océanos profundos':r?.continent;}
+function migrateCartography3400(s,source=s,before=null){
+ const raw=source.cartography3400,history={};
+ if(raw?.version===1){for(const c of Object.keys(CARTOGRAPHIC_GATES3400))if(raw.historicalAccess?.[c]===true)history[c]=true;}
+ else{
+  // A later legitimately enabled stage proves its historical predecessor stages.
+  const stages=Object.keys(CARTOGRAPHIC_GATES3400),flags={Sudamérica:'southAmericaUnlocked','Oceanía':'oceaniaUnlocked',Polos:'polarUnlocked','Océanos':'surfaceSeasUnlocked','Océanos profundos':'deepUnlocked','Fosas abisales':'abyssalUnlocked'};
+  let furthest=-1;
+  stages.forEach((c,i)=>{const node=Object.keys(CONTINENT_RESEARCH3300).find(n=>CONTINENT_RESEARCH3300[n]===c);
+   if(source.purchases?.[node]||source.upgrades?.[flags[c]]||REGIONS.some(r=>cartographicContinent3400(r)===c&&(source.regionUnlocked?.[r.id]||source.regionsVisited?.[r.id]||source.currentRegion===r.id)))furthest=Math.max(furthest,i);
+  });
+  for(let i=0;i<=furthest;i++)history[stages[i]]=true;
+ }
+ if(s.collectionId&&s.collectionId===before?.collectionId)for(const [c,yes]of Object.entries(before.cartography3400?.historicalAccess||{}))if(yes===true&&Object.hasOwn(CARTOGRAPHIC_GATES3400,c))history[c]=true;
+ s.cartography3400={version:1,historicalAccess:history};
+ return s;
+}
+function cartographyReady3400(continent,s=state){const map=CARTOGRAPHIC_GATES3400[continent];return !map||s.cartography3400?.historicalAccess?.[continent]===true||s.craftedItems?.[map]===true;}
+const accessBefore3400=regionRequirementsMet;
+regionRequirementsMet=function(r){return !!r&&cartographyReady3400(cartographicContinent3400(r))&&accessBefore3400(r);};
+const regionAccessibleBefore3400=regionAccessible;
+regionAccessible=function(r){return !!r&&cartographyReady3400(cartographicContinent3400(r))&&regionAccessibleBefore3400(r);};
+const setRegionBeforeCartography3400=setRegion;
+setRegion=function(id){const r=REGIONS.find(r=>r.id===id);if(r&&cartographyReady3400(cartographicContinent3400(r)))return setRegionBeforeCartography3400(id);};
+const canBuyBeforeCartography3400=canBuy;
+canBuy=function(node){const c=CONTINENT_RESEARCH3300[node?.id];return (!c||cartographyReady3400(c))&&canBuyBeforeCartography3400(node);};
+const statusBeforeCartography3400=continentStatus;
+continentStatus=function(c){const status=statusBeforeCartography3400(c);return status==='available'&&!cartographyReady3400(c)?'unlockable':status;};
+const atlasBeforeCartography3400=atlasRegionModel;
+atlasRegionModel=function(r){const m=atlasBeforeCartography3400(r),map=CARTOGRAPHIC_GATES3400[r.continent];if(map){m.requirements.push({label:state.cartography3400?.historicalAccess[r.continent]?'Acceso histórico reconocido · '+ITEMS[map].name+' físico voluntario':'Cartografía acreditada: '+ITEMS[map].name,met:cartographyReady3400(r.continent)});if(!cartographyReady3400(r.continent)){m.status='bloqueada';m.summary='Falta '+ITEMS[map].name;}}return m;};
+for(const [node,c]of Object.entries(CONTINENT_RESEARCH3300))if(CARTOGRAPHIC_GATES3400[c])RESEARCH_NODES.find(n=>n.id===node).desc+=' Cartografía permanente: '+ITEMS[CARTOGRAPHIC_GATES3400[c]].name+'. Los accesos históricos reconocidos se conservan; no se consumen mapas.';
+const researchNodeBefore3400=researchNode3280;
+researchNode3280=function(node,illustrated=true){const model=researchNodeBefore3400(node,illustrated),c=CONTINENT_RESEARCH3300[node.id],map=CARTOGRAPHIC_GATES3400[c];if(map){const historic=state.cartography3400?.historicalAccess[c];model.material={...developmentItem3280(map,1,illustrated),name:ITEMS[map].name+(historic?' · acceso histórico reconocido':''),have:state.inventory[map]||0,met:cartographyReady3400(c),consumed:false};if(!model.complete&&!cartographyReady3400(c))model.status='Pendiente de cartografía';}return model;};
+migrateCartography3400(state);
+// INV3400 END access and historical compatibility
 
 // INV3400 BEGIN inventory and workshop
 const INVENTORY_SECTIONS3400=[['equipo','Equipo'],['animales','Animales'],['expedicion','Expedición'],['coleccionables','Coleccionables'],['taller','Taller']];
@@ -6987,6 +7028,45 @@ inventoryUses3400=function(id){const uses=usesBeforeCartography3400(id),d=CARTOG
 const possibilitiesBefore3400=voyagePossibilities3280;
 voyagePossibilities3280=function(id){const model=possibilitiesBefore3400(id);if(model)for(const d of cartographicSources3400(id))model.items.push(developmentItem3280(d.piece));return model;};
 // INV3400 END cartographic catalogue and voyage layer
+
+// INV3400 BEGIN access and historical compatibility
+const CARTOGRAPHIC_GATES3400={Sudamérica:'south_america_map','Oceanía':'oceania_map',Polos:'polar_map','Océanos':'world_map','Océanos profundos':'world_map','Fosas abisales':'world_map'};
+for(const [continent,map]of Object.entries(CARTOGRAPHIC_GATES3400))CONTINENT_RULES3300[continent].cartography=map;
+function cartographicContinent3400(r){return abyssalRegionIndex3340.has(r?.id)?'Fosas abisales':deepRegionIndex3330.has(r?.id)?'Océanos profundos':r?.continent;}
+function migrateCartography3400(s,source=s,before=null){
+ const raw=source.cartography3400,history={};
+ if(raw?.version===1){for(const c of Object.keys(CARTOGRAPHIC_GATES3400))if(raw.historicalAccess?.[c]===true)history[c]=true;}
+ else{
+  // A later legitimately enabled stage proves its historical predecessor stages.
+  const stages=Object.keys(CARTOGRAPHIC_GATES3400),flags={Sudamérica:'southAmericaUnlocked','Oceanía':'oceaniaUnlocked',Polos:'polarUnlocked','Océanos':'surfaceSeasUnlocked','Océanos profundos':'deepUnlocked','Fosas abisales':'abyssalUnlocked'};
+  let furthest=-1;
+  stages.forEach((c,i)=>{const node=Object.keys(CONTINENT_RESEARCH3300).find(n=>CONTINENT_RESEARCH3300[n]===c);
+   if(source.purchases?.[node]||source.upgrades?.[flags[c]]||REGIONS.some(r=>cartographicContinent3400(r)===c&&(source.regionUnlocked?.[r.id]||source.regionsVisited?.[r.id]||source.currentRegion===r.id)))furthest=Math.max(furthest,i);
+  });
+  for(let i=0;i<=furthest;i++)history[stages[i]]=true;
+ }
+ if(s.collectionId&&s.collectionId===before?.collectionId)for(const [c,yes]of Object.entries(before.cartography3400?.historicalAccess||{}))if(yes===true&&Object.hasOwn(CARTOGRAPHIC_GATES3400,c))history[c]=true;
+ s.cartography3400={version:1,historicalAccess:history};
+ return s;
+}
+function cartographyReady3400(continent,s=state){const map=CARTOGRAPHIC_GATES3400[continent];return !map||s.cartography3400?.historicalAccess?.[continent]===true||s.craftedItems?.[map]===true;}
+const accessBefore3400=regionRequirementsMet;
+regionRequirementsMet=function(r){return !!r&&cartographyReady3400(cartographicContinent3400(r))&&accessBefore3400(r);};
+const regionAccessibleBefore3400=regionAccessible;
+regionAccessible=function(r){return !!r&&cartographyReady3400(cartographicContinent3400(r))&&regionAccessibleBefore3400(r);};
+const setRegionBeforeCartography3400=setRegion;
+setRegion=function(id){const r=REGIONS.find(r=>r.id===id);if(r&&cartographyReady3400(cartographicContinent3400(r)))return setRegionBeforeCartography3400(id);};
+const canBuyBeforeCartography3400=canBuy;
+canBuy=function(node){const c=CONTINENT_RESEARCH3300[node?.id];return (!c||cartographyReady3400(c))&&canBuyBeforeCartography3400(node);};
+const statusBeforeCartography3400=continentStatus;
+continentStatus=function(c){const status=statusBeforeCartography3400(c);return status==='available'&&!cartographyReady3400(c)?'unlockable':status;};
+const atlasBeforeCartography3400=atlasRegionModel;
+atlasRegionModel=function(r){const m=atlasBeforeCartography3400(r),map=CARTOGRAPHIC_GATES3400[r.continent];if(map){m.requirements.push({label:state.cartography3400?.historicalAccess[r.continent]?'Acceso histórico reconocido · '+ITEMS[map].name+' físico voluntario':'Cartografía acreditada: '+ITEMS[map].name,met:cartographyReady3400(r.continent)});if(!cartographyReady3400(r.continent)){m.status='bloqueada';m.summary='Falta '+ITEMS[map].name;}}return m;};
+for(const [node,c]of Object.entries(CONTINENT_RESEARCH3300))if(CARTOGRAPHIC_GATES3400[c])RESEARCH_NODES.find(n=>n.id===node).desc+=' Cartografía permanente: '+ITEMS[CARTOGRAPHIC_GATES3400[c]].name+'. Los accesos históricos reconocidos se conservan; no se consumen mapas.';
+const researchNodeBefore3400=researchNode3280;
+researchNode3280=function(node,illustrated=true){const model=researchNodeBefore3400(node,illustrated),c=CONTINENT_RESEARCH3300[node.id],map=CARTOGRAPHIC_GATES3400[c];if(map){const historic=state.cartography3400?.historicalAccess[c];model.material={...developmentItem3280(map,1,illustrated),name:ITEMS[map].name+(historic?' · acceso histórico reconocido':''),have:state.inventory[map]||0,met:cartographyReady3400(c),consumed:false};if(!model.complete&&!cartographyReady3400(c))model.status='Pendiente de cartografía';}return model;};
+migrateCartography3400(state);
+// INV3400 END access and historical compatibility
 
 // INV3400 BEGIN inventory and workshop
 const INVENTORY_SECTIONS3400=[['equipo','Equipo'],['animales','Animales'],['expedicion','Expedición'],['coleccionables','Coleccionables'],['taller','Taller']];
