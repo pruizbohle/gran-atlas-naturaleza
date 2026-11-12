@@ -2427,7 +2427,7 @@ window.AtlasSaveBridge={
      state.regionsVisited=state.regionsVisited&&typeof state.regionsVisited==='object'&&!Array.isArray(state.regionsVisited)?state.regionsVisited:{};
      state.regionsVisited[state.currentRegion]=true;
  // EC3300 BEGIN import-commerce
-     normalizeCommerce3300(state);migrateProgression3300(state);
+     normalizeCommerce3300(state);mergeLogistics3390(state,before);migrateProgression3300(state);
  // GM3310 BEGIN import
      migratePolar3310(state);
  // GM3320 BEGIN import
@@ -6433,22 +6433,54 @@ function cargoSnapshot3390(d){return {id:d.id,requires:{...d.requires},money:d.m
 function validCargo3390(m,route){const d=CARGO_MANIFESTS3390.find(d=>d.id===m?.id&&d.route===route);return !!d&&m.money===d.money&&m.knowledge===d.knowledge&&Object.keys(m.requires||{}).length===Object.keys(d.requires).length&&Object.entries(d.requires).every(([id,n])=>m.requires[id]===n);}
 // LOG3390 END manifests
 
+// LOG3390 BEGIN persistence
+function normalizeLogistics3390(s){
+ const c=s.commerce;
+ if(Array.isArray(c.deliveries)){
+  c.deliveries=c.deliveries.filter(h=>h&&Number.isSafeInteger(h.id)&&h.id>0&&Number.isFinite(h.at)&&SUPPLY_CONTRACTS3390.some(d=>d.id===h.contract)).filter((h,i,a)=>a.findIndex(x=>x.id===h.id)===i).map(h=>{const d=SUPPLY_CONTRACTS3390.find(d=>d.id===h.contract);return {id:h.id,contract:d.id,at:h.at,requires:{...d.requires},money:d.money,knowledge:d.knowledge};});
+  c.deliverySeq=Math.max(Number.isSafeInteger(c.deliverySeq)?c.deliverySeq:0,0,...c.deliveries.map(h=>h.id));
+ }
+ if(Array.isArray(c.tradeReceipts)){
+  c.tradeReceipts=c.tradeReceipts.filter(h=>h&&Number.isSafeInteger(h.id)&&h.id>0&&Number.isFinite(h.at)&&TRADE_ROUTES.some(r=>r.id===h.route)).filter((h,i,a)=>a.findIndex(x=>x.id===h.id)===i).map(h=>{const r=TRADE_ROUTES.find(r=>r.id===h.route);return {id:h.id,route:r.id,at:h.at,money:r.money,rewards:{...r.rewards},...(validCargo3390(h.manifest,h.route)?{manifest:JSON.parse(JSON.stringify(h.manifest))}:{})};});
+  c.jobs=c.jobs.filter(j=>!c.tradeReceipts.some(h=>h.id===j.id));
+  c.seq=Math.max(c.seq,...c.tradeReceipts.map(h=>h.id));
+ }
+ for(const j of c.jobs)if(j.manifest&&!validCargo3390(j.manifest,j.route))delete j.manifest;
+ return c;
+}
+function mergeLogistics3390(s,before){
+ if(!s.collectionId||s.collectionId!==before?.collectionId)return;
+ const c=s.commerce,old=before.commerce||{};
+ for(const key of ['deliveries','tradeReceipts'])if(Array.isArray(old[key])&&old[key].length){
+  const records=new Map((c[key]||[]).map(h=>[h.id,h]));
+  for(const h of old[key])records.set(h.id,JSON.parse(JSON.stringify(h)));
+  c[key]=[...records.values()].sort((a,b)=>a.id-b.id);
+ }
+ c.seq=Math.max(c.seq,old.seq||0);
+ if(old.deliverySeq)c.deliverySeq=Math.max(c.deliverySeq||0,old.deliverySeq);
+ normalizeLogistics3390(s);
+}
+// LOG3390 END persistence
+
 let navigationTab3300='expeditions';
 function normalizeCommerce3300(s){
  const c=s.commerce&&typeof s.commerce==='object'&&!Array.isArray(s.commerce)?s.commerce:{};
  c.jobs=Array.isArray(c.jobs)?c.jobs.filter(j=>j&&TRADE_ROUTES.some(r=>r.id===j.route)&&Number.isSafeInteger(j.id)&&j.id>0&&Number.isFinite(j.startedAt)&&Number.isFinite(j.endAt)&&j.endAt-j.startedAt===TRADE_ROUTES.find(r=>r.id===j.route).hours*3600000):[];
  // A duplicate job id is a single departure, never another reward.
  c.jobs=c.jobs.filter((j,i,a)=>a.findIndex(x=>x.id===j.id)===i);
- c.history=Array.isArray(c.history)?c.history.filter(j=>j&&Number.isSafeInteger(j.id)&&j.id>0&&Number.isFinite(j.at)&&TRADE_ROUTES.some(r=>r.id===j.route)).slice(-12).map(j=>{const r=TRADE_ROUTES.find(r=>r.id===j.route);return {id:j.id,route:r.id,at:j.at,money:r.money,rewards:{...r.rewards}};}):[];
+ c.history=Array.isArray(c.history)?c.history.filter(j=>j&&Number.isSafeInteger(j.id)&&j.id>0&&Number.isFinite(j.at)&&TRADE_ROUTES.some(r=>r.id===j.route)).slice(-12).map(j=>{const r=TRADE_ROUTES.find(r=>r.id===j.route);return {id:j.id,route:r.id,at:j.at,money:r.money,rewards:{...r.rewards},...(validCargo3390(j.manifest,j.route)?{manifest:JSON.parse(JSON.stringify(j.manifest))}:{})};}):[];
  c.seq=Math.max(0,Number.isSafeInteger(c.seq)?c.seq:0,...c.jobs.map(j=>j.id),...c.history.map(j=>j.id));
  c.jobs=c.jobs.filter(j=>!c.history.some(h=>h.id===j.id));
- s.commerce=c;return c;
+ s.commerce=c;return normalizeLogistics3390(s);
 }
 function tradeTransaction3300(change){
- const before={money:state.money,knowledge:state.knowledge,inventory:{...state.inventory},commerce:JSON.parse(JSON.stringify(state.commerce)),commissions:JSON.parse(JSON.stringify(state.commissions||null)),achievements:JSON.parse(JSON.stringify(state.achievements||null))};
- if(!change())return false;
- if(!persist()){Object.assign(state,before);achievementNotices3360=[];commissionNotices3370=[];achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360?.categories||{}));return false;}
- return true;
+ // persist() can flush missions, achievements and Museum accreditation. Roll back
+ // the complete save and deferred evaluation state together on any failure.
+ const before=JSON.parse(JSON.stringify(state)),runtime={ach:[...achievementNotices3360],enc:[...commissionNotices3370],dirty:[...achievementDirty3360],commission:commissionDirty3370,curation:curationDirty3380};
+ try{if(change()&&persist())return true;}catch(error){showStorageFault('No se pudo completar la operación comercial. Se conservaron los recursos; puedes reintentar.');}
+ for(const key of Object.keys(state))delete state[key];Object.assign(state,before);
+ achievementNotices3360=runtime.ach;commissionNotices3370=runtime.enc;achievementDirty3360.clear();for(const key of runtime.dirty)achievementDirty3360.add(key);commissionDirty3370=runtime.commission;curationDirty3380=runtime.curation;
+ return false;
 }
 function tradeCanStart3300(route){return !!route&&!!state.upgrades.shipyard&&state.commerce.jobs.length<1&&state.prestige>=route.prestige&&state.money>=route.cost&&state.knowledge>=route.knowledge;}
 function startTrade3300(id,manifestId=null,sequence=state.commerce.seq){
