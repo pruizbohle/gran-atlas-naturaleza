@@ -7179,6 +7179,7 @@ const developmentBeforeLinks3410=developmentAction3280;
 developmentAction3280=function(action,id){if(action==='er28-inventory')return uxNavigate3410(RECIPES[id]?'recipe':'item',id);return developmentBeforeLinks3410(action,id);};
 const commissionBeforeLinks3410=commissionAction3370;
 commissionAction3370=function(action,id){
+ if(action==='enc-page'){globalThis.AtlasCommissionsUI3370?.changePage(id);return true;}
  if(action==='enc-go'){const m=globalThis.AtlasCommissions3370.models(state,commissionContext3370()).find(m=>m.id===id);if(!m)return false;const module=m.definition.module;
   if(module==='field')return uxNavigate3410('field',state.currentRegion);
   if(module==='journal'){const species=currentRegion().species.find(id=>state.discovered[id]&&!state.published[id]);return species?uxNavigate3410('journal',species):uxNavigate3410('field',state.currentRegion);}
@@ -7197,11 +7198,61 @@ const panelBeforeTrail3410=renderPanel;
 renderPanel=function(){panelBeforeTrail3410();const last=uxRuntime3410.trail.at(-1);if(last)panel.insertAdjacentHTML?.('afterbegin','<button type="button" class="ux3410-back" data-action="ux-back">‹ Volver a '+uxLabels3410[last.tab]+'</button>');};
 // UX3410 END safe contextual navigation
 
+// UX3410 BEGIN continuity and existing notification stream
+uxRuntime3410.scrolls=new Map();uxRuntime3410.folds=new Map();uxRuntime3410.viewKey=null;uxRuntime3410.lastEvents=[];uxRuntime3410.snapshot=null;
+uxViewKey3410=function(){const detail=tab==='objects'?state.inventoryView:tab==='society'?state.societyView+(state.societyView==='publications'?':'+state.publicationView:''):tab==='museum'?state.museumView:tab==='research'?state.researchBranch:tab==='expeditions'?navigationTab3300+':'+tradeSection3390:tab==='atlas'?state.atlasView:'';return tab+':'+(detail||'');};
+function uxManagedFolds3410(){return [...panel.querySelectorAll('.inv340-filters,.inv340-chart,.inv340-recipe details,.inv340-detail>details,.ux3410-sources>details,.supply-root details,.atlas-requirements')];}
+function uxFoldKey3410(node,index){const parent=node.closest('[data-supply-contract]');return (node.dataset.supplyContract||node.dataset.curProject||parent?.dataset.supplyContract||'')+':'+node.className+':'+index;}
+const renderBeforeContinuity3410=renderPanel;
+renderPanel=function(){
+ const old=uxRuntime3410.viewKey,next=uxViewKey3410(),top=globalThis.scrollY||0,active=document.activeElement;
+ if(old){uxRuntime3410.scrolls.set(old,top);const folds=uxRuntime3410.folds.get(old)||new Map();uxManagedFolds3410().forEach((el,i)=>folds.set(uxFoldKey3410(el,i),el.open));uxRuntime3410.folds.set(old,folds);}
+ const field=active?.dataset?.invFilter,position=field==='query'?{start:active.selectionStart,end:active.selectionEnd}:null;
+ const ownRestore=tab==='research'||tab==='expeditions'?developmentUI3280.restore:tab==='museum'?museumUI3270.restore:null;
+ renderBeforeContinuity3410();uxRuntime3410.viewKey=next;document.body.classList.add('experience-v3410');document.body.setAttribute?.('data-ux-module',tab);
+ const folds=uxRuntime3410.folds.get(next);if(folds)uxManagedFolds3410().forEach((el,i)=>{const value=folds.get(uxFoldKey3410(el,i));if(value!==undefined&&el.open!==value)el.open=value;});
+ if(uxRuntime3410.frame)globalThis.cancelAnimationFrame?.(uxRuntime3410.frame);
+ uxRuntime3410.frame=globalThis.requestAnimationFrame?.(()=>{
+  uxRuntime3410.frame=null;const restored=ownRestore!==null&&ownRestore!==undefined?ownRestore:old===next?top:uxRuntime3410.scrolls.get(next)||0;globalThis.scrollTo?.({top:restored,behavior:'instant'});
+  if(field&&old===next){const input=panel.querySelector('[data-inv-filter="'+field+'"]');if(input){input.focus({preventScroll:true});if(position)input.setSelectionRange?.(position.start,position.end);}}
+  else if(old!==next&&!panel.contains(document.activeElement)){const heading=panel.querySelector('h1,h2,h3');heading?.setAttribute('tabindex','-1');heading?.focus({preventScroll:true});}
+ });
+};
+function uxSnapshot3410(){
+ const previous=uxRuntime3410.snapshot,key=[state.prestige,Object.keys(state.purchases).length,Object.keys(state.craftedItems).length,Object.keys(state.regionUnlocked).length].join('|');
+ const available=previous?.state===state&&previous.regionKey===key?previous.available:REGIONS.filter(r=>!regionAccessible(r)&&regionRequirementsMet(r)).map(r=>r.id);
+ return {state,regionKey:key,available,discoveries:Object.values(state.discovered).filter(Boolean).length,studies:Object.values(state.stages).reduce((a,n)=>a+(Number(n)||0),0),publications:Object.values(state.published).filter(Boolean).length,maps:[...CARTOGRAPHY3400.map(d=>d.map),'world_map'].filter(id=>state.craftedItems[id]===true),voyages:(state.museum.voyagesCompleted||0)+(state.commerce.tradeReceipts?.length??state.commerce.history.length),contracts:state.commerce.deliveries?.length||0,curation:Object.keys(state.museum.curation?.completed||{}).length};
+}
+function uxEvents3410(){return uxRuntime3410.lastEvents.map(e=>({...e,action:{...e.action}}));}
+function uxAnnounce3410(){
+ const before=uxRuntime3410.snapshot,after=uxSnapshot3410();uxRuntime3410.snapshot=after;uxRuntime3410.lastEvents=[];
+ if(!before||before.state!==state||uxRuntime3410.importing)return;
+ const events=[],add=(kind,title,count,detail,type,id,label,priority)=>{if(count>0)events.push({kind,title,count,detail,action:{type,id,label},priority});};
+ const map=after.maps.find(id=>!before.maps.includes(id));if(map)add('map','Mapa fabricado',after.maps.length-before.maps.length,ITEMS[map].name,'recipe',map,'Consultar cartografía',0);
+ const available=after.available.filter(id=>!before.available.includes(id));if(available.length)add('region','Nueva región disponible',available.length,REGIONS.find(r=>r.id===available[0]).name,'atlas',available[0],'Consultar región',1);
+ add('publication','Monografía completada',after.publications-before.publications,'Monografías publicadas','society','publications','Consultar publicaciones',2);
+ add('curation','Exposición acreditada',after.curation-before.curation,'Acreditaciones del Museo','museum','exhibitions','Consultar exposición',3);
+ add('contract','Contrato completado',after.contracts-before.contracts,'Entregas registradas','trade','register','Consultar recibo',4);
+ add('voyage','Expedición finalizada',after.voyages-before.voyages,'Regresos registrados','voyage','coast','Consultar expediciones',5);
+ add('study','Nueva etapa de estudio',after.studies-before.studies,'Etapas de estudio completadas','module','journal','Consultar Cuaderno',6);
+ add('discovery','Nueva especie descubierta',after.discoveries-before.discoveries,'Especies incorporadas al registro','module','journal','Consultar Cuaderno',7);
+ uxRuntime3410.lastEvents=events;
+ // Presentation failures must never roll back an already committed economic transaction.
+ try{globalThis.AtlasSociety3360?.notifyExperience?.(events);}catch(error){console.error('UX3410 notification:',error);}
+}
+const persistBeforeExperience3410=persist;
+persist=function(){const ok=persistBeforeExperience3410();if(ok)uxAnnounce3410();return ok;};
+const restoreBeforeExperience3410=window.AtlasSaveBridge.restoreGame;
+window.AtlasSaveBridge.restoreGame=function(imported){uxRuntime3410.importing=true;try{uxRuntime3410.trail=[];uxRuntime3410.scrolls.clear();uxRuntime3410.folds.clear();uxRuntime3410.viewKey=null;const result=restoreBeforeExperience3410.call(this,imported);uxRuntime3410.snapshot=uxSnapshot3410();uxRuntime3410.lastEvents=[];return result;}finally{uxRuntime3410.importing=false;}};
+// Use the same transaction-aware persistence entry point as the existing updater.
+window.AtlasSaveBridge.persistBeforeUpdate=persist;
+// UX3410 END continuity and existing notification stream
+
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 // ACH3360 BEGIN event integration. No timer and no per-render achievement mutations.
 if(globalThis.AtlasAchievements3360){
  achievementNotices3360=globalThis.AtlasAchievements3360.initialize(state,achievementContext3360());achievementReady3360=true;
- globalThis.AtlasSociety3360?.mount({state:()=>state,context:achievementContext3360,save:persist,render:renderPanel,open(){tab='society';state.societyView='achievements';renderPanel();persist();}});
+ globalThis.AtlasSociety3360?.mount({state:()=>state,context:achievementContext3360,save:persist,render:renderPanel,navigate:uxNavigate3410,open(){tab='society';state.societyView='achievements';renderPanel();persist();}});
  const watch=(fn,groups)=>function(...args){achievementMark3360(...groups);return fn.apply(this,args);};
  encounter=watch(encounter,['zoology','specimens','museum']);
  recordSpecimen=watch(recordSpecimen,['specimens']);

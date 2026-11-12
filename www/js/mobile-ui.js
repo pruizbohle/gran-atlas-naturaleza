@@ -32,10 +32,15 @@
   open.addEventListener('click',()=>menu.hidden?reveal():shut());
   close.addEventListener('click',()=>{shut();open.focus()});
   backdrop.addEventListener('click',()=>{shut();open.focus()});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!menu.hidden){shut();open.focus()}});
+  document.addEventListener('keydown',e=>{
+    if(menu.hidden)return;
+    if(e.key==='Escape'){shut();open.focus();return;}
+    if(e.key==='Tab'){const buttons=[...menu.querySelectorAll('.mobile-drawer-sheet button')].filter(b=>!b.disabled),first=buttons[0],last=buttons.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}}
+  });
   document.querySelectorAll('.mobile-dock-link,.mobile-menu-item').forEach(b=>b.addEventListener('click',()=>{
     shut();sync();
-    if(window.matchMedia('(max-width:700px)').matches) window.scrollTo({top:0,behavior:'instant'});
+    // The app restores the previous context after the navigation event.
+    if(!window.AtlasExperience3410&&window.matchMedia('(max-width:700px)').matches)window.scrollTo({top:0,behavior:'instant'});
   }));
   document.getElementById('panel')?.addEventListener('click',e=>{
     if(e.target.closest('[data-action="select-journal"]') && !document.querySelector('.journal-v311') && window.matchMedia('(max-width:700px)').matches){

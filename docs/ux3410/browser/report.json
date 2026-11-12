@@ -1,0 +1,83 @@
+{
+  "version": "3.41.0",
+  "base": "http://127.0.0.1:8768/",
+  "widths": [
+    {
+      "width": 320,
+      "noOverflow": true,
+      "all80AchievementsReachable": true,
+      "all37MissionsReachable": true,
+      "maxAchievementCards": 8,
+      "maxMissionCards": 4,
+      "safeContextualReturn": true,
+      "filtersAndScroll": true,
+      "compassPreferences": true,
+      "groupedExistingToast": true,
+      "reducedMotion": true,
+      "menuKeyboard": "passed",
+      "primaryAtlasY": 443.203125
+    },
+    {
+      "width": 360,
+      "noOverflow": true,
+      "all80AchievementsReachable": true,
+      "all37MissionsReachable": true,
+      "maxAchievementCards": 8,
+      "maxMissionCards": 4,
+      "safeContextualReturn": true,
+      "filtersAndScroll": true,
+      "compassPreferences": true,
+      "groupedExistingToast": true,
+      "reducedMotion": true,
+      "menuKeyboard": "passed",
+      "primaryAtlasY": 444.3125
+    },
+    {
+      "width": 390,
+      "noOverflow": true,
+      "all80AchievementsReachable": true,
+      "all37MissionsReachable": true,
+      "maxAchievementCards": 8,
+      "maxMissionCards": 4,
+      "safeContextualReturn": true,
+      "filtersAndScroll": true,
+      "compassPreferences": true,
+      "groupedExistingToast": true,
+      "reducedMotion": true,
+      "menuKeyboard": "passed",
+      "primaryAtlasY": 425.46875
+    },
+    {
+      "width": 412,
+      "noOverflow": true,
+      "all80AchievementsReachable": true,
+      "all37MissionsReachable": true,
+      "maxAchievementCards": 8,
+      "maxMissionCards": 4,
+      "safeContextualReturn": true,
+      "filtersAndScroll": true,
+      "compassPreferences": true,
+      "groupedExistingToast": true,
+      "reducedMotion": true,
+      "menuKeyboard": "passed",
+      "primaryAtlasY": 425.46875
+    },
+    {
+      "width": 1280,
+      "noOverflow": true,
+      "all80AchievementsReachable": true,
+      "all37MissionsReachable": true,
+      "maxAchievementCards": 8,
+      "maxMissionCards": 4,
+      "safeContextualReturn": true,
+      "filtersAndScroll": true,
+      "compassPreferences": true,
+      "groupedExistingToast": true,
+      "reducedMotion": true,
+      "menuKeyboard": "desktop",
+      "primaryAtlasY": 662.125
+    }
+  ],
+  "errors": [],
+  "physicalAndroid": false
+}
