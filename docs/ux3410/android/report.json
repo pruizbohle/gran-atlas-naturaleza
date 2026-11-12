@@ -1,0 +1,16 @@
+{
+  "targetVersion": "3.41.0",
+  "appId": "com.elgranatlas.naturaleza.beta314",
+  "permanentCertificatePinned": false,
+  "certificateValueChanged": false,
+  "localAdbAvailable": false,
+  "physicalCandidateTestPerformed": false,
+  "restorationEvidencePresent": false,
+  "remoteSigningSecrets": "not inspected; local environment reports no configured secrets",
+  "nativeExportImportSourcesPresent": true,
+  "candidateWorkflowManualAndPinGated": true,
+  "publicationRequiresSameArtifactAndPhysicalProof": true,
+  "apkBuilt": false,
+  "apkPublished": false,
+  "status": "pending permanent certificate pin and physical exact-candidate restoration evidence"
+}

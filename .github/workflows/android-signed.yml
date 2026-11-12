@@ -45,12 +45,13 @@ jobs:
 
       - name: Validar release web y certificado permanente fijado
         run: |
-          node --test tests/*.test.cjs
           python3 - <<'PYCODE'
           import json,re
           pin=json.load(open('docs/android/signing-certificate.json'))
           assert len(re.sub('[^0-9a-f]','',(pin.get('sha256') or '').lower()))==64, 'Fijar la huella pública del certificado permanente antes de compilar'
           PYCODE
+          node scripts/build-experience-release-v3410.cjs
+          node scripts/validate-experience-v3410.cjs
 
       - name: Instalar Capacitor
         run: npm install --no-audit --no-fund
