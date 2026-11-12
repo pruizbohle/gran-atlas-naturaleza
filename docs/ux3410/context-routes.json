@@ -1,0 +1,15 @@
+{
+  "method": "Real DOM interactions from an already open related context. Setup excluded; input and change counted separately, same as UX01.",
+  "versions": [
+    {
+      "version": "3.40.0",
+      "atlasToRecipe": 6,
+      "materialToRoutes": 3
+    },
+    {
+      "version": "3.41.0",
+      "atlasToRecipe": 2,
+      "materialToRoutes": 1
+    }
+  ]
+}

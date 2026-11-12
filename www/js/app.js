@@ -7090,13 +7090,15 @@ function uxSources3410(id){
  return out;
 }
 function compassContext3410(){
- const api=globalThis.AtlasCommissions3370,claimable=api?api.models(state,commissionContext3370()).filter(m=>m.ready&&!m.claimed&&m.available).map(m=>({id:m.id})):[];
- const regions=REGIONS.map(r=>({id:r.id,name:r.name,continent:r.continent,key:cartographicContinent3400(r),prestige:r.unlock.prestige,ready:regionRequirementsMet(r),accessible:regionAccessible(r)}));
+ const api=globalThis.AtlasCommissions3370,c=state.commissions||{},claimable=api?[...api.catalog.filter(d=>c.ready?.[d.id]&&!c.claimed?.[d.id]&&(!d.previous||c.ready?.[d.previous]||c.claimed?.[d.previous])),...SCIENTIFIC_MISSIONS.filter(d=>!state.purchases['mission_'+d.id]&&!c.legacyClaims?.[d.id]&&d.progress()>=d.target)].map(d=>({id:d.id})):[];
+ const regions=()=>REGIONS.map(r=>({id:r.id,name:r.name,continent:r.continent,key:cartographicContinent3400(r),prestige:r.unlock.prestige,ready:regionRequirementsMet(r),accessible:regionAccessible(r)}));
  const current=currentRegion(),seen=current.species.filter(id=>state.discovered[id]);
- const studies=seen.map(id=>({id,name:visibleName(id),stage:stage(id),published:!!state.published[id],inCurrent:true,ready:stage(id)<5&&stageRequirements(id,stage(id)).allOk,label:stage(id)<5?stageRequirements(id,stage(id)).label:'Monografía'}));
+ const studies=()=>seen.map(id=>({id,name:visibleName(id),stage:stage(id),published:!!state.published[id],inCurrent:true,ready:stage(id)<5&&stageRequirements(id,stage(id)).allOk,label:stage(id)<5?stageRequirements(id,stage(id)).label:'Monografía'}));
  const finished=[...(state.museum.excavations||[]).filter(j=>j.endAt<=Date.now()).map(()=>({type:'museum',id:'fossils',label:'Excavación lista'})),...(state.museum.relictSurveys||[]).filter(j=>j.endAt<=Date.now()).map(()=>({type:'museum',id:'relicts',label:'Prospección lista'})),...state.voyages.filter(j=>j.endAt<=Date.now()&&VOYAGES.some(v=>v.id===j.type)).map(j=>({type:'voyage',id:j.type,label:'Expedición científica finalizada'})),...state.commerce.jobs.filter(j=>j.endAt<=Date.now()).map(()=>({type:'trade',id:'routes',label:'Ruta comercial finalizada'}))];
- const stages=Object.entries(CONTINENT_RESEARCH3300).map(([research,key])=>({key,research,tools:craftedRequirements3300(key),map:CARTOGRAPHIC_GATES3400[key]||null,cartographyReady:cartographyReady3400(key)}));
- return {items:ITEMS,recipes:RECIPES,research:RESEARCH_NODES,regions,stages,studies,claimable,finished,canBuy:id=>canBuy(RESEARCH_NODES.find(n=>n.id===id)),canCraft,sources:uxSources3410,openRegions:regions.filter(r=>r.accessible).length,explorationSummary:regions.filter(r=>r.accessible).length+' de '+REGIONS.length+' regiones habilitadas · '+Object.values(state.published).filter(Boolean).length+' monografías publicadas.'};
+ const stages=()=>Object.entries(CONTINENT_RESEARCH3300).map(([research,key])=>({key,research,tools:craftedRequirements3300(key),map:CARTOGRAPHIC_GATES3400[key]||null,cartographyReady:cartographyReady3400(key)}));
+ let regionCache,studyCache,stageCache;
+ const regionModels=()=>regionCache??(regionCache=regions());
+ return {items:ITEMS,recipes:RECIPES,research:RESEARCH_NODES,get regions(){return regionModels()},get stages(){return stageCache??(stageCache=stages())},get studies(){return studyCache??(studyCache=studies())},claimable,finished,canBuy:id=>canBuy(RESEARCH_NODES.find(n=>n.id===id)),canCraft,sources:uxSources3410,get openRegions(){return regionModels().filter(r=>r.accessible).length},get explorationSummary(){return regionModels().filter(r=>r.accessible).length+' de '+REGIONS.length+' regiones habilitadas · '+Object.values(state.published).filter(Boolean).length+' monografías publicadas.'}};
 }
 function compassModel3410(){return globalThis.AtlasExperience3410?.suggest(state,compassContext3410())||null;}
 function uxCompassPreference3410(){return ['visible','collapsed','hidden'].includes(state.ux3410?.compass)?state.ux3410.compass:'visible';}
@@ -7104,7 +7106,8 @@ function uxRenderCompass3410(){const m=compassModel3410();uxRuntime3410.lastComp
 function syncCompass3410(now){
  if(tab!=='atlas'||!globalThis.AtlasExperience3410||uxCompassPreference3410()!=='visible')return;
  const due=[...state.voyages,...state.commerce.jobs,...state.museum.excavations,...state.museum.relictSurveys].filter(j=>j.endAt<=now).length;
- const stamp=[Math.floor(state.money),Math.floor(state.knowledge),state.prestige,Object.keys(state.published).length,Object.keys(state.regionUnlocked).length,Object.keys(state.purchases).length,Object.keys(state.craftedItems).length,Object.keys(state.commissions?.ready||{}).length,Object.keys(state.commissions?.claimed||{}).length,Object.entries(state.inventory).map(([id,n])=>id+':'+n).join(','),due,uxRuntime3410.revision].join('|');
+ const studyStamp=currentRegion().species.map(id=>[id,sight(id),feed(id),stage(id),specials(id),hasDimorphism(id),!!state.discovered[id]].join(':')).join(',');
+ const stamp=[state.currentRegion,studyStamp,Math.floor(state.money),Math.floor(state.knowledge),state.prestige,Object.keys(state.published).length,Object.keys(state.regionUnlocked).length,Object.keys(state.purchases).length,Object.keys(state.craftedItems).length,Object.keys(state.commissions?.ready||{}).length,Object.keys(state.commissions?.claimed||{}).length,Object.entries(state.inventory).map(([id,n])=>id+':'+n).join(','),due,uxRuntime3410.revision].join('|');
  if(uxRuntime3410.sourceState===state&&stamp===uxRuntime3410.lastStamp)return;
  uxRuntime3410.sourceState=state;uxRuntime3410.lastStamp=stamp;
  const m=compassModel3410(),html=globalThis.AtlasExperience3410.render(m,'visible');

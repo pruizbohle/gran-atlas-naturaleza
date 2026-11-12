@@ -1,0 +1,2707 @@
+{
+  "version": "3.41.0",
+  "method": "Actual DOM clicks after synthetic save restore; performance.now around synchronous handler dispatch excludes Playwright transport. 8 stages x 5 widths x 10 modules. Long session rotates modules 600 times, forces GC at endpoints, samples heap/DOM/listeners and measures 200 real persistence calls. Clock frozen in performance run to isolate presentation.",
+  "widths": [
+    {
+      "width": 320,
+      "states": [
+        {
+          "mode": "new",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 79.69999999925494,
+              "nodes": 405,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 2.900000000372529,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 58.40000000037253,
+              "nodes": 461,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 22.299999998882413,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 10.5,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 18.199999999254942,
+              "nodes": 804,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 6.200000001117587,
+              "nodes": 267,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 4.5,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 11.300000000745058,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.6999999992549419,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "europe",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 8.399999998509884,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 3.299999998882413,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 32.90000000037253,
+              "nodes": 478,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 9.099999999627471,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 38.69999999925494,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 23.600000001490116,
+              "nodes": 998,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 10.5,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 2,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 42.70000000111759,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.6999999992549419,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "first_continent",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 8,
+              "nodes": 397,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 2.300000000745058,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 7.299999998882413,
+              "nodes": 478,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 8.400000000372529,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.300000000745058,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 6.5,
+              "nodes": 1091,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 5,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 2.200000001117587,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 5.299999998882413,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.6999999992549419,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "africa",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 11.400000000372529,
+              "nodes": 559,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 20.300000000745058,
+              "nodes": 286,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 9.300000000745058,
+              "nodes": 488,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 5.200000001117587,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 9,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 10.900000000372529,
+              "nodes": 1617,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.300000000745058,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.6000000014901161,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 6.5,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.6999999992549419,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "museum",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 9.100000001490116,
+              "nodes": 456,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.900000000372529,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 7,
+              "nodes": 622,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 5.699999999254942,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 5.099999999627471,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 10.099999999627471,
+              "nodes": 1648,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 3.400000000372529,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 10.199999999254942,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 70.29999999888241,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 2.199999999254942,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "polar",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 11.700000001117587,
+              "nodes": 378,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.900000000372529,
+              "nodes": 279,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 8.5,
+              "nodes": 406,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 5.800000000745058,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 6.5,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 10.300000000745058,
+              "nodes": 1660,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.900000000372529,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.799999998882413,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 15,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1.699999999254942,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "ocean",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 25.199999999254942,
+              "nodes": 504,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 4.699999999254942,
+              "nodes": 292,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 5.699999999254942,
+              "nodes": 348,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.600000001490116,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 6.300000000745058,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 7.5,
+              "nodes": 1665,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 4.900000000372529,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.799999998882413,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 12,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1.400000000372529,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "advanced",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 10.400000000372529,
+              "nodes": 500,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.700000001117587,
+              "nodes": 292,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 6.599999999627471,
+              "nodes": 445,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.099999999627471,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.399999998509884,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 7.599999999627471,
+              "nodes": 1408,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.300000000745058,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.6000000014901161,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 10.400000000372529,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.900000000372529,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "states": [
+        {
+          "mode": "new",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 37.20000000111759,
+              "nodes": 405,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 7.699999999254942,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 33.19999999925494,
+              "nodes": 461,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 15.200000001117587,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.900000000372529,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 6.400000000372529,
+              "nodes": 804,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 4,
+              "nodes": 267,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 7.400000000372529,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 9.400000000372529,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.40000000037252903,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "europe",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 40.899999998509884,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.700000001117587,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 15.600000001490116,
+              "nodes": 478,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 4.799999998882413,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 5.200000001117587,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 10.399999998509884,
+              "nodes": 998,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 4,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 2.5,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 6.5,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1.099999999627471,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "first_continent",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 5.599999999627471,
+              "nodes": 397,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 2.5,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 5.5,
+              "nodes": 478,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 4.299999998882413,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.400000000372529,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 4.699999999254942,
+              "nodes": 1091,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.400000000372529,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 2,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 5.199999999254942,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.40000000037252903,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "africa",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 11.400000000372529,
+              "nodes": 559,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.900000000372529,
+              "nodes": 286,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 6.700000001117587,
+              "nodes": 488,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.800000000745058,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 5.399999998509884,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 5.900000000372529,
+              "nodes": 1617,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.300000000745058,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.5,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 3.900000000372529,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.7999999988824129,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "museum",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 8.399999998509884,
+              "nodes": 456,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.599999999627471,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 9.400000000372529,
+              "nodes": 622,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.5,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 7.5,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 6.700000001117587,
+              "nodes": 1648,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.400000000372529,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.800000000745058,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 22,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1.5,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "polar",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 7,
+              "nodes": 378,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 0.6999999992549419,
+              "nodes": 279,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 4.800000000745058,
+              "nodes": 406,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.199999999254942,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.099999999627471,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 6,
+              "nodes": 1660,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.099999999627471,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.099999999627471,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 9.599999999627471,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.7000000011175871,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "ocean",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 10.400000000372529,
+              "nodes": 504,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 3.5,
+              "nodes": 292,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 3.900000000372529,
+              "nodes": 348,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 2.700000001117587,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.299999998882413,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 4.900000000372529,
+              "nodes": 1665,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 1.599999999627471,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.300000000745058,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 8.299999998882413,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.599999999627471,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "advanced",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 7.299999998882413,
+              "nodes": 500,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 2,
+              "nodes": 292,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 6.5,
+              "nodes": 445,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 7.5,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 8,
+              "nodes": 1408,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.5,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 2.199999999254942,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 8.900000000372529,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.599999999627471,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "states": [
+        {
+          "mode": "new",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 75.90000000037253,
+              "nodes": 405,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 7.799999998882413,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 38,
+              "nodes": 461,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 17.300000000745058,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 7.5,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 9.400000000372529,
+              "nodes": 804,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 3.5,
+              "nodes": 267,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 5.400000000372529,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 11.599999999627471,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.900000000372529,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "europe",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 43.90000000037253,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 4,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 22.299999998882413,
+              "nodes": 478,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 8.399999998509884,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 5.099999999627471,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 9.700000001117587,
+              "nodes": 998,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.5,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 2.299999998882413,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 5,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.599999999627471,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "first_continent",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 6.299999998882413,
+              "nodes": 397,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 2.199999999254942,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 5.299999998882413,
+              "nodes": 478,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.400000000372529,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 3.400000000372529,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 3.200000001117587,
+              "nodes": 1091,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 7.699999999254942,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 2.100000001490116,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 6.800000000745058,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.8000000007450581,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "africa",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 8.800000000745058,
+              "nodes": 559,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.300000000745058,
+              "nodes": 286,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 7.700000001117587,
+              "nodes": 488,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.299999998882413,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.099999999627471,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 6.100000001490116,
+              "nodes": 1617,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.900000000372529,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 4.5,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.6999999992549419,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "museum",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 6.900000000372529,
+              "nodes": 456,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 2,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 7.099999999627471,
+              "nodes": 622,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 5,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 5.599999999627471,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 5.400000000372529,
+              "nodes": 1648,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.199999999254942,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 2.399999998509884,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 14.099999999627471,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.900000000372529,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "polar",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 7.800000000745058,
+              "nodes": 378,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.800000000745058,
+              "nodes": 279,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 5.399999998509884,
+              "nodes": 406,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.599999999627471,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.5,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 6.199999999254942,
+              "nodes": 1660,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 7.300000000745058,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.800000000745058,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 10.200000001117587,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1.199999999254942,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "ocean",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 10.699999999254942,
+              "nodes": 504,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.800000000745058,
+              "nodes": 292,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 4.599999999627471,
+              "nodes": 348,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.099999999627471,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 5.099999999627471,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 4.699999999254942,
+              "nodes": 1665,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.099999999627471,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.199999999254942,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 10.5,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "advanced",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 8.599999999627471,
+              "nodes": 500,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.900000000372529,
+              "nodes": 292,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 6.299999998882413,
+              "nodes": 445,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.099999999627471,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.900000000372529,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 9,
+              "nodes": 1408,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.900000000372529,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.799999998882413,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 10.200000001117587,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1.400000000372529,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 412,
+      "states": [
+        {
+          "mode": "new",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 59.59999999962747,
+              "nodes": 405,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 2.099999999627471,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 23.199999999254942,
+              "nodes": 461,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 19.800000000745058,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 5,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 6.699999999254942,
+              "nodes": 804,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.5,
+              "nodes": 267,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 3.199999999254942,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 22.300000000745058,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.5,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "europe",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 8,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 5.399999998509884,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 19.40000000037253,
+              "nodes": 478,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 4.900000000372529,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 3.699999999254942,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 6.799999998882413,
+              "nodes": 998,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 1.699999999254942,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.300000000745058,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 4,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.5,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "first_continent",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 6.200000001117587,
+              "nodes": 397,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.700000001117587,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 6.699999999254942,
+              "nodes": 478,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 4,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 3,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 3.400000000372529,
+              "nodes": 1091,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 1.5,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.5,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 3.699999999254942,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.40000000037252903,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "africa",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 9.5,
+              "nodes": 559,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.700000001117587,
+              "nodes": 286,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 6.200000001117587,
+              "nodes": 488,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.400000000372529,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.099999999627471,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 6,
+              "nodes": 1617,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.700000001117587,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 3.700000001117587,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.40000000037252903,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "museum",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 6.599999999627471,
+              "nodes": 456,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 7,
+              "nodes": 622,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.300000000745058,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.400000000372529,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 5.199999999254942,
+              "nodes": 1648,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 1.799999998882413,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.199999999254942,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 17.90000000037253,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1.1000000014901161,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "polar",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 7.900000000372529,
+              "nodes": 378,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.5,
+              "nodes": 279,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 5.699999999254942,
+              "nodes": 406,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.799999998882413,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.5,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 5.099999999627471,
+              "nodes": 1660,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 1.599999999627471,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.299999998882413,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 8.599999999627471,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.5,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "ocean",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 9.5,
+              "nodes": 504,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.400000000372529,
+              "nodes": 292,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 3.900000000372529,
+              "nodes": 348,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 2.700000001117587,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 4.600000001490116,
+              "nodes": 1665,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 1.700000001117587,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 8.400000000372529,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.7999999988824129,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "advanced",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 8.199999999254942,
+              "nodes": 500,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.5,
+              "nodes": 292,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 5.800000000745058,
+              "nodes": 445,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 2.800000000745058,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 5,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 8.099999999627471,
+              "nodes": 1408,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.299999998882413,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 9.300000000745058,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.8999999985098839,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "states": [
+        {
+          "mode": "new",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 42.90000000037253,
+              "nodes": 405,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 2.699999999254942,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 49.5,
+              "nodes": 461,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 21.09999999962747,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 17,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 15.700000001117587,
+              "nodes": 804,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.400000000372529,
+              "nodes": 267,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 3.700000001117587,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 8.199999999254942,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1.699999999254942,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "europe",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 11.199999999254942,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 5.600000001490116,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 51.59999999962747,
+              "nodes": 478,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 5.400000000372529,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 7.299999998882413,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 11.5,
+              "nodes": 998,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 1.800000000745058,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.799999998882413,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 4.900000000372529,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.6999999992549419,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "first_continent",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 14.700000001117587,
+              "nodes": 397,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 2.099999999627471,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 8.299999998882413,
+              "nodes": 478,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.5,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 6.5,
+              "nodes": 1091,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.900000000372529,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 2.5,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 7.900000000372529,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1.099999999627471,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "africa",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 11,
+              "nodes": 559,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.599999999627471,
+              "nodes": 286,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 5.799999998882413,
+              "nodes": 488,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.099999999627471,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 5.699999999254942,
+              "nodes": 1617,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 1.800000000745058,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.400000000372529,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 4,
+              "nodes": 398,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.5,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "museum",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 6,
+              "nodes": 456,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.699999999254942,
+              "nodes": 311,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 6.299999998882413,
+              "nodes": 622,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 3.5,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 4.399999998509884,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 5.5,
+              "nodes": 1648,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 1.799999998882413,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 3.599999999627471,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 16,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "polar",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 8.599999999627471,
+              "nodes": 378,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.5,
+              "nodes": 279,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 6.300000000745058,
+              "nodes": 406,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 9.199999999254942,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 5.800000000745058,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 6.5,
+              "nodes": 1660,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 7.900000000372529,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.699999999254942,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 9.100000001490116,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "ocean",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 11.5,
+              "nodes": 504,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.6000000014901161,
+              "nodes": 292,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 16.199999999254942,
+              "nodes": 348,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 6.699999999254942,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 9.699999999254942,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 9.400000000372529,
+              "nodes": 1665,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 2.099999999627471,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.200000001117587,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 38.19999999925494,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 0.8000000007450581,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        },
+        {
+          "mode": "advanced",
+          "modules": [
+            {
+              "tab": "atlas",
+              "ms": 7.200000001117587,
+              "nodes": 500,
+              "overflow": false
+            },
+            {
+              "tab": "field",
+              "ms": 1.800000000745058,
+              "nodes": 292,
+              "overflow": false
+            },
+            {
+              "tab": "journal",
+              "ms": 17.699999999254942,
+              "nodes": 445,
+              "overflow": false
+            },
+            {
+              "tab": "research",
+              "ms": 6,
+              "nodes": 319,
+              "overflow": false
+            },
+            {
+              "tab": "society",
+              "ms": 10.099999999627471,
+              "nodes": 236,
+              "overflow": false
+            },
+            {
+              "tab": "bestiary",
+              "ms": 16.299999998882413,
+              "nodes": 1408,
+              "overflow": false
+            },
+            {
+              "tab": "expeditions",
+              "ms": 3.099999999627471,
+              "nodes": 266,
+              "overflow": false
+            },
+            {
+              "tab": "objects",
+              "ms": 1.5,
+              "nodes": 365,
+              "overflow": false
+            },
+            {
+              "tab": "museum",
+              "ms": 30,
+              "nodes": 939,
+              "overflow": false
+            },
+            {
+              "tab": "crown",
+              "ms": 1,
+              "nodes": 211,
+              "overflow": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "longSessions": [
+    {
+      "width": 390,
+      "before": {
+        "heap": 8524339,
+        "nodes": 236,
+        "intervals": 1,
+        "writes": 21,
+        "writeMs": 6.399999998509884,
+        "writeBytes": 346454,
+        "listeners": 338
+      },
+      "after": {
+        "heap": 9156715,
+        "nodes": 236,
+        "intervals": 1,
+        "writes": 223,
+        "writeMs": 200.50000000558794,
+        "writeBytes": 346544,
+        "listeners": 2618
+      },
+      "domBefore": {
+        "documents": 1,
+        "nodes": 533,
+        "jsEventListeners": 73
+      },
+      "domAfter": {
+        "documents": 1,
+        "nodes": 533,
+        "jsEventListeners": 73
+      },
+      "changes": 600,
+      "totalMs": 3924.5,
+      "p50": 5.300000000745058,
+      "p95": 13.199999999254942,
+      "persist200Ms": 367.40000000037253
+    },
+    {
+      "width": 1280,
+      "before": {
+        "heap": 8502290,
+        "nodes": 236,
+        "intervals": 1,
+        "writes": 22,
+        "writeMs": 5.100000001490116,
+        "writeBytes": 346454,
+        "listeners": 338
+      },
+      "after": {
+        "heap": 9129890,
+        "nodes": 236,
+        "intervals": 1,
+        "writes": 223,
+        "writeMs": 52.10000000707805,
+        "writeBytes": 346544,
+        "listeners": 2618
+      },
+      "domBefore": {
+        "documents": 1,
+        "nodes": 532,
+        "jsEventListeners": 73
+      },
+      "domAfter": {
+        "documents": 1,
+        "nodes": 532,
+        "jsEventListeners": 73
+      },
+      "changes": 600,
+      "totalMs": 4558.5999999996275,
+      "p50": 5.100000001490116,
+      "p95": 21.200000001117587,
+      "persist200Ms": 236.2000000011176
+    }
+  ],
+  "errors": [],
+  "physicalAndroid": false
+}

@@ -1,0 +1,1423 @@
+{
+  "version": "3.41.0",
+  "base": "http://127.0.0.1:8768/",
+  "method": "Controlled synthetic saves for eight real UI stages; actual clicks/selects/fills and engine operations in isolated browser contexts, never personal saves. Ineligible actions are recorded as blocked. Latencies are measured in Chromium emulation, not Android hardware.",
+  "physicalAndroid": false,
+  "states": [
+    {
+      "mode": "new",
+      "label": "Principiante en Islas Británicas",
+      "tasks": {
+        "unlock": {
+          "clicks": 0,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [],
+          "actions": 0,
+          "elapsedMs": 20,
+          "blocked": "no-ready-region"
+        },
+        "materials": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 700,
+          "blocked": null
+        },
+        "sources": {
+          "clicks": 3,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 5,
+          "elapsedMs": 308,
+          "blocked": null
+        },
+        "craft": {
+          "clicks": 3,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 5,
+          "elapsedMs": 378,
+          "blocked": "blocked:[data-action=\"inv-craft\"]"
+        },
+        "voyage": {
+          "clicks": 3,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "expeditions"
+          ],
+          "actions": 3,
+          "elapsedMs": 319,
+          "blocked": "blocked:[data-action=\"sail\"][data-id=\"coast\"]"
+        },
+        "mission": {
+          "clicks": 3,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "society"
+          ],
+          "actions": 5,
+          "elapsedMs": 359,
+          "blocked": "blocked:[data-action=\"claim-mission\"]:enabled"
+        },
+        "publish": {
+          "clicks": 3,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 3,
+          "elapsedMs": 218,
+          "blocked": "blocked:[data-action=\"publish\"]:enabled"
+        },
+        "exhibition": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "museum"
+          ],
+          "actions": 4,
+          "elapsedMs": 339,
+          "blocked": null
+        },
+        "achievement": {
+          "clicks": 3,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 3,
+          "elapsedMs": 197,
+          "blocked": null
+        }
+      },
+      "opening": [
+        {
+          "tab": "atlas",
+          "ms": 128,
+          "nodes": 406,
+          "overflow": false,
+          "heap": 12278933
+        },
+        {
+          "tab": "field",
+          "ms": 63,
+          "nodes": 312,
+          "overflow": false,
+          "heap": 12481465
+        },
+        {
+          "tab": "journal",
+          "ms": 84,
+          "nodes": 462,
+          "overflow": false,
+          "heap": 12774917
+        },
+        {
+          "tab": "research",
+          "ms": 43,
+          "nodes": 320,
+          "overflow": false,
+          "heap": 13021399
+        },
+        {
+          "tab": "society",
+          "ms": 153,
+          "nodes": 363,
+          "overflow": false,
+          "heap": 10778583
+        },
+        {
+          "tab": "bestiary",
+          "ms": 140,
+          "nodes": 805,
+          "overflow": false,
+          "heap": 11627714
+        },
+        {
+          "tab": "expeditions",
+          "ms": 145,
+          "nodes": 268,
+          "overflow": false,
+          "heap": 11938446
+        },
+        {
+          "tab": "objects",
+          "ms": 200,
+          "nodes": 305,
+          "overflow": false,
+          "heap": 12234338
+        },
+        {
+          "tab": "museum",
+          "ms": 227,
+          "nodes": 399,
+          "overflow": false,
+          "heap": 12583634
+        },
+        {
+          "tab": "crown",
+          "ms": 161,
+          "nodes": 212,
+          "overflow": false,
+          "heap": 12827463
+        }
+      ]
+    },
+    {
+      "mode": "europe",
+      "label": "Europa con monografías",
+      "tasks": {
+        "unlock": {
+          "clicks": 2,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "atlas"
+          ],
+          "actions": 2,
+          "elapsedMs": 644,
+          "blocked": null
+        },
+        "materials": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 799,
+          "blocked": null
+        },
+        "sources": {
+          "clicks": 3,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 5,
+          "elapsedMs": 375,
+          "blocked": null
+        },
+        "craft": {
+          "clicks": 3,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 5,
+          "elapsedMs": 362,
+          "blocked": "blocked:[data-action=\"inv-craft\"]"
+        },
+        "voyage": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "expeditions"
+          ],
+          "actions": 4,
+          "elapsedMs": 392,
+          "blocked": null
+        },
+        "mission": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "society"
+          ],
+          "actions": 6,
+          "elapsedMs": 467,
+          "blocked": null
+        },
+        "publish": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 4,
+          "elapsedMs": 286,
+          "blocked": null
+        },
+        "exhibition": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "museum"
+          ],
+          "actions": 4,
+          "elapsedMs": 286,
+          "blocked": null
+        },
+        "achievement": {
+          "clicks": 3,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 3,
+          "elapsedMs": 222,
+          "blocked": null
+        }
+      },
+      "opening": [
+        {
+          "tab": "atlas",
+          "ms": 87,
+          "nodes": 399,
+          "overflow": false,
+          "heap": 13163260
+        },
+        {
+          "tab": "field",
+          "ms": 94,
+          "nodes": 312,
+          "overflow": false,
+          "heap": 10055107
+        },
+        {
+          "tab": "journal",
+          "ms": 87,
+          "nodes": 479,
+          "overflow": false,
+          "heap": 10695941
+        },
+        {
+          "tab": "research",
+          "ms": 123,
+          "nodes": 320,
+          "overflow": false,
+          "heap": 10939003
+        },
+        {
+          "tab": "society",
+          "ms": 245,
+          "nodes": 363,
+          "overflow": false,
+          "heap": 11934891
+        },
+        {
+          "tab": "bestiary",
+          "ms": 286,
+          "nodes": 999,
+          "overflow": false,
+          "heap": 13655250
+        },
+        {
+          "tab": "expeditions",
+          "ms": 111,
+          "nodes": 267,
+          "overflow": false,
+          "heap": 14000985
+        },
+        {
+          "tab": "objects",
+          "ms": 176,
+          "nodes": 305,
+          "overflow": false,
+          "heap": 14295585
+        },
+        {
+          "tab": "museum",
+          "ms": 191,
+          "nodes": 399,
+          "overflow": false,
+          "heap": 11528161
+        },
+        {
+          "tab": "crown",
+          "ms": 113,
+          "nodes": 212,
+          "overflow": false,
+          "heap": 11783126
+        }
+      ]
+    },
+    {
+      "mode": "first_continent",
+      "label": "Primer continente por preparar",
+      "tasks": {
+        "unlock": {
+          "clicks": 2,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "atlas"
+          ],
+          "actions": 2,
+          "elapsedMs": 455,
+          "blocked": null
+        },
+        "materials": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 530,
+          "blocked": null
+        },
+        "sources": {
+          "clicks": 3,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 5,
+          "elapsedMs": 330,
+          "blocked": null
+        },
+        "craft": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 503,
+          "blocked": null
+        },
+        "voyage": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "expeditions"
+          ],
+          "actions": 4,
+          "elapsedMs": 263,
+          "blocked": null
+        },
+        "mission": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "society"
+          ],
+          "actions": 6,
+          "elapsedMs": 397,
+          "blocked": null
+        },
+        "publish": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 4,
+          "elapsedMs": 342,
+          "blocked": null
+        },
+        "exhibition": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "museum"
+          ],
+          "actions": 4,
+          "elapsedMs": 257,
+          "blocked": null
+        },
+        "achievement": {
+          "clicks": 3,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 3,
+          "elapsedMs": 242,
+          "blocked": null
+        }
+      },
+      "opening": [
+        {
+          "tab": "atlas",
+          "ms": 52,
+          "nodes": 398,
+          "overflow": false,
+          "heap": 13065158
+        },
+        {
+          "tab": "field",
+          "ms": 51,
+          "nodes": 312,
+          "overflow": false,
+          "heap": 13270561
+        },
+        {
+          "tab": "journal",
+          "ms": 110,
+          "nodes": 479,
+          "overflow": false,
+          "heap": 10605245
+        },
+        {
+          "tab": "research",
+          "ms": 93,
+          "nodes": 320,
+          "overflow": false,
+          "heap": 10852283
+        },
+        {
+          "tab": "society",
+          "ms": 178,
+          "nodes": 363,
+          "overflow": false,
+          "heap": 11850207
+        },
+        {
+          "tab": "bestiary",
+          "ms": 166,
+          "nodes": 1092,
+          "overflow": false,
+          "heap": 13821242
+        },
+        {
+          "tab": "expeditions",
+          "ms": 106,
+          "nodes": 267,
+          "overflow": false,
+          "heap": 14168834
+        },
+        {
+          "tab": "objects",
+          "ms": 124,
+          "nodes": 305,
+          "overflow": false,
+          "heap": 14467290
+        },
+        {
+          "tab": "museum",
+          "ms": 110,
+          "nodes": 399,
+          "overflow": false,
+          "heap": 11652270
+        },
+        {
+          "tab": "crown",
+          "ms": 131,
+          "nodes": 212,
+          "overflow": false,
+          "heap": 11907235
+        }
+      ]
+    },
+    {
+      "mode": "africa",
+      "label": "África y América",
+      "tasks": {
+        "unlock": {
+          "clicks": 2,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "atlas"
+          ],
+          "actions": 2,
+          "elapsedMs": 570,
+          "blocked": null
+        },
+        "materials": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 686,
+          "blocked": null
+        },
+        "sources": {
+          "clicks": 3,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 5,
+          "elapsedMs": 291,
+          "blocked": null
+        },
+        "craft": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 414,
+          "blocked": null
+        },
+        "voyage": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "expeditions"
+          ],
+          "actions": 4,
+          "elapsedMs": 219,
+          "blocked": null
+        },
+        "mission": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "society"
+          ],
+          "actions": 6,
+          "elapsedMs": 337,
+          "blocked": null
+        },
+        "publish": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 4,
+          "elapsedMs": 248,
+          "blocked": null
+        },
+        "exhibition": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "museum"
+          ],
+          "actions": 4,
+          "elapsedMs": 391,
+          "blocked": null
+        },
+        "achievement": {
+          "clicks": 3,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 3,
+          "elapsedMs": 190,
+          "blocked": null
+        }
+      },
+      "opening": [
+        {
+          "tab": "atlas",
+          "ms": 46,
+          "nodes": 560,
+          "overflow": false,
+          "heap": 14462465
+        },
+        {
+          "tab": "field",
+          "ms": 80,
+          "nodes": 287,
+          "overflow": false,
+          "heap": 14665916
+        },
+        {
+          "tab": "journal",
+          "ms": 79,
+          "nodes": 489,
+          "overflow": false,
+          "heap": 11727414
+        },
+        {
+          "tab": "research",
+          "ms": 38,
+          "nodes": 320,
+          "overflow": false,
+          "heap": 11968968
+        },
+        {
+          "tab": "society",
+          "ms": 152,
+          "nodes": 366,
+          "overflow": false,
+          "heap": 13011980
+        },
+        {
+          "tab": "bestiary",
+          "ms": 128,
+          "nodes": 1618,
+          "overflow": false,
+          "heap": 14875835
+        },
+        {
+          "tab": "expeditions",
+          "ms": 99,
+          "nodes": 267,
+          "overflow": false,
+          "heap": 12123227
+        },
+        {
+          "tab": "objects",
+          "ms": 99,
+          "nodes": 305,
+          "overflow": false,
+          "heap": 12421163
+        },
+        {
+          "tab": "museum",
+          "ms": 153,
+          "nodes": 399,
+          "overflow": false,
+          "heap": 12779455
+        },
+        {
+          "tab": "crown",
+          "ms": 146,
+          "nodes": 212,
+          "overflow": false,
+          "heap": 13054763
+        }
+      ]
+    },
+    {
+      "mode": "museum",
+      "label": "Mapas, comercio y Museo",
+      "tasks": {
+        "unlock": {
+          "clicks": 2,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "atlas"
+          ],
+          "actions": 2,
+          "elapsedMs": 629,
+          "blocked": null
+        },
+        "materials": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 783,
+          "blocked": null
+        },
+        "sources": {
+          "clicks": 3,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 5,
+          "elapsedMs": 504,
+          "blocked": null
+        },
+        "craft": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 984,
+          "blocked": null
+        },
+        "voyage": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "expeditions"
+          ],
+          "actions": 4,
+          "elapsedMs": 769,
+          "blocked": null
+        },
+        "mission": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "society"
+          ],
+          "actions": 6,
+          "elapsedMs": 635,
+          "blocked": null
+        },
+        "publish": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 4,
+          "elapsedMs": 425,
+          "blocked": null
+        },
+        "exhibition": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "museum"
+          ],
+          "actions": 4,
+          "elapsedMs": 680,
+          "blocked": null
+        },
+        "achievement": {
+          "clicks": 3,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 3,
+          "elapsedMs": 437,
+          "blocked": null
+        }
+      },
+      "opening": [
+        {
+          "tab": "atlas",
+          "ms": 95,
+          "nodes": 457,
+          "overflow": false,
+          "heap": 14123318
+        },
+        {
+          "tab": "field",
+          "ms": 111,
+          "nodes": 312,
+          "overflow": false,
+          "heap": 14327529
+        },
+        {
+          "tab": "journal",
+          "ms": 157,
+          "nodes": 623,
+          "overflow": false,
+          "heap": 14960529
+        },
+        {
+          "tab": "research",
+          "ms": 194,
+          "nodes": 320,
+          "overflow": false,
+          "heap": 12086159
+        },
+        {
+          "tab": "society",
+          "ms": 202,
+          "nodes": 367,
+          "overflow": false,
+          "heap": 13167463
+        },
+        {
+          "tab": "bestiary",
+          "ms": 404,
+          "nodes": 1649,
+          "overflow": false,
+          "heap": 15248070
+        },
+        {
+          "tab": "expeditions",
+          "ms": 175,
+          "nodes": 267,
+          "overflow": false,
+          "heap": 12542438
+        },
+        {
+          "tab": "objects",
+          "ms": 145,
+          "nodes": 305,
+          "overflow": false,
+          "heap": 12836750
+        },
+        {
+          "tab": "museum",
+          "ms": 123,
+          "nodes": 940,
+          "overflow": false,
+          "heap": 13688002
+        },
+        {
+          "tab": "crown",
+          "ms": 188,
+          "nodes": 212,
+          "overflow": false,
+          "heap": 14123301
+        }
+      ]
+    },
+    {
+      "mode": "polar",
+      "label": "Exploración polar",
+      "tasks": {
+        "unlock": {
+          "clicks": 2,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "atlas"
+          ],
+          "actions": 2,
+          "elapsedMs": 615,
+          "blocked": null
+        },
+        "materials": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 714,
+          "blocked": null
+        },
+        "sources": {
+          "clicks": 3,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 5,
+          "elapsedMs": 439,
+          "blocked": null
+        },
+        "craft": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 568,
+          "blocked": null
+        },
+        "voyage": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "expeditions"
+          ],
+          "actions": 4,
+          "elapsedMs": 426,
+          "blocked": null
+        },
+        "mission": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "society"
+          ],
+          "actions": 6,
+          "elapsedMs": 636,
+          "blocked": null
+        },
+        "publish": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 4,
+          "elapsedMs": 587,
+          "blocked": null
+        },
+        "exhibition": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "museum"
+          ],
+          "actions": 4,
+          "elapsedMs": 814,
+          "blocked": null
+        },
+        "achievement": {
+          "clicks": 3,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 3,
+          "elapsedMs": 332,
+          "blocked": null
+        }
+      },
+      "opening": [
+        {
+          "tab": "atlas",
+          "ms": 91,
+          "nodes": 379,
+          "overflow": false,
+          "heap": 14914397
+        },
+        {
+          "tab": "field",
+          "ms": 77,
+          "nodes": 280,
+          "overflow": false,
+          "heap": 15100124
+        },
+        {
+          "tab": "journal",
+          "ms": 109,
+          "nodes": 407,
+          "overflow": false,
+          "heap": 12291122
+        },
+        {
+          "tab": "research",
+          "ms": 87,
+          "nodes": 320,
+          "overflow": false,
+          "heap": 12530596
+        },
+        {
+          "tab": "society",
+          "ms": 195,
+          "nodes": 367,
+          "overflow": false,
+          "heap": 13653812
+        },
+        {
+          "tab": "bestiary",
+          "ms": 365,
+          "nodes": 1661,
+          "overflow": false,
+          "heap": 12499855
+        },
+        {
+          "tab": "expeditions",
+          "ms": 218,
+          "nodes": 267,
+          "overflow": false,
+          "heap": 12916671
+        },
+        {
+          "tab": "objects",
+          "ms": 172,
+          "nodes": 305,
+          "overflow": false,
+          "heap": 13209355
+        },
+        {
+          "tab": "museum",
+          "ms": 200,
+          "nodes": 940,
+          "overflow": false,
+          "heap": 14093771
+        },
+        {
+          "tab": "crown",
+          "ms": 184,
+          "nodes": 212,
+          "overflow": false,
+          "heap": 14546363
+        }
+      ]
+    },
+    {
+      "mode": "ocean",
+      "label": "Mapamundi y océanos",
+      "tasks": {
+        "unlock": {
+          "clicks": 2,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "atlas"
+          ],
+          "actions": 2,
+          "elapsedMs": 650,
+          "blocked": null
+        },
+        "materials": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 788,
+          "blocked": null
+        },
+        "sources": {
+          "clicks": 3,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 5,
+          "elapsedMs": 376,
+          "blocked": null
+        },
+        "craft": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 636,
+          "blocked": null
+        },
+        "voyage": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "expeditions"
+          ],
+          "actions": 4,
+          "elapsedMs": 576,
+          "blocked": null
+        },
+        "mission": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "society"
+          ],
+          "actions": 6,
+          "elapsedMs": 629,
+          "blocked": null
+        },
+        "publish": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 4,
+          "elapsedMs": 558,
+          "blocked": null
+        },
+        "exhibition": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "museum"
+          ],
+          "actions": 4,
+          "elapsedMs": 775,
+          "blocked": null
+        },
+        "achievement": {
+          "clicks": 3,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 3,
+          "elapsedMs": 425,
+          "blocked": null
+        }
+      },
+      "opening": [
+        {
+          "tab": "atlas",
+          "ms": 175,
+          "nodes": 505,
+          "overflow": false,
+          "heap": 15139452
+        },
+        {
+          "tab": "field",
+          "ms": 96,
+          "nodes": 293,
+          "overflow": false,
+          "heap": 12202147
+        },
+        {
+          "tab": "journal",
+          "ms": 77,
+          "nodes": 349,
+          "overflow": false,
+          "heap": 12446873
+        },
+        {
+          "tab": "research",
+          "ms": 86,
+          "nodes": 320,
+          "overflow": false,
+          "heap": 12682875
+        },
+        {
+          "tab": "society",
+          "ms": 319,
+          "nodes": 367,
+          "overflow": false,
+          "heap": 13896507
+        },
+        {
+          "tab": "bestiary",
+          "ms": 205,
+          "nodes": 1666,
+          "overflow": false,
+          "heap": 12580874
+        },
+        {
+          "tab": "expeditions",
+          "ms": 154,
+          "nodes": 267,
+          "overflow": false,
+          "heap": 13170566
+        },
+        {
+          "tab": "objects",
+          "ms": 155,
+          "nodes": 305,
+          "overflow": false,
+          "heap": 13462066
+        },
+        {
+          "tab": "museum",
+          "ms": 107,
+          "nodes": 940,
+          "overflow": false,
+          "heap": 14395730
+        },
+        {
+          "tab": "crown",
+          "ms": 175,
+          "nodes": 212,
+          "overflow": false,
+          "heap": 14704419
+        }
+      ]
+    },
+    {
+      "mode": "advanced",
+      "label": "Gabinete avanzado",
+      "tasks": {
+        "unlock": {
+          "clicks": 2,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "atlas"
+          ],
+          "actions": 2,
+          "elapsedMs": 370,
+          "blocked": null
+        },
+        "materials": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 449,
+          "blocked": null
+        },
+        "sources": {
+          "clicks": 3,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 5,
+          "elapsedMs": 316,
+          "blocked": null
+        },
+        "craft": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "objects"
+          ],
+          "actions": 6,
+          "elapsedMs": 640,
+          "blocked": null
+        },
+        "voyage": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "expeditions"
+          ],
+          "actions": 4,
+          "elapsedMs": 353,
+          "blocked": null
+        },
+        "mission": {
+          "clicks": 4,
+          "changes": 1,
+          "inputs": 1,
+          "screens": [
+            "society"
+          ],
+          "actions": 6,
+          "elapsedMs": 619,
+          "blocked": null
+        },
+        "publish": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 4,
+          "elapsedMs": 404,
+          "blocked": null
+        },
+        "exhibition": {
+          "clicks": 4,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "museum"
+          ],
+          "actions": 4,
+          "elapsedMs": 401,
+          "blocked": null
+        },
+        "achievement": {
+          "clicks": 3,
+          "changes": 0,
+          "inputs": 0,
+          "screens": [
+            "society"
+          ],
+          "actions": 3,
+          "elapsedMs": 191,
+          "blocked": null
+        }
+      },
+      "opening": [
+        {
+          "tab": "atlas",
+          "ms": 44,
+          "nodes": 501,
+          "overflow": false,
+          "heap": 16048366
+        },
+        {
+          "tab": "field",
+          "ms": 76,
+          "nodes": 293,
+          "overflow": false,
+          "heap": 16309509
+        },
+        {
+          "tab": "journal",
+          "ms": 122,
+          "nodes": 446,
+          "overflow": false,
+          "heap": 16687335
+        },
+        {
+          "tab": "research",
+          "ms": 107,
+          "nodes": 320,
+          "overflow": false,
+          "heap": 16921721
+        },
+        {
+          "tab": "society",
+          "ms": 118,
+          "nodes": 367,
+          "overflow": false,
+          "heap": 18381433
+        },
+        {
+          "tab": "bestiary",
+          "ms": 228,
+          "nodes": 1409,
+          "overflow": false,
+          "heap": 20034996
+        },
+        {
+          "tab": "expeditions",
+          "ms": 93,
+          "nodes": 267,
+          "overflow": false,
+          "heap": 20420664
+        },
+        {
+          "tab": "objects",
+          "ms": 108,
+          "nodes": 305,
+          "overflow": false,
+          "heap": 20711516
+        },
+        {
+          "tab": "museum",
+          "ms": 123,
+          "nodes": 940,
+          "overflow": false,
+          "heap": 21813508
+        },
+        {
+          "tab": "crown",
+          "ms": 177,
+          "nodes": 212,
+          "overflow": false,
+          "heap": 11517546
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
