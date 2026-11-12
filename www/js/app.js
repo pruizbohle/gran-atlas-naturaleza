@@ -5054,7 +5054,7 @@ function handlePanelAction(e){
     const el=e.target.closest?.('[data-action]');
     if(!el||!panel.contains(el)||el.disabled)return;
     const act=el.dataset.action; const id=el.dataset.id;
-    if(act.startsWith('ux-')){compassAction3410(act,id);return;}
+    if(act.startsWith('ux-')){uxAction3410(act,id);return;}
     if(act.startsWith('inv-')){inventoryAction3400(act,id);return;}
  // GM3330 BEGIN actions
     if(act.startsWith('deep-')){deepAction3330(act,id);return;}
@@ -5161,7 +5161,7 @@ panel.addEventListener('toggle',event=>{
  if(content&&!content.hasChildNodes())content.innerHTML=specialBadges(details.dataset.specimenCollection);
 },true);
 
-document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{ tab=b.dataset.tab; renderPanel(); }));
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{ if(uxRuntime3410)uxRuntime3410.trail=[];tab=b.dataset.tab;renderPanel(); }));
 
 function syncMuseumTimers(now=Date.now()){
  if(tab!=='museum')return;
@@ -7082,9 +7082,10 @@ function uxSources3410(id){
  if(id==='fossil_amber'||['fossil_tooth','fossil_skull','brass_shard','old_ink','carved_wood'].includes(id))for(const v of VOYAGES)if(!out.some(q=>q.type==='voyage'&&q.id===v.id))routeSource(v,v.name+' · hallazgo adicional posible');
  const animals=Object.entries(SPECIES_DROPS).filter(([,item])=>item===id).map(([species])=>species);
  for(const r of REGIONS)if(regionAccessible(r)&&r.species.some(sp=>animals.includes(sp)))out.push({type:r.id===state.currentRegion?'field':'atlas',id:r.id,label:'Campo: '+r.name+' · Gabinete de especímenes',available:!!state.upgrades.specimenDrops,reachable:true,research:state.upgrades.specimenDrops?null:'gabinete_1'});
- if(['fossil_fragment','fossil_tooth','fossil_skull','river_pearl'].includes(id)&&(id!=='river_pearl'||currentRegion().habitats.some(h=>['rio','costa'].includes(h))))out.push({type:'field',id:state.currentRegion,label:'Campo: '+currentRegion().name+' · hallazgo posible en condiciones compatibles',available:true,reachable:true});
+ if(!deepRegionIndex3330.has(state.currentRegion)&&['fossil_fragment','fossil_tooth','fossil_skull','river_pearl'].includes(id)&&(id!=='river_pearl'||currentRegion().habitats.some(h=>['rio','costa'].includes(h))))out.push({type:'field',id:state.currentRegion,label:'Campo: '+currentRegion().name+' · hallazgo posible en condiciones compatibles',available:true,reachable:true});
  for(const site of MUSEUM_DIG_SITES)if(['fossil_fragment','fossil_tooth','fossil_skull','fossil_track','fossil_claw'].includes(id)&&state.regionUnlocked[site.region])out.push({type:'museum',id:'fossils',label:'Museo: '+site.name+' · excavación',available:state.money>=site.money&&state.knowledge>=site.knowledge,reachable:true});
  if(MUSEUM_FOSSIL_RECIPES.some(r=>r.id===id))out.push({type:'museum',id:'fossils',label:'Taller de fósiles del Museo',available:true,reachable:true});
+ const regional=REGIONAL_BARTERS3400.find(d=>d.id===id);if(regional)out.push({type:'trade',id:'barters',label:'Trueque regional: '+regional.name+' · '+regional.quantity+':1',available:shipyard&&regionalAccess3400(regional.continent)&&supplyStock3390({[regional.material]:regional.quantity}),reachable:regionalAccess3400(regional.continent)});
  if(market)out.push({type:'trade',id:'market',label:'Mercado: £'+market+' por unidad',available:shipyard&&state.money>=market,reachable:shipyard,research:shipyard?null:'astillero'});
  return out;
 }
@@ -7111,7 +7112,7 @@ function syncCompass3410(now){
 }
 const atlasBeforeExperience3410=renderAtlas;
 renderAtlas=function(){return uxRenderCompass3410()+atlasBeforeExperience3410();};
-function uxInventoryTarget3410(id,recipe=false){if(!ITEMS[id])return false;state.inventoryView=recipe?'taller':inventoryCategory3400(id)==='animal'?'animales':['cartography','fossil','regional'].includes(inventoryCategory3400(id))?'coleccionables':ITEMS[id].slot?'equipo':'expedicion';Object.assign(inventoryUI3400,{query:'',category:'all',owned:'all',use:'all',craft:'all',page:0,selected:id});tab='objects';return true;}
+function uxInventoryTarget3410(id,recipe=false){if(!Object.hasOwn(ITEMS,id)||recipe&&!Object.hasOwn(RECIPES,id))return false;state.inventoryView=recipe?'taller':inventoryCategory3400(id)==='animal'?'animales':['cartography','fossil','regional'].includes(inventoryCategory3400(id))?'coleccionables':ITEMS[id].slot?'equipo':'expedicion';Object.assign(inventoryUI3400,{query:'',category:'all',owned:'all',use:'all',craft:'all',page:0,selected:id});tab='objects';return true;}
 function uxNavigate3410(type,id){
  if(type==='recipe'||type==='item'){if(!uxInventoryTarget3410(id,type==='recipe'))return false;}
  else if(type==='research'){if(!researchIndex3280.has(id))return false;developmentAction3280('er28-research',id);return true;}
@@ -7132,6 +7133,69 @@ function compassAction3410(action,id){
  const previous=state.ux3410,next=action==='ux-compass-hide'?'hidden':action==='ux-compass-show'?'visible':uxCompassPreference3410()==='collapsed'?'visible':'collapsed';state.ux3410={...(previous&&typeof previous==='object'?previous:{}),compass:next};if(!persist()){if(previous===undefined)delete state.ux3410;else state.ux3410=previous;return false;}const root=panel.querySelector('[data-ux-compass],.ux3410-show');if(root)root.outerHTML=uxRenderCompass3410();return true;
 }
 // UX3410 END contextual orientation
+
+// UX3410 BEGIN safe contextual navigation
+const uxLabels3410={atlas:'Atlas',field:'Campo',journal:'Cuaderno',research:'Investigación',society:'Sociedad',bestiary:'Bestiario',museum:'Museo',expeditions:'Expediciones',objects:'Inventario',crown:'Corona'};
+uxRuntime3410.trail=[];
+function uxViewKey3410(){return [tab,state.inventoryView,state.societyView,state.publicationView,state.museumView,state.researchBranch,navigationTab3300,tradeSection3390].filter(Boolean).join('|');}
+function uxViewSnapshot3410(){return {tab,scroll:globalThis.scrollY||0,fields:Object.fromEntries(['inventoryView','societyView','publicationView','museumView','researchBranch','atlasView','atlasSelectedRegion','selectedJournal'].map(k=>[k,state[k]])),inventory:{...inventoryUI3400},navigation:navigationTab3300,commerce:tradeSection3390,development:{route:developmentUI3280.route,filter:developmentUI3280.filter,projects:{...developmentUI3280.projects}}};}
+const uxNavigateBeforeTrail3410=uxNavigate3410;
+uxNavigate3410=function(type,id){
+ const before=uxViewSnapshot3410(),trail=uxRuntime3410.trail.slice();uxRuntime3410.trail.push(before);if(uxRuntime3410.trail.length>8)uxRuntime3410.trail.shift();
+ let ok=false;
+ if(type==='module'&&Object.hasOwn(uxLabels3410,id)){tab=id;renderPanel();ok=true;}else ok=uxNavigateBeforeTrail3410(type,id);
+ if(!ok)uxRuntime3410.trail=trail;return ok;
+};
+function uxBack3410(){const last=uxRuntime3410.trail.pop();if(!last)return false;for(const [key,value]of Object.entries(last.fields))if(value===undefined)delete state[key];else state[key]=value;Object.assign(inventoryUI3400,last.inventory);navigationTab3300=last.navigation;tradeSection3390=last.commerce;Object.assign(developmentUI3280,last.development);tab=last.tab;renderPanel();globalThis.requestAnimationFrame?.(()=>globalThis.scrollTo?.({top:last.scroll,behavior:'instant'}));return true;}
+function uxLink3410(type,id,label){return '<button type="button" class="ux3410-link" data-action="ux-open" data-id="'+type+'|'+id+'">'+esc(label)+'</button>';}
+const atlasModelBeforeLinks3410=atlasRegionModel;
+atlasRegionModel=function(r){
+ const m=atlasModelBeforeLinks3410(r),key=cartographicContinent3400(r),node=Object.keys(CONTINENT_RESEARCH3300).find(n=>CONTINENT_RESEARCH3300[n]===key),physical=RESEARCH_NODES.find(n=>n.id===node)?.reqItem,map=CARTOGRAPHIC_GATES3400[key],ids=[...new Set([...craftedRequirements3300(key),physical,map].filter(Boolean))];
+ m.requirements=m.requirements.map(req=>{const id=ids.find(id=>req.label.includes(ITEMS[id].name));return id?{...req,link:{type:'recipe',id,label:state.cartography3400?.historicalAccess[key]&&id===map?'Consultar colección voluntaria':'Consultar receta'}}:req;});
+ if(node&&!state.purchases[node])m.requirements.push({label:'Investigación: '+RESEARCH_NODES.find(n=>n.id===node).name,met:false,link:{type:'research',id:node,label:'Consultar investigación'}});
+ return m;
+};
+const detailBeforeLinks3410=inventoryDetail3400;
+inventoryDetail3400=function(id){
+ const html=detailBeforeLinks3410(id),sources=uxSources3410(id),unique=[...new Map(sources.map(s=>[s.type+'|'+s.id,s])).values()].sort((a,b)=>Number(b.available)-Number(a.available));
+ if(!unique.length)return html;
+ const link=s=>uxLink3410(s.type,s.id,s.label+(s.available?'':' · requisitos pendientes'));
+ const sourceHTML='<div class="ux3410-sources" aria-label="Atajos de procedencia"><strong>Consultar dónde conseguirlo</strong><div>'+unique.slice(0,3).map(link).join('')+'</div>'+(unique.length>3?'<details><summary>Otras fuentes · '+(unique.length-3)+'</summary>'+unique.slice(3).map(link).join('')+'</details>':'')+'</div>';
+ return html.replace('<details open><summary>Fuentes de obtención</summary>',sourceHTML+'<details><summary>Todas las fuentes documentadas</summary>');
+};
+const supplyMaterialsBeforeLinks3410=supplyMaterials3390;
+supplyMaterials3390=function(items){let html=supplyMaterialsBeforeLinks3410(items);for(const [id,n]of Object.entries(items))html=html.replace('<span>'+esc(ITEMS[id].name)+' ×'+n+'</span>',uxLink3410('item',id,ITEMS[id].name+' ×'+n));return html;};
+const inventoryActionBeforeLinks3410=inventoryAction3400;
+inventoryAction3400=function(action,id=''){
+ if(action==='inv-item')return uxNavigate3410('item',id);
+ if(action==='inv-recipe')return uxNavigate3410('recipe',id);
+ if(action==='inv-research')return uxNavigate3410('research',id);
+ if(action==='inv-commerce')return uxNavigate3410('trade',id);
+ if(action==='inv-museum')return uxNavigate3410('museum',id);
+ if(action==='inv-map-atlas'){const r=REGIONS.find(r=>r.continent===id);return r?uxNavigate3410('atlas',r.id):false;}
+ return inventoryActionBeforeLinks3410(action,id);
+};
+const developmentBeforeLinks3410=developmentAction3280;
+developmentAction3280=function(action,id){if(action==='er28-inventory')return uxNavigate3410(RECIPES[id]?'recipe':'item',id);return developmentBeforeLinks3410(action,id);};
+const commissionBeforeLinks3410=commissionAction3370;
+commissionAction3370=function(action,id){
+ if(action==='enc-go'){const m=globalThis.AtlasCommissions3370.models(state,commissionContext3370()).find(m=>m.id===id);if(!m)return false;const module=m.definition.module;
+  if(module==='field')return uxNavigate3410('field',state.currentRegion);
+  if(module==='journal'){const species=currentRegion().species.find(id=>state.discovered[id]&&!state.published[id]);return species?uxNavigate3410('journal',species):uxNavigate3410('field',state.currentRegion);}
+  if(module==='society')return uxNavigate3410('society','publications');
+  return uxNavigate3410('module',module);
+ }
+ return commissionBeforeLinks3410(action,id);
+};
+function uxAction3410(action,id){
+ if(action==='ux-open'){const [type,target]=String(id||'').split('|');return uxNavigate3410(type,target);}
+ if(action==='ux-back')return uxBack3410();
+ if(['ux-compass-go','ux-compass-fold','ux-compass-hide','ux-compass-show'].includes(action))return compassAction3410(action,id);
+ return false;
+}
+const panelBeforeTrail3410=renderPanel;
+renderPanel=function(){panelBeforeTrail3410();const last=uxRuntime3410.trail.at(-1);if(last)panel.insertAdjacentHTML?.('afterbegin','<button type="button" class="ux3410-back" data-action="ux-back">‹ Volver a '+uxLabels3410[last.tab]+'</button>');};
+// UX3410 END safe contextual navigation
 
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 // ACH3360 BEGIN event integration. No timer and no per-render achievement mutations.
