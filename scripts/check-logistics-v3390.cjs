@@ -1,7 +1,11 @@
 'use strict';
-const fs=require('node:fs'),assert=require('node:assert/strict'),{chromium}=require('playwright');
+const fs=require('node:fs'),assert=require('node:assert/strict'),cp=require('node:child_process'),crypto=require('node:crypto'),{chromium}=require('playwright');
 const base=process.env.ATLAS_TEST_URL||'http://127.0.0.1:8768/',out=process.env.ATLAS_BROWSER_OUT||'docs/log3390/browser';fs.mkdirSync(out,{recursive:true});
-(async()=>{const browser=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});try{const report={version:'3.39.0',base,widths:[],errors:[],physicalAndroid:false};
+const launch={executablePath:'/usr/bin/chromium',args:['--no-sandbox']};
+// Trust only the supplied environment proxy CA by its public key, following the
+// published3.38 browser verifier. Do not disable certificate checks globally.
+if(base.startsWith('https:')){const cert=process.env.CODEX_PROXY_CERT||'/usr/local/share/ca-certificates/environment-proxy-ca.crt';if(fs.existsSync(cert)){const pem=cp.execFileSync('openssl',['x509','-in',cert,'-pubkey','-noout']),der=cp.execFileSync('openssl',['pkey','-pubin','-outform','DER'],{input:pem});launch.args.push('--ignore-certificate-errors-spki-list='+crypto.createHash('sha256').update(der).digest('base64'));}if(process.env.HTTPS_PROXY)launch.proxy={server:process.env.HTTPS_PROXY};}
+(async()=>{const browser=await chromium.launch(launch);try{const report={version:'3.39.0',base,explicitEnvironmentCATrust:base.startsWith('https:'),widths:[],errors:[],physicalAndroid:false};
 for(const width of [320,360,390,412,1280]){const context=await browser.newContext({viewport:{width,height:900},hasTouch:width<700}),p=await context.newPage();await p.addInitScript(()=>{window.__logIntervals=0;const old=window.setInterval;window.setInterval=(...args)=>{window.__logIntervals++;return old(...args);};});p.on('pageerror',e=>report.errors.push(e.message));p.setDefaultTimeout(15000);let confirms=0,accept=true;p.on('dialog',async d=>{confirms++;assert.ok(d.message().includes('Confirmar')||d.message().includes('Confirmar'.toLowerCase())||d.message().includes('confirmar'));if(accept)await d.accept();else await d.dismiss();});
 await p.goto(base);await p.waitForFunction(()=>!!window.AtlasSaveBridge);
 await p.evaluate(()=>{const s=AtlasSaveBridge.getSaveData();s.money=s.knowledge=100000;s.prestige=1000;s.helpers=0;s.upgrades.shipyard=1;s.craftedItems={brass_compass:true,oceanic_quadrant:true,field_telescope:true,scholar_hat:true,polar_coat:true,sounding_kit:true};for(const id of ['pressed_flower','parchment_scrap','animal_trace','river_pebble','fossil_fragment','fossil_tooth','carved_wood','polished_lens','brass_shard','old_ink'])s.inventory[id]=100;AtlasSaveBridge.restoreGame(s);});

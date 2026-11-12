@@ -1,0 +1,55 @@
+{
+  "version": "3.39.0",
+  "workflow": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/43143070014",
+  "deploymentCommit": "148321e7b11e85c0452876bdb26d361659c83602",
+  "conclusion": "success",
+  "tests": 599,
+  "pass": 599,
+  "fail": 0,
+  "steps": [
+    {
+      "name": "Set up job",
+      "conclusion": "success"
+    },
+    {
+      "name": "Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Evitar desplegar una rama Oceanía aún sin activar",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "Preparar Node",
+      "conclusion": "success"
+    },
+    {
+      "name": "Validar código y pruebas del Atlas",
+      "conclusion": "success"
+    },
+    {
+      "name": "Configure Pages",
+      "conclusion": "success"
+    },
+    {
+      "name": "Upload game",
+      "conclusion": "success"
+    },
+    {
+      "name": "Deploy",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Preparar Node",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Checkout",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "conclusion": "success"
+    }
+  ]
+}

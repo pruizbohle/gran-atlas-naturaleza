@@ -56,7 +56,7 @@ node scripts/check-logistics-pwa-v3390.cjs
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualizar con respaldo exacto](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3390.html) · [Laboratorio comercial](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-logistica-v3390.html).
 
-La integración y verificación de producción se documentarán aquí con el commit y el workflow reales después del despliegue. El hito permanece pendiente hasta esa comprobación.
+**Publicación verificada.** El commit [`148321e`](https://github.com/pruizbohle/gran-atlas-naturaleza/commit/148321e7b11e85c0452876bdb26d361659c83602) integra LOG-01–LOG-06 en `main` y `feat/logistica-comercio-v3390`. [GitHub Actions](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/43143070014) aprobó599/599 pruebas y desplegó Pages. Los [178 archivos públicos](docs/log3390/published-report.json) coinciden con sus hashes SHA-256, sin diferencias. La [prueba Chromium sobre producción](docs/log3390/published-browser/report.json) pasó en las cinco resoluciones, incluyendo carga de24h persistente, confirmaciones, laboratorio aislado, error de guardado y juego/laboratorio offline. Caché `gran-atlas-v3.39.0-logistics-52386e479b41`,176 archivos únicos declarados offline. No se generó APK ni se modificó la firma Android.
 
 ## Próxima versión 3.40.0
 
