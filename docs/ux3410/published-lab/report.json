@@ -1,0 +1,66 @@
+{
+  "version": "3.41.0",
+  "opaqueSandbox": true,
+  "personalStorageUntouched": true,
+  "nineSyntheticStages": [
+    {
+      "scenario": "new",
+      "goal": "Preparar la próxima ruta",
+      "maps": 0,
+      "historical": 0
+    },
+    {
+      "scenario": "europe",
+      "goal": "Hay una recompensa disponible",
+      "maps": 0,
+      "historical": 0
+    },
+    {
+      "scenario": "first_continent",
+      "goal": "Hay una recompensa disponible",
+      "maps": 0,
+      "historical": 0
+    },
+    {
+      "scenario": "africa",
+      "goal": "Hay una recompensa disponible",
+      "maps": 2,
+      "historical": 0
+    },
+    {
+      "scenario": "museum",
+      "goal": "Hay una recompensa disponible",
+      "maps": 6,
+      "historical": 0
+    },
+    {
+      "scenario": "polar",
+      "goal": "Hay una recompensa disponible",
+      "maps": 6,
+      "historical": 0
+    },
+    {
+      "scenario": "ocean",
+      "goal": "Hay una recompensa disponible",
+      "maps": 6,
+      "historical": 0
+    },
+    {
+      "scenario": "advanced",
+      "goal": "Hay una recompensa disponible",
+      "maps": 6,
+      "historical": 0
+    },
+    {
+      "scenario": "historical",
+      "goal": "Hay una recompensa disponible",
+      "maps": 0,
+      "historical": 6
+    }
+  ],
+  "safeShortcutReturn": true,
+  "quotaPreferenceRollback": true,
+  "offlineLabAndGame": true,
+  "errors": [],
+  "physicalAndroid": false
+}

@@ -1,0 +1,55 @@
+{
+  "method": "Three real elapsed 20-minute sessions, live original one-second ticker, same synthetic advanced save, 390 px, no reload, nine module clicks every 10s. GC at minute checkpoints only for comparison. Chromium emulation, not physical Android.",
+  "baseline3400": {
+    "elapsedMs": 1209070,
+    "actions": 1080,
+    "samples": 22,
+    "nodes": 1407,
+    "activeListenersInitial": 72,
+    "activeListenersFinal": 73,
+    "intervals": 1,
+    "initialHeapBytes": 5880725,
+    "lastHeapBytes": 7816600,
+    "lastFiveHeapRangeBytes": [
+      7799340,
+      7816600
+    ],
+    "errors": []
+  },
+  "iterationUX04": {
+    "elapsedMs": 1208075,
+    "actions": 1071,
+    "samples": 22,
+    "nodes": 366,
+    "activeListenersInitial": 72,
+    "activeListenersFinal": 73,
+    "intervals": 1,
+    "initialHeapBytes": 5813629,
+    "lastHeapBytes": 7945686,
+    "lastFiveHeapRangeBytes": [
+      7929530,
+      7945686
+    ],
+    "errors": []
+  },
+  "final3410": {
+    "elapsedMs": 1202337,
+    "actions": 1071,
+    "samples": 22,
+    "nodes": 366,
+    "activeListenersInitial": 72,
+    "activeListenersFinal": 73,
+    "intervals": 1,
+    "initialHeapBytes": 5814872,
+    "lastHeapBytes": 7938725,
+    "lastFiveHeapRangeBytes": [
+      7933425,
+      8169235
+    ],
+    "errors": []
+  },
+  "finalAppSha256": "b41dff685b6801ad371928a67bfd1b41ed60f4108eed19e3a3da599b5e268c09",
+  "matchesPublishedManifest": true,
+  "observedDOMAndListenersStabilized": true,
+  "physicalAndroid": false
+}

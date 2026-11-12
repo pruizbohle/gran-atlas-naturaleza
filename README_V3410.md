@@ -4,7 +4,7 @@ La Brújula del naturalista muestra un objetivo calculado desde la partida en At
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualizar con respaldo](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3410.html) · [Laboratorio aislado](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-experiencia-v3410.html)
 
-Estado: candidato web preparado; la comprobación final de Actions, hashes de Pages, navegación publicada y sesión de tiempo real se añadirá después del despliegue. Android queda pendiente por separado.
+**Publicación web verificada.** El commit [`a343ed2`](https://github.com/pruizbohle/gran-atlas-naturaleza/commit/a343ed23ee5150a500708cd33cc543705a9eb0b7) integra UX-01–UX-07 en `main`. [Actions](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/43239217859) aprobó **720/720 pruebas** (666 referencias intactas + 54 actuales) y desplegó Pages. Los [187/187 hashes publicados](docs/ux3410/published-report.json) coinciden sin diferencias; caché `gran-atlas-v3.41.0-experience-376e1e9631e1`, 185 recursos offline. [Navegación publicada en cinco anchos](docs/ux3410/published-browser/report.json) y [laboratorio publicado offline](docs/ux3410/published-lab/report.json) aprobados, sin errores JavaScript. Android queda pendiente por separado.
 
 ## Orientación y navegación
 
@@ -28,6 +28,8 @@ Se reutiliza el aviso de Sociedad para descubrimientos, etapas, publicaciones, m
 - [Listas de Sociedad](docs/ux3410/society-performance.json): Logros baja de 1.407 a 366 nodos y Misiones de 1.079 a 373. Los cambios de módulo presentan una regresión de latencia en estas ejecuciones; no se afirma una mejora general de velocidad.
 - [Actualización real 3.40→3.41](docs/ux3410/pwa/report.json): respaldo exacto, otra ventana bloquea activación, trabajos pendientes, 90 días offline, cobro único, manifiestos, contratos y acceso oceánico histórico sin mapas inventados.
 - [Laboratorio offline](docs/ux3410/lab/report.json): iframe opaco `allow-scripts`, motor real, nueve etapas sintéticas y fallo simulado de almacenamiento; no puede leer o sustituir partidas personales.
+
+Las sesiones base y final completaron más de veinte minutos reales, sin errores ni crecimiento de nodos o escuchadores tras estabilizarse. El SHA-256 de app.js de la sesión final coincide con el manifiesto publicado. [Resultados de tiempo real](docs/ux3410/sessions-comparison.json) · [Gráfica de memoria y DOM](docs/ux3410/sessions-comparison.png).
 
 Las pruebas usan Chromium emulado y partidas sintéticas declaradas. No son una prueba de usabilidad con participantes ni un ensayo Android físico. Las sesiones de tiempo real y las ráfagas de 600 cambios se informan por separado. Se fuerza GC solo para comparar extremos de memoria, no como mecanismo del juego.
 
