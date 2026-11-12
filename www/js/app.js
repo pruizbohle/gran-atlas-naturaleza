@@ -2821,7 +2821,125 @@ function publishMonograph(id){
   state.published[id]=true;
   state.prestige+=1;
   state.money+=90;
-  if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
+  // INV3400 BEGIN inventory and workshop
+const INVENTORY_SECTIONS3400=[['equipo','Equipo'],['animales','Animales'],['expedicion','Expedición'],['coleccionables','Coleccionables'],['taller','Taller']];
+const inventoryUI3400={query:'',category:'all',owned:'all',use:'all',craft:'all',sort:'alpha',page:0,selected:null};
+let inventoryActionSeq3400=0;
+function isMap3400(id){return /_map(?:_piece)?$/.test(id)||id==='world_map';}
+function inventoryCategory3400(id){const i=ITEMS[id];return isMap3400(id)?'cartography':i.kind==='regional'?'regional':i.slot?'equip':i.kind==='animal'?'animal':i.kind==='fossil'||i.kind==='rare'?'fossil':'materials';}
+function inventorySources3400(id){
+ const sources=[];
+ if(RECIPES[id])sources.push('Taller: '+Object.entries(RECIPES[id].requires).map(([k,n])=>ITEMS[k].name+' ×'+n).join(' · '));
+ if(V316_ORIGINS[id])sources.push(V316_ORIGINS[id]);
+ if(V316_LOOT_BASE.some(([i])=>i===id))sources.push('Botín común de las ocho expediciones (probabilidad variable)');
+ for(const v of VOYAGES)if(v.sample===id||V316_LOOT_BY_ROUTE[v.id]?.some(([i])=>i===id))sources.push(v.name+(v.sample===id?' · muestra garantizada':' · botín posible'));
+ for(const r of TRADE_ROUTES)if(r.rewards[id])sources.push('Comercio: '+r.name+' · '+r.rewards[id]+' unidades por viaje');
+ if(TRADE_MARKET[id])sources.push('Mercado: £'+TRADE_MARKET[id]+' por unidad');
+ for(const b of TRADE_BARTERS)if(b.rewards[id])sources.push('Conversión de suministros: '+tradeMaterials3300(b.requires));
+ for(const [sp,item]of Object.entries(SPECIES_DROPS))if(item===id)sources.push('Gabinete de especímenes: '+SPECIES[sp].name);
+ for(const r of MUSEUM_FOSSIL_RECIPES)if(r.id===id)sources.push('Taller del Museo: '+r.name);
+ return [...new Set(sources)];
+}
+function inventoryUses3400(id){
+ const uses=[];
+ for(const [out,r]of Object.entries(RECIPES))if(r.requires[id])uses.push({name:ITEMS[out].name,action:'recipe',id:out,kind:'recipe'});
+ for(const p of Object.values(V316_MATERIAL_STUDIES))if(p.requires[id])uses.push({name:p.name,action:'studies',id:'',kind:'research'});
+ for(const p of [...MUSEUM_COLLECTIONS,...MUSEUM_FOSSIL_RECIPES,...MUSEUM_CURATORIAL_PROJECTS])if(p.requires[id])uses.push({name:p.name,action:'goto',id:'museum',kind:'museum'});
+ for(const n of RESEARCH_NODES)if(n.reqItem===id)uses.push({name:n.name,action:'research',id:n.id,kind:'research'});
+ for(const c of SUPPLY_CONTRACTS3390)if(c.requires[id])uses.push({name:c.name,action:'commerce',id:'contracts',kind:'commerce'});
+ for(const m of CARGO_MANIFESTS3390)if(m.requires[id])uses.push({name:m.name,action:'commerce',id:'routes',kind:'commerce'});
+ for(const b of TRADE_BARTERS)if(b.requires[id])uses.push({name:'Conversión: '+tradeMaterials3300(b.rewards),action:'commerce',id:'barters',kind:'commerce'});
+ if(Object.values(CONTINENT_RULES3300).some(r=>r.items.includes(id)))uses.push({name:'Preparación continental permanente',action:'goto',id:'atlas',kind:'progression'});
+ if(ITEMS[id].slot)uses.push({name:'Equipar: '+ITEMS[id].bonus,action:'equip',id,kind:'equipment'});
+ return uses;
+}
+function recipePlan3400(id,s=state){
+ const recipe=RECIPES[id];if(!recipe)return null;
+ const stock={...s.inventory},missing={},components={};
+ function need(item,n,path=[]){
+  const used=Math.min(Math.max(0,stock[item]||0),n);stock[item]=(stock[item]||0)-used;n-=used;if(!n)return;
+  if(RECIPES[item]&&!path.includes(item)){components[item]=(components[item]||0)+n;for(const [mat,q]of Object.entries(RECIPES[item].requires))need(mat,n*q,path.concat(item));}
+  else missing[item]=(missing[item]||0)+n;
+ }
+ for(const [mat,n]of Object.entries(recipe.requires))need(mat,n,[id]);
+ return {missing,components};
+}
+function recipeRisk3400(id){
+ const recipe=RECIPES[id];if(!recipe||!canCraft(id))return false;
+ const before=supplyReserve3390(),s={...state,inventory:{...state.inventory},craftedItems:{...state.craftedItems,[id]:true}};
+ for(const [k,n]of Object.entries(recipe.requires))s.inventory[k]-=n;
+ s.inventory[id]=(s.inventory[id]||0)+1;
+ const after=supplyReserve3390(s);
+ return Object.keys(after).some(k=>Math.max(0,after[k]-(s.inventory[k]||0))>Math.max(0,(before[k]||0)-(state.inventory[k]||0)));
+}
+function inventoryQuery3400(){
+ const view=state.inventoryView,ui=inventoryUI3400;
+ let ids=Object.keys(view==='taller'?RECIPES:ITEMS).filter(id=>{
+  const cat=inventoryCategory3400(id),i=ITEMS[id];
+  if(view==='equipo'&&!i.slot||view==='animales'&&i.kind!=='animal'||view==='coleccionables'&&!['cartography','regional','fossil'].includes(cat)||view==='expedicion'&&['equip','animal','regional','fossil'].includes(cat))return false;
+  if(ui.query&&!ITEMS[id].name.toLocaleLowerCase('es').includes(ui.query.toLocaleLowerCase('es')))return false;
+  if(ui.category!=='all'&&cat!==ui.category)return false;
+  const owned=(state.inventory[id]||0)>0;
+  if(ui.owned==='owned'&&!owned||ui.owned==='missing'&&owned)return false;
+  if(ui.use!=='all'&&!inventoryUses3400(id).some(u=>u.kind===ui.use))return false;
+  if(ui.craft==='ready'&&!canCraft(id)||ui.craft==='missing'&&(!RECIPES[id]||canCraft(id))||ui.craft==='made'&&!state.craftedItems[id])return false;
+  return true;
+ });
+ ids.sort((a,b)=>(ui.sort==='quantity'?(state.inventory[b]||0)-(state.inventory[a]||0):0)||ITEMS[a].name.localeCompare(ITEMS[b].name,'es'));
+ const pages=Math.max(1,Math.ceil(ids.length/6)),page=Math.max(0,Math.min(pages-1,ui.page));
+ return {ids,total:ids.length,pages,page,shown:ids.slice(page*6,page*6+6)};
+}
+function inventorySelect3400(key,label,options){return `<label>${label}<select data-inv-filter="${key}">${options.map(([v,l])=>`<option value="${v}" ${inventoryUI3400[key]===v?'selected':''}>${l}</option>`).join('')}</select></label>`;}
+function inventoryMaterials3400(requires){const reserve=supplyReserve3390();return `<ul class="inv340-materials">${Object.entries(requires).map(([id,n])=>{const have=state.inventory[id]||0,r=reserve[id]||0;return `<li><button class="inv340-link" data-action="inv-item" data-id="${id}">${ITEMS[id].name} ×${n}</button><small>Disponibles ${have} · reservados ${r} · utilizables ${Math.max(0,have-r)}${have<n?' · faltan '+(n-have):''}</small></li>`;}).join('')}</ul>`;}
+function inventoryRecipe3400(id){
+ const plan=recipePlan3400(id);if(!plan)return '';
+ const preparation=Object.values(CONTINENT_RULES3300).some(r=>r.items.includes(id));
+ return `<section class="inv340-recipe"><h5>Planificador · ${ITEMS[id].name}</h5><p class="small">${state.craftedItems[id]?'Fabricado anteriormente':'Aún no fabricado'}${preparation?' · preparación continental permanente':''}.</p>${inventoryMaterials3400(RECIPES[id].requires)}<details><summary>Materiales faltantes y subcomponentes</summary><p class="small">Stock compartido, calculado recursivamente. No fabrica automáticamente.</p>${Object.keys(plan.components).length?`<p class="small">Subcomponentes: ${tradeMaterials3300(plan.components)}</p>`:''}<p class="small">${Object.keys(plan.missing).length?'Faltan materiales de base: '+tradeMaterials3300(plan.missing):'Todos los materiales de base están disponibles.'}</p></details>${recipeRisk3400(id)?'<p class="inv340-warning">Esta fabricación utiliza materiales reservados para otra preparación. Se pedirá confirmación.</p>':''}<button class="btn" data-action="inv-craft" data-id="${id}|${inventoryActionSeq3400}" ${canCraft(id)?'':'disabled'}>Fabricar ${ITEMS[id].name}</button></section>`;
+}
+function inventoryDetail3400(id){
+ if(!ITEMS[id])return '';
+ const uses=inventoryUses3400(id),sources=inventorySources3400(id);
+ return `<section class="inv340-detail" aria-label="Ficha de objeto"><div class="inv340-title">${itemArtInline(id)}<h4>${ITEMS[id].name}</h4></div><p class="small">${ITEMS[id].bonus} · En bolsa: ${state.inventory[id]||0}.</p>${ITEMS[id].slot?`<button class="btn alt" data-action="equip-item" data-id="${id}" ${state.inventory[id]?'':'disabled'}>${state.equipment[ITEMS[id].slot]===id?'Quitar':'Equipar'}</button>`:''}<details open><summary>Fuentes de obtención</summary><ul class="small">${sources.map(s=>`<li>${esc(s)}</li>`).join('')||'<li>Registro de colección; sin fuente consumible.</li>'}</ul></details><details><summary>Usos y destinos · ${uses.length}</summary><ul class="inv340-uses">${uses.map(u=>`<li><button class="inv340-link" data-action="inv-${u.action}" data-id="${u.id}">${esc(u.name)}</button></li>`).join('')||'<li>Conservar en la colección del gabinete.</li>'}</ul></details>${inventoryRecipe3400(id)}</section>`;
+}
+function inventoryStudies3400(){return `<details class="inv340-studies"><summary>Estudios de materiales repetidos · 8 proyectos</summary><p class="small">Conservan sus costos y resultados. Comprueba las reservas antes de utilizar suministros.</p>${Object.entries(V316_MATERIAL_STUDIES).map(([id,p])=>`<details><summary>${p.name}</summary><p class="small">${p.description} · £${p.money||0} y ${p.knowledge||0} conocimiento.</p>${inventoryMaterials3400(p.requires)}${[1,5].map(n=>`<button class="btn alt" data-action="process-materials" data-id="${id}:${n}" ${canProcessMaterials(id,n)?'':'disabled'}>Estudiar ×${n}</button>`).join('')}</details>`).join('')}</details>`;}
+renderObjects=function(){
+ const q=inventoryQuery3400(),ui=inventoryUI3400,id=ITEMS[ui.selected]?ui.selected:q.shown[0];
+ return `<section class="card inventory-main inv340-root"><header><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3>Inventario y Taller</h3><p class="small">${Object.values(state.inventory).filter(n=>n>0).length} tipos de objetos · ${Object.values(state.equipment).filter(Boolean).length}/3 ranuras activas.</p></header><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${INVENTORY_SECTIONS3400.map(([key,name])=>`<button class="inventory-subtab ${state.inventoryView===key?'active':''}" data-action="inventory-tab" data-id="${key}" role="tab" aria-selected="${state.inventoryView===key}">${name}</button>`).join('')}</div>${state.inventoryView==='equipo'?`<details><summary>Equipo activo y bonificaciones</summary><p class="small">Manual ${pctBuff(manualSearchChance())} · automático ${state.helpers?pctBuff(automaticSearchChance()):'inactivo'} · cada ${autoInterval()} s. Los bonos originales solo se aplican al equipar.</p><ul>${Object.entries(state.equipment).map(([slot,item])=>`<li>${{instrument:'Instrumento',hat:'Gorro',necklace:'Collar'}[slot]}: ${item?ITEMS[item].name:'Vacío'}</li>`).join('')}</ul></details>`:''}<label class="inv340-search">Buscar objetos<input type="search" data-inv-filter="query" value="${esc(ui.query)}" placeholder="Nombre del objeto" maxlength="80"></label><details class="inv340-filters"><summary>Filtros y orden</summary><div class="inv340-controls">${inventorySelect3400('category','Categoría',[['all','Todas'],['equip','Equipo'],['animal','Animal'],['materials','Materiales'],['fossil','Fósiles y raros'],['cartography','Cartografía'],['regional','Mercancías regionales']])}${inventorySelect3400('owned','Posesión',[['all','Todos'],['owned','En bolsa'],['missing','Sin existencias']])}${inventorySelect3400('use','Utilidad',[['all','Todas'],['recipe','Fabricación'],['progression','Progresión'],['research','Investigación'],['museum','Museo'],['commerce','Comercio']])}${inventorySelect3400('craft','Fabricación',[['all','Todas'],['ready','Fabricable ahora'],['missing','Faltan materiales'],['made','Fabricado antes']])}${inventorySelect3400('sort','Orden',[['alpha','Alfabético'],['quantity','Mayor cantidad']])}</div><button class="btn alt" data-action="inv-reset">Limpiar filtros</button></details>${state.inventoryView==='coleccionables'&&typeof renderCartography3400==='function'?renderCartography3400():''}<p class="small" aria-live="polite">${q.total} resultados · página ${q.page+1}/${q.pages}</p><div class="inv340-grid">${q.shown.map(key=>`<button class="inv340-card ${key===id?'selected':''}" data-action="inv-item" data-id="${key}" aria-pressed="${key===id}">${itemArtInline(key)}<strong>${ITEMS[key].name}</strong><span>×${state.inventory[key]||0}${state.inventoryView==='taller'?' · '+(canCraft(key)?'Fabricable':'Faltan materiales'):''}</span></button>`).join('')||'<p>No hay objetos con estos filtros.</p>'}</div><nav class="inv340-pages" aria-label="Páginas de objetos"><button class="btn alt" data-action="inv-page" data-id="${q.page-1}" ${q.page===0?'disabled':''}>Anterior</button><span>${q.page+1}/${q.pages}</span><button class="btn" data-action="inv-page" data-id="${q.page+1}" ${q.page+1>=q.pages?'disabled':''}>Siguiente</button></nav>${id?inventoryDetail3400(id):''}${state.inventoryView==='taller'?inventoryStudies3400():''}</section>`;
+};
+craftItem=function(id){
+ if(!ITEMS[id]||!canCraft(id))return false;
+ if(recipeRisk3400(id)&&!window.confirm('Esta receta consume materiales reservados para otra preparación continental. ¿Confirmar fabricación?'))return false;
+ const ok=tradeTransaction3300(()=>{
+  for(const [mat,n]of Object.entries(RECIPES[id].requires)){
+   state.inventory[mat]-=n;
+   if(state.inventory[mat]===0)for(const slot of ['instrument','hat','necklace'])if(state.equipment[slot]===mat)state.equipment[slot]=null;
+  }
+  addInventory(id,1);state.craftedItems[id]=true;pushLog('🛠️ Fabricado: '+ITEMS[id].name);achievementMark3360('research');return true;
+ });
+ if(ok)inventoryActionSeq3400++;renderCounters();renderPanel();return ok;
+};
+function inventoryAction3400(action,id=''){
+ const ui=inventoryUI3400;
+ if(action==='inv-item'&&ITEMS[id])ui.selected=id;
+ else if(action==='inv-recipe'&&RECIPES[id]){state.inventoryView='taller';ui.query='';ui.category=ui.owned=ui.use=ui.craft='all';ui.selected=id;}
+ else if(action==='inv-craft'){const [item,seq]=id.split('|');if(Number(seq)===inventoryActionSeq3400)craftItem(item);return;}
+ else if(action==='inv-page')ui.page=Math.max(0,Math.min(inventoryQuery3400().pages-1,Number(id)||0));
+ else if(action==='inv-reset')Object.assign(ui,{query:'',category:'all',owned:'all',use:'all',craft:'all',page:0,selected:null});
+ else if(action==='inv-studies')state.inventoryView='taller';
+ else if(action==='inv-equip'){equipItem(id);return;}
+ else if(action==='inv-research'){developmentAction3280('er28-research',id);return;}
+ else if(action==='inv-commerce'){tab='expeditions';navigationTab3300='commerce';tradeSection3390=id;}
+ else if(action==='inv-goto'&&['museum','atlas','research','expeditions'].includes(id))tab=id;
+ renderPanel();
+}
+panel.addEventListener('input',event=>{
+ const el=event.target,key=el.dataset?.invFilter;if(key!=='query')return;
+ inventoryUI3400.query=el.value.slice(0,80);inventoryUI3400.page=0;inventoryUI3400.selected=null;renderPanel();const input=panel.querySelector('[data-inv-filter="query"]');input?.focus();
+});
+panel.addEventListener('change',event=>{const key=event.target.dataset?.invFilter;if(!key||key==='query'||!Object.hasOwn(inventoryUI3400,key))return;inventoryUI3400[key]=event.target.value;inventoryUI3400.page=0;inventoryUI3400.selected=null;renderPanel();});
+// INV3400 END inventory and workshop
+
+if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
   pushLog(`🏅 Monografía publicada: ${SPECIES[id].name}. +1 prestigio, +£90.`);
   render();
 }
@@ -5046,6 +5164,7 @@ function handlePanelAction(e){
     const el=e.target.closest?.('[data-action]');
     if(!el||!panel.contains(el)||el.disabled)return;
     const act=el.dataset.action; const id=el.dataset.id;
+    if(act.startsWith('inv-')){inventoryAction3400(act,id);return;}
  // GM3330 BEGIN actions
     if(act.startsWith('deep-')){deepAction3330(act,id);return;}
     if(deepRegionIndex3330.has(state.currentRegion)&&(act==='search-manual'||act==='field-aid')){if(act==='search-manual')deepAction3330('deep-start');return;}
@@ -5124,7 +5243,7 @@ function handlePanelAction(e){
     if(act==='exhibit'){ exhibitAnimal(id); }
     if(act==='sail'){sail(id);}
     if(act==='equip-item'){equipItem(id);}
-    if(act==='inventory-tab' && ['equipo','animales','expedicion','coleccionables','taller'].includes(id)){state.inventoryView=id;renderPanel();persist();}
+    if(act==='inventory-tab' && ['equipo','animales','expedicion','coleccionables','taller'].includes(id)){state.inventoryView=id;Object.assign(inventoryUI3400,{page:0,selected:null});renderPanel();persist();}
     if(act==='craft-item'){craftItem(id);}
    if(act==='process-materials'){const [project,repeat]=String(id).split(':');processMaterials(project,Number(repeat));}
     if(act==='finish-voyage'){finishVoyage(id);}
@@ -6773,6 +6892,124 @@ fieldAutomaticModel=function(){const m=automaticBefore3340();if(abyssalRegionInd
 const journalBefore3340=renderJournal;
 renderJournal=function(){const view=journalBefore3340();return abyssalRegionIndex3340.has(state.currentRegion)||SPECIES[state.selectedJournal]?.origin==='abyssal3340'?'<section class="card abyssal-panel"><p class="small">Gabinete de fosas: reconstrucciones a partir de muestras diagnósticas. Su recuperación hadal es una abstracción lúdica de la ambientación de 1842. El estudio comparte las cinco etapas y publicaciones; las evidencias alimentarias se examinan indirectamente.</p></section>'+view:view;};
 // GM3340 END gameplay
+
+// INV3400 BEGIN inventory and workshop
+const INVENTORY_SECTIONS3400=[['equipo','Equipo'],['animales','Animales'],['expedicion','Expedición'],['coleccionables','Coleccionables'],['taller','Taller']];
+const inventoryUI3400={query:'',category:'all',owned:'all',use:'all',craft:'all',sort:'alpha',page:0,selected:null};
+let inventoryActionSeq3400=0;
+function isMap3400(id){return /_map(?:_piece)?$/.test(id)||id==='world_map';}
+function inventoryCategory3400(id){const i=ITEMS[id];return isMap3400(id)?'cartography':i.kind==='regional'?'regional':i.slot?'equip':i.kind==='animal'?'animal':i.kind==='fossil'||i.kind==='rare'?'fossil':'materials';}
+function inventorySources3400(id){
+ const sources=[];
+ if(RECIPES[id])sources.push('Taller: '+Object.entries(RECIPES[id].requires).map(([k,n])=>ITEMS[k].name+' ×'+n).join(' · '));
+ if(V316_ORIGINS[id])sources.push(V316_ORIGINS[id]);
+ if(V316_LOOT_BASE.some(([i])=>i===id))sources.push('Botín común de las ocho expediciones (probabilidad variable)');
+ for(const v of VOYAGES)if(v.sample===id||V316_LOOT_BY_ROUTE[v.id]?.some(([i])=>i===id))sources.push(v.name+(v.sample===id?' · muestra garantizada':' · botín posible'));
+ for(const r of TRADE_ROUTES)if(r.rewards[id])sources.push('Comercio: '+r.name+' · '+r.rewards[id]+' unidades por viaje');
+ if(TRADE_MARKET[id])sources.push('Mercado: £'+TRADE_MARKET[id]+' por unidad');
+ for(const b of TRADE_BARTERS)if(b.rewards[id])sources.push('Conversión de suministros: '+tradeMaterials3300(b.requires));
+ for(const [sp,item]of Object.entries(SPECIES_DROPS))if(item===id)sources.push('Gabinete de especímenes: '+SPECIES[sp].name);
+ for(const r of MUSEUM_FOSSIL_RECIPES)if(r.id===id)sources.push('Taller del Museo: '+r.name);
+ return [...new Set(sources)];
+}
+function inventoryUses3400(id){
+ const uses=[];
+ for(const [out,r]of Object.entries(RECIPES))if(r.requires[id])uses.push({name:ITEMS[out].name,action:'recipe',id:out,kind:'recipe'});
+ for(const p of Object.values(V316_MATERIAL_STUDIES))if(p.requires[id])uses.push({name:p.name,action:'studies',id:'',kind:'research'});
+ for(const p of [...MUSEUM_COLLECTIONS,...MUSEUM_FOSSIL_RECIPES,...MUSEUM_CURATORIAL_PROJECTS])if(p.requires[id])uses.push({name:p.name,action:'goto',id:'museum',kind:'museum'});
+ for(const n of RESEARCH_NODES)if(n.reqItem===id)uses.push({name:n.name,action:'research',id:n.id,kind:'research'});
+ for(const c of SUPPLY_CONTRACTS3390)if(c.requires[id])uses.push({name:c.name,action:'commerce',id:'contracts',kind:'commerce'});
+ for(const m of CARGO_MANIFESTS3390)if(m.requires[id])uses.push({name:m.name,action:'commerce',id:'routes',kind:'commerce'});
+ for(const b of TRADE_BARTERS)if(b.requires[id])uses.push({name:'Conversión: '+tradeMaterials3300(b.rewards),action:'commerce',id:'barters',kind:'commerce'});
+ if(Object.values(CONTINENT_RULES3300).some(r=>r.items.includes(id)))uses.push({name:'Preparación continental permanente',action:'goto',id:'atlas',kind:'progression'});
+ if(ITEMS[id].slot)uses.push({name:'Equipar: '+ITEMS[id].bonus,action:'equip',id,kind:'equipment'});
+ return uses;
+}
+function recipePlan3400(id,s=state){
+ const recipe=RECIPES[id];if(!recipe)return null;
+ const stock={...s.inventory},missing={},components={};
+ function need(item,n,path=[]){
+  const used=Math.min(Math.max(0,stock[item]||0),n);stock[item]=(stock[item]||0)-used;n-=used;if(!n)return;
+  if(RECIPES[item]&&!path.includes(item)){components[item]=(components[item]||0)+n;for(const [mat,q]of Object.entries(RECIPES[item].requires))need(mat,n*q,path.concat(item));}
+  else missing[item]=(missing[item]||0)+n;
+ }
+ for(const [mat,n]of Object.entries(recipe.requires))need(mat,n,[id]);
+ return {missing,components};
+}
+function recipeRisk3400(id){
+ const recipe=RECIPES[id];if(!recipe||!canCraft(id))return false;
+ const before=supplyReserve3390(),s={...state,inventory:{...state.inventory},craftedItems:{...state.craftedItems,[id]:true}};
+ for(const [k,n]of Object.entries(recipe.requires))s.inventory[k]-=n;
+ s.inventory[id]=(s.inventory[id]||0)+1;
+ const after=supplyReserve3390(s);
+ return Object.keys(after).some(k=>Math.max(0,after[k]-(s.inventory[k]||0))>Math.max(0,(before[k]||0)-(state.inventory[k]||0)));
+}
+function inventoryQuery3400(){
+ const view=state.inventoryView,ui=inventoryUI3400;
+ let ids=Object.keys(view==='taller'?RECIPES:ITEMS).filter(id=>{
+  const cat=inventoryCategory3400(id),i=ITEMS[id];
+  if(view==='equipo'&&!i.slot||view==='animales'&&i.kind!=='animal'||view==='coleccionables'&&!['cartography','regional','fossil'].includes(cat)||view==='expedicion'&&['equip','animal','regional','fossil'].includes(cat))return false;
+  if(ui.query&&!ITEMS[id].name.toLocaleLowerCase('es').includes(ui.query.toLocaleLowerCase('es')))return false;
+  if(ui.category!=='all'&&cat!==ui.category)return false;
+  const owned=(state.inventory[id]||0)>0;
+  if(ui.owned==='owned'&&!owned||ui.owned==='missing'&&owned)return false;
+  if(ui.use!=='all'&&!inventoryUses3400(id).some(u=>u.kind===ui.use))return false;
+  if(ui.craft==='ready'&&!canCraft(id)||ui.craft==='missing'&&(!RECIPES[id]||canCraft(id))||ui.craft==='made'&&!state.craftedItems[id])return false;
+  return true;
+ });
+ ids.sort((a,b)=>(ui.sort==='quantity'?(state.inventory[b]||0)-(state.inventory[a]||0):0)||ITEMS[a].name.localeCompare(ITEMS[b].name,'es'));
+ const pages=Math.max(1,Math.ceil(ids.length/6)),page=Math.max(0,Math.min(pages-1,ui.page));
+ return {ids,total:ids.length,pages,page,shown:ids.slice(page*6,page*6+6)};
+}
+function inventorySelect3400(key,label,options){return `<label>${label}<select data-inv-filter="${key}">${options.map(([v,l])=>`<option value="${v}" ${inventoryUI3400[key]===v?'selected':''}>${l}</option>`).join('')}</select></label>`;}
+function inventoryMaterials3400(requires){const reserve=supplyReserve3390();return `<ul class="inv340-materials">${Object.entries(requires).map(([id,n])=>{const have=state.inventory[id]||0,r=reserve[id]||0;return `<li><button class="inv340-link" data-action="inv-item" data-id="${id}">${ITEMS[id].name} ×${n}</button><small>Disponibles ${have} · reservados ${r} · utilizables ${Math.max(0,have-r)}${have<n?' · faltan '+(n-have):''}</small></li>`;}).join('')}</ul>`;}
+function inventoryRecipe3400(id){
+ const plan=recipePlan3400(id);if(!plan)return '';
+ const preparation=Object.values(CONTINENT_RULES3300).some(r=>r.items.includes(id));
+ return `<section class="inv340-recipe"><h5>Planificador · ${ITEMS[id].name}</h5><p class="small">${state.craftedItems[id]?'Fabricado anteriormente':'Aún no fabricado'}${preparation?' · preparación continental permanente':''}.</p>${inventoryMaterials3400(RECIPES[id].requires)}<details><summary>Materiales faltantes y subcomponentes</summary><p class="small">Stock compartido, calculado recursivamente. No fabrica automáticamente.</p>${Object.keys(plan.components).length?`<p class="small">Subcomponentes: ${tradeMaterials3300(plan.components)}</p>`:''}<p class="small">${Object.keys(plan.missing).length?'Faltan materiales de base: '+tradeMaterials3300(plan.missing):'Todos los materiales de base están disponibles.'}</p></details>${recipeRisk3400(id)?'<p class="inv340-warning">Esta fabricación utiliza materiales reservados para otra preparación. Se pedirá confirmación.</p>':''}<button class="btn" data-action="inv-craft" data-id="${id}|${inventoryActionSeq3400}" ${canCraft(id)?'':'disabled'}>Fabricar ${ITEMS[id].name}</button></section>`;
+}
+function inventoryDetail3400(id){
+ if(!ITEMS[id])return '';
+ const uses=inventoryUses3400(id),sources=inventorySources3400(id);
+ return `<section class="inv340-detail" aria-label="Ficha de objeto"><div class="inv340-title">${itemArtInline(id)}<h4>${ITEMS[id].name}</h4></div><p class="small">${ITEMS[id].bonus} · En bolsa: ${state.inventory[id]||0}.</p>${ITEMS[id].slot?`<button class="btn alt" data-action="equip-item" data-id="${id}" ${state.inventory[id]?'':'disabled'}>${state.equipment[ITEMS[id].slot]===id?'Quitar':'Equipar'}</button>`:''}<details open><summary>Fuentes de obtención</summary><ul class="small">${sources.map(s=>`<li>${esc(s)}</li>`).join('')||'<li>Registro de colección; sin fuente consumible.</li>'}</ul></details><details><summary>Usos y destinos · ${uses.length}</summary><ul class="inv340-uses">${uses.map(u=>`<li><button class="inv340-link" data-action="inv-${u.action}" data-id="${u.id}">${esc(u.name)}</button></li>`).join('')||'<li>Conservar en la colección del gabinete.</li>'}</ul></details>${inventoryRecipe3400(id)}</section>`;
+}
+function inventoryStudies3400(){return `<details class="inv340-studies"><summary>Estudios de materiales repetidos · 8 proyectos</summary><p class="small">Conservan sus costos y resultados. Comprueba las reservas antes de utilizar suministros.</p>${Object.entries(V316_MATERIAL_STUDIES).map(([id,p])=>`<details><summary>${p.name}</summary><p class="small">${p.description} · £${p.money||0} y ${p.knowledge||0} conocimiento.</p>${inventoryMaterials3400(p.requires)}${[1,5].map(n=>`<button class="btn alt" data-action="process-materials" data-id="${id}:${n}" ${canProcessMaterials(id,n)?'':'disabled'}>Estudiar ×${n}</button>`).join('')}</details>`).join('')}</details>`;}
+renderObjects=function(){
+ const q=inventoryQuery3400(),ui=inventoryUI3400,id=ITEMS[ui.selected]?ui.selected:q.shown[0];
+ return `<section class="card inventory-main inv340-root"><header><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3>Inventario y Taller</h3><p class="small">${Object.values(state.inventory).filter(n=>n>0).length} tipos de objetos · ${Object.values(state.equipment).filter(Boolean).length}/3 ranuras activas.</p></header><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${INVENTORY_SECTIONS3400.map(([key,name])=>`<button class="inventory-subtab ${state.inventoryView===key?'active':''}" data-action="inventory-tab" data-id="${key}" role="tab" aria-selected="${state.inventoryView===key}">${name}</button>`).join('')}</div>${state.inventoryView==='equipo'?`<details><summary>Equipo activo y bonificaciones</summary><p class="small">Manual ${pctBuff(manualSearchChance())} · automático ${state.helpers?pctBuff(automaticSearchChance()):'inactivo'} · cada ${autoInterval()} s. Los bonos originales solo se aplican al equipar.</p><ul>${Object.entries(state.equipment).map(([slot,item])=>`<li>${{instrument:'Instrumento',hat:'Gorro',necklace:'Collar'}[slot]}: ${item?ITEMS[item].name:'Vacío'}</li>`).join('')}</ul></details>`:''}<label class="inv340-search">Buscar objetos<input type="search" data-inv-filter="query" value="${esc(ui.query)}" placeholder="Nombre del objeto" maxlength="80"></label><details class="inv340-filters"><summary>Filtros y orden</summary><div class="inv340-controls">${inventorySelect3400('category','Categoría',[['all','Todas'],['equip','Equipo'],['animal','Animal'],['materials','Materiales'],['fossil','Fósiles y raros'],['cartography','Cartografía'],['regional','Mercancías regionales']])}${inventorySelect3400('owned','Posesión',[['all','Todos'],['owned','En bolsa'],['missing','Sin existencias']])}${inventorySelect3400('use','Utilidad',[['all','Todas'],['recipe','Fabricación'],['progression','Progresión'],['research','Investigación'],['museum','Museo'],['commerce','Comercio']])}${inventorySelect3400('craft','Fabricación',[['all','Todas'],['ready','Fabricable ahora'],['missing','Faltan materiales'],['made','Fabricado antes']])}${inventorySelect3400('sort','Orden',[['alpha','Alfabético'],['quantity','Mayor cantidad']])}</div><button class="btn alt" data-action="inv-reset">Limpiar filtros</button></details>${state.inventoryView==='coleccionables'&&typeof renderCartography3400==='function'?renderCartography3400():''}<p class="small" aria-live="polite">${q.total} resultados · página ${q.page+1}/${q.pages}</p><div class="inv340-grid">${q.shown.map(key=>`<button class="inv340-card ${key===id?'selected':''}" data-action="inv-item" data-id="${key}" aria-pressed="${key===id}">${itemArtInline(key)}<strong>${ITEMS[key].name}</strong><span>×${state.inventory[key]||0}${state.inventoryView==='taller'?' · '+(canCraft(key)?'Fabricable':'Faltan materiales'):''}</span></button>`).join('')||'<p>No hay objetos con estos filtros.</p>'}</div><nav class="inv340-pages" aria-label="Páginas de objetos"><button class="btn alt" data-action="inv-page" data-id="${q.page-1}" ${q.page===0?'disabled':''}>Anterior</button><span>${q.page+1}/${q.pages}</span><button class="btn" data-action="inv-page" data-id="${q.page+1}" ${q.page+1>=q.pages?'disabled':''}>Siguiente</button></nav>${id?inventoryDetail3400(id):''}${state.inventoryView==='taller'?inventoryStudies3400():''}</section>`;
+};
+craftItem=function(id){
+ if(!ITEMS[id]||!canCraft(id))return false;
+ if(recipeRisk3400(id)&&!window.confirm('Esta receta consume materiales reservados para otra preparación continental. ¿Confirmar fabricación?'))return false;
+ const ok=tradeTransaction3300(()=>{
+  for(const [mat,n]of Object.entries(RECIPES[id].requires)){
+   state.inventory[mat]-=n;
+   if(state.inventory[mat]===0)for(const slot of ['instrument','hat','necklace'])if(state.equipment[slot]===mat)state.equipment[slot]=null;
+  }
+  addInventory(id,1);state.craftedItems[id]=true;pushLog('🛠️ Fabricado: '+ITEMS[id].name);achievementMark3360('research');return true;
+ });
+ if(ok)inventoryActionSeq3400++;renderCounters();renderPanel();return ok;
+};
+function inventoryAction3400(action,id=''){
+ const ui=inventoryUI3400;
+ if(action==='inv-item'&&ITEMS[id])ui.selected=id;
+ else if(action==='inv-recipe'&&RECIPES[id]){state.inventoryView='taller';ui.query='';ui.category=ui.owned=ui.use=ui.craft='all';ui.selected=id;}
+ else if(action==='inv-craft'){const [item,seq]=id.split('|');if(Number(seq)===inventoryActionSeq3400)craftItem(item);return;}
+ else if(action==='inv-page')ui.page=Math.max(0,Math.min(inventoryQuery3400().pages-1,Number(id)||0));
+ else if(action==='inv-reset')Object.assign(ui,{query:'',category:'all',owned:'all',use:'all',craft:'all',page:0,selected:null});
+ else if(action==='inv-studies')state.inventoryView='taller';
+ else if(action==='inv-equip'){equipItem(id);return;}
+ else if(action==='inv-research'){developmentAction3280('er28-research',id);return;}
+ else if(action==='inv-commerce'){tab='expeditions';navigationTab3300='commerce';tradeSection3390=id;}
+ else if(action==='inv-goto'&&['museum','atlas','research','expeditions'].includes(id))tab=id;
+ renderPanel();
+}
+panel.addEventListener('input',event=>{
+ const el=event.target,key=el.dataset?.invFilter;if(key!=='query')return;
+ inventoryUI3400.query=el.value.slice(0,80);inventoryUI3400.page=0;inventoryUI3400.selected=null;renderPanel();const input=panel.querySelector('[data-inv-filter="query"]');input?.focus();
+});
+panel.addEventListener('change',event=>{const key=event.target.dataset?.invFilter;if(!key||key==='query'||!Object.hasOwn(inventoryUI3400,key))return;inventoryUI3400[key]=event.target.value;inventoryUI3400.page=0;inventoryUI3400.selected=null;renderPanel();});
+// INV3400 END inventory and workshop
 
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
 // ACH3360 BEGIN event integration. No timer and no per-render achievement mutations.
