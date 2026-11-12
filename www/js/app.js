@@ -2821,7 +2821,51 @@ function publishMonograph(id){
   state.published[id]=true;
   state.prestige+=1;
   state.money+=90;
-  // INV3400 BEGIN inventory and workshop
+  // INV3400 BEGIN cartographic catalogue and voyage layer
+const CARTOGRAPHY3400=[
+ {continent:'Asia',map:'asia_map',piece:'asia_map_piece',quantity:10,research:'asia_1'},
+ {continent:'África',map:'africa_map',piece:'africa_map_piece',quantity:10,research:'africa_1'},
+ {continent:'Norteamérica',map:'north_america_map',piece:'north_america_map_piece',quantity:8,research:'norteamerica_1'},
+ {continent:'Sudamérica',map:'south_america_map',piece:'south_america_map_piece',quantity:10,research:'sudamerica_1',sourceResearch:'norteamerica_1',routes:['atlantic_survey']},
+ {continent:'Oceanía',map:'oceania_map',piece:'oceania_map_piece',quantity:10,research:'oceania_1',sourceResearch:'sudamerica_1',routes:['atlantic_survey','north','alps']},
+ {continent:'Polos',map:'polar_map',piece:'polar_map_piece',quantity:8,research:'polos_1',sourceResearch:'oceania_1',routes:['north','alps']}
+];
+for(const d of CARTOGRAPHY3400.filter(d=>d.sourceResearch)){
+ const name=d.continent==='Polos'?'regiones polares':d.continent;
+ ITEMS[d.piece]={name:'Parte de mapa de '+name,emoji:'🧩',slot:null,kind:'voyage',bonus:'Documento cartográfico de expedición anterior al destino'};
+ ITEMS[d.map]={name:'Mapa de '+name,emoji:'🗺️',slot:null,kind:'voyage',bonus:'Cartografía permanente de '+name+'; no se consume al abrir regiones'};
+ RECIPES[d.map]={requires:{[d.piece]:d.quantity}};
+ V316_ORIGINS[d.piece]='Capa cartográfica: '+d.routes.map(id=>VOYAGES.find(v=>v.id===id).name).join(' / ')+', tras '+RESEARCH_NODES.find(n=>n.id===d.sourceResearch).name+'. 50 % por expedición; tirada independiente fijada al partir.';
+ V316_ORIGINS[d.map]='Taller: '+d.quantity+' partes propias de '+name;
+}
+ITEMS.world_map={name:'Mapamundi',emoji:'🌐',slot:null,kind:'voyage',bonus:'Unión documental permanente de seis mapas; conserva los originales'};
+RECIPES.world_map={requires:Object.fromEntries(CARTOGRAPHY3400.map(d=>[d.map,1])),preserveInputs:true};
+V316_ORIGINS.world_map='Taller: reunir físicamente los seis mapas completos. Ensamblaje no destructivo; no admite fragmentos sueltos ni acreditaciones históricas.';
+// Asia used to consume its physical map on research. All six documents now remain in the archive.
+RESEARCH_NODES.find(n=>n.id==='asia_1').reqItemConsume=false;
+function cartographyRoll3400(text){let value=2166136261;for(let i=0;i<text.length;i++){value^=text.charCodeAt(i);value=Math.imul(value,16777619);}value^=value>>>16;value=Math.imul(value,0x7feb352d);value^=value>>>15;value=Math.imul(value,0x846ca68b);return ((value^(value>>>16))>>>0)/4294967296;}
+function cartographicSources3400(route,s=state){return CARTOGRAPHY3400.filter(d=>d.sourceResearch&&s.purchases[d.sourceResearch]&&d.routes.includes(route));}
+function prepareCartography3400(job,s=state){
+ const parts={};
+ for(const d of cartographicSources3400(job.type,s))if(cartographyRoll3400([s.collectionId||'expedition',job.id,job.startedAt,job.type,d.piece].join('|'))<0.5)parts[d.piece]=1;
+ return {version:1,parts};
+}
+const canCraftBefore3400=canCraft;
+canCraft=function(id){
+ if(id==='world_map')return !state.craftedItems.world_map&&CARTOGRAPHY3400.every(d=>(state.inventory[d.map]||0)>=1);
+ return canCraftBefore3400(id);
+};
+function renderCartography3400(){
+ const physical=CARTOGRAPHY3400.filter(d=>(state.inventory[d.map]||0)>0).length;
+ return `<details class="inv340-chart"><summary>Archivo cartográfico · ${physical}/6 mapas · ${state.craftedItems.world_map?'Mapamundi acreditado':'Mapamundi pendiente'}</summary><p class="small">Europa es conocida al iniciar la expedición. Los seis documentos se conservan al unir el Mapamundi.</p>${CARTOGRAPHY3400.map(d=>`<article><details><summary>${ITEMS[d.map].name} · ${(state.inventory[d.map]||0)>0?'Ensamblado':(state.inventory[d.piece]||0)+'/'+d.quantity+' partes'}</summary><p class="small">Investigación: ${RESEARCH_NODES.find(n=>n.id===d.research).name} · ${state.purchases[d.research]?'completada':'pendiente'}.</p><p class="small">${state.cartography3400?.historicalAccess?.[d.continent]?'Acceso histórico reconocido; no acredita un mapa físico.':state.craftedItems[d.map]?'Mapa realmente fabricado.':'Mapa por ensamblar.'}</p><p class="small">Fuente: ${esc(V316_ORIGINS[d.piece])}</p><button class="btn alt" data-action="inv-recipe" data-id="${d.map}">Consultar receta</button> <button class="btn alt" data-action="inv-map-atlas" data-id="${d.continent}">Consultar regiones</button></details></article>`).join('')}<div class="inv340-world">${itemArtInline('world_map')}<div><strong>Mapamundi · ${physical}/6 documentos</strong><p class="small">${state.craftedItems.world_map?'Creado y acreditado permanentemente.':'Reúne los seis mapas físicos. El acceso histórico no sustituye documentos.'}</p></div></div><ul class="small">${CARTOGRAPHY3400.map(d=>`<li>${(state.inventory[d.map]||0)>0?'✓':'○'} ${ITEMS[d.map].name}</li>`).join('')}</ul><button class="btn" data-action="inv-recipe" data-id="world_map">Consultar ensamblaje del Mapamundi</button></details>`;
+}
+const usesBeforeCartography3400=inventoryUses3400;
+inventoryUses3400=function(id){const uses=usesBeforeCartography3400(id),d=CARTOGRAPHY3400.find(d=>d.map===id);if(d)uses.push({name:'Cartografía de '+d.continent,action:'map-atlas',id:d.continent,kind:'progression'});if(id==='world_map')uses.push({name:'Acceso a mares, océanos profundos y fosas',action:'map-atlas',id:'Océanos',kind:'progression'});return uses;};
+const possibilitiesBefore3400=voyagePossibilities3280;
+voyagePossibilities3280=function(id){const model=possibilitiesBefore3400(id);if(model)for(const d of cartographicSources3400(id))model.items.push(developmentItem3280(d.piece));return model;};
+// INV3400 END cartographic catalogue and voyage layer
+
+// INV3400 BEGIN inventory and workshop
 const INVENTORY_SECTIONS3400=[['equipo','Equipo'],['animales','Animales'],['expedicion','Expedición'],['coleccionables','Coleccionables'],['taller','Taller']];
 const inventoryUI3400={query:'',category:'all',owned:'all',use:'all',craft:'all',sort:'alpha',page:0,selected:null};
 let inventoryActionSeq3400=0;
@@ -2911,6 +2955,7 @@ craftItem=function(id){
  if(recipeRisk3400(id)&&!window.confirm('Esta receta consume materiales reservados para otra preparación continental. ¿Confirmar fabricación?'))return false;
  const ok=tradeTransaction3300(()=>{
   for(const [mat,n]of Object.entries(RECIPES[id].requires)){
+   if(id==='world_map')continue;
    state.inventory[mat]-=n;
    if(state.inventory[mat]===0)for(const slot of ['instrument','hat','necklace'])if(state.equipment[slot]===mat)state.equipment[slot]=null;
   }
@@ -2929,6 +2974,7 @@ function inventoryAction3400(action,id=''){
  else if(action==='inv-equip'){equipItem(id);return;}
  else if(action==='inv-research'){developmentAction3280('er28-research',id);return;}
  else if(action==='inv-commerce'){tab='expeditions';navigationTab3300='commerce';tradeSection3390=id;}
+ else if(action==='inv-map-atlas'&&ATLAS_CONTINENTS.some(c=>c.id===id)){state.atlasView=id;state.atlasSelectedRegion=REGIONS.find(r=>r.continent===id)?.id;tab='atlas';}
  else if(action==='inv-goto'&&['museum','atlas','research','expeditions'].includes(id))tab=id;
  renderPanel();
 }
@@ -4740,6 +4786,7 @@ function sail(voyageId){
  // E-3280 BEGIN departure
  const newJob=state.voyages[state.voyages.length-1];
  newJob.startedAt=newJob.endAt-voyageDuration(v.seconds)*1000;
+ if(typeof prepareCartography3400==='function')newJob.cartography=prepareCartography3400(newJob);
  // E-3280 END departure
  pushLog('⛵ Zarpó una expedición: '+v.name);render();
 }
@@ -4782,6 +4829,10 @@ function resolveVoyageReward(job/* E-3280 BEGIN receipt-time */,resolvedAt=Date.
 const amberChance=(v.id==='coast'||v.id==='namib_survey')?0.035:0.014;
 if(Math.random()<amberChance){addInventory('fossil_amber',1);pushLog('🟠 Hallazgo raro: ámbar fósil.');}
 
+  // Extra cartography is fixed at departure; old voyages receive no retroactive draw.
+  if(job.cartography?.version===1)for(const [id,n]of Object.entries(job.cartography.parts||{})){
+   if(n===1&&CARTOGRAPHY3400.some(d=>d.sourceResearch&&d.piece===id&&d.routes.includes(job.type))){addInventory(id,1);pushLog('🗺️ Documento cartográfico: '+ITEMS[id].name+'.');}
+  }
   state.museum.voyagesCompleted=(state.museum.voyagesCompleted||0)+1;
   achievementRecord3360('voyage',{type:v.id});
   pushLog('⛵ Regresó '+v.name+': +£'+prize+' y +'+notes+' conocimiento.');
@@ -6893,6 +6944,50 @@ const journalBefore3340=renderJournal;
 renderJournal=function(){const view=journalBefore3340();return abyssalRegionIndex3340.has(state.currentRegion)||SPECIES[state.selectedJournal]?.origin==='abyssal3340'?'<section class="card abyssal-panel"><p class="small">Gabinete de fosas: reconstrucciones a partir de muestras diagnósticas. Su recuperación hadal es una abstracción lúdica de la ambientación de 1842. El estudio comparte las cinco etapas y publicaciones; las evidencias alimentarias se examinan indirectamente.</p></section>'+view:view;};
 // GM3340 END gameplay
 
+// INV3400 BEGIN cartographic catalogue and voyage layer
+const CARTOGRAPHY3400=[
+ {continent:'Asia',map:'asia_map',piece:'asia_map_piece',quantity:10,research:'asia_1'},
+ {continent:'África',map:'africa_map',piece:'africa_map_piece',quantity:10,research:'africa_1'},
+ {continent:'Norteamérica',map:'north_america_map',piece:'north_america_map_piece',quantity:8,research:'norteamerica_1'},
+ {continent:'Sudamérica',map:'south_america_map',piece:'south_america_map_piece',quantity:10,research:'sudamerica_1',sourceResearch:'norteamerica_1',routes:['atlantic_survey']},
+ {continent:'Oceanía',map:'oceania_map',piece:'oceania_map_piece',quantity:10,research:'oceania_1',sourceResearch:'sudamerica_1',routes:['atlantic_survey','north','alps']},
+ {continent:'Polos',map:'polar_map',piece:'polar_map_piece',quantity:8,research:'polos_1',sourceResearch:'oceania_1',routes:['north','alps']}
+];
+for(const d of CARTOGRAPHY3400.filter(d=>d.sourceResearch)){
+ const name=d.continent==='Polos'?'regiones polares':d.continent;
+ ITEMS[d.piece]={name:'Parte de mapa de '+name,emoji:'🧩',slot:null,kind:'voyage',bonus:'Documento cartográfico de expedición anterior al destino'};
+ ITEMS[d.map]={name:'Mapa de '+name,emoji:'🗺️',slot:null,kind:'voyage',bonus:'Cartografía permanente de '+name+'; no se consume al abrir regiones'};
+ RECIPES[d.map]={requires:{[d.piece]:d.quantity}};
+ V316_ORIGINS[d.piece]='Capa cartográfica: '+d.routes.map(id=>VOYAGES.find(v=>v.id===id).name).join(' / ')+', tras '+RESEARCH_NODES.find(n=>n.id===d.sourceResearch).name+'. 50 % por expedición; tirada independiente fijada al partir.';
+ V316_ORIGINS[d.map]='Taller: '+d.quantity+' partes propias de '+name;
+}
+ITEMS.world_map={name:'Mapamundi',emoji:'🌐',slot:null,kind:'voyage',bonus:'Unión documental permanente de seis mapas; conserva los originales'};
+RECIPES.world_map={requires:Object.fromEntries(CARTOGRAPHY3400.map(d=>[d.map,1])),preserveInputs:true};
+V316_ORIGINS.world_map='Taller: reunir físicamente los seis mapas completos. Ensamblaje no destructivo; no admite fragmentos sueltos ni acreditaciones históricas.';
+// Asia used to consume its physical map on research. All six documents now remain in the archive.
+RESEARCH_NODES.find(n=>n.id==='asia_1').reqItemConsume=false;
+function cartographyRoll3400(text){let value=2166136261;for(let i=0;i<text.length;i++){value^=text.charCodeAt(i);value=Math.imul(value,16777619);}value^=value>>>16;value=Math.imul(value,0x7feb352d);value^=value>>>15;value=Math.imul(value,0x846ca68b);return ((value^(value>>>16))>>>0)/4294967296;}
+function cartographicSources3400(route,s=state){return CARTOGRAPHY3400.filter(d=>d.sourceResearch&&s.purchases[d.sourceResearch]&&d.routes.includes(route));}
+function prepareCartography3400(job,s=state){
+ const parts={};
+ for(const d of cartographicSources3400(job.type,s))if(cartographyRoll3400([s.collectionId||'expedition',job.id,job.startedAt,job.type,d.piece].join('|'))<0.5)parts[d.piece]=1;
+ return {version:1,parts};
+}
+const canCraftBefore3400=canCraft;
+canCraft=function(id){
+ if(id==='world_map')return !state.craftedItems.world_map&&CARTOGRAPHY3400.every(d=>(state.inventory[d.map]||0)>=1);
+ return canCraftBefore3400(id);
+};
+function renderCartography3400(){
+ const physical=CARTOGRAPHY3400.filter(d=>(state.inventory[d.map]||0)>0).length;
+ return `<details class="inv340-chart"><summary>Archivo cartográfico · ${physical}/6 mapas · ${state.craftedItems.world_map?'Mapamundi acreditado':'Mapamundi pendiente'}</summary><p class="small">Europa es conocida al iniciar la expedición. Los seis documentos se conservan al unir el Mapamundi.</p>${CARTOGRAPHY3400.map(d=>`<article><details><summary>${ITEMS[d.map].name} · ${(state.inventory[d.map]||0)>0?'Ensamblado':(state.inventory[d.piece]||0)+'/'+d.quantity+' partes'}</summary><p class="small">Investigación: ${RESEARCH_NODES.find(n=>n.id===d.research).name} · ${state.purchases[d.research]?'completada':'pendiente'}.</p><p class="small">${state.cartography3400?.historicalAccess?.[d.continent]?'Acceso histórico reconocido; no acredita un mapa físico.':state.craftedItems[d.map]?'Mapa realmente fabricado.':'Mapa por ensamblar.'}</p><p class="small">Fuente: ${esc(V316_ORIGINS[d.piece])}</p><button class="btn alt" data-action="inv-recipe" data-id="${d.map}">Consultar receta</button> <button class="btn alt" data-action="inv-map-atlas" data-id="${d.continent}">Consultar regiones</button></details></article>`).join('')}<div class="inv340-world">${itemArtInline('world_map')}<div><strong>Mapamundi · ${physical}/6 documentos</strong><p class="small">${state.craftedItems.world_map?'Creado y acreditado permanentemente.':'Reúne los seis mapas físicos. El acceso histórico no sustituye documentos.'}</p></div></div><ul class="small">${CARTOGRAPHY3400.map(d=>`<li>${(state.inventory[d.map]||0)>0?'✓':'○'} ${ITEMS[d.map].name}</li>`).join('')}</ul><button class="btn" data-action="inv-recipe" data-id="world_map">Consultar ensamblaje del Mapamundi</button></details>`;
+}
+const usesBeforeCartography3400=inventoryUses3400;
+inventoryUses3400=function(id){const uses=usesBeforeCartography3400(id),d=CARTOGRAPHY3400.find(d=>d.map===id);if(d)uses.push({name:'Cartografía de '+d.continent,action:'map-atlas',id:d.continent,kind:'progression'});if(id==='world_map')uses.push({name:'Acceso a mares, océanos profundos y fosas',action:'map-atlas',id:'Océanos',kind:'progression'});return uses;};
+const possibilitiesBefore3400=voyagePossibilities3280;
+voyagePossibilities3280=function(id){const model=possibilitiesBefore3400(id);if(model)for(const d of cartographicSources3400(id))model.items.push(developmentItem3280(d.piece));return model;};
+// INV3400 END cartographic catalogue and voyage layer
+
 // INV3400 BEGIN inventory and workshop
 const INVENTORY_SECTIONS3400=[['equipo','Equipo'],['animales','Animales'],['expedicion','Expedición'],['coleccionables','Coleccionables'],['taller','Taller']];
 const inventoryUI3400={query:'',category:'all',owned:'all',use:'all',craft:'all',sort:'alpha',page:0,selected:null};
@@ -6983,6 +7078,7 @@ craftItem=function(id){
  if(recipeRisk3400(id)&&!window.confirm('Esta receta consume materiales reservados para otra preparación continental. ¿Confirmar fabricación?'))return false;
  const ok=tradeTransaction3300(()=>{
   for(const [mat,n]of Object.entries(RECIPES[id].requires)){
+   if(id==='world_map')continue;
    state.inventory[mat]-=n;
    if(state.inventory[mat]===0)for(const slot of ['instrument','hat','necklace'])if(state.equipment[slot]===mat)state.equipment[slot]=null;
   }
@@ -7001,6 +7097,7 @@ function inventoryAction3400(action,id=''){
  else if(action==='inv-equip'){equipItem(id);return;}
  else if(action==='inv-research'){developmentAction3280('er28-research',id);return;}
  else if(action==='inv-commerce'){tab='expeditions';navigationTab3300='commerce';tradeSection3390=id;}
+ else if(action==='inv-map-atlas'&&ATLAS_CONTINENTS.some(c=>c.id===id)){state.atlasView=id;state.atlasSelectedRegion=REGIONS.find(r=>r.continent===id)?.id;tab='atlas';}
  else if(action==='inv-goto'&&['museum','atlas','research','expeditions'].includes(id))tab=id;
  renderPanel();
 }
