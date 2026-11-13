@@ -30,10 +30,12 @@ def verify_apk(apk,badging,signature,root=Path('.')):
  for field,value in [('name',info['appId']),('versionName',info['version']),('versionCode',str(info['versionCode']))]:require(bool(re.search(r"\b"+field+"='"+re.escape(value)+"'",packages[0])),'Wrong '+field)
  require(bool(re.search(r"^application-label:'El Gran Atlas'\s*$",badging,re.M)),'Wrong visible application label')
  require('application-debuggable' not in badging,'Debuggable APK is forbidden');require('Verifies' in signature,'Missing successful apksigner verification');require(not re.search(r'Android\s*Debug',signature,re.I),'Temporary debug signing is forbidden')
- certs=re.findall(r'(?m)^[ \t]*Signer #\d+ certificate SHA-256 digest:[ \t]*([0-9a-fA-F]{64})[ \t]*\r?$',signature)
- require(len(certs)==1,f'APK certificate does not match signing policy: expected exactly one APK signer SHA-256 digest; found {len(certs)}')
- observed=fingerprint(certs[0])
- require(observed==pin,f'APK certificate does not match the pinned permanent certificate (APK public SHA-256: {observed}; expected public SHA-256: {pin})');files=web_files(root)
+ cert_rows=re.findall(r'(?im)^[ \t]*((?:Signer[ \t]+#\d+|Signer[ \t]+\([^)\r\n]+\)|V\d+(?:\.\d+)?[ \t]+Signer:))[ \t]+certificate[ \t]+SHA-256[ \t]+digest:[ \t]*([0-9a-f]{64})[ \t]*\r?$',signature)
+ signer_numbers={int(n) for label,_ in cert_rows for n in re.findall(r'^Signer[ \t]+#(\d+)$',label)}
+ declared_signers=re.findall(r'(?m)^Number of signers:[ \t]*(\d+)[ \t]*\r?$',signature)
+ require(bool(cert_rows) and (not signer_numbers or signer_numbers=={1}) and (not declared_signers or all(n=='1' for n in declared_signers)),f'APK certificate does not match signing policy: expected one signer; found {len(cert_rows)} certificate digest rows, signer indices {sorted(signer_numbers)}, declared signers {declared_signers}')
+ observed={fingerprint(digest) for _,digest in cert_rows}
+ require(observed=={pin},f'APK certificate does not match the pinned permanent certificate (APK public SHA-256 digests: {sorted(observed)}; expected public SHA-256: {pin})');files=web_files(root)
  with zipfile.ZipFile(apk) as z:
   names=z.namelist();require(len(names)==len(set(names)),'Duplicate ZIP paths')
   actual={n[len('assets/public/'):] for n in names if n.startswith('assets/public/') and not n.endswith('/')};extra=actual-set(files)
