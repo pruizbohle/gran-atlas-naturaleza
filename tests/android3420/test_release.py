@@ -75,6 +75,18 @@ class Guards(unittest.TestCase):
  def test_other_certificate_stops(self):
   self.signature=self.signature.replace(TEST_PIN,'d'*64)
   with self.assertRaisesRegex(ValueError,'certificate does not match'):self.verify()
+ def test_apksigner_modern_v3_signer_accepted(self):
+  self.signature='Verifies\nNumber of signers: 1\nV3.0 Signer: certificate SHA-256 digest: '+TEST_PIN+'\n'
+  self.assertEqual(self.verify()['certificateSha256'],TEST_PIN)
+ def test_apksigner_modern_multiple_schemes_same_cert_accepted(self):
+  self.signature='Verifies\nNumber of signers: 1\nV2.0 Signer: certificate SHA-256 digest: '+TEST_PIN+'\nV3.0 Signer: certificate SHA-256 digest: '+TEST_PIN+'\n'
+  self.assertEqual(self.verify()['certificateSha256'],TEST_PIN)
+ def test_apksigner_modern_wrong_cert_rejected(self):
+  self.signature='Verifies\nNumber of signers: 1\nV3.0 Signer: certificate SHA-256 digest: '+'d'*64+'\n'
+  with self.assertRaisesRegex(ValueError,'certificate does not match'):self.verify()
+ def test_apksigner_modern_multiple_signers_rejected(self):
+  self.signature='Verifies\nNumber of signers: 2\nV3.0 Signer: certificate SHA-256 digest: '+TEST_PIN+'\n'
+  with self.assertRaisesRegex(ValueError,'certificate does not match'):self.verify()
  def test_multiple_signers_stop(self):
   self.signature+='Signer #2 certificate SHA-256 digest: '+TEST_PIN+'\n'
   with self.assertRaisesRegex(ValueError,'certificate does not match'):self.verify()
