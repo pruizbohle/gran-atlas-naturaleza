@@ -31,7 +31,7 @@ def verify_apk(apk,badging,signature,root=Path('.')):
  require(bool(re.search(r"^application-label:'El Gran Atlas'\s*$",badging,re.M)),'Wrong visible application label')
  require('application-debuggable' not in badging,'Debuggable APK is forbidden');require('Verifies' in signature,'Missing successful apksigner verification');require(not re.search(r'Android\s*Debug',signature,re.I),'Temporary debug signing is forbidden')
  certs=re.findall(r'(?m)^[ \t]*Signer #\d+ certificate SHA-256 digest:[ \t]*([0-9a-fA-F]{64})[ \t]*\r?$',signature)
- require(len(certs)==1,f'Expected one APK signer certificate SHA-256 digest in apksigner output; found {len(certs)}')
+ require(len(certs)==1,f'APK certificate does not match signing policy: expected exactly one APK signer SHA-256 digest; found {len(certs)}')
  observed=fingerprint(certs[0])
  require(observed==pin,f'APK certificate does not match the pinned permanent certificate (APK public SHA-256: {observed}; expected public SHA-256: {pin})');files=web_files(root)
  with zipfile.ZipFile(apk) as z:
