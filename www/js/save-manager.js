@@ -155,7 +155,18 @@
         const saver = cap?.Plugins?.AtlasExport ||
           (typeof cap?.registerPlugin === 'function' ? cap.registerPlugin('AtlasExport') : null);
         if (!saver?.saveFile) throw new Error('Esta APK no incluye el guardado nativo. Utiliza Compartir respaldo.');
-        await saver.saveFile({name,content:text});
+        // Store the potentially large JSON in app-private cache BEFORE opening
+        // Android's document picker. Keep the pending native call small.
+        const filesystem = cap?.Plugins?.Filesystem ||
+          (typeof cap?.registerPlugin === 'function' ? cap.registerPlugin('Filesystem') : null);
+        if (filesystem?.writeFile) {
+          const cacheName = 'atlas-export-' + Date.now() + '-' + Math.random().toString(36).slice(2, 10) + '.json';
+          await filesystem.writeFile({path:cacheName, data:text, directory:'CACHE', encoding:'utf8'});
+          await saver.saveFile({name, cacheName});
+        } else {
+          // Compatibility with older test adapters and previously installed clients.
+          await saver.saveFile({name,content:text});
+        }
         message('Respaldo guardado en la carpeta que elegiste. Conserva el archivo para recuperar tu partida.');
       } else {
         browserDownload(text, name);
