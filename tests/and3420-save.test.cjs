@@ -11,5 +11,27 @@ test('AND03 la lectura antigua no sustituye la selección más reciente',async()
 test('AND03 fallo al guardar la copia de emergencia impide adoptar el respaldo',async()=>{const h=setup(),before=copy(h.g.state),disk=h.store[KEY];h.content=JSON.stringify(fixture('new').save);await h.preview();const write=h.localStorage.setItem;h.localStorage.setItem=(k,v)=>{if(k===EMERGENCY)throw Error('quota');return write(k,v);};await h.apply();assert.deepEqual(copy(h.g.state),before);assert.equal(h.store[KEY],disk);});
 test('AND03 fallo de escritura de restauración conserva todos los campos anteriores',async()=>{const h=setup(),before=clean(h.g.state),disk=h.store[KEY];h.content=JSON.stringify(fixture('new').save);await h.preview();const write=h.localStorage.setItem;h.localStorage.setItem=(k,v)=>{if(k===KEY)throw Error('quota');return write(k,v);};await h.apply();assert.deepEqual(clean(h.g.state),before);assert.equal(h.store[KEY],disk);assert.equal(h.store[EMERGENCY],disk);});
 test('AND03 respaldo por texto y archivo usan previsualización y confirmación',async()=>{for(const mode of ['text','file']){const h=setup(),raw=JSON.stringify(fixture('new').save),before=h.store[KEY];if(mode==='text'){h.elements.savePasteJson.value=raw;await h.elements.savePasteBtn.fire('click');}else{h.elements.saveImportFile.files=[{size:raw.length,name:'test.json',text:async()=>raw}];await h.elements.saveImportFile.fire('change');}assert.equal(h.store[KEY],before);assert.equal(h.elements.saveImportBtn.disabled,false);await h.apply();assert.equal(h.g.state.prestige,0);}});
+test('AND09 el guardado Android envía al selector solo el nombre temporal, nunca el JSON completo',async()=>{
+ const h=setup();let staged=null,chooser=null;
+ h.window.Capacitor.Plugins.Filesystem={writeFile:async value=>{staged=value;return{uri:'file:///cache/atlas-backup.json'};}};
+ h.window.Capacitor.Plugins.AtlasExport.saveFile=async value=>{chooser=value;return{uri:'content://documents/atlas.json'};};
+ const previous=h.store[KEY];await h.export();
+ assert.ok(staged);assert.ok(chooser);
+ assert.equal(staged.directory,'CACHE');assert.equal(staged.encoding,'utf8');
+ assert.match(staged.path,/^atlas-export-\d{13}-[a-z0-9]{1,16}\.json$/);
+ assert.equal(chooser.cacheName,staged.path);
+ assert.equal(Object.prototype.hasOwnProperty.call(chooser,'content'),false);
+ assert.equal(JSON.parse(staged.data).game.currentRegion,h.g.state.currentRegion);
+ assert.equal(h.store[KEY],previous);
+});
+test('AND09 fallo al preparar caché impide abrir selector y preserva la partida',async()=>{
+ const h=setup(),before=h.store[KEY];let called=false;
+ h.window.Capacitor.Plugins.Filesystem={writeFile:async()=>{throw new Error('Espacio insuficiente');}};
+ h.window.Capacitor.Plugins.AtlasExport.saveFile=async()=>{called=true;};
+ await h.export();
+ assert.equal(called,false);
+ assert.equal(h.store[KEY],before);
+ assert.match(h.elements.saveManagerStatus.textContent,/Espacio insuficiente/);
+});
 test('AND03 compartir resuelve plugins con registerPlugin de Capacitor',async()=>{const h=setup(),calls=[];h.window.Capacitor.Plugins.Filesystem=undefined;h.window.Capacitor.Plugins.Share=undefined;h.window.Capacitor.registerPlugin=name=>({Filesystem:{writeFile:async d=>{calls.push(d);return{uri:'content://cache/test'};}},Share:{share:async d=>calls.push(d)}}[name]);await h.elements.saveExportBtn.fire('click');assert.equal(calls.length,2);assert.equal(calls[0].directory,'CACHE');assert.equal(JSON.parse(calls[0].data).game.currentRegion,h.g.state.currentRegion);assert.equal(calls[1].url,'content://cache/test');});
 test('AND03 viajes pendientes sobreviven al respaldo y se pagan una sola vez',async()=>{const a=setup();a.g.sail('coast');assert.equal(a.g.state.voyages.length,1);await a.export();const b=setup('new');b.content=a.exported;await b.preview();await b.apply();assert.deepEqual(copy(b.g.state.voyages),copy(a.g.state.voyages));b.now=b.g.state.voyages[0].endAt;b.tick();const paid=copy(b.g.state.inventory),count=b.g.state.museum.voyagesCompleted;assert.equal(b.g.state.voyages.length,0);b.tick();assert.deepEqual(copy(b.g.state.inventory),paid);assert.equal(b.g.state.museum.voyagesCompleted,count);});
