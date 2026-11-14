@@ -1,6 +1,6 @@
 {
   "version": "3.42.0",
-  "cache": "gran-atlas-v3.42.0-android-d63bd336d9e5",
+  "cache": "gran-atlas-v3.42.0-android-ffb400ee76b3",
   "catalog": {
     "species": 945,
     "regions": 113,
@@ -155,7 +155,7 @@
     "js/pwa-update-v3220.js": "0950af660171c8438d508a34e1a7db94498b48884bbc3b4ea59b154e3f15a224",
     "js/pwa-update-v3260.js": "8af86d5c7485e17d85814a43107d2230bc641575c4dc11650258be86407b996d",
     "js/relict-art-v3199.js": "cb4e4807595d56b240a5dca4d82d8ed712bf8abd48303dad031f645cea605e82",
-    "js/save-manager.js": "14f31a6b4155eefad6a5131b880b18680147a07481d20d670cc439fe0dabc162",
+    "js/save-manager.js": "f25f9f4868ecc9741e2e4b340857890fb186189acc9eacb55fda04b636482942",
     "js/society-achievements-ui-v3360.js": "4e8b52b5c609459fa22259e48b517ce15d30789c8f02c16b863f0ee6d74c6e54",
     "js/southamerica-art-v3230.js": "d0520fe625819e433cf5c7997565538da10e771f039cc4222a98c1104c0eef9a",
     "js/southamerica-data-v3230.js": "0ca138926288feeffafe7065dd1bc4e133abe77d81a80926d6577810691dafdd",
@@ -195,6 +195,6 @@
     "laboratorio-sociedad-v3360.html": "a95a0ffda5fe3071e11543d8cb17fc727032545879a61749d6eaf1e824d1f6b9",
     "laboratorio-sudamerica-v3230.html": "5cadb68c8ebb5789173d8bb6808db140d0d0e1f7b9964505853215b963c6a46b",
     "manifest.webmanifest": "bc50f3bbc201dd3d733ec1eba4ed13766922e756f5847a48ddd5fc444ed3cfe1",
-    "sw.js": "5b81c9ad54f9821b30640597e3253ea2d0bc1e14d03ae353f8baefce410b19d2"
+    "sw.js": "72817e6c0dc4fd296a03bc2968dfc5b348ab0a3fff798387d84b0c02ab5703dd"
   }
 }
