@@ -1,0 +1,30 @@
+{
+  "baseMain": "41a4bbdc90a16ebdb612f67591ea6e2dd9dfe259",
+  "remoteMainBeforeArtPush": "41a4bbdc90a16ebdb612f67591ea6e2dd9dfe259",
+  "productionFilesUnchanged": 196,
+  "publicFilesChecked": [
+    {
+      "path": "index.html",
+      "sha256": "39bbbe3ab799e3aef0be68d3136c3074d8c6812efaa8391000b1dda6979ec316",
+      "matchesPublished3430": true
+    },
+    {
+      "path": "atlas-release.json",
+      "sha256": "b2732aa85cfd82d300ec63da0282247ac4f15fca6145839d2cea5f2b7acbcdd2",
+      "matchesPublished3430": true
+    },
+    {
+      "path": "sw.js",
+      "sha256": "51205438183af30597d0ef8839f84081c7284776a093532f4bc6acbcafbd715f",
+      "matchesPublished3430": true
+    },
+    {
+      "path": "js/item-art-v3198.js",
+      "sha256": "74b42208616f3796c9f24379afdb4339904b6d6db937086b6735658a9a0a17f1",
+      "matchesPublished3430": true
+    }
+  ],
+  "publicVersion": "3.43.0",
+  "artDeployed": false,
+  "pagesBranchGuard": true
+}

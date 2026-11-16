@@ -1,0 +1,13 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const file='www/data/atlas_coleccionables_240_manifest_v2.json',source=fs.readFileSync(file,'utf8'),manifest=JSON.parse(source);
+assert.equal(manifest.pieces.length,240);assert.equal(new Set(manifest.pieces.map(x=>x.ID)).size,240);
+const js='/* Exact artistic input, no runtime integration or rewards. */\n(function(root){const data='+JSON.stringify(manifest).replace(/</g,'\\u003c')+';root.AtlasCollectiblesCatalogDraft=data;if(typeof module!=="undefined"&&module.exports)module.exports=data;})(typeof globalThis!=="undefined"?globalThis:this);\n';
+fs.writeFileSync('www/js/collectibles-catalog-draft.js',js);
+const api=require('../www/js/collectibles-art-draft');assert.deepEqual([...api.ids].sort(),Object.keys(require('../www/js/art-draft/core').registry).sort());
+const out='www/assets/collectibles-draft';fs.mkdirSync(out,{recursive:true});for(const id of api.ids)fs.writeFileSync(path.join(out,id+'.svg'),api.render(id,{size:120})+'\n');
+const report={base:'41a4bbdc90a16ebdb612f67591ea6e2dd9dfe259',manifestSHA256:crypto.createHash('sha256').update(source).digest('hex'),sprites:api.ids.length,collections:manifest.collections,gabinets:manifest.pieces.reduce((a,x)=>(a[x.Gabinete]=(a[x.Gabinete]||0)+1,a),{}),rarity:manifest.counts.rarity,structures:Object.fromEntries(Object.entries(require('../www/js/art-draft/core').families)),productionIntegrated:false};
+fs.mkdirSync('docs/art-col-01',{recursive:true});fs.writeFileSync('docs/art-col-01/build-report.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({sprites:api.ids.length,collections:Object.keys(manifest.collections).length,gabinets:Object.keys(report.gabinets).length,manifestSHA256:report.manifestSHA256}));
+let standalone=fs.readFileSync('www/laboratorio-coleccionables-v1.html','utf8');
+standalone=standalone.replace(/<link rel="stylesheet" href="([^"]+)">/g,(_,file)=>'<style>'+fs.readFileSync('www/'+file,'utf8')+'</style>').replace(/<script src="([^"]+)"><\/script>/g,(_,file)=>'<script>'+fs.readFileSync('www/'+file,'utf8').replace(/<\/script/gi,'<\\/script')+'</script>');
+fs.writeFileSync('docs/art-col-01/laboratorio-coleccionables-autonomo.html',standalone);

@@ -1,0 +1,77 @@
+{
+  "nearestPairs": [
+    {
+      "a": "FIL-02",
+      "b": "FIL-03",
+      "edgeCosine": 0.97063,
+      "sameCollection": true
+    },
+    {
+      "a": "FIL-01",
+      "b": "FIL-12",
+      "edgeCosine": 0.95403,
+      "sameCollection": true
+    },
+    {
+      "a": "FIL-09",
+      "b": "FIL-12",
+      "edgeCosine": 0.93541,
+      "sameCollection": true
+    },
+    {
+      "a": "FIL-01",
+      "b": "FIL-09",
+      "edgeCosine": 0.93518,
+      "sameCollection": true
+    },
+    {
+      "a": "FIL-01",
+      "b": "FIL-03",
+      "edgeCosine": 0.88997,
+      "sameCollection": true
+    },
+    {
+      "a": "FIL-01",
+      "b": "FIL-02",
+      "edgeCosine": 0.88927,
+      "sameCollection": true
+    },
+    {
+      "a": "FIL-01",
+      "b": "FIL-05",
+      "edgeCosine": 0.88744,
+      "sameCollection": true
+    },
+    {
+      "a": "FIL-02",
+      "b": "FIL-05",
+      "edgeCosine": 0.87918,
+      "sameCollection": true
+    },
+    {
+      "a": "FIL-05",
+      "b": "FIL-12",
+      "edgeCosine": 0.86828,
+      "sameCollection": true
+    },
+    {
+      "a": "FIL-02",
+      "b": "FIL-12",
+      "edgeCosine": 0.86422,
+      "sameCollection": true
+    },
+    {
+      "a": "FIL-05",
+      "b": "FIL-09",
+      "edgeCosine": 0.86373,
+      "sameCollection": true
+    },
+    {
+      "a": "FIL-03",
+      "b": "FIL-12",
+      "edgeCosine": 0.86295,
+      "sameCollection": true
+    }
+  ],
+  "exactRasterDuplicates": []
+}

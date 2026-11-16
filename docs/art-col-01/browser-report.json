@@ -1,0 +1,122 @@
+{
+  "widths": [
+    {
+      "width": 320,
+      "all240": true,
+      "filters": true,
+      "marine": 7,
+      "atlantis": 5,
+      "realSizes": [
+        24,
+        48,
+        80,
+        120
+      ],
+      "dialogSizes": [
+        24,
+        48,
+        80,
+        120
+      ],
+      "exportSVG": true,
+      "keyboard": true,
+      "noOverflow": true,
+      "noStorage": true
+    },
+    {
+      "width": 360,
+      "all240": true,
+      "filters": true,
+      "marine": 7,
+      "atlantis": 5,
+      "realSizes": [
+        24,
+        48,
+        80,
+        120
+      ],
+      "dialogSizes": [
+        24,
+        48,
+        80,
+        120
+      ],
+      "exportSVG": true,
+      "keyboard": true,
+      "noOverflow": true,
+      "noStorage": true
+    },
+    {
+      "width": 390,
+      "all240": true,
+      "filters": true,
+      "marine": 7,
+      "atlantis": 5,
+      "realSizes": [
+        24,
+        48,
+        80,
+        120
+      ],
+      "dialogSizes": [
+        24,
+        48,
+        80,
+        120
+      ],
+      "exportSVG": true,
+      "keyboard": true,
+      "noOverflow": true,
+      "noStorage": true
+    },
+    {
+      "width": 412,
+      "all240": true,
+      "filters": true,
+      "marine": 7,
+      "atlantis": 5,
+      "realSizes": [
+        24,
+        48,
+        80,
+        120
+      ],
+      "dialogSizes": [
+        24,
+        48,
+        80,
+        120
+      ],
+      "exportSVG": true,
+      "keyboard": true,
+      "noOverflow": true,
+      "noStorage": true
+    },
+    {
+      "width": 1280,
+      "all240": true,
+      "filters": true,
+      "marine": 7,
+      "atlantis": 5,
+      "realSizes": [
+        24,
+        48,
+        80,
+        120
+      ],
+      "dialogSizes": [
+        24,
+        48,
+        80,
+        120
+      ],
+      "exportSVG": true,
+      "keyboard": true,
+      "noOverflow": true,
+      "noStorage": true
+    }
+  ],
+  "errors": [],
+  "productionStorageAccess": 0,
+  "standaloneOffline": true
+}

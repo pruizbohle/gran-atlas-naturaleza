@@ -1,0 +1,92 @@
+{
+  "review": "agent visual review before commit",
+  "collectionsReviewed": 21,
+  "items": 240,
+  "sheets": [
+    {
+      "collection": "Herbario del mundo",
+      "file": "collection-01.png"
+    },
+    {
+      "collection": "Semillas extraordinarias",
+      "file": "collection-02.png"
+    },
+    {
+      "collection": "Pigmentos del mundo",
+      "file": "collection-03.png"
+    },
+    {
+      "collection": "Piedras preciosas",
+      "file": "collection-04.png"
+    },
+    {
+      "collection": "Minerales extraordinarios",
+      "file": "collection-05.png"
+    },
+    {
+      "collection": "Ámbar y resinas fósiles",
+      "file": "collection-06.png"
+    },
+    {
+      "collection": "Meteoritos",
+      "file": "collection-07.png"
+    },
+    {
+      "collection": "Los siete mares",
+      "file": "collection-08.png"
+    },
+    {
+      "collection": "Secretos de Atlántida",
+      "file": "collection-09.png"
+    },
+    {
+      "collection": "Conchas de los océanos",
+      "file": "collection-10.png"
+    },
+    {
+      "collection": "Curiosidades de marineros",
+      "file": "collection-11.png"
+    },
+    {
+      "collection": "Corales del mundo",
+      "file": "collection-12.png"
+    },
+    {
+      "collection": "Numismática",
+      "file": "collection-13.png"
+    },
+    {
+      "collection": "Objetos de civilizaciones",
+      "file": "collection-14.png"
+    },
+    {
+      "collection": "Filatelia",
+      "file": "collection-15.png"
+    },
+    {
+      "collection": "Máscaras y figurillas",
+      "file": "collection-16.png"
+    },
+    {
+      "collection": "Cartografía antigua",
+      "file": "collection-17.png"
+    },
+    {
+      "collection": "Huevos de aves",
+      "file": "collection-18.png"
+    },
+    {
+      "collection": "Fósiles menores",
+      "file": "collection-19.png"
+    },
+    {
+      "collection": "Instrumentos de exploración",
+      "file": "collection-20.png"
+    },
+    {
+      "collection": "Gabinete de maravillas",
+      "file": "collection-21.png"
+    }
+  ],
+  "reviewStatus": "reviewable vector edition; cultural and chronological limits documented"
+}
