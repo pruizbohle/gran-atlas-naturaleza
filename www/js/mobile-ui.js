@@ -13,7 +13,7 @@
   });
 
   if(!menu||!open||!heading)return;
-  const labels={atlas:'🗺️ Atlas',field:'🌿 Campo',journal:'📖 Cuaderno',research:'🔬 Investigación',society:'📜 Sociedad',bestiary:'🦉 Bestiario',expeditions:'⛵ Expediciones',objects:'🎒 Inventario',museum:'🏛️ Museo',crown:'👑 Corona'};
+  const labels={atlas:'🗺️ Atlas',field:'🌿 Campo',journal:'📖 Cuaderno',research:'🔬 Investigación',society:'📜 Sociedad',bestiary:'🦉 Bestiario',expeditions:'⛺ Campamento',objects:'🎒 Inventario',museum:'🏛️ Museo',crown:'👑 Corona'};
   const main=['atlas','field','journal','research'];
   function selected(){return Array.from(document.querySelectorAll('.mobile-dock-link.active,.mobile-menu-item.active')).find(e=>e.dataset.tab)?.dataset.tab||'field';}
   function sync(){
@@ -51,6 +51,6 @@
   document.querySelectorAll('.tab').forEach(b=>observer.observe(b,{attributes:true,attributeFilter:['class']}));
   sync();
   if(window.Capacitor?.getPlatform?.()!=='android' && 'serviceWorker' in navigator && (location.protocol==='https:' || ['localhost','127.0.0.1','[::1]'].includes(location.hostname))){
-    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=3.42.0',{updateViaCache:'none'}).catch(()=>{}));
+    window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=3.43.0',{updateViaCache:'none'}).catch(()=>{}));
   }
 })();

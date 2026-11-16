@@ -1,0 +1,9 @@
+{
+  "reference": "c9991a5",
+  "command": "node scripts/validate-android-v3420.cjs",
+  "nodePass": 803,
+  "nodeFail": 0,
+  "pythonPass": 61,
+  "pythonOK": true,
+  "releaseBuildPassedBeforeLaboratory": true
+}

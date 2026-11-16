@@ -2332,6 +2332,7 @@ function load(){
     }
     merged.asiaPricingVersion=Math.max(2, saved.asiaPricingVersion||2);
     merged.lastTick=Number.isFinite(saved.lastTick)?saved.lastTick:Date.now();
+    globalThis.AtlasCampProfile3430?.normalize(merged);
     return normalizeSpecialDiscoveries(mergeHistoricalBeardedVulture(merged));
   }catch(e){
     unreadableSave=true;
@@ -2422,6 +2423,7 @@ window.AtlasSaveBridge={
        voyages:Array.isArray(imported.voyages)?imported.voyages:[],
        log:Array.isArray(imported.log)?imported.log:[]
      };
+     globalThis.AtlasCampProfile3430?.normalize(state);
      normalizeSpecialDiscoveries(mergeHistoricalBeardedVulture(state));
      if(!REGIONS.some(r=>r.id===state.currentRegion))state.currentRegion=REGIONS[0].id;
      state.regionUnlocked[state.currentRegion]=true;
@@ -7252,6 +7254,84 @@ window.AtlasSaveBridge.persistBeforeUpdate=persist;
 // UX3410 END continuity and existing notification stream
 
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
+
+// CP3430 BEGIN approved Campamento and optional naturalist profile
+if(globalThis.AtlasCampProfile3430 && typeof document.createElement==='function'){
+const cpUI3430=globalThis.AtlasCampProfile3430;
+const cp3430={mode:'new',active:false,facility:null,pending:null,allowBackup:false,paintKey:'',storageMessage:'',restoreScroll:0};
+const cpOriginalExpeditions3430=renderExpeditions,cpOriginalRender3430=renderPanel;
+function cpJobState3430(jobs,available,empty){const now=Date.now(),ready=jobs.filter(j=>Number.isFinite(j.endAt)&&j.endAt<=now).length;if(ready)return {kind:'ready',label:ready+' trabajo'+(ready===1?' terminado':'s terminados')};if(jobs.length)return{kind:'running',label:jobs.length+' en curso'};return{kind:available?'available':'locked',label:available?'Acción disponible':empty||'Requisitos pendientes'};}
+function cpModels3430(){return {shipyard:cpJobState3430(state.voyages,VOYAGES.some(v=>voyageRoute3280(v).ready),'Rutas no disponibles'),caravan:cpJobState3430(state.commerce.jobs,TRADE_ROUTES.some(tradeCanStart3300),'Rutas no disponibles'),workshop:cpJobState3430([],Object.keys(RECIPES).some(canCraft),'Materiales pendientes'),excavations:cpJobState3430(state.museum.excavations,MUSEUM_DIG_SITES.some(d=>canStartExcavation(d.id)),'Requisitos pendientes'),surveys:cpJobState3430(state.museum.relictSurveys,MUSEUM_RELICTS.some(r=>canStartRelictSurvey(r.id)),'Expedientes pendientes')};}
+function cpSummary3430(){const all=[...state.voyages,...state.commerce.jobs,...state.museum.excavations,...state.museum.relictSurveys],ready=all.filter(j=>j.endAt<=Date.now()).length;return all.length?(all.length+' trabajos registrados · '+ready+' terminado'+(ready===1?'':'s')+'. Consulta cada instalación.'):'Sin trabajos en curso. Tu próxima salida empieza aquí.';}
+function cpTarget3430(type,id){if(type==='voyage')return 'shipyard';if(type==='trade')return 'caravan';if(type==='recipe')return 'workshop';if(type==='museum'&&id==='fossils')return 'excavations';if(type==='museum'&&id==='relicts')return 'surveys';return null;}
+function cpUnderlying3430(id){return ['shipyard','caravan'].includes(id)?'expeditions':id==='workshop'?'objects':'museum';}
+function cpGo3430(id){if(!cpUI3430.facilities.some(f=>f[0]===id))return false;cp3430.active=true;cp3430.facility=id;cp3430.pending=null;tab=cpUnderlying3430(id);if(id==='shipyard')navigationTab3300='expeditions';if(id==='caravan')navigationTab3300='commerce';if(id==='workshop')state.inventoryView='taller';if(id==='excavations'){state.museumView='fossils';museumUI3270.folds['dig-sites']=true;}if(id==='surveys')state.museumView='relicts';renderPanel();globalThis.scrollTo({top:0,behavior:'instant'});return true;}
+function cpHome3430(){cp3430.active=false;cp3430.facility=null;cp3430.pending=null;tab='expeditions';renderPanel();globalThis.scrollTo({top:0,behavior:'instant'});}
+renderExpeditions=function(){if(cp3430.mode==='old')return cpOriginalExpeditions3430();if(cp3430.active){return cp3430.facility==='caravan'?renderTrade3300():scientificExpeditions3300();}return cpUI3430.camp(cpModels3430(),cpSummary3430());};
+function cpMuseumPresentation3430(){const root=panel.querySelector('.m27-root'),room=root?.querySelector('#m27-room');if(!root||!room)return;root.querySelectorAll('.m27-heading,.m27-rooms,[data-m27-fold="ledger"],.m27-legendary').forEach(n=>n.remove());room.setAttribute('aria-label',cp3430.facility==='excavations'?'Excavaciones del Campamento':'Prospecciones del Campamento');for(const node of [...room.children]){const keep=node.classList.contains('m27-jobs')||(cp3430.facility==='excavations'?['dig-sites','dig-history'].includes(node.dataset.m27Fold):node.classList.contains('m27-grid')||node.dataset.m27Fold==='relict-history');if(!keep)node.remove();}
+ if(cp3430.facility==='surveys'){const grid=room.querySelector('.m27-grid');grid?.querySelectorAll('.m27-piece').forEach(n=>{if(!n.querySelector('[data-action="start-relict-survey"]'))n.remove();});if(grid&&!grid.children.length)grid.innerHTML='<p class="m27-note">No quedan nuevos expedientes de campo en esta selección. Consulta los registros conservados en el Museo.</p>';}
+ room.insertAdjacentHTML('beforeend','<p class="cp3430-museum-link"><button type="button" data-cp-museum="'+(cp3430.facility==='excavations'?'fossils':'relicts')+'">'+(cp3430.facility==='excavations'?'Ver reconstrucciones y colecciones en el Museo':'Ver catalogación y relictos en el Museo')+' →</button></p>');}
+renderPanel=function(){
+ if(cp3430.mode==='new'){
+  if(cp3430.pending!==null){cp3430.active=!!cp3430.pending;cp3430.facility=cp3430.pending||null;cp3430.pending=null;}
+  if(cp3430.active&&tab!==cpUnderlying3430(cp3430.facility)){cp3430.active=false;cp3430.facility=null;}
+  if(cp3430.active&&tab==='expeditions')cp3430.facility=navigationTab3300==='commerce'?'caravan':'shipyard';
+  if(cp3430.active&&tab==='objects'&&state.inventoryView!=='taller'){cp3430.active=false;cp3430.facility=null;}
+  if(cp3430.active&&tab==='museum'&&!['fossils','relicts'].includes(state.museumView)){cp3430.active=false;cp3430.facility=null;}
+ }
+ cpOriginalRender3430();document.body.classList.toggle('cp3430-camp-open',cp3430.mode==='new'&&(cp3430.active||tab==='expeditions'));document.body.classList.toggle('cp3430-workshop',cp3430.mode==='new'&&cp3430.active&&cp3430.facility==='workshop');
+ if(cp3430.mode==='new'&&cp3430.active){panel.querySelector('.ux3410-back')?.remove();panel.insertAdjacentHTML('afterbegin',cpUI3430.section(cp3430.facility));if(tab==='museum')cpMuseumPresentation3430();if(cp3430.facility==='workshop')panel.insertAdjacentHTML('beforeend','<button class="cp3430-inventory-link" type="button" data-cp-inventory>Consultar existencias y equipo en Inventario →</button>');document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab==='expeditions'));document.body.dataset.uxModule='expeditions';}
+ cpPaintAvatar3430();
+};
+const cpSnapshot3430=uxViewSnapshot3410;
+uxViewSnapshot3410=function(){return {...cpSnapshot3430(),camp3430:{active:cp3430.active,facility:cp3430.facility}};};
+const cpNavigate3430=uxNavigate3410;
+uxNavigate3410=function(type,id){if(cp3430.mode==='new'){const dest=cpTarget3430(type,id);cp3430.pending=dest||'';}const result=cpNavigate3430(type,id);if(!result)cp3430.pending=null;return result;};
+const cpBack3430=uxBack3410;
+uxBack3410=function(){const view=uxRuntime3410.trail.at(-1);if(view?.camp3430){cp3430.active=view.camp3430.active;cp3430.facility=view.camp3430.facility;cp3430.pending=null;}return cpBack3430();};
+function cpTitle3430(){const id=state.achievements?.featured,d=globalThis.AtlasAchievements3360.catalog.find(d=>d.id===id);return d?.title&&state.achievements.unlocked[id]?d.title:'Sin reconocimiento destacado';}
+function cpStats3430(){return cpUI3430.statistics(state,{species:SPECIES,regions:REGIONS,accessible:regionAccessible,legendary:LEGENDARY_SPECIMENS,achievements:globalThis.AtlasAchievements3360.catalog,collections:MUSEUM_COLLECTIONS,fossils:MUSEUM_FOSSIL_RECIPES,relicts:MUSEUM_RELICTS,curation:globalThis.AtlasMuseumCuration3380.projects});}
+const cpAvatarButton3430=document.getElementById('saveManagerOpen');
+const cpMenu3430=document.createElement('section');cpMenu3430.id='cp3430-menu';cpMenu3430.hidden=true;cpMenu3430.setAttribute('aria-label','Menú del naturalista');cpMenu3430.innerHTML='<div class="cp3430-menu-person"></div><p class="cp3430-menu-warning" role="status" hidden></p><nav><button type="button" data-cp-dialog="profile">Perfil <span>Retrato y nombre</span></button><button type="button" data-cp-dialog="stats">Estadísticas <span>Tu registro de exploración</span></button><button type="button" data-cp-save>Guardar y restaurar <span>Archivos y copias JSON</span></button><button type="button" data-cp-dialog="about">Sobre el juego <span>El Gran Atlas · 1842</span></button></nav>';document.body.appendChild(cpMenu3430);
+const cpDialog3430=document.createElement('div');cpDialog3430.id='cp3430-dialog';cpDialog3430.hidden=true;cpDialog3430.innerHTML='<button type="button" class="cp3430-modal-backdrop" data-cp-close aria-label="Cerrar ficha"></button><section role="dialog" aria-modal="true" aria-labelledby="cp3430-dialog-title"><header><div><small>ARCHIVO DEL NATURALISTA · 1842</small><h2 id="cp3430-dialog-title" tabindex="-1"></h2></div><button type="button" data-cp-close aria-label="Cerrar ficha">×</button></header><div id="cp3430-dialog-content"></div></section>';document.body.appendChild(cpDialog3430);
+function cpClose3430(focus=true){cpMenu3430.hidden=true;cpDialog3430.hidden=true;cpAvatarButton3430.setAttribute('aria-expanded','false');if(focus)cpAvatarButton3430.focus({preventScroll:true});}
+function cpPaintAvatar3430(){const p=cpUI3430.profile(state),fault=!!storageFault||!!unreadableSave;const key=[cp3430.mode,p.avatar,p.name,cpTitle3430(),fault,cp3430.storageMessage].join('|');if(cp3430.mode==='old'){if(cpAvatarButton3430.dataset.cpMode!=='old'){cpAvatarButton3430.textContent=fault?'⚠️':'💾';cpAvatarButton3430.classList.remove('cp3430-avatar-button');cpAvatarButton3430.dataset.cpMode='old';}return;}
+ if(key===cp3430.paintKey&&cpAvatarButton3430.querySelector('svg'))return;cp3430.paintKey=key;cpAvatarButton3430.dataset.cpMode='new';cpAvatarButton3430.classList.add('cp3430-avatar-button');cpAvatarButton3430.innerHTML=cpUI3430.portrait(p.avatar)+(fault?'<span class="cp3430-save-fault" aria-hidden="true">!</span>':'');cpAvatarButton3430.setAttribute('aria-haspopup','true');cpAvatarButton3430.setAttribute('aria-controls','cp3430-menu');cpAvatarButton3430.setAttribute('aria-label',fault?'Advertencia de guardado. '+cp3430.storageMessage+' Abrir menú para guardar y restaurar.':'Abrir menú del naturalista');cpAvatarButton3430.title=fault?cp3430.storageMessage:'Perfil, estadísticas y respaldos';cpMenu3430.querySelector('.cp3430-menu-person').innerHTML=cpUI3430.portrait(p.avatar)+'<div><strong>'+cpUI3430.esc(p.name||'Tu naturalista')+'</strong><small>'+cpUI3430.esc(cpTitle3430())+'</small></div>';const identity=cpDialog3430.querySelector('.cp3430-profile-identity');if(identity)identity.innerHTML=cpUI3430.portrait(p.avatar)+'<div><strong>'+cpUI3430.esc(p.name||'Tu naturalista')+'</strong><span>'+cpUI3430.esc(cpTitle3430())+'</span></div>';const warning=cpMenu3430.querySelector('.cp3430-menu-warning');warning.hidden=!fault;warning.textContent=fault?cp3430.storageMessage:'';}
+const cpFault3430=showStorageFault;
+showStorageFault=function(message){cp3430.storageMessage=message;cpFault3430(message);cpPaintAvatar3430();};
+function cpRefresh3430(){if(tab!=='expeditions'||cp3430.active)return;const models=cpModels3430();for(const [id,m]of Object.entries(models)){for(const button of panel.querySelectorAll('[data-cp-open="'+id+'"]')){const status=button.querySelector('.cp3430-state');if(status&&status.textContent!==m.label){status.innerHTML='<i aria-hidden="true"></i>'+cpUI3430.esc(m.label);for(const kind of ['ready','running','available','locked'])button.classList.toggle('state-'+kind,m.kind===kind);}}}const summary=panel.querySelector('.cp3430-summary');if(summary&&summary.textContent!==cpSummary3430())summary.textContent=cpSummary3430();}
+const cpPersist3430=persist;
+persist=function(){const ok=cpPersist3430();cpPaintAvatar3430();cpRefresh3430();return ok;};window.AtlasSaveBridge.persistBeforeUpdate=persist;
+function cpOpenDialog3430(which){cpMenu3430.hidden=true;cpAvatarButton3430.setAttribute('aria-expanded','false');cpDialog3430.hidden=false;const title={profile:'Perfil del naturalista',stats:'Estadísticas de tu expedición',about:'Sobre El Gran Atlas'}[which];document.getElementById('cp3430-dialog-title').textContent=title;document.getElementById('cp3430-dialog-content').innerHTML=which==='profile'?cpUI3430.profileForm(cpUI3430.profile(state),cpTitle3430()):which==='stats'?cpUI3430.stats(cpStats3430()):cpUI3430.about(cpUI3430.version);document.getElementById('cp3430-dialog-title').focus({preventScroll:true});}
+function cpRestore3430(){cp3430.active=false;cp3430.facility=null;cp3430.pending=null;cp3430.paintKey='';cpClose3430(false);}
+const cpOriginalRestore3430=window.AtlasSaveBridge.restoreGame;
+window.AtlasSaveBridge.restoreGame=function(data){cpRestore3430();const result=cpOriginalRestore3430.call(this,data);cpPaintAvatar3430();return result;};
+document.addEventListener('click',event=>{
+ const target=event.target.closest('button,[data-action]');if(!target)return;
+ if(target.closest('#saveManagerOpen')&&cp3430.mode==='new'&&!cp3430.allowBackup){event.preventDefault();event.stopImmediatePropagation();cpPaintAvatar3430();cpDialog3430.hidden=true;cpMenu3430.hidden=!cpMenu3430.hidden;cpAvatarButton3430.setAttribute('aria-expanded',String(!cpMenu3430.hidden));if(!cpMenu3430.hidden)cpMenu3430.querySelector('button').focus({preventScroll:true});return;}
+ if(target.matches('[data-cp-save]')){event.preventDefault();event.stopImmediatePropagation();cpClose3430(false);cp3430.allowBackup=true;try{cpAvatarButton3430.click();}finally{cp3430.allowBackup=false;}return;}
+ if(target.dataset.cpDialog){event.preventDefault();event.stopImmediatePropagation();cpOpenDialog3430(target.dataset.cpDialog);return;}
+ if(target.matches('[data-cp-profile-save]')){event.preventDefault();event.stopImmediatePropagation();cpSaveProfile3430(document.getElementById('cp3430-profile-form'));return;}
+ if(target.matches('[data-cp-close]')){cpClose3430();return;}
+ if(cp3430.mode==='new'){
+  if(target.dataset.cpOpen){event.preventDefault();event.stopImmediatePropagation();cpGo3430(target.dataset.cpOpen);return;}
+  if(target.matches('[data-cp-back]')){event.preventDefault();event.stopImmediatePropagation();cpHome3430();return;}
+  if(target.dataset.cpMuseum){event.preventDefault();event.stopImmediatePropagation();cp3430.active=false;cp3430.facility=null;tab='museum';state.museumView=target.dataset.cpMuseum;renderPanel();return;}
+  if(target.matches('[data-cp-inventory]')){event.preventDefault();event.stopImmediatePropagation();cp3430.active=false;cp3430.facility=null;tab='objects';state.inventoryView='equipo';renderPanel();return;}
+  if(target.matches('.tab[data-tab]')){cp3430.active=false;cp3430.facility=null;cp3430.pending=null;}
+  if(['inventory-tab','trade-inventory'].includes(target.dataset.action)&&target.dataset.id==='taller'){cp3430.pending='workshop';}
+  if(target.dataset.action==='er28-expeditions'){cp3430.pending='shipyard';}
+ }
+ if(!cpMenu3430.hidden&&!cpMenu3430.contains(event.target)&&!cpAvatarButton3430.contains(event.target))cpClose3430(false);
+},true);
+function cpSaveProfile3430(form){const name=cpUI3430.validName(document.getElementById('cp3430-name').value),status=document.getElementById('cp3430-profile-status');if(name===null){status.textContent='Usa hasta 32 letras, números, espacios, puntos, apóstrofos o guiones.';return;}const avatar=form.querySelector('[name="naturalistAvatar"]:checked')?.value;if(!cpUI3430.avatars.some(a=>a[0]===avatar))return;const before=state.naturalistProfile3430;state.naturalistProfile3430={...(before&&typeof before==='object'?before:{}),avatar,name};if(!persist()){if(before===undefined)delete state.naturalistProfile3430;else state.naturalistProfile3430=before;cpPaintAvatar3430();status.textContent='No se pudo guardar el perfil. Se conserva la selección anterior; abre Guardar y restaurar.';return;}cpPaintAvatar3430();status.textContent='Perfil guardado en esta partida.';}
+document.addEventListener('submit',event=>{if(event.target.id==='cp3430-profile-form'){event.preventDefault();cpSaveProfile3430(event.target);}});
+document.addEventListener('keydown',event=>{if(event.key==='Enter'&&event.target.id==='cp3430-name'){event.preventDefault();cpSaveProfile3430(event.target.form);}});
+document.addEventListener('change',event=>{if(event.target.name!=='naturalistAvatar')return;document.querySelectorAll('.cp3430-avatars label').forEach(n=>n.classList.toggle('selected',n.contains(event.target)));});
+document.addEventListener('keydown',event=>{const dialog=!cpDialog3430.hidden?cpDialog3430:!cpMenu3430.hidden?cpMenu3430:null;if(!dialog)return;if(event.key==='Escape'){event.preventDefault();cpClose3430();return;}const buttons=[...dialog.querySelectorAll('button,input:not([type="radio"]),input[type="radio"]:checked')].filter(n=>!n.disabled),first=buttons[0],last=buttons.at(-1);if(event.key==='Tab'&&event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}else if(event.key==='Tab'&&!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}if(dialog===cpMenu3430&&['ArrowDown','ArrowUp','Home','End'].includes(event.key)){event.preventDefault();const i=buttons.indexOf(document.activeElement),next=event.key==='Home'?0:event.key==='End'?buttons.length-1:(i+(event.key==='ArrowDown'?1:-1)+buttons.length)%buttons.length;buttons[next]?.focus();}});
+
+}
+// CP3430 END approved Campamento and optional naturalist profile
 // ACH3360 BEGIN event integration. No timer and no per-render achievement mutations.
 if(globalThis.AtlasAchievements3360){
  achievementNotices3360=globalThis.AtlasAchievements3360.initialize(state,achievementContext3360());achievementReady3360=true;

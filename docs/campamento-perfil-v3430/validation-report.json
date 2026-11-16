@@ -1,0 +1,11 @@
+{
+  "version": "3.43.0",
+  "command": "npm run release:verify",
+  "nodePass": 896,
+  "nodeFail": 0,
+  "currentNodePass": 93,
+  "referenceNodePass": 803,
+  "pythonPass": 61,
+  "physicalAndroid": false,
+  "publicationAuthorized": true
+}

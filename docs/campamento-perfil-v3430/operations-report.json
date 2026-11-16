@@ -1,0 +1,37 @@
+{
+  "base": "c9991a5",
+  "checks": [
+    "Astillero usa sail original y conserva viajes al cambiar instalación",
+    "Caravana: manifiesto cancelado no consume; confirmado crea un trabajo y conserva carga",
+    "Contrato original: cancelar, entregar y rechazar repetición con secuencia antigua",
+    "Excavación y prospección: recoger una vez, iniciar investigación y acceder al Museo completo",
+    "Taller fabrica mediante receta original y descuenta materiales",
+    "Alias históricos y regreso contextual al Taller conservan selección sin gasto",
+    "Menú móvil conserva alias expeditions y abre Campamento desde Atlas",
+    "Teclado del menú y exportación/restauración real del perfil con gestor JSON intacto",
+    "Cuota: aviso visible, perfil revierte y respaldo descargable sigue accesible",
+    "450 aperturas: DOM/listeners estables tras GC; no intervalos añadidos",
+    "HTML autónomo cargado como documento funciona sin red en seis escenarios y cinco instalaciones"
+  ],
+  "memoryScope": "Opaque engine iframe target, not the host document",
+  "before": {
+    "dom": {
+      "documents": 1,
+      "nodes": 1226,
+      "jsEventListeners": 92
+    },
+    "heap": 5766212
+  },
+  "after": {
+    "dom": {
+      "documents": 1,
+      "nodes": 1226,
+      "jsEventListeners": 92
+    },
+    "heap": 6079164
+  },
+  "requests": [
+    "http://127.0.0.1:8783/laboratorio-campamento-perfil-v3430.html"
+  ],
+  "fileURL": "Not tested: managed Chromium blocks file:// with ERR_BLOCKED_BY_ADMINISTRATOR"
+}

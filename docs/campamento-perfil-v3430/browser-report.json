@@ -1,0 +1,194 @@
+{
+  "base": "c9991a5",
+  "engine": "3.42.0",
+  "proposalOnly": true,
+  "widths": [
+    {
+      "width": 320,
+      "scenarios": [
+        {
+          "scenario": "A",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "B",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "C",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "D",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "E",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "F",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        }
+      ],
+      "maxFacilityBottom": 624.25,
+      "opaqueParent": true
+    },
+    {
+      "width": 360,
+      "scenarios": [
+        {
+          "scenario": "A",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "B",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "C",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "D",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "E",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "F",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        }
+      ],
+      "maxFacilityBottom": 662.546875,
+      "opaqueParent": true
+    },
+    {
+      "width": 390,
+      "scenarios": [
+        {
+          "scenario": "A",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "B",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "C",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "D",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "E",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "F",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        }
+      ],
+      "maxFacilityBottom": 651.59375,
+      "opaqueParent": true
+    },
+    {
+      "width": 412,
+      "scenarios": [
+        {
+          "scenario": "A",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "B",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "C",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "D",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "E",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "F",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        }
+      ],
+      "maxFacilityBottom": 668.875,
+      "opaqueParent": true
+    },
+    {
+      "width": 1280,
+      "scenarios": [
+        {
+          "scenario": "A",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "B",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "C",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "D",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "E",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        },
+        {
+          "scenario": "F",
+          "allFiveFacilities": true,
+          "noProgressMutation": true
+        }
+      ],
+      "maxFacilityBottom": 793.953125,
+      "opaqueParent": true
+    }
+  ],
+  "errors": [],
+  "physicalAndroid": false
+}

@@ -1,3 +1,7 @@
+# 3.43.0 · Campamento y perfil del naturalista
+
+Campamento reúne Astillero, Caravana, Taller, Excavaciones y Prospecciones, con botón **Volver al Campamento** en cada instalación. El avatar agrupa Perfil, Estadísticas, Guardar y restaurar, y Sobre; incluye ocho retratos y perfil opcional compatible con los respaldos existentes. Se mantienen catálogo, economía, trabajos pendientes y guardado local. [Informe 3.43.0](README_V3430.md).
+
 # 3.42.0 · Android preparado y continuidad de partidas
 
 Respaldo e importación reforzados, dependencias fijas y candidato vinculado a firma, contenido, run y commit. Android sigue pendiente del certificado real y la prueba física; no hay APK 3.42.0 publicado. [Informe y pasos del propietario](README_V3420.md).

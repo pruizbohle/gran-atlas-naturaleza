@@ -1,0 +1,82 @@
+{
+  "version": "3.43.0",
+  "designApproved": true,
+  "published": false,
+  "widths": [
+    {
+      "width": 320,
+      "scenarios": 5,
+      "facilityVisits": 25,
+      "explicitBack": true,
+      "profilePersists": true,
+      "exportRestore": true,
+      "storageWarning": true
+    },
+    {
+      "width": 360,
+      "scenarios": 5,
+      "facilityVisits": 25,
+      "explicitBack": true,
+      "profilePersists": true,
+      "exportRestore": true,
+      "storageWarning": true
+    },
+    {
+      "width": 390,
+      "scenarios": 5,
+      "facilityVisits": 25,
+      "explicitBack": true,
+      "profilePersists": true,
+      "exportRestore": true,
+      "storageWarning": true
+    },
+    {
+      "width": 412,
+      "scenarios": 5,
+      "facilityVisits": 25,
+      "explicitBack": true,
+      "profilePersists": true,
+      "exportRestore": true,
+      "storageWarning": true
+    },
+    {
+      "width": 1280,
+      "scenarios": 5,
+      "facilityVisits": 25,
+      "explicitBack": true,
+      "profilePersists": true,
+      "exportRestore": true,
+      "storageWarning": true
+    }
+  ],
+  "errors": [],
+  "corruptSaveWarningPreserved": true,
+  "serviceWorkerOfflineReload": true,
+  "backButtonLayout": [
+    {
+      "width": 320,
+      "height": 44,
+      "returnsToCamp": true
+    },
+    {
+      "width": 360,
+      "height": 44,
+      "returnsToCamp": true
+    },
+    {
+      "width": 390,
+      "height": 44,
+      "returnsToCamp": true
+    },
+    {
+      "width": 412,
+      "height": 44,
+      "returnsToCamp": true
+    },
+    {
+      "width": 1280,
+      "height": 44,
+      "returnsToCamp": true
+    }
+  ]
+}

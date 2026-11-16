@@ -1,0 +1,11 @@
+{
+  "base": "c9991a5854a4d9ea1d8bd7083d8d2e9889e7c16d",
+  "installedEngineVersion": "3.42.0",
+  "proposalVersion": "3.43.0 design approved; implementation pending review",
+  "productionEngineSha256": "b41dff685b6801ad371928a67bfd1b41ed60f4108eed19e3a3da599b5e268c09",
+  "selfContained": true,
+  "sandbox": "allow-scripts allow-downloads",
+  "sameOriginGranted": false,
+  "productionIntegrated": true,
+  "bytes": 2747606
+}

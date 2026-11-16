@@ -1,5 +1,5 @@
 {
-  "version": "3.42.0",
+  "version": "3.43.0",
   "atlas": "simple",
   "cells": {
     "Europa": 10,
@@ -156,5 +156,14 @@
     "appId": "com.elgranatlas.naturaleza.beta314",
     "versionCode": 34200,
     "policy": "Permanent certificate and exact-candidate physical restoration required before Android publication"
+  },
+  "campamentoProfile": {
+    "facilities": 5,
+    "avatars": 8,
+    "profile": "optional naturalistProfile3430",
+    "navigationAlias": "expeditions",
+    "economyChanged": false,
+    "designApproved": true,
+    "implementationApprovalPending": false
   }
 }

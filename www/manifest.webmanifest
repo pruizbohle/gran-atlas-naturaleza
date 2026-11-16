@@ -1,7 +1,7 @@
 {
   "name": "El Gran Atlas de la Naturaleza",
   "short_name": "Gran Atlas",
-  "description": "El Gran Atlas 3.42.0 · Android preparado, respaldo y continuidad de partidas; validación física pendiente.",
+  "description": "El Gran Atlas 3.43.0 · Campamento, perfil del naturalista y actividades originales; guardado local y juego offline.",
   "lang": "es",
   "start_url": "./",
   "scope": "./",
