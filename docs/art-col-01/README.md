@@ -4,6 +4,8 @@ Rama de arte: `feat/coleccionables-arte-240`. Base `41a4bbdc90a16ebdb612f67591ea
 
 Se incluyen 240 dibujos SVG originales con fondo transparente, 5 gabinetes y 21 colecciones. El JSON adjunto se conserva byte a byte; rarezas: **100 comunes, 80 poco comunes, 40 raros y 20 muy raros**. No se activan los puntos, obtención ni recompensas propuestos.
 
+[Comprobación de rama remota y aislamiento](GITHUB.md)
+
 ## Revisar el laboratorio
 
 - [HTML autónomo sin dependencias de red](laboratorio-coleccionables-autonomo.html): descargar el archivo y abrirlo en un navegador.
