@@ -1,0 +1,11 @@
+{
+  "version": "3.43.0",
+  "url": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "webFilesVerified": 196,
+  "hashMismatches": [],
+  "cache": "gran-atlas-v3.43.0-campamento-93709cfaaf9f",
+  "workflow": "https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/43903939247",
+  "deploymentCommit": "f867e7a4683560f598bd50a714f9fa9c73a3630f",
+  "workflowConclusion": "success",
+  "httpsVerified": true
+}

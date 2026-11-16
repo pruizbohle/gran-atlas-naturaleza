@@ -10,6 +10,8 @@ Las estadísticas usan catálogos y registros reales. No se inventa una fecha de
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Actualizar conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3430.html) · [Laboratorio aislado](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-campamento-perfil-v3430.html)
 
+[Publicación y hashes verificados](docs/campamento-perfil-v3430/PUBLICACION.md)
+
 ## Verificación
 
 - Suite histórica 3.42.0 ejecutada sobre `c9991a5`, sin editar sus pruebas.

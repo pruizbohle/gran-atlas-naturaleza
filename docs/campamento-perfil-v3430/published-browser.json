@@ -1,0 +1,10 @@
+{
+  "version": "3.43.0",
+  "url": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "deploymentCommit": "f867e7a4683560f598bd50a714f9fa9c73a3630f",
+  "status": "blocked_by_environment",
+  "error": "Chromium: net::ERR_CERT_AUTHORITY_INVALID",
+  "httpsFileVerification": "196/196 SHA-256 match using the system HTTPS trust store",
+  "localBrowserCoverage": "production-report.json; five widths, 125 installation visits, back button, profile, restore and offline reload",
+  "certificateChecksDisabled": false
+}
