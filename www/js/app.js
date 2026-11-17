@@ -2149,6 +2149,14 @@ taxonomyInfo=function(id){return SPECIES[id]?.origin==='abyssal3340'?SPECIES[id]
 RESEARCH_NODES.push({id:'exploracion_abisal_1',name:'Sondeo extraordinario de fosas',desc:'Planicie abisal y sectores hadales separados. Reutiliza el equipo de sondeo. Las reconstrucciones hadales son una abstracción lúdica que excede las capacidades reales de 1842.',branch:'expediciones',money:6800,knowledge:5800,req:'exploracion_profunda_1',once:true,effect(s){s.upgrades.abyssalUnlocked=1;}});
 // GM3340 END catalog
 
+// GM-06 review candidate is opt-in. The published 3.43.0 entry point does not load it.
+if(globalThis.AtlasGM06){
+ globalThis.AtlasGM06.apply(SPECIES,REGIONS);
+ for(const id of Object.keys(globalThis.AtlasGM06.species))SPECIMEN_CATEGORIES[id]=['Notable','Épico','Excepcional'];
+ const taxonomyBeforeGM06=taxonomyInfo;
+ taxonomyInfo=function(id){return SPECIES[id]?.origin==='gm06'?SPECIES[id].taxonomy:taxonomyBeforeGM06(id);};
+}
+
 function initialState(){
   const region=REGIONS[0].id;
   return {
@@ -5364,6 +5372,7 @@ function getSpriteMarkup(id, skin='normal', sex=null){
   // Specialized engines receive normal exactly once; anatomy and markings are shared.
   const pigment=skin==='albino'||skin==='melanico';
   const baseSvg=pigment?getSpriteMarkup(id,'normal'):
+    (sp.origin==='gm06'?globalThis.AtlasGM06Art.render(sp):null)||
     (validSex?sexSpriteMarkup(id,validSex):null)||spriteFor(sp.kind,sp.color,skin,id);
   const svg=skin==='melanico'?enforceMelanicColors(baseSvg):
     skin==='albino'?enforcePaleColors(baseSvg):baseSvg;
@@ -6603,7 +6612,7 @@ const CONTINENT_RESEARCH3300={asia_1:'Asia',africa_1:'África',norteamerica_1:'N
 for(let i=0;i<REGIONS.length;i++)if(Object.isFrozen(REGIONS[i]))REGIONS[i]={...REGIONS[i],unlock:{...REGIONS[i].unlock}};
 const historicalPrestige3300=new Map(REGIONS.map(r=>[r.id,r.unlock.prestige]));
 for(const [continent,rule]of Object.entries(CONTINENT_RULES3300)){
- const ordered=REGIONS.filter(r=>r.continent===continent).sort((a,b)=>historicalPrestige3300.get(a.id)-historicalPrestige3300.get(b.id));
+ const ordered=REGIONS.filter(r=>r.continent===continent&&r.origin!=='gm06').sort((a,b)=>historicalPrestige3300.get(a.id)-historicalPrestige3300.get(b.id));
  ordered.forEach((r,i)=>{r.unlock={...r.unlock,prestige:rule.initial+i*rule.step};});
 }
 function craftedRequirements3300(continent){return CONTINENT_RULES3300[continent]?.items||[];}

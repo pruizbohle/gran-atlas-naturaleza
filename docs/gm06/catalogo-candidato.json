@@ -1,0 +1,2373 @@
+{
+  "version": "GM-06E revisión · destino 3.44.0",
+  "base": "41a4bbd",
+  "species": {
+    "gm06_gavia_immer": {
+      "name": "Colimbo grande",
+      "latin": "Gavia immer",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#303a3a",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Gaviidae",
+        "family": "Gaviidae"
+      },
+      "gm06": {
+        "morph": "loon",
+        "locality": "Lagos boreales; no tundra terrestre uniforme",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_lepus_arcticus": {
+      "name": "Liebre ártica",
+      "latin": "Lepus arcticus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#eee9db",
+      "habitats": [
+        "tundra"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Leporidae",
+        "family": "Leporidae"
+      },
+      "gm06": {
+        "morph": "hare",
+        "locality": "Tundra de la costa septentrional; pelaje invernal representado",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_salmo_salar": {
+      "name": "Salmón atlántico",
+      "latin": "Salmo salar",
+      "rare": "Raro",
+      "kind": "fish",
+      "color": "#809b9c",
+      "habitats": [
+        "rio",
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Salmonidae",
+        "family": "Salmonidae"
+      },
+      "gm06": {
+        "morph": "salmon",
+        "locality": "Ríos y estuarios atlánticos; especie anádroma",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_pagophilus_groenlandicus": {
+      "name": "Foca de Groenlandia",
+      "latin": "Pagophilus groenlandicus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#c4c1b6",
+      "habitats": [
+        "costa_marina",
+        "agua_polar"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Phocidae",
+        "family": "Phocidae"
+      },
+      "gm06": {
+        "morph": "harpseal",
+        "locality": "Hielo estacional y aguas del golfo de San Lorenzo; adulto",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_histrionicus_histrionicus": {
+      "name": "Pato arlequín",
+      "latin": "Histrionicus histrionicus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#496578",
+      "habitats": [
+        "rio",
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Anatidae",
+        "family": "Anatidae"
+      },
+      "gm06": {
+        "morph": "harlequin",
+        "locality": "Ríos de cría y costas rocosas; macho adulto ilustrado",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_mellisuga_helenae": {
+      "name": "Colibrí abeja",
+      "latin": "Mellisuga helenae",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#38a395",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Trochilidae",
+        "family": "Trochilidae"
+      },
+      "gm06": {
+        "morph": "hummingbird",
+        "locality": "Cuba e Isla de la Juventud; macho adulto ilustrado",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_crocodylus_rhombifer": {
+      "name": "Cocodrilo cubano",
+      "latin": "Crocodylus rhombifer",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#798055",
+      "habitats": [
+        "humedal",
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Crocodylidae",
+        "family": "Crocodylidae"
+      },
+      "gm06": {
+        "morph": "crocodile",
+        "locality": "Cuba: ciénagas de Zapata y Lanier; no todas las Antillas",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_priotelus_temnurus": {
+      "name": "Tocororo",
+      "latin": "Priotelus temnurus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#4c977d",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Trogonidae",
+        "family": "Trogonidae"
+      },
+      "gm06": {
+        "morph": "trogon",
+        "locality": "Cuba e islas adyacentes",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_solenodon_paradoxus": {
+      "name": "Solenodonte de La Española",
+      "latin": "Solenodon paradoxus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#9c795c",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Solenodontidae",
+        "family": "Solenodontidae"
+      },
+      "gm06": {
+        "morph": "solenodon",
+        "locality": "La Española; nocturno",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_cyclura_nubila": {
+      "name": "Iguana cubana",
+      "latin": "Cyclura nubila",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#8b8b6e",
+      "habitats": [
+        "costa",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Iguanidae",
+        "family": "Iguanidae"
+      },
+      "gm06": {
+        "morph": "iguana",
+        "locality": "Cuba y cayos: concepto C. nubila; no población introducida de Puerto Rico",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_amazona_leucocephala": {
+      "name": "Amazona cubana",
+      "latin": "Amazona leucocephala",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#5c9a50",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psittacidae",
+        "family": "Psittacidae"
+      },
+      "gm06": {
+        "morph": "amazon",
+        "locality": "Cuba, Bahamas e islas Caimán; poblaciones insulares diferenciadas",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_cyclura_cornuta": {
+      "name": "Iguana rinoceronte",
+      "latin": "Cyclura cornuta",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#827e75",
+      "habitats": [
+        "costa",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Iguanidae",
+        "family": "Iguanidae"
+      },
+      "gm06": {
+        "morph": "horniguana",
+        "locality": "La Española; no Cuba",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_ateles_fusciceps": {
+      "name": "Mono araña de cabeza negra",
+      "latin": "Ateles fusciceps",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#343a32",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Atelidae",
+        "family": "Atelidae"
+      },
+      "gm06": {
+        "morph": "spidermonkey",
+        "locality": "Chocó de Colombia y Ecuador; no todo Darién",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_saguinus_geoffroyi": {
+      "name": "Tití de Geoffroy",
+      "latin": "Saguinus geoffroyi",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#9d674c",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Callitrichidae",
+        "family": "Callitrichidae"
+      },
+      "gm06": {
+        "morph": "tamarin",
+        "locality": "Panamá oriental y Colombia noroccidental",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_basiliscus_basiliscus": {
+      "name": "Basilisco común",
+      "latin": "Basiliscus basiliscus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#7a8753",
+      "habitats": [
+        "rio",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Corytophanidae",
+        "family": "Corytophanidae"
+      },
+      "gm06": {
+        "morph": "basilisk",
+        "locality": "Riberas de Panamá y noroeste de Colombia",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_crax_rubra": {
+      "name": "Pavón grande",
+      "latin": "Crax rubra",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#343c35",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Cracidae",
+        "family": "Cracidae"
+      },
+      "gm06": {
+        "morph": "curassow",
+        "locality": "Extremo noroccidental colombiano y Darién; macho adulto",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_amblyrhynchus_cristatus": {
+      "name": "Iguana marina",
+      "latin": "Amblyrhynchus cristatus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#485556",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Iguanidae",
+        "family": "Iguanidae"
+      },
+      "gm06": {
+        "morph": "marineiguana",
+        "locality": "Litorales rocosos de Galápagos; no animal oceánico",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_conolophus_subcristatus": {
+      "name": "Iguana terrestre de Galápagos",
+      "latin": "Conolophus subcristatus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#c9a24d",
+      "habitats": [
+        "desierto",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Iguanidae",
+        "family": "Iguanidae"
+      },
+      "gm06": {
+        "morph": "landiguana",
+        "locality": "Islas occidentales y centrales; no C. pallidus ni C. marthae",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_chelonoidis_porteri": {
+      "name": "Tortuga gigante de Santa Cruz occidental",
+      "latin": "Chelonoidis porteri",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#77765a",
+      "habitats": [
+        "pradera",
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Reptilia",
+        "subClass": "Testudinidae",
+        "family": "Testudinidae"
+      },
+      "gm06": {
+        "morph": "tortoise",
+        "locality": "Occidente de Santa Cruz; una especie explícita del complejo",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_spheniscus_mendiculus": {
+      "name": "Pingüino de Galápagos",
+      "latin": "Spheniscus mendiculus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#414949",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Spheniscidae",
+        "family": "Spheniscidae"
+      },
+      "gm06": {
+        "morph": "penguin",
+        "locality": "Principalmente Fernandina e Isabela",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_nannopterum_harrisi": {
+      "name": "Cormorán no volador",
+      "latin": "Nannopterum harrisi",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#444c48",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Phalacrocoracidae",
+        "family": "Phalacrocoracidae"
+      },
+      "gm06": {
+        "morph": "flightlesscormorant",
+        "locality": "Fernandina y oeste de Isabela; sinónimo Phalacrocorax harrisi",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_geospiza_fortis": {
+      "name": "Pinzón terrestre mediano",
+      "latin": "Geospiza fortis",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#343b34",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Thraupidae",
+        "family": "Thraupidae"
+      },
+      "gm06": {
+        "morph": "groundfinch",
+        "locality": "Galápagos; macho adulto, pico profundo",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_sula_nebouxii": {
+      "name": "Piquero de patas azules",
+      "latin": "Sula nebouxii",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#847b6b",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Sulidae",
+        "family": "Sulidae"
+      },
+      "gm06": {
+        "morph": "bluebooby",
+        "locality": "Galápagos y Pacífico oriental; no endémico",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_phoebastria_irrorata": {
+      "name": "Albatros de Galápagos",
+      "latin": "Phoebastria irrorata",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#908474",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Diomedeidae",
+        "family": "Diomedeidae"
+      },
+      "gm06": {
+        "morph": "albatross",
+        "locality": "Cría principalmente Española; también isla de la Plata",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_zalophus_wollebaeki": {
+      "name": "León marino de Galápagos",
+      "latin": "Zalophus wollebaeki",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#9e885c",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Otariidae",
+        "family": "Otariidae"
+      },
+      "gm06": {
+        "morph": "galapagosseal",
+        "locality": "Playas y costas de Galápagos; no lobo fino de Galápagos",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_spheniscus_humboldti": {
+      "name": "Pingüino de Humboldt",
+      "latin": "Spheniscus humboldti",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#343f41",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Spheniscidae",
+        "family": "Spheniscidae"
+      },
+      "gm06": {
+        "morph": "humboldtpenguin",
+        "locality": "Perú y Chile; banda pectoral y parche facial rosado",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_pelecanus_thagus": {
+      "name": "Pelícano peruano",
+      "latin": "Pelecanus thagus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#797b71",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Pelecanidae",
+        "family": "Pelecanidae"
+      },
+      "gm06": {
+        "morph": "pelican",
+        "locality": "Litoral de Perú y Chile",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_sula_variegata": {
+      "name": "Piquero peruano",
+      "latin": "Sula variegata",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#84766b",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Sulidae",
+        "family": "Sulidae"
+      },
+      "gm06": {
+        "morph": "peruvianbooby",
+        "locality": "Perú y Chile; patas grises, alas moteadas",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_leucocarbo_bougainvilliorum": {
+      "name": "Cormorán guanay",
+      "latin": "Leucocarbo bougainvilliorum",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#343d3a",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Phalacrocoracidae",
+        "family": "Phalacrocoracidae"
+      },
+      "gm06": {
+        "morph": "guanay",
+        "locality": "Litoral de Humboldt; vientre blanco y cara roja",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_larosterna_inca": {
+      "name": "Gaviotín inca",
+      "latin": "Larosterna inca",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#56646a",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Laridae",
+        "family": "Laridae"
+      },
+      "gm06": {
+        "morph": "incatern",
+        "locality": "Perú y Chile; bigotes blancos y pico rojo",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_arctocephalus_australis": {
+      "name": "Lobo fino sudamericano",
+      "latin": "Arctocephalus australis",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#6c6051",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Otariidae",
+        "family": "Otariidae"
+      },
+      "gm06": {
+        "morph": "furseal",
+        "locality": "Perú, Chile austral y Atlántico sudoccidental; presencia discontinua",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_dromiciops_gliroides": {
+      "name": "Monito del monte",
+      "latin": "Dromiciops gliroides",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#9c8569",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Microbiotheriidae",
+        "family": "Microbiotheriidae"
+      },
+      "gm06": {
+        "morph": "monito",
+        "locality": "Bosques húmedos australes; concepto MDD, no tres especies nuevas",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_lontra_provocax": {
+      "name": "Huillín",
+      "latin": "Lontra provocax",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#7c6a50",
+      "habitats": [
+        "rio",
+        "humedal",
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Mustelidae",
+        "family": "Mustelidae"
+      },
+      "gm06": {
+        "morph": "otter",
+        "locality": "Ríos meridionales y canales australes",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_pteroptochos_tarnii": {
+      "name": "Huet-huet del sur",
+      "latin": "Pteroptochos tarnii",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#725343",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Rhinocryptidae",
+        "family": "Rhinocryptidae"
+      },
+      "gm06": {
+        "morph": "huethuet",
+        "locality": "Sotobosque húmedo del sur de Chile y Argentina",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_chloephaga_hybrida": {
+      "name": "Caranca",
+      "latin": "Chloephaga hybrida",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#e7e6d9",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Anatidae",
+        "family": "Anatidae"
+      },
+      "gm06": {
+        "morph": "kelpgoose",
+        "locality": "Costas australes y fueguinas; macho blanco ilustrado",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_tachyeres_pteneres": {
+      "name": "Pato vapor no volador",
+      "latin": "Tachyeres pteneres",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#83908e",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Anatidae",
+        "family": "Anatidae"
+      },
+      "gm06": {
+        "morph": "steamerduck",
+        "locality": "Costas del sur de Chile y Tierra del Fuego",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_capra_nubiana": {
+      "name": "Íbice de Nubia",
+      "latin": "Capra nubiana",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#b49970",
+      "habitats": [
+        "montana",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Bovidae",
+        "family": "Bovidae"
+      },
+      "gm06": {
+        "morph": "ibex",
+        "locality": "Macizos áridos del noreste africano y Arabia",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_procavia_capensis": {
+      "name": "Damán roquero",
+      "latin": "Procavia capensis",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#9d8e76",
+      "habitats": [
+        "montana",
+        "desierto"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Procaviidae",
+        "family": "Procaviidae"
+      },
+      "gm06": {
+        "morph": "hyrax",
+        "locality": "Roquedos; no arrecifes",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_pterois_miles": {
+      "name": "Pez león del Índico",
+      "latin": "Pterois miles",
+      "rare": "Raro",
+      "kind": "fish",
+      "color": "#b87864",
+      "habitats": [
+        "arrecife"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Scorpaenidae",
+        "family": "Scorpaenidae"
+      },
+      "gm06": {
+        "morph": "lionfish",
+        "locality": "Mar Rojo e Índico; no confundir P. volitans",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_chaetodon_semilarvatus": {
+      "name": "Pez mariposa enmascarado",
+      "latin": "Chaetodon semilarvatus",
+      "rare": "Raro",
+      "kind": "fish",
+      "color": "#e1bf4b",
+      "habitats": [
+        "arrecife"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Actinopterygii",
+        "subClass": "Chaetodontidae",
+        "family": "Chaetodontidae"
+      },
+      "gm06": {
+        "morph": "butterflyfish",
+        "locality": "Mar Rojo y golfo de Adén",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_pongo_abelii": {
+      "name": "Orangután de Sumatra",
+      "latin": "Pongo abelii",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#bc7241",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Hominidae",
+        "family": "Hominidae"
+      },
+      "gm06": {
+        "morph": "orangutan",
+        "locality": "Norte de Sumatra; separado de P. tapanuliensis y P. pygmaeus",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_rhinoceros_sondaicus": {
+      "name": "Rinoceronte de Java",
+      "latin": "Rhinoceros sondaicus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#888d80",
+      "habitats": [
+        "selva",
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Rhinocerotidae",
+        "family": "Rhinocerotidae"
+      },
+      "gm06": {
+        "morph": "javanrhino",
+        "locality": "Java; distribución histórica continental no equivalente a la actual",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_pteropus_vampyrus": {
+      "name": "Zorro volador gigante",
+      "latin": "Pteropus vampyrus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#5d3c30",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Pteropodidae",
+        "family": "Pteropodidae"
+      },
+      "gm06": {
+        "morph": "flyingfox",
+        "locality": "Sumatra, Java y Borneo; distribución también continental",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_babyrousa_celebensis": {
+      "name": "Babirusa de Célebes",
+      "latin": "Babyrousa celebensis",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#a59d8d",
+      "habitats": [
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Suidae",
+        "family": "Suidae"
+      },
+      "gm06": {
+        "morph": "babirusa",
+        "locality": "Célebes; colmillos curvos del macho adulto",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_bubalus_depressicornis": {
+      "name": "Anoa de tierras bajas",
+      "latin": "Bubalus depressicornis",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#4b4940",
+      "habitats": [
+        "selva",
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Mammalia",
+        "subClass": "Bovidae",
+        "family": "Bovidae"
+      },
+      "gm06": {
+        "morph": "anoa",
+        "locality": "Célebes y Buton; no Borneo",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_macrocephalon_maleo": {
+      "name": "Maleo",
+      "latin": "Macrocephalon maleo",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#353c39",
+      "habitats": [
+        "bosque",
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Megapodiidae",
+        "family": "Megapodiidae"
+      },
+      "gm06": {
+        "morph": "maleo",
+        "locality": "Célebes; playas y suelos geotérmicos de nidificación",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_cacatua_moluccensis": {
+      "name": "Cacatúa de las Molucas",
+      "latin": "Cacatua moluccensis",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#ead6c8",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Cacatuidae",
+        "family": "Cacatuidae"
+      },
+      "gm06": {
+        "morph": "cockatoo",
+        "locality": "Seram y archipiélago próximo; no todas las Molucas",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_lorius_garrulus": {
+      "name": "Lori de las Molucas",
+      "latin": "Lorius garrulus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#c34f43",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psittaculidae",
+        "family": "Psittaculidae"
+      },
+      "gm06": {
+        "morph": "lory",
+        "locality": "Molucas septentrionales; separado de Seram",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_rhynochetos_jubatus": {
+      "name": "Kagú",
+      "latin": "Rhynochetos jubatus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#c4c7be",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Rhynochetidae",
+        "family": "Rhynochetidae"
+      },
+      "gm06": {
+        "morph": "kagu",
+        "locality": "Grande Terre, Nueva Caledonia",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_corvus_moneduloides": {
+      "name": "Cuervo de Nueva Caledonia",
+      "latin": "Corvus moneduloides",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#303b3b",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Corvidae",
+        "family": "Corvidae"
+      },
+      "gm06": {
+        "morph": "crow",
+        "locality": "Nueva Caledonia; uso de herramientas",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_eunymphicus_cornutus": {
+      "name": "Perico cornudo",
+      "latin": "Eunymphicus cornutus",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#77a552",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Psittaculidae",
+        "family": "Psittaculidae"
+      },
+      "gm06": {
+        "morph": "hornparakeet",
+        "locality": "Grande Terre y pequeñas islas; no perico de Ouvéa E. uvaeensis",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    },
+    "gm06_drepanoptila_holosericea": {
+      "name": "Paloma de plumas hendidas",
+      "latin": "Drepanoptila holosericea",
+      "rare": "Raro",
+      "kind": "gm06",
+      "color": "#7daa69",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "seasons": [
+        "primavera",
+        "verano",
+        "otono",
+        "invierno"
+      ],
+      "special": [
+        "Notable"
+      ],
+      "dimorphism": false,
+      "origin": "gm06",
+      "taxonomy": {
+        "className": "Aves",
+        "subClass": "Columbidae",
+        "family": "Columbidae"
+      },
+      "gm06": {
+        "morph": "fruitdove",
+        "locality": "Nueva Caledonia; patas emplumadas y pecho verde",
+        "sexRepresentation": "adulto representativo; sin variante sexual habilitada"
+      }
+    }
+  },
+  "regions": [
+    {
+      "id": "gm06_hudson",
+      "code": "GM06-HUDSON",
+      "name": "Bahía de Hudson",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 137
+      },
+      "habitats": [
+        "tundra",
+        "bosque",
+        "humedal",
+        "costa",
+        "banquisa_artica",
+        "agua_polar"
+      ],
+      "species": [
+        "gm06_gavia_immer",
+        "gm06_lepus_arcticus",
+        "polar_esp_ursus_maritimus",
+        "polar_esp_delphinapterus_leucas",
+        "polar_esp_pusa_hispida",
+        "reno",
+        "zorro_artico"
+      ],
+      "description": "Costas y cuencas subárticas; hielo estacional, aguas costeras y tierra separados por hábitat.",
+      "origin": "gm06"
+    },
+    {
+      "id": "gm06_labrador",
+      "code": "GM06-LABRADOR",
+      "name": "Labrador subártico",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 149
+      },
+      "habitats": [
+        "tundra",
+        "bosque",
+        "rio",
+        "humedal",
+        "costa"
+      ],
+      "species": [
+        "gm06_gavia_immer",
+        "gm06_lepus_arcticus",
+        "gm06_salmo_salar",
+        "gm06_histrionicus_histrionicus",
+        "na_esp_lynx_canadensis",
+        "gloton",
+        "na_esp_martes_americana",
+        "na_esp_perisoreus_canadensis"
+      ],
+      "description": "Península continental; no se extiende la fauna boreal a toda la tundra ni se introduce el alce de Terranova.",
+      "origin": "gm06"
+    },
+    {
+      "id": "gm06_atlantico",
+      "code": "GM06-ATLANTICO",
+      "name": "Atlántico canadiense",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 153
+      },
+      "habitats": [
+        "rio",
+        "humedal",
+        "costa",
+        "costa_marina",
+        "agua_polar",
+        "archipielago",
+        "oceano_abierto"
+      ],
+      "species": [
+        "gm06_gavia_immer",
+        "gm06_salmo_salar",
+        "gm06_pagophilus_groenlandicus",
+        "gm06_histrionicus_histrionicus",
+        "frailecillo_atlantico",
+        "mar_esp_halichoerus_grypus",
+        "mar_esp_gadus_morhua",
+        "mar_esp_morus_bassanus"
+      ],
+      "description": "Terranova, golfo de San Lorenzo y litorales próximos; conserva identidad marina frente a Labrador.",
+      "origin": "gm06"
+    },
+    {
+      "id": "gm06_antillas",
+      "code": "GM06-ANTILLAS",
+      "name": "Antillas y Caribe insular",
+      "continent": "Norteamérica",
+      "unlock": {
+        "prestige": 177
+      },
+      "habitats": [
+        "selva",
+        "bosque",
+        "rio",
+        "humedal",
+        "costa"
+      ],
+      "species": [
+        "gm06_mellisuga_helenae",
+        "gm06_crocodylus_rhombifer",
+        "gm06_priotelus_temnurus",
+        "gm06_solenodon_paradoxus",
+        "gm06_cyclura_nubila",
+        "gm06_amazona_leucocephala",
+        "gm06_cyclura_cornuta",
+        "na_esp_trichechus_manatus",
+        "sa_esp_phoenicopterus_ruber"
+      ],
+      "description": "Antillas Mayores y cayos: la presencia se especifica por isla, no en todo el hexágono.",
+      "origin": "gm06"
+    },
+    {
+      "id": "gm06_darien",
+      "code": "GM06-DARIEN",
+      "name": "Darién y Chocó",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 182
+      },
+      "habitats": [
+        "selva",
+        "bosque",
+        "rio",
+        "humedal",
+        "costa"
+      ],
+      "species": [
+        "gm06_ateles_fusciceps",
+        "gm06_saguinus_geoffroyi",
+        "gm06_basiliscus_basiliscus",
+        "gm06_crax_rubra",
+        "na_esp_panthera_onca",
+        "na_esp_tapirus_bairdii"
+      ],
+      "description": "Puente panameño-colombiano y bosques del Chocó; fauna asignada a subáreas.",
+      "origin": "gm06"
+    },
+    {
+      "id": "gm06_galapagos",
+      "code": "GM06-GALAPAGOS",
+      "name": "Islas Galápagos",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 197
+      },
+      "habitats": [
+        "costa",
+        "desierto",
+        "pradera",
+        "bosque"
+      ],
+      "species": [
+        "gm06_amblyrhynchus_cristatus",
+        "gm06_conolophus_subcristatus",
+        "gm06_chelonoidis_porteri",
+        "gm06_spheniscus_mendiculus",
+        "gm06_nannopterum_harrisi",
+        "gm06_geospiza_fortis",
+        "gm06_sula_nebouxii",
+        "gm06_phoebastria_irrorata",
+        "gm06_zalophus_wollebaeki"
+      ],
+      "description": "Archipiélago volcánico independiente; especies terrestres y litorales, no un mar abierto.",
+      "origin": "gm06"
+    },
+    {
+      "id": "gm06_humboldt",
+      "code": "GM06-HUMBOLDT",
+      "name": "Litoral del Pacífico suroriental",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 197
+      },
+      "habitats": [
+        "costa",
+        "costa_marina"
+      ],
+      "species": [
+        "gm06_spheniscus_humboldti",
+        "gm06_pelecanus_thagus",
+        "gm06_sula_variegata",
+        "gm06_leucocarbo_bougainvilliorum",
+        "gm06_larosterna_inca",
+        "gm06_arctocephalus_australis",
+        "sa_esp_lontra_felina",
+        "mar_esp_otaria_flavescens"
+      ],
+      "description": "Litoral de Perú y Chile asociado a Humboldt, al oeste de los Andes y al norte de Atacama.",
+      "origin": "gm06"
+    },
+    {
+      "id": "gm06_bosques",
+      "code": "GM06-BOSQUES",
+      "name": "Bosques templados del sur",
+      "continent": "Sudamérica",
+      "unlock": {
+        "prestige": 227
+      },
+      "habitats": [
+        "bosque",
+        "rio",
+        "humedal",
+        "costa"
+      ],
+      "species": [
+        "gm06_dromiciops_gliroides",
+        "gm06_lontra_provocax",
+        "gm06_pteroptochos_tarnii",
+        "sa_esp_pudu_puda",
+        "sa_esp_rhinoderma_darwinii",
+        "sa_esp_lycalopex_fulvipes",
+        "sa_esp_campephilus_magellanicus",
+        "sa_esp_enicognathus_ferrugineus"
+      ],
+      "description": "Selva valdiviana, Chiloé y bosques andinos húmedos; no toda la estepa patagónica.",
+      "origin": "gm06"
+    },
+    {
+      "id": "gm06_rojo",
+      "code": "GM06-ROJO",
+      "name": "Arco del mar Rojo",
+      "continent": "África",
+      "unlock": {
+        "prestige": 83
+      },
+      "habitats": [
+        "montana",
+        "desierto",
+        "costa",
+        "costa_marina",
+        "arrecife"
+      ],
+      "species": [
+        "gm06_capra_nubiana",
+        "gm06_procavia_capensis",
+        "gm06_pterois_miles",
+        "gm06_chaetodon_semilarvatus",
+        "af_dugongo",
+        "af_gacela_dorcas",
+        "mar_esp_chelonia_mydas"
+      ],
+      "description": "Macizos áridos y costas entre el Nilo, Etiopía y Arabia; arrecifes en hábitat propio.",
+      "origin": "gm06"
+    },
+    {
+      "id": "gm06_sonda",
+      "code": "GM06-SONDA",
+      "name": "Islas de la Sonda occidentales",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 48
+      },
+      "habitats": [
+        "selva",
+        "bosque",
+        "rio",
+        "humedal",
+        "costa"
+      ],
+      "species": [
+        "gm06_pongo_abelii",
+        "gm06_rhinoceros_sondaicus",
+        "gm06_pteropus_vampyrus",
+        "asia_esp_0436",
+        "asia_esp_0352",
+        "asia_esp_0067",
+        "asia_esp_0165"
+      ],
+      "description": "Sumatra, Java y Borneo; localidades explícitas y distribución histórica distinguida de la actual.",
+      "origin": "gm06"
+    },
+    {
+      "id": "gm06_wallacea",
+      "code": "GM06-WALLACEA",
+      "name": "Célebes y Molucas",
+      "continent": "Asia",
+      "unlock": {
+        "prestige": 48
+      },
+      "habitats": [
+        "selva",
+        "bosque",
+        "humedal",
+        "costa"
+      ],
+      "species": [
+        "gm06_babyrousa_celebensis",
+        "gm06_bubalus_depressicornis",
+        "gm06_macrocephalon_maleo",
+        "gm06_cacatua_moluccensis",
+        "gm06_lorius_garrulus"
+      ],
+      "description": "Célebes y archipiélagos moluqueños; no se mezclan endemismos de Borneo.",
+      "origin": "gm06"
+    },
+    {
+      "id": "gm06_melanesia",
+      "code": "GM06-MELANESIA",
+      "name": "Melanesia oriental",
+      "continent": "Oceanía",
+      "unlock": {
+        "prestige": 269
+      },
+      "habitats": [
+        "bosque",
+        "selva",
+        "costa"
+      ],
+      "species": [
+        "gm06_rhynochetos_jubatus",
+        "gm06_corvus_moneduloides",
+        "gm06_eunymphicus_cornutus",
+        "gm06_drepanoptila_holosericea"
+      ],
+      "description": "Nueva Caledonia y archipiélagos próximos; animales restringidos a sus islas documentadas.",
+      "origin": "gm06"
+    }
+  ],
+  "additions": {
+    "sa_patagonia_y_tierra_del_fuego": [
+      "gm06_arctocephalus_australis",
+      "gm06_lontra_provocax",
+      "gm06_chloephaga_hybrida",
+      "gm06_tachyeres_pteneres"
+    ]
+  },
+  "renames": {
+    "sa_caribe_sudamericano": "Litoral caribeño sudamericano",
+    "HX-08-10": "Bosques atlánticos ecuatoriales",
+    "HX-08-08": "Bosques guineanos occidentales",
+    "HX-10-12": "Litoral sudoriental africano",
+    "HX-11-10": "Sabanas del sudeste africano",
+    "HX-07-14": "Archipiélagos del Índico occidental",
+    "oc_desierto_australiano": "Interior árido australiano",
+    "oc_norte_tropical_australiano": "Australia tropical septentrional"
+  },
+  "transfers": {
+    "HX-06-17": {
+      "gm06_sonda": [
+        "asia_esp_0436",
+        "asia_esp_0352"
+      ]
+    },
+    "sa_patagonia_y_tierra_del_fuego": {
+      "gm06_bosques": [
+        "sa_esp_pudu_puda",
+        "sa_esp_rhinoderma_darwinii",
+        "sa_esp_lycalopex_fulvipes"
+      ]
+    }
+  },
+  "localities": {
+    "gm06_hudson|gm06_gavia_immer": "Lagos boreales; no tundra terrestre uniforme",
+    "gm06_labrador|gm06_gavia_immer": "Lagos boreales; no tundra terrestre uniforme",
+    "gm06_atlantico|gm06_gavia_immer": "Lagos boreales; no tundra terrestre uniforme",
+    "gm06_hudson|gm06_lepus_arcticus": "Tundra de la costa septentrional; pelaje invernal representado",
+    "gm06_labrador|gm06_lepus_arcticus": "Tundra de la costa septentrional; pelaje invernal representado",
+    "gm06_labrador|gm06_salmo_salar": "Ríos y estuarios atlánticos; especie anádroma",
+    "gm06_atlantico|gm06_salmo_salar": "Ríos y estuarios atlánticos; especie anádroma",
+    "gm06_atlantico|gm06_pagophilus_groenlandicus": "Hielo estacional y aguas del golfo de San Lorenzo; adulto",
+    "gm06_labrador|gm06_histrionicus_histrionicus": "Ríos de cría y costas rocosas; macho adulto ilustrado",
+    "gm06_atlantico|gm06_histrionicus_histrionicus": "Ríos de cría y costas rocosas; macho adulto ilustrado",
+    "gm06_antillas|gm06_mellisuga_helenae": "Cuba e Isla de la Juventud; macho adulto ilustrado",
+    "gm06_antillas|gm06_crocodylus_rhombifer": "Cuba: ciénagas de Zapata y Lanier; no todas las Antillas",
+    "gm06_antillas|gm06_priotelus_temnurus": "Cuba e islas adyacentes",
+    "gm06_antillas|gm06_solenodon_paradoxus": "La Española; nocturno",
+    "gm06_antillas|gm06_cyclura_nubila": "Cuba y cayos: concepto C. nubila; no población introducida de Puerto Rico",
+    "gm06_antillas|gm06_amazona_leucocephala": "Cuba, Bahamas e islas Caimán; poblaciones insulares diferenciadas",
+    "gm06_antillas|gm06_cyclura_cornuta": "La Española; no Cuba",
+    "gm06_darien|gm06_ateles_fusciceps": "Chocó de Colombia y Ecuador; no todo Darién",
+    "gm06_darien|gm06_saguinus_geoffroyi": "Panamá oriental y Colombia noroccidental",
+    "gm06_darien|gm06_basiliscus_basiliscus": "Riberas de Panamá y noroeste de Colombia",
+    "gm06_darien|gm06_crax_rubra": "Extremo noroccidental colombiano y Darién; macho adulto",
+    "gm06_galapagos|gm06_amblyrhynchus_cristatus": "Litorales rocosos de Galápagos; no animal oceánico",
+    "gm06_galapagos|gm06_conolophus_subcristatus": "Islas occidentales y centrales; no C. pallidus ni C. marthae",
+    "gm06_galapagos|gm06_chelonoidis_porteri": "Occidente de Santa Cruz; una especie explícita del complejo",
+    "gm06_galapagos|gm06_spheniscus_mendiculus": "Principalmente Fernandina e Isabela",
+    "gm06_galapagos|gm06_nannopterum_harrisi": "Fernandina y oeste de Isabela; sinónimo Phalacrocorax harrisi",
+    "gm06_galapagos|gm06_geospiza_fortis": "Galápagos; macho adulto, pico profundo",
+    "gm06_galapagos|gm06_sula_nebouxii": "Galápagos y Pacífico oriental; no endémico",
+    "gm06_galapagos|gm06_phoebastria_irrorata": "Cría principalmente Española; también isla de la Plata",
+    "gm06_galapagos|gm06_zalophus_wollebaeki": "Playas y costas de Galápagos; no lobo fino de Galápagos",
+    "gm06_humboldt|gm06_spheniscus_humboldti": "Perú y Chile; banda pectoral y parche facial rosado",
+    "gm06_humboldt|gm06_pelecanus_thagus": "Litoral de Perú y Chile",
+    "gm06_humboldt|gm06_sula_variegata": "Perú y Chile; patas grises, alas moteadas",
+    "gm06_humboldt|gm06_leucocarbo_bougainvilliorum": "Litoral de Humboldt; vientre blanco y cara roja",
+    "gm06_humboldt|gm06_larosterna_inca": "Perú y Chile; bigotes blancos y pico rojo",
+    "gm06_humboldt|gm06_arctocephalus_australis": "Perú, Chile austral y Atlántico sudoccidental; presencia discontinua",
+    "sa_patagonia_y_tierra_del_fuego|gm06_arctocephalus_australis": "Perú, Chile austral y Atlántico sudoccidental; presencia discontinua",
+    "gm06_bosques|gm06_dromiciops_gliroides": "Bosques húmedos australes; concepto MDD, no tres especies nuevas",
+    "gm06_bosques|gm06_lontra_provocax": "Ríos meridionales y canales australes",
+    "sa_patagonia_y_tierra_del_fuego|gm06_lontra_provocax": "Ríos meridionales y canales australes",
+    "gm06_bosques|gm06_pteroptochos_tarnii": "Sotobosque húmedo del sur de Chile y Argentina",
+    "sa_patagonia_y_tierra_del_fuego|gm06_chloephaga_hybrida": "Costas australes y fueguinas; macho blanco ilustrado",
+    "sa_patagonia_y_tierra_del_fuego|gm06_tachyeres_pteneres": "Costas del sur de Chile y Tierra del Fuego",
+    "gm06_rojo|gm06_capra_nubiana": "Macizos áridos del noreste africano y Arabia",
+    "gm06_rojo|gm06_procavia_capensis": "Roquedos; no arrecifes",
+    "gm06_rojo|gm06_pterois_miles": "Mar Rojo e Índico; no confundir P. volitans",
+    "gm06_rojo|gm06_chaetodon_semilarvatus": "Mar Rojo y golfo de Adén",
+    "gm06_sonda|gm06_pongo_abelii": "Norte de Sumatra; separado de P. tapanuliensis y P. pygmaeus",
+    "gm06_sonda|gm06_rhinoceros_sondaicus": "Java; distribución histórica continental no equivalente a la actual",
+    "gm06_sonda|gm06_pteropus_vampyrus": "Sumatra, Java y Borneo; distribución también continental",
+    "gm06_wallacea|gm06_babyrousa_celebensis": "Célebes; colmillos curvos del macho adulto",
+    "gm06_wallacea|gm06_bubalus_depressicornis": "Célebes y Buton; no Borneo",
+    "gm06_wallacea|gm06_macrocephalon_maleo": "Célebes; playas y suelos geotérmicos de nidificación",
+    "gm06_wallacea|gm06_cacatua_moluccensis": "Seram y archipiélago próximo; no todas las Molucas",
+    "gm06_wallacea|gm06_lorius_garrulus": "Molucas septentrionales; separado de Seram",
+    "gm06_melanesia|gm06_rhynochetos_jubatus": "Grande Terre, Nueva Caledonia",
+    "gm06_melanesia|gm06_corvus_moneduloides": "Nueva Caledonia; uso de herramientas",
+    "gm06_melanesia|gm06_eunymphicus_cornutus": "Grande Terre y pequeñas islas; no perico de Ouvéa E. uvaeensis",
+    "gm06_melanesia|gm06_drepanoptila_holosericea": "Nueva Caledonia; patas emplumadas y pecho verde",
+    "gm06_hudson|polar_esp_ursus_maritimus": "Costas y banquisa estacional",
+    "gm06_hudson|polar_esp_delphinapterus_leucas": "Aguas costeras y estuarios",
+    "gm06_hudson|polar_esp_pusa_hispida": "Banquisa y aguas subárticas",
+    "gm06_hudson|reno": "Tundra y bosque; caribú",
+    "gm06_hudson|zorro_artico": "Tundra costera",
+    "gm06_labrador|na_esp_lynx_canadensis": "Bosques de la península",
+    "gm06_labrador|gloton": "Bosques y tundra continentales",
+    "gm06_labrador|na_esp_martes_americana": "Bosque boreal",
+    "gm06_labrador|na_esp_perisoreus_canadensis": "Bosque boreal",
+    "gm06_atlantico|frailecillo_atlantico": "Colonias e islas costeras",
+    "gm06_atlantico|mar_esp_halichoerus_grypus": "Golfo de San Lorenzo y costas atlánticas",
+    "gm06_atlantico|mar_esp_gadus_morhua": "Aguas atlánticas de la plataforma; hábitat oceánico del catálogo vigente",
+    "gm06_atlantico|mar_esp_morus_bassanus": "Colonias insulares y aguas atlánticas",
+    "gm06_antillas|na_esp_trichechus_manatus": "Costas, estuarios y humedales antillanos",
+    "gm06_antillas|sa_esp_phoenicopterus_ruber": "Lagunas salinas de Cuba y otras islas, no selva",
+    "gm06_bosques|sa_esp_pudu_puda": "Bosques templados",
+    "gm06_bosques|sa_esp_rhinoderma_darwinii": "Sotobosque húmedo",
+    "gm06_bosques|sa_esp_lycalopex_fulvipes": "Chiloé y poblaciones continentales",
+    "gm06_bosques|sa_esp_campephilus_magellanicus": "Bosques australes",
+    "gm06_bosques|sa_esp_enicognathus_ferrugineus": "Bosques australes",
+    "gm06_humboldt|sa_esp_lontra_felina": "Litoral rocoso",
+    "gm06_humboldt|mar_esp_otaria_flavescens": "Litorales de Perú y Chile",
+    "gm06_rojo|af_dugongo": "Praderas marinas costeras",
+    "gm06_rojo|af_gacela_dorcas": "Desiertos costeros",
+    "gm06_rojo|mar_esp_chelonia_mydas": "Arrecifes y costas marinas",
+    "gm06_sonda|asia_esp_0436": "Borneo: Pongo pygmaeus",
+    "gm06_sonda|asia_esp_0352": "Borneo: Nasalis larvatus",
+    "gm06_sonda|asia_esp_0067": "Sumatra, Borneo y Java; distribución discontinua",
+    "gm06_sonda|asia_esp_0165": "Sumatra y Borneo; ámbito histórico más extenso",
+    "gm06_darien|na_esp_panthera_onca": "Darién; no extrapolación a todo el Chocó",
+    "gm06_darien|na_esp_tapirus_bairdii": "Darién; no extrapolación a todo el Chocó"
+  },
+  "scopes": {
+    "HX-07-14": {
+      "af_tortuga_aldabra": "Atolón de Aldabra; no todas las islas Seychelles",
+      "af_loro_negro_seychelles": "Praslin, Seychelles; no Aldabra",
+      "af_cernicalo_seychelles": "Islas graníticas de Seychelles; no atribuido a Aldabra"
+    }
+  },
+  "reserved": [
+    "Pacífico ecuatorial: referencia 9; sin región nueva"
+  ],
+  "special": {
+    "id": "rapa_nui",
+    "name": "Rapa Nui",
+    "title": "La isla solitaria del Pacífico",
+    "status": "Expediente de revisión; sin desbloqueo, recompensas ni especies jugables",
+    "records": [
+      "Chaetodon litus",
+      "Chrysiptera rapanui — identidad confirmada en ITIS 615094 y ficha MMA; archivo no jugable",
+      "Phaethon rubricauda",
+      "Onychoprion fuscatus",
+      "Sophora toromiro — botánica"
+    ],
+    "history": "Sociedad rapanui en 1842. Sin bandera chilena, sin moáis originales ni patrimonio como botín."
+  }
+}

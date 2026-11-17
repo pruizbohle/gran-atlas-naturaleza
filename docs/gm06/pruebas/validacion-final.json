@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-17",
+  "focused": {
+    "total": 27,
+    "passed": 27
+  },
+  "associationsChecked": 1829,
+  "speciesChecked": 997,
+  "suiteStatus": "Suite completa: 573/783 aprobadas; 210 fallos también presentes en la base 3.43.0. Fallos adicionales: 0.",
+  "publicationStatus": "Laboratorio aprobado expresamente por el usuario el 17-11-2026. Integración web 3.44.0 en preparación; ajustes menores de coordenadas diferidos.",
+  "fullSuite": {
+    "tests": "783",
+    "pass": "573",
+    "fail": "210",
+    "duration_ms": "128862.967547"
+  },
+  "newFailures": [],
+  "browser": "Cinco anchos, siete secciones, sin errores JS ni desbordamiento; arranque offline con red desactivada"
+}

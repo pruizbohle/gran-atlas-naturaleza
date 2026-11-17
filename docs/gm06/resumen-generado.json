@@ -1,0 +1,13 @@
+{
+  "base": "41a4bbd",
+  "phase": "GM-06 aprobado · integración 3.44.0",
+  "species": 997,
+  "newSpecies": 52,
+  "regions": 125,
+  "newRegions": 12,
+  "associations": 1829,
+  "selfContained": true,
+  "bytes": 3476018,
+  "sandbox": "allow-scripts allow-downloads",
+  "productionStorageAccessible": false
+}

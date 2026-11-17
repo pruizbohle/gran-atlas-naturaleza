@@ -1,0 +1,91 @@
+region_id	region	especie_id	tipo	localidad
+gm06_hudson	Bahía de Hudson	gm06_gavia_immer	nueva ficha	Lagos boreales; no tundra terrestre uniforme
+gm06_labrador	Labrador subártico	gm06_gavia_immer	nueva ficha	Lagos boreales; no tundra terrestre uniforme
+gm06_atlantico	Atlántico canadiense	gm06_gavia_immer	nueva ficha	Lagos boreales; no tundra terrestre uniforme
+gm06_hudson	Bahía de Hudson	gm06_lepus_arcticus	nueva ficha	Tundra de la costa septentrional; pelaje invernal representado
+gm06_labrador	Labrador subártico	gm06_lepus_arcticus	nueva ficha	Tundra de la costa septentrional; pelaje invernal representado
+gm06_labrador	Labrador subártico	gm06_salmo_salar	nueva ficha	Ríos y estuarios atlánticos; especie anádroma
+gm06_atlantico	Atlántico canadiense	gm06_salmo_salar	nueva ficha	Ríos y estuarios atlánticos; especie anádroma
+gm06_atlantico	Atlántico canadiense	gm06_pagophilus_groenlandicus	nueva ficha	Hielo estacional y aguas del golfo de San Lorenzo; adulto
+gm06_labrador	Labrador subártico	gm06_histrionicus_histrionicus	nueva ficha	Ríos de cría y costas rocosas; macho adulto ilustrado
+gm06_atlantico	Atlántico canadiense	gm06_histrionicus_histrionicus	nueva ficha	Ríos de cría y costas rocosas; macho adulto ilustrado
+gm06_antillas	Antillas y Caribe insular	gm06_mellisuga_helenae	nueva ficha	Cuba e Isla de la Juventud; macho adulto ilustrado
+gm06_antillas	Antillas y Caribe insular	gm06_crocodylus_rhombifer	nueva ficha	Cuba: ciénagas de Zapata y Lanier; no todas las Antillas
+gm06_antillas	Antillas y Caribe insular	gm06_priotelus_temnurus	nueva ficha	Cuba e islas adyacentes
+gm06_antillas	Antillas y Caribe insular	gm06_solenodon_paradoxus	nueva ficha	La Española; nocturno
+gm06_antillas	Antillas y Caribe insular	gm06_cyclura_nubila	nueva ficha	Cuba y cayos: concepto C. nubila; no población introducida de Puerto Rico
+gm06_antillas	Antillas y Caribe insular	gm06_amazona_leucocephala	nueva ficha	Cuba, Bahamas e islas Caimán; poblaciones insulares diferenciadas
+gm06_antillas	Antillas y Caribe insular	gm06_cyclura_cornuta	nueva ficha	La Española; no Cuba
+gm06_darien	Darién y Chocó	gm06_ateles_fusciceps	nueva ficha	Chocó de Colombia y Ecuador; no todo Darién
+gm06_darien	Darién y Chocó	gm06_saguinus_geoffroyi	nueva ficha	Panamá oriental y Colombia noroccidental
+gm06_darien	Darién y Chocó	gm06_basiliscus_basiliscus	nueva ficha	Riberas de Panamá y noroeste de Colombia
+gm06_darien	Darién y Chocó	gm06_crax_rubra	nueva ficha	Extremo noroccidental colombiano y Darién; macho adulto
+gm06_galapagos	Islas Galápagos	gm06_amblyrhynchus_cristatus	nueva ficha	Litorales rocosos de Galápagos; no animal oceánico
+gm06_galapagos	Islas Galápagos	gm06_conolophus_subcristatus	nueva ficha	Islas occidentales y centrales; no C. pallidus ni C. marthae
+gm06_galapagos	Islas Galápagos	gm06_chelonoidis_porteri	nueva ficha	Occidente de Santa Cruz; una especie explícita del complejo
+gm06_galapagos	Islas Galápagos	gm06_spheniscus_mendiculus	nueva ficha	Principalmente Fernandina e Isabela
+gm06_galapagos	Islas Galápagos	gm06_nannopterum_harrisi	nueva ficha	Fernandina y oeste de Isabela; sinónimo Phalacrocorax harrisi
+gm06_galapagos	Islas Galápagos	gm06_geospiza_fortis	nueva ficha	Galápagos; macho adulto, pico profundo
+gm06_galapagos	Islas Galápagos	gm06_sula_nebouxii	nueva ficha	Galápagos y Pacífico oriental; no endémico
+gm06_galapagos	Islas Galápagos	gm06_phoebastria_irrorata	nueva ficha	Cría principalmente Española; también isla de la Plata
+gm06_galapagos	Islas Galápagos	gm06_zalophus_wollebaeki	nueva ficha	Playas y costas de Galápagos; no lobo fino de Galápagos
+gm06_humboldt	Litoral del Pacífico suroriental	gm06_spheniscus_humboldti	nueva ficha	Perú y Chile; banda pectoral y parche facial rosado
+gm06_humboldt	Litoral del Pacífico suroriental	gm06_pelecanus_thagus	nueva ficha	Litoral de Perú y Chile
+gm06_humboldt	Litoral del Pacífico suroriental	gm06_sula_variegata	nueva ficha	Perú y Chile; patas grises, alas moteadas
+gm06_humboldt	Litoral del Pacífico suroriental	gm06_leucocarbo_bougainvilliorum	nueva ficha	Litoral de Humboldt; vientre blanco y cara roja
+gm06_humboldt	Litoral del Pacífico suroriental	gm06_larosterna_inca	nueva ficha	Perú y Chile; bigotes blancos y pico rojo
+gm06_humboldt	Litoral del Pacífico suroriental	gm06_arctocephalus_australis	nueva ficha	Perú, Chile austral y Atlántico sudoccidental; presencia discontinua
+sa_patagonia_y_tierra_del_fuego	Patagonia y Tierra del Fuego	gm06_arctocephalus_australis	nueva ficha	Perú, Chile austral y Atlántico sudoccidental; presencia discontinua
+gm06_bosques	Bosques templados del sur	gm06_dromiciops_gliroides	nueva ficha	Bosques húmedos australes; concepto MDD, no tres especies nuevas
+gm06_bosques	Bosques templados del sur	gm06_lontra_provocax	nueva ficha	Ríos meridionales y canales australes
+sa_patagonia_y_tierra_del_fuego	Patagonia y Tierra del Fuego	gm06_lontra_provocax	nueva ficha	Ríos meridionales y canales australes
+gm06_bosques	Bosques templados del sur	gm06_pteroptochos_tarnii	nueva ficha	Sotobosque húmedo del sur de Chile y Argentina
+sa_patagonia_y_tierra_del_fuego	Patagonia y Tierra del Fuego	gm06_chloephaga_hybrida	nueva ficha	Costas australes y fueguinas; macho blanco ilustrado
+sa_patagonia_y_tierra_del_fuego	Patagonia y Tierra del Fuego	gm06_tachyeres_pteneres	nueva ficha	Costas del sur de Chile y Tierra del Fuego
+gm06_rojo	Arco del mar Rojo	gm06_capra_nubiana	nueva ficha	Macizos áridos del noreste africano y Arabia
+gm06_rojo	Arco del mar Rojo	gm06_procavia_capensis	nueva ficha	Roquedos; no arrecifes
+gm06_rojo	Arco del mar Rojo	gm06_pterois_miles	nueva ficha	Mar Rojo e Índico; no confundir P. volitans
+gm06_rojo	Arco del mar Rojo	gm06_chaetodon_semilarvatus	nueva ficha	Mar Rojo y golfo de Adén
+gm06_sonda	Islas de la Sonda occidentales	gm06_pongo_abelii	nueva ficha	Norte de Sumatra; separado de P. tapanuliensis y P. pygmaeus
+gm06_sonda	Islas de la Sonda occidentales	gm06_rhinoceros_sondaicus	nueva ficha	Java; distribución histórica continental no equivalente a la actual
+gm06_sonda	Islas de la Sonda occidentales	gm06_pteropus_vampyrus	nueva ficha	Sumatra, Java y Borneo; distribución también continental
+gm06_wallacea	Célebes y Molucas	gm06_babyrousa_celebensis	nueva ficha	Célebes; colmillos curvos del macho adulto
+gm06_wallacea	Célebes y Molucas	gm06_bubalus_depressicornis	nueva ficha	Célebes y Buton; no Borneo
+gm06_wallacea	Célebes y Molucas	gm06_macrocephalon_maleo	nueva ficha	Célebes; playas y suelos geotérmicos de nidificación
+gm06_wallacea	Célebes y Molucas	gm06_cacatua_moluccensis	nueva ficha	Seram y archipiélago próximo; no todas las Molucas
+gm06_wallacea	Célebes y Molucas	gm06_lorius_garrulus	nueva ficha	Molucas septentrionales; separado de Seram
+gm06_melanesia	Melanesia oriental	gm06_rhynochetos_jubatus	nueva ficha	Grande Terre, Nueva Caledonia
+gm06_melanesia	Melanesia oriental	gm06_corvus_moneduloides	nueva ficha	Nueva Caledonia; uso de herramientas
+gm06_melanesia	Melanesia oriental	gm06_eunymphicus_cornutus	nueva ficha	Grande Terre y pequeñas islas; no perico de Ouvéa E. uvaeensis
+gm06_melanesia	Melanesia oriental	gm06_drepanoptila_holosericea	nueva ficha	Nueva Caledonia; patas emplumadas y pecho verde
+gm06_hudson	Bahía de Hudson	polar_esp_ursus_maritimus	reutilización	Costas y banquisa estacional
+gm06_hudson	Bahía de Hudson	polar_esp_delphinapterus_leucas	reutilización	Aguas costeras y estuarios
+gm06_hudson	Bahía de Hudson	polar_esp_pusa_hispida	reutilización	Banquisa y aguas subárticas
+gm06_hudson	Bahía de Hudson	reno	reutilización	Tundra y bosque; caribú
+gm06_hudson	Bahía de Hudson	zorro_artico	reutilización	Tundra costera
+gm06_labrador	Labrador subártico	na_esp_lynx_canadensis	reutilización	Bosques de la península
+gm06_labrador	Labrador subártico	gloton	reutilización	Bosques y tundra continentales
+gm06_labrador	Labrador subártico	na_esp_martes_americana	reutilización	Bosque boreal
+gm06_labrador	Labrador subártico	na_esp_perisoreus_canadensis	reutilización	Bosque boreal
+gm06_atlantico	Atlántico canadiense	frailecillo_atlantico	reutilización	Colonias e islas costeras
+gm06_atlantico	Atlántico canadiense	mar_esp_halichoerus_grypus	reutilización	Golfo de San Lorenzo y costas atlánticas
+gm06_atlantico	Atlántico canadiense	mar_esp_gadus_morhua	reutilización	Aguas atlánticas de la plataforma; hábitat oceánico del catálogo vigente
+gm06_atlantico	Atlántico canadiense	mar_esp_morus_bassanus	reutilización	Colonias insulares y aguas atlánticas
+gm06_antillas	Antillas y Caribe insular	na_esp_trichechus_manatus	reutilización	Costas, estuarios y humedales antillanos
+gm06_antillas	Antillas y Caribe insular	sa_esp_phoenicopterus_ruber	reutilización	Lagunas salinas de Cuba y otras islas, no selva
+gm06_bosques	Bosques templados del sur	sa_esp_pudu_puda	reutilización	Bosques templados
+gm06_bosques	Bosques templados del sur	sa_esp_rhinoderma_darwinii	reutilización	Sotobosque húmedo
+gm06_bosques	Bosques templados del sur	sa_esp_lycalopex_fulvipes	reutilización	Chiloé y poblaciones continentales
+gm06_bosques	Bosques templados del sur	sa_esp_campephilus_magellanicus	reutilización	Bosques australes
+gm06_bosques	Bosques templados del sur	sa_esp_enicognathus_ferrugineus	reutilización	Bosques australes
+gm06_humboldt	Litoral del Pacífico suroriental	sa_esp_lontra_felina	reutilización	Litoral rocoso
+gm06_humboldt	Litoral del Pacífico suroriental	mar_esp_otaria_flavescens	reutilización	Litorales de Perú y Chile
+gm06_rojo	Arco del mar Rojo	af_dugongo	reutilización	Praderas marinas costeras
+gm06_rojo	Arco del mar Rojo	af_gacela_dorcas	reutilización	Desiertos costeros
+gm06_rojo	Arco del mar Rojo	mar_esp_chelonia_mydas	reutilización	Arrecifes y costas marinas
+gm06_sonda	Islas de la Sonda occidentales	asia_esp_0436	reutilización	Borneo: Pongo pygmaeus
+gm06_sonda	Islas de la Sonda occidentales	asia_esp_0352	reutilización	Borneo: Nasalis larvatus
+gm06_sonda	Islas de la Sonda occidentales	asia_esp_0067	reutilización	Sumatra, Borneo y Java; distribución discontinua
+gm06_sonda	Islas de la Sonda occidentales	asia_esp_0165	reutilización	Sumatra y Borneo; ámbito histórico más extenso
+gm06_darien	Darién y Chocó	na_esp_panthera_onca	reutilización	Darién; no extrapolación a todo el Chocó
+gm06_darien	Darién y Chocó	na_esp_tapirus_bairdii	reutilización	Darién; no extrapolación a todo el Chocó

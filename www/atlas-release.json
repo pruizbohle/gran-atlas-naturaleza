@@ -1,13 +1,13 @@
 {
-  "version": "3.43.0",
+  "version": "3.44.0",
   "atlas": "simple",
   "cells": {
     "Europa": 10,
-    "Asia": 25,
-    "África": 24,
-    "Norteamérica": 14,
-    "Sudamérica": 10,
-    "Oceanía": 8,
+    "Asia": 27,
+    "África": 25,
+    "Norteamérica": 18,
+    "Sudamérica": 14,
+    "Oceanía": 9,
     "Polos": 7,
     "Océanos": 19
   },
@@ -165,5 +165,17 @@
     "economyChanged": false,
     "designApproved": true,
     "implementationApprovalPending": false
+  },
+  "gm06": {
+    "species": 997,
+    "newSpecies": 52,
+    "regions": 125,
+    "newRegions": 12,
+    "presences": 1829,
+    "approved": true,
+    "economyChanged": false,
+    "collectiblesIntegrated": false,
+    "specialDossier": "Rapa Nui",
+    "physicalAndroidValidated": false
   }
 }

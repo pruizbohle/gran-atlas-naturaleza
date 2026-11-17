@@ -1,3 +1,9 @@
+# 3.44.0 · Cartografía del naturalista
+
+997 especies, 125 regiones y 1.829 asociaciones zoológicas. Patagonia reorganizada y nuevos bosques templados e islas, conservando IDs y progreso. Rapa Nui es un expediente especial.
+
+[Laboratorio GM-06](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-cartografia-gm06.html) · [Informe](docs/gm06/cierre-validacion.md)
+
 # 3.43.0 · Campamento y perfil del naturalista
 
 Campamento reúne Astillero, Caravana, Taller, Excavaciones y Prospecciones, con botón **Volver al Campamento** en cada instalación. El avatar agrupa Perfil, Estadísticas, Guardar y restaurar, y Sobre; incluye ocho retratos y perfil opcional compatible con los respaldos existentes. Se mantienen catálogo, economía, trabajos pendientes y guardado local. [Informe 3.43.0](README_V3430.md).

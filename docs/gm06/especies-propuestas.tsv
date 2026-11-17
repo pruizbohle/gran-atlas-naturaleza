@@ -1,0 +1,53 @@
+latin	nombre	familia	clase	morfologia	color	habitats	zonas	localidad
+Gavia immer	Colimbo grande	Gaviidae	Aves	loon	#303a3a	rio,humedal	hudson,labrador,atlantico	Lagos boreales; no tundra terrestre uniforme
+Lepus arcticus	Liebre ártica	Leporidae	Mammalia	hare	#eee9db	tundra	hudson,labrador	Tundra de la costa septentrional; pelaje invernal representado
+Salmo salar	Salmón atlántico	Salmonidae	Actinopterygii	salmon	#809b9c	rio,costa	labrador,atlantico	Ríos y estuarios atlánticos; especie anádroma
+Pagophilus groenlandicus	Foca de Groenlandia	Phocidae	Mammalia	harpseal	#c4c1b6	costa_marina,agua_polar	atlantico	Hielo estacional y aguas del golfo de San Lorenzo; adulto
+Histrionicus histrionicus	Pato arlequín	Anatidae	Aves	harlequin	#496578	rio,costa	labrador,atlantico	Ríos de cría y costas rocosas; macho adulto ilustrado
+Mellisuga helenae	Colibrí abeja	Trochilidae	Aves	hummingbird	#38a395	bosque,selva	antillas	Cuba e Isla de la Juventud; macho adulto ilustrado
+Crocodylus rhombifer	Cocodrilo cubano	Crocodylidae	Reptilia	crocodile	#798055	humedal,rio	antillas	Cuba: ciénagas de Zapata y Lanier; no todas las Antillas
+Priotelus temnurus	Tocororo	Trogonidae	Aves	trogon	#4c977d	bosque,selva	antillas	Cuba e islas adyacentes
+Solenodon paradoxus	Solenodonte de La Española	Solenodontidae	Mammalia	solenodon	#9c795c	bosque,selva	antillas	La Española; nocturno
+Cyclura nubila	Iguana cubana	Iguanidae	Reptilia	iguana	#8b8b6e	costa,bosque	antillas	Cuba y cayos: concepto C. nubila; no población introducida de Puerto Rico
+Amazona leucocephala	Amazona cubana	Psittacidae	Aves	amazon	#5c9a50	bosque	antillas	Cuba, Bahamas e islas Caimán; poblaciones insulares diferenciadas
+Cyclura cornuta	Iguana rinoceronte	Iguanidae	Reptilia	horniguana	#827e75	costa,bosque	antillas	La Española; no Cuba
+Ateles fusciceps	Mono araña de cabeza negra	Atelidae	Mammalia	spidermonkey	#343a32	selva	darien	Chocó de Colombia y Ecuador; no todo Darién
+Saguinus geoffroyi	Tití de Geoffroy	Callitrichidae	Mammalia	tamarin	#9d674c	selva,bosque	darien	Panamá oriental y Colombia noroccidental
+Basiliscus basiliscus	Basilisco común	Corytophanidae	Reptilia	basilisk	#7a8753	rio,selva	darien	Riberas de Panamá y noroeste de Colombia
+Crax rubra	Pavón grande	Cracidae	Aves	curassow	#343c35	selva,bosque	darien	Extremo noroccidental colombiano y Darién; macho adulto
+Amblyrhynchus cristatus	Iguana marina	Iguanidae	Reptilia	marineiguana	#485556	costa	galapagos	Litorales rocosos de Galápagos; no animal oceánico
+Conolophus subcristatus	Iguana terrestre de Galápagos	Iguanidae	Reptilia	landiguana	#c9a24d	desierto,pradera	galapagos	Islas occidentales y centrales; no C. pallidus ni C. marthae
+Chelonoidis porteri	Tortuga gigante de Santa Cruz occidental	Testudinidae	Reptilia	tortoise	#77765a	pradera,bosque	galapagos	Occidente de Santa Cruz; una especie explícita del complejo
+Spheniscus mendiculus	Pingüino de Galápagos	Spheniscidae	Aves	penguin	#414949	costa	galapagos	Principalmente Fernandina e Isabela
+Nannopterum harrisi	Cormorán no volador	Phalacrocoracidae	Aves	flightlesscormorant	#444c48	costa	galapagos	Fernandina y oeste de Isabela; sinónimo Phalacrocorax harrisi
+Geospiza fortis	Pinzón terrestre mediano	Thraupidae	Aves	groundfinch	#343b34	bosque,pradera	galapagos	Galápagos; macho adulto, pico profundo
+Sula nebouxii	Piquero de patas azules	Sulidae	Aves	bluebooby	#847b6b	costa	galapagos	Galápagos y Pacífico oriental; no endémico
+Phoebastria irrorata	Albatros de Galápagos	Diomedeidae	Aves	albatross	#908474	costa	galapagos	Cría principalmente Española; también isla de la Plata
+Zalophus wollebaeki	León marino de Galápagos	Otariidae	Mammalia	galapagosseal	#9e885c	costa	galapagos	Playas y costas de Galápagos; no lobo fino de Galápagos
+Spheniscus humboldti	Pingüino de Humboldt	Spheniscidae	Aves	humboldtpenguin	#343f41	costa	humboldt	Perú y Chile; banda pectoral y parche facial rosado
+Pelecanus thagus	Pelícano peruano	Pelecanidae	Aves	pelican	#797b71	costa	humboldt	Litoral de Perú y Chile
+Sula variegata	Piquero peruano	Sulidae	Aves	peruvianbooby	#84766b	costa	humboldt	Perú y Chile; patas grises, alas moteadas
+Leucocarbo bougainvilliorum	Cormorán guanay	Phalacrocoracidae	Aves	guanay	#343d3a	costa	humboldt	Litoral de Humboldt; vientre blanco y cara roja
+Larosterna inca	Gaviotín inca	Laridae	Aves	incatern	#56646a	costa	humboldt	Perú y Chile; bigotes blancos y pico rojo
+Arctocephalus australis	Lobo fino sudamericano	Otariidae	Mammalia	furseal	#6c6051	costa	humboldt,patagonia	Perú, Chile austral y Atlántico sudoccidental; presencia discontinua
+Dromiciops gliroides	Monito del monte	Microbiotheriidae	Mammalia	monito	#9c8569	bosque	bosques	Bosques húmedos australes; concepto MDD, no tres especies nuevas
+Lontra provocax	Huillín	Mustelidae	Mammalia	otter	#7c6a50	rio,humedal,costa	bosques,patagonia	Ríos meridionales y canales australes
+Pteroptochos tarnii	Huet-huet del sur	Rhinocryptidae	Aves	huethuet	#725343	bosque	bosques	Sotobosque húmedo del sur de Chile y Argentina
+Chloephaga hybrida	Caranca	Anatidae	Aves	kelpgoose	#e7e6d9	costa	patagonia	Costas australes y fueguinas; macho blanco ilustrado
+Tachyeres pteneres	Pato vapor no volador	Anatidae	Aves	steamerduck	#83908e	costa	patagonia	Costas del sur de Chile y Tierra del Fuego
+Capra nubiana	Íbice de Nubia	Bovidae	Mammalia	ibex	#b49970	montana,desierto	rojo	Macizos áridos del noreste africano y Arabia
+Procavia capensis	Damán roquero	Procaviidae	Mammalia	hyrax	#9d8e76	montana,desierto	rojo	Roquedos; no arrecifes
+Pterois miles	Pez león del Índico	Scorpaenidae	Actinopterygii	lionfish	#b87864	arrecife	rojo	Mar Rojo e Índico; no confundir P. volitans
+Chaetodon semilarvatus	Pez mariposa enmascarado	Chaetodontidae	Actinopterygii	butterflyfish	#e1bf4b	arrecife	rojo	Mar Rojo y golfo de Adén
+Pongo abelii	Orangután de Sumatra	Hominidae	Mammalia	orangutan	#bc7241	selva	sonda	Norte de Sumatra; separado de P. tapanuliensis y P. pygmaeus
+Rhinoceros sondaicus	Rinoceronte de Java	Rhinocerotidae	Mammalia	javanrhino	#888d80	selva,humedal	sonda	Java; distribución histórica continental no equivalente a la actual
+Pteropus vampyrus	Zorro volador gigante	Pteropodidae	Mammalia	flyingfox	#5d3c30	selva,bosque	sonda	Sumatra, Java y Borneo; distribución también continental
+Babyrousa celebensis	Babirusa de Célebes	Suidae	Mammalia	babirusa	#a59d8d	selva	wallacea	Célebes; colmillos curvos del macho adulto
+Bubalus depressicornis	Anoa de tierras bajas	Bovidae	Mammalia	anoa	#4b4940	selva,humedal	wallacea	Célebes y Buton; no Borneo
+Macrocephalon maleo	Maleo	Megapodiidae	Aves	maleo	#353c39	bosque,costa	wallacea	Célebes; playas y suelos geotérmicos de nidificación
+Cacatua moluccensis	Cacatúa de las Molucas	Cacatuidae	Aves	cockatoo	#ead6c8	bosque,selva	wallacea	Seram y archipiélago próximo; no todas las Molucas
+Lorius garrulus	Lori de las Molucas	Psittaculidae	Aves	lory	#c34f43	bosque,selva	wallacea	Molucas septentrionales; separado de Seram
+Rhynochetos jubatus	Kagú	Rhynochetidae	Aves	kagu	#c4c7be	bosque	melanesia	Grande Terre, Nueva Caledonia
+Corvus moneduloides	Cuervo de Nueva Caledonia	Corvidae	Aves	crow	#303b3b	bosque	melanesia	Nueva Caledonia; uso de herramientas
+Eunymphicus cornutus	Perico cornudo	Psittaculidae	Aves	hornparakeet	#77a552	bosque	melanesia	Grande Terre y pequeñas islas; no perico de Ouvéa E. uvaeensis
+Drepanoptila holosericea	Paloma de plumas hendidas	Columbidae	Aves	fruitdove	#7daa69	bosque	melanesia	Nueva Caledonia; patas emplumadas y pecho verde

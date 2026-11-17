@@ -1,0 +1,130 @@
+[
+  {
+    "sciName": "Lepus_arcticus",
+    "id": "1001081",
+    "family": "Leporidae",
+    "countryDistribution": "Canada|Greenland",
+    "taxonomyNotesCitation": "NA",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Pagophilus_groenlandicus",
+    "id": "1005924",
+    "family": "Phocidae",
+    "countryDistribution": "Canada|Denmark|Finland|France|Germany|Greenland|Iceland|Norway|Russia|Spain|United Kingdom|United States",
+    "taxonomyNotesCitation": "NA",
+    "distributionNotesCitation": "Soulen, B.K., Cammen, K., Schultz, T.F. and Johnston, D.W. 2013. Factors affecting harp seal (_Pagophilus groenlandicus_) strandings in the northwest Atlantic. PLoS ONE 8(7):e68779. doi:10.1371/journal.pone.0068779"
+  },
+  {
+    "sciName": "Solenodon_paradoxus",
+    "id": "1003840",
+    "family": "Solenodontidae",
+    "countryDistribution": "Dominican Republic|Haiti",
+    "taxonomyNotesCitation": "NA",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Ateles_fusciceps",
+    "id": "1000769",
+    "family": "Atelidae",
+    "countryDistribution": "Colombia|Ecuador|Panama",
+    "taxonomyNotesCitation": "NA",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Saguinus_geoffroyi",
+    "id": "1000810",
+    "family": "Callitrichidae",
+    "countryDistribution": "Colombia|Panama",
+    "taxonomyNotesCitation": "Gutiérrez, E.E. and Marinho-Filho, J. 2017. The mammalian faunas endemic to the Cerrado and the Caatinga. ZooKeys 644:105-157. doi:10.3897/zookeys.644.10827|Garbino, G.S.T. and Martins-Junior, A.M.G. 2018. Phenotypic evolution in marmoset and tamarin monkeys (Cebidae, Callitrichinae) and a revised genus-level classification. Molecular Phylogenetics and Evolution 118:156-171. doi:10.1016/j.ympev.2017.10.002|Teta, P. 2019. The usage of subgenera in mammalian taxonomy. Mammalia 83(3):209-211. doi:10.1515/mammalia-2018-0059|Brcko, I.C., Carneiro, J., Ruiz-García, M., Boubli, J.P., Silva Júnior, J. de S. e, Farias, I.P., Hrbek, T., Schneider, H. and Sampaio, I. 2022. Phylogenetics and an updated taxonomic status of the tamarins (Callitrichinae, Cebidae). Molecular Phylogenetics and Evolution 173:107504. doi:10.1016/j.ympev.2022.107504|Lopes, G.P., Röhe, F., Bertuol, F., Polo, É., Valsecchi, J., Santos, T.C.M., Silva, F.E., Lima, I.J., Sampaio, R., Silva, M.N.F. da, Silva, C.R., Boubli, J.P., Costa-Araújo, R., de Thoisy, B., Ruiz-García, M., Gordo, M., Sampaio, I., Farias, I.P. and Hrbek, T. 2023. Molecular systematics of tamarins with emphasis on genus _Tamarinus_ (Primates, Callitrichidae). Zoologica Scripta 52:556-570. doi:10.1111/zsc.12617",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Zalophus_wollebaeki",
+    "id": "1005910",
+    "family": "Otariidae",
+    "countryDistribution": "Colombia|Costa Rica|Ecuador|Galápagos Islands",
+    "taxonomyNotesCitation": "NA",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Arctocephalus_australis",
+    "id": "1005896",
+    "family": "Otariidae",
+    "countryDistribution": "Argentina|Brazil|Chile|Falkland Islands|Peru|Uruguay",
+    "taxonomyNotesCitation": "Berta, A. and Churchill, M. 2012. Pinniped taxonomy: review of currently recognized species and subspecies, and evidence used for their description. Mammal Review 42(3):207-234. doi:10.1111/j.1365-2907.2011.00193.x|Lopes, F., Oliveira, L.R., Kessler, A., Beux, Y., Crespo, E., Cárdenas-Alayza, S., Majluf, P., Sepúlveda, M., Brownell, R.L., Jr., Franco-Trecu, V., Páez-Rosas, D., Chaves, J., Loch, C., Robertson, B.C., Acevedo-Whitehouse, K., Elorriaga-Verplancken, F.R., Kirkman, S.P., Peart, C.R., Wolf, J.B.W. and Bonatto, S.L. 2021. Phylogenomic discordance in the eared seals is best explained by incomplete lineage sorting following explosive radiation in the Southern Hemisphere. Systematic Biology 70(4):786-802. doi:10.1093/sysbio/syaa099",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Dromiciops_gliroides",
+    "id": "1000139",
+    "family": "Microbiotheriidae",
+    "countryDistribution": "Argentina|Chile",
+    "taxonomyNotesCitation": "D'Elía, G., Hurtado, N. and D'Anatro, A. 2016. Alpha taxonomy of _Dromiciops_ (Microbiotheriidae) with the description of 2 new species of monito del monte. Journal of Mammalogy 97(4):1136-1152. doi:10.1093/jmammal/gyw068|Valladares-Gómez, A., Celis-Diez, J.L., Palma, R.E. and Manríquez, G.S. 2017. Cranial morphological variation of _Dromiciops gliroides_ (Microbiotheria) along its geographical distribution in south-central Chile: A three-dimensional analysis. Mammalian Biology 87:107-117. doi:10.1016/j.mambio.2017.07.003|Martin, G.M. 2018. Variability and variation in _Dromiciops_ Thomas, 1894 (Marsupialia, Microbiotheria, Microbiotheriidae). Journal of Mammalogy 99(1):159-173. doi:10.1093/jmammal/gyx175|Suárez-Villota, E.Y., Quercia, C.A., Nuñez, J.J., Gallardo, M.H., Himes, C.M. and Kenagy, G.J. 2018. Monotypic status of the South American relictual marsupial _Dromiciops gliroides_ (Microbiotheria). Journal of Mammalogy 99(4):803-812. doi:10.1093/jmammal/gyy073|Quintero-Galvis, J.F., Saenz-Agudelo, P., Amico, G.C., Vazquez, S., Shafer, A.B.A. and Nespolo, R.F. 2022. Genomic diversity and demographic history of the _Dromiciops_ genus (Marsupialia: Microbiotheriidae). Molecular Phylogenetics and Evolution 168:107405. doi:10.1016/j.ympev.2022.107405",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Lontra_provocax",
+    "id": "1005847",
+    "family": "Mustelidae",
+    "countryDistribution": "Argentina|Chile",
+    "taxonomyNotesCitation": "NA",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Capra_nubiana",
+    "id": "1006186",
+    "family": "Bovidae",
+    "countryDistribution": "Egypt|Israel|Jordan|Oman|Palestine|Saudi Arabia|Sudan|Syria|Yemen|Eritrea?|Ethiopia?",
+    "taxonomyNotesCitation": "NA",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Procavia_capensis",
+    "id": "1000528",
+    "family": "Procaviidae",
+    "countryDistribution": "Algeria|Angola|Benin|Botswana|Burkina Faso|Burundi|Cameroon|Central African Republic|Chad|Cote d'Ivoire|Democratic Republic of the Congo|Djibouti|Egypt|Eritrea|Eswatini|Ethiopia|Gambia|Ghana|Guinea|Guinea-Bissau|Israel|Jordan|Kenya|Lebanon|Lesotho|Libya|Malawi|Mali|Mauritania|Mozambique|Namibia|Niger|Nigeria|Oman|Palestine|Rwanda|Saudi Arabia|Senegal|Sierra Leone|Somalia|South Africa|South Sudan|Sudan|Syria|Tanzania|Togo|Uganda|Yemen|Zambia|Zimbabwe",
+    "taxonomyNotesCitation": "NA",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Pongo_abelii",
+    "id": "1000721",
+    "family": "Hominidae",
+    "countryDistribution": "Indonesia",
+    "taxonomyNotesCitation": "Nater, A., Mattle-Greminger, M.P., Nurcahyo, A., Nowak, M.G., de Manuel, M., Desai, T., Groves, C.P., Pybus, M., Sonay, T.B., Roos, C., Lameira, A.R., Wich, S.A., Askew, J., Davila-Ross, M., Fredriksson, G., de Valles, G., Casals, F., Prado-Martinez, J., Goossens, B., Verschoor, E.J., Warren, K.S., Singleton, I., Marques, D.A., Pamungkas, J., Perwitasari-Farajallah, D., Rianti, P., Tuuga, A., Gut, I.G., Gut, M., Orozco-terWengel, P., Schaik, C.P. van, Bertranpetit, J., Anisimova, M., Scally, A., Marques-Bonet, T., Meijaard, E. and Krützen, M. 2017. Morphometric, behavioral, and genomic evidence for a new orangutan species. Current Biology 27(22):3487-3498. doi:10.1016/j.cub.2017.09.047",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Rhinoceros_sondaicus",
+    "id": "1006114",
+    "family": "Rhinocerotidae",
+    "countryDistribution": "Indonesia",
+    "taxonomyNotesCitation": "NA",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Pteropus_vampyrus",
+    "id": "1004507",
+    "family": "Pteropodidae",
+    "countryDistribution": "Brunei|Cambodia|East Timor|Indonesia|Malaysia|Myanmar|Philippines|Singapore|Thailand|Vietnam|China?",
+    "taxonomyNotesCitation": "Mlíkovský, J. 2012. Correct name for the Indian flying fox (Pteropodidae). Vespertilio 16:203-204. a#25260",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Babyrousa_celebensis",
+    "id": "1006362",
+    "family": "Suidae",
+    "countryDistribution": "Indonesia",
+    "taxonomyNotesCitation": "NA",
+    "distributionNotesCitation": ""
+  },
+  {
+    "sciName": "Bubalus_depressicornis",
+    "id": "1006270",
+    "family": "Bovidae",
+    "countryDistribution": "Indonesia",
+    "taxonomyNotesCitation": "Burton, J., Wheeler, P. and Mustari, A. 2014. _Bubalus depressicornis_. IUCN. doi:10.2305/IUCN.UK.2016-2.RLTS.T3126A46364222.en",
+    "distributionNotesCitation": ""
+  }
+]

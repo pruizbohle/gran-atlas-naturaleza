@@ -1,0 +1,44 @@
+{
+  "method": "Node VM, warm cache, 50 repetitions, same historical British region and mature synthetic save; includes model/markup, excludes DOM/layout; automatic forced for deterministic availability",
+  "physicalAndroid": false,
+  "results": {
+    "base3430": {
+      "species": 945,
+      "atlas": {
+        "medianMs": 0.437,
+        "p95Ms": 1.071
+      },
+      "journal": {
+        "medianMs": 0.217,
+        "p95Ms": 0.529
+      },
+      "bestiary": {
+        "medianMs": 1.268,
+        "p95Ms": 1.585
+      },
+      "automatic": {
+        "medianMs": 0.04,
+        "p95Ms": 0.29
+      }
+    },
+    "gm06": {
+      "species": 997,
+      "atlas": {
+        "medianMs": 0.417,
+        "p95Ms": 0.949
+      },
+      "journal": {
+        "medianMs": 0.247,
+        "p95Ms": 1.619
+      },
+      "bestiary": {
+        "medianMs": 1.344,
+        "p95Ms": 2.02
+      },
+      "automatic": {
+        "medianMs": 0.038,
+        "p95Ms": 0.229
+      }
+    }
+  }
+}
