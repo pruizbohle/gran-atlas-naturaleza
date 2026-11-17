@@ -29,3 +29,13 @@ Los 210 fallos de la suite general histórica identificados en la auditoría ant
 - Actualización conservando la partida: https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-v3440.html
 
 La comprobación del despliegue se registra después de finalizar GitHub Pages. No se inicia GM-07.
+
+## Publicación verificada
+
+GitHub Pages completó correctamente el [run 44126811877](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/runs/44126811877), con el commit de aplicación `52446ca8e434e8980ba29e625196da80546501ba`. Las comprobaciones y el despliegue finalizaron con `success`.
+
+Los **204 archivos web publicados** se descargaron por HTTPS con validación de certificados y coinciden byte a byte con los hashes del manifiesto de release. Evidencia: `pruebas/publicado-https.json`.
+
+Se verificó también el juego, Campamento y el laboratorio sin conexión usando el service worker y una copia local exacta de esos archivos publicados. El Chromium administrado rechaza la autoridad certificadora remota; no se deshabilitaron certificados ni se afirma que esa prueba de navegador se ejecutó bajo el origen público HTTPS. La comprobación HTTPS de todos los archivos se hizo con el cliente de red de confianza del entorno. Detalle: `pruebas/publicado-offline.json`.
+
+La cadena histórica de referencia y las 96 comprobaciones actuales pasaron antes del despliegue. La prueba local de actualización real desde la PWA 3.43.0 conservó la copia exacta, recursos y perfil. Los ajustes menores de hexágonos indicados por el usuario quedan pendientes de sus sugerencias; no se cambiaron las coordenadas aprobadas.

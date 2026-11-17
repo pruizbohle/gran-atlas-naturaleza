@@ -1,0 +1,12 @@
+{
+  "version": "3.44.0",
+  "source": "204 actual published files downloaded using validated HTTPS and release hashes",
+  "browserOrigin": "localhost mirror of published bytes",
+  "directRemoteBrowserLimitation": "Managed Chromium rejects remote certificate authority; no certificate checking disabled",
+  "serviceWorkerReady": true,
+  "offlineGame": true,
+  "offlineCampamento": true,
+  "offlineLaboratory": true,
+  "errors": [],
+  "physicalAndroid": false
+}

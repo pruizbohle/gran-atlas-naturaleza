@@ -1,0 +1,1030 @@
+{
+  "version": "3.44.0",
+  "sourceCommit": "52446ca8e434e8980ba29e625196da80546501ba",
+  "url": "https://pruizbohle.github.io/gran-atlas-naturaleza/",
+  "httpsValidated": true,
+  "allFilesMatch": true,
+  "count": 204,
+  "checks": [
+    {
+      "path": "actualizar-v3220.html",
+      "sha256": "23f8082c8b4faa0274d07fafc07b922d39c992db013511936ec170f3e8b43fa2",
+      "bytes": 1887
+    },
+    {
+      "path": "actualizar-v3221.html",
+      "sha256": "23f8082c8b4faa0274d07fafc07b922d39c992db013511936ec170f3e8b43fa2",
+      "bytes": 1887
+    },
+    {
+      "path": "actualizar-v3230.html",
+      "sha256": "9cde3171dc822d276e2361145efc0fb3d53a5575eec3ec96ef625e75faef2372",
+      "bytes": 1906
+    },
+    {
+      "path": "actualizar-v3231.html",
+      "sha256": "a64022ef64435b3ae525c31f5d88d814fb49026588a68126df553d1be03ecbda",
+      "bytes": 1905
+    },
+    {
+      "path": "actualizar-v3240.html",
+      "sha256": "35f32c7239d5ba3879ee9af6ca0c9d412af861522de4cd52be2656e70bcf7980",
+      "bytes": 1909
+    },
+    {
+      "path": "actualizar-v3250.html",
+      "sha256": "4281e4f2093e18488302f9cde1c49912cfd077af8dc67190dda7c833cd5fc9aa",
+      "bytes": 1911
+    },
+    {
+      "path": "actualizar-v3260.html",
+      "sha256": "26f8a9a2b8e724d00d16d97c968ab60d4739fb410412327dbe2c2b3d16ef3c09",
+      "bytes": 1912
+    },
+    {
+      "path": "actualizar-v3260b.html",
+      "sha256": "26f8a9a2b8e724d00d16d97c968ab60d4739fb410412327dbe2c2b3d16ef3c09",
+      "bytes": 1912
+    },
+    {
+      "path": "actualizar-v3270.html",
+      "sha256": "af1d9593574cc52c7ff4d428fee7190156e91ac2d72c0c45e1270da724c6b55c",
+      "bytes": 1912
+    },
+    {
+      "path": "actualizar-v3280.html",
+      "sha256": "9dcbf7a23e7afcbef24a922faceb3971cc63db32891c70a357c17941caa32f7b",
+      "bytes": 1915
+    },
+    {
+      "path": "actualizar-v3290.html",
+      "sha256": "873d1f7745ec1e1f2c2db92e35072077d511535dc22ef898b28035b87fec9623",
+      "bytes": 1909
+    },
+    {
+      "path": "actualizar-v3300.html",
+      "sha256": "e4e5ee5ca79221dae9103003b83fdbca72fe540b4404fa042ca0272ff01c3637",
+      "bytes": 1935
+    },
+    {
+      "path": "actualizar-v3310.html",
+      "sha256": "7b80415dfb7524002f1b2ccfeebf3d57be0ebde847a30b597c937d9aacb6ab0d",
+      "bytes": 1959
+    },
+    {
+      "path": "actualizar-v3320.html",
+      "sha256": "24cc14fa10f0d6e48e6b9889d59d3d57badb265147d73eb28635642dce6be644",
+      "bytes": 1987
+    },
+    {
+      "path": "actualizar-v3330.html",
+      "sha256": "bee8a32c38ab68b1e49f585b856603841c2a4739a9d2c753428fb6755cd90475",
+      "bytes": 2012
+    },
+    {
+      "path": "actualizar-v3340.html",
+      "sha256": "1de851708d1ea39989273f03e9b5af32549d6534059fa8bfd87de1f8aa1bfdb3",
+      "bytes": 1974
+    },
+    {
+      "path": "actualizar-v3350.html",
+      "sha256": "d0fbe018b5577c112967d499331817f616ce2c726461028b30b7232b899fc92a",
+      "bytes": 1999
+    },
+    {
+      "path": "actualizar-v3360.html",
+      "sha256": "b21d783eabd67f14760b24a68c3c3ef04ed4101c661949dd8800088cf6a25f2a",
+      "bytes": 2105
+    },
+    {
+      "path": "actualizar-v3370.html",
+      "sha256": "7c48e416540868175455c0cb4390c6a9317bb969008c406f18c462547ea326ea",
+      "bytes": 2151
+    },
+    {
+      "path": "actualizar-v3380.html",
+      "sha256": "08c4da25569d0bad02cd9480ddd9be446e5d8c07276f1ee945a68ec50e222cab",
+      "bytes": 2166
+    },
+    {
+      "path": "actualizar-v3390.html",
+      "sha256": "8846a1ba3aa90d84244eb01ffcdd45e79eed4bcbb30b2241ef1fbe3bf69c100f",
+      "bytes": 2219
+    },
+    {
+      "path": "actualizar-v3400.html",
+      "sha256": "e8802c8a887c69ab9a17872f15ea4a4001f243c3b7f88f2f077df770dca0d65b",
+      "bytes": 2213
+    },
+    {
+      "path": "actualizar-v3410.html",
+      "sha256": "f32566538c00061187d036bff76fd8236be6ca554a3dd7335f10af4f2a9b6153",
+      "bytes": 2091
+    },
+    {
+      "path": "actualizar-v3420.html",
+      "sha256": "0ebacc1c1fe42f8a93295824b7422b3fa43ceb18018d3dbd6af75a1defbd74c6",
+      "bytes": 2095
+    },
+    {
+      "path": "actualizar-v3430.html",
+      "sha256": "8551238bee883541be2e77d026b4deb6c2abf038a8242e9001a2b655bc272ceb",
+      "bytes": 2085
+    },
+    {
+      "path": "actualizar-v3440.html",
+      "sha256": "2acae41fc29459d69f9bf1c985b385e280d1e21cd1dde5383f2af2e7a4dfb15f",
+      "bytes": 2040
+    },
+    {
+      "path": "actualizar.html",
+      "sha256": "08c4da25569d0bad02cd9480ddd9be446e5d8c07276f1ee945a68ec50e222cab",
+      "bytes": 2166
+    },
+    {
+      "path": "atlas-release.json",
+      "sha256": "38b0e9fe6d109a4cfbccb47b5efa4d0ed7d90515f7625e5839c2a2000cc11b73",
+      "bytes": 3689
+    },
+    {
+      "path": "css/abyssal-v3340.css",
+      "sha256": "8347976eaabe0c12c3ac588eec9149ccfa8e81f6e7d99b2717e8c1f5ab0f35e8",
+      "bytes": 371
+    },
+    {
+      "path": "css/atlas-v3211.css",
+      "sha256": "86f5099282e8b76dcf01c4c67563b70a2af6b8b8e4a8d6256d3a56165928bfc7",
+      "bytes": 12005
+    },
+    {
+      "path": "css/bestiary-v3260.css",
+      "sha256": "93c643b6dc42967fee352f0249d043ee05ef15ccc429d6b1f4b31040a36f3692",
+      "bytes": 8546
+    },
+    {
+      "path": "css/campamento-perfil-v3430.css",
+      "sha256": "fa1a46cd3eca9264f460424dffb38a19771c7023764d75a6fcc933febcddf45c",
+      "bytes": 10210
+    },
+    {
+      "path": "css/commerce-v3300.css",
+      "sha256": "866cc0a57086f61567152fdd8536778eb11bf6fd6a086f5f59ff47bd09853e81",
+      "bytes": 2301
+    },
+    {
+      "path": "css/commissions-v3370.css",
+      "sha256": "4c6f893efdcbdaec46711a95aafeafc0ecde5dbe797f9093479bba46cdc8ff94",
+      "bytes": 5241
+    },
+    {
+      "path": "css/deep-v3330.css",
+      "sha256": "c844e6608e49ddb7e79a8c060eb688aeec26895168d37558421236da2c73e6fa",
+      "bytes": 650
+    },
+    {
+      "path": "css/expeditions-research-v3280.css",
+      "sha256": "f1d62bc49be80ac2b85666ef85acb022c3e74a22998741db9e23196479c5b449",
+      "bytes": 10510
+    },
+    {
+      "path": "css/experience-v3410.css",
+      "sha256": "931f56fba16a3ccf64888b2962345a0d91051ab4ba9ed14d9ad9910af17ffef8",
+      "bytes": 4832
+    },
+    {
+      "path": "css/field-v3210.css",
+      "sha256": "44ff1de118c0e92b08238b76338cb710e31e676b8e6cdc0696f453a07db093e3",
+      "bytes": 10452
+    },
+    {
+      "path": "css/inventory-v3400.css",
+      "sha256": "e1ade8c7151eb3fc990fd76a6d762d3547413c345044c51ca185d0df8a5e01b8",
+      "bytes": 3299
+    },
+    {
+      "path": "css/journal-v3250.css",
+      "sha256": "0143c30e7fa9d42a154d8e630dc5b4bc731e1cbeeef9c8cf7a2b1d510a22274d",
+      "bytes": 11070
+    },
+    {
+      "path": "css/marine-v3320.css",
+      "sha256": "2b3c6e1863e174ecea64ec161433e33e707d48142d98d1fa6c56aa247154d028",
+      "bytes": 443
+    },
+    {
+      "path": "css/museum-curation-v3380.css",
+      "sha256": "04be13e6ed63d38021168518a8591064608d75898697c47f93ced3b820d7b5f3",
+      "bytes": 4166
+    },
+    {
+      "path": "css/museum-v3270.css",
+      "sha256": "465e9f3507b5a88055e0f5bd712463b18dd6e522c44b8675cd5f88f97f0143a7",
+      "bytes": 11747
+    },
+    {
+      "path": "css/polar-v3310.css",
+      "sha256": "9706c8d709b581be25d9e751ffd1760945a3afdfb33d336c84c43d23c1e8001f",
+      "bytes": 265
+    },
+    {
+      "path": "css/society-v3360.css",
+      "sha256": "81623a2f5c5a8042998304a31be4c9386205089628c929b6a2b7f74e85b6efb5",
+      "bytes": 6359
+    },
+    {
+      "path": "css/styles.css",
+      "sha256": "91cbb8c4f54f13e24cf900d7493aa26fb8331f1aa68351b073dbf8ba02e10bd4",
+      "bytes": 87827
+    },
+    {
+      "path": "icons/atlas-192.png",
+      "sha256": "1c56dc358e912a2d40f996570ff156ac76007b98e9793f889a2cbdabe71d6ecc",
+      "bytes": 13248
+    },
+    {
+      "path": "icons/atlas-512.png",
+      "sha256": "a90a3ebbbb33f34acb1148bbb89e2ddeca064f552dfd8079c37d5314d43c7179",
+      "bytes": 38277
+    },
+    {
+      "path": "icons/atlas-icon.svg",
+      "sha256": "5ef0633308f672e2ed71b90f179245f8f2e0b1fb2536aa1f413bf768f0e53aa5",
+      "bytes": 558
+    },
+    {
+      "path": "index.html",
+      "sha256": "8ca6dd2fe5e1b9cc0e3910163613fb6b962eb10b1e2e6dd9fb7b00c6f59eadeb",
+      "bytes": 12524
+    },
+    {
+      "path": "js/abyssal-art-v3340.js",
+      "sha256": "3818765f845dde8c952daf146d73baf42909ee961147d48b1e82dbc08618cc2c",
+      "bytes": 2273
+    },
+    {
+      "path": "js/abyssal-data-v3340.js",
+      "sha256": "3b200f9d19fcb133b596a548d5d8567210e5965260b588537c3cbabcff7a7bac",
+      "bytes": 7879
+    },
+    {
+      "path": "js/abyssal-geography-v3340.js",
+      "sha256": "b515836fe1f64223c335dcffffdd32c0f877038941967211a5098dbce0731833",
+      "bytes": 2058
+    },
+    {
+      "path": "js/achievements-v3360.js",
+      "sha256": "2f00a9e07fc157e233191e86839faa3cb66080457346e0a82034e5ee146f53a4",
+      "bytes": 13915
+    },
+    {
+      "path": "js/app.js",
+      "sha256": "424c286f1fa2e91cc539d3ed1176b57e186e875e19501780f832229e54b4e047",
+      "bytes": 830976
+    },
+    {
+      "path": "js/atlas-geography-v3211b.js",
+      "sha256": "7b199ef602b19454bf03e115e1976cc6a96603c4c3c13668b78b5482df559863",
+      "bytes": 12437
+    },
+    {
+      "path": "js/atlas-map-v3211.js",
+      "sha256": "911552353c79321db0c80d02616651d23afd3c942bee7ad9b1dee4952e63018d",
+      "bytes": 4151
+    },
+    {
+      "path": "js/atlas-ui-v3211.js",
+      "sha256": "1ade9aa15e5dd319d37fea94d093866755edd2a7141cd9aafdf89a5e0604df9e",
+      "bytes": 12824
+    },
+    {
+      "path": "js/bestiary-ui-v3260.js",
+      "sha256": "50623ab93e950272cc2aced4ba78d4cd2f2474308521d81825216f653ce88d05",
+      "bytes": 11887
+    },
+    {
+      "path": "js/bird-art-v3193.js",
+      "sha256": "9475c214345fae86005eb18c1898ac201d31419d9b8d3948f2c43517581f1ef8",
+      "bytes": 50452
+    },
+    {
+      "path": "js/campamento-perfil-ui-v3430.js",
+      "sha256": "633663b86cfcad17864bbc857a0da4fa2019580b20ae86aca421dd9dfd7080d9",
+      "bytes": 11866
+    },
+    {
+      "path": "js/commissions-ui-v3370.js",
+      "sha256": "b0779a33f450a28fb8cac80e5f201082db2e38363a464c4bd2cc8731e54d1f90",
+      "bytes": 10429
+    },
+    {
+      "path": "js/commissions-v3370.js",
+      "sha256": "9cd22e81a5667a9f798ef0d4883f4dc5835e38da6cd560358fe1a27d7ad9fd0b",
+      "bytes": 14096
+    },
+    {
+      "path": "js/deep-art-v3330.js",
+      "sha256": "11df1cd9451746a513220007727cae48e41204d694b559fac5ae2ac355a35280",
+      "bytes": 6905
+    },
+    {
+      "path": "js/deep-data-v3330.js",
+      "sha256": "6618a08715bfb977b11c173f3fcfc5889230274adf06f5d19859cc47169edbc0",
+      "bytes": 68853
+    },
+    {
+      "path": "js/deep-geography-v3330.js",
+      "sha256": "19caf8d437c44552ff5a03d6cc2acd599c81180a8a07b8afd59561a1de0b1731",
+      "bytes": 2081
+    },
+    {
+      "path": "js/expeditions-research-ui-v3280.js",
+      "sha256": "8835163f8e939f2e1630da368aa65f31459e03be6947d620f6140a4e47a5e19d",
+      "bytes": 15686
+    },
+    {
+      "path": "js/experience-v3410.js",
+      "sha256": "a5be0e3a6bb54a4e68f3e2bb4a573dc9a63be6c2e7638b27f6aa28a09a3ba699",
+      "bytes": 6898
+    },
+    {
+      "path": "js/field-scene-v3210.js",
+      "sha256": "bc6476d17d32450caef39fb64f3c634ae482bf8ff539755c4a05f1c38aba50a5",
+      "bytes": 10382
+    },
+    {
+      "path": "js/field-ui-v3210.js",
+      "sha256": "877041f5ed69653db398de589348e3a277e107cae0649e51f213a00759491fd7",
+      "bytes": 5540
+    },
+    {
+      "path": "js/fish-art-v3191.js",
+      "sha256": "d1287aea496629827570cb2fdfdc3b9666c1b5a39a8b917af61b41da371cbd8c",
+      "bytes": 12846
+    },
+    {
+      "path": "js/gm06/art.js",
+      "sha256": "c68cdf8aa2015a89ae692897bc2c1b01fc0d91fd9fc23d57aa013bfd809e15a2",
+      "bytes": 13715
+    },
+    {
+      "path": "js/gm06/catalog.js",
+      "sha256": "7306028f50119d2fe1e91ca7f47c890e7f2e029a626e9ac421364528088bc60d",
+      "bytes": 45253
+    },
+    {
+      "path": "js/gm06/geography.js",
+      "sha256": "ef3a69b489cd899ddc36c20e27aeff1b5ef6e36c5e990833ebf45a202eeba8b6",
+      "bytes": 5519
+    },
+    {
+      "path": "js/gm06/lab-bridge.js",
+      "sha256": "4573ee05397812d464de6596e0e32cd36af6c864d7ad00f8dcda1dbd005dafcb",
+      "bytes": 2741
+    },
+    {
+      "path": "js/gm06/lab-host.js",
+      "sha256": "d2a19d04b2e89feb7f214f3eefe7439aa0982521b90577f3228cc86bc6d5fb80",
+      "bytes": 12317
+    },
+    {
+      "path": "js/gm06/lab-shell.html",
+      "sha256": "3551b55f2f6ec0ac5723eb27fd312ee969143d402729e6e48d8879fa43b5ccac",
+      "bytes": 10520
+    },
+    {
+      "path": "js/herp-art-v3192.js",
+      "sha256": "a9d56f4e8d25fa00193e8fd0ffa63e310b1d0dfc6b0af135120c66fa2ff5b377",
+      "bytes": 24781
+    },
+    {
+      "path": "js/item-art-v3198.js",
+      "sha256": "74b42208616f3796c9f24379afdb4339904b6d6db937086b6735658a9a0a17f1",
+      "bytes": 14644
+    },
+    {
+      "path": "js/journal-ui-v3250.js",
+      "sha256": "925e2050eb85c4200163eb191df0e048c1065178a3f21ac1e36558996e098050",
+      "bytes": 6347
+    },
+    {
+      "path": "js/lab/abyssal-lab-v3340.js",
+      "sha256": "8a55a73fa5a531d9406e41b68a5d817f246924688d06f89e83fece6f9a6ffa8c",
+      "bytes": 1924
+    },
+    {
+      "path": "js/lab/atlas-catalog-before-v3211b.js",
+      "sha256": "97b75ea1d376e1981abe63c4f27669bcabe9d3fcc56b9849c28f0bdf337b256b",
+      "bytes": 41075
+    },
+    {
+      "path": "js/lab/atlas-catalog-v3211.js",
+      "sha256": "7b68c2006dca81d99f7ae5f55faa57ea4353518b3c4f5bb1689be37f053df1de",
+      "bytes": 56803
+    },
+    {
+      "path": "js/lab/atlas-geography-before-simple.js",
+      "sha256": "060eed518873e006312cbdf1c348e6c21c5bb55c6f637b3c2f8c57e979b7bf13",
+      "bytes": 10094
+    },
+    {
+      "path": "js/lab/atlas-lab-v3211.js",
+      "sha256": "82a5fbe575a4552bbba934f51ad93901ea046849f0d12820b5516f051716e3b1",
+      "bytes": 4784
+    },
+    {
+      "path": "js/lab/atlas-ui-before-v3211b.js",
+      "sha256": "9c4fd419ce34abe270660ee3310f779c0d62904f8395a6ed701904bd52c73e39",
+      "bytes": 12858
+    },
+    {
+      "path": "js/lab/bestiary-app-before-v3250.js",
+      "sha256": "1fd6d35f93f898f8db7d2cc00c73aa853208a5a0d1c53d9a2907f9e28ba7e101",
+      "bytes": 619812
+    },
+    {
+      "path": "js/lab/bestiary-lab-v3260.js",
+      "sha256": "3570a0e61cd26c926d349806dfd2c64e0f89e430f2931711350129a0fc72faa3",
+      "bytes": 5583
+    },
+    {
+      "path": "js/lab/bird-lab-v3193.js",
+      "sha256": "ab717382542c1f501581545f2e9c17333a02f3fae017849778c1d6658f992de3",
+      "bytes": 3719
+    },
+    {
+      "path": "js/lab/bird-sprites-v3192b-before.js",
+      "sha256": "6cb68639784b2bf68da77b9f345a51bac66b97a7f13d2413fc8f7b83be5e7974",
+      "bytes": 185928
+    },
+    {
+      "path": "js/lab/campamento-perfil-adapter-v3430.js",
+      "sha256": "6dee24af0e4f79db80d3cb5c42117d1f19556af4affa15f410f906e658020b6f",
+      "bytes": 17037
+    },
+    {
+      "path": "js/lab/campamento-perfil-fixtures-v3430.js",
+      "sha256": "4d3e0034d7c1cd2eb066cda3db0975a100a32079d1d60c6a0bffc8ae9a909ab2",
+      "bytes": 6058
+    },
+    {
+      "path": "js/lab/campamento-perfil-host-v3430.js",
+      "sha256": "e1ba3ea37accfc833e5b9950bcb44a1a903c097dd62abbeb6dfb75ed46129c4a",
+      "bytes": 2081
+    },
+    {
+      "path": "js/lab/campamento-perfil-shell-v3430.html",
+      "sha256": "e53bbba818920dc32cf8770caeb89cd6af103b2f052bd2183ca7f16a642040ce",
+      "bytes": 4274
+    },
+    {
+      "path": "js/lab/commerce-lab-v3300.js",
+      "sha256": "accdce7fce370ba484c83dd0c7f4b312b8081bccf9ce2ad468b590b64b0c4476",
+      "bytes": 3447
+    },
+    {
+      "path": "js/lab/commissions-lab-v3370.js",
+      "sha256": "c95f349ec06f1b18aa55dcb1416391a16143d0efb25c2f5a37f2a452db0c5a66",
+      "bytes": 4276
+    },
+    {
+      "path": "js/lab/deep-lab-v3330.js",
+      "sha256": "a1ddd2eb6963015282a71e8f33fd18c7d32ed76174bfb42ce9ca8207fe3d9bf6",
+      "bytes": 1377
+    },
+    {
+      "path": "js/lab/dimorphism-lab-v3195.js",
+      "sha256": "3b7051063e8f733d556317e7bd62e2768302842102e028a59e6c8c85e28203b2",
+      "bytes": 3702
+    },
+    {
+      "path": "js/lab/dimorphism-production.js",
+      "sha256": "fc87f4202e5f39c7a4ba1a6b1c312e032f3e0cf5b845ce536bfa01609bc82bce",
+      "bytes": 403820
+    },
+    {
+      "path": "js/lab/expeditions-app-before-v3270.js",
+      "sha256": "bd8c672c73002aa034bb91e28e6c4bb6be2ba2ec89768fae6c09547bace642dc",
+      "bytes": 651878
+    },
+    {
+      "path": "js/lab/expeditions-research-lab-v3280.js",
+      "sha256": "316671d93107b3c90cbdd76c5533316efc12221355dc5b816799898234067fdb",
+      "bytes": 6203
+    },
+    {
+      "path": "js/lab/experience-lab-v3410.js",
+      "sha256": "838eab211137b5fcf47b20e7a41eaa26eff771ca8ac2f70fa5e938e53cb1f18b",
+      "bytes": 8865
+    },
+    {
+      "path": "js/lab/field-lab-v3210.js",
+      "sha256": "09f6767f0383e94fee8655a01284b0b3be3b1499757330e12ccac0cb6c35b8dc",
+      "bytes": 7341
+    },
+    {
+      "path": "js/lab/geography-lab-v3211b.js",
+      "sha256": "9430b0a1eccd5ec39c8fe525c8ac585b21a829f30437a41faaa22137970470b4",
+      "bytes": 9068
+    },
+    {
+      "path": "js/lab/herp-art-v3192-before.js",
+      "sha256": "ffd5962abeb21536c3ef8d31de14b44ffa3cb27ca23361571a244082fd2c145c",
+      "bytes": 13689
+    },
+    {
+      "path": "js/lab/herp-specimens-v3192b.js",
+      "sha256": "b73d0c5a2eceb9fd0f3de7ea6ea8c3ac01efb3b9138201b0645150e53ca91415",
+      "bytes": 8112
+    },
+    {
+      "path": "js/lab/inventory-lab-v3400.js",
+      "sha256": "0c827a6cfecc480b1c8277450f677f93cc3afbf4c46dc64fdbde28bbf773e9a3",
+      "bytes": 6779
+    },
+    {
+      "path": "js/lab/item-lab-v3198.js",
+      "sha256": "58c752528d17796e8ab577f91a2b8e8aded00d8f67aa19e79b49e1421b2ccecc",
+      "bytes": 9632
+    },
+    {
+      "path": "js/lab/journal-app-before-v3240.js",
+      "sha256": "137929ede561607c7c45164be019afd22a89031db96b9714b2aed0f44a8b5839",
+      "bytes": 615124
+    },
+    {
+      "path": "js/lab/journal-lab-v3250.js",
+      "sha256": "f75d12911fa25fc5bd30349d703d28e70d117b6cf7d2d7160e30c3b6e9a80146",
+      "bytes": 5105
+    },
+    {
+      "path": "js/lab/logistics-lab-v3390.js",
+      "sha256": "cb3ee0a1fa912a21078e76797117b181eac08a2941f5f62441c59025c011c3a8",
+      "bytes": 5002
+    },
+    {
+      "path": "js/lab/mammal-lab-v3194.js",
+      "sha256": "0271dd98d359693d534a155c8d499219785d81c1394bf61e0f38eb7b14edb87e",
+      "bytes": 5089
+    },
+    {
+      "path": "js/lab/mammal-sprites-v3193-before.js",
+      "sha256": "6a9acbe593ad0359bfa6dd82c2a4f8db05b87bb4420f20971f66633f444d2c2e",
+      "bytes": 227008
+    },
+    {
+      "path": "js/lab/marine-lab-v3320.js",
+      "sha256": "429c115cab1c1ea921546cfb5f12e7e792256d22374d17d761a98af62f5d3efa",
+      "bytes": 1321
+    },
+    {
+      "path": "js/lab/museum-app-before-v3260.js",
+      "sha256": "b10346f80d120657428d41891aa7efb7f638bdee86053240064465322d903f15",
+      "bytes": 630314
+    },
+    {
+      "path": "js/lab/museum-curation-lab-v3380.js",
+      "sha256": "4fa47723831ff5dae190e1854701cfe456deb5ca55f1b80b1bafc32ff429a8eb",
+      "bytes": 4593
+    },
+    {
+      "path": "js/lab/museum-lab-v3270.js",
+      "sha256": "a5d1e40e578ab6ab75bc109c6c3471ade516416f8740e0036a03757c132a61c2",
+      "bytes": 5937
+    },
+    {
+      "path": "js/lab/northamerica-art-before-v3221.js",
+      "sha256": "7a093d0eba364d2e786b3d18a0c99a8968e35d23f15f95011fb50df258e9b410",
+      "bytes": 30490
+    },
+    {
+      "path": "js/lab/northamerica-audit-v3221.js",
+      "sha256": "3142a48bd08d77d922ce52294c550beb35de6ce1a3243c8d997066861ea4562a",
+      "bytes": 72845
+    },
+    {
+      "path": "js/lab/northamerica-before-v3221.js",
+      "sha256": "0586cc285f5d1062613f6ede4f01a9884497a748b86d6ee15e336d8785e89163",
+      "bytes": 405200
+    },
+    {
+      "path": "js/lab/northamerica-catalog-v3220.js",
+      "sha256": "9bd87a0155d8ccf46cdfb338a5435950f4c67de7d0ed867ec8ee4e7b93873cf4",
+      "bytes": 404834
+    },
+    {
+      "path": "js/lab/northamerica-lab-v3220.js",
+      "sha256": "9c3e25cf9ab1d7153cfeac27104ba4ef7197c92acaadcc8637c6ce85bac5481f",
+      "bytes": 4467
+    },
+    {
+      "path": "js/lab/oceania-art-lab-v3290.js",
+      "sha256": "77022ebd6e2531aac19dc3a46302357969ade5d43861ddadeb08fb5f60c688b3",
+      "bytes": 2985
+    },
+    {
+      "path": "js/lab/oceania-catalog-v3290.js",
+      "sha256": "a9d4b0f76c2f56f939f35be27fd5abd1e6b39ecb57b7000945f2bf20df11269c",
+      "bytes": 494330
+    },
+    {
+      "path": "js/lab/oceania-map-v3290.js",
+      "sha256": "058be056cbfd495bd7752dde5a38f04e5eb67434ebad784a63ccc71ce6ddd963",
+      "bytes": 2289
+    },
+    {
+      "path": "js/lab/pigmentation-lab-v3196.js",
+      "sha256": "5332cc412aca104beb8720ba79b176fbefa5cb62f2cf929195f1ce3678e9b175",
+      "bytes": 3285
+    },
+    {
+      "path": "js/lab/polish-before-v3198.js",
+      "sha256": "959ffea92592002a6cc8c4770de59002d36a913e4e09f762186cc5a3c0b3faf4",
+      "bytes": 598291
+    },
+    {
+      "path": "js/lab/polish-lab-v3199.js",
+      "sha256": "acae4c417056af484f8663bc18cc9e4ba1c470803d64783dd8a744fa199ef048",
+      "bytes": 6347
+    },
+    {
+      "path": "js/lab/polish-production-v3199.js",
+      "sha256": "1e591e0db3fd7ac1d590049a315d203fef6baa84b5062b45ab46dc4165e3dbea",
+      "bytes": 16032
+    },
+    {
+      "path": "js/lab/polish-review-v3199.js",
+      "sha256": "3a03bef11a0a86473486f0901b958c7c6ca2133b841d048f44b1f9a757796eef",
+      "bytes": 101418
+    },
+    {
+      "path": "js/lab/society-lab-v3360.js",
+      "sha256": "7a901a36d0357352c9b42daaacdc1eb44bf56dcc1481b9b7fb7e204c28a56f98",
+      "bytes": 3455
+    },
+    {
+      "path": "js/lab/southamerica-art-before-v3231.js",
+      "sha256": "51a41b373535f63924e3511d38cbba1e6655e51348e7256501078da6fea36f24",
+      "bytes": 38096
+    },
+    {
+      "path": "js/lab/southamerica-audit-v3231.js",
+      "sha256": "3db214c50c1eaf31e5fd2d665be28f361da0cfacfe5760d85d73c36867dc183b",
+      "bytes": 75249
+    },
+    {
+      "path": "js/lab/southamerica-before-v3231.js",
+      "sha256": "06fa5d8a37dc6a8cdac65f6a30637031ad2a8a96720d9c727ae1a695298b828a",
+      "bytes": 406131
+    },
+    {
+      "path": "js/lab/southamerica-catalog-v3230.js",
+      "sha256": "c8873fbac609fa9aeb84093dc282b9880661f5d6235958011d498d65dff6d050",
+      "bytes": 406028
+    },
+    {
+      "path": "js/lab/southamerica-lab-v3230.js",
+      "sha256": "2d63665d41989ffe88db2069b7cc0a62fc4ccf9bc0f33acf83d11638a4b0dfc7",
+      "bytes": 6113
+    },
+    {
+      "path": "js/lab/special-lab-v3197.js",
+      "sha256": "851f5a1fa60b3da8205ef6a8dc05736590a73ca6529111c85a95b5ca538b3f38",
+      "bytes": 5037
+    },
+    {
+      "path": "js/lab/world-lab-v3350.js",
+      "sha256": "9893950c616c35ccbe8f9f9a23d7051ace3d1e17e84661f505872c4c3656aba6",
+      "bytes": 5099
+    },
+    {
+      "path": "js/legendary-art-v3197.js",
+      "sha256": "885a75fea726c7c1ce08ce73b0322e17c55d7d2c266c54ceaa1c71e9e98ff3a3",
+      "bytes": 11257
+    },
+    {
+      "path": "js/mammal-art-v3194.js",
+      "sha256": "d05187cd87cc1c6fd51117690f9afcbc16fe16bc56723659eb529ec8316d709a",
+      "bytes": 92323
+    },
+    {
+      "path": "js/marine-art-v3320.js",
+      "sha256": "92a3bc5674483920875adc4c44cdc7d2c4b05f428f51f8368439870c9cd7bd2d",
+      "bytes": 15163
+    },
+    {
+      "path": "js/marine-data-v3320.js",
+      "sha256": "96e5f9edddeecbb2a3847d701e093a3af58f548a328155823c217fc1853decf6",
+      "bytes": 290649
+    },
+    {
+      "path": "js/marine-geography-v3320.js",
+      "sha256": "b4997984524760661189d6e2e129fdb67214248501a7de52c0ac4ccc25ff3dac",
+      "bytes": 4498
+    },
+    {
+      "path": "js/mobile-ui.js",
+      "sha256": "a4ddc5325aa741def54c11b54317191249a368927c2e383042ffe6e2d5b73d27",
+      "bytes": 3792
+    },
+    {
+      "path": "js/museum-curation-ui-v3380.js",
+      "sha256": "ed01e3b46b40758b0fe424589a643e2b2cdea618f3dfb64ec43b1b7f28f68b74",
+      "bytes": 11019
+    },
+    {
+      "path": "js/museum-curation-v3380.js",
+      "sha256": "2004ff0ef29e3f2cf1d7f18db19eaf4537cd91df031f185bf730a173b99f86cd",
+      "bytes": 9266
+    },
+    {
+      "path": "js/museum-ui-v3270.js",
+      "sha256": "bbcb5916086c1e9437bf3c45dfee8f44d63d36da834708f777514468a33223ba",
+      "bytes": 16547
+    },
+    {
+      "path": "js/northamerica-art-v3220.js",
+      "sha256": "956997ff98a42be9ab83728f3e4d0f4f89383e9a454e00ac8188c2ede46ced6e",
+      "bytes": 30580
+    },
+    {
+      "path": "js/northamerica-data-v3220.js",
+      "sha256": "069cec890536e4a09125370eab1a6bde117d596e7e1865ed28d45d0ca5840039",
+      "bytes": 91493
+    },
+    {
+      "path": "js/northamerica-polish-v3221.js",
+      "sha256": "ce2f3661335fd704291f3b17420401f5dde8b03d7b299216305f0e19ce1c13f8",
+      "bytes": 46508
+    },
+    {
+      "path": "js/oceania-art-v3290.js",
+      "sha256": "7fa5a19711e57f4592525444d36b081456c1a41a1957da48f9e5002a3be8751e",
+      "bytes": 26344
+    },
+    {
+      "path": "js/oceania-data-v3290.js",
+      "sha256": "8d56c3d9e4ff3477a35d051642123f521c1350ec3f93c5f791c0e2512919ea1e",
+      "bytes": 410893
+    },
+    {
+      "path": "js/oceania-geography-v3290.js",
+      "sha256": "d35f2f556ad8f07590d525c44da444785c33d06d51e633ad622eac8dcad2ed06",
+      "bytes": 3952
+    },
+    {
+      "path": "js/oceania-runtime-v3290.js",
+      "sha256": "b6d1f3b6af95887126e36ade7615a882d1443ee95c8bdf15d186add0c55ffb51",
+      "bytes": 120896
+    },
+    {
+      "path": "js/polar-art-v3310.js",
+      "sha256": "e5c0a3fad6e9e1402a308bc70a122e15a8f44e02cf41e3e1591aea1f92890afd",
+      "bytes": 4277
+    },
+    {
+      "path": "js/polar-data-v3310.js",
+      "sha256": "a4d495fc32a5fe8d0d9d24e84b46f99b916fcb8e6d5c4a7a408f351d42348949",
+      "bytes": 45088
+    },
+    {
+      "path": "js/polar-geography-v3310.js",
+      "sha256": "be09e14a2c4b8c430a3795e29ce31b95db520a7690bf6d51f6756a2d99ed8f4d",
+      "bytes": 3529
+    },
+    {
+      "path": "js/pwa-update-v3212.js",
+      "sha256": "c3a13ce3fc9d34ceac074af33f416270f800ac5414ba93ee3a6c5a330c0ed5f2",
+      "bytes": 4284
+    },
+    {
+      "path": "js/pwa-update-v3220.js",
+      "sha256": "0950af660171c8438d508a34e1a7db94498b48884bbc3b4ea59b154e3f15a224",
+      "bytes": 4535
+    },
+    {
+      "path": "js/pwa-update-v3260.js",
+      "sha256": "8af86d5c7485e17d85814a43107d2230bc641575c4dc11650258be86407b996d",
+      "bytes": 4457
+    },
+    {
+      "path": "js/relict-art-v3199.js",
+      "sha256": "cb4e4807595d56b240a5dca4d82d8ed712bf8abd48303dad031f645cea605e82",
+      "bytes": 7351
+    },
+    {
+      "path": "js/save-manager.js",
+      "sha256": "e86fd8ebdb31cdd7eb7b7385d8fe918eb219d71fe8f9e0fd80a2e6be6fbbbdf4",
+      "bytes": 19243
+    },
+    {
+      "path": "js/society-achievements-ui-v3360.js",
+      "sha256": "4e8b52b5c609459fa22259e48b517ce15d30789c8f02c16b863f0ee6d74c6e54",
+      "bytes": 11067
+    },
+    {
+      "path": "js/southamerica-art-v3230.js",
+      "sha256": "d0520fe625819e433cf5c7997565538da10e771f039cc4222a98c1104c0eef9a",
+      "bytes": 38246
+    },
+    {
+      "path": "js/southamerica-data-v3230.js",
+      "sha256": "0ca138926288feeffafe7065dd1bc4e133abe77d81a80926d6577810691dafdd",
+      "bytes": 226426
+    },
+    {
+      "path": "js/southamerica-geography-v3230.js",
+      "sha256": "18e9679f7563044ede3694b1486612080a5fb0940d9f5a581e40d9f6bf1c38ea",
+      "bytes": 3963
+    },
+    {
+      "path": "js/southamerica-polish-v3231.js",
+      "sha256": "622f19061770e3c2c17fbc725dd43c6cd1c0d91758eba04467233fde749af2c8",
+      "bytes": 41086
+    },
+    {
+      "path": "js/update-client-v3212.js",
+      "sha256": "c36237481c04ffdf721b5c36fb015799960d459eeae294ac676d3c596bcdb1c3",
+      "bytes": 1734
+    },
+    {
+      "path": "laboratorio-abisal-v3340.html",
+      "sha256": "6dba547bcd616591dbcf3ff060453804023249d8fd1c57d07ad5d21395b09f59",
+      "bytes": 2059
+    },
+    {
+      "path": "laboratorio-arte-oceania-v3290.html",
+      "sha256": "c90320ba572420d4c4cb8e401f8f08109c080eafa3f02aefa1d4dee3c7147a76",
+      "bytes": 4148
+    },
+    {
+      "path": "laboratorio-atlas-v3211.html",
+      "sha256": "05ae765de873b83bee48948469e20828c3e983803eba921fa58ccd10a68f4227",
+      "bytes": 2544
+    },
+    {
+      "path": "laboratorio-atlas-v3211b.html",
+      "sha256": "88187f3c1ebd6152654b5660c7ca8e807d60b78f8af9875f847cbaafa33595b9",
+      "bytes": 4059
+    },
+    {
+      "path": "laboratorio-aves.html",
+      "sha256": "764f23170242529b740684c0ca637986321c936e4da7f7034c2a3d86a6bcbfb8",
+      "bytes": 5445
+    },
+    {
+      "path": "laboratorio-bestiario-v3260.html",
+      "sha256": "7754bd83ffaa2274f860b7caaeac178d43c59388cc1c03cb2b1825d60c340591",
+      "bytes": 3470
+    },
+    {
+      "path": "laboratorio-campamento-perfil-v3430.html",
+      "sha256": "b6f48c3f395d7106458a0971619408545a649574816ec5969e9db350aef6ed58",
+      "bytes": 2747606
+    },
+    {
+      "path": "laboratorio-campo-v3210.html",
+      "sha256": "c476ce63707f75d8ec49866b558e0bb34b1bc4076bf6c76a8cc104664f1d1e91",
+      "bytes": 3332
+    },
+    {
+      "path": "laboratorio-cartografia-gm06.html",
+      "sha256": "dad12d0fb95100a9852dc0e3ae37a8372643bc1df82adf76e6e0840a080aadb3",
+      "bytes": 3476018
+    },
+    {
+      "path": "laboratorio-comercio-v3300.html",
+      "sha256": "2937d4fdff858f6d22ce8f4f1f6af2e21f11b629fab78f863b47fcd3b72c10ab",
+      "bytes": 1285
+    },
+    {
+      "path": "laboratorio-cuaderno-v3250.html",
+      "sha256": "3320a8043182a6dc12ed1f063c8ddb53bafb0ce6ed709306244318feba0e4ece",
+      "bytes": 3441
+    },
+    {
+      "path": "laboratorio-dimorfismo.html",
+      "sha256": "eab42d40f0f0e5ff7e947a41535017b714fc5349639308f01ee0ce318a4e7066",
+      "bytes": 2476
+    },
+    {
+      "path": "laboratorio-especiales.html",
+      "sha256": "3c9a908713ad9b60be79c43267e69e885b3deef7e15a37b6106c4c80d676d027",
+      "bytes": 5066
+    },
+    {
+      "path": "laboratorio-expediciones-investigaciones-v3280.html",
+      "sha256": "75ddd2efa8947dd91215c19d98fa8c9aef061b5c5f8bcd9751211a6afdd27af7",
+      "bytes": 3718
+    },
+    {
+      "path": "laboratorio-experiencia-v3410.html",
+      "sha256": "af4689d53f5e31a50e161314968cdfc7c60fd83ceabc1413bab88c8492b97bce",
+      "bytes": 2740
+    },
+    {
+      "path": "laboratorio-herpetologia.html",
+      "sha256": "0f31c8a3960ab93e04b087406a927aed9f70a91f3423ac5e84f96eb0aeef8b21",
+      "bytes": 8107
+    },
+    {
+      "path": "laboratorio-inventario-v3400.html",
+      "sha256": "0ee0e18d14a354f6035ce85d386d4c30c51b415960220ff89d291606715c0002",
+      "bytes": 2705
+    },
+    {
+      "path": "laboratorio-logistica-v3390.html",
+      "sha256": "a6428bfbb475982203e9fd867ee53df5e445076b1d151f7f0c0503e65048d462",
+      "bytes": 2086
+    },
+    {
+      "path": "laboratorio-mamiferos.html",
+      "sha256": "fcd9310b48f2a8fd380122620eb517a74a68686b9650b55aae7701b56408882d",
+      "bytes": 5641
+    },
+    {
+      "path": "laboratorio-marino-v3320.html",
+      "sha256": "2ee65578c5eb4975fb3c2299f809228eaaf352368b0ad7a5c6a228f054699a22",
+      "bytes": 1873
+    },
+    {
+      "path": "laboratorio-misiones-v3370.html",
+      "sha256": "becf2c4d450f56cf53b2662ed852e33c649bd9c34d9ec8fa568eb3ca50701e34",
+      "bytes": 1618
+    },
+    {
+      "path": "laboratorio-mundial-v3350.html",
+      "sha256": "89fd9c895cc666362979254170ef0b3748f2b11d9832c208fecaefae1cc4297f",
+      "bytes": 2756
+    },
+    {
+      "path": "laboratorio-museo-v3270.html",
+      "sha256": "5b443542a1b426d5441602ed7171c6ef558fa455d9f889210ac3dc2b89688058",
+      "bytes": 3412
+    },
+    {
+      "path": "laboratorio-museo-v3380.html",
+      "sha256": "e218487a1e82365b084c03ad398778073e2678facad07fca8331c419dc49f39f",
+      "bytes": 1666
+    },
+    {
+      "path": "laboratorio-norteamerica-v3220.html",
+      "sha256": "ee673a3dbb304d1b545f6797e9061f589738a6b80cd7e0db5af1abeaa1fcb6bc",
+      "bytes": 5380
+    },
+    {
+      "path": "laboratorio-objetos.html",
+      "sha256": "03e73307d269fc7061eb415b9fb7f6a93849dc7035dcd9019bade60e38313356",
+      "bytes": 3110
+    },
+    {
+      "path": "laboratorio-oceania-v3290.html",
+      "sha256": "de7830c9e2298d6f4191461f22c610c06b1b9e58649b990b8e31503bf92c8f96",
+      "bytes": 1314
+    },
+    {
+      "path": "laboratorio-peces.html",
+      "sha256": "35cc4d56daacab8d676fcaded576a09826fa80d51860192c5cc1f4987e3051b1",
+      "bytes": 3746
+    },
+    {
+      "path": "laboratorio-pigmentacion.html",
+      "sha256": "68b1aee4dff97cb3e22e246a6e1a6e5246508b8fbcf7b3cd89bd5bf00f020569",
+      "bytes": 3842
+    },
+    {
+      "path": "laboratorio-polar-v3310.html",
+      "sha256": "1ec1030d0b914016280fa50cfe6f95da0a0d339889e0fd020fd0784edf8afb14",
+      "bytes": 1338
+    },
+    {
+      "path": "laboratorio-profundo-v3330.html",
+      "sha256": "3f621f6bed12eb6c5c279c9af226c1834831454745a8c5bdcbdc522d8a3eff9f",
+      "bytes": 1896
+    },
+    {
+      "path": "laboratorio-pulido-v3199.html",
+      "sha256": "79e0eaf6d88908f07d70015da3ef5d2f816c4f689ca2a18bc57d9d7a232f129c",
+      "bytes": 4876
+    },
+    {
+      "path": "laboratorio-sociedad-v3360.html",
+      "sha256": "a95a0ffda5fe3071e11543d8cb17fc727032545879a61749d6eaf1e824d1f6b9",
+      "bytes": 1597
+    },
+    {
+      "path": "laboratorio-sudamerica-v3230.html",
+      "sha256": "5cadb68c8ebb5789173d8bb6808db140d0d0e1f7b9964505853215b963c6a46b",
+      "bytes": 5975
+    },
+    {
+      "path": "manifest.webmanifest",
+      "sha256": "93437754ff101ca97b4f268d01c61c4d09f74932a8415b7b2384be8a2340c7bd",
+      "bytes": 659
+    },
+    {
+      "path": "sw.js",
+      "sha256": "75932bb346606dae892f614484717c78846eb1d8bf1996b55b5071190139ef5c",
+      "bytes": 10051
+    }
+  ]
+}
