@@ -18,9 +18,12 @@
   </header>
   <main class="container">
     <nav aria-label="Modos del laboratorio" id="modes">
-      <button type="button" data-mode="gallery">Galería</button>
+      <button type="button" data-mode="field">Campo</button>
+      <button type="button" data-mode="journal">Cuaderno</button>
+      <button type="button" data-mode="bestiary">Bestiario</button>
       <button type="button" data-mode="variants">Variantes</button>
       <button type="button" data-mode="frames">Ejemplares especiales</button>
+      <button type="button" data-mode="gallery">Galería</button>
       <button type="button" data-mode="compare">Comparación</button>
       <button type="button" data-mode="scale">Escala real</button>
       <button type="button" data-mode="review">Revisión artística</button>
@@ -31,6 +34,7 @@
         <label id="search-control">Buscar especie <input id="search" type="search" placeholder="Nombre común o científico"></label>
         <label id="species-control" hidden>Especie <select id="species"></select></label>
         <label id="scale-plate-control" hidden>Lámina <select id="scale-plate"></select></label>
+        <label id="category-control" hidden>Ejemplar <select id="category"></select></label>
         <label id="context-control" hidden>Vista de juego <select id="context">
           <option>Campo</option><option>Bestiario</option><option>Cuaderno</option><option>Museo</option>
         </select></label>

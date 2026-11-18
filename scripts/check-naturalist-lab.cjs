@@ -29,7 +29,21 @@ const server = http.createServer((req, res) => {
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
       page.on('response', response => { if (response.status() >= 400) errors.push(response.status() + ' ' + response.url()); });
+      const start = performance.now();
       await page.goto(url);
+      await page.locator('.field-card img').evaluate(image => image.decode());
+      const firstRender = Math.round(performance.now() - start);
+      assert.equal(await page.locator('.encounter .plate').evaluate(plate => plate.offsetWidth), 88);
+      for (const [mode, selector] of [['journal', '.journal-sheet'], ['bestiary', '.bestiary-entry']]) {
+        await page.locator('[data-mode=' + mode + ']').click();
+        await page.locator('#species').selectOption('na_esp_didelphis_virginiana');
+        await page.locator('#scale-plate').selectOption('albino');
+        await page.locator('#category').selectOption('Notable');
+        assert.match(await page.locator(selector).innerText(), /Didelphis virginiana[\s\S]*Albino/);
+        assert.match(await page.locator(selector + ' .notable img').getAttribute('src'), /--albino\.webp$/);
+        assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), viewport.width);
+      }
+      await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
       assert.equal(await page.locator('.gallery-card').count(), 29);
@@ -42,7 +56,7 @@ const server = http.createServer((req, res) => {
       assert.equal(await page.locator('.sprite svg').count(), 1);
       assert.equal(await page.locator('.pair img').count(), 1);
       await page.locator('[data-mode=frames]').click();
-      assert.equal(await page.locator('#content figure').count(), 5);
+      assert.deepEqual(await page.locator('#content figcaption').allTextContents(), ['Normal', 'Notable', 'Épico', 'Excepcional']);
       const paths = await page.locator('#content img').evaluateAll(imgs => imgs.map(i => i.src));
       assert.equal(new Set(paths).size, 1);
       await page.locator('[data-mode=variants]').click();
@@ -67,6 +81,7 @@ const server = http.createServer((req, res) => {
       assert.deepEqual(await page.evaluate(() => Object.keys(localStorage)), ['gran-atlas-naturalist-art-review-v1']);
       await session.setOffline(true);
       await page.reload();
+      await page.locator('[data-mode=gallery]').click();
       assert.equal(await page.locator('.gallery-card').count(), 29);
       const first = page.locator('.gallery-card img').first();
       await first.scrollIntoViewIfNeeded();
@@ -90,7 +105,7 @@ const server = http.createServer((req, res) => {
       assert.ok(plates.every(([width, height]) => width === 512 && height === 512));
       assert.deepEqual(errors, []);
       await session.close();
-      console.log('PASS', viewport.width, 'px: seis modos, revisión, exportación y recarga offline');
+      console.log('PASS', viewport.width, 'px: nueve modos, revisión, exportación y recarga offline; primera lámina', firstRender, 'ms');
     }
   } finally { await browser.close(); server.close(); }
 })().catch(error => { console.error(error); server.close(); process.exitCode = 1; });

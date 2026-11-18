@@ -7,7 +7,7 @@ const { harness } = require('../tests/helpers/live-game.cjs');
 
 const out = path.resolve('www/naturalist-art');
 const artDir = path.join(out, 'plates');
-const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'app'];
+const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'app'];
 const gameSource = modules.map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
 const audit = harness({}, null, { gameSource }).window.__atlasTest;
 const priority = [
@@ -47,7 +47,11 @@ const species = Object.entries(audit.SPECIES).filter(([id, sp]) => {
   const legendary = audit.LEGENDARY_SPECIMENS.find(item => item.speciesId === id);
   if (legendary) records.push(plate(id, 'legendario', legendary.name));
   return {
-    id, name: sp.name, latin: sp.latin, categories: ['Normal', ...special.filter(label => categories.includes(label))],
+    id, name: sp.name, latin: sp.latin, rarity: sp.rare || null,
+    dimorphism: Boolean(audit.SEXUAL_DIMORPHISM[id]),
+    regions: audit.REGIONS.filter(region => region.species.includes(id))
+      .map(({ id, name, continent }) => ({ id, name, continent })),
+    categories: categories.filter(label => label === 'Normal' || special.includes(label)),
     records, sprite: audit.getSpriteMarkup(id, 'normal')
   };
 }).sort((a, b) => {
@@ -59,6 +63,20 @@ for (const file of fs.readdirSync(artDir)) {
   if (file.endsWith('.webp') && !assets.has(file)) throw Error('Lámina sin entrada en el catálogo: ' + file);
 }
 fs.writeFileSync(path.join(out, 'catalog.js'), 'const catalog = ' + JSON.stringify(species, null, 2) + ';\n');
+const version = require('../package.json').version;
+const rows = species.map(sp => [
+  sp.id, sp.name, '*' + sp.latin + '*',
+  [...new Set(sp.regions.map(region => region.continent))].join(', ') || '—',
+  sp.regions.map(region => region.name).join(', ') || '—',
+  sp.records.filter(record => record.key !== 'legendario').map(record => record.label).join(', '),
+  sp.dimorphism ? 'Sí' : 'No', sp.categories.join(', ')
+]);
+fs.writeFileSync(path.join(out, 'CATALOGO.md'), [
+  '# Marsupiales del catálogo ' + version, '',
+  '| ID | Nombre común | Nombre científico | Continente | Zonas del juego | Variantes | Dimorfismo | Ejemplares |',
+  '| --- | --- | --- | --- | --- | --- | --- | --- |',
+  ...rows.map(row => '| ' + row.join(' | ') + ' |'), ''
+].join('\n'));
 const plates = [...assets].sort().map(file => 'plates/' + file);
 const hash = createHash('sha256');
 for (const file of ['index.html', 'catalog.js', 'lab.js', 'lab.css', 'sw.js', ...plates]) {

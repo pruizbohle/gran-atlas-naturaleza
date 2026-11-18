@@ -43,20 +43,92 @@ label { display: grid; gap: .25rem; font-size: .9rem; min-width: 0; }
 .gallery-card { padding: .65rem; background: var(--sheet); border: 1px solid var(--line); display: grid; text-align: left; }
 .gallery-card .card-title { font: 1.18rem Georgia, serif; margin-top: .55rem; }
 .latin { font: italic 1rem Georgia, serif; padding: .12rem 0 .3rem; }
-.plate {
-  --frame: #927c55;
-  position: relative; display: grid; place-items: center;
-  width: 100%; aspect-ratio: 1;
-  color: var(--muted); background: #eee6d5;
-  border: 4px double var(--frame);
+.plate, .specimen-label {
+  --metal: #a3906b;
+  --highlight: #e9dfc6;
+  --rim: #685a3e;
+  --mat: #f1e8d5;
 }
-.plate img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.notable { --metal: #ad754f; --highlight: #ebc1a0; --rim: #694331; --mat: #f0ddc9; }
+.epic { --metal: #8f9aa0; --highlight: #e2eaed; --rim: #414d55; --mat: #e8e7e0; }
+.exceptional { --metal: #b48a3d; --highlight: #f4dc98; --rim: #725322; --mat: #f5e7bc; }
+.legendary { --metal: #526d5b; --highlight: #e6cb89; --rim: #263c33; --mat: #e8dbb6; }
+.plate {
+  --rail: clamp(4px, .75vw, 10px);
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 3.2%;
+  color: var(--muted);
+  background: var(--mat);
+  border: 1px solid var(--rim);
+  box-shadow: inset 0 0 0 1px var(--highlight), inset 0 0 0 var(--rail) var(--metal), 0 2px 4px #29211728;
+}
+.plate::before {
+  content: "";
+  position: absolute;
+  inset: 1.4%;
+  border: 1px solid var(--highlight);
+  pointer-events: none;
+}
+.plate::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, var(--highlight) 48%, transparent 50%) top left,
+    linear-gradient(225deg, var(--highlight) 48%, transparent 50%) top right,
+    linear-gradient(45deg, var(--highlight) 48%, transparent 50%) bottom left,
+    linear-gradient(315deg, var(--highlight) 48%, transparent 50%) bottom right;
+  background-size: clamp(4px, 2vw, 10px) clamp(4px, 2vw, 10px);
+  background-repeat: no-repeat;
+}
+.plate.legendary::before { outline: 1px solid var(--rim); border-style: double; }
+.plate img { display: block; width: 100%; height: 100%; object-fit: contain; border: 1px solid var(--rim); }
 .plate span { text-align: center; font-size: .85rem; }
-.plate.notable { --frame: #a36138; border-width: 7px; }
-.plate.epic { --frame: #7c8991; border-width: 7px; }
-.plate.exceptional { --frame: #a37a28; border-width: 7px; }
-.plate.legendary { --frame: #7d633e; border: 8px ridge var(--frame); }
-.plate.legendary::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 2px #e8d49a, inset 0 0 0 5px #354b38; pointer-events: none; }
+.specimen-label {
+  display: inline-block;
+  margin-top: .4rem;
+  padding: .1rem .5rem;
+  font-size: .8rem;
+  border: 1px solid var(--metal);
+  background: var(--mat);
+  color: #32291e;
+}
+.frame-grid { max-width: 1060px; }
+.field-card, .journal-sheet, .bestiary-entry { border: 1px solid var(--line); }
+.field-card { max-width: 480px; background: #e6e9db; border-radius: 6px; overflow: hidden; }
+.field-card header { background: var(--forest); color: #fff4df; padding: .55rem .9rem; font-size: .9rem; }
+.encounter { display: grid; grid-template-columns: 88px minmax(0, 1fr); align-items: center; gap: .8rem; padding: .9rem; }
+.encounter .plate { --rail: 3px; padding: 4px; }
+.encounter .plate::after { background-size: 5px 5px; }
+.encounter h3, .journal-entry h3, .bestiary-details h3 { font-size: clamp(1.1rem, 3vw, 1.8rem); line-height: 1.15; }
+.journal-sheet {
+  max-width: 680px;
+  padding: clamp(.8rem, 3vw, 1.6rem);
+  background: repeating-linear-gradient(#fbf4e1 0 24px, #e9ddc0 25px);
+}
+.folio {
+  margin-bottom: 1rem;
+  border-bottom: 3px double #a9976f;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .82rem;
+  padding-bottom: .4rem;
+}
+.journal-entry { display: grid; grid-template-columns: minmax(0, 250px) minmax(0, 1fr); gap: clamp(.75rem, 3vw, 1.6rem); align-items: center; }
+.bestiary-entry { display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); max-width: 860px; padding: clamp(.8rem, 3vw, 1.6rem); gap: clamp(.8rem, 3vw, 2rem); background: var(--sheet); }
+.bestiary-details dl { display: grid; grid-template-columns: max-content 1fr; gap: .35rem 1rem; }
+.bestiary-details dt { color: var(--muted); }
+.bestiary-details dd { margin: 0; }
+@media (max-width: 530px) {
+  .bestiary-entry { grid-template-columns: 1fr; }
+  .journal-entry { grid-template-columns: minmax(0, 1fr); }
+  .journal-entry .plate { max-width: 260px; }
+}
 figure { min-width: 0; }
 figcaption { padding: .4rem 0; }
 .note { margin-bottom: .75rem; }
@@ -66,7 +138,9 @@ figcaption { padding: .4rem 0; }
 .sprite svg { width: 75%; height: 75%; }
 .scale-list { display: flex; flex-wrap: wrap; align-items: start; gap: 1rem; }
 .sample { min-width: 82px; max-width: 100%; padding: .55rem; border: 1px solid var(--line); background: var(--sheet); }
-.sample .plate { width: var(--size); max-width: 100%; border: 0; }
+.sample .plate { width: var(--size); max-width: 100%; border: 0; padding: 0; box-shadow: none; }
+.sample .plate::before, .sample .plate::after { content: none; }
+.sample .plate img { border: 0; }
 .sample.full { width: min(100%, 530px); }
 .sample[data-context="Campo"] { background: #dde3cc; }
 .sample[data-context="Bestiario"] { border: 3px double #a48b62; }
