@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Laboratorio V4 · El Gran Atlas</title>
+  <title>Laboratorio V4.1 · El Gran Atlas</title>
   <link rel="stylesheet" href="../css/naturalist-art-v400.css">
+  <link rel="stylesheet" href="../css/field-v3210.css">
   <link rel="stylesheet" href="lab.css">
   <script src="catalog.js" defer></script>
   <script src="../js/naturalist-art-v400.js" defer></script>
+  <script src="../js/field-ui-v3210.js" defer></script>
   <script src="lab.js" defer></script>
 </head>
 <body>
@@ -15,13 +17,14 @@
     <div class="container">
       <p class="eyebrow">El Gran Atlas</p>
       <h1>Laboratorio naturalista</h1>
-      <p class="subtitle">Marsupiales, monotremas y felinos · V4.0.0</p>
-      <a class="game-link" href="../index.html">Abrir la versión candidata</a>
+      <p class="subtitle">Marsupiales, monotremas, felinos y cánidos · V4.1.0</p>
+      <a class="game-link" href="../index.html">Abrir el juego</a>
     </div>
   </header>
   <main class="container">
     <nav aria-label="Modos del laboratorio" id="modes">
       <button type="button" data-mode="field">Campo</button>
+      <button type="button" data-mode="mixed">Campo mixto</button>
       <button type="button" data-mode="journal">Cuaderno</button>
       <button type="button" data-mode="bestiary">Bestiario</button>
       <button type="button" data-mode="museum">Museo</button>
@@ -35,17 +38,25 @@
     <section aria-labelledby="heading" class="workspace">
       <div class="toolbar">
         <div><h2 id="heading"></h2><p id="summary"></p></div>
-        <label>Grupo <select id="group"><option value="">Todos</option><option>Marsupiales</option><option>Monotremas</option><option>Felinos</option></select></label>
+        <label>Grupo <select id="group"><option value="">Todos</option><option>Marsupiales</option><option>Monotremas</option><option>Felinos</option><option>Cánidos</option></select></label>
         <label id="search-control">Buscar especie <input id="search" type="search" placeholder="Nombre común o científico"></label>
         <label id="species-control" hidden>Especie <select id="species"></select></label>
         <label id="scale-plate-control" hidden>Lámina <select id="scale-plate"></select></label>
+        <label>Presentación
+          <select id="frame-style">
+            <option value="classic">Marco clásico</option>
+            <option value="outline">Contorno minimalista</option>
+            <option value="bare">Sin marco convencional</option>
+          </select>
+        </label>
+        <label id="mixed-control" hidden>Compañero SVG <select id="mixed-svg"></select></label>
         <label id="category-control" hidden>Ejemplar <select id="category"></select></label>
         <label id="context-control" hidden>Vista de juego <select id="context">
           <option>Campo</option><option>Bestiario</option><option>Cuaderno</option><option>Museo</option>
         </select></label>
         <button id="export" type="button" hidden>Exportar JSON</button>
       </div>
-      <div id="content"></div>
+      <div id="content" data-frame-style="classic"></div>
       <p id="status" role="status"></p>
     </section>
   </main>

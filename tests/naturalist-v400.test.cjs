@@ -3,10 +3,12 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const { test } = require('node:test');
 const vm = require('node:vm');
+const { execFileSync } = require('node:child_process');
 const { harness } = require('./helpers/live-game.cjs');
 
 const read = name => fs.readFileSync('www/js/' + name + '.js', 'utf8');
 const added = ['naturalist-assets-v400', 'naturalist-art-v400'];
+const legacyFixtures = require('./fixtures/stability-saves-v3240.json');
 const production = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art'];
 const source = [...production, ...added, 'app'].map(read).join('\n');
 const art = require('../www/js/naturalist-art-v400.js');
@@ -40,7 +42,7 @@ test('catalog is read from the production runtime and only known records can be 
     }
     counts[sp.group] = (counts[sp.group] || 0) + 1;
   }
-  assert.deepEqual(counts, { Marsupiales: 29, Monotremas: 3, Felinos: 31 });
+  assert.deepEqual(counts, { Marsupiales: 29, Monotremas: 3, Felinos: 31, 'Cánidos': 28 });
 });
 
 test('rendering the collection does not disclose unseen art or write a save', () => {
@@ -54,4 +56,69 @@ test('rendering the collection does not disclose unseen art or write a save', ()
   assert.match(a.specialBadges(id), /--albino.webp/);
   assert.match(a.specialBadges(id), /notable[\s\S]*--normal.webp/);
   assert.equal(JSON.stringify(a.state), before);
+});
+
+test('Canidae uses exact variant routes and the original two legendary identities', () => {
+  const routes = globalThis.AtlasNaturalistAssets.routes;
+  const catalog = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\ncatalog;');
+  const canids = catalog.filter(sp => sp.family === 'Canidae');
+  const ids = new Set(canids.map(sp => sp.id));
+  for (const id of ['asia_esp_0246', 'af_hiena_manchada', 'af_hiena_parda']) assert.ok(!ids.has(id));
+  assert.equal(canids.flatMap(sp => sp.records.filter(r => ['albino', 'melanico'].includes(r.key))).length, 23);
+  assert.equal(canids.flatMap(sp => sp.records.filter(r => r.key === 'legendario')).length, 2);
+  assert.equal(routes.lobo_gris.legendario, 'lobo_gris--fenrir.webp');
+  assert.equal(routes.zorro_rojo.legendario, 'zorro_rojo--ascua.webp');
+  assert.ok(canids.every(sp => sp.records.every(record => record.src)));
+  assert.equal(new Set(canids.flatMap(sp => sp.records.map(record => record.src))).size, 53);
+});
+
+test('the six historical save fixtures read and restore identically to the current stable series 3', () => {
+  const readStable = path => execFileSync('git', ['show', 'd906224533559193e87704fa44471ea73d4069c9:' + path], { encoding: 'utf8', maxBuffer: 16e6 });
+  const stable = [...production.map(read), readStable('www/js/app.js')].join('\n');
+  const stableSave = readStable('www/js/save-manager.js');
+  class Clock extends Date { static now() { return 1700000000000; } }
+  for (const fixture of legacyFixtures) {
+    const raw = JSON.parse(fixture.raw);
+    const old = harness({ gran_atlas_v05: fixture.raw }, null, { gameSource: stable, saveSource: stableSave, Date: Clock });
+    const current = harness({ gran_atlas_v05: fixture.raw }, null, { gameSource: source, Date: Clock });
+    const normalized = h => {
+      const result = h.window.AtlasSaveBridge.getSaveData();
+      // A missing collection ID is generated on restore for both releases.
+      delete result.collectionId;
+      return JSON.parse(JSON.stringify(result));
+    };
+    assert.deepEqual(normalized(current), normalized(old), fixture.scenario + ' open');
+    old.window.AtlasSaveBridge.restoreGame(raw);
+    current.window.AtlasSaveBridge.restoreGame(raw);
+    assert.deepEqual(normalized(current), normalized(old), fixture.scenario + ' restore');
+  }
+});
+
+test('manual and automatic encounters keep identical saved results with and without WebP presentation', () => {
+  const svgSource = [...production, 'app'].map(read).join('\n');
+  const bridge = '\nwindow.__atlasTest={get state(){return state},encounter,fieldEncounterModel,automaticEligibleSpecies,visibleName};\n})();';
+  class Clock extends Date { static now() { return 1700000000000; } }
+  const options = { bridge, Date: Clock, rng: () => 0.29 };
+  const withoutArt = harness({}, null, { ...options, gameSource: svgSource }).window.__atlasTest;
+  const withArt = harness({}, null, { ...options, gameSource: source }).window.__atlasTest;
+  const fox = 'zorro_rojo';
+  const hour = Math.floor(Clock.now() / 3600000);
+  for (const game of [withoutArt, withArt]) {
+    const state = game.state;
+    Object.assign(state, { currentRegion: 'HX-01-09', habitat: 'bosque', season: 'primavera', time: 'amanecer' });
+    state.stages[fox] = 2;
+    state.discovered[fox] = true;
+    game.encounter('manual', Clock.now(), true);
+    assert.ok(state.lastEncounter?.entries?.length);
+    const eligible = game.automaticEligibleSpecies(state.currentRegion, state.season);
+    assert.ok(eligible.includes(fox));
+    for (const id of eligible) if (id !== fox) state.autoHourly[hour + ':' + id] = 999;
+    game.encounter('auto', Clock.now(), true);
+    assert.equal(state.lastEncounter.entries[0].id, fox);
+  }
+  for (const key of ['lastEncounter', 'sightings', 'specialFound', 'autoHourly', 'money', 'knowledge']) {
+    assert.equal(JSON.stringify(withArt.state[key]), JSON.stringify(withoutArt.state[key]), key);
+  }
+  assert.match(withArt.fieldEncounterModel(withArt.state.lastEncounter).entries[0].image, /zorro_rojo--normal\.webp/);
+  assert.match(withoutArt.fieldEncounterModel(withoutArt.state.lastEncounter).entries[0].image, /^<svg/);
 });

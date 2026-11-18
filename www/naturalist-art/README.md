@@ -1,9 +1,9 @@
-# El Gran Atlas · Laboratorio naturalista V4
+# El Gran Atlas · Laboratorio naturalista V4.1
 
-La candidata 4.0.0 se ejecuta desde `www/`. En la raíz del repositorio, inicia `python3 -m http.server 8080 --directory www` y abre el [laboratorio local](http://localhost:8080/naturalist-art/) o el [juego local](http://localhost:8080/). El laboratorio tiene filtros para Marsupiales, Monotremas y Felinos. Incluye Campo, Cuaderno, Bestiario, Museo, Galería, Variantes, Ejemplares especiales, comparación con el SVG vigente en 3.45.0, Escala real y Revisión artística con exportación JSON. Las observaciones se guardan localmente en el navegador.
+La versión 4.1.0 se ejecuta desde `www/`. En la raíz del repositorio, inicia `python3 -m http.server 8080 --directory www` y abre el [laboratorio local](http://localhost:8080/naturalist-art/) o el [juego local](http://localhost:8080/). El laboratorio tiene filtros para Marsupiales, Monotremas, Felinos y Cánidos. Incluye Campo y avistamiento mixto SVG/WebP, Cuaderno, Bestiario, Museo, Galería, Variantes, Ejemplares especiales, comparación con el SVG de respaldo y selección entre marco clásico, contorno minimalista y presentación sin marco, Escala real y Revisión artística con exportación JSON. Las observaciones se guardan localmente en el navegador.
 
-- [Inventario de las 63 entradas, familias y variantes](CATALOGO.md)
-- [Informe editorial y técnico de la candidata](../../docs/v400-naturalista/README.md)
+- [Inventario de las 91 entradas, familias y variantes](CATALOGO.md)
+- [Informe editorial y técnico de la candidata](../../docs/v410-naturalista/README.md)
 
 ## Incorporar ilustraciones
 

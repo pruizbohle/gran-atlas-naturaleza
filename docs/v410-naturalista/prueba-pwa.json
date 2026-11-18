@@ -1,0 +1,36 @@
+[
+  {
+    "width": 390,
+    "fieldSvgMs": 53,
+    "fieldWebPMs": 38,
+    "fieldSvgJSHeapBytes": 7650232,
+    "fieldWebpJSHeapBytes": 9423308,
+    "exactSaveBackup": true,
+    "preservedFields": 10,
+    "multiEncounter": true,
+    "mixedWebpAndSvg": true,
+    "estimatedVisibleRGBABytes": 65536,
+    "autoRepeatMs": 967,
+    "reusedDecodedImage": true,
+    "spritesOffline": true,
+    "labOffline": true,
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "fieldSvgMs": 37,
+    "fieldWebPMs": 48,
+    "fieldSvgJSHeapBytes": 7491168,
+    "fieldWebpJSHeapBytes": 9567784,
+    "exactSaveBackup": true,
+    "preservedFields": 10,
+    "multiEncounter": true,
+    "mixedWebpAndSvg": true,
+    "estimatedVisibleRGBABytes": 65536,
+    "autoRepeatMs": 984,
+    "reusedDecodedImage": true,
+    "spritesOffline": true,
+    "labOffline": true,
+    "errors": []
+  }
+]

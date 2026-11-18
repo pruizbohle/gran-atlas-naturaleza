@@ -116,3 +116,36 @@ figcaption { padding: .4rem 0; }
 .museum-entry { background: #34463a; color: #fcf2dc; border-color: #766745; }
 .museum-entry .latin, .museum-entry dt { color: #e5d9bc; }
 .sample .plate { width: var(--size); }
+
+/* These comparison styles are limited to the laboratory. */
+#content[data-frame-style="outline"] .plate {
+  background: var(--sheet);
+  border-color: var(--metal);
+  padding: 2px;
+  box-shadow: none;
+}
+#content:is([data-frame-style="outline"], [data-frame-style="bare"]) .plate::before,
+#content:is([data-frame-style="outline"], [data-frame-style="bare"]) .plate::after { content: none; }
+#content:is([data-frame-style="outline"], [data-frame-style="bare"]) .plate img { border: 0; }
+#content[data-frame-style="bare"] .plate {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+#content[data-frame-style="bare"] .plate:not(.classic) {
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px var(--metal), 0 0 10px 2px var(--metal);
+}
+#content[data-frame-style="bare"] .plate.legendary {
+  box-shadow: 0 0 0 1px var(--highlight), 0 0 12px 3px var(--metal);
+}
+.mixed-field { max-width: 620px; border: 1px solid var(--line); background: #e3e9d8; }
+.mixed-field .field-sighting { min-height: 255px; padding: 12px; }
+.mixed-field .field-actors { align-items: center; }
+.mixed-field .field-animal-sprite {
+  width: clamp(82px, 21vw, 128px);
+  height: clamp(82px, 21vw, 128px);
+}
+.mixed-field .field-animal-sprite .plate { --art-size: 100%; }
+.mixed-field > p { padding: .45rem .8rem; color: var(--muted); font-size: .85rem; }

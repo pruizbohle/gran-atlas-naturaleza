@@ -38,10 +38,15 @@ const felidGenera = new Set([
   'Acinonyx', 'Caracal', 'Catopuma', 'Felis', 'Herpailurus', 'Leopardus', 'Leptailurus',
   'Lynx', 'Neofelis', 'Otocolobus', 'Panthera', 'Pardofelis', 'Prionailurus', 'Puma'
 ]);
+const canidGenera = new Set([
+  'Atelocynus', 'Canis', 'Cerdocyon', 'Chrysocyon', 'Cuon', 'Dusicyon', 'Lupulella',
+  'Lycaon', 'Lycalopex', 'Nyctereutes', 'Otocyon', 'Speothos', 'Urocyon', 'Vulpes'
+]);
 function groupFor(id, sp) {
   const taxonomy = audit.taxonomyInfo(id);
   const family = taxonomy.family || sp.family;
   if (taxonomy.subClass === 'Marsupiales' || families.has(family)) return 'Marsupiales';
+  if (family === 'Canidae' || canidGenera.has(sp.latin.split(' ')[0])) return 'Cánidos';
   if (family === 'Felidae' || felidGenera.has(sp.latin.split(' ')[0])) return 'Felinos';
   if (['Ornithorhynchidae', 'Tachyglossidae'].includes(family)) return 'Monotremas';
   return null;
@@ -49,7 +54,7 @@ function groupFor(id, sp) {
 
 const species = Object.entries(audit.SPECIES).filter(([id, sp]) => groupFor(id, sp)).map(([id, sp]) => {
   const group = groupFor(id, sp);
-  const family = group === 'Felinos' ? 'Felidae' : audit.taxonomyInfo(id).family || sp.family;
+  const family = ({ Felinos: 'Felidae', 'Cánidos': 'Canidae' })[group] || audit.taxonomyInfo(id).family || sp.family;
   const special = audit.configuredSpecials(sp);
   const records = [plate(id, 'normal', 'Normal')];
   if (audit.SEXUAL_DIMORPHISM[id]) {
@@ -81,7 +86,14 @@ const species = Object.entries(audit.SPECIES).filter(([id, sp]) => groupFor(id, 
 for (const file of fs.readdirSync(artDir)) {
   if (file.endsWith('.webp') && !assets.has(file)) throw Error('Lámina sin entrada en el catálogo: ' + file);
 }
-fs.writeFileSync(path.join(out, 'catalog.js'), 'const catalog = ' + JSON.stringify(species, null, 2) + ';\n');
+const mixedFieldSprites = ['ciervo_rojo', 'jabali', 'oso_pardo'].map(id => {
+  const sp = audit.SPECIES[id];
+  if (groupFor(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
+  return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };
+});
+fs.writeFileSync(path.join(out, 'catalog.js'),
+  'const catalog = ' + JSON.stringify(species, null, 2) + ';\n' +
+  'const mixedFieldSprites = ' + JSON.stringify(mixedFieldSprites, null, 2) + ';\n');
 const version = require('../package.json').version;
 const rows = species.map(sp => [
   sp.group, sp.family, sp.id, sp.name, '*' + sp.latin + '*',
@@ -110,6 +122,8 @@ fs.writeFileSync('www/js/naturalist-assets-v400.js',
 const records = species.flatMap(sp => sp.records);
 console.log(JSON.stringify({
   species: species.length,
+  catalogSize: Object.keys(audit.SPECIES).length,
+  canids: species.filter(sp => sp.group === 'Cánidos').length,
   bases: records.filter(record => record.key === 'normal' && record.src).length,
   variants: records.filter(record => !['normal', 'legendario'].includes(record.key) && record.src).length,
   legendary: records.filter(record => record.key === 'legendario' && record.src).length,

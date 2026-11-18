@@ -1,5 +1,5 @@
 {
-  "version": "4.0.0",
+  "version": "4.1.0",
   "atlas": "simple",
   "cells": {
     "Europa": 10,
@@ -25,7 +25,7 @@
     "reusedSpecies": 10,
     "presences": 192
   },
-  "channel": "candidate",
+  "channel": "release",
   "oceania": {
     "regions": 8,
     "taxa": 97,

@@ -414,6 +414,166 @@ const catalog = [
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"felid\" data-mammal-morph=\"caracal\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 55C15 55 6 65 6 77C6 88 15 92 23 86Q28 82 23 80Q20 78 18 83Q10 88 11 77C12 68 20 64 30 64Z\" fill=\"#9e724a\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 59C26.764 66 30 69 33 73Q36 76 32.8 80L32.8 79Q36 78 39.1 80Q41.1 82 38.1 82L32 82Q30 80 30.199999999999996 77L30.599999999999998 80Q30 74 28.92 70C34 69 40.236 65 40.236 61Z\" fill=\"#9e724a\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 67C26.764 66 30 69 33 73Q36 76 32.8 80L32.8 79Q36 78 39.1 80Q41.1 82 38.1 82L32 82Q30 80 30.199999999999996 77L30.599999999999998 80Q30 74 28.92 70C34 69 40.236 65 40.236 61\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.074 57C70.074 64 74 69 74.7 72L73.8 80L73.8 79Q77 78 80.1 80Q82.1 82 79.1 82L71.6 82Q71 80 71.2 77L71.2 80L72 71Q70 67 76.926 59Z\" fill=\"#9e724a\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.074 63C70.074 64 74 69 74.7 72L73.8 80L73.8 79Q77 78 80.1 80Q82.1 82 79.1 82L71.6 82Q71 80 71.2 77L71.2 80L72 71Q70 67 76.926 59\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68 36Q63 21 69 21Q75 22 77 36Z\" fill=\"#bc9068\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M70 34Q67 24 72 25L74 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M77 37Q72 23 78 23Q84 24 86 37Z\" fill=\"#bc9068\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M79 35Q76 26 81 27L83 35Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M24 51C25 40 34 34 47 38Q60 33 70 42Q73 32 80 31Q87 30 89 39Q88 45 93 48Q97 51 93 55Q88 59 81 55Q77 53 76 52Q72 63 61 68Q45 72 30 67C22 64 21 58 24 51Z\" fill=\"#bc9068\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 59C20.2 66 29 69 32 73Q35 76 24.8 80L24.8 82Q28 81 31.1 83Q33.1 85 30.1 85L24 85Q22 83 22.2 80L22.6 80Q29 74 27 70C29 69 36.8 65 36.8 61Z\" fill=\"#bc9068\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 67C20.2 66 29 69 32 73Q35 76 24.8 80L24.8 82Q28 81 31.1 83Q33.1 85 30.1 85L24 85Q22 83 22.2 80L22.6 80Q29 74 27 70C29 69 36.8 65 36.8 61\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M27.8 83L28.2 84.4M29.6 83L30 84.4\" fill=\"none\" stroke=\"#9e724a\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.2 57C64.2 64 67 69 67.7 72L69.8 80L69.8 82Q73 81 76.1 83Q78.1 85 75.1 85L67.6 85Q67 83 67.2 80L67.2 80L65 71Q65 67 72.8 59Z\" fill=\"#bc9068\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.2 63C64.2 64 67 69 67.7 72L69.8 80L69.8 82Q73 81 76.1 83Q78.1 85 75.1 85L67.6 85Q67 83 67.2 80L67.2 80L65 71Q65 67 72.8 59\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 83L73.2 84.4M74.6 83L75 84.4\" fill=\"none\" stroke=\"#9e724a\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M69 25L66 16M80 25L83 15\" fill=\"none\" stroke=\"#39382f\" stroke-width=\"2.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><defs><clipPath id=\"m3194-caracal-caracal-normal-base-coat\"><path d=\"M24 51C25 40 34 34 47 38Q60 33 70 42Q73 32 80 31Q87 30 89 39Q88 45 93 48Q97 51 93 55Q88 59 81 55Q77 53 76 52Q72 63 61 68Q45 72 30 67C22 64 21 58 24 51Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-caracal-caracal-normal-base-coat)\"><path d=\"M76 46Q83 44 89 50L93 52L87 56L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"83\" cy=\"40\" r=\"1.9200000000000002\" fill=\"#d4a880\"/><circle cx=\"83\" cy=\"40\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"83.45\" cy=\"39.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M86 51Q89 54 92 51M85 54L90 55\" fill=\"none\" stroke=\"#9e724a\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"92\" cy=\"50\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
   },
   {
+    "id": "af_xlsx_131_lupulella_mesomelas",
+    "name": "Chacal de lomo negro",
+    "latin": "Lupulella mesomelas",
+    "rarity": "Común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-07-10",
+        "name": "Sabana de África oriental",
+        "continent": "África"
+      },
+      {
+        "id": "HX-11-10",
+        "name": "Sabanas del sudeste africano",
+        "continent": "África"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/af_xlsx_131_lupulella_mesomelas--normal.webp",
+        "bytes": 65706
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/af_xlsx_131_lupulella_mesomelas--albino.webp",
+        "bytes": 37472
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"wolf\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 49C17 47 10 54 9 64Q9 71 6 75Q13 79 21 73Q28 68 32 61Q23 64 21 59Q21 55 29 55Z\" fill=\"#d4a977\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#9e7341\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#9e7341\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 21 68 21Q74 22 76 35Z\" fill=\"#bc915f\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 24 71 25L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 23 77 23Q83 24 85 36Z\" fill=\"#bc915f\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 26 80 27L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M19 53C20 42 31.26 35 46.66 39.77Q57.95 34.4 67 38.1Q71 27 78 26Q85 26 87 36Q87 42 94.27 45Q97.91 47 96.09 51Q94.27 55 85 55Q80 54 77 51Q73 61 61 65.7Q46.66 70.23 26.13 65C18 63 16 57 19 53Z\" fill=\"#bc915f\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#bc915f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#9e7341\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#bc915f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#9e7341\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-lupulella-mesomelas-normal-base-coat\"><path d=\"M19 53C20 42 31.26 35 46.66 39.77Q57.95 34.4 67 38.1Q71 27 78 26Q85 26 87 36Q87 42 94.27 45Q97.91 47 96.09 51Q94.27 55 85 55Q80 54 77 51Q73 61 61 65.7Q46.66 70.23 26.13 65C18 63 16 57 19 53Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-lupulella-mesomelas-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 48Q46 31 66 41L59 52L37 54Z\" fill=\"#39382f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#d4a977\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#9e7341\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
+    "id": "chacal_dorado",
+    "name": "Chacal dorado",
+    "latin": "Canis aureus",
+    "rarity": "Poco común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-03-09",
+        "name": "Europa Oriental",
+        "continent": "Europa"
+      }
+    ],
+    "categories": [
+      "Normal"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/chacal_dorado--normal.webp",
+        "bytes": 56034
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/chacal_dorado--melanico.webp",
+        "bytes": 37392
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"wolf\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 49C17 47 10 54 9 64Q9 71 6 75Q13 79 21 73Q28 68 32 61Q23 64 21 59Q21 55 29 55Z\" fill=\"#d8a965\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#a2732f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#a2732f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 22 68 22Q74 23 76 35Z\" fill=\"#c0914d\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 25 71 26L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 24 77 24Q83 25 85 36Z\" fill=\"#c0914d\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 27 80 28L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M21 53C22 42 32.74 35 47.34 39.77Q58.05 34.4 67 38.1Q71 27 78 26Q85 26 87 36Q87 42 94.27 45Q97.91 47 96.09 51Q94.27 55 85 55Q80 54 77 51Q73 61 61 65.7Q47.34 70.23 27.87 65C20 63 18 57 21 53Z\" fill=\"#c0914d\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#c0914d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#a2732f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#c0914d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#a2732f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-canis-aureus-normal-base-coat\"><path d=\"M21 53C22 42 32.74 35 47.34 39.77Q58.05 34.4 67 38.1Q71 27 78 26Q85 26 87 36Q87 42 94.27 45Q97.91 47 96.09 51Q94.27 55 85 55Q80 54 77 51Q73 61 61 65.7Q47.34 70.23 27.87 65C20 63 18 57 21 53Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-canis-aureus-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#d8a965\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#a2732f\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
+    "id": "na_esp_canis_latrans",
+    "name": "Coyote",
+    "latin": "Canis latrans",
+    "rarity": "Común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-02-05",
+        "name": "Grandes Llanuras",
+        "continent": "Norteamérica"
+      },
+      {
+        "id": "HX-03-05",
+        "name": "Desierto de Sonora",
+        "continent": "Norteamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/na_esp_canis_latrans--normal.webp",
+        "bytes": 54414
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/na_esp_canis_latrans--albino.webp",
+        "bytes": 26556
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/na_esp_canis_latrans--melanico.webp",
+        "bytes": 35916
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-na-version=\"3.22.1\" data-na-profile=\"canis-latrans\" data-na-polish=\"AM-03\" data-zoological-family=\"Canidae\" data-mammal-family=\"Canidae\"><path d=\"M34 56Q32 65 39 72L38 78Q39 81 46 80L46 77L43 76Q45 66 41 58Z\" fill=\"#958d77\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 54Q63 63 68 70L67 76Q68 79 75 78L75 75L72 74Q74 64 72 56Z\" fill=\"#958d77\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 58Q7 50 8 72Q11 86 25 78L25 74Q15 80 15 69Q15 61 31 65Z\" fill=\"#aaa28c\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 53Q28 41 44 44Q60 40 72 47L80 51L80 64Q64 72 39 67Q23 67 25 53Z\" fill=\"#aaa28c\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"45\" cy=\"53\" rx=\"10\" ry=\"3\" fill=\"#bdb59f\" opacity=\".45\"/><path d=\"M29 45Q51 38 70 46L69 53Q46 49 31 55Z\" fill=\"#b39a78\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 57Q28 66 30 73L29 79Q30 82 37 81L37 78L34 77Q36 67 37 59Z\" fill=\"#aaa28c\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 57Q63 66 64 73L63 79Q64 82 71 81L71 78L68 77Q70 67 72 59Z\" fill=\"#aaa28c\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69 45Q70 32 80 32Q88 33 91 42L99 48L97 52L86 55L78 59L69 53Z\" fill=\"#aaa28c\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71 37Q68 23 74 25L81 33M84 34L91 24L92 43Z\" fill=\"#aaa28c\" stroke=\"#3b5144\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M81 47L96 48L96 52L86 55L79 52Z\" fill=\"#e1dbc1\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-na3221-eye=\"true\"><circle cx=\"85\" cy=\"42\" r=\"1.35\" fill=\"#23352d\"/><circle cx=\"85.35\" cy=\"41.6\" r=\"0.35\" fill=\"#f5eed8\"/></g><circle cx=\"98\" cy=\"49\" r=\"1.6\" fill=\"#3b5144\"/><path d=\"M89 53l4 3m-6-2-2 3\" fill=\"none\" stroke=\"#6c7564\" stroke-width=\"0.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "asia_esp_0820",
+    "name": "Cuón",
+    "latin": "Cuon alpinus",
+    "rarity": "Raro",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-04-15",
+        "name": "Himalaya",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-06-17",
+        "name": "Sudeste Asiático",
+        "continent": "Asia"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/asia_esp_0820--normal.webp",
+        "bytes": 67490
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/asia_esp_0820--melanico.webp",
+        "bytes": 44510
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"wolf\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 49C17 47 10 54 9 64Q9 71 6 75Q13 79 21 73Q28 68 32 61Q23 64 21 59Q21 55 29 55Z\" fill=\"#c58d63\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#8f572d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#8f572d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 24 68 24Q74 25 76 35Z\" fill=\"#ad754b\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 27 71 28L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 26 77 26Q83 27 85 36Z\" fill=\"#ad754b\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 29 80 30L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M20 51C21 40 32 33 47 38.23Q58 33.6 67 37.9Q71 27 78 26Q85 26 87 36Q87 42 94.27 45Q97.91 47 96.09 51Q94.27 55 85 55Q80 54 77 51Q73 61 61 66Q47 71 27 66C19 64 17 58 20 51Z\" fill=\"#ad754b\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#ad754b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#8f572d\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#ad754b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#8f572d\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-cuon-alpinus-normal-base-coat\"><path d=\"M20 51C21 40 32 33 47 38.23Q58 33.6 67 37.9Q71 27 78 26Q85 26 87 36Q87 42 94.27 45Q97.91 47 96.09 51Q94.27 55 85 55Q80 54 77 51Q73 61 61 66Q47 71 27 66C19 64 17 58 20 51Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-cuon-alpinus-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#c58d63\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#8f572d\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
     "id": "oc_esp_phalanger_orientalis",
     "name": "Cuscús común",
     "latin": "Phalanger orientalis",
@@ -470,6 +630,40 @@ const catalog = [
       }
     ],
     "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" data-m01-species=\"oc_esp_sarcophilus_harrisii\" data-m01-family=\"Dasyuridae\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M32 59Q17 59 10 72Q5 80 4 86Q11 88 18 78Q22 71 36 70Z\" fill=\"#2e342c\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31 62L28 75L23 82L25 86L35 86L39 80L44 66Z\" fill=\"#2e342c\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M62 64L65 79L70 83L79 83L81 79L75 75L75 64Z\" fill=\"#2e342c\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 57C20 43 31 38 45 38Q64 36 76 46L82 59Q79 72 57 74Q34 76 24 66Z\" fill=\"#454b43\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 51Q34 41 51 41L46 45L35 48L28 59Z\" fill=\"#6b7065\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M36 66Q46 67 46 74L41 80L39 85L28 88L24 85L28 81L31 75L30 69Z\" fill=\"#454b43\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 85l-1 2m3-2-1 2m3-2-1 2\" fill=\"none\" stroke=\"#6b7065\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 60Q73 58 76 65L76 76L82 81Q83 86 76 87L69 84L67 77L64 69Z\" fill=\"#454b43\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M75 84l-1 2m3-2-1 2m3-2-1 2\" fill=\"none\" stroke=\"#6b7065\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64 45Q63 34 73 32Q80 33 84 42L87 48Q94 50 98 55L97 60L92 64Q81 66 71 60L65 54Z\" fill=\"#454b43\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"70\" cy=\"31\" rx=\"5.2\" ry=\"6.2\" fill=\"#454b43\" stroke=\"#41483f\" stroke-width=\"1.2\"/><ellipse cx=\"70\" cy=\"31\" rx=\"3.3\" ry=\"4.2\" fill=\"#ab8b7b\" stroke=\"none\" stroke-width=\"1.2\"/><path d=\"M78 49Q87 49 97 55L97 59Q91 64 81 60L75 55Z\" fill=\"#666b5e\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"96\" cy=\"55\" rx=\"2.3\" ry=\"1.7\" fill=\"#41483f\" stroke=\"none\" stroke-width=\"1.2\"/><circle cx=\"81\" cy=\"44\" r=\"1.2\" fill=\"#202d29\"/><circle cx=\"80.7\" cy=\"43.65\" r=\"0.32\" fill=\"#faf4eb\"/><path d=\"M85 61L95 59\" fill=\"none\" stroke=\"#2e342c\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 46Q68 55 77 57L74 64Q63 61 60 51L58 47Z\" fill=\"#ddd5bf\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g opacity=\".72\"><path d=\"M31 51l3-3m0 9 3-3M44 41l4-1M54 66l4 2M68 38l2 2\" fill=\"none\" stroke=\"#6b7065\" stroke-width=\"0.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M89 57L98 55M90 59L98 61\" fill=\"none\" stroke=\"#595f57\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>"
+  },
+  {
+    "id": "oc_esp_canis_familiaris",
+    "name": "Dingo",
+    "latin": "Canis familiaris",
+    "rarity": "Poco común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "oc_norte_tropical_australiano",
+        "name": "Australia tropical septentrional",
+        "continent": "Oceanía"
+      },
+      {
+        "id": "oc_desierto_australiano",
+        "name": "Interior árido australiano",
+        "continent": "Oceanía"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/oc_esp_canis_familiaris--normal.webp",
+        "bytes": 59432
+      }
+    ],
+    "sprite": "<svg data-oc-profile=\"dingo\" data-oc-species=\"dingo-Canis-familiaris\" data-zoological-family=\"Canidae\" viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"wolf\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 49C17 47 10 54 9 64Q9 71 6 75Q13 79 21 73Q28 68 32 61Q23 64 21 59Q21 55 29 55Z\" fill=\"#d5aa75\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#9f743f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#9f743f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 23 68 23Q74 24 76 35Z\" fill=\"#bd925d\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 26 71 27L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 25 77 25Q83 26 85 36Z\" fill=\"#bd925d\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 28 80 29L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M20 52C21 41 32 34 47 39Q58 34 67 38Q71 27 78 26Q85 26 87 36Q87 42 95 45Q99 47 97 51Q95 55 85 55Q80 54 77 51Q73 61 61 66Q47 71 27 66C19 64 17 58 20 52Z\" fill=\"#bd925d\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#bd925d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#9f743f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#bd925d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#9f743f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-canis-familiaris-normal-base-coat\"><path d=\"M20 52C21 41 32 34 47 39Q58 34 67 38Q71 27 78 26Q85 26 87 36Q87 42 95 45Q99 47 97 51Q95 55 85 55Q80 54 77 51Q73 61 61 66Q47 71 27 66C19 64 17 58 20 52Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-canis-familiaris-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#d5aa75\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#9f743f\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
   },
   {
     "id": "oc_esp_tachyglossus_aculeatus",
@@ -548,6 +742,57 @@ const catalog = [
       }
     ],
     "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" data-m01-species=\"oc_esp_zaglossus_bartoni\" data-m01-family=\"Tachyglossidae\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M24 67L20 80L23 85L30 84L34 72M57 66L57 81L63 85L69 83L68 70Z\" fill=\"#4b483b\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 68Q12 48 28 36Q45 22 62 36Q73 44 76 61L77 71Q60 82 30 79L18 74Z\" fill=\"#625f52\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 59Q20 46 36 39Q53 32 64 43L65 48Q41 40 28 61Z\" fill=\"#6e6b5e\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 58Q16.5 54.5 14 51\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 58Q16.5 54.5 14 51\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M20.8 57L16 54\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 49Q23 45 21 41\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 49Q23 45 21 41\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26.8 48L23 44\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 43Q31.5 38.5 30 34\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 43Q31.5 38.5 30 34\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M34.8 42L32 37\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 40Q42 35.5 41 31\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 40Q42 35.5 41 31\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44.8 39L43 34\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M53 43Q52 39 51 35\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M53 43Q52 39 51 35\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M54.8 42L53 38\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M62 49Q61.5 45.5 61 42\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M62 49Q61.5 45.5 61 42\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M63.8 48L63 45\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 60Q24.5 56.5 22 53\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 60Q24.5 56.5 22 53\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28.8 59L24 56\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M38 52Q36 48 34 44\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M38 52Q36 48 34 44\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M39.8 51L36 47\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M49 55Q48 50.5 47 46\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M49 55Q48 50.5 47 46\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M50.8 54L49 49\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 61Q59.5 57 59 53\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 61Q59.5 57 59 53\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61.8 60L61 56\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31 69Q29 66 27 63\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31 69Q29 66 27 63\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32.8 68L29 66\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 65Q42.5 61 41 57\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 65Q42.5 61 41 57\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M45.8 64L43 60\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M55 70Q54 66.5 53 63\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M55 70Q54 66.5 53 63\" fill=\"none\" stroke=\"#c5b594\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M56.8 69L55 66\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 59Q68 48 76 54Q82 59 86 70Q88 77 97 82L96 85Q83 82 79 71L74 65L66 68Z\" fill=\"#625f52\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"77\" cy=\"59\" r=\"1\" fill=\"#202d29\"/><circle cx=\"76.7\" cy=\"58.65\" r=\"0.32\" fill=\"#faf4eb\"/><circle cx=\"96.5\" cy=\"83.5\" r=\"0.75\" fill=\"#41483f\"/><path d=\"M30 69Q34 72 32 80L30 87L22 88L19 84L24 80L24 74Z\" fill=\"#625f52\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61 70Q66 70 67 79L68 87L78 87L80 89L75 92L65 91L60 86L58 77Z\" fill=\"#625f52\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 85l-2 4m5-4-1 5m4-5-1 5M67 85l-1 4m4-4 0 4m3-4 1 3\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g opacity=\".72\"><path d=\"M20 63l2-3m10 1 2-3M37 73l2-3m7 6 1-4m8 0 1-3M62 52l2 2\" fill=\"none\" stroke=\"#a79d83\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
+  },
+  {
+    "id": "af_fenec",
+    "name": "Fénec",
+    "latin": "Vulpes zerda",
+    "rarity": "Poco común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-06-09",
+        "name": "Magreb",
+        "continent": "África"
+      },
+      {
+        "id": "HX-06-08",
+        "name": "Montañas del Atlas",
+        "continent": "África"
+      },
+      {
+        "id": "HX-06-07",
+        "name": "Desierto del Sáhara",
+        "continent": "África"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/af_fenec--normal.webp",
+        "bytes": 38882
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/af_fenec--albino.webp",
+        "bytes": 23472
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/af_fenec--melanico.webp",
+        "bytes": 31512
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"fennec\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M30 51C20 45 11 45 7 52Q1 63 8 73Q12 78 22 76Q30 73 34 65Q26 67 21 63Q17 57 30 59Z\" fill=\"#f1d7a6\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#bba170\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#bba170\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 42Q62 15 68 15Q74 16 76 42Z\" fill=\"#d9bf8e\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 40Q66 18 71 19L73 40Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 43Q71 17 77 17Q83 18 85 43Z\" fill=\"#d9bf8e\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 41Q75 20 80 21L82 41Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M24 58C26 47 36 41 48 43Q61 39 69 46Q72 36 79 35Q87 35 88 44Q89 48 97 51Q100 53 96 56Q91 60 83 58Q79 57 77 55Q72 68 59 72Q43 77 30 71C22 68 21 63 24 58Z\" fill=\"#d9bf8e\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#d9bf8e\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#bba170\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#d9bf8e\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#bba170\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-vulpes-zerda-normal-base-coat\"><path d=\"M24 58C26 47 36 41 48 43Q61 39 69 46Q72 36 79 35Q87 35 88 44Q89 48 97 51Q100 53 96 56Q91 60 83 58Q79 57 77 55Q72 68 59 72Q43 77 30 71C22 68 21 63 24 58Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-vulpes-zerda-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 60L14 67\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"45\" r=\"1.9200000000000002\" fill=\"#f1d7a6\"/><circle cx=\"82\" cy=\"45\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"44.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#bba170\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"53\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
   },
   {
     "id": "sa_esp_leopardus_jacobita",
@@ -1435,6 +1680,62 @@ const catalog = [
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"felid\" data-mammal-morph=\"leopard\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 55C15 55 6 65 6 77C6 88 15 92 23 86Q28 82 23 80Q20 78 18 83Q10 88 11 77C12 68 20 64 30 64Z\" fill=\"#a8854d\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 59C26.764 66 30 69 33 73Q36 76 32.8 80L32.8 79Q36 78 39.1 80Q41.1 82 38.1 82L32 82Q30 80 30.199999999999996 77L30.599999999999998 80Q30 74 28.92 70C34 69 40.236 65 40.236 61Z\" fill=\"#a8854d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 67C26.764 66 30 69 33 73Q36 76 32.8 80L32.8 79Q36 78 39.1 80Q41.1 82 38.1 82L32 82Q30 80 30.199999999999996 77L30.599999999999998 80Q30 74 28.92 70C34 69 40.236 65 40.236 61\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.074 57C70.074 64 74 69 74.7 72L73.8 80L73.8 79Q77 78 80.1 80Q82.1 82 79.1 82L71.6 82Q71 80 71.2 77L71.2 80L72 71Q70 67 76.926 59Z\" fill=\"#a8854d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.074 63C70.074 64 74 69 74.7 72L73.8 80L73.8 79Q77 78 80.1 80Q82.1 82 79.1 82L71.6 82Q71 80 71.2 77L71.2 80L72 71Q70 67 76.926 59\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68 36C63 27 78 24 77 36Z\" fill=\"#c6a36b\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M70 34Q67 30 72 31L74 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M77 37C72 29 87 26 86 37Z\" fill=\"#c6a36b\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M79 35Q76 32 81 33L83 35Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M19 52C20 41 30.24 35 44.61 37.33Q58.97 34.27 68 40.87Q71 31 79 31Q87 31 89 40Q89 46 95 49Q98 53 93 56Q87 59 79 54Q74 65 63 69.47Q46.66 74.53 26.13 69C18 67 16 62 19 52Z\" fill=\"#c6a36b\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 59C20.2 66 29 69 32 73Q35 76 24.8 80L24.8 82Q28 81 31.1 83Q33.1 85 30.1 85L24 85Q22 83 22.2 80L22.6 80Q29 74 27 70C29 69 36.8 65 36.8 61Z\" fill=\"#c6a36b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 67C20.2 66 29 69 32 73Q35 76 24.8 80L24.8 82Q28 81 31.1 83Q33.1 85 30.1 85L24 85Q22 83 22.2 80L22.6 80Q29 74 27 70C29 69 36.8 65 36.8 61\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M27.8 83L28.2 84.4M29.6 83L30 84.4\" fill=\"none\" stroke=\"#a8854d\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.2 57C64.2 64 67 69 67.7 72L69.8 80L69.8 82Q73 81 76.1 83Q78.1 85 75.1 85L67.6 85Q67 83 67.2 80L67.2 80L65 71Q65 67 72.8 59Z\" fill=\"#c6a36b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.2 63C64.2 64 67 69 67.7 72L69.8 80L69.8 82Q73 81 76.1 83Q78.1 85 75.1 85L67.6 85Q67 83 67.2 80L67.2 80L65 71Q65 67 72.8 59\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 83L73.2 84.4M74.6 83L75 84.4\" fill=\"none\" stroke=\"#a8854d\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-panthera-pardus-tulliana-normal-base-coat\"><path d=\"M19 52C20 41 30.24 35 44.61 37.33Q58.97 34.27 68 40.87Q71 31 79 31Q87 31 89 40Q89 46 95 49Q98 53 93 56Q87 59 79 54Q74 65 63 69.47Q46.66 74.53 26.13 69C18 67 16 62 19 52Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-panthera-pardus-tulliana-normal-base-coat)\"><path d=\"M76 46Q83 44 89 50L93 52L87 56L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 50q-3-4 1-5m3 0q4 2 1 5\" fill=\"none\" stroke=\"#a8854d\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M40 47q-3-4 1-5m3 0q4 2 1 5\" fill=\"none\" stroke=\"#a8854d\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M51 52q-3-4 1-5m3 0q4 2 1 5\" fill=\"none\" stroke=\"#a8854d\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 62q-3-4 1-5m3 0q4 2 1 5\" fill=\"none\" stroke=\"#a8854d\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M46 64q-3-4 1-5m3 0q4 2 1 5\" fill=\"none\" stroke=\"#a8854d\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 60q-3-4 1-5m3 0q4 2 1 5\" fill=\"none\" stroke=\"#a8854d\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"83\" cy=\"40\" r=\"1.9200000000000002\" fill=\"#debb83\"/><circle cx=\"83\" cy=\"40\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"83.45\" cy=\"39.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M86 51Q89 54 92 51M85 54L90 55\" fill=\"none\" stroke=\"#a8854d\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"92\" cy=\"50\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
   },
   {
+    "id": "af_licaon",
+    "name": "Licaón",
+    "latin": "Lycaon pictus",
+    "rarity": "Raro",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-07-10",
+        "name": "Sabana de África oriental",
+        "continent": "África"
+      },
+      {
+        "id": "HX-09-09",
+        "name": "Bosques de miombo",
+        "continent": "África"
+      },
+      {
+        "id": "HX-11-10",
+        "name": "Sabanas del sudeste africano",
+        "continent": "África"
+      },
+      {
+        "id": "HX-07-11",
+        "name": "Sahel oriental",
+        "continent": "África"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/af_licaon--normal.webp",
+        "bytes": 58488
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/af_licaon--albino.webp",
+        "bytes": 31702
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/af_licaon--melanico.webp",
+        "bytes": 37420
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"wilddog\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 49C17 47 10 54 9 64Q9 71 6 75Q13 79 21 73Q28 68 32 61Q23 64 21 59Q21 55 29 55Z\" fill=\"#c8b285\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#927c4f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#927c4f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35C62 23 77 20 76 35Z\" fill=\"#b09a6d\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 26 71 27L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36C71 25 86 22 85 36Z\" fill=\"#b09a6d\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 28 80 29L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M23 49C25 38 35 32 49 37Q60 32 69 38Q73 27 81 26Q89 25 90 36Q90 43 96 46Q100 50 96 54Q92 59 84 57Q79 55 76 52Q71 62 59 66Q43 70 29 64C22 62 20 56 23 49Z\" fill=\"#b09a6d\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#b09a6d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#927c4f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#b09a6d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#927c4f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-lycaon-pictus-normal-base-coat\"><path d=\"M23 49C25 38 35 32 49 37Q60 32 69 38Q73 27 81 26Q89 25 90 36Q90 43 96 46Q100 50 96 54Q92 59 84 57Q79 55 76 52Q71 62 59 66Q43 70 29 64C22 62 20 56 23 49Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-lycaon-pictus-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 43L37 39L40 52L29 56Z\" fill=\"#39382f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M46 43L58 39L65 51L56 59L46 55Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32 59L42 56L46 65L35 67Z\" fill=\"#927c4f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#c8b285\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#927c4f\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
     "id": "lince_boreal",
     "name": "Lince boreal",
     "latin": "Lynx lynx",
@@ -1632,6 +1933,274 @@ const catalog = [
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-na-version=\"3.22.1\" data-na-profile=\"lynx-rufus\" data-na-polish=\"AM-03\" data-zoological-family=\"Felidae\" data-mammal-family=\"Felidae\"><path d=\"M34 54Q32 63 39 70L38 76Q39 79 46 78L46 75L43 74Q45 64 41 56Z\" fill=\"#a18b6b\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 52Q63 61 68 68L67 74Q68 77 75 76L75 73L72 72Q74 62 72 54Z\" fill=\"#a18b6b\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q17 62 14 70Q19 76 29 67L33 61Z\" fill=\"#a18b6b\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 49Q31 35 47 39Q62 36 72 45L80 51L77 65Q60 74 36 67Q23 63 27 49Z\" fill=\"#b6a080\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"45\" cy=\"53\" rx=\"10\" ry=\"3\" fill=\"#c9b393\" opacity=\".45\"/><circle cx=\"35\" cy=\"51\" r=\"0.85\" fill=\"#6e7565\"/><circle cx=\"42\" cy=\"54\" r=\"0.85\" fill=\"#6e7565\"/><circle cx=\"51\" cy=\"49\" r=\"0.85\" fill=\"#6e7565\"/><circle cx=\"61\" cy=\"54\" r=\"0.85\" fill=\"#6e7565\"/><circle cx=\"40\" cy=\"61\" r=\"0.85\" fill=\"#6e7565\"/><circle cx=\"58\" cy=\"64\" r=\"0.85\" fill=\"#6e7565\"/><path d=\"M30 55Q28 64 30 71L29 77Q30 80 37 79L37 76L34 75Q36 65 37 57Z\" fill=\"#b6a080\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 55Q63 64 64 71L63 77Q64 80 71 79L71 76L68 75Q70 65 72 57Z\" fill=\"#b6a080\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69 45Q69 32 80 32Q91 33 92 43L97 47Q99 52 93 55L84 58L74 57L68 51Z\" fill=\"#b6a080\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71 36L69 24Q73 23 79 32M83 33L88 23Q93 25 91 41Z\" fill=\"#b6a080\" stroke=\"#3b5144\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 25l-3-6M89 24l2-6\" fill=\"none\" stroke=\"#6e7565\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71 49l-7-1 3 7-4 1 10 5M87 50l9-2-3 6 3 1-10 5\" fill=\"#e5dec7\" stroke=\"#3b5144\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M81 48Q90 46 96 49Q98 53 91 55L84 54L78 52Z\" fill=\"#e5dec7\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-na3221-eye=\"true\"><circle cx=\"85\" cy=\"42\" r=\"1.35\" fill=\"#23352d\"/><circle cx=\"85.35\" cy=\"41.6\" r=\"0.35\" fill=\"#f5eed8\"/></g><circle cx=\"96\" cy=\"49\" r=\"1.6\" fill=\"#3b5144\"/><path d=\"M89 53l4 3m-6-2-2 3\" fill=\"none\" stroke=\"#6e7565\" stroke-width=\"0.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M85 53l-7 1m7 2-7 2\" fill=\"none\" stroke=\"#e5dec7\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
   },
   {
+    "id": "sa_esp_chrysocyon_brachyurus",
+    "name": "Lobo de crin",
+    "latin": "Chrysocyon brachyurus",
+    "rarity": "Común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "sa_cerrado_brasileno",
+        "name": "Cerrado brasileño",
+        "continent": "Sudamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/sa_esp_chrysocyon_brachyurus--normal.webp",
+        "bytes": 53158
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-sa-version=\"3.23.1\" data-sa-polish=\"3231\" data-sa-profile=\"chrysocyon-brachyurus\" data-sa-morphology=\"chrysocyon-brachyurus\" data-zoological-family=\"Canidae\" data-mammal-family=\"Canidae\"><path d=\"M30 43Q28 49 31 54L34 81Q30 86 35 86L41 86L41 84L37 82Q40 55 35 52L37 45Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 42Q64 48 67 53L68 80Q64 85 69 85L75 85L75 83L71 81Q74 54 71 51L73 44Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 45Q14 45 8 64Q16 69 27 59L36 50Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 60L14 54L19 57L13 66Z\" fill=\"#e8ddc4\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 42Q29 32 43 34Q54 29 67 34L79 43L77 57Q62 64 42 58Q25 60 24 42Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 39Q45 33 59 37L66 41Q49 39 34 45Z\" fill=\"#bdaf93\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M59 33L62 23Q68 17 72 25L78 43L71 49L62 44Z\" fill=\"#646e5b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 45Q25 51 28 56L26 83Q22 88 27 88L33 88L33 86L29 84Q32 57 32 54L34 47Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 45Q63 51 66 56L64 83Q60 88 65 88L71 88L71 86L67 84Q70 57 70 54L72 47Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 72L33 73L32 88L25 88ZM64 70L71 71L70 88L63 88Z\" fill=\"#646e5b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68 32Q68 23 79 23Q87 24 90 32L99 36L97 42L85 46L75 41Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71 27Q65 8 72 7Q79 12 80 25M84 25Q85 7 91 9Q96 19 91 34Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M81 37L98 36L97 41L85 45Z\" fill=\"#e8ddc4\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-sa-eye=\"true\"><circle cx=\"85\" cy=\"31\" r=\"1.2\" fill=\"#23352d\"/><circle cx=\"84.7\" cy=\"30.65\" r=\"0.32\" fill=\"#f5ecd5\"/></g><circle cx=\"98\" cy=\"37\" r=\"1.3\" fill=\"#3b5244\"/></svg>"
+  },
+  {
+    "id": "af_chacal_dorado",
+    "name": "Lobo dorado africano",
+    "latin": "Canis lupaster",
+    "rarity": "Común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-06-09",
+        "name": "Magreb",
+        "continent": "África"
+      },
+      {
+        "id": "HX-07-08",
+        "name": "Sahel occidental",
+        "continent": "África"
+      },
+      {
+        "id": "HX-06-08",
+        "name": "Montañas del Atlas",
+        "continent": "África"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/af_chacal_dorado--normal.webp",
+        "bytes": 61810
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/af_chacal_dorado--albino.webp",
+        "bytes": 32786
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/af_chacal_dorado--melanico.webp",
+        "bytes": 39954
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"wolf\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 49C17 47 10 54 9 64Q9 71 6 75Q13 79 21 73Q28 68 32 61Q23 64 21 59Q21 55 29 55Z\" fill=\"#c5a878\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#8f7242\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#8f7242\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 21 68 21Q74 22 76 35Z\" fill=\"#ad9060\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 24 71 25L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 23 77 23Q83 24 85 36Z\" fill=\"#ad9060\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 26 80 27L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M20 52C21 41 32 34 47 39Q58 34 67 38Q71 27 78 26Q85 26 87 36Q87 42 94.27 45Q97.91 47 96.09 51Q94.27 55 85 55Q80 54 77 51Q73 61 61 65.7Q47 70.23 27 65C19 63 17 57 20 52Z\" fill=\"#ad9060\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#ad9060\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#8f7242\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#ad9060\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#8f7242\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-canis-lupaster-normal-base-coat\"><path d=\"M20 52C21 41 32 34 47 39Q58 34 67 38Q71 27 78 26Q85 26 87 36Q87 42 94.27 45Q97.91 47 96.09 51Q94.27 55 85 55Q80 54 77 51Q73 61 61 65.7Q47 70.23 27 65C19 63 17 57 20 52Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-canis-lupaster-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#c5a878\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#8f7242\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
+    "id": "af_lobo_etiope",
+    "name": "Lobo etíope",
+    "latin": "Canis simensis",
+    "rarity": "Muy rara",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-07-13",
+        "name": "Tierras altas de Etiopía",
+        "continent": "África"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/af_lobo_etiope--normal.webp",
+        "bytes": 64634
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/af_lobo_etiope--melanico.webp",
+        "bytes": 42450
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"wolf\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 49C17 47 10 54 9 64Q9 71 6 75Q13 79 21 73Q28 68 32 61Q23 64 21 59Q21 55 29 55Z\" fill=\"#ca8e66\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#945830\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#945830\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 21 68 21Q74 22 76 35Z\" fill=\"#b2764e\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 24 71 25L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 23 77 23Q83 24 85 36Z\" fill=\"#b2764e\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 26 80 27L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M19 53C20 42 31.26 35 46.66 39.77Q57.95 34.4 67 38.1Q71 27 78 26Q85 26 87 36Q87 42 95 45Q98 47 97 51Q95 55 85 55Q80 54 77 51Q73 61 61 65.4Q46.66 69.47 26.13 64C18 62 16 56 19 53Z\" fill=\"#b2764e\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#b2764e\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#945830\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#b2764e\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#945830\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-canis-simensis-normal-base-coat\"><path d=\"M19 53C20 42 31.26 35 46.66 39.77Q57.95 34.4 67 38.1Q71 27 78 26Q85 26 87 36Q87 42 95 45Q98 47 97 51Q95 55 85 55Q80 54 77 51Q73 61 61 65.4Q46.66 69.47 26.13 64C18 62 16 56 19 53Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-canis-simensis-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#ca8e66\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#945830\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
+    "id": "lobo_gris",
+    "name": "Lobo gris",
+    "latin": "Canis lupus",
+    "rarity": "Raro",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-01-11",
+        "name": "Escandinavia",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-02-11",
+        "name": "Europa Central",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-02-12",
+        "name": "Península Ibérica",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-03-09",
+        "name": "Europa Oriental",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-03-10",
+        "name": "Península Itálica",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-03-11",
+        "name": "Región del mar Báltico",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-03-12",
+        "name": "Balcanes",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-03-13",
+        "name": "Cáucaso",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-03-15",
+        "name": "Anatolia",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-02-13",
+        "name": "Siberia Occidental",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-03-14",
+        "name": "Siberia Central",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-04-13",
+        "name": "Mongolia",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-02-15",
+        "name": "Montes Urales",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-03-16",
+        "name": "Siberia Oriental",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-04-15",
+        "name": "Himalaya",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-03-17",
+        "name": "Península Arábiga",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-04-16",
+        "name": "Meseta de Irán",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-04-18",
+        "name": "Estepas de Asia Central",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-05-15",
+        "name": "China Septentrional",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-01-05",
+        "name": "Alaska",
+        "continent": "Norteamérica"
+      },
+      {
+        "id": "HX-02-02",
+        "name": "Columbia Británica",
+        "continent": "Norteamérica"
+      },
+      {
+        "id": "HX-02-03",
+        "name": "Bosques boreales de Canadá",
+        "continent": "Norteamérica"
+      },
+      {
+        "id": "HX-02-06",
+        "name": "Yukón",
+        "continent": "Norteamérica"
+      },
+      {
+        "id": "HX-04-02",
+        "name": "Sierra Madre",
+        "continent": "Norteamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable",
+      "Épico",
+      "Excepcional",
+      "Legendario"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/lobo_gris--normal.webp",
+        "bytes": 66694
+      },
+      {
+        "key": "legendario",
+        "label": "Fenrir",
+        "src": "plates/lobo_gris--fenrir.webp",
+        "bytes": 55482
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"wolf\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 49C17 47 10 54 9 64Q9 71 6 75Q13 79 21 73Q28 68 32 61Q23 64 21 59Q21 55 29 55Z\" fill=\"#b5b3a9\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#7f7d73\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#7f7d73\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 23 68 23Q74 24 76 35Z\" fill=\"#9d9b91\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 26 71 27L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 25 77 25Q83 26 85 36Z\" fill=\"#9d9b91\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 28 80 29L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M19 51C20 40 31.26 33 46.66 38.23Q57.95 33.6 67 37.9Q71 27 78 26Q85 26 87 36Q87 42 95 45Q98 47 97 51Q95 55 85 55Q80 54 77 51Q73 61 61 66.3Q46.66 71.77 26.13 67C18 65 16 59 19 51Z\" fill=\"#9d9b91\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#9d9b91\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#7f7d73\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#9d9b91\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#7f7d73\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-canis-lupus-normal-base-coat\"><path d=\"M19 51C20 40 31.26 33 46.66 38.23Q57.95 33.6 67 37.9Q71 27 78 26Q85 26 87 36Q87 42 95 45Q98 47 97 51Q95 55 85 55Q80 54 77 51Q73 61 61 66.3Q46.66 71.77 26.13 67C18 65 16 59 19 51Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-canis-lupus-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#b5b3a9\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#7f7d73\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
     "id": "asia_esp_0387",
     "name": "Manul",
     "latin": "Otocolobus manul",
@@ -1796,6 +2365,40 @@ const catalog = [
       }
     ],
     "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" data-m01-species=\"oc_esp_thylogale_billardierii\" data-m01-family=\"Macropodidae\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M35 73C24 76 14 82 7 87Q6 91 12 90Q30 87 43 81Z\" fill=\"#655f50\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M48 73Q59 71 59 83L55 88L69 91Q71 95 65 95L47 92L43 86Z\" fill=\"#655f50\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 68C25 57 33 50 43 47Q51 44 54 36Q60 32 65 38Q67 46 69 54L71 68C71 81 59 87 44 84Q28 83 27 72Z\" fill=\"#8b7c69\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M57 43Q64 47 65 57L66 70Q62 79 51 80L48 73L52 61Z\" fill=\"#b29b79\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q34 52 45 51L52 48Q47 55 39 58L33 69Z\" fill=\"#9f8d74\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M34 70Q40 62 50 68Q58 74 50 82L46 86L62 90Q68 93 62 95L41 93Q36 90 40 85L43 78L35 77Z\" fill=\"#8b7c69\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M39 71Q46 67 50 73M44 84L42 88M48 91L60 92\" fill=\"none\" stroke=\"#655f50\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M57 92l-1 2m3-2-1 2m3-2-1 2\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M55 44Q53 35 60 31Q68 28 74 34L80 43L83 46Q83 51 77 53L66 52L59 48Z\" fill=\"#8b7c69\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M59 34Q54 27 57 22Q61 21 64 30L64 34Z\" fill=\"#8b7c69\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 32Q68 24 72 23Q76 24 76 33Z\" fill=\"#8b7c69\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M59 26L61 31M72 26L73 30\" fill=\"none\" stroke=\"#bc9d89\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68 40Q76 39 83 46L82 49L76 51L67 47Z\" fill=\"#b6a28a\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"73\" cy=\"38\" r=\"1.05\" fill=\"#202d29\"/><circle cx=\"72.7\" cy=\"37.65\" r=\"0.32\" fill=\"#faf4eb\"/><ellipse cx=\"82\" cy=\"46\" rx=\"2\" ry=\"1.4\" fill=\"#41483f\" stroke=\"none\" stroke-width=\"1.2\"/><path d=\"M77 50L81 49\" fill=\"none\" stroke=\"#655f50\" stroke-width=\"0.55\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M63 53Q65 59 70 62L73 65L71 68L66 67Q59 63 58 57Z\" fill=\"#655f50\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69 65l-1 2m3-2-1 2m3-2-1 2\" fill=\"none\" stroke=\"#b29b79\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g opacity=\".72\"><path d=\"M29 65l2-3m-1 8 2-3m3 7 2-2M39 52l3-1M45 51l3-1M53 48l1-3M44 70l2 1M60 36l2-2M53 78l2-2\" fill=\"none\" stroke=\"#655f50\" stroke-width=\"0.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
+  },
+  {
+    "id": "sa_esp_speothos_venaticus",
+    "name": "Perro de monte",
+    "latin": "Speothos venaticus",
+    "rarity": "Raro",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "sa_amazonia",
+        "name": "Amazonía",
+        "continent": "Sudamérica"
+      },
+      {
+        "id": "sa_pantanal",
+        "name": "Pantanal",
+        "continent": "Sudamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/sa_esp_speothos_venaticus--normal.webp",
+        "bytes": 71458
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-sa-version=\"3.23.1\" data-sa-polish=\"3231\" data-sa-profile=\"speothos-venaticus\" data-sa-morphology=\"speothos-venaticus\" data-zoological-family=\"Canidae\" data-mammal-family=\"Canidae\"><path d=\"M30 62Q28 68 31 73L34 74Q30 79 35 79L41 79L41 77L37 75Q40 74 35 71L37 64Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 61Q64 67 67 72L68 73Q64 78 69 78L75 78L75 76L71 74Q74 73 71 70L73 63Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 62Q17 59 15 65L20 69L31 66Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 58Q24 47 39 47Q58 44 73 51Q82 57 78 67Q61 75 35 69Q20 70 22 58Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 48Q44 42 61 46L68 50Q45 48 32 53Z\" fill=\"#bdaf93\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 64Q25 70 28 75L26 76Q22 81 27 81L33 81L33 79L29 77Q32 76 32 73L34 66Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 64Q63 70 66 75L64 76Q60 81 65 81L71 81L71 79L67 77Q70 76 70 73L72 66Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 54Q64 42 76 41Q87 39 92 50L98 55L97 61L86 65L74 62L66 59Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69 45Q64 35 71 34Q78 34 78 43M83 42Q83 34 88 38L90 48Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M83 54L97 55L97 60L87 63Z\" fill=\"#e8ddc4\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-sa-eye=\"true\"><circle cx=\"85\" cy=\"48\" r=\"1.2\" fill=\"#23352d\"/><circle cx=\"84.7\" cy=\"47.65\" r=\"0.32\" fill=\"#f5ecd5\"/></g><circle cx=\"98\" cy=\"56\" r=\"1.3\" fill=\"#3b5244\"/></svg>"
   },
   {
     "id": "oc_esp_petaurus_breviceps",
@@ -2028,6 +2631,41 @@ const catalog = [
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"felid\" data-mammal-morph=\"serval\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 55C15 55 6 65 6 77C6 88 15 92 23 86Q28 82 23 80Q20 78 18 83Q10 88 11 77C12 68 20 64 30 64Z\" fill=\"#a6843d\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32.4185 53C29.4185 60 35 66 38 70Q41 73 35.8 83L35.8 83Q39 82 42.1 84Q44.1 86 41.1 86L35 86Q33 84 33.199999999999996 81L33.599999999999994 83Q35 71 34.305 67C36 63 41.5815 59 41.5815 55Z\" fill=\"#a6843d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32.4185 61C29.4185 60 35 66 38 70Q41 73 35.8 83L35.8 83Q39 82 42.1 84Q44.1 86 41.1 86L35 86Q33 84 33.199999999999996 81L33.599999999999994 83Q35 71 34.305 67C36 63 41.5815 59 41.5815 55\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.459 51C70.459 58 72 67 72.7 70L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L70 69Q70 61 76.541 53Z\" fill=\"#a6843d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.459 57C70.459 58 72 67 72.7 70L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L70 69Q70 61 76.541 53\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68 36Q63 18 69 18Q75 19 77 36Z\" fill=\"#c4a25b\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M70 34Q67 21 72 22L74 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M77 37Q72 20 78 20Q84 21 86 37Z\" fill=\"#c4a25b\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M79 35Q76 23 81 24L83 35Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M25 46C25 36 36 31 49 36Q61 32 69 38Q71 30 76 28Q83 26 87 32Q90 36 88 43Q89 46 93 47Q96 50 92 53Q87 56 81 52Q76 56 69 59Q56 63 44 62L32.25 62.9Q31 63 29.86 62.49Q22 59 25 46Z\" fill=\"#c4a25b\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26.05 53C23.05 60 34 66 37 70Q40 73 27.8 83L27.8 86Q31 85 34.1 87Q36.1 89 33.1 89L27 89Q25 87 25.2 84L25.6 83Q34 71 32.5 67C31 63 37.95 59 37.95 55Z\" fill=\"#c4a25b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26.05 61C23.05 60 34 66 37 70Q40 73 27.8 83L27.8 86Q31 85 34.1 87Q36.1 89 33.1 89L27 89Q25 87 25.2 84L25.6 83Q34 71 32.5 67C31 63 37.95 59 37.95 55\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M30.8 87L31.2 88.4M32.6 87L33 88.4\" fill=\"none\" stroke=\"#a6843d\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.7 51C64.7 58 65 67 65.7 70L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L63 69Q65 61 72.3 53Z\" fill=\"#c4a25b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.7 57C64.7 58 65 67 65.7 70L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L63 69Q65 61 72.3 53\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#a6843d\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-leptailurus-serval-normal-base-coat\"><path d=\"M25 46C25 36 36 31 49 36Q61 32 69 38Q71 30 76 28Q83 26 87 32Q90 36 88 43Q89 46 93 47Q96 50 92 53Q87 56 81 52Q76 56 69 59Q56 63 44 62L32.25 62.9Q31 63 29.86 62.49Q22 59 25 46Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-leptailurus-serval-normal-base-coat)\"><path d=\"M76 46Q83 44 89 50L93 52L87 56L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"30\" cy=\"49\" r=\"1.9\" fill=\"#a6843d\"/><circle cx=\"39\" cy=\"43\" r=\"1.9\" fill=\"#a6843d\"/><circle cx=\"48\" cy=\"49\" r=\"1.9\" fill=\"#a6843d\"/><circle cx=\"57\" cy=\"43\" r=\"1.9\" fill=\"#a6843d\"/><circle cx=\"62\" cy=\"56\" r=\"1.9\" fill=\"#a6843d\"/><circle cx=\"44\" cy=\"61\" r=\"1.9\" fill=\"#a6843d\"/><circle cx=\"30\" cy=\"61\" r=\"1.9\" fill=\"#a6843d\"/><path d=\"M82 42L86 51\" fill=\"none\" stroke=\"#39382f\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"83\" cy=\"40\" r=\"1.9200000000000002\" fill=\"#dcba73\"/><circle cx=\"83\" cy=\"40\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"83.45\" cy=\"39.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M86 51Q89 54 92 51M85 54L90 55\" fill=\"none\" stroke=\"#a6843d\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"92\" cy=\"50\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
+    "id": "asia_esp_0363",
+    "name": "Tanuki",
+    "latin": "Nyctereutes procyonoides",
+    "rarity": "Poco común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-06-18",
+        "name": "Archipiélago Japonés",
+        "continent": "Asia"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/asia_esp_0363--normal.webp",
+        "bytes": 73270
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/asia_esp_0363--albino.webp",
+        "bytes": 40206
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"raccoondog\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M30 51C20 45 11 45 7 52Q1 63 8 73Q12 78 22 76Q30 73 34 65Q26 67 21 63Q17 57 30 59Z\" fill=\"#c4ab8c\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#8e7556\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#8e7556\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 23 68 23Q74 24 76 35Z\" fill=\"#ac9374\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 26 71 27L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 25 77 25Q83 26 85 36Z\" fill=\"#ac9374\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 28 80 29L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M23 56C24 44 33 36 45 38Q61 35 73 45Q78 35 85 39Q90 42 89 49Q92 51 96 53Q98 57 93 60Q87 63 81 59Q75 71 62 75Q43 80 28 71C21 67 19 62 23 56Z\" fill=\"#ac9374\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#ac9374\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#8e7556\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#ac9374\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#8e7556\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-nyctereutes-procyonoides-normal-base-coat\"><path d=\"M23 56C24 44 33 36 45 38Q61 35 73 45Q78 35 85 39Q90 42 89 49Q92 51 96 53Q98 57 93 60Q87 63 81 59Q75 71 62 75Q43 80 28 71C21 67 19 62 23 56Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-nyctereutes-procyonoides-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M74 43L85 41L91 49L86 54L75 51Z\" fill=\"#39382f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 60L14 67\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#c4ab8c\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#8e7556\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
   },
   {
     "id": "asia_esp_0402",
@@ -2455,5 +3093,631 @@ const catalog = [
       }
     ],
     "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" data-m01-species=\"oc_esp_dactylopsila_trivirgata\" data-m01-family=\"Petauridae\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 87L93 74\" fill=\"none\" stroke=\"#756d57\" stroke-width=\"3.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M37 61Q18 48 13 62Q7 77 17 85Q25 89 30 82L29 78Q19 83 18 73Q14 65 28 65L42 72Z\" fill=\"#444c42\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M14 76Q17 85 27 80L28 83Q17 91 11 81Z\" fill=\"#ddd5bf\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 60C23 46 36 39 51 41Q65 39 73 48L78 62Q76 73 58 75Q37 78 27 69L24 67L26 64L23 62Z\" fill=\"#ded7c4\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M53 45Q68 43 71 57L72 68Q64 76 51 73L42 68L46 58Z\" fill=\"#f0e9d6\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 53Q32 43 45 42L56 43L49 46Q36 46 29 59Z\" fill=\"#f0e9d6\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 66Q42 60 49 68Q53 74 44 80L47 83L47 86L37 89L31 86L34 80L37 75L31 71Z\" fill=\"#444c42\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M40 85l-1 2m3-2-1 2m3-2-1 2\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 59Q73 61 72 69L77 74L82 74L84 77L81 81L74 81L68 76L64 68Z\" fill=\"#ded7c4\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M78 78l-1 2m3-2-1 2m3-2-1 2\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M75 81L73 83\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"65\" cy=\"34\" rx=\"4.5\" ry=\"5\" fill=\"#ded7c4\" stroke=\"#41483f\" stroke-width=\"1.2\"/><ellipse cx=\"79\" cy=\"33\" rx=\"4\" ry=\"4.5\" fill=\"#ded7c4\" stroke=\"#41483f\" stroke-width=\"1.2\"/><path d=\"M61 42Q67 33 77 38L90 49L91 54L84 59Q73 61 64 54Z\" fill=\"#ded7c4\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 43L79 41L90 50L89 55L82 58L71 53Z\" fill=\"#f0e9d6\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"79\" cy=\"44\" r=\"1.45\" fill=\"#202d29\"/><circle cx=\"78.7\" cy=\"43.65\" r=\"0.32\" fill=\"#faf4eb\"/><ellipse cx=\"90\" cy=\"52\" rx=\"1.8\" ry=\"1.35\" fill=\"#af8d80\" stroke=\"none\" stroke-width=\"1.2\"/><path d=\"M82 56L87 55\" fill=\"none\" stroke=\"#444c42\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 49Q42 40 63 47M27 58Q44 47 64 56M34 69Q49 57 65 63\" fill=\"none\" stroke=\"#444c42\" stroke-width=\"3.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 39L73 38L83 48L81 52L72 47Z\" fill=\"#444c42\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"79\" cy=\"44\" r=\"1.35\" fill=\"#202d29\"/><circle cx=\"78.7\" cy=\"43.65\" r=\"0.32\" fill=\"#faf4eb\"/><path d=\"M81 78L89 77\" fill=\"none\" stroke=\"#41483f\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g opacity=\".72\"><path d=\"M27 53l3-2m-3 8 3-2m2 9 3-2M41 43l4-1M49 68l3 1M64 45l2-2\" fill=\"none\" stroke=\"#cac3b0\" stroke-width=\"0.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
+  },
+  {
+    "id": "zorro_artico",
+    "name": "Zorro ártico",
+    "latin": "Vulpes lagopus",
+    "rarity": "Raro",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-01-11",
+        "name": "Escandinavia",
+        "continent": "Europa"
+      },
+      {
+        "id": "polar_hielo_artico_occidental",
+        "name": "Hielo ártico occidental",
+        "continent": "Polos"
+      },
+      {
+        "id": "polar_hielo_artico_oriental",
+        "name": "Hielo ártico oriental",
+        "continent": "Polos"
+      },
+      {
+        "id": "gm06_hudson",
+        "name": "Bahía de Hudson",
+        "continent": "Norteamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/zorro_artico--normal.webp",
+        "bytes": 25250
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/zorro_artico--melanico.webp",
+        "bytes": 24038
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"arcticfox\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M30 51C20 45 11 45 7 52Q1 63 8 73Q12 78 22 76Q30 73 34 65Q26 67 21 63Q17 57 30 59Z\" fill=\"#fdfef7\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28.764 62C25.764 69 29 69 32 73Q35 76 33.8 78L33.8 76Q37 75 40.1 77Q42.1 79 39.1 79L33 79Q31 77 31.199999999999996 74L31.599999999999998 78Q29 74 27.92 70C33 72 39.236 68 39.236 64Z\" fill=\"#c7c8c1\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28.764 70C25.764 69 29 69 32 73Q35 76 33.8 78L33.8 76Q37 75 40.1 77Q42.1 79 39.1 79L33 79Q31 77 31.199999999999996 74L31.599999999999998 78Q29 74 27.92 70C33 72 39.236 68 39.236 64\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M72.92 59C71.92 66 76 70 76.7 73L76.8 79L76.8 77Q80 76 83.1 78Q85.1 80 82.1 80L74.6 80Q74 78 74.2 75L74.2 79L74 72Q72 69 79.08 61Z\" fill=\"#c7c8c1\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M72.92 65C71.92 66 76 70 76.7 73L76.8 79L76.8 77Q80 76 83.1 78Q85.1 80 82.1 80L74.6 80Q74 78 74.2 75L74.2 79L74 72Q72 69 79.08 61\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 28 68 28Q74 29 76 35Z\" fill=\"#e5e6df\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 31 71 32L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 30 77 30Q83 31 85 36Z\" fill=\"#e5e6df\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 33 80 34L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M23 54C22 42 30 33 45 35Q59 31 70 41Q75 31 83 33Q90 35 91 44Q91 49 96 52Q99 56 92 59Q85 62 80 58Q76 71 63 74Q43 78 29 70C21 67 19 62 23 54Z\" fill=\"#e5e6df\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22.2 62C19.2 69 28 69 31 73Q34 76 25.8 78L25.8 79Q29 78 32.1 80Q34.1 82 31.1 82L25 82Q23 80 23.2 77L23.6 78Q28 74 26 70C28 72 35.8 68 35.8 64Z\" fill=\"#e5e6df\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22.2 70C19.2 69 28 69 31 73Q34 76 25.8 78L25.8 79Q29 78 32.1 80Q34.1 82 31.1 82L25 82Q23 80 23.2 77L23.6 78Q28 74 26 70C28 72 35.8 68 35.8 64\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M28.8 80L29.2 81.4M30.6 80L31 81.4\" fill=\"none\" stroke=\"#c7c8c1\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M67 59C66 66 69 70 69.7 73L72.8 79L72.8 80Q76 79 79.1 81Q81.1 83 78.1 83L70.6 83Q70 81 70.2 78L70.2 79L67 72Q67 69 75 61Z\" fill=\"#e5e6df\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 65C66 66 69 70 69.7 73L72.8 79L72.8 80Q76 79 79.1 81Q81.1 83 78.1 83L70.6 83Q70 81 70.2 78L70.2 79L67 72Q67 69 75 61\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M75.8 81L76.2 82.4M77.6 81L78 82.4\" fill=\"none\" stroke=\"#c7c8c1\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-vulpes-lagopus-normal-base-coat\"><path d=\"M23 54C22 42 30 33 45 35Q59 31 70 41Q75 31 83 33Q90 35 91 44Q91 49 96 52Q99 56 92 59Q85 62 80 58Q76 71 63 74Q43 78 29 70C21 67 19 62 23 54Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-vulpes-lagopus-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31 47Q47 40 62 47\" fill=\"none\" stroke=\"#fdfef7\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 60L14 67\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#fdfef7\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#c7c8c1\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
+    "id": "sa_esp_cerdocyon_thous",
+    "name": "Zorro cangrejero",
+    "latin": "Cerdocyon thous",
+    "rarity": "Común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "sa_caribe_sudamericano",
+        "name": "Litoral caribeño sudamericano",
+        "continent": "Sudamérica"
+      },
+      {
+        "id": "sa_cerrado_brasileno",
+        "name": "Cerrado brasileño",
+        "continent": "Sudamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/sa_esp_cerdocyon_thous--normal.webp",
+        "bytes": 63884
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-sa-version=\"3.23.1\" data-sa-polish=\"3231\" data-sa-profile=\"cerdocyon-thous\" data-sa-morphology=\"cerdocyon-thous\" data-zoological-family=\"Canidae\" data-mammal-family=\"Canidae\"><path d=\"M30 57Q28 63 31 68L34 78Q30 83 35 83L41 83L41 81L37 79Q40 69 35 66L37 59Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 56Q64 62 67 67L68 77Q64 82 69 82L75 82L75 80L71 78Q74 68 71 65L73 58Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 58Q11 48 4 68Q10 78 25 74Q34 72 41 64Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M5 67Q10 62 15 63L16 74Q9 76 5 70Z\" fill=\"#e8ddc4\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 52Q28 41 43 43Q60 39 71 46L81 53L78 65Q62 72 40 67Q22 66 24 52Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 48Q44 42 61 46L68 50Q45 48 32 53Z\" fill=\"#bdaf93\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 46Q46 39 65 46L67 52Q47 47 31 54Z\" fill=\"#8b8f7a\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 59Q25 65 28 70L26 80Q22 85 27 85L33 85L33 83L29 81Q32 71 32 68L34 61Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 59Q63 65 66 70L64 80Q60 85 65 85L71 85L71 83L67 81Q70 71 70 68L72 61Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69 44Q70 33 80 32Q88 34 91 43L99 47L97 52L85 56L75 53Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71 37L68 21Q74 19 81 33M84 34L89 19Q95 25 92 43Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M82 46L98 48L97 52L86 55Z\" fill=\"#e8ddc4\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-sa-eye=\"true\"><circle cx=\"85\" cy=\"40\" r=\"1.2\" fill=\"#23352d\"/><circle cx=\"84.7\" cy=\"39.65\" r=\"0.32\" fill=\"#f5ecd5\"/></g><circle cx=\"98\" cy=\"48\" r=\"1.3\" fill=\"#3b5244\"/></svg>"
+  },
+  {
+    "id": "asia_esp_0533",
+    "name": "Zorro corsac",
+    "latin": "Vulpes corsac",
+    "rarity": "Poco común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-04-13",
+        "name": "Mongolia",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-04-14",
+        "name": "Desierto de Gobi",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-04-18",
+        "name": "Estepas de Asia Central",
+        "continent": "Asia"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/asia_esp_0533--normal.webp",
+        "bytes": 52964
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/asia_esp_0533--melanico.webp",
+        "bytes": 35814
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"fox\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M30 51C20 45 11 45 7 52Q1 63 8 73Q12 78 22 76Q30 73 34 65Q26 67 21 63Q17 57 30 59Z\" fill=\"#d9ba90\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#a3845a\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#a3845a\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 21 68 21Q74 22 76 35Z\" fill=\"#c1a278\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 24 71 25L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 23 77 23Q83 24 85 36Z\" fill=\"#c1a278\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 26 80 27L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#c1a278\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#c1a278\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#a3845a\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#c1a278\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#a3845a\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-vulpes-corsac-normal-base-coat\"><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-vulpes-corsac-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 60L14 67\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#d9ba90\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#a3845a\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
+    "id": "sa_esp_lycalopex_culpaeus",
+    "name": "Zorro culpeo",
+    "latin": "Lycalopex culpaeus",
+    "rarity": "Raro",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "sa_andes_centrales",
+        "name": "Andes Centrales",
+        "continent": "Sudamérica"
+      },
+      {
+        "id": "sa_desierto_de_atacama",
+        "name": "Desierto de Atacama",
+        "continent": "Sudamérica"
+      },
+      {
+        "id": "sa_patagonia_y_tierra_del_fuego",
+        "name": "Patagonia y Tierra del Fuego",
+        "continent": "Sudamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/sa_esp_lycalopex_culpaeus--normal.webp",
+        "bytes": 61978
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-sa-version=\"3.23.1\" data-sa-polish=\"3231\" data-sa-profile=\"lycalopex-culpaeus\" data-sa-morphology=\"lycalopex-culpaeus\" data-zoological-family=\"Canidae\" data-mammal-family=\"Canidae\"><path d=\"M30 57Q28 63 31 68L34 78Q30 83 35 83L41 83L41 81L37 79Q40 69 35 66L37 59Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 56Q64 62 67 67L68 77Q64 82 69 82L75 82L75 80L71 78Q74 68 71 65L73 58Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 58Q11 48 4 68Q10 78 25 74Q34 72 41 64Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M5 67Q10 62 15 63L16 74Q9 76 5 70Z\" fill=\"#e8ddc4\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 52Q28 41 43 43Q60 39 71 46L81 53L78 65Q62 72 40 67Q22 66 24 52Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 48Q44 42 61 46L68 50Q45 48 32 53Z\" fill=\"#bdaf93\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 46Q46 39 65 46L67 52Q47 47 31 54Z\" fill=\"#8b8f7a\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 59Q25 65 28 70L26 80Q22 85 27 85L33 85L33 83L29 81Q32 71 32 68L34 61Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 59Q63 65 66 70L64 80Q60 85 65 85L71 85L71 83L67 81Q70 71 70 68L72 61Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69 44Q70 33 80 32Q88 34 91 43L99 47L97 52L85 56L75 53Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71 37L68 21Q74 19 81 33M84 34L89 19Q95 25 92 43Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M82 46L98 48L97 52L86 55Z\" fill=\"#e8ddc4\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-sa-eye=\"true\"><circle cx=\"85\" cy=\"40\" r=\"1.2\" fill=\"#23352d\"/><circle cx=\"84.7\" cy=\"39.65\" r=\"0.32\" fill=\"#f5ecd5\"/></g><circle cx=\"98\" cy=\"48\" r=\"1.3\" fill=\"#3b5244\"/><path d=\"M70 38L78 42L74 53L66 46Z\" fill=\"#b58c69\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "sa_esp_lycalopex_fulvipes",
+    "name": "Zorro de Darwin",
+    "latin": "Lycalopex fulvipes",
+    "rarity": "Muy rara",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "gm06_bosques",
+        "name": "Bosques templados del sur",
+        "continent": "Sudamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/sa_esp_lycalopex_fulvipes--normal.webp",
+        "bytes": 78676
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-sa-version=\"3.23.1\" data-sa-polish=\"3231\" data-sa-profile=\"lycalopex-fulvipes\" data-sa-morphology=\"lycalopex-fulvipes\" data-zoological-family=\"Canidae\" data-mammal-family=\"Canidae\"><path d=\"M30 57Q28 63 31 68L34 78Q30 83 35 83L41 83L41 81L37 79Q40 69 35 66L37 59Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 56Q64 62 67 67L68 77Q64 82 69 82L75 82L75 80L71 78Q74 68 71 65L73 58Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q9 50 4 70Q16 82 35 69L39 62Z\" fill=\"#646e5b\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23 53Q29 40 44 43Q61 39 73 48L80 57L78 67Q64 75 39 68Q21 67 23 53Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 48Q44 42 61 46L68 50Q45 48 32 53Z\" fill=\"#bdaf93\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 46Q46 39 65 46L67 52Q47 47 31 54Z\" fill=\"#646e5b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 59Q25 65 28 70L26 80Q22 85 27 85L33 85L33 83L29 81Q32 71 32 68L34 61Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 59Q63 65 66 70L64 80Q60 85 65 85L71 85L71 83L67 81Q70 71 70 68L72 61Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69 44Q70 33 80 32Q88 34 91 43L99 47L97 52L85 56L75 53Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M72 36Q68 24 75 25L81 34M84 34Q89 23 92 28L92 43Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M82 46L98 48L97 52L86 55Z\" fill=\"#e8ddc4\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-sa-eye=\"true\"><circle cx=\"85\" cy=\"40\" r=\"1.2\" fill=\"#23352d\"/><circle cx=\"84.7\" cy=\"39.65\" r=\"0.32\" fill=\"#f5ecd5\"/></g><circle cx=\"98\" cy=\"48\" r=\"1.3\" fill=\"#3b5244\"/></svg>"
+  },
+  {
+    "id": "sa_esp_atelocynus_microtis",
+    "name": "Zorro de orejas cortas",
+    "latin": "Atelocynus microtis",
+    "rarity": "Raro",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "sa_amazonia",
+        "name": "Amazonía",
+        "continent": "Sudamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/sa_esp_atelocynus_microtis--normal.webp",
+        "bytes": 72390
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-sa-version=\"3.23.1\" data-sa-polish=\"3231\" data-sa-profile=\"atelocynus-microtis\" data-sa-morphology=\"atelocynus-microtis\" data-zoological-family=\"Canidae\" data-mammal-family=\"Canidae\"><path d=\"M30 57Q28 63 31 68L34 78Q30 83 35 83L41 83L41 81L37 79Q40 69 35 66L37 59Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 56Q64 62 67 67L68 77Q64 82 69 82L75 82L75 80L71 78Q74 68 71 65L73 58Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 58Q10 48 6 65Q10 73 24 68L35 63Z\" fill=\"#646e5b\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 52Q28 41 44 43Q62 38 74 47L80 58L78 66Q61 73 39 67Q22 66 22 52Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 48Q44 42 61 46L68 50Q45 48 32 53Z\" fill=\"#bdaf93\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 46Q46 39 65 46L67 52Q47 47 31 54Z\" fill=\"#646e5b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 59Q25 65 28 70L26 80Q22 85 27 85L33 85L33 83L29 81Q32 71 32 68L34 61Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 59Q63 65 66 70L64 80Q60 85 65 85L71 85L71 83L67 81Q70 71 70 68L72 61Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69 45Q69 33 79 34Q87 34 92 44L99 49L97 54L85 57L75 53Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69 45Q64 35 71 34Q78 34 78 43M83 42Q83 34 88 38L90 48Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M82 46L98 48L97 52L86 55Z\" fill=\"#e8ddc4\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-sa-eye=\"true\"><circle cx=\"85\" cy=\"40\" r=\"1.2\" fill=\"#23352d\"/><circle cx=\"84.7\" cy=\"39.65\" r=\"0.32\" fill=\"#f5ecd5\"/></g><circle cx=\"98\" cy=\"48\" r=\"1.3\" fill=\"#3b5244\"/></svg>"
+  },
+  {
+    "id": "af_zorro_ruppell",
+    "name": "Zorro de Rüppell",
+    "latin": "Vulpes rueppellii",
+    "rarity": "Poco común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-03-17",
+        "name": "Península Arábiga",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-06-08",
+        "name": "Montañas del Atlas",
+        "continent": "África"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/af_zorro_ruppell--normal.webp",
+        "bytes": 49520
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/af_zorro_ruppell--melanico.webp",
+        "bytes": 36210
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"fox\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M30 51C20 45 11 45 7 52Q1 63 8 73Q12 78 22 76Q30 73 34 65Q26 67 21 63Q17 57 30 59Z\" fill=\"#efcfa3\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#b9996d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#b9996d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 17 68 17Q74 18 76 35Z\" fill=\"#d7b78b\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 20 71 21L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 19 77 19Q83 20 85 36Z\" fill=\"#d7b78b\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 22 80 23L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#d7b78b\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#d7b78b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#b9996d\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#d7b78b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#b9996d\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-vulpes-rueppellii-normal-base-coat\"><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-vulpes-rueppellii-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 60L14 67\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#efcfa3\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#b9996d\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
+    "id": "af_zorro_cabo",
+    "name": "Zorro del Cabo",
+    "latin": "Vulpes chama",
+    "rarity": "Común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-11-08",
+        "name": "Desierto del Namib",
+        "continent": "África"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/af_zorro_cabo--normal.webp",
+        "bytes": 60492
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/af_zorro_cabo--melanico.webp",
+        "bytes": 39184
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"fox\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M30 51C20 45 11 45 7 52Q1 63 8 73Q12 78 22 76Q30 73 34 65Q26 67 21 63Q17 57 30 59Z\" fill=\"#c1b08d\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#8b7a57\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#8b7a57\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 22 68 22Q74 23 76 35Z\" fill=\"#a99875\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 25 71 26L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 24 77 24Q83 25 85 36Z\" fill=\"#a99875\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 27 80 28L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M23 53C24.95 42 34.68 38 48.32 42Q59.03 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 95.18 48Q98 50 95.18 53Q90.64 56 82 54Q78 53 76 50Q73 61 61 65.7Q45.39 70.17 29.82 66C22 64 20 59 23 53Z\" fill=\"#a99875\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#a99875\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#8b7a57\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#a99875\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#8b7a57\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-vulpes-chama-normal-base-coat\"><path d=\"M23 53C24.95 42 34.68 38 48.32 42Q59.03 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 95.18 48Q98 50 95.18 53Q90.64 56 82 54Q78 53 76 50Q73 61 61 65.7Q45.39 70.17 29.82 66C22 64 20 59 23 53Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-vulpes-chama-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 60L14 67\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#c1b08d\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#8b7a57\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
+    "id": "na_esp_urocyon_cinereoargenteus",
+    "name": "Zorro gris",
+    "latin": "Urocyon cinereoargenteus",
+    "rarity": "Raro",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-03-04",
+        "name": "Bosques del este norteamericano",
+        "continent": "Norteamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/na_esp_urocyon_cinereoargenteus--normal.webp",
+        "bytes": 75514
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-na-version=\"3.22.1\" data-na-profile=\"urocyon-cinereoargenteus\" data-na-polish=\"AM-03\" data-zoological-family=\"Canidae\" data-mammal-family=\"Canidae\"><path d=\"M34 56Q32 65 39 72L38 78Q39 81 46 80L46 77L43 76Q45 66 41 58Z\" fill=\"#7d8275\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 54Q63 63 68 70L67 76Q68 79 75 78L75 75L72 74Q74 64 72 56Z\" fill=\"#7d8275\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31 57Q15 51 7 68Q12 78 32 70L41 62Z\" fill=\"#92978a\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 53Q28 41 44 44Q60 40 72 47L80 51L80 64Q64 72 39 67Q23 67 25 53Z\" fill=\"#92978a\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"45\" cy=\"53\" rx=\"10\" ry=\"3\" fill=\"#a5aa9d\" opacity=\".45\"/><path d=\"M29 45Q51 38 70 46L69 53Q46 49 31 55Z\" fill=\"#7d8275\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 57Q28 66 30 73L29 79Q30 82 37 81L37 78L34 77Q36 67 37 59Z\" fill=\"#92978a\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 57Q63 66 64 73L63 79Q64 82 71 81L71 78L68 77Q70 67 72 59Z\" fill=\"#92978a\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69 45Q70 32 80 32Q88 33 91 42L99 48L97 52L86 55L78 59L69 53Z\" fill=\"#92978a\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71 37Q68 23 74 25L81 33M84 34L91 24L92 43Z\" fill=\"#92978a\" stroke=\"#3b5144\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M81 47L96 48L96 52L86 55L79 52Z\" fill=\"#e5dbc0\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-na3221-eye=\"true\"><circle cx=\"85\" cy=\"42\" r=\"1.35\" fill=\"#23352d\"/><circle cx=\"85.35\" cy=\"41.6\" r=\"0.35\" fill=\"#f5eed8\"/></g><circle cx=\"98\" cy=\"49\" r=\"1.6\" fill=\"#3b5144\"/><path d=\"M89 53l4 3m-6-2-2 3\" fill=\"none\" stroke=\"#535e52\" stroke-width=\"0.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M78 52Q83 55 86 55L77 64L69 57Z\" fill=\"#e5dbc0\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M10 66Q18 57 30 60\" fill=\"none\" stroke=\"#535e52\" stroke-width=\"3.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62L35 70L31 78L27 78L28 68Z\" fill=\"#b38d6c\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "na_esp_vulpes_macrotis",
+    "name": "Zorro kit",
+    "latin": "Vulpes macrotis",
+    "rarity": "Raro",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-03-05",
+        "name": "Desierto de Sonora",
+        "continent": "Norteamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/na_esp_vulpes_macrotis--normal.webp",
+        "bytes": 50886
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-na-version=\"3.22.1\" data-na-profile=\"vulpes-macrotis\" data-na-polish=\"AM-03\" data-zoological-family=\"Canidae\" data-mammal-family=\"Canidae\"><path d=\"M34 56Q32 65 39 72L38 78Q39 81 46 80L46 77L43 76Q45 66 41 58Z\" fill=\"#a39879\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 54Q63 63 68 70L67 76Q68 79 75 78L75 75L72 74Q74 64 72 56Z\" fill=\"#a39879\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31 57Q15 51 7 68Q12 78 32 70L41 62Z\" fill=\"#b8ad8e\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 53Q28 41 44 44Q60 40 72 47L80 51L80 64Q64 72 39 67Q23 67 25 53Z\" fill=\"#b8ad8e\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"45\" cy=\"53\" rx=\"10\" ry=\"3\" fill=\"#cbc0a1\" opacity=\".45\"/><path d=\"M29 45Q51 38 70 46L69 53Q46 49 31 55Z\" fill=\"#a39879\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 57Q28 66 30 73L29 79Q30 82 37 81L37 78L34 77Q36 67 37 59Z\" fill=\"#b8ad8e\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 57Q63 66 64 73L63 79Q64 82 71 81L71 78L68 77Q70 67 72 59Z\" fill=\"#b8ad8e\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69 45Q70 32 80 32Q88 33 91 42L99 48L97 52L86 55L78 59L69 53Z\" fill=\"#b8ad8e\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71 36Q65 14 72 13Q82 18 81 34M83 35Q86 11 91 16L93 41Z\" fill=\"#b8ad8e\" stroke=\"#3b5144\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M81 47L96 48L96 52L86 55L79 52Z\" fill=\"#eae0c4\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-na3221-eye=\"true\"><circle cx=\"85\" cy=\"42\" r=\"1.35\" fill=\"#23352d\"/><circle cx=\"85.35\" cy=\"41.6\" r=\"0.35\" fill=\"#f5eed8\"/></g><circle cx=\"98\" cy=\"49\" r=\"1.6\" fill=\"#3b5144\"/><path d=\"M89 53l4 3m-6-2-2 3\" fill=\"none\" stroke=\"#807f67\" stroke-width=\"0.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M78 52Q83 55 86 55L77 64L69 57Z\" fill=\"#eae0c4\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "af_xlsx_131_otocyon_megalotis",
+    "name": "Zorro orejudo",
+    "latin": "Otocyon megalotis",
+    "rarity": "Común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-10-10",
+        "name": "Kalahari y sabana austral",
+        "continent": "África"
+      },
+      {
+        "id": "HX-11-08",
+        "name": "Desierto del Namib",
+        "continent": "África"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/af_xlsx_131_otocyon_megalotis--normal.webp",
+        "bytes": 63916
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/af_xlsx_131_otocyon_megalotis--albino.webp",
+        "bytes": 32054
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"fox\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M30 51C20 45 11 45 7 52Q1 63 8 73Q12 78 22 76Q30 73 34 65Q26 67 21 63Q17 57 30 59Z\" fill=\"#cfbc9c\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#998666\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#998666\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 13 68 13Q74 14 76 35Z\" fill=\"#b7a484\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 16 71 17L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 15 77 15Q83 16 85 36Z\" fill=\"#b7a484\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 18 80 19L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#b7a484\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#b7a484\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#998666\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#b7a484\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#998666\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-otocyon-megalotis-normal-base-coat\"><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-otocyon-megalotis-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 60L14 67\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#cfbc9c\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#998666\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
+    "id": "af_zorro_palido",
+    "name": "Zorro pálido",
+    "latin": "Vulpes pallida",
+    "rarity": "Poco común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-07-08",
+        "name": "Sahel occidental",
+        "continent": "África"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/af_zorro_palido--normal.webp",
+        "bytes": 48742
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/af_zorro_palido--albino.webp",
+        "bytes": 25848
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/af_zorro_palido--melanico.webp",
+        "bytes": 33906
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"fox\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M30 51C20 45 11 45 7 52Q1 63 8 73Q12 78 22 76Q30 73 34 65Q26 67 21 63Q17 57 30 59Z\" fill=\"#e8c58f\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#b28f59\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#b28f59\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 18 68 18Q74 19 76 35Z\" fill=\"#d0ad77\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 21 71 22L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 20 77 20Q83 21 85 36Z\" fill=\"#d0ad77\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 23 80 24L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#d0ad77\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#d0ad77\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#b28f59\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#d0ad77\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#b28f59\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-vulpes-pallida-normal-base-coat\"><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-vulpes-pallida-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 60L14 67\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#e8c58f\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#b28f59\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
+    "id": "sa_esp_lycalopex_gymnocercus",
+    "name": "Zorro pampeano",
+    "latin": "Lycalopex gymnocercus",
+    "rarity": "Común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "sa_pampas",
+        "name": "Pampas",
+        "continent": "Sudamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/sa_esp_lycalopex_gymnocercus--normal.webp",
+        "bytes": 58206
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-sa-version=\"3.23.1\" data-sa-polish=\"3231\" data-sa-profile=\"lycalopex-gymnocercus\" data-sa-morphology=\"lycalopex-gymnocercus\" data-zoological-family=\"Canidae\" data-mammal-family=\"Canidae\"><path d=\"M30 57Q28 63 31 68L34 78Q30 83 35 83L41 83L41 81L37 79Q40 69 35 66L37 59Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 56Q64 62 67 67L68 77Q64 82 69 82L75 82L75 80L71 78Q74 68 71 65L73 58Z\" fill=\"#97896d\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 58Q11 48 4 68Q10 78 25 74Q34 72 41 64Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M5 67Q10 62 15 63L16 74Q9 76 5 70Z\" fill=\"#646e5b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 52Q28 41 43 43Q60 39 71 46L81 53L78 65Q62 72 40 67Q22 66 24 52Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 48Q44 42 61 46L68 50Q45 48 32 53Z\" fill=\"#bdaf93\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 46Q46 39 65 46L67 52Q47 47 31 54Z\" fill=\"#8b8f7a\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 59Q25 65 28 70L26 80Q22 85 27 85L33 85L33 83L29 81Q32 71 32 68L34 61Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 59Q63 65 66 70L64 80Q60 85 65 85L71 85L71 83L67 81Q70 71 70 68L72 61Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69 44Q70 33 80 32Q88 34 91 43L99 47L97 52L85 56L75 53Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71 37L68 21Q74 19 81 33M84 34L89 19Q95 25 92 43Z\" fill=\"#ac9e82\" stroke=\"#3b5244\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M82 46L98 48L97 52L86 55Z\" fill=\"#e8ddc4\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-sa-eye=\"true\"><circle cx=\"85\" cy=\"40\" r=\"1.2\" fill=\"#23352d\"/><circle cx=\"84.7\" cy=\"39.65\" r=\"0.32\" fill=\"#f5ecd5\"/></g><circle cx=\"98\" cy=\"48\" r=\"1.3\" fill=\"#3b5244\"/></svg>"
+  },
+  {
+    "id": "zorro_rojo",
+    "name": "Zorro rojo",
+    "latin": "Vulpes vulpes",
+    "rarity": "Común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-01-09",
+        "name": "Islas Británicas",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-02-10",
+        "name": "Europa Occidental",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-03-09",
+        "name": "Europa Oriental",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-03-10",
+        "name": "Península Itálica",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-02-15",
+        "name": "Montes Urales",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-03-18",
+        "name": "Kamchatka",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-04-12",
+        "name": "Mesopotamia",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-05-15",
+        "name": "China Septentrional",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-06-16",
+        "name": "Península de Corea",
+        "continent": "Asia"
+      },
+      {
+        "id": "HX-06-09",
+        "name": "Magreb",
+        "continent": "África"
+      },
+      {
+        "id": "HX-01-05",
+        "name": "Alaska",
+        "continent": "Norteamérica"
+      },
+      {
+        "id": "HX-03-03",
+        "name": "Costa del Pacífico",
+        "continent": "Norteamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable",
+      "Épico",
+      "Excepcional",
+      "Legendario"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/zorro_rojo--normal.webp",
+        "bytes": 64724
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/zorro_rojo--albino.webp",
+        "bytes": 36212
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/zorro_rojo--melanico.webp",
+        "bytes": 44736
+      },
+      {
+        "key": "legendario",
+        "label": "Ascua",
+        "src": "plates/zorro_rojo--ascua.webp",
+        "bytes": 54978
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"fox\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M30 51C20 45 11 45 7 52Q1 63 8 73Q12 78 22 76Q30 73 34 65Q26 67 21 63Q17 57 30 59Z\" fill=\"#d59461\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#9f5e2b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#9f5e2b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 23 68 23Q74 24 76 35Z\" fill=\"#bd7c49\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 26 71 27L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 25 77 25Q83 26 85 36Z\" fill=\"#bd7c49\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 28 80 29L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#bd7c49\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#bd7c49\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#9f5e2b\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#bd7c49\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#9f5e2b\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-vulpes-vulpes-normal-base-coat\"><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-vulpes-vulpes-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 60L14 67\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#d59461\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#9f5e2b\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  },
+  {
+    "id": "asia_esp_0534",
+    "name": "Zorro tibetano",
+    "latin": "Vulpes ferrilata",
+    "rarity": "Común",
+    "group": "Cánidos",
+    "family": "Canidae",
+    "dimorphism": false,
+    "regions": [
+      {
+        "id": "HX-04-17",
+        "name": "Meseta del Tíbet",
+        "continent": "Asia"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/asia_esp_0534--normal.webp",
+        "bytes": 63068
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/asia_esp_0534--melanico.webp",
+        "bytes": 42856
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"fox\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M30 51C20 45 11 45 7 52Q1 63 8 73Q12 78 22 76Q30 73 34 65Q26 67 21 63Q17 57 30 59Z\" fill=\"#c9a27d\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#936c47\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#936c47\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 27 68 27Q74 28 76 35Z\" fill=\"#b18a65\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 30 71 31L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 29 77 29Q83 30 85 36Z\" fill=\"#b18a65\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 32 80 33L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#b18a65\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#b18a65\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#936c47\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#b18a65\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#936c47\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M75 39L87 40L93 49L87 55L77 53L71 47Z\" fill=\"#c9a27d\" stroke=\"#47483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><defs><clipPath id=\"m3194-vulpes-ferrilata-normal-base-coat\"><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-vulpes-ferrilata-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 60L14 67\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#c9a27d\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#936c47\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
+  }
+];
+const mixedFieldSprites = [
+  {
+    "id": "ciervo_rojo",
+    "name": "Ciervo rojo",
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"deer\" data-mammal-morph=\"deer\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M25 49Q16 47 12 52Q13 57 23 57L29 54Z\" fill=\"#bf8353\" stroke=\"#47483f\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32.1972 57C29.197200000000002 64 35 67 38 71Q41 74 35.5 83L35.5 83Q38 82 39.8 84Q41.8 86 38.8 86L34 86Q32 84 32.9 81L33.3 83Q35 72 34.844 68C34 67 37.8028 63 37.8028 59Z\" fill=\"#894d1d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32.1972 65C29.197200000000002 64 35 67 38 71Q41 74 35.5 83L35.5 83Q38 82 39.8 84Q41.8 86 38.8 86L34 86Q32 84 32.9 81L33.3 83Q35 72 34.844 68C34 67 37.8028 63 37.8028 59\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33.3 83Q38 82 39.8 84L39.3 86L33.3 86Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M37.2 84L36.8 86\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M74.0288 53C73.0288 60 72 69 72.7 72L74.5 84L74.5 84Q77 83 78.8 85Q80.8 87 77.8 87L72.3 87Q71 85 71.9 82L71.9 84L70 71Q72 63 77.9712 55Z\" fill=\"#894d1d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M74.0288 59C73.0288 60 72 69 72.7 72L74.5 84L74.5 84Q77 83 78.8 85Q80.8 87 77.8 87L72.3 87Q71 85 71.9 82L71.9 84L70 71Q72 63 77.9712 55\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M72.3 84Q77 83 78.8 85L78.3 87L72.3 87Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M76.2 85L75.8 87\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M74 28L69 13L63 7M70 18L61 15M69 13L72 6M82 28L86 13L91 7M86 17L94 15M86 13L83 6\" fill=\"none\" stroke=\"#a39881\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 35Q61 25 67 25Q73 26 75 35Z\" fill=\"#a76b3b\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M68 33Q65 28 70 29L72 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M75 36Q70 27 76 27Q82 28 84 36Z\" fill=\"#a76b3b\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M77 34Q74 30 79 31L81 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M19 48C20 37 31.26 33 48.71 39.3Q57.95 40.6 64 37.8Q68 30.93 69 25.97Q71 19 78 22Q85 25 86 34Q87 39 94 41Q98 44 95 48Q90 53 81 47Q77 51 75 60Q72 68 61 70.3Q44.61 73.83 27.16 69C19 67 16 61 19 48Z\" fill=\"#a76b3b\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26.36 57C23.36 64 34 67 37 71Q40 74 27.5 83L27.5 86Q30 85 31.8 87Q33.8 89 30.8 89L26 89Q24 87 24.9 84L25.3 83Q34 72 33.2 68C29 67 33.64 63 33.64 59Z\" fill=\"#a76b3b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26.36 65C23.36 64 34 67 37 71Q40 74 27.5 83L27.5 86Q30 85 31.8 87Q33.8 89 30.8 89L26 89Q24 87 24.9 84L25.3 83Q34 72 33.2 68C29 67 33.64 63 33.64 59\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25.3 86Q30 85 31.8 87L31.3 89L25.3 89Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.2 87L28.8 89\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M68.44 53C67.44 60 65 69 65.7 72L70.5 84L70.5 87Q73 86 74.8 88Q76.8 90 73.8 90L68.3 90Q67 88 67.9 85L67.9 84L63 71Q67 63 73.56 55Z\" fill=\"#a76b3b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68.44 59C67.44 60 65 69 65.7 72L70.5 84L70.5 87Q73 86 74.8 88Q76.8 90 73.8 90L68.3 90Q67 88 67.9 85L67.9 84L63 71Q67 63 73.56 55\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68.3 87Q73 86 74.8 88L74.3 90L68.3 90Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.2 88L71.8 90\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-cervus-elaphus-normal-base-coat\"><path d=\"M19 48C20 37 31.26 33 48.71 39.3Q57.95 40.6 64 37.8Q68 30.93 69 25.97Q71 19 78 22Q85 25 86 34Q87 39 94 41Q98 44 95 48Q90 53 81 47Q77 51 75 60Q72 68 61 70.3Q44.61 73.83 27.16 69C19 67 16 61 19 48Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-cervus-elaphus-normal-base-coat)\"><path d=\"M27 61Q48 68 69 56L65 66L45 70L28 67Z\" fill=\"#bf8353\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"83\" cy=\"34\" r=\"1.82\" fill=\"#bf8353\"/><circle cx=\"83\" cy=\"34\" r=\"1.5\" fill=\"#302e26\"/><circle cx=\"83.45\" cy=\"33.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M86 47Q90 50 93 47\" fill=\"none\" stroke=\"#894d1d\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
+  },
+  {
+    "id": "jabali",
+    "name": "Jabalí",
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"pig\" data-mammal-morph=\"pig\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M27 58Q11 57 7 73Q7 79 12 76Q17 67 31 65Z\" fill=\"#53351e\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28.03504 58C25.03504 65 31 69 34 73Q37 76 35.5 84L35.5 83Q38 82 39.8 84Q41.8 86 38.8 86L34 86Q32 84 32.9 81L33.3 84Q31 74 29.180799999999998 70C32 68 37.96496 64 37.96496 60Z\" fill=\"#53351e\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28.03504 66C25.03504 65 31 69 34 73Q37 76 35.5 84L35.5 83Q38 82 39.8 84Q41.8 86 38.8 86L34 86Q32 84 32.9 81L33.3 84Q31 74 29.180799999999998 70C32 68 37.96496 64 37.96496 60\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33.3 83Q38 82 39.8 84L39.3 86L33.3 86Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M37.2 84L36.8 86\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M73.1192 55C72.1192 62 75 71 75.7 74L77.5 84L77.5 83Q80 82 81.8 84Q83.8 86 80.8 86L75.3 86Q74 84 74.9 81L74.9 84L73 73Q73 65 80.8808 57Z\" fill=\"#53351e\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73.1192 61C72.1192 62 75 71 75.7 74L77.5 84L77.5 83Q80 82 81.8 84Q83.8 86 80.8 86L75.3 86Q74 84 74.9 81L74.9 84L73 73Q73 65 80.8808 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M75.3 83Q80 82 81.8 84L81.3 86L75.3 86Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M79.2 84L78.8 86\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M72 45Q67 38 73 38Q79 39 81 45Z\" fill=\"#71533c\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M74 43Q71 41 76 42L78 43Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M81 46Q76 40 82 40Q88 41 90 46Z\" fill=\"#71533c\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M83 44Q80 43 85 44L87 44Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M20 52Q24 37 45 36Q62 31 73 43L79.12 36.88Q80 36 81.22 35.73Q89 34 92 45L97.19 51.05Q98 52 97.89 53.24L97.11 61.76Q97 63 95.79 63.3L86.21 65.7Q85 66 83.98 65.28L76.02 59.72Q75 59 74.5 60.15Q68 75 46 74L28.19 68.38Q27 68 25.93 67.36Q17 62 20 52Z\" fill=\"#71533c\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21.552 58C18.552 65 30 69 33 73Q36 76 27.5 84L27.5 86Q30 85 31.8 87Q33.8 89 30.8 89L26 89Q24 87 24.9 84L25.3 84Q30 74 27.04 70C27 68 34.448 64 34.448 60Z\" fill=\"#71533c\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21.552 66C18.552 65 30 69 33 73Q36 76 27.5 84L27.5 86Q30 85 31.8 87Q33.8 89 30.8 89L26 89Q24 87 24.9 84L25.3 84Q30 74 27.04 70C27 68 34.448 64 34.448 60\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25.3 86Q30 85 31.8 87L31.3 89L25.3 89Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.2 87L28.8 89\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M66.96 55C65.96 62 68 71 68.7 74L73.5 84L73.5 86Q76 85 77.8 87Q79.8 89 76.8 89L71.3 89Q70 87 70.9 84L70.9 84L66 73Q68 65 77.04 57Z\" fill=\"#71533c\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66.96 61C65.96 62 68 71 68.7 74L73.5 84L73.5 86Q76 85 77.8 87Q79.8 89 76.8 89L71.3 89Q70 87 70.9 84L70.9 84L66 73Q68 65 77.04 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.3 86Q76 85 77.8 87L77.3 89L71.3 89Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M75.2 87L74.8 89\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M28 37L32 30L36 35L42 28L46 34L53 29L61 35Z\" fill=\"#53351e\" stroke=\"#47483f\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 59Q92 63 94 54Q98 66 88 67Z\" fill=\"#e9e0cd\" stroke=\"#47483f\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><defs><clipPath id=\"m3194-sus-scrofa-normal-base-coat\"><path d=\"M20 52Q24 37 45 36Q62 31 73 43L79.12 36.88Q80 36 81.22 35.73Q89 34 92 45L97.19 51.05Q98 52 97.89 53.24L97.11 61.76Q97 63 95.79 63.3L86.21 65.7Q85 66 83.98 65.28L76.02 59.72Q75 59 74.5 60.15Q68 75 46 74L28.19 68.38Q27 68 25.93 67.36Q17 62 20 52Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-sus-scrofa-normal-base-coat)\"><path d=\"M86 47L96 51L97 61L89 64L84 58Z\" fill=\"#896b54\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"94\" cy=\"54\" r=\"1.3\" fill=\"#53351e\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"84\" cy=\"44\" r=\"1.82\" fill=\"#896b54\"/><circle cx=\"84\" cy=\"44\" r=\"1.5\" fill=\"#302e26\"/><circle cx=\"84.45\" cy=\"43.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#53351e\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
+  },
+  {
+    "id": "oso_pardo",
+    "name": "Oso pardo",
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"bear\" data-mammal-morph=\"bear\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M23.910304 58C20.910304 65 31 69 34 73Q37 76 34.3 84L34.3 83Q38 82 42.8 84Q44.8 86 41.8 86L34 86Q32 84 31.699999999999996 81L32.099999999999994 84Q31 74 27.65312 70C32 68 42.089696 64 42.089696 60Z\" fill=\"#5f3a22\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.910304 66C20.910304 65 31 69 34 73Q37 76 34.3 84L34.3 83Q38 82 42.8 84Q44.8 86 41.8 86L34 86Q32 84 31.699999999999996 81L32.099999999999994 84Q31 74 27.65312 70C32 68 42.089696 64 42.089696 60\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.56688 55C70.56688 62 75 71 75.7 74L76.3 84L76.3 83Q80 82 84.8 84Q86.8 86 83.8 86L74.1 86Q74 84 73.7 81L73.7 84L73 73Q73 65 82.43312 57Z\" fill=\"#5f3a22\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.56688 61C70.56688 62 75 71 75.7 74L76.3 84L76.3 83Q80 82 84.8 84Q86.8 86 83.8 86L74.1 86Q74 84 73.7 81L73.7 84L73 73Q73 65 82.43312 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M17 48C18 34 26 27 39 27Q48 17 59 24Q65 27 73 30Q77 24 84 27Q90 31 89 41Q91 45 97 47Q99 52 96 56Q91 61 86 59Q81 57 76 53Q72 64 64 70Q53 79 40 75Q28 74 23 68C16 63 14 57 17 48Z\" fill=\"#7d5840\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16.1952 58C13.1952 65 30 69 33 73Q36 76 26.3 84L26.3 86Q30 85 34.8 87Q36.8 89 33.8 89L26 89Q24 87 23.7 84L24.1 84Q30 74 25.055999999999997 70C27 68 39.8048 64 39.8048 60Z\" fill=\"#7d5840\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16.1952 66C13.1952 65 30 69 33 73Q36 76 26.3 84L26.3 86Q30 85 34.8 87Q36.8 89 33.8 89L26 89Q24 87 23.7 84L24.1 84Q30 74 25.055999999999997 70C27 68 39.8048 64 39.8048 60\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#5f3a22\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M64.944 55C63.944 62 68 71 68.7 74L72.3 84L72.3 86Q76 85 80.8 87Q82.8 89 79.8 89L70.1 89Q70 87 69.7 84L69.7 84L66 73Q68 65 79.056 57Z\" fill=\"#7d5840\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64.944 61C63.944 62 68 71 68.7 74L72.3 84L72.3 86Q76 85 80.8 87Q82.8 89 79.8 89L70.1 89Q70 87 69.7 84L69.7 84L66 73Q68 65 79.056 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M75.8 87L76.2 88.4M77.6 87L78 88.4\" fill=\"none\" stroke=\"#5f3a22\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M72 34C67 25 82 22 81 34Z\" fill=\"#7d5840\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M74 32Q71 28 76 29L78 32Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M81 34C76 26 91 23 90 34Z\" fill=\"#7d5840\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M83 32Q80 29 85 30L87 32Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><path d=\"M83 43L96 47L97 54L88 59L81 52Z\" fill=\"#957058\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"85\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#957058\"/><circle cx=\"85\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"85.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><circle cx=\"96\" cy=\"49\" r=\"2\" fill=\"#39382f\"/><path d=\"M88 55L95 56\" fill=\"none\" stroke=\"#5f3a22\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
   }
 ];

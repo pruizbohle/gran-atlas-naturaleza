@@ -43,12 +43,32 @@ const server = http.createServer((req, res) => {
         assert.match(await page.locator(selector + ' .notable img').getAttribute('src'), /--albino\.webp$/);
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), viewport.width);
       }
+      await page.locator('#group').selectOption('Cánidos');
+      await page.locator('[data-mode=mixed]').click();
+      await page.locator('#species').selectOption('zorro_rojo');
+      await page.locator('#category').selectOption('Notable');
+      await page.locator('.mixed-field img').evaluate(img => img.decode());
+      assert.equal(await page.locator('.mixed-field .field-animal-sprite > svg').count(), 1);
+      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Ciervo rojo · SVG/);
+      const art = page.locator('.mixed-field .plate');
+      const src = await art.locator('img').getAttribute('src');
+      const shadows = [];
+      for (const style of ['classic','outline','bare']) {
+        await page.locator('#frame-style').selectOption(style);
+        assert.equal(await art.locator('img').getAttribute('src'), src);
+        shadows.push(await art.evaluate(node => getComputedStyle(node).boxShadow));
+      }
+      assert.equal(new Set(shadows).size, 3);
+      await page.locator('#frame-style').selectOption('classic');
+      await page.locator('#group').selectOption('');
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 63);
+      assert.equal(await page.locator('.gallery-card').count(), 91);
       await page.locator('#group').selectOption('Felinos');
       assert.equal(await page.locator('.gallery-card').count(), 31);
+      await page.locator('#group').selectOption('Cánidos');
+      assert.equal(await page.locator('.gallery-card').count(), 28);
       await page.locator('#group').selectOption('Monotremas');
       assert.equal(await page.locator('.gallery-card').count(), 3);
       await page.locator('#group').selectOption('');
@@ -68,11 +88,11 @@ const server = http.createServer((req, res) => {
       await page.locator('#species').selectOption('na_esp_didelphis_virginiana');
       assert.deepEqual(await page.locator('figcaption').allTextContents(), ['Normal', 'Albino']);
       await page.locator('[data-mode=scale]').click();
-      assert.equal(await page.locator('.sample').count(), 6);
-      assert.deepEqual(await page.locator('.sample:not(.full) .plate').evaluateAll(nodes => nodes.map(el => el.offsetWidth)), [32,48,64,96,128]);
+      assert.equal(await page.locator('.sample').count(), 7);
+      assert.deepEqual(await page.locator('.sample:not(.full) .plate').evaluateAll(nodes => nodes.map(el => el.offsetWidth)), [32,48,64,96,128,256]);
       for (const view of ['Campo','Bestiario','Cuaderno','Museo']) {
         await page.locator('#context').selectOption(view);
-        assert.equal(await page.locator('.sample[data-context="'+view+'"]').count(), 6);
+        assert.equal(await page.locator('.sample[data-context="'+view+'"]').count(), 7);
       }
       await page.locator('[data-mode=review]').click();
       await page.locator('#review-status').selectOption('Requiere ajustes');
@@ -81,17 +101,17 @@ const server = http.createServer((req, res) => {
       await page.locator('#export').click();
       const download = await pending;
       const data = JSON.parse(fs.readFileSync(await download.path(), 'utf8'));
-      assert.equal(data.results.length, 100);
+      assert.equal(data.results.length, 153);
       assert.equal(data.results.find(r => r.note === 'Revisar hocico y cola.').status, 'Requiere ajustes');
       assert.deepEqual(await page.evaluate(() => Object.keys(localStorage)), ['gran-atlas-naturalist-art-review-v1']);
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 63);
+      assert.equal(await page.locator('.gallery-card').count(), 91);
       const first = page.locator('.gallery-card img').first();
       await first.scrollIntoViewIfNeeded();
       await first.evaluate(image => image.decode());
-      assert.equal(await first.evaluate(image => image.naturalWidth), 512);
+      assert.equal(await first.evaluate(image => image.naturalWidth), 256);
       await page.locator('[data-mode=review]').click();
       await page.locator('#species').selectOption('na_esp_didelphis_virginiana');
       assert.equal(await page.locator('#review-note').inputValue(), 'Revisar hocico y cola.');
@@ -110,7 +130,7 @@ const server = http.createServer((req, res) => {
       assert.ok(plates.every(([width, height]) => width === 512 && height === 512));
       assert.deepEqual(errors, []);
       await session.close();
-      console.log('PASS', viewport.width, 'px: diez modos, revisión, exportación y recarga offline; primera lámina', firstRender, 'ms');
+      console.log('PASS', viewport.width, 'px: once modos, revisión, exportación y recarga offline; primera lámina', firstRender, 'ms');
     }
   } finally { await browser.close(); server.close(); }
 })().catch(error => { console.error(error); server.close(); process.exitCode = 1; });

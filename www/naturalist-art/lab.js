@@ -8,9 +8,10 @@ const group = byId('group');
 const context = byId('context');
 const scalePlate = byId('scale-plate');
 const category = byId('category');
+const mixedSvg = byId('mixed-svg');
 const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
-  field: 'Campo', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
+  field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
   gallery: 'Galería', variants: 'Variantes', frames: 'Ejemplares especiales',
   compare: 'Comparación', scale: 'Escala real', review: 'Revisión artística'
 };
@@ -23,7 +24,7 @@ const text = value => String(value).replace(/[&<>"']/g, c => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
 })[c]);
 const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-const previews = ['field', 'journal', 'bestiary', 'museum'];
+const previews = ['field', 'mixed', 'journal', 'bestiary', 'museum'];
 let mode = 'field';
 let reviewKey = 'normal';
 let review = {};
@@ -33,11 +34,13 @@ try {
   byId('status').textContent = 'No se pudo recuperar la revisión local.';
 }
 for (const sp of catalog) species.add(new Option(sp.name, sp.id));
+for (const sp of mixedFieldSprites) mixedSvg.add(new Option(sp.name, sp.id));
 
-function illustration(sp, record, frame = 'Normal') {
+function illustration(sp, record, frame = 'Normal', resolution = 512, eager = false) {
+  const src = resolution === 512 ? record.src : record.src?.replace('plates/', 'plates/' + resolution + '/');
   const label = text(sp.name + ' · ' + record.label);
-  return AtlasNaturalistArt.frame(record.src
-    ? '<img src="' + text(record.src) + '" width="512" height="512" loading="lazy" decoding="async" alt="' + label + '">'
+  return AtlasNaturalistArt.frame(src
+    ? '<img src="' + text(src) + '" width="' + resolution + '" height="' + resolution + '" loading="' + (eager ? 'eager' : 'lazy') + '" decoding="async" alt="' + label + '">'
     : '<span>Lámina pendiente</span>', frame, 'plate');
 }
 
@@ -51,7 +54,7 @@ function gallery() {
   byId('summary').textContent = shown.length + ' de ' + catalog.length + ' especies';
   return shown.length ? '<div class="grid gallery">' + shown.map(sp =>
     '<button type="button" class="gallery-card" data-species="' + text(sp.id) + '">' +
-    illustration(sp, sp.records[0]) + '<span class="card-title">' + text(sp.name) + '</span><span class="latin">' +
+    illustration(sp, sp.records[0], 'Normal', 256) + '<span class="card-title">' + text(sp.name) + '</span><span class="latin">' +
     text(sp.latin) + '</span></button>').join('') + '</div>' : '<p>No se encontraron especies.</p>';
 }
 
@@ -80,12 +83,23 @@ function gamePreview(sp) {
   selectOptions(category, sp.categories.map(frame => [frame, frame]));
   const frame = category.value;
   const record = selectedPlate(sp, frame);
-  const art = illustration(sp, record, frame);
+  const compact = mode === 'field' || mode === 'mixed';
+  const art = illustration(sp, record, frame, compact ? 128 : mode === 'journal' ? 256 : 512, compact);
   const title = '<h3>' + text(sp.name) + '</h3>';
   const latin = '<p class="latin">' + text(sp.latin) + '</p>';
   const occurrence = '<span class="specimen-label ' + frames[frame] + '">' + text(frame) + '</span>';
   const variant = '<p>Variante: ' + text(record.label) + '</p>';
   const zone = sp.regions[0];
+  if (mode === 'mixed') {
+    const companion = mixedFieldSprites.find(item => item.id === mixedSvg.value);
+    const entries = [
+      { name: sp.name, image: record.src ? art : sp.sprite, amount: 2, category: frame === 'Normal' ? '' : frame },
+      { name: companion.name, image: companion.sprite, amount: 1 }
+    ];
+    return '<article class="mixed-field" aria-label="Comparación de avistamiento mixto">' +
+      AtlasFieldUI.encounter({ entries, reward: '3 avistamientos' }) +
+      '<p>' + text(sp.name + (record.src ? ' · WebP' : ' · SVG de respaldo') + ' / ' + companion.name + ' · SVG') + '</p></article>';
+  }
   if (mode === 'field') {
     return '<article class="field-card"><header>' + text(zone?.name || 'Avistamiento') + '</header>' +
       '<div class="encounter">' + art + '<div>' + title + occurrence +
@@ -107,9 +121,9 @@ function gamePreview(sp) {
 function scale(sp) {
   selectOptions(scalePlate, sp.records.map(record => [record.key, record.label]));
   const record = sp.records.find(item => item.key === scalePlate.value) || sp.records[0];
-  return '<div class="scale-list">' + [32, 48, 64, 96, 128, 512].map(size =>
+  return '<div class="scale-list">' + [32, 48, 64, 96, 128, 256, 512].map(size =>
     '<figure class="sample ' + (size === 512 ? 'full' : '') + '" style="--size:' + size + 'px" data-context="' +
-    text(context.value) + '">' + illustration(sp, record) + '<h3>' + text(sp.name) +
+    text(context.value) + '">' + illustration(sp, record, 'Normal', [64, 128, 256, 512].find(resolution => resolution >= size)) + '<h3>' + text(sp.name) +
     '</h3><figcaption>' + (size === 512 ? 'Completo · 512 px' : size + ' px') +
     '</figcaption></figure>').join('') + '</div>';
 }
@@ -131,6 +145,7 @@ function reviewForm(sp) {
 function draw() {
   const sp = catalog.find(item => item.id === species.value);
   byId('heading').textContent = modes[mode];
+  byId('mixed-control').hidden = mode !== 'mixed';
   byId('search-control').hidden = mode !== 'gallery';
   byId('species-control').hidden = mode === 'gallery';
   byId('context-control').hidden = mode !== 'scale';
@@ -143,6 +158,7 @@ function draw() {
   }
   switch (mode) {
     case 'field':
+    case 'mixed':
     case 'journal':
     case 'bestiary':
     case 'museum': content.innerHTML = gamePreview(sp); break;
@@ -217,6 +233,10 @@ species.addEventListener('change', () => {
 context.addEventListener('change', draw);
 scalePlate.addEventListener('change', draw);
 category.addEventListener('change', draw);
+mixedSvg.addEventListener('change', draw);
+byId('frame-style').addEventListener('change', event => {
+  content.dataset.frameStyle = event.target.value;
+});
 byId('export').addEventListener('click', () => {
   const results = catalog.flatMap(sp => sp.records.map(record => ({
     speciesId: sp.id, scientificName: sp.latin, variant: record.key, file: record.src,
