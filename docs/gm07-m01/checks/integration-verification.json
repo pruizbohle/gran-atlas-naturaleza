@@ -1,0 +1,22 @@
+{
+  "version": "3.45.0",
+  "reference": "2e0535d149ff9fd574397b78dc09bba31d16f7f3",
+  "command": "npm run release:verify",
+  "exitCode": 0,
+  "historicalChecks": 992,
+  "currentChecks": 105,
+  "totalChecks": 1097,
+  "failed": 0,
+  "pwaUpgrade": "3.44.0 -> 3.45.0",
+  "exactBackup": true,
+  "offlineFiles": 198,
+  "webFiles": 207,
+  "outsideSpeciesUnchanged": 965,
+  "outsideRoutesUnchanged": 2743,
+  "finalApprovedSpeciesPreserved": 31,
+  "finalApprovedRoutesPreserved": 68,
+  "finalCorrection": "Only normal/Notable cuscus coat layers changed from reviewed R2",
+  "artSha256": "16e0131e1bc5f8221ba3fad8c83a2822f94f6b48c0263bf6ef9a0247daa7dc9b",
+  "physicalAndroid": false,
+  "checkedAt": "2026-11-18T17:02:16.527398+00:00"
+}

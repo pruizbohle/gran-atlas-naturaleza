@@ -5343,7 +5343,8 @@ function sexSpriteMarkup(id,sex){
 }
 
 const spriteCache=new Map();
-function getSpriteMarkup(id, skin='normal', sex=null){
+function getSpriteMarkup(id, skin='normal', sex=null, legacy=false){
+  if(!legacy&&globalThis.AtlasM01Art?.has(id))return spriteMarkupM01(id,skin);
  // GM3330 BEGIN art
  if(SPECIES[id]?.origin==='abyssal3340')return globalThis.AtlasAbyssalArt3340.render(SPECIES[id]);
  if(SPECIES[id]?.origin==='deep3330')return globalThis.AtlasDeepArt3330.render(SPECIES[id]);
@@ -5378,6 +5379,16 @@ function getSpriteMarkup(id, skin='normal', sex=null){
     skin==='albino'?enforcePaleColors(baseSvg):baseSvg;
   spriteCache.set(key,svg);
   return svg;
+}
+// M01: opt-in art for exactly32 reviewed identities. Other render paths are intact.
+function spriteMarkupM01(id,skin='normal'){
+ const key=id+':'+skin+':base';if(spriteCache.has(key))return spriteCache.get(key);
+ const category=Object.keys(SPECIMEN_LEVELS).find(c=>SPECIMEN_LEVELS[c].skin===skin);let svg;
+ if(category)svg=decorateSpecimen(getSpriteMarkup(id,'normal'),category);
+ else if(skin==='albino'||skin==='melanico'){
+  const base=getSpriteMarkup(id,'normal');svg=skin==='albino'?enforcePaleColors(base):enforceMelanicColors(base);
+ }else svg=globalThis.AtlasM01Art.render(SPECIES[id],id)||getSpriteMarkup(id,'normal',null,true);
+ spriteCache.set(key,svg);return svg;
 }
 function applySkin(base, skin){
   if(skin==='albino') return '#f2f3f4';

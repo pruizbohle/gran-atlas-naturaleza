@@ -1,0 +1,359 @@
+{
+  "outsideSpeciesCompared": 965,
+  "outsideDifferentPixels": 0,
+  "lotRoutesRendered": 70,
+  "normalChecks": [
+    {
+      "id": "na_esp_didelphis_marsupialis",
+      "modified": false,
+      "differentPixels": 0,
+      "bounds": [
+        3,
+        28,
+        79,
+        70
+      ]
+    },
+    {
+      "id": "na_esp_didelphis_virginiana",
+      "modified": true,
+      "differentPixels": 2021,
+      "bounds": [
+        4,
+        25,
+        78,
+        68
+      ]
+    },
+    {
+      "id": "oc_esp_dactylopsila_trivirgata",
+      "modified": true,
+      "differentPixels": 2333,
+      "bounds": [
+        8,
+        22,
+        75,
+        71
+      ]
+    },
+    {
+      "id": "oc_esp_dasycercus_cristicauda",
+      "modified": true,
+      "differentPixels": 1941,
+      "bounds": [
+        3,
+        25,
+        78,
+        70
+      ]
+    },
+    {
+      "id": "oc_esp_dasyurus_viverrinus",
+      "modified": true,
+      "differentPixels": 1972,
+      "bounds": [
+        2,
+        25,
+        78,
+        70
+      ]
+    },
+    {
+      "id": "oc_esp_dendrolagus_goodfellowi",
+      "modified": true,
+      "differentPixels": 2806,
+      "bounds": [
+        6,
+        16,
+        74,
+        75
+      ]
+    },
+    {
+      "id": "oc_esp_dendrolagus_lumholtzi",
+      "modified": true,
+      "differentPixels": 2806,
+      "bounds": [
+        6,
+        16,
+        74,
+        75
+      ]
+    },
+    {
+      "id": "oc_esp_dendrolagus_matschiei",
+      "modified": true,
+      "differentPixels": 2806,
+      "bounds": [
+        6,
+        16,
+        74,
+        75
+      ]
+    },
+    {
+      "id": "oc_esp_macropus_fuliginosus",
+      "modified": true,
+      "differentPixels": 2107,
+      "bounds": [
+        3,
+        6,
+        75,
+        75
+      ]
+    },
+    {
+      "id": "oc_esp_macropus_giganteus",
+      "modified": true,
+      "differentPixels": 2126,
+      "bounds": [
+        3,
+        6,
+        75,
+        75
+      ]
+    },
+    {
+      "id": "oc_esp_macrotis_lagotis",
+      "modified": true,
+      "differentPixels": 2464,
+      "bounds": [
+        3,
+        7,
+        77,
+        74
+      ]
+    },
+    {
+      "id": "oc_esp_myrmecobius_fasciatus",
+      "modified": true,
+      "differentPixels": 1977,
+      "bounds": [
+        2,
+        26,
+        78,
+        69
+      ]
+    },
+    {
+      "id": "oc_esp_notamacropus_agilis",
+      "modified": true,
+      "differentPixels": 2107,
+      "bounds": [
+        3,
+        6,
+        75,
+        75
+      ]
+    },
+    {
+      "id": "oc_esp_notamacropus_eugenii",
+      "modified": true,
+      "differentPixels": 2036,
+      "bounds": [
+        3,
+        11,
+        75,
+        75
+      ]
+    },
+    {
+      "id": "oc_esp_notamacropus_rufogriseus",
+      "modified": true,
+      "differentPixels": 2107,
+      "bounds": [
+        3,
+        6,
+        75,
+        75
+      ]
+    },
+    {
+      "id": "oc_esp_ornithorhynchus_anatinus",
+      "modified": true,
+      "differentPixels": 1954,
+      "bounds": [
+        2,
+        33,
+        78,
+        68
+      ]
+    },
+    {
+      "id": "oc_esp_osphranter_rufus",
+      "modified": true,
+      "differentPixels": 2107,
+      "bounds": [
+        3,
+        6,
+        75,
+        75
+      ]
+    },
+    {
+      "id": "oc_esp_petauroides_volans",
+      "modified": true,
+      "differentPixels": 2837,
+      "bounds": [
+        5,
+        12,
+        73,
+        76
+      ]
+    },
+    {
+      "id": "oc_esp_petaurus_breviceps",
+      "modified": true,
+      "differentPixels": 2269,
+      "bounds": [
+        4,
+        17,
+        73,
+        70
+      ]
+    },
+    {
+      "id": "oc_esp_petrogale_mareeba",
+      "modified": true,
+      "differentPixels": 2111,
+      "bounds": [
+        2,
+        11,
+        75,
+        75
+      ]
+    },
+    {
+      "id": "oc_esp_phalanger_orientalis",
+      "modified": true,
+      "differentPixels": 2358,
+      "bounds": [
+        6,
+        22,
+        75,
+        71
+      ]
+    },
+    {
+      "id": "oc_esp_phascolarctos_cinereus",
+      "modified": true,
+      "differentPixels": 2656,
+      "bounds": [
+        19,
+        10,
+        71,
+        77
+      ]
+    },
+    {
+      "id": "oc_esp_sarcophilus_harrisii",
+      "modified": true,
+      "differentPixels": 2280,
+      "bounds": [
+        2,
+        19,
+        78,
+        70
+      ]
+    },
+    {
+      "id": "oc_esp_setonix_brachyurus",
+      "modified": true,
+      "differentPixels": 2225,
+      "bounds": [
+        9,
+        19,
+        72,
+        75
+      ]
+    },
+    {
+      "id": "oc_esp_spilocuscus_maculatus",
+      "modified": true,
+      "differentPixels": 2333,
+      "bounds": [
+        6,
+        24,
+        75,
+        71
+      ]
+    },
+    {
+      "id": "oc_esp_tachyglossus_aculeatus",
+      "modified": true,
+      "differentPixels": 2285,
+      "bounds": [
+        6,
+        21,
+        78,
+        72
+      ]
+    },
+    {
+      "id": "oc_esp_thylogale_billardierii",
+      "modified": true,
+      "differentPixels": 2196,
+      "bounds": [
+        5,
+        17,
+        66,
+        76
+      ]
+    },
+    {
+      "id": "oc_esp_trichosurus_vulpecula",
+      "modified": true,
+      "differentPixels": 2483,
+      "bounds": [
+        7,
+        14,
+        75,
+        72
+      ]
+    },
+    {
+      "id": "oc_esp_vombatus_ursinus",
+      "modified": false,
+      "differentPixels": 0,
+      "bounds": [
+        9,
+        20,
+        75,
+        67
+      ]
+    },
+    {
+      "id": "oc_esp_wallabia_bicolor",
+      "modified": true,
+      "differentPixels": 2102,
+      "bounds": [
+        3,
+        6,
+        75,
+        75
+      ]
+    },
+    {
+      "id": "oc_esp_zaglossus_bartoni",
+      "modified": true,
+      "differentPixels": 2326,
+      "bounds": [
+        10,
+        23,
+        77,
+        73
+      ]
+    },
+    {
+      "id": "gm06_dromiciops_gliroides",
+      "modified": true,
+      "differentPixels": 2048,
+      "bounds": [
+        2,
+        23,
+        77,
+        68
+      ]
+    }
+  ]
+}

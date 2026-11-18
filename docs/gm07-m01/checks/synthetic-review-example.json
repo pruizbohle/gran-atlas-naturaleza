@@ -1,0 +1,660 @@
+{
+  "format": "el-gran-atlas-gm07-m01-review",
+  "formatVersion": 1,
+  "revision": "M01-final",
+  "reviewedProposalSha256": "574df49c64d4a106deb3d1198130dd897e2ab175944c8e4242716bcbd51d6f29",
+  "reference": "2e0535d",
+  "proposalSha256": "16e0131e1bc5f8221ba3fad8c83a2822f94f6b48c0263bf6ef9a0247daa7dc9b",
+  "exportedAt": "2026-11-18T16:53:58.879Z",
+  "speciesCount": 32,
+  "decisions": [
+    {
+      "id": "oc_esp_dasycercus_cristicauda",
+      "name": "Mulgará de cola crestada",
+      "latin": "Dasycercus cristicauda",
+      "family": "Dasyuridae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "e63fadeb6e8f33088b615eada74fcf394969682c538d535e36e0cba0239def21",
+      "correctedR2": true,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_dasyurus_viverrinus",
+      "name": "Quol oriental",
+      "latin": "Dasyurus viverrinus",
+      "family": "Dasyuridae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "409978abb08f3649f63765027a49ab1b95c735733bc9b6c2902bb5718d00ee3d",
+      "correctedR2": true,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_sarcophilus_harrisii",
+      "name": "Demonio de Tasmania",
+      "latin": "Sarcophilus harrisii",
+      "family": "Dasyuridae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "67f75d356b888d931c34d29319ac45a2e5742bba103782eadf6c02e947d2ab44",
+      "correctedR2": true,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "na_esp_didelphis_marsupialis",
+      "name": "Zarigüeya común",
+      "latin": "Didelphis marsupialis",
+      "family": "Didelphidae",
+      "proposedAction": "conservar original",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "a56202cbfc0b7c68033ead2999a16fff3065a885c4f4de9d23cc635e00313cb7",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "na_esp_didelphis_virginiana",
+      "name": "Zarigüeya de Virginia",
+      "latin": "Didelphis virginiana",
+      "family": "Didelphidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "albino",
+        "alfa"
+      ],
+      "proposalNormalSha256": "24a8f4bd2190d1ee76ff9124890aba17b63838ef539cd5bead53e8aa6235af4e",
+      "correctedR2": true,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_dendrolagus_goodfellowi",
+      "name": "Canguro arborícola de Goodfellow",
+      "latin": "Dendrolagus goodfellowi",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "d593e1dec45ad5a73db15d2652648b3d42c61c0d0d08702b39e07e9bbe69e3c9",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_dendrolagus_lumholtzi",
+      "name": "Canguro arborícola de Lumholtz",
+      "latin": "Dendrolagus lumholtzi",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "7eff1fa244bc41390aa068343174ff12382fc3d2cbf80463d9caad831c56fec5",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_dendrolagus_matschiei",
+      "name": "Canguro arborícola de Matschie",
+      "latin": "Dendrolagus matschiei",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "0869b79a758bfb9cbef6bbb36b8394925b12a43752b8237eee6559378bfc5534",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_macropus_fuliginosus",
+      "name": "Canguro gris occidental",
+      "latin": "Macropus fuliginosus",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "b641930c5830fba538510916229e0b3ab112f9a10d9d0960da3697f525508f2d",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_macropus_giganteus",
+      "name": "Canguro gris oriental",
+      "latin": "Macropus giganteus",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "albino",
+        "alfa"
+      ],
+      "proposalNormalSha256": "23985f9cb07911a28a6849d52ca14ab963b4bbcc6deea14ef37362338b13ff1d",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_notamacropus_agilis",
+      "name": "Ualabí ágil",
+      "latin": "Notamacropus agilis",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "a2b0bba59738f8746833b276f62c66bc479964e773d7c02cba075fe3a22ad46f",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_notamacropus_eugenii",
+      "name": "Ualabí de Tammar",
+      "latin": "Notamacropus eugenii",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "1369b89735105877e2bd17d0504d9d06aac393ae28758170ea7107355545e423",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_notamacropus_rufogriseus",
+      "name": "Ualabí de Bennett",
+      "latin": "Notamacropus rufogriseus",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "a0431fe22991e496478ab889b8e70fd42d77331afdc95899164e3c914a419b1e",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_osphranter_rufus",
+      "name": "Canguro rojo",
+      "latin": "Osphranter rufus",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "albino",
+        "alfa"
+      ],
+      "proposalNormalSha256": "8f40b1ae74fbcfa476fba73bb908352187340b4e02e881bc772cff97eca67edd",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_petrogale_mareeba",
+      "name": "Ualabí de roca de Mareeba",
+      "latin": "Petrogale mareeba",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "130076ce4c4109d4570a39c99c0f531c49fea6660ec3470988fcd552becac8a8",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_setonix_brachyurus",
+      "name": "Quokka",
+      "latin": "Setonix brachyurus",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "b6e90dad2520d0fad8622ce522f34208d97f96682123ee949c22830e150fed9d",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_thylogale_billardierii",
+      "name": "Pademelón de Tasmania",
+      "latin": "Thylogale billardierii",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "bdf3a8e93370958d47fe978ba52f25def7244d54469d2364c565b37f944097f4",
+      "correctedR2": true,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_wallabia_bicolor",
+      "name": "Ualabí de pantano",
+      "latin": "Wallabia bicolor",
+      "family": "Macropodidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "227b21e9f39881899988d32d6d05c57bba20c184266f4c466b0553387521b4e5",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "gm06_dromiciops_gliroides",
+      "name": "Monito del monte",
+      "latin": "Dromiciops gliroides",
+      "family": "Microbiotheriidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa",
+        "epico",
+        "excepcional"
+      ],
+      "proposalNormalSha256": "5b196313356952e887b73ca30ff30a206b9b17c2f34d4bec6cc7b97792c94410",
+      "correctedR2": true,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_myrmecobius_fasciatus",
+      "name": "Numbat",
+      "latin": "Myrmecobius fasciatus",
+      "family": "Myrmecobiidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "497680783108957702df9a40032c8842e7f137e6af32b57af23dbe68e88d5535",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_ornithorhynchus_anatinus",
+      "name": "Ornitorrinco",
+      "latin": "Ornithorhynchus anatinus",
+      "family": "Ornithorhynchidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "398e4cffd8422018fce33b2457a93340846a18150961e7abef0b5a24c17e8193",
+      "correctedR2": true,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_dactylopsila_trivirgata",
+      "name": "Zarigüeya listada",
+      "latin": "Dactylopsila trivirgata",
+      "family": "Petauridae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "62050d310e7505d59849f17a9e5f59f5c76addba53cc7e757ca4ca9893968571",
+      "correctedR2": true,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_petaurus_breviceps",
+      "name": "Petauro del azúcar",
+      "latin": "Petaurus breviceps",
+      "family": "Petauridae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "0dc384ac8217f0442eb09daa60f4d80115e05c09a09ee645d4d89f13104a283a",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_phalanger_orientalis",
+      "name": "Cuscús común",
+      "latin": "Phalanger orientalis",
+      "family": "Phalangeridae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "f960d0d08476632db44af936529e19034feae693c03759eb36cc00b3777ef722",
+      "correctedR2": true,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_spilocuscus_maculatus",
+      "name": "Cuscús moteado",
+      "latin": "Spilocuscus maculatus",
+      "family": "Phalangeridae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "97b5b540db36e8d19c2b1c4af4f1e36e979921b80072f9ef1dd28fd2a514bd20",
+      "correctedR2": true,
+      "finalCorrection": true,
+      "resolution": "Se pintan las manchas del torso antes de las patas, las orejas y la cabeza. Las siluetas delanteras cubren el patrón y conservan sus colores; no cambia ninguna de las otras 31 ilustraciones.",
+      "previousDecision": "request_correction",
+      "previousComment": "El único, las manchas se sobreponen a cabeza y piernas.",
+      "decision": "request_correction",
+      "comment": "Prueba posterior <sin alterar partida>",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_trichosurus_vulpecula",
+      "name": "Possum cola de cepillo",
+      "latin": "Trichosurus vulpecula",
+      "family": "Phalangeridae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "4397e5d48d64326d39b14f8093e24c8ad31300b49b94031b8896d5d257dcc45c",
+      "correctedR2": true,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_phascolarctos_cinereus",
+      "name": "Koala",
+      "latin": "Phascolarctos cinereus",
+      "family": "Phascolarctidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "c069fc1c7048423f3207e62c76fba6073c7f29d71e304a15571463a6c336bf86",
+      "correctedR2": true,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_petauroides_volans",
+      "name": "Petauro mayor",
+      "latin": "Petauroides volans",
+      "family": "Pseudocheiridae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "48a37c44f790ecd20bd4b19cf8fccf2d20d5a6c0fd4e43240fbf91d8b98633ee",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_tachyglossus_aculeatus",
+      "name": "Equidna de hocico corto",
+      "latin": "Tachyglossus aculeatus",
+      "family": "Tachyglossidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "c4d6b7560d47baddd42b68b6561b4729a4d06aa7630248b2f48b89118ac848fb",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_zaglossus_bartoni",
+      "name": "Equidna de hocico largo oriental",
+      "latin": "Zaglossus bartoni",
+      "family": "Tachyglossidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "15ec623c994c2a48075cbe883fe8422adf8e1092684eff271f7bfab33a5f4bea",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_macrotis_lagotis",
+      "name": "Bilbi mayor",
+      "latin": "Macrotis lagotis",
+      "family": "Thylacomyidae",
+      "proposedAction": "pulido M01",
+      "configuredVariants": [
+        "normal",
+        "alfa"
+      ],
+      "proposalNormalSha256": "6c2baaee0e0d68e4d1f450b0b040cbe64d132e6d60e9fc339b559b32b9eff1a8",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    },
+    {
+      "id": "oc_esp_vombatus_ursinus",
+      "name": "Wómbat común",
+      "latin": "Vombatus ursinus",
+      "family": "Vombatidae",
+      "proposedAction": "conservar original",
+      "configuredVariants": [
+        "normal",
+        "albino",
+        "alfa"
+      ],
+      "proposalNormalSha256": "a42b54683293175214bbe4fac7e60ce65c4b2dc541c9377489e488f4adef4217",
+      "correctedR2": false,
+      "finalCorrection": false,
+      "resolution": null,
+      "previousDecision": "approve",
+      "previousComment": "",
+      "decision": "approve",
+      "comment": "",
+      "variant": "normal"
+    }
+  ],
+  "synthetic": true,
+  "note": "Prueba automatizada; no aprobación del usuario."
+}

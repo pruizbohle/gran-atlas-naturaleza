@@ -1,12 +1,12 @@
 {
   "name": "el-gran-atlas-mobile",
-  "version": "3.44.0",
+  "version": "3.45.0",
   "private": true,
   "scripts": {
     "cap:add:android": "npx cap add android",
     "cap:sync": "npx cap sync",
     "cap:open:android": "npx cap open android",
-    "release:verify": "node scripts/build-gm06-release.cjs && node scripts/validate-gm06-release.cjs"
+    "release:verify": "node scripts/build-gm07-m01-release.cjs && node scripts/validate-gm07-m01-release.cjs"
   },
   "dependencies": {
     "@capacitor/core": "7.6.10",

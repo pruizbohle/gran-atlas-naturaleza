@@ -1,0 +1,19 @@
+{
+  "revision": "M01-final",
+  "version": "3.45.0",
+  "reviewFile": "reviews/2026-11-18-r2-original.json",
+  "reviewSha256": "d500e7a2c1e39d9d15b5843c2bcfcfc49f79c947e94bbbcca3c9eaa1eb55b726",
+  "reviewedProposalSha256": "df4c30649df953ad6235900d8d9c8c8773f9e2792bd0c64e36ff8c367a346bab",
+  "speciesCount": 32,
+  "explicitApprovals": 31,
+  "integrationAuthorized": true,
+  "authorization": "revisión completa, solo una observacion. Luego, integra a main",
+  "resolved": [
+    {
+      "id": "oc_esp_spilocuscus_maculatus",
+      "comment": "El único, las manchas se sobreponen a cabeza y piernas.",
+      "resolution": "Se pintan las manchas del torso antes de las patas, las orejas y la cabeza. Las siluetas delanteras cubren el patrón y conservan sus colores; no cambia ninguna de las otras 31 ilustraciones.",
+      "status": "resolved_under_user_integration_authorization"
+    }
+  ]
+}

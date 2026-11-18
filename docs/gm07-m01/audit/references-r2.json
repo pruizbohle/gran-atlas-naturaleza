@@ -1,0 +1,47 @@
+{
+  "revision": "M01-R2",
+  "facts": [
+    {
+      "species": "Dromiciops gliroides",
+      "url": "https://animaldiversity.org/accounts/Dromiciops_gliroides/",
+      "focus": "Anillos oculares oscuros, cola peluda con pequeña zona desnuda distal de agarre."
+    },
+    {
+      "species": "Phascolarctos cinereus",
+      "url": "https://collections.museumsvictoria.com.au/species/8424",
+      "focus": "Pelaje lanoso, orejas peludas, nariz negra y garras."
+    },
+    {
+      "species": "Ornithorhynchus anatinus",
+      "url": "https://ielc.libguides.com/sdzg/factsheets/platypus/characteristics",
+      "focus": "Pico flexible, cola ancha aplanada cubierta de pelo y patas palmeadas."
+    },
+    {
+      "species": "Didelphis virginiana",
+      "url": "https://animaldiversity.org/accounts/Didelphis_virginiana/",
+      "focus": "Cabeza clara y pelaje entrecano variable por población."
+    },
+    {
+      "species": "Didelphis marsupialis",
+      "url": "https://animaldiversity.org/accounts/Didelphis_marsupialis/",
+      "focus": "Especie distinta; orejas negras, vientre crema y variación individual."
+    },
+    {
+      "species": "Thylogale billardierii",
+      "url": "https://academic.oup.com/mspecies/article/50/965/100/5102490",
+      "focus": "Cuerpo compacto, orejas cortas y pelaje inferior rojizo."
+    },
+    {
+      "species": "Dactylopsila trivirgata",
+      "url": "https://www.qld.gov.au/environment/plants-animals/animals/discovering-wildlife/possum/striped-possum",
+      "focus": "Rayas longitudinales contrastadas y extremo claro de la cola."
+    }
+  ],
+  "photographicPages": [
+    "https://www.mammalogy.org/image-library/dromiciops-gliroides-3753",
+    "https://mammalsociety.org/image-library/dromiciops-gliroides-725",
+    "https://www.animaldiversity.org/collections/contributors/eva_hejda/noerdlkoala/",
+    "https://animaldiversity.org/accounts/Dactylopsila_trivirgata/pictures/",
+    "https://animaldiversity.org/accounts/Phalangeridae/pictures/"
+  ]
+}

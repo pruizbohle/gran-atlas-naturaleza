@@ -1,0 +1,55 @@
+{
+  "revision": "M01-final",
+  "browser": "156.0.8078.79",
+  "physicalAndroid": false,
+  "widths": [
+    {
+      "width": 320,
+      "overflow": false,
+      "triptych": true,
+      "filters": true,
+      "decisions": true,
+      "export32": true,
+      "storageCalls": 0
+    },
+    {
+      "width": 360,
+      "overflow": false,
+      "triptych": true,
+      "filters": true,
+      "decisions": true,
+      "export32": true,
+      "storageCalls": 0
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "triptych": true,
+      "filters": true,
+      "decisions": true,
+      "export32": true,
+      "storageCalls": 0
+    },
+    {
+      "width": 412,
+      "overflow": false,
+      "triptych": true,
+      "filters": true,
+      "decisions": true,
+      "export32": true,
+      "storageCalls": 0
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "triptych": true,
+      "filters": true,
+      "decisions": true,
+      "export32": true,
+      "storageCalls": 0
+    }
+  ],
+  "offline": true,
+  "errors": [],
+  "externalRequests": 0
+}

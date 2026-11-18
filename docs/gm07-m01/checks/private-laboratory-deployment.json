@@ -1,0 +1,15 @@
+{
+  "project_id": "appgprj_6afc9a1420908191a74a5ac066147ea9",
+  "site_source_commit": "95401d15611c4b93a39419e0660440842fd85ea2",
+  "game_reference": "2e0535d149ff9fd574397b78dc09bba31d16f7f3",
+  "game_integration_committed": false,
+  "deployment_id": "appgdep_6afcb82796c88191bb8537e827ad0669",
+  "version_id": "appgprj_6afc9a1420908191a74a5ac066147ea9~appgver_8ee365cf4e1081919bad43a86f65ad18",
+  "status": "succeeded",
+  "lab_url": "https://gran-atlas-gm07-laboratorio.muddyroadrunner17.chatgpt.site/laboratorio-marsupiales-monotremas.html",
+  "report_url": "https://gran-atlas-gm07-laboratorio.muddyroadrunner17.chatgpt.site/informe-m01.html",
+  "offline_url": "https://gran-atlas-gm07-laboratorio.muddyroadrunner17.chatgpt.site/laboratorio-gm07-m01-offline.zip",
+  "audience": "owner-only; preserved",
+  "lab_sha256": "75ae9d3273c9754c81fbcd242c9eb4a4907388ff2acf74857a411d2562ff0bec",
+  "deployed_at": "2026-11-17T20:25:34.946416+00:00"
+}

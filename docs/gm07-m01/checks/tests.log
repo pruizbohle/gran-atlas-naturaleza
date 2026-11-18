@@ -1,0 +1,17 @@
+✔ M01 is exactly32 independently classified records including both American opossums andDromiciops (315.550878ms)
+✔ M01 changes only the opt-in scoped art hook; catalog,geography,economy,save/native code and public entry stay exact (359.503646ms)
+✔ M01 real render comparison preserves all2743 configured routes of the965 non-M01 species (509.400908ms)
+✔ M01 preserves two selected originals byte-for-byte; all70 configured lot routes retain anatomy and current rare decorations (0.684854ms)
+✔ M01 art does not consume RNG,mutate progress,add intervals or accumulate duplicate cache entries (121.53541ms)
+✔ M01 old variants,monographs,regions,inventory,museum,jobs and profile survive load and native backup import/export (509.684948ms)
+✔ M01 encounters,all study requirements and72h offline return equal3.44; Field,Journal,Bestiary,Museum use the new art (565.912835ms)
+✔ M01 comparison provenance retains the previous worldwide candidate and exact art revision (12.398551ms)
+✔ M01-R2 addresses the12 reviewed records and preserves all43 routes of the20 other approved records (3.860728ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2622.280231

@@ -1,0 +1,616 @@
+[
+  {
+    "id": "na_esp_didelphis_marsupialis",
+    "name": "Zarigüeya común",
+    "latin": "Didelphis marsupialis",
+    "family": "Didelphidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000021",
+    "kind": "small",
+    "origin": "na3220",
+    "profile": "didelphis-marsupialis",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Didelphimorphia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000021"
+  },
+  {
+    "id": "na_esp_didelphis_virginiana",
+    "name": "Zarigüeya de Virginia",
+    "latin": "Didelphis virginiana",
+    "family": "Didelphidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000023",
+    "kind": "small",
+    "origin": "na3220",
+    "profile": "didelphis-virginiana",
+    "routes": [
+      "normal",
+      "albino",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Didelphimorphia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000023"
+  },
+  {
+    "id": "oc_esp_dactylopsila_trivirgata",
+    "name": "Zarigüeya listada",
+    "latin": "Dactylopsila trivirgata",
+    "family": "Petauridae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000338",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "possum",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000338"
+  },
+  {
+    "id": "oc_esp_dasycercus_cristicauda",
+    "name": "Mulgará de cola crestada",
+    "latin": "Dasycercus cristicauda",
+    "family": "Dasyuridae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000144",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "mulgara",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Dasyuromorphia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000144"
+  },
+  {
+    "id": "oc_esp_dasyurus_viverrinus",
+    "name": "Quol oriental",
+    "latin": "Dasyurus viverrinus",
+    "family": "Dasyuridae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000152",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "quoll",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Dasyuromorphia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000152"
+  },
+  {
+    "id": "oc_esp_dendrolagus_goodfellowi",
+    "name": "Canguro arborícola de Goodfellow",
+    "latin": "Dendrolagus goodfellowi",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000254",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "tree-kangaroo",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000254"
+  },
+  {
+    "id": "oc_esp_dendrolagus_lumholtzi",
+    "name": "Canguro arborícola de Lumholtz",
+    "latin": "Dendrolagus lumholtzi",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000256",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "tree-kangaroo",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000256"
+  },
+  {
+    "id": "oc_esp_dendrolagus_matschiei",
+    "name": "Canguro arborícola de Matschie",
+    "latin": "Dendrolagus matschiei",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000257",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "tree-kangaroo",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000257"
+  },
+  {
+    "id": "oc_esp_macropus_fuliginosus",
+    "name": "Canguro gris occidental",
+    "latin": "Macropus fuliginosus",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000276",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "macropod",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000276"
+  },
+  {
+    "id": "oc_esp_macropus_giganteus",
+    "name": "Canguro gris oriental",
+    "latin": "Macropus giganteus",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000277",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "macropod",
+    "routes": [
+      "normal",
+      "albino",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000277"
+  },
+  {
+    "id": "oc_esp_macrotis_lagotis",
+    "name": "Bilbi mayor",
+    "latin": "Macrotis lagotis",
+    "family": "Thylacomyidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000249",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "bilby",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Peramelemorphia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000249"
+  },
+  {
+    "id": "oc_esp_myrmecobius_fasciatus",
+    "name": "Numbat",
+    "latin": "Myrmecobius fasciatus",
+    "family": "Myrmecobiidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000219",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "numbat",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Dasyuromorphia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000219"
+  },
+  {
+    "id": "oc_esp_notamacropus_agilis",
+    "name": "Ualabí ágil",
+    "latin": "Notamacropus agilis",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000278",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "macropod",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000278"
+  },
+  {
+    "id": "oc_esp_notamacropus_eugenii",
+    "name": "Ualabí de Tammar",
+    "latin": "Notamacropus eugenii",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000280",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "macropod",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000280"
+  },
+  {
+    "id": "oc_esp_notamacropus_rufogriseus",
+    "name": "Ualabí de Bennett",
+    "latin": "Notamacropus rufogriseus",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000285",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "macropod",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000285"
+  },
+  {
+    "id": "oc_esp_ornithorhynchus_anatinus",
+    "name": "Ornitorrinco",
+    "latin": "Ornithorhynchus anatinus",
+    "family": "Ornithorhynchidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000001",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "platypus",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Monotremata",
+    "infraclass": "Australosphenida",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000001"
+  },
+  {
+    "id": "oc_esp_osphranter_rufus",
+    "name": "Canguro rojo",
+    "latin": "Osphranter rufus",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000292",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "macropod",
+    "routes": [
+      "normal",
+      "albino",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000292"
+  },
+  {
+    "id": "oc_esp_petauroides_volans",
+    "name": "Petauro mayor",
+    "latin": "Petauroides volans",
+    "family": "Pseudocheiridae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000351",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "glider",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000351"
+  },
+  {
+    "id": "oc_esp_petaurus_breviceps",
+    "name": "Petauro del azúcar",
+    "latin": "Petaurus breviceps",
+    "family": "Petauridae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000344",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "glider",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000344"
+  },
+  {
+    "id": "oc_esp_petrogale_mareeba",
+    "name": "Ualabí de roca de Mareeba",
+    "latin": "Petrogale mareeba",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000302",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "macropod",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000302"
+  },
+  {
+    "id": "oc_esp_phalanger_orientalis",
+    "name": "Cuscús común",
+    "latin": "Phalanger orientalis",
+    "family": "Phalangeridae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000387",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "possum",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000387"
+  },
+  {
+    "id": "oc_esp_phascolarctos_cinereus",
+    "name": "Koala",
+    "latin": "Phascolarctos cinereus",
+    "family": "Phascolarctidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000404",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "koala",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000404"
+  },
+  {
+    "id": "oc_esp_sarcophilus_harrisii",
+    "name": "Demonio de Tasmania",
+    "latin": "Sarcophilus harrisii",
+    "family": "Dasyuridae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000166",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "tasmanian-devil",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Dasyuromorphia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000166"
+  },
+  {
+    "id": "oc_esp_setonix_brachyurus",
+    "name": "Quokka",
+    "latin": "Setonix brachyurus",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000310",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "macropod",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000310"
+  },
+  {
+    "id": "oc_esp_spilocuscus_maculatus",
+    "name": "Cuscús moteado",
+    "latin": "Spilocuscus maculatus",
+    "family": "Phalangeridae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000394",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "possum",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000394"
+  },
+  {
+    "id": "oc_esp_tachyglossus_aculeatus",
+    "name": "Equidna de hocico corto",
+    "latin": "Tachyglossus aculeatus",
+    "family": "Tachyglossidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000002",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "echidna",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Monotremata",
+    "infraclass": "Australosphenida",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000002"
+  },
+  {
+    "id": "oc_esp_thylogale_billardierii",
+    "name": "Pademelón de Tasmania",
+    "latin": "Thylogale billardierii",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000311",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "macropod",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000311"
+  },
+  {
+    "id": "oc_esp_trichosurus_vulpecula",
+    "name": "Possum cola de cepillo",
+    "latin": "Trichosurus vulpecula",
+    "family": "Phalangeridae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000402",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "possum",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000402"
+  },
+  {
+    "id": "oc_esp_vombatus_ursinus",
+    "name": "Wómbat común",
+    "latin": "Vombatus ursinus",
+    "family": "Vombatidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000407",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "wombat",
+    "routes": [
+      "normal",
+      "albino",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000407"
+  },
+  {
+    "id": "oc_esp_wallabia_bicolor",
+    "name": "Ualabí de pantano",
+    "latin": "Wallabia bicolor",
+    "family": "Macropodidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000317",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "macropod",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Diprotodontia",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000317"
+  },
+  {
+    "id": "oc_esp_zaglossus_bartoni",
+    "name": "Equidna de hocico largo oriental",
+    "latin": "Zaglossus bartoni",
+    "family": "Tachyglossidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000004",
+    "kind": "small",
+    "origin": "oc3290",
+    "profile": "long-beaked-echidna",
+    "routes": [
+      "normal",
+      "alfa"
+    ],
+    "sexes": [],
+    "order": "Monotremata",
+    "infraclass": "Australosphenida",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000004"
+  },
+  {
+    "id": "gm06_dromiciops_gliroides",
+    "name": "Monito del monte",
+    "latin": "Dromiciops gliroides",
+    "family": "Microbiotheriidae",
+    "familySource": "https://www.mammaldiversity.org/taxon/1000139",
+    "kind": "gm06",
+    "origin": "gm06",
+    "profile": "gm06",
+    "routes": [
+      "normal",
+      "alfa",
+      "epico",
+      "excepcional"
+    ],
+    "sexes": [],
+    "order": "Microbiotheria",
+    "infraclass": "Marsupialia",
+    "classificationReference": "Mammal Diversity Database 2.5",
+    "mddId": "1000139"
+  }
+]

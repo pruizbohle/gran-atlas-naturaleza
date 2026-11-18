@@ -1,0 +1,15 @@
+{
+  "revision": "M01-R2",
+  "corrections": 12,
+  "approvedPreserved": 20,
+  "approvedRoutesUnchanged": 43,
+  "routesChangedSinceR1": 27,
+  "engineTests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "labBytes": 993655,
+  "labSha256": "f287290b049bfed0b61dd9b97a5b72756ac488cd3de3a01eac9c657165f578e1",
+  "browser": "Five headless Chromium viewports passed. Native Sites preview relay unavailable (4173 readiness timeout).",
+  "gameIntegrationCommitted": false
+}

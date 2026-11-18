@@ -1,5 +1,5 @@
 {
-  "version": "3.44.0",
+  "version": "3.45.0",
   "atlas": "simple",
   "cells": {
     "Europa": 10,
@@ -177,5 +177,18 @@
     "collectiblesIntegrated": false,
     "specialDossier": "Rapa Nui",
     "physicalAndroidValidated": false
+  },
+  "gm07M01": {
+    "reviewedSpecies": 32,
+    "modifiedNormalSprites": 30,
+    "retainedOriginals": 2,
+    "configuredVariantsIncludingNormal": 70,
+    "approvedUserRecords": 31,
+    "resolvedFinalObservations": 1,
+    "approved": true,
+    "economyChanged": false,
+    "otherSpeciesChanged": false,
+    "collectiblesIntegrated": false,
+    "androidBuildCreated": false
   }
 }

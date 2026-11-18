@@ -1,0 +1,108 @@
+{
+  "revision": "M01-R2",
+  "reviewFile": "reviews/2026-11-18-original.json",
+  "reviewSha256": "a03c93133a394fc74af8e1c4facb4991bf1250756093320d8a48e2bcd340793f",
+  "reviewedProposalSha256": "574df49c64d4a106deb3d1198130dd897e2ab175944c8e4242716bcbd51d6f29",
+  "explicitCorrections": 10,
+  "approvedWithComments": 2,
+  "changed": [
+    {
+      "id": "oc_esp_dasycercus_cristicauda",
+      "latin": "Dasycercus cristicauda",
+      "name": "Mulgará de cola crestada",
+      "previousDecision": "request_correction",
+      "userComment": "Línea de color ventral bajo piernas",
+      "rationale": "Se elimina la banda ventral que sobresalía bajo las patas. El vientre claro queda dentro del abdomen y detrás de las extremidades; se conservan el hocico, la cola gruesa y su cresta negra."
+    },
+    {
+      "id": "oc_esp_dasyurus_viverrinus",
+      "latin": "Dasyurus viverrinus",
+      "name": "Quol oriental",
+      "previousDecision": "request_correction",
+      "userComment": "Línea de color ventral bajo piernas",
+      "rationale": "Se corrige el orden de las capas y se recoge el color ventral dentro del torso, sin una línea flotante bajo las patas. Se conservan las manchas blancas y la cola sin manchas."
+    },
+    {
+      "id": "oc_esp_sarcophilus_harrisii",
+      "latin": "Sarcophilus harrisii",
+      "name": "Demonio de Tasmania",
+      "previousDecision": "request_correction",
+      "userComment": "Cuerpo y hocico más alargado",
+      "rationale": "Se alarga el torso en perfil y el hocico, manteniendo cuello y mandíbula robustos, orejas redondeadas, mancha pectoral y cola de base gruesa."
+    },
+    {
+      "id": "na_esp_didelphis_virginiana",
+      "latin": "Didelphis virginiana",
+      "name": "Zarigüeya de Virginia",
+      "previousDecision": "approve",
+      "userComment": "No sé si tiene alguna distinción con la común",
+      "rationale": "Se responde a la duda de distinción: la primera propuesta compartía geometría con D. marsupialis y solo cambiaba de tono. La nueva lámina muestra cabeza blanco grisácea, hocico rosado, orejas desnudas oscuras y pelaje entrecano con pelos de guarda; manos y cola prensil tienen detalle. La coloración varía entre poblaciones y no constituye por sí sola una clave taxonómica."
+    },
+    {
+      "id": "oc_esp_thylogale_billardierii",
+      "latin": "Thylogale billardierii",
+      "name": "Pademelón de Tasmania",
+      "previousDecision": "request_correction",
+      "userComment": "Cuerpo con forma de pera (actual es círculo)",
+      "rationale": "Se redibuja el tronco en forma de pera: hombros y cuello estrechos, cabeza pequeña y grupa ancha. Se mantienen patas posteriores potentes, orejas cortas, cola y vientre rojizo; se evita el torso circular."
+    },
+    {
+      "id": "gm06_dromiciops_gliroides",
+      "latin": "Dromiciops gliroides",
+      "name": "Monito del monte",
+      "previousDecision": "request_correction",
+      "userComment": "Corregir completo, no tiene detalles, no parece nada. Ser fidedigno a realidad.",
+      "rationale": "Redibujo completo: cuerpo pardo pequeño con pelaje, cara clara, grandes ojos rodeados de anillos oscuros, orejas redondeadas y manos de agarre. La cola está cubierta de pelo, salvo la pequeña superficie desnuda de agarre distal; no es una cola de roedor desnuda."
+    },
+    {
+      "id": "oc_esp_ornithorhynchus_anatinus",
+      "latin": "Ornithorhynchus anatinus",
+      "name": "Ornitorrinco",
+      "previousDecision": "request_correction",
+      "userComment": "Detallar cola de castor, diferenciar pico de cara, detalles en patas.",
+      "rationale": "Redibujo completo con cuerpo bajo y pelaje castaño, cola ancha aplanada con textura de pelo, pico gris de borde y narinas visibles separado de la cara, ojos pequeños y patas palmeadas con dedos y uñas."
+    },
+    {
+      "id": "oc_esp_dactylopsila_trivirgata",
+      "latin": "Dactylopsila trivirgata",
+      "name": "Zarigüeya listada",
+      "previousDecision": "request_correction",
+      "userComment": "Cuerpo alargado (muy circular)",
+      "rationale": "Se alarga el cuerpo en una postura de avance sobre la rama, en lugar del torso circular sentado. Se conservan las bandas longitudinales negras, el extremo claro de la cola y el dedo anterior alargado."
+    },
+    {
+      "id": "oc_esp_phalanger_orientalis",
+      "latin": "Phalanger orientalis",
+      "name": "Cuscús común",
+      "previousDecision": "approve",
+      "userComment": "Cuerpo alargado (muy circular)",
+      "rationale": "Se incorpora el comentario aunque la ficha estaba marcada aprobada: espalda y abdomen más alargados, con transición hacia el hombro. Se conservan cara corta, pelaje lanoso y cola prensil con zona distal desnuda."
+    },
+    {
+      "id": "oc_esp_spilocuscus_maculatus",
+      "latin": "Spilocuscus maculatus",
+      "name": "Cuscús moteado",
+      "previousDecision": "request_correction",
+      "userComment": "Cuerpo alargado (muy circular)",
+      "rationale": "Se alarga la espalda y se baja el perfil corporal, conservando la cabeza corta, ojos cálidos y cola prensil. Las manchas irregulares se recolocan dentro de la nueva silueta y las manos siguen sujetando el apoyo."
+    },
+    {
+      "id": "oc_esp_trichosurus_vulpecula",
+      "latin": "Trichosurus vulpecula",
+      "name": "Possum cola de cepillo",
+      "previousDecision": "request_correction",
+      "userComment": "Cuerpo alargado (muy circular)",
+      "rationale": "Se alarga el torso y se marca el hombro sin una forma circular. Se conservan orejas apuntadas, hocico más largo que el de los cuscús, pecho claro y cola oscura tupida."
+    },
+    {
+      "id": "oc_esp_phascolarctos_cinereus",
+      "latin": "Phascolarctos cinereus",
+      "name": "Koala",
+      "previousDecision": "request_correction",
+      "userComment": "Corregir completo, no tiene detalles, no parece nada. Ser fidedigno a realidad.",
+      "rationale": "Redibujo completo: cuerpo robusto con volumen y textura, orejas grandes de borde peludo, nariz negra alargada, mejillas claras y ojos diferenciados. Brazos y manos se aferran a la rama con dedos y garras visibles; no se añade cola."
+    }
+  ],
+  "preserveApproved": 20,
+  "approvalPolicy": "Los 12 dibujos corregidos vuelven a pendientes. Las otras 20 aprobaciones se conservan; no se integran al juego."
+}

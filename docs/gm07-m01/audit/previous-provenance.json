@@ -1,0 +1,9 @@
+{
+  "reference": "2e0535d",
+  "candidateBranch": "feat/gm07-homologacion-artistica",
+  "uncommitted": true,
+  "routesSha256": "42da90796f6bdbfa00af9966a87a443d238c224474623b4a4c7f7d7dfd0272d5",
+  "artSha256": "defa97c0dc37c9ecb32ab550a7be92db7092f83a7ee99fbce737c4f56faf5567",
+  "hookSha256": "3c244c024a2789666afce8be16f20664a299914210ecec34f8e031065eac122c",
+  "hookArchive": "reference/previous-world-hook.patch.gz"
+}

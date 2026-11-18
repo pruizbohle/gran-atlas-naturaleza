@@ -1,0 +1,29 @@
+{
+  "reference": "2e0535d",
+  "commit": "2e0535d149ff9fd574397b78dc09bba31d16f7f3",
+  "files": {
+    "www/js/app.js": "424c286f1fa2e91cc539d3ed1176b57e186e875e19501780f832229e54b4e047",
+    "www/js/abyssal-art-v3340.js": "3818765f845dde8c952daf146d73baf42909ee961147d48b1e82dbc08618cc2c",
+    "www/js/bird-art-v3193.js": "9475c214345fae86005eb18c1898ac201d31419d9b8d3948f2c43517581f1ef8",
+    "www/js/deep-art-v3330.js": "11df1cd9451746a513220007727cae48e41204d694b559fac5ae2ac355a35280",
+    "www/js/fish-art-v3191.js": "d1287aea496629827570cb2fdfdc3b9666c1b5a39a8b917af61b41da371cbd8c",
+    "www/js/herp-art-v3192.js": "a9d56f4e8d25fa00193e8fd0ffa63e310b1d0dfc6b0af135120c66fa2ff5b377",
+    "www/js/item-art-v3198.js": "74b42208616f3796c9f24379afdb4339904b6d6db937086b6735658a9a0a17f1",
+    "www/js/legendary-art-v3197.js": "885a75fea726c7c1ce08ce73b0322e17c55d7d2c266c54ceaa1c71e9e98ff3a3",
+    "www/js/mammal-art-v3194.js": "d05187cd87cc1c6fd51117690f9afcbc16fe16bc56723659eb529ec8316d709a",
+    "www/js/marine-art-v3320.js": "92a3bc5674483920875adc4c44cdc7d2c4b05f428f51f8368439870c9cd7bd2d",
+    "www/js/northamerica-art-v3220.js": "956997ff98a42be9ab83728f3e4d0f4f89383e9a454e00ac8188c2ede46ced6e",
+    "www/js/oceania-art-v3290.js": "7fa5a19711e57f4592525444d36b081456c1a41a1957da48f9e5002a3be8751e",
+    "www/js/polar-art-v3310.js": "e5c0a3fad6e9e1402a308bc70a122e15a8f44e02cf41e3e1591aea1f92890afd",
+    "www/js/relict-art-v3199.js": "cb4e4807595d56b240a5dca4d82d8ed712bf8abd48303dad031f645cea605e82",
+    "www/js/southamerica-art-v3230.js": "d0520fe625819e433cf5c7997565538da10e771f039cc4222a98c1104c0eef9a",
+    "www/js/gm06/art.js": "c68cdf8aa2015a89ae692897bc2c1b01fc0d91fd9fc23d57aa013bfd809e15a2"
+  },
+  "catalog": {
+    "species": 997,
+    "regions": 125,
+    "associations": 1829
+  },
+  "routes": 2813,
+  "duplicateGroups": 27
+}
