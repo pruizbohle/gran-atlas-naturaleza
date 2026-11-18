@@ -9,46 +9,63 @@
 .exceptional { --metal: #b48a3d; --highlight: #f4dc98; --rim: #725322; --mat: #f5e7bc; }
 .legendary { --metal: #526d5b; --highlight: #e6cb89; --rim: #263c33; --mat: #e8dbb6; }
 .atlas-art-frame {
-  --rail: clamp(3px, .55vw, 8px);
   position: relative;
   display: grid;
   place-items: center;
+  isolation: isolate;
+  box-sizing: border-box;
   width: min(100%, var(--art-size, 8rem));
   max-height: 100%;
   aspect-ratio: 1;
-  padding: clamp(3px, .65vw, 10px);
-  color: var(--muted);
-  background: var(--mat);
-  border: 1px solid var(--rim);
-  box-shadow: inset 0 0 0 1px var(--highlight), inset 0 0 0 var(--rail) var(--metal), 0 2px 4px #29211728;
 }
-.atlas-art-frame::before {
-  content: "";
-  position: absolute;
-  inset: 1.4%;
-  border: 1px solid var(--highlight);
-  pointer-events: none;
-}
-.atlas-art-frame::after {
-  content: "";
+.atlas-art-frame > img { display: block; width: 100%; height: 100%; min-width: 0; object-fit: contain; }
+.atlas-art-frame > .atlas-art-image { position: relative; z-index: 1; }
+.atlas-art-frame > .atlas-art-landscape {
   position: absolute;
   inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(135deg, var(--highlight) 48%, transparent 50%) top left,
-    linear-gradient(225deg, var(--highlight) 48%, transparent 50%) top right,
-    linear-gradient(45deg, var(--highlight) 48%, transparent 50%) bottom left,
-    linear-gradient(315deg, var(--highlight) 48%, transparent 50%) bottom right;
-  background-size: clamp(4px, 1vw, 10px) clamp(4px, 1vw, 10px);
-  background-repeat: no-repeat;
+  object-fit: cover;
+  opacity: .52;
+  border-radius: 12%;
+  mask-image: radial-gradient(ellipse at center, black 35%, #0008 62%, transparent 76%);
 }
-.atlas-art-frame.legendary::before { outline: 1px solid var(--rim); border-style: double; }
-.atlas-art-frame img { display: block; width: 100%; height: 100%; object-fit: contain; border: 1px solid var(--rim); }
-.atlas-art-frame span { text-align: center; font-size: .85rem; }
-
-.atlas-art-frame.exceptional::before { border-style: solid double; }
-.atlas-art-frame.legendary::after { background-size: 11px 11px; }
-.atlas-art-frame.classic::after { content: none; }
+.atlas-art-journal.atlas-art-cutout {
+  background: radial-gradient(ellipse, #f9efd2 9%, #f2e6c355 58%, transparent 74%);
+}
+.atlas-art-museum.atlas-art-cutout {
+  background: radial-gradient(ellipse, #d8d3b9 5%, #b6b8a54d 55%, transparent 76%);
+}
+.atlas-art-cutout.notable { --halo: #a55f31c9; }
+.atlas-art-cutout.epic { --halo: #d9edf9f2; }
+.atlas-art-cutout.exceptional { --halo: #e6ad26ee; }
+.atlas-art-cutout:not(.classic) > .atlas-art-image {
+  filter: drop-shadow(0 0 1.4px var(--halo)) drop-shadow(0 0 3px var(--halo));
+}
+.atlas-art-cutout.legendary > .atlas-art-image {
+  filter: drop-shadow(0 0 1.2px #f5d990) drop-shadow(0 0 4px #198672) drop-shadow(0 0 5px #a87c2f8f);
+}
+/* An opaque legacy plate has no animal alpha. Indicate category separately during migration. */
+.atlas-art-opaque:not(.classic)::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: auto 4% 4% auto;
+  width: clamp(6px, .9vw, 10px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--metal);
+  box-shadow: 0 0 0 1px var(--highlight);
+}
+.atlas-art-opaque.legendary::after { background: #286c59; box-shadow: 0 0 0 2px #efce80; }
+.field-environment > .atlas-art-landscape {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: blur(1px) saturate(.75);
+  opacity: .76;
+}
+.field-stage[data-light="noche"] .field-environment > .atlas-art-landscape { filter: blur(1px) saturate(.68) brightness(.64); }
+.field-stage[data-light="atardecer"] .field-environment > .atlas-art-landscape { filter: blur(1px) saturate(.83) sepia(.16); }
 .field-animal-sprite .atlas-art-frame { --art-size: clamp(64px, 20vw, 134px); margin-inline: auto; }
 .field-actors-group .atlas-art-frame { --art-size: clamp(56px, 17vw, 104px); }
 .field-log-art { display: flex; gap: .45rem; margin-block: .35rem; }

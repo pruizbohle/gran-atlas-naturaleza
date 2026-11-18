@@ -36,18 +36,18 @@ try {
 }
 const percent = (migrationProgress.migrated * 100 / migrationProgress.total).toLocaleString('es-CL', { maximumFractionDigits: 2 });
 byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + migrationProgress.total +
-  ' especies migradas · ' + percent + ' %';
+  ' especies migradas · ' + percent + ' % · ' + migrationProgress.cutouts + ' de ' + migrationProgress.plates + ' láminas recortadas';
 for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
 updateFamilies();
 updateSpecies();
 for (const sp of mixedFieldSprites) mixedSvg.add(new Option(sp.name, sp.id));
 
-function illustration(sp, record, frame = 'Normal', resolution = 512, eager = false) {
-  const src = resolution === 512 ? record.src : record.src?.replace('plates/', 'plates/' + resolution + '/');
-  const label = text(sp.name + ' · ' + record.label);
-  return AtlasNaturalistArt.frame(src
-    ? '<img src="' + text(src) + '" width="' + resolution + '" height="' + resolution + '" loading="' + (eager ? 'eager' : 'lazy') + '" decoding="async" alt="' + label + '">'
-    : '<span>Lámina pendiente</span>', frame, 'plate');
+function illustration(sp, record, frame = 'Normal', resolution = 512, eager = false, surface = 'plain') {
+  const habitat = AtlasNaturalistArt.preferredHabitat(sp.habitats);
+  return AtlasNaturalistArt.render(sp.id, {
+    variant: record.key, category: frame, size: resolution, eager, alt: sp.name + ' · ' + record.label,
+    surface, habitat, region: sp.regions[0]?.id, classes: 'plate'
+  }, () => AtlasNaturalistArt.frame('<span>Lámina pendiente</span>', frame, 'plate'));
 }
 
 function figure(markup, caption) {
@@ -110,7 +110,10 @@ function gamePreview(sp) {
   const frame = category.value;
   const record = selectedPlate(sp, frame);
   const compact = mode === 'field' || mode === 'mixed';
-  const art = illustration(sp, record, frame, compact ? 128 : mode === 'journal' ? 256 : 512, compact);
+  const surface = compact ? 'field' : mode;
+  const art = illustration(sp, record, frame, compact ? 128 : mode === 'journal' ? 256 : 512, compact, surface);
+  const environment = compact ? AtlasNaturalistArt.landscape(
+    AtlasNaturalistArt.preferredHabitat(sp.habitats), sp.regions[0]?.id, true) : '';
   const title = '<h3>' + text(sp.name) + '</h3>';
   const latin = '<p class="latin">' + text(sp.latin) + '</p>';
   const occurrence = '<span class="specimen-label ' + frames[frame] + '">' + text(frame) + '</span>';
@@ -123,12 +126,12 @@ function gamePreview(sp) {
       { name: companion.name, image: companion.sprite, amount: 1 }
     ];
     return '<article class="mixed-field" aria-label="Comparación de avistamiento mixto">' +
-      AtlasFieldUI.encounter({ entries, reward: '3 avistamientos' }) +
+      environment + AtlasFieldUI.encounter({ entries, reward: '3 avistamientos' }) +
       '<p>' + text(sp.name + (record.src ? ' · WebP' : ' · SVG de respaldo') + ' / ' + companion.name + ' · SVG') + '</p></article>';
   }
   if (mode === 'field') {
     return '<article class="field-card"><header>' + text(zone?.name || 'Avistamiento') + '</header>' +
-      '<div class="encounter">' + art + '<div>' + title + occurrence +
+      '<div class="encounter">' + environment + art + '<div>' + title + occurrence +
       (record.key === 'normal' ? '' : variant) + '</div></div></article>';
   }
   if (mode === 'journal') {

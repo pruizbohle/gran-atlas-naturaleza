@@ -21,3 +21,7 @@ node scripts/check-naturalist-candidate.cjs
 La derivación requiere Pillow. Las pruebas de navegador requieren Playwright y Chromium. Tanto el juego como el laboratorio aprovechan la misma caché offline.
 
 Para incorporar Primates, amplía la clasificación zoológica del generador y añade las láminas exactas del catálogo. Los filtros de grupo y familia, el indicador de avance, el manifiesto de caché y el motor leen el inventario generado.
+
+## Capas naturalistas de la serie 4
+
+El laboratorio abre sin marco y cuenta las láminas recortadas. Marco clásico y contorno minimalista quedan disponibles como tratamientos comparativos. Usa paisajes compartidos de `landscapes/`; las nuevas ilustraciones deben incluir alfa real. [Criterios, recortes y mediciones](../../docs/serie4-capas/README.md)

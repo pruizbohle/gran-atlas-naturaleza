@@ -6,7 +6,7 @@ const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
 const { harness } = require('../tests/helpers/live-game.cjs');
 
-const baseline = process.env.ATLAS_BASELINE || 'b4857135fedf8ee027c9e1e4cd12926957ae381e';
+const baseline = process.env.ATLAS_BASELINE || '5aa6eb09a45ca91040b7e2f77bc4e90193d58f5a';
 const version = require('../package.json').version;
 const versionSlug = version.replaceAll('.', '');
 const mime = { html: 'text/html', js: 'text/javascript', css: 'text/css', webp: 'image/webp', png: 'image/png', svg: 'image/svg+xml' };
@@ -83,7 +83,7 @@ async function run() {
       }, { id, id2 });
       const startOld = performance.now();
       await openTab(page, 'field');
-      await page.locator('#fieldResult .field-animal-sprite svg').first().waitFor();
+      await page.locator('#fieldResult .atlas-art-image').first().evaluate(img => img.decode());
       const beforeMs = Math.round(performance.now() - startOld);
       const beforeHeap = await jsHeap(page);
 
@@ -112,20 +112,35 @@ async function run() {
       await mark.evaluate(img => img.decode());
       const afterMs = Math.round(performance.now() - startNew);
       const afterHeap = await jsHeap(updated);
+      assert.equal(await updated.locator('#fieldResult .atlas-art-cutout').count(), 1);
+      assert.equal(await updated.locator('.field-environment .landscape-bosque').count(), 1);
+      assert.equal(await mark.evaluate(img => getComputedStyle(img).filter.includes('drop-shadow')), true);
       assert.match(await mark.getAttribute('src'), /--albino\.webp$/);
       assert.equal(await updated.locator('#fieldResult .atlas-art-image').count(), 1);
       assert.equal(await updated.locator('#fieldResult .field-animal-sprite > svg').count(), 1);
       const imageBytes = await mark.evaluate(img => img.naturalWidth * img.naturalHeight * 4);
       assert.deepEqual(await updated.locator('#fieldResult .encounter-multiplier').allTextContents(), ['×3', '×2']);
       assert.equal(await updated.locator('#fieldLog .atlas-art-image').count(), 1);
+      await updated.locator('[data-action=toggle-field-filters]').click();
+      await updated.locator('[data-action=set-habitat][data-id=pradera]').click();
+      await updated.locator('.field-environment .landscape-pradera').evaluate(img => img.decode());
+      await updated.locator('[data-action=set-habitat][data-id=bosque]').click();
+      await updated.locator('.field-environment .landscape-bosque').evaluate(img => img.decode());
+      if (process.argv.includes('--write-evidence')) {
+        await updated.locator('.field-stage').screenshot({
+          path: 'docs/serie4-capas/campo-' + width + '.jpg', type: 'jpeg', quality: 85
+        });
+      }
+
 
       await openTab(updated, 'bestiary');
       await updated.locator('#b26-search').fill('Lutra lutra');
       const card = updated.locator('.b26-card:has(.atlas-art-image)').first();
-      await card.locator('img').evaluate(img => img.decode());
+      await card.locator('.atlas-art-image').evaluate(img => img.decode());
       await card.click();
-      await updated.locator('.b26-dialog img').evaluate(img => img.decode());
-      assert.match(await updated.locator('.b26-dialog img').getAttribute('src'), /plates\/nutria_europea--normal.webp$/);
+      await updated.locator('.b26-dialog .atlas-art-image').evaluate(img => img.decode());
+      assert.match(await updated.locator('.b26-dialog .atlas-art-image').getAttribute('src'), /plates\/nutria_europea--normal.webp$/);
+      await updated.locator('.b26-dialog .landscape-rio').evaluate(img => img.decode());
       await updated.locator('[data-action=b26-close]').click();
 
       await openTab(updated, 'museum');
@@ -141,7 +156,7 @@ async function run() {
       await journal.evaluate(img => img.decode());
       assert.equal(await updated.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
       if (process.argv.includes('--write-evidence')) {
-        await updated.screenshot({ path: 'docs/v420-naturalista/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
+        await updated.screenshot({ path: 'docs/serie4-capas/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
       }
 
       // Exercise the real automatic timer while deterministic rolls select a single repeatable WebP.
@@ -187,10 +202,11 @@ async function run() {
       await openTab(updated, 'field');
       await updated.locator('#fieldResult img.atlas-art-image').first().evaluate(img => img.decode());
       await updated.goto(url + 'naturalist-art/');
-      await updated.locator('.field-card img').evaluate(img => img.decode());
+      await updated.locator('.field-card .atlas-art-image').evaluate(img => img.decode());
+      await updated.locator('.field-card .atlas-art-landscape').evaluate(img => img.decode());
       assert.deepEqual(errors, []);
-      results.push({ width, fieldSvgMs: beforeMs, fieldWebPMs: afterMs, fieldSvgJSHeapBytes: beforeHeap, fieldWebpJSHeapBytes: afterHeap, exactSaveBackup: true,
-        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, spritesOffline: true, labOffline: true, errors });
+      results.push({ width, fieldBeforeMs: beforeMs, fieldWebPMs: afterMs, fieldBeforeJSHeapBytes: beforeHeap, fieldWebpJSHeapBytes: afterHeap, exactSaveBackup: true,
+        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, spritesOffline: true, labOffline: true, errors });
       await ctx.close();
     }
   } finally {

@@ -25,12 +25,24 @@ const families = new Set([
 ]);
 const categories = ['Normal', 'Notable', 'Épico', 'Excepcional', 'Legendario'];
 const assets = new Set();
+const cutouts = {};
+function hasAlpha(file) {
+  const bytes = fs.readFileSync(file);
+  switch (bytes.toString('ascii', 12, 16)) {
+    case 'VP8X': return Boolean(bytes[20] & 0x10);
+    case 'VP8L': return Boolean(bytes.readUInt32LE(21) & 0x10000000);
+    default: return false;
+  }
+}
 
 function plate(id, key, label) {
   const file = id + '--' + key + '.webp';
   const source = path.join(artDir, file);
   const exists = fs.existsSync(source);
-  if (exists) assets.add(file);
+  if (exists) {
+    assets.add(file);
+    if (hasAlpha(source)) cutouts[file] = true;
+  }
   return { key, label, src: exists ? 'plates/' + file : null, bytes: exists ? fs.statSync(source).size : 0 };
 }
 
@@ -96,6 +108,7 @@ const species = catalogEntries.flatMap(([id, sp]) => {
   return [{
     id, name: sp.name, latin: sp.latin, rarity: sp.rare || null, group, family,
     dimorphism: Boolean(audit.SEXUAL_DIMORPHISM[id]),
+    habitats: [...sp.habitats],
     regions: audit.REGIONS.filter(region => region.species.includes(id))
       .map(({ id, name, continent }) => ({ id, name, continent })),
     categories: categories.filter(label => label === 'Normal' || special.includes(label)),
@@ -111,7 +124,9 @@ for (const file of fs.readdirSync(artDir)) {
 }
 const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,
-  total: catalogEntries.length
+  total: catalogEntries.length,
+  cutouts: Object.keys(cutouts).length,
+  plates: assets.size
 };
 const mixedFieldSprites = ['ciervo_rojo', 'jabali', 'corzo_europeo'].map(id => {
   const sp = audit.SPECIES[id];
@@ -140,13 +155,16 @@ fs.writeFileSync(path.join(out, 'CATALOGO.md'), [
 const routes = Object.fromEntries(species.map(sp => [sp.id,
   Object.fromEntries(sp.records.filter(record => record.src)
     .map(record => [record.key, path.basename(record.src)]))]));
-const files = [...assets].sort().flatMap(file =>
+const landscapes = fs.readdirSync(path.join(out, 'landscapes')).filter(file => file.endsWith('.webp'))
+  .map(file => path.basename(file, '.webp')).sort();
+const animalFiles = [...assets].sort().flatMap(file =>
   ['', '64/', '128/', '256/'].map(size => 'naturalist-art/plates/' + size + file));
+const files = [...animalFiles, ...landscapes.map(key => 'naturalist-art/landscapes/' + key + '.webp')];
 for (const file of files) {
   if (!fs.existsSync('www/' + file)) throw Error('Falta derivado gráfico: ' + file);
 }
 fs.writeFileSync('www/js/naturalist-assets-v400.js',
-  'globalThis.AtlasNaturalistAssets = ' + JSON.stringify({ routes, files }, null, 2) + ';\n');
+  'globalThis.AtlasNaturalistAssets = ' + JSON.stringify({ routes, cutouts, landscapes, files }, null, 2) + ';\n');
 const records = species.flatMap(sp => sp.records);
 console.log(JSON.stringify({
   species: species.length,

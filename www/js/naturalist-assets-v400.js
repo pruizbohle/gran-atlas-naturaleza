@@ -531,6 +531,42 @@ globalThis.AtlasNaturalistAssets = {
       "melanico": "asia_esp_0534--melanico.webp"
     }
   },
+  "cutouts": {
+    "zorro_rojo--normal.webp": true,
+    "zorro_rojo--albino.webp": true,
+    "zorro_rojo--melanico.webp": true,
+    "zorro_rojo--ascua.webp": true,
+    "nutria_europea--normal.webp": true,
+    "nutria_europea--albino.webp": true,
+    "nutria_europea--melanico.webp": true,
+    "lobo_gris--normal.webp": true,
+    "lobo_gris--fenrir.webp": true,
+    "asia_esp_0402--normal.webp": true,
+    "asia_esp_0402--ambar.webp": true,
+    "asia_esp_0007--normal.webp": true,
+    "asia_esp_0007--albino.webp": true,
+    "asia_esp_0007--melanico.webp": true,
+    "oc_esp_osphranter_rufus--normal.webp": true,
+    "oc_esp_petauroides_volans--normal.webp": true
+  },
+  "landscapes": [
+    "arrecife",
+    "bosque",
+    "costa",
+    "desierto",
+    "humedal",
+    "matorral",
+    "montana",
+    "oceano",
+    "polar",
+    "pradera",
+    "profundidades",
+    "rio",
+    "sabana",
+    "selva",
+    "taiga",
+    "tundra"
+  ],
   "files": [
     "naturalist-art/plates/af_caracal--albino.webp",
     "naturalist-art/plates/64/af_caracal--albino.webp",
@@ -1511,6 +1547,22 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/zorro_rojo--normal.webp",
     "naturalist-art/plates/64/zorro_rojo--normal.webp",
     "naturalist-art/plates/128/zorro_rojo--normal.webp",
-    "naturalist-art/plates/256/zorro_rojo--normal.webp"
+    "naturalist-art/plates/256/zorro_rojo--normal.webp",
+    "naturalist-art/landscapes/arrecife.webp",
+    "naturalist-art/landscapes/bosque.webp",
+    "naturalist-art/landscapes/costa.webp",
+    "naturalist-art/landscapes/desierto.webp",
+    "naturalist-art/landscapes/humedal.webp",
+    "naturalist-art/landscapes/matorral.webp",
+    "naturalist-art/landscapes/montana.webp",
+    "naturalist-art/landscapes/oceano.webp",
+    "naturalist-art/landscapes/polar.webp",
+    "naturalist-art/landscapes/pradera.webp",
+    "naturalist-art/landscapes/profundidades.webp",
+    "naturalist-art/landscapes/rio.webp",
+    "naturalist-art/landscapes/sabana.webp",
+    "naturalist-art/landscapes/selva.webp",
+    "naturalist-art/landscapes/taiga.webp",
+    "naturalist-art/landscapes/tundra.webp"
   ]
 };

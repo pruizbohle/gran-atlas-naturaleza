@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../css/field-v3210.css">
   <link rel="stylesheet" href="lab.css">
   <script src="catalog.js" defer></script>
+  <script src="../js/naturalist-assets-v400.js" defer></script>
   <script src="../js/naturalist-art-v400.js" defer></script>
   <script src="../js/field-ui-v3210.js" defer></script>
   <script src="lab.js" defer></script>
@@ -17,7 +18,7 @@
     <div class="container">
       <p class="eyebrow">El Gran Atlas</p>
       <h1>Laboratorio naturalista</h1>
-      <p class="subtitle">Colección ilustrada · V4.2.0</p>
+      <p class="subtitle">Serie 4 · Capas naturalistas</p>
       <p id="migration-progress" class="migration-progress"></p>
       <a class="game-link" href="../index.html">Abrir el juego</a>
     </div>
@@ -46,9 +47,9 @@
         <label id="scale-plate-control" hidden>Lámina <select id="scale-plate"></select></label>
         <label>Presentación
           <select id="frame-style">
-            <option value="classic">Marco clásico</option>
+            <option value="bare">Sin marco · halos de categoría</option>
             <option value="outline">Contorno minimalista</option>
-            <option value="bare">Sin marco convencional</option>
+            <option value="classic">Comparar con el marco clásico</option>
           </select>
         </label>
         <label id="mixed-control" hidden>Compañero SVG <select id="mixed-svg"></select></label>
@@ -58,7 +59,7 @@
         </select></label>
         <button id="export" type="button" hidden>Exportar JSON</button>
       </div>
-      <div id="content" data-frame-style="classic"></div>
+      <div id="content" data-frame-style="bare"></div>
       <p id="status" role="status"></p>
     </section>
   </main>

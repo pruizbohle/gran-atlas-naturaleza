@@ -31,7 +31,7 @@ const server = http.createServer((req, res) => {
       page.on('response', response => { if (response.status() >= 400) errors.push(response.status() + ' ' + response.url()); });
       const start = performance.now();
       await page.goto(url);
-      await page.locator('.field-card img').evaluate(image => image.decode());
+      await page.locator('.field-card .atlas-art-image').evaluate(image => image.decode());
       const firstRender = Math.round(performance.now() - start);
       assert.equal(await page.locator('.encounter .plate').evaluate(plate => plate.offsetWidth), 88);
       for (const [mode, selector] of [['journal', '.journal-sheet'], ['bestiary', '.bestiary-entry'], ['museum', '.museum-entry']]) {
@@ -47,25 +47,41 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=mixed]').click();
       await page.locator('#species').selectOption('zorro_rojo');
       await page.locator('#category').selectOption('Notable');
-      await page.locator('.mixed-field img').evaluate(img => img.decode());
+      await page.locator('.mixed-field .atlas-art-image').evaluate(img => img.decode());
       assert.equal(await page.locator('.mixed-field .field-animal-sprite > svg').count(), 1);
       assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Ciervo rojo · SVG/);
       const art = page.locator('.mixed-field .plate');
-      const src = await art.locator('img').getAttribute('src');
-      const shadows = [];
+      const image = art.locator('.atlas-art-image');
+      const src = await image.getAttribute('src');
+      assert.equal(await page.locator('#content').getAttribute('data-frame-style'), 'bare');
+      assert.match(await art.getAttribute('class'), /atlas-art-cutout/);
+      assert.match(await page.locator('.mixed-field > .atlas-art-landscape').getAttribute('src'), /bosque\.webp$/);
+      const states = [];
       for (const style of ['classic','outline','bare']) {
         await page.locator('#frame-style').selectOption(style);
-        assert.equal(await art.locator('img').getAttribute('src'), src);
-        shadows.push(await art.evaluate(node => getComputedStyle(node).boxShadow));
+        assert.equal(await image.getAttribute('src'), src);
+        states.push(await art.evaluate(node => {
+          const css = getComputedStyle(node);
+          return [css.borderTopWidth, css.boxShadow, getComputedStyle(node.querySelector('.atlas-art-image')).filter].join('|');
+        }));
       }
-      assert.equal(new Set(shadows).size, 3);
-      await page.locator('#frame-style').selectOption('classic');
+      assert.equal(new Set(states).size, 3);
+      await page.locator('#category').selectOption('Normal');
+      assert.equal(await image.evaluate(img => getComputedStyle(img).filter), 'none');
+      await page.locator('[data-mode=bestiary]').click();
+      assert.equal(await page.locator('.bestiary-entry .atlas-art-landscape').count(), 1);
+      await page.locator('[data-mode=journal]').click();
+      assert.equal(await page.locator('.journal-sheet .atlas-art-landscape').count(), 0);
+      assert.equal(await page.locator('.journal-sheet .atlas-art-journal').count(), 1);
+      await page.locator('[data-mode=museum]').click();
+      assert.equal(await page.locator('.museum-entry .atlas-art-museum').count(), 1);
+      assert.equal(await page.locator('.museum-entry .atlas-art-landscape').count(), 0);
       await page.locator('#group').selectOption('');
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
       assert.equal(await page.locator('.gallery-card').count(), 142);
-      assert.match(await page.locator('#migration-progress').innerText(), /142 de 997/);
+      assert.match(await page.locator('#migration-progress').innerText(), /142 de 997.*láminas recortadas/);
       await page.locator('#group').selectOption('Carnívoros terrestres');
       assert.equal(await page.locator('.gallery-card').count(), 51);
       await page.locator('#family').selectOption('Hyaenidae');
@@ -126,6 +142,9 @@ const server = http.createServer((req, res) => {
       await first.scrollIntoViewIfNeeded();
       await first.evaluate(image => image.decode());
       assert.equal(await first.evaluate(image => image.naturalWidth), 256);
+      await page.locator('[data-mode=bestiary]').click();
+      await page.locator('#species').selectOption('zorro_rojo');
+      await page.locator('.bestiary-entry .atlas-art-landscape').evaluate(image => image.decode());
       await page.locator('[data-mode=review]').click();
       await page.locator('#species').selectOption('na_esp_didelphis_virginiana');
       assert.equal(await page.locator('#review-note').inputValue(), 'Revisar hocico y cola.');

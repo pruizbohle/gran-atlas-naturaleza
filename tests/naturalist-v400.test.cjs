@@ -146,5 +146,32 @@ test('terrestrial Carnivora covers the nine present families with only the confi
   assert.equal(total, 42);
   assert.ok(records.some(sp => sp.id === 'sa_esp_lontra_felina'));
   assert.ok(!records.some(sp => sp.latin.startsWith('Enhydra ')));
-  assert.deepEqual({ ...catalog.migrationProgress }, { migrated: 142, total: 997 });
+  assert.equal(catalog.migrationProgress.migrated, 142);
+  assert.equal(catalog.migrationProgress.total, 997);
+  assert.equal(catalog.migrationProgress.plates, 245);
+});
+
+test('biome library and transparent editions use module-specific layers and existing category routes', () => {
+  const assets = globalThis.AtlasNaturalistAssets;
+  const game = harness({}, null, { gameSource: source }).window.__atlasTest;
+  assert.equal(assets.landscapes.length, 16);
+  for (const region of game.REGIONS) for (const habitat of region.habitats) {
+    assert.ok(assets.landscapes.includes(art.landscapeKey(habitat, region.id)), region.id + ' / ' + habitat);
+  }
+  assert.equal(art.landscapeKey('bosque', 'HX-01-09'), 'bosque');
+  assert.equal(art.landscapeKey('bosque', 'HX-02-03'), 'taiga');
+  assert.equal(art.landscapeKey('bosque', 'sa_amazonia'), 'selva');
+  assert.match(art.landscape('rio', 'HX-01-09', true), /loading="eager".*rio.webp/);
+  assert.equal(art.landscape('__proto__', ''), '');
+  assert.ok(assets.cutouts['nutria_europea--albino.webp']);
+  const fallback = () => '<svg></svg>';
+  const options = { variant: 'albino', habitat: 'rio', category: 'Notable' };
+  const bestiary = art.render('nutria_europea', { ...options, surface: 'bestiary' }, fallback);
+  assert.match(bestiary, /notable atlas-art-bestiary atlas-art-cutout/);
+  assert.match(bestiary, /landscapes\/rio.webp[\s\S]*plates\/128\/nutria_europea--albino.webp/);
+  for (const surface of ['field', 'journal', 'museum']) {
+    const output = art.render('nutria_europea', { ...options, surface }, fallback);
+    assert.match(output, /plates\/128\/nutria_europea--albino.webp/);
+    assert.doesNotMatch(output, /atlas-art-landscape/);
+  }
 });

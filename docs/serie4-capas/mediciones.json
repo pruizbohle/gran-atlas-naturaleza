@@ -1,0 +1,91 @@
+{
+  "approvedCutouts": 16,
+  "allPlates": 245,
+  "sourcePixelsPreserved": true,
+  "beforeBytes": 1350876,
+  "afterBytes": 2308166,
+  "landscapes": 16,
+  "landscapeBytes": 417488,
+  "plates": [
+    {
+      "plate": "asia_esp_0007--albino",
+      "beforeBytes": 69354,
+      "afterBytes": 121706
+    },
+    {
+      "plate": "asia_esp_0007--melanico",
+      "beforeBytes": 72430,
+      "afterBytes": 110856
+    },
+    {
+      "plate": "asia_esp_0007--normal",
+      "beforeBytes": 81998,
+      "afterBytes": 125936
+    },
+    {
+      "plate": "asia_esp_0402--ambar",
+      "beforeBytes": 133528,
+      "afterBytes": 184638
+    },
+    {
+      "plate": "asia_esp_0402--normal",
+      "beforeBytes": 112300,
+      "afterBytes": 185402
+    },
+    {
+      "plate": "lobo_gris--fenrir",
+      "beforeBytes": 71342,
+      "afterBytes": 154016
+    },
+    {
+      "plate": "lobo_gris--normal",
+      "beforeBytes": 84880,
+      "afterBytes": 165568
+    },
+    {
+      "plate": "nutria_europea--albino",
+      "beforeBytes": 69090,
+      "afterBytes": 114604
+    },
+    {
+      "plate": "nutria_europea--melanico",
+      "beforeBytes": 72686,
+      "afterBytes": 110396
+    },
+    {
+      "plate": "nutria_europea--normal",
+      "beforeBytes": 84942,
+      "afterBytes": 118586
+    },
+    {
+      "plate": "oc_esp_osphranter_rufus--normal",
+      "beforeBytes": 115114,
+      "afterBytes": 160054
+    },
+    {
+      "plate": "oc_esp_petauroides_volans--normal",
+      "beforeBytes": 120004,
+      "afterBytes": 216194
+    },
+    {
+      "plate": "zorro_rojo--albino",
+      "beforeBytes": 49324,
+      "afterBytes": 122218
+    },
+    {
+      "plate": "zorro_rojo--ascua",
+      "beforeBytes": 69872,
+      "afterBytes": 162890
+    },
+    {
+      "plate": "zorro_rojo--melanico",
+      "beforeBytes": 61866,
+      "afterBytes": 119182
+    },
+    {
+      "plate": "zorro_rojo--normal",
+      "beforeBytes": 82146,
+      "afterBytes": 135920
+    }
+  ]
+}

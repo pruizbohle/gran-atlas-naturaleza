@@ -1884,14 +1884,17 @@ function specimenMarkup(id,variant='',category='',sex=null){
  return category&&SPECIMEN_LEVELS[category]&&variantToSkin(variant)!==SPECIMEN_LEVELS[category].skin?decorateSpecimen(svg,category):svg;
 }
 // Presentation adapter for discovered animals. Stored encounter markup stays SVG.
-function animalMarkup(id,{variant='',category='',sex=null,size=128,eager=false}={}){
+function animalMarkup(id,{variant='',category='',sex=null,size=128,eager=false,surface='plain'}={}){
  const skin=variantToSkin(variant);
  const frame=category||Object.keys(SPECIMEN_LEVELS).find(name=>SPECIMEN_LEVELS[name].skin===skin)||'Normal';
  const key=frame==='Legendario'?'legendario':
   (skin==='normal'&&SEXUAL_DIMORPHISM[id]&&(sex==='male'||sex==='female'))?sex:
   (skin==='albino'||skin==='melanico')?skin:'normal';
  const fallback=()=>specimenMarkup(id,variant,category,sex);
- return globalThis.AtlasNaturalistArt?.render(id,{variant:key,category:frame,size,eager},fallback)??fallback();
+ const graphics=globalThis.AtlasNaturalistArt;
+ const habitat=surface==='bestiary'?graphics?.preferredHabitat(SPECIES[id]?.habitats||[]):'';
+ const region=habitat==='bosque'?REGIONS.find(zone=>zone.species.includes(id)&&zone.habitats.includes(habitat))?.id:undefined;
+ return graphics?.render(id,{variant:key,category:frame,size,eager,surface,habitat,region},fallback)??fallback();
 }
 function decorateSpecimen(svg,category){
  const level=SPECIMEN_LEVELS[category];if(!level)return svg;
@@ -3245,7 +3248,7 @@ function fieldBackdropMarkup(habitat){return globalThis.AtlasFieldScene.render(h
 function fieldEncounterModel(last){
  const entries=(Array.isArray(last?.entries)?last.entries:[]).filter(e=>SPECIES[e.id]).slice(0,3).map((e,index)=>{
   const individual=(e.category==='Legendario'||e.variant==='Legendario')?legendaryForSpecies(e.id):null;
-  return {...e,name:(individual?individual.name+' — ':'')+visibleName(e.id),image:animalMarkup(e.id,{variant:e.variant,category:e.category,sex:e.sex,eager:true}),amount:Number(e.amount)||1,sexLabel:e.sex==='male'?'macho':'hembra',sexNew:!!(index===0&&e.sex&&last?.subtitle?.includes('primera observación'))};
+  return {...e,name:(individual?individual.name+' — ':'')+visibleName(e.id),image:animalMarkup(e.id,{variant:e.variant,category:e.category,sex:e.sex,eager:true,surface:'field'}),amount:Number(e.amount)||1,sexLabel:e.sex==='male'?'macho':'hembra',sexNew:!!(index===0&&e.sex&&last?.subtitle?.includes('primera observación'))};
  });
  if(!entries.length&&last?.species&&SPECIES[last.species])entries.push({id:last.species,name:visibleName(last.species),image:last.sprite||animalMarkup(last.species,{eager:true}),amount:1});
  const knowledge=(last?.subtitle||'').match(/\+\d+ conocimiento/),money=(last?.subtitle||'').match(/\+£\d+/),sample=(last?.subtitle||'').match(/muestra obtenida: ([^,·]+)/);
@@ -3277,7 +3280,7 @@ function fieldLogMarkup(){
 }
 function fieldViewModel(){
  const region=currentRegion();
- return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),progress:fieldProgressModel(),auto:fieldAutomaticModel(),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(),logHTML:fieldLogMarkup(),toolsHTML:'<div class="helper-row"><button class="btn gold" data-action="field-aid" data-id="knowledge">+500 conocimiento</button><button class="btn gold" data-action="field-aid" data-id="sightings">+50 avistamientos</button><button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button></div>',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
+ return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:globalThis.AtlasNaturalistArt?.landscape(state.habitat,region.id,true)||fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),progress:fieldProgressModel(),auto:fieldAutomaticModel(),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(),logHTML:fieldLogMarkup(),toolsHTML:'<div class="helper-row"><button class="btn gold" data-action="field-aid" data-id="knowledge">+500 conocimiento</button><button class="btn gold" data-action="field-aid" data-id="sightings">+50 avistamientos</button><button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button></div>',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
 }
 function renderField(){return globalThis.AtlasFieldUI.render(fieldViewModel());}
 function renderJournal(){
@@ -3322,7 +3325,7 @@ function renderJournal(){
       </aside>
       <section class="card journal-detail journal-sheet">
         <div class="journal-sheet-top"><span>ARCHIVO DEL NATURALISTA</span><span>FOLIO ${String(ids.indexOf(id)+1).padStart(3,'0')}</span></div>
-        <div class="journal-cover"><div class="journal-portrait"><div class="sprite-wrap">${isKnown?animalMarkup(id,{size:256}):'<div class="qmark">?</div>'}</div><span>ILUSTRACIÓN DE CAMPO</span></div><div class="journal-identity"><div class="journal-rarity">${rarityBadge(sp.rare)}</div><h2>${visibleName(id)}</h2><em>${visibleLatin(id)}</em><div class="journal-stage-label">Investigación · ${st} de 5 etapas</div></div></div>
+        <div class="journal-cover"><div class="journal-portrait"><div class="sprite-wrap">${isKnown?animalMarkup(id,{size:256,surface:'journal'}):'<div class="qmark">?</div>'}</div><span>ILUSTRACIÓN DE CAMPO</span></div><div class="journal-identity"><div class="journal-rarity">${rarityBadge(sp.rare)}</div><h2>${visibleName(id)}</h2><em>${visibleLatin(id)}</em><div class="journal-stage-label">Investigación · ${st} de 5 etapas</div></div></div>
         <section class="journal-research"><div class="journal-block-heading"><strong>✦ Progreso científico</strong><span>${Math.round(st/5*100)}%</span></div><div class="journal-stamps">${stamps}</div><div class="journal-track"><span style="width:${st/5*100}%"></span></div></section>
         <div class="journal-facts"><div><span>AVISTAMIENTOS</span><strong>${fmt(sight(id))}</strong></div><div><span>ALIMENTACIÓN</span><strong>${fmt(feed(id))}/10</strong></div><div><span>ESPECIALES</span><strong>${fmt(specials(id))}</strong></div><div><span>DIMORFISMO</span><strong>${sp.dimorphism?dimorphismProgress(id)+'/2':'—'}</strong></div></div>
         <section class="journal-collection"><div class="journal-block-heading"><strong>◈ Variantes observadas</strong></div><div class="journal-variants">${specialBadges(id)}</div></section>
@@ -3349,7 +3352,7 @@ function journalViewModel3250(detailOnly=false){
  if(journalSortMode==='sightings')items.sort((a,b)=>b.sightings-a.sightings||a.slot-b.slot);
  const foundVariants=specialBadges(id).replace(/<div class="variant-card unknown">[\s\S]*?<\/div><\/div><div class="small">[\s\S]*?<\/div><\/div>/g,'');
  const observedVariants=foundVariants.includes('variant-card seen')?foundVariants.replaceAll(sp.name,visibleName(id)):'';
- return {region:currentRegion().name,identified:regionIdentifiedCount(state.currentRegion),query:journalRailQuery,sort:journalSortMode,items,money:fmt(state.money),knowledge:fmt(state.knowledge),selected:{...items.find(p=>p.slot===ids.indexOf(id)),sprite:state.discovered[id]?animalMarkup(id,{size:256}):'',name:visibleName(id),latin:visibleLatin(id),rarity:sp.rare,next,published:!!state.published[id],food:feed(id),specials:specials(id),sexProgress:sp.dimorphism?dimorphismProgress(id)+'/2':'—',extraLabel:st===3?(sp.dimorphism?'Alimentación o sexos':'Alimentación'):'Espécimen especial',extraProgress:st===3?(sp.dimorphism?feed(id)+'/10 · '+dimorphismProgress(id)+'/2 sexos':feed(id)+'/10'):specials(id)+'/1',taxonomy:taxonomyText(id),habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',variants:observedVariants,sexes:SEXUAL_DIMORPHISM[id]?renderSexComparison(id):''}};
+ return {region:currentRegion().name,identified:regionIdentifiedCount(state.currentRegion),query:journalRailQuery,sort:journalSortMode,items,money:fmt(state.money),knowledge:fmt(state.knowledge),selected:{...items.find(p=>p.slot===ids.indexOf(id)),sprite:state.discovered[id]?animalMarkup(id,{size:256,surface:'journal'}):'',name:visibleName(id),latin:visibleLatin(id),rarity:sp.rare,next,published:!!state.published[id],food:feed(id),specials:specials(id),sexProgress:sp.dimorphism?dimorphismProgress(id)+'/2':'—',extraLabel:st===3?(sp.dimorphism?'Alimentación o sexos':'Alimentación'):'Espécimen especial',extraProgress:st===3?(sp.dimorphism?feed(id)+'/10 · '+dimorphismProgress(id)+'/2 sexos':feed(id)+'/10'):specials(id)+'/1',taxonomy:taxonomyText(id),habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',variants:observedVariants,sexes:SEXUAL_DIMORPHISM[id]?renderSexComparison(id):''}};
 }
 let journalRailScrollLeft3250=0,journalRailRegion3250='',journalRailSelection3250='';
 function refreshJournalSheet3250(){
@@ -4244,7 +4247,7 @@ function museumMaterials3270(requirements){return Object.entries(requirements||{
 function museumCanExhibit3270(id){return !!(SPECIES[id]&&stage(id)===5&&state.published[id]&&!state.museum.exhibits[id]&&Object.keys(state.museum.exhibits).length<museumCapacity()&&state.money>=exhibitPrice(id));}
 function museumAnimal3270(id){
  const sp=SPECIES[id],owned=!!state.museum.exhibits[id],token=museumToken3270('animal',id),available=museumCanExhibit3270(id),full=Object.keys(state.museum.exhibits).length>=museumCapacity();
- return {token,kind:'Muestra animal',name:visibleName(id),latin:visibleLatin(id),art:animalMarkup(id,{size:256}),owned,open:true,status:owned?'Actualmente expuesta':available?'Disponible para exponer':full?'Sin capacidad':'Recursos insuficientes',detail:`${sp.rare} · ${stage(id)}/5 · ${state.published[id]?'Monografía publicada':'Registro histórico'} · £${exhibitPrice(id)} · £${exhibitIncome(id).toFixed(2)}/s base`,description:'Las bonificaciones se aplican al ingreso total del Museo. Retirar una muestra no reembolsa su costo.',actions:owned?[{action:'remove-exhibit',token,label:'Retirar muestra',alt:true}]:[{action:'exhibit',token,label:'Exponer · £'+exhibitPrice(id),enabled:available}]};
+ return {token,kind:'Muestra animal',name:visibleName(id),latin:visibleLatin(id),art:animalMarkup(id,{size:256,surface:'museum'}),owned,open:true,status:owned?'Actualmente expuesta':available?'Disponible para exponer':full?'Sin capacidad':'Recursos insuficientes',detail:`${sp.rare} · ${stage(id)}/5 · ${state.published[id]?'Monografía publicada':'Registro histórico'} · £${exhibitPrice(id)} · £${exhibitIncome(id).toFixed(2)}/s base`,description:'Las bonificaciones se aplican al ingreso total del Museo. Retirar una muestra no reembolsa su costo.',actions:owned?[{action:'remove-exhibit',token,label:'Retirar muestra',alt:true}]:[{action:'exhibit',token,label:'Exponer · £'+exhibitPrice(id),enabled:available}]};
 }
 function museumRecipe3270(p){
  const owned=p.unique?!!state.museum.collections[p.id]:(state.inventory[p.id]||0)>0,displayed=!!(p.unique&&owned&&museumIsDisplayed('collection',p.id)),token=museumToken3270('recipe',p.id),ready=museumAssemblyReady(p);
@@ -4936,7 +4939,7 @@ function bestiaryQuery3260(){
 function bestiaryViewModel3260(){
  const query=bestiaryQuery3260(),pages=Math.max(1,Math.ceil(query.entries.length/BESTIARY_PAGE_SIZE));
  bestiaryPage=Math.max(0,Math.min(bestiaryPage,pages-1));
- const cards=query.entries.slice(bestiaryPage*BESTIARY_PAGE_SIZE,(bestiaryPage+1)*BESTIARY_PAGE_SIZE).map(p=>({slot:p.slot,name:p.name,latin:p.latin,stage:p.stage,sightings:p.sightings,discovered:p.discovered,published:p.discovered&&p.published,sprite:p.discovered?animalMarkup(p.id):''}));
+ const cards=query.entries.slice(bestiaryPage*BESTIARY_PAGE_SIZE,(bestiaryPage+1)*BESTIARY_PAGE_SIZE).map(p=>({slot:p.slot,name:p.name,latin:p.latin,stage:p.stage,sightings:p.sightings,discovered:p.discovered,published:p.discovered&&p.published,sprite:p.discovered?animalMarkup(p.id,{surface:'bestiary'}):''}));
  return {total:query.total,identified:identifiedCount(),matches:query.entries.length,page:bestiaryPage,pages,filters:query.filters,subgroups:query.subgroups,cards};
 }
 function changeBestiaryFilter3260(key,value){
@@ -4968,7 +4971,7 @@ function bestiaryObservedVariants3260(id){
 function bestiaryModalModel3260(id){
  if(!SPECIES[id]||!state.discovered[id])return null;
  const sp=SPECIES[id],st=stage(id),t=taxonomyInfo(id),sex=state.sexSeen[id]||{};
- return {name:visibleName(id),latin:visibleLatin(id),stage:st,sightings:sight(id),sprite:animalMarkup(id,{size:512}),rarity:sp.rare,group:st>=2?bestiaryTypeBucket(id):null,taxonomy:taxonomyText(id),food:feed(id),published:!!state.published[id],variants:bestiaryObservedVariants3260(id),sexes:SEXUAL_DIMORPHISM[id]&&(sex.male||sex.female)?[sex.male?'Macho observado':null,sex.female?'Hembra observada':null].filter(Boolean).join(' · '):'Sin registros de dimorfismo.',habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',regions:bestiaryDistribution3260(id),journalAvailable:currentRegion().species.includes(id)};
+ return {name:visibleName(id),latin:visibleLatin(id),stage:st,sightings:sight(id),sprite:animalMarkup(id,{size:512,surface:'bestiary'}),rarity:sp.rare,group:st>=2?bestiaryTypeBucket(id):null,taxonomy:taxonomyText(id),food:feed(id),published:!!state.published[id],variants:bestiaryObservedVariants3260(id),sexes:SEXUAL_DIMORPHISM[id]&&(sex.male||sex.female)?[sex.male?'Macho observado':null,sex.female?'Hembra observada':null].filter(Boolean).join(' · '):'Sin registros de dimorfismo.',habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',regions:bestiaryDistribution3260(id),journalAvailable:currentRegion().species.includes(id)};
 }
 function openBestiaryModal3260(slot,source){
  if(!Number.isInteger(slot)||slot<0)return;

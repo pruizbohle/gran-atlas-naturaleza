@@ -7,6 +7,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Pseudocheiridae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "selva"
+    ],
     "regions": [
       {
         "id": "oc_australia_oriental",
@@ -23,7 +27,7 @@ const catalog = [
         "key": "normal",
         "label": "Normal",
         "src": "plates/oc_esp_petauroides_volans--normal.webp",
-        "bytes": 92472
+        "bytes": 186944
       }
     ],
     "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" data-m01-species=\"oc_esp_petauroides_volans\" data-m01-family=\"Pseudocheiridae\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M37 88L90 76\" fill=\"none\" stroke=\"#716b56\" stroke-width=\"3.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M37 87L90 75\" fill=\"none\" stroke=\"#a3977a\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 61Q28 61 27 72Q24 83 13 86L8 88L11 90L7 93L12 94L10 96Q32 95 37 81Q43 73 48 73Z\" fill=\"#585e56\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M38 70Q31 82 17 91L13 92Q29 91 35 80L42 71Z\" fill=\"#7e8077\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g opacity=\".72\"><path d=\"M31 76l-1 5m-4 2-3 3m10-15-1 4m-9 13-5 3\" fill=\"none\" stroke=\"#c5c4b3\" stroke-width=\"0.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M37 61Q32 43 48 36Q64 29 74 44L77 66Q74 81 59 84Q42 85 37 72L35 69L38 67L35 64Z\" fill=\"#7e8077\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61 43Q74 43 73 61L71 76Q65 83 56 80L52 73L56 61Z\" fill=\"#c5c4b3\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M46 49Q49 61 60 68L53 79Q43 77 40 67L40 60Z\" fill=\"#585e56\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 53Q48 63 55 68L51 73L45 68Z\" fill=\"#888a81\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M48 71Q55 68 60 75L59 80L67 81L68 85L57 88L50 85L47 80Z\" fill=\"#585e56\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 84l-1 2m3-2-1 2m3-2-1 2\" fill=\"none\" stroke=\"#c5c4b3\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M48 41Q39 37 41 26L43 25L42 22L46 21L47 18Q57 18 60 29L58 39Z\" fill=\"#7e8077\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 32Q63 21 70 17L73 18L75 16L78 19L81 19Q87 28 79 40Z\" fill=\"#7e8077\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M46 34Q42 25 48 23Q55 21 56 31L53 36Z\" fill=\"#c5c4b3\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71 29Q69 21 75 21Q82 25 77 33Z\" fill=\"#c5c4b3\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M49 39Q57 31 69 34Q81 37 82 47L77 55Q66 60 55 53L50 49L48 46L51 44Z\" fill=\"#7e8077\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M55 39Q61 42 65 39L68 36L74 40L79 46L76 52L64 55L55 51Z\" fill=\"#ddd5bf\" stroke=\"none\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"58\" cy=\"42\" rx=\"2.1\" ry=\"2.6\" fill=\"#585e56\" stroke=\"none\" stroke-width=\"1.2\"/><ellipse cx=\"73\" cy=\"42\" rx=\"2.5\" ry=\"2.9\" fill=\"#585e56\" stroke=\"none\" stroke-width=\"1.2\"/><circle cx=\"58\" cy=\"42\" r=\"1.45\" fill=\"#202d29\"/><circle cx=\"57.7\" cy=\"41.65\" r=\"0.32\" fill=\"#faf4eb\"/><circle cx=\"73\" cy=\"42\" r=\"1.8\" fill=\"#202d29\"/><circle cx=\"72.7\" cy=\"41.65\" r=\"0.32\" fill=\"#faf4eb\"/><ellipse cx=\"69\" cy=\"48\" rx=\"2.3\" ry=\"1.6\" fill=\"#41483f\" stroke=\"none\" stroke-width=\"1.2\"/><path d=\"M69 50L69 52M66 53L71 52M53 49L58 50M76 50L81 48\" fill=\"none\" stroke=\"#585e56\" stroke-width=\"0.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 59Q78 61 77 69L79 76L85 77L87 81L82 84L75 81Q71 75 71 67Z\" fill=\"#7e8077\" stroke=\"#41483f\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M81 80l-1 2m3-2-1 2m3-2-1 2\" fill=\"none\" stroke=\"#ddd5bf\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g opacity=\".72\"><path d=\"M39 52l3-3m-3 9 3-3m-2 9 3-3M50 37l2-2M57 35l2-1M42 28l2 2M75 19l2 3M55 63l2 3M65 66l1 4M57 76l2 2\" fill=\"none\" stroke=\"#c5c4b3\" stroke-width=\"0.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
@@ -36,6 +40,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "selva",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "oc_nueva_guinea",
@@ -65,6 +73,9 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Thylacomyidae",
     "dimorphism": false,
+    "habitats": [
+      "desierto"
+    ],
     "regions": [
       {
         "id": "oc_desierto_australiano",
@@ -94,6 +105,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Myrmecobiidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "mediterraneo"
+    ],
     "regions": [
       {
         "id": "oc_australia_occidental",
@@ -123,6 +138,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Phalangeridae",
     "dimorphism": false,
+    "habitats": [
+      "selva",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "oc_nueva_guinea",
@@ -152,6 +171,9 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Microbiotheriidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "gm06_bosques",
@@ -183,6 +205,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "selva",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "oc_costa_nordeste_australiana",
@@ -212,6 +238,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "selva",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "oc_nueva_guinea",
@@ -241,6 +271,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-01-11",
@@ -286,6 +320,9 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Viverridae",
     "dimorphism": false,
+    "habitats": [
+      "selva"
+    ],
     "regions": [
       {
         "id": "HX-06-17",
@@ -321,6 +358,13 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "sabana",
+      "mediterraneo",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "oc_australia_occidental",
@@ -350,6 +394,13 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "sabana",
+      "mediterraneo",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "oc_tasmania",
@@ -390,6 +441,13 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "sabana",
+      "mediterraneo",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "oc_norte_tropical_australiano",
@@ -411,7 +469,7 @@ const catalog = [
         "key": "normal",
         "label": "Normal",
         "src": "plates/oc_esp_osphranter_rufus--normal.webp",
-        "bytes": 89692
+        "bytes": 134710
       },
       {
         "key": "albino",
@@ -430,6 +488,11 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "HX-03-15",
@@ -501,6 +564,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "pradera",
+      "estepa"
+    ],
     "regions": [
       {
         "id": "HX-07-10",
@@ -541,6 +608,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-03-09",
@@ -575,6 +646,11 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mephitidae",
     "dimorphism": false,
+    "habitats": [
+      "estepa",
+      "pradera",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "sa_patagonia_y_tierra_del_fuego",
@@ -604,6 +680,9 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "costa"
+    ],
     "regions": [
       {
         "id": "sa_patagonia_y_tierra_del_fuego",
@@ -638,6 +717,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Viverridae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana"
+    ],
     "regions": [
       {
         "id": "HX-08-11",
@@ -689,6 +772,9 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Viverridae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-05-17",
@@ -724,6 +810,11 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Procyonidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "selva",
+      "humedal"
+    ],
     "regions": [
       {
         "id": "HX-04-02",
@@ -763,6 +854,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-01-09",
@@ -808,6 +903,11 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "pradera",
+      "desierto",
+      "estepa"
+    ],
     "regions": [
       {
         "id": "HX-02-05",
@@ -854,6 +954,13 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana",
+      "pradera",
+      "tundra",
+      "estepa"
+    ],
     "regions": [
       {
         "id": "HX-04-15",
@@ -894,6 +1001,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Phalangeridae",
     "dimorphism": false,
+    "habitats": [
+      "selva",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "oc_nueva_guinea",
@@ -923,6 +1034,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Dasyuridae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "oc_tasmania",
@@ -952,6 +1067,12 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "sabana",
+      "pradera",
+      "desierto",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "oc_norte_tropical_australiano",
@@ -986,6 +1107,12 @@ const catalog = [
     "group": "Monotremas",
     "family": "Tachyglossidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "desierto",
+      "mediterraneo"
+    ],
     "regions": [
       {
         "id": "oc_costa_nordeste_australiana",
@@ -1035,6 +1162,11 @@ const catalog = [
     "group": "Monotremas",
     "family": "Tachyglossidae",
     "dimorphism": false,
+    "habitats": [
+      "selva",
+      "bosque",
+      "montana"
+    ],
     "regions": [
       {
         "id": "oc_nueva_guinea",
@@ -1064,6 +1196,11 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "HX-06-09",
@@ -1115,6 +1252,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Eupleridae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana"
+    ],
     "regions": [
       {
         "id": "HX-09-14",
@@ -1156,6 +1297,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-02-10",
@@ -1201,6 +1346,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-03-09",
@@ -1241,6 +1390,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "montana",
+      "estepa"
+    ],
     "regions": [
       {
         "id": "sa_andes_centrales",
@@ -1270,6 +1423,9 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "humedal"
+    ],
     "regions": [
       {
         "id": "HX-04-12",
@@ -1305,6 +1461,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "desierto",
+      "estepa"
+    ],
     "regions": [
       {
         "id": "HX-03-17",
@@ -1350,6 +1510,11 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "pradera",
+      "estepa",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "sa_pampas",
@@ -1384,6 +1549,9 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-08-11",
@@ -1424,6 +1592,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "selva"
+    ],
     "regions": [
       {
         "id": "HX-05-17",
@@ -1453,6 +1625,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana"
+    ],
     "regions": [
       {
         "id": "HX-06-16",
@@ -1493,6 +1669,12 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "selva",
+      "montana",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "sa_pampas",
@@ -1528,6 +1710,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana"
+    ],
     "regions": [
       {
         "id": "HX-06-08",
@@ -1563,6 +1749,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana"
+    ],
     "regions": [
       {
         "id": "HX-02-10",
@@ -1617,6 +1807,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "selva"
+    ],
     "regions": [
       {
         "id": "HX-05-16",
@@ -1651,6 +1845,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Viverridae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-02-12",
@@ -1691,6 +1889,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "rio"
+    ],
     "regions": [
       {
         "id": "HX-01-11",
@@ -1755,6 +1957,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "pradera",
+      "estepa"
+    ],
     "regions": [
       {
         "id": "HX-07-10",
@@ -1816,6 +2022,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Hyaenidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-07-10",
@@ -1877,6 +2087,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Hyaenidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-10-10",
@@ -1917,6 +2131,9 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Hyaenidae",
     "dimorphism": false,
+    "habitats": [
+      "estepa"
+    ],
     "regions": [
       {
         "id": "HX-04-16",
@@ -1957,6 +2174,11 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "rio",
+      "humedal",
+      "costa"
+    ],
     "regions": [
       {
         "id": "sa_patagonia_y_tierra_del_fuego",
@@ -1993,6 +2215,9 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-02-05",
@@ -2022,6 +2247,9 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-04-02",
@@ -2100,6 +2328,9 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-04-03",
@@ -2134,6 +2365,9 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Phascolarctidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "oc_australia_oriental",
@@ -2163,6 +2397,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": true,
+    "habitats": [
+      "pradera",
+      "estepa"
+    ],
     "regions": [
       {
         "id": "HX-07-10",
@@ -2232,6 +2470,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-07-10",
@@ -2298,6 +2540,13 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana",
+      "pradera",
+      "tundra",
+      "estepa"
+    ],
     "regions": [
       {
         "id": "HX-04-15",
@@ -2341,6 +2590,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "selva"
+    ],
     "regions": [
       {
         "id": "HX-05-17",
@@ -2381,6 +2634,11 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-03-13",
@@ -2436,6 +2694,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-07-10",
@@ -2492,6 +2754,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana"
+    ],
     "regions": [
       {
         "id": "HX-01-11",
@@ -2581,6 +2847,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "tundra"
+    ],
     "regions": [
       {
         "id": "HX-02-03",
@@ -2620,6 +2890,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana"
+    ],
     "regions": [
       {
         "id": "HX-02-12",
@@ -2654,6 +2928,9 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-02-04",
@@ -2689,6 +2966,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "sabana",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "sa_cerrado_brasileno",
@@ -2718,6 +2999,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-06-09",
@@ -2769,6 +3054,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-07-13",
@@ -2804,6 +3093,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-01-11",
@@ -2938,13 +3231,13 @@ const catalog = [
         "key": "normal",
         "label": "Normal",
         "src": "plates/lobo_gris--normal.webp",
-        "bytes": 66694
+        "bytes": 140258
       },
       {
         "key": "legendario",
         "label": "Fenrir",
         "src": "plates/lobo_gris--fenrir.webp",
-        "bytes": 55482
+        "bytes": 130450
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"wolf\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 49C17 47 10 54 9 64Q9 71 6 75Q13 79 21 73Q28 68 32 61Q23 64 21 59Q21 55 29 55Z\" fill=\"#b5b3a9\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#7f7d73\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#7f7d73\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 23 68 23Q74 24 76 35Z\" fill=\"#9d9b91\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 26 71 27L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 25 77 25Q83 26 85 36Z\" fill=\"#9d9b91\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 28 80 29L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M19 51C20 40 31.26 33 46.66 38.23Q57.95 33.6 67 37.9Q71 27 78 26Q85 26 87 36Q87 42 95 45Q98 47 97 51Q95 55 85 55Q80 54 77 51Q73 61 61 66.3Q46.66 71.77 26.13 67C18 65 16 59 19 51Z\" fill=\"#9d9b91\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#9d9b91\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#7f7d73\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#9d9b91\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#7f7d73\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-canis-lupus-normal-base-coat\"><path d=\"M19 51C20 40 31.26 33 46.66 38.23Q57.95 33.6 67 37.9Q71 27 78 26Q85 26 87 36Q87 42 95 45Q98 47 97 51Q95 55 85 55Q80 54 77 51Q73 61 61 66.3Q46.66 71.77 26.13 67C18 65 16 59 19 51Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-canis-lupus-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#b5b3a9\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#7f7d73\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
@@ -2957,6 +3250,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Herpestidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-07-10",
@@ -2997,6 +3294,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Herpestidae",
     "dimorphism": false,
+    "habitats": [
+      "pradera",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-07-10",
@@ -3042,6 +3343,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "estepa",
+      "montana"
+    ],
     "regions": [
       {
         "id": "HX-04-13",
@@ -3077,6 +3382,11 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Procyonidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "selva",
+      "humedal"
+    ],
     "regions": [
       {
         "id": "HX-03-02",
@@ -3122,6 +3432,11 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Procyonidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "selva",
+      "humedal"
+    ],
     "regions": [
       {
         "id": "HX-04-03",
@@ -3151,6 +3466,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-02-03",
@@ -3185,6 +3504,9 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-02-13",
@@ -3234,6 +3556,13 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana",
+      "pradera",
+      "estepa",
+      "tundra"
+    ],
     "regions": [
       {
         "id": "HX-04-15",
@@ -3274,6 +3603,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-01-11",
@@ -3319,6 +3652,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Herpestidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "rio"
+    ],
     "regions": [
       {
         "id": "HX-02-12",
@@ -3353,6 +3690,9 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Dasyuridae",
     "dimorphism": false,
+    "habitats": [
+      "desierto"
+    ],
     "regions": [
       {
         "id": "oc_desierto_australiano",
@@ -3382,6 +3722,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "rio",
+      "humedal"
+    ],
     "regions": [
       {
         "id": "HX-09-11",
@@ -3417,6 +3761,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "rio",
+      "costa"
+    ],
     "regions": [
       {
         "id": "HX-02-02",
@@ -3467,6 +3815,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "rio",
+      "costa"
+    ],
     "regions": [
       {
         "id": "HX-01-09",
@@ -3493,19 +3845,19 @@ const catalog = [
         "key": "normal",
         "label": "Normal",
         "src": "plates/nutria_europea--normal.webp",
-        "bytes": 63328
+        "bytes": 99750
       },
       {
         "key": "albino",
         "label": "Albino",
         "src": "plates/nutria_europea--albino.webp",
-        "bytes": 50324
+        "bytes": 97150
       },
       {
         "key": "melanico",
         "label": "Melánico",
         "src": "plates/nutria_europea--melanico.webp",
-        "bytes": 52302
+        "bytes": 92544
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"otter\" data-mammal-morph=\"river-otter\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M29 61Q14 64 5 82Q4 87 10 86Q20 75 37 71Z\" fill=\"#5d3d1b\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 56Q30 43 50 47L62.78 44.26Q64 44 64.52 42.86Q69 33 80 36Q93 39 94 51L97.31 55.96Q98 57 97.12 57.88L93.88 61.12Q93 62 91.75 62L82.25 62Q81 62 79.91 61.39L73.09 57.61Q72 57 71.27 58.01Q59 75 41 74L28.2 70.34Q27 70 25.94 69.34Q19 65 24 56Z\" fill=\"#7b5b39\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M34 63Q27 67 29 74L20 80Q18 83 24 84L38 79L45 67Z\" fill=\"#7b5b39\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 61Q65 72 74 76L86 79Q92 77 87 74L78 69L76 59Z\" fill=\"#7b5b39\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 42C68 36 83 33 82 42Z\" fill=\"#7b5b39\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M75 40Q72 39 77 40L79 40Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M82 42C77 37 92 34 91 42Z\" fill=\"#7b5b39\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M84 40Q81 40 86 41L88 40Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><path d=\"M75 49Q85 47 93 54L97 57L90 61L78 59Z\" fill=\"#937351\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"86\" cy=\"45\" r=\"1.9200000000000002\" fill=\"#937351\"/><circle cx=\"86\" cy=\"45\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"86.45\" cy=\"44.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><circle cx=\"96\" cy=\"55\" r=\"1.8\" fill=\"#39382f\"/><path d=\"M85 58L93 64M82 56L96 57M28 80L23 78M82 76L84 80\" fill=\"none\" stroke=\"#6e4e2c\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
@@ -3518,6 +3870,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "rio",
+      "humedal"
+    ],
     "regions": [
       {
         "id": "sa_amazonia",
@@ -3552,6 +3908,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "humedal",
+      "rio"
+    ],
     "regions": [
       {
         "id": "HX-04-12",
@@ -3587,6 +3947,9 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-04-03",
@@ -3621,6 +3984,9 @@ const catalog = [
     "group": "Monotremas",
     "family": "Ornithorhynchidae",
     "dimorphism": false,
+    "habitats": [
+      "rio"
+    ],
     "regions": [
       {
         "id": "oc_costa_nordeste_australiana",
@@ -3660,6 +4026,9 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Ursidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-05-16",
@@ -3695,6 +4064,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Ursidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana"
+    ],
     "regions": [
       {
         "id": "sa_andes_del_norte",
@@ -3725,6 +4098,9 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Ursidae",
     "dimorphism": false,
+    "habitats": [
+      "selva"
+    ],
     "regions": [
       {
         "id": "HX-06-17",
@@ -3754,6 +4130,9 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Ursidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-01-05",
@@ -3814,6 +4193,13 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Ursidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana",
+      "pradera",
+      "tundra",
+      "estepa"
+    ],
     "regions": [
       {
         "id": "HX-04-15",
@@ -3864,6 +4250,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Ursidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana"
+    ],
     "regions": [
       {
         "id": "HX-01-11",
@@ -3958,6 +4348,9 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Ursidae",
     "dimorphism": false,
+    "habitats": [
+      "banquisa_artica"
+    ],
     "regions": [
       {
         "id": "polar_hielo_artico_occidental",
@@ -4002,6 +4395,13 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "sabana",
+      "mediterraneo",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "oc_tasmania",
@@ -4031,6 +4431,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Ursidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "selva"
+    ],
     "regions": [
       {
         "id": "HX-05-17",
@@ -4060,6 +4464,13 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Ailuridae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana",
+      "pradera",
+      "estepa",
+      "tundra"
+    ],
     "regions": [
       {
         "id": "HX-04-15",
@@ -4076,19 +4487,19 @@ const catalog = [
         "key": "normal",
         "label": "Normal",
         "src": "plates/asia_esp_0007--normal.webp",
-        "bytes": 59400
+        "bytes": 107274
       },
       {
         "key": "albino",
         "label": "Albino",
         "src": "plates/asia_esp_0007--albino.webp",
-        "bytes": 49482
+        "bytes": 105348
       },
       {
         "key": "melanico",
         "label": "Melánico",
         "src": "plates/asia_esp_0007--melanico.webp",
-        "bytes": 50872
+        "bytes": 93130
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"red-panda\" data-mammal-morph=\"red-panda-ringed-tail\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g transform=\"translate(100 0) scale(-1 1)\"><path d=\"M38 58Q15 44 8 60Q3 77 16 83Q32 87 44 70Z\" fill=\"#cd9166\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 58C29 47 34 40 44 37Q49 32 52 25Q59 18 68 21Q80 25 80 35Q80 43 69 50Q74 57 72 66Q70 77 60 81Q43 88 32 77C26 70 27 64 33 58Z\" fill=\"#b5794e\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 64Q33 66 34 81L43 86L50 77L54 67Z\" fill=\"#975b30\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M62 62Q72 65 72 80L63 87L55 80L54 68Z\" fill=\"#975b30\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M52 27Q47 15 53 15Q59 16 61 27Z\" fill=\"#b5794e\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M54 25Q51 18 56 19L58 25Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M66 28Q61 17 67 17Q73 18 75 28Z\" fill=\"#b5794e\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M68 26Q65 20 70 21L72 26Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-ailurus-fulgens-normal-base-tail\"><path d=\"M38 58Q15 44 8 60Q3 77 16 83Q32 87 44 70Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-ailurus-fulgens-normal-base-tail)\"><path d=\"M12 53L10 69M21 52L18 78M31 57L28 81\" fill=\"none\" stroke=\"#975b30\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><path d=\"M53 27Q62 19 73 27L76 39L66 45L54 40Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M54 31L60 31L61 37L56 37ZM68 31L73 32L71 38L66 37Z\" fill=\"#975b30\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"58\" cy=\"32\" r=\"2.12\" fill=\"#cd9166\"/><circle cx=\"58\" cy=\"32\" r=\"1.8\" fill=\"#302e26\"/><circle cx=\"58.45\" cy=\"31.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><circle cx=\"70\" cy=\"33\" r=\"2.12\" fill=\"#cd9166\"/><circle cx=\"70\" cy=\"33\" r=\"1.8\" fill=\"#302e26\"/><circle cx=\"70.45\" cy=\"32.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><circle cx=\"65\" cy=\"40\" r=\"1.8\" fill=\"#39382f\"/><path d=\"M53 40L45 41M73 41L81 44\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
@@ -4101,6 +4512,11 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "selva",
+      "bosque",
+      "sabana"
+    ],
     "regions": [
       {
         "id": "sa_amazonia",
@@ -4135,6 +4551,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Petauridae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "selva"
+    ],
     "regions": [
       {
         "id": "oc_australia_oriental",
@@ -4164,6 +4584,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Phalangeridae",
     "dimorphism": false,
+    "habitats": [
+      "selva",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "oc_tasmania",
@@ -4198,6 +4622,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana"
+    ],
     "regions": [
       {
         "id": "HX-02-02",
@@ -4258,6 +4686,13 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "sabana",
+      "mediterraneo",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "oc_australia_occidental",
@@ -4287,6 +4722,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Dasyuridae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "oc_tasmania",
@@ -4316,6 +4755,12 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana",
+      "desierto",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-06-09",
@@ -4367,6 +4812,11 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Herpestidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "rio",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "HX-10-10",
@@ -4419,6 +4869,9 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-06-18",
@@ -4454,6 +4907,11 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "pradera",
+      "montana",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-04-02",
@@ -4483,6 +4941,9 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-06-16",
@@ -4518,6 +4979,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "rio"
+    ],
     "regions": [
       {
         "id": "HX-01-09",
@@ -4562,6 +5027,11 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "estepa",
+      "pradera",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-10-10",
@@ -4602,6 +5072,13 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "montana",
+      "pradera",
+      "tundra",
+      "estepa"
+    ],
     "regions": [
       {
         "id": "HX-03-16",
@@ -4636,7 +5113,7 @@ const catalog = [
         "key": "normal",
         "label": "Normal",
         "src": "plates/asia_esp_0402--normal.webp",
-        "bytes": 86012
+        "bytes": 160356
       },
       {
         "key": "albino",
@@ -4654,7 +5131,7 @@ const catalog = [
         "key": "legendario",
         "label": "Ámbar",
         "src": "plates/asia_esp_0402--ambar.webp",
-        "bytes": 101824
+        "bytes": 161946
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"felid\" data-mammal-morph=\"tiger\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M28 55C15 55 6 65 6 77C6 88 15 92 23 86Q28 82 23 80Q20 78 18 83Q10 88 11 77C12 68 20 64 30 64Z\" fill=\"#a36d2a\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 59C26.764 66 30 69 33 73Q36 76 32.8 80L32.8 79Q36 78 39.1 80Q41.1 82 38.1 82L32 82Q30 80 30.199999999999996 77L30.599999999999998 80Q30 74 28.92 70C34 69 40.236 65 40.236 61Z\" fill=\"#a36d2a\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 67C26.764 66 30 69 33 73Q36 76 32.8 80L32.8 79Q36 78 39.1 80Q41.1 82 38.1 82L32 82Q30 80 30.199999999999996 77L30.599999999999998 80Q30 74 28.92 70C34 69 40.236 65 40.236 61\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.074 57C70.074 64 74 69 74.7 72L73.8 80L73.8 79Q77 78 80.1 80Q82.1 82 79.1 82L71.6 82Q71 80 71.2 77L71.2 80L72 71Q70 67 76.926 59Z\" fill=\"#a36d2a\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.074 63C70.074 64 74 69 74.7 72L73.8 80L73.8 79Q77 78 80.1 80Q82.1 82 79.1 82L71.6 82Q71 80 71.2 77L71.2 80L72 71Q70 67 76.926 59\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68 36C63 27 78 24 77 36Z\" fill=\"#c18b48\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M70 34Q67 30 72 31L74 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M77 37C72 29 87 26 86 37Z\" fill=\"#c18b48\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M79 35Q76 32 81 33L83 35Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M21 53C21 41 31 35 47 38Q59 35 67 40Q70 30 78 29Q87 28 90 39Q89 45 95 48Q98 52 94 55Q87 59 79 54Q76 62 66 67Q52 73 29 68C21 67 18 61 21 53Z\" fill=\"#c18b48\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 59C20.2 66 29 69 32 73Q35 76 24.8 80L24.8 82Q28 81 31.1 83Q33.1 85 30.1 85L24 85Q22 83 22.2 80L22.6 80Q29 74 27 70C29 69 36.8 65 36.8 61Z\" fill=\"#c18b48\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 67C20.2 66 29 69 32 73Q35 76 24.8 80L24.8 82Q28 81 31.1 83Q33.1 85 30.1 85L24 85Q22 83 22.2 80L22.6 80Q29 74 27 70C29 69 36.8 65 36.8 61\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M27.8 83L28.2 84.4M29.6 83L30 84.4\" fill=\"none\" stroke=\"#a36d2a\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.2 57C64.2 64 67 69 67.7 72L69.8 80L69.8 82Q73 81 76.1 83Q78.1 85 75.1 85L67.6 85Q67 83 67.2 80L67.2 80L65 71Q65 67 72.8 59Z\" fill=\"#c18b48\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.2 63C64.2 64 67 69 67.7 72L69.8 80L69.8 82Q73 81 76.1 83Q78.1 85 75.1 85L67.6 85Q67 83 67.2 80L67.2 80L65 71Q65 67 72.8 59\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 83L73.2 84.4M74.6 83L75 84.4\" fill=\"none\" stroke=\"#a36d2a\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-panthera-tigris-normal-base-coat\"><path d=\"M21 53C21 41 31 35 47 38Q59 35 67 40Q70 30 78 29Q87 28 90 39Q89 45 95 48Q98 52 94 55Q87 59 79 54Q76 62 66 67Q52 73 29 68C21 67 18 61 21 53Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-panthera-tigris-normal-base-coat)\"><path d=\"M76 46Q83 44 89 50L93 52L87 56L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 39L34 51L28 50M42 38L46 53L40 51M55 38L57 50L51 48M31 62L38 58M47 68L50 57M61 64L66 51M78 34L81 41M87 38L84 44\" fill=\"none\" stroke=\"#39382f\" stroke-width=\"3.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"83\" cy=\"40\" r=\"1.9200000000000002\" fill=\"#d9a360\"/><circle cx=\"83\" cy=\"40\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"83.45\" cy=\"39.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M86 51Q89 54 92 51M85 54L90 55\" fill=\"none\" stroke=\"#a36d2a\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"92\" cy=\"50\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
@@ -4667,6 +5144,10 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "selva",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "sa_andes_del_norte",
@@ -4707,6 +5188,9 @@ const catalog = [
     "group": "Felinos",
     "family": "Felidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-04-03",
@@ -4741,6 +5225,9 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "estepa"
+    ],
     "regions": [
       {
         "id": "HX-04-18",
@@ -4776,6 +5263,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-01-09",
@@ -4821,6 +5312,13 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "sabana",
+      "mediterraneo",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "oc_norte_tropical_australiano",
@@ -4850,6 +5348,13 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "sabana",
+      "mediterraneo",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "oc_tasmania",
@@ -4884,6 +5389,9 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "oc_australia_oriental",
@@ -4913,6 +5421,13 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "sabana",
+      "mediterraneo",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "oc_costa_nordeste_australiana",
@@ -4942,6 +5457,13 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Macropodidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "sabana",
+      "mediterraneo",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "oc_australia_occidental",
@@ -4971,6 +5493,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mustelidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-02-10",
@@ -5011,6 +5537,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Vombatidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "oc_tasmania",
@@ -5051,6 +5581,9 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Didelphidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-05-04",
@@ -5080,6 +5613,9 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Didelphidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-03-04",
@@ -5120,6 +5656,10 @@ const catalog = [
     "group": "Marsupiales",
     "family": "Petauridae",
     "dimorphism": false,
+    "habitats": [
+      "selva",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "oc_costa_nordeste_australiana",
@@ -5149,6 +5689,10 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mephitidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "desierto"
+    ],
     "regions": [
       {
         "id": "HX-03-03",
@@ -5183,6 +5727,11 @@ const catalog = [
     "group": "Carnívoros terrestres",
     "family": "Mephitidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "humedal"
+    ],
     "regions": [
       {
         "id": "HX-02-05",
@@ -5228,6 +5777,11 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "tundra"
+    ],
     "regions": [
       {
         "id": "HX-01-11",
@@ -5278,6 +5832,12 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "estepa",
+      "sabana"
+    ],
     "regions": [
       {
         "id": "sa_caribe_sudamericano",
@@ -5312,6 +5872,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "estepa",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-04-13",
@@ -5357,6 +5921,12 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "montana",
+      "estepa",
+      "pradera",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "sa_andes_centrales",
@@ -5396,6 +5966,9 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "gm06_bosques",
@@ -5425,6 +5998,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "selva",
+      "bosque"
+    ],
     "regions": [
       {
         "id": "sa_amazonia",
@@ -5454,6 +6031,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-03-17",
@@ -5494,6 +6075,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-11-08",
@@ -5529,6 +6114,9 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
     "regions": [
       {
         "id": "HX-03-04",
@@ -5558,6 +6146,9 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "desierto"
+    ],
     "regions": [
       {
         "id": "HX-03-05",
@@ -5587,6 +6178,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "estepa",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-10-10",
@@ -5627,6 +6222,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-07-08",
@@ -5668,6 +6267,12 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera",
+      "estepa",
+      "sabana"
+    ],
     "regions": [
       {
         "id": "sa_pampas",
@@ -5697,6 +6302,10 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "bosque",
+      "pradera"
+    ],
     "regions": [
       {
         "id": "HX-01-09",
@@ -5771,25 +6380,25 @@ const catalog = [
         "key": "normal",
         "label": "Normal",
         "src": "plates/zorro_rojo--normal.webp",
-        "bytes": 64724
+        "bytes": 115556
       },
       {
         "key": "albino",
         "label": "Albino",
         "src": "plates/zorro_rojo--albino.webp",
-        "bytes": 36212
+        "bytes": 104416
       },
       {
         "key": "melanico",
         "label": "Melánico",
         "src": "plates/zorro_rojo--melanico.webp",
-        "bytes": 44736
+        "bytes": 98632
       },
       {
         "key": "legendario",
         "label": "Ascua",
         "src": "plates/zorro_rojo--ascua.webp",
-        "bytes": 54978
+        "bytes": 144052
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"canid\" data-mammal-morph=\"fox\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M30 51C20 45 11 45 7 52Q1 63 8 73Q12 78 22 76Q30 73 34 65Q26 67 21 63Q17 57 30 59Z\" fill=\"#d59461\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 55C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57Z\" fill=\"#9f5e2b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29.764 63C26.764 62 35 68 38 72Q41 75 34.8 83L34.8 83Q38 82 41.1 84Q43.1 86 40.1 86L34 86Q32 84 32.199999999999996 81L32.599999999999994 83Q35 73 33.92 69C34 65 40.236 61 40.236 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 54C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56Z\" fill=\"#9f5e2b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M71.305 60C70.305 61 71 69 71.7 72L73.8 83L73.8 83Q77 82 80.1 84Q82.1 86 79.1 86L71.6 86Q71 84 71.2 81L71.2 83L69 71Q70 64 76.695 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 35Q62 23 68 23Q74 24 76 35Z\" fill=\"#bd7c49\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M69 33Q66 26 71 27L73 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 36Q71 25 77 25Q83 26 85 36Z\" fill=\"#bd7c49\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M78 34Q75 28 80 29L82 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#bd7c49\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 55C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57Z\" fill=\"#bd7c49\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23.2 63C20.2 62 34 68 37 72Q40 75 26.8 83L26.8 86Q30 85 33.1 87Q35.1 89 32.1 89L26 89Q24 87 24.2 84L24.6 83Q34 73 32 69C29 65 36.8 61 36.8 57\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.8 87L30.2 88.4M31.6 87L32 88.4\" fill=\"none\" stroke=\"#9f5e2b\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M65.5 54C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56Z\" fill=\"#bd7c49\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65.5 60C64.5 61 64 69 64.7 72L69.8 83L69.8 86Q73 85 76.1 87Q78.1 89 75.1 89L67.6 89Q67 87 67.2 84L67.2 83L62 71Q65 64 72.5 56\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.8 87L73.2 88.4M74.6 87L75 88.4\" fill=\"none\" stroke=\"#9f5e2b\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-vulpes-vulpes-normal-base-coat\"><path d=\"M22 53C24 42 34 38 48 42Q59 37 68 41Q71 30 78 29Q84 29 86 39Q86 45 96 48Q100 50 96 53Q91 56 82 54Q78 53 76 50Q73 61 61 66Q45 71 29 67C21 65 19 60 22 53Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-vulpes-vulpes-normal-base-coat)\"><path d=\"M73 43L82 45L91 50L95 51L87 55L78 54Z\" fill=\"#e9e0cd\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 60L14 67\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"82\" cy=\"38\" r=\"1.9200000000000002\" fill=\"#d59461\"/><circle cx=\"82\" cy=\"38\" r=\"1.6\" fill=\"#302e26\"/><circle cx=\"82.45\" cy=\"37.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#9f5e2b\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><circle cx=\"95\" cy=\"49\" r=\"1.8\" fill=\"#39382f\"/></g></g></svg>"
@@ -5802,6 +6411,9 @@ const catalog = [
     "group": "Cánidos",
     "family": "Canidae",
     "dimorphism": false,
+    "habitats": [
+      "montana"
+    ],
     "regions": [
       {
         "id": "HX-04-17",
@@ -5847,4 +6459,4 @@ const mixedFieldSprites = [
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"deer\" data-mammal-morph=\"roe\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M25 49Q16 47 12 52Q13 57 23 57L29 54Z\" fill=\"#d7a35f\" stroke=\"#47483f\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32.1972 57C29.197200000000002 64 35 67 38 71Q41 74 35.5 83L35.5 83Q38 82 39.8 84Q41.8 86 38.8 86L34 86Q32 84 32.9 81L33.3 83Q35 72 34.844 68C34 67 37.8028 63 37.8028 59Z\" fill=\"#a16d29\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32.1972 65C29.197200000000002 64 35 67 38 71Q41 74 35.5 83L35.5 83Q38 82 39.8 84Q41.8 86 38.8 86L34 86Q32 84 32.9 81L33.3 83Q35 72 34.844 68C34 67 37.8028 63 37.8028 59\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33.3 83Q38 82 39.8 84L39.3 86L33.3 86Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M37.2 84L36.8 86\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M74.0288 53C73.0288 60 72 69 72.7 72L74.5 84L74.5 84Q77 83 78.8 85Q80.8 87 77.8 87L72.3 87Q71 85 71.9 82L71.9 84L70 71Q72 63 77.9712 55Z\" fill=\"#a16d29\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M74.0288 59C73.0288 60 72 69 72.7 72L74.5 84L74.5 84Q77 83 78.8 85Q80.8 87 77.8 87L72.3 87Q71 85 71.9 82L71.9 84L70 71Q72 63 77.9712 55\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M72.3 84Q77 83 78.8 85L78.3 87L72.3 87Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M76.2 85L75.8 87\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M74 27L69 12M71 20L65 17M70 15L74 10M82 27L86 12M84 20L91 16\" fill=\"none\" stroke=\"#a39881\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 35Q61 25 67 25Q73 26 75 35Z\" fill=\"#bf8b47\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M68 33Q65 28 70 29L72 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M75 36Q70 27 76 27Q82 28 84 36Z\" fill=\"#bf8b47\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M77 34Q74 30 79 31L81 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M25.92 54C27.87 43 36.63 37 48.32 42.73Q57.08 44.43 64 41.2Q69 34.03 71 28Q76 23 82 27Q87 31 87 39Q88.82 43 93.36 45Q97 48 93.36 52Q88.82 56 81 52Q78 51 75 48Q72 63 63 68.77Q49.29 75.3 31.76 70C24.95 68 23 61 25.92 54Z\" fill=\"#bf8b47\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26.36 57C23.36 64 34 67 37 71Q40 74 27.5 83L27.5 86Q30 85 31.8 87Q33.8 89 30.8 89L26 89Q24 87 24.9 84L25.3 83Q34 72 33.2 68C29 67 33.64 63 33.64 59Z\" fill=\"#bf8b47\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26.36 65C23.36 64 34 67 37 71Q40 74 27.5 83L27.5 86Q30 85 31.8 87Q33.8 89 30.8 89L26 89Q24 87 24.9 84L25.3 83Q34 72 33.2 68C29 67 33.64 63 33.64 59\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25.3 86Q30 85 31.8 87L31.3 89L25.3 89Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.2 87L28.8 89\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M68.44 53C67.44 60 65 69 65.7 72L70.5 84L70.5 87Q73 86 74.8 88Q76.8 90 73.8 90L68.3 90Q67 88 67.9 85L67.9 84L63 71Q67 63 73.56 55Z\" fill=\"#bf8b47\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68.44 59C67.44 60 65 69 65.7 72L70.5 84L70.5 87Q73 86 74.8 88Q76.8 90 73.8 90L68.3 90Q67 88 67.9 85L67.9 84L63 71Q67 63 73.56 55\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68.3 87Q73 86 74.8 88L74.3 90L68.3 90Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.2 88L71.8 90\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-capreolus-capreolus-normal-base-coat\"><path d=\"M25.92 54C27.87 43 36.63 37 48.32 42.73Q57.08 44.43 64 41.2Q69 34.03 71 28Q76 23 82 27Q87 31 87 39Q88.82 43 93.36 45Q97 48 93.36 52Q88.82 56 81 52Q78 51 75 48Q72 63 63 68.77Q49.29 75.3 31.76 70C24.95 68 23 61 25.92 54Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-capreolus-capreolus-normal-base-coat)\"><path d=\"M27 61Q48 68 69 56L65 66L45 70L28 67Z\" fill=\"#d7a35f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"83\" cy=\"34\" r=\"1.82\" fill=\"#d7a35f\"/><circle cx=\"83\" cy=\"34\" r=\"1.5\" fill=\"#302e26\"/><circle cx=\"83.45\" cy=\"33.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M86 47Q90 50 93 47\" fill=\"none\" stroke=\"#a16d29\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
   }
 ];
-const migrationProgress = {"migrated":142,"total":997};
+const migrationProgress = {"migrated":142,"total":997,"cutouts":16,"plates":245};

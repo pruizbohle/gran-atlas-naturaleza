@@ -120,25 +120,18 @@ figcaption { padding: .4rem 0; }
 /* These comparison styles are limited to the laboratory. */
 #content[data-frame-style="outline"] .plate {
   background: var(--sheet);
-  border-color: var(--metal);
+  border: 1px solid var(--metal);
   padding: 2px;
   box-shadow: none;
 }
-#content:is([data-frame-style="outline"], [data-frame-style="bare"]) .plate::before,
-#content:is([data-frame-style="outline"], [data-frame-style="bare"]) .plate::after { content: none; }
+#content[data-frame-style="outline"] .plate::before,
+#content[data-frame-style="outline"] .plate::after { content: none; }
 #content:is([data-frame-style="outline"], [data-frame-style="bare"]) .plate img { border: 0; }
 #content[data-frame-style="bare"] .plate {
   padding: 0;
   border: 0;
   background: transparent;
   box-shadow: none;
-}
-#content[data-frame-style="bare"] .plate:not(.classic) {
-  border-radius: 4px;
-  box-shadow: 0 0 0 1px var(--metal), 0 0 10px 2px var(--metal);
-}
-#content[data-frame-style="bare"] .plate.legendary {
-  box-shadow: 0 0 0 1px var(--highlight), 0 0 12px 3px var(--metal);
 }
 .mixed-field { max-width: 620px; border: 1px solid var(--line); background: #e3e9d8; }
 .mixed-field .field-sighting { min-height: 255px; padding: 12px; }
@@ -150,3 +143,58 @@ figcaption { padding: .4rem 0; }
 .mixed-field .field-animal-sprite .plate { --art-size: 100%; }
 .mixed-field > p { padding: .45rem .8rem; color: var(--muted); font-size: .85rem; }
 .migration-progress { margin-top: .4rem; color: #fbedd2; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+#content[data-frame-style="classic"] .plate {
+  --rail: clamp(3px, .55vw, 8px);
+  padding: clamp(3px, .65vw, 10px);
+  color: var(--muted);
+  background: var(--mat);
+  border: 1px solid var(--rim);
+  box-shadow: inset 0 0 0 1px var(--highlight), inset 0 0 0 var(--rail) var(--metal), 0 2px 4px #29211728;
+}
+#content[data-frame-style="classic"] .plate::before {
+  content: "";
+  position: absolute;
+  inset: 1.4%;
+  border: 1px solid var(--highlight);
+  pointer-events: none;
+}
+#content[data-frame-style="classic"] .plate::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, var(--highlight) 48%, transparent 50%) top left,
+    linear-gradient(225deg, var(--highlight) 48%, transparent 50%) top right,
+    linear-gradient(45deg, var(--highlight) 48%, transparent 50%) bottom left,
+    linear-gradient(315deg, var(--highlight) 48%, transparent 50%) bottom right;
+  background-size: clamp(4px, 1vw, 10px) clamp(4px, 1vw, 10px);
+  background-repeat: no-repeat;
+}
+#content[data-frame-style="classic"] .plate.legendary::before { outline: 1px solid var(--rim); border-style: double; }
+#content[data-frame-style="classic"] .plate.exceptional::before { border-style: solid double; }
+#content[data-frame-style="classic"] .plate.legendary::after { background-size: 11px 11px; }
+#content[data-frame-style="classic"] .plate.classic::after { content: none; }
+
+#content[data-frame-style="classic"] .plate > .atlas-art-image { border: 1px solid var(--rim); }
+#content[data-frame-style="classic"] .plate > .atlas-art-landscape { opacity: 0; }
+#content[data-frame-style="classic"] .plate > .atlas-art-image { filter: none; }
+#content[data-frame-style="classic"] .plate.atlas-art-opaque { isolation: isolate; }
+#content[data-frame-style="classic"] .plate.atlas-art-opaque::after { display: block; }
+
+.mixed-field, .encounter { position: relative; isolation: isolate; }
+.mixed-field > .atlas-art-landscape, .encounter > .atlas-art-landscape {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .34;
+  filter: blur(1px);
+}
+#content[data-frame-style="classic"] .sample .plate,
+#content[data-frame-style="outline"] .sample .plate { padding: 0; border: 0; box-shadow: none; }
+#content .sample .plate::before, #content .sample .plate::after { content: none; }
+#content .sample .plate > .atlas-art-image { border: 0; }
