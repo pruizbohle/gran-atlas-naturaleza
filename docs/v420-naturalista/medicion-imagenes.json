@@ -1,0 +1,15 @@
+{
+  "canonica": 245,
+  "archivos": 980,
+  "previosIntactos": 608,
+  "bytesPorResolucion": {
+    "512": 16192976,
+    "64": 274504,
+    "128": 963192,
+    "256": 4091668
+  },
+  "totalBytes": 21522340,
+  "proyeccion997Normales": 100421533,
+  "proyeccion997ConVariantes": 151111077,
+  "segundosEntrePrimeraYUltimaSalida": 563
+}

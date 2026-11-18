@@ -6,7 +6,7 @@ const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
 const { harness } = require('../tests/helpers/live-game.cjs');
 
-const baseline = process.env.ATLAS_BASELINE || 'd906224533559193e87704fa44471ea73d4069c9';
+const baseline = process.env.ATLAS_BASELINE || 'b4857135fedf8ee027c9e1e4cd12926957ae381e';
 const version = require('../package.json').version;
 const versionSlug = version.replaceAll('.', '');
 const mime = { html: 'text/html', js: 'text/javascript', css: 'text/css', webp: 'image/webp', png: 'image/png', svg: 'image/svg+xml' };
@@ -42,7 +42,7 @@ async function run() {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const url = 'http://127.0.0.1:' + server.address().port + '/';
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
-  const id = 'zorro_rojo';
+  const id = 'nutria_europea';
   const id2 = 'ciervo_rojo';
   const britishSpecies = harness().window.__atlasTest.REGIONS.find(region => region.id === 'HX-01-09').species;
   const tabs = name => '.tab[data-tab="' + name + '"]';
@@ -120,12 +120,12 @@ async function run() {
       assert.equal(await updated.locator('#fieldLog .atlas-art-image').count(), 1);
 
       await openTab(updated, 'bestiary');
-      await updated.locator('#b26-search').fill('Vulpes vulpes');
+      await updated.locator('#b26-search').fill('Lutra lutra');
       const card = updated.locator('.b26-card:has(.atlas-art-image)').first();
       await card.locator('img').evaluate(img => img.decode());
       await card.click();
       await updated.locator('.b26-dialog img').evaluate(img => img.decode());
-      assert.match(await updated.locator('.b26-dialog img').getAttribute('src'), /plates\/zorro_rojo--normal.webp$/);
+      assert.match(await updated.locator('.b26-dialog img').getAttribute('src'), /plates\/nutria_europea--normal.webp$/);
       await updated.locator('[data-action=b26-close]').click();
 
       await openTab(updated, 'museum');
@@ -141,7 +141,7 @@ async function run() {
       await journal.evaluate(img => img.decode());
       assert.equal(await updated.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
       if (process.argv.includes('--write-evidence')) {
-        await updated.screenshot({ path: 'docs/v410-naturalista/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
+        await updated.screenshot({ path: 'docs/v420-naturalista/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
       }
 
       // Exercise the real automatic timer while deterministic rolls select a single repeatable WebP.
@@ -157,7 +157,7 @@ async function run() {
         AtlasSaveBridge.restoreGame(save);
       }, { id, britishSpecies });
       await openTab(updated, 'field');
-      const automaticImage = updated.locator('#fieldResult img[src$="zorro_rojo--normal.webp"]');
+      const automaticImage = updated.locator('#fieldResult img[src$="nutria_europea--normal.webp"]');
       await automaticImage.evaluate(img => img.decode());
       const firstAutoSequence = await automaticImage.evaluate(img => {
         window.__atlasRepeatedImage = img;
@@ -169,6 +169,18 @@ async function run() {
       assert.equal(repeatedImage, true);
       const autoRepeatMs = Math.round(performance.now() - autoStart);
 
+      const workerCache = await updated.evaluate(async version => {
+        const names = (await caches.keys()).filter(name => name.startsWith('gran-atlas-'));
+        const current = names.find(name => name.startsWith('gran-atlas-v' + version + '-'));
+        const entries = await (await caches.open(current)).keys();
+        return { names, resources: entries.map(entry => new URL(entry.url).pathname) };
+      }, version);
+      assert.equal(workerCache.names.length, 1);
+      assert.match(workerCache.names[0], /gran-atlas-v4\.2\.0-/);
+      for (const size of ['', '64/', '128/', '256/']) {
+        assert.ok(workerCache.resources.includes('/naturalist-art/plates/' + size + 'nutria_europea--normal.webp'));
+      }
+
       await ctx.setOffline(true);
       await updated.reload();
       await updated.waitForFunction(() => !!window.AtlasSaveBridge);
@@ -178,7 +190,7 @@ async function run() {
       await updated.locator('.field-card img').evaluate(img => img.decode());
       assert.deepEqual(errors, []);
       results.push({ width, fieldSvgMs: beforeMs, fieldWebPMs: afterMs, fieldSvgJSHeapBytes: beforeHeap, fieldWebpJSHeapBytes: afterHeap, exactSaveBackup: true,
-        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, estimatedVisibleRGBABytes: imageBytes, autoRepeatMs, reusedDecodedImage: repeatedImage, spritesOffline: true, labOffline: true, errors });
+        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, spritesOffline: true, labOffline: true, errors });
       await ctx.close();
     }
   } finally {

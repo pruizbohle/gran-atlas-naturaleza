@@ -42,19 +42,42 @@ const canidGenera = new Set([
   'Atelocynus', 'Canis', 'Cerdocyon', 'Chrysocyon', 'Cuon', 'Dusicyon', 'Lupulella',
   'Lycaon', 'Lycalopex', 'Nyctereutes', 'Otocyon', 'Speothos', 'Urocyon', 'Vulpes'
 ]);
-function groupFor(id, sp) {
+// The lab resolves these zoological families independently of the historic UI buckets.
+const carnivoreGenera = {
+  Ursidae: 'Ailuropoda Helarctos Melursus Tremarctos Ursus',
+  Mustelidae: 'Aonyx Arctonyx Eira Galictis Gulo Hydrictis Ictonyx Lontra Lutra Lutrogale Martes Meles Mellivora Melogale Mustela Neogale Poecilogale Pteronura Taxidea Vormela',
+  Mephitidae: 'Conepatus Mephitis Mydaus Spilogale',
+  Procyonidae: 'Bassaricyon Bassariscus Nasua Nasuella Potos Procyon',
+  Ailuridae: 'Ailurus',
+  Hyaenidae: 'Crocuta Hyaena Parahyaena Proteles',
+  Herpestidae: 'Bdeogale Crossarchus Cynictis Dologale Galerella Helogale Herpestes Ichneumia Mungos Paracynictis Rhynchogale Suricata Xenogale',
+  Viverridae: 'Arctictis Arctogalidia Chrotogale Civettictis Genetta Hemigalus Paguma Paradoxurus Poiana Viverricula Viverra',
+  Eupleridae: 'Cryptoprocta Eupleres Fossa Galidia Galidictis Mungotictis Salanoia',
+  Nandiniidae: 'Nandinia',
+  Prionodontidae: 'Prionodon'
+};
+const carnivoreFamilyByGenus = new Map(Object.entries(carnivoreGenera).flatMap(([family, names]) =>
+  names.split(' ').map(genus => [genus, family])));
+
+function classify(id, sp) {
   const taxonomy = audit.taxonomyInfo(id);
-  const family = taxonomy.family || sp.family;
-  if (taxonomy.subClass === 'Marsupiales' || families.has(family)) return 'Marsupiales';
-  if (family === 'Canidae' || canidGenera.has(sp.latin.split(' ')[0])) return 'Cánidos';
-  if (family === 'Felidae' || felidGenera.has(sp.latin.split(' ')[0])) return 'Felinos';
-  if (['Ornithorhynchidae', 'Tachyglossidae'].includes(family)) return 'Monotremas';
+  const genus = sp.latin.split(' ')[0];
+  const family = carnivoreFamilyByGenus.get(genus) || taxonomy.family || sp.family;
+  // Enhydra is reserved with the predominantly marine mammals.
+  if (genus === 'Enhydra') return null;
+  if (Object.hasOwn(carnivoreGenera, family)) return { family, group: 'Carnívoros terrestres' };
+  if (taxonomy.subClass === 'Marsupiales' || families.has(family)) return { family, group: 'Marsupiales' };
+  if (family === 'Canidae' || canidGenera.has(genus)) return { family: 'Canidae', group: 'Cánidos' };
+  if (family === 'Felidae' || felidGenera.has(genus)) return { family: 'Felidae', group: 'Felinos' };
+  if (['Ornithorhynchidae', 'Tachyglossidae'].includes(family)) return { family, group: 'Monotremas' };
   return null;
 }
 
-const species = Object.entries(audit.SPECIES).filter(([id, sp]) => groupFor(id, sp)).map(([id, sp]) => {
-  const group = groupFor(id, sp);
-  const family = ({ Felinos: 'Felidae', 'Cánidos': 'Canidae' })[group] || audit.taxonomyInfo(id).family || sp.family;
+const catalogEntries = Object.entries(audit.SPECIES);
+const species = catalogEntries.flatMap(([id, sp]) => {
+  const classification = classify(id, sp);
+  if (!classification) return [];
+  const { group, family } = classification;
   const special = audit.configuredSpecials(sp);
   const records = [plate(id, 'normal', 'Normal')];
   if (audit.SEXUAL_DIMORPHISM[id]) {
@@ -70,14 +93,14 @@ const species = Object.entries(audit.SPECIES).filter(([id, sp]) => groupFor(id, 
     const record = plate(id, legendary.id, legendary.name);
     records.push({ ...record, key: 'legendario' });
   }
-  return {
+  return [{
     id, name: sp.name, latin: sp.latin, rarity: sp.rare || null, group, family,
     dimorphism: Boolean(audit.SEXUAL_DIMORPHISM[id]),
     regions: audit.REGIONS.filter(region => region.species.includes(id))
       .map(({ id, name, continent }) => ({ id, name, continent })),
     categories: categories.filter(label => label === 'Normal' || special.includes(label)),
     records, sprite: audit.getSpriteMarkup(id, 'normal')
-  };
+  }];
 }).sort((a, b) => {
   const rank = id => priority.includes(id) ? priority.indexOf(id) : priority.length;
   return rank(a.id) - rank(b.id) || a.name.localeCompare(b.name, 'es');
@@ -86,14 +109,19 @@ const species = Object.entries(audit.SPECIES).filter(([id, sp]) => groupFor(id, 
 for (const file of fs.readdirSync(artDir)) {
   if (file.endsWith('.webp') && !assets.has(file)) throw Error('Lámina sin entrada en el catálogo: ' + file);
 }
-const mixedFieldSprites = ['ciervo_rojo', 'jabali', 'oso_pardo'].map(id => {
+const migrationProgress = {
+  migrated: species.filter(sp => sp.records[0].src).length,
+  total: catalogEntries.length
+};
+const mixedFieldSprites = ['ciervo_rojo', 'jabali', 'corzo_europeo'].map(id => {
   const sp = audit.SPECIES[id];
-  if (groupFor(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
+  if (classify(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
   return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };
 });
 fs.writeFileSync(path.join(out, 'catalog.js'),
   'const catalog = ' + JSON.stringify(species, null, 2) + ';\n' +
-  'const mixedFieldSprites = ' + JSON.stringify(mixedFieldSprites, null, 2) + ';\n');
+  'const mixedFieldSprites = ' + JSON.stringify(mixedFieldSprites, null, 2) + ';\n' +
+  'const migrationProgress = ' + JSON.stringify(migrationProgress) + ';\n');
 const version = require('../package.json').version;
 const rows = species.map(sp => [
   sp.group, sp.family, sp.id, sp.name, '*' + sp.latin + '*',
@@ -122,8 +150,9 @@ fs.writeFileSync('www/js/naturalist-assets-v400.js',
 const records = species.flatMap(sp => sp.records);
 console.log(JSON.stringify({
   species: species.length,
-  catalogSize: Object.keys(audit.SPECIES).length,
-  canids: species.filter(sp => sp.group === 'Cánidos').length,
+  catalogSize: migrationProgress.total,
+  carnivoresByFamily: Object.fromEntries(Object.keys(carnivoreGenera).map(family => [family,
+    species.filter(sp => sp.family === family).length]).filter(([, count]) => count)),
   bases: records.filter(record => record.key === 'normal' && record.src).length,
   variants: records.filter(record => !['normal', 'legendario'].includes(record.key) && record.src).length,
   legendary: records.filter(record => record.key === 'legendario' && record.src).length,

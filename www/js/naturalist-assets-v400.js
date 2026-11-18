@@ -24,6 +24,14 @@ globalThis.AtlasNaturalistAssets = {
     "oc_esp_dendrolagus_matschiei": {
       "normal": "oc_esp_dendrolagus_matschiei--normal.webp"
     },
+    "eu_esp_0618": {
+      "normal": "eu_esp_0618--normal.webp",
+      "melanico": "eu_esp_0618--melanico.webp"
+    },
+    "asia_esp_0849": {
+      "normal": "asia_esp_0849--normal.webp",
+      "melanico": "asia_esp_0849--melanico.webp"
+    },
     "oc_esp_macropus_fuliginosus": {
       "normal": "oc_esp_macropus_fuliginosus--normal.webp"
     },
@@ -47,6 +55,28 @@ globalThis.AtlasNaturalistAssets = {
     "chacal_dorado": {
       "normal": "chacal_dorado--normal.webp",
       "melanico": "chacal_dorado--melanico.webp"
+    },
+    "sa_esp_conepatus_chinga": {
+      "normal": "sa_esp_conepatus_chinga--normal.webp"
+    },
+    "sa_esp_lontra_felina": {
+      "normal": "sa_esp_lontra_felina--normal.webp"
+    },
+    "af_civeta": {
+      "normal": "af_civeta--normal.webp",
+      "albino": "af_civeta--albino.webp",
+      "melanico": "af_civeta--melanico.webp"
+    },
+    "asia_esp_0395": {
+      "normal": "asia_esp_0395--normal.webp",
+      "melanico": "asia_esp_0395--melanico.webp"
+    },
+    "na_esp_nasua_narica": {
+      "normal": "na_esp_nasua_narica--normal.webp"
+    },
+    "eu_esp_0617": {
+      "normal": "eu_esp_0617--normal.webp",
+      "melanico": "eu_esp_0617--melanico.webp"
     },
     "na_esp_canis_latrans": {
       "normal": "na_esp_canis_latrans--normal.webp",
@@ -76,6 +106,19 @@ globalThis.AtlasNaturalistAssets = {
       "normal": "af_fenec--normal.webp",
       "albino": "af_fenec--albino.webp",
       "melanico": "af_fenec--melanico.webp"
+    },
+    "af_fosa": {
+      "normal": "af_fosa--normal.webp",
+      "albino": "af_fosa--albino.webp",
+      "melanico": "af_fosa--melanico.webp"
+    },
+    "eu_esp_0620": {
+      "normal": "eu_esp_0620--normal.webp",
+      "melanico": "eu_esp_0620--melanico.webp"
+    },
+    "eu_esp_0625": {
+      "normal": "eu_esp_0625--normal.webp",
+      "melanico": "eu_esp_0625--melanico.webp"
     },
     "sa_esp_leopardus_jacobita": {
       "normal": "sa_esp_leopardus_jacobita--normal.webp"
@@ -117,10 +160,37 @@ globalThis.AtlasNaturalistAssets = {
     "asia_esp_0816": {
       "normal": "asia_esp_0816--normal.webp"
     },
+    "eu_esp_0219": {
+      "normal": "eu_esp_0219--normal.webp",
+      "melanico": "eu_esp_0219--melanico.webp"
+    },
+    "gloton": {
+      "normal": "gloton--normal.webp",
+      "albino": "gloton--albino.webp"
+    },
     "af_guepardo": {
       "normal": "af_guepardo--normal.webp",
       "albino": "af_guepardo--albino.webp",
       "melanico": "af_guepardo--melanico.webp"
+    },
+    "af_hiena_manchada": {
+      "normal": "af_hiena_manchada--normal.webp",
+      "albino": "af_hiena_manchada--albino.webp",
+      "melanico": "af_hiena_manchada--melanico.webp"
+    },
+    "af_hiena_parda": {
+      "normal": "af_hiena_parda--normal.webp",
+      "melanico": "af_hiena_parda--melanico.webp"
+    },
+    "asia_esp_0246": {
+      "normal": "asia_esp_0246--normal.webp",
+      "melanico": "asia_esp_0246--melanico.webp"
+    },
+    "gm06_lontra_provocax": {
+      "normal": "gm06_lontra_provocax--normal.webp"
+    },
+    "na_esp_mustela_nigripes": {
+      "normal": "na_esp_mustela_nigripes--normal.webp"
     },
     "na_esp_panthera_onca": {
       "normal": "na_esp_panthera_onca--normal.webp",
@@ -193,12 +263,66 @@ globalThis.AtlasNaturalistAssets = {
       "normal": "lobo_gris--normal.webp",
       "legendario": "lobo_gris--fenrir.webp"
     },
+    "af_mangosta_enana": {
+      "normal": "af_mangosta_enana--normal.webp",
+      "albino": "af_mangosta_enana--albino.webp"
+    },
+    "af_xlsx_131_mungos_mungo": {
+      "normal": "af_xlsx_131_mungos_mungo--normal.webp",
+      "albino": "af_xlsx_131_mungos_mungo--albino.webp"
+    },
     "asia_esp_0387": {
       "normal": "asia_esp_0387--normal.webp",
       "melanico": "asia_esp_0387--melanico.webp"
     },
+    "na_esp_procyon_lotor": {
+      "normal": "na_esp_procyon_lotor--normal.webp",
+      "albino": "na_esp_procyon_lotor--albino.webp"
+    },
+    "na_esp_procyon_pygmaeus": {
+      "normal": "na_esp_procyon_pygmaeus--normal.webp"
+    },
+    "na_esp_martes_americana": {
+      "normal": "na_esp_martes_americana--normal.webp"
+    },
+    "asia_esp_0326": {
+      "normal": "asia_esp_0326--normal.webp",
+      "albino": "asia_esp_0326--albino.webp"
+    },
+    "asia_esp_0850": {
+      "normal": "asia_esp_0850--normal.webp",
+      "melanico": "asia_esp_0850--melanico.webp"
+    },
+    "eu_esp_0621": {
+      "normal": "eu_esp_0621--normal.webp",
+      "melanico": "eu_esp_0621--melanico.webp"
+    },
+    "meloncillo": {
+      "normal": "meloncillo--normal.webp",
+      "melanico": "meloncillo--melanico.webp"
+    },
     "oc_esp_dasycercus_cristicauda": {
       "normal": "oc_esp_dasycercus_cristicauda--normal.webp"
+    },
+    "af_xlsx_131_hydrictis_maculicollis": {
+      "normal": "af_xlsx_131_hydrictis_maculicollis--normal.webp",
+      "albino": "af_xlsx_131_hydrictis_maculicollis--albino.webp"
+    },
+    "na_esp_lontra_canadensis": {
+      "normal": "na_esp_lontra_canadensis--normal.webp",
+      "albino": "na_esp_lontra_canadensis--albino.webp"
+    },
+    "nutria_europea": {
+      "normal": "nutria_europea--normal.webp",
+      "albino": "nutria_europea--albino.webp",
+      "melanico": "nutria_europea--melanico.webp"
+    },
+    "sa_esp_pteronura_brasiliensis": {
+      "normal": "sa_esp_pteronura_brasiliensis--normal.webp"
+    },
+    "asia_esp_0300": {
+      "normal": "asia_esp_0300--normal.webp",
+      "melanico": "asia_esp_0300--melanico.webp"
     },
     "na_esp_leopardus_pardalis": {
       "normal": "na_esp_leopardus_pardalis--normal.webp"
@@ -206,8 +330,40 @@ globalThis.AtlasNaturalistAssets = {
     "oc_esp_ornithorhynchus_anatinus": {
       "normal": "oc_esp_ornithorhynchus_anatinus--normal.webp"
     },
+    "asia_esp_0336": {
+      "normal": "asia_esp_0336--normal.webp",
+      "albino": "asia_esp_0336--albino.webp"
+    },
+    "sa_esp_tremarctos_ornatus": {
+      "normal": "sa_esp_tremarctos_ornatus--normal.webp"
+    },
+    "asia_esp_0238": {
+      "normal": "asia_esp_0238--normal.webp"
+    },
+    "na_esp_ursus_americanus": {
+      "normal": "na_esp_ursus_americanus--normal.webp",
+      "albino": "na_esp_ursus_americanus--albino.webp"
+    },
+    "asia_esp_0523": {
+      "normal": "asia_esp_0523--normal.webp",
+      "melanico": "asia_esp_0523--melanico.webp"
+    },
+    "oso_pardo": {
+      "normal": "oso_pardo--normal.webp"
+    },
+    "polar_esp_ursus_maritimus": {
+      "normal": "polar_esp_ursus_maritimus--normal.webp"
+    },
     "oc_esp_thylogale_billardierii": {
       "normal": "oc_esp_thylogale_billardierii--normal.webp"
+    },
+    "asia_esp_0006": {
+      "normal": "asia_esp_0006--normal.webp"
+    },
+    "asia_esp_0007": {
+      "normal": "asia_esp_0007--normal.webp",
+      "albino": "asia_esp_0007--albino.webp",
+      "melanico": "asia_esp_0007--melanico.webp"
     },
     "sa_esp_speothos_venaticus": {
       "normal": "sa_esp_speothos_venaticus--normal.webp"
@@ -233,9 +389,29 @@ globalThis.AtlasNaturalistAssets = {
       "albino": "af_serval--albino.webp",
       "melanico": "af_serval--melanico.webp"
     },
+    "af_suricata": {
+      "normal": "af_suricata--normal.webp",
+      "albino": "af_suricata--albino.webp",
+      "melanico": "af_suricata--melanico.webp"
+    },
     "asia_esp_0363": {
       "normal": "asia_esp_0363--normal.webp",
       "albino": "asia_esp_0363--albino.webp"
+    },
+    "na_esp_taxidea_taxus": {
+      "normal": "na_esp_taxidea_taxus--normal.webp"
+    },
+    "asia_esp_0333": {
+      "normal": "asia_esp_0333--normal.webp",
+      "melanico": "asia_esp_0333--melanico.webp"
+    },
+    "tejon_europeo": {
+      "normal": "tejon_europeo--normal.webp",
+      "albino": "tejon_europeo--albino.webp"
+    },
+    "af_xlsx_131_mellivora_capensis": {
+      "normal": "af_xlsx_131_mellivora_capensis--normal.webp",
+      "albino": "af_xlsx_131_mellivora_capensis--albino.webp"
     },
     "asia_esp_0402": {
       "normal": "asia_esp_0402--normal.webp",
@@ -249,6 +425,14 @@ globalThis.AtlasNaturalistAssets = {
     },
     "na_esp_leopardus_wiedii": {
       "normal": "na_esp_leopardus_wiedii--normal.webp"
+    },
+    "asia_esp_0347": {
+      "normal": "asia_esp_0347--normal.webp",
+      "melanico": "asia_esp_0347--melanico.webp"
+    },
+    "eu_esp_0619": {
+      "normal": "eu_esp_0619--normal.webp",
+      "melanico": "eu_esp_0619--melanico.webp"
     },
     "oc_esp_notamacropus_agilis": {
       "normal": "oc_esp_notamacropus_agilis--normal.webp"
@@ -265,6 +449,10 @@ globalThis.AtlasNaturalistAssets = {
     "oc_esp_notamacropus_eugenii": {
       "normal": "oc_esp_notamacropus_eugenii--normal.webp"
     },
+    "eu_esp_0622": {
+      "normal": "eu_esp_0622--normal.webp",
+      "melanico": "eu_esp_0622--melanico.webp"
+    },
     "oc_esp_vombatus_ursinus": {
       "normal": "oc_esp_vombatus_ursinus--normal.webp",
       "albino": "oc_esp_vombatus_ursinus--albino.webp"
@@ -278,6 +466,13 @@ globalThis.AtlasNaturalistAssets = {
     },
     "oc_esp_dactylopsila_trivirgata": {
       "normal": "oc_esp_dactylopsila_trivirgata--normal.webp"
+    },
+    "na_esp_spilogale_gracilis": {
+      "normal": "na_esp_spilogale_gracilis--normal.webp"
+    },
+    "na_esp_mephitis_mephitis": {
+      "normal": "na_esp_mephitis_mephitis--normal.webp",
+      "albino": "na_esp_mephitis_mephitis--albino.webp"
     },
     "zorro_artico": {
       "normal": "zorro_artico--normal.webp",
@@ -361,6 +556,18 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/af_chacal_dorado--normal.webp",
     "naturalist-art/plates/128/af_chacal_dorado--normal.webp",
     "naturalist-art/plates/256/af_chacal_dorado--normal.webp",
+    "naturalist-art/plates/af_civeta--albino.webp",
+    "naturalist-art/plates/64/af_civeta--albino.webp",
+    "naturalist-art/plates/128/af_civeta--albino.webp",
+    "naturalist-art/plates/256/af_civeta--albino.webp",
+    "naturalist-art/plates/af_civeta--melanico.webp",
+    "naturalist-art/plates/64/af_civeta--melanico.webp",
+    "naturalist-art/plates/128/af_civeta--melanico.webp",
+    "naturalist-art/plates/256/af_civeta--melanico.webp",
+    "naturalist-art/plates/af_civeta--normal.webp",
+    "naturalist-art/plates/64/af_civeta--normal.webp",
+    "naturalist-art/plates/128/af_civeta--normal.webp",
+    "naturalist-art/plates/256/af_civeta--normal.webp",
     "naturalist-art/plates/af_fenec--albino.webp",
     "naturalist-art/plates/64/af_fenec--albino.webp",
     "naturalist-art/plates/128/af_fenec--albino.webp",
@@ -373,6 +580,18 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/af_fenec--normal.webp",
     "naturalist-art/plates/128/af_fenec--normal.webp",
     "naturalist-art/plates/256/af_fenec--normal.webp",
+    "naturalist-art/plates/af_fosa--albino.webp",
+    "naturalist-art/plates/64/af_fosa--albino.webp",
+    "naturalist-art/plates/128/af_fosa--albino.webp",
+    "naturalist-art/plates/256/af_fosa--albino.webp",
+    "naturalist-art/plates/af_fosa--melanico.webp",
+    "naturalist-art/plates/64/af_fosa--melanico.webp",
+    "naturalist-art/plates/128/af_fosa--melanico.webp",
+    "naturalist-art/plates/256/af_fosa--melanico.webp",
+    "naturalist-art/plates/af_fosa--normal.webp",
+    "naturalist-art/plates/64/af_fosa--normal.webp",
+    "naturalist-art/plates/128/af_fosa--normal.webp",
+    "naturalist-art/plates/256/af_fosa--normal.webp",
     "naturalist-art/plates/af_gato_montes_africano--melanico.webp",
     "naturalist-art/plates/64/af_gato_montes_africano--melanico.webp",
     "naturalist-art/plates/128/af_gato_montes_africano--melanico.webp",
@@ -393,6 +612,26 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/af_guepardo--normal.webp",
     "naturalist-art/plates/128/af_guepardo--normal.webp",
     "naturalist-art/plates/256/af_guepardo--normal.webp",
+    "naturalist-art/plates/af_hiena_manchada--albino.webp",
+    "naturalist-art/plates/64/af_hiena_manchada--albino.webp",
+    "naturalist-art/plates/128/af_hiena_manchada--albino.webp",
+    "naturalist-art/plates/256/af_hiena_manchada--albino.webp",
+    "naturalist-art/plates/af_hiena_manchada--melanico.webp",
+    "naturalist-art/plates/64/af_hiena_manchada--melanico.webp",
+    "naturalist-art/plates/128/af_hiena_manchada--melanico.webp",
+    "naturalist-art/plates/256/af_hiena_manchada--melanico.webp",
+    "naturalist-art/plates/af_hiena_manchada--normal.webp",
+    "naturalist-art/plates/64/af_hiena_manchada--normal.webp",
+    "naturalist-art/plates/128/af_hiena_manchada--normal.webp",
+    "naturalist-art/plates/256/af_hiena_manchada--normal.webp",
+    "naturalist-art/plates/af_hiena_parda--melanico.webp",
+    "naturalist-art/plates/64/af_hiena_parda--melanico.webp",
+    "naturalist-art/plates/128/af_hiena_parda--melanico.webp",
+    "naturalist-art/plates/256/af_hiena_parda--melanico.webp",
+    "naturalist-art/plates/af_hiena_parda--normal.webp",
+    "naturalist-art/plates/64/af_hiena_parda--normal.webp",
+    "naturalist-art/plates/128/af_hiena_parda--normal.webp",
+    "naturalist-art/plates/256/af_hiena_parda--normal.webp",
     "naturalist-art/plates/af_leon--albino.webp",
     "naturalist-art/plates/64/af_leon--albino.webp",
     "naturalist-art/plates/128/af_leon--albino.webp",
@@ -441,6 +680,14 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/af_lobo_etiope--normal.webp",
     "naturalist-art/plates/128/af_lobo_etiope--normal.webp",
     "naturalist-art/plates/256/af_lobo_etiope--normal.webp",
+    "naturalist-art/plates/af_mangosta_enana--albino.webp",
+    "naturalist-art/plates/64/af_mangosta_enana--albino.webp",
+    "naturalist-art/plates/128/af_mangosta_enana--albino.webp",
+    "naturalist-art/plates/256/af_mangosta_enana--albino.webp",
+    "naturalist-art/plates/af_mangosta_enana--normal.webp",
+    "naturalist-art/plates/64/af_mangosta_enana--normal.webp",
+    "naturalist-art/plates/128/af_mangosta_enana--normal.webp",
+    "naturalist-art/plates/256/af_mangosta_enana--normal.webp",
     "naturalist-art/plates/af_serval--albino.webp",
     "naturalist-art/plates/64/af_serval--albino.webp",
     "naturalist-art/plates/128/af_serval--albino.webp",
@@ -453,6 +700,26 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/af_serval--normal.webp",
     "naturalist-art/plates/128/af_serval--normal.webp",
     "naturalist-art/plates/256/af_serval--normal.webp",
+    "naturalist-art/plates/af_suricata--albino.webp",
+    "naturalist-art/plates/64/af_suricata--albino.webp",
+    "naturalist-art/plates/128/af_suricata--albino.webp",
+    "naturalist-art/plates/256/af_suricata--albino.webp",
+    "naturalist-art/plates/af_suricata--melanico.webp",
+    "naturalist-art/plates/64/af_suricata--melanico.webp",
+    "naturalist-art/plates/128/af_suricata--melanico.webp",
+    "naturalist-art/plates/256/af_suricata--melanico.webp",
+    "naturalist-art/plates/af_suricata--normal.webp",
+    "naturalist-art/plates/64/af_suricata--normal.webp",
+    "naturalist-art/plates/128/af_suricata--normal.webp",
+    "naturalist-art/plates/256/af_suricata--normal.webp",
+    "naturalist-art/plates/af_xlsx_131_hydrictis_maculicollis--albino.webp",
+    "naturalist-art/plates/64/af_xlsx_131_hydrictis_maculicollis--albino.webp",
+    "naturalist-art/plates/128/af_xlsx_131_hydrictis_maculicollis--albino.webp",
+    "naturalist-art/plates/256/af_xlsx_131_hydrictis_maculicollis--albino.webp",
+    "naturalist-art/plates/af_xlsx_131_hydrictis_maculicollis--normal.webp",
+    "naturalist-art/plates/64/af_xlsx_131_hydrictis_maculicollis--normal.webp",
+    "naturalist-art/plates/128/af_xlsx_131_hydrictis_maculicollis--normal.webp",
+    "naturalist-art/plates/256/af_xlsx_131_hydrictis_maculicollis--normal.webp",
     "naturalist-art/plates/af_xlsx_131_lupulella_mesomelas--albino.webp",
     "naturalist-art/plates/64/af_xlsx_131_lupulella_mesomelas--albino.webp",
     "naturalist-art/plates/128/af_xlsx_131_lupulella_mesomelas--albino.webp",
@@ -461,6 +728,22 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/af_xlsx_131_lupulella_mesomelas--normal.webp",
     "naturalist-art/plates/128/af_xlsx_131_lupulella_mesomelas--normal.webp",
     "naturalist-art/plates/256/af_xlsx_131_lupulella_mesomelas--normal.webp",
+    "naturalist-art/plates/af_xlsx_131_mellivora_capensis--albino.webp",
+    "naturalist-art/plates/64/af_xlsx_131_mellivora_capensis--albino.webp",
+    "naturalist-art/plates/128/af_xlsx_131_mellivora_capensis--albino.webp",
+    "naturalist-art/plates/256/af_xlsx_131_mellivora_capensis--albino.webp",
+    "naturalist-art/plates/af_xlsx_131_mellivora_capensis--normal.webp",
+    "naturalist-art/plates/64/af_xlsx_131_mellivora_capensis--normal.webp",
+    "naturalist-art/plates/128/af_xlsx_131_mellivora_capensis--normal.webp",
+    "naturalist-art/plates/256/af_xlsx_131_mellivora_capensis--normal.webp",
+    "naturalist-art/plates/af_xlsx_131_mungos_mungo--albino.webp",
+    "naturalist-art/plates/64/af_xlsx_131_mungos_mungo--albino.webp",
+    "naturalist-art/plates/128/af_xlsx_131_mungos_mungo--albino.webp",
+    "naturalist-art/plates/256/af_xlsx_131_mungos_mungo--albino.webp",
+    "naturalist-art/plates/af_xlsx_131_mungos_mungo--normal.webp",
+    "naturalist-art/plates/64/af_xlsx_131_mungos_mungo--normal.webp",
+    "naturalist-art/plates/128/af_xlsx_131_mungos_mungo--normal.webp",
+    "naturalist-art/plates/256/af_xlsx_131_mungos_mungo--normal.webp",
     "naturalist-art/plates/af_xlsx_131_otocyon_megalotis--albino.webp",
     "naturalist-art/plates/64/af_xlsx_131_otocyon_megalotis--albino.webp",
     "naturalist-art/plates/128/af_xlsx_131_otocyon_megalotis--albino.webp",
@@ -505,6 +788,22 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/af_zorro_ruppell--normal.webp",
     "naturalist-art/plates/128/af_zorro_ruppell--normal.webp",
     "naturalist-art/plates/256/af_zorro_ruppell--normal.webp",
+    "naturalist-art/plates/asia_esp_0006--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0006--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0006--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0006--normal.webp",
+    "naturalist-art/plates/asia_esp_0007--albino.webp",
+    "naturalist-art/plates/64/asia_esp_0007--albino.webp",
+    "naturalist-art/plates/128/asia_esp_0007--albino.webp",
+    "naturalist-art/plates/256/asia_esp_0007--albino.webp",
+    "naturalist-art/plates/asia_esp_0007--melanico.webp",
+    "naturalist-art/plates/64/asia_esp_0007--melanico.webp",
+    "naturalist-art/plates/128/asia_esp_0007--melanico.webp",
+    "naturalist-art/plates/256/asia_esp_0007--melanico.webp",
+    "naturalist-art/plates/asia_esp_0007--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0007--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0007--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0007--normal.webp",
     "naturalist-art/plates/asia_esp_0096--normal.webp",
     "naturalist-art/plates/64/asia_esp_0096--normal.webp",
     "naturalist-art/plates/128/asia_esp_0096--normal.webp",
@@ -525,6 +824,58 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/asia_esp_0206--normal.webp",
     "naturalist-art/plates/128/asia_esp_0206--normal.webp",
     "naturalist-art/plates/256/asia_esp_0206--normal.webp",
+    "naturalist-art/plates/asia_esp_0238--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0238--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0238--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0238--normal.webp",
+    "naturalist-art/plates/asia_esp_0246--melanico.webp",
+    "naturalist-art/plates/64/asia_esp_0246--melanico.webp",
+    "naturalist-art/plates/128/asia_esp_0246--melanico.webp",
+    "naturalist-art/plates/256/asia_esp_0246--melanico.webp",
+    "naturalist-art/plates/asia_esp_0246--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0246--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0246--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0246--normal.webp",
+    "naturalist-art/plates/asia_esp_0300--melanico.webp",
+    "naturalist-art/plates/64/asia_esp_0300--melanico.webp",
+    "naturalist-art/plates/128/asia_esp_0300--melanico.webp",
+    "naturalist-art/plates/256/asia_esp_0300--melanico.webp",
+    "naturalist-art/plates/asia_esp_0300--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0300--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0300--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0300--normal.webp",
+    "naturalist-art/plates/asia_esp_0326--albino.webp",
+    "naturalist-art/plates/64/asia_esp_0326--albino.webp",
+    "naturalist-art/plates/128/asia_esp_0326--albino.webp",
+    "naturalist-art/plates/256/asia_esp_0326--albino.webp",
+    "naturalist-art/plates/asia_esp_0326--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0326--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0326--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0326--normal.webp",
+    "naturalist-art/plates/asia_esp_0333--melanico.webp",
+    "naturalist-art/plates/64/asia_esp_0333--melanico.webp",
+    "naturalist-art/plates/128/asia_esp_0333--melanico.webp",
+    "naturalist-art/plates/256/asia_esp_0333--melanico.webp",
+    "naturalist-art/plates/asia_esp_0333--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0333--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0333--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0333--normal.webp",
+    "naturalist-art/plates/asia_esp_0336--albino.webp",
+    "naturalist-art/plates/64/asia_esp_0336--albino.webp",
+    "naturalist-art/plates/128/asia_esp_0336--albino.webp",
+    "naturalist-art/plates/256/asia_esp_0336--albino.webp",
+    "naturalist-art/plates/asia_esp_0336--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0336--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0336--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0336--normal.webp",
+    "naturalist-art/plates/asia_esp_0347--melanico.webp",
+    "naturalist-art/plates/64/asia_esp_0347--melanico.webp",
+    "naturalist-art/plates/128/asia_esp_0347--melanico.webp",
+    "naturalist-art/plates/256/asia_esp_0347--melanico.webp",
+    "naturalist-art/plates/asia_esp_0347--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0347--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0347--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0347--normal.webp",
     "naturalist-art/plates/asia_esp_0355--melanico.webp",
     "naturalist-art/plates/64/asia_esp_0355--melanico.webp",
     "naturalist-art/plates/128/asia_esp_0355--melanico.webp",
@@ -549,6 +900,14 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/asia_esp_0387--normal.webp",
     "naturalist-art/plates/128/asia_esp_0387--normal.webp",
     "naturalist-art/plates/256/asia_esp_0387--normal.webp",
+    "naturalist-art/plates/asia_esp_0395--melanico.webp",
+    "naturalist-art/plates/64/asia_esp_0395--melanico.webp",
+    "naturalist-art/plates/128/asia_esp_0395--melanico.webp",
+    "naturalist-art/plates/256/asia_esp_0395--melanico.webp",
+    "naturalist-art/plates/asia_esp_0395--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0395--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0395--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0395--normal.webp",
     "naturalist-art/plates/asia_esp_0401--melanico.webp",
     "naturalist-art/plates/64/asia_esp_0401--melanico.webp",
     "naturalist-art/plates/128/asia_esp_0401--melanico.webp",
@@ -589,6 +948,14 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/asia_esp_0440--normal.webp",
     "naturalist-art/plates/128/asia_esp_0440--normal.webp",
     "naturalist-art/plates/256/asia_esp_0440--normal.webp",
+    "naturalist-art/plates/asia_esp_0523--melanico.webp",
+    "naturalist-art/plates/64/asia_esp_0523--melanico.webp",
+    "naturalist-art/plates/128/asia_esp_0523--melanico.webp",
+    "naturalist-art/plates/256/asia_esp_0523--melanico.webp",
+    "naturalist-art/plates/asia_esp_0523--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0523--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0523--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0523--normal.webp",
     "naturalist-art/plates/asia_esp_0533--melanico.webp",
     "naturalist-art/plates/64/asia_esp_0533--melanico.webp",
     "naturalist-art/plates/128/asia_esp_0533--melanico.webp",
@@ -617,6 +984,22 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/asia_esp_0820--normal.webp",
     "naturalist-art/plates/128/asia_esp_0820--normal.webp",
     "naturalist-art/plates/256/asia_esp_0820--normal.webp",
+    "naturalist-art/plates/asia_esp_0849--melanico.webp",
+    "naturalist-art/plates/64/asia_esp_0849--melanico.webp",
+    "naturalist-art/plates/128/asia_esp_0849--melanico.webp",
+    "naturalist-art/plates/256/asia_esp_0849--melanico.webp",
+    "naturalist-art/plates/asia_esp_0849--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0849--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0849--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0849--normal.webp",
+    "naturalist-art/plates/asia_esp_0850--melanico.webp",
+    "naturalist-art/plates/64/asia_esp_0850--melanico.webp",
+    "naturalist-art/plates/128/asia_esp_0850--melanico.webp",
+    "naturalist-art/plates/256/asia_esp_0850--melanico.webp",
+    "naturalist-art/plates/asia_esp_0850--normal.webp",
+    "naturalist-art/plates/64/asia_esp_0850--normal.webp",
+    "naturalist-art/plates/128/asia_esp_0850--normal.webp",
+    "naturalist-art/plates/256/asia_esp_0850--normal.webp",
     "naturalist-art/plates/chacal_dorado--melanico.webp",
     "naturalist-art/plates/64/chacal_dorado--melanico.webp",
     "naturalist-art/plates/128/chacal_dorado--melanico.webp",
@@ -625,6 +1008,70 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/chacal_dorado--normal.webp",
     "naturalist-art/plates/128/chacal_dorado--normal.webp",
     "naturalist-art/plates/256/chacal_dorado--normal.webp",
+    "naturalist-art/plates/eu_esp_0219--melanico.webp",
+    "naturalist-art/plates/64/eu_esp_0219--melanico.webp",
+    "naturalist-art/plates/128/eu_esp_0219--melanico.webp",
+    "naturalist-art/plates/256/eu_esp_0219--melanico.webp",
+    "naturalist-art/plates/eu_esp_0219--normal.webp",
+    "naturalist-art/plates/64/eu_esp_0219--normal.webp",
+    "naturalist-art/plates/128/eu_esp_0219--normal.webp",
+    "naturalist-art/plates/256/eu_esp_0219--normal.webp",
+    "naturalist-art/plates/eu_esp_0617--melanico.webp",
+    "naturalist-art/plates/64/eu_esp_0617--melanico.webp",
+    "naturalist-art/plates/128/eu_esp_0617--melanico.webp",
+    "naturalist-art/plates/256/eu_esp_0617--melanico.webp",
+    "naturalist-art/plates/eu_esp_0617--normal.webp",
+    "naturalist-art/plates/64/eu_esp_0617--normal.webp",
+    "naturalist-art/plates/128/eu_esp_0617--normal.webp",
+    "naturalist-art/plates/256/eu_esp_0617--normal.webp",
+    "naturalist-art/plates/eu_esp_0618--melanico.webp",
+    "naturalist-art/plates/64/eu_esp_0618--melanico.webp",
+    "naturalist-art/plates/128/eu_esp_0618--melanico.webp",
+    "naturalist-art/plates/256/eu_esp_0618--melanico.webp",
+    "naturalist-art/plates/eu_esp_0618--normal.webp",
+    "naturalist-art/plates/64/eu_esp_0618--normal.webp",
+    "naturalist-art/plates/128/eu_esp_0618--normal.webp",
+    "naturalist-art/plates/256/eu_esp_0618--normal.webp",
+    "naturalist-art/plates/eu_esp_0619--melanico.webp",
+    "naturalist-art/plates/64/eu_esp_0619--melanico.webp",
+    "naturalist-art/plates/128/eu_esp_0619--melanico.webp",
+    "naturalist-art/plates/256/eu_esp_0619--melanico.webp",
+    "naturalist-art/plates/eu_esp_0619--normal.webp",
+    "naturalist-art/plates/64/eu_esp_0619--normal.webp",
+    "naturalist-art/plates/128/eu_esp_0619--normal.webp",
+    "naturalist-art/plates/256/eu_esp_0619--normal.webp",
+    "naturalist-art/plates/eu_esp_0620--melanico.webp",
+    "naturalist-art/plates/64/eu_esp_0620--melanico.webp",
+    "naturalist-art/plates/128/eu_esp_0620--melanico.webp",
+    "naturalist-art/plates/256/eu_esp_0620--melanico.webp",
+    "naturalist-art/plates/eu_esp_0620--normal.webp",
+    "naturalist-art/plates/64/eu_esp_0620--normal.webp",
+    "naturalist-art/plates/128/eu_esp_0620--normal.webp",
+    "naturalist-art/plates/256/eu_esp_0620--normal.webp",
+    "naturalist-art/plates/eu_esp_0621--melanico.webp",
+    "naturalist-art/plates/64/eu_esp_0621--melanico.webp",
+    "naturalist-art/plates/128/eu_esp_0621--melanico.webp",
+    "naturalist-art/plates/256/eu_esp_0621--melanico.webp",
+    "naturalist-art/plates/eu_esp_0621--normal.webp",
+    "naturalist-art/plates/64/eu_esp_0621--normal.webp",
+    "naturalist-art/plates/128/eu_esp_0621--normal.webp",
+    "naturalist-art/plates/256/eu_esp_0621--normal.webp",
+    "naturalist-art/plates/eu_esp_0622--melanico.webp",
+    "naturalist-art/plates/64/eu_esp_0622--melanico.webp",
+    "naturalist-art/plates/128/eu_esp_0622--melanico.webp",
+    "naturalist-art/plates/256/eu_esp_0622--melanico.webp",
+    "naturalist-art/plates/eu_esp_0622--normal.webp",
+    "naturalist-art/plates/64/eu_esp_0622--normal.webp",
+    "naturalist-art/plates/128/eu_esp_0622--normal.webp",
+    "naturalist-art/plates/256/eu_esp_0622--normal.webp",
+    "naturalist-art/plates/eu_esp_0625--melanico.webp",
+    "naturalist-art/plates/64/eu_esp_0625--melanico.webp",
+    "naturalist-art/plates/128/eu_esp_0625--melanico.webp",
+    "naturalist-art/plates/256/eu_esp_0625--melanico.webp",
+    "naturalist-art/plates/eu_esp_0625--normal.webp",
+    "naturalist-art/plates/64/eu_esp_0625--normal.webp",
+    "naturalist-art/plates/128/eu_esp_0625--normal.webp",
+    "naturalist-art/plates/256/eu_esp_0625--normal.webp",
     "naturalist-art/plates/gato_montes--melanico.webp",
     "naturalist-art/plates/64/gato_montes--melanico.webp",
     "naturalist-art/plates/128/gato_montes--melanico.webp",
@@ -633,10 +1080,22 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/gato_montes--normal.webp",
     "naturalist-art/plates/128/gato_montes--normal.webp",
     "naturalist-art/plates/256/gato_montes--normal.webp",
+    "naturalist-art/plates/gloton--albino.webp",
+    "naturalist-art/plates/64/gloton--albino.webp",
+    "naturalist-art/plates/128/gloton--albino.webp",
+    "naturalist-art/plates/256/gloton--albino.webp",
+    "naturalist-art/plates/gloton--normal.webp",
+    "naturalist-art/plates/64/gloton--normal.webp",
+    "naturalist-art/plates/128/gloton--normal.webp",
+    "naturalist-art/plates/256/gloton--normal.webp",
     "naturalist-art/plates/gm06_dromiciops_gliroides--normal.webp",
     "naturalist-art/plates/64/gm06_dromiciops_gliroides--normal.webp",
     "naturalist-art/plates/128/gm06_dromiciops_gliroides--normal.webp",
     "naturalist-art/plates/256/gm06_dromiciops_gliroides--normal.webp",
+    "naturalist-art/plates/gm06_lontra_provocax--normal.webp",
+    "naturalist-art/plates/64/gm06_lontra_provocax--normal.webp",
+    "naturalist-art/plates/128/gm06_lontra_provocax--normal.webp",
+    "naturalist-art/plates/256/gm06_lontra_provocax--normal.webp",
     "naturalist-art/plates/lince_boreal--melanico.webp",
     "naturalist-art/plates/64/lince_boreal--melanico.webp",
     "naturalist-art/plates/128/lince_boreal--melanico.webp",
@@ -661,6 +1120,14 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/lobo_gris--normal.webp",
     "naturalist-art/plates/128/lobo_gris--normal.webp",
     "naturalist-art/plates/256/lobo_gris--normal.webp",
+    "naturalist-art/plates/meloncillo--melanico.webp",
+    "naturalist-art/plates/64/meloncillo--melanico.webp",
+    "naturalist-art/plates/128/meloncillo--melanico.webp",
+    "naturalist-art/plates/256/meloncillo--melanico.webp",
+    "naturalist-art/plates/meloncillo--normal.webp",
+    "naturalist-art/plates/64/meloncillo--normal.webp",
+    "naturalist-art/plates/128/meloncillo--normal.webp",
+    "naturalist-art/plates/256/meloncillo--normal.webp",
     "naturalist-art/plates/na_esp_canis_latrans--albino.webp",
     "naturalist-art/plates/64/na_esp_canis_latrans--albino.webp",
     "naturalist-art/plates/128/na_esp_canis_latrans--albino.webp",
@@ -697,6 +1164,14 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/na_esp_leopardus_wiedii--normal.webp",
     "naturalist-art/plates/128/na_esp_leopardus_wiedii--normal.webp",
     "naturalist-art/plates/256/na_esp_leopardus_wiedii--normal.webp",
+    "naturalist-art/plates/na_esp_lontra_canadensis--albino.webp",
+    "naturalist-art/plates/64/na_esp_lontra_canadensis--albino.webp",
+    "naturalist-art/plates/128/na_esp_lontra_canadensis--albino.webp",
+    "naturalist-art/plates/256/na_esp_lontra_canadensis--albino.webp",
+    "naturalist-art/plates/na_esp_lontra_canadensis--normal.webp",
+    "naturalist-art/plates/64/na_esp_lontra_canadensis--normal.webp",
+    "naturalist-art/plates/128/na_esp_lontra_canadensis--normal.webp",
+    "naturalist-art/plates/256/na_esp_lontra_canadensis--normal.webp",
     "naturalist-art/plates/na_esp_lynx_canadensis--normal.webp",
     "naturalist-art/plates/64/na_esp_lynx_canadensis--normal.webp",
     "naturalist-art/plates/128/na_esp_lynx_canadensis--normal.webp",
@@ -709,6 +1184,26 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/na_esp_lynx_rufus--normal.webp",
     "naturalist-art/plates/128/na_esp_lynx_rufus--normal.webp",
     "naturalist-art/plates/256/na_esp_lynx_rufus--normal.webp",
+    "naturalist-art/plates/na_esp_martes_americana--normal.webp",
+    "naturalist-art/plates/64/na_esp_martes_americana--normal.webp",
+    "naturalist-art/plates/128/na_esp_martes_americana--normal.webp",
+    "naturalist-art/plates/256/na_esp_martes_americana--normal.webp",
+    "naturalist-art/plates/na_esp_mephitis_mephitis--albino.webp",
+    "naturalist-art/plates/64/na_esp_mephitis_mephitis--albino.webp",
+    "naturalist-art/plates/128/na_esp_mephitis_mephitis--albino.webp",
+    "naturalist-art/plates/256/na_esp_mephitis_mephitis--albino.webp",
+    "naturalist-art/plates/na_esp_mephitis_mephitis--normal.webp",
+    "naturalist-art/plates/64/na_esp_mephitis_mephitis--normal.webp",
+    "naturalist-art/plates/128/na_esp_mephitis_mephitis--normal.webp",
+    "naturalist-art/plates/256/na_esp_mephitis_mephitis--normal.webp",
+    "naturalist-art/plates/na_esp_mustela_nigripes--normal.webp",
+    "naturalist-art/plates/64/na_esp_mustela_nigripes--normal.webp",
+    "naturalist-art/plates/128/na_esp_mustela_nigripes--normal.webp",
+    "naturalist-art/plates/256/na_esp_mustela_nigripes--normal.webp",
+    "naturalist-art/plates/na_esp_nasua_narica--normal.webp",
+    "naturalist-art/plates/64/na_esp_nasua_narica--normal.webp",
+    "naturalist-art/plates/128/na_esp_nasua_narica--normal.webp",
+    "naturalist-art/plates/256/na_esp_nasua_narica--normal.webp",
     "naturalist-art/plates/na_esp_panthera_onca--albino.webp",
     "naturalist-art/plates/64/na_esp_panthera_onca--albino.webp",
     "naturalist-art/plates/128/na_esp_panthera_onca--albino.webp",
@@ -721,6 +1216,18 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/na_esp_panthera_onca--normal.webp",
     "naturalist-art/plates/128/na_esp_panthera_onca--normal.webp",
     "naturalist-art/plates/256/na_esp_panthera_onca--normal.webp",
+    "naturalist-art/plates/na_esp_procyon_lotor--albino.webp",
+    "naturalist-art/plates/64/na_esp_procyon_lotor--albino.webp",
+    "naturalist-art/plates/128/na_esp_procyon_lotor--albino.webp",
+    "naturalist-art/plates/256/na_esp_procyon_lotor--albino.webp",
+    "naturalist-art/plates/na_esp_procyon_lotor--normal.webp",
+    "naturalist-art/plates/64/na_esp_procyon_lotor--normal.webp",
+    "naturalist-art/plates/128/na_esp_procyon_lotor--normal.webp",
+    "naturalist-art/plates/256/na_esp_procyon_lotor--normal.webp",
+    "naturalist-art/plates/na_esp_procyon_pygmaeus--normal.webp",
+    "naturalist-art/plates/64/na_esp_procyon_pygmaeus--normal.webp",
+    "naturalist-art/plates/128/na_esp_procyon_pygmaeus--normal.webp",
+    "naturalist-art/plates/256/na_esp_procyon_pygmaeus--normal.webp",
     "naturalist-art/plates/na_esp_puma_concolor--albino.webp",
     "naturalist-art/plates/64/na_esp_puma_concolor--albino.webp",
     "naturalist-art/plates/128/na_esp_puma_concolor--albino.webp",
@@ -729,14 +1236,42 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/na_esp_puma_concolor--normal.webp",
     "naturalist-art/plates/128/na_esp_puma_concolor--normal.webp",
     "naturalist-art/plates/256/na_esp_puma_concolor--normal.webp",
+    "naturalist-art/plates/na_esp_spilogale_gracilis--normal.webp",
+    "naturalist-art/plates/64/na_esp_spilogale_gracilis--normal.webp",
+    "naturalist-art/plates/128/na_esp_spilogale_gracilis--normal.webp",
+    "naturalist-art/plates/256/na_esp_spilogale_gracilis--normal.webp",
+    "naturalist-art/plates/na_esp_taxidea_taxus--normal.webp",
+    "naturalist-art/plates/64/na_esp_taxidea_taxus--normal.webp",
+    "naturalist-art/plates/128/na_esp_taxidea_taxus--normal.webp",
+    "naturalist-art/plates/256/na_esp_taxidea_taxus--normal.webp",
     "naturalist-art/plates/na_esp_urocyon_cinereoargenteus--normal.webp",
     "naturalist-art/plates/64/na_esp_urocyon_cinereoargenteus--normal.webp",
     "naturalist-art/plates/128/na_esp_urocyon_cinereoargenteus--normal.webp",
     "naturalist-art/plates/256/na_esp_urocyon_cinereoargenteus--normal.webp",
+    "naturalist-art/plates/na_esp_ursus_americanus--albino.webp",
+    "naturalist-art/plates/64/na_esp_ursus_americanus--albino.webp",
+    "naturalist-art/plates/128/na_esp_ursus_americanus--albino.webp",
+    "naturalist-art/plates/256/na_esp_ursus_americanus--albino.webp",
+    "naturalist-art/plates/na_esp_ursus_americanus--normal.webp",
+    "naturalist-art/plates/64/na_esp_ursus_americanus--normal.webp",
+    "naturalist-art/plates/128/na_esp_ursus_americanus--normal.webp",
+    "naturalist-art/plates/256/na_esp_ursus_americanus--normal.webp",
     "naturalist-art/plates/na_esp_vulpes_macrotis--normal.webp",
     "naturalist-art/plates/64/na_esp_vulpes_macrotis--normal.webp",
     "naturalist-art/plates/128/na_esp_vulpes_macrotis--normal.webp",
     "naturalist-art/plates/256/na_esp_vulpes_macrotis--normal.webp",
+    "naturalist-art/plates/nutria_europea--albino.webp",
+    "naturalist-art/plates/64/nutria_europea--albino.webp",
+    "naturalist-art/plates/128/nutria_europea--albino.webp",
+    "naturalist-art/plates/256/nutria_europea--albino.webp",
+    "naturalist-art/plates/nutria_europea--melanico.webp",
+    "naturalist-art/plates/64/nutria_europea--melanico.webp",
+    "naturalist-art/plates/128/nutria_europea--melanico.webp",
+    "naturalist-art/plates/256/nutria_europea--melanico.webp",
+    "naturalist-art/plates/nutria_europea--normal.webp",
+    "naturalist-art/plates/64/nutria_europea--normal.webp",
+    "naturalist-art/plates/128/nutria_europea--normal.webp",
+    "naturalist-art/plates/256/nutria_europea--normal.webp",
     "naturalist-art/plates/oc_esp_canis_familiaris--normal.webp",
     "naturalist-art/plates/64/oc_esp_canis_familiaris--normal.webp",
     "naturalist-art/plates/128/oc_esp_canis_familiaris--normal.webp",
@@ -869,6 +1404,14 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/oc_esp_zaglossus_bartoni--normal.webp",
     "naturalist-art/plates/128/oc_esp_zaglossus_bartoni--normal.webp",
     "naturalist-art/plates/256/oc_esp_zaglossus_bartoni--normal.webp",
+    "naturalist-art/plates/oso_pardo--normal.webp",
+    "naturalist-art/plates/64/oso_pardo--normal.webp",
+    "naturalist-art/plates/128/oso_pardo--normal.webp",
+    "naturalist-art/plates/256/oso_pardo--normal.webp",
+    "naturalist-art/plates/polar_esp_ursus_maritimus--normal.webp",
+    "naturalist-art/plates/64/polar_esp_ursus_maritimus--normal.webp",
+    "naturalist-art/plates/128/polar_esp_ursus_maritimus--normal.webp",
+    "naturalist-art/plates/256/polar_esp_ursus_maritimus--normal.webp",
     "naturalist-art/plates/sa_esp_atelocynus_microtis--normal.webp",
     "naturalist-art/plates/64/sa_esp_atelocynus_microtis--normal.webp",
     "naturalist-art/plates/128/sa_esp_atelocynus_microtis--normal.webp",
@@ -881,6 +1424,10 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/sa_esp_chrysocyon_brachyurus--normal.webp",
     "naturalist-art/plates/128/sa_esp_chrysocyon_brachyurus--normal.webp",
     "naturalist-art/plates/256/sa_esp_chrysocyon_brachyurus--normal.webp",
+    "naturalist-art/plates/sa_esp_conepatus_chinga--normal.webp",
+    "naturalist-art/plates/64/sa_esp_conepatus_chinga--normal.webp",
+    "naturalist-art/plates/128/sa_esp_conepatus_chinga--normal.webp",
+    "naturalist-art/plates/256/sa_esp_conepatus_chinga--normal.webp",
     "naturalist-art/plates/sa_esp_leopardus_colocola--normal.webp",
     "naturalist-art/plates/64/sa_esp_leopardus_colocola--normal.webp",
     "naturalist-art/plates/128/sa_esp_leopardus_colocola--normal.webp",
@@ -905,6 +1452,10 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/sa_esp_leopardus_tigrinus--normal.webp",
     "naturalist-art/plates/128/sa_esp_leopardus_tigrinus--normal.webp",
     "naturalist-art/plates/256/sa_esp_leopardus_tigrinus--normal.webp",
+    "naturalist-art/plates/sa_esp_lontra_felina--normal.webp",
+    "naturalist-art/plates/64/sa_esp_lontra_felina--normal.webp",
+    "naturalist-art/plates/128/sa_esp_lontra_felina--normal.webp",
+    "naturalist-art/plates/256/sa_esp_lontra_felina--normal.webp",
     "naturalist-art/plates/sa_esp_lycalopex_culpaeus--normal.webp",
     "naturalist-art/plates/64/sa_esp_lycalopex_culpaeus--normal.webp",
     "naturalist-art/plates/128/sa_esp_lycalopex_culpaeus--normal.webp",
@@ -917,10 +1468,26 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/sa_esp_lycalopex_gymnocercus--normal.webp",
     "naturalist-art/plates/128/sa_esp_lycalopex_gymnocercus--normal.webp",
     "naturalist-art/plates/256/sa_esp_lycalopex_gymnocercus--normal.webp",
+    "naturalist-art/plates/sa_esp_pteronura_brasiliensis--normal.webp",
+    "naturalist-art/plates/64/sa_esp_pteronura_brasiliensis--normal.webp",
+    "naturalist-art/plates/128/sa_esp_pteronura_brasiliensis--normal.webp",
+    "naturalist-art/plates/256/sa_esp_pteronura_brasiliensis--normal.webp",
     "naturalist-art/plates/sa_esp_speothos_venaticus--normal.webp",
     "naturalist-art/plates/64/sa_esp_speothos_venaticus--normal.webp",
     "naturalist-art/plates/128/sa_esp_speothos_venaticus--normal.webp",
     "naturalist-art/plates/256/sa_esp_speothos_venaticus--normal.webp",
+    "naturalist-art/plates/sa_esp_tremarctos_ornatus--normal.webp",
+    "naturalist-art/plates/64/sa_esp_tremarctos_ornatus--normal.webp",
+    "naturalist-art/plates/128/sa_esp_tremarctos_ornatus--normal.webp",
+    "naturalist-art/plates/256/sa_esp_tremarctos_ornatus--normal.webp",
+    "naturalist-art/plates/tejon_europeo--albino.webp",
+    "naturalist-art/plates/64/tejon_europeo--albino.webp",
+    "naturalist-art/plates/128/tejon_europeo--albino.webp",
+    "naturalist-art/plates/256/tejon_europeo--albino.webp",
+    "naturalist-art/plates/tejon_europeo--normal.webp",
+    "naturalist-art/plates/64/tejon_europeo--normal.webp",
+    "naturalist-art/plates/128/tejon_europeo--normal.webp",
+    "naturalist-art/plates/256/tejon_europeo--normal.webp",
     "naturalist-art/plates/zorro_artico--melanico.webp",
     "naturalist-art/plates/64/zorro_artico--melanico.webp",
     "naturalist-art/plates/128/zorro_artico--melanico.webp",

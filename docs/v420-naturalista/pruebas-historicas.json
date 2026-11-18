@@ -1,0 +1,33 @@
+{
+  "base": "4.1.0",
+  "baseCommit": "b4857135fedf8ee027c9e1e4cd12926957ae381e",
+  "candidata": "4.2.0",
+  "pruebas": 111,
+  "aprobadasEnAmbas": 90,
+  "fallidasEnAmbas": 21,
+  "omitidas": 0,
+  "regresionesNuevas": 0,
+  "fallosPreexistentes": [
+    "3.26 adds presentation only; every original 3.25 gameplay, journal, art and catalog byte remains exact",
+    "sighting orders and every threshold use the real complete catalog before pagination",
+    "search, group, subgroup, sightings, progress and monograph hiding combine, including an empty result and clearing",
+    "discovery, incomplete study, 5/5 and publication are separate progress conditions",
+    "all 807 entries remain reachable through 26 pages; only 32 visible cards request SVGs and filters clamp an invalid page",
+    "release precaches the production Bestiary and an isolated twelve-state comparison using the actual 3.25 engine",
+    "production field projection is read-only and preserves hidden names for unidentified specimens",
+    "3.25 only adds journal presentation: all original game source, including the five-stage engine, remains exact",
+    "all 807 stage-zero illustrations omit technical identity metadata without changing a single SVG drawing",
+    "release and offline cache include the same production journal, isolated comparison and safe update entry",
+    "presentation is additive: original 3.26 app and every game rule remain byte-for-byte exact",
+    "catalog remains 807 species / 79 regions and exactly five Museum rooms",
+    "all 807 eligible samples are reachable on 26 pages; at most 32 visible sprites and no permanent UI fields",
+    "release precaches all Museum resources and actual isolated before/after lab with twelve states and no storage access",
+    "Museum presentation preserves historical 3.19.9 europe through all rooms, native import/export and restoration",
+    "Museum presentation preserves historical 3.21.2 africa through all rooms, native import/export and restoration",
+    "Museum presentation preserves historical 3.22.1 northamerica through all rooms, native import/export and restoration",
+    "Museum presentation preserves historical 3.23.1 southamerica through all rooms, native import/export and restoration",
+    "Museum presentation preserves historical 3.23.0 museum through all rooms, native import/export and restoration",
+    "Museum presentation preserves historical 3.22.1 variants-monographs through all rooms, native import/export and restoration",
+    "update entrypoint is independent of the old app bundle and publishes an identifiable version"
+  ]
+}

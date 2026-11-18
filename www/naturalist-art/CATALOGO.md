@@ -1,4 +1,4 @@
-# Inventario naturalista del catálogo 4.1.0
+# Inventario naturalista del catálogo 4.2.0
 
 | Grupo | Familia | ID | Nombre común | Nombre científico | Continente | Zonas del juego | Variantes | Dimorfismo | Ejemplares |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -10,12 +10,20 @@
 | Marsupiales | Microbiotheriidae | gm06_dromiciops_gliroides | Monito del monte | *Dromiciops gliroides* | Sudamérica | Bosques templados del sur | Normal | No | Normal, Notable, Épico, Excepcional |
 | Marsupiales | Macropodidae | oc_esp_dendrolagus_lumholtzi | Canguro arborícola de Lumholtz | *Dendrolagus lumholtzi* | Oceanía | Costa nordeste australiana | Normal | No | Normal, Notable |
 | Marsupiales | Macropodidae | oc_esp_dendrolagus_matschiei | Canguro arborícola de Matschie | *Dendrolagus matschiei* | Oceanía | Nueva Guinea | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | eu_esp_0618 | Armiño | *Mustela erminea* | Europa | Escandinavia, Europa Occidental, Región del mar Báltico | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Viverridae | asia_esp_0849 | Binturong | *Arctictis binturong* | Asia | Sudeste Asiático | Normal, Melánico | No | Normal, Notable |
 | Marsupiales | Macropodidae | oc_esp_macropus_fuliginosus | Canguro gris occidental | *Macropus fuliginosus* | Oceanía | Australia Occidental | Normal | No | Normal, Notable |
 | Marsupiales | Macropodidae | oc_esp_macropus_giganteus | Canguro gris oriental | *Macropus giganteus* | Oceanía | Tasmania, Australia Oriental | Normal, Albino | No | Normal, Notable |
 | Marsupiales | Macropodidae | oc_esp_osphranter_rufus | Canguro rojo | *Osphranter rufus* | Oceanía | Australia tropical septentrional, Interior árido australiano | Normal, Albino | No | Normal, Notable |
 | Felinos | Felidae | af_caracal | Caracal | *Caracal caracal* | Asia, África | Anatolia, Península Arábiga, Meseta de Irán, Sahel occidental, Kalahari y sabana austral, Cuerno de África, Desierto del Namib | Normal, Albino, Melánico | No | Normal, Notable |
 | Cánidos | Canidae | af_xlsx_131_lupulella_mesomelas | Chacal de lomo negro | *Lupulella mesomelas* | África | Sabana de África oriental, Sabanas del sudeste africano | Normal, Albino | No | Normal, Notable |
 | Cánidos | Canidae | chacal_dorado | Chacal dorado | *Canis aureus* | Europa | Europa Oriental | Normal, Melánico | No | Normal |
+| Carnívoros terrestres | Mephitidae | sa_esp_conepatus_chinga | Chingue patagónico | *Conepatus chinga* | Sudamérica | Patagonia y Tierra del Fuego | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | sa_esp_lontra_felina | Chungungo | *Lontra felina* | Sudamérica | Patagonia y Tierra del Fuego, Litoral del Pacífico suroriental | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Viverridae | af_civeta | Civeta africana | *Civettictis civetta* | África | Cuenca del Congo, Bosques guineanos occidentales, Bosques atlánticos ecuatoriales | Normal, Albino, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Viverridae | asia_esp_0395 | Civeta de las palmeras enmascarada | *Paguma larvata* | Asia | China Meridional | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Procyonidae | na_esp_nasua_narica | Coatí de nariz blanca | *Nasua narica* | Norteamérica | Sierra Madre, Península de Yucatán, América Central | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | eu_esp_0617 | Comadreja común | *Mustela nivalis* | Europa | Islas Británicas, Europa Occidental, Europa Central | Normal, Melánico | No | Normal, Notable |
 | Cánidos | Canidae | na_esp_canis_latrans | Coyote | *Canis latrans* | Norteamérica | Grandes Llanuras, Desierto de Sonora | Normal, Albino, Melánico | No | Normal, Notable |
 | Cánidos | Canidae | asia_esp_0820 | Cuón | *Cuon alpinus* | Asia | Himalaya, Sudeste Asiático | Normal, Melánico | No | Normal, Notable |
 | Marsupiales | Phalangeridae | oc_esp_phalanger_orientalis | Cuscús común | *Phalanger orientalis* | Oceanía | Nueva Guinea | Normal | No | Normal, Notable |
@@ -24,6 +32,9 @@
 | Monotremas | Tachyglossidae | oc_esp_tachyglossus_aculeatus | Equidna de hocico corto | *Tachyglossus aculeatus* | Oceanía | Costa nordeste australiana, Australia tropical septentrional, Tasmania, Australia Occidental, Australia Oriental | Normal | No | Normal, Notable |
 | Monotremas | Tachyglossidae | oc_esp_zaglossus_bartoni | Equidna de hocico largo oriental | *Zaglossus bartoni* | Oceanía | Nueva Guinea | Normal | No | Normal, Notable |
 | Cánidos | Canidae | af_fenec | Fénec | *Vulpes zerda* | África | Magreb, Montañas del Atlas, Desierto del Sáhara | Normal, Albino, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Eupleridae | af_fosa | Fosa | *Cryptoprocta ferox* | África | Madagascar | Normal, Albino, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | eu_esp_0620 | Garduña | *Martes foina* | Europa | Europa Occidental, Europa Central, Península Ibérica | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | eu_esp_0625 | Gato almizclero europeo | *Vormela peregusna* | Europa | Europa Oriental, Balcanes | Normal, Melánico | No | Normal, Notable |
 | Felinos | Felidae | sa_esp_leopardus_jacobita | Gato andino | *Leopardus jacobita* | Sudamérica | Andes Centrales | Normal | No | Normal, Notable |
 | Felinos | Felidae | asia_esp_0205 | Gato de la jungla | *Felis chaus* | Asia | Mesopotamia | Normal, Melánico | No | Normal, Notable |
 | Felinos | Felidae | asia_esp_0206 | Gato de las arenas | *Felis margarita* | Asia, África | Península Arábiga, Meseta de Irán, Desierto del Sáhara | Normal, Melánico | No | Normal, Notable |
@@ -35,7 +46,14 @@
 | Felinos | Felidae | af_gato_montes_africano | Gato montés africano | *Felis lybica* | África | Montañas del Atlas | Normal, Melánico | No | Normal, Notable |
 | Felinos | Felidae | gato_montes | Gato montés europeo | *Felis silvestris* | Europa, Asia | Europa Occidental, Europa Central, Península Itálica, Balcanes, Anatolia | Normal, Melánico | No | Normal |
 | Felinos | Felidae | asia_esp_0816 | Gato pescador | *Prionailurus viverrinus* | Asia | Subcontinente Indio, Sudeste Asiático | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Viverridae | eu_esp_0219 | Gineta | *Genetta genetta* | Europa, África | Península Ibérica, Magreb | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | gloton | Glotón | *Gulo gulo* | Europa, Asia, Norteamérica | Escandinavia, Siberia Occidental, Siberia Central, Montes Urales, Alaska, Yukón, Labrador subártico | Normal, Albino | No | Normal |
 | Felinos | Felidae | af_guepardo | Guepardo | *Acinonyx jubatus* | África | Sabana de África oriental, Kalahari y sabana austral, Bosques de miombo, Lagos del Rift, Sahel oriental | Normal, Albino, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Hyaenidae | af_hiena_manchada | Hiena manchada | *Crocuta crocuta* | África | Sabana de África oriental, Kalahari y sabana austral, Cuerno de África, Sabanas del sudeste africano, Sahel oriental | Normal, Albino, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Hyaenidae | af_hiena_parda | Hiena parda | *Parahyaena brunnea* | África | Kalahari y sabana austral, Desierto del Namib | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Hyaenidae | asia_esp_0246 | Hiena rayada | *Hyaena hyaena* | Asia, África | Meseta de Irán, Sahel occidental | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | gm06_lontra_provocax | Huillín | *Lontra provocax* | Sudamérica | Patagonia y Tierra del Fuego, Bosques templados del sur | Normal | No | Normal, Notable, Épico, Excepcional |
+| Carnívoros terrestres | Mustelidae | na_esp_mustela_nigripes | Hurón de patas negras | *Mustela nigripes* | Norteamérica | Grandes Llanuras | Normal | No | Normal, Notable |
 | Felinos | Felidae | na_esp_panthera_onca | Jaguar | *Panthera onca* | Norteamérica, Sudamérica | Sierra Madre, Península de Yucatán, América Central, Llanos del Orinoco, Amazonía, Pantanal, Cerrado brasileño, Darién y Chocó | Normal, Albino, Melánico | No | Normal, Notable, Épico, Excepcional |
 | Felinos | Felidae | na_esp_herpailurus_yagouaroundi | Jaguarundi | *Herpailurus yagouaroundi* | Norteamérica | Península de Yucatán, América Central | Normal | No | Normal, Notable |
 | Marsupiales | Phascolarctidae | oc_esp_phascolarctos_cinereus | Koala | *Phascolarctos cinereus* | Oceanía | Australia Oriental | Normal | No | Normal, Notable |
@@ -53,11 +71,34 @@
 | Cánidos | Canidae | af_chacal_dorado | Lobo dorado africano | *Canis lupaster* | África | Magreb, Sahel occidental, Montañas del Atlas | Normal, Albino, Melánico | No | Normal, Notable |
 | Cánidos | Canidae | af_lobo_etiope | Lobo etíope | *Canis simensis* | África | Tierras altas de Etiopía | Normal, Melánico | No | Normal, Notable |
 | Cánidos | Canidae | lobo_gris | Lobo gris | *Canis lupus* | Europa, Asia, Norteamérica | Escandinavia, Europa Central, Península Ibérica, Europa Oriental, Península Itálica, Región del mar Báltico, Balcanes, Cáucaso, Anatolia, Siberia Occidental, Siberia Central, Mongolia, Montes Urales, Siberia Oriental, Himalaya, Península Arábiga, Meseta de Irán, Estepas de Asia Central, China Septentrional, Alaska, Columbia Británica, Bosques boreales de Canadá, Yukón, Sierra Madre | Normal | No | Normal, Notable, Épico, Excepcional, Legendario · Fenrir |
+| Carnívoros terrestres | Herpestidae | af_mangosta_enana | Mangosta enana africana | *Helogale parvula* | África | Sabana de África oriental, Sabanas del sudeste africano | Normal, Albino | No | Normal, Notable |
+| Carnívoros terrestres | Herpestidae | af_xlsx_131_mungos_mungo | Mangosta rayada | *Mungos mungo* | África | Sabana de África oriental, Bosques de miombo, Sabanas del sudeste africano | Normal, Albino | No | Normal, Notable |
 | Felinos | Felidae | asia_esp_0387 | Manul | *Otocolobus manul* | Asia | Mongolia | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Procyonidae | na_esp_procyon_lotor | Mapache | *Procyon lotor* | Norteamérica | Región de los Grandes Lagos, Bosques del este norteamericano, Costa del golfo de México | Normal, Albino | No | Normal, Notable |
+| Carnívoros terrestres | Procyonidae | na_esp_procyon_pygmaeus | Mapache de Cozumel | *Procyon pygmaeus* | Norteamérica | Península de Yucatán | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | na_esp_martes_americana | Marta americana | *Martes americana* | Norteamérica | Bosques boreales de Canadá, Labrador subártico | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | asia_esp_0326 | Marta cibelina | *Martes zibellina* | Asia | Siberia Occidental, Siberia Central, Montes Urales, Siberia Oriental | Normal, Albino | No | Normal |
+| Carnívoros terrestres | Mustelidae | asia_esp_0850 | Marta de garganta amarilla | *Martes flavigula* | Asia | Himalaya, Sudeste Asiático | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | eu_esp_0621 | Marta europea | *Martes martes* | Europa | Escandinavia, Europa Occidental, Europa Central | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Herpestidae | meloncillo | Meloncillo | *Herpestes ichneumon* | Europa | Península Ibérica | Normal, Melánico | No | Normal |
 | Marsupiales | Dasyuridae | oc_esp_dasycercus_cristicauda | Mulgará de cola crestada | *Dasycercus cristicauda* | Oceanía | Interior árido australiano | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | af_xlsx_131_hydrictis_maculicollis | Nutria de cuello manchado | *Hydrictis maculicollis* | África | Grandes Lagos africanos | Normal, Albino | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | na_esp_lontra_canadensis | Nutria de río norteamericana | *Lontra canadensis* | Norteamérica | Columbia Británica, Región de los Grandes Lagos, Costa del Pacífico, Costa del golfo de México | Normal, Albino | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | nutria_europea | Nutria europea | *Lutra lutra* | Europa | Islas Británicas, Europa Central, Región del mar Báltico | Normal, Albino, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | sa_esp_pteronura_brasiliensis | Nutria gigante | *Pteronura brasiliensis* | Sudamérica | Amazonía, Pantanal | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | asia_esp_0300 | Nutria lisa | *Lutrogale perspicillata* | Asia | Mesopotamia | Normal, Melánico | No | Normal, Notable |
 | Felinos | Felidae | na_esp_leopardus_pardalis | Ocelote | *Leopardus pardalis* | Norteamérica | Península de Yucatán, América Central | Normal | No | Normal, Notable |
 | Monotremas | Ornithorhynchidae | oc_esp_ornithorhynchus_anatinus | Ornitorrinco | *Ornithorhynchus anatinus* | Oceanía | Costa nordeste australiana, Tasmania, Australia Oriental | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Ursidae | asia_esp_0336 | Oso bezudo | *Melursus ursinus* | Asia | Subcontinente Indio | Normal, Albino | No | Normal, Notable |
+| Carnívoros terrestres | Ursidae | sa_esp_tremarctos_ornatus | Oso de anteojos | *Tremarctos ornatus* | Sudamérica | Andes del Norte | Normal | No | Normal, Notable, Épico |
+| Carnívoros terrestres | Ursidae | asia_esp_0238 | Oso malayo | *Helarctos malayanus* | Asia | Sudeste Asiático | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Ursidae | na_esp_ursus_americanus | Oso negro americano | *Ursus americanus* | Norteamérica | Alaska, Columbia Británica, Montañas Rocosas, Costa del Pacífico, Bosques del este norteamericano, Sierra Madre | Normal, Albino | No | Normal, Notable |
+| Carnívoros terrestres | Ursidae | asia_esp_0523 | Oso negro asiático | *Ursus thibetanus* | Asia | Himalaya, China Meridional, Península de Corea, Archipiélago Japonés | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Ursidae | oso_pardo | Oso pardo | *Ursus arctos* | Europa, Asia, Norteamérica | Escandinavia, Península Itálica, Balcanes, Cáucaso, Anatolia, Siberia Occidental, Siberia Central, Montes Urales, Siberia Oriental, Kamchatka, Desierto de Gobi, Meseta de Irán, Alaska, Columbia Británica | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Ursidae | polar_esp_ursus_maritimus | Oso polar | *Ursus maritimus* | Polos, Norteamérica | Hielo ártico occidental, Hielo ártico central, Hielo ártico oriental, Bahía de Hudson | Normal | No | Normal, Notable |
 | Marsupiales | Macropodidae | oc_esp_thylogale_billardierii | Pademelón de Tasmania | *Thylogale billardierii* | Oceanía | Tasmania | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Ursidae | asia_esp_0006 | Panda gigante | *Ailuropoda melanoleuca* | Asia | China Meridional | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Ailuridae | asia_esp_0007 | Panda rojo | *Ailurus fulgens* | Asia | Himalaya | Normal, Albino, Melánico | No | Normal, Notable |
 | Cánidos | Canidae | sa_esp_speothos_venaticus | Perro de monte | *Speothos venaticus* | Sudamérica | Amazonía, Pantanal | Normal | No | Normal, Notable |
 | Marsupiales | Petauridae | oc_esp_petaurus_breviceps | Petauro del azúcar | *Petaurus breviceps* | Oceanía | Australia Oriental | Normal | No | Normal, Notable |
 | Marsupiales | Phalangeridae | oc_esp_trichosurus_vulpecula | Possum cola de cepillo | *Trichosurus vulpecula* | Oceanía | Tasmania, Australia Oriental | Normal | No | Normal, Notable |
@@ -65,19 +106,29 @@
 | Marsupiales | Macropodidae | oc_esp_setonix_brachyurus | Quokka | *Setonix brachyurus* | Oceanía | Australia Occidental | Normal | No | Normal, Notable |
 | Marsupiales | Dasyuridae | oc_esp_dasyurus_viverrinus | Quol oriental | *Dasyurus viverrinus* | Oceanía | Tasmania | Normal | No | Normal, Notable |
 | Felinos | Felidae | af_serval | Serval | *Leptailurus serval* | África | Magreb, Sabana de África oriental, Grandes Lagos africanos | Normal, Albino, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Herpestidae | af_suricata | Suricata | *Suricata suricatta* | África | Kalahari y sabana austral, Desierto del Namib, Sabanas del sudeste africano | Normal, Albino, Melánico | No | Normal, Notable, Épico |
 | Cánidos | Canidae | asia_esp_0363 | Tanuki | *Nyctereutes procyonoides* | Asia | Archipiélago Japonés | Normal, Albino | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | na_esp_taxidea_taxus | Tejón americano | *Taxidea taxus* | Norteamérica | Sierra Madre | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | asia_esp_0333 | Tejón asiático | *Meles leucurus* | Asia | Península de Corea | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | tejon_europeo | Tejón europeo | *Meles meles* | Europa | Islas Británicas, Europa Occidental, Europa Central | Normal, Albino | No | Normal |
+| Carnívoros terrestres | Mustelidae | af_xlsx_131_mellivora_capensis | Tejón melero | *Mellivora capensis* | África | Kalahari y sabana austral, Bosques de miombo | Normal, Albino | No | Normal, Notable |
 | Felinos | Felidae | asia_esp_0402 | Tigre siberiano | *Panthera tigris* | Asia | Siberia Oriental, China Septentrional, Subcontinente Indio, Sudeste Asiático | Normal, Albino, Melánico | No | Normal, Notable, Épico, Excepcional, Legendario · Ámbar |
 | Felinos | Felidae | sa_esp_leopardus_tigrinus | Tigrillo | *Leopardus tigrinus* | Sudamérica | Andes del Norte, Amazonía | Normal, Melánico | No | Normal, Notable |
 | Felinos | Felidae | na_esp_leopardus_wiedii | Tigrillo margay | *Leopardus wiedii* | Norteamérica | Península de Yucatán, América Central | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | asia_esp_0347 | Turón estepario | *Mustela eversmanii* | Asia | Estepas de Asia Central | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | eu_esp_0619 | Turón europeo | *Mustela putorius* | Europa | Islas Británicas, Europa Occidental, Europa Central | Normal, Melánico | No | Normal, Notable |
 | Marsupiales | Macropodidae | oc_esp_notamacropus_agilis | Ualabí ágil | *Notamacropus agilis* | Oceanía | Australia tropical septentrional | Normal | No | Normal, Notable |
 | Marsupiales | Macropodidae | oc_esp_notamacropus_rufogriseus | Ualabí de Bennett | *Notamacropus rufogriseus* | Oceanía | Tasmania, Australia Oriental | Normal | No | Normal, Notable |
 | Marsupiales | Macropodidae | oc_esp_wallabia_bicolor | Ualabí de pantano | *Wallabia bicolor* | Oceanía | Australia Oriental | Normal | No | Normal, Notable |
 | Marsupiales | Macropodidae | oc_esp_petrogale_mareeba | Ualabí de roca de Mareeba | *Petrogale mareeba* | Oceanía | Costa nordeste australiana | Normal | No | Normal, Notable |
 | Marsupiales | Macropodidae | oc_esp_notamacropus_eugenii | Ualabí de Tammar | *Notamacropus eugenii* | Oceanía | Australia Occidental | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Mustelidae | eu_esp_0622 | Visón europeo | *Mustela lutreola* | Europa | Europa Occidental, Europa Oriental | Normal, Melánico | No | Normal, Notable |
 | Marsupiales | Vombatidae | oc_esp_vombatus_ursinus | Wómbat común | *Vombatus ursinus* | Oceanía | Tasmania, Australia Oriental | Normal, Albino | No | Normal, Notable |
 | Marsupiales | Didelphidae | na_esp_didelphis_marsupialis | Zarigüeya común | *Didelphis marsupialis* | Norteamérica | América Central | Normal | No | Normal, Notable |
 | Marsupiales | Didelphidae | na_esp_didelphis_virginiana | Zarigüeya de Virginia | *Didelphis virginiana* | Norteamérica | Bosques del este norteamericano, Costa del golfo de México | Normal, Albino | No | Normal, Notable |
 | Marsupiales | Petauridae | oc_esp_dactylopsila_trivirgata | Zarigüeya listada | *Dactylopsila trivirgata* | Oceanía | Costa nordeste australiana | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Mephitidae | na_esp_spilogale_gracilis | Zorrillo moteado occidental | *Spilogale gracilis* | Norteamérica | Costa del Pacífico, Desierto de Sonora | Normal | No | Normal, Notable |
+| Carnívoros terrestres | Mephitidae | na_esp_mephitis_mephitis | Zorrillo rayado | *Mephitis mephitis* | Norteamérica | Grandes Llanuras, Región de los Grandes Lagos, Bosques del este norteamericano | Normal, Albino | No | Normal, Notable |
 | Cánidos | Canidae | zorro_artico | Zorro ártico | *Vulpes lagopus* | Europa, Polos, Norteamérica | Escandinavia, Hielo ártico occidental, Hielo ártico oriental, Bahía de Hudson | Normal, Melánico | No | Normal, Notable |
 | Cánidos | Canidae | sa_esp_cerdocyon_thous | Zorro cangrejero | *Cerdocyon thous* | Sudamérica | Litoral caribeño sudamericano, Cerrado brasileño | Normal | No | Normal, Notable |
 | Cánidos | Canidae | asia_esp_0533 | Zorro corsac | *Vulpes corsac* | Asia | Mongolia, Desierto de Gobi, Estepas de Asia Central | Normal, Melánico | No | Normal, Notable |

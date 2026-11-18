@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Laboratorio V4.1 · El Gran Atlas</title>
+  <title>Laboratorio V4.2 · El Gran Atlas</title>
   <link rel="stylesheet" href="../css/naturalist-art-v400.css">
   <link rel="stylesheet" href="../css/field-v3210.css">
   <link rel="stylesheet" href="lab.css">
@@ -17,7 +17,8 @@
     <div class="container">
       <p class="eyebrow">El Gran Atlas</p>
       <h1>Laboratorio naturalista</h1>
-      <p class="subtitle">Marsupiales, monotremas, felinos y cánidos · V4.1.0</p>
+      <p class="subtitle">Colección ilustrada · V4.2.0</p>
+      <p id="migration-progress" class="migration-progress"></p>
       <a class="game-link" href="../index.html">Abrir el juego</a>
     </div>
   </header>
@@ -38,7 +39,8 @@
     <section aria-labelledby="heading" class="workspace">
       <div class="toolbar">
         <div><h2 id="heading"></h2><p id="summary"></p></div>
-        <label>Grupo <select id="group"><option value="">Todos</option><option>Marsupiales</option><option>Monotremas</option><option>Felinos</option><option>Cánidos</option></select></label>
+        <label>Grupo <select id="group"><option value="">Todos</option></select></label>
+        <label>Familia zoológica <select id="family"></select></label>
         <label id="search-control">Buscar especie <input id="search" type="search" placeholder="Nombre común o científico"></label>
         <label id="species-control" hidden>Especie <select id="species"></select></label>
         <label id="scale-plate-control" hidden>Lámina <select id="scale-plate"></select></label>

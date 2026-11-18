@@ -42,7 +42,7 @@ test('catalog is read from the production runtime and only known records can be 
     }
     counts[sp.group] = (counts[sp.group] || 0) + 1;
   }
-  assert.deepEqual(counts, { Marsupiales: 29, Monotremas: 3, Felinos: 31, 'Cánidos': 28 });
+  assert.deepEqual(counts, { Marsupiales: 29, Monotremas: 3, Felinos: 31, 'Cánidos': 28, 'Carnívoros terrestres': 51 });
 });
 
 test('rendering the collection does not disclose unseen art or write a save', () => {
@@ -121,4 +121,30 @@ test('manual and automatic encounters keep identical saved results with and with
   }
   assert.match(withArt.fieldEncounterModel(withArt.state.lastEncounter).entries[0].image, /zorro_rojo--normal\.webp/);
   assert.match(withoutArt.fieldEncounterModel(withoutArt.state.lastEncounter).entries[0].image, /^<svg/);
+});
+
+test('terrestrial Carnivora covers the nine present families with only the configured pigments', () => {
+  const catalog = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog,migrationProgress});');
+  const records = catalog.catalog.filter(sp => sp.group === 'Carnívoros terrestres');
+  const families = Object.fromEntries([...new Set(records.map(sp => sp.family))].map(family =>
+    [family, records.filter(sp => sp.family === family).length]));
+  assert.deepEqual(families, {
+    Ursidae: 8, Mustelidae: 24, Mephitidae: 3, Procyonidae: 3, Ailuridae: 1,
+    Hyaenidae: 3, Herpestidae: 4, Viverridae: 4, Eupleridae: 1
+  });
+  const a = harness({}, null, { gameSource: source }).window.__atlasTest;
+  assert.equal(a.LEGENDARY_SPECIMENS.length, 12);
+  let total = 0;
+  for (const sp of records) {
+    assert.ok(!sp.dimorphism);
+    assert.ok(!sp.categories.includes('Legendario'));
+    assert.ok(sp.records.every(record => record.src));
+    assert.deepEqual([...sp.records].slice(1).map(r => r.label).sort(),
+      [...a.configuredSpecials(a.SPECIES[sp.id])].filter(label => ['Albino', 'Melánico'].includes(label)).sort());
+    total += sp.records.length - 1;
+  }
+  assert.equal(total, 42);
+  assert.ok(records.some(sp => sp.id === 'sa_esp_lontra_felina'));
+  assert.ok(!records.some(sp => sp.latin.startsWith('Enhydra ')));
+  assert.deepEqual({ ...catalog.migrationProgress }, { migrated: 142, total: 997 });
 });

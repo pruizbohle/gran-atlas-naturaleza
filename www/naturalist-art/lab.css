@@ -149,3 +149,4 @@ figcaption { padding: .4rem 0; }
 }
 .mixed-field .field-animal-sprite .plate { --art-size: 100%; }
 .mixed-field > p { padding: .45rem .8rem; color: var(--muted); font-size: .85rem; }
+.migration-progress { margin-top: .4rem; color: #fbedd2; font-weight: 600; font-variant-numeric: tabular-nums; }

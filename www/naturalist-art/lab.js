@@ -5,6 +5,7 @@ const content = byId('content');
 const search = byId('search');
 const species = byId('species');
 const group = byId('group');
+const family = byId('family');
 const context = byId('context');
 const scalePlate = byId('scale-plate');
 const category = byId('category');
@@ -33,7 +34,12 @@ try {
 } catch {
   byId('status').textContent = 'No se pudo recuperar la revisión local.';
 }
-for (const sp of catalog) species.add(new Option(sp.name, sp.id));
+const percent = (migrationProgress.migrated * 100 / migrationProgress.total).toLocaleString('es-CL', { maximumFractionDigits: 2 });
+byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + migrationProgress.total +
+  ' especies migradas · ' + percent + ' %';
+for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
+updateFamilies();
+updateSpecies();
 for (const sp of mixedFieldSprites) mixedSvg.add(new Option(sp.name, sp.id));
 
 function illustration(sp, record, frame = 'Normal', resolution = 512, eager = false) {
@@ -48,9 +54,29 @@ function figure(markup, caption) {
   return '<figure>' + markup + '<figcaption>' + text(caption) + '</figcaption></figure>';
 }
 
-function gallery() {
+function matchingSpecies() {
   const query = normalize(search.value.trim());
-  const shown = catalog.filter(sp => (!group.value || sp.group === group.value) && normalize(sp.name + ' ' + sp.latin).includes(query));
+  return catalog.filter(sp => (!group.value || sp.group === group.value) &&
+    (!family.value || sp.family === family.value) && normalize(sp.name + ' ' + sp.latin).includes(query));
+}
+
+function updateFamilies() {
+  const names = [...new Set(catalog.filter(sp => !group.value || sp.group === group.value).map(sp => sp.family))]
+    .sort((a, b) => a.localeCompare(b));
+  selectOptions(family, [['', 'Todas'], ...names.map(name => [name, name])]);
+}
+
+function updateSpecies() {
+  const selected = species.value;
+  selectOptions(species, matchingSpecies().map(sp => [sp.id, sp.name]));
+  if (species.value !== selected) {
+    reviewKey = 'normal';
+    scalePlate.value = 'normal';
+  }
+}
+
+function gallery() {
+  const shown = matchingSpecies();
   byId('summary').textContent = shown.length + ' de ' + catalog.length + ' especies';
   return shown.length ? '<div class="grid gallery">' + shown.map(sp =>
     '<button type="button" class="gallery-card" data-species="' + text(sp.id) + '">' +
@@ -146,15 +172,19 @@ function draw() {
   const sp = catalog.find(item => item.id === species.value);
   byId('heading').textContent = modes[mode];
   byId('mixed-control').hidden = mode !== 'mixed';
-  byId('search-control').hidden = mode !== 'gallery';
+
   byId('species-control').hidden = mode === 'gallery';
   byId('context-control').hidden = mode !== 'scale';
   byId('scale-plate-control').hidden = mode !== 'scale' && !previews.includes(mode);
   byId('category-control').hidden = !previews.includes(mode);
   byId('export').hidden = mode !== 'review';
-  byId('summary').textContent = mode === 'gallery' ? '' : sp.latin;
+  byId('summary').textContent = mode === 'gallery' ? '' : (sp?.latin || '');
   for (const button of document.querySelectorAll('[data-mode]')) {
     button.setAttribute('aria-pressed', String(button.dataset.mode === mode));
+  }
+  if (!sp && mode !== 'gallery') {
+    content.innerHTML = '<p>No se encontraron especies.</p>';
+    return;
   }
   switch (mode) {
     case 'field':
@@ -219,12 +249,16 @@ content.addEventListener('change', event => {
   }
   if (event.target.id === 'review-status') saveReview();
 });
-search.addEventListener('input', draw);
-group.addEventListener('change', () => {
-  selectOptions(species, catalog.filter(sp => !group.value || sp.group === group.value).map(sp => [sp.id, sp.name]));
-  reviewKey = 'normal';
+function applyFilters() {
+  updateSpecies();
   draw();
+}
+search.addEventListener('input', applyFilters);
+group.addEventListener('change', () => {
+  updateFamilies();
+  applyFilters();
 });
+family.addEventListener('change', applyFilters);
 species.addEventListener('change', () => {
   reviewKey = 'normal';
   scalePlate.value = 'normal';
