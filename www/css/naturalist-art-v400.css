@@ -66,6 +66,7 @@
 }
 .field-stage[data-light="noche"] .field-environment > .atlas-art-landscape { filter: blur(1px) saturate(.68) brightness(.64); }
 .field-stage[data-light="atardecer"] .field-environment > .atlas-art-landscape { filter: blur(1px) saturate(.83) sepia(.16); }
+.field-stage[data-light="amanecer"] .field-environment > .atlas-art-landscape { filter: blur(1px) saturate(.68) brightness(.9) sepia(.12); }
 .field-animal-sprite .atlas-art-frame { --art-size: clamp(64px, 20vw, 134px); margin-inline: auto; }
 .field-actors-group .atlas-art-frame { --art-size: clamp(56px, 17vw, 104px); }
 .field-log-art { display: flex; gap: .45rem; margin-block: .35rem; }

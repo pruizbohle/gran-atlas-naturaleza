@@ -6,6 +6,11 @@ const { harness } = require('../tests/helpers/live-game.cjs');
 
 const out = path.resolve('www/naturalist-art');
 const artDir = path.join(out, 'plates');
+const reviewDir = path.join(out, 'review');
+const reviewNotes = path.join(reviewDir, 'observations.json');
+const observations = fs.existsSync(reviewNotes) ? JSON.parse(fs.readFileSync(reviewNotes, 'utf8')) : {};
+const qualities = [75, 80, 85, 90, 95];
+const reviewFiles = new Set();
 const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'app'];
 const gameSource = modules.map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
 const audit = harness({}, null, { gameSource }).window.__atlasTest;
@@ -43,7 +48,22 @@ function plate(id, key, label) {
     assets.add(file);
     if (hasAlpha(source)) cutouts[file] = true;
   }
-  return { key, label, src: exists ? 'plates/' + file : null, bytes: exists ? fs.statSync(source).size : 0 };
+  const reviewAsset = (folder, comparisonFile) => {
+    const relative = 'review/' + folder + '/' + comparisonFile;
+    const location = path.join(out, relative);
+    if (!fs.existsSync(location)) return null;
+    reviewFiles.add('naturalist-art/' + relative);
+    return { src: relative, bytes: fs.statSync(location).size };
+  };
+  const before = reviewAsset('before', file);
+  const compression = Object.fromEntries(qualities.flatMap(quality => {
+    const sample = reviewAsset('compression/' + quality, file);
+    return sample ? [[quality, sample]] : [];
+  }));
+  return {
+    key, label, src: exists ? 'plates/' + file : null, bytes: exists ? fs.statSync(source).size : 0,
+    cutout: cutouts[file] === true, note: observations[file] || '', before, compression
+  };
 }
 
 const felidGenera = new Set([
@@ -126,7 +146,8 @@ const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,
   total: catalogEntries.length,
   cutouts: Object.keys(cutouts).length,
-  plates: assets.size
+  plates: assets.size,
+  review: Object.keys(observations).length
 };
 const mixedFieldSprites = ['ciervo_rojo', 'jabali', 'corzo_europeo'].map(id => {
   const sp = audit.SPECIES[id];
@@ -159,7 +180,7 @@ const landscapes = fs.readdirSync(path.join(out, 'landscapes')).filter(file => f
   .map(file => path.basename(file, '.webp')).sort();
 const animalFiles = [...assets].sort().flatMap(file =>
   ['', '64/', '128/', '256/'].map(size => 'naturalist-art/plates/' + size + file));
-const files = [...animalFiles, ...landscapes.map(key => 'naturalist-art/landscapes/' + key + '.webp')];
+const files = [...animalFiles, ...landscapes.map(key => 'naturalist-art/landscapes/' + key + '.webp'), ...[...reviewFiles].sort()];
 for (const file of files) {
   if (!fs.existsSync('www/' + file)) throw Error('Falta derivado gráfico: ' + file);
 }

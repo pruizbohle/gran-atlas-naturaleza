@@ -6,6 +6,7 @@ const search = byId('search');
 const species = byId('species');
 const group = byId('group');
 const family = byId('family');
+const cutState = byId('cut-state');
 const context = byId('context');
 const scalePlate = byId('scale-plate');
 const category = byId('category');
@@ -14,7 +15,7 @@ const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
   gallery: 'Galería', variants: 'Variantes', frames: 'Ejemplares especiales',
-  compare: 'Comparación', scale: 'Escala real', review: 'Revisión artística'
+  compare: 'Antes y después', compression: 'Compresión WebP', scale: 'Escala real', review: 'Revisión artística'
 };
 const frames = {
   Normal: 'classic', Notable: 'notable', 'Épico': 'epic',
@@ -35,8 +36,11 @@ try {
   byId('status').textContent = 'No se pudo recuperar la revisión local.';
 }
 const percent = (migrationProgress.migrated * 100 / migrationProgress.total).toLocaleString('es-CL', { maximumFractionDigits: 2 });
+const pending = migrationProgress.plates - migrationProgress.cutouts;
 byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + migrationProgress.total +
-  ' especies migradas · ' + percent + ' % · ' + migrationProgress.cutouts + ' de ' + migrationProgress.plates + ' láminas recortadas';
+  ' especies migradas · ' + percent + ' % · ' + migrationProgress.cutouts + ' de ' + migrationProgress.plates +
+  ' láminas recortadas · ' + pending + ' pendientes' +
+  (migrationProgress.review ? ' · ' + migrationProgress.review + ' bordes por revisar' : '');
 for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
 updateFamilies();
 updateSpecies();
@@ -54,10 +58,20 @@ function figure(markup, caption) {
   return '<figure>' + markup + '<figcaption>' + text(caption) + '</figcaption></figure>';
 }
 
+function cutStatus(record) {
+  return !record.cutout ? 'pending' : record.note ? 'review' : 'ready';
+}
+
+function matchingPlates(sp) {
+  return sp.records.filter(record => (!cutState.value || cutStatus(record) === cutState.value) &&
+    (mode !== 'compression' || Object.keys(record.compression).length));
+}
+
 function matchingSpecies() {
   const query = normalize(search.value.trim());
   return catalog.filter(sp => (!group.value || sp.group === group.value) &&
-    (!family.value || sp.family === family.value) && normalize(sp.name + ' ' + sp.latin).includes(query));
+    (!family.value || sp.family === family.value) && matchingPlates(sp).length &&
+    normalize(sp.name + ' ' + sp.latin).includes(query));
 }
 
 function updateFamilies() {
@@ -80,7 +94,7 @@ function gallery() {
   byId('summary').textContent = shown.length + ' de ' + catalog.length + ' especies';
   return shown.length ? '<div class="grid gallery">' + shown.map(sp =>
     '<button type="button" class="gallery-card" data-species="' + text(sp.id) + '">' +
-    illustration(sp, sp.records[0], 'Normal', 256) + '<span class="card-title">' + text(sp.name) + '</span><span class="latin">' +
+    illustration(sp, matchingPlates(sp)[0], 'Normal', 256) + '<span class="card-title">' + text(sp.name) + '</span><span class="latin">' +
     text(sp.latin) + '</span></button>').join('') + '</div>' : '<p>No se encontraron especies.</p>';
 }
 
@@ -90,7 +104,7 @@ function specimenPlate(sp, frame) {
 
 function specialFrames(sp) {
   const samples = sp.categories.map(frame => figure(illustration(sp, specimenPlate(sp, frame), frame), frame));
-  return '<div class="grid frame-grid">' + samples.join('') + '</div>';
+  return '<div class="grid frame-grid review-comparison">' + samples.join('') + '</div>';
 }
 
 function selectOptions(select, entries) {
@@ -157,18 +171,50 @@ function scale(sp) {
     '</figcaption></figure>').join('') + '</div>';
 }
 
+function compareImage(asset, label) {
+  return '<span class="atlas-art-frame plate"><img class="atlas-art-image" src="' +
+    text(asset.src) + '" alt="' + text(label) + '" decoding="async"></span>';
+}
+
+function beforeAfter(sp) {
+  const records = matchingPlates(sp);
+  selectOptions(scalePlate, records.map(record => [record.key, record.label]));
+  const record = records.find(item => item.key === scalePlate.value) || records[0];
+  const before = record.before ? compareImage(record.before, sp.name + ' · original') : '<p>Original de referencia pendiente.</p>';
+  return '<div class="pair review-comparison">' +
+    figure(before, 'Antes · original a 256 px') +
+    figure(illustration(sp, record, 'Normal', 256), 'Después · lámina a 256 px') +
+    '</div>' + (record.note ? '<p class="note">' + text(record.note) + '</p>' : '');
+}
+
+function compression(sp) {
+  const records = matchingPlates(sp);
+  selectOptions(scalePlate, records.map(record => [record.key, record.label]));
+  const record = records.find(item => item.key === scalePlate.value) || records[0];
+  if (!record) return '<p class="note">Esta lámina no forma parte de la muestra de compresión. Selecciona una especie de la lista.</p>';
+  const quality = byId('compression-quality').value;
+  const sample = record.compression[quality];
+  const weight = bytes => (bytes / 1024).toLocaleString('es-CL', { maximumFractionDigits: 1 }) + ' KiB';
+  return '<div class="pair review-comparison">' +
+    figure(compareImage(sample, sp.name + ' · calidad ' + quality), 'Calidad ' + quality + ' · ' + weight(sample.bytes)) +
+    figure(illustration(sp, record), 'Versión del juego · ' + weight(record.bytes)) +
+    '</div><p class="note">512 px · Mismo recorte y canal alfa en las cinco muestras.</p>';
+}
+
 function reviewForm(sp) {
-  const record = sp.records.find(item => item.key === reviewKey) || sp.records[0];
+  const records = matchingPlates(sp);
+  const record = records.find(item => item.key === reviewKey) || records[0];
   const current = review[sp.id + '/' + record.key] || {};
-  return '<div class="review">' + illustration(sp, record) +
+  return '<div class="review"><div class="review-comparison">' + illustration(sp, record) + '</div>' +
     '<div class="review-fields"><label>Lámina<select id="review-plate">' +
-    sp.records.map(item => '<option value="' + text(item.key) + '"' + (item === record ? ' selected' : '') +
+    records.map(item => '<option value="' + text(item.key) + '"' + (item === record ? ' selected' : '') +
       '>' + text(item.label) + '</option>').join('') +
     '</select></label><label>Estado<select id="review-status" ' + (record.src ? '' : 'disabled') + '>' +
     statuses.map(label => '<option' + (label === current.status ? ' selected' : '') + '>' +
       text(label) + '</option>').join('') +
     '</select></label><label>Observaciones<textarea id="review-note" rows="6">' +
-    text(current.note || '') + '</textarea></label></div></div>';
+    text(current.note || '') + '</textarea></label>' +
+    (record.note ? '<p class="note">' + text(record.note) + '</p>' : '') + '</div></div>';
 }
 
 function draw() {
@@ -178,7 +224,9 @@ function draw() {
 
   byId('species-control').hidden = mode === 'gallery';
   byId('context-control').hidden = mode !== 'scale';
-  byId('scale-plate-control').hidden = mode !== 'scale' && !previews.includes(mode);
+  byId('scale-plate-control').hidden = !['scale', 'compare', 'compression', ...previews].includes(mode);
+  byId('backdrop-control').hidden = !['compare', 'compression', 'review', 'frames'].includes(mode);
+  byId('compression-control').hidden = mode !== 'compression';
   byId('category-control').hidden = !previews.includes(mode);
   byId('export').hidden = mode !== 'review';
   byId('summary').textContent = mode === 'gallery' ? '' : (sp?.latin || '');
@@ -204,11 +252,8 @@ function draw() {
       break;
     }
     case 'frames': content.innerHTML = specialFrames(sp); break;
-    case 'compare':
-      content.innerHTML = '<div class="pair">' +
-        figure('<div class="atlas-art-frame classic plate sprite" role="img" aria-label="Sprite de ' + text(sp.name) + '">' + sp.sprite + '</div>', 'Sprite actual') +
-        figure(illustration(sp, sp.records[0]), 'Ilustración naturalista') + '</div>';
-      break;
+    case 'compare': content.innerHTML = beforeAfter(sp); break;
+    case 'compression': content.innerHTML = compression(sp); break;
     case 'scale': content.innerHTML = scale(sp); break;
     case 'review': content.innerHTML = reviewForm(sp); break;
   }
@@ -229,7 +274,7 @@ byId('modes').addEventListener('click', event => {
   const button = event.target.closest('[data-mode]');
   if (button) {
     mode = button.dataset.mode;
-    draw();
+    applyFilters();
   }
 });
 content.addEventListener('click', event => {
@@ -262,6 +307,7 @@ group.addEventListener('change', () => {
   applyFilters();
 });
 family.addEventListener('change', applyFilters);
+cutState.addEventListener('change', applyFilters);
 species.addEventListener('change', () => {
   reviewKey = 'normal';
   scalePlate.value = 'normal';
@@ -271,15 +317,20 @@ context.addEventListener('change', draw);
 scalePlate.addEventListener('change', draw);
 category.addEventListener('change', draw);
 mixedSvg.addEventListener('change', draw);
+byId('compression-quality').addEventListener('change', draw);
+byId('backdrop').addEventListener('change', event => {
+  content.dataset.backdrop = event.target.value;
+});
 byId('frame-style').addEventListener('change', event => {
   content.dataset.frameStyle = event.target.value;
 });
 byId('export').addEventListener('click', () => {
   const results = catalog.flatMap(sp => sp.records.map(record => ({
     speciesId: sp.id, scientificName: sp.latin, variant: record.key, file: record.src,
+    cutout: cutStatus(record), cutoutNote: record.note,
     ...(review[sp.id + '/' + record.key] || { status: 'Pendiente', note: '' })
   })));
-  const data = new Blob([JSON.stringify({ schemaVersion: 1, results }, null, 2)], { type: 'application/json' });
+  const data = new Blob([JSON.stringify({ schemaVersion: 2, migration: migrationProgress, results }, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(data);
   const link = document.createElement('a');
   link.href = url;

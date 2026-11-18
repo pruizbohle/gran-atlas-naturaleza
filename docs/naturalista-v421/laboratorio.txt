@@ -1,0 +1,2 @@
+PASS 320 px: doce modos, filtros, corte, compresión y exportación offline; primera lámina 1107 ms
+PASS 1280 px: doce modos, filtros, corte, compresión y exportación offline; primera lámina 499 ms

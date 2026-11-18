@@ -161,6 +161,9 @@ test('biome library and transparent editions use module-specific layers and exis
   assert.equal(art.landscapeKey('bosque', 'HX-01-09'), 'bosque');
   assert.equal(art.landscapeKey('bosque', 'HX-02-03'), 'taiga');
   assert.equal(art.landscapeKey('bosque', 'sa_amazonia'), 'selva');
+  assert.equal(art.landscapeKey('bosque', 'HX-09-09'), 'sabana');
+  assert.equal(art.landscapeKey('bosque', 'gm06_hudson'), 'taiga');
+  assert.equal(art.landscapeKey('bosque', 'oc_costa_nordeste_australiana'), 'selva');
   assert.match(art.landscape('rio', 'HX-01-09', true), /loading="eager".*rio.webp/);
   assert.equal(art.landscape('__proto__', ''), '');
   assert.ok(assets.cutouts['nutria_europea--albino.webp']);
@@ -173,5 +176,24 @@ test('biome library and transparent editions use module-specific layers and exis
     const output = art.render('nutria_europea', { ...options, surface }, fallback);
     assert.match(output, /plates\/128\/nutria_europea--albino.webp/);
     assert.doesNotMatch(output, /atlas-art-landscape/);
+  }
+});
+
+test('lab preserves the original for every plate and caches the five comparison qualities', () => {
+  const { catalog, migrationProgress } = vm.runInNewContext(
+    fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog,migrationProgress});');
+  const { files, cutouts } = globalThis.AtlasNaturalistAssets;
+  const plates = new Map(catalog.flatMap(sp => sp.records.map(record => [record.src, record])));
+  assert.equal(plates.size, 245);
+  assert.equal(migrationProgress.cutouts, Object.keys(cutouts).length);
+  const samples = [...plates.values()].filter(plate => Object.keys(plate.compression).length);
+  assert.equal(samples.length, 10);
+  for (const record of plates.values()) {
+    assert.equal(record.cutout, Boolean(cutouts[record.src.slice('plates/'.length)]));
+    assert.ok(files.includes('naturalist-art/' + record.before.src));
+  }
+  for (const sample of samples) {
+    assert.deepEqual(Object.keys(sample.compression), ['75', '80', '85', '90', '95']);
+    for (const { src } of Object.values(sample.compression)) assert.ok(files.includes('naturalist-art/' + src));
   }
 });

@@ -198,3 +198,17 @@ figcaption { padding: .4rem 0; }
 #content[data-frame-style="outline"] .sample .plate { padding: 0; border: 0; box-shadow: none; }
 #content .sample .plate::before, #content .sample .plate::after { content: none; }
 #content .sample .plate > .atlas-art-image { border: 0; }
+
+.review-comparison { --review-bg: #f4ead5; }
+#content[data-backdrop="dark"] .review-comparison { --review-bg: #253139; }
+#content[data-backdrop="grid"] .review-comparison {
+  --review-bg: conic-gradient(#bbc5bd 0 25%, #e5e9e2 0 50%, #bbc5bd 0 75%, #e5e9e2 0) 0 0 / 20px 20px;
+}
+#content[data-frame-style="bare"] .review-comparison .plate {
+  background: var(--review-bg);
+}
+.review-comparison .plate {
+  display: grid;
+  aspect-ratio: 1;
+  width: 100%;
+}

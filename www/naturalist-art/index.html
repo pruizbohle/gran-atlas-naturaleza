@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Laboratorio V4.2 · El Gran Atlas</title>
+  <title>Laboratorio V4.2.1 · El Gran Atlas</title>
   <link rel="stylesheet" href="../css/naturalist-art-v400.css">
   <link rel="stylesheet" href="../css/field-v3210.css">
   <link rel="stylesheet" href="lab.css">
@@ -18,7 +18,7 @@
     <div class="container">
       <p class="eyebrow">El Gran Atlas</p>
       <h1>Laboratorio naturalista</h1>
-      <p class="subtitle">Serie 4 · Capas naturalistas</p>
+      <p class="subtitle">V4.2.1 · Consolidación naturalista</p>
       <p id="migration-progress" class="migration-progress"></p>
       <a class="game-link" href="../index.html">Abrir el juego</a>
     </div>
@@ -33,7 +33,8 @@
       <button type="button" data-mode="variants">Variantes</button>
       <button type="button" data-mode="frames">Ejemplares especiales</button>
       <button type="button" data-mode="gallery">Galería</button>
-      <button type="button" data-mode="compare">Comparación</button>
+      <button type="button" data-mode="compare">Antes y después</button>
+      <button type="button" data-mode="compression">Compresión</button>
       <button type="button" data-mode="scale">Escala real</button>
       <button type="button" data-mode="review">Revisión artística</button>
     </nav>
@@ -42,6 +43,14 @@
         <div><h2 id="heading"></h2><p id="summary"></p></div>
         <label>Grupo <select id="group"><option value="">Todos</option></select></label>
         <label>Familia zoológica <select id="family"></select></label>
+        <label>Estado del recorte
+          <select id="cut-state">
+            <option value="">Todos</option>
+            <option value="ready">Recortado</option>
+            <option value="review">Borde por revisar</option>
+            <option value="pending">Sin recorte</option>
+          </select>
+        </label>
         <label id="search-control">Buscar especie <input id="search" type="search" placeholder="Nombre común o científico"></label>
         <label id="species-control" hidden>Especie <select id="species"></select></label>
         <label id="scale-plate-control" hidden>Lámina <select id="scale-plate"></select></label>
@@ -56,6 +65,14 @@
         <label id="category-control" hidden>Ejemplar <select id="category"></select></label>
         <label id="context-control" hidden>Vista de juego <select id="context">
           <option>Campo</option><option>Bestiario</option><option>Cuaderno</option><option>Museo</option>
+        </select></label>
+        <label id="backdrop-control" hidden>Fondo de revisión <select id="backdrop">
+          <option value="light">Claro</option>
+          <option value="dark">Oscuro</option>
+          <option value="grid">Cuadrícula</option>
+        </select></label>
+        <label id="compression-control" hidden>Calidad WebP <select id="compression-quality">
+          <option>75</option><option>80</option><option>85</option><option selected>90</option><option>95</option>
         </select></label>
         <button id="export" type="button" hidden>Exportar JSON</button>
       </div>

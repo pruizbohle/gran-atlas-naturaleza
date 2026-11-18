@@ -18,9 +18,12 @@
   });
   const forestRegions = {
     taiga: new Set(['HX-01-11', 'HX-02-13', 'HX-03-14', 'HX-02-15', 'HX-03-16', 'HX-03-18',
-      'HX-01-05', 'HX-02-03', 'HX-02-06', 'gm06_labrador']),
-    selva: new Set(['HX-06-17', 'HX-08-11', 'HX-08-08', 'HX-08-10', 'HX-04-03', 'HX-05-04',
-      'sa_amazonia', 'oc_nueva_guinea', 'gm06_darien', 'gm06_sonda', 'gm06_wallacea', 'gm06_melanesia'])
+      'HX-01-05', 'HX-02-03', 'HX-02-06', 'gm06_labrador', 'gm06_hudson']),
+    selva: new Set(['HX-05-17', 'HX-06-17', 'HX-08-11', 'HX-08-08', 'HX-08-10', 'HX-09-14',
+      'HX-04-03', 'HX-05-04', 'sa_amazonia', 'sa_andes_del_norte', 'oc_nueva_guinea',
+      'oc_costa_nordeste_australiana', 'gm06_antillas', 'gm06_darien', 'gm06_sonda', 'gm06_wallacea', 'gm06_melanesia']),
+    sabana: new Set(['HX-09-09', 'HX-09-12', 'HX-11-10', 'sa_llanos_del_orinoco', 'sa_cerrado_brasileno',
+      'oc_norte_tropical_australiano'])
   };
   const escape = value => String(value).replace(/[&<>"']/g, char => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -30,8 +33,9 @@
 
   function landscapeKey(habitat, region) {
     if (habitat === 'bosque') {
-      if (forestRegions.taiga.has(region)) return 'taiga';
-      if (forestRegions.selva.has(region)) return 'selva';
+      for (const [landscape, regions] of Object.entries(forestRegions)) {
+        if (regions.has(region)) return landscape;
+      }
     }
     return Object.hasOwn(habitats, habitat) ? habitats[habitat] : null;
   }

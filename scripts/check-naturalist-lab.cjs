@@ -40,7 +40,7 @@ const server = http.createServer((req, res) => {
         await page.locator('#scale-plate').selectOption('albino');
         await page.locator('#category').selectOption('Notable');
         assert.match(await page.locator(selector).innerText(), /Didelphis virginiana[\s\S]*Albino/);
-        assert.match(await page.locator(selector + ' .notable img').getAttribute('src'), /--albino\.webp$/);
+        assert.match(await page.locator(selector + ' .notable .atlas-art-image').getAttribute('src'), /--albino\.webp$/);
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), viewport.width);
       }
       await page.locator('#group').selectOption('Cánidos');
@@ -107,13 +107,20 @@ const server = http.createServer((req, res) => {
       assert.equal(await page.locator('.gallery-card').count(), 1);
       await page.locator('.gallery-card').click();
       assert.equal(await page.locator('.pair figure').count(), 2);
-      assert.equal(await page.locator('.sprite svg').count(), 1);
-      assert.equal(await page.locator('.pair img').count(), 1);
+      assert.equal(await page.locator('.pair img').count(), 2);
+      assert.match(await page.locator('.pair img').first().getAttribute('src'), /review\/before\/gm06_dromiciops/);
+      const comparison = page.locator('.pair .plate').last();
+      const light = await comparison.evaluate(node => getComputedStyle(node).backgroundColor);
+      await page.locator('#backdrop').selectOption('dark');
+      assert.notEqual(await comparison.evaluate(node => getComputedStyle(node).backgroundColor), light);
       await page.locator('#search').fill('');
       await page.locator('[data-mode=frames]').click();
       assert.deepEqual(await page.locator('#content figcaption').allTextContents(), ['Normal', 'Notable', 'Épico', 'Excepcional']);
       const paths = await page.locator('#content img').evaluateAll(imgs => imgs.map(i => i.src));
       assert.equal(new Set(paths).size, 1);
+      const haloFilters = await page.locator('#content img').evaluateAll(imgs => imgs.map(img => getComputedStyle(img).filter));
+      assert.equal(haloFilters[0], 'none');
+      assert.equal(new Set(haloFilters).size, 4);
       await page.locator('[data-mode=variants]').click();
       await page.locator('#species').selectOption('na_esp_didelphis_virginiana');
       assert.deepEqual(await page.locator('figcaption').allTextContents(), ['Normal', 'Albino']);
@@ -131,6 +138,8 @@ const server = http.createServer((req, res) => {
       await page.locator('#export').click();
       const download = await pending;
       const data = JSON.parse(fs.readFileSync(await download.path(), 'utf8'));
+      assert.equal(data.schemaVersion, 2);
+      assert.equal(data.migration.plates, 245);
       assert.equal(data.results.length, 246);
       assert.equal(data.results.find(r => r.note === 'Revisar hocico y cola.').status, 'Requiere ajustes');
       assert.deepEqual(await page.evaluate(() => Object.keys(localStorage)), ['gran-atlas-naturalist-art-review-v1']);
@@ -138,6 +147,9 @@ const server = http.createServer((req, res) => {
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
       assert.equal(await page.locator('.gallery-card').count(), 142);
+      await page.locator('#cut-state').selectOption('pending');
+      assert.equal(await page.locator('.gallery-card').count(), data.migration.plates - data.migration.cutouts);
+      await page.locator('#cut-state').selectOption('');
       const first = page.locator('.gallery-card img').first();
       await first.scrollIntoViewIfNeeded();
       await first.evaluate(image => image.decode());
@@ -145,6 +157,17 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=bestiary]').click();
       await page.locator('#species').selectOption('zorro_rojo');
       await page.locator('.bestiary-entry .atlas-art-landscape').evaluate(image => image.decode());
+      await page.locator('[data-mode=compare]').click();
+      await page.locator('.review-comparison img').first().evaluate(image => image.decode());
+      await page.locator('[data-mode=compression]').click();
+      await page.locator('#species').selectOption('zorro_rojo');
+      await page.locator('#scale-plate').selectOption('albino');
+      for (const quality of [75, 80, 85, 90, 95]) {
+        await page.locator('#compression-quality').selectOption(String(quality));
+        const sample = page.locator('.review-comparison img').first();
+        await sample.evaluate(image => image.decode());
+        assert.match(await sample.getAttribute('src'), new RegExp('/' + quality + '/zorro_rojo--albino\\.webp$'));
+      }
       await page.locator('[data-mode=review]').click();
       await page.locator('#species').selectOption('na_esp_didelphis_virginiana');
       assert.equal(await page.locator('#review-note').inputValue(), 'Revisar hocico y cola.');
@@ -163,7 +186,7 @@ const server = http.createServer((req, res) => {
       assert.ok(plates.every(([width, height]) => width === 512 && height === 512));
       assert.deepEqual(errors, []);
       await session.close();
-      console.log('PASS', viewport.width, 'px: once modos, revisión, exportación y recarga offline; primera lámina', firstRender, 'ms');
+      console.log('PASS', viewport.width, 'px: doce modos, filtros, corte, compresión y exportación offline; primera lámina', firstRender, 'ms');
     }
   } finally { await browser.close(); server.close(); }
 })().catch(error => { console.error(error); server.close(); process.exitCode = 1; });

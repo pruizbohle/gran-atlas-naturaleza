@@ -92,7 +92,9 @@ async function run() {
       await page.waitForFunction(async () => !!(await navigator.serviceWorker.getRegistration()).waiting);
       const updated = await ctx.newPage();
       updated.on('pageerror', e => errors.push(e.message));
-      await updated.goto(url + 'actualizar-v' + versionSlug + '.html');
+      // The installed 4.2.0 update button still opens its cached update entry point.
+      const upgradeSlug = width === 390 ? '420' : versionSlug;
+      await updated.goto(url + 'actualizar-v' + upgradeSlug + '.html');
       await updated.locator('#atlasUpdateApply').click();
       await updated.waitForFunction(() => document.querySelector('#status').dataset.error === 'true');
       assert.match(await updated.locator('#status').innerText(), /otra ventana/);
@@ -126,9 +128,14 @@ async function run() {
       await updated.locator('.field-environment .landscape-pradera').evaluate(img => img.decode());
       await updated.locator('[data-action=set-habitat][data-id=bosque]').click();
       await updated.locator('.field-environment .landscape-bosque').evaluate(img => img.decode());
+      const landscape = updated.locator('.field-environment .atlas-art-landscape');
+      const dawn = await landscape.evaluate(img => getComputedStyle(img).filter);
+      await updated.locator('[data-action=set-time][data-id=noche]').click();
+      assert.notEqual(await landscape.evaluate(img => getComputedStyle(img).filter), dawn);
+      await updated.locator('[data-action=set-time][data-id=amanecer]').click();
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/serie4-capas/campo-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: 'docs/naturalista-v421/campo-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
 
@@ -156,7 +163,7 @@ async function run() {
       await journal.evaluate(img => img.decode());
       assert.equal(await updated.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
       if (process.argv.includes('--write-evidence')) {
-        await updated.screenshot({ path: 'docs/serie4-capas/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
+        await updated.screenshot({ path: 'docs/naturalista-v421/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
       }
 
       // Exercise the real automatic timer while deterministic rolls select a single repeatable WebP.
@@ -176,12 +183,15 @@ async function run() {
       await automaticImage.evaluate(img => img.decode());
       const firstAutoSequence = await automaticImage.evaluate(img => {
         window.__atlasRepeatedImage = img;
+        window.__atlasRepeatedLandscape = document.querySelector('.field-environment .atlas-art-landscape');
         return AtlasSaveBridge.getSaveData().encounterSequence;
       });
       const autoStart = performance.now();
       await updated.waitForFunction(seq => AtlasSaveBridge.getSaveData().encounterSequence > seq, firstAutoSequence);
       const repeatedImage = await automaticImage.evaluate(img => window.__atlasRepeatedImage === img);
       assert.equal(repeatedImage, true);
+      const repeatedLandscape = await landscape.evaluate(img => window.__atlasRepeatedLandscape === img);
+      assert.equal(repeatedLandscape, true);
       const autoRepeatMs = Math.round(performance.now() - autoStart);
 
       const workerCache = await updated.evaluate(async version => {
@@ -191,7 +201,7 @@ async function run() {
         return { names, resources: entries.map(entry => new URL(entry.url).pathname) };
       }, version);
       assert.equal(workerCache.names.length, 1);
-      assert.match(workerCache.names[0], /gran-atlas-v4\.2\.0-/);
+      assert.ok(workerCache.names[0].startsWith('gran-atlas-v' + version + '-'));
       for (const size of ['', '64/', '128/', '256/']) {
         assert.ok(workerCache.resources.includes('/naturalist-art/plates/' + size + 'nutria_europea--normal.webp'));
       }
@@ -206,7 +216,7 @@ async function run() {
       await updated.locator('.field-card .atlas-art-landscape').evaluate(img => img.decode());
       assert.deepEqual(errors, []);
       results.push({ width, fieldBeforeMs: beforeMs, fieldWebPMs: afterMs, fieldBeforeJSHeapBytes: beforeHeap, fieldWebpJSHeapBytes: afterHeap, exactSaveBackup: true,
-        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, spritesOffline: true, labOffline: true, errors });
+        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, errors });
       await ctx.close();
     }
   } finally {

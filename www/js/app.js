@@ -2542,7 +2542,7 @@ function maxVoyages(){return 2+(state.upgrades.fleet||0)}
 function voyageDuration(seconds){return Math.max(30, Math.round(seconds*(state.upgrades.voyageTime||1)))}
 function rarityClass(r){return ({'Común':'rarity-common','Poco común':'rarity-uncommon','Raro':'rarity-rare','Muy rara':'rarity-legendary'}[r]||'')}
 function rarityBadge(r){return `<span class="badge ${rarityClass(r)}">${r}</span>`}
-function specialBadges(id){
+function specialBadges(id,surface='journal'){
  const variants=configuredSpecials(SPECIES[id]);
  if(!variants.length)return '<div class="small">sin variantes configuradas</div>';
  const found=state.specialFound[id]||{};
@@ -2551,12 +2551,12 @@ function specialBadges(id){
   const seen=l?!!state.legendaryFound?.[l.id]:Object.entries(found).some(([label,value])=>value&&specialVariantName(label)===v);
   const count=state.specialCounts?.[id]?.[v];
   const caption=seen?(l?l.name+' — '+SPECIES[id].name:v):v+' · sin descubrir';
-  return `<div class="variant-card ${seen?'seen':'unknown'}"><div class="sprite-wrap">${seen?animalMarkup(id,{variant:v}):'<div class="qmark">?</div>'}</div><div class="small">${caption}${seen?(l?' · descubierto (1/1)':count?' · '+count+' encuentros desde v3.19.7':' · registro histórico'):''}</div></div>`;
+  return `<div class="variant-card ${seen?'seen':'unknown'}"><div class="sprite-wrap">${seen?animalMarkup(id,{variant:v,surface}):'<div class="qmark">?</div>'}</div><div class="small">${caption}${seen?(l?' · descubierto (1/1)':count?' · '+count+' encuentros desde v3.19.7':' · registro histórico'):''}</div></div>`;
  }).join('')+'</div>';
 }
 function renderLegendaryCollection(){
  const found=LEGENDARY_SPECIMENS.filter(l=>state.legendaryFound?.[l.id]);
- return `<section class="card legendary-collection"><h3>Individuos legendarios · ${found.length}/${LEGENDARY_SPECIMENS.length}</h3><p class="small">Identidades ficticias del atlas naturalista. Cada individuo aparece una sola vez por partida. Colección visual sin bonificaciones.</p><div class="species-grid">${found.map(l=>`<article class="variant-card"><div class="sprite-wrap">${animalMarkup(l.speciesId,{category:'Legendario',size:256})}</div><strong>${l.name} — ${SPECIES[l.speciesId].name}</strong><p>Legendario · descubierto</p><p class="small">${l.description}</p></article>`).join('')||'<p class="small">Los individuos se revelarán después de encontrarlos en Campo.</p>'}</div></section>`;
+ return `<section class="card legendary-collection"><h3>Individuos legendarios · ${found.length}/${LEGENDARY_SPECIMENS.length}</h3><p class="small">Identidades ficticias del atlas naturalista. Cada individuo aparece una sola vez por partida. Colección visual sin bonificaciones.</p><div class="species-grid">${found.map(l=>`<article class="variant-card"><div class="sprite-wrap">${animalMarkup(l.speciesId,{category:'Legendario',size:256,surface:'museum'})}</div><strong>${l.name} — ${SPECIES[l.speciesId].name}</strong><p>Legendario · descubierto</p><p class="small">${l.description}</p></article>`).join('')||'<p class="small">Los individuos se revelarán después de encontrarlos en Campo.</p>'}</div></section>`;
 }
 
 // Comparación en el Cuaderno: se revela cada sexo solo al observarlo.
@@ -4999,7 +4999,7 @@ function bestiaryModalAction3260(action,slot){
 }
 function bestiaryCollection3260(slot){
  const id=bestiaryData3260().ids[slot];if(!id||!state.discovered[id])return '<p class="small">Sin especímenes observados.</p>';
- const found=specialBadges(id).replace(/<div class="variant-card unknown">[\s\S]*?<\/div><\/div><div class="small">[\s\S]*?<\/div><\/div>/g,'');
+  const found=specialBadges(id,'bestiary').replace(/<div class="variant-card unknown">[\s\S]*?<\/div><\/div><div class="small">[\s\S]*?<\/div><\/div>/g,'');
  return found.includes('variant-card seen')?globalThis.AtlasBestiaryUI.illustration(found.replaceAll(SPECIES[id].name,visibleName(id))):'<p class="small">Sin variantes observadas.</p>';
 }
 // B-3260 END presentation

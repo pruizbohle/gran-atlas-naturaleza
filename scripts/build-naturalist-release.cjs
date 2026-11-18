@@ -5,6 +5,9 @@ const { createHash } = require('node:crypto');
 
 require('../www/js/naturalist-assets-v400.js');
 const assets = globalThis.AtlasNaturalistAssets;
+for (const file of new Set(Object.values(assets.routes).flatMap(route => Object.values(route)))) {
+  assert.ok(assets.cutouts[file], 'La lámina de producción requiere transparencia: ' + file);
+}
 const source = fs.readFileSync('www/sw.js', 'utf8');
 const core = [...source.match(/const CORE=\[([^;]+)\];/)[1].matchAll(/['"]([^'"]+)['"]/g)]
   .map(match => match[1].slice(2));

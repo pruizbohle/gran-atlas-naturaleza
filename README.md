@@ -1,5 +1,10 @@
 # 3.44.0 · Cartografía del naturalista
 
+## Serie 4 · Consolidación naturalista (V4.2.1)
+
+[Web pública](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Estándar artístico](docs/naturalista-v421/estandar.md) · [Informe V4.2.1](docs/naturalista-v421/README.md).
+
+
 997 especies, 125 regiones y 1.829 asociaciones zoológicas. Patagonia reorganizada y nuevos bosques templados e islas, conservando IDs y progreso. Rapa Nui es un expediente especial.
 
 [Laboratorio GM-06](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-cartografia-gm06.html) · [Informe](docs/gm06/cierre-validacion.md)

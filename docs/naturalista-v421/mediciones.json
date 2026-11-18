@@ -1,0 +1,5206 @@
+{
+  "initial": {
+    "species": 997,
+    "migrated": 142,
+    "plates": 245,
+    "cutouts": 16,
+    "pending": 229,
+    "landscapes": 16
+  },
+  "final": {
+    "plates": 245,
+    "newCutouts": 229,
+    "reencodedCutouts": 16,
+    "pending": 0,
+    "notes": 10,
+    "validatedWebPs": 980,
+    "landscapes": 16
+  },
+  "bytes": {
+    "before": 21522340,
+    "after": 15306828,
+    "platesDelta": -6215512,
+    "platesSavingsPercent": 28.88,
+    "landscapes": 417488,
+    "beforeLab": 4091668,
+    "compressionLab": 2089662,
+    "deployedArtWebPs": 21905646,
+    "candidateBefore": 22479630,
+    "web420": 39678401,
+    "webInitialBranch": 41070086,
+    "web421": 40171361
+  },
+  "bySize": {
+    "64": {
+      "before": 274504,
+      "after": 566834
+    },
+    "128": {
+      "before": 963192,
+      "after": 1384032
+    },
+    "256": {
+      "before": 4091668,
+      "after": 3977204
+    },
+    "512": {
+      "before": 16192976,
+      "after": 9378758
+    }
+  },
+  "encoding": {
+    "64": 82,
+    "128": 83,
+    "256": 86,
+    "512": 90,
+    "alphaQuality": 100,
+    "method": 4
+  },
+  "files": [
+    {
+      "file": "af_caracal--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1034,
+          "after": 2466
+        },
+        "128": {
+          "before": 3362,
+          "after": 5476
+        },
+        "256": {
+          "before": 14212,
+          "after": 14280
+        },
+        "512": {
+          "before": 50996,
+          "after": 27436
+        }
+      }
+    },
+    {
+      "file": "af_caracal--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1228,
+          "after": 2424
+        },
+        "128": {
+          "before": 3772,
+          "after": 5568
+        },
+        "256": {
+          "before": 15692,
+          "after": 15146
+        },
+        "512": {
+          "before": 53970,
+          "after": 30732
+        }
+      }
+    },
+    {
+      "file": "af_caracal--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1136,
+          "after": 2566
+        },
+        "128": {
+          "before": 4156,
+          "after": 5968
+        },
+        "256": {
+          "before": 19076,
+          "after": 16508
+        },
+        "512": {
+          "before": 94718,
+          "after": 42702
+        }
+      }
+    },
+    {
+      "file": "af_chacal_dorado--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 610,
+          "after": 2446
+        },
+        "128": {
+          "before": 1968,
+          "after": 5644
+        },
+        "256": {
+          "before": 8412,
+          "after": 15272
+        },
+        "512": {
+          "before": 32786,
+          "after": 26882
+        }
+      }
+    },
+    {
+      "file": "af_chacal_dorado--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 944,
+          "after": 2598
+        },
+        "128": {
+          "before": 2808,
+          "after": 6148
+        },
+        "256": {
+          "before": 11356,
+          "after": 17114
+        },
+        "512": {
+          "before": 39954,
+          "after": 33960
+        }
+      }
+    },
+    {
+      "file": "af_chacal_dorado--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 902,
+          "after": 2672
+        },
+        "128": {
+          "before": 3002,
+          "after": 6392
+        },
+        "256": {
+          "before": 12686,
+          "after": 17898
+        },
+        "512": {
+          "before": 61810,
+          "after": 42788
+        }
+      }
+    },
+    {
+      "file": "af_civeta--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1064,
+          "after": 2150
+        },
+        "128": {
+          "before": 3760,
+          "after": 5128
+        },
+        "256": {
+          "before": 17006,
+          "after": 15514
+        },
+        "512": {
+          "before": 58068,
+          "after": 35076
+        }
+      }
+    },
+    {
+      "file": "af_civeta--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1378,
+          "after": 2346
+        },
+        "128": {
+          "before": 4524,
+          "after": 5612
+        },
+        "256": {
+          "before": 19518,
+          "after": 17236
+        },
+        "512": {
+          "before": 63068,
+          "after": 39592
+        }
+      }
+    },
+    {
+      "file": "af_civeta--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1456,
+          "after": 2520
+        },
+        "128": {
+          "before": 5294,
+          "after": 6358
+        },
+        "256": {
+          "before": 23160,
+          "after": 19714
+        },
+        "512": {
+          "before": 84104,
+          "after": 50592
+        }
+      }
+    },
+    {
+      "file": "af_fenec--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 470,
+          "after": 2120
+        },
+        "128": {
+          "before": 1224,
+          "after": 4988
+        },
+        "256": {
+          "before": 5020,
+          "after": 12944
+        },
+        "512": {
+          "before": 23472,
+          "after": 22608
+        }
+      }
+    },
+    {
+      "file": "af_fenec--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 838,
+          "after": 2318
+        },
+        "128": {
+          "before": 2046,
+          "after": 5486
+        },
+        "256": {
+          "before": 8020,
+          "after": 15168
+        },
+        "512": {
+          "before": 31512,
+          "after": 30662
+        }
+      }
+    },
+    {
+      "file": "af_fenec--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 558,
+          "after": 2228
+        },
+        "128": {
+          "before": 1582,
+          "after": 5160
+        },
+        "256": {
+          "before": 6522,
+          "after": 14364
+        },
+        "512": {
+          "before": 38882,
+          "after": 32130
+        }
+      }
+    },
+    {
+      "file": "af_fosa--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1056,
+          "after": 2610
+        },
+        "128": {
+          "before": 3800,
+          "after": 6458
+        },
+        "256": {
+          "before": 16372,
+          "after": 17752
+        },
+        "512": {
+          "before": 53630,
+          "after": 30716
+        }
+      }
+    },
+    {
+      "file": "af_fosa--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1388,
+          "after": 2156
+        },
+        "128": {
+          "before": 4314,
+          "after": 5466
+        },
+        "256": {
+          "before": 17240,
+          "after": 14800
+        },
+        "512": {
+          "before": 54858,
+          "after": 29522
+        }
+      }
+    },
+    {
+      "file": "af_fosa--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1220,
+          "after": 2202
+        },
+        "128": {
+          "before": 4662,
+          "after": 5752
+        },
+        "256": {
+          "before": 19902,
+          "after": 15974
+        },
+        "512": {
+          "before": 68958,
+          "after": 33624
+        }
+      }
+    },
+    {
+      "file": "af_gato_montes_africano--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1186,
+          "after": 2346
+        },
+        "128": {
+          "before": 3732,
+          "after": 5434
+        },
+        "256": {
+          "before": 14632,
+          "after": 14728
+        },
+        "512": {
+          "before": 49678,
+          "after": 29142
+        }
+      }
+    },
+    {
+      "file": "af_gato_montes_africano--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1056,
+          "after": 2386
+        },
+        "128": {
+          "before": 3830,
+          "after": 5806
+        },
+        "256": {
+          "before": 17124,
+          "after": 16376
+        },
+        "512": {
+          "before": 81538,
+          "after": 39712
+        }
+      }
+    },
+    {
+      "file": "af_guepardo--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 974,
+          "after": 2524
+        },
+        "128": {
+          "before": 3456,
+          "after": 6004
+        },
+        "256": {
+          "before": 13618,
+          "after": 15598
+        },
+        "512": {
+          "before": 46408,
+          "after": 28300
+        }
+      }
+    },
+    {
+      "file": "af_guepardo--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1254,
+          "after": 2558
+        },
+        "128": {
+          "before": 4316,
+          "after": 6284
+        },
+        "256": {
+          "before": 15692,
+          "after": 16240
+        },
+        "512": {
+          "before": 51934,
+          "after": 31048
+        }
+      }
+    },
+    {
+      "file": "af_guepardo--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1210,
+          "after": 2662
+        },
+        "128": {
+          "before": 4896,
+          "after": 6900
+        },
+        "256": {
+          "before": 20720,
+          "after": 19846
+        },
+        "512": {
+          "before": 86576,
+          "after": 47376
+        }
+      }
+    },
+    {
+      "file": "af_hiena_manchada--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 764,
+          "after": 2572
+        },
+        "128": {
+          "before": 2494,
+          "after": 6376
+        },
+        "256": {
+          "before": 11566,
+          "after": 17682
+        },
+        "512": {
+          "before": 42148,
+          "after": 32400
+        }
+      }
+    },
+    {
+      "file": "af_hiena_manchada--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1142,
+          "after": 2792
+        },
+        "128": {
+          "before": 3306,
+          "after": 6746
+        },
+        "256": {
+          "before": 13662,
+          "after": 18882
+        },
+        "512": {
+          "before": 47110,
+          "after": 38514
+        }
+      }
+    },
+    {
+      "file": "af_hiena_manchada--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1010,
+          "after": 2756
+        },
+        "128": {
+          "before": 3392,
+          "after": 6868
+        },
+        "256": {
+          "before": 15780,
+          "after": 19284
+        },
+        "512": {
+          "before": 60760,
+          "after": 42460
+        }
+      }
+    },
+    {
+      "file": "af_hiena_parda--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1076,
+          "after": 2628
+        },
+        "128": {
+          "before": 3618,
+          "after": 6556
+        },
+        "256": {
+          "before": 16058,
+          "after": 19510
+        },
+        "512": {
+          "before": 52752,
+          "after": 42820
+        }
+      }
+    },
+    {
+      "file": "af_hiena_parda--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1086,
+          "after": 2710
+        },
+        "128": {
+          "before": 4036,
+          "after": 7034
+        },
+        "256": {
+          "before": 18560,
+          "after": 21268
+        },
+        "512": {
+          "before": 69244,
+          "after": 50280
+        }
+      }
+    },
+    {
+      "file": "af_leon--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 918,
+          "after": 2472
+        },
+        "128": {
+          "before": 3090,
+          "after": 5906
+        },
+        "256": {
+          "before": 12776,
+          "after": 15960
+        },
+        "512": {
+          "before": 47274,
+          "after": 31004
+        }
+      }
+    },
+    {
+      "file": "af_leon--female.webp",
+      "sizes": {
+        "64": {
+          "before": 1000,
+          "after": 2346
+        },
+        "128": {
+          "before": 3180,
+          "after": 5530
+        },
+        "256": {
+          "before": 14124,
+          "after": 15154
+        },
+        "512": {
+          "before": 49940,
+          "after": 28510
+        }
+      }
+    },
+    {
+      "file": "af_leon--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1206,
+          "after": 2492
+        },
+        "128": {
+          "before": 3768,
+          "after": 6294
+        },
+        "256": {
+          "before": 14764,
+          "after": 17656
+        },
+        "512": {
+          "before": 50770,
+          "after": 36140
+        }
+      }
+    },
+    {
+      "file": "af_leon--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1044,
+          "after": 2800
+        },
+        "128": {
+          "before": 3622,
+          "after": 7172
+        },
+        "256": {
+          "before": 16118,
+          "after": 21426
+        },
+        "512": {
+          "before": 80008,
+          "after": 53844
+        }
+      }
+    },
+    {
+      "file": "af_leopardo--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1108,
+          "after": 2132
+        },
+        "128": {
+          "before": 4222,
+          "after": 4950
+        },
+        "256": {
+          "before": 16510,
+          "after": 13100
+        },
+        "512": {
+          "before": 52880,
+          "after": 24490
+        }
+      }
+    },
+    {
+      "file": "af_leopardo--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1416,
+          "after": 2360
+        },
+        "128": {
+          "before": 4950,
+          "after": 5922
+        },
+        "256": {
+          "before": 17724,
+          "after": 15908
+        },
+        "512": {
+          "before": 56238,
+          "after": 30708
+        }
+      }
+    },
+    {
+      "file": "af_leopardo--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1336,
+          "after": 2550
+        },
+        "128": {
+          "before": 5572,
+          "after": 6650
+        },
+        "256": {
+          "before": 23166,
+          "after": 19298
+        },
+        "512": {
+          "before": 94406,
+          "after": 48106
+        }
+      }
+    },
+    {
+      "file": "af_licaon--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 598,
+          "after": 2600
+        },
+        "128": {
+          "before": 1898,
+          "after": 6150
+        },
+        "256": {
+          "before": 7906,
+          "after": 16444
+        },
+        "512": {
+          "before": 31702,
+          "after": 28130
+        }
+      }
+    },
+    {
+      "file": "af_licaon--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1042,
+          "after": 2694
+        },
+        "128": {
+          "before": 2886,
+          "after": 6446
+        },
+        "256": {
+          "before": 10664,
+          "after": 17642
+        },
+        "512": {
+          "before": 37420,
+          "after": 33538
+        }
+      }
+    },
+    {
+      "file": "af_licaon--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 970,
+          "after": 2838
+        },
+        "128": {
+          "before": 2968,
+          "after": 6810
+        },
+        "256": {
+          "before": 11876,
+          "after": 18560
+        },
+        "512": {
+          "before": 58488,
+          "after": 42076
+        }
+      }
+    },
+    {
+      "file": "af_lobo_etiope--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 990,
+          "after": 2378
+        },
+        "128": {
+          "before": 2938,
+          "after": 5794
+        },
+        "256": {
+          "before": 11886,
+          "after": 15276
+        },
+        "512": {
+          "before": 42450,
+          "after": 28202
+        }
+      }
+    },
+    {
+      "file": "af_lobo_etiope--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 930,
+          "after": 2530
+        },
+        "128": {
+          "before": 2978,
+          "after": 6036
+        },
+        "256": {
+          "before": 12578,
+          "after": 16330
+        },
+        "512": {
+          "before": 64634,
+          "after": 37794
+        }
+      }
+    },
+    {
+      "file": "af_mangosta_enana--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1034,
+          "after": 1738
+        },
+        "128": {
+          "before": 3696,
+          "after": 3906
+        },
+        "256": {
+          "before": 16388,
+          "after": 10752
+        },
+        "512": {
+          "before": 54706,
+          "after": 22834
+        }
+      }
+    },
+    {
+      "file": "af_mangosta_enana--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1126,
+          "after": 1866
+        },
+        "128": {
+          "before": 4322,
+          "after": 4470
+        },
+        "256": {
+          "before": 20322,
+          "after": 13348
+        },
+        "512": {
+          "before": 77194,
+          "after": 33196
+        }
+      }
+    },
+    {
+      "file": "af_serval--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 870,
+          "after": 2556
+        },
+        "128": {
+          "before": 2970,
+          "after": 5886
+        },
+        "256": {
+          "before": 11778,
+          "after": 14878
+        },
+        "512": {
+          "before": 43302,
+          "after": 25546
+        }
+      }
+    },
+    {
+      "file": "af_serval--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1200,
+          "after": 2652
+        },
+        "128": {
+          "before": 3774,
+          "after": 6290
+        },
+        "256": {
+          "before": 14374,
+          "after": 16284
+        },
+        "512": {
+          "before": 47500,
+          "after": 30246
+        }
+      }
+    },
+    {
+      "file": "af_serval--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1238,
+          "after": 2792
+        },
+        "128": {
+          "before": 4548,
+          "after": 6936
+        },
+        "256": {
+          "before": 18102,
+          "after": 19174
+        },
+        "512": {
+          "before": 86086,
+          "after": 47136
+        }
+      }
+    },
+    {
+      "file": "af_suricata--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 738,
+          "after": 1732
+        },
+        "128": {
+          "before": 2630,
+          "after": 3940
+        },
+        "256": {
+          "before": 12662,
+          "after": 10958
+        },
+        "512": {
+          "before": 47246,
+          "after": 20600
+        }
+      }
+    },
+    {
+      "file": "af_suricata--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1026,
+          "after": 1798
+        },
+        "128": {
+          "before": 3378,
+          "after": 4222
+        },
+        "256": {
+          "before": 15314,
+          "after": 11404
+        },
+        "512": {
+          "before": 51946,
+          "after": 23206
+        }
+      }
+    },
+    {
+      "file": "af_suricata--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 900,
+          "after": 1846
+        },
+        "128": {
+          "before": 3436,
+          "after": 4266
+        },
+        "256": {
+          "before": 16454,
+          "after": 11924
+        },
+        "512": {
+          "before": 63452,
+          "after": 25702
+        }
+      }
+    },
+    {
+      "file": "af_xlsx_131_hydrictis_maculicollis--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 750,
+          "after": 1900
+        },
+        "128": {
+          "before": 2610,
+          "after": 4232
+        },
+        "256": {
+          "before": 13090,
+          "after": 11644
+        },
+        "512": {
+          "before": 46138,
+          "after": 21552
+        }
+      }
+    },
+    {
+      "file": "af_xlsx_131_hydrictis_maculicollis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 884,
+          "after": 1928
+        },
+        "128": {
+          "before": 3278,
+          "after": 4428
+        },
+        "256": {
+          "before": 15670,
+          "after": 12310
+        },
+        "512": {
+          "before": 60784,
+          "after": 24828
+        }
+      }
+    },
+    {
+      "file": "af_xlsx_131_lupulella_mesomelas--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 576,
+          "after": 2318
+        },
+        "128": {
+          "before": 1784,
+          "after": 5484
+        },
+        "256": {
+          "before": 8884,
+          "after": 14844
+        },
+        "512": {
+          "before": 37472,
+          "after": 26414
+        }
+      }
+    },
+    {
+      "file": "af_xlsx_131_lupulella_mesomelas--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 846,
+          "after": 2634
+        },
+        "128": {
+          "before": 2714,
+          "after": 6524
+        },
+        "256": {
+          "before": 12316,
+          "after": 18430
+        },
+        "512": {
+          "before": 65706,
+          "after": 46148
+        }
+      }
+    },
+    {
+      "file": "af_xlsx_131_mellivora_capensis--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 992,
+          "after": 2004
+        },
+        "128": {
+          "before": 3548,
+          "after": 4588
+        },
+        "256": {
+          "before": 16126,
+          "after": 13418
+        },
+        "512": {
+          "before": 52338,
+          "after": 27790
+        }
+      }
+    },
+    {
+      "file": "af_xlsx_131_mellivora_capensis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1122,
+          "after": 2398
+        },
+        "128": {
+          "before": 4236,
+          "after": 6180
+        },
+        "256": {
+          "before": 19112,
+          "after": 18128
+        },
+        "512": {
+          "before": 67534,
+          "after": 41364
+        }
+      }
+    },
+    {
+      "file": "af_xlsx_131_mungos_mungo--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 824,
+          "after": 2138
+        },
+        "128": {
+          "before": 3096,
+          "after": 4884
+        },
+        "256": {
+          "before": 15076,
+          "after": 14094
+        },
+        "512": {
+          "before": 51464,
+          "after": 27882
+        }
+      }
+    },
+    {
+      "file": "af_xlsx_131_mungos_mungo--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 940,
+          "after": 2248
+        },
+        "128": {
+          "before": 3718,
+          "after": 5596
+        },
+        "256": {
+          "before": 18602,
+          "after": 16836
+        },
+        "512": {
+          "before": 72492,
+          "after": 40910
+        }
+      }
+    },
+    {
+      "file": "af_xlsx_131_otocyon_megalotis--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 560,
+          "after": 2208
+        },
+        "128": {
+          "before": 1744,
+          "after": 5104
+        },
+        "256": {
+          "before": 7806,
+          "after": 13786
+        },
+        "512": {
+          "before": 32054,
+          "after": 26002
+        }
+      }
+    },
+    {
+      "file": "af_xlsx_131_otocyon_megalotis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 916,
+          "after": 2424
+        },
+        "128": {
+          "before": 2766,
+          "after": 5846
+        },
+        "256": {
+          "before": 12310,
+          "after": 16430
+        },
+        "512": {
+          "before": 63916,
+          "after": 43182
+        }
+      }
+    },
+    {
+      "file": "af_xlsx_gato_dorado--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1366,
+          "after": 2216
+        },
+        "128": {
+          "before": 4486,
+          "after": 4876
+        },
+        "256": {
+          "before": 17436,
+          "after": 13054
+        },
+        "512": {
+          "before": 56680,
+          "after": 27776
+        }
+      }
+    },
+    {
+      "file": "af_xlsx_gato_dorado--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1462,
+          "after": 2348
+        },
+        "128": {
+          "before": 5398,
+          "after": 5438
+        },
+        "256": {
+          "before": 22278,
+          "after": 15882
+        },
+        "512": {
+          "before": 99420,
+          "after": 45668
+        }
+      }
+    },
+    {
+      "file": "af_zorro_cabo--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 934,
+          "after": 2336
+        },
+        "128": {
+          "before": 2750,
+          "after": 5462
+        },
+        "256": {
+          "before": 10666,
+          "after": 14860
+        },
+        "512": {
+          "before": 39184,
+          "after": 29928
+        }
+      }
+    },
+    {
+      "file": "af_zorro_cabo--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 818,
+          "after": 2388
+        },
+        "128": {
+          "before": 2612,
+          "after": 5608
+        },
+        "256": {
+          "before": 11398,
+          "after": 15456
+        },
+        "512": {
+          "before": 60492,
+          "after": 38844
+        }
+      }
+    },
+    {
+      "file": "af_zorro_palido--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 494,
+          "after": 2310
+        },
+        "128": {
+          "before": 1502,
+          "after": 5086
+        },
+        "256": {
+          "before": 6358,
+          "after": 13712
+        },
+        "512": {
+          "before": 25848,
+          "after": 23688
+        }
+      }
+    },
+    {
+      "file": "af_zorro_palido--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 910,
+          "after": 2504
+        },
+        "128": {
+          "before": 2376,
+          "after": 5758
+        },
+        "256": {
+          "before": 9594,
+          "after": 15936
+        },
+        "512": {
+          "before": 33906,
+          "after": 30442
+        }
+      }
+    },
+    {
+      "file": "af_zorro_palido--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 652,
+          "after": 2486
+        },
+        "128": {
+          "before": 2062,
+          "after": 5728
+        },
+        "256": {
+          "before": 8952,
+          "after": 16004
+        },
+        "512": {
+          "before": 48742,
+          "after": 36198
+        }
+      }
+    },
+    {
+      "file": "af_zorro_ruppell--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 926,
+          "after": 2482
+        },
+        "128": {
+          "before": 2384,
+          "after": 5794
+        },
+        "256": {
+          "before": 9488,
+          "after": 16390
+        },
+        "512": {
+          "before": 36210,
+          "after": 32060
+        }
+      }
+    },
+    {
+      "file": "af_zorro_ruppell--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 668,
+          "after": 2336
+        },
+        "128": {
+          "before": 2012,
+          "after": 5646
+        },
+        "256": {
+          "before": 8430,
+          "after": 15716
+        },
+        "512": {
+          "before": 49520,
+          "after": 37266
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0006--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1128,
+          "after": 2418
+        },
+        "128": {
+          "before": 3714,
+          "after": 5636
+        },
+        "256": {
+          "before": 15532,
+          "after": 16788
+        },
+        "512": {
+          "before": 56322,
+          "after": 38384
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0007--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1148,
+          "after": 1956
+        },
+        "128": {
+          "before": 3676,
+          "after": 4346
+        },
+        "256": {
+          "before": 15048,
+          "after": 12464
+        },
+        "512": {
+          "before": 49482,
+          "after": 25710
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0007--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1330,
+          "after": 2012
+        },
+        "128": {
+          "before": 4032,
+          "after": 4654
+        },
+        "256": {
+          "before": 16196,
+          "after": 13200
+        },
+        "512": {
+          "before": 50872,
+          "after": 27300
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0007--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1318,
+          "after": 2102
+        },
+        "128": {
+          "before": 4106,
+          "after": 4894
+        },
+        "256": {
+          "before": 17174,
+          "after": 14004
+        },
+        "512": {
+          "before": 59400,
+          "after": 29432
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0096--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1330,
+          "after": 2420
+        },
+        "128": {
+          "before": 5100,
+          "after": 5734
+        },
+        "256": {
+          "before": 21168,
+          "after": 16402
+        },
+        "512": {
+          "before": 92756,
+          "after": 44554
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0205--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1286,
+          "after": 2300
+        },
+        "128": {
+          "before": 4406,
+          "after": 5476
+        },
+        "256": {
+          "before": 17550,
+          "after": 14544
+        },
+        "512": {
+          "before": 77364,
+          "after": 36890
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0205--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1196,
+          "after": 2468
+        },
+        "128": {
+          "before": 4814,
+          "after": 5918
+        },
+        "256": {
+          "before": 20848,
+          "after": 16622
+        },
+        "512": {
+          "before": 94556,
+          "after": 43326
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0206--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1038,
+          "after": 2248
+        },
+        "128": {
+          "before": 2864,
+          "after": 5132
+        },
+        "256": {
+          "before": 10916,
+          "after": 14584
+        },
+        "512": {
+          "before": 40364,
+          "after": 29072
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0206--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 878,
+          "after": 2218
+        },
+        "128": {
+          "before": 2860,
+          "after": 5320
+        },
+        "256": {
+          "before": 12432,
+          "after": 15192
+        },
+        "512": {
+          "before": 64170,
+          "after": 36670
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0238--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1344,
+          "after": 2310
+        },
+        "128": {
+          "before": 4456,
+          "after": 5402
+        },
+        "256": {
+          "before": 17902,
+          "after": 14892
+        },
+        "512": {
+          "before": 60430,
+          "after": 31808
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0246--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1174,
+          "after": 2664
+        },
+        "128": {
+          "before": 3514,
+          "after": 6698
+        },
+        "256": {
+          "before": 15622,
+          "after": 19758
+        },
+        "512": {
+          "before": 52090,
+          "after": 41832
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0246--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1060,
+          "after": 2802
+        },
+        "128": {
+          "before": 3676,
+          "after": 7108
+        },
+        "256": {
+          "before": 16922,
+          "after": 20912
+        },
+        "512": {
+          "before": 63778,
+          "after": 44400
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0300--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 946,
+          "after": 1702
+        },
+        "128": {
+          "before": 2918,
+          "after": 4268
+        },
+        "256": {
+          "before": 13306,
+          "after": 12352
+        },
+        "512": {
+          "before": 45330,
+          "after": 25102
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0300--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 850,
+          "after": 1904
+        },
+        "128": {
+          "before": 3098,
+          "after": 4570
+        },
+        "256": {
+          "before": 15138,
+          "after": 13508
+        },
+        "512": {
+          "before": 58622,
+          "after": 28484
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0326--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 990,
+          "after": 1984
+        },
+        "128": {
+          "before": 3312,
+          "after": 4550
+        },
+        "256": {
+          "before": 14848,
+          "after": 14236
+        },
+        "512": {
+          "before": 48484,
+          "after": 30486
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0326--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1104,
+          "after": 2182
+        },
+        "128": {
+          "before": 3686,
+          "after": 5214
+        },
+        "256": {
+          "before": 17306,
+          "after": 15722
+        },
+        "512": {
+          "before": 63126,
+          "after": 37608
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0333--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1110,
+          "after": 1936
+        },
+        "128": {
+          "before": 4046,
+          "after": 4458
+        },
+        "256": {
+          "before": 18188,
+          "after": 13852
+        },
+        "512": {
+          "before": 59186,
+          "after": 28924
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0333--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1030,
+          "after": 2008
+        },
+        "128": {
+          "before": 4236,
+          "after": 5082
+        },
+        "256": {
+          "before": 20066,
+          "after": 15936
+        },
+        "512": {
+          "before": 74016,
+          "after": 38080
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0336--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 874,
+          "after": 2196
+        },
+        "128": {
+          "before": 3418,
+          "after": 5664
+        },
+        "256": {
+          "before": 15434,
+          "after": 17040
+        },
+        "512": {
+          "before": 50552,
+          "after": 38296
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0336--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1092,
+          "after": 2776
+        },
+        "128": {
+          "before": 3890,
+          "after": 6722
+        },
+        "256": {
+          "before": 17300,
+          "after": 21074
+        },
+        "512": {
+          "before": 61038,
+          "after": 50434
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0347--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 854,
+          "after": 1822
+        },
+        "128": {
+          "before": 2722,
+          "after": 4024
+        },
+        "256": {
+          "before": 13112,
+          "after": 11234
+        },
+        "512": {
+          "before": 44580,
+          "after": 21992
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0347--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 802,
+          "after": 1904
+        },
+        "128": {
+          "before": 3038,
+          "after": 4294
+        },
+        "256": {
+          "before": 15618,
+          "after": 12256
+        },
+        "512": {
+          "before": 58396,
+          "after": 24970
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0355--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1360,
+          "after": 2486
+        },
+        "128": {
+          "before": 4436,
+          "after": 5962
+        },
+        "256": {
+          "before": 17184,
+          "after": 16132
+        },
+        "512": {
+          "before": 57458,
+          "after": 33224
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0355--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1366,
+          "after": 2692
+        },
+        "128": {
+          "before": 4908,
+          "after": 7144
+        },
+        "256": {
+          "before": 20026,
+          "after": 20532
+        },
+        "512": {
+          "before": 86678,
+          "after": 52172
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0363--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 718,
+          "after": 1896
+        },
+        "128": {
+          "before": 2444,
+          "after": 4364
+        },
+        "256": {
+          "before": 11124,
+          "after": 12656
+        },
+        "512": {
+          "before": 40206,
+          "after": 26038
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0363--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 988,
+          "after": 2200
+        },
+        "128": {
+          "before": 3494,
+          "after": 5130
+        },
+        "256": {
+          "before": 15066,
+          "after": 15386
+        },
+        "512": {
+          "before": 73270,
+          "after": 43382
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0387--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1036,
+          "after": 1868
+        },
+        "128": {
+          "before": 3464,
+          "after": 4562
+        },
+        "256": {
+          "before": 15602,
+          "after": 14564
+        },
+        "512": {
+          "before": 53652,
+          "after": 33970
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0387--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1028,
+          "after": 1978
+        },
+        "128": {
+          "before": 4072,
+          "after": 5000
+        },
+        "256": {
+          "before": 18112,
+          "after": 16078
+        },
+        "512": {
+          "before": 84312,
+          "after": 48906
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0395--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1322,
+          "after": 2364
+        },
+        "128": {
+          "before": 4100,
+          "after": 5574
+        },
+        "256": {
+          "before": 17782,
+          "after": 16210
+        },
+        "512": {
+          "before": 57628,
+          "after": 35508
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0395--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1344,
+          "after": 2472
+        },
+        "128": {
+          "before": 4764,
+          "after": 6156
+        },
+        "256": {
+          "before": 20746,
+          "after": 18532
+        },
+        "512": {
+          "before": 74784,
+          "after": 44978
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0401--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1410,
+          "after": 2318
+        },
+        "128": {
+          "before": 4586,
+          "after": 5612
+        },
+        "256": {
+          "before": 16938,
+          "after": 15368
+        },
+        "512": {
+          "before": 54392,
+          "after": 32830
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0401--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1390,
+          "after": 2446
+        },
+        "128": {
+          "before": 5386,
+          "after": 6344
+        },
+        "256": {
+          "before": 21454,
+          "after": 19154
+        },
+        "512": {
+          "before": 89376,
+          "after": 50116
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0402--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1150,
+          "after": 2344
+        },
+        "128": {
+          "before": 3894,
+          "after": 5372
+        },
+        "256": {
+          "before": 14510,
+          "after": 14238
+        },
+        "512": {
+          "before": 47704,
+          "after": 29426
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0402--ambar.webp",
+      "sizes": {
+        "64": {
+          "before": 1610,
+          "after": 2160
+        },
+        "128": {
+          "before": 5952,
+          "after": 5648
+        },
+        "256": {
+          "before": 24142,
+          "after": 17698
+        },
+        "512": {
+          "before": 101824,
+          "after": 52550
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0402--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1342,
+          "after": 2348
+        },
+        "128": {
+          "before": 4120,
+          "after": 5662
+        },
+        "256": {
+          "before": 15324,
+          "after": 15672
+        },
+        "512": {
+          "before": 49526,
+          "after": 33212
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0402--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1468,
+          "after": 2660
+        },
+        "128": {
+          "before": 5096,
+          "after": 6550
+        },
+        "256": {
+          "before": 19724,
+          "after": 18556
+        },
+        "512": {
+          "before": 86012,
+          "after": 49452
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0403--niebla.webp",
+      "sizes": {
+        "64": {
+          "before": 1506,
+          "after": 3098
+        },
+        "128": {
+          "before": 5334,
+          "after": 8022
+        },
+        "256": {
+          "before": 21738,
+          "after": 22504
+        },
+        "512": {
+          "before": 96098,
+          "after": 64548
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0403--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1240,
+          "after": 2514
+        },
+        "128": {
+          "before": 4460,
+          "after": 6226
+        },
+        "256": {
+          "before": 17768,
+          "after": 17150
+        },
+        "512": {
+          "before": 79194,
+          "after": 44934
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0440--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1500,
+          "after": 2062
+        },
+        "128": {
+          "before": 5278,
+          "after": 4928
+        },
+        "256": {
+          "before": 19538,
+          "after": 13320
+        },
+        "512": {
+          "before": 79324,
+          "after": 32830
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0440--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1430,
+          "after": 2278
+        },
+        "128": {
+          "before": 5668,
+          "after": 5572
+        },
+        "256": {
+          "before": 22514,
+          "after": 15614
+        },
+        "512": {
+          "before": 92654,
+          "after": 38642
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0523--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1160,
+          "after": 2222
+        },
+        "128": {
+          "before": 3710,
+          "after": 5288
+        },
+        "256": {
+          "before": 16090,
+          "after": 16642
+        },
+        "512": {
+          "before": 49976,
+          "after": 35808
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0523--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1186,
+          "after": 2502
+        },
+        "128": {
+          "before": 4094,
+          "after": 6286
+        },
+        "256": {
+          "before": 17430,
+          "after": 18758
+        },
+        "512": {
+          "before": 59204,
+          "after": 42814
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0533--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 864,
+          "after": 2252
+        },
+        "128": {
+          "before": 2392,
+          "after": 5278
+        },
+        "256": {
+          "before": 9736,
+          "after": 14500
+        },
+        "512": {
+          "before": 35814,
+          "after": 29098
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0533--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 654,
+          "after": 2206
+        },
+        "128": {
+          "before": 2082,
+          "after": 5146
+        },
+        "256": {
+          "before": 9588,
+          "after": 14206
+        },
+        "512": {
+          "before": 52964,
+          "after": 35268
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0534--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 960,
+          "after": 2424
+        },
+        "128": {
+          "before": 2738,
+          "after": 5832
+        },
+        "256": {
+          "before": 12012,
+          "after": 16810
+        },
+        "512": {
+          "before": 42856,
+          "after": 34772
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0534--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 702,
+          "after": 2372
+        },
+        "128": {
+          "before": 2508,
+          "after": 5756
+        },
+        "256": {
+          "before": 11678,
+          "after": 16674
+        },
+        "512": {
+          "before": 63068,
+          "after": 44010
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0816--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1370,
+          "after": 2422
+        },
+        "128": {
+          "before": 5290,
+          "after": 6248
+        },
+        "256": {
+          "before": 22336,
+          "after": 19168
+        },
+        "512": {
+          "before": 96184,
+          "after": 54160
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0820--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1106,
+          "after": 2436
+        },
+        "128": {
+          "before": 3336,
+          "after": 5890
+        },
+        "256": {
+          "before": 13252,
+          "after": 16414
+        },
+        "512": {
+          "before": 44510,
+          "after": 32050
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0820--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 980,
+          "after": 2628
+        },
+        "128": {
+          "before": 3360,
+          "after": 6352
+        },
+        "256": {
+          "before": 14166,
+          "after": 17544
+        },
+        "512": {
+          "before": 67490,
+          "after": 42672
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0849--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1204,
+          "after": 2542
+        },
+        "128": {
+          "before": 4180,
+          "after": 7042
+        },
+        "256": {
+          "before": 19060,
+          "after": 22888
+        },
+        "512": {
+          "before": 62064,
+          "after": 55912
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0849--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1360,
+          "after": 2726
+        },
+        "128": {
+          "before": 5220,
+          "after": 7926
+        },
+        "256": {
+          "before": 23462,
+          "after": 26164
+        },
+        "512": {
+          "before": 86606,
+          "after": 70766
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0850--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1226,
+          "after": 2308
+        },
+        "128": {
+          "before": 4098,
+          "after": 5650
+        },
+        "256": {
+          "before": 17118,
+          "after": 16318
+        },
+        "512": {
+          "before": 54398,
+          "after": 33936
+        }
+      }
+    },
+    {
+      "file": "asia_esp_0850--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1260,
+          "after": 2426
+        },
+        "128": {
+          "before": 4268,
+          "after": 5958
+        },
+        "256": {
+          "before": 18880,
+          "after": 17526
+        },
+        "512": {
+          "before": 68650,
+          "after": 40050
+        }
+      }
+    },
+    {
+      "file": "chacal_dorado--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 940,
+          "after": 2296
+        },
+        "128": {
+          "before": 2624,
+          "after": 5570
+        },
+        "256": {
+          "before": 10366,
+          "after": 15554
+        },
+        "512": {
+          "before": 37392,
+          "after": 30834
+        }
+      }
+    },
+    {
+      "file": "chacal_dorado--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 790,
+          "after": 2348
+        },
+        "128": {
+          "before": 2564,
+          "after": 5672
+        },
+        "256": {
+          "before": 10976,
+          "after": 15954
+        },
+        "512": {
+          "before": 56034,
+          "after": 38926
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0219--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1428,
+          "after": 2308
+        },
+        "128": {
+          "before": 4388,
+          "after": 5620
+        },
+        "256": {
+          "before": 17612,
+          "after": 15358
+        },
+        "512": {
+          "before": 55902,
+          "after": 30474
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0219--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1476,
+          "after": 2598
+        },
+        "128": {
+          "before": 5134,
+          "after": 6490
+        },
+        "256": {
+          "before": 20718,
+          "after": 18210
+        },
+        "512": {
+          "before": 71200,
+          "after": 39460
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0617--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 844,
+          "after": 1312
+        },
+        "128": {
+          "before": 2842,
+          "after": 2782
+        },
+        "256": {
+          "before": 12574,
+          "after": 7482
+        },
+        "512": {
+          "before": 43262,
+          "after": 14508
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0617--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 788,
+          "after": 1420
+        },
+        "128": {
+          "before": 3048,
+          "after": 3150
+        },
+        "256": {
+          "before": 15094,
+          "after": 8756
+        },
+        "512": {
+          "before": 56556,
+          "after": 16428
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0618--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 978,
+          "after": 1880
+        },
+        "128": {
+          "before": 3276,
+          "after": 4244
+        },
+        "256": {
+          "before": 14630,
+          "after": 11342
+        },
+        "512": {
+          "before": 48604,
+          "after": 22936
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0618--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 932,
+          "after": 2038
+        },
+        "128": {
+          "before": 3454,
+          "after": 5096
+        },
+        "256": {
+          "before": 16674,
+          "after": 13222
+        },
+        "512": {
+          "before": 61816,
+          "after": 27034
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0619--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1018,
+          "after": 1760
+        },
+        "128": {
+          "before": 3260,
+          "after": 4156
+        },
+        "256": {
+          "before": 14810,
+          "after": 12214
+        },
+        "512": {
+          "before": 47786,
+          "after": 25662
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0619--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 984,
+          "after": 1872
+        },
+        "128": {
+          "before": 3648,
+          "after": 4478
+        },
+        "256": {
+          "before": 17116,
+          "after": 13466
+        },
+        "512": {
+          "before": 60852,
+          "after": 30502
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0620--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1330,
+          "after": 2178
+        },
+        "128": {
+          "before": 4204,
+          "after": 5142
+        },
+        "256": {
+          "before": 17750,
+          "after": 15222
+        },
+        "512": {
+          "before": 54442,
+          "after": 31906
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0620--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1248,
+          "after": 2272
+        },
+        "128": {
+          "before": 4394,
+          "after": 5478
+        },
+        "256": {
+          "before": 19200,
+          "after": 16536
+        },
+        "512": {
+          "before": 69454,
+          "after": 38404
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0621--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1300,
+          "after": 2306
+        },
+        "128": {
+          "before": 3990,
+          "after": 5568
+        },
+        "256": {
+          "before": 16978,
+          "after": 16890
+        },
+        "512": {
+          "before": 52894,
+          "after": 35598
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0621--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1256,
+          "after": 2364
+        },
+        "128": {
+          "before": 4220,
+          "after": 5928
+        },
+        "256": {
+          "before": 18830,
+          "after": 18026
+        },
+        "512": {
+          "before": 68910,
+          "after": 42906
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0622--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1092,
+          "after": 1676
+        },
+        "128": {
+          "before": 3740,
+          "after": 3832
+        },
+        "256": {
+          "before": 16894,
+          "after": 11344
+        },
+        "512": {
+          "before": 53296,
+          "after": 23200
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0622--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 996,
+          "after": 1828
+        },
+        "128": {
+          "before": 4094,
+          "after": 4128
+        },
+        "256": {
+          "before": 18468,
+          "after": 12258
+        },
+        "512": {
+          "before": 65068,
+          "after": 26352
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0625--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 918,
+          "after": 1740
+        },
+        "128": {
+          "before": 3130,
+          "after": 4094
+        },
+        "256": {
+          "before": 14928,
+          "after": 11746
+        },
+        "512": {
+          "before": 50404,
+          "after": 23938
+        }
+      }
+    },
+    {
+      "file": "eu_esp_0625--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 944,
+          "after": 1936
+        },
+        "128": {
+          "before": 3462,
+          "after": 5026
+        },
+        "256": {
+          "before": 17040,
+          "after": 14252
+        },
+        "512": {
+          "before": 63400,
+          "after": 32502
+        }
+      }
+    },
+    {
+      "file": "gato_montes--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1366,
+          "after": 2288
+        },
+        "128": {
+          "before": 4542,
+          "after": 5404
+        },
+        "256": {
+          "before": 18356,
+          "after": 15810
+        },
+        "512": {
+          "before": 61690,
+          "after": 36550
+        }
+      }
+    },
+    {
+      "file": "gato_montes--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1360,
+          "after": 2536
+        },
+        "128": {
+          "before": 5230,
+          "after": 6570
+        },
+        "256": {
+          "before": 21874,
+          "after": 19610
+        },
+        "512": {
+          "before": 95344,
+          "after": 58270
+        }
+      }
+    },
+    {
+      "file": "gloton--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 930,
+          "after": 1836
+        },
+        "128": {
+          "before": 3454,
+          "after": 4852
+        },
+        "256": {
+          "before": 16290,
+          "after": 15098
+        },
+        "512": {
+          "before": 52954,
+          "after": 34372
+        }
+      }
+    },
+    {
+      "file": "gloton--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1142,
+          "after": 2234
+        },
+        "128": {
+          "before": 4156,
+          "after": 5578
+        },
+        "256": {
+          "before": 19258,
+          "after": 18008
+        },
+        "512": {
+          "before": 71684,
+          "after": 45696
+        }
+      }
+    },
+    {
+      "file": "gm06_dromiciops_gliroides--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1328,
+          "after": 2582
+        },
+        "128": {
+          "before": 4914,
+          "after": 6046
+        },
+        "256": {
+          "before": 19298,
+          "after": 16886
+        },
+        "512": {
+          "before": 89544,
+          "after": 44066
+        }
+      }
+    },
+    {
+      "file": "gm06_lontra_provocax--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1068,
+          "after": 2024
+        },
+        "128": {
+          "before": 4062,
+          "after": 4974
+        },
+        "256": {
+          "before": 19188,
+          "after": 15000
+        },
+        "512": {
+          "before": 68696,
+          "after": 34040
+        }
+      }
+    },
+    {
+      "file": "lince_boreal--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1418,
+          "after": 2590
+        },
+        "128": {
+          "before": 4886,
+          "after": 6080
+        },
+        "256": {
+          "before": 18610,
+          "after": 16552
+        },
+        "512": {
+          "before": 61162,
+          "after": 34222
+        }
+      }
+    },
+    {
+      "file": "lince_boreal--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1426,
+          "after": 2788
+        },
+        "128": {
+          "before": 5450,
+          "after": 6830
+        },
+        "256": {
+          "before": 21576,
+          "after": 19236
+        },
+        "512": {
+          "before": 92084,
+          "after": 48692
+        }
+      }
+    },
+    {
+      "file": "lince_iberico--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1430,
+          "after": 1896
+        },
+        "128": {
+          "before": 4978,
+          "after": 4728
+        },
+        "256": {
+          "before": 19236,
+          "after": 13464
+        },
+        "512": {
+          "before": 61992,
+          "after": 29908
+        }
+      }
+    },
+    {
+      "file": "lince_iberico--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1402,
+          "after": 2106
+        },
+        "128": {
+          "before": 5576,
+          "after": 5358
+        },
+        "256": {
+          "before": 22908,
+          "after": 15996
+        },
+        "512": {
+          "before": 94864,
+          "after": 44570
+        }
+      }
+    },
+    {
+      "file": "lobo_gris--fenrir.webp",
+      "sizes": {
+        "64": {
+          "before": 996,
+          "after": 2558
+        },
+        "128": {
+          "before": 3160,
+          "after": 6308
+        },
+        "256": {
+          "before": 11704,
+          "after": 17350
+        },
+        "512": {
+          "before": 55482,
+          "after": 42110
+        }
+      }
+    },
+    {
+      "file": "lobo_gris--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 948,
+          "after": 2706
+        },
+        "128": {
+          "before": 3302,
+          "after": 6644
+        },
+        "256": {
+          "before": 13936,
+          "after": 18850
+        },
+        "512": {
+          "before": 66694,
+          "after": 46664
+        }
+      }
+    },
+    {
+      "file": "meloncillo--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1092,
+          "after": 1770
+        },
+        "128": {
+          "before": 3656,
+          "after": 4132
+        },
+        "256": {
+          "before": 15536,
+          "after": 11690
+        },
+        "512": {
+          "before": 50164,
+          "after": 22670
+        }
+      }
+    },
+    {
+      "file": "meloncillo--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 962,
+          "after": 1840
+        },
+        "128": {
+          "before": 3868,
+          "after": 4344
+        },
+        "256": {
+          "before": 18162,
+          "after": 12682
+        },
+        "512": {
+          "before": 67264,
+          "after": 26824
+        }
+      }
+    },
+    {
+      "file": "na_esp_canis_latrans--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 478,
+          "after": 2246
+        },
+        "128": {
+          "before": 1422,
+          "after": 5320
+        },
+        "256": {
+          "before": 6236,
+          "after": 14430
+        },
+        "512": {
+          "before": 26556,
+          "after": 24096
+        }
+      }
+    },
+    {
+      "file": "na_esp_canis_latrans--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 840,
+          "after": 2410
+        },
+        "128": {
+          "before": 2422,
+          "after": 6066
+        },
+        "256": {
+          "before": 9806,
+          "after": 16934
+        },
+        "512": {
+          "before": 35916,
+          "after": 32572
+        }
+      }
+    },
+    {
+      "file": "na_esp_canis_latrans--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 682,
+          "after": 2592
+        },
+        "128": {
+          "before": 2282,
+          "after": 6828
+        },
+        "256": {
+          "before": 10198,
+          "after": 19572
+        },
+        "512": {
+          "before": 54414,
+          "after": 47996
+        }
+      }
+    },
+    {
+      "file": "na_esp_didelphis_marsupialis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1568,
+          "after": 2618
+        },
+        "128": {
+          "before": 5668,
+          "after": 6662
+        },
+        "256": {
+          "before": 23906,
+          "after": 19534
+        },
+        "512": {
+          "before": 105504,
+          "after": 56796
+        }
+      }
+    },
+    {
+      "file": "na_esp_didelphis_virginiana--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1280,
+          "after": 2338
+        },
+        "128": {
+          "before": 4360,
+          "after": 5708
+        },
+        "256": {
+          "before": 17658,
+          "after": 16274
+        },
+        "512": {
+          "before": 69758,
+          "after": 40330
+        }
+      }
+    },
+    {
+      "file": "na_esp_didelphis_virginiana--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1388,
+          "after": 2480
+        },
+        "128": {
+          "before": 5074,
+          "after": 6270
+        },
+        "256": {
+          "before": 21248,
+          "after": 17846
+        },
+        "512": {
+          "before": 91346,
+          "after": 48212
+        }
+      }
+    },
+    {
+      "file": "na_esp_herpailurus_yagouaroundi--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1310,
+          "after": 2024
+        },
+        "128": {
+          "before": 4628,
+          "after": 4882
+        },
+        "256": {
+          "before": 19526,
+          "after": 13716
+        },
+        "512": {
+          "before": 86798,
+          "after": 32852
+        }
+      }
+    },
+    {
+      "file": "na_esp_leopardus_pardalis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1590,
+          "after": 2920
+        },
+        "128": {
+          "before": 6214,
+          "after": 7684
+        },
+        "256": {
+          "before": 23556,
+          "after": 21520
+        },
+        "512": {
+          "before": 93972,
+          "after": 54714
+        }
+      }
+    },
+    {
+      "file": "na_esp_leopardus_wiedii--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1612,
+          "after": 2980
+        },
+        "128": {
+          "before": 5508,
+          "after": 7324
+        },
+        "256": {
+          "before": 20790,
+          "after": 20136
+        },
+        "512": {
+          "before": 86932,
+          "after": 50310
+        }
+      }
+    },
+    {
+      "file": "na_esp_lontra_canadensis--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 948,
+          "after": 2014
+        },
+        "128": {
+          "before": 3440,
+          "after": 4898
+        },
+        "256": {
+          "before": 16536,
+          "after": 14476
+        },
+        "512": {
+          "before": 53970,
+          "after": 28900
+        }
+      }
+    },
+    {
+      "file": "na_esp_lontra_canadensis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1014,
+          "after": 2024
+        },
+        "128": {
+          "before": 3978,
+          "after": 5126
+        },
+        "256": {
+          "before": 18820,
+          "after": 15036
+        },
+        "512": {
+          "before": 68014,
+          "after": 33772
+        }
+      }
+    },
+    {
+      "file": "na_esp_lynx_canadensis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1166,
+          "after": 3024
+        },
+        "128": {
+          "before": 4178,
+          "after": 7876
+        },
+        "256": {
+          "before": 16348,
+          "after": 23734
+        },
+        "512": {
+          "before": 74340,
+          "after": 65654
+        }
+      }
+    },
+    {
+      "file": "na_esp_lynx_rufus--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1146,
+          "after": 2492
+        },
+        "128": {
+          "before": 3836,
+          "after": 5570
+        },
+        "256": {
+          "before": 15410,
+          "after": 14406
+        },
+        "512": {
+          "before": 52236,
+          "after": 29602
+        }
+      }
+    },
+    {
+      "file": "na_esp_lynx_rufus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1310,
+          "after": 2808
+        },
+        "128": {
+          "before": 4944,
+          "after": 7060
+        },
+        "256": {
+          "before": 19940,
+          "after": 19664
+        },
+        "512": {
+          "before": 86920,
+          "after": 51658
+        }
+      }
+    },
+    {
+      "file": "na_esp_martes_americana--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1236,
+          "after": 2232
+        },
+        "128": {
+          "before": 4226,
+          "after": 5292
+        },
+        "256": {
+          "before": 18758,
+          "after": 16182
+        },
+        "512": {
+          "before": 68774,
+          "after": 39344
+        }
+      }
+    },
+    {
+      "file": "na_esp_mephitis_mephitis--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1006,
+          "after": 2130
+        },
+        "128": {
+          "before": 3786,
+          "after": 5484
+        },
+        "256": {
+          "before": 16836,
+          "after": 16920
+        },
+        "512": {
+          "before": 54338,
+          "after": 37102
+        }
+      }
+    },
+    {
+      "file": "na_esp_mephitis_mephitis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1346,
+          "after": 2464
+        },
+        "128": {
+          "before": 4840,
+          "after": 6460
+        },
+        "256": {
+          "before": 20842,
+          "after": 20408
+        },
+        "512": {
+          "before": 70746,
+          "after": 49312
+        }
+      }
+    },
+    {
+      "file": "na_esp_mustela_nigripes--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 874,
+          "after": 2038
+        },
+        "128": {
+          "before": 2972,
+          "after": 4794
+        },
+        "256": {
+          "before": 14776,
+          "after": 13128
+        },
+        "512": {
+          "before": 55910,
+          "after": 26568
+        }
+      }
+    },
+    {
+      "file": "na_esp_nasua_narica--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1504,
+          "after": 2824
+        },
+        "128": {
+          "before": 5222,
+          "after": 7154
+        },
+        "256": {
+          "before": 22264,
+          "after": 19828
+        },
+        "512": {
+          "before": 73920,
+          "after": 42660
+        }
+      }
+    },
+    {
+      "file": "na_esp_panthera_onca--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1456,
+          "after": 2388
+        },
+        "128": {
+          "before": 5282,
+          "after": 5834
+        },
+        "256": {
+          "before": 18734,
+          "after": 15742
+        },
+        "512": {
+          "before": 58094,
+          "after": 30976
+        }
+      }
+    },
+    {
+      "file": "na_esp_panthera_onca--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1476,
+          "after": 2230
+        },
+        "128": {
+          "before": 5344,
+          "after": 5614
+        },
+        "256": {
+          "before": 18940,
+          "after": 15230
+        },
+        "512": {
+          "before": 58738,
+          "after": 31610
+        }
+      }
+    },
+    {
+      "file": "na_esp_panthera_onca--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1662,
+          "after": 2636
+        },
+        "128": {
+          "before": 6860,
+          "after": 7118
+        },
+        "256": {
+          "before": 26938,
+          "after": 21770
+        },
+        "512": {
+          "before": 105348,
+          "after": 57106
+        }
+      }
+    },
+    {
+      "file": "na_esp_procyon_lotor--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1080,
+          "after": 2220
+        },
+        "128": {
+          "before": 4128,
+          "after": 5748
+        },
+        "256": {
+          "before": 18254,
+          "after": 17330
+        },
+        "512": {
+          "before": 57494,
+          "after": 37746
+        }
+      }
+    },
+    {
+      "file": "na_esp_procyon_lotor--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1412,
+          "after": 2528
+        },
+        "128": {
+          "before": 5368,
+          "after": 6946
+        },
+        "256": {
+          "before": 22726,
+          "after": 21778
+        },
+        "512": {
+          "before": 79004,
+          "after": 53300
+        }
+      }
+    },
+    {
+      "file": "na_esp_procyon_pygmaeus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1324,
+          "after": 2058
+        },
+        "128": {
+          "before": 4934,
+          "after": 5084
+        },
+        "256": {
+          "before": 20174,
+          "after": 14948
+        },
+        "512": {
+          "before": 68862,
+          "after": 33088
+        }
+      }
+    },
+    {
+      "file": "na_esp_puma_concolor--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 948,
+          "after": 2518
+        },
+        "128": {
+          "before": 2950,
+          "after": 5714
+        },
+        "256": {
+          "before": 11782,
+          "after": 15140
+        },
+        "512": {
+          "before": 41696,
+          "after": 28344
+        }
+      }
+    },
+    {
+      "file": "na_esp_puma_concolor--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1196,
+          "after": 2662
+        },
+        "128": {
+          "before": 3908,
+          "after": 6552
+        },
+        "256": {
+          "before": 16752,
+          "after": 18436
+        },
+        "512": {
+          "before": 86016,
+          "after": 49750
+        }
+      }
+    },
+    {
+      "file": "na_esp_spilogale_gracilis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1330,
+          "after": 2802
+        },
+        "128": {
+          "before": 4646,
+          "after": 7472
+        },
+        "256": {
+          "before": 20006,
+          "after": 21978
+        },
+        "512": {
+          "before": 69256,
+          "after": 52238
+        }
+      }
+    },
+    {
+      "file": "na_esp_taxidea_taxus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1010,
+          "after": 2320
+        },
+        "128": {
+          "before": 4138,
+          "after": 6238
+        },
+        "256": {
+          "before": 19550,
+          "after": 19406
+        },
+        "512": {
+          "before": 73800,
+          "after": 50886
+        }
+      }
+    },
+    {
+      "file": "na_esp_urocyon_cinereoargenteus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 966,
+          "after": 2212
+        },
+        "128": {
+          "before": 3518,
+          "after": 5526
+        },
+        "256": {
+          "before": 15284,
+          "after": 16460
+        },
+        "512": {
+          "before": 75514,
+          "after": 45622
+        }
+      }
+    },
+    {
+      "file": "na_esp_ursus_americanus--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1014,
+          "after": 2244
+        },
+        "128": {
+          "before": 3428,
+          "after": 5046
+        },
+        "256": {
+          "before": 15554,
+          "after": 14846
+        },
+        "512": {
+          "before": 50346,
+          "after": 30718
+        }
+      }
+    },
+    {
+      "file": "na_esp_ursus_americanus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1178,
+          "after": 2262
+        },
+        "128": {
+          "before": 3992,
+          "after": 5534
+        },
+        "256": {
+          "before": 17122,
+          "after": 15784
+        },
+        "512": {
+          "before": 59638,
+          "after": 34278
+        }
+      }
+    },
+    {
+      "file": "na_esp_vulpes_macrotis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 658,
+          "after": 2210
+        },
+        "128": {
+          "before": 2212,
+          "after": 5174
+        },
+        "256": {
+          "before": 9494,
+          "after": 14136
+        },
+        "512": {
+          "before": 50886,
+          "after": 32556
+        }
+      }
+    },
+    {
+      "file": "nutria_europea--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 890,
+          "after": 1910
+        },
+        "128": {
+          "before": 3118,
+          "after": 4488
+        },
+        "256": {
+          "before": 14758,
+          "after": 13074
+        },
+        "512": {
+          "before": 50324,
+          "after": 25460
+        }
+      }
+    },
+    {
+      "file": "nutria_europea--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1014,
+          "after": 1810
+        },
+        "128": {
+          "before": 3496,
+          "after": 4524
+        },
+        "256": {
+          "before": 15874,
+          "after": 13522
+        },
+        "512": {
+          "before": 52302,
+          "after": 28304
+        }
+      }
+    },
+    {
+      "file": "nutria_europea--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 944,
+          "after": 1942
+        },
+        "128": {
+          "before": 3626,
+          "after": 4840
+        },
+        "256": {
+          "before": 17044,
+          "after": 14512
+        },
+        "512": {
+          "before": 63328,
+          "after": 30998
+        }
+      }
+    },
+    {
+      "file": "oc_esp_canis_familiaris--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 868,
+          "after": 2506
+        },
+        "128": {
+          "before": 2668,
+          "after": 5746
+        },
+        "256": {
+          "before": 12030,
+          "after": 16246
+        },
+        "512": {
+          "before": 59432,
+          "after": 35608
+        }
+      }
+    },
+    {
+      "file": "oc_esp_dactylopsila_trivirgata--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1590,
+          "after": 3162
+        },
+        "128": {
+          "before": 5530,
+          "after": 7872
+        },
+        "256": {
+          "before": 20696,
+          "after": 23560
+        },
+        "512": {
+          "before": 91024,
+          "after": 71710
+        }
+      }
+    },
+    {
+      "file": "oc_esp_dasycercus_cristicauda--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1206,
+          "after": 2268
+        },
+        "128": {
+          "before": 5014,
+          "after": 5484
+        },
+        "256": {
+          "before": 22464,
+          "after": 15784
+        },
+        "512": {
+          "before": 105346,
+          "after": 43640
+        }
+      }
+    },
+    {
+      "file": "oc_esp_dasyurus_viverrinus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1326,
+          "after": 2634
+        },
+        "128": {
+          "before": 4942,
+          "after": 6446
+        },
+        "256": {
+          "before": 21594,
+          "after": 18124
+        },
+        "512": {
+          "before": 98628,
+          "after": 48020
+        }
+      }
+    },
+    {
+      "file": "oc_esp_dendrolagus_goodfellowi--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1678,
+          "after": 2466
+        },
+        "128": {
+          "before": 5836,
+          "after": 5952
+        },
+        "256": {
+          "before": 23106,
+          "after": 16486
+        },
+        "512": {
+          "before": 103494,
+          "after": 45094
+        }
+      }
+    },
+    {
+      "file": "oc_esp_dendrolagus_lumholtzi--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1374,
+          "after": 2706
+        },
+        "128": {
+          "before": 5032,
+          "after": 6724
+        },
+        "256": {
+          "before": 20894,
+          "after": 19924
+        },
+        "512": {
+          "before": 93154,
+          "after": 55596
+        }
+      }
+    },
+    {
+      "file": "oc_esp_dendrolagus_matschiei--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1408,
+          "after": 2438
+        },
+        "128": {
+          "before": 4818,
+          "after": 6008
+        },
+        "256": {
+          "before": 19302,
+          "after": 16946
+        },
+        "512": {
+          "before": 89262,
+          "after": 46418
+        }
+      }
+    },
+    {
+      "file": "oc_esp_macropus_fuliginosus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1360,
+          "after": 2332
+        },
+        "128": {
+          "before": 5124,
+          "after": 5838
+        },
+        "256": {
+          "before": 21926,
+          "after": 16518
+        },
+        "512": {
+          "before": 99348,
+          "after": 39974
+        }
+      }
+    },
+    {
+      "file": "oc_esp_macropus_giganteus--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1256,
+          "after": 2306
+        },
+        "128": {
+          "before": 4448,
+          "after": 5388
+        },
+        "256": {
+          "before": 17490,
+          "after": 14448
+        },
+        "512": {
+          "before": 69848,
+          "after": 32010
+        }
+      }
+    },
+    {
+      "file": "oc_esp_macropus_giganteus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1304,
+          "after": 2294
+        },
+        "128": {
+          "before": 4742,
+          "after": 5688
+        },
+        "256": {
+          "before": 20494,
+          "after": 15778
+        },
+        "512": {
+          "before": 91232,
+          "after": 37798
+        }
+      }
+    },
+    {
+      "file": "oc_esp_macrotis_lagotis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1248,
+          "after": 2464
+        },
+        "128": {
+          "before": 4826,
+          "after": 6000
+        },
+        "256": {
+          "before": 21788,
+          "after": 16548
+        },
+        "512": {
+          "before": 99774,
+          "after": 42286
+        }
+      }
+    },
+    {
+      "file": "oc_esp_myrmecobius_fasciatus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1586,
+          "after": 3022
+        },
+        "128": {
+          "before": 6114,
+          "after": 7940
+        },
+        "256": {
+          "before": 24792,
+          "after": 24712
+        },
+        "512": {
+          "before": 103930,
+          "after": 75578
+        }
+      }
+    },
+    {
+      "file": "oc_esp_notamacropus_agilis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1098,
+          "after": 2220
+        },
+        "128": {
+          "before": 4532,
+          "after": 5360
+        },
+        "256": {
+          "before": 20584,
+          "after": 14926
+        },
+        "512": {
+          "before": 92566,
+          "after": 36406
+        }
+      }
+    },
+    {
+      "file": "oc_esp_notamacropus_eugenii--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1216,
+          "after": 2140
+        },
+        "128": {
+          "before": 4978,
+          "after": 4924
+        },
+        "256": {
+          "before": 22386,
+          "after": 14286
+        },
+        "512": {
+          "before": 102236,
+          "after": 37908
+        }
+      }
+    },
+    {
+      "file": "oc_esp_notamacropus_rufogriseus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1358,
+          "after": 2192
+        },
+        "128": {
+          "before": 5198,
+          "after": 5436
+        },
+        "256": {
+          "before": 22466,
+          "after": 15784
+        },
+        "512": {
+          "before": 98974,
+          "after": 42236
+        }
+      }
+    },
+    {
+      "file": "oc_esp_ornithorhynchus_anatinus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1294,
+          "after": 1634
+        },
+        "128": {
+          "before": 5008,
+          "after": 3814
+        },
+        "256": {
+          "before": 21378,
+          "after": 11082
+        },
+        "512": {
+          "before": 94826,
+          "after": 30118
+        }
+      }
+    },
+    {
+      "file": "oc_esp_osphranter_rufus--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1230,
+          "after": 2618
+        },
+        "128": {
+          "before": 4218,
+          "after": 6584
+        },
+        "256": {
+          "before": 16378,
+          "after": 17478
+        },
+        "512": {
+          "before": 66552,
+          "after": 37178
+        }
+      }
+    },
+    {
+      "file": "oc_esp_osphranter_rufus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1244,
+          "after": 2692
+        },
+        "128": {
+          "before": 4600,
+          "after": 6752
+        },
+        "256": {
+          "before": 19578,
+          "after": 18518
+        },
+        "512": {
+          "before": 89692,
+          "after": 42914
+        }
+      }
+    },
+    {
+      "file": "oc_esp_petauroides_volans--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1508,
+          "after": 2796
+        },
+        "128": {
+          "before": 5222,
+          "after": 7398
+        },
+        "256": {
+          "before": 20802,
+          "after": 22830
+        },
+        "512": {
+          "before": 92472,
+          "after": 65832
+        }
+      }
+    },
+    {
+      "file": "oc_esp_petaurus_breviceps--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1442,
+          "after": 2352
+        },
+        "128": {
+          "before": 5262,
+          "after": 5604
+        },
+        "256": {
+          "before": 20382,
+          "after": 16032
+        },
+        "512": {
+          "before": 82570,
+          "after": 42266
+        }
+      }
+    },
+    {
+      "file": "oc_esp_petrogale_mareeba--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1324,
+          "after": 2446
+        },
+        "128": {
+          "before": 5224,
+          "after": 5934
+        },
+        "256": {
+          "before": 23282,
+          "after": 17072
+        },
+        "512": {
+          "before": 105256,
+          "after": 48098
+        }
+      }
+    },
+    {
+      "file": "oc_esp_phalanger_orientalis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1482,
+          "after": 2406
+        },
+        "128": {
+          "before": 5278,
+          "after": 5910
+        },
+        "256": {
+          "before": 21370,
+          "after": 17216
+        },
+        "512": {
+          "before": 88656,
+          "after": 48552
+        }
+      }
+    },
+    {
+      "file": "oc_esp_phascolarctos_cinereus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1506,
+          "after": 2286
+        },
+        "128": {
+          "before": 5590,
+          "after": 5774
+        },
+        "256": {
+          "before": 22120,
+          "after": 17490
+        },
+        "512": {
+          "before": 94480,
+          "after": 51496
+        }
+      }
+    },
+    {
+      "file": "oc_esp_sarcophilus_harrisii--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1454,
+          "after": 2366
+        },
+        "128": {
+          "before": 5038,
+          "after": 5572
+        },
+        "256": {
+          "before": 20796,
+          "after": 16210
+        },
+        "512": {
+          "before": 87076,
+          "after": 43572
+        }
+      }
+    },
+    {
+      "file": "oc_esp_setonix_brachyurus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1350,
+          "after": 2178
+        },
+        "128": {
+          "before": 5284,
+          "after": 5720
+        },
+        "256": {
+          "before": 22732,
+          "after": 16858
+        },
+        "512": {
+          "before": 94776,
+          "after": 50326
+        }
+      }
+    },
+    {
+      "file": "oc_esp_spilocuscus_maculatus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1670,
+          "after": 2548
+        },
+        "128": {
+          "before": 5880,
+          "after": 6414
+        },
+        "256": {
+          "before": 22352,
+          "after": 17704
+        },
+        "512": {
+          "before": 93412,
+          "after": 49338
+        }
+      }
+    },
+    {
+      "file": "oc_esp_tachyglossus_aculeatus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1548,
+          "after": 2894
+        },
+        "128": {
+          "before": 6278,
+          "after": 8136
+        },
+        "256": {
+          "before": 25738,
+          "after": 27580
+        },
+        "512": {
+          "before": 107482,
+          "after": 87824
+        }
+      }
+    },
+    {
+      "file": "oc_esp_thylogale_billardierii--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1352,
+          "after": 2104
+        },
+        "128": {
+          "before": 5450,
+          "after": 5108
+        },
+        "256": {
+          "before": 24042,
+          "after": 15672
+        },
+        "512": {
+          "before": 108990,
+          "after": 45640
+        }
+      }
+    },
+    {
+      "file": "oc_esp_trichosurus_vulpecula--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1462,
+          "after": 3108
+        },
+        "128": {
+          "before": 5042,
+          "after": 8300
+        },
+        "256": {
+          "before": 20670,
+          "after": 25888
+        },
+        "512": {
+          "before": 94430,
+          "after": 81132
+        }
+      }
+    },
+    {
+      "file": "oc_esp_vombatus_ursinus--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1002,
+          "after": 2074
+        },
+        "128": {
+          "before": 3754,
+          "after": 4974
+        },
+        "256": {
+          "before": 17278,
+          "after": 15338
+        },
+        "512": {
+          "before": 78680,
+          "after": 47086
+        }
+      }
+    },
+    {
+      "file": "oc_esp_vombatus_ursinus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1108,
+          "after": 2238
+        },
+        "128": {
+          "before": 4668,
+          "after": 5814
+        },
+        "256": {
+          "before": 22260,
+          "after": 18690
+        },
+        "512": {
+          "before": 106598,
+          "after": 63738
+        }
+      }
+    },
+    {
+      "file": "oc_esp_wallabia_bicolor--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1296,
+          "after": 2166
+        },
+        "128": {
+          "before": 5212,
+          "after": 5404
+        },
+        "256": {
+          "before": 24294,
+          "after": 15330
+        },
+        "512": {
+          "before": 111528,
+          "after": 43100
+        }
+      }
+    },
+    {
+      "file": "oc_esp_zaglossus_bartoni--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1376,
+          "after": 2312
+        },
+        "128": {
+          "before": 5370,
+          "after": 5834
+        },
+        "256": {
+          "before": 23272,
+          "after": 17536
+        },
+        "512": {
+          "before": 104444,
+          "after": 52358
+        }
+      }
+    },
+    {
+      "file": "oso_pardo--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1292,
+          "after": 2644
+        },
+        "128": {
+          "before": 4874,
+          "after": 6786
+        },
+        "256": {
+          "before": 20672,
+          "after": 20178
+        },
+        "512": {
+          "before": 69804,
+          "after": 48520
+        }
+      }
+    },
+    {
+      "file": "polar_esp_ursus_maritimus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 696,
+          "after": 2136
+        },
+        "128": {
+          "before": 2212,
+          "after": 5132
+        },
+        "256": {
+          "before": 9778,
+          "after": 15252
+        },
+        "512": {
+          "before": 38288,
+          "after": 32208
+        }
+      }
+    },
+    {
+      "file": "sa_esp_atelocynus_microtis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1052,
+          "after": 2204
+        },
+        "128": {
+          "before": 3558,
+          "after": 5180
+        },
+        "256": {
+          "before": 15112,
+          "after": 14656
+        },
+        "512": {
+          "before": 72390,
+          "after": 37846
+        }
+      }
+    },
+    {
+      "file": "sa_esp_cerdocyon_thous--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 820,
+          "after": 2172
+        },
+        "128": {
+          "before": 2784,
+          "after": 5396
+        },
+        "256": {
+          "before": 12170,
+          "after": 15154
+        },
+        "512": {
+          "before": 63884,
+          "after": 38242
+        }
+      }
+    },
+    {
+      "file": "sa_esp_chrysocyon_brachyurus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 864,
+          "after": 2574
+        },
+        "128": {
+          "before": 2542,
+          "after": 6330
+        },
+        "256": {
+          "before": 10216,
+          "after": 17198
+        },
+        "512": {
+          "before": 53158,
+          "after": 39156
+        }
+      }
+    },
+    {
+      "file": "sa_esp_conepatus_chinga--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 988,
+          "after": 2812
+        },
+        "128": {
+          "before": 3802,
+          "after": 8032
+        },
+        "256": {
+          "before": 17364,
+          "after": 25760
+        },
+        "512": {
+          "before": 61842,
+          "after": 68978
+        }
+      }
+    },
+    {
+      "file": "sa_esp_leopardus_colocola--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1278,
+          "after": 2344
+        },
+        "128": {
+          "before": 4988,
+          "after": 6008
+        },
+        "256": {
+          "before": 21742,
+          "after": 17804
+        },
+        "512": {
+          "before": 96342,
+          "after": 54866
+        }
+      }
+    },
+    {
+      "file": "sa_esp_leopardus_geoffroyi--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1184,
+          "after": 2224
+        },
+        "128": {
+          "before": 4182,
+          "after": 5216
+        },
+        "256": {
+          "before": 15972,
+          "after": 14594
+        },
+        "512": {
+          "before": 70332,
+          "after": 35528
+        }
+      }
+    },
+    {
+      "file": "sa_esp_leopardus_geoffroyi--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1168,
+          "after": 2326
+        },
+        "128": {
+          "before": 4760,
+          "after": 5702
+        },
+        "256": {
+          "before": 19626,
+          "after": 16340
+        },
+        "512": {
+          "before": 88118,
+          "after": 43936
+        }
+      }
+    },
+    {
+      "file": "sa_esp_leopardus_jacobita--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1336,
+          "after": 2454
+        },
+        "128": {
+          "before": 4728,
+          "after": 6358
+        },
+        "256": {
+          "before": 19760,
+          "after": 18258
+        },
+        "512": {
+          "before": 89574,
+          "after": 52964
+        }
+      }
+    },
+    {
+      "file": "sa_esp_leopardus_tigrinus--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1490,
+          "after": 1872
+        },
+        "128": {
+          "before": 5048,
+          "after": 4604
+        },
+        "256": {
+          "before": 19566,
+          "after": 12300
+        },
+        "512": {
+          "before": 78020,
+          "after": 28342
+        }
+      }
+    },
+    {
+      "file": "sa_esp_leopardus_tigrinus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1428,
+          "after": 2026
+        },
+        "128": {
+          "before": 5412,
+          "after": 4914
+        },
+        "256": {
+          "before": 21830,
+          "after": 13934
+        },
+        "512": {
+          "before": 94518,
+          "after": 33990
+        }
+      }
+    },
+    {
+      "file": "sa_esp_lontra_felina--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1040,
+          "after": 1586
+        },
+        "128": {
+          "before": 4012,
+          "after": 3710
+        },
+        "256": {
+          "before": 18380,
+          "after": 11298
+        },
+        "512": {
+          "before": 68534,
+          "after": 23870
+        }
+      }
+    },
+    {
+      "file": "sa_esp_lycalopex_culpaeus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 850,
+          "after": 2354
+        },
+        "128": {
+          "before": 2822,
+          "after": 5600
+        },
+        "256": {
+          "before": 12054,
+          "after": 15858
+        },
+        "512": {
+          "before": 61978,
+          "after": 40990
+        }
+      }
+    },
+    {
+      "file": "sa_esp_lycalopex_fulvipes--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1062,
+          "after": 2086
+        },
+        "128": {
+          "before": 3838,
+          "after": 5028
+        },
+        "256": {
+          "before": 16578,
+          "after": 14178
+        },
+        "512": {
+          "before": 78676,
+          "after": 38164
+        }
+      }
+    },
+    {
+      "file": "sa_esp_lycalopex_gymnocercus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 670,
+          "after": 2376
+        },
+        "128": {
+          "before": 2504,
+          "after": 5780
+        },
+        "256": {
+          "before": 11504,
+          "after": 16654
+        },
+        "512": {
+          "before": 58206,
+          "after": 40276
+        }
+      }
+    },
+    {
+      "file": "sa_esp_pteronura_brasiliensis--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1018,
+          "after": 1982
+        },
+        "128": {
+          "before": 3938,
+          "after": 4698
+        },
+        "256": {
+          "before": 17756,
+          "after": 13582
+        },
+        "512": {
+          "before": 64520,
+          "after": 29426
+        }
+      }
+    },
+    {
+      "file": "sa_esp_speothos_venaticus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 936,
+          "after": 2028
+        },
+        "128": {
+          "before": 3274,
+          "after": 4758
+        },
+        "256": {
+          "before": 14558,
+          "after": 13788
+        },
+        "512": {
+          "before": 71458,
+          "after": 35972
+        }
+      }
+    },
+    {
+      "file": "sa_esp_tremarctos_ornatus--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1322,
+          "after": 2244
+        },
+        "128": {
+          "before": 4388,
+          "after": 5234
+        },
+        "256": {
+          "before": 18396,
+          "after": 14910
+        },
+        "512": {
+          "before": 63574,
+          "after": 33182
+        }
+      }
+    },
+    {
+      "file": "tejon_europeo--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 1076,
+          "after": 1882
+        },
+        "128": {
+          "before": 4040,
+          "after": 4654
+        },
+        "256": {
+          "before": 17832,
+          "after": 15120
+        },
+        "512": {
+          "before": 56876,
+          "after": 33526
+        }
+      }
+    },
+    {
+      "file": "tejon_europeo--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 1288,
+          "after": 2132
+        },
+        "128": {
+          "before": 4864,
+          "after": 5608
+        },
+        "256": {
+          "before": 21292,
+          "after": 18412
+        },
+        "512": {
+          "before": 75612,
+          "after": 46698
+        }
+      }
+    },
+    {
+      "file": "zorro_artico--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 596,
+          "after": 1718
+        },
+        "128": {
+          "before": 1528,
+          "after": 3936
+        },
+        "256": {
+          "before": 6130,
+          "after": 11138
+        },
+        "512": {
+          "before": 24038,
+          "after": 23922
+        }
+      }
+    },
+    {
+      "file": "zorro_artico--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 386,
+          "after": 1624
+        },
+        "128": {
+          "before": 1086,
+          "after": 3610
+        },
+        "256": {
+          "before": 3916,
+          "after": 9210
+        },
+        "512": {
+          "before": 25250,
+          "after": 20656
+        }
+      }
+    },
+    {
+      "file": "zorro_rojo--albino.webp",
+      "sizes": {
+        "64": {
+          "before": 738,
+          "after": 2092
+        },
+        "128": {
+          "before": 2408,
+          "after": 4882
+        },
+        "256": {
+          "before": 9966,
+          "after": 13520
+        },
+        "512": {
+          "before": 36212,
+          "after": 24474
+        }
+      }
+    },
+    {
+      "file": "zorro_rojo--ascua.webp",
+      "sizes": {
+        "64": {
+          "before": 904,
+          "after": 2112
+        },
+        "128": {
+          "before": 2928,
+          "after": 5016
+        },
+        "256": {
+          "before": 11062,
+          "after": 14268
+        },
+        "512": {
+          "before": 54978,
+          "after": 37578
+        }
+      }
+    },
+    {
+      "file": "zorro_rojo--melanico.webp",
+      "sizes": {
+        "64": {
+          "before": 1056,
+          "after": 2208
+        },
+        "128": {
+          "before": 3190,
+          "after": 5340
+        },
+        "256": {
+          "before": 12884,
+          "after": 15290
+        },
+        "512": {
+          "before": 44736,
+          "after": 31116
+        }
+      }
+    },
+    {
+      "file": "zorro_rojo--normal.webp",
+      "sizes": {
+        "64": {
+          "before": 964,
+          "after": 2242
+        },
+        "128": {
+          "before": 3082,
+          "after": 5362
+        },
+        "256": {
+          "before": 13376,
+          "after": 15004
+        },
+        "512": {
+          "before": 64724,
+          "after": 36016
+        }
+      }
+    }
+  ]
+}
