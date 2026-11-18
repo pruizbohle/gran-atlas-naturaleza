@@ -1883,6 +1883,16 @@ function specimenMarkup(id,variant='',category='',sex=null){
  const svg=getSpriteMarkup(id,variantToSkin(variant),!variant?sex:null);
  return category&&SPECIMEN_LEVELS[category]&&variantToSkin(variant)!==SPECIMEN_LEVELS[category].skin?decorateSpecimen(svg,category):svg;
 }
+// Presentation adapter for discovered animals. Stored encounter markup stays SVG.
+function animalMarkup(id,{variant='',category='',sex=null,size=128,eager=false}={}){
+ const skin=variantToSkin(variant);
+ const frame=category||Object.keys(SPECIMEN_LEVELS).find(name=>SPECIMEN_LEVELS[name].skin===skin)||'Normal';
+ const key=frame==='Legendario'?'legendario':
+  (skin==='normal'&&SEXUAL_DIMORPHISM[id]&&(sex==='male'||sex==='female'))?sex:
+  (skin==='albino'||skin==='melanico')?skin:'normal';
+ const fallback=()=>specimenMarkup(id,variant,category,sex);
+ return globalThis.AtlasNaturalistArt?.render(id,{variant:key,category:frame,size,eager},fallback)??fallback();
+}
 function decorateSpecimen(svg,category){
  const level=SPECIMEN_LEVELS[category];if(!level)return svg;
  return svg.replace('>',` data-specimen-category="${category}">`+specimenHalo(category));
@@ -2538,12 +2548,12 @@ function specialBadges(id){
   const seen=l?!!state.legendaryFound?.[l.id]:Object.entries(found).some(([label,value])=>value&&specialVariantName(label)===v);
   const count=state.specialCounts?.[id]?.[v];
   const caption=seen?(l?l.name+' — '+SPECIES[id].name:v):v+' · sin descubrir';
-  return `<div class="variant-card ${seen?'seen':'unknown'}"><div class="sprite-wrap">${seen?getSpriteMarkup(id,variantToSkin(v)):'<div class="qmark">?</div>'}</div><div class="small">${caption}${seen?(l?' · descubierto (1/1)':count?' · '+count+' encuentros desde v3.19.7':' · registro histórico'):''}</div></div>`;
+  return `<div class="variant-card ${seen?'seen':'unknown'}"><div class="sprite-wrap">${seen?animalMarkup(id,{variant:v}):'<div class="qmark">?</div>'}</div><div class="small">${caption}${seen?(l?' · descubierto (1/1)':count?' · '+count+' encuentros desde v3.19.7':' · registro histórico'):''}</div></div>`;
  }).join('')+'</div>';
 }
 function renderLegendaryCollection(){
  const found=LEGENDARY_SPECIMENS.filter(l=>state.legendaryFound?.[l.id]);
- return `<section class="card legendary-collection"><h3>Individuos legendarios · ${found.length}/${LEGENDARY_SPECIMENS.length}</h3><p class="small">Identidades ficticias del atlas naturalista. Cada individuo aparece una sola vez por partida. Colección visual sin bonificaciones.</p><div class="species-grid">${found.map(l=>`<article class="variant-card"><div class="sprite-wrap">${getSpriteMarkup(l.speciesId,'legendario')}</div><strong>${l.name} — ${SPECIES[l.speciesId].name}</strong><p>Legendario · descubierto</p><p class="small">${l.description}</p></article>`).join('')||'<p class="small">Los individuos se revelarán después de encontrarlos en Campo.</p>'}</div></section>`;
+ return `<section class="card legendary-collection"><h3>Individuos legendarios · ${found.length}/${LEGENDARY_SPECIMENS.length}</h3><p class="small">Identidades ficticias del atlas naturalista. Cada individuo aparece una sola vez por partida. Colección visual sin bonificaciones.</p><div class="species-grid">${found.map(l=>`<article class="variant-card"><div class="sprite-wrap">${animalMarkup(l.speciesId,{category:'Legendario',size:256})}</div><strong>${l.name} — ${SPECIES[l.speciesId].name}</strong><p>Legendario · descubierto</p><p class="small">${l.description}</p></article>`).join('')||'<p class="small">Los individuos se revelarán después de encontrarlos en Campo.</p>'}</div></section>`;
 }
 
 // Comparación en el Cuaderno: se revela cada sexo solo al observarlo.
@@ -2554,7 +2564,7 @@ function renderSexComparison(id){
     const seen=!!found[sex];
     return `<div class="sex-card ${seen?'':'sex-hidden'}">
       <div class="sex-label">${label}</div>
-      <div class="sex-sprite sprite-wrap">${seen?getSpriteMarkup(id,'normal',sex):'<div class="qmark">?</div>'}</div>
+      <div class="sex-sprite sprite-wrap">${seen?animalMarkup(id,{sex}):'<div class="qmark">?</div>'}</div>
       <div class="small">${seen?'Observado':'Sin observar'}</div>
     </div>`;
   }).join('');
@@ -2941,11 +2951,27 @@ function renderCounters(){
 }
 
 function renderIfOpen(tabs){ if(tabs.includes(tab)) renderPanel(); }
+function replaceFieldEncounter(result, markup){
+ const template=document.createElement?.('template');
+ if(!template){result.innerHTML=markup;return;}
+ template.innerHTML=markup;
+ const reusable=new Map();
+ for(const image of result.querySelectorAll('img.atlas-art-image')){
+  const key=image.getAttribute('src');
+  if(!reusable.has(key))reusable.set(key,[]);
+  reusable.get(key).push(image);
+ }
+ for(const image of template.content.querySelectorAll('img.atlas-art-image')){
+  const previous=reusable.get(image.getAttribute('src'))?.shift();
+  if(previous)image.replaceWith(previous);
+ }
+ result.replaceChildren(template.content);
+}
 function updateFieldOutput(){
  if(tab!=='field')return;
  const last=state.lastEncounter;
  const result=document.getElementById('fieldResult');
- if(result){const signature=fieldEncounterSignature(last);if(signature!==lastPanelSignature){result.innerHTML=encounterCardMarkup(last);result.classList.remove('encounter-reveal');void result.offsetWidth;result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
+ if(result){const signature=fieldEncounterSignature(last);if(signature!==lastPanelSignature){replaceFieldEncounter(result,encounterCardMarkup(last));result.classList.remove('encounter-reveal');void result.offsetWidth;result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
  const buffs=document.getElementById('fieldBuffSummary');
  if(buffs){const next=fieldBuffSummaryMarkup();if(buffs.innerHTML!==next)buffs.innerHTML=next;}
  const automatic=fieldAutomaticModel();
@@ -2961,10 +2987,11 @@ function updateFieldOutput(){
  const autoDetail=document.getElementById('fieldAutoDetail');
  if(autoDetail&&autoDetail.textContent!==currentAutoNotice)autoDetail.textContent=currentAutoNotice;
  const log=document.getElementById('fieldLog');
- if(log && diaryDirty){
-  const wasNearTop=log.scrollTop<42;
-  log.innerHTML=state.log.map(x=>`<div class="log">${esc(x)}</div>`).join('');
+ if(log && (diaryDirty||log.dataset?.artSequence!==String(last?.sequence||0))){
+  const wasNearTop=log.scrollTop<42,next=fieldLogMarkup();
+  if(log.innerHTML!==next)log.innerHTML=next;
   if(wasNearTop)log.scrollTop=0;
+  if(log.dataset)log.dataset.artSequence=String(last?.sequence||0);
   diaryDirty=false;
  }
 }
@@ -3218,9 +3245,9 @@ function fieldBackdropMarkup(habitat){return globalThis.AtlasFieldScene.render(h
 function fieldEncounterModel(last){
  const entries=(Array.isArray(last?.entries)?last.entries:[]).filter(e=>SPECIES[e.id]).slice(0,3).map((e,index)=>{
   const individual=(e.category==='Legendario'||e.variant==='Legendario')?legendaryForSpecies(e.id):null;
-  return {...e,name:(individual?individual.name+' — ':'')+visibleName(e.id),image:specimenMarkup(e.id,e.variant,e.category,e.sex),amount:Number(e.amount)||1,sexLabel:e.sex==='male'?'macho':'hembra',sexNew:!!(index===0&&e.sex&&last?.subtitle?.includes('primera observación'))};
+  return {...e,name:(individual?individual.name+' — ':'')+visibleName(e.id),image:animalMarkup(e.id,{variant:e.variant,category:e.category,sex:e.sex,eager:true}),amount:Number(e.amount)||1,sexLabel:e.sex==='male'?'macho':'hembra',sexNew:!!(index===0&&e.sex&&last?.subtitle?.includes('primera observación'))};
  });
- if(!entries.length&&last?.species&&SPECIES[last.species])entries.push({id:last.species,name:visibleName(last.species),image:last.sprite||getSpriteMarkup(last.species),amount:1});
+ if(!entries.length&&last?.species&&SPECIES[last.species])entries.push({id:last.species,name:visibleName(last.species),image:last.sprite||animalMarkup(last.species,{eager:true}),amount:1});
  const knowledge=(last?.subtitle||'').match(/\+\d+ conocimiento/),money=(last?.subtitle||'').match(/\+£\d+/),sample=(last?.subtitle||'').match(/muestra obtenida: ([^,·]+)/);
  const count=entries.reduce((sum,e)=>sum+e.amount,0);
  return {entries,title:last?.title||'Sigue los rastros',failed:!!last&&!last.species,legacyImage:!entries.length?last?.sprite:null,emptyImage:renderItemArt('binoculars'),reward:[count?('+'+count+' '+(count===1?'avistamiento':'avistamientos')):'',knowledge?.[0],money?.[0],sample?'Muestra: '+sample[1].trim():''].filter(Boolean).join(' · ')||'Observa y completa tu cuaderno de viaje.'};
@@ -3240,9 +3267,17 @@ function fieldAutomaticModel(){
  const paused=helpers>0&&(!cap.total||!cap.remaining);
  return {helpers,summary:helpers?(helpers+' naturalistas · '+(paused?'en pausa':'explorando')):'Explora con ayuda de naturalistas',detail:helpers?(paused?(cap.total?'Cupo horario completo · búsqueda manual disponible':'Sin fauna compatible con la estación'):'Cada '+autoInterval()+' s · censo ×'+automaticCensusRate()+' · '+cap.remaining+'/'+cap.total+' especies con cupo'):'Contrata tu equipo en Investigación',notice:currentAutoNotice};
 }
+function fieldLogMarkup(){
+ const lastEntries=state.lastEncounter?.entries;
+ const art=Array.isArray(lastEntries)?lastEntries.slice(0,3).filter(entry=>state.discovered[entry.id]&&
+  Object.hasOwn(globalThis.AtlasNaturalistAssets?.routes||{},entry.id)).map(entry=>
+   animalMarkup(entry.id,{variant:entry.variant,category:entry.category,sex:entry.sex,size:64})).join(''):'';
+ const history=state.log.map(line=>'<div class="log">'+esc(line)+'</div>').join('');
+ return (art?'<div class="field-log-art" aria-label="Último avistamiento">'+art+'</div>':'')+history;
+}
 function fieldViewModel(){
  const region=currentRegion();
- return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),progress:fieldProgressModel(),auto:fieldAutomaticModel(),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(),logHTML:state.log.map(x=>'<div class="log">'+esc(x)+'</div>').join(''),toolsHTML:'<div class="helper-row"><button class="btn gold" data-action="field-aid" data-id="knowledge">+500 conocimiento</button><button class="btn gold" data-action="field-aid" data-id="sightings">+50 avistamientos</button><button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button></div>',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
+ return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),progress:fieldProgressModel(),auto:fieldAutomaticModel(),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(),logHTML:fieldLogMarkup(),toolsHTML:'<div class="helper-row"><button class="btn gold" data-action="field-aid" data-id="knowledge">+500 conocimiento</button><button class="btn gold" data-action="field-aid" data-id="sightings">+50 avistamientos</button><button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button></div>',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
 }
 function renderField(){return globalThis.AtlasFieldUI.render(fieldViewModel());}
 function renderJournal(){
@@ -3277,7 +3312,7 @@ function renderJournal(){
             const selected=sid===id;
             const name=visibleName(sid);
             return `<button type="button" class="journal-v311-animal ${selected?'selected':''}" data-action="select-journal" data-id="${sid}" ${selected?'aria-current="true"':''} aria-label="${esc(name).replace(/"/g,'&quot;')}, ${fmt(sight(sid))} avistamientos, etapa ${stage(sid)} de 5">
-              <span class="journal-v311-avatar">${known?getSpriteMarkup(sid,'normal'):'<span class="journal-v311-unknown" aria-hidden="true">?</span>'}</span>
+              <span class="journal-v311-avatar">${known?animalMarkup(sid,{size:64}):'<span class="journal-v311-unknown" aria-hidden="true">?</span>'}</span>
               <span class="journal-v311-animal-name">${esc(name)}</span>
               <span class="journal-v311-sightings" aria-label="${fmt(sight(sid))} avistamientos">👁 <b>${fmt(sight(sid))}</b></span>
               <span class="journal-v311-progress">${stage(sid)}/5</span>
@@ -3287,7 +3322,7 @@ function renderJournal(){
       </aside>
       <section class="card journal-detail journal-sheet">
         <div class="journal-sheet-top"><span>ARCHIVO DEL NATURALISTA</span><span>FOLIO ${String(ids.indexOf(id)+1).padStart(3,'0')}</span></div>
-        <div class="journal-cover"><div class="journal-portrait"><div class="sprite-wrap">${isKnown?getSpriteMarkup(id,'normal'):'<div class="qmark">?</div>'}</div><span>ILUSTRACIÓN DE CAMPO</span></div><div class="journal-identity"><div class="journal-rarity">${rarityBadge(sp.rare)}</div><h2>${visibleName(id)}</h2><em>${visibleLatin(id)}</em><div class="journal-stage-label">Investigación · ${st} de 5 etapas</div></div></div>
+        <div class="journal-cover"><div class="journal-portrait"><div class="sprite-wrap">${isKnown?animalMarkup(id,{size:256}):'<div class="qmark">?</div>'}</div><span>ILUSTRACIÓN DE CAMPO</span></div><div class="journal-identity"><div class="journal-rarity">${rarityBadge(sp.rare)}</div><h2>${visibleName(id)}</h2><em>${visibleLatin(id)}</em><div class="journal-stage-label">Investigación · ${st} de 5 etapas</div></div></div>
         <section class="journal-research"><div class="journal-block-heading"><strong>✦ Progreso científico</strong><span>${Math.round(st/5*100)}%</span></div><div class="journal-stamps">${stamps}</div><div class="journal-track"><span style="width:${st/5*100}%"></span></div></section>
         <div class="journal-facts"><div><span>AVISTAMIENTOS</span><strong>${fmt(sight(id))}</strong></div><div><span>ALIMENTACIÓN</span><strong>${fmt(feed(id))}/10</strong></div><div><span>ESPECIALES</span><strong>${fmt(specials(id))}</strong></div><div><span>DIMORFISMO</span><strong>${sp.dimorphism?dimorphismProgress(id)+'/2':'—'}</strong></div></div>
         <section class="journal-collection"><div class="journal-block-heading"><strong>◈ Variantes observadas</strong></div><div class="journal-variants">${specialBadges(id)}</div></section>
@@ -3310,11 +3345,11 @@ function renderJournal(){
 // J-3250 BEGIN model
 function journalViewModel3250(detailOnly=false){
  const ids=currentRegion().species,id=state.selectedJournal||ids[0],sp=SPECIES[id],st=stage(id),next=st<5?stageRequirements(id,st):null;
- const items=ids.map((sid,slot)=>({slot,name:visibleName(sid),stage:stage(sid),sightings:sight(sid),discovered:!!state.discovered[sid],sprite:state.discovered[sid]&&(!detailOnly||sid===id)?getSpriteMarkup(sid,'normal'):''}));
+ const items=ids.map((sid,slot)=>({slot,name:visibleName(sid),stage:stage(sid),sightings:sight(sid),discovered:!!state.discovered[sid],sprite:state.discovered[sid]&&!detailOnly?animalMarkup(sid,{size:64}):''}));
  if(journalSortMode==='sightings')items.sort((a,b)=>b.sightings-a.sightings||a.slot-b.slot);
  const foundVariants=specialBadges(id).replace(/<div class="variant-card unknown">[\s\S]*?<\/div><\/div><div class="small">[\s\S]*?<\/div><\/div>/g,'');
  const observedVariants=foundVariants.includes('variant-card seen')?foundVariants.replaceAll(sp.name,visibleName(id)):'';
- return {region:currentRegion().name,identified:regionIdentifiedCount(state.currentRegion),query:journalRailQuery,sort:journalSortMode,items,money:fmt(state.money),knowledge:fmt(state.knowledge),selected:{...items.find(p=>p.slot===ids.indexOf(id)),name:visibleName(id),latin:visibleLatin(id),rarity:sp.rare,next,published:!!state.published[id],food:feed(id),specials:specials(id),sexProgress:sp.dimorphism?dimorphismProgress(id)+'/2':'—',extraLabel:st===3?(sp.dimorphism?'Alimentación o sexos':'Alimentación'):'Espécimen especial',extraProgress:st===3?(sp.dimorphism?feed(id)+'/10 · '+dimorphismProgress(id)+'/2 sexos':feed(id)+'/10'):specials(id)+'/1',taxonomy:taxonomyText(id),habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',variants:observedVariants,sexes:SEXUAL_DIMORPHISM[id]?renderSexComparison(id):''}};
+ return {region:currentRegion().name,identified:regionIdentifiedCount(state.currentRegion),query:journalRailQuery,sort:journalSortMode,items,money:fmt(state.money),knowledge:fmt(state.knowledge),selected:{...items.find(p=>p.slot===ids.indexOf(id)),sprite:state.discovered[id]?animalMarkup(id,{size:256}):'',name:visibleName(id),latin:visibleLatin(id),rarity:sp.rare,next,published:!!state.published[id],food:feed(id),specials:specials(id),sexProgress:sp.dimorphism?dimorphismProgress(id)+'/2':'—',extraLabel:st===3?(sp.dimorphism?'Alimentación o sexos':'Alimentación'):'Espécimen especial',extraProgress:st===3?(sp.dimorphism?feed(id)+'/10 · '+dimorphismProgress(id)+'/2 sexos':feed(id)+'/10'):specials(id)+'/1',taxonomy:taxonomyText(id),habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',variants:observedVariants,sexes:SEXUAL_DIMORPHISM[id]?renderSexComparison(id):''}};
 }
 let journalRailScrollLeft3250=0,journalRailRegion3250='',journalRailSelection3250='';
 function refreshJournalSheet3250(){
@@ -4026,7 +4061,7 @@ function renderMuseumSamples(exhibits,count){
  '<div class="list">'+(samples.map(id=>{
   const owned=!!exhibits[id],complete=stage(id)===5&&!!state.published[id],price=exhibitPrice(id);
   return '<div class="atlas-region museum-v311-sample"><div class="head" style="display:flex;gap:8px;align-items:center">'+
-    '<div class="sprite-wrap">'+getSpriteMarkup(id)+'</div><div><strong>'+visibleName(id)+'</strong>'+
+    '<div class="sprite-wrap">'+animalMarkup(id)+'</div><div><strong>'+visibleName(id)+'</strong>'+
     '<div class="small">Etapa '+stage(id)+'/5 · muestra £'+price+' · £'+exhibitIncome(id).toFixed(2)+'/s</div></div></div>'+
     (owned?'<span class="badge">En sala</span>':
      '<button class="btn" data-action="exhibit" data-id="'+id+'" '+
@@ -4175,7 +4210,7 @@ function renderMuseum(){
       <div class="small">Ingresos: £${museumRate().toFixed(2)} por segundo (hasta 8 h offline)</div>
     </div>
     ${next?`<button class="btn" data-action="expand-museum" ${state.prestige<next.prestige||state.money<next.cost?'disabled':''}>Ampliar: ${next.name} · £${next.cost} y ${next.prestige} prestigio</button>`:`<div class="badge">Nivel máximo del prototipo</div>`}
-    <div class="showcase-grid museum-v33-showcases">${exhibitIds.length?exhibitIds.map(id=>`<div class="showpiece museum-v33-vitrine"><div class="museum-v33-frame"><div class="sprite-wrap">${getSpriteMarkup(id)}</div></div><strong>${SPECIES[id].name}</strong><div class="small">${SPECIES[id].rare} · muestra £${exhibitPrice(id)}</div><div class="badge">£${exhibitIncome(id).toFixed(2)}/s</div><button class="btn alt" data-action="remove-exhibit" data-id="${id}">Cambiar especie</button></div>`).join(''):`<div class="small">Aún no has montado exposiciones.</div>`}</div>
+    <div class="showcase-grid museum-v33-showcases">${exhibitIds.length?exhibitIds.map(id=>`<div class="showpiece museum-v33-vitrine"><div class="museum-v33-frame"><div class="sprite-wrap">${animalMarkup(id)}</div></div><strong>${SPECIES[id].name}</strong><div class="small">${SPECIES[id].rare} · muestra £${exhibitPrice(id)}</div><div class="badge">£${exhibitIncome(id).toFixed(2)}/s</div><button class="btn alt" data-action="remove-exhibit" data-id="${id}">Cambiar especie</button></div>`).join(''):`<div class="small">Aún no has montado exposiciones.</div>`}</div>
     <div class="divider"></div><h3 class="section">🦴 Otras colecciones en exposición</h3>
     ${renderMuseumExtraGallery()}
   ` : state.museumView==='samples' ? renderMuseumSamples(exhibits,count) : state.museumView==='fossils' ? renderFossilWorkshop() : state.museumView==='relicts' ? renderMuseumRelicts() : renderMuseumArtifacts()}
@@ -4209,7 +4244,7 @@ function museumMaterials3270(requirements){return Object.entries(requirements||{
 function museumCanExhibit3270(id){return !!(SPECIES[id]&&stage(id)===5&&state.published[id]&&!state.museum.exhibits[id]&&Object.keys(state.museum.exhibits).length<museumCapacity()&&state.money>=exhibitPrice(id));}
 function museumAnimal3270(id){
  const sp=SPECIES[id],owned=!!state.museum.exhibits[id],token=museumToken3270('animal',id),available=museumCanExhibit3270(id),full=Object.keys(state.museum.exhibits).length>=museumCapacity();
- return {token,kind:'Muestra animal',name:visibleName(id),latin:visibleLatin(id),art:getSpriteMarkup(id),owned,open:true,status:owned?'Actualmente expuesta':available?'Disponible para exponer':full?'Sin capacidad':'Recursos insuficientes',detail:`${sp.rare} · ${stage(id)}/5 · ${state.published[id]?'Monografía publicada':'Registro histórico'} · £${exhibitPrice(id)} · £${exhibitIncome(id).toFixed(2)}/s base`,description:'Las bonificaciones se aplican al ingreso total del Museo. Retirar una muestra no reembolsa su costo.',actions:owned?[{action:'remove-exhibit',token,label:'Retirar muestra',alt:true}]:[{action:'exhibit',token,label:'Exponer · £'+exhibitPrice(id),enabled:available}]};
+ return {token,kind:'Muestra animal',name:visibleName(id),latin:visibleLatin(id),art:animalMarkup(id,{size:256}),owned,open:true,status:owned?'Actualmente expuesta':available?'Disponible para exponer':full?'Sin capacidad':'Recursos insuficientes',detail:`${sp.rare} · ${stage(id)}/5 · ${state.published[id]?'Monografía publicada':'Registro histórico'} · £${exhibitPrice(id)} · £${exhibitIncome(id).toFixed(2)}/s base`,description:'Las bonificaciones se aplican al ingreso total del Museo. Retirar una muestra no reembolsa su costo.',actions:owned?[{action:'remove-exhibit',token,label:'Retirar muestra',alt:true}]:[{action:'exhibit',token,label:'Exponer · £'+exhibitPrice(id),enabled:available}]};
 }
 function museumRecipe3270(p){
  const owned=p.unique?!!state.museum.collections[p.id]:(state.inventory[p.id]||0)>0,displayed=!!(p.unique&&owned&&museumIsDisplayed('collection',p.id)),token=museumToken3270('recipe',p.id),ready=museumAssemblyReady(p);
@@ -4901,7 +4936,7 @@ function bestiaryQuery3260(){
 function bestiaryViewModel3260(){
  const query=bestiaryQuery3260(),pages=Math.max(1,Math.ceil(query.entries.length/BESTIARY_PAGE_SIZE));
  bestiaryPage=Math.max(0,Math.min(bestiaryPage,pages-1));
- const cards=query.entries.slice(bestiaryPage*BESTIARY_PAGE_SIZE,(bestiaryPage+1)*BESTIARY_PAGE_SIZE).map(p=>({slot:p.slot,name:p.name,latin:p.latin,stage:p.stage,sightings:p.sightings,discovered:p.discovered,published:p.discovered&&p.published,sprite:p.discovered?getSpriteMarkup(p.id,'normal'):''}));
+ const cards=query.entries.slice(bestiaryPage*BESTIARY_PAGE_SIZE,(bestiaryPage+1)*BESTIARY_PAGE_SIZE).map(p=>({slot:p.slot,name:p.name,latin:p.latin,stage:p.stage,sightings:p.sightings,discovered:p.discovered,published:p.discovered&&p.published,sprite:p.discovered?animalMarkup(p.id):''}));
  return {total:query.total,identified:identifiedCount(),matches:query.entries.length,page:bestiaryPage,pages,filters:query.filters,subgroups:query.subgroups,cards};
 }
 function changeBestiaryFilter3260(key,value){
@@ -4933,7 +4968,7 @@ function bestiaryObservedVariants3260(id){
 function bestiaryModalModel3260(id){
  if(!SPECIES[id]||!state.discovered[id])return null;
  const sp=SPECIES[id],st=stage(id),t=taxonomyInfo(id),sex=state.sexSeen[id]||{};
- return {name:visibleName(id),latin:visibleLatin(id),stage:st,sightings:sight(id),sprite:getSpriteMarkup(id,'normal'),rarity:sp.rare,group:st>=2?bestiaryTypeBucket(id):null,taxonomy:taxonomyText(id),food:feed(id),published:!!state.published[id],variants:bestiaryObservedVariants3260(id),sexes:SEXUAL_DIMORPHISM[id]&&(sex.male||sex.female)?[sex.male?'Macho observado':null,sex.female?'Hembra observada':null].filter(Boolean).join(' · '):'Sin registros de dimorfismo.',habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',regions:bestiaryDistribution3260(id),journalAvailable:currentRegion().species.includes(id)};
+ return {name:visibleName(id),latin:visibleLatin(id),stage:st,sightings:sight(id),sprite:animalMarkup(id,{size:512}),rarity:sp.rare,group:st>=2?bestiaryTypeBucket(id):null,taxonomy:taxonomyText(id),food:feed(id),published:!!state.published[id],variants:bestiaryObservedVariants3260(id),sexes:SEXUAL_DIMORPHISM[id]&&(sex.male||sex.female)?[sex.male?'Macho observado':null,sex.female?'Hembra observada':null].filter(Boolean).join(' · '):'Sin registros de dimorfismo.',habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',regions:bestiaryDistribution3260(id),journalAvailable:currentRegion().species.includes(id)};
 }
 function openBestiaryModal3260(slot,source){
  if(!Number.isInteger(slot)||slot<0)return;
@@ -4976,7 +5011,7 @@ function speciesCard(id, selected=false, bestiary=false){
   const knownName=st>=1;
   return `<button class="species-card ${selected?'selected':''}" ${bestiary?'':'data-action="select-journal"'} data-id="${id}">
     <div class="head">
-      <div class="sprite-wrap">${discovered?getSpriteMarkup(id,'normal'):'<div style="font-size:30px">❔</div>'}</div>
+      <div class="sprite-wrap">${discovered?animalMarkup(id):'<div style="font-size:30px">❔</div>'}</div>
       <div class="head-info">
         <div class="titleline"><strong>${knownName?sp.name:'No identificado'}</strong> ${rarityBadge(sp.rare)}</div>
         <div class="small">${knownName?visibleLatin(id):(discovered?'sin identificar':'sin descubrir')}</div>

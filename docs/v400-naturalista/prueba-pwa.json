@@ -1,0 +1,24 @@
+[
+  {
+    "width": 390,
+    "fieldSvgMs": 39,
+    "fieldWebPMs": 61,
+    "exactSaveBackup": true,
+    "preservedFields": 10,
+    "multiEncounter": true,
+    "spritesOffline": true,
+    "labOffline": true,
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "fieldSvgMs": 45,
+    "fieldWebPMs": 90,
+    "exactSaveBackup": true,
+    "preservedFields": 10,
+    "multiEncounter": true,
+    "spritesOffline": true,
+    "labOffline": true,
+    "errors": []
+  }
+]
