@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marsupiales · El Gran Atlas</title>
+  <link rel="stylesheet" href="lab.css">
+  <script src="catalog.js" defer></script>
+  <script src="lab.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="container">
+      <p class="eyebrow">El Gran Atlas</p>
+      <h1>Marsupiales</h1>
+      <p class="subtitle">Laboratorio de ilustración naturalista</p>
+    </div>
+  </header>
+  <main class="container">
+    <nav aria-label="Modos del laboratorio" id="modes">
+      <button type="button" data-mode="gallery">Galería</button>
+      <button type="button" data-mode="variants">Variantes</button>
+      <button type="button" data-mode="frames">Ejemplares especiales</button>
+      <button type="button" data-mode="compare">Comparación</button>
+      <button type="button" data-mode="scale">Escala real</button>
+      <button type="button" data-mode="review">Revisión artística</button>
+    </nav>
+    <section aria-labelledby="heading" class="workspace">
+      <div class="toolbar">
+        <div><h2 id="heading"></h2><p id="summary"></p></div>
+        <label id="search-control">Buscar especie <input id="search" type="search" placeholder="Nombre común o científico"></label>
+        <label id="species-control" hidden>Especie <select id="species"></select></label>
+        <label id="scale-plate-control" hidden>Lámina <select id="scale-plate"></select></label>
+        <label id="context-control" hidden>Vista de juego <select id="context">
+          <option>Campo</option><option>Bestiario</option><option>Cuaderno</option><option>Museo</option>
+        </select></label>
+        <button id="export" type="button" hidden>Exportar JSON</button>
+      </div>
+      <div id="content"></div>
+      <p id="status" role="status"></p>
+    </section>
+  </main>
+</body>
+</html>
