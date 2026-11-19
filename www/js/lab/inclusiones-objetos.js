@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const {rows, materialIds, animalMaterialIds, paleontology, tradeRoutes, barter, botany, geology, geologyComparisons, oceanography, oceanographyComparisons, maritimeSources, history, historyComparisons, historicalSources} = AtlasObjetosCientificos;
+  const {rows, materialIds, animalMaterialIds, paleontology, tradeRoutes, barter, botany, geology, geologyComparisons, oceanography, oceanographyComparisons, maritimeSources, history, historyComparisons, historicalSources, natural, naturalistScenarios} = AtlasObjetosCientificos;
   const {phases, reconstruction} = AtlasReconstruccionObjetos;
   const byId = new Map(rows.map(row => [row.id, row]));
   const get = id => document.getElementById(id);
@@ -28,7 +28,7 @@
 
   const rarities = ['Común','Poco común','Raro','Muy raro'];
   const discoveries = new Set();
-  const exhibitCabinets = {'Botánica':botany, 'Geología':geology, 'Oceanografía':oceanography, 'Historia':history};
+  const exhibitCabinets = {'Botánica':botany, 'Geología':geology, 'Oceanografía':oceanography, 'Historia':history, 'Historia natural y exploración':natural};
   const atlantis = oceanography.find(group => group.name === 'Secretos de Atlántida').ids.map(id => byId.get(id));
   const comparisons = [...geologyComparisons,...oceanographyComparisons,...historyComparisons];
   const historical = collectible.filter(row => row.history);
@@ -60,8 +60,9 @@
   const state = {
     section:'inventory', query:'', page:0, scope:'existing', family:'', tier:'',
     group:'all', museum:'Fósiles', mount:paleontology.mounts[0].id, phase:'3', form:'skeleton',
-    cabinet:'', collection:'', progress:'50', discoveryRarity:'Poco común', approval:'', origin:'',
+    cabinet:'', collection:'', grandCabinet:'', grandCollection:'', progress:'50', discoveryRarity:'Poco común', approval:'', origin:'',
     exhibitCabinet:'Botánica', exhibitCollection:botany[0].name, exhibitFormat:'album', exhibitProgress:'100',
+    naturalistSource:naturalistScenarios[0].id,
     maritimeSource:maritimeSources[0].id, atlantisCount:'0', historicalSource:historicalSources[0].id,
     historicalContinent:'', historicalCulture:'', historicalPeriod:'', historicalType:'',
     instrument:'binoculars', hat:'field_hat', necklace:'amulet', bag:'sturdy_pack'
@@ -96,6 +97,7 @@
       state[key] = input.value;
       state.page = 0;
       if (key === 'cabinet') state.collection = '';
+      if (key === 'grandCabinet') state.grandCollection = '';
       if (key === 'exhibitCabinet') state.exhibitCollection = exhibitCabinets[input.value][0].name;
       if (key === 'progress') discoveries.clear();
       render();
@@ -126,7 +128,7 @@
   }
 
   function matches(row) {
-    return normalize([row.name,row.id,row.provenance].filter(Boolean).join(' ')).includes(normalize(state.query.trim()));
+    return normalize([row.name,row.id,row.provenance,row.natural?.species?.name,row.natural?.species?.latin,row.natural?.identity].filter(Boolean).join(' ')).includes(normalize(state.query.trim()));
   }
 
   function figure(row, visibility = true, caption = '', pixels = 128) {
@@ -134,7 +136,7 @@
     const stage = node('div', '', 'stage');
     const source = row.sprites.inventario?.[pixels];
     if (!visibility) {
-      if ((row.botany || row.geology || row.oceanography || row.history) && source) {
+      if ((row.botany || row.geology || row.oceanography || row.history || row.natural) && source) {
         const silhouette = node('img');
         silhouette.src = source.src;
         silhouette.alt = '';
@@ -184,7 +186,7 @@
     const facts = node('dl');
     const fields = [['Categoría',row.type],['Gabinete',row.cabinet],['Colección',row.collection],
       ['Rareza',row.rarity],['Procedencia',row.provenance || row.continent],['Descripción',row.description],
-      ['Obtención sugerida',row.history ? 'Registro, reproducción o intercambio de gabinete autorizado.' : row.acquisition],['Uso sugerido',row.uses],['Contexto',row.context],
+      ['Obtención sugerida',row.natural?.acquisition || (row.history ? 'Registro, reproducción o intercambio de gabinete autorizado.' : row.acquisition)],['Uso sugerido',row.uses],['Contexto',row.context],
       ['Identificación u origen',row.botany?.identity],['Caracteres diagnósticos',row.botany?.characteristics],
       ['Escala real',row.botany?.scale],['Puntos de colección',row.points],
       ['Clasificación',row.geology?.classification],['Composición',row.geology?.composition],['Hábito o estructura',row.geology?.structure],
@@ -196,11 +198,15 @@
       ['Identificación histórica',row.history?.identity],['Cultura',row.history?.culture],['Periodo',row.history?.period],
       ['Fecha de referencia',row.history?.date],['Material histórico',row.history?.material],['Rasgos',row.history?.diagnostic],
       ['Contexto cultural',row.history?.culturalContext],['Compatibilidad con 1842',row.history?.compatibility],
-      ['Tratamiento',row.history?.treatment],['Observaciones documentales',row.history?.note],['Estado artístico',row.artState],['Observaciones',row.observations]];
+      ['Tratamiento',row.history?.treatment],['Observaciones documentales',row.history?.note],['Identificación científica',row.natural?.identity],['Clasificación científica',row.natural?.classification],
+      ['Material del ejemplar',row.natural?.material],['Dimensiones aproximadas',row.natural?.dimensions],['Rasgo diagnóstico',row.natural?.diagnostic],
+      ['Asociación con fauna',row.natural?.species?.name || row.natural?.association],
+      ['Contexto científico',row.natural?.science],['Contexto histórico',row.natural?.history],
+      ['Compatibilidad con 1842',row.natural && row.chronology.status],['Observaciones de gabinete',row.natural?.note],['Estado artístico',row.artState],['Observaciones',row.observations]];
     for (const [label, value] of fields) {
       if (value) facts.append(node('dt',label),node('dd',value));
     }
-    const discoverable = row.type === 'Coleccionable propuesto' && state.section === 'album';
+    const discoverable = row.type === 'Coleccionable propuesto' && ['album','grand'].includes(state.section);
     const showSample = visible && (!discoverable || discovered(row));
     body.replaceChildren(h,figure(row,showSample,'',row.botany || row.geology || row.oceanography || row.history ? 256 : 128),facts);
     if (row.geology) {
@@ -216,9 +222,9 @@
         body.append(link);
       } else body.append(node('p','Fuente: ' + source));
     }
-    if (row.history) {
+    if (row.history || row.natural) {
       const link = node('a','Referencia de colección');
-      link.href = row.history.source;
+      link.href = row.history?.source || row.natural.source;
       body.append(link);
     }
     if (showSample) {
@@ -362,7 +368,7 @@
   }
 
   function after1842(row) {
-    return row.history?.compatibility === 'Posterior a 1842';
+    return Boolean(row.history || row.natural) && row.chronology.status === 'Posterior a 1842';
   }
 
   function demonstrateDiscovery(row = discoveryCandidate(), openAlbum = false) {
@@ -391,9 +397,50 @@
     dialog.showModal();
   }
 
+  function albumEntries(cabinet = state.cabinet, collection = state.collection) {
+    return collectible.filter(row => (!cabinet || row.cabinet === cabinet) &&
+      (!collection || row.collection === collection) && matches(row));
+  }
+
+  function grandCabinet() {
+    const entries = albumEntries(state.grandCabinet,state.grandCollection);
+    const found = collectible.filter(discovered).length;
+    status.textContent = entries.length + (entries.length === 1 ? ' pieza · ' : ' piezas · ') + found + ' descubiertas de ' + collectible.length;
+    const summary = node('section','','grand-summary');
+    summary.append(node('h3','Catálogo completo'),progressLine('Progreso global',collectible),
+      node('p',score(collectible)), node('p',found + ' descubiertas · ' + (collectible.length - found) + ' pendientes'));
+    if (found === collectible.length) summary.append(node('p','Catálogo completo · 300 piezas documentadas','collection-complete'));
+    const distribution = node('ul','','rarity-summary');
+    for (const rarity of rarities) {
+      const members = collectible.filter(row => row.rarity === rarity);
+      distribution.append(node('li',rarity + ' · ' + members.filter(discovered).length + '/' + members.length));
+    }
+    summary.append(node('h4','Descubiertas por rareza'),distribution);
+    gallery.append(summary);
+    const progress = node('div','','grand-progress');
+    for (const [cabinet,groups] of Object.entries(exhibitCabinets)) {
+      if (state.grandCabinet && cabinet !== state.grandCabinet) continue;
+      const members = groups.flatMap(group => collections.get(group.name));
+      const panel = node('section','','grand-summary');
+      panel.append(node('h3',cabinet),progressLine('Gabinete',members),node('p',score(members)));
+      if (members.every(discovered)) panel.append(node('p','Gabinete completo','collection-complete'));
+      for (const group of groups) {
+        if (state.grandCollection && group.name !== state.grandCollection) continue;
+        const collection = collections.get(group.name);
+        panel.append(progressLine(group.name,collection));
+        if (collection.every(discovered)) panel.append(node('p',group.name + ' · colección completa','collection-complete'));
+      }
+      progress.append(panel);
+    }
+    gallery.append(progress);
+    paginate(entries,page => gallery.append(grid(page,row => {
+      const visible = discovered(row);
+      return card(row,visible,[row.collection,row.rarity,row.points + ' pts',visible ? 'Descubierta' : 'Pendiente'].join(' · '));
+    })));
+  }
+
   function album() {
-    const entries = collectible.filter(row => (!state.cabinet || row.cabinet === state.cabinet) &&
-      (!state.collection || row.collection === state.collection) && matches(row));
+    const entries = albumEntries();
     status.textContent = entries.length + ' piezas · 300 en el álbum';
     const summary = node('div','','progress-list');
     for (const cabinet of cabinets) summary.append(progressLine(cabinet,collectible.filter(row => row.cabinet === cabinet)));
@@ -446,7 +493,7 @@
     gallery.append(grid(entries, row => {
       const added = discovered(row);
       const late = after1842(row);
-      const tile = card(row,added,[row.rarity,row.oceanography?.nature].filter(Boolean).join(' · '));
+      const tile = card(row,added,[row.rarity,row.natural?.species?.name || row.natural?.association || row.oceanography?.nature].filter(Boolean).join(' · '));
       const action = button(late ? 'Referencia futura' : added ? 'En el álbum' : 'Simular descubrimiento',
         () => demonstrateDiscovery(row,true));
       action.disabled = added || late;
@@ -617,7 +664,7 @@
     status.textContent = '';
     gallery.replaceChildren();
     navigation.replaceChildren();
-    ({inventory,equipment:team,materials,trade:commerce,album,exhibition,maritime:() => discoverySources(maritimeSources,'maritimeSource'),
+    ({inventory,equipment:team,materials,trade:commerce,album,grand:grandCabinet,naturalist:() => discoverySources(naturalistScenarios,'naturalistSource'),exhibition,maritime:() => discoverySources(maritimeSources,'maritimeSource'),
       historical:() => discoverySources(historicalSources,'historicalSource'),civilizations,atlantis:atlantisView,museum:museumView,register})[state.section]();
   }
 
@@ -634,12 +681,14 @@
       }
       select('tier','Tier artístico',[['','Todos'],...['I','II','III','IV'].map(tier => [tier,'Tier ' + tier])]);
     }
-    if (state.section === 'album') {
-      select('cabinet','Gabinete',[['','Todos'],...cabinets.map(name => [name,name])]);
-      const available = [...collections].filter(([,members]) => !state.cabinet || members[0].cabinet === state.cabinet);
-      select('collection','Colección',[['','Todas'],...available.map(([name]) => [name,name])]);
+    if (['album','grand'].includes(state.section)) {
+      const grand = state.section === 'grand';
+      const cabinetKey = grand ? 'grandCabinet' : 'cabinet';
+      select(cabinetKey,'Gabinete',[['','Todos'],...cabinets.map(name => [name,name])]);
+      const available = [...collections].filter(([,members]) => !state[cabinetKey] || members[0].cabinet === state[cabinetKey]);
+      select(grand ? 'grandCollection' : 'collection','Colección',[['','Todas'],...available.map(([name]) => [name,name])]);
       select('progress','Progreso de prueba',progressOptions);
-      if (Object.hasOwn(exhibitCabinets,state.cabinet)) {
+      if (state.section === 'album' && Object.hasOwn(exhibitCabinets,state.cabinet)) {
         select('discoveryRarity','Rareza del descubrimiento',rarities.map(value => [value,value]));
         const trigger = button('Probar descubrimiento',() => demonstrateDiscovery());
         trigger.id = 'include-discover';
@@ -655,6 +704,10 @@
       select('exhibitCollection','Colección',exhibitCabinets[state.exhibitCabinet].map(group => [group.name,group.name]));
       select('exhibitFormat','Presentación',Object.entries(formats));
       select('exhibitProgress','Progreso de exhibición',progressOptions);
+    }
+    if (state.section === 'naturalist') {
+      select('naturalistSource','Tipo de hallazgo',naturalistScenarios.map(scenario => [scenario.id,scenario.name]));
+      select('progress','Progreso de prueba',progressOptions);
     }
     if (state.section === 'maritime') {
       select('maritimeSource','Fuente propuesta',maritimeSources.map(source => [source.id,source.name]));

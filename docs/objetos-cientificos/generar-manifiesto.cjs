@@ -253,7 +253,26 @@ const historicalFacts = Object.fromEntries(read('docs/objetos-cientificos/fichas
 assert.equal(stage09Art.size, 57);
 assert.equal(Object.keys(historicalFacts).length, 72);
 
+const stage10 = JSON.parse(read('docs/objetos-cientificos/obj-10.json'));
+const stage10Art = new Set(stage10.sheets.flatMap(sheet => sheet.ids).filter(Boolean));
+const naturalist = JSON.parse(read('docs/objetos-cientificos/fauna-historia-natural.json'));
+const naturalFacts = Object.fromEntries(read('docs/objetos-cientificos/fichas-historia-natural.tsv').trim().split('\n').slice(1).map(line => {
+  const [id,identity,classification,material,dimensions,length,diagnostic,science,history,status,acquisition,note,source] = line.split('\t');
+  assert.ok(chronologyLabels[status] && source?.startsWith('https://'), id);
+  const speciesId = naturalist.species[id];
+  const species = speciesId ? game.SPECIES[speciesId] : undefined;
+  assert.ok(!speciesId || species, speciesId);
+  if (id.startsWith('HUE-')) assert.ok(Number(length) > 0, id);
+  return [id,{identity,classification,material,dimensions,length:Number(length) || null,diagnostic,science,history,status,
+    acquisition,note,source,species:species ? {id:speciesId,name:species.name,latin:species.latin} : null,
+    association:naturalist.alternatives[id] || 'Asociación documental por identificación o procedencia.'}];
+}));
+assert.equal(stage10Art.size, 34);
+assert.equal(Object.keys(naturalFacts).length,60);
+
 function classifyChronology(row, context) {
+  const natural = naturalFacts[row.id];
+  if (natural) return {status:chronologyLabels[natural.status], evidence:natural.history, source:natural.source};
   const history = historicalFacts[row.id];
   if (history) return {status:history.compatibility, evidence:history.date, source:history.source};
   const geology = geologicalFacts[row.id];
@@ -343,10 +362,11 @@ const rows = [...products,...catalog,...museumRecords,...concepts,...futureMater
   return {cabinet:null,collection:null,rarity:null,tier:null,continent:null,provenance:null,
     acquisition:null,description:null,material:null,context:null,original:null,observations:null, ...row,
     pilot:plateIds.includes(row.id),
-    stage:plateIds.includes(row.id) ? 'OBJ-01' : stage02Ids.has(row.id) ? 'OBJ-02' : stage03Ids.has(row.id) ? 'OBJ-03' : stage04Ids.has(row.id) ? 'OBJ-04' : stage05Ids.has(row.id) ? 'OBJ-05' : stage06Art.has(row.id) ? 'OBJ-06' : stage07Art.has(row.id) ? 'OBJ-07' : stage08Art.has(row.id) ? 'OBJ-08' : stage09Art.has(row.id) ? 'OBJ-09' : 'Futuras etapas',
+    stage:plateIds.includes(row.id) ? 'OBJ-01' : stage02Ids.has(row.id) ? 'OBJ-02' : stage03Ids.has(row.id) ? 'OBJ-03' : stage04Ids.has(row.id) ? 'OBJ-04' : stage05Ids.has(row.id) ? 'OBJ-05' : stage06Art.has(row.id) ? 'OBJ-06' : stage07Art.has(row.id) ? 'OBJ-07' : stage08Art.has(row.id) ? 'OBJ-08' : stage09Art.has(row.id) ? 'OBJ-09' : stage10Art.has(row.id) ? 'OBJ-10' : 'Futuras etapas',
     ...(botanicalFacts[row.id] ? {botany:botanicalFacts[row.id]} : {}),
     ...(geologicalFacts[row.id] ? {geology:geologicalFacts[row.id]} : {}),
     ...(maritimeFacts[row.id] ? {oceanography:maritimeFacts[row.id]} : {}),
+    ...(naturalFacts[row.id] ? {natural:naturalFacts[row.id]} : {}),
     ...(historicalFacts[row.id] ? {history:historicalFacts[row.id]} : {}),
     chronology:classifyChronology(row,context),
     context,
@@ -357,9 +377,9 @@ assert.equal(new Set(rows.map(row => row.id)).size, rows.length);
 assert.equal(rows.filter(row => row.pilot).length, 30);
 assert.equal(stage02Ids.size, 31);
 assert.equal(rows.filter(row => row.stage === 'OBJ-02').length, stage02Ids.size);
-const candidateIds = new Set([...plateIds, ...stage02Ids, ...stage03Art, ...stage04Art, ...stage05Art, ...stage06Art, ...stage07Art, ...stage08Art, ...stage09Art]);
+const candidateIds = new Set([...plateIds, ...stage02Ids, ...stage03Art, ...stage04Art, ...stage05Art, ...stage06Art, ...stage07Art, ...stage08Art, ...stage09Art, ...stage10Art]);
 const candidates = rows.filter(row => candidateIds.has(row.id));
-assert.equal(candidates.length, 384);
+assert.equal(candidates.length, 418);
 assert.equal(rows.filter(row => row.artState === 'Candidato').length, candidates.length);
 assert.ok(materialIds.every(id => candidateIds.has(id)), 'Material de OBJ-03 sin candidato');
 assert.ok(candidates.every(row => Object.values(row.sprites).every(files => Object.values(files || {}).filter(file => file.bytes > 0).length === 4)));
@@ -400,8 +420,8 @@ const botany = stage06.collections.map(({id,name}) => ({
   name, ids:catalog.filter(row => row.id.startsWith(id+'-') && row.collection === name).map(row => row.id)
 }));
 assert.deepEqual(botany.map(group => group.ids.length), [12,12,12,12]);
-assert.equal(illustrated.size, 384);
-assert.equal(catalog.filter(row => illustrated.has(row.id)).length, 266);
+assert.equal(illustrated.size, 418);
+assert.equal(catalog.filter(row => illustrated.has(row.id)).length, 300);
 assert.ok(botany.flatMap(group => group.ids).every(id => illustrated.get(id)?.botany));
 const geology = stage07.collections.map(prefix => {
   const specimens = catalog.filter(row => row.id.startsWith(prefix + '-') && row.cabinet === 'Geología');
@@ -431,7 +451,15 @@ const history = stage09.collections.map(prefix => {
 assert.equal(stage09.sources.length,5);
 assert.ok(stage09.sources.flatMap(group => group.ids).every(id => illustrated.get(id)?.history));
 assert.ok(stage09.comparisons.flatMap(group => group.ids).every(id => illustrated.has(id)));
-const manifest = {schema:1, year:1842, botany, history, historyComparisons:stage09.comparisons,
+const natural = stage10.collections.map(prefix => {
+  const specimens = catalog.filter(row => row.id.startsWith(prefix + '-') && row.cabinet === 'Historia natural y exploración');
+  assert.equal(specimens.length,12);
+  assert.ok(specimens.every(row => illustrated.get(row.id)?.natural));
+  return {name:specimens[0].collection,ids:specimens.map(row => row.id)};
+});
+assert.equal(naturalist.scenarios.length,5);
+assert.ok(naturalist.scenarios.flatMap(scenario => scenario.ids).every(id => illustrated.get(id)?.natural));
+const manifest = {natural, naturalistScenarios:naturalist.scenarios, schema:1, year:1842, botany, history, historyComparisons:stage09.comparisons,
   historicalSources:stage09.sources, geology, geologyComparisons:stage07.comparisons,
   oceanography, oceanographyComparisons:stage08.comparisons, maritimeSources:stage08.sources, groups:[...stage02.groups, ...stage03.groups], archive, cartography, paleontology,
   tradeRoutes:game.TRADE_ROUTES.slice(0, 3).map(({name,rewards}) => ({name,rewards})),

@@ -1,0 +1,37 @@
+{
+  "species": {
+    "HUE-02": "frailecillo_atlantico",
+    "HUE-03": "na_esp_falco_peregrinus",
+    "HUE-04": "flamenco_comun",
+    "HUE-05": "sa_esp_rhea_americana",
+    "HUE-06": "oc_esp_dromaius_novaehollandiae",
+    "HUE-07": "oc_esp_casuarius_casuarius",
+    "HUE-08": "oc_esp_apteryx_mantelli",
+    "HUE-09": "sa_esp_ensifera_ensifera",
+    "HUE-10": "af_avestruz",
+    "HUE-11": "polar_esp_aptenodytes_forsteri",
+    "ARQ-01": "af_xlsx_131_ploceus_cucullatus",
+    "ARQ-06": "na_esp_castor_canadensis",
+    "ARQ-07": "oc_esp_ptilonorhynchus_violaceus",
+    "ARQ-12": "na_esp_cynomys_ludovicianus"
+  },
+  "alternatives": {
+    "HUE-01":"Investigación oológica de Asia oriental.",
+    "HUE-12":"Investigación paleornitológica de Madagascar.",
+    "ARQ-02":"Observación de bordes arbolados de la Cuenca del Plata.",
+    "ARQ-03":"Documentación de edificios rurales y aleros.",
+    "ARQ-04":"Observación de estructuras de barro en zonas cálidas.",
+    "ARQ-05":"Observación a distancia de ramas expuestas.",
+    "ARQ-08":"Observación de arbustos y bordes de bosque.",
+    "ARQ-09":"Estudio de suelos de sabana.",
+    "ARQ-10":"Documentación de telas de bosque en Madagascar.",
+    "ARQ-11":"Investigación de arroyos alpinos y su fondo de grava."
+  },
+  "scenarios": [
+    {"id":"ave","name":"Observación de un ave","description":"Documentar un nido desde una distancia de observación.","ids":["ARQ-01","ARQ-07"]},
+    {"id":"habitat","name":"Exploración de hábitat","description":"Registrar formas construidas en cursos de agua y praderas.","ids":["ARQ-06","ARQ-11","ARQ-12"]},
+    {"id":"geologia","name":"Expedición geológica","description":"Documentar estructuras y propiedades minerales en lámina.","ids":["MARV-02","MARV-07","MARV-09"]},
+    {"id":"investigacion","name":"Investigación científica","description":"Asociar una réplica de fósil con su ficha de estudio.","ids":["FOS-01","FOS-02","FOS-05"]},
+    {"id":"museo","name":"Intercambio museístico","description":"Incorporar modelos o facsímiles autorizados de gabinete.","ids":["HUE-06","HUE-10","INS-10"]}
+  ]
+}

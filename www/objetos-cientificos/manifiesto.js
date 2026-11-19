@@ -1,4 +1,142 @@
 globalThis.AtlasObjetosCientificos = {
+  "natural": [
+    {
+      "name": "Huevos de aves",
+      "ids": [
+        "HUE-01",
+        "HUE-02",
+        "HUE-03",
+        "HUE-04",
+        "HUE-05",
+        "HUE-06",
+        "HUE-07",
+        "HUE-08",
+        "HUE-09",
+        "HUE-10",
+        "HUE-11",
+        "HUE-12"
+      ]
+    },
+    {
+      "name": "Fósiles menores",
+      "ids": [
+        "FOS-01",
+        "FOS-02",
+        "FOS-03",
+        "FOS-04",
+        "FOS-05",
+        "FOS-06",
+        "FOS-07",
+        "FOS-08",
+        "FOS-09",
+        "FOS-10",
+        "FOS-11",
+        "FOS-12"
+      ]
+    },
+    {
+      "name": "Instrumentos de exploración",
+      "ids": [
+        "INS-01",
+        "INS-02",
+        "INS-03",
+        "INS-04",
+        "INS-05",
+        "INS-06",
+        "INS-07",
+        "INS-08",
+        "INS-09",
+        "INS-10",
+        "INS-11",
+        "INS-12"
+      ]
+    },
+    {
+      "name": "Gabinete de maravillas",
+      "ids": [
+        "MARV-01",
+        "MARV-02",
+        "MARV-03",
+        "MARV-04",
+        "MARV-05",
+        "MARV-06",
+        "MARV-07",
+        "MARV-08",
+        "MARV-09",
+        "MARV-10",
+        "MARV-11",
+        "MARV-12"
+      ]
+    },
+    {
+      "name": "Arquitecturas animales",
+      "ids": [
+        "ARQ-01",
+        "ARQ-02",
+        "ARQ-03",
+        "ARQ-04",
+        "ARQ-05",
+        "ARQ-06",
+        "ARQ-07",
+        "ARQ-08",
+        "ARQ-09",
+        "ARQ-10",
+        "ARQ-11",
+        "ARQ-12"
+      ]
+    }
+  ],
+  "naturalistScenarios": [
+    {
+      "id": "ave",
+      "name": "Observación de un ave",
+      "description": "Documentar un nido desde una distancia de observación.",
+      "ids": [
+        "ARQ-01",
+        "ARQ-07"
+      ]
+    },
+    {
+      "id": "habitat",
+      "name": "Exploración de hábitat",
+      "description": "Registrar formas construidas en cursos de agua y praderas.",
+      "ids": [
+        "ARQ-06",
+        "ARQ-11",
+        "ARQ-12"
+      ]
+    },
+    {
+      "id": "geologia",
+      "name": "Expedición geológica",
+      "description": "Documentar estructuras y propiedades minerales en lámina.",
+      "ids": [
+        "MARV-02",
+        "MARV-07",
+        "MARV-09"
+      ]
+    },
+    {
+      "id": "investigacion",
+      "name": "Investigación científica",
+      "description": "Asociar una réplica de fósil con su ficha de estudio.",
+      "ids": [
+        "FOS-01",
+        "FOS-02",
+        "FOS-05"
+      ]
+    },
+    {
+      "id": "museo",
+      "name": "Intercambio museístico",
+      "description": "Incorporar modelos o facsímiles autorizados de gabinete.",
+      "ids": [
+        "HUE-06",
+        "HUE-10",
+        "INS-10"
+      ]
+    }
+  ],
   "schema": 1,
   "year": 1842,
   "botany": [
@@ -20873,18 +21011,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Codorniz japonesa (Coturnix japonica)",
+        "classification": "Galliformes",
+        "material": "Cáscara calcárea",
+        "dimensions": "≈ 30 × 22 mm",
+        "length": 30,
+        "diagnostic": "Óvalo crema con manchas pardas grandes e irregulares.",
+        "science": "Las manchas varían entre puestas.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, modelo o ejemplar histórico conservado.",
+        "note": "Documentación de oología; patrón interpretado.",
+        "source": "https://animaldiversity.org/accounts/Coturnix_japonica/",
+        "species": null,
+        "association": "Investigación oológica de Asia oriental."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://animaldiversity.org/accounts/Coturnix_japonica/"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-01/clasica-64.webp",
+            "bytes": 2336
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-01/clasica-128.webp",
+            "bytes": 6108
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-01/clasica-256.webp",
+            "bytes": 18358
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-01/clasica-512.webp",
+            "bytes": 49148
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-01/inventario-64.webp",
+            "bytes": 2472
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-01/inventario-128.webp",
+            "bytes": 6300
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-01/inventario-256.webp",
+            "bytes": 16314
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-01/inventario-512.webp",
+            "bytes": 38332
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -20906,18 +21094,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Frailecillo atlántico (Fratercula arctica)",
+        "classification": "Charadriiformes",
+        "material": "Cáscara calcárea",
+        "dimensions": "59–67 mm de longitud",
+        "length": 63,
+        "diagnostic": "Óvalo blanquecino con marcas discretas.",
+        "science": "Deposita un huevo por puesta en una madriguera.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, modelo o ejemplar histórico conservado.",
+        "note": "Lámina de gabinete; la intensidad del moteado varía.",
+        "source": "https://www.allaboutbirds.org/guide/Atlantic_Puffin/lifehistory",
+        "species": {
+          "id": "frailecillo_atlantico",
+          "name": "Frailecillo atlántico",
+          "latin": "Fratercula arctica"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://www.allaboutbirds.org/guide/Atlantic_Puffin/lifehistory"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-02/clasica-64.webp",
+            "bytes": 1752
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-02/clasica-128.webp",
+            "bytes": 4338
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-02/clasica-256.webp",
+            "bytes": 12576
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-02/clasica-512.webp",
+            "bytes": 40988
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-02/inventario-64.webp",
+            "bytes": 1810
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-02/inventario-128.webp",
+            "bytes": 4428
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-02/inventario-256.webp",
+            "bytes": 11048
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-02/inventario-512.webp",
+            "bytes": 31272
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -20939,18 +21181,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Halcón peregrino (Falco peregrinus)",
+        "classification": "Falconiformes",
+        "material": "Cáscara calcárea",
+        "dimensions": "50–52 mm de longitud",
+        "length": 51,
+        "diagnostic": "Fondo claro densamente moteado de marrón rojizo.",
+        "science": "El moteado puede cubrir casi toda la superficie.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, modelo o ejemplar histórico conservado.",
+        "note": "Modelo o registro científico.",
+        "source": "https://www.allaboutbirds.org/guide/Peregrine_Falcon/lifehistory",
+        "species": {
+          "id": "na_esp_falco_peregrinus",
+          "name": "Halcón peregrino",
+          "latin": "Falco peregrinus"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://www.allaboutbirds.org/guide/Peregrine_Falcon/lifehistory"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-03/clasica-64.webp",
+            "bytes": 2376
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-03/clasica-128.webp",
+            "bytes": 6420
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-03/clasica-256.webp",
+            "bytes": 19802
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-03/clasica-512.webp",
+            "bytes": 61156
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-03/inventario-64.webp",
+            "bytes": 2526
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-03/inventario-128.webp",
+            "bytes": 6962
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-03/inventario-256.webp",
+            "bytes": 17830
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-03/inventario-512.webp",
+            "bytes": 48494
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -20972,18 +21268,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Flamenco común (Phoenicopterus roseus)",
+        "classification": "Phoenicopteriformes",
+        "material": "Cáscara calcárea",
+        "dimensions": "≈ 89 × 55 mm",
+        "length": 89,
+        "diagnostic": "Óvalo alargado y blanco mate.",
+        "science": "La superficie puede adquirir manchas de barro en el montículo de cría.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, modelo o ejemplar histórico conservado.",
+        "note": "Lámina; blanco tizado interpretado.",
+        "source": "https://www.vertebradosibericos.org/aves/reproduccion/phorosre.html",
+        "species": {
+          "id": "flamenco_comun",
+          "name": "Flamenco común",
+          "latin": "Phoenicopterus roseus"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://www.vertebradosibericos.org/aves/reproduccion/phorosre.html"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-04/clasica-64.webp",
+            "bytes": 1110
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-04/clasica-128.webp",
+            "bytes": 2580
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-04/clasica-256.webp",
+            "bytes": 6970
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-04/clasica-512.webp",
+            "bytes": 23038
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-04/inventario-64.webp",
+            "bytes": 1018
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-04/inventario-128.webp",
+            "bytes": 2524
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-04/inventario-256.webp",
+            "bytes": 6178
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-04/inventario-512.webp",
+            "bytes": 17162
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -21005,18 +21355,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Ñandú común (Rhea americana)",
+        "classification": "Rheiformes",
+        "material": "Cáscara calcárea",
+        "dimensions": "≈ 132 × 90 mm",
+        "length": 132,
+        "diagnostic": "Óvalo ancho marfil.",
+        "science": "Varios huevos pueden compartir un nido atendido por el macho.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, modelo o ejemplar histórico conservado.",
+        "note": "Modelo; la cáscara puede aclarar con el tiempo.",
+        "source": "https://www.scielo.br/j/pvb/a/nWk8f6FzpDkMCqcSzhwPXvz/",
+        "species": {
+          "id": "sa_esp_rhea_americana",
+          "name": "Ñandú",
+          "latin": "Rhea americana"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://www.scielo.br/j/pvb/a/nWk8f6FzpDkMCqcSzhwPXvz/"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-05/clasica-64.webp",
+            "bytes": 1522
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-05/clasica-128.webp",
+            "bytes": 3424
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-05/clasica-256.webp",
+            "bytes": 9706
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-05/clasica-512.webp",
+            "bytes": 35572
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-05/inventario-64.webp",
+            "bytes": 1422
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-05/inventario-128.webp",
+            "bytes": 3400
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-05/inventario-256.webp",
+            "bytes": 8312
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-05/inventario-512.webp",
+            "bytes": 25094
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -21038,18 +21442,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Emú (Dromaius novaehollandiae)",
+        "classification": "Casuariiformes",
+        "material": "Cáscara calcárea",
+        "dimensions": "130 × 90 mm",
+        "length": 130,
+        "diagnostic": "Óvalo grande de verde muy oscuro y superficie granulosa.",
+        "science": "La cáscara puede parecer casi negra a distancia.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, modelo o ejemplar histórico conservado.",
+        "note": "Modelo de gabinete.",
+        "source": "https://australian.museum/learn/animals/birds/emu/",
+        "species": {
+          "id": "oc_esp_dromaius_novaehollandiae",
+          "name": "Emú",
+          "latin": "Dromaius novaehollandiae"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://australian.museum/learn/animals/birds/emu/"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-06/clasica-64.webp",
+            "bytes": 1656
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-06/clasica-128.webp",
+            "bytes": 4766
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-06/clasica-256.webp",
+            "bytes": 15210
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-06/clasica-512.webp",
+            "bytes": 53596
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-06/inventario-64.webp",
+            "bytes": 1806
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-06/inventario-128.webp",
+            "bytes": 5232
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-06/inventario-256.webp",
+            "bytes": 13600
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-06/inventario-512.webp",
+            "bytes": 39340
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -21071,18 +21529,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Casuario común (Casuarius casuarius)",
+        "classification": "Casuariiformes",
+        "material": "Cáscara calcárea",
+        "dimensions": "140 × 90 mm",
+        "length": 140,
+        "diagnostic": "Óvalo ancho verde y rugoso.",
+        "science": "La cáscara presenta gránulos y el tono cambia con la conservación.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, modelo o ejemplar histórico conservado.",
+        "note": "Lámina de gabinete; tono representativo.",
+        "source": "https://australian.museum/learn/animals/birds/southern-cassowary/",
+        "species": {
+          "id": "oc_esp_casuarius_casuarius",
+          "name": "Casuario común",
+          "latin": "Casuarius casuarius"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://australian.museum/learn/animals/birds/southern-cassowary/"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-07/clasica-64.webp",
+            "bytes": 1444
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-07/clasica-128.webp",
+            "bytes": 4400
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-07/clasica-256.webp",
+            "bytes": 14264
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-07/clasica-512.webp",
+            "bytes": 44620
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-07/inventario-64.webp",
+            "bytes": 1572
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-07/inventario-128.webp",
+            "bytes": 4836
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-07/inventario-256.webp",
+            "bytes": 12774
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-07/inventario-512.webp",
+            "bytes": 32488
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -21104,18 +21616,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Kiwi pardo (Apteryx mantelli)",
+        "classification": "Apterygiformes",
+        "material": "Cáscara calcárea",
+        "dimensions": "129 × 83 mm, referencia NMNZ OR.012785/a",
+        "length": 129,
+        "diagnostic": "Óvalo alargado de color crema.",
+        "science": "El huevo es grande en relación con la masa de la hembra.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, modelo o ejemplar histórico conservado.",
+        "note": "Modelo; referencia de kiwi pardo.",
+        "source": "https://www.nzbirdsonline.org.nz/species/north-island-brown-kiwi",
+        "species": {
+          "id": "oc_esp_apteryx_mantelli",
+          "name": "Kiwi pardo de la isla norte",
+          "latin": "Apteryx mantelli"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://www.nzbirdsonline.org.nz/species/north-island-brown-kiwi"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-08/clasica-64.webp",
+            "bytes": 1110
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-08/clasica-128.webp",
+            "bytes": 2532
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-08/clasica-256.webp",
+            "bytes": 7422
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-08/clasica-512.webp",
+            "bytes": 24240
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-08/inventario-64.webp",
+            "bytes": 974
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-08/inventario-128.webp",
+            "bytes": 2364
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-08/inventario-256.webp",
+            "bytes": 6194
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-08/inventario-512.webp",
+            "bytes": 16430
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -21137,18 +21703,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Colibrí andino, referencia picoespada (Ensifera ensifera)",
+        "classification": "Apodiformes",
+        "material": "Cáscara calcárea",
+        "dimensions": "≈ 13 mm, referencia comparativa de troquílidos",
+        "length": 13,
+        "diagnostic": "Óvalo blanco liso muy pequeño.",
+        "science": "La longitud es orientativa para la familia y requiere cotejo para esta especie.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, modelo o ejemplar histórico conservado.",
+        "note": "Lámina; sin medida confirmada para el picoespada.",
+        "source": "https://www.allaboutbirds.org/guide/Ruby-throated_Hummingbird/lifehistory",
+        "species": {
+          "id": "sa_esp_ensifera_ensifera",
+          "name": "Colibrí picoespada",
+          "latin": "Ensifera ensifera"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://www.allaboutbirds.org/guide/Ruby-throated_Hummingbird/lifehistory"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-09/clasica-64.webp",
+            "bytes": 1464
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-09/clasica-128.webp",
+            "bytes": 4142
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-09/clasica-256.webp",
+            "bytes": 11096
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-09/clasica-512.webp",
+            "bytes": 26414
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-09/inventario-64.webp",
+            "bytes": 1444
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-09/inventario-128.webp",
+            "bytes": 3708
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-09/inventario-256.webp",
+            "bytes": 10280
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-09/inventario-512.webp",
+            "bytes": 23978
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -21170,18 +21790,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Avestruz común (Struthio camelus)",
+        "classification": "Struthioniformes",
+        "material": "Cáscara calcárea",
+        "dimensions": "≈ 150 mm de longitud",
+        "length": 150,
+        "diagnostic": "Óvalo muy ancho de superficie porosa marfil.",
+        "science": "El tamaño y los poros gruesos ayudan a distinguirlo de otros huevos de ratites.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, modelo o ejemplar histórico conservado.",
+        "note": "Modelo de gabinete.",
+        "source": "https://nationalzoo.si.edu/animals/ostrich",
+        "species": {
+          "id": "af_avestruz",
+          "name": "Avestruz común",
+          "latin": "Struthio camelus"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://nationalzoo.si.edu/animals/ostrich"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-10/clasica-64.webp",
+            "bytes": 2008
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-10/clasica-128.webp",
+            "bytes": 6216
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-10/clasica-256.webp",
+            "bytes": 20086
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-10/clasica-512.webp",
+            "bytes": 65244
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-10/inventario-64.webp",
+            "bytes": 2090
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-10/inventario-128.webp",
+            "bytes": 6586
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-10/inventario-256.webp",
+            "bytes": 17474
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-10/inventario-512.webp",
+            "bytes": 51886
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -21203,18 +21877,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Pingüino emperador (Aptenodytes forsteri)",
+        "classification": "Sphenisciformes",
+        "material": "Cáscara calcárea",
+        "dimensions": "≈ 123 mm de longitud",
+        "length": 123,
+        "diagnostic": "Óvalo piriforme claro, a menudo verdoso.",
+        "science": "El macho lo incuba sobre sus patas bajo el pliegue ventral.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, modelo o ejemplar histórico conservado.",
+        "note": "Lámina de gabinete.",
+        "source": "https://www.nzbirdsonline.org.nz/species/emperor-penguin",
+        "species": {
+          "id": "polar_esp_aptenodytes_forsteri",
+          "name": "Pingüino emperador",
+          "latin": "Aptenodytes forsteri"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://www.nzbirdsonline.org.nz/species/emperor-penguin"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-11/clasica-64.webp",
+            "bytes": 1386
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-11/clasica-128.webp",
+            "bytes": 3316
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-11/clasica-256.webp",
+            "bytes": 9660
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-11/clasica-512.webp",
+            "bytes": 31392
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HUE-11/inventario-64.webp",
+            "bytes": 1368
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HUE-11/inventario-128.webp",
+            "bytes": 3232
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HUE-11/inventario-256.webp",
+            "bytes": 7982
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HUE-11/inventario-512.webp",
+            "bytes": 20052
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -21237,10 +21965,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
       "stage": "OBJ-01",
+      "natural": {
+        "identity": "Huevo de ave elefante (Aepyornithidae)",
+        "classification": "Aepyornithiformes",
+        "material": "Cáscara calcárea",
+        "dimensions": "≈ 300 × 220 mm",
+        "length": 300,
+        "diagnostic": "Óvalo de gran volumen con cáscara gruesa.",
+        "science": "Las dimensiones son aproximadas y varían entre ejemplares atribuidos.",
+        "history": "Huevos documentados en Europa hacia 1850–1851.",
+        "status": "posterior",
+        "acquisition": "Lámina, modelo o ejemplar histórico conservado.",
+        "note": "Consultar como referencia posterior a 1842; conservar OBJ-01.",
+        "source": "https://bibliothek.univie.ac.at/sammlungen/objekt_des_monats/008796.html",
+        "species": null,
+        "association": "Investigación paleornitológica de Madagascar."
+      },
       "chronology": {
         "status": "Posterior a 1842",
-        "evidence": "Futuro · Huevos de Aepyornis documentados en Europa hacia 1850–1851",
-        "source": ""
+        "evidence": "Huevos documentados en Europa hacia 1850–1851.",
+        "source": "https://bibliothek.univie.ac.at/sammlungen/objekt_des_monats/008796.html"
       },
       "sprites": {
         "clasica": {
@@ -21304,10 +22048,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "natural": {
+        "identity": "Fronda de planta paleozoica",
+        "classification": "Paleobotánica",
+        "material": "Impresión carbonosa en roca",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Pinnas y nervadura sobre matriz plegada.",
+        "science": "Formas semejantes pueden corresponder a helechos con semilla.",
+        "history": "Cotejar localidad y ejemplar.",
+        "status": "pendiente",
+        "acquisition": "Registro científico o reproducción de museo.",
+        "note": "La fronda se conserva como candidata OBJ-05.",
+        "source": "https://www.nhm.ac.uk/discover/what-are-fossils.html",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Cotejar localidad y ejemplar.",
+        "source": "https://www.nhm.ac.uk/discover/what-are-fossils.html"
       },
       "sprites": {
         "clasica": {
@@ -21371,10 +22131,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "natural": {
+        "identity": "Ammonoideo de Dorset",
+        "classification": "Mollusca · Cephalopoda",
+        "material": "Concha mineralizada",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Espiral plana con costillas radiales.",
+        "science": "Las suturas y vueltas ayudan a identificar el género.",
+        "history": "El ejemplar concreto queda por datar.",
+        "status": "pendiente",
+        "acquisition": "Registro científico o reproducción de museo.",
+        "note": "Cotejar detalle de suturas.",
+        "source": "https://www.bgs.ac.uk/discovering-geology/fossils-and-geological-time/ammonites/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "El ejemplar concreto queda por datar.",
+        "source": "https://www.bgs.ac.uk/discovering-geology/fossils-and-geological-time/ammonites/"
       },
       "sprites": {
         "clasica": {
@@ -21438,10 +22214,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "natural": {
+        "identity": "Madera petrificada de Arizona",
+        "classification": "Paleobotánica",
+        "material": "Sílice en tejido vegetal",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Anillos y grano leñoso mineralizados.",
+        "science": "Minerales de sílice pueden ocupar poros y sustituir tejido.",
+        "history": "Localidad de referencia, ejemplar sin inventario.",
+        "status": "pendiente",
+        "acquisition": "Registro científico o reproducción de museo.",
+        "note": "Fragmento de gabinete, escala artística.",
+        "source": "https://www.nps.gov/pefo/learn/nature/petrified-wood.htm",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Localidad de referencia, ejemplar sin inventario.",
+        "source": "https://www.nps.gov/pefo/learn/nature/petrified-wood.htm"
       },
       "sprites": {
         "clasica": {
@@ -21505,10 +22297,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "natural": {
+        "identity": "Trilobite marroquí",
+        "classification": "Arthropoda · Trilobita",
+        "material": "Exoesqueleto mineralizado",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Cefalón y segmentos torácicos; eje central marcado.",
+        "science": "El género depende de caracteres del cefalón y pigidio.",
+        "history": "Procedencia concreta y preparación por verificar.",
+        "status": "pendiente",
+        "acquisition": "Registro científico o reproducción de museo.",
+        "note": "Reproducción documental.",
+        "source": "https://www.amnh.org/research/paleontology/collections/fossil-invertebrate-collection/trilobite-website",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Procedencia concreta y preparación por verificar.",
+        "source": "https://www.amnh.org/research/paleontology/collections/fossil-invertebrate-collection/trilobite-website"
       },
       "sprites": {
         "clasica": {
@@ -21572,10 +22380,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "natural": {
+        "identity": "Diente de tiburón fósil",
+        "classification": "Chondrichthyes",
+        "material": "Dentina y esmaltoide fosilizados",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Corona triangular y raíz contrastada.",
+        "science": "La silueta sola puede representar varios linajes.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Registro científico o reproducción de museo.",
+        "note": "Abierto a identificación por dentado y raíz.",
+        "source": "https://www.floridamuseum.ufl.edu/fossil-sharks/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://www.floridamuseum.ufl.edu/fossil-sharks/"
       },
       "sprites": {
         "clasica": {
@@ -21639,10 +22463,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "natural": {
+        "identity": "Pez fósil en laja",
+        "classification": "Actinopterygii, atribución provisional",
+        "material": "Hueso mineralizado y matriz",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Columna, radio de aletas y contorno corporal.",
+        "science": "La forma general permite documentar la preservación, la especie requiere revisión.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Registro científico o reproducción de museo.",
+        "note": "Lámina o réplica de gabinete.",
+        "source": "https://www.nhm.ac.uk/discover/what-are-fossils.html",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://www.nhm.ac.uk/discover/what-are-fossils.html"
       },
       "sprites": {
         "clasica": {
@@ -21706,10 +22546,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "natural": {
+        "identity": "Hoja fósil de China",
+        "classification": "Paleobotánica",
+        "material": "Compresión en roca",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Silueta foliar y venas convergentes.",
+        "science": "El patrón venoso orienta la identificación.",
+        "history": "Estrato y ejemplar por verificar.",
+        "status": "pendiente",
+        "acquisition": "Registro científico o reproducción de museo.",
+        "note": "Modelo de compresión vegetal.",
+        "source": "https://www.nhm.ac.uk/discover/what-are-fossils.html",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Estrato y ejemplar por verificar.",
+        "source": "https://www.nhm.ac.uk/discover/what-are-fossils.html"
       },
       "sprites": {
         "clasica": {
@@ -21773,10 +22629,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "natural": {
+        "identity": "Xifosuro fósil alemán",
+        "classification": "Arthropoda · Xiphosura",
+        "material": "Cutícula mineralizada",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Escudo curvo y telson largo.",
+        "science": "Los xifosuros son quelicerados; el nombre común es cangrejo herradura.",
+        "history": "Ejemplar por datar.",
+        "status": "pendiente",
+        "acquisition": "Registro científico o reproducción de museo.",
+        "note": "Atribución de género pendiente.",
+        "source": "https://www.gbif.org/species/10651",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar por datar.",
+        "source": "https://www.gbif.org/species/10651"
       },
       "sprites": {
         "clasica": {
@@ -21840,10 +22712,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "natural": {
+        "identity": "Rastro de Cal Orck’o",
+        "classification": "Icnofósil",
+        "material": "Impronta en caliza",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Cavidades repetidas con huellas tridáctilas.",
+        "science": "Un rastro registra desplazamiento; su productor se infiere.",
+        "history": "El yacimiento fue documentado en época contemporánea.",
+        "status": "posterior",
+        "acquisition": "Registro científico o reproducción de museo.",
+        "note": "Revisar fidelidad al rastro, conservando OBJ-05.",
+        "source": "https://whc.unesco.org/en/tentativelists/1816/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
-        "status": "Compatible con reservas documentales",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "status": "Posterior a 1842",
+        "evidence": "El yacimiento fue documentado en época contemporánea.",
+        "source": "https://whc.unesco.org/en/tentativelists/1816/"
       },
       "sprites": {
         "clasica": {
@@ -21907,10 +22795,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "natural": {
+        "identity": "Posible gastrólito fósil",
+        "classification": "Piedra de contexto paleontológico",
+        "material": "Clasto pulido",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Superficie redondeada y lisa.",
+        "science": "La identificación exige asociación con el esqueleto o el contexto sedimentario.",
+        "history": "Ejemplar concreto pendiente.",
+        "status": "pendiente",
+        "acquisition": "Registro científico o reproducción de museo.",
+        "note": "Mantener la atribución como provisional.",
+        "source": "https://pubs.usgs.gov/of/2004/1115/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar concreto pendiente.",
+        "source": "https://pubs.usgs.gov/of/2004/1115/"
       },
       "sprites": {
         "clasica": {
@@ -21974,10 +22878,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "natural": {
+        "identity": "Pluma de Solnhofen atribuida a Archaeopteryx",
+        "classification": "Fósil de tegumento",
+        "material": "Impresión en caliza",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Raquis fino y barbas asimétricas.",
+        "science": "La primera pluma aislada de Solnhofen presenta un eje visible.",
+        "history": "Publicación en 1861.",
+        "status": "posterior",
+        "acquisition": "Registro científico o reproducción de museo.",
+        "note": "Cotejar atribución y relieve; conservar OBJ-05.",
+        "source": "https://www.nhm.ac.uk/discover/archaeopteryx.html",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Posterior a 1842",
-        "evidence": "Futuro · Pluma de Archaeopteryx publicada en 1861",
-        "source": ""
+        "evidence": "Publicación en 1861.",
+        "source": "https://www.nhm.ac.uk/discover/archaeopteryx.html"
       },
       "sprites": {
         "clasica": {
@@ -22041,10 +22961,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "natural": {
+        "identity": "Diente de reptil marino jurásico",
+        "classification": "Sauropsida, taxón pendiente",
+        "material": "Dentina mineralizada",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Corona cónica con aristas finas.",
+        "science": "La diagnosis depende del esmalte y la sección transversal.",
+        "history": "Yacimiento exacto y edad por verificar.",
+        "status": "pendiente",
+        "acquisition": "Registro científico o reproducción de museo.",
+        "note": "Réplica de gabinete.",
+        "source": "https://jurassiccoast.org/dorset-and-east-devon-world-heritage-site/fossils",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Yacimiento exacto y edad por verificar.",
+        "source": "https://jurassiccoast.org/dorset-and-east-devon-world-heritage-site/fossils"
       },
       "sprites": {
         "clasica": {
@@ -22108,10 +23044,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "natural": {
+        "identity": "Lupa de mano",
+        "classification": "Óptica",
+        "material": "Vidrio y metal",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Lente convexa simple montada en aro.",
+        "science": "Amplía detalles de superficie.",
+        "history": "Tipo de instrumento anterior a 1842; ejemplar pendiente.",
+        "status": "reserva",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Distinguir de la lente suelta funcional.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "status": "Compatible con reservas documentales",
+        "evidence": "Tipo de instrumento anterior a 1842; ejemplar pendiente.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/"
       },
       "sprites": {
         "clasica": {
@@ -22175,10 +23127,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "natural": {
+        "identity": "Brújula de bolsillo",
+        "classification": "Orientación",
+        "material": "Vidrio, acero imantado y caja de latón",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Aguja visible y rosa de rumbos.",
+        "science": "La aguja se alinea con el campo magnético terrestre.",
+        "history": "Tipo anterior a 1842; cotejar el cierre y el modelo.",
+        "status": "reserva",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Distinguir de brújula funcional de latón.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "status": "Compatible con reservas documentales",
+        "evidence": "Tipo anterior a 1842; cotejar el cierre y el modelo.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/"
       },
       "sprites": {
         "clasica": {
@@ -22242,10 +23210,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "natural": {
+        "identity": "Prensa botánica portátil",
+        "classification": "Herbario",
+        "material": "Madera, papel secante y correas",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Dos tapas planas y paquete estratificado.",
+        "science": "La presión y el recambio de secante facilitan el secado.",
+        "history": "El prensado botánico antecede a 1842; modelo por datar.",
+        "status": "reserva",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Modelo de gabinete con sistema de sujeción visible.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "status": "Compatible con reservas documentales",
+        "evidence": "El prensado botánico antecede a 1842; modelo por datar.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/"
       },
       "sprites": {
         "clasica": {
@@ -22309,10 +23293,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "natural": {
+        "identity": "Plomada de agrimensura",
+        "classification": "Topografía",
+        "material": "Metal y cordel",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Punta cónica suspendida.",
+        "science": "La vertical gravimétrica permite centrar un instrumento.",
+        "history": "Tipo anterior a 1842; ejemplar sin atribución.",
+        "status": "reserva",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Diferenciar del instrumental graduado.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "status": "Compatible con reservas documentales",
+        "evidence": "Tipo anterior a 1842; ejemplar sin atribución.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/"
       },
       "sprites": {
         "clasica": {
@@ -22376,10 +23376,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "natural": {
+        "identity": "Barómetro aneroide de Vidi",
+        "classification": "Meteorología",
+        "material": "Cápsula metálica y mecanismo",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Dial circular accionado por cápsula.",
+        "science": "La deformación de una cápsula bajo presión mueve la aguja.",
+        "history": "Patentes de Vidi de 1843–1844.",
+        "status": "posterior",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Distinguir del barómetro de columna de mercurio.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/people/cp71753/lucien-vidie",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Posterior a 1842",
-        "evidence": "Futuro · barómetro aneroide de Vidi, 1844",
-        "source": ""
+        "evidence": "Patentes de Vidi de 1843–1844.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/people/cp71753/lucien-vidie"
       },
       "sprites": {
         "clasica": {
@@ -22443,10 +23459,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "natural": {
+        "identity": "Cuaderno protegido de campo",
+        "classification": "Registro de expedición",
+        "material": "Papel, encuadernación y funda",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Cubierta envolvente y hojas internas.",
+        "science": "La resistencia al agua depende de materiales y tratamiento.",
+        "history": "La impermeabilidad efectiva del modelo queda por verificar.",
+        "status": "pendiente",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Interpretación de una cubierta protectora.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "La impermeabilidad efectiva del modelo queda por verificar.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/"
       },
       "sprites": {
         "clasica": {
@@ -22510,10 +23542,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "natural": {
+        "identity": "Teodolito de agrimensura",
+        "classification": "Topografía",
+        "material": "Latón, vidrio y niveles",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Telescopio y círculos graduados.",
+        "science": "Mide ángulos horizontales y verticales.",
+        "history": "Tipo anterior a 1842; cotejar montura y graduaciones.",
+        "status": "reserva",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Distinguir de catalejos sin limbo.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/objects/co53222/geodetic-theodolite-1751-1800",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "status": "Compatible con reservas documentales",
+        "evidence": "Tipo anterior a 1842; cotejar montura y graduaciones.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/objects/co53222/geodetic-theodolite-1751-1800"
       },
       "sprites": {
         "clasica": {
@@ -22577,10 +23625,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "natural": {
+        "identity": "Catalejo de gabinete",
+        "classification": "Óptica",
+        "material": "Latón, vidrio y cuero",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Tubo extensible y ocular estrecho.",
+        "science": "Los tubos permiten retraer el instrumento para transporte.",
+        "history": "Tipo anterior a 1842; modelo pendiente.",
+        "status": "reserva",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Distinguir del catalejo funcional mediante estuche y perfil.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/search/makers/jesse-ramsden",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "status": "Compatible con reservas documentales",
+        "evidence": "Tipo anterior a 1842; modelo pendiente.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/search/makers/jesse-ramsden"
       },
       "sprites": {
         "clasica": {
@@ -22644,10 +23708,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "natural": {
+        "identity": "Cámara temprana de placas",
+        "classification": "Fotografía",
+        "material": "Madera, vidrio y soporte metálico",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Caja con objetivo y portaplacas.",
+        "science": "Los equipos daguerreanos tempranos empleaban soporte metálico sensibilizado.",
+        "history": "Daguerrotipo de 1839; cotejar que el modelo dibujado corresponda.",
+        "status": "reserva",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Evitar atribuir placas secas y fuelles posteriores al prototipo.",
+        "source": "https://www.metmuseum.org/essays/daguerre-1787-1851-and-the-invention-of-photography",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "status": "Compatible con reservas documentales",
+        "evidence": "Daguerrotipo de 1839; cotejar que el modelo dibujado corresponda.",
+        "source": "https://www.metmuseum.org/essays/daguerre-1787-1851-and-the-invention-of-photography"
       },
       "sprites": {
         "clasica": {
@@ -22711,10 +23791,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "natural": {
+        "identity": "Sextante de gabinete",
+        "classification": "Navegación",
+        "material": "Latón, vidrio y espejos",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Sector graduado e índice móvil.",
+        "science": "Mide un ángulo por doble reflexión.",
+        "history": "Tipo anterior a 1842; ejemplar de referencia por fechar.",
+        "status": "reserva",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Distinguir del cuadrante funcional.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/objects/co55875/brass-framed-sextant-sextant",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "status": "Compatible con reservas documentales",
+        "evidence": "Tipo anterior a 1842; ejemplar de referencia por fechar.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/objects/co55875/brass-framed-sextant-sextant"
       },
       "sprites": {
         "clasica": {
@@ -22778,10 +23874,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "natural": {
+        "identity": "Microscopio portátil",
+        "classification": "Óptica científica",
+        "material": "Latón y vidrio",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Tubo óptico corto sobre soporte.",
+        "science": "El enfoque aproxima la óptica a la preparación.",
+        "history": "Confirmar que soporte y óptica correspondan al periodo.",
+        "status": "pendiente",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Modelo interpretativo.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Confirmar que soporte y óptica correspondan al periodo.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/"
       },
       "sprites": {
         "clasica": {
@@ -22845,10 +23957,26 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "natural": {
+        "identity": "Cronómetro de marina",
+        "classification": "Navegación",
+        "material": "Latón, acero y caja de madera",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Esfera bajo tapa y suspensión en caja.",
+        "science": "La conservación de la hora de referencia permite estimar longitud.",
+        "history": "Tipo anterior a 1842; mecanismo de referencia pendiente.",
+        "status": "reserva",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Distinguir de relojes de bolsillo.",
+        "source": "https://www.rmg.co.uk/collections",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "status": "Compatible con reservas documentales",
+        "evidence": "Tipo anterior a 1842; mecanismo de referencia pendiente.",
+        "source": "https://www.rmg.co.uk/collections"
       },
       "sprites": {
         "clasica": {
@@ -22911,18 +24039,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Guijarro con perforación natural",
+        "classification": "Geomorfología fluvial",
+        "material": "Roca rodada",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Perforación irregular con bordes redondeados.",
+        "science": "Abrasión y erosión diferencial pueden producir o agrandar cavidades.",
+        "history": "Procedencia y proceso del ejemplar pendientes.",
+        "status": "pendiente",
+        "acquisition": "Lámina, reproducción o registro de campo autorizado.",
+        "note": "Descartar herramientas o perforaciones artificiales por inspección de bordes.",
+        "source": "https://www.usgs.gov/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Procedencia y proceso del ejemplar pendientes.",
+        "source": "https://www.usgs.gov/"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-01/clasica-64.webp",
+            "bytes": 2012
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-01/clasica-128.webp",
+            "bytes": 5178
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-01/clasica-256.webp",
+            "bytes": 16014
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-01/clasica-512.webp",
+            "bytes": 57768
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-01/inventario-64.webp",
+            "bytes": 2112
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-01/inventario-128.webp",
+            "bytes": 5428
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-01/inventario-256.webp",
+            "bytes": 15038
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-01/inventario-512.webp",
+            "bytes": 43380
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -22944,18 +24122,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Rosa del desierto",
+        "classification": "Agregado evaporítico",
+        "material": "Yeso o barita con arena",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Roseta de láminas lenticulares con arena adherida.",
+        "science": "Los cristales crecen entre granos de sedimento en medios evaporíticos.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, reproducción o registro de campo autorizado.",
+        "note": "El dibujo representa yeso con arena; confirmar mineral para muestra concreta.",
+        "source": "https://www.mindat.org/min-1784.html",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://www.mindat.org/min-1784.html"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-02/clasica-64.webp",
+            "bytes": 2498
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-02/clasica-128.webp",
+            "bytes": 6396
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-02/clasica-256.webp",
+            "bytes": 20288
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-02/clasica-512.webp",
+            "bytes": 66036
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-02/inventario-64.webp",
+            "bytes": 2540
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-02/inventario-128.webp",
+            "bytes": 6850
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-02/inventario-256.webp",
+            "bytes": 18872
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-02/inventario-512.webp",
+            "bytes": 55190
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -22977,18 +24205,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Concreción arenosa esférica",
+        "classification": "Sedimentología",
+        "material": "Arena con cemento mineral",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Esfera con bandas concéntricas en sección.",
+        "science": "La precipitación mineral cementa sedimento alrededor de un núcleo.",
+        "history": "Modelo geológico general; ejemplar pendiente.",
+        "status": "pendiente",
+        "acquisition": "Lámina, reproducción o registro de campo autorizado.",
+        "note": "Comparar capas con una muestra real.",
+        "source": "https://www.nps.gov/articles/000/concretions.htm",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Modelo geológico general; ejemplar pendiente.",
+        "source": "https://www.nps.gov/articles/000/concretions.htm"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-03/clasica-64.webp",
+            "bytes": 2356
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-03/clasica-128.webp",
+            "bytes": 6232
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-03/clasica-256.webp",
+            "bytes": 19150
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-03/clasica-512.webp",
+            "bytes": 70678
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-03/inventario-64.webp",
+            "bytes": 2394
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-03/inventario-128.webp",
+            "bytes": 6736
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-03/inventario-256.webp",
+            "bytes": 17578
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-03/inventario-512.webp",
+            "bytes": 51270
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -23010,18 +24288,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Ventifacto",
+        "classification": "Geomorfología eólica",
+        "material": "Roca abrasionada",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Caras planas pulidas y aristas angulosas.",
+        "science": "La arena impulsada por el viento pule las superficies expuestas.",
+        "history": "Muestra concreta por verificar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, reproducción o registro de campo autorizado.",
+        "note": "Modelar facetas naturales y pátina.",
+        "source": "https://www.nps.gov/subjects/geology/aeolian-landforms.htm",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Muestra concreta por verificar.",
+        "source": "https://www.nps.gov/subjects/geology/aeolian-landforms.htm"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-04/clasica-64.webp",
+            "bytes": 2088
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-04/clasica-128.webp",
+            "bytes": 5102
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-04/clasica-256.webp",
+            "bytes": 15886
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-04/clasica-512.webp",
+            "bytes": 55874
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-04/inventario-64.webp",
+            "bytes": 2150
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-04/inventario-128.webp",
+            "bytes": 5514
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-04/inventario-256.webp",
+            "bytes": 13788
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-04/inventario-512.webp",
+            "bytes": 40038
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -23043,18 +24371,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Obsidiana iridiscente",
+        "classification": "Vidrio volcánico",
+        "material": "Vidrio silíceo",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Fractura concoidea con reflejos localizados.",
+        "science": "La iridiscencia depende de microestructuras y del ángulo de luz.",
+        "history": "Ejemplar por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, reproducción o registro de campo autorizado.",
+        "note": "Mantener el arco iris localizado y sutil.",
+        "source": "https://www.usgs.gov/glossary/volcano-hazards-program-glossary",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar por datar.",
+        "source": "https://www.usgs.gov/glossary/volcano-hazards-program-glossary"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-05/clasica-64.webp",
+            "bytes": 2232
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-05/clasica-128.webp",
+            "bytes": 5810
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-05/clasica-256.webp",
+            "bytes": 18254
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-05/clasica-512.webp",
+            "bytes": 62402
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-05/inventario-64.webp",
+            "bytes": 2346
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-05/inventario-128.webp",
+            "bytes": 6296
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-05/inventario-256.webp",
+            "bytes": 16606
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-05/inventario-512.webp",
+            "bytes": 47616
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -23076,18 +24454,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Geoda de cuarzo",
+        "classification": "Cavidad mineralizada",
+        "material": "Cuarzo y roca encajante",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Cavidad abierta con tapiz de cristales claros.",
+        "science": "Los cristales crecen hacia el espacio libre de la cavidad.",
+        "history": "Ejemplar por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, reproducción o registro de campo autorizado.",
+        "note": "Distinguir por corteza gruesa y cristales hialinos.",
+        "source": "https://www.mindat.org/min-3337.html",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar por datar.",
+        "source": "https://www.mindat.org/min-3337.html"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-06/clasica-64.webp",
+            "bytes": 2268
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-06/clasica-128.webp",
+            "bytes": 6008
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-06/clasica-256.webp",
+            "bytes": 19058
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-06/clasica-512.webp",
+            "bytes": 63282
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-06/inventario-64.webp",
+            "bytes": 2374
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-06/inventario-128.webp",
+            "bytes": 6588
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-06/inventario-256.webp",
+            "bytes": 16884
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-06/inventario-512.webp",
+            "bytes": 50216
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -23109,18 +24537,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Espato de Islandia",
+        "classification": "Carbonato · Calcita",
+        "material": "Calcita transparente",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Romboedro que duplica un trazo.",
+        "science": "La birrefringencia es verificable; su uso histórico para navegar es una hipótesis.",
+        "history": "La doble refracción se documentó en el siglo XVII; uso histórico del ejemplar pendiente.",
+        "status": "reserva",
+        "acquisition": "Lámina, reproducción o registro de campo autorizado.",
+        "note": "Representar el desdoblamiento con una línea sobria.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/21282181/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "status": "Compatible con reservas documentales",
+        "evidence": "La doble refracción se documentó en el siglo XVII; uso histórico del ejemplar pendiente.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/21282181/"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-07/clasica-64.webp",
+            "bytes": 2004
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-07/clasica-128.webp",
+            "bytes": 5044
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-07/clasica-256.webp",
+            "bytes": 14072
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-07/clasica-512.webp",
+            "bytes": 50052
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-07/inventario-64.webp",
+            "bytes": 1982
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-07/inventario-128.webp",
+            "bytes": 5116
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-07/inventario-256.webp",
+            "bytes": 12452
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-07/inventario-512.webp",
+            "bytes": 40386
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -23142,18 +24620,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Perla barroca",
+        "classification": "Biomineralización",
+        "material": "Nácar y matriz orgánica",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Relieve asimétrico de brillo nacarado.",
+        "science": "Las capas de aragonito contribuyen al lustre.",
+        "history": "Ejemplar y origen, natural o cultivado, pendientes.",
+        "status": "pendiente",
+        "acquisition": "Lámina, reproducción o registro de campo autorizado.",
+        "note": "Comparar con nácar regional y perlas regulares.",
+        "source": "https://www.gia.edu/pearl",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar y origen, natural o cultivado, pendientes.",
+        "source": "https://www.gia.edu/pearl"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-08/clasica-64.webp",
+            "bytes": 2878
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-08/clasica-128.webp",
+            "bytes": 6962
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-08/clasica-256.webp",
+            "bytes": 20412
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-08/clasica-512.webp",
+            "bytes": 66316
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-08/inventario-64.webp",
+            "bytes": 2750
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-08/inventario-128.webp",
+            "bytes": 7000
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-08/inventario-256.webp",
+            "bytes": 19440
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-08/inventario-512.webp",
+            "bytes": 55876
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -23175,18 +24703,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Fulgurita tubular",
+        "classification": "Vidrio natural",
+        "material": "Arena exterior y vidrio de sílice",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Tubo hueco irregular, a veces ramificado.",
+        "science": "Una descarga puede fundir y vitrificar arena alrededor de su trayecto.",
+        "history": "Ejemplar de referencia por datar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, reproducción o registro de campo autorizado.",
+        "note": "Distinguir de una raíz y de vidrio volcánico.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/22847696/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar de referencia por datar.",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/22847696/"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-09/clasica-64.webp",
+            "bytes": 2876
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-09/clasica-128.webp",
+            "bytes": 7290
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-09/clasica-256.webp",
+            "bytes": 20836
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-09/clasica-512.webp",
+            "bytes": 69822
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-09/inventario-64.webp",
+            "bytes": 2980
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-09/inventario-128.webp",
+            "bytes": 7750
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-09/inventario-256.webp",
+            "bytes": 20452
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-09/inventario-512.webp",
+            "bytes": 65422
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -23208,18 +24786,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Geoda de amatista tipo catedral",
+        "classification": "Cavidad mineralizada",
+        "material": "Cuarzo violeta y roca volcánica",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Cavidad alta con cristales violetas interiores.",
+        "science": "Los cristales apuntan hacia el hueco; el violeta depende de impurezas e irradiación natural.",
+        "history": "Ejemplar gigante sin inventario específico.",
+        "status": "pendiente",
+        "acquisition": "Lámina, reproducción o registro de campo autorizado.",
+        "note": "Forma y escala interpretadas.",
+        "source": "https://www.mindat.org/min-198.html",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Ejemplar gigante sin inventario específico.",
+        "source": "https://www.mindat.org/min-198.html"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-10/clasica-64.webp",
+            "bytes": 2384
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-10/clasica-128.webp",
+            "bytes": 6390
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-10/clasica-256.webp",
+            "bytes": 20536
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-10/clasica-512.webp",
+            "bytes": 71384
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-10/inventario-64.webp",
+            "bytes": 2498
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-10/inventario-128.webp",
+            "bytes": 6966
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-10/inventario-256.webp",
+            "bytes": 18720
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-10/inventario-512.webp",
+            "bytes": 57910
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -23241,18 +24869,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Vidrio del desierto libio",
+        "classification": "Vidrio natural de impacto",
+        "material": "Vidrio rico en sílice",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Fragmento amarillo verdoso translúcido de superficie irregular.",
+        "science": "Se relaciona con un evento de alta temperatura asociado a impacto.",
+        "history": "Vidrio usado en la antigüedad; muestra actual por datar.",
+        "status": "reserva",
+        "acquisition": "Lámina, reproducción o registro de campo autorizado.",
+        "note": "Evitar presentarlo como vidrio volcánico.",
+        "source": "https://www.mindat.org/min-39796.html",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "status": "Compatible con reservas documentales",
+        "evidence": "Vidrio usado en la antigüedad; muestra actual por datar.",
+        "source": "https://www.mindat.org/min-39796.html"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-11/clasica-64.webp",
+            "bytes": 2444
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-11/clasica-128.webp",
+            "bytes": 6532
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-11/clasica-256.webp",
+            "bytes": 19454
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-11/clasica-512.webp",
+            "bytes": 68956
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-11/inventario-64.webp",
+            "bytes": 2476
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-11/inventario-128.webp",
+            "bytes": 6416
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-11/inventario-256.webp",
+            "bytes": 17516
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-11/inventario-512.webp",
+            "bytes": 53204
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -23274,18 +24952,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Cristal dendrítico de nieve",
+        "classification": "Hielo atmosférico",
+        "material": "Hielo, representado en lámina",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Seis ramas con ramificación secundaria.",
+        "science": "La simetría proviene de la estructura cristalina; el crecimiento depende de temperatura y humedad.",
+        "history": "Observación antártica concreta por identificar.",
+        "status": "pendiente",
+        "acquisition": "Lámina, reproducción o registro de campo autorizado.",
+        "note": "Ilustración ampliada de una observación; sin muestra física estable.",
+        "source": "https://www.its.caltech.edu/~atomic/snowcrystals/",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Fecha del ejemplar por verificar",
-        "source": ""
+        "evidence": "Observación antártica concreta por identificar.",
+        "source": "https://www.its.caltech.edu/~atomic/snowcrystals/"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-12/clasica-64.webp",
+            "bytes": 3510
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-12/clasica-128.webp",
+            "bytes": 10536
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-12/clasica-256.webp",
+            "bytes": 32720
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-12/clasica-512.webp",
+            "bytes": 108524
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MARV-12/inventario-64.webp",
+            "bytes": 3750
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MARV-12/inventario-128.webp",
+            "bytes": 11834
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MARV-12/inventario-256.webp",
+            "bytes": 32920
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MARV-12/inventario-512.webp",
+            "bytes": 103366
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -26992,10 +28720,30 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": true,
       "stage": "OBJ-01",
+      "natural": {
+        "identity": "Nido del tejedor común",
+        "classification": "Arquitectura aviar",
+        "material": "Fibras vegetales",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Bolsa tejida suspendida con entrada inferior.",
+        "science": "El entrelazado de fibras desarrolla una cámara colgante.",
+        "history": "Registro concreto por datar.",
+        "status": "pendiente",
+        "acquisition": "Observación a distancia, modelo o sección de gabinete.",
+        "note": "Conservar la ilustración de OBJ-01.",
+        "source": "https://www.biodiversityexplorer.info/birds/ploceidae/ploceus_cucullatus.htm",
+        "species": {
+          "id": "af_xlsx_131_ploceus_cucullatus",
+          "name": "Tejedor común",
+          "latin": "Ploceus cucullatus"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
-        "source": ""
+        "evidence": "Registro concreto por datar.",
+        "source": "https://www.biodiversityexplorer.info/birds/ploceidae/ploceus_cucullatus.htm"
       },
       "sprites": {
         "clasica": {
@@ -27058,18 +28806,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Nido de hornero (Furnarius rufus)",
+        "classification": "Arquitectura aviar",
+        "material": "Barro y fibras",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Cúpula de barro y entrada lateral.",
+        "science": "Un tabique interior protege la cámara de cría.",
+        "history": "Registro concreto por datar.",
+        "status": "pendiente",
+        "acquisition": "Observación a distancia, modelo o sección de gabinete.",
+        "note": "Modelo sin animales.",
+        "source": "https://www.argentina.gob.ar/ambiente/accion/hornero",
+        "species": null,
+        "association": "Observación de bordes arbolados de la Cuenca del Plata."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
-        "source": ""
+        "evidence": "Registro concreto por datar.",
+        "source": "https://www.argentina.gob.ar/ambiente/accion/hornero"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-02/clasica-64.webp",
+            "bytes": 2034
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-02/clasica-128.webp",
+            "bytes": 5282
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-02/clasica-256.webp",
+            "bytes": 16340
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-02/clasica-512.webp",
+            "bytes": 55038
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-02/inventario-64.webp",
+            "bytes": 2172
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-02/inventario-128.webp",
+            "bytes": 5614
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-02/inventario-256.webp",
+            "bytes": 14844
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-02/inventario-512.webp",
+            "bytes": 44652
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -27091,18 +28889,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Nido de golondrina común (Hirundo rustica)",
+        "classification": "Arquitectura aviar",
+        "material": "Barro y fibras",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Taza abierta adherida a un soporte.",
+        "science": "Bolas de barro y fibras forman una copa, con frecuencia bajo refugio.",
+        "history": "Registro concreto por datar.",
+        "status": "pendiente",
+        "acquisition": "Observación a distancia, modelo o sección de gabinete.",
+        "note": "Distinguir de nidos cerrados de aviones.",
+        "source": "https://www.allaboutbirds.org/guide/Barn_Swallow/lifehistory",
+        "species": null,
+        "association": "Documentación de edificios rurales y aleros."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
-        "source": ""
+        "evidence": "Registro concreto por datar.",
+        "source": "https://www.allaboutbirds.org/guide/Barn_Swallow/lifehistory"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-03/clasica-64.webp",
+            "bytes": 2076
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-03/clasica-128.webp",
+            "bytes": 5674
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-03/clasica-256.webp",
+            "bytes": 17200
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-03/clasica-512.webp",
+            "bytes": 55056
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-03/inventario-64.webp",
+            "bytes": 2194
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-03/inventario-128.webp",
+            "bytes": 6176
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-03/inventario-256.webp",
+            "bytes": 16070
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-03/inventario-512.webp",
+            "bytes": 45552
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -27124,18 +28972,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Celda de avispa alfarera",
+        "classification": "Arquitectura de himenópteros",
+        "material": "Barro seco",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Urna pequeña con cuello y orificio.",
+        "science": "Algunas avispas solitarias construyen celdas de barro para su cría.",
+        "history": "Registro concreto por datar.",
+        "status": "pendiente",
+        "acquisition": "Observación a distancia, modelo o sección de gabinete.",
+        "note": "Género por cotejar; modelo de una celda.",
+        "source": "https://www.fs.usda.gov/wildflowers/pollinators/pollinator-of-the-month/potter_wasp.shtml",
+        "species": null,
+        "association": "Observación de estructuras de barro en zonas cálidas."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
-        "source": ""
+        "evidence": "Registro concreto por datar.",
+        "source": "https://www.fs.usda.gov/wildflowers/pollinators/pollinator-of-the-month/potter_wasp.shtml"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-04/clasica-64.webp",
+            "bytes": 2118
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-04/clasica-128.webp",
+            "bytes": 5398
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-04/clasica-256.webp",
+            "bytes": 16522
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-04/clasica-512.webp",
+            "bytes": 47870
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-04/inventario-64.webp",
+            "bytes": 2170
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-04/inventario-128.webp",
+            "bytes": 5704
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-04/inventario-256.webp",
+            "bytes": 15512
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-04/inventario-512.webp",
+            "bytes": 40962
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -27157,18 +29055,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Panal de abeja gigante (Apis dorsata)",
+        "classification": "Arquitectura de himenópteros",
+        "material": "Cera",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Panal único expuesto bajo rama.",
+        "science": "Las colonias suelen formar un solo panal abierto de gran tamaño.",
+        "history": "Registro concreto por datar.",
+        "status": "pendiente",
+        "acquisition": "Observación a distancia, modelo o sección de gabinete.",
+        "note": "Mostrar la geometría en reproducción.",
+        "source": "https://www.fao.org/4/i0842e/i0842e00.htm",
+        "species": null,
+        "association": "Observación a distancia de ramas expuestas."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
-        "source": ""
+        "evidence": "Registro concreto por datar.",
+        "source": "https://www.fao.org/4/i0842e/i0842e00.htm"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-05/clasica-64.webp",
+            "bytes": 1930
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-05/clasica-128.webp",
+            "bytes": 5720
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-05/clasica-256.webp",
+            "bytes": 18584
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-05/clasica-512.webp",
+            "bytes": 61284
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-05/inventario-64.webp",
+            "bytes": 2158
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-05/inventario-128.webp",
+            "bytes": 6088
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-05/inventario-256.webp",
+            "bytes": 17398
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-05/inventario-512.webp",
+            "bytes": 51114
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -27190,18 +29138,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Dique de castor (Castor canadensis)",
+        "classification": "Arquitectura de mamíferos",
+        "material": "Ramas, lodo y piedras",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Entramado de ramas sellado con barro.",
+        "science": "El dique retiene agua; la madriguera o refugio es una construcción distinta.",
+        "history": "Registro concreto por datar.",
+        "status": "pendiente",
+        "acquisition": "Observación a distancia, modelo o sección de gabinete.",
+        "note": "Sección simplificada sin paisaje.",
+        "source": "https://www.nps.gov/subjects/beavers/index.htm",
+        "species": {
+          "id": "na_esp_castor_canadensis",
+          "name": "Castor canadiense",
+          "latin": "Castor canadensis"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
-        "source": ""
+        "evidence": "Registro concreto por datar.",
+        "source": "https://www.nps.gov/subjects/beavers/index.htm"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-06/clasica-64.webp",
+            "bytes": 2372
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-06/clasica-128.webp",
+            "bytes": 6574
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-06/clasica-256.webp",
+            "bytes": 19704
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-06/clasica-512.webp",
+            "bytes": 67518
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-06/inventario-64.webp",
+            "bytes": 2584
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-06/inventario-128.webp",
+            "bytes": 6994
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-06/inventario-256.webp",
+            "bytes": 18476
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-06/inventario-512.webp",
+            "bytes": 55522
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -27223,18 +29225,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Pérgola de ave jardinera satinada (Ptilonorhynchus violaceus)",
+        "classification": "Arquitectura aviar de cortejo",
+        "material": "Ramillas y objetos del entorno",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Dos hileras de ramas y objetos azules.",
+        "science": "El macho construye la avenida para exhibición de cortejo.",
+        "history": "Registro concreto por datar.",
+        "status": "pendiente",
+        "acquisition": "Observación a distancia, modelo o sección de gabinete.",
+        "note": "Modelo centrado en la avenida.",
+        "source": "https://australian.museum/learn/animals/birds/satin-bowerbird/",
+        "species": {
+          "id": "oc_esp_ptilonorhynchus_violaceus",
+          "name": "Ave jardinera satinada",
+          "latin": "Ptilonorhynchus violaceus"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
-        "source": ""
+        "evidence": "Registro concreto por datar.",
+        "source": "https://australian.museum/learn/animals/birds/satin-bowerbird/"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-07/clasica-64.webp",
+            "bytes": 3382
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-07/clasica-128.webp",
+            "bytes": 9846
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-07/clasica-256.webp",
+            "bytes": 32248
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-07/clasica-512.webp",
+            "bytes": 108314
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-07/inventario-64.webp",
+            "bytes": 3596
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-07/inventario-128.webp",
+            "bytes": 11098
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-07/inventario-256.webp",
+            "bytes": 32290
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-07/inventario-512.webp",
+            "bytes": 103618
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -27256,18 +29312,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Nido de pájaro sastre (Orthotomus sutorius)",
+        "classification": "Arquitectura aviar",
+        "material": "Hojas y fibras",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Hoja curvada con bordes perforados y unidos.",
+        "science": "La hoja cosida sostiene la taza de fibras.",
+        "history": "Registro concreto por datar.",
+        "status": "pendiente",
+        "acquisition": "Observación a distancia, modelo o sección de gabinete.",
+        "note": "Cotejar costuras y no exagerar su número.",
+        "source": "https://www.nparks.gov.sg/florafaunaweb/fauna/5/6/565",
+        "species": null,
+        "association": "Observación de arbustos y bordes de bosque."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
-        "source": ""
+        "evidence": "Registro concreto por datar.",
+        "source": "https://www.nparks.gov.sg/florafaunaweb/fauna/5/6/565"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-08/clasica-64.webp",
+            "bytes": 2448
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-08/clasica-128.webp",
+            "bytes": 6138
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-08/clasica-256.webp",
+            "bytes": 16902
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-08/clasica-512.webp",
+            "bytes": 48160
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-08/inventario-64.webp",
+            "bytes": 2562
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-08/inventario-128.webp",
+            "bytes": 6504
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-08/inventario-256.webp",
+            "bytes": 14910
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-08/inventario-512.webp",
+            "bytes": 35284
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -27289,18 +29395,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Termitero tipo catedral",
+        "classification": "Arquitectura de isópteros",
+        "material": "Tierra aglomerada y materia orgánica",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Pináculos y contrafuertes de tierra.",
+        "science": "La forma externa depende del taxón y del microclima.",
+        "history": "Registro concreto por datar.",
+        "status": "pendiente",
+        "acquisition": "Observación a distancia, modelo o sección de gabinete.",
+        "note": "Atribución taxonómica pendiente.",
+        "source": "https://australian.museum/learn/animals/insects/termites/",
+        "species": null,
+        "association": "Estudio de suelos de sabana."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
-        "source": ""
+        "evidence": "Registro concreto por datar.",
+        "source": "https://australian.museum/learn/animals/insects/termites/"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-09/clasica-64.webp",
+            "bytes": 1984
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-09/clasica-128.webp",
+            "bytes": 5150
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-09/clasica-256.webp",
+            "bytes": 15080
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-09/clasica-512.webp",
+            "bytes": 45936
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-09/inventario-64.webp",
+            "bytes": 2066
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-09/inventario-128.webp",
+            "bytes": 5342
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-09/inventario-256.webp",
+            "bytes": 13284
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-09/inventario-512.webp",
+            "bytes": 35222
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -27322,18 +29478,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Rueda de seda dorada (Trichonephila sp.)",
+        "classification": "Arquitectura de arácnidos",
+        "material": "Seda",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Radios y espiral entre soportes.",
+        "science": "En algunas tejedoras la seda refleja tonos dorados.",
+        "history": "Registro concreto por datar.",
+        "status": "pendiente",
+        "acquisition": "Observación a distancia, modelo o sección de gabinete.",
+        "note": "Modelo de trama; especie no comprobada.",
+        "source": "https://australian.museum/learn/animals/spiders/golden-orb-weaving-spiders/",
+        "species": null,
+        "association": "Documentación de telas de bosque en Madagascar."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
-        "source": ""
+        "evidence": "Registro concreto por datar.",
+        "source": "https://australian.museum/learn/animals/spiders/golden-orb-weaving-spiders/"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-10/clasica-64.webp",
+            "bytes": 3426
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-10/clasica-128.webp",
+            "bytes": 10242
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-10/clasica-256.webp",
+            "bytes": 32692
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-10/clasica-512.webp",
+            "bytes": 99670
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-10/inventario-64.webp",
+            "bytes": 3710
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-10/inventario-128.webp",
+            "bytes": 11084
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-10/inventario-256.webp",
+            "bytes": 33884
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-10/inventario-512.webp",
+            "bytes": 97884
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -27355,18 +29561,68 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Estuche larval de tricóptero",
+        "classification": "Arquitectura de insectos acuáticos",
+        "material": "Grava y seda",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Tubo portátil de granos unidos.",
+        "science": "Algunas larvas adhieren grava con seda para formar un estuche.",
+        "history": "Registro concreto por datar.",
+        "status": "pendiente",
+        "acquisition": "Observación a distancia, modelo o sección de gabinete.",
+        "note": "Modelo; especie no comprobada.",
+        "source": "https://www.nps.gov/romo/caddisflies.htm",
+        "species": null,
+        "association": "Investigación de arroyos alpinos y su fondo de grava."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
-        "source": ""
+        "evidence": "Registro concreto por datar.",
+        "source": "https://www.nps.gov/romo/caddisflies.htm"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-11/clasica-64.webp",
+            "bytes": 1510
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-11/clasica-128.webp",
+            "bytes": 3876
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-11/clasica-256.webp",
+            "bytes": 10744
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-11/clasica-512.webp",
+            "bytes": 31018
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-11/inventario-64.webp",
+            "bytes": 1672
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-11/inventario-128.webp",
+            "bytes": 4130
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-11/inventario-256.webp",
+            "bytes": 9214
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-11/inventario-512.webp",
+            "bytes": 21272
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -27388,18 +29644,72 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-10",
+      "natural": {
+        "identity": "Madriguera del perrito de las praderas de cola negra (Cynomys ludovicianus)",
+        "classification": "Arquitectura de mamíferos",
+        "material": "Terreno excavado",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Montículos y túneles comunicados.",
+        "science": "Entradas a distintas alturas pueden contribuir a la ventilación.",
+        "history": "Registro concreto por datar.",
+        "status": "pendiente",
+        "acquisition": "Observación a distancia, modelo o sección de gabinete.",
+        "note": "Corte museístico simplificado.",
+        "source": "https://www.nps.gov/badl/learn/nature/prairie-dogs.htm",
+        "species": {
+          "id": "na_esp_cynomys_ludovicianus",
+          "name": "Perrito de las praderas de cola negra",
+          "latin": "Cynomys ludovicianus"
+        },
+        "association": "Asociación documental por identificación o procedencia."
+      },
       "chronology": {
         "status": "Fecha pendiente de verificar",
-        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
-        "source": ""
+        "evidence": "Registro concreto por datar.",
+        "source": "https://www.nps.gov/badl/learn/nature/prairie-dogs.htm"
       },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-12/clasica-64.webp",
+            "bytes": 2232
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-12/clasica-128.webp",
+            "bytes": 6622
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-12/clasica-256.webp",
+            "bytes": 22362
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-12/clasica-512.webp",
+            "bytes": 76684
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARQ-12/inventario-64.webp",
+            "bytes": 2424
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARQ-12/inventario-128.webp",
+            "bytes": 7310
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARQ-12/inventario-256.webp",
+            "bytes": 20094
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARQ-12/inventario-512.webp",
+            "bytes": 56202
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,

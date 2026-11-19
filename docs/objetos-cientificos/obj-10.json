@@ -1,0 +1,154 @@
+{
+  "sheets": [
+    {
+      "file": "huevos-a.png",
+      "columns": 3,
+      "ids": [
+        "HUE-01",
+        "HUE-02",
+        "HUE-03",
+        "HUE-04",
+        "HUE-05",
+        "HUE-06"
+      ]
+    },
+    {
+      "file": "huevos-b.png",
+      "columns": 3,
+      "ids": [
+        "HUE-07",
+        "HUE-08",
+        "HUE-09",
+        "HUE-10",
+        "HUE-11",
+        null
+      ],
+      "crop": {
+        "rows": [
+          0,
+          512,
+          1024
+        ],
+        "edges": [
+          [
+            0,
+            512,
+            1024,
+            1536
+          ],
+          [
+            0,
+            512,
+            1024,
+            1536
+          ]
+        ],
+        "alpha": [
+          234,
+          251
+        ]
+      }
+    },
+    {
+      "file": "maravillas-a.png",
+      "columns": 3,
+      "ids": [
+        "MARV-01",
+        "MARV-02",
+        "MARV-03",
+        "MARV-04",
+        "MARV-05",
+        "MARV-06"
+      ]
+    },
+    {
+      "file": "maravillas-b.png",
+      "columns": 3,
+      "ids": [
+        "MARV-07",
+        "MARV-08",
+        "MARV-09",
+        "MARV-10",
+        "MARV-11",
+        "MARV-12"
+      ],
+      "crop": {
+        "rows": [
+          0,
+          500,
+          1024
+        ],
+        "edges": [
+          [
+            0,
+            512,
+            1024,
+            1536
+          ],
+          [
+            0,
+            512,
+            1024,
+            1536
+          ]
+        ]
+      }
+    },
+    {
+      "file": "arquitecturas-a.png",
+      "columns": 3,
+      "ids": [
+        "ARQ-02",
+        "ARQ-03",
+        "ARQ-04",
+        "ARQ-05",
+        "ARQ-06",
+        "ARQ-07"
+      ]
+    },
+    {
+      "file": "arquitecturas-b.png",
+      "columns": 3,
+      "ids": [
+        "ARQ-08",
+        "ARQ-09",
+        "ARQ-10",
+        "ARQ-11",
+        "ARQ-12",
+        null
+      ],
+      "crop": {
+        "rows": [
+          0,
+          512,
+          1024
+        ],
+        "edges": [
+          [
+            0,
+            512,
+            1024,
+            1536
+          ],
+          [
+            0,
+            512,
+            1024,
+            1536
+          ]
+        ],
+        "alpha": [
+          77,
+          248
+        ]
+      }
+    }
+  ],
+  "collections": [
+    "HUE",
+    "FOS",
+    "INS",
+    "MARV",
+    "ARQ"
+  ]
+}

@@ -124,11 +124,26 @@ progress { accent-color: #4c755a; margin: .4rem 0 .8rem; }
 @media (max-width: 660px) { .fossil-layout { grid-template-columns: 1fr; } }
 .masthead a { color: inherit; }
 .fossil-workbench + button { margin-top: .65rem; }
-.botany-section,.geology-section,.oceanography-section,.history-section { margin-block:1.2rem; }
+.botany-section,.geology-section,.oceanography-section,.history-section,.natural-section { margin-block:1.2rem; }
 .botany-grid { display:grid; gap:.7rem; grid-template-columns:repeat(auto-fit,minmax(min(100%,255px),1fr)); }
-.botany-card h3,.geology-card h3,.oceanography-card h3,.history-card h3 { margin-bottom:.25rem; }
+.botany-card h3,.geology-card h3,.oceanography-card h3,.history-card h3,.natural-card h3 { margin-bottom:.25rem; }
 .botany-samples {
   display:grid; grid-auto-flow:column; grid-auto-columns:minmax(calc(var(--size) + 10px),1fr);
   gap:.45rem; overflow-x:auto; margin:.55rem 0;
 }
 .botany-samples .stage { padding-inline:0; }
+
+.egg-comparator { --egg-ruler-length: min(210px, 65vw); }
+.egg-comparator .botany-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr)); }
+.egg-ruler {
+  display: flex;
+  justify-content: space-between;
+  width: var(--egg-ruler-length);
+  max-width: 100%;
+  border-bottom: 2px solid currentColor;
+  font-variant-numeric: tabular-nums;
+}
+.egg-ruler span { position: relative; text-align: center; width: 0; display: grid; justify-content: center; padding-bottom: .4rem; }
+.egg-ruler span::after { position: absolute; bottom: 0; left: 0; height: .3rem; border-inline-start: 1px solid currentColor; content: ''; }
+.egg-proportional .stage { min-height: calc(var(--egg-ruler-length) / .89 + .75rem); }
+.egg-proportional .stage img { width: min(calc(var(--egg-ruler-length) * var(--egg-ratio)), 100%); }

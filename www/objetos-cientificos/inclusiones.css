@@ -106,3 +106,9 @@
 .history-timeline button { flex:none; white-space:nowrap; }
 .history-timeline button[aria-pressed="true"] { color:#fff6df; background:#305243; border-color:#305243; }
 .history-status { font-weight:600; }
+
+.grand-progress { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%, 300px),1fr)); gap: .8rem; }
+.grand-summary { border: 1px solid var(--line); border-radius: .3rem; padding: .75rem; margin-block-end: .8rem; }
+.grand-summary .progress-row { grid-template-columns: minmax(0,2fr) minmax(4rem,1fr) auto; margin-block: .45rem; }
+.rarity-summary { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; padding-inline-start: 1.2rem; }
+.collection-complete { border-inline-start: .2rem solid currentColor; padding-inline-start: .65rem; font-weight: 700; }
