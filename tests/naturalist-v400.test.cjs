@@ -51,7 +51,7 @@ test('catalog is read from the production runtime and only known records can be 
     Cetáceos: 28, Pinnípedos: 20, Sirenios: 2, 'Nutria marina': 1,
     Rapaces: 49, 'Marinas y costeras': 42, 'Ribereñas y humedales': 50,
     'Corredoras y paleognatas': 9, Galliformes: 24, 'Otras aves terrestres': 6,
-    'Arborícolas y otros no paseriformes': 62, Paseriformes: 1, Anfibios: 1
+    'Arborícolas y otros no paseriformes': 62, Paseriformes: 45, Anfibios: 1
   });
 });
 
@@ -157,7 +157,7 @@ test('terrestrial Carnivora covers the nine present families with only the confi
   assert.ok(records.some(sp => sp.id === 'sa_esp_lontra_felina'));
   assert.ok(!records.some(sp => sp.latin.startsWith('Enhydra ')));
   assert.equal(catalog.migrationProgress.total, 998);
-  assert.equal(catalog.migrationProgress.target, 1221);
+  assert.equal(catalog.migrationProgress.target, 1311);
 });
 
 test('biome library and transparent editions use module-specific layers and existing category routes', () => {
@@ -196,7 +196,7 @@ test('lab preserves the originals and reserves comparison downloads for the revi
   const archived = new Set(catalog.flatMap(sp => sp.records.flatMap(record => record.previous ? [record.previous.src] : [])));
   assert.equal(archived.size, 341);
   assert.equal(plates.size, migrationProgress.plates);
-  assert.equal(migrationProgress.migrated, 705);
+  assert.equal(migrationProgress.migrated, 749);
   assert.equal(migrationProgress.classical, migrationProgress.target);
   assert.equal(migrationProgress.plates, migrationProgress.target);
   assert.equal(migrationProgress.cutouts, Object.keys(cutouts).length);
@@ -289,7 +289,9 @@ test('bird routes match the released inventories, with distinct dimorphism and C
   const terrestrialIds = new Set(terrestrial.map(sp => sp.id));
   const arboreal = plan.editions['4.7.3'].inventory;
   const arborealIds = new Set(arboreal.map(sp => sp.id));
-  const released = new Set([...plan.editions['4.7.0'].inventory, ...aquatic, ...terrestrial, ...arboreal].map(sp => sp.id));
+  const passerines = plan.editions['4.7.4'].inventory;
+  const passerineIds = new Set(passerines.map(sp => sp.id));
+  const released = new Set(assigned.map(sp => sp.id));
   const { routes, cutouts, landscapes, bestiaryHabitats } = globalThis.AtlasNaturalistAssets;
   const cat = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') +
     '\n({catalog,birdComparisons,migrationProgress});');
@@ -300,16 +302,15 @@ test('bird routes match the released inventories, with distinct dimorphism and C
     assert.equal(sp.dimorphism, Boolean(game.SEXUAL_DIMORPHISM[sp.id]));
     assert.deepEqual(sp.pigmentation, [...game.configuredSpecials(game.SPECIES[sp.id])]
       .filter(label => ['Albino', 'Melánico'].includes(label)));
-    if (!released.has(sp.id)) {
-      assert.equal(routes[sp.id], undefined, sp.id);
-      continue;
-    }
     const entry = cat.catalog.find(item => item.id === sp.id);
     assert.equal(entry.order, sp.order);
     assert.equal(entry.family, sp.family);
     if (arborealIds.has(sp.id)) {
       assert.equal(entry.group, sp.order === 'Passeriformes' ? 'Paseriformes' : 'Arborícolas y otros no paseriformes');
       assert.equal(entry.edition, '4.7.3');
+    } else if (passerineIds.has(sp.id)) {
+      assert.equal(entry.group, 'Paseriformes');
+      assert.equal(entry.edition, '4.7.4');
     } else if (terrestrialIds.has(sp.id)) {
       if (sp.order === 'Galliformes') assert.equal(entry.group, 'Galliformes');
       else assert.ok(['Corredoras y paleognatas', 'Otras aves terrestres'].includes(entry.group));
@@ -326,8 +327,8 @@ test('bird routes match the released inventories, with distinct dimorphism and C
     }
   }
   assert.equal(cat.migrationProgress.birds, 287);
-  assert.equal(cat.migrationProgress.birdsMigrated, 243);
-  assert.equal(cat.migrationProgress.biological, 531);
+  assert.equal(cat.migrationProgress.birdsMigrated, 287);
+  assert.equal(cat.migrationProgress.biological, 577);
   assert.equal(cat.migrationProgress.legendary, 7);
   for (const [wave, count] of [['Marinas y costeras', 50], ['Ribereñas y humedales', 94]]) {
     const files = aquatic.filter(sp => sp.wave === wave).flatMap(sp => Object.values(routes[sp.id]));
@@ -343,9 +344,16 @@ test('bird routes match the released inventories, with distinct dimorphism and C
   assert.equal(arboreal.filter(sp => sp.dimorphism).length, 4);
   assert.equal([...arborealFiles].filter(file => file.endsWith('--albino.webp')).length, 15);
   assert.equal([...arborealFiles].filter(file => file.endsWith('--melanico.webp')).length, 7);
-  assert.equal(plan.editions['4.7.4'].inventory.length, 44);
+  assert.equal(passerines.length, 44);
+  assert.equal(new Set(passerines.map(sp => sp.family)).size, 26);
+  const passerineFiles = new Set(passerines.flatMap(sp => Object.values(routes[sp.id])));
+  assert.equal(passerineFiles.size, 90);
+  assert.equal(passerines.filter(sp => sp.dimorphism).length, 12);
+  assert.equal([...passerineFiles].filter(file => file.endsWith('--albino.webp')).length, 9);
+  assert.equal([...passerineFiles].filter(file => file.endsWith('--melanico.webp')).length, 13);
+  assert.equal(new Set(assigned.flatMap(sp => Object.values(routes[sp.id]))).size, 496);
   assert.ok(arborealIds.has('sa_esp_scelorchilus_rubecula'));
-  assert.ok(!plan.editions['4.7.4'].inventory.some(sp => sp.id === 'sa_esp_scelorchilus_rubecula'));
+  assert.ok(!passerineIds.has('sa_esp_scelorchilus_rubecula'));
   assert.deepEqual(routes.sa_esp_brachycephalus_pulex, { normal: 'sa_esp_brachycephalus_pulex--normal.webp' });
   const aquaticIds = new Set(aquatic.map(sp => sp.id));
   for (const [id, habitat] of Object.entries(bestiaryHabitats)) {
@@ -364,10 +372,26 @@ test('bird routes match the released inventories, with distinct dimorphism and C
   assert.equal(new Set([condor.normal, condor.male, condor.female]).size, 3);
   assert.notDeepEqual(fs.readFileSync('www/naturalist-art/plates/' + condor.male),
     fs.readFileSync('www/naturalist-art/plates/' + condor.female));
-  assert.equal(Object.keys(cat.birdComparisons).length, 51);
+  assert.equal(Object.keys(cat.birdComparisons).length, 62);
   for (const set of Object.values(cat.birdComparisons)) {
     assert.ok(set.birds.length >= 2 && set.birds.every(bird => released.has(bird.id) && bird.trait));
+    for (const { id, plateKey } of set.birds) {
+      if (plateKey) assert.ok(routes[id][plateKey], id + ' · ' + plateKey);
+    }
   }
+});
+
+test('the herpetology inventory matches live identities and only the flea toad already has a plate', () => {
+  const audit = JSON.parse(execFileSync(process.execPath, ['scripts/audit-scientific-catalog.cjs', '--herpetology'], { encoding: 'utf8' }));
+  const committed = require('../docs/cientifica-v474/inventario-herpetologia.json');
+  assert.deepEqual(audit, committed);
+  assert.equal(audit.summary.species, 139);
+  assert.deepEqual(Object.values(audit.editions).map(lot => [lot.species, lot.estimatedPlates]), [[78, 128], [26, 46], [35, 51]]);
+  assert.deepEqual(audit.editions['4.8.0'].legendary.sort(), ['Basalto', 'Seda']);
+  assert.deepEqual(audit.editions['4.8.1'].legendary.sort(), ['Junco', 'Áncora'].sort());
+  assert.equal(audit.summary.dimorphicSpecies, 0);
+  assert.deepEqual(audit.summary.alreadyMigrated, ['sa_esp_brachycephalus_pulex']);
+  assert.deepEqual(audit.southAmericanRegions.filter(region => region.hasFleaToad).map(region => region.id), ['sa_cerrado_brasileno']);
 });
 
 test('the V4.7.3 records keep the existing chucao identity, prior saves and region requirements', () => {

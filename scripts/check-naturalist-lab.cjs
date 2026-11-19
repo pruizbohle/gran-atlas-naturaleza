@@ -6,6 +6,7 @@ const path = require('node:path');
 const http = require('node:http');
 const vm = require('node:vm');
 const { chromium } = require('playwright');
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v474';
 require('../www/js/naturalist-assets-v400.js');
 const expected = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') +
   '\n({catalog,migrationProgress});');
@@ -53,7 +54,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#category').selectOption('Notable');
       await page.locator('.mixed-field .atlas-art-image').evaluate(img => img.decode());
       assert.equal(await page.locator('.mixed-field .field-animal-sprite > svg').count(), 1);
-      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Mirlo común · SVG/);
+      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Lución europeo · SVG/);
       const art = page.locator('.mixed-field .plate');
       const image = art.locator('.atlas-art-image');
       const src = await image.getAttribute('src');
@@ -84,7 +85,10 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 705);
+      assert.equal(await page.locator('.gallery-card').count(), 749);
+      await page.locator('#release-scope').selectOption('4.7.4');
+      assert.equal(await page.locator('.gallery-card').count(), 44);
+      assert.equal(await page.locator('.gallery-card[data-species="sa_esp_scelorchilus_rubecula"]').count(), 0);
       await page.locator('#release-scope').selectOption('4.7.3');
       assert.equal(await page.locator('.gallery-card').count(), 64);
       await page.locator('#release-scope').selectOption('catalog');
@@ -98,6 +102,25 @@ const server = http.createServer((req, res) => {
       await page.locator('.comparison-styles img').evaluate(img => img.decode());
       await page.locator('#release-scope').selectOption('');
       await page.locator('[data-mode=birds]').click();
+      await page.locator('#bird-set').selectOption('passerine-tits');
+      await page.locator('#comparison-size').selectOption('64');
+      assert.deepEqual(await page.locator('.bird-comparison img').evaluateAll(imgs => Promise.all(imgs.map(async img => {
+        await img.decode();
+        return img.naturalWidth;
+      }))), [64, 64]);
+      await page.locator('#bird-set').selectOption('paradise-dimorphism');
+      await page.locator('#comparison-size').selectOption('128');
+      const sexes = page.locator('.bird-comparison img');
+      const sources = await sexes.evaluateAll(imgs => Promise.all(imgs.map(async img => {
+        await img.decode();
+        return img.getAttribute('src');
+      })));
+      assert.equal(sources.length, 6);
+      assert.deepEqual(sources.map(src => src.match(/\/128\/[^/]+--(male|female)\.webp$/)[1]),
+        ['male', 'female', 'male', 'female', 'male', 'female']);
+      if (process.argv.includes('--write-evidence')) {
+        await page.locator('.bird-comparison').screenshot({ path: evidenceDir + '/dimorfismo-aves-del-paraiso-' + viewport.width + '.jpg' });
+      }
       await page.locator('#bird-set').selectOption('asian-hornbills');
       await page.locator('#comparison-size').selectOption('128');
       await page.locator('#backdrop').selectOption('dark');
@@ -108,7 +131,7 @@ const server = http.createServer((req, res) => {
       if (process.argv.includes('--write-evidence')) {
         await page.locator('#comparison-size').selectOption('256');
         await hornbills.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
-        await page.locator('.bird-comparison').screenshot({ path: 'docs/cientifica-v473/comparacion-calaos-' + viewport.width + '.jpg' });
+        await page.locator('.bird-comparison').screenshot({ path: evidenceDir + '/comparacion-calaos-' + viewport.width + '.jpg' });
       }
       await page.locator('#bird-set').selectOption('hummingbirds');
       await page.locator('#comparison-size').selectOption('64');
@@ -145,7 +168,7 @@ const server = http.createServer((req, res) => {
       if (process.argv.includes('--write-evidence')) {
         await page.locator('#comparison-size').selectOption('256');
         await peafowl.evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
-        await page.locator('.variants').screenshot({ path: 'docs/cientifica-v473/pavo-real-' + viewport.width + '.jpg' });
+        await page.locator('.variants').screenshot({ path: evidenceDir + '/pavo-real-' + viewport.width + '.jpg' });
       }
       await page.locator('#variant-view').selectOption('all');
       await page.locator('#comparison-halo').selectOption('Normal');
@@ -159,7 +182,7 @@ const server = http.createServer((req, res) => {
       if (process.argv.includes('--write-evidence')) {
         await page.locator('#comparison-size').selectOption('256');
         await kiwiCards.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
-        await page.locator('.bird-comparison').screenshot({ path: 'docs/cientifica-v473/comparacion-kiwis-' + viewport.width + '.jpg' });
+        await page.locator('.bird-comparison').screenshot({ path: evidenceDir + '/comparacion-kiwis-' + viewport.width + '.jpg' });
       }
       await page.locator('#bird-set').selectOption('turkeys');
       await page.locator('#comparison-size').selectOption('128');
@@ -185,7 +208,7 @@ const server = http.createServer((req, res) => {
       await shoveler.evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
       assert.deepEqual(await shoveler.evaluateAll(imgs => imgs.map(img => img.naturalWidth)), [128, 128, 128, 128]);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.variants').screenshot({ path: 'docs/cientifica-v473/pato-cuchara-' + viewport.width + '.jpg' });
+        await page.locator('.variants').screenshot({ path: evidenceDir + '/pato-cuchara-' + viewport.width + '.jpg' });
       }
       await page.locator('[data-mode=gallery]').click();
       await page.locator('#group').selectOption('Rapaces');
@@ -217,7 +240,7 @@ const server = http.createServer((req, res) => {
       if (process.argv.includes('--write-evidence')) {
         await page.locator('#comparison-size').selectOption('256');
         await penguinCards.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
-        await page.locator('.bird-comparison').screenshot({ path: 'docs/cientifica-v473/comparacion-pinguinos-' + viewport.width + '.jpg' });
+        await page.locator('.bird-comparison').screenshot({ path: evidenceDir + '/comparacion-pinguinos-' + viewport.width + '.jpg' });
       }
       await page.locator('#bird-set').selectOption('horned-owls');
       await page.locator('#comparison-size').selectOption('64');
@@ -230,7 +253,7 @@ const server = http.createServer((req, res) => {
       await owlCards.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), viewport.width);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.bird-comparison').screenshot({ path: 'docs/cientifica-v473/comparacion-buhos-' + viewport.width + '.jpg' });
+        await page.locator('.bird-comparison').screenshot({ path: evidenceDir + '/comparacion-buhos-' + viewport.width + '.jpg' });
       }
       await page.locator('#backdrop').selectOption('light');
       await page.locator('[data-mode=gallery]').click();
@@ -292,7 +315,7 @@ const server = http.createServer((req, res) => {
       await page.locator('.comparison-styles img').evaluate(image => image.decode());
       assert.equal(await page.locator('.legacy-sprite svg').count(), 1);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v473/comparacion-inia-' + viewport.width + '.jpg' });
+        await page.locator('.comparison-styles').screenshot({ path: evidenceDir + '/comparacion-inia-' + viewport.width + '.jpg' });
       }
       await page.locator('[data-mode=bestiary]').click();
       await page.locator('.bestiary-entry .landscape-rio').evaluate(image => image.decode());
@@ -319,7 +342,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#backdrop').selectOption('dark');
       assert.notEqual(await comparison.evaluate(node => getComputedStyle(node).backgroundColor), light);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v473/comparacion-' + viewport.width + '.jpg' });
+        await page.locator('.comparison-styles').screenshot({ path: evidenceDir + '/comparacion-' + viewport.width + '.jpg' });
       }
       await page.locator('#search').fill('');
       await page.locator('[data-mode=frames]').click();
@@ -365,7 +388,7 @@ const server = http.createServer((req, res) => {
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 705);
+      assert.equal(await page.locator('.gallery-card').count(), 749);
       await page.locator('#cut-state').selectOption('pending');
       assert.equal(await page.locator('.gallery-card').count(),
         expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);

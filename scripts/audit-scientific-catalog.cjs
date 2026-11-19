@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const { harness } = require('../tests/helpers/live-game.cjs');
 const { aquaticMammal } = require('./terrestrial-mammal-families.cjs');
+const herpetology = require('./herpetology-taxonomy.cjs');
 const art = require('../www/js/naturalist-art-v400.js');
 
 const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'gm07-a04/catalog', 'app'];
@@ -28,8 +29,101 @@ function members(className) {
   return Object.entries(game.SPECIES).filter(([id]) => game.taxonomyInfo(id).className === className);
 }
 
+function birdCoverage() {
+  require('../www/js/naturalist-assets-v400.js');
+  const { files, routes, cutouts } = globalThis.AtlasNaturalistAssets;
+  const precached = new Set(files);
+  const assigned = Object.entries(require('../docs/cientifica-v460/inventario-aves.json').editions)
+    .flatMap(([edition, lot]) => lot.inventory.map(bird => [bird.id, { ...bird, edition }]));
+  const inventory = new Map(assigned);
+  const birds = members('Aves').map(([id, species]) => {
+    const actual = describe(id, species);
+    const plan = inventory.get(id);
+    assert.ok(plan, id + ' · sin lote o familia');
+    for (const key of ['id', 'latin', 'name', 'dimorphism', 'pigmentation', 'legendary']) {
+      assert.deepEqual(JSON.stringify(actual[key]), JSON.stringify(plan[key]), id + ' · ' + key);
+    }
+    const keys = ['normal', ...actual.pigmentation.map(label => pigments[label])];
+    if (actual.dimorphism) keys.push('male', 'female');
+    if (actual.legendary) keys.push('legendario');
+    assert.deepEqual(Object.keys(routes[id] || {}).sort(), keys.sort(), id + ' · rutas vigentes');
+    for (const key of keys) {
+      const file = routes[id][key];
+      const stem = key === 'legendario' ? actual.legendary.id : key;
+      assert.equal(file, id + '--' + stem + '.webp');
+      assert.equal(cutouts[file], true);
+      for (const [surface, size] of [['field', 128], ['journal', 256], ['bestiary', 256], ['museum', 512], ['field', 64]]) {
+        const plate = 'plates/' + (size === 512 ? '' : size + '/') + file;
+        const resource = 'naturalist-art/' + plate;
+        assert.ok(precached.has(resource) && fs.existsSync('www/' + resource), id + ' · fuera de caché');
+        const markup = art.render(id, { variant: key, surface, size }, () => '');
+        assert.ok(markup.includes('atlas-art-cutout') && markup.includes(plate), id + ' · ' + surface);
+      }
+    }
+    return { ...plan, routes: routes[id] };
+  }).sort((a, b) => a.latin.localeCompare(b.latin, 'en'));
+  assert.equal(birds.length, assigned.length);
+  const summary = { birds: birds.length, migrated: birds.length, pending: 0,
+    families: new Set(birds.map(bird => bird.family)).size,
+    albino: birds.filter(bird => bird.pigmentation.includes('Albino')).length,
+    melanic: birds.filter(bird => bird.pigmentation.includes('Melánico')).length,
+    dimorphicSpecies: birds.filter(bird => bird.dimorphism).length,
+    plates: birds.reduce((sum, bird) => sum + Object.keys(bird.routes).length, 0),
+    legendary: birds.flatMap(bird => bird.legendary ? [bird.legendary.name] : []) };
+  return { version: require('../package.json').version, summary, birds };
+}
+
+function herpetologyPlan() {
+  require('../www/js/naturalist-assets-v400.js');
+  const { routes } = globalThis.AtlasNaturalistAssets;
+  const editions = {
+    '4.8.0': { title: 'Serpientes y lagartos', inventory: [] },
+    '4.8.1': { title: 'Tortugas, crocodilianos y otros reptiles', inventory: [] },
+    '4.8.2': { title: 'Anfibios', inventory: [] }
+  };
+  const records = Object.entries(game.SPECIES).flatMap(([id, species]) => {
+    const taxon = herpetology(species.latin);
+    const taxonomy = game.taxonomyInfo(id);
+    if (!taxon && !['Reptilia', 'Amphibia'].includes(taxonomy.className)) return [];
+    assert.equal(taxon?.className, taxonomy.className, id + ' · clase zoológica no conciliada');
+    const { edition, ...classification } = taxon;
+    const entry = describe(id, species);
+    const expected = ['normal', ...entry.pigmentation.map(label => pigments[label])];
+    if (entry.dimorphism) expected.push('male', 'female');
+    if (entry.legendary) expected.push('legendario');
+    const existing = routes[id] || {};
+    assert.ok(Object.keys(existing).every(key => expected.includes(key)), id + ' · ruta fuera del inventario');
+    const pendingPlates = expected.filter(key => !existing[key]).map(key =>
+      id + '--' + (key === 'legendario' ? entry.legendary.id : key) + '.webp');
+    return [{ ...entry, ...classification, edition, configuredSpecimens: [...game.configuredSpecials(species)],
+      existingRoutes: existing, pendingPlates }];
+  }).sort((a, b) => a.latin.localeCompare(b.latin, 'en'));
+  for (const { edition, ...entry } of records) editions[edition].inventory.push(entry);
+  const summarize = inventory => ({
+    species: inventory.length,
+    groups: Object.fromEntries([...new Set(inventory.map(sp => sp.group))].sort().map(group =>
+      [group, inventory.filter(sp => sp.group === group).length])),
+    families: [...new Set(inventory.map(sp => sp.family))].sort(),
+    albino: inventory.filter(sp => sp.pigmentation.includes('Albino')).length,
+    melanic: inventory.filter(sp => sp.pigmentation.includes('Melánico')).length,
+    dimorphicSpecies: inventory.filter(sp => sp.dimorphism).length,
+    legendary: inventory.flatMap(sp => sp.legendary ? [sp.legendary.name] : []),
+    alreadyMigrated: inventory.filter(sp => sp.existingRoutes.normal).map(sp => sp.id),
+    estimatedPlates: inventory.reduce((sum, sp) => sum + sp.pendingPlates.length, 0)
+  });
+  const geography = game.REGIONS.filter(region => region.continent === 'Sudamérica')
+    .map(({ id, name, habitats, species }) => ({ id, name, habitats, hasFleaToad: species.includes('sa_esp_brachycephalus_pulex') }));
+  return { version: require('../package.json').version, summary: summarize(records),
+    editions: Object.fromEntries(Object.entries(editions).map(([edition, { title, inventory }]) =>
+      [edition, { title, ...summarize(inventory), inventory }])), southAmericanRegions: geography };
+}
+
 if (process.argv.includes('--birds')) {
   console.log(JSON.stringify(members('Aves').map(([id, sp]) => describe(id, sp)), null, 2));
+} else if (process.argv.includes('--bird-coverage')) {
+  console.log(JSON.stringify(birdCoverage(), null, 2));
+} else if (process.argv.includes('--herpetology')) {
+  console.log(JSON.stringify(herpetologyPlan(), null, 2));
 } else {
   const { catalog, migrationProgress } = vm.runInNewContext(
     fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog,migrationProgress});');

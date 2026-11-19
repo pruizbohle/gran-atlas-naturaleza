@@ -5,9 +5,10 @@ const path = require('node:path');
 const http = require('node:http');
 const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v474';
 const { harness } = require('../tests/helpers/live-game.cjs');
 
-const baseline = process.env.ATLAS_BASELINE || '89c8c6ba852cf1f8a43b5af00e644ecacb357ec2';
+const baseline = process.env.ATLAS_BASELINE || '31951d3b4cd2c3a143cb7bc601a0e0ccf52ffd38';
 const baselineWeb = process.env.ATLAS_BASELINE_WWW;
 const version = require('../package.json').version;
 const versionSlug = version.replaceAll('.', '');
@@ -50,7 +51,7 @@ async function run() {
   const url = 'http://127.0.0.1:' + server.address().port + '/';
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
   const id = 'nutria_europea';
-  const id2 = 'eu_esp_0628';
+  const id2 = 'eu_esp_0660';
   const regions = harness().window.__atlasTest.REGIONS;
   const { records } = require('../www/js/gm07-a04/catalog.js');
   const catalogSource = ['gm06/catalog', 'gm07-a04/catalog', 'app']
@@ -155,7 +156,7 @@ async function run() {
       await updated.locator('[data-action=set-time][data-id=amanecer]').click();
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v473/campo-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: evidenceDir + '/campo-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
 
@@ -183,7 +184,7 @@ async function run() {
       await journal.evaluate(img => img.decode());
       assert.equal(await updated.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
       if (process.argv.includes('--write-evidence')) {
-        await updated.screenshot({ path: 'docs/cientifica-v473/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
+        await updated.screenshot({ path: evidenceDir + '/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
       }
 
       // Exercise the real automatic timer while deterministic rolls select a single repeatable WebP.
@@ -370,7 +371,7 @@ async function run() {
       await loggedDolphin.evaluate(img => img.decode());
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v473/inia-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: evidenceDir + '/inia-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
       await openTab(updated, 'bestiary');
@@ -413,7 +414,7 @@ async function run() {
       await updated.locator('.field-environment .landscape-montana').evaluate(img => img.decode());
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v473/centinela-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: evidenceDir + '/centinela-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
       await openTab(updated, 'journal');
@@ -439,7 +440,7 @@ async function run() {
       await updated.locator('.field-environment .landscape-costa').evaluate(img => img.decode());
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v473/frailecillo-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: evidenceDir + '/frailecillo-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
 
@@ -510,7 +511,7 @@ async function run() {
       await updated.locator('.field-environment .landscape-pradera').evaluate(img => img.decode());
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v473/avestruz-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: evidenceDir + '/avestruz-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
       const ostrichPlate = 'img[src$="/af_avestruz--normal.webp"]';
@@ -552,6 +553,61 @@ async function run() {
       await partridge.evaluate(img => img.decode());
       const terrestrialAutoRepeatMs = Math.round(performance.now() - terrestrialAutoStart);
 
+      const chaffinch = 'eu_esp_0629';
+      await updated.evaluate(({ id, regionSpecies }) => {
+        const save = AtlasSaveBridge.getSaveData();
+        save.currentRegion = 'HX-01-09';
+        save.habitat = 'bosque';
+        save.time = 'dia';
+        save.season = 'primavera';
+        save.helpers = 3;
+        save.lastTick = Date.now();
+        delete save.discovered[id];
+        delete save.sightings[id];
+        delete save.stages[id];
+        const hour = Math.floor(save.lastTick / 3600000);
+        save.autoHourly = Object.fromEntries(regionSpecies.filter(key => key !== id).map(key => [hour + ':' + key, 999]));
+        AtlasSaveBridge.restoreGame(save);
+      }, { id: chaffinch, regionSpecies: britishSpecies });
+      await openTab(updated, 'field');
+      const passerinePlate = 'img[src*="/' + chaffinch + '--"]';
+      const passerineStart = performance.now();
+      await updated.locator('#fieldResult ' + passerinePlate).evaluate(img => img.decode());
+      const passerineAutoMs = Math.round(performance.now() - passerineStart);
+      assert.ok(await updated.evaluate(id => AtlasSaveBridge.getSaveData().sightings[id] > 0, chaffinch));
+      await updated.evaluate(id => {
+        const save = AtlasSaveBridge.getSaveData();
+        save.helpers = 0;
+        save.stages[id] = 5;
+        save.selectedJournal = id;
+        save.published[id] = true;
+        save.museum.exhibits[id] = true;
+        save.lastEncounter = { species: id, title: 'Pinzón vulgar', sequence: save.encounterSequence,
+          entries: [{ id, amount: 1, sex: 'female', category: 'Notable' }] };
+        AtlasSaveBridge.restoreGame(save);
+      }, chaffinch);
+      await openTab(updated, 'field');
+      const passerineFemale = updated.locator('#fieldResult .notable img[src$="/eu_esp_0629--female.webp"]');
+      await passerineFemale.evaluate(img => img.decode());
+      assert.match(await passerineFemale.evaluate(img => getComputedStyle(img).filter), /drop-shadow/);
+      if (process.argv.includes('--write-evidence')) {
+        await updated.locator('.field-stage').screenshot({
+          path: evidenceDir + '/pinzon-' + width + '.jpg', type: 'jpeg', quality: 85
+        });
+      }
+      await openTab(updated, 'journal');
+      await updated.locator('.j25-sheet ' + passerinePlate).first().evaluate(img => img.decode());
+      await openTab(updated, 'bestiary');
+      await updated.locator('#b26-search').fill('Fringilla coelebs');
+      await updated.locator('.b26-card').filter({ has: updated.locator(passerinePlate) }).click();
+      await updated.locator('.b26-dialog ' + passerinePlate).first().evaluate(img => img.decode());
+      await updated.locator('[data-action=b26-close]').click();
+      await openTab(updated, 'museum');
+      await updated.getByRole('tab', { name: 'Exposiciones', exact: true }).click();
+      await updated.locator('.m27-vitrines [data-action=m27-open]').filter({ has: updated.locator(passerinePlate) }).click();
+      await updated.locator('.m27-dialog ' + passerinePlate).first().evaluate(img => img.decode());
+      await updated.locator('[data-action=m27-close]').click();
+
       const discoveryChecks = {};
       for (const [speciesId, record] of Object.entries(records)) {
         const region = expandedRegions.find(r => r.id === record.region);
@@ -587,7 +643,7 @@ async function run() {
         discoveryChecks[speciesId] = { ...found, renderMs: Math.round(performance.now() - start) };
         if (process.argv.includes('--write-evidence')) {
           await updated.locator('.field-stage').screenshot({
-            path: 'docs/cientifica-v473/' + (record.species ? 'sapo-pulga' : 'chucao') + '-' + width + '.jpg',
+            path: evidenceDir + '/' + (record.species ? 'sapo-pulga' : 'chucao') + '-' + width + '.jpg',
             type: 'jpeg', quality: 85
           });
         }
@@ -623,7 +679,7 @@ async function run() {
       await updated.locator('.field-card .atlas-art-landscape').evaluate(img => img.decode());
       assert.deepEqual(errors, []);
       results.push({ width, fieldBeforeMs: beforeMs, fieldWebPMs: afterMs, fieldBeforeJSHeapBytes: beforeHeap, fieldWebpJSHeapBytes: afterHeap, exactSaveBackup: true,
-        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, terrestrialAutoRepeatMs, ostrichDimorphismOffline: true, discoveryChecks, optionalReviewOutsideGameCache: true, errors });
+        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, terrestrialAutoRepeatMs, ostrichDimorphismOffline: true, passerineAutoMs, passerineInAllModulesOffline: true, discoveryChecks, optionalReviewOutsideGameCache: true, errors });
       await ctx.close();
     }
   } finally {

@@ -237,10 +237,12 @@ function compareStyles(sp) {
 
 function compareBirds() {
   const size = Number(comparisonSize.value);
-  const cards = birdComparisons[birdSet.value].birds.map(({ id, trait }) => {
+  const cards = birdComparisons[birdSet.value].birds.map(({ id, trait, plateKey }) => {
     const sp = catalog.find(item => item.id === id);
-    return '<figure>' + illustration(sp, specimenPlate(sp, 'Normal'), comparisonHalo.value, size, true) +
-      '<figcaption><strong>' + text(sp.name) + '</strong><p class="latin">' + text(sp.latin) +
+    const plate = plateKey ? sp.records.find(record => record.key === plateKey) : specimenPlate(sp, 'Normal');
+    const name = plateKey ? sp.name + ' · ' + plate.label : sp.name;
+    return '<figure>' + illustration(sp, plate, comparisonHalo.value, size, true) +
+      '<figcaption><strong>' + text(name) + '</strong><p class="latin">' + text(sp.latin) +
       '</p><p>' + text(trait) + '</p></figcaption></figure>';
   });
   return '<div class="comparison-styles review-comparison bird-comparison" style="--comparison-size:' +

@@ -8,6 +8,7 @@ const { terrestrialMammal, aquaticMammal } = require('./terrestrial-mammal-famil
 const birdPlan = require('../docs/cientifica-v460/inventario-aves.json');
 const additions = require('../www/js/gm07-a04/catalog.js').records;
 const comparisonSets = {
+  ...require('./passerine-comparisons.cjs'),
   ...require('./arboreal-bird-comparisons.cjs'),
   ...require('./terrestrial-bird-comparisons.cjs'),
   ...require('./aquatic-bird-comparisons.cjs'),
@@ -31,7 +32,8 @@ const priority = [
   'myrmecobius_fasciatus', 'spilocuscus_maculatus', 'dendrolagus_lumholtzi', 'dendrolagus_matschiei'
 ].map(suffix => 'oc_esp_' + suffix);
 priority.splice(5, 0, 'gm06_dromiciops_gliroides');
-priority.unshift('asia_esp_0067', 'sa_esp_scelorchilus_rubecula', 'sa_esp_brachycephalus_pulex',
+priority.unshift('oc_esp_cicinnurus_respublica', 'eu_esp_0629', 'asia_esp_0067',
+  'sa_esp_scelorchilus_rubecula', 'sa_esp_brachycephalus_pulex',
   'af_avestruz', 'asia_esp_0410', 'urogallo_comun',
   'frailecillo_atlantico', 'aguila_real', 'mar_esp_megaptera_novaeangliae',
   'sa_esp_inia_geoffrensis', 'af_gorila_montana');
@@ -49,7 +51,8 @@ const birds = new Map([
   ...birdPlan.editions['4.7.0'].inventory.map(row => ({ ...row, group: 'Rapaces' })),
   ...aquaticBirds.map(row => ({ ...row, group: row.wave })),
   ...terrestrialBirds,
-  ...arborealBirds
+  ...arborealBirds,
+  ...birdPlan.editions['4.7.4'].inventory.map(row => ({ ...row, group: 'Paseriformes', edition: '4.7.4' }))
 ].map(row => [row.id, row]));
 const pelagicFamilies = new Set(['Diomedeidae', 'Procellariidae', 'Fregatidae', 'Sulidae']);
 const wetlandPortraits = {
@@ -255,12 +258,15 @@ for (const file of classical) {
 }
 const records = species.flatMap(sp => sp.records);
 const mammals = catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Mammalia');
-const birdsByLatin = new Map(species.filter(sp => sp.order).map(sp => [sp.latin, sp.id]));
+const birdsByLatin = new Map(species.filter(sp => birds.has(sp.id)).map(sp => [sp.latin, sp]));
 const birdComparisons = Object.fromEntries(Object.entries(comparisonSets).map(([key, set]) =>
-  [key, { label: set.label, birds: set.birds.map(([latin, trait]) => {
-    const id = birdsByLatin.get(latin);
-    if (!id) throw Error('Ave de comparación fuera del inventario: ' + latin);
-    return { id, trait };
+  [key, { label: set.label, birds: set.birds.map(([latin, trait, plateKey]) => {
+    const bird = birdsByLatin.get(latin);
+    if (!bird) throw Error('Ave de comparación fuera del inventario: ' + latin);
+    if (plateKey && !bird.records.some(record => record.key === plateKey && record.src)) {
+      throw Error('Variante de comparación sin lámina: ' + latin + ' · ' + plateKey);
+    }
+    return { id: bird.id, trait, ...(plateKey ? { plateKey } : {}) };
   }) }]));
 const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,
@@ -278,7 +284,7 @@ const migrationProgress = {
   birds: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Aves').length,
   birdsMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Aves').length
 };
-const mixedFieldSprites = ['eu_esp_0628', 'eu_esp_0631', 'eu_esp_0629'].map(id => {
+const mixedFieldSprites = ['eu_esp_0661', 'eu_esp_0660', 'lagarto_ocelado'].map(id => {
   const sp = audit.SPECIES[id];
   if (classify(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
   return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };

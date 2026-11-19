@@ -1,0 +1,6389 @@
+{
+  "version": "4.7.4",
+  "summary": {
+    "birds": 287,
+    "migrated": 287,
+    "pending": 0,
+    "families": 84,
+    "albino": 81,
+    "melanic": 59,
+    "dimorphicSpecies": 34,
+    "plates": 496,
+    "legendary": [
+      "Centinela"
+    ]
+  },
+  "birds": [
+    {
+      "id": "asia_esp_0886",
+      "name": "Azor común",
+      "latin": "Accipiter gentilis",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Astur gentilis",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "asia_esp_0886--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0644",
+      "name": "Gavilán común",
+      "latin": "Accipiter nisus",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Accipiter nisus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "eu_esp_0644--normal.webp",
+        "melanico": "eu_esp_0644--melanico.webp"
+      }
+    },
+    {
+      "id": "af_jacana_africana",
+      "name": "Jacana africana",
+      "latin": "Actophilornis africanus",
+      "habitats": [
+        "humedal",
+        "rio"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Charadriiformes",
+      "family": "Jacanidae",
+      "iocTaxon": "Actophilornis africanus",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_jacana_africana--normal.webp",
+        "albino": "af_jacana_africana--albino.webp"
+      }
+    },
+    {
+      "id": "af_inseparable_lilian",
+      "name": "Inseparable de Lilian",
+      "latin": "Agapornis lilianae",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittaculidae",
+      "iocTaxon": "Agapornis lilianae",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "af_inseparable_lilian--normal.webp",
+        "albino": "af_inseparable_lilian--albino.webp"
+      }
+    },
+    {
+      "id": "sa_esp_agelaioides_badius",
+      "name": "Tordo músico",
+      "latin": "Agelaioides badius",
+      "habitats": [
+        "pradera",
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Icteridae",
+      "iocTaxon": "Agelaioides badius",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "sa_esp_agelaioides_badius--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0891",
+      "name": "Pato mandarín",
+      "latin": "Aix galericulata",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Anátidas",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Aix galericulata",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "asia_esp_0891--normal.webp",
+        "male": "asia_esp_0891--male.webp",
+        "female": "asia_esp_0891--female.webp",
+        "melanico": "asia_esp_0891--melanico.webp"
+      }
+    },
+    {
+      "id": "na_esp_aix_sponsa",
+      "name": "Pato joyuyo",
+      "latin": "Aix sponsa",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Aix sponsa",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "na_esp_aix_sponsa--normal.webp",
+        "male": "na_esp_aix_sponsa--male.webp",
+        "female": "na_esp_aix_sponsa--female.webp",
+        "albino": "na_esp_aix_sponsa--albino.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0636",
+      "name": "Alondra común",
+      "latin": "Alauda arvensis",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Alaudidae",
+      "iocTaxon": "Alauda arvensis",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "eu_esp_0636--normal.webp",
+        "melanico": "eu_esp_0636--melanico.webp"
+      }
+    },
+    {
+      "id": "martin_pescador",
+      "name": "Martín pescador común",
+      "latin": "Alcedo atthis",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Coraciiformes",
+      "family": "Alcedinidae",
+      "iocTaxon": "Alcedo atthis",
+      "placement": "Martín pescador asociado al agua por su forma de alimentación.",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "martin_pescador--normal.webp",
+        "melanico": "martin_pescador--melanico.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0642",
+      "name": "Perdiz griega",
+      "latin": "Alectoris graeca",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Galliformes",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Alectoris graeca",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "eu_esp_0642--normal.webp",
+        "melanico": "eu_esp_0642--melanico.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0641",
+      "name": "Perdiz roja",
+      "latin": "Alectoris rufa",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Galliformes",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Alectoris rufa",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "eu_esp_0641--normal.webp",
+        "melanico": "eu_esp_0641--melanico.webp"
+      }
+    },
+    {
+      "id": "sa_esp_amazona_amazonica",
+      "name": "Loro amazónico",
+      "latin": "Amazona amazonica",
+      "habitats": [
+        "selva",
+        "bosque",
+        "sabana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "iocTaxon": "Amazona amazonica",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_amazona_amazonica--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_amazona_leucocephala",
+      "name": "Amazona cubana",
+      "latin": "Amazona leucocephala",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Psittacidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "iocTaxon": "Amazona leucocephala",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "gm06_amazona_leucocephala--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_anas_platyrhynchos",
+      "name": "Ánade real",
+      "latin": "Anas platyrhynchos",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Anas platyrhynchos",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "na_esp_anas_platyrhynchos--normal.webp",
+        "male": "na_esp_anas_platyrhynchos--male.webp",
+        "female": "na_esp_anas_platyrhynchos--female.webp",
+        "albino": "na_esp_anas_platyrhynchos--albino.webp"
+      }
+    },
+    {
+      "id": "sa_esp_andigena_hypoglauca",
+      "name": "Tucán andino pechigris",
+      "latin": "Andigena hypoglauca",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Piciformes",
+      "family": "Ramphastidae",
+      "iocTaxon": "Andigena hypoglauca",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_andigena_hypoglauca--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_anodorhynchus_hyacinthinus",
+      "name": "Guacamayo jacinto",
+      "latin": "Anodorhynchus hyacinthinus",
+      "habitats": [
+        "selva",
+        "bosque",
+        "sabana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "iocTaxon": "Anodorhynchus hyacinthinus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_anodorhynchus_hyacinthinus--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_anser_caerulescens",
+      "name": "Ánsar nival",
+      "latin": "Anser caerulescens",
+      "habitats": [
+        "tundra",
+        "rio"
+      ],
+      "historicalGroup": "Anátidas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Anser caerulescens",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "na_esp_anser_caerulescens--normal.webp",
+        "albino": "na_esp_anser_caerulescens--albino.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0020",
+      "name": "Grulla damisela",
+      "latin": "Anthropoides virgo",
+      "habitats": [
+        "estepa",
+        "pradera",
+        "rio"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Gruiformes",
+      "family": "Gruidae",
+      "iocTaxon": "Grus virgo",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "asia_esp_0020--normal.webp"
+      }
+    },
+    {
+      "id": "polar_esp_aptenodytes_forsteri",
+      "name": "Pingüino emperador",
+      "latin": "Aptenodytes forsteri",
+      "habitats": [
+        "banquisa_antartica",
+        "costa_antartica"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iocTaxon": "Aptenodytes forsteri",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "polar_esp_aptenodytes_forsteri--normal.webp"
+      }
+    },
+    {
+      "id": "mar_esp_aptenodytes_patagonicus",
+      "name": "Pingüino rey",
+      "latin": "Aptenodytes patagonicus",
+      "habitats": [
+        "archipielago",
+        "mar_austral"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iocTaxon": "Aptenodytes patagonicus",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "mar_esp_aptenodytes_patagonicus--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_apteryx_mantelli",
+      "name": "Kiwi pardo de la isla norte",
+      "latin": "Apteryx mantelli",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Paleognatas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Apterygiformes",
+      "family": "Apterygidae",
+      "iocTaxon": "Apteryx mantelli",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "oc_esp_apteryx_mantelli--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_apteryx_haastii",
+      "name": "Kiwi moteado grande",
+      "latin": "Apteryx maxima",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Paleognatas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Apterygiformes",
+      "family": "Apterygidae",
+      "iocTaxon": "Apteryx maxima",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "oc_esp_apteryx_haastii--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_apteryx_owenii",
+      "name": "Kiwi moteado pequeño",
+      "latin": "Apteryx owenii",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Paleognatas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Apterygiformes",
+      "family": "Apterygidae",
+      "iocTaxon": "Apteryx owenii",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "oc_esp_apteryx_owenii--normal.webp"
+      }
+    },
+    {
+      "id": "aguila_imperial_iberica",
+      "name": "Águila imperial ibérica",
+      "latin": "Aquila adalberti",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Aquila adalberti",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "aguila_imperial_iberica--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_aquila_audax",
+      "name": "Águila audaz",
+      "latin": "Aquila audax",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "montana"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Aquila audax",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "oc_esp_aquila_audax--normal.webp"
+      }
+    },
+    {
+      "id": "aguila_real",
+      "name": "Águila real",
+      "latin": "Aquila chrysaetos",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "montana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": {
+        "id": "centinela",
+        "speciesId": "aguila_real",
+        "name": "Centinela",
+        "description": "La nuca dorada destaca sobre las alas recogidas de este vigilante."
+      },
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Aquila chrysaetos",
+      "legendaryFile": "aguila_real--centinela.webp",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "aguila_real--normal.webp",
+        "legendario": "aguila_real--centinela.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_131_aquila_fasciata",
+      "name": "Águila perdicera",
+      "latin": "Aquila fasciata",
+      "habitats": [
+        "montana",
+        "estepa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Aquila fasciata",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "af_xlsx_131_aquila_fasciata--normal.webp",
+        "albino": "af_xlsx_131_aquila_fasciata--albino.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0029",
+      "name": "Águila imperial oriental",
+      "latin": "Aquila heliaca",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Aquila heliaca",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "eu_esp_0029--normal.webp",
+        "melanico": "eu_esp_0029--melanico.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0030",
+      "name": "Águila esteparia",
+      "latin": "Aquila nipalensis",
+      "habitats": [
+        "estepa",
+        "pradera",
+        "montana"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Aquila nipalensis",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "asia_esp_0030--normal.webp",
+        "albino": "asia_esp_0030--albino.webp"
+      }
+    },
+    {
+      "id": "sa_esp_ara_ararauna",
+      "name": "Guacamaya azulamarilla",
+      "latin": "Ara ararauna",
+      "habitats": [
+        "selva",
+        "bosque",
+        "sabana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "iocTaxon": "Ara ararauna",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_ara_ararauna--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_ara_chloropterus",
+      "name": "Guacamayo rojo y verde",
+      "latin": "Ara chloropterus",
+      "habitats": [
+        "selva",
+        "bosque",
+        "sabana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "iocTaxon": "Ara chloropterus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_ara_chloropterus--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_ara_macao",
+      "name": "Guacamaya roja",
+      "latin": "Ara macao",
+      "habitats": [
+        "selva",
+        "bosque",
+        "montana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "iocTaxon": "Ara macao",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "na_esp_ara_macao--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_ara_militaris",
+      "name": "Guacamaya verde",
+      "latin": "Ara militaris",
+      "habitats": [
+        "selva",
+        "bosque",
+        "montana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "iocTaxon": "Ara militaris",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "na_esp_ara_militaris--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_archilochus_colubris",
+      "name": "Colibrí garganta rubí",
+      "latin": "Archilochus colubris",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Apodiformes",
+      "family": "Trochilidae",
+      "iocTaxon": "Archilochus colubris",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "na_esp_archilochus_colubris--normal.webp",
+        "male": "na_esp_archilochus_colubris--male.webp",
+        "female": "na_esp_archilochus_colubris--female.webp"
+      }
+    },
+    {
+      "id": "garza_real",
+      "name": "Garza real",
+      "latin": "Ardea cinerea",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "iocTaxon": "Ardea cinerea",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "garza_real--normal.webp",
+        "albino": "garza_real--albino.webp"
+      }
+    },
+    {
+      "id": "sa_esp_ardea_cocoi",
+      "name": "Garza cocoi",
+      "latin": "Ardea cocoi",
+      "habitats": [
+        "rio",
+        "humedal",
+        "costa"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "iocTaxon": "Ardea cocoi",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "sa_esp_ardea_cocoi--normal.webp"
+      }
+    },
+    {
+      "id": "af_garza_goliat",
+      "name": "Garza goliat",
+      "latin": "Ardea goliath",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "iocTaxon": "Ardea goliath",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_garza_goliat--normal.webp",
+        "albino": "af_garza_goliat--albino.webp",
+        "melanico": "af_garza_goliat--melanico.webp"
+      }
+    },
+    {
+      "id": "na_esp_ardea_herodias",
+      "name": "Garza azulada",
+      "latin": "Ardea herodias",
+      "habitats": [
+        "humedal",
+        "costa",
+        "rio"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "iocTaxon": "Ardea herodias",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "na_esp_ardea_herodias--normal.webp"
+      }
+    },
+    {
+      "id": "mar_esp_ardenna_grisea",
+      "name": "Pardela sombría",
+      "latin": "Ardenna grisea",
+      "habitats": [
+        "archipielago",
+        "mar_austral"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Procellariiformes",
+      "family": "Procellariidae",
+      "iocTaxon": "Ardenna grisea",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "mar_esp_ardenna_grisea--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_asio_flammeus",
+      "name": "Lechuzón de campo",
+      "latin": "Asio flammeus",
+      "habitats": [
+        "pradera",
+        "humedal",
+        "estepa"
+      ],
+      "historicalGroup": "Rapaces",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "iocTaxon": "Asio flammeus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "sa_esp_asio_flammeus--normal.webp"
+      }
+    },
+    {
+      "id": "buho_comun",
+      "name": "Búho común",
+      "latin": "Asio otus",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Búhos y lechuzas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "iocTaxon": "Asio otus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "buho_comun--normal.webp",
+        "albino": "buho_comun--albino.webp"
+      }
+    },
+    {
+      "id": "na_esp_athene_cunicularia",
+      "name": "Lechuza llanera",
+      "latin": "Athene cunicularia",
+      "habitats": [
+        "pradera"
+      ],
+      "historicalGroup": "Búhos y lechuzas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "iocTaxon": "Athene cunicularia",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "na_esp_athene_cunicularia--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0645",
+      "name": "Mochuelo europeo",
+      "latin": "Athene noctua",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "iocTaxon": "Athene noctua",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "eu_esp_0645--normal.webp",
+        "melanico": "eu_esp_0645--melanico.webp"
+      }
+    },
+    {
+      "id": "af_picozapato",
+      "name": "Picozapato",
+      "latin": "Balaeniceps rex",
+      "habitats": [
+        "humedal",
+        "rio"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Balaenicipitidae",
+      "iocTaxon": "Balaeniceps rex",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_picozapato--normal.webp"
+      }
+    },
+    {
+      "id": "af_grulla_coronada",
+      "name": "Grulla coronada gris",
+      "latin": "Balearica regulorum",
+      "habitats": [
+        "humedal",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Gruiformes",
+      "family": "Gruidae",
+      "iocTaxon": "Balearica regulorum",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_grulla_coronada--normal.webp",
+        "albino": "af_grulla_coronada--albino.webp",
+        "melanico": "af_grulla_coronada--melanico.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0640",
+      "name": "Ampelis europeo",
+      "latin": "Bombycilla garrulus",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Bombycillidae",
+      "iocTaxon": "Bombycilla garrulus",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "eu_esp_0640--normal.webp",
+        "melanico": "eu_esp_0640--melanico.webp"
+      }
+    },
+    {
+      "id": "buho_real",
+      "name": "Búho real",
+      "latin": "Bubo bubo",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Búhos y lechuzas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "iocTaxon": "Bubo bubo",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "buho_real--normal.webp",
+        "albino": "buho_real--albino.webp"
+      }
+    },
+    {
+      "id": "na_esp_bubo_scandiacus",
+      "name": "Búho nival",
+      "latin": "Bubo scandiacus",
+      "habitats": [
+        "tundra",
+        "pradera"
+      ],
+      "historicalGroup": "Búhos y lechuzas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "iocTaxon": "Bubo scandiacus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "na_esp_bubo_scandiacus--normal.webp",
+        "albino": "na_esp_bubo_scandiacus--albino.webp"
+      }
+    },
+    {
+      "id": "na_esp_bubo_virginianus",
+      "name": "Búho cornudo",
+      "latin": "Bubo virginianus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Búhos y lechuzas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "iocTaxon": "Bubo virginianus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "na_esp_bubo_virginianus--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0868",
+      "name": "Cálao bicorne",
+      "latin": "Buceros bicornis",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "historicalGroup": "Cálaos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Bucerotiformes",
+      "family": "Bucerotidae",
+      "iocTaxon": "Buceros bicornis",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "asia_esp_0868--normal.webp",
+        "albino": "asia_esp_0868--albino.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0067",
+      "name": "Cálao rinoceronte",
+      "latin": "Buceros rhinoceros",
+      "habitats": [
+        "selva"
+      ],
+      "historicalGroup": "Cálaos",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Bucerotiformes",
+      "family": "Bucerotidae",
+      "iocTaxon": "Buceros rhinoceros",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "asia_esp_0067--normal.webp",
+        "melanico": "asia_esp_0067--melanico.webp"
+      }
+    },
+    {
+      "id": "af_calao_terrestre",
+      "name": "Cálao terrestre sureño",
+      "latin": "Bucorvus leadbeateri",
+      "habitats": [
+        "pradera",
+        "bosque"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Bucerotiformes",
+      "family": "Bucerotidae",
+      "iocTaxon": "Bucorvus leadbeateri",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "af_calao_terrestre--normal.webp",
+        "albino": "af_calao_terrestre--albino.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0643",
+      "name": "Busardo ratonero",
+      "latin": "Buteo buteo",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Buteo buteo",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "eu_esp_0643--normal.webp",
+        "melanico": "eu_esp_0643--melanico.webp"
+      }
+    },
+    {
+      "id": "sa_esp_buteogallus_coronatus",
+      "name": "Águila coronada",
+      "latin": "Buteogallus coronatus",
+      "habitats": [
+        "bosque",
+        "montana",
+        "pradera",
+        "selva"
+      ],
+      "historicalGroup": "Rapaces",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Buteogallus coronatus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "sa_esp_buteogallus_coronatus--normal.webp"
+      }
+    },
+    {
+      "id": "af_calao_trompetero",
+      "name": "Cálao trompetero",
+      "latin": "Bycanistes bucinator",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Cálaos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Bucerotiformes",
+      "family": "Bucerotidae",
+      "iocTaxon": "Bycanistes bucinator",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "af_calao_trompetero--normal.webp",
+        "albino": "af_calao_trompetero--albino.webp"
+      }
+    },
+    {
+      "id": "oc_esp_cacatua_galerita",
+      "name": "Cacatúa galerita",
+      "latin": "Cacatua galerita",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "mediterraneo",
+        "sabana"
+      ],
+      "historicalGroup": "Psitaciformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Cacatuidae",
+      "iocTaxon": "Cacatua galerita",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_cacatua_galerita--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_cacatua_moluccensis",
+      "name": "Cacatúa de las Molucas",
+      "latin": "Cacatua moluccensis",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "historicalGroup": "Cacatuidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Cacatuidae",
+      "iocTaxon": "Cacatua moluccensis",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "gm06_cacatua_moluccensis--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_cairina_moschata",
+      "name": "Pato real",
+      "latin": "Cairina moschata",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Cairina moschata",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "sa_esp_cairina_moschata--normal.webp",
+        "male": "sa_esp_cairina_moschata--male.webp",
+        "female": "sa_esp_cairina_moschata--female.webp",
+        "albino": "sa_esp_cairina_moschata--albino.webp"
+      }
+    },
+    {
+      "id": "oc_esp_callaeas_wilsoni",
+      "name": "Kōkako",
+      "latin": "Callaeas wilsoni",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "historicalGroup": "Aves forestales",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Callaeidae",
+      "iocTaxon": "Callaeas wilsoni",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "oc_esp_callaeas_wilsoni--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_callipepla_californica",
+      "name": "Codorniz de California",
+      "latin": "Callipepla californica",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Odontophoridae",
+      "iocTaxon": "Callipepla californica",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "na_esp_callipepla_californica--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_calypte_anna",
+      "name": "Colibrí de Ana",
+      "latin": "Calypte anna",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Apodiformes",
+      "family": "Trochilidae",
+      "iocTaxon": "Calypte anna",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "na_esp_calypte_anna--normal.webp",
+        "male": "na_esp_calypte_anna--male.webp",
+        "female": "na_esp_calypte_anna--female.webp"
+      }
+    },
+    {
+      "id": "oc_esp_calyptorhynchus_banksii",
+      "name": "Cacatúa negra de cola roja",
+      "latin": "Calyptorhynchus banksii",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "mediterraneo",
+        "sabana"
+      ],
+      "historicalGroup": "Psitaciformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Cacatuidae",
+      "iocTaxon": "Calyptorhynchus banksii",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_calyptorhynchus_banksii--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_campephilus_magellanicus",
+      "name": "Carpintero negro",
+      "latin": "Campephilus magellanicus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Piciformes",
+      "family": "Picidae",
+      "iocTaxon": "Campephilus magellanicus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_campephilus_magellanicus--normal.webp",
+        "male": "sa_esp_campephilus_magellanicus--male.webp",
+        "female": "sa_esp_campephilus_magellanicus--female.webp"
+      }
+    },
+    {
+      "id": "na_esp_caracara_plancus",
+      "name": "Caracara quebrantahuesos",
+      "latin": "Caracara plancus",
+      "habitats": [
+        "selva",
+        "pradera"
+      ],
+      "historicalGroup": "Rapaces",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Falconiformes",
+      "family": "Falconidae",
+      "iocTaxon": "Caracara plancus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "na_esp_caracara_plancus--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_cardinalis_cardinalis",
+      "name": "Cardenal rojo",
+      "latin": "Cardinalis cardinalis",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Cardinalidae",
+      "iocTaxon": "Cardinalis cardinalis",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "na_esp_cardinalis_cardinalis--normal.webp",
+        "male": "na_esp_cardinalis_cardinalis--male.webp",
+        "female": "na_esp_cardinalis_cardinalis--female.webp",
+        "albino": "na_esp_cardinalis_cardinalis--albino.webp"
+      }
+    },
+    {
+      "id": "sa_esp_cariama_cristata",
+      "name": "Seriema de patas rojas",
+      "latin": "Cariama cristata",
+      "habitats": [
+        "sabana",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Cariamiformes",
+      "family": "Cariamidae",
+      "iocTaxon": "Cariama cristata",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "sa_esp_cariama_cristata--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_casuarius_casuarius",
+      "name": "Casuario común",
+      "latin": "Casuarius casuarius",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Paleognatas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Casuariiformes",
+      "family": "Casuariidae",
+      "iocTaxon": "Casuarius casuarius",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "oc_esp_casuarius_casuarius--normal.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_131_ceratogymna_atrata",
+      "name": "Cálao de casquete negro",
+      "latin": "Ceratogymna atrata",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Cálaos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Bucerotiformes",
+      "family": "Bucerotidae",
+      "iocTaxon": "Ceratogymna atrata",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "af_xlsx_131_ceratogymna_atrata--normal.webp",
+        "albino": "af_xlsx_131_ceratogymna_atrata--albino.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_martin_pio",
+      "name": "Martín pescador pío",
+      "latin": "Ceryle rudis",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Coraciiformes",
+      "family": "Alcedinidae",
+      "iocTaxon": "Ceryle rudis",
+      "placement": "Martín pescador asociado al agua por su forma de alimentación.",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_xlsx_martin_pio--normal.webp",
+        "albino": "af_xlsx_martin_pio--albino.webp"
+      }
+    },
+    {
+      "id": "sa_esp_chauna_torquata",
+      "name": "Chajá",
+      "latin": "Chauna torquata",
+      "habitats": [
+        "humedal",
+        "rio"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anhimidae",
+      "iocTaxon": "Chauna torquata",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "sa_esp_chauna_torquata--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_chloephaga_hybrida",
+      "name": "Caranca",
+      "latin": "Chloephaga hybrida",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Anatidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Chloephaga hybrida",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_chloephaga_hybrida--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0124",
+      "name": "Faisán dorado",
+      "latin": "Chrysolophus pictus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Galliformes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Chrysolophus pictus",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "asia_esp_0124--normal.webp",
+        "male": "asia_esp_0124--male.webp",
+        "female": "asia_esp_0124--female.webp",
+        "albino": "asia_esp_0124--albino.webp"
+      }
+    },
+    {
+      "id": "oc_esp_cicinnurus_regius",
+      "name": "Pájaro del paraíso rey",
+      "latin": "Cicinnurus regius",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Aves del paraíso",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Paradisaeidae",
+      "iocTaxon": "Cicinnurus regius",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "oc_esp_cicinnurus_regius--normal.webp",
+        "male": "oc_esp_cicinnurus_regius--male.webp",
+        "female": "oc_esp_cicinnurus_regius--female.webp"
+      }
+    },
+    {
+      "id": "oc_esp_cicinnurus_respublica",
+      "name": "Ave del paraíso de Wilson",
+      "latin": "Cicinnurus respublica",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Aves del paraíso",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Paradisaeidae",
+      "iocTaxon": "Diphyllodes respublica",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "oc_esp_cicinnurus_respublica--normal.webp",
+        "male": "oc_esp_cicinnurus_respublica--male.webp",
+        "female": "oc_esp_cicinnurus_respublica--female.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0890",
+      "name": "Cigüeña blanca oriental",
+      "latin": "Ciconia boyciana",
+      "habitats": [
+        "rio",
+        "costa"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Ciconiiformes",
+      "family": "Ciconiidae",
+      "iocTaxon": "Ciconia boyciana",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "asia_esp_0890--normal.webp"
+      }
+    },
+    {
+      "id": "ciguena_blanca",
+      "name": "Cigüeña blanca",
+      "latin": "Ciconia ciconia",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Ciconiiformes",
+      "family": "Ciconiidae",
+      "iocTaxon": "Ciconia ciconia",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "ciguena_blanca--normal.webp",
+        "melanico": "ciguena_blanca--melanico.webp"
+      }
+    },
+    {
+      "id": "ciguena_negra",
+      "name": "Cigüeña negra",
+      "latin": "Ciconia nigra",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Ciconiiformes",
+      "family": "Ciconiidae",
+      "iocTaxon": "Ciconia nigra",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "ciguena_negra--normal.webp",
+        "albino": "ciguena_negra--albino.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_131_circaetus_gallicus",
+      "name": "Águila culebrera",
+      "latin": "Circaetus gallicus",
+      "habitats": [
+        "estepa",
+        "bosque"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Circaetus gallicus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "af_xlsx_131_circaetus_gallicus--normal.webp",
+        "albino": "af_xlsx_131_circaetus_gallicus--albino.webp"
+      }
+    },
+    {
+      "id": "na_esp_circus_hudsonius",
+      "name": "Aguilucho pálido",
+      "latin": "Circus hudsonius",
+      "habitats": [
+        "pradera",
+        "humedal"
+      ],
+      "historicalGroup": "Rapaces",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Circus hudsonius",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "na_esp_circus_hudsonius--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_colaptes_campestris",
+      "name": "Carpintero campestre",
+      "latin": "Colaptes campestris",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Piciformes",
+      "family": "Picidae",
+      "iocTaxon": "Colaptes campestris",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_colaptes_campestris--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0872",
+      "name": "Carraca india",
+      "latin": "Coracias benghalensis",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Coraciiformes",
+      "family": "Coraciidae",
+      "iocTaxon": "Coracias benghalensis",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "asia_esp_0872--normal.webp",
+        "albino": "asia_esp_0872--albino.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_131_coracias_caudatus",
+      "name": "Carraca lila",
+      "latin": "Coracias caudatus",
+      "habitats": [
+        "pradera",
+        "estepa"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Coraciiformes",
+      "family": "Coraciidae",
+      "iocTaxon": "Coracias caudatus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "af_xlsx_131_coracias_caudatus--normal.webp",
+        "albino": "af_xlsx_131_coracias_caudatus--albino.webp"
+      }
+    },
+    {
+      "id": "af_loro_negro_seychelles",
+      "name": "Loro negro de Seychelles",
+      "latin": "Coracopsis barklyi",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittaculidae",
+      "iocTaxon": "Coracopsis barklyi",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "af_loro_negro_seychelles--normal.webp",
+        "albino": "af_loro_negro_seychelles--albino.webp"
+      }
+    },
+    {
+      "id": "na_esp_corvus_corax",
+      "name": "Cuervo común",
+      "latin": "Corvus corax",
+      "habitats": [
+        "bosque",
+        "tundra"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Corvidae",
+      "iocTaxon": "Corvus corax",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "na_esp_corvus_corax--normal.webp",
+        "albino": "na_esp_corvus_corax--albino.webp"
+      }
+    },
+    {
+      "id": "gm06_corvus_moneduloides",
+      "name": "Cuervo de Nueva Caledonia",
+      "latin": "Corvus moneduloides",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Corvidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Corvidae",
+      "iocTaxon": "Corvus moneduloides",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "gm06_corvus_moneduloides--normal.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_131_corythaeola_cristata",
+      "name": "Turaco gigante",
+      "latin": "Corythaeola cristata",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Musophagiformes",
+      "family": "Musophagidae",
+      "iocTaxon": "Corythaeola cristata",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "af_xlsx_131_corythaeola_cristata--normal.webp",
+        "albino": "af_xlsx_131_corythaeola_cristata--albino.webp"
+      }
+    },
+    {
+      "id": "af_martin_malaquita",
+      "name": "Martín pescador malaquita",
+      "latin": "Corythornis cristatus",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Coraciiformes",
+      "family": "Alcedinidae",
+      "iocTaxon": "Corythornis cristatus",
+      "placement": "Martín pescador asociado al agua por su forma de alimentación.",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_martin_malaquita--normal.webp",
+        "albino": "af_martin_malaquita--albino.webp"
+      }
+    },
+    {
+      "id": "gm06_crax_rubra",
+      "name": "Pavón grande",
+      "latin": "Crax rubra",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Cracidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Cracidae",
+      "iocTaxon": "Crax rubra",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "gm06_crax_rubra--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0631",
+      "name": "Herrerillo común",
+      "latin": "Cyanistes caeruleus",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Paridae",
+      "iocTaxon": "Cyanistes caeruleus",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "eu_esp_0631--normal.webp",
+        "melanico": "eu_esp_0631--melanico.webp"
+      }
+    },
+    {
+      "id": "af_ganso_alas_azules",
+      "name": "Ganso de alas azules",
+      "latin": "Cyanochen cyanoptera",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Anátidas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Cyanochen cyanoptera",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_ganso_alas_azules--normal.webp",
+        "albino": "af_ganso_alas_azules--albino.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_vanga_azul",
+      "name": "Vanga azul",
+      "latin": "Cyanolanius madagascarinus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Vangidae",
+      "iocTaxon": "Cyanolanius madagascarinus",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "af_xlsx_vanga_azul--normal.webp",
+        "albino": "af_xlsx_vanga_azul--albino.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0633",
+      "name": "Rabilargo ibérico",
+      "latin": "Cyanopica cooki",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Corvidae",
+      "iocTaxon": "Cyanopica cooki",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "eu_esp_0633--normal.webp",
+        "melanico": "eu_esp_0633--melanico.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0878",
+      "name": "Urraca de pico azul",
+      "latin": "Cyanopica cyanus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Corvidae",
+      "iocTaxon": "Cyanopica cyanus",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "asia_esp_0878--normal.webp",
+        "albino": "asia_esp_0878--albino.webp"
+      }
+    },
+    {
+      "id": "oc_esp_cygnus_atratus",
+      "name": "Cisne negro",
+      "latin": "Cygnus atratus",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Anátidas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Cygnus atratus",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "oc_esp_cygnus_atratus--normal.webp",
+        "albino": "oc_esp_cygnus_atratus--albino.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0144",
+      "name": "Cisne cantor",
+      "latin": "Cygnus cygnus",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Anátidas",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Cygnus cygnus",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "eu_esp_0144--normal.webp",
+        "melanico": "eu_esp_0144--melanico.webp"
+      }
+    },
+    {
+      "id": "sa_esp_cygnus_melancoryphus",
+      "name": "Cisne de cuello negro",
+      "latin": "Cygnus melancoryphus",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Cygnus melancoryphus",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "sa_esp_cygnus_melancoryphus--normal.webp",
+        "albino": "sa_esp_cygnus_melancoryphus--albino.webp"
+      }
+    },
+    {
+      "id": "cisne_vulgar",
+      "name": "Cisne vulgar",
+      "latin": "Cygnus olor",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Anátidas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Cygnus olor",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "cisne_vulgar--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_dacelo_leachii",
+      "name": "Cucaburra de alas azules",
+      "latin": "Dacelo leachii",
+      "habitats": [
+        "bosque",
+        "selva",
+        "sabana"
+      ],
+      "historicalGroup": "Alcedínidos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Coraciiformes",
+      "family": "Alcedinidae",
+      "iocTaxon": "Dacelo leachii",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_dacelo_leachii--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_dacelo_novaeguineae",
+      "name": "Cucaburra risueña",
+      "latin": "Dacelo novaeguineae",
+      "habitats": [
+        "bosque",
+        "selva",
+        "sabana"
+      ],
+      "historicalGroup": "Alcedínidos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Coraciiformes",
+      "family": "Alcedinidae",
+      "iocTaxon": "Dacelo novaeguineae",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_dacelo_novaeguineae--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0159",
+      "name": "Pico picapinos",
+      "latin": "Dendrocopos major",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Piciformes",
+      "family": "Picidae",
+      "iocTaxon": "Dendrocopos major",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "eu_esp_0159--normal.webp",
+        "melanico": "eu_esp_0159--melanico.webp"
+      }
+    },
+    {
+      "id": "oc_esp_diomedea_epomophora",
+      "name": "Albatros real del sur",
+      "latin": "Diomedea epomophora",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Aves marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Procellariiformes",
+      "family": "Diomedeidae",
+      "iocTaxon": "Diomedea epomophora",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "oc_esp_diomedea_epomophora--normal.webp"
+      }
+    },
+    {
+      "id": "mar_esp_diomedea_exulans",
+      "name": "Albatros errante",
+      "latin": "Diomedea exulans",
+      "habitats": [
+        "archipielago",
+        "mar_austral"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Procellariiformes",
+      "family": "Diomedeidae",
+      "iocTaxon": "Diomedea exulans",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "mar_esp_diomedea_exulans--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_drepanoptila_holosericea",
+      "name": "Paloma de plumas hendidas",
+      "latin": "Drepanoptila holosericea",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Columbidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Columbiformes",
+      "family": "Columbidae",
+      "iocTaxon": "Ptilinopus holosericea",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "gm06_drepanoptila_holosericea--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_dromaius_novaehollandiae",
+      "name": "Emú",
+      "latin": "Dromaius novaehollandiae",
+      "habitats": [
+        "pradera",
+        "sabana",
+        "desierto",
+        "bosque"
+      ],
+      "historicalGroup": "Paleognatas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Casuariiformes",
+      "family": "Casuariidae",
+      "iocTaxon": "Dromaius novaehollandiae",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "oc_esp_dromaius_novaehollandiae--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_dryocopus_pileatus",
+      "name": "Píleo",
+      "latin": "Dryocopus pileatus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Piciformes",
+      "family": "Picidae",
+      "iocTaxon": "Dryocopus pileatus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "na_esp_dryocopus_pileatus--normal.webp",
+        "albino": "na_esp_dryocopus_pileatus--albino.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_garceta",
+      "name": "Garceta común",
+      "latin": "Egretta garzetta",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
+      "iocTaxon": "Egretta garzetta",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_xlsx_garceta--normal.webp",
+        "albino": "af_xlsx_garceta--albino.webp"
+      }
+    },
+    {
+      "id": "sa_esp_enicognathus_ferrugineus",
+      "name": "Cachaña",
+      "latin": "Enicognathus ferrugineus",
+      "habitats": [
+        "selva",
+        "bosque",
+        "sabana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "iocTaxon": "Enicognathus ferrugineus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_enicognathus_ferrugineus--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_ensifera_ensifera",
+      "name": "Colibrí picoespada",
+      "latin": "Ensifera ensifera",
+      "habitats": [
+        "bosque",
+        "montana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Apodiformes",
+      "family": "Trochilidae",
+      "iocTaxon": "Ensifera ensifera",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_ensifera_ensifera--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_eolophus_roseicapilla",
+      "name": "Cacatúa rosada",
+      "latin": "Eolophus roseicapilla",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "mediterraneo",
+        "sabana"
+      ],
+      "historicalGroup": "Psitaciformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Cacatuidae",
+      "iocTaxon": "Eolophus roseicapilla",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_eolophus_roseicapilla--normal.webp"
+      }
+    },
+    {
+      "id": "petirrojo",
+      "name": "Petirrojo europeo",
+      "latin": "Erithacus rubecula",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Muscicapidae",
+      "iocTaxon": "Erithacus rubecula",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "petirrojo--normal.webp",
+        "albino": "petirrojo--albino.webp"
+      }
+    },
+    {
+      "id": "sa_esp_eudocimus_ruber",
+      "name": "Corocora roja",
+      "latin": "Eudocimus ruber",
+      "habitats": [
+        "humedal",
+        "costa",
+        "rio"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Threskiornithidae",
+      "iocTaxon": "Eudocimus ruber",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "sa_esp_eudocimus_ruber--normal.webp"
+      }
+    },
+    {
+      "id": "mar_esp_eudyptes_filholi",
+      "name": "Pingüino saltarrocas oriental",
+      "latin": "Eudyptes filholi",
+      "habitats": [
+        "archipielago",
+        "mar_austral"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iocTaxon": "Eudyptes filholi",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "mar_esp_eudyptes_filholi--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_eunymphicus_cornutus",
+      "name": "Perico cornudo",
+      "latin": "Eunymphicus cornutus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Psittaculidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittaculidae",
+      "iocTaxon": "Eunymphicus cornutus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "gm06_eunymphicus_cornutus--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_falcipennis_canadensis",
+      "name": "Urogallo de Canadá",
+      "latin": "Falcipennis canadensis",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Canachites canadensis",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "na_esp_falcipennis_canadensis--normal.webp"
+      }
+    },
+    {
+      "id": "af_cernicalo_seychelles",
+      "name": "Cernícalo de Seychelles",
+      "latin": "Falco araeus",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Falconiformes",
+      "family": "Falconidae",
+      "iocTaxon": "Falco araeus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "af_cernicalo_seychelles--normal.webp",
+        "albino": "af_cernicalo_seychelles--albino.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0887",
+      "name": "Halcón sacre",
+      "latin": "Falco cherrug",
+      "habitats": [
+        "estepa",
+        "pradera",
+        "montana"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Falconiformes",
+      "family": "Falconidae",
+      "iocTaxon": "Falco cherrug",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "asia_esp_0887--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0647",
+      "name": "Halcón de Eleonor",
+      "latin": "Falco eleonorae",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Falconiformes",
+      "family": "Falconidae",
+      "iocTaxon": "Falco eleonorae",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "eu_esp_0647--normal.webp",
+        "melanico": "eu_esp_0647--melanico.webp"
+      }
+    },
+    {
+      "id": "na_esp_falco_peregrinus",
+      "name": "Halcón peregrino",
+      "latin": "Falco peregrinus",
+      "habitats": [
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Falconiformes",
+      "family": "Falconidae",
+      "iocTaxon": "Falco peregrinus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "na_esp_falco_peregrinus--normal.webp",
+        "albino": "na_esp_falco_peregrinus--albino.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0203",
+      "name": "Halcón gerifalte",
+      "latin": "Falco rusticolus",
+      "habitats": [
+        "pradera",
+        "montana",
+        "tundra",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Falconiformes",
+      "family": "Falconidae",
+      "iocTaxon": "Falco rusticolus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "asia_esp_0203--normal.webp",
+        "melanico": "asia_esp_0203--melanico.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0204",
+      "name": "Cernícalo vulgar",
+      "latin": "Falco tinnunculus",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Falconiformes",
+      "family": "Falconidae",
+      "iocTaxon": "Falco tinnunculus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "eu_esp_0204--normal.webp",
+        "melanico": "eu_esp_0204--melanico.webp"
+      }
+    },
+    {
+      "id": "frailecillo_atlantico",
+      "name": "Frailecillo atlántico",
+      "latin": "Fratercula arctica",
+      "habitats": [
+        "costa",
+        "rio"
+      ],
+      "historicalGroup": "Aves marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Charadriiformes",
+      "family": "Alcidae",
+      "iocTaxon": "Fratercula arctica",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "frailecillo_atlantico--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0209",
+      "name": "Frailecillo corniculado",
+      "latin": "Fratercula corniculata",
+      "habitats": [
+        "costa",
+        "tundra"
+      ],
+      "historicalGroup": "Aves marinas",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Charadriiformes",
+      "family": "Alcidae",
+      "iocTaxon": "Fratercula corniculata",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "asia_esp_0209--normal.webp",
+        "albino": "asia_esp_0209--albino.webp",
+        "melanico": "asia_esp_0209--melanico.webp"
+      }
+    },
+    {
+      "id": "mar_esp_fregata_magnificens",
+      "name": "Fragata magnífica",
+      "latin": "Fregata magnificens",
+      "habitats": [
+        "archipielago",
+        "oceano_abierto"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Suliformes",
+      "family": "Fregatidae",
+      "iocTaxon": "Fregata magnificens",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "mar_esp_fregata_magnificens--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0629",
+      "name": "Pinzón vulgar",
+      "latin": "Fringilla coelebs",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Fringillidae",
+      "iocTaxon": "Fringilla coelebs",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "eu_esp_0629--normal.webp",
+        "male": "eu_esp_0629--male.webp",
+        "female": "eu_esp_0629--female.webp",
+        "melanico": "eu_esp_0629--melanico.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0652",
+      "name": "Focha común",
+      "latin": "Fulica atra",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Gruiformes",
+      "family": "Rallidae",
+      "iocTaxon": "Fulica atra",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "eu_esp_0652--normal.webp",
+        "melanico": "eu_esp_0652--melanico.webp"
+      }
+    },
+    {
+      "id": "oc_esp_gallirallus_australis",
+      "name": "Weka",
+      "latin": "Gallirallus australis",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "humedal"
+      ],
+      "historicalGroup": "Rálidos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Gruiformes",
+      "family": "Rallidae",
+      "iocTaxon": "Gallirallus australis",
+      "placement": "El weka es un rálido forestal terrestre y no volador.",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "oc_esp_gallirallus_australis--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0632",
+      "name": "Arrendajo euroasiático",
+      "latin": "Garrulus glandarius",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Corvidae",
+      "iocTaxon": "Garrulus glandarius",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "eu_esp_0632--normal.webp",
+        "melanico": "eu_esp_0632--melanico.webp"
+      }
+    },
+    {
+      "id": "gm06_gavia_immer",
+      "name": "Colimbo grande",
+      "latin": "Gavia immer",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Gaviidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Gaviiformes",
+      "family": "Gaviidae",
+      "iocTaxon": "Gavia immer",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_gavia_immer--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_geococcyx_californianus",
+      "name": "Correcaminos mayor",
+      "latin": "Geococcyx californianus",
+      "habitats": [
+        "desierto"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Cuculiformes",
+      "family": "Cuculidae",
+      "iocTaxon": "Geococcyx californianus",
+      "placement": "El correcaminos se desplaza y caza principalmente en el suelo.",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "na_esp_geococcyx_californianus--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_geospiza_fortis",
+      "name": "Pinzón terrestre mediano",
+      "latin": "Geospiza fortis",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Thraupidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Thraupidae",
+      "iocTaxon": "Geospiza fortis",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "gm06_geospiza_fortis--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_geranoaetus_melanoleucus",
+      "name": "Águila mora",
+      "latin": "Geranoaetus melanoleucus",
+      "habitats": [
+        "bosque",
+        "montana",
+        "pradera",
+        "selva"
+      ],
+      "historicalGroup": "Rapaces",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Geranoaetus melanoleucus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "sa_esp_geranoaetus_melanoleucus--normal.webp"
+      }
+    },
+    {
+      "id": "af_ibis_eremita",
+      "name": "Ibis eremita",
+      "latin": "Geronticus eremita",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Threskiornithidae",
+      "iocTaxon": "Geronticus eremita",
+      "placement": "El ibis eremita se alimenta principalmente en terrenos abiertos y secos.",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "af_ibis_eremita--normal.webp",
+        "albino": "af_ibis_eremita--albino.webp",
+        "melanico": "af_ibis_eremita--melanico.webp"
+      }
+    },
+    {
+      "id": "af_grulla_carunculada",
+      "name": "Grulla carunculada",
+      "latin": "Grus carunculata",
+      "habitats": [
+        "humedal",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Gruiformes",
+      "family": "Gruidae",
+      "iocTaxon": "Grus carunculata",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_grulla_carunculada--normal.webp",
+        "albino": "af_grulla_carunculada--albino.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0226",
+      "name": "Grulla de coronilla roja",
+      "latin": "Grus japonensis",
+      "habitats": [
+        "rio",
+        "costa"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Gruiformes",
+      "family": "Gruidae",
+      "iocTaxon": "Grus japonensis",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "asia_esp_0226--normal.webp",
+        "melanico": "asia_esp_0226--melanico.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0227",
+      "name": "Grulla de cuello negro",
+      "latin": "Grus nigricollis",
+      "habitats": [
+        "rio"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Gruiformes",
+      "family": "Gruidae",
+      "iocTaxon": "Grus nigricollis",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "asia_esp_0227--normal.webp",
+        "melanico": "asia_esp_0227--melanico.webp"
+      }
+    },
+    {
+      "id": "oc_esp_gymnorhina_tibicen",
+      "name": "Urraca australiana",
+      "latin": "Gymnorhina tibicen",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "historicalGroup": "Aves forestales",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Artamidae",
+      "iocTaxon": "Gymnorhina tibicen",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "oc_esp_gymnorhina_tibicen--normal.webp"
+      }
+    },
+    {
+      "id": "quebrantahuesos",
+      "name": "Quebrantahuesos",
+      "latin": "Gypaetus barbatus",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "montana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Gypaetus barbatus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "quebrantahuesos--normal.webp",
+        "albino": "quebrantahuesos--albino.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_131_gyps_africanus",
+      "name": "Buitre dorsiblanco africano",
+      "latin": "Gyps africanus",
+      "habitats": [
+        "estepa",
+        "pradera"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Gyps africanus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "af_xlsx_131_gyps_africanus--normal.webp",
+        "albino": "af_xlsx_131_gyps_africanus--albino.webp"
+      }
+    },
+    {
+      "id": "buitre_leonado",
+      "name": "Buitre leonado",
+      "latin": "Gyps fulvus",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Gyps fulvus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "buitre_leonado--normal.webp",
+        "albino": "buitre_leonado--albino.webp"
+      }
+    },
+    {
+      "id": "af_ostrero_africano",
+      "name": "Ostrero africano",
+      "latin": "Haematopus moquini",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Charadriiformes",
+      "family": "Haematopodidae",
+      "iocTaxon": "Haematopus moquini",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_ostrero_africano--normal.webp",
+        "albino": "af_ostrero_africano--albino.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0232",
+      "name": "Águila marina europea",
+      "latin": "Haliaeetus albicilla",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Haliaeetus albicilla",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "eu_esp_0232--normal.webp",
+        "melanico": "eu_esp_0232--melanico.webp"
+      }
+    },
+    {
+      "id": "na_esp_haliaeetus_leucocephalus",
+      "name": "Águila calva",
+      "latin": "Haliaeetus leucocephalus",
+      "habitats": [
+        "rio",
+        "costa",
+        "bosque"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Haliaeetus leucocephalus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "na_esp_haliaeetus_leucocephalus--normal.webp",
+        "albino": "na_esp_haliaeetus_leucocephalus--albino.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0234",
+      "name": "Águila marina de Steller",
+      "latin": "Haliaeetus pelagicus",
+      "habitats": [
+        "pradera",
+        "montana",
+        "tundra",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Haliaeetus pelagicus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "asia_esp_0234--normal.webp",
+        "melanico": "asia_esp_0234--melanico.webp"
+      }
+    },
+    {
+      "id": "af_fosa_ave",
+      "name": "Águila pescadora de Madagascar",
+      "latin": "Haliaeetus vociferoides",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Icthyophaga vociferoides",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "af_fosa_ave--normal.webp",
+        "albino": "af_fosa_ave--albino.webp",
+        "melanico": "af_fosa_ave--melanico.webp"
+      }
+    },
+    {
+      "id": "sa_esp_harpia_harpyja",
+      "name": "Águila harpía",
+      "latin": "Harpia harpyja",
+      "habitats": [
+        "selva"
+      ],
+      "historicalGroup": "Rapaces",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Harpia harpyja",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "sa_esp_harpia_harpyja--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_harpyopsis_novaeguineae",
+      "name": "Águila de Nueva Guinea",
+      "latin": "Harpyopsis novaeguineae",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "montana"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Harpyopsis novaeguineae",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "oc_esp_harpyopsis_novaeguineae--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_hemiphaga_novaeseelandiae",
+      "name": "Kererū",
+      "latin": "Hemiphaga novaeseelandiae",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "historicalGroup": "Aves forestales",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Columbiformes",
+      "family": "Columbidae",
+      "iocTaxon": "Hemiphaga novaeseelandiae",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_hemiphaga_novaeseelandiae--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_histrionicus_histrionicus",
+      "name": "Pato arlequín",
+      "latin": "Histrionicus histrionicus",
+      "habitats": [
+        "rio",
+        "costa"
+      ],
+      "historicalGroup": "Anatidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Histrionicus histrionicus",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_histrionicus_histrionicus--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_hylocichla_mustelina",
+      "name": "Zorzal maculado",
+      "latin": "Hylocichla mustelina",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Turdidae",
+      "iocTaxon": "Hylocichla mustelina",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "na_esp_hylocichla_mustelina--normal.webp"
+      }
+    },
+    {
+      "id": "af_aguila_pescadora",
+      "name": "Pigargo vocinglero",
+      "latin": "Icthyophaga vocifer",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Icthyophaga vocifer",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "af_aguila_pescadora--normal.webp",
+        "albino": "af_aguila_pescadora--albino.webp",
+        "melanico": "af_aguila_pescadora--melanico.webp"
+      }
+    },
+    {
+      "id": "sa_esp_jabiru_mycteria",
+      "name": "Jabirú",
+      "latin": "Jabiru mycteria",
+      "habitats": [
+        "humedal",
+        "rio"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Ciconiiformes",
+      "family": "Ciconiidae",
+      "iocTaxon": "Jabiru mycteria",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "sa_esp_jabiru_mycteria--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_jacana_jacana",
+      "name": "Jacana común",
+      "latin": "Jacana jacana",
+      "habitats": [
+        "humedal",
+        "rio"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Charadriiformes",
+      "family": "Jacanidae",
+      "iocTaxon": "Jacana jacana",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "sa_esp_jacana_jacana--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0267",
+      "name": "Lagópodo común",
+      "latin": "Lagopus lagopus",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "montana",
+        "tundra"
+      ],
+      "historicalGroup": "Galliformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Lagopus lagopus",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "eu_esp_0267--normal.webp"
+      }
+    },
+    {
+      "id": "perdiz_nival",
+      "name": "Perdiz nival",
+      "latin": "Lagopus muta",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "montana",
+        "tundra"
+      ],
+      "historicalGroup": "Galliformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Lagopus muta",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "perdiz_nival--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_larosterna_inca",
+      "name": "Gaviotín inca",
+      "latin": "Larosterna inca",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Laridae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Charadriiformes",
+      "family": "Laridae",
+      "iocTaxon": "Larosterna inca",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_larosterna_inca--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0877",
+      "name": "Petirrojo japonés",
+      "latin": "Larvivora akahige",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Muscicapidae",
+      "iocTaxon": "Larvivora akahige",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "asia_esp_0877--normal.webp",
+        "albino": "asia_esp_0877--albino.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0863",
+      "name": "Perdiz de las nieves del Himalaya",
+      "latin": "Lerwa lerwa",
+      "habitats": [
+        "bosque",
+        "montana",
+        "pradera",
+        "tundra"
+      ],
+      "historicalGroup": "Galliformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Lerwa lerwa",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "asia_esp_0863--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_leucocarbo_bougainvilliorum",
+      "name": "Cormorán guanay",
+      "latin": "Leucocarbo bougainvilliorum",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Phalacrocoracidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Suliformes",
+      "family": "Phalacrocoracidae",
+      "iocTaxon": "Leucocarbo bougainvilliorum",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_leucocarbo_bougainvilliorum--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0287",
+      "name": "Grulla siberiana",
+      "latin": "Leucogeranus leucogeranus",
+      "habitats": [
+        "rio",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Gruiformes",
+      "family": "Gruidae",
+      "iocTaxon": "Leucogeranus leucogeranus",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "asia_esp_0287--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0294",
+      "name": "Monal del Himalaya",
+      "latin": "Lophophorus impejanus",
+      "habitats": [
+        "bosque",
+        "montana",
+        "pradera",
+        "tundra"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Lophophorus impejanus",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "asia_esp_0294--normal.webp",
+        "male": "asia_esp_0294--male.webp",
+        "female": "asia_esp_0294--female.webp",
+        "melanico": "asia_esp_0294--melanico.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0864",
+      "name": "Faisán monal chino",
+      "latin": "Lophophorus lhuysii",
+      "habitats": [
+        "bosque",
+        "montana",
+        "pradera",
+        "tundra"
+      ],
+      "historicalGroup": "Galliformes",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Lophophorus lhuysii",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "asia_esp_0864--normal.webp",
+        "male": "asia_esp_0864--male.webp",
+        "female": "asia_esp_0864--female.webp",
+        "melanico": "asia_esp_0864--melanico.webp"
+      }
+    },
+    {
+      "id": "oc_esp_lophorina_superba",
+      "name": "Ave del paraíso soberbia",
+      "latin": "Lophorina superba",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Aves del paraíso",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Paradisaeidae",
+      "iocTaxon": "Lophorina superba",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "oc_esp_lophorina_superba--normal.webp",
+        "male": "oc_esp_lophorina_superba--male.webp",
+        "female": "oc_esp_lophorina_superba--female.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0296",
+      "name": "Faisán plateado",
+      "latin": "Lophura nycthemera",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Galliformes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Lophura nycthemera",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "asia_esp_0296--normal.webp",
+        "male": "asia_esp_0296--male.webp",
+        "female": "asia_esp_0296--female.webp",
+        "albino": "asia_esp_0296--albino.webp"
+      }
+    },
+    {
+      "id": "gm06_lorius_garrulus",
+      "name": "Lori de las Molucas",
+      "latin": "Lorius garrulus",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "historicalGroup": "Psittaculidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittaculidae",
+      "iocTaxon": "Lorius garrulus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "gm06_lorius_garrulus--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0880",
+      "name": "Gallo lira",
+      "latin": "Lyrurus tetrix",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Lyrurus tetrix",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "asia_esp_0880--normal.webp",
+        "male": "asia_esp_0880--male.webp",
+        "female": "asia_esp_0880--female.webp",
+        "albino": "asia_esp_0880--albino.webp"
+      }
+    },
+    {
+      "id": "gm06_macrocephalon_maleo",
+      "name": "Maleo",
+      "latin": "Macrocephalon maleo",
+      "habitats": [
+        "bosque",
+        "costa"
+      ],
+      "historicalGroup": "Megapodiidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Megapodiidae",
+      "iocTaxon": "Macrocephalon maleo",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "gm06_macrocephalon_maleo--normal.webp"
+      }
+    },
+    {
+      "id": "mar_esp_macronectes_giganteus",
+      "name": "Petrel gigante austral",
+      "latin": "Macronectes giganteus",
+      "habitats": [
+        "archipielago",
+        "mar_austral"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Procellariiformes",
+      "family": "Procellariidae",
+      "iocTaxon": "Macronectes giganteus",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "mar_esp_macronectes_giganteus--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_megadyptes_antipodes",
+      "name": "Pingüino de ojos amarillos",
+      "latin": "Megadyptes antipodes",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Pingüinos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iocTaxon": "Megadyptes antipodes",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "oc_esp_megadyptes_antipodes--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_meleagris_gallopavo",
+      "name": "Guajolote silvestre",
+      "latin": "Meleagris gallopavo",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Meleagris gallopavo",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "na_esp_meleagris_gallopavo--normal.webp",
+        "male": "na_esp_meleagris_gallopavo--male.webp",
+        "female": "na_esp_meleagris_gallopavo--female.webp",
+        "albino": "na_esp_meleagris_gallopavo--albino.webp"
+      }
+    },
+    {
+      "id": "na_esp_meleagris_ocellata",
+      "name": "Pavo ocelado",
+      "latin": "Meleagris ocellata",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Meleagris ocellata",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "na_esp_meleagris_ocellata--normal.webp",
+        "male": "na_esp_meleagris_ocellata--male.webp",
+        "female": "na_esp_meleagris_ocellata--female.webp"
+      }
+    },
+    {
+      "id": "gm06_mellisuga_helenae",
+      "name": "Colibrí abeja",
+      "latin": "Mellisuga helenae",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "historicalGroup": "Trochilidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Apodiformes",
+      "family": "Trochilidae",
+      "iocTaxon": "Mellisuga helenae",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "gm06_mellisuga_helenae--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_melopsittacus_undulatus",
+      "name": "Periquito australiano",
+      "latin": "Melopsittacus undulatus",
+      "habitats": [
+        "pradera",
+        "desierto",
+        "sabana"
+      ],
+      "historicalGroup": "Psitaciformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittaculidae",
+      "iocTaxon": "Melopsittacus undulatus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_melopsittacus_undulatus--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_menura_novaehollandiae",
+      "name": "Ave lira soberbia",
+      "latin": "Menura novaehollandiae",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "historicalGroup": "Aves forestales",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Menuridae",
+      "iocTaxon": "Menura novaehollandiae",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "oc_esp_menura_novaehollandiae--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0635",
+      "name": "Abejaruco europeo",
+      "latin": "Merops apiaster",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Coraciiformes",
+      "family": "Meropidae",
+      "iocTaxon": "Merops apiaster",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "eu_esp_0635--normal.webp",
+        "melanico": "eu_esp_0635--melanico.webp"
+      }
+    },
+    {
+      "id": "af_abejaruco_carmin",
+      "name": "Abejaruco carmín",
+      "latin": "Merops nubicus",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "rio"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Coraciiformes",
+      "family": "Meropidae",
+      "iocTaxon": "Merops nubicus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "af_abejaruco_carmin--normal.webp",
+        "albino": "af_abejaruco_carmin--albino.webp",
+        "melanico": "af_abejaruco_carmin--melanico.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0873",
+      "name": "Abejaruco verde",
+      "latin": "Merops orientalis",
+      "habitats": [
+        "estepa",
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Coraciiformes",
+      "family": "Meropidae",
+      "iocTaxon": "Merops orientalis",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "asia_esp_0873--normal.webp",
+        "albino": "asia_esp_0873--albino.webp"
+      }
+    },
+    {
+      "id": "na_esp_micrathene_whitneyi",
+      "name": "Tecolote enano",
+      "latin": "Micrathene whitneyi",
+      "habitats": [
+        "desierto"
+      ],
+      "historicalGroup": "Búhos y lechuzas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "iocTaxon": "Micrathene whitneyi",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "na_esp_micrathene_whitneyi--normal.webp"
+      }
+    },
+    {
+      "id": "milano_real",
+      "name": "Milano real",
+      "latin": "Milvus milvus",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Milvus milvus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "milano_real--normal.webp",
+        "albino": "milano_real--albino.webp",
+        "melanico": "milano_real--melanico.webp"
+      }
+    },
+    {
+      "id": "mar_esp_morus_bassanus",
+      "name": "Alcatraz atlántico",
+      "latin": "Morus bassanus",
+      "habitats": [
+        "archipielago",
+        "oceano_abierto"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Suliformes",
+      "family": "Sulidae",
+      "iocTaxon": "Morus bassanus",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "mar_esp_morus_bassanus--normal.webp"
+      }
+    },
+    {
+      "id": "af_alcatraz_cabo",
+      "name": "Alcatraz del Cabo",
+      "latin": "Morus capensis",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Aves marinas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Suliformes",
+      "family": "Sulidae",
+      "iocTaxon": "Morus capensis",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_alcatraz_cabo--normal.webp",
+        "albino": "af_alcatraz_cabo--albino.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_131_musophaga_violacea",
+      "name": "Turaco violeta",
+      "latin": "Musophaga violacea",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Musophagiformes",
+      "family": "Musophagidae",
+      "iocTaxon": "Tauraco violaceus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "af_xlsx_131_musophaga_violacea--normal.webp",
+        "albino": "af_xlsx_131_musophaga_violacea--albino.webp"
+      }
+    },
+    {
+      "id": "gm06_nannopterum_harrisi",
+      "name": "Cormorán no volador",
+      "latin": "Nannopterum harrisi",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Phalacrocoracidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Suliformes",
+      "family": "Phalacrocoracidae",
+      "iocTaxon": "Nannopterum harrisi",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_nannopterum_harrisi--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_neophema_chrysogaster",
+      "name": "Periquito de vientre naranja",
+      "latin": "Neophema chrysogaster",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "mediterraneo"
+      ],
+      "historicalGroup": "Psitaciformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittaculidae",
+      "iocTaxon": "Neophema chrysogaster",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_neophema_chrysogaster--normal.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_131_neophron_percnopterus",
+      "name": "Alimoche común",
+      "latin": "Neophron percnopterus",
+      "habitats": [
+        "desierto",
+        "estepa",
+        "montana"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Neophron percnopterus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "af_xlsx_131_neophron_percnopterus--normal.webp",
+        "albino": "af_xlsx_131_neophron_percnopterus--albino.webp"
+      }
+    },
+    {
+      "id": "oc_esp_nestor_meridionalis",
+      "name": "Kākā",
+      "latin": "Nestor meridionalis",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "mediterraneo"
+      ],
+      "historicalGroup": "Psitaciformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Strigopidae",
+      "iocTaxon": "Nestor meridionalis",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_nestor_meridionalis--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_nestor_notabilis",
+      "name": "Kea",
+      "latin": "Nestor notabilis",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "mediterraneo"
+      ],
+      "historicalGroup": "Psitaciformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Strigopidae",
+      "iocTaxon": "Nestor notabilis",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_nestor_notabilis--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_ninox_strenua",
+      "name": "Búho poderoso",
+      "latin": "Ninox strenua",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Búhos y lechuzas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "iocTaxon": "Ninox strenua",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "oc_esp_ninox_strenua--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_nymphicus_hollandicus",
+      "name": "Ninfa",
+      "latin": "Nymphicus hollandicus",
+      "habitats": [
+        "pradera",
+        "sabana",
+        "desierto"
+      ],
+      "historicalGroup": "Psitaciformes",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Cacatuidae",
+      "iocTaxon": "Nymphicus hollandicus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_nymphicus_hollandicus--normal.webp",
+        "male": "oc_esp_nymphicus_hollandicus--male.webp",
+        "female": "oc_esp_nymphicus_hollandicus--female.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0881",
+      "name": "Collalba del desierto",
+      "latin": "Oenanthe deserti",
+      "habitats": [
+        "bosque",
+        "montana",
+        "pradera",
+        "tundra"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Muscicapidae",
+      "iocTaxon": "Oenanthe deserti",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "asia_esp_0881--normal.webp",
+        "melanico": "asia_esp_0881--melanico.webp"
+      }
+    },
+    {
+      "id": "sa_esp_opisthocomus_hoazin",
+      "name": "Hoacín",
+      "latin": "Opisthocomus hoazin",
+      "habitats": [
+        "selva",
+        "rio"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Opisthocomiformes",
+      "family": "Opisthocomidae",
+      "iocTaxon": "Opisthocomus hoazin",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_opisthocomus_hoazin--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0638",
+      "name": "Oropéndola europea",
+      "latin": "Oriolus oriolus",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Oriolidae",
+      "iocTaxon": "Oriolus oriolus",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "eu_esp_0638--normal.webp",
+        "male": "eu_esp_0638--male.webp",
+        "female": "eu_esp_0638--female.webp",
+        "melanico": "eu_esp_0638--melanico.webp"
+      }
+    },
+    {
+      "id": "polar_esp_pagodroma_nivea",
+      "name": "Petrel de las nieves",
+      "latin": "Pagodroma nivea",
+      "habitats": [
+        "hielo_interior",
+        "costa_antartica",
+        "banquisa_antartica"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Procellariiformes",
+      "family": "Procellariidae",
+      "iocTaxon": "Pagodroma nivea",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "polar_esp_pagodroma_nivea--normal.webp"
+      }
+    },
+    {
+      "id": "polar_esp_pagophila_eburnea",
+      "name": "Gaviota marfil",
+      "latin": "Pagophila eburnea",
+      "habitats": [
+        "banquisa_artica",
+        "agua_polar"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Charadriiformes",
+      "family": "Laridae",
+      "iocTaxon": "Pagophila eburnea",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "polar_esp_pagophila_eburnea--normal.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_131_pandion_haliaetus",
+      "name": "Águila pescadora",
+      "latin": "Pandion haliaetus",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Pandionidae",
+      "iocTaxon": "Pandion haliaetus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "af_xlsx_131_pandion_haliaetus--normal.webp",
+        "albino": "af_xlsx_131_pandion_haliaetus--albino.webp"
+      }
+    },
+    {
+      "id": "oc_esp_paradisaea_apoda",
+      "name": "Ave del paraíso mayor",
+      "latin": "Paradisaea apoda",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Aves del paraíso",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Paradisaeidae",
+      "iocTaxon": "Paradisaea apoda",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "oc_esp_paradisaea_apoda--normal.webp",
+        "male": "oc_esp_paradisaea_apoda--male.webp",
+        "female": "oc_esp_paradisaea_apoda--female.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0630",
+      "name": "Carbonero común",
+      "latin": "Parus major",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Paridae",
+      "iocTaxon": "Parus major",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "eu_esp_0630--normal.webp",
+        "melanico": "eu_esp_0630--melanico.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0410",
+      "name": "Pavo real común",
+      "latin": "Pavo cristatus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Pavo cristatus",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "asia_esp_0410--normal.webp",
+        "male": "asia_esp_0410--male.webp",
+        "female": "asia_esp_0410--female.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0867",
+      "name": "Pavo verde",
+      "latin": "Pavo muticus",
+      "habitats": [
+        "selva"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Pavo muticus",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "asia_esp_0867--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_pelecanus_conspicillatus",
+      "name": "Pelícano australiano",
+      "latin": "Pelecanus conspicillatus",
+      "habitats": [
+        "costa",
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Pelícanos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Pelecanidae",
+      "iocTaxon": "Pelecanus conspicillatus",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "oc_esp_pelecanus_conspicillatus--normal.webp"
+      }
+    },
+    {
+      "id": "pelicano_cenudo",
+      "name": "Pelícano ceñudo",
+      "latin": "Pelecanus crispus",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Pelecanidae",
+      "iocTaxon": "Pelecanus crispus",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "pelicano_cenudo--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_pelecanus_erythrorhynchos",
+      "name": "Pelícano blanco americano",
+      "latin": "Pelecanus erythrorhynchos",
+      "habitats": [
+        "costa",
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Pelecanidae",
+      "iocTaxon": "Pelecanus erythrorhynchos",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "na_esp_pelecanus_erythrorhynchos--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_pelecanus_occidentalis",
+      "name": "Pelícano pardo",
+      "latin": "Pelecanus occidentalis",
+      "habitats": [
+        "costa",
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Pelecanidae",
+      "iocTaxon": "Pelecanus occidentalis",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "na_esp_pelecanus_occidentalis--normal.webp"
+      }
+    },
+    {
+      "id": "af_pelicano_blanco",
+      "name": "Pelícano blanco",
+      "latin": "Pelecanus onocrotalus",
+      "habitats": [
+        "humedal",
+        "rio"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Pelecanidae",
+      "iocTaxon": "Pelecanus onocrotalus",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_pelicano_blanco--normal.webp",
+        "albino": "af_pelicano_blanco--albino.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0888",
+      "name": "Pelícano blanco oriental",
+      "latin": "Pelecanus philippensis",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Pelecanidae",
+      "iocTaxon": "Pelecanus philippensis",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "asia_esp_0888--normal.webp",
+        "melanico": "asia_esp_0888--melanico.webp"
+      }
+    },
+    {
+      "id": "gm06_pelecanus_thagus",
+      "name": "Pelícano peruano",
+      "latin": "Pelecanus thagus",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Pelecanidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Pelecanidae",
+      "iocTaxon": "Pelecanus thagus",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_pelecanus_thagus--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_penelope_jacquacu",
+      "name": "Pava amazónica",
+      "latin": "Penelope jacquacu",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Cracidae",
+      "iocTaxon": "Penelope jacquacu",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "sa_esp_penelope_jacquacu--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_perisoreus_canadensis",
+      "name": "Arrendajo canadiense",
+      "latin": "Perisoreus canadensis",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Corvidae",
+      "iocTaxon": "Perisoreus canadensis",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "na_esp_perisoreus_canadensis--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0861",
+      "name": "Arrendajo de Siberia",
+      "latin": "Perisoreus infaustus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Corvidae",
+      "iocTaxon": "Perisoreus infaustus",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "asia_esp_0861--normal.webp",
+        "albino": "asia_esp_0861--albino.webp"
+      }
+    },
+    {
+      "id": "oc_esp_petroica_australis",
+      "name": "Petirrojo de Nueva Zelanda",
+      "latin": "Petroica australis",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "historicalGroup": "Aves forestales",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Petroicidae",
+      "iocTaxon": "Petroica australis",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "oc_esp_petroica_australis--normal.webp"
+      }
+    },
+    {
+      "id": "af_cormoran_cabo",
+      "name": "Cormorán del Cabo",
+      "latin": "Phalacrocorax capensis",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Aves marinas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Suliformes",
+      "family": "Phalacrocoracidae",
+      "iocTaxon": "Phalacrocorax capensis",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_cormoran_cabo--normal.webp",
+        "albino": "af_cormoran_cabo--albino.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0654",
+      "name": "Cormorán grande",
+      "latin": "Phalacrocorax carbo",
+      "habitats": [
+        "costa",
+        "rio"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Suliformes",
+      "family": "Phalacrocoracidae",
+      "iocTaxon": "Phalacrocorax carbo",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "eu_esp_0654--normal.webp",
+        "melanico": "eu_esp_0654--melanico.webp"
+      }
+    },
+    {
+      "id": "na_esp_pharomachrus_mocinno",
+      "name": "Quetzal resplandeciente",
+      "latin": "Pharomachrus mocinno",
+      "habitats": [
+        "selva",
+        "bosque",
+        "montana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Trogoniformes",
+      "family": "Trogonidae",
+      "iocTaxon": "Pharomachrus mocinno",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "na_esp_pharomachrus_mocinno--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0422",
+      "name": "Faisán común",
+      "latin": "Phasianus colchicus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Galliformes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Phasianus colchicus",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "asia_esp_0422--normal.webp",
+        "male": "asia_esp_0422--male.webp",
+        "female": "asia_esp_0422--female.webp",
+        "albino": "asia_esp_0422--albino.webp"
+      }
+    },
+    {
+      "id": "mar_esp_phoebastria_immutabilis",
+      "name": "Albatros de Laysan",
+      "latin": "Phoebastria immutabilis",
+      "habitats": [
+        "archipielago",
+        "oceano_abierto"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Procellariiformes",
+      "family": "Diomedeidae",
+      "iocTaxon": "Phoebastria immutabilis",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "mar_esp_phoebastria_immutabilis--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_phoebastria_irrorata",
+      "name": "Albatros de Galápagos",
+      "latin": "Phoebastria irrorata",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Diomedeidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Procellariiformes",
+      "family": "Diomedeidae",
+      "iocTaxon": "Phoebastria irrorata",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_phoebastria_irrorata--normal.webp"
+      }
+    },
+    {
+      "id": "af_flamenco_enano",
+      "name": "Flamenco enano",
+      "latin": "Phoeniconaias minor",
+      "habitats": [
+        "humedal",
+        "rio"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Phoenicopteriformes",
+      "family": "Phoenicopteridae",
+      "iocTaxon": "Phoeniconaias minor",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_flamenco_enano--normal.webp",
+        "albino": "af_flamenco_enano--albino.webp"
+      }
+    },
+    {
+      "id": "sa_esp_phoenicoparrus_andinus",
+      "name": "Flamenco andino",
+      "latin": "Phoenicoparrus andinus",
+      "habitats": [
+        "humedal"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Phoenicopteriformes",
+      "family": "Phoenicopteridae",
+      "iocTaxon": "Phoenicoparrus andinus",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "sa_esp_phoenicoparrus_andinus--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_phoenicopterus_chilensis",
+      "name": "Flamenco chileno",
+      "latin": "Phoenicopterus chilensis",
+      "habitats": [
+        "humedal"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Phoenicopteriformes",
+      "family": "Phoenicopteridae",
+      "iocTaxon": "Phoenicopterus chilensis",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "sa_esp_phoenicopterus_chilensis--normal.webp"
+      }
+    },
+    {
+      "id": "flamenco_comun",
+      "name": "Flamenco común",
+      "latin": "Phoenicopterus roseus",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Phoenicopteriformes",
+      "family": "Phoenicopteridae",
+      "iocTaxon": "Phoenicopterus roseus",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "flamenco_comun--normal.webp",
+        "albino": "flamenco_comun--albino.webp"
+      }
+    },
+    {
+      "id": "sa_esp_phoenicopterus_ruber",
+      "name": "Flamenco del Caribe",
+      "latin": "Phoenicopterus ruber",
+      "habitats": [
+        "humedal",
+        "costa"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Phoenicopteriformes",
+      "family": "Phoenicopteridae",
+      "iocTaxon": "Phoenicopterus ruber",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "sa_esp_phoenicopterus_ruber--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_phylidonyris_novaehollandiae",
+      "name": "Mielero de Nueva Holanda",
+      "latin": "Phylidonyris novaehollandiae",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "historicalGroup": "Aves forestales",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Meliphagidae",
+      "iocTaxon": "Phylidonyris novaehollandiae",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "oc_esp_phylidonyris_novaehollandiae--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_pica_hudsonia",
+      "name": "Urraca de pico negro",
+      "latin": "Pica hudsonia",
+      "habitats": [
+        "pradera",
+        "montana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Corvidae",
+      "iocTaxon": "Pica hudsonia",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "na_esp_pica_hudsonia--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0433",
+      "name": "Urraca oriental",
+      "latin": "Pica serica",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Corvidae",
+      "iocTaxon": "Pica serica",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "asia_esp_0433--normal.webp"
+      }
+    },
+    {
+      "id": "af_picatartes_gris",
+      "name": "Picatartes de cuello gris",
+      "latin": "Picathartes oreas",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Picathartidae",
+      "iocTaxon": "Picathartes oreas",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "af_picatartes_gris--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0883",
+      "name": "Águila de las Filipinas",
+      "latin": "Pithecophaga jefferyi",
+      "habitats": [
+        "selva"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Pithecophaga jefferyi",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "asia_esp_0883--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_platalea_ajaja",
+      "name": "Espátula rosada",
+      "latin": "Platalea ajaja",
+      "habitats": [
+        "humedal",
+        "costa"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Threskiornithidae",
+      "iocTaxon": "Platalea ajaja",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "na_esp_platalea_ajaja--normal.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_131_ploceus_cucullatus",
+      "name": "Tejedor común",
+      "latin": "Ploceus cucullatus",
+      "habitats": [
+        "bosque",
+        "humedal",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Ploceidae",
+      "iocTaxon": "Ploceus cucullatus",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "af_xlsx_131_ploceus_cucullatus--normal.webp",
+        "albino": "af_xlsx_131_ploceus_cucullatus--albino.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0650",
+      "name": "Somormujo lavanco",
+      "latin": "Podiceps cristatus",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Podicipediformes",
+      "family": "Podicipedidae",
+      "iocTaxon": "Podiceps cristatus",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "eu_esp_0650--normal.webp",
+        "melanico": "eu_esp_0650--melanico.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_131_polemaetus_bellicosus",
+      "name": "Águila marcial",
+      "latin": "Polemaetus bellicosus",
+      "habitats": [
+        "pradera",
+        "estepa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Polemaetus bellicosus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "af_xlsx_131_polemaetus_bellicosus--normal.webp",
+        "albino": "af_xlsx_131_polemaetus_bellicosus--albino.webp"
+      }
+    },
+    {
+      "id": "oc_esp_porphyrio_hochstetteri",
+      "name": "Takahé",
+      "latin": "Porphyrio hochstetteri",
+      "habitats": [
+        "pradera",
+        "humedal"
+      ],
+      "historicalGroup": "Rálidos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Gruiformes",
+      "family": "Rallidae",
+      "iocTaxon": "Porphyrio hochstetteri",
+      "placement": "El takahē es un rálido no volador de pastizal.",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "oc_esp_porphyrio_hochstetteri--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_primolius_couloni",
+      "name": "Guacamayo cabeza azul",
+      "latin": "Primolius couloni",
+      "habitats": [
+        "selva",
+        "bosque",
+        "sabana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "iocTaxon": "Primolius couloni",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_primolius_couloni--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_priotelus_temnurus",
+      "name": "Tocororo",
+      "latin": "Priotelus temnurus",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "historicalGroup": "Trogonidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Trogoniformes",
+      "family": "Trogonidae",
+      "iocTaxon": "Priotelus temnurus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "gm06_priotelus_temnurus--normal.webp"
+      }
+    },
+    {
+      "id": "af_loro_gris",
+      "name": "Loro gris africano",
+      "latin": "Psittacus erithacus",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittacidae",
+      "iocTaxon": "Psittacus erithacus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "af_loro_gris--normal.webp",
+        "albino": "af_loro_gris--albino.webp",
+        "melanico": "af_loro_gris--melanico.webp"
+      }
+    },
+    {
+      "id": "sa_esp_pteroglossus_torquatus",
+      "name": "Arasarí de collar",
+      "latin": "Pteroglossus torquatus",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Piciformes",
+      "family": "Ramphastidae",
+      "iocTaxon": "Pteroglossus torquatus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_pteroglossus_torquatus--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_pteroptochos_tarnii",
+      "name": "Huet-huet del sur",
+      "latin": "Pteroptochos tarnii",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Rhinocryptidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Rhinocryptidae",
+      "iocTaxon": "Pteroptochos tarnii",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "gm06_pteroptochos_tarnii--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_ptilonorhynchus_violaceus",
+      "name": "Ave jardinera satinada",
+      "latin": "Ptilonorhynchus violaceus",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "historicalGroup": "Aves forestales",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Ptilonorhynchidae",
+      "iocTaxon": "Ptilonorhynchus violaceus",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "oc_esp_ptilonorhynchus_violaceus--normal.webp",
+        "male": "oc_esp_ptilonorhynchus_violaceus--male.webp",
+        "female": "oc_esp_ptilonorhynchus_violaceus--female.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0874",
+      "name": "Bubul",
+      "latin": "Pycnonotus cafer",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Pycnonotidae",
+      "iocTaxon": "Pycnonotus cafer",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "asia_esp_0874--normal.webp",
+        "albino": "asia_esp_0874--albino.webp"
+      }
+    },
+    {
+      "id": "polar_esp_pygoscelis_adeliae",
+      "name": "Pingüino de Adelia",
+      "latin": "Pygoscelis adeliae",
+      "habitats": [
+        "costa_antartica",
+        "agua_polar"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iocTaxon": "Pygoscelis adeliae",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "polar_esp_pygoscelis_adeliae--normal.webp"
+      }
+    },
+    {
+      "id": "mar_esp_pygoscelis_antarcticus",
+      "name": "Pingüino barbijo",
+      "latin": "Pygoscelis antarcticus",
+      "habitats": [
+        "archipielago",
+        "mar_austral"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iocTaxon": "Pygoscelis antarcticus",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "mar_esp_pygoscelis_antarcticus--normal.webp"
+      }
+    },
+    {
+      "id": "mar_esp_pygoscelis_papua",
+      "name": "Pingüino papúa",
+      "latin": "Pygoscelis papua",
+      "habitats": [
+        "archipielago",
+        "mar_austral"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iocTaxon": "Pygoscelis papua",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "mar_esp_pygoscelis_papua--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0639",
+      "name": "Camachuelo común",
+      "latin": "Pyrrhula pyrrhula",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Fringillidae",
+      "iocTaxon": "Pyrrhula pyrrhula",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "eu_esp_0639--normal.webp",
+        "male": "eu_esp_0639--male.webp",
+        "female": "eu_esp_0639--female.webp",
+        "melanico": "eu_esp_0639--melanico.webp"
+      }
+    },
+    {
+      "id": "na_esp_ramphastos_sulfuratus",
+      "name": "Tucán pico iris",
+      "latin": "Ramphastos sulfuratus",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Piciformes",
+      "family": "Ramphastidae",
+      "iocTaxon": "Ramphastos sulfuratus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "na_esp_ramphastos_sulfuratus--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_ramphastos_toco",
+      "name": "Tucán toco",
+      "latin": "Ramphastos toco",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Piciformes",
+      "family": "Ramphastidae",
+      "iocTaxon": "Ramphastos toco",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_ramphastos_toco--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_ramphastos_tucanus",
+      "name": "Tucán de garganta blanca",
+      "latin": "Ramphastos tucanus",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Piciformes",
+      "family": "Ramphastidae",
+      "iocTaxon": "Ramphastos tucanus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_ramphastos_tucanus--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_rhea_americana",
+      "name": "Ñandú",
+      "latin": "Rhea americana",
+      "habitats": [
+        "pradera",
+        "estepa",
+        "sabana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Rheiformes",
+      "family": "Rheidae",
+      "iocTaxon": "Rhea americana",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "sa_esp_rhea_americana--normal.webp",
+        "albino": "sa_esp_rhea_americana--albino.webp"
+      }
+    },
+    {
+      "id": "sa_esp_rhea_pennata",
+      "name": "Suri",
+      "latin": "Rhea pennata",
+      "habitats": [
+        "pradera",
+        "estepa",
+        "sabana"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Rheiformes",
+      "family": "Rheidae",
+      "iocTaxon": "Rhea pennata",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "sa_esp_rhea_pennata--normal.webp",
+        "albino": "sa_esp_rhea_pennata--albino.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0869",
+      "name": "Cálao de casco",
+      "latin": "Rhinoplax vigil",
+      "habitats": [
+        "selva"
+      ],
+      "historicalGroup": "Cálaos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Bucerotiformes",
+      "family": "Bucerotidae",
+      "iocTaxon": "Rhinoplax vigil",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "asia_esp_0869--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_rhipidura_fuliginosa",
+      "name": "Cola de abanico de Nueva Zelanda",
+      "latin": "Rhipidura fuliginosa",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera"
+      ],
+      "historicalGroup": "Aves forestales",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Rhipiduridae",
+      "iocTaxon": "Rhipidura fuliginosa",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "oc_esp_rhipidura_fuliginosa--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_rhynochetos_jubatus",
+      "name": "Kagú",
+      "latin": "Rhynochetos jubatus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Rhynochetidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Eurypygiformes",
+      "family": "Rhynochetidae",
+      "iocTaxon": "Rhynochetos jubatus",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "gm06_rhynochetos_jubatus--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_rupicola_peruvianus",
+      "name": "Gallito de las rocas andino",
+      "latin": "Rupicola peruvianus",
+      "habitats": [
+        "montana",
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Cotingidae",
+      "iocTaxon": "Rupicola peruvianus",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "sa_esp_rupicola_peruvianus--normal.webp",
+        "male": "sa_esp_rupicola_peruvianus--male.webp",
+        "female": "sa_esp_rupicola_peruvianus--female.webp"
+      }
+    },
+    {
+      "id": "af_secretario",
+      "name": "Ave secretaria",
+      "latin": "Sagittarius serpentarius",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Sagittariidae",
+      "iocTaxon": "Sagittarius serpentarius",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "af_secretario--normal.webp",
+        "albino": "af_secretario--albino.webp",
+        "melanico": "af_secretario--melanico.webp"
+      }
+    },
+    {
+      "id": "sa_esp_scelorchilus_rubecula",
+      "name": "Chucao",
+      "latin": "Scelorchilus rubecula",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Rhinocryptidae",
+      "iocTaxon": "Scelorchilus rubecula",
+      "placement": "La lámina científica del chucao se adelanta a V4.7.3.",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "sa_esp_scelorchilus_rubecula--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_seleucidis_melanoleucus",
+      "name": "Ave del paraíso saxícola",
+      "latin": "Seleucidis melanoleucus",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Aves del paraíso",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Paradisaeidae",
+      "iocTaxon": "Seleucidis melanoleucus",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "oc_esp_seleucidis_melanoleucus--normal.webp",
+        "male": "oc_esp_seleucidis_melanoleucus--male.webp",
+        "female": "oc_esp_seleucidis_melanoleucus--female.webp"
+      }
+    },
+    {
+      "id": "polar_esp_somateria_mollissima",
+      "name": "Pato eider común",
+      "latin": "Somateria mollissima",
+      "habitats": [
+        "banquisa_artica",
+        "agua_polar"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Somateria mollissima",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "polar_esp_somateria_mollissima--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0649",
+      "name": "Pato cuchara europeo",
+      "latin": "Spatula clypeata",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Spatula clypeata",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "eu_esp_0649--normal.webp",
+        "male": "eu_esp_0649--male.webp",
+        "female": "eu_esp_0649--female.webp",
+        "melanico": "eu_esp_0649--melanico.webp"
+      }
+    },
+    {
+      "id": "af_pinguino_africano",
+      "name": "Pingüino africano",
+      "latin": "Spheniscus demersus",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Aves marinas",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iocTaxon": "Spheniscus demersus",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_pinguino_africano--normal.webp",
+        "albino": "af_pinguino_africano--albino.webp",
+        "melanico": "af_pinguino_africano--melanico.webp"
+      }
+    },
+    {
+      "id": "gm06_spheniscus_humboldti",
+      "name": "Pingüino de Humboldt",
+      "latin": "Spheniscus humboldti",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Spheniscidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iocTaxon": "Spheniscus humboldti",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_spheniscus_humboldti--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_spheniscus_magellanicus",
+      "name": "Pingüino de Magallanes",
+      "latin": "Spheniscus magellanicus",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iocTaxon": "Spheniscus magellanicus",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "sa_esp_spheniscus_magellanicus--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_spheniscus_mendiculus",
+      "name": "Pingüino de Galápagos",
+      "latin": "Spheniscus mendiculus",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Spheniscidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Sphenisciformes",
+      "family": "Spheniscidae",
+      "iocTaxon": "Spheniscus mendiculus",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_spheniscus_mendiculus--normal.webp"
+      }
+    },
+    {
+      "id": "polar_esp_stercorarius_maccormicki",
+      "name": "Skúa polar austral",
+      "latin": "Stercorarius maccormicki",
+      "habitats": [
+        "costa_antartica",
+        "agua_polar"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Charadriiformes",
+      "family": "Stercorariidae",
+      "iocTaxon": "Stercorarius maccormicki",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "polar_esp_stercorarius_maccormicki--normal.webp"
+      }
+    },
+    {
+      "id": "polar_esp_sterna_paradisaea",
+      "name": "Charrán ártico",
+      "latin": "Sterna paradisaea",
+      "habitats": [
+        "banquisa_artica",
+        "agua_polar"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Charadriiformes",
+      "family": "Laridae",
+      "iocTaxon": "Sterna paradisaea",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "polar_esp_sterna_paradisaea--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_strigops_habroptilus",
+      "name": "Kakapo",
+      "latin": "Strigops habroptilus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Psitaciformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Strigopidae",
+      "iocTaxon": "Strigops habroptilus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_strigops_habroptilus--normal.webp"
+      }
+    },
+    {
+      "id": "na_esp_strix_occidentalis",
+      "name": "Búho moteado",
+      "latin": "Strix occidentalis",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Búhos y lechuzas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Strigiformes",
+      "family": "Strigidae",
+      "iocTaxon": "Strix occidentalis",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "na_esp_strix_occidentalis--normal.webp"
+      }
+    },
+    {
+      "id": "af_avestruz",
+      "name": "Avestruz común",
+      "latin": "Struthio camelus",
+      "habitats": [
+        "pradera",
+        "estepa"
+      ],
+      "historicalGroup": "Ratites",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Struthioniformes",
+      "family": "Struthionidae",
+      "iocTaxon": "Struthio camelus",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "af_avestruz--normal.webp",
+        "male": "af_avestruz--male.webp",
+        "female": "af_avestruz--female.webp",
+        "albino": "af_avestruz--albino.webp",
+        "melanico": "af_avestruz--melanico.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_avestruz_somali",
+      "name": "Avestruz somalí",
+      "latin": "Struthio molybdophanes",
+      "habitats": [
+        "desierto",
+        "estepa"
+      ],
+      "historicalGroup": "Ratites",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Struthioniformes",
+      "family": "Struthionidae",
+      "iocTaxon": "Struthio molybdophanes",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "af_xlsx_avestruz_somali--normal.webp",
+        "albino": "af_xlsx_avestruz_somali--albino.webp"
+      }
+    },
+    {
+      "id": "gm06_sula_nebouxii",
+      "name": "Piquero de patas azules",
+      "latin": "Sula nebouxii",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Sulidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Suliformes",
+      "family": "Sulidae",
+      "iocTaxon": "Sula nebouxii",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_sula_nebouxii--normal.webp"
+      }
+    },
+    {
+      "id": "gm06_sula_variegata",
+      "name": "Piquero peruano",
+      "latin": "Sula variegata",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Sulidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Suliformes",
+      "family": "Sulidae",
+      "iocTaxon": "Sula variegata",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_sula_variegata--normal.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0494",
+      "name": "Faisán cobrizo",
+      "latin": "Syrmaticus soemmerringii",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Galliformes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Syrmaticus soemmerringii",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "asia_esp_0494--normal.webp",
+        "albino": "asia_esp_0494--albino.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0653",
+      "name": "Zampullín común",
+      "latin": "Tachybaptus ruficollis",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Podicipediformes",
+      "family": "Podicipedidae",
+      "iocTaxon": "Tachybaptus ruficollis",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "eu_esp_0653--normal.webp",
+        "melanico": "eu_esp_0653--melanico.webp"
+      }
+    },
+    {
+      "id": "gm06_tachyeres_pteneres",
+      "name": "Pato vapor no volador",
+      "latin": "Tachyeres pteneres",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Anatidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Anseriformes",
+      "family": "Anatidae",
+      "iocTaxon": "Tachyeres pteneres",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "gm06_tachyeres_pteneres--normal.webp"
+      }
+    },
+    {
+      "id": "af_turaco",
+      "name": "Turaco verde",
+      "latin": "Tauraco persa",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Musophagiformes",
+      "family": "Musophagidae",
+      "iocTaxon": "Tauraco persa",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "af_turaco--normal.webp",
+        "albino": "af_turaco--albino.webp",
+        "melanico": "af_turaco--melanico.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0503",
+      "name": "Mosquero del paraíso asiático",
+      "latin": "Terpsiphone paradisi",
+      "habitats": [
+        "bosque",
+        "montana",
+        "pradera",
+        "tundra"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Monarchidae",
+      "iocTaxon": "Terpsiphone paradisi",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "asia_esp_0503--normal.webp",
+        "melanico": "asia_esp_0503--melanico.webp"
+      }
+    },
+    {
+      "id": "urogallo_comun",
+      "name": "Urogallo común",
+      "latin": "Tetrao urogallus",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "tundra"
+      ],
+      "historicalGroup": "Galliformes",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Tetrao urogallus",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "urogallo_comun--normal.webp",
+        "male": "urogallo_comun--male.webp",
+        "female": "urogallo_comun--female.webp",
+        "albino": "urogallo_comun--albino.webp",
+        "melanico": "urogallo_comun--melanico.webp"
+      }
+    },
+    {
+      "id": "mar_esp_thalassarche_melanophris",
+      "name": "Albatros de ceja negra",
+      "latin": "Thalassarche melanophris",
+      "habitats": [
+        "archipielago",
+        "oceano_abierto",
+        "mar_austral"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Procellariiformes",
+      "family": "Diomedeidae",
+      "iocTaxon": "Thalassarche melanophris",
+      "wave": "Marinas y costeras",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "mar_esp_thalassarche_melanophris--normal.webp"
+      }
+    },
+    {
+      "id": "af_ibis_sagrado",
+      "name": "Ibis sagrado africano",
+      "latin": "Threskiornis aethiopicus",
+      "habitats": [
+        "rio",
+        "costa",
+        "pradera"
+      ],
+      "historicalGroup": "Aves acuáticas y ribereñas",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Pelecaniformes",
+      "family": "Threskiornithidae",
+      "iocTaxon": "Threskiornis aethiopicus",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "af_ibis_sagrado--normal.webp",
+        "albino": "af_ibis_sagrado--albino.webp",
+        "melanico": "af_ibis_sagrado--melanico.webp"
+      }
+    },
+    {
+      "id": "af_xlsx_sahara_buitre",
+      "name": "Buitre orejudo",
+      "latin": "Torgos tracheliotos",
+      "habitats": [
+        "desierto",
+        "estepa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
+      "iocTaxon": "Torgos tracheliotos",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "af_xlsx_sahara_buitre--normal.webp",
+        "albino": "af_xlsx_sahara_buitre--albino.webp"
+      }
+    },
+    {
+      "id": "asia_esp_0865",
+      "name": "Tragopán sátiro",
+      "latin": "Tragopan satyra",
+      "habitats": [
+        "bosque",
+        "montana",
+        "pradera",
+        "tundra"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Tragopan satyra",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "asia_esp_0865--normal.webp",
+        "male": "asia_esp_0865--male.webp",
+        "female": "asia_esp_0865--female.webp",
+        "melanico": "asia_esp_0865--melanico.webp"
+      }
+    },
+    {
+      "id": "oc_esp_trichoglossus_haematodus",
+      "name": "Lori de cocotero",
+      "latin": "Trichoglossus haematodus",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "mediterraneo"
+      ],
+      "historicalGroup": "Psitaciformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittaculidae",
+      "iocTaxon": "Trichoglossus haematodus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_trichoglossus_haematodus--normal.webp"
+      }
+    },
+    {
+      "id": "oc_esp_trichoglossus_moluccanus",
+      "name": "Lori arcoíris",
+      "latin": "Trichoglossus moluccanus",
+      "habitats": [
+        "bosque",
+        "selva",
+        "pradera",
+        "mediterraneo"
+      ],
+      "historicalGroup": "Psitaciformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Psittaculidae",
+      "iocTaxon": "Trichoglossus moluccanus",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_trichoglossus_moluccanus--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0628",
+      "name": "Mirlo común",
+      "latin": "Turdus merula",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Turdidae",
+      "iocTaxon": "Turdus merula",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "eu_esp_0628--normal.webp",
+        "male": "eu_esp_0628--male.webp",
+        "female": "eu_esp_0628--female.webp",
+        "melanico": "eu_esp_0628--melanico.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0637",
+      "name": "Zorzal común",
+      "latin": "Turdus philomelos",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Passeriformes",
+      "family": "Turdidae",
+      "iocTaxon": "Turdus philomelos",
+      "edition": "4.7.4",
+      "routes": {
+        "normal": "eu_esp_0637--normal.webp",
+        "melanico": "eu_esp_0637--melanico.webp"
+      }
+    },
+    {
+      "id": "na_esp_tympanuchus_cupido",
+      "name": "Perdiz de las praderas",
+      "latin": "Tympanuchus cupido",
+      "habitats": [
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Galliformes",
+      "family": "Phasianidae",
+      "iocTaxon": "Tympanuchus cupido",
+      "edition": "4.7.2",
+      "routes": {
+        "normal": "na_esp_tympanuchus_cupido--normal.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0646",
+      "name": "Lechuza común",
+      "latin": "Tyto alba",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Aves rapaces",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Strigiformes",
+      "family": "Tytonidae",
+      "iocTaxon": "Tyto alba",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "eu_esp_0646--normal.webp",
+        "melanico": "eu_esp_0646--melanico.webp"
+      }
+    },
+    {
+      "id": "eu_esp_0634",
+      "name": "Abubilla europea",
+      "latin": "Upupa epops",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Aves terrestres",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Bucerotiformes",
+      "family": "Upupidae",
+      "iocTaxon": "Upupa epops",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "eu_esp_0634--normal.webp",
+        "melanico": "eu_esp_0634--melanico.webp"
+      }
+    },
+    {
+      "id": "sa_esp_vanellus_chilensis",
+      "name": "Tero",
+      "latin": "Vanellus chilensis",
+      "habitats": [
+        "pradera",
+        "humedal",
+        "costa"
+      ],
+      "historicalGroup": "Aves acuáticas y marinas",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Charadriiformes",
+      "family": "Charadriidae",
+      "iocTaxon": "Vanellus chilensis",
+      "wave": "Ribereñas y humedales",
+      "edition": "4.7.1",
+      "routes": {
+        "normal": "sa_esp_vanellus_chilensis--normal.webp"
+      }
+    },
+    {
+      "id": "sa_esp_vultur_gryphus",
+      "name": "Cóndor andino",
+      "latin": "Vultur gryphus",
+      "habitats": [
+        "montana",
+        "estepa",
+        "costa"
+      ],
+      "historicalGroup": "Rapaces",
+      "pigmentation": [],
+      "dimorphism": true,
+      "legendary": null,
+      "order": "Accipitriformes",
+      "family": "Cathartidae",
+      "iocTaxon": "Vultur gryphus",
+      "edition": "4.7.0",
+      "routes": {
+        "normal": "sa_esp_vultur_gryphus--normal.webp",
+        "male": "sa_esp_vultur_gryphus--male.webp",
+        "female": "sa_esp_vultur_gryphus--female.webp"
+      }
+    },
+    {
+      "id": "oc_esp_zanda_latirostris",
+      "name": "Cacatúa negra de Carnaby",
+      "latin": "Zanda latirostris",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "mediterraneo",
+        "sabana"
+      ],
+      "historicalGroup": "Psitaciformes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Psittaciformes",
+      "family": "Cacatuidae",
+      "iocTaxon": "Zanda latirostris",
+      "edition": "4.7.3",
+      "routes": {
+        "normal": "oc_esp_zanda_latirostris--normal.webp"
+      }
+    }
+  ]
+}
