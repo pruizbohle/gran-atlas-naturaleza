@@ -37,7 +37,9 @@ El caché base pasa de **73,58 MB** a **79,01 MB**. Los 636 recursos comparativo
 
 ## Validación funcional
 
-Las 13 pruebas de publicación pasaron. El laboratorio pasó sus trece modos a 320 y 1280 px, incluidos los filtros por orden y familia, el dimorfismo del cóndor, el halo de Centinela, la nueva comparación anatómica y la exportación de revisiones sin conexión. [Comparación de búhos en móvil](comparacion-buhos-320.jpg) · [Comparación en escritorio](comparacion-buhos-1280.jpg)
+Las 13 pruebas de publicación pasaron. La suite histórica ejecutó 811 pruebas, con 583 aprobadas y los mismos 228 fallos que V4.6.0. [Comparación de la suite histórica](regresion.json)
+
+El laboratorio pasó sus trece modos a 320 y 1280 px, incluidos los filtros por orden y familia, el dimorfismo del cóndor, el halo de Centinela, la nueva comparación anatómica y la exportación de revisiones sin conexión. [Comparación de búhos en móvil](comparacion-buhos-320.jpg) · [Comparación en escritorio](comparacion-buhos-1280.jpg)
 
 Chromium conservó el respaldo exacto y los diez campos comparados de la partida al actualizar de V4.6.0 a V4.7.0, tanto desde la pantalla de actualización anterior como desde la nueva. Sin conexión cargaron el laboratorio, los encuentros mixtos SVG y WebP y Centinela con su halo sobre el paisaje de montaña. Cuaderno mostró la lámina normal del águila real y el avistamiento automático de busardo reutilizó el elemento de imagen. [Resultados PWA](pwa.json) · [Centinela en Campo](centinela-390.jpg)
 
