@@ -105,3 +105,10 @@ progress { accent-color: #4c755a; margin: .4rem 0 .8rem; }
   .recipe-flow { grid-template-columns: minmax(0, 1fr); }
   .recipe-arrow { transform: rotate(90deg); }
 }
+.assembly-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,19rem),1fr)); gap: .75rem; }
+.assembly-card { display: grid; gap: .4rem; min-width: 0; }
+.assembly-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .5rem; }
+.assembly-card progress { width: 100%; margin: .3rem 0 0; }
+.assembly-world { padding: .85rem; margin-top: .8rem; border: 1px solid var(--line); border-radius: .4rem; }
+.assembly-world p { margin: .35rem 0; }
+.assembly-world figure { max-width: calc(var(--size) + 1rem); }

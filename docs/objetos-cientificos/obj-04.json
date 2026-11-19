@@ -1,0 +1,18 @@
+{
+  "cartography": [
+    {"id":"asia_map","name":"Asia","extent":[24,4,183,83],"land":"#9b9b70","fragment":[[0.65,0.2],[0.98,0.12],[0.99,0.72],[0.85,0.85],[0.78,0.73],[0.62,0.77],[0.65,0.56],[0.55,0.43]]},
+    {"id":"africa_map","name":"África","extent":[-27,-39,56,42],"land":"#b69a60","fragment":[[0.08,0.08],[0.83,0.06],[0.76,0.38],[0.62,0.36],[0.57,0.55],[0.37,0.48],[0.29,0.59],[0.08,0.42]]},
+    {"id":"north_america_map","name":"Norteamérica","extent":[-170,8,-48,83],"land":"#9da475","fragment":[[0.12,0.38],[0.33,0.34],[0.48,0.52],[0.64,0.58],[0.63,0.88],[0.5,0.95],[0.07,0.89],[0.02,0.68]]},
+    {"id":"south_america_map","name":"Sudamérica","extent":[-86,-58,-31,16],"land":"#94966c","fragment":[[0.38,0.43],[0.7,0.53],[0.78,0.76],[0.68,0.98],[0.32,0.96],[0.25,0.77],[0.34,0.67],[0.22,0.59]]},
+    {"id":"oceania_map","name":"Oceanía","extent":[111,-49,196,9],"land":"#ba9d70","fragment":[[0.34,0.45],[0.53,0.36],[0.69,0.52],[0.88,0.48],[0.98,0.74],[0.86,0.95],[0.46,0.92],[0.31,0.72]]},
+    {"id":"polar_map","name":"Regiones polares","land":"#a8aba0","fragment":[[0.52,0.21],[0.78,0.08],[0.97,0.22],[0.93,0.75],[0.76,0.89],[0.59,0.81],[0.52,0.6],[0.59,0.45]]}
+  ],
+  "sheets": [
+    {"file":"historicas-a.png","columns":4,"ids":["MAP-01","MAP-02","MAP-03","MAP-04","MAP-05","MAP-06","MAP-07","MAP-08"]},
+    {"file":"historicas-b.png","columns":4,"crop":{"rows":[0,444,887],"edges":[[0,443,887,1330,1774],[0,443,887,1330,1774]],"alpha":[219,246]},"ids":["MAP-10","MAP-11","MAP-12","carta_historica","diario_explorador","MAR-01","MAR-02","MAR-03"]},
+    {"file":"mercancias.png","columns":4,"ids":["asian_spices","asian_trade_folio","african_textile_sample","north_american_trade_document","south_american_cacao","oceanian_nacre","polar_geology_record","com-te-asiatico"]},
+    {"file":"mar-y-comercio.png","columns":3,"crop":{"rows":[0,400,819,1236],"edges":[[0,424,824,1272],[0,424,824,1272],[0,418,824,1272]]},"ids":["MAR-04","MAR-05","MAR-06","MAR-07","com-porcelana-qing","com-seda-bengala","com-cafe-etiope","com-algodon-egipcio","com-vainilla-mexicana"]}
+  ],
+  "trade": ["asian_spices","asian_trade_folio","african_textile_sample","north_american_trade_document","south_american_cacao","oceanian_nacre","polar_geology_record"],
+  "museum": ["carta_historica","diario_explorador"]
+}

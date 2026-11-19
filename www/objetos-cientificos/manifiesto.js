@@ -177,6 +177,152 @@ globalThis.AtlasObjetosCientificos = {
       ]
     }
   ],
+  "archive": [
+    {
+      "name": "Fragmentos y mapas",
+      "ids": [
+        "asia_map_piece",
+        "asia_map",
+        "africa_map_piece",
+        "africa_map",
+        "north_america_map_piece",
+        "north_america_map",
+        "south_america_map_piece",
+        "south_america_map",
+        "oceania_map_piece",
+        "oceania_map",
+        "polar_map_piece",
+        "polar_map",
+        "world_map",
+        "map_fragment"
+      ]
+    },
+    {
+      "name": "Mapas funcionales y cartas históricas",
+      "ids": [
+        "asia_map",
+        "africa_map",
+        "north_america_map",
+        "south_america_map",
+        "oceania_map",
+        "polar_map",
+        "world_map",
+        "MAP-01",
+        "MAP-02",
+        "MAP-03",
+        "MAP-04",
+        "MAP-05",
+        "MAP-06",
+        "MAP-07",
+        "MAP-08",
+        "MAP-09",
+        "MAP-10",
+        "MAP-11",
+        "MAP-12"
+      ]
+    },
+    {
+      "name": "Cartografía antigua",
+      "ids": [
+        "MAP-01",
+        "MAP-02",
+        "MAP-03",
+        "MAP-04",
+        "MAP-05",
+        "MAP-06",
+        "MAP-07",
+        "MAP-08",
+        "MAP-09",
+        "MAP-10",
+        "MAP-11",
+        "MAP-12"
+      ]
+    },
+    {
+      "name": "Mercancías regionales",
+      "ids": [
+        "asian_spices",
+        "asian_trade_folio",
+        "african_textile_sample",
+        "north_american_trade_document",
+        "south_american_cacao",
+        "oceanian_nacre",
+        "polar_geology_record"
+      ]
+    },
+    {
+      "name": "Los siete mares",
+      "ids": [
+        "MAR-01",
+        "MAR-02",
+        "MAR-03",
+        "MAR-04",
+        "MAR-05",
+        "MAR-06",
+        "MAR-07"
+      ]
+    },
+    {
+      "name": "Archivo histórico del Museo",
+      "ids": [
+        "carta_historica",
+        "diario_explorador"
+      ]
+    },
+    {
+      "name": "Propuestas comerciales",
+      "ids": [
+        "com-te-asiatico",
+        "com-porcelana-qing",
+        "com-seda-bengala",
+        "com-cafe-etiope",
+        "com-algodon-egipcio",
+        "com-vainilla-mexicana",
+        "com-tabaco-lamina",
+        "com-indigo",
+        "com-sandalo",
+        "com-lana"
+      ]
+    }
+  ],
+  "cartography": [
+    {
+      "id": "asia_map",
+      "piece": "asia_map_piece",
+      "name": "Asia",
+      "parts": 10
+    },
+    {
+      "id": "africa_map",
+      "piece": "africa_map_piece",
+      "name": "África",
+      "parts": 10
+    },
+    {
+      "id": "north_america_map",
+      "piece": "north_america_map_piece",
+      "name": "Norteamérica",
+      "parts": 10
+    },
+    {
+      "id": "south_america_map",
+      "piece": "south_america_map_piece",
+      "name": "Sudamérica",
+      "parts": 10
+    },
+    {
+      "id": "oceania_map",
+      "piece": "oceania_map_piece",
+      "name": "Oceanía",
+      "parts": 10
+    },
+    {
+      "id": "polar_map",
+      "piece": "polar_map_piece",
+      "name": "Regiones polares",
+      "parts": 10
+    }
+  ],
   "materialIds": [
     "pressed_flower",
     "parchment_scrap",
@@ -1434,13 +1580,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/asia_map_piece/clasica-64.webp",
+            "bytes": 1782
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/asia_map_piece/clasica-128.webp",
+            "bytes": 3894
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/asia_map_piece/clasica-256.webp",
+            "bytes": 10188
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/asia_map_piece/clasica-512.webp",
+            "bytes": 31636
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/asia_map_piece/inventario-64.webp",
+            "bytes": 1802
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/asia_map_piece/inventario-128.webp",
+            "bytes": 3948
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/asia_map_piece/inventario-256.webp",
+            "bytes": 8016
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/asia_map_piece/inventario-512.webp",
+            "bytes": 19018
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1467,13 +1647,47 @@ globalThis.AtlasObjetosCientificos = {
         "asia_map_piece": 10
       },
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/asia_map/clasica-64.webp",
+            "bytes": 1076
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/asia_map/clasica-128.webp",
+            "bytes": 2692
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/asia_map/clasica-256.webp",
+            "bytes": 6198
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/asia_map/clasica-512.webp",
+            "bytes": 24340
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/asia_map/inventario-64.webp",
+            "bytes": 1150
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/asia_map/inventario-128.webp",
+            "bytes": 2672
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/asia_map/inventario-256.webp",
+            "bytes": 5518
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/asia_map/inventario-512.webp",
+            "bytes": 14684
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1497,13 +1711,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/africa_map_piece/clasica-64.webp",
+            "bytes": 1566
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/africa_map_piece/clasica-128.webp",
+            "bytes": 3340
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/africa_map_piece/clasica-256.webp",
+            "bytes": 7206
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/africa_map_piece/clasica-512.webp",
+            "bytes": 24410
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/africa_map_piece/inventario-64.webp",
+            "bytes": 1528
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/africa_map_piece/inventario-128.webp",
+            "bytes": 3278
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/africa_map_piece/inventario-256.webp",
+            "bytes": 6512
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/africa_map_piece/inventario-512.webp",
+            "bytes": 13816
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1530,13 +1778,47 @@ globalThis.AtlasObjetosCientificos = {
         "africa_map_piece": 10
       },
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/africa_map/clasica-64.webp",
+            "bytes": 1344
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/africa_map/clasica-128.webp",
+            "bytes": 3088
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/africa_map/clasica-256.webp",
+            "bytes": 7132
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/africa_map/clasica-512.webp",
+            "bytes": 28442
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/africa_map/inventario-64.webp",
+            "bytes": 1336
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/africa_map/inventario-128.webp",
+            "bytes": 3024
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/africa_map/inventario-256.webp",
+            "bytes": 6656
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/africa_map/inventario-512.webp",
+            "bytes": 15634
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1560,13 +1842,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/north_america_map_piece/clasica-64.webp",
+            "bytes": 1778
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/north_america_map_piece/clasica-128.webp",
+            "bytes": 3828
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/north_america_map_piece/clasica-256.webp",
+            "bytes": 9232
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/north_america_map_piece/clasica-512.webp",
+            "bytes": 32346
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/north_america_map_piece/inventario-64.webp",
+            "bytes": 1700
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/north_america_map_piece/inventario-128.webp",
+            "bytes": 3642
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/north_america_map_piece/inventario-256.webp",
+            "bytes": 7680
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/north_america_map_piece/inventario-512.webp",
+            "bytes": 17230
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1593,13 +1909,47 @@ globalThis.AtlasObjetosCientificos = {
         "north_america_map_piece": 8
       },
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/north_america_map/clasica-64.webp",
+            "bytes": 1196
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/north_america_map/clasica-128.webp",
+            "bytes": 2988
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/north_america_map/clasica-256.webp",
+            "bytes": 8160
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/north_america_map/clasica-512.webp",
+            "bytes": 30664
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/north_america_map/inventario-64.webp",
+            "bytes": 1292
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/north_america_map/inventario-128.webp",
+            "bytes": 3344
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/north_america_map/inventario-256.webp",
+            "bytes": 7130
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/north_america_map/inventario-512.webp",
+            "bytes": 18318
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3085,13 +3435,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/south_america_map_piece/clasica-64.webp",
+            "bytes": 1754
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/south_america_map_piece/clasica-128.webp",
+            "bytes": 3776
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/south_america_map_piece/clasica-256.webp",
+            "bytes": 8990
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/south_america_map_piece/clasica-512.webp",
+            "bytes": 27646
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/south_america_map_piece/inventario-64.webp",
+            "bytes": 1734
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/south_america_map_piece/inventario-128.webp",
+            "bytes": 3744
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/south_america_map_piece/inventario-256.webp",
+            "bytes": 7418
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/south_america_map_piece/inventario-512.webp",
+            "bytes": 17648
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3118,13 +3502,47 @@ globalThis.AtlasObjetosCientificos = {
         "south_america_map_piece": 10
       },
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/south_america_map/clasica-64.webp",
+            "bytes": 1000
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/south_america_map/clasica-128.webp",
+            "bytes": 2228
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/south_america_map/clasica-256.webp",
+            "bytes": 5014
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/south_america_map/clasica-512.webp",
+            "bytes": 19924
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/south_america_map/inventario-64.webp",
+            "bytes": 1046
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/south_america_map/inventario-128.webp",
+            "bytes": 2234
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/south_america_map/inventario-256.webp",
+            "bytes": 4842
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/south_america_map/inventario-512.webp",
+            "bytes": 11216
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3148,13 +3566,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/oceania_map_piece/clasica-64.webp",
+            "bytes": 1562
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/oceania_map_piece/clasica-128.webp",
+            "bytes": 3340
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/oceania_map_piece/clasica-256.webp",
+            "bytes": 7800
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/oceania_map_piece/clasica-512.webp",
+            "bytes": 22304
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/oceania_map_piece/inventario-64.webp",
+            "bytes": 1472
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/oceania_map_piece/inventario-128.webp",
+            "bytes": 3328
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/oceania_map_piece/inventario-256.webp",
+            "bytes": 6564
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/oceania_map_piece/inventario-512.webp",
+            "bytes": 14888
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3181,13 +3633,47 @@ globalThis.AtlasObjetosCientificos = {
         "oceania_map_piece": 10
       },
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/oceania_map/clasica-64.webp",
+            "bytes": 1130
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/oceania_map/clasica-128.webp",
+            "bytes": 2620
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/oceania_map/clasica-256.webp",
+            "bytes": 6112
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/oceania_map/clasica-512.webp",
+            "bytes": 23452
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/oceania_map/inventario-64.webp",
+            "bytes": 1174
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/oceania_map/inventario-128.webp",
+            "bytes": 2696
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/oceania_map/inventario-256.webp",
+            "bytes": 5466
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/oceania_map/inventario-512.webp",
+            "bytes": 13916
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3211,13 +3697,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/polar_map_piece/clasica-64.webp",
+            "bytes": 2276
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/polar_map_piece/clasica-128.webp",
+            "bytes": 5306
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/polar_map_piece/clasica-256.webp",
+            "bytes": 14122
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/polar_map_piece/clasica-512.webp",
+            "bytes": 40976
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/polar_map_piece/inventario-64.webp",
+            "bytes": 2102
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/polar_map_piece/inventario-128.webp",
+            "bytes": 4806
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/polar_map_piece/inventario-256.webp",
+            "bytes": 9858
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/polar_map_piece/inventario-512.webp",
+            "bytes": 25256
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3244,13 +3764,47 @@ globalThis.AtlasObjetosCientificos = {
         "polar_map_piece": 8
       },
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/polar_map/clasica-64.webp",
+            "bytes": 1008
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/polar_map/clasica-128.webp",
+            "bytes": 2528
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/polar_map/clasica-256.webp",
+            "bytes": 6364
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/polar_map/clasica-512.webp",
+            "bytes": 22152
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/polar_map/inventario-64.webp",
+            "bytes": 952
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/polar_map/inventario-128.webp",
+            "bytes": 2572
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/polar_map/inventario-256.webp",
+            "bytes": 5608
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/polar_map/inventario-512.webp",
+            "bytes": 14272
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3346,13 +3900,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/asian_spices/clasica-64.webp",
+            "bytes": 2278
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/asian_spices/clasica-128.webp",
+            "bytes": 5776
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/asian_spices/clasica-256.webp",
+            "bytes": 16386
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/asian_spices/clasica-512.webp",
+            "bytes": 50664
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/asian_spices/inventario-64.webp",
+            "bytes": 2366
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/asian_spices/inventario-128.webp",
+            "bytes": 6128
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/asian_spices/inventario-256.webp",
+            "bytes": 14878
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/asian_spices/inventario-512.webp",
+            "bytes": 41266
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3376,13 +3964,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/asian_trade_folio/clasica-64.webp",
+            "bytes": 2482
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/asian_trade_folio/clasica-128.webp",
+            "bytes": 6780
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/asian_trade_folio/clasica-256.webp",
+            "bytes": 20630
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/asian_trade_folio/clasica-512.webp",
+            "bytes": 64128
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/asian_trade_folio/inventario-64.webp",
+            "bytes": 2658
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/asian_trade_folio/inventario-128.webp",
+            "bytes": 7252
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/asian_trade_folio/inventario-256.webp",
+            "bytes": 18326
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/asian_trade_folio/inventario-512.webp",
+            "bytes": 48932
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3406,13 +4028,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/african_textile_sample/clasica-64.webp",
+            "bytes": 2622
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/african_textile_sample/clasica-128.webp",
+            "bytes": 7374
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/african_textile_sample/clasica-256.webp",
+            "bytes": 24406
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/african_textile_sample/clasica-512.webp",
+            "bytes": 82140
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/african_textile_sample/inventario-64.webp",
+            "bytes": 2798
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/african_textile_sample/inventario-128.webp",
+            "bytes": 8200
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/african_textile_sample/inventario-256.webp",
+            "bytes": 22852
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/african_textile_sample/inventario-512.webp",
+            "bytes": 65446
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3436,13 +4092,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/north_american_trade_document/clasica-64.webp",
+            "bytes": 1808
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/north_american_trade_document/clasica-128.webp",
+            "bytes": 5072
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/north_american_trade_document/clasica-256.webp",
+            "bytes": 15622
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/north_american_trade_document/clasica-512.webp",
+            "bytes": 50756
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/north_american_trade_document/inventario-64.webp",
+            "bytes": 1832
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/north_american_trade_document/inventario-128.webp",
+            "bytes": 5284
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/north_american_trade_document/inventario-256.webp",
+            "bytes": 13522
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/north_american_trade_document/inventario-512.webp",
+            "bytes": 39090
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3466,13 +4156,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/south_american_cacao/clasica-64.webp",
+            "bytes": 2654
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/south_american_cacao/clasica-128.webp",
+            "bytes": 6852
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/south_american_cacao/clasica-256.webp",
+            "bytes": 20390
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/south_american_cacao/clasica-512.webp",
+            "bytes": 62714
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/south_american_cacao/inventario-64.webp",
+            "bytes": 2914
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/south_american_cacao/inventario-128.webp",
+            "bytes": 7570
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/south_american_cacao/inventario-256.webp",
+            "bytes": 18040
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/south_american_cacao/inventario-512.webp",
+            "bytes": 49638
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3496,13 +4220,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/oceanian_nacre/clasica-64.webp",
+            "bytes": 2008
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/oceanian_nacre/clasica-128.webp",
+            "bytes": 5022
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/oceanian_nacre/clasica-256.webp",
+            "bytes": 14356
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/oceanian_nacre/clasica-512.webp",
+            "bytes": 43738
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/oceanian_nacre/inventario-64.webp",
+            "bytes": 2098
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/oceanian_nacre/inventario-128.webp",
+            "bytes": 5102
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/oceanian_nacre/inventario-256.webp",
+            "bytes": 13640
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/oceanian_nacre/inventario-512.webp",
+            "bytes": 36090
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3526,13 +4284,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/polar_geology_record/clasica-64.webp",
+            "bytes": 2314
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/polar_geology_record/clasica-128.webp",
+            "bytes": 5970
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/polar_geology_record/clasica-256.webp",
+            "bytes": 16804
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/polar_geology_record/clasica-512.webp",
+            "bytes": 53028
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/polar_geology_record/inventario-64.webp",
+            "bytes": 2522
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/polar_geology_record/inventario-128.webp",
+            "bytes": 6240
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/polar_geology_record/inventario-256.webp",
+            "bytes": 14926
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/polar_geology_record/inventario-512.webp",
+            "bytes": 41858
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -6144,13 +6936,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-01/clasica-64.webp",
+            "bytes": 2132
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-01/clasica-128.webp",
+            "bytes": 5550
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-01/clasica-256.webp",
+            "bytes": 17512
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-01/clasica-512.webp",
+            "bytes": 47882
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-01/inventario-64.webp",
+            "bytes": 2164
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-01/inventario-128.webp",
+            "bytes": 5774
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-01/inventario-256.webp",
+            "bytes": 13122
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-01/inventario-512.webp",
+            "bytes": 32040
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -6172,13 +6998,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-02/clasica-64.webp",
+            "bytes": 1450
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-02/clasica-128.webp",
+            "bytes": 3396
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-02/clasica-256.webp",
+            "bytes": 9092
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-02/clasica-512.webp",
+            "bytes": 24670
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-02/inventario-64.webp",
+            "bytes": 1450
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-02/inventario-128.webp",
+            "bytes": 3536
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-02/inventario-256.webp",
+            "bytes": 8118
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-02/inventario-512.webp",
+            "bytes": 19814
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -6200,13 +7060,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-03/clasica-64.webp",
+            "bytes": 1622
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-03/clasica-128.webp",
+            "bytes": 3594
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-03/clasica-256.webp",
+            "bytes": 9204
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-03/clasica-512.webp",
+            "bytes": 24074
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-03/inventario-64.webp",
+            "bytes": 1660
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-03/inventario-128.webp",
+            "bytes": 3786
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-03/inventario-256.webp",
+            "bytes": 8046
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-03/inventario-512.webp",
+            "bytes": 19338
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -6228,13 +7122,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-04/clasica-64.webp",
+            "bytes": 2486
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-04/clasica-128.webp",
+            "bytes": 6422
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-04/clasica-256.webp",
+            "bytes": 20084
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-04/clasica-512.webp",
+            "bytes": 53520
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-04/inventario-64.webp",
+            "bytes": 2644
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-04/inventario-128.webp",
+            "bytes": 6872
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-04/inventario-256.webp",
+            "bytes": 18488
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-04/inventario-512.webp",
+            "bytes": 45338
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -6256,13 +7184,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-05/clasica-64.webp",
+            "bytes": 2816
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-05/clasica-128.webp",
+            "bytes": 7608
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-05/clasica-256.webp",
+            "bytes": 24854
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-05/clasica-512.webp",
+            "bytes": 71612
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-05/inventario-64.webp",
+            "bytes": 2926
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-05/inventario-128.webp",
+            "bytes": 8420
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-05/inventario-256.webp",
+            "bytes": 23046
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-05/inventario-512.webp",
+            "bytes": 60370
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -6284,13 +7246,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-06/clasica-64.webp",
+            "bytes": 1370
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-06/clasica-128.webp",
+            "bytes": 3538
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-06/clasica-256.webp",
+            "bytes": 10360
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-06/clasica-512.webp",
+            "bytes": 31818
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-06/inventario-64.webp",
+            "bytes": 1442
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-06/inventario-128.webp",
+            "bytes": 3804
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-06/inventario-256.webp",
+            "bytes": 9136
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-06/inventario-512.webp",
+            "bytes": 24452
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -6312,13 +7308,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-07/clasica-64.webp",
+            "bytes": 1836
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-07/clasica-128.webp",
+            "bytes": 4948
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-07/clasica-256.webp",
+            "bytes": 15590
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-07/clasica-512.webp",
+            "bytes": 48908
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-07/inventario-64.webp",
+            "bytes": 2030
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-07/inventario-128.webp",
+            "bytes": 5336
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-07/inventario-256.webp",
+            "bytes": 14190
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-07/inventario-512.webp",
+            "bytes": 39050
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -8994,7 +10024,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "papel",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Carta interpretativa del Mediterráneo. Cotejar Gibraltar, Sicilia y Levante con un portulano del siglo XVI.",
       "id": "MAP-01",
       "name": "Carta portulana mediterránea",
       "type": "Coleccionable propuesto",
@@ -9002,13 +10032,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-01/clasica-64.webp",
+            "bytes": 1560
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-01/clasica-128.webp",
+            "bytes": 4824
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-01/clasica-256.webp",
+            "bytes": 16442
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-01/clasica-512.webp",
+            "bytes": 58622
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-01/inventario-64.webp",
+            "bytes": 1684
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-01/inventario-128.webp",
+            "bytes": 5520
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-01/inventario-256.webp",
+            "bytes": 14804
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-01/inventario-512.webp",
+            "bytes": 42740
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -9022,7 +10086,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "papel",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Tira de itinerarios inspirada en la copia medieval de una cartografía vial romana; no usa escala geográfica moderna.",
       "id": "MAP-02",
       "name": "Tabula Peutingeriana",
       "type": "Coleccionable propuesto",
@@ -9030,13 +10094,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-02/clasica-64.webp",
+            "bytes": 962
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-02/clasica-128.webp",
+            "bytes": 2486
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-02/clasica-256.webp",
+            "bytes": 7570
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-02/clasica-512.webp",
+            "bytes": 24424
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-02/inventario-64.webp",
+            "bytes": 974
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-02/inventario-128.webp",
+            "bytes": 2804
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-02/inventario-256.webp",
+            "bytes": 7286
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-02/inventario-512.webp",
+            "bytes": 20908
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -9050,7 +10148,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "papel",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Interpretación de la carta de Juan de la Cosa de 1500, con el oeste arriba y América en verde.",
       "id": "MAP-03",
       "name": "Mapa de Juan de la Cosa",
       "type": "Coleccionable propuesto",
@@ -9058,13 +10156,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-03/clasica-64.webp",
+            "bytes": 2444
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-03/clasica-128.webp",
+            "bytes": 6828
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-03/clasica-256.webp",
+            "bytes": 22654
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-03/clasica-512.webp",
+            "bytes": 78652
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-03/inventario-64.webp",
+            "bytes": 2586
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-03/inventario-128.webp",
+            "bytes": 7652
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-03/inventario-256.webp",
+            "bytes": 21084
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-03/inventario-512.webp",
+            "bytes": 61704
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -9078,7 +10210,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "papel",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Folio de gabinete inspirado en el Atlas de Mercator de 1595 y su tradición editorial; la apertura es interpretativa.",
       "id": "MAP-04",
       "name": "Atlas de Mercator",
       "type": "Coleccionable propuesto",
@@ -9086,13 +10218,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-04/clasica-64.webp",
+            "bytes": 1516
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-04/clasica-128.webp",
+            "bytes": 4656
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-04/clasica-256.webp",
+            "bytes": 16044
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-04/clasica-512.webp",
+            "bytes": 56640
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-04/inventario-64.webp",
+            "bytes": 1838
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-04/inventario-128.webp",
+            "bytes": 5300
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-04/inventario-256.webp",
+            "bytes": 14420
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-04/inventario-512.webp",
+            "bytes": 41404
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -9106,7 +10272,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "papel",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Fragmento de pergamino inspirado en el mapa atlántico de Piri Reis de 1513; cotejar sus costas y orientación.",
       "id": "MAP-05",
       "name": "Mapa de Piri Reis",
       "type": "Coleccionable propuesto",
@@ -9114,13 +10280,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-05/clasica-64.webp",
+            "bytes": 2650
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-05/clasica-128.webp",
+            "bytes": 6960
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-05/clasica-256.webp",
+            "bytes": 22546
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-05/clasica-512.webp",
+            "bytes": 75448
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-05/inventario-64.webp",
+            "bytes": 2644
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-05/inventario-128.webp",
+            "bytes": 7372
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-05/inventario-256.webp",
+            "bytes": 21882
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-05/inventario-512.webp",
+            "bytes": 63226
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -9134,7 +10334,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "papel",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Reconstrucción temática de corredores de Asia central, sin atribución a un original específico.",
       "id": "MAP-06",
       "name": "Carta de las rutas de la seda",
       "type": "Coleccionable propuesto",
@@ -9142,13 +10342,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-06/clasica-64.webp",
+            "bytes": 1312
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-06/clasica-128.webp",
+            "bytes": 3768
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-06/clasica-256.webp",
+            "bytes": 11440
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-06/clasica-512.webp",
+            "bytes": 37526
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-06/inventario-64.webp",
+            "bytes": 1364
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-06/inventario-128.webp",
+            "bytes": 4066
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-06/inventario-256.webp",
+            "bytes": 10252
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-06/inventario-512.webp",
+            "bytes": 30300
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -9162,7 +10396,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "papel",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Reconstrucción temática de la costa oriental africana; cotejar la ubicación de islas y puertos.",
       "id": "MAP-07",
       "name": "Carta de la costa suajili",
       "type": "Coleccionable propuesto",
@@ -9170,13 +10404,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-07/clasica-64.webp",
+            "bytes": 1626
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-07/clasica-128.webp",
+            "bytes": 5024
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-07/clasica-256.webp",
+            "bytes": 16754
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-07/clasica-512.webp",
+            "bytes": 56578
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-07/inventario-64.webp",
+            "bytes": 1782
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-07/inventario-128.webp",
+            "bytes": 5106
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-07/inventario-256.webp",
+            "bytes": 13684
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-07/inventario-512.webp",
+            "bytes": 39574
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -9190,7 +10458,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "papel",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Vista interpretativa de Tenochtitlán y Texcoco inspirada en planos coloniales; cotejar orientación y calzadas.",
       "id": "MAP-08",
       "name": "Mapa del valle de México",
       "type": "Coleccionable propuesto",
@@ -9198,13 +10466,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-08/clasica-64.webp",
+            "bytes": 2156
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-08/clasica-128.webp",
+            "bytes": 6844
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-08/clasica-256.webp",
+            "bytes": 23430
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-08/clasica-512.webp",
+            "bytes": 81546
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-08/inventario-64.webp",
+            "bytes": 2560
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-08/inventario-128.webp",
+            "bytes": 7914
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-08/inventario-256.webp",
+            "bytes": 21218
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-08/inventario-512.webp",
+            "bytes": 59550
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -9280,7 +10582,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "papel",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Carta interpretativa de arrecifes frente a la costa nororiental australiana; cotejar con los levantamientos de 1770.",
       "id": "MAP-10",
       "name": "Carta de la Gran Barrera",
       "type": "Coleccionable propuesto",
@@ -9288,13 +10590,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-10/clasica-64.webp",
+            "bytes": 990
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-10/clasica-128.webp",
+            "bytes": 2868
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-10/clasica-256.webp",
+            "bytes": 9588
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-10/clasica-512.webp",
+            "bytes": 29508
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-10/inventario-64.webp",
+            "bytes": 990
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-10/inventario-128.webp",
+            "bytes": 2950
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-10/inventario-256.webp",
+            "bytes": 7618
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-10/inventario-512.webp",
+            "bytes": 22180
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -9308,7 +10644,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "papel",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Interpretación de un derrotero del Endeavour de 1769–1770; cotejar las escalas y el perfil de Nueva Zelanda.",
       "id": "MAP-11",
       "name": "Carta del Pacífico de Cook",
       "type": "Coleccionable propuesto",
@@ -9316,13 +10652,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-11/clasica-64.webp",
+            "bytes": 956
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-11/clasica-128.webp",
+            "bytes": 2530
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-11/clasica-256.webp",
+            "bytes": 8448
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-11/clasica-512.webp",
+            "bytes": 27130
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-11/inventario-64.webp",
+            "bytes": 996
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-11/inventario-128.webp",
+            "bytes": 2774
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-11/inventario-256.webp",
+            "bytes": 6544
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-11/inventario-512.webp",
+            "bytes": 18698
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -9336,7 +10706,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "papel",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Carta incompleta inspirada en observaciones australes de 1838–1842. El atlas publicado de Wilkes es de 1844.",
       "id": "MAP-12",
       "name": "Carta de las tierras antárticas",
       "type": "Coleccionable propuesto",
@@ -9344,13 +10714,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-12/clasica-64.webp",
+            "bytes": 760
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-12/clasica-128.webp",
+            "bytes": 2178
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-12/clasica-256.webp",
+            "bytes": 6800
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-12/clasica-512.webp",
+            "bytes": 21596
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAP-12/inventario-64.webp",
+            "bytes": 824
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAP-12/inventario-128.webp",
+            "bytes": 2132
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAP-12/inventario-256.webp",
+            "bytes": 5002
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAP-12/inventario-512.webp",
+            "bytes": 16048
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -13121,13 +14525,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/carta_historica/clasica-64.webp",
+            "bytes": 1224
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/carta_historica/clasica-128.webp",
+            "bytes": 3342
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/carta_historica/clasica-256.webp",
+            "bytes": 12286
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/carta_historica/clasica-512.webp",
+            "bytes": 38794
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/carta_historica/inventario-64.webp",
+            "bytes": 1248
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/carta_historica/inventario-128.webp",
+            "bytes": 3568
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/carta_historica/inventario-256.webp",
+            "bytes": 8936
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/carta_historica/inventario-512.webp",
+            "bytes": 23670
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -13296,13 +14734,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-04",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/diario_explorador/clasica-64.webp",
+            "bytes": 1784
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/diario_explorador/clasica-128.webp",
+            "bytes": 4790
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/diario_explorador/clasica-256.webp",
+            "bytes": 15136
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/diario_explorador/clasica-512.webp",
+            "bytes": 42478
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/diario_explorador/inventario-64.webp",
+            "bytes": 1852
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/diario_explorador/inventario-128.webp",
+            "bytes": 5056
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/diario_explorador/inventario-256.webp",
+            "bytes": 12462
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/diario_explorador/inventario-512.webp",
+            "bytes": 31132
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -15584,6 +17056,470 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": "Sur de China",
+      "acquisition": null,
+      "description": null,
+      "material": "Hojas secas",
+      "context": "Comercio exterior de té anterior a 1842. Muestra de gabinete.",
+      "original": null,
+      "observations": "Hoja oscura retorcida, frente a las especias mixtas.",
+      "id": "com-te-asiatico",
+      "name": "Té de hojas torcidas",
+      "family": "Mercancías regionales",
+      "type": "Idea de mercancía regional",
+      "pilot": false,
+      "stage": "OBJ-04",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/com-te-asiatico/clasica-64.webp",
+            "bytes": 2602
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/com-te-asiatico/clasica-128.webp",
+            "bytes": 6764
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/com-te-asiatico/clasica-256.webp",
+            "bytes": 19562
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/com-te-asiatico/clasica-512.webp",
+            "bytes": 59556
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/com-te-asiatico/inventario-64.webp",
+            "bytes": 2668
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/com-te-asiatico/inventario-128.webp",
+            "bytes": 6970
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/com-te-asiatico/inventario-256.webp",
+            "bytes": 18766
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/com-te-asiatico/inventario-512.webp",
+            "bytes": 51352
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": "Jingdezhen, China",
+      "acquisition": null,
+      "description": null,
+      "material": "Porcelana esmaltada",
+      "context": "Reproducción de vajilla de exportación anterior a 1842.",
+      "original": null,
+      "observations": "Taza entera, frente al fragmento marítimo MAR-04.",
+      "id": "com-porcelana-qing",
+      "name": "Taza de porcelana Qing",
+      "family": "Mercancías regionales",
+      "type": "Idea de mercancía regional",
+      "pilot": false,
+      "stage": "OBJ-04",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/com-porcelana-qing/clasica-64.webp",
+            "bytes": 2382
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/com-porcelana-qing/clasica-128.webp",
+            "bytes": 6248
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/com-porcelana-qing/clasica-256.webp",
+            "bytes": 19352
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/com-porcelana-qing/clasica-512.webp",
+            "bytes": 50284
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/com-porcelana-qing/inventario-64.webp",
+            "bytes": 2374
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/com-porcelana-qing/inventario-128.webp",
+            "bytes": 6510
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/com-porcelana-qing/inventario-256.webp",
+            "bytes": 17136
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/com-porcelana-qing/inventario-512.webp",
+            "bytes": 41142
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": "Bengala",
+      "acquisition": null,
+      "description": null,
+      "material": "Fibra de seda",
+      "context": "Muestra de tejido conservado, de tradición anterior a 1842.",
+      "original": null,
+      "observations": "Paño liso de lustre cálido, frente a la muestra africana de algodón y a textiles patrimoniales.",
+      "id": "com-seda-bengala",
+      "name": "Muestra de seda de Bengala",
+      "family": "Mercancías regionales",
+      "type": "Idea de mercancía regional",
+      "pilot": false,
+      "stage": "OBJ-04",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/com-seda-bengala/clasica-64.webp",
+            "bytes": 2380
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/com-seda-bengala/clasica-128.webp",
+            "bytes": 5790
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/com-seda-bengala/clasica-256.webp",
+            "bytes": 16448
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/com-seda-bengala/clasica-512.webp",
+            "bytes": 54680
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/com-seda-bengala/inventario-64.webp",
+            "bytes": 2536
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/com-seda-bengala/inventario-128.webp",
+            "bytes": 6042
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/com-seda-bengala/inventario-256.webp",
+            "bytes": 14526
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/com-seda-bengala/inventario-512.webp",
+            "bytes": 39162
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": "Tierras altas de Etiopía",
+      "acquisition": null,
+      "description": null,
+      "material": "Frutos y semillas",
+      "context": "Referencia botánica de Coffea arabica y sus circuitos históricos.",
+      "original": null,
+      "observations": "Fruto seco y grano verde, sin servicio ni preparación.",
+      "id": "com-cafe-etiope",
+      "name": "Café de gabinete etíope",
+      "family": "Mercancías regionales",
+      "type": "Idea de mercancía regional",
+      "pilot": false,
+      "stage": "OBJ-04",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/com-cafe-etiope/clasica-64.webp",
+            "bytes": 3038
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/com-cafe-etiope/clasica-128.webp",
+            "bytes": 8124
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/com-cafe-etiope/clasica-256.webp",
+            "bytes": 26364
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/com-cafe-etiope/clasica-512.webp",
+            "bytes": 77064
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/com-cafe-etiope/inventario-64.webp",
+            "bytes": 3146
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/com-cafe-etiope/inventario-128.webp",
+            "bytes": 8656
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/com-cafe-etiope/inventario-256.webp",
+            "bytes": 24276
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/com-cafe-etiope/inventario-512.webp",
+            "bytes": 64360
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": "Valle del Nilo",
+      "acquisition": null,
+      "description": null,
+      "material": "Fibra vegetal",
+      "context": "Referencia a la expansión del algodón comercial en Egipto en la década de 1820.",
+      "original": null,
+      "observations": "Cápsula abierta con fibra cruda, frente a los textiles ya tejidos.",
+      "id": "com-algodon-egipcio",
+      "name": "Cápsula de algodón egipcio",
+      "family": "Mercancías regionales",
+      "type": "Idea de mercancía regional",
+      "pilot": false,
+      "stage": "OBJ-04",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/com-algodon-egipcio/clasica-64.webp",
+            "bytes": 2924
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/com-algodon-egipcio/clasica-128.webp",
+            "bytes": 7546
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/com-algodon-egipcio/clasica-256.webp",
+            "bytes": 23972
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/com-algodon-egipcio/clasica-512.webp",
+            "bytes": 71950
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/com-algodon-egipcio/inventario-64.webp",
+            "bytes": 3060
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/com-algodon-egipcio/inventario-128.webp",
+            "bytes": 7980
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/com-algodon-egipcio/inventario-256.webp",
+            "bytes": 22540
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/com-algodon-egipcio/inventario-512.webp",
+            "bytes": 62714
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": "Veracruz, México",
+      "acquisition": null,
+      "description": null,
+      "material": "Vainas y flor",
+      "context": "Muestra botánica conservada de una especia mesoamericana con circulación anterior a 1842.",
+      "original": null,
+      "observations": "Vainas largas y flor de referencia, frente a las especias sueltas de Asia.",
+      "id": "com-vainilla-mexicana",
+      "name": "Vainilla de Veracruz",
+      "family": "Mercancías regionales",
+      "type": "Idea de mercancía regional",
+      "pilot": false,
+      "stage": "OBJ-04",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/com-vainilla-mexicana/clasica-64.webp",
+            "bytes": 2926
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/com-vainilla-mexicana/clasica-128.webp",
+            "bytes": 7618
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/com-vainilla-mexicana/clasica-256.webp",
+            "bytes": 22658
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/com-vainilla-mexicana/clasica-512.webp",
+            "bytes": 70092
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/com-vainilla-mexicana/inventario-64.webp",
+            "bytes": 3060
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/com-vainilla-mexicana/inventario-128.webp",
+            "bytes": 8284
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/com-vainilla-mexicana/inventario-256.webp",
+            "bytes": 22410
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/com-vainilla-mexicana/inventario-512.webp",
+            "bytes": 65328
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": "Valles del Caribe",
+      "acquisition": null,
+      "description": null,
+      "material": "Reproducción sobre papel",
+      "context": "Registro histórico de Nicotiana tabacum.",
+      "original": null,
+      "observations": "Hoja y flor en lámina, sin presentación comercial de consumo.",
+      "id": "com-tabaco-lamina",
+      "name": "Lámina botánica de tabaco",
+      "family": "Mercancías regionales",
+      "type": "Idea de mercancía regional",
+      "pilot": false,
+      "stage": "OBJ-04",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": "Bengala",
+      "acquisition": null,
+      "description": null,
+      "material": "Pigmento vegetal seco",
+      "context": "Ejemplar histórico documentado de tintura.",
+      "original": null,
+      "observations": "Contrastar con el pigmento identificado en el álbum antes de ilustrar.",
+      "id": "com-indigo",
+      "name": "Torta de índigo de gabinete",
+      "family": "Mercancías regionales",
+      "type": "Idea de mercancía regional",
+      "pilot": false,
+      "stage": "OBJ-04",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": "Mysore, India",
+      "acquisition": null,
+      "description": null,
+      "material": "Madera aromática",
+      "context": "Muestra histórica de gabinete de la red del Índico.",
+      "original": null,
+      "observations": "Corte de madera sin tallar, frente a madera de taller.",
+      "id": "com-sandalo",
+      "name": "Muestra de sándalo",
+      "family": "Mercancías regionales",
+      "type": "Idea de mercancía regional",
+      "pilot": false,
+      "stage": "OBJ-04",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": "Península ibérica",
+      "acquisition": null,
+      "description": null,
+      "material": "Fibra de lana",
+      "context": "Muestra conservada de la tradición de lana de exportación ibérica.",
+      "original": null,
+      "observations": "Mechón rizado preparado como muestrario, frente a pelo animal de OBJ-03.",
+      "id": "com-lana",
+      "name": "Muestra de lana merina",
+      "family": "Mercancías regionales",
+      "type": "Idea de mercancía regional",
+      "pilot": false,
+      "stage": "OBJ-04",
       "sprites": {
         "clasica": null,
         "inventario": null

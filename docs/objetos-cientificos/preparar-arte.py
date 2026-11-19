@@ -1,4 +1,4 @@
-"""OBJ-01: pasar las tres planchas originales. OBJ-02 y OBJ-03: pasar --obj-02 o --obj-03 y una plancha opcional."""
+"""OBJ-01: pasar las tres planchas originales. OBJ-02 a OBJ-04: pasar la etapa (por ejemplo --obj-04) y una plancha opcional."""
 import json
 from pathlib import Path
 import sys
@@ -45,29 +45,32 @@ def prepare(filename, columns, names, method, guides=None):
                             bounds[2] == art.width or bounds[3] == art.height):
             raise ValueError(f'Revisar límites de celda: {name}')
         art = art.crop(bounds)
-        folder = ROOT / name
-        folder.mkdir(parents=True, exist_ok=True)
-        # Reducir microtextura y reforzar masas tonales para tamaños de casilla.
-        smooth = art.convert('RGB').filter(ImageFilter.MedianFilter(3))
-        smooth = ImageEnhance.Contrast(smooth).enhance(1.10)
-        smooth.putalpha(art.getchannel('A'))
-        for variant, source, fill, quality in (
-            ('clasica', art, 0.81, 88), ('inventario', smooth, 0.89, 79)
-        ):
-            for size in (64, 128, 256, 512):
-                factor = size * fill / max(source.size)
-                resized = source.resize(tuple(round(d * factor) for d in source.size), Image.Resampling.LANCZOS)
-                if variant == 'inventario' and size <= 128:
-                    alpha = resized.getchannel('A')
-                    resized = resized.convert('RGB').filter(ImageFilter.UnsharpMask(0.85, 80, 3))
-                    resized.putalpha(alpha)
-                canvas = Image.new('RGBA', (size, size))
-                canvas.paste(resized, ((size-resized.width)//2, (size-resized.height)//2))
-                canvas.save(folder / f'{variant}-{size}.webp', quality=quality, method=method)
+        export_sprite(name, art, method)
 
+
+def export_sprite(name, art, method=4):
+    folder = ROOT / name
+    folder.mkdir(parents=True, exist_ok=True)
+    # Reducir microtextura y reforzar masas tonales para tamaños de casilla.
+    smooth = art.convert('RGB').filter(ImageFilter.MedianFilter(3))
+    smooth = ImageEnhance.Contrast(smooth).enhance(1.10)
+    smooth.putalpha(art.getchannel('A'))
+    for variant, source, fill, quality in (
+        ('clasica', art, 0.81, 88), ('inventario', smooth, 0.89, 79)
+    ):
+        for size in (64, 128, 256, 512):
+            factor = size * fill / max(source.size)
+            resized = source.resize(tuple(round(d * factor) for d in source.size), Image.Resampling.LANCZOS)
+            if variant == 'inventario' and size <= 128:
+                alpha = resized.getchannel('A')
+                resized = resized.convert('RGB').filter(ImageFilter.UnsharpMask(0.85, 80, 3))
+                resized.putalpha(alpha)
+            canvas = Image.new('RGBA', (size, size))
+            canvas.paste(resized, ((size-resized.width)//2, (size-resized.height)//2))
+            canvas.save(folder / f'{variant}-{size}.webp', quality=quality, method=method)
 
 def main(args):
-    if args and args[0] in ('--obj-02', '--obj-03'):
+    if args and args[0] in ('--obj-02', '--obj-03', '--obj-04'):
         stage = args[0][2:]
         folder = Path(__file__).parent
         plan = json.loads((folder / f'{stage}.json').read_text())

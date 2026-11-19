@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const {rows, groups, materialIds, recipeExamples} = AtlasObjetosCientificos;
+  const {rows, groups, materialIds, recipeExamples, archive, cartography} = AtlasObjetosCientificos;
   const byId = new Map(rows.map(row => [row.id, row]));
   const get = id => document.getElementById(id);
   const gallery = get('gallery');
@@ -44,6 +44,9 @@
   }
 
   options(get('group'), groups.map(group => group.name));
+  const archiveSelect = get('archive-section');
+  archiveSelect.add(new Option('Ensamblaje cartográfico', 'assembly'));
+  options(archiveSelect, archive.map(group => group.name));
   options(get('stock'), stockAmounts.map(quantity => integer.format(quantity)), 'Cantidades variadas');
   const recipeSelect = get('recipe-example');
   recipeSelect.add(new Option('Todas las recetas', ''));
@@ -241,6 +244,33 @@
     return article;
   }
 
+  function renderAssembly() {
+    const percent = Number(get('assembly').value);
+    const complete = percent === 100;
+    const grid = node('div', '', 'assembly-grid');
+    for (const map of cartography) {
+      const card = node('article', '', 'assembly-card');
+      const fragment = figure(byId.get(map.piece), 'inventario', 'Fragmento');
+      const chart = figure(byId.get(map.id), 'inventario', complete ? 'Mapa completo' : 'Mapa en ensamblaje');
+      chart.querySelector('img').style.clipPath = 'inset(0 ' + (100 - percent) + '% 0 0)';
+      const pair = node('div', '', 'assembly-pair');
+      pair.append(fragment, chart);
+      const count = Math.floor(map.parts * percent / 100);
+      const progress = node('progress');
+      progress.max = 100;
+      progress.value = percent;
+      progress.setAttribute('aria-label', 'Ensamblaje visual de ' + map.name);
+      card.append(node('h3', map.name), pair, progress, node('small', count + ' de ' + map.parts + ' partes completas'));
+      grid.append(card);
+    }
+    const world = node('section', '', 'assembly-world');
+    world.append(node('h2', 'Mapamundi'),
+      node('p', complete ? 'Los seis mapas se conservan al ensamblar el Mapamundi.' :
+        'El Mapamundi se ensambla al reunir los seis mapas completos; estos se conservan.'),
+      complete ? figure(byId.get('world_map'), 'inventario') : node('p', '0 de 6 mapas completos'));
+    gallery.append(node('p', 'El porcentaje muestra el avance visual. El contador indica partes enteras.'), grid, world);
+  }
+
   function matchesView(row, view) {
     switch (view) {
       case 'inventory': return row.type === 'Objeto productivo';
@@ -250,6 +280,7 @@
       case 'album': return row.type === 'Coleccionable propuesto';
       case 'museum': return row.type === 'Pieza del Museo';
       case 'groups': return groups.find(group => group.name === get('group').value).ids.includes(row.id);
+      case 'archive': return archive.find(group => group.name === archiveSelect.value)?.ids.includes(row.id);
       default: return get('stage').value || get('scope').value !== 'pilot' || row.pilot;
     }
   }
@@ -304,8 +335,7 @@
     gallery.append(section);
   }
 
-  function renderGroup(selected) {
-    const group = groups.find(entry => entry.name === get('group').value);
+  function renderGroup(selected, group) {
     const visible = new Map(selected.map(row => [row.id, row]));
     const ordered = group.evolution ? group.ids.map(id => visible.get(id)).filter(Boolean) : selected;
     const section = node('section');
@@ -331,6 +361,11 @@
 
   function render() {
     const view = get('view').value;
+    const inArchive = view === 'archive';
+    const inAssembly = inArchive && archiveSelect.value === 'assembly';
+    get('archive-control').hidden = !inArchive;
+    get('assembly-control').hidden = !inAssembly;
+    for (const key of ['search','sort',...filters]) get(key).disabled = inAssembly;
     const single = view === 'compare' && get('layout').value === 'single';
     get('scope').disabled = view !== 'compare' || Boolean(get('stage').value);
     get('group-control').hidden = view !== 'groups';
@@ -343,10 +378,17 @@
       filters.every(key => !get(key).value || get(key).value === (key === 'approval' ? approval(row) : row[key]))));
     gallery.replaceChildren();
     gallery.style.setProperty('--size', size() + 'px');
-    get('status').textContent = selected.length + ' resultados' + (['compare','groups'].includes(view) ? '' : ' · Simulación con datos de prueba');
-    if (view === 'groups') {
+    if (inAssembly) {
       navigation(0, 0);
-      renderGroup(selected);
+      get('status').textContent = 'Seis mapas · 10 partes por mapa · simulación visual';
+      renderAssembly();
+      return;
+    }
+    get('status').textContent = selected.length + ' resultados' + (['compare','groups','archive'].includes(view) ? '' : ' · Simulación con datos de prueba');
+    if (view === 'groups' || inArchive) {
+      navigation(0, 0);
+      const name = inArchive ? archiveSelect.value : get('group').value;
+      renderGroup(selected, (inArchive ? archive : groups).find(entry => entry.name === name));
       return;
     }
     if (view === 'album') {
@@ -372,8 +414,8 @@
   }
 
   get('search').addEventListener('input', resetPage);
-  for (const key of ['view','group','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
-  for (const key of ['scale','ground','halo','stock']) get(key).addEventListener('change', render);
+  for (const key of ['view','group','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
+  for (const key of ['scale','ground','halo','stock','assembly']) get(key).addEventListener('change', render);
   function resetPage() {
     page = 0;
     focusId = null;

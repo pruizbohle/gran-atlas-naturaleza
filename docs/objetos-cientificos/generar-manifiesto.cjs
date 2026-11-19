@@ -168,6 +168,23 @@ assert.equal(futureMaterials.filter(row => stage03Art.has(row.id)).length, 8);
 assert.equal(stage03Art.size, 22);
 assert.ok(stage03.recipes.every(id => products.find(row => row.id === id)?.recipe), 'Ejemplo sin receta real');
 
+const stage04 = JSON.parse(read('docs/objetos-cientificos/obj-04.json'));
+const commercialIdeas = read('docs/objetos-cientificos/comercio-futuro.tsv').trim().split('\n').slice(1).map(line => {
+  const [id, name, provenance, material, context, observations] = line.split('\t');
+  assert.ok(observations, id);
+  return {id, name, provenance, material, context, observations, family:'Mercancías regionales',
+    type:'Idea de mercancía regional'};
+});
+const cartography = stage04.cartography.map(({id, name}) => ({id, piece:id + '_piece', name, parts:10}));
+const stage04Art = new Set([...stage04.sheets.flatMap(sheet => sheet.ids),
+  ...cartography.flatMap(map => [map.id, map.piece])]);
+const stage04Ids = new Set([...stage04Art, ...commercialIdeas.map(row => row.id)]);
+assert.equal(stage04Art.size, 45);
+assert.equal(commercialIdeas.length, 10);
+assert.equal(commercialIdeas.filter(row => stage04Art.has(row.id)).length, 6);
+assert.equal(cartography.length, 6);
+assert.ok(cartography.every(map => products.find(row => row.id === map.id)?.recipe?.[map.piece] > 0));
+
 assert.equal(extra.length, 60);
 const newCollections = new Set(extra.map(row => row.collection));
 assert.equal(newCollections.size, 5);
@@ -191,6 +208,18 @@ assert.deepEqual(Object.keys({Botánica:1,Geología:1,Oceanografía:1,Historia:1
   .map(cabinet => catalog.filter(row => row.cabinet === cabinet).length), [48,60,60,72,60]);
 
 const pilotNotes = {
+  'MAP-01':'Carta interpretativa del Mediterráneo. Cotejar Gibraltar, Sicilia y Levante con un portulano del siglo XVI.',
+  'MAP-02':'Tira de itinerarios inspirada en la copia medieval de una cartografía vial romana; no usa escala geográfica moderna.',
+  'MAP-03':'Interpretación de la carta de Juan de la Cosa de 1500, con el oeste arriba y América en verde.',
+  'MAP-04':'Folio de gabinete inspirado en el Atlas de Mercator de 1595 y su tradición editorial; la apertura es interpretativa.',
+  'MAP-05':'Fragmento de pergamino inspirado en el mapa atlántico de Piri Reis de 1513; cotejar sus costas y orientación.',
+  'MAP-06':'Reconstrucción temática de corredores de Asia central, sin atribución a un original específico.',
+  'MAP-07':'Reconstrucción temática de la costa oriental africana; cotejar la ubicación de islas y puertos.',
+  'MAP-08':'Vista interpretativa de Tenochtitlán y Texcoco inspirada en planos coloniales; cotejar orientación y calzadas.',
+  'MAP-10':'Carta interpretativa de arrecifes frente a la costa nororiental australiana; cotejar con los levantamientos de 1770.',
+  'MAP-11':'Interpretación de un derrotero del Endeavour de 1769–1770; cotejar las escalas y el perfil de Nueva Zelanda.',
+  'MAP-12':'Carta incompleta inspirada en observaciones australes de 1838–1842. El atlas publicado de Wilkes es de 1844.',
+
   'animal_trace':'Vaciado claro de yeso de campo, con una pisada reciente marcada. La huella fósil queda como referencia para OBJ-05.',
   'fossil_fragment':'Fragmento de matriz estratificada con una impronta parcial; referencia para OBJ-05.',
   'polished_lens':'Vidrio claro de borde biselado y perfil regular, frente a la fractura y opacidad de las piezas minerales.',
@@ -214,7 +243,7 @@ const pilotNotes = {
   'binoculars':'Cotejar el puente y la distancia entre ópticas con un modelo galileano de viaje.',
   'ancient_coin':'Diferenciar la variante de inventario del penique victoriano por la pátina y el relieve.'
 };
-const rows = [...products,...catalog,...museumRecords,...concepts,...futureMaterials].map(row => {
+const rows = [...products,...catalog,...museumRecords,...concepts,...futureMaterials,...commercialIdeas].map(row => {
   const sprites = {};
   for (const variant of ['clasica','inventario']) {
     const files = {};
@@ -228,7 +257,7 @@ const rows = [...products,...catalog,...museumRecords,...concepts,...futureMater
   return {cabinet:null,collection:null,rarity:null,tier:null,continent:null,provenance:null,
     acquisition:null,description:null,material:null,context:null,original:null,observations:null, ...row,
     pilot:plateIds.includes(row.id),
-    stage:plateIds.includes(row.id) ? 'OBJ-01' : stage02Ids.has(row.id) ? 'OBJ-02' : stage03Ids.has(row.id) ? 'OBJ-03' : 'Futuras etapas',
+    stage:plateIds.includes(row.id) ? 'OBJ-01' : stage02Ids.has(row.id) ? 'OBJ-02' : stage03Ids.has(row.id) ? 'OBJ-03' : stage04Ids.has(row.id) ? 'OBJ-04' : 'Futuras etapas',
     context:row.id === 'INS-05' ? 'Futuro · barómetro aneroide de Vidi, 1844' : row.context,
     observations:pilotNotes[row.id] || row.observations || null, sprites, approval:'Pendiente',
     artState:sprites.clasica && sprites.inventario ? 'Candidato' : row.newArtwork === false ? 'Reutilización documental' : 'Pendiente'};
@@ -237,9 +266,9 @@ assert.equal(new Set(rows.map(row => row.id)).size, rows.length);
 assert.equal(rows.filter(row => row.pilot).length, 30);
 assert.equal(stage02Ids.size, 31);
 assert.equal(rows.filter(row => row.stage === 'OBJ-02').length, stage02Ids.size);
-const candidateIds = new Set([...plateIds, ...stage02Ids, ...stage03Art]);
+const candidateIds = new Set([...plateIds, ...stage02Ids, ...stage03Art, ...stage04Art]);
 const candidates = rows.filter(row => candidateIds.has(row.id));
-assert.equal(candidates.length, 83);
+assert.equal(candidates.length, 128);
 assert.equal(rows.filter(row => row.artState === 'Candidato').length, candidates.length);
 assert.ok(materialIds.every(id => candidateIds.has(id)), 'Material de OBJ-03 sin candidato');
 assert.ok(candidates.every(row => Object.values(row.sprites).every(files => Object.values(files || {}).filter(file => file.bytes > 0).length === 4)));
@@ -252,7 +281,21 @@ for (const group of stage02.groups) {
 }
 assert.equal(rows.filter(row => row.type === 'Objeto productivo' && row.original).length, 68);
 assert.ok(stage03.groups.flatMap(group => group.ids).every(id => rows.some(row => row.id === id)));
-const manifest = {schema:1, year:1842, groups:[...stage02.groups, ...stage03.groups],
+const chartIds = catalog.filter(row => row.collection === 'Cartografía antigua').map(row => row.id);
+const seaIds = catalog.filter(row => row.collection === 'Los siete mares').map(row => row.id);
+assert.equal(chartIds.length, 12);
+assert.equal(seaIds.length, 7);
+const archive = [
+  {name:'Fragmentos y mapas', ids:[...cartography.flatMap(map => [map.piece, map.id]),'world_map','map_fragment']},
+  {name:'Mapas funcionales y cartas históricas', ids:[...cartography.map(map => map.id),'world_map',...chartIds]},
+  {name:'Cartografía antigua', ids:chartIds},
+  {name:'Mercancías regionales', ids:stage04.trade},
+  {name:'Los siete mares', ids:seaIds},
+  {name:'Archivo histórico del Museo', ids:stage04.museum},
+  {name:'Propuestas comerciales', ids:commercialIdeas.map(row => row.id)}
+];
+assert.ok(archive.slice(0, -1).flatMap(group => group.ids).every(id => illustrated.has(id)));
+const manifest = {schema:1, year:1842, groups:[...stage02.groups, ...stage03.groups], archive, cartography,
   materialIds, recipeExamples:stage03.recipes, rows};
 write('www/objetos-cientificos/manifiesto.js', 'globalThis.AtlasObjetosCientificos = '+JSON.stringify(manifest,null,2)+';\n');
 write('docs/objetos-cientificos/catalogo-300.json', JSON.stringify({
@@ -263,4 +306,4 @@ write('docs/objetos-cientificos/catalogo-300.json', JSON.stringify({
   }))],
   chronology:Object.fromEntries(catalog.map(row => [row.id,row.context]))
 },null,2)+'\n');
-console.log(`${products.length} objetos, ${catalog.length} coleccionables, ${museumRecords.length} registros de Museo, ${concepts.length} ideas de equipo, ${futureMaterials.length} ideas de materiales`);
+console.log(`${products.length} objetos, ${catalog.length} coleccionables, ${museumRecords.length} registros de Museo, ${concepts.length} ideas de equipo, ${futureMaterials.length} ideas de materiales, ${commercialIdeas.length} ideas comerciales`);
