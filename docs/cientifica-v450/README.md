@@ -55,7 +55,9 @@ Para completar las 997 especies, quedan 587 especies con 912 rutas de ilustraci�
 
 ## Validación funcional
 
-Las doce pruebas del control de release pasaron. La actualización PWA desde V4.4.0 se probó en Chromium a 390 y 1280 px. Conservó el respaldo exacto y los diez campos de partida cotejados, entre ellos los descubrimientos, las variantes, el Museo, la economía y el inventario. Se verificaron Campo, Cuaderno, Bestiario y Museo. Campo conservó el encuentro mixto y reutilizó el paisaje y el WebP decodificado en encuentros consecutivos. Atlas y su halo se cargaron sin conexión. El laboratorio pasó los doce modos a 320 y 1280 px, con la exportación JSON y la descarga opcional de referencias. [Prueba PWA](pwa.json) · [Atlas en Campo](atlas-390.jpg) · [Atlas en el laboratorio](comparacion-atlas-1280.jpg)
+Las doce pruebas del control de release pasaron. La suite histórica registró 582 aprobadas y los mismos 228 fallos que V4.4.0. [Suite histórica](regresion.json)
+
+La actualización PWA desde V4.4.0 se probó en Chromium a 390 y 1280 px. Conservó el respaldo exacto y los diez campos de partida cotejados, entre ellos los descubrimientos, las variantes, el Museo, la economía y el inventario. Se verificaron Campo, Cuaderno, Bestiario y Museo. Campo conservó el encuentro mixto y reutilizó el paisaje y el WebP decodificado en encuentros consecutivos. Atlas y su halo se cargaron sin conexión. El laboratorio pasó los doce modos a 320 y 1280 px, con la exportación JSON y la descarga opcional de referencias. [Prueba PWA](pwa.json) · [Atlas en Campo](atlas-390.jpg) · [Atlas en el laboratorio](comparacion-atlas-1280.jpg)
 
 En la ejecución medida, la apertura de Campo hasta decodificar la lámina pasó de 75 a 35 ms a 390 px y de 58 a 46 ms a 1280 px. El heap de JavaScript pasó de 6,09 a 10,47 MB y de 7,89 a 10,18 MB respectivamente. El siguiente encuentro automático de la prueba tardó 837 y 801 ms. Una imagen de Campo de 128 px ocupa 65.536 bytes RGBA una vez decodificada. Son mediciones puntuales del navegador de validación. [Tiempos y memoria](pwa.json)
 
