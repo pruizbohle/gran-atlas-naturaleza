@@ -22,7 +22,7 @@ const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
   gallery: 'Galería', variants: 'Variantes', frames: 'Ejemplares especiales',
   compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles',
-  compression: 'Compresión WebP', scale: 'Escala real', review: 'Revisión artística'
+  compression: 'Compresión WebP', scale: 'Escala real', 'visual-scale': 'Ajustes de escala', review: 'Revisión artística'
 };
 const frames = {
   Normal: 'classic', Notable: 'notable', 'Épico': 'epic',
@@ -56,11 +56,11 @@ updateFamilies();
 updateSpecies();
 for (const sp of mixedFieldSprites) mixedSvg.add(new Option(sp.name, sp.id));
 
-function illustration(sp, record, frame = 'Normal', resolution = 512, eager = false, surface = 'plain') {
+function illustration(sp, record, frame = 'Normal', resolution = 512, eager = false, surface = 'plain', fullSize = false) {
   const habitat = AtlasNaturalistArt.preferredHabitat(sp.habitats);
   return AtlasNaturalistArt.render(sp.id, {
     variant: record.key, category: frame, size: resolution, eager, alt: sp.name + ' · ' + record.label,
-    surface, habitat, region: sp.regions[0]?.id, classes: 'plate'
+    surface, habitat, region: sp.regions[0]?.id, classes: 'plate', fullSize
   }, () => AtlasNaturalistArt.frame('<span>Lámina pendiente</span>', frame, 'plate'));
 }
 
@@ -195,7 +195,7 @@ function scale(sp) {
   const record = sp.records.find(item => item.key === scalePlate.value) || sp.records[0];
   return '<div class="scale-list">' + [32, 48, 64, 96, 128, 256, 512].map(size =>
     '<figure class="sample ' + (size === 512 ? 'full' : '') + '" style="--size:' + size + 'px" data-context="' +
-    text(context.value) + '">' + illustration(sp, record, 'Normal', [64, 128, 256, 512].find(resolution => resolution >= size)) + '<h3>' + text(sp.name) +
+    text(context.value) + '">' + illustration(sp, record, 'Normal', [64, 128, 256, 512].find(resolution => resolution >= size), false, 'plain', size === 512) + '<h3>' + text(sp.name) +
     '</h3><figcaption>' + (size === 512 ? 'Completo · 512 px' : size + ' px') +
     '</figcaption></figure>').join('') + '</div>';
 }
@@ -279,30 +279,52 @@ function reviewForm(sp) {
     (record.note ? '<p class="note">' + text(record.note) + '</p>' : '') + '</div></div>';
 }
 
+function compareVisualScales() {
+  const size = Number(comparisonSize.value);
+  const halo = comparisonHalo.value;
+  const percent = new Intl.NumberFormat('es-CL', { style: 'percent', maximumFractionDigits: 2 });
+  return Object.keys(AtlasNaturalistAssets.visualScales || {}).map(id => {
+    const sp = catalog.find(entry => entry.id === id);
+    const record = specimenPlate(sp, 'Normal');
+    const before = illustration(sp, record, halo, size, true, 'plain', true);
+    const after = illustration(sp, record, halo, size, true);
+    return '<section class="visual-scale-pair" data-visual-species="' + text(id) + '"><h3>' + text(sp.name) +
+      '</h3><p class="latin">' + text(sp.latin) + '</p><div class="comparison-styles review-comparison plate-comparison" style="--comparison-size:' +
+      size + 'px">' + figure(before, 'Antes · ' + percent.format(1)) +
+      figure(after, 'Después · ' + percent.format(AtlasNaturalistArt.visualScale(id))) + '</div></section>';
+  }).join('');
+}
+
 function draw() {
   const sp = catalog.find(item => item.id === species.value);
   const comparingTaxa = mode === 'birds' || mode === 'reptiles';
+  const comparingVisualScale = mode === 'visual-scale';
+  const comparingSets = comparingTaxa || comparingVisualScale;
   const comparingVariants = mode === 'variants' && Boolean(sp);
   byId('heading').textContent = modes[mode];
   byId('mixed-control').hidden = mode !== 'mixed';
 
-  for (const label of document.querySelectorAll('[data-catalog-filter]')) label.hidden = comparingTaxa;
-  byId('order-control').hidden = comparingTaxa || birdOrder.options.length < 2;
+  for (const label of document.querySelectorAll('[data-catalog-filter]')) label.hidden = comparingSets;
+  byId('order-control').hidden = comparingSets || birdOrder.options.length < 2;
   byId('bird-set-control').hidden = !comparingTaxa;
-  byId('comparison-size-control').hidden = !comparingTaxa && !comparingVariants;
-  byId('comparison-halo-control').hidden = !comparingTaxa && !comparingVariants;
+  byId('comparison-size-control').hidden = !comparingSets && !comparingVariants;
+  byId('comparison-halo-control').hidden = !comparingSets && !comparingVariants;
   byId('variant-view-control').hidden = !comparingVariants || !sp.dimorphism;
-  byId('species-control').hidden = mode === 'gallery' || comparingTaxa;
+  byId('species-control').hidden = mode === 'gallery' || comparingSets;
   byId('context-control').hidden = mode !== 'scale';
   byId('scale-plate-control').hidden = !['scale', 'compare', 'compression', ...previews].includes(mode);
-  byId('backdrop-control').hidden = !comparingTaxa && !['compare', 'variants', 'compression', 'review', 'frames'].includes(mode);
+  byId('backdrop-control').hidden = !comparingSets && !['compare', 'variants', 'compression', 'review', 'frames'].includes(mode);
   byId('compression-control').hidden = mode !== 'compression';
   byId('comparison-control').hidden = mode !== 'compare';
   byId('category-control').hidden = !previews.includes(mode);
   byId('export').hidden = mode !== 'review';
-  byId('summary').textContent = mode === 'gallery' || comparingTaxa ? '' : (sp?.latin || '');
+  byId('summary').textContent = mode === 'gallery' || comparingSets ? '' : (sp?.latin || '');
   for (const button of document.querySelectorAll('[data-mode]')) {
     button.setAttribute('aria-pressed', String(button.dataset.mode === mode));
+  }
+  if (comparingVisualScale) {
+    content.innerHTML = compareVisualScales();
+    return;
   }
   if (comparingTaxa) {
     content.innerHTML = mode === 'birds' ? compareTaxa(birdComparisons, 'birds', 'bird-comparison') :

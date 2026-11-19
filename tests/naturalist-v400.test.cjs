@@ -51,7 +51,7 @@ test('catalog is read from the production runtime and only known records can be 
     Cetáceos: 28, Pinnípedos: 20, Sirenios: 2, 'Nutria marina': 1,
     Rapaces: 49, 'Marinas y costeras': 42, 'Ribereñas y humedales': 50,
     'Corredoras y paleognatas': 9, Galliformes: 24, 'Otras aves terrestres': 6,
-    'Arborícolas y otros no paseriformes': 62, Paseriformes: 45, Anfibios: 1, Serpientes: 36, Lagartos: 42
+    'Arborícolas y otros no paseriformes': 62, Paseriformes: 45, Anfibios: 1, Serpientes: 36, Lagartos: 42, Tortugas: 12, Crocodilianos: 13, Rincocéfalos: 1
   });
 });
 
@@ -157,7 +157,7 @@ test('terrestrial Carnivora covers the nine present families with only the confi
   assert.ok(records.some(sp => sp.id === 'sa_esp_lontra_felina'));
   assert.ok(!records.some(sp => sp.latin.startsWith('Enhydra ')));
   assert.equal(catalog.migrationProgress.total, 998);
-  assert.equal(catalog.migrationProgress.target, 1439);
+  assert.equal(catalog.migrationProgress.target, 1485);
 });
 
 test('biome library and transparent editions use module-specific layers and existing category routes', () => {
@@ -196,7 +196,7 @@ test('lab preserves the originals and reserves comparison downloads for the revi
   const archived = new Set(catalog.flatMap(sp => sp.records.flatMap(record => record.previous ? [record.previous.src] : [])));
   assert.equal(archived.size, 341);
   assert.equal(plates.size, migrationProgress.plates);
-  assert.equal(migrationProgress.migrated, 827);
+  assert.equal(migrationProgress.migrated, 853);
   assert.equal(migrationProgress.classical, migrationProgress.target);
   assert.equal(migrationProgress.plates, migrationProgress.target);
   assert.equal(migrationProgress.cutouts, Object.keys(cutouts).length);
@@ -328,8 +328,8 @@ test('bird routes match the released inventories, with distinct dimorphism and C
   }
   assert.equal(cat.migrationProgress.birds, 287);
   assert.equal(cat.migrationProgress.birdsMigrated, 287);
-  assert.equal(cat.migrationProgress.biological, 625);
-  assert.equal(cat.migrationProgress.legendary, 9);
+  assert.equal(cat.migrationProgress.biological, 643);
+  assert.equal(cat.migrationProgress.legendary, 11);
   for (const [wave, count] of [['Marinas y costeras', 50], ['Ribereñas y humedales', 94]]) {
     const files = aquatic.filter(sp => sp.wave === wave).flatMap(sp => Object.values(routes[sp.id]));
     assert.equal(new Set(files).size, count, wave);
@@ -381,63 +381,72 @@ test('bird routes match the released inventories, with distinct dimorphism and C
   }
 });
 
-test('the squamate release covers every configured route and retains the two original legends', () => {
+test('all 104 reptiles resolve to their configured categories and the four registered legends', () => {
   const audit = JSON.parse(execFileSync(process.execPath, ['scripts/audit-scientific-catalog.cjs', '--herpetology'], { encoding: 'utf8' }));
   const previous = require('../docs/cientifica-v474/inventario-herpetologia.json');
-  const priorLot = previous.editions['4.8.0'];
-  const lot = audit.editions['4.8.0'];
+  const squamates = audit.editions['4.8.0'];
+  const finalLot = audit.editions['4.8.1'];
   const { catalog, reptileComparisons, migrationProgress } = vm.runInNewContext(
     fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog,reptileComparisons,migrationProgress});');
   const { files, cutouts, routes } = globalThis.AtlasNaturalistAssets;
   const runtime = harness({}, null, { gameSource: source }).window.__atlasTest;
   assert.equal(audit.summary.species, 139);
-  assert.equal(audit.summary.estimatedPlates, 97);
-  assert.equal(lot.species, 78);
-  assert.equal(lot.families.length, 20);
-  assert.deepEqual(lot.groups, { Lagartos: 42, Serpientes: 36 });
-  assert.equal(lot.albino, 28);
-  assert.equal(lot.melanic, 20);
-  assert.equal(lot.dimorphicSpecies, 0);
-  assert.equal(lot.estimatedPlates, 0);
-  assert.deepEqual(lot.legendary, priorLot.legendary);
-  assert.deepEqual(audit.editions['4.8.1'], previous.editions['4.8.1']);
+  assert.equal(audit.summary.estimatedPlates, 51);
+  assert.equal(squamates.species, 78);
+  assert.equal(squamates.families.length, 20);
+  assert.deepEqual(squamates.groups, { Lagartos: 42, Serpientes: 36 });
+  assert.equal(squamates.albino, 28);
+  assert.equal(squamates.melanic, 20);
+  assert.equal(finalLot.species, 26);
+  assert.equal(finalLot.families.length, 8);
+  assert.deepEqual(finalLot.groups, { Crocodilianos: 13, Rincocéfalos: 1, Tortugas: 12 });
+  assert.equal(finalLot.albino, 10);
+  assert.equal(finalLot.melanic, 8);
   assert.deepEqual(audit.editions['4.8.2'], previous.editions['4.8.2']);
   assert.deepEqual(audit.southAmericanRegions, previous.southAmericanRegions);
   assert.equal(migrationProgress.reptiles, 104);
-  assert.equal(migrationProgress.reptilesMigrated, 78);
+  assert.equal(migrationProgress.reptilesMigrated, 104);
 
   const unique = new Set();
-  for (const [index, animal] of lot.inventory.entries()) {
-    const past = priorLot.inventory[index];
-    const { pendingPlates, existingRoutes, ...zoology } = animal;
-    const { pendingPlates: expected, existingRoutes: oldRoutes, ...unchanged } = past;
-    assert.deepEqual(zoology, unchanged);
-    assert.deepEqual(pendingPlates, []);
-    assert.deepEqual(oldRoutes, {});
-    assert.deepEqual(Object.values(existingRoutes).sort(), expected.sort());
-    assert.deepEqual(existingRoutes, routes[animal.id]);
-    const labRecord = catalog.find(sp => sp.id === animal.id);
-    assert.equal(labRecord.group, animal.group);
-    assert.equal(labRecord.family, animal.family);
-    assert.equal(labRecord.edition, '4.8.0');
-    assert.ok(runtime.REGIONS.some(region => region.species.includes(animal.id) &&
-      zoneSupports(region, animal.habitats)), animal.id + ' · zona compatible');
+  for (const [edition, lot, count] of [['4.8.0', squamates, 128], ['4.8.1', finalLot, 46]]) {
+    const priorLot = previous.editions[edition];
+    assert.equal(lot.dimorphicSpecies, 0);
+    assert.equal(lot.estimatedPlates, 0);
+    assert.deepEqual(lot.legendary, priorLot.legendary);
+    assert.equal(lot.inventory.flatMap(animal => Object.values(animal.existingRoutes)).length, count);
+    for (const [index, animal] of lot.inventory.entries()) {
+      const past = priorLot.inventory[index];
+      const { pendingPlates, existingRoutes, ...zoology } = animal;
+      const { pendingPlates: expected, existingRoutes: oldRoutes, ...unchanged } = past;
+      assert.deepEqual(zoology, unchanged);
+      assert.deepEqual(pendingPlates, []);
+      assert.deepEqual(oldRoutes, {});
+      assert.deepEqual(Object.values(existingRoutes).sort(), expected.sort());
+      assert.deepEqual(existingRoutes, routes[animal.id]);
+      const labRecord = catalog.find(sp => sp.id === animal.id);
+      assert.equal(labRecord.group, animal.group);
+      assert.equal(labRecord.family, animal.family);
+      assert.equal(labRecord.edition, edition);
+      assert.ok(runtime.REGIONS.some(region => region.species.includes(animal.id) &&
+        zoneSupports(region, animal.habitats)), animal.id + ' · zona compatible');
 
-    for (const [key, file] of Object.entries(existingRoutes)) {
-      assert.equal(cutouts[file], true);
-      unique.add(file);
-      for (const size of ['', '64/', '128/', '256/']) {
-        assert.ok(files.includes('naturalist-art/plates/' + size + file));
-      }
-      for (const surface of ['field', 'journal', 'bestiary', 'museum']) {
-        const frame = art.render(animal.id, { variant: key, surface, habitat: animal.habitats[0] }, () => '');
-        assert.ok(frame.includes('atlas-art-' + surface + ' atlas-art-cutout') && frame.includes(file), animal.id + ' · ' + surface);
+      for (const [key, file] of Object.entries(existingRoutes)) {
+        assert.equal(cutouts[file], true);
+        unique.add(file);
+        for (const size of ['', '64/', '128/', '256/']) {
+          assert.ok(files.includes('naturalist-art/plates/' + size + file));
+        }
+        for (const surface of ['field', 'journal', 'bestiary', 'museum']) {
+          const frame = art.render(animal.id, { variant: key, surface, habitat: animal.habitats[0] }, () => '');
+          assert.ok(frame.includes('atlas-art-' + surface + ' atlas-art-cutout') && frame.includes(file), animal.id + ' · ' + surface);
+        }
       }
     }
   }
-  assert.equal(unique.size, 128);
+  assert.equal(unique.size, 174);
   for (const [set, id, legendary] of [
-    ['basalto', 'asia_esp_0527', 'basalto'], ['seda', 'asia_esp_0373', 'seda']
+    ['basalto', 'asia_esp_0527', 'basalto'], ['seda', 'asia_esp_0373', 'seda'],
+    ['junco', 'af_cocodrilo_nilo', 'junco'], ['ancora', 'af_tortuga_aldabra', 'ancora']
   ]) {
     assert.equal(routes[id].legendario, id + '--' + legendary + '.webp');
     assert.notDeepEqual(fs.readFileSync('www/naturalist-art/plates/' + routes[id].normal),
@@ -445,7 +454,31 @@ test('the squamate release covers every configured route and retains the two ori
     assert.equal(reptileComparisons[set].reptiles[1].plateKey, 'legendario');
     assert.match(art.render(id, { variant: 'legendario', category: 'Legendario' }, () => ''), / atlas-art-frame legendary|class="atlas-art-frame legendary/);
   }
-  assert.equal(Object.keys(reptileComparisons).length, 13);
+  assert.equal(Object.keys(reptileComparisons).length, 22);
+  assert.equal(catalog.find(sp => sp.id === 'oc_esp_sphenodon_punctatus').order, 'Rhynchocephalia');
+});
+
+test('the two visual exceptions preserve image paths, dimensions, backgrounds and halo categories', () => {
+  const scales = { sa_esp_brachycephalus_pulex: 0.25, gm06_mellisuga_helenae: 0.5 };
+  const assets = globalThis.AtlasNaturalistAssets;
+  assert.deepEqual(assets.visualScales, scales);
+  for (const [id, scale] of Object.entries(scales)) {
+    assert.equal(art.visualScale(id), scale);
+    for (const surface of ['field', 'journal', 'bestiary', 'museum', 'plain']) {
+      const options = { surface, category: 'Notable', habitat: 'bosque', size: 128 };
+      const displayed = art.render(id, options, () => '');
+      const fullSize = art.render(id, { ...options, fullSize: true }, () => '');
+      const style = ' style="--art-visual-transform:scale(' + scale + ')"';
+      assert.ok(displayed.includes(style), id + ' · ' + surface);
+      assert.match(displayed, /atlas-art-frame notable/);
+      assert.equal(displayed.replace(style, ''), fullSize);
+      assert.ok(displayed.includes('plates/128/' + assets.routes[id].normal));
+    }
+  }
+  const other = 'af_tortuga_aldabra';
+  assert.equal(art.visualScale(other), 1);
+  assert.equal(art.visualScale('missing'), 1);
+  assert.doesNotMatch(art.render(other, {}, () => ''), /--art-visual-transform/);
 });
 
 function zoneSupports(region, habitats) {

@@ -56,9 +56,14 @@
     return values.find(habitat => landscapeKey(habitat)) || '';
   }
 
+  function visualScale(id) {
+    const scale = root.AtlasNaturalistAssets?.visualScales?.[id];
+    return Number.isFinite(scale) && scale > 0 && scale <= 1 ? scale : 1;
+  }
+
   function render(id, {
     variant = 'normal', category = 'Normal', size = 128, eager = false, alt = '',
-    surface = 'plain', habitat = '', region, classes = ''
+    surface = 'plain', habitat = '', region, classes = '', fullSize = false
   } = {}, fallback) {
     const records = root.AtlasNaturalistAssets?.routes[id];
     const file = records && Object.hasOwn(records, variant) ? records[variant] : null;
@@ -69,12 +74,14 @@
     const scene = cutout && surface === 'bestiary'
       ? landscape(root.AtlasNaturalistAssets.bestiaryHabitats?.[id] || habitat, region) : '';
     const wrapper = ['atlas-art-' + surface, cutout ? 'atlas-art-cutout' : 'atlas-art-opaque', classes].filter(Boolean).join(' ');
+    const scale = fullSize ? 1 : visualScale(id);
+    const visualTransform = scale === 1 ? '' : ' style="--art-visual-transform:scale(' + scale + ')"';
     const image = '<img class="atlas-art-image" alt="' + escape(alt) + '" width="' + resolution + '" height="' + resolution +
-      '" loading="' + (eager ? 'eager' : 'lazy') + '" decoding="async" src="' + escape(base + 'plates/' + prefix + file) + '">';
+      '" loading="' + (eager ? 'eager' : 'lazy') + '" decoding="async" src="' + escape(base + 'plates/' + prefix + file) + '"' + visualTransform + '>';
     return frame(scene + image, category, wrapper);
   }
 
-  const api = Object.freeze({ render, frame, landscape, landscapeKey, preferredHabitat });
+  const api = Object.freeze({ render, frame, landscape, landscapeKey, preferredHabitat, visualScale });
   root.AtlasNaturalistArt = api;
   if (typeof module === 'object' && module.exports) module.exports = api;
 })(globalThis);

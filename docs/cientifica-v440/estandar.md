@@ -18,6 +18,10 @@ Aplicable al arte de la Serie 4 a partir de la candidata V4.4.0. Se conserva la 
 4. Guardar una comparación de Serie 4.3 en `www/naturalist-art/review/series-4.3/` cuando exista. Las referencias del laboratorio forman un caché opcional.
 5. El archivo `www/naturalist-art/review/classical-plates.json` identifica los recursos incorporados con el estándar clásico. La generación de rutas rechaza una lámina registrada sin alfa o sin especie en el inventario.
 
+## Excepciones de escala visual
+
+Registrar el ID de la especie y un factor mayor que 0 y menor que 1 en `visualScales` del generador `scripts/build-naturalist-lab.cjs`. El motor usa 1,00 para los demás IDs. El factor reduce por igual el ancho y el alto de la imagen en todos los módulos y presentaciones habituales. El halo sigue la silueta transformada y la interfaz conserva el espacio original. Para revisar detalle o comparar antes y después, el laboratorio puede invocar el renderizador con `fullSize: true`. Las cuatro resoluciones, las partidas y los parámetros del catálogo quedan fuera de este ajuste.
+
 ## Validación
 
 Comprobar identidad y variante, silueta a 64 px y pesos por resolución antes de registrar una lámina. Usar `node scripts/build-naturalist-lab.cjs` para regenerar el inventario y `node scripts/build-naturalist-release.cjs --write` para actualizar la revisión de caché. Ejecutar `npm run release:verify`, la comparación del laboratorio y la prueba de actualización PWA desde V4.3.0. La validación de Android documenta por separado el paquete, su firma y la restauración en dispositivo.

@@ -5,10 +5,10 @@ const path = require('node:path');
 const http = require('node:http');
 const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v480';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v481';
 const { harness } = require('../tests/helpers/live-game.cjs');
 
-const baseline = process.env.ATLAS_BASELINE || '0421dbe4b316b0934dbfbcb9e55340b48a8fdb72';
+const baseline = process.env.ATLAS_BASELINE || '6313c49049fb5042ef23dfb85356f1b8363d2798';
 const baselineWeb = process.env.ATLAS_BASELINE_WWW;
 const version = require('../package.json').version;
 const versionSlug = version.replaceAll('.', '');
@@ -44,6 +44,33 @@ async function jsHeap(page) {
   } finally {
     await session.detach();
   }
+}
+
+async function measureVisualScale(locator, expected) {
+  const measured = await locator.evaluate(async img => {
+    await img.decode();
+    const frame = img.closest('.atlas-art-frame');
+    const button = img.closest('button');
+    const box = element => {
+      const { width, height } = element.getBoundingClientRect();
+      return [width, height];
+    };
+    const layout = () => ({ frame: box(frame), interaction: button && box(button) });
+    const scaled = box(img);
+    const scaledLayout = layout();
+    const halo = getComputedStyle(img).filter;
+    const property = '--art-visual-transform';
+    const original = img.style.getPropertyValue(property);
+    img.style.removeProperty(property);
+    const full = box(img);
+    const fullLayout = layout();
+    if (original) img.style.setProperty(property, original);
+    return { width: scaled[0] / full[0], height: scaled[1] / full[1], halo, scaledLayout, fullLayout };
+  });
+  for (const dimension of ['width', 'height']) assert.ok(Math.abs(measured[dimension] - expected) < 0.002);
+  assert.deepEqual(measured.scaledLayout, measured.fullLayout);
+  return { width: measured.width, height: measured.height, frame: measured.scaledLayout.frame,
+    interaction: measured.scaledLayout.interaction, halo: measured.halo };
 }
 
 async function run() {
@@ -609,7 +636,12 @@ async function run() {
       await updated.locator('[data-action=m27-close]').click();
 
       const discoveryChecks = {};
-      for (const [speciesId, record] of Object.entries(records)) {
+      const scaleChecks = {};
+      const scaleFactors = { sa_esp_brachycephalus_pulex: 0.25, gm06_mellisuga_helenae: 0.5 };
+      const smallBird = ['gm06_mellisuga_helenae', { latin: 'Mellisuga helenae', region: 'gm06_antillas' }];
+      for (const [speciesId, record] of [...Object.entries(records), smallBird]) {
+        const factor = scaleFactors[speciesId];
+        const checks = factor ? (scaleChecks[speciesId] = {}) : null;
         const region = expandedRegions.find(r => r.id === record.region);
         await updated.evaluate(({ speciesId, region }) => {
           const save = AtlasSaveBridge.getSaveData();
@@ -632,6 +664,7 @@ async function run() {
         const scene = updated.locator('#fieldResult ' + plate);
         const start = performance.now();
         await scene.evaluate(img => img.decode());
+        if (checks) checks.automatic = await measureVisualScale(scene, factor);
         const found = await updated.evaluate(id => {
           const save = AtlasSaveBridge.getSaveData();
           return { discovered: save.discovered[id], sightings: save.sightings[id], region: save.currentRegion, habitat: save.habitat };
@@ -643,34 +676,58 @@ async function run() {
         discoveryChecks[speciesId] = { ...found, renderMs: Math.round(performance.now() - start) };
         if (process.argv.includes('--write-evidence')) {
           await updated.locator('.field-stage').screenshot({
-            path: evidenceDir + '/' + (record.species ? 'sapo-pulga' : 'chucao') + '-' + width + '.jpg',
+            path: evidenceDir + '/' + (speciesId === smallBird[0] ? 'colibri-abeja' : record.species ? 'sapo-pulga' : 'chucao') + '-' + width + '.jpg',
             type: 'jpeg', quality: 85
           });
         }
-        await updated.evaluate(id => {
+        await updated.evaluate(({ id, scaled }) => {
           const save = AtlasSaveBridge.getSaveData();
           save.helpers = 0;
           save.stages[id] = 5;
           save.selectedJournal = id;
           save.published[id] = true;
           save.museum.exhibits[id] = true;
+          if (scaled) {
+            save.lastEncounter = { species: id, title: 'Avistamiento de prueba', sequence: save.encounterSequence,
+              entries: [{ id, amount: 1, category: 'Notable' }] };
+          }
           AtlasSaveBridge.restoreGame(save);
-        }, speciesId);
+        }, { id: speciesId, scaled: Boolean(checks) });
+        if (checks) {
+          await openTab(updated, 'field');
+          checks.field = await measureVisualScale(updated.locator('#fieldResult .notable ' + plate), factor);
+          assert.match(checks.field.halo, /drop-shadow/);
+        }
         await openTab(updated, 'journal');
-        await updated.locator('.j25-sheet ' + plate).first().evaluate(img => img.decode());
+        const journalPlate = updated.locator('.j25-sheet ' + plate).first();
+        if (checks) checks.journal = await measureVisualScale(journalPlate, factor);
+        else await journalPlate.evaluate(img => img.decode());
         await openTab(updated, 'bestiary');
         await updated.locator('#b26-search').fill(record.latin);
-        await updated.locator('.b26-card').filter({ has: updated.locator(plate) }).click();
+        const card = updated.locator('.b26-card').filter({ has: updated.locator(plate) });
+        if (checks) {
+          checks.bestiary = await measureVisualScale(card.locator(plate), factor);
+          assert.ok(checks.bestiary.interaction[0] > checks.bestiary.frame[0]);
+        }
+        await card.click({ position: { x: 8, y: 8 } });
         const detail = updated.locator('.b26-dialog');
-        await detail.locator(plate).first().evaluate(img => img.decode());
-        assert.match(await detail.locator('.b26-region').first().innerText(), /Región principal/);
-        await detail.locator('.species-monograph summary').click();
-        assert.equal(await detail.locator('.species-monograph a').getAttribute('href'), record.reference.url);
+        const portrait = detail.locator(plate).first();
+        if (checks) checks.detail = await measureVisualScale(portrait, factor);
+        else await portrait.evaluate(img => img.decode());
+        if (record.reference) {
+          assert.match(await detail.locator('.b26-region').first().innerText(), /Región principal/);
+          await detail.locator('.species-monograph summary').click();
+          assert.equal(await detail.locator('.species-monograph a').getAttribute('href'), record.reference.url);
+        }
         await updated.locator('[data-action=b26-close]').click();
         await openTab(updated, 'museum');
         await updated.getByRole('tab', { name: 'Exposiciones', exact: true }).click();
-        await updated.locator('.m27-vitrines [data-action=m27-open]').filter({ has: updated.locator(plate) }).click();
-        await updated.locator('.m27-dialog ' + plate).first().evaluate(img => img.decode());
+        const exhibit = updated.locator('.m27-vitrines [data-action=m27-open]').filter({ has: updated.locator(plate) });
+        if (checks) checks.museum = await measureVisualScale(exhibit.locator(plate).first(), factor);
+        await exhibit.click({ position: { x: 8, y: 8 } });
+        const display = updated.locator('.m27-dialog ' + plate).first();
+        if (checks) checks.exhibit = await measureVisualScale(display, factor);
+        else await display.evaluate(img => img.decode());
         await updated.locator('[data-action=m27-close]').click();
       }
 
@@ -721,13 +778,16 @@ async function run() {
       await updated.locator('.m27-dialog ' + lizardPlate).first().evaluate(img => img.decode());
       await updated.locator('[data-action=m27-close]').click();
 
-      const squamateLegends = [];
-      for (const [id, legend] of [['asia_esp_0527', 'basalto'], ['asia_esp_0373', 'seda']]) {
-        await updated.evaluate(({ id, legend }) => {
+      const reptileLegends = [];
+      for (const [id, legend, region, habitat] of [
+        ['asia_esp_0527', 'basalto', 'HX-06-17', 'selva'], ['asia_esp_0373', 'seda', 'HX-06-17', 'selva'],
+        ['af_cocodrilo_nilo', 'junco', 'HX-07-10', 'rio'], ['af_tortuga_aldabra', 'ancora', 'HX-07-14', 'pradera']
+      ]) {
+        await updated.evaluate(({ id, legend, region, habitat }) => {
           const save = AtlasSaveBridge.getSaveData();
-          save.currentRegion = 'HX-06-17';
+          save.currentRegion = region;
           save.regionUnlocked[save.currentRegion] = true;
-          save.habitat = 'selva';
+          save.habitat = habitat;
           save.discovered[id] = true;
           save.stages[id] = 5;
           save.selectedJournal = id;
@@ -736,16 +796,30 @@ async function run() {
             { id, amount: 1, variant: 'Legendario', category: 'Legendario' }
           ] };
           AtlasSaveBridge.restoreGame(save);
-        }, { id, legend });
+        }, { id, legend, region, habitat });
         await openTab(updated, 'field');
         const art = updated.locator('#fieldResult .legendary img[src$="--' + legend + '.webp"]');
         await art.evaluate(img => img.decode());
         assert.match(await art.evaluate(img => getComputedStyle(img).filter), /drop-shadow/);
-        await updated.locator('.field-environment .landscape-selva').evaluate(img => img.decode());
-        squamateLegends.push(legend);
+        await updated.locator('.field-environment .landscape-' + habitat).evaluate(img => img.decode());
+        reptileLegends.push(legend);
         if (process.argv.includes('--write-evidence')) {
           await updated.locator('.field-stage').screenshot({ path: evidenceDir + '/' + legend + '-' + width + '.jpg', type: 'jpeg', quality: 85 });
         }
+      }
+
+      await updated.evaluate(ids => {
+        const save = AtlasSaveBridge.getSaveData();
+        save.lastEncounter = { species: ids[0], title: 'Escala después de reiniciar', sequence: save.encounterSequence,
+          entries: ids.map(id => ({ id, amount: 1, category: 'Notable' })) };
+        AtlasSaveBridge.restoreGame(save);
+        AtlasSaveBridge.persistBeforeUpdate();
+      }, Object.keys(scaleFactors));
+      await updated.reload();
+      await openTab(updated, 'field');
+      for (const [id, factor] of Object.entries(scaleFactors)) {
+        const image = updated.locator('#fieldResult img[src$="/' + id + '--normal.webp"]');
+        scaleChecks[id].afterRestart = await measureVisualScale(image, factor);
       }
 
       await updated.goto(url + 'naturalist-art/');
@@ -753,7 +827,7 @@ async function run() {
       await updated.locator('.field-card .atlas-art-landscape').evaluate(img => img.decode());
       assert.deepEqual(errors, []);
       results.push({ width, fieldBeforeMs: beforeMs, fieldWebPMs: afterMs, fieldBeforeJSHeapBytes: beforeHeap, fieldWebpJSHeapBytes: afterHeap, exactSaveBackup: true,
-        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, terrestrialAutoRepeatMs, ostrichDimorphismOffline: true, passerineAutoMs, passerineInAllModulesOffline: true, squamateAutoMs, squamateInAllModulesOffline: true, squamateLegends, discoveryChecks, optionalReviewOutsideGameCache: true, errors });
+        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, terrestrialAutoRepeatMs, ostrichDimorphismOffline: true, passerineAutoMs, passerineInAllModulesOffline: true, squamateAutoMs, squamateInAllModulesOffline: true, reptileLegends, scaleChecks, discoveryChecks, optionalReviewOutsideGameCache: true, errors });
       await ctx.close();
     }
   } finally {

@@ -1,7 +1,9 @@
-# Inventario naturalista del catálogo 4.8.0
+# Inventario naturalista del catálogo 4.8.1
 
 | Grupo | Familia | ID | Nombre común | Nombre científico | Continente | Zonas del juego | Variantes | Dimorfismo | Ejemplares |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Tortugas | Testudinidae | af_tortuga_aldabra | Tortuga gigante de Aldabra | *Aldabrachelys gigantea* | África | Archipiélagos del Índico occidental | Normal | No | Normal, Notable, Épico, Excepcional, Legendario · Áncora |
+| Crocodilianos | Crocodylidae | af_cocodrilo_nilo | Cocodrilo del Nilo | *Crocodylus niloticus* | África | Sabana de África oriental, Valle del Nilo, Grandes Lagos africanos, Delta del Okavango, Litoral sudoriental africano, Lagos del Rift, Humedales de Bangweulu | Normal, Albino, Melánico | No | Normal, Notable, Épico, Excepcional, Legendario · Junco |
 | Lagartos | Varanidae | asia_esp_0527 | Dragón de Komodo | *Varanus komodoensis* | Asia | Sudeste Asiático | Normal, Melánico | No | Normal, Notable, Épico, Excepcional, Legendario · Basalto |
 | Serpientes | Elapidae | asia_esp_0373 | Cobra real | *Ophiophagus hannah* | Asia | Sudeste Asiático | Normal, Melánico | No | Normal, Notable, Épico, Excepcional, Legendario · Seda |
 | Paseriformes | Paradisaeidae | oc_esp_cicinnurus_respublica | Ave del paraíso de Wilson | *Cicinnurus respublica* | Oceanía | Nueva Guinea | Normal, Macho, Hembra | Sí | Normal, Notable |
@@ -58,6 +60,7 @@
 | Marinas y costeras | Sulidae | af_alcatraz_cabo | Alcatraz del Cabo | *Morus capensis* | África | Costa del Cabo | Normal, Albino | No | Normal, Notable |
 | Ungulados | Cervidae | alce | Alce | *Alces alces* | Europa, Asia, Norteamérica | Escandinavia, Europa Oriental, Región del mar Báltico, Siberia Occidental, Siberia Central, Montes Urales, Alaska, Bosques boreales de Canadá, Yukón | Normal, Macho, Hembra | Sí | Normal, Notable |
 | Ungulados | Bovidae | af_xlsx_alcefalo | Alcéfalo común | *Alcelaphus buselaphus* | África | Sabana de África oriental, Sabanas del sudeste africano, Sahel oriental | Normal, Albino | No | Normal, Notable |
+| Crocodilianos | Alligatoridae | na_esp_alligator_mississippiensis | Aligátor americano | *Alligator mississippiensis* | Norteamérica | Costa del golfo de México | Normal, Albino | No | Normal, Notable, Épico |
 | Rapaces | Accipitridae | af_xlsx_131_neophron_percnopterus | Alimoche común | *Neophron percnopterus* | África | Magreb, Valle del Nilo | Normal, Albino | No | Normal, Notable |
 | Paseriformes | Alaudidae | eu_esp_0636 | Alondra común | *Alauda arvensis* | Europa | Islas Británicas, Europa Oriental | Normal, Melánico | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Psittacidae | gm06_amazona_leucocephala | Amazona cubana | *Amazona leucocephala* | Norteamérica | Antillas y Caribe insular | Normal | No | Normal, Notable, Épico, Excepcional |
@@ -149,6 +152,10 @@
 | Arborícolas y otros no paseriformes | Cacatuidae | oc_esp_eolophus_roseicapilla | Cacatúa rosada | *Eolophus roseicapilla* | Oceanía | Interior árido australiano, Australia Occidental | Normal | No | Normal, Notable |
 | Cetáceos | Physeteridae | mar_esp_physeter_macrocephalus | Cachalote | *Physeter macrocephalus* | Océanos | Pacífico nororiental, Índico meridional, Atlántico austral | Normal | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Psittacidae | sa_esp_enicognathus_ferrugineus | Cachaña | *Enicognathus ferrugineus* | Sudamérica | Patagonia y Tierra del Fuego, Bosques templados del sur | Normal | No | Normal, Notable |
+| Crocodilianos | Alligatoridae | sa_esp_caiman_crocodilus | Caimán de anteojos | *Caiman crocodilus* | Sudamérica | Litoral caribeño sudamericano, Llanos del Orinoco | Normal, Albino | No | Normal, Notable |
+| Crocodilianos | Crocodylidae | sa_esp_crocodylus_intermedius | Caimán del Orinoco | *Crocodylus intermedius* | Sudamérica | Llanos del Orinoco | Normal | No | Normal, Notable |
+| Crocodilianos | Alligatoridae | sa_esp_melanosuchus_niger | Caimán negro | *Melanosuchus niger* | Sudamérica | Amazonía | Normal, Albino | No | Normal, Notable |
+| Crocodilianos | Alligatoridae | sa_esp_caiman_yacare | Caimán yacaré | *Caiman yacare* | Sudamérica | Pantanal | Normal, Albino | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Bucerotidae | asia_esp_0868 | Cálao bicorne | *Buceros bicornis* | Asia | Subcontinente Indio, Sudeste Asiático | Normal, Albino | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Bucerotidae | asia_esp_0869 | Cálao de casco | *Rhinoplax vigil* | Asia | Sudeste Asiático | Normal | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Bucerotidae | af_xlsx_131_ceratogymna_atrata | Cálao de casquete negro | *Ceratogymna atrata* | África | Bosques guineanos occidentales, Bosques atlánticos ecuatoriales | Normal, Albino | No | Normal, Notable |
@@ -216,6 +223,13 @@
 | Serpientes | Elapidae | af_cobra_egipcia | Cobra egipcia | *Naja haje* | África | Magreb, Valle del Nilo, Montañas del Atlas | Normal, Albino, Melánico | No | Normal, Notable |
 | Serpientes | Elapidae | af_xlsx_131_naja_mossambica | Cobra escupidora de Mozambique | *Naja mossambica* | África | Sabanas del sudeste africano | Normal, Albino | No | Normal, Notable |
 | Serpientes | Elapidae | asia_esp_0351 | Cobra india | *Naja naja* | Asia | Subcontinente Indio | Normal, Melánico | No | Normal, Notable |
+| Crocodilianos | Crocodylidae | gm06_crocodylus_rhombifer | Cocodrilo cubano | *Crocodylus rhombifer* | Norteamérica | Antillas y Caribe insular | Normal | No | Normal, Notable, Épico, Excepcional |
+| Crocodilianos | Crocodylidae | oc_esp_crocodylus_johnstoni | Cocodrilo de agua dulce australiano | *Crocodylus johnstoni* | Oceanía | Australia tropical septentrional | Normal | No | Normal, Notable |
+| Crocodilianos | Crocodylidae | af_cocodrilo_hocico | Cocodrilo de hocico estrecho | *Mecistops cataphractus* | África | Cuenca del Congo | Normal, Albino, Melánico | No | Normal, Notable |
+| Crocodilianos | Crocodylidae | asia_esp_0136 | Cocodrilo de las marismas | *Crocodylus palustris* | Asia | Subcontinente Indio | Normal, Melánico | No | Normal, Notable |
+| Crocodilianos | Crocodylidae | oc_esp_crocodylus_novaeguineae | Cocodrilo de Nueva Guinea | *Crocodylus novaeguineae* | Oceanía | Nueva Guinea | Normal | No | Normal, Notable |
+| Crocodilianos | Crocodylidae | af_xlsx_cocodrilo_enano | Cocodrilo enano africano | *Osteolaemus tetraspis* | África | Cuenca del Congo, Bosques atlánticos ecuatoriales | Normal, Albino | No | Normal, Notable |
+| Crocodilianos | Crocodylidae | oc_esp_crocodylus_porosus | Cocodrilo marino | *Crocodylus porosus* | Oceanía | Costa nordeste australiana, Australia tropical septentrional | Normal | No | Normal, Notable |
 | Galliformes | Odontophoridae | na_esp_callipepla_californica | Codorniz de California | *Callipepla californica* | Norteamérica | Costa del Pacífico | Normal | No | Normal, Notable |
 | Roedores | Echimyidae | sa_esp_myocastor_coypus | Coipo | *Myocastor coypus* | Sudamérica | Pantanal, Pampas | Normal, Albino | No | Normal, Notable |
 | Paseriformes | Rhipiduridae | oc_esp_rhipidura_fuliginosa | Cola de abanico de Nueva Zelanda | *Rhipidura fuliginosa* | Oceanía | Nueva Zelanda | Normal | No | Normal, Notable |
@@ -327,6 +341,7 @@
 | Ungulados | Bovidae | asia_esp_0218 | Gacela persa | *Gazella subgutturosa* | Asia | Meseta de Irán | Normal, Melánico | No | Normal, Notable |
 | Ungulados | Bovidae | asia_esp_0442 | Gacela tibetana | *Procapra picticaudata* | Asia | Meseta del Tíbet | Normal, Melánico | No | Normal, Notable |
 | Primates | Galagidae | af_galago | Gálago senegalés | *Galago senegalensis* | África | Sabana de África oriental, Sahel occidental, Grandes Lagos africanos | Normal, Albino, Melánico | No | Normal, Notable |
+| Tortugas | Geoemydidae | asia_esp_0327 | Galápago caspio | *Mauremys caspica* | Asia | Mesopotamia | Normal, Melánico | No | Normal, Notable |
 | Paseriformes | Cotingidae | sa_esp_rupicola_peruvianus | Gallito de las rocas andino | *Rupicola peruvianus* | Sudamérica | Andes del Norte | Normal, Macho, Hembra | Sí | Normal, Notable |
 | Galliformes | Phasianidae | asia_esp_0880 | Gallo lira | *Lyrurus tetrix* | Asia | Siberia Occidental, Siberia Central | Normal, Macho, Hembra, Albino | Sí | Normal, Notable |
 | Ungulados | Cervidae | asia_esp_0149 | Gamo | *Dama dama* | Asia | Cáucaso | Normal, Macho, Hembra, Albino, Melánico | Sí | Normal, Notable |
@@ -760,7 +775,18 @@
 | Roedores | Cricetidae | eu_esp_0605 | Topillo rojo | *Myodes glareolus* | Europa | Europa Occidental, Europa Central, Región del mar Báltico | Normal, Melánico | No | Normal, Notable |
 | Eulipotiflos | Talpidae | eu_esp_0611 | Topo europeo | *Talpa europaea* | Europa | Islas Británicas, Europa Occidental, Europa Central | Normal, Melánico | No | Normal, Notable |
 | Paseriformes | Icteridae | sa_esp_agelaioides_badius | Tordo músico | *Agelaioides badius* | Sudamérica | Pampas | Normal | No | Normal, Notable |
+| Tortugas | Cheloniidae | mar_esp_eretmochelys_imbricata | Tortuga carey | *Eretmochelys imbricata* | Océanos | Océano Índico tropical | Normal | No | Normal, Notable |
+| Tortugas | Emydidae | na_esp_terrapene_carolina | Tortuga de caja de Florida | *Terrapene carolina* | Norteamérica | Costa del golfo de México | Normal | No | Normal, Notable |
+| Tortugas | Testudinidae | na_esp_gopherus_agassizii | Tortuga del desierto | *Gopherus agassizii* | Norteamérica | Desierto de Sonora | Normal | No | Normal, Notable |
+| Tortugas | Testudinidae | gm06_chelonoidis_porteri | Tortuga gigante de Santa Cruz occidental | *Chelonoidis porteri* | Sudamérica | Islas Galápagos | Normal | No | Normal, Notable, Épico, Excepcional |
+| Tortugas | Testudinidae | eu_esp_0505 | Tortuga griega | *Testudo graeca* | Europa, Asia, África | Balcanes, Anatolia, Magreb, Montañas del Atlas | Normal, Melánico | No | Normal, Notable |
+| Tortugas | Dermochelyidae | af_tortuga_laúd | Tortuga laúd | *Dermochelys coriacea* | África, Océanos | Costa del Cabo, Litoral sudoriental africano, Archipiélagos del Índico occidental, Índico meridional | Normal, Albino, Melánico | No | Normal, Notable |
+| Tortugas | Testudinidae | eu_esp_0506 | Tortuga mediterránea | *Testudo hermanni* | Europa | Península Itálica | Normal, Melánico | No | Normal, Notable |
+| Tortugas | Emydidae | na_esp_chrysemys_picta | Tortuga pintada | *Chrysemys picta* | Norteamérica | Región de los Grandes Lagos | Normal, Albino | No | Normal, Notable |
+| Tortugas | Testudinidae | af_tortuga_radiada | Tortuga radiada | *Astrochelys radiata* | África | Madagascar | Normal, Albino, Melánico | No | Normal, Notable |
+| Tortugas | Cheloniidae | mar_esp_chelonia_mydas | Tortuga verde | *Chelonia mydas* | Océanos, África | Mar tropical asiático, Archipiélagos tropicales, Arco del mar Rojo | Normal | No | Normal, Notable |
 | Galliformes | Phasianidae | asia_esp_0865 | Tragopán sátiro | *Tragopan satyra* | Asia | Himalaya | Normal, Macho, Hembra, Melánico | Sí | Normal, Notable |
+| Rincocéfalos | Sphenodontidae | oc_esp_sphenodon_punctatus | Tuátara | *Sphenodon punctatus* | Oceanía | Nueva Zelanda | Normal | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Ramphastidae | sa_esp_andigena_hypoglauca | Tucán andino pechigris | *Andigena hypoglauca* | Sudamérica | Andes del Norte | Normal | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Ramphastidae | sa_esp_ramphastos_tucanus | Tucán de garganta blanca | *Ramphastos tucanus* | Sudamérica | Amazonía | Normal | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Ramphastidae | na_esp_ramphastos_sulfuratus | Tucán pico iris | *Ramphastos sulfuratus* | Norteamérica | Península de Yucatán, América Central | Normal | No | Normal, Notable |

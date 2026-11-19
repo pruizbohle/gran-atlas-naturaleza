@@ -6,9 +6,14 @@ const { harness } = require('../tests/helpers/live-game.cjs');
 const { ungulateFamily } = require('./ungulate-families.cjs');
 const { terrestrialMammal, aquaticMammal } = require('./terrestrial-mammal-families.cjs');
 const birdPlan = require('../docs/cientifica-v460/inventario-aves.json');
-const squamatePlan = require('../docs/cientifica-v474/inventario-herpetologia.json').editions['4.8.0'].inventory;
-const squamates = new Map(squamatePlan.map(animal => [animal.id, animal]));
-const reptileSets = require('./squamate-comparisons.cjs');
+const herpetologyPlan = require('../docs/cientifica-v474/inventario-herpetologia.json').editions;
+const reptiles = new Map(['4.8.0', '4.8.1'].flatMap(edition => herpetologyPlan[edition].inventory
+  .map(animal => [animal.id, { ...animal, edition }])));
+const reptileSets = {
+  ...require('./turtle-crocodilian-comparisons.cjs'),
+  ...require('./squamate-comparisons.cjs')
+};
+const visualScales = { sa_esp_brachycephalus_pulex: 0.25, gm06_mellisuga_helenae: 0.5 };
 const additions = require('../www/js/gm07-a04/catalog.js').records;
 const comparisonSets = {
   ...require('./passerine-comparisons.cjs'),
@@ -35,7 +40,7 @@ const priority = [
   'myrmecobius_fasciatus', 'spilocuscus_maculatus', 'dendrolagus_lumholtzi', 'dendrolagus_matschiei'
 ].map(suffix => 'oc_esp_' + suffix);
 priority.splice(5, 0, 'gm06_dromiciops_gliroides');
-priority.unshift('asia_esp_0527', 'asia_esp_0373', 'oc_esp_cicinnurus_respublica', 'eu_esp_0629', 'asia_esp_0067',
+priority.unshift('af_tortuga_aldabra', 'af_cocodrilo_nilo', 'asia_esp_0527', 'asia_esp_0373', 'oc_esp_cicinnurus_respublica', 'eu_esp_0629', 'asia_esp_0067',
   'sa_esp_scelorchilus_rubecula', 'sa_esp_brachycephalus_pulex',
   'af_avestruz', 'asia_esp_0410', 'urogallo_comun',
   'frailecillo_atlantico', 'aguila_real', 'mar_esp_megaptera_novaeangliae',
@@ -178,11 +183,11 @@ function classify(id, sp) {
     if (taxonomy.className !== 'Aves' || bird.latin !== sp.latin) throw Error('Ave fuera del inventario: ' + id);
     return { family: bird.family, order: bird.order, group: bird.group, edition: bird.edition };
   }
-  const squamate = squamates.get(id);
-  if (squamate) {
-    if (taxonomy.className !== 'Reptilia' || squamate.latin !== sp.latin) throw Error('Reptil fuera del inventario: ' + id);
-    const { family, order, group } = squamate;
-    return { family, order, group, edition: '4.8.0' };
+  const reptile = reptiles.get(id);
+  if (reptile) {
+    if (taxonomy.className !== 'Reptilia' || reptile.latin !== sp.latin) throw Error('Reptil fuera del inventario: ' + id);
+    const { family, order, group, edition } = reptile;
+    return { family, order, group, edition };
   }
   if (Object.hasOwn(additions, id) && taxonomy.className === 'Amphibia') {
     const { family, order } = taxonomy;
@@ -281,7 +286,7 @@ function buildComparisons(sets, members, key) {
 }
 
 const birdComparisons = buildComparisons(comparisonSets, birds, 'birds');
-const reptileComparisons = buildComparisons(reptileSets, squamates, 'reptiles');
+const reptileComparisons = buildComparisons(reptileSets, reptiles, 'reptiles');
 const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,
   total: catalogEntries.length,
@@ -329,6 +334,9 @@ fs.writeFileSync(path.join(out, 'CATALOGO.md'), [
 const routes = Object.fromEntries(species.map(sp => [sp.id,
   Object.fromEntries(sp.records.filter(record => record.src)
     .map(record => [record.key, path.basename(record.src)]))]));
+for (const [id, scale] of Object.entries(visualScales)) {
+  if (!routes[id]?.normal || !(scale > 0 && scale < 1)) throw Error('Escala visual sin lámina válida: ' + id);
+}
 const landscapes = fs.readdirSync(path.join(out, 'landscapes')).filter(file => file.endsWith('.webp'))
   .map(file => path.basename(file, '.webp')).sort();
 const animalFiles = [...assets].sort().flatMap(file =>
@@ -341,7 +349,7 @@ for (const file of [...files, ...labFiles]) {
 const labBytes = labFiles.reduce((bytes, file) => bytes + fs.statSync('www/' + file).size, 0);
 fs.writeFileSync('www/js/naturalist-assets-v400.js',
   'globalThis.AtlasNaturalistAssets = ' +
-  JSON.stringify({ routes, cutouts, landscapes, bestiaryHabitats, files, labFiles, labBytes }, null, 2) + ';\n');
+  JSON.stringify({ routes, cutouts, landscapes, bestiaryHabitats, visualScales, files, labFiles, labBytes }, null, 2) + ';\n');
 console.log(JSON.stringify({
   species: species.length,
   catalogSize: migrationProgress.total,
