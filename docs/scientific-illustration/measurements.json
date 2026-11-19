@@ -1,0 +1,2285 @@
+{
+  "plates": 33,
+  "generationSeconds": [
+    190,
+    46,
+    130,
+    88
+  ],
+  "medianSilhouetteDice32": 0.9805,
+  "bySize": {
+    "64": {
+      "naturalBytes": 81020,
+      "scientificBytes": 78750,
+      "naturalReencode": {
+        "meanPsnrDb": 33.31,
+        "encodeMs": 46.31,
+        "medianDecodeMsForAll": 4.76
+      },
+      "scientific": {
+        "meanPsnrDb": 32.67,
+        "encodeMs": 38.84,
+        "medianDecodeMsForAll": 4.79
+      },
+      "decodedRgbaBytesPerPlate": 16384
+    },
+    "128": {
+      "naturalBytes": 200878,
+      "scientificBytes": 196178,
+      "naturalReencode": {
+        "meanPsnrDb": 34.19,
+        "encodeMs": 102.49,
+        "medianDecodeMsForAll": 12.06
+      },
+      "scientific": {
+        "meanPsnrDb": 33.2,
+        "encodeMs": 100.72,
+        "medianDecodeMsForAll": 11.72
+      },
+      "decodedRgbaBytesPerPlate": 65536
+    },
+    "256": {
+      "naturalBytes": 582314,
+      "scientificBytes": 585224,
+      "naturalReencode": {
+        "meanPsnrDb": 35.95,
+        "encodeMs": 355.37,
+        "medianDecodeMsForAll": 37.63
+      },
+      "scientific": {
+        "meanPsnrDb": 34.29,
+        "encodeMs": 312.13,
+        "medianDecodeMsForAll": 37.19
+      },
+      "decodedRgbaBytesPerPlate": 262144
+    },
+    "512": {
+      "naturalBytes": 1603504,
+      "scientificBytes": 1895190,
+      "naturalReencode": {
+        "meanPsnrDb": 46.29,
+        "encodeMs": 1292.12,
+        "medianDecodeMsForAll": 129.27
+      },
+      "scientific": {
+        "meanPsnrDb": 36.6,
+        "encodeMs": 1270.75,
+        "medianDecodeMsForAll": 137.71
+      },
+      "decodedRgbaBytesPerPlate": 1048576
+    }
+  },
+  "detail": [
+    {
+      "file": "oc_esp_petauroides_volans--normal.webp",
+      "species": "oc_esp_petauroides_volans",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9796,
+      "naturalCoverage32": 473,
+      "scientificCoverage32": 458,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2796,
+          "scientificBytes": 2664,
+          "naturalReencode": {
+            "bytes": 2790,
+            "encodeMs": 4.045,
+            "psnrDb": 34.18
+          },
+          "scientific": {
+            "bytes": 2664,
+            "encodeMs": 1.246,
+            "psnrDb": 33.5
+          }
+        },
+        "128": {
+          "naturalBytes": 7398,
+          "scientificBytes": 7218,
+          "naturalReencode": {
+            "bytes": 7368,
+            "encodeMs": 3.221,
+            "psnrDb": 35.35
+          },
+          "scientific": {
+            "bytes": 7218,
+            "encodeMs": 3.08,
+            "psnrDb": 34.16
+          }
+        },
+        "256": {
+          "naturalBytes": 22830,
+          "scientificBytes": 22642,
+          "naturalReencode": {
+            "bytes": 22656,
+            "encodeMs": 13.453,
+            "psnrDb": 36.97
+          },
+          "scientific": {
+            "bytes": 22642,
+            "encodeMs": 13.252,
+            "psnrDb": 35.24
+          }
+        },
+        "512": {
+          "naturalBytes": 65832,
+          "scientificBytes": 76648,
+          "naturalReencode": {
+            "bytes": 65506,
+            "encodeMs": 46.858,
+            "psnrDb": 48.15
+          },
+          "scientific": {
+            "bytes": 76648,
+            "encodeMs": 47.222,
+            "psnrDb": 37.17
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_dendrolagus_goodfellowi--normal.webp",
+      "species": "oc_esp_dendrolagus_goodfellowi",
+      "variant": "normal",
+      "nearCellEdge": true,
+      "silhouetteDice32": 0.981,
+      "naturalCoverage32": 315,
+      "scientificCoverage32": 315,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2466,
+          "scientificBytes": 2416,
+          "naturalReencode": {
+            "bytes": 2468,
+            "encodeMs": 1.246,
+            "psnrDb": 28.78
+          },
+          "scientific": {
+            "bytes": 2416,
+            "encodeMs": 1.14,
+            "psnrDb": 28.7
+          }
+        },
+        "128": {
+          "naturalBytes": 5952,
+          "scientificBytes": 5748,
+          "naturalReencode": {
+            "bytes": 5922,
+            "encodeMs": 2.889,
+            "psnrDb": 31.07
+          },
+          "scientific": {
+            "bytes": 5748,
+            "encodeMs": 2.876,
+            "psnrDb": 30.45
+          }
+        },
+        "256": {
+          "naturalBytes": 16486,
+          "scientificBytes": 16786,
+          "naturalReencode": {
+            "bytes": 16320,
+            "encodeMs": 8.661,
+            "psnrDb": 34.08
+          },
+          "scientific": {
+            "bytes": 16786,
+            "encodeMs": 8.944,
+            "psnrDb": 32.49
+          }
+        },
+        "512": {
+          "naturalBytes": 45094,
+          "scientificBytes": 53746,
+          "naturalReencode": {
+            "bytes": 44552,
+            "encodeMs": 38.214,
+            "psnrDb": 44.76
+          },
+          "scientific": {
+            "bytes": 53746,
+            "encodeMs": 29.633,
+            "psnrDb": 35.53
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_macrotis_lagotis--normal.webp",
+      "species": "oc_esp_macrotis_lagotis",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9792,
+      "naturalCoverage32": 290,
+      "scientificCoverage32": 288,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2464,
+          "scientificBytes": 2400,
+          "naturalReencode": {
+            "bytes": 2470,
+            "encodeMs": 1.207,
+            "psnrDb": 32.61
+          },
+          "scientific": {
+            "bytes": 2400,
+            "encodeMs": 1.082,
+            "psnrDb": 32.15
+          }
+        },
+        "128": {
+          "naturalBytes": 6000,
+          "scientificBytes": 5896,
+          "naturalReencode": {
+            "bytes": 5988,
+            "encodeMs": 2.807,
+            "psnrDb": 33.89
+          },
+          "scientific": {
+            "bytes": 5896,
+            "encodeMs": 3.22,
+            "psnrDb": 33.06
+          }
+        },
+        "256": {
+          "naturalBytes": 16548,
+          "scientificBytes": 16952,
+          "naturalReencode": {
+            "bytes": 16326,
+            "encodeMs": 8.761,
+            "psnrDb": 35.55
+          },
+          "scientific": {
+            "bytes": 16952,
+            "encodeMs": 8.954,
+            "psnrDb": 34.66
+          }
+        },
+        "512": {
+          "naturalBytes": 42286,
+          "scientificBytes": 52846,
+          "naturalReencode": {
+            "bytes": 41970,
+            "encodeMs": 27.12,
+            "psnrDb": 46.69
+          },
+          "scientific": {
+            "bytes": 52846,
+            "encodeMs": 30.54,
+            "psnrDb": 37.14
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_myrmecobius_fasciatus--normal.webp",
+      "species": "oc_esp_myrmecobius_fasciatus",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.93,
+      "naturalCoverage32": 266,
+      "scientificCoverage32": 291,
+      "sizes": {
+        "64": {
+          "naturalBytes": 3002,
+          "scientificBytes": 2422,
+          "naturalReencode": {
+            "bytes": 3016,
+            "encodeMs": 1.538,
+            "psnrDb": 32.23
+          },
+          "scientific": {
+            "bytes": 2422,
+            "encodeMs": 1.111,
+            "psnrDb": 32.01
+          }
+        },
+        "128": {
+          "naturalBytes": 7810,
+          "scientificBytes": 6020,
+          "naturalReencode": {
+            "bytes": 7808,
+            "encodeMs": 4.137,
+            "psnrDb": 33.28
+          },
+          "scientific": {
+            "bytes": 6020,
+            "encodeMs": 2.981,
+            "psnrDb": 32.62
+          }
+        },
+        "256": {
+          "naturalBytes": 24336,
+          "scientificBytes": 18468,
+          "naturalReencode": {
+            "bytes": 24210,
+            "encodeMs": 13.975,
+            "psnrDb": 35.18
+          },
+          "scientific": {
+            "bytes": 18468,
+            "encodeMs": 11.937,
+            "psnrDb": 33.69
+          }
+        },
+        "512": {
+          "naturalBytes": 74736,
+          "scientificBytes": 59628,
+          "naturalReencode": {
+            "bytes": 73912,
+            "encodeMs": 49.775,
+            "psnrDb": 44.84
+          },
+          "scientific": {
+            "bytes": 59628,
+            "encodeMs": 45.86,
+            "psnrDb": 36.01
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_spilocuscus_maculatus--normal.webp",
+      "species": "oc_esp_spilocuscus_maculatus",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9848,
+      "naturalCoverage32": 361,
+      "scientificCoverage32": 364,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2548,
+          "scientificBytes": 2706,
+          "naturalReencode": {
+            "bytes": 2562,
+            "encodeMs": 1.309,
+            "psnrDb": 31.78
+          },
+          "scientific": {
+            "bytes": 2706,
+            "encodeMs": 1.195,
+            "psnrDb": 30.07
+          }
+        },
+        "128": {
+          "naturalBytes": 6414,
+          "scientificBytes": 6472,
+          "naturalReencode": {
+            "bytes": 6372,
+            "encodeMs": 2.796,
+            "psnrDb": 32.78
+          },
+          "scientific": {
+            "bytes": 6472,
+            "encodeMs": 2.741,
+            "psnrDb": 30.6
+          }
+        },
+        "256": {
+          "naturalBytes": 17704,
+          "scientificBytes": 18858,
+          "naturalReencode": {
+            "bytes": 17538,
+            "encodeMs": 8.401,
+            "psnrDb": 34.6
+          },
+          "scientific": {
+            "bytes": 18858,
+            "encodeMs": 8.736,
+            "psnrDb": 32.27
+          }
+        },
+        "512": {
+          "naturalBytes": 49338,
+          "scientificBytes": 58914,
+          "naturalReencode": {
+            "bytes": 48522,
+            "encodeMs": 38.791,
+            "psnrDb": 43.54
+          },
+          "scientific": {
+            "bytes": 58914,
+            "encodeMs": 29.929,
+            "psnrDb": 35.78
+          }
+        }
+      }
+    },
+    {
+      "file": "gm06_dromiciops_gliroides--normal.webp",
+      "species": "gm06_dromiciops_gliroides",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9094,
+      "naturalCoverage32": 275,
+      "scientificCoverage32": 277,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2582,
+          "scientificBytes": 2370,
+          "naturalReencode": {
+            "bytes": 2572,
+            "encodeMs": 1.219,
+            "psnrDb": 33.44
+          },
+          "scientific": {
+            "bytes": 2370,
+            "encodeMs": 1.155,
+            "psnrDb": 33.08
+          }
+        },
+        "128": {
+          "naturalBytes": 6046,
+          "scientificBytes": 5758,
+          "naturalReencode": {
+            "bytes": 6058,
+            "encodeMs": 3.115,
+            "psnrDb": 34.42
+          },
+          "scientific": {
+            "bytes": 5758,
+            "encodeMs": 2.789,
+            "psnrDb": 33.73
+          }
+        },
+        "256": {
+          "naturalBytes": 16886,
+          "scientificBytes": 16598,
+          "naturalReencode": {
+            "bytes": 16668,
+            "encodeMs": 13.27,
+            "psnrDb": 36.24
+          },
+          "scientific": {
+            "bytes": 16598,
+            "encodeMs": 8.982,
+            "psnrDb": 34.86
+          }
+        },
+        "512": {
+          "naturalBytes": 44066,
+          "scientificBytes": 51112,
+          "naturalReencode": {
+            "bytes": 43802,
+            "encodeMs": 38.206,
+            "psnrDb": 47.76
+          },
+          "scientific": {
+            "bytes": 51112,
+            "encodeMs": 41.058,
+            "psnrDb": 36.79
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_dendrolagus_lumholtzi--normal.webp",
+      "species": "oc_esp_dendrolagus_lumholtzi",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9805,
+      "naturalCoverage32": 411,
+      "scientificCoverage32": 409,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2706,
+          "scientificBytes": 2692,
+          "naturalReencode": {
+            "bytes": 2716,
+            "encodeMs": 1.354,
+            "psnrDb": 33.92
+          },
+          "scientific": {
+            "bytes": 2692,
+            "encodeMs": 1.173,
+            "psnrDb": 33.24
+          }
+        },
+        "128": {
+          "naturalBytes": 6724,
+          "scientificBytes": 6764,
+          "naturalReencode": {
+            "bytes": 6732,
+            "encodeMs": 3.33,
+            "psnrDb": 34.66
+          },
+          "scientific": {
+            "bytes": 6764,
+            "encodeMs": 3.116,
+            "psnrDb": 34.08
+          }
+        },
+        "256": {
+          "naturalBytes": 19924,
+          "scientificBytes": 20308,
+          "naturalReencode": {
+            "bytes": 19954,
+            "encodeMs": 13.302,
+            "psnrDb": 36.42
+          },
+          "scientific": {
+            "bytes": 20308,
+            "encodeMs": 9.527,
+            "psnrDb": 35.1
+          }
+        },
+        "512": {
+          "naturalBytes": 55596,
+          "scientificBytes": 67464,
+          "naturalReencode": {
+            "bytes": 55160,
+            "encodeMs": 43.392,
+            "psnrDb": 45.37
+          },
+          "scientific": {
+            "bytes": 67464,
+            "encodeMs": 45.85,
+            "psnrDb": 36.96
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_dendrolagus_matschiei--normal.webp",
+      "species": "oc_esp_dendrolagus_matschiei",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9865,
+      "naturalCoverage32": 372,
+      "scientificCoverage32": 368,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2438,
+          "scientificBytes": 2492,
+          "naturalReencode": {
+            "bytes": 2438,
+            "encodeMs": 1.17,
+            "psnrDb": 32.43
+          },
+          "scientific": {
+            "bytes": 2492,
+            "encodeMs": 1.128,
+            "psnrDb": 31.95
+          }
+        },
+        "128": {
+          "naturalBytes": 6008,
+          "scientificBytes": 6206,
+          "naturalReencode": {
+            "bytes": 6026,
+            "encodeMs": 2.864,
+            "psnrDb": 33.6
+          },
+          "scientific": {
+            "bytes": 6206,
+            "encodeMs": 6.195,
+            "psnrDb": 32.21
+          }
+        },
+        "256": {
+          "naturalBytes": 16946,
+          "scientificBytes": 18148,
+          "naturalReencode": {
+            "bytes": 16898,
+            "encodeMs": 10.063,
+            "psnrDb": 35.67
+          },
+          "scientific": {
+            "bytes": 18148,
+            "encodeMs": 11.256,
+            "psnrDb": 33.13
+          }
+        },
+        "512": {
+          "naturalBytes": 46418,
+          "scientificBytes": 60916,
+          "naturalReencode": {
+            "bytes": 45744,
+            "encodeMs": 41.667,
+            "psnrDb": 45.64
+          },
+          "scientific": {
+            "bytes": 60916,
+            "encodeMs": 34.275,
+            "psnrDb": 36.02
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_macropus_fuliginosus--normal.webp",
+      "species": "oc_esp_macropus_fuliginosus",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9805,
+      "naturalCoverage32": 282,
+      "scientificCoverage32": 283,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2332,
+          "scientificBytes": 2390,
+          "naturalReencode": {
+            "bytes": 2328,
+            "encodeMs": 1.285,
+            "psnrDb": 33.93
+          },
+          "scientific": {
+            "bytes": 2390,
+            "encodeMs": 1.187,
+            "psnrDb": 33.59
+          }
+        },
+        "128": {
+          "naturalBytes": 5838,
+          "scientificBytes": 5756,
+          "naturalReencode": {
+            "bytes": 5830,
+            "encodeMs": 3.358,
+            "psnrDb": 34.64
+          },
+          "scientific": {
+            "bytes": 5756,
+            "encodeMs": 2.922,
+            "psnrDb": 33.99
+          }
+        },
+        "256": {
+          "naturalBytes": 16518,
+          "scientificBytes": 16610,
+          "naturalReencode": {
+            "bytes": 16534,
+            "encodeMs": 13.119,
+            "psnrDb": 36.24
+          },
+          "scientific": {
+            "bytes": 16610,
+            "encodeMs": 8.88,
+            "psnrDb": 35.03
+          }
+        },
+        "512": {
+          "naturalBytes": 39974,
+          "scientificBytes": 51390,
+          "naturalReencode": {
+            "bytes": 39612,
+            "encodeMs": 38.655,
+            "psnrDb": 47.67
+          },
+          "scientific": {
+            "bytes": 51390,
+            "encodeMs": 32.054,
+            "psnrDb": 37.14
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_macropus_giganteus--normal.webp",
+      "species": "oc_esp_macropus_giganteus",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9853,
+      "naturalCoverage32": 271,
+      "scientificCoverage32": 273,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2294,
+          "scientificBytes": 2238,
+          "naturalReencode": {
+            "bytes": 2282,
+            "encodeMs": 1.325,
+            "psnrDb": 33.52
+          },
+          "scientific": {
+            "bytes": 2238,
+            "encodeMs": 1.11,
+            "psnrDb": 33.41
+          }
+        },
+        "128": {
+          "naturalBytes": 5688,
+          "scientificBytes": 5788,
+          "naturalReencode": {
+            "bytes": 5670,
+            "encodeMs": 2.894,
+            "psnrDb": 34.22
+          },
+          "scientific": {
+            "bytes": 5788,
+            "encodeMs": 2.862,
+            "psnrDb": 33.79
+          }
+        },
+        "256": {
+          "naturalBytes": 15778,
+          "scientificBytes": 16624,
+          "naturalReencode": {
+            "bytes": 15678,
+            "encodeMs": 9.103,
+            "psnrDb": 36.09
+          },
+          "scientific": {
+            "bytes": 16624,
+            "encodeMs": 8.811,
+            "psnrDb": 35.36
+          }
+        },
+        "512": {
+          "naturalBytes": 37798,
+          "scientificBytes": 50854,
+          "naturalReencode": {
+            "bytes": 37312,
+            "encodeMs": 26.742,
+            "psnrDb": 46.93
+          },
+          "scientific": {
+            "bytes": 50854,
+            "encodeMs": 30.668,
+            "psnrDb": 37.39
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_macropus_giganteus--albino.webp",
+      "species": "oc_esp_macropus_giganteus",
+      "variant": "albino",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9853,
+      "naturalCoverage32": 271,
+      "scientificCoverage32": 273,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2306,
+          "scientificBytes": 2322,
+          "naturalReencode": {
+            "bytes": 2302,
+            "encodeMs": 1.118,
+            "psnrDb": 33.75
+          },
+          "scientific": {
+            "bytes": 2322,
+            "encodeMs": 1.232,
+            "psnrDb": 32.85
+          }
+        },
+        "128": {
+          "naturalBytes": 5388,
+          "scientificBytes": 5640,
+          "naturalReencode": {
+            "bytes": 5378,
+            "encodeMs": 3.437,
+            "psnrDb": 34.28
+          },
+          "scientific": {
+            "bytes": 5640,
+            "encodeMs": 2.88,
+            "psnrDb": 33.03
+          }
+        },
+        "256": {
+          "naturalBytes": 14448,
+          "scientificBytes": 15702,
+          "naturalReencode": {
+            "bytes": 14410,
+            "encodeMs": 9.285,
+            "psnrDb": 36.26
+          },
+          "scientific": {
+            "bytes": 15702,
+            "encodeMs": 9.289,
+            "psnrDb": 34.09
+          }
+        },
+        "512": {
+          "naturalBytes": 32010,
+          "scientificBytes": 47604,
+          "naturalReencode": {
+            "bytes": 31242,
+            "encodeMs": 27.23,
+            "psnrDb": 43.95
+          },
+          "scientific": {
+            "bytes": 47604,
+            "encodeMs": 31.097,
+            "psnrDb": 37.14
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_osphranter_rufus--normal.webp",
+      "species": "oc_esp_osphranter_rufus",
+      "variant": "normal",
+      "nearCellEdge": true,
+      "silhouetteDice32": 0.9778,
+      "naturalCoverage32": 312,
+      "scientificCoverage32": 318,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2692,
+          "scientificBytes": 2684,
+          "naturalReencode": {
+            "bytes": 2716,
+            "encodeMs": 1.474,
+            "psnrDb": 32.06
+          },
+          "scientific": {
+            "bytes": 2684,
+            "encodeMs": 1.155,
+            "psnrDb": 31.5
+          }
+        },
+        "128": {
+          "naturalBytes": 6752,
+          "scientificBytes": 6694,
+          "naturalReencode": {
+            "bytes": 6754,
+            "encodeMs": 3.051,
+            "psnrDb": 33.57
+          },
+          "scientific": {
+            "bytes": 6694,
+            "encodeMs": 3.282,
+            "psnrDb": 32.19
+          }
+        },
+        "256": {
+          "naturalBytes": 18518,
+          "scientificBytes": 19422,
+          "naturalReencode": {
+            "bytes": 18456,
+            "encodeMs": 10.51,
+            "psnrDb": 35.29
+          },
+          "scientific": {
+            "bytes": 19422,
+            "encodeMs": 9.179,
+            "psnrDb": 33.49
+          }
+        },
+        "512": {
+          "naturalBytes": 42914,
+          "scientificBytes": 59738,
+          "naturalReencode": {
+            "bytes": 42252,
+            "encodeMs": 29.521,
+            "psnrDb": 45.48
+          },
+          "scientific": {
+            "bytes": 59738,
+            "encodeMs": 33.801,
+            "psnrDb": 36.3
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_osphranter_rufus--albino.webp",
+      "species": "oc_esp_osphranter_rufus",
+      "variant": "albino",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9859,
+      "naturalCoverage32": 317,
+      "scientificCoverage32": 322,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2618,
+          "scientificBytes": 2590,
+          "naturalReencode": {
+            "bytes": 2628,
+            "encodeMs": 1.22,
+            "psnrDb": 33.75
+          },
+          "scientific": {
+            "bytes": 2590,
+            "encodeMs": 1.122,
+            "psnrDb": 32.82
+          }
+        },
+        "128": {
+          "naturalBytes": 6584,
+          "scientificBytes": 6622,
+          "naturalReencode": {
+            "bytes": 6536,
+            "encodeMs": 3.441,
+            "psnrDb": 34.45
+          },
+          "scientific": {
+            "bytes": 6622,
+            "encodeMs": 3.226,
+            "psnrDb": 33.13
+          }
+        },
+        "256": {
+          "naturalBytes": 17478,
+          "scientificBytes": 18528,
+          "naturalReencode": {
+            "bytes": 17318,
+            "encodeMs": 9.464,
+            "psnrDb": 36.15
+          },
+          "scientific": {
+            "bytes": 18528,
+            "encodeMs": 9.422,
+            "psnrDb": 34.06
+          }
+        },
+        "512": {
+          "naturalBytes": 37178,
+          "scientificBytes": 57118,
+          "naturalReencode": {
+            "bytes": 36410,
+            "encodeMs": 25.639,
+            "psnrDb": 44.56
+          },
+          "scientific": {
+            "bytes": 57118,
+            "encodeMs": 36.973,
+            "psnrDb": 37.2
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_phalanger_orientalis--normal.webp",
+      "species": "oc_esp_phalanger_orientalis",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9826,
+      "naturalCoverage32": 376,
+      "scientificCoverage32": 371,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2406,
+          "scientificBytes": 2462,
+          "naturalReencode": {
+            "bytes": 2400,
+            "encodeMs": 1.183,
+            "psnrDb": 34.71
+          },
+          "scientific": {
+            "bytes": 2462,
+            "encodeMs": 1.114,
+            "psnrDb": 34.04
+          }
+        },
+        "128": {
+          "naturalBytes": 5910,
+          "scientificBytes": 6080,
+          "naturalReencode": {
+            "bytes": 5886,
+            "encodeMs": 2.721,
+            "psnrDb": 35.29
+          },
+          "scientific": {
+            "bytes": 6080,
+            "encodeMs": 3.312,
+            "psnrDb": 34.08
+          }
+        },
+        "256": {
+          "naturalBytes": 17216,
+          "scientificBytes": 18020,
+          "naturalReencode": {
+            "bytes": 17008,
+            "encodeMs": 8.554,
+            "psnrDb": 36.59
+          },
+          "scientific": {
+            "bytes": 18020,
+            "encodeMs": 8.466,
+            "psnrDb": 34.86
+          }
+        },
+        "512": {
+          "naturalBytes": 48552,
+          "scientificBytes": 58140,
+          "naturalReencode": {
+            "bytes": 48234,
+            "encodeMs": 40.24,
+            "psnrDb": 47.72
+          },
+          "scientific": {
+            "bytes": 58140,
+            "encodeMs": 45.165,
+            "psnrDb": 36.63
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_sarcophilus_harrisii--normal.webp",
+      "species": "oc_esp_sarcophilus_harrisii",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9807,
+      "naturalCoverage32": 365,
+      "scientificCoverage32": 361,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2366,
+          "scientificBytes": 2368,
+          "naturalReencode": {
+            "bytes": 2376,
+            "encodeMs": 1.406,
+            "psnrDb": 34.26
+          },
+          "scientific": {
+            "bytes": 2368,
+            "encodeMs": 1.076,
+            "psnrDb": 33.95
+          }
+        },
+        "128": {
+          "naturalBytes": 5572,
+          "scientificBytes": 5704,
+          "naturalReencode": {
+            "bytes": 5588,
+            "encodeMs": 2.875,
+            "psnrDb": 35.33
+          },
+          "scientific": {
+            "bytes": 5704,
+            "encodeMs": 2.679,
+            "psnrDb": 34.36
+          }
+        },
+        "256": {
+          "naturalBytes": 16210,
+          "scientificBytes": 17130,
+          "naturalReencode": {
+            "bytes": 16026,
+            "encodeMs": 9.0,
+            "psnrDb": 36.82
+          },
+          "scientific": {
+            "bytes": 17130,
+            "encodeMs": 9.694,
+            "psnrDb": 35.71
+          }
+        },
+        "512": {
+          "naturalBytes": 43572,
+          "scientificBytes": 55410,
+          "naturalReencode": {
+            "bytes": 43260,
+            "encodeMs": 27.123,
+            "psnrDb": 46.77
+          },
+          "scientific": {
+            "bytes": 55410,
+            "encodeMs": 31.131,
+            "psnrDb": 37.87
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_phascolarctos_cinereus--normal.webp",
+      "species": "oc_esp_phascolarctos_cinereus",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.973,
+      "naturalCoverage32": 394,
+      "scientificCoverage32": 385,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2286,
+          "scientificBytes": 2312,
+          "naturalReencode": {
+            "bytes": 2290,
+            "encodeMs": 1.315,
+            "psnrDb": 33.95
+          },
+          "scientific": {
+            "bytes": 2312,
+            "encodeMs": 1.249,
+            "psnrDb": 33.38
+          }
+        },
+        "128": {
+          "naturalBytes": 5774,
+          "scientificBytes": 5746,
+          "naturalReencode": {
+            "bytes": 5738,
+            "encodeMs": 2.654,
+            "psnrDb": 34.72
+          },
+          "scientific": {
+            "bytes": 5746,
+            "encodeMs": 3.107,
+            "psnrDb": 34.25
+          }
+        },
+        "256": {
+          "naturalBytes": 17490,
+          "scientificBytes": 17882,
+          "naturalReencode": {
+            "bytes": 17394,
+            "encodeMs": 9.465,
+            "psnrDb": 36.36
+          },
+          "scientific": {
+            "bytes": 17882,
+            "encodeMs": 9.628,
+            "psnrDb": 35.28
+          }
+        },
+        "512": {
+          "naturalBytes": 51496,
+          "scientificBytes": 58404,
+          "naturalReencode": {
+            "bytes": 51364,
+            "encodeMs": 38.14,
+            "psnrDb": 48.76
+          },
+          "scientific": {
+            "bytes": 58404,
+            "encodeMs": 42.399,
+            "psnrDb": 37.01
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_dasycercus_cristicauda--normal.webp",
+      "species": "oc_esp_dasycercus_cristicauda",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9725,
+      "naturalCoverage32": 276,
+      "scientificCoverage32": 269,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2268,
+          "scientificBytes": 2240,
+          "naturalReencode": {
+            "bytes": 2274,
+            "encodeMs": 1.217,
+            "psnrDb": 33.3
+          },
+          "scientific": {
+            "bytes": 2240,
+            "encodeMs": 1.043,
+            "psnrDb": 32.25
+          }
+        },
+        "128": {
+          "naturalBytes": 5484,
+          "scientificBytes": 5620,
+          "naturalReencode": {
+            "bytes": 5490,
+            "encodeMs": 2.812,
+            "psnrDb": 33.66
+          },
+          "scientific": {
+            "bytes": 5620,
+            "encodeMs": 3.012,
+            "psnrDb": 32.55
+          }
+        },
+        "256": {
+          "naturalBytes": 15784,
+          "scientificBytes": 16540,
+          "naturalReencode": {
+            "bytes": 15780,
+            "encodeMs": 7.929,
+            "psnrDb": 35.37
+          },
+          "scientific": {
+            "bytes": 16540,
+            "encodeMs": 8.553,
+            "psnrDb": 33.5
+          }
+        },
+        "512": {
+          "naturalBytes": 43640,
+          "scientificBytes": 52864,
+          "naturalReencode": {
+            "bytes": 43014,
+            "encodeMs": 39.527,
+            "psnrDb": 45.35
+          },
+          "scientific": {
+            "bytes": 52864,
+            "encodeMs": 40.45,
+            "psnrDb": 35.84
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_thylogale_billardierii--normal.webp",
+      "species": "oc_esp_thylogale_billardierii",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9894,
+      "naturalCoverage32": 332,
+      "scientificCoverage32": 329,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2104,
+          "scientificBytes": 2146,
+          "naturalReencode": {
+            "bytes": 2102,
+            "encodeMs": 1.304,
+            "psnrDb": 33.26
+          },
+          "scientific": {
+            "bytes": 2146,
+            "encodeMs": 1.052,
+            "psnrDb": 32.9
+          }
+        },
+        "128": {
+          "naturalBytes": 5108,
+          "scientificBytes": 5248,
+          "naturalReencode": {
+            "bytes": 5118,
+            "encodeMs": 2.644,
+            "psnrDb": 33.81
+          },
+          "scientific": {
+            "bytes": 5248,
+            "encodeMs": 2.816,
+            "psnrDb": 33.01
+          }
+        },
+        "256": {
+          "naturalBytes": 15672,
+          "scientificBytes": 16042,
+          "naturalReencode": {
+            "bytes": 15628,
+            "encodeMs": 8.16,
+            "psnrDb": 35.49
+          },
+          "scientific": {
+            "bytes": 16042,
+            "encodeMs": 8.786,
+            "psnrDb": 33.83
+          }
+        },
+        "512": {
+          "naturalBytes": 45640,
+          "scientificBytes": 53200,
+          "naturalReencode": {
+            "bytes": 44968,
+            "encodeMs": 38.554,
+            "psnrDb": 45.37
+          },
+          "scientific": {
+            "bytes": 53200,
+            "encodeMs": 28.115,
+            "psnrDb": 36.05
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_petaurus_breviceps--normal.webp",
+      "species": "oc_esp_petaurus_breviceps",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.786,
+      "naturalCoverage32": 259,
+      "scientificCoverage32": 283,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2352,
+          "scientificBytes": 2202,
+          "naturalReencode": {
+            "bytes": 2358,
+            "encodeMs": 1.247,
+            "psnrDb": 33.74
+          },
+          "scientific": {
+            "bytes": 2202,
+            "encodeMs": 1.115,
+            "psnrDb": 33.13
+          }
+        },
+        "128": {
+          "naturalBytes": 5604,
+          "scientificBytes": 5312,
+          "naturalReencode": {
+            "bytes": 5610,
+            "encodeMs": 2.887,
+            "psnrDb": 34.31
+          },
+          "scientific": {
+            "bytes": 5312,
+            "encodeMs": 2.812,
+            "psnrDb": 33.77
+          }
+        },
+        "256": {
+          "naturalBytes": 16032,
+          "scientificBytes": 15862,
+          "naturalReencode": {
+            "bytes": 15948,
+            "encodeMs": 12.454,
+            "psnrDb": 36.16
+          },
+          "scientific": {
+            "bytes": 15862,
+            "encodeMs": 8.812,
+            "psnrDb": 35.23
+          }
+        },
+        "512": {
+          "naturalBytes": 42266,
+          "scientificBytes": 49612,
+          "naturalReencode": {
+            "bytes": 42140,
+            "encodeMs": 48.515,
+            "psnrDb": 48.98
+          },
+          "scientific": {
+            "bytes": 49612,
+            "encodeMs": 39.024,
+            "psnrDb": 37.35
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_trichosurus_vulpecula--normal.webp",
+      "species": "oc_esp_trichosurus_vulpecula",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.8857,
+      "naturalCoverage32": 398,
+      "scientificCoverage32": 433,
+      "sizes": {
+        "64": {
+          "naturalBytes": 3108,
+          "scientificBytes": 2360,
+          "naturalReencode": {
+            "bytes": 3120,
+            "encodeMs": 1.533,
+            "psnrDb": 34.18
+          },
+          "scientific": {
+            "bytes": 2360,
+            "encodeMs": 1.081,
+            "psnrDb": 33.43
+          }
+        },
+        "128": {
+          "naturalBytes": 8300,
+          "scientificBytes": 6270,
+          "naturalReencode": {
+            "bytes": 8274,
+            "encodeMs": 4.076,
+            "psnrDb": 34.78
+          },
+          "scientific": {
+            "bytes": 6270,
+            "encodeMs": 2.713,
+            "psnrDb": 34.23
+          }
+        },
+        "256": {
+          "naturalBytes": 25888,
+          "scientificBytes": 20710,
+          "naturalReencode": {
+            "bytes": 25876,
+            "encodeMs": 15.353,
+            "psnrDb": 36.77
+          },
+          "scientific": {
+            "bytes": 20710,
+            "encodeMs": 8.764,
+            "psnrDb": 35.24
+          }
+        },
+        "512": {
+          "naturalBytes": 81132,
+          "scientificBytes": 70038,
+          "naturalReencode": {
+            "bytes": 80770,
+            "encodeMs": 68.359,
+            "psnrDb": 47.22
+          },
+          "scientific": {
+            "bytes": 70038,
+            "encodeMs": 43.799,
+            "psnrDb": 37.42
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_setonix_brachyurus--normal.webp",
+      "species": "oc_esp_setonix_brachyurus",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9839,
+      "naturalCoverage32": 368,
+      "scientificCoverage32": 376,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2178,
+          "scientificBytes": 2220,
+          "naturalReencode": {
+            "bytes": 2176,
+            "encodeMs": 1.249,
+            "psnrDb": 33.4
+          },
+          "scientific": {
+            "bytes": 2220,
+            "encodeMs": 1.251,
+            "psnrDb": 32.64
+          }
+        },
+        "128": {
+          "naturalBytes": 5720,
+          "scientificBytes": 5752,
+          "naturalReencode": {
+            "bytes": 5760,
+            "encodeMs": 3.728,
+            "psnrDb": 34.13
+          },
+          "scientific": {
+            "bytes": 5752,
+            "encodeMs": 2.814,
+            "psnrDb": 33.17
+          }
+        },
+        "256": {
+          "naturalBytes": 16858,
+          "scientificBytes": 17902,
+          "naturalReencode": {
+            "bytes": 16746,
+            "encodeMs": 10.705,
+            "psnrDb": 35.95
+          },
+          "scientific": {
+            "bytes": 17902,
+            "encodeMs": 8.088,
+            "psnrDb": 33.8
+          }
+        },
+        "512": {
+          "naturalBytes": 50326,
+          "scientificBytes": 60076,
+          "naturalReencode": {
+            "bytes": 49872,
+            "encodeMs": 48.513,
+            "psnrDb": 47.0
+          },
+          "scientific": {
+            "bytes": 60076,
+            "encodeMs": 40.045,
+            "psnrDb": 35.91
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_dasyurus_viverrinus--normal.webp",
+      "species": "oc_esp_dasyurus_viverrinus",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9762,
+      "naturalCoverage32": 313,
+      "scientificCoverage32": 316,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2634,
+          "scientificBytes": 2630,
+          "naturalReencode": {
+            "bytes": 2648,
+            "encodeMs": 1.514,
+            "psnrDb": 32.4
+          },
+          "scientific": {
+            "bytes": 2630,
+            "encodeMs": 1.517,
+            "psnrDb": 31.15
+          }
+        },
+        "128": {
+          "naturalBytes": 6446,
+          "scientificBytes": 6396,
+          "naturalReencode": {
+            "bytes": 6442,
+            "encodeMs": 2.866,
+            "psnrDb": 33.36
+          },
+          "scientific": {
+            "bytes": 6396,
+            "encodeMs": 3.383,
+            "psnrDb": 31.85
+          }
+        },
+        "256": {
+          "naturalBytes": 18124,
+          "scientificBytes": 18388,
+          "naturalReencode": {
+            "bytes": 18036,
+            "encodeMs": 13.244,
+            "psnrDb": 35.21
+          },
+          "scientific": {
+            "bytes": 18388,
+            "encodeMs": 9.686,
+            "psnrDb": 33.04
+          }
+        },
+        "512": {
+          "naturalBytes": 48020,
+          "scientificBytes": 58758,
+          "naturalReencode": {
+            "bytes": 47546,
+            "encodeMs": 41.929,
+            "psnrDb": 45.38
+          },
+          "scientific": {
+            "bytes": 58758,
+            "encodeMs": 44.945,
+            "psnrDb": 35.65
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_notamacropus_agilis--normal.webp",
+      "species": "oc_esp_notamacropus_agilis",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9742,
+      "naturalCoverage32": 271,
+      "scientificCoverage32": 271,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2220,
+          "scientificBytes": 2272,
+          "naturalReencode": {
+            "bytes": 2214,
+            "encodeMs": 1.17,
+            "psnrDb": 32.98
+          },
+          "scientific": {
+            "bytes": 2272,
+            "encodeMs": 1.271,
+            "psnrDb": 31.45
+          }
+        },
+        "128": {
+          "naturalBytes": 5360,
+          "scientificBytes": 5596,
+          "naturalReencode": {
+            "bytes": 5334,
+            "encodeMs": 2.713,
+            "psnrDb": 34.04
+          },
+          "scientific": {
+            "bytes": 5596,
+            "encodeMs": 2.961,
+            "psnrDb": 32.57
+          }
+        },
+        "256": {
+          "naturalBytes": 14926,
+          "scientificBytes": 16008,
+          "naturalReencode": {
+            "bytes": 14812,
+            "encodeMs": 8.53,
+            "psnrDb": 35.82
+          },
+          "scientific": {
+            "bytes": 16008,
+            "encodeMs": 8.631,
+            "psnrDb": 34.07
+          }
+        },
+        "512": {
+          "naturalBytes": 36406,
+          "scientificBytes": 49648,
+          "naturalReencode": {
+            "bytes": 36004,
+            "encodeMs": 27.964,
+            "psnrDb": 46.72
+          },
+          "scientific": {
+            "bytes": 49648,
+            "encodeMs": 32.165,
+            "psnrDb": 36.34
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_notamacropus_rufogriseus--normal.webp",
+      "species": "oc_esp_notamacropus_rufogriseus",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9928,
+      "naturalCoverage32": 278,
+      "scientificCoverage32": 278,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2192,
+          "scientificBytes": 2130,
+          "naturalReencode": {
+            "bytes": 2212,
+            "encodeMs": 1.207,
+            "psnrDb": 32.97
+          },
+          "scientific": {
+            "bytes": 2130,
+            "encodeMs": 1.088,
+            "psnrDb": 32.19
+          }
+        },
+        "128": {
+          "naturalBytes": 5436,
+          "scientificBytes": 5388,
+          "naturalReencode": {
+            "bytes": 5432,
+            "encodeMs": 2.925,
+            "psnrDb": 33.95
+          },
+          "scientific": {
+            "bytes": 5388,
+            "encodeMs": 3.19,
+            "psnrDb": 33.12
+          }
+        },
+        "256": {
+          "naturalBytes": 15784,
+          "scientificBytes": 15828,
+          "naturalReencode": {
+            "bytes": 15718,
+            "encodeMs": 8.563,
+            "psnrDb": 35.58
+          },
+          "scientific": {
+            "bytes": 15828,
+            "encodeMs": 8.838,
+            "psnrDb": 34.51
+          }
+        },
+        "512": {
+          "naturalBytes": 42236,
+          "scientificBytes": 50798,
+          "naturalReencode": {
+            "bytes": 41906,
+            "encodeMs": 38.847,
+            "psnrDb": 46.78
+          },
+          "scientific": {
+            "bytes": 50798,
+            "encodeMs": 29.883,
+            "psnrDb": 36.44
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_wallabia_bicolor--normal.webp",
+      "species": "oc_esp_wallabia_bicolor",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9827,
+      "naturalCoverage32": 285,
+      "scientificCoverage32": 293,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2166,
+          "scientificBytes": 2146,
+          "naturalReencode": {
+            "bytes": 2170,
+            "encodeMs": 1.113,
+            "psnrDb": 33.03
+          },
+          "scientific": {
+            "bytes": 2146,
+            "encodeMs": 1.035,
+            "psnrDb": 32.46
+          }
+        },
+        "128": {
+          "naturalBytes": 5404,
+          "scientificBytes": 5334,
+          "naturalReencode": {
+            "bytes": 5384,
+            "encodeMs": 3.048,
+            "psnrDb": 33.72
+          },
+          "scientific": {
+            "bytes": 5334,
+            "encodeMs": 2.878,
+            "psnrDb": 32.9
+          }
+        },
+        "256": {
+          "naturalBytes": 15330,
+          "scientificBytes": 15536,
+          "naturalReencode": {
+            "bytes": 15162,
+            "encodeMs": 8.132,
+            "psnrDb": 35.49
+          },
+          "scientific": {
+            "bytes": 15536,
+            "encodeMs": 9.561,
+            "psnrDb": 33.84
+          }
+        },
+        "512": {
+          "naturalBytes": 43100,
+          "scientificBytes": 50578,
+          "naturalReencode": {
+            "bytes": 42606,
+            "encodeMs": 38.465,
+            "psnrDb": 46.29
+          },
+          "scientific": {
+            "bytes": 50578,
+            "encodeMs": 29.907,
+            "psnrDb": 36.15
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_petrogale_mareeba--normal.webp",
+      "species": "oc_esp_petrogale_mareeba",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9767,
+      "naturalCoverage32": 283,
+      "scientificCoverage32": 276,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2446,
+          "scientificBytes": 2308,
+          "naturalReencode": {
+            "bytes": 2440,
+            "encodeMs": 1.163,
+            "psnrDb": 33.3
+          },
+          "scientific": {
+            "bytes": 2308,
+            "encodeMs": 1.369,
+            "psnrDb": 33.04
+          }
+        },
+        "128": {
+          "naturalBytes": 5934,
+          "scientificBytes": 5812,
+          "naturalReencode": {
+            "bytes": 5916,
+            "encodeMs": 3.289,
+            "psnrDb": 34.24
+          },
+          "scientific": {
+            "bytes": 5812,
+            "encodeMs": 3.035,
+            "psnrDb": 33.52
+          }
+        },
+        "256": {
+          "naturalBytes": 17072,
+          "scientificBytes": 16922,
+          "naturalReencode": {
+            "bytes": 16928,
+            "encodeMs": 12.723,
+            "psnrDb": 35.82
+          },
+          "scientific": {
+            "bytes": 16922,
+            "encodeMs": 9.732,
+            "psnrDb": 34.78
+          }
+        },
+        "512": {
+          "naturalBytes": 48098,
+          "scientificBytes": 52688,
+          "naturalReencode": {
+            "bytes": 47750,
+            "encodeMs": 43.055,
+            "psnrDb": 46.87
+          },
+          "scientific": {
+            "bytes": 52688,
+            "encodeMs": 42.056,
+            "psnrDb": 36.57
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_notamacropus_eugenii--normal.webp",
+      "species": "oc_esp_notamacropus_eugenii",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9855,
+      "naturalCoverage32": 278,
+      "scientificCoverage32": 274,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2140,
+          "scientificBytes": 2072,
+          "naturalReencode": {
+            "bytes": 2102,
+            "encodeMs": 1.301,
+            "psnrDb": 33.81
+          },
+          "scientific": {
+            "bytes": 2072,
+            "encodeMs": 1.001,
+            "psnrDb": 33.08
+          }
+        },
+        "128": {
+          "naturalBytes": 4924,
+          "scientificBytes": 4940,
+          "naturalReencode": {
+            "bytes": 4906,
+            "encodeMs": 3.262,
+            "psnrDb": 34.4
+          },
+          "scientific": {
+            "bytes": 4940,
+            "encodeMs": 2.632,
+            "psnrDb": 33.26
+          }
+        },
+        "256": {
+          "naturalBytes": 14286,
+          "scientificBytes": 14692,
+          "naturalReencode": {
+            "bytes": 14230,
+            "encodeMs": 10.649,
+            "psnrDb": 36.04
+          },
+          "scientific": {
+            "bytes": 14692,
+            "encodeMs": 8.262,
+            "psnrDb": 34.84
+          }
+        },
+        "512": {
+          "naturalBytes": 37908,
+          "scientificBytes": 46492,
+          "naturalReencode": {
+            "bytes": 37506,
+            "encodeMs": 36.895,
+            "psnrDb": 46.44
+          },
+          "scientific": {
+            "bytes": 46492,
+            "encodeMs": 38.689,
+            "psnrDb": 36.69
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_vombatus_ursinus--normal.webp",
+      "species": "oc_esp_vombatus_ursinus",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9855,
+      "naturalCoverage32": 484,
+      "scientificCoverage32": 480,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2238,
+          "scientificBytes": 2280,
+          "naturalReencode": {
+            "bytes": 2226,
+            "encodeMs": 1.316,
+            "psnrDb": 34.25
+          },
+          "scientific": {
+            "bytes": 2280,
+            "encodeMs": 1.06,
+            "psnrDb": 33.04
+          }
+        },
+        "128": {
+          "naturalBytes": 5814,
+          "scientificBytes": 5958,
+          "naturalReencode": {
+            "bytes": 5820,
+            "encodeMs": 3.075,
+            "psnrDb": 34.82
+          },
+          "scientific": {
+            "bytes": 5958,
+            "encodeMs": 3.049,
+            "psnrDb": 33.34
+          }
+        },
+        "256": {
+          "naturalBytes": 18690,
+          "scientificBytes": 19512,
+          "naturalReencode": {
+            "bytes": 18482,
+            "encodeMs": 9.243,
+            "psnrDb": 36.2
+          },
+          "scientific": {
+            "bytes": 19512,
+            "encodeMs": 9.501,
+            "psnrDb": 33.68
+          }
+        },
+        "512": {
+          "naturalBytes": 63738,
+          "scientificBytes": 71604,
+          "naturalReencode": {
+            "bytes": 62696,
+            "encodeMs": 43.242,
+            "psnrDb": 45.07
+          },
+          "scientific": {
+            "bytes": 71604,
+            "encodeMs": 45.874,
+            "psnrDb": 35.71
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_vombatus_ursinus--albino.webp",
+      "species": "oc_esp_vombatus_ursinus",
+      "variant": "albino",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9908,
+      "naturalCoverage32": 491,
+      "scientificCoverage32": 488,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2074,
+          "scientificBytes": 2184,
+          "naturalReencode": {
+            "bytes": 2108,
+            "encodeMs": 1.725,
+            "psnrDb": 35.5
+          },
+          "scientific": {
+            "bytes": 2184,
+            "encodeMs": 1.153,
+            "psnrDb": 35.02
+          }
+        },
+        "128": {
+          "naturalBytes": 4974,
+          "scientificBytes": 5470,
+          "naturalReencode": {
+            "bytes": 4958,
+            "encodeMs": 2.651,
+            "psnrDb": 36.15
+          },
+          "scientific": {
+            "bytes": 5470,
+            "encodeMs": 2.683,
+            "psnrDb": 34.45
+          }
+        },
+        "256": {
+          "naturalBytes": 15338,
+          "scientificBytes": 18018,
+          "naturalReencode": {
+            "bytes": 15102,
+            "encodeMs": 9.457,
+            "psnrDb": 37.16
+          },
+          "scientific": {
+            "bytes": 18018,
+            "encodeMs": 9.504,
+            "psnrDb": 34.55
+          }
+        },
+        "512": {
+          "naturalBytes": 47086,
+          "scientificBytes": 65540,
+          "naturalReencode": {
+            "bytes": 46606,
+            "encodeMs": 28.393,
+            "psnrDb": 46.18
+          },
+          "scientific": {
+            "bytes": 65540,
+            "encodeMs": 43.914,
+            "psnrDb": 37.06
+          }
+        }
+      }
+    },
+    {
+      "file": "na_esp_didelphis_marsupialis--normal.webp",
+      "species": "na_esp_didelphis_marsupialis",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9654,
+      "naturalCoverage32": 351,
+      "scientificCoverage32": 343,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2618,
+          "scientificBytes": 2702,
+          "naturalReencode": {
+            "bytes": 2642,
+            "encodeMs": 1.25,
+            "psnrDb": 32.86
+          },
+          "scientific": {
+            "bytes": 2702,
+            "encodeMs": 1.496,
+            "psnrDb": 32.24
+          }
+        },
+        "128": {
+          "naturalBytes": 6662,
+          "scientificBytes": 6700,
+          "naturalReencode": {
+            "bytes": 6566,
+            "encodeMs": 2.937,
+            "psnrDb": 33.86
+          },
+          "scientific": {
+            "bytes": 6700,
+            "encodeMs": 3.167,
+            "psnrDb": 33.06
+          }
+        },
+        "256": {
+          "naturalBytes": 19534,
+          "scientificBytes": 19830,
+          "naturalReencode": {
+            "bytes": 19386,
+            "encodeMs": 13.453,
+            "psnrDb": 35.51
+          },
+          "scientific": {
+            "bytes": 19830,
+            "encodeMs": 9.407,
+            "psnrDb": 34.13
+          }
+        },
+        "512": {
+          "naturalBytes": 56796,
+          "scientificBytes": 65166,
+          "naturalReencode": {
+            "bytes": 56008,
+            "encodeMs": 42.603,
+            "psnrDb": 45.58
+          },
+          "scientific": {
+            "bytes": 65166,
+            "encodeMs": 45.321,
+            "psnrDb": 36.41
+          }
+        }
+      }
+    },
+    {
+      "file": "na_esp_didelphis_virginiana--normal.webp",
+      "species": "na_esp_didelphis_virginiana",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9704,
+      "naturalCoverage32": 319,
+      "scientificCoverage32": 322,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2480,
+          "scientificBytes": 2428,
+          "naturalReencode": {
+            "bytes": 2488,
+            "encodeMs": 1.542,
+            "psnrDb": 33.72
+          },
+          "scientific": {
+            "bytes": 2428,
+            "encodeMs": 1.108,
+            "psnrDb": 32.99
+          }
+        },
+        "128": {
+          "naturalBytes": 6270,
+          "scientificBytes": 6232,
+          "naturalReencode": {
+            "bytes": 6234,
+            "encodeMs": 2.915,
+            "psnrDb": 34.42
+          },
+          "scientific": {
+            "bytes": 6232,
+            "encodeMs": 2.712,
+            "psnrDb": 33.51
+          }
+        },
+        "256": {
+          "naturalBytes": 17846,
+          "scientificBytes": 18602,
+          "naturalReencode": {
+            "bytes": 17812,
+            "encodeMs": 11.9,
+            "psnrDb": 36.29
+          },
+          "scientific": {
+            "bytes": 18602,
+            "encodeMs": 9.335,
+            "psnrDb": 34.45
+          }
+        },
+        "512": {
+          "naturalBytes": 48212,
+          "scientificBytes": 61450,
+          "naturalReencode": {
+            "bytes": 47996,
+            "encodeMs": 40.894,
+            "psnrDb": 48.28
+          },
+          "scientific": {
+            "bytes": 61450,
+            "encodeMs": 43.43,
+            "psnrDb": 36.67
+          }
+        }
+      }
+    },
+    {
+      "file": "na_esp_didelphis_virginiana--albino.webp",
+      "species": "na_esp_didelphis_virginiana",
+      "variant": "albino",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9794,
+      "naturalCoverage32": 343,
+      "scientificCoverage32": 335,
+      "sizes": {
+        "64": {
+          "naturalBytes": 2338,
+          "scientificBytes": 2350,
+          "naturalReencode": {
+            "bytes": 2334,
+            "encodeMs": 1.183,
+            "psnrDb": 34.85
+          },
+          "scientific": {
+            "bytes": 2350,
+            "encodeMs": 1.073,
+            "psnrDb": 34.33
+          }
+        },
+        "128": {
+          "naturalBytes": 5708,
+          "scientificBytes": 5822,
+          "naturalReencode": {
+            "bytes": 5698,
+            "encodeMs": 2.707,
+            "psnrDb": 35.59
+          },
+          "scientific": {
+            "bytes": 5822,
+            "encodeMs": 2.849,
+            "psnrDb": 34.06
+          }
+        },
+        "256": {
+          "naturalBytes": 16274,
+          "scientificBytes": 17300,
+          "naturalReencode": {
+            "bytes": 16152,
+            "encodeMs": 12.353,
+            "psnrDb": 36.97
+          },
+          "scientific": {
+            "bytes": 17300,
+            "encodeMs": 9.066,
+            "psnrDb": 34.21
+          }
+        },
+        "512": {
+          "naturalBytes": 40330,
+          "scientificBytes": 55938,
+          "naturalReencode": {
+            "bytes": 39378,
+            "encodeMs": 39.353,
+            "psnrDb": 44.51
+          },
+          "scientific": {
+            "bytes": 55938,
+            "encodeMs": 50.772,
+            "psnrDb": 36.55
+          }
+        }
+      }
+    },
+    {
+      "file": "oc_esp_dactylopsila_trivirgata--normal.webp",
+      "species": "oc_esp_dactylopsila_trivirgata",
+      "variant": "normal",
+      "nearCellEdge": false,
+      "silhouetteDice32": 0.9211,
+      "naturalCoverage32": 336,
+      "scientificCoverage32": 348,
+      "sizes": {
+        "64": {
+          "naturalBytes": 3162,
+          "scientificBytes": 2552,
+          "naturalReencode": {
+            "bytes": 3174,
+            "encodeMs": 1.861,
+            "psnrDb": 32.24
+          },
+          "scientific": {
+            "bytes": 2552,
+            "encodeMs": 1.648,
+            "psnrDb": 32.44
+          }
+        },
+        "128": {
+          "naturalBytes": 7872,
+          "scientificBytes": 6216,
+          "naturalReencode": {
+            "bytes": 7862,
+            "encodeMs": 4.368,
+            "psnrDb": 33.57
+          },
+          "scientific": {
+            "bytes": 6216,
+            "encodeMs": 2.746,
+            "psnrDb": 33.39
+          }
+        },
+        "256": {
+          "naturalBytes": 23560,
+          "scientificBytes": 18854,
+          "naturalReencode": {
+            "bytes": 23414,
+            "encodeMs": 14.139,
+            "psnrDb": 35.97
+          },
+          "scientific": {
+            "bytes": 18854,
+            "encodeMs": 12.645,
+            "psnrDb": 34.52
+          }
+        },
+        "512": {
+          "naturalBytes": 71710,
+          "scientificBytes": 60808,
+          "naturalReencode": {
+            "bytes": 71322,
+            "encodeMs": 49.697,
+            "psnrDb": 46.86
+          },
+          "scientific": {
+            "bytes": 60808,
+            "encodeMs": 44.706,
+            "psnrDb": 36.9
+          }
+        }
+      }
+    }
+  ]
+}

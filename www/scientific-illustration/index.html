@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compara tres estilos de ilustración zoológica con el mismo fondo, halo y escala.">
+  <title>Laboratorio de ilustración científica · El Gran Atlas</title>
+  <link rel="stylesheet" href="../css/field-v3210.css">
+  <link rel="stylesheet" href="../css/journal-v3250.css">
+  <link rel="stylesheet" href="../css/bestiary-v3260.css">
+  <link rel="stylesheet" href="../css/museum-v3270.css">
+  <link rel="stylesheet" href="../css/naturalist-art-v400.css">
+  <link rel="stylesheet" href="lab.css">
+  <script src="specimens.js" defer></script>
+  <script src="../js/naturalist-art-v400.js" defer></script>
+  <script src="../js/field-ui-v3210.js" defer></script>
+  <script src="../js/journal-ui-v3250.js" defer></script>
+  <script src="../js/bestiary-ui-v3260.js" defer></script>
+  <script src="../js/museum-ui-v3270.js" defer></script>
+  <script src="lab.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="container">
+      <p class="brand">El Gran Atlas</p>
+      <h1>Laboratorio de ilustración científica</h1>
+      <p>Compara el sprite original, la acuarela naturalista y la candidata a tinta y color.</p>
+      <p id="coverage" class="coverage"></p>
+    </div>
+  </header>
+  <main class="container">
+    <section aria-labelledby="specimen-name" class="workspace">
+      <div class="controls">
+        <label class="species-control" for="species">Especie<select id="species"></select></label>
+        <label for="variant">Variante<select id="variant"></select></label>
+        <label for="halo">Halo<select id="halo"></select></label>
+        <label for="backdrop">Fondo<select id="backdrop">
+          <option value="paper">Papel naturalista</option><option value="light">Claro</option>
+          <option value="dark">Oscuro</option><option value="landscape">Paisaje ambiental</option>
+        </select></label>
+        <label id="size-control" for="size">Tamaño<select id="size">
+          <option>32</option><option>64</option><option>128</option><option selected>256</option><option>512</option>
+        </select></label>
+      </div>
+      <div class="specimen-heading">
+        <div>
+          <h2 id="specimen-name"></h2>
+          <p class="taxonomy"><i id="scientific-name"></i><span id="family"></span></p>
+        </div>
+        <div class="navigation" aria-label="Navegación entre especies">
+          <button type="button" id="previous">Anterior</button><button type="button" id="next">Siguiente</button>
+        </div>
+      </div>
+      <nav id="modules" aria-label="Vistas de comparación">
+        <button type="button" data-mode="scales" aria-pressed="false">Escalas</button>
+        <button type="button" data-mode="field" aria-pressed="false">Campo</button>
+        <button type="button" data-mode="mixed" aria-pressed="false">Campo mixto</button>
+        <button type="button" data-mode="journal" aria-pressed="false">Cuaderno</button>
+        <button type="button" data-mode="bestiary" aria-pressed="false">Bestiario</button>
+        <button type="button" data-mode="museum" aria-pressed="false">Museo</button>
+      </nav>
+      <div id="board" class="board" role="region" aria-label="Tres estilos en comparación" tabindex="0"></div>
+      <p id="weights" class="weight-line"></p>
+    </section>
+    <section aria-labelledby="review-title" class="review-panel">
+      <div class="review-heading">
+        <div><h2 id="review-title">Evaluación</h2><p id="review-subject"></p></div>
+        <button id="export" type="button">Exportar revisión JSON</button>
+      </div>
+      <form id="review-form">
+        <div id="scores" class="scores"></div>
+        <div class="review-details">
+          <label for="preference">Preferencia<select id="preference" name="preference">
+            <option value="">Sin evaluar</option>
+            <option>Prefiero naturalista</option><option>Prefiero científica</option>
+            <option>Requiere corrección</option><option>Indiferente</option>
+          </select></label>
+          <label for="notes">Observaciones<textarea id="notes" name="notes" rows="4" placeholder="Postura, rasgos diagnósticos, bordes o legibilidad"></textarea></label>
+          <p id="status" role="status"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
