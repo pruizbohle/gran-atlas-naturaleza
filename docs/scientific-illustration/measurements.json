@@ -2281,5 +2281,12 @@
         }
       }
     }
-  ]
+  ],
+  "pairedGenerationSample": {
+    "subjects": 4,
+    "sameReferenceAndGrid": true,
+    "naturalistSeconds": 25,
+    "scientificSeconds": 52,
+    "measurement": "elapsed submission to completed response including service latency"
+  }
 }
