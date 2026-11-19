@@ -1,0 +1,4628 @@
+{
+  "version": "4.5.0",
+  "progress": {
+    "migrated": 410,
+    "total": 997,
+    "cutouts": 757,
+    "plates": 757,
+    "biological": 363,
+    "legendary": 6,
+    "review": 0,
+    "classical": 757,
+    "target": 757,
+    "ungulates": 122,
+    "mammals": 461,
+    "mammalsMigrated": 410
+  },
+  "mammals": {
+    "migrated": 410,
+    "terrestrialPending": 0,
+    "aquaticReserved": 51
+  },
+  "newTerrestrialByFamily": {
+    "Bradypodidae": [
+      {
+        "id": "na_esp_bradypus_variegatus",
+        "name": "Perezoso de tres dedos",
+        "latin": "Bradypus variegatus",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Pilosa",
+        "family": "Bradypodidae",
+        "group": "Perezosos y osos hormigueros"
+      }
+    ],
+    "Castoridae": [
+      {
+        "id": "na_esp_castor_canadensis",
+        "name": "Castor canadiense",
+        "latin": "Castor canadensis",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Castoridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "castor_europeo",
+        "name": "Castor europeo",
+        "latin": "Castor fiber",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Castoridae",
+        "group": "Roedores"
+      }
+    ],
+    "Caviidae": [
+      {
+        "id": "sa_esp_dolichotis_patagonum",
+        "name": "Mara patagónica",
+        "latin": "Dolichotis patagonum",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Caviidae",
+        "group": "Roedores"
+      },
+      {
+        "id": "sa_esp_hydrochoerus_hydrochaeris",
+        "name": "Chigüiro",
+        "latin": "Hydrochoerus hydrochaeris",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Caviidae",
+        "group": "Roedores"
+      }
+    ],
+    "Chinchillidae": [
+      {
+        "id": "sa_esp_chinchilla_chinchilla",
+        "name": "Chinchilla de cola corta",
+        "latin": "Chinchilla chinchilla",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Chinchillidae",
+        "group": "Roedores"
+      },
+      {
+        "id": "sa_esp_chinchilla_lanigera",
+        "name": "Chinchilla de cola larga",
+        "latin": "Chinchilla lanigera",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Chinchillidae",
+        "group": "Roedores"
+      },
+      {
+        "id": "sa_esp_lagidium_viscacia",
+        "name": "Vizcacha andina",
+        "latin": "Lagidium viscacia",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Chinchillidae",
+        "group": "Roedores"
+      },
+      {
+        "id": "sa_esp_lagostomus_maximus",
+        "name": "Vizcacha de las pampas",
+        "latin": "Lagostomus maximus",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Chinchillidae",
+        "group": "Roedores"
+      }
+    ],
+    "Chlamyphoridae": [
+      {
+        "id": "sa_esp_chaetophractus_villosus",
+        "name": "Armadillo peludo",
+        "latin": "Chaetophractus villosus",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Cingulata",
+        "family": "Chlamyphoridae",
+        "group": "Armadillos"
+      },
+      {
+        "id": "sa_esp_euphractus_sexcinctus",
+        "name": "Armadillo de seis bandas",
+        "latin": "Euphractus sexcinctus",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Cingulata",
+        "family": "Chlamyphoridae",
+        "group": "Armadillos"
+      },
+      {
+        "id": "sa_esp_priodontes_maximus",
+        "name": "Armadillo gigante",
+        "latin": "Priodontes maximus",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Cingulata",
+        "family": "Chlamyphoridae",
+        "group": "Armadillos"
+      },
+      {
+        "id": "sa_esp_tolypeutes_tricinctus",
+        "name": "Armadillo de tres bandas",
+        "latin": "Tolypeutes tricinctus",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Cingulata",
+        "family": "Chlamyphoridae",
+        "group": "Armadillos"
+      }
+    ],
+    "Choloepodidae": [
+      {
+        "id": "sa_esp_choloepus_didactylus",
+        "name": "Perezoso de dos dedos",
+        "latin": "Choloepus didactylus",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Pilosa",
+        "family": "Choloepodidae",
+        "group": "Perezosos y osos hormigueros"
+      }
+    ],
+    "Cricetidae": [
+      {
+        "id": "eu_esp_0609",
+        "name": "Topillo nival",
+        "latin": "Chionomys nivalis",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Cricetidae",
+        "group": "Roedores"
+      },
+      {
+        "id": "na_esp_dicrostonyx_groenlandicus",
+        "name": "Lemming de collar ártico",
+        "latin": "Dicrostonyx groenlandicus",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Cricetidae",
+        "group": "Roedores"
+      },
+      {
+        "id": "eu_esp_0610",
+        "name": "Lemming noruego",
+        "latin": "Lemmus lemmus",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Cricetidae",
+        "group": "Roedores"
+      },
+      {
+        "id": "na_esp_lemmus_trimucronatus",
+        "name": "Lemming pardo",
+        "latin": "Lemmus trimucronatus",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Cricetidae",
+        "group": "Roedores"
+      },
+      {
+        "id": "eu_esp_0604",
+        "name": "Topillo agreste",
+        "latin": "Microtus agrestis",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Cricetidae",
+        "group": "Roedores"
+      },
+      {
+        "id": "eu_esp_0603",
+        "name": "Topillo común",
+        "latin": "Microtus arvalis",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Cricetidae",
+        "group": "Roedores"
+      },
+      {
+        "id": "eu_esp_0605",
+        "name": "Topillo rojo",
+        "latin": "Myodes glareolus",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Cricetidae",
+        "group": "Roedores"
+      }
+    ],
+    "Cuniculidae": [
+      {
+        "id": "na_esp_cuniculus_paca",
+        "name": "Tepezcuintle",
+        "latin": "Cuniculus paca",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Cuniculidae",
+        "group": "Roedores"
+      }
+    ],
+    "Cyclopedidae": [
+      {
+        "id": "sa_esp_cyclopes_didactylus",
+        "name": "Oso hormiguero enano",
+        "latin": "Cyclopes didactylus",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Pilosa",
+        "family": "Cyclopedidae",
+        "group": "Perezosos y osos hormigueros"
+      }
+    ],
+    "Dasypodidae": [
+      {
+        "id": "na_esp_dasypus_novemcinctus",
+        "name": "Armadillo de nueve bandas",
+        "latin": "Dasypus novemcinctus",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Cingulata",
+        "family": "Dasypodidae",
+        "group": "Armadillos"
+      },
+      {
+        "id": "sa_esp_dasypus_septemcinctus",
+        "name": "Mulita",
+        "latin": "Dasypus septemcinctus",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Cingulata",
+        "family": "Dasypodidae",
+        "group": "Armadillos"
+      }
+    ],
+    "Dipodidae": [
+      {
+        "id": "asia_esp_0194",
+        "name": "Jerbo de orejas largas",
+        "latin": "Euchoreutes naso",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Dipodidae",
+        "group": "Roedores"
+      },
+      {
+        "id": "af_xlsx_jerbo",
+        "name": "Jerbo egipcio",
+        "latin": "Jaculus jaculus",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Dipodidae",
+        "group": "Roedores"
+      }
+    ],
+    "Echimyidae": [
+      {
+        "id": "sa_esp_myocastor_coypus",
+        "name": "Coipo",
+        "latin": "Myocastor coypus",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Echimyidae",
+        "group": "Roedores"
+      }
+    ],
+    "Elephantidae": [
+      {
+        "id": "asia_esp_0176",
+        "name": "Elefante asiático",
+        "latin": "Elephas maximus",
+        "historicalGroup": "Elefantes",
+        "pending": [],
+        "order": "Proboscidea",
+        "family": "Elephantidae",
+        "group": "Elefantes"
+      },
+      {
+        "id": "af_elefante_sabana",
+        "name": "Elefante africano de sabana",
+        "latin": "Loxodonta africana",
+        "historicalGroup": "Elefantes",
+        "pending": [],
+        "order": "Proboscidea",
+        "family": "Elephantidae",
+        "group": "Elefantes"
+      },
+      {
+        "id": "af_elefante_bosque",
+        "name": "Elefante africano de bosque",
+        "latin": "Loxodonta cyclotis",
+        "historicalGroup": "Elefantes",
+        "pending": [],
+        "order": "Proboscidea",
+        "family": "Elephantidae",
+        "group": "Elefantes"
+      }
+    ],
+    "Erethizontidae": [
+      {
+        "id": "na_esp_erethizon_dorsatum",
+        "name": "Puercoespín norteamericano",
+        "latin": "Erethizon dorsatum",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Erethizontidae",
+        "group": "Roedores"
+      }
+    ],
+    "Erinaceidae": [
+      {
+        "id": "af_xlsx_131_atelerix_algirus",
+        "name": "Erizo argelino",
+        "latin": "Atelerix algirus",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Eulipotyphla",
+        "family": "Erinaceidae",
+        "group": "Eulipotiflos"
+      },
+      {
+        "id": "erizo_europeo",
+        "name": "Erizo europeo",
+        "latin": "Erinaceus europaeus",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Eulipotyphla",
+        "family": "Erinaceidae",
+        "group": "Eulipotiflos"
+      }
+    ],
+    "Gliridae": [
+      {
+        "id": "eu_esp_0601",
+        "name": "Lirón careto",
+        "latin": "Eliomys quercinus",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Gliridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "eu_esp_0602",
+        "name": "Lirón gris",
+        "latin": "Glis glis",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Gliridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "eu_esp_0606",
+        "name": "Lirón avellano",
+        "latin": "Muscardinus avellanarius",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Gliridae",
+        "group": "Roedores"
+      }
+    ],
+    "Heteromyidae": [
+      {
+        "id": "na_esp_dipodomys_merriami",
+        "name": "Rata canguro de Merriam",
+        "latin": "Dipodomys merriami",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Heteromyidae",
+        "group": "Roedores"
+      }
+    ],
+    "Hystricidae": [
+      {
+        "id": "af_xlsx_131_hystrix_africaeaustralis",
+        "name": "Puercoespín sudafricano",
+        "latin": "Hystrix africaeaustralis",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Hystricidae",
+        "group": "Roedores"
+      },
+      {
+        "id": "eu_esp_0253",
+        "name": "Puercoespín crestado",
+        "latin": "Hystrix cristata",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Hystricidae",
+        "group": "Roedores"
+      }
+    ],
+    "Leporidae": [
+      {
+        "id": "na_esp_brachylagus_idahoensis",
+        "name": "Conejo pigmeo",
+        "latin": "Brachylagus idahoensis",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "na_esp_lepus_americanus",
+        "name": "Liebre americana",
+        "latin": "Lepus americanus",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "gm06_lepus_arcticus",
+        "name": "Liebre ártica",
+        "latin": "Lepus arcticus",
+        "historicalGroup": "Leporidae",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "na_esp_lepus_californicus",
+        "name": "Liebre de cola negra",
+        "latin": "Lepus californicus",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "af_xlsx_131_lepus_capensis",
+        "name": "Liebre del Cabo",
+        "latin": "Lepus capensis",
+        "historicalGroup": "Lagomorfos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "liebre_europea",
+        "name": "Liebre europea",
+        "latin": "Lepus europaeus",
+        "historicalGroup": "Lagomorfos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "af_xlsx_131_lepus_fagani",
+        "name": "Liebre etíope",
+        "latin": "Lepus fagani",
+        "historicalGroup": "Lagomorfos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "eu_esp_0607",
+        "name": "Liebre ibérica",
+        "latin": "Lepus granatensis",
+        "historicalGroup": "Lagomorfos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "asia_esp_0842",
+        "name": "Liebre china",
+        "latin": "Lepus sinensis",
+        "historicalGroup": "Lagomorfos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "liebre_variable",
+        "name": "Liebre variable",
+        "latin": "Lepus timidus",
+        "historicalGroup": "Lagomorfos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "conejo_europeo",
+        "name": "Conejo europeo",
+        "latin": "Oryctolagus cuniculus",
+        "historicalGroup": "Lagomorfos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "asia_esp_0414",
+        "name": "Conejo de Amami",
+        "latin": "Pentalagus furnessi",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "na_esp_sylvilagus_audubonii",
+        "name": "Conejo del desierto",
+        "latin": "Sylvilagus audubonii",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      },
+      {
+        "id": "na_esp_sylvilagus_floridanus",
+        "name": "Conejo de cola de algodón oriental",
+        "latin": "Sylvilagus floridanus",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Leporidae",
+        "group": "Lagomorfos"
+      }
+    ],
+    "Manidae": [
+      {
+        "id": "asia_esp_0852",
+        "name": "Pangolín indio",
+        "latin": "Manis crassicaudata",
+        "historicalGroup": "Pangolines",
+        "pending": [],
+        "order": "Pholidota",
+        "family": "Manidae",
+        "group": "Pangolines"
+      },
+      {
+        "id": "asia_esp_0317",
+        "name": "Pangolín malayo",
+        "latin": "Manis javanica",
+        "historicalGroup": "Pangolines",
+        "pending": [],
+        "order": "Pholidota",
+        "family": "Manidae",
+        "group": "Pangolines"
+      },
+      {
+        "id": "asia_esp_0318",
+        "name": "Pangolín chino",
+        "latin": "Manis pentadactyla",
+        "historicalGroup": "Pangolines",
+        "pending": [],
+        "order": "Pholidota",
+        "family": "Manidae",
+        "group": "Pangolines"
+      },
+      {
+        "id": "af_xlsx_131_phataginus_tricuspis",
+        "name": "Pangolín arborícola",
+        "latin": "Phataginus tricuspis",
+        "historicalGroup": "Pangolines",
+        "pending": [],
+        "order": "Pholidota",
+        "family": "Manidae",
+        "group": "Pangolines"
+      },
+      {
+        "id": "af_pangolin_gigante",
+        "name": "Pangolín gigante",
+        "latin": "Smutsia gigantea",
+        "historicalGroup": "Pangolines",
+        "pending": [],
+        "order": "Pholidota",
+        "family": "Manidae",
+        "group": "Pangolines"
+      },
+      {
+        "id": "af_pangolin_temminck",
+        "name": "Pangolín terrestre",
+        "latin": "Smutsia temminckii",
+        "historicalGroup": "Pangolines",
+        "pending": [],
+        "order": "Pholidota",
+        "family": "Manidae",
+        "group": "Pangolines"
+      }
+    ],
+    "Myrmecophagidae": [
+      {
+        "id": "na_esp_myrmecophaga_tridactyla",
+        "name": "Oso hormiguero gigante",
+        "latin": "Myrmecophaga tridactyla",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Pilosa",
+        "family": "Myrmecophagidae",
+        "group": "Perezosos y osos hormigueros"
+      },
+      {
+        "id": "sa_esp_tamandua_mexicana",
+        "name": "Tamandúa norteño",
+        "latin": "Tamandua mexicana",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Pilosa",
+        "family": "Myrmecophagidae",
+        "group": "Perezosos y osos hormigueros"
+      },
+      {
+        "id": "sa_esp_tamandua_tetradactyla",
+        "name": "Tamandúa sureño",
+        "latin": "Tamandua tetradactyla",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Pilosa",
+        "family": "Myrmecophagidae",
+        "group": "Perezosos y osos hormigueros"
+      }
+    ],
+    "Noctilionidae": [
+      {
+        "id": "sa_esp_noctilio_leporinus",
+        "name": "Murciélago pescador",
+        "latin": "Noctilio leporinus",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Chiroptera",
+        "family": "Noctilionidae",
+        "group": "Murciélagos"
+      }
+    ],
+    "Ochotonidae": [
+      {
+        "id": "na_esp_ochotona_princeps",
+        "name": "Pica americana",
+        "latin": "Ochotona princeps",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Lagomorpha",
+        "family": "Ochotonidae",
+        "group": "Lagomorfos"
+      }
+    ],
+    "Octodontidae": [
+      {
+        "id": "sa_esp_octodon_degus",
+        "name": "Degú",
+        "latin": "Octodon degus",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Octodontidae",
+        "group": "Roedores"
+      }
+    ],
+    "Orycteropodidae": [
+      {
+        "id": "af_xlsx_cerdo_hormiguero",
+        "name": "Cerdo hormiguero",
+        "latin": "Orycteropus afer",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Tubulidentata",
+        "family": "Orycteropodidae",
+        "group": "Tubulidentados"
+      }
+    ],
+    "Procaviidae": [
+      {
+        "id": "gm06_procavia_capensis",
+        "name": "Damán roquero",
+        "latin": "Procavia capensis",
+        "historicalGroup": "Procaviidae",
+        "pending": [],
+        "order": "Hyracoidea",
+        "family": "Procaviidae",
+        "group": "Damanes"
+      }
+    ],
+    "Pteropodidae": [
+      {
+        "id": "oc_esp_pteropus_conspicillatus",
+        "name": "Zorro volador de anteojos",
+        "latin": "Pteropus conspicillatus",
+        "historicalGroup": "Murciélagos",
+        "pending": [],
+        "order": "Chiroptera",
+        "family": "Pteropodidae",
+        "group": "Murciélagos"
+      },
+      {
+        "id": "oc_esp_pteropus_poliocephalus",
+        "name": "Murciélago zorro volador de cabeza gris",
+        "latin": "Pteropus poliocephalus",
+        "historicalGroup": "Murciélagos",
+        "pending": [],
+        "order": "Chiroptera",
+        "family": "Pteropodidae",
+        "group": "Murciélagos"
+      },
+      {
+        "id": "gm06_pteropus_vampyrus",
+        "name": "Zorro volador gigante",
+        "latin": "Pteropus vampyrus",
+        "historicalGroup": "Pteropodidae",
+        "pending": [],
+        "order": "Chiroptera",
+        "family": "Pteropodidae",
+        "group": "Murciélagos"
+      }
+    ],
+    "Rhinolophidae": [
+      {
+        "id": "eu_esp_0616",
+        "name": "Murciélago de herradura grande",
+        "latin": "Rhinolophus ferrumequinum",
+        "historicalGroup": "Murciélagos",
+        "pending": [],
+        "order": "Chiroptera",
+        "family": "Rhinolophidae",
+        "group": "Murciélagos"
+      }
+    ],
+    "Sciuridae": [
+      {
+        "id": "na_esp_cynomys_ludovicianus",
+        "name": "Perrito de las praderas de cola negra",
+        "latin": "Cynomys ludovicianus",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "af_xlsx_131_geosciurus_inauris",
+        "name": "Ardilla terrestre del Cabo",
+        "latin": "Geosciurus inauris",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "asia_esp_0319",
+        "name": "Marmota bobak",
+        "latin": "Marmota bobak",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "na_esp_marmota_flaviventris",
+        "name": "Marmota de vientre amarillo",
+        "latin": "Marmota flaviventris",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "asia_esp_0321",
+        "name": "Marmota del Himalaya",
+        "latin": "Marmota himalayana",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "marmota_alpina",
+        "name": "Marmota alpina",
+        "latin": "Marmota marmota",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "asia_esp_0323",
+        "name": "Marmota siberiana",
+        "latin": "Marmota sibirica",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "na_esp_marmota_vancouverensis",
+        "name": "Marmota de Vancouver",
+        "latin": "Marmota vancouverensis",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "asia_esp_0844",
+        "name": "Ardilla voladora gigante roja",
+        "latin": "Petaurista petaurista",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "asia_esp_0843",
+        "name": "Ardilla voladora siberiana",
+        "latin": "Pteromys volans",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "na_esp_sciurus_carolinensis",
+        "name": "Ardilla gris oriental",
+        "latin": "Sciurus carolinensis",
+        "historicalGroup": "Roedores y lagomorfos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "ardilla_roja",
+        "name": "Ardilla roja",
+        "latin": "Sciurus vulgaris",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      },
+      {
+        "id": "eu_esp_0608",
+        "name": "Ardilla terrestre europea",
+        "latin": "Spermophilus citellus",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Sciuridae",
+        "group": "Roedores"
+      }
+    ],
+    "Solenodontidae": [
+      {
+        "id": "gm06_solenodon_paradoxus",
+        "name": "Solenodonte de La Española",
+        "latin": "Solenodon paradoxus",
+        "historicalGroup": "Solenodontidae",
+        "pending": [],
+        "order": "Eulipotyphla",
+        "family": "Solenodontidae",
+        "group": "Eulipotiflos"
+      }
+    ],
+    "Soricidae": [
+      {
+        "id": "eu_esp_0612",
+        "name": "Musaraña común",
+        "latin": "Sorex araneus",
+        "historicalGroup": "Insectívoros",
+        "pending": [],
+        "order": "Eulipotyphla",
+        "family": "Soricidae",
+        "group": "Eulipotiflos"
+      },
+      {
+        "id": "na_esp_sorex_cinereus",
+        "name": "Musaraña enmascarada",
+        "latin": "Sorex cinereus",
+        "historicalGroup": "Otros mamíferos",
+        "pending": [],
+        "order": "Eulipotyphla",
+        "family": "Soricidae",
+        "group": "Eulipotiflos"
+      },
+      {
+        "id": "eu_esp_0613",
+        "name": "Musaraña enana",
+        "latin": "Sorex minutus",
+        "historicalGroup": "Insectívoros",
+        "pending": [],
+        "order": "Eulipotyphla",
+        "family": "Soricidae",
+        "group": "Eulipotiflos"
+      },
+      {
+        "id": "asia_esp_0853",
+        "name": "Musaraña almizclera",
+        "latin": "Suncus murinus",
+        "historicalGroup": "Insectívoros",
+        "pending": [],
+        "order": "Eulipotyphla",
+        "family": "Soricidae",
+        "group": "Eulipotiflos"
+      }
+    ],
+    "Spalacidae": [
+      {
+        "id": "af_xlsx_rata_topo",
+        "name": "Rata topo gigante",
+        "latin": "Tachyoryctes macrocephalus",
+        "historicalGroup": "Insectívoros",
+        "pending": [],
+        "order": "Rodentia",
+        "family": "Spalacidae",
+        "group": "Roedores"
+      }
+    ],
+    "Talpidae": [
+      {
+        "id": "eu_esp_0624",
+        "name": "Desmán ruso",
+        "latin": "Desmana moschata",
+        "historicalGroup": "Insectívoros",
+        "pending": [],
+        "order": "Eulipotyphla",
+        "family": "Talpidae",
+        "group": "Eulipotiflos"
+      },
+      {
+        "id": "eu_esp_0623",
+        "name": "Desmán ibérico",
+        "latin": "Galemys pyrenaicus",
+        "historicalGroup": "Insectívoros",
+        "pending": [],
+        "order": "Eulipotyphla",
+        "family": "Talpidae",
+        "group": "Eulipotiflos"
+      },
+      {
+        "id": "eu_esp_0611",
+        "name": "Topo europeo",
+        "latin": "Talpa europaea",
+        "historicalGroup": "Insectívoros",
+        "pending": [],
+        "order": "Eulipotyphla",
+        "family": "Talpidae",
+        "group": "Eulipotiflos"
+      }
+    ],
+    "Tenrecidae": [
+      {
+        "id": "af_tenrec",
+        "name": "Tenrec común",
+        "latin": "Tenrec ecaudatus",
+        "historicalGroup": "Roedores y pequeños mamíferos",
+        "pending": [],
+        "order": "Afrosoricida",
+        "family": "Tenrecidae",
+        "group": "Afrosorícidos"
+      }
+    ],
+    "Vespertilionidae": [
+      {
+        "id": "eu_esp_0615",
+        "name": "Murciélago hortelano",
+        "latin": "Eptesicus serotinus",
+        "historicalGroup": "Murciélagos",
+        "pending": [],
+        "order": "Chiroptera",
+        "family": "Vespertilionidae",
+        "group": "Murciélagos"
+      },
+      {
+        "id": "eu_esp_0614",
+        "name": "Murciélago común",
+        "latin": "Pipistrellus pipistrellus",
+        "historicalGroup": "Murciélagos",
+        "pending": [],
+        "order": "Chiroptera",
+        "family": "Vespertilionidae",
+        "group": "Murciélagos"
+      }
+    ]
+  },
+  "migratedMammals": [
+    {
+      "id": "af_guepardo",
+      "name": "Guepardo",
+      "latin": "Acinonyx jubatus",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "af_xlsx_addax",
+      "name": "Addax",
+      "latin": "Addax nasomaculatus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_impala",
+      "name": "Impala",
+      "latin": "Aepyceros melampus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "asia_esp_0006",
+      "name": "Panda gigante",
+      "latin": "Ailuropoda melanoleuca",
+      "group": "Carnívoros terrestres",
+      "family": "Ursidae"
+    },
+    {
+      "id": "asia_esp_0007",
+      "name": "Panda rojo",
+      "latin": "Ailurus fulgens",
+      "group": "Carnívoros terrestres",
+      "family": "Ailuridae"
+    },
+    {
+      "id": "af_xlsx_alcefalo",
+      "name": "Alcéfalo común",
+      "latin": "Alcelaphus buselaphus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "alce",
+      "name": "Alce",
+      "latin": "Alces alces",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "na_esp_alouatta_palliata",
+      "name": "Mono aullador de manto",
+      "latin": "Alouatta palliata",
+      "group": "Primates",
+      "family": "Atelidae"
+    },
+    {
+      "id": "na_esp_alouatta_pigra",
+      "name": "Mono aullador negro",
+      "latin": "Alouatta pigra",
+      "group": "Primates",
+      "family": "Atelidae"
+    },
+    {
+      "id": "af_arrui",
+      "name": "Arruí",
+      "latin": "Ammotragus lervia",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_springbok",
+      "name": "Springbok",
+      "latin": "Antidorcas marsupialis",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "na_esp_antilocapra_americana",
+      "name": "Berrendo",
+      "latin": "Antilocapra americana",
+      "group": "Ungulados",
+      "family": "Antilocapridae"
+    },
+    {
+      "id": "asia_esp_0833",
+      "name": "Antílope negro",
+      "latin": "Antilope cervicapra",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "sa_esp_aotus_trivirgatus",
+      "name": "Mono nocturno",
+      "latin": "Aotus trivirgatus",
+      "group": "Primates",
+      "family": "Aotidae"
+    },
+    {
+      "id": "asia_esp_0849",
+      "name": "Binturong",
+      "latin": "Arctictis binturong",
+      "group": "Carnívoros terrestres",
+      "family": "Viverridae"
+    },
+    {
+      "id": "af_xlsx_131_atelerix_algirus",
+      "name": "Erizo argelino",
+      "latin": "Atelerix algirus",
+      "group": "Eulipotiflos",
+      "family": "Erinaceidae"
+    },
+    {
+      "id": "sa_esp_ateles_belzebuth",
+      "name": "Mono araña de vientre blanco",
+      "latin": "Ateles belzebuth",
+      "group": "Primates",
+      "family": "Atelidae"
+    },
+    {
+      "id": "gm06_ateles_fusciceps",
+      "name": "Mono araña de cabeza negra",
+      "latin": "Ateles fusciceps",
+      "group": "Primates",
+      "family": "Atelidae"
+    },
+    {
+      "id": "na_esp_ateles_geoffroyi",
+      "name": "Mono araña de Geoffroy",
+      "latin": "Ateles geoffroyi",
+      "group": "Primates",
+      "family": "Atelidae"
+    },
+    {
+      "id": "sa_esp_ateles_paniscus",
+      "name": "Mono araña negro",
+      "latin": "Ateles paniscus",
+      "group": "Primates",
+      "family": "Atelidae"
+    },
+    {
+      "id": "sa_esp_atelocynus_microtis",
+      "name": "Zorro de orejas cortas",
+      "latin": "Atelocynus microtis",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "asia_esp_0050",
+      "name": "Ciervo chital",
+      "latin": "Axis axis",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "gm06_babyrousa_celebensis",
+      "name": "Babirusa de Célebes",
+      "latin": "Babyrousa celebensis",
+      "group": "Ungulados",
+      "family": "Suidae"
+    },
+    {
+      "id": "na_esp_bison_bison",
+      "name": "Bisonte americano",
+      "latin": "Bison bison",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "bisonte_europeo",
+      "name": "Bisonte europeo",
+      "latin": "Bison bonasus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "sa_esp_blastocerus_dichotomus",
+      "name": "Ciervo de los pantanos",
+      "latin": "Blastocerus dichotomus",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "asia_esp_0061",
+      "name": "Gaur",
+      "latin": "Bos gaurus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "asia_esp_0062",
+      "name": "Yak salvaje",
+      "latin": "Bos mutus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "asia_esp_0063",
+      "name": "Nilgó",
+      "latin": "Boselaphus tragocamelus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "na_esp_brachylagus_idahoensis",
+      "name": "Conejo pigmeo",
+      "latin": "Brachylagus idahoensis",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "na_esp_bradypus_variegatus",
+      "name": "Perezoso de tres dedos",
+      "latin": "Bradypus variegatus",
+      "group": "Perezosos y osos hormigueros",
+      "family": "Bradypodidae"
+    },
+    {
+      "id": "asia_esp_0830",
+      "name": "Búfalo salvaje asiático",
+      "latin": "Bubalus arnee",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "asia_esp_0065",
+      "name": "Búfalo de agua",
+      "latin": "Bubalus bubalis",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "gm06_bubalus_depressicornis",
+      "name": "Anoa de tierras bajas",
+      "latin": "Bubalus depressicornis",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "asia_esp_0821",
+      "name": "Takin",
+      "latin": "Budorcas taxicolor",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_dromedario",
+      "name": "Dromedario",
+      "latin": "Camelus dromedarius",
+      "group": "Ungulados",
+      "family": "Camelidae"
+    },
+    {
+      "id": "asia_esp_0073",
+      "name": "Camello bactriano salvaje",
+      "latin": "Camelus ferus",
+      "group": "Ungulados",
+      "family": "Camelidae"
+    },
+    {
+      "id": "chacal_dorado",
+      "name": "Chacal dorado",
+      "latin": "Canis aureus",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "oc_esp_canis_familiaris",
+      "name": "Dingo",
+      "latin": "Canis familiaris",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "na_esp_canis_latrans",
+      "name": "Coyote",
+      "latin": "Canis latrans",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "af_chacal_dorado",
+      "name": "Lobo dorado africano",
+      "latin": "Canis lupaster",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "lobo_gris",
+      "name": "Lobo gris",
+      "latin": "Canis lupus",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "af_lobo_etiope",
+      "name": "Lobo etíope",
+      "latin": "Canis simensis",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "asia_esp_0080",
+      "name": "Cabra salvaje",
+      "latin": "Capra aegagrus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "asia_esp_0081",
+      "name": "Tur del Cáucaso oriental",
+      "latin": "Capra cylindricornis",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "ibice_alpino",
+      "name": "Íbice alpino",
+      "latin": "Capra ibex",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "gm06_capra_nubiana",
+      "name": "Íbice de Nubia",
+      "latin": "Capra nubiana",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "cabra_montes_iberica",
+      "name": "Cabra montés ibérica",
+      "latin": "Capra pyrenaica",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_ibice_walia",
+      "name": "Íbice de Walia",
+      "latin": "Capra walie",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "corzo_europeo",
+      "name": "Corzo europeo",
+      "latin": "Capreolus capreolus",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "asia_esp_0086",
+      "name": "Corzo siberiano",
+      "latin": "Capreolus pygargus",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "asia_esp_0087",
+      "name": "Serau japonés",
+      "latin": "Capricornis crispus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_xlsx_gato_dorado",
+      "name": "Gato dorado africano",
+      "latin": "Caracal aurata",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "af_caracal",
+      "name": "Caracal",
+      "latin": "Caracal caracal",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "asia_esp_0858",
+      "name": "Tarsio filipino",
+      "latin": "Carlito syrichta",
+      "group": "Primates",
+      "family": "Tarsiidae"
+    },
+    {
+      "id": "na_esp_castor_canadensis",
+      "name": "Castor canadiense",
+      "latin": "Castor canadensis",
+      "group": "Roedores",
+      "family": "Castoridae"
+    },
+    {
+      "id": "castor_europeo",
+      "name": "Castor europeo",
+      "latin": "Castor fiber",
+      "group": "Roedores",
+      "family": "Castoridae"
+    },
+    {
+      "id": "asia_esp_0096",
+      "name": "Gato dorado asiático",
+      "latin": "Catopuma temminckii",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "na_esp_cebus_imitator",
+      "name": "Mono capuchino cariblanco",
+      "latin": "Cebus imitator",
+      "group": "Primates",
+      "family": "Cebidae"
+    },
+    {
+      "id": "sa_esp_cebus_olivaceus",
+      "name": "Mono capuchino",
+      "latin": "Cebus olivaceus",
+      "group": "Primates",
+      "family": "Cebidae"
+    },
+    {
+      "id": "af_xlsx_131_cephalophus_zebra",
+      "name": "Duíquer cebra",
+      "latin": "Cephalophus zebra",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_rinoceronte_blanco",
+      "name": "Rinoceronte blanco",
+      "latin": "Ceratotherium simum",
+      "group": "Ungulados",
+      "family": "Rhinocerotidae"
+    },
+    {
+      "id": "af_xlsx_131_cercopithecus_diana",
+      "name": "Mono diana",
+      "latin": "Cercopithecus diana",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "af_mono_brazza",
+      "name": "Mono de De Brazza",
+      "latin": "Cercopithecus neglectus",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "sa_esp_cerdocyon_thous",
+      "name": "Zorro cangrejero",
+      "latin": "Cerdocyon thous",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "na_esp_cervus_canadensis",
+      "name": "Wapití",
+      "latin": "Cervus canadensis",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "ciervo_rojo",
+      "name": "Ciervo rojo",
+      "latin": "Cervus elaphus",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "af_ciervo_berberia",
+      "name": "Ciervo de Berbería",
+      "latin": "Cervus elaphus barbarus",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "asia_esp_0111",
+      "name": "Ciervo sika",
+      "latin": "Cervus nippon",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "sa_esp_chaetophractus_villosus",
+      "name": "Armadillo peludo",
+      "latin": "Chaetophractus villosus",
+      "group": "Armadillos",
+      "family": "Chlamyphoridae"
+    },
+    {
+      "id": "sa_esp_chinchilla_chinchilla",
+      "name": "Chinchilla de cola corta",
+      "latin": "Chinchilla chinchilla",
+      "group": "Roedores",
+      "family": "Chinchillidae"
+    },
+    {
+      "id": "sa_esp_chinchilla_lanigera",
+      "name": "Chinchilla de cola larga",
+      "latin": "Chinchilla lanigera",
+      "group": "Roedores",
+      "family": "Chinchillidae"
+    },
+    {
+      "id": "eu_esp_0609",
+      "name": "Topillo nival",
+      "latin": "Chionomys nivalis",
+      "group": "Roedores",
+      "family": "Cricetidae"
+    },
+    {
+      "id": "af_xlsx_131_chlorocebus_sabaeus",
+      "name": "Mono verde",
+      "latin": "Chlorocebus sabaeus",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "af_xlsx_hipopotamo_pigmeo",
+      "name": "Hipopótamo pigmeo",
+      "latin": "Choeropsis liberiensis",
+      "group": "Ungulados",
+      "family": "Hippopotamidae"
+    },
+    {
+      "id": "sa_esp_choloepus_didactylus",
+      "name": "Perezoso de dos dedos",
+      "latin": "Choloepus didactylus",
+      "group": "Perezosos y osos hormigueros",
+      "family": "Choloepodidae"
+    },
+    {
+      "id": "sa_esp_chrysocyon_brachyurus",
+      "name": "Lobo de crin",
+      "latin": "Chrysocyon brachyurus",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "af_civeta",
+      "name": "Civeta africana",
+      "latin": "Civettictis civetta",
+      "group": "Carnívoros terrestres",
+      "family": "Viverridae"
+    },
+    {
+      "id": "af_colobo",
+      "name": "Colobo blanco y negro",
+      "latin": "Colobus guereza",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "af_xlsx_131_colobus_polykomos",
+      "name": "Colobo occidental blanco y negro",
+      "latin": "Colobus polykomos",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "sa_esp_conepatus_chinga",
+      "name": "Chingue patagónico",
+      "latin": "Conepatus chinga",
+      "group": "Carnívoros terrestres",
+      "family": "Mephitidae"
+    },
+    {
+      "id": "af_nu_azul",
+      "name": "Ñu azul",
+      "latin": "Connochaetes taurinus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_hiena_manchada",
+      "name": "Hiena manchada",
+      "latin": "Crocuta crocuta",
+      "group": "Carnívoros terrestres",
+      "family": "Hyaenidae"
+    },
+    {
+      "id": "af_fosa",
+      "name": "Fosa",
+      "latin": "Cryptoprocta ferox",
+      "group": "Carnívoros terrestres",
+      "family": "Eupleridae"
+    },
+    {
+      "id": "na_esp_cuniculus_paca",
+      "name": "Tepezcuintle",
+      "latin": "Cuniculus paca",
+      "group": "Roedores",
+      "family": "Cuniculidae"
+    },
+    {
+      "id": "asia_esp_0820",
+      "name": "Cuón",
+      "latin": "Cuon alpinus",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "sa_esp_cyclopes_didactylus",
+      "name": "Oso hormiguero enano",
+      "latin": "Cyclopes didactylus",
+      "group": "Perezosos y osos hormigueros",
+      "family": "Cyclopedidae"
+    },
+    {
+      "id": "na_esp_cynomys_ludovicianus",
+      "name": "Perrito de las praderas de cola negra",
+      "latin": "Cynomys ludovicianus",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "oc_esp_dactylopsila_trivirgata",
+      "name": "Zarigüeya listada",
+      "latin": "Dactylopsila trivirgata",
+      "group": "Marsupiales",
+      "family": "Petauridae"
+    },
+    {
+      "id": "asia_esp_0149",
+      "name": "Gamo",
+      "latin": "Dama dama",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "af_xlsx_topi",
+      "name": "Topi",
+      "latin": "Damaliscus lunatus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "oc_esp_dasycercus_cristicauda",
+      "name": "Mulgará de cola crestada",
+      "latin": "Dasycercus cristicauda",
+      "group": "Marsupiales",
+      "family": "Dasyuridae"
+    },
+    {
+      "id": "na_esp_dasypus_novemcinctus",
+      "name": "Armadillo de nueve bandas",
+      "latin": "Dasypus novemcinctus",
+      "group": "Armadillos",
+      "family": "Dasypodidae"
+    },
+    {
+      "id": "sa_esp_dasypus_septemcinctus",
+      "name": "Mulita",
+      "latin": "Dasypus septemcinctus",
+      "group": "Armadillos",
+      "family": "Dasypodidae"
+    },
+    {
+      "id": "oc_esp_dasyurus_viverrinus",
+      "name": "Quol oriental",
+      "latin": "Dasyurus viverrinus",
+      "group": "Marsupiales",
+      "family": "Dasyuridae"
+    },
+    {
+      "id": "af_xlsx_ayeaye",
+      "name": "Aye-aye",
+      "latin": "Daubentonia madagascariensis",
+      "group": "Primates",
+      "family": "Daubentoniidae"
+    },
+    {
+      "id": "oc_esp_dendrolagus_goodfellowi",
+      "name": "Canguro arborícola de Goodfellow",
+      "latin": "Dendrolagus goodfellowi",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "oc_esp_dendrolagus_lumholtzi",
+      "name": "Canguro arborícola de Lumholtz",
+      "latin": "Dendrolagus lumholtzi",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "oc_esp_dendrolagus_matschiei",
+      "name": "Canguro arborícola de Matschie",
+      "latin": "Dendrolagus matschiei",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "eu_esp_0624",
+      "name": "Desmán ruso",
+      "latin": "Desmana moschata",
+      "group": "Eulipotiflos",
+      "family": "Talpidae"
+    },
+    {
+      "id": "asia_esp_0165",
+      "name": "Rinoceronte de Sumatra",
+      "latin": "Dicerorhinus sumatrensis",
+      "group": "Ungulados",
+      "family": "Rhinocerotidae"
+    },
+    {
+      "id": "af_xlsx_rinoceronte_negro",
+      "name": "Rinoceronte negro",
+      "latin": "Diceros bicornis",
+      "group": "Ungulados",
+      "family": "Rhinocerotidae"
+    },
+    {
+      "id": "na_esp_dicotyles_tajacu",
+      "name": "Pecarí de collar",
+      "latin": "Dicotyles tajacu",
+      "group": "Ungulados",
+      "family": "Tayassuidae"
+    },
+    {
+      "id": "na_esp_dicrostonyx_groenlandicus",
+      "name": "Lemming de collar ártico",
+      "latin": "Dicrostonyx groenlandicus",
+      "group": "Roedores",
+      "family": "Cricetidae"
+    },
+    {
+      "id": "na_esp_didelphis_marsupialis",
+      "name": "Zarigüeya común",
+      "latin": "Didelphis marsupialis",
+      "group": "Marsupiales",
+      "family": "Didelphidae"
+    },
+    {
+      "id": "na_esp_didelphis_virginiana",
+      "name": "Zarigüeya de Virginia",
+      "latin": "Didelphis virginiana",
+      "group": "Marsupiales",
+      "family": "Didelphidae"
+    },
+    {
+      "id": "na_esp_dipodomys_merriami",
+      "name": "Rata canguro de Merriam",
+      "latin": "Dipodomys merriami",
+      "group": "Roedores",
+      "family": "Heteromyidae"
+    },
+    {
+      "id": "sa_esp_dolichotis_patagonum",
+      "name": "Mara patagónica",
+      "latin": "Dolichotis patagonum",
+      "group": "Roedores",
+      "family": "Caviidae"
+    },
+    {
+      "id": "gm06_dromiciops_gliroides",
+      "name": "Monito del monte",
+      "latin": "Dromiciops gliroides",
+      "group": "Marsupiales",
+      "family": "Microbiotheriidae"
+    },
+    {
+      "id": "asia_esp_0824",
+      "name": "Ciervo del padre David",
+      "latin": "Elaphurus davidianus",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "asia_esp_0176",
+      "name": "Elefante asiático",
+      "latin": "Elephas maximus",
+      "group": "Elefantes",
+      "family": "Elephantidae"
+    },
+    {
+      "id": "eu_esp_0601",
+      "name": "Lirón careto",
+      "latin": "Eliomys quercinus",
+      "group": "Roedores",
+      "family": "Gliridae"
+    },
+    {
+      "id": "eu_esp_0615",
+      "name": "Murciélago hortelano",
+      "latin": "Eptesicus serotinus",
+      "group": "Murciélagos",
+      "family": "Vespertilionidae"
+    },
+    {
+      "id": "af_xlsx_131_equus_africanus",
+      "name": "Asno salvaje africano",
+      "latin": "Equus africanus",
+      "group": "Ungulados",
+      "family": "Equidae"
+    },
+    {
+      "id": "af_asno_somali",
+      "name": "Asno salvaje somalí",
+      "latin": "Equus africanus somaliensis",
+      "group": "Ungulados",
+      "family": "Equidae"
+    },
+    {
+      "id": "asia_esp_0182",
+      "name": "Onagro",
+      "latin": "Equus hemionus",
+      "group": "Ungulados",
+      "family": "Equidae"
+    },
+    {
+      "id": "asia_esp_0183",
+      "name": "Kiang",
+      "latin": "Equus kiang",
+      "group": "Ungulados",
+      "family": "Equidae"
+    },
+    {
+      "id": "asia_esp_0184",
+      "name": "Caballo de Przewalski",
+      "latin": "Equus przewalskii",
+      "group": "Ungulados",
+      "family": "Equidae"
+    },
+    {
+      "id": "af_cebra_llanura",
+      "name": "Cebra de llanura",
+      "latin": "Equus quagga",
+      "group": "Ungulados",
+      "family": "Equidae"
+    },
+    {
+      "id": "na_esp_erethizon_dorsatum",
+      "name": "Puercoespín norteamericano",
+      "latin": "Erethizon dorsatum",
+      "group": "Roedores",
+      "family": "Erethizontidae"
+    },
+    {
+      "id": "erizo_europeo",
+      "name": "Erizo europeo",
+      "latin": "Erinaceus europaeus",
+      "group": "Eulipotiflos",
+      "family": "Erinaceidae"
+    },
+    {
+      "id": "asia_esp_0194",
+      "name": "Jerbo de orejas largas",
+      "latin": "Euchoreutes naso",
+      "group": "Roedores",
+      "family": "Dipodidae"
+    },
+    {
+      "id": "af_xlsx_gacela_frente_roja",
+      "name": "Gacela de frente roja",
+      "latin": "Eudorcas rufifrons",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_xlsx_gacela_thomson",
+      "name": "Gacela de Thomson",
+      "latin": "Eudorcas thomsonii",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "sa_esp_euphractus_sexcinctus",
+      "name": "Armadillo de seis bandas",
+      "latin": "Euphractus sexcinctus",
+      "group": "Armadillos",
+      "family": "Chlamyphoridae"
+    },
+    {
+      "id": "asia_esp_0205",
+      "name": "Gato de la jungla",
+      "latin": "Felis chaus",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "af_gato_montes_africano",
+      "name": "Gato montés africano",
+      "latin": "Felis lybica",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "asia_esp_0206",
+      "name": "Gato de las arenas",
+      "latin": "Felis margarita",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "gato_montes",
+      "name": "Gato montés europeo",
+      "latin": "Felis silvestris",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "af_galago",
+      "name": "Gálago senegalés",
+      "latin": "Galago senegalensis",
+      "group": "Primates",
+      "family": "Galagidae"
+    },
+    {
+      "id": "eu_esp_0623",
+      "name": "Desmán ibérico",
+      "latin": "Galemys pyrenaicus",
+      "group": "Eulipotiflos",
+      "family": "Talpidae"
+    },
+    {
+      "id": "asia_esp_0214",
+      "name": "Gacela de Arabia",
+      "latin": "Gazella arabica",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_xlsx_gacela_cuvier",
+      "name": "Gacela de Cuvier",
+      "latin": "Gazella cuvieri",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_gacela_dorcas",
+      "name": "Gacela dorcas",
+      "latin": "Gazella dorcas",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_xlsx_gacela_speke",
+      "name": "Gacela de Speke",
+      "latin": "Gazella spekei",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "asia_esp_0218",
+      "name": "Gacela persa",
+      "latin": "Gazella subgutturosa",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "eu_esp_0219",
+      "name": "Gineta",
+      "latin": "Genetta genetta",
+      "group": "Carnívoros terrestres",
+      "family": "Viverridae"
+    },
+    {
+      "id": "af_xlsx_131_geosciurus_inauris",
+      "name": "Ardilla terrestre del Cabo",
+      "latin": "Geosciurus inauris",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "af_jirafa",
+      "name": "Jirafa",
+      "latin": "Giraffa camelopardalis",
+      "group": "Ungulados",
+      "family": "Giraffidae"
+    },
+    {
+      "id": "af_jirafa_rothschild",
+      "name": "Jirafa de Rothschild",
+      "latin": "Giraffa camelopardalis rothschildi",
+      "group": "Ungulados",
+      "family": "Giraffidae"
+    },
+    {
+      "id": "af_xlsx_jirafa_reticulada",
+      "name": "Jirafa reticulada",
+      "latin": "Giraffa reticulata",
+      "group": "Ungulados",
+      "family": "Giraffidae"
+    },
+    {
+      "id": "eu_esp_0602",
+      "name": "Lirón gris",
+      "latin": "Glis glis",
+      "group": "Roedores",
+      "family": "Gliridae"
+    },
+    {
+      "id": "af_gorila_montana",
+      "name": "Gorila de montaña",
+      "latin": "Gorilla beringei beringei",
+      "group": "Primates",
+      "family": "Hominidae"
+    },
+    {
+      "id": "af_gorila_occidental",
+      "name": "Gorila occidental",
+      "latin": "Gorilla gorilla",
+      "group": "Primates",
+      "family": "Hominidae"
+    },
+    {
+      "id": "gloton",
+      "name": "Glotón",
+      "latin": "Gulo gulo",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "asia_esp_0238",
+      "name": "Oso malayo",
+      "latin": "Helarctos malayanus",
+      "group": "Carnívoros terrestres",
+      "family": "Ursidae"
+    },
+    {
+      "id": "af_mangosta_enana",
+      "name": "Mangosta enana africana",
+      "latin": "Helogale parvula",
+      "group": "Carnívoros terrestres",
+      "family": "Herpestidae"
+    },
+    {
+      "id": "asia_esp_0240",
+      "name": "Tahr del Himalaya",
+      "latin": "Hemitragus jemlahicus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "na_esp_herpailurus_yagouaroundi",
+      "name": "Jaguarundi",
+      "latin": "Herpailurus yagouaroundi",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "meloncillo",
+      "name": "Meloncillo",
+      "latin": "Herpestes ichneumon",
+      "group": "Carnívoros terrestres",
+      "family": "Herpestidae"
+    },
+    {
+      "id": "sa_esp_hippocamelus_antisensis",
+      "name": "Taruca",
+      "latin": "Hippocamelus antisensis",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "sa_esp_hippocamelus_bisulcus",
+      "name": "Huemul",
+      "latin": "Hippocamelus bisulcus",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "af_hipopotamo",
+      "name": "Hipopótamo común",
+      "latin": "Hippopotamus amphibius",
+      "group": "Ungulados",
+      "family": "Hippopotamidae"
+    },
+    {
+      "id": "af_xlsx_131_hippotragus_equinus",
+      "name": "Antílope ruano",
+      "latin": "Hippotragus equinus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_antilope_sable",
+      "name": "Antílope sable",
+      "latin": "Hippotragus niger",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "asia_esp_0246",
+      "name": "Hiena rayada",
+      "latin": "Hyaena hyaena",
+      "group": "Carnívoros terrestres",
+      "family": "Hyaenidae"
+    },
+    {
+      "id": "af_xlsx_131_hydrictis_maculicollis",
+      "name": "Nutria de cuello manchado",
+      "latin": "Hydrictis maculicollis",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "sa_esp_hydrochoerus_hydrochaeris",
+      "name": "Chigüiro",
+      "latin": "Hydrochoerus hydrochaeris",
+      "group": "Roedores",
+      "family": "Caviidae"
+    },
+    {
+      "id": "asia_esp_0249",
+      "name": "Ciervo acuático chino",
+      "latin": "Hydropotes inermis",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "asia_esp_0251",
+      "name": "Gibón de manos blancas",
+      "latin": "Hylobates lar",
+      "group": "Primates",
+      "family": "Hylobatidae"
+    },
+    {
+      "id": "af_xlsx_131_hystrix_africaeaustralis",
+      "name": "Puercoespín sudafricano",
+      "latin": "Hystrix africaeaustralis",
+      "group": "Roedores",
+      "family": "Hystricidae"
+    },
+    {
+      "id": "eu_esp_0253",
+      "name": "Puercoespín crestado",
+      "latin": "Hystrix cristata",
+      "group": "Roedores",
+      "family": "Hystricidae"
+    },
+    {
+      "id": "af_indri",
+      "name": "Indri",
+      "latin": "Indri indri",
+      "group": "Primates",
+      "family": "Indriidae"
+    },
+    {
+      "id": "af_xlsx_jerbo",
+      "name": "Jerbo egipcio",
+      "latin": "Jaculus jaculus",
+      "group": "Roedores",
+      "family": "Dipodidae"
+    },
+    {
+      "id": "af_lechwe_rojo",
+      "name": "Lechwe rojo",
+      "latin": "Kobus leche",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_lechwe_negro",
+      "name": "Lechwe negro",
+      "latin": "Kobus leche smithemani",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_puku",
+      "name": "Puku",
+      "latin": "Kobus vardonii",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "sa_esp_lagidium_viscacia",
+      "name": "Vizcacha andina",
+      "latin": "Lagidium viscacia",
+      "group": "Roedores",
+      "family": "Chinchillidae"
+    },
+    {
+      "id": "sa_esp_lagostomus_maximus",
+      "name": "Vizcacha de las pampas",
+      "latin": "Lagostomus maximus",
+      "group": "Roedores",
+      "family": "Chinchillidae"
+    },
+    {
+      "id": "sa_esp_lagothrix_lagothricha",
+      "name": "Mono lanudo marrón",
+      "latin": "Lagothrix lagothricha",
+      "group": "Primates",
+      "family": "Atelidae"
+    },
+    {
+      "id": "sa_esp_lama_guanicoe",
+      "name": "Guanaco",
+      "latin": "Lama guanicoe",
+      "group": "Ungulados",
+      "family": "Camelidae"
+    },
+    {
+      "id": "eu_esp_0610",
+      "name": "Lemming noruego",
+      "latin": "Lemmus lemmus",
+      "group": "Roedores",
+      "family": "Cricetidae"
+    },
+    {
+      "id": "na_esp_lemmus_trimucronatus",
+      "name": "Lemming pardo",
+      "latin": "Lemmus trimucronatus",
+      "group": "Roedores",
+      "family": "Cricetidae"
+    },
+    {
+      "id": "af_lemur_colaanillada",
+      "name": "Lémur de cola anillada",
+      "latin": "Lemur catta",
+      "group": "Primates",
+      "family": "Lemuridae"
+    },
+    {
+      "id": "sa_esp_leopardus_colocola",
+      "name": "Gato de las pampas",
+      "latin": "Leopardus colocola",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "sa_esp_leopardus_geoffroyi",
+      "name": "Gato montés",
+      "latin": "Leopardus geoffroyi",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "sa_esp_leopardus_jacobita",
+      "name": "Gato andino",
+      "latin": "Leopardus jacobita",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "na_esp_leopardus_pardalis",
+      "name": "Ocelote",
+      "latin": "Leopardus pardalis",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "sa_esp_leopardus_tigrinus",
+      "name": "Tigrillo",
+      "latin": "Leopardus tigrinus",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "na_esp_leopardus_wiedii",
+      "name": "Tigrillo margay",
+      "latin": "Leopardus wiedii",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "af_serval",
+      "name": "Serval",
+      "latin": "Leptailurus serval",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "na_esp_lepus_americanus",
+      "name": "Liebre americana",
+      "latin": "Lepus americanus",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "gm06_lepus_arcticus",
+      "name": "Liebre ártica",
+      "latin": "Lepus arcticus",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "na_esp_lepus_californicus",
+      "name": "Liebre de cola negra",
+      "latin": "Lepus californicus",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "af_xlsx_131_lepus_capensis",
+      "name": "Liebre del Cabo",
+      "latin": "Lepus capensis",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "liebre_europea",
+      "name": "Liebre europea",
+      "latin": "Lepus europaeus",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "af_xlsx_131_lepus_fagani",
+      "name": "Liebre etíope",
+      "latin": "Lepus fagani",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "eu_esp_0607",
+      "name": "Liebre ibérica",
+      "latin": "Lepus granatensis",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "asia_esp_0842",
+      "name": "Liebre china",
+      "latin": "Lepus sinensis",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "liebre_variable",
+      "name": "Liebre variable",
+      "latin": "Lepus timidus",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "af_gerenuc",
+      "name": "Gerenuc",
+      "latin": "Litocranius walleri",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "na_esp_lontra_canadensis",
+      "name": "Nutria de río norteamericana",
+      "latin": "Lontra canadensis",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "sa_esp_lontra_felina",
+      "name": "Chungungo",
+      "latin": "Lontra felina",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "gm06_lontra_provocax",
+      "name": "Huillín",
+      "latin": "Lontra provocax",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "af_elefante_sabana",
+      "name": "Elefante africano de sabana",
+      "latin": "Loxodonta africana",
+      "group": "Elefantes",
+      "family": "Elephantidae"
+    },
+    {
+      "id": "af_elefante_bosque",
+      "name": "Elefante africano de bosque",
+      "latin": "Loxodonta cyclotis",
+      "group": "Elefantes",
+      "family": "Elephantidae"
+    },
+    {
+      "id": "af_xlsx_131_lupulella_mesomelas",
+      "name": "Chacal de lomo negro",
+      "latin": "Lupulella mesomelas",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "nutria_europea",
+      "name": "Nutria europea",
+      "latin": "Lutra lutra",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "asia_esp_0300",
+      "name": "Nutria lisa",
+      "latin": "Lutrogale perspicillata",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "sa_esp_lycalopex_culpaeus",
+      "name": "Zorro culpeo",
+      "latin": "Lycalopex culpaeus",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "sa_esp_lycalopex_fulvipes",
+      "name": "Zorro de Darwin",
+      "latin": "Lycalopex fulvipes",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "sa_esp_lycalopex_gymnocercus",
+      "name": "Zorro pampeano",
+      "latin": "Lycalopex gymnocercus",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "af_licaon",
+      "name": "Licaón",
+      "latin": "Lycaon pictus",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "na_esp_lynx_canadensis",
+      "name": "Lince canadiense",
+      "latin": "Lynx canadensis",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "lince_boreal",
+      "name": "Lince boreal",
+      "latin": "Lynx lynx",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "lince_iberico",
+      "name": "Lince ibérico",
+      "latin": "Lynx pardinus",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "na_esp_lynx_rufus",
+      "name": "Lince rojo",
+      "latin": "Lynx rufus",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "asia_esp_0308",
+      "name": "Macaco japonés",
+      "latin": "Macaca fuscata",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "asia_esp_0855",
+      "name": "Macaco rhesus",
+      "latin": "Macaca mulatta",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "asia_esp_0857",
+      "name": "Macaco de cola de cerdo",
+      "latin": "Macaca nemestrina",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "af_macaco_berberia",
+      "name": "Macaco de Berbería",
+      "latin": "Macaca sylvanus",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "asia_esp_0310",
+      "name": "Macaco tibetano",
+      "latin": "Macaca thibetana",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "oc_esp_macropus_fuliginosus",
+      "name": "Canguro gris occidental",
+      "latin": "Macropus fuliginosus",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "oc_esp_macropus_giganteus",
+      "name": "Canguro gris oriental",
+      "latin": "Macropus giganteus",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "oc_esp_macrotis_lagotis",
+      "name": "Bilbi mayor",
+      "latin": "Macrotis lagotis",
+      "group": "Marsupiales",
+      "family": "Thylacomyidae"
+    },
+    {
+      "id": "af_dikdik_guenther",
+      "name": "Dicdic de Günther",
+      "latin": "Madoqua guentheri",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_xlsx_131_madoqua_saltiana",
+      "name": "Dicdic de Salt",
+      "latin": "Madoqua saltiana",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_mandril",
+      "name": "Mandril",
+      "latin": "Mandrillus sphinx",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "asia_esp_0852",
+      "name": "Pangolín indio",
+      "latin": "Manis crassicaudata",
+      "group": "Pangolines",
+      "family": "Manidae"
+    },
+    {
+      "id": "asia_esp_0317",
+      "name": "Pangolín malayo",
+      "latin": "Manis javanica",
+      "group": "Pangolines",
+      "family": "Manidae"
+    },
+    {
+      "id": "asia_esp_0318",
+      "name": "Pangolín chino",
+      "latin": "Manis pentadactyla",
+      "group": "Pangolines",
+      "family": "Manidae"
+    },
+    {
+      "id": "asia_esp_0319",
+      "name": "Marmota bobak",
+      "latin": "Marmota bobak",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "na_esp_marmota_flaviventris",
+      "name": "Marmota de vientre amarillo",
+      "latin": "Marmota flaviventris",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "asia_esp_0321",
+      "name": "Marmota del Himalaya",
+      "latin": "Marmota himalayana",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "marmota_alpina",
+      "name": "Marmota alpina",
+      "latin": "Marmota marmota",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "asia_esp_0323",
+      "name": "Marmota siberiana",
+      "latin": "Marmota sibirica",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "na_esp_marmota_vancouverensis",
+      "name": "Marmota de Vancouver",
+      "latin": "Marmota vancouverensis",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "na_esp_martes_americana",
+      "name": "Marta americana",
+      "latin": "Martes americana",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "asia_esp_0850",
+      "name": "Marta de garganta amarilla",
+      "latin": "Martes flavigula",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "eu_esp_0620",
+      "name": "Garduña",
+      "latin": "Martes foina",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "eu_esp_0621",
+      "name": "Marta europea",
+      "latin": "Martes martes",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "asia_esp_0326",
+      "name": "Marta cibelina",
+      "latin": "Martes zibellina",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "sa_esp_mazama_americana",
+      "name": "Venado colorado",
+      "latin": "Mazama americana",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "asia_esp_0333",
+      "name": "Tejón asiático",
+      "latin": "Meles leucurus",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "tejon_europeo",
+      "name": "Tejón europeo",
+      "latin": "Meles meles",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "af_xlsx_131_mellivora_capensis",
+      "name": "Tejón melero",
+      "latin": "Mellivora capensis",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "asia_esp_0336",
+      "name": "Oso bezudo",
+      "latin": "Melursus ursinus",
+      "group": "Carnívoros terrestres",
+      "family": "Ursidae"
+    },
+    {
+      "id": "na_esp_mephitis_mephitis",
+      "name": "Zorrillo rayado",
+      "latin": "Mephitis mephitis",
+      "group": "Carnívoros terrestres",
+      "family": "Mephitidae"
+    },
+    {
+      "id": "af_xlsx_lemur_raton",
+      "name": "Lémur ratón gris",
+      "latin": "Microcebus murinus",
+      "group": "Primates",
+      "family": "Cheirogaleidae"
+    },
+    {
+      "id": "eu_esp_0604",
+      "name": "Topillo agreste",
+      "latin": "Microtus agrestis",
+      "group": "Roedores",
+      "family": "Cricetidae"
+    },
+    {
+      "id": "eu_esp_0603",
+      "name": "Topillo común",
+      "latin": "Microtus arvalis",
+      "group": "Roedores",
+      "family": "Cricetidae"
+    },
+    {
+      "id": "asia_esp_0344",
+      "name": "Ciervo almizclero siberiano",
+      "latin": "Moschus moschiferus",
+      "group": "Ungulados",
+      "family": "Moschidae"
+    },
+    {
+      "id": "af_xlsx_131_mungos_mungo",
+      "name": "Mangosta rayada",
+      "latin": "Mungos mungo",
+      "group": "Carnívoros terrestres",
+      "family": "Herpestidae"
+    },
+    {
+      "id": "asia_esp_0345",
+      "name": "Muntíaco de Reeves",
+      "latin": "Muntiacus reevesi",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "eu_esp_0606",
+      "name": "Lirón avellano",
+      "latin": "Muscardinus avellanarius",
+      "group": "Roedores",
+      "family": "Gliridae"
+    },
+    {
+      "id": "eu_esp_0618",
+      "name": "Armiño",
+      "latin": "Mustela erminea",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "asia_esp_0347",
+      "name": "Turón estepario",
+      "latin": "Mustela eversmanii",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "eu_esp_0622",
+      "name": "Visón europeo",
+      "latin": "Mustela lutreola",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "na_esp_mustela_nigripes",
+      "name": "Hurón de patas negras",
+      "latin": "Mustela nigripes",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "eu_esp_0617",
+      "name": "Comadreja común",
+      "latin": "Mustela nivalis",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "eu_esp_0619",
+      "name": "Turón europeo",
+      "latin": "Mustela putorius",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "sa_esp_myocastor_coypus",
+      "name": "Coipo",
+      "latin": "Myocastor coypus",
+      "group": "Roedores",
+      "family": "Echimyidae"
+    },
+    {
+      "id": "eu_esp_0605",
+      "name": "Topillo rojo",
+      "latin": "Myodes glareolus",
+      "group": "Roedores",
+      "family": "Cricetidae"
+    },
+    {
+      "id": "oc_esp_myrmecobius_fasciatus",
+      "name": "Numbat",
+      "latin": "Myrmecobius fasciatus",
+      "group": "Marsupiales",
+      "family": "Myrmecobiidae"
+    },
+    {
+      "id": "na_esp_myrmecophaga_tridactyla",
+      "name": "Oso hormiguero gigante",
+      "latin": "Myrmecophaga tridactyla",
+      "group": "Perezosos y osos hormigueros",
+      "family": "Myrmecophagidae"
+    },
+    {
+      "id": "asia_esp_0352",
+      "name": "Mono narigudo",
+      "latin": "Nasalis larvatus",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "na_esp_nasua_narica",
+      "name": "Coatí de nariz blanca",
+      "latin": "Nasua narica",
+      "group": "Carnívoros terrestres",
+      "family": "Procyonidae"
+    },
+    {
+      "id": "asia_esp_0355",
+      "name": "Leopardo nublado",
+      "latin": "Neofelis nebulosa",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "sa_esp_noctilio_leporinus",
+      "name": "Murciélago pescador",
+      "latin": "Noctilio leporinus",
+      "group": "Murciélagos",
+      "family": "Noctilionidae"
+    },
+    {
+      "id": "asia_esp_0854",
+      "name": "Gibón de cresta negra",
+      "latin": "Nomascus concolor",
+      "group": "Primates",
+      "family": "Hylobatidae"
+    },
+    {
+      "id": "oc_esp_notamacropus_agilis",
+      "name": "Ualabí ágil",
+      "latin": "Notamacropus agilis",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "oc_esp_notamacropus_eugenii",
+      "name": "Ualabí de Tammar",
+      "latin": "Notamacropus eugenii",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "oc_esp_notamacropus_rufogriseus",
+      "name": "Ualabí de Bennett",
+      "latin": "Notamacropus rufogriseus",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "asia_esp_0363",
+      "name": "Tanuki",
+      "latin": "Nyctereutes procyonoides",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "asia_esp_0860",
+      "name": "Loris lento de Bengala",
+      "latin": "Nycticebus bengalensis",
+      "group": "Primates",
+      "family": "Lorisidae"
+    },
+    {
+      "id": "na_esp_ochotona_princeps",
+      "name": "Pica americana",
+      "latin": "Ochotona princeps",
+      "group": "Lagomorfos",
+      "family": "Ochotonidae"
+    },
+    {
+      "id": "sa_esp_octodon_degus",
+      "name": "Degú",
+      "latin": "Octodon degus",
+      "group": "Roedores",
+      "family": "Octodontidae"
+    },
+    {
+      "id": "na_esp_odocoileus_hemionus",
+      "name": "Ciervo mulo",
+      "latin": "Odocoileus hemionus",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "na_esp_odocoileus_virginianus",
+      "name": "Venado de cola blanca",
+      "latin": "Odocoileus virginianus",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "af_okapi",
+      "name": "Okapi",
+      "latin": "Okapia johnstoni",
+      "group": "Ungulados",
+      "family": "Giraffidae"
+    },
+    {
+      "id": "na_esp_oreamnos_americanus",
+      "name": "Cabra de las Rocosas",
+      "latin": "Oreamnos americanus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "oc_esp_ornithorhynchus_anatinus",
+      "name": "Ornitorrinco",
+      "latin": "Ornithorhynchus anatinus",
+      "group": "Monotremas",
+      "family": "Ornithorhynchidae"
+    },
+    {
+      "id": "af_xlsx_cerdo_hormiguero",
+      "name": "Cerdo hormiguero",
+      "latin": "Orycteropus afer",
+      "group": "Tubulidentados",
+      "family": "Orycteropodidae"
+    },
+    {
+      "id": "conejo_europeo",
+      "name": "Conejo europeo",
+      "latin": "Oryctolagus cuniculus",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "af_xlsx_orix_beisa",
+      "name": "Órix beisa",
+      "latin": "Oryx beisa",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_xlsx_orix_cimitarra",
+      "name": "Órix de cuernos de cimitarra",
+      "latin": "Oryx dammah",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_orix",
+      "name": "Órix del Cabo",
+      "latin": "Oryx gazella",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "asia_esp_0383",
+      "name": "Órix árabe",
+      "latin": "Oryx leucoryx",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "oc_esp_osphranter_rufus",
+      "name": "Canguro rojo",
+      "latin": "Osphranter rufus",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "asia_esp_0387",
+      "name": "Manul",
+      "latin": "Otocolobus manul",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "af_xlsx_131_otocyon_megalotis",
+      "name": "Zorro orejudo",
+      "latin": "Otocyon megalotis",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "na_esp_ovibos_moschatus",
+      "name": "Buey almizclero",
+      "latin": "Ovibos moschatus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "na_esp_ovis_canadensis",
+      "name": "Borrego cimarrón",
+      "latin": "Ovis canadensis",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "na_esp_ovis_dalli",
+      "name": "Borrego de Dall",
+      "latin": "Ovis dalli",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "eu_esp_0627",
+      "name": "Muflón europeo",
+      "latin": "Ovis gmelini",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "sa_esp_ozotoceros_bezoarticus",
+      "name": "Venado de las pampas",
+      "latin": "Ozotoceros bezoarticus",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "asia_esp_0395",
+      "name": "Civeta de las palmeras enmascarada",
+      "latin": "Paguma larvata",
+      "group": "Carnívoros terrestres",
+      "family": "Viverridae"
+    },
+    {
+      "id": "af_xlsx_bonobo",
+      "name": "Bonobo",
+      "latin": "Pan paniscus",
+      "group": "Primates",
+      "family": "Hominidae"
+    },
+    {
+      "id": "af_chimpance",
+      "name": "Chimpancé común",
+      "latin": "Pan troglodytes",
+      "group": "Primates",
+      "family": "Hominidae"
+    },
+    {
+      "id": "af_leon",
+      "name": "León africano",
+      "latin": "Panthera leo",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "na_esp_panthera_onca",
+      "name": "Jaguar",
+      "latin": "Panthera onca",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "af_leopardo",
+      "name": "Leopardo africano",
+      "latin": "Panthera pardus pardus",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "asia_esp_0401",
+      "name": "Leopardo persa",
+      "latin": "Panthera pardus tulliana",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "asia_esp_0402",
+      "name": "Tigre siberiano",
+      "latin": "Panthera tigris",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "asia_esp_0403",
+      "name": "Leopardo de las nieves",
+      "latin": "Panthera uncia",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "asia_esp_0404",
+      "name": "Antílope tibetano",
+      "latin": "Pantholops hodgsonii",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_babuino_oliva",
+      "name": "Babuino oliva",
+      "latin": "Papio anubis",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "af_babuino_hamadryas",
+      "name": "Babuino hamadríade",
+      "latin": "Papio hamadryas",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "af_hiena_parda",
+      "name": "Hiena parda",
+      "latin": "Parahyaena brunnea",
+      "group": "Carnívoros terrestres",
+      "family": "Hyaenidae"
+    },
+    {
+      "id": "asia_esp_0414",
+      "name": "Conejo de Amami",
+      "latin": "Pentalagus furnessi",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "asia_esp_0844",
+      "name": "Ardilla voladora gigante roja",
+      "latin": "Petaurista petaurista",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "oc_esp_petauroides_volans",
+      "name": "Petauro mayor",
+      "latin": "Petauroides volans",
+      "group": "Marsupiales",
+      "family": "Pseudocheiridae"
+    },
+    {
+      "id": "oc_esp_petaurus_breviceps",
+      "name": "Petauro del azúcar",
+      "latin": "Petaurus breviceps",
+      "group": "Marsupiales",
+      "family": "Petauridae"
+    },
+    {
+      "id": "oc_esp_petrogale_mareeba",
+      "name": "Ualabí de roca de Mareeba",
+      "latin": "Petrogale mareeba",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "af_facoquero",
+      "name": "Facóquero común",
+      "latin": "Phacochoerus africanus",
+      "group": "Ungulados",
+      "family": "Suidae"
+    },
+    {
+      "id": "oc_esp_phalanger_orientalis",
+      "name": "Cuscús común",
+      "latin": "Phalanger orientalis",
+      "group": "Marsupiales",
+      "family": "Phalangeridae"
+    },
+    {
+      "id": "oc_esp_phascolarctos_cinereus",
+      "name": "Koala",
+      "latin": "Phascolarctos cinereus",
+      "group": "Marsupiales",
+      "family": "Phascolarctidae"
+    },
+    {
+      "id": "af_xlsx_131_phataginus_tricuspis",
+      "name": "Pangolín arborícola",
+      "latin": "Phataginus tricuspis",
+      "group": "Pangolines",
+      "family": "Manidae"
+    },
+    {
+      "id": "af_duiker_azul",
+      "name": "Duíquer azul",
+      "latin": "Philantomba monticola",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "eu_esp_0614",
+      "name": "Murciélago común",
+      "latin": "Pipistrellus pipistrellus",
+      "group": "Murciélagos",
+      "family": "Vespertilionidae"
+    },
+    {
+      "id": "gm06_pongo_abelii",
+      "name": "Orangután de Sumatra",
+      "latin": "Pongo abelii",
+      "group": "Primates",
+      "family": "Hominidae"
+    },
+    {
+      "id": "asia_esp_0436",
+      "name": "Orangután de Borneo",
+      "latin": "Pongo pygmaeus",
+      "group": "Primates",
+      "family": "Hominidae"
+    },
+    {
+      "id": "af_potamoquero",
+      "name": "Potamóquero rojo",
+      "latin": "Potamochoerus porcus",
+      "group": "Ungulados",
+      "family": "Suidae"
+    },
+    {
+      "id": "sa_esp_priodontes_maximus",
+      "name": "Armadillo gigante",
+      "latin": "Priodontes maximus",
+      "group": "Armadillos",
+      "family": "Chlamyphoridae"
+    },
+    {
+      "id": "asia_esp_0440",
+      "name": "Gato leopardo",
+      "latin": "Prionailurus bengalensis",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "asia_esp_0816",
+      "name": "Gato pescador",
+      "latin": "Prionailurus viverrinus",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "asia_esp_0441",
+      "name": "Gacela de Mongolia",
+      "latin": "Procapra gutturosa",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "asia_esp_0442",
+      "name": "Gacela tibetana",
+      "latin": "Procapra picticaudata",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "gm06_procavia_capensis",
+      "name": "Damán roquero",
+      "latin": "Procavia capensis",
+      "group": "Damanes",
+      "family": "Procaviidae"
+    },
+    {
+      "id": "na_esp_procyon_lotor",
+      "name": "Mapache",
+      "latin": "Procyon lotor",
+      "group": "Carnívoros terrestres",
+      "family": "Procyonidae"
+    },
+    {
+      "id": "na_esp_procyon_pygmaeus",
+      "name": "Mapache de Cozumel",
+      "latin": "Procyon pygmaeus",
+      "group": "Carnívoros terrestres",
+      "family": "Procyonidae"
+    },
+    {
+      "id": "af_sifaka",
+      "name": "Sifaca de Verreaux",
+      "latin": "Propithecus verreauxi",
+      "group": "Primates",
+      "family": "Indriidae"
+    },
+    {
+      "id": "asia_esp_0445",
+      "name": "Bharal",
+      "latin": "Pseudois nayaur",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "asia_esp_0843",
+      "name": "Ardilla voladora siberiana",
+      "latin": "Pteromys volans",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "sa_esp_pteronura_brasiliensis",
+      "name": "Nutria gigante",
+      "latin": "Pteronura brasiliensis",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "oc_esp_pteropus_conspicillatus",
+      "name": "Zorro volador de anteojos",
+      "latin": "Pteropus conspicillatus",
+      "group": "Murciélagos",
+      "family": "Pteropodidae"
+    },
+    {
+      "id": "oc_esp_pteropus_poliocephalus",
+      "name": "Murciélago zorro volador de cabeza gris",
+      "latin": "Pteropus poliocephalus",
+      "group": "Murciélagos",
+      "family": "Pteropodidae"
+    },
+    {
+      "id": "gm06_pteropus_vampyrus",
+      "name": "Zorro volador gigante",
+      "latin": "Pteropus vampyrus",
+      "group": "Murciélagos",
+      "family": "Pteropodidae"
+    },
+    {
+      "id": "sa_esp_pudella_mephistophiles",
+      "name": "Pudu del norte",
+      "latin": "Pudella mephistophiles",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "sa_esp_pudu_puda",
+      "name": "Pudú del sur",
+      "latin": "Pudu puda",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "na_esp_puma_concolor",
+      "name": "Puma",
+      "latin": "Puma concolor",
+      "group": "Felinos",
+      "family": "Felidae"
+    },
+    {
+      "id": "reno",
+      "name": "Reno",
+      "latin": "Rangifer tarandus",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "gm06_rhinoceros_sondaicus",
+      "name": "Rinoceronte de Java",
+      "latin": "Rhinoceros sondaicus",
+      "group": "Ungulados",
+      "family": "Rhinocerotidae"
+    },
+    {
+      "id": "asia_esp_0465",
+      "name": "Rinoceronte indio",
+      "latin": "Rhinoceros unicornis",
+      "group": "Ungulados",
+      "family": "Rhinocerotidae"
+    },
+    {
+      "id": "eu_esp_0616",
+      "name": "Murciélago de herradura grande",
+      "latin": "Rhinolophus ferrumequinum",
+      "group": "Murciélagos",
+      "family": "Rhinolophidae"
+    },
+    {
+      "id": "asia_esp_0856",
+      "name": "Mono de nariz chata dorado",
+      "latin": "Rhinopithecus roxellana",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "eu_esp_0626",
+      "name": "Rebeco pirenaico",
+      "latin": "Rupicapra pyrenaica",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "rebeco_alpino",
+      "name": "Rebeco alpino",
+      "latin": "Rupicapra rupicapra",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "asia_esp_0825",
+      "name": "Ciervo sambar",
+      "latin": "Rusa unicolor",
+      "group": "Ungulados",
+      "family": "Cervidae"
+    },
+    {
+      "id": "gm06_saguinus_geoffroyi",
+      "name": "Tití de Geoffroy",
+      "latin": "Saguinus geoffroyi",
+      "group": "Primates",
+      "family": "Callitrichidae"
+    },
+    {
+      "id": "sa_esp_saguinus_imperator",
+      "name": "Mono tití emperador",
+      "latin": "Saguinus imperator",
+      "group": "Primates",
+      "family": "Callitrichidae"
+    },
+    {
+      "id": "asia_esp_0468",
+      "name": "Antílope saiga",
+      "latin": "Saiga tatarica",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "sa_esp_saimiri_sciureus",
+      "name": "Mono ardilla",
+      "latin": "Saimiri sciureus",
+      "group": "Primates",
+      "family": "Cebidae"
+    },
+    {
+      "id": "oc_esp_sarcophilus_harrisii",
+      "name": "Demonio de Tasmania",
+      "latin": "Sarcophilus harrisii",
+      "group": "Marsupiales",
+      "family": "Dasyuridae"
+    },
+    {
+      "id": "na_esp_sciurus_carolinensis",
+      "name": "Ardilla gris oriental",
+      "latin": "Sciurus carolinensis",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "ardilla_roja",
+      "name": "Ardilla roja",
+      "latin": "Sciurus vulgaris",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "asia_esp_0476",
+      "name": "Langur gris",
+      "latin": "Semnopithecus entellus",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "oc_esp_setonix_brachyurus",
+      "name": "Quokka",
+      "latin": "Setonix brachyurus",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "af_pangolin_gigante",
+      "name": "Pangolín gigante",
+      "latin": "Smutsia gigantea",
+      "group": "Pangolines",
+      "family": "Manidae"
+    },
+    {
+      "id": "af_pangolin_temminck",
+      "name": "Pangolín terrestre",
+      "latin": "Smutsia temminckii",
+      "group": "Pangolines",
+      "family": "Manidae"
+    },
+    {
+      "id": "gm06_solenodon_paradoxus",
+      "name": "Solenodonte de La Española",
+      "latin": "Solenodon paradoxus",
+      "group": "Eulipotiflos",
+      "family": "Solenodontidae"
+    },
+    {
+      "id": "eu_esp_0612",
+      "name": "Musaraña común",
+      "latin": "Sorex araneus",
+      "group": "Eulipotiflos",
+      "family": "Soricidae"
+    },
+    {
+      "id": "na_esp_sorex_cinereus",
+      "name": "Musaraña enmascarada",
+      "latin": "Sorex cinereus",
+      "group": "Eulipotiflos",
+      "family": "Soricidae"
+    },
+    {
+      "id": "eu_esp_0613",
+      "name": "Musaraña enana",
+      "latin": "Sorex minutus",
+      "group": "Eulipotiflos",
+      "family": "Soricidae"
+    },
+    {
+      "id": "sa_esp_speothos_venaticus",
+      "name": "Perro de monte",
+      "latin": "Speothos venaticus",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "eu_esp_0608",
+      "name": "Ardilla terrestre europea",
+      "latin": "Spermophilus citellus",
+      "group": "Roedores",
+      "family": "Sciuridae"
+    },
+    {
+      "id": "oc_esp_spilocuscus_maculatus",
+      "name": "Cuscús moteado",
+      "latin": "Spilocuscus maculatus",
+      "group": "Marsupiales",
+      "family": "Phalangeridae"
+    },
+    {
+      "id": "na_esp_spilogale_gracilis",
+      "name": "Zorrillo moteado occidental",
+      "latin": "Spilogale gracilis",
+      "group": "Carnívoros terrestres",
+      "family": "Mephitidae"
+    },
+    {
+      "id": "asia_esp_0853",
+      "name": "Musaraña almizclera",
+      "latin": "Suncus murinus",
+      "group": "Eulipotiflos",
+      "family": "Soricidae"
+    },
+    {
+      "id": "af_suricata",
+      "name": "Suricata",
+      "latin": "Suricata suricatta",
+      "group": "Carnívoros terrestres",
+      "family": "Herpestidae"
+    },
+    {
+      "id": "asia_esp_0834",
+      "name": "Jabalí barbudo",
+      "latin": "Sus barbatus",
+      "group": "Ungulados",
+      "family": "Suidae"
+    },
+    {
+      "id": "jabali",
+      "name": "Jabalí",
+      "latin": "Sus scrofa",
+      "group": "Ungulados",
+      "family": "Suidae"
+    },
+    {
+      "id": "na_esp_sylvilagus_audubonii",
+      "name": "Conejo del desierto",
+      "latin": "Sylvilagus audubonii",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "na_esp_sylvilagus_floridanus",
+      "name": "Conejo de cola de algodón oriental",
+      "latin": "Sylvilagus floridanus",
+      "group": "Lagomorfos",
+      "family": "Leporidae"
+    },
+    {
+      "id": "asia_esp_0491",
+      "name": "Gibón siamango",
+      "latin": "Symphalangus syndactylus",
+      "group": "Primates",
+      "family": "Hylobatidae"
+    },
+    {
+      "id": "af_bufalo_cafre",
+      "name": "Búfalo cafre",
+      "latin": "Syncerus caffer",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "oc_esp_tachyglossus_aculeatus",
+      "name": "Equidna de hocico corto",
+      "latin": "Tachyglossus aculeatus",
+      "group": "Monotremas",
+      "family": "Tachyglossidae"
+    },
+    {
+      "id": "af_xlsx_rata_topo",
+      "name": "Rata topo gigante",
+      "latin": "Tachyoryctes macrocephalus",
+      "group": "Roedores",
+      "family": "Spalacidae"
+    },
+    {
+      "id": "eu_esp_0611",
+      "name": "Topo europeo",
+      "latin": "Talpa europaea",
+      "group": "Eulipotiflos",
+      "family": "Talpidae"
+    },
+    {
+      "id": "sa_esp_tamandua_mexicana",
+      "name": "Tamandúa norteño",
+      "latin": "Tamandua mexicana",
+      "group": "Perezosos y osos hormigueros",
+      "family": "Myrmecophagidae"
+    },
+    {
+      "id": "sa_esp_tamandua_tetradactyla",
+      "name": "Tamandúa sureño",
+      "latin": "Tamandua tetradactyla",
+      "group": "Perezosos y osos hormigueros",
+      "family": "Myrmecophagidae"
+    },
+    {
+      "id": "na_esp_tapirus_bairdii",
+      "name": "Tapir centroamericano",
+      "latin": "Tapirus bairdii",
+      "group": "Ungulados",
+      "family": "Tapiridae"
+    },
+    {
+      "id": "asia_esp_0498",
+      "name": "Tapir malayo",
+      "latin": "Tapirus indicus",
+      "group": "Ungulados",
+      "family": "Tapiridae"
+    },
+    {
+      "id": "sa_esp_tapirus_pinchaque",
+      "name": "Tapir de montaña",
+      "latin": "Tapirus pinchaque",
+      "group": "Ungulados",
+      "family": "Tapiridae"
+    },
+    {
+      "id": "sa_esp_tapirus_terrestris",
+      "name": "Tapir amazónico",
+      "latin": "Tapirus terrestris",
+      "group": "Ungulados",
+      "family": "Tapiridae"
+    },
+    {
+      "id": "asia_esp_0859",
+      "name": "Tarsio de espectro",
+      "latin": "Tarsius tarsier",
+      "group": "Primates",
+      "family": "Tarsiidae"
+    },
+    {
+      "id": "af_eland",
+      "name": "Eland común",
+      "latin": "Taurotragus oryx",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "na_esp_taxidea_taxus",
+      "name": "Tejón americano",
+      "latin": "Taxidea taxus",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "sa_esp_tayassu_pecari",
+      "name": "Pecarí de labios blancos",
+      "latin": "Tayassu pecari",
+      "group": "Ungulados",
+      "family": "Tayassuidae"
+    },
+    {
+      "id": "af_tenrec",
+      "name": "Tenrec común",
+      "latin": "Tenrec ecaudatus",
+      "group": "Afrosorícidos",
+      "family": "Tenrecidae"
+    },
+    {
+      "id": "af_gelada",
+      "name": "Gelada",
+      "latin": "Theropithecus gelada",
+      "group": "Primates",
+      "family": "Cercopithecidae"
+    },
+    {
+      "id": "oc_esp_thylogale_billardierii",
+      "name": "Pademelón de Tasmania",
+      "latin": "Thylogale billardierii",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "sa_esp_tolypeutes_tricinctus",
+      "name": "Armadillo de tres bandas",
+      "latin": "Tolypeutes tricinctus",
+      "group": "Armadillos",
+      "family": "Chlamyphoridae"
+    },
+    {
+      "id": "af_nyala_comun",
+      "name": "Niala común",
+      "latin": "Tragelaphus angasii",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_nyala_montana",
+      "name": "Nyala de montaña",
+      "latin": "Tragelaphus buxtoni",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_antilope_bongo",
+      "name": "Bongo",
+      "latin": "Tragelaphus eurycerus",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_sitatunga",
+      "name": "Sitatunga",
+      "latin": "Tragelaphus spekii",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "af_gran_kudu",
+      "name": "Gran kudú",
+      "latin": "Tragelaphus strepsiceros",
+      "group": "Ungulados",
+      "family": "Bovidae"
+    },
+    {
+      "id": "sa_esp_tremarctos_ornatus",
+      "name": "Oso de anteojos",
+      "latin": "Tremarctos ornatus",
+      "group": "Carnívoros terrestres",
+      "family": "Ursidae"
+    },
+    {
+      "id": "oc_esp_trichosurus_vulpecula",
+      "name": "Possum cola de cepillo",
+      "latin": "Trichosurus vulpecula",
+      "group": "Marsupiales",
+      "family": "Phalangeridae"
+    },
+    {
+      "id": "na_esp_urocyon_cinereoargenteus",
+      "name": "Zorro gris",
+      "latin": "Urocyon cinereoargenteus",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "na_esp_ursus_americanus",
+      "name": "Oso negro americano",
+      "latin": "Ursus americanus",
+      "group": "Carnívoros terrestres",
+      "family": "Ursidae"
+    },
+    {
+      "id": "oso_pardo",
+      "name": "Oso pardo",
+      "latin": "Ursus arctos",
+      "group": "Carnívoros terrestres",
+      "family": "Ursidae"
+    },
+    {
+      "id": "polar_esp_ursus_maritimus",
+      "name": "Oso polar",
+      "latin": "Ursus maritimus",
+      "group": "Carnívoros terrestres",
+      "family": "Ursidae"
+    },
+    {
+      "id": "asia_esp_0523",
+      "name": "Oso negro asiático",
+      "latin": "Ursus thibetanus",
+      "group": "Carnívoros terrestres",
+      "family": "Ursidae"
+    },
+    {
+      "id": "af_xlsx_lemur_rufo",
+      "name": "Lémur rufo rojo",
+      "latin": "Varecia rubra",
+      "group": "Primates",
+      "family": "Lemuridae"
+    },
+    {
+      "id": "sa_esp_vicugna_vicugna",
+      "name": "Vicuña",
+      "latin": "Vicugna vicugna",
+      "group": "Ungulados",
+      "family": "Camelidae"
+    },
+    {
+      "id": "oc_esp_vombatus_ursinus",
+      "name": "Wómbat común",
+      "latin": "Vombatus ursinus",
+      "group": "Marsupiales",
+      "family": "Vombatidae"
+    },
+    {
+      "id": "eu_esp_0625",
+      "name": "Gato almizclero europeo",
+      "latin": "Vormela peregusna",
+      "group": "Carnívoros terrestres",
+      "family": "Mustelidae"
+    },
+    {
+      "id": "af_zorro_cabo",
+      "name": "Zorro del Cabo",
+      "latin": "Vulpes chama",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "asia_esp_0533",
+      "name": "Zorro corsac",
+      "latin": "Vulpes corsac",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "asia_esp_0534",
+      "name": "Zorro tibetano",
+      "latin": "Vulpes ferrilata",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "zorro_artico",
+      "name": "Zorro ártico",
+      "latin": "Vulpes lagopus",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "na_esp_vulpes_macrotis",
+      "name": "Zorro kit",
+      "latin": "Vulpes macrotis",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "af_zorro_palido",
+      "name": "Zorro pálido",
+      "latin": "Vulpes pallida",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "af_zorro_ruppell",
+      "name": "Zorro de Rüppell",
+      "latin": "Vulpes rueppellii",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "zorro_rojo",
+      "name": "Zorro rojo",
+      "latin": "Vulpes vulpes",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "af_fenec",
+      "name": "Fénec",
+      "latin": "Vulpes zerda",
+      "group": "Cánidos",
+      "family": "Canidae"
+    },
+    {
+      "id": "oc_esp_wallabia_bicolor",
+      "name": "Ualabí de pantano",
+      "latin": "Wallabia bicolor",
+      "group": "Marsupiales",
+      "family": "Macropodidae"
+    },
+    {
+      "id": "oc_esp_zaglossus_bartoni",
+      "name": "Equidna de hocico largo oriental",
+      "latin": "Zaglossus bartoni",
+      "group": "Monotremas",
+      "family": "Tachyglossidae"
+    }
+  ],
+  "terrestrialPending": [],
+  "aquaticForV460": [
+    {
+      "id": "gm06_arctocephalus_australis",
+      "name": "Lobo fino sudamericano",
+      "latin": "Arctocephalus australis",
+      "historicalGroup": "Otariidae",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Otariidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "oc_esp_arctocephalus_forsteri",
+      "name": "Foca peletera neozelandesa",
+      "latin": "Arctocephalus forsteri",
+      "historicalGroup": "Otáridos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Otariidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_arctocephalus_gazella",
+      "name": "Lobo fino antártico",
+      "latin": "Arctocephalus gazella",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Otariidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "af_lobo_marino_cabo",
+      "name": "Lobo marino del Cabo",
+      "latin": "Arctocephalus pusillus",
+      "historicalGroup": "Mustélidos",
+      "pending": [
+        "normal",
+        "albino",
+        "melanico"
+      ],
+      "group": "Pinnipedia",
+      "family": "Otariidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "polar_esp_balaena_mysticetus",
+      "name": "Ballena de Groenlandia",
+      "latin": "Balaena mysticetus",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Balaenidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_balaenoptera_acutorostrata",
+      "name": "Rorcual aliblanco",
+      "latin": "Balaenoptera acutorostrata",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Balaenopteridae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_balaenoptera_edeni",
+      "name": "Rorcual de Bryde",
+      "latin": "Balaenoptera edeni",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Balaenopteridae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_balaenoptera_musculus",
+      "name": "Ballena azul",
+      "latin": "Balaenoptera musculus",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Balaenopteridae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_balaenoptera_physalus",
+      "name": "Rorcual común",
+      "latin": "Balaenoptera physalus",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Balaenopteridae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "oc_esp_cephalorhynchus_hectori",
+      "name": "Delfín de Héctor",
+      "latin": "Cephalorhynchus hectori",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "polar_esp_delphinapterus_leucas",
+      "name": "Beluga",
+      "latin": "Delphinapterus leucas",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Monodontidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_delphinus_delphis",
+      "name": "Delfín común",
+      "latin": "Delphinus delphis",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "af_dugongo",
+      "name": "Dugongo",
+      "latin": "Dugong dugon",
+      "historicalGroup": "Sirénidos",
+      "pending": [
+        "normal",
+        "albino"
+      ],
+      "group": "Sirenia",
+      "family": "Dugongidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "asia_esp_0177",
+      "name": "Nutria marina",
+      "latin": "Enhydra lutris",
+      "historicalGroup": "Mustélidos",
+      "pending": [
+        "normal",
+        "melanico"
+      ],
+      "group": "Nutria marina",
+      "family": "Mustelidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "polar_esp_erignathus_barbatus",
+      "name": "Foca barbuda",
+      "latin": "Erignathus barbatus",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Phocidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_eschrichtius_robustus",
+      "name": "Ballena gris",
+      "latin": "Eschrichtius robustus",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Eschrichtiidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_eubalaena_australis",
+      "name": "Ballena franca austral",
+      "latin": "Eubalaena australis",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Balaenidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_eumetopias_jubatus",
+      "name": "León marino de Steller",
+      "latin": "Eumetopias jubatus",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Otariidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_globicephala_macrorhynchus",
+      "name": "Calderón tropical",
+      "latin": "Globicephala macrorhynchus",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_globicephala_melas",
+      "name": "Calderón común",
+      "latin": "Globicephala melas",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_grampus_griseus",
+      "name": "Delfín de Risso",
+      "latin": "Grampus griseus",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_halichoerus_grypus",
+      "name": "Foca gris",
+      "latin": "Halichoerus grypus",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Phocidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "polar_esp_hydrurga_leptonyx",
+      "name": "Foca leopardo",
+      "latin": "Hydrurga leptonyx",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Phocidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "sa_esp_inia_boliviensis",
+      "name": "Delfín de río boliviano",
+      "latin": "Inia boliviensis",
+      "historicalGroup": "Otros mamíferos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Iniidae",
+      "environment": "agua dulce"
+    },
+    {
+      "id": "sa_esp_inia_geoffrensis",
+      "name": "Delfín rosado",
+      "latin": "Inia geoffrensis",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Iniidae",
+      "environment": "agua dulce"
+    },
+    {
+      "id": "mar_esp_lagenorhynchus_albirostris",
+      "name": "Delfín de hocico blanco",
+      "latin": "Lagenorhynchus albirostris",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_lagenorhynchus_obliquidens",
+      "name": "Delfín de flancos blancos del Pacífico",
+      "latin": "Lagenorhynchus obliquidens",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_lagenorhynchus_obscurus",
+      "name": "Delfín oscuro",
+      "latin": "Lagenorhynchus obscurus",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "polar_esp_leptonychotes_weddellii",
+      "name": "Foca de Weddell",
+      "latin": "Leptonychotes weddellii",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Phocidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "polar_esp_lobodon_carcinophaga",
+      "name": "Foca cangrejera",
+      "latin": "Lobodon carcinophaga",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Phocidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_megaptera_novaeangliae",
+      "name": "Ballena jorobada",
+      "latin": "Megaptera novaeangliae",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Balaenopteridae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_mirounga_angustirostris",
+      "name": "Elefante marino del norte",
+      "latin": "Mirounga angustirostris",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Phocidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "polar_esp_mirounga_leonina",
+      "name": "Elefante marino del sur",
+      "latin": "Mirounga leonina",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Phocidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "polar_esp_monodon_monoceros",
+      "name": "Narval",
+      "latin": "Monodon monoceros",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Monodontidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "polar_esp_odobenus_rosmarus",
+      "name": "Morsa",
+      "latin": "Odobenus rosmarus",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Odobenidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "polar_esp_ommatophoca_rossii",
+      "name": "Foca de Ross",
+      "latin": "Ommatophoca rossii",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Phocidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_orcinus_orca",
+      "name": "Orca",
+      "latin": "Orcinus orca",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_otaria_flavescens",
+      "name": "Lobo marino de un pelo",
+      "latin": "Otaria flavescens",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Otariidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "gm06_pagophilus_groenlandicus",
+      "name": "Foca de Groenlandia",
+      "latin": "Pagophilus groenlandicus",
+      "historicalGroup": "Phocidae",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Phocidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_phoca_vitulina",
+      "name": "Foca común",
+      "latin": "Phoca vitulina",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Phocidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_phocoena_phocoena",
+      "name": "Marsopa común",
+      "latin": "Phocoena phocoena",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Phocoenidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_physeter_macrocephalus",
+      "name": "Cachalote",
+      "latin": "Physeter macrocephalus",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Physeteridae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_pseudorca_crassidens",
+      "name": "Falsa orca",
+      "latin": "Pseudorca crassidens",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "polar_esp_pusa_hispida",
+      "name": "Foca anillada",
+      "latin": "Pusa hispida",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Phocidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "af_delfin_jorobado_indico",
+      "name": "Delfín jorobado del Índico",
+      "latin": "Sousa plumbea",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal",
+        "albino"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_stenella_longirostris",
+      "name": "Delfín tornillo",
+      "latin": "Stenella longirostris",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "na_esp_trichechus_manatus",
+      "name": "Manatí antillano",
+      "latin": "Trichechus manatus",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal",
+        "albino"
+      ],
+      "group": "Sirenia",
+      "family": "Trichechidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_tursiops_truncatus",
+      "name": "Delfín mular",
+      "latin": "Tursiops truncatus",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Delphinidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_zalophus_californianus",
+      "name": "Lobo marino de California",
+      "latin": "Zalophus californianus",
+      "historicalGroup": "Mamíferos marinos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Otariidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "gm06_zalophus_wollebaeki",
+      "name": "León marino de Galápagos",
+      "latin": "Zalophus wollebaeki",
+      "historicalGroup": "Otariidae",
+      "pending": [
+        "normal"
+      ],
+      "group": "Pinnipedia",
+      "family": "Otariidae",
+      "environment": "marino o costero"
+    },
+    {
+      "id": "mar_esp_ziphius_cavirostris",
+      "name": "Zifio de Cuvier",
+      "latin": "Ziphius cavirostris",
+      "historicalGroup": "Cetáceos",
+      "pending": [
+        "normal"
+      ],
+      "group": "Cetacea",
+      "family": "Ziphiidae",
+      "environment": "marino o costero"
+    }
+  ],
+  "variantsPendingForV460": [
+    {
+      "id": "asia_esp_0177",
+      "variant": "melanico"
+    },
+    {
+      "id": "af_lobo_marino_cabo",
+      "variant": "albino"
+    },
+    {
+      "id": "af_lobo_marino_cabo",
+      "variant": "melanico"
+    },
+    {
+      "id": "af_dugongo",
+      "variant": "albino"
+    },
+    {
+      "id": "af_delfin_jorobado_indico",
+      "variant": "albino"
+    },
+    {
+      "id": "na_esp_trichechus_manatus",
+      "variant": "albino"
+    }
+  ],
+  "legendaryMammalsPending": [],
+  "observations": [
+    {
+      "id": "af_lobo_marino_cabo",
+      "historicalGroup": "Mustélidos",
+      "family": "Otariidae",
+      "note": "El lobo marino del Cabo figura en el grupo histórico de mustélidos."
+    },
+    {
+      "id": "sa_esp_inia_boliviensis",
+      "historicalGroup": "Otros mamíferos",
+      "family": "Iniidae",
+      "note": "El delfín boliviano es un cetáceo de agua dulce."
+    },
+    {
+      "id": "af_xlsx_rata_topo",
+      "historicalGroup": "Insectívoros",
+      "family": "Spalacidae",
+      "note": "La rata topo gigante es un roedor, aunque figura entre los insectívoros."
+    },
+    {
+      "id": "asia_esp_0414",
+      "historicalGroup": "Roedores y pequeños mamíferos",
+      "family": "Leporidae",
+      "note": "El conejo de Amami figura en el grupo histórico de roedores y pequeños mamíferos."
+    },
+    {
+      "id": "af_xlsx_cerdo_hormiguero",
+      "historicalGroup": "Roedores y pequeños mamíferos",
+      "family": "Orycteropodidae",
+      "note": "El cerdo hormiguero pertenece a Tubulidentata."
+    },
+    {
+      "id": "af_tenrec",
+      "historicalGroup": "Roedores y pequeños mamíferos",
+      "family": "Tenrecidae",
+      "note": "El tenrec pertenece a Afrosoricida."
+    },
+    {
+      "id": "sa_esp_lontra_felina",
+      "historicalGroup": "Otros mamíferos",
+      "family": "Mustelidae",
+      "note": "El chungungo costero conserva su lámina migrada. La nutria marina reservada es Enhydra lutris."
+    }
+  ]
+}

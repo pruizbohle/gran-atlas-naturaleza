@@ -84,7 +84,7 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 313);
+      assert.equal(await page.locator('.gallery-card').count(), 410);
       assert.match(await page.locator('#migration-progress').innerText(),
         new RegExp(expected.migrationProgress.migrated + ' de 997.*' + expected.migrationProgress.classical + " de " + expected.migrationProgress.target + " láminas científicas"));
       await page.locator('#group').selectOption('Primates');
@@ -127,6 +127,16 @@ const server = http.createServer((req, res) => {
       assert.equal(await page.locator('.comparison-styles figure').count(), 3);
       assert.equal(await page.locator('.legacy-sprite svg').count(), 1);
       assert.match(await page.locator('.comparison-styles').innerText(), /Sin lámina naturalista previa/);
+      await page.locator('#group').selectOption('Elefantes');
+      await page.locator('#species').selectOption('af_elefante_sabana');
+      await page.locator('#scale-plate').selectOption('legendario');
+      const atlas = page.locator('.comparison-styles .legendary img');
+      await atlas.evaluate(image => image.decode());
+      assert.match(await atlas.getAttribute('src'), /--atlas\.webp$/);
+      assert.equal(await page.locator('.comparison-styles .legendary svg').count(), 1);
+      if (process.argv.includes('--write-evidence')) {
+        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v450/comparacion-atlas-' + viewport.width + '.jpg' });
+      }
       await page.locator('[data-mode=gallery]').click();
       await page.locator('#group').selectOption('');
       await page.locator('#family').selectOption('');
@@ -149,7 +159,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#backdrop').selectOption('dark');
       assert.notEqual(await comparison.evaluate(node => getComputedStyle(node).backgroundColor), light);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v440/comparacion-' + viewport.width + '.jpg' });
+        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v450/comparacion-' + viewport.width + '.jpg' });
       }
       await page.locator('#search').fill('');
       await page.locator('[data-mode=frames]').click();
@@ -195,7 +205,7 @@ const server = http.createServer((req, res) => {
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 313);
+      assert.equal(await page.locator('.gallery-card').count(), 410);
       await page.locator('#cut-state').selectOption('pending');
       assert.equal(await page.locator('.gallery-card').count(),
         expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);

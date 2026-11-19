@@ -1,4 +1,8 @@
-# El Gran Atlas · Ilustración científica clásica y ungulados (V4.4.0)
+# El Gran Atlas · Mamíferos terrestres restantes (V4.5.0)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.5.0](docs/cientifica-v450/README.md).
+
+## Serie 4 · Ilustración científica clásica y ungulados (V4.4.0)
 
 [Web pública](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.4.0](docs/cientifica-v440/README.md) · [Estándar artístico](docs/cientifica-v440/estandar.md).
 

@@ -5,6 +5,7 @@ const { test } = require('node:test');
 const vm = require('node:vm');
 const { execFileSync } = require('node:child_process');
 const { harness } = require('./helpers/live-game.cjs');
+const { aquaticMammal, terrestrialMammal } = require('../scripts/terrestrial-mammal-families.cjs');
 
 const read = name => fs.readFileSync('www/js/' + name + '.js', 'utf8');
 const added = ['naturalist-assets-v400', 'naturalist-art-v400'];
@@ -42,7 +43,12 @@ test('catalog is read from the production runtime and only known records can be 
     }
     counts[sp.group] = (counts[sp.group] || 0) + 1;
   }
-  assert.deepEqual(counts, { Marsupiales: 29, Monotremas: 3, Felinos: 31, 'Cánidos': 28, 'Carnívoros terrestres': 51, Primates: 49, Ungulados: 122 });
+  assert.deepEqual(counts, {
+    Marsupiales: 29, Monotremas: 3, Felinos: 31, 'Cánidos': 28, 'Carnívoros terrestres': 51,
+    Primates: 49, Ungulados: 122, Roedores: 41, Lagomorfos: 15, Murciélagos: 7,
+    Eulipotiflos: 10, Armadillos: 6, 'Perezosos y osos hormigueros': 6, Pangolines: 6,
+    Elefantes: 3, Damanes: 1, Tubulidentados: 1, Afrosorícidos: 1
+  });
 });
 
 test('rendering the collection does not disclose unseen art or write a save', () => {
@@ -147,7 +153,7 @@ test('terrestrial Carnivora covers the nine present families with only the confi
   assert.ok(records.some(sp => sp.id === 'sa_esp_lontra_felina'));
   assert.ok(!records.some(sp => sp.latin.startsWith('Enhydra ')));
   assert.equal(catalog.migrationProgress.total, 997);
-  assert.equal(catalog.migrationProgress.target, 590);
+  assert.equal(catalog.migrationProgress.target, 757);
 });
 
 test('biome library and transparent editions use module-specific layers and existing category routes', () => {
@@ -186,7 +192,7 @@ test('lab preserves the originals and reserves comparison downloads for the revi
   const archived = new Set(catalog.flatMap(sp => sp.records.flatMap(record => record.previous ? [record.previous.src] : [])));
   assert.equal(archived.size, 341);
   assert.equal(plates.size, migrationProgress.plates);
-  assert.equal(migrationProgress.migrated, 313);
+  assert.equal(migrationProgress.migrated, 410);
   assert.equal(migrationProgress.classical, migrationProgress.target);
   assert.equal(migrationProgress.plates, migrationProgress.target);
   assert.equal(migrationProgress.cutouts, Object.keys(cutouts).length);
@@ -222,6 +228,36 @@ test('ungulates come from the existing catalogue and use only configured variant
     const routes = globalThis.AtlasNaturalistAssets.routes[sp.id];
     if (routes.female) assert.notEqual(routes.female, routes.male);
   }
+});
+
+test('the mammal audit covers terrestrial and freshwater forms and reserves the aquatic inventory', () => {
+  const game = harness({}, null, { gameSource: source }).window.__atlasTest;
+  const { routes, cutouts } = globalThis.AtlasNaturalistAssets;
+  const mammalia = Object.entries(game.SPECIES).filter(([id]) => game.taxonomyInfo(id).className === 'Mammalia');
+  const newSpecies = mammalia.filter(([, sp]) => terrestrialMammal(sp.latin));
+  const aquatic = mammalia.filter(([, sp]) => aquaticMammal(sp.latin));
+  assert.equal(mammalia.length, 461);
+  assert.equal(newSpecies.length, 97);
+  assert.equal(aquatic.length, 51);
+  assert.deepEqual(aquatic.map(([id]) => id).sort(), mammalia.filter(([id]) => !routes[id]).map(([id]) => id).sort());
+  const pigments = { Albino: 'albino', 'Melánico': 'melanico' };
+  for (const [id, sp] of newSpecies) {
+    const variants = [...game.configuredSpecials(sp)].flatMap(label => pigments[label] ? [pigments[label]] : []);
+    if (game.SEXUAL_DIMORPHISM[id]) variants.push('male', 'female');
+    if (id === 'af_elefante_sabana') variants.push('legendario');
+    assert.deepEqual(Object.keys(routes[id]).sort(), ['normal', ...variants].sort(), id);
+    for (const file of Object.values(routes[id])) assert.equal(cutouts[file], true, file);
+  }
+  for (const id of ['castor_europeo', 'sa_esp_hydrochoerus_hydrochaeris', 'eu_esp_0623']) assert.ok(routes[id].normal);
+  for (const id of ['sa_esp_inia_boliviensis', 'sa_esp_inia_geoffrensis', 'asia_esp_0177', 'af_lobo_marino_cabo']) {
+    assert.equal(art.render(id, {}, () => '<svg></svg>'), '<svg></svg>', id);
+  }
+  const atlas = routes.af_elefante_sabana;
+  assert.equal(atlas.legendario, 'af_elefante_sabana--atlas.webp');
+  assert.notDeepEqual(fs.readFileSync('www/naturalist-art/plates/' + atlas.legendario),
+    fs.readFileSync('www/naturalist-art/plates/' + atlas.normal));
+  assert.match(art.render('af_elefante_sabana', { variant: 'legendario', category: 'Legendario' }, () => ''),
+    /legendary[\s\S]*--atlas\.webp/);
 });
 
 test('Primates includes the fourteen zoological families, all configured variants and only Silverback', () => {

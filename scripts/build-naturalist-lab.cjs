@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { harness } = require('../tests/helpers/live-game.cjs');
 const { ungulateFamily } = require('./ungulate-families.cjs');
+const { terrestrialMammal, aquaticMammal } = require('./terrestrial-mammal-families.cjs');
 
 const out = path.resolve('www/naturalist-art');
 const artDir = path.join(out, 'plates');
@@ -120,6 +121,9 @@ const primateFamilyByGenus = new Map(Object.entries(primateGenera).flatMap(([fam
 function classify(id, sp) {
   const taxonomy = audit.taxonomyInfo(id);
   const genus = sp.latin.split(' ')[0];
+  if (aquaticMammal(sp.latin)) return null;
+  const terrestrial = terrestrialMammal(sp.latin);
+  if (terrestrial) return terrestrial;
   const hoofedFamily = ungulateFamily(sp.latin, taxonomy.family || sp.family);
   if (hoofedFamily) return { family: hoofedFamily, group: 'Ungulados' };
   const primateFamily = primateFamilyByGenus.get(genus);
@@ -128,8 +132,6 @@ function classify(id, sp) {
     throw Error('Primate sin familia zoológica revisada: ' + sp.latin);
   }
   const family = carnivoreFamilyByGenus.get(genus) || taxonomy.family || sp.family;
-  // Enhydra is reserved with the predominantly marine mammals.
-  if (genus === 'Enhydra') return null;
   if (Object.hasOwn(carnivoreGenera, family)) return { family, group: 'Carnívoros terrestres' };
   if (taxonomy.subClass === 'Marsupiales' || families.has(family)) return { family, group: 'Marsupiales' };
   if (family === 'Canidae' || canidGenera.has(genus)) return { family: 'Canidae', group: 'Cánidos' };
@@ -190,6 +192,7 @@ for (const file of classical) {
   if (!cutouts[file]) throw Error('Lámina científica sin transparencia o sin entrada: ' + file);
 }
 const records = species.flatMap(sp => sp.records);
+const mammals = catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Mammalia');
 const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,
   total: catalogEntries.length,
@@ -200,9 +203,11 @@ const migrationProgress = {
   review: records.filter(record => record.note).length,
   classical: classical.size,
   target: records.filter(record => !record.sharedWith).length,
-  ungulates: species.filter(sp => sp.group === 'Ungulados').length
+  ungulates: species.filter(sp => sp.group === 'Ungulados').length,
+  mammals: mammals.length,
+  mammalsMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Mammalia').length
 };
-const mixedFieldSprites = ['aguila_real', 'af_elefante_sabana', 'af_avestruz'].map(id => {
+const mixedFieldSprites = ['aguila_real', 'buho_real', 'af_avestruz'].map(id => {
   const sp = audit.SPECIES[id];
   if (classify(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
   return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };

@@ -39,7 +39,8 @@ const percent = (migrationProgress.migrated * 100 / migrationProgress.total).toL
 byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + migrationProgress.total +
   ' especies migradas · ' + percent + ' % · ' + migrationProgress.classical + ' de ' + migrationProgress.target +
   ' láminas científicas · ' + migrationProgress.biological + ' variantes biológicas · ' +
-  migrationProgress.legendary + ' legendarios';
+  migrationProgress.legendary + ' legendarios · ' + migrationProgress.mammalsMigrated + ' de ' +
+  migrationProgress.mammals + ' mamíferos';
 for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
 updateFamilies();
 updateSpecies();

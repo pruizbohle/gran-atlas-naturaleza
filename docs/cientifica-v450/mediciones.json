@@ -1,0 +1,72 @@
+{
+  "baselineCommit": "5cf1806c0d795aa6e849a8b7511f6c9f0fa6286d",
+  "exactPreviousWebP": 2360,
+  "exactPreviousRoutes": 313,
+  "newDistinctPlates": 167,
+  "newUniqueResources": 668,
+  "bySize": {
+    "64": {
+      "v440Bytes": 1294814,
+      "addedBytes": 305616,
+      "totalBytes": 1600430,
+      "files": 757,
+      "RGBABytesPerPlate": 16384
+    },
+    "128": {
+      "v440Bytes": 3110932,
+      "addedBytes": 736448,
+      "totalBytes": 3847380,
+      "files": 757,
+      "RGBABytesPerPlate": 65536
+    },
+    "256": {
+      "v440Bytes": 8800858,
+      "addedBytes": 2172602,
+      "totalBytes": 10973460,
+      "files": 757,
+      "RGBABytesPerPlate": 262144
+    },
+    "512": {
+      "v440Bytes": 25715654,
+      "addedBytes": 7138400,
+      "totalBytes": 32854054,
+      "files": 757,
+      "RGBABytesPerPlate": 1048576
+    }
+  },
+  "cache": {
+    "oldCoreBytes": 60111826,
+    "currentCoreBytes": 71058765,
+    "oldCoreFiles": 2587,
+    "currentCoreFiles": 3256,
+    "oldReviewBytes": 11702828,
+    "currentReviewBytes": 11702828,
+    "reviewFiles": 636
+  },
+  "decode128": {
+    "samples": 167,
+    "medianMs": 53.53
+  },
+  "projection": {
+    "speciesRemaining": 587,
+    "expectedDistinctPlatesWithoutAliases": {
+      "normal": 587,
+      "pigmentation": 251,
+      "sexualDimorphism": 68,
+      "legendary": 6
+    },
+    "totalPlates": 912,
+    "meanBytesPerPlateWithDerivatives": 61994,
+    "quartilesP25P75Bytes": [
+      47642,
+      74365
+    ],
+    "projectedArtBytes": 105813852,
+    "projectedBaseBytes": 127597293,
+    "projectedBaseSensitivityBytes": [
+      114508269,
+      138879645
+    ]
+  },
+  "invalidResources": []
+}
