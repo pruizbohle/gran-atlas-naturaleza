@@ -1,0 +1,15 @@
+{
+  "sheets": [
+    {"file":"flores.png","columns":3,"ids":["BOT-02","BOT-03","BOT-04","BOT-05","BOT-06","BOT-07","BOT-08","BOT-09","BOT-10"]},
+    {"file":"flores-semillas.png","columns":3,"crop":{"rows":[0,426,810,1219],"edges":[[0,430,860,1290],[0,430,860,1290],[0,425,860,1290]]},"ids":["BOT-11","BOT-12","SEM-01","SEM-02","SEM-03","SEM-04","SEM-05","SEM-06","SEM-07"]},
+    {"file":"semillas-pigmentos.png","columns":3,"crop":{"rows":[0,341,682,1024],"edges":[[0,512,1024,1536],[0,512,1024,1536],[0,512,1024,1536]],"alpha":[184,246]},"ids":["SEM-08","SEM-09","SEM-10","SEM-11","PIG-01","PIG-02","PIG-03","PIG-04","PIG-05"]},
+    {"file":"pigmentos-hojas.png","columns":3,"crop":{"rows":[0,341,664,1024],"edges":[[0,512,1024,1536],[0,512,1024,1536],[0,512,1024,1536]],"alpha":[231,246]},"ids":["PIG-06","PIG-07","PIG-08","PIG-09","PIG-10","PIG-11","PIG-12","HOJ-02","HOJ-03"]},
+    {"file":"hojas.png","columns":3,"ids":["HOJ-04","HOJ-05","HOJ-06","HOJ-07","HOJ-08","HOJ-09","HOJ-10","HOJ-11","HOJ-12"]}
+  ],
+  "collections": [
+    {"id":"BOT","name":"Herbario del mundo"},
+    {"id":"SEM","name":"Semillas extraordinarias"},
+    {"id":"PIG","name":"Pigmentos del mundo"},
+    {"id":"HOJ","name":"Hojas y frondas del mundo"}
+  ]
+}

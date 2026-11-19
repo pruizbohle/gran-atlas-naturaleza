@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const {rows, groups, materialIds, recipeExamples, archive, cartography, paleontology} = AtlasObjetosCientificos;
+  const {rows, groups, materialIds, recipeExamples, archive, cartography, paleontology, botany} = AtlasObjetosCientificos;
   const {phases, reconstruction} = AtlasReconstruccionObjetos;
   const fossilGroups = {
     materials: {name:'Materiales y fósiles menores', ids:[...paleontology.materials,...paleontology.minors]},
@@ -50,6 +50,7 @@
   }
 
   options(get('group'), groups.map(group => group.name));
+  options(get('botany-group'), botany.map(group => group.name), 'Plancha general · 48 piezas');
   for (const mount of paleontology.mounts) get('mount').add(new Option(mount.name, mount.id));
   phases.forEach((phase, index) => get('phase').add(new Option(phase.name, String(index))));
   get('phase').value = '3';
@@ -162,6 +163,14 @@
     const columns = node('div', '', 'columns actual');
     for (const [key, title] of headings) columns.append(figure(row, key, title));
     card.append(columns, node('p', [row.description, row.provenance, row.context, row.observations].filter(Boolean).join(' · ')));
+    if (row.botany) {
+      const facts = node('dl', '', 'material-facts');
+      for (const [label,value] of [['Identificación u origen',row.botany.identity],
+        ['Caracteres diagnósticos',row.botany.characteristics],['Escala real',row.botany.scale]]) {
+        facts.append(node('dt',label),node('dd',value));
+      }
+      card.append(facts);
+    }
     if (row.species) {
       const facts = node('dl', '', 'material-facts');
       for (const [label, value] of [['Especies potenciales', row.species.join(', ')], ['Continentes', row.continent],
@@ -288,6 +297,7 @@
       case 'workshop': return row.type === 'Objeto productivo' && row.recipe && (!get('recipe-example').value || get('recipe-example').value === row.id);
       case 'album': return row.type === 'Coleccionable propuesto';
       case 'museum': return row.type === 'Pieza del Museo';
+      case 'botany': return row.botany && (!get('botany-group').value || row.collection === get('botany-group').value);
       case 'groups': return groups.find(group => group.name === get('group').value).ids.includes(row.id);
       case 'paleontology': return fossilGroups[get('paleo-section').value]?.ids.includes(row.id);
       case 'archive': return archive.find(group => group.name === archiveSelect.value)?.ids.includes(row.id);
@@ -369,9 +379,36 @@
     gallery.append(section);
   }
 
+  function renderBotany(selected) {
+    const variant = get('botany-variant').value;
+    const labels = variant === 'both' ? headings.slice(1) : headings.filter(([key]) => key === variant);
+    for (const group of botany) {
+      const entries = selected.filter(row => group.ids.includes(row.id));
+      if (!entries.length) continue;
+      const section = node('section', '', 'botany-section');
+      const grid = node('div', '', 'botany-grid');
+      for (const row of entries) {
+        const card = node('article', '', 'botany-card');
+        card.append(node('h3', row.name), node('small', row.id + ' · ' + row.rarity));
+        const samples = node('div', '', 'botany-samples');
+        for (const [key, title] of labels) samples.append(figure(row,key,title));
+        card.append(samples);
+        const open = node('button','Consultar y evaluar');
+        open.addEventListener('click', () => inspect(row));
+        card.append(open);
+        grid.append(card);
+      }
+      section.append(node('h2',group.name),grid);
+      gallery.append(section);
+    }
+  }
+
   function render() {
     const view = get('view').value;
     const inArchive = view === 'archive';
+    const inBotany = view === 'botany';
+    get('botany-control').hidden = !inBotany;
+    get('botany-variant-control').hidden = !inBotany;
     const inAssembly = inArchive && archiveSelect.value === 'assembly';
     get('archive-control').hidden = !inArchive;
     get('assembly-control').hidden = !inAssembly;
@@ -411,7 +448,12 @@
       gallery.append(compare);
       return;
     }
-    get('status').textContent = selected.length + ' resultados' + (['compare','groups','archive','paleontology'].includes(view) ? '' : ' · Simulación con datos de prueba');
+    get('status').textContent = selected.length + ' resultados' + (['compare','groups','archive','paleontology','botany'].includes(view) ? '' : ' · Simulación con datos de prueba');
+    if (inBotany) {
+      navigation(0, 0);
+      renderBotany(selected);
+      return;
+    }
     if (inPaleo) {
       navigation(0, 0);
       renderGroup(selected, fossilGroups[fossilSection]);
@@ -446,8 +488,8 @@
   }
 
   get('search').addEventListener('input', resetPage);
-  for (const key of ['view','group','paleo-section','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
-  for (const key of ['scale','ground','halo','stock','assembly','mount','phase','living']) get(key).addEventListener('change', render);
+  for (const key of ['view','group','botany-group','paleo-section','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
+  for (const key of ['scale','ground','halo','stock','assembly','botany-variant','mount','phase','living']) get(key).addEventListener('change', render);
   function resetPage() {
     page = 0;
     focusId = null;

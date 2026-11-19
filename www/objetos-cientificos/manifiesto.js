@@ -1,6 +1,76 @@
 globalThis.AtlasObjetosCientificos = {
   "schema": 1,
   "year": 1842,
+  "botany": [
+    {
+      "name": "Herbario del mundo",
+      "ids": [
+        "BOT-01",
+        "BOT-02",
+        "BOT-03",
+        "BOT-04",
+        "BOT-05",
+        "BOT-06",
+        "BOT-07",
+        "BOT-08",
+        "BOT-09",
+        "BOT-10",
+        "BOT-11",
+        "BOT-12"
+      ]
+    },
+    {
+      "name": "Semillas extraordinarias",
+      "ids": [
+        "SEM-01",
+        "SEM-02",
+        "SEM-03",
+        "SEM-04",
+        "SEM-05",
+        "SEM-06",
+        "SEM-07",
+        "SEM-08",
+        "SEM-09",
+        "SEM-10",
+        "SEM-11",
+        "SEM-12"
+      ]
+    },
+    {
+      "name": "Pigmentos del mundo",
+      "ids": [
+        "PIG-01",
+        "PIG-02",
+        "PIG-03",
+        "PIG-04",
+        "PIG-05",
+        "PIG-06",
+        "PIG-07",
+        "PIG-08",
+        "PIG-09",
+        "PIG-10",
+        "PIG-11",
+        "PIG-12"
+      ]
+    },
+    {
+      "name": "Hojas y frondas del mundo",
+      "ids": [
+        "HOJ-01",
+        "HOJ-02",
+        "HOJ-03",
+        "HOJ-04",
+        "HOJ-05",
+        "HOJ-06",
+        "HOJ-07",
+        "HOJ-08",
+        "HOJ-09",
+        "HOJ-10",
+        "HOJ-11",
+        "HOJ-12"
+      ]
+    }
+  ],
   "groups": [
     {
       "name": "Instrumentos y morral de viaje",
@@ -5007,6 +5077,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Lámina de herbario",
       "pilot": true,
       "stage": "OBJ-01",
+      "botany": {
+        "identity": "Rosa silvestre · Rosa sp.",
+        "characteristics": "Corola de cinco pétalos, pequeño tallo y hojas. Especie exacta pendiente.",
+        "scale": "Flor de pocos centímetros."
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5068,13 +5143,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Lámina de herbario",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Calluna vulgaris",
+        "characteristics": "Ramilla con pequeñas flores agrupadas y hojas reducidas.",
+        "scale": "Las flores individuales se cuentan en milímetros."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-02/clasica-64.webp",
+            "bytes": 2306
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-02/clasica-128.webp",
+            "bytes": 6860
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-02/clasica-256.webp",
+            "bytes": 20882
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-02/clasica-512.webp",
+            "bytes": 61342
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-02/inventario-64.webp",
+            "bytes": 2420
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-02/inventario-128.webp",
+            "bytes": 7462
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-02/inventario-256.webp",
+            "bytes": 20934
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-02/inventario-512.webp",
+            "bytes": 59686
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5096,13 +5210,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Lámina de herbario",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Eschscholzia californica",
+        "characteristics": "Copa de cuatro pétalos y follaje finamente dividido.",
+        "scale": "Flor de pocos centímetros."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-03/clasica-64.webp",
+            "bytes": 2630
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-03/clasica-128.webp",
+            "bytes": 7490
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-03/clasica-256.webp",
+            "bytes": 23702
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-03/clasica-512.webp",
+            "bytes": 68180
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-03/inventario-64.webp",
+            "bytes": 2714
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-03/inventario-128.webp",
+            "bytes": 7810
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-03/inventario-256.webp",
+            "bytes": 23418
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-03/inventario-512.webp",
+            "bytes": 65000
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5124,13 +5277,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Lámina de herbario",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Lupinus mutabilis · referencia andina",
+        "characteristics": "Racimo de flores papilionadas y hoja palmeada.",
+        "scale": "Se representa un tramo floral, no la altura de la planta."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-04/clasica-64.webp",
+            "bytes": 2176
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-04/clasica-128.webp",
+            "bytes": 5922
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-04/clasica-256.webp",
+            "bytes": 17934
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-04/clasica-512.webp",
+            "bytes": 51284
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-04/inventario-64.webp",
+            "bytes": 2258
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-04/inventario-128.webp",
+            "bytes": 6296
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-04/inventario-256.webp",
+            "bytes": 17374
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-04/inventario-512.webp",
+            "bytes": 47266
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5152,13 +5344,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Lámina de herbario",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Jacaranda mimosifolia",
+        "characteristics": "Corolas tubulares azul violáceas, follaje dividido como referencia.",
+        "scale": "Se representa una porción de la inflorescencia."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-05/clasica-64.webp",
+            "bytes": 3236
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-05/clasica-128.webp",
+            "bytes": 9384
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-05/clasica-256.webp",
+            "bytes": 29636
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-05/clasica-512.webp",
+            "bytes": 87806
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-05/inventario-64.webp",
+            "bytes": 3450
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-05/inventario-128.webp",
+            "bytes": 10272
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-05/inventario-256.webp",
+            "bytes": 29772
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-05/inventario-512.webp",
+            "bytes": 83640
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5180,13 +5411,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Lámina de herbario",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Protea cynaroides",
+        "characteristics": "Brácteas externas rosadas y centro denso de flores pequeñas.",
+        "scale": "Cabezuela amplia, mayor que una flor de cerezo."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-06/clasica-64.webp",
+            "bytes": 3112
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-06/clasica-128.webp",
+            "bytes": 9000
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-06/clasica-256.webp",
+            "bytes": 29218
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-06/clasica-512.webp",
+            "bytes": 83730
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-06/inventario-64.webp",
+            "bytes": 3288
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-06/inventario-128.webp",
+            "bytes": 9784
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-06/inventario-256.webp",
+            "bytes": 27198
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-06/inventario-512.webp",
+            "bytes": 72054
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5208,13 +5478,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Lámina de herbario",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Adansonia digitata",
+        "characteristics": "Flor colgante clara, pétalos reflejos y prominente haz de estambres.",
+        "scale": "Flor relativamente grande, dibujada aislada."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-07/clasica-64.webp",
+            "bytes": 2976
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-07/clasica-128.webp",
+            "bytes": 8860
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-07/clasica-256.webp",
+            "bytes": 27462
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-07/clasica-512.webp",
+            "bytes": 77656
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-07/inventario-64.webp",
+            "bytes": 3212
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-07/inventario-128.webp",
+            "bytes": 9534
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-07/inventario-256.webp",
+            "bytes": 26286
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-07/inventario-512.webp",
+            "bytes": 71352
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5236,13 +5545,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Lámina de herbario",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Nelumbo nucifera",
+        "characteristics": "Corola rosada y receptáculo central diferenciado.",
+        "scale": "Flor de escala decimétrica."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-08/clasica-64.webp",
+            "bytes": 2314
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-08/clasica-128.webp",
+            "bytes": 5816
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-08/clasica-256.webp",
+            "bytes": 18458
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-08/clasica-512.webp",
+            "bytes": 52688
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-08/inventario-64.webp",
+            "bytes": 2416
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-08/inventario-128.webp",
+            "bytes": 5872
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-08/inventario-256.webp",
+            "bytes": 16880
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-08/inventario-512.webp",
+            "bytes": 44022
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5264,13 +5612,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Lámina de herbario",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Prunus serrulata · tipo de flor simple",
+        "characteristics": "Cinco pétalos en cada flor de la ramilla y pequeños botones.",
+        "scale": "Varias flores de pocos centímetros."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-09/clasica-64.webp",
+            "bytes": 2892
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-09/clasica-128.webp",
+            "bytes": 8102
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-09/clasica-256.webp",
+            "bytes": 25182
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-09/clasica-512.webp",
+            "bytes": 70084
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-09/inventario-64.webp",
+            "bytes": 2964
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-09/inventario-128.webp",
+            "bytes": 8400
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-09/inventario-256.webp",
+            "bytes": 23768
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-09/inventario-512.webp",
+            "bytes": 63828
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5292,13 +5679,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Lámina de herbario",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Telopea speciosissima",
+        "characteristics": "Cabezuela escarlata de florecillas curvas y hojas coriáceas.",
+        "scale": "Cabezuela de escala decimétrica."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-10/clasica-64.webp",
+            "bytes": 2858
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-10/clasica-128.webp",
+            "bytes": 8246
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-10/clasica-256.webp",
+            "bytes": 25940
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-10/clasica-512.webp",
+            "bytes": 72872
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-10/inventario-64.webp",
+            "bytes": 3028
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-10/inventario-128.webp",
+            "bytes": 8874
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-10/inventario-256.webp",
+            "bytes": 24352
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-10/inventario-512.webp",
+            "bytes": 65926
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5320,13 +5746,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Lámina de herbario",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Leontopodium alpinum · referencia alpina",
+        "characteristics": "Brácteas lanosas estrelladas alrededor de capítulos pequeños.",
+        "scale": "Se amplía la inflorescencia respecto al resto del herbario."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-11/clasica-64.webp",
+            "bytes": 2802
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-11/clasica-128.webp",
+            "bytes": 7128
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-11/clasica-256.webp",
+            "bytes": 22222
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-11/clasica-512.webp",
+            "bytes": 61932
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-11/inventario-64.webp",
+            "bytes": 2912
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-11/inventario-128.webp",
+            "bytes": 7754
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-11/inventario-256.webp",
+            "bytes": 22492
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-11/inventario-512.webp",
+            "bytes": 59142
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5348,13 +5813,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Lámina de herbario",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Rafflesia arnoldi",
+        "characteristics": "Flor rojiza de cinco lóbulos carnosos, verrugas claras y cámara central.",
+        "scale": "La flor puede acercarse a un metro y se reduce para el álbum."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-12/clasica-64.webp",
+            "bytes": 2594
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-12/clasica-128.webp",
+            "bytes": 7664
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-12/clasica-256.webp",
+            "bytes": 25678
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-12/clasica-512.webp",
+            "bytes": 79242
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/BOT-12/inventario-64.webp",
+            "bytes": 2986
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/BOT-12/inventario-128.webp",
+            "bytes": 8620
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/BOT-12/inventario-256.webp",
+            "bytes": 24182
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/BOT-12/inventario-512.webp",
+            "bytes": 64114
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5376,13 +5880,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Quercus robur · ejemplar de referencia",
+        "characteristics": "Nuez ovoide con cúpula escamosa.",
+        "scale": "Un fruto de pocos centímetros."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-01/clasica-64.webp",
+            "bytes": 1592
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-01/clasica-128.webp",
+            "bytes": 3968
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-01/clasica-256.webp",
+            "bytes": 11614
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-01/clasica-512.webp",
+            "bytes": 34480
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-01/inventario-64.webp",
+            "bytes": 1626
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-01/inventario-128.webp",
+            "bytes": 4146
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-01/inventario-256.webp",
+            "bytes": 10188
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-01/inventario-512.webp",
+            "bytes": 27252
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5404,13 +5947,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Pinus pinea",
+        "characteristics": "Semilla clara y ejemplar con cubierta oscura.",
+        "scale": "Semillas pequeñas ampliadas."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-02/clasica-64.webp",
+            "bytes": 2178
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-02/clasica-128.webp",
+            "bytes": 6020
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-02/clasica-256.webp",
+            "bytes": 19704
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-02/clasica-512.webp",
+            "bytes": 51878
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-02/inventario-64.webp",
+            "bytes": 2188
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-02/inventario-128.webp",
+            "bytes": 6000
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-02/inventario-256.webp",
+            "bytes": 16482
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-02/inventario-512.webp",
+            "bytes": 40460
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5432,13 +6014,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Fagus sylvatica",
+        "characteristics": "Nueces triangulares dentro de una cúpula espinosa.",
+        "scale": "Conjunto de pocos centímetros."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-03/clasica-64.webp",
+            "bytes": 3048
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-03/clasica-128.webp",
+            "bytes": 8458
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-03/clasica-256.webp",
+            "bytes": 27552
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-03/clasica-512.webp",
+            "bytes": 83612
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-03/inventario-64.webp",
+            "bytes": 3242
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-03/inventario-128.webp",
+            "bytes": 9140
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-03/inventario-256.webp",
+            "bytes": 26454
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-03/inventario-512.webp",
+            "bytes": 72526
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5460,13 +6081,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Carnegiea gigantea",
+        "characteristics": "Semilla de testa negra con relieve fino.",
+        "scale": "La semilla es milimétrica y se amplía para mostrar la testa."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-04/clasica-64.webp",
+            "bytes": 1852
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-04/clasica-128.webp",
+            "bytes": 4904
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-04/clasica-256.webp",
+            "bytes": 16266
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-04/clasica-512.webp",
+            "bytes": 42830
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-04/inventario-64.webp",
+            "bytes": 1972
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-04/inventario-128.webp",
+            "bytes": 5242
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-04/inventario-256.webp",
+            "bytes": 13056
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-04/inventario-512.webp",
+            "bytes": 31636
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5488,13 +6148,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Theobroma cacao · tipo criollo",
+        "characteristics": "Semilla aislada y sección clara. Distinta de la mazorca funcional abierta.",
+        "scale": "Semilla de pocos centímetros."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-05/clasica-64.webp",
+            "bytes": 2658
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-05/clasica-128.webp",
+            "bytes": 6898
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-05/clasica-256.webp",
+            "bytes": 23062
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-05/clasica-512.webp",
+            "bytes": 61244
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-05/inventario-64.webp",
+            "bytes": 2720
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-05/inventario-128.webp",
+            "bytes": 7448
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-05/inventario-256.webp",
+            "bytes": 19316
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-05/inventario-512.webp",
+            "bytes": 48092
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5516,13 +6215,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Delonix regia",
+        "characteristics": "Vaina larga, oscura, dura y aplanada.",
+        "scale": "La vaina mide decenas de centímetros y se reduce."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-06/clasica-64.webp",
+            "bytes": 1404
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-06/clasica-128.webp",
+            "bytes": 3296
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-06/clasica-256.webp",
+            "bytes": 9344
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-06/clasica-512.webp",
+            "bytes": 31088
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-06/inventario-64.webp",
+            "bytes": 1468
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-06/inventario-128.webp",
+            "bytes": 3506
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-06/inventario-256.webp",
+            "bytes": 9372
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-06/inventario-512.webp",
+            "bytes": 26420
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5544,13 +6282,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Araucaria araucana",
+        "characteristics": "Piñón alargado, cuneiforme y pardo claro, de la araucaria del sur andino.",
+        "scale": "Semilla de pocos centímetros."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-07/clasica-64.webp",
+            "bytes": 1550
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-07/clasica-128.webp",
+            "bytes": 4154
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-07/clasica-256.webp",
+            "bytes": 13186
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-07/clasica-512.webp",
+            "bytes": 37144
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-07/inventario-64.webp",
+            "bytes": 1626
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-07/inventario-128.webp",
+            "bytes": 4314
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-07/inventario-256.webp",
+            "bytes": 11412
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-07/inventario-512.webp",
+            "bytes": 29360
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5572,13 +6349,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Nelumbo nucifera",
+        "characteristics": "Semilla oscura y detalle del receptáculo poroso.",
+        "scale": "La semilla y el receptáculo se representan juntos."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-08/clasica-64.webp",
+            "bytes": 1730
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-08/clasica-128.webp",
+            "bytes": 4134
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-08/clasica-256.webp",
+            "bytes": 11602
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-08/clasica-512.webp",
+            "bytes": 30736
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-08/inventario-64.webp",
+            "bytes": 1820
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-08/inventario-128.webp",
+            "bytes": 4246
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-08/inventario-256.webp",
+            "bytes": 9264
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-08/inventario-512.webp",
+            "bytes": 22776
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5600,13 +6416,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Eucalyptus sp. · morfotipo leñoso",
+        "characteristics": "Cápsulas con reborde y válvulas; se ilustra el fruto que contiene las semillas.",
+        "scale": "Cápsulas ampliadas."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-09/clasica-64.webp",
+            "bytes": 2266
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-09/clasica-128.webp",
+            "bytes": 5578
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-09/clasica-256.webp",
+            "bytes": 16108
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-09/clasica-512.webp",
+            "bytes": 42686
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-09/inventario-64.webp",
+            "bytes": 2336
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-09/inventario-128.webp",
+            "bytes": 5742
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-09/inventario-256.webp",
+            "bytes": 12944
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-09/inventario-512.webp",
+            "bytes": 31886
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5628,13 +6483,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Adansonia digitata",
+        "characteristics": "Semilla reniforme, cubierta opaca y sección clara.",
+        "scale": "Semillas pequeñas ampliadas."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-10/clasica-64.webp",
+            "bytes": 1306
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-10/clasica-128.webp",
+            "bytes": 3410
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-10/clasica-256.webp",
+            "bytes": 9170
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-10/clasica-512.webp",
+            "bytes": 25632
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-10/inventario-64.webp",
+            "bytes": 1452
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-10/inventario-128.webp",
+            "bytes": 3434
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-10/inventario-256.webp",
+            "bytes": 7558
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-10/inventario-512.webp",
+            "bytes": 19006
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5656,13 +6550,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Acer palmatum",
+        "characteristics": "Dos sámaras unidas con alas papiráceas divergentes.",
+        "scale": "Fruto alado de pocos centímetros."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-11/clasica-64.webp",
+            "bytes": 1562
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-11/clasica-128.webp",
+            "bytes": 3546
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-11/clasica-256.webp",
+            "bytes": 9058
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-11/clasica-512.webp",
+            "bytes": 24124
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/SEM-11/inventario-64.webp",
+            "bytes": 1566
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/SEM-11/inventario-128.webp",
+            "bytes": 3576
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/SEM-11/inventario-256.webp",
+            "bytes": 7622
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/SEM-11/inventario-512.webp",
+            "bytes": 18598
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5685,6 +6618,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
       "stage": "OBJ-01",
+      "botany": {
+        "identity": "Lodoicea maldivica",
+        "characteristics": "Réplica de semilla bilobulada de Seychelles.",
+        "scale": "Ejemplar mucho mayor que las restantes semillas, reducido para el álbum."
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5746,13 +6684,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Vegetal · carbón de madera",
+        "characteristics": "Fragmento negro fisurado y marca mate.",
+        "scale": "Presentación de gabinete."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-01/clasica-64.webp",
+            "bytes": 1504
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-01/clasica-128.webp",
+            "bytes": 3916
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-01/clasica-256.webp",
+            "bytes": 10868
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-01/clasica-512.webp",
+            "bytes": 30726
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-01/inventario-64.webp",
+            "bytes": 1578
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-01/inventario-128.webp",
+            "bytes": 4116
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-01/inventario-256.webp",
+            "bytes": 9474
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-01/inventario-512.webp",
+            "bytes": 23348
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5774,13 +6751,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Mineral · tierra ferruginosa con goethita",
+        "characteristics": "Ocre amarillo de grano terroso y trazo dorado.",
+        "scale": "Presentación de gabinete."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-02/clasica-64.webp",
+            "bytes": 1518
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-02/clasica-128.webp",
+            "bytes": 3640
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-02/clasica-256.webp",
+            "bytes": 9740
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-02/clasica-512.webp",
+            "bytes": 28374
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-02/inventario-64.webp",
+            "bytes": 1444
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-02/inventario-128.webp",
+            "bytes": 3600
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-02/inventario-256.webp",
+            "bytes": 8112
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-02/inventario-512.webp",
+            "bytes": 19642
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5802,13 +6818,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Mineral · tierra ferruginosa con hematita",
+        "characteristics": "Muestra arcillosa de grano rojizo y mate.",
+        "scale": "Presentación de gabinete."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-03/clasica-64.webp",
+            "bytes": 1548
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-03/clasica-128.webp",
+            "bytes": 3890
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-03/clasica-256.webp",
+            "bytes": 10438
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-03/clasica-512.webp",
+            "bytes": 27598
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-03/inventario-64.webp",
+            "bytes": 1572
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-03/inventario-128.webp",
+            "bytes": 3866
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-03/inventario-256.webp",
+            "bytes": 8778
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-03/inventario-512.webp",
+            "bytes": 22252
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5830,13 +6885,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Mineral · tierra ferruginosa natural, con óxidos de manganeso en proporción variable",
+        "characteristics": "Pardo amarillento y trazo terroso.",
+        "scale": "Presentación de gabinete."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-04/clasica-64.webp",
+            "bytes": 1466
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-04/clasica-128.webp",
+            "bytes": 3576
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-04/clasica-256.webp",
+            "bytes": 9682
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-04/clasica-512.webp",
+            "bytes": 27648
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-04/inventario-64.webp",
+            "bytes": 1458
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-04/inventario-128.webp",
+            "bytes": 3652
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-04/inventario-256.webp",
+            "bytes": 8166
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-04/inventario-512.webp",
+            "bytes": 20258
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5858,13 +6952,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Mineral · tierras verdes, como celadonita o glauconita",
+        "characteristics": "Fragmento verdoso y muestra aplanada de verde grisáceo.",
+        "scale": "Presentación de gabinete."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-05/clasica-64.webp",
+            "bytes": 1138
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-05/clasica-128.webp",
+            "bytes": 2820
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-05/clasica-256.webp",
+            "bytes": 8146
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-05/clasica-512.webp",
+            "bytes": 24656
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-05/inventario-64.webp",
+            "bytes": 1164
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-05/inventario-128.webp",
+            "bytes": 3082
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-05/inventario-256.webp",
+            "bytes": 7112
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-05/inventario-512.webp",
+            "bytes": 17022
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5886,13 +7019,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Vegetal · semillas de Bixa orellana",
+        "characteristics": "Semillas rojizas y una cápsula espinosa como referencia.",
+        "scale": "Presentación de gabinete."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-06/clasica-64.webp",
+            "bytes": 2308
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-06/clasica-128.webp",
+            "bytes": 5904
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-06/clasica-256.webp",
+            "bytes": 16632
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-06/clasica-512.webp",
+            "bytes": 50550
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-06/inventario-64.webp",
+            "bytes": 2372
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-06/inventario-128.webp",
+            "bytes": 6176
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-06/inventario-256.webp",
+            "bytes": 15254
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-06/inventario-512.webp",
+            "bytes": 44158
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5914,13 +7086,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Vegetal · plantas tintóreas como Indigofera tinctoria",
+        "characteristics": "Torta compacta azul muy oscura y una muestra de color.",
+        "scale": "Presentación de gabinete."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-07/clasica-64.webp",
+            "bytes": 1614
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-07/clasica-128.webp",
+            "bytes": 3918
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-07/clasica-256.webp",
+            "bytes": 10776
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-07/clasica-512.webp",
+            "bytes": 29998
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-07/inventario-64.webp",
+            "bytes": 1454
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-07/inventario-128.webp",
+            "bytes": 3896
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-07/inventario-256.webp",
+            "bytes": 9260
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-07/inventario-512.webp",
+            "bytes": 23502
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5942,13 +7153,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Animal · cochinilla Dactylopius coccus",
+        "characteristics": "Ejemplares históricos conservados y muestra carmín.",
+        "scale": "Los insectos se representan ampliados."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-08/clasica-64.webp",
+            "bytes": 1842
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-08/clasica-128.webp",
+            "bytes": 4886
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-08/clasica-256.webp",
+            "bytes": 13376
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-08/clasica-512.webp",
+            "bytes": 38552
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-08/inventario-64.webp",
+            "bytes": 1868
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-08/inventario-128.webp",
+            "bytes": 4952
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-08/inventario-256.webp",
+            "bytes": 12078
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-08/inventario-512.webp",
+            "bytes": 33184
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5970,13 +7220,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Mixto · colorante índigo y mineral arcilloso paligorskita",
+        "characteristics": "Fragmento cerámico con color histórico.",
+        "scale": "Reproducción documental, sin atribución arqueológica a un original."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-09/clasica-64.webp",
+            "bytes": 1714
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-09/clasica-128.webp",
+            "bytes": 4324
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-09/clasica-256.webp",
+            "bytes": 11454
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-09/clasica-512.webp",
+            "bytes": 32644
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-09/inventario-64.webp",
+            "bytes": 1828
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-09/inventario-128.webp",
+            "bytes": 4336
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-09/inventario-256.webp",
+            "bytes": 10082
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-09/inventario-512.webp",
+            "bytes": 25652
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -5998,13 +7287,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Mineral · malaquita, carbonato básico de cobre",
+        "characteristics": "Mineral bandeado y muestra granular verde.",
+        "scale": "Presentación de gabinete."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-10/clasica-64.webp",
+            "bytes": 1736
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-10/clasica-128.webp",
+            "bytes": 4312
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-10/clasica-256.webp",
+            "bytes": 11378
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-10/clasica-512.webp",
+            "bytes": 32932
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-10/inventario-64.webp",
+            "bytes": 1702
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-10/inventario-128.webp",
+            "bytes": 4446
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-10/inventario-256.webp",
+            "bytes": 10084
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-10/inventario-512.webp",
+            "bytes": 26402
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -6026,13 +7354,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Mineral · lapislázuli rico en lazurita",
+        "characteristics": "Roca azul con inclusiones y trazo ultramar. La ficha se refiere al pigmento mineral histórico.",
+        "scale": "Presentación de gabinete."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-11/clasica-64.webp",
+            "bytes": 1696
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-11/clasica-128.webp",
+            "bytes": 4272
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-11/clasica-256.webp",
+            "bytes": 11886
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-11/clasica-512.webp",
+            "bytes": 34310
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-11/inventario-64.webp",
+            "bytes": 1700
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-11/inventario-128.webp",
+            "bytes": 4360
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-11/inventario-256.webp",
+            "bytes": 10752
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-11/inventario-512.webp",
+            "bytes": 27212
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -6054,13 +7421,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Animal · pigmento histórico de moluscos marinos de la familia Muricidae",
+        "characteristics": "Reproducción de lana histórica teñida, con tonalidad purpúrea.",
+        "scale": "Trozo de muestra textil conservada."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-12/clasica-64.webp",
+            "bytes": 2088
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-12/clasica-128.webp",
+            "bytes": 5870
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-12/clasica-256.webp",
+            "bytes": 17368
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-12/clasica-512.webp",
+            "bytes": 47326
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/PIG-12/inventario-64.webp",
+            "bytes": 2278
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/PIG-12/inventario-128.webp",
+            "bytes": 6114
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/PIG-12/inventario-256.webp",
+            "bytes": 14150
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/PIG-12/inventario-512.webp",
+            "bytes": 35630
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -13631,6 +15037,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": true,
       "stage": "OBJ-01",
+      "botany": {
+        "identity": "Ginkgo biloba",
+        "characteristics": "Limbo en abanico con nervaduras divergentes.",
+        "scale": "Una hoja de pocos centímetros."
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -13692,13 +15103,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Acer saccharum",
+        "characteristics": "Cinco lóbulos, senos redondeados y pecíolo marcado.",
+        "scale": "Una hoja de escala centimétrica."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-02/clasica-64.webp",
+            "bytes": 2066
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-02/clasica-128.webp",
+            "bytes": 5076
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-02/clasica-256.webp",
+            "bytes": 13970
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-02/clasica-512.webp",
+            "bytes": 37042
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-02/inventario-64.webp",
+            "bytes": 2230
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-02/inventario-128.webp",
+            "bytes": 5174
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-02/inventario-256.webp",
+            "bytes": 12032
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-02/inventario-512.webp",
+            "bytes": 30148
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -13720,13 +15170,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Ficus carica",
+        "characteristics": "Lóbulos anchos y nervaduras principales palmadas.",
+        "scale": "Una hoja de escala centimétrica a decimétrica."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-03/clasica-64.webp",
+            "bytes": 2378
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-03/clasica-128.webp",
+            "bytes": 6042
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-03/clasica-256.webp",
+            "bytes": 17054
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-03/clasica-512.webp",
+            "bytes": 45262
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-03/inventario-64.webp",
+            "bytes": 2528
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-03/inventario-128.webp",
+            "bytes": 6272
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-03/inventario-256.webp",
+            "bytes": 14388
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-03/inventario-512.webp",
+            "bytes": 35846
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -13748,13 +15237,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Adiantum capillus-veneris",
+        "characteristics": "Pínnulas en abanico y ejes delgados oscuros.",
+        "scale": "Una porción de fronda, ampliada."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-04/clasica-64.webp",
+            "bytes": 3290
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-04/clasica-128.webp",
+            "bytes": 10022
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-04/clasica-256.webp",
+            "bytes": 32006
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-04/clasica-512.webp",
+            "bytes": 96542
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-04/inventario-64.webp",
+            "bytes": 3640
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-04/inventario-128.webp",
+            "bytes": 11022
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-04/inventario-256.webp",
+            "bytes": 32584
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-04/inventario-512.webp",
+            "bytes": 93750
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -13776,13 +15304,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Eucalyptus globulus",
+        "characteristics": "Hoja adulta falcada, coriácea, con nervio medio.",
+        "scale": "Una hoja alargada de escala decimétrica."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-05/clasica-64.webp",
+            "bytes": 1190
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-05/clasica-128.webp",
+            "bytes": 3074
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-05/clasica-256.webp",
+            "bytes": 8430
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-05/clasica-512.webp",
+            "bytes": 25588
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-05/inventario-64.webp",
+            "bytes": 1334
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-05/inventario-128.webp",
+            "bytes": 3172
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-05/inventario-256.webp",
+            "bytes": 8190
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-05/inventario-512.webp",
+            "bytes": 22600
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -13804,13 +15371,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Liriodendron tulipifera",
+        "characteristics": "Ápice truncado o escotado y lóbulos angulosos.",
+        "scale": "Una hoja de escala centimétrica."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-06/clasica-64.webp",
+            "bytes": 1992
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-06/clasica-128.webp",
+            "bytes": 5000
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-06/clasica-256.webp",
+            "bytes": 15402
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-06/clasica-512.webp",
+            "bytes": 44158
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-06/inventario-64.webp",
+            "bytes": 2062
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-06/inventario-128.webp",
+            "bytes": 5182
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-06/inventario-256.webp",
+            "bytes": 14058
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-06/inventario-512.webp",
+            "bytes": 37146
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -13832,13 +15438,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Alsophila dealbata · sin. Cyathea dealbata",
+        "characteristics": "Envés plateado y fronda dividida.",
+        "scale": "Porción de una fronda que puede medir metros."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-07/clasica-64.webp",
+            "bytes": 3266
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-07/clasica-128.webp",
+            "bytes": 9968
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-07/clasica-256.webp",
+            "bytes": 31012
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-07/clasica-512.webp",
+            "bytes": 96342
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-07/inventario-64.webp",
+            "bytes": 3548
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-07/inventario-128.webp",
+            "bytes": 10844
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-07/inventario-256.webp",
+            "bytes": 31344
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-07/inventario-512.webp",
+            "bytes": 91826
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -13860,13 +15505,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Victoria amazonica",
+        "characteristics": "Disco flotante, reborde elevado y organización radial.",
+        "scale": "Limbo de hasta 2,3 m de ancho según Kew; se reduce para el álbum."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-08/clasica-64.webp",
+            "bytes": 1582
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-08/clasica-128.webp",
+            "bytes": 4728
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-08/clasica-256.webp",
+            "bytes": 15224
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-08/clasica-512.webp",
+            "bytes": 50634
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-08/inventario-64.webp",
+            "bytes": 1826
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-08/inventario-128.webp",
+            "bytes": 4934
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-08/inventario-256.webp",
+            "bytes": 13346
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-08/inventario-512.webp",
+            "bytes": 37366
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -13888,13 +15572,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Gnetum africanum",
+        "characteristics": "Limbo oblongo de borde entero y nervadura reticulada.",
+        "scale": "Una hoja de escala centimétrica."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-09/clasica-64.webp",
+            "bytes": 1910
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-09/clasica-128.webp",
+            "bytes": 4654
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-09/clasica-256.webp",
+            "bytes": 14002
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-09/clasica-512.webp",
+            "bytes": 40294
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-09/inventario-64.webp",
+            "bytes": 2014
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-09/inventario-128.webp",
+            "bytes": 4850
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-09/inventario-256.webp",
+            "bytes": 12038
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-09/inventario-512.webp",
+            "bytes": 32390
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -13916,13 +15639,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Asplenium scolopendrium",
+        "characteristics": "Fronda lineal continua, con soros lineares en el envés.",
+        "scale": "Fronda de escala decimétrica."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-10/clasica-64.webp",
+            "bytes": 1618
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-10/clasica-128.webp",
+            "bytes": 3996
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-10/clasica-256.webp",
+            "bytes": 11328
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-10/clasica-512.webp",
+            "bytes": 33928
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-10/inventario-64.webp",
+            "bytes": 1632
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-10/inventario-128.webp",
+            "bytes": 4110
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-10/inventario-256.webp",
+            "bytes": 10512
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-10/inventario-512.webp",
+            "bytes": 29630
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -13944,13 +15706,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Nepenthes rafflesiana",
+        "characteristics": "Trampa en jarro, con tapa y zarcillo. El jarro es una parte modificada de la hoja.",
+        "scale": "Se representa una sola trampa con una porción de hoja."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-11/clasica-64.webp",
+            "bytes": 2884
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-11/clasica-128.webp",
+            "bytes": 8064
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-11/clasica-256.webp",
+            "bytes": 25024
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-11/clasica-512.webp",
+            "bytes": 69384
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-11/inventario-64.webp",
+            "bytes": 3154
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-11/inventario-128.webp",
+            "bytes": 8778
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-11/inventario-256.webp",
+            "bytes": 23752
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-11/inventario-512.webp",
+            "bytes": 62846
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Botánica",
@@ -13972,13 +15773,52 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-06",
+      "botany": {
+        "identity": "Ravenala madagascariensis · referencia",
+        "characteristics": "Limbo largo con nervio central y desgarros transversales.",
+        "scale": "Una sola hoja de escala métrica, reducida."
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-12/clasica-64.webp",
+            "bytes": 1788
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-12/clasica-128.webp",
+            "bytes": 4616
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-12/clasica-256.webp",
+            "bytes": 13368
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-12/clasica-512.webp",
+            "bytes": 43524
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/HOJ-12/inventario-64.webp",
+            "bytes": 1874
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/HOJ-12/inventario-128.webp",
+            "bytes": 5014
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/HOJ-12/inventario-256.webp",
+            "bytes": 12946
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/HOJ-12/inventario-512.webp",
+            "bytes": 37352
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",

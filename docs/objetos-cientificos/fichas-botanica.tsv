@@ -1,0 +1,49 @@
+ID	Identificación u origen	Caracteres de referencia	Escala de la muestra
+BOT-01	Rosa silvestre · Rosa sp.	Corola de cinco pétalos, pequeño tallo y hojas. Especie exacta pendiente.	Flor de pocos centímetros.
+BOT-02	Calluna vulgaris	Ramilla con pequeñas flores agrupadas y hojas reducidas.	Las flores individuales se cuentan en milímetros.
+BOT-03	Eschscholzia californica	Copa de cuatro pétalos y follaje finamente dividido.	Flor de pocos centímetros.
+BOT-04	Lupinus mutabilis · referencia andina	Racimo de flores papilionadas y hoja palmeada.	Se representa un tramo floral, no la altura de la planta.
+BOT-05	Jacaranda mimosifolia	Corolas tubulares azul violáceas, follaje dividido como referencia.	Se representa una porción de la inflorescencia.
+BOT-06	Protea cynaroides	Brácteas externas rosadas y centro denso de flores pequeñas.	Cabezuela amplia, mayor que una flor de cerezo.
+BOT-07	Adansonia digitata	Flor colgante clara, pétalos reflejos y prominente haz de estambres.	Flor relativamente grande, dibujada aislada.
+BOT-08	Nelumbo nucifera	Corola rosada y receptáculo central diferenciado.	Flor de escala decimétrica.
+BOT-09	Prunus serrulata · tipo de flor simple	Cinco pétalos en cada flor de la ramilla y pequeños botones.	Varias flores de pocos centímetros.
+BOT-10	Telopea speciosissima	Cabezuela escarlata de florecillas curvas y hojas coriáceas.	Cabezuela de escala decimétrica.
+BOT-11	Leontopodium alpinum · referencia alpina	Brácteas lanosas estrelladas alrededor de capítulos pequeños.	Se amplía la inflorescencia respecto al resto del herbario.
+BOT-12	Rafflesia arnoldi	Flor rojiza de cinco lóbulos carnosos, verrugas claras y cámara central.	La flor puede acercarse a un metro y se reduce para el álbum.
+SEM-01	Quercus robur · ejemplar de referencia	Nuez ovoide con cúpula escamosa.	Un fruto de pocos centímetros.
+SEM-02	Pinus pinea	Semilla clara y ejemplar con cubierta oscura.	Semillas pequeñas ampliadas.
+SEM-03	Fagus sylvatica	Nueces triangulares dentro de una cúpula espinosa.	Conjunto de pocos centímetros.
+SEM-04	Carnegiea gigantea	Semilla de testa negra con relieve fino.	La semilla es milimétrica y se amplía para mostrar la testa.
+SEM-05	Theobroma cacao · tipo criollo	Semilla aislada y sección clara. Distinta de la mazorca funcional abierta.	Semilla de pocos centímetros.
+SEM-06	Delonix regia	Vaina larga, oscura, dura y aplanada.	La vaina mide decenas de centímetros y se reduce.
+SEM-07	Araucaria araucana	Piñón alargado, cuneiforme y pardo claro, de la araucaria del sur andino.	Semilla de pocos centímetros.
+SEM-08	Nelumbo nucifera	Semilla oscura y detalle del receptáculo poroso.	La semilla y el receptáculo se representan juntos.
+SEM-09	Eucalyptus sp. · morfotipo leñoso	Cápsulas con reborde y válvulas; se ilustra el fruto que contiene las semillas.	Cápsulas ampliadas.
+SEM-10	Adansonia digitata	Semilla reniforme, cubierta opaca y sección clara.	Semillas pequeñas ampliadas.
+SEM-11	Acer palmatum	Dos sámaras unidas con alas papiráceas divergentes.	Fruto alado de pocos centímetros.
+SEM-12	Lodoicea maldivica	Réplica de semilla bilobulada de Seychelles.	Ejemplar mucho mayor que las restantes semillas, reducido para el álbum.
+PIG-01	Vegetal · carbón de madera	Fragmento negro fisurado y marca mate.	Presentación de gabinete.
+PIG-02	Mineral · tierra ferruginosa con goethita	Ocre amarillo de grano terroso y trazo dorado.	Presentación de gabinete.
+PIG-03	Mineral · tierra ferruginosa con hematita	Muestra arcillosa de grano rojizo y mate.	Presentación de gabinete.
+PIG-04	Mineral · tierra ferruginosa natural, con óxidos de manganeso en proporción variable	Pardo amarillento y trazo terroso.	Presentación de gabinete.
+PIG-05	Mineral · tierras verdes, como celadonita o glauconita	Fragmento verdoso y muestra aplanada de verde grisáceo.	Presentación de gabinete.
+PIG-06	Vegetal · semillas de Bixa orellana	Semillas rojizas y una cápsula espinosa como referencia.	Presentación de gabinete.
+PIG-07	Vegetal · plantas tintóreas como Indigofera tinctoria	Torta compacta azul muy oscura y una muestra de color.	Presentación de gabinete.
+PIG-08	Animal · cochinilla Dactylopius coccus	Ejemplares históricos conservados y muestra carmín.	Los insectos se representan ampliados.
+PIG-09	Mixto · colorante índigo y mineral arcilloso paligorskita	Fragmento cerámico con color histórico.	Reproducción documental, sin atribución arqueológica a un original.
+PIG-10	Mineral · malaquita, carbonato básico de cobre	Mineral bandeado y muestra granular verde.	Presentación de gabinete.
+PIG-11	Mineral · lapislázuli rico en lazurita	Roca azul con inclusiones y trazo ultramar. La ficha se refiere al pigmento mineral histórico.	Presentación de gabinete.
+PIG-12	Animal · pigmento histórico de moluscos marinos de la familia Muricidae	Reproducción de lana histórica teñida, con tonalidad purpúrea.	Trozo de muestra textil conservada.
+HOJ-01	Ginkgo biloba	Limbo en abanico con nervaduras divergentes.	Una hoja de pocos centímetros.
+HOJ-02	Acer saccharum	Cinco lóbulos, senos redondeados y pecíolo marcado.	Una hoja de escala centimétrica.
+HOJ-03	Ficus carica	Lóbulos anchos y nervaduras principales palmadas.	Una hoja de escala centimétrica a decimétrica.
+HOJ-04	Adiantum capillus-veneris	Pínnulas en abanico y ejes delgados oscuros.	Una porción de fronda, ampliada.
+HOJ-05	Eucalyptus globulus	Hoja adulta falcada, coriácea, con nervio medio.	Una hoja alargada de escala decimétrica.
+HOJ-06	Liriodendron tulipifera	Ápice truncado o escotado y lóbulos angulosos.	Una hoja de escala centimétrica.
+HOJ-07	Alsophila dealbata · sin. Cyathea dealbata	Envés plateado y fronda dividida.	Porción de una fronda que puede medir metros.
+HOJ-08	Victoria amazonica	Disco flotante, reborde elevado y organización radial.	Limbo de hasta 2,3 m de ancho según Kew; se reduce para el álbum.
+HOJ-09	Gnetum africanum	Limbo oblongo de borde entero y nervadura reticulada.	Una hoja de escala centimétrica.
+HOJ-10	Asplenium scolopendrium	Fronda lineal continua, con soros lineares en el envés.	Fronda de escala decimétrica.
+HOJ-11	Nepenthes rafflesiana	Trampa en jarro, con tapa y zarcillo. El jarro es una parte modificada de la hoja.	Se representa una sola trampa con una porción de hoja.
+HOJ-12	Ravenala madagascariensis · referencia	Limbo largo con nervio central y desgarros transversales.	Una sola hoja de escala métrica, reducida.

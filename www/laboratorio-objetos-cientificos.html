@@ -20,11 +20,15 @@
 <main>
   <div class="controls">
     <label>Vista<select id="view">
-      <option value="compare">Comparación</option><option value="paleontology">Paleontología</option><option value="groups">Familias y evolución</option><option value="archive">Archivo cartográfico y comercial</option><option value="inventory">Inventario funcional</option><option value="materials">Materiales acumulables</option>
+      <option value="compare">Comparación</option><option value="botany">Gabinete botánico</option><option value="paleontology">Paleontología</option><option value="groups">Familias y evolución</option><option value="archive">Archivo cartográfico y comercial</option><option value="inventory">Inventario funcional</option><option value="materials">Materiales acumulables</option>
       <option value="equipment">Equipo del naturalista</option><option value="workshop">Taller de fabricación</option>
       <option value="album">Álbum de coleccionables</option><option value="museum">Gabinete museístico</option>
     </select></label>
     <label>Buscar<input type="search" id="search" placeholder="Nombre, ID o procedencia"></label>
+    <label id="botany-control" hidden>Colección botánica<select id="botany-group"></select></label>
+    <label id="botany-variant-control" hidden>Lámina<select id="botany-variant">
+      <option value="both">Clásica e inventario</option><option value="clasica">Clásica</option><option value="inventario">Inventario</option>
+    </select></label>
     <label id="paleo-control" hidden>Sección paleontológica<select id="paleo-section">
       <option value="mounts">Reconstrucciones fósiles</option><option value="materials">Materiales y fósiles menores</option>
       <option value="archive">Archivo paleontológico</option><option value="future">Montajes futuros</option>

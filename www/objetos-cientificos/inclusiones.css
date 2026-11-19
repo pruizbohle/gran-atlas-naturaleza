@@ -43,3 +43,24 @@
   .inclusions .progress-row { grid-template-columns:1fr minmax(5rem, 1fr) auto; }
   .inclusions .controls { grid-template-columns:repeat(auto-fit,minmax(min(100%,145px),1fr)); }
 }
+.inclusions .botany-undiscovered { gap:.2rem; }
+.inclusions .botany-undiscovered img { filter:brightness(0); opacity:.13; }
+.inclusions .album-score { margin:.25rem 0 .75rem; font-size:.83rem; color:var(--muted); }
+#discovery-status { align-self:center; }
+.discovery-panel {
+  --halo:#a89b78;
+  border:1px solid var(--halo); border-radius:.4rem; padding:clamp(.65rem,3vw,1.15rem);
+  text-align:center; background:var(--card);
+}
+.discovery-panel[data-rarity="1"] { --halo:#50846a; }
+.discovery-panel[data-rarity="2"] { --halo:#566fa2; }
+.discovery-panel[data-rarity="3"] { --halo:#895c92; }
+.discovery-panel .stage { --size:min(210px,48vh); background:#f2e9d5; }
+.discovery-panel .stage img { filter:drop-shadow(0 0 9px var(--halo)); }
+.discovery-panel .discovery-kicker { margin:.1rem 0 .35rem; font-size:.84rem; }
+.discovery-rarity {
+  display:inline-block; font:600 .85rem system-ui,sans-serif; border:1px solid var(--halo);
+  border-radius:100px; padding:.23rem .66rem; margin:.35rem 0 .7rem;
+}
+.discovery-panel .progress-row { text-align:left; }
+.botanical-summary { padding:.55rem .75rem; border:1px solid var(--line); border-radius:.35rem; background:var(--card); }

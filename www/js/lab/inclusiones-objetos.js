@@ -26,6 +26,8 @@
     collections.get(row.collection).push(row);
   }
 
+  const rarities = ['Común','Poco común','Raro','Muy raro'];
+  const discoveries = new Set();
   const choices = ['Pendiente','Incluir','Incluir con modificaciones','Evaluar posteriormente','Descartar'];
   const storageKey = 'atlas-laboratorio-inclusiones:v1';
   let reviews = {};
@@ -38,7 +40,7 @@
   const state = {
     section:'inventory', query:'', page:0, scope:'existing', family:'', tier:'',
     group:'all', museum:'Fósiles', mount:paleontology.mounts[0].id, phase:'3', form:'skeleton',
-    cabinet:'', collection:'', progress:'50', approval:'', origin:'',
+    cabinet:'', collection:'', progress:'50', discoveryRarity:'Poco común', approval:'', origin:'',
     instrument:'binoculars', hat:'field_hat', necklace:'amulet', bag:'sturdy_pack'
   };
   const perPage = 24;
@@ -71,6 +73,7 @@
       state[key] = input.value;
       state.page = 0;
       if (key === 'cabinet') state.collection = '';
+      if (key === 'progress') discoveries.clear();
       render();
       get(input.id)?.focus();
     });
@@ -107,6 +110,15 @@
     const stage = node('div', '', 'stage');
     const source = row.sprites.inventario?.[pixels];
     if (!visibility) {
+      if (row.botany && source) {
+        const silhouette = node('img');
+        silhouette.src = source.src;
+        silhouette.alt = '';
+        silhouette.loading = 'lazy';
+        silhouette.decoding = 'async';
+        stage.classList.add('botany-undiscovered');
+        stage.append(silhouette);
+      }
       stage.append(node('span','Pendiente de descubrir'));
     } else if (source) {
       const image = node('img');
@@ -148,12 +160,14 @@
     const fields = [['Categoría',row.type],['Gabinete',row.cabinet],['Colección',row.collection],
       ['Rareza',row.rarity],['Procedencia',row.provenance || row.continent],['Descripción',row.description],
       ['Obtención sugerida',row.acquisition],['Uso sugerido',row.uses],['Contexto',row.context],
+      ['Identificación u origen',row.botany?.identity],['Caracteres diagnósticos',row.botany?.characteristics],
+      ['Escala real',row.botany?.scale],['Puntos de colección',row.points],
       ['Estado artístico',row.artState],['Observaciones',row.observations]];
     for (const [label, value] of fields) {
       if (value) facts.append(node('dt',label),node('dd',value));
     }
     const discoverable = row.type === 'Coleccionable propuesto' && state.section === 'album';
-    body.replaceChildren(h,figure(row,!discoverable || discovered(row)),facts);
+    body.replaceChildren(h,figure(row,!discoverable || discovered(row),'',row.botany ? 256 : 128),facts);
     dialog.showModal();
   }
 
@@ -261,7 +275,7 @@
 
   function discovered(row) {
     const members = collections.get(row.collection);
-    return members.indexOf(row) < Math.floor(members.length * Number(state.progress) / 100);
+    return discoveries.has(row.id) || members.indexOf(row) < Math.floor(members.length * Number(state.progress) / 100);
   }
 
   function progressLine(name, entries) {
@@ -275,6 +289,35 @@
     return entry;
   }
 
+  function score(entries) {
+    const sum = members => members.reduce((points,row) => points + row.points,0);
+    return sum(entries.filter(discovered)) + '/' + sum(entries) + ' puntos de colección';
+  }
+
+  function discoveryCandidate() {
+    return collectible.find(row => row.botany && row.rarity === state.discoveryRarity &&
+      (!state.collection || row.collection === state.collection) && matches(row) && !discovered(row));
+  }
+
+  function demonstrateDiscovery() {
+    const row = discoveryCandidate();
+    if (!row) return;
+    discoveries.add(row.id);
+    renderContent();
+    const panel = node('section','','discovery-panel');
+    panel.dataset.rarity = String(rarities.indexOf(row.rarity));
+    const title = node('h2', row.name);
+    title.id = 'detail-title';
+    const rarity = node('p',row.rarity,'discovery-rarity');
+    const picture = figure(row,true,'',512);
+    const members = collections.get(row.collection);
+    panel.append(node('p','Descubrimiento de prueba','discovery-kicker'),title,rarity,picture,
+      node('p',row.provenance || row.continent),progressLine(row.collection,members),
+      node('p',score(members)));
+    get('detail-content').replaceChildren(panel);
+    dialog.showModal();
+  }
+
   function album() {
     const entries = collectible.filter(row => (!state.cabinet || row.cabinet === state.cabinet) &&
       (!state.collection || row.collection === state.collection) && matches(row));
@@ -282,12 +325,24 @@
     const summary = node('div','','progress-list');
     for (const cabinet of cabinets) summary.append(progressLine(cabinet,collectible.filter(row => row.cabinet === cabinet)));
     gallery.append(summary);
+    if (state.cabinet === 'Botánica') {
+      const botanical = collectible.filter(row => row.botany);
+      const summary = node('div','','progress-list botanical-summary');
+      for (const [name,members] of collections) {
+        if (members[0].botany) summary.append(progressLine(name,members));
+      }
+      gallery.append(node('p',score(botanical),'album-score'),summary);
+      const trigger = get('include-discover');
+      trigger.disabled = !discoveryCandidate();
+      get('discovery-status').textContent = trigger.disabled ?
+        'No quedan piezas de esta rareza en la selección actual.' : '';
+    }
     paginate(entries, page => {
       for (const [name, members] of collections) {
         const visible = page.filter(row => row.collection === name);
         if (!visible.length) continue;
         const section = node('section','','album-section');
-        section.append(node('h3',name),progressLine(name,members),grid(visible, row =>
+        section.append(node('h3',name),progressLine(name,members),node('p',score(members),'album-score'),grid(visible, row =>
           card(row,discovered(row),row.rarity + ' · ' + (discovered(row) ? 'Descubierta' : 'Pendiente'))));
         gallery.append(section);
       }
@@ -429,7 +484,17 @@
       select('cabinet','Gabinete',[['','Todos'],...cabinets.map(name => [name,name])]);
       const available = [...collections].filter(([,members]) => !state.cabinet || members[0].cabinet === state.cabinet);
       select('collection','Colección',[['','Todas'],...available.map(([name]) => [name,name])]);
-      select('progress','Progreso de prueba',['0','25','50','75','100'].map(value => [value,value + ' %']));
+      select('progress','Progreso de prueba',['0','25','50','75','100'].map(value => [value,value === '0' ? 'Sin descubrir · 0 %' : value + ' %']));
+      if (state.cabinet === 'Botánica') {
+        select('discoveryRarity','Rareza del descubrimiento',rarities.map(value => [value,value]));
+        const trigger = button('Probar descubrimiento',demonstrateDiscovery);
+        trigger.id = 'include-discover';
+        trigger.setAttribute('aria-describedby','discovery-status');
+        const availability = node('small');
+        availability.id = 'discovery-status';
+        availability.setAttribute('role','status');
+        controls.append(trigger,availability);
+      }
     }
     if (state.section === 'museum') {
       select('museum','Sala',['Exposiciones','Muestras','Fósiles','Relictos','Artefactos'].map(name => [name,name]));
