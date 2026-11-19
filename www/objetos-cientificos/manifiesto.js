@@ -41,7 +41,7 @@ globalThis.AtlasObjetosCientificos = {
         "INS-02",
         "INS-03",
         "INS-04",
-        "INS-05",
+        "INS-13",
         "INS-06",
         "INS-07",
         "INS-08",
@@ -221,7 +221,7 @@ globalThis.AtlasObjetosCientificos = {
         "NUM-06",
         "NUM-07",
         "NUM-08",
-        "NUM-09",
+        "NUM-13",
         "NUM-10",
         "NUM-11",
         "NUM-12"
@@ -245,20 +245,20 @@ globalThis.AtlasObjetosCientificos = {
       ]
     },
     {
-      "name": "Filatelia",
+      "name": "Armería histórica",
       "ids": [
-        "FIL-01",
-        "FIL-02",
-        "FIL-03",
-        "FIL-04",
-        "FIL-05",
-        "FIL-06",
-        "FIL-07",
-        "FIL-08",
-        "FIL-09",
-        "FIL-10",
-        "FIL-11",
-        "FIL-12"
+        "ARM-01",
+        "ARM-02",
+        "ARM-03",
+        "ARM-04",
+        "ARM-05",
+        "ARM-06",
+        "ARM-07",
+        "ARM-08",
+        "ARM-09",
+        "ARM-10",
+        "ARM-11",
+        "ARM-12"
       ]
     },
     {
@@ -305,7 +305,7 @@ globalThis.AtlasObjetosCientificos = {
         "MED-05",
         "MED-06",
         "MED-07",
-        "MED-08",
+        "MED-13",
         "MED-09",
         "MED-10",
         "MED-11",
@@ -333,16 +333,6 @@ globalThis.AtlasObjetosCientificos = {
         "MAR-07",
         "medallon_viajero",
         "museum_medallion"
-      ]
-    },
-    {
-      "name": "Sellos y documentos",
-      "ids": [
-        "FIL-01",
-        "FIL-09",
-        "FIL-11",
-        "north_american_trade_document",
-        "asian_trade_folio"
       ]
     },
     {
@@ -377,6 +367,16 @@ globalThis.AtlasObjetosCientificos = {
         "MAR-09",
         "MAR-12"
       ]
+    },
+    {
+      "name": "Objetos ceremoniales y distinciones",
+      "ids": [
+        "ARM-06",
+        "ARM-09",
+        "ARM-11",
+        "ARM-12",
+        "MED-13"
+      ]
     }
   ],
   "historicalSources": [
@@ -402,21 +402,21 @@ globalThis.AtlasObjetosCientificos = {
         "NUM-07",
         "NUM-08",
         "NUM-11",
-        "FIL-01",
-        "MAS-03"
+        "MAS-03",
+        "NUM-13"
       ]
     },
     {
       "id": "documental",
       "name": "Investigación documental",
-      "description": "Consulta de mapas, catálogos, archivos y fichas de emisión.",
+      "description": "Consulta de cartas, catálogos y registros museísticos.",
       "ids": [
         "MAP-02",
         "MAP-03",
         "MAP-04",
-        "FIL-02",
-        "FIL-08",
-        "FIL-12"
+        "ARM-01",
+        "ARM-02",
+        "ARM-03"
       ]
     },
     {
@@ -501,18 +501,18 @@ globalThis.AtlasObjetosCientificos = {
     {
       "name": "Meteoritos",
       "ids": [
-        "MET-01",
+        "MET-13",
         "MET-02",
-        "MET-03",
-        "MET-04",
-        "MET-05",
+        "MET-14",
+        "MET-15",
+        "MET-16",
         "MET-06",
         "MET-07",
-        "MET-08",
+        "MET-17",
         "MET-09",
-        "MET-10",
-        "MET-11",
-        "MET-12"
+        "MET-18",
+        "MET-19",
+        "MET-20"
       ]
     },
     {
@@ -529,7 +529,7 @@ globalThis.AtlasObjetosCientificos = {
         "ROC-09",
         "ROC-10",
         "ROC-11",
-        "ROC-12"
+        "ROC-13"
       ]
     }
   ],
@@ -578,7 +578,7 @@ globalThis.AtlasObjetosCientificos = {
       "name": "Meteoritos y fragmentos fósiles",
       "ids": [
         "MET-06",
-        "MET-04",
+        "MET-15",
         "MET-09",
         "fossil_fragment",
         "hard_bone"
@@ -640,7 +640,7 @@ globalThis.AtlasObjetosCientificos = {
         "CUR-01",
         "CUR-02",
         "CUR-03",
-        "CUR-04",
+        "CUR-13",
         "CUR-05",
         "CUR-06",
         "CUR-07",
@@ -865,7 +865,7 @@ globalThis.AtlasObjetosCientificos = {
         "INS-02",
         "INS-03",
         "INS-04",
-        "INS-05",
+        "INS-13",
         "INS-06",
         "INS-07",
         "INS-08",
@@ -1248,6 +1248,2339 @@ globalThis.AtlasObjetosCientificos = {
       "montaje-megatherium"
     ]
   },
+  "archivedRows": [
+    {
+      "cabinet": "Geología",
+      "collection": "Meteoritos",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "Asia",
+      "provenance": "Guangxi, China",
+      "acquisition": "Investigación geológica",
+      "description": "Meteoroide metálico fragmentado",
+      "material": "material meteórico",
+      "context": "Fecha del ejemplar por verificar",
+      "original": null,
+      "observations": null,
+      "id": "MET-01",
+      "name": "Meteorito de Nantan",
+      "type": "Coleccionable propuesto",
+      "family": "Minerales y piedras preciosas",
+      "points": 1,
+      "exhibit": "Réplica de fragmento",
+      "pilot": false,
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito metálico · hierro IAB-MG",
+        "composition": "Aleación Fe-Ni",
+        "structure": "Fragmento metálico meteorizado",
+        "diagnostic": "Óxidos y superficie irregular",
+        "history": "Futuro · hallazgo catalogado en 1958. Asociación con un relato de 1516 incierta.",
+        "plate": "Se representa un fragmento oxidado interpretativo.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16906"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · hallazgo catalogado en 1958. Asociación con un relato de 1516 incierta.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16906"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-01/clasica-64.webp",
+            "bytes": 1932
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-01/clasica-128.webp",
+            "bytes": 4922
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-01/clasica-256.webp",
+            "bytes": 14832
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-01/clasica-512.webp",
+            "bytes": 40208
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-01/inventario-64.webp",
+            "bytes": 2028
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-01/inventario-128.webp",
+            "bytes": 5108
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-01/inventario-256.webp",
+            "bytes": 11448
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-01/inventario-512.webp",
+            "bytes": 27948
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Geología",
+      "collection": "Meteoritos",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "América del Norte",
+      "provenance": "Chihuahua, México",
+      "acquisition": "Investigación geológica",
+      "description": "Condrita carbonácea estudiada científicamente",
+      "material": "material meteórico",
+      "context": "Fecha del ejemplar por verificar",
+      "original": null,
+      "observations": null,
+      "id": "MET-03",
+      "name": "Meteorito de Allende",
+      "type": "Coleccionable propuesto",
+      "family": "Minerales y piedras preciosas",
+      "points": 1,
+      "exhibit": "Réplica de fragmento",
+      "pilot": false,
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito pétreo · condrita carbonácea CV3",
+        "composition": "Silicatos, cóndrulos e inclusiones ricas en Ca y Al",
+        "structure": "Interior de textura condrítica",
+        "diagnostic": "Inclusiones claras y granos redondeados",
+        "history": "Futuro · caída de 1969.",
+        "plate": "Vista de una cara interior esquemática.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=2278"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · caída de 1969.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=2278"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-03/clasica-64.webp",
+            "bytes": 1934
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-03/clasica-128.webp",
+            "bytes": 4826
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-03/clasica-256.webp",
+            "bytes": 14578
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-03/clasica-512.webp",
+            "bytes": 41106
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-03/inventario-64.webp",
+            "bytes": 2010
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-03/inventario-128.webp",
+            "bytes": 5222
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-03/inventario-256.webp",
+            "bytes": 11456
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-03/inventario-512.webp",
+            "bytes": 27630
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Geología",
+      "collection": "Meteoritos",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "Oceanía",
+      "provenance": "Victoria, Australia",
+      "acquisition": "Investigación geológica",
+      "description": "Condrita rica en compuestos orgánicos",
+      "material": "material meteórico",
+      "context": "Fecha del ejemplar por verificar",
+      "original": null,
+      "observations": null,
+      "id": "MET-04",
+      "name": "Meteorito de Murchison",
+      "type": "Coleccionable propuesto",
+      "family": "Minerales y piedras preciosas",
+      "points": 1,
+      "exhibit": "Réplica de fragmento",
+      "pilot": false,
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito pétreo · condrita carbonácea CM2",
+        "composition": "Matriz fina rica en filosilicatos y cóndrulos",
+        "structure": "Corteza y masa oscura granular",
+        "diagnostic": "Matriz rica en material fino y cóndrulos pequeños",
+        "history": "Futuro · caída de 1969.",
+        "plate": "La microtextura se amplía para el sprite.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16875"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · caída de 1969.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16875"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-04/clasica-64.webp",
+            "bytes": 1786
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-04/clasica-128.webp",
+            "bytes": 4620
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-04/clasica-256.webp",
+            "bytes": 13824
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-04/clasica-512.webp",
+            "bytes": 37166
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-04/inventario-64.webp",
+            "bytes": 1964
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-04/inventario-128.webp",
+            "bytes": 4938
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-04/inventario-256.webp",
+            "bytes": 10444
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-04/inventario-512.webp",
+            "bytes": 25436
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Geología",
+      "collection": "Meteoritos",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "Asia",
+      "provenance": "Rusia",
+      "acquisition": "Investigación geológica",
+      "description": "Fragmentos de una caída observada en 2013",
+      "material": "material meteórico",
+      "context": "Fecha del ejemplar por verificar",
+      "original": null,
+      "observations": null,
+      "id": "MET-05",
+      "name": "Meteorito de Cheliábinsk",
+      "type": "Coleccionable propuesto",
+      "family": "Minerales y piedras preciosas",
+      "points": 1,
+      "exhibit": "Réplica de fragmento",
+      "pilot": false,
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito pétreo · condrita ordinaria LL5",
+        "composition": "Principalmente silicatos con poco hierro metálico",
+        "structure": "Corteza negra sobre interior gris",
+        "diagnostic": "Contraste de corteza y posible veta de choque",
+        "history": "Futuro · caída de 2013.",
+        "plate": "La veta interior es interpretativa.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=57165"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · caída de 2013.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=57165"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-05/clasica-64.webp",
+            "bytes": 1732
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-05/clasica-128.webp",
+            "bytes": 4462
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-05/clasica-256.webp",
+            "bytes": 14058
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-05/clasica-512.webp",
+            "bytes": 39834
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-05/inventario-64.webp",
+            "bytes": 1776
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-05/inventario-128.webp",
+            "bytes": 4814
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-05/inventario-256.webp",
+            "bytes": 10638
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-05/inventario-512.webp",
+            "bytes": 26348
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Geología",
+      "collection": "Meteoritos",
+      "rarity": "Poco común",
+      "tier": null,
+      "continent": "Asia",
+      "provenance": "Extremo oriente ruso",
+      "acquisition": "Investigación geológica",
+      "description": "Ejemplar metálico de caída documentada",
+      "material": "material meteórico",
+      "context": "Fecha del ejemplar por verificar",
+      "original": null,
+      "observations": null,
+      "id": "MET-08",
+      "name": "Meteorito Sikhote-Alin",
+      "type": "Coleccionable propuesto",
+      "family": "Minerales y piedras preciosas",
+      "points": 2,
+      "exhibit": "Réplica de fragmento",
+      "pilot": false,
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito metálico · hierro IIAB",
+        "composition": "Aleación Fe-Ni",
+        "structure": "Fragmentos y metralla",
+        "diagnostic": "Fuerte relieve en piezas de fragmentación",
+        "history": "Futuro · caída de 1947.",
+        "plate": "La pieza representa un fragmento desgarrado.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=23593"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · caída de 1947.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=23593"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-08/clasica-64.webp",
+            "bytes": 1828
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-08/clasica-128.webp",
+            "bytes": 4412
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-08/clasica-256.webp",
+            "bytes": 12736
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-08/clasica-512.webp",
+            "bytes": 36442
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-08/inventario-64.webp",
+            "bytes": 1938
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-08/inventario-128.webp",
+            "bytes": 4666
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-08/inventario-256.webp",
+            "bytes": 10320
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-08/inventario-512.webp",
+            "bytes": 25560
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Geología",
+      "collection": "Meteoritos",
+      "rarity": "Raro",
+      "tier": null,
+      "continent": "Asia",
+      "provenance": "Xinjiang, China",
+      "acquisition": "Investigación geológica",
+      "description": "Pallasita célebre por su textura translúcida",
+      "material": "material meteórico",
+      "context": "Fecha del ejemplar por verificar",
+      "original": null,
+      "observations": null,
+      "id": "MET-10",
+      "name": "Meteorito Fukang",
+      "type": "Coleccionable propuesto",
+      "family": "Minerales y piedras preciosas",
+      "points": 4,
+      "exhibit": "Réplica de fragmento",
+      "pilot": false,
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito mixto · pallasita del grupo principal",
+        "composition": "Olivino y metal Fe-Ni",
+        "structure": "Cristales en matriz metálica",
+        "diagnostic": "Contraste óptico entre olivino y entramado metálico",
+        "history": "Futuro · hallazgo catalogado en 2000.",
+        "plate": "Lámina de sección interpretativa.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=34491"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · hallazgo catalogado en 2000.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=34491"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-10/clasica-64.webp",
+            "bytes": 2438
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-10/clasica-128.webp",
+            "bytes": 7098
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-10/clasica-256.webp",
+            "bytes": 21646
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-10/clasica-512.webp",
+            "bytes": 64684
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-10/inventario-64.webp",
+            "bytes": 2636
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-10/inventario-128.webp",
+            "bytes": 7584
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-10/inventario-256.webp",
+            "bytes": 20306
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-10/inventario-512.webp",
+            "bytes": 54632
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Geología",
+      "collection": "Meteoritos",
+      "rarity": "Raro",
+      "tier": null,
+      "continent": "África",
+      "provenance": "Namibia",
+      "acquisition": "Investigación geológica",
+      "description": "Representación del gran meteorito metálico",
+      "material": "material meteórico",
+      "context": "Fecha del ejemplar por verificar",
+      "original": null,
+      "observations": null,
+      "id": "MET-11",
+      "name": "Meteorito de Hoba",
+      "type": "Coleccionable propuesto",
+      "family": "Minerales y piedras preciosas",
+      "points": 4,
+      "exhibit": "Réplica de fragmento",
+      "pilot": false,
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito metálico · hierro IVB",
+        "composition": "Aleación Fe-Ni rica en níquel",
+        "structure": "Masa metálica tabular",
+        "diagnostic": "Volumen aplanado y meteorización superficial",
+        "history": "Futuro · hallazgo de 1920.",
+        "plate": "Modelo a escala reducida de una masa de unas 60 toneladas.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=11890"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · hallazgo de 1920.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=11890"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-11/clasica-64.webp",
+            "bytes": 1982
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-11/clasica-128.webp",
+            "bytes": 5444
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-11/clasica-256.webp",
+            "bytes": 17484
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-11/clasica-512.webp",
+            "bytes": 53524
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-11/inventario-64.webp",
+            "bytes": 2190
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-11/inventario-128.webp",
+            "bytes": 6100
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-11/inventario-256.webp",
+            "bytes": 15530
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-11/inventario-512.webp",
+            "bytes": 42262
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Geología",
+      "collection": "Meteoritos",
+      "rarity": "Muy raro",
+      "tier": null,
+      "continent": "Antártida",
+      "provenance": "Colinas Allan, Antártida",
+      "acquisition": "Investigación geológica",
+      "description": "Réplica de meteorito marciano encontrado en hielo",
+      "material": "material meteórico",
+      "context": "Fecha del ejemplar por verificar",
+      "original": null,
+      "observations": null,
+      "id": "MET-12",
+      "name": "Meteorito ALH 84001",
+      "type": "Coleccionable propuesto",
+      "family": "Minerales y piedras preciosas",
+      "points": 8,
+      "exhibit": "Réplica de fragmento",
+      "pilot": false,
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito pétreo marciano · ortopiroxenita",
+        "composition": "Principalmente ortopiroxeno",
+        "structure": "Fragmento ígneo granular",
+        "diagnostic": "Corteza de fusión y masa interior de piroxeno",
+        "history": "Futuro · hallazgo de 1984.",
+        "plate": "Lámina del fragmento sin presuntas formas biológicas.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=604"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · hallazgo de 1984.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=604"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-12/clasica-64.webp",
+            "bytes": 1958
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-12/clasica-128.webp",
+            "bytes": 5562
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-12/clasica-256.webp",
+            "bytes": 18794
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-12/clasica-512.webp",
+            "bytes": 56292
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-12/inventario-64.webp",
+            "bytes": 2146
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-12/inventario-128.webp",
+            "bytes": 6048
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-12/inventario-256.webp",
+            "bytes": 16832
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-12/inventario-512.webp",
+            "bytes": 45474
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Oceanografía",
+      "collection": "Curiosidades de marineros",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "Asia",
+      "provenance": "Japón",
+      "acquisition": "Comercio portuario",
+      "description": "Boya usada históricamente en pesca",
+      "material": "material mixto",
+      "context": "Fecha del ejemplar por verificar",
+      "original": null,
+      "observations": null,
+      "id": "CUR-04",
+      "name": "Flotador de vidrio",
+      "type": "Coleccionable propuesto",
+      "family": "Objetos marítimos",
+      "points": 1,
+      "exhibit": "Objeto marinero",
+      "pilot": false,
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Flotador de pesca de vidrio japonés",
+        "classification": "Aparejo flotante",
+        "material": "Vidrio y cabo",
+        "diagnostic": "Masa hueca esférica y amarre",
+        "habitat": "",
+        "history": "Futuro · el uso japonés está documentado desde 1910.",
+        "plate": "La red se representa como soporte.",
+        "source": "https://collectionswa.net.au/items/d72a4368-a99e-4e9a-a1c7-99fc53bfe25c"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · el uso japonés está documentado desde 1910.",
+        "source": "https://collectionswa.net.au/items/d72a4368-a99e-4e9a-a1c7-99fc53bfe25c"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-04/clasica-64.webp",
+            "bytes": 2522
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-04/clasica-128.webp",
+            "bytes": 6620
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-04/clasica-256.webp",
+            "bytes": 21238
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-04/clasica-512.webp",
+            "bytes": 54262
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-04/inventario-64.webp",
+            "bytes": 2650
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-04/inventario-128.webp",
+            "bytes": 7004
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-04/inventario-256.webp",
+            "bytes": 17552
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-04/inventario-512.webp",
+            "bytes": 42364
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Numismática",
+      "rarity": "Poco común",
+      "tier": null,
+      "continent": "África",
+      "provenance": "Etiopía",
+      "acquisition": "Comercio e intercambio",
+      "description": "Moneda histórica de África oriental",
+      "material": "metal acuñado",
+      "context": "Futuro · Birr de Menelik II, emisión de finales del siglo XIX",
+      "original": null,
+      "observations": null,
+      "id": "NUM-09",
+      "name": "Birr etíope antiguo",
+      "type": "Coleccionable propuesto",
+      "family": "Numismática",
+      "points": 2,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Birr de Menelik II",
+        "culture": "Etiopía imperial",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1894,
+        "date": "Década de 1890",
+        "material": "Plata",
+        "diagnostic": "Perfil coronado y leyenda ge'ez",
+        "culturalContext": "Moneda imperial de acuñación moderna.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "La variante ilustrada es posterior a 1842.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Década de 1890",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-09/clasica-64.webp",
+            "bytes": 2446
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-09/clasica-128.webp",
+            "bytes": 6886
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-09/clasica-256.webp",
+            "bytes": 23460
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-09/clasica-512.webp",
+            "bytes": 72490
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-09/inventario-64.webp",
+            "bytes": 2536
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-09/inventario-128.webp",
+            "bytes": 7590
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-09/inventario-256.webp",
+            "bytes": 20736
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-09/inventario-512.webp",
+            "bytes": 53226
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Filatelia",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "Europa",
+      "provenance": "Reino Unido",
+      "acquisition": "Comercio e intercambio",
+      "description": "Sello británico decimonónico de uso extendido",
+      "material": "papel impreso",
+      "context": "Primera emisión británica de 1841; ejemplar sin perforar",
+      "original": null,
+      "observations": "Esquema de un sello imperforado; pendiente cotejo del grabado.",
+      "id": "FIL-01",
+      "name": "Penny Red",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 1,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": true,
+      "stage": "OBJ-01",
+      "history": {
+        "identity": "Penny Red británico sin dentar",
+        "culture": "Reino Unido",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1841,
+        "date": "1841",
+        "material": "Papel y tinta roja",
+        "diagnostic": "Retrato y márgenes lisos",
+        "culturalContext": "Emisión postal británica anterior al dentado de series posteriores.",
+        "compatibility": "Compatible con 1842",
+        "treatment": "Interpretación artística",
+        "note": "Conservado de OBJ-01; leyendas en síntesis gráfica.",
+        "source": "https://www.postalmuseum.org/"
+      },
+      "chronology": {
+        "status": "Compatible con 1842",
+        "evidence": "1841",
+        "source": "https://www.postalmuseum.org/"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-01/clasica-64.webp",
+            "bytes": 1584
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-01/clasica-128.webp",
+            "bytes": 5020
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-01/clasica-256.webp",
+            "bytes": 19460
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-01/clasica-512.webp",
+            "bytes": 60482
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-01/inventario-64.webp",
+            "bytes": 1680
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-01/inventario-128.webp",
+            "bytes": 5432
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-01/inventario-256.webp",
+            "bytes": 14374
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-01/inventario-512.webp",
+            "bytes": 36002
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Filatelia",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "Europa",
+      "provenance": "Francia",
+      "acquisition": "Comercio e intercambio",
+      "description": "Sello con figura alegórica de la república",
+      "material": "papel impreso",
+      "context": "Futuro · Ceres francesa, 1849",
+      "original": null,
+      "observations": null,
+      "id": "FIL-02",
+      "name": "Ceres francesa",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 1,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Cérès de 20 céntimos",
+        "culture": "Francia",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1849,
+        "date": "1849",
+        "material": "Papel y tinta negra",
+        "diagnostic": "Cabeza alegórica y borde imperforado",
+        "culturalContext": "Primera serie postal francesa.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Cotejar los marcos grabados; se mantiene el ejemplar posterior.",
+        "source": "https://www.laposte.fr/musee"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1849",
+        "source": "https://www.laposte.fr/musee"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-02/clasica-64.webp",
+            "bytes": 1630
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-02/clasica-128.webp",
+            "bytes": 4994
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-02/clasica-256.webp",
+            "bytes": 18420
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-02/clasica-512.webp",
+            "bytes": 56256
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-02/inventario-64.webp",
+            "bytes": 1822
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-02/inventario-128.webp",
+            "bytes": 5516
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-02/inventario-256.webp",
+            "bytes": 13998
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-02/inventario-512.webp",
+            "bytes": 33746
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Filatelia",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "América del Norte",
+      "provenance": "Estados Unidos",
+      "acquisition": "Comercio e intercambio",
+      "description": "Sello de primera emisión nacional",
+      "material": "papel impreso",
+      "context": "Futuro · Emisión estadounidense, 1847",
+      "original": null,
+      "observations": null,
+      "id": "FIL-03",
+      "name": "Cinco centavos Franklin",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 1,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Franklin de cinco centavos",
+        "culture": "Estados Unidos",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1847,
+        "date": "1847",
+        "material": "Papel y tinta parda",
+        "diagnostic": "Retrato y margen imperforado",
+        "culturalContext": "Una de las primeras emisiones generales de EE. UU.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Cotejar el grabado y el valor impreso.",
+        "source": "https://postalmuseum.si.edu/object/npm_0.260305.151.11.2"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1847",
+        "source": "https://postalmuseum.si.edu/object/npm_0.260305.151.11.2"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-03/clasica-64.webp",
+            "bytes": 1754
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-03/clasica-128.webp",
+            "bytes": 5168
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-03/clasica-256.webp",
+            "bytes": 19272
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-03/clasica-512.webp",
+            "bytes": 69272
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-03/inventario-64.webp",
+            "bytes": 2002
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-03/inventario-128.webp",
+            "bytes": 5748
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-03/inventario-256.webp",
+            "bytes": 16078
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-03/inventario-512.webp",
+            "bytes": 43686
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Filatelia",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "América del Norte",
+      "provenance": "Canadá",
+      "acquisition": "Comercio e intercambio",
+      "description": "Sello antiguo con fauna del país",
+      "material": "papel impreso",
+      "context": "Futuro · Sello canadiense, 1851",
+      "original": null,
+      "observations": null,
+      "id": "FIL-04",
+      "name": "Castor canadiense",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 1,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Castor de tres peniques",
+        "culture": "Provincia de Canadá",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1851,
+        "date": "1851",
+        "material": "Papel y tinta rojiza",
+        "diagnostic": "Formato apaisado y castor en paisaje",
+        "culturalContext": "Emisión postal canadiense temprana.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Márgenes lisos; el texto no se valida en el sprite.",
+        "source": "https://www.historymuseum.ca/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1851",
+        "source": "https://www.historymuseum.ca/"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-04/clasica-64.webp",
+            "bytes": 1688
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-04/clasica-128.webp",
+            "bytes": 5048
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-04/clasica-256.webp",
+            "bytes": 18712
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-04/clasica-512.webp",
+            "bytes": 64908
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-04/inventario-64.webp",
+            "bytes": 1934
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-04/inventario-128.webp",
+            "bytes": 5702
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-04/inventario-256.webp",
+            "bytes": 15694
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-04/inventario-512.webp",
+            "bytes": 41944
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Filatelia",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "América del Sur",
+      "provenance": "Chile",
+      "acquisition": "Comercio e intercambio",
+      "description": "Sello de las primeras emisiones chilenas",
+      "material": "papel impreso",
+      "context": "Futuro · Primera emisión chilena, 1853",
+      "original": null,
+      "observations": null,
+      "id": "FIL-05",
+      "name": "Colón chileno",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 1,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Colón de cinco centavos",
+        "culture": "Chile",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1853,
+        "date": "1853",
+        "material": "Papel y tinta rojiza",
+        "diagnostic": "Retrato de Colón y borde imperforado",
+        "culturalContext": "Primera serie postal de Chile.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Revisar perfil, color y textos del tipo de 1853.",
+        "source": "https://www.bibliotecanacionaldigital.gob.cl/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1853",
+        "source": "https://www.bibliotecanacionaldigital.gob.cl/"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-05/clasica-64.webp",
+            "bytes": 1694
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-05/clasica-128.webp",
+            "bytes": 4862
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-05/clasica-256.webp",
+            "bytes": 17958
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-05/clasica-512.webp",
+            "bytes": 61184
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-05/inventario-64.webp",
+            "bytes": 1944
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-05/inventario-128.webp",
+            "bytes": 5424
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-05/inventario-256.webp",
+            "bytes": 14580
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-05/inventario-512.webp",
+            "bytes": 36690
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Filatelia",
+      "rarity": "Poco común",
+      "tier": null,
+      "continent": "Asia",
+      "provenance": "Japón",
+      "acquisition": "Comercio e intercambio",
+      "description": "Sello temprano del sistema postal japonés",
+      "material": "papel impreso",
+      "context": "Futuro · Primera emisión japonesa, 1871",
+      "original": null,
+      "observations": null,
+      "id": "FIL-06",
+      "name": "Dragón japonés",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 2,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Dragón de la primera serie postal",
+        "culture": "Japón Meiji",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1871,
+        "date": "1871",
+        "material": "Papel y tinta",
+        "diagnostic": "Dragones laterales con panel central",
+        "culturalContext": "Primera emisión postal japonesa.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "El diseño es una aproximación; denominación y color por confirmar.",
+        "source": "https://postalmuseum.si.edu/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1871",
+        "source": "https://postalmuseum.si.edu/"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-06/clasica-64.webp",
+            "bytes": 1772
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-06/clasica-128.webp",
+            "bytes": 5058
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-06/clasica-256.webp",
+            "bytes": 18508
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-06/clasica-512.webp",
+            "bytes": 60970
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-06/inventario-64.webp",
+            "bytes": 2038
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-06/inventario-128.webp",
+            "bytes": 5808
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-06/inventario-256.webp",
+            "bytes": 16024
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-06/inventario-512.webp",
+            "bytes": 41298
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Filatelia",
+      "rarity": "Poco común",
+      "tier": null,
+      "continent": "Asia",
+      "provenance": "India británica",
+      "acquisition": "Comercio e intercambio",
+      "description": "Emisión postal histórica de Sind",
+      "material": "papel impreso",
+      "context": "Futuro · Emisión de 1852",
+      "original": null,
+      "observations": null,
+      "id": "FIL-07",
+      "name": "Scinde Dawk",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 2,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Scinde Dawk, variante roja",
+        "culture": "Administración colonial de Sind",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1852,
+        "date": "1852",
+        "material": "Oblea lacrada",
+        "diagnostic": "Disco rojo con impronta central",
+        "culturalContext": "Marca postal de Sind, entonces bajo administración británica.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Se representa la variante de lacre como modelo.",
+        "source": "https://postalmuseum.si.edu/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1852",
+        "source": "https://postalmuseum.si.edu/"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-07/clasica-64.webp",
+            "bytes": 1896
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-07/clasica-128.webp",
+            "bytes": 5648
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-07/clasica-256.webp",
+            "bytes": 21568
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-07/clasica-512.webp",
+            "bytes": 63622
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-07/inventario-64.webp",
+            "bytes": 2104
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-07/inventario-128.webp",
+            "bytes": 5948
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-07/inventario-256.webp",
+            "bytes": 16014
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-07/inventario-512.webp",
+            "bytes": 39650
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Filatelia",
+      "rarity": "Poco común",
+      "tier": null,
+      "continent": "Oceanía",
+      "provenance": "Nueva Gales del Sur, Australia",
+      "acquisition": "Comercio e intercambio",
+      "description": "Sello colonial con vista de Sídney",
+      "material": "papel impreso",
+      "context": "Futuro · Sydney Views, 1850",
+      "original": null,
+      "observations": null,
+      "id": "FIL-08",
+      "name": "Sydney Views",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 2,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Sydney Views de un penique",
+        "culture": "Nueva Gales del Sur",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1850,
+        "date": "1850",
+        "material": "Papel y tinta roja",
+        "diagnostic": "Paisaje portuario en marco oval",
+        "culturalContext": "Emisión de Nueva Gales del Sur.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Revisar el motivo alegórico y el marco específico.",
+        "source": "https://www.sl.nsw.gov.au/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1850",
+        "source": "https://www.sl.nsw.gov.au/"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-08/clasica-64.webp",
+            "bytes": 1616
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-08/clasica-128.webp",
+            "bytes": 4830
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-08/clasica-256.webp",
+            "bytes": 17464
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-08/clasica-512.webp",
+            "bytes": 60794
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-08/inventario-64.webp",
+            "bytes": 1872
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-08/inventario-128.webp",
+            "bytes": 5394
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-08/inventario-256.webp",
+            "bytes": 14740
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-08/inventario-512.webp",
+            "bytes": 38914
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Filatelia",
+      "rarity": "Poco común",
+      "tier": null,
+      "continent": "Europa",
+      "provenance": "Reino Unido",
+      "acquisition": "Comercio e intercambio",
+      "description": "Primer sello postal adhesivo de uso general",
+      "material": "papel impreso",
+      "context": "Emisión británica de 1840",
+      "original": null,
+      "observations": null,
+      "id": "FIL-09",
+      "name": "Penny Black",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 2,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Penny Black británico",
+        "culture": "Reino Unido",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1840,
+        "date": "1840",
+        "material": "Papel y tinta negra",
+        "diagnostic": "Retrato de Victoria y márgenes lisos",
+        "culturalContext": "Emisión postal adhesiva británica.",
+        "compatibility": "Compatible con 1842",
+        "treatment": "Interpretación artística",
+        "note": "Una cara diagnóstica con marcas de esquina esquemáticas.",
+        "source": "https://www.postalmuseum.org/"
+      },
+      "chronology": {
+        "status": "Compatible con 1842",
+        "evidence": "1840",
+        "source": "https://www.postalmuseum.org/"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-09/clasica-64.webp",
+            "bytes": 1878
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-09/clasica-128.webp",
+            "bytes": 5582
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-09/clasica-256.webp",
+            "bytes": 20798
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-09/clasica-512.webp",
+            "bytes": 69958
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-09/inventario-64.webp",
+            "bytes": 2022
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-09/inventario-128.webp",
+            "bytes": 5944
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-09/inventario-256.webp",
+            "bytes": 17414
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-09/inventario-512.webp",
+            "bytes": 42212
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Filatelia",
+      "rarity": "Raro",
+      "tier": null,
+      "continent": "América del Sur",
+      "provenance": "Brasil",
+      "acquisition": "Comercio e intercambio",
+      "description": "Emisión postal sudamericana temprana",
+      "material": "papel impreso",
+      "context": "Futuro · Emisión brasileña, 1843",
+      "original": null,
+      "observations": null,
+      "id": "FIL-10",
+      "name": "Ojo de Buey brasileño",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 4,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Ojo de Buey de 30 réis",
+        "culture": "Brasil imperial",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1843,
+        "date": "1843",
+        "material": "Papel y tinta oscura",
+        "diagnostic": "Valor grande sobre óvalo de guilloché",
+        "culturalContext": "Primera emisión de sellos de Brasil.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Papel imperforado; cotejar numerales y marco.",
+        "source": "https://postalmuseum.si.edu/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1843",
+        "source": "https://postalmuseum.si.edu/"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-10/clasica-64.webp",
+            "bytes": 1700
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-10/clasica-128.webp",
+            "bytes": 5090
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-10/clasica-256.webp",
+            "bytes": 19938
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-10/clasica-512.webp",
+            "bytes": 70544
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-10/inventario-64.webp",
+            "bytes": 1954
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-10/inventario-128.webp",
+            "bytes": 6018
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-10/inventario-256.webp",
+            "bytes": 17420
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-10/inventario-512.webp",
+            "bytes": 47022
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Filatelia",
+      "rarity": "Raro",
+      "tier": null,
+      "continent": "África",
+      "provenance": "Sudáfrica",
+      "acquisition": "Comercio e intercambio",
+      "description": "Sello conocido por su peculiar forma triangular",
+      "material": "papel impreso",
+      "context": "Futuro · Emisión del Cabo, 1853",
+      "original": null,
+      "observations": null,
+      "id": "FIL-11",
+      "name": "Triangular del Cabo",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 4,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Triangular del Cabo de un penique",
+        "culture": "Colonia del Cabo",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1853,
+        "date": "1853",
+        "material": "Papel y tinta roja",
+        "diagnostic": "Triángulo, alegoría de la Esperanza y ancla",
+        "culturalContext": "Emisión temprana de la Colonia del Cabo.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Cotejar la figura recostada y el borde.",
+        "source": "https://postalmuseum.si.edu/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1853",
+        "source": "https://postalmuseum.si.edu/"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-11/clasica-64.webp",
+            "bytes": 1316
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-11/clasica-128.webp",
+            "bytes": 3314
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-11/clasica-256.webp",
+            "bytes": 9420
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-11/clasica-512.webp",
+            "bytes": 26446
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-11/inventario-64.webp",
+            "bytes": 1416
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-11/inventario-128.webp",
+            "bytes": 3340
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-11/inventario-256.webp",
+            "bytes": 7328
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-11/inventario-512.webp",
+            "bytes": 19074
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Filatelia",
+      "rarity": "Muy raro",
+      "tier": null,
+      "continent": "África",
+      "provenance": "Mauricio",
+      "acquisition": "Comercio e intercambio",
+      "description": "Réplica de sello histórico de gran rareza",
+      "material": "papel impreso",
+      "context": "Futuro · Mauritius Post Office, 1847",
+      "original": null,
+      "observations": null,
+      "id": "FIL-12",
+      "name": "Mauritius Post Office",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 8,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Mauritius Post Office de dos peniques",
+        "culture": "Mauricio colonial",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1847,
+        "date": "1847",
+        "material": "Papel y tinta azul",
+        "diagnostic": "Perfil de Victoria en rectángulo imperforado",
+        "culturalContext": "Ejemplar de la primera emisión local de Mauricio.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "La inscripción postal concreta queda por comprobar a escala ampliada.",
+        "source": "https://www.bl.uk/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1847",
+        "source": "https://www.bl.uk/"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-12/clasica-64.webp",
+            "bytes": 1412
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-12/clasica-128.webp",
+            "bytes": 4518
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-12/clasica-256.webp",
+            "bytes": 16182
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-12/clasica-512.webp",
+            "bytes": 49050
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-12/inventario-64.webp",
+            "bytes": 1562
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-12/inventario-128.webp",
+            "bytes": 4886
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-12/inventario-256.webp",
+            "bytes": 12236
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-12/inventario-512.webp",
+            "bytes": 28856
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia natural y exploración",
+      "collection": "Instrumentos de exploración",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "Europa",
+      "provenance": "Francia",
+      "acquisition": "Investigación y comercio",
+      "description": "Instrumento portátil para presión atmosférica",
+      "material": "material mixto",
+      "context": "Futuro · barómetro aneroide de Vidi, 1844",
+      "original": null,
+      "observations": "Referencia de un aneroide Vidi posterior a 1842. Reservar para contenido futuro.",
+      "id": "INS-05",
+      "name": "Barómetro aneroide",
+      "type": "Coleccionable propuesto",
+      "family": "Instrumentos científicos",
+      "points": 1,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "pilot": false,
+      "stage": "OBJ-02",
+      "natural": {
+        "identity": "Barómetro aneroide de Vidi",
+        "classification": "Meteorología",
+        "material": "Cápsula metálica y mecanismo",
+        "dimensions": "Dimensión del ejemplar por verificar",
+        "length": null,
+        "diagnostic": "Dial circular accionado por cápsula.",
+        "science": "La deformación de una cápsula bajo presión mueve la aguja.",
+        "history": "Patentes de Vidi de 1843–1844.",
+        "status": "posterior",
+        "acquisition": "Registro, modelo o intercambio de gabinete.",
+        "note": "Distinguir del barómetro de columna de mercurio.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/people/cp71753/lucien-vidie",
+        "species": null,
+        "association": "Asociación documental por identificación o procedencia."
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Patentes de Vidi de 1843–1844.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/people/cp71753/lucien-vidie"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-05/clasica-64.webp",
+            "bytes": 2114
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-05/clasica-128.webp",
+            "bytes": 5496
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-05/clasica-256.webp",
+            "bytes": 17674
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-05/clasica-512.webp",
+            "bytes": 49212
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-05/inventario-64.webp",
+            "bytes": 2306
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-05/inventario-128.webp",
+            "bytes": 5872
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-05/inventario-256.webp",
+            "bytes": 15746
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-05/inventario-512.webp",
+            "bytes": 39650
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Geología",
+      "collection": "Rocas y formaciones geológicas",
+      "rarity": "Muy raro",
+      "tier": null,
+      "continent": "África",
+      "provenance": "Sudáfrica",
+      "acquisition": "Documentación de gabinete",
+      "description": "Facsímil de brecha volcánica de chimenea diamantífera",
+      "material": "roca",
+      "context": "Futuro · hallazgos de Kimberley en la década de 1870",
+      "original": null,
+      "observations": null,
+      "family": "Minerales y piedras preciosas",
+      "id": "ROC-12",
+      "name": "Kimberlita de Kimberley",
+      "exhibit": "Lámina, reproducción o ejemplar histórico conservado",
+      "points": 8,
+      "type": "Coleccionable propuesto",
+      "pilot": false,
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca ígnea ultramáfica · kimberlita",
+        "composition": "Olivino alterado, carbonatos y otros minerales",
+        "structure": "Brecha o matriz volcánica con xenolitos",
+        "diagnostic": "Clastos y matriz contrastan sin implicar presencia de diamante",
+        "history": "Futuro · contexto de los hallazgos de Kimberley en la década de 1870.",
+        "plate": "Trozos de roca, sin adornos.",
+        "source": "https://www.gia.edu/gems-gemology/winter-2018-how-diamonds-form"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · contexto de los hallazgos de Kimberley en la década de 1870.",
+        "source": "https://www.gia.edu/gems-gemology/winter-2018-how-diamonds-form"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-12/clasica-64.webp",
+            "bytes": 2056
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-12/clasica-128.webp",
+            "bytes": 5278
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-12/clasica-256.webp",
+            "bytes": 16420
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-12/clasica-512.webp",
+            "bytes": 45664
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-12/inventario-64.webp",
+            "bytes": 2074
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-12/inventario-128.webp",
+            "bytes": 5750
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-12/inventario-256.webp",
+            "bytes": 13138
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-12/inventario-512.webp",
+            "bytes": 31416
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Medallas y condecoraciones históricas",
+      "rarity": "Poco común",
+      "tier": null,
+      "continent": "África",
+      "provenance": "Túnez",
+      "acquisition": "Documentación de gabinete",
+      "description": "Insignia de la orden del Mérito del bey",
+      "material": "metal acuñado",
+      "context": "Futuro · orden instituida en 1860",
+      "original": null,
+      "observations": null,
+      "family": "Artefactos históricos",
+      "id": "MED-08",
+      "name": "Insignia de la Orden del Mérito tunecina",
+      "exhibit": "Lámina, reproducción o ejemplar histórico conservado",
+      "points": 2,
+      "type": "Coleccionable propuesto",
+      "pilot": false,
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Insignia tunecina del Mérito de tipo posterior",
+        "culture": "Beylicato de Túnez",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1860,
+        "date": "Modelo posterior; antecedente museístico de 1902–1906",
+        "material": "Metal y esmalte",
+        "diagnostic": "Estrella radial y cartela central",
+        "culturalContext": "La orden tiene antecedentes en la década de 1830. El rótulo posterior se aplica al modelo de insignia.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Rotular como futura; comprobar grado, fecha y motivo de la cartela.",
+        "source": "https://americanhistory.si.edu/collections/object/nmah_963454"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Modelo posterior; antecedente museístico de 1902–1906",
+        "source": "https://americanhistory.si.edu/collections/object/nmah_963454"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-08/clasica-64.webp",
+            "bytes": 2912
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-08/clasica-128.webp",
+            "bytes": 7580
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-08/clasica-256.webp",
+            "bytes": 24806
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-08/clasica-512.webp",
+            "bytes": 72470
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-08/inventario-64.webp",
+            "bytes": 2970
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-08/inventario-128.webp",
+            "bytes": 8168
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-08/inventario-256.webp",
+            "bytes": 23758
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-08/inventario-512.webp",
+            "bytes": 62724
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    }
+  ],
+  "substitutions": [
+    {
+      "old": "MET-01",
+      "id": "MET-13",
+      "oldName": "Meteorito de Nantan",
+      "name": "Meteorito de L’Aigle",
+      "reason": "Futuro · hallazgo catalogado en 1958. Asociación con un relato de 1516 incierta.",
+      "collection": "Meteoritos",
+      "rarity": "Común",
+      "points": 1,
+      "provenance": "Orne, Francia",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12434",
+      "before": "objetos-cientificos/arte/MET-01/inventario-128.webp",
+      "after": "objetos-cientificos/arte/MET-13/inventario-128.webp"
+    },
+    {
+      "old": "MET-03",
+      "id": "MET-14",
+      "oldName": "Meteorito de Allende",
+      "name": "Meteorito de Wold Cottage",
+      "reason": "Futuro · caída de 1969.",
+      "collection": "Meteoritos",
+      "rarity": "Común",
+      "points": 1,
+      "provenance": "Yorkshire, Reino Unido",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=24325",
+      "before": "objetos-cientificos/arte/MET-03/inventario-128.webp",
+      "after": "objetos-cientificos/arte/MET-14/inventario-128.webp"
+    },
+    {
+      "old": "MET-04",
+      "id": "MET-15",
+      "oldName": "Meteorito de Murchison",
+      "name": "Meteorito de Benares",
+      "reason": "Futuro · caída de 1969.",
+      "collection": "Meteoritos",
+      "rarity": "Común",
+      "points": 1,
+      "provenance": "Uttar Pradesh, India",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=5011",
+      "before": "objetos-cientificos/arte/MET-04/inventario-128.webp",
+      "after": "objetos-cientificos/arte/MET-15/inventario-128.webp"
+    },
+    {
+      "old": "MET-05",
+      "id": "MET-16",
+      "oldName": "Meteorito de Cheliábinsk",
+      "name": "Meteorito de Weston",
+      "reason": "Futuro · caída de 2013.",
+      "collection": "Meteoritos",
+      "rarity": "Común",
+      "points": 1,
+      "provenance": "Connecticut, Estados Unidos",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=24249",
+      "before": "objetos-cientificos/arte/MET-05/inventario-128.webp",
+      "after": "objetos-cientificos/arte/MET-16/inventario-128.webp"
+    },
+    {
+      "old": "MET-08",
+      "id": "MET-17",
+      "oldName": "Meteorito Sikhote-Alin",
+      "name": "Meteorito de Chassigny",
+      "reason": "Futuro · caída de 1947.",
+      "collection": "Meteoritos",
+      "rarity": "Poco común",
+      "points": 2,
+      "provenance": "Haute-Marne, Francia",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=5331",
+      "before": "objetos-cientificos/arte/MET-08/inventario-128.webp",
+      "after": "objetos-cientificos/arte/MET-17/inventario-128.webp"
+    },
+    {
+      "old": "MET-10",
+      "id": "MET-18",
+      "oldName": "Meteorito Fukang",
+      "name": "Meteorito de Krasnojarsk",
+      "reason": "Futuro · hallazgo catalogado en 2000.",
+      "collection": "Meteoritos",
+      "rarity": "Raro",
+      "points": 4,
+      "provenance": "Siberia, Rusia",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12356",
+      "before": "objetos-cientificos/arte/MET-10/inventario-128.webp",
+      "after": "objetos-cientificos/arte/MET-18/inventario-128.webp"
+    },
+    {
+      "old": "MET-11",
+      "id": "MET-19",
+      "oldName": "Meteorito de Hoba",
+      "name": "Meteorito de Alais",
+      "reason": "Futuro · hallazgo de 1920.",
+      "collection": "Meteoritos",
+      "rarity": "Raro",
+      "points": 4,
+      "provenance": "Gard, Francia",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=448",
+      "before": "objetos-cientificos/arte/MET-11/inventario-128.webp",
+      "after": "objetos-cientificos/arte/MET-19/inventario-128.webp"
+    },
+    {
+      "old": "MET-12",
+      "id": "MET-20",
+      "oldName": "Meteorito ALH 84001",
+      "name": "Meteorito de Stannern",
+      "reason": "Futuro · hallazgo de 1984.",
+      "collection": "Meteoritos",
+      "rarity": "Muy raro",
+      "points": 8,
+      "provenance": "Moravia, Chequia",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=23713",
+      "before": "objetos-cientificos/arte/MET-12/inventario-128.webp",
+      "after": "objetos-cientificos/arte/MET-20/inventario-128.webp"
+    },
+    {
+      "old": "CUR-04",
+      "id": "CUR-13",
+      "oldName": "Flotador de vidrio",
+      "name": "Flotador pesquero de corcho",
+      "reason": "Futuro · el uso japonés está documentado desde 1910.",
+      "collection": "Curiosidades de marineros",
+      "rarity": "Común",
+      "points": 1,
+      "provenance": "Litoral atlántico europeo",
+      "source": "https://www.fishingmuseum.org.uk/floats_overview.html",
+      "before": "objetos-cientificos/arte/CUR-04/inventario-128.webp",
+      "after": "objetos-cientificos/arte/CUR-13/inventario-128.webp"
+    },
+    {
+      "old": "NUM-09",
+      "id": "NUM-13",
+      "oldName": "Birr etíope antiguo",
+      "name": "Tálero de María Teresa",
+      "reason": "Década de 1890",
+      "collection": "Numismática",
+      "rarity": "Poco común",
+      "points": 2,
+      "provenance": "Günzburg, territorios de los Habsburgo",
+      "source": "https://www.metmuseum.org/art/collection/search/237844",
+      "before": "objetos-cientificos/arte/NUM-09/inventario-128.webp",
+      "after": "objetos-cientificos/arte/NUM-13/inventario-128.webp"
+    },
+    {
+      "old": "FIL-01",
+      "id": "ARM-01",
+      "oldName": "Penny Red",
+      "name": "Khopesh egipcio",
+      "reason": "Sustitución de la colección por Armería histórica.",
+      "collection": "Armería histórica",
+      "rarity": "Común",
+      "points": 1,
+      "provenance": "Egipto",
+      "source": "https://collections.carlos.emory.edu/objects/12783/sickle-sword",
+      "before": "objetos-cientificos/arte/FIL-01/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ARM-01/inventario-128.webp"
+    },
+    {
+      "old": "FIL-02",
+      "id": "ARM-02",
+      "oldName": "Ceres francesa",
+      "name": "Casco corintio",
+      "reason": "Sustitución de la colección por Armería histórica.",
+      "collection": "Armería histórica",
+      "rarity": "Común",
+      "points": 1,
+      "provenance": "Grecia",
+      "source": "https://www.metmuseum.org/art/collection/search/250921",
+      "before": "objetos-cientificos/arte/FIL-02/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ARM-02/inventario-128.webp"
+    },
+    {
+      "old": "FIL-03",
+      "id": "ARM-03",
+      "oldName": "Cinco centavos Franklin",
+      "name": "Gladius romano",
+      "reason": "Sustitución de la colección por Armería histórica.",
+      "collection": "Armería histórica",
+      "rarity": "Común",
+      "points": 1,
+      "provenance": "Provincias romanas",
+      "source": "https://artsandculture.google.com/asset/the-sword-of-tiberius/MQFxR30oimm1hw?hl=en",
+      "before": "objetos-cientificos/arte/FIL-03/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ARM-03/inventario-128.webp"
+    },
+    {
+      "old": "FIL-04",
+      "id": "ARM-04",
+      "oldName": "Castor canadiense",
+      "name": "Armadura samurái",
+      "reason": "Sustitución de la colección por Armería histórica.",
+      "collection": "Armería histórica",
+      "rarity": "Común",
+      "points": 1,
+      "provenance": "Japón",
+      "source": "https://www.metmuseum.org/exhibitions/listings/2009/art-of-the-samurai/photo-gallery",
+      "before": "objetos-cientificos/arte/FIL-04/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ARM-04/inventario-128.webp"
+    },
+    {
+      "old": "FIL-05",
+      "id": "ARM-05",
+      "oldName": "Colón chileno",
+      "name": "Jian chino",
+      "reason": "Sustitución de la colección por Armería histórica.",
+      "collection": "Armería histórica",
+      "rarity": "Común",
+      "points": 1,
+      "provenance": "China",
+      "source": "https://worcester.emuseum.com/objects/49886/jian-sword",
+      "before": "objetos-cientificos/arte/FIL-05/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ARM-05/inventario-128.webp"
+    },
+    {
+      "old": "FIL-06",
+      "id": "ARM-06",
+      "oldName": "Dragón japonés",
+      "name": "Keris indonesio",
+      "reason": "Sustitución de la colección por Armería histórica.",
+      "collection": "Armería histórica",
+      "rarity": "Poco común",
+      "points": 2,
+      "provenance": "Bali, Indonesia",
+      "source": "https://www.metmuseum.org/art/collection/search/24312",
+      "before": "objetos-cientificos/arte/FIL-06/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ARM-06/inventario-128.webp"
+    },
+    {
+      "old": "FIL-07",
+      "id": "ARM-07",
+      "oldName": "Scinde Dawk",
+      "name": "Cota de malla europea",
+      "reason": "Sustitución de la colección por Armería histórica.",
+      "collection": "Armería histórica",
+      "rarity": "Poco común",
+      "points": 2,
+      "provenance": "Europa central",
+      "source": "https://www.metmuseum.org/art/collection/search/31958",
+      "before": "objetos-cientificos/arte/FIL-07/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ARM-07/inventario-128.webp"
+    },
+    {
+      "old": "FIL-08",
+      "id": "ARM-08",
+      "oldName": "Sydney Views",
+      "name": "Espada ropera española",
+      "reason": "Sustitución de la colección por Armería histórica.",
+      "collection": "Armería histórica",
+      "rarity": "Poco común",
+      "points": 2,
+      "provenance": "España",
+      "source": "https://www.metmuseum.org/art/collection/search/27408",
+      "before": "objetos-cientificos/arte/FIL-08/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ARM-08/inventario-128.webp"
+    },
+    {
+      "old": "FIL-09",
+      "id": "ARM-09",
+      "oldName": "Penny Black",
+      "name": "Sable otomano ceremonial",
+      "reason": "Sustitución de la colección por Armería histórica.",
+      "collection": "Armería histórica",
+      "rarity": "Poco común",
+      "points": 2,
+      "provenance": "Anatolia",
+      "source": "https://www.metmuseum.org/essays/islamic-arms-and-armor",
+      "before": "objetos-cientificos/arte/FIL-09/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ARM-09/inventario-128.webp"
+    },
+    {
+      "old": "FIL-10",
+      "id": "ARM-10",
+      "oldName": "Ojo de Buey brasileño",
+      "name": "Escudo zulú",
+      "reason": "Sustitución de la colección por Armería histórica.",
+      "collection": "Armería histórica",
+      "rarity": "Raro",
+      "points": 4,
+      "provenance": "KwaZulu-Natal, Sudáfrica",
+      "source": "https://www.era.anthropology.ac.uk/Era_Resources/Era/Pitt_Rivers/shieweap/shcurinf/currinf23.html",
+      "before": "objetos-cientificos/arte/FIL-10/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ARM-10/inventario-128.webp"
+    },
+    {
+      "old": "FIL-11",
+      "id": "ARM-11",
+      "oldName": "Triangular del Cabo",
+      "name": "Chimalli mexica",
+      "reason": "Sustitución de la colección por Armería histórica.",
+      "collection": "Armería histórica",
+      "rarity": "Raro",
+      "points": 4,
+      "provenance": "Valle de México",
+      "source": "https://mnh.inah.gob.mx/chimalli-tesoro-de-moctezuma-en-chapultepec",
+      "before": "objetos-cientificos/arte/FIL-11/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ARM-11/inventario-128.webp"
+    },
+    {
+      "old": "FIL-12",
+      "id": "ARM-12",
+      "oldName": "Mauritius Post Office",
+      "name": "Clava mapuche ceremonial",
+      "reason": "Sustitución de la colección por Armería histórica.",
+      "collection": "Armería histórica",
+      "rarity": "Muy raro",
+      "points": 8,
+      "provenance": "Centro-sur de Chile",
+      "source": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-7-3525",
+      "before": "objetos-cientificos/arte/FIL-12/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ARM-12/inventario-128.webp"
+    },
+    {
+      "old": "INS-05",
+      "id": "INS-13",
+      "oldName": "Barómetro aneroide",
+      "name": "Barómetro de mercurio de gabinete",
+      "reason": "Patentes de Vidi de 1843–1844.",
+      "collection": "Instrumentos de exploración",
+      "rarity": "Común",
+      "points": 1,
+      "provenance": "Reino Unido",
+      "source": "https://collection.sciencemuseumgroup.org.uk/objects/co8408198/mercury-stick-barometer-by-baptist-ronchetti-mercury-barometer",
+      "before": "objetos-cientificos/arte/INS-05/inventario-128.webp",
+      "after": "objetos-cientificos/arte/INS-13/inventario-128.webp"
+    },
+    {
+      "old": "ROC-12",
+      "id": "ROC-13",
+      "oldName": "Kimberlita de Kimberley",
+      "name": "Basalto olivínico escocés",
+      "reason": "Futuro · contexto de los hallazgos de Kimberley en la década de 1870.",
+      "collection": "Rocas y formaciones geológicas",
+      "rarity": "Muy raro",
+      "points": 8,
+      "provenance": "Escocia, Reino Unido",
+      "source": "https://www.lindahall.org/experience/digital-exhibitions/vulcans-forge-and-fingals-cave/section-xv/56-lava-whinstone-and-sir-james-hall-1805",
+      "before": "objetos-cientificos/arte/ROC-12/inventario-128.webp",
+      "after": "objetos-cientificos/arte/ROC-13/inventario-128.webp"
+    },
+    {
+      "old": "MED-08",
+      "id": "MED-13",
+      "oldName": "Insignia de la Orden del Mérito tunecina",
+      "name": "Insignia civil de la Orden de Leopoldo",
+      "reason": "Modelo posterior; antecedente museístico de 1902–1906",
+      "collection": "Medallas y condecoraciones históricas",
+      "rarity": "Poco común",
+      "points": 2,
+      "provenance": "Bélgica",
+      "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-202791",
+      "before": "objetos-cientificos/arte/MED-08/inventario-128.webp",
+      "after": "objetos-cientificos/arte/MED-13/inventario-128.webp"
+    }
+  ],
   "tradeRoutes": [
     {
       "name": "Cabotaje de suministros",
@@ -11480,71 +13813,73 @@ globalThis.AtlasObjetosCientificos = {
       "collection": "Meteoritos",
       "rarity": "Común",
       "tier": null,
-      "continent": "Asia",
-      "provenance": "Guangxi, China",
-      "acquisition": "Investigación geológica",
-      "description": "Meteoroide metálico fragmentado",
-      "material": "material meteórico",
-      "context": "Fecha del ejemplar por verificar",
+      "continent": "Europa",
+      "provenance": "Orne, Francia",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Costra oscura y sección gris.",
+      "material": "Condrita ordinaria L6",
+      "context": "Caída observada en 1803.",
       "original": null,
       "observations": null,
-      "id": "MET-01",
-      "name": "Meteorito de Nantan",
+      "id": "MET-13",
+      "name": "Meteorito de L’Aigle",
       "type": "Coleccionable propuesto",
       "family": "Minerales y piedras preciosas",
       "points": 1,
       "exhibit": "Réplica de fragmento",
+      "reference": "https://www.lpi.usra.edu/meteor/metbull.php?code=12434",
+      "compatibility": "compatible",
       "pilot": false,
-      "stage": "OBJ-07",
+      "stage": "OBJ-11",
       "geology": {
-        "classification": "Meteorito metálico · hierro IAB-MG",
-        "composition": "Aleación Fe-Ni",
-        "structure": "Fragmento metálico meteorizado",
-        "diagnostic": "Óxidos y superficie irregular",
-        "history": "Futuro · hallazgo catalogado en 1958. Asociación con un relato de 1516 incierta.",
-        "plate": "Se representa un fragmento oxidado interpretativo.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16906"
+        "classification": "Condrita ordinaria L6",
+        "composition": "Condrita ordinaria L6",
+        "structure": "Costra oscura y sección gris.",
+        "diagnostic": "Costra oscura y sección gris.",
+        "history": "Caída observada en 1803.",
+        "plate": "Interpretación del ejemplar de referencia.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12434"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · hallazgo catalogado en 1958. Asociación con un relato de 1516 incierta.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16906"
+        "status": "Compatible con 1842",
+        "evidence": "Caída observada en 1803.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12434"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-01/clasica-64.webp",
-            "bytes": 1932
+            "src": "objetos-cientificos/arte/MET-13/clasica-64.webp",
+            "bytes": 2592
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-01/clasica-128.webp",
-            "bytes": 4922
+            "src": "objetos-cientificos/arte/MET-13/clasica-128.webp",
+            "bytes": 6872
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-01/clasica-256.webp",
-            "bytes": 14832
+            "src": "objetos-cientificos/arte/MET-13/clasica-256.webp",
+            "bytes": 22298
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-01/clasica-512.webp",
-            "bytes": 40208
+            "src": "objetos-cientificos/arte/MET-13/clasica-512.webp",
+            "bytes": 75990
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-01/inventario-64.webp",
-            "bytes": 2028
+            "src": "objetos-cientificos/arte/MET-13/inventario-64.webp",
+            "bytes": 2704
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-01/inventario-128.webp",
-            "bytes": 5108
+            "src": "objetos-cientificos/arte/MET-13/inventario-128.webp",
+            "bytes": 7592
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-01/inventario-256.webp",
-            "bytes": 11448
+            "src": "objetos-cientificos/arte/MET-13/inventario-256.webp",
+            "bytes": 20896
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-01/inventario-512.webp",
-            "bytes": 27948
+            "src": "objetos-cientificos/arte/MET-13/inventario-512.webp",
+            "bytes": 60326
           }
         }
       },
@@ -11632,147 +13967,73 @@ globalThis.AtlasObjetosCientificos = {
       "collection": "Meteoritos",
       "rarity": "Común",
       "tier": null,
-      "continent": "América del Norte",
-      "provenance": "Chihuahua, México",
-      "acquisition": "Investigación geológica",
-      "description": "Condrita carbonácea estudiada científicamente",
-      "material": "material meteórico",
-      "context": "Fecha del ejemplar por verificar",
+      "continent": "Europa",
+      "provenance": "Yorkshire, Reino Unido",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Contorno angular y costra moteada.",
+      "material": "Condrita ordinaria L6",
+      "context": "Caída observada en 1795.",
       "original": null,
       "observations": null,
-      "id": "MET-03",
-      "name": "Meteorito de Allende",
+      "id": "MET-14",
+      "name": "Meteorito de Wold Cottage",
       "type": "Coleccionable propuesto",
       "family": "Minerales y piedras preciosas",
       "points": 1,
       "exhibit": "Réplica de fragmento",
+      "reference": "https://www.lpi.usra.edu/meteor/metbull.php?code=24325",
+      "compatibility": "compatible",
       "pilot": false,
-      "stage": "OBJ-07",
+      "stage": "OBJ-11",
       "geology": {
-        "classification": "Meteorito pétreo · condrita carbonácea CV3",
-        "composition": "Silicatos, cóndrulos e inclusiones ricas en Ca y Al",
-        "structure": "Interior de textura condrítica",
-        "diagnostic": "Inclusiones claras y granos redondeados",
-        "history": "Futuro · caída de 1969.",
-        "plate": "Vista de una cara interior esquemática.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=2278"
+        "classification": "Condrita ordinaria L6",
+        "composition": "Condrita ordinaria L6",
+        "structure": "Contorno angular y costra moteada.",
+        "diagnostic": "Contorno angular y costra moteada.",
+        "history": "Caída observada en 1795.",
+        "plate": "Interpretación del ejemplar de referencia.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=24325"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · caída de 1969.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=2278"
+        "status": "Compatible con 1842",
+        "evidence": "Caída observada en 1795.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=24325"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-03/clasica-64.webp",
-            "bytes": 1934
+            "src": "objetos-cientificos/arte/MET-14/clasica-64.webp",
+            "bytes": 2502
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-03/clasica-128.webp",
-            "bytes": 4826
+            "src": "objetos-cientificos/arte/MET-14/clasica-128.webp",
+            "bytes": 6708
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-03/clasica-256.webp",
-            "bytes": 14578
+            "src": "objetos-cientificos/arte/MET-14/clasica-256.webp",
+            "bytes": 22060
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-03/clasica-512.webp",
-            "bytes": 41106
+            "src": "objetos-cientificos/arte/MET-14/clasica-512.webp",
+            "bytes": 76406
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-03/inventario-64.webp",
-            "bytes": 2010
+            "src": "objetos-cientificos/arte/MET-14/inventario-64.webp",
+            "bytes": 2696
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-03/inventario-128.webp",
-            "bytes": 5222
+            "src": "objetos-cientificos/arte/MET-14/inventario-128.webp",
+            "bytes": 7416
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-03/inventario-256.webp",
-            "bytes": 11456
+            "src": "objetos-cientificos/arte/MET-14/inventario-256.webp",
+            "bytes": 20656
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-03/inventario-512.webp",
-            "bytes": 27630
-          }
-        }
-      },
-      "approval": "Pendiente",
-      "artState": "Candidato"
-    },
-    {
-      "cabinet": "Geología",
-      "collection": "Meteoritos",
-      "rarity": "Común",
-      "tier": null,
-      "continent": "Oceanía",
-      "provenance": "Victoria, Australia",
-      "acquisition": "Investigación geológica",
-      "description": "Condrita rica en compuestos orgánicos",
-      "material": "material meteórico",
-      "context": "Fecha del ejemplar por verificar",
-      "original": null,
-      "observations": null,
-      "id": "MET-04",
-      "name": "Meteorito de Murchison",
-      "type": "Coleccionable propuesto",
-      "family": "Minerales y piedras preciosas",
-      "points": 1,
-      "exhibit": "Réplica de fragmento",
-      "pilot": false,
-      "stage": "OBJ-07",
-      "geology": {
-        "classification": "Meteorito pétreo · condrita carbonácea CM2",
-        "composition": "Matriz fina rica en filosilicatos y cóndrulos",
-        "structure": "Corteza y masa oscura granular",
-        "diagnostic": "Matriz rica en material fino y cóndrulos pequeños",
-        "history": "Futuro · caída de 1969.",
-        "plate": "La microtextura se amplía para el sprite.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16875"
-      },
-      "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · caída de 1969.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16875"
-      },
-      "sprites": {
-        "clasica": {
-          "64": {
-            "src": "objetos-cientificos/arte/MET-04/clasica-64.webp",
-            "bytes": 1786
-          },
-          "128": {
-            "src": "objetos-cientificos/arte/MET-04/clasica-128.webp",
-            "bytes": 4620
-          },
-          "256": {
-            "src": "objetos-cientificos/arte/MET-04/clasica-256.webp",
-            "bytes": 13824
-          },
-          "512": {
-            "src": "objetos-cientificos/arte/MET-04/clasica-512.webp",
-            "bytes": 37166
-          }
-        },
-        "inventario": {
-          "64": {
-            "src": "objetos-cientificos/arte/MET-04/inventario-64.webp",
-            "bytes": 1964
-          },
-          "128": {
-            "src": "objetos-cientificos/arte/MET-04/inventario-128.webp",
-            "bytes": 4938
-          },
-          "256": {
-            "src": "objetos-cientificos/arte/MET-04/inventario-256.webp",
-            "bytes": 10444
-          },
-          "512": {
-            "src": "objetos-cientificos/arte/MET-04/inventario-512.webp",
-            "bytes": 25436
+            "src": "objetos-cientificos/arte/MET-14/inventario-512.webp",
+            "bytes": 63650
           }
         }
       },
@@ -11785,70 +14046,150 @@ globalThis.AtlasObjetosCientificos = {
       "rarity": "Común",
       "tier": null,
       "continent": "Asia",
-      "provenance": "Rusia",
-      "acquisition": "Investigación geológica",
-      "description": "Fragmentos de una caída observada en 2013",
-      "material": "material meteórico",
-      "context": "Fecha del ejemplar por verificar",
+      "provenance": "Uttar Pradesh, India",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Costra oscura y matriz gris visible en una fractura.",
+      "material": "Condrita ordinaria LL4",
+      "context": "Caída observada en 1798; nombre oficial Benares (a).",
       "original": null,
       "observations": null,
-      "id": "MET-05",
-      "name": "Meteorito de Cheliábinsk",
+      "id": "MET-15",
+      "name": "Meteorito de Benares",
       "type": "Coleccionable propuesto",
       "family": "Minerales y piedras preciosas",
       "points": 1,
       "exhibit": "Réplica de fragmento",
+      "reference": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=5011",
+      "compatibility": "compatible",
       "pilot": false,
-      "stage": "OBJ-07",
+      "stage": "OBJ-11",
       "geology": {
-        "classification": "Meteorito pétreo · condrita ordinaria LL5",
-        "composition": "Principalmente silicatos con poco hierro metálico",
-        "structure": "Corteza negra sobre interior gris",
-        "diagnostic": "Contraste de corteza y posible veta de choque",
-        "history": "Futuro · caída de 2013.",
-        "plate": "La veta interior es interpretativa.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=57165"
+        "classification": "Condrita ordinaria LL4",
+        "composition": "Condrita ordinaria LL4",
+        "structure": "Costra oscura y matriz gris visible en una fractura.",
+        "diagnostic": "Costra oscura y matriz gris visible en una fractura.",
+        "history": "Caída observada en 1798; nombre oficial Benares (a).",
+        "plate": "Interpretación del ejemplar de referencia.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=5011"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · caída de 2013.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=57165"
+        "status": "Compatible con 1842",
+        "evidence": "Caída observada en 1798; nombre oficial Benares (a).",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=5011"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-05/clasica-64.webp",
-            "bytes": 1732
+            "src": "objetos-cientificos/arte/MET-15/clasica-64.webp",
+            "bytes": 2026
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-05/clasica-128.webp",
-            "bytes": 4462
+            "src": "objetos-cientificos/arte/MET-15/clasica-128.webp",
+            "bytes": 5446
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-05/clasica-256.webp",
-            "bytes": 14058
+            "src": "objetos-cientificos/arte/MET-15/clasica-256.webp",
+            "bytes": 18406
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-05/clasica-512.webp",
-            "bytes": 39834
+            "src": "objetos-cientificos/arte/MET-15/clasica-512.webp",
+            "bytes": 57216
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-05/inventario-64.webp",
-            "bytes": 1776
+            "src": "objetos-cientificos/arte/MET-15/inventario-64.webp",
+            "bytes": 2232
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-05/inventario-128.webp",
-            "bytes": 4814
+            "src": "objetos-cientificos/arte/MET-15/inventario-128.webp",
+            "bytes": 5962
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-05/inventario-256.webp",
-            "bytes": 10638
+            "src": "objetos-cientificos/arte/MET-15/inventario-256.webp",
+            "bytes": 16110
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-05/inventario-512.webp",
-            "bytes": 26348
+            "src": "objetos-cientificos/arte/MET-15/inventario-512.webp",
+            "bytes": 43546
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Geología",
+      "collection": "Meteoritos",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "América del Norte",
+      "provenance": "Connecticut, Estados Unidos",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Matriz gris con granos contrastados.",
+      "material": "Condrita ordinaria H4",
+      "context": "Caída observada en 1807.",
+      "original": null,
+      "observations": null,
+      "id": "MET-16",
+      "name": "Meteorito de Weston",
+      "type": "Coleccionable propuesto",
+      "family": "Minerales y piedras preciosas",
+      "points": 1,
+      "exhibit": "Réplica de fragmento",
+      "reference": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=24249",
+      "compatibility": "compatible",
+      "pilot": false,
+      "stage": "OBJ-11",
+      "geology": {
+        "classification": "Condrita ordinaria H4",
+        "composition": "Condrita ordinaria H4",
+        "structure": "Matriz gris con granos contrastados.",
+        "diagnostic": "Matriz gris con granos contrastados.",
+        "history": "Caída observada en 1807.",
+        "plate": "Interpretación del ejemplar de referencia.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=24249"
+      },
+      "chronology": {
+        "status": "Compatible con 1842",
+        "evidence": "Caída observada en 1807.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=24249"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-16/clasica-64.webp",
+            "bytes": 2296
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-16/clasica-128.webp",
+            "bytes": 6438
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-16/clasica-256.webp",
+            "bytes": 21008
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-16/clasica-512.webp",
+            "bytes": 74084
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-16/inventario-64.webp",
+            "bytes": 2494
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-16/inventario-128.webp",
+            "bytes": 6982
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-16/inventario-256.webp",
+            "bytes": 19576
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-16/inventario-512.webp",
+            "bytes": 61898
           }
         }
       },
@@ -12012,71 +14353,73 @@ globalThis.AtlasObjetosCientificos = {
       "collection": "Meteoritos",
       "rarity": "Poco común",
       "tier": null,
-      "continent": "Asia",
-      "provenance": "Extremo oriente ruso",
-      "acquisition": "Investigación geológica",
-      "description": "Ejemplar metálico de caída documentada",
-      "material": "material meteórico",
-      "context": "Fecha del ejemplar por verificar",
+      "continent": "Europa",
+      "provenance": "Haute-Marne, Francia",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Interior granular rico en olivino.",
+      "material": "Acondrita marciana, dunita rica en olivino",
+      "context": "Caída observada en 1815; origen marciano atribuido posteriormente.",
       "original": null,
       "observations": null,
-      "id": "MET-08",
-      "name": "Meteorito Sikhote-Alin",
+      "id": "MET-17",
+      "name": "Meteorito de Chassigny",
       "type": "Coleccionable propuesto",
       "family": "Minerales y piedras preciosas",
       "points": 2,
       "exhibit": "Réplica de fragmento",
+      "reference": "https://www.lpi.usra.edu/meteor/metbull.php?code=5331",
+      "compatibility": "compatible",
       "pilot": false,
-      "stage": "OBJ-07",
+      "stage": "OBJ-11",
       "geology": {
-        "classification": "Meteorito metálico · hierro IIAB",
-        "composition": "Aleación Fe-Ni",
-        "structure": "Fragmentos y metralla",
-        "diagnostic": "Fuerte relieve en piezas de fragmentación",
-        "history": "Futuro · caída de 1947.",
-        "plate": "La pieza representa un fragmento desgarrado.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=23593"
+        "classification": "Acondrita marciana, dunita rica en olivino",
+        "composition": "Acondrita marciana, dunita rica en olivino",
+        "structure": "Interior granular rico en olivino.",
+        "diagnostic": "Interior granular rico en olivino.",
+        "history": "Caída observada en 1815; origen marciano atribuido posteriormente.",
+        "plate": "Interpretación del ejemplar de referencia.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=5331"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · caída de 1947.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=23593"
+        "status": "Compatible con 1842",
+        "evidence": "Caída observada en 1815; origen marciano atribuido posteriormente.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=5331"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-08/clasica-64.webp",
-            "bytes": 1828
+            "src": "objetos-cientificos/arte/MET-17/clasica-64.webp",
+            "bytes": 2344
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-08/clasica-128.webp",
-            "bytes": 4412
+            "src": "objetos-cientificos/arte/MET-17/clasica-128.webp",
+            "bytes": 6402
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-08/clasica-256.webp",
-            "bytes": 12736
+            "src": "objetos-cientificos/arte/MET-17/clasica-256.webp",
+            "bytes": 21220
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-08/clasica-512.webp",
-            "bytes": 36442
+            "src": "objetos-cientificos/arte/MET-17/clasica-512.webp",
+            "bytes": 74494
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-08/inventario-64.webp",
-            "bytes": 1938
+            "src": "objetos-cientificos/arte/MET-17/inventario-64.webp",
+            "bytes": 2460
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-08/inventario-128.webp",
-            "bytes": 4666
+            "src": "objetos-cientificos/arte/MET-17/inventario-128.webp",
+            "bytes": 7008
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-08/inventario-256.webp",
-            "bytes": 10320
+            "src": "objetos-cientificos/arte/MET-17/inventario-256.webp",
+            "bytes": 19292
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-08/inventario-512.webp",
-            "bytes": 25560
+            "src": "objetos-cientificos/arte/MET-17/inventario-512.webp",
+            "bytes": 61106
           }
         }
       },
@@ -12165,70 +14508,72 @@ globalThis.AtlasObjetosCientificos = {
       "rarity": "Raro",
       "tier": null,
       "continent": "Asia",
-      "provenance": "Xinjiang, China",
-      "acquisition": "Investigación geológica",
-      "description": "Pallasita célebre por su textura translúcida",
-      "material": "material meteórico",
-      "context": "Fecha del ejemplar por verificar",
+      "provenance": "Siberia, Rusia",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Sección interpretativa con olivino en matriz metálica.",
+      "material": "Palasita, hierro-níquel y olivino",
+      "context": "Hallazgo de 1749; también llamado hierro de Pallas.",
       "original": null,
       "observations": null,
-      "id": "MET-10",
-      "name": "Meteorito Fukang",
+      "id": "MET-18",
+      "name": "Meteorito de Krasnojarsk",
       "type": "Coleccionable propuesto",
       "family": "Minerales y piedras preciosas",
       "points": 4,
       "exhibit": "Réplica de fragmento",
+      "reference": "https://www.lpi.usra.edu/meteor/metbull.php?code=12356",
+      "compatibility": "compatible",
       "pilot": false,
-      "stage": "OBJ-07",
+      "stage": "OBJ-11",
       "geology": {
-        "classification": "Meteorito mixto · pallasita del grupo principal",
-        "composition": "Olivino y metal Fe-Ni",
-        "structure": "Cristales en matriz metálica",
-        "diagnostic": "Contraste óptico entre olivino y entramado metálico",
-        "history": "Futuro · hallazgo catalogado en 2000.",
-        "plate": "Lámina de sección interpretativa.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=34491"
+        "classification": "Palasita, hierro-níquel y olivino",
+        "composition": "Palasita, hierro-níquel y olivino",
+        "structure": "Sección interpretativa con olivino en matriz metálica.",
+        "diagnostic": "Sección interpretativa con olivino en matriz metálica.",
+        "history": "Hallazgo de 1749; también llamado hierro de Pallas.",
+        "plate": "Interpretación del ejemplar de referencia.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12356"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · hallazgo catalogado en 2000.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=34491"
+        "status": "Compatible con 1842",
+        "evidence": "Hallazgo de 1749; también llamado hierro de Pallas.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12356"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-10/clasica-64.webp",
-            "bytes": 2438
+            "src": "objetos-cientificos/arte/MET-18/clasica-64.webp",
+            "bytes": 2442
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-10/clasica-128.webp",
-            "bytes": 7098
+            "src": "objetos-cientificos/arte/MET-18/clasica-128.webp",
+            "bytes": 6292
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-10/clasica-256.webp",
-            "bytes": 21646
+            "src": "objetos-cientificos/arte/MET-18/clasica-256.webp",
+            "bytes": 19780
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-10/clasica-512.webp",
-            "bytes": 64684
+            "src": "objetos-cientificos/arte/MET-18/clasica-512.webp",
+            "bytes": 68596
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-10/inventario-64.webp",
-            "bytes": 2636
+            "src": "objetos-cientificos/arte/MET-18/inventario-64.webp",
+            "bytes": 2606
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-10/inventario-128.webp",
-            "bytes": 7584
+            "src": "objetos-cientificos/arte/MET-18/inventario-128.webp",
+            "bytes": 6714
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-10/inventario-256.webp",
-            "bytes": 20306
+            "src": "objetos-cientificos/arte/MET-18/inventario-256.webp",
+            "bytes": 18198
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-10/inventario-512.webp",
-            "bytes": 54632
+            "src": "objetos-cientificos/arte/MET-18/inventario-512.webp",
+            "bytes": 56314
           }
         }
       },
@@ -12240,71 +14585,73 @@ globalThis.AtlasObjetosCientificos = {
       "collection": "Meteoritos",
       "rarity": "Raro",
       "tier": null,
-      "continent": "África",
-      "provenance": "Namibia",
-      "acquisition": "Investigación geológica",
-      "description": "Representación del gran meteorito metálico",
-      "material": "material meteórico",
-      "context": "Fecha del ejemplar por verificar",
+      "continent": "Europa",
+      "provenance": "Gard, Francia",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Matriz negra, irregular y friable.",
+      "material": "Condrita carbonácea CI1",
+      "context": "Caída observada en 1806.",
       "original": null,
       "observations": null,
-      "id": "MET-11",
-      "name": "Meteorito de Hoba",
+      "id": "MET-19",
+      "name": "Meteorito de Alais",
       "type": "Coleccionable propuesto",
       "family": "Minerales y piedras preciosas",
       "points": 4,
       "exhibit": "Réplica de fragmento",
+      "reference": "https://www.lpi.usra.edu/meteor/metbull.php?code=448",
+      "compatibility": "compatible",
       "pilot": false,
-      "stage": "OBJ-07",
+      "stage": "OBJ-11",
       "geology": {
-        "classification": "Meteorito metálico · hierro IVB",
-        "composition": "Aleación Fe-Ni rica en níquel",
-        "structure": "Masa metálica tabular",
-        "diagnostic": "Volumen aplanado y meteorización superficial",
-        "history": "Futuro · hallazgo de 1920.",
-        "plate": "Modelo a escala reducida de una masa de unas 60 toneladas.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=11890"
+        "classification": "Condrita carbonácea CI1",
+        "composition": "Condrita carbonácea CI1",
+        "structure": "Matriz negra, irregular y friable.",
+        "diagnostic": "Matriz negra, irregular y friable.",
+        "history": "Caída observada en 1806.",
+        "plate": "Interpretación del ejemplar de referencia.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=448"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · hallazgo de 1920.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=11890"
+        "status": "Compatible con 1842",
+        "evidence": "Caída observada en 1806.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=448"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-11/clasica-64.webp",
-            "bytes": 1982
+            "src": "objetos-cientificos/arte/MET-19/clasica-64.webp",
+            "bytes": 2128
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-11/clasica-128.webp",
-            "bytes": 5444
+            "src": "objetos-cientificos/arte/MET-19/clasica-128.webp",
+            "bytes": 5720
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-11/clasica-256.webp",
-            "bytes": 17484
+            "src": "objetos-cientificos/arte/MET-19/clasica-256.webp",
+            "bytes": 19156
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-11/clasica-512.webp",
-            "bytes": 53524
+            "src": "objetos-cientificos/arte/MET-19/clasica-512.webp",
+            "bytes": 66240
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-11/inventario-64.webp",
-            "bytes": 2190
+            "src": "objetos-cientificos/arte/MET-19/inventario-64.webp",
+            "bytes": 2372
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-11/inventario-128.webp",
-            "bytes": 6100
+            "src": "objetos-cientificos/arte/MET-19/inventario-128.webp",
+            "bytes": 6512
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-11/inventario-256.webp",
-            "bytes": 15530
+            "src": "objetos-cientificos/arte/MET-19/inventario-256.webp",
+            "bytes": 18062
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-11/inventario-512.webp",
-            "bytes": 42262
+            "src": "objetos-cientificos/arte/MET-19/inventario-512.webp",
+            "bytes": 53326
           }
         }
       },
@@ -12316,71 +14663,73 @@ globalThis.AtlasObjetosCientificos = {
       "collection": "Meteoritos",
       "rarity": "Muy raro",
       "tier": null,
-      "continent": "Antártida",
-      "provenance": "Colinas Allan, Antártida",
-      "acquisition": "Investigación geológica",
-      "description": "Réplica de meteorito marciano encontrado en hielo",
-      "material": "material meteórico",
-      "context": "Fecha del ejemplar por verificar",
+      "continent": "Europa",
+      "provenance": "Moravia, Chequia",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Interior basáltico gris y costra oscura.",
+      "material": "Acondrita eucrítica",
+      "context": "Caída observada en 1808.",
       "original": null,
       "observations": null,
-      "id": "MET-12",
-      "name": "Meteorito ALH 84001",
+      "id": "MET-20",
+      "name": "Meteorito de Stannern",
       "type": "Coleccionable propuesto",
       "family": "Minerales y piedras preciosas",
       "points": 8,
       "exhibit": "Réplica de fragmento",
+      "reference": "https://www.lpi.usra.edu/meteor/metbull.php?code=23713",
+      "compatibility": "compatible",
       "pilot": false,
-      "stage": "OBJ-07",
+      "stage": "OBJ-11",
       "geology": {
-        "classification": "Meteorito pétreo marciano · ortopiroxenita",
-        "composition": "Principalmente ortopiroxeno",
-        "structure": "Fragmento ígneo granular",
-        "diagnostic": "Corteza de fusión y masa interior de piroxeno",
-        "history": "Futuro · hallazgo de 1984.",
-        "plate": "Lámina del fragmento sin presuntas formas biológicas.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=604"
+        "classification": "Acondrita eucrítica",
+        "composition": "Acondrita eucrítica",
+        "structure": "Interior basáltico gris y costra oscura.",
+        "diagnostic": "Interior basáltico gris y costra oscura.",
+        "history": "Caída observada en 1808.",
+        "plate": "Interpretación del ejemplar de referencia.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=23713"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · hallazgo de 1984.",
-        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=604"
+        "status": "Compatible con 1842",
+        "evidence": "Caída observada en 1808.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=23713"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-12/clasica-64.webp",
-            "bytes": 1958
+            "src": "objetos-cientificos/arte/MET-20/clasica-64.webp",
+            "bytes": 2122
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-12/clasica-128.webp",
-            "bytes": 5562
+            "src": "objetos-cientificos/arte/MET-20/clasica-128.webp",
+            "bytes": 5710
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-12/clasica-256.webp",
-            "bytes": 18794
+            "src": "objetos-cientificos/arte/MET-20/clasica-256.webp",
+            "bytes": 17960
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-12/clasica-512.webp",
-            "bytes": 56292
+            "src": "objetos-cientificos/arte/MET-20/clasica-512.webp",
+            "bytes": 62086
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/MET-12/inventario-64.webp",
-            "bytes": 2146
+            "src": "objetos-cientificos/arte/MET-20/inventario-64.webp",
+            "bytes": 2272
           },
           "128": {
-            "src": "objetos-cientificos/arte/MET-12/inventario-128.webp",
-            "bytes": 6048
+            "src": "objetos-cientificos/arte/MET-20/inventario-128.webp",
+            "bytes": 6090
           },
           "256": {
-            "src": "objetos-cientificos/arte/MET-12/inventario-256.webp",
-            "bytes": 16832
+            "src": "objetos-cientificos/arte/MET-20/inventario-256.webp",
+            "bytes": 16250
           },
           "512": {
-            "src": "objetos-cientificos/arte/MET-12/inventario-512.webp",
-            "bytes": 45474
+            "src": "objetos-cientificos/arte/MET-20/inventario-512.webp",
+            "bytes": 50674
           }
         }
       },
@@ -14498,73 +16847,75 @@ globalThis.AtlasObjetosCientificos = {
       "collection": "Curiosidades de marineros",
       "rarity": "Común",
       "tier": null,
-      "continent": "Asia",
-      "provenance": "Japón",
-      "acquisition": "Comercio portuario",
-      "description": "Boya usada históricamente en pesca",
-      "material": "material mixto",
-      "context": "Fecha del ejemplar por verificar",
+      "continent": "Europa",
+      "provenance": "Litoral atlántico europeo",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Cuerpo de corcho con orificio de amarre.",
+      "material": "Corcho y fibra",
+      "context": "Hay descripciones de flotadores de pesca de corcho desde 1496. El modelo de gabinete interpreta un cuerpo ovalado.",
       "original": null,
       "observations": null,
-      "id": "CUR-04",
-      "name": "Flotador de vidrio",
+      "id": "CUR-13",
+      "name": "Flotador pesquero de corcho",
       "type": "Coleccionable propuesto",
       "family": "Objetos marítimos",
       "points": 1,
       "exhibit": "Objeto marinero",
+      "reference": "https://www.fishingmuseum.org.uk/floats_overview.html",
+      "compatibility": "reserva",
       "pilot": false,
-      "stage": "OBJ-08",
+      "stage": "OBJ-11",
       "oceanography": {
-        "nature": "Histórica interpretativa",
-        "identity": "Flotador de pesca de vidrio japonés",
-        "classification": "Aparejo flotante",
-        "material": "Vidrio y cabo",
-        "diagnostic": "Masa hueca esférica y amarre",
-        "habitat": "",
-        "history": "Futuro · el uso japonés está documentado desde 1910.",
-        "plate": "La red se representa como soporte.",
-        "source": "https://collectionswa.net.au/items/d72a4368-a99e-4e9a-a1c7-99fc53bfe25c"
+        "nature": "Interpretación documental",
+        "identity": "Flotador pesquero de corcho",
+        "classification": "Equipo pesquero de gabinete",
+        "material": "Corcho y fibra",
+        "diagnostic": "Cuerpo de corcho con orificio de amarre.",
+        "habitat": "Pesquerías atlánticas",
+        "history": "Hay descripciones de flotadores de pesca de corcho desde 1496. El modelo de gabinete interpreta un cuerpo ovalado.",
+        "plate": "Modelo de gabinete.",
+        "source": "https://www.fishingmuseum.org.uk/floats_overview.html"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · el uso japonés está documentado desde 1910.",
-        "source": "https://collectionswa.net.au/items/d72a4368-a99e-4e9a-a1c7-99fc53bfe25c"
+        "status": "Compatible con reservas documentales",
+        "evidence": "Hay descripciones de flotadores de pesca de corcho desde 1496. El modelo de gabinete interpreta un cuerpo ovalado.",
+        "source": "https://www.fishingmuseum.org.uk/floats_overview.html"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/CUR-04/clasica-64.webp",
-            "bytes": 2522
+            "src": "objetos-cientificos/arte/CUR-13/clasica-64.webp",
+            "bytes": 1300
           },
           "128": {
-            "src": "objetos-cientificos/arte/CUR-04/clasica-128.webp",
-            "bytes": 6620
+            "src": "objetos-cientificos/arte/CUR-13/clasica-128.webp",
+            "bytes": 3248
           },
           "256": {
-            "src": "objetos-cientificos/arte/CUR-04/clasica-256.webp",
-            "bytes": 21238
+            "src": "objetos-cientificos/arte/CUR-13/clasica-256.webp",
+            "bytes": 8854
           },
           "512": {
-            "src": "objetos-cientificos/arte/CUR-04/clasica-512.webp",
-            "bytes": 54262
+            "src": "objetos-cientificos/arte/CUR-13/clasica-512.webp",
+            "bytes": 27770
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/CUR-04/inventario-64.webp",
-            "bytes": 2650
+            "src": "objetos-cientificos/arte/CUR-13/inventario-64.webp",
+            "bytes": 1378
           },
           "128": {
-            "src": "objetos-cientificos/arte/CUR-04/inventario-128.webp",
-            "bytes": 7004
+            "src": "objetos-cientificos/arte/CUR-13/inventario-128.webp",
+            "bytes": 3410
           },
           "256": {
-            "src": "objetos-cientificos/arte/CUR-04/inventario-256.webp",
-            "bytes": 17552
+            "src": "objetos-cientificos/arte/CUR-13/inventario-256.webp",
+            "bytes": 7994
           },
           "512": {
-            "src": "objetos-cientificos/arte/CUR-04/inventario-512.webp",
-            "bytes": 42364
+            "src": "objetos-cientificos/arte/CUR-13/inventario-512.webp",
+            "bytes": 23184
           }
         }
       },
@@ -16784,76 +19135,78 @@ globalThis.AtlasObjetosCientificos = {
       "collection": "Numismática",
       "rarity": "Poco común",
       "tier": null,
-      "continent": "África",
-      "provenance": "Etiopía",
-      "acquisition": "Comercio e intercambio",
-      "description": "Moneda histórica de África oriental",
-      "material": "metal acuñado",
-      "context": "Futuro · Birr de Menelik II, emisión de finales del siglo XIX",
+      "continent": "Europa",
+      "provenance": "Günzburg, territorios de los Habsburgo",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Busto en relieve en el anverso.",
+      "material": "Plata acuñada",
+      "context": "Referencia a la emisión de 1780; distinguir reacuñaciones modernas.",
       "original": null,
       "observations": null,
-      "id": "NUM-09",
-      "name": "Birr etíope antiguo",
+      "id": "NUM-13",
+      "name": "Tálero de María Teresa",
       "type": "Coleccionable propuesto",
       "family": "Numismática",
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://www.metmuseum.org/art/collection/search/237844",
+      "compatibility": "compatible",
       "pilot": false,
-      "stage": "OBJ-09",
+      "stage": "OBJ-11",
       "history": {
-        "identity": "Birr de Menelik II",
-        "culture": "Etiopía imperial",
-        "period": "Siglo XIX · después de 1842",
-        "year": 1894,
-        "date": "Década de 1890",
-        "material": "Plata",
-        "diagnostic": "Perfil coronado y leyenda ge'ez",
-        "culturalContext": "Moneda imperial de acuñación moderna.",
-        "compatibility": "Posterior a 1842",
+        "identity": "Tálero de María Teresa",
+        "culture": "Monarquía de los Habsburgo",
+        "period": "Edad Moderna",
+        "year": 1780,
+        "date": "1780",
+        "material": "Plata acuñada",
+        "diagnostic": "Busto en relieve en el anverso.",
+        "culturalContext": "Referencia a la emisión de 1780; distinguir reacuñaciones modernas.",
+        "compatibility": "Compatible con 1842",
         "treatment": "Interpretación artística",
-        "note": "La variante ilustrada es posterior a 1842.",
-        "source": "https://www.britishmuseum.org/collection"
+        "note": "Ejemplar interpretado para revisión.",
+        "source": "https://www.metmuseum.org/art/collection/search/237844"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Década de 1890",
-        "source": "https://www.britishmuseum.org/collection"
+        "status": "Compatible con 1842",
+        "evidence": "Referencia a la emisión de 1780; distinguir reacuñaciones modernas.",
+        "source": "https://www.metmuseum.org/art/collection/search/237844"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/NUM-09/clasica-64.webp",
-            "bytes": 2446
+            "src": "objetos-cientificos/arte/NUM-13/clasica-64.webp",
+            "bytes": 2488
           },
           "128": {
-            "src": "objetos-cientificos/arte/NUM-09/clasica-128.webp",
-            "bytes": 6886
+            "src": "objetos-cientificos/arte/NUM-13/clasica-128.webp",
+            "bytes": 6744
           },
           "256": {
-            "src": "objetos-cientificos/arte/NUM-09/clasica-256.webp",
-            "bytes": 23460
+            "src": "objetos-cientificos/arte/NUM-13/clasica-256.webp",
+            "bytes": 21328
           },
           "512": {
-            "src": "objetos-cientificos/arte/NUM-09/clasica-512.webp",
-            "bytes": 72490
+            "src": "objetos-cientificos/arte/NUM-13/clasica-512.webp",
+            "bytes": 72838
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/NUM-09/inventario-64.webp",
-            "bytes": 2536
+            "src": "objetos-cientificos/arte/NUM-13/inventario-64.webp",
+            "bytes": 2684
           },
           "128": {
-            "src": "objetos-cientificos/arte/NUM-09/inventario-128.webp",
-            "bytes": 7590
+            "src": "objetos-cientificos/arte/NUM-13/inventario-128.webp",
+            "bytes": 7422
           },
           "256": {
-            "src": "objetos-cientificos/arte/NUM-09/inventario-256.webp",
-            "bytes": 20736
+            "src": "objetos-cientificos/arte/NUM-13/inventario-256.webp",
+            "bytes": 19994
           },
           "512": {
-            "src": "objetos-cientificos/arte/NUM-09/inventario-512.webp",
-            "bytes": 53226
+            "src": "objetos-cientificos/arte/NUM-13/inventario-512.webp",
+            "bytes": 55276
           }
         }
       },
@@ -18077,79 +20430,164 @@ globalThis.AtlasObjetosCientificos = {
     },
     {
       "cabinet": "Historia",
-      "collection": "Filatelia",
+      "collection": "Armería histórica",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "África",
+      "provenance": "Egipto",
+      "acquisition": "Reproducción inerte o registro de museo autorizado.",
+      "description": "Hoja curva de contorno falciforme.",
+      "material": "Bronce, pátina de cobre",
+      "context": "Interpretación del tipo del Imperio Nuevo.",
+      "original": null,
+      "observations": null,
+      "id": "ARM-01",
+      "name": "Khopesh egipcio",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 1,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://collections.carlos.emory.edu/objects/12783/sickle-sword",
+      "compatibility": "reserva",
+      "pilot": false,
+      "stage": "OBJ-11",
+      "history": {
+        "identity": "Khopesh egipcio",
+        "culture": "Egipto faraónico",
+        "period": "Edad del Bronce",
+        "year": -1300,
+        "date": "1300 a. C.",
+        "material": "Bronce, pátina de cobre",
+        "diagnostic": "Hoja curva de contorno falciforme.",
+        "culturalContext": "Interpretación del tipo del Imperio Nuevo.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Pieza de museo o reproducción inerte.",
+        "source": "https://collections.carlos.emory.edu/objects/12783/sickle-sword"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Interpretación del tipo del Imperio Nuevo.",
+        "source": "https://collections.carlos.emory.edu/objects/12783/sickle-sword"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARM-01/clasica-64.webp",
+            "bytes": 1380
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARM-01/clasica-128.webp",
+            "bytes": 3114
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARM-01/clasica-256.webp",
+            "bytes": 8086
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARM-01/clasica-512.webp",
+            "bytes": 24794
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARM-01/inventario-64.webp",
+            "bytes": 1420
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARM-01/inventario-128.webp",
+            "bytes": 3300
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARM-01/inventario-256.webp",
+            "bytes": 7816
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARM-01/inventario-512.webp",
+            "bytes": 22468
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Armería histórica",
       "rarity": "Común",
       "tier": null,
       "continent": "Europa",
-      "provenance": "Reino Unido",
-      "acquisition": "Comercio e intercambio",
-      "description": "Sello británico decimonónico de uso extendido",
-      "material": "papel impreso",
-      "context": "Primera emisión británica de 1841; ejemplar sin perforar",
+      "provenance": "Grecia",
+      "acquisition": "Reproducción inerte o registro de museo autorizado.",
+      "description": "Calota y aberturas faciales con protector nasal.",
+      "material": "Bronce",
+      "context": "Tipología griega arcaica, con pátina museística.",
       "original": null,
-      "observations": "Esquema de un sello imperforado; pendiente cotejo del grabado.",
-      "id": "FIL-01",
-      "name": "Penny Red",
+      "observations": null,
+      "id": "ARM-02",
+      "name": "Casco corintio",
       "type": "Coleccionable propuesto",
       "family": "Artefactos históricos",
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
-      "pilot": true,
-      "stage": "OBJ-01",
+      "reference": "https://www.metmuseum.org/art/collection/search/250921",
+      "compatibility": "reserva",
+      "pilot": false,
+      "stage": "OBJ-11",
       "history": {
-        "identity": "Penny Red británico sin dentar",
-        "culture": "Reino Unido",
-        "period": "Siglo XIX · hasta 1842",
-        "year": 1841,
-        "date": "1841",
-        "material": "Papel y tinta roja",
-        "diagnostic": "Retrato y márgenes lisos",
-        "culturalContext": "Emisión postal británica anterior al dentado de series posteriores.",
-        "compatibility": "Compatible con 1842",
+        "identity": "Casco corintio",
+        "culture": "Grecia arcaica",
+        "period": "Antigüedad",
+        "year": -600,
+        "date": "600 a. C.",
+        "material": "Bronce",
+        "diagnostic": "Calota y aberturas faciales con protector nasal.",
+        "culturalContext": "Tipología griega arcaica, con pátina museística.",
+        "compatibility": "Compatible con reservas documentales",
         "treatment": "Interpretación artística",
-        "note": "Conservado de OBJ-01; leyendas en síntesis gráfica.",
-        "source": "https://www.postalmuseum.org/"
+        "note": "Pieza de museo o reproducción inerte.",
+        "source": "https://www.metmuseum.org/art/collection/search/250921"
       },
       "chronology": {
-        "status": "Compatible con 1842",
-        "evidence": "1841",
-        "source": "https://www.postalmuseum.org/"
+        "status": "Compatible con reservas documentales",
+        "evidence": "Tipología griega arcaica, con pátina museística.",
+        "source": "https://www.metmuseum.org/art/collection/search/250921"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-01/clasica-64.webp",
-            "bytes": 1584
+            "src": "objetos-cientificos/arte/ARM-02/clasica-64.webp",
+            "bytes": 1904
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-01/clasica-128.webp",
-            "bytes": 5020
+            "src": "objetos-cientificos/arte/ARM-02/clasica-128.webp",
+            "bytes": 4678
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-01/clasica-256.webp",
-            "bytes": 19460
+            "src": "objetos-cientificos/arte/ARM-02/clasica-256.webp",
+            "bytes": 12732
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-01/clasica-512.webp",
-            "bytes": 60482
+            "src": "objetos-cientificos/arte/ARM-02/clasica-512.webp",
+            "bytes": 40398
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-01/inventario-64.webp",
-            "bytes": 1680
+            "src": "objetos-cientificos/arte/ARM-02/inventario-64.webp",
+            "bytes": 1894
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-01/inventario-128.webp",
-            "bytes": 5432
+            "src": "objetos-cientificos/arte/ARM-02/inventario-128.webp",
+            "bytes": 4948
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-01/inventario-256.webp",
-            "bytes": 14374
+            "src": "objetos-cientificos/arte/ARM-02/inventario-256.webp",
+            "bytes": 11416
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-01/inventario-512.webp",
-            "bytes": 36002
+            "src": "objetos-cientificos/arte/ARM-02/inventario-512.webp",
+            "bytes": 32008
           }
         }
       },
@@ -18158,79 +20596,81 @@ globalThis.AtlasObjetosCientificos = {
     },
     {
       "cabinet": "Historia",
-      "collection": "Filatelia",
+      "collection": "Armería histórica",
       "rarity": "Común",
       "tier": null,
       "continent": "Europa",
-      "provenance": "Francia",
-      "acquisition": "Comercio e intercambio",
-      "description": "Sello con figura alegórica de la república",
-      "material": "papel impreso",
-      "context": "Futuro · Ceres francesa, 1849",
+      "provenance": "Provincias romanas",
+      "acquisition": "Reproducción inerte o registro de museo autorizado.",
+      "description": "Hoja corta de perfil recto y empuñadura diferenciada.",
+      "material": "Hierro y empuñadura orgánica",
+      "context": "Modelo inspirado en el tipo romano de época imperial.",
       "original": null,
       "observations": null,
-      "id": "FIL-02",
-      "name": "Ceres francesa",
+      "id": "ARM-03",
+      "name": "Gladius romano",
       "type": "Coleccionable propuesto",
       "family": "Artefactos históricos",
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://artsandculture.google.com/asset/the-sword-of-tiberius/MQFxR30oimm1hw?hl=en",
+      "compatibility": "reserva",
       "pilot": false,
-      "stage": "OBJ-09",
+      "stage": "OBJ-11",
       "history": {
-        "identity": "Cérès de 20 céntimos",
-        "culture": "Francia",
-        "period": "Siglo XIX · después de 1842",
-        "year": 1849,
-        "date": "1849",
-        "material": "Papel y tinta negra",
-        "diagnostic": "Cabeza alegórica y borde imperforado",
-        "culturalContext": "Primera serie postal francesa.",
-        "compatibility": "Posterior a 1842",
+        "identity": "Gladius romano",
+        "culture": "Roma imperial",
+        "period": "Antigüedad",
+        "year": 50,
+        "date": "50",
+        "material": "Hierro y empuñadura orgánica",
+        "diagnostic": "Hoja corta de perfil recto y empuñadura diferenciada.",
+        "culturalContext": "Modelo inspirado en el tipo romano de época imperial.",
+        "compatibility": "Compatible con reservas documentales",
         "treatment": "Interpretación artística",
-        "note": "Cotejar los marcos grabados; se mantiene el ejemplar posterior.",
-        "source": "https://www.laposte.fr/musee"
+        "note": "Pieza de museo o reproducción inerte.",
+        "source": "https://artsandculture.google.com/asset/the-sword-of-tiberius/MQFxR30oimm1hw?hl=en"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "1849",
-        "source": "https://www.laposte.fr/musee"
+        "status": "Compatible con reservas documentales",
+        "evidence": "Modelo inspirado en el tipo romano de época imperial.",
+        "source": "https://artsandculture.google.com/asset/the-sword-of-tiberius/MQFxR30oimm1hw?hl=en"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-02/clasica-64.webp",
-            "bytes": 1630
+            "src": "objetos-cientificos/arte/ARM-03/clasica-64.webp",
+            "bytes": 896
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-02/clasica-128.webp",
-            "bytes": 4994
+            "src": "objetos-cientificos/arte/ARM-03/clasica-128.webp",
+            "bytes": 2170
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-02/clasica-256.webp",
-            "bytes": 18420
+            "src": "objetos-cientificos/arte/ARM-03/clasica-256.webp",
+            "bytes": 5694
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-02/clasica-512.webp",
-            "bytes": 56256
+            "src": "objetos-cientificos/arte/ARM-03/clasica-512.webp",
+            "bytes": 17032
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-02/inventario-64.webp",
-            "bytes": 1822
+            "src": "objetos-cientificos/arte/ARM-03/inventario-64.webp",
+            "bytes": 1002
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-02/inventario-128.webp",
-            "bytes": 5516
+            "src": "objetos-cientificos/arte/ARM-03/inventario-128.webp",
+            "bytes": 2258
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-02/inventario-256.webp",
-            "bytes": 13998
+            "src": "objetos-cientificos/arte/ARM-03/inventario-256.webp",
+            "bytes": 5222
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-02/inventario-512.webp",
-            "bytes": 33746
+            "src": "objetos-cientificos/arte/ARM-03/inventario-512.webp",
+            "bytes": 14824
           }
         }
       },
@@ -18239,322 +20679,81 @@ globalThis.AtlasObjetosCientificos = {
     },
     {
       "cabinet": "Historia",
-      "collection": "Filatelia",
+      "collection": "Armería histórica",
       "rarity": "Común",
-      "tier": null,
-      "continent": "América del Norte",
-      "provenance": "Estados Unidos",
-      "acquisition": "Comercio e intercambio",
-      "description": "Sello de primera emisión nacional",
-      "material": "papel impreso",
-      "context": "Futuro · Emisión estadounidense, 1847",
-      "original": null,
-      "observations": null,
-      "id": "FIL-03",
-      "name": "Cinco centavos Franklin",
-      "type": "Coleccionable propuesto",
-      "family": "Artefactos históricos",
-      "points": 1,
-      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
-      "pilot": false,
-      "stage": "OBJ-09",
-      "history": {
-        "identity": "Franklin de cinco centavos",
-        "culture": "Estados Unidos",
-        "period": "Siglo XIX · después de 1842",
-        "year": 1847,
-        "date": "1847",
-        "material": "Papel y tinta parda",
-        "diagnostic": "Retrato y margen imperforado",
-        "culturalContext": "Una de las primeras emisiones generales de EE. UU.",
-        "compatibility": "Posterior a 1842",
-        "treatment": "Interpretación artística",
-        "note": "Cotejar el grabado y el valor impreso.",
-        "source": "https://postalmuseum.si.edu/object/npm_0.260305.151.11.2"
-      },
-      "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "1847",
-        "source": "https://postalmuseum.si.edu/object/npm_0.260305.151.11.2"
-      },
-      "sprites": {
-        "clasica": {
-          "64": {
-            "src": "objetos-cientificos/arte/FIL-03/clasica-64.webp",
-            "bytes": 1754
-          },
-          "128": {
-            "src": "objetos-cientificos/arte/FIL-03/clasica-128.webp",
-            "bytes": 5168
-          },
-          "256": {
-            "src": "objetos-cientificos/arte/FIL-03/clasica-256.webp",
-            "bytes": 19272
-          },
-          "512": {
-            "src": "objetos-cientificos/arte/FIL-03/clasica-512.webp",
-            "bytes": 69272
-          }
-        },
-        "inventario": {
-          "64": {
-            "src": "objetos-cientificos/arte/FIL-03/inventario-64.webp",
-            "bytes": 2002
-          },
-          "128": {
-            "src": "objetos-cientificos/arte/FIL-03/inventario-128.webp",
-            "bytes": 5748
-          },
-          "256": {
-            "src": "objetos-cientificos/arte/FIL-03/inventario-256.webp",
-            "bytes": 16078
-          },
-          "512": {
-            "src": "objetos-cientificos/arte/FIL-03/inventario-512.webp",
-            "bytes": 43686
-          }
-        }
-      },
-      "approval": "Pendiente",
-      "artState": "Candidato"
-    },
-    {
-      "cabinet": "Historia",
-      "collection": "Filatelia",
-      "rarity": "Común",
-      "tier": null,
-      "continent": "América del Norte",
-      "provenance": "Canadá",
-      "acquisition": "Comercio e intercambio",
-      "description": "Sello antiguo con fauna del país",
-      "material": "papel impreso",
-      "context": "Futuro · Sello canadiense, 1851",
-      "original": null,
-      "observations": null,
-      "id": "FIL-04",
-      "name": "Castor canadiense",
-      "type": "Coleccionable propuesto",
-      "family": "Artefactos históricos",
-      "points": 1,
-      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
-      "pilot": false,
-      "stage": "OBJ-09",
-      "history": {
-        "identity": "Castor de tres peniques",
-        "culture": "Provincia de Canadá",
-        "period": "Siglo XIX · después de 1842",
-        "year": 1851,
-        "date": "1851",
-        "material": "Papel y tinta rojiza",
-        "diagnostic": "Formato apaisado y castor en paisaje",
-        "culturalContext": "Emisión postal canadiense temprana.",
-        "compatibility": "Posterior a 1842",
-        "treatment": "Interpretación artística",
-        "note": "Márgenes lisos; el texto no se valida en el sprite.",
-        "source": "https://www.historymuseum.ca/"
-      },
-      "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "1851",
-        "source": "https://www.historymuseum.ca/"
-      },
-      "sprites": {
-        "clasica": {
-          "64": {
-            "src": "objetos-cientificos/arte/FIL-04/clasica-64.webp",
-            "bytes": 1688
-          },
-          "128": {
-            "src": "objetos-cientificos/arte/FIL-04/clasica-128.webp",
-            "bytes": 5048
-          },
-          "256": {
-            "src": "objetos-cientificos/arte/FIL-04/clasica-256.webp",
-            "bytes": 18712
-          },
-          "512": {
-            "src": "objetos-cientificos/arte/FIL-04/clasica-512.webp",
-            "bytes": 64908
-          }
-        },
-        "inventario": {
-          "64": {
-            "src": "objetos-cientificos/arte/FIL-04/inventario-64.webp",
-            "bytes": 1934
-          },
-          "128": {
-            "src": "objetos-cientificos/arte/FIL-04/inventario-128.webp",
-            "bytes": 5702
-          },
-          "256": {
-            "src": "objetos-cientificos/arte/FIL-04/inventario-256.webp",
-            "bytes": 15694
-          },
-          "512": {
-            "src": "objetos-cientificos/arte/FIL-04/inventario-512.webp",
-            "bytes": 41944
-          }
-        }
-      },
-      "approval": "Pendiente",
-      "artState": "Candidato"
-    },
-    {
-      "cabinet": "Historia",
-      "collection": "Filatelia",
-      "rarity": "Común",
-      "tier": null,
-      "continent": "América del Sur",
-      "provenance": "Chile",
-      "acquisition": "Comercio e intercambio",
-      "description": "Sello de las primeras emisiones chilenas",
-      "material": "papel impreso",
-      "context": "Futuro · Primera emisión chilena, 1853",
-      "original": null,
-      "observations": null,
-      "id": "FIL-05",
-      "name": "Colón chileno",
-      "type": "Coleccionable propuesto",
-      "family": "Artefactos históricos",
-      "points": 1,
-      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
-      "pilot": false,
-      "stage": "OBJ-09",
-      "history": {
-        "identity": "Colón de cinco centavos",
-        "culture": "Chile",
-        "period": "Siglo XIX · después de 1842",
-        "year": 1853,
-        "date": "1853",
-        "material": "Papel y tinta rojiza",
-        "diagnostic": "Retrato de Colón y borde imperforado",
-        "culturalContext": "Primera serie postal de Chile.",
-        "compatibility": "Posterior a 1842",
-        "treatment": "Interpretación artística",
-        "note": "Revisar perfil, color y textos del tipo de 1853.",
-        "source": "https://www.bibliotecanacionaldigital.gob.cl/"
-      },
-      "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "1853",
-        "source": "https://www.bibliotecanacionaldigital.gob.cl/"
-      },
-      "sprites": {
-        "clasica": {
-          "64": {
-            "src": "objetos-cientificos/arte/FIL-05/clasica-64.webp",
-            "bytes": 1694
-          },
-          "128": {
-            "src": "objetos-cientificos/arte/FIL-05/clasica-128.webp",
-            "bytes": 4862
-          },
-          "256": {
-            "src": "objetos-cientificos/arte/FIL-05/clasica-256.webp",
-            "bytes": 17958
-          },
-          "512": {
-            "src": "objetos-cientificos/arte/FIL-05/clasica-512.webp",
-            "bytes": 61184
-          }
-        },
-        "inventario": {
-          "64": {
-            "src": "objetos-cientificos/arte/FIL-05/inventario-64.webp",
-            "bytes": 1944
-          },
-          "128": {
-            "src": "objetos-cientificos/arte/FIL-05/inventario-128.webp",
-            "bytes": 5424
-          },
-          "256": {
-            "src": "objetos-cientificos/arte/FIL-05/inventario-256.webp",
-            "bytes": 14580
-          },
-          "512": {
-            "src": "objetos-cientificos/arte/FIL-05/inventario-512.webp",
-            "bytes": 36690
-          }
-        }
-      },
-      "approval": "Pendiente",
-      "artState": "Candidato"
-    },
-    {
-      "cabinet": "Historia",
-      "collection": "Filatelia",
-      "rarity": "Poco común",
       "tier": null,
       "continent": "Asia",
       "provenance": "Japón",
-      "acquisition": "Comercio e intercambio",
-      "description": "Sello temprano del sistema postal japonés",
-      "material": "papel impreso",
-      "context": "Futuro · Primera emisión japonesa, 1871",
+      "acquisition": "Reproducción inerte o registro de museo autorizado.",
+      "description": "Peto y faldones escalonados.",
+      "material": "Láminas lacadas, cordones, metal y textil",
+      "context": "Interpretación de gabinete de una armadura del periodo Edo.",
       "original": null,
       "observations": null,
-      "id": "FIL-06",
-      "name": "Dragón japonés",
+      "id": "ARM-04",
+      "name": "Armadura samurái",
       "type": "Coleccionable propuesto",
       "family": "Artefactos históricos",
-      "points": 2,
+      "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://www.metmuseum.org/exhibitions/listings/2009/art-of-the-samurai/photo-gallery",
+      "compatibility": "reserva",
       "pilot": false,
-      "stage": "OBJ-09",
+      "stage": "OBJ-11",
       "history": {
-        "identity": "Dragón de la primera serie postal",
-        "culture": "Japón Meiji",
-        "period": "Siglo XIX · después de 1842",
-        "year": 1871,
-        "date": "1871",
-        "material": "Papel y tinta",
-        "diagnostic": "Dragones laterales con panel central",
-        "culturalContext": "Primera emisión postal japonesa.",
-        "compatibility": "Posterior a 1842",
+        "identity": "Armadura samurái",
+        "culture": "Japón del periodo Edo",
+        "period": "Edad Moderna",
+        "year": 1750,
+        "date": "1750",
+        "material": "Láminas lacadas, cordones, metal y textil",
+        "diagnostic": "Peto y faldones escalonados.",
+        "culturalContext": "Interpretación de gabinete de una armadura del periodo Edo.",
+        "compatibility": "Compatible con reservas documentales",
         "treatment": "Interpretación artística",
-        "note": "El diseño es una aproximación; denominación y color por confirmar.",
-        "source": "https://postalmuseum.si.edu/"
+        "note": "Pieza de museo o reproducción inerte.",
+        "source": "https://www.metmuseum.org/exhibitions/listings/2009/art-of-the-samurai/photo-gallery"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "1871",
-        "source": "https://postalmuseum.si.edu/"
+        "status": "Compatible con reservas documentales",
+        "evidence": "Interpretación de gabinete de una armadura del periodo Edo.",
+        "source": "https://www.metmuseum.org/exhibitions/listings/2009/art-of-the-samurai/photo-gallery"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-06/clasica-64.webp",
-            "bytes": 1772
+            "src": "objetos-cientificos/arte/ARM-04/clasica-64.webp",
+            "bytes": 1972
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-06/clasica-128.webp",
-            "bytes": 5058
+            "src": "objetos-cientificos/arte/ARM-04/clasica-128.webp",
+            "bytes": 5082
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-06/clasica-256.webp",
-            "bytes": 18508
+            "src": "objetos-cientificos/arte/ARM-04/clasica-256.webp",
+            "bytes": 14160
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-06/clasica-512.webp",
-            "bytes": 60970
+            "src": "objetos-cientificos/arte/ARM-04/clasica-512.webp",
+            "bytes": 46760
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-06/inventario-64.webp",
-            "bytes": 2038
+            "src": "objetos-cientificos/arte/ARM-04/inventario-64.webp",
+            "bytes": 1974
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-06/inventario-128.webp",
-            "bytes": 5808
+            "src": "objetos-cientificos/arte/ARM-04/inventario-128.webp",
+            "bytes": 5278
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-06/inventario-256.webp",
-            "bytes": 16024
+            "src": "objetos-cientificos/arte/ARM-04/inventario-256.webp",
+            "bytes": 13122
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-06/inventario-512.webp",
-            "bytes": 41298
+            "src": "objetos-cientificos/arte/ARM-04/inventario-512.webp",
+            "bytes": 37784
           }
         }
       },
@@ -18563,79 +20762,164 @@ globalThis.AtlasObjetosCientificos = {
     },
     {
       "cabinet": "Historia",
-      "collection": "Filatelia",
+      "collection": "Armería histórica",
+      "rarity": "Común",
+      "tier": null,
+      "continent": "Asia",
+      "provenance": "China",
+      "acquisition": "Reproducción inerte o registro de museo autorizado.",
+      "description": "Hoja recta de dos filos y guarda sobria.",
+      "material": "Acero, madera y latón",
+      "context": "El ejemplar concreto y su guarnición requieren cotejo.",
+      "original": null,
+      "observations": null,
+      "id": "ARM-05",
+      "name": "Jian chino",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 1,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://worcester.emuseum.com/objects/49886/jian-sword",
+      "compatibility": "reserva",
+      "pilot": false,
+      "stage": "OBJ-11",
+      "history": {
+        "identity": "Jian chino",
+        "culture": "China imperial",
+        "period": "Edad Moderna",
+        "year": 1750,
+        "date": "1750",
+        "material": "Acero, madera y latón",
+        "diagnostic": "Hoja recta de dos filos y guarda sobria.",
+        "culturalContext": "El ejemplar concreto y su guarnición requieren cotejo.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Pieza de museo o reproducción inerte.",
+        "source": "https://worcester.emuseum.com/objects/49886/jian-sword"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "El ejemplar concreto y su guarnición requieren cotejo.",
+        "source": "https://worcester.emuseum.com/objects/49886/jian-sword"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARM-05/clasica-64.webp",
+            "bytes": 918
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARM-05/clasica-128.webp",
+            "bytes": 2218
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARM-05/clasica-256.webp",
+            "bytes": 5476
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARM-05/clasica-512.webp",
+            "bytes": 17438
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARM-05/inventario-64.webp",
+            "bytes": 976
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARM-05/inventario-128.webp",
+            "bytes": 2224
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARM-05/inventario-256.webp",
+            "bytes": 5486
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARM-05/inventario-512.webp",
+            "bytes": 15940
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Armería histórica",
       "rarity": "Poco común",
       "tier": null,
       "continent": "Asia",
-      "provenance": "India británica",
-      "acquisition": "Comercio e intercambio",
-      "description": "Emisión postal histórica de Sind",
-      "material": "papel impreso",
-      "context": "Futuro · Emisión de 1852",
+      "provenance": "Bali, Indonesia",
+      "acquisition": "Reproducción inerte o registro de museo autorizado.",
+      "description": "Perfil ondulado y empuñadura tallada.",
+      "material": "Acero y madera tallada",
+      "context": "Objeto de valor social y cultural, presentado como interpretación.",
       "original": null,
       "observations": null,
-      "id": "FIL-07",
-      "name": "Scinde Dawk",
+      "id": "ARM-06",
+      "name": "Keris indonesio",
       "type": "Coleccionable propuesto",
       "family": "Artefactos históricos",
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://www.metmuseum.org/art/collection/search/24312",
+      "compatibility": "reserva",
       "pilot": false,
-      "stage": "OBJ-09",
+      "stage": "OBJ-11",
       "history": {
-        "identity": "Scinde Dawk, variante roja",
-        "culture": "Administración colonial de Sind",
-        "period": "Siglo XIX · después de 1842",
-        "year": 1852,
-        "date": "1852",
-        "material": "Oblea lacrada",
-        "diagnostic": "Disco rojo con impronta central",
-        "culturalContext": "Marca postal de Sind, entonces bajo administración británica.",
-        "compatibility": "Posterior a 1842",
+        "identity": "Keris indonesio",
+        "culture": "Tradición balinesa",
+        "period": "Edad Moderna",
+        "year": 1750,
+        "date": "1750",
+        "material": "Acero y madera tallada",
+        "diagnostic": "Perfil ondulado y empuñadura tallada.",
+        "culturalContext": "Objeto de valor social y cultural, presentado como interpretación.",
+        "compatibility": "Compatible con reservas documentales",
         "treatment": "Interpretación artística",
-        "note": "Se representa la variante de lacre como modelo.",
-        "source": "https://postalmuseum.si.edu/"
+        "note": "Pieza de museo o reproducción inerte.",
+        "source": "https://www.metmuseum.org/art/collection/search/24312"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "1852",
-        "source": "https://postalmuseum.si.edu/"
+        "status": "Compatible con reservas documentales",
+        "evidence": "Objeto de valor social y cultural, presentado como interpretación.",
+        "source": "https://www.metmuseum.org/art/collection/search/24312"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-07/clasica-64.webp",
-            "bytes": 1896
+            "src": "objetos-cientificos/arte/ARM-06/clasica-64.webp",
+            "bytes": 1092
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-07/clasica-128.webp",
-            "bytes": 5648
+            "src": "objetos-cientificos/arte/ARM-06/clasica-128.webp",
+            "bytes": 2504
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-07/clasica-256.webp",
-            "bytes": 21568
+            "src": "objetos-cientificos/arte/ARM-06/clasica-256.webp",
+            "bytes": 5874
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-07/clasica-512.webp",
-            "bytes": 63622
+            "src": "objetos-cientificos/arte/ARM-06/clasica-512.webp",
+            "bytes": 17624
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-07/inventario-64.webp",
-            "bytes": 2104
+            "src": "objetos-cientificos/arte/ARM-06/inventario-64.webp",
+            "bytes": 1112
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-07/inventario-128.webp",
-            "bytes": 5948
+            "src": "objetos-cientificos/arte/ARM-06/inventario-128.webp",
+            "bytes": 2496
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-07/inventario-256.webp",
-            "bytes": 16014
+            "src": "objetos-cientificos/arte/ARM-06/inventario-256.webp",
+            "bytes": 5660
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-07/inventario-512.webp",
-            "bytes": 39650
+            "src": "objetos-cientificos/arte/ARM-06/inventario-512.webp",
+            "bytes": 15838
           }
         }
       },
@@ -18644,160 +20928,81 @@ globalThis.AtlasObjetosCientificos = {
     },
     {
       "cabinet": "Historia",
-      "collection": "Filatelia",
-      "rarity": "Poco común",
-      "tier": null,
-      "continent": "Oceanía",
-      "provenance": "Nueva Gales del Sur, Australia",
-      "acquisition": "Comercio e intercambio",
-      "description": "Sello colonial con vista de Sídney",
-      "material": "papel impreso",
-      "context": "Futuro · Sydney Views, 1850",
-      "original": null,
-      "observations": null,
-      "id": "FIL-08",
-      "name": "Sydney Views",
-      "type": "Coleccionable propuesto",
-      "family": "Artefactos históricos",
-      "points": 2,
-      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
-      "pilot": false,
-      "stage": "OBJ-09",
-      "history": {
-        "identity": "Sydney Views de un penique",
-        "culture": "Nueva Gales del Sur",
-        "period": "Siglo XIX · después de 1842",
-        "year": 1850,
-        "date": "1850",
-        "material": "Papel y tinta roja",
-        "diagnostic": "Paisaje portuario en marco oval",
-        "culturalContext": "Emisión de Nueva Gales del Sur.",
-        "compatibility": "Posterior a 1842",
-        "treatment": "Interpretación artística",
-        "note": "Revisar el motivo alegórico y el marco específico.",
-        "source": "https://www.sl.nsw.gov.au/"
-      },
-      "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "1850",
-        "source": "https://www.sl.nsw.gov.au/"
-      },
-      "sprites": {
-        "clasica": {
-          "64": {
-            "src": "objetos-cientificos/arte/FIL-08/clasica-64.webp",
-            "bytes": 1616
-          },
-          "128": {
-            "src": "objetos-cientificos/arte/FIL-08/clasica-128.webp",
-            "bytes": 4830
-          },
-          "256": {
-            "src": "objetos-cientificos/arte/FIL-08/clasica-256.webp",
-            "bytes": 17464
-          },
-          "512": {
-            "src": "objetos-cientificos/arte/FIL-08/clasica-512.webp",
-            "bytes": 60794
-          }
-        },
-        "inventario": {
-          "64": {
-            "src": "objetos-cientificos/arte/FIL-08/inventario-64.webp",
-            "bytes": 1872
-          },
-          "128": {
-            "src": "objetos-cientificos/arte/FIL-08/inventario-128.webp",
-            "bytes": 5394
-          },
-          "256": {
-            "src": "objetos-cientificos/arte/FIL-08/inventario-256.webp",
-            "bytes": 14740
-          },
-          "512": {
-            "src": "objetos-cientificos/arte/FIL-08/inventario-512.webp",
-            "bytes": 38914
-          }
-        }
-      },
-      "approval": "Pendiente",
-      "artState": "Candidato"
-    },
-    {
-      "cabinet": "Historia",
-      "collection": "Filatelia",
+      "collection": "Armería histórica",
       "rarity": "Poco común",
       "tier": null,
       "continent": "Europa",
-      "provenance": "Reino Unido",
-      "acquisition": "Comercio e intercambio",
-      "description": "Primer sello postal adhesivo de uso general",
-      "material": "papel impreso",
-      "context": "Emisión británica de 1840",
+      "provenance": "Europa central",
+      "acquisition": "Reproducción inerte o registro de museo autorizado.",
+      "description": "Camisa de anillas con mangas cortas.",
+      "material": "Hierro",
+      "context": "Ejemplo de tipología europea anterior a 1842.",
       "original": null,
       "observations": null,
-      "id": "FIL-09",
-      "name": "Penny Black",
+      "id": "ARM-07",
+      "name": "Cota de malla europea",
       "type": "Coleccionable propuesto",
       "family": "Artefactos históricos",
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://www.metmuseum.org/art/collection/search/31958",
+      "compatibility": "reserva",
       "pilot": false,
-      "stage": "OBJ-09",
+      "stage": "OBJ-11",
       "history": {
-        "identity": "Penny Black británico",
-        "culture": "Reino Unido",
-        "period": "Siglo XIX · hasta 1842",
-        "year": 1840,
-        "date": "1840",
-        "material": "Papel y tinta negra",
-        "diagnostic": "Retrato de Victoria y márgenes lisos",
-        "culturalContext": "Emisión postal adhesiva británica.",
-        "compatibility": "Compatible con 1842",
+        "identity": "Cota de malla europea",
+        "culture": "Europa central",
+        "period": "Edad Moderna",
+        "year": 1550,
+        "date": "1550",
+        "material": "Hierro",
+        "diagnostic": "Camisa de anillas con mangas cortas.",
+        "culturalContext": "Ejemplo de tipología europea anterior a 1842.",
+        "compatibility": "Compatible con reservas documentales",
         "treatment": "Interpretación artística",
-        "note": "Una cara diagnóstica con marcas de esquina esquemáticas.",
-        "source": "https://www.postalmuseum.org/"
+        "note": "Pieza de museo o reproducción inerte.",
+        "source": "https://www.metmuseum.org/art/collection/search/31958"
       },
       "chronology": {
-        "status": "Compatible con 1842",
-        "evidence": "1840",
-        "source": "https://www.postalmuseum.org/"
+        "status": "Compatible con reservas documentales",
+        "evidence": "Ejemplo de tipología europea anterior a 1842.",
+        "source": "https://www.metmuseum.org/art/collection/search/31958"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-09/clasica-64.webp",
-            "bytes": 1878
+            "src": "objetos-cientificos/arte/ARM-07/clasica-64.webp",
+            "bytes": 2342
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-09/clasica-128.webp",
-            "bytes": 5582
+            "src": "objetos-cientificos/arte/ARM-07/clasica-128.webp",
+            "bytes": 6650
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-09/clasica-256.webp",
-            "bytes": 20798
+            "src": "objetos-cientificos/arte/ARM-07/clasica-256.webp",
+            "bytes": 23406
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-09/clasica-512.webp",
-            "bytes": 69958
+            "src": "objetos-cientificos/arte/ARM-07/clasica-512.webp",
+            "bytes": 83402
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-09/inventario-64.webp",
-            "bytes": 2022
+            "src": "objetos-cientificos/arte/ARM-07/inventario-64.webp",
+            "bytes": 2518
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-09/inventario-128.webp",
-            "bytes": 5944
+            "src": "objetos-cientificos/arte/ARM-07/inventario-128.webp",
+            "bytes": 7392
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-09/inventario-256.webp",
-            "bytes": 17414
+            "src": "objetos-cientificos/arte/ARM-07/inventario-256.webp",
+            "bytes": 22500
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-09/inventario-512.webp",
-            "bytes": 42212
+            "src": "objetos-cientificos/arte/ARM-07/inventario-512.webp",
+            "bytes": 71632
           }
         }
       },
@@ -18806,79 +21011,81 @@ globalThis.AtlasObjetosCientificos = {
     },
     {
       "cabinet": "Historia",
-      "collection": "Filatelia",
-      "rarity": "Raro",
+      "collection": "Armería histórica",
+      "rarity": "Poco común",
       "tier": null,
-      "continent": "América del Sur",
-      "provenance": "Brasil",
-      "acquisition": "Comercio e intercambio",
-      "description": "Emisión postal sudamericana temprana",
-      "material": "papel impreso",
-      "context": "Futuro · Emisión brasileña, 1843",
+      "continent": "Europa",
+      "provenance": "España",
+      "acquisition": "Reproducción inerte o registro de museo autorizado.",
+      "description": "Guarda de taza y hoja larga de perfil estrecho.",
+      "material": "Acero",
+      "context": "Ejemplar de referencia del siglo XVII.",
       "original": null,
       "observations": null,
-      "id": "FIL-10",
-      "name": "Ojo de Buey brasileño",
+      "id": "ARM-08",
+      "name": "Espada ropera española",
       "type": "Coleccionable propuesto",
       "family": "Artefactos históricos",
-      "points": 4,
+      "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://www.metmuseum.org/art/collection/search/27408",
+      "compatibility": "reserva",
       "pilot": false,
-      "stage": "OBJ-09",
+      "stage": "OBJ-11",
       "history": {
-        "identity": "Ojo de Buey de 30 réis",
-        "culture": "Brasil imperial",
-        "period": "Siglo XIX · después de 1842",
-        "year": 1843,
-        "date": "1843",
-        "material": "Papel y tinta oscura",
-        "diagnostic": "Valor grande sobre óvalo de guilloché",
-        "culturalContext": "Primera emisión de sellos de Brasil.",
-        "compatibility": "Posterior a 1842",
+        "identity": "Espada ropera española",
+        "culture": "Monarquía hispánica",
+        "period": "Edad Moderna",
+        "year": 1650,
+        "date": "1650",
+        "material": "Acero",
+        "diagnostic": "Guarda de taza y hoja larga de perfil estrecho.",
+        "culturalContext": "Ejemplar de referencia del siglo XVII.",
+        "compatibility": "Compatible con reservas documentales",
         "treatment": "Interpretación artística",
-        "note": "Papel imperforado; cotejar numerales y marco.",
-        "source": "https://postalmuseum.si.edu/"
+        "note": "Pieza de museo o reproducción inerte.",
+        "source": "https://www.metmuseum.org/art/collection/search/27408"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "1843",
-        "source": "https://postalmuseum.si.edu/"
+        "status": "Compatible con reservas documentales",
+        "evidence": "Ejemplar de referencia del siglo XVII.",
+        "source": "https://www.metmuseum.org/art/collection/search/27408"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-10/clasica-64.webp",
-            "bytes": 1700
+            "src": "objetos-cientificos/arte/ARM-08/clasica-64.webp",
+            "bytes": 1752
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-10/clasica-128.webp",
-            "bytes": 5090
+            "src": "objetos-cientificos/arte/ARM-08/clasica-128.webp",
+            "bytes": 4118
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-10/clasica-256.webp",
-            "bytes": 19938
+            "src": "objetos-cientificos/arte/ARM-08/clasica-256.webp",
+            "bytes": 11428
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-10/clasica-512.webp",
-            "bytes": 70544
+            "src": "objetos-cientificos/arte/ARM-08/clasica-512.webp",
+            "bytes": 37516
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-10/inventario-64.webp",
-            "bytes": 1954
+            "src": "objetos-cientificos/arte/ARM-08/inventario-64.webp",
+            "bytes": 1704
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-10/inventario-128.webp",
-            "bytes": 6018
+            "src": "objetos-cientificos/arte/ARM-08/inventario-128.webp",
+            "bytes": 4362
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-10/inventario-256.webp",
-            "bytes": 17420
+            "src": "objetos-cientificos/arte/ARM-08/inventario-256.webp",
+            "bytes": 11536
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-10/inventario-512.webp",
-            "bytes": 47022
+            "src": "objetos-cientificos/arte/ARM-08/inventario-512.webp",
+            "bytes": 36298
           }
         }
       },
@@ -18887,79 +21094,164 @@ globalThis.AtlasObjetosCientificos = {
     },
     {
       "cabinet": "Historia",
-      "collection": "Filatelia",
+      "collection": "Armería histórica",
+      "rarity": "Poco común",
+      "tier": null,
+      "continent": "Asia",
+      "provenance": "Anatolia",
+      "acquisition": "Reproducción inerte o registro de museo autorizado.",
+      "description": "Perfil curvo con empuñadura ornamentada.",
+      "material": "Acero y guarnición dorada",
+      "context": "Interpretación de gabinete basada en tipologías otomanas anteriores a 1842.",
+      "original": null,
+      "observations": null,
+      "id": "ARM-09",
+      "name": "Sable otomano ceremonial",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 2,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://www.metmuseum.org/essays/islamic-arms-and-armor",
+      "compatibility": "reserva",
+      "pilot": false,
+      "stage": "OBJ-11",
+      "history": {
+        "identity": "Sable otomano ceremonial",
+        "culture": "Imperio otomano",
+        "period": "Edad Moderna",
+        "year": 1750,
+        "date": "1750",
+        "material": "Acero y guarnición dorada",
+        "diagnostic": "Perfil curvo con empuñadura ornamentada.",
+        "culturalContext": "Interpretación de gabinete basada en tipologías otomanas anteriores a 1842.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Pieza de museo o reproducción inerte.",
+        "source": "https://www.metmuseum.org/essays/islamic-arms-and-armor"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Interpretación de gabinete basada en tipologías otomanas anteriores a 1842.",
+        "source": "https://www.metmuseum.org/essays/islamic-arms-and-armor"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARM-09/clasica-64.webp",
+            "bytes": 1622
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARM-09/clasica-128.webp",
+            "bytes": 4192
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARM-09/clasica-256.webp",
+            "bytes": 11338
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARM-09/clasica-512.webp",
+            "bytes": 36374
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARM-09/inventario-64.webp",
+            "bytes": 1662
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARM-09/inventario-128.webp",
+            "bytes": 4352
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARM-09/inventario-256.webp",
+            "bytes": 11024
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARM-09/inventario-512.webp",
+            "bytes": 33598
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Armería histórica",
       "rarity": "Raro",
       "tier": null,
       "continent": "África",
-      "provenance": "Sudáfrica",
-      "acquisition": "Comercio e intercambio",
-      "description": "Sello conocido por su peculiar forma triangular",
-      "material": "papel impreso",
-      "context": "Futuro · Emisión del Cabo, 1853",
+      "provenance": "KwaZulu-Natal, Sudáfrica",
+      "acquisition": "Reproducción inerte o registro de museo autorizado.",
+      "description": "Óvalo longitudinal y contraste natural de piel.",
+      "material": "Cuero bovino y madera",
+      "context": "Reconstrucción de la tradición de principios del siglo XIX; ejemplar y patrón de piel por cotejar.",
       "original": null,
       "observations": null,
-      "id": "FIL-11",
-      "name": "Triangular del Cabo",
+      "id": "ARM-10",
+      "name": "Escudo zulú",
       "type": "Coleccionable propuesto",
       "family": "Artefactos históricos",
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://www.era.anthropology.ac.uk/Era_Resources/Era/Pitt_Rivers/shieweap/shcurinf/currinf23.html",
+      "compatibility": "reserva",
       "pilot": false,
-      "stage": "OBJ-09",
+      "stage": "OBJ-11",
       "history": {
-        "identity": "Triangular del Cabo de un penique",
-        "culture": "Colonia del Cabo",
-        "period": "Siglo XIX · después de 1842",
-        "year": 1853,
-        "date": "1853",
-        "material": "Papel y tinta roja",
-        "diagnostic": "Triángulo, alegoría de la Esperanza y ancla",
-        "culturalContext": "Emisión temprana de la Colonia del Cabo.",
-        "compatibility": "Posterior a 1842",
+        "identity": "Escudo zulú",
+        "culture": "Pueblo zulú",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1820,
+        "date": "1820",
+        "material": "Cuero bovino y madera",
+        "diagnostic": "Óvalo longitudinal y contraste natural de piel.",
+        "culturalContext": "Reconstrucción de la tradición de principios del siglo XIX; ejemplar y patrón de piel por cotejar.",
+        "compatibility": "Compatible con reservas documentales",
         "treatment": "Interpretación artística",
-        "note": "Cotejar la figura recostada y el borde.",
-        "source": "https://postalmuseum.si.edu/"
+        "note": "Pieza de museo o reproducción inerte.",
+        "source": "https://www.era.anthropology.ac.uk/Era_Resources/Era/Pitt_Rivers/shieweap/shcurinf/currinf23.html"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "1853",
-        "source": "https://postalmuseum.si.edu/"
+        "status": "Compatible con reservas documentales",
+        "evidence": "Reconstrucción de la tradición de principios del siglo XIX; ejemplar y patrón de piel por cotejar.",
+        "source": "https://www.era.anthropology.ac.uk/Era_Resources/Era/Pitt_Rivers/shieweap/shcurinf/currinf23.html"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-11/clasica-64.webp",
-            "bytes": 1316
+            "src": "objetos-cientificos/arte/ARM-10/clasica-64.webp",
+            "bytes": 1770
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-11/clasica-128.webp",
-            "bytes": 3314
+            "src": "objetos-cientificos/arte/ARM-10/clasica-128.webp",
+            "bytes": 4414
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-11/clasica-256.webp",
-            "bytes": 9420
+            "src": "objetos-cientificos/arte/ARM-10/clasica-256.webp",
+            "bytes": 12092
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-11/clasica-512.webp",
-            "bytes": 26446
+            "src": "objetos-cientificos/arte/ARM-10/clasica-512.webp",
+            "bytes": 40622
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-11/inventario-64.webp",
-            "bytes": 1416
+            "src": "objetos-cientificos/arte/ARM-10/inventario-64.webp",
+            "bytes": 1808
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-11/inventario-128.webp",
-            "bytes": 3340
+            "src": "objetos-cientificos/arte/ARM-10/inventario-128.webp",
+            "bytes": 4636
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-11/inventario-256.webp",
-            "bytes": 7328
+            "src": "objetos-cientificos/arte/ARM-10/inventario-256.webp",
+            "bytes": 10804
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-11/inventario-512.webp",
-            "bytes": 19074
+            "src": "objetos-cientificos/arte/ARM-10/inventario-512.webp",
+            "bytes": 32462
           }
         }
       },
@@ -18968,79 +21260,164 @@ globalThis.AtlasObjetosCientificos = {
     },
     {
       "cabinet": "Historia",
-      "collection": "Filatelia",
+      "collection": "Armería histórica",
+      "rarity": "Raro",
+      "tier": null,
+      "continent": "América del Norte",
+      "provenance": "Valle de México",
+      "acquisition": "Reproducción inerte o registro de museo autorizado.",
+      "description": "Rodela plumaria circular con cuatro medias lunas y fleco inferior.",
+      "material": "Plumas, entramado vegetal y fibras",
+      "context": "Interpretación del cuexyo chimalli de Chapultepec. Se conservan el motivo de cuatro medias lunas y la forma circular.",
+      "original": null,
+      "observations": null,
+      "id": "ARM-11",
+      "name": "Chimalli mexica",
+      "type": "Coleccionable propuesto",
+      "family": "Artefactos históricos",
+      "points": 4,
+      "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://mnh.inah.gob.mx/chimalli-tesoro-de-moctezuma-en-chapultepec",
+      "compatibility": "reserva",
+      "pilot": false,
+      "stage": "OBJ-11",
+      "history": {
+        "identity": "Chimalli mexica",
+        "culture": "Pueblo mexica",
+        "period": "Edad Moderna",
+        "year": 1520,
+        "date": "1520",
+        "material": "Plumas, entramado vegetal y fibras",
+        "diagnostic": "Rodela plumaria circular con cuatro medias lunas y fleco inferior.",
+        "culturalContext": "Interpretación del cuexyo chimalli de Chapultepec. Se conservan el motivo de cuatro medias lunas y la forma circular.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Pieza de museo o reproducción inerte.",
+        "source": "https://mnh.inah.gob.mx/chimalli-tesoro-de-moctezuma-en-chapultepec"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Interpretación del cuexyo chimalli de Chapultepec. Se conservan el motivo de cuatro medias lunas y la forma circular.",
+        "source": "https://mnh.inah.gob.mx/chimalli-tesoro-de-moctezuma-en-chapultepec"
+      },
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARM-11/clasica-64.webp",
+            "bytes": 1974
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARM-11/clasica-128.webp",
+            "bytes": 5144
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARM-11/clasica-256.webp",
+            "bytes": 14730
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARM-11/clasica-512.webp",
+            "bytes": 51536
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ARM-11/inventario-64.webp",
+            "bytes": 2182
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ARM-11/inventario-128.webp",
+            "bytes": 5626
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ARM-11/inventario-256.webp",
+            "bytes": 14150
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ARM-11/inventario-512.webp",
+            "bytes": 43716
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": "Historia",
+      "collection": "Armería histórica",
       "rarity": "Muy raro",
       "tier": null,
-      "continent": "África",
-      "provenance": "Mauricio",
-      "acquisition": "Comercio e intercambio",
-      "description": "Réplica de sello histórico de gran rareza",
-      "material": "papel impreso",
-      "context": "Futuro · Mauritius Post Office, 1847",
+      "continent": "América del Sur",
+      "provenance": "Centro-sur de Chile",
+      "acquisition": "Reproducción inerte o registro de museo autorizado.",
+      "description": "Cabeza estilizada y cuerpo macizo.",
+      "material": "Madera tallada",
+      "context": "La cronología del modelo y su carácter ceremonial requieren cotejo del ejemplar.",
       "original": null,
       "observations": null,
-      "id": "FIL-12",
-      "name": "Mauritius Post Office",
+      "id": "ARM-12",
+      "name": "Clava mapuche ceremonial",
       "type": "Coleccionable propuesto",
       "family": "Artefactos históricos",
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-7-3525",
+      "compatibility": "reserva",
       "pilot": false,
-      "stage": "OBJ-09",
+      "stage": "OBJ-11",
       "history": {
-        "identity": "Mauritius Post Office de dos peniques",
-        "culture": "Mauricio colonial",
-        "period": "Siglo XIX · después de 1842",
-        "year": 1847,
-        "date": "1847",
-        "material": "Papel y tinta azul",
-        "diagnostic": "Perfil de Victoria en rectángulo imperforado",
-        "culturalContext": "Ejemplar de la primera emisión local de Mauricio.",
-        "compatibility": "Posterior a 1842",
+        "identity": "Clava mapuche ceremonial",
+        "culture": "Pueblo mapuche",
+        "period": "Edad Moderna",
+        "year": 1750,
+        "date": "1750",
+        "material": "Madera tallada",
+        "diagnostic": "Cabeza estilizada y cuerpo macizo.",
+        "culturalContext": "La cronología del modelo y su carácter ceremonial requieren cotejo del ejemplar.",
+        "compatibility": "Compatible con reservas documentales",
         "treatment": "Interpretación artística",
-        "note": "La inscripción postal concreta queda por comprobar a escala ampliada.",
-        "source": "https://www.bl.uk/"
+        "note": "Pieza de museo o reproducción inerte.",
+        "source": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-7-3525"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "1847",
-        "source": "https://www.bl.uk/"
+        "status": "Compatible con reservas documentales",
+        "evidence": "La cronología del modelo y su carácter ceremonial requieren cotejo del ejemplar.",
+        "source": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-7-3525"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-12/clasica-64.webp",
-            "bytes": 1412
+            "src": "objetos-cientificos/arte/ARM-12/clasica-64.webp",
+            "bytes": 1294
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-12/clasica-128.webp",
-            "bytes": 4518
+            "src": "objetos-cientificos/arte/ARM-12/clasica-128.webp",
+            "bytes": 3052
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-12/clasica-256.webp",
-            "bytes": 16182
+            "src": "objetos-cientificos/arte/ARM-12/clasica-256.webp",
+            "bytes": 7760
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-12/clasica-512.webp",
-            "bytes": 49050
+            "src": "objetos-cientificos/arte/ARM-12/clasica-512.webp",
+            "bytes": 24308
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/FIL-12/inventario-64.webp",
-            "bytes": 1562
+            "src": "objetos-cientificos/arte/ARM-12/inventario-64.webp",
+            "bytes": 1292
           },
           "128": {
-            "src": "objetos-cientificos/arte/FIL-12/inventario-128.webp",
-            "bytes": 4886
+            "src": "objetos-cientificos/arte/ARM-12/inventario-128.webp",
+            "bytes": 3172
           },
           "256": {
-            "src": "objetos-cientificos/arte/FIL-12/inventario-256.webp",
-            "bytes": 12236
+            "src": "objetos-cientificos/arte/ARM-12/inventario-256.webp",
+            "bytes": 7234
           },
           "512": {
-            "src": "objetos-cientificos/arte/FIL-12/inventario-512.webp",
-            "bytes": 28856
+            "src": "objetos-cientificos/arte/ARM-12/inventario-512.webp",
+            "bytes": 21282
           }
         }
       },
@@ -21982,8 +24359,8 @@ globalThis.AtlasObjetosCientificos = {
         "association": "Investigación paleornitológica de Madagascar."
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Huevos documentados en Europa hacia 1850–1851.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Huevos documentados en Europa hacia 1850–1851. La fecha científica o documental se conserva como referencia.",
         "source": "https://bibliothek.univie.ac.at/sammlungen/objekt_des_monats/008796.html"
       },
       "sprites": {
@@ -22729,8 +25106,8 @@ globalThis.AtlasObjetosCientificos = {
         "association": "Asociación documental por identificación o procedencia."
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "El yacimiento fue documentado en época contemporánea.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "El yacimiento fue documentado en época contemporánea. La fecha científica o documental se conserva como referencia.",
         "source": "https://whc.unesco.org/en/tentativelists/1816/"
       },
       "sprites": {
@@ -22895,8 +25272,8 @@ globalThis.AtlasObjetosCientificos = {
         "association": "Asociación documental por identificación o procedencia."
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Publicación en 1861.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Publicación en 1861. La fecha científica o documental se conserva como referencia.",
         "source": "https://www.nhm.ac.uk/discover/archaeopteryx.html"
       },
       "sprites": {
@@ -23361,77 +25738,79 @@ globalThis.AtlasObjetosCientificos = {
       "rarity": "Común",
       "tier": null,
       "continent": "Europa",
-      "provenance": "Francia",
-      "acquisition": "Investigación y comercio",
-      "description": "Instrumento portátil para presión atmosférica",
-      "material": "material mixto",
-      "context": "Futuro · barómetro aneroide de Vidi, 1844",
+      "provenance": "Reino Unido",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Caja vertical con escala graduada.",
+      "material": "Madera, vidrio, mercurio y metal",
+      "context": "Tipo de barómetro de pared documentado hacia 1790. El acabado de la lámina es interpretativo.",
       "original": null,
-      "observations": "Referencia de un aneroide Vidi posterior a 1842. Reservar para contenido futuro.",
-      "id": "INS-05",
-      "name": "Barómetro aneroide",
+      "observations": null,
+      "id": "INS-13",
+      "name": "Barómetro de mercurio de gabinete",
       "type": "Coleccionable propuesto",
       "family": "Instrumentos científicos",
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
+      "reference": "https://collection.sciencemuseumgroup.org.uk/objects/co8408198/mercury-stick-barometer-by-baptist-ronchetti-mercury-barometer",
+      "compatibility": "reserva",
       "pilot": false,
-      "stage": "OBJ-02",
+      "stage": "OBJ-11",
       "natural": {
-        "identity": "Barómetro aneroide de Vidi",
+        "identity": "Barómetro de mercurio de gabinete",
         "classification": "Meteorología",
-        "material": "Cápsula metálica y mecanismo",
+        "material": "Madera, vidrio, mercurio y metal",
         "dimensions": "Dimensión del ejemplar por verificar",
         "length": null,
-        "diagnostic": "Dial circular accionado por cápsula.",
-        "science": "La deformación de una cápsula bajo presión mueve la aguja.",
-        "history": "Patentes de Vidi de 1843–1844.",
-        "status": "posterior",
-        "acquisition": "Registro, modelo o intercambio de gabinete.",
-        "note": "Distinguir del barómetro de columna de mercurio.",
-        "source": "https://collection.sciencemuseumgroup.org.uk/people/cp71753/lucien-vidie",
+        "diagnostic": "Caja vertical con escala graduada.",
+        "science": "La columna responde a la presión atmosférica.",
+        "history": "Tipo de barómetro de pared documentado hacia 1790. El acabado de la lámina es interpretativo.",
+        "status": "reserva",
+        "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+        "note": "Modelo histórico de gabinete; escala y fabricante por cotejar.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/objects/co8408198/mercury-stick-barometer-by-baptist-ronchetti-mercury-barometer",
         "species": null,
         "association": "Asociación documental por identificación o procedencia."
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Patentes de Vidi de 1843–1844.",
-        "source": "https://collection.sciencemuseumgroup.org.uk/people/cp71753/lucien-vidie"
+        "status": "Compatible con reservas documentales",
+        "evidence": "Tipo de barómetro de pared documentado hacia 1790. El acabado de la lámina es interpretativo.",
+        "source": "https://collection.sciencemuseumgroup.org.uk/objects/co8408198/mercury-stick-barometer-by-baptist-ronchetti-mercury-barometer"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/INS-05/clasica-64.webp",
-            "bytes": 2114
+            "src": "objetos-cientificos/arte/INS-13/clasica-64.webp",
+            "bytes": 930
           },
           "128": {
-            "src": "objetos-cientificos/arte/INS-05/clasica-128.webp",
-            "bytes": 5496
+            "src": "objetos-cientificos/arte/INS-13/clasica-128.webp",
+            "bytes": 2504
           },
           "256": {
-            "src": "objetos-cientificos/arte/INS-05/clasica-256.webp",
-            "bytes": 17674
+            "src": "objetos-cientificos/arte/INS-13/clasica-256.webp",
+            "bytes": 6402
           },
           "512": {
-            "src": "objetos-cientificos/arte/INS-05/clasica-512.webp",
-            "bytes": 49212
+            "src": "objetos-cientificos/arte/INS-13/clasica-512.webp",
+            "bytes": 19166
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/INS-05/inventario-64.webp",
-            "bytes": 2306
+            "src": "objetos-cientificos/arte/INS-13/inventario-64.webp",
+            "bytes": 1032
           },
           "128": {
-            "src": "objetos-cientificos/arte/INS-05/inventario-128.webp",
-            "bytes": 5872
+            "src": "objetos-cientificos/arte/INS-13/inventario-128.webp",
+            "bytes": 2568
           },
           "256": {
-            "src": "objetos-cientificos/arte/INS-05/inventario-256.webp",
-            "bytes": 15746
+            "src": "objetos-cientificos/arte/INS-13/inventario-256.webp",
+            "bytes": 5732
           },
           "512": {
-            "src": "objetos-cientificos/arte/INS-05/inventario-512.webp",
-            "bytes": 39650
+            "src": "objetos-cientificos/arte/INS-13/inventario-512.webp",
+            "bytes": 16172
           }
         }
       },
@@ -26720,71 +29099,73 @@ globalThis.AtlasObjetosCientificos = {
       "collection": "Rocas y formaciones geológicas",
       "rarity": "Muy raro",
       "tier": null,
-      "continent": "África",
-      "provenance": "Sudáfrica",
-      "acquisition": "Documentación de gabinete",
-      "description": "Facsímil de brecha volcánica de chimenea diamantífera",
-      "material": "roca",
-      "context": "Futuro · hallazgos de Kimberley en la década de 1870",
+      "continent": "Europa",
+      "provenance": "Escocia, Reino Unido",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Granos verdosos dispersos en matriz oscura.",
+      "material": "Roca volcánica con fenocristales de olivino",
+      "context": "La roca antecede a su estudio; referencia histórica a los basaltos estudiados por James Hall.",
       "original": null,
       "observations": null,
       "family": "Minerales y piedras preciosas",
-      "id": "ROC-12",
-      "name": "Kimberlita de Kimberley",
+      "id": "ROC-13",
+      "name": "Basalto olivínico escocés",
       "exhibit": "Lámina, reproducción o ejemplar histórico conservado",
       "points": 8,
       "type": "Coleccionable propuesto",
+      "reference": "https://www.lindahall.org/experience/digital-exhibitions/vulcans-forge-and-fingals-cave/section-xv/56-lava-whinstone-and-sir-james-hall-1805",
+      "compatibility": "reserva",
       "pilot": false,
-      "stage": "OBJ-07",
+      "stage": "OBJ-11",
       "geology": {
-        "classification": "Roca ígnea ultramáfica · kimberlita",
-        "composition": "Olivino alterado, carbonatos y otros minerales",
-        "structure": "Brecha o matriz volcánica con xenolitos",
-        "diagnostic": "Clastos y matriz contrastan sin implicar presencia de diamante",
-        "history": "Futuro · contexto de los hallazgos de Kimberley en la década de 1870.",
-        "plate": "Trozos de roca, sin adornos.",
-        "source": "https://www.gia.edu/gems-gemology/winter-2018-how-diamonds-form"
+        "classification": "Roca volcánica con fenocristales de olivino",
+        "composition": "Roca volcánica con fenocristales de olivino",
+        "structure": "Granos verdosos dispersos en matriz oscura.",
+        "diagnostic": "Granos verdosos dispersos en matriz oscura.",
+        "history": "La roca antecede a su estudio; referencia histórica a los basaltos estudiados por James Hall.",
+        "plate": "Interpretación del ejemplar de referencia.",
+        "source": "https://www.lindahall.org/experience/digital-exhibitions/vulcans-forge-and-fingals-cave/section-xv/56-lava-whinstone-and-sir-james-hall-1805"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · contexto de los hallazgos de Kimberley en la década de 1870.",
-        "source": "https://www.gia.edu/gems-gemology/winter-2018-how-diamonds-form"
+        "status": "Compatible con reservas documentales",
+        "evidence": "La roca antecede a su estudio; referencia histórica a los basaltos estudiados por James Hall.",
+        "source": "https://www.lindahall.org/experience/digital-exhibitions/vulcans-forge-and-fingals-cave/section-xv/56-lava-whinstone-and-sir-james-hall-1805"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/ROC-12/clasica-64.webp",
-            "bytes": 2056
+            "src": "objetos-cientificos/arte/ROC-13/clasica-64.webp",
+            "bytes": 2220
           },
           "128": {
-            "src": "objetos-cientificos/arte/ROC-12/clasica-128.webp",
-            "bytes": 5278
+            "src": "objetos-cientificos/arte/ROC-13/clasica-128.webp",
+            "bytes": 5916
           },
           "256": {
-            "src": "objetos-cientificos/arte/ROC-12/clasica-256.webp",
-            "bytes": 16420
+            "src": "objetos-cientificos/arte/ROC-13/clasica-256.webp",
+            "bytes": 18248
           },
           "512": {
-            "src": "objetos-cientificos/arte/ROC-12/clasica-512.webp",
-            "bytes": 45664
+            "src": "objetos-cientificos/arte/ROC-13/clasica-512.webp",
+            "bytes": 63606
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/ROC-12/inventario-64.webp",
-            "bytes": 2074
+            "src": "objetos-cientificos/arte/ROC-13/inventario-64.webp",
+            "bytes": 2358
           },
           "128": {
-            "src": "objetos-cientificos/arte/ROC-12/inventario-128.webp",
-            "bytes": 5750
+            "src": "objetos-cientificos/arte/ROC-13/inventario-128.webp",
+            "bytes": 6478
           },
           "256": {
-            "src": "objetos-cientificos/arte/ROC-12/inventario-256.webp",
-            "bytes": 13138
+            "src": "objetos-cientificos/arte/ROC-13/inventario-256.webp",
+            "bytes": 16314
           },
           "512": {
-            "src": "objetos-cientificos/arte/ROC-12/inventario-512.webp",
-            "bytes": 31416
+            "src": "objetos-cientificos/arte/ROC-13/inventario-512.webp",
+            "bytes": 49732
           }
         }
       },
@@ -28299,76 +30680,78 @@ globalThis.AtlasObjetosCientificos = {
       "collection": "Medallas y condecoraciones históricas",
       "rarity": "Poco común",
       "tier": null,
-      "continent": "África",
-      "provenance": "Túnez",
-      "acquisition": "Documentación de gabinete",
-      "description": "Insignia de la orden del Mérito del bey",
-      "material": "metal acuñado",
-      "context": "Futuro · orden instituida en 1860",
+      "continent": "Europa",
+      "provenance": "Bélgica",
+      "acquisition": "Lámina, modelo o muestra de gabinete documentada.",
+      "description": "Cruz esmaltada clara, centro heráldico y cinta púrpura.",
+      "material": "Metal, esmalte y cinta",
+      "context": "Orden instituida en 1832; la lámina evoca el tipo civil y la fecha del ejemplar requiere cotejo.",
       "original": null,
       "observations": null,
       "family": "Artefactos históricos",
-      "id": "MED-08",
-      "name": "Insignia de la Orden del Mérito tunecina",
+      "id": "MED-13",
+      "name": "Insignia civil de la Orden de Leopoldo",
       "exhibit": "Lámina, reproducción o ejemplar histórico conservado",
       "points": 2,
       "type": "Coleccionable propuesto",
+      "reference": "https://www.rmg.co.uk/collections/objects/rmgc-object-202791",
+      "compatibility": "reserva",
       "pilot": false,
-      "stage": "OBJ-09",
+      "stage": "OBJ-11",
       "history": {
-        "identity": "Insignia tunecina del Mérito de tipo posterior",
-        "culture": "Beylicato de Túnez",
-        "period": "Siglo XIX · después de 1842",
-        "year": 1860,
-        "date": "Modelo posterior; antecedente museístico de 1902–1906",
-        "material": "Metal y esmalte",
-        "diagnostic": "Estrella radial y cartela central",
-        "culturalContext": "La orden tiene antecedentes en la década de 1830. El rótulo posterior se aplica al modelo de insignia.",
-        "compatibility": "Posterior a 1842",
+        "identity": "Insignia civil de la Orden de Leopoldo",
+        "culture": "Bélgica independiente",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1832,
+        "date": "1832",
+        "material": "Metal, esmalte y cinta",
+        "diagnostic": "Cruz esmaltada clara, centro heráldico y cinta púrpura.",
+        "culturalContext": "Orden instituida en 1832; la lámina evoca el tipo civil y la fecha del ejemplar requiere cotejo.",
+        "compatibility": "Compatible con reservas documentales",
         "treatment": "Interpretación artística",
-        "note": "Rotular como futura; comprobar grado, fecha y motivo de la cartela.",
-        "source": "https://americanhistory.si.edu/collections/object/nmah_963454"
+        "note": "Ejemplar interpretado para revisión.",
+        "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-202791"
       },
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Modelo posterior; antecedente museístico de 1902–1906",
-        "source": "https://americanhistory.si.edu/collections/object/nmah_963454"
+        "status": "Compatible con reservas documentales",
+        "evidence": "Orden instituida en 1832; la lámina evoca el tipo civil y la fecha del ejemplar requiere cotejo.",
+        "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-202791"
       },
       "sprites": {
         "clasica": {
           "64": {
-            "src": "objetos-cientificos/arte/MED-08/clasica-64.webp",
-            "bytes": 2912
+            "src": "objetos-cientificos/arte/MED-13/clasica-64.webp",
+            "bytes": 2166
           },
           "128": {
-            "src": "objetos-cientificos/arte/MED-08/clasica-128.webp",
-            "bytes": 7580
+            "src": "objetos-cientificos/arte/MED-13/clasica-128.webp",
+            "bytes": 5746
           },
           "256": {
-            "src": "objetos-cientificos/arte/MED-08/clasica-256.webp",
-            "bytes": 24806
+            "src": "objetos-cientificos/arte/MED-13/clasica-256.webp",
+            "bytes": 17454
           },
           "512": {
-            "src": "objetos-cientificos/arte/MED-08/clasica-512.webp",
-            "bytes": 72470
+            "src": "objetos-cientificos/arte/MED-13/clasica-512.webp",
+            "bytes": 54284
           }
         },
         "inventario": {
           "64": {
-            "src": "objetos-cientificos/arte/MED-08/inventario-64.webp",
-            "bytes": 2970
+            "src": "objetos-cientificos/arte/MED-13/inventario-64.webp",
+            "bytes": 2250
           },
           "128": {
-            "src": "objetos-cientificos/arte/MED-08/inventario-128.webp",
-            "bytes": 8168
+            "src": "objetos-cientificos/arte/MED-13/inventario-128.webp",
+            "bytes": 5980
           },
           "256": {
-            "src": "objetos-cientificos/arte/MED-08/inventario-256.webp",
-            "bytes": 23758
+            "src": "objetos-cientificos/arte/MED-13/inventario-256.webp",
+            "bytes": 16796
           },
           "512": {
-            "src": "objetos-cientificos/arte/MED-08/inventario-512.webp",
-            "bytes": 62724
+            "src": "objetos-cientificos/arte/MED-13/inventario-512.webp",
+            "bytes": 48398
           }
         }
       },
@@ -29522,11 +31905,11 @@ globalThis.AtlasObjetosCientificos = {
         "inventario": {
           "64": {
             "src": "objetos-cientificos/arte/ARQ-10/inventario-64.webp",
-            "bytes": 3710
+            "bytes": 3646
           },
           "128": {
             "src": "objetos-cientificos/arte/ARQ-10/inventario-128.webp",
-            "bytes": 11084
+            "bytes": 10812
           },
           "256": {
             "src": "objetos-cientificos/arte/ARQ-10/inventario-256.webp",
@@ -30410,8 +32793,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1905",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1905 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -30486,8 +32869,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1889",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1889 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -30561,8 +32944,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1877",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1877 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -30637,8 +33020,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1915",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1915 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -30714,8 +33097,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1908",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1908 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -30868,8 +33251,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1943",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1943 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -30945,8 +33328,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1985",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1985 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -31015,8 +33398,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "Futuras etapas",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1938",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1938 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -33673,8 +36056,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1905",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1905 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -33738,8 +36121,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1889",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1889 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -33803,8 +36186,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1877",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1877 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -33868,8 +36251,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1915",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1915 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -33933,8 +36316,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1908",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1908 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -33998,8 +36381,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Documentación o reproducción museística; datación por verificar La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34063,8 +36446,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1943",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1943 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34128,8 +36511,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Futuro · referencia taxonómica de 1985",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Futuro · referencia taxonómica de 1985 La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34193,8 +36576,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Descrito en 1877.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Descrito en 1877. La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34224,8 +36607,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Descrito en 1878.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Descrito en 1878. La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34289,8 +36672,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Descrito en 1903.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Descrito en 1903. La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34320,8 +36703,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Descrito en 1924.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Descrito en 1924. La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34351,8 +36734,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Descrito en 1922.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Descrito en 1922. La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34382,8 +36765,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Descrito en 1969.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Descrito en 1969. La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34413,8 +36796,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Descrito en 1861.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Descrito en 1861. La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34444,8 +36827,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Posterior a 1842",
-        "evidence": "Descrito en 1876.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Descrito en 1876. La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34509,8 +36892,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Reconocido en la década de 1820.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Reconocido en la década de 1820. La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34574,8 +36957,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Reconocido en la década de 1820.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Reconocido en la década de 1820. La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34605,8 +36988,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Descrito antes de 1842.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Descrito antes de 1842. La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {
@@ -34670,8 +37053,8 @@ globalThis.AtlasObjetosCientificos = {
       "pilot": false,
       "stage": "OBJ-05",
       "chronology": {
-        "status": "Fecha pendiente de verificar",
-        "evidence": "Descrito en 1796.",
+        "status": "Compatible con reservas documentales",
+        "evidence": "Descrito en 1796. La fecha científica o documental se conserva como referencia.",
         "source": ""
       },
       "sprites": {

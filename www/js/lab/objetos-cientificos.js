@@ -1,14 +1,16 @@
 (() => {
   'use strict';
 
-  const {rows, groups, materialIds, recipeExamples, archive, cartography, paleontology, botany, geology, geologyComparisons, oceanography, oceanographyComparisons, history, historyComparisons, natural} = AtlasObjetosCientificos;
+  const {rows, groups, materialIds, recipeExamples, archive, cartography, paleontology, botany, geology, geologyComparisons, oceanography, oceanographyComparisons, history, historyComparisons, natural, archivedRows, substitutions} = AtlasObjetosCientificos;
   const {phases, reconstruction} = AtlasReconstruccionObjetos;
   const fossilGroups = {
     materials: {name:'Materiales y fósiles menores', ids:[...paleontology.materials,...paleontology.minors]},
     archive: {name:'Archivo paleontológico', ids:paleontology.archive},
     future: {name:'Montajes futuros', ids:paleontology.future}
   };
-  const byId = new Map(rows.map(row => [row.id, row]));
+  const {entries:audits, similarities, profiles} = AtlasAuditoriaObjetos;
+  const byId = new Map([...rows,...archivedRows].map(row => [row.id, row]));
+  const bySubstitution = new Map(substitutions.flatMap(entry => [[entry.old,entry],[entry.id,entry]]));
   const get = id => document.getElementById(id);
   const gallery = get('gallery');
   const storageKey = 'atlas-laboratorio-objetos-cientificos:v1';
@@ -49,6 +51,8 @@
     options(get(key), values, 'Todas las opciones');
   }
 
+  options(get('audit-status'),[...new Set(Object.values(audits).map(entry => entry.status))].sort(collator.compare),'Todos los resultados');
+  options(get('audit-similar'),similarities.map(group => group.name),'Todas las familias');
   options(get('group'), groups.map(group => group.name));
   options(get('botany-group'), botany.map(group => group.name), 'Plancha general · 48 piezas');
   options(get('geology-group'), [...geology,...geologyComparisons].map(group => group.name), 'Plancha general · 60 piezas');
@@ -81,10 +85,10 @@
     return row.sprites[key]?.[Math.max(64, size())];
   }
 
-  function figure(row, key, caption, hidden = false) {
+  function figure(row, key, caption, hidden = false, resolution) {
     const target = node('figure');
     const stage = node('div', '', 'stage ' + get('ground').value);
-    const source = asset(row, key);
+    const source = resolution ? row.sprites[key]?.[resolution] : asset(row,key);
     const rarity = rarities.indexOf(row.rarity);
     if (rarity >= 0 && get('halo').checked) {
       stage.classList.add('halo');
@@ -378,6 +382,14 @@
         const selection = get('oceanography-group').value;
         return selection ? [...oceanography,...oceanographyComparisons].find(group => group.name === selection)?.ids.includes(row.id) : row.oceanography;
       }
+      case 'audit': {
+        const entry = audits[row.id];
+        const family = similarities.find(group => group.name === get('audit-similar').value);
+        return entry && (!get('audit-status').value || entry.status === get('audit-status').value) &&
+          (!family || family.ids.includes(row.id));
+      }
+      case 'retired': return get('retired-mode').value === 'all' ||
+        row.id.startsWith('FIL-') === (get('retired-mode').value === 'philately');
       case 'natural': return row.natural && (!get('natural-group').value || row.collection === get('natural-group').value);
       case 'eggs': return row.id.startsWith('HUE-');
       case 'history': {
@@ -522,8 +534,94 @@
     gallery.append(comparator);
   }
 
+  function substitutionCard(entry) {
+    const card = node('article','','substitution-card');
+    const before = byId.get(entry.old);
+    const after = byId.get(entry.id);
+    card.append(node('h3',entry.old + ' → ' + entry.id),node('p',entry.reason));
+    const images = node('div','','botany-samples');
+    images.append(figure(before,'inventario','Archivado · ' + before.name),figure(after,'inventario','Vigente · ' + after.name));
+    card.append(images);
+    const source = node('a','Referencia documental');
+    source.href = entry.source;
+    card.append(node('p',entry.collection + ' · ' + entry.rarity + ' · ' + entry.points + ' pts'),source);
+    return card;
+  }
+
+  function auditDetail(row) {
+    focusId = row.id;
+    render();
+    gallery.scrollIntoView({block:'start'});
+  }
+
+  function renderAudit(entries, retired) {
+    const focused = entries.find(row => row.id === focusId);
+    if (focused) {
+      navigation(0,0);
+      const back = node('button','Volver a la cuadrícula');
+      back.addEventListener('click',() => { focusId = null; render(); });
+      gallery.append(back);
+      const entry = audits[focused.id];
+      if (entry) gallery.append(node('p',entry.status + ' · ' + entry.note));
+      if (entry?.previous) {
+        const revision = node('div','','botany-samples');
+        const resolution = size() <= 64 ? 64 : 128;
+        const before = {...focused,sprites:{inventario:entry.previous}};
+        revision.append(figure(before,'inventario','Inventario anterior',false,resolution),
+          figure(focused,'inventario',entry.status === 'Requiere homologación' ? 'Contraste ajustado' : 'Lámina corregida',false,resolution));
+        gallery.append(revision);
+      }
+      const replacement = bySubstitution.get(focused.id);
+      if (replacement) gallery.append(substitutionCard(replacement));
+      gallery.append(comparison(focused));
+      return;
+    }
+    const count = Math.ceil(entries.length / pageSize);
+    page = Math.min(page,Math.max(0,count - 1));
+    navigation(page,count);
+    const grid = node('div','','botany-grid');
+    for (const row of entries.slice(page * pageSize,(page + 1) * pageSize)) {
+      const entry = audits[row.id];
+      const card = retired ? substitutionCard(bySubstitution.get(row.id)) : node('article','','audit-card');
+      if (!retired) card.append(node('h3',row.name),node('small',row.id + ' · ' + entry.status),
+        figure(row,'inventario'), node('p',entry.note));
+      const open = node('button',retired ? 'Ficha y evaluación archivada' : 'Consultar y evaluar');
+      open.addEventListener('click',() => auditDetail(row));
+      card.append(open);
+      grid.append(card);
+    }
+    gallery.append(grid);
+  }
+
+  function renderProfiles() {
+    navigation(0,0);
+    const heading = node('h2','Perfiles de distribución');
+    gallery.append(heading,node('p','Peso medido de los archivos vigentes. Memoria RGBA estimada si todas las imágenes se decodificaran a la vez.'));
+    const grid = node('div','','botany-grid');
+    for (const profile of profiles) {
+      const card = node('article','','profile-card');
+      const mib = value => (value / 1048576).toFixed(2).replace('.',',') + ' MiB';
+      card.append(node('h3',profile.name),node('p',profile.description),
+        node('p',profile.files + ' archivos · ' + mib(profile.bytes) + ' en disco · ' + mib(profile.rgba) + ' RGBA estimados'));
+      const variant = profile.assets.some(([key,pixels]) => key === 'inventario' && pixels >= size()) ? 'inventario' : 'clasica';
+      const choices = profile.assets.filter(([key]) => key === variant).map(([,pixels]) => pixels);
+      const resolution = choices.find(pixels => pixels >= size()) || choices.at(-1);
+      for (const id of ['ARM-02','HUE-09','MARV-06']) {
+        card.append(figure(byId.get(id),variant,byId.get(id).name + ' · fuente ' + resolution + ' px',false,resolution));
+      }
+      grid.append(card);
+    }
+    gallery.append(grid);
+  }
+
   function render() {
     const view = get('view').value;
+    const inAudit = view === 'audit';
+    const inRetired = view === 'retired';
+    const inPerformance = view === 'performance';
+    get('audit-status-control').hidden = !inAudit;
+    get('audit-similar-control').hidden = !inAudit;
+    get('retired-control').hidden = !inRetired;
     const inArchive = view === 'archive';
     const inBotany = view === 'botany';
     get('botany-control').hidden = !inBotany;
@@ -546,7 +644,7 @@
     const reconstructing = inPaleo && fossilSection === 'mounts';
     get('paleo-control').hidden = !inPaleo;
     for (const id of ['mount','phase','living']) get(id + '-control').hidden = !reconstructing;
-    for (const key of ['search','sort',...filters]) get(key).disabled = inAssembly || reconstructing;
+    for (const key of ['search','sort',...filters]) get(key).disabled = inAssembly || reconstructing || inPerformance;
     const single = view === 'compare' && get('layout').value === 'single';
     get('scope').disabled = view !== 'compare' || Boolean(get('stage').value);
     get('group-control').hidden = view !== 'groups';
@@ -554,11 +652,21 @@
     get('recipe-control').hidden = view !== 'workshop';
     get('layout').disabled = view !== 'compare';
     const query = normalize(get('search').value.trim());
-    const selected = sortRows(rows.filter(row => matchesView(row, view) &&
+    const selected = sortRows((inRetired ? archivedRows : rows).filter(row => matchesView(row, view) &&
       normalize([row.name,row.id,row.provenance,...(row.species || [])].join(' ')).includes(query) &&
       filters.every(key => !get(key).value || get(key).value === (key === 'approval' ? approval(row) : row[key]))));
     gallery.replaceChildren();
     gallery.style.setProperty('--size', size() + 'px');
+    if (inAudit || inRetired) {
+      get('status').textContent = selected.length + (inRetired ? ' piezas archivadas' : ' ilustraciones principales');
+      renderAudit(selected,inRetired);
+      return;
+    }
+    if (inPerformance) {
+      get('status').textContent = 'Tres perfiles experimentales';
+      renderProfiles();
+      return;
+    }
     if (inAssembly) {
       navigation(0, 0);
       get('status').textContent = 'Seis mapas · requisitos de las recetas vigentes · simulación visual';
@@ -636,7 +744,7 @@
   }
 
   get('search').addEventListener('input', resetPage);
-  for (const key of ['view','group','botany-group','geology-group','oceanography-group','history-group','history-period','history-date','natural-group','egg-mode','paleo-section','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
+  for (const key of ['view','group','botany-group','geology-group','oceanography-group','history-group','history-period','history-date','audit-status','audit-similar','retired-mode','natural-group','egg-mode','paleo-section','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
   for (const key of ['scale','ground','halo','stock','assembly','botany-variant','mount','phase','living']) get(key).addEventListener('change', render);
   function resetPage() {
     page = 0;
@@ -654,5 +762,7 @@
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   });
 
+  const initialView = new URLSearchParams(location.search).get('vista');
+  if (['audit','retired','performance'].includes(initialView)) get('view').value = initialView;
   render();
 })();

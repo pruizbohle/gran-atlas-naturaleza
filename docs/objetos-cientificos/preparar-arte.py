@@ -1,4 +1,4 @@
-"""OBJ-01: pasar las tres planchas originales. OBJ-02 a OBJ-10: pasar la etapa (por ejemplo --obj-04) y una plancha opcional."""
+"""OBJ-01: pasar las tres planchas originales. OBJ-02 a OBJ-11: pasar la etapa (por ejemplo --obj-04) y una plancha opcional."""
 import json
 from pathlib import Path
 import sys
@@ -84,7 +84,7 @@ def export_sprite(name, art, method=4):
             canvas.save(folder / f'{variant}-{size}.webp', quality=quality, method=method)
 
 def main(args):
-    if args and args[0] in ('--obj-02', '--obj-03', '--obj-04', '--obj-05', '--obj-06', '--obj-07', '--obj-08', '--obj-09', '--obj-10'):
+    if args and args[0] in ('--obj-02', '--obj-03', '--obj-04', '--obj-05', '--obj-06', '--obj-07', '--obj-08', '--obj-09', '--obj-10', '--obj-11'):
         stage = args[0][2:]
         folder = Path(__file__).parent
         plan = json.loads((folder / f'{stage}.json').read_text())

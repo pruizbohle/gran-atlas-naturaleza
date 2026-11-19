@@ -1,0 +1,386 @@
+ID	Pieza	Tipo	Familia	Gabinete	Revisión preliminar	Observación	Aprobación
+binoculars	Prismáticos de viaje	Objeto productivo	Instrumentos científicos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+brass_compass	Brújula de latón	Objeto productivo	Instrumentos científicos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+sturdy_pack	Morral reforzado	Objeto productivo	Materiales de expedición	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+field_hat	Sombrero de naturalista	Objeto productivo	Sombreros y prendas	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+feather_cap	Gorro emplumado	Objeto productivo	Sombreros y prendas	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+rain_hood	Capucha impermeable	Objeto productivo	Sombreros y prendas	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+amulet	Colgante del explorador	Objeto productivo	Collares, amuletos y medallones	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+amber_charm	Amuleto de ámbar	Objeto productivo	Collares, amuletos y medallones	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+shell_necklace	Collar de conchas	Objeto productivo	Collares, amuletos y medallones	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+fossil_fragment	Fragmento fósil	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+fossil_skull	Cráneo fósil	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+fossil_tooth	Diente fósil	Objeto productivo	Fósiles	—	Requiere homologación	Separar silueta y textura de dientes coleccionables FOS-05 y FOS-12.	Pendiente
+bone_short	Hueso corto	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+bone_long	Hueso largo	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+carnivore_skull	Cráneo carnívoro	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+herbivore_skull	Cráneo herbívoro	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+fossil_plate	Placa fósil dorsal	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+fossil_sail	Espina de vela fósil	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+animal_trace	Muestra de huellas	Objeto productivo	Materiales animales	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+pressed_flower	Flor prensada	Objeto productivo	Botánica	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ancient_coin	Moneda antigua	Objeto productivo	Numismática	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+map_fragment	Fragmento de mapa	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+asia_map_piece	Parte de mapa de Asia	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+asia_map	Mapa de Asia	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+africa_map_piece	Parte de mapa de África	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+africa_map	Mapa de África	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+north_america_map_piece	Parte de mapa de Norteamérica	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+north_america_map	Mapa de Norteamérica	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+oceanic_quadrant	Cuadrante transatlántico	Objeto productivo	Instrumentos científicos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+parchment_scrap	Pergamino antiguo	Objeto productivo	Artefactos históricos	—	Requiere ajuste menor	Acentuar borde irregular para diferenciarlo de cartas y fragmentos de mapa.	Pendiente
+river_pebble	Piedra de río pulida	Objeto productivo	Materiales de expedición	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+heron_feather	Pluma de garza	Objeto productivo	Materiales animales	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+polished_lens	Lente pulida	Objeto productivo	Instrumentos científicos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+brass_shard	Pieza de latón antiguo	Objeto productivo	Materiales de expedición	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+old_ink	Tintero antiguo	Objeto productivo	Materiales de expedición	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+carved_wood	Madera tallada	Objeto productivo	Materiales de expedición	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+wolf_tooth	Diente de lobo	Objeto productivo	Materiales animales	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+owl_feather	Pluma de rapaz	Objeto productivo	Materiales animales	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+antler_fragment	Fragmento de cornamenta	Objeto productivo	Materiales animales	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+otter_whisker	Bigote de nutria	Objeto productivo	Materiales animales	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+boar_tusk	Colmillo de jabalí	Objeto productivo	Materiales animales	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+beaver_tail_scale	Escama de cola de castor	Objeto productivo	Materiales animales	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+field_telescope	Catalejo de precisión	Objeto productivo	Instrumentos científicos	—	Requiere homologación	Comparar con INS-08 y separar ambos por montura, estuche o perfil.	Pendiente
+scholar_hat	Sombrero académico	Objeto productivo	Sombreros y prendas	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+museum_medallion	Medallón de ámbar	Objeto productivo	Collares, amuletos y medallones	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+fossil_amber	Ámbar fósil	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+river_pearl	Perla fluvial	Objeto productivo	Materiales animales	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+fossil_track	Huella fosilizada	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+fossil_claw	Garra fósil	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+fossil_rib	Costilla fósil	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+fossil_horn	Cuerno fósil	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+hard_bone	Hueso duro	Objeto productivo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+polar_coat	Abrigo de expedición polar	Objeto productivo	Sombreros y prendas	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+sounding_kit	Equipo de sondeo y muestreo	Objeto productivo	Instrumentos científicos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+south_america_map_piece	Parte de mapa de Sudamérica	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+south_america_map	Mapa de Sudamérica	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+oceania_map_piece	Parte de mapa de Oceanía	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+oceania_map	Mapa de Oceanía	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+polar_map_piece	Parte de mapa de regiones polares	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+polar_map	Mapa de regiones polares	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+world_map	Mapamundi	Objeto productivo	Cartografía	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+asian_spices	Especias de gabinete oriental	Objeto productivo	Botánica	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+asian_trade_folio	Folio de comercio asiático	Objeto productivo	Artefactos históricos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+african_textile_sample	Muestra textil de gabinete africano	Objeto productivo	Materiales de expedición	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+north_american_trade_document	Documento comercial norteamericano	Objeto productivo	Artefactos históricos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+south_american_cacao	Cacao de colección botánica	Objeto productivo	Botánica	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+oceanian_nacre	Nácar insular histórico	Objeto productivo	Materiales de expedición	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+polar_geology_record	Registro geológico polar	Objeto productivo	Artefactos históricos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+BOT-01	Rosa silvestre	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+BOT-02	Brezo común	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+BOT-03	Amapola de California	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+BOT-04	Lupino andino	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+BOT-05	Jacarandá	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+BOT-06	Protea real	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+BOT-07	Flor de baobab	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+BOT-08	Loto sagrado	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+BOT-09	Flor de cerezo	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+BOT-10	Waratah	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+BOT-11	Edelweiss	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+BOT-12	Rafflesia gigante	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+SEM-01	Bellota de roble	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+SEM-02	Piñón mediterráneo	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+SEM-03	Haya europea	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+SEM-04	Semilla de saguaro	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+SEM-05	Cacao criollo	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+SEM-06	Vaina de flamboyán	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+SEM-07	Semilla de araucaria	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+SEM-08	Semilla de loto	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+SEM-09	Cápsula de eucalipto	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+SEM-10	Semilla de baobab	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+SEM-11	Sámara de arce japonés	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+SEM-12	Coco de mar	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+PIG-01	Carbón vegetal negro	Coleccionable propuesto	Otras piezas de colección	Botánica	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+PIG-02	Ocre amarillo	Coleccionable propuesto	Otras piezas de colección	Botánica	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+PIG-03	Ocre rojo	Coleccionable propuesto	Otras piezas de colección	Botánica	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+PIG-04	Siena natural	Coleccionable propuesto	Otras piezas de colección	Botánica	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+PIG-05	Tierra verde	Coleccionable propuesto	Otras piezas de colección	Botánica	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+PIG-06	Achiote rojo	Coleccionable propuesto	Otras piezas de colección	Botánica	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+PIG-07	Índigo natural	Coleccionable propuesto	Otras piezas de colección	Botánica	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+PIG-08	Cochinilla carmín	Coleccionable propuesto	Otras piezas de colección	Botánica	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+PIG-09	Azul maya	Coleccionable propuesto	Otras piezas de colección	Botánica	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+PIG-10	Malaquita molida	Coleccionable propuesto	Otras piezas de colección	Botánica	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+PIG-11	Ultramar de lapislázuli	Coleccionable propuesto	Otras piezas de colección	Botánica	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+PIG-12	Púrpura de Tiro	Coleccionable propuesto	Otras piezas de colección	Botánica	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+GEM-01	Cuarzo rosa	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+GEM-02	Granate almandino	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+GEM-03	Amatista	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+GEM-04	Topacio imperial	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+GEM-05	Aguamarina	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+GEM-06	Turquesa	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+GEM-07	Jade nefrita	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+GEM-08	Peridoto	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+GEM-09	Esmeralda colombiana	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+GEM-10	Zafiro de Ceilán	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+GEM-11	Rubí birmano	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+GEM-12	Ópalo negro	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MIN-01	Cuarzo cristalino	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MIN-02	Calcita óptica	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar geometría y refracción con MARV-07.	Pendiente
+MIN-03	Pirita cúbica	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MIN-04	Hematita especular	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MIN-05	Fluorita violeta	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MIN-06	Magnetita natural	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MIN-07	Azurita	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MIN-08	Malaquita bandeada	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MIN-09	Obsidiana negra	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MIN-10	Azufre cristalizado	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MIN-11	Lapislázuli	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MIN-12	Vivianita cristalizada	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+AMB-01	Resina de pino endurecida	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar tono, inclusión, borde y transparencia con otras resinas sobre fondos claro y oscuro.	Pendiente
+AMB-02	Copal africano	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar tono, inclusión, borde y transparencia con otras resinas sobre fondos claro y oscuro.	Pendiente
+AMB-03	Copal colombiano	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar tono, inclusión, borde y transparencia con otras resinas sobre fondos claro y oscuro.	Pendiente
+AMB-04	Ámbar miel báltico	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar tono, inclusión, borde y transparencia con otras resinas sobre fondos claro y oscuro.	Pendiente
+AMB-05	Ámbar opaco báltico	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar tono, inclusión, borde y transparencia con otras resinas sobre fondos claro y oscuro.	Pendiente
+AMB-06	Ámbar de Chiapas	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar tono, inclusión, borde y transparencia con otras resinas sobre fondos claro y oscuro.	Pendiente
+AMB-07	Ámbar de Kuji	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar tono, inclusión, borde y transparencia con otras resinas sobre fondos claro y oscuro.	Pendiente
+AMB-08	Ámbar libanés	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar tono, inclusión, borde y transparencia con otras resinas sobre fondos claro y oscuro.	Pendiente
+AMB-09	Ámbar dominicano	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar tono, inclusión, borde y transparencia con otras resinas sobre fondos claro y oscuro.	Pendiente
+AMB-10	Ámbar con hoja fósil	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar tono, inclusión, borde y transparencia con otras resinas sobre fondos claro y oscuro.	Pendiente
+AMB-11	Ámbar birmano	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar tono, inclusión, borde y transparencia con otras resinas sobre fondos claro y oscuro.	Pendiente
+AMB-12	Ámbar azul dominicano	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar tono, inclusión, borde y transparencia con otras resinas sobre fondos claro y oscuro.	Pendiente
+MET-13	Meteorito de L’Aigle	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+MET-02	Meteorito de Ensisheim	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MET-14	Meteorito de Wold Cottage	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar costra y área de fractura con L’Aigle, ambos L6.	Pendiente
+MET-15	Meteorito de Benares	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Separar el perfil oscuro de otras condritas con fuente museística.	Pendiente
+MET-16	Meteorito de Weston	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere ajuste menor	Cotejar corte y superficie con el fragmento de Weston.	Pendiente
+MET-06	Meteorito de Gibeon	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MET-07	Meteorito de Campo del Cielo	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MET-17	Meteorito de Chassigny	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+MET-09	Meteorito de Imilac	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MET-18	Meteorito de Krasnojarsk	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+MET-19	Meteorito de Alais	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+MET-20	Meteorito de Stannern	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Requiere homologación	Comparar matriz basáltica clara con condritas de aspecto similar.	Pendiente
+MAR-01	Ficha portuaria del Atlántico Norte	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MAR-02	Plomada de sonda del Atlántico Sur	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MAR-03	Clavo de casco del Pacífico Norte	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MAR-04	Fragmento de porcelana del Pacífico Sur	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MAR-05	Contrapeso de red del Índico	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MAR-06	Botella de mensaje del Ártico	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MAR-07	Medalla de navegante del océano Austral	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MAR-08	Fragmento del plano de los anillos	Coleccionable propuesto	Artefactos históricos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MAR-09	Sello del tridente sumergido	Coleccionable propuesto	Artefactos históricos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MAR-10	Llave de las compuertas de Atlántida	Coleccionable propuesto	Artefactos históricos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MAR-11	Prisma de las mareas	Coleccionable propuesto	Artefactos históricos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MAR-12	Corona de oricalco	Coleccionable propuesto	Artefactos históricos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CON-01	Vieira atlántica	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CON-02	Lapa mediterránea	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CON-03	Caracola turbante	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CON-04	Oreja de mar	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CON-05	Cauri tigre	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CON-06	Múrex espinoso	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CON-07	Caracola reina	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CON-08	Cono textil	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CON-09	Nautilo perlado	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CON-10	Caracola tritón	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CON-11	Almeja gigante	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CON-12	Argonauta hembra	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CUR-01	Nudo de ocho	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CUR-02	Silbato de contramaestre	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CUR-03	Ficha de rancho naval	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CUR-13	Flotador pesquero de corcho	Coleccionable propuesto	Objetos marítimos	Oceanografía	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+CUR-05	Caja de agujas de vela	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CUR-06	Pipa de arcilla marinera	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CUR-07	Cuaderno de mareas	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CUR-08	Tablilla de señales	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CUR-09	Trenzado de cabo	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CUR-10	Rueda de bitácora miniatura	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CUR-11	Botella de arena oceánica	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CUR-12	Maqueta de barco en botella	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+COR-01	Coral cerebro	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+COR-02	Coral estrella	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+COR-03	Coral plato	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+COR-04	Coral coliflor	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+COR-05	Coral asta de ciervo	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+COR-06	Gorgonia abanico	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+COR-07	Coral azul	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+COR-08	Coral tubo de órgano	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+COR-09	Coral bambú	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+COR-10	Coral negro	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+COR-11	Coral rojo mediterráneo	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+COR-12	Coral cuerno de alce	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+NUM-01	Penique victoriano	Coleccionable propuesto	Numismática	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+NUM-02	Denario romano	Coleccionable propuesto	Numismática	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+NUM-03	Dracma griega	Coleccionable propuesto	Numismática	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+NUM-04	Moneda cash china	Coleccionable propuesto	Numismática	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+NUM-05	Rupia de la India británica	Coleccionable propuesto	Numismática	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+NUM-06	Real brasileño antiguo	Coleccionable propuesto	Numismática	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+NUM-07	Dólar de plata estadounidense	Coleccionable propuesto	Numismática	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+NUM-08	Koban japonés	Coleccionable propuesto	Numismática	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+NUM-13	Tálero de María Teresa	Coleccionable propuesto	Numismática	Historia	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+NUM-10	Soberano británico de oro	Coleccionable propuesto	Numismática	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+NUM-11	Ocho reales mexicano	Coleccionable propuesto	Numismática	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+NUM-12	Doblón español de naufragio	Coleccionable propuesto	Numismática	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+CIV-01	Lucerna romana	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+CIV-02	Ánfora griega	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+CIV-03	Fíbula nórdica	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+CIV-04	Escarabeo egipcio	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+CIV-05	Sello cilíndrico	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+CIV-06	Figurilla del valle del Indo	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+CIV-07	Cerámica pueblo ancestral	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+CIV-08	Colgante de jade maya	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+CIV-09	Quipu andino	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+CIV-10	Textil nazca	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+CIV-11	Colgante pounamu maorí	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+CIV-12	Placa del Reino de Benín	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+ARM-01	Khopesh egipcio	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+ARM-02	Casco corintio	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+ARM-03	Gladius romano	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+ARM-04	Armadura samurái	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+ARM-05	Jian chino	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+ARM-06	Keris indonesio	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+ARM-07	Cota de malla europea	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+ARM-08	Espada ropera española	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+ARM-09	Sable otomano ceremonial	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+ARM-10	Escudo zulú	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	Tipología zulú documentada. El patrón de piel y el ejemplar exacto siguen pendientes.	Pendiente
+ARM-11	Chimalli mexica	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+ARM-12	Clava mapuche ceremonial	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	Cotejar perfil de la clava con el inventario y contexto ceremonial.	Pendiente
+MAS-01	Máscara teatral griega	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+MAS-02	Máscara veneciana	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+MAS-03	Kokeshi de madera	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+MAS-04	Netsuke tallado	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+MAS-05	Peso de oro akan	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+MAS-06	Máscara gelede	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+MAS-07	Figurilla olmeca	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+MAS-08	Máscara maya de jade	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+MAS-09	Vasija retrato moche	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+MAS-10	Figurilla inca	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+MAS-11	Hei-tiki maorí	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+MAS-12	Máscara de madera baulé	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+MAP-01	Carta portulana mediterránea	Coleccionable propuesto	Cartografía	Historia	Pendiente de cotejo científico	Cotejar orientación, formato, técnica y perfil con el ejemplar de la ficha antes de corregir.	Pendiente
+MAP-02	Tabula Peutingeriana	Coleccionable propuesto	Cartografía	Historia	Pendiente de cotejo científico	Cotejar orientación, formato, técnica y perfil con el ejemplar de la ficha antes de corregir.	Pendiente
+MAP-03	Mapa de Juan de la Cosa	Coleccionable propuesto	Cartografía	Historia	Pendiente de cotejo científico	Cotejar orientación, formato, técnica y perfil con el ejemplar de la ficha antes de corregir.	Pendiente
+MAP-04	Atlas de Mercator	Coleccionable propuesto	Cartografía	Historia	Pendiente de cotejo científico	Cotejar orientación, formato, técnica y perfil con el ejemplar de la ficha antes de corregir.	Pendiente
+MAP-05	Mapa de Piri Reis	Coleccionable propuesto	Cartografía	Historia	Pendiente de cotejo científico	Cotejar orientación, formato, técnica y perfil con el ejemplar de la ficha antes de corregir.	Pendiente
+MAP-06	Carta de las rutas de la seda	Coleccionable propuesto	Cartografía	Historia	Requiere rediseño	Identificar primero un itinerario histórico concreto para dibujar una carta reconocible.	Pendiente
+MAP-07	Carta de la costa suajili	Coleccionable propuesto	Cartografía	Historia	Requiere rediseño	El trazo litoral requiere fuente fechada y orientación antes de redibujar.	Pendiente
+MAP-08	Mapa del valle de México	Coleccionable propuesto	Cartografía	Historia	Pendiente de cotejo científico	Cotejar orientación, formato, técnica y perfil con el ejemplar de la ficha antes de corregir.	Pendiente
+MAP-09	Carta del estrecho de Magallanes	Coleccionable propuesto	Cartografía	Historia	Pendiente de cotejo científico	Cotejar orientación, formato, técnica y perfil con el ejemplar de la ficha antes de corregir.	Pendiente
+MAP-10	Carta de la Gran Barrera	Coleccionable propuesto	Cartografía	Historia	Pendiente de cotejo científico	Cotejar orientación, formato, técnica y perfil con el ejemplar de la ficha antes de corregir.	Pendiente
+MAP-11	Carta del Pacífico de Cook	Coleccionable propuesto	Cartografía	Historia	Pendiente de cotejo científico	Cotejar orientación, formato, técnica y perfil con el ejemplar de la ficha antes de corregir.	Pendiente
+MAP-12	Carta de las tierras antárticas	Coleccionable propuesto	Cartografía	Historia	Pendiente de cotejo científico	Separar observaciones de campaña del atlas publicado en 1844.	Pendiente
+HUE-01	Huevo de codorniz	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+HUE-02	Huevo de frailecillo	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+HUE-03	Huevo de halcón peregrino	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+HUE-04	Huevo de flamenco	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Requiere homologación	Cáscara clara cercana a HUE-05 y HUE-08. Revisar perfiles a 24 px.	Pendiente
+HUE-05	Huevo de ñandú	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Requiere ajuste menor	Revisar diferenciación por anchura y tono respecto de HUE-04.	Pendiente
+HUE-06	Huevo de emú	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+HUE-07	Huevo de casuario	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+HUE-08	Huevo de kiwi	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Requiere ajuste menor	El óvalo claro pierde información tonal a escala pequeña.	Pendiente
+HUE-09	Huevo de colibrí	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Pendiente de cotejo científico	El comparador usa una longitud familiar orientativa. Falta medida para el picoespada.	Pendiente
+HUE-10	Huevo de avestruz	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+HUE-11	Huevo de pingüino emperador	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Requiere ajuste menor	Conservar el extremo piriforme y reforzar el contraste a 24 px.	Pendiente
+HUE-12	Huevo de ave elefante	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Pendiente de cotejo científico	Conservar el huevo, con el registro europeo posterior indicado en ficha.	Pendiente
+FOS-01	Helecho fósil	Coleccionable propuesto	Fósiles	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+FOS-02	Ammonite espiral	Coleccionable propuesto	Fósiles	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+FOS-03	Madera petrificada	Coleccionable propuesto	Fósiles	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+FOS-04	Trilobite marroquí	Coleccionable propuesto	Fósiles	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+FOS-05	Diente de tiburón fósil	Coleccionable propuesto	Fósiles	Historia natural y exploración	Requiere homologación	Comparar la corona ancha y la raíz con dientes funcionales.	Pendiente
+FOS-06	Pez fósil	Coleccionable propuesto	Fósiles	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+FOS-07	Hoja fósil	Coleccionable propuesto	Fósiles	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+FOS-08	Cangrejo herradura fósil	Coleccionable propuesto	Fósiles	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+FOS-09	Huellas de dinosaurio	Coleccionable propuesto	Fósiles	Historia natural y exploración	Pendiente de cotejo científico	Cotejar las huellas de Cal Orck’o y su disposición en la superficie.	Pendiente
+FOS-10	Gastrólito fósil documentado	Coleccionable propuesto	Fósiles	Historia natural y exploración	Pendiente de cotejo científico	La atribución de gastrólito exige contexto estratigráfico.	Pendiente
+FOS-11	Pluma fósil de Solnhofen	Coleccionable propuesto	Fósiles	Historia natural y exploración	Pendiente de cotejo científico	Confirmar el perfil de la pluma de Solnhofen. La descripción posterior queda documentada.	Pendiente
+FOS-12	Diente de reptil marino	Coleccionable propuesto	Fósiles	Historia natural y exploración	Pendiente de cotejo científico	Confirmar esmalte, sección y taxón del diente.	Pendiente
+INS-01	Lupa de naturalista	Coleccionable propuesto	Instrumentos científicos	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+INS-02	Brújula de bolsillo	Coleccionable propuesto	Instrumentos científicos	Historia natural y exploración	Requiere homologación	Conservar la caja como rasgo que distingue la brújula coleccionable.	Pendiente
+INS-03	Prensa botánica	Coleccionable propuesto	Instrumentos científicos	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+INS-04	Plomada cartográfica	Coleccionable propuesto	Instrumentos científicos	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+INS-13	Barómetro de mercurio de gabinete	Coleccionable propuesto	Instrumentos científicos	Historia natural y exploración	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+INS-06	Cuaderno de campo impermeable	Coleccionable propuesto	Instrumentos científicos	Historia natural y exploración	Pendiente de cotejo científico	Cotejar material e impermeabilidad de la cubierta.	Pendiente
+INS-07	Teodolito antiguo	Coleccionable propuesto	Instrumentos científicos	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+INS-08	Catalejo de latón	Coleccionable propuesto	Instrumentos científicos	Historia natural y exploración	Requiere homologación	Silueta de tubo cercana al catalejo funcional.	Pendiente
+INS-09	Cámara de placas	Coleccionable propuesto	Instrumentos científicos	Historia natural y exploración	Pendiente de cotejo científico	Cotejar cámara y placa con tecnología daguerreana anterior a 1842.	Pendiente
+INS-10	Sextante náutico	Coleccionable propuesto	Instrumentos científicos	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+INS-11	Microscopio de campo	Coleccionable propuesto	Instrumentos científicos	Historia natural y exploración	Pendiente de cotejo científico	Cotejar montura y óptica con un microscopio de campo fechado.	Pendiente
+INS-12	Cronómetro marino	Coleccionable propuesto	Instrumentos científicos	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MARV-01	Piedra de río perforada	Coleccionable propuesto	Otras piezas de colección	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MARV-02	Rosa del desierto	Coleccionable propuesto	Otras piezas de colección	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MARV-03	Concreción esférica	Coleccionable propuesto	Otras piezas de colección	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MARV-04	Ventifacto	Coleccionable propuesto	Otras piezas de colección	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MARV-05	Vidrio volcánico iridiscente	Coleccionable propuesto	Otras piezas de colección	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MARV-06	Geoda de cuarzo	Coleccionable propuesto	Otras piezas de colección	Historia natural y exploración	Requiere homologación	Cavidad de cuarzo clara y silueta próxima a otras geodas.	Pendiente
+MARV-07	Piedra solar de calcita	Coleccionable propuesto	Otras piezas de colección	Historia natural y exploración	Requiere homologación	Diferenciar de MIN-02 y preservar el trazo duplicado a 64 px.	Pendiente
+MARV-08	Perla barroca	Coleccionable propuesto	Otras piezas de colección	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MARV-09	Fulgurita	Coleccionable propuesto	Otras piezas de colección	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MARV-10	Geoda de amatista gigante	Coleccionable propuesto	Otras piezas de colección	Historia natural y exploración	Requiere ajuste menor	La silueta de catedral y el violeta separan la pieza. Revisar el interior a 24 px.	Pendiente
+MARV-11	Vidrio del desierto libio	Coleccionable propuesto	Otras piezas de colección	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MARV-12	Copo de nieve antártico	Coleccionable propuesto	Otras piezas de colección	Historia natural y exploración	Requiere ajuste menor	Las ramificaciones finas pierden contraste en fondo claro.	Pendiente
+HOJ-01	Hoja de ginkgo	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+HOJ-02	Hoja de arce azucarero	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+HOJ-03	Hoja de higuera común	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+HOJ-04	Fronda de culantrillo	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+HOJ-05	Hoja de eucalipto azul	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+HOJ-06	Hoja de tulípero	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+HOJ-07	Fronda de helecho arborescente plateado	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+HOJ-08	Hoja de nenúfar gigante amazónico	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+HOJ-09	Hoja de gneto africano	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+HOJ-10	Fronda de helecho lengua de ciervo	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+HOJ-11	Hoja de planta jarro de Raffles	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+HOJ-12	Hoja de palma viajera	Coleccionable propuesto	Botánica	Botánica	Pendiente de cotejo científico	La forma general se lee en plancha. Confirmar estructuras diagnósticas con la referencia.	Pendiente
+ROC-01	Basalto columnar de Antrim	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ROC-02	Granito de Cornualles	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ROC-03	Pizarra de Gales	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ROC-04	Pumita del Vesubio	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ROC-05	Arenisca de las Blue Mountains	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ROC-06	Travertino de Pamukkale	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ROC-07	Toba volcánica de Capadocia	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ROC-08	Conglomerado de los Andes	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ROC-09	Gneis de Lewis	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ROC-10	Diatomita lacustre	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ROC-11	Hierro bandeado de Hamersley	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ROC-13	Basalto olivínico escocés	Coleccionable propuesto	Minerales y piedras preciosas	Geología	Pendiente de aprobación del usuario	Candidata de gabinete basada en la referencia de la ficha. Revisar textura, pátina y silueta.	Pendiente
+ALG-01	Sargazo	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ALG-02	Lechuga de mar	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ALG-03	Musgo de Irlanda	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ALG-04	Cochayuyo	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ALG-05	Alga coralina articulada	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ALG-06	Kelpo gigante	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ALG-07	Wakame	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ALG-08	Alga uva del Indo-Pacífico	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ALG-09	Dulse atlántico	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ALG-10	Alga abanico de pavo	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ALG-11	Verde de cordón	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ALG-12	Alga arcoíris australiana	Coleccionable propuesto	Objetos marítimos	Oceanografía	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MED-01	Medalla histórica de Waterloo	Coleccionable propuesto	Artefactos históricos	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MED-02	Medalla de campaña de Seringapatam	Coleccionable propuesto	Artefactos históricos	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MED-03	Insignia del Águila Blanca	Coleccionable propuesto	Artefactos históricos	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MED-04	Cruz de la Legión de Honor	Coleccionable propuesto	Artefactos históricos	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MED-05	Medalla de la Reconquista de Buenos Aires	Coleccionable propuesto	Artefactos históricos	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MED-06	Medalla de proclamación de Pedro I	Coleccionable propuesto	Artefactos históricos	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MED-07	Cruz de la Orden de Guadalupe	Coleccionable propuesto	Artefactos históricos	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MED-13	Insignia civil de la Orden de Leopoldo	Coleccionable propuesto	Artefactos históricos	Historia	Pendiente de cotejo científico	Orden creada en 1832. Verificar el modelo civil de primera época.	Pendiente
+MED-09	Cruz de San Jorge rusa	Coleccionable propuesto	Artefactos históricos	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MED-10	Medalla de oro de la Real Sociedad Geográfica	Coleccionable propuesto	Artefactos históricos	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MED-11	Medalla de Trafalgar de Boulton	Coleccionable propuesto	Artefactos históricos	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+MED-12	Orden del Sol del Perú	Coleccionable propuesto	Artefactos históricos	Historia	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ARQ-01	Nido de ave tejedora	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ARQ-02	Nido de hornero	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ARQ-03	Nido de golondrina común	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ARQ-04	Celda de avispa alfarera	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ARQ-05	Panal de abeja gigante	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ARQ-06	Dique de castor canadiense	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ARQ-07	Pérgola de ave jardinera satinada	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Requiere ajuste menor	Los tallos finos se confunden al reducir. Conservar el perfil de la avenida.	Pendiente
+ARQ-08	Nido de pájaro sastre	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ARQ-09	Termitero catedral	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ARQ-10	Rueda de telaraña de seda dorada	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Requiere homologación	Se reforzó el contraste de inventario a 64 y 128 px. La trama sigue simplificada al reducir.	Pendiente
+ARQ-11	Refugio de tricóptero de grava	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ARQ-12	Madriguera de perrito de la pradera	Coleccionable propuesto	Materiales animales	Historia natural y exploración	Requiere ajuste menor	Las galerías interiores se leen mejor desde 64 px.	Pendiente
+fosil_catalogado	Fósil catalogado	Pieza del Museo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+huella_paleontologica	Registro de huellas antiguas	Pieza del Museo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+huellas_teropodos	Archivo de pisadas fósiles	Pieza del Museo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+sedimentos_estratos	Estudio de estratos antiguos	Pieza del Museo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+carta_historica	Carta cartográfica histórica	Pieza del Museo	Artefactos históricos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+medallon_viajero	Medallón de expedición	Pieza del Museo	Artefactos históricos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+astrolabio_laton	Astrolabio de latón	Pieza del Museo	Artefactos históricos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+diario_explorador	Diario de explorador	Pieza del Museo	Artefactos históricos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+globo_cartografico	Globo cartográfico antiguo	Pieza del Museo	Artefactos históricos	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+trex_mount	Reconstrucción de T. rex	Pieza del Museo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+triceratops_mount	Reconstrucción de Triceratops	Pieza del Museo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+stegosaurus_mount	Reconstrucción de Estegosaurio	Pieza del Museo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+spinosaurus_mount	Reconstrucción de Espinosaurio	Pieza del Museo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+ankylosaurus_mount	Reconstrucción de Anquilosaurio	Pieza del Museo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+iguanodon_mount	Reconstrucción de Iguanodonte	Pieza del Museo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+pachycephalosaurus_mount	Reconstrucción de Paquicefalosaurio	Pieza del Museo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente
+carnotaurus_mount	Reconstrucción de Carnotauro	Pieza del Museo	Fósiles	—	Sin problemas detectados	En la plancha de conjunto se distingue el material y la silueta a 64 px.	Pendiente

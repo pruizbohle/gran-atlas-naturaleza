@@ -1,0 +1,301 @@
+ID	Pieza	Gabinete	Colección	Fuente principal	Fuente secundaria	Continente	Zona potencial	Rareza	Etapa sugerida	Requisitos propuestos
+BOT-01	Rosa silvestre	Botánica	Herbario del mundo	Exploración terrestre	Investigación	Europa	Islas británicas	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+BOT-02	Brezo común	Botánica	Herbario del mundo	Exploración terrestre	Investigación	Europa	Tierras altas de Escocia	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+BOT-03	Amapola de California	Botánica	Herbario del mundo	Exploración terrestre	Investigación	América del Norte	California, Estados Unidos	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+BOT-04	Lupino andino	Botánica	Herbario del mundo	Exploración terrestre	Investigación	América del Sur	Altiplano andino	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+BOT-05	Jacarandá	Botánica	Herbario del mundo	Exploración terrestre	Investigación	América del Sur	Brasil y norte de Argentina	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+BOT-06	Protea real	Botánica	Herbario del mundo	Exploración terrestre	Investigación	África	Región del Cabo, Sudáfrica	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+BOT-07	Flor de baobab	Botánica	Herbario del mundo	Exploración terrestre	Investigación	África	Madagascar	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+BOT-08	Loto sagrado	Botánica	Herbario del mundo	Exploración terrestre	Investigación	Asia	India	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+BOT-09	Flor de cerezo	Botánica	Herbario del mundo	Exploración terrestre	Investigación	Asia	Japón	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+BOT-10	Waratah	Botánica	Herbario del mundo	Exploración terrestre	Investigación	Oceanía	Nueva Gales del Sur, Australia	Raro	Meses 2–3	Bitácora botánica y registro de hábitat
+BOT-11	Edelweiss	Botánica	Herbario del mundo	Exploración terrestre	Investigación	Europa	Alpes	Raro	Meses 2–3	Bitácora botánica y registro de hábitat
+BOT-12	Rafflesia gigante	Botánica	Herbario del mundo	Exploración terrestre	Investigación	Asia	Sumatra, Indonesia	Muy raro	Meses 3–5	Bitácora botánica y registro de hábitat
+SEM-01	Bellota de roble	Botánica	Semillas extraordinarias	Exploración terrestre	Investigación	Europa	Bosques atlánticos	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+SEM-02	Piñón mediterráneo	Botánica	Semillas extraordinarias	Exploración terrestre	Investigación	Europa	Península ibérica	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+SEM-03	Haya europea	Botánica	Semillas extraordinarias	Exploración terrestre	Investigación	Europa	Bosques de Europa central	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+SEM-04	Semilla de saguaro	Botánica	Semillas extraordinarias	Exploración terrestre	Investigación	América del Norte	Desierto de Sonora	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+SEM-05	Cacao criollo	Botánica	Semillas extraordinarias	Exploración terrestre	Investigación	América del Sur	Cuenca amazónica	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+SEM-06	Vaina de flamboyán	Botánica	Semillas extraordinarias	Exploración terrestre	Investigación	África	Madagascar	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+SEM-07	Semilla de araucaria	Botánica	Semillas extraordinarias	Exploración terrestre	Investigación	América del Sur	Sur de Chile y Argentina	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+SEM-08	Semilla de loto	Botánica	Semillas extraordinarias	Exploración terrestre	Investigación	Asia	India y China	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+SEM-09	Cápsula de eucalipto	Botánica	Semillas extraordinarias	Exploración terrestre	Investigación	Oceanía	Sureste de Australia	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+SEM-10	Semilla de baobab	Botánica	Semillas extraordinarias	Exploración terrestre	Investigación	África	África subsahariana	Raro	Meses 2–3	Bitácora botánica y registro de hábitat
+SEM-11	Sámara de arce japonés	Botánica	Semillas extraordinarias	Exploración terrestre	Investigación	Asia	Japón	Raro	Meses 2–3	Bitácora botánica y registro de hábitat
+SEM-12	Coco de mar	Botánica	Semillas extraordinarias	Exploración terrestre	Investigación	África	Seychelles	Muy raro	Meses 3–5	Bitácora botánica y registro de hábitat
+PIG-01	Carbón vegetal negro	Botánica	Pigmentos del mundo	Exploración terrestre	Investigación	Europa	Europa occidental	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+PIG-02	Ocre amarillo	Botánica	Pigmentos del mundo	Exploración terrestre	Investigación	Europa	Yacimientos europeos	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+PIG-03	Ocre rojo	Botánica	Pigmentos del mundo	Exploración terrestre	Investigación	África	Sahara	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+PIG-04	Siena natural	Botánica	Pigmentos del mundo	Exploración terrestre	Investigación	Europa	Toscana, Italia	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+PIG-05	Tierra verde	Botánica	Pigmentos del mundo	Exploración terrestre	Investigación	Europa	Norte de Italia	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+PIG-06	Achiote rojo	Botánica	Pigmentos del mundo	Exploración terrestre	Investigación	América del Sur	Amazonía	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+PIG-07	Índigo natural	Botánica	Pigmentos del mundo	Exploración terrestre	Investigación	Asia	India	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+PIG-08	Cochinilla carmín	Botánica	Pigmentos del mundo	Exploración terrestre	Investigación	América del Norte	México	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+PIG-09	Azul maya	Botánica	Pigmentos del mundo	Exploración terrestre	Investigación	América del Norte	Mesoamérica	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+PIG-10	Malaquita molida	Botánica	Pigmentos del mundo	Exploración terrestre	Investigación	África	África central	Raro	Meses 2–3	Bitácora botánica y registro de hábitat
+PIG-11	Ultramar de lapislázuli	Botánica	Pigmentos del mundo	Exploración terrestre	Investigación	Asia	Badakhshan, Afganistán	Raro	Meses 2–3	Bitácora botánica y registro de hábitat
+PIG-12	Púrpura de Tiro	Botánica	Pigmentos del mundo	Exploración terrestre	Investigación	Asia	Costa del Levante	Muy raro	Meses 3–5	Bitácora botánica y registro de hábitat
+GEM-01	Cuarzo rosa	Geología	Piedras preciosas	Expediciones	Investigación	América del Sur	Minas Gerais, Brasil	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+GEM-02	Granate almandino	Geología	Piedras preciosas	Expediciones	Investigación	Europa	Bohemia, Chequia	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+GEM-03	Amatista	Geología	Piedras preciosas	Expediciones	Investigación	América del Sur	Brasil	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+GEM-04	Topacio imperial	Geología	Piedras preciosas	Expediciones	Investigación	América del Sur	Ouro Preto, Brasil	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+GEM-05	Aguamarina	Geología	Piedras preciosas	Expediciones	Investigación	América del Sur	Brasil	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+GEM-06	Turquesa	Geología	Piedras preciosas	Expediciones	Investigación	América del Norte	Suroeste de Estados Unidos	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+GEM-07	Jade nefrita	Geología	Piedras preciosas	Expediciones	Investigación	Asia	China	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+GEM-08	Peridoto	Geología	Piedras preciosas	Expediciones	Investigación	África	Isla Zabargad, Egipto	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+GEM-09	Esmeralda colombiana	Geología	Piedras preciosas	Expediciones	Investigación	América del Sur	Boyacá, Colombia	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+GEM-10	Zafiro de Ceilán	Geología	Piedras preciosas	Expediciones	Investigación	Asia	Sri Lanka	Raro	Meses 2–3	Ficha geológica, zona accesible y muestra autorizada
+GEM-11	Rubí birmano	Geología	Piedras preciosas	Expediciones	Investigación	Asia	Myanmar	Raro	Meses 2–3	Ficha geológica, zona accesible y muestra autorizada
+GEM-12	Ópalo negro	Geología	Piedras preciosas	Expediciones	Investigación	Oceanía	Lightning Ridge, Australia	Muy raro	Meses 3–5	Ficha geológica, zona accesible y muestra autorizada
+MIN-01	Cuarzo cristalino	Geología	Minerales extraordinarios	Expediciones	Investigación	Europa	Alpes	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+MIN-02	Calcita óptica	Geología	Minerales extraordinarios	Expediciones	Investigación	Europa	Islandia	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+MIN-03	Pirita cúbica	Geología	Minerales extraordinarios	Expediciones	Investigación	Europa	La Rioja, España	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+MIN-04	Hematita especular	Geología	Minerales extraordinarios	Expediciones	Investigación	África	Namibia	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+MIN-05	Fluorita violeta	Geología	Minerales extraordinarios	Expediciones	Investigación	Europa	Derbyshire, Inglaterra	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+MIN-06	Magnetita natural	Geología	Minerales extraordinarios	Expediciones	Investigación	Europa	Escandinavia	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+MIN-07	Azurita	Geología	Minerales extraordinarios	Expediciones	Investigación	África	Marruecos	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+MIN-08	Malaquita bandeada	Geología	Minerales extraordinarios	Expediciones	Investigación	África	África central	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+MIN-09	Obsidiana negra	Geología	Minerales extraordinarios	Expediciones	Investigación	América del Norte	México	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+MIN-10	Azufre cristalizado	Geología	Minerales extraordinarios	Expediciones	Investigación	Europa	Sicilia, Italia	Raro	Meses 2–3	Ficha geológica, zona accesible y muestra autorizada
+MIN-11	Lapislázuli	Geología	Minerales extraordinarios	Expediciones	Investigación	Asia	Badakhshan, Afganistán	Raro	Meses 2–3	Ficha geológica, zona accesible y muestra autorizada
+MIN-12	Vivianita cristalizada	Geología	Minerales extraordinarios	Expediciones	Investigación	América del Sur	Bolivia	Muy raro	Meses 3–5	Ficha geológica, zona accesible y muestra autorizada
+AMB-01	Resina de pino endurecida	Geología	Ámbar y resinas fósiles	Expediciones	Investigación	Europa	Europa central	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+AMB-02	Copal africano	Geología	Ámbar y resinas fósiles	Expediciones	Investigación	África	África oriental	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+AMB-03	Copal colombiano	Geología	Ámbar y resinas fósiles	Expediciones	Investigación	América del Sur	Colombia	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+AMB-04	Ámbar miel báltico	Geología	Ámbar y resinas fósiles	Expediciones	Investigación	Europa	Costa del Báltico	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+AMB-05	Ámbar opaco báltico	Geología	Ámbar y resinas fósiles	Expediciones	Investigación	Europa	Costa del Báltico	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+AMB-06	Ámbar de Chiapas	Geología	Ámbar y resinas fósiles	Expediciones	Investigación	América del Norte	Chiapas, México	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+AMB-07	Ámbar de Kuji	Geología	Ámbar y resinas fósiles	Expediciones	Investigación	Asia	Japón	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+AMB-08	Ámbar libanés	Geología	Ámbar y resinas fósiles	Expediciones	Investigación	Asia	Líbano	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+AMB-09	Ámbar dominicano	Geología	Ámbar y resinas fósiles	Expediciones	Investigación	América del Norte	República Dominicana	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+AMB-10	Ámbar con hoja fósil	Geología	Ámbar y resinas fósiles	Expediciones	Investigación	Europa	Región báltica	Raro	Meses 2–3	Ficha geológica, zona accesible y muestra autorizada
+AMB-11	Ámbar birmano	Geología	Ámbar y resinas fósiles	Expediciones	Investigación	Asia	Myanmar	Raro	Meses 2–3	Ficha geológica, zona accesible y muestra autorizada
+AMB-12	Ámbar azul dominicano	Geología	Ámbar y resinas fósiles	Expediciones	Investigación	América del Norte	República Dominicana	Muy raro	Meses 3–5	Ficha geológica, zona accesible y muestra autorizada
+MET-13	Meteorito de L’Aigle	Geología	Meteoritos	Expediciones	Investigación	Europa	Orne, Francia	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+MET-02	Meteorito de Ensisheim	Geología	Meteoritos	Expediciones	Investigación	Europa	Alsacia, Francia	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+MET-14	Meteorito de Wold Cottage	Geología	Meteoritos	Expediciones	Investigación	Europa	Yorkshire, Reino Unido	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+MET-15	Meteorito de Benares	Geología	Meteoritos	Expediciones	Investigación	Asia	Uttar Pradesh, India	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+MET-16	Meteorito de Weston	Geología	Meteoritos	Expediciones	Investigación	América del Norte	Connecticut, Estados Unidos	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+MET-06	Meteorito de Gibeon	Geología	Meteoritos	Expediciones	Investigación	África	Namibia	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+MET-07	Meteorito de Campo del Cielo	Geología	Meteoritos	Expediciones	Investigación	América del Sur	Chaco, Argentina	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+MET-17	Meteorito de Chassigny	Geología	Meteoritos	Expediciones	Investigación	Europa	Haute-Marne, Francia	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+MET-09	Meteorito de Imilac	Geología	Meteoritos	Expediciones	Investigación	América del Sur	Desierto de Atacama, Chile	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+MET-18	Meteorito de Krasnojarsk	Geología	Meteoritos	Expediciones	Investigación	Asia	Siberia, Rusia	Raro	Meses 2–3	Ficha geológica, zona accesible y muestra autorizada
+MET-19	Meteorito de Alais	Geología	Meteoritos	Expediciones	Investigación	Europa	Gard, Francia	Raro	Meses 2–3	Ficha geológica, zona accesible y muestra autorizada
+MET-20	Meteorito de Stannern	Geología	Meteoritos	Expediciones	Investigación	Europa	Moravia, Chequia	Muy raro	Meses 3–5	Ficha geológica, zona accesible y muestra autorizada
+MAR-01	Ficha portuaria del Atlántico Norte	Oceanografía	Los siete mares	Exploración costera	Expediciones	Europa	Atlántico Norte	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+MAR-02	Plomada de sonda del Atlántico Sur	Oceanografía	Los siete mares	Exploración costera	Expediciones	América del Sur	Atlántico Sur	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+MAR-03	Clavo de casco del Pacífico Norte	Oceanografía	Los siete mares	Exploración costera	Expediciones	Asia	Pacífico Norte	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+MAR-04	Fragmento de porcelana del Pacífico Sur	Oceanografía	Los siete mares	Exploración costera	Expediciones	Oceanía	Pacífico Sur	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+MAR-05	Contrapeso de red del Índico	Oceanografía	Los siete mares	Exploración costera	Expediciones	África	Océano Índico	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+MAR-06	Botella de mensaje del Ártico	Oceanografía	Los siete mares	Exploración costera	Expediciones	Polos	Océano Ártico	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+MAR-07	Medalla de navegante del océano Austral	Oceanografía	Los siete mares	Exploración costera	Expediciones	Polos	Océano Austral	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+MAR-08	Fragmento del plano de los anillos	Oceanografía	Secretos de Atlántida	Misiones	Investigación	Leyenda	Atlántida (ficción)	Poco común	Semanas 3–6	Línea narrativa de ficción explícita
+MAR-09	Sello del tridente sumergido	Oceanografía	Secretos de Atlántida	Misiones	Investigación	Leyenda	Atlántida (ficción)	Poco común	Semanas 3–6	Línea narrativa de ficción explícita
+MAR-10	Llave de las compuertas de Atlántida	Oceanografía	Secretos de Atlántida	Misiones	Investigación	Leyenda	Atlántida (ficción)	Raro	Meses 2–3	Línea narrativa de ficción explícita
+MAR-11	Prisma de las mareas	Oceanografía	Secretos de Atlántida	Misiones	Investigación	Leyenda	Atlántida (ficción)	Raro	Meses 2–3	Línea narrativa de ficción explícita
+MAR-12	Corona de oricalco	Oceanografía	Secretos de Atlántida	Misiones	Investigación	Leyenda	Atlántida (ficción)	Muy raro	Meses 3–5	Línea narrativa de ficción explícita
+CON-01	Vieira atlántica	Oceanografía	Conchas de los océanos	Exploración costera	Expediciones	Europa	Galicia, España	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+CON-02	Lapa mediterránea	Oceanografía	Conchas de los océanos	Exploración costera	Expediciones	Europa	Costa mediterránea	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+CON-03	Caracola turbante	Oceanografía	Conchas de los océanos	Exploración costera	Expediciones	Asia	Japón	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+CON-04	Oreja de mar	Oceanografía	Conchas de los océanos	Exploración costera	Expediciones	América del Norte	California, Estados Unidos	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+CON-05	Cauri tigre	Oceanografía	Conchas de los océanos	Exploración costera	Expediciones	África	Seychelles	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+CON-06	Múrex espinoso	Oceanografía	Conchas de los océanos	Exploración costera	Expediciones	Europa	Mar Mediterráneo	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+CON-07	Caracola reina	Oceanografía	Conchas de los océanos	Exploración costera	Expediciones	América del Norte	Caribe	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+CON-08	Cono textil	Oceanografía	Conchas de los océanos	Exploración costera	Expediciones	Asia	Filipinas	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+CON-09	Nautilo perlado	Oceanografía	Conchas de los océanos	Exploración costera	Expediciones	Oceanía	Micronesia	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+CON-10	Caracola tritón	Oceanografía	Conchas de los océanos	Exploración costera	Expediciones	Oceanía	Pacífico tropical	Raro	Meses 2–3	Registro marítimo, costa accesible y documentación
+CON-11	Almeja gigante	Oceanografía	Conchas de los océanos	Exploración costera	Expediciones	Oceanía	Gran Barrera de Coral, Australia	Raro	Meses 2–3	Registro marítimo, costa accesible y documentación
+CON-12	Argonauta hembra	Oceanografía	Conchas de los océanos	Exploración costera	Expediciones	Asia	Mar de Filipinas	Muy raro	Meses 3–5	Registro marítimo, costa accesible y documentación
+CUR-01	Nudo de ocho	Oceanografía	Curiosidades de marineros	Exploración costera	Expediciones	Europa	Puertos atlánticos	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+CUR-02	Silbato de contramaestre	Oceanografía	Curiosidades de marineros	Exploración costera	Expediciones	Europa	Reino Unido	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+CUR-03	Ficha de rancho naval	Oceanografía	Curiosidades de marineros	Exploración costera	Expediciones	Europa	Mar del Norte	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+CUR-13	Flotador pesquero de corcho	Oceanografía	Curiosidades de marineros	Exploración costera	Expediciones	Europa	Litoral atlántico europeo	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+CUR-05	Caja de agujas de vela	Oceanografía	Curiosidades de marineros	Exploración costera	Expediciones	Europa	Puertos del Báltico	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+CUR-06	Pipa de arcilla marinera	Oceanografía	Curiosidades de marineros	Exploración costera	Expediciones	Europa	Países Bajos	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+CUR-07	Cuaderno de mareas	Oceanografía	Curiosidades de marineros	Exploración costera	Expediciones	América del Norte	Costa este de Estados Unidos	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+CUR-08	Tablilla de señales	Oceanografía	Curiosidades de marineros	Exploración costera	Expediciones	Oceanía	Pacífico sur	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+CUR-09	Trenzado de cabo	Oceanografía	Curiosidades de marineros	Exploración costera	Expediciones	África	Puertos del Índico	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+CUR-10	Rueda de bitácora miniatura	Oceanografía	Curiosidades de marineros	Exploración costera	Expediciones	América del Sur	Valparaíso, Chile	Raro	Meses 2–3	Registro marítimo, costa accesible y documentación
+CUR-11	Botella de arena oceánica	Oceanografía	Curiosidades de marineros	Exploración costera	Expediciones	Oceanía	Islas del Pacífico	Raro	Meses 2–3	Registro marítimo, costa accesible y documentación
+CUR-12	Maqueta de barco en botella	Oceanografía	Curiosidades de marineros	Exploración costera	Expediciones	Europa	Puertos del Atlántico	Muy raro	Meses 3–5	Registro marítimo, costa accesible y documentación
+COR-01	Coral cerebro	Oceanografía	Corales del mundo	Exploración costera	Expediciones	América del Norte	Caribe	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+COR-02	Coral estrella	Oceanografía	Corales del mundo	Exploración costera	Expediciones	América del Norte	Caribe	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+COR-03	Coral plato	Oceanografía	Corales del mundo	Exploración costera	Expediciones	África	Mar Rojo	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+COR-04	Coral coliflor	Oceanografía	Corales del mundo	Exploración costera	Expediciones	Oceanía	Hawái, Estados Unidos	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+COR-05	Coral asta de ciervo	Oceanografía	Corales del mundo	Exploración costera	Expediciones	América del Norte	Caribe	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+COR-06	Gorgonia abanico	Oceanografía	Corales del mundo	Exploración costera	Expediciones	América del Norte	Caribe	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+COR-07	Coral azul	Oceanografía	Corales del mundo	Exploración costera	Expediciones	Oceanía	Pacífico occidental	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+COR-08	Coral tubo de órgano	Oceanografía	Corales del mundo	Exploración costera	Expediciones	Asia	Indonesia	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+COR-09	Coral bambú	Oceanografía	Corales del mundo	Exploración costera	Expediciones	Oceanía	Pacífico profundo	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+COR-10	Coral negro	Oceanografía	Corales del mundo	Exploración costera	Expediciones	Asia	Indo-Pacífico	Raro	Meses 2–3	Registro marítimo, costa accesible y documentación
+COR-11	Coral rojo mediterráneo	Oceanografía	Corales del mundo	Exploración costera	Expediciones	Europa	Mediterráneo occidental	Raro	Meses 2–3	Registro marítimo, costa accesible y documentación
+COR-12	Coral cuerno de alce	Oceanografía	Corales del mundo	Exploración costera	Expediciones	América del Norte	Caribe	Muy raro	Meses 3–5	Registro marítimo, costa accesible y documentación
+NUM-01	Penique victoriano	Historia	Numismática	Comercio	Intercambios museísticos	Europa	Reino Unido	Común	Primeras semanas	Registro de emisión y procedencia autorizada
+NUM-02	Denario romano	Historia	Numismática	Comercio	Intercambios museísticos	Europa	Antigua Roma	Común	Primeras semanas	Registro de emisión y procedencia autorizada
+NUM-03	Dracma griega	Historia	Numismática	Comercio	Intercambios museísticos	Europa	Grecia antigua	Común	Primeras semanas	Registro de emisión y procedencia autorizada
+NUM-04	Moneda cash china	Historia	Numismática	Comercio	Intercambios museísticos	Asia	China imperial	Común	Primeras semanas	Registro de emisión y procedencia autorizada
+NUM-05	Rupia de la India británica	Historia	Numismática	Comercio	Intercambios museísticos	Asia	India	Común	Primeras semanas	Registro de emisión y procedencia autorizada
+NUM-06	Real brasileño antiguo	Historia	Numismática	Comercio	Intercambios museísticos	América del Sur	Brasil	Poco común	Semanas 3–6	Registro de emisión y procedencia autorizada
+NUM-07	Dólar de plata estadounidense	Historia	Numismática	Comercio	Intercambios museísticos	América del Norte	Estados Unidos	Poco común	Semanas 3–6	Registro de emisión y procedencia autorizada
+NUM-08	Koban japonés	Historia	Numismática	Comercio	Intercambios museísticos	Asia	Japón, período Edo	Poco común	Semanas 3–6	Registro de emisión y procedencia autorizada
+NUM-13	Tálero de María Teresa	Historia	Numismática	Comercio	Intercambios museísticos	Europa	Günzburg, territorios de los Habsburgo	Poco común	Semanas 3–6	Registro de emisión y procedencia autorizada
+NUM-10	Soberano británico de oro	Historia	Numismática	Comercio	Intercambios museísticos	Europa	Reino Unido	Raro	Meses 2–3	Registro de emisión y procedencia autorizada
+NUM-11	Ocho reales mexicano	Historia	Numismática	Comercio	Intercambios museísticos	América del Norte	México	Raro	Meses 2–3	Registro de emisión y procedencia autorizada
+NUM-12	Doblón español de naufragio	Historia	Numismática	Comercio	Intercambios museísticos	América del Sur	Costa americana del Atlántico	Muy raro	Meses 3–5	Registro de emisión y procedencia autorizada
+CIV-01	Lucerna romana	Historia	Objetos de civilizaciones	Investigación	Intercambios museísticos	Europa	Italia	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+CIV-02	Ánfora griega	Historia	Objetos de civilizaciones	Investigación	Intercambios museísticos	Europa	Grecia	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+CIV-03	Fíbula nórdica	Historia	Objetos de civilizaciones	Investigación	Intercambios museísticos	Europa	Escandinavia	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+CIV-04	Escarabeo egipcio	Historia	Objetos de civilizaciones	Investigación	Intercambios museísticos	África	Egipto	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+CIV-05	Sello cilíndrico	Historia	Objetos de civilizaciones	Investigación	Intercambios museísticos	Asia	Mesopotamia	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+CIV-06	Figurilla del valle del Indo	Historia	Objetos de civilizaciones	Investigación	Intercambios museísticos	Asia	Pakistán	Poco común	Semanas 3–6	Ficha de procedencia y reproducción autorizada
+CIV-07	Cerámica pueblo ancestral	Historia	Objetos de civilizaciones	Investigación	Intercambios museísticos	América del Norte	Suroeste de Estados Unidos	Poco común	Semanas 3–6	Ficha de procedencia y reproducción autorizada
+CIV-08	Colgante de jade maya	Historia	Objetos de civilizaciones	Investigación	Intercambios museísticos	América del Norte	Mesoamérica	Poco común	Semanas 3–6	Ficha de procedencia y reproducción autorizada
+CIV-09	Quipu andino	Historia	Objetos de civilizaciones	Investigación	Intercambios museísticos	América del Sur	Andes centrales	Poco común	Semanas 3–6	Ficha de procedencia y reproducción autorizada
+CIV-10	Textil nazca	Historia	Objetos de civilizaciones	Investigación	Intercambios museísticos	América del Sur	Costa sur de Perú	Raro	Meses 2–3	Ficha de procedencia y reproducción autorizada
+CIV-11	Colgante pounamu maorí	Historia	Objetos de civilizaciones	Investigación	Intercambios museísticos	Oceanía	Aotearoa, Nueva Zelanda	Raro	Meses 2–3	Ficha de procedencia y reproducción autorizada
+CIV-12	Placa del Reino de Benín	Historia	Objetos de civilizaciones	Investigación	Intercambios museísticos	África	Actual Nigeria	Muy raro	Meses 3–5	Ficha de procedencia y reproducción autorizada
+ARM-01	Khopesh egipcio	Historia	Armería histórica	Intercambios museísticos	Investigación	África	Egipto	Común	Primeras semanas	Reproducción inerte o registro con procedencia
+ARM-02	Casco corintio	Historia	Armería histórica	Intercambios museísticos	Investigación	Europa	Grecia	Común	Primeras semanas	Reproducción inerte o registro con procedencia
+ARM-03	Gladius romano	Historia	Armería histórica	Intercambios museísticos	Investigación	Europa	Provincias romanas	Común	Primeras semanas	Reproducción inerte o registro con procedencia
+ARM-04	Armadura samurái	Historia	Armería histórica	Intercambios museísticos	Investigación	Asia	Japón	Común	Primeras semanas	Reproducción inerte o registro con procedencia
+ARM-05	Jian chino	Historia	Armería histórica	Intercambios museísticos	Investigación	Asia	China	Común	Primeras semanas	Reproducción inerte o registro con procedencia
+ARM-06	Keris indonesio	Historia	Armería histórica	Intercambios museísticos	Investigación	Asia	Bali, Indonesia	Poco común	Semanas 3–6	Reproducción inerte o registro con procedencia
+ARM-07	Cota de malla europea	Historia	Armería histórica	Intercambios museísticos	Investigación	Europa	Europa central	Poco común	Semanas 3–6	Reproducción inerte o registro con procedencia
+ARM-08	Espada ropera española	Historia	Armería histórica	Intercambios museísticos	Investigación	Europa	España	Poco común	Semanas 3–6	Reproducción inerte o registro con procedencia
+ARM-09	Sable otomano ceremonial	Historia	Armería histórica	Intercambios museísticos	Investigación	Asia	Anatolia	Poco común	Semanas 3–6	Reproducción inerte o registro con procedencia
+ARM-10	Escudo zulú	Historia	Armería histórica	Intercambios museísticos	Investigación	África	KwaZulu-Natal, Sudáfrica	Raro	Meses 2–3	Reproducción inerte o registro con procedencia
+ARM-11	Chimalli mexica	Historia	Armería histórica	Intercambios museísticos	Investigación	América del Norte	Valle de México	Raro	Meses 2–3	Reproducción inerte o registro con procedencia
+ARM-12	Clava mapuche ceremonial	Historia	Armería histórica	Intercambios museísticos	Investigación	América del Sur	Centro-sur de Chile	Muy raro	Meses 3–5	Reproducción inerte o registro con procedencia
+MAS-01	Máscara teatral griega	Historia	Máscaras y figurillas	Investigación	Intercambios museísticos	Europa	Grecia	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+MAS-02	Máscara veneciana	Historia	Máscaras y figurillas	Investigación	Intercambios museísticos	Europa	Venecia, Italia	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+MAS-03	Kokeshi de madera	Historia	Máscaras y figurillas	Investigación	Intercambios museísticos	Asia	Japón	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+MAS-04	Netsuke tallado	Historia	Máscaras y figurillas	Investigación	Intercambios museísticos	Asia	Japón	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+MAS-05	Peso de oro akan	Historia	Máscaras y figurillas	Investigación	Intercambios museísticos	África	Ghana	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+MAS-06	Máscara gelede	Historia	Máscaras y figurillas	Investigación	Intercambios museísticos	África	Nigeria y Benín	Poco común	Semanas 3–6	Ficha de procedencia y reproducción autorizada
+MAS-07	Figurilla olmeca	Historia	Máscaras y figurillas	Investigación	Intercambios museísticos	América del Norte	México	Poco común	Semanas 3–6	Ficha de procedencia y reproducción autorizada
+MAS-08	Máscara maya de jade	Historia	Máscaras y figurillas	Investigación	Intercambios museísticos	América del Norte	Guatemala	Poco común	Semanas 3–6	Ficha de procedencia y reproducción autorizada
+MAS-09	Vasija retrato moche	Historia	Máscaras y figurillas	Investigación	Intercambios museísticos	América del Sur	Costa norte de Perú	Poco común	Semanas 3–6	Ficha de procedencia y reproducción autorizada
+MAS-10	Figurilla inca	Historia	Máscaras y figurillas	Investigación	Intercambios museísticos	América del Sur	Andes centrales	Raro	Meses 2–3	Ficha de procedencia y reproducción autorizada
+MAS-11	Hei-tiki maorí	Historia	Máscaras y figurillas	Investigación	Intercambios museísticos	Oceanía	Aotearoa, Nueva Zelanda	Raro	Meses 2–3	Ficha de procedencia y reproducción autorizada
+MAS-12	Máscara de madera baulé	Historia	Máscaras y figurillas	Investigación	Intercambios museísticos	África	Costa de Marfil	Muy raro	Meses 3–5	Ficha de procedencia y reproducción autorizada
+MAP-01	Carta portulana mediterránea	Historia	Cartografía antigua	Investigación	Misiones	Europa	Mediterráneo	Común	Primeras semanas	Documento de archivo, zona de referencia e itinerario identificado
+MAP-02	Tabula Peutingeriana	Historia	Cartografía antigua	Investigación	Misiones	Europa	Europa romana	Común	Primeras semanas	Documento de archivo, zona de referencia e itinerario identificado
+MAP-03	Mapa de Juan de la Cosa	Historia	Cartografía antigua	Investigación	Misiones	Europa	España	Común	Primeras semanas	Documento de archivo, zona de referencia e itinerario identificado
+MAP-04	Atlas de Mercator	Historia	Cartografía antigua	Investigación	Misiones	Europa	Países Bajos	Común	Primeras semanas	Documento de archivo, zona de referencia e itinerario identificado
+MAP-05	Mapa de Piri Reis	Historia	Cartografía antigua	Investigación	Misiones	Asia	Imperio otomano	Común	Primeras semanas	Documento de archivo, zona de referencia e itinerario identificado
+MAP-06	Carta de las rutas de la seda	Historia	Cartografía antigua	Investigación	Misiones	Asia	Asia central	Poco común	Semanas 3–6	Documento de archivo, zona de referencia e itinerario identificado
+MAP-07	Carta de la costa suajili	Historia	Cartografía antigua	Investigación	Misiones	África	África oriental	Poco común	Semanas 3–6	Documento de archivo, zona de referencia e itinerario identificado
+MAP-08	Mapa del valle de México	Historia	Cartografía antigua	Investigación	Misiones	América del Norte	México	Poco común	Semanas 3–6	Documento de archivo, zona de referencia e itinerario identificado
+MAP-09	Carta del estrecho de Magallanes	Historia	Cartografía antigua	Investigación	Misiones	América del Sur	Chile	Poco común	Semanas 3–6	Documento de archivo, zona de referencia e itinerario identificado
+MAP-10	Carta de la Gran Barrera	Historia	Cartografía antigua	Investigación	Misiones	Oceanía	Costa de Queensland, Australia	Raro	Meses 2–3	Documento de archivo, zona de referencia e itinerario identificado
+MAP-11	Carta del Pacífico de Cook	Historia	Cartografía antigua	Investigación	Misiones	Oceanía	Océano Pacífico	Raro	Meses 2–3	Documento de archivo, zona de referencia e itinerario identificado
+MAP-12	Carta de las tierras antárticas	Historia	Cartografía antigua	Investigación	Misiones	Antártida	Península Antártica	Muy raro	Meses 3–5	Documento de archivo, zona de referencia e itinerario identificado
+HUE-01	Huevo de codorniz	Historia natural y exploración	Huevos de aves	Investigación	Intercambios museísticos	Asia	Asia oriental	Común	Primeras semanas	Lámina, modelo o ejemplar conservado de referencia
+HUE-02	Huevo de frailecillo	Historia natural y exploración	Huevos de aves	Observaciones de fauna	Intercambios museísticos	Europa	Islandia	Común	Primeras semanas	Lámina, modelo o ejemplar conservado de referencia · Frailecillo atlántico
+HUE-03	Huevo de halcón peregrino	Historia natural y exploración	Huevos de aves	Observaciones de fauna	Intercambios museísticos	Europa	Europa occidental	Común	Primeras semanas	Lámina, modelo o ejemplar conservado de referencia · Halcón peregrino
+HUE-04	Huevo de flamenco	Historia natural y exploración	Huevos de aves	Observaciones de fauna	Intercambios museísticos	África	África oriental	Común	Primeras semanas	Lámina, modelo o ejemplar conservado de referencia · Flamenco común
+HUE-05	Huevo de ñandú	Historia natural y exploración	Huevos de aves	Observaciones de fauna	Intercambios museísticos	América del Sur	Pampas de Argentina	Común	Primeras semanas	Lámina, modelo o ejemplar conservado de referencia · Ñandú
+HUE-06	Huevo de emú	Historia natural y exploración	Huevos de aves	Observaciones de fauna	Intercambios museísticos	Oceanía	Australia	Poco común	Semanas 3–6	Lámina, modelo o ejemplar conservado de referencia · Emú
+HUE-07	Huevo de casuario	Historia natural y exploración	Huevos de aves	Observaciones de fauna	Intercambios museísticos	Oceanía	Nueva Guinea	Poco común	Semanas 3–6	Lámina, modelo o ejemplar conservado de referencia · Casuario común
+HUE-08	Huevo de kiwi	Historia natural y exploración	Huevos de aves	Observaciones de fauna	Intercambios museísticos	Oceanía	Nueva Zelanda	Poco común	Semanas 3–6	Lámina, modelo o ejemplar conservado de referencia · Kiwi pardo de la isla norte
+HUE-09	Huevo de colibrí	Historia natural y exploración	Huevos de aves	Observaciones de fauna	Intercambios museísticos	América del Sur	Andes tropicales	Poco común	Semanas 3–6	Lámina, modelo o ejemplar conservado de referencia · Colibrí picoespada
+HUE-10	Huevo de avestruz	Historia natural y exploración	Huevos de aves	Observaciones de fauna	Intercambios museísticos	África	África austral	Raro	Meses 2–3	Lámina, modelo o ejemplar conservado de referencia · Avestruz común
+HUE-11	Huevo de pingüino emperador	Historia natural y exploración	Huevos de aves	Observaciones de fauna	Intercambios museísticos	Antártida	Antártida oriental	Raro	Meses 2–3	Lámina, modelo o ejemplar conservado de referencia · Pingüino emperador
+HUE-12	Huevo de ave elefante	Historia natural y exploración	Huevos de aves	Investigación	Intercambios museísticos	África	Madagascar	Muy raro	Meses 3–5	Lámina, modelo o ejemplar conservado de referencia
+FOS-01	Helecho fósil	Historia natural y exploración	Fósiles menores	Excavaciones	Investigación	Europa	Gales, Reino Unido	Común	Primeras semanas	Permiso de registro o réplica con ficha de yacimiento
+FOS-02	Ammonite espiral	Historia natural y exploración	Fósiles menores	Excavaciones	Investigación	Europa	Dorset, Reino Unido	Común	Primeras semanas	Permiso de registro o réplica con ficha de yacimiento
+FOS-03	Madera petrificada	Historia natural y exploración	Fósiles menores	Excavaciones	Investigación	América del Norte	Arizona, Estados Unidos	Común	Primeras semanas	Permiso de registro o réplica con ficha de yacimiento
+FOS-04	Trilobite marroquí	Historia natural y exploración	Fósiles menores	Excavaciones	Investigación	África	Marruecos	Común	Primeras semanas	Permiso de registro o réplica con ficha de yacimiento
+FOS-05	Diente de tiburón fósil	Historia natural y exploración	Fósiles menores	Excavaciones	Investigación	América del Norte	Costa atlántica de Estados Unidos	Común	Primeras semanas	Permiso de registro o réplica con ficha de yacimiento
+FOS-06	Pez fósil	Historia natural y exploración	Fósiles menores	Excavaciones	Investigación	África	Marruecos	Poco común	Semanas 3–6	Permiso de registro o réplica con ficha de yacimiento
+FOS-07	Hoja fósil	Historia natural y exploración	Fósiles menores	Excavaciones	Investigación	Asia	China	Poco común	Semanas 3–6	Permiso de registro o réplica con ficha de yacimiento
+FOS-08	Cangrejo herradura fósil	Historia natural y exploración	Fósiles menores	Excavaciones	Investigación	Europa	Alemania	Poco común	Semanas 3–6	Permiso de registro o réplica con ficha de yacimiento
+FOS-09	Huellas de dinosaurio	Historia natural y exploración	Fósiles menores	Excavaciones	Investigación	América del Sur	Cal Orck'o, Bolivia	Poco común	Semanas 3–6	Permiso de registro o réplica con ficha de yacimiento
+FOS-10	Gastrólito fósil documentado	Historia natural y exploración	Fósiles menores	Excavaciones	Investigación	América del Norte	Oeste de Estados Unidos	Raro	Meses 2–3	Permiso de registro o réplica con ficha de yacimiento
+FOS-11	Pluma fósil de Solnhofen	Historia natural y exploración	Fósiles menores	Excavaciones	Investigación	Europa	Baviera, Alemania	Raro	Meses 2–3	Permiso de registro o réplica con ficha de yacimiento
+FOS-12	Diente de reptil marino	Historia natural y exploración	Fósiles menores	Excavaciones	Investigación	Europa	Costa jurásica, Reino Unido	Muy raro	Meses 3–5	Permiso de registro o réplica con ficha de yacimiento
+INS-01	Lupa de naturalista	Historia natural y exploración	Instrumentos de exploración	Comercio	Intercambios museísticos	Europa	Francia	Común	Primeras semanas	Catálogo de instrumentos o facsímil documentado
+INS-02	Brújula de bolsillo	Historia natural y exploración	Instrumentos de exploración	Comercio	Intercambios museísticos	Europa	Reino Unido	Común	Primeras semanas	Catálogo de instrumentos o facsímil documentado
+INS-03	Prensa botánica	Historia natural y exploración	Instrumentos de exploración	Comercio	Intercambios museísticos	Europa	Países Bajos	Común	Primeras semanas	Catálogo de instrumentos o facsímil documentado
+INS-04	Plomada cartográfica	Historia natural y exploración	Instrumentos de exploración	Comercio	Intercambios museísticos	Europa	Italia	Común	Primeras semanas	Catálogo de instrumentos o facsímil documentado
+INS-13	Barómetro de mercurio de gabinete	Historia natural y exploración	Instrumentos de exploración	Comercio	Intercambios museísticos	Europa	Reino Unido	Común	Primeras semanas	Catálogo de instrumentos o facsímil documentado
+INS-06	Cuaderno de campo impermeable	Historia natural y exploración	Instrumentos de exploración	Comercio	Intercambios museísticos	Europa	Reino Unido	Poco común	Semanas 3–6	Catálogo de instrumentos o facsímil documentado
+INS-07	Teodolito antiguo	Historia natural y exploración	Instrumentos de exploración	Comercio	Intercambios museísticos	Europa	Alemania	Poco común	Semanas 3–6	Catálogo de instrumentos o facsímil documentado
+INS-08	Catalejo de latón	Historia natural y exploración	Instrumentos de exploración	Comercio	Intercambios museísticos	Europa	Reino Unido	Poco común	Semanas 3–6	Catálogo de instrumentos o facsímil documentado
+INS-09	Cámara de placas	Historia natural y exploración	Instrumentos de exploración	Comercio	Intercambios museísticos	Europa	Francia	Poco común	Semanas 3–6	Catálogo de instrumentos o facsímil documentado
+INS-10	Sextante náutico	Historia natural y exploración	Instrumentos de exploración	Comercio	Intercambios museísticos	Europa	Reino Unido	Raro	Meses 2–3	Catálogo de instrumentos o facsímil documentado
+INS-11	Microscopio de campo	Historia natural y exploración	Instrumentos de exploración	Comercio	Intercambios museísticos	Europa	Alemania	Raro	Meses 2–3	Catálogo de instrumentos o facsímil documentado
+INS-12	Cronómetro marino	Historia natural y exploración	Instrumentos de exploración	Comercio	Intercambios museísticos	Europa	Reino Unido	Muy raro	Meses 3–5	Catálogo de instrumentos o facsímil documentado
+MARV-01	Piedra de río perforada	Historia natural y exploración	Gabinete de maravillas	Investigación	Exploración terrestre	Europa	Ríos de Europa occidental	Común	Primeras semanas	Ficha de campo o modelo científico
+MARV-02	Rosa del desierto	Historia natural y exploración	Gabinete de maravillas	Investigación	Exploración terrestre	África	Sahara	Común	Primeras semanas	Ficha de campo o modelo científico
+MARV-03	Concreción esférica	Historia natural y exploración	Gabinete de maravillas	Investigación	Exploración terrestre	América del Norte	Utah, Estados Unidos	Común	Primeras semanas	Ficha de campo o modelo científico
+MARV-04	Ventifacto	Historia natural y exploración	Gabinete de maravillas	Investigación	Exploración terrestre	África	Desierto del Namib	Común	Primeras semanas	Ficha de campo o modelo científico
+MARV-05	Vidrio volcánico iridiscente	Historia natural y exploración	Gabinete de maravillas	Investigación	Exploración terrestre	América del Norte	México	Común	Primeras semanas	Ficha de campo o modelo científico
+MARV-06	Geoda de cuarzo	Historia natural y exploración	Gabinete de maravillas	Investigación	Exploración terrestre	América del Sur	Brasil	Poco común	Semanas 3–6	Ficha de campo o modelo científico
+MARV-07	Piedra solar de calcita	Historia natural y exploración	Gabinete de maravillas	Investigación	Exploración terrestre	Europa	Islandia	Poco común	Semanas 3–6	Ficha de campo o modelo científico
+MARV-08	Perla barroca	Historia natural y exploración	Gabinete de maravillas	Investigación	Exploración terrestre	Oceanía	Pacífico	Poco común	Semanas 3–6	Ficha de campo o modelo científico
+MARV-09	Fulgurita	Historia natural y exploración	Gabinete de maravillas	Investigación	Exploración terrestre	África	Sahara	Poco común	Semanas 3–6	Ficha de campo o modelo científico
+MARV-10	Geoda de amatista gigante	Historia natural y exploración	Gabinete de maravillas	Investigación	Exploración terrestre	América del Sur	Uruguay	Raro	Meses 2–3	Ficha de campo o modelo científico
+MARV-11	Vidrio del desierto libio	Historia natural y exploración	Gabinete de maravillas	Investigación	Exploración terrestre	África	Desierto de Libia	Raro	Meses 2–3	Ficha de campo o modelo científico
+MARV-12	Copo de nieve antártico	Historia natural y exploración	Gabinete de maravillas	Investigación	Exploración terrestre	Antártida	Antártida	Muy raro	Meses 3–5	Ficha de campo o modelo científico
+HOJ-01	Hoja de ginkgo	Botánica	Hojas y frondas del mundo	Exploración terrestre	Investigación	Asia	China	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+HOJ-02	Hoja de arce azucarero	Botánica	Hojas y frondas del mundo	Exploración terrestre	Investigación	América del Norte	Canadá oriental	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+HOJ-03	Hoja de higuera común	Botánica	Hojas y frondas del mundo	Exploración terrestre	Investigación	Europa	Mediterráneo oriental	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+HOJ-04	Fronda de culantrillo	Botánica	Hojas y frondas del mundo	Exploración terrestre	Investigación	Europa	Península ibérica	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+HOJ-05	Hoja de eucalipto azul	Botánica	Hojas y frondas del mundo	Exploración terrestre	Investigación	Oceanía	Tasmania	Común	Primeras semanas	Bitácora botánica y registro de hábitat
+HOJ-06	Hoja de tulípero	Botánica	Hojas y frondas del mundo	Exploración terrestre	Investigación	América del Norte	Apalaches	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+HOJ-07	Fronda de helecho arborescente plateado	Botánica	Hojas y frondas del mundo	Exploración terrestre	Investigación	Oceanía	Aotearoa Nueva Zelanda	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+HOJ-08	Hoja de nenúfar gigante amazónico	Botánica	Hojas y frondas del mundo	Exploración terrestre	Investigación	América del Sur	Cuenca amazónica	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+HOJ-09	Hoja de gneto africano	Botánica	Hojas y frondas del mundo	Exploración terrestre	Investigación	África	Cuenca del Congo	Poco común	Semanas 3–6	Bitácora botánica y registro de hábitat
+HOJ-10	Fronda de helecho lengua de ciervo	Botánica	Hojas y frondas del mundo	Exploración terrestre	Investigación	Europa	Bosques atlánticos	Raro	Meses 2–3	Bitácora botánica y registro de hábitat
+HOJ-11	Hoja de planta jarro de Raffles	Botánica	Hojas y frondas del mundo	Exploración terrestre	Investigación	Asia	Península malaya	Raro	Meses 2–3	Bitácora botánica y registro de hábitat
+HOJ-12	Hoja de palma viajera	Botánica	Hojas y frondas del mundo	Exploración terrestre	Investigación	África	Madagascar	Muy raro	Meses 3–5	Bitácora botánica y registro de hábitat
+ROC-01	Basalto columnar de Antrim	Geología	Rocas y formaciones geológicas	Expediciones	Investigación	Europa	Irlanda del Norte	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+ROC-02	Granito de Cornualles	Geología	Rocas y formaciones geológicas	Expediciones	Investigación	Europa	Suroeste de Inglaterra	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+ROC-03	Pizarra de Gales	Geología	Rocas y formaciones geológicas	Expediciones	Investigación	Europa	Gales septentrional	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+ROC-04	Pumita del Vesubio	Geología	Rocas y formaciones geológicas	Expediciones	Investigación	Europa	Campania	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+ROC-05	Arenisca de las Blue Mountains	Geología	Rocas y formaciones geológicas	Expediciones	Investigación	Oceanía	Nueva Gales del Sur	Común	Primeras semanas	Ficha geológica, zona accesible y muestra autorizada
+ROC-06	Travertino de Pamukkale	Geología	Rocas y formaciones geológicas	Expediciones	Investigación	Asia	Anatolia	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+ROC-07	Toba volcánica de Capadocia	Geología	Rocas y formaciones geológicas	Expediciones	Investigación	Asia	Anatolia central	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+ROC-08	Conglomerado de los Andes	Geología	Rocas y formaciones geológicas	Expediciones	Investigación	América del Sur	Andes centrales	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+ROC-09	Gneis de Lewis	Geología	Rocas y formaciones geológicas	Expediciones	Investigación	Europa	Hébridas Exteriores	Poco común	Semanas 3–6	Ficha geológica, zona accesible y muestra autorizada
+ROC-10	Diatomita lacustre	Geología	Rocas y formaciones geológicas	Expediciones	Investigación	África	Valle del Rift de Kenia	Raro	Meses 2–3	Ficha geológica, zona accesible y muestra autorizada
+ROC-11	Hierro bandeado de Hamersley	Geología	Rocas y formaciones geológicas	Expediciones	Investigación	Oceanía	Australia Occidental	Raro	Meses 2–3	Ficha geológica, zona accesible y muestra autorizada
+ROC-13	Basalto olivínico escocés	Geología	Rocas y formaciones geológicas	Expediciones	Investigación	Europa	Escocia, Reino Unido	Muy raro	Meses 3–5	Ficha geológica, zona accesible y muestra autorizada
+ALG-01	Sargazo	Oceanografía	Algas del mundo	Exploración costera	Expediciones	Atlántico	Mar de los Sargazos	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+ALG-02	Lechuga de mar	Oceanografía	Algas del mundo	Exploración costera	Expediciones	Europa	Costa atlántica francesa	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+ALG-03	Musgo de Irlanda	Oceanografía	Algas del mundo	Exploración costera	Expediciones	Europa	Atlántico nororiental	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+ALG-04	Cochayuyo	Oceanografía	Algas del mundo	Exploración costera	Expediciones	América del Sur	Chile austral	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+ALG-05	Alga coralina articulada	Oceanografía	Algas del mundo	Exploración costera	Expediciones	Europa	Mediterráneo	Común	Primeras semanas	Registro marítimo, costa accesible y documentación
+ALG-06	Kelpo gigante	Oceanografía	Algas del mundo	Exploración costera	Expediciones	América del Norte	Costa de California	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+ALG-07	Wakame	Oceanografía	Algas del mundo	Exploración costera	Expediciones	Asia	Litoral japonés	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+ALG-08	Alga uva del Indo-Pacífico	Oceanografía	Algas del mundo	Exploración costera	Expediciones	Asia	Filipinas	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+ALG-09	Dulse atlántico	Oceanografía	Algas del mundo	Exploración costera	Expediciones	América del Norte	Costa canadiense atlántica	Poco común	Semanas 3–6	Registro marítimo, costa accesible y documentación
+ALG-10	Alga abanico de pavo	Oceanografía	Algas del mundo	Exploración costera	Expediciones	África	Canarias	Raro	Meses 2–3	Registro marítimo, costa accesible y documentación
+ALG-11	Verde de cordón	Oceanografía	Algas del mundo	Exploración costera	Expediciones	Oceanía	Litoral de Nueva Zelanda	Raro	Meses 2–3	Registro marítimo, costa accesible y documentación
+ALG-12	Alga arcoíris australiana	Oceanografía	Algas del mundo	Exploración costera	Expediciones	Oceanía	Costa australiana oriental	Muy raro	Meses 3–5	Registro marítimo, costa accesible y documentación
+MED-01	Medalla histórica de Waterloo	Historia	Medallas y condecoraciones históricas	Investigación	Intercambios museísticos	Europa	Reino Unido	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+MED-02	Medalla de campaña de Seringapatam	Historia	Medallas y condecoraciones históricas	Investigación	Intercambios museísticos	Asia	Mysore	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+MED-03	Insignia del Águila Blanca	Historia	Medallas y condecoraciones históricas	Investigación	Intercambios museísticos	Europa	Polonia	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+MED-04	Cruz de la Legión de Honor	Historia	Medallas y condecoraciones históricas	Investigación	Intercambios museísticos	Europa	Francia	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+MED-05	Medalla de la Reconquista de Buenos Aires	Historia	Medallas y condecoraciones históricas	Investigación	Intercambios museísticos	América del Sur	Río de la Plata	Común	Primeras semanas	Ficha de procedencia y reproducción autorizada
+MED-06	Medalla de proclamación de Pedro I	Historia	Medallas y condecoraciones históricas	Investigación	Intercambios museísticos	América del Sur	Brasil	Poco común	Semanas 3–6	Ficha de procedencia y reproducción autorizada
+MED-07	Cruz de la Orden de Guadalupe	Historia	Medallas y condecoraciones históricas	Investigación	Intercambios museísticos	América del Norte	México	Poco común	Semanas 3–6	Ficha de procedencia y reproducción autorizada
+MED-13	Insignia civil de la Orden de Leopoldo	Historia	Medallas y condecoraciones históricas	Investigación	Intercambios museísticos	Europa	Bélgica	Poco común	Semanas 3–6	Ficha de procedencia y reproducción autorizada
+MED-09	Cruz de San Jorge rusa	Historia	Medallas y condecoraciones históricas	Investigación	Intercambios museísticos	Europa	Imperio ruso	Poco común	Semanas 3–6	Ficha de procedencia y reproducción autorizada
+MED-10	Medalla de oro de la Real Sociedad Geográfica	Historia	Medallas y condecoraciones históricas	Investigación	Intercambios museísticos	Europa	Londres	Raro	Meses 2–3	Ficha de procedencia y reproducción autorizada
+MED-11	Medalla de Trafalgar de Boulton	Historia	Medallas y condecoraciones históricas	Investigación	Intercambios museísticos	Europa	Reino Unido	Raro	Meses 2–3	Ficha de procedencia y reproducción autorizada
+MED-12	Orden del Sol del Perú	Historia	Medallas y condecoraciones históricas	Investigación	Intercambios museísticos	América del Sur	Perú	Muy raro	Meses 3–5	Ficha de procedencia y reproducción autorizada
+ARQ-01	Nido de ave tejedora	Historia natural y exploración	Arquitecturas animales	Observaciones de fauna	Exploración terrestre	África	Sabana de África oriental	Común	Primeras semanas	Observación a distancia o modelo de estructura · Tejedor común
+ARQ-02	Nido de hornero	Historia natural y exploración	Arquitecturas animales	Exploración terrestre	Intercambios museísticos	América del Sur	Cuenca del Plata	Común	Primeras semanas	Observación a distancia o modelo de estructura
+ARQ-03	Nido de golondrina común	Historia natural y exploración	Arquitecturas animales	Exploración terrestre	Intercambios museísticos	Europa	Europa occidental	Común	Primeras semanas	Observación a distancia o modelo de estructura
+ARQ-04	Celda de avispa alfarera	Historia natural y exploración	Arquitecturas animales	Exploración terrestre	Intercambios museísticos	Asia	India peninsular	Común	Primeras semanas	Observación a distancia o modelo de estructura
+ARQ-05	Panal de abeja gigante	Historia natural y exploración	Arquitecturas animales	Exploración terrestre	Intercambios museísticos	Asia	Subcontinente indio	Común	Primeras semanas	Observación a distancia o modelo de estructura
+ARQ-06	Dique de castor canadiense	Historia natural y exploración	Arquitecturas animales	Observaciones de fauna	Exploración terrestre	América del Norte	Cuenca del San Lorenzo	Poco común	Semanas 3–6	Observación a distancia o modelo de estructura · Castor canadiense
+ARQ-07	Pérgola de ave jardinera satinada	Historia natural y exploración	Arquitecturas animales	Observaciones de fauna	Exploración terrestre	Oceanía	Australia oriental	Poco común	Semanas 3–6	Observación a distancia o modelo de estructura · Ave jardinera satinada
+ARQ-08	Nido de pájaro sastre	Historia natural y exploración	Arquitecturas animales	Exploración terrestre	Intercambios museísticos	Asia	Sri Lanka	Poco común	Semanas 3–6	Observación a distancia o modelo de estructura
+ARQ-09	Termitero catedral	Historia natural y exploración	Arquitecturas animales	Exploración terrestre	Intercambios museísticos	África	Namibia	Poco común	Semanas 3–6	Observación a distancia o modelo de estructura
+ARQ-10	Rueda de telaraña de seda dorada	Historia natural y exploración	Arquitecturas animales	Exploración terrestre	Intercambios museísticos	África	Madagascar	Raro	Meses 2–3	Observación a distancia o modelo de estructura
+ARQ-11	Refugio de tricóptero de grava	Historia natural y exploración	Arquitecturas animales	Exploración terrestre	Intercambios museísticos	Europa	Alpes	Raro	Meses 2–3	Observación a distancia o modelo de estructura
+ARQ-12	Madriguera de perrito de la pradera	Historia natural y exploración	Arquitecturas animales	Observaciones de fauna	Exploración terrestre	América del Norte	Grandes Llanuras	Muy raro	Meses 3–5	Observación a distancia o modelo de estructura · Perrito de las praderas de cola negra

@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const {rows, materialIds, animalMaterialIds, paleontology, tradeRoutes, barter, botany, geology, geologyComparisons, oceanography, oceanographyComparisons, maritimeSources, history, historyComparisons, historicalSources, natural, naturalistScenarios} = AtlasObjetosCientificos;
+  const {rows, materialIds, animalMaterialIds, paleontology, tradeRoutes, barter, botany, geology, geologyComparisons, oceanography, oceanographyComparisons, maritimeSources, history, historyComparisons, historicalSources, natural, naturalistScenarios, archivedRows} = AtlasObjetosCientificos;
   const {phases, reconstruction} = AtlasReconstruccionObjetos;
   const byId = new Map(rows.map(row => [row.id, row]));
   const get = id => document.getElementById(id);
@@ -15,6 +15,22 @@
   const museum = rows.filter(row => row.type === 'Pieza del Museo');
   const proposed = rows.filter(row => row.type.startsWith('Idea de ') || row.type === 'Reconstrucción complementaria');
   const proposals = [...collectible, ...proposed];
+  const proposalModes = [['','Todas las propuestas'],['equipment','Equipamiento futuro'],['tiers','Tiers'],
+    ['materials','Materiales animales adicionales'],['trade','Mercancías adicionales'],['future','Reconstrucciones futuras'],
+    ['collectibles','Coleccionables'],['exhibitions','Exhibiciones'],['fauna','Asociaciones con fauna'],['retired','Evaluaciones archivadas']];
+  function proposalMatches(row) {
+    switch (state.proposalType) {
+      case 'equipment': return row.type === 'Idea de equipamiento futuro';
+      case 'tiers': return Boolean(row.tier);
+      case 'materials': return row.type === 'Idea de material animal';
+      case 'trade': return row.type === 'Idea de mercancía regional';
+      case 'future': return row.type === 'Idea de montaje paleontológico' || row.type === 'Reconstrucción complementaria';
+      case 'collectibles': return row.type === 'Coleccionable propuesto';
+      case 'exhibitions': return Boolean(row.exhibit && row.type === 'Coleccionable propuesto');
+      case 'fauna': return Boolean(row.natural?.species || row.natural && /^(ARQ|HUE)-/.test(row.id));
+      default: return true;
+    }
+  }
   const fossils = new Set([...paleontology.materials,...paleontology.minors,...paleontology.future]);
   const equipment = functional.filter(row => row.slot || ['polar_coat','oceanic_quadrant','sounding_kit'].includes(row.id));
   const equipmentIdeas = proposed.filter(row => row.type === 'Idea de equipamiento futuro');
@@ -60,7 +76,7 @@
   const state = {
     section:'inventory', query:'', page:0, scope:'existing', family:'', tier:'',
     group:'all', museum:'Fósiles', mount:paleontology.mounts[0].id, phase:'3', form:'skeleton',
-    cabinet:'', collection:'', grandCabinet:'', grandCollection:'', progress:'50', discoveryRarity:'Poco común', approval:'', origin:'',
+    cabinet:'', collection:'', grandCabinet:'', grandCollection:'', progress:'50', discoveryRarity:'Poco común', approval:'', origin:'', proposalType:'',
     exhibitCabinet:'Botánica', exhibitCollection:botany[0].name, exhibitFormat:'album', exhibitProgress:'100',
     naturalistSource:naturalistScenarios[0].id,
     maritimeSource:maritimeSources[0].id, atlantisCount:'0', historicalSource:historicalSources[0].id,
@@ -644,7 +660,18 @@
   }
 
   function register() {
-    const entries = proposals.filter(row => matches(row) && (!state.origin || state.origin === origin(row)) &&
+    const pool = state.proposalType === 'retired' ? archivedRows : state.proposalType === 'tiers' ? [...equipment,...proposals] : proposals;
+    if (state.proposalType === 'exhibitions') {
+      const link = node('a','Abrir exhibiciones');
+      link.href = '?vista=exhibition';
+      gallery.append(link);
+    }
+    if (state.proposalType === 'fauna') {
+      const link = node('a','Abrir hallazgos naturalistas');
+      link.href = '?vista=naturalist';
+      gallery.append(link);
+    }
+    const entries = pool.filter(row => proposalMatches(row) && matches(row) && (!state.origin || state.origin === origin(row)) &&
       (!state.approval || state.approval === (reviews[row.id]?.decision || choices[0])));
     status.textContent = entries.length + ' propuestas';
     paginate(entries,page => gallery.append(inclusionTable(page)));
@@ -735,6 +762,7 @@
       }
     }
     if (state.section === 'register') {
+      select('proposalType','Panel global de propuestas',proposalModes);
       select('approval','Estado',[['','Todos'],...choices.map(choice => [choice,choice])]);
       select('origin','Etapa',[['','Todas'],...unique(proposals.map(origin)).map(stage => [stage,stage])]);
       controls.append(button('Exportar evaluaciones',exportReviews));
@@ -754,5 +782,6 @@
       render();
     });
   }
-  sections[0].click();
+  const initialView = new URLSearchParams(location.search).get('vista');
+  (sections.find(tab => tab.dataset.page === initialView) || sections[0]).click();
 })();

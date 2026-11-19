@@ -8,6 +8,7 @@
 <script defer src="js/item-art-v3198.js"></script>
 <script defer src="objetos-cientificos/manifiesto.js"></script>
 <script defer src="js/lab/reconstruccion-objetos.js"></script>
+<script defer src="objetos-cientificos/auditoria.js"></script>
 <script defer src="js/lab/objetos-cientificos.js"></script>
 </head>
 <body>
@@ -18,9 +19,10 @@
   <a href="laboratorio-inclusiones-objetos.html">Laboratorio de inclusiones</a>
 </header>
 <main>
+  <p><a href="laboratorios-objetos.html">Portal de laboratorios</a></p>
   <div class="controls">
     <label>Vista<select id="view">
-      <option value="compare">Comparación</option><option value="botany">Gabinete botánico</option><option value="geology">Gabinete de Geología</option><option value="oceanography">Gabinete de Oceanografía</option><option value="history">Gabinete de Historia</option><option value="natural">Gabinete de Historia natural y exploración</option><option value="eggs">Comparador de dimensiones de huevos</option><option value="paleontology">Paleontología</option><option value="groups">Familias y evolución</option><option value="archive">Archivo cartográfico y comercial</option><option value="inventory">Inventario funcional</option><option value="materials">Materiales acumulables</option>
+      <option value="compare">Comparación</option><option value="audit">Auditoría global</option><option value="retired">Archivo histórico de colecciones retiradas</option><option value="performance">Comparación de rendimiento</option><option value="botany">Gabinete botánico</option><option value="geology">Gabinete de Geología</option><option value="oceanography">Gabinete de Oceanografía</option><option value="history">Gabinete de Historia</option><option value="natural">Gabinete de Historia natural y exploración</option><option value="eggs">Comparador de dimensiones de huevos</option><option value="paleontology">Paleontología</option><option value="groups">Familias y evolución</option><option value="archive">Archivo cartográfico y comercial</option><option value="inventory">Inventario funcional</option><option value="materials">Materiales acumulables</option>
       <option value="equipment">Equipo del naturalista</option><option value="workshop">Taller de fabricación</option>
       <option value="album">Álbum de coleccionables</option><option value="museum">Gabinete museístico</option>
     </select></label>
@@ -31,6 +33,9 @@
     <label id="history-control" hidden>Colección o comparación histórica<select id="history-group"></select></label>
     <label id="history-period-control" hidden>Periodo histórico<select id="history-period"></select></label>
     <label id="history-date-control" hidden>Compatibilidad cronológica<select id="history-date"></select></label>
+    <label id="audit-status-control" hidden>Resultado preliminar<select id="audit-status"></select></label>
+    <label id="audit-similar-control" hidden>Comparar piezas semejantes<select id="audit-similar"></select></label>
+    <label id="retired-control" hidden>Archivo<select id="retired-mode"><option value="all">Todas las sustituciones</option><option value="philately">Filatelia</option><option value="chronology">Otros reemplazos cronológicos</option></select></label>
     <label id="natural-control" hidden>Colección de Historia natural<select id="natural-group"></select></label>
     <label id="egg-control" hidden>Escala relativa<select id="egg-mode"><option value="normalized">Normalizada para inventario</option><option value="proportional">Proporcional aproximada</option></select></label>
     <label id="botany-variant-control" hidden>Lámina<select id="botany-variant">

@@ -1,0 +1,561 @@
+{
+  "sheets": [
+    {
+      "file": "arm1.png",
+      "columns": 3,
+      "ids": [
+        "ARM-01",
+        "ARM-02",
+        "ARM-03",
+        "ARM-04",
+        "ARM-05",
+        "ARM-06"
+      ],
+      "crop": {
+        "rows": [
+          0,
+          467,
+          1024
+        ],
+        "edges": [
+          [
+            0,
+            512,
+            1024,
+            1536
+          ],
+          [
+            0,
+            512,
+            1024,
+            1536
+          ]
+        ]
+      }
+    },
+    {
+      "file": "arm2.png",
+      "columns": 3,
+      "ids": [
+        "ARM-07",
+        "ARM-08",
+        "ARM-09",
+        "ARM-10",
+        "ARM-11",
+        "ARM-12"
+      ],
+      "crop": {
+        "rows": [
+          0,
+          466,
+          1024
+        ],
+        "edges": [
+          [
+            0,
+            512,
+            1024,
+            1536
+          ],
+          [
+            0,
+            512,
+            1024,
+            1536
+          ]
+        ]
+      }
+    },
+    {
+      "file": "met1.png",
+      "columns": 3,
+      "ids": [
+        "MET-13",
+        "MET-14",
+        "MET-15",
+        "MET-16",
+        "MET-17",
+        "MET-18"
+      ],
+      "crop": {
+        "rows": [
+          0,
+          512,
+          1024
+        ],
+        "edges": [
+          [
+            0,
+            512,
+            1024,
+            1536
+          ],
+          [
+            0,
+            488,
+            986,
+            1536
+          ]
+        ]
+      }
+    },
+    {
+      "file": "met2.png",
+      "columns": 3,
+      "ids": [
+        "MET-19",
+        "MET-20",
+        null,
+        null,
+        null,
+        null
+      ],
+      "crop": {
+        "rows": [
+          0,
+          512,
+          1024
+        ],
+        "edges": [
+          [
+            0,
+            500,
+            992,
+            1536
+          ],
+          [
+            0,
+            473,
+            1000,
+            1536
+          ]
+        ]
+      }
+    },
+    {
+      "file": "other.png",
+      "columns": 3,
+      "ids": [
+        "INS-13",
+        "NUM-13",
+        "CUR-13",
+        "ROC-13",
+        "MED-13",
+        null
+      ],
+      "crop": {
+        "rows": [
+          0,
+          530,
+          1024
+        ],
+        "edges": [
+          [
+            0,
+            512,
+            1024,
+            1536
+          ],
+          [
+            0,
+            512,
+            1000,
+            1536
+          ]
+        ],
+        "rectangles": {
+          "MED-13": [
+            595,
+            500,
+            906,
+            1018
+          ],
+          "INS-13": [
+            195,
+            0,
+            352,
+            530
+          ],
+          "NUM-13": [
+            535,
+            32,
+            981,
+            480
+          ],
+          "CUR-13": [
+            1170,
+            0,
+            1390,
+            532
+          ],
+          "ROC-13": [
+            8,
+            550,
+            505,
+            994
+          ]
+        }
+      }
+    },
+    {
+      "file": "revision-arm.png",
+      "columns": 2,
+      "ids": [
+        "ARM-02",
+        "ARM-11"
+      ]
+    }
+  ],
+  "replacements": [
+    {
+      "old": "FIL-01",
+      "id": "ARM-01",
+      "name": "Khopesh egipcio",
+      "continent": "África",
+      "provenance": "Egipto",
+      "culture": "Egipto faraónico",
+      "period": "Edad del Bronce",
+      "year": -1300,
+      "material": "Bronce, pátina de cobre",
+      "diagnostic": "Hoja curva de contorno falciforme.",
+      "evidence": "Interpretación del tipo del Imperio Nuevo.",
+      "source": "https://collections.carlos.emory.edu/objects/12783/sickle-sword"
+    },
+    {
+      "old": "FIL-02",
+      "id": "ARM-02",
+      "name": "Casco corintio",
+      "continent": "Europa",
+      "provenance": "Grecia",
+      "culture": "Grecia arcaica",
+      "period": "Antigüedad",
+      "year": -600,
+      "material": "Bronce",
+      "diagnostic": "Calota y aberturas faciales con protector nasal.",
+      "evidence": "Tipología griega arcaica, con pátina museística.",
+      "source": "https://www.metmuseum.org/art/collection/search/250921"
+    },
+    {
+      "old": "FIL-03",
+      "id": "ARM-03",
+      "name": "Gladius romano",
+      "continent": "Europa",
+      "provenance": "Provincias romanas",
+      "culture": "Roma imperial",
+      "period": "Antigüedad",
+      "year": 50,
+      "material": "Hierro y empuñadura orgánica",
+      "diagnostic": "Hoja corta de perfil recto y empuñadura diferenciada.",
+      "evidence": "Modelo inspirado en el tipo romano de época imperial.",
+      "source": "https://artsandculture.google.com/asset/the-sword-of-tiberius/MQFxR30oimm1hw?hl=en"
+    },
+    {
+      "old": "FIL-04",
+      "id": "ARM-04",
+      "name": "Armadura samurái",
+      "continent": "Asia",
+      "provenance": "Japón",
+      "culture": "Japón del periodo Edo",
+      "period": "Edad Moderna",
+      "year": 1750,
+      "material": "Láminas lacadas, cordones, metal y textil",
+      "diagnostic": "Peto y faldones escalonados.",
+      "evidence": "Interpretación de gabinete de una armadura del periodo Edo.",
+      "source": "https://www.metmuseum.org/exhibitions/listings/2009/art-of-the-samurai/photo-gallery"
+    },
+    {
+      "old": "FIL-05",
+      "id": "ARM-05",
+      "name": "Jian chino",
+      "continent": "Asia",
+      "provenance": "China",
+      "culture": "China imperial",
+      "period": "Edad Moderna",
+      "year": 1750,
+      "material": "Acero, madera y latón",
+      "diagnostic": "Hoja recta de dos filos y guarda sobria.",
+      "evidence": "El ejemplar concreto y su guarnición requieren cotejo.",
+      "source": "https://worcester.emuseum.com/objects/49886/jian-sword"
+    },
+    {
+      "old": "FIL-06",
+      "id": "ARM-06",
+      "name": "Keris indonesio",
+      "continent": "Asia",
+      "provenance": "Bali, Indonesia",
+      "culture": "Tradición balinesa",
+      "period": "Edad Moderna",
+      "year": 1750,
+      "material": "Acero y madera tallada",
+      "diagnostic": "Perfil ondulado y empuñadura tallada.",
+      "evidence": "Objeto de valor social y cultural, presentado como interpretación.",
+      "source": "https://www.metmuseum.org/art/collection/search/24312"
+    },
+    {
+      "old": "FIL-07",
+      "id": "ARM-07",
+      "name": "Cota de malla europea",
+      "continent": "Europa",
+      "provenance": "Europa central",
+      "culture": "Europa central",
+      "period": "Edad Moderna",
+      "year": 1550,
+      "material": "Hierro",
+      "diagnostic": "Camisa de anillas con mangas cortas.",
+      "evidence": "Ejemplo de tipología europea anterior a 1842.",
+      "source": "https://www.metmuseum.org/art/collection/search/31958"
+    },
+    {
+      "old": "FIL-08",
+      "id": "ARM-08",
+      "name": "Espada ropera española",
+      "continent": "Europa",
+      "provenance": "España",
+      "culture": "Monarquía hispánica",
+      "period": "Edad Moderna",
+      "year": 1650,
+      "material": "Acero",
+      "diagnostic": "Guarda de taza y hoja larga de perfil estrecho.",
+      "evidence": "Ejemplar de referencia del siglo XVII.",
+      "source": "https://www.metmuseum.org/art/collection/search/27408"
+    },
+    {
+      "old": "FIL-09",
+      "id": "ARM-09",
+      "name": "Sable otomano ceremonial",
+      "continent": "Asia",
+      "provenance": "Anatolia",
+      "culture": "Imperio otomano",
+      "period": "Edad Moderna",
+      "year": 1750,
+      "material": "Acero y guarnición dorada",
+      "diagnostic": "Perfil curvo con empuñadura ornamentada.",
+      "evidence": "Interpretación de gabinete basada en tipologías otomanas anteriores a 1842.",
+      "source": "https://www.metmuseum.org/essays/islamic-arms-and-armor"
+    },
+    {
+      "old": "FIL-10",
+      "id": "ARM-10",
+      "name": "Escudo zulú",
+      "continent": "África",
+      "provenance": "KwaZulu-Natal, Sudáfrica",
+      "culture": "Pueblo zulú",
+      "period": "Siglo XIX · hasta 1842",
+      "year": 1820,
+      "material": "Cuero bovino y madera",
+      "diagnostic": "Óvalo longitudinal y contraste natural de piel.",
+      "evidence": "Reconstrucción de la tradición de principios del siglo XIX; ejemplar y patrón de piel por cotejar.",
+      "source": "https://www.era.anthropology.ac.uk/Era_Resources/Era/Pitt_Rivers/shieweap/shcurinf/currinf23.html"
+    },
+    {
+      "old": "FIL-11",
+      "id": "ARM-11",
+      "name": "Chimalli mexica",
+      "continent": "América del Norte",
+      "provenance": "Valle de México",
+      "culture": "Pueblo mexica",
+      "period": "Edad Moderna",
+      "year": 1520,
+      "material": "Plumas, entramado vegetal y fibras",
+      "diagnostic": "Rodela plumaria circular con cuatro medias lunas y fleco inferior.",
+      "evidence": "Interpretación del cuexyo chimalli de Chapultepec. Se conservan el motivo de cuatro medias lunas y la forma circular.",
+      "source": "https://mnh.inah.gob.mx/chimalli-tesoro-de-moctezuma-en-chapultepec"
+    },
+    {
+      "old": "FIL-12",
+      "id": "ARM-12",
+      "name": "Clava mapuche ceremonial",
+      "continent": "América del Sur",
+      "provenance": "Centro-sur de Chile",
+      "culture": "Pueblo mapuche",
+      "period": "Edad Moderna",
+      "year": 1750,
+      "material": "Madera tallada",
+      "diagnostic": "Cabeza estilizada y cuerpo macizo.",
+      "evidence": "La cronología del modelo y su carácter ceremonial requieren cotejo del ejemplar.",
+      "source": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-7-3525"
+    },
+    {
+      "old": "MET-01",
+      "id": "MET-13",
+      "name": "Meteorito de L’Aigle",
+      "continent": "Europa",
+      "provenance": "Orne, Francia",
+      "culture": "Francia",
+      "period": "Siglo XIX · hasta 1842",
+      "year": 1803,
+      "material": "Condrita ordinaria L6",
+      "diagnostic": "Costra oscura y sección gris.",
+      "evidence": "Caída observada en 1803.",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12434"
+    },
+    {
+      "old": "MET-03",
+      "id": "MET-14",
+      "name": "Meteorito de Wold Cottage",
+      "continent": "Europa",
+      "provenance": "Yorkshire, Reino Unido",
+      "culture": "Reino Unido",
+      "period": "Edad Moderna",
+      "year": 1795,
+      "material": "Condrita ordinaria L6",
+      "diagnostic": "Contorno angular y costra moteada.",
+      "evidence": "Caída observada en 1795.",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=24325"
+    },
+    {
+      "old": "MET-04",
+      "id": "MET-15",
+      "name": "Meteorito de Benares",
+      "continent": "Asia",
+      "provenance": "Uttar Pradesh, India",
+      "culture": "India",
+      "period": "Edad Moderna",
+      "year": 1798,
+      "material": "Condrita ordinaria LL4",
+      "diagnostic": "Costra oscura y matriz gris visible en una fractura.",
+      "evidence": "Caída observada en 1798; nombre oficial Benares (a).",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=5011"
+    },
+    {
+      "old": "MET-05",
+      "id": "MET-16",
+      "name": "Meteorito de Weston",
+      "continent": "América del Norte",
+      "provenance": "Connecticut, Estados Unidos",
+      "culture": "Estados Unidos",
+      "period": "Siglo XIX · hasta 1842",
+      "year": 1807,
+      "material": "Condrita ordinaria H4",
+      "diagnostic": "Matriz gris con granos contrastados.",
+      "evidence": "Caída observada en 1807.",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.cfm?code=24249"
+    },
+    {
+      "old": "MET-08",
+      "id": "MET-17",
+      "name": "Meteorito de Chassigny",
+      "continent": "Europa",
+      "provenance": "Haute-Marne, Francia",
+      "culture": "Francia",
+      "period": "Siglo XIX · hasta 1842",
+      "year": 1815,
+      "material": "Acondrita marciana, dunita rica en olivino",
+      "diagnostic": "Interior granular rico en olivino.",
+      "evidence": "Caída observada en 1815; origen marciano atribuido posteriormente.",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=5331"
+    },
+    {
+      "old": "MET-10",
+      "id": "MET-18",
+      "name": "Meteorito de Krasnojarsk",
+      "continent": "Asia",
+      "provenance": "Siberia, Rusia",
+      "culture": "Rusia",
+      "period": "Edad Moderna",
+      "year": 1749,
+      "material": "Palasita, hierro-níquel y olivino",
+      "diagnostic": "Sección interpretativa con olivino en matriz metálica.",
+      "evidence": "Hallazgo de 1749; también llamado hierro de Pallas.",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12356"
+    },
+    {
+      "old": "MET-11",
+      "id": "MET-19",
+      "name": "Meteorito de Alais",
+      "continent": "Europa",
+      "provenance": "Gard, Francia",
+      "culture": "Francia",
+      "period": "Siglo XIX · hasta 1842",
+      "year": 1806,
+      "material": "Condrita carbonácea CI1",
+      "diagnostic": "Matriz negra, irregular y friable.",
+      "evidence": "Caída observada en 1806.",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=448"
+    },
+    {
+      "old": "MET-12",
+      "id": "MET-20",
+      "name": "Meteorito de Stannern",
+      "continent": "Europa",
+      "provenance": "Moravia, Chequia",
+      "culture": "Moravia",
+      "period": "Siglo XIX · hasta 1842",
+      "year": 1808,
+      "material": "Acondrita eucrítica",
+      "diagnostic": "Interior basáltico gris y costra oscura.",
+      "evidence": "Caída observada en 1808.",
+      "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=23713"
+    },
+    {
+      "old": "INS-05",
+      "id": "INS-13",
+      "name": "Barómetro de mercurio de gabinete",
+      "continent": "Europa",
+      "provenance": "Reino Unido",
+      "culture": "Reino Unido",
+      "period": "Edad Moderna",
+      "year": 1790,
+      "material": "Madera, vidrio, mercurio y metal",
+      "diagnostic": "Caja vertical con escala graduada.",
+      "evidence": "Tipo de barómetro de pared documentado hacia 1790. El acabado de la lámina es interpretativo.",
+      "source": "https://collection.sciencemuseumgroup.org.uk/objects/co8408198/mercury-stick-barometer-by-baptist-ronchetti-mercury-barometer"
+    },
+    {
+      "old": "NUM-09",
+      "id": "NUM-13",
+      "name": "Tálero de María Teresa",
+      "continent": "Europa",
+      "provenance": "Günzburg, territorios de los Habsburgo",
+      "culture": "Monarquía de los Habsburgo",
+      "period": "Edad Moderna",
+      "year": 1780,
+      "material": "Plata acuñada",
+      "diagnostic": "Busto en relieve en el anverso.",
+      "evidence": "Referencia a la emisión de 1780; distinguir reacuñaciones modernas.",
+      "source": "https://www.metmuseum.org/art/collection/search/237844"
+    },
+    {
+      "old": "CUR-04",
+      "id": "CUR-13",
+      "name": "Flotador pesquero de corcho",
+      "continent": "Europa",
+      "provenance": "Litoral atlántico europeo",
+      "culture": "Pesca tradicional atlántica",
+      "period": "Edad Moderna",
+      "year": 1750,
+      "material": "Corcho y fibra",
+      "diagnostic": "Cuerpo de corcho con orificio de amarre.",
+      "evidence": "Hay descripciones de flotadores de pesca de corcho desde 1496. El modelo de gabinete interpreta un cuerpo ovalado.",
+      "source": "https://www.fishingmuseum.org.uk/floats_overview.html"
+    },
+    {
+      "old": "ROC-12",
+      "id": "ROC-13",
+      "name": "Basalto olivínico escocés",
+      "continent": "Europa",
+      "provenance": "Escocia, Reino Unido",
+      "culture": "Escocia",
+      "period": "Siglo XIX · hasta 1842",
+      "year": 1805,
+      "material": "Roca volcánica con fenocristales de olivino",
+      "diagnostic": "Granos verdosos dispersos en matriz oscura.",
+      "evidence": "La roca antecede a su estudio; referencia histórica a los basaltos estudiados por James Hall.",
+      "source": "https://www.lindahall.org/experience/digital-exhibitions/vulcans-forge-and-fingals-cave/section-xv/56-lava-whinstone-and-sir-james-hall-1805"
+    },
+    {
+      "old": "MED-08",
+      "id": "MED-13",
+      "name": "Insignia civil de la Orden de Leopoldo",
+      "continent": "Europa",
+      "provenance": "Bélgica",
+      "culture": "Bélgica independiente",
+      "period": "Siglo XIX · hasta 1842",
+      "year": 1832,
+      "material": "Metal, esmalte y cinta",
+      "diagnostic": "Cruz esmaltada clara, centro heráldico y cinta púrpura.",
+      "evidence": "Orden instituida en 1832; la lámina evoca el tipo civil y la fecha del ejemplar requiere cotejo.",
+      "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-202791"
+    }
+  ]
+}

@@ -147,3 +147,9 @@ progress { accent-color: #4c755a; margin: .4rem 0 .8rem; }
 .egg-ruler span::after { position: absolute; bottom: 0; left: 0; height: .3rem; border-inline-start: 1px solid currentColor; content: ''; }
 .egg-proportional .stage { min-height: calc(var(--egg-ruler-length) / .89 + .75rem); }
 .egg-proportional .stage img { width: min(calc(var(--egg-ruler-length) * var(--egg-ratio)), 100%); }
+
+.object-portal { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr)); gap:1rem; margin-block:1rem; }
+.object-portal a { display:grid; gap:.45rem; padding:1rem; border:1px solid var(--line); border-radius:.35rem; }
+.object-portal span { font-size:.9rem; }
+.substitution-card { min-width:0; overflow:hidden; }
+.audit-card p,.substitution-card p,.profile-card p { overflow-wrap:anywhere; }

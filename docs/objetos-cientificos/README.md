@@ -94,5 +94,5 @@ Se verificaron los 240 archivos con sus dimensiones y canal alfa. En Chromium m�
 | OBJ-08 | [Gabinete de Oceanografía](OBJ-08.md) |
 | OBJ-09 | [Gabinete de Historia](OBJ-09.md) |
 | OBJ-10 | [Gabinete de Historia natural y exploración](OBJ-10.md) |
-| OBJ-11 | Auditoría global |
+| OBJ-11 | [Auditoría global y homologación](OBJ-11.md) |
 | OBJ-12 | Integración posterior a la aprobación artística de los animales |
