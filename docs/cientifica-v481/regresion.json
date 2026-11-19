@@ -1,0 +1,16 @@
+{
+  "command": "node --test --test-reporter=spec tests/*.test.cjs",
+  "baselineCommit": "6313c49049fb5042ef23dfb85356f1b8363d2798",
+  "v480": {
+    "tests": 814,
+    "pass": 586,
+    "fail": 228
+  },
+  "v481": {
+    "tests": 815,
+    "pass": 587,
+    "fail": 228
+  },
+  "newFailures": [],
+  "identicalFailingTestNames": true
+}

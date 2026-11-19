@@ -13,10 +13,11 @@ const expected = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.
 const root = path.resolve('www');
 const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'application/javascript', '.webp': 'image/webp' };
 const server = http.createServer((req, res) => {
-  const url = new URL(req.url, 'http://localhost');
-  const file = path.join(root, url.pathname, url.pathname.endsWith('/') ? 'index.html' : '');
-  if (!file.startsWith(root + '/')) return res.writeHead(403).end();
   try {
+    const url = new URL(req.url, 'http://localhost');
+    const pathname = decodeURIComponent(url.pathname);
+    const file = path.join(root, pathname, pathname.endsWith('/') ? 'index.html' : '');
+    if (!file.startsWith(root + '/')) return res.writeHead(403).end();
     const bytes = fs.readFileSync(file);
     res.writeHead(200, {'Content-Type': types[path.extname(file)] || 'application/octet-stream'});
     res.end(bytes);

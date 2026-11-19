@@ -1,0 +1,492 @@
+[
+  {
+    "width": 390,
+    "fieldBeforeMs": 87,
+    "fieldWebPMs": 259,
+    "fieldBeforeJSHeapBytes": 6525220,
+    "fieldWebpJSHeapBytes": 8906028,
+    "exactSaveBackup": true,
+    "preservedFields": 11,
+    "multiEncounter": true,
+    "mixedWebpAndSvg": true,
+    "habitatChangedThroughUI": true,
+    "timeLightingChanged": true,
+    "estimatedVisibleRGBABytes": 65536,
+    "offlineCacheEntries": 6179,
+    "autoRepeatMs": 811,
+    "reusedDecodedImage": true,
+    "reusedLandscape": true,
+    "spritesOffline": true,
+    "labOffline": true,
+    "silverback": true,
+    "primateAutoRepeatMs": 938,
+    "ungulateDimorphismOffline": true,
+    "atlasLegendaryOffline": true,
+    "freshwaterDolphinInAllModulesOffline": true,
+    "raptorAutoRepeatMs": 818,
+    "centinelaOffline": true,
+    "aquaticAutoRepeatMs": 1829,
+    "coastalBirdOffline": true,
+    "wetlandBestiaryOffline": true,
+    "terrestrialAutoRepeatMs": 1956,
+    "ostrichDimorphismOffline": true,
+    "passerineAutoMs": 3000,
+    "passerineInAllModulesOffline": true,
+    "squamateAutoMs": 5345,
+    "squamateInAllModulesOffline": true,
+    "reptileLegends": [
+      "basalto",
+      "seda",
+      "junco",
+      "ancora"
+    ],
+    "scaleChecks": {
+      "sa_esp_brachycephalus_pulex": {
+        "automatic": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            78,
+            78
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "field": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            78,
+            78
+          ],
+          "interaction": null,
+          "halo": "drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 1.4px) drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 3px)"
+        },
+        "journal": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            109.1875,
+            109.1875
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "bestiary": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            80,
+            80
+          ],
+          "interaction": [
+            182.5,
+            191
+          ],
+          "halo": "none"
+        },
+        "detail": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            109.1875,
+            109.1875
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "museum": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            88,
+            88
+          ],
+          "interaction": [
+            182.5,
+            171.9375
+          ],
+          "halo": "none"
+        },
+        "exhibit": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            109.1875,
+            109.1875
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "afterRestart": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            66.296875,
+            66.296875
+          ],
+          "interaction": null,
+          "halo": "drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 1.4px) drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 3px)"
+        }
+      },
+      "gm06_mellisuga_helenae": {
+        "automatic": {
+          "width": 0.5000000978329033,
+          "height": 0.5,
+          "frame": [
+            77.98393249511719,
+            77.98394775390625
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "field": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            78,
+            78
+          ],
+          "interaction": null,
+          "halo": "drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 1.4px) drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 3px)"
+        },
+        "journal": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            109.1875,
+            109.1875
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "bestiary": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            80,
+            80
+          ],
+          "interaction": [
+            182.5,
+            191
+          ],
+          "halo": "none"
+        },
+        "detail": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            109.1875,
+            109.1875
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "museum": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            88,
+            88
+          ],
+          "interaction": [
+            182.5,
+            171.9375
+          ],
+          "halo": "none"
+        },
+        "exhibit": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            109.1875,
+            109.1875
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "afterRestart": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            66.296875,
+            66.296875
+          ],
+          "interaction": null,
+          "halo": "drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 1.4px) drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 3px)"
+        }
+      }
+    },
+    "discoveryChecks": {
+      "sa_esp_scelorchilus_rubecula": {
+        "discovered": true,
+        "sightings": 1,
+        "region": "gm06_bosques",
+        "habitat": "bosque",
+        "renderMs": 2498
+      },
+      "sa_esp_brachycephalus_pulex": {
+        "discovered": true,
+        "sightings": 1,
+        "region": "sa_cerrado_brasileno",
+        "habitat": "bosque",
+        "renderMs": 3512
+      },
+      "gm06_mellisuga_helenae": {
+        "discovered": true,
+        "sightings": 1,
+        "region": "gm06_antillas",
+        "habitat": "bosque",
+        "renderMs": 6085
+      }
+    },
+    "optionalReviewOutsideGameCache": true,
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "fieldBeforeMs": 61,
+    "fieldWebPMs": 126,
+    "fieldBeforeJSHeapBytes": 7530700,
+    "fieldWebpJSHeapBytes": 8630944,
+    "exactSaveBackup": true,
+    "preservedFields": 11,
+    "multiEncounter": true,
+    "mixedWebpAndSvg": true,
+    "habitatChangedThroughUI": true,
+    "timeLightingChanged": true,
+    "estimatedVisibleRGBABytes": 65536,
+    "offlineCacheEntries": 6179,
+    "autoRepeatMs": 706,
+    "reusedDecodedImage": true,
+    "reusedLandscape": true,
+    "spritesOffline": true,
+    "labOffline": true,
+    "silverback": true,
+    "primateAutoRepeatMs": 611,
+    "ungulateDimorphismOffline": true,
+    "atlasLegendaryOffline": true,
+    "freshwaterDolphinInAllModulesOffline": true,
+    "raptorAutoRepeatMs": 908,
+    "centinelaOffline": true,
+    "aquaticAutoRepeatMs": 1912,
+    "coastalBirdOffline": true,
+    "wetlandBestiaryOffline": true,
+    "terrestrialAutoRepeatMs": 2729,
+    "ostrichDimorphismOffline": true,
+    "passerineAutoMs": 3063,
+    "passerineInAllModulesOffline": true,
+    "squamateAutoMs": 4906,
+    "squamateInAllModulesOffline": true,
+    "reptileLegends": [
+      "basalto",
+      "seda",
+      "junco",
+      "ancora"
+    ],
+    "scaleChecks": {
+      "sa_esp_brachycephalus_pulex": {
+        "automatic": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            129.97998046875,
+            129.97998046875
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "field": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            134,
+            134
+          ],
+          "interaction": null,
+          "halo": "drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 1.4px) drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 3px)"
+        },
+        "journal": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            166,
+            166
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "bestiary": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            88,
+            88
+          ],
+          "interaction": [
+            170,
+            231
+          ],
+          "halo": "none"
+        },
+        "detail": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            166,
+            166
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "museum": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            88,
+            88
+          ],
+          "interaction": [
+            215.5,
+            209.203125
+          ],
+          "halo": "none"
+        },
+        "exhibit": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            166,
+            166
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "afterRestart": {
+          "width": 0.25,
+          "height": 0.25,
+          "frame": [
+            104,
+            104
+          ],
+          "interaction": null,
+          "halo": "drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 1.4px) drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 3px)"
+        }
+      },
+      "gm06_mellisuga_helenae": {
+        "automatic": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            134,
+            134
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "field": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            134,
+            134
+          ],
+          "interaction": null,
+          "halo": "drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 1.4px) drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 3px)"
+        },
+        "journal": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            166,
+            166
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "bestiary": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            88,
+            88
+          ],
+          "interaction": [
+            170,
+            231
+          ],
+          "halo": "none"
+        },
+        "detail": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            166,
+            166
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "museum": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            88,
+            88
+          ],
+          "interaction": [
+            215.5,
+            209.203125
+          ],
+          "halo": "none"
+        },
+        "exhibit": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            166,
+            166
+          ],
+          "interaction": null,
+          "halo": "none"
+        },
+        "afterRestart": {
+          "width": 0.5,
+          "height": 0.5,
+          "frame": [
+            104,
+            104
+          ],
+          "interaction": null,
+          "halo": "drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 1.4px) drop-shadow(rgba(165, 95, 49, 0.79) 0px 0px 3px)"
+        }
+      }
+    },
+    "discoveryChecks": {
+      "sa_esp_scelorchilus_rubecula": {
+        "discovered": true,
+        "sightings": 1,
+        "region": "gm06_bosques",
+        "habitat": "bosque",
+        "renderMs": 2374
+      },
+      "sa_esp_brachycephalus_pulex": {
+        "discovered": true,
+        "sightings": 1,
+        "region": "sa_cerrado_brasileno",
+        "habitat": "bosque",
+        "renderMs": 1552
+      },
+      "gm06_mellisuga_helenae": {
+        "discovered": true,
+        "sightings": 1,
+        "region": "gm06_antillas",
+        "habitat": "bosque",
+        "renderMs": 4912
+      }
+    },
+    "optionalReviewOutsideGameCache": true,
+    "errors": []
+  }
+]
