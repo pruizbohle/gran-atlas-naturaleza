@@ -15,7 +15,7 @@ const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
   gallery: 'Galería', variants: 'Variantes', frames: 'Ejemplares especiales',
-  compare: 'Antes y después', compression: 'Compresión WebP', scale: 'Escala real', review: 'Revisión artística'
+  compare: 'Comparar estilos', compression: 'Compresión WebP', scale: 'Escala real', review: 'Revisión artística'
 };
 const frames = {
   Normal: 'classic', Notable: 'notable', 'Épico': 'epic',
@@ -36,12 +36,10 @@ try {
   byId('status').textContent = 'No se pudo recuperar la revisión local.';
 }
 const percent = (migrationProgress.migrated * 100 / migrationProgress.total).toLocaleString('es-CL', { maximumFractionDigits: 2 });
-const pending = migrationProgress.plates - migrationProgress.cutouts;
 byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + migrationProgress.total +
-  ' especies migradas · ' + percent + ' % · ' + migrationProgress.cutouts + ' de ' + migrationProgress.plates +
-  ' láminas recortadas · ' + migrationProgress.biological + ' variantes biológicas · ' +
-  migrationProgress.legendary + ' legendarios · ' + pending + ' pendientes' +
-  (migrationProgress.review ? ' · ' + migrationProgress.review + ' bordes por revisar' : '');
+  ' especies migradas · ' + percent + ' % · ' + migrationProgress.classical + ' de ' + migrationProgress.target +
+  ' láminas científicas · ' + migrationProgress.biological + ' variantes biológicas · ' +
+  migrationProgress.legendary + ' legendarios';
 for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
 updateFamilies();
 updateSpecies();
@@ -64,8 +62,12 @@ function cutStatus(record) {
 }
 
 function matchingPlates(sp) {
-  return sp.records.filter(record => (!cutState.value || cutStatus(record) === cutState.value) &&
-    (mode !== 'compression' || Object.keys(record.compression).length));
+  const state = cutState.value;
+  return sp.records.filter(record => {
+    const matches = state === 'classical' ? record.classical :
+      state === 'previous' ? !record.classical : !state || cutStatus(record) === state;
+    return matches && (mode !== 'compression' || Object.keys(record.compression).length);
+  });
 }
 
 function matchingSpecies() {
@@ -172,23 +174,37 @@ function scale(sp) {
     '</figcaption></figure>').join('') + '</div>';
 }
 
-function compareImage(asset, label) {
-  return '<span class="atlas-art-frame plate"><img class="atlas-art-image" src="' +
-    text(asset.src) + '" alt="' + text(label) + '" decoding="async"></span>';
+function compareImage(asset, label, frame = 'Normal') {
+  const image = '<img class="atlas-art-image" src="' + text(asset.src) + '" alt="' + text(label) + '" decoding="async">';
+  return AtlasNaturalistArt.frame(image, frame, 'plate atlas-art-cutout');
 }
 
-function beforeAfter(sp) {
+function comparisonPlaceholder(message) {
+  return AtlasNaturalistArt.frame('<span class="comparison-placeholder">' + text(message) + '</span>', 'Normal', 'plate');
+}
+
+function compareStyles(sp) {
   const records = matchingPlates(sp);
   selectOptions(scalePlate, records.map(record => [record.key, record.label]));
   const record = records.find(item => item.key === scalePlate.value) || records[0];
-  const useWebp = Boolean(record.before) && byId('comparison-source').value !== 'svg';
-  const before = useWebp ? compareImage(record.before, sp.name + ' · original') :
-    '<span class="atlas-art-frame plate legacy-sprite" role="img" aria-label="' +
-    text(sp.name + ' · SVG original') + '">' + (record.svg || sp.sprite) + '</span>';
-  return '<div class="pair review-comparison">' +
-    figure(before, useWebp ? 'Antes · original a 256 px' : 'Antes · SVG del juego') +
-    figure(illustration(sp, record, 'Normal', 256, true), 'Después · lámina a 256 px') +
-    '</div>' + (record.note ? '<p class="note">' + text(record.note) + '</p>' : '');
+  const frame = record.key === 'legendario' ? 'Legendario' : 'Normal';
+  if (byId('comparison-source').value === 'original') {
+    const before = record.before ? compareImage(record.before, sp.name + ' · original', frame) :
+      comparisonPlaceholder('Original con fondo no disponible');
+    const after = record.previous ? compareImage(record.previous, sp.name + ' · recorte anterior', frame) :
+      comparisonPlaceholder('Recorte anterior no disponible');
+    return '<div class="pair review-comparison">' + figure(before, 'Original con fondo') +
+      figure(after, 'Recorte Serie 4.3') + '</div>';
+  }
+  const svg = AtlasNaturalistArt.frame('<span class="atlas-art-image legacy-sprite" role="img" aria-label="' +
+    text(sp.name + ' · SVG original') + '">' + (record.svg || sp.sprite) + '</span>', frame, 'plate atlas-art-cutout');
+  const previous = record.previous ? compareImage(record.previous, sp.name + ' · naturalista', frame) :
+    comparisonPlaceholder('Sin lámina naturalista previa');
+  const current = record.classical ? illustration(sp, record, frame, 256, true) :
+    comparisonPlaceholder('Lámina científica pendiente');
+  return '<div class="review-comparison comparison-styles">' +
+    figure(svg, 'SVG · Serie 3') + figure(previous, 'Naturalista · Serie 4.3') +
+    figure(current, 'Científica clásica') + '</div>';
 }
 
 function compression(sp) {
@@ -257,7 +273,7 @@ function draw() {
       break;
     }
     case 'frames': content.innerHTML = specialFrames(sp); break;
-    case 'compare': content.innerHTML = beforeAfter(sp); break;
+    case 'compare': content.innerHTML = compareStyles(sp); break;
     case 'compression': content.innerHTML = compression(sp); break;
     case 'scale': content.innerHTML = scale(sp); break;
     case 'review': content.innerHTML = reviewForm(sp); break;
@@ -333,7 +349,7 @@ byId('frame-style').addEventListener('change', event => {
 byId('export').addEventListener('click', () => {
   const results = catalog.flatMap(sp => sp.records.map(record => ({
     speciesId: sp.id, scientificName: sp.latin, variant: record.key, file: record.src,
-    cutout: cutStatus(record), cutoutNote: record.note,
+    cutout: cutStatus(record), cutoutNote: record.note, classical: record.classical,
     ...(review[sp.id + '/' + record.key] || { status: 'Pendiente', note: '' })
   })));
   const data = new Blob([JSON.stringify({ schemaVersion: 2, migration: migrationProgress, results }, null, 2)], { type: 'application/json' });

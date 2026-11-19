@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Laboratorio V4.3.0 · El Gran Atlas</title>
+  <title>Laboratorio de ilustración científica · El Gran Atlas</title>
   <link rel="stylesheet" href="../css/naturalist-art-v400.css">
   <link rel="stylesheet" href="../css/field-v3210.css">
   <link rel="stylesheet" href="lab.css">
@@ -17,8 +17,7 @@
   <header class="masthead">
     <div class="container">
       <p class="eyebrow">El Gran Atlas</p>
-      <h1>Laboratorio naturalista</h1>
-      <p class="subtitle">V4.3.0 · Primates</p>
+      <h1>Laboratorio de ilustración científica</h1>
       <p id="migration-progress" class="migration-progress"></p>
       <a class="game-link" href="../index.html">Abrir el juego</a>
     </div>
@@ -33,7 +32,7 @@
       <button type="button" data-mode="variants">Variantes</button>
       <button type="button" data-mode="frames">Ejemplares especiales</button>
       <button type="button" data-mode="gallery">Galería</button>
-      <button type="button" data-mode="compare">Antes y después</button>
+      <button type="button" data-mode="compare">Comparar estilos</button>
       <button type="button" data-mode="compression">Compresión</button>
       <button type="button" data-mode="scale">Escala real</button>
       <button type="button" data-mode="review">Revisión artística</button>
@@ -43,12 +42,14 @@
         <div><h2 id="heading"></h2><p id="summary"></p></div>
         <label>Grupo <select id="group"><option value="">Todos</option></select></label>
         <label>Familia zoológica <select id="family"></select></label>
-        <label>Estado del recorte
+        <label>Estado de la lámina
           <select id="cut-state">
             <option value="">Todos</option>
             <option value="ready">Recortado</option>
             <option value="review">Borde por revisar</option>
             <option value="pending">Sin recorte</option>
+            <option value="classical">Ilustración científica clásica</option>
+            <option value="previous">Ilustración científica pendiente</option>
           </select>
         </label>
         <label id="search-control">Buscar especie <input id="search" type="search" placeholder="Nombre común o científico"></label>
@@ -75,7 +76,7 @@
           <option>75</option><option>80</option><option>85</option><option selected>90</option><option>95</option>
         </select></label>
         <label id="comparison-control" hidden>Referencia <select id="comparison-source">
-          <option value="original">Original disponible</option><option value="svg">SVG del juego</option>
+          <option value="styles">Serie 3, Serie 4.3 y científica clásica</option><option value="original">Recorte de Serie 4 anterior</option>
         </select></label>
         <button id="export" type="button" hidden>Exportar JSON</button>
         <button id="review-offline" type="button" hidden></button>

@@ -42,7 +42,7 @@ test('catalog is read from the production runtime and only known records can be 
     }
     counts[sp.group] = (counts[sp.group] || 0) + 1;
   }
-  assert.deepEqual(counts, { Marsupiales: 29, Monotremas: 3, Felinos: 31, 'Cánidos': 28, 'Carnívoros terrestres': 51, Primates: 49 });
+  assert.deepEqual(counts, { Marsupiales: 29, Monotremas: 3, Felinos: 31, 'Cánidos': 28, 'Carnívoros terrestres': 51, Primates: 49, Ungulados: 122 });
 });
 
 test('rendering the collection does not disclose unseen art or write a save', () => {
@@ -146,9 +146,8 @@ test('terrestrial Carnivora covers the nine present families with only the confi
   assert.equal(total, 42);
   assert.ok(records.some(sp => sp.id === 'sa_esp_lontra_felina'));
   assert.ok(!records.some(sp => sp.latin.startsWith('Enhydra ')));
-  assert.equal(catalog.migrationProgress.migrated, 191);
   assert.equal(catalog.migrationProgress.total, 997);
-  assert.equal(catalog.migrationProgress.plates, 341);
+  assert.equal(catalog.migrationProgress.target, 590);
 });
 
 test('biome library and transparent editions use module-specific layers and existing category routes', () => {
@@ -183,8 +182,13 @@ test('lab preserves the originals and reserves comparison downloads for the revi
   const { catalog, migrationProgress } = vm.runInNewContext(
     fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog,migrationProgress});');
   const { files, labFiles, cutouts } = globalThis.AtlasNaturalistAssets;
-  const plates = new Map(catalog.flatMap(sp => sp.records.map(record => [record.src, record])));
-  assert.equal(plates.size, 341);
+  const plates = new Map(catalog.flatMap(sp => sp.records.filter(record => record.src).map(record => [record.src, record])));
+  const archived = new Set(catalog.flatMap(sp => sp.records.flatMap(record => record.previous ? [record.previous.src] : [])));
+  assert.equal(archived.size, 341);
+  assert.equal(plates.size, migrationProgress.plates);
+  assert.equal(migrationProgress.migrated, 313);
+  assert.equal(migrationProgress.classical, migrationProgress.target);
+  assert.equal(migrationProgress.plates, migrationProgress.target);
   assert.equal(migrationProgress.cutouts, Object.keys(cutouts).length);
   assert.equal(migrationProgress.cutouts, plates.size);
   const samples = [...plates.values()].filter(plate => Object.keys(plate.compression).length);
@@ -192,14 +196,32 @@ test('lab preserves the originals and reserves comparison downloads for the revi
   for (const record of plates.values()) {
     assert.equal(record.cutout, Boolean(cutouts[record.src.slice('plates/'.length)]));
     if (record.before) assert.ok(labFiles.includes('naturalist-art/' + record.before.src));
-    else assert.match(record.svg, /^<svg[\s>]/);
+    if (record.previous) assert.ok(labFiles.includes('naturalist-art/' + record.previous.src));
   }
   for (const sample of samples) {
     assert.deepEqual(Object.keys(sample.compression), ['75', '80', '85', '90', '95']);
     for (const { src } of Object.values(sample.compression)) assert.ok(labFiles.includes('naturalist-art/' + src));
   }
-  assert.equal(labFiles.length, 295);
   assert.ok(labFiles.every(file => !files.includes(file)));
+});
+
+test('ungulates come from the existing catalogue and use only configured variants', () => {
+  const { catalog } = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog});');
+  const game = harness({}, null, { gameSource: source }).window.__atlasTest;
+  const ungulates = catalog.filter(sp => sp.group === 'Ungulados');
+  const preliminary = fs.readFileSync('docs/naturalista-v430/ungulados-candidatos.tsv', 'utf8').trim().split('\n').slice(1);
+  const additional = ['eu_esp_0626', 'eu_esp_0627', 'sa_esp_pudella_mephistophiles', 'sa_esp_pudu_puda'];
+  assert.deepEqual(Array.from(ungulates, sp => sp.id).sort(), [...preliminary.map(row => row.split('\t')[0]), ...additional].sort());
+  for (const sp of ungulates) {
+    const pigments = { Albino: 'albino', 'Melánico': 'melanico' };
+    const variants = game.configuredSpecials(game.SPECIES[sp.id]).flatMap(label => pigments[label] ? [pigments[label]] : []);
+    if (game.SEXUAL_DIMORPHISM[sp.id]) variants.push('male', 'female');
+    assert.deepEqual(Array.from(sp.records, record => record.key).sort(), ['normal', ...variants].sort(), sp.id);
+    assert.ok(sp.records.every(record => !record.previous), sp.id);
+    assert.match(sp.sprite, /^<svg[\s>]/, sp.id);
+    const routes = globalThis.AtlasNaturalistAssets.routes[sp.id];
+    if (routes.female) assert.notEqual(routes.female, routes.male);
+  }
 });
 
 test('Primates includes the fourteen zoological families, all configured variants and only Silverback', () => {

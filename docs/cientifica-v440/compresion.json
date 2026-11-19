@@ -1,0 +1,272 @@
+{
+  "af_suricata--albino.webp": {
+    "75": {
+      "bytes": 17214,
+      "psnrDb": 36.75,
+      "encodeMs": 61.74
+    },
+    "80": {
+      "bytes": 18836,
+      "psnrDb": 37.85,
+      "encodeMs": 48.39
+    },
+    "85": {
+      "bytes": 20680,
+      "psnrDb": 39.2,
+      "encodeMs": 45.76
+    },
+    "90": {
+      "bytes": 24432,
+      "psnrDb": 41.26,
+      "encodeMs": 46.12
+    },
+    "95": {
+      "bytes": 30836,
+      "psnrDb": 43.8,
+      "encodeMs": 47.36
+    }
+  },
+  "asia_esp_0007--normal.webp": {
+    "75": {
+      "bytes": 38712,
+      "psnrDb": 32.5,
+      "encodeMs": 41.16
+    },
+    "80": {
+      "bytes": 43540,
+      "psnrDb": 33.7,
+      "encodeMs": 47.94
+    },
+    "85": {
+      "bytes": 49668,
+      "psnrDb": 35.17,
+      "encodeMs": 42.39
+    },
+    "90": {
+      "bytes": 58682,
+      "psnrDb": 36.9,
+      "encodeMs": 43.17
+    },
+    "95": {
+      "bytes": 75764,
+      "psnrDb": 39.51,
+      "encodeMs": 43.83
+    }
+  },
+  "asia_esp_0402--ambar.webp": {
+    "75": {
+      "bytes": 42628,
+      "psnrDb": 30.49,
+      "encodeMs": 31.56
+    },
+    "80": {
+      "bytes": 49044,
+      "psnrDb": 31.98,
+      "encodeMs": 33.68
+    },
+    "85": {
+      "bytes": 55706,
+      "psnrDb": 33.44,
+      "encodeMs": 34.15
+    },
+    "90": {
+      "bytes": 66226,
+      "psnrDb": 35.33,
+      "encodeMs": 32.0
+    },
+    "95": {
+      "bytes": 81936,
+      "psnrDb": 37.22,
+      "encodeMs": 34.49
+    }
+  },
+  "lobo_gris--fenrir.webp": {
+    "75": {
+      "bytes": 42152,
+      "psnrDb": 32.03,
+      "encodeMs": 31.86
+    },
+    "80": {
+      "bytes": 47648,
+      "psnrDb": 33.61,
+      "encodeMs": 32.02
+    },
+    "85": {
+      "bytes": 53564,
+      "psnrDb": 35.13,
+      "encodeMs": 32.23
+    },
+    "90": {
+      "bytes": 63192,
+      "psnrDb": 37.29,
+      "encodeMs": 38.24
+    },
+    "95": {
+      "bytes": 79464,
+      "psnrDb": 39.74,
+      "encodeMs": 45.72
+    }
+  },
+  "nutria_europea--melanico.webp": {
+    "75": {
+      "bytes": 13860,
+      "psnrDb": 38.16,
+      "encodeMs": 32.47
+    },
+    "80": {
+      "bytes": 15198,
+      "psnrDb": 39.12,
+      "encodeMs": 33.23
+    },
+    "85": {
+      "bytes": 16664,
+      "psnrDb": 40.32,
+      "encodeMs": 33.62
+    },
+    "90": {
+      "bytes": 19822,
+      "psnrDb": 42.47,
+      "encodeMs": 32.83
+    },
+    "95": {
+      "bytes": 25134,
+      "psnrDb": 44.75,
+      "encodeMs": 36.22
+    }
+  },
+  "oc_esp_myrmecobius_fasciatus--normal.webp": {
+    "75": {
+      "bytes": 34182,
+      "psnrDb": 31.75,
+      "encodeMs": 37.54
+    },
+    "80": {
+      "bytes": 38040,
+      "psnrDb": 33.14,
+      "encodeMs": 40.65
+    },
+    "85": {
+      "bytes": 42546,
+      "psnrDb": 34.61,
+      "encodeMs": 39.1
+    },
+    "90": {
+      "bytes": 49510,
+      "psnrDb": 36.7,
+      "encodeMs": 42.62
+    },
+    "95": {
+      "bytes": 60222,
+      "psnrDb": 38.9,
+      "encodeMs": 41.77
+    }
+  },
+  "oc_esp_ornithorhynchus_anatinus--normal.webp": {
+    "75": {
+      "bytes": 25772,
+      "psnrDb": 30.83,
+      "encodeMs": 25.37
+    },
+    "80": {
+      "bytes": 29114,
+      "psnrDb": 32.32,
+      "encodeMs": 24.09
+    },
+    "85": {
+      "bytes": 32758,
+      "psnrDb": 33.69,
+      "encodeMs": 22.95
+    },
+    "90": {
+      "bytes": 38626,
+      "psnrDb": 35.37,
+      "encodeMs": 25.53
+    },
+    "95": {
+      "bytes": 48244,
+      "psnrDb": 37.02,
+      "encodeMs": 24.35
+    }
+  },
+  "oc_esp_petauroides_volans--normal.webp": {
+    "75": {
+      "bytes": 26878,
+      "psnrDb": 33.0,
+      "encodeMs": 35.27
+    },
+    "80": {
+      "bytes": 30058,
+      "psnrDb": 34.24,
+      "encodeMs": 36.44
+    },
+    "85": {
+      "bytes": 34164,
+      "psnrDb": 36.01,
+      "encodeMs": 35.9
+    },
+    "90": {
+      "bytes": 40068,
+      "psnrDb": 38.06,
+      "encodeMs": 39.07
+    },
+    "95": {
+      "bytes": 50142,
+      "psnrDb": 40.62,
+      "encodeMs": 35.94
+    }
+  },
+  "oc_esp_tachyglossus_aculeatus--normal.webp": {
+    "75": {
+      "bytes": 50208,
+      "psnrDb": 29.01,
+      "encodeMs": 32.45
+    },
+    "80": {
+      "bytes": 56464,
+      "psnrDb": 30.34,
+      "encodeMs": 30.5
+    },
+    "85": {
+      "bytes": 63128,
+      "psnrDb": 31.51,
+      "encodeMs": 31.62
+    },
+    "90": {
+      "bytes": 73654,
+      "psnrDb": 32.93,
+      "encodeMs": 32.08
+    },
+    "95": {
+      "bytes": 88886,
+      "psnrDb": 34.13,
+      "encodeMs": 32.61
+    }
+  },
+  "zorro_rojo--albino.webp": {
+    "75": {
+      "bytes": 24722,
+      "psnrDb": 34.53,
+      "encodeMs": 27.38
+    },
+    "80": {
+      "bytes": 27718,
+      "psnrDb": 35.94,
+      "encodeMs": 26.91
+    },
+    "85": {
+      "bytes": 31314,
+      "psnrDb": 37.44,
+      "encodeMs": 28.76
+    },
+    "90": {
+      "bytes": 37606,
+      "psnrDb": 39.68,
+      "encodeMs": 28.76
+    },
+    "95": {
+      "bytes": 48098,
+      "psnrDb": 42.54,
+      "encodeMs": 29.67
+    }
+  }
+}

@@ -6,7 +6,7 @@ const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
 const { harness } = require('../tests/helpers/live-game.cjs');
 
-const baseline = process.env.ATLAS_BASELINE || '0e7767dbbc9b59f17fb18855dabcd7538a408851';
+const baseline = process.env.ATLAS_BASELINE || '0719d2816470ad9a7adbb35387384d97bfaa3794';
 const version = require('../package.json').version;
 const versionSlug = version.replaceAll('.', '');
 const baselineSlug = JSON.parse(execFileSync('git', ['show', baseline + ':www/atlas-release.json'], { encoding: 'utf8' })).version.replaceAll('.', '');
@@ -44,7 +44,7 @@ async function run() {
   const url = 'http://127.0.0.1:' + server.address().port + '/';
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
   const id = 'nutria_europea';
-  const id2 = 'ciervo_rojo';
+  const id2 = 'aguila_real';
   const regions = harness().window.__atlasTest.REGIONS;
   const britishSpecies = regions.find(region => region.id === 'HX-01-09').species;
   const primateRegion = regions.find(region => region.id === 'HX-09-11');
@@ -60,7 +60,7 @@ async function run() {
       page.on('pageerror', e => errors.push(e.message));
       await page.goto(url);
       await page.waitForFunction(() => !!window.AtlasSaveBridge);
-      await page.waitForFunction(() => !!navigator.serviceWorker.controller);
+      await page.waitForFunction(() => !!navigator.serviceWorker.controller, null, { timeout: 120000 });
       await page.evaluate(({ id, id2 }) => {
         const save = AtlasSaveBridge.getSaveData();
         for (const key of [id, id2]) {
@@ -92,7 +92,7 @@ async function run() {
 
       candidate = true;
       await page.evaluate(async () => (await navigator.serviceWorker.getRegistration()).update());
-      await page.waitForFunction(async () => !!(await navigator.serviceWorker.getRegistration()).waiting);
+      await page.waitForFunction(async () => !!(await navigator.serviceWorker.getRegistration()).waiting, null, { timeout: 120000 });
       const updated = await ctx.newPage();
       updated.on('pageerror', e => errors.push(e.message));
       // Installed games still open their cached update entry point.
@@ -138,7 +138,7 @@ async function run() {
       await updated.locator('[data-action=set-time][data-id=amanecer]').click();
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/naturalista-v430/campo-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: 'docs/cientifica-v440/campo-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
 
@@ -166,7 +166,7 @@ async function run() {
       await journal.evaluate(img => img.decode());
       assert.equal(await updated.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
       if (process.argv.includes('--write-evidence')) {
-        await updated.screenshot({ path: 'docs/naturalista-v430/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
+        await updated.screenshot({ path: 'docs/cientifica-v440/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
       }
 
       // Exercise the real automatic timer while deterministic rolls select a single repeatable WebP.
@@ -233,7 +233,7 @@ async function run() {
       assert.match(await silverback.evaluate(img => getComputedStyle(img).filter), /drop-shadow/);
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/naturalista-v430/silverback-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: 'docs/cientifica-v440/silverback-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
 
@@ -259,17 +259,37 @@ async function run() {
       assert.equal(await baboon.evaluate(img => window.__atlasPrimateImage === img), true);
       const primateAutoRepeatMs = Math.round(performance.now() - primateAutoStart);
 
+      const deer = 'ciervo_rojo';
+      await updated.evaluate(id => {
+        const save = AtlasSaveBridge.getSaveData();
+        save.discovered[id] = true;
+        save.stages[id] = 3;
+        save.helpers = 0;
+        save.lastTick = Date.now();
+        save.currentRegion = 'HX-01-09';
+        save.habitat = 'bosque';
+        save.lastEncounter = { species: id, title: 'Ciervo rojo', sequence: save.encounterSequence, entries: [
+          { id, amount: 1, sex: 'female' }, { id, amount: 1, sex: 'male' }
+        ] };
+        AtlasSaveBridge.restoreGame(save);
+      }, deer);
+      await openTab(updated, 'field');
+      const deerSprites = updated.locator('#fieldResult img.atlas-art-image');
+      assert.deepEqual(await deerSprites.evaluateAll(images => images.map(image => image.src.split('/').at(-1))),
+        ['ciervo_rojo--female.webp', 'ciervo_rojo--normal.webp']);
+      await deerSprites.first().evaluate(img => img.decode());
+
       await ctx.setOffline(true);
       await updated.reload();
       await updated.waitForFunction(() => !!window.AtlasSaveBridge);
       await openTab(updated, 'field');
-      await updated.locator('#fieldResult img.atlas-art-image').first().evaluate(img => img.decode());
+      await updated.locator('#fieldResult img[src$="ciervo_rojo--female.webp"]').evaluate(img => img.decode());
       await updated.goto(url + 'naturalist-art/');
       await updated.locator('.field-card .atlas-art-image').evaluate(img => img.decode());
       await updated.locator('.field-card .atlas-art-landscape').evaluate(img => img.decode());
       assert.deepEqual(errors, []);
       results.push({ width, fieldBeforeMs: beforeMs, fieldWebPMs: afterMs, fieldBeforeJSHeapBytes: beforeHeap, fieldWebpJSHeapBytes: afterHeap, exactSaveBackup: true,
-        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, optionalReviewOutsideGameCache: true, errors });
+        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, optionalReviewOutsideGameCache: true, errors });
       await ctx.close();
     }
   } finally {

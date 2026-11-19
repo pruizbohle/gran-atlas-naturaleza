@@ -1,0 +1,52 @@
+{
+  "baselineCommit": "0719d2816470ad9a7adbb35387384d97bfaa3794",
+  "classical": 590,
+  "previousStyleReplaced": 341,
+  "ungulatesDistinctWebp": 249,
+  "sizes": {
+    "64": {
+      "v430Bytes": 792990,
+      "v440SameIdentitiesBytes": 724782,
+      "differenceBytes": -68208,
+      "ungulateBytes": 570032,
+      "currentTotalBytes": 1294814,
+      "decodeRGBABytesPerImage": 16384
+    },
+    "128": {
+      "v430Bytes": 1918252,
+      "v440SameIdentitiesBytes": 1748718,
+      "differenceBytes": -169534,
+      "ungulateBytes": 1362214,
+      "currentTotalBytes": 3110932,
+      "decodeRGBABytesPerImage": 65536
+    },
+    "256": {
+      "v430Bytes": 5478436,
+      "v440SameIdentitiesBytes": 5035336,
+      "differenceBytes": -443100,
+      "ungulateBytes": 3765522,
+      "currentTotalBytes": 8800858,
+      "decodeRGBABytesPerImage": 262144
+    },
+    "512": {
+      "v430Bytes": 14023048,
+      "v440SameIdentitiesBytes": 14914968,
+      "differenceBytes": 891920,
+      "ungulateBytes": 10800686,
+      "currentTotalBytes": 25715654,
+      "decodeRGBABytesPerImage": 1048576
+    }
+  },
+  "cache": {
+    "baseV430Bytes": 41272458,
+    "baseCandidateBytes": 60111826,
+    "reviewV430Bytes": 6181330,
+    "reviewCandidateBytes": 11702828
+  },
+  "decoded256MS": {
+    "matched": 341,
+    "v430": 1007.02,
+    "classical": 911.67
+  },
+  "invalidResources": []
+}

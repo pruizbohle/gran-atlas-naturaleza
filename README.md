@@ -1,4 +1,6 @@
-# 3.44.0 · Cartografía del naturalista
+# El Gran Atlas · Ilustración científica clásica y ungulados (V4.4.0)
+
+[Web pública](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.4.0](docs/cientifica-v440/README.md) · [Estándar artístico](docs/cientifica-v440/estandar.md).
 
 ## Serie 4 · Primates (V4.3.0)
 
@@ -9,6 +11,8 @@
 
 [Web pública](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Estándar artístico](docs/naturalista-v421/estandar.md) · [Informe V4.2.1](docs/naturalista-v421/README.md).
 
+
+## 3.44.0 · Cartografía del naturalista
 
 997 especies, 125 regiones y 1.829 asociaciones zoológicas. Patagonia reorganizada y nuevos bosques templados e islas, conservando IDs y progreso. Rapa Nui es un expediente especial.
 

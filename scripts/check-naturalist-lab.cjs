@@ -4,7 +4,11 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const http = require('node:http');
+const vm = require('node:vm');
 const { chromium } = require('playwright');
+require('../www/js/naturalist-assets-v400.js');
+const expected = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') +
+  '\n({catalog,migrationProgress});');
 const root = path.resolve('www');
 const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'application/javascript', '.webp': 'image/webp' };
 const server = http.createServer((req, res) => {
@@ -49,7 +53,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#category').selectOption('Notable');
       await page.locator('.mixed-field .atlas-art-image').evaluate(img => img.decode());
       assert.equal(await page.locator('.mixed-field .field-animal-sprite > svg').count(), 1);
-      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Ciervo rojo · SVG/);
+      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Águila real · SVG/);
       const art = page.locator('.mixed-field .plate');
       const image = art.locator('.atlas-art-image');
       const src = await image.getAttribute('src');
@@ -80,15 +84,16 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 191);
-      assert.match(await page.locator('#migration-progress').innerText(), /191 de 997.*341 de 341 láminas recortadas/);
+      assert.equal(await page.locator('.gallery-card').count(), 313);
+      assert.match(await page.locator('#migration-progress').innerText(),
+        new RegExp(expected.migrationProgress.migrated + ' de 997.*' + expected.migrationProgress.classical + " de " + expected.migrationProgress.target + " láminas científicas"));
       await page.locator('#group').selectOption('Primates');
       assert.equal(await page.locator('.gallery-card').count(), 49);
       await page.locator('#family').selectOption('Tarsiidae');
       assert.equal(await page.locator('.gallery-card').count(), 2);
       await page.locator('.gallery-card').first().click();
       assert.equal(await page.locator('.legacy-sprite svg').count(), 1);
-      await page.locator('.review-comparison .atlas-art-image').evaluate(image => image.decode());
+      await page.locator('.comparison-styles img').first().evaluate(image => image.decode());
       await page.locator('#family').selectOption('');
       await page.locator('[data-mode=frames]').click();
       await page.locator('#species').selectOption('af_gorila_montana');
@@ -115,22 +120,37 @@ const server = http.createServer((req, res) => {
       assert.equal(await page.locator('.gallery-card').count(), 28);
       await page.locator('#group').selectOption('Monotremas');
       assert.equal(await page.locator('.gallery-card').count(), 3);
+      await page.locator('#group').selectOption('Ungulados');
+      assert.equal(await page.locator('.gallery-card').count(), 122);
+      await page.locator('#family').selectOption('Cervidae');
+      await page.locator('.gallery-card[data-species="ciervo_rojo"]').click();
+      assert.equal(await page.locator('.comparison-styles figure').count(), 3);
+      assert.equal(await page.locator('.legacy-sprite svg').count(), 1);
+      assert.match(await page.locator('.comparison-styles').innerText(), /Sin lámina naturalista previa/);
+      await page.locator('[data-mode=gallery]').click();
       await page.locator('#group').selectOption('');
+      await page.locator('#family').selectOption('');
       await page.locator('#search').fill('cuscus');
       assert.equal(await page.locator('.gallery-card').count(), 2);
       await page.locator('#search').fill('dromiciops');
       assert.equal(await page.locator('.gallery-card').count(), 1);
       await page.locator('.gallery-card').click();
+      assert.equal(await page.locator('.comparison-styles figure').count(), 3);
+      assert.equal(await page.locator('.comparison-styles img').count(), 2);
+      assert.equal(await page.locator('.legacy-sprite svg').count(), 1);
+      assert.match(await page.locator('.comparison-styles img').first().getAttribute('src'), /review\/series-4\.3\/gm06_dromiciops/);
+      await page.locator('#comparison-source').selectOption('original');
       assert.equal(await page.locator('.pair figure').count(), 2);
       assert.equal(await page.locator('.pair img').count(), 2);
       assert.match(await page.locator('.pair img').first().getAttribute('src'), /review\/before\/gm06_dromiciops/);
-      await page.locator('#comparison-source').selectOption('svg');
-      assert.equal(await page.locator('.legacy-sprite svg').count(), 1);
-      await page.locator('#comparison-source').selectOption('original');
-      const comparison = page.locator('.pair .plate').last();
+      await page.locator('#comparison-source').selectOption('styles');
+      const comparison = page.locator('.comparison-styles .plate').last();
       const light = await comparison.evaluate(node => getComputedStyle(node).backgroundColor);
       await page.locator('#backdrop').selectOption('dark');
       assert.notEqual(await comparison.evaluate(node => getComputedStyle(node).backgroundColor), light);
+      if (process.argv.includes('--write-evidence')) {
+        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v440/comparacion-' + viewport.width + '.jpg' });
+      }
       await page.locator('#search').fill('');
       await page.locator('[data-mode=frames]').click();
       assert.deepEqual(await page.locator('#content figcaption').allTextContents(), ['Normal', 'Notable', 'Épico', 'Excepcional']);
@@ -157,8 +177,8 @@ const server = http.createServer((req, res) => {
       const download = await pending;
       const data = JSON.parse(fs.readFileSync(await download.path(), 'utf8'));
       assert.equal(data.schemaVersion, 2);
-      assert.equal(data.migration.plates, 341);
-      assert.equal(data.results.length, 342);
+      assert.equal(data.migration.plates, expected.migrationProgress.plates);
+      assert.equal(data.results.length, expected.catalog.flatMap(sp => sp.records).length);
       assert.equal(data.results.find(r => r.note === 'Revisar hocico y cola.').status, 'Requiere ajustes');
       assert.deepEqual(await page.evaluate(() => Object.keys(localStorage)), ['gran-atlas-naturalist-art-review-v1']);
       await page.locator('#review-offline').click();
@@ -171,13 +191,14 @@ const server = http.createServer((req, res) => {
         return { game: (await paths(game)).some(path => path.includes('/review/')), study: (await paths(study)).length };
       });
       assert.equal(separation.game, false);
-      assert.equal(separation.study, 295);
+      assert.equal(separation.study, globalThis.AtlasNaturalistAssets.labFiles.length);
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 191);
+      assert.equal(await page.locator('.gallery-card').count(), 313);
       await page.locator('#cut-state').selectOption('pending');
-      assert.equal(await page.locator('.gallery-card').count(), data.migration.plates - data.migration.cutouts);
+      assert.equal(await page.locator('.gallery-card').count(),
+        expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);
       await page.locator('#cut-state').selectOption('');
       const first = page.locator('.gallery-card img').first();
       await first.scrollIntoViewIfNeeded();

@@ -1,0 +1,70 @@
+{
+  "baseline": "0719d2816470ad9a7adbb35387384d97bfaa3794",
+  "migrationProgress": {
+    "migrated": 313,
+    "total": 997,
+    "cutouts": 590,
+    "plates": 590,
+    "biological": 294,
+    "legendary": 5,
+    "review": 0,
+    "classical": 590,
+    "target": 590,
+    "ungulates": 122
+  },
+  "archived": 341,
+  "oldRoutesRetained": 342,
+  "landscapes": 16,
+  "groups": {
+    "Primates": {
+      "species": 49,
+      "uniquePlates": 96,
+      "variants": 46,
+      "legendarios": [
+        "Silverback"
+      ]
+    },
+    "Marsupiales": {
+      "species": 29,
+      "uniquePlates": 33,
+      "variants": 4,
+      "legendarios": []
+    },
+    "Ungulados": {
+      "species": 122,
+      "uniquePlates": 249,
+      "variants": 148,
+      "legendarios": []
+    },
+    "Carnívoros terrestres": {
+      "species": 51,
+      "uniquePlates": 93,
+      "variants": 42,
+      "legendarios": []
+    },
+    "Felinos": {
+      "species": 31,
+      "uniquePlates": 63,
+      "variants": 31,
+      "legendarios": [
+        "Niebla",
+        "Ámbar"
+      ]
+    },
+    "Cánidos": {
+      "species": 28,
+      "uniquePlates": 53,
+      "variants": 23,
+      "legendarios": [
+        "Fenrir",
+        "Ascua"
+      ]
+    },
+    "Monotremas": {
+      "species": 3,
+      "uniquePlates": 3,
+      "variants": 0,
+      "legendarios": []
+    }
+  }
+}

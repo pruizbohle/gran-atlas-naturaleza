@@ -3,12 +3,15 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { harness } = require('../tests/helpers/live-game.cjs');
+const { ungulateFamily } = require('./ungulate-families.cjs');
 
 const out = path.resolve('www/naturalist-art');
 const artDir = path.join(out, 'plates');
 const reviewDir = path.join(out, 'review');
 const reviewNotes = path.join(reviewDir, 'observations.json');
 const observations = fs.existsSync(reviewNotes) ? JSON.parse(fs.readFileSync(reviewNotes, 'utf8')) : {};
+const classicalIndex = path.join(reviewDir, 'classical-plates.json');
+const classical = new Set(fs.existsSync(classicalIndex) ? JSON.parse(fs.readFileSync(classicalIndex, 'utf8')) : []);
 const qualities = [75, 80, 85, 90, 95];
 const reviewFiles = new Set();
 const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'app'];
@@ -57,13 +60,15 @@ function plate(id, key, label) {
     return { src: relative, bytes: fs.statSync(location).size };
   };
   const before = reviewAsset('before', file);
+  const previous = reviewAsset('series-4.3', file);
   const compression = Object.fromEntries(qualities.flatMap(quality => {
     const sample = reviewAsset('compression/' + quality, file);
     return sample ? [[quality, sample]] : [];
   }));
   return {
     key, label, src: exists ? 'plates/' + file : null, bytes: exists ? fs.statSync(source).size : 0,
-    cutout: cutouts[file] === true, note: observations[file] || '', before, compression
+    cutout: cutouts[file] === true, classical: classical.has(file),
+    note: classical.has(file) ? '' : observations[file] || '', before, previous, compression
   };
 }
 
@@ -115,6 +120,8 @@ const primateFamilyByGenus = new Map(Object.entries(primateGenera).flatMap(([fam
 function classify(id, sp) {
   const taxonomy = audit.taxonomyInfo(id);
   const genus = sp.latin.split(' ')[0];
+  const hoofedFamily = ungulateFamily(sp.latin, taxonomy.family || sp.family);
+  if (hoofedFamily) return { family: hoofedFamily, group: 'Ungulados' };
   const primateFamily = primateFamilyByGenus.get(genus);
   if (primateFamily) return { family: primateFamily, group: 'Primates' };
   if (['Primates', 'Lémures'].includes(taxonomy.subClass) || Object.hasOwn(primateGenera, taxonomy.family)) {
@@ -139,8 +146,10 @@ const species = catalogEntries.flatMap(([id, sp]) => {
   const special = audit.configuredSpecials(sp);
   const records = [plate(id, 'normal', 'Normal')];
   if (audit.SEXUAL_DIMORPHISM[id]) {
-    // The Felidae reference plate already depicts the male African lion.
-    const male = id === 'af_leon' ? { ...records[0], key: 'male', label: 'Macho', bytes: 0 } : plate(id, 'male', 'Macho');
+    // The African lion and the new ungulate base plates depict adult males.
+    const male = id === 'af_leon' || group === 'Ungulados'
+      ? { ...records[0], key: 'male', label: 'Macho', bytes: 0, sharedWith: 'normal' }
+      : plate(id, 'male', 'Macho');
     records.push(male, plate(id, 'female', 'Hembra'));
   }
   if (special.includes('Albino')) records.push(plate(id, 'albino', 'Albino'));
@@ -151,10 +160,13 @@ const species = catalogEntries.flatMap(([id, sp]) => {
     const record = plate(id, legendary.id, legendary.name);
     records.push({ ...record, key: 'legendario' });
   }
-  if (group === 'Primates') {
-    for (const record of records) {
-      const sex = ['male', 'female'].includes(record.key) ? record.key : null;
-      record.svg = audit.getSpriteMarkup(id, sex ? 'normal' : record.key, sex);
+  for (const record of records.slice(1)) {
+    const sex = ['male', 'female'].includes(record.key) ? record.key : null;
+    record.svg = audit.getSpriteMarkup(id, sex ? 'normal' : record.key, sex);
+    if (record.key === 'legendario') {
+      // The comparison applies the same external halo to each representation.
+      record.svg = record.svg.replace(/ data-specimen-category="[^"]+"/, '')
+        .replace(/<g data-specimen-halo="[^"]+"[^>]*>[\s\S]*?<\/g>/, '');
     }
   }
   return [{
@@ -174,17 +186,23 @@ const species = catalogEntries.flatMap(([id, sp]) => {
 for (const file of fs.readdirSync(artDir)) {
   if (file.endsWith('.webp') && !assets.has(file)) throw Error('Lámina sin entrada en el catálogo: ' + file);
 }
+for (const file of classical) {
+  if (!cutouts[file]) throw Error('Lámina científica sin transparencia o sin entrada: ' + file);
+}
+const records = species.flatMap(sp => sp.records);
 const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,
   total: catalogEntries.length,
   cutouts: Object.keys(cutouts).length,
   plates: assets.size,
-  biological: species.flatMap(sp => sp.records)
-    .filter(record => record.src && !['normal', 'legendario'].includes(record.key)).length,
+  biological: records.filter(record => record.src && !['normal', 'legendario'].includes(record.key)).length,
   legendary: species.filter(sp => sp.records.some(record => record.src && record.key === 'legendario')).length,
-  review: Object.keys(observations).length
+  review: records.filter(record => record.note).length,
+  classical: classical.size,
+  target: records.filter(record => !record.sharedWith).length,
+  ungulates: species.filter(sp => sp.group === 'Ungulados').length
 };
-const mixedFieldSprites = ['ciervo_rojo', 'jabali', 'corzo_europeo'].map(id => {
+const mixedFieldSprites = ['aguila_real', 'af_elefante_sabana', 'af_avestruz'].map(id => {
   const sp = audit.SPECIES[id];
   if (classify(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
   return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };
@@ -223,7 +241,6 @@ for (const file of [...files, ...labFiles]) {
 const labBytes = labFiles.reduce((bytes, file) => bytes + fs.statSync('www/' + file).size, 0);
 fs.writeFileSync('www/js/naturalist-assets-v400.js',
   'globalThis.AtlasNaturalistAssets = ' + JSON.stringify({ routes, cutouts, landscapes, files, labFiles, labBytes }, null, 2) + ';\n');
-const records = species.flatMap(sp => sp.records);
 console.log(JSON.stringify({
   species: species.length,
   catalogSize: migrationProgress.total,
