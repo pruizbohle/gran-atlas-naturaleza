@@ -41,3 +41,13 @@ Las cifras usan MB decimales. La comprobación byte a byte preservó los 3.028 W
 | **Total** | **49,28 MB** | **2,37 MB** | **51,65 MB** |
 
 El caché base pasó de **71,06 a 73,58 MB** y las comparaciones opcionales conservaron **11,70 MB**. Los derivados mantienen las calidades 82, 83, 86 y 90, con alfa a calidad 100. Los 57 WebP nuevos a 128 px se decodificaron en una mediana total de 15,91 ms en el equipo de validación. [Mediciones y comprobaciones](mediciones.json)
+
+## Validación funcional
+
+Pasaron las 13 pruebas específicas de release. La suite histórica registró 583 aprobadas y los mismos 228 fallos que V4.5.0. [Suite histórica](regresion.json)
+
+El laboratorio pasó los doce modos a 320 y 1280 px, con los filtros del lote acuático, la galería y la exportación de revisión sin conexión. La actualización PWA de V4.5.0 a V4.6.0 conservó el respaldo exacto y diez campos de partida cotejados en las pruebas de Chromium a 390 y 1280 px. El delfín rosado se cargó sin conexión en Campo, Cuaderno, Bestiario, Museo y el registro de avistamientos. Campo y Bestiario mostraron el fondo de río. [Resultados PWA](pwa.json) · [Campo fluvial](inia-390.jpg) · [Comparación de Inia](comparacion-inia-1280.jpg)
+
+En la ejecución medida, la apertura de Campo hasta decodificar la lámina pasó de 123 a 88 ms a 390 px y de 51 a 90 ms a 1280 px. El heap de JavaScript pasó de 6,12 a 10,26 MB y de 8,08 a 10,46 MB respectivamente. El encuentro automático siguiente tardó 708 y 1.004 ms, y reutilizó la imagen y el paisaje ya cargados. Una lámina de 128 px ocupa 65.536 bytes RGBA decodificada. Estas cifras son mediciones puntuales del navegador de validación. [Tiempos y memoria](pwa.json)
+
+La sincronización local de Capacitor confirmó `versionCode 40600` y la igualdad byte a byte de los 3.912 recursos cotejados. El flujo firmado verifica el APK y lo vincula al commit. La restauración en un dispositivo físico se registra con el procedimiento Android del repositorio. [Procedimiento Android](../../README_ANDROID_FIRMA_PERMANENTE.md)
