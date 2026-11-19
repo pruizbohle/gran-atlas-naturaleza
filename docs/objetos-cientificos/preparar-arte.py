@@ -1,9 +1,9 @@
-"""OBJ-01: pasar las tres planchas originales. OBJ-02 a OBJ-04: pasar la etapa (por ejemplo --obj-04) y una plancha opcional."""
+"""OBJ-01: pasar las tres planchas originales. OBJ-02 a OBJ-05: pasar la etapa (por ejemplo --obj-04) y una plancha opcional."""
 import json
 from pathlib import Path
 import sys
 
-from PIL import Image, ImageEnhance, ImageFilter
+from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[2] / 'www/objetos-cientificos/arte'
 SHEETS = (
@@ -34,9 +34,18 @@ def prepare(filename, columns, names, method, guides=None):
         rows = tuple(row * sheet.height // count for row in range(count + 1))
         bounds_by_row = (tuple(column * sheet.width // columns for column in range(columns + 1)),) * count
     for index, name in enumerate(names):
+        if name is None:
+            continue
         row, column = divmod(index, columns)
         edges = bounds_by_row[row]
-        art = sheet.crop((edges[column], rows[row], edges[column + 1], rows[row + 1]))
+        polygon = (guides or {}).get('polygons', {}).get(name)
+        if polygon:
+            mask = Image.new('L', sheet.size)
+            ImageDraw.Draw(mask).polygon([tuple(point) for point in polygon], fill=255)
+            art = sheet.copy()
+            art.putalpha(ImageChops.multiply(sheet.getchannel('A'), mask))
+        else:
+            art = sheet.crop((edges[column], rows[row], edges[column + 1], rows[row + 1]))
         alpha = art.getchannel('A')
         bounds = alpha.point(lambda value: 255 if value >= 18 else 0).getbbox()
         if not bounds:
@@ -70,7 +79,7 @@ def export_sprite(name, art, method=4):
             canvas.save(folder / f'{variant}-{size}.webp', quality=quality, method=method)
 
 def main(args):
-    if args and args[0] in ('--obj-02', '--obj-03', '--obj-04'):
+    if args and args[0] in ('--obj-02', '--obj-03', '--obj-04', '--obj-05'):
         stage = args[0][2:]
         folder = Path(__file__).parent
         plan = json.loads((folder / f'{stage}.json').read_text())

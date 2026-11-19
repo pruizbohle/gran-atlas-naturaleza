@@ -1,7 +1,13 @@
 (() => {
   'use strict';
 
-  const {rows, groups, materialIds, recipeExamples, archive, cartography} = AtlasObjetosCientificos;
+  const {rows, groups, materialIds, recipeExamples, archive, cartography, paleontology} = AtlasObjetosCientificos;
+  const {phases, reconstruction} = AtlasReconstruccionObjetos;
+  const fossilGroups = {
+    materials: {name:'Materiales y fósiles menores', ids:[...paleontology.materials,...paleontology.minors]},
+    archive: {name:'Archivo paleontológico', ids:paleontology.archive},
+    future: {name:'Montajes futuros', ids:paleontology.future}
+  };
   const byId = new Map(rows.map(row => [row.id, row]));
   const get = id => document.getElementById(id);
   const gallery = get('gallery');
@@ -44,6 +50,9 @@
   }
 
   options(get('group'), groups.map(group => group.name));
+  for (const mount of paleontology.mounts) get('mount').add(new Option(mount.name, mount.id));
+  phases.forEach((phase, index) => get('phase').add(new Option(phase.name, String(index))));
+  get('phase').value = '3';
   const archiveSelect = get('archive-section');
   archiveSelect.add(new Option('Ensamblaje cartográfico', 'assembly'));
   options(archiveSelect, archive.map(group => group.name));
@@ -280,6 +289,7 @@
       case 'album': return row.type === 'Coleccionable propuesto';
       case 'museum': return row.type === 'Pieza del Museo';
       case 'groups': return groups.find(group => group.name === get('group').value).ids.includes(row.id);
+      case 'paleontology': return fossilGroups[get('paleo-section').value]?.ids.includes(row.id);
       case 'archive': return archive.find(group => group.name === archiveSelect.value)?.ids.includes(row.id);
       default: return get('stage').value || get('scope').value !== 'pilot' || row.pilot;
     }
@@ -365,7 +375,12 @@
     const inAssembly = inArchive && archiveSelect.value === 'assembly';
     get('archive-control').hidden = !inArchive;
     get('assembly-control').hidden = !inAssembly;
-    for (const key of ['search','sort',...filters]) get(key).disabled = inAssembly;
+    const inPaleo = view === 'paleontology';
+    const fossilSection = get('paleo-section').value;
+    const reconstructing = inPaleo && fossilSection === 'mounts';
+    get('paleo-control').hidden = !inPaleo;
+    for (const id of ['mount','phase','living']) get(id + '-control').hidden = !reconstructing;
+    for (const key of ['search','sort',...filters]) get(key).disabled = inAssembly || reconstructing;
     const single = view === 'compare' && get('layout').value === 'single';
     get('scope').disabled = view !== 'compare' || Boolean(get('stage').value);
     get('group-control').hidden = view !== 'groups';
@@ -380,11 +395,28 @@
     gallery.style.setProperty('--size', size() + 'px');
     if (inAssembly) {
       navigation(0, 0);
-      get('status').textContent = 'Seis mapas · 10 partes por mapa · simulación visual';
+      get('status').textContent = 'Seis mapas · requisitos de las recetas vigentes · simulación visual';
       renderAssembly();
       return;
     }
-    get('status').textContent = selected.length + ' resultados' + (['compare','groups','archive'].includes(view) ? '' : ' · Simulación con datos de prueba');
+    if (reconstructing) {
+      navigation(0, 0);
+      const mount = paleontology.mounts.find(entry => entry.id === get('mount').value);
+      const living = get('living').checked;
+      get('status').textContent = 'Reconstrucción con existencias de prueba';
+      gallery.append(reconstruction({mount, phase:Number(get('phase').value), living, byId, node,
+        art: row => figure(row, 'inventario')}));
+      const compare = node('button', 'Comparar y evaluar');
+      compare.addEventListener('click', () => inspect(byId.get(living ? mount.living : mount.id)));
+      gallery.append(compare);
+      return;
+    }
+    get('status').textContent = selected.length + ' resultados' + (['compare','groups','archive','paleontology'].includes(view) ? '' : ' · Simulación con datos de prueba');
+    if (inPaleo) {
+      navigation(0, 0);
+      renderGroup(selected, fossilGroups[fossilSection]);
+      return;
+    }
     if (view === 'groups' || inArchive) {
       navigation(0, 0);
       const name = inArchive ? archiveSelect.value : get('group').value;
@@ -414,8 +446,8 @@
   }
 
   get('search').addEventListener('input', resetPage);
-  for (const key of ['view','group','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
-  for (const key of ['scale','ground','halo','stock','assembly']) get(key).addEventListener('change', render);
+  for (const key of ['view','group','paleo-section','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
+  for (const key of ['scale','ground','halo','stock','assembly','mount','phase','living']) get(key).addEventListener('change', render);
   function resetPage() {
     page = 0;
     focusId = null;

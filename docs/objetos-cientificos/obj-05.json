@@ -1,0 +1,39 @@
+{
+  "sheets": [
+    {"file":"materiales-a.png","columns":4,"ids":["fossil_tooth","bone_short","bone_long","carnivore_skull","herbivore_skull","fossil_plate","fossil_sail","fossil_amber"]},
+    {"file":"materiales-b.png","columns":3,"ids":["river_pearl","fossil_track","fossil_claw","fossil_rib","fossil_horn","hard_bone"]},
+    {"file":"menores-a.png","columns":3,"ids":["FOS-01","FOS-02",null,"FOS-03","FOS-04","FOS-05"]},
+    {"file":"menores-b.png","columns":3,"ids":["FOS-07","FOS-08","FOS-09","FOS-10","FOS-11","FOS-12"]},
+    {"file":"esqueletos.png","columns":4,"ids":["trex_mount","triceratops_mount","stegosaurus_mount","spinosaurus_mount","ankylosaurus_mount","iguanodon_mount","pachycephalosaurus_mount","carnotaurus_mount"]},
+    {"file":"en-vida.png","columns":4,"crop":{"rows":[0,443,887],"edges":[[0,443,889,1329,1774],[0,443,886,1330,1774]],"alpha":[237,248]},"ids":["vida-trex_mount","vida-triceratops_mount","vida-stegosaurus_mount",null,"vida-ankylosaurus_mount","vida-iguanodon_mount","vida-pachycephalosaurus_mount","vida-carnotaurus_mount"]},
+    {"file":"archivo.png","columns":2,"ids":["fosil_catalogado","huella_paleontologica","huellas_teropodos","sedimentos_estratos"]},
+    {"file":"futuros.png","columns":2,"crop":{"rows":[0,470,1024],"edges":[[0,768,1536],[0,768,1536]],"polygons":{"montaje-diplodocus":[[0,0],[795,0],[800,248],[848,255],[848,288],[810,312],[770,470],[0,470]],"montaje-pteranodon":[[795,0],[1535,0],[1535,470],[770,470],[810,312],[848,288],[848,255],[800,248]]}},"ids":["montaje-diplodocus","montaje-pteranodon","montaje-plesiosaurus","montaje-mamut"]},
+    {"file":"pez.png","columns":1,"ids":["FOS-06"]},
+    {"file":"espinosaurio.png","columns":1,"ids":["vida-spinosaurus_mount"]}
+  ],
+  "materials": ["fossil_fragment","fossil_skull","fossil_tooth","bone_short","bone_long","carnivore_skull","herbivore_skull","fossil_plate","fossil_sail","fossil_amber","river_pearl","fossil_track","fossil_claw","fossil_rib","fossil_horn","hard_bone"],
+  "mounts": {
+    "trex_mount": ["Tyrannosaurus rex","Cráneo profundo, dos dedos y cola horizontal."],
+    "triceratops_mount": ["Triceratops","Gola amplia y tres cuernos; proporciones de un cuadrúpedo pesado."],
+    "stegosaurus_mount": ["Stegosaurus","Placas dorsales alternadas y cuatro púas caudales."],
+    "spinosaurus_mount": ["Spinosaurus","Hocico alargado, extremidades posteriores cortas, vela dorsal y cola profunda. La locomoción y ecología siguen en debate."],
+    "ankylosaurus_mount": ["Ankylosaurus","Osteodermos, torso bajo y maza caudal."],
+    "iguanodon_mount": ["Iguanodon","Pulgar en espiga, pico y postura cuadrúpeda de referencia."],
+    "pachycephalosaurus_mount": ["Pachycephalosaurus","Cúpula craneal y postura bípeda."],
+    "carnotaurus_mount": ["Carnotaurus","Dos cuernos supraorbitarios, cráneo corto y brazos reducidos."]
+  },
+  "minorNotes": {
+    "FOS-01":"Impresión de fronda con pinnas. Identificación y datación del ejemplar pendientes.",
+    "FOS-02":"Concha espiral costillada. El ammonite como grupo fósil era conocido en 1842.",
+    "FOS-03":"Vetas y anillos conservados en matriz mineral. Procedencia del ejemplar pendiente.",
+    "FOS-04":"Trilobites conocidos antes de 1842; verificar la procedencia y documentación de la muestra marroquí.",
+    "FOS-05":"Diente aplanado y serrado; identificación a nivel de especie pendiente.",
+    "FOS-06":"Impresión de peces con aletas y radios visibles. Identificación de formación pendiente.",
+    "FOS-07":"Limbo único y red de nervios, distinto de la fronda pinnada.",
+    "FOS-08":"Molde de prosoma y telson. Verificar taxón, yacimiento y cronología de la documentación.",
+    "FOS-09":"Rastro de varias pisadas. Las huellas de Connecticut se estudiaban en la década de 1830; la atribución a dinosaurios requiere contexto.",
+    "FOS-10":"La función gástrica requiere asociación diagnóstica. Una piedra pulida aislada no acredita su uso ni su datación documental.",
+    "FOS-11":"Posterior a 1842 si corresponde a la pluma aislada de Solnhofen, descrita en 1861 y asociada históricamente a Archaeopteryx.",
+    "FOS-12":"Diente curvo de reptil marino con estrías. Identificación y yacimiento del ejemplar pendientes."
+  }
+}

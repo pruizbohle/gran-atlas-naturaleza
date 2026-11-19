@@ -88,7 +88,7 @@ Se verificaron los 240 archivos con sus dimensiones y canal alfa. En Chromium m�
 | OBJ-02 | [Equipamiento e instrumentos](OBJ-02.md) |
 | OBJ-03 | [Materiales animales y de expedición](OBJ-03.md) |
 | OBJ-04 | [Cartografía y mercancías regionales](OBJ-04.md) |
-| OBJ-05 | Fósiles y Museo |
+| OBJ-05 | [Paleontología, Museo y laboratorio de inclusiones](OBJ-05.md) |
 | OBJ-06 | Botánica |
 | OBJ-07 | Geología |
 | OBJ-08 | Oceanografía |

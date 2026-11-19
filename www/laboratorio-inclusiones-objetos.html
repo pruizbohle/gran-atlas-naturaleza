@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laboratorio de inclusiones · El Gran Atlas</title>
+<link rel="stylesheet" href="objetos-cientificos/laboratorio.css">
+<link rel="stylesheet" href="objetos-cientificos/inclusiones.css">
+<script defer src="objetos-cientificos/manifiesto.js"></script>
+<script defer src="js/lab/reconstruccion-objetos.js"></script>
+<script defer src="js/lab/inclusiones-objetos.js"></script>
+</head>
+<body class="inclusions">
+<header class="masthead">
+  <p>El Gran Atlas · Cuaderno del naturalista</p>
+  <h1>Laboratorio de inclusiones</h1>
+  <p>Partida de muestra · 1842</p>
+  <a href="laboratorio-objetos-cientificos.html">Laboratorio artístico</a>
+</header>
+<main>
+  <nav id="sections" aria-label="Secciones del laboratorio">
+    <button type="button" data-page="inventory">Inventario</button>
+    <button type="button" data-page="equipment">Equipo del naturalista</button>
+    <button type="button" data-page="materials">Materiales</button>
+    <button type="button" data-page="trade">Comercio</button>
+    <button type="button" data-page="album">Álbum</button>
+    <button type="button" data-page="museum">Museo</button>
+    <button type="button" data-page="register">Registro de inclusiones</button>
+  </nav>
+  <h2 id="section-title"></h2>
+  <div class="controls" id="controls"></div>
+  <p id="status" role="status"></p>
+  <div id="gallery"></div>
+  <nav id="navigation" aria-label="Páginas de resultados"></nav>
+</main>
+<dialog id="detail" aria-labelledby="detail-title">
+  <form method="dialog"><button>Volver</button></form>
+  <div id="detail-content"></div>
+</dialog>
+</body>
+</html>

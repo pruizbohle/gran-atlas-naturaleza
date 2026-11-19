@@ -175,7 +175,7 @@ const commercialIdeas = read('docs/objetos-cientificos/comercio-futuro.tsv').tri
   return {id, name, provenance, material, context, observations, family:'Mercancías regionales',
     type:'Idea de mercancía regional'};
 });
-const cartography = stage04.cartography.map(({id, name}) => ({id, piece:id + '_piece', name, parts:10}));
+const cartography = stage04.cartography.map(({id, name}) => ({id, piece:id + '_piece', name, parts:game.RECIPES[id].requires[id + '_piece']}));
 const stage04Art = new Set([...stage04.sheets.flatMap(sheet => sheet.ids),
   ...cartography.flatMap(map => [map.id, map.piece])]);
 const stage04Ids = new Set([...stage04Art, ...commercialIdeas.map(row => row.id)]);
@@ -184,6 +184,26 @@ assert.equal(commercialIdeas.length, 10);
 assert.equal(commercialIdeas.filter(row => stage04Art.has(row.id)).length, 6);
 assert.equal(cartography.length, 6);
 assert.ok(cartography.every(map => products.find(row => row.id === map.id)?.recipe?.[map.piece] > 0));
+
+const stage05 = JSON.parse(read('docs/objetos-cientificos/obj-05.json'));
+const stage05Art = new Set(stage05.sheets.flatMap(sheet => sheet.ids).filter(Boolean));
+const museumMounts = Object.entries(stage05.mounts).map(([id, [name, anatomy]]) => ({
+  id, name, anatomy, living:'vida-' + id
+}));
+const livingMounts = museumMounts.map(({id, name, anatomy, living}) => ({
+  id:living, name:name + ' en vida', type:'Reconstrucción complementaria', family:'Paleontología',
+  description:anatomy, context:museumRecords.find(row => row.id === id).context,
+  observations:'Interpretación naturalista hipotética. Color, tejidos y postura requieren revisión.'
+}));
+const futureMounts = read('docs/objetos-cientificos/montajes-futuros.tsv').trim().split('\n').slice(1).map(line => {
+  const [id, name, family, context, observations] = line.split('\t');
+  return {id, name, family, context, observations, type:'Idea de montaje paleontológico'};
+});
+const stage05Ids = new Set([...stage05Art, ...futureMounts.map(row => row.id)]);
+assert.equal(stage05Art.size, 50);
+assert.equal(museumMounts.length, 8);
+assert.equal(futureMounts.length, 12);
+assert.equal(futureMounts.filter(row => stage05Art.has(row.id)).length, 4);
 
 assert.equal(extra.length, 60);
 const newCollections = new Set(extra.map(row => row.collection));
@@ -208,6 +228,8 @@ assert.deepEqual(Object.keys({Botánica:1,Geología:1,Oceanografía:1,Historia:1
   .map(cabinet => catalog.filter(row => row.cabinet === cabinet).length), [48,60,60,72,60]);
 
 const pilotNotes = {
+  ...stage05.minorNotes,
+  ...Object.fromEntries(museumMounts.map(({id, anatomy}) => [id, anatomy])),
   'MAP-01':'Carta interpretativa del Mediterráneo. Cotejar Gibraltar, Sicilia y Levante con un portulano del siglo XVI.',
   'MAP-02':'Tira de itinerarios inspirada en la copia medieval de una cartografía vial romana; no usa escala geográfica moderna.',
   'MAP-03':'Interpretación de la carta de Juan de la Cosa de 1500, con el oeste arriba y América en verde.',
@@ -243,7 +265,7 @@ const pilotNotes = {
   'binoculars':'Cotejar el puente y la distancia entre ópticas con un modelo galileano de viaje.',
   'ancient_coin':'Diferenciar la variante de inventario del penique victoriano por la pátina y el relieve.'
 };
-const rows = [...products,...catalog,...museumRecords,...concepts,...futureMaterials,...commercialIdeas].map(row => {
+const rows = [...products,...catalog,...museumRecords,...concepts,...futureMaterials,...commercialIdeas,...livingMounts,...futureMounts].map(row => {
   const sprites = {};
   for (const variant of ['clasica','inventario']) {
     const files = {};
@@ -257,7 +279,7 @@ const rows = [...products,...catalog,...museumRecords,...concepts,...futureMater
   return {cabinet:null,collection:null,rarity:null,tier:null,continent:null,provenance:null,
     acquisition:null,description:null,material:null,context:null,original:null,observations:null, ...row,
     pilot:plateIds.includes(row.id),
-    stage:plateIds.includes(row.id) ? 'OBJ-01' : stage02Ids.has(row.id) ? 'OBJ-02' : stage03Ids.has(row.id) ? 'OBJ-03' : stage04Ids.has(row.id) ? 'OBJ-04' : 'Futuras etapas',
+    stage:plateIds.includes(row.id) ? 'OBJ-01' : stage02Ids.has(row.id) ? 'OBJ-02' : stage03Ids.has(row.id) ? 'OBJ-03' : stage04Ids.has(row.id) ? 'OBJ-04' : stage05Ids.has(row.id) ? 'OBJ-05' : 'Futuras etapas',
     context:row.id === 'INS-05' ? 'Futuro · barómetro aneroide de Vidi, 1844' : row.context,
     observations:pilotNotes[row.id] || row.observations || null, sprites, approval:'Pendiente',
     artState:sprites.clasica && sprites.inventario ? 'Candidato' : row.newArtwork === false ? 'Reutilización documental' : 'Pendiente'};
@@ -266,9 +288,9 @@ assert.equal(new Set(rows.map(row => row.id)).size, rows.length);
 assert.equal(rows.filter(row => row.pilot).length, 30);
 assert.equal(stage02Ids.size, 31);
 assert.equal(rows.filter(row => row.stage === 'OBJ-02').length, stage02Ids.size);
-const candidateIds = new Set([...plateIds, ...stage02Ids, ...stage03Art, ...stage04Art]);
+const candidateIds = new Set([...plateIds, ...stage02Ids, ...stage03Art, ...stage04Art, ...stage05Art]);
 const candidates = rows.filter(row => candidateIds.has(row.id));
-assert.equal(candidates.length, 128);
+assert.equal(candidates.length, 178);
 assert.equal(rows.filter(row => row.artState === 'Candidato').length, candidates.length);
 assert.ok(materialIds.every(id => candidateIds.has(id)), 'Material de OBJ-03 sin candidato');
 assert.ok(candidates.every(row => Object.values(row.sprites).every(files => Object.values(files || {}).filter(file => file.bytes > 0).length === 4)));
@@ -294,9 +316,21 @@ const archive = [
   {name:'Archivo histórico del Museo', ids:stage04.museum},
   {name:'Propuestas comerciales', ids:commercialIdeas.map(row => row.id)}
 ];
+assert.equal(products.filter(row => illustrated.has(row.id)).length, 68);
+assert.equal(museumRecords.filter(row => row.newArtwork && illustrated.has(row.id)).length, 17);
+assert.equal(catalog.filter(row => row.id.startsWith('FOS-') && illustrated.has(row.id)).length, 12);
+const paleontology = {
+  materials:stage05.materials,
+  minors:catalog.filter(row => row.id.startsWith('FOS-')).map(row => row.id),
+  archive:museumRecords.filter(row => row.collection === 'Archivo paleontológico').map(row => row.id),
+  mounts:museumMounts,
+  future:futureMounts.map(row => row.id)
+};
 assert.ok(archive.slice(0, -1).flatMap(group => group.ids).every(id => illustrated.has(id)));
-const manifest = {schema:1, year:1842, groups:[...stage02.groups, ...stage03.groups], archive, cartography,
-  materialIds, recipeExamples:stage03.recipes, rows};
+const manifest = {schema:1, year:1842, groups:[...stage02.groups, ...stage03.groups], archive, cartography, paleontology,
+  tradeRoutes:game.TRADE_ROUTES.slice(0, 3).map(({name,rewards}) => ({name,rewards})),
+  barter:game.REGIONAL_BARTERS3400.map(({id,continent,material,quantity}) => ({id,continent,material,quantity})),
+  materialIds, animalMaterialIds:stage03.animal, recipeExamples:stage03.recipes, rows};
 write('www/objetos-cientificos/manifiesto.js', 'globalThis.AtlasObjetosCientificos = '+JSON.stringify(manifest,null,2)+';\n');
 write('docs/objetos-cientificos/catalogo-300.json', JSON.stringify({
   schema:1, source:'docs/gm06/coleccionables-referencia.json', pieces:[...base.pieces,...extra.map(row => ({

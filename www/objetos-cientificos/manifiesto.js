@@ -302,7 +302,7 @@ globalThis.AtlasObjetosCientificos = {
       "id": "north_america_map",
       "piece": "north_america_map_piece",
       "name": "Norteamérica",
-      "parts": 10
+      "parts": 8
     },
     {
       "id": "south_america_map",
@@ -320,7 +320,182 @@ globalThis.AtlasObjetosCientificos = {
       "id": "polar_map",
       "piece": "polar_map_piece",
       "name": "Regiones polares",
-      "parts": 10
+      "parts": 8
+    }
+  ],
+  "paleontology": {
+    "materials": [
+      "fossil_fragment",
+      "fossil_skull",
+      "fossil_tooth",
+      "bone_short",
+      "bone_long",
+      "carnivore_skull",
+      "herbivore_skull",
+      "fossil_plate",
+      "fossil_sail",
+      "fossil_amber",
+      "river_pearl",
+      "fossil_track",
+      "fossil_claw",
+      "fossil_rib",
+      "fossil_horn",
+      "hard_bone"
+    ],
+    "minors": [
+      "FOS-01",
+      "FOS-02",
+      "FOS-03",
+      "FOS-04",
+      "FOS-05",
+      "FOS-06",
+      "FOS-07",
+      "FOS-08",
+      "FOS-09",
+      "FOS-10",
+      "FOS-11",
+      "FOS-12"
+    ],
+    "archive": [
+      "fosil_catalogado",
+      "huella_paleontologica",
+      "huellas_teropodos",
+      "sedimentos_estratos"
+    ],
+    "mounts": [
+      {
+        "id": "trex_mount",
+        "name": "Tyrannosaurus rex",
+        "anatomy": "Cráneo profundo, dos dedos y cola horizontal.",
+        "living": "vida-trex_mount"
+      },
+      {
+        "id": "triceratops_mount",
+        "name": "Triceratops",
+        "anatomy": "Gola amplia y tres cuernos; proporciones de un cuadrúpedo pesado.",
+        "living": "vida-triceratops_mount"
+      },
+      {
+        "id": "stegosaurus_mount",
+        "name": "Stegosaurus",
+        "anatomy": "Placas dorsales alternadas y cuatro púas caudales.",
+        "living": "vida-stegosaurus_mount"
+      },
+      {
+        "id": "spinosaurus_mount",
+        "name": "Spinosaurus",
+        "anatomy": "Hocico alargado, extremidades posteriores cortas, vela dorsal y cola profunda. La locomoción y ecología siguen en debate.",
+        "living": "vida-spinosaurus_mount"
+      },
+      {
+        "id": "ankylosaurus_mount",
+        "name": "Ankylosaurus",
+        "anatomy": "Osteodermos, torso bajo y maza caudal.",
+        "living": "vida-ankylosaurus_mount"
+      },
+      {
+        "id": "iguanodon_mount",
+        "name": "Iguanodon",
+        "anatomy": "Pulgar en espiga, pico y postura cuadrúpeda de referencia.",
+        "living": "vida-iguanodon_mount"
+      },
+      {
+        "id": "pachycephalosaurus_mount",
+        "name": "Pachycephalosaurus",
+        "anatomy": "Cúpula craneal y postura bípeda.",
+        "living": "vida-pachycephalosaurus_mount"
+      },
+      {
+        "id": "carnotaurus_mount",
+        "name": "Carnotaurus",
+        "anatomy": "Dos cuernos supraorbitarios, cráneo corto y brazos reducidos.",
+        "living": "vida-carnotaurus_mount"
+      }
+    ],
+    "future": [
+      "montaje-allosaurus",
+      "montaje-diplodocus",
+      "montaje-brachiosaurus",
+      "montaje-velociraptor",
+      "montaje-parasaurolophus",
+      "montaje-deinonychus",
+      "montaje-archaeopteryx",
+      "montaje-pteranodon",
+      "montaje-plesiosaurus",
+      "montaje-ichthyosaurus",
+      "montaje-mamut",
+      "montaje-megatherium"
+    ]
+  },
+  "tradeRoutes": [
+    {
+      "name": "Cabotaje de suministros",
+      "rewards": {
+        "parchment_scrap": 3,
+        "pressed_flower": 2,
+        "river_pebble": 3
+      }
+    },
+    {
+      "name": "Proveedores del taller",
+      "rewards": {
+        "polished_lens": 2,
+        "brass_shard": 2,
+        "carved_wood": 3
+      }
+    },
+    {
+      "name": "Caravana de cartógrafos",
+      "rewards": {
+        "old_ink": 2,
+        "parchment_scrap": 5,
+        "brass_shard": 3,
+        "polished_lens": 2
+      }
+    }
+  ],
+  "barter": [
+    {
+      "id": "asian_spices",
+      "continent": "Asia",
+      "material": "pressed_flower",
+      "quantity": 50
+    },
+    {
+      "id": "asian_trade_folio",
+      "continent": "Asia",
+      "material": "parchment_scrap",
+      "quantity": 100
+    },
+    {
+      "id": "african_textile_sample",
+      "continent": "África",
+      "material": "carved_wood",
+      "quantity": 50
+    },
+    {
+      "id": "north_american_trade_document",
+      "continent": "Norteamérica",
+      "material": "parchment_scrap",
+      "quantity": 50
+    },
+    {
+      "id": "south_american_cacao",
+      "continent": "Sudamérica",
+      "material": "pressed_flower",
+      "quantity": 100
+    },
+    {
+      "id": "oceanian_nacre",
+      "continent": "Oceanía",
+      "material": "river_pebble",
+      "quantity": 100
+    },
+    {
+      "id": "polar_geology_record",
+      "continent": "Polos",
+      "material": "carved_wood",
+      "quantity": 100
     }
   ],
   "materialIds": [
@@ -335,6 +510,15 @@ globalThis.AtlasObjetosCientificos = {
     "carved_wood",
     "animal_trace",
     "fossil_fragment",
+    "wolf_tooth",
+    "owl_feather",
+    "antler_fragment",
+    "otter_whisker",
+    "boar_tusk",
+    "beaver_tail_scale",
+    "heron_feather"
+  ],
+  "animalMaterialIds": [
     "wolf_tooth",
     "owl_feather",
     "antler_fragment",
@@ -1114,13 +1298,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_tooth/clasica-64.webp",
+            "bytes": 1366
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_tooth/clasica-128.webp",
+            "bytes": 3840
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_tooth/clasica-256.webp",
+            "bytes": 11526
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_tooth/clasica-512.webp",
+            "bytes": 35144
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_tooth/inventario-64.webp",
+            "bytes": 1426
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_tooth/inventario-128.webp",
+            "bytes": 4078
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_tooth/inventario-256.webp",
+            "bytes": 10162
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_tooth/inventario-512.webp",
+            "bytes": 28300
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1144,13 +1362,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/bone_short/clasica-64.webp",
+            "bytes": 1706
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/bone_short/clasica-128.webp",
+            "bytes": 4606
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/bone_short/clasica-256.webp",
+            "bytes": 13640
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/bone_short/clasica-512.webp",
+            "bytes": 43288
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/bone_short/inventario-64.webp",
+            "bytes": 1756
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/bone_short/inventario-128.webp",
+            "bytes": 4858
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/bone_short/inventario-256.webp",
+            "bytes": 12396
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/bone_short/inventario-512.webp",
+            "bytes": 34648
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1174,13 +1426,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/bone_long/clasica-64.webp",
+            "bytes": 1110
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/bone_long/clasica-128.webp",
+            "bytes": 2768
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/bone_long/clasica-256.webp",
+            "bytes": 7732
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/bone_long/clasica-512.webp",
+            "bytes": 23946
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/bone_long/inventario-64.webp",
+            "bytes": 1226
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/bone_long/inventario-128.webp",
+            "bytes": 2946
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/bone_long/inventario-256.webp",
+            "bytes": 7294
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/bone_long/inventario-512.webp",
+            "bytes": 20872
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1204,13 +1490,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/carnivore_skull/clasica-64.webp",
+            "bytes": 2172
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/carnivore_skull/clasica-128.webp",
+            "bytes": 6236
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/carnivore_skull/clasica-256.webp",
+            "bytes": 18534
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/carnivore_skull/clasica-512.webp",
+            "bytes": 59940
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/carnivore_skull/inventario-64.webp",
+            "bytes": 2500
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/carnivore_skull/inventario-128.webp",
+            "bytes": 6620
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/carnivore_skull/inventario-256.webp",
+            "bytes": 18626
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/carnivore_skull/inventario-512.webp",
+            "bytes": 53184
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1234,13 +1554,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/herbivore_skull/clasica-64.webp",
+            "bytes": 1842
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/herbivore_skull/clasica-128.webp",
+            "bytes": 5030
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/herbivore_skull/clasica-256.webp",
+            "bytes": 16026
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/herbivore_skull/clasica-512.webp",
+            "bytes": 51030
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/herbivore_skull/inventario-64.webp",
+            "bytes": 1960
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/herbivore_skull/inventario-128.webp",
+            "bytes": 5324
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/herbivore_skull/inventario-256.webp",
+            "bytes": 14774
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/herbivore_skull/inventario-512.webp",
+            "bytes": 41694
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1264,13 +1618,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_plate/clasica-64.webp",
+            "bytes": 2370
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_plate/clasica-128.webp",
+            "bytes": 6444
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_plate/clasica-256.webp",
+            "bytes": 20934
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_plate/clasica-512.webp",
+            "bytes": 70452
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_plate/inventario-64.webp",
+            "bytes": 2486
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_plate/inventario-128.webp",
+            "bytes": 6812
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_plate/inventario-256.webp",
+            "bytes": 19466
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_plate/inventario-512.webp",
+            "bytes": 55106
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1294,13 +1682,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_sail/clasica-64.webp",
+            "bytes": 1350
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_sail/clasica-128.webp",
+            "bytes": 3110
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_sail/clasica-256.webp",
+            "bytes": 8182
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_sail/clasica-512.webp",
+            "bytes": 25412
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_sail/inventario-64.webp",
+            "bytes": 1292
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_sail/inventario-128.webp",
+            "bytes": 3170
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_sail/inventario-256.webp",
+            "bytes": 7784
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_sail/inventario-512.webp",
+            "bytes": 21488
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3085,13 +3507,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_amber/clasica-64.webp",
+            "bytes": 2262
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_amber/clasica-128.webp",
+            "bytes": 6194
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_amber/clasica-256.webp",
+            "bytes": 20312
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_amber/clasica-512.webp",
+            "bytes": 66510
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_amber/inventario-64.webp",
+            "bytes": 2384
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_amber/inventario-128.webp",
+            "bytes": 6592
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_amber/inventario-256.webp",
+            "bytes": 18542
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_amber/inventario-512.webp",
+            "bytes": 52970
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3115,13 +3571,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/river_pearl/clasica-64.webp",
+            "bytes": 2224
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/river_pearl/clasica-128.webp",
+            "bytes": 5990
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/river_pearl/clasica-256.webp",
+            "bytes": 18752
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/river_pearl/clasica-512.webp",
+            "bytes": 53226
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/river_pearl/inventario-64.webp",
+            "bytes": 2308
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/river_pearl/inventario-128.webp",
+            "bytes": 6066
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/river_pearl/inventario-256.webp",
+            "bytes": 17266
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/river_pearl/inventario-512.webp",
+            "bytes": 44552
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3145,13 +3635,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_track/clasica-64.webp",
+            "bytes": 2550
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_track/clasica-128.webp",
+            "bytes": 6640
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_track/clasica-256.webp",
+            "bytes": 21336
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_track/clasica-512.webp",
+            "bytes": 74540
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_track/inventario-64.webp",
+            "bytes": 2598
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_track/inventario-128.webp",
+            "bytes": 7314
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_track/inventario-256.webp",
+            "bytes": 19684
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_track/inventario-512.webp",
+            "bytes": 59538
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3175,13 +3699,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_claw/clasica-64.webp",
+            "bytes": 2010
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_claw/clasica-128.webp",
+            "bytes": 5026
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_claw/clasica-256.webp",
+            "bytes": 14772
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_claw/clasica-512.webp",
+            "bytes": 51620
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_claw/inventario-64.webp",
+            "bytes": 1984
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_claw/inventario-128.webp",
+            "bytes": 5254
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_claw/inventario-256.webp",
+            "bytes": 14116
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_claw/inventario-512.webp",
+            "bytes": 43238
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3205,13 +3763,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_rib/clasica-64.webp",
+            "bytes": 1554
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_rib/clasica-128.webp",
+            "bytes": 3864
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_rib/clasica-256.webp",
+            "bytes": 10068
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_rib/clasica-512.webp",
+            "bytes": 33024
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_rib/inventario-64.webp",
+            "bytes": 1608
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_rib/inventario-128.webp",
+            "bytes": 3970
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_rib/inventario-256.webp",
+            "bytes": 10068
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_rib/inventario-512.webp",
+            "bytes": 31688
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3235,13 +3827,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_horn/clasica-64.webp",
+            "bytes": 2048
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_horn/clasica-128.webp",
+            "bytes": 5094
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_horn/clasica-256.webp",
+            "bytes": 15406
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_horn/clasica-512.webp",
+            "bytes": 54258
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_horn/inventario-64.webp",
+            "bytes": 2064
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_horn/inventario-128.webp",
+            "bytes": 5526
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_horn/inventario-256.webp",
+            "bytes": 14398
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_horn/inventario-512.webp",
+            "bytes": 44994
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -3265,13 +3891,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/hard_bone/clasica-64.webp",
+            "bytes": 2464
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/hard_bone/clasica-128.webp",
+            "bytes": 6818
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/hard_bone/clasica-256.webp",
+            "bytes": 21686
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/hard_bone/clasica-512.webp",
+            "bytes": 74438
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/hard_bone/inventario-64.webp",
+            "bytes": 2598
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/hard_bone/inventario-128.webp",
+            "bytes": 7490
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/hard_bone/inventario-256.webp",
+            "bytes": 19952
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/hard_bone/inventario-512.webp",
+            "bytes": 61272
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -11138,7 +11798,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mineralizado",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Impresión de fronda con pinnas. Identificación y datación del ejemplar pendientes.",
       "id": "FOS-01",
       "name": "Helecho fósil",
       "type": "Coleccionable propuesto",
@@ -11146,13 +11806,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-01/clasica-64.webp",
+            "bytes": 2588
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-01/clasica-128.webp",
+            "bytes": 6782
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-01/clasica-256.webp",
+            "bytes": 21586
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-01/clasica-512.webp",
+            "bytes": 77404
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-01/inventario-64.webp",
+            "bytes": 2694
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-01/inventario-128.webp",
+            "bytes": 7248
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-01/inventario-256.webp",
+            "bytes": 20024
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-01/inventario-512.webp",
+            "bytes": 62096
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -11166,7 +11860,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mineralizado",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Concha espiral costillada. El ammonite como grupo fósil era conocido en 1842.",
       "id": "FOS-02",
       "name": "Ammonite espiral",
       "type": "Coleccionable propuesto",
@@ -11174,13 +11868,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-02/clasica-64.webp",
+            "bytes": 3042
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-02/clasica-128.webp",
+            "bytes": 7998
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-02/clasica-256.webp",
+            "bytes": 25296
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-02/clasica-512.webp",
+            "bytes": 88024
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-02/inventario-64.webp",
+            "bytes": 3182
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-02/inventario-128.webp",
+            "bytes": 8954
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-02/inventario-256.webp",
+            "bytes": 23868
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-02/inventario-512.webp",
+            "bytes": 71112
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -11194,7 +11922,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mineralizado",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Vetas y anillos conservados en matriz mineral. Procedencia del ejemplar pendiente.",
       "id": "FOS-03",
       "name": "Madera petrificada",
       "type": "Coleccionable propuesto",
@@ -11202,13 +11930,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-03/clasica-64.webp",
+            "bytes": 2638
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-03/clasica-128.webp",
+            "bytes": 7540
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-03/clasica-256.webp",
+            "bytes": 23878
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-03/clasica-512.webp",
+            "bytes": 84520
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-03/inventario-64.webp",
+            "bytes": 2844
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-03/inventario-128.webp",
+            "bytes": 8056
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-03/inventario-256.webp",
+            "bytes": 21604
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-03/inventario-512.webp",
+            "bytes": 67784
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -11222,7 +11984,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mineralizado",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Trilobites conocidos antes de 1842; verificar la procedencia y documentación de la muestra marroquí.",
       "id": "FOS-04",
       "name": "Trilobite marroquí",
       "type": "Coleccionable propuesto",
@@ -11230,13 +11992,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-04/clasica-64.webp",
+            "bytes": 2720
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-04/clasica-128.webp",
+            "bytes": 7362
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-04/clasica-256.webp",
+            "bytes": 23460
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-04/clasica-512.webp",
+            "bytes": 82964
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-04/inventario-64.webp",
+            "bytes": 2948
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-04/inventario-128.webp",
+            "bytes": 8312
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-04/inventario-256.webp",
+            "bytes": 21700
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-04/inventario-512.webp",
+            "bytes": 67054
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -11250,7 +12046,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mineralizado",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Diente aplanado y serrado; identificación a nivel de especie pendiente.",
       "id": "FOS-05",
       "name": "Diente de tiburón fósil",
       "type": "Coleccionable propuesto",
@@ -11258,13 +12054,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-05/clasica-64.webp",
+            "bytes": 2174
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-05/clasica-128.webp",
+            "bytes": 5772
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-05/clasica-256.webp",
+            "bytes": 17450
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-05/clasica-512.webp",
+            "bytes": 65640
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-05/inventario-64.webp",
+            "bytes": 2352
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-05/inventario-128.webp",
+            "bytes": 6216
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-05/inventario-256.webp",
+            "bytes": 16380
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-05/inventario-512.webp",
+            "bytes": 54394
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -11278,7 +12108,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mineralizado",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Impresión de peces con aletas y radios visibles. Identificación de formación pendiente.",
       "id": "FOS-06",
       "name": "Pez fósil",
       "type": "Coleccionable propuesto",
@@ -11286,13 +12116,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-06/clasica-64.webp",
+            "bytes": 1564
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-06/clasica-128.webp",
+            "bytes": 3976
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-06/clasica-256.webp",
+            "bytes": 11684
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-06/clasica-512.webp",
+            "bytes": 36056
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-06/inventario-64.webp",
+            "bytes": 1472
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-06/inventario-128.webp",
+            "bytes": 4120
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-06/inventario-256.webp",
+            "bytes": 11492
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-06/inventario-512.webp",
+            "bytes": 33328
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -11306,7 +12170,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mineralizado",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Limbo único y red de nervios, distinto de la fronda pinnada.",
       "id": "FOS-07",
       "name": "Hoja fósil",
       "type": "Coleccionable propuesto",
@@ -11314,13 +12178,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-07/clasica-64.webp",
+            "bytes": 2508
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-07/clasica-128.webp",
+            "bytes": 6760
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-07/clasica-256.webp",
+            "bytes": 21296
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-07/clasica-512.webp",
+            "bytes": 78858
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-07/inventario-64.webp",
+            "bytes": 2686
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-07/inventario-128.webp",
+            "bytes": 7162
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-07/inventario-256.webp",
+            "bytes": 19718
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-07/inventario-512.webp",
+            "bytes": 59268
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -11334,7 +12232,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mineralizado",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Molde de prosoma y telson. Verificar taxón, yacimiento y cronología de la documentación.",
       "id": "FOS-08",
       "name": "Cangrejo herradura fósil",
       "type": "Coleccionable propuesto",
@@ -11342,13 +12240,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-08/clasica-64.webp",
+            "bytes": 2038
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-08/clasica-128.webp",
+            "bytes": 5354
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-08/clasica-256.webp",
+            "bytes": 16278
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-08/clasica-512.webp",
+            "bytes": 60878
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-08/inventario-64.webp",
+            "bytes": 2120
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-08/inventario-128.webp",
+            "bytes": 5696
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-08/inventario-256.webp",
+            "bytes": 14300
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-08/inventario-512.webp",
+            "bytes": 45410
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -11362,7 +12294,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mineralizado",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Rastro de varias pisadas. Las huellas de Connecticut se estudiaban en la década de 1830; la atribución a dinosaurios requiere contexto.",
       "id": "FOS-09",
       "name": "Huellas de dinosaurio",
       "type": "Coleccionable propuesto",
@@ -11370,13 +12302,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-09/clasica-64.webp",
+            "bytes": 2090
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-09/clasica-128.webp",
+            "bytes": 5722
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-09/clasica-256.webp",
+            "bytes": 19182
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-09/clasica-512.webp",
+            "bytes": 69536
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-09/inventario-64.webp",
+            "bytes": 2288
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-09/inventario-128.webp",
+            "bytes": 6430
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-09/inventario-256.webp",
+            "bytes": 16784
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-09/inventario-512.webp",
+            "bytes": 50368
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -11390,7 +12356,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mineralizado",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "La función gástrica requiere asociación diagnóstica. Una piedra pulida aislada no acredita su uso ni su datación documental.",
       "id": "FOS-10",
       "name": "Gastrólito fósil documentado",
       "type": "Coleccionable propuesto",
@@ -11398,13 +12364,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-10/clasica-64.webp",
+            "bytes": 2366
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-10/clasica-128.webp",
+            "bytes": 5974
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-10/clasica-256.webp",
+            "bytes": 18482
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-10/clasica-512.webp",
+            "bytes": 68036
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-10/inventario-64.webp",
+            "bytes": 2426
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-10/inventario-128.webp",
+            "bytes": 6498
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-10/inventario-256.webp",
+            "bytes": 17062
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-10/inventario-512.webp",
+            "bytes": 51096
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -11418,7 +12418,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mineralizado",
       "context": "Futuro · Pluma de Archaeopteryx publicada en 1861",
       "original": null,
-      "observations": null,
+      "observations": "Posterior a 1842 si corresponde a la pluma aislada de Solnhofen, descrita en 1861 y asociada históricamente a Archaeopteryx.",
       "id": "FOS-11",
       "name": "Pluma fósil de Solnhofen",
       "type": "Coleccionable propuesto",
@@ -11426,13 +12426,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-11/clasica-64.webp",
+            "bytes": 2178
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-11/clasica-128.webp",
+            "bytes": 5728
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-11/clasica-256.webp",
+            "bytes": 18830
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-11/clasica-512.webp",
+            "bytes": 71406
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-11/inventario-64.webp",
+            "bytes": 2314
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-11/inventario-128.webp",
+            "bytes": 6204
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-11/inventario-256.webp",
+            "bytes": 15988
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-11/inventario-512.webp",
+            "bytes": 51006
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -11446,7 +12480,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mineralizado",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Diente curvo de reptil marino con estrías. Identificación y yacimiento del ejemplar pendientes.",
       "id": "FOS-12",
       "name": "Diente de reptil marino",
       "type": "Coleccionable propuesto",
@@ -11454,13 +12488,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-12/clasica-64.webp",
+            "bytes": 2180
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-12/clasica-128.webp",
+            "bytes": 5758
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-12/clasica-256.webp",
+            "bytes": 17412
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-12/clasica-512.webp",
+            "bytes": 65512
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FOS-12/inventario-64.webp",
+            "bytes": 2302
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FOS-12/inventario-128.webp",
+            "bytes": 5956
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FOS-12/inventario-256.webp",
+            "bytes": 16336
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FOS-12/inventario-512.webp",
+            "bytes": 49706
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -14384,13 +15452,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/fosil_catalogado/clasica-64.webp",
+            "bytes": 1938
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fosil_catalogado/clasica-128.webp",
+            "bytes": 4968
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fosil_catalogado/clasica-256.webp",
+            "bytes": 14866
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fosil_catalogado/clasica-512.webp",
+            "bytes": 54590
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/fosil_catalogado/inventario-64.webp",
+            "bytes": 2024
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fosil_catalogado/inventario-128.webp",
+            "bytes": 5176
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fosil_catalogado/inventario-256.webp",
+            "bytes": 12828
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fosil_catalogado/inventario-512.webp",
+            "bytes": 39294
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -14419,13 +15521,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/huella_paleontologica/clasica-64.webp",
+            "bytes": 1922
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/huella_paleontologica/clasica-128.webp",
+            "bytes": 4722
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/huella_paleontologica/clasica-256.webp",
+            "bytes": 11736
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/huella_paleontologica/clasica-512.webp",
+            "bytes": 40466
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/huella_paleontologica/inventario-64.webp",
+            "bytes": 2020
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/huella_paleontologica/inventario-128.webp",
+            "bytes": 4812
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/huella_paleontologica/inventario-256.webp",
+            "bytes": 10648
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/huella_paleontologica/inventario-512.webp",
+            "bytes": 31462
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -14454,13 +15590,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/huellas_teropodos/clasica-64.webp",
+            "bytes": 1300
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/huellas_teropodos/clasica-128.webp",
+            "bytes": 3456
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/huellas_teropodos/clasica-256.webp",
+            "bytes": 10380
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/huellas_teropodos/clasica-512.webp",
+            "bytes": 40396
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/huellas_teropodos/inventario-64.webp",
+            "bytes": 1376
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/huellas_teropodos/inventario-128.webp",
+            "bytes": 3720
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/huellas_teropodos/inventario-256.webp",
+            "bytes": 9266
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/huellas_teropodos/inventario-512.webp",
+            "bytes": 29712
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -14490,13 +15660,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/sedimentos_estratos/clasica-64.webp",
+            "bytes": 1602
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/sedimentos_estratos/clasica-128.webp",
+            "bytes": 4554
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/sedimentos_estratos/clasica-256.webp",
+            "bytes": 13188
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/sedimentos_estratos/clasica-512.webp",
+            "bytes": 46276
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/sedimentos_estratos/inventario-64.webp",
+            "bytes": 1870
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/sedimentos_estratos/inventario-128.webp",
+            "bytes": 4948
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/sedimentos_estratos/inventario-256.webp",
+            "bytes": 12540
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/sedimentos_estratos/inventario-512.webp",
+            "bytes": 38842
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -14862,7 +16066,7 @@ globalThis.AtlasObjetosCientificos = {
         "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\"><path d=\"M14 42Q33 16 57 35L73 25 85 31 76 42 60 47 39 52 22 48\" fill=\"none\" stroke=\"#73583d\" stroke-width=\"7\" stroke-linecap=\"round\"/><path d=\"M31 51L20 86m26-36 2 32m-29 3 16 1m5-3 16 1\" fill=\"none\" stroke=\"#785b3b\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M35 44l3 18m4-21 7 18m2-20 6 15m-25-7-23 8\" fill=\"none\" stroke=\"#c7a67b\" stroke-width=\"4\"/><path d=\"M70 24Q83 12 96 24L89 39 75 38Z\" fill=\"#d8c29d\" stroke=\"#74583d\" stroke-width=\"3\"/><circle cx=\"88\" cy=\"26\" r=\"3\" fill=\"#654d36\"/></svg>",
         "bytes": 549
       },
-      "observations": null,
+      "observations": "Cráneo profundo, dos dedos y cola horizontal.",
       "id": "trex_mount",
       "name": "Reconstrucción de T. rex",
       "type": "Pieza del Museo",
@@ -14874,13 +16078,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/trex_mount/clasica-64.webp",
+            "bytes": 1938
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/trex_mount/clasica-128.webp",
+            "bytes": 5830
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/trex_mount/clasica-256.webp",
+            "bytes": 17262
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/trex_mount/clasica-512.webp",
+            "bytes": 56510
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/trex_mount/inventario-64.webp",
+            "bytes": 1996
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/trex_mount/inventario-128.webp",
+            "bytes": 6224
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/trex_mount/inventario-256.webp",
+            "bytes": 17788
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/trex_mount/inventario-512.webp",
+            "bytes": 54158
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -14898,7 +16136,7 @@ globalThis.AtlasObjetosCientificos = {
         "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\"><path d=\"M11 59Q28 39 53 48L72 46 81 59 61 72 30 67Z\" fill=\"none\" stroke=\"#73593b\" stroke-width=\"6\"/><path d=\"M22 67l-5 22m21-20v20m20-20 5 20\" stroke=\"#94795a\" stroke-width=\"6\"/><path d=\"M70 40L84 25L94 35L91 58L76 63L66 51Z\" fill=\"#d8bf97\" stroke=\"#6a533c\" stroke-width=\"3\"/><path d=\"M77 38l-6-21m15 20 3-20m3 37 8-8\" stroke=\"#decca9\" stroke-width=\"5\"/><path d=\"M37 47l5 20m10-18 1 18\" stroke=\"#d2b48a\" stroke-width=\"3\"/></svg>",
         "bytes": 475
       },
-      "observations": null,
+      "observations": "Gola amplia y tres cuernos; proporciones de un cuadrúpedo pesado.",
       "id": "triceratops_mount",
       "name": "Reconstrucción de Triceratops",
       "type": "Pieza del Museo",
@@ -14911,13 +16149,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/triceratops_mount/clasica-64.webp",
+            "bytes": 2436
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/triceratops_mount/clasica-128.webp",
+            "bytes": 7076
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/triceratops_mount/clasica-256.webp",
+            "bytes": 22104
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/triceratops_mount/clasica-512.webp",
+            "bytes": 71766
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/triceratops_mount/inventario-64.webp",
+            "bytes": 2724
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/triceratops_mount/inventario-128.webp",
+            "bytes": 8052
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/triceratops_mount/inventario-256.webp",
+            "bytes": 22406
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/triceratops_mount/inventario-512.webp",
+            "bytes": 67050
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -14935,7 +16207,7 @@ globalThis.AtlasObjetosCientificos = {
         "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\"><path d=\"M13 62Q27 43 58 50L80 61L67 70L30 72Z\" fill=\"none\" stroke=\"#785d3f\" stroke-width=\"6\"/><path d=\"M19 52L26 26L38 48L47 17L58 49L70 34L77 60\" fill=\"#c4a477\" stroke=\"#886b49\" stroke-width=\"3\"/><path d=\"M30 69l-5 20m20-19-2 20m22-19 3 18\" stroke=\"#866746\" stroke-width=\"6\"/><path d=\"M18 63L4 48m14 20-15 10\" stroke=\"#9a7651\" stroke-width=\"4\"/><circle cx=\"75\" cy=\"61\" r=\"2\" fill=\"#5e4933\"/></svg>",
         "bytes": 445
       },
-      "observations": null,
+      "observations": "Placas dorsales alternadas y cuatro púas caudales.",
       "id": "stegosaurus_mount",
       "name": "Reconstrucción de Estegosaurio",
       "type": "Pieza del Museo",
@@ -14947,13 +16219,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/stegosaurus_mount/clasica-64.webp",
+            "bytes": 2286
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/stegosaurus_mount/clasica-128.webp",
+            "bytes": 6470
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/stegosaurus_mount/clasica-256.webp",
+            "bytes": 20320
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/stegosaurus_mount/clasica-512.webp",
+            "bytes": 66060
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/stegosaurus_mount/inventario-64.webp",
+            "bytes": 2338
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/stegosaurus_mount/inventario-128.webp",
+            "bytes": 7112
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/stegosaurus_mount/inventario-256.webp",
+            "bytes": 20592
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/stegosaurus_mount/inventario-512.webp",
+            "bytes": 61304
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -14971,7 +16277,7 @@ globalThis.AtlasObjetosCientificos = {
         "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\"><path d=\"M8 58Q30 36 56 49L70 40L89 51L95 64L73 62L47 70L24 67Z\" fill=\"none\" stroke=\"#73583f\" stroke-width=\"6\"/><path d=\"M24 44L28 15L39 42L45 9L52 45L60 23L66 46\" fill=\"#ceb28a\" stroke=\"#785c44\" stroke-width=\"3\"/><path d=\"M33 67L29 89m29-22 6 22\" stroke=\"#8a7051\" stroke-width=\"6\"/><path d=\"M75 43L89 32L98 43L95 52L79 50Z\" fill=\"#dac4a4\" stroke=\"#71583e\" stroke-width=\"3\"/><circle cx=\"91\" cy=\"40\" r=\"2\" fill=\"#42372e\"/></svg>",
         "bytes": 473
       },
-      "observations": null,
+      "observations": "Hocico alargado, extremidades posteriores cortas, vela dorsal y cola profunda. La locomoción y ecología siguen en debate.",
       "id": "spinosaurus_mount",
       "name": "Reconstrucción de Espinosaurio",
       "type": "Pieza del Museo",
@@ -14984,13 +16290,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/spinosaurus_mount/clasica-64.webp",
+            "bytes": 1992
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/spinosaurus_mount/clasica-128.webp",
+            "bytes": 5772
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/spinosaurus_mount/clasica-256.webp",
+            "bytes": 17426
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/spinosaurus_mount/clasica-512.webp",
+            "bytes": 57198
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/spinosaurus_mount/inventario-64.webp",
+            "bytes": 2050
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/spinosaurus_mount/inventario-128.webp",
+            "bytes": 6160
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/spinosaurus_mount/inventario-256.webp",
+            "bytes": 17748
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/spinosaurus_mount/inventario-512.webp",
+            "bytes": 54464
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -15008,7 +16348,7 @@ globalThis.AtlasObjetosCientificos = {
         "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\"><path d=\"M20 64Q37 41 65 49Q85 55 80 70L43 75Z\" fill=\"#d9c19a\" stroke=\"#795d41\" stroke-width=\"4\"/><path d=\"M29 49l7-16 10 17 9-21 10 22 11-11\" fill=\"#bea17a\" stroke=\"#795d41\" stroke-width=\"3\"/><path d=\"M34 72l-4 15m17-14-1 14m15-15 3 14\" stroke=\"#846647\" stroke-width=\"6\" fill=\"none\"/><path d=\"M21 63Q10 61 9 74L4 81\" stroke=\"#896a4d\" stroke-width=\"7\" fill=\"none\"/><ellipse cx=\"9\" cy=\"80\" rx=\"8\" ry=\"6\" fill=\"#cbb28d\" stroke=\"#72573e\" stroke-width=\"3\"/><path d=\"M75 55l14-5 8 12-10 9-11-4Z\" fill=\"#dfc9a3\" stroke=\"#785c40\" stroke-width=\"3\"/></svg>",
         "bytes": 593
       },
-      "observations": null,
+      "observations": "Osteodermos, torso bajo y maza caudal.",
       "id": "ankylosaurus_mount",
       "name": "Reconstrucción de Anquilosaurio",
       "type": "Pieza del Museo",
@@ -15022,13 +16362,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ankylosaurus_mount/clasica-64.webp",
+            "bytes": 1910
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ankylosaurus_mount/clasica-128.webp",
+            "bytes": 5544
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ankylosaurus_mount/clasica-256.webp",
+            "bytes": 16714
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ankylosaurus_mount/clasica-512.webp",
+            "bytes": 53356
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ankylosaurus_mount/inventario-64.webp",
+            "bytes": 2054
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ankylosaurus_mount/inventario-128.webp",
+            "bytes": 5940
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ankylosaurus_mount/inventario-256.webp",
+            "bytes": 17142
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ankylosaurus_mount/inventario-512.webp",
+            "bytes": 49802
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -15046,7 +16420,7 @@ globalThis.AtlasObjetosCientificos = {
         "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\"><path d=\"M17 53Q40 35 63 49L73 42Q87 36 95 47L85 59L62 62 39 66Z\" fill=\"#d4b994\" stroke=\"#775d42\" stroke-width=\"4\"/><path d=\"M23 56L6 69M40 64l-8 24 15 0m16-30 8 30 13 0\" fill=\"none\" stroke=\"#85694b\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M53 53l5 21 10 3m-10-3 4-9m-23-15 9 11\" stroke=\"#765e44\" stroke-width=\"4\" fill=\"none\"/><path d=\"M76 39l8-9 13 5-1 13-12 7-9-5Z\" fill=\"#e2cba5\" stroke=\"#765a42\" stroke-width=\"3\"/><circle cx=\"91\" cy=\"40\" r=\"2\" fill=\"#5b452f\"/></svg>",
         "bytes": 526
       },
-      "observations": null,
+      "observations": "Pulgar en espiga, pico y postura cuadrúpeda de referencia.",
       "id": "iguanodon_mount",
       "name": "Reconstrucción de Iguanodonte",
       "type": "Pieza del Museo",
@@ -15060,13 +16434,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/iguanodon_mount/clasica-64.webp",
+            "bytes": 2148
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/iguanodon_mount/clasica-128.webp",
+            "bytes": 6308
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/iguanodon_mount/clasica-256.webp",
+            "bytes": 19224
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/iguanodon_mount/clasica-512.webp",
+            "bytes": 61294
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/iguanodon_mount/inventario-64.webp",
+            "bytes": 2236
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/iguanodon_mount/inventario-128.webp",
+            "bytes": 6972
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/iguanodon_mount/inventario-256.webp",
+            "bytes": 19976
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/iguanodon_mount/inventario-512.webp",
+            "bytes": 59900
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -15084,7 +16492,7 @@ globalThis.AtlasObjetosCientificos = {
         "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\"><path d=\"M9 59Q31 45 56 52L69 48 75 60 59 70 32 70Z\" fill=\"none\" stroke=\"#856f50\" stroke-width=\"7\"/><path d=\"M13 59L3 49m39 22-4 18m17-20 7 20\" fill=\"none\" stroke=\"#997b55\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M69 49Q63 26 84 19Q98 19 98 35L94 54L79 61Z\" fill=\"#e4cba3\" stroke=\"#8c6b46\" stroke-width=\"4\"/><path d=\"M72 32Q84 17 95 29\" fill=\"none\" stroke=\"#fff0ca\" stroke-width=\"4\"/><path d=\"M61 56l9 11m-27-15 5 12m-20-9 8 11\" fill=\"none\" stroke=\"#d6b88d\" stroke-width=\"4\"/><circle cx=\"90\" cy=\"40\" r=\"2.5\" fill=\"#473729\"/></svg>",
         "bytes": 586
       },
-      "observations": null,
+      "observations": "Cúpula craneal y postura bípeda.",
       "id": "pachycephalosaurus_mount",
       "name": "Reconstrucción de Paquicefalosaurio",
       "type": "Pieza del Museo",
@@ -15098,13 +16506,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/pachycephalosaurus_mount/clasica-64.webp",
+            "bytes": 1998
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/pachycephalosaurus_mount/clasica-128.webp",
+            "bytes": 5700
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/pachycephalosaurus_mount/clasica-256.webp",
+            "bytes": 16888
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/pachycephalosaurus_mount/clasica-512.webp",
+            "bytes": 56116
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/pachycephalosaurus_mount/inventario-64.webp",
+            "bytes": 2074
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/pachycephalosaurus_mount/inventario-128.webp",
+            "bytes": 6212
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/pachycephalosaurus_mount/inventario-256.webp",
+            "bytes": 17276
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/pachycephalosaurus_mount/inventario-512.webp",
+            "bytes": 53118
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -15122,7 +16564,7 @@ globalThis.AtlasObjetosCientificos = {
         "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\"><path d=\"M9 60Q30 43 57 53L67 43 78 45 91 52 82 61 54 71 27 68Z\" fill=\"none\" stroke=\"#80684c\" stroke-width=\"7\"/><path d=\"M23 63L6 80m32-11-7 22m26-21 7 20m-20-38 7 15m0-13 8 13\" fill=\"none\" stroke=\"#ac8c63\" stroke-width=\"5\"/><path d=\"M68 38L83 29L97 35L97 51L81 58L68 49Z\" fill=\"#e0c69e\" stroke=\"#816548\" stroke-width=\"3\"/><path d=\"M78 32l-4-12 13 10m0 1 9-11-2 15\" stroke=\"#dbc19b\" stroke-width=\"5\" fill=\"none\"/><path d=\"M77 53L91 53\" stroke=\"#765a40\" stroke-width=\"3\"/><circle cx=\"89\" cy=\"40\" r=\"2\" fill=\"#53402b\"/></svg>",
         "bytes": 569
       },
-      "observations": null,
+      "observations": "Dos cuernos supraorbitarios, cráneo corto y brazos reducidos.",
       "id": "carnotaurus_mount",
       "name": "Reconstrucción de Carnotauro",
       "type": "Pieza del Museo",
@@ -15136,13 +16578,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-05",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/carnotaurus_mount/clasica-64.webp",
+            "bytes": 1832
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/carnotaurus_mount/clasica-128.webp",
+            "bytes": 5208
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/carnotaurus_mount/clasica-256.webp",
+            "bytes": 15332
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/carnotaurus_mount/clasica-512.webp",
+            "bytes": 49214
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/carnotaurus_mount/inventario-64.webp",
+            "bytes": 1882
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/carnotaurus_mount/inventario-128.webp",
+            "bytes": 5690
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/carnotaurus_mount/inventario-256.webp",
+            "bytes": 15778
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/carnotaurus_mount/inventario-512.webp",
+            "bytes": 47942
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -17520,6 +18996,934 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de mercancía regional",
       "pilot": false,
       "stage": "OBJ-04",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Cráneo profundo, dos dedos y cola horizontal.",
+      "material": null,
+      "context": "Futuro · referencia taxonómica de 1905",
+      "original": null,
+      "observations": "Interpretación naturalista hipotética. Color, tejidos y postura requieren revisión.",
+      "id": "vida-trex_mount",
+      "name": "Tyrannosaurus rex en vida",
+      "type": "Reconstrucción complementaria",
+      "family": "Paleontología",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-trex_mount/clasica-64.webp",
+            "bytes": 1670
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-trex_mount/clasica-128.webp",
+            "bytes": 4266
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-trex_mount/clasica-256.webp",
+            "bytes": 12136
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-trex_mount/clasica-512.webp",
+            "bytes": 39824
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-trex_mount/inventario-64.webp",
+            "bytes": 1764
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-trex_mount/inventario-128.webp",
+            "bytes": 4436
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-trex_mount/inventario-256.webp",
+            "bytes": 12286
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-trex_mount/inventario-512.webp",
+            "bytes": 38628
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Gola amplia y tres cuernos; proporciones de un cuadrúpedo pesado.",
+      "material": null,
+      "context": "Futuro · referencia taxonómica de 1889",
+      "original": null,
+      "observations": "Interpretación naturalista hipotética. Color, tejidos y postura requieren revisión.",
+      "id": "vida-triceratops_mount",
+      "name": "Triceratops en vida",
+      "type": "Reconstrucción complementaria",
+      "family": "Paleontología",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-triceratops_mount/clasica-64.webp",
+            "bytes": 2264
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-triceratops_mount/clasica-128.webp",
+            "bytes": 6030
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-triceratops_mount/clasica-256.webp",
+            "bytes": 17950
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-triceratops_mount/clasica-512.webp",
+            "bytes": 59944
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-triceratops_mount/inventario-64.webp",
+            "bytes": 2404
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-triceratops_mount/inventario-128.webp",
+            "bytes": 6446
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-triceratops_mount/inventario-256.webp",
+            "bytes": 17822
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-triceratops_mount/inventario-512.webp",
+            "bytes": 55818
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Placas dorsales alternadas y cuatro púas caudales.",
+      "material": null,
+      "context": "Futuro · referencia taxonómica de 1877",
+      "original": null,
+      "observations": "Interpretación naturalista hipotética. Color, tejidos y postura requieren revisión.",
+      "id": "vida-stegosaurus_mount",
+      "name": "Stegosaurus en vida",
+      "type": "Reconstrucción complementaria",
+      "family": "Paleontología",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-stegosaurus_mount/clasica-64.webp",
+            "bytes": 2144
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-stegosaurus_mount/clasica-128.webp",
+            "bytes": 5564
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-stegosaurus_mount/clasica-256.webp",
+            "bytes": 16830
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-stegosaurus_mount/clasica-512.webp",
+            "bytes": 55960
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-stegosaurus_mount/inventario-64.webp",
+            "bytes": 2134
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-stegosaurus_mount/inventario-128.webp",
+            "bytes": 5932
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-stegosaurus_mount/inventario-256.webp",
+            "bytes": 16752
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-stegosaurus_mount/inventario-512.webp",
+            "bytes": 52898
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Hocico alargado, extremidades posteriores cortas, vela dorsal y cola profunda. La locomoción y ecología siguen en debate.",
+      "material": null,
+      "context": "Futuro · referencia taxonómica de 1915",
+      "original": null,
+      "observations": "Interpretación naturalista hipotética. Color, tejidos y postura requieren revisión.",
+      "id": "vida-spinosaurus_mount",
+      "name": "Spinosaurus en vida",
+      "type": "Reconstrucción complementaria",
+      "family": "Paleontología",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-spinosaurus_mount/clasica-64.webp",
+            "bytes": 1160
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-spinosaurus_mount/clasica-128.webp",
+            "bytes": 2526
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-spinosaurus_mount/clasica-256.webp",
+            "bytes": 6300
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-spinosaurus_mount/clasica-512.webp",
+            "bytes": 17126
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-spinosaurus_mount/inventario-64.webp",
+            "bytes": 1124
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-spinosaurus_mount/inventario-128.webp",
+            "bytes": 2790
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-spinosaurus_mount/inventario-256.webp",
+            "bytes": 5974
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-spinosaurus_mount/inventario-512.webp",
+            "bytes": 15912
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Osteodermos, torso bajo y maza caudal.",
+      "material": null,
+      "context": "Futuro · referencia taxonómica de 1908",
+      "original": null,
+      "observations": "Interpretación naturalista hipotética. Color, tejidos y postura requieren revisión.",
+      "id": "vida-ankylosaurus_mount",
+      "name": "Ankylosaurus en vida",
+      "type": "Reconstrucción complementaria",
+      "family": "Paleontología",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-ankylosaurus_mount/clasica-64.webp",
+            "bytes": 1766
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-ankylosaurus_mount/clasica-128.webp",
+            "bytes": 4694
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-ankylosaurus_mount/clasica-256.webp",
+            "bytes": 13432
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-ankylosaurus_mount/clasica-512.webp",
+            "bytes": 45312
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-ankylosaurus_mount/inventario-64.webp",
+            "bytes": 1820
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-ankylosaurus_mount/inventario-128.webp",
+            "bytes": 4900
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-ankylosaurus_mount/inventario-256.webp",
+            "bytes": 13390
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-ankylosaurus_mount/inventario-512.webp",
+            "bytes": 42610
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Pulgar en espiga, pico y postura cuadrúpeda de referencia.",
+      "material": null,
+      "context": "Documentación o reproducción museística; datación por verificar",
+      "original": null,
+      "observations": "Interpretación naturalista hipotética. Color, tejidos y postura requieren revisión.",
+      "id": "vida-iguanodon_mount",
+      "name": "Iguanodon en vida",
+      "type": "Reconstrucción complementaria",
+      "family": "Paleontología",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-iguanodon_mount/clasica-64.webp",
+            "bytes": 1876
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-iguanodon_mount/clasica-128.webp",
+            "bytes": 5262
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-iguanodon_mount/clasica-256.webp",
+            "bytes": 14550
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-iguanodon_mount/clasica-512.webp",
+            "bytes": 47340
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-iguanodon_mount/inventario-64.webp",
+            "bytes": 1988
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-iguanodon_mount/inventario-128.webp",
+            "bytes": 5434
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-iguanodon_mount/inventario-256.webp",
+            "bytes": 14542
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-iguanodon_mount/inventario-512.webp",
+            "bytes": 45186
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Cúpula craneal y postura bípeda.",
+      "material": null,
+      "context": "Futuro · referencia taxonómica de 1943",
+      "original": null,
+      "observations": "Interpretación naturalista hipotética. Color, tejidos y postura requieren revisión.",
+      "id": "vida-pachycephalosaurus_mount",
+      "name": "Pachycephalosaurus en vida",
+      "type": "Reconstrucción complementaria",
+      "family": "Paleontología",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-pachycephalosaurus_mount/clasica-64.webp",
+            "bytes": 1734
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-pachycephalosaurus_mount/clasica-128.webp",
+            "bytes": 4300
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-pachycephalosaurus_mount/clasica-256.webp",
+            "bytes": 11428
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-pachycephalosaurus_mount/clasica-512.webp",
+            "bytes": 36662
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-pachycephalosaurus_mount/inventario-64.webp",
+            "bytes": 1774
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-pachycephalosaurus_mount/inventario-128.webp",
+            "bytes": 4426
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-pachycephalosaurus_mount/inventario-256.webp",
+            "bytes": 11390
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-pachycephalosaurus_mount/inventario-512.webp",
+            "bytes": 35006
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Dos cuernos supraorbitarios, cráneo corto y brazos reducidos.",
+      "material": null,
+      "context": "Futuro · referencia taxonómica de 1985",
+      "original": null,
+      "observations": "Interpretación naturalista hipotética. Color, tejidos y postura requieren revisión.",
+      "id": "vida-carnotaurus_mount",
+      "name": "Carnotaurus en vida",
+      "type": "Reconstrucción complementaria",
+      "family": "Paleontología",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-carnotaurus_mount/clasica-64.webp",
+            "bytes": 1742
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-carnotaurus_mount/clasica-128.webp",
+            "bytes": 4228
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-carnotaurus_mount/clasica-256.webp",
+            "bytes": 11980
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-carnotaurus_mount/clasica-512.webp",
+            "bytes": 39028
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/vida-carnotaurus_mount/inventario-64.webp",
+            "bytes": 1742
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/vida-carnotaurus_mount/inventario-128.webp",
+            "bytes": 4412
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/vida-carnotaurus_mount/inventario-256.webp",
+            "bytes": 11938
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/vida-carnotaurus_mount/inventario-512.webp",
+            "bytes": 37234
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": null,
+      "material": null,
+      "context": "Descrito en 1877.",
+      "original": null,
+      "observations": "Cráneo con crestas supraorbitales y tres dedos.",
+      "id": "montaje-allosaurus",
+      "name": "Allosaurus",
+      "family": "Dinosaurio terópodo",
+      "type": "Idea de montaje paleontológico",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": null,
+      "material": null,
+      "context": "Descrito en 1878.",
+      "original": null,
+      "observations": "Cuello y cola muy largos, cuatro extremidades columnares.",
+      "id": "montaje-diplodocus",
+      "name": "Diplodocus",
+      "family": "Dinosaurio saurópodo",
+      "type": "Idea de montaje paleontológico",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/montaje-diplodocus/clasica-64.webp",
+            "bytes": 1040
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/montaje-diplodocus/clasica-128.webp",
+            "bytes": 2718
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/montaje-diplodocus/clasica-256.webp",
+            "bytes": 7460
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/montaje-diplodocus/clasica-512.webp",
+            "bytes": 22916
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/montaje-diplodocus/inventario-64.webp",
+            "bytes": 1000
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/montaje-diplodocus/inventario-128.webp",
+            "bytes": 2830
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/montaje-diplodocus/inventario-256.webp",
+            "bytes": 7440
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/montaje-diplodocus/inventario-512.webp",
+            "bytes": 22860
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": null,
+      "material": null,
+      "context": "Descrito en 1903.",
+      "original": null,
+      "observations": "Extremidades delanteras altas y cuello elevado.",
+      "id": "montaje-brachiosaurus",
+      "name": "Brachiosaurus",
+      "family": "Dinosaurio saurópodo",
+      "type": "Idea de montaje paleontológico",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": null,
+      "material": null,
+      "context": "Descrito en 1924.",
+      "original": null,
+      "observations": "Dromeosáurido pequeño con garra elevada en el segundo dedo del pie.",
+      "id": "montaje-velociraptor",
+      "name": "Velociraptor",
+      "family": "Dinosaurio terópodo",
+      "type": "Idea de montaje paleontológico",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": null,
+      "material": null,
+      "context": "Descrito en 1922.",
+      "original": null,
+      "observations": "Cresta craneal tubular prolongada.",
+      "id": "montaje-parasaurolophus",
+      "name": "Parasaurolophus",
+      "family": "Dinosaurio ornitópodo",
+      "type": "Idea de montaje paleontológico",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": null,
+      "material": null,
+      "context": "Descrito en 1969.",
+      "original": null,
+      "observations": "Pie con garra raptorial y cola larga.",
+      "id": "montaje-deinonychus",
+      "name": "Deinonychus",
+      "family": "Dinosaurio terópodo",
+      "type": "Idea de montaje paleontológico",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": null,
+      "material": null,
+      "context": "Descrito en 1861.",
+      "original": null,
+      "observations": "Alas con plumas, dientes y cola ósea larga.",
+      "id": "montaje-archaeopteryx",
+      "name": "Archaeopteryx",
+      "family": "Dinosaurio terópodo avialano",
+      "type": "Idea de montaje paleontológico",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": null,
+      "material": null,
+      "context": "Descrito en 1876.",
+      "original": null,
+      "observations": "Cresta, pico sin dientes y ala sostenida por el cuarto dedo.",
+      "id": "montaje-pteranodon",
+      "name": "Pteranodon",
+      "family": "Reptil volador · Pterosauria",
+      "type": "Idea de montaje paleontológico",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/montaje-pteranodon/clasica-64.webp",
+            "bytes": 1610
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/montaje-pteranodon/clasica-128.webp",
+            "bytes": 4018
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/montaje-pteranodon/clasica-256.webp",
+            "bytes": 10070
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/montaje-pteranodon/clasica-512.webp",
+            "bytes": 30792
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/montaje-pteranodon/inventario-64.webp",
+            "bytes": 1648
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/montaje-pteranodon/inventario-128.webp",
+            "bytes": 3906
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/montaje-pteranodon/inventario-256.webp",
+            "bytes": 10198
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/montaje-pteranodon/inventario-512.webp",
+            "bytes": 30496
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": null,
+      "material": null,
+      "context": "Reconocido en la década de 1820.",
+      "original": null,
+      "observations": "Cuello largo, cabeza pequeña y cuatro aletas.",
+      "id": "montaje-plesiosaurus",
+      "name": "Plesiosaurus",
+      "family": "Reptil marino · Plesiosauria",
+      "type": "Idea de montaje paleontológico",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/montaje-plesiosaurus/clasica-64.webp",
+            "bytes": 1444
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/montaje-plesiosaurus/clasica-128.webp",
+            "bytes": 3732
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/montaje-plesiosaurus/clasica-256.webp",
+            "bytes": 10946
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/montaje-plesiosaurus/clasica-512.webp",
+            "bytes": 33976
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/montaje-plesiosaurus/inventario-64.webp",
+            "bytes": 1408
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/montaje-plesiosaurus/inventario-128.webp",
+            "bytes": 3894
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/montaje-plesiosaurus/inventario-256.webp",
+            "bytes": 11126
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/montaje-plesiosaurus/inventario-512.webp",
+            "bytes": 33076
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": null,
+      "material": null,
+      "context": "Reconocido en la década de 1820.",
+      "original": null,
+      "observations": "Cuerpo fusiforme, hocico largo y aletas.",
+      "id": "montaje-ichthyosaurus",
+      "name": "Ichthyosaurus",
+      "family": "Reptil marino · Ichthyosauria",
+      "type": "Idea de montaje paleontológico",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": null,
+      "material": null,
+      "context": "Descrito antes de 1842.",
+      "original": null,
+      "observations": "Defensas fuertemente curvas y cráneo alto.",
+      "id": "montaje-mamut",
+      "name": "Mamut lanudo",
+      "family": "Mamífero · Proboscidea",
+      "type": "Idea de montaje paleontológico",
+      "pilot": false,
+      "stage": "OBJ-05",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/montaje-mamut/clasica-64.webp",
+            "bytes": 2334
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/montaje-mamut/clasica-128.webp",
+            "bytes": 6590
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/montaje-mamut/clasica-256.webp",
+            "bytes": 18588
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/montaje-mamut/clasica-512.webp",
+            "bytes": 56242
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/montaje-mamut/inventario-64.webp",
+            "bytes": 2524
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/montaje-mamut/inventario-128.webp",
+            "bytes": 6958
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/montaje-mamut/inventario-256.webp",
+            "bytes": 18624
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/montaje-mamut/inventario-512.webp",
+            "bytes": 55026
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": null,
+      "material": null,
+      "context": "Descrito en 1796.",
+      "original": null,
+      "observations": "Perezoso terrestre gigante con garras y pelvis robusta.",
+      "id": "montaje-megatherium",
+      "name": "Megatherium",
+      "family": "Mamífero · Xenarthra",
+      "type": "Idea de montaje paleontológico",
+      "pilot": false,
+      "stage": "OBJ-05",
       "sprites": {
         "clasica": null,
         "inventario": null

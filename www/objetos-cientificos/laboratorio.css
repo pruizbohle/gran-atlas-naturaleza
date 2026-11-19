@@ -112,3 +112,15 @@ progress { accent-color: #4c755a; margin: .4rem 0 .8rem; }
 .assembly-world { padding: .85rem; margin-top: .8rem; border: 1px solid var(--line); border-radius: .4rem; }
 .assembly-world p { margin: .35rem 0; }
 .assembly-world figure { max-width: calc(var(--size) + 1rem); }
+.fossil-workbench { padding: 1rem; }
+.fossil-workbench p { margin: .35rem 0; }
+.fossil-layout { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin-top: .7rem; }
+.fossil-parts, .fossil-display { min-width: 0; }
+.fossil-components { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,8rem),1fr)); gap: .45rem; list-style: none; padding: 0; }
+.fossil-component { display: grid; align-content: start; gap: .18rem; padding: .35rem; border: 1px solid var(--line); border-radius: .3rem; }
+.fossil-component .stage { min-height: 66px; }
+.fossil-component .stage img { max-width: 64px; }
+.fossil-display progress { width: 100%; }
+@media (max-width: 660px) { .fossil-layout { grid-template-columns: 1fr; } }
+.masthead a { color: inherit; }
+.fossil-workbench + button { margin-top: .65rem; }

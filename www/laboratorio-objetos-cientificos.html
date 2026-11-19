@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="objetos-cientificos/laboratorio.css">
 <script defer src="js/item-art-v3198.js"></script>
 <script defer src="objetos-cientificos/manifiesto.js"></script>
+<script defer src="js/lab/reconstruccion-objetos.js"></script>
 <script defer src="js/lab/objetos-cientificos.js"></script>
 </head>
 <body>
@@ -14,15 +15,23 @@
   <p>El Gran Atlas · Gabinete experimental</p>
   <h1>Laboratorio de objetos científicos</h1>
   <p>Comparación de láminas y pruebas de inventario para el Atlas de 1842.</p>
+  <a href="laboratorio-inclusiones-objetos.html">Laboratorio de inclusiones</a>
 </header>
 <main>
   <div class="controls">
     <label>Vista<select id="view">
-      <option value="compare">Comparación</option><option value="groups">Familias y evolución</option><option value="archive">Archivo cartográfico y comercial</option><option value="inventory">Inventario funcional</option><option value="materials">Materiales acumulables</option>
+      <option value="compare">Comparación</option><option value="paleontology">Paleontología</option><option value="groups">Familias y evolución</option><option value="archive">Archivo cartográfico y comercial</option><option value="inventory">Inventario funcional</option><option value="materials">Materiales acumulables</option>
       <option value="equipment">Equipo del naturalista</option><option value="workshop">Taller de fabricación</option>
       <option value="album">Álbum de coleccionables</option><option value="museum">Gabinete museístico</option>
     </select></label>
     <label>Buscar<input type="search" id="search" placeholder="Nombre, ID o procedencia"></label>
+    <label id="paleo-control" hidden>Sección paleontológica<select id="paleo-section">
+      <option value="mounts">Reconstrucciones fósiles</option><option value="materials">Materiales y fósiles menores</option>
+      <option value="archive">Archivo paleontológico</option><option value="future">Montajes futuros</option>
+    </select></label>
+    <label id="mount-control" hidden>Montaje<select id="mount"></select></label>
+    <label id="phase-control" hidden>Progreso<select id="phase"></select></label>
+    <label id="living-control" class="switch" hidden><input id="living" type="checkbox"> Interpretación en vida</label>
     <label id="stock-control" hidden>Existencias de prueba<select id="stock"></select></label>
     <label id="recipe-control" hidden>Receta de ejemplo<select id="recipe-example"></select></label>
     <label id="archive-control" hidden>Sección del archivo<select id="archive-section"></select></label>
