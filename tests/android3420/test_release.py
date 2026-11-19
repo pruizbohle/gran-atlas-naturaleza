@@ -4,12 +4,18 @@ from pathlib import Path
 sys.path.insert(0,str(Path('scripts').resolve()))
 import android_release as a
 ROOT=Path('.').resolve();TEST_PIN='a'*64;SOURCE='b'*40
+class AndroidZipEntry(zipfile.ZipInfo):
+ def _encodeFilenameFlags(self):
+  return self.filename.encode('utf-8'),self.flag_bits
+
 class Guards(unittest.TestCase):
  def setUp(self):
   self.temp=tempfile.TemporaryDirectory();self.root=Path(self.temp.name)
   for folder in ['android-native','scripts']:shutil.copytree(ROOT/folder,self.root/folder)
   for name in ['package.json','package-lock.json','capacitor.config.json','.github/workflows/android-signed.yml','.github/workflows/android-publish.yml','docs/gm02/release-final/previous-apk.json']:
    dst=self.root/name;dst.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/name,dst)
+  fixture_package=self.root/'package.json'
+  fixture_package.write_text(json.dumps({**a.read(fixture_package),'version':'3.42.0'}))
   (self.root/'docs/android').mkdir(parents=True);self.pin(TEST_PIN)
   (self.root/'www').mkdir();(self.root/'www/index.html').write_text('SIMULATED web fixture');(self.root/'www/sw.js').write_text('SIMULATED worker')
   self.entries={'assets/public/index.html':b'SIMULATED web fixture','assets/public/sw.js':b'SIMULATED worker','assets/public/cordova.js':b'','assets/public/cordova_plugins.js':b'','assets/capacitor.config.json':(self.root/'capacitor.config.json').read_bytes(),'assets/capacitor.plugins.json':json.dumps([{'classpath':'com.capacitorjs.plugins.filesystem.FilesystemPlugin'},{'classpath':'com.capacitorjs.plugins.share.SharePlugin'}]).encode(),'classes.dex':('SIMULATED descriptors only: L'+a.APP_ID.replace('.','/')+'/AtlasExportPlugin; L'+a.APP_ID.replace('.','/')+'/AtlasImportPlugin;').encode()}
@@ -40,6 +46,15 @@ class Guards(unittest.TestCase):
   self.pin(a.read(self.root/'docs/gm02/release-final/previous-apk.json')['certificateSha256'])
   with self.assertRaisesRegex(ValueError,'retired debug'):self.verify()
  def test_synthetic_container_matches_expected_bytes(self):self.assertEqual(self.verify()['versionCode'],34200)
+ def test_utf8_asset_without_zip_flag_preserves_exact_name_and_bytes(self):
+  name='naturalist-art/plates/af_tortuga_laúd--normal.webp';path=self.root/'www'/name
+  path.parent.mkdir(parents=True);path.write_bytes(b'illustration')
+  archived='assets/public/'+name
+  with zipfile.ZipFile(self.archive,'a') as archive:archive.writestr(AndroidZipEntry(archived),b'illustration')
+  with zipfile.ZipFile(self.archive) as archive:self.assertNotIn(archived,archive.namelist())
+  self.assertEqual(self.verify()['webFiles'][name],a.sha(b'illustration'))
+  path.write_bytes(b'changed')
+  with self.assertRaisesRegex(ValueError,'Changed web file'):self.verify()
  def test_changed_web_file_stops(self):
   self.entries['assets/public/index.html']=b'changed';self.pack()
   with self.assertRaisesRegex(ValueError,'Changed web'):self.verify()

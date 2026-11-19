@@ -36,10 +36,13 @@ def verify_apk(apk,badging,signature,root=Path('.')):
  require(bool(cert_rows) and (not signer_numbers or signer_numbers=={1}) and (not declared_signers or all(n=='1' for n in declared_signers)),f'APK certificate does not match signing policy: expected one signer; found {len(cert_rows)} certificate digest rows, signer indices {sorted(signer_numbers)}, declared signers {declared_signers}')
  observed={fingerprint(digest) for _,digest in cert_rows}
  require(observed=={pin},f'APK certificate does not match the pinned permanent certificate (APK public SHA-256 digests: {sorted(observed)}; expected public SHA-256: {pin})');files=web_files(root)
- with zipfile.ZipFile(apk) as z:
+ # Android stores UTF-8 asset names even when its ZIP entries omit the UTF-8 flag.
+ with zipfile.ZipFile(apk,metadata_encoding='utf-8') as z:
   names=z.namelist();require(len(names)==len(set(names)),'Duplicate ZIP paths')
   actual={n[len('assets/public/'):] for n in names if n.startswith('assets/public/') and not n.endswith('/')};extra=actual-set(files)
-  require(extra<={'cordova.js','cordova_plugins.js'},'Unexpected packaged web files');require(set(files)<=actual,'Missing packaged web files')
+  unexpected=extra-{'cordova.js','cordova_plugins.js'}
+  require(not unexpected,'Unexpected packaged web files: '+repr(sorted(unexpected)[:12]))
+  require(set(files)<=actual,'Missing packaged web files: '+repr(sorted(set(files)-actual)[:12]))
   for name,digest in files.items():require(sha(z.read('assets/public/'+name))==digest,'Changed web file: '+name)
   for name in extra:require(z.read('assets/public/'+name)==b'','Unexpected Cordova code: '+name)
   cap=json.loads(z.read('assets/capacitor.config.json'));require(cap['appId']==APP_ID and cap['appName']=='El Gran Atlas','Packaged Capacitor identity mismatch')
