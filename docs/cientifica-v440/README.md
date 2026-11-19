@@ -49,4 +49,6 @@ La actualización PWA desde V4.3.0 se probó en Chromium a 390 y 1280 px. Conser
 
 En esa ejecución se observaron 102 → 105 ms de apertura y decodificación de Campo a 390 px y 62 → 88 ms a 1280 px. El heap de JavaScript medido pasó de 7,96 a 10,11 MB y de 7,43 a 10,22 MB, respectivamente. Un WebP de 128 px decodificado ocupa 65.536 bytes RGBA. Estas cifras corresponden a Chromium en el equipo de validación. [Mediciones de Campo](pwa.json)
 
+Las 11 pruebas del control de release pasaron. La suite histórica tuvo 581 casos aprobados y los mismos 228 fallos que V4.3.0. La sincronización de Capacitor conservó exactamente los 3.016 recursos web cotejados y confirmó `versionCode 40400`. [Comparación de la suite histórica](regresion.json)
+
 La validación de Android utiliza el candidato firmado del flujo del repositorio. La distribución como release Android requiere restaurar una partida en un dispositivo físico y vincular el resultado al hash exacto del APK. [Procedimiento Android](../../README_ANDROID_FIRMA_PERMANENTE.md)

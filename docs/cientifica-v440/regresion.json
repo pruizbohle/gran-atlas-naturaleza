@@ -1,0 +1,15 @@
+{
+  "base": {
+    "tests": 808,
+    "pass": 580,
+    "fail": 228
+  },
+  "candidate": {
+    "tests": 809,
+    "pass": 581,
+    "fail": 228
+  },
+  "matchedFailures": 228,
+  "newFailures": [],
+  "clearedFailures": []
+}
