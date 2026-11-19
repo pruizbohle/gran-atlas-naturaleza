@@ -1,0 +1,75 @@
+{
+  "baselineCommit": "8d95f5125a9f4c58260ceecc604439903df9b8af",
+  "exactPreviousWebP": 3600,
+  "exactPreviousRoutes": 510,
+  "newDistinctPlates": 144,
+  "newUniqueResources": 576,
+  "bySize": {
+    "64": {
+      "v470Bytes": 1848358,
+      "addedBytes": 279708,
+      "totalBytes": 2128066,
+      "files": 1044,
+      "RGBABytesPerPlate": 16384
+    },
+    "128": {
+      "v470Bytes": 4427706,
+      "addedBytes": 650908,
+      "totalBytes": 5078614,
+      "files": 1044,
+      "RGBABytesPerPlate": 65536
+    },
+    "256": {
+      "v470Bytes": 12578494,
+      "addedBytes": 1765262,
+      "totalBytes": 14343756,
+      "files": 1044,
+      "RGBABytesPerPlate": 262144
+    },
+    "512": {
+      "v470Bytes": 37943558,
+      "addedBytes": 5417168,
+      "totalBytes": 43360726,
+      "files": 1044,
+      "RGBABytesPerPlate": 1048576
+    }
+  },
+  "waves": {
+    "Marinas y costeras": {
+      "species": 42,
+      "plates": 50,
+      "bySizeBytes": {
+        "64": 95346,
+        "128": 218756,
+        "256": 589638,
+        "512": 1846716
+      },
+      "totalBytes": 2750456
+    },
+    "Ribereñas y humedales": {
+      "species": 50,
+      "plates": 94,
+      "bySizeBytes": {
+        "64": 184362,
+        "128": 432152,
+        "256": 1175624,
+        "512": 3570452
+      },
+      "totalBytes": 5362590
+    }
+  },
+  "cache": {
+    "oldCoreBytes": 79009982,
+    "currentCoreBytes": 87535288,
+    "oldCoreFiles": 3830,
+    "currentCoreFiles": 4407,
+    "oldReviewBytes": 11702828,
+    "currentReviewBytes": 11702828,
+    "reviewFiles": 636
+  },
+  "decode128": {
+    "samples": 144,
+    "medianMs": 53.84
+  },
+  "invalidResources": []
+}

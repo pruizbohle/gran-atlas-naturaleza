@@ -1,7 +1,8 @@
-# Inventario naturalista del catálogo 4.7.0
+# Inventario naturalista del catálogo 4.7.1
 
 | Grupo | Familia | ID | Nombre común | Nombre científico | Continente | Zonas del juego | Variantes | Dimorfismo | Ejemplares |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Marinas y costeras | Alcidae | frailecillo_atlantico | Frailecillo atlántico | *Fratercula arctica* | Europa, Océanos, Norteamérica | Islas Británicas, Atlántico septentrional, Atlántico canadiense | Normal | No | Normal, Notable |
 | Rapaces | Accipitridae | aguila_real | Águila real | *Aquila chrysaetos* | Europa, Asia, África, Norteamérica | Alpes, Balcanes, Cáucaso, Anatolia, Desierto de Gobi, Himalaya, Tierras altas de Etiopía, Alaska, Montañas Rocosas | Normal | No | Normal, Notable, Épico, Excepcional, Legendario · Centinela |
 | Cetáceos | Balaenopteridae | mar_esp_megaptera_novaeangliae | Ballena jorobada | *Megaptera novaeangliae* | Océanos | Atlántico septentrional, Índico meridional, Pacífico austral, Océano Austral occidental | Normal | No | Normal, Notable |
 | Cetáceos | Iniidae | sa_esp_inia_geoffrensis | Delfín rosado | *Inia geoffrensis* | Sudamérica | Amazonía | Normal | No | Normal, Notable |
@@ -33,10 +34,19 @@
 | Rapaces | Pandionidae | af_xlsx_131_pandion_haliaetus | Águila pescadora | *Pandion haliaetus* | África, Norteamérica | Valle del Nilo, Litoral sudoriental africano, Costa del golfo de México | Normal, Albino | No | Normal, Notable |
 | Rapaces | Accipitridae | af_fosa_ave | Águila pescadora de Madagascar | *Haliaeetus vociferoides* | África | Madagascar | Normal, Albino, Melánico | No | Normal, Notable |
 | Rapaces | Accipitridae | na_esp_circus_hudsonius | Aguilucho pálido | *Circus hudsonius* | Norteamérica | Grandes Llanuras | Normal | No | Normal, Notable |
+| Marinas y costeras | Diomedeidae | mar_esp_thalassarche_melanophris | Albatros de ceja negra | *Thalassarche melanophris* | Océanos | Índico meridional, Atlántico austral | Normal | No | Normal, Notable |
+| Marinas y costeras | Diomedeidae | gm06_phoebastria_irrorata | Albatros de Galápagos | *Phoebastria irrorata* | Sudamérica | Islas Galápagos | Normal | No | Normal, Notable, Épico, Excepcional |
+| Marinas y costeras | Diomedeidae | mar_esp_phoebastria_immutabilis | Albatros de Laysan | *Phoebastria immutabilis* | Océanos | Pacífico nororiental | Normal | No | Normal, Notable |
+| Marinas y costeras | Diomedeidae | mar_esp_diomedea_exulans | Albatros errante | *Diomedea exulans* | Océanos | Pacífico austral, Océano Austral occidental | Normal | No | Normal, Notable |
+| Marinas y costeras | Diomedeidae | oc_esp_diomedea_epomophora | Albatros real del sur | *Diomedea epomophora* | Oceanía, Océanos | Nueva Zelanda, Pacífico suroccidental | Normal | No | Normal, Notable |
+| Marinas y costeras | Sulidae | mar_esp_morus_bassanus | Alcatraz atlántico | *Morus bassanus* | Océanos, Norteamérica | Atlántico septentrional, Atlántico canadiense | Normal | No | Normal, Notable |
+| Marinas y costeras | Sulidae | af_alcatraz_cabo | Alcatraz del Cabo | *Morus capensis* | África | Costa del Cabo | Normal, Albino | No | Normal, Notable |
 | Ungulados | Cervidae | alce | Alce | *Alces alces* | Europa, Asia, Norteamérica | Escandinavia, Europa Oriental, Región del mar Báltico, Siberia Occidental, Siberia Central, Montes Urales, Alaska, Bosques boreales de Canadá, Yukón | Normal, Macho, Hembra | Sí | Normal, Notable |
 | Ungulados | Bovidae | af_xlsx_alcefalo | Alcéfalo común | *Alcelaphus buselaphus* | África | Sabana de África oriental, Sabanas del sudeste africano, Sahel oriental | Normal, Albino | No | Normal, Notable |
 | Rapaces | Accipitridae | af_xlsx_131_neophron_percnopterus | Alimoche común | *Neophron percnopterus* | África | Magreb, Valle del Nilo | Normal, Albino | No | Normal, Notable |
+| Ribereñas y humedales | Anatidae | na_esp_anas_platyrhynchos | Ánade real | *Anas platyrhynchos* | Norteamérica | Bosques boreales de Canadá, Región de los Grandes Lagos | Normal, Macho, Hembra, Albino | Sí | Normal, Notable |
 | Ungulados | Bovidae | gm06_bubalus_depressicornis | Anoa de tierras bajas | *Bubalus depressicornis* | Asia | Célebes y Molucas | Normal | No | Normal, Notable, Épico, Excepcional |
+| Ribereñas y humedales | Anatidae | na_esp_anser_caerulescens | Ánsar nival | *Anser caerulescens* | Norteamérica | Alaska, Bosques boreales de Canadá | Normal, Albino | No | Normal, Notable |
 | Ungulados | Bovidae | asia_esp_0833 | Antílope negro | *Antilope cervicapra* | Asia | Subcontinente Indio | Normal, Macho, Hembra, Melánico | Sí | Normal, Notable |
 | Ungulados | Bovidae | af_xlsx_131_hippotragus_equinus | Antílope ruano | *Hippotragus equinus* | África | Sahel occidental, Grandes Lagos africanos | Normal, Albino | No | Normal, Notable |
 | Ungulados | Bovidae | af_antilope_sable | Antílope sable | *Hippotragus niger* | África | Grandes Lagos africanos, Bosques de miombo, Sabanas del sudeste africano | Normal | No | Normal, Notable |
@@ -104,6 +114,7 @@
 | Marsupiales | Macropodidae | oc_esp_osphranter_rufus | Canguro rojo | *Osphranter rufus* | Oceanía | Australia tropical septentrional, Interior árido australiano | Normal, Albino | No | Normal, Notable |
 | Felinos | Felidae | af_caracal | Caracal | *Caracal caracal* | Asia, África | Anatolia, Península Arábiga, Meseta de Irán, Sahel occidental, Kalahari y sabana austral, Cuerno de África, Desierto del Namib | Normal, Albino, Melánico | No | Normal, Notable |
 | Rapaces | Falconidae | na_esp_caracara_plancus | Caracara quebrantahuesos | *Caracara plancus* | Norteamérica, Sudamérica | América Central, Pampas, Patagonia y Tierra del Fuego | Normal | No | Normal, Notable |
+| Marinas y costeras | Anatidae | gm06_chloephaga_hybrida | Caranca | *Chloephaga hybrida* | Sudamérica | Patagonia y Tierra del Fuego | Normal | No | Normal, Notable, Épico, Excepcional |
 | Roedores | Castoridae | na_esp_castor_canadensis | Castor canadiense | *Castor canadensis* | Norteamérica | Alaska, Columbia Británica, Bosques boreales de Canadá, Región de los Grandes Lagos, Costa del Pacífico | Normal, Albino | No | Normal, Notable |
 | Roedores | Castoridae | castor_europeo | Castor europeo | *Castor fiber* | Europa, Asia | Europa Central, Europa Oriental, Región del mar Báltico, Siberia Occidental | Normal, Albino | No | Normal |
 | Ungulados | Equidae | af_cebra_llanura | Cebra de llanura | *Equus quagga* | África | Sabana de África oriental, Kalahari y sabana austral, Sabanas del sudeste africano | Normal, Albino, Melánico | No | Normal, Notable |
@@ -112,6 +123,8 @@
 | Rapaces | Falconidae | eu_esp_0204 | Cernícalo vulgar | *Falco tinnunculus* | Europa | Península Itálica | Normal, Melánico | No | Normal, Notable |
 | Cánidos | Canidae | af_xlsx_131_lupulella_mesomelas | Chacal de lomo negro | *Lupulella mesomelas* | África | Sabana de África oriental, Sabanas del sudeste africano | Normal, Albino | No | Normal, Notable |
 | Cánidos | Canidae | chacal_dorado | Chacal dorado | *Canis aureus* | Europa | Europa Oriental | Normal, Melánico | No | Normal |
+| Ribereñas y humedales | Anhimidae | sa_esp_chauna_torquata | Chajá | *Chauna torquata* | Sudamérica | Pantanal, Pampas | Normal | No | Normal, Notable |
+| Marinas y costeras | Laridae | polar_esp_sterna_paradisaea | Charrán ártico | *Sterna paradisaea* | Polos, Océanos | Hielo ártico occidental, Hielo ártico oriental, Océano Austral central | Normal | No | Normal, Notable |
 | Roedores | Caviidae | sa_esp_hydrochoerus_hydrochaeris | Chigüiro | *Hydrochoerus hydrochaeris* | Sudamérica | Litoral caribeño sudamericano, Llanos del Orinoco, Pantanal | Normal, Albino | No | Normal, Notable, Épico |
 | Primates | Hominidae | af_chimpance | Chimpancé común | *Pan troglodytes* | África | Cuenca del Congo, Bosques guineanos occidentales, Grandes Lagos africanos | Normal, Albino, Melánico | No | Normal, Notable |
 | Roedores | Chinchillidae | sa_esp_chinchilla_chinchilla | Chinchilla de cola corta | *Chinchilla chinchilla* | Sudamérica | Andes Centrales | Normal, Albino | No | Normal, Notable |
@@ -128,10 +141,18 @@
 | Ungulados | Cervidae | ciervo_rojo | Ciervo rojo | *Cervus elaphus* | Europa | Islas Británicas, Europa Occidental, Europa Central, Península Ibérica, Europa Oriental | Normal, Macho, Hembra | Sí | Normal, Notable |
 | Ungulados | Cervidae | asia_esp_0825 | Ciervo sambar | *Rusa unicolor* | Asia | Subcontinente Indio, Sudeste Asiático | Normal | No | Normal, Notable |
 | Ungulados | Cervidae | asia_esp_0111 | Ciervo sika | *Cervus nippon* | Asia | Península de Corea, Archipiélago Japonés | Normal, Macho, Hembra, Melánico | Sí | Normal, Notable |
+| Ribereñas y humedales | Ciconiidae | ciguena_blanca | Cigüeña blanca | *Ciconia ciconia* | Europa | Europa Central, Península Ibérica | Normal, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Ciconiidae | asia_esp_0890 | Cigüeña blanca oriental | *Ciconia boyciana* | Asia | China Septentrional, Península de Corea, Archipiélago Japonés | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Ciconiidae | ciguena_negra | Cigüeña negra | *Ciconia nigra* | Europa | Región del mar Báltico | Normal, Albino | No | Normal |
+| Ribereñas y humedales | Anatidae | eu_esp_0144 | Cisne cantor | *Cygnus cygnus* | Europa | Región del mar Báltico | Normal, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Anatidae | sa_esp_cygnus_melancoryphus | Cisne de cuello negro | *Cygnus melancoryphus* | Sudamérica | Pampas, Patagonia y Tierra del Fuego | Normal, Albino | No | Normal, Notable |
+| Ribereñas y humedales | Anatidae | oc_esp_cygnus_atratus | Cisne negro | *Cygnus atratus* | Oceanía | Tasmania, Australia Occidental, Australia Oriental | Normal, Albino | No | Normal, Notable |
+| Ribereñas y humedales | Anatidae | cisne_vulgar | Cisne vulgar | *Cygnus olor* | Europa | Islas Británicas, Europa Central | Normal | No | Normal, Notable |
 | Carnívoros terrestres | Viverridae | af_civeta | Civeta africana | *Civettictis civetta* | África | Cuenca del Congo, Bosques guineanos occidentales, Bosques atlánticos ecuatoriales | Normal, Albino, Melánico | No | Normal, Notable |
 | Carnívoros terrestres | Viverridae | asia_esp_0395 | Civeta de las palmeras enmascarada | *Paguma larvata* | Asia | China Meridional | Normal, Melánico | No | Normal, Notable |
 | Carnívoros terrestres | Procyonidae | na_esp_nasua_narica | Coatí de nariz blanca | *Nasua narica* | Norteamérica | Sierra Madre, Península de Yucatán, América Central | Normal | No | Normal, Notable |
 | Roedores | Echimyidae | sa_esp_myocastor_coypus | Coipo | *Myocastor coypus* | Sudamérica | Pantanal, Pampas | Normal, Albino | No | Normal, Notable |
+| Ribereñas y humedales | Gaviidae | gm06_gavia_immer | Colimbo grande | *Gavia immer* | Norteamérica | Bahía de Hudson, Labrador subártico, Atlántico canadiense | Normal | No | Normal, Notable, Épico, Excepcional |
 | Primates | Cercopithecidae | af_colobo | Colobo blanco y negro | *Colobus guereza* | África | Cuenca del Congo | Normal, Albino, Melánico | No | Normal, Notable |
 | Primates | Cercopithecidae | af_xlsx_131_colobus_polykomos | Colobo occidental blanco y negro | *Colobus polykomos* | África | Bosques guineanos occidentales, Bosques atlánticos ecuatoriales | Normal, Albino | No | Normal, Notable |
 | Carnívoros terrestres | Mustelidae | eu_esp_0617 | Comadreja común | *Mustela nivalis* | Europa | Islas Británicas, Europa Occidental, Europa Central | Normal, Melánico | No | Normal, Notable |
@@ -141,6 +162,11 @@
 | Lagomorfos | Leporidae | na_esp_sylvilagus_audubonii | Conejo del desierto | *Sylvilagus audubonii* | Norteamérica | Desierto de Sonora, Sierra Madre | Normal | No | Normal, Notable |
 | Lagomorfos | Leporidae | conejo_europeo | Conejo europeo | *Oryctolagus cuniculus* | Europa | Península Ibérica | Normal, Albino | No | Normal |
 | Lagomorfos | Leporidae | na_esp_brachylagus_idahoensis | Conejo pigmeo | *Brachylagus idahoensis* | Norteamérica | Montañas Rocosas | Normal | No | Normal, Notable |
+| Marinas y costeras | Phalacrocoracidae | af_cormoran_cabo | Cormorán del Cabo | *Phalacrocorax capensis* | África | Costa del Cabo, Desierto del Namib | Normal, Albino | No | Normal, Notable |
+| Marinas y costeras | Phalacrocoracidae | eu_esp_0654 | Cormorán grande | *Phalacrocorax carbo* | Europa | Islas Británicas, Escandinavia, Región del mar Báltico | Normal, Melánico | No | Normal, Notable |
+| Marinas y costeras | Phalacrocoracidae | gm06_leucocarbo_bougainvilliorum | Cormorán guanay | *Leucocarbo bougainvilliorum* | Sudamérica | Litoral del Pacífico suroriental | Normal | No | Normal, Notable, Épico, Excepcional |
+| Marinas y costeras | Phalacrocoracidae | gm06_nannopterum_harrisi | Cormorán no volador | *Nannopterum harrisi* | Sudamérica | Islas Galápagos | Normal | No | Normal, Notable, Épico, Excepcional |
+| Ribereñas y humedales | Threskiornithidae | sa_esp_eudocimus_ruber | Corocora roja | *Eudocimus ruber* | Sudamérica | Llanos del Orinoco | Normal | No | Normal, Notable |
 | Ungulados | Cervidae | corzo_europeo | Corzo europeo | *Capreolus capreolus* | Europa | Islas Británicas, Europa Occidental, Europa Central, Península Itálica, Región del mar Báltico | Normal, Macho, Hembra, Albino | Sí | Normal |
 | Ungulados | Cervidae | asia_esp_0086 | Corzo siberiano | *Capreolus pygargus* | Asia | Siberia Oriental, China Septentrional | Normal, Albino, Melánico | No | Normal, Notable |
 | Cánidos | Canidae | na_esp_canis_latrans | Coyote | *Canis latrans* | Norteamérica | Grandes Llanuras, Desierto de Sonora | Normal, Albino, Melánico | No | Normal, Notable |
@@ -178,9 +204,15 @@
 | Monotremas | Tachyglossidae | oc_esp_zaglossus_bartoni | Equidna de hocico largo oriental | *Zaglossus bartoni* | Oceanía | Nueva Guinea | Normal | No | Normal, Notable |
 | Eulipotiflos | Erinaceidae | af_xlsx_131_atelerix_algirus | Erizo argelino | *Atelerix algirus* | África | Magreb | Normal, Albino | No | Normal, Notable |
 | Eulipotiflos | Erinaceidae | erizo_europeo | Erizo europeo | *Erinaceus europaeus* | Europa | Islas Británicas | Normal, Albino | No | Normal |
+| Ribereñas y humedales | Threskiornithidae | na_esp_platalea_ajaja | Espátula rosada | *Platalea ajaja* | Norteamérica | Costa del golfo de México | Normal | No | Normal, Notable |
 | Ungulados | Suidae | af_facoquero | Facóquero común | *Phacochoerus africanus* | África | Sabana de África oriental, Sahel occidental, Bosques de miombo, Sabanas del sudeste africano, Sahel oriental | Normal, Albino, Melánico | No | Normal, Notable |
 | Cetáceos | Delphinidae | mar_esp_pseudorca_crassidens | Falsa orca | *Pseudorca crassidens* | Océanos | Océano Índico tropical, Pacífico suroccidental | Normal | No | Normal, Notable |
 | Cánidos | Canidae | af_fenec | Fénec | *Vulpes zerda* | África | Magreb, Montañas del Atlas, Desierto del Sáhara | Normal, Albino, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Phoenicopteridae | sa_esp_phoenicoparrus_andinus | Flamenco andino | *Phoenicoparrus andinus* | Sudamérica | Andes Centrales, Desierto de Atacama | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Phoenicopteridae | sa_esp_phoenicopterus_chilensis | Flamenco chileno | *Phoenicopterus chilensis* | Sudamérica | Desierto de Atacama | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Phoenicopteridae | flamenco_comun | Flamenco común | *Phoenicopterus roseus* | Asia | Mesopotamia | Normal, Albino | No | Normal |
+| Ribereñas y humedales | Phoenicopteridae | sa_esp_phoenicopterus_ruber | Flamenco del Caribe | *Phoenicopterus ruber* | Sudamérica, Norteamérica | Litoral caribeño sudamericano, Antillas y Caribe insular | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Phoenicopteridae | af_flamenco_enano | Flamenco enano | *Phoeniconaias minor* | África | Sabana de África oriental, Grandes Lagos africanos, Lagos del Rift | Normal, Albino | No | Normal, Notable |
 | Pinnípedos | Phocidae | polar_esp_pusa_hispida | Foca anillada | *Pusa hispida* | Polos, Norteamérica | Hielo ártico occidental, Hielo ártico central, Hielo ártico oriental, Bahía de Hudson | Normal | No | Normal, Notable |
 | Pinnípedos | Phocidae | polar_esp_erignathus_barbatus | Foca barbuda | *Erignathus barbatus* | Polos | Hielo ártico central | Normal | No | Normal, Notable |
 | Pinnípedos | Phocidae | polar_esp_lobodon_carcinophaga | Foca cangrejera | *Lobodon carcinophaga* | Polos, Océanos | Hielo antártico costero, Océano Austral occidental | Normal | No | Normal, Notable |
@@ -191,7 +223,10 @@
 | Pinnípedos | Phocidae | mar_esp_halichoerus_grypus | Foca gris | *Halichoerus grypus* | Océanos, Norteamérica | Atlántico septentrional, Atlántico canadiense | Normal | No | Normal, Notable |
 | Pinnípedos | Phocidae | polar_esp_hydrurga_leptonyx | Foca leopardo | *Hydrurga leptonyx* | Polos | Hielo antártico oriental | Normal | No | Normal, Notable |
 | Pinnípedos | Otariidae | oc_esp_arctocephalus_forsteri | Foca peletera neozelandesa | *Arctocephalus forsteri* | Oceanía, Océanos | Nueva Zelanda, Pacífico suroccidental | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Rallidae | eu_esp_0652 | Focha común | *Fulica atra* | Europa | Europa Occidental, Europa Central | Normal, Melánico | No | Normal, Notable |
 | Carnívoros terrestres | Eupleridae | af_fosa | Fosa | *Cryptoprocta ferox* | África | Madagascar | Normal, Albino, Melánico | No | Normal, Notable |
+| Marinas y costeras | Fregatidae | mar_esp_fregata_magnificens | Fragata magnífica | *Fregata magnificens* | Océanos | Pacífico nororiental, Archipiélagos tropicales | Normal | No | Normal, Notable |
+| Marinas y costeras | Alcidae | asia_esp_0209 | Frailecillo corniculado | *Fratercula corniculata* | Asia | Kamchatka | Normal, Albino, Melánico | No | Normal, Notable |
 | Ungulados | Bovidae | asia_esp_0214 | Gacela de Arabia | *Gazella arabica* | Asia | Península Arábiga | Normal, Melánico | No | Normal, Notable |
 | Ungulados | Bovidae | af_xlsx_gacela_cuvier | Gacela de Cuvier | *Gazella cuvieri* | África | Magreb, Montañas del Atlas | Normal, Albino | No | Normal, Notable |
 | Ungulados | Bovidae | af_xlsx_gacela_frente_roja | Gacela de frente roja | *Eudorcas rufifrons* | África | Sahel oriental | Normal, Albino | No | Normal, Notable |
@@ -203,7 +238,13 @@
 | Ungulados | Bovidae | asia_esp_0442 | Gacela tibetana | *Procapra picticaudata* | Asia | Meseta del Tíbet | Normal, Melánico | No | Normal, Notable |
 | Primates | Galagidae | af_galago | Gálago senegalés | *Galago senegalensis* | África | Sabana de África oriental, Sahel occidental, Grandes Lagos africanos | Normal, Albino, Melánico | No | Normal, Notable |
 | Ungulados | Cervidae | asia_esp_0149 | Gamo | *Dama dama* | Asia | Cáucaso | Normal, Macho, Hembra, Albino, Melánico | Sí | Normal, Notable |
+| Ribereñas y humedales | Anatidae | af_ganso_alas_azules | Ganso de alas azules | *Cyanochen cyanoptera* | África | Tierras altas de Etiopía | Normal, Albino | No | Normal, Notable |
+| Ribereñas y humedales | Ardeidae | af_xlsx_garceta | Garceta común | *Egretta garzetta* | África | Valle del Nilo | Normal, Albino | No | Normal, Notable |
 | Carnívoros terrestres | Mustelidae | eu_esp_0620 | Garduña | *Martes foina* | Europa | Europa Occidental, Europa Central, Península Ibérica | Normal, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Ardeidae | na_esp_ardea_herodias | Garza azulada | *Ardea herodias* | Norteamérica | Costa del golfo de México | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Ardeidae | sa_esp_ardea_cocoi | Garza cocoi | *Ardea cocoi* | Sudamérica | Llanos del Orinoco | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Ardeidae | af_garza_goliat | Garza goliat | *Ardea goliath* | África | Valle del Nilo, Grandes Lagos africanos, Delta del Okavango, Litoral sudoriental africano | Normal, Albino, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Ardeidae | garza_real | Garza real | *Ardea cinerea* | Asia | Mesopotamia | Normal, Albino | No | Normal |
 | Carnívoros terrestres | Mustelidae | eu_esp_0625 | Gato almizclero europeo | *Vormela peregusna* | Europa | Europa Oriental, Balcanes | Normal, Melánico | No | Normal, Notable |
 | Felinos | Felidae | sa_esp_leopardus_jacobita | Gato andino | *Leopardus jacobita* | Sudamérica | Andes Centrales | Normal | No | Normal, Notable |
 | Felinos | Felidae | asia_esp_0205 | Gato de la jungla | *Felis chaus* | Asia | Mesopotamia | Normal, Melánico | No | Normal, Notable |
@@ -218,6 +259,8 @@
 | Felinos | Felidae | asia_esp_0816 | Gato pescador | *Prionailurus viverrinus* | Asia | Subcontinente Indio, Sudeste Asiático | Normal | No | Normal, Notable |
 | Ungulados | Bovidae | asia_esp_0061 | Gaur | *Bos gaurus* | Asia | Subcontinente Indio | Normal, Melánico | No | Normal, Notable |
 | Rapaces | Accipitridae | eu_esp_0644 | Gavilán común | *Accipiter nisus* | Europa | Europa Occidental, Europa Central, Región del mar Báltico | Normal, Melánico | No | Normal, Notable |
+| Marinas y costeras | Laridae | polar_esp_pagophila_eburnea | Gaviota marfil | *Pagophila eburnea* | Polos | Hielo ártico occidental, Hielo ártico central | Normal | No | Normal, Notable |
+| Marinas y costeras | Laridae | gm06_larosterna_inca | Gaviotín inca | *Larosterna inca* | Sudamérica | Litoral del Pacífico suroriental | Normal | No | Normal, Notable, Épico, Excepcional |
 | Primates | Cercopithecidae | af_gelada | Gelada | *Theropithecus gelada* | África | Tierras altas de Etiopía | Normal, Macho, Hembra, Albino | Sí | Normal, Notable |
 | Ungulados | Bovidae | af_gerenuc | Gerenuc | *Litocranius walleri* | África | Cuerno de África | Normal, Melánico | No | Normal, Notable |
 | Primates | Hylobatidae | asia_esp_0854 | Gibón de cresta negra | *Nomascus concolor* | Asia | China Meridional, Sudeste Asiático | Normal | No | Normal, Notable |
@@ -227,6 +270,12 @@
 | Carnívoros terrestres | Mustelidae | gloton | Glotón | *Gulo gulo* | Europa, Asia, Norteamérica | Escandinavia, Siberia Occidental, Siberia Central, Montes Urales, Alaska, Yukón, Labrador subártico | Normal, Albino | No | Normal |
 | Primates | Hominidae | af_gorila_occidental | Gorila occidental | *Gorilla gorilla* | África | Cuenca del Congo, Bosques atlánticos ecuatoriales | Normal, Albino, Melánico | No | Normal, Notable |
 | Ungulados | Bovidae | af_gran_kudu | Gran kudú | *Tragelaphus strepsiceros* | África | Lagos del Rift, Sabanas del sudeste africano | Normal, Melánico | No | Normal, Notable, Épico, Excepcional |
+| Ribereñas y humedales | Gruidae | af_grulla_carunculada | Grulla carunculada | *Grus carunculata* | África | Humedales de Bangweulu | Normal, Albino | No | Normal, Notable |
+| Ribereñas y humedales | Gruidae | af_grulla_coronada | Grulla coronada gris | *Balearica regulorum* | África | Grandes Lagos africanos, Delta del Okavango, Lagos del Rift, Humedales de Bangweulu | Normal, Albino, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Gruidae | asia_esp_0020 | Grulla damisela | *Anthropoides virgo* | Asia | Mongolia | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Gruidae | asia_esp_0226 | Grulla de coronilla roja | *Grus japonensis* | Asia | China Septentrional, Península de Corea, Archipiélago Japonés | Normal, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Gruidae | asia_esp_0227 | Grulla de cuello negro | *Grus nigricollis* | Asia | Meseta del Tíbet | Normal, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Gruidae | asia_esp_0287 | Grulla siberiana | *Leucogeranus leucogeranus* | Asia | Siberia Occidental | Normal | No | Normal, Notable |
 | Ungulados | Camelidae | sa_esp_lama_guanicoe | Guanaco | *Lama guanicoe* | Sudamérica | Andes Centrales, Desierto de Atacama, Patagonia y Tierra del Fuego | Normal | No | Normal, Notable |
 | Felinos | Felidae | af_guepardo | Guepardo | *Acinonyx jubatus* | África | Sabana de África oriental, Kalahari y sabana austral, Bosques de miombo, Lagos del Rift, Sahel oriental | Normal, Albino, Melánico | No | Normal, Notable |
 | Rapaces | Falconidae | eu_esp_0647 | Halcón de Eleonor | *Falco eleonorae* | Europa | Península Ibérica, Península Itálica | Normal, Melánico | No | Normal, Notable |
@@ -244,10 +293,14 @@
 | Ungulados | Bovidae | ibice_alpino | Íbice alpino | *Capra ibex* | Europa | Alpes | Normal, Macho, Hembra | Sí | Normal, Notable |
 | Ungulados | Bovidae | gm06_capra_nubiana | Íbice de Nubia | *Capra nubiana* | África | Arco del mar Rojo | Normal | No | Normal, Notable, Épico, Excepcional |
 | Ungulados | Bovidae | af_ibice_walia | Íbice de Walia | *Capra walie* | África | Tierras altas de Etiopía | Normal, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Threskiornithidae | af_ibis_sagrado | Ibis sagrado africano | *Threskiornis aethiopicus* | África | Valle del Nilo, Tierras altas de Etiopía | Normal, Albino, Melánico | No | Normal, Notable |
 | Ungulados | Bovidae | af_impala | Impala | *Aepyceros melampus* | África | Sabanas del sudeste africano | Normal, Albino | No | Normal, Notable |
 | Primates | Indriidae | af_indri | Indri | *Indri indri* | África | Madagascar | Normal, Albino, Melánico | No | Normal, Notable |
 | Ungulados | Suidae | jabali | Jabalí | *Sus scrofa* | Europa, Asia, África | Europa Occidental, Europa Central, Península Ibérica, Europa Oriental, Península Itálica, Balcanes, Cáucaso, Anatolia, Mesopotamia, China Septentrional, Península de Corea, Magreb | Normal, Albino | No | Normal, Notable, Épico |
 | Ungulados | Suidae | asia_esp_0834 | Jabalí barbudo | *Sus barbatus* | Asia | Sudeste Asiático | Normal, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Ciconiidae | sa_esp_jabiru_mycteria | Jabirú | *Jabiru mycteria* | Sudamérica | Pantanal | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Jacanidae | af_jacana_africana | Jacana africana | *Actophilornis africanus* | África | Delta del Okavango, Lagos del Rift, Humedales de Bangweulu | Normal, Albino | No | Normal, Notable |
+| Ribereñas y humedales | Jacanidae | sa_esp_jacana_jacana | Jacana común | *Jacana jacana* | Sudamérica | Pantanal | Normal | No | Normal, Notable |
 | Felinos | Felidae | na_esp_panthera_onca | Jaguar | *Panthera onca* | Norteamérica, Sudamérica | Sierra Madre, Península de Yucatán, América Central, Llanos del Orinoco, Amazonía, Pantanal, Cerrado brasileño, Darién y Chocó | Normal, Albino, Melánico | No | Normal, Notable, Épico, Excepcional |
 | Felinos | Felidae | na_esp_herpailurus_yagouaroundi | Jaguarundi | *Herpailurus yagouaroundi* | Norteamérica | Península de Yucatán, América Central | Normal | No | Normal, Notable |
 | Roedores | Dipodidae | asia_esp_0194 | Jerbo de orejas largas | *Euchoreutes naso* | Asia | Desierto de Gobi, Estepas de Asia Central | Normal, Albino, Melánico | No | Normal, Notable |
@@ -327,6 +380,9 @@
 | Carnívoros terrestres | Mustelidae | asia_esp_0326 | Marta cibelina | *Martes zibellina* | Asia | Siberia Occidental, Siberia Central, Montes Urales, Siberia Oriental | Normal, Albino | No | Normal |
 | Carnívoros terrestres | Mustelidae | asia_esp_0850 | Marta de garganta amarilla | *Martes flavigula* | Asia | Himalaya, Sudeste Asiático | Normal, Melánico | No | Normal, Notable |
 | Carnívoros terrestres | Mustelidae | eu_esp_0621 | Marta europea | *Martes martes* | Europa | Escandinavia, Europa Occidental, Europa Central | Normal, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Alcedinidae | martin_pescador | Martín pescador común | *Alcedo atthis* | Europa | Islas Británicas, Península Ibérica | Normal, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Alcedinidae | af_martin_malaquita | Martín pescador malaquita | *Corythornis cristatus* | África | Litoral sudoriental africano | Normal, Albino | No | Normal, Notable |
+| Ribereñas y humedales | Alcedinidae | af_xlsx_martin_pio | Martín pescador pío | *Ceryle rudis* | África | Valle del Nilo | Normal, Albino | No | Normal, Notable |
 | Carnívoros terrestres | Herpestidae | meloncillo | Meloncillo | *Herpestes ichneumon* | Europa | Península Ibérica | Normal, Melánico | No | Normal |
 | Rapaces | Accipitridae | milano_real | Milano real | *Milvus milvus* | Europa | Europa Occidental, Península Ibérica | Normal, Albino, Melánico | No | Normal |
 | Rapaces | Strigidae | eu_esp_0645 | Mochuelo europeo | *Athene noctua* | Europa | Europa Occidental, Península Ibérica | Normal, Melánico | No | Normal, Notable |
@@ -392,6 +448,7 @@
 | Carnívoros terrestres | Ursidae | asia_esp_0523 | Oso negro asiático | *Ursus thibetanus* | Asia | Himalaya, China Meridional, Península de Corea, Archipiélago Japonés | Normal, Melánico | No | Normal, Notable |
 | Carnívoros terrestres | Ursidae | oso_pardo | Oso pardo | *Ursus arctos* | Europa, Asia, Norteamérica | Escandinavia, Península Itálica, Balcanes, Cáucaso, Anatolia, Siberia Occidental, Siberia Central, Montes Urales, Siberia Oriental, Kamchatka, Desierto de Gobi, Meseta de Irán, Alaska, Columbia Británica | Normal | No | Normal, Notable |
 | Carnívoros terrestres | Ursidae | polar_esp_ursus_maritimus | Oso polar | *Ursus maritimus* | Polos, Norteamérica | Hielo ártico occidental, Hielo ártico central, Hielo ártico oriental, Bahía de Hudson | Normal | No | Normal, Notable |
+| Marinas y costeras | Haematopodidae | af_ostrero_africano | Ostrero africano | *Haematopus moquini* | África | Costa del Cabo, Desierto del Namib | Normal, Albino | No | Normal, Notable |
 | Marsupiales | Macropodidae | oc_esp_thylogale_billardierii | Pademelón de Tasmania | *Thylogale billardierii* | Oceanía | Tasmania | Normal | No | Normal, Notable |
 | Carnívoros terrestres | Ursidae | asia_esp_0006 | Panda gigante | *Ailuropoda melanoleuca* | Asia | China Meridional | Normal | No | Normal, Notable |
 | Carnívoros terrestres | Ailuridae | asia_esp_0007 | Panda rojo | *Ailurus fulgens* | Asia | Himalaya | Normal, Albino, Melánico | No | Normal, Notable |
@@ -401,15 +458,46 @@
 | Pangolines | Manidae | asia_esp_0852 | Pangolín indio | *Manis crassicaudata* | Asia | Subcontinente Indio | Normal | No | Normal, Notable |
 | Pangolines | Manidae | asia_esp_0317 | Pangolín malayo | *Manis javanica* | Asia | Sudeste Asiático | Normal, Melánico | No | Normal, Notable |
 | Pangolines | Manidae | af_pangolin_temminck | Pangolín terrestre | *Smutsia temminckii* | África | Kalahari y sabana austral, Bosques de miombo | Normal | No | Normal, Notable |
+| Marinas y costeras | Procellariidae | mar_esp_ardenna_grisea | Pardela sombría | *Ardenna grisea* | Océanos | Pacífico austral, Océano Austral occidental | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Anatidae | gm06_histrionicus_histrionicus | Pato arlequín | *Histrionicus histrionicus* | Norteamérica | Labrador subártico, Atlántico canadiense | Normal | No | Normal, Notable, Épico, Excepcional |
+| Ribereñas y humedales | Anatidae | eu_esp_0649 | Pato cuchara europeo | *Spatula clypeata* | Europa | Islas Británicas, Región del mar Báltico | Normal, Macho, Hembra, Melánico | Sí | Normal, Notable |
+| Marinas y costeras | Anatidae | polar_esp_somateria_mollissima | Pato eider común | *Somateria mollissima* | Polos, Océanos | Hielo ártico occidental, Atlántico septentrional | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Anatidae | na_esp_aix_sponsa | Pato joyuyo | *Aix sponsa* | Norteamérica | Región de los Grandes Lagos, Bosques del este norteamericano | Normal, Macho, Hembra, Albino | Sí | Normal, Notable |
+| Ribereñas y humedales | Anatidae | asia_esp_0891 | Pato mandarín | *Aix galericulata* | Asia | China Septentrional, Península de Corea, Archipiélago Japonés | Normal, Macho, Hembra, Melánico | Sí | Normal, Notable |
+| Ribereñas y humedales | Anatidae | sa_esp_cairina_moschata | Pato real | *Cairina moschata* | Sudamérica | Amazonía, Pantanal | Normal, Macho, Hembra, Albino | Sí | Normal, Notable |
+| Marinas y costeras | Anatidae | gm06_tachyeres_pteneres | Pato vapor no volador | *Tachyeres pteneres* | Sudamérica | Patagonia y Tierra del Fuego | Normal | No | Normal, Notable, Épico, Excepcional |
 | Ungulados | Tayassuidae | na_esp_dicotyles_tajacu | Pecarí de collar | *Dicotyles tajacu* | Norteamérica, Sudamérica | Desierto de Sonora, Península de Yucatán, Litoral caribeño sudamericano, Amazonía, Pantanal | Normal | No | Normal, Notable |
 | Ungulados | Tayassuidae | sa_esp_tayassu_pecari | Pecarí de labios blancos | *Tayassu pecari* | Sudamérica | Litoral caribeño sudamericano, Amazonía, Pantanal | Normal | No | Normal, Notable |
+| Marinas y costeras | Pelecanidae | oc_esp_pelecanus_conspicillatus | Pelícano australiano | *Pelecanus conspicillatus* | Oceanía | Australia tropical septentrional, Australia Occidental | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Pelecanidae | af_pelicano_blanco | Pelícano blanco | *Pelecanus onocrotalus* | África | Valle del Nilo, Grandes Lagos africanos, Delta del Okavango, Lagos del Rift, Humedales de Bangweulu | Normal, Albino | No | Normal, Notable |
+| Marinas y costeras | Pelecanidae | na_esp_pelecanus_erythrorhynchos | Pelícano blanco americano | *Pelecanus erythrorhynchos* | Norteamérica | Grandes Llanuras, Región de los Grandes Lagos | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Pelecanidae | asia_esp_0888 | Pelícano blanco oriental | *Pelecanus philippensis* | Asia | Subcontinente Indio, Sudeste Asiático | Normal, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Pelecanidae | pelicano_cenudo | Pelícano ceñudo | *Pelecanus crispus* | Asia | Mesopotamia | Normal | No | Normal, Notable |
+| Marinas y costeras | Pelecanidae | na_esp_pelecanus_occidentalis | Pelícano pardo | *Pelecanus occidentalis* | Norteamérica, Sudamérica | Costa del golfo de México, Litoral caribeño sudamericano | Normal | No | Normal, Notable |
+| Marinas y costeras | Pelecanidae | gm06_pelecanus_thagus | Pelícano peruano | *Pelecanus thagus* | Sudamérica | Litoral del Pacífico suroriental | Normal | No | Normal, Notable, Épico, Excepcional |
 | Perezosos y osos hormigueros | Choloepodidae | sa_esp_choloepus_didactylus | Perezoso de dos dedos | *Choloepus didactylus* | Sudamérica | Amazonía | Normal | No | Normal, Notable |
 | Perezosos y osos hormigueros | Bradypodidae | na_esp_bradypus_variegatus | Perezoso de tres dedos | *Bradypus variegatus* | Norteamérica, Sudamérica | América Central, Amazonía | Normal | No | Normal, Notable |
 | Roedores | Sciuridae | na_esp_cynomys_ludovicianus | Perrito de las praderas de cola negra | *Cynomys ludovicianus* | Norteamérica | Grandes Llanuras | Normal | No | Normal, Notable |
 | Cánidos | Canidae | sa_esp_speothos_venaticus | Perro de monte | *Speothos venaticus* | Sudamérica | Amazonía, Pantanal | Normal | No | Normal, Notable |
 | Marsupiales | Petauridae | oc_esp_petaurus_breviceps | Petauro del azúcar | *Petaurus breviceps* | Oceanía | Australia Oriental | Normal | No | Normal, Notable |
+| Marinas y costeras | Procellariidae | polar_esp_pagodroma_nivea | Petrel de las nieves | *Pagodroma nivea* | Polos | Hielo antártico occidental, Hielo antártico central, Hielo antártico costero, Hielo antártico oriental | Normal | No | Normal, Notable |
+| Marinas y costeras | Procellariidae | mar_esp_macronectes_giganteus | Petrel gigante austral | *Macronectes giganteus* | Océanos | Océano Austral central | Normal | No | Normal, Notable |
 | Lagomorfos | Ochotonidae | na_esp_ochotona_princeps | Pica americana | *Ochotona princeps* | Norteamérica | Montañas Rocosas | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Balaenicipitidae | af_picozapato | Picozapato | *Balaeniceps rex* | África | Grandes Lagos africanos, Humedales de Bangweulu | Normal | No | Normal, Notable, Épico |
 | Rapaces | Accipitridae | af_aguila_pescadora | Pigargo vocinglero | *Icthyophaga vocifer* | África | Sabana de África oriental, Delta del Okavango, Litoral sudoriental africano, Lagos del Rift, Humedales de Bangweulu | Normal, Albino, Melánico | No | Normal, Notable |
+| Marinas y costeras | Spheniscidae | af_pinguino_africano | Pingüino africano | *Spheniscus demersus* | África | Costa del Cabo | Normal, Albino, Melánico | No | Normal, Notable |
+| Marinas y costeras | Spheniscidae | mar_esp_pygoscelis_antarcticus | Pingüino barbijo | *Pygoscelis antarcticus* | Océanos | Océano Austral central | Normal | No | Normal, Notable |
+| Marinas y costeras | Spheniscidae | polar_esp_pygoscelis_adeliae | Pingüino de Adelia | *Pygoscelis adeliae* | Polos | Hielo antártico occidental, Hielo antártico central, Hielo antártico costero, Hielo antártico oriental | Normal | No | Normal, Notable |
+| Marinas y costeras | Spheniscidae | gm06_spheniscus_mendiculus | Pingüino de Galápagos | *Spheniscus mendiculus* | Sudamérica | Islas Galápagos | Normal | No | Normal, Notable, Épico, Excepcional |
+| Marinas y costeras | Spheniscidae | gm06_spheniscus_humboldti | Pingüino de Humboldt | *Spheniscus humboldti* | Sudamérica | Litoral del Pacífico suroriental | Normal | No | Normal, Notable, Épico, Excepcional |
+| Marinas y costeras | Spheniscidae | sa_esp_spheniscus_magellanicus | Pingüino de Magallanes | *Spheniscus magellanicus* | Sudamérica, Océanos | Patagonia y Tierra del Fuego, Atlántico austral | Normal | No | Normal, Notable |
+| Marinas y costeras | Spheniscidae | oc_esp_megadyptes_antipodes | Pingüino de ojos amarillos | *Megadyptes antipodes* | Oceanía, Océanos | Nueva Zelanda, Pacífico suroccidental | Normal | No | Normal, Notable |
+| Marinas y costeras | Spheniscidae | polar_esp_aptenodytes_forsteri | Pingüino emperador | *Aptenodytes forsteri* | Polos, Océanos | Hielo antártico occidental, Hielo antártico central, Hielo antártico costero, Hielo antártico oriental, Océano Austral central | Normal | No | Normal, Notable |
+| Marinas y costeras | Spheniscidae | mar_esp_pygoscelis_papua | Pingüino papúa | *Pygoscelis papua* | Océanos | Océano Austral occidental | Normal | No | Normal, Notable |
+| Marinas y costeras | Spheniscidae | mar_esp_aptenodytes_patagonicus | Pingüino rey | *Aptenodytes patagonicus* | Océanos | Océano Austral occidental, Océano Austral central | Normal | No | Normal, Notable |
+| Marinas y costeras | Spheniscidae | mar_esp_eudyptes_filholi | Pingüino saltarrocas oriental | *Eudyptes filholi* | Océanos | Pacífico austral, Océano Austral central | Normal | No | Normal, Notable |
+| Marinas y costeras | Sulidae | gm06_sula_nebouxii | Piquero de patas azules | *Sula nebouxii* | Sudamérica | Islas Galápagos | Normal | No | Normal, Notable, Épico, Excepcional |
+| Marinas y costeras | Sulidae | gm06_sula_variegata | Piquero peruano | *Sula variegata* | Sudamérica | Litoral del Pacífico suroriental | Normal | No | Normal, Notable, Épico, Excepcional |
 | Marsupiales | Phalangeridae | oc_esp_trichosurus_vulpecula | Possum cola de cepillo | *Trichosurus vulpecula* | Oceanía | Tasmania, Australia Oriental | Normal | No | Normal, Notable |
 | Ungulados | Suidae | af_potamoquero | Potamóquero rojo | *Potamochoerus porcus* | África | Bosques atlánticos ecuatoriales | Normal, Melánico | No | Normal, Notable |
 | Ungulados | Cervidae | sa_esp_pudella_mephistophiles | Pudu del norte | *Pudella mephistophiles* | Sudamérica | Andes del Norte | Normal, Macho, Hembra | Sí | Normal, Notable |
@@ -439,7 +527,9 @@
 | Felinos | Felidae | af_serval | Serval | *Leptailurus serval* | África | Magreb, Sabana de África oriental, Grandes Lagos africanos | Normal, Albino, Melánico | No | Normal, Notable |
 | Primates | Indriidae | af_sifaka | Sifaca de Verreaux | *Propithecus verreauxi* | África | Madagascar | Normal, Albino, Melánico | No | Normal, Notable |
 | Ungulados | Bovidae | af_sitatunga | Sitatunga | *Tragelaphus spekii* | África | Delta del Okavango, Humedales de Bangweulu | Normal, Melánico | No | Normal, Notable |
+| Marinas y costeras | Stercorariidae | polar_esp_stercorarius_maccormicki | Skúa polar austral | *Stercorarius maccormicki* | Polos | Hielo antártico occidental, Hielo antártico central | Normal | No | Normal, Notable |
 | Eulipotiflos | Solenodontidae | gm06_solenodon_paradoxus | Solenodonte de La Española | *Solenodon paradoxus* | Norteamérica | Antillas y Caribe insular | Normal | No | Normal, Notable, Épico, Excepcional |
+| Ribereñas y humedales | Podicipedidae | eu_esp_0650 | Somormujo lavanco | *Podiceps cristatus* | Europa | Europa Occidental, Región del mar Báltico | Normal, Melánico | No | Normal, Notable |
 | Ungulados | Bovidae | af_springbok | Springbok | *Antidorcas marsupialis* | África | Kalahari y sabana austral, Desierto del Namib | Normal, Albino, Melánico | No | Normal, Notable |
 | Carnívoros terrestres | Herpestidae | af_suricata | Suricata | *Suricata suricatta* | África | Kalahari y sabana austral, Desierto del Namib, Sabanas del sudeste africano | Normal, Albino, Melánico | No | Normal, Notable, Épico |
 | Ungulados | Bovidae | asia_esp_0240 | Tahr del Himalaya | *Hemitragus jemlahicus* | Asia | Himalaya | Normal, Albino, Melánico | No | Normal, Notable |
@@ -461,6 +551,7 @@
 | Carnívoros terrestres | Mustelidae | af_xlsx_131_mellivora_capensis | Tejón melero | *Mellivora capensis* | África | Kalahari y sabana austral, Bosques de miombo | Normal, Albino | No | Normal, Notable |
 | Afrosorícidos | Tenrecidae | af_tenrec | Tenrec común | *Tenrec ecaudatus* | África | Madagascar | Normal, Albino, Melánico | No | Normal, Notable |
 | Roedores | Cuniculidae | na_esp_cuniculus_paca | Tepezcuintle | *Cuniculus paca* | Norteamérica | Península de Yucatán, América Central | Normal | No | Normal, Notable |
+| Ribereñas y humedales | Charadriidae | sa_esp_vanellus_chilensis | Tero | *Vanellus chilensis* | Sudamérica | Pampas | Normal | No | Normal, Notable |
 | Felinos | Felidae | asia_esp_0402 | Tigre siberiano | *Panthera tigris* | Asia | Siberia Oriental, China Septentrional, Subcontinente Indio, Sudeste Asiático | Normal, Albino, Melánico | No | Normal, Notable, Épico, Excepcional, Legendario · Ámbar |
 | Felinos | Felidae | sa_esp_leopardus_tigrinus | Tigrillo | *Leopardus tigrinus* | Sudamérica | Andes del Norte, Amazonía | Normal, Melánico | No | Normal, Notable |
 | Felinos | Felidae | na_esp_leopardus_wiedii | Tigrillo margay | *Leopardus wiedii* | Norteamérica | Península de Yucatán, América Central | Normal | No | Normal, Notable |
@@ -489,6 +580,7 @@
 | Ungulados | Cervidae | na_esp_cervus_canadensis | Wapití | *Cervus canadensis* | Norteamérica | Montañas Rocosas | Normal, Macho, Hembra, Albino | Sí | Normal, Notable |
 | Marsupiales | Vombatidae | oc_esp_vombatus_ursinus | Wómbat común | *Vombatus ursinus* | Oceanía | Tasmania, Australia Oriental | Normal, Albino | No | Normal, Notable |
 | Ungulados | Bovidae | asia_esp_0062 | Yak salvaje | *Bos mutus* | Asia | Himalaya, Meseta del Tíbet | Normal, Melánico | No | Normal, Notable |
+| Ribereñas y humedales | Podicipedidae | eu_esp_0653 | Zampullín común | *Tachybaptus ruficollis* | Europa | Europa Occidental, Península Ibérica | Normal, Melánico | No | Normal, Notable |
 | Marsupiales | Didelphidae | na_esp_didelphis_marsupialis | Zarigüeya común | *Didelphis marsupialis* | Norteamérica | América Central | Normal | No | Normal, Notable |
 | Marsupiales | Didelphidae | na_esp_didelphis_virginiana | Zarigüeya de Virginia | *Didelphis virginiana* | Norteamérica | Bosques del este norteamericano, Costa del golfo de México | Normal, Albino | No | Normal, Notable |
 | Marsupiales | Petauridae | oc_esp_dactylopsila_trivirgata | Zarigüeya listada | *Dactylopsila trivirgata* | Oceanía | Costa nordeste australiana | Normal | No | Normal, Notable |

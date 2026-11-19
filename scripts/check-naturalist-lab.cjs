@@ -53,7 +53,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#category').selectOption('Notable');
       await page.locator('.mixed-field .atlas-art-image').evaluate(img => img.decode());
       assert.equal(await page.locator('.mixed-field .field-animal-sprite > svg').count(), 1);
-      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Martín pescador común · SVG/);
+      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Mirlo común · SVG/);
       const art = page.locator('.mixed-field .plate');
       const image = art.locator('.atlas-art-image');
       const src = await image.getAttribute('src');
@@ -84,7 +84,27 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 510);
+      assert.equal(await page.locator('.gallery-card').count(), 602);
+      await page.locator('#group').selectOption('Marinas y costeras');
+      assert.equal(await page.locator('.gallery-card').count(), 42);
+      await page.locator('#bird-order').selectOption('Sphenisciformes');
+      assert.equal(await page.locator('.gallery-card').count(), 11);
+      await page.locator('#group').selectOption('Ribereñas y humedales');
+      assert.equal(await page.locator('.gallery-card').count(), 50);
+      await page.locator('#family').selectOption('Anatidae');
+      assert.equal(await page.locator('.gallery-card').count(), 12);
+      await page.locator('[data-mode=variants]').click();
+      await page.locator('#species').selectOption('eu_esp_0649');
+      assert.deepEqual(await page.locator('#content figcaption').allTextContents(), ['Normal', 'Macho', 'Hembra', 'Melánico']);
+      await page.locator('#comparison-size').selectOption('128');
+      await page.locator('#backdrop').selectOption('dark');
+      const shoveler = page.locator('.variants img');
+      await shoveler.evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
+      assert.deepEqual(await shoveler.evaluateAll(imgs => imgs.map(img => img.naturalWidth)), [128, 128, 128, 128]);
+      if (process.argv.includes('--write-evidence')) {
+        await page.locator('.variants').screenshot({ path: 'docs/cientifica-v471/pato-cuchara-' + viewport.width + '.jpg' });
+      }
+      await page.locator('[data-mode=gallery]').click();
       await page.locator('#group').selectOption('Rapaces');
       assert.equal(await page.locator('.gallery-card').count(), 49);
       await page.locator('#bird-order').selectOption('Strigiformes');
@@ -104,19 +124,30 @@ const server = http.createServer((req, res) => {
       const condor = page.locator('#content .atlas-art-image');
       assert.deepEqual((await condor.evaluateAll(imgs => imgs.map(img => img.getAttribute('src'))))
         .map(src => src.split('--')[1]), ['normal.webp', 'male.webp', 'female.webp']);
-      await page.locator('[data-mode=raptors]').click();
-      await page.locator('#raptor-set').selectOption('horned-owls');
-      await page.locator('#raptor-size').selectOption('64');
-      const owlCards = page.locator('.raptor-comparison figure');
+      await page.locator('[data-mode=birds]').click();
+      await page.locator('#bird-set').selectOption('banded-penguins');
+      await page.locator('#comparison-size').selectOption('64');
+      const penguinCards = page.locator('.bird-comparison figure');
+      assert.equal(await penguinCards.count(), 4);
+      assert.deepEqual(await penguinCards.locator('img').evaluateAll(imgs => imgs.map(img => img.clientWidth)), [64, 64, 64, 64]);
+      assert.match(await penguinCards.nth(2).innerText(), /Spheniscus magellanicus[\s\S]*Dos bandas/);
+      if (process.argv.includes('--write-evidence')) {
+        await page.locator('#comparison-size').selectOption('256');
+        await penguinCards.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
+        await page.locator('.bird-comparison').screenshot({ path: 'docs/cientifica-v471/comparacion-pinguinos-' + viewport.width + '.jpg' });
+      }
+      await page.locator('#bird-set').selectOption('horned-owls');
+      await page.locator('#comparison-size').selectOption('64');
+      const owlCards = page.locator('.bird-comparison figure');
       assert.equal(await owlCards.count(), 3);
       assert.deepEqual(await owlCards.locator('img').evaluateAll(imgs => imgs.map(img => img.clientWidth)), [64, 64, 64]);
       assert.match(await owlCards.first().innerText(), /Bubo bubo[\s\S]*Ojos anaranjados/);
       await page.locator('#backdrop').selectOption('dark');
-      await page.locator('#raptor-size').selectOption('256');
+      await page.locator('#comparison-size').selectOption('256');
       await owlCards.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), viewport.width);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.raptor-comparison').screenshot({ path: 'docs/cientifica-v470/comparacion-buhos-' + viewport.width + '.jpg' });
+        await page.locator('.bird-comparison').screenshot({ path: 'docs/cientifica-v471/comparacion-buhos-' + viewport.width + '.jpg' });
       }
       await page.locator('#backdrop').selectOption('light');
       await page.locator('[data-mode=gallery]').click();
@@ -178,7 +209,7 @@ const server = http.createServer((req, res) => {
       await page.locator('.comparison-styles img').evaluate(image => image.decode());
       assert.equal(await page.locator('.legacy-sprite svg').count(), 1);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v470/comparacion-inia-' + viewport.width + '.jpg' });
+        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v471/comparacion-inia-' + viewport.width + '.jpg' });
       }
       await page.locator('[data-mode=bestiary]').click();
       await page.locator('.bestiary-entry .landscape-rio').evaluate(image => image.decode());
@@ -205,7 +236,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#backdrop').selectOption('dark');
       assert.notEqual(await comparison.evaluate(node => getComputedStyle(node).backgroundColor), light);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v470/comparacion-' + viewport.width + '.jpg' });
+        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v471/comparacion-' + viewport.width + '.jpg' });
       }
       await page.locator('#search').fill('');
       await page.locator('[data-mode=frames]').click();
@@ -251,7 +282,7 @@ const server = http.createServer((req, res) => {
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 510);
+      assert.equal(await page.locator('.gallery-card').count(), 602);
       await page.locator('#cut-state').selectOption('pending');
       assert.equal(await page.locator('.gallery-card').count(),
         expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);
@@ -292,7 +323,7 @@ const server = http.createServer((req, res) => {
       assert.ok(plates.every(([width, height]) => width === 512 && height === 512));
       assert.deepEqual(errors, []);
       await session.close();
-      console.log('PASS', viewport.width, 'px: trece modos, filtros, comparación de rapaces y exportación offline; primera lámina', firstRender, 'ms');
+      console.log('PASS', viewport.width, 'px: trece modos, filtros, comparación de aves y exportación offline; primera lámina', firstRender, 'ms');
     }
   } finally { await browser.close(); server.close(); }
 })().catch(error => { console.error(error); server.close(); process.exitCode = 1; });

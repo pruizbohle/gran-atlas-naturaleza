@@ -12,13 +12,13 @@ const context = byId('context');
 const scalePlate = byId('scale-plate');
 const category = byId('category');
 const mixedSvg = byId('mixed-svg');
-const raptorSet = byId('raptor-set');
-const raptorSize = byId('raptor-size');
+const birdSet = byId('bird-set');
+const comparisonSize = byId('comparison-size');
 const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
   gallery: 'Galería', variants: 'Variantes', frames: 'Ejemplares especiales',
-  compare: 'Comparar estilos', raptors: 'Comparar rapaces',
+  compare: 'Comparar estilos', birds: 'Comparar aves',
   compression: 'Compresión WebP', scale: 'Escala real', review: 'Revisión artística'
 };
 const frames = {
@@ -47,9 +47,8 @@ byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + m
   migrationProgress.mammals + ' mamíferos · ' + migrationProgress.birdsMigrated + ' de ' +
   migrationProgress.birds + ' aves';
 for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
-selectOptions(birdOrder, [['', 'Todos'], ...[...new Set(catalog.flatMap(sp => sp.order ? [sp.order] : []))]
-  .sort().map(name => [name, name])]);
-selectOptions(raptorSet, Object.entries(raptorComparisons).map(([key, set]) => [key, set.label]));
+selectOptions(birdSet, Object.entries(birdComparisons).map(([key, set]) => [key, set.label]));
+updateOrders();
 updateFamilies();
 updateSpecies();
 for (const sp of mixedFieldSprites) mixedSvg.add(new Option(sp.name, sp.id));
@@ -79,8 +78,12 @@ function matchingPlates(sp) {
   });
 }
 
+function matchesGroup(sp) {
+  return !group.value || sp.group === group.value;
+}
+
 function matchesTaxonomy(sp) {
-  return (!group.value || sp.group === group.value) && (!birdOrder.value || sp.order === birdOrder.value);
+  return matchesGroup(sp) && (!birdOrder.value || sp.order === birdOrder.value);
 }
 
 function matchingSpecies() {
@@ -88,6 +91,11 @@ function matchingSpecies() {
   return catalog.filter(sp => matchesTaxonomy(sp) &&
     (!family.value || sp.family === family.value) && matchingPlates(sp).length &&
     normalize(sp.name + ' ' + sp.latin).includes(query));
+}
+
+function updateOrders() {
+  const orders = [...new Set(catalog.filter(sp => sp.order && matchesGroup(sp)).map(sp => sp.order))].sort();
+  selectOptions(birdOrder, [['', 'Todos'], ...orders.map(order => [order, order])]);
 }
 
 function updateFamilies() {
@@ -220,15 +228,15 @@ function compareStyles(sp) {
     figure(current, 'Científica clásica') + '</div>';
 }
 
-function compareRaptors() {
-  const size = Number(raptorSize.value);
-  const cards = raptorComparisons[raptorSet.value].birds.map(({ id, trait }) => {
+function compareBirds() {
+  const size = Number(comparisonSize.value);
+  const cards = birdComparisons[birdSet.value].birds.map(({ id, trait }) => {
     const sp = catalog.find(item => item.id === id);
     return '<figure>' + illustration(sp, specimenPlate(sp, 'Normal'), 'Normal', size, true) +
       '<figcaption><strong>' + text(sp.name) + '</strong><p class="latin">' + text(sp.latin) +
       '</p><p>' + text(trait) + '</p></figcaption></figure>';
   });
-  return '<div class="comparison-styles review-comparison raptor-comparison" style="--raptor-size:' +
+  return '<div class="comparison-styles review-comparison bird-comparison" style="--comparison-size:' +
     size + 'px">' + cards.join('') + '</div>';
 }
 
@@ -264,28 +272,28 @@ function reviewForm(sp) {
 
 function draw() {
   const sp = catalog.find(item => item.id === species.value);
-  const comparingRaptors = mode === 'raptors';
+  const comparingBirds = mode === 'birds';
   byId('heading').textContent = modes[mode];
   byId('mixed-control').hidden = mode !== 'mixed';
 
-  for (const label of document.querySelectorAll('[data-catalog-filter]')) label.hidden = comparingRaptors;
-  byId('order-control').hidden = comparingRaptors || Boolean(group.value && group.value !== 'Rapaces');
-  byId('raptor-set-control').hidden = !comparingRaptors;
-  byId('raptor-size-control').hidden = !comparingRaptors;
-  byId('species-control').hidden = mode === 'gallery' || comparingRaptors;
+  for (const label of document.querySelectorAll('[data-catalog-filter]')) label.hidden = comparingBirds;
+  byId('order-control').hidden = comparingBirds || birdOrder.options.length < 2;
+  byId('bird-set-control').hidden = !comparingBirds;
+  byId('comparison-size-control').hidden = !comparingBirds && mode !== 'variants';
+  byId('species-control').hidden = mode === 'gallery' || comparingBirds;
   byId('context-control').hidden = mode !== 'scale';
   byId('scale-plate-control').hidden = !['scale', 'compare', 'compression', ...previews].includes(mode);
-  byId('backdrop-control').hidden = !['compare', 'raptors', 'compression', 'review', 'frames'].includes(mode);
+  byId('backdrop-control').hidden = !['compare', 'birds', 'variants', 'compression', 'review', 'frames'].includes(mode);
   byId('compression-control').hidden = mode !== 'compression';
   byId('comparison-control').hidden = mode !== 'compare';
   byId('category-control').hidden = !previews.includes(mode);
   byId('export').hidden = mode !== 'review';
-  byId('summary').textContent = mode === 'gallery' || comparingRaptors ? '' : (sp?.latin || '');
+  byId('summary').textContent = mode === 'gallery' || comparingBirds ? '' : (sp?.latin || '');
   for (const button of document.querySelectorAll('[data-mode]')) {
     button.setAttribute('aria-pressed', String(button.dataset.mode === mode));
   }
-  if (comparingRaptors) {
-    content.innerHTML = compareRaptors();
+  if (comparingBirds) {
+    content.innerHTML = compareBirds();
     return;
   }
   if (!sp && mode !== 'gallery') {
@@ -301,9 +309,11 @@ function draw() {
     case 'gallery': content.innerHTML = gallery(); break;
     case 'variants': {
       const variants = sp.records.filter(record => record.key !== 'legendario');
+      const size = Number(comparisonSize.value);
       content.innerHTML = (variants.length === 1 ? '<p class="note">Esta especie solo tiene representación normal en el catálogo.</p>' : '') +
-        '<div class="pair variants' + (variants.length === 1 ? ' group' : '') + '">' +
-        variants.map(record => figure(illustration(sp, record), record.label)).join('') + '</div>';
+        '<div class="pair variants review-comparison plate-comparison' +
+        (variants.length === 1 ? ' group' : '') + '" style="--comparison-size:' + size + 'px">' +
+        variants.map(record => figure(illustration(sp, record, 'Normal', size, true), record.label)).join('') + '</div>';
       break;
     }
     case 'frames': content.innerHTML = specialFrames(sp); break;
@@ -358,7 +368,7 @@ function applyFilters() {
 }
 search.addEventListener('input', applyFilters);
 group.addEventListener('change', () => {
-  if (group.value && group.value !== 'Rapaces') birdOrder.value = '';
+  updateOrders();
   updateFamilies();
   applyFilters();
 });
@@ -379,8 +389,8 @@ category.addEventListener('change', draw);
 mixedSvg.addEventListener('change', draw);
 byId('compression-quality').addEventListener('change', draw);
 byId('comparison-source').addEventListener('change', draw);
-raptorSet.addEventListener('change', draw);
-raptorSize.addEventListener('change', draw);
+birdSet.addEventListener('change', draw);
+comparisonSize.addEventListener('change', draw);
 byId('backdrop').addEventListener('change', event => {
   content.dataset.backdrop = event.target.value;
 });

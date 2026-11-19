@@ -6,7 +6,7 @@ const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
 const { harness } = require('../tests/helpers/live-game.cjs');
 
-const baseline = process.env.ATLAS_BASELINE || '3560d7d350e3baa4199516f36606e82a8d240021';
+const baseline = process.env.ATLAS_BASELINE || '8d95f5125a9f4c58260ceecc604439903df9b8af';
 const version = require('../package.json').version;
 const versionSlug = version.replaceAll('.', '');
 const baselineSlug = JSON.parse(execFileSync('git', ['show', baseline + ':www/atlas-release.json'], { encoding: 'utf8' })).version.replaceAll('.', '');
@@ -44,7 +44,7 @@ async function run() {
   const url = 'http://127.0.0.1:' + server.address().port + '/';
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
   const id = 'nutria_europea';
-  const id2 = 'martin_pescador';
+  const id2 = 'eu_esp_0628';
   const regions = harness().window.__atlasTest.REGIONS;
   const britishSpecies = regions.find(region => region.id === 'HX-01-09').species;
   const primateRegion = regions.find(region => region.id === 'HX-09-11');
@@ -141,7 +141,7 @@ async function run() {
       await updated.locator('[data-action=set-time][data-id=amanecer]').click();
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v470/campo-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: 'docs/cientifica-v471/campo-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
 
@@ -169,7 +169,7 @@ async function run() {
       await journal.evaluate(img => img.decode());
       assert.equal(await updated.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
       if (process.argv.includes('--write-evidence')) {
-        await updated.screenshot({ path: 'docs/cientifica-v470/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
+        await updated.screenshot({ path: 'docs/cientifica-v471/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
       }
 
       // Exercise the real automatic timer while deterministic rolls select a single repeatable WebP.
@@ -356,7 +356,7 @@ async function run() {
       await loggedDolphin.evaluate(img => img.decode());
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v470/inia-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: 'docs/cientifica-v471/inia-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
       await openTab(updated, 'bestiary');
@@ -399,18 +399,84 @@ async function run() {
       await updated.locator('.field-environment .landscape-montana').evaluate(img => img.decode());
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v470/centinela-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: 'docs/cientifica-v471/centinela-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
       await openTab(updated, 'journal');
       await updated.locator('.j25-sheet img[src$="/aguila_real--normal.webp"]').first().evaluate(img => img.decode());
+
+      const puffin = 'frailecillo_atlantico';
+      await updated.evaluate(id => {
+        const save = AtlasSaveBridge.getSaveData();
+        save.currentRegion = 'HX-01-09';
+        save.habitat = 'costa';
+        save.helpers = 0;
+        save.discovered[id] = true;
+        save.stages[id] = 2;
+        save.lastEncounter = { species: id, title: 'Frailecillo atlántico', sequence: save.encounterSequence, entries: [
+          { id, amount: 1, category: 'Notable' }
+        ] };
+        AtlasSaveBridge.restoreGame(save);
+      }, puffin);
+      await openTab(updated, 'field');
+      const puffinImage = updated.locator('#fieldResult .notable img[src$="frailecillo_atlantico--normal.webp"]');
+      await puffinImage.evaluate(img => img.decode());
+      assert.match(await puffinImage.evaluate(img => getComputedStyle(img).filter), /drop-shadow/);
+      await updated.locator('.field-environment .landscape-costa').evaluate(img => img.decode());
+      if (process.argv.includes('--write-evidence')) {
+        await updated.locator('.field-stage').screenshot({
+          path: 'docs/cientifica-v471/frailecillo-' + width + '.jpg', type: 'jpeg', quality: 85
+        });
+      }
+
+      const shoveler = 'eu_esp_0649';
+      await updated.evaluate(({ id, regionSpecies }) => {
+        const save = AtlasSaveBridge.getSaveData();
+        save.habitat = 'bosque';
+        save.time = 'dia';
+        save.season = 'primavera';
+        save.discovered[id] = true;
+        save.published[id] = true;
+        save.stages[id] = 5;
+        save.sightings[id] = 430;
+        save.selectedJournal = id;
+        save.museum.exhibits[id] = true;
+        save.helpers = 3;
+        save.lastTick = Date.now();
+        const hour = Math.floor(save.lastTick / 3600000);
+        save.autoHourly = Object.fromEntries(regionSpecies.filter(key => key !== id).map(key => [hour + ':' + key, 999]));
+        AtlasSaveBridge.restoreGame(save);
+      }, { id: shoveler, regionSpecies: britishSpecies });
+      const shovelerImage = updated.locator('#fieldResult img[src*="eu_esp_0649--"]');
+      await shovelerImage.evaluate(img => img.decode());
+      const aquaticSequence = await updated.evaluate(() => AtlasSaveBridge.getSaveData().encounterSequence);
+      const aquaticAutoStart = performance.now();
+      await updated.waitForFunction(seq => AtlasSaveBridge.getSaveData().encounterSequence > seq, aquaticSequence);
+      // Repeated sightings can select a different sex or pigment and use a new image.
+      await shovelerImage.evaluate(img => img.decode());
+      const aquaticAutoRepeatMs = Math.round(performance.now() - aquaticAutoStart);
+      await updated.locator('.field-environment .landscape-bosque').evaluate(img => img.decode());
+      await openTab(updated, 'journal');
+      await updated.locator('.j25-sheet img[src*="eu_esp_0649--"]').first().evaluate(img => img.decode());
+      await openTab(updated, 'bestiary');
+      const shovelerPlate = 'img[src*="eu_esp_0649--"]';
+      await updated.locator('#b26-search').fill('Spatula clypeata');
+      await updated.locator('.b26-card').filter({ has: updated.locator(shovelerPlate) }).click();
+      await updated.locator('.b26-dialog .landscape-humedal').evaluate(img => img.decode());
+      await updated.locator('.b26-dialog ' + shovelerPlate).first().evaluate(img => img.decode());
+      await updated.locator('[data-action=b26-close]').click();
+      await openTab(updated, 'museum');
+      await updated.getByRole('tab', { name: 'Exposiciones', exact: true }).click();
+      await updated.locator('.m27-vitrines [data-action=m27-open]').filter({ has: updated.locator(shovelerPlate) }).click();
+      await updated.locator('.m27-dialog ' + shovelerPlate).first().evaluate(img => img.decode());
+      await updated.locator('[data-action=m27-close]').click();
 
       await updated.goto(url + 'naturalist-art/');
       await updated.locator('.field-card .atlas-art-image').evaluate(img => img.decode());
       await updated.locator('.field-card .atlas-art-landscape').evaluate(img => img.decode());
       assert.deepEqual(errors, []);
       results.push({ width, fieldBeforeMs: beforeMs, fieldWebPMs: afterMs, fieldBeforeJSHeapBytes: beforeHeap, fieldWebpJSHeapBytes: afterHeap, exactSaveBackup: true,
-        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, optionalReviewOutsideGameCache: true, errors });
+        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, optionalReviewOutsideGameCache: true, errors });
       await ctx.close();
     }
   } finally {

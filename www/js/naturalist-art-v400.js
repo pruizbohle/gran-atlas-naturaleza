@@ -66,7 +66,8 @@
     const resolution = [64, 128, 256, 512].includes(size) ? size : 128;
     const prefix = resolution === 512 ? '' : resolution + '/';
     const cutout = !!root.AtlasNaturalistAssets.cutouts?.[file];
-    const scene = cutout && surface === 'bestiary' ? landscape(habitat, region) : '';
+    const scene = cutout && surface === 'bestiary'
+      ? landscape(root.AtlasNaturalistAssets.bestiaryHabitats?.[id] || habitat, region) : '';
     const wrapper = ['atlas-art-' + surface, cutout ? 'atlas-art-cutout' : 'atlas-art-opaque', classes].filter(Boolean).join(' ');
     const image = '<img class="atlas-art-image" alt="' + escape(alt) + '" width="' + resolution + '" height="' + resolution +
       '" loading="' + (eager ? 'eager' : 'lazy') + '" decoding="async" src="' + escape(base + 'plates/' + prefix + file) + '">';
