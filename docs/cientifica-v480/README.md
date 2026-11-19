@@ -42,6 +42,23 @@ Se decodificaron **5.756 WebP de animales** y se comprobaron sus dimensiones, ca
 
 Cada lámina se exportó a 64, 128, 256 y 512 px con calidades WebP 82, 83, 86 y 90 y alfa a calidad 100. El caché base pasó de **104,85 MB a 115,64 MB**. Los 636 recursos de comparación del laboratorio conservan su caché opcional de **11,70 MB**. [Mediciones por resolución](mediciones.json)
 
+## Validación funcional
+
+Pasaron las 16 pruebas de publicación. La suite completa ejecutó 814 pruebas, con 586 aprobadas y los mismos 228 fallos que V4.7.4. [Comparación de la suite histórica](regresion.json)
+
+El laboratorio pasó los 14 modos en anchos de 320 y 1280 px, incluida la exportación JSON sin conexión. Cargaron cuatro geckos a 64 px y los pares de Basalto y Seda a 128 px. [Comparación de Basalto](comparacion-basalto-1280.jpg) · [Comparación de Seda](comparacion-seda-1280.jpg)
+
+La actualización PWA de V4.7.4 a V4.8.0 conservó el respaldo exacto y los once campos de partida cotejados. Sin conexión, el lagarto ocelado apareció en una ronda automática y sus láminas cargaron en Campo, Cuaderno, Bestiario y Museo. Basalto y Seda cargaron en Campo con el halo y paisaje vigentes. [Resultados de PWA](pwa.json) · [Seda en Campo](seda-390.jpg)
+
+| Ancho | Apertura de Campo y decodificación | Memoria JS de Campo | Avistamiento automático de prueba del lagarto ocelado |
+| --- | ---: | ---: | ---: |
+| 390 px | 99 a 94 ms | 6,45 a 8,89 MB | 2499 ms |
+| 1280 px | 126 a 82 ms | 7,49 a 9,16 MB | 2326 ms |
+
+Los tiempos y la memoria corresponden a las pruebas en Chromium. Las dos primeras columnas de medidas muestran V4.7.4 y V4.8.0 en ese orden.
+
+Capacitor sincronizó los 6.417 recursos cotejados byte a byte con `versionCode 40800`. La restauración en un dispositivo físico es una comprobación separada del candidato firmado. [Firma Android](https://github.com/pruizbohle/gran-atlas-naturaleza/actions/workflows/android-signed.yml)
+
 ## Preparación de V4.8.1
 
 Quedan planificadas **26 especies y 46 láminas**, incluidos Junco y Áncora. [Inventario de tortugas, crocodilianos y tuátara](plan-v481.md)

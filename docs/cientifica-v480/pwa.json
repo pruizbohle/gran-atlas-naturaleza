@@ -1,0 +1,118 @@
+[
+  {
+    "width": 390,
+    "fieldBeforeMs": 99,
+    "fieldWebPMs": 94,
+    "fieldBeforeJSHeapBytes": 6448372,
+    "fieldWebpJSHeapBytes": 8893420,
+    "exactSaveBackup": true,
+    "preservedFields": 11,
+    "multiEncounter": true,
+    "mixedWebpAndSvg": true,
+    "habitatChangedThroughUI": true,
+    "timeLightingChanged": true,
+    "estimatedVisibleRGBABytes": 65536,
+    "offlineCacheEntries": 5994,
+    "autoRepeatMs": 578,
+    "reusedDecodedImage": true,
+    "reusedLandscape": true,
+    "spritesOffline": true,
+    "labOffline": true,
+    "silverback": true,
+    "primateAutoRepeatMs": 661,
+    "ungulateDimorphismOffline": true,
+    "atlasLegendaryOffline": true,
+    "freshwaterDolphinInAllModulesOffline": true,
+    "raptorAutoRepeatMs": 986,
+    "centinelaOffline": true,
+    "aquaticAutoRepeatMs": 807,
+    "coastalBirdOffline": true,
+    "wetlandBestiaryOffline": true,
+    "terrestrialAutoRepeatMs": 1673,
+    "ostrichDimorphismOffline": true,
+    "passerineAutoMs": 3939,
+    "passerineInAllModulesOffline": true,
+    "squamateAutoMs": 2499,
+    "squamateInAllModulesOffline": true,
+    "squamateLegends": [
+      "basalto",
+      "seda"
+    ],
+    "discoveryChecks": {
+      "sa_esp_scelorchilus_rubecula": {
+        "discovered": true,
+        "sightings": 1,
+        "region": "gm06_bosques",
+        "habitat": "bosque",
+        "renderMs": 1908
+      },
+      "sa_esp_brachycephalus_pulex": {
+        "discovered": true,
+        "sightings": 1,
+        "region": "sa_cerrado_brasileno",
+        "habitat": "bosque",
+        "renderMs": 1423
+      }
+    },
+    "optionalReviewOutsideGameCache": true,
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "fieldBeforeMs": 126,
+    "fieldWebPMs": 82,
+    "fieldBeforeJSHeapBytes": 7485184,
+    "fieldWebpJSHeapBytes": 9160828,
+    "exactSaveBackup": true,
+    "preservedFields": 11,
+    "multiEncounter": true,
+    "mixedWebpAndSvg": true,
+    "habitatChangedThroughUI": true,
+    "timeLightingChanged": true,
+    "estimatedVisibleRGBABytes": 65536,
+    "offlineCacheEntries": 5994,
+    "autoRepeatMs": 626,
+    "reusedDecodedImage": true,
+    "reusedLandscape": true,
+    "spritesOffline": true,
+    "labOffline": true,
+    "silverback": true,
+    "primateAutoRepeatMs": 960,
+    "ungulateDimorphismOffline": true,
+    "atlasLegendaryOffline": true,
+    "freshwaterDolphinInAllModulesOffline": true,
+    "raptorAutoRepeatMs": 516,
+    "centinelaOffline": true,
+    "aquaticAutoRepeatMs": 1592,
+    "coastalBirdOffline": true,
+    "wetlandBestiaryOffline": true,
+    "terrestrialAutoRepeatMs": 1808,
+    "ostrichDimorphismOffline": true,
+    "passerineAutoMs": 2320,
+    "passerineInAllModulesOffline": true,
+    "squamateAutoMs": 2326,
+    "squamateInAllModulesOffline": true,
+    "squamateLegends": [
+      "basalto",
+      "seda"
+    ],
+    "discoveryChecks": {
+      "sa_esp_scelorchilus_rubecula": {
+        "discovered": true,
+        "sightings": 1,
+        "region": "gm06_bosques",
+        "habitat": "bosque",
+        "renderMs": 4691
+      },
+      "sa_esp_brachycephalus_pulex": {
+        "discovered": true,
+        "sightings": 1,
+        "region": "sa_cerrado_brasileno",
+        "habitat": "bosque",
+        "renderMs": 2813
+      }
+    },
+    "optionalReviewOutsideGameCache": true,
+    "errors": []
+  }
+]
