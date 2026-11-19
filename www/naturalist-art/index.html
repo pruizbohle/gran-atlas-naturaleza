@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Laboratorio V4.2.1 · El Gran Atlas</title>
+  <title>Laboratorio V4.3.0 · El Gran Atlas</title>
   <link rel="stylesheet" href="../css/naturalist-art-v400.css">
   <link rel="stylesheet" href="../css/field-v3210.css">
   <link rel="stylesheet" href="lab.css">
@@ -18,7 +18,7 @@
     <div class="container">
       <p class="eyebrow">El Gran Atlas</p>
       <h1>Laboratorio naturalista</h1>
-      <p class="subtitle">V4.2.1 · Consolidación naturalista</p>
+      <p class="subtitle">V4.3.0 · Primates</p>
       <p id="migration-progress" class="migration-progress"></p>
       <a class="game-link" href="../index.html">Abrir el juego</a>
     </div>
@@ -74,7 +74,11 @@
         <label id="compression-control" hidden>Calidad WebP <select id="compression-quality">
           <option>75</option><option>80</option><option>85</option><option selected>90</option><option>95</option>
         </select></label>
+        <label id="comparison-control" hidden>Referencia <select id="comparison-source">
+          <option value="original">Original disponible</option><option value="svg">SVG del juego</option>
+        </select></label>
         <button id="export" type="button" hidden>Exportar JSON</button>
+        <button id="review-offline" type="button" hidden></button>
       </div>
       <div id="content" data-frame-style="bare"></div>
       <p id="status" role="status"></p>

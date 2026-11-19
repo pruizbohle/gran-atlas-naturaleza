@@ -1,0 +1,695 @@
+[
+  {
+    "id": "af_gorila_montana",
+    "name": "Gorila de montaña",
+    "latin": "Gorilla beringei beringei",
+    "family": "Hominidae",
+    "files": {
+      "normal": "af_gorila_montana--normal.webp",
+      "albino": "af_gorila_montana--albino.webp",
+      "melanico": "af_gorila_montana--melanico.webp",
+      "legendario": "af_gorila_montana--silverback.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable",
+      "Épico",
+      "Excepcional",
+      "Legendario"
+    ]
+  },
+  {
+    "id": "af_xlsx_ayeaye",
+    "name": "Aye-aye",
+    "latin": "Daubentonia madagascariensis",
+    "family": "Daubentoniidae",
+    "files": {
+      "normal": "af_xlsx_ayeaye--normal.webp",
+      "albino": "af_xlsx_ayeaye--albino.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_babuino_hamadryas",
+    "name": "Babuino hamadríade",
+    "latin": "Papio hamadryas",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "af_babuino_hamadryas--normal.webp",
+      "male": "af_babuino_hamadryas--male.webp",
+      "female": "af_babuino_hamadryas--female.webp",
+      "albino": "af_babuino_hamadryas--albino.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_babuino_oliva",
+    "name": "Babuino oliva",
+    "latin": "Papio anubis",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "af_babuino_oliva--normal.webp",
+      "albino": "af_babuino_oliva--albino.webp",
+      "melanico": "af_babuino_oliva--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_xlsx_bonobo",
+    "name": "Bonobo",
+    "latin": "Pan paniscus",
+    "family": "Hominidae",
+    "files": {
+      "normal": "af_xlsx_bonobo--normal.webp",
+      "albino": "af_xlsx_bonobo--albino.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_chimpance",
+    "name": "Chimpancé común",
+    "latin": "Pan troglodytes",
+    "family": "Hominidae",
+    "files": {
+      "normal": "af_chimpance--normal.webp",
+      "albino": "af_chimpance--albino.webp",
+      "melanico": "af_chimpance--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_colobo",
+    "name": "Colobo blanco y negro",
+    "latin": "Colobus guereza",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "af_colobo--normal.webp",
+      "albino": "af_colobo--albino.webp",
+      "melanico": "af_colobo--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_xlsx_131_colobus_polykomos",
+    "name": "Colobo occidental blanco y negro",
+    "latin": "Colobus polykomos",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "af_xlsx_131_colobus_polykomos--normal.webp",
+      "albino": "af_xlsx_131_colobus_polykomos--albino.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_galago",
+    "name": "Gálago senegalés",
+    "latin": "Galago senegalensis",
+    "family": "Galagidae",
+    "files": {
+      "normal": "af_galago--normal.webp",
+      "albino": "af_galago--albino.webp",
+      "melanico": "af_galago--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_gelada",
+    "name": "Gelada",
+    "latin": "Theropithecus gelada",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "af_gelada--normal.webp",
+      "male": "af_gelada--male.webp",
+      "female": "af_gelada--female.webp",
+      "albino": "af_gelada--albino.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0854",
+    "name": "Gibón de cresta negra",
+    "latin": "Nomascus concolor",
+    "family": "Hylobatidae",
+    "files": {
+      "normal": "asia_esp_0854--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0251",
+    "name": "Gibón de manos blancas",
+    "latin": "Hylobates lar",
+    "family": "Hylobatidae",
+    "files": {
+      "normal": "asia_esp_0251--normal.webp",
+      "melanico": "asia_esp_0251--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0491",
+    "name": "Gibón siamango",
+    "latin": "Symphalangus syndactylus",
+    "family": "Hylobatidae",
+    "files": {
+      "normal": "asia_esp_0491--normal.webp",
+      "melanico": "asia_esp_0491--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_gorila_occidental",
+    "name": "Gorila occidental",
+    "latin": "Gorilla gorilla",
+    "family": "Hominidae",
+    "files": {
+      "normal": "af_gorila_occidental--normal.webp",
+      "albino": "af_gorila_occidental--albino.webp",
+      "melanico": "af_gorila_occidental--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_indri",
+    "name": "Indri",
+    "latin": "Indri indri",
+    "family": "Indriidae",
+    "files": {
+      "normal": "af_indri--normal.webp",
+      "albino": "af_indri--albino.webp",
+      "melanico": "af_indri--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0476",
+    "name": "Langur gris",
+    "latin": "Semnopithecus entellus",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "asia_esp_0476--normal.webp",
+      "melanico": "asia_esp_0476--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_lemur_colaanillada",
+    "name": "Lémur de cola anillada",
+    "latin": "Lemur catta",
+    "family": "Lemuridae",
+    "files": {
+      "normal": "af_lemur_colaanillada--normal.webp",
+      "albino": "af_lemur_colaanillada--albino.webp",
+      "melanico": "af_lemur_colaanillada--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_xlsx_lemur_raton",
+    "name": "Lémur ratón gris",
+    "latin": "Microcebus murinus",
+    "family": "Cheirogaleidae",
+    "files": {
+      "normal": "af_xlsx_lemur_raton--normal.webp",
+      "albino": "af_xlsx_lemur_raton--albino.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_xlsx_lemur_rufo",
+    "name": "Lémur rufo rojo",
+    "latin": "Varecia rubra",
+    "family": "Lemuridae",
+    "files": {
+      "normal": "af_xlsx_lemur_rufo--normal.webp",
+      "albino": "af_xlsx_lemur_rufo--albino.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0860",
+    "name": "Loris lento de Bengala",
+    "latin": "Nycticebus bengalensis",
+    "family": "Lorisidae",
+    "files": {
+      "normal": "asia_esp_0860--normal.webp",
+      "melanico": "asia_esp_0860--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_macaco_berberia",
+    "name": "Macaco de Berbería",
+    "latin": "Macaca sylvanus",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "af_macaco_berberia--normal.webp",
+      "albino": "af_macaco_berberia--albino.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0857",
+    "name": "Macaco de cola de cerdo",
+    "latin": "Macaca nemestrina",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "asia_esp_0857--normal.webp",
+      "melanico": "asia_esp_0857--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0308",
+    "name": "Macaco japonés",
+    "latin": "Macaca fuscata",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "asia_esp_0308--normal.webp",
+      "melanico": "asia_esp_0308--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0855",
+    "name": "Macaco rhesus",
+    "latin": "Macaca mulatta",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "asia_esp_0855--normal.webp",
+      "melanico": "asia_esp_0855--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0310",
+    "name": "Macaco tibetano",
+    "latin": "Macaca thibetana",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "asia_esp_0310--normal.webp",
+      "melanico": "asia_esp_0310--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_mandril",
+    "name": "Mandril",
+    "latin": "Mandrillus sphinx",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "af_mandril--normal.webp",
+      "male": "af_mandril--male.webp",
+      "female": "af_mandril--female.webp",
+      "albino": "af_mandril--albino.webp",
+      "melanico": "af_mandril--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "gm06_ateles_fusciceps",
+    "name": "Mono araña de cabeza negra",
+    "latin": "Ateles fusciceps",
+    "family": "Atelidae",
+    "files": {
+      "normal": "gm06_ateles_fusciceps--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable",
+      "Épico",
+      "Excepcional"
+    ]
+  },
+  {
+    "id": "na_esp_ateles_geoffroyi",
+    "name": "Mono araña de Geoffroy",
+    "latin": "Ateles geoffroyi",
+    "family": "Atelidae",
+    "files": {
+      "normal": "na_esp_ateles_geoffroyi--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "sa_esp_ateles_belzebuth",
+    "name": "Mono araña de vientre blanco",
+    "latin": "Ateles belzebuth",
+    "family": "Atelidae",
+    "files": {
+      "normal": "sa_esp_ateles_belzebuth--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "sa_esp_ateles_paniscus",
+    "name": "Mono araña negro",
+    "latin": "Ateles paniscus",
+    "family": "Atelidae",
+    "files": {
+      "normal": "sa_esp_ateles_paniscus--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "sa_esp_saimiri_sciureus",
+    "name": "Mono ardilla",
+    "latin": "Saimiri sciureus",
+    "family": "Cebidae",
+    "files": {
+      "normal": "sa_esp_saimiri_sciureus--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "na_esp_alouatta_palliata",
+    "name": "Mono aullador de manto",
+    "latin": "Alouatta palliata",
+    "family": "Atelidae",
+    "files": {
+      "normal": "na_esp_alouatta_palliata--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "na_esp_alouatta_pigra",
+    "name": "Mono aullador negro",
+    "latin": "Alouatta pigra",
+    "family": "Atelidae",
+    "files": {
+      "normal": "na_esp_alouatta_pigra--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "sa_esp_cebus_olivaceus",
+    "name": "Mono capuchino",
+    "latin": "Cebus olivaceus",
+    "family": "Cebidae",
+    "files": {
+      "normal": "sa_esp_cebus_olivaceus--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "na_esp_cebus_imitator",
+    "name": "Mono capuchino cariblanco",
+    "latin": "Cebus imitator",
+    "family": "Cebidae",
+    "files": {
+      "normal": "na_esp_cebus_imitator--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_mono_brazza",
+    "name": "Mono de De Brazza",
+    "latin": "Cercopithecus neglectus",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "af_mono_brazza--normal.webp",
+      "albino": "af_mono_brazza--albino.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0856",
+    "name": "Mono de nariz chata dorado",
+    "latin": "Rhinopithecus roxellana",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "asia_esp_0856--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_xlsx_131_cercopithecus_diana",
+    "name": "Mono diana",
+    "latin": "Cercopithecus diana",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "af_xlsx_131_cercopithecus_diana--normal.webp",
+      "albino": "af_xlsx_131_cercopithecus_diana--albino.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "sa_esp_lagothrix_lagothricha",
+    "name": "Mono lanudo marrón",
+    "latin": "Lagothrix lagothricha",
+    "family": "Atelidae",
+    "files": {
+      "normal": "sa_esp_lagothrix_lagothricha--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0352",
+    "name": "Mono narigudo",
+    "latin": "Nasalis larvatus",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "asia_esp_0352--normal.webp",
+      "melanico": "asia_esp_0352--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "sa_esp_aotus_trivirgatus",
+    "name": "Mono nocturno",
+    "latin": "Aotus trivirgatus",
+    "family": "Aotidae",
+    "files": {
+      "normal": "sa_esp_aotus_trivirgatus--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "sa_esp_saguinus_imperator",
+    "name": "Mono tití emperador",
+    "latin": "Saguinus imperator",
+    "family": "Callitrichidae",
+    "files": {
+      "normal": "sa_esp_saguinus_imperator--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "af_xlsx_131_chlorocebus_sabaeus",
+    "name": "Mono verde",
+    "latin": "Chlorocebus sabaeus",
+    "family": "Cercopithecidae",
+    "files": {
+      "normal": "af_xlsx_131_chlorocebus_sabaeus--normal.webp",
+      "albino": "af_xlsx_131_chlorocebus_sabaeus--albino.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0436",
+    "name": "Orangután de Borneo",
+    "latin": "Pongo pygmaeus",
+    "family": "Hominidae",
+    "files": {
+      "normal": "asia_esp_0436--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "gm06_pongo_abelii",
+    "name": "Orangután de Sumatra",
+    "latin": "Pongo abelii",
+    "family": "Hominidae",
+    "files": {
+      "normal": "gm06_pongo_abelii--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable",
+      "Épico",
+      "Excepcional"
+    ]
+  },
+  {
+    "id": "af_sifaka",
+    "name": "Sifaca de Verreaux",
+    "latin": "Propithecus verreauxi",
+    "family": "Indriidae",
+    "files": {
+      "normal": "af_sifaka--normal.webp",
+      "albino": "af_sifaka--albino.webp",
+      "melanico": "af_sifaka--melanico.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0859",
+    "name": "Tarsio de espectro",
+    "latin": "Tarsius tarsier",
+    "family": "Tarsiidae",
+    "files": {
+      "normal": "asia_esp_0859--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "asia_esp_0858",
+    "name": "Tarsio filipino",
+    "latin": "Carlito syrichta",
+    "family": "Tarsiidae",
+    "files": {
+      "normal": "asia_esp_0858--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable"
+    ]
+  },
+  {
+    "id": "gm06_saguinus_geoffroyi",
+    "name": "Tití de Geoffroy",
+    "latin": "Saguinus geoffroyi",
+    "family": "Callitrichidae",
+    "files": {
+      "normal": "gm06_saguinus_geoffroyi--normal.webp"
+    },
+    "categories": [
+      "Normal",
+      "Notable",
+      "Épico",
+      "Excepcional"
+    ]
+  }
+]

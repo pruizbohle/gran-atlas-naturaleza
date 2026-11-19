@@ -39,7 +39,8 @@ const percent = (migrationProgress.migrated * 100 / migrationProgress.total).toL
 const pending = migrationProgress.plates - migrationProgress.cutouts;
 byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + migrationProgress.total +
   ' especies migradas · ' + percent + ' % · ' + migrationProgress.cutouts + ' de ' + migrationProgress.plates +
-  ' láminas recortadas · ' + pending + ' pendientes' +
+  ' láminas recortadas · ' + migrationProgress.biological + ' variantes biológicas · ' +
+  migrationProgress.legendary + ' legendarios · ' + pending + ' pendientes' +
   (migrationProgress.review ? ' · ' + migrationProgress.review + ' bordes por revisar' : '');
 for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
 updateFamilies();
@@ -180,10 +181,13 @@ function beforeAfter(sp) {
   const records = matchingPlates(sp);
   selectOptions(scalePlate, records.map(record => [record.key, record.label]));
   const record = records.find(item => item.key === scalePlate.value) || records[0];
-  const before = record.before ? compareImage(record.before, sp.name + ' · original') : '<p>Original de referencia pendiente.</p>';
+  const useWebp = Boolean(record.before) && byId('comparison-source').value !== 'svg';
+  const before = useWebp ? compareImage(record.before, sp.name + ' · original') :
+    '<span class="atlas-art-frame plate legacy-sprite" role="img" aria-label="' +
+    text(sp.name + ' · SVG original') + '">' + (record.svg || sp.sprite) + '</span>';
   return '<div class="pair review-comparison">' +
-    figure(before, 'Antes · original a 256 px') +
-    figure(illustration(sp, record, 'Normal', 256), 'Después · lámina a 256 px') +
+    figure(before, useWebp ? 'Antes · original a 256 px' : 'Antes · SVG del juego') +
+    figure(illustration(sp, record, 'Normal', 256, true), 'Después · lámina a 256 px') +
     '</div>' + (record.note ? '<p class="note">' + text(record.note) + '</p>' : '');
 }
 
@@ -197,7 +201,7 @@ function compression(sp) {
   const weight = bytes => (bytes / 1024).toLocaleString('es-CL', { maximumFractionDigits: 1 }) + ' KiB';
   return '<div class="pair review-comparison">' +
     figure(compareImage(sample, sp.name + ' · calidad ' + quality), 'Calidad ' + quality + ' · ' + weight(sample.bytes)) +
-    figure(illustration(sp, record), 'Versión del juego · ' + weight(record.bytes)) +
+    figure(illustration(sp, record, 'Normal', 512, true), 'Versión del juego · ' + weight(record.bytes)) +
     '</div><p class="note">512 px · Mismo recorte y canal alfa en las cinco muestras.</p>';
 }
 
@@ -227,6 +231,7 @@ function draw() {
   byId('scale-plate-control').hidden = !['scale', 'compare', 'compression', ...previews].includes(mode);
   byId('backdrop-control').hidden = !['compare', 'compression', 'review', 'frames'].includes(mode);
   byId('compression-control').hidden = mode !== 'compression';
+  byId('comparison-control').hidden = mode !== 'compare';
   byId('category-control').hidden = !previews.includes(mode);
   byId('export').hidden = mode !== 'review';
   byId('summary').textContent = mode === 'gallery' ? '' : (sp?.latin || '');
@@ -318,6 +323,7 @@ scalePlate.addEventListener('change', draw);
 category.addEventListener('change', draw);
 mixedSvg.addEventListener('change', draw);
 byId('compression-quality').addEventListener('change', draw);
+byId('comparison-source').addEventListener('change', draw);
 byId('backdrop').addEventListener('change', event => {
   content.dataset.backdrop = event.target.value;
 });
@@ -341,6 +347,36 @@ byId('export').addEventListener('click', () => {
 if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
   navigator.serviceWorker.register('../sw.js').catch(() => {
     byId('status').textContent = 'No se pudo preparar el acceso sin conexión.';
+  });
+  const button = byId('review-offline');
+  const size = (AtlasNaturalistAssets.labBytes / 1e6).toLocaleString('es-CL', { maximumFractionDigits: 1 });
+  button.textContent = 'Descargar comparaciones offline · ' + size + ' MB';
+  button.hidden = false;
+  button.addEventListener('click', async () => {
+    button.disabled = true;
+    const status = byId('status');
+    status.textContent = 'Preparando comparaciones…';
+    try {
+      const registration = await navigator.serviceWorker.getRegistration();
+      if (!registration?.active) throw Error('Service worker inactive');
+      const channel = new MessageChannel();
+      const timeout = setTimeout(() => finish(false), 150000);
+      function finish(success) {
+        clearTimeout(timeout);
+        channel.port1.close();
+        button.disabled = false;
+        status.textContent = success ? 'Comparaciones listas para usar sin conexión.' :
+          'La descarga quedó incompleta. Puedes volver a intentarlo.';
+      }
+      channel.port1.onmessage = ({ data }) => {
+        if (data.done || data.failed) finish(Boolean(data.done));
+        else status.textContent = 'Descargando comparaciones · ' + data.complete + ' de ' + data.total;
+      };
+      registration.active.postMessage({ type: 'ATLAS_CACHE_NATURALIST_REVIEW' }, [channel.port2]);
+    } catch {
+      button.disabled = false;
+      status.textContent = 'El caché del juego aún se está preparando. Intenta la descarga de nuevo cuando termine.';
+    }
   });
 }
 draw();

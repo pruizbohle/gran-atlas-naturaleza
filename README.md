@@ -1,5 +1,10 @@
 # 3.44.0 · Cartografía del naturalista
 
+## Serie 4 · Primates (V4.3.0)
+
+[Web pública](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.3.0](docs/naturalista-v430/README.md).
+
+
 ## Serie 4 · Consolidación naturalista (V4.2.1)
 
 [Web pública](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Estándar artístico](docs/naturalista-v421/estandar.md) · [Informe V4.2.1](docs/naturalista-v421/README.md).

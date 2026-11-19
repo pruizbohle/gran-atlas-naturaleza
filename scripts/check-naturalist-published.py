@@ -13,7 +13,8 @@ parser.add_argument("origin", help="Published site URL, including any project pa
 args = parser.parse_args()
 root = Path("www")
 manifest = (root / "js/naturalist-assets-v400.js").read_text(encoding="utf-8")
-plates = json.loads(manifest.split("=", 1)[1].strip().removesuffix(";"))["files"]
+assets = json.loads(manifest.split("=", 1)[1].strip().removesuffix(";"))
+plates = assets["files"] + assets.get("labFiles", [])
 release = json.loads((root / "atlas-release.json").read_text(encoding="utf-8"))
 files = [
     "index.html", "atlas-release.json", "sw.js", "manifest.webmanifest",

@@ -1,11 +1,10 @@
 {
   "asia_esp_0355--normal.webp": "Pantera nebulosa: el tramo inferior de la cola se confunde con el suelo. Puede quedar textura de fondo entre el pelo fino.",
   "asia_esp_0403--niebla.webp": "Niebla: las patas descansan sobre piedra del mismo color. Queda una línea tenue bajo una garra.",
-  "asia_esp_0403--normal.webp": "Leopardo de las nieves: revisar el borde de la pata posterior cuando se observe sobre un fondo oscuro.",
   "eu_esp_0219--normal.webp": "Gineta: la cola se separó manualmente de una rama que cruza por detrás. Revisar la transición donde se tocaban.",
   "na_esp_leopardus_wiedii--normal.webp": "Margay: revisar las puntas de las garras que se superponen con la rama original.",
   "oc_esp_dactylopsila_trivirgata--normal.webp": "Falanguero listado: parte del contorno de los dedos coincide con la rama. Revisar a 512 px.",
-  "oc_esp_myrmecobius_fasciatus--normal.webp": "Numbat: el extremo de la cola tiene pelo fino del mismo tono que la hojarasca. El borde se ajustó a mano.",
+  "oc_esp_myrmecobius_fasciatus--normal.webp": "Numbat: se retiró un resto aislado de hojarasca en V4.3.0. El pelo fino de la cola sigue requiriendo cuidado sobre fondos oscuros.",
   "oc_esp_petauroides_volans--normal.webp": "Petauro mayor: puede quedar un borde claro muy tenue bajo las garras.",
   "sa_esp_conepatus_chinga--normal.webp": "Zorrino común: el pelo claro de la cola se confunde con el paisaje original. Conserva transparencia parcial en los pelos finos.",
   "sa_esp_leopardus_jacobita--normal.webp": "Gato andino: la cola llega al borde del lienzo en el original. El recorte conserva ese límite y el detalle visible."

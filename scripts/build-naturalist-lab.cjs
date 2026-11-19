@@ -19,6 +19,7 @@ const priority = [
   'myrmecobius_fasciatus', 'spilocuscus_maculatus', 'dendrolagus_lumholtzi', 'dendrolagus_matschiei'
 ].map(suffix => 'oc_esp_' + suffix);
 priority.splice(5, 0, 'gm06_dromiciops_gliroides');
+priority.unshift('af_gorila_montana');
 
 // Cross-check family independently of the game's display taxonomy.
 const families = new Set([
@@ -90,10 +91,35 @@ const carnivoreGenera = {
 };
 const carnivoreFamilyByGenus = new Map(Object.entries(carnivoreGenera).flatMap(([family, names]) =>
   names.split(' ').map(genus => [genus, family])));
+// Primates are resolved from their zoological names, including taxa filed under
+// pequeños mamíferos and Otros mamíferos in the legacy display taxonomy.
+const primateGenera = {
+  Aotidae: 'Aotus',
+  Atelidae: 'Alouatta Ateles Lagothrix',
+  Callitrichidae: 'Saguinus',
+  Cebidae: 'Cebus Saimiri',
+  Cercopithecidae: 'Cercopithecus Chlorocebus Colobus Macaca Mandrillus Nasalis Papio Rhinopithecus Semnopithecus Theropithecus',
+  Cheirogaleidae: 'Microcebus',
+  Daubentoniidae: 'Daubentonia',
+  Galagidae: 'Galago',
+  Hominidae: 'Gorilla Pan Pongo',
+  Hylobatidae: 'Hylobates Nomascus Symphalangus',
+  Indriidae: 'Indri Propithecus',
+  Lemuridae: 'Lemur Varecia',
+  Lorisidae: 'Nycticebus',
+  Tarsiidae: 'Carlito Tarsius'
+};
+const primateFamilyByGenus = new Map(Object.entries(primateGenera).flatMap(([family, names]) =>
+  names.split(' ').map(genus => [genus, family])));
 
 function classify(id, sp) {
   const taxonomy = audit.taxonomyInfo(id);
   const genus = sp.latin.split(' ')[0];
+  const primateFamily = primateFamilyByGenus.get(genus);
+  if (primateFamily) return { family: primateFamily, group: 'Primates' };
+  if (['Primates', 'Lémures'].includes(taxonomy.subClass) || Object.hasOwn(primateGenera, taxonomy.family)) {
+    throw Error('Primate sin familia zoológica revisada: ' + sp.latin);
+  }
   const family = carnivoreFamilyByGenus.get(genus) || taxonomy.family || sp.family;
   // Enhydra is reserved with the predominantly marine mammals.
   if (genus === 'Enhydra') return null;
@@ -125,6 +151,12 @@ const species = catalogEntries.flatMap(([id, sp]) => {
     const record = plate(id, legendary.id, legendary.name);
     records.push({ ...record, key: 'legendario' });
   }
+  if (group === 'Primates') {
+    for (const record of records) {
+      const sex = ['male', 'female'].includes(record.key) ? record.key : null;
+      record.svg = audit.getSpriteMarkup(id, sex ? 'normal' : record.key, sex);
+    }
+  }
   return [{
     id, name: sp.name, latin: sp.latin, rarity: sp.rare || null, group, family,
     dimorphism: Boolean(audit.SEXUAL_DIMORPHISM[id]),
@@ -147,6 +179,9 @@ const migrationProgress = {
   total: catalogEntries.length,
   cutouts: Object.keys(cutouts).length,
   plates: assets.size,
+  biological: species.flatMap(sp => sp.records)
+    .filter(record => record.src && !['normal', 'legendario'].includes(record.key)).length,
+  legendary: species.filter(sp => sp.records.some(record => record.src && record.key === 'legendario')).length,
   review: Object.keys(observations).length
 };
 const mixedFieldSprites = ['ciervo_rojo', 'jabali', 'corzo_europeo'].map(id => {
@@ -180,12 +215,14 @@ const landscapes = fs.readdirSync(path.join(out, 'landscapes')).filter(file => f
   .map(file => path.basename(file, '.webp')).sort();
 const animalFiles = [...assets].sort().flatMap(file =>
   ['', '64/', '128/', '256/'].map(size => 'naturalist-art/plates/' + size + file));
-const files = [...animalFiles, ...landscapes.map(key => 'naturalist-art/landscapes/' + key + '.webp'), ...[...reviewFiles].sort()];
-for (const file of files) {
+const files = [...animalFiles, ...landscapes.map(key => 'naturalist-art/landscapes/' + key + '.webp')];
+const labFiles = [...reviewFiles].sort();
+for (const file of [...files, ...labFiles]) {
   if (!fs.existsSync('www/' + file)) throw Error('Falta derivado gráfico: ' + file);
 }
+const labBytes = labFiles.reduce((bytes, file) => bytes + fs.statSync('www/' + file).size, 0);
 fs.writeFileSync('www/js/naturalist-assets-v400.js',
-  'globalThis.AtlasNaturalistAssets = ' + JSON.stringify({ routes, cutouts, landscapes, files }, null, 2) + ';\n');
+  'globalThis.AtlasNaturalistAssets = ' + JSON.stringify({ routes, cutouts, landscapes, files, labFiles, labBytes }, null, 2) + ';\n');
 const records = species.flatMap(sp => sp.records);
 console.log(JSON.stringify({
   species: species.length,

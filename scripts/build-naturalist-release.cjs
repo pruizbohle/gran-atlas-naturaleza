@@ -13,8 +13,9 @@ const core = [...source.match(/const CORE=\[([^;]+)\];/)[1].matchAll(/['"]([^'"]
   .map(match => match[1].slice(2));
 const files = [...new Set([...core, ...assets.files].map(file =>
   file.endsWith('/') || !file ? file + 'index.html' : file))].sort();
+const review = assets.labFiles || [];
 const hash = createHash('sha256').update(source.replace(/const CACHE='[^']+'/, 'const CACHE=REVISION'));
-for (const file of files) {
+for (const file of [...files, ...review]) {
   assert.ok(fs.existsSync('www/' + file), 'Falta recurso offline: ' + file);
   hash.update(file).update(fs.readFileSync('www/' + file));
 }
@@ -27,4 +28,4 @@ const revision = 'gran-atlas-v' + version + '-naturalist-' + hash.digest('hex').
 const generated = source.replace(/const CACHE='[^']+'/, "const CACHE='" + revision + "'");
 if (process.argv.includes('--write')) fs.writeFileSync('www/sw.js', generated);
 else assert.equal(source, generated, 'Ejecuta scripts/build-naturalist-release.cjs --write');
-console.log(JSON.stringify({ version, offlineFiles: files.length, naturalistFiles: assets.files.length, revision }));
+console.log(JSON.stringify({ version, offlineFiles: files.length, naturalistFiles: assets.files.length, reviewFiles: review.length, reviewBytes: assets.labBytes, revision }));

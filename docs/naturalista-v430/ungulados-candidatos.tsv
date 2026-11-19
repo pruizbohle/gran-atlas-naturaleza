@@ -1,0 +1,119 @@
+Id	Nombre	Nombre científico	Grupo histórico	Dimorfismo	Variantes configuradas
+asia_esp_0184	Caballo de Przewalski	Equus przewalskii	Ungulados	No	Notable
+asia_esp_0441	Gacela de Mongolia	Procapra gutturosa	Ungulados	Sí	Notable
+ciervo_rojo	Ciervo rojo	Cervus elaphus	Ungulados	Sí	Notable
+corzo_europeo	Corzo europeo	Capreolus capreolus	Ungulados	Sí	Albino
+alce	Alce	Alces alces	Ungulados	Sí	Notable
+reno	Reno	Rangifer tarandus	Ungulados	Sí	Albino, Épico
+ibice_alpino	Íbice alpino	Capra ibex	Ungulados	Sí	Notable
+rebeco_alpino	Rebeco alpino	Rupicapra rupicapra	Ungulados	No	Albino
+jabali	Jabalí	Sus scrofa	Suidos	No	Albino, Notable, Épico
+cabra_montes_iberica	Cabra montés ibérica	Capra pyrenaica	Ungulados	Sí	Notable
+bisonte_europeo	Bisonte europeo	Bison bonasus	Ungulados	No	Albino, Notable
+asia_esp_0081	Tur del Cáucaso oriental	Capra cylindricornis	Ungulados	Sí	Albino, Notable
+asia_esp_0149	Gamo	Dama dama	Ungulados	Sí	Melánico, Albino, Notable
+asia_esp_0080	Cabra salvaje	Capra aegagrus	Ungulados	Sí	Albino, Notable
+asia_esp_0086	Corzo siberiano	Capreolus pygargus	Ungulados	No	Albino, Melánico, Notable
+asia_esp_0344	Ciervo almizclero siberiano	Moschus moschiferus	Ungulados	No	Albino, Melánico, Notable
+asia_esp_0073	Camello bactriano salvaje	Camelus ferus	Camélidos	No	Melánico, Notable
+asia_esp_0062	Yak salvaje	Bos mutus	Ungulados	No	Melánico, Notable
+asia_esp_0821	Takin	Budorcas taxicolor	Ungulados	No	Melánico, Notable
+asia_esp_0240	Tahr del Himalaya	Hemitragus jemlahicus	Ungulados	No	Albino, Melánico, Notable
+asia_esp_0445	Bharal	Pseudois nayaur	Ungulados	No	Albino, Melánico, Notable
+asia_esp_0214	Gacela de Arabia	Gazella arabica	Ungulados	No	Melánico, Notable
+asia_esp_0383	Órix árabe	Oryx leucoryx	Ungulados	No	Notable
+asia_esp_0065	Búfalo de agua	Bubalus bubalis	Ungulados	No	Notable
+asia_esp_0182	Onagro	Equus hemionus	Ungulados	No	Melánico, Notable
+asia_esp_0218	Gacela persa	Gazella subgutturosa	Ungulados	No	Melánico, Notable
+asia_esp_0183	Kiang	Equus kiang	Ungulados	No	Melánico, Notable
+asia_esp_0404	Antílope tibetano	Pantholops hodgsonii	Ungulados	No	Notable
+asia_esp_0442	Gacela tibetana	Procapra picticaudata	Ungulados	No	Melánico, Notable
+asia_esp_0468	Antílope saiga	Saiga tatarica	Ungulados	No	Notable
+asia_esp_0824	Ciervo del padre David	Elaphurus davidianus	Ungulados	No	Notable
+asia_esp_0833	Antílope negro	Antilope cervicapra	Ungulados	Sí	Melánico, Notable
+asia_esp_0050	Ciervo chital	Axis axis	Ungulados	No	Melánico, Notable
+asia_esp_0061	Gaur	Bos gaurus	Ungulados	No	Melánico, Notable
+asia_esp_0063	Nilgó	Boselaphus tragocamelus	Ungulados	No	Notable
+asia_esp_0830	Búfalo salvaje asiático	Bubalus arnee	Ungulados	No	Notable
+asia_esp_0465	Rinoceronte indio	Rhinoceros unicornis	Rinocerontes	No	Melánico, Notable
+asia_esp_0825	Ciervo sambar	Rusa unicolor	Ungulados	No	Notable
+asia_esp_0345	Muntíaco de Reeves	Muntiacus reevesi	Ungulados	No	Melánico, Notable
+asia_esp_0111	Ciervo sika	Cervus nippon	Ungulados	Sí	Melánico, Notable
+asia_esp_0249	Ciervo acuático chino	Hydropotes inermis	Ungulados	No	Melánico, Notable
+asia_esp_0165	Rinoceronte de Sumatra	Dicerorhinus sumatrensis	Rinocerontes	No	Notable
+asia_esp_0834	Jabalí barbudo	Sus barbatus	Ungulados	No	Melánico, Notable
+asia_esp_0498	Tapir malayo	Tapirus indicus	Ungulados	No	Melánico, Notable
+asia_esp_0087	Serau japonés	Capricornis crispus	Ungulados	No	Melánico, Notable
+af_dromedario	Dromedario	Camelus dromedarius	Camélidos	No	Albino, Melánico, Notable
+af_gacela_dorcas	Gacela dorcas	Gazella dorcas	Ungulados	No	Albino, Melánico, Notable
+af_arrui	Arruí	Ammotragus lervia	Ungulados	No	Albino, Melánico, Notable
+af_rinoceronte_blanco	Rinoceronte blanco	Ceratotherium simum	Rinocerontes	No	Albino, Melánico, Notable
+af_bufalo_cafre	Búfalo cafre	Syncerus caffer	Ungulados	No	Albino, Melánico, Notable
+af_hipopotamo	Hipopótamo común	Hippopotamus amphibius	Hipopótamos	No	Albino, Melánico, Notable, Épico
+af_jirafa	Jirafa	Giraffa camelopardalis	Jirafas y afines	No	Albino, Melánico, Notable, Épico
+af_cebra_llanura	Cebra de llanura	Equus quagga	Équidos	No	Albino, Melánico, Notable
+af_facoquero	Facóquero común	Phacochoerus africanus	Suidos	No	Albino, Melánico, Notable
+af_nu_azul	Ñu azul	Connochaetes taurinus	Ungulados	No	Albino, Melánico, Notable
+af_orix	Órix del Cabo	Oryx gazella	Ungulados	No	Albino, Melánico, Notable
+af_antilope_bongo	Bongo	Tragelaphus eurycerus	Ungulados	No	Albino, Melánico, Notable
+af_duiker_azul	Duíquer azul	Philantomba monticola	Ungulados	No	Albino, Melánico, Notable
+af_okapi	Okapi	Okapia johnstoni	Jirafas y afines	No	Albino, Melánico, Notable
+af_springbok	Springbok	Antidorcas marsupialis	Ungulados	No	Albino, Melánico, Notable
+af_eland	Eland común	Taurotragus oryx	Ungulados	No	Albino, Melánico, Notable
+af_asno_somali	Asno salvaje somalí	Equus africanus somaliensis	Équidos	No	Notable
+af_gerenuc	Gerenuc	Litocranius walleri	Ungulados	No	Melánico, Notable
+af_dikdik_guenther	Dicdic de Günther	Madoqua guentheri	Ungulados	No	Melánico, Notable
+af_lechwe_rojo	Lechwe rojo	Kobus leche	Ungulados	No	Melánico, Notable
+af_sitatunga	Sitatunga	Tragelaphus spekii	Ungulados	No	Melánico, Notable
+af_potamoquero	Potamóquero rojo	Potamochoerus porcus	Suidos	No	Notable, Melánico
+af_ibice_walia	Íbice de Walia	Capra walie	Ungulados	No	Melánico, Notable
+af_nyala_montana	Nyala de montaña	Tragelaphus buxtoni	Ungulados	No	Melánico, Notable
+af_ciervo_berberia	Ciervo de Berbería	Cervus elaphus barbarus	Ungulados	No	Albino, Notable
+af_antilope_sable	Antílope sable	Hippotragus niger	Ungulados	No	Notable
+af_jirafa_rothschild	Jirafa de Rothschild	Giraffa camelopardalis rothschildi	Jirafas y afines	No	Notable
+af_gran_kudu	Gran kudú	Tragelaphus strepsiceros	Ungulados	No	Melánico, Notable, Épico, Excepcional
+af_lechwe_negro	Lechwe negro	Kobus leche smithemani	Ungulados	No	Notable
+af_puku	Puku	Kobus vardonii	Ungulados	No	Melánico, Notable
+af_impala	Impala	Aepyceros melampus	Ungulados	No	Albino, Notable
+af_nyala_comun	Niala común	Tragelaphus angasii	Ungulados	No	Albino, Notable
+af_xlsx_addax	Addax	Addax nasomaculatus	Ungulados	No	Albino, Notable
+af_xlsx_alcefalo	Alcéfalo común	Alcelaphus buselaphus	Ungulados	No	Albino, Notable
+af_xlsx_gacela_frente_roja	Gacela de frente roja	Eudorcas rufifrons	Ungulados	No	Albino, Notable
+af_xlsx_orix_cimitarra	Órix de cuernos de cimitarra	Oryx dammah	Ungulados	No	Albino, Notable
+af_xlsx_gacela_cuvier	Gacela de Cuvier	Gazella cuvieri	Ungulados	No	Albino, Notable
+af_xlsx_hipopotamo_pigmeo	Hipopótamo pigmeo	Choeropsis liberiensis	Hipopótamos	No	Albino, Notable
+af_xlsx_rinoceronte_negro	Rinoceronte negro	Diceros bicornis	Rinocerontes	No	Albino, Notable
+af_xlsx_gacela_thomson	Gacela de Thomson	Eudorcas thomsonii	Ungulados	No	Albino, Notable
+af_xlsx_topi	Topi	Damaliscus lunatus	Ungulados	No	Albino, Notable
+af_xlsx_gacela_speke	Gacela de Speke	Gazella spekei	Ungulados	No	Albino, Notable
+af_xlsx_jirafa_reticulada	Jirafa reticulada	Giraffa reticulata	Jirafas y afines	No	Albino, Notable
+af_xlsx_orix_beisa	Órix beisa	Oryx beisa	Ungulados	No	Albino, Notable
+af_xlsx_131_cephalophus_zebra	Duíquer cebra	Cephalophus zebra	Ungulados	No	Albino, Notable
+af_xlsx_131_hippotragus_equinus	Antílope ruano	Hippotragus equinus	Ungulados	No	Albino, Notable
+af_xlsx_131_equus_africanus	Asno salvaje africano	Equus africanus	Ungulados	No	Albino, Notable
+af_xlsx_131_madoqua_saltiana	Dicdic de Salt	Madoqua saltiana	Ungulados	No	Albino, Notable
+na_esp_ovibos_moschatus	Buey almizclero	Ovibos moschatus	Ungulados	No	Albino, Notable
+na_esp_ovis_dalli	Borrego de Dall	Ovis dalli	Ungulados	No	Albino, Notable
+na_esp_odocoileus_hemionus	Ciervo mulo	Odocoileus hemionus	Ungulados	No	Albino, Notable
+na_esp_antilocapra_americana	Berrendo	Antilocapra americana	Ungulados	No	Notable
+na_esp_bison_bison	Bisonte americano	Bison bison	Ungulados	No	Albino, Notable, Épico, Excepcional
+na_esp_cervus_canadensis	Wapití	Cervus canadensis	Ungulados	Sí	Albino, Notable
+na_esp_dicotyles_tajacu	Pecarí de collar	Dicotyles tajacu	Ungulados	No	Notable
+na_esp_odocoileus_virginianus	Venado de cola blanca	Odocoileus virginianus	Ungulados	Sí	Albino, Melánico, Notable
+na_esp_oreamnos_americanus	Cabra de las Rocosas	Oreamnos americanus	Ungulados	No	Notable
+na_esp_ovis_canadensis	Borrego cimarrón	Ovis canadensis	Ungulados	No	Albino, Notable
+na_esp_tapirus_bairdii	Tapir centroamericano	Tapirus bairdii	Ungulados	No	Notable
+sa_esp_blastocerus_dichotomus	Ciervo de los pantanos	Blastocerus dichotomus	Ungulados	Sí	Notable
+sa_esp_hippocamelus_antisensis	Taruca	Hippocamelus antisensis	Ungulados	Sí	Notable
+sa_esp_hippocamelus_bisulcus	Huemul	Hippocamelus bisulcus	Ungulados	Sí	Notable
+sa_esp_lama_guanicoe	Guanaco	Lama guanicoe	Ungulados	No	Notable
+sa_esp_mazama_americana	Venado colorado	Mazama americana	Ungulados	Sí	Notable
+sa_esp_ozotoceros_bezoarticus	Venado de las pampas	Ozotoceros bezoarticus	Ungulados	Sí	Notable
+sa_esp_tapirus_pinchaque	Tapir de montaña	Tapirus pinchaque	Ungulados	No	Notable
+sa_esp_tapirus_terrestris	Tapir amazónico	Tapirus terrestris	Ungulados	No	Albino, Notable
+sa_esp_tayassu_pecari	Pecarí de labios blancos	Tayassu pecari	Ungulados	No	Notable
+sa_esp_vicugna_vicugna	Vicuña	Vicugna vicugna	Ungulados	No	Notable
+gm06_capra_nubiana	Íbice de Nubia	Capra nubiana	Bovidae	No	Notable, Épico, Excepcional
+gm06_rhinoceros_sondaicus	Rinoceronte de Java	Rhinoceros sondaicus	Rhinocerotidae	No	Notable, Épico, Excepcional
+gm06_babyrousa_celebensis	Babirusa de Célebes	Babyrousa celebensis	Suidae	No	Notable, Épico, Excepcional
+gm06_bubalus_depressicornis	Anoa de tierras bajas	Bubalus depressicornis	Bovidae	No	Notable, Épico, Excepcional
