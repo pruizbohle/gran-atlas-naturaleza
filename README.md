@@ -1,4 +1,8 @@
-# El Gran Atlas · Mamíferos terrestres restantes (V4.5.0)
+# El Gran Atlas · Mamíferos acuáticos (V4.6.0)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Cierre de Mammalia](docs/cientifica-v460/README.md) · [Plan de aves](docs/cientifica-v460/plan-aves.md).
+
+## Serie 4 · Mamíferos terrestres restantes (V4.5.0)
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.5.0](docs/cientifica-v450/README.md).
 

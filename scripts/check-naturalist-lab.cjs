@@ -84,7 +84,7 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 410);
+      assert.equal(await page.locator('.gallery-card').count(), 461);
       assert.match(await page.locator('#migration-progress').innerText(),
         new RegExp(expected.migrationProgress.migrated + ' de 997.*' + expected.migrationProgress.classical + " de " + expected.migrationProgress.target + " láminas científicas"));
       await page.locator('#group').selectOption('Primates');
@@ -134,9 +134,20 @@ const server = http.createServer((req, res) => {
       await atlas.evaluate(image => image.decode());
       assert.match(await atlas.getAttribute('src'), /--atlas\.webp$/);
       assert.equal(await page.locator('.comparison-styles .legendary svg').count(), 1);
+      await page.locator('[data-mode=gallery]').click();
+      await page.locator('#group').selectOption('Cetáceos');
+      assert.equal(await page.locator('.gallery-card').count(), 28);
+      await page.locator('#family').selectOption('Iniidae');
+      assert.equal(await page.locator('.gallery-card').count(), 2);
+      await page.locator('.gallery-card[data-species="sa_esp_inia_geoffrensis"]').click();
+      await page.locator('.comparison-styles img').evaluate(image => image.decode());
+      assert.equal(await page.locator('.legacy-sprite svg').count(), 1);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v450/comparacion-atlas-' + viewport.width + '.jpg' });
+        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v460/comparacion-inia-' + viewport.width + '.jpg' });
       }
+      await page.locator('[data-mode=bestiary]').click();
+      await page.locator('.bestiary-entry .landscape-rio').evaluate(image => image.decode());
+      assert.equal(await page.locator('.bestiary-entry .landscape-oceano').count(), 0);
       await page.locator('[data-mode=gallery]').click();
       await page.locator('#group').selectOption('');
       await page.locator('#family').selectOption('');
@@ -159,7 +170,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#backdrop').selectOption('dark');
       assert.notEqual(await comparison.evaluate(node => getComputedStyle(node).backgroundColor), light);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v450/comparacion-' + viewport.width + '.jpg' });
+        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v460/comparacion-' + viewport.width + '.jpg' });
       }
       await page.locator('#search').fill('');
       await page.locator('[data-mode=frames]').click();
@@ -205,7 +216,7 @@ const server = http.createServer((req, res) => {
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 410);
+      assert.equal(await page.locator('.gallery-card').count(), 461);
       await page.locator('#cut-state').selectOption('pending');
       assert.equal(await page.locator('.gallery-card').count(),
         expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);

@@ -23,7 +23,14 @@ const priority = [
   'myrmecobius_fasciatus', 'spilocuscus_maculatus', 'dendrolagus_lumholtzi', 'dendrolagus_matschiei'
 ].map(suffix => 'oc_esp_' + suffix);
 priority.splice(5, 0, 'gm06_dromiciops_gliroides');
-priority.unshift('af_gorila_montana');
+priority.unshift('mar_esp_megaptera_novaeangliae', 'sa_esp_inia_geoffrensis', 'af_gorila_montana');
+
+const aquaticGroups = {
+  Cetacea: 'Cetáceos',
+  Pinnipedia: 'Pinnípedos',
+  Sirenia: 'Sirenios',
+  'Nutria marina': 'Nutria marina'
+};
 
 // Cross-check family independently of the game's display taxonomy.
 const families = new Set([
@@ -121,7 +128,8 @@ const primateFamilyByGenus = new Map(Object.entries(primateGenera).flatMap(([fam
 function classify(id, sp) {
   const taxonomy = audit.taxonomyInfo(id);
   const genus = sp.latin.split(' ')[0];
-  if (aquaticMammal(sp.latin)) return null;
+  const aquatic = aquaticMammal(sp.latin);
+  if (aquatic) return { family: aquatic.family, group: aquaticGroups[aquatic.group] };
   const terrestrial = terrestrialMammal(sp.latin);
   if (terrestrial) return terrestrial;
   const hoofedFamily = ungulateFamily(sp.latin, taxonomy.family || sp.family);
