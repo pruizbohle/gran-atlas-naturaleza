@@ -71,6 +71,154 @@ globalThis.AtlasObjetosCientificos = {
       ]
     }
   ],
+  "geology": [
+    {
+      "name": "Piedras preciosas",
+      "ids": [
+        "GEM-01",
+        "GEM-02",
+        "GEM-03",
+        "GEM-04",
+        "GEM-05",
+        "GEM-06",
+        "GEM-07",
+        "GEM-08",
+        "GEM-09",
+        "GEM-10",
+        "GEM-11",
+        "GEM-12"
+      ]
+    },
+    {
+      "name": "Minerales extraordinarios",
+      "ids": [
+        "MIN-01",
+        "MIN-02",
+        "MIN-03",
+        "MIN-04",
+        "MIN-05",
+        "MIN-06",
+        "MIN-07",
+        "MIN-08",
+        "MIN-09",
+        "MIN-10",
+        "MIN-11",
+        "MIN-12"
+      ]
+    },
+    {
+      "name": "Ámbar y resinas fósiles",
+      "ids": [
+        "AMB-01",
+        "AMB-02",
+        "AMB-03",
+        "AMB-04",
+        "AMB-05",
+        "AMB-06",
+        "AMB-07",
+        "AMB-08",
+        "AMB-09",
+        "AMB-10",
+        "AMB-11",
+        "AMB-12"
+      ]
+    },
+    {
+      "name": "Meteoritos",
+      "ids": [
+        "MET-01",
+        "MET-02",
+        "MET-03",
+        "MET-04",
+        "MET-05",
+        "MET-06",
+        "MET-07",
+        "MET-08",
+        "MET-09",
+        "MET-10",
+        "MET-11",
+        "MET-12"
+      ]
+    },
+    {
+      "name": "Rocas y formaciones geológicas",
+      "ids": [
+        "ROC-01",
+        "ROC-02",
+        "ROC-03",
+        "ROC-04",
+        "ROC-05",
+        "ROC-06",
+        "ROC-07",
+        "ROC-08",
+        "ROC-09",
+        "ROC-10",
+        "ROC-11",
+        "ROC-12"
+      ]
+    }
+  ],
+  "geologyComparisons": [
+    {
+      "name": "Gemas y minerales cristalinos",
+      "ids": [
+        "GEM-01",
+        "GEM-03",
+        "MIN-01",
+        "MIN-05",
+        "GEM-09",
+        "MIN-07"
+      ]
+    },
+    {
+      "name": "Canto rodado y rocas",
+      "ids": [
+        "river_pebble",
+        "ROC-08",
+        "ROC-04",
+        "ROC-09"
+      ]
+    },
+    {
+      "name": "Ámbar funcional y resinas de gabinete",
+      "ids": [
+        "fossil_amber",
+        "AMB-01",
+        "AMB-03",
+        "AMB-04",
+        "AMB-10",
+        "AMB-12"
+      ]
+    },
+    {
+      "name": "Minerales y pigmentos",
+      "ids": [
+        "MIN-08",
+        "PIG-10",
+        "MIN-11",
+        "PIG-11"
+      ]
+    },
+    {
+      "name": "Meteoritos y fragmentos fósiles",
+      "ids": [
+        "MET-06",
+        "MET-04",
+        "MET-09",
+        "fossil_fragment",
+        "hard_bone"
+      ]
+    },
+    {
+      "name": "Cristales y lente pulida",
+      "ids": [
+        "polished_lens",
+        "GEM-05",
+        "MIN-02",
+        "MIN-01"
+      ]
+    }
+  ],
   "groups": [
     {
       "name": "Instrumentos y morral de viaje",
@@ -7488,13 +7636,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Gema o réplica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Variedad mineral · cuarzo",
+        "composition": "SiO₂",
+        "structure": "Masivo habitual",
+        "diagnostic": "Aspecto translúcido rosado y fractura concoidea",
+        "history": "Procedencia brasileña de catálogo; ejemplar sin datación confirmada.",
+        "plate": "Masa en bruto con aristas de fractura.",
+        "source": "https://www.gia.edu/rose-quartz"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-01/clasica-64.webp",
+            "bytes": 2416
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-01/clasica-128.webp",
+            "bytes": 6530
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-01/clasica-256.webp",
+            "bytes": 21802
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-01/clasica-512.webp",
+            "bytes": 67406
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-01/inventario-64.webp",
+            "bytes": 2626
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-01/inventario-128.webp",
+            "bytes": 7432
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-01/inventario-256.webp",
+            "bytes": 20772
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-01/inventario-512.webp",
+            "bytes": 55734
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7516,13 +7707,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Gema o réplica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · granate almandino",
+        "composition": "Fe₃Al₂(SiO₄)₃",
+        "structure": "Sistema cúbico; dodecaedros frecuentes",
+        "diagnostic": "Caras romboidales y tono vino",
+        "history": "El granate se usaba antes de 1842; muestra de Bohemia de referencia.",
+        "plate": "Cristal único sobre roca madre.",
+        "source": "https://www.gia.edu/garnet"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-02/clasica-64.webp",
+            "bytes": 2638
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-02/clasica-128.webp",
+            "bytes": 7522
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-02/clasica-256.webp",
+            "bytes": 25664
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-02/clasica-512.webp",
+            "bytes": 80844
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-02/inventario-64.webp",
+            "bytes": 2844
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-02/inventario-128.webp",
+            "bytes": 8622
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-02/inventario-256.webp",
+            "bytes": 23894
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-02/inventario-512.webp",
+            "bytes": 64868
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7544,13 +7778,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Gema o réplica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Variedad mineral · amatista",
+        "composition": "SiO₂",
+        "structure": "Prismas trigonalmente simétricos de sección hexagonal",
+        "diagnostic": "Puntas con terminaciones y zonación tintórea",
+        "history": "Variedad conocida antes de 1842; muestra brasileña sin fecha precisa.",
+        "plate": "Drusa pequeña sobre matriz.",
+        "source": "https://www.gia.edu/amethyst"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-03/clasica-64.webp",
+            "bytes": 2144
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-03/clasica-128.webp",
+            "bytes": 5700
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-03/clasica-256.webp",
+            "bytes": 18630
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-03/clasica-512.webp",
+            "bytes": 56296
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-03/inventario-64.webp",
+            "bytes": 2280
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-03/inventario-128.webp",
+            "bytes": 6162
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-03/inventario-256.webp",
+            "bytes": 16780
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-03/inventario-512.webp",
+            "bytes": 44854
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7572,13 +7849,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Gema o réplica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · variedad de topacio",
+        "composition": "Al₂SiO₄(F,OH)₂",
+        "structure": "Prismático ortorrómbico",
+        "diagnostic": "Estrías longitudinales y brillo vítreo",
+        "history": "Referencia de Ouro Preto; datación del ejemplar pendiente.",
+        "plate": "Prisma alargado dorado en bruto.",
+        "source": "https://www.gia.edu/topaz"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-04/clasica-64.webp",
+            "bytes": 1332
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-04/clasica-128.webp",
+            "bytes": 3532
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-04/clasica-256.webp",
+            "bytes": 11694
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-04/clasica-512.webp",
+            "bytes": 37806
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-04/inventario-64.webp",
+            "bytes": 1304
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-04/inventario-128.webp",
+            "bytes": 3772
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-04/inventario-256.webp",
+            "bytes": 10318
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-04/inventario-512.webp",
+            "bytes": 29248
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7600,13 +7920,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Gema o réplica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Variedad mineral · berilo",
+        "composition": "Be₃Al₂Si₆O₁₈",
+        "structure": "Prisma hexagonal",
+        "diagnostic": "Cristal largo, transparente o translúcido, con caras prismáticas",
+        "history": "Variedad histórica; procedencia de catálogo.",
+        "plate": "Prisma azul verdoso de extremo plano.",
+        "source": "https://www.gia.edu/aquamarine"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-05/clasica-64.webp",
+            "bytes": 1108
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-05/clasica-128.webp",
+            "bytes": 3128
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-05/clasica-256.webp",
+            "bytes": 10608
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-05/clasica-512.webp",
+            "bytes": 33198
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-05/inventario-64.webp",
+            "bytes": 1170
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-05/inventario-128.webp",
+            "bytes": 3466
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-05/inventario-256.webp",
+            "bytes": 9228
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-05/inventario-512.webp",
+            "bytes": 25242
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7628,13 +7991,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Gema o réplica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · fosfato hidratado",
+        "composition": "CuAl₆(PO₄)₄(OH)₈·4H₂O",
+        "structure": "Masas compactas y vetas",
+        "diagnostic": "Opacidad y aspecto de vena en matriz",
+        "history": "Material ornamental conocido antes de 1842; procedencia catalogada.",
+        "plate": "Nódulo con matriz oscura.",
+        "source": "https://www.gia.edu/turquoise"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-06/clasica-64.webp",
+            "bytes": 2186
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-06/clasica-128.webp",
+            "bytes": 5894
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-06/clasica-256.webp",
+            "bytes": 19632
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-06/clasica-512.webp",
+            "bytes": 58940
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-06/inventario-64.webp",
+            "bytes": 2292
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-06/inventario-128.webp",
+            "bytes": 6214
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-06/inventario-256.webp",
+            "bytes": 17320
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-06/inventario-512.webp",
+            "bytes": 46172
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7656,13 +8062,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Gema o réplica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca ornamental · nefrita",
+        "composition": "Tremolita-actinolita de textura fibrosa",
+        "structure": "Agregado compacto de anfíboles",
+        "diagnostic": "Textura entrelazada y brillo graso",
+        "history": "Cultura material china anterior a 1842; ejemplar interpretativo.",
+        "plate": "Bloque satinado con fractura astillosa.",
+        "source": "https://www.gia.edu/jade"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-07/clasica-64.webp",
+            "bytes": 2106
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-07/clasica-128.webp",
+            "bytes": 5486
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-07/clasica-256.webp",
+            "bytes": 18212
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-07/clasica-512.webp",
+            "bytes": 54426
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-07/inventario-64.webp",
+            "bytes": 2196
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-07/inventario-128.webp",
+            "bytes": 5866
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-07/inventario-256.webp",
+            "bytes": 15640
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-07/inventario-512.webp",
+            "bytes": 41418
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7684,13 +8133,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Gema o réplica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Variedad mineral · olivino",
+        "composition": "(Mg,Fe)₂SiO₄",
+        "structure": "Ortorrómbico; agregado granular",
+        "diagnostic": "Tonalidad oliva y brillo vítreo del grano",
+        "history": "Procedencia histórica de Zabargad; ejemplar interpretativo.",
+        "plate": "Granos pequeños con roca madre.",
+        "source": "https://www.gia.edu/peridot"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-08/clasica-64.webp",
+            "bytes": 2206
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-08/clasica-128.webp",
+            "bytes": 6200
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-08/clasica-256.webp",
+            "bytes": 21244
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-08/clasica-512.webp",
+            "bytes": 62762
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-08/inventario-64.webp",
+            "bytes": 2422
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-08/inventario-128.webp",
+            "bytes": 6618
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-08/inventario-256.webp",
+            "bytes": 18418
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-08/inventario-512.webp",
+            "bytes": 48026
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7713,6 +8205,15 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Gema o réplica",
       "pilot": true,
       "stage": "OBJ-01",
+      "geology": {
+        "classification": "Variedad mineral · berilo",
+        "composition": "Be₃Al₂Si₆O₁₈, con Cr o V",
+        "structure": "Prisma hexagonal",
+        "diagnostic": "Crecimiento prismático e inclusiones visibles",
+        "history": "Esmeraldas colombianas documentadas antes de 1842.",
+        "plate": "Conservada de OBJ-01.",
+        "source": "https://www.gia.edu/emerald"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -7774,13 +8275,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Gema o réplica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Variedad mineral · corindón",
+        "composition": "Al₂O₃, con elementos traza",
+        "structure": "Trigonales; cristales de sección hexagonal",
+        "diagnostic": "Caras basales y aspecto prismático o abarrilado",
+        "history": "Gema histórica de Sri Lanka; ejemplar sin fecha individual.",
+        "plate": "Cristal azul bruto, sin talla.",
+        "source": "https://www.gia.edu/sapphire"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-10/clasica-64.webp",
+            "bytes": 2004
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-10/clasica-128.webp",
+            "bytes": 5496
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-10/clasica-256.webp",
+            "bytes": 17814
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-10/clasica-512.webp",
+            "bytes": 46922
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-10/inventario-64.webp",
+            "bytes": 2188
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-10/inventario-128.webp",
+            "bytes": 5916
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-10/inventario-256.webp",
+            "bytes": 15248
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-10/inventario-512.webp",
+            "bytes": 37124
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7802,13 +8346,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Gema o réplica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Variedad mineral · corindón",
+        "composition": "Al₂O₃, con Cr",
+        "structure": "Cristal trigonal tabular o prismático",
+        "diagnostic": "Corindón rojo en mármol como asociación posible",
+        "history": "Gema histórica de Myanmar; muestra exacta sin fecha.",
+        "plate": "Cristal corto en matriz blanca.",
+        "source": "https://www.gia.edu/ruby"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-11/clasica-64.webp",
+            "bytes": 2212
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-11/clasica-128.webp",
+            "bytes": 6004
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-11/clasica-256.webp",
+            "bytes": 19490
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-11/clasica-512.webp",
+            "bytes": 54916
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/GEM-11/inventario-64.webp",
+            "bytes": 2262
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/GEM-11/inventario-128.webp",
+            "bytes": 6420
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/GEM-11/inventario-256.webp",
+            "bytes": 17898
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/GEM-11/inventario-512.webp",
+            "bytes": 46186
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7831,6 +8418,15 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Gema o réplica",
       "pilot": true,
       "stage": "OBJ-01",
+      "geology": {
+        "classification": "Mineraloide · ópalo precioso",
+        "composition": "SiO₂·nH₂O, sílice hidratada",
+        "structure": "Amorfo; masas opalinas",
+        "diagnostic": "Juego de color sobre cuerpo oscuro",
+        "history": "Fecha de disponibilidad del ejemplar de Lightning Ridge pendiente de cotejo.",
+        "plate": "Conservado de OBJ-01.",
+        "source": "https://www.gia.edu/opal"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -7892,13 +8488,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · cuarzo",
+        "composition": "SiO₂",
+        "structure": "Prisma de sección hexagonal",
+        "diagnostic": "Terminación facetada y brillo vítreo",
+        "history": "Mineral conocido antes de 1842.",
+        "plate": "Conjunto de puntas incoloras.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/quartz.pdf"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-01/clasica-64.webp",
+            "bytes": 2392
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-01/clasica-128.webp",
+            "bytes": 6244
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-01/clasica-256.webp",
+            "bytes": 19768
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-01/clasica-512.webp",
+            "bytes": 54276
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-01/inventario-64.webp",
+            "bytes": 2400
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-01/inventario-128.webp",
+            "bytes": 6710
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-01/inventario-256.webp",
+            "bytes": 18054
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-01/inventario-512.webp",
+            "bytes": 46768
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7920,13 +8559,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · calcita óptica",
+        "composition": "CaCO₃",
+        "structure": "Clivaje romboédrico",
+        "diagnostic": "Birrefringencia y caras oblicuas",
+        "history": "Espato de Islandia conocido antes de 1842.",
+        "plate": "El trazo interno sugiere doble imagen.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/calcite.pdf"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-02/clasica-64.webp",
+            "bytes": 1810
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-02/clasica-128.webp",
+            "bytes": 5102
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-02/clasica-256.webp",
+            "bytes": 15926
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-02/clasica-512.webp",
+            "bytes": 43828
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-02/inventario-64.webp",
+            "bytes": 1954
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-02/inventario-128.webp",
+            "bytes": 5386
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-02/inventario-256.webp",
+            "bytes": 14430
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-02/inventario-512.webp",
+            "bytes": 37266
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7948,13 +8630,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · sulfuro de hierro",
+        "composition": "FeS₂",
+        "structure": "Cúbico; estrías en las caras",
+        "diagnostic": "Caras cúbicas y brillo metálico latonado",
+        "history": "Mineral histórico; datación de la pieza riojana pendiente.",
+        "plate": "Cubos en matriz gris, sin pulido.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/pyrite.pdf"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-03/clasica-64.webp",
+            "bytes": 2186
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-03/clasica-128.webp",
+            "bytes": 6012
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-03/clasica-256.webp",
+            "bytes": 20286
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-03/clasica-512.webp",
+            "bytes": 56552
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-03/inventario-64.webp",
+            "bytes": 2316
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-03/inventario-128.webp",
+            "bytes": 6494
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-03/inventario-256.webp",
+            "bytes": 18006
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-03/inventario-512.webp",
+            "bytes": 46284
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -7976,13 +8701,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · óxido de hierro",
+        "composition": "Fe₂O₃",
+        "structure": "Agregado laminar especular",
+        "diagnostic": "Láminas con reflejos acerados",
+        "history": "Variedad histórica; pieza africana de referencia.",
+        "plate": "Superficie plana granular con destellos discretos.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/hematite.pdf"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-04/clasica-64.webp",
+            "bytes": 2406
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-04/clasica-128.webp",
+            "bytes": 6340
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-04/clasica-256.webp",
+            "bytes": 21294
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-04/clasica-512.webp",
+            "bytes": 59354
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-04/inventario-64.webp",
+            "bytes": 2552
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-04/inventario-128.webp",
+            "bytes": 7052
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-04/inventario-256.webp",
+            "bytes": 19092
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-04/inventario-512.webp",
+            "bytes": 48246
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8004,13 +8772,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · fluoruro de calcio",
+        "composition": "CaF₂",
+        "structure": "Cubos frecuentes",
+        "diagnostic": "Cristales escalonados con zonación posible",
+        "history": "Mineral anterior a 1842; procedencia de catálogo.",
+        "plate": "Grupo cúbico violeta en bruto.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/fluorite.pdf"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-05/clasica-64.webp",
+            "bytes": 2400
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-05/clasica-128.webp",
+            "bytes": 6392
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-05/clasica-256.webp",
+            "bytes": 21360
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-05/clasica-512.webp",
+            "bytes": 58898
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-05/inventario-64.webp",
+            "bytes": 2552
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-05/inventario-128.webp",
+            "bytes": 6914
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-05/inventario-256.webp",
+            "bytes": 19466
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-05/inventario-512.webp",
+            "bytes": 48856
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8032,13 +8843,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · óxido de hierro",
+        "composition": "Fe₃O₄",
+        "structure": "Octaédrico frecuente",
+        "diagnostic": "Caras triangulares, color negro y magnetismo",
+        "history": "Mineral conocido antes de 1842.",
+        "plate": "Octaedro oscuro sin efecto visual de magnetismo.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/magnetite.pdf"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-06/clasica-64.webp",
+            "bytes": 2402
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-06/clasica-128.webp",
+            "bytes": 6902
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-06/clasica-256.webp",
+            "bytes": 22786
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-06/clasica-512.webp",
+            "bytes": 61968
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-06/inventario-64.webp",
+            "bytes": 2600
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-06/inventario-128.webp",
+            "bytes": 7442
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-06/inventario-256.webp",
+            "bytes": 19898
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-06/inventario-512.webp",
+            "bytes": 49194
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8060,13 +8914,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · carbonato básico de cobre",
+        "composition": "Cu₃(CO₃)₂(OH)₂",
+        "structure": "Prismático o tabular; agregados",
+        "diagnostic": "Azul intenso y formas cristalinas",
+        "history": "Mineral históricamente utilizado; muestra sin fecha documental.",
+        "plate": "Cristales bajos sobre matriz terrosa.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/azurite.pdf"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-07/clasica-64.webp",
+            "bytes": 2050
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-07/clasica-128.webp",
+            "bytes": 5246
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-07/clasica-256.webp",
+            "bytes": 15512
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-07/clasica-512.webp",
+            "bytes": 39768
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-07/inventario-64.webp",
+            "bytes": 2146
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-07/inventario-128.webp",
+            "bytes": 5656
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-07/inventario-256.webp",
+            "bytes": 12726
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-07/inventario-512.webp",
+            "bytes": 30480
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8088,13 +8985,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · carbonato básico de cobre",
+        "composition": "Cu₂CO₃(OH)₂",
+        "structure": "Agregado botrioidal o fibroso",
+        "diagnostic": "Bandas concéntricas de distintos verdes",
+        "history": "Mineral histórico; procedencia genérica de catálogo.",
+        "plate": "Muestra semipulida sin polvo de pigmento.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/malachite.pdf"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-08/clasica-64.webp",
+            "bytes": 1774
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-08/clasica-128.webp",
+            "bytes": 4480
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-08/clasica-256.webp",
+            "bytes": 12422
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-08/clasica-512.webp",
+            "bytes": 30916
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-08/inventario-64.webp",
+            "bytes": 1906
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-08/inventario-128.webp",
+            "bytes": 4752
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-08/inventario-256.webp",
+            "bytes": 10452
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-08/inventario-512.webp",
+            "bytes": 23998
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8117,6 +9057,15 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Vitrina mineralógica",
       "pilot": true,
       "stage": "OBJ-01",
+      "geology": {
+        "classification": "Vidrio volcánico · roca ígnea",
+        "composition": "Sílice y otros componentes silicatados",
+        "structure": "Amorfo",
+        "diagnostic": "Fractura concoidea y brillo vítreo",
+        "history": "Material utilizado antes de 1842.",
+        "plate": "Conservado de OBJ-01; clasificación editorial en Minerales.",
+        "source": "https://www.nps.gov/subjects/volcanoes/obsidian.htm"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -8178,13 +9127,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · elemento nativo",
+        "composition": "S",
+        "structure": "Ortorrómbico dipiramidal habitual",
+        "diagnostic": "Formas cristalinas y brillo resinoso",
+        "history": "Azufre siciliano de referencia histórica.",
+        "plate": "Cristales sobre roca gris.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/sulfur.pdf"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-10/clasica-64.webp",
+            "bytes": 1860
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-10/clasica-128.webp",
+            "bytes": 4556
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-10/clasica-256.webp",
+            "bytes": 12690
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-10/clasica-512.webp",
+            "bytes": 32058
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-10/inventario-64.webp",
+            "bytes": 1806
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-10/inventario-128.webp",
+            "bytes": 4758
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-10/inventario-256.webp",
+            "bytes": 10290
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-10/inventario-512.webp",
+            "bytes": 25168
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8206,13 +9198,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca ornamental · lapislázuli",
+        "composition": "Lazurita con calcita y pirita frecuentes",
+        "structure": "Agregado multicomponente",
+        "diagnostic": "Vetas claras y posibles puntos de pirita",
+        "history": "Material de uso antiguo en Badakhshan.",
+        "plate": "Se conserva en Minerales por su función editorial.",
+        "source": "https://www.gia.edu/lapis-lazuli"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-11/clasica-64.webp",
+            "bytes": 1880
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-11/clasica-128.webp",
+            "bytes": 5074
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-11/clasica-256.webp",
+            "bytes": 15024
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-11/clasica-512.webp",
+            "bytes": 38666
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-11/inventario-64.webp",
+            "bytes": 2028
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-11/inventario-128.webp",
+            "bytes": 5460
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-11/inventario-256.webp",
+            "bytes": 11924
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-11/inventario-512.webp",
+            "bytes": 28894
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8234,13 +9269,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Mineral · fosfato hidratado de hierro",
+        "composition": "Fe₃(PO₄)₂·8H₂O",
+        "structure": "Cristales prismáticos o laminares alargados",
+        "diagnostic": "Azul verdoso tras oxidación y estrías",
+        "history": "Especie nombrada en el siglo XIX; procedencia de la pieza por cotejar.",
+        "plate": "Hojas cristalinas en matriz terrosa.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/vivianite.pdf"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-12/clasica-64.webp",
+            "bytes": 1822
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-12/clasica-128.webp",
+            "bytes": 4678
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-12/clasica-256.webp",
+            "bytes": 13230
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-12/clasica-512.webp",
+            "bytes": 34800
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MIN-12/inventario-64.webp",
+            "bytes": 1892
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MIN-12/inventario-128.webp",
+            "bytes": 4890
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MIN-12/inventario-256.webp",
+            "bytes": 10988
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MIN-12/inventario-512.webp",
+            "bytes": 26150
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8262,13 +9340,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Resina reciente · exudado endurecido",
+        "composition": "Mezcla orgánica resinosa",
+        "structure": "Irregular, adherida a corteza",
+        "diagnostic": "Vidriosidad en zonas finas y corteza vegetal",
+        "history": "Recreación de muestra reciente disponible en 1842.",
+        "plate": "Se distingue del ámbar por la relación con la corteza fresca.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-01/clasica-64.webp",
+            "bytes": 2216
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-01/clasica-128.webp",
+            "bytes": 6074
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-01/clasica-256.webp",
+            "bytes": 17736
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-01/clasica-512.webp",
+            "bytes": 45152
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-01/inventario-64.webp",
+            "bytes": 2394
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-01/inventario-128.webp",
+            "bytes": 6422
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-01/inventario-256.webp",
+            "bytes": 14786
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-01/inventario-512.webp",
+            "bytes": 34054
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8290,13 +9411,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Resina natural · copal",
+        "composition": "Resina orgánica parcialmente madurada",
+        "structure": "Masa irregular y quebradiza",
+        "diagnostic": "Aspecto pálido; la madurez no se diagnostica solo por color",
+        "history": "Copal de África oriental de referencia histórica.",
+        "plate": "Fractura fresca y craquelado superficial interpretados.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-02/clasica-64.webp",
+            "bytes": 1754
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-02/clasica-128.webp",
+            "bytes": 4572
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-02/clasica-256.webp",
+            "bytes": 13222
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-02/clasica-512.webp",
+            "bytes": 33632
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-02/inventario-64.webp",
+            "bytes": 1724
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-02/inventario-128.webp",
+            "bytes": 4396
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-02/inventario-256.webp",
+            "bytes": 9912
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-02/inventario-512.webp",
+            "bytes": 24500
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8318,13 +9482,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Resina natural · copal",
+        "composition": "Resina orgánica parcialmente madurada",
+        "structure": "Terrón irregular, parcialmente translúcido",
+        "diagnostic": "Burbujas o velos pueden aparecer; no determinan la edad",
+        "history": "Datación del ejemplar colombiano pendiente.",
+        "plate": "Corteza tenue y cuerpo amarillento.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-03/clasica-64.webp",
+            "bytes": 1384
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-03/clasica-128.webp",
+            "bytes": 3490
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-03/clasica-256.webp",
+            "bytes": 9824
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-03/clasica-512.webp",
+            "bytes": 25372
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-03/inventario-64.webp",
+            "bytes": 1426
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-03/inventario-128.webp",
+            "bytes": 3482
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-03/inventario-256.webp",
+            "bytes": 7904
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-03/inventario-512.webp",
+            "bytes": 19274
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8346,13 +9553,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Resina fósil · ámbar báltico",
+        "composition": "Resina orgánica fosilizada; succinita como referencia",
+        "structure": "Fragmento amorfo",
+        "diagnostic": "Transparencia parcial y brillo resinoso",
+        "history": "Material documentado antes de 1842.",
+        "plate": "Ventana color miel y borde natural.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-04/clasica-64.webp",
+            "bytes": 2128
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-04/clasica-128.webp",
+            "bytes": 5722
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-04/clasica-256.webp",
+            "bytes": 18090
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-04/clasica-512.webp",
+            "bytes": 51580
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-04/inventario-64.webp",
+            "bytes": 2178
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-04/inventario-128.webp",
+            "bytes": 6214
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-04/inventario-256.webp",
+            "bytes": 16062
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-04/inventario-512.webp",
+            "bytes": 41916
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8374,13 +9624,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Resina fósil · ámbar báltico",
+        "composition": "Resina orgánica fosilizada",
+        "structure": "Agregado amorfo con turbidez",
+        "diagnostic": "Opacidad causada por dispersión, asociada a microinclusiones",
+        "history": "Báltico histórico, sin fecha individual.",
+        "plate": "Sección cremosa con bandas tenues.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-05/clasica-64.webp",
+            "bytes": 1834
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-05/clasica-128.webp",
+            "bytes": 4380
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-05/clasica-256.webp",
+            "bytes": 13668
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-05/clasica-512.webp",
+            "bytes": 40604
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-05/inventario-64.webp",
+            "bytes": 1798
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-05/inventario-128.webp",
+            "bytes": 4454
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-05/inventario-256.webp",
+            "bytes": 12564
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-05/inventario-512.webp",
+            "bytes": 34366
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8402,13 +9695,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Resina fósil · ámbar de Chiapas",
+        "composition": "Resina orgánica fosilizada",
+        "structure": "Fragmento amorfo",
+        "diagnostic": "Bordes translúcidos y tonos variables",
+        "history": "Procedencia mexicana fija en catálogo; datación de pieza pendiente.",
+        "plate": "Pieza rojiza de fractura natural.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-06/clasica-64.webp",
+            "bytes": 1894
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-06/clasica-128.webp",
+            "bytes": 5230
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-06/clasica-256.webp",
+            "bytes": 16820
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-06/clasica-512.webp",
+            "bytes": 48502
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-06/inventario-64.webp",
+            "bytes": 2080
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-06/inventario-128.webp",
+            "bytes": 5428
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-06/inventario-256.webp",
+            "bytes": 14856
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-06/inventario-512.webp",
+            "bytes": 39702
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8430,13 +9766,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Resina fósil · ámbar de Kuji",
+        "composition": "Resina orgánica fosilizada",
+        "structure": "Laminación de flujo posible",
+        "diagnostic": "Capas internas y corteza superficial",
+        "history": "Procedencia japonesa fija; cotejar documentación del ejemplar.",
+        "plate": "Chip oscuro con borde translúcido.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-07/clasica-64.webp",
+            "bytes": 2080
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-07/clasica-128.webp",
+            "bytes": 5746
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-07/clasica-256.webp",
+            "bytes": 18142
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-07/clasica-512.webp",
+            "bytes": 52416
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-07/inventario-64.webp",
+            "bytes": 2190
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-07/inventario-128.webp",
+            "bytes": 6288
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-07/inventario-256.webp",
+            "bytes": 16080
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-07/inventario-512.webp",
+            "bytes": 43274
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8458,13 +9837,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Resina fósil · ámbar libanés",
+        "composition": "Resina orgánica fosilizada",
+        "structure": "Fragmento pequeño en roca huésped",
+        "diagnostic": "Diferencia óptica entre resina y matriz",
+        "history": "Procedencia de catálogo; disponibilidad de la pieza en 1842 no establecida.",
+        "plate": "La matriz se conserva como parte de la composición.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-08/clasica-64.webp",
+            "bytes": 2216
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-08/clasica-128.webp",
+            "bytes": 6508
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-08/clasica-256.webp",
+            "bytes": 20622
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-08/clasica-512.webp",
+            "bytes": 60248
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-08/inventario-64.webp",
+            "bytes": 2286
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-08/inventario-128.webp",
+            "bytes": 6822
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-08/inventario-256.webp",
+            "bytes": 18362
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-08/inventario-512.webp",
+            "bytes": 49594
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8486,13 +9908,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Resina fósil · ámbar dominicano",
+        "composition": "Resina orgánica fosilizada",
+        "structure": "Nódulo amorfo translúcido",
+        "diagnostic": "Claridad en ventana y borde con corteza",
+        "history": "Datación comercial o museística del ejemplar pendiente.",
+        "plate": "Chip dorado, separado de la variante fluorescente.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-09/clasica-64.webp",
+            "bytes": 2194
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-09/clasica-128.webp",
+            "bytes": 5642
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-09/clasica-256.webp",
+            "bytes": 18370
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-09/clasica-512.webp",
+            "bytes": 51596
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-09/inventario-64.webp",
+            "bytes": 2262
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-09/inventario-128.webp",
+            "bytes": 5810
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-09/inventario-256.webp",
+            "bytes": 16244
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-09/inventario-512.webp",
+            "bytes": 43262
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8514,13 +9979,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Resina fósil con inclusión vegetal",
+        "composition": "Resina orgánica fosilizada y resto vegetal",
+        "structure": "Fragmento aplanado",
+        "diagnostic": "Una inclusión puede conservar contorno y nervios",
+        "history": "Posible muestra de gabinete; autenticidad de la inclusión no inferible de la ilustración.",
+        "plate": "La hoja queda dentro de la matriz, nunca en la superficie.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-10/clasica-64.webp",
+            "bytes": 1872
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-10/clasica-128.webp",
+            "bytes": 4738
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-10/clasica-256.webp",
+            "bytes": 15256
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-10/clasica-512.webp",
+            "bytes": 44542
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-10/inventario-64.webp",
+            "bytes": 1882
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-10/inventario-128.webp",
+            "bytes": 5324
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-10/inventario-256.webp",
+            "bytes": 13564
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-10/inventario-512.webp",
+            "bytes": 36802
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8542,13 +10050,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Resina fósil · ámbar birmano",
+        "composition": "Resina orgánica fosilizada",
+        "structure": "Nódulo rugoso",
+        "diagnostic": "Fracturas y translucidez variable",
+        "history": "Procedencia histórica; ejemplar sin datación de colección.",
+        "plate": "Nódulo cálido de costra oscura.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-11/clasica-64.webp",
+            "bytes": 1804
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-11/clasica-128.webp",
+            "bytes": 4954
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-11/clasica-256.webp",
+            "bytes": 15706
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-11/clasica-512.webp",
+            "bytes": 46344
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/AMB-11/inventario-64.webp",
+            "bytes": 1920
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/AMB-11/inventario-128.webp",
+            "bytes": 5210
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/AMB-11/inventario-256.webp",
+            "bytes": 14066
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/AMB-11/inventario-512.webp",
+            "bytes": 37760
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8571,6 +10122,15 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Muestra encapsulada",
       "pilot": true,
       "stage": "OBJ-01",
+      "geology": {
+        "classification": "Resina fósil · ámbar fluorescente",
+        "composition": "Resina orgánica fosilizada",
+        "structure": "Amorfo; fluorescencia óptica",
+        "diagnostic": "Apariencia azul en ciertas iluminaciones; el cuerpo puede ser amarillo",
+        "history": "Procedencia dominicana de referencia. No se confirma documentación individual en 1842.",
+        "plate": "Conservado de OBJ-01. Azul superficial y brillo resinoso.",
+        "source": "https://www.gia.edu/gems-gemology/summer-2014-liu-color-phenomena-blue-amber"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -8632,13 +10192,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito metálico · hierro IAB-MG",
+        "composition": "Aleación Fe-Ni",
+        "structure": "Fragmento metálico meteorizado",
+        "diagnostic": "Óxidos y superficie irregular",
+        "history": "Futuro · hallazgo catalogado en 1958. Asociación con un relato de 1516 incierta.",
+        "plate": "Se representa un fragmento oxidado interpretativo.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16906"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-01/clasica-64.webp",
+            "bytes": 1932
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-01/clasica-128.webp",
+            "bytes": 4922
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-01/clasica-256.webp",
+            "bytes": 14832
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-01/clasica-512.webp",
+            "bytes": 40208
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-01/inventario-64.webp",
+            "bytes": 2028
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-01/inventario-128.webp",
+            "bytes": 5108
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-01/inventario-256.webp",
+            "bytes": 11448
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-01/inventario-512.webp",
+            "bytes": 27948
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8660,13 +10263,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito pétreo · condrita ordinaria LL6",
+        "composition": "Silicatos y metal disperso",
+        "structure": "Masa compacta fracturada",
+        "diagnostic": "Corteza oscura y superficie interior más clara",
+        "history": "Caída observada en 1492.",
+        "plate": "La fractura se interpreta para lectura del contraste.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=10039"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-02/clasica-64.webp",
+            "bytes": 1636
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-02/clasica-128.webp",
+            "bytes": 4750
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-02/clasica-256.webp",
+            "bytes": 14264
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-02/clasica-512.webp",
+            "bytes": 39372
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-02/inventario-64.webp",
+            "bytes": 1808
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-02/inventario-128.webp",
+            "bytes": 4900
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-02/inventario-256.webp",
+            "bytes": 10904
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-02/inventario-512.webp",
+            "bytes": 26066
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8688,13 +10334,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito pétreo · condrita carbonácea CV3",
+        "composition": "Silicatos, cóndrulos e inclusiones ricas en Ca y Al",
+        "structure": "Interior de textura condrítica",
+        "diagnostic": "Inclusiones claras y granos redondeados",
+        "history": "Futuro · caída de 1969.",
+        "plate": "Vista de una cara interior esquemática.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=2278"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-03/clasica-64.webp",
+            "bytes": 1934
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-03/clasica-128.webp",
+            "bytes": 4826
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-03/clasica-256.webp",
+            "bytes": 14578
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-03/clasica-512.webp",
+            "bytes": 41106
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-03/inventario-64.webp",
+            "bytes": 2010
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-03/inventario-128.webp",
+            "bytes": 5222
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-03/inventario-256.webp",
+            "bytes": 11456
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-03/inventario-512.webp",
+            "bytes": 27630
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8716,13 +10405,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito pétreo · condrita carbonácea CM2",
+        "composition": "Matriz fina rica en filosilicatos y cóndrulos",
+        "structure": "Corteza y masa oscura granular",
+        "diagnostic": "Matriz rica en material fino y cóndrulos pequeños",
+        "history": "Futuro · caída de 1969.",
+        "plate": "La microtextura se amplía para el sprite.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16875"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-04/clasica-64.webp",
+            "bytes": 1786
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-04/clasica-128.webp",
+            "bytes": 4620
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-04/clasica-256.webp",
+            "bytes": 13824
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-04/clasica-512.webp",
+            "bytes": 37166
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-04/inventario-64.webp",
+            "bytes": 1964
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-04/inventario-128.webp",
+            "bytes": 4938
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-04/inventario-256.webp",
+            "bytes": 10444
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-04/inventario-512.webp",
+            "bytes": 25436
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8744,13 +10476,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito pétreo · condrita ordinaria LL5",
+        "composition": "Principalmente silicatos con poco hierro metálico",
+        "structure": "Corteza negra sobre interior gris",
+        "diagnostic": "Contraste de corteza y posible veta de choque",
+        "history": "Futuro · caída de 2013.",
+        "plate": "La veta interior es interpretativa.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=57165"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-05/clasica-64.webp",
+            "bytes": 1732
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-05/clasica-128.webp",
+            "bytes": 4462
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-05/clasica-256.webp",
+            "bytes": 14058
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-05/clasica-512.webp",
+            "bytes": 39834
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-05/inventario-64.webp",
+            "bytes": 1776
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-05/inventario-128.webp",
+            "bytes": 4814
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-05/inventario-256.webp",
+            "bytes": 10638
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-05/inventario-512.webp",
+            "bytes": 26348
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8773,6 +10548,15 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Réplica de fragmento",
       "pilot": true,
       "stage": "OBJ-01",
+      "geology": {
+        "classification": "Meteorito metálico · hierro IVA",
+        "composition": "Aleación Fe-Ni",
+        "structure": "Octaedrita fina en secciones diagnósticas",
+        "diagnostic": "Regmagliptos en superficie; patrón metálico estudiable en sección",
+        "history": "Hallazgo catalogado en 1836.",
+        "plate": "Muestra conservada de OBJ-01 en bruto.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=10912"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -8834,13 +10618,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito metálico · hierro IAB-MG",
+        "composition": "Aleación Fe-Ni",
+        "structure": "Fragmento metálico desgastado",
+        "diagnostic": "Relieve de depresiones y óxidos",
+        "history": "Documentado en 1576; muestra concreta interpretativa.",
+        "plate": "Se enfatiza el relieve grueso.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=5247"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-07/clasica-64.webp",
+            "bytes": 1986
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-07/clasica-128.webp",
+            "bytes": 4978
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-07/clasica-256.webp",
+            "bytes": 14842
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-07/clasica-512.webp",
+            "bytes": 41398
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-07/inventario-64.webp",
+            "bytes": 2104
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-07/inventario-128.webp",
+            "bytes": 5222
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-07/inventario-256.webp",
+            "bytes": 11510
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-07/inventario-512.webp",
+            "bytes": 28294
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8862,13 +10689,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito metálico · hierro IIAB",
+        "composition": "Aleación Fe-Ni",
+        "structure": "Fragmentos y metralla",
+        "diagnostic": "Fuerte relieve en piezas de fragmentación",
+        "history": "Futuro · caída de 1947.",
+        "plate": "La pieza representa un fragmento desgarrado.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=23593"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-08/clasica-64.webp",
+            "bytes": 1828
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-08/clasica-128.webp",
+            "bytes": 4412
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-08/clasica-256.webp",
+            "bytes": 12736
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-08/clasica-512.webp",
+            "bytes": 36442
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-08/inventario-64.webp",
+            "bytes": 1938
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-08/inventario-128.webp",
+            "bytes": 4666
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-08/inventario-256.webp",
+            "bytes": 10320
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-08/inventario-512.webp",
+            "bytes": 25560
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8890,13 +10760,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito mixto · pallasita del grupo principal",
+        "composition": "Olivino y metal Fe-Ni",
+        "structure": "Red metálica con olivino o huecos",
+        "diagnostic": "Cristales y cavidades en espécimen meteorizado",
+        "history": "Hallazgo catalogado en 1822.",
+        "plate": "Fragmento bruto de referencia chilena.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12025"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-09/clasica-64.webp",
+            "bytes": 2204
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-09/clasica-128.webp",
+            "bytes": 5514
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-09/clasica-256.webp",
+            "bytes": 16792
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-09/clasica-512.webp",
+            "bytes": 47432
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-09/inventario-64.webp",
+            "bytes": 2224
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-09/inventario-128.webp",
+            "bytes": 5946
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-09/inventario-256.webp",
+            "bytes": 13448
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-09/inventario-512.webp",
+            "bytes": 31980
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8918,13 +10831,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito mixto · pallasita del grupo principal",
+        "composition": "Olivino y metal Fe-Ni",
+        "structure": "Cristales en matriz metálica",
+        "diagnostic": "Contraste óptico entre olivino y entramado metálico",
+        "history": "Futuro · hallazgo catalogado en 2000.",
+        "plate": "Lámina de sección interpretativa.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=34491"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-10/clasica-64.webp",
+            "bytes": 2438
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-10/clasica-128.webp",
+            "bytes": 7098
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-10/clasica-256.webp",
+            "bytes": 21646
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-10/clasica-512.webp",
+            "bytes": 64684
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-10/inventario-64.webp",
+            "bytes": 2636
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-10/inventario-128.webp",
+            "bytes": 7584
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-10/inventario-256.webp",
+            "bytes": 20306
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-10/inventario-512.webp",
+            "bytes": 54632
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8946,13 +10902,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito metálico · hierro IVB",
+        "composition": "Aleación Fe-Ni rica en níquel",
+        "structure": "Masa metálica tabular",
+        "diagnostic": "Volumen aplanado y meteorización superficial",
+        "history": "Futuro · hallazgo de 1920.",
+        "plate": "Modelo a escala reducida de una masa de unas 60 toneladas.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=11890"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-11/clasica-64.webp",
+            "bytes": 1982
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-11/clasica-128.webp",
+            "bytes": 5444
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-11/clasica-256.webp",
+            "bytes": 17484
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-11/clasica-512.webp",
+            "bytes": 53524
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-11/inventario-64.webp",
+            "bytes": 2190
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-11/inventario-128.webp",
+            "bytes": 6100
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-11/inventario-256.webp",
+            "bytes": 15530
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-11/inventario-512.webp",
+            "bytes": 42262
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -8974,13 +10973,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Meteorito pétreo marciano · ortopiroxenita",
+        "composition": "Principalmente ortopiroxeno",
+        "structure": "Fragmento ígneo granular",
+        "diagnostic": "Corteza de fusión y masa interior de piroxeno",
+        "history": "Futuro · hallazgo de 1984.",
+        "plate": "Lámina del fragmento sin presuntas formas biológicas.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=604"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-12/clasica-64.webp",
+            "bytes": 1958
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-12/clasica-128.webp",
+            "bytes": 5562
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-12/clasica-256.webp",
+            "bytes": 18794
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-12/clasica-512.webp",
+            "bytes": 56292
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MET-12/inventario-64.webp",
+            "bytes": 2146
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MET-12/inventario-128.webp",
+            "bytes": 6048
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MET-12/inventario-256.webp",
+            "bytes": 16832
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MET-12/inventario-512.webp",
+            "bytes": 45474
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -15840,13 +17882,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca ígnea volcánica · basalto",
+        "composition": "Plagioclasa y piroxeno, entre otros",
+        "structure": "Disyunción columnar",
+        "diagnostic": "Prismas poligonales por contracción",
+        "history": "Muestra estructural de Antrim, formato documental.",
+        "plate": "Modelo reducido sin paisaje.",
+        "source": "https://whc.unesco.org/en/list/369/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-01/clasica-64.webp",
+            "bytes": 2266
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-01/clasica-128.webp",
+            "bytes": 6754
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-01/clasica-256.webp",
+            "bytes": 21002
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-01/clasica-512.webp",
+            "bytes": 58282
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-01/inventario-64.webp",
+            "bytes": 2336
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-01/inventario-128.webp",
+            "bytes": 7102
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-01/inventario-256.webp",
+            "bytes": 18272
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-01/inventario-512.webp",
+            "bytes": 46072
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -15868,13 +17953,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca ígnea plutónica · granito",
+        "composition": "Cuarzo, feldespatos y micas",
+        "structure": "Grano visible e intercrecido",
+        "diagnostic": "Tres componentes contrastan en fractura gruesa",
+        "history": "Granito de Cornualles, procedencia de catálogo.",
+        "plate": "Escala de muestra de mano.",
+        "source": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-02/clasica-64.webp",
+            "bytes": 2602
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-02/clasica-128.webp",
+            "bytes": 7230
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-02/clasica-256.webp",
+            "bytes": 24056
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-02/clasica-512.webp",
+            "bytes": 73398
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-02/inventario-64.webp",
+            "bytes": 2858
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-02/inventario-128.webp",
+            "bytes": 7982
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-02/inventario-256.webp",
+            "bytes": 22530
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-02/inventario-512.webp",
+            "bytes": 61200
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -15896,13 +18024,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca metamórfica · pizarra",
+        "composition": "Filosilicatos finos y cuarzo",
+        "structure": "Clivaje pizarroso",
+        "diagnostic": "Hojas planas exfoliables",
+        "history": "Referencia minera del norte de Gales.",
+        "plate": "Plaquitas apiladas sin paisaje.",
+        "source": "https://whc.unesco.org/en/list/1633/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-03/clasica-64.webp",
+            "bytes": 1824
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-03/clasica-128.webp",
+            "bytes": 5006
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-03/clasica-256.webp",
+            "bytes": 15654
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-03/clasica-512.webp",
+            "bytes": 48728
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-03/inventario-64.webp",
+            "bytes": 1906
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-03/inventario-128.webp",
+            "bytes": 5178
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-03/inventario-256.webp",
+            "bytes": 14292
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-03/inventario-512.webp",
+            "bytes": 38838
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -15924,13 +18095,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca ígnea volcánica · pumita",
+        "composition": "Vidrio volcánico espumoso",
+        "structure": "Vesicular",
+        "diagnostic": "Muchos poros pequeños y matriz clara",
+        "history": "Vesubio, referencia de catálogo.",
+        "plate": "Fragmento sin matriz añadida.",
+        "source": "https://www.usgs.gov/glossary/volcano-hazards-program/pumice"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-04/clasica-64.webp",
+            "bytes": 2418
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-04/clasica-128.webp",
+            "bytes": 6658
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-04/clasica-256.webp",
+            "bytes": 21936
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-04/clasica-512.webp",
+            "bytes": 64038
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-04/inventario-64.webp",
+            "bytes": 2498
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-04/inventario-128.webp",
+            "bytes": 7258
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-04/inventario-256.webp",
+            "bytes": 20526
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-04/inventario-512.webp",
+            "bytes": 53756
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -15952,13 +18166,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca sedimentaria detrítica · arenisca",
+        "composition": "Granos arenosos, frecuentemente cuarzo",
+        "structure": "Estratificación cruzada",
+        "diagnostic": "Láminas inclinadas y grano arenoso",
+        "history": "Blue Mountains; muestra interpretativa sin fecha individual.",
+        "plate": "Corte oblicuo deliberado.",
+        "source": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-05/clasica-64.webp",
+            "bytes": 2082
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-05/clasica-128.webp",
+            "bytes": 6158
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-05/clasica-256.webp",
+            "bytes": 19138
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-05/clasica-512.webp",
+            "bytes": 62760
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-05/inventario-64.webp",
+            "bytes": 2314
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-05/inventario-128.webp",
+            "bytes": 6796
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-05/inventario-256.webp",
+            "bytes": 17986
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-05/inventario-512.webp",
+            "bytes": 49756
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -15980,13 +18237,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca sedimentaria química · travertino",
+        "composition": "CaCO₃ frecuente en forma de calcita",
+        "structure": "Bandas y terrazas de precipitación",
+        "diagnostic": "Capas claras con porosidad variable",
+        "history": "Pamukkale, representación documental.",
+        "plate": "Modelo pequeño de la estructura escalonada.",
+        "source": "https://whc.unesco.org/en/list/485/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-06/clasica-64.webp",
+            "bytes": 1606
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-06/clasica-128.webp",
+            "bytes": 4362
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-06/clasica-256.webp",
+            "bytes": 12648
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-06/clasica-512.webp",
+            "bytes": 34356
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-06/inventario-64.webp",
+            "bytes": 1670
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-06/inventario-128.webp",
+            "bytes": 4330
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-06/inventario-256.webp",
+            "bytes": 10392
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-06/inventario-512.webp",
+            "bytes": 24912
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -16008,13 +18308,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca ígnea piroclástica · toba",
+        "composition": "Ceniza consolidada con cristales y fragmentos",
+        "structure": "Porosa, con fragmentos líticos",
+        "diagnostic": "Ceniza fina y clastos oscuros dispersos",
+        "history": "Capadocia, procedencia de referencia.",
+        "plate": "Muestra de mano.",
+        "source": "https://whc.unesco.org/en/list/357/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-07/clasica-64.webp",
+            "bytes": 2252
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-07/clasica-128.webp",
+            "bytes": 6044
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-07/clasica-256.webp",
+            "bytes": 19146
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-07/clasica-512.webp",
+            "bytes": 54494
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-07/inventario-64.webp",
+            "bytes": 2406
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-07/inventario-128.webp",
+            "bytes": 6418
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-07/inventario-256.webp",
+            "bytes": 15420
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-07/inventario-512.webp",
+            "bytes": 37702
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -16036,13 +18379,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca sedimentaria detrítica · conglomerado",
+        "composition": "Clastos de composición variable y matriz arenosa",
+        "structure": "Clastos redondeados embebidos",
+        "diagnostic": "Cantos visibles unidos por matriz",
+        "history": "Andes centrales, sin localidad individual asignada.",
+        "plate": "Sección que distingue la roca de un canto suelto.",
+        "source": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-08/clasica-64.webp",
+            "bytes": 2070
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-08/clasica-128.webp",
+            "bytes": 5084
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-08/clasica-256.webp",
+            "bytes": 15712
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-08/clasica-512.webp",
+            "bytes": 43742
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-08/inventario-64.webp",
+            "bytes": 2064
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-08/inventario-128.webp",
+            "bytes": 5378
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-08/inventario-256.webp",
+            "bytes": 12530
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-08/inventario-512.webp",
+            "bytes": 30124
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -16064,13 +18450,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca metamórfica · gneis",
+        "composition": "Cuarzo, feldespatos y minerales máficos",
+        "structure": "Bandeado gnéisico",
+        "diagnostic": "Bandas minerales claras y oscuras",
+        "history": "Lewis, procedencia de catálogo.",
+        "plate": "Bandeado ondulado de muestra de mano.",
+        "source": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-09/clasica-64.webp",
+            "bytes": 1998
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-09/clasica-128.webp",
+            "bytes": 5476
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-09/clasica-256.webp",
+            "bytes": 16538
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-09/clasica-512.webp",
+            "bytes": 45862
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-09/inventario-64.webp",
+            "bytes": 2124
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-09/inventario-128.webp",
+            "bytes": 5754
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-09/inventario-256.webp",
+            "bytes": 13494
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-09/inventario-512.webp",
+            "bytes": 32310
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -16092,13 +18521,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca sedimentaria biogénica · diatomita",
+        "composition": "Sílice opalina de frústulas de diatomeas",
+        "structure": "Fina, terrosa y porosa",
+        "diagnostic": "Textura ligera y friable",
+        "history": "Valle del Rift de Kenia, muestra de referencia.",
+        "plate": "Las frústulas microscópicas quedan fuera de la lámina.",
+        "source": "https://www.usgs.gov/centers/national-minerals-information-center/diatomite-statistics-and-information"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-10/clasica-64.webp",
+            "bytes": 1744
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-10/clasica-128.webp",
+            "bytes": 4524
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-10/clasica-256.webp",
+            "bytes": 13880
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-10/clasica-512.webp",
+            "bytes": 38982
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-10/inventario-64.webp",
+            "bytes": 1814
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-10/inventario-128.webp",
+            "bytes": 4556
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-10/inventario-256.webp",
+            "bytes": 10768
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-10/inventario-512.webp",
+            "bytes": 26688
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -16120,13 +18592,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca sedimentaria química · formación ferrífera bandeada",
+        "composition": "Óxidos de hierro y sílice",
+        "structure": "Bandeado fino",
+        "diagnostic": "Alternancia férrica y silícea",
+        "history": "Hamersley, referencia documental, con datación de la muestra pendiente.",
+        "plate": "Sección plana, escala relativa de álbum.",
+        "source": "https://www.ga.gov.au/education/minerals-energy/australian-mineral-facts/iron"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-11/clasica-64.webp",
+            "bytes": 1834
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-11/clasica-128.webp",
+            "bytes": 4696
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-11/clasica-256.webp",
+            "bytes": 14714
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-11/clasica-512.webp",
+            "bytes": 42848
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-11/inventario-64.webp",
+            "bytes": 1882
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-11/inventario-128.webp",
+            "bytes": 5012
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-11/inventario-256.webp",
+            "bytes": 11400
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-11/inventario-512.webp",
+            "bytes": 27372
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Geología",
@@ -16148,13 +18663,56 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-07",
+      "geology": {
+        "classification": "Roca ígnea ultramáfica · kimberlita",
+        "composition": "Olivino alterado, carbonatos y otros minerales",
+        "structure": "Brecha o matriz volcánica con xenolitos",
+        "diagnostic": "Clastos y matriz contrastan sin implicar presencia de diamante",
+        "history": "Futuro · contexto de los hallazgos de Kimberley en la década de 1870.",
+        "plate": "Trozos de roca, sin adornos.",
+        "source": "https://www.gia.edu/gems-gemology/winter-2018-how-diamonds-form"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-12/clasica-64.webp",
+            "bytes": 2056
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-12/clasica-128.webp",
+            "bytes": 5278
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-12/clasica-256.webp",
+            "bytes": 16420
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-12/clasica-512.webp",
+            "bytes": 45664
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ROC-12/inventario-64.webp",
+            "bytes": 2074
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ROC-12/inventario-128.webp",
+            "bytes": 5750
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ROC-12/inventario-256.webp",
+            "bytes": 13138
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ROC-12/inventario-512.webp",
+            "bytes": 31416
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",

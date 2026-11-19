@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const {rows, groups, materialIds, recipeExamples, archive, cartography, paleontology, botany} = AtlasObjetosCientificos;
+  const {rows, groups, materialIds, recipeExamples, archive, cartography, paleontology, botany, geology, geologyComparisons} = AtlasObjetosCientificos;
   const {phases, reconstruction} = AtlasReconstruccionObjetos;
   const fossilGroups = {
     materials: {name:'Materiales y fósiles menores', ids:[...paleontology.materials,...paleontology.minors]},
@@ -51,6 +51,7 @@
 
   options(get('group'), groups.map(group => group.name));
   options(get('botany-group'), botany.map(group => group.name), 'Plancha general · 48 piezas');
+  options(get('geology-group'), [...geology,...geologyComparisons].map(group => group.name), 'Plancha general · 60 piezas');
   for (const mount of paleontology.mounts) get('mount').add(new Option(mount.name, mount.id));
   phases.forEach((phase, index) => get('phase').add(new Option(phase.name, String(index))));
   get('phase').value = '3';
@@ -169,6 +170,20 @@
         ['Caracteres diagnósticos',row.botany.characteristics],['Escala real',row.botany.scale]]) {
         facts.append(node('dt',label),node('dd',value));
       }
+      card.append(facts);
+    }
+    if (row.geology) {
+      const facts = node('dl', '', 'material-facts');
+      for (const [label,value] of [['Clasificación',row.geology.classification],['Composición',row.geology.composition],
+        ['Hábito o estructura',row.geology.structure],['Rasgo documentado',row.geology.diagnostic],
+        ['Contexto histórico',row.geology.history],['Observación de la lámina',row.geology.plate]]) {
+        facts.append(node('dt',label),node('dd',value));
+      }
+      const source = node('a','Ficha de referencia');
+      source.href = row.geology.source;
+      const cell = node('dd');
+      cell.append(source);
+      facts.append(node('dt','Fuente'),cell);
       card.append(facts);
     }
     if (row.species) {
@@ -298,6 +313,10 @@
       case 'album': return row.type === 'Coleccionable propuesto';
       case 'museum': return row.type === 'Pieza del Museo';
       case 'botany': return row.botany && (!get('botany-group').value || row.collection === get('botany-group').value);
+      case 'geology': {
+        const selection = get('geology-group').value;
+        return selection ? [...geology,...geologyComparisons].find(group => group.name === selection)?.ids.includes(row.id) : row.geology;
+      }
       case 'groups': return groups.find(group => group.name === get('group').value).ids.includes(row.id);
       case 'paleontology': return fossilGroups[get('paleo-section').value]?.ids.includes(row.id);
       case 'archive': return archive.find(group => group.name === archiveSelect.value)?.ids.includes(row.id);
@@ -379,16 +398,16 @@
     gallery.append(section);
   }
 
-  function renderBotany(selected) {
+  function renderCabinet(selected, entriesByGroup, cabinet) {
     const variant = get('botany-variant').value;
     const labels = variant === 'both' ? headings.slice(1) : headings.filter(([key]) => key === variant);
-    for (const group of botany) {
+    for (const group of entriesByGroup) {
       const entries = selected.filter(row => group.ids.includes(row.id));
       if (!entries.length) continue;
-      const section = node('section', '', 'botany-section');
+      const section = node('section', '', cabinet + '-section');
       const grid = node('div', '', 'botany-grid');
       for (const row of entries) {
-        const card = node('article', '', 'botany-card');
+        const card = node('article', '', cabinet + '-card');
         card.append(node('h3', row.name), node('small', row.id + ' · ' + row.rarity));
         const samples = node('div', '', 'botany-samples');
         for (const [key, title] of labels) samples.append(figure(row,key,title));
@@ -408,7 +427,9 @@
     const inArchive = view === 'archive';
     const inBotany = view === 'botany';
     get('botany-control').hidden = !inBotany;
-    get('botany-variant-control').hidden = !inBotany;
+    const inGeology = view === 'geology';
+    get('geology-control').hidden = !inGeology;
+    get('botany-variant-control').hidden = !inBotany && !inGeology;
     const inAssembly = inArchive && archiveSelect.value === 'assembly';
     get('archive-control').hidden = !inArchive;
     get('assembly-control').hidden = !inAssembly;
@@ -448,10 +469,11 @@
       gallery.append(compare);
       return;
     }
-    get('status').textContent = selected.length + ' resultados' + (['compare','groups','archive','paleontology','botany'].includes(view) ? '' : ' · Simulación con datos de prueba');
-    if (inBotany) {
+    get('status').textContent = selected.length + ' resultados' + (['compare','groups','archive','paleontology','botany','geology'].includes(view) ? '' : ' · Simulación con datos de prueba');
+    if (inBotany || inGeology) {
       navigation(0, 0);
-      renderBotany(selected);
+      const selectedComparison = inGeology && geologyComparisons.find(group => group.name === get('geology-group').value);
+      renderCabinet(selected, selectedComparison ? [selectedComparison] : inGeology ? geology : botany, view);
       return;
     }
     if (inPaleo) {
@@ -488,7 +510,7 @@
   }
 
   get('search').addEventListener('input', resetPage);
-  for (const key of ['view','group','botany-group','paleo-section','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
+  for (const key of ['view','group','botany-group','geology-group','paleo-section','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
   for (const key of ['scale','ground','halo','stock','assembly','botany-variant','mount','phase','living']) get(key).addEventListener('change', render);
   function resetPage() {
     page = 0;

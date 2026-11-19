@@ -64,3 +64,25 @@
 }
 .discovery-panel .progress-row { text-align:left; }
 .botanical-summary { padding:.55rem .75rem; border:1px solid var(--line); border-radius:.35rem; background:var(--card); }
+.collection-exhibition {
+  padding:clamp(.65rem,3vw,1.3rem); border:1px solid var(--line); border-radius:.45rem;
+  background:var(--card);
+}
+.collection-exhibition .display-grid { margin-top:.5rem; }
+.collection-exhibition > p { margin:.25rem 0; }
+.collection-exhibition progress { width:min(100%,23rem); }
+.exhibition-album { background:#f9eed8; }
+.exhibition-album .inclusion-card { background:transparent; border:0; border-bottom:1px solid #ccb78c; border-radius:0; }
+.exhibition-album .stage { border:0; background:transparent; }
+.exhibition-cabinet {
+  background:linear-gradient(155deg,#6f5135,#9b7751 52%,#6c4e32); color:#fff5df;
+}
+.exhibition-cabinet .inclusion-card {
+  background:#f0e3c8; color:var(--ink); border:3px double #a3865d;
+}
+.exhibition-cabinet .stage { background:#e4d3ae; border:1px inset #b79a6c; }
+.exhibition-showcase { background:#213d34; color:#f5edda; border-color:#487062; }
+.exhibition-showcase .inclusion-card { background:#2c5145; color:#f5edda; border-color:#648475; }
+.exhibition-showcase small { color:#f5edda; }
+.exhibition-showcase .stage { background:radial-gradient(ellipse at center,#789084,#2c5145 76%); border:1px solid #75998c; }
+.exhibition-showcase .stage span { color:#f5edda; }

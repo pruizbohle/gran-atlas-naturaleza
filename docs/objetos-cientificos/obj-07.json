@@ -1,0 +1,20 @@
+{
+  "sheets": [
+    {"file":"gemas-a.png","columns":4,"ids":["GEM-01","GEM-02","GEM-03","GEM-04","GEM-05","GEM-06","GEM-07","GEM-08"]},
+    {"file":"gemas-minerales.png","columns":4,"ids":["GEM-10","GEM-11","MIN-01","MIN-02","MIN-03","MIN-04","MIN-05","MIN-06"]},
+    {"file":"minerales-resinas.png","columns":4,"crop":{"rows":[0,443,887],"edges":[[0,443,887,1330,1774],[0,443,887,1330,1774]],"padding":12,"alpha":[36, 249]},"ids":["MIN-07","MIN-08","MIN-10","MIN-11","MIN-12","AMB-01","AMB-02","AMB-03"]},
+    {"file":"resinas.png","columns":4,"ids":["AMB-04","AMB-05","AMB-06","AMB-07","AMB-08","AMB-09","AMB-10","AMB-11"]},
+    {"file":"meteoritos-a.png","columns":4,"crop":{"rows":[0,443,887],"edges":[[0,443,887,1330,1774],[0,443,887,1330,1774]],"padding":8,"alpha":[42, 249]},"ids":["MET-01","MET-02","MET-03","MET-04","MET-05","MET-07","MET-08","MET-09"]},
+    {"file":"meteoritos-rocas.png","columns":4,"ids":["MET-10","MET-11","MET-12","ROC-01","ROC-02","ROC-03","ROC-04","ROC-05"]},
+    {"file":"rocas.png","columns":4,"crop":{"rows":[0,443,887],"edges":[[0,443,887,1330,1774],[0,443,887,1330,1774]],"padding":16,"alpha":[225, 247]},"ids":["ROC-06","ROC-07","ROC-08","ROC-09","ROC-10","ROC-11","ROC-12",null]}
+  ],
+  "collections": ["GEM","MIN","AMB","MET","ROC"],
+  "comparisons": [
+    {"name":"Gemas y minerales cristalinos","ids":["GEM-01","GEM-03","MIN-01","MIN-05","GEM-09","MIN-07"]},
+    {"name":"Canto rodado y rocas","ids":["river_pebble","ROC-08","ROC-04","ROC-09"]},
+    {"name":"Ámbar funcional y resinas de gabinete","ids":["fossil_amber","AMB-01","AMB-03","AMB-04","AMB-10","AMB-12"]},
+    {"name":"Minerales y pigmentos","ids":["MIN-08","PIG-10","MIN-11","PIG-11"]},
+    {"name":"Meteoritos y fragmentos fósiles","ids":["MET-06","MET-04","MET-09","fossil_fragment","hard_bone"]},
+    {"name":"Cristales y lente pulida","ids":["polished_lens","GEM-05","MIN-02","MIN-01"]}
+  ]
+}

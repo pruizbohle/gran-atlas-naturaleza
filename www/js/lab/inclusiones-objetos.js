@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const {rows, materialIds, animalMaterialIds, paleontology, tradeRoutes, barter} = AtlasObjetosCientificos;
+  const {rows, materialIds, animalMaterialIds, paleontology, tradeRoutes, barter, botany, geology, geologyComparisons} = AtlasObjetosCientificos;
   const {phases, reconstruction} = AtlasReconstruccionObjetos;
   const byId = new Map(rows.map(row => [row.id, row]));
   const get = id => document.getElementById(id);
@@ -28,6 +28,13 @@
 
   const rarities = ['Común','Poco común','Raro','Muy raro'];
   const discoveries = new Set();
+  const exhibitCabinets = {'Botánica':botany, 'Geología':geology};
+  const formats = {
+    album:'Álbum de láminas científicas',
+    cabinet:'Gabinete de muestras',
+    showcase:'Vitrina de colección museística'
+  };
+  const progressOptions = ['0','25','50','75','100'].map(value => [value,value === '0' ? 'Sin descubrir · 0 %' : value + ' %']);
   const choices = ['Pendiente','Incluir','Incluir con modificaciones','Evaluar posteriormente','Descartar'];
   const storageKey = 'atlas-laboratorio-inclusiones:v1';
   let reviews = {};
@@ -41,6 +48,7 @@
     section:'inventory', query:'', page:0, scope:'existing', family:'', tier:'',
     group:'all', museum:'Fósiles', mount:paleontology.mounts[0].id, phase:'3', form:'skeleton',
     cabinet:'', collection:'', progress:'50', discoveryRarity:'Poco común', approval:'', origin:'',
+    exhibitCabinet:'Botánica', exhibitCollection:botany[0].name, exhibitFormat:'album', exhibitProgress:'100',
     instrument:'binoculars', hat:'field_hat', necklace:'amulet', bag:'sturdy_pack'
   };
   const perPage = 24;
@@ -73,6 +81,7 @@
       state[key] = input.value;
       state.page = 0;
       if (key === 'cabinet') state.collection = '';
+      if (key === 'exhibitCabinet') state.exhibitCollection = exhibitCabinets[input.value][0].name;
       if (key === 'progress') discoveries.clear();
       render();
       get(input.id)?.focus();
@@ -110,7 +119,7 @@
     const stage = node('div', '', 'stage');
     const source = row.sprites.inventario?.[pixels];
     if (!visibility) {
-      if (row.botany && source) {
+      if ((row.botany || row.geology) && source) {
         const silhouette = node('img');
         silhouette.src = source.src;
         silhouette.alt = '';
@@ -142,7 +151,7 @@
     tile.append(figure(row, visible), node('h3', row.name),
       node('small', summary || row.rarity || (row.tier ? 'Tier ' + row.tier : row.type)));
     if (!visible && !row.sprites.inventario) tile.append(node('small', 'Ilustración pendiente'));
-    tile.append(button('Ficha', () => detail(row)));
+    tile.append(button('Ficha', () => detail(row,visible)));
     return tile;
   }
 
@@ -152,7 +161,7 @@
     return list;
   }
 
-  function detail(row) {
+  function detail(row, visible = true) {
     const body = get('detail-content');
     const h = node('h2', row.name);
     h.id = 'detail-title';
@@ -162,13 +171,30 @@
       ['Obtención sugerida',row.acquisition],['Uso sugerido',row.uses],['Contexto',row.context],
       ['Identificación u origen',row.botany?.identity],['Caracteres diagnósticos',row.botany?.characteristics],
       ['Escala real',row.botany?.scale],['Puntos de colección',row.points],
+      ['Clasificación',row.geology?.classification],['Composición',row.geology?.composition],['Hábito o estructura',row.geology?.structure],
+      ['Rasgo documentado',row.geology?.diagnostic],['Contexto histórico',row.geology?.history],['Observación de la lámina',row.geology?.plate],
       ['Estado artístico',row.artState],['Observaciones',row.observations]];
     for (const [label, value] of fields) {
       if (value) facts.append(node('dt',label),node('dd',value));
     }
     const discoverable = row.type === 'Coleccionable propuesto' && state.section === 'album';
-    body.replaceChildren(h,figure(row,!discoverable || discovered(row),'',row.botany ? 256 : 128),facts);
-    dialog.showModal();
+    const showSample = visible && (!discoverable || discovered(row));
+    body.replaceChildren(h,figure(row,showSample,'',row.botany || row.geology ? 256 : 128),facts);
+    if (row.geology) {
+      const source = node('a','Fuente mineralógica o geológica');
+      source.href = row.geology.source;
+      body.append(source);
+    }
+    if (showSample) {
+      const related = [...new Set(geologyComparisons.filter(group => group.ids.includes(row.id))
+        .flatMap(group => group.ids))].filter(id => id !== row.id).map(id => byId.get(id));
+      if (related.length) {
+        body.append(node('h3','Comparar con muestras similares'),grid(related, other =>
+          card(other,!discoverable || other.type !== 'Coleccionable propuesto' || discovered(other),
+            other.geology?.classification || other.type)));
+      }
+    }
+    if (!dialog.open) dialog.showModal();
   }
 
   function paginate(entries, renderPage) {
@@ -295,7 +321,7 @@
   }
 
   function discoveryCandidate() {
-    return collectible.find(row => row.botany && row.rarity === state.discoveryRarity &&
+    return collectible.find(row => row.cabinet === state.cabinet && row.rarity === state.discoveryRarity &&
       (!state.collection || row.collection === state.collection) && matches(row) && !discovered(row));
   }
 
@@ -325,13 +351,13 @@
     const summary = node('div','','progress-list');
     for (const cabinet of cabinets) summary.append(progressLine(cabinet,collectible.filter(row => row.cabinet === cabinet)));
     gallery.append(summary);
-    if (state.cabinet === 'Botánica') {
-      const botanical = collectible.filter(row => row.botany);
-      const summary = node('div','','progress-list botanical-summary');
+    if (Object.hasOwn(exhibitCabinets,state.cabinet)) {
+      const membersInCabinet = collectible.filter(row => row.cabinet === state.cabinet);
+      const summary = node('div','','progress-list botanical-summary cabinet-summary');
       for (const [name,members] of collections) {
-        if (members[0].botany) summary.append(progressLine(name,members));
+        if (members[0].cabinet === state.cabinet) summary.append(progressLine(name,members));
       }
-      gallery.append(node('p',score(botanical),'album-score'),summary);
+      gallery.append(node('p',score(membersInCabinet),'album-score'),summary);
       const trigger = get('include-discover');
       trigger.disabled = !discoveryCandidate();
       get('discovery-status').textContent = trigger.disabled ?
@@ -347,6 +373,21 @@
         gallery.append(section);
       }
     });
+  }
+
+  function exhibition() {
+    const members = collections.get(state.exhibitCollection);
+    const baseline = Math.floor(members.length * Number(state.exhibitProgress) / 100);
+    status.textContent = baseline + ' de ' + members.length + ' piezas exhibidas';
+    const section = node('section','','collection-exhibition exhibition-' + state.exhibitFormat);
+    section.append(node('h3',state.exhibitCollection),node('p',formats[state.exhibitFormat] + ' · ' + state.exhibitCabinet));
+    const bar = node('progress');
+    bar.max = members.length;
+    bar.value = baseline;
+    bar.setAttribute('aria-label','Progreso de la exhibición');
+    section.append(bar,grid(members, (row) => card(row,members.indexOf(row) < baseline,
+      row.rarity + ' · ' + (members.indexOf(row) < baseline ? 'Exhibida' : 'Pendiente'))));
+    gallery.append(section);
   }
 
   function museumView() {
@@ -464,12 +505,12 @@
     status.textContent = '';
     gallery.replaceChildren();
     navigation.replaceChildren();
-    ({inventory,equipment:team,materials,trade:commerce,album,museum:museumView,register})[state.section]();
+    ({inventory,equipment:team,materials,trade:commerce,album,exhibition,museum:museumView,register})[state.section]();
   }
 
   function render() {
     controls.replaceChildren();
-    if (state.section !== 'museum' || state.museum !== 'Fósiles') search();
+    if (state.section !== 'exhibition' && (state.section !== 'museum' || state.museum !== 'Fósiles')) search();
     if (state.section === 'inventory') {
       select('scope','Alcance',[['existing','Objetos existentes'],['proposed','Inclusiones propuestas'],['all','Todos los objetos']]);
       select('family','Categoría',[['','Todas'],...['Materiales','Equipamiento','Fósiles','Cartografía','Mercancías regionales'].map(label => [label,label])]);
@@ -484,8 +525,8 @@
       select('cabinet','Gabinete',[['','Todos'],...cabinets.map(name => [name,name])]);
       const available = [...collections].filter(([,members]) => !state.cabinet || members[0].cabinet === state.cabinet);
       select('collection','Colección',[['','Todas'],...available.map(([name]) => [name,name])]);
-      select('progress','Progreso de prueba',['0','25','50','75','100'].map(value => [value,value === '0' ? 'Sin descubrir · 0 %' : value + ' %']));
-      if (state.cabinet === 'Botánica') {
+      select('progress','Progreso de prueba',progressOptions);
+      if (Object.hasOwn(exhibitCabinets,state.cabinet)) {
         select('discoveryRarity','Rareza del descubrimiento',rarities.map(value => [value,value]));
         const trigger = button('Probar descubrimiento',demonstrateDiscovery);
         trigger.id = 'include-discover';
@@ -495,6 +536,12 @@
         availability.setAttribute('role','status');
         controls.append(trigger,availability);
       }
+    }
+    if (state.section === 'exhibition') {
+      select('exhibitCabinet','Gabinete',Object.keys(exhibitCabinets).map(name => [name,name]));
+      select('exhibitCollection','Colección',exhibitCabinets[state.exhibitCabinet].map(group => [group.name,group.name]));
+      select('exhibitFormat','Presentación',Object.entries(formats));
+      select('exhibitProgress','Progreso de exhibición',progressOptions);
     }
     if (state.section === 'museum') {
       select('museum','Sala',['Exposiciones','Muestras','Fósiles','Relictos','Artefactos'].map(name => [name,name]));
