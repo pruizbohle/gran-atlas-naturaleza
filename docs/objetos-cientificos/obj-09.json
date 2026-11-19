@@ -1,0 +1,27 @@
+{
+  "sheets":[
+    {"file":"monedas.png","columns":4,"ids":["NUM-02","NUM-03","NUM-04","NUM-05","NUM-06","NUM-07","NUM-08","NUM-09"],"crop":{"rows":[0,443,887],"edges":[[0,443,887,1330,1774],[0,443,887,1330,1774]]}},
+    {"file":"monedas-civilizaciones.png","columns":4,"ids":["NUM-10","NUM-11","NUM-12","CIV-01","CIV-02","CIV-03","CIV-04","CIV-05"],"crop":{"rows":[0,443,887],"edges":[[0,443,887,1330,1774],[0,443,887,1330,1774]],"alpha":[135,249],"rectangles":{"NUM-10":[58,58,385,392],"NUM-11":[490,48,841,405],"NUM-12":[934,49,1272,399],"CIV-01":[1365,74,1743,381],"CIV-02":[103,472,342,859],"CIV-03":[481,530,848,809],"CIV-04":[987,489,1232,839],"CIV-05":[1354,507,1533,809]}}},
+    {"file":"civilizaciones.png","columns":4,"ids":["CIV-06","CIV-07","CIV-08","CIV-09","CIV-10","CIV-11","CIV-12","FIL-02"],"crop":{"rows":[0,443,887],"edges":[[0,443,887,1330,1774],[0,443,887,1330,1774]],"alpha":[65,249]}},
+    {"file":"sellos.png","columns":4,"ids":["FIL-03","FIL-04","FIL-05","FIL-06","FIL-07","FIL-08","FIL-09","FIL-10"],"crop":{"rows":[0,443,887],"edges":[[0,443,887,1330,1774],[0,443,887,1330,1774]]}},
+    {"file":"sellos-figuras.png","columns":4,"ids":["FIL-11","FIL-12","MAS-01","MAS-02","MAS-03","MAS-04","MAS-05","MAS-06"],"crop":{"rows":[0,443,887],"edges":[[0,443,887,1330,1774],[0,443,887,1330,1774]],"alpha":[135,249],"rectangles":{"NUM-10":[58,58,385,392],"NUM-11":[490,48,841,405],"NUM-12":[934,49,1272,399],"CIV-01":[1365,74,1743,381],"CIV-02":[103,472,342,859],"CIV-03":[481,530,848,809],"CIV-04":[987,489,1232,839],"CIV-05":[1354,507,1533,809]}}},
+    {"file":"figuras-medallas.png","columns":4,"ids":["MAS-07","MAS-08","MAS-09","MAS-10","MAS-11","MAS-12","MED-02","MED-03"],"crop":{"rows":[0,443,887],"edges":[[0,443,887,1330,1774],[0,443,887,1330,1774]],"alpha":[206,249]}},
+    {"file":"medallas.png","columns":3,"ids":["MED-04","MED-05","MED-06","MED-07","MED-08","MED-09","MED-10","MED-11","MED-12"],"crop":{"rows":[0,415,831,1247],"edges":[[0,420,840,1261],[0,420,840,1261],[305,614,925,1261]],"rectangles":{"MED-07":[430,411,812,811],"MED-08":[831,416,1241,802],"MED-09":[16,801,304,1225]}}}
+  ],
+  "collections":["NUM","CIV","FIL","MAS","MAP","MED"],
+  "comparisons":[
+    {"name":"Monedas de gabinete y monedas funcionales","ids":["ancient_coin","NUM-01","NUM-04","NUM-08","NUM-11"]},
+    {"name":"Medallas y colgantes","ids":["MED-01","MED-03","MED-10","MAR-07","medallon_viajero","museum_medallion"]},
+    {"name":"Sellos y documentos","ids":["FIL-01","FIL-09","FIL-11","north_american_trade_document","asian_trade_folio"]},
+    {"name":"Artefactos y mercancías regionales","ids":["CIV-10","african_textile_sample","CIV-11","oceanian_nacre","CIV-07","MAR-04"]},
+    {"name":"Cartas históricas y mapas funcionales","ids":["MAP-04","MAP-09","MAP-12","world_map","polar_map","south_america_map"]},
+    {"name":"Arqueología y ficción de Atlántida","ids":["CIV-04","CIV-05","CIV-12","MAR-08","MAR-09","MAR-12"]}
+  ],
+  "sources":[
+    {"id":"terrestre","name":"Expediciones terrestres","description":"Registros de gabinete y reproducciones autorizadas, con procedencia anotada.","ids":["CIV-01","CIV-03","CIV-07","MAP-06","MAP-08","MAS-09"]},
+    {"id":"comercio","name":"Comercio","description":"Adquisiciones autorizadas de material documental y reproducciones.","ids":["NUM-04","NUM-07","NUM-08","NUM-11","FIL-01","MAS-03"]},
+    {"id":"documental","name":"Investigación documental","description":"Consulta de mapas, catálogos, archivos y fichas de emisión.","ids":["MAP-02","MAP-03","MAP-04","FIL-02","FIL-08","FIL-12"]},
+    {"id":"misiones","name":"Misiones de exploración","description":"Registros de referencia vinculados a travesías y pesquisa de archivo.","ids":["MAP-07","MAP-09","MAP-11","MAP-12","MED-02","MED-10"]},
+    {"id":"museos","name":"Intercambios museísticos","description":"Préstamos de estudio, láminas y reproducciones de gabinete autorizadas.","ids":["CIV-09","CIV-10","CIV-12","MAS-06","MAS-08","MAS-11"]}
+  ]
+}

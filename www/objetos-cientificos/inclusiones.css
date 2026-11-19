@@ -99,3 +99,10 @@
   border:1px solid #887652; border-radius:.3rem; font-weight:650;
 }
 .discovery-panel > button { margin-top:.35rem; }
+.history-timeline {
+  display:flex; gap:.45rem; overflow-x:auto; padding:.45rem .2rem .7rem; margin-bottom:.8rem;
+  border-bottom:1px solid var(--line);
+}
+.history-timeline button { flex:none; white-space:nowrap; }
+.history-timeline button[aria-pressed="true"] { color:#fff6df; background:#305243; border-color:#305243; }
+.history-status { font-weight:600; }

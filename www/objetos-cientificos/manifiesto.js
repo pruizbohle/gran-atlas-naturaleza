@@ -71,6 +71,243 @@ globalThis.AtlasObjetosCientificos = {
       ]
     }
   ],
+  "history": [
+    {
+      "name": "Numismática",
+      "ids": [
+        "NUM-01",
+        "NUM-02",
+        "NUM-03",
+        "NUM-04",
+        "NUM-05",
+        "NUM-06",
+        "NUM-07",
+        "NUM-08",
+        "NUM-09",
+        "NUM-10",
+        "NUM-11",
+        "NUM-12"
+      ]
+    },
+    {
+      "name": "Objetos de civilizaciones",
+      "ids": [
+        "CIV-01",
+        "CIV-02",
+        "CIV-03",
+        "CIV-04",
+        "CIV-05",
+        "CIV-06",
+        "CIV-07",
+        "CIV-08",
+        "CIV-09",
+        "CIV-10",
+        "CIV-11",
+        "CIV-12"
+      ]
+    },
+    {
+      "name": "Filatelia",
+      "ids": [
+        "FIL-01",
+        "FIL-02",
+        "FIL-03",
+        "FIL-04",
+        "FIL-05",
+        "FIL-06",
+        "FIL-07",
+        "FIL-08",
+        "FIL-09",
+        "FIL-10",
+        "FIL-11",
+        "FIL-12"
+      ]
+    },
+    {
+      "name": "Máscaras y figurillas",
+      "ids": [
+        "MAS-01",
+        "MAS-02",
+        "MAS-03",
+        "MAS-04",
+        "MAS-05",
+        "MAS-06",
+        "MAS-07",
+        "MAS-08",
+        "MAS-09",
+        "MAS-10",
+        "MAS-11",
+        "MAS-12"
+      ]
+    },
+    {
+      "name": "Cartografía antigua",
+      "ids": [
+        "MAP-01",
+        "MAP-02",
+        "MAP-03",
+        "MAP-04",
+        "MAP-05",
+        "MAP-06",
+        "MAP-07",
+        "MAP-08",
+        "MAP-09",
+        "MAP-10",
+        "MAP-11",
+        "MAP-12"
+      ]
+    },
+    {
+      "name": "Medallas y condecoraciones históricas",
+      "ids": [
+        "MED-01",
+        "MED-02",
+        "MED-03",
+        "MED-04",
+        "MED-05",
+        "MED-06",
+        "MED-07",
+        "MED-08",
+        "MED-09",
+        "MED-10",
+        "MED-11",
+        "MED-12"
+      ]
+    }
+  ],
+  "historyComparisons": [
+    {
+      "name": "Monedas de gabinete y monedas funcionales",
+      "ids": [
+        "ancient_coin",
+        "NUM-01",
+        "NUM-04",
+        "NUM-08",
+        "NUM-11"
+      ]
+    },
+    {
+      "name": "Medallas y colgantes",
+      "ids": [
+        "MED-01",
+        "MED-03",
+        "MED-10",
+        "MAR-07",
+        "medallon_viajero",
+        "museum_medallion"
+      ]
+    },
+    {
+      "name": "Sellos y documentos",
+      "ids": [
+        "FIL-01",
+        "FIL-09",
+        "FIL-11",
+        "north_american_trade_document",
+        "asian_trade_folio"
+      ]
+    },
+    {
+      "name": "Artefactos y mercancías regionales",
+      "ids": [
+        "CIV-10",
+        "african_textile_sample",
+        "CIV-11",
+        "oceanian_nacre",
+        "CIV-07",
+        "MAR-04"
+      ]
+    },
+    {
+      "name": "Cartas históricas y mapas funcionales",
+      "ids": [
+        "MAP-04",
+        "MAP-09",
+        "MAP-12",
+        "world_map",
+        "polar_map",
+        "south_america_map"
+      ]
+    },
+    {
+      "name": "Arqueología y ficción de Atlántida",
+      "ids": [
+        "CIV-04",
+        "CIV-05",
+        "CIV-12",
+        "MAR-08",
+        "MAR-09",
+        "MAR-12"
+      ]
+    }
+  ],
+  "historicalSources": [
+    {
+      "id": "terrestre",
+      "name": "Expediciones terrestres",
+      "description": "Registros de gabinete y reproducciones autorizadas, con procedencia anotada.",
+      "ids": [
+        "CIV-01",
+        "CIV-03",
+        "CIV-07",
+        "MAP-06",
+        "MAP-08",
+        "MAS-09"
+      ]
+    },
+    {
+      "id": "comercio",
+      "name": "Comercio",
+      "description": "Adquisiciones autorizadas de material documental y reproducciones.",
+      "ids": [
+        "NUM-04",
+        "NUM-07",
+        "NUM-08",
+        "NUM-11",
+        "FIL-01",
+        "MAS-03"
+      ]
+    },
+    {
+      "id": "documental",
+      "name": "Investigación documental",
+      "description": "Consulta de mapas, catálogos, archivos y fichas de emisión.",
+      "ids": [
+        "MAP-02",
+        "MAP-03",
+        "MAP-04",
+        "FIL-02",
+        "FIL-08",
+        "FIL-12"
+      ]
+    },
+    {
+      "id": "misiones",
+      "name": "Misiones de exploración",
+      "description": "Registros de referencia vinculados a travesías y pesquisa de archivo.",
+      "ids": [
+        "MAP-07",
+        "MAP-09",
+        "MAP-11",
+        "MAP-12",
+        "MED-02",
+        "MED-10"
+      ]
+    },
+    {
+      "id": "museos",
+      "name": "Intercambios museísticos",
+      "description": "Préstamos de estudio, láminas y reproducciones de gabinete autorizadas.",
+      "ids": [
+        "CIV-09",
+        "CIV-10",
+        "CIV-12",
+        "MAS-06",
+        "MAS-08",
+        "MAS-11"
+      ]
+    }
+  ],
   "geology": [
     {
       "name": "Piedras preciosas",
@@ -1009,6 +1246,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1077,6 +1319,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1145,6 +1392,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1213,6 +1465,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1281,6 +1538,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1349,6 +1611,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1417,6 +1684,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1485,6 +1757,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1553,6 +1830,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1617,6 +1899,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1681,6 +1968,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1745,6 +2037,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1809,6 +2106,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1873,6 +2175,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -1937,6 +2244,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2001,6 +2313,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2065,6 +2382,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2129,6 +2451,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2193,6 +2520,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2257,6 +2589,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2321,6 +2658,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2385,6 +2727,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2449,6 +2796,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2516,6 +2868,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2580,6 +2937,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2647,6 +3009,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2711,6 +3078,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2778,6 +3150,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2848,6 +3225,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2912,6 +3294,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -2976,6 +3363,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3040,6 +3432,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3104,6 +3501,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3168,6 +3570,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3232,6 +3639,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3296,6 +3708,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3360,6 +3777,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3424,6 +3846,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3488,6 +3915,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3552,6 +3984,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3616,6 +4053,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3680,6 +4122,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3750,6 +4197,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3820,6 +4272,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3890,6 +4347,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -3954,6 +4416,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4018,6 +4485,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4082,6 +4554,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4146,6 +4623,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4210,6 +4692,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4274,6 +4761,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4338,6 +4830,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4408,6 +4905,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4478,6 +4980,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4542,6 +5049,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4609,6 +5121,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4673,6 +5190,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4740,6 +5262,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4804,6 +5331,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4871,6 +5403,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -4943,6 +5480,11 @@ globalThis.AtlasObjetosCientificos = {
       },
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5007,6 +5549,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5071,6 +5618,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5135,6 +5687,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5199,6 +5756,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5263,6 +5825,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5327,6 +5894,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5391,6 +5963,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Objeto productivo",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia artística de 1842; modelo específico por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5457,6 +6034,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Rosa silvestre · Rosa sp.",
         "characteristics": "Corola de cinco pétalos, pequeño tallo y hojas. Especie exacta pendiente.",
         "scale": "Flor de pocos centímetros."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -5525,6 +6107,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Ramilla con pequeñas flores agrupadas y hojas reducidas.",
         "scale": "Las flores individuales se cuentan en milímetros."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5591,6 +6178,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Eschscholzia californica",
         "characteristics": "Copa de cuatro pétalos y follaje finamente dividido.",
         "scale": "Flor de pocos centímetros."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -5659,6 +6251,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Racimo de flores papilionadas y hoja palmeada.",
         "scale": "Se representa un tramo floral, no la altura de la planta."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5725,6 +6322,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Jacaranda mimosifolia",
         "characteristics": "Corolas tubulares azul violáceas, follaje dividido como referencia.",
         "scale": "Se representa una porción de la inflorescencia."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -5793,6 +6395,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Brácteas externas rosadas y centro denso de flores pequeñas.",
         "scale": "Cabezuela amplia, mayor que una flor de cerezo."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5859,6 +6466,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Adansonia digitata",
         "characteristics": "Flor colgante clara, pétalos reflejos y prominente haz de estambres.",
         "scale": "Flor relativamente grande, dibujada aislada."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -5927,6 +6539,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Corola rosada y receptáculo central diferenciado.",
         "scale": "Flor de escala decimétrica."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -5993,6 +6610,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Prunus serrulata · tipo de flor simple",
         "characteristics": "Cinco pétalos en cada flor de la ramilla y pequeños botones.",
         "scale": "Varias flores de pocos centímetros."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -6061,6 +6683,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Cabezuela escarlata de florecillas curvas y hojas coriáceas.",
         "scale": "Cabezuela de escala decimétrica."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -6127,6 +6754,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Leontopodium alpinum · referencia alpina",
         "characteristics": "Brácteas lanosas estrelladas alrededor de capítulos pequeños.",
         "scale": "Se amplía la inflorescencia respecto al resto del herbario."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -6195,6 +6827,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Flor rojiza de cinco lóbulos carnosos, verrugas claras y cámara central.",
         "scale": "La flor puede acercarse a un metro y se reduce para el álbum."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -6261,6 +6898,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Quercus robur · ejemplar de referencia",
         "characteristics": "Nuez ovoide con cúpula escamosa.",
         "scale": "Un fruto de pocos centímetros."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -6329,6 +6971,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Semilla clara y ejemplar con cubierta oscura.",
         "scale": "Semillas pequeñas ampliadas."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -6395,6 +7042,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Fagus sylvatica",
         "characteristics": "Nueces triangulares dentro de una cúpula espinosa.",
         "scale": "Conjunto de pocos centímetros."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -6463,6 +7115,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Semilla de testa negra con relieve fino.",
         "scale": "La semilla es milimétrica y se amplía para mostrar la testa."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -6529,6 +7186,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Theobroma cacao · tipo criollo",
         "characteristics": "Semilla aislada y sección clara. Distinta de la mazorca funcional abierta.",
         "scale": "Semilla de pocos centímetros."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -6597,6 +7259,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Vaina larga, oscura, dura y aplanada.",
         "scale": "La vaina mide decenas de centímetros y se reduce."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -6663,6 +7330,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Araucaria araucana",
         "characteristics": "Piñón alargado, cuneiforme y pardo claro, de la araucaria del sur andino.",
         "scale": "Semilla de pocos centímetros."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -6731,6 +7403,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Semilla oscura y detalle del receptáculo poroso.",
         "scale": "La semilla y el receptáculo se representan juntos."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -6797,6 +7474,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Eucalyptus sp. · morfotipo leñoso",
         "characteristics": "Cápsulas con reborde y válvulas; se ilustra el fruto que contiene las semillas.",
         "scale": "Cápsulas ampliadas."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -6865,6 +7547,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Semilla reniforme, cubierta opaca y sección clara.",
         "scale": "Semillas pequeñas ampliadas."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -6931,6 +7618,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Acer palmatum",
         "characteristics": "Dos sámaras unidas con alas papiráceas divergentes.",
         "scale": "Fruto alado de pocos centímetros."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -6999,6 +7691,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Réplica de semilla bilobulada de Seychelles.",
         "scale": "Ejemplar mucho mayor que las restantes semillas, reducido para el álbum."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -7065,6 +7762,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Vegetal · carbón de madera",
         "characteristics": "Fragmento negro fisurado y marca mate.",
         "scale": "Presentación de gabinete."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -7133,6 +7835,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Ocre amarillo de grano terroso y trazo dorado.",
         "scale": "Presentación de gabinete."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -7199,6 +7906,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Mineral · tierra ferruginosa con hematita",
         "characteristics": "Muestra arcillosa de grano rojizo y mate.",
         "scale": "Presentación de gabinete."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -7267,6 +7979,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Pardo amarillento y trazo terroso.",
         "scale": "Presentación de gabinete."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -7333,6 +8050,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Mineral · tierras verdes, como celadonita o glauconita",
         "characteristics": "Fragmento verdoso y muestra aplanada de verde grisáceo.",
         "scale": "Presentación de gabinete."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -7401,6 +8123,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Semillas rojizas y una cápsula espinosa como referencia.",
         "scale": "Presentación de gabinete."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -7467,6 +8194,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Vegetal · plantas tintóreas como Indigofera tinctoria",
         "characteristics": "Torta compacta azul muy oscura y una muestra de color.",
         "scale": "Presentación de gabinete."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -7535,6 +8267,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Ejemplares históricos conservados y muestra carmín.",
         "scale": "Los insectos se representan ampliados."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -7601,6 +8338,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Mixto · colorante índigo y mineral arcilloso paligorskita",
         "characteristics": "Fragmento cerámico con color histórico.",
         "scale": "Reproducción documental, sin atribución arqueológica a un original."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -7669,6 +8411,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Mineral bandeado y muestra granular verde.",
         "scale": "Presentación de gabinete."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -7736,6 +8483,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Roca azul con inclusiones y trazo ultramar. La ficha se refiere al pigmento mineral histórico.",
         "scale": "Presentación de gabinete."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -7802,6 +8554,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Animal · pigmento histórico de moluscos marinos de la familia Muricidae",
         "characteristics": "Reproducción de lana histórica teñida, con tonalidad purpúrea.",
         "scale": "Trozo de muestra textil conservada."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -7872,6 +8629,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Aspecto translúcido rosado y fractura concoidea",
         "history": "Procedencia brasileña de catálogo; ejemplar sin datación confirmada.",
         "plate": "Masa en bruto con aristas de fractura.",
+        "source": "https://www.gia.edu/rose-quartz"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Procedencia brasileña de catálogo; ejemplar sin datación confirmada.",
         "source": "https://www.gia.edu/rose-quartz"
       },
       "sprites": {
@@ -7945,6 +8707,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Cristal único sobre roca madre.",
         "source": "https://www.gia.edu/garnet"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "El granate se usaba antes de 1842; muestra de Bohemia de referencia.",
+        "source": "https://www.gia.edu/garnet"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -8014,6 +8781,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Puntas con terminaciones y zonación tintórea",
         "history": "Variedad conocida antes de 1842; muestra brasileña sin fecha precisa.",
         "plate": "Drusa pequeña sobre matriz.",
+        "source": "https://www.gia.edu/amethyst"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Variedad conocida antes de 1842; muestra brasileña sin fecha precisa.",
         "source": "https://www.gia.edu/amethyst"
       },
       "sprites": {
@@ -8087,6 +8859,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Prisma alargado dorado en bruto.",
         "source": "https://www.gia.edu/topaz"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia de Ouro Preto; datación del ejemplar pendiente.",
+        "source": "https://www.gia.edu/topaz"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -8156,6 +8933,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Cristal largo, transparente o translúcido, con caras prismáticas",
         "history": "Variedad histórica; procedencia de catálogo.",
         "plate": "Prisma azul verdoso de extremo plano.",
+        "source": "https://www.gia.edu/aquamarine"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Variedad histórica; procedencia de catálogo.",
         "source": "https://www.gia.edu/aquamarine"
       },
       "sprites": {
@@ -8229,6 +9011,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Nódulo con matriz oscura.",
         "source": "https://www.gia.edu/turquoise"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Material ornamental conocido antes de 1842; procedencia catalogada.",
+        "source": "https://www.gia.edu/turquoise"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -8298,6 +9085,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Textura entrelazada y brillo graso",
         "history": "Cultura material china anterior a 1842; ejemplar interpretativo.",
         "plate": "Bloque satinado con fractura astillosa.",
+        "source": "https://www.gia.edu/jade"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Cultura material china anterior a 1842; ejemplar interpretativo.",
         "source": "https://www.gia.edu/jade"
       },
       "sprites": {
@@ -8371,6 +9163,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Granos pequeños con roca madre.",
         "source": "https://www.gia.edu/peridot"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Procedencia histórica de Zabargad; ejemplar interpretativo.",
+        "source": "https://www.gia.edu/peridot"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -8440,6 +9237,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Crecimiento prismático e inclusiones visibles",
         "history": "Esmeraldas colombianas documentadas antes de 1842.",
         "plate": "Conservada de OBJ-01.",
+        "source": "https://www.gia.edu/emerald"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Esmeraldas colombianas documentadas antes de 1842.",
         "source": "https://www.gia.edu/emerald"
       },
       "sprites": {
@@ -8513,6 +9315,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Cristal azul bruto, sin talla.",
         "source": "https://www.gia.edu/sapphire"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Gema histórica de Sri Lanka; ejemplar sin fecha individual.",
+        "source": "https://www.gia.edu/sapphire"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -8582,6 +9389,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Corindón rojo en mármol como asociación posible",
         "history": "Gema histórica de Myanmar; muestra exacta sin fecha.",
         "plate": "Cristal corto en matriz blanca.",
+        "source": "https://www.gia.edu/ruby"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Gema histórica de Myanmar; muestra exacta sin fecha.",
         "source": "https://www.gia.edu/ruby"
       },
       "sprites": {
@@ -8655,6 +9467,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Conservado de OBJ-01.",
         "source": "https://www.gia.edu/opal"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha de disponibilidad del ejemplar de Lightning Ridge pendiente de cotejo.",
+        "source": "https://www.gia.edu/opal"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -8724,6 +9541,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Terminación facetada y brillo vítreo",
         "history": "Mineral conocido antes de 1842.",
         "plate": "Conjunto de puntas incoloras.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/quartz.pdf"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Mineral conocido antes de 1842.",
         "source": "https://www.handbookofmineralogy.org/pdfs/quartz.pdf"
       },
       "sprites": {
@@ -8797,6 +9619,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "El trazo interno sugiere doble imagen.",
         "source": "https://www.handbookofmineralogy.org/pdfs/calcite.pdf"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Espato de Islandia conocido antes de 1842.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/calcite.pdf"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -8866,6 +9693,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Caras cúbicas y brillo metálico latonado",
         "history": "Mineral histórico; datación de la pieza riojana pendiente.",
         "plate": "Cubos en matriz gris, sin pulido.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/pyrite.pdf"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Mineral histórico; datación de la pieza riojana pendiente.",
         "source": "https://www.handbookofmineralogy.org/pdfs/pyrite.pdf"
       },
       "sprites": {
@@ -8939,6 +9771,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Superficie plana granular con destellos discretos.",
         "source": "https://www.handbookofmineralogy.org/pdfs/hematite.pdf"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Variedad histórica; pieza africana de referencia.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/hematite.pdf"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -9008,6 +9845,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Cristales escalonados con zonación posible",
         "history": "Mineral anterior a 1842; procedencia de catálogo.",
         "plate": "Grupo cúbico violeta en bruto.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/fluorite.pdf"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Mineral anterior a 1842; procedencia de catálogo.",
         "source": "https://www.handbookofmineralogy.org/pdfs/fluorite.pdf"
       },
       "sprites": {
@@ -9081,6 +9923,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Octaedro oscuro sin efecto visual de magnetismo.",
         "source": "https://www.handbookofmineralogy.org/pdfs/magnetite.pdf"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Mineral conocido antes de 1842.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/magnetite.pdf"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -9150,6 +9997,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Azul intenso y formas cristalinas",
         "history": "Mineral históricamente utilizado; muestra sin fecha documental.",
         "plate": "Cristales bajos sobre matriz terrosa.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/azurite.pdf"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Mineral históricamente utilizado; muestra sin fecha documental.",
         "source": "https://www.handbookofmineralogy.org/pdfs/azurite.pdf"
       },
       "sprites": {
@@ -9223,6 +10075,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Muestra semipulida sin polvo de pigmento.",
         "source": "https://www.handbookofmineralogy.org/pdfs/malachite.pdf"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Mineral histórico; procedencia genérica de catálogo.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/malachite.pdf"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -9292,6 +10149,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Fractura concoidea y brillo vítreo",
         "history": "Material utilizado antes de 1842.",
         "plate": "Conservado de OBJ-01; clasificación editorial en Minerales.",
+        "source": "https://www.nps.gov/subjects/volcanoes/obsidian.htm"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Material utilizado antes de 1842.",
         "source": "https://www.nps.gov/subjects/volcanoes/obsidian.htm"
       },
       "sprites": {
@@ -9365,6 +10227,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Cristales sobre roca gris.",
         "source": "https://www.handbookofmineralogy.org/pdfs/sulfur.pdf"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Azufre siciliano de referencia histórica.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/sulfur.pdf"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -9434,6 +10301,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Vetas claras y posibles puntos de pirita",
         "history": "Material de uso antiguo en Badakhshan.",
         "plate": "Se conserva en Minerales por su función editorial.",
+        "source": "https://www.gia.edu/lapis-lazuli"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Material de uso antiguo en Badakhshan.",
         "source": "https://www.gia.edu/lapis-lazuli"
       },
       "sprites": {
@@ -9507,6 +10379,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Hojas cristalinas en matriz terrosa.",
         "source": "https://www.handbookofmineralogy.org/pdfs/vivianite.pdf"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Especie nombrada en el siglo XIX; procedencia de la pieza por cotejar.",
+        "source": "https://www.handbookofmineralogy.org/pdfs/vivianite.pdf"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -9576,6 +10453,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Vidriosidad en zonas finas y corteza vegetal",
         "history": "Recreación de muestra reciente disponible en 1842.",
         "plate": "Se distingue del ámbar por la relación con la corteza fresca.",
+        "source": "https://www.gia.edu/amber"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Recreación de muestra reciente disponible en 1842.",
         "source": "https://www.gia.edu/amber"
       },
       "sprites": {
@@ -9649,6 +10531,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Fractura fresca y craquelado superficial interpretados.",
         "source": "https://www.gia.edu/amber"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Copal de África oriental de referencia histórica.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -9718,6 +10605,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Burbujas o velos pueden aparecer; no determinan la edad",
         "history": "Datación del ejemplar colombiano pendiente.",
         "plate": "Corteza tenue y cuerpo amarillento.",
+        "source": "https://www.gia.edu/amber"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Datación del ejemplar colombiano pendiente.",
         "source": "https://www.gia.edu/amber"
       },
       "sprites": {
@@ -9791,6 +10683,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Ventana color miel y borde natural.",
         "source": "https://www.gia.edu/amber"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Material documentado antes de 1842.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -9860,6 +10757,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Opacidad causada por dispersión, asociada a microinclusiones",
         "history": "Báltico histórico, sin fecha individual.",
         "plate": "Sección cremosa con bandas tenues.",
+        "source": "https://www.gia.edu/amber"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Báltico histórico, sin fecha individual.",
         "source": "https://www.gia.edu/amber"
       },
       "sprites": {
@@ -9933,6 +10835,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Pieza rojiza de fractura natural.",
         "source": "https://www.gia.edu/amber"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Procedencia mexicana fija en catálogo; datación de pieza pendiente.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -10002,6 +10909,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Capas internas y corteza superficial",
         "history": "Procedencia japonesa fija; cotejar documentación del ejemplar.",
         "plate": "Chip oscuro con borde translúcido.",
+        "source": "https://www.gia.edu/amber"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Procedencia japonesa fija; cotejar documentación del ejemplar.",
         "source": "https://www.gia.edu/amber"
       },
       "sprites": {
@@ -10075,6 +10987,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "La matriz se conserva como parte de la composición.",
         "source": "https://www.gia.edu/amber"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Procedencia de catálogo; disponibilidad de la pieza en 1842 no establecida.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -10144,6 +11061,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Claridad en ventana y borde con corteza",
         "history": "Datación comercial o museística del ejemplar pendiente.",
         "plate": "Chip dorado, separado de la variante fluorescente.",
+        "source": "https://www.gia.edu/amber"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Datación comercial o museística del ejemplar pendiente.",
         "source": "https://www.gia.edu/amber"
       },
       "sprites": {
@@ -10217,6 +11139,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "La hoja queda dentro de la matriz, nunca en la superficie.",
         "source": "https://www.gia.edu/amber"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Posible muestra de gabinete; autenticidad de la inclusión no inferible de la ilustración.",
+        "source": "https://www.gia.edu/amber"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -10286,6 +11213,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Fracturas y translucidez variable",
         "history": "Procedencia histórica; ejemplar sin datación de colección.",
         "plate": "Nódulo cálido de costra oscura.",
+        "source": "https://www.gia.edu/amber"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Procedencia histórica; ejemplar sin datación de colección.",
         "source": "https://www.gia.edu/amber"
       },
       "sprites": {
@@ -10359,6 +11291,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Conservado de OBJ-01. Azul superficial y brillo resinoso.",
         "source": "https://www.gia.edu/gems-gemology/summer-2014-liu-color-phenomena-blue-amber"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Procedencia dominicana de referencia. No se confirma documentación individual en 1842.",
+        "source": "https://www.gia.edu/gems-gemology/summer-2014-liu-color-phenomena-blue-amber"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -10428,6 +11365,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Óxidos y superficie irregular",
         "history": "Futuro · hallazgo catalogado en 1958. Asociación con un relato de 1516 incierta.",
         "plate": "Se representa un fragmento oxidado interpretativo.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16906"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · hallazgo catalogado en 1958. Asociación con un relato de 1516 incierta.",
         "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16906"
       },
       "sprites": {
@@ -10501,6 +11443,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "La fractura se interpreta para lectura del contraste.",
         "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=10039"
       },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Caída observada en 1492.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=10039"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -10570,6 +11517,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Inclusiones claras y granos redondeados",
         "history": "Futuro · caída de 1969.",
         "plate": "Vista de una cara interior esquemática.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=2278"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · caída de 1969.",
         "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=2278"
       },
       "sprites": {
@@ -10643,6 +11595,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "La microtextura se amplía para el sprite.",
         "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16875"
       },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · caída de 1969.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=16875"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -10712,6 +11669,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Contraste de corteza y posible veta de choque",
         "history": "Futuro · caída de 2013.",
         "plate": "La veta interior es interpretativa.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=57165"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · caída de 2013.",
         "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=57165"
       },
       "sprites": {
@@ -10785,6 +11747,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Muestra conservada de OBJ-01 en bruto.",
         "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=10912"
       },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Hallazgo catalogado en 1836.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=10912"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -10854,6 +11821,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Relieve de depresiones y óxidos",
         "history": "Documentado en 1576; muestra concreta interpretativa.",
         "plate": "Se enfatiza el relieve grueso.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=5247"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Documentado en 1576; muestra concreta interpretativa.",
         "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=5247"
       },
       "sprites": {
@@ -10927,6 +11899,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "La pieza representa un fragmento desgarrado.",
         "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=23593"
       },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · caída de 1947.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=23593"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -10996,6 +11973,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Cristales y cavidades en espécimen meteorizado",
         "history": "Hallazgo catalogado en 1822.",
         "plate": "Fragmento bruto de referencia chilena.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12025"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Hallazgo catalogado en 1822.",
         "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=12025"
       },
       "sprites": {
@@ -11069,6 +12051,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Lámina de sección interpretativa.",
         "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=34491"
       },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · hallazgo catalogado en 2000.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=34491"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11140,6 +12127,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Modelo a escala reducida de una masa de unas 60 toneladas.",
         "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=11890"
       },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · hallazgo de 1920.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=11890"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11209,6 +12201,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Corteza de fusión y masa interior de piroxeno",
         "history": "Futuro · hallazgo de 1984.",
         "plate": "Lámina del fragmento sin presuntas formas biológicas.",
+        "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=604"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · hallazgo de 1984.",
         "source": "https://www.lpi.usra.edu/meteor/metbull.php?code=604"
       },
       "sprites": {
@@ -11284,6 +12281,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Conservada de OBJ-04; distinguir de una medalla oficial.",
         "source": "https://www.rmg.co.uk/collections"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Analogía de comercio portuario, sin atribución a un puerto concreto en 1842.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11355,6 +12357,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "",
         "history": "La sonda de mano es de uso anterior a 1842; el ejemplar atlántico es interpretativo.",
         "plate": "Conservada de OBJ-04; se muestra un peso aislado.",
+        "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-42888"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "La sonda de mano es de uso anterior a 1842; el ejemplar atlántico es interpretativo.",
         "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-42888"
       },
       "sprites": {
@@ -11430,6 +12437,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Conservada de OBJ-04; perfil doblado.",
         "source": "https://www.rmg.co.uk/collections"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Tipo histórico de clavazón; sin barco identificado.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11501,6 +12513,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "",
         "history": "Recreación de tránsito marítimo, sin atribución a un pecio.",
         "plate": "Conservada de OBJ-04; una forma incompleta la separa de la taza futura.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Recreación de tránsito marítimo, sin atribución a un pecio.",
         "source": "https://www.rmg.co.uk/collections"
       },
       "sprites": {
@@ -11576,6 +12593,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Conservada de OBJ-04; masa redondeada frente a la sonda cónica.",
         "source": "https://www.rmg.co.uk/collections"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Analogía etnográfica; fecha local y ejemplar por cotejar.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11647,6 +12669,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "",
         "history": "Objeto imaginado para el gabinete marítimo; sin expedición identificada.",
         "plate": "Conservada de OBJ-04; distinta del frasco con arena.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Objeto imaginado para el gabinete marítimo; sin expedición identificada.",
         "source": "https://www.rmg.co.uk/collections"
       },
       "sprites": {
@@ -11722,6 +12749,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Conservada de OBJ-04; sin atribuirla a una condecoración histórica concreta.",
         "source": "https://www.rmg.co.uk/collections"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Analogía de medalla de expedición; fecha y emisión hipotéticas.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11793,6 +12825,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "",
         "history": "Parte de la narración ficticia de Atlántida.",
         "plate": "Fragmento con una sección del plano imaginario.",
+        "source": "Catálogo experimental OBJ · Secretos de Atlántida"
+      },
+      "chronology": {
+        "status": "Ficción explícita",
+        "evidence": "Parte de la narración ficticia de Atlántida.",
         "source": "Catálogo experimental OBJ · Secretos de Atlántida"
       },
       "sprites": {
@@ -11868,6 +12905,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Sello interpretado como pieza de metal arqueológico.",
         "source": "Catálogo experimental OBJ · Secretos de Atlántida"
       },
+      "chronology": {
+        "status": "Ficción explícita",
+        "evidence": "Parte de la narración ficticia de Atlántida.",
+        "source": "Catálogo experimental OBJ · Secretos de Atlántida"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11939,6 +12981,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "",
         "history": "Parte de la narración ficticia de Atlántida.",
         "plate": "Forma de llave mecánica imaginaria.",
+        "source": "Catálogo experimental OBJ · Secretos de Atlántida"
+      },
+      "chronology": {
+        "status": "Ficción explícita",
+        "evidence": "Parte de la narración ficticia de Atlántida.",
         "source": "Catálogo experimental OBJ · Secretos de Atlántida"
       },
       "sprites": {
@@ -12014,6 +13061,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "La transparencia es un rasgo material de la lámina.",
         "source": "Catálogo experimental OBJ · Secretos de Atlántida"
       },
+      "chronology": {
+        "status": "Ficción explícita",
+        "evidence": "Parte de la narración ficticia de Atlántida.",
+        "source": "Catálogo experimental OBJ · Secretos de Atlántida"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -12085,6 +13137,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "",
         "history": "Parte de la narración ficticia de Atlántida.",
         "plate": "Conservada de OBJ-01.",
+        "source": "Catálogo experimental OBJ · Secretos de Atlántida"
+      },
+      "chronology": {
+        "status": "Ficción explícita",
+        "evidence": "Parte de la narración ficticia de Atlántida.",
         "source": "Catálogo experimental OBJ · Secretos de Atlántida"
       },
       "sprites": {
@@ -12160,6 +13217,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Valva vacía o réplica.",
         "source": "https://www.marinespecies.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Morfotipo histórico de gabinete.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -12231,6 +13293,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Intermareal rocoso mediterráneo",
         "history": "Morfotipo histórico de gabinete.",
         "plate": "Exterior de una concha vacía.",
+        "source": "https://www.marinespecies.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Morfotipo histórico de gabinete.",
         "source": "https://www.marinespecies.org/"
       },
       "sprites": {
@@ -12306,6 +13373,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Espinas y desgaste variables.",
         "source": "https://www.marinespecies.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "La identificación de referencia es actual; la muestra de gabinete es interpretativa.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -12377,6 +13449,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Costas rocosas del Pacífico nororiental",
         "history": "Morfotipo de gabinete, ejemplar sin fecha individual.",
         "plate": "Vista interna, frente a la placa ornamental de nácar.",
+        "source": "https://www.marinespecies.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Morfotipo de gabinete, ejemplar sin fecha individual.",
         "source": "https://www.marinespecies.org/"
       },
       "sprites": {
@@ -12452,6 +13529,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Patrón interpretado, no diagnóstico aislado.",
         "source": "https://www.marinespecies.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Morfotipo histórico de gabinete.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -12523,6 +13605,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Fondos costeros mediterráneos",
         "history": "Morfotipo histórico de gabinete.",
         "plate": "Concha vacía con perfil espinoso.",
+        "source": "https://www.marinespecies.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Morfotipo histórico de gabinete.",
         "source": "https://www.marinespecies.org/"
       },
       "sprites": {
@@ -12598,6 +13685,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Conservada de OBJ-01 como representación de concha vacía.",
         "source": "https://www.marinespecies.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Morfotipo histórico de gabinete.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -12669,6 +13761,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Ambiente tropical indo-pacífico",
         "history": "Morfotipo histórico de gabinete.",
         "plate": "Concha vacía o réplica; no se representa el animal.",
+        "source": "https://www.marinespecies.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Morfotipo histórico de gabinete.",
         "source": "https://www.marinespecies.org/"
       },
       "sprites": {
@@ -12744,6 +13841,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Sección interpretativa de una concha, que contrasta con el estuche ovígero del argonauta.",
         "source": "https://www.marinespecies.org/aphia.php?id=153112&p=taxdetails"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Morfotipo histórico de gabinete.",
+        "source": "https://www.marinespecies.org/aphia.php?id=153112&p=taxdetails"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -12815,6 +13917,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Infralitoral tropical indo-pacífico",
         "history": "Morfotipo histórico de gabinete.",
         "plate": "Perfil alto de concha vacía.",
+        "source": "https://www.marinespecies.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Morfotipo histórico de gabinete.",
         "source": "https://www.marinespecies.org/"
       },
       "sprites": {
@@ -12890,6 +13997,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Valva suelta a escala reducida, interpretada como reproducción.",
         "source": "https://www.marinespecies.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Morfotipo histórico de gabinete.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -12961,6 +14073,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Aguas abiertas de latitudes cálidas",
         "history": "Morfotipo histórico de gabinete.",
         "plate": "Estuche secretado por la hembra; el animal no está representado.",
+        "source": "https://www.marinespecies.org/aphia.php?id=11785&p=taxdetails"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Morfotipo histórico de gabinete.",
         "source": "https://www.marinespecies.org/aphia.php?id=11785&p=taxdetails"
       },
       "sprites": {
@@ -13036,6 +14153,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "La vista muestra el cruce frente al cabo trenzado.",
         "source": "https://www.rmg.co.uk/collections"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Maniobra histórica representada sin barco asociado.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -13107,6 +14229,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "",
         "history": "Tipo funcional y simbólico anterior a 1842; referencia museística.",
         "plate": "Cadena abreviada para legibilidad.",
+        "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-62304"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Tipo funcional y simbólico anterior a 1842; referencia museística.",
         "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-62304"
       },
       "sprites": {
@@ -13182,6 +14309,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Las marcas pictóricas no se atribuyen a una emisión real.",
         "source": "https://www.rmg.co.uk/collections"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Uso e identificación concretos por cotejar; ficha anónima de referencia.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -13253,6 +14385,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "",
         "history": "Futuro · el uso japonés está documentado desde 1910.",
         "plate": "La red se representa como soporte.",
+        "source": "https://collectionswa.net.au/items/d72a4368-a99e-4e9a-a1c7-99fc53bfe25c"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · el uso japonés está documentado desde 1910.",
         "source": "https://collectionswa.net.au/items/d72a4368-a99e-4e9a-a1c7-99fc53bfe25c"
       },
       "sprites": {
@@ -13328,6 +14465,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Forma abierta para mostrar contenido; ejemplar exacto sin identificar.",
         "source": "https://www.rmg.co.uk/collections"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Recreación de equipo de mantenimiento naval.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -13399,6 +14541,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "",
         "history": "Morfotipo europeo histórico; sin barco identificado.",
         "plate": "Objeto aislado de gabinete, sin humo ni escena de consumo.",
+        "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-19589"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Morfotipo europeo histórico; sin barco identificado.",
         "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-19589"
       },
       "sprites": {
@@ -13474,6 +14621,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Las líneas son gráficas interpretativas.",
         "source": "https://www.rmg.co.uk/collections"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Recreación de registro observacional de época.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -13545,6 +14697,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "",
         "history": "Analogía de tablero de señales, sin sistema regional atribuido.",
         "plate": "Diseño interpretativo para revisión.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Analogía de tablero de señales, sin sistema regional atribuido.",
         "source": "https://www.rmg.co.uk/collections"
       },
       "sprites": {
@@ -13620,6 +14777,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "El trenzado uniforme se distingue del nudo.",
         "source": "https://www.rmg.co.uk/collections"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Tipo de oficio anterior a 1842; muestra museística interpretativa.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -13691,6 +14853,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "",
         "history": "Pieza de catálogo; la forma toma como analogía la rueda de gobierno, no la caja de la brújula.",
         "plate": "El nombre de catálogo se conserva y la identificación precisa requiere cotejo.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Pieza de catálogo; la forma toma como analogía la rueda de gobierno, no la caja de la brújula.",
         "source": "https://www.rmg.co.uk/collections"
       },
       "sprites": {
@@ -13766,6 +14933,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "La lectura depende de la capa baja de sedimento, sin nota.",
         "source": "https://www.rmg.co.uk/collections"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Recreación de muestrario histórico sin expedición atribuida.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -13837,6 +15009,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "",
         "history": "El tipo está documentado en colecciones; la fecha exacta del modelo requiere cotejo.",
         "plate": "No se identifica un barco o pieza museística concreta.",
+        "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-206128"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "El tipo está documentado en colecciones; la fecha exacta del modelo requiere cotejo.",
         "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-206128"
       },
       "sprites": {
@@ -13912,6 +15089,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Conservada de OBJ-01.",
         "source": "https://cdhc.noaa.gov/coral-biology/coral-biology/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de gabinete; ejemplar histórico no identificado.",
+        "source": "https://cdhc.noaa.gov/coral-biology/coral-biology/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -13983,6 +15165,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Arrecifes caribeños",
         "history": "Lámina de gabinete.",
         "plate": "La textura reproduce el relieve como modelo.",
+        "source": "https://cdhc.noaa.gov/coral-biology/coral-biology/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de gabinete.",
         "source": "https://cdhc.noaa.gov/coral-biology/coral-biology/"
       },
       "sprites": {
@@ -14058,6 +15245,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Morfotipo de pólipo solitario, distinto de una colonia en plato.",
         "source": "https://www.marinespecies.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de gabinete.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -14129,6 +15321,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Arrecifes tropicales del Pacífico",
         "history": "Lámina de gabinete.",
         "plate": "Modelo de colonia compacta; identificación específica pendiente.",
+        "source": "https://www.marinespecies.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de gabinete.",
         "source": "https://www.marinespecies.org/"
       },
       "sprites": {
@@ -14204,6 +15401,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Modelo diagnóstico de perfil de asta.",
         "source": "https://www.fisheries.noaa.gov/species/staghorn-coral"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de gabinete.",
+        "source": "https://www.fisheries.noaa.gov/species/staghorn-coral"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -14275,6 +15477,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Arrecifes caribeños",
         "history": "Lámina o reproducción de gabinete.",
         "plate": "La malla fina se interpreta para lectura a pequeña escala.",
+        "source": "https://www.marinespecies.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de gabinete.",
         "source": "https://www.marinespecies.org/"
       },
       "sprites": {
@@ -14350,6 +15557,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Color orientativo de un modelo del esqueleto.",
         "source": "https://www.marinespecies.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de gabinete.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -14421,6 +15633,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Arrecifes someros indo-pacíficos",
         "history": "Lámina o reproducción de gabinete.",
         "plate": "Se representa el esqueleto, distinguiendo tubos y plataformas.",
+        "source": "https://www.marinespecies.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de gabinete.",
         "source": "https://www.marinespecies.org/"
       },
       "sprites": {
@@ -14496,6 +15713,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Morfotipo ilustrativo, sin asignación a especie.",
         "source": "https://www.marinespecies.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de investigación o reproducción.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -14567,6 +15789,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Fondos tropicales del Indo-Pacífico",
         "history": "Lámina o reproducción de gabinete.",
         "plate": "El esquema muestra el esqueleto oscuro, no el color del tejido vivo.",
+        "source": "https://www.marinespecies.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de gabinete.",
         "source": "https://www.marinespecies.org/"
       },
       "sprites": {
@@ -14642,6 +15869,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "El color es orientativo de un eje conservado.",
         "source": "https://www.marinespecies.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de gabinete.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -14715,6 +15947,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Perfil reconocible frente a las ramas cilíndricas de asta de ciervo.",
         "source": "https://www.fisheries.noaa.gov/species/elkhorn-coral"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de gabinete.",
+        "source": "https://www.fisheries.noaa.gov/species/elkhorn-coral"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -14777,6 +16014,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
       "stage": "OBJ-01",
+      "history": {
+        "identity": "Penique de Victoria, tipo Young Head",
+        "culture": "Reino Unido",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1841,
+        "date": "1841",
+        "material": "Cobre",
+        "diagnostic": "Perfil joven con borde acuñado",
+        "culturalContext": "Moneda circulante victoriana.",
+        "compatibility": "Compatible con 1842",
+        "treatment": "Interpretación artística",
+        "note": "Conservada de OBJ-01; año y leyenda no se leen en la acuarela.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con 1842",
+        "evidence": "1841",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -14838,13 +16094,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Denario de tipo imperial romano",
+        "culture": "Roma antigua",
+        "period": "Antigüedad",
+        "year": 100,
+        "date": "Siglos I–II",
+        "material": "Plata",
+        "diagnostic": "Cospel irregular y perfil laureado",
+        "culturalContext": "Moneda romana de circulación.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Identificación histórica pendiente",
+        "note": "El tipo es reconocible; emperador y ceca no asignados.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Siglos I–II",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-02/clasica-64.webp",
+            "bytes": 2558
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-02/clasica-128.webp",
+            "bytes": 6970
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-02/clasica-256.webp",
+            "bytes": 23230
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-02/clasica-512.webp",
+            "bytes": 61732
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-02/inventario-64.webp",
+            "bytes": 2768
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-02/inventario-128.webp",
+            "bytes": 7576
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-02/inventario-256.webp",
+            "bytes": 19234
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-02/inventario-512.webp",
+            "bytes": 45688
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -14866,13 +16175,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Dracma griega de tipo ateniense",
+        "culture": "Grecia antigua",
+        "period": "Antigüedad",
+        "year": -430,
+        "date": "Siglo V a. C.",
+        "material": "Plata",
+        "diagnostic": "Lechuza y oliva sobre cospel martillado",
+        "culturalContext": "Motivos monetarios de Atenas.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Identificación histórica pendiente",
+        "note": "Peso y denominación precisos requieren cotejo; el motivo no distingue por sí solo el valor.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Siglo V a. C.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-03/clasica-64.webp",
+            "bytes": 2442
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-03/clasica-128.webp",
+            "bytes": 6570
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-03/clasica-256.webp",
+            "bytes": 22134
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-03/clasica-512.webp",
+            "bytes": 63902
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-03/inventario-64.webp",
+            "bytes": 2644
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-03/inventario-128.webp",
+            "bytes": 7270
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-03/inventario-256.webp",
+            "bytes": 19334
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-03/inventario-512.webp",
+            "bytes": 48282
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -14894,13 +16256,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Moneda de tipo cash",
+        "culture": "China imperial",
+        "period": "Edad Moderna",
+        "year": 1720,
+        "date": "Referencia Qing temprana",
+        "material": "Bronce",
+        "diagnostic": "Orificio cuadrado y relieves",
+        "culturalContext": "La perforación permitía ensartar monedas.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Identificación histórica pendiente",
+        "note": "Los signos del dibujo no identifican una emisión.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Referencia Qing temprana",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-04/clasica-64.webp",
+            "bytes": 2512
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-04/clasica-128.webp",
+            "bytes": 6844
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-04/clasica-256.webp",
+            "bytes": 23262
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-04/clasica-512.webp",
+            "bytes": 68004
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-04/inventario-64.webp",
+            "bytes": 2622
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-04/inventario-128.webp",
+            "bytes": 7380
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-04/inventario-256.webp",
+            "bytes": 19450
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-04/inventario-512.webp",
+            "bytes": 48276
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -14922,13 +16337,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Rupia de Victoria, tipo de la Compañía de las Indias Orientales",
+        "culture": "India británica",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1840,
+        "date": "1840",
+        "material": "Plata",
+        "diagnostic": "Busto de Victoria y borde perlado",
+        "culturalContext": "Emisión colonial; la atribución de ceca queda pendiente.",
+        "compatibility": "Compatible con 1842",
+        "treatment": "Interpretación artística",
+        "note": "Cotejar retrato, leyenda y canto con la serie de 1840.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con 1842",
+        "evidence": "1840",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-05/clasica-64.webp",
+            "bytes": 2356
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-05/clasica-128.webp",
+            "bytes": 6534
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-05/clasica-256.webp",
+            "bytes": 22416
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-05/clasica-512.webp",
+            "bytes": 66002
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-05/inventario-64.webp",
+            "bytes": 2550
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-05/inventario-128.webp",
+            "bytes": 7240
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-05/inventario-256.webp",
+            "bytes": 19052
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-05/inventario-512.webp",
+            "bytes": 46856
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -14950,13 +16418,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Moneda de réis del tipo imperial temprano",
+        "culture": "Brasil imperial",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1825,
+        "date": "Década de 1820",
+        "material": "Cobre",
+        "diagnostic": "Escudo coronado y acuñación circular",
+        "culturalContext": "Moneda del Imperio de Brasil.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Identificación histórica pendiente",
+        "note": "Denominación y ceca por contrastar; el nombre del catálogo se conserva.",
+        "source": "https://www.bcb.gov.br/acessoinformacao/museudovalores"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Década de 1820",
+        "source": "https://www.bcb.gov.br/acessoinformacao/museudovalores"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-06/clasica-64.webp",
+            "bytes": 2378
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-06/clasica-128.webp",
+            "bytes": 6686
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-06/clasica-256.webp",
+            "bytes": 22988
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-06/clasica-512.webp",
+            "bytes": 69484
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-06/inventario-64.webp",
+            "bytes": 2532
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-06/inventario-128.webp",
+            "bytes": 7214
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-06/inventario-256.webp",
+            "bytes": 19264
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-06/inventario-512.webp",
+            "bytes": 47996
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -14978,13 +16499,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Dólar de plata Flowing Hair",
+        "culture": "Estados Unidos",
+        "period": "Edad Moderna",
+        "year": 1795,
+        "date": "1795",
+        "material": "Plata",
+        "diagnostic": "Liberty de cabello suelto",
+        "culturalContext": "Una de las primeras series del dólar federal.",
+        "compatibility": "Compatible con 1842",
+        "treatment": "Interpretación artística",
+        "note": "Una cara orienta la identificación; revisar número de estrellas.",
+        "source": "https://www.usmint.gov/learn/coin-and-medal-programs/early-american-coins"
+      },
+      "chronology": {
+        "status": "Compatible con 1842",
+        "evidence": "1795",
+        "source": "https://www.usmint.gov/learn/coin-and-medal-programs/early-american-coins"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-07/clasica-64.webp",
+            "bytes": 2538
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-07/clasica-128.webp",
+            "bytes": 6818
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-07/clasica-256.webp",
+            "bytes": 22156
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-07/clasica-512.webp",
+            "bytes": 74858
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-07/inventario-64.webp",
+            "bytes": 2700
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-07/inventario-128.webp",
+            "bytes": 7554
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-07/inventario-256.webp",
+            "bytes": 20504
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-07/inventario-512.webp",
+            "bytes": 53694
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15006,13 +16580,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Koban de tipo Tokugawa",
+        "culture": "Japón Edo",
+        "period": "Edad Moderna",
+        "year": 1700,
+        "date": "Periodo Edo; emisión por verificar",
+        "material": "Oro aleado",
+        "diagnostic": "Placa oval con punzones",
+        "culturalContext": "Moneda oval de alto valor.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "La ley se comprueba por tipo y emisión.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Periodo Edo; emisión por verificar",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-08/clasica-64.webp",
+            "bytes": 1632
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-08/clasica-128.webp",
+            "bytes": 4856
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-08/clasica-256.webp",
+            "bytes": 16028
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-08/clasica-512.webp",
+            "bytes": 51768
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-08/inventario-64.webp",
+            "bytes": 1832
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-08/inventario-128.webp",
+            "bytes": 5312
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-08/inventario-256.webp",
+            "bytes": 14150
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-08/inventario-512.webp",
+            "bytes": 40018
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15034,13 +16661,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Birr de Menelik II",
+        "culture": "Etiopía imperial",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1894,
+        "date": "Década de 1890",
+        "material": "Plata",
+        "diagnostic": "Perfil coronado y leyenda ge'ez",
+        "culturalContext": "Moneda imperial de acuñación moderna.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "La variante ilustrada es posterior a 1842.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Década de 1890",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-09/clasica-64.webp",
+            "bytes": 2446
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-09/clasica-128.webp",
+            "bytes": 6886
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-09/clasica-256.webp",
+            "bytes": 23460
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-09/clasica-512.webp",
+            "bytes": 72490
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-09/inventario-64.webp",
+            "bytes": 2536
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-09/inventario-128.webp",
+            "bytes": 7590
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-09/inventario-256.webp",
+            "bytes": 20736
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-09/inventario-512.webp",
+            "bytes": 53226
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15062,13 +16742,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Soberano con San Jorge y el dragón",
+        "culture": "Reino Unido",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1821,
+        "date": "Referencia de 1821",
+        "material": "Oro",
+        "diagnostic": "Relieve ecuestre con dragón",
+        "culturalContext": "Reverso de tradición numismática británica.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "La acuarela interpreta el reverso; no se afirma año de ceca.",
+        "source": "https://www.royalmintmuseum.org.uk/"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Referencia de 1821",
+        "source": "https://www.royalmintmuseum.org.uk/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-10/clasica-64.webp",
+            "bytes": 2468
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-10/clasica-128.webp",
+            "bytes": 6584
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-10/clasica-256.webp",
+            "bytes": 20676
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-10/clasica-512.webp",
+            "bytes": 55840
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-10/inventario-64.webp",
+            "bytes": 2564
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-10/inventario-128.webp",
+            "bytes": 7054
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-10/inventario-256.webp",
+            "bytes": 16578
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-10/inventario-512.webp",
+            "bytes": 40788
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15090,13 +16823,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Ocho reales republicano de gorro y rayos",
+        "culture": "México republicano",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1824,
+        "date": "Década de 1820",
+        "material": "Plata",
+        "diagnostic": "Gorro radiante",
+        "culturalContext": "Iconografía republicana sobre moneda de circulación amplia.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Ceca y fecha exactas pendientes.",
+        "source": "https://www.banxico.org.mx/museodelbancodemexico/"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Década de 1820",
+        "source": "https://www.banxico.org.mx/museodelbancodemexico/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-11/clasica-64.webp",
+            "bytes": 2206
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-11/clasica-128.webp",
+            "bytes": 6176
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-11/clasica-256.webp",
+            "bytes": 19646
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-11/clasica-512.webp",
+            "bytes": 54994
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-11/inventario-64.webp",
+            "bytes": 2348
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-11/inventario-128.webp",
+            "bytes": 6630
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-11/inventario-256.webp",
+            "bytes": 15832
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-11/inventario-512.webp",
+            "bytes": 38638
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15118,13 +16904,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Doblón tipo macuquino",
+        "culture": "Monarquía hispánica",
+        "period": "Edad Moderna",
+        "year": 1700,
+        "date": "Siglos XVII–XVIII",
+        "material": "Oro",
+        "diagnostic": "Cospel recortado y cruz en cuarteles",
+        "culturalContext": "Moneda colonial; el contexto de naufragio es editorial.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Identificación histórica pendiente",
+        "note": "No se atribuye a un pecio concreto.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Siglos XVII–XVIII",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-12/clasica-64.webp",
+            "bytes": 2262
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-12/clasica-128.webp",
+            "bytes": 6120
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-12/clasica-256.webp",
+            "bytes": 19302
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-12/clasica-512.webp",
+            "bytes": 54016
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/NUM-12/inventario-64.webp",
+            "bytes": 2402
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/NUM-12/inventario-128.webp",
+            "bytes": 6534
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/NUM-12/inventario-256.webp",
+            "bytes": 15624
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/NUM-12/inventario-512.webp",
+            "bytes": 38824
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15146,13 +16985,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Lucerna romana de pico",
+        "culture": "Roma antigua",
+        "period": "Antigüedad",
+        "year": 100,
+        "date": "Siglos I–II",
+        "material": "Terracota",
+        "diagnostic": "Depósito, orificio y pico",
+        "culturalContext": "Objeto doméstico de iluminación.",
+        "compatibility": "Compatible con 1842",
+        "treatment": "Interpretación artística",
+        "note": "Modelo de tipo arqueológico con roseta.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
+      "chronology": {
+        "status": "Compatible con 1842",
+        "evidence": "Siglos I–II",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-01/clasica-64.webp",
+            "bytes": 1822
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-01/clasica-128.webp",
+            "bytes": 4796
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-01/clasica-256.webp",
+            "bytes": 14272
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-01/clasica-512.webp",
+            "bytes": 39374
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-01/inventario-64.webp",
+            "bytes": 1898
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-01/inventario-128.webp",
+            "bytes": 4834
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-01/inventario-256.webp",
+            "bytes": 11228
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-01/inventario-512.webp",
+            "bytes": 27760
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15174,13 +17066,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Ánfora de figuras negras",
+        "culture": "Grecia antigua",
+        "period": "Antigüedad",
+        "year": -520,
+        "date": "Siglo VI a. C.",
+        "material": "Terracota",
+        "diagnostic": "Asas altas y decoración negra",
+        "culturalContext": "Tipo de vasija de almacenaje y representación figurativa.",
+        "compatibility": "Compatible con 1842",
+        "treatment": "Interpretación artística",
+        "note": "Escena esquemática, sin atribución a pintor o taller.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
+      "chronology": {
+        "status": "Compatible con 1842",
+        "evidence": "Siglo VI a. C.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-02/clasica-64.webp",
+            "bytes": 1874
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-02/clasica-128.webp",
+            "bytes": 5092
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-02/clasica-256.webp",
+            "bytes": 15494
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-02/clasica-512.webp",
+            "bytes": 43630
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-02/inventario-64.webp",
+            "bytes": 2046
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-02/inventario-128.webp",
+            "bytes": 5490
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-02/inventario-256.webp",
+            "bytes": 13316
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-02/inventario-512.webp",
+            "bytes": 33508
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15202,13 +17147,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Fíbula oval de tipo escandinavo",
+        "culture": "Escandinavia nórdica",
+        "period": "Edad Media",
+        "year": 900,
+        "date": "Siglos IX–X",
+        "material": "Bronce",
+        "diagnostic": "Domo oval y relieve bajo",
+        "culturalContext": "Broche de vestir; la posición de uso depende del conjunto arqueológico.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Diseño de repertorio general, sin yacimiento identificado.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Siglos IX–X",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-03/clasica-64.webp",
+            "bytes": 1760
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-03/clasica-128.webp",
+            "bytes": 4830
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-03/clasica-256.webp",
+            "bytes": 15478
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-03/clasica-512.webp",
+            "bytes": 42586
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-03/inventario-64.webp",
+            "bytes": 1908
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-03/inventario-128.webp",
+            "bytes": 5246
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-03/inventario-256.webp",
+            "bytes": 12630
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-03/inventario-512.webp",
+            "bytes": 29858
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15230,13 +17228,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Amuleto en forma de escarabeo",
+        "culture": "Egipto antiguo",
+        "period": "Antigüedad",
+        "year": -1000,
+        "date": "Segundo a primer milenio a. C.",
+        "material": "Fayenza",
+        "diagnostic": "Vista dorsal y sutura de élitros",
+        "culturalContext": "Amuleto que puede tener usos religiosos, funerarios o administrativos según el tipo.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Se representa como reproducción; no se deduce función para un original.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Segundo a primer milenio a. C.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-04/clasica-64.webp",
+            "bytes": 1694
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-04/clasica-128.webp",
+            "bytes": 4676
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-04/clasica-256.webp",
+            "bytes": 14544
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-04/clasica-512.webp",
+            "bytes": 37902
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-04/inventario-64.webp",
+            "bytes": 1794
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-04/inventario-128.webp",
+            "bytes": 4884
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-04/inventario-256.webp",
+            "bytes": 11102
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-04/inventario-512.webp",
+            "bytes": 27574
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15258,13 +17309,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Sello cilíndrico mesopotámico",
+        "culture": "Mesopotamia",
+        "period": "Antigüedad",
+        "year": -2200,
+        "date": "Tercer a segundo milenio a. C.",
+        "material": "Piedra y arcilla",
+        "diagnostic": "Cilindro grabado y pequeño registro rodado",
+        "culturalContext": "Se usaban impresiones en contextos administrativos y de identidad.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "La composición muestra un cilindro con impresión esquemática.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Tercer a segundo milenio a. C.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-05/clasica-64.webp",
+            "bytes": 1262
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-05/clasica-128.webp",
+            "bytes": 3768
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-05/clasica-256.webp",
+            "bytes": 12624
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-05/clasica-512.webp",
+            "bytes": 32306
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-05/inventario-64.webp",
+            "bytes": 1320
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-05/inventario-128.webp",
+            "bytes": 3936
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-05/inventario-256.webp",
+            "bytes": 8988
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-05/inventario-512.webp",
+            "bytes": 21254
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15286,13 +17390,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Figurilla de terracota del Indo",
+        "culture": "Civilización del Indo",
+        "period": "Antigüedad",
+        "year": -2300,
+        "date": "c. 2600–1900 a. C.",
+        "material": "Terracota",
+        "diagnostic": "Torso modelado y elementos aplicados",
+        "culturalContext": "La función de estas figurillas varía y puede quedar indeterminada.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Identificación histórica pendiente",
+        "note": "No se atribuye sexo ni función ritual al ejemplar representado.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "c. 2600–1900 a. C.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-06/clasica-64.webp",
+            "bytes": 1928
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-06/clasica-128.webp",
+            "bytes": 4560
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-06/clasica-256.webp",
+            "bytes": 12782
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-06/clasica-512.webp",
+            "bytes": 35788
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-06/inventario-64.webp",
+            "bytes": 1944
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-06/inventario-128.webp",
+            "bytes": 4848
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-06/inventario-256.webp",
+            "bytes": 10418
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-06/inventario-512.webp",
+            "bytes": 25982
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15314,13 +17471,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Cuenco ancestral pueblo de tipo blanco y negro",
+        "culture": "Pueblos ancestrales del suroeste",
+        "period": "Edad Media",
+        "year": 1150,
+        "date": "Siglos XI–XIII",
+        "material": "Cerámica",
+        "diagnostic": "Perfil bajo y banda geométrica pintada",
+        "culturalContext": "Tradiciones cerámicas de comunidades indígenas del sudoeste.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Procedencia e identificación de tipo requieren validación comunitaria o curatorial.",
+        "source": "https://www.nps.gov/meve/learn/historyculture/pottery.htm"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Siglos XI–XIII",
+        "source": "https://www.nps.gov/meve/learn/historyculture/pottery.htm"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-07/clasica-64.webp",
+            "bytes": 1500
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-07/clasica-128.webp",
+            "bytes": 3882
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-07/clasica-256.webp",
+            "bytes": 11732
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-07/clasica-512.webp",
+            "bytes": 31980
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-07/inventario-64.webp",
+            "bytes": 1670
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-07/inventario-128.webp",
+            "bytes": 4228
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-07/inventario-256.webp",
+            "bytes": 9240
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-07/inventario-512.webp",
+            "bytes": 21986
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15342,13 +17552,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Colgante maya de piedra verde",
+        "culture": "Maya",
+        "period": "Edad Media",
+        "year": 700,
+        "date": "Periodo Clásico",
+        "material": "Jadeíta o piedra verde",
+        "diagnostic": "Perforación de suspensión y relieve inciso",
+        "culturalContext": "Los objetos de piedra verde podían tener usos personales y ceremoniales.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Reproducción documental; material exacto de la pieza sin análisis.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Periodo Clásico",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-08/clasica-64.webp",
+            "bytes": 1882
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-08/clasica-128.webp",
+            "bytes": 4802
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-08/clasica-256.webp",
+            "bytes": 13474
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-08/clasica-512.webp",
+            "bytes": 36250
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-08/inventario-64.webp",
+            "bytes": 1996
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-08/inventario-128.webp",
+            "bytes": 5024
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-08/inventario-256.webp",
+            "bytes": 10690
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-08/inventario-512.webp",
+            "bytes": 26628
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15370,13 +17633,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Khipu andino",
+        "culture": "Andino",
+        "period": "Edad Moderna",
+        "year": 1500,
+        "date": "Siglos XV–XVI",
+        "material": "Fibra textil",
+        "diagnostic": "Cuerda matriz y cordeles anudados",
+        "culturalContext": "Conjunto de registro andino, incluido el uso administrativo inca.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Los nudos gráficos no representan un registro descifrado.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Siglos XV–XVI",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-09/clasica-64.webp",
+            "bytes": 3352
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-09/clasica-128.webp",
+            "bytes": 10212
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-09/clasica-256.webp",
+            "bytes": 30956
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-09/clasica-512.webp",
+            "bytes": 86714
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-09/inventario-64.webp",
+            "bytes": 3642
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-09/inventario-128.webp",
+            "bytes": 11140
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-09/inventario-256.webp",
+            "bytes": 31138
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-09/inventario-512.webp",
+            "bytes": 84564
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15398,13 +17714,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Fragmento textil nazca",
+        "culture": "Nazca",
+        "period": "Antigüedad",
+        "year": 350,
+        "date": "c. 100 a. C.–800 d. C.",
+        "material": "Fibras textiles",
+        "diagnostic": "Trama visible y borde frágil",
+        "culturalContext": "La función del textil depende de su contexto, incluido el funerario.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Se presenta como reproducción; no se asigna significado a los motivos simplificados.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "c. 100 a. C.–800 d. C.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-10/clasica-64.webp",
+            "bytes": 2442
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-10/clasica-128.webp",
+            "bytes": 6444
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-10/clasica-256.webp",
+            "bytes": 20520
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-10/clasica-512.webp",
+            "bytes": 61602
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-10/inventario-64.webp",
+            "bytes": 2586
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-10/inventario-128.webp",
+            "bytes": 6818
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-10/inventario-256.webp",
+            "bytes": 17764
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-10/inventario-512.webp",
+            "bytes": 45640
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15426,13 +17795,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Colgante pounamu de tipo hei matau",
+        "culture": "Māori",
+        "period": "Edad Moderna",
+        "year": 1750,
+        "date": "Referencia anterior a 1842; fecha individual pendiente",
+        "material": "Pounamu y fibra",
+        "diagnostic": "Perfil de anzuelo y lazo",
+        "culturalContext": "El pounamu puede ser taonga; procedencia y custodia requieren contexto iwi.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Reproducción documental; la forma concreta debe revisarse con fuente maorí.",
+        "source": "https://collections.tepapa.govt.nz/object/49921"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Referencia anterior a 1842; fecha individual pendiente",
+        "source": "https://collections.tepapa.govt.nz/object/49921"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-11/clasica-64.webp",
+            "bytes": 1696
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-11/clasica-128.webp",
+            "bytes": 4040
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-11/clasica-256.webp",
+            "bytes": 10354
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-11/clasica-512.webp",
+            "bytes": 26662
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-11/inventario-64.webp",
+            "bytes": 1746
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-11/inventario-128.webp",
+            "bytes": 4138
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-11/inventario-256.webp",
+            "bytes": 9084
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-11/inventario-512.webp",
+            "bytes": 22510
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15454,13 +17876,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Placa de corte del Reino de Benín",
+        "culture": "Edo",
+        "period": "Edad Moderna",
+        "year": 1600,
+        "date": "Siglos XVI–XVII",
+        "material": "Latón",
+        "diagnostic": "Placa rectangular en relieve",
+        "culturalContext": "Arte de corte. Muchas placas fueron expoliadas en 1897; ese traslado es posterior.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Referencia para una reproducción, con identificación y procedencia de colección pendientes.",
+        "source": "https://www.britishmuseum.org/about-us/british-museum-story/contested-objects-collection/benin-bronzes"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Siglos XVI–XVII",
+        "source": "https://www.britishmuseum.org/about-us/british-museum-story/contested-objects-collection/benin-bronzes"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-12/clasica-64.webp",
+            "bytes": 1444
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-12/clasica-128.webp",
+            "bytes": 4404
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-12/clasica-256.webp",
+            "bytes": 15830
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-12/clasica-512.webp",
+            "bytes": 47932
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CIV-12/inventario-64.webp",
+            "bytes": 1604
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CIV-12/inventario-128.webp",
+            "bytes": 4790
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CIV-12/inventario-256.webp",
+            "bytes": 12106
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CIV-12/inventario-512.webp",
+            "bytes": 29486
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15483,6 +17958,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
       "stage": "OBJ-01",
+      "history": {
+        "identity": "Penny Red británico sin dentar",
+        "culture": "Reino Unido",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1841,
+        "date": "1841",
+        "material": "Papel y tinta roja",
+        "diagnostic": "Retrato y márgenes lisos",
+        "culturalContext": "Emisión postal británica anterior al dentado de series posteriores.",
+        "compatibility": "Compatible con 1842",
+        "treatment": "Interpretación artística",
+        "note": "Conservado de OBJ-01; leyendas en síntesis gráfica.",
+        "source": "https://www.postalmuseum.org/"
+      },
+      "chronology": {
+        "status": "Compatible con 1842",
+        "evidence": "1841",
+        "source": "https://www.postalmuseum.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -15544,13 +18038,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Cérès de 20 céntimos",
+        "culture": "Francia",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1849,
+        "date": "1849",
+        "material": "Papel y tinta negra",
+        "diagnostic": "Cabeza alegórica y borde imperforado",
+        "culturalContext": "Primera serie postal francesa.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Cotejar los marcos grabados; se mantiene el ejemplar posterior.",
+        "source": "https://www.laposte.fr/musee"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1849",
+        "source": "https://www.laposte.fr/musee"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-02/clasica-64.webp",
+            "bytes": 1630
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-02/clasica-128.webp",
+            "bytes": 4994
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-02/clasica-256.webp",
+            "bytes": 18420
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-02/clasica-512.webp",
+            "bytes": 56256
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-02/inventario-64.webp",
+            "bytes": 1822
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-02/inventario-128.webp",
+            "bytes": 5516
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-02/inventario-256.webp",
+            "bytes": 13998
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-02/inventario-512.webp",
+            "bytes": 33746
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15572,13 +18119,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Franklin de cinco centavos",
+        "culture": "Estados Unidos",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1847,
+        "date": "1847",
+        "material": "Papel y tinta parda",
+        "diagnostic": "Retrato y margen imperforado",
+        "culturalContext": "Una de las primeras emisiones generales de EE. UU.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Cotejar el grabado y el valor impreso.",
+        "source": "https://postalmuseum.si.edu/object/npm_0.260305.151.11.2"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1847",
+        "source": "https://postalmuseum.si.edu/object/npm_0.260305.151.11.2"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-03/clasica-64.webp",
+            "bytes": 1754
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-03/clasica-128.webp",
+            "bytes": 5168
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-03/clasica-256.webp",
+            "bytes": 19272
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-03/clasica-512.webp",
+            "bytes": 69272
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-03/inventario-64.webp",
+            "bytes": 2002
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-03/inventario-128.webp",
+            "bytes": 5748
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-03/inventario-256.webp",
+            "bytes": 16078
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-03/inventario-512.webp",
+            "bytes": 43686
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15600,13 +18200,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Castor de tres peniques",
+        "culture": "Provincia de Canadá",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1851,
+        "date": "1851",
+        "material": "Papel y tinta rojiza",
+        "diagnostic": "Formato apaisado y castor en paisaje",
+        "culturalContext": "Emisión postal canadiense temprana.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Márgenes lisos; el texto no se valida en el sprite.",
+        "source": "https://www.historymuseum.ca/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1851",
+        "source": "https://www.historymuseum.ca/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-04/clasica-64.webp",
+            "bytes": 1688
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-04/clasica-128.webp",
+            "bytes": 5048
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-04/clasica-256.webp",
+            "bytes": 18712
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-04/clasica-512.webp",
+            "bytes": 64908
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-04/inventario-64.webp",
+            "bytes": 1934
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-04/inventario-128.webp",
+            "bytes": 5702
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-04/inventario-256.webp",
+            "bytes": 15694
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-04/inventario-512.webp",
+            "bytes": 41944
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15628,13 +18281,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Colón de cinco centavos",
+        "culture": "Chile",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1853,
+        "date": "1853",
+        "material": "Papel y tinta rojiza",
+        "diagnostic": "Retrato de Colón y borde imperforado",
+        "culturalContext": "Primera serie postal de Chile.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Revisar perfil, color y textos del tipo de 1853.",
+        "source": "https://www.bibliotecanacionaldigital.gob.cl/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1853",
+        "source": "https://www.bibliotecanacionaldigital.gob.cl/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-05/clasica-64.webp",
+            "bytes": 1694
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-05/clasica-128.webp",
+            "bytes": 4862
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-05/clasica-256.webp",
+            "bytes": 17958
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-05/clasica-512.webp",
+            "bytes": 61184
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-05/inventario-64.webp",
+            "bytes": 1944
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-05/inventario-128.webp",
+            "bytes": 5424
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-05/inventario-256.webp",
+            "bytes": 14580
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-05/inventario-512.webp",
+            "bytes": 36690
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15656,13 +18362,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Dragón de la primera serie postal",
+        "culture": "Japón Meiji",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1871,
+        "date": "1871",
+        "material": "Papel y tinta",
+        "diagnostic": "Dragones laterales con panel central",
+        "culturalContext": "Primera emisión postal japonesa.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "El diseño es una aproximación; denominación y color por confirmar.",
+        "source": "https://postalmuseum.si.edu/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1871",
+        "source": "https://postalmuseum.si.edu/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-06/clasica-64.webp",
+            "bytes": 1772
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-06/clasica-128.webp",
+            "bytes": 5058
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-06/clasica-256.webp",
+            "bytes": 18508
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-06/clasica-512.webp",
+            "bytes": 60970
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-06/inventario-64.webp",
+            "bytes": 2038
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-06/inventario-128.webp",
+            "bytes": 5808
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-06/inventario-256.webp",
+            "bytes": 16024
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-06/inventario-512.webp",
+            "bytes": 41298
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15684,13 +18443,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Scinde Dawk, variante roja",
+        "culture": "Administración colonial de Sind",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1852,
+        "date": "1852",
+        "material": "Oblea lacrada",
+        "diagnostic": "Disco rojo con impronta central",
+        "culturalContext": "Marca postal de Sind, entonces bajo administración británica.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Se representa la variante de lacre como modelo.",
+        "source": "https://postalmuseum.si.edu/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1852",
+        "source": "https://postalmuseum.si.edu/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-07/clasica-64.webp",
+            "bytes": 1896
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-07/clasica-128.webp",
+            "bytes": 5648
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-07/clasica-256.webp",
+            "bytes": 21568
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-07/clasica-512.webp",
+            "bytes": 63622
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-07/inventario-64.webp",
+            "bytes": 2104
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-07/inventario-128.webp",
+            "bytes": 5948
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-07/inventario-256.webp",
+            "bytes": 16014
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-07/inventario-512.webp",
+            "bytes": 39650
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15712,13 +18524,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Sydney Views de un penique",
+        "culture": "Nueva Gales del Sur",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1850,
+        "date": "1850",
+        "material": "Papel y tinta roja",
+        "diagnostic": "Paisaje portuario en marco oval",
+        "culturalContext": "Emisión de Nueva Gales del Sur.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Revisar el motivo alegórico y el marco específico.",
+        "source": "https://www.sl.nsw.gov.au/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1850",
+        "source": "https://www.sl.nsw.gov.au/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-08/clasica-64.webp",
+            "bytes": 1616
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-08/clasica-128.webp",
+            "bytes": 4830
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-08/clasica-256.webp",
+            "bytes": 17464
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-08/clasica-512.webp",
+            "bytes": 60794
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-08/inventario-64.webp",
+            "bytes": 1872
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-08/inventario-128.webp",
+            "bytes": 5394
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-08/inventario-256.webp",
+            "bytes": 14740
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-08/inventario-512.webp",
+            "bytes": 38914
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15740,13 +18605,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Penny Black británico",
+        "culture": "Reino Unido",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1840,
+        "date": "1840",
+        "material": "Papel y tinta negra",
+        "diagnostic": "Retrato de Victoria y márgenes lisos",
+        "culturalContext": "Emisión postal adhesiva británica.",
+        "compatibility": "Compatible con 1842",
+        "treatment": "Interpretación artística",
+        "note": "Una cara diagnóstica con marcas de esquina esquemáticas.",
+        "source": "https://www.postalmuseum.org/"
+      },
+      "chronology": {
+        "status": "Compatible con 1842",
+        "evidence": "1840",
+        "source": "https://www.postalmuseum.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-09/clasica-64.webp",
+            "bytes": 1878
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-09/clasica-128.webp",
+            "bytes": 5582
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-09/clasica-256.webp",
+            "bytes": 20798
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-09/clasica-512.webp",
+            "bytes": 69958
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-09/inventario-64.webp",
+            "bytes": 2022
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-09/inventario-128.webp",
+            "bytes": 5944
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-09/inventario-256.webp",
+            "bytes": 17414
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-09/inventario-512.webp",
+            "bytes": 42212
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15768,13 +18686,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Ojo de Buey de 30 réis",
+        "culture": "Brasil imperial",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1843,
+        "date": "1843",
+        "material": "Papel y tinta oscura",
+        "diagnostic": "Valor grande sobre óvalo de guilloché",
+        "culturalContext": "Primera emisión de sellos de Brasil.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Papel imperforado; cotejar numerales y marco.",
+        "source": "https://postalmuseum.si.edu/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1843",
+        "source": "https://postalmuseum.si.edu/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-10/clasica-64.webp",
+            "bytes": 1700
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-10/clasica-128.webp",
+            "bytes": 5090
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-10/clasica-256.webp",
+            "bytes": 19938
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-10/clasica-512.webp",
+            "bytes": 70544
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-10/inventario-64.webp",
+            "bytes": 1954
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-10/inventario-128.webp",
+            "bytes": 6018
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-10/inventario-256.webp",
+            "bytes": 17420
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-10/inventario-512.webp",
+            "bytes": 47022
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15796,13 +18767,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Triangular del Cabo de un penique",
+        "culture": "Colonia del Cabo",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1853,
+        "date": "1853",
+        "material": "Papel y tinta roja",
+        "diagnostic": "Triángulo, alegoría de la Esperanza y ancla",
+        "culturalContext": "Emisión temprana de la Colonia del Cabo.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Cotejar la figura recostada y el borde.",
+        "source": "https://postalmuseum.si.edu/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1853",
+        "source": "https://postalmuseum.si.edu/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-11/clasica-64.webp",
+            "bytes": 1316
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-11/clasica-128.webp",
+            "bytes": 3314
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-11/clasica-256.webp",
+            "bytes": 9420
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-11/clasica-512.webp",
+            "bytes": 26446
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-11/inventario-64.webp",
+            "bytes": 1416
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-11/inventario-128.webp",
+            "bytes": 3340
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-11/inventario-256.webp",
+            "bytes": 7328
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-11/inventario-512.webp",
+            "bytes": 19074
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15824,13 +18848,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Mauritius Post Office de dos peniques",
+        "culture": "Mauricio colonial",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1847,
+        "date": "1847",
+        "material": "Papel y tinta azul",
+        "diagnostic": "Perfil de Victoria en rectángulo imperforado",
+        "culturalContext": "Ejemplar de la primera emisión local de Mauricio.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "La inscripción postal concreta queda por comprobar a escala ampliada.",
+        "source": "https://www.bl.uk/"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "1847",
+        "source": "https://www.bl.uk/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-12/clasica-64.webp",
+            "bytes": 1412
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-12/clasica-128.webp",
+            "bytes": 4518
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-12/clasica-256.webp",
+            "bytes": 16182
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-12/clasica-512.webp",
+            "bytes": 49050
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/FIL-12/inventario-64.webp",
+            "bytes": 1562
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/FIL-12/inventario-128.webp",
+            "bytes": 4886
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/FIL-12/inventario-256.webp",
+            "bytes": 12236
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/FIL-12/inventario-512.webp",
+            "bytes": 28856
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15852,13 +18929,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Máscara teatral de tipo antiguo",
+        "culture": "Grecia antigua",
+        "period": "Antigüedad",
+        "year": -300,
+        "date": "Referencia helenística",
+        "material": "Terracota",
+        "diagnostic": "Aberturas de ojos y boca",
+        "culturalContext": "Objeto o representación del repertorio teatral; el original de uso escénico puede tener materiales distintos.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Reproducción museística de un tipo, pendiente de ejemplar concreto.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Referencia helenística",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-01/clasica-64.webp",
+            "bytes": 2132
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-01/clasica-128.webp",
+            "bytes": 5420
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-01/clasica-256.webp",
+            "bytes": 16558
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-01/clasica-512.webp",
+            "bytes": 43982
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-01/inventario-64.webp",
+            "bytes": 2208
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-01/inventario-128.webp",
+            "bytes": 5702
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-01/inventario-256.webp",
+            "bytes": 12580
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-01/inventario-512.webp",
+            "bytes": 31336
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15880,13 +19010,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Máscara veneciana de tipo bauta",
+        "culture": "Venecia",
+        "period": "Edad Moderna",
+        "year": 1750,
+        "date": "Siglo XVIII",
+        "material": "Papel moldeado y acabado claro",
+        "diagnostic": "Mentón angulado y forma clara",
+        "culturalContext": "Objeto de vestimenta y sociabilidad venecianas.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Forma esquemática, sin taller identificado.",
+        "source": "https://collections.vam.ac.uk/"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Siglo XVIII",
+        "source": "https://collections.vam.ac.uk/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-02/clasica-64.webp",
+            "bytes": 2216
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-02/clasica-128.webp",
+            "bytes": 5662
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-02/clasica-256.webp",
+            "bytes": 16568
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-02/clasica-512.webp",
+            "bytes": 42732
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-02/inventario-64.webp",
+            "bytes": 2216
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-02/inventario-128.webp",
+            "bytes": 5642
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-02/inventario-256.webp",
+            "bytes": 12960
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-02/inventario-512.webp",
+            "bytes": 32162
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15908,13 +19091,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Kokeshi de tipo tradicional",
+        "culture": "Tōhoku japonés",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1820,
+        "date": "Referencia Edo tardía",
+        "material": "Madera torneada",
+        "diagnostic": "Cabeza redonda y cuerpo cilíndrico",
+        "culturalContext": "Artesanía popular; cronología exacta de origen discutida.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Identificación histórica pendiente",
+        "note": "Revisar región y estilo de taller, sin fechar el motivo pintado.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Referencia Edo tardía",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-03/clasica-64.webp",
+            "bytes": 1330
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-03/clasica-128.webp",
+            "bytes": 3302
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-03/clasica-256.webp",
+            "bytes": 8846
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-03/clasica-512.webp",
+            "bytes": 24966
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-03/inventario-64.webp",
+            "bytes": 1336
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-03/inventario-128.webp",
+            "bytes": 3346
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-03/inventario-256.webp",
+            "bytes": 7414
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-03/inventario-512.webp",
+            "bytes": 18534
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15936,13 +19172,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Netsuke de animal tallado",
+        "culture": "Japón Edo",
+        "period": "Edad Moderna",
+        "year": 1780,
+        "date": "Siglos XVIII–XIX",
+        "material": "Madera clara",
+        "diagnostic": "Figura compacta y orificios de cordón",
+        "culturalContext": "Contrapeso para accesorios suspendidos de la vestimenta.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Se elige madera para la reconstrucción.",
+        "source": "https://collections.vam.ac.uk/"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Siglos XVIII–XIX",
+        "source": "https://collections.vam.ac.uk/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-04/clasica-64.webp",
+            "bytes": 1842
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-04/clasica-128.webp",
+            "bytes": 4726
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-04/clasica-256.webp",
+            "bytes": 14224
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-04/clasica-512.webp",
+            "bytes": 37020
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-04/inventario-64.webp",
+            "bytes": 1882
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-04/inventario-128.webp",
+            "bytes": 4698
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-04/inventario-256.webp",
+            "bytes": 11118
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-04/inventario-512.webp",
+            "bytes": 27666
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15964,13 +19253,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Pesa akan para oro en polvo",
+        "culture": "Akan",
+        "period": "Edad Moderna",
+        "year": 1700,
+        "date": "Referencia de los siglos XVII–XIX",
+        "material": "Latón",
+        "diagnostic": "Geometría escalonada y pátina",
+        "culturalContext": "Instrumento de pesaje; su material no es oro.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Motivo geométrico sin atribuir un proverbio a la forma ilustrada.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Referencia de los siglos XVII–XIX",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-05/clasica-64.webp",
+            "bytes": 1938
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-05/clasica-128.webp",
+            "bytes": 4838
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-05/clasica-256.webp",
+            "bytes": 14024
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-05/clasica-512.webp",
+            "bytes": 37182
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-05/inventario-64.webp",
+            "bytes": 2050
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-05/inventario-128.webp",
+            "bytes": 4950
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-05/inventario-256.webp",
+            "bytes": 10436
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-05/inventario-512.webp",
+            "bytes": 27008
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -15992,13 +19334,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Tocado Gèlèdé de tipo yoruba",
+        "culture": "Yoruba",
+        "period": "Siglo XIX · hasta 1842",
+        "year": null,
+        "date": "Tradición anterior; fecha de la pieza pendiente",
+        "material": "Madera y pigmento",
+        "diagnostic": "Máscara de cabeza con remate tallado",
+        "culturalContext": "Patrimonio ceremonial asociado a comunidades yoruba y al respeto por las madres.",
+        "compatibility": "Fecha pendiente de verificar",
+        "treatment": "Identificación histórica pendiente",
+        "note": "Reproducción documental; motivos y contexto requieren revisión curatorial.",
+        "source": "https://ich.unesco.org/en/RL/oral-heritage-of-gelede-00002"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Tradición anterior; fecha de la pieza pendiente",
+        "source": "https://ich.unesco.org/en/RL/oral-heritage-of-gelede-00002"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-06/clasica-64.webp",
+            "bytes": 1464
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-06/clasica-128.webp",
+            "bytes": 3576
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-06/clasica-256.webp",
+            "bytes": 10050
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-06/clasica-512.webp",
+            "bytes": 28206
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-06/inventario-64.webp",
+            "bytes": 1498
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-06/inventario-128.webp",
+            "bytes": 3778
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-06/inventario-256.webp",
+            "bytes": 8298
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-06/inventario-512.webp",
+            "bytes": 20852
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -16020,13 +19415,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Figurilla olmeca de piedra verde",
+        "culture": "Olmeca",
+        "period": "Antigüedad",
+        "year": -800,
+        "date": "Primer milenio a. C.",
+        "material": "Piedra verde",
+        "diagnostic": "Figura compacta y cabeza modelada",
+        "culturalContext": "Cultura material mesoamericana; función exacta por determinar.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Sin yacimiento ni función ceremonial asignados.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Primer milenio a. C.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-07/clasica-64.webp",
+            "bytes": 1520
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-07/clasica-128.webp",
+            "bytes": 4236
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-07/clasica-256.webp",
+            "bytes": 13148
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-07/clasica-512.webp",
+            "bytes": 34492
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-07/inventario-64.webp",
+            "bytes": 1782
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-07/inventario-128.webp",
+            "bytes": 4442
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-07/inventario-256.webp",
+            "bytes": 10488
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-07/inventario-512.webp",
+            "bytes": 26002
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -16048,13 +19496,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Máscara maya de mosaico",
+        "culture": "Maya",
+        "period": "Edad Media",
+        "year": 700,
+        "date": "Periodo Clásico",
+        "material": "Jadeíta, concha y otros materiales",
+        "diagnostic": "Teselas verdes y ojos incrustados",
+        "culturalContext": "Morfotipo funerario; el contexto y la custodia del patrimonio son esenciales.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "No se adjudica al ajuar de un gobernante.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Periodo Clásico",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-08/clasica-64.webp",
+            "bytes": 2230
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-08/clasica-128.webp",
+            "bytes": 6616
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-08/clasica-256.webp",
+            "bytes": 19512
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-08/clasica-512.webp",
+            "bytes": 53090
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-08/inventario-64.webp",
+            "bytes": 2396
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-08/inventario-128.webp",
+            "bytes": 6934
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-08/inventario-256.webp",
+            "bytes": 16264
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-08/inventario-512.webp",
+            "bytes": 40420
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -16076,13 +19577,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Vasija retrato de tipo moche",
+        "culture": "Moche",
+        "period": "Antigüedad",
+        "year": 500,
+        "date": "c. 200–800 d. C.",
+        "material": "Cerámica",
+        "diagnostic": "Rostro modelado y asa estribo",
+        "culturalContext": "Los retratos cerámicos dependen de su contexto arqueológico.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Rostro de referencia, sin identidad histórica atribuida.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "c. 200–800 d. C.",
+        "source": "https://www.metmuseum.org/art/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-09/clasica-64.webp",
+            "bytes": 1830
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-09/clasica-128.webp",
+            "bytes": 4288
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-09/clasica-256.webp",
+            "bytes": 11584
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-09/clasica-512.webp",
+            "bytes": 32074
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-09/inventario-64.webp",
+            "bytes": 1824
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-09/inventario-128.webp",
+            "bytes": 4354
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-09/inventario-256.webp",
+            "bytes": 10028
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-09/inventario-512.webp",
+            "bytes": 24728
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -16104,13 +19658,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Figurilla votiva inca",
+        "culture": "Inca",
+        "period": "Edad Moderna",
+        "year": 1500,
+        "date": "Siglos XV–XVI",
+        "material": "Plata",
+        "diagnostic": "Figura erguida y metal trabajado",
+        "culturalContext": "Algunas figuras se vinculan a ofrendas; requiere tratamiento documental.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Sin contexto funerario inventado ni localidad específica.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Siglos XV–XVI",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-10/clasica-64.webp",
+            "bytes": 1274
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-10/clasica-128.webp",
+            "bytes": 3402
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-10/clasica-256.webp",
+            "bytes": 9326
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-10/clasica-512.webp",
+            "bytes": 25086
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-10/inventario-64.webp",
+            "bytes": 1354
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-10/inventario-128.webp",
+            "bytes": 3522
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-10/inventario-256.webp",
+            "bytes": 8138
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-10/inventario-512.webp",
+            "bytes": 19812
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -16132,13 +19739,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Hei-tiki de pounamu",
+        "culture": "Māori",
+        "period": "Edad Moderna",
+        "year": 1750,
+        "date": "Referencia anterior a 1842; fecha individual pendiente",
+        "material": "Pounamu y fibra",
+        "diagnostic": "Figura antropomorfa con cabeza inclinada",
+        "culturalContext": "Los hei-tiki son taonga y su significado particular depende de la comunidad y de la pieza.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Reproducción; identidad y custodia del original no asignadas.",
+        "source": "https://collections.tepapa.govt.nz/topic/1999"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Referencia anterior a 1842; fecha individual pendiente",
+        "source": "https://collections.tepapa.govt.nz/topic/1999"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-11/clasica-64.webp",
+            "bytes": 1620
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-11/clasica-128.webp",
+            "bytes": 4412
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-11/clasica-256.webp",
+            "bytes": 12372
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-11/clasica-512.webp",
+            "bytes": 34086
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-11/inventario-64.webp",
+            "bytes": 1728
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-11/inventario-128.webp",
+            "bytes": 4600
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-11/inventario-256.webp",
+            "bytes": 11286
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-11/inventario-512.webp",
+            "bytes": 29086
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -16160,13 +19820,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Máscara baulé de referencia",
+        "culture": "Baoulé",
+        "period": "Siglo XIX · hasta 1842",
+        "year": null,
+        "date": "Fecha individual pendiente",
+        "material": "Madera",
+        "diagnostic": "Óvalo, talla facial y peinado",
+        "culturalContext": "El papel ceremonial o de representación depende del tipo y de la comunidad.",
+        "compatibility": "Fecha pendiente de verificar",
+        "treatment": "Identificación histórica pendiente",
+        "note": "Referencia interpretativa; revisar modelo, época y contexto con ficha de colección.",
+        "source": "https://www.metmuseum.org/art/collection/search/319512"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha individual pendiente",
+        "source": "https://www.metmuseum.org/art/collection/search/319512"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-12/clasica-64.webp",
+            "bytes": 1434
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-12/clasica-128.webp",
+            "bytes": 3640
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-12/clasica-256.webp",
+            "bytes": 10960
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-12/clasica-512.webp",
+            "bytes": 31200
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAS-12/inventario-64.webp",
+            "bytes": 1512
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAS-12/inventario-128.webp",
+            "bytes": 3840
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAS-12/inventario-256.webp",
+            "bytes": 9468
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAS-12/inventario-512.webp",
+            "bytes": 23446
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -16189,6 +19902,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-04",
+      "history": {
+        "identity": "Carta portulana del Mediterráneo",
+        "culture": "Cartografía mediterránea",
+        "period": "Edad Moderna",
+        "year": 1550,
+        "date": "Siglo XVI",
+        "material": "Pergamino",
+        "diagnostic": "Red de rumbos y costas",
+        "culturalContext": "Formato náutico portulano anterior a 1842.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Comprobar costa, formato horizontal y la coherencia de rumbos en OBJ-11.",
+        "source": "https://www.loc.gov/resource/g5672m.ct003136/"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Siglo XVI",
+        "source": "https://www.loc.gov/resource/g5672m.ct003136/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -16251,6 +19983,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-04",
+      "history": {
+        "identity": "Tabula Peutingeriana",
+        "culture": "Cartografía vial romana y transmisión medieval",
+        "period": "Edad Media",
+        "year": 1200,
+        "date": "Copia medieval de un itinerario antiguo",
+        "material": "Pergamino",
+        "diagnostic": "Tira alargada y red de itinerarios",
+        "culturalContext": "El documento organiza rutas; la forma no equivale a una proyección moderna.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Auditar el formato de tira y el esquema vial, no la escala geográfica moderna.",
+        "source": "https://www.unesco.org/en/memory-world/tabula-peutingeriana"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Copia medieval de un itinerario antiguo",
+        "source": "https://www.unesco.org/en/memory-world/tabula-peutingeriana"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -16313,6 +20064,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-04",
+      "history": {
+        "identity": "Carta de Juan de la Cosa",
+        "culture": "Corona de Castilla",
+        "period": "Edad Moderna",
+        "year": 1500,
+        "date": "1500",
+        "material": "Pergamino",
+        "diagnostic": "Mapa atlántico con el oeste arriba",
+        "culturalContext": "Documento de los primeros viajes atlánticos.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Auditar orientación occidental, perfiles de costas y formato del soporte.",
+        "source": "https://www.loc.gov/resource/g3200.ct007021/"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "1500",
+        "source": "https://www.loc.gov/resource/g3200.ct007021/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -16375,6 +20145,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-04",
+      "history": {
+        "identity": "Atlas de Mercator y tradición editorial",
+        "culture": "Cartografía neerlandesa",
+        "period": "Edad Moderna",
+        "year": 1595,
+        "date": "1595 y ediciones posteriores",
+        "material": "Papel impreso y encuadernación",
+        "diagnostic": "Apertura de atlas con hemisferios",
+        "culturalContext": "El doble hemisferio representa la tradición editorial, no un folio identificado de 1595.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Identificar el folio antes de afirmar correspondencia con una edición.",
+        "source": "https://www.loc.gov/item/map55000728/"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "1595 y ediciones posteriores",
+        "source": "https://www.loc.gov/item/map55000728/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -16437,6 +20226,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-04",
+      "history": {
+        "identity": "Fragmento cartográfico de Piri Reis",
+        "culture": "Cartografía otomana",
+        "period": "Edad Moderna",
+        "year": 1513,
+        "date": "1513",
+        "material": "Pergamino",
+        "diagnostic": "Costas atlánticas y forma fragmentaria",
+        "culturalContext": "Documento de síntesis náutica.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Auditar orientación y correspondencia de las costas del fragmento conservado.",
+        "source": "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/19/66/71/38/2019667138/2019667138.pdf"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "1513",
+        "source": "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/19/66/71/38/2019667138/2019667138.pdf"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -16499,6 +20307,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-04",
+      "history": {
+        "identity": "Carta temática de rutas centroasiáticas",
+        "culture": "Asia central",
+        "period": "Edad Moderna",
+        "year": null,
+        "date": "Fecha del modelo por verificar",
+        "material": "Papel o soporte flexible",
+        "diagnostic": "Tira de corredores con montañas",
+        "culturalContext": "Reconstrucción temática de rutas diversas.",
+        "compatibility": "Fecha pendiente de verificar",
+        "treatment": "Identificación histórica pendiente",
+        "note": "Revisar itinerario y técnica; no se atribuye a un original único.",
+        "source": "https://www.unesco.org/en/silk-roads"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del modelo por verificar",
+        "source": "https://www.unesco.org/en/silk-roads"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -16561,6 +20388,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-04",
+      "history": {
+        "identity": "Reconstrucción de carta costera suajili",
+        "culture": "Costa suajili",
+        "period": "Edad Moderna",
+        "year": null,
+        "date": "Fecha del modelo por verificar",
+        "material": "Papel",
+        "diagnostic": "Franja costera vertical",
+        "culturalContext": "Reconstrucción de conexiones marítimas de África oriental.",
+        "compatibility": "Fecha pendiente de verificar",
+        "treatment": "Identificación histórica pendiente",
+        "note": "Verificar sentido del mar, islas y puertos contra un documento identificado.",
+        "source": "https://www.loc.gov/maps/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del modelo por verificar",
+        "source": "https://www.loc.gov/maps/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -16623,6 +20469,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-04",
+      "history": {
+        "identity": "Plano interpretativo del valle de México",
+        "culture": "Mexica y cartografía colonial",
+        "period": "Edad Moderna",
+        "year": 1524,
+        "date": "Referencia temprana de 1524",
+        "material": "Papel",
+        "diagnostic": "Lago, isla central y calzadas",
+        "culturalContext": "Lectura desde un referente colonial temprano; no se identifica un facsímil.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Auditar orientación, calzadas y alcance regional.",
+        "source": "https://www.loc.gov/exhibits/exploring-the-early-americas/urban-landscapes.html"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Referencia temprana de 1524",
+        "source": "https://www.loc.gov/exhibits/exploring-the-early-americas/urban-landscapes.html"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -16685,6 +20550,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
       "stage": "OBJ-01",
+      "history": {
+        "identity": "Carta del estrecho de Magallanes",
+        "culture": "Cartografía hidrográfica británica",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1833,
+        "date": "Levantamientos del Beagle, década de 1830",
+        "material": "Papel",
+        "diagnostic": "Canal angosto y relieve lateral",
+        "culturalContext": "Hidrografía de canales australes.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Cotejar perfil del estrecho, orientación y fecha de la carta publicada.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Levantamientos del Beagle, década de 1830",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -16747,6 +20631,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-04",
+      "history": {
+        "identity": "Carta de arrecifes de Queensland",
+        "culture": "Cartografía de expedición británica",
+        "period": "Edad Moderna",
+        "year": 1770,
+        "date": "Levantamientos de 1770",
+        "material": "Papel",
+        "diagnostic": "Franja con arrecifes al este de Australia",
+        "culturalContext": "Referencia de cartografía náutica de la expedición del Endeavour.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Cotejar tramo, escala, costa y arrecifes con una carta fechada.",
+        "source": "https://www.sl.nsw.gov.au/collection-items/chart-great-south-sea-or-pacifick-ocean-shewing-track-and-discoveries-made"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Levantamientos de 1770",
+        "source": "https://www.sl.nsw.gov.au/collection-items/chart-great-south-sea-or-pacifick-ocean-shewing-track-and-discoveries-made"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -16809,6 +20712,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-04",
+      "history": {
+        "identity": "Derrotero del Pacífico de Cook",
+        "culture": "Cartografía de expedición británica",
+        "period": "Edad Moderna",
+        "year": 1770,
+        "date": "1769–1770",
+        "material": "Papel",
+        "diagnostic": "Carta plegada con derrotero",
+        "culturalContext": "Referencia de levantamientos del Endeavour.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Auditar perfil de Nueva Zelanda, trayecto y orientación.",
+        "source": "https://www.sl.nsw.gov.au/collection-items/chart-great-south-sea-or-pacifick-ocean-shewing-track-and-discoveries-made"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "1769–1770",
+        "source": "https://www.sl.nsw.gov.au/collection-items/chart-great-south-sea-or-pacifick-ocean-shewing-track-and-discoveries-made"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -16871,6 +20793,25 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-04",
+      "history": {
+        "identity": "Reconstrucción de carta austral",
+        "culture": "Expediciones australes",
+        "period": "Siglo XIX · transición de 1842",
+        "year": 1844,
+        "date": "Expedición 1838–1842; atlas publicado en 1844",
+        "material": "Papel",
+        "diagnostic": "Registro esquemático con meridianos australes",
+        "culturalContext": "Las observaciones y la publicación tienen fechas distintas.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Verificar si se conserva como observación de campaña o se fecha como atlas posterior.",
+        "source": "https://www.loc.gov/item/2010589747/"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Expedición 1838–1842; atlas publicado en 1844",
+        "source": "https://www.loc.gov/item/2010589747/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -16933,6 +20874,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -16961,6 +20907,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -16989,6 +20940,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -17017,6 +20973,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -17045,6 +21006,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -17073,6 +21039,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -17101,6 +21072,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -17129,6 +21105,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -17157,6 +21138,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -17185,6 +21171,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -17213,6 +21204,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -17241,6 +21237,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · Huevos de Aepyornis documentados en Europa hacia 1850–1851",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -17303,6 +21304,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -17365,6 +21371,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -17427,6 +21438,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -17489,6 +21505,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -17551,6 +21572,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -17613,6 +21639,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -17675,6 +21706,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -17737,6 +21773,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -17799,6 +21840,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -17861,6 +21907,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -17923,6 +21974,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · Pluma de Archaeopteryx publicada en 1861",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -17985,6 +22041,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18047,6 +22108,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18109,6 +22175,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18171,6 +22242,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18233,6 +22309,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18295,6 +22376,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · barómetro aneroide de Vidi, 1844",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18357,6 +22443,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18419,6 +22510,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18481,6 +22577,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18543,6 +22644,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18605,6 +22711,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18667,6 +22778,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18729,6 +22845,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18791,6 +22912,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -18819,6 +22945,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -18847,6 +22978,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -18875,6 +23011,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -18903,6 +23044,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -18931,6 +23077,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -18959,6 +23110,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -18987,6 +23143,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -19015,6 +23176,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -19043,6 +23209,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -19071,6 +23242,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -19099,6 +23275,11 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Fecha del ejemplar por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -19131,6 +23312,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Ginkgo biloba",
         "characteristics": "Limbo en abanico con nervaduras divergentes.",
         "scale": "Una hoja de pocos centímetros."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -19199,6 +23385,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Cinco lóbulos, senos redondeados y pecíolo marcado.",
         "scale": "Una hoja de escala centimétrica."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -19265,6 +23456,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Ficus carica",
         "characteristics": "Lóbulos anchos y nervaduras principales palmadas.",
         "scale": "Una hoja de escala centimétrica a decimétrica."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -19333,6 +23529,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Pínnulas en abanico y ejes delgados oscuros.",
         "scale": "Una porción de fronda, ampliada."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -19399,6 +23600,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Eucalyptus globulus",
         "characteristics": "Hoja adulta falcada, coriácea, con nervio medio.",
         "scale": "Una hoja alargada de escala decimétrica."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -19467,6 +23673,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Ápice truncado o escotado y lóbulos angulosos.",
         "scale": "Una hoja de escala centimétrica."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -19533,6 +23744,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Alsophila dealbata · sin. Cyathea dealbata",
         "characteristics": "Envés plateado y fronda dividida.",
         "scale": "Porción de una fronda que puede medir metros."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -19601,6 +23817,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Disco flotante, reborde elevado y organización radial.",
         "scale": "Limbo de hasta 2,3 m de ancho según Kew; se reduce para el álbum."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -19667,6 +23888,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Gnetum africanum",
         "characteristics": "Limbo oblongo de borde entero y nervadura reticulada.",
         "scale": "Una hoja de escala centimétrica."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -19735,6 +23961,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Fronda lineal continua, con soros lineares en el envés.",
         "scale": "Fronda de escala decimétrica."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -19802,6 +24033,11 @@ globalThis.AtlasObjetosCientificos = {
         "characteristics": "Trampa en jarro, con tapa y zarcillo. El jarro es una parte modificada de la hoja.",
         "scale": "Se representa una sola trampa con una porción de hoja."
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -19868,6 +24104,11 @@ globalThis.AtlasObjetosCientificos = {
         "identity": "Ravenala madagascariensis · referencia",
         "characteristics": "Limbo largo con nervio central y desgarros transversales.",
         "scale": "Una sola hoja de escala métrica, reducida."
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
       },
       "sprites": {
         "clasica": {
@@ -19938,6 +24179,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Prismas poligonales por contracción",
         "history": "Muestra estructural de Antrim, formato documental.",
         "plate": "Modelo reducido sin paisaje.",
+        "source": "https://whc.unesco.org/en/list/369/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Muestra estructural de Antrim, formato documental.",
         "source": "https://whc.unesco.org/en/list/369/"
       },
       "sprites": {
@@ -20011,6 +24257,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Escala de muestra de mano.",
         "source": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Granito de Cornualles, procedencia de catálogo.",
+        "source": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -20080,6 +24331,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Hojas planas exfoliables",
         "history": "Referencia minera del norte de Gales.",
         "plate": "Plaquitas apiladas sin paisaje.",
+        "source": "https://whc.unesco.org/en/list/1633/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia minera del norte de Gales.",
         "source": "https://whc.unesco.org/en/list/1633/"
       },
       "sprites": {
@@ -20153,6 +24409,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Fragmento sin matriz añadida.",
         "source": "https://www.usgs.gov/glossary/volcano-hazards-program/pumice"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Vesubio, referencia de catálogo.",
+        "source": "https://www.usgs.gov/glossary/volcano-hazards-program/pumice"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -20222,6 +24483,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Láminas inclinadas y grano arenoso",
         "history": "Blue Mountains; muestra interpretativa sin fecha individual.",
         "plate": "Corte oblicuo deliberado.",
+        "source": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Blue Mountains; muestra interpretativa sin fecha individual.",
         "source": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/"
       },
       "sprites": {
@@ -20295,6 +24561,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Modelo pequeño de la estructura escalonada.",
         "source": "https://whc.unesco.org/en/list/485/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Pamukkale, representación documental.",
+        "source": "https://whc.unesco.org/en/list/485/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -20364,6 +24635,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Ceniza fina y clastos oscuros dispersos",
         "history": "Capadocia, procedencia de referencia.",
         "plate": "Muestra de mano.",
+        "source": "https://whc.unesco.org/en/list/357/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Capadocia, procedencia de referencia.",
         "source": "https://whc.unesco.org/en/list/357/"
       },
       "sprites": {
@@ -20437,6 +24713,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Sección que distingue la roca de un canto suelto.",
         "source": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Andes centrales, sin localidad individual asignada.",
+        "source": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -20506,6 +24787,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Bandas minerales claras y oscuras",
         "history": "Lewis, procedencia de catálogo.",
         "plate": "Bandeado ondulado de muestra de mano.",
+        "source": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lewis, procedencia de catálogo.",
         "source": "https://www.bgs.ac.uk/discovering-geology/rocks-and-minerals/"
       },
       "sprites": {
@@ -20579,6 +24865,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Las frústulas microscópicas quedan fuera de la lámina.",
         "source": "https://www.usgs.gov/centers/national-minerals-information-center/diatomite-statistics-and-information"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Valle del Rift de Kenia, muestra de referencia.",
+        "source": "https://www.usgs.gov/centers/national-minerals-information-center/diatomite-statistics-and-information"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -20650,6 +24941,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Sección plana, escala relativa de álbum.",
         "source": "https://www.ga.gov.au/education/minerals-energy/australian-mineral-facts/iron"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Hamersley, referencia documental, con datación de la muestra pendiente.",
+        "source": "https://www.ga.gov.au/education/minerals-energy/australian-mineral-facts/iron"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -20719,6 +25015,11 @@ globalThis.AtlasObjetosCientificos = {
         "diagnostic": "Clastos y matriz contrastan sin implicar presencia de diamante",
         "history": "Futuro · contexto de los hallazgos de Kimberley en la década de 1870.",
         "plate": "Trozos de roca, sin adornos.",
+        "source": "https://www.gia.edu/gems-gemology/winter-2018-how-diamonds-form"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · contexto de los hallazgos de Kimberley en la década de 1870.",
         "source": "https://www.gia.edu/gems-gemology/winter-2018-how-diamonds-form"
       },
       "sprites": {
@@ -20794,6 +25095,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Conservada de OBJ-01.",
         "source": "https://www.algaebase.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de observación histórica.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -20865,6 +25171,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Costas atlánticas someras",
         "history": "Lámina de gabinete.",
         "plate": "El talo carece de nervaduras foliares de planta terrestre.",
+        "source": "https://www.algaebase.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de gabinete.",
         "source": "https://www.algaebase.org/"
       },
       "sprites": {
@@ -20940,6 +25251,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Se representa pigmentación rojiza orientativa.",
         "source": "https://www.algaebase.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de gabinete.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -21011,6 +25327,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Intermareal rocoso del sur de Chile",
         "history": "Lámina de un morfotipo conocido en el litoral chileno.",
         "plate": "Referencia de género; el nombre común puede abarcar más de una especie local.",
+        "source": "https://metadatos.mma.gob.cl/sinia/Documento_Fichas.pdf"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de un morfotipo conocido en el litoral chileno.",
         "source": "https://metadatos.mma.gob.cl/sinia/Documento_Fichas.pdf"
       },
       "sprites": {
@@ -21086,6 +25407,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "El talo articulado se distingue de un coral colonial.",
         "source": "https://www.algaebase.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de gabinete.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -21157,6 +25483,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Bosques costeros de kelpo del Pacífico",
         "history": "Lámina de gabinete.",
         "plate": "Se representa un tramo lateral, no el tamaño de la planta completa.",
+        "source": "https://www.algaebase.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de gabinete.",
         "source": "https://www.algaebase.org/"
       },
       "sprites": {
@@ -21232,6 +25563,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "El dibujo resalta el eje longitudinal.",
         "source": "https://www.algaebase.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de observación de litoral japonés.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -21303,6 +25639,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Zonas someras del Indo-Pacífico",
         "history": "Lámina de gabinete.",
         "plate": "Las esferas son ramificaciones, no frutos.",
+        "source": "https://www.algaebase.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de gabinete.",
         "source": "https://www.algaebase.org/"
       },
       "sprites": {
@@ -21378,6 +25719,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Perfil plano y flexible.",
         "source": "https://www.algaebase.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de gabinete.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -21449,6 +25795,11 @@ globalThis.AtlasObjetosCientificos = {
         "habitat": "Costas templadas cálidas y subtropicales",
         "history": "Lámina de gabinete.",
         "plate": "La escala relativa facilita ver los arcos.",
+        "source": "https://www.algaebase.org/"
+      },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de gabinete.",
         "source": "https://www.algaebase.org/"
       },
       "sprites": {
@@ -21524,6 +25875,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "Referencia de género; especie no determinada por silueta.",
         "source": "https://www.algaebase.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina de gabinete.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -21597,6 +25953,11 @@ globalThis.AtlasObjetosCientificos = {
         "plate": "La identificación y el mecanismo óptico del ejemplar requieren cotejo.",
         "source": "https://www.algaebase.org/"
       },
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina contemporánea de referencia, sin atribución a una recolección de 1842.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -21659,6 +26020,25 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": true,
       "stage": "OBJ-01",
+      "history": {
+        "identity": "Medalla británica de Waterloo",
+        "culture": "Reino Unido",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1815,
+        "date": "1815",
+        "material": "Plata y cinta",
+        "diagnostic": "Medallón circular suspendido",
+        "culturalContext": "Medalla de campaña.",
+        "compatibility": "Compatible con 1842",
+        "treatment": "Interpretación artística",
+        "note": "Conservada de OBJ-01; cotejar cinta y relieve exactos.",
+        "source": "https://www.nam.ac.uk/explore/battle-waterloo"
+      },
+      "chronology": {
+        "status": "Compatible con 1842",
+        "evidence": "1815",
+        "source": "https://www.nam.ac.uk/explore/battle-waterloo"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -21720,13 +26100,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Medalla de campaña de Seringapatam",
+        "culture": "Compañía de las Indias Orientales",
+        "period": "Edad Moderna",
+        "year": 1799,
+        "date": "Campaña de 1799",
+        "material": "Plata",
+        "diagnostic": "León y tigre en relieve",
+        "culturalContext": "Condecoración de campaña en contexto colonial.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Confirmar variante y fecha de acuñación frente a la campaña.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Campaña de 1799",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-02/clasica-64.webp",
+            "bytes": 1934
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-02/clasica-128.webp",
+            "bytes": 4876
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-02/clasica-256.webp",
+            "bytes": 14242
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-02/clasica-512.webp",
+            "bytes": 40912
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-02/inventario-64.webp",
+            "bytes": 2022
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-02/inventario-128.webp",
+            "bytes": 5030
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-02/inventario-256.webp",
+            "bytes": 12542
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-02/inventario-512.webp",
+            "bytes": 31196
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -21748,13 +26181,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Insignia histórica de la Orden del Águila Blanca",
+        "culture": "Mancomunidad polaco-lituana",
+        "period": "Edad Moderna",
+        "year": 1750,
+        "date": "Modelo del siglo XVIII; orden de 1705",
+        "material": "Metal, esmalte y cinta",
+        "diagnostic": "Cruz esmaltada y águila blanca",
+        "culturalContext": "Insignia de una orden histórica con variantes posteriores.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Cotejar suspensión y esmalte con un modelo fechado.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Modelo del siglo XVIII; orden de 1705",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-03/clasica-64.webp",
+            "bytes": 2692
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-03/clasica-128.webp",
+            "bytes": 7400
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-03/clasica-256.webp",
+            "bytes": 20350
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-03/clasica-512.webp",
+            "bytes": 56564
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-03/inventario-64.webp",
+            "bytes": 2812
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-03/inventario-128.webp",
+            "bytes": 7852
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-03/inventario-256.webp",
+            "bytes": 18746
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-03/inventario-512.webp",
+            "bytes": 47408
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -21776,13 +26262,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Cruz de la Legión de Honor de tipo temprano",
+        "culture": "Francia napoleónica",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1804,
+        "date": "Orden de 1802; insignia de época imperial",
+        "material": "Metal esmaltado y cinta",
+        "diagnostic": "Rayos blancos y cinta roja",
+        "culturalContext": "Insignia honorífica francesa.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "El centro y la corona dependen del modelo concreto.",
+        "source": "https://www.legiondhonneur.fr/"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Orden de 1802; insignia de época imperial",
+        "source": "https://www.legiondhonneur.fr/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-04/clasica-64.webp",
+            "bytes": 3050
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-04/clasica-128.webp",
+            "bytes": 8102
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-04/clasica-256.webp",
+            "bytes": 25560
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-04/clasica-512.webp",
+            "bytes": 76008
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-04/inventario-64.webp",
+            "bytes": 3208
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-04/inventario-128.webp",
+            "bytes": 8522
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-04/inventario-256.webp",
+            "bytes": 24162
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-04/inventario-512.webp",
+            "bytes": 66954
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -21804,13 +26343,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Medalla de la Reconquista de Buenos Aires",
+        "culture": "Río de la Plata",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1806,
+        "date": "1806",
+        "material": "Metal acuñado",
+        "diagnostic": "Disco con relieve heráldico",
+        "culturalContext": "Memoria de la reconquista durante las invasiones británicas.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Identificación histórica pendiente",
+        "note": "El escudo y la suspensión requieren contraste con una pieza inventariada.",
+        "source": "https://museohistoriconacional.cultura.gob.ar/"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "1806",
+        "source": "https://museohistoriconacional.cultura.gob.ar/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-05/clasica-64.webp",
+            "bytes": 2270
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-05/clasica-128.webp",
+            "bytes": 5958
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-05/clasica-256.webp",
+            "bytes": 19336
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-05/clasica-512.webp",
+            "bytes": 59076
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-05/inventario-64.webp",
+            "bytes": 2350
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-05/inventario-128.webp",
+            "bytes": 6432
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-05/inventario-256.webp",
+            "bytes": 17722
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-05/inventario-512.webp",
+            "bytes": 45034
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -21832,13 +26424,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Medalla de proclamación de Pedro I",
+        "culture": "Brasil imperial",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1822,
+        "date": "1822",
+        "material": "Metal acuñado",
+        "diagnostic": "Disco con busto imperial",
+        "culturalContext": "Objeto conmemorativo vinculado a la proclamación.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Identificación histórica pendiente",
+        "note": "Metal y leyenda de la variante por revisar.",
+        "source": "https://www.bcb.gov.br/acessoinformacao/museudovalores"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "1822",
+        "source": "https://www.bcb.gov.br/acessoinformacao/museudovalores"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-06/clasica-64.webp",
+            "bytes": 2514
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-06/clasica-128.webp",
+            "bytes": 6890
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-06/clasica-256.webp",
+            "bytes": 23162
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-06/clasica-512.webp",
+            "bytes": 65458
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-06/inventario-64.webp",
+            "bytes": 2568
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-06/inventario-128.webp",
+            "bytes": 7418
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-06/inventario-256.webp",
+            "bytes": 19564
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-06/inventario-512.webp",
+            "bytes": 49236
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -21860,13 +26505,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Cruz de la primera Orden de Guadalupe",
+        "culture": "Primer Imperio mexicano",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1822,
+        "date": "Orden de 1822",
+        "material": "Metal, esmalte y suspensión",
+        "diagnostic": "Motivo guadalupano al centro",
+        "culturalContext": "Insignia de la primera orden imperial; el motivo tiene contexto religioso.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Contrastar con un modelo de 1822 y evitar atribuir insignias de restauraciones posteriores.",
+        "source": "https://www.legiondhonneur.fr/en/le-musee/les-collections/world"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Orden de 1822",
+        "source": "https://www.legiondhonneur.fr/en/le-musee/les-collections/world"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-07/clasica-64.webp",
+            "bytes": 3004
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-07/clasica-128.webp",
+            "bytes": 7980
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-07/clasica-256.webp",
+            "bytes": 25582
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-07/clasica-512.webp",
+            "bytes": 76864
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-07/inventario-64.webp",
+            "bytes": 3310
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-07/inventario-128.webp",
+            "bytes": 8612
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-07/inventario-256.webp",
+            "bytes": 24794
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-07/inventario-512.webp",
+            "bytes": 68400
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -21888,13 +26586,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Insignia tunecina del Mérito de tipo posterior",
+        "culture": "Beylicato de Túnez",
+        "period": "Siglo XIX · después de 1842",
+        "year": 1860,
+        "date": "Modelo posterior; antecedente museístico de 1902–1906",
+        "material": "Metal y esmalte",
+        "diagnostic": "Estrella radial y cartela central",
+        "culturalContext": "La orden tiene antecedentes en la década de 1830. El rótulo posterior se aplica al modelo de insignia.",
+        "compatibility": "Posterior a 1842",
+        "treatment": "Interpretación artística",
+        "note": "Rotular como futura; comprobar grado, fecha y motivo de la cartela.",
+        "source": "https://americanhistory.si.edu/collections/object/nmah_963454"
+      },
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Modelo posterior; antecedente museístico de 1902–1906",
+        "source": "https://americanhistory.si.edu/collections/object/nmah_963454"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-08/clasica-64.webp",
+            "bytes": 2912
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-08/clasica-128.webp",
+            "bytes": 7580
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-08/clasica-256.webp",
+            "bytes": 24806
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-08/clasica-512.webp",
+            "bytes": 72470
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-08/inventario-64.webp",
+            "bytes": 2970
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-08/inventario-128.webp",
+            "bytes": 8168
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-08/inventario-256.webp",
+            "bytes": 23758
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-08/inventario-512.webp",
+            "bytes": 62724
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -21916,13 +26667,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Distinción militar de San Jorge de tipo temprano",
+        "culture": "Imperio ruso",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1807,
+        "date": "1807 para la distinción; variante por comprobar",
+        "material": "Plata y cinta",
+        "diagnostic": "Brazos simples y cinta negra y naranja",
+        "culturalContext": "El sistema de clases y sus formas evolucionaron posteriormente.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "No atribuir a una clase de una reforma posterior sin cotejo.",
+        "source": "https://www.britishmuseum.org/collection"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "1807 para la distinción; variante por comprobar",
+        "source": "https://www.britishmuseum.org/collection"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-09/clasica-64.webp",
+            "bytes": 2156
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-09/clasica-128.webp",
+            "bytes": 5324
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-09/clasica-256.webp",
+            "bytes": 16110
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-09/clasica-512.webp",
+            "bytes": 48892
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-09/inventario-64.webp",
+            "bytes": 2188
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-09/inventario-128.webp",
+            "bytes": 5600
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-09/inventario-256.webp",
+            "bytes": 14958
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-09/inventario-512.webp",
+            "bytes": 40004
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -21944,13 +26748,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Medalla de oro de la Real Sociedad Geográfica",
+        "culture": "Reino Unido",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1830,
+        "date": "Desde la década de 1830",
+        "material": "Oro",
+        "diagnostic": "Disco de relieve alegórico",
+        "culturalContext": "Premio de geografía e investigación.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Distinguir medallas y retratos de distintas épocas.",
+        "source": "https://www.rgs.org/about-us/our-history/medals-and-awards"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Desde la década de 1830",
+        "source": "https://www.rgs.org/about-us/our-history/medals-and-awards"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-10/clasica-64.webp",
+            "bytes": 2364
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-10/clasica-128.webp",
+            "bytes": 6286
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-10/clasica-256.webp",
+            "bytes": 20800
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-10/clasica-512.webp",
+            "bytes": 61026
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-10/inventario-64.webp",
+            "bytes": 2414
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-10/inventario-128.webp",
+            "bytes": 6590
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-10/inventario-256.webp",
+            "bytes": 18514
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-10/inventario-512.webp",
+            "bytes": 48022
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -21972,13 +26829,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Medalla de Trafalgar de Matthew Boulton",
+        "culture": "Reino Unido",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1805,
+        "date": "Batalla de 1805; edición por cotejar",
+        "material": "Metal acuñado",
+        "diagnostic": "Relieve naval en disco",
+        "culturalContext": "Serie conmemorativa privada vinculada a Trafalgar.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "Metal y reverso requieren identificación por edición.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Batalla de 1805; edición por cotejar",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-11/clasica-64.webp",
+            "bytes": 2574
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-11/clasica-128.webp",
+            "bytes": 6992
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-11/clasica-256.webp",
+            "bytes": 23990
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-11/clasica-512.webp",
+            "bytes": 66524
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-11/inventario-64.webp",
+            "bytes": 2598
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-11/inventario-128.webp",
+            "bytes": 7418
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-11/inventario-256.webp",
+            "bytes": 19760
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-11/inventario-512.webp",
+            "bytes": 48502
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -22000,13 +26910,66 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-09",
+      "history": {
+        "identity": "Orden del Sol del Perú, referencia inicial",
+        "culture": "Perú independiente",
+        "period": "Siglo XIX · hasta 1842",
+        "year": 1821,
+        "date": "Orden instituida en 1821",
+        "material": "Metal dorado",
+        "diagnostic": "Insignia de rayos solares",
+        "culturalContext": "Condecoración vinculada a la independencia; existen modelos posteriores.",
+        "compatibility": "Compatible con reservas documentales",
+        "treatment": "Interpretación artística",
+        "note": "La geometría presentada es interpretativa; cotejar el diseño de primera época.",
+        "source": "https://www.legiondhonneur.fr/en/le-musee/les-collections/world"
+      },
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Orden instituida en 1821",
+        "source": "https://www.legiondhonneur.fr/en/le-musee/les-collections/world"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-12/clasica-64.webp",
+            "bytes": 2960
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-12/clasica-128.webp",
+            "bytes": 8108
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-12/clasica-256.webp",
+            "bytes": 26806
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-12/clasica-512.webp",
+            "bytes": 81950
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MED-12/inventario-64.webp",
+            "bytes": 3030
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MED-12/inventario-128.webp",
+            "bytes": 8770
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MED-12/inventario-256.webp",
+            "bytes": 25798
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MED-12/inventario-512.webp",
+            "bytes": 72754
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -22029,6 +26992,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": true,
       "stage": "OBJ-01",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -22091,6 +27059,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -22119,6 +27092,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -22147,6 +27125,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -22175,6 +27158,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -22203,6 +27191,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -22231,6 +27224,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -22259,6 +27257,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -22287,6 +27290,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -22315,6 +27323,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -22343,6 +27356,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -22371,6 +27389,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Lámina o reproducción de referencia; datación documental pendiente",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -22405,6 +27428,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -22474,6 +27502,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -22543,6 +27576,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -22613,6 +27651,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -22682,6 +27725,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -22751,6 +27799,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -22821,6 +27874,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -22891,6 +27949,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -22961,6 +28024,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -23031,6 +28099,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1905",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -23102,6 +28175,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1889",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -23172,6 +28250,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1877",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -23243,6 +28326,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1915",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -23315,6 +28403,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1908",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -23387,6 +28480,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Compatible con reservas documentales",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -23459,6 +28557,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1943",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -23531,6 +28634,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": true,
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1985",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -23596,6 +28704,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": false,
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1938",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -23627,6 +28740,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": false,
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -23658,6 +28776,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": false,
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -23689,6 +28812,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": false,
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -23720,6 +28848,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": false,
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -23751,6 +28884,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": false,
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -23782,6 +28920,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": false,
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -23813,6 +28956,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": false,
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -23844,6 +28992,11 @@ globalThis.AtlasObjetosCientificos = {
       "newArtwork": false,
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -23870,6 +29023,11 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Instrumentos científicos",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · modelo Soleil de la década de 1840, fechar ejemplar",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -23896,6 +29054,11 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Instrumentos científicos",
       "pilot": false,
       "stage": "Futuras etapas",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia de la primera mitad del siglo XIX",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -23922,6 +29085,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de equipamiento futuro",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -23982,6 +29150,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de equipamiento futuro",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24042,6 +29215,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de equipamiento futuro",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24102,6 +29280,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de equipamiento futuro",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24162,6 +29345,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de equipamiento futuro",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24222,6 +29410,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de equipamiento futuro",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24282,6 +29475,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de equipamiento futuro",
       "pilot": false,
       "stage": "OBJ-02",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24348,6 +29546,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24414,6 +29617,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24480,6 +29688,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24546,6 +29759,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24612,6 +29830,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24678,6 +29901,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24744,6 +29972,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24810,6 +30043,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -24876,6 +30114,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -24908,6 +30151,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -24940,6 +30188,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -24972,6 +30225,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25004,6 +30262,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25036,6 +30299,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25068,6 +30336,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25100,6 +30373,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25132,6 +30410,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25164,6 +30447,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25196,6 +30484,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25228,6 +30521,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25260,6 +30558,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25292,6 +30595,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25324,6 +30632,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25356,6 +30669,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25388,6 +30706,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25420,6 +30743,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25452,6 +30780,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25484,6 +30817,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de material animal",
       "pilot": false,
       "stage": "OBJ-03",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Propuesta de gabinete para una ampliación futura",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25510,6 +30848,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de mercancía regional",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Comercio exterior de té anterior a 1842. Muestra de gabinete.",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -25570,6 +30913,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de mercancía regional",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Reproducción de vajilla de exportación anterior a 1842.",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -25630,6 +30978,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de mercancía regional",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Muestra de tejido conservado, de tradición anterior a 1842.",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -25690,6 +31043,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de mercancía regional",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia botánica de Coffea arabica y sus circuitos históricos.",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -25750,6 +31108,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de mercancía regional",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Referencia a la expansión del algodón comercial en Egipto en la década de 1820.",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -25810,6 +31173,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de mercancía regional",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Muestra botánica conservada de una especia mesoamericana con circulación anterior a 1842.",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -25870,6 +31238,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de mercancía regional",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Registro histórico de Nicotiana tabacum.",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25896,6 +31269,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de mercancía regional",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Ejemplar histórico documentado de tintura.",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25922,6 +31300,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de mercancía regional",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Muestra histórica de gabinete de la red del Índico.",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25948,6 +31331,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de mercancía regional",
       "pilot": false,
       "stage": "OBJ-04",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Muestra conservada de la tradición de lana de exportación ibérica.",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -25974,6 +31362,11 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Paleontología",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1905",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -26034,6 +31427,11 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Paleontología",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1889",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -26094,6 +31492,11 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Paleontología",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1877",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -26154,6 +31557,11 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Paleontología",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1915",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -26214,6 +31622,11 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Paleontología",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1908",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -26274,6 +31687,11 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Paleontología",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Documentación o reproducción museística; datación por verificar",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -26334,6 +31752,11 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Paleontología",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1943",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -26394,6 +31817,11 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Paleontología",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Futuro · referencia taxonómica de 1985",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -26454,6 +31882,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de montaje paleontológico",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Descrito en 1877.",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -26480,6 +31913,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de montaje paleontológico",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Descrito en 1878.",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -26540,6 +31978,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de montaje paleontológico",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Descrito en 1903.",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -26566,6 +32009,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de montaje paleontológico",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Descrito en 1924.",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -26592,6 +32040,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de montaje paleontológico",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Descrito en 1922.",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -26618,6 +32071,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de montaje paleontológico",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Descrito en 1969.",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -26644,6 +32102,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de montaje paleontológico",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Descrito en 1861.",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -26670,6 +32133,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de montaje paleontológico",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Posterior a 1842",
+        "evidence": "Descrito en 1876.",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -26730,6 +32198,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de montaje paleontológico",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Reconocido en la década de 1820.",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -26790,6 +32263,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de montaje paleontológico",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Reconocido en la década de 1820.",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -26816,6 +32294,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de montaje paleontológico",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Descrito antes de 1842.",
+        "source": ""
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -26876,6 +32359,11 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de montaje paleontológico",
       "pilot": false,
       "stage": "OBJ-05",
+      "chronology": {
+        "status": "Fecha pendiente de verificar",
+        "evidence": "Descrito en 1796.",
+        "source": ""
+      },
       "sprites": {
         "clasica": null,
         "inventario": null

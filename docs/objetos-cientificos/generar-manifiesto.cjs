@@ -235,6 +235,39 @@ const maritimeFacts = Object.fromEntries(read('docs/objetos-cientificos/fichas-o
 assert.equal(stage08Art.size, 49);
 assert.equal(Object.keys(maritimeFacts).length, 60);
 
+const stage09 = JSON.parse(read('docs/objetos-cientificos/obj-09.json'));
+const stage09Art = new Set(stage09.sheets.flatMap(sheet => sheet.ids).filter(Boolean));
+const chronologyLabels = {
+  compatible:'Compatible con 1842',
+  reserva:'Compatible con reservas documentales',
+  posterior:'Posterior a 1842',
+  pendiente:'Fecha pendiente de verificar',
+  ficcion:'Ficción explícita'
+};
+const historicalFacts = Object.fromEntries(read('docs/objetos-cientificos/fichas-historia.tsv').trim().split('\n').slice(1).map(line => {
+  const [id,identity,culture,period,year,date,material,diagnostic,culturalContext,status,treatment,note,source] = line.split('\t');
+  assert.ok(chronologyLabels[status] && source?.startsWith('https://'), id);
+  return [id,{identity,culture,period,year:status === 'pendiente' ? null : Number(year),date,material,
+    diagnostic,culturalContext,compatibility:chronologyLabels[status],treatment,note,source}];
+}));
+assert.equal(stage09Art.size, 57);
+assert.equal(Object.keys(historicalFacts).length, 72);
+
+function classifyChronology(row, context) {
+  const history = historicalFacts[row.id];
+  if (history) return {status:history.compatibility, evidence:history.date, source:history.source};
+  const geology = geologicalFacts[row.id];
+  const maritime = maritimeFacts[row.id];
+  const evidence = geology?.history || maritime?.history || context || 'Fecha sin documentación suficiente';
+  const recordedYear = /^Descrito en (\d{4})/.exec(evidence)?.[1];
+  let status = 'pendiente';
+  if (maritime?.nature === 'Ficción explícita' || /^Ficción/i.test(context || '')) status = 'ficcion';
+  else if (/^Futuro/i.test(evidence) || /^Futuro/i.test(context || '')) status = 'posterior';
+  else if (row.type === 'Idea de montaje paleontológico' && Number(recordedYear) > 1842) status = 'posterior';
+  else if (/^MET-/.test(row.id) || row.id === 'iguanodon_mount' || row.id === 'FOS-09') status = 'reserva';
+  return {status:chronologyLabels[status],evidence,source:geology?.source || maritime?.source || ''};
+}
+
 assert.equal(extra.length, 60);
 const newCollections = new Set(extra.map(row => row.collection));
 assert.equal(newCollections.size, 5);
@@ -306,14 +339,17 @@ const rows = [...products,...catalog,...museumRecords,...concepts,...futureMater
     }
     sprites[variant] = Object.keys(files).length ? files : null;
   }
+  const context = row.id === 'INS-05' ? 'Futuro · barómetro aneroide de Vidi, 1844' : row.context;
   return {cabinet:null,collection:null,rarity:null,tier:null,continent:null,provenance:null,
     acquisition:null,description:null,material:null,context:null,original:null,observations:null, ...row,
     pilot:plateIds.includes(row.id),
-    stage:plateIds.includes(row.id) ? 'OBJ-01' : stage02Ids.has(row.id) ? 'OBJ-02' : stage03Ids.has(row.id) ? 'OBJ-03' : stage04Ids.has(row.id) ? 'OBJ-04' : stage05Ids.has(row.id) ? 'OBJ-05' : stage06Art.has(row.id) ? 'OBJ-06' : stage07Art.has(row.id) ? 'OBJ-07' : stage08Art.has(row.id) ? 'OBJ-08' : 'Futuras etapas',
+    stage:plateIds.includes(row.id) ? 'OBJ-01' : stage02Ids.has(row.id) ? 'OBJ-02' : stage03Ids.has(row.id) ? 'OBJ-03' : stage04Ids.has(row.id) ? 'OBJ-04' : stage05Ids.has(row.id) ? 'OBJ-05' : stage06Art.has(row.id) ? 'OBJ-06' : stage07Art.has(row.id) ? 'OBJ-07' : stage08Art.has(row.id) ? 'OBJ-08' : stage09Art.has(row.id) ? 'OBJ-09' : 'Futuras etapas',
     ...(botanicalFacts[row.id] ? {botany:botanicalFacts[row.id]} : {}),
     ...(geologicalFacts[row.id] ? {geology:geologicalFacts[row.id]} : {}),
     ...(maritimeFacts[row.id] ? {oceanography:maritimeFacts[row.id]} : {}),
-    context:row.id === 'INS-05' ? 'Futuro · barómetro aneroide de Vidi, 1844' : row.context,
+    ...(historicalFacts[row.id] ? {history:historicalFacts[row.id]} : {}),
+    chronology:classifyChronology(row,context),
+    context,
     observations:pilotNotes[row.id] || row.observations || null, sprites, approval:'Pendiente',
     artState:sprites.clasica && sprites.inventario ? 'Candidato' : row.newArtwork === false ? 'Reutilización documental' : 'Pendiente'};
 });
@@ -321,9 +357,9 @@ assert.equal(new Set(rows.map(row => row.id)).size, rows.length);
 assert.equal(rows.filter(row => row.pilot).length, 30);
 assert.equal(stage02Ids.size, 31);
 assert.equal(rows.filter(row => row.stage === 'OBJ-02').length, stage02Ids.size);
-const candidateIds = new Set([...plateIds, ...stage02Ids, ...stage03Art, ...stage04Art, ...stage05Art, ...stage06Art, ...stage07Art, ...stage08Art]);
+const candidateIds = new Set([...plateIds, ...stage02Ids, ...stage03Art, ...stage04Art, ...stage05Art, ...stage06Art, ...stage07Art, ...stage08Art, ...stage09Art]);
 const candidates = rows.filter(row => candidateIds.has(row.id));
-assert.equal(candidates.length, 327);
+assert.equal(candidates.length, 384);
 assert.equal(rows.filter(row => row.artState === 'Candidato').length, candidates.length);
 assert.ok(materialIds.every(id => candidateIds.has(id)), 'Material de OBJ-03 sin candidato');
 assert.ok(candidates.every(row => Object.values(row.sprites).every(files => Object.values(files || {}).filter(file => file.bytes > 0).length === 4)));
@@ -364,8 +400,8 @@ const botany = stage06.collections.map(({id,name}) => ({
   name, ids:catalog.filter(row => row.id.startsWith(id+'-') && row.collection === name).map(row => row.id)
 }));
 assert.deepEqual(botany.map(group => group.ids.length), [12,12,12,12]);
-assert.equal(illustrated.size, 327);
-assert.equal(catalog.filter(row => illustrated.has(row.id)).length, 209);
+assert.equal(illustrated.size, 384);
+assert.equal(catalog.filter(row => illustrated.has(row.id)).length, 266);
 assert.ok(botany.flatMap(group => group.ids).every(id => illustrated.get(id)?.botany));
 const geology = stage07.collections.map(prefix => {
   const specimens = catalog.filter(row => row.id.startsWith(prefix + '-') && row.cabinet === 'Geología');
@@ -386,12 +422,26 @@ assert.ok(atlantes.every(id => maritimeFacts[id].nature === 'Ficción explícita
 assert.equal(stage08.sources.length,5);
 assert.ok(stage08.sources.flatMap(group => group.ids).every(id => illustrated.has(id) && maritimeFacts[id]));
 assert.ok(stage08.comparisons.flatMap(group => group.ids).every(id => illustrated.has(id)));
-const manifest = {schema:1, year:1842, botany, geology, geologyComparisons:stage07.comparisons,
+const history = stage09.collections.map(prefix => {
+  const specimens = catalog.filter(row => row.id.startsWith(prefix + '-') && row.cabinet === 'Historia');
+  assert.equal(specimens.length,12);
+  assert.ok(specimens.every(row => illustrated.get(row.id)?.history));
+  return {name:specimens[0].collection,ids:specimens.map(row => row.id)};
+});
+assert.equal(stage09.sources.length,5);
+assert.ok(stage09.sources.flatMap(group => group.ids).every(id => illustrated.get(id)?.history));
+assert.ok(stage09.comparisons.flatMap(group => group.ids).every(id => illustrated.has(id)));
+const manifest = {schema:1, year:1842, botany, history, historyComparisons:stage09.comparisons,
+  historicalSources:stage09.sources, geology, geologyComparisons:stage07.comparisons,
   oceanography, oceanographyComparisons:stage08.comparisons, maritimeSources:stage08.sources, groups:[...stage02.groups, ...stage03.groups], archive, cartography, paleontology,
   tradeRoutes:game.TRADE_ROUTES.slice(0, 3).map(({name,rewards}) => ({name,rewards})),
   barter:game.REGIONAL_BARTERS3400.map(({id,continent,material,quantity}) => ({id,continent,material,quantity})),
   materialIds, animalMaterialIds:stage03.animal, recipeExamples:stage03.recipes, rows};
 write('www/objetos-cientificos/manifiesto.js', 'globalThis.AtlasObjetosCientificos = '+JSON.stringify(manifest,null,2)+';\n');
+const auditHeader = ['ID','Nombre','Tipo','Colección','Compatibilidad con 1842','Evidencia o fecha de referencia','Fuente'];
+const auditRows = rows.map(row => [row.id,row.name,row.type,row.collection,row.chronology.status,row.chronology.evidence,row.chronology.source || '—']);
+write('docs/objetos-cientificos/auditoria-cronologica.tsv',
+  [auditHeader,...auditRows].map(cells => cells.map(value => String(value ?? '').replace(/[\t\r\n]+/g,' ')).join('\t')).join('\n') + '\n');
 write('docs/objetos-cientificos/catalogo-300.json', JSON.stringify({
   schema:1, source:'docs/gm06/coleccionables-referencia.json', pieces:[...base.pieces,...extra.map(row => ({
     ID:row.id, Gabinete:row.cabinet, 'Colección':row.collection, Pieza:row.name, Continente:row.continent,

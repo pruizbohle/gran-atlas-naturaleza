@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const {rows, groups, materialIds, recipeExamples, archive, cartography, paleontology, botany, geology, geologyComparisons, oceanography, oceanographyComparisons} = AtlasObjetosCientificos;
+  const {rows, groups, materialIds, recipeExamples, archive, cartography, paleontology, botany, geology, geologyComparisons, oceanography, oceanographyComparisons, history, historyComparisons} = AtlasObjetosCientificos;
   const {phases, reconstruction} = AtlasReconstruccionObjetos;
   const fossilGroups = {
     materials: {name:'Materiales y fósiles menores', ids:[...paleontology.materials,...paleontology.minors]},
@@ -53,6 +53,9 @@
   options(get('botany-group'), botany.map(group => group.name), 'Plancha general · 48 piezas');
   options(get('geology-group'), [...geology,...geologyComparisons].map(group => group.name), 'Plancha general · 60 piezas');
   options(get('oceanography-group'), [...oceanography,...oceanographyComparisons].map(group => group.name), 'Plancha general · 60 piezas');
+  options(get('history-group'), [...history,...historyComparisons].map(group => group.name), 'Plancha general · 72 piezas');
+  options(get('history-period'), [...new Set(rows.filter(row => row.history).map(row => row.history.period))], 'Todos los periodos');
+  options(get('history-date'), [...new Set(rows.map(row => row.chronology.status))].sort(collator.compare), 'Todas las fechas');
   for (const mount of paleontology.mounts) get('mount').add(new Option(mount.name, mount.id));
   phases.forEach((phase, index) => get('phase').add(new Option(phase.name, String(index))));
   get('phase').value = '3';
@@ -205,6 +208,22 @@
       facts.append(node('dt','Fuente documental'),source);
       card.append(facts);
     }
+    if (row.history) {
+      const record = row.history;
+      const facts = node('dl', '', 'material-facts');
+      for (const [label,value] of [['Identificación histórica',record.identity],['Cultura',record.culture],['Procedencia',row.provenance],
+        ['Material',record.material],['Periodo',record.period],['Fecha de referencia',record.date],['Rasgos',record.diagnostic],
+        ['Contexto cultural',record.culturalContext],['Compatibilidad con 1842',record.compatibility],
+        ['Tratamiento',record.treatment],['Observaciones documentales',record.note]]) {
+        facts.append(node('dt',label),node('dd',value));
+      }
+      const source = node('a','Referencia de colección');
+      source.href = record.source;
+      const cell = node('dd');
+      cell.append(source);
+      facts.append(node('dt','Fuente documental'),cell);
+      card.append(facts);
+    }
     if (row.species) {
       const facts = node('dl', '', 'material-facts');
       for (const [label, value] of [['Especies potenciales', row.species.join(', ')], ['Continentes', row.continent],
@@ -340,6 +359,12 @@
         const selection = get('oceanography-group').value;
         return selection ? [...oceanography,...oceanographyComparisons].find(group => group.name === selection)?.ids.includes(row.id) : row.oceanography;
       }
+      case 'history': {
+        const selection = get('history-group').value;
+        if (get('history-period').value && row.history?.period !== get('history-period').value) return false;
+        if (get('history-date').value && row.chronology.status !== get('history-date').value) return false;
+        return selection ? [...history,...historyComparisons].find(group => group.name === selection)?.ids.includes(row.id) : row.history;
+      }
       case 'groups': return groups.find(group => group.name === get('group').value).ids.includes(row.id);
       case 'paleontology': return fossilGroups[get('paleo-section').value]?.ids.includes(row.id);
       case 'archive': return archive.find(group => group.name === archiveSelect.value)?.ids.includes(row.id);
@@ -431,7 +456,7 @@
       const grid = node('div', '', 'botany-grid');
       for (const row of entries) {
         const card = node('article', '', cabinet + '-card');
-        card.append(node('h3', row.name), node('small', [row.id,row.rarity,row.oceanography?.nature].filter(Boolean).join(' · ')));
+        card.append(node('h3', row.name), node('small', [row.id,row.rarity,row.oceanography?.nature,row.history?.compatibility].filter(Boolean).join(' · ')));
         const samples = node('div', '', 'botany-samples');
         for (const [key, title] of labels) samples.append(figure(row,key,title));
         card.append(samples);
@@ -454,7 +479,9 @@
     get('geology-control').hidden = !inGeology;
     const inOceanography = view === 'oceanography';
     get('oceanography-control').hidden = !inOceanography;
-    get('botany-variant-control').hidden = !inBotany && !inGeology && !inOceanography;
+    const inHistory = view === 'history';
+    for (const id of ['history-control','history-period-control','history-date-control']) get(id).hidden = !inHistory;
+    get('botany-variant-control').hidden = !inBotany && !inGeology && !inOceanography && !inHistory;
     const inAssembly = inArchive && archiveSelect.value === 'assembly';
     get('archive-control').hidden = !inArchive;
     get('assembly-control').hidden = !inAssembly;
@@ -494,7 +521,13 @@
       gallery.append(compare);
       return;
     }
-    get('status').textContent = selected.length + ' resultados' + (['compare','groups','archive','paleontology','botany','geology','oceanography'].includes(view) ? '' : ' · Simulación con datos de prueba');
+    get('status').textContent = selected.length + ' resultados' + (['compare','groups','archive','paleontology','botany','geology','oceanography','history'].includes(view) ? '' : ' · Simulación con datos de prueba');
+    if (inHistory) {
+      navigation(0, 0);
+      const selectedComparison = historyComparisons.find(group => group.name === get('history-group').value);
+      renderCabinet(selected, selectedComparison ? [selectedComparison] : history, view);
+      return;
+    }
     if (inOceanography) {
       navigation(0, 0);
       const selectedComparison = oceanographyComparisons.find(group => group.name === get('oceanography-group').value);
@@ -541,7 +574,7 @@
   }
 
   get('search').addEventListener('input', resetPage);
-  for (const key of ['view','group','botany-group','geology-group','oceanography-group','paleo-section','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
+  for (const key of ['view','group','botany-group','geology-group','oceanography-group','history-group','history-period','history-date','paleo-section','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
   for (const key of ['scale','ground','halo','stock','assembly','botany-variant','mount','phase','living']) get(key).addEventListener('change', render);
   function resetPage() {
     page = 0;

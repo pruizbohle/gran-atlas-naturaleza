@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const {rows, materialIds, animalMaterialIds, paleontology, tradeRoutes, barter, botany, geology, geologyComparisons, oceanography, oceanographyComparisons, maritimeSources} = AtlasObjetosCientificos;
+  const {rows, materialIds, animalMaterialIds, paleontology, tradeRoutes, barter, botany, geology, geologyComparisons, oceanography, oceanographyComparisons, maritimeSources, history, historyComparisons, historicalSources} = AtlasObjetosCientificos;
   const {phases, reconstruction} = AtlasReconstruccionObjetos;
   const byId = new Map(rows.map(row => [row.id, row]));
   const get = id => document.getElementById(id);
@@ -28,9 +28,12 @@
 
   const rarities = ['Común','Poco común','Raro','Muy raro'];
   const discoveries = new Set();
-  const exhibitCabinets = {'Botánica':botany, 'Geología':geology, 'Oceanografía':oceanography};
+  const exhibitCabinets = {'Botánica':botany, 'Geología':geology, 'Oceanografía':oceanography, 'Historia':history};
   const atlantis = oceanography.find(group => group.name === 'Secretos de Atlántida').ids.map(id => byId.get(id));
-  const comparisons = [...geologyComparisons,...oceanographyComparisons];
+  const comparisons = [...geologyComparisons,...oceanographyComparisons,...historyComparisons];
+  const historical = collectible.filter(row => row.history);
+  const historicalPeriods = [...new Map(historical.slice().sort((a,b) => (a.history.year ?? Infinity) - (b.history.year ?? Infinity))
+    .map(row => [row.history.period,row.history.period])).values()];
   const narrative = [
     'El expediente permanece cerrado. Cinco huecos esperan las piezas de la historia.',
     'El fragmento revela un trazado de anillos cortado por canales.',
@@ -59,7 +62,8 @@
     group:'all', museum:'Fósiles', mount:paleontology.mounts[0].id, phase:'3', form:'skeleton',
     cabinet:'', collection:'', progress:'50', discoveryRarity:'Poco común', approval:'', origin:'',
     exhibitCabinet:'Botánica', exhibitCollection:botany[0].name, exhibitFormat:'album', exhibitProgress:'100',
-    maritimeSource:maritimeSources[0].id, atlantisCount:'0',
+    maritimeSource:maritimeSources[0].id, atlantisCount:'0', historicalSource:historicalSources[0].id,
+    historicalContinent:'', historicalCulture:'', historicalPeriod:'', historicalType:'',
     instrument:'binoculars', hat:'field_hat', necklace:'amulet', bag:'sturdy_pack'
   };
   const perPage = 24;
@@ -130,7 +134,7 @@
     const stage = node('div', '', 'stage');
     const source = row.sprites.inventario?.[pixels];
     if (!visibility) {
-      if ((row.botany || row.geology || row.oceanography) && source) {
+      if ((row.botany || row.geology || row.oceanography || row.history) && source) {
         const silhouette = node('img');
         silhouette.src = source.src;
         silhouette.alt = '';
@@ -162,6 +166,7 @@
     tile.append(figure(row, visible), node('h3', row.name),
       node('small', summary || row.rarity || (row.tier ? 'Tier ' + row.tier : row.type)));
     if (!visible && !row.sprites.inventario) tile.append(node('small', 'Ilustración pendiente'));
+    if (row.history) tile.append(node('small',row.history.compatibility,'history-status'));
     tile.append(button('Ficha', () => detail(row,visible)));
     return tile;
   }
@@ -179,7 +184,7 @@
     const facts = node('dl');
     const fields = [['Categoría',row.type],['Gabinete',row.cabinet],['Colección',row.collection],
       ['Rareza',row.rarity],['Procedencia',row.provenance || row.continent],['Descripción',row.description],
-      ['Obtención sugerida',row.acquisition],['Uso sugerido',row.uses],['Contexto',row.context],
+      ['Obtención sugerida',row.history ? 'Registro, reproducción o intercambio de gabinete autorizado.' : row.acquisition],['Uso sugerido',row.uses],['Contexto',row.context],
       ['Identificación u origen',row.botany?.identity],['Caracteres diagnósticos',row.botany?.characteristics],
       ['Escala real',row.botany?.scale],['Puntos de colección',row.points],
       ['Clasificación',row.geology?.classification],['Composición',row.geology?.composition],['Hábito o estructura',row.geology?.structure],
@@ -188,13 +193,16 @@
       ['Clasificación marítima',row.oceanography?.classification],['Material',row.oceanography?.material],
       [row.oceanography?.nature === 'Ficción explícita' ? 'Rasgo de diseño' : 'Rasgo diagnóstico',row.oceanography?.diagnostic],
       ['Hábitat',row.oceanography?.habitat],['Marco histórico',row.oceanography?.history],['Observación de la lámina',row.oceanography?.plate],
-      ['Estado artístico',row.artState],['Observaciones',row.observations]];
+      ['Identificación histórica',row.history?.identity],['Cultura',row.history?.culture],['Periodo',row.history?.period],
+      ['Fecha de referencia',row.history?.date],['Material histórico',row.history?.material],['Rasgos',row.history?.diagnostic],
+      ['Contexto cultural',row.history?.culturalContext],['Compatibilidad con 1842',row.history?.compatibility],
+      ['Tratamiento',row.history?.treatment],['Observaciones documentales',row.history?.note],['Estado artístico',row.artState],['Observaciones',row.observations]];
     for (const [label, value] of fields) {
       if (value) facts.append(node('dt',label),node('dd',value));
     }
     const discoverable = row.type === 'Coleccionable propuesto' && state.section === 'album';
     const showSample = visible && (!discoverable || discovered(row));
-    body.replaceChildren(h,figure(row,showSample,'',row.botany || row.geology || row.oceanography ? 256 : 128),facts);
+    body.replaceChildren(h,figure(row,showSample,'',row.botany || row.geology || row.oceanography || row.history ? 256 : 128),facts);
     if (row.geology) {
       const source = node('a','Fuente mineralógica o geológica');
       source.href = row.geology.source;
@@ -208,13 +216,18 @@
         body.append(link);
       } else body.append(node('p','Fuente: ' + source));
     }
+    if (row.history) {
+      const link = node('a','Referencia de colección');
+      link.href = row.history.source;
+      body.append(link);
+    }
     if (showSample) {
       const related = [...new Set(comparisons.filter(group => group.ids.includes(row.id))
         .flatMap(group => group.ids))].filter(id => id !== row.id).map(id => byId.get(id));
       if (related.length) {
         body.append(node('h3','Comparar con muestras similares'),grid(related, other =>
           card(other,!discoverable || other.type !== 'Coleccionable propuesto' || discovered(other),
-            other.geology?.classification || other.oceanography?.classification || other.type)));
+            other.geology?.classification || other.oceanography?.classification || other.history?.culture || other.type)));
       }
     }
     if (!dialog.open) dialog.showModal();
@@ -344,11 +357,15 @@
   }
 
   function discoveryCandidate() {
-    return collectible.find(row => row.cabinet === state.cabinet && row.rarity === state.discoveryRarity &&
+    return collectible.find(row => row.cabinet === state.cabinet && !after1842(row) && row.rarity === state.discoveryRarity &&
       (!state.collection || row.collection === state.collection) && matches(row) && !discovered(row));
   }
 
-  function demonstrateDiscovery(row = discoveryCandidate(), fromMaritime = false) {
+  function after1842(row) {
+    return row.history?.compatibility === 'Posterior a 1842';
+  }
+
+  function demonstrateDiscovery(row = discoveryCandidate(), openAlbum = false) {
     if (!row || discovered(row)) return;
     discoveries.add(row.id);
     renderContent();
@@ -362,9 +379,9 @@
     panel.append(node('p','Descubrimiento de prueba','discovery-kicker'),title,rarity,picture,
       node('p',row.provenance || row.continent),progressLine(row.collection,members),
       node('p',score(members)));
-    if (fromMaritime) {
+    if (openAlbum) {
       panel.append(button('Ver en el álbum', () => {
-        state.cabinet = 'Oceanografía';
+        state.cabinet = row.cabinet;
         state.collection = row.collection;
         dialog.close();
         get('sections').querySelector('[data-page="album"]').click();
@@ -381,6 +398,7 @@
     const summary = node('div','','progress-list');
     for (const cabinet of cabinets) summary.append(progressLine(cabinet,collectible.filter(row => row.cabinet === cabinet)));
     gallery.append(summary);
+    if (state.cabinet === 'Historia') gallery.append(node('p','El progreso de prueba incluye piezas posteriores a 1842 como referencias de gabinete.'));
     if (Object.hasOwn(exhibitCabinets,state.cabinet)) {
       const membersInCabinet = collectible.filter(row => row.cabinet === state.cabinet);
       const summary = node('div','','progress-list botanical-summary cabinet-summary');
@@ -420,19 +438,45 @@
     gallery.append(section);
   }
 
-  function maritime() {
-    const source = maritimeSources.find(entry => entry.id === state.maritimeSource);
+  function discoverySources(sources, key) {
+    const source = sources.find(entry => entry.id === state[key]);
     const entries = source.ids.map(id => byId.get(id)).filter(matches);
     status.textContent = entries.length + ' asociaciones editoriales';
     gallery.append(node('h3',source.name),node('p',source.description));
     gallery.append(grid(entries, row => {
       const added = discovered(row);
-      const tile = card(row,added,[row.rarity,row.oceanography.nature].join(' · '));
-      const action = button(added ? 'En el álbum' : 'Simular descubrimiento', () => demonstrateDiscovery(row,true));
-      action.disabled = added;
+      const late = after1842(row);
+      const tile = card(row,added,[row.rarity,row.oceanography?.nature].filter(Boolean).join(' · '));
+      const action = button(late ? 'Referencia futura' : added ? 'En el álbum' : 'Simular descubrimiento',
+        () => demonstrateDiscovery(row,true));
+      action.disabled = added || late;
       tile.append(action);
       return tile;
     }));
+  }
+
+  function civilizations() {
+    const timeline = node('nav','','history-timeline');
+    timeline.setAttribute('aria-label','Línea temporal histórica');
+    for (const period of ['',...historicalPeriods]) {
+      const mark = button(period || 'Todos los periodos', () => {
+        state.historicalPeriod = period;
+        state.page = 0;
+        renderContent();
+        gallery.querySelector('.history-timeline [aria-pressed="true"]')?.focus();
+      });
+      mark.setAttribute('aria-pressed',String(state.historicalPeriod === period));
+      timeline.append(mark);
+    }
+    gallery.append(timeline);
+    const entries = historical.filter(row => matches(row) &&
+      (!state.historicalContinent || row.continent === state.historicalContinent) &&
+      (!state.historicalCulture || row.history.culture === state.historicalCulture) &&
+      (!state.historicalType || row.collection === state.historicalType) &&
+      (!state.historicalPeriod || row.history.period === state.historicalPeriod))
+      .sort((a,b) => (a.history.year ?? Infinity) - (b.history.year ?? Infinity) || a.name.localeCompare(b.name,'es'));
+    status.textContent = entries.length + ' registros históricos';
+    paginate(entries,page => gallery.append(grid(page,row => card(row,true,row.history.date + ' · ' + row.history.culture))));
   }
 
   function atlantisView() {
@@ -573,7 +617,8 @@
     status.textContent = '';
     gallery.replaceChildren();
     navigation.replaceChildren();
-    ({inventory,equipment:team,materials,trade:commerce,album,exhibition,maritime,atlantis:atlantisView,museum:museumView,register})[state.section]();
+    ({inventory,equipment:team,materials,trade:commerce,album,exhibition,maritime:() => discoverySources(maritimeSources,'maritimeSource'),
+      historical:() => discoverySources(historicalSources,'historicalSource'),civilizations,atlantis:atlantisView,museum:museumView,register})[state.section]();
   }
 
   function render() {
@@ -613,6 +658,15 @@
     }
     if (state.section === 'maritime') {
       select('maritimeSource','Fuente propuesta',maritimeSources.map(source => [source.id,source.name]));
+      select('progress','Progreso de prueba',progressOptions);
+    }
+    if (state.section === 'civilizations') {
+      select('historicalContinent','Continente',[['','Todos'],...unique(historical.map(row => row.continent)).map(value => [value,value])]);
+      select('historicalCulture','Cultura',[['','Todas'],...unique(historical.map(row => row.history.culture)).map(value => [value,value])]);
+      select('historicalType','Tipo de objeto',[['','Todos'],...history.map(group => [group.name,group.name])]);
+    }
+    if (state.section === 'historical') {
+      select('historicalSource','Fuente propuesta',historicalSources.map(source => [source.id,source.name]));
       select('progress','Progreso de prueba',progressOptions);
     }
     if (state.section === 'atlantis') {

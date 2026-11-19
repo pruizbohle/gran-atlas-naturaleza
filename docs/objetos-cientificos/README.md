@@ -92,7 +92,7 @@ Se verificaron los 240 archivos con sus dimensiones y canal alfa. En Chromium m�
 | OBJ-06 | [Gabinete de Botánica](OBJ-06.md) |
 | OBJ-07 | [Gabinete de Geología](OBJ-07.md) |
 | OBJ-08 | [Gabinete de Oceanografía](OBJ-08.md) |
-| OBJ-09 | Historia |
+| OBJ-09 | [Gabinete de Historia](OBJ-09.md) |
 | OBJ-10 | Historia natural y exploración |
 | OBJ-11 | Auditoría global |
 | OBJ-12 | Integración posterior a la aprobación artística de los animales |
