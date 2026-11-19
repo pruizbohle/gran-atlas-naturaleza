@@ -5,6 +5,8 @@ const path = require('node:path');
 const { harness } = require('../tests/helpers/live-game.cjs');
 const { ungulateFamily } = require('./ungulate-families.cjs');
 const { terrestrialMammal, aquaticMammal } = require('./terrestrial-mammal-families.cjs');
+const birdPlan = require('../docs/cientifica-v460/inventario-aves.json');
+const comparisonSets = require('./raptor-comparisons.cjs');
 
 const out = path.resolve('www/naturalist-art');
 const artDir = path.join(out, 'plates');
@@ -23,7 +25,8 @@ const priority = [
   'myrmecobius_fasciatus', 'spilocuscus_maculatus', 'dendrolagus_lumholtzi', 'dendrolagus_matschiei'
 ].map(suffix => 'oc_esp_' + suffix);
 priority.splice(5, 0, 'gm06_dromiciops_gliroides');
-priority.unshift('mar_esp_megaptera_novaeangliae', 'sa_esp_inia_geoffrensis', 'af_gorila_montana');
+priority.unshift('aguila_real', 'mar_esp_megaptera_novaeangliae', 'sa_esp_inia_geoffrensis', 'af_gorila_montana');
+const raptors = new Map(birdPlan.editions['4.7.0'].inventory.map(row => [row.id, row]));
 
 const aquaticGroups = {
   Cetacea: 'Cetáceos',
@@ -127,6 +130,11 @@ const primateFamilyByGenus = new Map(Object.entries(primateGenera).flatMap(([fam
 
 function classify(id, sp) {
   const taxonomy = audit.taxonomyInfo(id);
+  const raptor = raptors.get(id);
+  if (raptor) {
+    if (taxonomy.className !== 'Aves' || raptor.latin !== sp.latin) throw Error('Rapaz fuera del inventario: ' + id);
+    return { family: raptor.family, order: raptor.order, group: 'Rapaces' };
+  }
   const genus = sp.latin.split(' ')[0];
   const aquatic = aquaticMammal(sp.latin);
   if (aquatic) return { family: aquatic.family, group: aquaticGroups[aquatic.group] };
@@ -181,6 +189,7 @@ const species = catalogEntries.flatMap(([id, sp]) => {
   }
   return [{
     id, name: sp.name, latin: sp.latin, rarity: sp.rare || null, group, family,
+    ...(group === 'Rapaces' ? { order: classification.order } : {}),
     dimorphism: Boolean(audit.SEXUAL_DIMORPHISM[id]),
     habitats: [...sp.habitats],
     regions: audit.REGIONS.filter(region => region.species.includes(id))
@@ -201,6 +210,13 @@ for (const file of classical) {
 }
 const records = species.flatMap(sp => sp.records);
 const mammals = catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Mammalia');
+const raptorsByLatin = new Map(species.filter(sp => sp.group === 'Rapaces').map(sp => [sp.latin, sp.id]));
+const raptorComparisons = Object.fromEntries(Object.entries(comparisonSets).map(([key, set]) =>
+  [key, { label: set.label, birds: set.birds.map(([latin, trait]) => {
+    const id = raptorsByLatin.get(latin);
+    if (!id) throw Error('Rapaz de comparación fuera del inventario: ' + latin);
+    return { id, trait };
+  }) }]));
 const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,
   total: catalogEntries.length,
@@ -213,9 +229,11 @@ const migrationProgress = {
   target: records.filter(record => !record.sharedWith).length,
   ungulates: species.filter(sp => sp.group === 'Ungulados').length,
   mammals: mammals.length,
-  mammalsMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Mammalia').length
+  mammalsMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Mammalia').length,
+  birds: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Aves').length,
+  birdsMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Aves').length
 };
-const mixedFieldSprites = ['aguila_real', 'buho_real', 'af_avestruz'].map(id => {
+const mixedFieldSprites = ['martin_pescador', 'garza_real', 'af_avestruz'].map(id => {
   const sp = audit.SPECIES[id];
   if (classify(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
   return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };
@@ -223,6 +241,7 @@ const mixedFieldSprites = ['aguila_real', 'buho_real', 'af_avestruz'].map(id => 
 fs.writeFileSync(path.join(out, 'catalog.js'),
   'const catalog = ' + JSON.stringify(species, null, 2) + ';\n' +
   'const mixedFieldSprites = ' + JSON.stringify(mixedFieldSprites, null, 2) + ';\n' +
+  'const raptorComparisons = ' + JSON.stringify(raptorComparisons, null, 2) + ';\n' +
   'const migrationProgress = ' + JSON.stringify(migrationProgress) + ';\n');
 const version = require('../package.json').version;
 const rows = species.map(sp => [

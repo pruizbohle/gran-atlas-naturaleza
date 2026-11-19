@@ -48,7 +48,7 @@ test('catalog is read from the production runtime and only known records can be 
     Primates: 49, Ungulados: 122, Roedores: 41, Lagomorfos: 15, Murciélagos: 7,
     Eulipotiflos: 10, Armadillos: 6, 'Perezosos y osos hormigueros': 6, Pangolines: 6,
     Elefantes: 3, Damanes: 1, Tubulidentados: 1, Afrosorícidos: 1,
-    Cetáceos: 28, Pinnípedos: 20, Sirenios: 2, 'Nutria marina': 1
+    Cetáceos: 28, Pinnípedos: 20, Sirenios: 2, 'Nutria marina': 1, Rapaces: 49
   });
 });
 
@@ -154,7 +154,7 @@ test('terrestrial Carnivora covers the nine present families with only the confi
   assert.ok(records.some(sp => sp.id === 'sa_esp_lontra_felina'));
   assert.ok(!records.some(sp => sp.latin.startsWith('Enhydra ')));
   assert.equal(catalog.migrationProgress.total, 997);
-  assert.equal(catalog.migrationProgress.target, 814);
+  assert.equal(catalog.migrationProgress.target, 900);
 });
 
 test('biome library and transparent editions use module-specific layers and existing category routes', () => {
@@ -193,7 +193,7 @@ test('lab preserves the originals and reserves comparison downloads for the revi
   const archived = new Set(catalog.flatMap(sp => sp.records.flatMap(record => record.previous ? [record.previous.src] : [])));
   assert.equal(archived.size, 341);
   assert.equal(plates.size, migrationProgress.plates);
-  assert.equal(migrationProgress.migrated, 461);
+  assert.equal(migrationProgress.migrated, 510);
   assert.equal(migrationProgress.classical, migrationProgress.target);
   assert.equal(migrationProgress.plates, migrationProgress.target);
   assert.equal(migrationProgress.cutouts, Object.keys(cutouts).length);
@@ -276,11 +276,15 @@ test('the mammal audit completes each configured route and keeps Inia in freshwa
     /legendary[\s\S]*--atlas\.webp/);
 });
 
-test('the bird preparation assigns all catalogue IDs once and queues Centinela for the raptor edition', () => {
+test('raptor routes match the scoped bird inventory and keep Centinela and the condor editions distinct', () => {
   const game = harness({}, null, { gameSource: source }).window.__atlasTest;
   const plan = require('../docs/cientifica-v460/inventario-aves.json');
   const expected = Object.entries(game.SPECIES).filter(([id]) => game.taxonomyInfo(id).className === 'Aves');
   const assigned = Object.values(plan.editions).flatMap(lot => lot.inventory);
+  const raptors = new Map(plan.editions['4.7.0'].inventory.map(sp => [sp.id, sp]));
+  const { routes, cutouts } = globalThis.AtlasNaturalistAssets;
+  const cat = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') +
+    '\n({catalog,raptorComparisons});');
   assert.deepEqual(assigned.map(sp => sp.id).sort(), expected.map(([id]) => id).sort());
   assert.equal(plan.summary.estimatedPlates, 496);
   for (const sp of assigned) {
@@ -288,11 +292,32 @@ test('the bird preparation assigns all catalogue IDs once and queues Centinela f
     assert.equal(sp.dimorphism, Boolean(game.SEXUAL_DIMORPHISM[sp.id]));
     assert.deepEqual(sp.pigmentation, [...game.configuredSpecials(game.SPECIES[sp.id])]
       .filter(label => ['Albino', 'Melánico'].includes(label)));
-    assert.ok(!globalThis.AtlasNaturalistAssets.routes[sp.id]);
+    if (!raptors.has(sp.id)) {
+      assert.equal(routes[sp.id], undefined, sp.id);
+      continue;
+    }
+    const entry = cat.catalog.find(item => item.id === sp.id);
+    assert.equal(entry.order, sp.order);
+    assert.equal(entry.family, sp.family);
+    const keys = ['normal', ...sp.pigmentation.map(label => label === 'Albino' ? 'albino' : 'melanico')];
+    if (sp.dimorphism) keys.push('male', 'female');
+    if (sp.legendary) keys.push('legendario');
+    assert.deepEqual(Object.keys(routes[sp.id]).sort(), keys.sort(), sp.id);
+    for (const file of Object.values(routes[sp.id])) assert.equal(cutouts[file], true, file);
   }
   const centinela = plan.editions['4.7.0'].inventory.find(sp => sp.id === 'aguila_real');
   assert.equal(centinela.legendary.id, 'centinela');
   assert.equal(centinela.legendaryFile, 'aguila_real--centinela.webp');
+  assert.equal(routes.aguila_real.legendario, centinela.legendaryFile);
+  assert.notDeepEqual(fs.readFileSync('www/naturalist-art/plates/' + routes.aguila_real.normal),
+    fs.readFileSync('www/naturalist-art/plates/' + routes.aguila_real.legendario));
+  const condor = routes.sa_esp_vultur_gryphus;
+  assert.equal(new Set([condor.normal, condor.male, condor.female]).size, 3);
+  assert.notDeepEqual(fs.readFileSync('www/naturalist-art/plates/' + condor.male),
+    fs.readFileSync('www/naturalist-art/plates/' + condor.female));
+  for (const set of Object.values(cat.raptorComparisons)) {
+    assert.ok(set.birds.length >= 2 && set.birds.every(bird => raptors.has(bird.id) && bird.trait));
+  }
 });
 
 test('Primates includes the fourteen zoological families, all configured variants and only Silverback', () => {

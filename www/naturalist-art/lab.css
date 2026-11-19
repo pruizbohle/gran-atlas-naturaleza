@@ -222,6 +222,8 @@ figcaption { padding: .4rem 0; }
   margin-inline: auto;
 }
 .comparison-styles figure { min-width: 0; margin: 0; }
+.raptor-comparison .plate { width: min(100%, var(--raptor-size)); margin-inline: auto; }
+.raptor-comparison figcaption strong { color: var(--ink); }
 .comparison-placeholder {
   align-self: center;
   justify-self: center;

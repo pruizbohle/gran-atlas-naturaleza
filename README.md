@@ -1,4 +1,8 @@
-# El Gran Atlas · Mamíferos acuáticos (V4.6.0)
+# El Gran Atlas · Rapaces diurnas y nocturnas (V4.7.0)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.7.0](docs/cientifica-v470/README.md) · [Preparación de V4.7.1](docs/cientifica-v470/plan-v471.md).
+
+## Serie 4 · Mamíferos acuáticos (V4.6.0)
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Cierre de Mammalia](docs/cientifica-v460/README.md) · [Plan de aves](docs/cientifica-v460/plan-aves.md).
 

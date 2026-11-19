@@ -1,5 +1,5 @@
 {
-  "version": "4.6.0",
+  "version": "4.7.0",
   "atlas": "simple",
   "cells": {
     "Europa": 10,
@@ -154,7 +154,7 @@
   },
   "androidDistribution": {
     "appId": "com.elgranatlas.naturaleza.beta314",
-    "versionCode": 40600,
+    "versionCode": 40700,
     "policy": "Permanent certificate and exact-candidate physical restoration required before Android publication"
   },
   "campamentoProfile": {
