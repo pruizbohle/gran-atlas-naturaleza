@@ -86,7 +86,7 @@ Se verificaron los 240 archivos con sus dimensiones y canal alfa. En Chromium m�
 | --- | --- |
 | OBJ-01 | Laboratorio y piloto |
 | OBJ-02 | [Equipamiento e instrumentos](OBJ-02.md) |
-| OBJ-03 | Materiales animales y de expedición |
+| OBJ-03 | [Materiales animales y de expedición](OBJ-03.md) |
 | OBJ-04 | Cartografía y mercancías regionales |
 | OBJ-05 | Fósiles y Museo |
 | OBJ-06 | Botánica |

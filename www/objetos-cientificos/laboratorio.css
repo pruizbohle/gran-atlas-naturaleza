@@ -71,3 +71,37 @@ progress { accent-color: #4c755a; margin: .4rem 0 .8rem; }
 }
 .family-card h3 { font-size: 1.1rem; }
 .family-card .stage { padding-inline: 0; }
+.stock-card { position: relative; display: grid; align-content: start; gap: .35rem; }
+.stock-card .stage { margin-top: 1.35rem; }
+.stock-count {
+  position: absolute;
+  top: .55rem;
+  right: .65rem;
+  padding: .1rem .45rem;
+  color: var(--muted);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: .3rem;
+  font: 600 .8rem/1.25 system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.recipe-cards { display: grid; gap: 1rem; }
+.recipe-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(8rem, 1fr) minmax(0, 1fr);
+  gap: .8rem;
+  margin-top: .7rem;
+}
+.recipe-materials { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); gap: .6rem; }
+.recipe-piece, .recipe-result { display: flex; flex-direction: column; gap: .2rem; min-width: 0; }
+.recipe-piece strong, .recipe-result strong { font-size: .88rem; }
+.recipe-operation { display: grid; align-content: center; text-align: center; gap: .25rem; }
+.recipe-arrow { font-size: 1.75rem; color: var(--muted); }
+.recipe-missing { color: #854226; font-weight: 700; }
+.material-facts { display: grid; grid-template-columns: minmax(5rem, 1fr) minmax(0, 2fr); gap: .3rem .8rem; font-size: .88rem; }
+.material-facts dt { font-weight: 650; }
+.material-facts dd { margin: 0; }
+@media (max-width: 650px) {
+  .recipe-flow { grid-template-columns: minmax(0, 1fr); }
+  .recipe-arrow { transform: rotate(90deg); }
+}

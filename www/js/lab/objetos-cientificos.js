@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const {rows, groups} = AtlasObjetosCientificos;
+  const {rows, groups, materialIds, recipeExamples} = AtlasObjetosCientificos;
   const byId = new Map(rows.map(row => [row.id, row]));
   const get = id => document.getElementById(id);
   const gallery = get('gallery');
@@ -15,6 +15,8 @@
   const filters = ['family', 'cabinet', 'collection', 'rarity', 'tier', 'stage', 'approval'];
   const collator = new Intl.Collator('es');
   const pageSize = 12;
+  const stockAmounts = [1, 5, 25, 100, 500, 1000];
+  const integer = new Intl.NumberFormat('es-CL');
   let page = 0;
   let focusId = null;
   let reviews = {};
@@ -42,6 +44,10 @@
   }
 
   options(get('group'), groups.map(group => group.name));
+  options(get('stock'), stockAmounts.map(quantity => integer.format(quantity)), 'Cantidades variadas');
+  const recipeSelect = get('recipe-example');
+  recipeSelect.add(new Option('Todas las recetas', ''));
+  for (const id of recipeExamples) recipeSelect.add(new Option(byId.get(id).name, id));
 
   function approval(row) {
     return reviews[row.id]?.approval || row.approval;
@@ -143,7 +149,16 @@
     card.append(node('h2', row.name), node('small', metadata(row), 'metadata'));
     const columns = node('div', '', 'columns actual');
     for (const [key, title] of headings) columns.append(figure(row, key, title));
-    card.append(columns, node('p', [row.description, row.provenance, row.context, row.observations].filter(Boolean).join(' · ')), review(row));
+    card.append(columns, node('p', [row.description, row.provenance, row.context, row.observations].filter(Boolean).join(' · ')));
+    if (row.species) {
+      const facts = node('dl', '', 'material-facts');
+      for (const [label, value] of [['Especies potenciales', row.species.join(', ')], ['Continentes', row.continent],
+        ['Material predominante', row.material], ['Obtención sugerida', row.acquisition], ['Posibles usos', row.uses]]) {
+        facts.append(node('dt', label), node('dd', value));
+      }
+      card.append(facts);
+    }
+    card.append(review(row));
     return card;
   }
 
@@ -170,26 +185,68 @@
       view === 'equipment' ? ({instrument:'Instrumento',hat:'Sombrero',necklace:'Colgante'}[row.slot] || row.family) :
       view === 'album' ? [row.rarity, discovered ? 'Descubierta' : 'Pendiente'].join(' · ') : row.collection || row.family;
     card.append(node('small', text));
-    if (view === 'workshop') {
-      const requirements = node('ul', '', 'requirements');
-      for (const [id, needed] of Object.entries(row.recipe)) {
-        const material = byId.get(id);
-        const owned = material ? quantity(material) : 0;
-        requirements.append(node('li', (material?.name || id) + ' · ' + owned + '/' + needed));
-      }
-      card.append(requirements);
-    }
     const link = node('button', 'Comparar');
     link.addEventListener('click', () => inspect(row));
     card.append(link);
     return card;
   }
 
+  function materialCard(row) {
+    const card = node('article', '', 'stock-card');
+    const label = get('stock').value || integer.format(stockAmounts[materialIds.indexOf(row.id) % stockAmounts.length]);
+    const count = node('span', '×' + label, 'stock-count');
+    count.setAttribute('aria-label', label + ' unidades disponibles');
+    card.append(count, figure(row, 'inventario'), node('h3', row.name));
+    const compare = node('button', 'Comparar');
+    compare.addEventListener('click', () => inspect(row));
+    card.append(compare);
+    return card;
+  }
+
+  function recipeCard(row) {
+    const article = node('article', '', 'recipe-card');
+    article.append(node('h2', row.name));
+    const flow = node('div', '', 'recipe-flow');
+    const components = node('section');
+    const list = node('ul', '', 'recipe-materials');
+    let shortages = 0;
+    for (const [id, required] of Object.entries(row.recipe)) {
+      const material = byId.get(id);
+      const owned = material ? quantity(material) : 0;
+      const missing = Math.max(0, required - owned);
+      shortages += missing;
+      const item = node('li', '', 'recipe-piece');
+      if (material) item.append(figure(material, material.sprites.inventario ? 'inventario' : 'original'));
+      item.append(node('strong', material?.name || id),
+        node('small', required + ' requeridas · ' + owned + ' disponibles'),
+        node('small', 'Faltan ' + missing, missing ? 'recipe-missing' : ''));
+      list.append(item);
+    }
+    components.append(node('h3', 'Materiales requeridos'), list);
+
+    const operation = node('div', '', 'recipe-operation');
+    const arrow = node('span', '→', 'recipe-arrow');
+    arrow.setAttribute('aria-hidden', 'true');
+    operation.append(arrow, node('strong', 'Fabricación simulada'),
+      node('small', shortages ? 'Faltan ' + shortages + ' unidades en total' : 'Materiales suficientes'), arrow.cloneNode(true));
+
+    const result = node('section', '', 'recipe-result');
+    result.append(node('h3', 'Objeto resultante'), figure(row, row.sprites.inventario ? 'inventario' : 'original'),
+      node('strong', row.name));
+    const compare = node('button', 'Comparar');
+    compare.addEventListener('click', () => inspect(row));
+    result.append(compare);
+    flow.append(components, operation, result);
+    article.append(flow);
+    return article;
+  }
+
   function matchesView(row, view) {
     switch (view) {
       case 'inventory': return row.type === 'Objeto productivo';
+      case 'materials': return materialIds.includes(row.id);
       case 'equipment': return row.type === 'Objeto productivo' && row.slot;
-      case 'workshop': return row.type === 'Objeto productivo' && row.recipe;
+      case 'workshop': return row.type === 'Objeto productivo' && row.recipe && (!get('recipe-example').value || get('recipe-example').value === row.id);
       case 'album': return row.type === 'Coleccionable propuesto';
       case 'museum': return row.type === 'Pieza del Museo';
       case 'groups': return groups.find(group => group.name === get('group').value).ids.includes(row.id);
@@ -277,10 +334,12 @@
     const single = view === 'compare' && get('layout').value === 'single';
     get('scope').disabled = view !== 'compare' || Boolean(get('stage').value);
     get('group-control').hidden = view !== 'groups';
+    get('stock-control').hidden = view !== 'materials';
+    get('recipe-control').hidden = view !== 'workshop';
     get('layout').disabled = view !== 'compare';
     const query = normalize(get('search').value.trim());
     const selected = sortRows(rows.filter(row => matchesView(row, view) &&
-      normalize([row.name,row.id,row.provenance].join(' ')).includes(query) &&
+      normalize([row.name,row.id,row.provenance,...(row.species || [])].join(' ')).includes(query) &&
       filters.every(key => !get(key).value || get(key).value === (key === 'approval' ? approval(row) : row[key]))));
     gallery.replaceChildren();
     gallery.style.setProperty('--size', size() + 'px');
@@ -302,16 +361,19 @@
     }
     page = Math.min(page, Math.max(0, count - 1));
     navigation(page, count);
-    const grid = node('div', '', view === 'compare' ? 'cards' : 'display-grid');
+    const grid = node('div', '', view === 'compare' ? 'cards' : view === 'workshop' ? 'recipe-cards' : 'display-grid');
     for (const row of selected.slice(page * step, (page + 1) * step)) {
-      grid.append(view === 'compare' ? comparison(row) : simulationCard(row, view));
+      if (view === 'compare') grid.append(comparison(row));
+      else if (view === 'materials') grid.append(materialCard(row));
+      else if (view === 'workshop') grid.append(recipeCard(row));
+      else grid.append(simulationCard(row, view));
     }
     gallery.append(grid);
   }
 
   get('search').addEventListener('input', resetPage);
-  for (const key of ['view','group','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
-  for (const key of ['scale','ground','halo']) get(key).addEventListener('change', render);
+  for (const key of ['view','group','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
+  for (const key of ['scale','ground','halo','stock']) get(key).addEventListener('change', render);
   function resetPage() {
     page = 0;
     focusId = null;

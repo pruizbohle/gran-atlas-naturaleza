@@ -1,0 +1,19 @@
+{
+  "sheets": [
+    {"file":"expedicion.png","columns":4,"ids":["map_fragment","river_pebble","polished_lens","brass_shard","old_ink","carved_wood","animal_trace","fossil_fragment"]},
+    {"file":"animal.png","columns":3,"ids":["owl_feather","antler_fragment","otter_whisker","boar_tusk","beaver_tail_scale","heron_feather"]},
+    {"file":"futuros.png","columns":4,"ids":["mat-pluma-tropical","mat-plumon","mat-muda-serpiente","mat-escudo-capara","mat-pelo-guarda","mat-puas","mat-cascara-huevo","mat-sepion"]}
+  ],
+  "expedition": ["pressed_flower","parchment_scrap","ancient_coin","map_fragment","river_pebble","polished_lens","brass_shard","old_ink","carved_wood","animal_trace","fossil_fragment"],
+  "animal": ["wolf_tooth","owl_feather","antler_fragment","otter_whisker","boar_tusk","beaver_tail_scale","heron_feather"],
+  "recipes": ["brass_compass","binoculars","scholar_hat","field_telescope","polar_coat","museum_medallion"],
+  "groups": [
+    {"name":"Materiales históricos","ids":["parchment_scrap","ancient_coin","brass_shard","old_ink","NUM-01"]},
+    {"name":"Materiales naturales","ids":["pressed_flower","river_pebble","carved_wood","BOT-01","GEM-09"]},
+    {"name":"Materiales animales","ids":["wolf_tooth","owl_feather","antler_fragment","otter_whisker","boar_tusk","beaver_tail_scale","heron_feather"]},
+    {"name":"Materiales ópticos","ids":["polished_lens","binoculars","field_telescope","GEM-12"]},
+    {"name":"Materiales cartográficos","ids":["map_fragment","parchment_scrap","world_map","MAP-09"]},
+    {"name":"Materiales paleontológicos","ids":["fossil_fragment","fossil_skull","animal_trace","fossil_track"]},
+    {"name":"Materiales animales futuros · muestras","ids":["mat-pluma-tropical","mat-plumon","mat-muda-serpiente","mat-escudo-capara","mat-pelo-guarda","mat-puas","mat-cascara-huevo","mat-sepion"]}
+  ]
+}

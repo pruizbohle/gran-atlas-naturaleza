@@ -18,11 +18,13 @@
 <main>
   <div class="controls">
     <label>Vista<select id="view">
-      <option value="compare">Comparación</option><option value="groups">Familias y evolución</option><option value="inventory">Inventario funcional</option>
+      <option value="compare">Comparación</option><option value="groups">Familias y evolución</option><option value="inventory">Inventario funcional</option><option value="materials">Materiales acumulables</option>
       <option value="equipment">Equipo del naturalista</option><option value="workshop">Taller de fabricación</option>
       <option value="album">Álbum de coleccionables</option><option value="museum">Gabinete museístico</option>
     </select></label>
     <label>Buscar<input type="search" id="search" placeholder="Nombre, ID o procedencia"></label>
+    <label id="stock-control" hidden>Existencias de prueba<select id="stock"></select></label>
+    <label id="recipe-control" hidden>Receta de ejemplo<select id="recipe-example"></select></label>
     <label id="group-control" hidden>Conjunto<select id="group"></select></label>
     <label>Mostrar<select id="scope"><option value="pilot">Tanda inicial</option><option value="all">Catálogo completo</option></select></label>
     <label>Familia<select id="family"></select></label>

@@ -1,4 +1,4 @@
-"""OBJ-01: pasar las tres planchas originales. OBJ-02: pasar --obj-02 y una plancha opcional."""
+"""OBJ-01: pasar las tres planchas originales. OBJ-02 y OBJ-03: pasar --obj-02 o --obj-03 y una plancha opcional."""
 import json
 from pathlib import Path
 import sys
@@ -67,14 +67,15 @@ def prepare(filename, columns, names, method, guides=None):
 
 
 def main(args):
-    if args and args[0] == '--obj-02':
+    if args and args[0] in ('--obj-02', '--obj-03'):
+        stage = args[0][2:]
         folder = Path(__file__).parent
-        plan = json.loads((folder / 'obj-02.json').read_text())
+        plan = json.loads((folder / f'{stage}.json').read_text())
         sheets = [sheet for sheet in plan['sheets'] if len(args) == 1 or sheet['file'] == args[1]]
         if not sheets or len(args) > 2:
             sys.exit(__doc__)
         for sheet in sheets:
-            prepare(folder / 'maestras-obj-02' / sheet['file'], sheet['columns'], sheet['ids'], 4, sheet.get('crop'))
+            prepare(folder / f'maestras-{stage}' / sheet['file'], sheet['columns'], sheet['ids'], 4, sheet.get('crop'))
     elif len(args) == 3:
         for filename, (columns, names) in zip(args, SHEETS):
             prepare(filename, columns, names.split(), 6)

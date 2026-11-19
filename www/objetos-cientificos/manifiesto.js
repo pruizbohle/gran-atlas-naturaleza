@@ -103,7 +103,107 @@ globalThis.AtlasObjetosCientificos = {
         "idea-valija-muestras",
         "idea-gabinete-portatil"
       ]
+    },
+    {
+      "name": "Materiales históricos",
+      "ids": [
+        "parchment_scrap",
+        "ancient_coin",
+        "brass_shard",
+        "old_ink",
+        "NUM-01"
+      ]
+    },
+    {
+      "name": "Materiales naturales",
+      "ids": [
+        "pressed_flower",
+        "river_pebble",
+        "carved_wood",
+        "BOT-01",
+        "GEM-09"
+      ]
+    },
+    {
+      "name": "Materiales animales",
+      "ids": [
+        "wolf_tooth",
+        "owl_feather",
+        "antler_fragment",
+        "otter_whisker",
+        "boar_tusk",
+        "beaver_tail_scale",
+        "heron_feather"
+      ]
+    },
+    {
+      "name": "Materiales ópticos",
+      "ids": [
+        "polished_lens",
+        "binoculars",
+        "field_telescope",
+        "GEM-12"
+      ]
+    },
+    {
+      "name": "Materiales cartográficos",
+      "ids": [
+        "map_fragment",
+        "parchment_scrap",
+        "world_map",
+        "MAP-09"
+      ]
+    },
+    {
+      "name": "Materiales paleontológicos",
+      "ids": [
+        "fossil_fragment",
+        "fossil_skull",
+        "animal_trace",
+        "fossil_track"
+      ]
+    },
+    {
+      "name": "Materiales animales futuros · muestras",
+      "ids": [
+        "mat-pluma-tropical",
+        "mat-plumon",
+        "mat-muda-serpiente",
+        "mat-escudo-capara",
+        "mat-pelo-guarda",
+        "mat-puas",
+        "mat-cascara-huevo",
+        "mat-sepion"
+      ]
     }
+  ],
+  "materialIds": [
+    "pressed_flower",
+    "parchment_scrap",
+    "ancient_coin",
+    "map_fragment",
+    "river_pebble",
+    "polished_lens",
+    "brass_shard",
+    "old_ink",
+    "carved_wood",
+    "animal_trace",
+    "fossil_fragment",
+    "wolf_tooth",
+    "owl_feather",
+    "antler_fragment",
+    "otter_whisker",
+    "boar_tusk",
+    "beaver_tail_scale",
+    "heron_feather"
+  ],
+  "recipeExamples": [
+    "brass_compass",
+    "binoculars",
+    "scholar_hat",
+    "field_telescope",
+    "polar_coat",
+    "museum_medallion"
   ],
   "rows": [
     {
@@ -733,20 +833,54 @@ globalThis.AtlasObjetosCientificos = {
         "renderer": "AtlasItemArt",
         "bytes": 568
       },
-      "observations": null,
+      "observations": "Fragmento de matriz estratificada con una impronta parcial; referencia para OBJ-05.",
       "id": "fossil_fragment",
       "name": "Fragmento fósil",
       "family": "Fósiles",
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_fragment/clasica-64.webp",
+            "bytes": 2326
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_fragment/clasica-128.webp",
+            "bytes": 5908
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_fragment/clasica-256.webp",
+            "bytes": 19580
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_fragment/clasica-512.webp",
+            "bytes": 62622
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/fossil_fragment/inventario-64.webp",
+            "bytes": 2466
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/fossil_fragment/inventario-128.webp",
+            "bytes": 6462
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/fossil_fragment/inventario-256.webp",
+            "bytes": 17014
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/fossil_fragment/inventario-512.webp",
+            "bytes": 45100
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1037,20 +1171,54 @@ globalThis.AtlasObjetosCientificos = {
         "renderer": "AtlasItemArt",
         "bytes": 681
       },
-      "observations": null,
+      "observations": "Vaciado claro de yeso de campo, con una pisada reciente marcada. La huella fósil queda como referencia para OBJ-05.",
       "id": "animal_trace",
       "name": "Muestra de huellas",
       "family": "Materiales animales",
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/animal_trace/clasica-64.webp",
+            "bytes": 2572
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/animal_trace/clasica-128.webp",
+            "bytes": 7342
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/animal_trace/clasica-256.webp",
+            "bytes": 23162
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/animal_trace/clasica-512.webp",
+            "bytes": 72062
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/animal_trace/inventario-64.webp",
+            "bytes": 2588
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/animal_trace/inventario-128.webp",
+            "bytes": 7846
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/animal_trace/inventario-256.webp",
+            "bytes": 19590
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/animal_trace/inventario-512.webp",
+            "bytes": 52314
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1195,20 +1363,54 @@ globalThis.AtlasObjetosCientificos = {
         "renderer": "AtlasItemArt",
         "bytes": 704
       },
-      "observations": null,
+      "observations": "Fragmento recortado con una costa incompleta, frente a la extensión de una carta identificada.",
       "id": "map_fragment",
       "name": "Fragmento de mapa",
       "family": "Cartografía",
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/map_fragment/clasica-64.webp",
+            "bytes": 2272
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/map_fragment/clasica-128.webp",
+            "bytes": 6216
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/map_fragment/clasica-256.webp",
+            "bytes": 20008
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/map_fragment/clasica-512.webp",
+            "bytes": 61006
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/map_fragment/inventario-64.webp",
+            "bytes": 2390
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/map_fragment/inventario-128.webp",
+            "bytes": 6414
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/map_fragment/inventario-256.webp",
+            "bytes": 17678
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/map_fragment/inventario-512.webp",
+            "bytes": 46624
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1555,13 +1757,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/river_pebble/clasica-64.webp",
+            "bytes": 1810
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/river_pebble/clasica-128.webp",
+            "bytes": 5040
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/river_pebble/clasica-256.webp",
+            "bytes": 16838
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/river_pebble/clasica-512.webp",
+            "bytes": 53918
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/river_pebble/inventario-64.webp",
+            "bytes": 1912
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/river_pebble/inventario-128.webp",
+            "bytes": 5282
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/river_pebble/inventario-256.webp",
+            "bytes": 14656
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/river_pebble/inventario-512.webp",
+            "bytes": 40062
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1585,13 +1821,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/heron_feather/clasica-64.webp",
+            "bytes": 1624
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/heron_feather/clasica-128.webp",
+            "bytes": 4206
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/heron_feather/clasica-256.webp",
+            "bytes": 11802
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/heron_feather/clasica-512.webp",
+            "bytes": 39312
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/heron_feather/inventario-64.webp",
+            "bytes": 1664
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/heron_feather/inventario-128.webp",
+            "bytes": 4346
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/heron_feather/inventario-256.webp",
+            "bytes": 11010
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/heron_feather/inventario-512.webp",
+            "bytes": 33768
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1608,20 +1878,54 @@ globalThis.AtlasObjetosCientificos = {
         "renderer": "AtlasItemArt",
         "bytes": 573
       },
-      "observations": null,
+      "observations": "Vidrio claro de borde biselado y perfil regular, frente a la fractura y opacidad de las piezas minerales.",
       "id": "polished_lens",
       "name": "Lente pulida",
       "family": "Instrumentos científicos",
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/polished_lens/clasica-64.webp",
+            "bytes": 2074
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/polished_lens/clasica-128.webp",
+            "bytes": 5146
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/polished_lens/clasica-256.webp",
+            "bytes": 14848
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/polished_lens/clasica-512.webp",
+            "bytes": 47520
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/polished_lens/inventario-64.webp",
+            "bytes": 2152
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/polished_lens/inventario-128.webp",
+            "bytes": 5500
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/polished_lens/inventario-256.webp",
+            "bytes": 15426
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/polished_lens/inventario-512.webp",
+            "bytes": 47346
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1645,13 +1949,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/brass_shard/clasica-64.webp",
+            "bytes": 2424
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/brass_shard/clasica-128.webp",
+            "bytes": 6234
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/brass_shard/clasica-256.webp",
+            "bytes": 19950
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/brass_shard/clasica-512.webp",
+            "bytes": 62370
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/brass_shard/inventario-64.webp",
+            "bytes": 2456
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/brass_shard/inventario-128.webp",
+            "bytes": 6514
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/brass_shard/inventario-256.webp",
+            "bytes": 17246
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/brass_shard/inventario-512.webp",
+            "bytes": 44792
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1675,13 +2013,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/old_ink/clasica-64.webp",
+            "bytes": 2206
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/old_ink/clasica-128.webp",
+            "bytes": 6232
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/old_ink/clasica-256.webp",
+            "bytes": 18940
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/old_ink/clasica-512.webp",
+            "bytes": 57626
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/old_ink/inventario-64.webp",
+            "bytes": 2436
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/old_ink/inventario-128.webp",
+            "bytes": 6604
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/old_ink/inventario-256.webp",
+            "bytes": 17026
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/old_ink/inventario-512.webp",
+            "bytes": 44346
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1705,13 +2077,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/carved_wood/clasica-64.webp",
+            "bytes": 2086
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/carved_wood/clasica-128.webp",
+            "bytes": 5588
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/carved_wood/clasica-256.webp",
+            "bytes": 18798
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/carved_wood/clasica-512.webp",
+            "bytes": 62720
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/carved_wood/inventario-64.webp",
+            "bytes": 2266
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/carved_wood/inventario-128.webp",
+            "bytes": 6086
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/carved_wood/inventario-256.webp",
+            "bytes": 16618
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/carved_wood/inventario-512.webp",
+            "bytes": 45272
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1799,13 +2205,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/owl_feather/clasica-64.webp",
+            "bytes": 2102
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/owl_feather/clasica-128.webp",
+            "bytes": 5482
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/owl_feather/clasica-256.webp",
+            "bytes": 16548
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/owl_feather/clasica-512.webp",
+            "bytes": 53786
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/owl_feather/inventario-64.webp",
+            "bytes": 2178
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/owl_feather/inventario-128.webp",
+            "bytes": 5878
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/owl_feather/inventario-256.webp",
+            "bytes": 15772
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/owl_feather/inventario-512.webp",
+            "bytes": 46154
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1829,13 +2269,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/antler_fragment/clasica-64.webp",
+            "bytes": 1846
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/antler_fragment/clasica-128.webp",
+            "bytes": 4288
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/antler_fragment/clasica-256.webp",
+            "bytes": 11648
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/antler_fragment/clasica-512.webp",
+            "bytes": 35976
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/antler_fragment/inventario-64.webp",
+            "bytes": 1822
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/antler_fragment/inventario-128.webp",
+            "bytes": 4452
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/antler_fragment/inventario-256.webp",
+            "bytes": 10890
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/antler_fragment/inventario-512.webp",
+            "bytes": 30754
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1852,20 +2326,54 @@ globalThis.AtlasObjetosCientificos = {
         "renderer": "AtlasItemArt",
         "bytes": 655
       },
-      "observations": null,
+      "observations": "Muestra seca individual sobre dos pestañas de conservación. Revisar el contraste del filamento a 24 px.",
       "id": "otter_whisker",
       "name": "Bigote de nutria",
       "family": "Materiales animales",
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/otter_whisker/clasica-64.webp",
+            "bytes": 1472
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/otter_whisker/clasica-128.webp",
+            "bytes": 3186
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/otter_whisker/clasica-256.webp",
+            "bytes": 8244
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/otter_whisker/clasica-512.webp",
+            "bytes": 25490
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/otter_whisker/inventario-64.webp",
+            "bytes": 1414
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/otter_whisker/inventario-128.webp",
+            "bytes": 3308
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/otter_whisker/inventario-256.webp",
+            "bytes": 8576
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/otter_whisker/inventario-512.webp",
+            "bytes": 25242
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1889,13 +2397,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/boar_tusk/clasica-64.webp",
+            "bytes": 1972
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/boar_tusk/clasica-128.webp",
+            "bytes": 5036
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/boar_tusk/clasica-256.webp",
+            "bytes": 13928
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/boar_tusk/clasica-512.webp",
+            "bytes": 46604
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/boar_tusk/inventario-64.webp",
+            "bytes": 1978
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/boar_tusk/inventario-128.webp",
+            "bytes": 5104
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/boar_tusk/inventario-256.webp",
+            "bytes": 13180
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/boar_tusk/inventario-512.webp",
+            "bytes": 36416
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1919,13 +2461,47 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-03",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/beaver_tail_scale/clasica-64.webp",
+            "bytes": 2132
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/beaver_tail_scale/clasica-128.webp",
+            "bytes": 5586
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/beaver_tail_scale/clasica-256.webp",
+            "bytes": 17482
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/beaver_tail_scale/clasica-512.webp",
+            "bytes": 55982
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/beaver_tail_scale/inventario-64.webp",
+            "bytes": 2284
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/beaver_tail_scale/inventario-128.webp",
+            "bytes": 6260
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/beaver_tail_scale/inventario-256.webp",
+            "bytes": 15808
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/beaver_tail_scale/inventario-512.webp",
+            "bytes": 42132
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -13846,6 +14422,1174 @@ globalThis.AtlasObjetosCientificos = {
       },
       "approval": "Pendiente",
       "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "América del Sur; América del Norte; África",
+      "provenance": null,
+      "acquisition": "Muda documentada o reproducción",
+      "description": null,
+      "material": "Queratina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Lámina piloto de una forma ancha, no diagnóstica de especie.",
+      "id": "mat-pluma-tropical",
+      "name": "Pluma de contorno tropical",
+      "family": "Plumas",
+      "species": [
+        "Guacamayo rojo",
+        "lora de nuca amarilla",
+        "turaco verde"
+      ],
+      "uses": "Comparación de pigmento y estructura",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-pluma-tropical/clasica-64.webp",
+            "bytes": 2250
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-pluma-tropical/clasica-128.webp",
+            "bytes": 6438
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-pluma-tropical/clasica-256.webp",
+            "bytes": 20970
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-pluma-tropical/clasica-512.webp",
+            "bytes": 65842
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-pluma-tropical/inventario-64.webp",
+            "bytes": 2376
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-pluma-tropical/inventario-128.webp",
+            "bytes": 6960
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-pluma-tropical/inventario-256.webp",
+            "bytes": 19700
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-pluma-tropical/inventario-512.webp",
+            "bytes": 55172
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; Asia; América del Norte",
+      "provenance": null,
+      "acquisition": "Ejemplar de gabinete conservado",
+      "description": null,
+      "material": "Queratina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Separar visualmente de una pluma rígida por la ausencia de un eje firme.",
+      "id": "mat-plumon",
+      "name": "Restos de plumón",
+      "family": "Plumas",
+      "species": [
+        "Ánsar común",
+        "cisne cantor",
+        "eider común"
+      ],
+      "uses": "Estudio de aislamiento",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-plumon/clasica-64.webp",
+            "bytes": 3618
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-plumon/clasica-128.webp",
+            "bytes": 10152
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-plumon/clasica-256.webp",
+            "bytes": 33288
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-plumon/clasica-512.webp",
+            "bytes": 109952
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-plumon/inventario-64.webp",
+            "bytes": 3610
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-plumon/inventario-128.webp",
+            "bytes": 11092
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-plumon/inventario-256.webp",
+            "bytes": 33724
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-plumon/inventario-512.webp",
+            "bytes": 103192
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; América del Norte",
+      "provenance": null,
+      "acquisition": "Muda abandonada documentada",
+      "description": null,
+      "material": "Queratina translúcida",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Preservar transparencia en pequeños intersticios de la lámina.",
+      "id": "mat-muda-serpiente",
+      "name": "Muda seca de serpiente",
+      "family": "Mudas",
+      "species": [
+        "Culebra de escalera",
+        "serpiente del maíz",
+        "culebra de collar"
+      ],
+      "uses": "Comparación de escamas y morfología",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-muda-serpiente/clasica-64.webp",
+            "bytes": 3048
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-muda-serpiente/clasica-128.webp",
+            "bytes": 8734
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-muda-serpiente/clasica-256.webp",
+            "bytes": 27828
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-muda-serpiente/clasica-512.webp",
+            "bytes": 83164
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-muda-serpiente/inventario-64.webp",
+            "bytes": 3300
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-muda-serpiente/inventario-128.webp",
+            "bytes": 9930
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-muda-serpiente/inventario-256.webp",
+            "bytes": 27724
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-muda-serpiente/inventario-512.webp",
+            "bytes": 74164
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "América del Norte; Europa; África",
+      "provenance": null,
+      "acquisition": "Reproducción museística",
+      "description": null,
+      "material": "Queratina escutelar",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Representar desprendimiento superficial o réplica, sin restos orgánicos adheridos.",
+      "id": "mat-escudo-capara",
+      "name": "Fragmento de escudo de caparazón",
+      "family": "Caparazones",
+      "species": [
+        "Tortuga de orejas rojas",
+        "galápago europeo",
+        "galápago leproso"
+      ],
+      "uses": "Estudio comparado de escudos",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-escudo-capara/clasica-64.webp",
+            "bytes": 2412
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-escudo-capara/clasica-128.webp",
+            "bytes": 6346
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-escudo-capara/clasica-256.webp",
+            "bytes": 21570
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-escudo-capara/clasica-512.webp",
+            "bytes": 64068
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-escudo-capara/inventario-64.webp",
+            "bytes": 2552
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-escudo-capara/inventario-128.webp",
+            "bytes": 6786
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-escudo-capara/inventario-256.webp",
+            "bytes": 19638
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-escudo-capara/inventario-512.webp",
+            "bytes": 52456
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; Asia; América del Sur; América del Norte",
+      "provenance": null,
+      "acquisition": "Ejemplar conservado o pelo desprendido documentado",
+      "description": null,
+      "material": "Queratina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Fibras gruesas en haz poco compacto.",
+      "id": "mat-pelo-guarda",
+      "name": "Mechón de pelo de guarda",
+      "family": "Pelo",
+      "species": [
+        "Zorro rojo",
+        "mara patagónica",
+        "buey almizclero"
+      ],
+      "uses": "Comparación de textura y color",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-pelo-guarda/clasica-64.webp",
+            "bytes": 2894
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-pelo-guarda/clasica-128.webp",
+            "bytes": 8494
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-pelo-guarda/clasica-256.webp",
+            "bytes": 27678
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-pelo-guarda/clasica-512.webp",
+            "bytes": 90690
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-pelo-guarda/inventario-64.webp",
+            "bytes": 3166
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-pelo-guarda/inventario-128.webp",
+            "bytes": 9486
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-pelo-guarda/inventario-256.webp",
+            "bytes": 28614
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-pelo-guarda/inventario-512.webp",
+            "bytes": 88826
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; África; América del Norte; América del Sur",
+      "provenance": null,
+      "acquisition": "Muestra histórica conservada o réplica",
+      "description": null,
+      "material": "Queratina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Púas anilladas como referencia, patrones variables por especie.",
+      "id": "mat-puas",
+      "name": "Púas desprendidas",
+      "family": "Pelo",
+      "species": [
+        "Puercoespín crestado",
+        "puercoespín norteamericano",
+        "coendú"
+      ],
+      "uses": "Estudio de defensa y queratina",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-puas/clasica-64.webp",
+            "bytes": 2950
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-puas/clasica-128.webp",
+            "bytes": 7616
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-puas/clasica-256.webp",
+            "bytes": 22020
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-puas/clasica-512.webp",
+            "bytes": 67092
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-puas/inventario-64.webp",
+            "bytes": 3066
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-puas/inventario-128.webp",
+            "bytes": 8152
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-puas/inventario-256.webp",
+            "bytes": 22780
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-puas/inventario-512.webp",
+            "bytes": 65294
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; Asia; América del Norte",
+      "provenance": null,
+      "acquisition": "Reproducción de gabinete",
+      "description": null,
+      "material": "Carbonato cálcico",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Fragmento curvo de cáscara, distinto de un huevo catalogado entero.",
+      "id": "mat-cascara-huevo",
+      "name": "Fragmento de cáscara moteada",
+      "family": "Cáscaras",
+      "species": [
+        "Gaviota argéntea",
+        "avefría europea",
+        "chorlito dorado"
+      ],
+      "uses": "Comparación de pigmentación y curvatura",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-cascara-huevo/clasica-64.webp",
+            "bytes": 2610
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-cascara-huevo/clasica-128.webp",
+            "bytes": 6786
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-cascara-huevo/clasica-256.webp",
+            "bytes": 21848
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-cascara-huevo/clasica-512.webp",
+            "bytes": 61410
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-cascara-huevo/inventario-64.webp",
+            "bytes": 2686
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-cascara-huevo/inventario-128.webp",
+            "bytes": 7166
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-cascara-huevo/inventario-256.webp",
+            "bytes": 20762
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-cascara-huevo/inventario-512.webp",
+            "bytes": 53606
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; África; Oceanía",
+      "provenance": null,
+      "acquisition": "Reproducción o ejemplar histórico",
+      "description": null,
+      "material": "Aragonito",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Lámina piloto con capas porosas y borde natural.",
+      "id": "mat-sepion",
+      "name": "Fragmento de sepión",
+      "family": "Conchas",
+      "species": [
+        "Sepia común",
+        "sepia elegante",
+        "sepia gigante australiana"
+      ],
+      "uses": "Comparación de estructuras internas",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-sepion/clasica-64.webp",
+            "bytes": 1732
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-sepion/clasica-128.webp",
+            "bytes": 4780
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-sepion/clasica-256.webp",
+            "bytes": 15338
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-sepion/clasica-512.webp",
+            "bytes": 47180
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/mat-sepion/inventario-64.webp",
+            "bytes": 1826
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/mat-sepion/inventario-128.webp",
+            "bytes": 5106
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/mat-sepion/inventario-256.webp",
+            "bytes": 14490
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/mat-sepion/inventario-512.webp",
+            "bytes": 39176
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Asia; Europa",
+      "provenance": null,
+      "acquisition": "Muda documentada o réplica",
+      "description": null,
+      "material": "Queratina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Evitar depender del ocelo de una sola especie.",
+      "id": "mat-pluma-caudal",
+      "name": "Pluma caudal larga",
+      "family": "Plumas",
+      "species": [
+        "Faisán común",
+        "pavo real indio",
+        "urraca común"
+      ],
+      "uses": "Estudio de proporciones caudales",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; África; Oceanía; Antártida",
+      "provenance": null,
+      "acquisition": "Réplica de gabinete",
+      "description": null,
+      "material": "Queratina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Reservar un perfil largo y robusto.",
+      "id": "mat-pluma-marina",
+      "name": "Pluma de vuelo marina",
+      "family": "Plumas",
+      "species": [
+        "Albatros viajero",
+        "pardela cenicienta",
+        "petrel gigante"
+      ],
+      "uses": "Comparación de forma y desgaste",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; África; Asia; América del Sur",
+      "provenance": null,
+      "acquisition": "Réplica de gabinete",
+      "description": null,
+      "material": "Queratina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Mostrar barbas sueltas y pieza corta.",
+      "id": "mat-pluma-facial",
+      "name": "Pluma facial corta",
+      "family": "Plumas",
+      "species": [
+        "Lechuza común",
+        "cárabo común",
+        "mochuelo europeo"
+      ],
+      "uses": "Estudio de discos faciales",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Asia; Europa; Oceanía",
+      "provenance": null,
+      "acquisition": "Muda abandonada documentada",
+      "description": null,
+      "material": "Queratina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Parche irregular con patrón granuloso.",
+      "id": "mat-muda-lagarto",
+      "name": "Muda escamosa en parches",
+      "family": "Mudas",
+      "species": [
+        "Gecko leopardo",
+        "lagarto ocelado",
+        "dragón barbudo"
+      ],
+      "uses": "Comparación de fragmentación de muda",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; América del Norte; Oceanía",
+      "provenance": null,
+      "acquisition": "Exuvia vacía documentada",
+      "description": null,
+      "material": "Quitina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Mantener la abertura dorsal reconocible.",
+      "id": "mat-exuvia-cigarra",
+      "name": "Exuvia de cigarra",
+      "family": "Mudas",
+      "species": [
+        "Cigarra común",
+        "cigarra periódica",
+        "cigarra australiana"
+      ],
+      "uses": "Estudio de metamorfosis",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; África; Asia",
+      "provenance": null,
+      "acquisition": "Exuvia vacía documentada",
+      "description": null,
+      "material": "Quitina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Silueta alargada con patas prensiles.",
+      "id": "mat-exuvia-libelula",
+      "name": "Exuvia de libélula",
+      "family": "Mudas",
+      "species": [
+        "Emperador azul",
+        "libélula de vientre plano",
+        "esmeralda metálica"
+      ],
+      "uses": "Estudio del paso del agua al aire",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; África; América del Norte",
+      "provenance": null,
+      "acquisition": "Reproducción de gabinete",
+      "description": null,
+      "material": "Quitina mineralizada",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Borde articulado y color apagado.",
+      "id": "mat-capara-crustaceo",
+      "name": "Fragmento de muda de crustáceo",
+      "family": "Caparazones",
+      "species": [
+        "Cangrejo verde",
+        "bogavante europeo",
+        "cangrejo azul"
+      ],
+      "uses": "Comparación de exoesqueletos",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "América del Norte; América del Sur",
+      "provenance": null,
+      "acquisition": "Réplica de gabinete",
+      "description": null,
+      "material": "Reproducción de placa ósea",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Conservar la forma poligonal y la textura de placa.",
+      "id": "mat-placa-armadillo",
+      "name": "Réplica de placa de armadillo",
+      "family": "Caparazones",
+      "species": [
+        "Armadillo de nueve bandas",
+        "peludo grande",
+        "tatú bola"
+      ],
+      "uses": "Estudio de corazas articuladas",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "América del Sur; Europa",
+      "provenance": null,
+      "acquisition": "Fibra desprendida documentada o reproducción",
+      "description": null,
+      "material": "Queratina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Haz rizado, distinguible del pelo recto de guarda.",
+      "id": "mat-lana",
+      "name": "Mechón de lana fina",
+      "family": "Pelo",
+      "species": [
+        "Vicuña",
+        "guanaco",
+        "muflón europeo"
+      ],
+      "uses": "Comparación de ondulación",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "América del Norte; Europa; Asia",
+      "provenance": null,
+      "acquisition": "Muestra histórica de gabinete",
+      "description": null,
+      "material": "Queratina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Agrupación compacta y mate.",
+      "id": "mat-pelo-subpelo",
+      "name": "Subpelo de clima frío",
+      "family": "Pelo",
+      "species": [
+        "Buey almizclero",
+        "liebre ártica",
+        "zorro ártico"
+      ],
+      "uses": "Estudio del aislamiento estacional",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; África; América del Norte; América del Sur",
+      "provenance": null,
+      "acquisition": "Réplica o muda documentada",
+      "description": null,
+      "material": "Queratina",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Cerdas oscuras de puntas desiguales.",
+      "id": "mat-cerdas",
+      "name": "Cerdas rígidas",
+      "family": "Pelo",
+      "species": [
+        "Jabalí",
+        "facóquero",
+        "pecarí de collar"
+      ],
+      "uses": "Comparación de fibras duras",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "África; Oceanía; América del Sur",
+      "provenance": null,
+      "acquisition": "Reproducción de gabinete",
+      "description": null,
+      "material": "Carbonato cálcico",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Borde grueso, poroso y de curva tenue.",
+      "id": "mat-cascara-gruesa",
+      "name": "Cáscara gruesa de ave corredora",
+      "family": "Cáscaras",
+      "species": [
+        "Avestruz",
+        "emú",
+        "ñandú"
+      ],
+      "uses": "Comparación de grosor",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "América del Norte; América del Sur; Europa; Asia",
+      "provenance": null,
+      "acquisition": "Reproducción basada en observación",
+      "description": null,
+      "material": "Yeso",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Mostrar almohadilla y dedos redondos.",
+      "id": "mat-huella-felino",
+      "name": "Molde de huella felina",
+      "family": "Huellas",
+      "species": [
+        "Puma",
+        "jaguar",
+        "lince boreal"
+      ],
+      "uses": "Comparación de rastros",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; Asia; América del Norte",
+      "provenance": null,
+      "acquisition": "Reproducción basada en observación",
+      "description": null,
+      "material": "Yeso",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Mostrar dos impresiones simétricas marcadas.",
+      "id": "mat-huella-ungulado",
+      "name": "Molde de pezuña hendida",
+      "family": "Huellas",
+      "species": [
+        "Corzo",
+        "ciervo rojo",
+        "berrendo"
+      ],
+      "uses": "Estudio de marcha",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; Asia; América del Norte; América del Sur",
+      "provenance": null,
+      "acquisition": "Reproducción basada en observación",
+      "description": null,
+      "material": "Yeso",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Separar de los moldes de mamífero por silueta radial.",
+      "id": "mat-huella-ave",
+      "name": "Molde de huella tridáctila",
+      "family": "Huellas",
+      "species": [
+        "Grulla común",
+        "garza real",
+        "garceta nívea"
+      ],
+      "uses": "Estudio de proporción de dedos",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; África; América del Norte",
+      "provenance": null,
+      "acquisition": "Réplica o ejemplar conservado",
+      "description": null,
+      "material": "Carbonato cálcico",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Una sola valva, sin brillo de gema.",
+      "id": "mat-concha-bivalva",
+      "name": "Valva vacía común",
+      "family": "Conchas",
+      "species": [
+        "Mejillón común",
+        "almeja fina",
+        "berberecho común"
+      ],
+      "uses": "Comparación de charnela",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; África; América del Sur",
+      "provenance": null,
+      "acquisition": "Réplica o ejemplar conservado",
+      "description": null,
+      "material": "Carbonato cálcico",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Ejemplar genérico pequeño, diferente de una caracola singular.",
+      "id": "mat-concha-gastero",
+      "name": "Concha vacía de orilla",
+      "family": "Conchas",
+      "species": [
+        "Lapa común",
+        "bígaro común",
+        "lapa de ojo"
+      ],
+      "uses": "Comparación de forma de fijación",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; América del Norte; América del Sur",
+      "provenance": null,
+      "acquisition": "Réplica documental",
+      "description": null,
+      "material": "Madera",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Representar una sección de rama marcada.",
+      "id": "mat-rastro-roedura",
+      "name": "Registro de roedura",
+      "family": "Rastros",
+      "species": [
+        "Castor europeo",
+        "castor canadiense",
+        "coipo"
+      ],
+      "uses": "Comparación de marcas de incisivos",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "Europa; Asia; América del Norte",
+      "provenance": null,
+      "acquisition": "Reproducción documental",
+      "description": null,
+      "material": "Corteza",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Mostrar la superficie hendida en una cara del fragmento.",
+      "id": "mat-rastro-galeria",
+      "name": "Registro de galería en corteza",
+      "family": "Rastros",
+      "species": [
+        "Escolítido del abeto",
+        "barrenillo del olmo",
+        "escarabajo de la corteza del pino"
+      ],
+      "uses": "Comparación de patrones de galerías",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": null,
+      "continent": "América del Sur; África; Europa",
+      "provenance": null,
+      "acquisition": "Reproducción museística",
+      "description": null,
+      "material": "Yeso",
+      "context": "Propuesta de gabinete para una ampliación futura",
+      "original": null,
+      "observations": "Molde de bajo relieve con escala geométrica visible.",
+      "id": "mat-rastro-impresion-piel",
+      "name": "Registro de impresión de escamas",
+      "family": "Rastros",
+      "species": [
+        "Iguana verde",
+        "varano del Nilo",
+        "lagarto ocelado"
+      ],
+      "uses": "Comparación de patrones superficiales",
+      "type": "Idea de material animal",
+      "pilot": false,
+      "stage": "OBJ-03",
+      "sprites": {
+        "clasica": null,
+        "inventario": null
+      },
+      "approval": "Pendiente",
+      "artState": "Pendiente"
     }
   ]
 };
