@@ -86,3 +86,16 @@
 .exhibition-showcase small { color:#f5edda; }
 .exhibition-showcase .stage { background:radial-gradient(ellipse at center,#789084,#2c5145 76%); border:1px solid #75998c; }
 .exhibition-showcase .stage span { color:#f5edda; }
+.atlantis-case { background:#ded0ae; border-color:#8a7654; }
+.atlantis-case .inclusion-card { border-color:#9c8863; }
+.atlantis-case .stage { background:#efe3c6; }
+.atlantis-rings {
+  display:grid; place-items:center; width:min(100%,24rem); min-height:8rem; margin:.75rem auto;
+  border:1px solid #8b7856; border-radius:.35rem;
+  background:repeating-radial-gradient(circle at center,#ac9566 0 3px,#e3d5b4 3px 14px,#c6b286 14px 17px,#e3d5b4 17px 24px);
+}
+.atlantis-rings span {
+  padding:.45rem .8rem; background:#f8efd9; color:#304741;
+  border:1px solid #887652; border-radius:.3rem; font-weight:650;
+}
+.discovery-panel > button { margin-top:.35rem; }

@@ -91,7 +91,7 @@ Se verificaron los 240 archivos con sus dimensiones y canal alfa. En Chromium m�
 | OBJ-05 | [Paleontología, Museo y laboratorio de inclusiones](OBJ-05.md) |
 | OBJ-06 | [Gabinete de Botánica](OBJ-06.md) |
 | OBJ-07 | [Gabinete de Geología](OBJ-07.md) |
-| OBJ-08 | Oceanografía |
+| OBJ-08 | [Gabinete de Oceanografía](OBJ-08.md) |
 | OBJ-09 | Historia |
 | OBJ-10 | Historia natural y exploración |
 | OBJ-11 | Auditoría global |

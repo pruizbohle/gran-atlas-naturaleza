@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const {rows, materialIds, animalMaterialIds, paleontology, tradeRoutes, barter, botany, geology, geologyComparisons} = AtlasObjetosCientificos;
+  const {rows, materialIds, animalMaterialIds, paleontology, tradeRoutes, barter, botany, geology, geologyComparisons, oceanography, oceanographyComparisons, maritimeSources} = AtlasObjetosCientificos;
   const {phases, reconstruction} = AtlasReconstruccionObjetos;
   const byId = new Map(rows.map(row => [row.id, row]));
   const get = id => document.getElementById(id);
@@ -28,7 +28,17 @@
 
   const rarities = ['Común','Poco común','Raro','Muy raro'];
   const discoveries = new Set();
-  const exhibitCabinets = {'Botánica':botany, 'Geología':geology};
+  const exhibitCabinets = {'Botánica':botany, 'Geología':geology, 'Oceanografía':oceanography};
+  const atlantis = oceanography.find(group => group.name === 'Secretos de Atlántida').ids.map(id => byId.get(id));
+  const comparisons = [...geologyComparisons,...oceanographyComparisons];
+  const narrative = [
+    'El expediente permanece cerrado. Cinco huecos esperan las piezas de la historia.',
+    'El fragmento revela un trazado de anillos cortado por canales.',
+    'El tridente del sello comparte el motivo central del plano.',
+    'La llave sugiere compuertas entre los anillos del relato.',
+    'El prisma representa la lectura de las mareas en el relato.',
+    'Al reunir las cinco piezas, el plano, el sello, la llave, el prisma y la corona componen un relato de canales y anillos concéntricos.'
+  ];
   const formats = {
     album:'Álbum de láminas científicas',
     cabinet:'Gabinete de muestras',
@@ -49,6 +59,7 @@
     group:'all', museum:'Fósiles', mount:paleontology.mounts[0].id, phase:'3', form:'skeleton',
     cabinet:'', collection:'', progress:'50', discoveryRarity:'Poco común', approval:'', origin:'',
     exhibitCabinet:'Botánica', exhibitCollection:botany[0].name, exhibitFormat:'album', exhibitProgress:'100',
+    maritimeSource:maritimeSources[0].id, atlantisCount:'0',
     instrument:'binoculars', hat:'field_hat', necklace:'amulet', bag:'sturdy_pack'
   };
   const perPage = 24;
@@ -119,7 +130,7 @@
     const stage = node('div', '', 'stage');
     const source = row.sprites.inventario?.[pixels];
     if (!visibility) {
-      if ((row.botany || row.geology) && source) {
+      if ((row.botany || row.geology || row.oceanography) && source) {
         const silhouette = node('img');
         silhouette.src = source.src;
         silhouette.alt = '';
@@ -173,25 +184,37 @@
       ['Escala real',row.botany?.scale],['Puntos de colección',row.points],
       ['Clasificación',row.geology?.classification],['Composición',row.geology?.composition],['Hábito o estructura',row.geology?.structure],
       ['Rasgo documentado',row.geology?.diagnostic],['Contexto histórico',row.geology?.history],['Observación de la lámina',row.geology?.plate],
+      ['Naturaleza',row.oceanography?.nature],['Identificación',row.oceanography?.identity],
+      ['Clasificación marítima',row.oceanography?.classification],['Material',row.oceanography?.material],
+      [row.oceanography?.nature === 'Ficción explícita' ? 'Rasgo de diseño' : 'Rasgo diagnóstico',row.oceanography?.diagnostic],
+      ['Hábitat',row.oceanography?.habitat],['Marco histórico',row.oceanography?.history],['Observación de la lámina',row.oceanography?.plate],
       ['Estado artístico',row.artState],['Observaciones',row.observations]];
     for (const [label, value] of fields) {
       if (value) facts.append(node('dt',label),node('dd',value));
     }
     const discoverable = row.type === 'Coleccionable propuesto' && state.section === 'album';
     const showSample = visible && (!discoverable || discovered(row));
-    body.replaceChildren(h,figure(row,showSample,'',row.botany || row.geology ? 256 : 128),facts);
+    body.replaceChildren(h,figure(row,showSample,'',row.botany || row.geology || row.oceanography ? 256 : 128),facts);
     if (row.geology) {
       const source = node('a','Fuente mineralógica o geológica');
       source.href = row.geology.source;
       body.append(source);
     }
+    if (row.oceanography) {
+      const source = row.oceanography.source;
+      if (source.startsWith('https://')) {
+        const link = node('a','Fuente documental');
+        link.href = source;
+        body.append(link);
+      } else body.append(node('p','Fuente: ' + source));
+    }
     if (showSample) {
-      const related = [...new Set(geologyComparisons.filter(group => group.ids.includes(row.id))
+      const related = [...new Set(comparisons.filter(group => group.ids.includes(row.id))
         .flatMap(group => group.ids))].filter(id => id !== row.id).map(id => byId.get(id));
       if (related.length) {
         body.append(node('h3','Comparar con muestras similares'),grid(related, other =>
           card(other,!discoverable || other.type !== 'Coleccionable propuesto' || discovered(other),
-            other.geology?.classification || other.type)));
+            other.geology?.classification || other.oceanography?.classification || other.type)));
       }
     }
     if (!dialog.open) dialog.showModal();
@@ -325,9 +348,8 @@
       (!state.collection || row.collection === state.collection) && matches(row) && !discovered(row));
   }
 
-  function demonstrateDiscovery() {
-    const row = discoveryCandidate();
-    if (!row) return;
+  function demonstrateDiscovery(row = discoveryCandidate(), fromMaritime = false) {
+    if (!row || discovered(row)) return;
     discoveries.add(row.id);
     renderContent();
     const panel = node('section','','discovery-panel');
@@ -340,6 +362,14 @@
     panel.append(node('p','Descubrimiento de prueba','discovery-kicker'),title,rarity,picture,
       node('p',row.provenance || row.continent),progressLine(row.collection,members),
       node('p',score(members)));
+    if (fromMaritime) {
+      panel.append(button('Ver en el álbum', () => {
+        state.cabinet = 'Oceanografía';
+        state.collection = row.collection;
+        dialog.close();
+        get('sections').querySelector('[data-page="album"]').click();
+      }));
+    }
     get('detail-content').replaceChildren(panel);
     dialog.showModal();
   }
@@ -388,6 +418,44 @@
     section.append(bar,grid(members, (row) => card(row,members.indexOf(row) < baseline,
       row.rarity + ' · ' + (members.indexOf(row) < baseline ? 'Exhibida' : 'Pendiente'))));
     gallery.append(section);
+  }
+
+  function maritime() {
+    const source = maritimeSources.find(entry => entry.id === state.maritimeSource);
+    const entries = source.ids.map(id => byId.get(id)).filter(matches);
+    status.textContent = entries.length + ' asociaciones editoriales';
+    gallery.append(node('h3',source.name),node('p',source.description));
+    gallery.append(grid(entries, row => {
+      const added = discovered(row);
+      const tile = card(row,added,[row.rarity,row.oceanography.nature].join(' · '));
+      const action = button(added ? 'En el álbum' : 'Simular descubrimiento', () => demonstrateDiscovery(row,true));
+      action.disabled = added;
+      tile.append(action);
+      return tile;
+    }));
+  }
+
+  function atlantisView() {
+    const count = Number(state.atlantisCount);
+    const complete = count === atlantis.length;
+    status.textContent = count + ' de ' + atlantis.length + ' piezas · ficción explícita';
+    const display = node('section','','collection-exhibition atlantis-case');
+    display.append(node('h3','Expediente ficticio de Atlántida'),node('p',narrative[count]));
+    const progress = node('progress');
+    progress.max = atlantis.length;
+    progress.value = count;
+    progress.setAttribute('aria-label','Piezas descubiertas de Atlántida');
+    display.append(progress);
+    if (complete) {
+      const rings = node('div','','atlantis-rings');
+      rings.setAttribute('role','img');
+      rings.setAttribute('aria-label','Plano imaginario de los anillos de Atlántida');
+      rings.append(node('span','Colección completada'));
+      display.append(rings);
+    }
+    display.append(grid(atlantis, (row) => card(row,atlantis.indexOf(row) < count,
+      atlantis.indexOf(row) < count ? 'Ficción · Descubierta' : 'Ficción · Pendiente')));
+    gallery.append(display);
   }
 
   function museumView() {
@@ -505,12 +573,12 @@
     status.textContent = '';
     gallery.replaceChildren();
     navigation.replaceChildren();
-    ({inventory,equipment:team,materials,trade:commerce,album,exhibition,museum:museumView,register})[state.section]();
+    ({inventory,equipment:team,materials,trade:commerce,album,exhibition,maritime,atlantis:atlantisView,museum:museumView,register})[state.section]();
   }
 
   function render() {
     controls.replaceChildren();
-    if (state.section !== 'exhibition' && (state.section !== 'museum' || state.museum !== 'Fósiles')) search();
+    if (!['exhibition','atlantis'].includes(state.section) && (state.section !== 'museum' || state.museum !== 'Fósiles')) search();
     if (state.section === 'inventory') {
       select('scope','Alcance',[['existing','Objetos existentes'],['proposed','Inclusiones propuestas'],['all','Todos los objetos']]);
       select('family','Categoría',[['','Todas'],...['Materiales','Equipamiento','Fósiles','Cartografía','Mercancías regionales'].map(label => [label,label])]);
@@ -528,7 +596,7 @@
       select('progress','Progreso de prueba',progressOptions);
       if (Object.hasOwn(exhibitCabinets,state.cabinet)) {
         select('discoveryRarity','Rareza del descubrimiento',rarities.map(value => [value,value]));
-        const trigger = button('Probar descubrimiento',demonstrateDiscovery);
+        const trigger = button('Probar descubrimiento',() => demonstrateDiscovery());
         trigger.id = 'include-discover';
         trigger.setAttribute('aria-describedby','discovery-status');
         const availability = node('small');
@@ -542,6 +610,14 @@
       select('exhibitCollection','Colección',exhibitCabinets[state.exhibitCabinet].map(group => [group.name,group.name]));
       select('exhibitFormat','Presentación',Object.entries(formats));
       select('exhibitProgress','Progreso de exhibición',progressOptions);
+    }
+    if (state.section === 'maritime') {
+      select('maritimeSource','Fuente propuesta',maritimeSources.map(source => [source.id,source.name]));
+      select('progress','Progreso de prueba',progressOptions);
+    }
+    if (state.section === 'atlantis') {
+      select('atlantisCount','Piezas descubiertas',atlantis.map((row,i) => [String(i),String(i)])
+        .concat([[String(atlantis.length),String(atlantis.length)]]));
     }
     if (state.section === 'museum') {
       select('museum','Sala',['Exposiciones','Muestras','Fósiles','Relictos','Artefactos'].map(name => [name,name]));

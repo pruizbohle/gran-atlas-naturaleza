@@ -1,4 +1,4 @@
-"""OBJ-01: pasar las tres planchas originales. OBJ-02 a OBJ-07: pasar la etapa (por ejemplo --obj-04) y una plancha opcional."""
+"""OBJ-01: pasar las tres planchas originales. OBJ-02 a OBJ-08: pasar la etapa (por ejemplo --obj-04) y una plancha opcional."""
 import json
 from pathlib import Path
 import sys
@@ -39,7 +39,10 @@ def prepare(filename, columns, names, method, guides=None):
         row, column = divmod(index, columns)
         edges = bounds_by_row[row]
         polygon = (guides or {}).get('polygons', {}).get(name)
-        if polygon:
+        rectangle = (guides or {}).get('rectangles', {}).get(name)
+        if rectangle:
+            art = sheet.crop(tuple(rectangle))
+        elif polygon:
             mask = Image.new('L', sheet.size)
             ImageDraw.Draw(mask).polygon([tuple(point) for point in polygon], fill=255)
             art = sheet.copy()
@@ -81,7 +84,7 @@ def export_sprite(name, art, method=4):
             canvas.save(folder / f'{variant}-{size}.webp', quality=quality, method=method)
 
 def main(args):
-    if args and args[0] in ('--obj-02', '--obj-03', '--obj-04', '--obj-05', '--obj-06', '--obj-07'):
+    if args and args[0] in ('--obj-02', '--obj-03', '--obj-04', '--obj-05', '--obj-06', '--obj-07', '--obj-08'):
         stage = args[0][2:]
         folder = Path(__file__).parent
         plan = json.loads((folder / f'{stage}.json').read_text())

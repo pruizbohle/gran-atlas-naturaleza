@@ -1,0 +1,26 @@
+{
+  "sheets": [
+    {"file":"conchas-a.png","columns":3,"crop":{"rows":[0,334,663,1024],"edges":[[0,512,1024,1536],[0,512,1024,1536],[0,512,1024,1536]]},"ids":["CON-01","CON-02","CON-03","CON-04","CON-05","CON-06","CON-08","CON-09","CON-10"]},
+    {"file":"conchas-marineros.png","columns":3,"ids":["CON-11","CON-12","CUR-01","CUR-02","CUR-03","CUR-04","CUR-05","CUR-06","CUR-07"]},
+    {"file":"marineros-corales.png","columns":3,"ids":["CUR-08","CUR-09","CUR-10","CUR-11","CUR-12","COR-02","COR-03","COR-04","COR-05"]},
+    {"file":"corales-algas.png","columns":3,"crop":{"rows":[0,305,617,1024],"edges":[[0,512,1024,1536],[0,512,1024,1536],[0,512,1024,1536]],"rectangles":{"COR-06":[12,4,515,305],"COR-07":[570,4,1035,305],"COR-08":[12,305,435,617],"COR-09":[435,305,1060,617],"COR-10":[1060,305,1500,617],"COR-11":[12,617,349,1001],"COR-12":[350,617,759,1001],"ALG-02":[759,617,1110,1001],"ALG-03":[1110,617,1535,1001]}},"ids":["COR-06","COR-07","COR-08","COR-09","COR-10","COR-11","COR-12","ALG-02","ALG-03"]},
+    {"file":"algas.png","columns":3,"crop":{"rows":[0,340,679,1024],"edges":[[0,512,1024,1536],[0,512,1024,1536],[0,512,1024,1536]],"alpha":[125,245]},"ids":["ALG-04","ALG-05","ALG-06","ALG-07","ALG-08","ALG-09","ALG-10","ALG-11","ALG-12"]},
+    {"file":"atlantida.png","columns":2,"ids":["MAR-08","MAR-09","MAR-10","MAR-11"]}
+  ],
+  "collections": ["Los siete mares","Secretos de Atlántida","Conchas de los océanos","Curiosidades de marineros","Corales del mundo","Algas del mundo"],
+  "comparisons": [
+    {"name":"Conchas y materiales animales","ids":["CON-04","CON-09","CON-12","shell_necklace","oceanian_nacre","mat-sepion"]},
+    {"name":"Corales, minerales y fósiles","ids":["COR-01","COR-04","COR-06","COR-08","MIN-07","FOS-02"]},
+    {"name":"Algas frente a plantas terrestres","ids":["ALG-02","ALG-04","ALG-07","ALG-11","HOJ-04","HOJ-10"]},
+    {"name":"Objetos marítimos e instrumentos","ids":["MAR-02","CUR-02","CUR-07","sounding_kit","INS-04","INS-10"]},
+    {"name":"Medallas y fichas históricas","ids":["MAR-01","MAR-07","CUR-03","MED-01","medallon_viajero"]},
+    {"name":"Atlántida y objetos arqueológicos","ids":["MAR-08","MAR-09","MAR-10","MAR-11","MAR-12","carta_historica","astrolabio_laton","NUM-01"]}
+  ],
+  "sources": [
+    {"id":"costa","name":"Exploración costera","description":"Observaciones de orilla, modelos de conchas vacías y láminas de campo.","ids":["CON-01","CON-02","ALG-02","ALG-04","ALG-10","CUR-11"]},
+    {"id":"expedicion","name":"Expediciones marítimas","description":"Documentos y artefactos interpretativos de travesías; referencias naturales de expedición.","ids":["MAR-02","MAR-03","MAR-06","MAR-07","ALG-01","ALG-06"]},
+    {"id":"investigacion","name":"Investigación oceanográfica","description":"Láminas, réplicas y muestras históricas documentadas de gabinete.","ids":["CON-09","CON-12","COR-01","COR-06","COR-09","ALG-12"]},
+    {"id":"comercio","name":"Comercio portuario","description":"Intercambio documental de objetos de navegación y reproducciones de gabinete.","ids":["MAR-01","MAR-04","CUR-02","CUR-03","CUR-05","CUR-12"]},
+    {"id":"misiones","name":"Exploraciones y misiones especiales","description":"Escenario ficticio de Atlántida y una analogía marítima de gabinete.","ids":["MAR-08","MAR-09","MAR-10","MAR-11","MAR-12","CUR-08"]}
+  ]
+}

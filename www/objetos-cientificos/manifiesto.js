@@ -219,6 +219,234 @@ globalThis.AtlasObjetosCientificos = {
       ]
     }
   ],
+  "oceanography": [
+    {
+      "name": "Los siete mares",
+      "ids": [
+        "MAR-01",
+        "MAR-02",
+        "MAR-03",
+        "MAR-04",
+        "MAR-05",
+        "MAR-06",
+        "MAR-07"
+      ]
+    },
+    {
+      "name": "Secretos de Atlántida",
+      "ids": [
+        "MAR-08",
+        "MAR-09",
+        "MAR-10",
+        "MAR-11",
+        "MAR-12"
+      ]
+    },
+    {
+      "name": "Conchas de los océanos",
+      "ids": [
+        "CON-01",
+        "CON-02",
+        "CON-03",
+        "CON-04",
+        "CON-05",
+        "CON-06",
+        "CON-07",
+        "CON-08",
+        "CON-09",
+        "CON-10",
+        "CON-11",
+        "CON-12"
+      ]
+    },
+    {
+      "name": "Curiosidades de marineros",
+      "ids": [
+        "CUR-01",
+        "CUR-02",
+        "CUR-03",
+        "CUR-04",
+        "CUR-05",
+        "CUR-06",
+        "CUR-07",
+        "CUR-08",
+        "CUR-09",
+        "CUR-10",
+        "CUR-11",
+        "CUR-12"
+      ]
+    },
+    {
+      "name": "Corales del mundo",
+      "ids": [
+        "COR-01",
+        "COR-02",
+        "COR-03",
+        "COR-04",
+        "COR-05",
+        "COR-06",
+        "COR-07",
+        "COR-08",
+        "COR-09",
+        "COR-10",
+        "COR-11",
+        "COR-12"
+      ]
+    },
+    {
+      "name": "Algas del mundo",
+      "ids": [
+        "ALG-01",
+        "ALG-02",
+        "ALG-03",
+        "ALG-04",
+        "ALG-05",
+        "ALG-06",
+        "ALG-07",
+        "ALG-08",
+        "ALG-09",
+        "ALG-10",
+        "ALG-11",
+        "ALG-12"
+      ]
+    }
+  ],
+  "oceanographyComparisons": [
+    {
+      "name": "Conchas y materiales animales",
+      "ids": [
+        "CON-04",
+        "CON-09",
+        "CON-12",
+        "shell_necklace",
+        "oceanian_nacre",
+        "mat-sepion"
+      ]
+    },
+    {
+      "name": "Corales, minerales y fósiles",
+      "ids": [
+        "COR-01",
+        "COR-04",
+        "COR-06",
+        "COR-08",
+        "MIN-07",
+        "FOS-02"
+      ]
+    },
+    {
+      "name": "Algas frente a plantas terrestres",
+      "ids": [
+        "ALG-02",
+        "ALG-04",
+        "ALG-07",
+        "ALG-11",
+        "HOJ-04",
+        "HOJ-10"
+      ]
+    },
+    {
+      "name": "Objetos marítimos e instrumentos",
+      "ids": [
+        "MAR-02",
+        "CUR-02",
+        "CUR-07",
+        "sounding_kit",
+        "INS-04",
+        "INS-10"
+      ]
+    },
+    {
+      "name": "Medallas y fichas históricas",
+      "ids": [
+        "MAR-01",
+        "MAR-07",
+        "CUR-03",
+        "MED-01",
+        "medallon_viajero"
+      ]
+    },
+    {
+      "name": "Atlántida y objetos arqueológicos",
+      "ids": [
+        "MAR-08",
+        "MAR-09",
+        "MAR-10",
+        "MAR-11",
+        "MAR-12",
+        "carta_historica",
+        "astrolabio_laton",
+        "NUM-01"
+      ]
+    }
+  ],
+  "maritimeSources": [
+    {
+      "id": "costa",
+      "name": "Exploración costera",
+      "description": "Observaciones de orilla, modelos de conchas vacías y láminas de campo.",
+      "ids": [
+        "CON-01",
+        "CON-02",
+        "ALG-02",
+        "ALG-04",
+        "ALG-10",
+        "CUR-11"
+      ]
+    },
+    {
+      "id": "expedicion",
+      "name": "Expediciones marítimas",
+      "description": "Documentos y artefactos interpretativos de travesías; referencias naturales de expedición.",
+      "ids": [
+        "MAR-02",
+        "MAR-03",
+        "MAR-06",
+        "MAR-07",
+        "ALG-01",
+        "ALG-06"
+      ]
+    },
+    {
+      "id": "investigacion",
+      "name": "Investigación oceanográfica",
+      "description": "Láminas, réplicas y muestras históricas documentadas de gabinete.",
+      "ids": [
+        "CON-09",
+        "CON-12",
+        "COR-01",
+        "COR-06",
+        "COR-09",
+        "ALG-12"
+      ]
+    },
+    {
+      "id": "comercio",
+      "name": "Comercio portuario",
+      "description": "Intercambio documental de objetos de navegación y reproducciones de gabinete.",
+      "ids": [
+        "MAR-01",
+        "MAR-04",
+        "CUR-02",
+        "CUR-03",
+        "CUR-05",
+        "CUR-12"
+      ]
+    },
+    {
+      "id": "misiones",
+      "name": "Exploraciones y misiones especiales",
+      "description": "Escenario ficticio de Atlántida y una analogía marítima de gabinete.",
+      "ids": [
+        "MAR-08",
+        "MAR-09",
+        "MAR-10",
+        "MAR-11",
+        "MAR-12",
+        "CUR-08"
+      ]
+    }
+  ],
   "groups": [
     {
       "name": "Instrumentos y morral de viaje",
@@ -11045,6 +11273,17 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
       "stage": "OBJ-04",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Ficha portuaria del Atlántico Norte",
+        "classification": "Ficha de intercambio",
+        "material": "Metal acuñado",
+        "diagnostic": "Canto gastado y relieve de ancla",
+        "habitat": "",
+        "history": "Analogía de comercio portuario, sin atribución a un puerto concreto en 1842.",
+        "plate": "Conservada de OBJ-04; distinguir de una medalla oficial.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11107,6 +11346,17 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
       "stage": "OBJ-04",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Plomada de sonda del Atlántico Sur",
+        "classification": "Instrumento náutico",
+        "material": "Metal y fibra",
+        "diagnostic": "Cuerpo cónico y ojal para línea",
+        "habitat": "",
+        "history": "La sonda de mano es de uso anterior a 1842; el ejemplar atlántico es interpretativo.",
+        "plate": "Conservada de OBJ-04; se muestra un peso aislado.",
+        "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-42888"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11169,6 +11419,17 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
       "stage": "OBJ-04",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Clavo de casco del Pacífico Norte",
+        "classification": "Fijación naval",
+        "material": "Hierro",
+        "diagnostic": "Cabeza aplanada, sección irregular y óxido",
+        "habitat": "",
+        "history": "Tipo histórico de clavazón; sin barco identificado.",
+        "plate": "Conservada de OBJ-04; perfil doblado.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11231,6 +11492,17 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
       "stage": "OBJ-04",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Fragmento de porcelana del Pacífico Sur",
+        "classification": "Cerámica de intercambio",
+        "material": "Porcelana vidriada",
+        "diagnostic": "Borde roto y decoración azul bajo cubierta",
+        "habitat": "",
+        "history": "Recreación de tránsito marítimo, sin atribución a un pecio.",
+        "plate": "Conservada de OBJ-04; una forma incompleta la separa de la taza futura.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11293,6 +11565,17 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
       "stage": "OBJ-04",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Contrapeso de red del Índico",
+        "classification": "Utensilio pesquero",
+        "material": "Piedra y fibra",
+        "diagnostic": "Peso perforado y extremo de cuerda",
+        "habitat": "",
+        "history": "Analogía etnográfica; fecha local y ejemplar por cotejar.",
+        "plate": "Conservada de OBJ-04; masa redondeada frente a la sonda cónica.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11355,6 +11638,17 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
       "stage": "OBJ-04",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Botella de mensaje del Ártico",
+        "classification": "Contenedor de documento",
+        "material": "Vidrio, corcho y papel",
+        "diagnostic": "Nota visible dentro de un frasco cerrado",
+        "habitat": "",
+        "history": "Objeto imaginado para el gabinete marítimo; sin expedición identificada.",
+        "plate": "Conservada de OBJ-04; distinta del frasco con arena.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11417,6 +11711,17 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
       "stage": "OBJ-04",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Medalla de navegante del océano Austral",
+        "classification": "Pieza conmemorativa",
+        "material": "Metal y cinta",
+        "diagnostic": "Perfil de medalla suspendida, motivo marítimo",
+        "habitat": "",
+        "history": "Analogía de medalla de expedición; fecha y emisión hipotéticas.",
+        "plate": "Conservada de OBJ-04; sin atribuirla a una condecoración histórica concreta.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11478,13 +11783,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Réplica de ficción",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Ficción explícita",
+        "identity": "Fragmento del plano de los anillos",
+        "classification": "Artefacto ficticio",
+        "material": "Piedra calcárea imitativa",
+        "diagnostic": "Arcos concéntricos y canales grabados",
+        "habitat": "",
+        "history": "Parte de la narración ficticia de Atlántida.",
+        "plate": "Fragmento con una sección del plano imaginario.",
+        "source": "Catálogo experimental OBJ · Secretos de Atlántida"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-08/clasica-64.webp",
+            "bytes": 2458
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-08/clasica-128.webp",
+            "bytes": 6532
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-08/clasica-256.webp",
+            "bytes": 20252
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-08/clasica-512.webp",
+            "bytes": 65430
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-08/inventario-64.webp",
+            "bytes": 2568
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-08/inventario-128.webp",
+            "bytes": 6836
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-08/inventario-256.webp",
+            "bytes": 18436
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-08/inventario-512.webp",
+            "bytes": 53610
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11506,13 +11856,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Réplica de ficción",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Ficción explícita",
+        "identity": "Sello del tridente sumergido",
+        "classification": "Artefacto ficticio",
+        "material": "Bronce con pátina",
+        "diagnostic": "Cara circular grabada con tridente",
+        "habitat": "",
+        "history": "Parte de la narración ficticia de Atlántida.",
+        "plate": "Sello interpretado como pieza de metal arqueológico.",
+        "source": "Catálogo experimental OBJ · Secretos de Atlántida"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-09/clasica-64.webp",
+            "bytes": 1848
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-09/clasica-128.webp",
+            "bytes": 4788
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-09/clasica-256.webp",
+            "bytes": 13800
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-09/clasica-512.webp",
+            "bytes": 43960
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-09/inventario-64.webp",
+            "bytes": 1900
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-09/inventario-128.webp",
+            "bytes": 5118
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-09/inventario-256.webp",
+            "bytes": 12124
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-09/inventario-512.webp",
+            "bytes": 36514
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11534,13 +11929,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Réplica de ficción",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Ficción explícita",
+        "identity": "Llave de las compuertas de Atlántida",
+        "classification": "Artefacto ficticio",
+        "material": "Bronce con pátina",
+        "diagnostic": "Anilla y paletón corto",
+        "habitat": "",
+        "history": "Parte de la narración ficticia de Atlántida.",
+        "plate": "Forma de llave mecánica imaginaria.",
+        "source": "Catálogo experimental OBJ · Secretos de Atlántida"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-10/clasica-64.webp",
+            "bytes": 1622
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-10/clasica-128.webp",
+            "bytes": 4062
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-10/clasica-256.webp",
+            "bytes": 11078
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-10/clasica-512.webp",
+            "bytes": 34170
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-10/inventario-64.webp",
+            "bytes": 1574
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-10/inventario-128.webp",
+            "bytes": 4246
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-10/inventario-256.webp",
+            "bytes": 11054
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-10/inventario-512.webp",
+            "bytes": 29990
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11562,13 +12002,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Réplica de ficción",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Ficción explícita",
+        "identity": "Prisma de las mareas",
+        "classification": "Artefacto ficticio",
+        "material": "Cristal y collar de bronce",
+        "diagnostic": "Facetas triangulares con reflejo pintado",
+        "habitat": "",
+        "history": "Parte de la narración ficticia de Atlántida.",
+        "plate": "La transparencia es un rasgo material de la lámina.",
+        "source": "Catálogo experimental OBJ · Secretos de Atlántida"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-11/clasica-64.webp",
+            "bytes": 1662
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-11/clasica-128.webp",
+            "bytes": 4116
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-11/clasica-256.webp",
+            "bytes": 11152
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-11/clasica-512.webp",
+            "bytes": 34110
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/MAR-11/inventario-64.webp",
+            "bytes": 1554
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/MAR-11/inventario-128.webp",
+            "bytes": 4272
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/MAR-11/inventario-256.webp",
+            "bytes": 10140
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/MAR-11/inventario-512.webp",
+            "bytes": 28986
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11591,6 +12076,17 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Réplica de ficción",
       "pilot": true,
       "stage": "OBJ-01",
+      "oceanography": {
+        "nature": "Ficción explícita",
+        "identity": "Corona de oricalco",
+        "classification": "Artefacto ficticio",
+        "material": "Aleación imaginaria",
+        "diagnostic": "Diadema de metal con remates marinos",
+        "habitat": "",
+        "history": "Parte de la narración ficticia de Atlántida.",
+        "plate": "Conservada de OBJ-01.",
+        "source": "Catálogo experimental OBJ · Secretos de Atlántida"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11652,13 +12148,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Pecten maximus · referencia",
+        "classification": "Bivalvo · Pectinidae",
+        "material": "Concha calcárea",
+        "diagnostic": "Valva en abanico, costillas y aurículas cerca de la charnela",
+        "habitat": "Fondos costeros del Atlántico nororiental",
+        "history": "Morfotipo histórico de gabinete.",
+        "plate": "Valva vacía o réplica.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-01/clasica-64.webp",
+            "bytes": 2586
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-01/clasica-128.webp",
+            "bytes": 7000
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-01/clasica-256.webp",
+            "bytes": 24282
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-01/clasica-512.webp",
+            "bytes": 67048
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-01/inventario-64.webp",
+            "bytes": 2760
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-01/inventario-128.webp",
+            "bytes": 7486
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-01/inventario-256.webp",
+            "bytes": 21432
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-01/inventario-512.webp",
+            "bytes": 52624
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11680,13 +12221,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Patella caerulea · referencia",
+        "classification": "Gasterópodo · Patellidae",
+        "material": "Concha calcárea",
+        "diagnostic": "Cono bajo, ápice y costillas radiales",
+        "habitat": "Intermareal rocoso mediterráneo",
+        "history": "Morfotipo histórico de gabinete.",
+        "plate": "Exterior de una concha vacía.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-02/clasica-64.webp",
+            "bytes": 1868
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-02/clasica-128.webp",
+            "bytes": 5258
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-02/clasica-256.webp",
+            "bytes": 17076
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-02/clasica-512.webp",
+            "bytes": 48820
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-02/inventario-64.webp",
+            "bytes": 2046
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-02/inventario-128.webp",
+            "bytes": 5998
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-02/inventario-256.webp",
+            "bytes": 15508
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-02/inventario-512.webp",
+            "bytes": 40112
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11708,13 +12294,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Turbo sazae · referencia regional",
+        "classification": "Gasterópodo · Turbinidae",
+        "material": "Concha calcárea nacarada",
+        "diagnostic": "Espiral gruesa y abertura redonda nacarada",
+        "habitat": "Costa rocosa japonesa",
+        "history": "La identificación de referencia es actual; la muestra de gabinete es interpretativa.",
+        "plate": "Espinas y desgaste variables.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-03/clasica-64.webp",
+            "bytes": 2536
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-03/clasica-128.webp",
+            "bytes": 6608
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-03/clasica-256.webp",
+            "bytes": 21634
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-03/clasica-512.webp",
+            "bytes": 58340
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-03/inventario-64.webp",
+            "bytes": 2594
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-03/inventario-128.webp",
+            "bytes": 6974
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-03/inventario-256.webp",
+            "bytes": 19314
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-03/inventario-512.webp",
+            "bytes": 48284
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11736,13 +12367,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Haliotis rufescens · referencia",
+        "classification": "Gasterópodo · Haliotidae",
+        "material": "Concha calcárea y nácar",
+        "diagnostic": "Forma de oreja baja con fila de perforaciones",
+        "habitat": "Costas rocosas del Pacífico nororiental",
+        "history": "Morfotipo de gabinete, ejemplar sin fecha individual.",
+        "plate": "Vista interna, frente a la placa ornamental de nácar.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-04/clasica-64.webp",
+            "bytes": 2156
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-04/clasica-128.webp",
+            "bytes": 5916
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-04/clasica-256.webp",
+            "bytes": 18650
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-04/clasica-512.webp",
+            "bytes": 54544
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-04/inventario-64.webp",
+            "bytes": 2256
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-04/inventario-128.webp",
+            "bytes": 6256
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-04/inventario-256.webp",
+            "bytes": 16716
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-04/inventario-512.webp",
+            "bytes": 44640
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11764,13 +12440,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Cypraea tigris · referencia",
+        "classification": "Gasterópodo · Cypraeidae",
+        "material": "Concha calcárea",
+        "diagnostic": "Perfil oval pulido, moteado y abertura dentada",
+        "habitat": "Arrecifes someros indo-pacíficos",
+        "history": "Morfotipo histórico de gabinete.",
+        "plate": "Patrón interpretado, no diagnóstico aislado.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-05/clasica-64.webp",
+            "bytes": 2152
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-05/clasica-128.webp",
+            "bytes": 5446
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-05/clasica-256.webp",
+            "bytes": 16184
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-05/clasica-512.webp",
+            "bytes": 43958
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-05/inventario-64.webp",
+            "bytes": 2242
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-05/inventario-128.webp",
+            "bytes": 5802
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-05/inventario-256.webp",
+            "bytes": 14546
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-05/inventario-512.webp",
+            "bytes": 36560
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11792,13 +12513,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Bolinus brandaris · referencia",
+        "classification": "Gasterópodo · Muricidae",
+        "material": "Concha calcárea",
+        "diagnostic": "Espinas salientes y canal sifonal largo",
+        "habitat": "Fondos costeros mediterráneos",
+        "history": "Morfotipo histórico de gabinete.",
+        "plate": "Concha vacía con perfil espinoso.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-06/clasica-64.webp",
+            "bytes": 2034
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-06/clasica-128.webp",
+            "bytes": 5326
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-06/clasica-256.webp",
+            "bytes": 16556
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-06/clasica-512.webp",
+            "bytes": 49556
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-06/inventario-64.webp",
+            "bytes": 2160
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-06/inventario-128.webp",
+            "bytes": 5560
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-06/inventario-256.webp",
+            "bytes": 16142
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-06/inventario-512.webp",
+            "bytes": 44236
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11821,6 +12587,17 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
       "stage": "OBJ-01",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Aliger gigas · referencia",
+        "classification": "Gasterópodo · Strombidae",
+        "material": "Concha calcárea",
+        "diagnostic": "Labio ensanchado y espira robusta",
+        "habitat": "Fondos someros caribeños",
+        "history": "Morfotipo histórico de gabinete.",
+        "plate": "Conservada de OBJ-01 como representación de concha vacía.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -11882,13 +12659,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Conus textile · referencia",
+        "classification": "Gasterópodo · Conidae",
+        "material": "Concha calcárea",
+        "diagnostic": "Perfil cónico, hombro superior y retícula triangular",
+        "habitat": "Ambiente tropical indo-pacífico",
+        "history": "Morfotipo histórico de gabinete.",
+        "plate": "Concha vacía o réplica; no se representa el animal.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-08/clasica-64.webp",
+            "bytes": 1944
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-08/clasica-128.webp",
+            "bytes": 5176
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-08/clasica-256.webp",
+            "bytes": 15898
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-08/clasica-512.webp",
+            "bytes": 41746
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-08/inventario-64.webp",
+            "bytes": 2120
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-08/inventario-128.webp",
+            "bytes": 5548
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-08/inventario-256.webp",
+            "bytes": 14406
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-08/inventario-512.webp",
+            "bytes": 35674
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11910,13 +12732,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Nautilus pompilius · referencia",
+        "classification": "Cefalópodo · Nautilidae",
+        "material": "Concha calcárea septada",
+        "diagnostic": "Espiral con cámaras sucesivas y bandas exteriores",
+        "habitat": "Taludes de arrecifes indo-pacíficos",
+        "history": "Morfotipo histórico de gabinete.",
+        "plate": "Sección interpretativa de una concha, que contrasta con el estuche ovígero del argonauta.",
+        "source": "https://www.marinespecies.org/aphia.php?id=153112&p=taxdetails"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-09/clasica-64.webp",
+            "bytes": 2614
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-09/clasica-128.webp",
+            "bytes": 6822
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-09/clasica-256.webp",
+            "bytes": 22078
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-09/clasica-512.webp",
+            "bytes": 62246
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-09/inventario-64.webp",
+            "bytes": 2772
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-09/inventario-128.webp",
+            "bytes": 7380
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-09/inventario-256.webp",
+            "bytes": 19400
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-09/inventario-512.webp",
+            "bytes": 48852
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11938,13 +12805,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Charonia tritonis · referencia",
+        "classification": "Gasterópodo · Charoniidae",
+        "material": "Concha calcárea",
+        "diagnostic": "Espira elevada, abertura alargada y canal sifonal",
+        "habitat": "Infralitoral tropical indo-pacífico",
+        "history": "Morfotipo histórico de gabinete.",
+        "plate": "Perfil alto de concha vacía.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-10/clasica-64.webp",
+            "bytes": 2486
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-10/clasica-128.webp",
+            "bytes": 6256
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-10/clasica-256.webp",
+            "bytes": 20106
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-10/clasica-512.webp",
+            "bytes": 57528
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-10/inventario-64.webp",
+            "bytes": 2624
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-10/inventario-128.webp",
+            "bytes": 6718
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-10/inventario-256.webp",
+            "bytes": 18462
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-10/inventario-512.webp",
+            "bytes": 47514
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11966,13 +12878,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Tridacna gigas · referencia",
+        "classification": "Bivalvo · Cardiidae",
+        "material": "Concha calcárea",
+        "diagnostic": "Valva gruesa con grandes ondulaciones radiales",
+        "habitat": "Arrecifes tropicales indo-pacíficos",
+        "history": "Morfotipo histórico de gabinete.",
+        "plate": "Valva suelta a escala reducida, interpretada como reproducción.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-11/clasica-64.webp",
+            "bytes": 1888
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-11/clasica-128.webp",
+            "bytes": 4438
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-11/clasica-256.webp",
+            "bytes": 13210
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-11/clasica-512.webp",
+            "bytes": 42490
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-11/inventario-64.webp",
+            "bytes": 1940
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-11/inventario-128.webp",
+            "bytes": 4532
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-11/inventario-256.webp",
+            "bytes": 12422
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-11/inventario-512.webp",
+            "bytes": 33542
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -11994,13 +12951,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Argonauta argo · estuche de hembra",
+        "classification": "Cefalópodo octópodo · Argonautidae",
+        "material": "Estuche ovígero de carbonato cálcico",
+        "diagnostic": "Pared fina, costillas radiales y quilla; carece de cámaras internas",
+        "habitat": "Aguas abiertas de latitudes cálidas",
+        "history": "Morfotipo histórico de gabinete.",
+        "plate": "Estuche secretado por la hembra; el animal no está representado.",
+        "source": "https://www.marinespecies.org/aphia.php?id=11785&p=taxdetails"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-12/clasica-64.webp",
+            "bytes": 1866
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-12/clasica-128.webp",
+            "bytes": 4986
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-12/clasica-256.webp",
+            "bytes": 16098
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-12/clasica-512.webp",
+            "bytes": 45074
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CON-12/inventario-64.webp",
+            "bytes": 1848
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CON-12/inventario-128.webp",
+            "bytes": 5204
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CON-12/inventario-256.webp",
+            "bytes": 14360
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CON-12/inventario-512.webp",
+            "bytes": 36732
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12022,13 +13024,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto marinero",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Nudo de ocho de cabo",
+        "classification": "Nudo de tope",
+        "material": "Fibra de cáñamo",
+        "diagnostic": "Dos curvas cruzadas con extremos cortos",
+        "habitat": "",
+        "history": "Maniobra histórica representada sin barco asociado.",
+        "plate": "La vista muestra el cruce frente al cabo trenzado.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-01/clasica-64.webp",
+            "bytes": 1540
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-01/clasica-128.webp",
+            "bytes": 4240
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-01/clasica-256.webp",
+            "bytes": 12430
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-01/clasica-512.webp",
+            "bytes": 37408
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-01/inventario-64.webp",
+            "bytes": 1632
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-01/inventario-128.webp",
+            "bytes": 4470
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-01/inventario-256.webp",
+            "bytes": 11952
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-01/inventario-512.webp",
+            "bytes": 33368
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12050,13 +13097,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto marinero",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Silbato de contramaestre",
+        "classification": "Instrumento de señales",
+        "material": "Metal y cadena",
+        "diagnostic": "Tubo curvo y cámara terminal",
+        "habitat": "",
+        "history": "Tipo funcional y simbólico anterior a 1842; referencia museística.",
+        "plate": "Cadena abreviada para legibilidad.",
+        "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-62304"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-02/clasica-64.webp",
+            "bytes": 1364
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-02/clasica-128.webp",
+            "bytes": 3304
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-02/clasica-256.webp",
+            "bytes": 9188
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-02/clasica-512.webp",
+            "bytes": 25708
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-02/inventario-64.webp",
+            "bytes": 1388
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-02/inventario-128.webp",
+            "bytes": 3494
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-02/inventario-256.webp",
+            "bytes": 9048
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-02/inventario-512.webp",
+            "bytes": 24550
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12078,13 +13170,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto marinero",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Ficha de rancho naval",
+        "classification": "Ficha de contabilidad",
+        "material": "Metal",
+        "diagnostic": "Disco pequeño y marcas discretas",
+        "habitat": "",
+        "history": "Uso e identificación concretos por cotejar; ficha anónima de referencia.",
+        "plate": "Las marcas pictóricas no se atribuyen a una emisión real.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-03/clasica-64.webp",
+            "bytes": 1848
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-03/clasica-128.webp",
+            "bytes": 4924
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-03/clasica-256.webp",
+            "bytes": 16706
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-03/clasica-512.webp",
+            "bytes": 46838
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-03/inventario-64.webp",
+            "bytes": 1990
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-03/inventario-128.webp",
+            "bytes": 5106
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-03/inventario-256.webp",
+            "bytes": 13380
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-03/inventario-512.webp",
+            "bytes": 32640
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12106,13 +13243,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto marinero",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Flotador de pesca de vidrio japonés",
+        "classification": "Aparejo flotante",
+        "material": "Vidrio y cabo",
+        "diagnostic": "Masa hueca esférica y amarre",
+        "habitat": "",
+        "history": "Futuro · el uso japonés está documentado desde 1910.",
+        "plate": "La red se representa como soporte.",
+        "source": "https://collectionswa.net.au/items/d72a4368-a99e-4e9a-a1c7-99fc53bfe25c"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-04/clasica-64.webp",
+            "bytes": 2522
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-04/clasica-128.webp",
+            "bytes": 6620
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-04/clasica-256.webp",
+            "bytes": 21238
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-04/clasica-512.webp",
+            "bytes": 54262
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-04/inventario-64.webp",
+            "bytes": 2650
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-04/inventario-128.webp",
+            "bytes": 7004
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-04/inventario-256.webp",
+            "bytes": 17552
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-04/inventario-512.webp",
+            "bytes": 42364
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12134,13 +13316,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto marinero",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Caja de agujas para velas",
+        "classification": "Útil de oficio",
+        "material": "Madera y metal",
+        "diagnostic": "Estuche alargado y agujas visibles",
+        "habitat": "",
+        "history": "Recreación de equipo de mantenimiento naval.",
+        "plate": "Forma abierta para mostrar contenido; ejemplar exacto sin identificar.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-05/clasica-64.webp",
+            "bytes": 1700
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-05/clasica-128.webp",
+            "bytes": 4902
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-05/clasica-256.webp",
+            "bytes": 15042
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-05/clasica-512.webp",
+            "bytes": 47350
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-05/inventario-64.webp",
+            "bytes": 1932
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-05/inventario-128.webp",
+            "bytes": 5390
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-05/inventario-256.webp",
+            "bytes": 13424
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-05/inventario-512.webp",
+            "bytes": 35950
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12162,13 +13389,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Objeto marinero",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Pipa neerlandesa de arcilla",
+        "classification": "Objeto museístico de uso cotidiano",
+        "material": "Arcilla sin vidriar",
+        "diagnostic": "Cazoleta pequeña y largo caño",
+        "habitat": "",
+        "history": "Morfotipo europeo histórico; sin barco identificado.",
+        "plate": "Objeto aislado de gabinete, sin humo ni escena de consumo.",
+        "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-19589"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-06/clasica-64.webp",
+            "bytes": 1212
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-06/clasica-128.webp",
+            "bytes": 2566
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-06/clasica-256.webp",
+            "bytes": 6122
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-06/clasica-512.webp",
+            "bytes": 18058
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-06/inventario-64.webp",
+            "bytes": 1124
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-06/inventario-128.webp",
+            "bytes": 2494
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-06/inventario-256.webp",
+            "bytes": 5742
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-06/inventario-512.webp",
+            "bytes": 16524
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12190,13 +13462,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Objeto marinero",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Cuaderno de mareas",
+        "classification": "Documento de observación",
+        "material": "Papel y encuadernación",
+        "diagnostic": "Cuaderno abierto con curvas y renglones",
+        "habitat": "",
+        "history": "Recreación de registro observacional de época.",
+        "plate": "Las líneas son gráficas interpretativas.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-07/clasica-64.webp",
+            "bytes": 1192
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-07/clasica-128.webp",
+            "bytes": 3078
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-07/clasica-256.webp",
+            "bytes": 10312
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-07/clasica-512.webp",
+            "bytes": 36642
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-07/inventario-64.webp",
+            "bytes": 1242
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-07/inventario-128.webp",
+            "bytes": 3026
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-07/inventario-256.webp",
+            "bytes": 8320
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-07/inventario-512.webp",
+            "bytes": 23822
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12218,13 +13535,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Objeto marinero",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Tablilla de señales",
+        "classification": "Útil documental",
+        "material": "Madera y cuero",
+        "diagnostic": "Placa plana con motivos geométricos",
+        "habitat": "",
+        "history": "Analogía de tablero de señales, sin sistema regional atribuido.",
+        "plate": "Diseño interpretativo para revisión.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-08/clasica-64.webp",
+            "bytes": 2528
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-08/clasica-128.webp",
+            "bytes": 6820
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-08/clasica-256.webp",
+            "bytes": 22356
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-08/clasica-512.webp",
+            "bytes": 63554
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-08/inventario-64.webp",
+            "bytes": 2666
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-08/inventario-128.webp",
+            "bytes": 7290
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-08/inventario-256.webp",
+            "bytes": 19688
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-08/inventario-512.webp",
+            "bytes": 50588
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12246,13 +13608,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Objeto marinero",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Trenzado de cabo",
+        "classification": "Muestra de cordelería",
+        "material": "Fibra de cáñamo",
+        "diagnostic": "Trama regular y extremos incurvados",
+        "habitat": "",
+        "history": "Tipo de oficio anterior a 1842; muestra museística interpretativa.",
+        "plate": "El trenzado uniforme se distingue del nudo.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-09/clasica-64.webp",
+            "bytes": 1266
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-09/clasica-128.webp",
+            "bytes": 3370
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-09/clasica-256.webp",
+            "bytes": 9464
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-09/clasica-512.webp",
+            "bytes": 29956
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-09/inventario-64.webp",
+            "bytes": 1274
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-09/inventario-128.webp",
+            "bytes": 3522
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-09/inventario-256.webp",
+            "bytes": 9100
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-09/inventario-512.webp",
+            "bytes": 26538
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12274,13 +13681,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Objeto marinero",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Rueda de bitácora miniatura",
+        "classification": "Modelo naval",
+        "material": "Madera y metal",
+        "diagnostic": "Aro con radios y centro metálico",
+        "habitat": "",
+        "history": "Pieza de catálogo; la forma toma como analogía la rueda de gobierno, no la caja de la brújula.",
+        "plate": "El nombre de catálogo se conserva y la identificación precisa requiere cotejo.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-10/clasica-64.webp",
+            "bytes": 3374
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-10/clasica-128.webp",
+            "bytes": 8398
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-10/clasica-256.webp",
+            "bytes": 26768
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-10/clasica-512.webp",
+            "bytes": 74526
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-10/inventario-64.webp",
+            "bytes": 3460
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-10/inventario-128.webp",
+            "bytes": 9272
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-10/inventario-256.webp",
+            "bytes": 26364
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-10/inventario-512.webp",
+            "bytes": 69704
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12302,13 +13754,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Objeto marinero",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Frasco de arena oceánica",
+        "classification": "Muestra sedimentaria sellada",
+        "material": "Vidrio, corcho y sedimento",
+        "diagnostic": "Capa granular en el fondo",
+        "habitat": "",
+        "history": "Recreación de muestrario histórico sin expedición atribuida.",
+        "plate": "La lectura depende de la capa baja de sedimento, sin nota.",
+        "source": "https://www.rmg.co.uk/collections"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-11/clasica-64.webp",
+            "bytes": 2532
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-11/clasica-128.webp",
+            "bytes": 6414
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-11/clasica-256.webp",
+            "bytes": 20724
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-11/clasica-512.webp",
+            "bytes": 54582
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-11/inventario-64.webp",
+            "bytes": 2514
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-11/inventario-128.webp",
+            "bytes": 6352
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-11/inventario-256.webp",
+            "bytes": 18882
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-11/inventario-512.webp",
+            "bytes": 48828
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12330,13 +13827,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Objeto marinero",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Histórica interpretativa",
+        "identity": "Maqueta de barco en botella",
+        "classification": "Modelo de artesanía marítima",
+        "material": "Vidrio, madera, hilo y corcho",
+        "diagnostic": "Aparejo en miniatura dentro de frasco horizontal",
+        "habitat": "",
+        "history": "El tipo está documentado en colecciones; la fecha exacta del modelo requiere cotejo.",
+        "plate": "No se identifica un barco o pieza museística concreta.",
+        "source": "https://www.rmg.co.uk/collections/objects/rmgc-object-206128"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-12/clasica-64.webp",
+            "bytes": 1452
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-12/clasica-128.webp",
+            "bytes": 3794
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-12/clasica-256.webp",
+            "bytes": 11078
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-12/clasica-512.webp",
+            "bytes": 37516
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/CUR-12/inventario-64.webp",
+            "bytes": 1444
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/CUR-12/inventario-128.webp",
+            "bytes": 4022
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/CUR-12/inventario-256.webp",
+            "bytes": 10006
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/CUR-12/inventario-512.webp",
+            "bytes": 28952
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12359,6 +13901,17 @@ globalThis.AtlasObjetosCientificos = {
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
       "stage": "OBJ-01",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Diploria · tipo de coral cerebro",
+        "classification": "Coral pétreo colonial · Scleractinia",
+        "material": "Esqueleto de carbonato cálcico",
+        "diagnostic": "Valles sinuosos continuos sobre masa redondeada",
+        "habitat": "Arrecifes caribeños",
+        "history": "Lámina de gabinete; ejemplar histórico no identificado.",
+        "plate": "Conservada de OBJ-01.",
+        "source": "https://cdhc.noaa.gov/coral-biology/coral-biology/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -12420,13 +13973,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Orbicella · tipo estrella",
+        "classification": "Coral pétreo colonial · Scleractinia",
+        "material": "Esqueleto de carbonato cálcico",
+        "diagnostic": "Coralitos estrellados sobre una masa gruesa",
+        "habitat": "Arrecifes caribeños",
+        "history": "Lámina de gabinete.",
+        "plate": "La textura reproduce el relieve como modelo.",
+        "source": "https://cdhc.noaa.gov/coral-biology/coral-biology/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-02/clasica-64.webp",
+            "bytes": 2836
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-02/clasica-128.webp",
+            "bytes": 7280
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-02/clasica-256.webp",
+            "bytes": 24170
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-02/clasica-512.webp",
+            "bytes": 69260
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-02/inventario-64.webp",
+            "bytes": 2864
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-02/inventario-128.webp",
+            "bytes": 7828
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-02/inventario-256.webp",
+            "bytes": 22434
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-02/inventario-512.webp",
+            "bytes": 57254
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12448,13 +14046,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Fungia · tipo plato",
+        "classification": "Coral pétreo solitario · Scleractinia",
+        "material": "Esqueleto de carbonato cálcico",
+        "diagnostic": "Disco aplanado, septos radiales y centro rebajado",
+        "habitat": "Arrecifes indo-pacíficos, incluido el mar Rojo",
+        "history": "Lámina de gabinete.",
+        "plate": "Morfotipo de pólipo solitario, distinto de una colonia en plato.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-03/clasica-64.webp",
+            "bytes": 2354
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-03/clasica-128.webp",
+            "bytes": 6750
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-03/clasica-256.webp",
+            "bytes": 22832
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-03/clasica-512.webp",
+            "bytes": 67564
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-03/inventario-64.webp",
+            "bytes": 2428
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-03/inventario-128.webp",
+            "bytes": 7314
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-03/inventario-256.webp",
+            "bytes": 21426
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-03/inventario-512.webp",
+            "bytes": 57968
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12476,13 +14119,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Pocillopora · tipo coliflor",
+        "classification": "Coral pétreo colonial · Scleractinia",
+        "material": "Esqueleto de carbonato cálcico",
+        "diagnostic": "Ramas cortas, densas y verrugas superficiales",
+        "habitat": "Arrecifes tropicales del Pacífico",
+        "history": "Lámina de gabinete.",
+        "plate": "Modelo de colonia compacta; identificación específica pendiente.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-04/clasica-64.webp",
+            "bytes": 2858
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-04/clasica-128.webp",
+            "bytes": 7734
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-04/clasica-256.webp",
+            "bytes": 24372
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-04/clasica-512.webp",
+            "bytes": 71822
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-04/inventario-64.webp",
+            "bytes": 2908
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-04/inventario-128.webp",
+            "bytes": 7908
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-04/inventario-256.webp",
+            "bytes": 23110
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-04/inventario-512.webp",
+            "bytes": 61030
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12504,13 +14192,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Acropora cervicornis",
+        "classification": "Coral pétreo colonial · Scleractinia",
+        "material": "Esqueleto de carbonato cálcico",
+        "diagnostic": "Ramas estrechas, cilíndricas, con puntas axiales",
+        "habitat": "Arrecifes caribeños",
+        "history": "Lámina o reproducción de gabinete.",
+        "plate": "Modelo diagnóstico de perfil de asta.",
+        "source": "https://www.fisheries.noaa.gov/species/staghorn-coral"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-05/clasica-64.webp",
+            "bytes": 2662
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-05/clasica-128.webp",
+            "bytes": 7386
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-05/clasica-256.webp",
+            "bytes": 21824
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-05/clasica-512.webp",
+            "bytes": 66548
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-05/inventario-64.webp",
+            "bytes": 2764
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-05/inventario-128.webp",
+            "bytes": 7696
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-05/inventario-256.webp",
+            "bytes": 21758
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-05/inventario-512.webp",
+            "bytes": 63346
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12532,13 +14265,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Gorgonia ventalina · referencia",
+        "classification": "Octocoral · gorgonia",
+        "material": "Eje orgánico y escleritos",
+        "diagnostic": "Abanico plano reticulado, con eje de fijación",
+        "habitat": "Arrecifes caribeños",
+        "history": "Lámina o reproducción de gabinete.",
+        "plate": "La malla fina se interpreta para lectura a pequeña escala.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-06/clasica-64.webp",
+            "bytes": 2752
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-06/clasica-128.webp",
+            "bytes": 8336
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-06/clasica-256.webp",
+            "bytes": 28358
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-06/clasica-512.webp",
+            "bytes": 100298
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-06/inventario-64.webp",
+            "bytes": 2918
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-06/inventario-128.webp",
+            "bytes": 9262
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-06/inventario-256.webp",
+            "bytes": 28976
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-06/inventario-512.webp",
+            "bytes": 98402
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12560,13 +14338,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Heliopora coerulea · referencia",
+        "classification": "Octocoral · Helioporidae",
+        "material": "Esqueleto calcáreo pigmentado",
+        "diagnostic": "Interior azul apagado y lóbulos compactos",
+        "habitat": "Arrecifes del Indo-Pacífico",
+        "history": "Lámina o reproducción de gabinete.",
+        "plate": "Color orientativo de un modelo del esqueleto.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-07/clasica-64.webp",
+            "bytes": 2786
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-07/clasica-128.webp",
+            "bytes": 7958
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-07/clasica-256.webp",
+            "bytes": 26034
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-07/clasica-512.webp",
+            "bytes": 70064
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-07/inventario-64.webp",
+            "bytes": 2920
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-07/inventario-128.webp",
+            "bytes": 8304
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-07/inventario-256.webp",
+            "bytes": 23720
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-07/inventario-512.webp",
+            "bytes": 60138
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12588,13 +14411,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Tubipora musica · referencia",
+        "classification": "Octocoral · Tubiporidae",
+        "material": "Tubos calcáreos rojizos",
+        "diagnostic": "Tubos paralelos unidos por tabiques transversales",
+        "habitat": "Arrecifes someros indo-pacíficos",
+        "history": "Lámina o reproducción de gabinete.",
+        "plate": "Se representa el esqueleto, distinguiendo tubos y plataformas.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-08/clasica-64.webp",
+            "bytes": 2952
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-08/clasica-128.webp",
+            "bytes": 7928
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-08/clasica-256.webp",
+            "bytes": 26056
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-08/clasica-512.webp",
+            "bytes": 71176
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-08/inventario-64.webp",
+            "bytes": 3266
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-08/inventario-128.webp",
+            "bytes": 9050
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-08/inventario-256.webp",
+            "bytes": 23542
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-08/inventario-512.webp",
+            "bytes": 57372
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12616,13 +14484,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Isididae en sentido amplio · tipo bambú",
+        "classification": "Octocoral de eje articulado",
+        "material": "Internodos calcáreos y nodos orgánicos",
+        "diagnostic": "Alternancia clara y oscura en articulaciones",
+        "habitat": "Ambientes profundos del Pacífico",
+        "history": "Lámina de investigación o reproducción.",
+        "plate": "Morfotipo ilustrativo, sin asignación a especie.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-09/clasica-64.webp",
+            "bytes": 3188
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-09/clasica-128.webp",
+            "bytes": 8096
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-09/clasica-256.webp",
+            "bytes": 24762
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-09/clasica-512.webp",
+            "bytes": 69630
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-09/inventario-64.webp",
+            "bytes": 3146
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-09/inventario-128.webp",
+            "bytes": 8572
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-09/inventario-256.webp",
+            "bytes": 24710
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-09/inventario-512.webp",
+            "bytes": 67594
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12644,13 +14557,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Antipatharia · tipo negro",
+        "classification": "Coral colonial · Hexacorallia",
+        "material": "Eje orgánico oscuro",
+        "diagnostic": "Eje delgado, pequeñas espinas y ramas dispersas",
+        "habitat": "Fondos tropicales del Indo-Pacífico",
+        "history": "Lámina o reproducción de gabinete.",
+        "plate": "El esquema muestra el esqueleto oscuro, no el color del tejido vivo.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-10/clasica-64.webp",
+            "bytes": 2636
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-10/clasica-128.webp",
+            "bytes": 7552
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-10/clasica-256.webp",
+            "bytes": 24522
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-10/clasica-512.webp",
+            "bytes": 72200
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-10/inventario-64.webp",
+            "bytes": 2684
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-10/inventario-128.webp",
+            "bytes": 8016
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-10/inventario-256.webp",
+            "bytes": 25252
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-10/inventario-512.webp",
+            "bytes": 71750
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12672,13 +14630,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Corallium rubrum",
+        "classification": "Octocoral · Coralliidae",
+        "material": "Eje calcáreo rojo",
+        "diagnostic": "Ramificación corta y gruesa, relieve menudo",
+        "habitat": "Fondos rocosos mediterráneos",
+        "history": "Lámina o reproducción de gabinete.",
+        "plate": "El color es orientativo de un eje conservado.",
+        "source": "https://www.marinespecies.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-11/clasica-64.webp",
+            "bytes": 2676
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-11/clasica-128.webp",
+            "bytes": 7170
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-11/clasica-256.webp",
+            "bytes": 22064
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-11/clasica-512.webp",
+            "bytes": 62808
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-11/inventario-64.webp",
+            "bytes": 2972
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-11/inventario-128.webp",
+            "bytes": 7784
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-11/inventario-256.webp",
+            "bytes": 21594
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-11/inventario-512.webp",
+            "bytes": 56792
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -12700,13 +14703,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Acropora palmata",
+        "classification": "Coral pétreo colonial · Scleractinia",
+        "material": "Esqueleto de carbonato cálcico",
+        "diagnostic": "Ramas anchas, planas y palmeadas",
+        "habitat": "Arrecifes caribeños",
+        "history": "Lámina o reproducción de gabinete.",
+        "plate": "Perfil reconocible frente a las ramas cilíndricas de asta de ciervo.",
+        "source": "https://www.fisheries.noaa.gov/species/elkhorn-coral"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-12/clasica-64.webp",
+            "bytes": 2996
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-12/clasica-128.webp",
+            "bytes": 7886
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-12/clasica-256.webp",
+            "bytes": 25220
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-12/clasica-512.webp",
+            "bytes": 76414
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/COR-12/inventario-64.webp",
+            "bytes": 2986
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/COR-12/inventario-128.webp",
+            "bytes": 8462
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/COR-12/inventario-256.webp",
+            "bytes": 24394
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/COR-12/inventario-512.webp",
+            "bytes": 69528
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",
@@ -18735,6 +20783,17 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Coleccionable propuesto",
       "pilot": true,
       "stage": "OBJ-01",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Sargassum · tipo pelágico",
+        "classification": "Alga parda · Fucales",
+        "material": "Talo membranoso",
+        "diagnostic": "Frondas lanceoladas y vesículas flotantes",
+        "habitat": "Mar de los Sargazos",
+        "history": "Lámina de observación histórica.",
+        "plate": "Conservada de OBJ-01.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
         "clasica": {
           "64": {
@@ -18796,13 +20855,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Ulva lactuca · referencia",
+        "classification": "Alga verde · Ulvales",
+        "material": "Talo delgado translúcido",
+        "diagnostic": "Lámina irregular ondulada y fijación basal",
+        "habitat": "Costas atlánticas someras",
+        "history": "Lámina de gabinete.",
+        "plate": "El talo carece de nervaduras foliares de planta terrestre.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-02/clasica-64.webp",
+            "bytes": 3110
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-02/clasica-128.webp",
+            "bytes": 8674
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-02/clasica-256.webp",
+            "bytes": 26154
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-02/clasica-512.webp",
+            "bytes": 74512
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-02/inventario-64.webp",
+            "bytes": 3138
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-02/inventario-128.webp",
+            "bytes": 9046
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-02/inventario-256.webp",
+            "bytes": 24756
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-02/inventario-512.webp",
+            "bytes": 65050
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -18824,13 +20928,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Chondrus crispus",
+        "classification": "Alga roja · Gigartinales",
+        "material": "Talo aplanado y cartilaginoso",
+        "diagnostic": "Ramas cortas dicotómicas con extremos redondeados",
+        "habitat": "Intermareal rocoso del Atlántico nororiental",
+        "history": "Lámina de gabinete.",
+        "plate": "Se representa pigmentación rojiza orientativa.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-03/clasica-64.webp",
+            "bytes": 2854
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-03/clasica-128.webp",
+            "bytes": 8532
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-03/clasica-256.webp",
+            "bytes": 26740
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-03/clasica-512.webp",
+            "bytes": 82560
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-03/inventario-64.webp",
+            "bytes": 3040
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-03/inventario-128.webp",
+            "bytes": 9222
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-03/inventario-256.webp",
+            "bytes": 26712
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-03/inventario-512.webp",
+            "bytes": 79202
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -18852,13 +21001,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Durvillaea · cochayuyo chileno",
+        "classification": "Alga parda · Fucales",
+        "material": "Talo grueso, coriáceo",
+        "diagnostic": "Frondas en cintas robustas y hapterio firme",
+        "habitat": "Intermareal rocoso del sur de Chile",
+        "history": "Lámina de un morfotipo conocido en el litoral chileno.",
+        "plate": "Referencia de género; el nombre común puede abarcar más de una especie local.",
+        "source": "https://metadatos.mma.gob.cl/sinia/Documento_Fichas.pdf"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-04/clasica-64.webp",
+            "bytes": 3010
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-04/clasica-128.webp",
+            "bytes": 7704
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-04/clasica-256.webp",
+            "bytes": 22018
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-04/clasica-512.webp",
+            "bytes": 57426
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-04/inventario-64.webp",
+            "bytes": 3150
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-04/inventario-128.webp",
+            "bytes": 8150
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-04/inventario-256.webp",
+            "bytes": 19262
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-04/inventario-512.webp",
+            "bytes": 49922
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -18880,13 +21074,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Corallina officinalis · referencia",
+        "classification": "Alga roja calcificada · Corallinales",
+        "material": "Talo calcificado articulado",
+        "diagnostic": "Segmentos pequeños separados por articulaciones",
+        "habitat": "Charcas y costas rocosas",
+        "history": "Lámina de gabinete.",
+        "plate": "El talo articulado se distingue de un coral colonial.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-05/clasica-64.webp",
+            "bytes": 3020
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-05/clasica-128.webp",
+            "bytes": 8040
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-05/clasica-256.webp",
+            "bytes": 22114
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-05/clasica-512.webp",
+            "bytes": 63708
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-05/inventario-64.webp",
+            "bytes": 3146
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-05/inventario-128.webp",
+            "bytes": 8462
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-05/inventario-256.webp",
+            "bytes": 21124
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-05/inventario-512.webp",
+            "bytes": 59000
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -18908,13 +21147,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Macrocystis pyrifera",
+        "classification": "Alga parda · Laminariales",
+        "material": "Talo coriáceo",
+        "diagnostic": "Varias láminas con vesícula en la base de cada una",
+        "habitat": "Bosques costeros de kelpo del Pacífico",
+        "history": "Lámina de gabinete.",
+        "plate": "Se representa un tramo lateral, no el tamaño de la planta completa.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-06/clasica-64.webp",
+            "bytes": 2500
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-06/clasica-128.webp",
+            "bytes": 6528
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-06/clasica-256.webp",
+            "bytes": 17166
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-06/clasica-512.webp",
+            "bytes": 44594
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-06/inventario-64.webp",
+            "bytes": 2624
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-06/inventario-128.webp",
+            "bytes": 6700
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-06/inventario-256.webp",
+            "bytes": 16356
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-06/inventario-512.webp",
+            "bytes": 39476
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -18936,13 +21220,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Undaria pinnatifida",
+        "classification": "Alga parda · Laminariales",
+        "material": "Talo laminar",
+        "diagnostic": "Lámina con nervio central y divisiones laterales",
+        "habitat": "Costas templadas del Pacífico noroccidental",
+        "history": "Lámina de observación de litoral japonés.",
+        "plate": "El dibujo resalta el eje longitudinal.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-07/clasica-64.webp",
+            "bytes": 2440
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-07/clasica-128.webp",
+            "bytes": 6842
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-07/clasica-256.webp",
+            "bytes": 18142
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-07/clasica-512.webp",
+            "bytes": 47178
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-07/inventario-64.webp",
+            "bytes": 2622
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-07/inventario-128.webp",
+            "bytes": 6916
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-07/inventario-256.webp",
+            "bytes": 15916
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-07/inventario-512.webp",
+            "bytes": 40644
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -18964,13 +21293,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Caulerpa lentillifera · referencia",
+        "classification": "Alga verde · Bryopsidales",
+        "material": "Talo sifonal",
+        "diagnostic": "Estolón y ramillas con pequeñas esferas agrupadas",
+        "habitat": "Zonas someras del Indo-Pacífico",
+        "history": "Lámina de gabinete.",
+        "plate": "Las esferas son ramificaciones, no frutos.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-08/clasica-64.webp",
+            "bytes": 2234
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-08/clasica-128.webp",
+            "bytes": 6514
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-08/clasica-256.webp",
+            "bytes": 17328
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-08/clasica-512.webp",
+            "bytes": 47250
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-08/inventario-64.webp",
+            "bytes": 2398
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-08/inventario-128.webp",
+            "bytes": 6864
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-08/inventario-256.webp",
+            "bytes": 16344
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-08/inventario-512.webp",
+            "bytes": 43040
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -18992,13 +21366,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Palmaria palmata",
+        "classification": "Alga roja · Palmariales",
+        "material": "Talo aplanado rojizo",
+        "diagnostic": "Lóbulos anchos y cortos de forma palmeada",
+        "habitat": "Costas del Atlántico norte",
+        "history": "Lámina de gabinete.",
+        "plate": "Perfil plano y flexible.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-09/clasica-64.webp",
+            "bytes": 2250
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-09/clasica-128.webp",
+            "bytes": 5598
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-09/clasica-256.webp",
+            "bytes": 15082
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-09/clasica-512.webp",
+            "bytes": 40372
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-09/inventario-64.webp",
+            "bytes": 2236
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-09/inventario-128.webp",
+            "bytes": 5724
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-09/inventario-256.webp",
+            "bytes": 12432
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-09/inventario-512.webp",
+            "bytes": 31974
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -19020,13 +21439,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Padina pavonica · referencia",
+        "classification": "Alga parda · Dictyotales",
+        "material": "Talo laminar con depósitos calcáreos",
+        "diagnostic": "Abanico con bandas concéntricas y borde enrollado",
+        "habitat": "Costas templadas cálidas y subtropicales",
+        "history": "Lámina de gabinete.",
+        "plate": "La escala relativa facilita ver los arcos.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-10/clasica-64.webp",
+            "bytes": 2198
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-10/clasica-128.webp",
+            "bytes": 5620
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-10/clasica-256.webp",
+            "bytes": 16132
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-10/clasica-512.webp",
+            "bytes": 41178
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-10/inventario-64.webp",
+            "bytes": 2114
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-10/inventario-128.webp",
+            "bytes": 5542
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-10/inventario-256.webp",
+            "bytes": 13014
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-10/inventario-512.webp",
+            "bytes": 31536
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -19048,13 +21512,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Codium · tipo de talo cilíndrico",
+        "classification": "Alga verde · Bryopsidales",
+        "material": "Talo sifonal aterciopelado",
+        "diagnostic": "Ramas tubulares gruesas con bifurcaciones",
+        "habitat": "Litoral templado de Nueva Zelanda",
+        "history": "Lámina de gabinete.",
+        "plate": "Referencia de género; especie no determinada por silueta.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-11/clasica-64.webp",
+            "bytes": 2988
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-11/clasica-128.webp",
+            "bytes": 8188
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-11/clasica-256.webp",
+            "bytes": 21920
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-11/clasica-512.webp",
+            "bytes": 58870
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-11/inventario-64.webp",
+            "bytes": 3168
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-11/inventario-128.webp",
+            "bytes": 8458
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-11/inventario-256.webp",
+            "bytes": 20930
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-11/inventario-512.webp",
+            "bytes": 52734
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Oceanografía",
@@ -19076,13 +21585,58 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "type": "Coleccionable propuesto",
       "pilot": false,
-      "stage": "Futuras etapas",
+      "stage": "OBJ-08",
+      "oceanography": {
+        "nature": "Científica",
+        "identity": "Iridescencia de alga parda australiana · morfotipo documental",
+        "classification": "Alga parda · identificación específica pendiente",
+        "material": "Talo ramificado",
+        "diagnostic": "Pigmentación oliva y reflejo superficial localizado",
+        "habitat": "Litoral australiano de catálogo",
+        "history": "Lámina contemporánea de referencia, sin atribución a una recolección de 1842.",
+        "plate": "La identificación y el mecanismo óptico del ejemplar requieren cotejo.",
+        "source": "https://www.algaebase.org/"
+      },
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-12/clasica-64.webp",
+            "bytes": 3118
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-12/clasica-128.webp",
+            "bytes": 9002
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-12/clasica-256.webp",
+            "bytes": 25170
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-12/clasica-512.webp",
+            "bytes": 70198
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/ALG-12/inventario-64.webp",
+            "bytes": 3284
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/ALG-12/inventario-128.webp",
+            "bytes": 9706
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/ALG-12/inventario-256.webp",
+            "bytes": 24406
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/ALG-12/inventario-512.webp",
+            "bytes": 66538
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia",

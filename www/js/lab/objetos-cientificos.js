@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const {rows, groups, materialIds, recipeExamples, archive, cartography, paleontology, botany, geology, geologyComparisons} = AtlasObjetosCientificos;
+  const {rows, groups, materialIds, recipeExamples, archive, cartography, paleontology, botany, geology, geologyComparisons, oceanography, oceanographyComparisons} = AtlasObjetosCientificos;
   const {phases, reconstruction} = AtlasReconstruccionObjetos;
   const fossilGroups = {
     materials: {name:'Materiales y fósiles menores', ids:[...paleontology.materials,...paleontology.minors]},
@@ -52,6 +52,7 @@
   options(get('group'), groups.map(group => group.name));
   options(get('botany-group'), botany.map(group => group.name), 'Plancha general · 48 piezas');
   options(get('geology-group'), [...geology,...geologyComparisons].map(group => group.name), 'Plancha general · 60 piezas');
+  options(get('oceanography-group'), [...oceanography,...oceanographyComparisons].map(group => group.name), 'Plancha general · 60 piezas');
   for (const mount of paleontology.mounts) get('mount').add(new Option(mount.name, mount.id));
   phases.forEach((phase, index) => get('phase').add(new Option(phase.name, String(index))));
   get('phase').value = '3';
@@ -186,6 +187,24 @@
       facts.append(node('dt','Fuente'),cell);
       card.append(facts);
     }
+    if (row.oceanography) {
+      const sample = row.oceanography;
+      const facts = node('dl', '', 'material-facts');
+      for (const [label,value] of [['Naturaleza',sample.nature],['Identificación',sample.identity],
+        ['Clasificación',sample.classification],['Procedencia',row.provenance],['Material',sample.material],
+        [sample.nature === 'Ficción explícita' ? 'Rasgo de diseño' : 'Rasgo documentado',sample.diagnostic],['Hábitat',sample.habitat],['Contexto histórico',sample.history],
+        ['Observación de la lámina',sample.plate]]) {
+        if (value) facts.append(node('dt',label),node('dd',value));
+      }
+      const source = node('dd');
+      if (sample.source.startsWith('https://')) {
+        const link = node('a','Ficha de referencia');
+        link.href = sample.source;
+        source.append(link);
+      } else source.textContent = sample.source;
+      facts.append(node('dt','Fuente documental'),source);
+      card.append(facts);
+    }
     if (row.species) {
       const facts = node('dl', '', 'material-facts');
       for (const [label, value] of [['Especies potenciales', row.species.join(', ')], ['Continentes', row.continent],
@@ -317,6 +336,10 @@
         const selection = get('geology-group').value;
         return selection ? [...geology,...geologyComparisons].find(group => group.name === selection)?.ids.includes(row.id) : row.geology;
       }
+      case 'oceanography': {
+        const selection = get('oceanography-group').value;
+        return selection ? [...oceanography,...oceanographyComparisons].find(group => group.name === selection)?.ids.includes(row.id) : row.oceanography;
+      }
       case 'groups': return groups.find(group => group.name === get('group').value).ids.includes(row.id);
       case 'paleontology': return fossilGroups[get('paleo-section').value]?.ids.includes(row.id);
       case 'archive': return archive.find(group => group.name === archiveSelect.value)?.ids.includes(row.id);
@@ -408,7 +431,7 @@
       const grid = node('div', '', 'botany-grid');
       for (const row of entries) {
         const card = node('article', '', cabinet + '-card');
-        card.append(node('h3', row.name), node('small', row.id + ' · ' + row.rarity));
+        card.append(node('h3', row.name), node('small', [row.id,row.rarity,row.oceanography?.nature].filter(Boolean).join(' · ')));
         const samples = node('div', '', 'botany-samples');
         for (const [key, title] of labels) samples.append(figure(row,key,title));
         card.append(samples);
@@ -429,7 +452,9 @@
     get('botany-control').hidden = !inBotany;
     const inGeology = view === 'geology';
     get('geology-control').hidden = !inGeology;
-    get('botany-variant-control').hidden = !inBotany && !inGeology;
+    const inOceanography = view === 'oceanography';
+    get('oceanography-control').hidden = !inOceanography;
+    get('botany-variant-control').hidden = !inBotany && !inGeology && !inOceanography;
     const inAssembly = inArchive && archiveSelect.value === 'assembly';
     get('archive-control').hidden = !inArchive;
     get('assembly-control').hidden = !inAssembly;
@@ -469,7 +494,13 @@
       gallery.append(compare);
       return;
     }
-    get('status').textContent = selected.length + ' resultados' + (['compare','groups','archive','paleontology','botany','geology'].includes(view) ? '' : ' · Simulación con datos de prueba');
+    get('status').textContent = selected.length + ' resultados' + (['compare','groups','archive','paleontology','botany','geology','oceanography'].includes(view) ? '' : ' · Simulación con datos de prueba');
+    if (inOceanography) {
+      navigation(0, 0);
+      const selectedComparison = oceanographyComparisons.find(group => group.name === get('oceanography-group').value);
+      renderCabinet(selected, selectedComparison ? [selectedComparison] : oceanography, view);
+      return;
+    }
     if (inBotany || inGeology) {
       navigation(0, 0);
       const selectedComparison = inGeology && geologyComparisons.find(group => group.name === get('geology-group').value);
@@ -510,7 +541,7 @@
   }
 
   get('search').addEventListener('input', resetPage);
-  for (const key of ['view','group','botany-group','geology-group','paleo-section','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
+  for (const key of ['view','group','botany-group','geology-group','oceanography-group','paleo-section','archive-section','recipe-example','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
   for (const key of ['scale','ground','halo','stock','assembly','botany-variant','mount','phase','living']) get(key).addEventListener('change', render);
   function resetPage() {
     page = 0;

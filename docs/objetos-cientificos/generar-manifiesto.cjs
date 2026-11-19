@@ -225,6 +225,16 @@ const geologicalFacts = Object.fromEntries(read('docs/objetos-cientificos/fichas
 assert.equal(stage07Art.size, 55);
 assert.equal(Object.keys(geologicalFacts).length, 60);
 
+const stage08 = JSON.parse(read('docs/objetos-cientificos/obj-08.json'));
+const stage08Art = new Set(stage08.sheets.flatMap(sheet => sheet.ids).filter(Boolean));
+const maritimeFacts = Object.fromEntries(read('docs/objetos-cientificos/fichas-oceanografia.tsv').trim().split('\n').slice(1).map(line => {
+  const [id,nature,identity,classification,material,diagnostic,habitat,history,plate,source] = line.split('\t');
+  assert.ok(source, id);
+  return [id,{nature,identity,classification,material,diagnostic,habitat:habitat === '—' ? '' : habitat,history,plate,source}];
+}));
+assert.equal(stage08Art.size, 49);
+assert.equal(Object.keys(maritimeFacts).length, 60);
+
 assert.equal(extra.length, 60);
 const newCollections = new Set(extra.map(row => row.collection));
 assert.equal(newCollections.size, 5);
@@ -299,9 +309,10 @@ const rows = [...products,...catalog,...museumRecords,...concepts,...futureMater
   return {cabinet:null,collection:null,rarity:null,tier:null,continent:null,provenance:null,
     acquisition:null,description:null,material:null,context:null,original:null,observations:null, ...row,
     pilot:plateIds.includes(row.id),
-    stage:plateIds.includes(row.id) ? 'OBJ-01' : stage02Ids.has(row.id) ? 'OBJ-02' : stage03Ids.has(row.id) ? 'OBJ-03' : stage04Ids.has(row.id) ? 'OBJ-04' : stage05Ids.has(row.id) ? 'OBJ-05' : stage06Art.has(row.id) ? 'OBJ-06' : stage07Art.has(row.id) ? 'OBJ-07' : 'Futuras etapas',
+    stage:plateIds.includes(row.id) ? 'OBJ-01' : stage02Ids.has(row.id) ? 'OBJ-02' : stage03Ids.has(row.id) ? 'OBJ-03' : stage04Ids.has(row.id) ? 'OBJ-04' : stage05Ids.has(row.id) ? 'OBJ-05' : stage06Art.has(row.id) ? 'OBJ-06' : stage07Art.has(row.id) ? 'OBJ-07' : stage08Art.has(row.id) ? 'OBJ-08' : 'Futuras etapas',
     ...(botanicalFacts[row.id] ? {botany:botanicalFacts[row.id]} : {}),
     ...(geologicalFacts[row.id] ? {geology:geologicalFacts[row.id]} : {}),
+    ...(maritimeFacts[row.id] ? {oceanography:maritimeFacts[row.id]} : {}),
     context:row.id === 'INS-05' ? 'Futuro · barómetro aneroide de Vidi, 1844' : row.context,
     observations:pilotNotes[row.id] || row.observations || null, sprites, approval:'Pendiente',
     artState:sprites.clasica && sprites.inventario ? 'Candidato' : row.newArtwork === false ? 'Reutilización documental' : 'Pendiente'};
@@ -310,9 +321,9 @@ assert.equal(new Set(rows.map(row => row.id)).size, rows.length);
 assert.equal(rows.filter(row => row.pilot).length, 30);
 assert.equal(stage02Ids.size, 31);
 assert.equal(rows.filter(row => row.stage === 'OBJ-02').length, stage02Ids.size);
-const candidateIds = new Set([...plateIds, ...stage02Ids, ...stage03Art, ...stage04Art, ...stage05Art, ...stage06Art, ...stage07Art]);
+const candidateIds = new Set([...plateIds, ...stage02Ids, ...stage03Art, ...stage04Art, ...stage05Art, ...stage06Art, ...stage07Art, ...stage08Art]);
 const candidates = rows.filter(row => candidateIds.has(row.id));
-assert.equal(candidates.length, 278);
+assert.equal(candidates.length, 327);
 assert.equal(rows.filter(row => row.artState === 'Candidato').length, candidates.length);
 assert.ok(materialIds.every(id => candidateIds.has(id)), 'Material de OBJ-03 sin candidato');
 assert.ok(candidates.every(row => Object.values(row.sprites).every(files => Object.values(files || {}).filter(file => file.bytes > 0).length === 4)));
@@ -353,8 +364,8 @@ const botany = stage06.collections.map(({id,name}) => ({
   name, ids:catalog.filter(row => row.id.startsWith(id+'-') && row.collection === name).map(row => row.id)
 }));
 assert.deepEqual(botany.map(group => group.ids.length), [12,12,12,12]);
-assert.equal(illustrated.size, 278);
-assert.equal(catalog.filter(row => illustrated.has(row.id)).length, 160);
+assert.equal(illustrated.size, 327);
+assert.equal(catalog.filter(row => illustrated.has(row.id)).length, 209);
 assert.ok(botany.flatMap(group => group.ids).every(id => illustrated.get(id)?.botany));
 const geology = stage07.collections.map(prefix => {
   const specimens = catalog.filter(row => row.id.startsWith(prefix + '-') && row.cabinet === 'Geología');
@@ -364,7 +375,19 @@ const geology = stage07.collections.map(prefix => {
 });
 assert.equal(new Set(geology.map(group => group.name)).size, 5);
 assert.ok(stage07.comparisons.flatMap(group => group.ids).every(id => illustrated.has(id)));
-const manifest = {schema:1, year:1842, botany, geology, geologyComparisons:stage07.comparisons, groups:[...stage02.groups, ...stage03.groups], archive, cartography, paleontology,
+const oceanography = stage08.collections.map(name => {
+  const specimens = catalog.filter(row => row.collection === name && row.cabinet === 'Oceanografía');
+  assert.ok(specimens.every(row => illustrated.get(row.id)?.oceanography));
+  return {name, ids:specimens.map(row => row.id)};
+});
+assert.deepEqual(oceanography.map(group => group.ids.length),[7,5,12,12,12,12]);
+const atlantes = oceanography.find(group => group.name === 'Secretos de Atlántida').ids;
+assert.ok(atlantes.every(id => maritimeFacts[id].nature === 'Ficción explícita'));
+assert.equal(stage08.sources.length,5);
+assert.ok(stage08.sources.flatMap(group => group.ids).every(id => illustrated.has(id) && maritimeFacts[id]));
+assert.ok(stage08.comparisons.flatMap(group => group.ids).every(id => illustrated.has(id)));
+const manifest = {schema:1, year:1842, botany, geology, geologyComparisons:stage07.comparisons,
+  oceanography, oceanographyComparisons:stage08.comparisons, maritimeSources:stage08.sources, groups:[...stage02.groups, ...stage03.groups], archive, cartography, paleontology,
   tradeRoutes:game.TRADE_ROUTES.slice(0, 3).map(({name,rewards}) => ({name,rewards})),
   barter:game.REGIONAL_BARTERS3400.map(({id,continent,material,quantity}) => ({id,continent,material,quantity})),
   materialIds, animalMaterialIds:stage03.animal, recipeExamples:stage03.recipes, rows};
