@@ -1,0 +1,29 @@
+{
+  "sheets": [
+    {"file":"equipo.png","columns":3,"crop":{"rows":[0,396,790,1246],"edges":[[0,415,842,1263],[0,420,840,1263],[0,420,840,1263]]},"ids":["feather_cap","rain_hood","scholar_hat","amulet","amber_charm","shell_necklace","oceanic_quadrant","polar_coat","sounding_kit"]},
+    {"file":"instrumentos-a.png","columns":3,"ids":["INS-01","INS-02","INS-03","INS-04","INS-05","INS-06","INS-07","INS-08","INS-09"]},
+    {"file":"instrumentos-b.png","columns":3,"crop":{"rows":[0,408,820,1246],"edges":[[0,425,845,1263],[0,425,845,1263],[0,421,818,1263]]},"ids":["INS-10","INS-11","INS-12","astrolabio_laton","globo_cartografico","medallon_viajero","idea-refractor-campo","idea-refractor-observatorio","idea-sombrero-tratado"]},
+    {"file":"evolucion.png","columns":2,"crop":{"rows":[0,502,1024],"edges":[[0,768,1536],[0,768,1536]],"alpha":[195,247]},"ids":["idea-sombrero-velo","idea-morral-dividido","idea-valija-muestras","idea-gabinete-portatil"]}
+  ],
+  "ideas": [
+    {"id":"idea-refractor-campo","name":"Refractor acromático de campo","tier":"III","family":"Instrumentos científicos","material":"latón, vidrio y madera","description":"Montura plegable y enfoque por cremallera para observación estable."},
+    {"id":"idea-refractor-observatorio","name":"Refractor de observatorio","tier":"IV","family":"Instrumentos científicos","material":"latón, vidrio y caoba","description":"Montura pivotante con contrapeso y círculo graduado para orientar el tubo."},
+    {"id":"idea-sombrero-tratado","name":"Sombrero de campo de fieltro tratado","tier":"III","family":"Sombreros y prendas","material":"fieltro y latón","description":"Ala ancha con borde cosido y ajuste de hebilla para proteger frente a lluvia y viento."},
+    {"id":"idea-sombrero-velo","name":"Sombrero de campo con protector de nuca","tier":"IV","family":"Sombreros y prendas","material":"fieltro, lino y latón","description":"Ala reforzada, copa estructurada y protector de lino desmontable con botones."},
+    {"id":"idea-morral-dividido","name":"Morral de muestras con divisiones","tier":"II","family":"Materiales de expedición","material":"lona y cuero","description":"Separador interior para pliegos y dos bolsillos exteriores para herramientas."},
+    {"id":"idea-valija-muestras","name":"Valija de muestras rígida","tier":"III","family":"Materiales de expedición","material":"madera, cuero y latón","description":"Caja rígida compartimentada, reforzada en las esquinas para muestras frágiles."},
+    {"id":"idea-gabinete-portatil","name":"Gabinete portátil de viaje","tier":"IV","family":"Materiales de expedición","material":"caoba, cuero y latón","description":"Cajones bajos con cierres y correa de transporte para clasificar las muestras en campo."}
+  ],
+  "groups": [
+    {"name":"Instrumentos y morral de viaje","ids":["binoculars","brass_compass","sturdy_pack","field_telescope"]},
+    {"name":"Sombreros y prendas","ids":["field_hat","feather_cap","rain_hood","scholar_hat"]},
+    {"name":"Collares y amuletos","ids":["amulet","amber_charm","shell_necklace","museum_medallion"]},
+    {"name":"Preparaciones especiales","ids":["oceanic_quadrant","polar_coat","sounding_kit"]},
+    {"name":"Instrumentos de exploración · colección","ids":["INS-01","INS-02","INS-03","INS-04","INS-05","INS-06","INS-07","INS-08","INS-09","INS-10","INS-11","INS-12"]},
+    {"name":"Instrumentos de viaje y ejemplares históricos","ids":["brass_compass","INS-02","field_telescope","INS-08","oceanic_quadrant","INS-10","astrolabio_laton"]},
+    {"name":"Instrumentos y exploración · Museo","ids":["astrolabio_laton","globo_cartografico","medallon_viajero"]},
+    {"name":"Evolución · instrumentos ópticos","evolution":true,"ids":["binoculars","field_telescope","idea-refractor-campo","idea-refractor-observatorio"]},
+    {"name":"Evolución · sombreros de naturalista","evolution":true,"ids":["field_hat","scholar_hat","idea-sombrero-tratado","idea-sombrero-velo"]},
+    {"name":"Evolución · equipamiento de viaje","evolution":true,"ids":["sturdy_pack","idea-morral-dividido","idea-valija-muestras","idea-gabinete-portatil"]}
+  ]
+}

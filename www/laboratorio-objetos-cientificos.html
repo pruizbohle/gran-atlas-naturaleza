@@ -18,17 +18,19 @@
 <main>
   <div class="controls">
     <label>Vista<select id="view">
-      <option value="compare">Comparación</option><option value="inventory">Inventario funcional</option>
+      <option value="compare">Comparación</option><option value="groups">Familias y evolución</option><option value="inventory">Inventario funcional</option>
       <option value="equipment">Equipo del naturalista</option><option value="workshop">Taller de fabricación</option>
       <option value="album">Álbum de coleccionables</option><option value="museum">Gabinete museístico</option>
     </select></label>
     <label>Buscar<input type="search" id="search" placeholder="Nombre, ID o procedencia"></label>
+    <label id="group-control" hidden>Conjunto<select id="group"></select></label>
     <label>Mostrar<select id="scope"><option value="pilot">Tanda inicial</option><option value="all">Catálogo completo</option></select></label>
     <label>Familia<select id="family"></select></label>
     <label>Gabinete<select id="cabinet"></select></label>
     <label>Colección<select id="collection"></select></label>
     <label>Rareza<select id="rarity"></select></label>
     <label>Tier artístico<select id="tier"></select></label>
+    <label>Etapa de producción<select id="stage"></select></label>
     <label>Aprobación<select id="approval"></select></label>
     <label>Orden<select id="sort"><option value="name">Alfabético</option><option value="rarity">Rareza</option><option value="bytes">Peso a la escala elegida</option></select></label>
     <label>Presentación<select id="layout"><option value="grid">Cuadrícula</option><option value="single">Individual</option></select></label>

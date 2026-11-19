@@ -79,3 +79,20 @@ Las 30 ilustraciones, con dos variantes y cuatro resoluciones, ocupan **4,01 MiB
 En la [plancha de legibilidad](legibilidad.webp), cada sujeto aparece primero a 32 y luego a 64 px, con clásica a la izquierda e inventario a la derecha. A 32 px los prismáticos, el catalejo, el sombrero, el ginkgo y el coco de mar conservan siluetas distintas. El contorno oval del ópalo y la fractura de la obsidiana ayudan a separarlos. El relieve de las monedas y las costas de las cartas requieren 64 px o más para distinguirse. Conviene acentuar pliegues y perfiles en esos pares antes de aprobarlos. La carta de Magallanes, el grabado de los sellos y las piezas acuñadas requieren un cotejo con ejemplares datados. La evaluación individual queda en **Pendiente** hasta que se revise cada propuesta.
 
 Se verificaron los 240 archivos con sus dimensiones y canal alfa. En Chromium móvil se comprobó el funcionamiento con un servidor local y solicitudes externas bloqueadas, incluyendo filtros, escalas, las cinco simulaciones y persistencia y exportación JSON. Las seis pruebas de inventario pasaron. Las suites históricas GM06 y Museo dieron 19 aprobadas y los mismos 11 fallos en la base 4.3.0 y en la rama experimental.
+
+## Hoja de ruta
+
+| Etapa | Alcance |
+| --- | --- |
+| OBJ-01 | Laboratorio y piloto |
+| OBJ-02 | [Equipamiento e instrumentos](OBJ-02.md) |
+| OBJ-03 | Materiales animales y de expedición |
+| OBJ-04 | Cartografía y mercancías regionales |
+| OBJ-05 | Fósiles y Museo |
+| OBJ-06 | Botánica |
+| OBJ-07 | Geología |
+| OBJ-08 | Oceanografía |
+| OBJ-09 | Historia |
+| OBJ-10 | Historia natural y exploración |
+| OBJ-11 | Auditoría global |
+| OBJ-12 | Integración posterior a la aprobación artística de los animales |

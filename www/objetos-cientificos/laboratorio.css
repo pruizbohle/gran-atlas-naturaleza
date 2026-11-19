@@ -54,3 +54,20 @@ form { margin-top: .55rem; }
 .collection { margin-bottom: 1.5rem; }
 progress { accent-color: #4c755a; margin: .4rem 0 .8rem; }
 .requirements { padding-left: 1.2rem; font-size: .83rem; }
+[hidden] { display: none; }
+.family-strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max(180px, calc(var(--size) + 26px));
+  gap: .75rem;
+  overflow-x: auto;
+  padding: .3rem .2rem .75rem;
+}
+.family-card {
+  display: grid;
+  grid-row: span 6;
+  grid-template-rows: subgrid;
+  padding: .65rem;
+}
+.family-card h3 { font-size: 1.1rem; }
+.family-card .stage { padding-inline: 0; }

@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const rows = AtlasObjetosCientificos.rows;
+  const {rows, groups} = AtlasObjetosCientificos;
   const byId = new Map(rows.map(row => [row.id, row]));
   const get = id => document.getElementById(id);
   const gallery = get('gallery');
@@ -12,7 +12,7 @@
   const criteria = ['Reconocimiento inmediato', 'Fidelidad al material', 'Precisión histórica',
     'Belleza visual', 'Coherencia con El Gran Atlas', 'Diferenciación', 'Legibilidad a 32 px', 'Legibilidad a 64 px'];
   const headings = [['original','Sprite original'], ['clasica','Ilustración clásica'], ['inventario','Optimizada para inventario']];
-  const filters = ['family', 'cabinet', 'collection', 'rarity', 'tier', 'approval'];
+  const filters = ['family', 'cabinet', 'collection', 'rarity', 'tier', 'stage', 'approval'];
   const collator = new Intl.Collator('es');
   const pageSize = 12;
   let page = 0;
@@ -40,6 +40,8 @@
     const values = key === 'approval' ? approvals : [...new Set(rows.map(row => row[key]).filter(Boolean))].sort(collator.compare);
     options(get(key), values, 'Todas las opciones');
   }
+
+  options(get('group'), groups.map(group => group.name));
 
   function approval(row) {
     return reviews[row.id]?.approval || row.approval;
@@ -133,7 +135,7 @@
   }
 
   function metadata(row) {
-    return [row.id, row.type, row.family, row.cabinet, row.collection, row.rarity, row.tier && 'Tier ' + row.tier, approval(row)].filter(Boolean).join(' · ');
+    return [row.id, row.type, row.family, row.cabinet, row.collection, row.rarity, row.stage, row.tier && 'Tier ' + row.tier, approval(row)].filter(Boolean).join(' · ');
   }
 
   function comparison(row) {
@@ -190,7 +192,8 @@
       case 'workshop': return row.type === 'Objeto productivo' && row.recipe;
       case 'album': return row.type === 'Coleccionable propuesto';
       case 'museum': return row.type === 'Pieza del Museo';
-      default: return get('scope').value !== 'pilot' || row.pilot;
+      case 'groups': return groups.find(group => group.name === get('group').value).ids.includes(row.id);
+      default: return get('stage').value || get('scope').value !== 'pilot' || row.pilot;
     }
   }
 
@@ -244,10 +247,36 @@
     gallery.append(section);
   }
 
+  function renderGroup(selected) {
+    const group = groups.find(entry => entry.name === get('group').value);
+    const visible = new Map(selected.map(row => [row.id, row]));
+    const ordered = group.evolution ? group.ids.map(id => visible.get(id)).filter(Boolean) : selected;
+    const section = node('section');
+    const title = node('h2', group.name);
+    title.id = 'group-title';
+    section.append(title);
+    const strip = node('div', '', 'family-strip');
+    strip.tabIndex = 0;
+    strip.setAttribute('role', 'region');
+    strip.setAttribute('aria-labelledby', title.id);
+    for (const row of ordered) {
+      const card = node('article', '', 'family-card');
+      card.append(node('h3', row.name), node('small', [row.type, row.tier && 'Tier ' + row.tier, row.stage].filter(Boolean).join(' · ')));
+      for (const [key, caption] of headings) card.append(figure(row, key, caption));
+      const link = node('button', 'Consultar y evaluar');
+      link.addEventListener('click', () => inspect(row));
+      card.append(link);
+      strip.append(card);
+    }
+    if (ordered.length) section.append(strip);
+    gallery.append(section);
+  }
+
   function render() {
     const view = get('view').value;
     const single = view === 'compare' && get('layout').value === 'single';
-    get('scope').disabled = view !== 'compare';
+    get('scope').disabled = view !== 'compare' || Boolean(get('stage').value);
+    get('group-control').hidden = view !== 'groups';
     get('layout').disabled = view !== 'compare';
     const query = normalize(get('search').value.trim());
     const selected = sortRows(rows.filter(row => matchesView(row, view) &&
@@ -255,7 +284,12 @@
       filters.every(key => !get(key).value || get(key).value === (key === 'approval' ? approval(row) : row[key]))));
     gallery.replaceChildren();
     gallery.style.setProperty('--size', size() + 'px');
-    get('status').textContent = selected.length + ' resultados' + (view === 'compare' ? '' : ' · Simulación con datos de prueba');
+    get('status').textContent = selected.length + ' resultados' + (['compare','groups'].includes(view) ? '' : ' · Simulación con datos de prueba');
+    if (view === 'groups') {
+      navigation(0, 0);
+      renderGroup(selected);
+      return;
+    }
     if (view === 'album') {
       renderAlbum(selected);
       return;
@@ -276,7 +310,7 @@
   }
 
   get('search').addEventListener('input', resetPage);
-  for (const key of ['view','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
+  for (const key of ['view','group','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
   for (const key of ['scale','ground','halo']) get(key).addEventListener('change', render);
   function resetPage() {
     page = 0;

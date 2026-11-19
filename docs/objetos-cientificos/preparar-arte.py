@@ -1,4 +1,5 @@
-"""Recorta tres planchas RGBA. Pasar las rutas de objetos, naturaleza y mixta."""
+"""OBJ-01: pasar las tres planchas originales. OBJ-02: pasar --obj-02 y una plancha opcional."""
+import json
 from pathlib import Path
 import sys
 
@@ -12,22 +13,27 @@ SHEETS = (
     (3, 'COR-01 ALG-01 NUM-01 FIL-01 MED-01 MAP-09 HUE-12 ARQ-01 MAR-12'),
 )
 
-if len(sys.argv) != 4:
-    sys.exit(__doc__)
-
-for filename, (columns, names) in zip(sys.argv[1:], SHEETS):
+def prepare(filename, columns, names, method, guides=None):
     sheet = Image.open(filename).convert('RGBA')
-    # Las divisiones manuales siguen los espacios transparentes de cada plancha piloto.
-    if sheet.size == (1448, 1086):
+    # Las divisiones manuales siguen los espacios transparentes de cada plancha.
+    if guides:
+        rows = guides['rows']
+        bounds_by_row = guides['edges']
+        if 'alpha' in guides:
+            low, high = guides['alpha']
+            alpha = sheet.getchannel('A')
+            sheet.putalpha(alpha.point(lambda value: round(max(0, min(255, (value-low)*255/(high-low))))))
+    elif method == 6 and sheet.size == (1448, 1086):
         rows = (0, 362, 724, 1086)
         bounds_by_row = ((0,362,724,1050,1448), (0,420,724,1050,1448), (0,370,750,1030,1448))
-    elif sheet.size == (1263, 1246):
+    elif method == 6 and sheet.size == (1263, 1246):
         rows = (0, 414, 813, 1246)
         bounds_by_row = ((0,425,845,1263),) * 3
     else:
-        rows = tuple(row * sheet.height // 3 for row in range(4))
-        bounds_by_row = (tuple(column * sheet.width // columns for column in range(columns + 1)),) * 3
-    for index, name in enumerate(names.split()):
+        count = len(names) // columns
+        rows = tuple(row * sheet.height // count for row in range(count + 1))
+        bounds_by_row = (tuple(column * sheet.width // columns for column in range(columns + 1)),) * count
+    for index, name in enumerate(names):
         row, column = divmod(index, columns)
         edges = bounds_by_row[row]
         art = sheet.crop((edges[column], rows[row], edges[column + 1], rows[row + 1]))
@@ -35,6 +41,9 @@ for filename, (columns, names) in zip(sys.argv[1:], SHEETS):
         bounds = alpha.point(lambda value: 255 if value >= 18 else 0).getbbox()
         if not bounds:
             raise ValueError(f'Celda vacía: {name}')
+        if method != 6 and (bounds[0] == 0 or bounds[1] == 0 or
+                            bounds[2] == art.width or bounds[3] == art.height):
+            raise ValueError(f'Revisar límites de celda: {name}')
         art = art.crop(bounds)
         folder = ROOT / name
         folder.mkdir(parents=True, exist_ok=True)
@@ -54,4 +63,24 @@ for filename, (columns, names) in zip(sys.argv[1:], SHEETS):
                     resized.putalpha(alpha)
                 canvas = Image.new('RGBA', (size, size))
                 canvas.paste(resized, ((size-resized.width)//2, (size-resized.height)//2))
-                canvas.save(folder / f'{variant}-{size}.webp', quality=quality, method=6)
+                canvas.save(folder / f'{variant}-{size}.webp', quality=quality, method=method)
+
+
+def main(args):
+    if args and args[0] == '--obj-02':
+        folder = Path(__file__).parent
+        plan = json.loads((folder / 'obj-02.json').read_text())
+        sheets = [sheet for sheet in plan['sheets'] if len(args) == 1 or sheet['file'] == args[1]]
+        if not sheets or len(args) > 2:
+            sys.exit(__doc__)
+        for sheet in sheets:
+            prepare(folder / 'maestras-obj-02' / sheet['file'], sheet['columns'], sheet['ids'], 4, sheet.get('crop'))
+    elif len(args) == 3:
+        for filename, (columns, names) in zip(args, SHEETS):
+            prepare(filename, columns, names.split(), 6)
+    else:
+        sys.exit(__doc__)
+
+
+if __name__ == '__main__':
+    main(sys.argv[1:])

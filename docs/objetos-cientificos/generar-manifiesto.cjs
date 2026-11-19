@@ -144,6 +144,12 @@ const concepts = [
   {id:'idea-saccharimeter',name:'Sacarímetro óptico de gabinete',tier:'III',context:'Futuro · modelo Soleil de la década de 1840, fechar ejemplar',material:'latón y vidrio'},
   {id:'idea-achromatic-microscope',name:'Microscopio acromático de laboratorio',tier:'IV',context:'Referencia de la primera mitad del siglo XIX',material:'latón y vidrio'}
 ].map(row => ({...row,type:'Idea de equipamiento futuro',family:'Instrumentos científicos',description:'Referencia de construcción para una futura ampliación'}));
+const stage02 = JSON.parse(read('docs/objetos-cientificos/obj-02.json'));
+const stage02Ids = new Set(stage02.sheets.flatMap(sheet => sheet.ids));
+concepts.push(...stage02.ideas.map(idea => ({
+  ...idea, type:'Idea de equipamiento futuro', context:'Concepto artístico inspirado en la primera mitad del siglo XIX'
+})));
+
 assert.equal(extra.length, 60);
 const newCollections = new Set(extra.map(row => row.collection));
 assert.equal(newCollections.size, 5);
@@ -167,6 +173,13 @@ assert.deepEqual(Object.keys({Botánica:1,Geología:1,Oceanografía:1,Historia:1
   .map(cabinet => catalog.filter(row => row.cabinet === cabinet).length), [48,60,60,72,60]);
 
 const pilotNotes = {
+  'INS-02':'Caja de caoba inspirada en brújulas británicas de bolsillo de finales del siglo XVIII.',
+  'INS-05':'Referencia de un aneroide Vidi posterior a 1842. Reservar para contenido futuro.',
+  'INS-08':'Ejemplar de un solo tramo y cuerpo de madera. El catalejo de viaje usa tramos de latón visibles.',
+  'INS-09':'Representación de una caja deslizante para placa daguerreotípica de época.',
+  'oceanic_quadrant':'Cuadrante de madera y latón. Su armazón macizo lo distingue del sextante de retícula abierta.',
+  'museum_medallion':'Medallón funcional de ámbar. La medalla de expedición del Museo se representa en metal y cinta.',
+
   'MAP-09':'Silueta cartográfica candidata; verificar el trazado del estrecho contra una carta fechada.',
   'NUM-01':'Relieve candidato; cotejar perfil y cantos con un penique fechado.',
   'FIL-01':'Esquema de un sello imperforado; pendiente cotejo del grabado.',
@@ -190,15 +203,28 @@ const rows = [...products,...catalog,...museumRecords,...concepts].map(row => {
   }
   return {cabinet:null,collection:null,rarity:null,tier:null,continent:null,provenance:null,
     acquisition:null,description:null,material:null,context:null,original:null,observations:null, ...row,
-    pilot:plateIds.includes(row.id), observations:pilotNotes[row.id] || row.observations || null, sprites, approval:'Pendiente',
+    pilot:plateIds.includes(row.id),
+    stage:plateIds.includes(row.id) ? 'OBJ-01' : stage02Ids.has(row.id) ? 'OBJ-02' : 'Futuras etapas',
+    context:row.id === 'INS-05' ? 'Futuro · barómetro aneroide de Vidi, 1844' : row.context,
+    observations:pilotNotes[row.id] || row.observations || null, sprites, approval:'Pendiente',
     artState:sprites.clasica && sprites.inventario ? 'Candidato' : row.newArtwork === false ? 'Reutilización documental' : 'Pendiente'};
 });
 assert.equal(new Set(rows.map(row => row.id)).size, rows.length);
 assert.equal(rows.filter(row => row.pilot).length, 30);
-assert.equal(rows.filter(row => row.artState === 'Candidato').length, 30);
-assert.ok(rows.filter(row => row.pilot).every(row => Object.values(row.sprites).every(files => Object.keys(files || {}).length === 4)));
+assert.equal(stage02Ids.size, 31);
+assert.equal(rows.filter(row => row.stage === 'OBJ-02').length, stage02Ids.size);
+const candidates = rows.filter(row => row.stage !== 'Futuras etapas');
+assert.equal(candidates.length, 61);
+assert.ok(candidates.every(row => Object.values(row.sprites).every(files => Object.values(files || {}).filter(file => file.bytes > 0).length === 4)));
+const illustrated = new Map(candidates.map(row => [row.id, row]));
+assert.deepEqual(rows.filter(row => row.collection === 'Instrumentos de exploración').map(row => row.id),
+  stage02.groups.find(group => group.ids.length === 12).ids);
+for (const group of stage02.groups) {
+  assert.ok(group.ids.every(id => illustrated.has(id)), group.name);
+  if (group.evolution) assert.deepEqual(group.ids.map(id => illustrated.get(id).tier), ['I','II','III','IV']);
+}
 assert.equal(rows.filter(row => row.type === 'Objeto productivo' && row.original).length, 68);
-const manifest = {schema:1, year:1842, rows};
+const manifest = {schema:1, year:1842, groups:stage02.groups, rows};
 write('www/objetos-cientificos/manifiesto.js', 'globalThis.AtlasObjetosCientificos = '+JSON.stringify(manifest,null,2)+';\n');
 write('docs/objetos-cientificos/catalogo-300.json', JSON.stringify({
   schema:1, source:'docs/gm06/coleccionables-referencia.json', pieces:[...base.pieces,...extra.map(row => ({

@@ -1,6 +1,110 @@
 globalThis.AtlasObjetosCientificos = {
   "schema": 1,
   "year": 1842,
+  "groups": [
+    {
+      "name": "Instrumentos y morral de viaje",
+      "ids": [
+        "binoculars",
+        "brass_compass",
+        "sturdy_pack",
+        "field_telescope"
+      ]
+    },
+    {
+      "name": "Sombreros y prendas",
+      "ids": [
+        "field_hat",
+        "feather_cap",
+        "rain_hood",
+        "scholar_hat"
+      ]
+    },
+    {
+      "name": "Collares y amuletos",
+      "ids": [
+        "amulet",
+        "amber_charm",
+        "shell_necklace",
+        "museum_medallion"
+      ]
+    },
+    {
+      "name": "Preparaciones especiales",
+      "ids": [
+        "oceanic_quadrant",
+        "polar_coat",
+        "sounding_kit"
+      ]
+    },
+    {
+      "name": "Instrumentos de exploración · colección",
+      "ids": [
+        "INS-01",
+        "INS-02",
+        "INS-03",
+        "INS-04",
+        "INS-05",
+        "INS-06",
+        "INS-07",
+        "INS-08",
+        "INS-09",
+        "INS-10",
+        "INS-11",
+        "INS-12"
+      ]
+    },
+    {
+      "name": "Instrumentos de viaje y ejemplares históricos",
+      "ids": [
+        "brass_compass",
+        "INS-02",
+        "field_telescope",
+        "INS-08",
+        "oceanic_quadrant",
+        "INS-10",
+        "astrolabio_laton"
+      ]
+    },
+    {
+      "name": "Instrumentos y exploración · Museo",
+      "ids": [
+        "astrolabio_laton",
+        "globo_cartografico",
+        "medallon_viajero"
+      ]
+    },
+    {
+      "name": "Evolución · instrumentos ópticos",
+      "evolution": true,
+      "ids": [
+        "binoculars",
+        "field_telescope",
+        "idea-refractor-campo",
+        "idea-refractor-observatorio"
+      ]
+    },
+    {
+      "name": "Evolución · sombreros de naturalista",
+      "evolution": true,
+      "ids": [
+        "field_hat",
+        "scholar_hat",
+        "idea-sombrero-tratado",
+        "idea-sombrero-velo"
+      ]
+    },
+    {
+      "name": "Evolución · equipamiento de viaje",
+      "evolution": true,
+      "ids": [
+        "sturdy_pack",
+        "idea-morral-dividido",
+        "idea-valija-muestras",
+        "idea-gabinete-portatil"
+      ]
+    }
+  ],
   "rows": [
     {
       "cabinet": null,
@@ -28,6 +132,7 @@ globalThis.AtlasObjetosCientificos = {
         "map_fragment": 1
       },
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -95,6 +200,7 @@ globalThis.AtlasObjetosCientificos = {
         "map_fragment": 1
       },
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -162,6 +268,7 @@ globalThis.AtlasObjetosCientificos = {
         "beaver_tail_scale": 1
       },
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -229,6 +336,7 @@ globalThis.AtlasObjetosCientificos = {
         "parchment_scrap": 2
       },
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -296,12 +404,47 @@ globalThis.AtlasObjetosCientificos = {
         "pressed_flower": 1
       },
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/feather_cap/clasica-64.webp",
+            "bytes": 1512
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/feather_cap/clasica-128.webp",
+            "bytes": 3998
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/feather_cap/clasica-256.webp",
+            "bytes": 12400
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/feather_cap/clasica-512.webp",
+            "bytes": 37534
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/feather_cap/inventario-64.webp",
+            "bytes": 1646
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/feather_cap/inventario-128.webp",
+            "bytes": 4236
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/feather_cap/inventario-256.webp",
+            "bytes": 10766
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/feather_cap/inventario-512.webp",
+            "bytes": 28182
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -329,12 +472,47 @@ globalThis.AtlasObjetosCientificos = {
         "animal_trace": 1
       },
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/rain_hood/clasica-64.webp",
+            "bytes": 2272
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/rain_hood/clasica-128.webp",
+            "bytes": 5832
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/rain_hood/clasica-256.webp",
+            "bytes": 16274
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/rain_hood/clasica-512.webp",
+            "bytes": 49718
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/rain_hood/inventario-64.webp",
+            "bytes": 2446
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/rain_hood/inventario-128.webp",
+            "bytes": 6142
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/rain_hood/inventario-256.webp",
+            "bytes": 15464
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/rain_hood/inventario-512.webp",
+            "bytes": 40400
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -362,12 +540,47 @@ globalThis.AtlasObjetosCientificos = {
         "otter_whisker": 1
       },
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/amulet/clasica-64.webp",
+            "bytes": 1880
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/amulet/clasica-128.webp",
+            "bytes": 4736
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/amulet/clasica-256.webp",
+            "bytes": 13796
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/amulet/clasica-512.webp",
+            "bytes": 41222
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/amulet/inventario-64.webp",
+            "bytes": 1916
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/amulet/inventario-128.webp",
+            "bytes": 5014
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/amulet/inventario-256.webp",
+            "bytes": 12424
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/amulet/inventario-512.webp",
+            "bytes": 32864
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -395,12 +608,47 @@ globalThis.AtlasObjetosCientificos = {
         "wolf_tooth": 1
       },
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/amber_charm/clasica-64.webp",
+            "bytes": 1730
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/amber_charm/clasica-128.webp",
+            "bytes": 4574
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/amber_charm/clasica-256.webp",
+            "bytes": 13866
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/amber_charm/clasica-512.webp",
+            "bytes": 40768
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/amber_charm/inventario-64.webp",
+            "bytes": 1764
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/amber_charm/inventario-128.webp",
+            "bytes": 4784
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/amber_charm/inventario-256.webp",
+            "bytes": 12672
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/amber_charm/inventario-512.webp",
+            "bytes": 33524
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -428,12 +676,47 @@ globalThis.AtlasObjetosCientificos = {
         "fossil_fragment": 1
       },
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/shell_necklace/clasica-64.webp",
+            "bytes": 2484
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/shell_necklace/clasica-128.webp",
+            "bytes": 6238
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/shell_necklace/clasica-256.webp",
+            "bytes": 19026
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/shell_necklace/clasica-512.webp",
+            "bytes": 57230
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/shell_necklace/inventario-64.webp",
+            "bytes": 2494
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/shell_necklace/inventario-128.webp",
+            "bytes": 6712
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/shell_necklace/inventario-256.webp",
+            "bytes": 19628
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/shell_necklace/inventario-512.webp",
+            "bytes": 54226
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -457,6 +740,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -486,6 +770,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -549,6 +834,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -578,6 +864,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -607,6 +894,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -636,6 +924,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -665,6 +954,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -694,6 +984,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -723,6 +1014,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -752,6 +1044,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -781,6 +1074,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -844,6 +1138,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -907,6 +1202,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -936,6 +1232,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -968,6 +1265,7 @@ globalThis.AtlasObjetosCientificos = {
         "asia_map_piece": 10
       },
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -997,6 +1295,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1029,6 +1328,7 @@ globalThis.AtlasObjetosCientificos = {
         "africa_map_piece": 10
       },
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1058,6 +1358,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1090,6 +1391,7 @@ globalThis.AtlasObjetosCientificos = {
         "north_america_map_piece": 8
       },
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1112,7 +1414,7 @@ globalThis.AtlasObjetosCientificos = {
         "renderer": "AtlasItemArt",
         "bytes": 962
       },
-      "observations": null,
+      "observations": "Cuadrante de madera y latón. Su armazón macizo lo distingue del sextante de retícula abierta.",
       "id": "oceanic_quadrant",
       "name": "Cuadrante transatlántico",
       "family": "Instrumentos científicos",
@@ -1125,12 +1427,47 @@ globalThis.AtlasObjetosCientificos = {
         "parchment_scrap": 1
       },
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/oceanic_quadrant/clasica-64.webp",
+            "bytes": 2538
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/oceanic_quadrant/clasica-128.webp",
+            "bytes": 6372
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/oceanic_quadrant/clasica-256.webp",
+            "bytes": 18312
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/oceanic_quadrant/clasica-512.webp",
+            "bytes": 55818
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/oceanic_quadrant/inventario-64.webp",
+            "bytes": 2642
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/oceanic_quadrant/inventario-128.webp",
+            "bytes": 6544
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/oceanic_quadrant/inventario-256.webp",
+            "bytes": 17644
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/oceanic_quadrant/inventario-512.webp",
+            "bytes": 47686
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1154,6 +1491,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -1217,6 +1555,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1246,6 +1585,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1275,6 +1615,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1304,6 +1645,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1333,6 +1675,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1362,6 +1705,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1391,6 +1735,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -1454,6 +1799,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1483,6 +1829,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1512,6 +1859,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1541,6 +1889,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1570,6 +1919,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1605,6 +1955,7 @@ globalThis.AtlasObjetosCientificos = {
         "parchment_scrap": 2
       },
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -1674,12 +2025,47 @@ globalThis.AtlasObjetosCientificos = {
         "pressed_flower": 3
       },
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/scholar_hat/clasica-64.webp",
+            "bytes": 1442
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/scholar_hat/clasica-128.webp",
+            "bytes": 3400
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/scholar_hat/clasica-256.webp",
+            "bytes": 9554
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/scholar_hat/clasica-512.webp",
+            "bytes": 30158
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/scholar_hat/inventario-64.webp",
+            "bytes": 1534
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/scholar_hat/inventario-128.webp",
+            "bytes": 3662
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/scholar_hat/inventario-256.webp",
+            "bytes": 8294
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/scholar_hat/inventario-512.webp",
+            "bytes": 21702
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -1696,7 +2082,7 @@ globalThis.AtlasObjetosCientificos = {
         "renderer": "AtlasItemArt",
         "bytes": 895
       },
-      "observations": null,
+      "observations": "Medallón funcional de ámbar. La medalla de expedición del Museo se representa en metal y cinta.",
       "id": "museum_medallion",
       "name": "Medallón de ámbar",
       "family": "Collares, amuletos y medallones",
@@ -1709,6 +2095,7 @@ globalThis.AtlasObjetosCientificos = {
         "brass_shard": 1
       },
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -1772,6 +2159,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1801,6 +2189,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1830,6 +2219,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1859,6 +2249,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1888,6 +2279,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1917,6 +2309,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1946,6 +2339,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -1981,12 +2375,47 @@ globalThis.AtlasObjetosCientificos = {
         "parchment_scrap": 2
       },
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/polar_coat/clasica-64.webp",
+            "bytes": 2118
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/polar_coat/clasica-128.webp",
+            "bytes": 5050
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/polar_coat/clasica-256.webp",
+            "bytes": 14130
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/polar_coat/clasica-512.webp",
+            "bytes": 45314
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/polar_coat/inventario-64.webp",
+            "bytes": 2186
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/polar_coat/inventario-128.webp",
+            "bytes": 5316
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/polar_coat/inventario-256.webp",
+            "bytes": 13162
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/polar_coat/inventario-512.webp",
+            "bytes": 34794
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -2016,12 +2445,47 @@ globalThis.AtlasObjetosCientificos = {
         "sturdy_pack": 1
       },
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/sounding_kit/clasica-64.webp",
+            "bytes": 3100
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/sounding_kit/clasica-128.webp",
+            "bytes": 8666
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/sounding_kit/clasica-256.webp",
+            "bytes": 26408
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/sounding_kit/clasica-512.webp",
+            "bytes": 81254
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/sounding_kit/inventario-64.webp",
+            "bytes": 3338
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/sounding_kit/inventario-128.webp",
+            "bytes": 9502
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/sounding_kit/inventario-256.webp",
+            "bytes": 25696
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/sounding_kit/inventario-512.webp",
+            "bytes": 71554
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -2045,6 +2509,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2077,6 +2542,7 @@ globalThis.AtlasObjetosCientificos = {
         "south_america_map_piece": 10
       },
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2106,6 +2572,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2138,6 +2605,7 @@ globalThis.AtlasObjetosCientificos = {
         "oceania_map_piece": 10
       },
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2167,6 +2635,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2199,6 +2668,7 @@ globalThis.AtlasObjetosCientificos = {
         "polar_map_piece": 8
       },
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2236,6 +2706,7 @@ globalThis.AtlasObjetosCientificos = {
         "polar_map": 1
       },
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -2299,6 +2770,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2328,6 +2800,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2357,6 +2830,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2386,6 +2860,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2415,6 +2890,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2444,6 +2920,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2473,6 +2950,7 @@ globalThis.AtlasObjetosCientificos = {
       "slot": null,
       "type": "Objeto productivo",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2500,6 +2978,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Lámina de herbario",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -2561,6 +3040,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Lámina de herbario",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2588,6 +3068,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Lámina de herbario",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2615,6 +3096,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Lámina de herbario",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2642,6 +3124,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Lámina de herbario",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2669,6 +3152,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Lámina de herbario",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2696,6 +3180,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Lámina de herbario",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2723,6 +3208,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Lámina de herbario",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2750,6 +3236,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Lámina de herbario",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2777,6 +3264,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Lámina de herbario",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2804,6 +3292,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Lámina de herbario",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2831,6 +3320,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Lámina de herbario",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2858,6 +3348,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2885,6 +3376,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2912,6 +3404,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2939,6 +3432,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2966,6 +3460,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -2993,6 +3488,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3020,6 +3516,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3047,6 +3544,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3074,6 +3572,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3101,6 +3600,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3128,6 +3628,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3155,6 +3656,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -3216,6 +3718,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3243,6 +3746,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3270,6 +3774,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3297,6 +3802,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3324,6 +3830,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3351,6 +3858,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3378,6 +3886,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3405,6 +3914,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3432,6 +3942,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3459,6 +3970,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3486,6 +3998,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3513,6 +4026,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Frasco de pigmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3540,6 +4054,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Gema o réplica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3567,6 +4082,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Gema o réplica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3594,6 +4110,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Gema o réplica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3621,6 +4138,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Gema o réplica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3648,6 +4166,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Gema o réplica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3675,6 +4194,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Gema o réplica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3702,6 +4222,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Gema o réplica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3729,6 +4250,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Gema o réplica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3756,6 +4278,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Gema o réplica",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -3817,6 +4340,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Gema o réplica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3844,6 +4368,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Gema o réplica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3871,6 +4396,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Gema o réplica",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -3932,6 +4458,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3959,6 +4486,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -3986,6 +4514,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4013,6 +4542,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4040,6 +4570,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4067,6 +4598,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4094,6 +4626,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4121,6 +4654,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4148,6 +4682,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Vitrina mineralógica",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -4209,6 +4744,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4236,6 +4772,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4263,6 +4800,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Vitrina mineralógica",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4290,6 +4828,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4317,6 +4856,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4344,6 +4884,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4371,6 +4912,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4398,6 +4940,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4425,6 +4968,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4452,6 +4996,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4479,6 +5024,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4506,6 +5052,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4533,6 +5080,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4560,6 +5108,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Muestra encapsulada",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4587,6 +5136,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Muestra encapsulada",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -4648,6 +5198,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4675,6 +5226,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4702,6 +5254,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4729,6 +5282,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4756,6 +5310,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4783,6 +5338,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Réplica de fragmento",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -4844,6 +5400,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4871,6 +5428,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4898,6 +5456,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4925,6 +5484,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4952,6 +5512,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -4979,6 +5540,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Réplica de fragmento",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5006,6 +5568,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5033,6 +5596,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5060,6 +5624,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5087,6 +5652,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5114,6 +5680,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5141,6 +5708,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5168,6 +5736,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Objeto náutico de vitrina",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5195,6 +5764,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Réplica de ficción",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5222,6 +5792,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Réplica de ficción",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5249,6 +5820,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Réplica de ficción",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5276,6 +5848,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Réplica de ficción",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5303,6 +5876,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Réplica de ficción",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -5364,6 +5938,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5391,6 +5966,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5418,6 +5994,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5445,6 +6022,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5472,6 +6050,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5499,6 +6078,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5526,6 +6106,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -5587,6 +6168,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5614,6 +6196,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5641,6 +6224,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5668,6 +6252,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5695,6 +6280,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5722,6 +6308,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto marinero",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5749,6 +6336,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto marinero",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5776,6 +6364,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto marinero",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5803,6 +6392,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto marinero",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5830,6 +6420,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Objeto marinero",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5857,6 +6448,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Objeto marinero",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5884,6 +6476,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Objeto marinero",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5911,6 +6504,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Objeto marinero",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5938,6 +6532,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Objeto marinero",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5965,6 +6560,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Objeto marinero",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -5992,6 +6588,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Objeto marinero",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6019,6 +6616,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Objeto marinero",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6046,6 +6644,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -6107,6 +6706,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6134,6 +6734,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6161,6 +6762,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6188,6 +6790,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6215,6 +6818,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6242,6 +6846,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6269,6 +6874,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6296,6 +6902,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6323,6 +6930,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6350,6 +6958,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6377,6 +6986,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6404,6 +7014,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -6465,6 +7076,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6492,6 +7104,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6519,6 +7132,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6546,6 +7160,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6573,6 +7188,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6600,6 +7216,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6627,6 +7244,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6654,6 +7272,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6681,6 +7300,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6708,6 +7328,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6735,6 +7356,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6762,6 +7384,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6789,6 +7412,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6816,6 +7440,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6843,6 +7468,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6870,6 +7496,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6897,6 +7524,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6924,6 +7552,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6951,6 +7580,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -6978,6 +7608,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7005,6 +7636,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7032,6 +7664,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7059,6 +7692,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7086,6 +7720,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -7147,6 +7782,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7174,6 +7810,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7201,6 +7838,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7228,6 +7866,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7255,6 +7894,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7282,6 +7922,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7309,6 +7950,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7336,6 +7978,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7363,6 +8006,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7390,6 +8034,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7417,6 +8062,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7444,6 +8090,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7471,6 +8118,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7498,6 +8146,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7525,6 +8174,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7552,6 +8202,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7579,6 +8230,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7606,6 +8258,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7633,6 +8286,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7660,6 +8314,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7687,6 +8342,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7714,6 +8370,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7741,6 +8398,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7768,6 +8426,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7795,6 +8454,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7822,6 +8482,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7849,6 +8510,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7876,6 +8538,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7903,6 +8566,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7930,6 +8594,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7957,6 +8622,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -7984,6 +8650,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -8045,6 +8712,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8072,6 +8740,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8099,6 +8768,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8126,6 +8796,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8153,6 +8824,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8180,6 +8852,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8207,6 +8880,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8234,6 +8908,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8261,6 +8936,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8288,6 +8964,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8315,6 +8992,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8342,6 +9020,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8369,6 +9048,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8396,6 +9076,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8423,6 +9104,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -8484,6 +9166,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8511,6 +9194,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8538,6 +9222,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8565,6 +9250,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8592,6 +9278,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8619,6 +9306,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8646,6 +9334,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8673,6 +9362,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8700,6 +9390,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8727,6 +9418,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8754,6 +9446,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8781,6 +9474,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -8808,12 +9502,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-01/clasica-64.webp",
+            "bytes": 1778
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-01/clasica-128.webp",
+            "bytes": 4182
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-01/clasica-256.webp",
+            "bytes": 12676
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-01/clasica-512.webp",
+            "bytes": 36272
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-01/inventario-64.webp",
+            "bytes": 1838
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-01/inventario-128.webp",
+            "bytes": 4440
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-01/inventario-256.webp",
+            "bytes": 12564
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-01/inventario-512.webp",
+            "bytes": 33570
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -8827,7 +9556,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mixto",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Caja de caoba inspirada en brújulas británicas de bolsillo de finales del siglo XVIII.",
       "id": "INS-02",
       "name": "Brújula de bolsillo",
       "type": "Coleccionable propuesto",
@@ -8835,12 +9564,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-02/clasica-64.webp",
+            "bytes": 2204
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-02/clasica-128.webp",
+            "bytes": 5500
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-02/clasica-256.webp",
+            "bytes": 16822
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-02/clasica-512.webp",
+            "bytes": 49628
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-02/inventario-64.webp",
+            "bytes": 2266
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-02/inventario-128.webp",
+            "bytes": 5736
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-02/inventario-256.webp",
+            "bytes": 14912
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-02/inventario-512.webp",
+            "bytes": 39434
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -8862,12 +9626,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-03/clasica-64.webp",
+            "bytes": 2008
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-03/clasica-128.webp",
+            "bytes": 5012
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-03/clasica-256.webp",
+            "bytes": 15640
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-03/clasica-512.webp",
+            "bytes": 46592
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-03/inventario-64.webp",
+            "bytes": 2078
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-03/inventario-128.webp",
+            "bytes": 5352
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-03/inventario-256.webp",
+            "bytes": 14176
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-03/inventario-512.webp",
+            "bytes": 37600
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -8889,12 +9688,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-04/clasica-64.webp",
+            "bytes": 1922
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-04/clasica-128.webp",
+            "bytes": 4652
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-04/clasica-256.webp",
+            "bytes": 13912
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-04/clasica-512.webp",
+            "bytes": 39516
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-04/inventario-64.webp",
+            "bytes": 1904
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-04/inventario-128.webp",
+            "bytes": 4864
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-04/inventario-256.webp",
+            "bytes": 13556
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-04/inventario-512.webp",
+            "bytes": 36852
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -8906,9 +9740,9 @@ globalThis.AtlasObjetosCientificos = {
       "acquisition": "Investigación y comercio",
       "description": "Instrumento portátil para presión atmosférica",
       "material": "material mixto",
-      "context": "Fecha del ejemplar por verificar",
+      "context": "Futuro · barómetro aneroide de Vidi, 1844",
       "original": null,
-      "observations": null,
+      "observations": "Referencia de un aneroide Vidi posterior a 1842. Reservar para contenido futuro.",
       "id": "INS-05",
       "name": "Barómetro aneroide",
       "type": "Coleccionable propuesto",
@@ -8916,12 +9750,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-05/clasica-64.webp",
+            "bytes": 2114
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-05/clasica-128.webp",
+            "bytes": 5496
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-05/clasica-256.webp",
+            "bytes": 17674
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-05/clasica-512.webp",
+            "bytes": 49212
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-05/inventario-64.webp",
+            "bytes": 2306
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-05/inventario-128.webp",
+            "bytes": 5872
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-05/inventario-256.webp",
+            "bytes": 15746
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-05/inventario-512.webp",
+            "bytes": 39650
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -8943,12 +9812,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-06/clasica-64.webp",
+            "bytes": 2320
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-06/clasica-128.webp",
+            "bytes": 5956
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-06/clasica-256.webp",
+            "bytes": 19784
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-06/clasica-512.webp",
+            "bytes": 56406
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-06/inventario-64.webp",
+            "bytes": 2350
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-06/inventario-128.webp",
+            "bytes": 6132
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-06/inventario-256.webp",
+            "bytes": 16970
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-06/inventario-512.webp",
+            "bytes": 43020
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -8970,12 +9874,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-07/clasica-64.webp",
+            "bytes": 3034
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-07/clasica-128.webp",
+            "bytes": 7692
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-07/clasica-256.webp",
+            "bytes": 23396
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-07/clasica-512.webp",
+            "bytes": 68726
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-07/inventario-64.webp",
+            "bytes": 3220
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-07/inventario-128.webp",
+            "bytes": 8680
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-07/inventario-256.webp",
+            "bytes": 23068
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-07/inventario-512.webp",
+            "bytes": 63194
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -8989,7 +9928,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mixto",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Ejemplar de un solo tramo y cuerpo de madera. El catalejo de viaje usa tramos de latón visibles.",
       "id": "INS-08",
       "name": "Catalejo de latón",
       "type": "Coleccionable propuesto",
@@ -8997,12 +9936,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-08/clasica-64.webp",
+            "bytes": 1790
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-08/clasica-128.webp",
+            "bytes": 4270
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-08/clasica-256.webp",
+            "bytes": 12676
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-08/clasica-512.webp",
+            "bytes": 36690
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-08/inventario-64.webp",
+            "bytes": 1876
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-08/inventario-128.webp",
+            "bytes": 4490
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-08/inventario-256.webp",
+            "bytes": 12520
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-08/inventario-512.webp",
+            "bytes": 33398
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -9016,7 +9990,7 @@ globalThis.AtlasObjetosCientificos = {
       "material": "material mixto",
       "context": "Fecha del ejemplar por verificar",
       "original": null,
-      "observations": null,
+      "observations": "Representación de una caja deslizante para placa daguerreotípica de época.",
       "id": "INS-09",
       "name": "Cámara de placas",
       "type": "Coleccionable propuesto",
@@ -9024,12 +9998,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-09/clasica-64.webp",
+            "bytes": 2290
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-09/clasica-128.webp",
+            "bytes": 6208
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-09/clasica-256.webp",
+            "bytes": 18908
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-09/clasica-512.webp",
+            "bytes": 55990
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-09/inventario-64.webp",
+            "bytes": 2392
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-09/inventario-128.webp",
+            "bytes": 6668
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-09/inventario-256.webp",
+            "bytes": 16268
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-09/inventario-512.webp",
+            "bytes": 43066
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -9051,12 +10060,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-10/clasica-64.webp",
+            "bytes": 3278
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-10/clasica-128.webp",
+            "bytes": 8778
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-10/clasica-256.webp",
+            "bytes": 26114
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-10/clasica-512.webp",
+            "bytes": 77262
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-10/inventario-64.webp",
+            "bytes": 3496
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-10/inventario-128.webp",
+            "bytes": 9500
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-10/inventario-256.webp",
+            "bytes": 25346
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-10/inventario-512.webp",
+            "bytes": 68834
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -9078,12 +10122,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-11/clasica-64.webp",
+            "bytes": 2182
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-11/clasica-128.webp",
+            "bytes": 5436
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-11/clasica-256.webp",
+            "bytes": 15194
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-11/clasica-512.webp",
+            "bytes": 45686
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-11/inventario-64.webp",
+            "bytes": 2284
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-11/inventario-128.webp",
+            "bytes": 5748
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-11/inventario-256.webp",
+            "bytes": 14956
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-11/inventario-512.webp",
+            "bytes": 39798
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -9105,12 +10184,47 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-12/clasica-64.webp",
+            "bytes": 2178
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-12/clasica-128.webp",
+            "bytes": 5620
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-12/clasica-256.webp",
+            "bytes": 15670
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-12/clasica-512.webp",
+            "bytes": 48476
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/INS-12/inventario-64.webp",
+            "bytes": 2292
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/INS-12/inventario-128.webp",
+            "bytes": 5750
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/INS-12/inventario-256.webp",
+            "bytes": 13632
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/INS-12/inventario-512.webp",
+            "bytes": 35800
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": "Historia natural y exploración",
@@ -9132,6 +10246,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9159,6 +10274,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9186,6 +10302,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9213,6 +10330,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9240,6 +10358,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9267,6 +10386,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9294,6 +10414,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9321,6 +10442,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9348,6 +10470,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9375,6 +10498,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9402,6 +10526,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9429,6 +10554,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "exhibit": "Documentación, reproducción o ejemplar histórico conservado",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9456,6 +10582,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -9517,6 +10644,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9544,6 +10672,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9571,6 +10700,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9598,6 +10728,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9625,6 +10756,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9652,6 +10784,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9679,6 +10812,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9706,6 +10840,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9733,6 +10868,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9760,6 +10896,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9787,6 +10924,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9814,6 +10952,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9841,6 +10980,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9868,6 +11008,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9895,6 +11036,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9922,6 +11064,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9949,6 +11092,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -9976,6 +11120,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10003,6 +11148,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10030,6 +11176,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10057,6 +11204,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10084,6 +11232,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10111,6 +11260,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10138,6 +11288,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -10199,6 +11350,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10226,6 +11378,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10253,6 +11406,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10280,6 +11434,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10307,6 +11462,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10334,6 +11490,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10361,6 +11518,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10388,6 +11546,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10415,6 +11574,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10442,6 +11602,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10469,6 +11630,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10496,6 +11658,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -10557,6 +11720,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10584,6 +11748,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10611,6 +11776,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10638,6 +11804,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10665,6 +11832,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10692,6 +11860,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10719,6 +11888,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10746,6 +11916,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10773,6 +11944,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10800,6 +11972,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10827,6 +12000,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10854,6 +12028,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": true,
+      "stage": "OBJ-01",
       "sprites": {
         "clasica": {
           "64": {
@@ -10915,6 +12090,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10942,6 +12118,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10969,6 +12146,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -10996,6 +12174,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 1,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11023,6 +12202,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11050,6 +12230,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11077,6 +12258,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11104,6 +12286,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 2,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11131,6 +12314,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11158,6 +12342,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 4,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11185,6 +12370,7 @@ globalThis.AtlasObjetosCientificos = {
       "points": 8,
       "type": "Coleccionable propuesto",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11218,6 +12404,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11252,6 +12439,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11286,6 +12474,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11321,6 +12510,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11355,6 +12545,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11389,12 +12580,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/medallon_viajero/clasica-64.webp",
+            "bytes": 1786
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/medallon_viajero/clasica-128.webp",
+            "bytes": 4820
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/medallon_viajero/clasica-256.webp",
+            "bytes": 14706
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/medallon_viajero/clasica-512.webp",
+            "bytes": 44876
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/medallon_viajero/inventario-64.webp",
+            "bytes": 1994
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/medallon_viajero/inventario-128.webp",
+            "bytes": 5252
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/medallon_viajero/inventario-256.webp",
+            "bytes": 13548
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/medallon_viajero/inventario-512.webp",
+            "bytes": 35978
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -11424,12 +12650,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/astrolabio_laton/clasica-64.webp",
+            "bytes": 2736
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/astrolabio_laton/clasica-128.webp",
+            "bytes": 8304
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/astrolabio_laton/clasica-256.webp",
+            "bytes": 26872
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/astrolabio_laton/clasica-512.webp",
+            "bytes": 84728
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/astrolabio_laton/inventario-64.webp",
+            "bytes": 3028
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/astrolabio_laton/inventario-128.webp",
+            "bytes": 8886
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/astrolabio_laton/inventario-256.webp",
+            "bytes": 26756
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/astrolabio_laton/inventario-512.webp",
+            "bytes": 78434
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -11459,6 +12720,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11494,12 +12756,47 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "OBJ-02",
       "sprites": {
-        "clasica": null,
-        "inventario": null
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/globo_cartografico/clasica-64.webp",
+            "bytes": 2032
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/globo_cartografico/clasica-128.webp",
+            "bytes": 5486
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/globo_cartografico/clasica-256.webp",
+            "bytes": 16420
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/globo_cartografico/clasica-512.webp",
+            "bytes": 50832
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/globo_cartografico/inventario-64.webp",
+            "bytes": 2292
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/globo_cartografico/inventario-128.webp",
+            "bytes": 6054
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/globo_cartografico/inventario-256.webp",
+            "bytes": 15658
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/globo_cartografico/inventario-512.webp",
+            "bytes": 43668
+          }
+        }
       },
       "approval": "Pendiente",
-      "artState": "Pendiente"
+      "artState": "Candidato"
     },
     {
       "cabinet": null,
@@ -11529,6 +12826,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11565,6 +12863,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11600,6 +12899,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11636,6 +12936,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11673,6 +12974,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11710,6 +13012,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11747,6 +13050,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11784,6 +13088,7 @@ globalThis.AtlasObjetosCientificos = {
       },
       "newArtwork": true,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11814,6 +13119,7 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Artefactos históricos",
       "newArtwork": false,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11844,6 +13150,7 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Artefactos históricos",
       "newArtwork": false,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11874,6 +13181,7 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Artefactos históricos",
       "newArtwork": false,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11904,6 +13212,7 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Artefactos históricos",
       "newArtwork": false,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11934,6 +13243,7 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Artefactos históricos",
       "newArtwork": false,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11964,6 +13274,7 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Artefactos históricos",
       "newArtwork": false,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -11994,6 +13305,7 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Artefactos históricos",
       "newArtwork": false,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -12024,6 +13336,7 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Artefactos históricos",
       "newArtwork": false,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -12054,6 +13367,7 @@ globalThis.AtlasObjetosCientificos = {
       "family": "Artefactos históricos",
       "newArtwork": false,
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -12079,6 +13393,7 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de equipamiento futuro",
       "family": "Instrumentos científicos",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
@@ -12104,12 +13419,433 @@ globalThis.AtlasObjetosCientificos = {
       "type": "Idea de equipamiento futuro",
       "family": "Instrumentos científicos",
       "pilot": false,
+      "stage": "Futuras etapas",
       "sprites": {
         "clasica": null,
         "inventario": null
       },
       "approval": "Pendiente",
       "artState": "Pendiente"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": "III",
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Montura plegable y enfoque por cremallera para observación estable.",
+      "material": "latón, vidrio y madera",
+      "context": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+      "original": null,
+      "observations": null,
+      "id": "idea-refractor-campo",
+      "name": "Refractor acromático de campo",
+      "family": "Instrumentos científicos",
+      "type": "Idea de equipamiento futuro",
+      "pilot": false,
+      "stage": "OBJ-02",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-refractor-campo/clasica-64.webp",
+            "bytes": 2530
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-refractor-campo/clasica-128.webp",
+            "bytes": 6310
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-refractor-campo/clasica-256.webp",
+            "bytes": 17718
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-refractor-campo/clasica-512.webp",
+            "bytes": 53256
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-refractor-campo/inventario-64.webp",
+            "bytes": 2630
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-refractor-campo/inventario-128.webp",
+            "bytes": 6616
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-refractor-campo/inventario-256.webp",
+            "bytes": 17456
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-refractor-campo/inventario-512.webp",
+            "bytes": 48866
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": "IV",
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Montura pivotante con contrapeso y círculo graduado para orientar el tubo.",
+      "material": "latón, vidrio y caoba",
+      "context": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+      "original": null,
+      "observations": null,
+      "id": "idea-refractor-observatorio",
+      "name": "Refractor de observatorio",
+      "family": "Instrumentos científicos",
+      "type": "Idea de equipamiento futuro",
+      "pilot": false,
+      "stage": "OBJ-02",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-refractor-observatorio/clasica-64.webp",
+            "bytes": 3006
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-refractor-observatorio/clasica-128.webp",
+            "bytes": 7648
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-refractor-observatorio/clasica-256.webp",
+            "bytes": 22432
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-refractor-observatorio/clasica-512.webp",
+            "bytes": 68456
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-refractor-observatorio/inventario-64.webp",
+            "bytes": 3230
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-refractor-observatorio/inventario-128.webp",
+            "bytes": 8232
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-refractor-observatorio/inventario-256.webp",
+            "bytes": 22186
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-refractor-observatorio/inventario-512.webp",
+            "bytes": 61498
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": "III",
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Ala ancha con borde cosido y ajuste de hebilla para proteger frente a lluvia y viento.",
+      "material": "fieltro y latón",
+      "context": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+      "original": null,
+      "observations": null,
+      "id": "idea-sombrero-tratado",
+      "name": "Sombrero de campo de fieltro tratado",
+      "family": "Sombreros y prendas",
+      "type": "Idea de equipamiento futuro",
+      "pilot": false,
+      "stage": "OBJ-02",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-sombrero-tratado/clasica-64.webp",
+            "bytes": 1714
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-sombrero-tratado/clasica-128.webp",
+            "bytes": 3826
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-sombrero-tratado/clasica-256.webp",
+            "bytes": 11274
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-sombrero-tratado/clasica-512.webp",
+            "bytes": 35802
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-sombrero-tratado/inventario-64.webp",
+            "bytes": 1762
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-sombrero-tratado/inventario-128.webp",
+            "bytes": 4066
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-sombrero-tratado/inventario-256.webp",
+            "bytes": 10124
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-sombrero-tratado/inventario-512.webp",
+            "bytes": 26708
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": "IV",
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Ala reforzada, copa estructurada y protector de lino desmontable con botones.",
+      "material": "fieltro, lino y latón",
+      "context": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+      "original": null,
+      "observations": null,
+      "id": "idea-sombrero-velo",
+      "name": "Sombrero de campo con protector de nuca",
+      "family": "Sombreros y prendas",
+      "type": "Idea de equipamiento futuro",
+      "pilot": false,
+      "stage": "OBJ-02",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-sombrero-velo/clasica-64.webp",
+            "bytes": 1688
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-sombrero-velo/clasica-128.webp",
+            "bytes": 3706
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-sombrero-velo/clasica-256.webp",
+            "bytes": 9222
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-sombrero-velo/clasica-512.webp",
+            "bytes": 28752
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-sombrero-velo/inventario-64.webp",
+            "bytes": 1728
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-sombrero-velo/inventario-128.webp",
+            "bytes": 3700
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-sombrero-velo/inventario-256.webp",
+            "bytes": 8134
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-sombrero-velo/inventario-512.webp",
+            "bytes": 20366
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": "II",
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Separador interior para pliegos y dos bolsillos exteriores para herramientas.",
+      "material": "lona y cuero",
+      "context": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+      "original": null,
+      "observations": null,
+      "id": "idea-morral-dividido",
+      "name": "Morral de muestras con divisiones",
+      "family": "Materiales de expedición",
+      "type": "Idea de equipamiento futuro",
+      "pilot": false,
+      "stage": "OBJ-02",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-morral-dividido/clasica-64.webp",
+            "bytes": 2162
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-morral-dividido/clasica-128.webp",
+            "bytes": 5170
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-morral-dividido/clasica-256.webp",
+            "bytes": 13934
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-morral-dividido/clasica-512.webp",
+            "bytes": 43762
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-morral-dividido/inventario-64.webp",
+            "bytes": 2154
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-morral-dividido/inventario-128.webp",
+            "bytes": 5370
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-morral-dividido/inventario-256.webp",
+            "bytes": 12234
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-morral-dividido/inventario-512.webp",
+            "bytes": 32416
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": "III",
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Caja rígida compartimentada, reforzada en las esquinas para muestras frágiles.",
+      "material": "madera, cuero y latón",
+      "context": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+      "original": null,
+      "observations": null,
+      "id": "idea-valija-muestras",
+      "name": "Valija de muestras rígida",
+      "family": "Materiales de expedición",
+      "type": "Idea de equipamiento futuro",
+      "pilot": false,
+      "stage": "OBJ-02",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-valija-muestras/clasica-64.webp",
+            "bytes": 2240
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-valija-muestras/clasica-128.webp",
+            "bytes": 5286
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-valija-muestras/clasica-256.webp",
+            "bytes": 15266
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-valija-muestras/clasica-512.webp",
+            "bytes": 48128
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-valija-muestras/inventario-64.webp",
+            "bytes": 2214
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-valija-muestras/inventario-128.webp",
+            "bytes": 5648
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-valija-muestras/inventario-256.webp",
+            "bytes": 13208
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-valija-muestras/inventario-512.webp",
+            "bytes": 34164
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
+    },
+    {
+      "cabinet": null,
+      "collection": null,
+      "rarity": null,
+      "tier": "IV",
+      "continent": null,
+      "provenance": null,
+      "acquisition": null,
+      "description": "Cajones bajos con cierres y correa de transporte para clasificar las muestras en campo.",
+      "material": "caoba, cuero y latón",
+      "context": "Concepto artístico inspirado en la primera mitad del siglo XIX",
+      "original": null,
+      "observations": null,
+      "id": "idea-gabinete-portatil",
+      "name": "Gabinete portátil de viaje",
+      "family": "Materiales de expedición",
+      "type": "Idea de equipamiento futuro",
+      "pilot": false,
+      "stage": "OBJ-02",
+      "sprites": {
+        "clasica": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-gabinete-portatil/clasica-64.webp",
+            "bytes": 2186
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-gabinete-portatil/clasica-128.webp",
+            "bytes": 5578
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-gabinete-portatil/clasica-256.webp",
+            "bytes": 16456
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-gabinete-portatil/clasica-512.webp",
+            "bytes": 49354
+          }
+        },
+        "inventario": {
+          "64": {
+            "src": "objetos-cientificos/arte/idea-gabinete-portatil/inventario-64.webp",
+            "bytes": 2328
+          },
+          "128": {
+            "src": "objetos-cientificos/arte/idea-gabinete-portatil/inventario-128.webp",
+            "bytes": 6018
+          },
+          "256": {
+            "src": "objetos-cientificos/arte/idea-gabinete-portatil/inventario-256.webp",
+            "bytes": 14752
+          },
+          "512": {
+            "src": "objetos-cientificos/arte/idea-gabinete-portatil/inventario-512.webp",
+            "bytes": 38676
+          }
+        }
+      },
+      "approval": "Pendiente",
+      "artState": "Candidato"
     }
   ]
 };
