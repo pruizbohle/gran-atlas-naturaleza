@@ -6,7 +6,7 @@ const path = require('node:path');
 const http = require('node:http');
 const vm = require('node:vm');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v474';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v480';
 require('../www/js/naturalist-assets-v400.js');
 const expected = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') +
   '\n({catalog,migrationProgress});');
@@ -54,7 +54,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#category').selectOption('Notable');
       await page.locator('.mixed-field .atlas-art-image').evaluate(img => img.decode());
       assert.equal(await page.locator('.mixed-field .field-animal-sprite > svg').count(), 1);
-      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Lución europeo · SVG/);
+      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Rana bermeja · SVG/);
       const art = page.locator('.mixed-field .plate');
       const image = art.locator('.atlas-art-image');
       const src = await image.getAttribute('src');
@@ -85,7 +85,14 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 749);
+      assert.equal(await page.locator('.gallery-card').count(), 827);
+      await page.locator('#release-scope').selectOption('4.8.0');
+      assert.equal(await page.locator('.gallery-card').count(), 78);
+      await page.locator('#group').selectOption('Serpientes');
+      assert.equal(await page.locator('.gallery-card').count(), 36);
+      await page.locator('#group').selectOption('Lagartos');
+      assert.equal(await page.locator('.gallery-card').count(), 42);
+      await page.locator('#group').selectOption('');
       await page.locator('#release-scope').selectOption('4.7.4');
       assert.equal(await page.locator('.gallery-card').count(), 44);
       assert.equal(await page.locator('.gallery-card[data-species="sa_esp_scelorchilus_rubecula"]').count(), 0);
@@ -101,6 +108,28 @@ const server = http.createServer((req, res) => {
       assert.match(await page.locator('.comparison-styles').innerText(), /Sin lámina histórica/);
       await page.locator('.comparison-styles img').evaluate(img => img.decode());
       await page.locator('#release-scope').selectOption('');
+      await page.locator('[data-mode=reptiles]').click();
+      await page.locator('#bird-set').selectOption('squamate-geckos');
+      await page.locator('#comparison-size').selectOption('64');
+      await page.locator('#backdrop').selectOption('dark');
+      const geckos = page.locator('.reptile-comparison img');
+      assert.deepEqual(await geckos.evaluateAll(imgs => Promise.all(imgs.map(async img => {
+        await img.decode();
+        return img.naturalWidth;
+      }))), [64, 64, 64, 64]);
+      await page.locator('#comparison-size').selectOption('128');
+      for (const [label, species] of [['basalto', 'asia_esp_0527'], ['seda', 'asia_esp_0373']]) {
+        await page.locator('#bird-set').selectOption(label);
+        const plates = page.locator('.reptile-comparison img');
+        const urls = await plates.evaluateAll(imgs => Promise.all(imgs.map(async img => {
+          await img.decode();
+          return new URL(img.src).pathname.split('/').slice(-2).join('/');
+        })));
+        assert.deepEqual(urls, ['128/' + species + '--normal.webp', '128/' + species + '--' + label + '.webp']);
+        if (process.argv.includes('--write-evidence')) {
+          await page.locator('.reptile-comparison').screenshot({ path: evidenceDir + '/comparacion-' + label + '-' + viewport.width + '.jpg' });
+        }
+      }
       await page.locator('[data-mode=birds]').click();
       await page.locator('#bird-set').selectOption('passerine-tits');
       await page.locator('#comparison-size').selectOption('64');
@@ -388,7 +417,7 @@ const server = http.createServer((req, res) => {
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 749);
+      assert.equal(await page.locator('.gallery-card').count(), 827);
       await page.locator('#cut-state').selectOption('pending');
       assert.equal(await page.locator('.gallery-card').count(),
         expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);
@@ -429,7 +458,7 @@ const server = http.createServer((req, res) => {
       assert.ok(plates.every(([width, height]) => width === 512 && height === 512));
       assert.deepEqual(errors, []);
       await session.close();
-      console.log('PASS', viewport.width, 'px: trece modos, filtros, comparación de aves y exportación offline; primera lámina', firstRender, 'ms');
+      console.log('PASS', viewport.width, 'px: catorce modos, filtros, comparación de aves y reptiles y exportación offline; primera lámina', firstRender, 'ms');
     }
   } finally { await browser.close(); server.close(); }
 })().catch(error => { console.error(error); server.close(); process.exitCode = 1; });

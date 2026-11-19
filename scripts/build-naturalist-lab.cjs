@@ -6,6 +6,9 @@ const { harness } = require('../tests/helpers/live-game.cjs');
 const { ungulateFamily } = require('./ungulate-families.cjs');
 const { terrestrialMammal, aquaticMammal } = require('./terrestrial-mammal-families.cjs');
 const birdPlan = require('../docs/cientifica-v460/inventario-aves.json');
+const squamatePlan = require('../docs/cientifica-v474/inventario-herpetologia.json').editions['4.8.0'].inventory;
+const squamates = new Map(squamatePlan.map(animal => [animal.id, animal]));
+const reptileSets = require('./squamate-comparisons.cjs');
 const additions = require('../www/js/gm07-a04/catalog.js').records;
 const comparisonSets = {
   ...require('./passerine-comparisons.cjs'),
@@ -32,7 +35,7 @@ const priority = [
   'myrmecobius_fasciatus', 'spilocuscus_maculatus', 'dendrolagus_lumholtzi', 'dendrolagus_matschiei'
 ].map(suffix => 'oc_esp_' + suffix);
 priority.splice(5, 0, 'gm06_dromiciops_gliroides');
-priority.unshift('oc_esp_cicinnurus_respublica', 'eu_esp_0629', 'asia_esp_0067',
+priority.unshift('asia_esp_0527', 'asia_esp_0373', 'oc_esp_cicinnurus_respublica', 'eu_esp_0629', 'asia_esp_0067',
   'sa_esp_scelorchilus_rubecula', 'sa_esp_brachycephalus_pulex',
   'af_avestruz', 'asia_esp_0410', 'urogallo_comun',
   'frailecillo_atlantico', 'aguila_real', 'mar_esp_megaptera_novaeangliae',
@@ -175,6 +178,12 @@ function classify(id, sp) {
     if (taxonomy.className !== 'Aves' || bird.latin !== sp.latin) throw Error('Ave fuera del inventario: ' + id);
     return { family: bird.family, order: bird.order, group: bird.group, edition: bird.edition };
   }
+  const squamate = squamates.get(id);
+  if (squamate) {
+    if (taxonomy.className !== 'Reptilia' || squamate.latin !== sp.latin) throw Error('Reptil fuera del inventario: ' + id);
+    const { family, order, group } = squamate;
+    return { family, order, group, edition: '4.8.0' };
+  }
   if (Object.hasOwn(additions, id) && taxonomy.className === 'Amphibia') {
     const { family, order } = taxonomy;
     return { family, order, group: 'Anfibios', edition: '4.7.3' };
@@ -258,16 +267,21 @@ for (const file of classical) {
 }
 const records = species.flatMap(sp => sp.records);
 const mammals = catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Mammalia');
-const birdsByLatin = new Map(species.filter(sp => birds.has(sp.id)).map(sp => [sp.latin, sp]));
-const birdComparisons = Object.fromEntries(Object.entries(comparisonSets).map(([key, set]) =>
-  [key, { label: set.label, birds: set.birds.map(([latin, trait, plateKey]) => {
-    const bird = birdsByLatin.get(latin);
-    if (!bird) throw Error('Ave de comparación fuera del inventario: ' + latin);
-    if (plateKey && !bird.records.some(record => record.key === plateKey && record.src)) {
-      throw Error('Variante de comparación sin lámina: ' + latin + ' · ' + plateKey);
-    }
-    return { id: bird.id, trait, ...(plateKey ? { plateKey } : {}) };
-  }) }]));
+function buildComparisons(sets, members, key) {
+  const byLatin = new Map(species.filter(sp => members.has(sp.id)).map(sp => [sp.latin, sp]));
+  return Object.fromEntries(Object.entries(sets).map(([id, set]) =>
+    [id, { label: set.label, [key]: set[key].map(([latin, trait, plateKey]) => {
+      const animal = byLatin.get(latin);
+      if (!animal) throw Error('Especie de comparación fuera del inventario: ' + latin);
+      if (plateKey && !animal.records.some(record => record.key === plateKey && record.src)) {
+        throw Error('Variante de comparación sin lámina: ' + latin + ' · ' + plateKey);
+      }
+      return { id: animal.id, trait, ...(plateKey ? { plateKey } : {}) };
+    }) }]));
+}
+
+const birdComparisons = buildComparisons(comparisonSets, birds, 'birds');
+const reptileComparisons = buildComparisons(reptileSets, squamates, 'reptiles');
 const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,
   total: catalogEntries.length,
@@ -282,9 +296,11 @@ const migrationProgress = {
   mammals: mammals.length,
   mammalsMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Mammalia').length,
   birds: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Aves').length,
-  birdsMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Aves').length
+  birdsMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Aves').length,
+  reptiles: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Reptilia').length,
+  reptilesMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Reptilia').length
 };
-const mixedFieldSprites = ['eu_esp_0661', 'eu_esp_0660', 'lagarto_ocelado'].map(id => {
+const mixedFieldSprites = ['eu_esp_0660', 'eu_esp_0659', 'salamandra_comun'].map(id => {
   const sp = audit.SPECIES[id];
   if (classify(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
   return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };
@@ -293,6 +309,7 @@ fs.writeFileSync(path.join(out, 'catalog.js'),
   'const catalog = ' + JSON.stringify(species, null, 2) + ';\n' +
   'const mixedFieldSprites = ' + JSON.stringify(mixedFieldSprites, null, 2) + ';\n' +
   'const birdComparisons = ' + JSON.stringify(birdComparisons, null, 2) + ';\n' +
+  'const reptileComparisons = ' + JSON.stringify(reptileComparisons, null, 2) + ';\n' +
   'const migrationProgress = ' + JSON.stringify(migrationProgress) + ';\n');
 const version = require('../package.json').version;
 const rows = species.map(sp => [

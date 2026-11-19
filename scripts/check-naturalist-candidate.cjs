@@ -5,10 +5,10 @@ const path = require('node:path');
 const http = require('node:http');
 const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v474';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v480';
 const { harness } = require('../tests/helpers/live-game.cjs');
 
-const baseline = process.env.ATLAS_BASELINE || '31951d3b4cd2c3a143cb7bc601a0e0ccf52ffd38';
+const baseline = process.env.ATLAS_BASELINE || '0421dbe4b316b0934dbfbcb9e55340b48a8fdb72';
 const baselineWeb = process.env.ATLAS_BASELINE_WWW;
 const version = require('../package.json').version;
 const versionSlug = version.replaceAll('.', '');
@@ -674,12 +674,86 @@ async function run() {
         await updated.locator('[data-action=m27-close]').click();
       }
 
+      const lizard = 'lagarto_ocelado';
+      await updated.evaluate(({ id, region }) => {
+        const save = AtlasSaveBridge.getSaveData();
+        save.currentRegion = region.id;
+        save.regionUnlocked[region.id] = true;
+        save.habitat = 'pradera';
+        save.time = 'dia';
+        save.season = 'primavera';
+        save.helpers = 3;
+        save.lastTick = Date.now();
+        delete save.discovered[id];
+        delete save.sightings[id];
+        delete save.stages[id];
+        const hour = Math.floor(save.lastTick / 3600000);
+        save.autoHourly = Object.fromEntries(region.species.filter(key => key !== id).map(key => [hour + ':' + key, 999]));
+        AtlasSaveBridge.restoreGame(save);
+      }, { id: lizard, region: partridgeRegion });
+      await openTab(updated, 'field');
+      const lizardPlate = 'img[src*="/lagarto_ocelado--"]';
+      const lizardStart = performance.now();
+      await updated.locator('#fieldResult ' + lizardPlate).evaluate(img => img.decode());
+      const squamateAutoMs = Math.round(performance.now() - lizardStart);
+      assert.ok(await updated.evaluate(id => AtlasSaveBridge.getSaveData().sightings[id] > 0, lizard));
+      await updated.locator('.field-environment .landscape-pradera').evaluate(img => img.decode());
+      await updated.evaluate(id => {
+        const save = AtlasSaveBridge.getSaveData();
+        save.helpers = 0;
+        save.stages[id] = 5;
+        save.selectedJournal = id;
+        save.published[id] = true;
+        save.museum.exhibits[id] = true;
+        AtlasSaveBridge.restoreGame(save);
+      }, lizard);
+      await openTab(updated, 'journal');
+      await updated.locator('.j25-sheet ' + lizardPlate).first().evaluate(img => img.decode());
+      await openTab(updated, 'bestiary');
+      await updated.locator('#b26-search').fill('Timon lepidus');
+      await updated.locator('.b26-card').filter({ has: updated.locator(lizardPlate) }).click();
+      await updated.locator('.b26-dialog ' + lizardPlate).first().evaluate(img => img.decode());
+      await updated.locator('.b26-dialog .landscape-pradera').evaluate(img => img.decode());
+      await updated.locator('[data-action=b26-close]').click();
+      await openTab(updated, 'museum');
+      await updated.getByRole('tab', { name: 'Exposiciones', exact: true }).click();
+      await updated.locator('.m27-vitrines [data-action=m27-open]').filter({ has: updated.locator(lizardPlate) }).click();
+      await updated.locator('.m27-dialog ' + lizardPlate).first().evaluate(img => img.decode());
+      await updated.locator('[data-action=m27-close]').click();
+
+      const squamateLegends = [];
+      for (const [id, legend] of [['asia_esp_0527', 'basalto'], ['asia_esp_0373', 'seda']]) {
+        await updated.evaluate(({ id, legend }) => {
+          const save = AtlasSaveBridge.getSaveData();
+          save.currentRegion = 'HX-06-17';
+          save.regionUnlocked[save.currentRegion] = true;
+          save.habitat = 'selva';
+          save.discovered[id] = true;
+          save.stages[id] = 5;
+          save.selectedJournal = id;
+          save.legendaryFound[legend] = { id: legend, speciesId: id };
+          save.lastEncounter = { species: id, title: legend, sequence: save.encounterSequence, entries: [
+            { id, amount: 1, variant: 'Legendario', category: 'Legendario' }
+          ] };
+          AtlasSaveBridge.restoreGame(save);
+        }, { id, legend });
+        await openTab(updated, 'field');
+        const art = updated.locator('#fieldResult .legendary img[src$="--' + legend + '.webp"]');
+        await art.evaluate(img => img.decode());
+        assert.match(await art.evaluate(img => getComputedStyle(img).filter), /drop-shadow/);
+        await updated.locator('.field-environment .landscape-selva').evaluate(img => img.decode());
+        squamateLegends.push(legend);
+        if (process.argv.includes('--write-evidence')) {
+          await updated.locator('.field-stage').screenshot({ path: evidenceDir + '/' + legend + '-' + width + '.jpg', type: 'jpeg', quality: 85 });
+        }
+      }
+
       await updated.goto(url + 'naturalist-art/');
       await updated.locator('.field-card .atlas-art-image').evaluate(img => img.decode());
       await updated.locator('.field-card .atlas-art-landscape').evaluate(img => img.decode());
       assert.deepEqual(errors, []);
       results.push({ width, fieldBeforeMs: beforeMs, fieldWebPMs: afterMs, fieldBeforeJSHeapBytes: beforeHeap, fieldWebpJSHeapBytes: afterHeap, exactSaveBackup: true,
-        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, terrestrialAutoRepeatMs, ostrichDimorphismOffline: true, passerineAutoMs, passerineInAllModulesOffline: true, discoveryChecks, optionalReviewOutsideGameCache: true, errors });
+        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, terrestrialAutoRepeatMs, ostrichDimorphismOffline: true, passerineAutoMs, passerineInAllModulesOffline: true, squamateAutoMs, squamateInAllModulesOffline: true, squamateLegends, discoveryChecks, optionalReviewOutsideGameCache: true, errors });
       await ctx.close();
     }
   } finally {

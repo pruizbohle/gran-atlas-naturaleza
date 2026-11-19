@@ -1,0 +1,2214 @@
+{
+  "version": "4.8.0",
+  "title": "Serpientes y lagartos",
+  "species": 78,
+  "groups": {
+    "Lagartos": 42,
+    "Serpientes": 36
+  },
+  "families": [
+    "Agamidae",
+    "Anguidae",
+    "Boidae",
+    "Chamaeleonidae",
+    "Colubridae",
+    "Corytophanidae",
+    "Elapidae",
+    "Gekkonidae",
+    "Helodermatidae",
+    "Iguanidae",
+    "Lacertidae",
+    "Liolaemidae",
+    "Natricidae",
+    "Phrynosomatidae",
+    "Pythonidae",
+    "Scincidae",
+    "Teiidae",
+    "Tropiduridae",
+    "Varanidae",
+    "Viperidae"
+  ],
+  "albino": 28,
+  "melanic": 20,
+  "dimorphicSpecies": 0,
+  "legendary": [
+    "Seda",
+    "Basalto"
+  ],
+  "alreadyMigrated": [
+    "oc_esp_acanthophis_antarcticus",
+    "af_xlsx_131_agama_agama",
+    "gm06_amblyrhynchus_cristatus",
+    "eu_esp_0661",
+    "gm06_basiliscus_basiliscus",
+    "na_esp_basiliscus_plumifrons",
+    "af_xlsx_131_bitis_arietans",
+    "na_esp_boa_imperator",
+    "sa_esp_bothrops_alternatus",
+    "asia_esp_0906",
+    "af_xlsx_camaleon_parson",
+    "af_xlsx_vibora_cornuda",
+    "asia_esp_0102",
+    "eu_esp_0116",
+    "af_camaleon_namaqua",
+    "oc_esp_chlamydosaurus_kingii",
+    "gm06_conolophus_subcristatus",
+    "na_esp_crotalus_atrox",
+    "sa_esp_crotalus_durissus",
+    "na_esp_crotalus_horridus",
+    "na_esp_crotalus_viridis",
+    "na_esp_ctenosaura_similis",
+    "gm06_cyclura_cornuta",
+    "gm06_cyclura_nubila",
+    "asia_esp_0905",
+    "af_xlsx_mamba_negra",
+    "asia_esp_0901",
+    "sa_esp_epicrates_cenchria",
+    "sa_esp_eunectes_murinus",
+    "sa_esp_eunectes_notaeus",
+    "af_camaleon_pantera",
+    "asia_esp_0902",
+    "na_esp_heloderma_suspectum",
+    "sa_esp_iguana_iguana",
+    "oc_esp_intellagama_lesueurii",
+    "na_esp_lampropeltis_californiae",
+    "mar_esp_laticauda_colubrina",
+    "na_esp_leptophis_ahaetulla",
+    "sa_esp_liolaemus_atacamensis",
+    "asia_esp_0316",
+    "sa_esp_microlophus_atacamensis",
+    "sa_esp_micrurus_corallinus",
+    "oc_esp_moloch_horridus",
+    "oc_esp_morelia_spilota",
+    "oc_esp_morelia_viridis",
+    "af_cobra_egipcia",
+    "af_xlsx_131_naja_mossambica",
+    "asia_esp_0351",
+    "eu_esp_0666",
+    "eu_esp_0665",
+    "oc_esp_notechis_scutatus",
+    "asia_esp_0373",
+    "oc_esp_oxyuranus_microlepidotus",
+    "oc_esp_oxyuranus_scutellatus",
+    "af_geco_patas_palmeadas",
+    "af_xlsx_131_phelsuma_grandis",
+    "af_gecko_diurno",
+    "asia_esp_0431",
+    "na_esp_phrynosoma_cornutum",
+    "oc_esp_pogona_vitticeps",
+    "asia_esp_0903",
+    "af_xlsx_piton_bola",
+    "af_piton_africana",
+    "sa_esp_salvator_merianae",
+    "af_xlsx_boa_madagascar",
+    "af_xlsx_geco_desierto",
+    "oc_esp_tiliqua_scincoides",
+    "lagarto_ocelado",
+    "af_xlsx_131_trioceros_jacksonii",
+    "asia_esp_0519",
+    "af_xlsx_gecko_hoja",
+    "asia_esp_0900",
+    "oc_esp_varanus_giganteus",
+    "oc_esp_varanus_gouldii",
+    "asia_esp_0527",
+    "af_xlsx_varano_nilo",
+    "oc_esp_varanus_salvadorii",
+    "vibora_aspid"
+  ],
+  "estimatedPlates": 0,
+  "inventory": [
+    {
+      "id": "oc_esp_acanthophis_antarcticus",
+      "name": "Víbora de la muerte australiana",
+      "latin": "Acanthophis antarcticus",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "desierto",
+        "humedal"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Elapidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_acanthophis_antarcticus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_131_agama_agama",
+      "name": "Agama común",
+      "latin": "Agama agama",
+      "habitats": [
+        "estepa",
+        "pradera",
+        "bosque"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Agamidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_131_agama_agama--normal.webp",
+        "albino": "af_xlsx_131_agama_agama--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "gm06_amblyrhynchus_cristatus",
+      "name": "Iguana marina",
+      "latin": "Amblyrhynchus cristatus",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Iguanidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Iguanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable",
+        "Épico",
+        "Excepcional"
+      ],
+      "existingRoutes": {
+        "normal": "gm06_amblyrhynchus_cristatus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "eu_esp_0661",
+      "name": "Lución europeo",
+      "latin": "Anguis fragilis",
+      "habitats": [
+        "pradera",
+        "montana",
+        "bosque"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Anguidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "eu_esp_0661--normal.webp",
+        "melanico": "eu_esp_0661--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "gm06_basiliscus_basiliscus",
+      "name": "Basilisco común",
+      "latin": "Basiliscus basiliscus",
+      "habitats": [
+        "rio",
+        "selva"
+      ],
+      "historicalGroup": "Corytophanidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Corytophanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable",
+        "Épico",
+        "Excepcional"
+      ],
+      "existingRoutes": {
+        "normal": "gm06_basiliscus_basiliscus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "na_esp_basiliscus_plumifrons",
+      "name": "Basilisco verde",
+      "latin": "Basiliscus plumifrons",
+      "habitats": [
+        "selva",
+        "rio"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Corytophanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "na_esp_basiliscus_plumifrons--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_131_bitis_arietans",
+      "name": "Víbora bufadora",
+      "latin": "Bitis arietans",
+      "habitats": [
+        "estepa",
+        "pradera",
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Viperidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_131_bitis_arietans--normal.webp",
+        "albino": "af_xlsx_131_bitis_arietans--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "na_esp_boa_imperator",
+      "name": "Boa común",
+      "latin": "Boa imperator",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Boidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "na_esp_boa_imperator--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "sa_esp_bothrops_alternatus",
+      "name": "Bothrops yarará",
+      "latin": "Bothrops alternatus",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Viperidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "sa_esp_bothrops_alternatus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0906",
+      "name": "Krait común",
+      "latin": "Bungarus caeruleus",
+      "habitats": [
+        "pradera"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Elapidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0906--normal.webp",
+        "melanico": "asia_esp_0906--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_camaleon_parson",
+      "name": "Camaleón de Parson",
+      "latin": "Calumma parsonii",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Chamaeleonidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_camaleon_parson--normal.webp",
+        "albino": "af_xlsx_camaleon_parson--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_vibora_cornuda",
+      "name": "Víbora cornuda",
+      "latin": "Cerastes cerastes",
+      "habitats": [
+        "desierto"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Viperidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_vibora_cornuda--normal.webp",
+        "albino": "af_xlsx_vibora_cornuda--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0102",
+      "name": "Víbora cornuda árabe",
+      "latin": "Cerastes gasperettii",
+      "habitats": [
+        "desierto",
+        "estepa"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Viperidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0102--normal.webp",
+        "melanico": "asia_esp_0102--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "eu_esp_0116",
+      "name": "Camaleón común",
+      "latin": "Chamaeleo chamaeleon",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Chamaeleonidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "eu_esp_0116--normal.webp",
+        "melanico": "eu_esp_0116--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_camaleon_namaqua",
+      "name": "Camaleón de Namaqua",
+      "latin": "Chamaeleo namaquensis",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Chamaeleonidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_camaleon_namaqua--normal.webp",
+        "albino": "af_camaleon_namaqua--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_chlamydosaurus_kingii",
+      "name": "Lagarto de cuello de volante",
+      "latin": "Chlamydosaurus kingii",
+      "habitats": [
+        "bosque",
+        "sabana"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Agamidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_chlamydosaurus_kingii--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "gm06_conolophus_subcristatus",
+      "name": "Iguana terrestre de Galápagos",
+      "latin": "Conolophus subcristatus",
+      "habitats": [
+        "desierto",
+        "pradera"
+      ],
+      "historicalGroup": "Iguanidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Iguanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable",
+        "Épico",
+        "Excepcional"
+      ],
+      "existingRoutes": {
+        "normal": "gm06_conolophus_subcristatus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "na_esp_crotalus_atrox",
+      "name": "Serpiente de cascabel diamante occidental",
+      "latin": "Crotalus atrox",
+      "habitats": [
+        "desierto"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Viperidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "na_esp_crotalus_atrox--normal.webp",
+        "albino": "na_esp_crotalus_atrox--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "sa_esp_crotalus_durissus",
+      "name": "Cascabel sudamericana",
+      "latin": "Crotalus durissus",
+      "habitats": [
+        "sabana",
+        "pradera"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Viperidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "sa_esp_crotalus_durissus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "na_esp_crotalus_horridus",
+      "name": "Serpiente de cascabel del bosque",
+      "latin": "Crotalus horridus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Viperidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "na_esp_crotalus_horridus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "na_esp_crotalus_viridis",
+      "name": "Serpiente de cascabel de pradera",
+      "latin": "Crotalus viridis",
+      "habitats": [
+        "pradera",
+        "estepa"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Viperidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "na_esp_crotalus_viridis--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "na_esp_ctenosaura_similis",
+      "name": "Iguana negra de cola espinosa",
+      "latin": "Ctenosaura similis",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Iguanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "na_esp_ctenosaura_similis--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "gm06_cyclura_cornuta",
+      "name": "Iguana rinoceronte",
+      "latin": "Cyclura cornuta",
+      "habitats": [
+        "costa",
+        "bosque"
+      ],
+      "historicalGroup": "Iguanidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Iguanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable",
+        "Épico",
+        "Excepcional"
+      ],
+      "existingRoutes": {
+        "normal": "gm06_cyclura_cornuta--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "gm06_cyclura_nubila",
+      "name": "Iguana cubana",
+      "latin": "Cyclura nubila",
+      "habitats": [
+        "costa",
+        "bosque"
+      ],
+      "historicalGroup": "Iguanidae",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Iguanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable",
+        "Épico",
+        "Excepcional"
+      ],
+      "existingRoutes": {
+        "normal": "gm06_cyclura_nubila--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0905",
+      "name": "Víbora de Russell",
+      "latin": "Daboia russelii",
+      "habitats": [
+        "pradera"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Viperidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0905--normal.webp",
+        "melanico": "asia_esp_0905--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_mamba_negra",
+      "name": "Mamba negra",
+      "latin": "Dendroaspis polylepis",
+      "habitats": [
+        "pradera",
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Elapidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_mamba_negra--normal.webp",
+        "albino": "af_xlsx_mamba_negra--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0901",
+      "name": "Dragón volador común",
+      "latin": "Draco volans",
+      "habitats": [
+        "selva"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Agamidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0901--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "sa_esp_epicrates_cenchria",
+      "name": "Boa arcoíris",
+      "latin": "Epicrates cenchria",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Boidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "sa_esp_epicrates_cenchria--normal.webp",
+        "albino": "sa_esp_epicrates_cenchria--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "sa_esp_eunectes_murinus",
+      "name": "Anaconda verde",
+      "latin": "Eunectes murinus",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Boidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable",
+        "Épico"
+      ],
+      "existingRoutes": {
+        "normal": "sa_esp_eunectes_murinus--normal.webp",
+        "albino": "sa_esp_eunectes_murinus--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "sa_esp_eunectes_notaeus",
+      "name": "Anaconda amarilla",
+      "latin": "Eunectes notaeus",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Boidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "sa_esp_eunectes_notaeus--normal.webp",
+        "albino": "sa_esp_eunectes_notaeus--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_camaleon_pantera",
+      "name": "Camaleón pantera",
+      "latin": "Furcifer pardalis",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Chamaeleonidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_camaleon_pantera--normal.webp",
+        "albino": "af_camaleon_pantera--albino.webp",
+        "melanico": "af_camaleon_pantera--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0902",
+      "name": "Gecko tokay",
+      "latin": "Gekko gecko",
+      "habitats": [
+        "montana",
+        "selva"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Gekkonidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0902--normal.webp",
+        "melanico": "asia_esp_0902--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "na_esp_heloderma_suspectum",
+      "name": "Monstruo de Gila",
+      "latin": "Heloderma suspectum",
+      "habitats": [
+        "desierto",
+        "estepa"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Helodermatidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "na_esp_heloderma_suspectum--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "sa_esp_iguana_iguana",
+      "name": "Iguana verde",
+      "latin": "Iguana iguana",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Iguanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "sa_esp_iguana_iguana--normal.webp",
+        "albino": "sa_esp_iguana_iguana--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_intellagama_lesueurii",
+      "name": "Dragón de agua oriental",
+      "latin": "Intellagama lesueurii",
+      "habitats": [
+        "bosque",
+        "rio"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Agamidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_intellagama_lesueurii--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "na_esp_lampropeltis_californiae",
+      "name": "Serpiente rey de California",
+      "latin": "Lampropeltis californiae",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Colubridae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "na_esp_lampropeltis_californiae--normal.webp",
+        "albino": "na_esp_lampropeltis_californiae--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "mar_esp_laticauda_colubrina",
+      "name": "Serpiente marina de labios amarillos",
+      "latin": "Laticauda colubrina",
+      "habitats": [
+        "arrecife",
+        "costa_marina"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Elapidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "mar_esp_laticauda_colubrina--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "na_esp_leptophis_ahaetulla",
+      "name": "Serpiente arborícola verde",
+      "latin": "Leptophis ahaetulla",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Colubridae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "na_esp_leptophis_ahaetulla--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "sa_esp_liolaemus_atacamensis",
+      "name": "Lagarto de Atacama",
+      "latin": "Liolaemus atacamensis",
+      "habitats": [
+        "desierto"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Liolaemidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "sa_esp_liolaemus_atacamensis--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0316",
+      "name": "Pitón reticulada",
+      "latin": "Malayopython reticulatus",
+      "habitats": [
+        "selva"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Pythonidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0316--normal.webp",
+        "melanico": "asia_esp_0316--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "sa_esp_microlophus_atacamensis",
+      "name": "Lagartija de lava",
+      "latin": "Microlophus atacamensis",
+      "habitats": [
+        "costa"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Tropiduridae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "sa_esp_microlophus_atacamensis--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "sa_esp_micrurus_corallinus",
+      "name": "Serpiente coral común",
+      "latin": "Micrurus corallinus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Elapidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "sa_esp_micrurus_corallinus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_moloch_horridus",
+      "name": "Diablo espinoso",
+      "latin": "Moloch horridus",
+      "habitats": [
+        "desierto"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Agamidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_moloch_horridus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_morelia_spilota",
+      "name": "Pitón diamante",
+      "latin": "Morelia spilota",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Pythonidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_morelia_spilota--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_morelia_viridis",
+      "name": "Pitón verde arborícola",
+      "latin": "Morelia viridis",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Pythonidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_morelia_viridis--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_cobra_egipcia",
+      "name": "Cobra egipcia",
+      "latin": "Naja haje",
+      "habitats": [
+        "pradera",
+        "rio",
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Elapidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_cobra_egipcia--normal.webp",
+        "albino": "af_cobra_egipcia--albino.webp",
+        "melanico": "af_cobra_egipcia--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_131_naja_mossambica",
+      "name": "Cobra escupidora de Mozambique",
+      "latin": "Naja mossambica",
+      "habitats": [
+        "pradera",
+        "estepa"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Elapidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_131_naja_mossambica--normal.webp",
+        "albino": "af_xlsx_131_naja_mossambica--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0351",
+      "name": "Cobra india",
+      "latin": "Naja naja",
+      "habitats": [
+        "pradera"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Elapidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0351--normal.webp",
+        "melanico": "asia_esp_0351--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "eu_esp_0666",
+      "name": "Culebra viperina",
+      "latin": "Natrix maura",
+      "habitats": [
+        "pradera",
+        "rio",
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Natricidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "eu_esp_0666--normal.webp",
+        "melanico": "eu_esp_0666--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "eu_esp_0665",
+      "name": "Culebra de collar",
+      "latin": "Natrix natrix",
+      "habitats": [
+        "pradera",
+        "rio",
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Natricidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "eu_esp_0665--normal.webp",
+        "melanico": "eu_esp_0665--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_notechis_scutatus",
+      "name": "Serpiente tigre",
+      "latin": "Notechis scutatus",
+      "habitats": [
+        "bosque",
+        "humedal",
+        "pradera"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Elapidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_notechis_scutatus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0373",
+      "name": "Cobra real",
+      "latin": "Ophiophagus hannah",
+      "habitats": [
+        "selva"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": {
+        "id": "seda",
+        "speciesId": "asia_esp_0373",
+        "name": "Seda",
+        "description": "Una cobra de capucha estrecha se eleva entre sus propios anillos."
+      },
+      "order": "Squamata",
+      "family": "Elapidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable",
+        "Épico",
+        "Excepcional",
+        "Legendario"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0373--normal.webp",
+        "melanico": "asia_esp_0373--melanico.webp",
+        "legendario": "asia_esp_0373--seda.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_oxyuranus_microlepidotus",
+      "name": "Serpiente taipán del interior",
+      "latin": "Oxyuranus microlepidotus",
+      "habitats": [
+        "desierto",
+        "pradera"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Elapidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_oxyuranus_microlepidotus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_oxyuranus_scutellatus",
+      "name": "Serpiente taipán costera",
+      "latin": "Oxyuranus scutellatus",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana",
+        "desierto",
+        "humedal"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Elapidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_oxyuranus_scutellatus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_geco_patas_palmeadas",
+      "name": "Geco de patas palmeadas",
+      "latin": "Pachydactylus rangei",
+      "habitats": [
+        "desierto"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Gekkonidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_geco_patas_palmeadas--normal.webp",
+        "albino": "af_geco_patas_palmeadas--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_131_phelsuma_grandis",
+      "name": "Geco diurno gigante",
+      "latin": "Phelsuma grandis",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Gekkonidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_131_phelsuma_grandis--normal.webp",
+        "albino": "af_xlsx_131_phelsuma_grandis--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_gecko_diurno",
+      "name": "Geco diurno de Madagascar",
+      "latin": "Phelsuma madagascariensis",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Gekkonidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_gecko_diurno--normal.webp",
+        "albino": "af_gecko_diurno--albino.webp",
+        "melanico": "af_gecko_diurno--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0431",
+      "name": "Lagarto cabeza de sapo",
+      "latin": "Phrynocephalus versicolor",
+      "habitats": [
+        "desierto",
+        "estepa",
+        "pradera",
+        "montana"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Agamidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0431--normal.webp",
+        "melanico": "asia_esp_0431--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "na_esp_phrynosoma_cornutum",
+      "name": "Lagarto cornudo de Texas",
+      "latin": "Phrynosoma cornutum",
+      "habitats": [
+        "desierto",
+        "pradera",
+        "estepa"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Phrynosomatidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "na_esp_phrynosoma_cornutum--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_pogona_vitticeps",
+      "name": "Dragón barbudo central",
+      "latin": "Pogona vitticeps",
+      "habitats": [
+        "desierto",
+        "pradera"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Agamidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_pogona_vitticeps--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0903",
+      "name": "Lagarto de cristal oriental",
+      "latin": "Pseudopus apodus",
+      "habitats": [
+        "pradera",
+        "montana",
+        "estepa"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Anguidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0903--normal.webp",
+        "albino": "asia_esp_0903--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_piton_bola",
+      "name": "Pitón bola",
+      "latin": "Python regius",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Pythonidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_piton_bola--normal.webp",
+        "albino": "af_xlsx_piton_bola--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_piton_africana",
+      "name": "Pitón de Seba",
+      "latin": "Python sebae",
+      "habitats": [
+        "pradera",
+        "rio",
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino",
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Pythonidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Melánico",
+        "Notable",
+        "Épico"
+      ],
+      "existingRoutes": {
+        "normal": "af_piton_africana--normal.webp",
+        "albino": "af_piton_africana--albino.webp",
+        "melanico": "af_piton_africana--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "sa_esp_salvator_merianae",
+      "name": "Lagarto overo",
+      "latin": "Salvator merianae",
+      "habitats": [
+        "pradera",
+        "bosque",
+        "sabana"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Teiidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "sa_esp_salvator_merianae--normal.webp",
+        "albino": "sa_esp_salvator_merianae--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_boa_madagascar",
+      "name": "Boa de Madagascar",
+      "latin": "Sanzinia madagascariensis",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Boidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_boa_madagascar--normal.webp",
+        "albino": "af_xlsx_boa_madagascar--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_geco_desierto",
+      "name": "Geco del desierto",
+      "latin": "Stenodactylus sthenodactylus",
+      "habitats": [
+        "desierto"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Gekkonidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_geco_desierto--normal.webp",
+        "albino": "af_xlsx_geco_desierto--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_tiliqua_scincoides",
+      "name": "Escinco de lengua azul oriental",
+      "latin": "Tiliqua scincoides",
+      "habitats": [
+        "bosque",
+        "pradera",
+        "sabana"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Scincidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_tiliqua_scincoides--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "lagarto_ocelado",
+      "name": "Lagarto ocelado",
+      "latin": "Timon lepidus",
+      "habitats": [
+        "pradera",
+        "montana",
+        "costa"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Lacertidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino"
+      ],
+      "existingRoutes": {
+        "normal": "lagarto_ocelado--normal.webp",
+        "albino": "lagarto_ocelado--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_131_trioceros_jacksonii",
+      "name": "Camaleón de Jackson",
+      "latin": "Trioceros jacksonii",
+      "habitats": [
+        "bosque",
+        "montana"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Chamaeleonidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_131_trioceros_jacksonii--normal.webp",
+        "albino": "af_xlsx_131_trioceros_jacksonii--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0519",
+      "name": "Lagarto egipcio de cola espinosa",
+      "latin": "Uromastyx aegyptia",
+      "habitats": [
+        "desierto",
+        "estepa"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Agamidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0519--normal.webp",
+        "melanico": "asia_esp_0519--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_gecko_hoja",
+      "name": "Geco cola de hoja satánico",
+      "latin": "Uroplatus phantasticus",
+      "habitats": [
+        "bosque"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Gekkonidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_gecko_hoja--normal.webp",
+        "albino": "af_xlsx_gecko_hoja--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0900",
+      "name": "Varano de Bengala",
+      "latin": "Varanus bengalensis",
+      "habitats": [
+        "pradera"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Varanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0900--normal.webp",
+        "melanico": "asia_esp_0900--melanico.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_varanus_giganteus",
+      "name": "Perentie",
+      "latin": "Varanus giganteus",
+      "habitats": [
+        "desierto",
+        "pradera"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Varanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_varanus_giganteus--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_varanus_gouldii",
+      "name": "Varano de arena",
+      "latin": "Varanus gouldii",
+      "habitats": [
+        "desierto",
+        "pradera",
+        "bosque"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Varanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_varanus_gouldii--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "asia_esp_0527",
+      "name": "Dragón de Komodo",
+      "latin": "Varanus komodoensis",
+      "habitats": [
+        "selva"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": {
+        "id": "basalto",
+        "speciesId": "asia_esp_0527",
+        "name": "Basalto",
+        "description": "Escamas oscuras y patas robustas sostienen una silueta rasante."
+      },
+      "order": "Squamata",
+      "family": "Varanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico",
+        "Notable",
+        "Épico",
+        "Excepcional",
+        "Legendario"
+      ],
+      "existingRoutes": {
+        "normal": "asia_esp_0527--normal.webp",
+        "melanico": "asia_esp_0527--melanico.webp",
+        "legendario": "asia_esp_0527--basalto.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "af_xlsx_varano_nilo",
+      "name": "Varano del Nilo",
+      "latin": "Varanus niloticus",
+      "habitats": [
+        "rio",
+        "humedal"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [
+        "Albino"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Varanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Albino",
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "af_xlsx_varano_nilo--normal.webp",
+        "albino": "af_xlsx_varano_nilo--albino.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "oc_esp_varanus_salvadorii",
+      "name": "Varanus de Papúa",
+      "latin": "Varanus salvadorii",
+      "habitats": [
+        "selva",
+        "bosque"
+      ],
+      "historicalGroup": "Lagartos",
+      "pigmentation": [],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Varanidae",
+      "group": "Lagartos",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Notable"
+      ],
+      "existingRoutes": {
+        "normal": "oc_esp_varanus_salvadorii--normal.webp"
+      },
+      "pendingPlates": []
+    },
+    {
+      "id": "vibora_aspid",
+      "name": "Víbora áspid",
+      "latin": "Vipera aspis",
+      "habitats": [
+        "pradera",
+        "rio",
+        "bosque",
+        "montana"
+      ],
+      "historicalGroup": "Serpientes",
+      "pigmentation": [
+        "Melánico"
+      ],
+      "dimorphism": false,
+      "legendary": null,
+      "order": "Squamata",
+      "family": "Viperidae",
+      "group": "Serpientes",
+      "className": "Reptilia",
+      "configuredSpecimens": [
+        "Melánico"
+      ],
+      "existingRoutes": {
+        "normal": "vibora_aspid--normal.webp",
+        "melanico": "vibora_aspid--melanico.webp"
+      },
+      "pendingPlates": []
+    }
+  ]
+}

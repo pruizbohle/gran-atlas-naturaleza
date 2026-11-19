@@ -1,4 +1,8 @@
-# El Gran Atlas · Paseriformes y cierre de aves (V4.7.4)
+# El Gran Atlas · Serpientes y lagartos (V4.8.0)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.8.0](docs/cientifica-v480/README.md) · [Inventario V4.8.1](docs/cientifica-v480/plan-v481.md).
+
+## Serie 4 · Paseriformes y cierre de aves (V4.7.4)
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.7.4](docs/cientifica-v474/README.md) · [Inventario de reptiles y anfibios](docs/cientifica-v474/plan-herpetologia.md).
 
