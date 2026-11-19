@@ -7,6 +7,7 @@ const { ungulateFamily } = require('./ungulate-families.cjs');
 const { terrestrialMammal, aquaticMammal } = require('./terrestrial-mammal-families.cjs');
 const birdPlan = require('../docs/cientifica-v460/inventario-aves.json');
 const comparisonSets = {
+  ...require('./terrestrial-bird-comparisons.cjs'),
   ...require('./aquatic-bird-comparisons.cjs'),
   ...require('./raptor-comparisons.cjs')
 };
@@ -28,10 +29,21 @@ const priority = [
   'myrmecobius_fasciatus', 'spilocuscus_maculatus', 'dendrolagus_lumholtzi', 'dendrolagus_matschiei'
 ].map(suffix => 'oc_esp_' + suffix);
 priority.splice(5, 0, 'gm06_dromiciops_gliroides');
-priority.unshift('frailecillo_atlantico', 'aguila_real', 'mar_esp_megaptera_novaeangliae',
+priority.unshift('af_avestruz', 'asia_esp_0410', 'urogallo_comun',
+  'frailecillo_atlantico', 'aguila_real', 'mar_esp_megaptera_novaeangliae',
   'sa_esp_inia_geoffrensis', 'af_gorila_montana');
 const aquaticBirds = birdPlan.editions['4.7.1'].inventory;
-const birds = new Map([...birdPlan.editions['4.7.0'].inventory, ...aquaticBirds].map(row => [row.id, row]));
+const paleognathOrders = new Set(['Apterygiformes', 'Casuariiformes', 'Rheiformes', 'Struthioniformes']);
+const terrestrialBirds = birdPlan.editions['4.7.2'].inventory.map(row => ({
+  ...row,
+  group: row.order === 'Galliformes' ? 'Galliformes' :
+    paleognathOrders.has(row.order) ? 'Corredoras y paleognatas' : 'Otras aves terrestres'
+}));
+const birds = new Map([
+  ...birdPlan.editions['4.7.0'].inventory.map(row => ({ ...row, group: 'Rapaces' })),
+  ...aquaticBirds.map(row => ({ ...row, group: row.wave })),
+  ...terrestrialBirds
+].map(row => [row.id, row]));
 const pelagicFamilies = new Set(['Diomedeidae', 'Procellariidae', 'Fregatidae', 'Sulidae']);
 const wetlandPortraits = {
   'Aix galericulata': 'rio',
@@ -151,7 +163,7 @@ function classify(id, sp) {
   const bird = birds.get(id);
   if (bird) {
     if (taxonomy.className !== 'Aves' || bird.latin !== sp.latin) throw Error('Ave fuera del inventario: ' + id);
-    return { family: bird.family, order: bird.order, group: bird.wave || 'Rapaces' };
+    return { family: bird.family, order: bird.order, group: bird.group };
   }
   const genus = sp.latin.split(' ')[0];
   const aquatic = aquaticMammal(sp.latin);
@@ -251,7 +263,7 @@ const migrationProgress = {
   birds: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Aves').length,
   birdsMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Aves').length
 };
-const mixedFieldSprites = ['eu_esp_0628', 'af_avestruz', 'eu_esp_0629'].map(id => {
+const mixedFieldSprites = ['eu_esp_0628', 'eu_esp_0631', 'eu_esp_0629'].map(id => {
   const sp = audit.SPECIES[id];
   if (classify(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
   return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };

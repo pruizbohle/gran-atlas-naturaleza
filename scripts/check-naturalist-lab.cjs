@@ -84,7 +84,57 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 602);
+      assert.equal(await page.locator('.gallery-card').count(), 641);
+      await page.locator('#group').selectOption('Corredoras y paleognatas');
+      assert.equal(await page.locator('.gallery-card').count(), 9);
+      await page.locator('#bird-order').selectOption('Apterygiformes');
+      assert.equal(await page.locator('.gallery-card').count(), 3);
+      await page.locator('#group').selectOption('Otras aves terrestres');
+      assert.equal(await page.locator('.gallery-card').count(), 6);
+      await page.locator('#group').selectOption('Galliformes');
+      assert.equal(await page.locator('.gallery-card').count(), 24);
+      await page.locator('#family').selectOption('Phasianidae');
+      assert.equal(await page.locator('.gallery-card').count(), 20);
+      await page.locator('[data-mode=variants]').click();
+      await page.locator('#species').selectOption('asia_esp_0410');
+      await page.locator('#variant-view').selectOption('sex');
+      await page.locator('#comparison-halo').selectOption('Notable');
+      await page.locator('#comparison-size').selectOption('128');
+      await page.locator('#backdrop').selectOption('dark');
+      const peafowl = page.locator('.variants .notable img');
+      assert.equal(await peafowl.count(), 2);
+      assert.deepEqual(await page.locator('.variants figcaption').allTextContents(), ['Macho', 'Hembra']);
+      const sexAssets = await peafowl.evaluateAll(imgs => Promise.all(imgs.map(async img => {
+        await img.decode();
+        return [img.naturalWidth, img.src.split('--')[1], getComputedStyle(img).filter.includes('drop-shadow')];
+      })));
+      assert.deepEqual(sexAssets, [[128, 'male.webp', true], [128, 'female.webp', true]]);
+      if (process.argv.includes('--write-evidence')) {
+        await page.locator('#comparison-size').selectOption('256');
+        await peafowl.evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
+        await page.locator('.variants').screenshot({ path: 'docs/cientifica-v472/pavo-real-' + viewport.width + '.jpg' });
+      }
+      await page.locator('#variant-view').selectOption('all');
+      await page.locator('#comparison-halo').selectOption('Normal');
+      await page.locator('[data-mode=birds]').click();
+      await page.locator('#bird-set').selectOption('kiwis');
+      await page.locator('#comparison-size').selectOption('64');
+      const kiwiCards = page.locator('.bird-comparison figure');
+      assert.equal(await kiwiCards.count(), 3);
+      assert.deepEqual(await kiwiCards.locator('img').evaluateAll(imgs => imgs.map(img => img.clientWidth)), [64, 64, 64]);
+      assert.match(await kiwiCards.last().innerText(), /Apteryx owenii[\s\S]*moteado fino/);
+      if (process.argv.includes('--write-evidence')) {
+        await page.locator('#comparison-size').selectOption('256');
+        await kiwiCards.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
+        await page.locator('.bird-comparison').screenshot({ path: 'docs/cientifica-v472/comparacion-kiwis-' + viewport.width + '.jpg' });
+      }
+      await page.locator('#bird-set').selectOption('turkeys');
+      await page.locator('#comparison-size').selectOption('128');
+      const turkeys = page.locator('.bird-comparison figure');
+      assert.equal(await turkeys.count(), 2);
+      await turkeys.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
+      assert.match(await turkeys.last().innerText(), /Meleagris ocellata[\s\S]*ocelos/);
+      await page.locator('[data-mode=gallery]').click();
       await page.locator('#group').selectOption('Marinas y costeras');
       assert.equal(await page.locator('.gallery-card').count(), 42);
       await page.locator('#bird-order').selectOption('Sphenisciformes');
@@ -102,7 +152,7 @@ const server = http.createServer((req, res) => {
       await shoveler.evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
       assert.deepEqual(await shoveler.evaluateAll(imgs => imgs.map(img => img.naturalWidth)), [128, 128, 128, 128]);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.variants').screenshot({ path: 'docs/cientifica-v471/pato-cuchara-' + viewport.width + '.jpg' });
+        await page.locator('.variants').screenshot({ path: 'docs/cientifica-v472/pato-cuchara-' + viewport.width + '.jpg' });
       }
       await page.locator('[data-mode=gallery]').click();
       await page.locator('#group').selectOption('Rapaces');
@@ -134,7 +184,7 @@ const server = http.createServer((req, res) => {
       if (process.argv.includes('--write-evidence')) {
         await page.locator('#comparison-size').selectOption('256');
         await penguinCards.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
-        await page.locator('.bird-comparison').screenshot({ path: 'docs/cientifica-v471/comparacion-pinguinos-' + viewport.width + '.jpg' });
+        await page.locator('.bird-comparison').screenshot({ path: 'docs/cientifica-v472/comparacion-pinguinos-' + viewport.width + '.jpg' });
       }
       await page.locator('#bird-set').selectOption('horned-owls');
       await page.locator('#comparison-size').selectOption('64');
@@ -147,7 +197,7 @@ const server = http.createServer((req, res) => {
       await owlCards.locator('img').evaluateAll(imgs => Promise.all(imgs.map(img => img.decode())));
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), viewport.width);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.bird-comparison').screenshot({ path: 'docs/cientifica-v471/comparacion-buhos-' + viewport.width + '.jpg' });
+        await page.locator('.bird-comparison').screenshot({ path: 'docs/cientifica-v472/comparacion-buhos-' + viewport.width + '.jpg' });
       }
       await page.locator('#backdrop').selectOption('light');
       await page.locator('[data-mode=gallery]').click();
@@ -209,7 +259,7 @@ const server = http.createServer((req, res) => {
       await page.locator('.comparison-styles img').evaluate(image => image.decode());
       assert.equal(await page.locator('.legacy-sprite svg').count(), 1);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v471/comparacion-inia-' + viewport.width + '.jpg' });
+        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v472/comparacion-inia-' + viewport.width + '.jpg' });
       }
       await page.locator('[data-mode=bestiary]').click();
       await page.locator('.bestiary-entry .landscape-rio').evaluate(image => image.decode());
@@ -236,7 +286,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#backdrop').selectOption('dark');
       assert.notEqual(await comparison.evaluate(node => getComputedStyle(node).backgroundColor), light);
       if (process.argv.includes('--write-evidence')) {
-        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v471/comparacion-' + viewport.width + '.jpg' });
+        await page.locator('.comparison-styles').screenshot({ path: 'docs/cientifica-v472/comparacion-' + viewport.width + '.jpg' });
       }
       await page.locator('#search').fill('');
       await page.locator('[data-mode=frames]').click();
@@ -282,7 +332,7 @@ const server = http.createServer((req, res) => {
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 602);
+      assert.equal(await page.locator('.gallery-card').count(), 641);
       await page.locator('#cut-state').selectOption('pending');
       assert.equal(await page.locator('.gallery-card').count(),
         expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);

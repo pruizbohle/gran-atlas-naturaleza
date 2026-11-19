@@ -1,4 +1,8 @@
-# El Gran Atlas · Aves acuáticas y marinas (V4.7.1)
+# El Gran Atlas · Aves terrestres, corredoras y galliformes (V4.7.2)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.7.2](docs/cientifica-v472/README.md) · [Inventario V4.7.3](docs/cientifica-v472/plan-v473.md).
+
+## Serie 4 · Aves acuáticas y marinas (V4.7.1)
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.7.1](docs/cientifica-v471/README.md) · [Preparación de V4.7.2](docs/cientifica-v471/plan-v472.md).
 

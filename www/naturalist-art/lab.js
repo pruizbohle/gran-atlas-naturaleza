@@ -14,6 +14,8 @@ const category = byId('category');
 const mixedSvg = byId('mixed-svg');
 const birdSet = byId('bird-set');
 const comparisonSize = byId('comparison-size');
+const comparisonHalo = byId('comparison-halo');
+const variantView = byId('variant-view');
 const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
@@ -48,6 +50,7 @@ byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + m
   migrationProgress.birds + ' aves';
 for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
 selectOptions(birdSet, Object.entries(birdComparisons).map(([key, set]) => [key, set.label]));
+selectOptions(comparisonHalo, Object.keys(frames).map(label => [label, label]));
 updateOrders();
 updateFamilies();
 updateSpecies();
@@ -232,7 +235,7 @@ function compareBirds() {
   const size = Number(comparisonSize.value);
   const cards = birdComparisons[birdSet.value].birds.map(({ id, trait }) => {
     const sp = catalog.find(item => item.id === id);
-    return '<figure>' + illustration(sp, specimenPlate(sp, 'Normal'), 'Normal', size, true) +
+    return '<figure>' + illustration(sp, specimenPlate(sp, 'Normal'), comparisonHalo.value, size, true) +
       '<figcaption><strong>' + text(sp.name) + '</strong><p class="latin">' + text(sp.latin) +
       '</p><p>' + text(trait) + '</p></figcaption></figure>';
   });
@@ -273,13 +276,16 @@ function reviewForm(sp) {
 function draw() {
   const sp = catalog.find(item => item.id === species.value);
   const comparingBirds = mode === 'birds';
+  const comparingVariants = mode === 'variants' && Boolean(sp);
   byId('heading').textContent = modes[mode];
   byId('mixed-control').hidden = mode !== 'mixed';
 
   for (const label of document.querySelectorAll('[data-catalog-filter]')) label.hidden = comparingBirds;
   byId('order-control').hidden = comparingBirds || birdOrder.options.length < 2;
   byId('bird-set-control').hidden = !comparingBirds;
-  byId('comparison-size-control').hidden = !comparingBirds && mode !== 'variants';
+  byId('comparison-size-control').hidden = !comparingBirds && !comparingVariants;
+  byId('comparison-halo-control').hidden = !comparingBirds && !comparingVariants;
+  byId('variant-view-control').hidden = !comparingVariants || !sp.dimorphism;
   byId('species-control').hidden = mode === 'gallery' || comparingBirds;
   byId('context-control').hidden = mode !== 'scale';
   byId('scale-plate-control').hidden = !['scale', 'compare', 'compression', ...previews].includes(mode);
@@ -308,12 +314,14 @@ function draw() {
     case 'museum': content.innerHTML = gamePreview(sp); break;
     case 'gallery': content.innerHTML = gallery(); break;
     case 'variants': {
-      const variants = sp.records.filter(record => record.key !== 'legendario');
+      const comparingSex = sp.dimorphism && variantView.value === 'sex';
+      const variants = sp.records.filter(record => comparingSex
+        ? ['male', 'female'].includes(record.key) : record.key !== 'legendario');
       const size = Number(comparisonSize.value);
       content.innerHTML = (variants.length === 1 ? '<p class="note">Esta especie solo tiene representación normal en el catálogo.</p>' : '') +
         '<div class="pair variants review-comparison plate-comparison' +
         (variants.length === 1 ? ' group' : '') + '" style="--comparison-size:' + size + 'px">' +
-        variants.map(record => figure(illustration(sp, record, 'Normal', size, true), record.label)).join('') + '</div>';
+        variants.map(record => figure(illustration(sp, record, comparisonHalo.value, size, true), record.label)).join('') + '</div>';
       break;
     }
     case 'frames': content.innerHTML = specialFrames(sp); break;
@@ -391,6 +399,8 @@ byId('compression-quality').addEventListener('change', draw);
 byId('comparison-source').addEventListener('change', draw);
 birdSet.addEventListener('change', draw);
 comparisonSize.addEventListener('change', draw);
+comparisonHalo.addEventListener('change', draw);
+variantView.addEventListener('change', draw);
 byId('backdrop').addEventListener('change', event => {
   content.dataset.backdrop = event.target.value;
 });
