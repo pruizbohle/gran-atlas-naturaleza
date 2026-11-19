@@ -118,10 +118,61 @@ function herpetologyPlan() {
       [edition, { title, ...summarize(inventory), inventory }])), southAmericanRegions: geography };
 }
 
+function aquaticPlatePlan() {
+  require('../www/js/naturalist-assets-v400.js');
+  const { routes } = globalThis.AtlasNaturalistAssets;
+  const classifyAquatic = require('./aquatic-plate-taxonomy.cjs');
+  const lots = {
+    condrictios: { title: 'Tiburones y rayas', review: 'Hocico, dientes y cinco a siete hendiduras branquiales en tiburones, disco y posición de las branquias en rayas.' },
+    salmonidos: { title: 'Salmónidos y Remonte', review: 'Aleta adiposa, radios, pedúnculo caudal y contraste entre coloración habitual y nupcial.' },
+    dulceacuicolas: { title: 'Peces dulceacuícolas y estuarinos', review: 'Barbillones, placas, línea lateral, forma de mandíbulas, aletas y patrones de escamas.' },
+    arrecife: { title: 'Peces óseos de arrecife', review: 'Diversidad del perfil lateral, espinas, aletas transparentes y marcas diagnósticas en miniaturas.' },
+    marinos: { title: 'Peces óseos costeros, pelágicos y de plataforma', review: 'Aletas y pínulas de pelágicos, barbillón de gadiformes y proporciones de peces luna.' },
+    profundos: { title: 'Peces óseos de aguas profundas', review: 'Fotóforos, señuelos, ojos tubulares, radios alargados y piel delicada, con contraste sobre fondo de aguas profundas.' },
+    cefalopodos: { title: 'Pulpos, calamares y calamar vampiro', review: 'Ocho brazos en octópodos, dos tentáculos adicionales en calamares, membranas y aletas, con margen transparente en ventosas y filamentos.' }
+  };
+  const records = Object.entries(game.SPECIES).flatMap(([id, species]) => {
+    if (routes[id]?.normal) return [];
+    const { className, subClass: historicalGroup } = game.taxonomyInfo(id);
+    const { family, lot } = classifyAquatic(species.latin, className, species.habitats);
+    const entry = describe(id, species);
+    const variants = entry.pigmentation.map(label => pigments[label]);
+    if (entry.dimorphism) variants.push('male', 'female');
+    if (entry.legendary) variants.push('legendario');
+    const pendingPlates = ['normal', ...variants].map(key =>
+      id + '--' + (key === 'legendario' ? entry.legendary.id : key) + '.webp');
+    assert.ok(!routes[id], id + ' · ruta acuática parcial inesperada');
+    return [{ ...entry, className, family, historicalGroup, configuredSpecimens: [...game.configuredSpecials(species)], lot, pendingPlates }];
+  }).sort((a, b) => a.latin.localeCompare(b.latin, 'en'));
+
+  const summarize = inventory => ({
+    species: inventory.length,
+    families: [...new Set(inventory.map(sp => sp.family))].sort(),
+    albino: inventory.filter(sp => sp.pigmentation.includes('Albino')).length,
+    melanic: inventory.filter(sp => sp.pigmentation.includes('Melánico')).length,
+    dimorphicSpecies: inventory.filter(sp => sp.dimorphism).length,
+    legendary: inventory.filter(sp => sp.legendary).map(sp => sp.legendary),
+    estimatedPlates: inventory.reduce((sum, sp) => sum + sp.pendingPlates.length, 0)
+  });
+  return {
+    version: require('../package.json').version,
+    summary: summarize(records),
+    classes: Object.fromEntries([...new Set(records.map(sp => sp.className))].sort()
+      .map(className => [className, records.filter(sp => sp.className === className).length])),
+    lots: Object.fromEntries(Object.entries(lots).map(([lot, detail]) => {
+      const inventory = records.filter(sp => sp.lot === lot).map(({ lot, ...sp }) => sp);
+      assert.ok(inventory.length, lot + ' · lote vacío');
+      return [lot, { ...detail, ...summarize(inventory), inventory }];
+    }))
+  };
+}
+
 if (process.argv.includes('--birds')) {
   console.log(JSON.stringify(members('Aves').map(([id, sp]) => describe(id, sp)), null, 2));
 } else if (process.argv.includes('--bird-coverage')) {
   console.log(JSON.stringify(birdCoverage(), null, 2));
+} else if (process.argv.includes('--aquatic-plan')) {
+  console.log(JSON.stringify(aquaticPlatePlan(), null, 2));
 } else if (process.argv.includes('--herpetology')) {
   console.log(JSON.stringify(herpetologyPlan(), null, 2));
 } else {

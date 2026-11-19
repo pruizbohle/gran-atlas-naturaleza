@@ -21,8 +21,11 @@ const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
   gallery: 'Galería', variants: 'Variantes', frames: 'Ejemplares especiales',
-  compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles',
+  compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles', amphibians: 'Comparar anfibios',
   compression: 'Compresión WebP', scale: 'Escala real', 'visual-scale': 'Ajustes de escala', review: 'Revisión artística'
+};
+const taxonComparisons = {
+  birds: birdComparisons, reptiles: reptileComparisons, amphibians: amphibianComparisons
 };
 const frames = {
   Normal: 'classic', Notable: 'notable', 'Épico': 'epic',
@@ -48,7 +51,8 @@ byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + m
   ' láminas científicas · ' + migrationProgress.biological + ' variantes biológicas · ' +
   migrationProgress.legendary + ' legendarios · ' + migrationProgress.mammalsMigrated + ' de ' +
   migrationProgress.mammals + ' mamíferos · ' + migrationProgress.birdsMigrated + ' de ' +
-  migrationProgress.birds + ' aves · ' + migrationProgress.reptilesMigrated + ' de ' + migrationProgress.reptiles + ' reptiles';
+  migrationProgress.birds + ' aves · ' + migrationProgress.reptilesMigrated + ' de ' + migrationProgress.reptiles + ' reptiles · ' +
+  migrationProgress.amphibiansMigrated + ' de ' + migrationProgress.amphibians + ' anfibios';
 for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
 selectOptions(comparisonHalo, Object.keys(frames).map(label => [label, label]));
 updateOrders();
@@ -234,7 +238,7 @@ function compareStyles(sp) {
     figure(current, 'Científica clásica') + '</div>';
 }
 
-function compareTaxa(sets, key, cssClass) {
+function compareTaxa(sets, key) {
   selectOptions(birdSet, Object.entries(sets).map(([id, set]) => [id, set.label]));
   const size = Number(comparisonSize.value);
   const cards = sets[birdSet.value][key].map(({ id, trait, plateKey }) => {
@@ -245,7 +249,7 @@ function compareTaxa(sets, key, cssClass) {
       '<figcaption><strong>' + text(name) + '</strong><p class="latin">' + text(sp.latin) +
       '</p><p>' + text(trait) + '</p></figcaption></figure>';
   });
-  return '<div class="comparison-styles review-comparison ' + cssClass + '" style="--comparison-size:' +
+  return '<div class="comparison-styles review-comparison taxon-comparison" style="--comparison-size:' +
     size + 'px">' + cards.join('') + '</div>';
 }
 
@@ -297,7 +301,7 @@ function compareVisualScales() {
 
 function draw() {
   const sp = catalog.find(item => item.id === species.value);
-  const comparingTaxa = mode === 'birds' || mode === 'reptiles';
+  const comparingTaxa = Object.hasOwn(taxonComparisons, mode);
   const comparingVisualScale = mode === 'visual-scale';
   const comparingSets = comparingTaxa || comparingVisualScale;
   const comparingVariants = mode === 'variants' && Boolean(sp);
@@ -327,8 +331,7 @@ function draw() {
     return;
   }
   if (comparingTaxa) {
-    content.innerHTML = mode === 'birds' ? compareTaxa(birdComparisons, 'birds', 'bird-comparison') :
-      compareTaxa(reptileComparisons, 'reptiles', 'reptile-comparison');
+    content.innerHTML = compareTaxa(taxonComparisons[mode], mode);
     return;
   }
   if (!sp && mode !== 'gallery') {

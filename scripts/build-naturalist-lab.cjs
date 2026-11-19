@@ -15,6 +15,8 @@ const reptileSets = {
 };
 const visualScales = { sa_esp_brachycephalus_pulex: 0.25, gm06_mellisuga_helenae: 0.5 };
 const additions = require('../www/js/gm07-a04/catalog.js').records;
+const amphibians = new Map(herpetologyPlan['4.8.2'].inventory.map(animal => [animal.id, animal]));
+const amphibianSets = require('./amphibian-comparisons.cjs');
 const comparisonSets = {
   ...require('./passerine-comparisons.cjs'),
   ...require('./arboreal-bird-comparisons.cjs'),
@@ -189,9 +191,11 @@ function classify(id, sp) {
     const { family, order, group, edition } = reptile;
     return { family, order, group, edition };
   }
-  if (Object.hasOwn(additions, id) && taxonomy.className === 'Amphibia') {
-    const { family, order } = taxonomy;
-    return { family, order, group: 'Anfibios', edition: '4.7.3' };
+  const amphibian = amphibians.get(id);
+  if (amphibian) {
+    if (taxonomy.className !== 'Amphibia' || amphibian.latin !== sp.latin) throw Error('Anfibio fuera del inventario: ' + id);
+    const { family, order } = amphibian;
+    return { family, order, group: 'Anfibios', edition: id === 'sa_esp_brachycephalus_pulex' ? '4.7.3' : '4.8.2' };
   }
   const genus = sp.latin.split(' ')[0];
   const aquatic = aquaticMammal(sp.latin);
@@ -287,6 +291,7 @@ function buildComparisons(sets, members, key) {
 
 const birdComparisons = buildComparisons(comparisonSets, birds, 'birds');
 const reptileComparisons = buildComparisons(reptileSets, reptiles, 'reptiles');
+const amphibianComparisons = buildComparisons(amphibianSets, amphibians, 'amphibians');
 const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,
   total: catalogEntries.length,
@@ -303,9 +308,11 @@ const migrationProgress = {
   birds: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Aves').length,
   birdsMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Aves').length,
   reptiles: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Reptilia').length,
-  reptilesMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Reptilia').length
+  reptilesMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Reptilia').length,
+  amphibians: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Amphibia').length,
+  amphibiansMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Amphibia').length
 };
-const mixedFieldSprites = ['eu_esp_0660', 'eu_esp_0659', 'salamandra_comun'].map(id => {
+const mixedFieldSprites = ['eu_esp_0669', 'eu_esp_0668', 'eu_esp_0667'].map(id => {
   const sp = audit.SPECIES[id];
   if (classify(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
   return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };
@@ -315,6 +322,7 @@ fs.writeFileSync(path.join(out, 'catalog.js'),
   'const mixedFieldSprites = ' + JSON.stringify(mixedFieldSprites, null, 2) + ';\n' +
   'const birdComparisons = ' + JSON.stringify(birdComparisons, null, 2) + ';\n' +
   'const reptileComparisons = ' + JSON.stringify(reptileComparisons, null, 2) + ';\n' +
+  'const amphibianComparisons = ' + JSON.stringify(amphibianComparisons, null, 2) + ';\n' +
   'const migrationProgress = ' + JSON.stringify(migrationProgress) + ';\n');
 const version = require('../package.json').version;
 const rows = species.map(sp => [

@@ -5,10 +5,10 @@ const path = require('node:path');
 const http = require('node:http');
 const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v481';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v482';
 const { harness } = require('../tests/helpers/live-game.cjs');
 
-const baseline = process.env.ATLAS_BASELINE || '6313c49049fb5042ef23dfb85356f1b8363d2798';
+const baseline = process.env.ATLAS_BASELINE || '23c28cc50fec35e6d6b95f441d9a072319790d80';
 const baselineWeb = process.env.ATLAS_BASELINE_WWW;
 const version = require('../package.json').version;
 const versionSlug = version.replaceAll('.', '');
@@ -78,7 +78,7 @@ async function run() {
   const url = 'http://127.0.0.1:' + server.address().port + '/';
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
   const id = 'nutria_europea';
-  const id2 = 'eu_esp_0660';
+  const id2 = 'eu_esp_0669';
   const regions = harness().window.__atlasTest.REGIONS;
   const { records } = require('../www/js/gm07-a04/catalog.js');
   const catalogSource = ['gm06/catalog', 'gm07-a04/catalog', 'app']
@@ -808,6 +808,71 @@ async function run() {
         }
       }
 
+      const amphibianChecks = {};
+      for (const specimen of [
+        { id: 'eu_esp_0660', latin: 'Rana temporaria', zone: 'HX-01-09', habitat: 'bosque', pigment: 'Melánico', key: 'melanico' },
+        { id: 'na_esp_ambystoma_mexicanum', latin: 'Ambystoma mexicanum', zone: 'HX-04-02', habitat: 'rio', pigment: 'Albino', key: 'albino' }
+      ]) {
+        const { id, latin, zone, habitat, key } = specimen;
+        const region = expandedRegions.find(region => region.id === zone);
+        await updated.evaluate(({ id, habitat, region }) => {
+          const save = AtlasSaveBridge.getSaveData();
+          save.currentRegion = region.id;
+          save.regionUnlocked[region.id] = true;
+          save.habitat = habitat;
+          save.time = 'dia';
+          save.season = 'primavera';
+          save.helpers = 3;
+          save.lastTick = Date.now();
+          delete save.discovered[id];
+          delete save.sightings[id];
+          delete save.stages[id];
+          const hour = Math.floor(save.lastTick / 3600000);
+          save.autoHourly = Object.fromEntries(region.species.filter(key => key !== id).map(key => [hour + ':' + key, 999]));
+          AtlasSaveBridge.restoreGame(save);
+        }, { id, habitat, region });
+        await openTab(updated, 'field');
+        const start = performance.now();
+        await updated.locator('#fieldResult img[src*="/' + id + '--"]').evaluate(img => img.decode());
+        const automaticMs = Math.round(performance.now() - start);
+        assert.ok(await updated.evaluate(id => AtlasSaveBridge.getSaveData().sightings[id] > 0, id));
+        await updated.evaluate(({ id, pigment }) => {
+          const save = AtlasSaveBridge.getSaveData();
+          save.helpers = 0;
+          save.stages[id] = 5;
+          save.published[id] = true;
+          save.selectedJournal = id;
+          save.specialFound[id] = { [pigment]: true, Notable: true };
+          save.museum.exhibits[id] = true;
+          save.lastEncounter = { species: id, title: 'Anfibio', sequence: save.encounterSequence,
+            entries: [{ id, amount: 2, variant: pigment, category: 'Notable' }] };
+          AtlasSaveBridge.restoreGame(save);
+        }, specimen);
+        const variant = updated.locator('#fieldResult .notable img[src$="/' + id + '--' + key + '.webp"]');
+        await variant.evaluate(img => img.decode());
+        assert.match(await variant.evaluate(img => getComputedStyle(img).filter), /drop-shadow/);
+        await updated.locator('.field-environment .landscape-' + habitat).evaluate(img => img.decode());
+        if (process.argv.includes('--write-evidence')) {
+          await updated.locator('.field-stage').screenshot({
+            path: evidenceDir + '/campo-' + key + '-' + width + '.jpg', type: 'jpeg', quality: 85
+          });
+        }
+        const normal = 'img[src$="/' + id + '--normal.webp"]';
+        await openTab(updated, 'journal');
+        await updated.locator('.j25-sheet ' + normal).first().evaluate(img => img.decode());
+        await openTab(updated, 'bestiary');
+        await updated.locator('#b26-search').fill(latin);
+        await updated.locator('.b26-card').filter({ has: updated.locator(normal) }).click();
+        await updated.locator('.b26-dialog ' + normal).first().evaluate(img => img.decode());
+        await updated.locator('[data-action=b26-close]').click();
+        await openTab(updated, 'museum');
+        await updated.getByRole('tab', { name: 'Exposiciones', exact: true }).click();
+        await updated.locator('.m27-vitrines [data-action=m27-open]').filter({ has: updated.locator(normal) }).click();
+        await updated.locator('.m27-dialog ' + normal).first().evaluate(img => img.decode());
+        await updated.locator('[data-action=m27-close]').click();
+        amphibianChecks[id] = { automaticMs, habitat, variant: key, modules: ['Campo', 'Cuaderno', 'Bestiario', 'Museo'] };
+      }
+
       await updated.evaluate(ids => {
         const save = AtlasSaveBridge.getSaveData();
         save.lastEncounter = { species: ids[0], title: 'Escala después de reiniciar', sequence: save.encounterSequence,
@@ -827,7 +892,7 @@ async function run() {
       await updated.locator('.field-card .atlas-art-landscape').evaluate(img => img.decode());
       assert.deepEqual(errors, []);
       results.push({ width, fieldBeforeMs: beforeMs, fieldWebPMs: afterMs, fieldBeforeJSHeapBytes: beforeHeap, fieldWebpJSHeapBytes: afterHeap, exactSaveBackup: true,
-        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, terrestrialAutoRepeatMs, ostrichDimorphismOffline: true, passerineAutoMs, passerineInAllModulesOffline: true, squamateAutoMs, squamateInAllModulesOffline: true, reptileLegends, scaleChecks, discoveryChecks, optionalReviewOutsideGameCache: true, errors });
+        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, terrestrialAutoRepeatMs, ostrichDimorphismOffline: true, passerineAutoMs, passerineInAllModulesOffline: true, squamateAutoMs, squamateInAllModulesOffline: true, reptileLegends, amphibianChecks, scaleChecks, discoveryChecks, optionalReviewOutsideGameCache: true, errors });
       await ctx.close();
     }
   } finally {

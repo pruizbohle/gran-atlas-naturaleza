@@ -224,11 +224,9 @@ figcaption { padding: .4rem 0; }
 .comparison-styles figure { min-width: 0; margin: 0; }
 .visual-scale-pair + .visual-scale-pair { margin-top: 1.5rem; }
 .visual-scale-pair .comparison-styles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.bird-comparison .plate,
-.reptile-comparison .plate,
+.taxon-comparison .plate,
 .plate-comparison .plate { width: min(100%, var(--comparison-size)); margin-inline: auto; }
-.bird-comparison figcaption strong,
-.reptile-comparison figcaption strong { color: var(--ink); }
+.taxon-comparison figcaption strong { color: var(--ink); }
 .comparison-placeholder {
   align-self: center;
   justify-self: center;

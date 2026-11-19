@@ -1,4 +1,4 @@
-# Inventario naturalista del catálogo 4.8.1
+# Inventario naturalista del catálogo 4.8.2
 
 | Grupo | Familia | ID | Nombre común | Nombre científico | Continente | Zonas del juego | Variantes | Dimorfismo | Ejemplares |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -51,6 +51,7 @@
 | Rapaces | Pandionidae | af_xlsx_131_pandion_haliaetus | Águila pescadora | *Pandion haliaetus* | África, Norteamérica | Valle del Nilo, Litoral sudoriental africano, Costa del golfo de México | Normal, Albino | No | Normal, Notable |
 | Rapaces | Accipitridae | af_fosa_ave | Águila pescadora de Madagascar | *Haliaeetus vociferoides* | África | Madagascar | Normal, Albino, Melánico | No | Normal, Notable |
 | Rapaces | Accipitridae | na_esp_circus_hudsonius | Aguilucho pálido | *Circus hudsonius* | Norteamérica | Grandes Llanuras | Normal | No | Normal, Notable |
+| Anfibios | Ambystomatidae | na_esp_ambystoma_mexicanum | Ajolote mexicano | *Ambystoma mexicanum* | Norteamérica | Sierra Madre | Normal, Albino | No | Normal, Notable |
 | Marinas y costeras | Diomedeidae | mar_esp_thalassarche_melanophris | Albatros de ceja negra | *Thalassarche melanophris* | Océanos | Índico meridional, Atlántico austral | Normal | No | Normal, Notable |
 | Marinas y costeras | Diomedeidae | gm06_phoebastria_irrorata | Albatros de Galápagos | *Phoebastria irrorata* | Sudamérica | Islas Galápagos | Normal | No | Normal, Notable, Épico, Excepcional |
 | Marinas y costeras | Diomedeidae | mar_esp_phoebastria_immutabilis | Albatros de Laysan | *Phoebastria immutabilis* | Océanos | Pacífico nororiental | Normal | No | Normal, Notable |
@@ -707,6 +708,22 @@
 | Marsupiales | Macropodidae | oc_esp_setonix_brachyurus | Quokka | *Setonix brachyurus* | Oceanía | Australia Occidental | Normal | No | Normal, Notable |
 | Marsupiales | Dasyuridae | oc_esp_dasyurus_viverrinus | Quol oriental | *Dasyurus viverrinus* | Oceanía | Tasmania | Normal | No | Normal, Notable |
 | Paseriformes | Corvidae | eu_esp_0633 | Rabilargo ibérico | *Cyanopica cooki* | Europa | Península Ibérica | Normal, Melánico | No | Normal, Notable |
+| Anfibios | Pelodryadidae | oc_esp_ranoidea_caerulea | Rana arborícola verde australiana | *Ranoidea caerulea* | Oceanía | Costa nordeste australiana, Australia tropical septentrional | Normal | No | Normal, Notable |
+| Anfibios | Ranidae | eu_esp_0660 | Rana bermeja | *Rana temporaria* | Europa | Islas Británicas, Escandinavia, Europa Occidental | Normal, Melánico | No | Normal, Notable |
+| Anfibios | Ceratophryidae | sa_esp_ceratophrys_ornata | Rana cornuda argentina | *Ceratophrys ornata* | Sudamérica | Pampas | Normal | No | Normal, Notable |
+| Anfibios | Myobatrachidae | oc_esp_pseudophryne_corroboree | Rana corroboree meridional | *Pseudophryne corroboree* | Oceanía | Australia Oriental | Normal | No | Normal, Notable |
+| Anfibios | Dendrobatidae | sa_esp_dendrobates_tinctorius | Rana dardo azul | *Dendrobates tinctorius* | Sudamérica | Amazonía | Normal | No | Normal, Notable |
+| Anfibios | Myobatrachidae | oc_esp_assa_darlingtoni | Rana de bolsillo | *Assa darlingtoni* | Oceanía | Australia Oriental | Normal | No | Normal, Notable |
+| Anfibios | Ranidae | na_esp_lithobates_sylvaticus | Rana de bosque | *Lithobates sylvaticus* | Norteamérica | Bosques boreales de Canadá, Yukón | Normal | No | Normal, Notable |
+| Anfibios | Centrolenidae | na_esp_hyalinobatrachium_fleischmanni | Rana de cristal | *Hyalinobatrachium fleischmanni* | Norteamérica | América Central | Normal | No | Normal, Notable |
+| Anfibios | Brevicipitidae | af_xlsx_131_breviceps_macrops | Rana de lluvia del desierto | *Breviceps macrops* | África | Sabanas del sudeste africano | Normal, Albino | No | Normal, Notable |
+| Anfibios | Phyllomedusidae | na_esp_agalychnis_callidryas | Rana de ojos rojos | *Agalychnis callidryas* | Norteamérica | América Central | Normal | No | Normal, Notable |
+| Anfibios | Pipidae | af_xlsx_lemur_etc | Rana de uñas africana | *Xenopus laevis* | África | Sabanas del sudeste africano | Normal, Albino | No | Normal, Notable |
+| Anfibios | Conrauidae | af_xlsx_rana_goliat | Rana goliat | *Conraua goliath* | África | Bosques guineanos occidentales | Normal, Albino | No | Normal, Notable |
+| Anfibios | Hemiphractidae | sa_esp_gastrotheca_riobambae | Rana marsupial andina | *Gastrotheca riobambae* | Sudamérica | Andes del Norte | Normal | No | Normal, Notable |
+| Anfibios | Dendrobatidae | sa_esp_phyllobates_terribilis | Rana venenosa dorada | *Phyllobates terribilis* | Sudamérica | Andes del Norte | Normal | No | Normal, Notable |
+| Anfibios | Ranidae | na_esp_lithobates_clamitans | Rana verde | *Lithobates clamitans* | Norteamérica | Región de los Grandes Lagos | Normal | No | Normal, Notable |
+| Anfibios | Rhinodermatidae | sa_esp_rhinoderma_darwinii | Ranita de Darwin | *Rhinoderma darwinii* | Sudamérica | Bosques templados del sur | Normal | No | Normal, Notable |
 | Roedores | Heteromyidae | na_esp_dipodomys_merriami | Rata canguro de Merriam | *Dipodomys merriami* | Norteamérica | Desierto de Sonora | Normal | No | Normal, Notable |
 | Roedores | Spalacidae | af_xlsx_rata_topo | Rata topo gigante | *Tachyoryctes macrocephalus* | África | Tierras altas de Etiopía | Normal, Albino | No | Normal, Notable |
 | Ungulados | Bovidae | rebeco_alpino | Rebeco alpino | *Rupicapra rupicapra* | Europa | Alpes, Balcanes | Normal, Albino | No | Normal |
@@ -720,6 +737,20 @@
 | Cetáceos | Balaenopteridae | mar_esp_balaenoptera_acutorostrata | Rorcual aliblanco | *Balaenoptera acutorostrata* | Océanos | Atlántico septentrional, Pacífico noroccidental | Normal | No | Normal, Notable |
 | Cetáceos | Balaenopteridae | mar_esp_balaenoptera_physalus | Rorcual común | *Balaenoptera physalus* | Océanos | Atlántico septentrional, Pacífico austral, Océano Austral occidental | Normal | No | Normal, Notable |
 | Cetáceos | Balaenopteridae | mar_esp_balaenoptera_edeni | Rorcual de Bryde | *Balaenoptera edeni* | Océanos | Océano Índico tropical, Índico meridional | Normal | No | Normal, Notable |
+| Anfibios | Salamandridae | salamandra_alpina | Salamandra alpina | *Salamandra atra* | Europa | Alpes | Normal, Albino | No | Normal, Notable |
+| Anfibios | Salamandridae | salamandra_comun | Salamandra común | *Salamandra salamandra* | Europa | Europa Occidental | Normal, Albino | No | Normal, Notable |
+| Anfibios | Ambystomatidae | na_esp_ambystoma_maculatum | Salamandra de manchas amarillas | *Ambystoma maculatum* | Norteamérica | Bosques del este norteamericano | Normal | No | Normal, Notable |
+| Anfibios | Cryptobranchidae | asia_esp_0016 | Salamandra gigante china | *Andrias davidianus* | Asia | China Meridional | Normal | No | Normal, Notable |
+| Anfibios | Ambystomatidae | na_esp_dicamptodon_tenebrosus | Salamandra gigante del Pacífico | *Dicamptodon tenebrosus* | Norteamérica | Costa del Pacífico | Normal | No | Normal, Notable |
+| Anfibios | Cryptobranchidae | asia_esp_0017 | Salamandra gigante japonesa | *Andrias japonicus* | Asia | Archipiélago Japonés | Normal, Melánico | No | Normal, Notable |
+| Anfibios | Hynobiidae | asia_esp_0899 | Salamandra siberiana | *Salamandrella keyserlingii* | Asia | Siberia Central, Siberia Oriental, Kamchatka | Normal, Albino | No | Normal, Notable |
+| Anfibios | Ambystomatidae | na_esp_ambystoma_tigrinum | Salamandra tigre | *Ambystoma tigrinum* | Norteamérica | Región de los Grandes Lagos | Normal | No | Normal, Notable |
+| Anfibios | Bufonidae | af_xlsx_131_sclerophrys_regularis | Sapo común africano | *Sclerophrys regularis* | África | Valle del Nilo | Normal, Albino | No | Normal, Notable |
+| Anfibios | Bufonidae | eu_esp_0659 | Sapo corredor | *Epidalea calamita* | Europa | Europa Occidental, Península Ibérica | Normal, Melánico | No | Normal, Notable |
+| Anfibios | Bufonidae | af_xlsx_131_schismaderma_carens | Sapo de vientre rojo | *Schismaderma carens* | África | Sabanas del sudeste africano | Normal, Albino | No | Normal, Notable |
+| Anfibios | Bufonidae | na_esp_incilius_alvarius | Sapo del desierto de Sonora | *Incilius alvarius* | Norteamérica | Desierto de Sonora | Normal | No | Normal, Notable |
+| Anfibios | Bufonidae | sa_esp_rhinella_marina | Sapo gigante | *Rhinella marina* | Sudamérica | Litoral caribeño sudamericano, Amazonía | Normal, Albino | No | Normal, Notable |
+| Anfibios | Bufonidae | asia_esp_0898 | Sapo mongol | *Strauchbufo raddei* | Asia | Mongolia, Desierto de Gobi | Normal, Albino | No | Normal |
 | Ungulados | Bovidae | asia_esp_0087 | Serau japonés | *Capricornis crispus* | Asia | Archipiélago Japonés | Normal, Melánico | No | Normal, Notable |
 | Otras aves terrestres | Cariamidae | sa_esp_cariama_cristata | Seriema de patas rojas | *Cariama cristata* | Sudamérica | Cerrado brasileño | Normal | No | Normal, Notable |
 | Serpientes | Colubridae | na_esp_leptophis_ahaetulla | Serpiente arborícola verde | *Leptophis ahaetulla* | Norteamérica | América Central | Normal | No | Normal, Notable |
@@ -786,6 +817,9 @@
 | Tortugas | Testudinidae | af_tortuga_radiada | Tortuga radiada | *Astrochelys radiata* | África | Madagascar | Normal, Albino, Melánico | No | Normal, Notable |
 | Tortugas | Cheloniidae | mar_esp_chelonia_mydas | Tortuga verde | *Chelonia mydas* | Océanos, África | Mar tropical asiático, Archipiélagos tropicales, Arco del mar Rojo | Normal | No | Normal, Notable |
 | Galliformes | Phasianidae | asia_esp_0865 | Tragopán sátiro | *Tragopan satyra* | Asia | Himalaya | Normal, Macho, Hembra, Melánico | Sí | Normal, Notable |
+| Anfibios | Salamandridae | eu_esp_0657 | Tritón alpino | *Ichthyosaura alpestris* | Europa | Alpes, Europa Central | Normal, Melánico | No | Normal, Notable |
+| Anfibios | Salamandridae | eu_esp_0655 | Tritón crestado | *Triturus cristatus* | Europa | Islas Británicas, Europa Occidental, Europa Central | Normal, Melánico | No | Normal, Notable |
+| Anfibios | Salamandridae | eu_esp_0656 | Tritón palmeado | *Lissotriton helveticus* | Europa | Islas Británicas, Europa Occidental | Normal, Melánico | No | Normal, Notable |
 | Rincocéfalos | Sphenodontidae | oc_esp_sphenodon_punctatus | Tuátara | *Sphenodon punctatus* | Oceanía | Nueva Zelanda | Normal | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Ramphastidae | sa_esp_andigena_hypoglauca | Tucán andino pechigris | *Andigena hypoglauca* | Sudamérica | Andes del Norte | Normal | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Ramphastidae | sa_esp_ramphastos_tucanus | Tucán de garganta blanca | *Ramphastos tucanus* | Sudamérica | Amazonía | Normal | No | Normal, Notable |

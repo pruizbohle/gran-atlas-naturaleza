@@ -1,4 +1,8 @@
-# El Gran Atlas · Tortugas, crocodilianos y tuátara (V4.8.1)
+# El Gran Atlas · Anfibios (V4.8.2)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.8.2](docs/cientifica-v482/README.md) · [Plan V4.9](docs/cientifica-v482/plan-v49.md).
+
+## Serie 4 · Tortugas, crocodilianos y tuátara (V4.8.1)
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.8.1](docs/cientifica-v481/README.md) · [Inventario V4.8.2](docs/cientifica-v481/plan-v482.md).
 
