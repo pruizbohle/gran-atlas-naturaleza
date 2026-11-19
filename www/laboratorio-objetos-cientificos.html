@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laboratorio de objetos científicos · El Gran Atlas</title>
+<link rel="stylesheet" href="objetos-cientificos/laboratorio.css">
+<script defer src="js/item-art-v3198.js"></script>
+<script defer src="objetos-cientificos/manifiesto.js"></script>
+<script defer src="js/lab/objetos-cientificos.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <p>El Gran Atlas · Gabinete experimental</p>
+  <h1>Laboratorio de objetos científicos</h1>
+  <p>Comparación de láminas y pruebas de inventario para el Atlas de 1842.</p>
+</header>
+<main>
+  <div class="controls">
+    <label>Vista<select id="view">
+      <option value="compare">Comparación</option><option value="inventory">Inventario funcional</option>
+      <option value="equipment">Equipo del naturalista</option><option value="workshop">Taller de fabricación</option>
+      <option value="album">Álbum de coleccionables</option><option value="museum">Gabinete museístico</option>
+    </select></label>
+    <label>Buscar<input type="search" id="search" placeholder="Nombre, ID o procedencia"></label>
+    <label>Mostrar<select id="scope"><option value="pilot">Tanda inicial</option><option value="all">Catálogo completo</option></select></label>
+    <label>Familia<select id="family"></select></label>
+    <label>Gabinete<select id="cabinet"></select></label>
+    <label>Colección<select id="collection"></select></label>
+    <label>Rareza<select id="rarity"></select></label>
+    <label>Tier artístico<select id="tier"></select></label>
+    <label>Aprobación<select id="approval"></select></label>
+    <label>Orden<select id="sort"><option value="name">Alfabético</option><option value="rarity">Rareza</option><option value="bytes">Peso a la escala elegida</option></select></label>
+    <label>Presentación<select id="layout"><option value="grid">Cuadrícula</option><option value="single">Individual</option></select></label>
+    <label>Escala<select id="scale"><option>24</option><option>32</option><option>64</option><option selected>128</option><option>256</option><option>512</option></select></label>
+    <label>Fondo<select id="ground"><option value="paper">Papel naturalista</option><option value="light">Claro</option><option value="dark">Oscuro</option><option value="inventory">Inventario Serie 4</option></select></label>
+    <label class="switch"><input id="halo" type="checkbox"> Halo de rareza</label>
+    <button id="export" type="button">Exportar evaluaciones JSON</button>
+  </div>
+  <p id="status" role="status"></p>
+  <nav id="navigation" aria-label="Navegación de resultados"></nav>
+  <div id="gallery"></div>
+</main>
+<template id="review">
+  <form>
+    <label>Estado<select name="approval"></select></label>
+    <div class="scores"></div>
+    <label>Propuesta preferida<select name="preference"><option value="">Sin evaluar</option><option>Original</option><option>Clásica</option><option>Inventario</option></select></label>
+    <label>Observaciones<textarea name="notes" rows="3"></textarea></label>
+    <button>Guardar evaluación</button>
+  </form>
+</template>
+</body>
+</html>

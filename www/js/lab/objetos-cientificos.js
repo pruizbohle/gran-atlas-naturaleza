@@ -1,0 +1,298 @@
+(() => {
+  'use strict';
+
+  const rows = AtlasObjetosCientificos.rows;
+  const byId = new Map(rows.map(row => [row.id, row]));
+  const get = id => document.getElementById(id);
+  const gallery = get('gallery');
+  const storageKey = 'atlas-laboratorio-objetos-cientificos:v1';
+  const approvals = ['Pendiente', 'Aprobado', 'Prefiero el original', 'Requiere corrección menor', 'Requiere rediseño'];
+  const rarities = ['Común', 'Poco común', 'Raro', 'Muy raro'];
+  const colors = ['#888d7d', '#4f8468', '#507bb0', '#8d5f9e'];
+  const criteria = ['Reconocimiento inmediato', 'Fidelidad al material', 'Precisión histórica',
+    'Belleza visual', 'Coherencia con El Gran Atlas', 'Diferenciación', 'Legibilidad a 32 px', 'Legibilidad a 64 px'];
+  const headings = [['original','Sprite original'], ['clasica','Ilustración clásica'], ['inventario','Optimizada para inventario']];
+  const filters = ['family', 'cabinet', 'collection', 'rarity', 'tier', 'approval'];
+  const collator = new Intl.Collator('es');
+  const pageSize = 12;
+  let page = 0;
+  let focusId = null;
+  let reviews = {};
+  try {
+    reviews = JSON.parse(localStorage.getItem(storageKey)) || {};
+  } catch {
+    // La evaluación permanece en memoria cuando el almacenamiento está deshabilitado.
+  }
+
+  function node(tag, value, className) {
+    const element = document.createElement(tag);
+    if (value) element.textContent = value;
+    if (className) element.className = className;
+    return element;
+  }
+
+  function options(select, values, placeholder) {
+    if (placeholder) select.add(new Option(placeholder, ''));
+    for (const value of values) select.add(new Option(value, value));
+  }
+
+  for (const key of filters) {
+    const values = key === 'approval' ? approvals : [...new Set(rows.map(row => row[key]).filter(Boolean))].sort(collator.compare);
+    options(get(key), values, 'Todas las opciones');
+  }
+
+  function approval(row) {
+    return reviews[row.id]?.approval || row.approval;
+  }
+
+  function size() {
+    return Number(get('scale').value);
+  }
+
+  function asset(row, key) {
+    if (key === 'original') return row.original;
+    return row.sprites[key]?.[Math.max(64, size())];
+  }
+
+  function figure(row, key, caption, hidden = false) {
+    const target = node('figure');
+    const stage = node('div', '', 'stage ' + get('ground').value);
+    const source = asset(row, key);
+    const rarity = rarities.indexOf(row.rarity);
+    if (rarity >= 0 && get('halo').checked) {
+      stage.classList.add('halo');
+      stage.style.setProperty('--rarity-color', colors[rarity]);
+    }
+    if (hidden) {
+      stage.textContent = 'Pendiente de descubrir';
+    } else if (source?.src) {
+      const img = node('img');
+      img.src = source.src;
+      img.alt = row.name;
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      stage.append(img);
+    } else if (source?.renderer) {
+      // El SVG proviene del renderizador del juego o de su instantánea museística.
+      stage.innerHTML = source.svg || AtlasItemArt.renderItemArt(row.id);
+    } else {
+      stage.textContent = key === 'original' ? 'Sin sprite original' : 'Ilustración pendiente';
+    }
+    target.append(stage);
+    if (caption) {
+      const weight = source ? ' · ' + (source.bytes/1024).toFixed(1) + ' KiB' + (source.renderer ? ' SVG' : ' WebP') : '';
+      target.append(node('figcaption', caption + weight));
+    }
+    return target;
+  }
+
+  function review(row) {
+    const details = node('details');
+    details.append(node('summary', 'Evaluar y anotar'));
+    const form = get('review').content.firstElementChild.cloneNode(true);
+    const fields = form.elements;
+    const existing = reviews[row.id];
+    options(fields.approval, approvals);
+    fields.approval.value = approval(row);
+    fields.preference.value = existing?.preference || '';
+    fields.preference.options[1].disabled = !row.original;
+    fields.preference.options[2].disabled = !row.sprites.clasica;
+    fields.preference.options[3].disabled = !row.sprites.inventario;
+    fields.notes.value = existing?.notes || '';
+    criteria.forEach((criterion, index) => {
+      const label = node('label', criterion);
+      const select = node('select');
+      select.name = 'score' + index;
+      options(select, ['1','2','3','4','5'], 'Sin evaluar');
+      select.value = existing?.scores[criterion] || '';
+      label.append(select);
+      form.querySelector('.scores').append(label);
+    });
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      reviews[row.id] = {
+        approval: fields.approval.value,
+        preference: fields.preference.value,
+        notes: fields.notes.value.trim(),
+        scores: Object.fromEntries(criteria.map((criterion, index) => [
+          criterion, Number(fields['score' + index].value) || null
+        ]))
+      };
+      let saved = true;
+      try {
+        localStorage.setItem(storageKey, JSON.stringify(reviews));
+      } catch {
+        saved = false;
+      }
+      if (get('approval').value) render();
+      else details.closest('article').querySelector('.metadata').textContent = metadata(row);
+      get('status').textContent = saved ? 'Evaluación guardada · ' + row.name : 'Evaluación en memoria · puedes exportarla a JSON';
+    });
+    details.append(form);
+    return details;
+  }
+
+  function metadata(row) {
+    return [row.id, row.type, row.family, row.cabinet, row.collection, row.rarity, row.tier && 'Tier ' + row.tier, approval(row)].filter(Boolean).join(' · ');
+  }
+
+  function comparison(row) {
+    const card = node('article');
+    card.append(node('h2', row.name), node('small', metadata(row), 'metadata'));
+    const columns = node('div', '', 'columns actual');
+    for (const [key, title] of headings) columns.append(figure(row, key, title));
+    card.append(columns, node('p', [row.description, row.provenance, row.context, row.observations].filter(Boolean).join(' · ')), review(row));
+    return card;
+  }
+
+  function inspect(row) {
+    get('view').value = 'compare';
+    get('layout').value = 'single';
+    get('scope').value = 'all';
+    for (const filter of ['search', ...filters]) get(filter).value = '';
+    focusId = row.id;
+    render();
+    window.scrollTo(0,0);
+  }
+
+  function quantity(row) {
+    return (rows.indexOf(row) * 7 + 3) % 11;
+  }
+
+  function simulationCard(row, view, index) {
+    const card = node('article');
+    const discovered = view !== 'album' || index % 3 !== 1;
+    card.append(figure(row, row.sprites.inventario ? 'inventario' : 'original', '', !discovered));
+    card.append(node('h3', row.name));
+    const text = view === 'inventory' ? 'Cantidad de prueba ×' + quantity(row) :
+      view === 'equipment' ? ({instrument:'Instrumento',hat:'Sombrero',necklace:'Colgante'}[row.slot] || row.family) :
+      view === 'album' ? [row.rarity, discovered ? 'Descubierta' : 'Pendiente'].join(' · ') : row.collection || row.family;
+    card.append(node('small', text));
+    if (view === 'workshop') {
+      const requirements = node('ul', '', 'requirements');
+      for (const [id, needed] of Object.entries(row.recipe)) {
+        const material = byId.get(id);
+        const owned = material ? quantity(material) : 0;
+        requirements.append(node('li', (material?.name || id) + ' · ' + owned + '/' + needed));
+      }
+      card.append(requirements);
+    }
+    const link = node('button', 'Comparar');
+    link.addEventListener('click', () => inspect(row));
+    card.append(link);
+    return card;
+  }
+
+  function matchesView(row, view) {
+    switch (view) {
+      case 'inventory': return row.type === 'Objeto productivo';
+      case 'equipment': return row.type === 'Objeto productivo' && row.slot;
+      case 'workshop': return row.type === 'Objeto productivo' && row.recipe;
+      case 'album': return row.type === 'Coleccionable propuesto';
+      case 'museum': return row.type === 'Pieza del Museo';
+      default: return get('scope').value !== 'pilot' || row.pilot;
+    }
+  }
+
+  function sortRows(selected) {
+    const sort = get('sort').value;
+    const weight = row => asset(row, 'inventario')?.bytes ?? Infinity;
+    return selected.sort((a,b) => {
+      if (sort === 'bytes' && weight(a) !== weight(b)) return weight(a) - weight(b);
+      if (sort === 'rarity' && a.rarity !== b.rarity) return rarities.indexOf(b.rarity) - rarities.indexOf(a.rarity);
+      return collator.compare(a.name, b.name);
+    });
+  }
+
+  function normalize(value) {
+    return value.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
+  }
+
+  function navigation(current, count) {
+    const nav = get('navigation');
+    nav.replaceChildren();
+    if (count <= 1) return;
+    const previous = node('button', 'Anterior');
+    const next = node('button', 'Siguiente');
+    previous.disabled = current <= 0;
+    next.disabled = current >= count - 1;
+    for (const [button, offset] of [[previous, -1], [next, 1]]) button.addEventListener('click', () => {
+      focusId = null;
+      page = current + offset;
+      render();
+    });
+    nav.append(previous, node('span', (current + 1) + ' de ' + count), next);
+  }
+
+  function renderAlbum(selected) {
+    const collectionNames = [...new Set(selected.map(row => row.collection))].sort(collator.compare);
+    page = Math.min(page, Math.max(0, collectionNames.length - 1));
+    navigation(page, collectionNames.length);
+    const collection = collectionNames[page];
+    if (!collection) return;
+    const all = rows.filter(row => row.collection === collection && row.type === 'Coleccionable propuesto');
+    const found = all.filter((row, index) => index % 3 !== 1).length;
+    const section = node('section', '', 'collection');
+    const progress = node('progress');
+    progress.value = found;
+    progress.max = all.length;
+    progress.setAttribute('aria-label', 'Progreso de prueba');
+    section.append(node('h2', collection), node('div', found + '/' + all.length + ' descubiertas'), progress);
+    const grid = node('div', '', 'display-grid');
+    for (const row of selected.filter(row => row.collection === collection)) grid.append(simulationCard(row, 'album', all.indexOf(row)));
+    section.append(grid);
+    gallery.append(section);
+  }
+
+  function render() {
+    const view = get('view').value;
+    const single = view === 'compare' && get('layout').value === 'single';
+    get('scope').disabled = view !== 'compare';
+    get('layout').disabled = view !== 'compare';
+    const query = normalize(get('search').value.trim());
+    const selected = sortRows(rows.filter(row => matchesView(row, view) &&
+      normalize([row.name,row.id,row.provenance].join(' ')).includes(query) &&
+      filters.every(key => !get(key).value || get(key).value === (key === 'approval' ? approval(row) : row[key]))));
+    gallery.replaceChildren();
+    gallery.style.setProperty('--size', size() + 'px');
+    get('status').textContent = selected.length + ' resultados' + (view === 'compare' ? '' : ' · Simulación con datos de prueba');
+    if (view === 'album') {
+      renderAlbum(selected);
+      return;
+    }
+    const step = single ? 1 : pageSize;
+    const count = Math.ceil(selected.length / step);
+    if (single && focusId) {
+      const index = selected.findIndex(row => row.id === focusId);
+      if (index >= 0) page = index;
+    }
+    page = Math.min(page, Math.max(0, count - 1));
+    navigation(page, count);
+    const grid = node('div', '', view === 'compare' ? 'cards' : 'display-grid');
+    for (const row of selected.slice(page * step, (page + 1) * step)) {
+      grid.append(view === 'compare' ? comparison(row) : simulationCard(row, view));
+    }
+    gallery.append(grid);
+  }
+
+  get('search').addEventListener('input', resetPage);
+  for (const key of ['view','scope','layout','sort',...filters]) get(key).addEventListener('change', resetPage);
+  for (const key of ['scale','ground','halo']) get(key).addEventListener('change', render);
+  function resetPage() {
+    page = 0;
+    focusId = null;
+    render();
+  }
+
+  get('export').addEventListener('click', () => {
+    const payload = {schema:1, year:1842, exportedAt:new Date().toISOString(), reviews};
+    const url = URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)], {type:'application/json'}));
+    const link = node('a');
+    link.href = url;
+    link.download = 'evaluaciones-objetos-cientificos.json';
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+
+  render();
+})();

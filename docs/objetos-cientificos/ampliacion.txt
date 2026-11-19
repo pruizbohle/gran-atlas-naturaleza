@@ -1,0 +1,65 @@
+HOJ|Botánica|Hojas y frondas del mundo|Botánica|tejido vegetal seco
+Hoja de ginkgo|Asia|China|Abanico con nervaduras dicotómicas
+Hoja de arce azucarero|América del Norte|Canadá oriental|Cinco lóbulos de seno redondeado
+Hoja de higuera común|Europa|Mediterráneo oriental|Hoja palmeada de tres a cinco lóbulos
+Fronda de culantrillo|Europa|Península ibérica|Pínnulas delicadas sobre un tallo negro
+Hoja de eucalipto azul|Oceanía|Tasmania|Hoja adulta en forma de hoz
+Hoja de tulípero|América del Norte|Apalaches|Ápice truncado y lóbulos angulosos
+Fronda de helecho arborescente plateado|Oceanía|Aotearoa Nueva Zelanda|Envés plateado registrado en lámina
+Hoja de nenúfar gigante amazónico|América del Sur|Cuenca amazónica|Lámina circular con reborde y nervaduras radiales
+Hoja de gneto africano|África|Cuenca del Congo|Nervadura en red en una gimnosperma
+Fronda de helecho lengua de ciervo|Europa|Bosques atlánticos|Lámina entera con soros lineales
+Hoja de planta jarro de Raffles|Asia|Península malaya|Jarro moteado con tapa documentado en lámina
+Hoja de palma viajera|África|Madagascar|Limbo acintado con rasgaduras transversales
+ROC|Geología|Rocas y formaciones geológicas|Minerales y piedras preciosas|roca
+Basalto columnar de Antrim|Europa|Irlanda del Norte|Modelo de prismas de enfriamiento
+Granito de Cornualles|Europa|Suroeste de Inglaterra|Cuarzo claro y feldespato de grano visible
+Pizarra de Gales|Europa|Gales septentrional|Lajas de clivaje neto
+Pumita del Vesubio|Europa|Campania|Matriz liviana de vesículas abiertas
+Arenisca de las Blue Mountains|Oceanía|Nueva Gales del Sur|Estratificación de arenas ferruginosas
+Travertino de Pamukkale|Asia|Anatolia|Modelo de terrazas de carbonato
+Toba volcánica de Capadocia|Asia|Anatolia central|Ceniza consolidada y relieve erosionado
+Conglomerado de los Andes|América del Sur|Andes centrales|Cantos redondeados unidos por matriz
+Gneis de Lewis|Europa|Hébridas Exteriores|Bandas minerales claras y oscuras
+Diatomita lacustre|África|Valle del Rift de Kenia|Muestra clara y porosa de sedimento biogénico
+Hierro bandeado de Hamersley|Oceanía|Australia Occidental|Láminas ferruginosas alternadas con sílice
+Kimberlita de Kimberley|África|Sudáfrica|Facsímil de brecha volcánica de chimenea diamantífera|Futuro · hallazgos de Kimberley en la década de 1870
+ALG|Oceanografía|Algas del mundo|Objetos marítimos|tejido algal
+Sargazo|Atlántico|Mar de los Sargazos|Ramas con vesículas flotantes redondeadas
+Lechuga de mar|Europa|Costa atlántica francesa|Lámina verde translúcida de borde ondulado
+Musgo de Irlanda|Europa|Atlántico nororiental|Frondas rojas recurvadas y bifurcadas
+Cochayuyo|América del Sur|Chile austral|Fronda correosa con estructura interna alveolar
+Alga coralina articulada|Europa|Mediterráneo|Segmentos calcificados rosados
+Kelpo gigante|América del Norte|Costa de California|Cuchillas largas con flotadores basales
+Wakame|Asia|Litoral japonés|Lámina lobulada de nervio central marcado
+Alga uva del Indo-Pacífico|Asia|Filipinas|Racimos de vesículas verdes
+Dulse atlántico|América del Norte|Costa canadiense atlántica|Lámina rojiza de lóbulos anchos
+Alga abanico de pavo|África|Canarias|Bandas concéntricas claras en el abanico
+Verde de cordón|Oceanía|Litoral de Nueva Zelanda|Cordones huecos y ramificados
+Alga arcoíris australiana|Oceanía|Costa australiana oriental|Ilustración del reflejo iridiscente subacuático
+MED|Historia|Medallas y condecoraciones históricas|Artefactos históricos|metal acuñado
+Medalla histórica de Waterloo|Europa|Reino Unido|Reproducción en plata con cinta carmesí y bordes azules|1815
+Medalla de campaña de Seringapatam|Asia|Mysore|Facsímil de relieve con un león y un tigre|Campaña de 1799
+Insignia del Águila Blanca|Europa|Polonia|Cruz esmaltada con un águila blanca|Orden instituida en 1705
+Cruz de la Legión de Honor|Europa|Francia|Estrella de cinco brazos con esmalte blanco|Orden instituida en 1802
+Medalla de la Reconquista de Buenos Aires|América del Sur|Río de la Plata|Reproducción de insignia conmemorativa de las invasiones británicas|1806
+Medalla de proclamación de Pedro I|América del Sur|Brasil|Relieve alusivo al primer emperador de Brasil|1822
+Cruz de la Orden de Guadalupe|América del Norte|México|Insignia imperial con águila y esmalte|Primera orden de 1822
+Insignia de la Orden del Mérito tunecina|África|Túnez|Insignia de la orden del Mérito del bey|Futuro · orden instituida en 1860
+Cruz de San Jorge rusa|Europa|Imperio ruso|Cruz de plata con medallón central|Distinción instituida en 1807
+Medalla de oro de la Real Sociedad Geográfica|Europa|Londres|Reproducción de reverso grabado de la época|Premio otorgado desde la década de 1830
+Medalla de Trafalgar de Boulton|Europa|Reino Unido|Medalla con relieve del combate naval|Batalla de 1805
+Orden del Sol del Perú|América del Sur|Perú|Reproducción de insignia de la orden independentista|Orden instituida en 1821
+ARQ|Historia natural y exploración|Arquitecturas animales|Materiales animales|material estructural
+Nido de ave tejedora|África|Sabana de África oriental|Nido de fibras con entrada tubular suspendida
+Nido de hornero|América del Sur|Cuenca del Plata|Modelo de cámara de barro con acceso lateral
+Nido de golondrina común|Europa|Europa occidental|Copa abierta de barro y fibras
+Celda de avispa alfarera|Asia|India peninsular|Vasija de barro con cuello estrecho
+Panal de abeja gigante|Asia|Subcontinente indio|Sección hexagonal de un panal abierto
+Dique de castor canadiense|América del Norte|Cuenca del San Lorenzo|Maqueta en corte de ramas y barro
+Pérgola de ave jardinera satinada|Oceanía|Australia oriental|Pasillo de ramitas con objetos azules documentados
+Nido de pájaro sastre|Asia|Sri Lanka|Bordes de hojas unidos con fibras
+Termitero catedral|África|Namibia|Maqueta de torres de tierra ventiladas
+Rueda de telaraña de seda dorada|África|Madagascar|Lámina de radios y espiral adhesiva
+Refugio de tricóptero de grava|Europa|Alpes|Estuche tubular armado con piedras pequeñas
+Madriguera de perrito de la pradera|América del Norte|Grandes Llanuras|Corte del túnel con montículo de ventilación
