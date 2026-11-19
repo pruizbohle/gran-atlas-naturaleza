@@ -2,18 +2,25 @@
 
 const { species, svgBaseline } = AtlasScientificMarsupials;
 const styles = [
-  ['svg', 'SVG · Serie 3'], ['natural', 'Naturalista · Serie 4'], ['scientific', 'Científica · candidata']
+  ['svg', 'SVG original'], ['natural', 'Naturalista vigente'], ['scientific', 'Científica · Lámina clásica']
 ];
 const scales = [32, 64, 128, 256, 512];
 const criteria = [
-  ['identity', 'Identidad zoológica'], ['anatomy', 'Precisión anatómica'],
-  ['art', 'Calidad artística'], ['legibility', 'Legibilidad'], ['coherence', 'Coherencia con el juego']
+  ['identity', 'Reconocimiento de especie'], ['anatomy', 'Calidad anatómica'],
+  ['art', 'Belleza visual'], ['legibility', 'Legibilidad en tamaños pequeños'], ['coherence', 'Coherencia con El Gran Atlas']
 ];
+const habitats = {
+  bosque: 'Bosque', selva: 'Selva', matorral: 'Matorral', pradera: 'Pradera', sabana: 'Sabana',
+  desierto: 'Desierto', montana: 'Montaña', rio: 'Río', humedal: 'Humedal', estepa: 'Estepa',
+  mediterraneo: 'Mediterráneo', costa: 'Costa'
+};
+const contextBackdrops = { field: 'landscape', mixed: 'landscape', journal: 'paper', bestiary: 'landscape',
+  museum: 'exhibition', scales: 'paper' };
 const byId = id => document.getElementById(id);
 const select = byId('species');
 const form = byId('review-form');
 const board = byId('board');
-const storageKey = 'gran-atlas-scientific-marsupials-review-v1';
+const storageKey = 'gran-atlas-scientific-classic-marsupials-review-v1';
 const escaping = value => String(value).replace(/[&<>"']/g, c =>
   ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const bytes = value => value === null ? 'Pendiente' :
@@ -32,16 +39,17 @@ const allVariants = species.flatMap(sp => sp.variants);
 byId('coverage').textContent = species.length + ' especies · ' +
   allVariants.filter(record => record.available).length + ' de ' + allVariants.length + ' candidatas disponibles';
 for (const sp of species) select.add(new Option(sp.name, sp.id));
-if (window.matchMedia('(max-width: 650px)').matches) byId('size').value = '128';
+if (window.matchMedia('(max-width: 500px)').matches) byId('size').value = '64';
+else if (window.matchMedia('(max-width: 650px)').matches) byId('size').value = '128';
 
 const makeScore = (key, label, style, title) =>
   '<select name="' + style + '-' + key + '" aria-label="' + escaping(label + ' · ' + title) +
   '"><option value="">—</option>' + [1, 2, 3, 4, 5].map(n => '<option>' + n + '</option>').join('') + '</select>';
 byId('scores').innerHTML = '<table><caption>Escala de 1 a 5, donde 5 es la mejor valoración</caption>' +
-  '<thead><tr><th scope="col">Criterio</th><th scope="col">Naturalista</th><th scope="col">Científica</th></tr></thead><tbody>' +
+  '<thead><tr><th scope="col">Criterio</th><th scope="col">Naturalista</th><th scope="col">Clásica</th></tr></thead><tbody>' +
   criteria.map(([key, label]) => '<tr><th scope="row">' + escaping(label) + '</th><td>' +
     makeScore(key, label, 'natural', 'Naturalista') + '</td><td>' +
-    makeScore(key, label, 'scientific', 'Científica') + '</td></tr>').join('') + '</tbody></table>';
+    makeScore(key, label, 'scientific', 'Científica clásica') + '</td></tr>').join('') + '</tbody></table>';
 
 function current() {
   const sp = species[select.selectedIndex];
@@ -72,11 +80,13 @@ function picture(style, sp, record, px, category) {
 }
 
 function backdrop(sp) {
-  if (byId('backdrop').value !== 'landscape') return '';
-  return '<div class="field-environment">' + AtlasNaturalistArt.landscape(
-    AtlasNaturalistArt.preferredHabitat(sp.habitats), sp.regions[0]?.id, true
-  ) + '</div>';
+  if (board.dataset.backdrop !== 'landscape') return '';
+  const habitat = isField() ? byId('field-habitat').value : AtlasNaturalistArt.preferredHabitat(sp.habitats);
+  const region = sp.regions.find(place => place.habitats.includes(habitat)) || sp.regions[0];
+  return '<div class="field-environment">' + AtlasNaturalistArt.landscape(habitat, region?.id, true) + '</div>';
 }
+
+const isField = () => mode === 'field' || mode === 'mixed';
 
 function extract(markup, selector) {
   const template = document.createElement('template');
@@ -89,7 +99,7 @@ function sample(style, sp, record, px) {
   const image = picture(style, sp, record, px, halo);
   const stage = code => '<div class="sample-stage">' + backdrop(sp) + code + '</div>';
   if (mode === 'scales') return stage(image);
-  if (mode === 'field' || mode === 'mixed') {
+  if (isField()) {
     const entries = [{ name: sp.name, image, amount: mode === 'mixed' ? 2 : 1,
       variant: record.key === 'albino' ? 'Albino' : '', category: halo === 'Normal' ? '' : halo }];
     if (mode === 'mixed') {
@@ -143,8 +153,10 @@ function render() {
   byId('family').textContent = sp.family;
   byId('previous').disabled = select.selectedIndex <= 0;
   byId('next').disabled = select.selectedIndex >= species.length - 1;
-  board.dataset.backdrop = byId('backdrop').value;
+  const selectedBackdrop = byId('backdrop').value;
+  board.dataset.backdrop = selectedBackdrop === 'context' ? contextBackdrops[mode] : selectedBackdrop;
   board.dataset.mode = mode;
+  byId('field-habitat-control').hidden = !isField() || board.dataset.backdrop !== 'landscape';
   const px = Number(byId('size').value);
   byId('size-control').hidden = mode === 'scales';
   for (const button of byId('modules').querySelectorAll('[data-mode]')) {
@@ -162,7 +174,14 @@ function render() {
   byId('weights').textContent = mode === 'scales' ? 'La vista de 32 px usa el derivado de 64 px.' :
     'WebP a ' + resolution + ' px · Naturalista ' + bytes(record.natural[resolution]) +
     ' · Científica ' + bytes(record.scientific[resolution]);
+  updateScrollHint();
 }
+
+function updateScrollHint() {
+  byId('board-scroll').hidden = board.scrollWidth <= board.clientWidth;
+}
+
+if ('ResizeObserver' in window) new ResizeObserver(updateScrollHint).observe(board);
 
 const reviewKey = (sp, record) => sp.id + '/' + record.key;
 function fillReview() {
@@ -180,6 +199,8 @@ function changeSpecies() {
   const { sp } = current();
   byId('variant').value = '';
   options(byId('variant'), sp.variants.map(record => [record.key, record.label]));
+  const observedBiomes = sp.habitats.filter(habitat => AtlasNaturalistArt.landscapeKey(habitat));
+  options(byId('field-habitat'), observedBiomes.map(habitat => [habitat, habitats[habitat] || habitat]));
   const categories = ['Normal', 'Notable', 'Épico', 'Excepcional'];
   if (sp.categories.includes('Legendario') && sp.variants.some(record => record.key === 'legendario')) categories.push('Legendario');
   options(byId('halo'), categories.map(category => [category, category]));
@@ -188,7 +209,7 @@ function changeSpecies() {
 }
 select.addEventListener('change', changeSpecies);
 byId('variant').addEventListener('change', () => { render(); fillReview(); });
-for (const id of ['halo', 'backdrop', 'size']) byId(id).addEventListener('change', render);
+for (const id of ['halo', 'backdrop', 'size', 'field-habitat']) byId(id).addEventListener('change', render);
 for (const [id, direction] of [['previous', -1], ['next', 1]]) {
   byId(id).addEventListener('click', () => { select.selectedIndex += direction; changeSpecies(); });
 }
@@ -220,13 +241,61 @@ byId('export').addEventListener('click', () => {
     return { speciesId: sp.id, scientificName: sp.latin, variant: record.key, available: record.available,
       scores, preference: saved.preference || null, notes: saved.notes || '' };
   }));
-  const payload = { schemaVersion: 1, baseVersion: '4.3.0', svgBaseline, records };
+  const payload = { schemaVersion: 2, edition: 'lamina-zoologica-clasica', baseVersion: '4.3.0', svgBaseline, records };
   const url = URL.createObjectURL(new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' }));
   const link = document.createElement('a');
   link.href = url;
-  link.download = 'atlas-evaluacion-marsupiales.json';
+  link.download = 'atlas-evaluacion-marsupiales-clasica.json';
   link.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 });
+
+function waitForOfflineWorker(registration) {
+  const worker = registration.installing || registration.waiting;
+  if (!worker) return registration.active ? Promise.resolve() :
+    Promise.reject(new Error('El laboratorio aún no tiene una copia local.'));
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => finish(false), 120000);
+    function finish(success) {
+      clearTimeout(timer);
+      worker.removeEventListener('statechange', check);
+      if (success) resolve();
+      else reject(new Error('La descarga aún no está completa.'));
+    }
+    function check() {
+      if (worker.state === 'activated') finish(true);
+      if (worker.state === 'redundant') finish(false);
+    }
+    worker.addEventListener('statechange', check);
+    check();
+  });
+}
+
+if (window.isSecureContext && 'serviceWorker' in navigator) {
+  const button = byId('offline');
+  const status = byId('offline-status');
+  const scope = new URL('./', location.href).href;
+  const ready = () => {
+    button.textContent = 'Actualizar copia sin conexión';
+    status.textContent = 'El laboratorio está disponible sin conexión al volver a esta página.';
+  };
+  byId('offline-control').hidden = false;
+  navigator.serviceWorker.getRegistration(scope).then(registration => {
+    if (registration?.scope === scope && registration.active) ready();
+  }).catch(() => {});
+  button.addEventListener('click', async () => {
+    button.disabled = true;
+    status.textContent = 'Guardando el laboratorio y las láminas…';
+    try {
+      const registration = await navigator.serviceWorker.register('./sw.js', { scope: './', updateViaCache: 'none' });
+      await waitForOfflineWorker(registration);
+      ready();
+    } catch {
+      status.textContent = 'La copia sin conexión quedó incompleta. Puedes volver a intentarlo con conexión.';
+    } finally {
+      button.disabled = false;
+    }
+  });
+}
 
 changeSpecies();

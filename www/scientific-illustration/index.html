@@ -24,7 +24,7 @@
     <div class="container">
       <p class="brand">El Gran Atlas</p>
       <h1>Laboratorio de ilustración científica</h1>
-      <p>Compara el sprite original, la acuarela naturalista y la candidata a tinta y color.</p>
+      <p>Compara el SVG original, la acuarela naturalista y la candidata en estilo de lámina zoológica clásica.</p>
       <p id="coverage" class="coverage"></p>
     </div>
   </header>
@@ -35,9 +35,10 @@
         <label for="variant">Variante<select id="variant"></select></label>
         <label for="halo">Halo<select id="halo"></select></label>
         <label for="backdrop">Fondo<select id="backdrop">
-          <option value="paper">Papel naturalista</option><option value="light">Claro</option>
-          <option value="dark">Oscuro</option><option value="landscape">Paisaje ambiental</option>
+          <option value="context">Según la vista</option><option value="paper">Papel naturalista</option>
+          <option value="light">Claro</option><option value="dark">Oscuro</option><option value="landscape">Paisaje de Campo</option>
         </select></label>
+        <label id="field-habitat-control" for="field-habitat" hidden>Bioma de Campo<select id="field-habitat"></select></label>
         <label id="size-control" for="size">Tamaño<select id="size">
           <option>32</option><option>64</option><option>128</option><option selected>256</option><option>512</option>
         </select></label>
@@ -60,7 +61,12 @@
         <button type="button" data-mode="museum" aria-pressed="false">Museo</button>
       </nav>
       <div id="board" class="board" role="region" aria-label="Tres estilos en comparación" tabindex="0"></div>
+      <p id="board-scroll" class="weight-line" hidden>Desplaza la comparación para recorrer las tres columnas.</p>
       <p id="weights" class="weight-line"></p>
+      <div id="offline-control" class="offline-control" hidden>
+        <button id="offline" type="button">Guardar para usar sin conexión</button>
+        <p id="offline-status" role="status"></p>
+      </div>
     </section>
     <section aria-labelledby="review-title" class="review-panel">
       <div class="review-heading">
@@ -72,7 +78,7 @@
         <div class="review-details">
           <label for="preference">Preferencia<select id="preference" name="preference">
             <option value="">Sin evaluar</option>
-            <option>Prefiero naturalista</option><option>Prefiero científica</option>
+            <option>Prefiero naturalista</option><option>Prefiero científica clásica</option>
             <option>Requiere corrección</option><option>Indiferente</option>
           </select></label>
           <label for="notes">Observaciones<textarea id="notes" name="notes" rows="4" placeholder="Postura, rasgos diagnósticos, bordes o legibilidad"></textarea></label>

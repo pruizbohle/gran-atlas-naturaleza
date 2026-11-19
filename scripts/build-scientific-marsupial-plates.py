@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Align experimental contact sheets with production plates and measure both WebP sets."""
+"""Extract and measure classic zoological plates from transparent contact sheets."""
 import argparse
 import io
 import json
@@ -23,18 +23,24 @@ def plate(root, name, size):
     return (root if size == 512 else root / str(size)) / name
 
 
-def extract(sheet, index, reference):
+def extract(sheet, index, marks, components, threshold):
     col, row = index % 3, index // 3
-    bounds = (col * sheet.width // 3, row * sheet.height // 3,
-              (col + 1) * sheet.width // 3, (row + 1) * sheet.height // 3)
-    rgba = np.array(sheet.crop(bounds))
-    alpha = np.clip((rgba[..., 3].astype(np.float32) - 16) * 255 / 229, 0, 255)
-    marks, _ = ndimage.label(alpha >= 12)
-    counts = np.bincount(marks.ravel())
+    left, top = col * sheet.width // 3, row * sheet.height // 3
+    right, bottom = (col + 1) * sheet.width // 3, (row + 1) * sheet.height // 3
+    counts = np.bincount(marks[top:bottom, left:right].ravel())
     counts[0] = 0
     if not counts.max():
         raise ValueError("Celda sin espécimen recortable")
-    subject = marks == counts.argmax()
+    component = int(counts.argmax())
+    y, x = components[component - 1]
+    crosses_grid = x.start < left or x.stop > right or y.start < top or y.stop > bottom
+    touches_sheet = min(x.start, y.start, sheet.width - x.stop, sheet.height - y.stop) <= 1
+    bounds = (max(0, x.start - 4), max(0, y.start - 4),
+              min(sheet.width, x.stop + 4), min(sheet.height, y.stop + 4))
+    rgba = np.array(sheet.crop(bounds))
+    cutoff = max(16, threshold - 36)
+    alpha = np.clip((rgba[..., 3].astype(np.float32) - cutoff) * 255 / (245 - cutoff), 0, 255)
+    subject = marks[bounds[1]:bounds[3], bounds[0]:bounds[2]] == component
     alpha[ndimage.distance_transform_edt(~subject) > 3] = 0
 
     colors = rgba[..., :3].astype(np.float32)
@@ -47,16 +53,12 @@ def extract(sheet, index, reference):
     rgba[..., 3] = np.uint8(np.round(alpha))
     rgba[rgba[..., 3] == 0, :3] = 0
     cutout = Image.fromarray(rgba)
-    cell_bounds = cutout.getbbox()
-    touches_cell = min(cell_bounds[0], cell_bounds[1], cutout.width - cell_bounds[2],
-                       cutout.height - cell_bounds[3]) <= 1
-    cutout = cutout.crop(cell_bounds)
-    left, top, right, bottom = reference.getbbox()
-    scale = min((right - left) / cutout.width, (bottom - top) / cutout.height)
+    cutout = cutout.crop(cutout.getbbox())
+    scale = 450 / max(cutout.size)
     cutout = cutout.resize(tuple(round(dimension * scale) for dimension in cutout.size), Image.Resampling.LANCZOS)
     canvas = Image.new("RGBA", (512, 512))
-    canvas.alpha_composite(cutout, ((left + right - cutout.width) // 2, (top + bottom - cutout.height) // 2))
-    return canvas, touches_cell
+    canvas.alpha_composite(cutout, ((512 - cutout.width) // 2, (512 - cutout.height) // 2))
+    return canvas, component, crosses_grid, touches_sheet
 
 
 def compression(image, quality):
@@ -102,17 +104,29 @@ def main():
     jobs = json.loads(args.jobs.read_text())
     args.masters.mkdir(parents=True, exist_ok=True)
     sheets = [Image.open(job["file"]).convert("RGBA") for job in jobs]
+    fields = []
+    for sheet, job in zip(sheets, jobs):
+        threshold = job.get("alphaThreshold", 27)
+        if not 27 <= threshold < 245:
+            raise ValueError("El umbral alfa debe estar entre 27 y 244")
+        marks, _ = ndimage.label(np.asarray(sheet.getchannel("A")) >= threshold)
+        fields.append((marks, ndimage.find_objects(marks), threshold))
+    seen = set()
     rows = []
     for index, record in enumerate(records):
         name = Path(record["src"]).name
         with Image.open(NATURAL / name) as source:
             natural = source.convert("RGBA")
-        scientific, near_edge = extract(sheets[index // 9], index % 9, natural)
+        batch = index // 9
+        scientific, component, crosses_grid, touches_sheet = extract(sheets[batch], index % 9, *fields[batch])
+        if (batch, component) in seen:
+            raise ValueError(f"Dos celdas comparten una silueta conectada en {name}")
+        seen.add((batch, component))
         scientific.save(args.masters / name.replace(".webp", ".png"))
         masks = [mask32(image) for image in (natural, scientific)]
         similarity = 2 * np.logical_and(*masks).sum() / sum(mask.sum() for mask in masks)
         row = {"file": name, "species": record["id"], "variant": record["key"],
-               "nearCellEdge": near_edge, "silhouetteDice32": round(float(similarity), 4),
+               "crossesGrid": crosses_grid, "touchesSheet": touches_sheet, "silhouetteDice32": round(float(similarity), 4),
                "naturalCoverage32": int(masks[0].sum()), "scientificCoverage32": int(masks[1].sum()), "sizes": {}}
         for size, quality in QUALITIES.items():
             images = [image if size == 512 else image.resize((size, size), Image.Resampling.LANCZOS)

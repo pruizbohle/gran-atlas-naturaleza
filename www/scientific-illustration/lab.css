@@ -23,6 +23,9 @@ h2 { font-size: clamp(1.55rem, 3vw, 2.4rem); }
 .masthead .coverage { margin-top: .75rem; color: #efdbb7; font-size: .92rem; font-variant-numeric: tabular-nums; }
 .workspace { padding: 1.4rem 0 1.8rem; }
 .controls { display: grid; grid-template-columns: minmax(13rem, 2.3fr) repeat(4, minmax(6rem, 1fr)); gap: .8rem; }
+@media (min-width: 850px) {
+  .controls:has(#field-habitat-control:not([hidden])) { grid-template-columns: minmax(13rem, 2.3fr) repeat(5, minmax(6rem, 1fr)); }
+}
 label { display: grid; gap: .3rem; min-width: 0; color: var(--muted); font-size: .9rem; }
 select, button, textarea { font: inherit; color: inherit; border: 1px solid #a6ad9c; border-radius: .35rem; background: var(--panel); min-height: 2.75rem; }
 select {
@@ -73,6 +76,7 @@ button[aria-pressed=true], #export { color: #fff8e8; background: var(--pine); bo
 .board[data-backdrop=light] { --surface: #fffdf6; }
 .board[data-backdrop=dark] { --surface: #25343c; }
 .board[data-backdrop=landscape] { --surface: #d8dbce; }
+.board[data-backdrop=exhibition] { --surface: radial-gradient(ellipse, #f6eacb, #d8c4a5); }
 .board .field-environment { position: absolute; z-index: -1; inset: 0; }
 .board .j25-plate, .board .b26-card, .board .m27-plate { display: grid; height: 100%; grid-template-columns: minmax(0, 1fr); align-content: start; text-align: center; gap: .4rem; }
 .board .j25-identity { min-width: 0; }
@@ -82,6 +86,8 @@ button[aria-pressed=true], #export { color: #fff8e8; background: var(--pine); bo
 .board .j25-portrait { display: block; }
 .missing { font-size: .85rem; font-weight: 600; color: #9b6c38; text-align: center; }
 .weight-line { margin-top: .55rem; color: var(--muted); font-size: .9rem; }
+.offline-control { display: flex; flex-wrap: wrap; gap: .4rem .8rem; align-items: center; margin-top: .65rem; }
+.offline-control p { color: var(--muted); font-size: .9rem; }
 .review-panel { margin-bottom: 2rem; padding: clamp(.8rem, 3vw, 1.3rem); border: 1px solid var(--line); border-radius: .5rem; background: var(--panel); }
 .review-heading { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: .8rem; gap: .65rem; }
 #review-subject, #status { color: var(--muted); margin-top: .35rem; }

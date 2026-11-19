@@ -1,35 +1,37 @@
-# El Gran Atlas · Laboratorio de ilustración científica
+# El Gran Atlas · Lámina zoológica clásica
 
-El experimento parte de V4.3.0, commit `0719d2816470ad9a7adbb35387384d97bfaa3794`, en la rama `experiment/scientific-illustration-marsupials`. Las referencias SVG se extraen del código de la serie 3.45.0 en `d906224533559193e87704fa44471ea73d4069c9`. El proyecto mantiene el inventario, las ilustraciones y el guardado de producción. La evaluación se guarda localmente con su propia clave y puede exportarse en JSON.
+[Laboratorio experimental privado](https://el-gran-atlas-ilustracion-cientifica.muddyroadrunner17.chatgpt.site/scientific-illustration/)
 
-Se verificaron **29 marsupiales y 33 láminas**, incluidas las cuatro variantes albinas configuradas de canguro gris oriental, canguro rojo, wómbat común y zarigüeya de Virginia. Hay **33 candidatas disponibles y 0 pendientes**. Cada candidata usa un WebP alfa de 512 px con derivados propios de 64, 128 y 256 px. Los 132 archivos se decodificaron para verificar tamaño, color y transparencia real.
+El ajuste continúa en `experiment/scientific-illustration-marsupials` a partir de V4.3.0. Compara el SVG de Serie 3, la ilustración naturalista vigente y la nueva candidata clásica. Para la dirección artística se usó la pauta escrita del usuario, con libertad para cambiar la pose, la orientación y el encuadre. La primera comparación experimental sigue disponible en el commit `2d6139f`.
 
-[Abrir el laboratorio privado](https://el-gran-atlas-ilustracion-cientifica.muddyroadrunner17.chatgpt.site)
+## Resumen visual
 
-## Revisión artística
+Se renovaron las **33 candidatas** de los 29 marsupiales del catálogo, incluidas las cuatro albinas autorizadas de canguro gris oriental, canguro rojo, wómbat común y zarigüeya de Virginia. Las nuevas poses priorizan el gesto natural de la especie. La acuarela modela el volumen y la tinta o el grafito fino definen el pelaje, los perfiles y las marcas diagnósticas. El papel y los paisajes se aplican por separado a las tres columnas del laboratorio. [Vista de las 33 láminas](laminas-clasicas.jpg)
 
-La prueba usa las mismas posturas y encuadres de referencia, con tinta y grafito finos, rayado, punteado y acuarela controlada. El anclaje y la escala se ajustaron contra la caja alfa de la lámina naturalista, respetando la proporción de cada candidata. El halo se aplica con la misma función y CSS del juego. Cada vista comparte fondo, categoría, escala y espécimen. En Campo mixto, el segundo marsupial queda fijo en las tres columnas.
+Dieciséis láminas conservan un apoyo breve, con trece ramas o troncos, una roca y dos sugerencias de suelo. El petauro mayor y los canguros arborícolas ganan una lectura vertical, mientras que el petauro del azúcar deja ver el patagio extendido durante el planeo. Se ajustó el recorte del canguro gris oriental en sus dos pigmentaciones para retirar veladuras alrededor de las orejas.
 
-- La mediana del coeficiente Dice de las máscaras a 32 px fue **0,9805**. Este indicador mide el solapamiento de las siluetas. La memoria visual y la preferencia quedan para la evaluación en el laboratorio.
-- Las mayores diferencias de silueta se concentran en petauro del azúcar, possum cola de cepillo y monito del monte. Cambiaron el espacio entre patas, la curva del cuerpo o el contorno de la cola. Conviene revisar esos tres registros al decidir el estilo. Se revisaron los extremos del arborícola de Goodfellow y del canguro rojo, donde la entrada generada quedó cerca del borde de su celda.
-- En la muestra a 64 px conservan buena lectura los grandes patagios, las colas anilladas y los patrones de manchas o franjas. A 32 px disminuye la lectura del rayado fino y dominan la silueta, la distribución de tonos y unos pocos rasgos contrastantes. La muestra gráfica presenta Naturalista a la izquierda y Científica a la derecha para cada ejemplar. [Comparación de miniaturas](minis.jpg)
+- **A 64 px**, se distinguen las manchas del quol, el patagio del petauro del azúcar y la cola anillada del canguro arborícola de Goodfellow. Los apoyos finos mantienen visible el contorno principal.
+- **A 32 px**, el tronco del possum cola de cepillo se aproxima visualmente a la cola. Los dos canguros grises pierden parte de las diferencias finas del hocico, y el pelaje albino tiene menos contraste sobre papel claro. Conviene revisar esos ejemplares en la evaluación.
+- El halo sigue el alfa completo, que incluye los apoyos. En el koala y el possum se extiende alrededor del tronco. El contorno incluye la roca bajo las patas del ualabí de Mareeba. [Comparación de miniaturas](minis.jpg)
 
-## Medición técnica
+## Peso y compresión
 
-| Resolución | Naturalista vigente | Científica | PSNR naturalista / científica | Decodificación de 33 archivos, naturalista / científica |
-| --- | ---: | ---: | ---: | ---: |
-| 64 px | 81 020 B | 78 750 B | 33,31 / 32,67 dB | 4,76 / 4,79 ms |
-| 128 px | 200 878 B | 196 178 B | 34,19 / 33,20 dB | 12,06 / 11,72 ms |
-| 256 px | 582 314 B | 585 224 B | 35,95 / 34,29 dB | 37,63 / 37,19 ms |
-| 512 px | 1 603 504 B | 1 895 190 B | 46,29 / 36,60 dB | 129,27 / 137,71 ms |
-| **Total** | **2 467 716 B** | **2 755 342 B** | | |
+| Resolución | Naturalista vigente | Lámina clásica |
+| --- | ---: | ---: |
+| 64 px | 81 020 B | 73 718 B |
+| 128 px | 200 878 B | 178 742 B |
+| 256 px | 582 314 B | 518 076 B |
+| 512 px | 1 603 504 B | 1 618 364 B |
+| **Total** | **2 467 716 B** | **2 388 900 B** |
 
-La candidata agrega **287 626 B (+11,66 %)**. El mayor incremento está en los WebP de 512 px. La codificación usó calidades 82, 83, 86 y 90 con alfa 100. El PSNR compara cada estilo con su propia entrada de codificación, en píxeles casi opacos, con el mismo codificador y parámetros. La entrada naturalista procede del WebP de referencia ya comprimido. La candidata procede del recorte antes de codificar. Esa diferencia limita la comparación de calidad de una primera compresión.
+El conjunto clásico ocupa **78 816 B menos (−3,19 %)**. Las 16 láminas con apoyo suman 1 262 694 B en clásica frente a 1 305 630 B en los mismos registros naturalistas. Es una comparación por ejemplar que también refleja las nuevas poses y la textura de pintura. La codificación usa calidades 82, 83, 86 y 90 con alfa 100. Se verificaron 132 archivos WebP cuadrados, el tamaño y la presencia de alfa con transparencia real.
 
-Se midió la mediana de cinco recorridos de decodificación con Pillow y bytes ya en memoria. Una lámina RGBA ocupa 16, 64, 256 o 1024 KiB decodificada según la resolución. La memoria total de un navegador depende del contexto de render y el caché. El tiempo aproximado de codificación de las 132 imágenes fue 1,80 s para las entradas naturalistas y 1,72 s para las candidatas. Se midieron 46 a 190 s entre el lanzamiento de las solicitudes de generación y la recepción de los cuatro lotes científicos. Una prueba pareada sobre las mismas cuatro referencias, con el mismo tamaño de rejilla, tardó **25 s en naturalista y 52 s en científica**. Son tiempos de respuesta completos de una sola ejecución por estilo e incluyen la espera del servicio. El tiempo histórico de generación naturalista queda sin medición comparable. [Datos por archivo](measurements.json)
+La mediana de decodificación de los 33 WebP de 64 px fue de 4,86 ms para naturalista y de 4,72 ms para clásica en Pillow con los bytes ya en memoria. Las dimensiones de cada resolución determinan el mismo tamaño de píxeles decodificados para ambos estilos. El solapamiento mediano de sus siluetas a 32 px fue 0,6054, consistente con los cambios de pose y composición. Los cuatro lotes de generación clásica tardaron entre 46 y 197 s entre solicitud y recepción. [Mediciones por archivo](measurements.json)
 
-## Uso y verificación
+## Laboratorio y verificación
 
-El laboratorio compara SVG, Naturalista y Científica en Campo, Campo mixto, Cuaderno, Bestiario y Museo. La matriz de escalas permite ver 32, 64, 128, 256 y 512 px. La vista de 32 px usa el derivado de 64 px. La evaluación registra cinco criterios para cada estilo, una preferencia y observaciones por especie y variante.
+Campo y Campo mixto permiten elegir el bioma. Bestiario usa un fondo por hábitat, Cuaderno usa papel y Museo usa un fondo de exposición. Se conservan los fondos manuales, los halos, las cinco escalas y las seis vistas. La evaluación compara ambos estilos por especie y variante, guarda la preferencia y las observaciones en una clave local de la edición clásica y exporta los 33 registros a JSON.
 
-Para usarlo desde el checkout, sirve `www/` como sitio estático y abre `/scientific-illustration/`. `node scripts/build-scientific-marsupials.cjs` regenera los datos. `node scripts/package-scientific-marsupials.cjs <directorio>` crea el sitio autónomo con sus recursos. Las diez pruebas de la versión base pasaron. Una prueba DOM comprobó seis vistas, fondos compartidos, halos, carga de rutas, evaluación independiente del guardado y exportación de los 33 registros. Sites confirmó el despliegue privado. El acceso automatizado a la vista publicada quedó sin verificar por un fallo del entorno del navegador. La decisión sobre el estilo definitivo queda pendiente de la evaluación del usuario.
+**Guardar para usar sin conexión** descarga 295 recursos para volver a abrir la página del laboratorio. Su caché tiene su propio ámbito y nombre. En una prueba simulada se comprobaron recuperación sin red de los 295 recursos, recuperación tras una descarga incompleta y aislamiento del caché del juego. Una prueba DOM comprobó las seis vistas y la exportación. También pasaron las diez pruebas de la versión base. La previsualización administrada en navegador quedó limitada por un fallo del entorno.
+
+La decisión sobre la dirección definitiva queda pendiente de la revisión del usuario.

@@ -10,16 +10,24 @@ globalThis.AtlasScientificMarsupials = {
         "bosque",
         "selva"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_australia_oriental",
           "name": "Australia Oriental",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "montana",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -34,10 +42,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 65832
           },
           "scientific": {
-            "64": 2664,
-            "128": 7218,
-            "256": 22642,
-            "512": 76648
+            "64": 1892,
+            "128": 4442,
+            "256": 12594,
+            "512": 40068
           },
           "available": true
         }
@@ -53,16 +61,24 @@ globalThis.AtlasScientificMarsupials = {
         "selva",
         "bosque"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_nueva_guinea",
           "name": "Nueva Guinea",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "selva",
+            "bosque",
+            "montana",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -77,10 +93,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 45094
           },
           "scientific": {
-            "64": 2416,
-            "128": 5748,
-            "256": 16786,
-            "512": 53746
+            "64": 2162,
+            "128": 4878,
+            "256": 12866,
+            "512": 38796
           },
           "available": true
         }
@@ -95,16 +111,20 @@ globalThis.AtlasScientificMarsupials = {
       "habitats": [
         "desierto"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_desierto_australiano",
           "name": "Interior árido australiano",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "desierto",
+            "pradera"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -119,10 +139,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 42286
           },
           "scientific": {
-            "64": 2400,
-            "128": 5896,
-            "256": 16952,
-            "512": 52846
+            "64": 2568,
+            "128": 6518,
+            "256": 17818,
+            "512": 55374
           },
           "available": true
         }
@@ -138,16 +158,25 @@ globalThis.AtlasScientificMarsupials = {
         "bosque",
         "mediterraneo"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_australia_occidental",
           "name": "Australia Occidental",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "mediterraneo",
+            "bosque",
+            "pradera",
+            "desierto",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -162,10 +191,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 74736
           },
           "scientific": {
-            "64": 2422,
-            "128": 6020,
-            "256": 18468,
-            "512": 59628
+            "64": 2224,
+            "128": 5510,
+            "256": 15938,
+            "512": 49510
           },
           "available": true
         }
@@ -181,16 +210,24 @@ globalThis.AtlasScientificMarsupials = {
         "selva",
         "bosque"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_nueva_guinea",
           "name": "Nueva Guinea",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "selva",
+            "bosque",
+            "montana",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -205,10 +242,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 49338
           },
           "scientific": {
-            "64": 2706,
-            "128": 6472,
-            "256": 18858,
-            "512": 58914
+            "64": 2224,
+            "128": 5246,
+            "256": 15018,
+            "512": 46632
           },
           "available": true
         }
@@ -223,18 +260,24 @@ globalThis.AtlasScientificMarsupials = {
       "habitats": [
         "bosque"
       ],
-      "regions": [
-        {
-          "id": "gm06_bosques",
-          "name": "Bosques templados del sur",
-          "continent": "Sudamérica"
-        }
-      ],
       "categories": [
         "Normal",
         "Notable",
         "Épico",
         "Excepcional"
+      ],
+      "regions": [
+        {
+          "id": "gm06_bosques",
+          "name": "Bosques templados del sur",
+          "continent": "Sudamérica",
+          "habitats": [
+            "bosque",
+            "rio",
+            "humedal",
+            "costa"
+          ]
+        }
       ],
       "variants": [
         {
@@ -249,10 +292,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 44066
           },
           "scientific": {
-            "64": 2370,
-            "128": 5758,
-            "256": 16598,
-            "512": 51112
+            "64": 2082,
+            "128": 4880,
+            "256": 13912,
+            "512": 42078
           },
           "available": true
         }
@@ -268,16 +311,24 @@ globalThis.AtlasScientificMarsupials = {
         "selva",
         "bosque"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_costa_nordeste_australiana",
           "name": "Costa nordeste australiana",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "selva",
+            "rio",
+            "costa",
+            "humedal",
+            "pradera"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -292,10 +343,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 55596
           },
           "scientific": {
-            "64": 2692,
-            "128": 6764,
-            "256": 20308,
-            "512": 67464
+            "64": 2036,
+            "128": 4668,
+            "256": 12892,
+            "512": 40570
           },
           "available": true
         }
@@ -311,16 +362,24 @@ globalThis.AtlasScientificMarsupials = {
         "selva",
         "bosque"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_nueva_guinea",
           "name": "Nueva Guinea",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "selva",
+            "bosque",
+            "montana",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -335,10 +394,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 46418
           },
           "scientific": {
-            "64": 2492,
-            "128": 6206,
-            "256": 18148,
-            "512": 60916
+            "64": 2418,
+            "128": 5282,
+            "256": 14590,
+            "512": 45230
           },
           "available": true
         }
@@ -357,16 +416,25 @@ globalThis.AtlasScientificMarsupials = {
         "mediterraneo",
         "desierto"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_australia_occidental",
           "name": "Australia Occidental",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "mediterraneo",
+            "bosque",
+            "pradera",
+            "desierto",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -381,10 +449,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 39974
           },
           "scientific": {
-            "64": 2390,
-            "128": 5756,
-            "256": 16610,
-            "512": 51390
+            "64": 2210,
+            "128": 5240,
+            "256": 14056,
+            "512": 42050
           },
           "available": true
         }
@@ -403,21 +471,36 @@ globalThis.AtlasScientificMarsupials = {
         "mediterraneo",
         "desierto"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_tasmania",
           "name": "Tasmania",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         },
         {
           "id": "oc_australia_oriental",
           "name": "Australia Oriental",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "montana",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -432,10 +515,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 37798
           },
           "scientific": {
-            "64": 2238,
-            "128": 5788,
-            "256": 16624,
-            "512": 50854
+            "64": 1994,
+            "128": 4572,
+            "256": 12362,
+            "512": 36196
           },
           "available": true
         },
@@ -451,10 +534,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 32010
           },
           "scientific": {
-            "64": 2322,
-            "128": 5640,
-            "256": 15702,
-            "512": 47604
+            "64": 1914,
+            "128": 4190,
+            "256": 11404,
+            "512": 32992
           },
           "available": true
         }
@@ -473,21 +556,33 @@ globalThis.AtlasScientificMarsupials = {
         "mediterraneo",
         "desierto"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_norte_tropical_australiano",
           "name": "Australia tropical septentrional",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "sabana",
+            "bosque",
+            "rio",
+            "costa",
+            "humedal",
+            "pradera"
+          ]
         },
         {
           "id": "oc_desierto_australiano",
           "name": "Interior árido australiano",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "desierto",
+            "pradera"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -502,10 +597,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 42914
           },
           "scientific": {
-            "64": 2684,
-            "128": 6694,
-            "256": 19422,
-            "512": 59738
+            "64": 2252,
+            "128": 5298,
+            "256": 14364,
+            "512": 42890
           },
           "available": true
         },
@@ -521,10 +616,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 37178
           },
           "scientific": {
-            "64": 2590,
-            "128": 6622,
-            "256": 18528,
-            "512": 57118
+            "64": 2108,
+            "128": 5048,
+            "256": 13220,
+            "512": 38934
           },
           "available": true
         }
@@ -540,16 +635,24 @@ globalThis.AtlasScientificMarsupials = {
         "selva",
         "bosque"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_nueva_guinea",
           "name": "Nueva Guinea",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "selva",
+            "bosque",
+            "montana",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -564,10 +667,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 48552
           },
           "scientific": {
-            "64": 2462,
-            "128": 6080,
-            "256": 18020,
-            "512": 58140
+            "64": 1970,
+            "128": 4746,
+            "256": 13982,
+            "512": 43020
           },
           "available": true
         }
@@ -583,16 +686,23 @@ globalThis.AtlasScientificMarsupials = {
         "bosque",
         "pradera"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_tasmania",
           "name": "Tasmania",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -607,10 +717,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 43572
           },
           "scientific": {
-            "64": 2368,
-            "128": 5704,
-            "256": 17130,
-            "512": 55410
+            "64": 1832,
+            "128": 4164,
+            "256": 11898,
+            "512": 36424
           },
           "available": true
         }
@@ -625,16 +735,24 @@ globalThis.AtlasScientificMarsupials = {
       "habitats": [
         "bosque"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_australia_oriental",
           "name": "Australia Oriental",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "montana",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -649,10 +767,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 51496
           },
           "scientific": {
-            "64": 2312,
-            "128": 5746,
-            "256": 17882,
-            "512": 58404
+            "64": 2224,
+            "128": 5622,
+            "256": 17518,
+            "512": 57582
           },
           "available": true
         }
@@ -667,16 +785,20 @@ globalThis.AtlasScientificMarsupials = {
       "habitats": [
         "desierto"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_desierto_australiano",
           "name": "Interior árido australiano",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "desierto",
+            "pradera"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -691,10 +813,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 43640
           },
           "scientific": {
-            "64": 2240,
-            "128": 5620,
-            "256": 16540,
-            "512": 52864
+            "64": 2050,
+            "128": 5036,
+            "256": 15242,
+            "512": 47678
           },
           "available": true
         }
@@ -713,16 +835,23 @@ globalThis.AtlasScientificMarsupials = {
         "mediterraneo",
         "desierto"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_tasmania",
           "name": "Tasmania",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -737,10 +866,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 45640
           },
           "scientific": {
-            "64": 2146,
-            "128": 5248,
-            "256": 16042,
-            "512": 53200
+            "64": 2020,
+            "128": 4900,
+            "256": 14452,
+            "512": 46216
           },
           "available": true
         }
@@ -756,16 +885,24 @@ globalThis.AtlasScientificMarsupials = {
         "bosque",
         "selva"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_australia_oriental",
           "name": "Australia Oriental",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "montana",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -780,10 +917,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 42266
           },
           "scientific": {
-            "64": 2202,
-            "128": 5312,
-            "256": 15862,
-            "512": 49612
+            "64": 2260,
+            "128": 5352,
+            "256": 15018,
+            "512": 45224
           },
           "available": true
         }
@@ -799,21 +936,36 @@ globalThis.AtlasScientificMarsupials = {
         "selva",
         "bosque"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_tasmania",
           "name": "Tasmania",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         },
         {
           "id": "oc_australia_oriental",
           "name": "Australia Oriental",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "montana",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -828,10 +980,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 81132
           },
           "scientific": {
-            "64": 2360,
-            "128": 6270,
-            "256": 20710,
-            "512": 70038
+            "64": 2124,
+            "128": 5274,
+            "256": 16232,
+            "512": 53844
           },
           "available": true
         }
@@ -850,16 +1002,25 @@ globalThis.AtlasScientificMarsupials = {
         "mediterraneo",
         "desierto"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_australia_occidental",
           "name": "Australia Occidental",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "mediterraneo",
+            "bosque",
+            "pradera",
+            "desierto",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -874,10 +1035,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 50326
           },
           "scientific": {
-            "64": 2220,
-            "128": 5752,
-            "256": 17902,
-            "512": 60076
+            "64": 2074,
+            "128": 5330,
+            "256": 15908,
+            "512": 52694
           },
           "available": true
         }
@@ -893,16 +1054,23 @@ globalThis.AtlasScientificMarsupials = {
         "bosque",
         "pradera"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_tasmania",
           "name": "Tasmania",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -917,10 +1085,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 48020
           },
           "scientific": {
-            "64": 2630,
-            "128": 6396,
-            "256": 18388,
-            "512": 58758
+            "64": 2080,
+            "128": 5044,
+            "256": 14192,
+            "512": 43398
           },
           "available": true
         }
@@ -939,16 +1107,24 @@ globalThis.AtlasScientificMarsupials = {
         "mediterraneo",
         "desierto"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_norte_tropical_australiano",
           "name": "Australia tropical septentrional",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "sabana",
+            "bosque",
+            "rio",
+            "costa",
+            "humedal",
+            "pradera"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -963,10 +1139,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 36406
           },
           "scientific": {
-            "64": 2272,
-            "128": 5596,
-            "256": 16008,
-            "512": 49648
+            "64": 2134,
+            "128": 4916,
+            "256": 13434,
+            "512": 40382
           },
           "available": true
         }
@@ -985,21 +1161,36 @@ globalThis.AtlasScientificMarsupials = {
         "mediterraneo",
         "desierto"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_tasmania",
           "name": "Tasmania",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         },
         {
           "id": "oc_australia_oriental",
           "name": "Australia Oriental",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "montana",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -1014,10 +1205,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 42236
           },
           "scientific": {
-            "64": 2130,
-            "128": 5388,
-            "256": 15828,
-            "512": 50798
+            "64": 1906,
+            "128": 4492,
+            "256": 13136,
+            "512": 41624
           },
           "available": true
         }
@@ -1032,16 +1223,24 @@ globalThis.AtlasScientificMarsupials = {
       "habitats": [
         "bosque"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_australia_oriental",
           "name": "Australia Oriental",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "montana",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -1056,10 +1255,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 43100
           },
           "scientific": {
-            "64": 2146,
-            "128": 5334,
-            "256": 15536,
-            "512": 50578
+            "64": 2416,
+            "128": 5902,
+            "256": 17448,
+            "512": 54246
           },
           "available": true
         }
@@ -1078,16 +1277,24 @@ globalThis.AtlasScientificMarsupials = {
         "mediterraneo",
         "desierto"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_costa_nordeste_australiana",
           "name": "Costa nordeste australiana",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "selva",
+            "rio",
+            "costa",
+            "humedal",
+            "pradera"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -1102,10 +1309,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 48098
           },
           "scientific": {
-            "64": 2308,
-            "128": 5812,
-            "256": 16922,
-            "512": 52688
+            "64": 2398,
+            "128": 5850,
+            "256": 16778,
+            "512": 52532
           },
           "available": true
         }
@@ -1124,16 +1331,25 @@ globalThis.AtlasScientificMarsupials = {
         "mediterraneo",
         "desierto"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_australia_occidental",
           "name": "Australia Occidental",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "mediterraneo",
+            "bosque",
+            "pradera",
+            "desierto",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -1148,10 +1364,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 37908
           },
           "scientific": {
-            "64": 2072,
-            "128": 4940,
-            "256": 14692,
-            "512": 46492
+            "64": 2126,
+            "128": 5532,
+            "256": 16352,
+            "512": 50920
           },
           "available": true
         }
@@ -1167,21 +1383,36 @@ globalThis.AtlasScientificMarsupials = {
         "bosque",
         "pradera"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_tasmania",
           "name": "Tasmania",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "costa"
+          ]
         },
         {
           "id": "oc_australia_oriental",
           "name": "Australia Oriental",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "pradera",
+            "rio",
+            "humedal",
+            "montana",
+            "costa"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -1196,10 +1427,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 63738
           },
           "scientific": {
-            "64": 2280,
-            "128": 5958,
-            "256": 19512,
-            "512": 71604
+            "64": 2506,
+            "128": 6914,
+            "256": 21912,
+            "512": 72986
           },
           "available": true
         },
@@ -1215,10 +1446,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 47086
           },
           "scientific": {
-            "64": 2184,
-            "128": 5470,
-            "256": 18018,
-            "512": 65540
+            "64": 2466,
+            "128": 6304,
+            "256": 20250,
+            "512": 67038
           },
           "available": true
         }
@@ -1233,16 +1464,22 @@ globalThis.AtlasScientificMarsupials = {
       "habitats": [
         "bosque"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "HX-05-04",
           "name": "América Central",
-          "continent": "Norteamérica"
+          "continent": "Norteamérica",
+          "habitats": [
+            "selva",
+            "bosque",
+            "rio",
+            "montana"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -1257,10 +1494,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 56796
           },
           "scientific": {
-            "64": 2702,
-            "128": 6700,
-            "256": 19830,
-            "512": 65166
+            "64": 2700,
+            "128": 7006,
+            "256": 21316,
+            "512": 66590
           },
           "available": true
         }
@@ -1275,21 +1512,32 @@ globalThis.AtlasScientificMarsupials = {
       "habitats": [
         "bosque"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "HX-03-04",
           "name": "Bosques del este norteamericano",
-          "continent": "Norteamérica"
+          "continent": "Norteamérica",
+          "habitats": [
+            "bosque",
+            "rio",
+            "humedal"
+          ]
         },
         {
           "id": "HX-04-04",
           "name": "Costa del golfo de México",
-          "continent": "Norteamérica"
+          "continent": "Norteamérica",
+          "habitats": [
+            "costa",
+            "humedal",
+            "rio",
+            "bosque"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -1304,10 +1552,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 48212
           },
           "scientific": {
-            "64": 2428,
-            "128": 6232,
-            "256": 18602,
-            "512": 61450
+            "64": 2768,
+            "128": 7086,
+            "256": 21720,
+            "512": 67258
           },
           "available": true
         },
@@ -1323,10 +1571,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 40330
           },
           "scientific": {
-            "64": 2350,
-            "128": 5822,
-            "256": 17300,
-            "512": 55938
+            "64": 2702,
+            "128": 6608,
+            "256": 19848,
+            "512": 60472
           },
           "available": true
         }
@@ -1342,16 +1590,24 @@ globalThis.AtlasScientificMarsupials = {
         "selva",
         "bosque"
       ],
+      "categories": [
+        "Normal",
+        "Notable"
+      ],
       "regions": [
         {
           "id": "oc_costa_nordeste_australiana",
           "name": "Costa nordeste australiana",
-          "continent": "Oceanía"
+          "continent": "Oceanía",
+          "habitats": [
+            "bosque",
+            "selva",
+            "rio",
+            "costa",
+            "humedal",
+            "pradera"
+          ]
         }
-      ],
-      "categories": [
-        "Normal",
-        "Notable"
       ],
       "variants": [
         {
@@ -1366,10 +1622,10 @@ globalThis.AtlasScientificMarsupials = {
             "512": 71710
           },
           "scientific": {
-            "64": 2552,
-            "128": 6216,
-            "256": 18854,
-            "512": 60808
+            "64": 2878,
+            "128": 6892,
+            "256": 20406,
+            "512": 66916
           },
           "available": true
         }
