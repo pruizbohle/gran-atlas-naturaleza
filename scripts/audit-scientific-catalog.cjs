@@ -7,7 +7,7 @@ const { harness } = require('../tests/helpers/live-game.cjs');
 const { aquaticMammal } = require('./terrestrial-mammal-families.cjs');
 const art = require('../www/js/naturalist-art-v400.js');
 
-const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'app'];
+const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'gm07-a04/catalog', 'app'];
 const gameSource = modules.map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
 const game = harness({}, null, { gameSource }).window.__atlasTest;
 const pigments = { Albino: 'albino', Melánico: 'melanico' };

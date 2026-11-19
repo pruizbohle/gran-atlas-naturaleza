@@ -1,4 +1,8 @@
-# El Gran Atlas · Aves terrestres, corredoras y galliformes (V4.7.2)
+# El Gran Atlas · Aves arborícolas, chucao y sapo pulga (V4.7.3)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.7.3](docs/cientifica-v473/README.md) · [Inventario V4.7.4](docs/cientifica-v473/plan-v474.md).
+
+## Serie 4 · Aves terrestres, corredoras y galliformes (V4.7.2)
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.7.2](docs/cientifica-v472/README.md) · [Inventario V4.7.3](docs/cientifica-v472/plan-v473.md).
 

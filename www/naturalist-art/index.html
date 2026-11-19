@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Laboratorio de ilustración científica V4.7.2 · El Gran Atlas</title>
+  <title>Laboratorio de ilustración científica V4.7.3 · El Gran Atlas</title>
   <link rel="stylesheet" href="../css/naturalist-art-v400.css">
   <link rel="stylesheet" href="../css/field-v3210.css">
   <link rel="stylesheet" href="lab.css">
@@ -42,8 +42,14 @@
       <div class="toolbar">
         <div><h2 id="heading"></h2><p id="summary"></p></div>
         <label data-catalog-filter>Grupo <select id="group"><option value="">Todos</option></select></label>
-        <label id="order-control" data-catalog-filter>Orden de aves <select id="bird-order"></select></label>
+        <label id="order-control" data-catalog-filter>Orden zoológico <select id="bird-order"></select></label>
         <label data-catalog-filter>Familia zoológica <select id="family"></select></label>
+        <label data-catalog-filter>Edición <select id="release-scope">
+          <option value="">Todas</option>
+          <option value="4.7.3">Ilustradas en V4.7.3</option>
+          <option value="catalog">Chucao y sapo pulga</option>
+          <option value="new">Altas del catálogo</option>
+        </select></label>
         <label data-catalog-filter>Estado de la lámina
           <select id="cut-state">
             <option value="">Todos</option>

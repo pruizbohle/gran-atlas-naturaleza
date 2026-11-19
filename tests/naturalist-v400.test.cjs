@@ -10,7 +10,7 @@ const { aquaticMammal, terrestrialMammal } = require('../scripts/terrestrial-mam
 const read = name => fs.readFileSync('www/js/' + name + '.js', 'utf8');
 const added = ['naturalist-assets-v400', 'naturalist-art-v400'];
 const legacyFixtures = require('./fixtures/stability-saves-v3240.json');
-const production = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art'];
+const production = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'gm07-a04/catalog'];
 const source = [...production, ...added, 'app'].map(read).join('\n');
 const art = require('../www/js/naturalist-art-v400.js');
 require('../www/js/naturalist-assets-v400.js');
@@ -50,7 +50,8 @@ test('catalog is read from the production runtime and only known records can be 
     Elefantes: 3, Damanes: 1, Tubulidentados: 1, Afrosorícidos: 1,
     Cetáceos: 28, Pinnípedos: 20, Sirenios: 2, 'Nutria marina': 1,
     Rapaces: 49, 'Marinas y costeras': 42, 'Ribereñas y humedales': 50,
-    'Corredoras y paleognatas': 9, Galliformes: 24, 'Otras aves terrestres': 6
+    'Corredoras y paleognatas': 9, Galliformes: 24, 'Otras aves terrestres': 6,
+    'Arborícolas y otros no paseriformes': 62, Paseriformes: 1, Anfibios: 1
   });
 });
 
@@ -155,8 +156,8 @@ test('terrestrial Carnivora covers the nine present families with only the confi
   assert.equal(total, 42);
   assert.ok(records.some(sp => sp.id === 'sa_esp_lontra_felina'));
   assert.ok(!records.some(sp => sp.latin.startsWith('Enhydra ')));
-  assert.equal(catalog.migrationProgress.total, 997);
-  assert.equal(catalog.migrationProgress.target, 1127);
+  assert.equal(catalog.migrationProgress.total, 998);
+  assert.equal(catalog.migrationProgress.target, 1221);
 });
 
 test('biome library and transparent editions use module-specific layers and existing category routes', () => {
@@ -195,7 +196,7 @@ test('lab preserves the originals and reserves comparison downloads for the revi
   const archived = new Set(catalog.flatMap(sp => sp.records.flatMap(record => record.previous ? [record.previous.src] : [])));
   assert.equal(archived.size, 341);
   assert.equal(plates.size, migrationProgress.plates);
-  assert.equal(migrationProgress.migrated, 641);
+  assert.equal(migrationProgress.migrated, 705);
   assert.equal(migrationProgress.classical, migrationProgress.target);
   assert.equal(migrationProgress.plates, migrationProgress.target);
   assert.equal(migrationProgress.cutouts, Object.keys(cutouts).length);
@@ -278,7 +279,7 @@ test('the mammal audit completes each configured route and keeps Inia in freshwa
     /legendary[\s\S]*--atlas\.webp/);
 });
 
-test('bird routes match the three released inventories, with distinct dimorphism and Centinela plates', () => {
+test('bird routes match the released inventories, with distinct dimorphism and Centinela plates', () => {
   const game = harness({}, null, { gameSource: source }).window.__atlasTest;
   const plan = require('../docs/cientifica-v460/inventario-aves.json');
   const expected = Object.entries(game.SPECIES).filter(([id]) => game.taxonomyInfo(id).className === 'Aves');
@@ -286,7 +287,9 @@ test('bird routes match the three released inventories, with distinct dimorphism
   const aquatic = plan.editions['4.7.1'].inventory;
   const terrestrial = plan.editions['4.7.2'].inventory;
   const terrestrialIds = new Set(terrestrial.map(sp => sp.id));
-  const released = new Set([...plan.editions['4.7.0'].inventory, ...aquatic, ...terrestrial].map(sp => sp.id));
+  const arboreal = plan.editions['4.7.3'].inventory;
+  const arborealIds = new Set(arboreal.map(sp => sp.id));
+  const released = new Set([...plan.editions['4.7.0'].inventory, ...aquatic, ...terrestrial, ...arboreal].map(sp => sp.id));
   const { routes, cutouts, landscapes, bestiaryHabitats } = globalThis.AtlasNaturalistAssets;
   const cat = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') +
     '\n({catalog,birdComparisons,migrationProgress});');
@@ -304,7 +307,10 @@ test('bird routes match the three released inventories, with distinct dimorphism
     const entry = cat.catalog.find(item => item.id === sp.id);
     assert.equal(entry.order, sp.order);
     assert.equal(entry.family, sp.family);
-    if (terrestrialIds.has(sp.id)) {
+    if (arborealIds.has(sp.id)) {
+      assert.equal(entry.group, sp.order === 'Passeriformes' ? 'Paseriformes' : 'Arborícolas y otros no paseriformes');
+      assert.equal(entry.edition, '4.7.3');
+    } else if (terrestrialIds.has(sp.id)) {
       if (sp.order === 'Galliformes') assert.equal(entry.group, 'Galliformes');
       else assert.ok(['Corredoras y paleognatas', 'Otras aves terrestres'].includes(entry.group));
     } else assert.equal(entry.group, sp.wave || 'Rapaces');
@@ -319,8 +325,9 @@ test('bird routes match the three released inventories, with distinct dimorphism
       assert.equal(new Set(plates).size, 3, sp.id);
     }
   }
-  assert.equal(cat.migrationProgress.birdsMigrated, 180);
-  assert.equal(cat.migrationProgress.biological, 501);
+  assert.equal(cat.migrationProgress.birds, 287);
+  assert.equal(cat.migrationProgress.birdsMigrated, 243);
+  assert.equal(cat.migrationProgress.biological, 531);
   assert.equal(cat.migrationProgress.legendary, 7);
   for (const [wave, count] of [['Marinas y costeras', 50], ['Ribereñas y humedales', 94]]) {
     const files = aquatic.filter(sp => sp.wave === wave).flatMap(sp => Object.values(routes[sp.id]));
@@ -331,6 +338,15 @@ test('bird routes match the three released inventories, with distinct dimorphism
   assert.equal(terrestrial.filter(sp => sp.dimorphism).length, 12);
   assert.equal([...landFiles].filter(file => file.endsWith('--albino.webp')).length, 12);
   assert.equal([...landFiles].filter(file => file.endsWith('--melanico.webp')).length, 8);
+  const arborealFiles = new Set(arboreal.flatMap(sp => Object.values(routes[sp.id])));
+  assert.equal(arborealFiles.size, 93);
+  assert.equal(arboreal.filter(sp => sp.dimorphism).length, 4);
+  assert.equal([...arborealFiles].filter(file => file.endsWith('--albino.webp')).length, 15);
+  assert.equal([...arborealFiles].filter(file => file.endsWith('--melanico.webp')).length, 7);
+  assert.equal(plan.editions['4.7.4'].inventory.length, 44);
+  assert.ok(arborealIds.has('sa_esp_scelorchilus_rubecula'));
+  assert.ok(!plan.editions['4.7.4'].inventory.some(sp => sp.id === 'sa_esp_scelorchilus_rubecula'));
+  assert.deepEqual(routes.sa_esp_brachycephalus_pulex, { normal: 'sa_esp_brachycephalus_pulex--normal.webp' });
   const aquaticIds = new Set(aquatic.map(sp => sp.id));
   for (const [id, habitat] of Object.entries(bestiaryHabitats)) {
     assert.ok(aquaticIds.has(id) && landscapes.includes(art.landscapeKey(habitat)), id);
@@ -348,9 +364,105 @@ test('bird routes match the three released inventories, with distinct dimorphism
   assert.equal(new Set([condor.normal, condor.male, condor.female]).size, 3);
   assert.notDeepEqual(fs.readFileSync('www/naturalist-art/plates/' + condor.male),
     fs.readFileSync('www/naturalist-art/plates/' + condor.female));
-  assert.equal(Object.keys(cat.birdComparisons).length, 38);
+  assert.equal(Object.keys(cat.birdComparisons).length, 51);
   for (const set of Object.values(cat.birdComparisons)) {
     assert.ok(set.birds.length >= 2 && set.birds.every(bird => released.has(bird.id) && bird.trait));
+  }
+});
+
+test('the V4.7.3 records keep the existing chucao identity, prior saves and region requirements', () => {
+  const baseline = '89c8c6ba852cf1f8a43b5af00e644ecacb357ec2';
+  const legacySource = production.filter(name => name !== 'gm07-a04/catalog').map(read).join('\n') + '\n' +
+    execFileSync('git', ['show', baseline + ':www/js/app.js'], { encoding: 'utf8', maxBuffer: 4e6 });
+  const old = harness({}, null, { gameSource: legacySource }).window.__atlasTest;
+  const prev = JSON.parse(JSON.stringify(old.initialState()));
+  const bird = 'sa_esp_scelorchilus_rubecula';
+  const frog = 'sa_esp_brachycephalus_pulex';
+  Object.assign(prev, {
+    currentRegion: 'sa_patagonia_y_tierra_del_fuego', habitat: 'bosque', prestige: 227,
+    money: 8200, knowledge: 1200
+  });
+  prev.regionUnlocked[prev.currentRegion] = true;
+  prev.discovered[bird] = true;
+  prev.sightings[bird] = 19;
+  prev.stages[bird] = 3;
+  const saved = JSON.stringify(prev);
+  const normalized = harness({ gran_atlas_v05: saved }, null, { gameSource: legacySource }).window.AtlasSaveBridge.getSaveData();
+  const next = harness({ gran_atlas_v05: saved }, null, { gameSource: source }).window;
+  const after = next.AtlasSaveBridge.getSaveData();
+  const game = next.__atlasTest;
+  const clone = item => JSON.parse(JSON.stringify(item));
+  assert.equal(Object.keys(old.SPECIES).length, 997);
+  assert.equal(Object.keys(game.SPECIES).length, 998);
+  assert.deepEqual(Object.keys(game.SPECIES).filter(id => !Object.hasOwn(old.SPECIES, id)), [frog]);
+  for (const id of Object.keys(old.SPECIES)) assert.deepEqual(clone(game.SPECIES[id]), clone(old.SPECIES[id]), id);
+  for (const key of ['currentRegion', 'regionUnlocked', 'discovered', 'sightings', 'stages', 'money', 'knowledge', 'prestige']) {
+    assert.deepEqual(clone(after[key]), clone(normalized[key]), key);
+  }
+  const { records } = require('../www/js/gm07-a04/catalog.js');
+  assert.equal(game.REGIONS.length, old.REGIONS.length);
+  for (const region of old.REGIONS) {
+    const expected = clone(region);
+    for (const [id, record] of Object.entries(records)) if (record.region === region.id) expected.species.push(id);
+    assert.deepEqual(clone(game.REGIONS.find(r => r.id === region.id)), expected, region.id);
+  }
+  assert.equal(records[frog].zoologicalRecord.minimumMm, 6.45);
+  assert.equal(records[frog].reference.url, 'https://doi.org/10.1111/zsc.12654');
+  assert.deepEqual(clone(game.taxonomyInfo(bird)), records[bird].taxonomy);
+  assert.deepEqual(clone(game.taxonomyInfo(frog)), records[frog].taxonomy);
+});
+
+test('chucao and sapo pulga can be discovered, researched, published and exhibited through the normal game', () => {
+  const { records } = require('../www/js/gm07-a04/catalog.js');
+  const now = Date.now();
+  for (const [id, rec] of Object.entries(records)) {
+    let rolls = [];
+    const { window } = harness({}, null, { gameSource: source, rng: () => rolls.shift() ?? 0.5 });
+    const game = window.__atlasTest;
+    const state = game.state;
+    state.currentRegion = rec.region;
+    state.regionUnlocked[rec.region] = true;
+    state.habitat = 'bosque';
+    state.time = 'dia';
+    state.season = 'primavera';
+    state.societyView = 'publications';
+    state.publicationView = 'monographs';
+    assert.equal(game.eligibleSpecies(rec.region, 'bosque', 'dia', 'primavera').at(-1), id);
+    assert.ok(!game.eligibleSpecies(rec.region, 'rio', 'dia', 'primavera').includes(id));
+    assert.ok(game.automaticEligibleSpecies(rec.region, 'primavera').includes(id));
+    assert.ok(!state.discovered[id]);
+    rolls = [0.01, 0.99999];
+    game.encounter('manual', now);
+    assert.equal(state.lastEncounter.entries[0].id, id);
+    assert.equal(state.discovered[id], true);
+    assert.equal(state.sightings[id], 1);
+    assert.doesNotMatch(game.renderSociety(), /species-monograph/);
+
+    state.helpers = 3;
+    const hour = Math.floor(now / 3600000);
+    for (const candidate of game.automaticEligibleSpecies(rec.region, 'primavera')) {
+      if (candidate !== id) state.autoHourly[hour + ':' + candidate] = 999;
+    }
+    rolls = [0.01, 0.5];
+    game.encounter('auto', now);
+    assert.equal(state.sightings[id], 2);
+    assert.equal(state.autoHourly[hour + ':' + id], 1);
+
+    state.money = 50000;
+    state.knowledge = 50000;
+    state.sightings[id] = 500;
+    state.feedObs[id] = 20;
+    state.specialSeen[id] = 1;
+    for (let step = 0; step < 5; step++) game.advanceSpecies(id);
+    assert.equal(state.stages[id], 5);
+    const prestige = state.prestige;
+    game.publishMonograph(id);
+    game.publishMonograph(id);
+    assert.equal(state.prestige, prestige + 1);
+    assert.equal(state.published[id], true);
+    assert.ok(game.renderSociety().includes(rec.reference.url));
+    game.exhibitAnimal(id);
+    assert.equal(state.museum.exhibits[id], true);
   }
 });
 

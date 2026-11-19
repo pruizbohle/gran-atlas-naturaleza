@@ -6,7 +6,9 @@ const { harness } = require('../tests/helpers/live-game.cjs');
 const { ungulateFamily } = require('./ungulate-families.cjs');
 const { terrestrialMammal, aquaticMammal } = require('./terrestrial-mammal-families.cjs');
 const birdPlan = require('../docs/cientifica-v460/inventario-aves.json');
+const additions = require('../www/js/gm07-a04/catalog.js').records;
 const comparisonSets = {
+  ...require('./arboreal-bird-comparisons.cjs'),
   ...require('./terrestrial-bird-comparisons.cjs'),
   ...require('./aquatic-bird-comparisons.cjs'),
   ...require('./raptor-comparisons.cjs')
@@ -21,7 +23,7 @@ const classicalIndex = path.join(reviewDir, 'classical-plates.json');
 const classical = new Set(fs.existsSync(classicalIndex) ? JSON.parse(fs.readFileSync(classicalIndex, 'utf8')) : []);
 const qualities = [75, 80, 85, 90, 95];
 const reviewFiles = new Set();
-const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'app'];
+const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'gm07-a04/catalog', 'app'];
 const gameSource = modules.map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
 const audit = harness({}, null, { gameSource }).window.__atlasTest;
 const priority = [
@@ -29,7 +31,8 @@ const priority = [
   'myrmecobius_fasciatus', 'spilocuscus_maculatus', 'dendrolagus_lumholtzi', 'dendrolagus_matschiei'
 ].map(suffix => 'oc_esp_' + suffix);
 priority.splice(5, 0, 'gm06_dromiciops_gliroides');
-priority.unshift('af_avestruz', 'asia_esp_0410', 'urogallo_comun',
+priority.unshift('asia_esp_0067', 'sa_esp_scelorchilus_rubecula', 'sa_esp_brachycephalus_pulex',
+  'af_avestruz', 'asia_esp_0410', 'urogallo_comun',
   'frailecillo_atlantico', 'aguila_real', 'mar_esp_megaptera_novaeangliae',
   'sa_esp_inia_geoffrensis', 'af_gorila_montana');
 const aquaticBirds = birdPlan.editions['4.7.1'].inventory;
@@ -39,10 +42,14 @@ const terrestrialBirds = birdPlan.editions['4.7.2'].inventory.map(row => ({
   group: row.order === 'Galliformes' ? 'Galliformes' :
     paleognathOrders.has(row.order) ? 'Corredoras y paleognatas' : 'Otras aves terrestres'
 }));
+const arborealBirds = birdPlan.editions['4.7.3'].inventory.map(row => ({
+  ...row, group: row.order === 'Passeriformes' ? 'Paseriformes' : 'Arborícolas y otros no paseriformes', edition: '4.7.3'
+}));
 const birds = new Map([
   ...birdPlan.editions['4.7.0'].inventory.map(row => ({ ...row, group: 'Rapaces' })),
   ...aquaticBirds.map(row => ({ ...row, group: row.wave })),
-  ...terrestrialBirds
+  ...terrestrialBirds,
+  ...arborealBirds
 ].map(row => [row.id, row]));
 const pelagicFamilies = new Set(['Diomedeidae', 'Procellariidae', 'Fregatidae', 'Sulidae']);
 const wetlandPortraits = {
@@ -163,7 +170,11 @@ function classify(id, sp) {
   const bird = birds.get(id);
   if (bird) {
     if (taxonomy.className !== 'Aves' || bird.latin !== sp.latin) throw Error('Ave fuera del inventario: ' + id);
-    return { family: bird.family, order: bird.order, group: bird.group };
+    return { family: bird.family, order: bird.order, group: bird.group, edition: bird.edition };
+  }
+  if (Object.hasOwn(additions, id) && taxonomy.className === 'Amphibia') {
+    const { family, order } = taxonomy;
+    return { family, order, group: 'Anfibios', edition: '4.7.3' };
   }
   const genus = sp.latin.split(' ')[0];
   const aquatic = aquaticMammal(sp.latin);
@@ -191,6 +202,7 @@ const species = catalogEntries.flatMap(([id, sp]) => {
   const classification = classify(id, sp);
   if (!classification) return [];
   const { group, family } = classification;
+  const addition = Object.hasOwn(additions, id) ? additions[id] : null;
   const special = audit.configuredSpecials(sp);
   const records = [plate(id, 'normal', 'Normal')];
   if (audit.SEXUAL_DIMORPHISM[id]) {
@@ -220,9 +232,12 @@ const species = catalogEntries.flatMap(([id, sp]) => {
   return [{
     id, name: sp.name, latin: sp.latin, rarity: sp.rare || null, group, family,
     ...(classification.order ? { order: classification.order } : {}),
+    ...(classification.edition ? { edition: classification.edition } : {}),
+    ...(addition ? { catalogChange: addition.species ? 'new' : 'updated' } : {}),
     dimorphism: Boolean(audit.SEXUAL_DIMORPHISM[id]),
     habitats: [...sp.habitats],
     regions: audit.REGIONS.filter(region => region.species.includes(id))
+      .sort((a, b) => Number(b.id === addition?.region) - Number(a.id === addition?.region))
       .map(({ id, name, continent }) => ({ id, name, continent })),
     categories: categories.filter(label => label === 'Normal' || special.includes(label)),
     records, sprite: audit.getSpriteMarkup(id, 'normal')

@@ -43,7 +43,7 @@ EDITIONS = {
     "4.7.0": "Rapaces diurnas y nocturnas",
     "4.7.1": "Aves acuáticas y marinas",
     "4.7.2": "Aves terrestres, corredoras y galliformes",
-    "4.7.3": "Arborícolas y demás no paseriformes",
+    "4.7.3": "Arborícolas, demás no paseriformes y chucao",
     "4.7.4": "Paseriformes",
 }
 WORKBOOK = Path("docs/gm02/scientific-evidence/ioc-master-15.2.xlsx")
@@ -65,6 +65,8 @@ def ioc_names():
 
 
 def assign(latin, order):
+    if latin == "Scelorchilus rubecula":
+        return "4.7.3", "La lámina científica del chucao se adelanta a V4.7.3."
     if order == "Passeriformes":
         return "4.7.4", None
     if order in RAPTORS:

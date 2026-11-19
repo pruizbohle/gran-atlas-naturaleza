@@ -7,6 +7,7 @@ const species = byId('species');
 const group = byId('group');
 const birdOrder = byId('bird-order');
 const family = byId('family');
+const releaseScope = byId('release-scope');
 const cutState = byId('cut-state');
 const context = byId('context');
 const scalePlate = byId('scale-plate');
@@ -91,8 +92,10 @@ function matchesTaxonomy(sp) {
 
 function matchingSpecies() {
   const query = normalize(search.value.trim());
+  const scope = releaseScope.value;
   return catalog.filter(sp => matchesTaxonomy(sp) &&
     (!family.value || sp.family === family.value) && matchingPlates(sp).length &&
+    (!scope || (scope === 'catalog' ? sp.catalogChange : scope === 'new' ? sp.catalogChange === 'new' : sp.edition === scope)) &&
     normalize(sp.name + ' ' + sp.latin).includes(query));
 }
 
@@ -220,8 +223,9 @@ function compareStyles(sp) {
     return '<div class="pair review-comparison">' + figure(before, 'Original con fondo') +
       figure(after, 'Recorte Serie 4.3') + '</div>';
   }
-  const svg = AtlasNaturalistArt.frame('<span class="atlas-art-image legacy-sprite" role="img" aria-label="' +
-    text(sp.name + ' · SVG original') + '">' + (record.svg || sp.sprite) + '</span>', frame, 'plate atlas-art-cutout');
+  const svg = sp.catalogChange === 'new' ? comparisonPlaceholder('Sin lámina histórica') :
+    AtlasNaturalistArt.frame('<span class="atlas-art-image legacy-sprite" role="img" aria-label="' +
+      text(sp.name + ' · SVG original') + '">' + (record.svg || sp.sprite) + '</span>', frame, 'plate atlas-art-cutout');
   const previous = record.previous ? compareImage(record.previous, sp.name + ' · naturalista', frame) :
     comparisonPlaceholder('Sin lámina naturalista previa');
   const current = record.classical ? illustration(sp, record, frame, 256, true) :
@@ -385,6 +389,7 @@ birdOrder.addEventListener('change', () => {
   applyFilters();
 });
 family.addEventListener('change', applyFilters);
+releaseScope.addEventListener('change', applyFilters);
 cutState.addEventListener('change', applyFilters);
 species.addEventListener('change', () => {
   reviewKey = 'normal';

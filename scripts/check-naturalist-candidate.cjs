@@ -1,15 +1,19 @@
 'use strict';
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const path = require('node:path');
 const http = require('node:http');
 const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
 const { harness } = require('../tests/helpers/live-game.cjs');
 
-const baseline = process.env.ATLAS_BASELINE || '9eed5e7d4b8ffe0c53a033cc2f8f874ed8b9d14c';
+const baseline = process.env.ATLAS_BASELINE || '89c8c6ba852cf1f8a43b5af00e644ecacb357ec2';
+const baselineWeb = process.env.ATLAS_BASELINE_WWW;
 const version = require('../package.json').version;
 const versionSlug = version.replaceAll('.', '');
-const baselineSlug = JSON.parse(execFileSync('git', ['show', baseline + ':www/atlas-release.json'], { encoding: 'utf8' })).version.replaceAll('.', '');
+const baselineRelease = execFileSync('git', ['show', baseline + ':www/atlas-release.json'], { encoding: 'utf8' });
+if (baselineWeb) assert.equal(fs.readFileSync(path.join(baselineWeb, 'atlas-release.json'), 'utf8'), baselineRelease);
+const baselineSlug = JSON.parse(baselineRelease).version.replaceAll('.', '');
 const mime = { html: 'text/html', js: 'text/javascript', css: 'text/css', webp: 'image/webp', png: 'image/png', svg: 'image/svg+xml' };
 const oldFiles = new Map();
 let candidate = false;
@@ -19,7 +23,9 @@ const server = http.createServer((request, response) => {
     const name = requested.endsWith('/') || !requested ? requested + 'index.html' : requested;
     if (name.includes('..')) throw Error('path');
     if (!candidate && !oldFiles.has(name)) {
-      oldFiles.set(name, execFileSync('git', ['show', baseline + ':www/' + name], { maxBuffer: 16e6, stdio: ['ignore', 'pipe', 'ignore'] }));
+      const prior = baselineWeb ? fs.readFileSync(path.join(baselineWeb, name)) :
+        execFileSync('git', ['show', baseline + ':www/' + name], { maxBuffer: 16e6, stdio: ['ignore', 'pipe', 'ignore'] });
+      oldFiles.set(name, prior);
     }
     const data = candidate ? fs.readFileSync('www/' + name) : oldFiles.get(name);
     response.setHeader('Content-Type', mime[name.split('.').pop()] || 'application/json');
@@ -46,6 +52,10 @@ async function run() {
   const id = 'nutria_europea';
   const id2 = 'eu_esp_0628';
   const regions = harness().window.__atlasTest.REGIONS;
+  const { records } = require('../www/js/gm07-a04/catalog.js');
+  const catalogSource = ['gm06/catalog', 'gm07-a04/catalog', 'app']
+    .map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
+  const expandedRegions = harness({}, null, { gameSource: catalogSource }).window.__atlasTest.REGIONS;
   const britishSpecies = regions.find(region => region.id === 'HX-01-09').species;
   const primateRegion = regions.find(region => region.id === 'HX-09-11');
   const elephant = 'af_elefante_sabana';
@@ -76,6 +86,9 @@ async function run() {
         save.currentRegion = 'HX-01-09';
         save.regionUnlocked[save.currentRegion] = true;
         save.selectedJournal = id;
+        save.discovered.sa_esp_scelorchilus_rubecula = true;
+        save.sightings.sa_esp_scelorchilus_rubecula = 19;
+        save.stages.sa_esp_scelorchilus_rubecula = 3;
         save.specialFound[id] = { Albino: true, Notable: true };
         save.legendaryFound = {};
         save.museum.exhibits[id] = true;
@@ -113,7 +126,7 @@ async function run() {
       const after = await updated.evaluate(() => AtlasSaveBridge.getSaveData());
       const before = JSON.parse(raw);
       assert.equal(await updated.evaluate(() => localStorage.getItem('gran_atlas_backup_before_update')), raw);
-      const keys = ['discovered', 'published', 'sightings', 'specialFound', 'legendaryFound', 'museum', 'inventory', 'knowledge', 'money', 'regionUnlocked'];
+      const keys = ['discovered', 'published', 'sightings', 'stages', 'specialFound', 'legendaryFound', 'museum', 'inventory', 'knowledge', 'money', 'regionUnlocked'];
       for (const key of keys) assert.deepEqual(after[key], before[key], key);
       const startNew = performance.now();
       await openTab(updated, 'field');
@@ -142,7 +155,7 @@ async function run() {
       await updated.locator('[data-action=set-time][data-id=amanecer]').click();
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v472/campo-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: 'docs/cientifica-v473/campo-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
 
@@ -170,7 +183,7 @@ async function run() {
       await journal.evaluate(img => img.decode());
       assert.equal(await updated.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
       if (process.argv.includes('--write-evidence')) {
-        await updated.screenshot({ path: 'docs/cientifica-v472/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
+        await updated.screenshot({ path: 'docs/cientifica-v473/cuaderno-' + width + '.jpg', type: 'jpeg', quality: 82 });
       }
 
       // Exercise the real automatic timer while deterministic rolls select a single repeatable WebP.
@@ -357,7 +370,7 @@ async function run() {
       await loggedDolphin.evaluate(img => img.decode());
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v472/inia-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: 'docs/cientifica-v473/inia-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
       await openTab(updated, 'bestiary');
@@ -400,7 +413,7 @@ async function run() {
       await updated.locator('.field-environment .landscape-montana').evaluate(img => img.decode());
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v472/centinela-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: 'docs/cientifica-v473/centinela-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
       await openTab(updated, 'journal');
@@ -426,7 +439,7 @@ async function run() {
       await updated.locator('.field-environment .landscape-costa').evaluate(img => img.decode());
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v472/frailecillo-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: 'docs/cientifica-v473/frailecillo-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
 
@@ -497,7 +510,7 @@ async function run() {
       await updated.locator('.field-environment .landscape-pradera').evaluate(img => img.decode());
       if (process.argv.includes('--write-evidence')) {
         await updated.locator('.field-stage').screenshot({
-          path: 'docs/cientifica-v472/avestruz-' + width + '.jpg', type: 'jpeg', quality: 85
+          path: 'docs/cientifica-v473/avestruz-' + width + '.jpg', type: 'jpeg', quality: 85
         });
       }
       const ostrichPlate = 'img[src$="/af_avestruz--normal.webp"]';
@@ -539,12 +552,78 @@ async function run() {
       await partridge.evaluate(img => img.decode());
       const terrestrialAutoRepeatMs = Math.round(performance.now() - terrestrialAutoStart);
 
+      const discoveryChecks = {};
+      for (const [speciesId, record] of Object.entries(records)) {
+        const region = expandedRegions.find(r => r.id === record.region);
+        await updated.evaluate(({ speciesId, region }) => {
+          const save = AtlasSaveBridge.getSaveData();
+          save.currentRegion = region.id;
+          save.regionUnlocked[region.id] = true;
+          save.habitat = 'bosque';
+          save.time = 'dia';
+          save.season = 'primavera';
+          save.helpers = 3;
+          save.lastTick = Date.now();
+          delete save.discovered[speciesId];
+          delete save.sightings[speciesId];
+          delete save.stages[speciesId];
+          const hour = Math.floor(save.lastTick / 3600000);
+          save.autoHourly = Object.fromEntries(region.species.filter(key => key !== speciesId).map(key => [hour + ':' + key, 999]));
+          AtlasSaveBridge.restoreGame(save);
+        }, { speciesId, region });
+        await openTab(updated, 'field');
+        const plate = 'img[src$="/' + speciesId + '--normal.webp"]';
+        const scene = updated.locator('#fieldResult ' + plate);
+        const start = performance.now();
+        await scene.evaluate(img => img.decode());
+        const found = await updated.evaluate(id => {
+          const save = AtlasSaveBridge.getSaveData();
+          return { discovered: save.discovered[id], sightings: save.sightings[id], region: save.currentRegion, habitat: save.habitat };
+        }, speciesId);
+        assert.equal(found.discovered, true);
+        assert.ok(found.sightings > 0);
+        assert.equal(found.region, record.region);
+        assert.equal(found.habitat, 'bosque');
+        discoveryChecks[speciesId] = { ...found, renderMs: Math.round(performance.now() - start) };
+        if (process.argv.includes('--write-evidence')) {
+          await updated.locator('.field-stage').screenshot({
+            path: 'docs/cientifica-v473/' + (record.species ? 'sapo-pulga' : 'chucao') + '-' + width + '.jpg',
+            type: 'jpeg', quality: 85
+          });
+        }
+        await updated.evaluate(id => {
+          const save = AtlasSaveBridge.getSaveData();
+          save.helpers = 0;
+          save.stages[id] = 5;
+          save.selectedJournal = id;
+          save.published[id] = true;
+          save.museum.exhibits[id] = true;
+          AtlasSaveBridge.restoreGame(save);
+        }, speciesId);
+        await openTab(updated, 'journal');
+        await updated.locator('.j25-sheet ' + plate).first().evaluate(img => img.decode());
+        await openTab(updated, 'bestiary');
+        await updated.locator('#b26-search').fill(record.latin);
+        await updated.locator('.b26-card').filter({ has: updated.locator(plate) }).click();
+        const detail = updated.locator('.b26-dialog');
+        await detail.locator(plate).first().evaluate(img => img.decode());
+        assert.match(await detail.locator('.b26-region').first().innerText(), /Región principal/);
+        await detail.locator('.species-monograph summary').click();
+        assert.equal(await detail.locator('.species-monograph a').getAttribute('href'), record.reference.url);
+        await updated.locator('[data-action=b26-close]').click();
+        await openTab(updated, 'museum');
+        await updated.getByRole('tab', { name: 'Exposiciones', exact: true }).click();
+        await updated.locator('.m27-vitrines [data-action=m27-open]').filter({ has: updated.locator(plate) }).click();
+        await updated.locator('.m27-dialog ' + plate).first().evaluate(img => img.decode());
+        await updated.locator('[data-action=m27-close]').click();
+      }
+
       await updated.goto(url + 'naturalist-art/');
       await updated.locator('.field-card .atlas-art-image').evaluate(img => img.decode());
       await updated.locator('.field-card .atlas-art-landscape').evaluate(img => img.decode());
       assert.deepEqual(errors, []);
       results.push({ width, fieldBeforeMs: beforeMs, fieldWebPMs: afterMs, fieldBeforeJSHeapBytes: beforeHeap, fieldWebpJSHeapBytes: afterHeap, exactSaveBackup: true,
-        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, terrestrialAutoRepeatMs, ostrichDimorphismOffline: true, optionalReviewOutsideGameCache: true, errors });
+        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, terrestrialAutoRepeatMs, ostrichDimorphismOffline: true, discoveryChecks, optionalReviewOutsideGameCache: true, errors });
       await ctx.close();
     }
   } finally {

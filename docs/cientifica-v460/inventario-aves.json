@@ -3454,8 +3454,8 @@
       ]
     },
     "4.7.3": {
-      "title": "Arborícolas y demás no paseriformes",
-      "species": 62,
+      "title": "Arborícolas, demás no paseriformes y chucao",
+      "species": 63,
       "families": {
         "Alcedinidae": 2,
         "Bucerotidae": 6,
@@ -3469,6 +3469,7 @@
         "Psittacidae": 10,
         "Psittaculidae": 8,
         "Ramphastidae": 5,
+        "Rhinocryptidae": 1,
         "Strigopidae": 3,
         "Trochilidae": 4,
         "Trogonidae": 2,
@@ -3480,7 +3481,7 @@
       },
       "dimorphicSpecies": 4,
       "legendary": [],
-      "estimatedPlates": 92,
+      "estimatedPlates": 93,
       "inventory": [
         {
           "id": "af_inseparable_lilian",
@@ -4429,6 +4430,22 @@
           "iocTaxon": "Rhinoplax vigil"
         },
         {
+          "id": "sa_esp_scelorchilus_rubecula",
+          "name": "Chucao",
+          "latin": "Scelorchilus rubecula",
+          "habitats": [
+            "bosque"
+          ],
+          "historicalGroup": "Aves terrestres",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "order": "Passeriformes",
+          "family": "Rhinocryptidae",
+          "iocTaxon": "Scelorchilus rubecula",
+          "placement": "La lámina científica del chucao se adelanta a V4.7.3."
+        },
+        {
           "id": "oc_esp_strigops_habroptilus",
           "name": "Kakapo",
           "latin": "Strigops habroptilus",
@@ -4538,7 +4555,7 @@
     },
     "4.7.4": {
       "title": "Paseriformes",
-      "species": 45,
+      "species": 44,
       "families": {
         "Alaudidae": 1,
         "Artamidae": 1,
@@ -4561,7 +4578,7 @@
         "Ploceidae": 1,
         "Ptilonorhynchidae": 1,
         "Pycnonotidae": 1,
-        "Rhinocryptidae": 2,
+        "Rhinocryptidae": 1,
         "Rhipiduridae": 1,
         "Thraupidae": 1,
         "Turdidae": 3,
@@ -4573,7 +4590,7 @@
       },
       "dimorphicSpecies": 12,
       "legendary": [],
-      "estimatedPlates": 91,
+      "estimatedPlates": 90,
       "inventory": [
         {
           "id": "sa_esp_agelaioides_badius",
@@ -5251,21 +5268,6 @@
           "order": "Passeriformes",
           "family": "Cotingidae",
           "iocTaxon": "Rupicola peruvianus"
-        },
-        {
-          "id": "sa_esp_scelorchilus_rubecula",
-          "name": "Chucao",
-          "latin": "Scelorchilus rubecula",
-          "habitats": [
-            "bosque"
-          ],
-          "historicalGroup": "Aves terrestres",
-          "pigmentation": [],
-          "dimorphism": false,
-          "legendary": null,
-          "order": "Passeriformes",
-          "family": "Rhinocryptidae",
-          "iocTaxon": "Scelorchilus rubecula"
         },
         {
           "id": "oc_esp_seleucidis_melanoleucus",

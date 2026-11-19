@@ -1613,6 +1613,9 @@ function taxonomyText(id){
   const st=stage(id); const t=taxonomyInfo(id);
   if(st<2) return 'Clasificación: por estudiar';
   if(st<3) return `Clase: ${t.className}`;
+  if(Object.hasOwn(globalThis.AtlasGM07A04?.records||{},id)){
+   return `Clase: ${t.className} · Orden: ${t.order} · Familia: ${t.family}`;
+  }
   return `Clase: ${t.className} · Grupo: ${t.subClass}`;
 }
 // Beta 3.10.1: preservar la ecología explícita de las dos regiones nuevas.
@@ -2168,6 +2171,19 @@ if(globalThis.AtlasGM06){
  for(const id of Object.keys(globalThis.AtlasGM06.species))SPECIMEN_CATEGORIES[id]=['Notable','Épico','Excepcional'];
  const taxonomyBeforeGM06=taxonomyInfo;
  taxonomyInfo=function(id){return SPECIES[id]?.origin==='gm06'?SPECIES[id].taxonomy:taxonomyBeforeGM06(id);};
+}
+
+const catalogA04=globalThis.AtlasGM07A04;
+if(catalogA04){
+ catalogA04.apply(SPECIES,REGIONS,SPECIMEN_CATEGORIES);
+ const previousTaxonomy=taxonomyInfo;
+ taxonomyInfo=function(id){
+  return Object.hasOwn(catalogA04.records,id)?catalogA04.records[id].taxonomy:previousTaxonomy(id);
+ };
+}
+
+function publishedMonographA04(id){
+ return state.published[id]&&catalogA04?catalogA04.monograph(id):'';
 }
 
 function initialState(){
@@ -3495,6 +3511,7 @@ function renderSociety(){
   let pubContent='';
   if(state.publicationView==='monographs'){
     pubContent=`<div class="req"><strong>Monografías publicadas</strong><div class="small">${publications} de ${Object.keys(SPECIES).length}</div></div><div class="list">${publishable.map(id=>`<div class="atlas-region"><div><strong>${visibleName(id)}</strong><div class="small">5/5 · lista para publicar</div></div><button class="btn" data-action="publish" data-id="${id}">Publicar</button></div>`).join('')||'<div class="small">Aún no hay nuevas monografías listas. Investiga una especie hasta 5/5.</div>'}</div>`;
+    if(catalogA04)pubContent+=Object.keys(catalogA04.records).map(publishedMonographA04).join('');
   } else if(state.publicationView==='codex'){
     pubContent=`<div class="small">Códex: compilación de las monografías de cada continente.</div>${continentStats}`;
   } else {
@@ -4959,10 +4976,12 @@ function changeBestiaryFilter3260(key,value){
 }
 function bestiaryDistribution3260(id){
  if(!state.discovered[id])return [];
+ const preferred=catalogA04?.records[id]?.region;
  return (bestiaryRegions3260().get(id)||[]).map(r=>{
   const current=r.id===state.currentRegion,accessible=regionAccessible(r),ready=regionRequirementsMet(r);
-  return {slot:REGIONS.indexOf(r),name:r.name,continent:r.continent,current,accessible,ready,statusLabel:current?'Ya estás aquí':accessible?'Disponible para viajar':ready?'Disponible para desbloquear':'Región bloqueada',rank:current?0:accessible?1:ready?2:3};
- }).sort((a,b)=>a.rank-b.rank||a.continent.localeCompare(b.continent,'es')||a.name.localeCompare(b.name,'es'));
+  return {slot:REGIONS.indexOf(r),name:r.name,continent:r.continent,current,accessible,ready,statusLabel:current?'Ya estás aquí':accessible?'Disponible para viajar':ready?'Disponible para desbloquear':'Región bloqueada',rank:current?0:accessible?1:ready?2:3,
+   ...(r.id===preferred?{primary:true}:{})};
+ }).sort((a,b)=>Number(!!b.primary)-Number(!!a.primary)||a.rank-b.rank||a.continent.localeCompare(b.continent,'es')||a.name.localeCompare(b.name,'es'));
 }
 function bestiaryObservedVariants3260(id){
  const found=state.specialFound[id]||{};
@@ -4971,7 +4990,8 @@ function bestiaryObservedVariants3260(id){
 function bestiaryModalModel3260(id){
  if(!SPECIES[id]||!state.discovered[id])return null;
  const sp=SPECIES[id],st=stage(id),t=taxonomyInfo(id),sex=state.sexSeen[id]||{};
- return {name:visibleName(id),latin:visibleLatin(id),stage:st,sightings:sight(id),sprite:animalMarkup(id,{size:512,surface:'bestiary'}),rarity:sp.rare,group:st>=2?bestiaryTypeBucket(id):null,taxonomy:taxonomyText(id),food:feed(id),published:!!state.published[id],variants:bestiaryObservedVariants3260(id),sexes:SEXUAL_DIMORPHISM[id]&&(sex.male||sex.female)?[sex.male?'Macho observado':null,sex.female?'Hembra observada':null].filter(Boolean).join(' · '):'Sin registros de dimorfismo.',habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',regions:bestiaryDistribution3260(id),journalAvailable:currentRegion().species.includes(id)};
+ const monograph=publishedMonographA04(id);
+ return {name:visibleName(id),latin:visibleLatin(id),stage:st,sightings:sight(id),sprite:animalMarkup(id,{size:512,surface:'bestiary'}),rarity:sp.rare,group:st>=2?bestiaryTypeBucket(id):null,taxonomy:taxonomyText(id),food:feed(id),published:!!state.published[id],variants:bestiaryObservedVariants3260(id),sexes:SEXUAL_DIMORPHISM[id]&&(sex.male||sex.female)?[sex.male?'Macho observado':null,sex.female?'Hembra observada':null].filter(Boolean).join(' · '):'Sin registros de dimorfismo.',habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',regions:bestiaryDistribution3260(id),journalAvailable:currentRegion().species.includes(id),...(monograph?{monograph}:{})};
 }
 function openBestiaryModal3260(slot,source){
  if(!Number.isInteger(slot)||slot<0)return;
