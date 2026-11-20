@@ -23,6 +23,9 @@ const cartilaginousSets = require('./cartilaginous-comparisons.cjs');
 const salmonids = new Map(require('../docs/cientifica-v490/inventario-pendiente.json').lots.salmonidos.inventory
   .map(animal => [animal.id, animal]));
 const salmonidSets = require('./salmonid-comparisons.cjs');
+const freshwater = new Map(require('../docs/cientifica-v491/inventario-pendiente.json').lots.dulceacuicolas.inventory
+  .map(animal => [animal.id, animal]));
+const freshwaterSets = require('./freshwater-fish-comparisons.cjs');
 const comparisonSets = {
   ...require('./passerine-comparisons.cjs'),
   ...require('./arboreal-bird-comparisons.cjs'),
@@ -213,6 +216,13 @@ function classify(id, sp) {
     if (taxonomy.className !== salmonid.className || salmonid.latin !== sp.latin) throw Error('Salmónido fuera del inventario: ' + id);
     return { family: salmonid.family, order: 'Salmoniformes', group: 'Salmónidos', edition: '4.9.1' };
   }
+  const freshwaterFish = freshwater.get(id);
+  if (freshwaterFish) {
+    if (taxonomy.className !== freshwaterFish.className || freshwaterFish.latin !== sp.latin) {
+      throw Error('Pez dulceacuícola o estuarino fuera del inventario: ' + id);
+    }
+    return { family: freshwaterFish.family, group: 'Peces dulceacuícolas y estuarinos', edition: '4.9.2' };
+  }
   const genus = sp.latin.split(' ')[0];
   const aquatic = aquaticMammal(sp.latin);
   if (aquatic) return { family: aquatic.family, group: aquaticGroups[aquatic.group] };
@@ -310,6 +320,7 @@ const reptileComparisons = buildComparisons(reptileSets, reptiles, 'reptiles');
 const amphibianComparisons = buildComparisons(amphibianSets, amphibians, 'amphibians');
 const cartilaginousComparisons = buildComparisons(cartilaginousSets, cartilaginous, 'cartilaginous');
 const salmonidComparisons = buildComparisons(salmonidSets, salmonids, 'salmonids');
+const freshwaterComparisons = buildComparisons(freshwaterSets, freshwater, 'freshwater');
 const legendMembers = new Map(audit.LEGENDARY_SPECIMENS.map(legend => [legend.speciesId, legend]));
 const legendaryComparisons = buildComparisons({
   all: {
@@ -340,9 +351,11 @@ const migrationProgress = {
   cartilaginous: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Chondrichthyes').length,
   cartilaginousMigrated: species.filter(sp => sp.records[0].src && cartilaginous.has(sp.id)).length,
   salmonids: salmonids.size,
-  salmonidsMigrated: species.filter(sp => sp.records[0].src && salmonids.has(sp.id)).length
+  salmonidsMigrated: species.filter(sp => sp.records[0].src && salmonids.has(sp.id)).length,
+  freshwater: freshwater.size,
+  freshwaterMigrated: species.filter(sp => sp.records[0].src && freshwater.has(sp.id)).length
 };
-const mixedFieldSprites = ['eu_esp_0668', 'eu_esp_0667', 'eu_esp_0670'].map(id => {
+const mixedFieldSprites = ['mar_esp_amphiprion_ocellaris', 'mar_esp_hippocampus_comes', 'mar_esp_paracanthurus_hepatus'].map(id => {
   const sp = audit.SPECIES[id];
   if (classify(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
   return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };
@@ -355,6 +368,7 @@ fs.writeFileSync(path.join(out, 'catalog.js'),
   'const amphibianComparisons = ' + JSON.stringify(amphibianComparisons, null, 2) + ';\n' +
   'const cartilaginousComparisons = ' + JSON.stringify(cartilaginousComparisons, null, 2) + ';\n' +
   'const salmonidComparisons = ' + JSON.stringify(salmonidComparisons, null, 2) + ';\n' +
+  'const freshwaterComparisons = ' + JSON.stringify(freshwaterComparisons, null, 2) + ';\n' +
   'const legendaryComparisons = ' + JSON.stringify(legendaryComparisons, null, 2) + ';\n' +
   'const migrationProgress = ' + JSON.stringify(migrationProgress) + ';\n');
 const version = require('../package.json').version;

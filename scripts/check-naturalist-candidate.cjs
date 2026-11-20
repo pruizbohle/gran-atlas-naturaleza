@@ -5,10 +5,10 @@ const path = require('node:path');
 const http = require('node:http');
 const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v491';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v492';
 const { harness } = require('../tests/helpers/live-game.cjs');
 
-const baseline = process.env.ATLAS_BASELINE || '4ee0853d636d6e99cfff5c71eec8e8162d11b8ff';
+const baseline = process.env.ATLAS_BASELINE || 'dc7929a902a6383f1b32e1ba6501e31675747071';
 const baselineWeb = process.env.ATLAS_BASELINE_WWW;
 const version = require('../package.json').version;
 const baselineRelease = execFileSync('git', ['show', baseline + ':www/atlas-release.json'], { encoding: 'utf8' });
@@ -133,6 +133,8 @@ async function run() {
         AtlasSaveBridge.restoreGame(save);
         AtlasSaveBridge.persistBeforeUpdate();
       }, { id, id2, zone: mixedRegion.id });
+      assert.equal(await page.locator('#fieldResult .atlas-art-image').count(), 1);
+      assert.equal(await page.locator('#fieldResult .field-animal-sprite > svg').count(), 1);
       const startOld = performance.now();
       await openTab(page, 'field');
       await page.locator('#fieldResult .atlas-art-image').first().evaluate(img => img.decode());
@@ -168,15 +170,16 @@ async function run() {
       await mark.evaluate(img => img.decode());
       const afterMs = Math.round(performance.now() - startNew);
       const afterHeap = await jsHeap(updated);
-      assert.equal(await updated.locator('#fieldResult .atlas-art-cutout').count(), 1);
+      assert.equal(await updated.locator('#fieldResult .atlas-art-cutout').count(), 2);
       assert.equal(await updated.locator('.field-environment .landscape-bosque').count(), 1);
       assert.equal(await mark.evaluate(img => getComputedStyle(img).filter.includes('drop-shadow')), true);
       assert.match(await mark.getAttribute('src'), /--albino\.webp$/);
-      assert.equal(await updated.locator('#fieldResult .atlas-art-image').count(), 1);
-      assert.equal(await updated.locator('#fieldResult .field-animal-sprite > svg').count(), 1);
+      assert.equal(await updated.locator('#fieldResult .atlas-art-image').count(), 2);
+      await updated.locator('#fieldResult img[src$="/eu_esp_0668--normal.webp"]').evaluate(img => img.decode());
+      assert.equal(await updated.locator('#fieldResult .field-animal-sprite > svg').count(), 0);
       const imageBytes = await mark.evaluate(img => img.naturalWidth * img.naturalHeight * 4);
       assert.deepEqual(await updated.locator('#fieldResult .encounter-multiplier').allTextContents(), ['×3', '×2']);
-      assert.equal(await updated.locator('#fieldLog .atlas-art-image').count(), 1);
+      assert.equal(await updated.locator('#fieldLog .atlas-art-image').count(), 2);
       await updated.locator('[data-action=toggle-field-filters]').click();
       await updated.locator('[data-action=set-habitat][data-id=pradera]').click();
       await updated.locator('.field-environment .landscape-pradera').evaluate(img => img.decode());
@@ -260,6 +263,7 @@ async function run() {
         assert.ok(workerCache.resources.includes('/naturalist-art/plates/' + size + 'nutria_europea--normal.webp'));
         assert.ok(workerCache.resources.includes('/naturalist-art/plates/' + size + 'af_gorila_montana--silverback.webp'));
         assert.ok(workerCache.resources.includes('/naturalist-art/plates/' + size + 'asia_esp_0369--remonte.webp'));
+        assert.ok(workerCache.resources.includes('/naturalist-art/plates/' + size + 'eu_esp_0668--melanico.webp'));
       }
       assert.equal(workerCache.resources.some(resource => resource.includes('/naturalist-art/review/')), false);
 
@@ -899,7 +903,7 @@ async function run() {
       await updated.locator('.field-card .atlas-art-landscape').evaluate(img => img.decode());
       assert.deepEqual(errors, []);
       results.push({ width, fieldBeforeMs: beforeMs, fieldWebPMs: afterMs, fieldBeforeJSHeapBytes: beforeHeap, fieldWebpJSHeapBytes: afterHeap, exactSaveBackup: true,
-        preservedFields: keys.length, multiEncounter: true, mixedWebpAndSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, terrestrialAutoRepeatMs, ostrichDimorphismOffline: true, passerineAutoMs, passerineInAllModulesOffline: true, squamateAutoMs, squamateInAllModulesOffline: true, reptileLegends, amphibianChecks, scaleChecks, discoveryChecks, optionalReviewOutsideGameCache: true, errors });
+        preservedFields: keys.length, multiEncounter: true, freshwaterUpgradedFromSvg: true, habitatChangedThroughUI: true, timeLightingChanged: true, estimatedVisibleRGBABytes: imageBytes, offlineCacheEntries: workerCache.resources.length, autoRepeatMs, reusedDecodedImage: repeatedImage, reusedLandscape: repeatedLandscape, spritesOffline: true, labOffline: true, silverback: true, primateAutoRepeatMs, ungulateDimorphismOffline: true, atlasLegendaryOffline: true, freshwaterDolphinInAllModulesOffline: true, raptorAutoRepeatMs, centinelaOffline: true, aquaticAutoRepeatMs, coastalBirdOffline: true, wetlandBestiaryOffline: true, terrestrialAutoRepeatMs, ostrichDimorphismOffline: true, passerineAutoMs, passerineInAllModulesOffline: true, squamateAutoMs, squamateInAllModulesOffline: true, reptileLegends, amphibianChecks, scaleChecks, discoveryChecks, optionalReviewOutsideGameCache: true, errors });
       await ctx.close();
     }
   } finally {

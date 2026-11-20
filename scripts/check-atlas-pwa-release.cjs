@@ -7,9 +7,9 @@ const os = require('node:os');
 const path = require('node:path');
 const { chromium } = require('playwright');
 
-const archive = process.env.ATLAS_HISTORY_WWW || '/workspace/work/v491/reference';
+const archive = process.env.ATLAS_HISTORY_WWW || '/workspace/work/v492/reference';
 const version = require('../package.json').version;
-const previous = '4.9.0';
+const previous = '4.9.1';
 const future = version.replace(/\d+$/, patch => String(Number(patch) + 1));
 const evidence = process.env.ATLAS_EVIDENCE_DIR;
 const host = '127.0.0.1';
@@ -192,7 +192,7 @@ async function runMigration(browser, base, old, mobile) {
 
     if (old === previous) {
       for (const kind of ['interruption', 'checksum']) {
-        fault = { kind, file: '/naturalist-art/plates/64/asia_esp_0369--remonte.webp' };
+        fault = { kind, file: '/naturalist-art/plates/64/eu_esp_0668--melanico.webp' };
         const active = await update.evaluate(() => navigator.serviceWorker.controller.scriptURL);
         await update.locator('#atlasUpdateApply').click();
         await statusText(update, /Se interrumpió la descarga o falló/);
@@ -233,8 +233,8 @@ async function runMigration(browser, base, old, mobile) {
     await update.reload();
     await update.waitForFunction(() => !!window.AtlasSaveBridge);
     await update.goto(base + 'naturalist-art/');
-    await update.locator('[data-mode=salmonids]').click();
-    await update.locator('#bird-set').selectOption('remonte');
+    await update.locator('[data-mode=freshwater]').click();
+    await update.locator('#bird-set').selectOption('tigerfish');
     const plates = await update.locator('.taxon-comparison img').evaluateAll(imgs => Promise.all(imgs.map(async img => {
       await img.decode();
       return img.naturalWidth;
@@ -307,11 +307,11 @@ async function freshAndNotify(browser, base) {
   }
 }
 
-async function checkRemonteInGame(app) {
+async function checkBarbelInGame(app) {
   const { harness } = require('../tests/helpers/live-game.cjs');
   const gameSource = ['gm06/catalog', 'gm07-a04/catalog', 'app'].map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
-  const region = harness({}, null, { gameSource }).window.__atlasTest.REGIONS.find(zone => zone.id === 'HX-03-18');
-  const id = 'asia_esp_0369';
+  const region = harness({}, null, { gameSource }).window.__atlasTest.REGIONS.find(zone => zone.id === 'HX-02-11');
+  const id = 'eu_esp_0668';
   const open = tab => app.locator('.tab[data-tab=' + tab + ']').first().evaluate(button => button.click());
   await app.bringToFront();
   await app.evaluate(({ region, id }) => {
@@ -336,7 +336,7 @@ async function checkRemonteInGame(app) {
   await open('field');
   const start = performance.now();
   try {
-    await app.locator('#fieldResult img[src*="/asia_esp_0369--"]').evaluate(img => img.decode(), undefined, { timeout: 20000 });
+    await app.locator('#fieldResult img[src*="/eu_esp_0668--"]').evaluate(img => img.decode(), undefined, { timeout: 20000 });
   } catch (error) {
     console.error(await app.evaluate(id => {
       const save = AtlasSaveBridge.getSaveData();
@@ -353,22 +353,22 @@ async function checkRemonteInGame(app) {
     save.stages[id] = 5;
     save.published[id] = true;
     save.selectedJournal = id;
-    save.legendaryFound.remonte = { id: 'remonte', speciesId: id };
+    save.specialFound[id] = { 'Melánico': true, Notable: true };
     save.museum.exhibits[id] = true;
-    save.lastEncounter = { species: id, title: 'Remonte', sequence: save.encounterSequence,
-      entries: [{ id, amount: 1, variant: 'Legendario', category: 'Legendario' }] };
+    save.lastEncounter = { species: id, title: 'Barbo común', sequence: save.encounterSequence,
+      entries: [{ id, amount: 1, variant: 'Melánico', category: 'Notable' }] };
     AtlasSaveBridge.restoreGame(save);
   }, id);
-  const variant = app.locator('#fieldResult .legendary img[src$="/asia_esp_0369--remonte.webp"]');
+  const variant = app.locator('#fieldResult .notable img[src$="/eu_esp_0668--melanico.webp"]');
   await variant.evaluate(img => img.decode());
   assert.match(await variant.evaluate(img => getComputedStyle(img).filter), /drop-shadow/);
   await app.locator('.field-environment .landscape-rio').evaluate(img => img.decode());
-  if (evidence) await app.locator('.field-stage').screenshot({ path: path.join(evidence, 'remonte-campo.jpg') });
-  const normal = 'img[src$="/asia_esp_0369--normal.webp"]';
+  if (evidence) await app.locator('.field-stage').screenshot({ path: path.join(evidence, 'barbo-campo.jpg') });
+  const normal = 'img[src$="/eu_esp_0668--normal.webp"]';
   await open('journal');
   await app.locator('.j25-sheet ' + normal).first().evaluate(img => img.decode());
   await open('bestiary');
-  await app.locator('#b26-search').fill('Oncorhynchus gorbuscha');
+  await app.locator('#b26-search').fill('Barbus barbus');
   await app.locator('.b26-card').filter({ has: app.locator(normal) }).click();
   await app.locator('.b26-dialog ' + normal).first().evaluate(img => img.decode());
   await app.locator('[data-action=b26-close]').click();
@@ -443,13 +443,13 @@ async function installedMigration(base) {
       await app.reload();
       await app.waitForFunction(() => !!window.AtlasSaveBridge && matchMedia('(display-mode: standalone)').matches);
       assert.match(await app.title(), new RegExp('v' + version));
-      const remonte = await checkRemonteInGame(app);
+      const barbel = await checkBarbelInGame(app);
       await context.setOffline(false);
       await protocol.send('PWA.uninstall', { manifestId: base });
-      evidenceRows.push({ from: previous, to: version, installed: true, remonte, tested: [
+      evidenceRows.push({ from: previous, to: version, installed: true, barbel, tested: [
         'PWA instalada mediante Chromium', 'ventana standalone', 'respaldo exacto', 'reapertura offline'
       ] });
-      console.log('PASS PWA V4.9.0 instalada en Chromium, ventana standalone, actualización y reapertura offline');
+      console.log('PASS PWA V4.9.1 instalada en Chromium, ventana standalone, actualización y reapertura offline');
     } finally {
       await context.close();
     }

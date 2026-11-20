@@ -6,7 +6,7 @@ const path = require('node:path');
 const http = require('node:http');
 const vm = require('node:vm');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v491';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v492';
 require('../www/js/naturalist-assets-v400.js');
 const expected = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') +
   '\n({catalog,migrationProgress});');
@@ -62,7 +62,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#category').selectOption('Notable');
       await page.locator('.mixed-field .atlas-art-image').evaluate(img => img.decode());
       assert.equal(await page.locator('.mixed-field .field-animal-sprite > svg').count(), 1);
-      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Barbo común · SVG/);
+      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Pez payaso común · SVG/);
       const art = page.locator('.mixed-field .plate');
       const image = art.locator('.atlas-art-image');
       const src = await image.getAttribute('src');
@@ -93,7 +93,9 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 913);
+      assert.equal(await page.locator('.gallery-card').count(), 936);
+      await page.locator('#release-scope').selectOption('4.9.2');
+      assert.equal(await page.locator('.gallery-card').count(), 23);
       await page.locator('#release-scope').selectOption('4.9.1');
       assert.equal(await page.locator('.gallery-card').count(), 8);
       await page.locator('#release-scope').selectOption('4.9.0');
@@ -210,6 +212,26 @@ const server = http.createServer((req, res) => {
       }
       if (process.argv.includes('--write-evidence')) {
         await salmonids.screenshot({ path: evidenceDir + '/remonte-comparacion-' + viewport.width + '.jpg' });
+      }
+      await page.locator('[data-mode=freshwater]').click();
+      const freshwater = page.locator('.taxon-comparison');
+      assert.equal(await page.locator('#bird-set option').count(), 7);
+      for (const size of [64, 128]) {
+        await page.locator('#comparison-size').selectOption(String(size));
+        for (const [set, count] of [['tigerfish', 2], ['perch', 3], ['deep-bodied', 4], ['elongated', 4],
+          ['cyprinids', 3], ['albino', 4], ['melanico', 5]]) {
+          await page.locator('#bird-set').selectOption(set);
+          const plates = await freshwater.locator('img').evaluateAll(decodePlates);
+          assert.equal(plates.length, count, set);
+          assert.ok(plates.every(plate => plate[0] === size), set);
+        }
+      }
+      if (process.argv.includes('--write-evidence')) {
+        for (const [set, name] of [['tigerfish', 'peces-tigre'], ['elongated', 'peces-alargados'],
+          ['deep-bodied', 'peces-altos'], ['cyprinids', 'carpas-y-barbos']]) {
+          await page.locator('#bird-set').selectOption(set);
+          await freshwater.screenshot({ path: evidenceDir + '/' + name + '-' + viewport.width + '.jpg' });
+        }
       }
       await page.locator('[data-mode=legendary]').click();
       const collection = page.locator('.taxon-comparison');
@@ -533,7 +555,7 @@ const server = http.createServer((req, res) => {
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 913);
+      assert.equal(await page.locator('.gallery-card').count(), 936);
       await page.locator('#cut-state').selectOption('pending');
       assert.equal(await page.locator('.gallery-card').count(),
         expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);
@@ -574,7 +596,7 @@ const server = http.createServer((req, res) => {
       assert.ok(plates.every(([width, height]) => width === 512 && height === 512));
       assert.deepEqual(errors, []);
       await session.close();
-      console.log('PASS', viewport.width, 'px: diecinueve modos, filtros, salmónidos y doce legendarios, escala visual y exportación offline; primera lámina', firstRender, 'ms');
+      console.log('PASS', viewport.width, 'px: veinte modos, peces dulceacuícolas y doce legendarios, escala visual y exportación offline; primera lámina', firstRender, 'ms');
     }
   } finally { await browser.close(); server.close(); }
 })().catch(error => { console.error(error); server.close(); process.exitCode = 1; });

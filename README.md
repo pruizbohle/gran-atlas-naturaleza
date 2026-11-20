@@ -1,4 +1,8 @@
-# El Gran Atlas · Salmónidos y Remonte (V4.9.1)
+# El Gran Atlas · Peces dulceacuícolas y estuarinos (V4.9.2)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.2](docs/cientifica-v492/README.md) · [Plan V4.9.3](docs/cientifica-v492/plan-v493.md).
+
+## Serie 4 · Salmónidos y Remonte (V4.9.1)
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.1](docs/cientifica-v491/README.md) · [Plan V4.9.2](docs/cientifica-v491/plan-v492.md).
 

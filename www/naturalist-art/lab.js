@@ -22,12 +22,13 @@ const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
   gallery: 'Galería', variants: 'Variantes', frames: 'Ejemplares especiales',
   compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles', amphibians: 'Comparar anfibios', cartilaginous: 'Comparar tiburones y rayas',
-  salmonids: 'Comparar salmónidos', legendary: 'Colección de legendarios',
+  salmonids: 'Comparar salmónidos', freshwater: 'Comparar peces de agua dulce', legendary: 'Colección de legendarios',
   compression: 'Compresión WebP', scale: 'Escala real', 'visual-scale': 'Ajustes de escala', review: 'Revisión artística'
 };
 const taxonComparisons = {
   birds: birdComparisons, reptiles: reptileComparisons, amphibians: amphibianComparisons,
-  cartilaginous: cartilaginousComparisons, salmonids: salmonidComparisons, legendary: legendaryComparisons
+  cartilaginous: cartilaginousComparisons, salmonids: salmonidComparisons,
+  freshwater: freshwaterComparisons, legendary: legendaryComparisons
 };
 const frames = {
   Normal: 'classic', Notable: 'notable', 'Épico': 'epic',
@@ -56,7 +57,8 @@ byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + m
   migrationProgress.birds + ' aves · ' + migrationProgress.reptilesMigrated + ' de ' + migrationProgress.reptiles + ' reptiles · ' +
   migrationProgress.amphibiansMigrated + ' de ' + migrationProgress.amphibians + ' anfibios · ' +
   migrationProgress.cartilaginousMigrated + ' de ' + migrationProgress.cartilaginous + ' tiburones y rayas · ' +
-  migrationProgress.salmonidsMigrated + ' de ' + migrationProgress.salmonids + ' salmónidos';
+  migrationProgress.salmonidsMigrated + ' de ' + migrationProgress.salmonids + ' salmónidos · ' +
+  migrationProgress.freshwaterMigrated + ' de ' + migrationProgress.freshwater + ' peces dulceacuícolas y estuarinos';
 for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
 selectOptions(comparisonHalo, Object.keys(frames).map(label => [label, label]));
 updateOrders();

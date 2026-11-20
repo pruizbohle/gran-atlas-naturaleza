@@ -10,7 +10,7 @@ const archive = process.env.ATLAS_HISTORY_WWW;
 const repetitions = Number(process.env.ATLAS_FIELD_REPETITIONS || 10);
 const current = require('../package.json').version;
 const offline = process.argv.includes('--offline');
-const versions = ['4.8.2', '4.9.0', current];
+const versions = ['4.9.0', '4.9.1', current];
 assert.ok(archive && Number.isInteger(repetitions) && repetitions >= 6);
 const roots = new Map(versions.map(version => {
   const directory = version === current ? 'www' : path.join(archive, version.replaceAll('.', ''), 'www');
@@ -52,20 +52,16 @@ function contextOptions(width) {
   return { viewport: { width, height: 900 }, isMobile: width === 390, hasTouch: width === 390 };
 }
 
-async function prepareOffline(browser, url, width, version) {
+async function prepareOffline(browser, url, width) {
   const context = await browser.newContext(contextOptions(width));
   try {
     const page = await context.newPage();
-    if (version === '4.8.2') {
-      await page.goto(url);
-    } else {
-      await page.goto(url + 'actualizar-atlas.html');
-      await page.locator('#atlasUpdateApply').click();
-      await page.getByText(/Descarga completa e integridad verificada/).waitFor({ timeout: 120000 });
-      await page.locator('#atlasUpdateInstall').click();
-      await page.getByText(/instalada\. El juego/).waitFor();
-      await page.locator('#atlasUpdateReturn').click();
-    }
+    await page.goto(url + 'actualizar-atlas.html');
+    await page.locator('#atlasUpdateApply').click();
+    await page.getByText(/Descarga completa e integridad verificada/).waitFor({ timeout: 120000 });
+    await page.locator('#atlasUpdateInstall').click();
+    await page.getByText(/instalada\. El juego/).waitFor();
+    await page.locator('#atlasUpdateReturn').click();
     await page.waitForFunction(() => navigator.serviceWorker.controller, null, { timeout: 120000 });
     await page.close();
     await context.setOffline(true);
@@ -84,19 +80,19 @@ async function benchmark(browser, url, width, prepared) {
     await page.waitForFunction(() => !!window.AtlasSaveBridge);
     await page.evaluate(() => {
       const save = AtlasSaveBridge.getSaveData();
-      const otter = 'nutria_europea';
-      const barbel = 'eu_esp_0668';
-      Object.assign(save, { currentRegion: 'HX-02-11', habitat: 'bosque', time: 'dia', season: 'primavera', helpers: 0 });
+      const dugong = 'af_dugongo';
+      const clownfish = 'mar_esp_amphiprion_ocellaris';
+      Object.assign(save, { currentRegion: 'mar_oceano_indico_tropical', habitat: 'arrecife', time: 'dia', season: 'primavera', helpers: 0 });
       save.regionUnlocked[save.currentRegion] = true;
-      for (const id of [otter, barbel]) {
+      for (const id of [dugong, clownfish]) {
         save.discovered[id] = true;
         save.stages[id] = 5;
         save.sightings[id] = 430;
       }
-      save.selectedJournal = otter;
-      save.specialFound[otter] = { Albino: true, Notable: true };
-      save.lastEncounter = { species: otter, title: 'Prueba de Campo', sequence: 1, entries: [
-        { id: otter, amount: 3, variant: 'Albino', category: 'Notable' }, { id: barbel, amount: 2 }
+      save.selectedJournal = dugong;
+      save.specialFound[dugong] = { Albino: true, Notable: true };
+      save.lastEncounter = { species: dugong, title: 'Prueba de Campo', sequence: 1, entries: [
+        { id: dugong, amount: 3, variant: 'Albino', category: 'Notable' }, { id: clownfish, amount: 2 }
       ] };
       AtlasSaveBridge.restoreGame(save);
     });
@@ -106,7 +102,7 @@ async function benchmark(browser, url, width, prepared) {
       const start = performance.now();
       const sample = await measure(page);
       sample.driverMs = performance.now() - start;
-      assert.deepEqual(sample.images, ['nutria_europea--albino.webp']);
+      assert.deepEqual(sample.images, ['af_dugongo--albino.webp']);
       assert.equal(sample.svg, 1);
       samples.push(sample);
     }
@@ -140,7 +136,7 @@ function stats(values) {
       try {
         if (offline) {
           for (const version of versions) {
-            prepared.set(version, await prepareOffline(browser, address + version + '/', width, version));
+            prepared.set(version, await prepareOffline(browser, address + version + '/', width));
           }
         }
         for (let trial = 0; trial < repetitions; trial++) {
