@@ -2369,6 +2369,7 @@ function load(){
     merged.asiaPricingVersion=Math.max(2, saved.asiaPricingVersion||2);
     merged.lastTick=Number.isFinite(saved.lastTick)?saved.lastTick:Date.now();
     normalizeAutomaticProgress(merged);
+    normalizeScientificVoyages(merged);
     globalThis.AtlasCampProfile3430?.normalize(merged);
     return normalizeSpecialDiscoveries(mergeHistoricalBeardedVulture(merged));
   }catch(e){
@@ -2487,12 +2488,15 @@ window.AtlasSaveBridge={
      // Evitar calcular un intervalo offline obsoleto al actualizar la partida.
      state.lastTick=Date.now();
      normalizeAutomaticProgress(state);
+     normalizeScientificVoyages(state);
      autoDiaryBuffer={searches:0,hits:0,knowledge:0};
      lastAutoDiaryFlush=0;lastPanelSignature='';currentAutoNotice='';
      tab='field';
      unreadableSave=false;corruptSave=false;
+     // Render may fail on malformed historical data. Keep disk untouched until it succeeds.
+     renderCounters();
+     renderPanel();
      if(!persist())throw new Error('No se pudo guardar la partida restaurada. Conserva el archivo de respaldo y libera almacenamiento.');
-     render();
      return atlasLiveReceipt();
    }catch(error){
      state=before;
@@ -4683,6 +4687,34 @@ function renderObjects(){
  return `<section class="card stack inventory-main inventory-v33"><header class="inventory-v33-header"><span class="inventory-v33-kicker">GABINETE DEL NATURALISTA · 1842</span><h3 class="section">🎒 Inventario</h3><a class="small" href="./laboratorio-objetos.html" target="_blank" rel="noopener">Ver láminas del gabinete</a><div class="inventory-v33-stats"><span>📦 ${ownedEntries.length} tipos de objetos</span><span>🎽 ${equipped}/3 equipados</span></div></header><p class="small">Organiza tus hallazgos en cinco pestañas. Solo el Equipo utiliza los tres slots activos; el Taller permite aprovechar excedentes.</p><div class="inventory-subtabs" role="tablist" aria-label="Secciones del inventario">${sections.map(([id,label])=>`<button type="button" role="tab" aria-selected="${selected===id?'true':'false'}" class="inventory-subtab ${selected===id?'active':''}" data-action="inventory-tab" data-id="${id}">${label}</button>`).join('')}</div>${content}</section>`;
 }
 
+
+function scientificVoyageId(id){
+ if(typeof id==='string'&&/^[1-9]\d*$/.test(id))id=Number(id);
+ return Number.isSafeInteger(id)&&id>0?id:null;
+}
+function normalizeScientificVoyages(snapshot){
+ const completed=new Set();
+ let seq=scientificVoyageId(snapshot.voyageSeq)??0;
+ for(const receipt of Array.isArray(snapshot.voyageHistory)?snapshot.voyageHistory:[]){
+   const id=scientificVoyageId(receipt?.jobId);
+   if(id===null||!Number.isFinite(receipt.at))continue;
+   if(!Number.isFinite(receipt.money)||!Number.isFinite(receipt.knowledge))continue;
+   completed.add(id);
+   seq=Math.max(seq,id);
+ }
+ const pending=new Set();
+ snapshot.voyages=(Array.isArray(snapshot.voyages)?snapshot.voyages:[]).filter(job=>{
+   if(!job||typeof job!=='object')return false;
+   const id=scientificVoyageId(job.id);
+   if(id===null)return true;
+   seq=Math.max(seq,id);
+   // Leave a historical job with an unreadable date visible, unless the same departure has a valid date.
+   if(completed.has(id)||pending.has(id))return false;
+   if(Number.isFinite(job.endAt))pending.add(id);
+   return true;
+ }).filter(job=>Number.isFinite(job.endAt)||!pending.has(scientificVoyageId(job.id)));
+ snapshot.voyageSeq=seq;
+}
 
 function sail(voyageId){
  const v=VOYAGES.find(x=>x.id===voyageId);
@@ -7188,11 +7220,20 @@ buyNode=function(id){const node=RESEARCH_NODES.find(n=>n.id===id);if(!node||!can
 const processBeforeInventory3400=processVoyages;
 processVoyages=function(now){
  if(!Number.isFinite(now))return 0;
- if(!state.voyages.some(j=>j.cartography&&Number.isFinite(j.endAt)&&j.endAt<=now))return processBeforeInventory3400(now);
+ if(!state.voyages.some(j=>Number.isFinite(j.endAt)&&j.endAt<=now))return 0;
  let count=0;const ok=tradeTransaction3300(()=>{count=processBeforeInventory3400(now);return true;});return ok?count:0;
 };
-const finishBeforeInventory3400=finishVoyage;
-finishVoyage=function(id){const job=state.voyages.find(j=>String(j.id)===String(id));if(!job?.cartography)return finishBeforeInventory3400(id);if(!Number.isFinite(job.endAt)||Date.now()<job.endAt)return false;const ok=tradeTransaction3300(()=>{state.voyages=state.voyages.filter(j=>j!==job);return resolveVoyageReward(job);});renderCounters();renderPanel();return ok;};
+finishVoyage=function(id){
+ const job=state.voyages.find(j=>String(j.id)===String(id));
+ const now=Date.now();
+ if(!job||!Number.isFinite(job.endAt)||now<job.endAt)return false;
+ const ok=tradeTransaction3300(()=>{
+   state.voyages=state.voyages.filter(j=>j!==job);
+   return resolveVoyageReward(job,now);
+ });
+ renderCounters();renderPanel();
+ return ok;
+};
 // INV3400 END atomic scientific departures and research
 
 

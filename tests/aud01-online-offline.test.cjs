@@ -93,3 +93,72 @@ test('AUD-01 el lote pendiente conserva región y estación al cambiar de zona',
   game.drain(noon + 2 * hour);
   assert.ok(Object.keys(s.sightings).every(id => available.includes(id)));
 });
+
+test('AUD-03 respaldo con una expedición repetida liquida una sola vez y ajusta la secuencia', () => {
+  const game = open();
+  const bridge = game.h.window.AtlasSaveBridge;
+  const save = bridge.getSaveData();
+  const route = game.g.VOYAGES.find(v => v.id === 'coast');
+  save.voyages = [
+    { id: 7, type: route.id, endAt: null },
+    { id: 7, type: route.id, endAt: noon },
+    { id: '7', type: route.id, endAt: noon }
+  ];
+  bridge.restoreGame(save);
+  assert.equal(game.g.state.voyages.length, 1);
+  assert.equal(game.g.state.voyageSeq, 7);
+  game.at(noon);
+  assert.equal(game.g.state.money, save.money + route.prize);
+  assert.equal(game.g.state.knowledge, save.knowledge + route.notes);
+  assert.equal(game.g.state.museum.voyagesCompleted, 1);
+  const reopened = open(game.h.store);
+  reopened.at(noon);
+  assert.equal(reopened.g.state.money, save.money + route.prize);
+  const stale = reopened.h.window.AtlasSaveBridge.getSaveData();
+  stale.voyages = [{ id: 7, type: route.id, endAt: noon }];
+  reopened.h.window.AtlasSaveBridge.restoreGame(stale);
+  assert.equal(reopened.g.state.voyages.length, 0);
+});
+
+test('AUD-03 la liquidación ordinaria revierte tanto el regreso manual como el automático si falla la cuota', () => {
+  const game = open();
+  const bridge = game.h.window.AtlasSaveBridge;
+  const save = bridge.getSaveData();
+  const route = game.g.VOYAGES.find(v => v.id === 'coast');
+  save.voyages = [{ id: 1, type: route.id, endAt: noon }];
+  bridge.restoreGame(save);
+  const write = game.h.localStorage.setItem;
+  game.h.localStorage.setItem = () => { throw new Error('QuotaExceededError'); };
+  const finished = game.g.finishVoyage(1);
+  assert.equal(game.g.state.voyages.length, 1);
+  assert.equal(finished, false);
+  game.at(noon);
+  assert.equal(game.g.state.voyages.length, 1);
+  assert.equal(game.g.state.money, save.money);
+  assert.equal(JSON.parse(game.h.store[key]).money, save.money);
+  game.h.localStorage.setItem = write;
+  game.at(noon);
+  assert.equal(game.g.state.voyages.length, 0);
+  assert.equal(game.g.state.money, save.money + route.prize);
+});
+
+test('AUD-03 un fallo al dibujar un respaldo deja la partida original en memoria y en disco', () => {
+  const game = open();
+  game.g.persist();
+  const bridge = game.h.window.AtlasSaveBridge;
+  const save = bridge.getSaveData();
+  const stored = game.h.store[key];
+  const counter = game.h.elements.statMoney;
+  let label = counter.textContent;
+  let once = true;
+  Object.defineProperty(counter, 'textContent', {
+    get() { return label; },
+    set(value) {
+      if (once) { once = false; throw new Error('Render interrumpido'); }
+      label = value;
+    }
+  });
+  assert.throws(() => bridge.restoreGame({ ...save, money: save.money + 40 }), /Render interrumpido/);
+  assert.equal(bridge.getSaveData().money, save.money);
+  assert.equal(game.h.store[key], stored);
+});
