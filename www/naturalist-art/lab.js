@@ -17,6 +17,12 @@ const birdSet = byId('bird-set');
 const comparisonSize = byId('comparison-size');
 const comparisonHalo = byId('comparison-halo');
 const variantView = byId('variant-view');
+const pigmentViews = new Set(['albino', 'melanico', 'pigments']);
+for (const [value, label] of [
+  ['albino', 'Todos los albinos'],
+  ['melanico', 'Todos los melánicos'],
+  ['pigments', 'Todos los albinos y melánicos']
+]) variantView.add(new Option(label, value));
 const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
@@ -139,6 +145,34 @@ function gallery() {
     '<button type="button" class="gallery-card" data-species="' + text(sp.id) + '">' +
     illustration(sp, matchingPlates(sp)[0], 'Normal', 256) + '<span class="card-title">' + text(sp.name) + '</span><span class="latin">' +
     text(sp.latin) + '</span></button>').join('') + '</div>' : '<p>No se encontraron especies.</p>';
+}
+
+function pigmentGallery() {
+  const view = variantView.value;
+  const keys = view === 'pigments' ? ['albino', 'melanico'] : [view];
+  const rows = matchingSpecies().map(sp => ({
+    sp, variants: matchingPlates(sp).filter(record => keys.includes(record.key))
+  })).filter(row => row.variants.length).sort((a, b) =>
+    a.sp.name.localeCompare(b.sp.name, 'es'));
+  const count = rows.reduce((total, row) => total + row.variants.length, 0);
+  const pending = rows.reduce((total, row) => total + row.variants.filter(record => !record.src).length, 0);
+  byId('summary').textContent = rows.length + ' especies · ' + count + ' variantes' +
+    (pending ? ' · ' + pending + ' sin lámina científica' : '');
+  if (!rows.length) return '<p>No se encontraron variantes con estos filtros.</p>';
+  const size = Number(comparisonSize.value);
+  return '<p class="note">Comparación con la lámina normal de cada especie; solo se incluyen variantes configuradas en el catálogo.</p>' +
+    '<div class="grid pigment-gallery" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))">' +
+    rows.map(({ sp, variants }) => {
+      const records = [sp.records.find(record => record.key === 'normal'), ...variants].filter(Boolean);
+      return '<article class="gallery-card" data-pigment-species="' + text(sp.id) + '">' +
+        '<h3>' + text(sp.name) + '</h3><p class="latin">' + text(sp.latin) + '</p>' +
+        '<div class="pair review-comparison plate-comparison" style="--comparison-size:' + size +
+        'px;grid-template-columns:repeat(' + records.length + ',minmax(0,1fr))">' +
+        records.map(record => '<div data-pigment-key="' + text(record.key) + '">' +
+          figure(illustration(sp, record, comparisonHalo.value, size, false),
+            record.label + (record.src ? '' : ' · Lámina científica pendiente')) + '</div>').join('') +
+        '</div></article>';
+    }).join('') + '</div>';
 }
 
 function specimenPlate(sp, frame) {
@@ -315,7 +349,8 @@ function draw() {
   const comparingTaxa = Object.hasOwn(taxonComparisons, mode);
   const comparingVisualScale = mode === 'visual-scale';
   const comparingSets = comparingTaxa || comparingVisualScale;
-  const comparingVariants = mode === 'variants' && Boolean(sp);
+  const comparingVariants = mode === 'variants';
+  const comparingPigments = comparingVariants && pigmentViews.has(variantView.value);
   byId('heading').textContent = modes[mode];
   byId('mixed-control').hidden = mode !== 'mixed';
 
@@ -324,8 +359,8 @@ function draw() {
   byId('bird-set-control').hidden = !comparingTaxa || mode === 'legendary';
   byId('comparison-size-control').hidden = !comparingSets && !comparingVariants;
   byId('comparison-halo-control').hidden = (!comparingSets && !comparingVariants) || mode === 'legendary';
-  byId('variant-view-control').hidden = !comparingVariants || !sp.dimorphism;
-  byId('species-control').hidden = mode === 'gallery' || comparingSets;
+  byId('variant-view-control').hidden = !comparingVariants;
+  byId('species-control').hidden = mode === 'gallery' || comparingSets || comparingPigments;
   byId('context-control').hidden = mode !== 'scale';
   byId('scale-plate-control').hidden = !['scale', 'compare', 'compression', ...previews].includes(mode);
   byId('backdrop-control').hidden = !comparingSets && !['compare', 'variants', 'compression', 'review', 'frames'].includes(mode);
@@ -343,6 +378,10 @@ function draw() {
   }
   if (comparingTaxa) {
     content.innerHTML = compareTaxa(taxonComparisons[mode], mode);
+    return;
+  }
+  if (comparingPigments) {
+    content.innerHTML = pigmentGallery();
     return;
   }
   if (!sp && mode !== 'gallery') {
