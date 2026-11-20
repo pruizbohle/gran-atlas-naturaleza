@@ -1,4 +1,8 @@
-# El Gran Atlas · Peces de arrecife y cierre del catálogo mundial (V4.9.3)
+# El Gran Atlas · Fauna de las profundidades (V4.9.5)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.5](docs/cientifica-v495/README.md) · [Plan V4.9.6](docs/cientifica-v495/plan-v496.md)
+
+## Serie 4 · Peces de arrecife y cierre del catálogo mundial (V4.9.3)
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.3](docs/cientifica-v493/README.md) · [Plan V4.9.5](docs/cientifica-v493/plan-v495.md)
 

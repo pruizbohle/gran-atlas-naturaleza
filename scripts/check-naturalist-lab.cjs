@@ -6,11 +6,15 @@ const path = require('node:path');
 const http = require('node:http');
 const vm = require('node:vm');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v493';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v495';
 require('../www/js/naturalist-assets-v400.js');
 const expected = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') +
   '\n({catalog,migrationProgress});');
 const root = path.resolve('www');
+async function decodeImage(locator) {
+  await locator.scrollIntoViewIfNeeded();
+  await locator.evaluate(image => image.decode());
+}
 const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'application/javascript', '.webp': 'image/webp' };
 const server = http.createServer((req, res) => {
   try {
@@ -44,7 +48,7 @@ const server = http.createServer((req, res) => {
       await update.close();
       const start = performance.now();
       await page.goto(url);
-      await page.locator('.field-card .atlas-art-image').evaluate(image => image.decode());
+      await decodeImage(page.locator('.field-card .atlas-art-image'));
       const firstRender = Math.round(performance.now() - start);
       assert.equal(await page.locator('.encounter .plate').evaluate(plate => plate.offsetWidth), 88);
       for (const [mode, selector] of [['journal', '.journal-sheet'], ['bestiary', '.bestiary-entry'], ['museum', '.museum-entry']]) {
@@ -60,7 +64,7 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=mixed]').click();
       await page.locator('#species').selectOption('zorro_rojo');
       await page.locator('#category').selectOption('Notable');
-      await page.locator('.mixed-field .atlas-art-image').evaluate(img => img.decode());
+      await decodeImage(page.locator('.mixed-field .atlas-art-image'));
       assert.equal(await page.locator('.mixed-field .field-animal-sprite > svg').count(), 1);
       assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Atún de aleta amarilla · SVG/);
       const art = page.locator('.mixed-field .plate');
@@ -93,7 +97,9 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 950);
+      assert.equal(await page.locator('.gallery-card').count(), 964);
+      await page.locator('#release-scope').selectOption('4.9.5');
+      assert.equal(await page.locator('.gallery-card').count(), 14);
       await page.locator('#release-scope').selectOption('4.9.3');
       assert.equal(await page.locator('.gallery-card').count(), 14);
       await page.locator('#release-scope').selectOption('4.9.2');
@@ -130,12 +136,12 @@ const server = http.createServer((req, res) => {
       await page.locator('#release-scope').selectOption('catalog');
       assert.equal(await page.locator('.gallery-card').count(), 4);
       const chucao = page.locator('.gallery-card[data-species="sa_esp_scelorchilus_rubecula"]');
-      await chucao.locator('img').evaluate(img => img.decode());
+      await decodeImage(chucao.locator('img'));
       await page.locator('#release-scope').selectOption('new');
       assert.equal(await page.locator('.gallery-card').count(), 3);
       await page.locator('.gallery-card[data-species="sa_esp_brachycephalus_pulex"]').click();
       assert.match(await page.locator('.comparison-styles').innerText(), /Sin lámina histórica/);
-      await page.locator('.comparison-styles img').evaluate(img => img.decode());
+      await decodeImage(page.locator('.comparison-styles img'));
       await page.locator('#release-scope').selectOption('');
       await page.locator('[data-mode=reptiles]').click();
       await page.locator('#bird-set').selectOption('squamate-geckos');
@@ -231,6 +237,22 @@ const server = http.createServer((req, res) => {
           await page.locator('#backdrop').selectOption('light');
         }
       }
+      await page.locator('[data-mode=deep]').click();
+      const deep = page.locator('.taxon-comparison');
+      for (const [key, count] of [['fangtooths', 3], ['photophores', 6], ['deepAnatomy', 3], ['hadal', 2]]) {
+        await page.locator('#bird-set').selectOption(key);
+        await page.locator('#backdrop').selectOption('dark');
+        for (const size of ['64', '128']) {
+          await page.locator('#comparison-size').selectOption(size);
+          const measured = await deep.locator('img').evaluateAll(decodePlates);
+          assert.equal(measured.length, count);
+          assert.ok(measured.every(([natural]) => natural === Number(size)));
+        }
+        if (process.argv.includes('--write-evidence')) {
+          await deep.screenshot({ path: evidenceDir + '/profundidad-' + key + '-' + viewport.width + '.jpg' });
+        }
+      }
+      await page.locator('#backdrop').selectOption('light');
       await page.locator('[data-mode=freshwater]').click();
       const freshwater = page.locator('.taxon-comparison');
       assert.equal(await page.locator('#bird-set option').count(), 7);
@@ -408,7 +430,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#scale-plate').selectOption('legendario');
       const centinela = page.locator('.comparison-styles .legendary img');
       assert.match(await centinela.getAttribute('src'), /--centinela\.webp$/);
-      await centinela.evaluate(img => img.decode());
+      await decodeImage(centinela);
       await page.locator('#species').selectOption('sa_esp_vultur_gryphus');
       await page.locator('[data-mode=variants]').click();
       assert.deepEqual(await page.locator('#content figcaption').allTextContents(), ['Normal', 'Macho', 'Hembra']);
@@ -450,13 +472,12 @@ const server = http.createServer((req, res) => {
       assert.equal(await page.locator('.gallery-card').count(), 2);
       await page.locator('.gallery-card').first().click();
       assert.equal(await page.locator('.legacy-sprite svg').count(), 1);
-      await page.locator('.comparison-styles img').first().evaluate(image => image.decode());
+      await decodeImage(page.locator('.comparison-styles img').first());
       await page.locator('#family').selectOption('');
       await page.locator('[data-mode=frames]').click();
       await page.locator('#species').selectOption('af_gorila_montana');
       const legendary = page.locator('.legendary img.atlas-art-image');
-      await legendary.scrollIntoViewIfNeeded();
-      await legendary.evaluate(image => image.decode());
+      await decodeImage(legendary);
       assert.match(await page.locator('.legendary img.atlas-art-image').getAttribute('src'), /--silverback\.webp$/);
       await page.locator('[data-mode=gallery]').click();
       await page.locator('#group').selectOption('Carnívoros terrestres');
@@ -488,7 +509,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#species').selectOption('af_elefante_sabana');
       await page.locator('#scale-plate').selectOption('legendario');
       const atlas = page.locator('.comparison-styles .legendary img');
-      await atlas.evaluate(image => image.decode());
+      await decodeImage(atlas);
       assert.match(await atlas.getAttribute('src'), /--atlas\.webp$/);
       assert.equal(await page.locator('.comparison-styles .legendary svg').count(), 1);
       await page.locator('[data-mode=gallery]').click();
@@ -497,13 +518,13 @@ const server = http.createServer((req, res) => {
       await page.locator('#family').selectOption('Iniidae');
       assert.equal(await page.locator('.gallery-card').count(), 2);
       await page.locator('.gallery-card[data-species="sa_esp_inia_geoffrensis"]').click();
-      await page.locator('.comparison-styles img').evaluate(image => image.decode());
+      await decodeImage(page.locator('.comparison-styles img'));
       assert.equal(await page.locator('.legacy-sprite svg').count(), 1);
       if (process.argv.includes('--write-evidence')) {
         await page.locator('.comparison-styles').screenshot({ path: evidenceDir + '/comparacion-inia-' + viewport.width + '.jpg' });
       }
       await page.locator('[data-mode=bestiary]').click();
-      await page.locator('.bestiary-entry .landscape-rio').evaluate(image => image.decode());
+      await decodeImage(page.locator('.bestiary-entry .landscape-rio'));
       assert.equal(await page.locator('.bestiary-entry .landscape-oceano').count(), 0);
       await page.locator('[data-mode=gallery]').click();
       await page.locator('#group').selectOption('');
@@ -573,27 +594,26 @@ const server = http.createServer((req, res) => {
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 950);
+      assert.equal(await page.locator('.gallery-card').count(), 964);
       await page.locator('#cut-state').selectOption('pending');
       assert.equal(await page.locator('.gallery-card').count(),
         expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);
       await page.locator('#cut-state').selectOption('');
       const first = page.locator('.gallery-card img').first();
-      await first.scrollIntoViewIfNeeded();
-      await first.evaluate(image => image.decode());
+      await decodeImage(first);
       assert.equal(await first.evaluate(image => image.naturalWidth), 256);
       await page.locator('[data-mode=bestiary]').click();
       await page.locator('#species').selectOption('zorro_rojo');
-      await page.locator('.bestiary-entry .atlas-art-landscape').evaluate(image => image.decode());
+      await decodeImage(page.locator('.bestiary-entry .atlas-art-landscape'));
       await page.locator('[data-mode=compare]').click();
-      await page.locator('.review-comparison img').first().evaluate(image => image.decode());
+      await decodeImage(page.locator('.review-comparison img').first());
       await page.locator('[data-mode=compression]').click();
       await page.locator('#species').selectOption('zorro_rojo');
       await page.locator('#scale-plate').selectOption('albino');
       for (const quality of [75, 80, 85, 90, 95]) {
         await page.locator('#compression-quality').selectOption(String(quality));
         const sample = page.locator('.review-comparison img').first();
-        await sample.evaluate(image => image.decode());
+        await decodeImage(sample);
         assert.match(await sample.getAttribute('src'), new RegExp('/' + quality + '/zorro_rojo--albino\\.webp$'));
       }
       await page.locator('[data-mode=review]').click();
@@ -614,7 +634,7 @@ const server = http.createServer((req, res) => {
       assert.ok(plates.every(([width, height]) => width === 512 && height === 512));
       assert.deepEqual(errors, []);
       await session.close();
-      console.log('PASS', viewport.width, 'px: 21 modos, peces de arrecife y doce legendarios, escala visual y exportación offline; primera lámina', firstRender, 'ms');
+      console.log('PASS', viewport.width, 'px: 22 modos, peces de aguas profundas y doce legendarios, escala visual y exportación offline; primera lámina', firstRender, 'ms');
     }
   } finally { await browser.close(); server.close(); }
 })().catch(error => { console.error(error); server.close(); process.exitCode = 1; });

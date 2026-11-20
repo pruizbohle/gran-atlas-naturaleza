@@ -10,7 +10,7 @@ const archive = process.env.ATLAS_HISTORY_WWW;
 const repetitions = Number(process.env.ATLAS_FIELD_REPETITIONS || 10);
 const current = require('../package.json').version;
 const offline = process.argv.includes('--offline');
-const versions = ['4.9.2', current];
+const versions = ['4.9.3', current];
 assert.ok(archive && Number.isInteger(repetitions) && repetitions >= 6);
 const roots = new Map(versions.map(version => {
   const directory = version === current ? 'www' : path.join(archive, version.replaceAll('.', ''), 'www');
@@ -72,7 +72,7 @@ async function prepareOffline(browser, url, width) {
   }
 }
 
-async function benchmark(browser, url, width, prepared, scientificClownfish) {
+async function benchmark(browser, url, width, prepared, scientificBarreleye) {
   const context = prepared || await browser.newContext({ ...contextOptions(width), serviceWorkers: 'block' });
   const page = await context.newPage();
   try {
@@ -80,19 +80,22 @@ async function benchmark(browser, url, width, prepared, scientificClownfish) {
     await page.waitForFunction(() => !!window.AtlasSaveBridge);
     await page.evaluate(() => {
       const save = AtlasSaveBridge.getSaveData();
-      const dugong = 'af_dugongo';
-      const clownfish = 'mar_esp_amphiprion_ocellaris';
-      Object.assign(save, { currentRegion: 'mar_oceano_indico_tropical', habitat: 'arrecife', time: 'dia', season: 'primavera', helpers: 0 });
+      const cookiecutter = 'mar_esp_isistius_brasiliensis';
+      const barreleye = 'deep_esp_macropinna_microstoma';
+      Object.assign(save, { currentRegion: 'profundo_pacifico_profundo_oriental', habitat: 'columna_mesopelagica', time: 'dia', season: 'primavera', helpers: 0 });
       save.regionUnlocked[save.currentRegion] = true;
-      for (const id of [dugong, clownfish]) {
+      save.craftedItems.world_map = true;
+      save.craftedItems.sounding_kit = true;
+      save.purchases.exploracion_profunda_1 = 1;
+      for (const id of [cookiecutter, barreleye]) {
         save.discovered[id] = true;
         save.stages[id] = 5;
         save.sightings[id] = 430;
       }
-      save.selectedJournal = dugong;
-      save.specialFound[dugong] = { Albino: true, Notable: true };
-      save.lastEncounter = { species: dugong, title: 'Prueba de Campo', sequence: 1, entries: [
-        { id: dugong, amount: 3, variant: 'Albino', category: 'Notable' }, { id: clownfish, amount: 2 }
+      save.selectedJournal = cookiecutter;
+      save.lastEncounter = { species: cookiecutter, title: 'Registro indirecto de muestra', sequence: 1,
+        deepEvidence: { method: 'sondeo', region: save.currentRegion, direct: false }, entries: [
+        { id: cookiecutter, amount: 3 }, { id: barreleye, amount: 2 }
       ] };
       AtlasSaveBridge.restoreGame(save);
     });
@@ -102,10 +105,10 @@ async function benchmark(browser, url, width, prepared, scientificClownfish) {
       const start = performance.now();
       const sample = await measure(page);
       sample.driverMs = performance.now() - start;
-      const files = ['af_dugongo--albino.webp'];
-      if (scientificClownfish) files.push('mar_esp_amphiprion_ocellaris--normal.webp');
+      const files = ['mar_esp_isistius_brasiliensis--normal.webp'];
+      if (scientificBarreleye) files.push('deep_esp_macropinna_microstoma--normal.webp');
       assert.deepEqual(sample.images, files);
-      assert.equal(sample.svg, scientificClownfish ? 0 : 1);
+      assert.equal(sample.svg, scientificBarreleye ? 0 : 1);
       samples.push(sample);
     }
     const session = await context.newCDPSession(page);

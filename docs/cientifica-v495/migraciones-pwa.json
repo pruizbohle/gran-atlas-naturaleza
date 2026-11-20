@@ -1,0 +1,193 @@
+[
+  {
+    "from": "4.3.0",
+    "to": "4.9.5",
+    "mobile": false,
+    "tested": [
+      "sin precarga automática",
+      "ruta antigua estancada aun con parámetro",
+      "ruta universal bajo el service worker histórico",
+      "activación bloqueada con otra pestaña",
+      "respaldo exacto, avance restaurado, juego y laboratorio offline"
+    ]
+  },
+  {
+    "from": "4.8.1",
+    "to": "4.9.5",
+    "mobile": true,
+    "tested": [
+      "sin precarga automática",
+      "ruta universal bajo el service worker histórico",
+      "pérdida de conexión",
+      "activación bloqueada con otra pestaña",
+      "respaldo renovado ante escritura concurrente",
+      "respaldo exacto, avance restaurado, juego y laboratorio offline"
+    ]
+  },
+  {
+    "from": "4.8.2",
+    "to": "4.9.5",
+    "mobile": false,
+    "tested": [
+      "sin precarga automática",
+      "ruta universal bajo el service worker histórico",
+      "activación bloqueada con otra pestaña",
+      "respaldo renovado ante escritura concurrente",
+      "respaldo exacto, avance restaurado, juego y laboratorio offline"
+    ]
+  },
+  {
+    "from": "4.9.2",
+    "to": "4.9.5",
+    "mobile": false,
+    "tested": [
+      "sin precarga automática",
+      "ruta universal bajo el service worker histórico",
+      "activación bloqueada con otra pestaña",
+      "respaldo renovado ante escritura concurrente",
+      "respaldo exacto, avance restaurado, juego y laboratorio offline"
+    ]
+  },
+  {
+    "from": "4.9.3",
+    "to": "4.9.5",
+    "mobile": true,
+    "tested": [
+      "sin precarga automática",
+      "detección real de la publicación al recuperar el foco",
+      "ruta universal bajo el service worker histórico",
+      "pérdida de conexión",
+      "transferencia cortada y SHA-256 incorrecto con reversión y reintento",
+      "activación bloqueada con otra pestaña",
+      "respaldo renovado ante escritura concurrente",
+      "respaldo exacto, avance restaurado, juego y laboratorio offline"
+    ]
+  },
+  {
+    "from": "nueva",
+    "to": "4.9.5",
+    "mobile": false,
+    "tested": [
+      "consulta inicial",
+      "foco con límite",
+      "aviso y Más tarde",
+      "consulta manual",
+      "instalación sin partida, acceso offline"
+    ]
+  },
+  {
+    "from": "4.9.3",
+    "to": "4.9.5",
+    "installed": true,
+    "catalog": [
+      {
+        "id": "asia_esp_craseonycteris_thonglongyai",
+        "region": "HX-06-17",
+        "automaticMs": 1048,
+        "scale": 0.3500003222186318,
+        "visualWidth": 46.4083251953125,
+        "modules": [
+          "Campo",
+          "Cuaderno",
+          "Bestiario",
+          "Museo"
+        ]
+      },
+      {
+        "id": "sa_esp_chlamyphorus_truncatus",
+        "region": "sa_pampas",
+        "automaticMs": 901,
+        "scale": 0.4,
+        "visualWidth": 53.21337890625,
+        "modules": [
+          "Campo",
+          "Cuaderno",
+          "Bestiario",
+          "Museo"
+        ]
+      }
+    ],
+    "surface": {
+      "id": "mar_esp_eretmochelys_imbricata",
+      "region": "mar_oceano_indico_tropical",
+      "habitat": "arrecife",
+      "method": "observación directa"
+    },
+    "deepSea": [
+      {
+        "id": "deep_esp_macropinna_microstoma",
+        "habitat": "columna_mesopelagica",
+        "method": "sondeo",
+        "region": "profundo_pacifico_profundo_oriental",
+        "seconds": 60,
+        "automatic": false,
+        "modules": [
+          "Campo",
+          "Cuaderno",
+          "Bestiario",
+          "Museo"
+        ],
+        "offline": true
+      },
+      {
+        "id": "deep_esp_bathypterois_grallator",
+        "habitat": "fondo_batial",
+        "method": "muestreo",
+        "region": "profundo_indico_profundo",
+        "seconds": 180,
+        "automatic": false,
+        "modules": [
+          "Campo",
+          "Cuaderno",
+          "Bestiario",
+          "Museo"
+        ],
+        "offline": true
+      },
+      {
+        "id": "abisal_esp_pseudoliparis_swirei",
+        "habitat": "hadal_marianas",
+        "method": "extraordinario",
+        "region": "abisal_fosa_oceanica_occidental",
+        "seconds": 300,
+        "automatic": true,
+        "modules": [
+          "Campo",
+          "Cuaderno",
+          "Bestiario",
+          "Museo"
+        ],
+        "offline": true
+      },
+      {
+        "id": "abisal_esp_pseudoliparis_kermadecensis",
+        "habitat": "hadal_kermadec",
+        "method": "extraordinario",
+        "region": "abisal_fosa_oceanica_oriental",
+        "seconds": 300,
+        "automatic": true,
+        "modules": [
+          "Campo",
+          "Cuaderno",
+          "Bestiario",
+          "Museo"
+        ],
+        "offline": true
+      }
+    ],
+    "tested": [
+      "PWA instalada mediante Chromium",
+      "ventana standalone",
+      "respaldo exacto",
+      "reapertura offline"
+    ]
+  },
+  {
+    "from": "4.3.0",
+    "to": "4.9.5",
+    "tested": [
+      "actualizar-v430.html desde la caché histórica",
+      "respaldo exacto"
+    ]
+  }
+]

@@ -416,6 +416,9 @@ globalThis.AtlasNaturalistAssets = {
       "albino": "af_babuino_oliva--albino.webp",
       "melanico": "af_babuino_oliva--melanico.webp"
     },
+    "deep_esp_dissostichus_mawsoni": {
+      "normal": "deep_esp_dissostichus_mawsoni--normal.webp"
+    },
     "sa_esp_pseudoplatystoma_corruscans": {
       "normal": "sa_esp_pseudoplatystoma_corruscans--normal.webp"
     },
@@ -2587,6 +2590,9 @@ globalThis.AtlasNaturalistAssets = {
     "mar_esp_macronectes_giganteus": {
       "normal": "mar_esp_macronectes_giganteus--normal.webp"
     },
+    "deep_esp_anoplogaster_cornuta": {
+      "normal": "deep_esp_anoplogaster_cornuta--normal.webp"
+    },
     "mar_esp_pomacanthus_imperator": {
       "normal": "mar_esp_pomacanthus_imperator--normal.webp"
     },
@@ -2597,17 +2603,38 @@ globalThis.AtlasNaturalistAssets = {
       "normal": "asia_esp_0915--normal.webp",
       "melanico": "asia_esp_0915--melanico.webp"
     },
+    "deep_esp_macropinna_microstoma": {
+      "normal": "deep_esp_macropinna_microstoma--normal.webp"
+    },
+    "abisal_esp_pseudoliparis_kermadecensis": {
+      "normal": "abisal_esp_pseudoliparis_kermadecensis--normal.webp"
+    },
+    "abisal_esp_pseudoliparis_swirei": {
+      "normal": "abisal_esp_pseudoliparis_swirei--normal.webp"
+    },
     "mar_esp_paracanthurus_hepatus": {
       "normal": "mar_esp_paracanthurus_hepatus--normal.webp"
     },
     "sa_esp_symphysodon_aequifasciatus": {
       "normal": "sa_esp_symphysodon_aequifasciatus--normal.webp"
     },
+    "deep_esp_stomias_boa": {
+      "normal": "deep_esp_stomias_boa--normal.webp"
+    },
+    "deep_esp_idiacanthus_antrostomus": {
+      "normal": "deep_esp_idiacanthus_antrostomus--normal.webp"
+    },
     "sa_esp_electrophorus_electricus": {
       "normal": "sa_esp_electrophorus_electricus--normal.webp"
     },
+    "deep_esp_argyropelecus_aculeatus": {
+      "normal": "deep_esp_argyropelecus_aculeatus--normal.webp"
+    },
     "gm06_pterois_miles": {
       "normal": "gm06_pterois_miles--normal.webp"
+    },
+    "deep_esp_benthosema_glaciale": {
+      "normal": "deep_esp_benthosema_glaciale--normal.webp"
     },
     "mar_esp_bolbometopon_muricatum": {
       "normal": "mar_esp_bolbometopon_muricatum--normal.webp"
@@ -2626,8 +2653,14 @@ globalThis.AtlasNaturalistAssets = {
     "mar_esp_cheilinus_undulatus": {
       "normal": "mar_esp_cheilinus_undulatus--normal.webp"
     },
+    "deep_esp_anoplogaster_brachycera": {
+      "normal": "deep_esp_anoplogaster_brachycera--normal.webp"
+    },
     "mar_esp_amphiprion_ocellaris": {
       "normal": "mar_esp_amphiprion_ocellaris--normal.webp"
+    },
+    "deep_esp_eurypharynx_pelecanoides": {
+      "normal": "deep_esp_eurypharynx_pelecanoides--normal.webp"
     },
     "mar_esp_synanceia_verrucosa": {
       "normal": "mar_esp_synanceia_verrucosa--normal.webp"
@@ -2639,6 +2672,12 @@ globalThis.AtlasNaturalistAssets = {
     "af_xlsx_pez_tigre_goliat": {
       "normal": "af_xlsx_pez_tigre_goliat--normal.webp",
       "albino": "af_xlsx_pez_tigre_goliat--albino.webp"
+    },
+    "deep_esp_bathypterois_grallator": {
+      "normal": "deep_esp_bathypterois_grallator--normal.webp"
+    },
+    "deep_esp_chauliodus_macouni": {
+      "normal": "deep_esp_chauliodus_macouni--normal.webp"
     },
     "mar_esp_exocoetus_volitans": {
       "normal": "mar_esp_exocoetus_volitans--normal.webp"
@@ -2838,6 +2877,9 @@ globalThis.AtlasNaturalistAssets = {
     },
     "sa_esp_rhinoderma_darwinii": {
       "normal": "sa_esp_rhinoderma_darwinii--normal.webp"
+    },
+    "deep_esp_ceratias_holboelli": {
+      "normal": "deep_esp_ceratias_holboelli--normal.webp"
     },
     "na_esp_dipodomys_merriami": {
       "normal": "na_esp_dipodomys_merriami--normal.webp"
@@ -5112,7 +5154,21 @@ globalThis.AtlasNaturalistAssets = {
     "mar_esp_zalophus_californianus--normal.webp": true,
     "mar_esp_ziphius_cavirostris--normal.webp": true,
     "deep_esp_mitsukurina_owstoni--normal.webp": true,
+    "deep_esp_argyropelecus_aculeatus--normal.webp": true,
+    "deep_esp_benthosema_glaciale--normal.webp": true,
+    "deep_esp_ceratias_holboelli--normal.webp": true,
+    "deep_esp_eurypharynx_pelecanoides--normal.webp": true,
+    "deep_esp_stomias_boa--normal.webp": true,
+    "deep_esp_anoplogaster_cornuta--normal.webp": true,
+    "deep_esp_chauliodus_macouni--normal.webp": true,
+    "deep_esp_idiacanthus_antrostomus--normal.webp": true,
+    "deep_esp_macropinna_microstoma--normal.webp": true,
     "deep_esp_chlamydoselachus_anguineus--normal.webp": true,
+    "deep_esp_anoplogaster_brachycera--normal.webp": true,
+    "deep_esp_bathypterois_grallator--normal.webp": true,
+    "deep_esp_dissostichus_mawsoni--normal.webp": true,
+    "abisal_esp_pseudoliparis_swirei--normal.webp": true,
+    "abisal_esp_pseudoliparis_kermadecensis--normal.webp": true,
     "gm06_gavia_immer--normal.webp": true,
     "gm06_lepus_arcticus--normal.webp": true,
     "gm06_salmo_salar--normal.webp": true,
@@ -5208,6 +5264,14 @@ globalThis.AtlasNaturalistAssets = {
     "sa_esp_chlamyphorus_truncatus": 0.4
   },
   "files": [
+    "naturalist-art/plates/abisal_esp_pseudoliparis_kermadecensis--normal.webp",
+    "naturalist-art/plates/64/abisal_esp_pseudoliparis_kermadecensis--normal.webp",
+    "naturalist-art/plates/128/abisal_esp_pseudoliparis_kermadecensis--normal.webp",
+    "naturalist-art/plates/256/abisal_esp_pseudoliparis_kermadecensis--normal.webp",
+    "naturalist-art/plates/abisal_esp_pseudoliparis_swirei--normal.webp",
+    "naturalist-art/plates/64/abisal_esp_pseudoliparis_swirei--normal.webp",
+    "naturalist-art/plates/128/abisal_esp_pseudoliparis_swirei--normal.webp",
+    "naturalist-art/plates/256/abisal_esp_pseudoliparis_swirei--normal.webp",
     "naturalist-art/plates/af_abejaruco_carmin--albino.webp",
     "naturalist-art/plates/64/af_abejaruco_carmin--albino.webp",
     "naturalist-art/plates/128/af_abejaruco_carmin--albino.webp",
@@ -8392,14 +8456,62 @@ globalThis.AtlasNaturalistAssets = {
     "naturalist-art/plates/64/corzo_europeo--normal.webp",
     "naturalist-art/plates/128/corzo_europeo--normal.webp",
     "naturalist-art/plates/256/corzo_europeo--normal.webp",
+    "naturalist-art/plates/deep_esp_anoplogaster_brachycera--normal.webp",
+    "naturalist-art/plates/64/deep_esp_anoplogaster_brachycera--normal.webp",
+    "naturalist-art/plates/128/deep_esp_anoplogaster_brachycera--normal.webp",
+    "naturalist-art/plates/256/deep_esp_anoplogaster_brachycera--normal.webp",
+    "naturalist-art/plates/deep_esp_anoplogaster_cornuta--normal.webp",
+    "naturalist-art/plates/64/deep_esp_anoplogaster_cornuta--normal.webp",
+    "naturalist-art/plates/128/deep_esp_anoplogaster_cornuta--normal.webp",
+    "naturalist-art/plates/256/deep_esp_anoplogaster_cornuta--normal.webp",
+    "naturalist-art/plates/deep_esp_argyropelecus_aculeatus--normal.webp",
+    "naturalist-art/plates/64/deep_esp_argyropelecus_aculeatus--normal.webp",
+    "naturalist-art/plates/128/deep_esp_argyropelecus_aculeatus--normal.webp",
+    "naturalist-art/plates/256/deep_esp_argyropelecus_aculeatus--normal.webp",
+    "naturalist-art/plates/deep_esp_bathypterois_grallator--normal.webp",
+    "naturalist-art/plates/64/deep_esp_bathypterois_grallator--normal.webp",
+    "naturalist-art/plates/128/deep_esp_bathypterois_grallator--normal.webp",
+    "naturalist-art/plates/256/deep_esp_bathypterois_grallator--normal.webp",
+    "naturalist-art/plates/deep_esp_benthosema_glaciale--normal.webp",
+    "naturalist-art/plates/64/deep_esp_benthosema_glaciale--normal.webp",
+    "naturalist-art/plates/128/deep_esp_benthosema_glaciale--normal.webp",
+    "naturalist-art/plates/256/deep_esp_benthosema_glaciale--normal.webp",
+    "naturalist-art/plates/deep_esp_ceratias_holboelli--normal.webp",
+    "naturalist-art/plates/64/deep_esp_ceratias_holboelli--normal.webp",
+    "naturalist-art/plates/128/deep_esp_ceratias_holboelli--normal.webp",
+    "naturalist-art/plates/256/deep_esp_ceratias_holboelli--normal.webp",
+    "naturalist-art/plates/deep_esp_chauliodus_macouni--normal.webp",
+    "naturalist-art/plates/64/deep_esp_chauliodus_macouni--normal.webp",
+    "naturalist-art/plates/128/deep_esp_chauliodus_macouni--normal.webp",
+    "naturalist-art/plates/256/deep_esp_chauliodus_macouni--normal.webp",
     "naturalist-art/plates/deep_esp_chlamydoselachus_anguineus--normal.webp",
     "naturalist-art/plates/64/deep_esp_chlamydoselachus_anguineus--normal.webp",
     "naturalist-art/plates/128/deep_esp_chlamydoselachus_anguineus--normal.webp",
     "naturalist-art/plates/256/deep_esp_chlamydoselachus_anguineus--normal.webp",
+    "naturalist-art/plates/deep_esp_dissostichus_mawsoni--normal.webp",
+    "naturalist-art/plates/64/deep_esp_dissostichus_mawsoni--normal.webp",
+    "naturalist-art/plates/128/deep_esp_dissostichus_mawsoni--normal.webp",
+    "naturalist-art/plates/256/deep_esp_dissostichus_mawsoni--normal.webp",
+    "naturalist-art/plates/deep_esp_eurypharynx_pelecanoides--normal.webp",
+    "naturalist-art/plates/64/deep_esp_eurypharynx_pelecanoides--normal.webp",
+    "naturalist-art/plates/128/deep_esp_eurypharynx_pelecanoides--normal.webp",
+    "naturalist-art/plates/256/deep_esp_eurypharynx_pelecanoides--normal.webp",
+    "naturalist-art/plates/deep_esp_idiacanthus_antrostomus--normal.webp",
+    "naturalist-art/plates/64/deep_esp_idiacanthus_antrostomus--normal.webp",
+    "naturalist-art/plates/128/deep_esp_idiacanthus_antrostomus--normal.webp",
+    "naturalist-art/plates/256/deep_esp_idiacanthus_antrostomus--normal.webp",
+    "naturalist-art/plates/deep_esp_macropinna_microstoma--normal.webp",
+    "naturalist-art/plates/64/deep_esp_macropinna_microstoma--normal.webp",
+    "naturalist-art/plates/128/deep_esp_macropinna_microstoma--normal.webp",
+    "naturalist-art/plates/256/deep_esp_macropinna_microstoma--normal.webp",
     "naturalist-art/plates/deep_esp_mitsukurina_owstoni--normal.webp",
     "naturalist-art/plates/64/deep_esp_mitsukurina_owstoni--normal.webp",
     "naturalist-art/plates/128/deep_esp_mitsukurina_owstoni--normal.webp",
     "naturalist-art/plates/256/deep_esp_mitsukurina_owstoni--normal.webp",
+    "naturalist-art/plates/deep_esp_stomias_boa--normal.webp",
+    "naturalist-art/plates/64/deep_esp_stomias_boa--normal.webp",
+    "naturalist-art/plates/128/deep_esp_stomias_boa--normal.webp",
+    "naturalist-art/plates/256/deep_esp_stomias_boa--normal.webp",
     "naturalist-art/plates/erizo_europeo--albino.webp",
     "naturalist-art/plates/64/erizo_europeo--albino.webp",
     "naturalist-art/plates/128/erizo_europeo--albino.webp",

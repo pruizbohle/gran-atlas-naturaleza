@@ -1,0 +1,51 @@
+{
+  "baselineCommit": "75c58875e8a97d6652bb046a2c384611321e8d6d",
+  "exactPreviousWebP": 6488,
+  "exactPreviousRoutes": 950,
+  "newDistinctPlates": 14,
+  "newUniqueResources": 56,
+  "bySize": {
+    "64": {
+      "v493Bytes": 3285894,
+      "addedBytes": 22208,
+      "totalBytes": 3308102,
+      "files": 1636,
+      "RGBABytesPerPlate": 16384
+    },
+    "128": {
+      "v493Bytes": 7862968,
+      "addedBytes": 48252,
+      "totalBytes": 7911220,
+      "files": 1636,
+      "RGBABytesPerPlate": 65536
+    },
+    "256": {
+      "v493Bytes": 22235092,
+      "addedBytes": 128414,
+      "totalBytes": 22363506,
+      "files": 1636,
+      "RGBABytesPerPlate": 262144
+    },
+    "512": {
+      "v493Bytes": 68284724,
+      "addedBytes": 392050,
+      "totalBytes": 68676774,
+      "files": 1636,
+      "RGBABytesPerPlate": 1048576
+    }
+  },
+  "cache": {
+    "oldCoreBytes": 126269870,
+    "currentCoreBytes": 126910948,
+    "oldCoreFiles": 6730,
+    "currentCoreFiles": 6786,
+    "oldReviewBytes": 11702828,
+    "currentReviewBytes": 11702828,
+    "reviewFiles": 636
+  },
+  "decode128": {
+    "samples": 14,
+    "medianMs": 20.57
+  },
+  "invalidResources": []
+}

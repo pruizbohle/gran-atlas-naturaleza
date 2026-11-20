@@ -1,0 +1,1877 @@
+{
+  "chromium": "156.0.8078.79",
+  "offline": false,
+  "repetitions": 12,
+  "summary": [
+    {
+      "width": 390,
+      "version": "4.9.3",
+      "initialMs": {
+        "median": 89.20000000018626,
+        "p90": 126.8999999994412,
+        "min": 8.200000000186265,
+        "max": 247.20000000018626
+      },
+      "repeatedMs": {
+        "median": 75.39999999990687,
+        "p90": 165.5,
+        "min": 9.799999999813735,
+        "max": 201.20000000018626
+      },
+      "initialDriverMs": {
+        "median": 113.83567250000124,
+        "p90": 200.27746399999887,
+        "min": 26.030851000003167,
+        "max": 267.3463839999895
+      },
+      "heapBytes": {
+        "median": 7796910,
+        "p90": 7814928,
+        "min": 7743764,
+        "max": 8319864
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 390,
+      "version": "4.9.5",
+      "initialMs": {
+        "median": 85.34999999962747,
+        "p90": 136.80000000074506,
+        "min": 25.200000000186265,
+        "max": 180.5
+      },
+      "repeatedMs": {
+        "median": 62.9499999997206,
+        "p90": 95.29999999981374,
+        "min": 10.599999999627471,
+        "max": 403.3999999994412
+      },
+      "initialDriverMs": {
+        "median": 117.26143799999772,
+        "p90": 170.89100700000563,
+        "min": 53.3324640000028,
+        "max": 291.25750100000005
+      },
+      "heapBytes": {
+        "median": 7784840,
+        "p90": 7881732,
+        "min": 7744544,
+        "max": 7889372
+      },
+      "imageRGBABytes": 131072
+    },
+    {
+      "width": 1280,
+      "version": "4.9.3",
+      "initialMs": {
+        "median": 33.700000000186265,
+        "p90": 82.40000000037253,
+        "min": 7.2000000001862645,
+        "max": 93.6000000005588
+      },
+      "repeatedMs": {
+        "median": 26.34999999962747,
+        "p90": 85.09999999962747,
+        "min": 2.599999999627471,
+        "max": 293.8999999994412
+      },
+      "initialDriverMs": {
+        "median": 93.4982840000157,
+        "p90": 140.4524650000094,
+        "min": 22.96882100001676,
+        "max": 164.50499799998943
+      },
+      "heapBytes": {
+        "median": 7751988,
+        "p90": 7836920,
+        "min": 7715404,
+        "max": 8270680
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 1280,
+      "version": "4.9.5",
+      "initialMs": {
+        "median": 70.40000000037253,
+        "p90": 91.70000000018626,
+        "min": 12.5,
+        "max": 95.1000000005588
+      },
+      "repeatedMs": {
+        "median": 20.299999999813735,
+        "p90": 65.29999999981374,
+        "min": 5.3999999994412065,
+        "max": 141.70000000018626
+      },
+      "initialDriverMs": {
+        "median": 97.87287600000855,
+        "p90": 115.13100100000156,
+        "min": 20.06089099997189,
+        "max": 116.86375200000475
+      },
+      "heapBytes": {
+        "median": 7746410,
+        "p90": 7824836,
+        "min": 7683452,
+        "max": 8237156
+      },
+      "imageRGBABytes": 131072
+    }
+  ],
+  "samples": [
+    {
+      "width": 390,
+      "trial": 0,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 31.299999999813735,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 97.12566400000105
+      },
+      "repeats": [
+        {
+          "ms": 175.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 269.4150890000001
+        },
+        {
+          "ms": 13.600000000558794,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 70.18018699999993
+        }
+      ],
+      "heapBytes": 7814928
+    },
+    {
+      "width": 390,
+      "trial": 0,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 26.600000000558794,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 53.3324640000028
+      },
+      "repeats": [
+        {
+          "ms": 26,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 39.83675100000255
+        },
+        {
+          "ms": 19.299999999813735,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 24.56081500000073
+        }
+      ],
+      "heapBytes": 7784464
+    },
+    {
+      "width": 390,
+      "trial": 1,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 77.20000000018626,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 105.6436700000013
+      },
+      "repeats": [
+        {
+          "ms": 27.399999999441206,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 38.401583000002574
+        },
+        {
+          "ms": 23.799999999813735,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 40.157804000002216
+        }
+      ],
+      "heapBytes": 7744544
+    },
+    {
+      "width": 390,
+      "trial": 1,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 100.70000000018626,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 187.07169299999805
+      },
+      "repeats": [
+        {
+          "ms": 84.20000000018626,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 115.71047100000214
+        },
+        {
+          "ms": 97.20000000018626,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 111.17530199999965
+        }
+      ],
+      "heapBytes": 7788288
+    },
+    {
+      "width": 390,
+      "trial": 2,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 73.90000000037253,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 98.33193000000028
+      },
+      "repeats": [
+        {
+          "ms": 24.100000000558794,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 30.8646099999969
+        },
+        {
+          "ms": 45.200000000186265,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 57.34170200000517
+        }
+      ],
+      "heapBytes": 7781080
+    },
+    {
+      "width": 390,
+      "trial": 2,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 32.40000000037253,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 81.06101200000558
+      },
+      "repeats": [
+        {
+          "ms": 80.09999999962747,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 92.86393599999428
+        },
+        {
+          "ms": 10.599999999627471,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 22.890622999999323
+        }
+      ],
+      "heapBytes": 7753104
+    },
+    {
+      "width": 390,
+      "trial": 3,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 136.80000000074506,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 164.5936140000049
+      },
+      "repeats": [
+        {
+          "ms": 33.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 43.47139700000116
+        },
+        {
+          "ms": 57.39999999944121,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 70.18998499999725
+        }
+      ],
+      "heapBytes": 7785216
+    },
+    {
+      "width": 390,
+      "trial": 3,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 96.70000000018626,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 122.21949200000381
+      },
+      "repeats": [
+        {
+          "ms": 98.8999999994412,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 123.28723999999784
+        },
+        {
+          "ms": 77.09999999962747,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 101.05914900000062
+        }
+      ],
+      "heapBytes": 7813044
+    },
+    {
+      "width": 390,
+      "trial": 4,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 81.70000000018626,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 105.45185299999866
+      },
+      "repeats": [
+        {
+          "ms": 104,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 164.4874520000012
+        },
+        {
+          "ms": 76.70000000018626,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 88.36123100000259
+        }
+      ],
+      "heapBytes": 7811788
+    },
+    {
+      "width": 390,
+      "trial": 4,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 88.09999999962747,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 121.0849159999998
+      },
+      "repeats": [
+        {
+          "ms": 120.80000000074506,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 205.09710700000142
+        },
+        {
+          "ms": 88.3999999994412,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 117.03137699999934
+        }
+      ],
+      "heapBytes": 7758028
+    },
+    {
+      "width": 390,
+      "trial": 5,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 97.09999999962747,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 170.89100700000563
+      },
+      "repeats": [
+        {
+          "ms": 85.79999999981374,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 102.6650479999953
+        },
+        {
+          "ms": 95.29999999981374,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 165.10588999999163
+        }
+      ],
+      "heapBytes": 7821784
+    },
+    {
+      "width": 390,
+      "trial": 5,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 247.20000000018626,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 267.3463839999895
+      },
+      "repeats": [
+        {
+          "ms": 74.09999999962747,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 99.51999099999375
+        },
+        {
+          "ms": 22.799999999813735,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 29.844482999993488
+        }
+      ],
+      "heapBytes": 7785820
+    },
+    {
+      "width": 390,
+      "trial": 6,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 69.70000000018626,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 78.58616500000062
+      },
+      "repeats": [
+        {
+          "ms": 201.20000000018626,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 252.81040499999654
+        },
+        {
+          "ms": 33.10000000055879,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 86.83898299999419
+        }
+      ],
+      "heapBytes": 7809548
+    },
+    {
+      "width": 390,
+      "trial": 6,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 93.29999999981374,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 155.3049089999986
+      },
+      "repeats": [
+        {
+          "ms": 75.20000000018626,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 93.03597300000547
+        },
+        {
+          "ms": 19.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 43.167290000012144
+        }
+      ],
+      "heapBytes": 7848204
+    },
+    {
+      "width": 390,
+      "trial": 7,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 82.59999999962747,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 101.00832999999693
+      },
+      "repeats": [
+        {
+          "ms": 28.100000000558794,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 45.38320699999167
+        },
+        {
+          "ms": 68.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 77.62884900000063
+        }
+      ],
+      "heapBytes": 7889372
+    },
+    {
+      "width": 390,
+      "trial": 7,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 8.200000000186265,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 26.030851000003167
+      },
+      "repeats": [
+        {
+          "ms": 9.799999999813735,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 15.699854000005871
+        },
+        {
+          "ms": 78.40000000037253,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 86.66314200000488
+        }
+      ],
+      "heapBytes": 7783236
+    },
+    {
+      "width": 390,
+      "trial": 8,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 126.8999999994412,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 200.27746399999887
+      },
+      "repeats": [
+        {
+          "ms": 101.29999999981374,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 106.44784900000377
+        },
+        {
+          "ms": 70.20000000018626,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 94.93404900000314
+        }
+      ],
+      "heapBytes": 7743764
+    },
+    {
+      "width": 390,
+      "trial": 8,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 89.3999999994412,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 113.43795999999566
+      },
+      "repeats": [
+        {
+          "ms": 77.40000000037253,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 111.03322800000024
+        },
+        {
+          "ms": 95.29999999981374,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 115.98464900000545
+        }
+      ],
+      "heapBytes": 7770908
+    },
+    {
+      "width": 390,
+      "trial": 9,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 76.1000000005588,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 124.77820200000133
+      },
+      "repeats": [
+        {
+          "ms": 28.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 40.41339199998765
+        },
+        {
+          "ms": 19.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 27.3870040000038
+        }
+      ],
+      "heapBytes": 7783684
+    },
+    {
+      "width": 390,
+      "trial": 9,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 102.5,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 133.82385000000068
+      },
+      "repeats": [
+        {
+          "ms": 30.200000000186265,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 60.204996999993455
+        },
+        {
+          "ms": 47.90000000037253,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 114.48475000000326
+        }
+      ],
+      "heapBytes": 7805532
+    },
+    {
+      "width": 390,
+      "trial": 10,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 103.5,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 180.19117499999993
+      },
+      "repeats": [
+        {
+          "ms": 106.59999999962747,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 190.81902500000433
+        },
+        {
+          "ms": 56.59999999962747,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 160.02855499999714
+        }
+      ],
+      "heapBytes": 8319864
+    },
+    {
+      "width": 390,
+      "trial": 10,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 180.5,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 291.25750100000005
+      },
+      "repeats": [
+        {
+          "ms": 403.3999999994412,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 449.4622539999982
+        },
+        {
+          "ms": 85.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 110.09542399999918
+        }
+      ],
+      "heapBytes": 7800444
+    },
+    {
+      "width": 390,
+      "trial": 11,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 25.200000000186265,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 97.25497899999027
+      },
+      "repeats": [
+        {
+          "ms": 36.19999999925494,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 97.60399299999699
+        },
+        {
+          "ms": 71.20000000018626,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 93.62481199999456
+        }
+      ],
+      "heapBytes": 7881732
+    },
+    {
+      "width": 390,
+      "trial": 11,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 30.799999999813735,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 105.11989199998789
+      },
+      "repeats": [
+        {
+          "ms": 165.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 181.90984600000957
+        },
+        {
+          "ms": 50.700000000186265,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 113.75414000000455
+        }
+      ],
+      "heapBytes": 7760424
+    },
+    {
+      "width": 1280,
+      "trial": 0,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 93.6000000005588,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 109.10470699999132
+      },
+      "repeats": [
+        {
+          "ms": 29.899999999441206,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 80.46983800000453
+        },
+        {
+          "ms": 81.29999999981374,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 97.6220650000032
+        }
+      ],
+      "heapBytes": 7759404
+    },
+    {
+      "width": 1280,
+      "trial": 0,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 51.90000000037253,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 108.61731299999519
+      },
+      "repeats": [
+        {
+          "ms": 45.299999999813735,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 159.03138499998022
+        },
+        {
+          "ms": 10.699999999254942,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 15.726253000000725
+        }
+      ],
+      "heapBytes": 7734144
+    },
+    {
+      "width": 1280,
+      "trial": 1,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 80.70000000018626,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 103.10909899999388
+      },
+      "repeats": [
+        {
+          "ms": 20.699999999254942,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 28.62541899998905
+        },
+        {
+          "ms": 27.700000000186265,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 69.98042799998075
+        }
+      ],
+      "heapBytes": 7750508
+    },
+    {
+      "width": 1280,
+      "trial": 1,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 39.40000000037253,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 95.6766850000131
+      },
+      "repeats": [
+        {
+          "ms": 82.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 91.31920299999183
+        },
+        {
+          "ms": 47.700000000186265,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 101.29037000000244
+        }
+      ],
+      "heapBytes": 7740468
+    },
+    {
+      "width": 1280,
+      "trial": 2,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 82.40000000037253,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 140.4524650000094
+      },
+      "repeats": [
+        {
+          "ms": 28.299999999813735,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 84.90690599998925
+        },
+        {
+          "ms": 23.90000000037253,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 71.77538999999524
+        }
+      ],
+      "heapBytes": 7750328
+    },
+    {
+      "width": 1280,
+      "trial": 2,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 39.39999999944121,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 92.76072799999383
+      },
+      "repeats": [
+        {
+          "ms": 95.20000000018626,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 252.1780940000026
+        },
+        {
+          "ms": 11.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 50.13583099999232
+        }
+      ],
+      "heapBytes": 7775800
+    },
+    {
+      "width": 1280,
+      "trial": 3,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 65.20000000018626,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 88.8732949999976
+      },
+      "repeats": [
+        {
+          "ms": 13.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 21.6007990000071
+        },
+        {
+          "ms": 11.400000000372529,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 77.44476299997768
+        }
+      ],
+      "heapBytes": 7742312
+    },
+    {
+      "width": 1280,
+      "trial": 3,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 7.2000000001862645,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 70.37798900000053
+      },
+      "repeats": [
+        {
+          "ms": 12.599999999627471,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 18.70441999999457
+        },
+        {
+          "ms": 69.29999999981374,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 112.00486899999669
+        }
+      ],
+      "heapBytes": 8270680
+    },
+    {
+      "width": 1280,
+      "trial": 4,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 31.40000000037253,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 91.31988300001831
+      },
+      "repeats": [
+        {
+          "ms": 107.29999999981374,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 217.45943099999567
+        },
+        {
+          "ms": 15.600000000558794,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 53.561535999993794
+        }
+      ],
+      "heapBytes": 7753648
+    },
+    {
+      "width": 1280,
+      "trial": 4,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 75.6000000005588,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 100.50475200000801
+      },
+      "repeats": [
+        {
+          "ms": 41,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 222.31598900002427
+        },
+        {
+          "ms": 141.70000000018626,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 168.78455799998483
+        }
+      ],
+      "heapBytes": 7718936
+    },
+    {
+      "width": 1280,
+      "trial": 5,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 83.29999999981374,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 95.24100000000908
+      },
+      "repeats": [
+        {
+          "ms": 17.299999999813735,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 27.110717000003206
+        },
+        {
+          "ms": 11.200000000186265,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 15.94736700001522
+        }
+      ],
+      "heapBytes": 8237156
+    },
+    {
+      "width": 1280,
+      "trial": 5,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 11.100000000558794,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 56.9852869999886
+      },
+      "repeats": [
+        {
+          "ms": 11.599999999627471,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 25.519220999995014
+        },
+        {
+          "ms": 22.40000000037253,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 76.17736099998001
+        }
+      ],
+      "heapBytes": 7757044
+    },
+    {
+      "width": 1280,
+      "trial": 6,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 47.799999999813735,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 164.50499799998943
+      },
+      "repeats": [
+        {
+          "ms": 85.09999999962747,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 97.0419610000099
+        },
+        {
+          "ms": 57.59999999962747,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 68.32264100000612
+        }
+      ],
+      "heapBytes": 7740824
+    },
+    {
+      "width": 1280,
+      "trial": 6,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 89.79999999981374,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 115.13100100000156
+      },
+      "repeats": [
+        {
+          "ms": 36.30000000074506,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 85.7977050000045
+        },
+        {
+          "ms": 51.299999999813735,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 95.2125089999754
+        }
+      ],
+      "heapBytes": 7723692
+    },
+    {
+      "width": 1280,
+      "trial": 7,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 15.5,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 60.67119900000398
+      },
+      "repeats": [
+        {
+          "ms": 15.700000000186265,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 72.8716199999908
+        },
+        {
+          "ms": 6.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 11.915944000007585
+        }
+      ],
+      "heapBytes": 7824836
+    },
+    {
+      "width": 1280,
+      "trial": 7,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 36,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 106.11708900000667
+      },
+      "repeats": [
+        {
+          "ms": 52.700000000186265,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 60.37799800001085
+        },
+        {
+          "ms": 16.600000000558794,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 27.160952999984147
+        }
+      ],
+      "heapBytes": 7836920
+    },
+    {
+      "width": 1280,
+      "trial": 8,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 76.40000000037253,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 105.0763010000228
+      },
+      "repeats": [
+        {
+          "ms": 47.799999999813735,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 67.52248600000166
+        },
+        {
+          "ms": 19.100000000558794,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 68.00133800000185
+        }
+      ],
+      "heapBytes": 7723748
+    },
+    {
+      "width": 1280,
+      "trial": 8,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 95.1000000005588,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 112.44454699999187
+      },
+      "repeats": [
+        {
+          "ms": 63.299999999813735,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 66.645806000015
+        },
+        {
+          "ms": 9.700000000186265,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 30.636998000001768
+        }
+      ],
+      "heapBytes": 7726804
+    },
+    {
+      "width": 1280,
+      "trial": 9,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 45.90000000037253,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 94.45554700001958
+      },
+      "repeats": [
+        {
+          "ms": 19.90000000037253,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 32.436808999977075
+        },
+        {
+          "ms": 65.29999999981374,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 83.4272490000003
+        }
+      ],
+      "heapBytes": 7683452
+    },
+    {
+      "width": 1280,
+      "trial": 9,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 11.700000000186265,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 22.96882100001676
+      },
+      "repeats": [
+        {
+          "ms": 24.399999999441206,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 89.70581300000777
+        },
+        {
+          "ms": 293.8999999994412,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 310.960087000014
+        }
+      ],
+      "heapBytes": 7778744
+    },
+    {
+      "width": 1280,
+      "trial": 10,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 13.799999999813735,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 30.19861699998728
+      },
+      "repeats": [
+        {
+          "ms": 5.599999999627471,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 14.000062999984948
+        },
+        {
+          "ms": 11.300000000745058,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 22.241894999984652
+        }
+      ],
+      "heapBytes": 7715404
+    },
+    {
+      "width": 1280,
+      "trial": 10,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 12.5,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 20.06089099997189
+      },
+      "repeats": [
+        {
+          "ms": 6.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 56.751388000004226
+        },
+        {
+          "ms": 5.3999999994412065,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 9.399273999995785
+        }
+      ],
+      "heapBytes": 7804440
+    },
+    {
+      "width": 1280,
+      "trial": 11,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 91.70000000018626,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp",
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 116.86375200000475
+      },
+      "repeats": [
+        {
+          "ms": 47.700000000186265,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 104.04072700001416
+        },
+        {
+          "ms": 29.09999999962747,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp",
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 40.68413799998234
+        }
+      ],
+      "heapBytes": 7784756
+    },
+    {
+      "width": 1280,
+      "trial": 11,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 19.200000000186265,
+        "images": [
+          "mar_esp_isistius_brasiliensis--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 33.41336800000863
+      },
+      "repeats": [
+        {
+          "ms": 2.599999999627471,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.242329000000609
+        },
+        {
+          "ms": 10.5,
+          "images": [
+            "mar_esp_isistius_brasiliensis--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 19.750694000016665
+        }
+      ],
+      "heapBytes": 7733492
+    }
+  ]
+}

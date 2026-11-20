@@ -33,6 +33,9 @@ const freshwaterSets = require('./freshwater-fish-comparisons.cjs');
 const reef = new Map(require('../docs/cientifica-v492/inventario-pendiente.json').lots.arrecife.inventory
   .map(animal => [animal.id, animal]));
 const reefSets = require('./reef-fish-comparisons.cjs');
+const deepSea = new Map(require('../docs/cientifica-v493/inventario-pendiente.json').lots.profundos.inventory
+  .map(animal => [animal.id, animal]));
+const deepSeaSets = require('./deep-sea-fish-comparisons.cjs');
 const comparisonSets = {
   ...require('./passerine-comparisons.cjs'),
   ...require('./arboreal-bird-comparisons.cjs'),
@@ -237,6 +240,13 @@ function classify(id, sp) {
     }
     return { family: reefFish.family, group: 'Peces de arrecife', edition: '4.9.3' };
   }
+  const deepFish = deepSea.get(id);
+  if (deepFish) {
+    if (taxonomy.className !== deepFish.className || deepFish.latin !== sp.latin) {
+      throw Error('Pez de aguas profundas fuera del inventario: ' + id);
+    }
+    return { family: deepFish.family, group: 'Peces de aguas profundas', edition: '4.9.5' };
+  }
   if (Object.hasOwn(worldAdditions, id)) {
     const { family, order, subClass: group } = taxonomy;
     return { family, order, group, edition: '4.9.3' };
@@ -340,6 +350,7 @@ const cartilaginousComparisons = buildComparisons(cartilaginousSets, cartilagino
 const salmonidComparisons = buildComparisons(salmonidSets, salmonids, 'salmonids');
 const freshwaterComparisons = buildComparisons(freshwaterSets, freshwater, 'freshwater');
 const reefComparisons = buildComparisons(reefSets, reef, 'reef');
+const deepSeaComparisons = buildComparisons(deepSeaSets, deepSea, 'deep');
 const legendMembers = new Map(audit.LEGENDARY_SPECIMENS.map(legend => [legend.speciesId, legend]));
 const legendaryComparisons = buildComparisons({
   all: {
@@ -374,7 +385,9 @@ const migrationProgress = {
   freshwater: freshwater.size,
   freshwaterMigrated: species.filter(sp => sp.records[0].src && freshwater.has(sp.id)).length,
   reef: reef.size,
-  reefMigrated: species.filter(sp => sp.records[0].src && reef.has(sp.id)).length
+  reefMigrated: species.filter(sp => sp.records[0].src && reef.has(sp.id)).length,
+  deepSea: deepSea.size,
+  deepSeaMigrated: species.filter(sp => sp.records[0].src && deepSea.has(sp.id)).length
 };
 const mixedFieldSprites = ['mar_esp_thunnus_albacares', 'mar_esp_mola_mola', 'mar_esp_scomber_scombrus'].map(id => {
   const sp = audit.SPECIES[id];
@@ -391,6 +404,7 @@ fs.writeFileSync(path.join(out, 'catalog.js'),
   'const salmonidComparisons = ' + JSON.stringify(salmonidComparisons, null, 2) + ';\n' +
   'const freshwaterComparisons = ' + JSON.stringify(freshwaterComparisons, null, 2) + ';\n' +
   'const reefComparisons = ' + JSON.stringify(reefComparisons, null, 2) + ';\n' +
+  'const deepSeaComparisons = ' + JSON.stringify(deepSeaComparisons, null, 2) + ';\n' +
   'const legendaryComparisons = ' + JSON.stringify(legendaryComparisons, null, 2) + ';\n' +
   'const migrationProgress = ' + JSON.stringify(migrationProgress) + ';\n');
 const version = require('../package.json').version;
