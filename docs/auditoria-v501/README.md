@@ -1,26 +1,31 @@
-# AUD-01 · Auditoría v5.0.1 — fase estática inicial
+# V5.0.1 · Integración de la auditoría global
 
-Base: V4.9.6, commit 84298f39b4e333dc2f9a8bae0e07e3ae84a1264e. La rama audit/v501-aud01 no cambia producción ni firma Android.
+Rama de trabajo `audit/aud-01-v501`. Se integraron los diez commits de `audit/v501-aud01` mediante `5567e9d`, sobre el `main` de V4.9.6 que ya incluía el filtro de variantes del laboratorio en `c8af26e`. La candidata conserva la versión pública declarada 4.9.6 hasta la consolidación. El repositorio principal sigue en esa versión.
 
-## Resultados preliminares
-- 227 entradas únicas: 20 contienen expectativas antiguas verificadas en código; 24 comparaciones históricas probables; 15 candidatos a fixture incompleto; 166 requieren investigación; 2 entradas de fallo de archivo sin diagnóstico. Son grupos excluyentes de triaje, no causas raíz verificadas.
-- 92 entradas enlazadas a una ubicación en el código de pruebas. Las restantes se localizarán al reproducir. Prioridades heurísticas: 48 P1, 78 P2, 101 P3; no son severidades confirmadas.
-- 0 errores funcionales confirmados en esta fase; no implica 0 errores reales. No se ejecutó la batería del juego por falta del checkout completo en el entorno de revisión.
-- Las 14 pruebas AND03 exigen que una nueva exportación declare exactamente 3.42.0. Deben conservar todas las comprobaciones de integridad y contrastar la versión vigente.
-- Cuatro pruebas de Bestiario 3.26 fijan 807 fichas, 26 páginas o sus cantidades derivadas; mantener comprobaciones de filtros, orden, descubrimiento y paginación con el tamaño real.
-- La prueba AND08 de coherencia usa 3.42.0 y la comparación de arte/código de Bestiario exige una instantánea de 3.25. Separar invariantes históricos de los contratos actuales.
-- Los helpers de exploración profunda/hadal preparan recursos y desbloqueos sin acreditar explícitamente las reglas cartográficas posteriores. Probar requisitos completos antes de atribuir un fallo al motor.
+## Registro de resultados
+
+- [AUD-01 · Clasificación y evidencia individual](aud01-resultados.json). Contiene los 227 casos reproducidos individualmente y en la suite, el punto de fallo, su causa o pregunta pendiente y el resultado sobre la candidata. El [registro preliminar](registro-aud01.json) conserva el triaje anterior.
+- [AUD-02 · Revisión de mecánicas](AUD-02-mecanicas.md) y [casos aislados](aud02-pruebas-aisladas.json). Los bonos verificados con el motor y las sesiones completas se describen en el [informe de integración](integracion-v501.md).
+- [AUD-03 · Revisión de partidas](AUD-03-partidas.md) y [casos aislados](aud03-pruebas-aisladas.json). Las pruebas nuevas verifican el rollback de guardado y la liquidación de expediciones; las limitaciones restantes constan en el informe de integración.
+- [AUD-04 · Inventario de arte y muestra inicial](AUD-04-arte.md). La [continuación por familia](aud04-felidae-canidae.json) registra cada una de las 52 láminas pigmentarias de Felidae y Canidae. Los recursos de producción y la revisión previa se conservan.
+- [Partidas integrales](aud01-partidas-integrales.json), [mediciones de Chromium y PWA](aud01-navegador.json) y [plan de retirada de ayudas](retiro-ayudas.md).
 
 ## Reproducción
-En un checkout completo de esta rama, con historial Git y Node 22, instalar dependencias mediante npm ci. Desde la raíz ejecutar:
 
-    node scripts/aud01-run.cjs
+Usar un checkout completo con historial Git, Node 24.22.1 para la comparación registrada y las dependencias del proyecto. Las suites históricas incluyen ejecutores que regeneran sus propios informes. Ejecutarlas en un árbol desechable.
 
-Para un primer bloque:
+    git worktree add --detach /tmp/atlas-aud01-base 5567e9d
+    git worktree add --detach /tmp/atlas-aud01-final 90dd1cc
 
-    node scripts/aud01-run.cjs tests/and3420-migrations.test.cjs tests/bestiary-v3260.test.cjs tests/deep-v3330.test.cjs tests/abyssal-v3340.test.cjs tests/patch-v318.test.cjs
+En cada árbol, ejecutar `AUD01_OUTPUT=/ruta/al/directorio node scripts/aud01-run.cjs`. El directorio contiene `events.ndjson`, `stderr.log` y `report.json`. Para repetir una sola aserción sobre la base, usar el título y archivo de `aud01-resultados.json`. Escapar los metacaracteres de la expresión regular y anclarla a ambos extremos. Los IDs 219 y 220 se reproducen ejecutando cada archivo completo.
 
-El ejecutor conserva eventos NDJSON, stderr y report.json en un directorio temporal (o AUD01_OUTPUT). Los resultados históricos no observados y los omitidos no cuentan como aprobados. No modifica pruebas, código ni publicación. El proceso conserva el código de salida de las pruebas. El ejecutor se probó con Node 22.16.0 y casos sintéticos de éxito, fallo, omisión y ausencia; no se ha ejecutado con el juego real.
+    node --test --test-name-pattern='^título escapado$' tests/archivo.test.cjs
+    npm run release:verify
+    node --test tests/aud01-online-offline.test.cjs tests/live-save.test.cjs tests/and3420-migrations.test.cjs tests/and3420-native.test.cjs
 
-## Siguiente paso
-Guardar el reporte de ejecución, vincular cada ID con su aserción y causa comprobada, y corregir primero los errores reales de partidas y acceso. Actualizar pruebas antiguas preservando su propósito. No cambiar mecánicas de relictos ni economía; no generar APK firmado. Mantener main intacto hasta revisión.
+Los siguientes comandos se ejecutan desde el checkout actual. Para el navegador se requieren Chromium y Playwright. `ATLAS_CHROMIUM` permite seleccionar el binario. El laboratorio HTML generado usa rutas locales de ese checkout.
+
+    AUD01_ADVANCED_SAVE=/tmp/atlas-aud01-avanzada.json node scripts/aud01-playthrough.cjs
+    AUD01_ADVANCED_SAVE=/tmp/atlas-aud01-avanzada.json node scripts/aud01-browser.cjs /tmp/atlas-aud01-base/www
+    node scripts/aud04-contact-sheets.cjs --family Felidae --mode variants
+    node scripts/aud04-contact-sheets.cjs --family Canidae --mode variants

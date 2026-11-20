@@ -1,0 +1,897 @@
+{
+  "method": "Siluetas y tejidos comparados con la normal. Tamaños WebP reales de 64 y 128 en claro/oscuro, con lámina original de 512 reducida para la vista general. Observaciones visuales, pendientes de confirmación biológica cuando se indica.",
+  "priorReviewed": 21,
+  "uniqueReviewed": 67,
+  "inventoried": 564,
+  "statusThisReview": {
+    "insuficiente": 24,
+    "mejorable": 28
+  },
+  "variants": [
+    {
+      "id": "af_guepardo",
+      "latin": "Acinonyx jubatus",
+      "family": "Felidae",
+      "variant": "albino",
+      "normal": "af_guepardo--normal.webp",
+      "plate": "af_guepardo--albino.webp",
+      "sha": "77150da35a855e5ea7d8d8d20e1570fddc6cb81b",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Punteado residual muy uniforme y cara sin marcas lagrimales distinguibles en fondo claro. Revisar pigmentación del moteado, ojos y hocico."
+    },
+    {
+      "id": "af_guepardo",
+      "latin": "Acinonyx jubatus",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "af_guepardo--normal.webp",
+      "plate": "af_guepardo--melanico.webp",
+      "sha": "ea9b588b593a54b7569a765a4e754bdc0b4a5ee8",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Se conservan puntos, cola anillada y vientre recogido. Levantar los medios tonos del hocico y los hombros en fondo oscuro."
+    },
+    {
+      "id": "af_xlsx_gato_dorado",
+      "latin": "Caracal aurata",
+      "family": "Felidae",
+      "variant": "albino",
+      "normal": "af_xlsx_gato_dorado--normal.webp",
+      "plate": "af_xlsx_gato_dorado--albino.webp",
+      "sha": "989cfcc8b95996059faabaad4225d106d273cfed",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Orejas y hocico se pierden a 64 px en claro. El rosa invade el manto; separar piel, pelo y sombras."
+    },
+    {
+      "id": "af_caracal",
+      "latin": "Caracal caracal",
+      "family": "Felidae",
+      "variant": "albino",
+      "normal": "af_caracal--normal.webp",
+      "plate": "af_caracal--albino.webp",
+      "sha": "ffea061fb2c0a212dede5d61ed57f3e28af80a8a",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Pinceles auriculares reconocibles en oscuro. Reforzar perfil de oreja, nariz y patas delanteras para fondo claro."
+    },
+    {
+      "id": "af_caracal",
+      "latin": "Caracal caracal",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "af_caracal--normal.webp",
+      "plate": "af_caracal--melanico.webp",
+      "sha": "b41b70508f881ebfa7a82fa172b0b18d107d700a",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "En oscuro se borra el perfil de hocico, flanco y pinceles. Recuperar volumen y bordes selectivos."
+    },
+    {
+      "id": "asia_esp_0205",
+      "latin": "Felis chaus",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0205--normal.webp",
+      "plate": "asia_esp_0205--melanico.webp",
+      "sha": "fabdc4551527bea83d026da06bf5a12d5710fd30",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "El lomo queda plano y la transición frente-morro apenas se lee en oscuro. Conservar anillos de cola y reflejos de costado."
+    },
+    {
+      "id": "af_gato_montes_africano",
+      "latin": "Felis lybica",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "af_gato_montes_africano--normal.webp",
+      "plate": "af_gato_montes_africano--melanico.webp",
+      "sha": "9229b98880c2df638da3a5ba8aa14957a392748b",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Rayas del tronco y cola todavía legibles en claro. Separar el cuello de la cara y los dos pares de patas en oscuro."
+    },
+    {
+      "id": "asia_esp_0206",
+      "latin": "Felis margarita",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0206--normal.webp",
+      "plate": "asia_esp_0206--melanico.webp",
+      "sha": "4f497628f2c49c8fbffb7817903b37e0b65ba8d9",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Perfil bajo y cabeza ancha se conservan. Dar claridad a orejas y hombro sin apagar anillos de cola."
+    },
+    {
+      "id": "gato_montes",
+      "latin": "Felis silvestris",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "gato_montes--normal.webp",
+      "plate": "gato_montes--melanico.webp",
+      "sha": "45226be84c3b97940e93ec428e535003dee53b04",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Pecho, mejillas y separación de extremidades se pierden a 64 px en oscuro. Recuperar volumen sin añadir contorno artificial."
+    },
+    {
+      "id": "sa_esp_leopardus_geoffroyi",
+      "latin": "Leopardus geoffroyi",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "sa_esp_leopardus_geoffroyi--normal.webp",
+      "plate": "sa_esp_leopardus_geoffroyi--melanico.webp",
+      "sha": "234576ac98a5fb1d565a4773160f2e054051dfe2",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Moteado y anillos fantasma conservados. Aclarar frente, ojos y patas en fondo oscuro para distinguirlo del tigrillo."
+    },
+    {
+      "id": "sa_esp_leopardus_tigrinus",
+      "latin": "Leopardus tigrinus",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "sa_esp_leopardus_tigrinus--normal.webp",
+      "plate": "sa_esp_leopardus_tigrinus--melanico.webp",
+      "sha": "6438fb0403b362194b9702a0234076c960012928",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Rosetas pequeñas y cola curvada se conservan. Aumentar lectura de cabeza y pata posterior sobre fondo oscuro."
+    },
+    {
+      "id": "af_serval",
+      "latin": "Leptailurus serval",
+      "family": "Felidae",
+      "variant": "albino",
+      "normal": "af_serval--normal.webp",
+      "plate": "af_serval--albino.webp",
+      "sha": "71942aaf63f24e4d2e2752c16a5e21befb90afc0",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Manchas de alto contraste dominan una cara lavada. Revisar el patrón de pigmentación y recuperar hocico, ojos y pliegues auriculares."
+    },
+    {
+      "id": "af_serval",
+      "latin": "Leptailurus serval",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "af_serval--normal.webp",
+      "plate": "af_serval--melanico.webp",
+      "sha": "3731b9dbce30e7f3443486e110f113987312ad52",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Patas largas y orejas grandes sobreviven a 128 px. Reforzar cabeza y huecos entre patas en oscuro."
+    },
+    {
+      "id": "lince_boreal",
+      "latin": "Lynx lynx",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "lince_boreal--normal.webp",
+      "plate": "lince_boreal--melanico.webp",
+      "sha": "461b63e308f3ba8bbfe91f916f4a54c5bf9dab56",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Cola corta y pinceles definen el lince. Mejillas, pecho y separación de patas necesitan mejor contraste en oscuro."
+    },
+    {
+      "id": "lince_iberico",
+      "latin": "Lynx pardinus",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "lince_iberico--normal.webp",
+      "plate": "lince_iberico--melanico.webp",
+      "sha": "342419ab3b5be80e41801b0f0ec6651694f768cd",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Buen perfil de cola corta y gorguera en claro. La gorguera se funde con el pecho en oscuro a 64 px."
+    },
+    {
+      "id": "na_esp_lynx_rufus",
+      "latin": "Lynx rufus",
+      "family": "Felidae",
+      "variant": "albino",
+      "normal": "na_esp_lynx_rufus--normal.webp",
+      "plate": "na_esp_lynx_rufus--albino.webp",
+      "sha": "d4775312dee9e3e848b8085c23a08df6805f4285",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "El pelo granulado se mezcla con el fondo claro y se pierde el ojo. Ajustar los tonos del pelo largo y el hocico."
+    },
+    {
+      "id": "asia_esp_0355",
+      "latin": "Neofelis nebulosa",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0355--normal.webp",
+      "plate": "asia_esp_0355--melanico.webp",
+      "sha": "99e08c08cb5dc2f445f98074c8ae788482328992",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La rama comparte el oscurecimiento y compite con las patas. Retirar o separar el soporte al corregir la variante."
+    },
+    {
+      "id": "asia_esp_0387",
+      "latin": "Otocolobus manul",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0387--normal.webp",
+      "plate": "asia_esp_0387--melanico.webp",
+      "sha": "20ac6486a8d4521763b4e6074b518341e17ab55a",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Se borra la cara ancha y la transición a pelo largo. Diferenciar máscara, mejilla y mechones bajo luz tenue."
+    },
+    {
+      "id": "af_leon",
+      "latin": "Panthera leo",
+      "family": "Felidae",
+      "variant": "albino",
+      "normal": "af_leon--normal.webp",
+      "plate": "af_leon--albino.webp",
+      "sha": "19529cd4e8af611280efe6eb697e02ee4028f0cb",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La melena se separa de hombro y costado en oscuro. Verificar albinismo frente a morfo blanco y definir nariz e iris."
+    },
+    {
+      "id": "af_leon",
+      "latin": "Panthera leo",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "af_leon--normal.webp",
+      "plate": "af_leon--melanico.webp",
+      "sha": "135dd241cea315499758e2f66c5f40f2bd0f223d",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Melena y mandíbula pierden detalle en oscuro. También requiere justificar biológicamente el morfo oscuro presentado."
+    },
+    {
+      "id": "na_esp_panthera_onca",
+      "latin": "Panthera onca",
+      "family": "Felidae",
+      "variant": "albino",
+      "normal": "na_esp_panthera_onca--normal.webp",
+      "plate": "na_esp_panthera_onca--albino.webp",
+      "sha": "ad338a688841d953e629e205fbdcb9afe315dbcf",
+      "visualState": "insuficiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Rosetas muy presentes con cara y hocico lavados. Dar tratamiento separado a ojo, nariz, vibrisas y patrón residual."
+    },
+    {
+      "id": "na_esp_panthera_onca",
+      "latin": "Panthera onca",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "na_esp_panthera_onca--normal.webp",
+      "plate": "na_esp_panthera_onca--melanico.webp",
+      "sha": "b53c966dfe1c6dc42c673ef1bab81a50fdf3f698",
+      "visualState": "mejorable",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Rosetas fantasma y cabeza robusta conservadas a 128 px. Separar nariz, mejilla y pata frontal a 64 px en oscuro."
+    },
+    {
+      "id": "af_leopardo",
+      "latin": "Panthera pardus pardus",
+      "family": "Felidae",
+      "variant": "albino",
+      "normal": "af_leopardo--normal.webp",
+      "plate": "af_leopardo--albino.webp",
+      "sha": "56f70a7a0fc4ff1d51ffc2d62b4336ceb0ccdeac",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "El blanco uniforme borra el perfil facial en claro; rosetas lavadas dominan el torso. Revisar pigmentación y relieve."
+    },
+    {
+      "id": "af_leopardo",
+      "latin": "Panthera pardus pardus",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "af_leopardo--normal.webp",
+      "plate": "af_leopardo--melanico.webp",
+      "sha": "6fe1234599e4ee958aa0a2da43f19a9f0c4d08d7",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Se lee el patrón de rosetas; a 64 px se pierde la separación cuello-cara. Restaurar reflejos discretos."
+    },
+    {
+      "id": "asia_esp_0401",
+      "latin": "Panthera pardus tulliana",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0401--normal.webp",
+      "plate": "asia_esp_0401--melanico.webp",
+      "sha": "645eee654058715bf1dc85c4aa060a7d2983402b",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Cola gruesa y rosetas distinguibles en claro. Modelar la cabeza y la articulación de hombro para fondos oscuros."
+    },
+    {
+      "id": "asia_esp_0402",
+      "latin": "Panthera tigris",
+      "family": "Felidae",
+      "variant": "albino",
+      "normal": "asia_esp_0402--normal.webp",
+      "plate": "asia_esp_0402--albino.webp",
+      "sha": "626e8f3693b5ef299f03a81ccb049aebdea17b89",
+      "visualState": "insuficiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "El rayado persiste con transición uniforme al blanco y ojos lavados. Diferenciar morfo blanco y albinismo antes de aprobar."
+    },
+    {
+      "id": "asia_esp_0402",
+      "latin": "Panthera tigris",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0402--normal.webp",
+      "plate": "asia_esp_0402--melanico.webp",
+      "sha": "e3ff96caff465e08ef71e6d91ee900b2de54464e",
+      "visualState": "insuficiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Las franjas y el hocico se confunden a 64 px en oscuro. Contrastar con referencias del pseudomelanismo y preservar volumen."
+    },
+    {
+      "id": "asia_esp_0440",
+      "latin": "Prionailurus bengalensis",
+      "family": "Felidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0440--normal.webp",
+      "plate": "asia_esp_0440--melanico.webp",
+      "sha": "4193151d024f61e31e45d3c0a9aab8897fa008eb",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Manchas y bandas de cola legibles en claro. Mejorar separación de oreja, ojo y morro en oscuro."
+    },
+    {
+      "id": "na_esp_puma_concolor",
+      "latin": "Puma concolor",
+      "family": "Felidae",
+      "variant": "albino",
+      "normal": "na_esp_puma_concolor--normal.webp",
+      "plate": "na_esp_puma_concolor--albino.webp",
+      "sha": "e1641b6fe2d50d51a48a8ca612fe186fcc183506",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Perfil y cola largos se conservan en oscuro. Reforzar hocico y ojo en claro y justificar la pigmentación residual de la punta."
+    },
+    {
+      "id": "chacal_dorado",
+      "latin": "Canis aureus",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "chacal_dorado--normal.webp",
+      "plate": "chacal_dorado--melanico.webp",
+      "sha": "0921b70ad8107431dea122dddd4c363f3c54d3e7",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Manto y carrillos legibles a 128 px en claro. En oscuro se pierden los ojos y las patas finas."
+    },
+    {
+      "id": "na_esp_canis_latrans",
+      "latin": "Canis latrans",
+      "family": "Canidae",
+      "variant": "albino",
+      "normal": "na_esp_canis_latrans--normal.webp",
+      "plate": "na_esp_canis_latrans--albino.webp",
+      "sha": "d09ce3d73a0fe1971e68aa69b1bf129f09a2a9f8",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Las orejas, el cuello y el ojo se confunden con el fondo claro. Separar pelo claro de piel desnuda en hocico y párpado."
+    },
+    {
+      "id": "na_esp_canis_latrans",
+      "latin": "Canis latrans",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "na_esp_canis_latrans--normal.webp",
+      "plate": "na_esp_canis_latrans--melanico.webp",
+      "sha": "fe442ead27af45335deb4899ea23232303183f5f",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Cola larga y perfil de coyote se conservan. Recuperar el brillo del pelo del cuello y el arco del ojo en oscuro."
+    },
+    {
+      "id": "af_chacal_dorado",
+      "latin": "Canis lupaster",
+      "family": "Canidae",
+      "variant": "albino",
+      "normal": "af_chacal_dorado--normal.webp",
+      "plate": "af_chacal_dorado--albino.webp",
+      "sha": "a051772aa7b1e9afc3b8a1a742f2e6a3bca63aaf",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Pérdida de bigotes, nariz y delimitación de orejas en fondo claro. Trabajar cabeza y tejidos blandos por separado."
+    },
+    {
+      "id": "af_chacal_dorado",
+      "latin": "Canis lupaster",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "af_chacal_dorado--normal.webp",
+      "plate": "af_chacal_dorado--melanico.webp",
+      "sha": "24c06c353de71147220968b7fc04beef0b425876",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Se mantiene la forma de patas y orejas en claro. Dar relieve a los hombros y recuperar ojo y parte anterior de la cola en oscuro."
+    },
+    {
+      "id": "af_lobo_etiope",
+      "latin": "Canis simensis",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "af_lobo_etiope--normal.webp",
+      "plate": "af_lobo_etiope--melanico.webp",
+      "sha": "2b36711210600e30bb6802e23a5aadce44673313",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Morro largo y patas altas reconocibles. La máscara y nariz necesitan reflejos locales en oscuro; verificar el carácter hipotético."
+    },
+    {
+      "id": "asia_esp_0820",
+      "latin": "Cuon alpinus",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0820--normal.webp",
+      "plate": "asia_esp_0820--melanico.webp",
+      "sha": "16ecc49b5ab567e6c39ca6a88b19f78b78c1011b",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Desaparecen el hocico y las extremidades distales sobre oscuro a 64 px. Recuperar hombro y textura de la cola."
+    },
+    {
+      "id": "af_xlsx_131_lupulella_mesomelas",
+      "latin": "Lupulella mesomelas",
+      "family": "Canidae",
+      "variant": "albino",
+      "normal": "af_xlsx_131_lupulella_mesomelas--normal.webp",
+      "plate": "af_xlsx_131_lupulella_mesomelas--albino.webp",
+      "sha": "07b9fd93015e629399e38048cf1ea1c18682de34",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La banda dorsal parece una versión lavada del patrón normal. Validar pigmentación residual y hacer legibles ojos y hocico."
+    },
+    {
+      "id": "af_licaon",
+      "latin": "Lycaon pictus",
+      "family": "Canidae",
+      "variant": "albino",
+      "normal": "af_licaon--normal.webp",
+      "plate": "af_licaon--albino.webp",
+      "sha": "00b51a20c2a91cce2595fe657009254605551a5b",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Parches corporales muy marcados, tejidos y cara demasiado lavados. Distinguir albinismo y áreas claras del patrón propio del licaón."
+    },
+    {
+      "id": "af_licaon",
+      "latin": "Lycaon pictus",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "af_licaon--normal.webp",
+      "plate": "af_licaon--melanico.webp",
+      "sha": "cfd9156310d69960e059857962475a6f2cdfb322",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "El mosaico permanece reconocible en claro. Separar parches y patas a 64 px en oscuro sin quitar el patrón propio."
+    },
+    {
+      "id": "asia_esp_0363",
+      "latin": "Nyctereutes procyonoides",
+      "family": "Canidae",
+      "variant": "albino",
+      "normal": "asia_esp_0363--normal.webp",
+      "plate": "asia_esp_0363--albino.webp",
+      "sha": "3b2ddb4f1c8a368b4a7121706d5e5f101066b51c",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Máscara y postura baja legibles en oscuro. Revisar la máscara residual y el contraste de nariz y ojo en claro."
+    },
+    {
+      "id": "af_xlsx_131_otocyon_megalotis",
+      "latin": "Otocyon megalotis",
+      "family": "Canidae",
+      "variant": "albino",
+      "normal": "af_xlsx_131_otocyon_megalotis--normal.webp",
+      "plate": "af_xlsx_131_otocyon_megalotis--albino.webp",
+      "sha": "1e64cb05301dc883bc21add691aadc6fec8a0757",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Se conservan orejas grandes y pelo de la cola. Recuperar ojos y nariz sin uniformar los tonos del interior auricular."
+    },
+    {
+      "id": "af_zorro_cabo",
+      "latin": "Vulpes chama",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "af_zorro_cabo--normal.webp",
+      "plate": "af_zorro_cabo--melanico.webp",
+      "sha": "2f8754c34d360162f0eb856f233c63e74ac4087e",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Cara, patas y cola se unen al fondo oscuro. Modelar la base de la cola y la transición de mejilla a cuello."
+    },
+    {
+      "id": "asia_esp_0533",
+      "latin": "Vulpes corsac",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0533--normal.webp",
+      "plate": "asia_esp_0533--melanico.webp",
+      "sha": "b507fa12133e910613687a241e9c222d8116bbaf",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Morro corto y contorno de cola quedan visibles en claro. En oscuro preservar volumen de pecho y separación de patas."
+    },
+    {
+      "id": "asia_esp_0534",
+      "latin": "Vulpes ferrilata",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0534--normal.webp",
+      "plate": "asia_esp_0534--melanico.webp",
+      "sha": "f482dd2b9b4bd5cb75ce78719df632ee1a315e2e",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Buena silueta compacta en claro. Dar volumen a máscara, mejilla y frente para distinguirlo del zorro corsac."
+    },
+    {
+      "id": "zorro_artico",
+      "latin": "Vulpes lagopus",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "zorro_artico--normal.webp",
+      "plate": "zorro_artico--melanico.webp",
+      "sha": "24a9ff3690526558335ea6a4a3a0a9899ea5c0f5",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Manto casi plano incluso en claro. Validar la relación con el morfo azul y recuperar textura, cuello y inserción de cola."
+    },
+    {
+      "id": "af_zorro_palido",
+      "latin": "Vulpes pallida",
+      "family": "Canidae",
+      "variant": "albino",
+      "normal": "af_zorro_palido--normal.webp",
+      "plate": "af_zorro_palido--albino.webp",
+      "sha": "d90988b567341bd5c6fa97e7e6f60ec80e0060ef",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Patas largas y orejas se leen en oscuro. En claro distinguir ojos, nariz y puntas de orejas del manto."
+    },
+    {
+      "id": "af_zorro_palido",
+      "latin": "Vulpes pallida",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "af_zorro_palido--normal.webp",
+      "plate": "af_zorro_palido--melanico.webp",
+      "sha": "66d8b07d9588054c90d0ab66b7336d43832af0d4",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Patillas finas y hocico casi invisibles en oscuro. Reforzar planos de hombro y bordes de patas largas."
+    },
+    {
+      "id": "af_zorro_ruppell",
+      "latin": "Vulpes rueppellii",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "af_zorro_ruppell--normal.webp",
+      "plate": "af_zorro_ruppell--melanico.webp",
+      "sha": "55b22a56337f7396d9aad3a23c2714733f1b2e5e",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Se conserva la oreja ancha en claro pero el hocico y vientre se pierden en oscuro. Revisar tonos intermedios de la máscara."
+    },
+    {
+      "id": "zorro_rojo",
+      "latin": "Vulpes vulpes",
+      "family": "Canidae",
+      "variant": "albino",
+      "normal": "zorro_rojo--normal.webp",
+      "plate": "zorro_rojo--albino.webp",
+      "sha": "4f2ef9685bcb0065b0754968a2f2f2435b7c6780",
+      "visualState": "insuficiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Contraste facial muy bajo en fondo claro y patas con rosa homogéneo. Separar nariz, ojos, oreja y textura."
+    },
+    {
+      "id": "zorro_rojo",
+      "latin": "Vulpes vulpes",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "zorro_rojo--normal.webp",
+      "plate": "zorro_rojo--melanico.webp",
+      "sha": "0b28ff6ac23d1522d52c7beeeac8c875e81bbe0a",
+      "visualState": "mejorable",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Perfil y punta de la cola se conservan. Trabajar ojos, mejillas y hombros para que sobrevivan a 64 px en oscuro."
+    },
+    {
+      "id": "af_fenec",
+      "latin": "Vulpes zerda",
+      "family": "Canidae",
+      "variant": "albino",
+      "normal": "af_fenec--normal.webp",
+      "plate": "af_fenec--albino.webp",
+      "sha": "d4f2b268f5c755dbbfdc909cde940474e1d5d866",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Nariz y orejas grandes se reconocen en oscuro. En claro reforzar iris y dar matiz diferencial a piel de orejas y manto."
+    },
+    {
+      "id": "af_fenec",
+      "latin": "Vulpes zerda",
+      "family": "Canidae",
+      "variant": "melanico",
+      "normal": "af_fenec--normal.webp",
+      "plate": "af_fenec--melanico.webp",
+      "sha": "ecfbe9d230673d79f3f00702eba426a4488e96f0",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "El interior de las orejas mantiene un relieve útil. Levantar volumen del cuerpo y lectura de patas finas en oscuro."
+    }
+  ],
+  "notReviewed": 497
+}
