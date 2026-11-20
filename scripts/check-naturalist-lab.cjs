@@ -6,7 +6,7 @@ const path = require('node:path');
 const http = require('node:http');
 const vm = require('node:vm');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v482';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v490';
 require('../www/js/naturalist-assets-v400.js');
 const expected = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') +
   '\n({catalog,migrationProgress});');
@@ -35,6 +35,13 @@ const server = http.createServer((req, res) => {
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
       page.on('response', response => { if (response.status() >= 400) errors.push(response.status() + ' ' + response.url()); });
+      const update = await session.newPage();
+      await update.goto(new URL('../actualizar-atlas.html', url).href);
+      await update.locator('#atlasUpdateApply').click();
+      await update.getByText(/Descarga completa e integridad verificada/).waitFor({ timeout: 180000 });
+      await update.locator('#atlasUpdateInstall').click();
+      await update.getByText(/instalada\. El juego/).waitFor();
+      await update.close();
       const start = performance.now();
       await page.goto(url);
       await page.locator('.field-card .atlas-art-image').evaluate(image => image.decode());
@@ -86,7 +93,10 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 887);
+      assert.equal(await page.locator('.gallery-card').count(), 905);
+      await page.locator('#release-scope').selectOption('4.9.0');
+      assert.equal(await page.locator('.gallery-card').count(), 18);
+      await page.locator('#release-scope').selectOption('');
       await page.locator('#group').selectOption('Anfibios');
       assert.equal(await page.locator('.gallery-card').count(), 35);
       await page.locator('#release-scope').selectOption('4.8.2');
@@ -168,6 +178,23 @@ const server = http.createServer((req, res) => {
         await amphibians.screenshot({ path: evidenceDir + '/comparacion-escala-anfibios-' + viewport.width + '.jpg' });
         await page.locator('#bird-set').selectOption('axolotl');
         await amphibians.screenshot({ path: evidenceDir + '/comparacion-ajolote-' + viewport.width + '.jpg' });
+      }
+      await page.locator('[data-mode=cartilaginous]').click();
+      const sharks = page.locator('.taxon-comparison');
+      assert.equal(await page.locator('#bird-set option').count(), 8);
+      for (const size of [64, 128]) {
+        await page.locator('#comparison-size').selectOption(String(size));
+        await page.locator('#bird-set').selectOption('eagle-ray');
+        assert.deepEqual((await sharks.locator('img').evaluateAll(decodePlates)).map(plate => plate[0]), [size, size, size]);
+        await page.locator('#bird-set').selectOption('white-shark-pigment');
+        assert.deepEqual(await sharks.locator('img').evaluateAll(decodePlates), [
+          [size, 'af_tiburon_blanco--normal.webp'], [size, 'af_tiburon_blanco--albino.webp'], [size, 'af_tiburon_blanco--melanico.webp']
+        ]);
+      }
+      if (process.argv.includes('--write-evidence')) {
+        await sharks.screenshot({ path: evidenceDir + '/tiburon-blanco-' + viewport.width + '.jpg' });
+        await page.locator('#bird-set').selectOption('eagle-ray');
+        await sharks.screenshot({ path: evidenceDir + '/rayas-' + viewport.width + '.jpg' });
       }
       await page.locator('[data-mode=visual-scale]').click();
       await page.locator('#comparison-size').selectOption('256');
@@ -482,7 +509,7 @@ const server = http.createServer((req, res) => {
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 887);
+      assert.equal(await page.locator('.gallery-card').count(), 905);
       await page.locator('#cut-state').selectOption('pending');
       assert.equal(await page.locator('.gallery-card').count(),
         expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);
@@ -523,7 +550,7 @@ const server = http.createServer((req, res) => {
       assert.ok(plates.every(([width, height]) => width === 512 && height === 512));
       assert.deepEqual(errors, []);
       await session.close();
-      console.log('PASS', viewport.width, 'px: dieciséis modos, filtros, comparación de anfibios, escala visual y exportación offline; primera lámina', firstRender, 'ms');
+      console.log('PASS', viewport.width, 'px: diecisiete modos, filtros, comparación de condrictios, escala visual y exportación offline; primera lámina', firstRender, 'ms');
     }
   } finally { await browser.close(); server.close(); }
 })().catch(error => { console.error(error); server.close(); process.exitCode = 1; });

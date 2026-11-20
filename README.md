@@ -1,4 +1,8 @@
-# El Gran Atlas · Anfibios (V4.8.2)
+# El Gran Atlas · Tiburones, rayas y actualización de la PWA (V4.9.0)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.0](docs/cientifica-v490/README.md) · [Plan V4.9.1](docs/cientifica-v490/plan-v491.md).
+
+## Serie 4 · Anfibios (V4.8.2)
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Informe V4.8.2](docs/cientifica-v482/README.md) · [Plan V4.9](docs/cientifica-v482/plan-v49.md).
 

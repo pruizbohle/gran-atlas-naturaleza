@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Laboratorio de ilustración científica V4.8.2 · El Gran Atlas</title>
+  <title>Laboratorio de ilustración científica V4.9.0 · El Gran Atlas</title>
   <link rel="stylesheet" href="../css/naturalist-art-v400.css">
   <link rel="stylesheet" href="../css/field-v3210.css">
   <link rel="stylesheet" href="lab.css">
@@ -36,6 +36,7 @@
       <button type="button" data-mode="birds">Comparar aves</button>
       <button type="button" data-mode="reptiles">Comparar reptiles</button>
       <button type="button" data-mode="amphibians">Comparar anfibios</button>
+      <button type="button" data-mode="cartilaginous">Comparar tiburones y rayas</button>
       <button type="button" data-mode="compression">Compresión</button>
       <button type="button" data-mode="scale">Escala real</button>
       <button type="button" data-mode="visual-scale">Ajustes de escala</button>
@@ -49,6 +50,7 @@
         <label data-catalog-filter>Familia zoológica <select id="family"></select></label>
         <label data-catalog-filter>Edición <select id="release-scope">
           <option value="">Todas</option>
+          <option value="4.9.0">Ilustradas en V4.9.0</option>
           <option value="4.8.2">Ilustradas en V4.8.2</option>
           <option value="4.8.1">Ilustradas en V4.8.1</option>
           <option value="4.8.0">Ilustradas en V4.8.0</option>
@@ -107,6 +109,7 @@
         </select></label>
         <button id="export" type="button" hidden>Exportar JSON</button>
         <button id="review-offline" type="button" hidden></button>
+        <a id="review-prepare-offline" href="../actualizar-atlas.html" hidden>Preparar el juego sin conexión</a>
       </div>
       <div id="content" data-frame-style="bare"></div>
       <p id="status" role="status"></p>

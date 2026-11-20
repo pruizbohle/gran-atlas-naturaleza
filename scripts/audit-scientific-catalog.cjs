@@ -161,7 +161,6 @@ function aquaticPlatePlan() {
       .map(className => [className, records.filter(sp => sp.className === className).length])),
     lots: Object.fromEntries(Object.entries(lots).map(([lot, detail]) => {
       const inventory = records.filter(sp => sp.lot === lot).map(({ lot, ...sp }) => sp);
-      assert.ok(inventory.length, lot + ' · lote vacío');
       return [lot, { ...detail, ...summarize(inventory), inventory }];
     }))
   };

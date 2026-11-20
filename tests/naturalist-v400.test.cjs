@@ -51,7 +51,7 @@ test('catalog is read from the production runtime and only known records can be 
     Cetáceos: 28, Pinnípedos: 20, Sirenios: 2, 'Nutria marina': 1,
     Rapaces: 49, 'Marinas y costeras': 42, 'Ribereñas y humedales': 50,
     'Corredoras y paleognatas': 9, Galliformes: 24, 'Otras aves terrestres': 6,
-    'Arborícolas y otros no paseriformes': 62, Paseriformes: 45, Anfibios: 35, Serpientes: 36, Lagartos: 42, Tortugas: 12, Crocodilianos: 13, Rincocéfalos: 1
+    'Arborícolas y otros no paseriformes': 62, Paseriformes: 45, Anfibios: 35, 'Tiburones y rayas': 18, Serpientes: 36, Lagartos: 42, Tortugas: 12, Crocodilianos: 13, Rincocéfalos: 1
   });
 });
 
@@ -157,7 +157,7 @@ test('terrestrial Carnivora covers the nine present families with only the confi
   assert.ok(records.some(sp => sp.id === 'sa_esp_lontra_felina'));
   assert.ok(!records.some(sp => sp.latin.startsWith('Enhydra ')));
   assert.equal(catalog.migrationProgress.total, 998);
-  assert.equal(catalog.migrationProgress.target, 1536);
+  assert.equal(catalog.migrationProgress.target, 1557);
 });
 
 test('biome library and transparent editions use module-specific layers and existing category routes', () => {
@@ -196,7 +196,7 @@ test('lab preserves the originals and reserves comparison downloads for the revi
   const archived = new Set(catalog.flatMap(sp => sp.records.flatMap(record => record.previous ? [record.previous.src] : [])));
   assert.equal(archived.size, 341);
   assert.equal(plates.size, migrationProgress.plates);
-  assert.equal(migrationProgress.migrated, 887);
+  assert.equal(migrationProgress.migrated, 905);
   assert.equal(migrationProgress.classical, migrationProgress.target);
   assert.equal(migrationProgress.plates, migrationProgress.target);
   assert.equal(migrationProgress.cutouts, Object.keys(cutouts).length);
@@ -328,7 +328,7 @@ test('bird routes match the released inventories, with distinct dimorphism and C
   }
   assert.equal(cat.migrationProgress.birds, 287);
   assert.equal(cat.migrationProgress.birdsMigrated, 287);
-  assert.equal(cat.migrationProgress.biological, 660);
+  assert.equal(cat.migrationProgress.biological, 663);
   assert.equal(cat.migrationProgress.legendary, 11);
   for (const [wave, count] of [['Marinas y costeras', 50], ['Ribereñas y humedales', 94]]) {
     const files = aquatic.filter(sp => sp.wave === wave).flatMap(sp => Object.values(routes[sp.id]));
@@ -622,4 +622,42 @@ test('Primates includes the fourteen zoological families, all configured variant
   assert.notDeepEqual(fs.readFileSync('www/naturalist-art/plates/' + routes.af_gorila_montana.legendario),
     fs.readFileSync('www/naturalist-art/plates/' + routes.af_gorila_montana.normal));
   assert.equal(game.LEGENDARY_SPECIMENS.find(specimen => specimen.id === 'silverback').name, 'Silverback');
+});
+
+
+test('the 18 cartilaginous fishes retain their configured pigmentation, habitats and transparent plates', () => {
+  const initial = require('../docs/cientifica-v482/inventario-v49.json').lots.condrictios;
+  const { catalog, migrationProgress, cartilaginousComparisons } = vm.runInNewContext(
+    fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog,migrationProgress,cartilaginousComparisons});');
+  const runtime = harness({}, null, { gameSource: source }).window.__atlasTest;
+  const { routes, cutouts, files } = globalThis.AtlasNaturalistAssets;
+  const resources = new Set(files);
+  const configured = Object.entries(runtime.SPECIES).filter(([id]) => runtime.taxonomyInfo(id).className === 'Chondrichthyes');
+  assert.deepEqual(configured.map(([id]) => id).sort(), initial.inventory.map(animal => animal.id).sort());
+  assert.equal(migrationProgress.cartilaginousMigrated, 18);
+  assert.equal(migrationProgress.cartilaginous, 18);
+  let count = 0;
+  for (const animal of initial.inventory) {
+    const { id, family, habitats, pendingPlates } = animal;
+    const live = runtime.SPECIES[id];
+    const lab = catalog.find(species => species.id === id);
+    assert.equal(live.latin, animal.latin);
+    assert.deepEqual([...live.habitats], habitats);
+    assert.ok(runtime.REGIONS.some(region => region.species.includes(id) && zoneSupports(region, habitats)), id);
+    assert.deepEqual([...runtime.configuredSpecials(live)], animal.configuredSpecimens);
+    assert.equal(lab.family, family);
+    assert.equal(lab.edition, '4.9.0');
+    assert.deepEqual(Object.values(routes[id]).sort(), pendingPlates.slice().sort());
+    for (const [variant, file] of Object.entries(routes[id])) {
+      count += 1;
+      assert.equal(cutouts[file], true);
+      for (const size of ['', '64/', '128/', '256/']) assert.ok(resources.has('naturalist-art/plates/' + size + file));
+      for (const surface of ['field', 'journal', 'bestiary', 'museum']) {
+        const markup = art.render(id, { variant, surface, habitat: habitats[0] }, () => '');
+        assert.ok(markup.includes('atlas-art-' + surface + ' atlas-art-cutout') && markup.includes(file));
+      }
+    }
+  }
+  assert.equal(count, 21);
+  assert.equal(Object.keys(cartilaginousComparisons).length, 8);
 });

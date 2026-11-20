@@ -1,4 +1,4 @@
-# Inventario naturalista del catálogo 4.8.2
+# Inventario naturalista del catálogo 4.9.0
 
 | Grupo | Familia | ID | Nombre común | Nombre científico | Continente | Zonas del juego | Variantes | Dimorfismo | Ejemplares |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -526,6 +526,8 @@
 | Primates | Cercopithecidae | af_mandril | Mandril | *Mandrillus sphinx* | África | Cuenca del Congo, Bosques guineanos occidentales, Bosques atlánticos ecuatoriales | Normal, Macho, Hembra, Albino, Melánico | Sí | Normal, Notable |
 | Carnívoros terrestres | Herpestidae | af_mangosta_enana | Mangosta enana africana | *Helogale parvula* | África | Sabana de África oriental, Sabanas del sudeste africano | Normal, Albino | No | Normal, Notable |
 | Carnívoros terrestres | Herpestidae | af_xlsx_131_mungos_mungo | Mangosta rayada | *Mungos mungo* | África | Sabana de África oriental, Bosques de miombo, Sabanas del sudeste africano | Normal, Albino | No | Normal, Notable |
+| Tiburones y rayas | Mobulidae | mar_esp_mobula_alfredi | Manta de arrecife | *Mobula alfredi* | Océanos | Océano Índico tropical, Mar tropical asiático, Archipiélagos tropicales | Normal | No | Normal, Notable |
+| Tiburones y rayas | Mobulidae | af_manta_gigante | Manta gigante | *Mobula birostris* | África, Océanos | Litoral sudoriental africano, Archipiélagos del Índico occidental, Índico meridional | Normal, Melánico | No | Normal, Notable |
 | Felinos | Felidae | asia_esp_0387 | Manul | *Otocolobus manul* | Asia | Mongolia | Normal, Melánico | No | Normal, Notable |
 | Carnívoros terrestres | Procyonidae | na_esp_procyon_lotor | Mapache | *Procyon lotor* | Norteamérica | Región de los Grandes Lagos, Bosques del este norteamericano, Costa del golfo de México | Normal, Albino | No | Normal, Notable |
 | Carnívoros terrestres | Procyonidae | na_esp_procyon_pygmaeus | Mapache de Cozumel | *Procyon pygmaeus* | Norteamérica | Península de Yucatán | Normal | No | Normal, Notable |
@@ -726,6 +728,8 @@
 | Anfibios | Rhinodermatidae | sa_esp_rhinoderma_darwinii | Ranita de Darwin | *Rhinoderma darwinii* | Sudamérica | Bosques templados del sur | Normal | No | Normal, Notable |
 | Roedores | Heteromyidae | na_esp_dipodomys_merriami | Rata canguro de Merriam | *Dipodomys merriami* | Norteamérica | Desierto de Sonora | Normal | No | Normal, Notable |
 | Roedores | Spalacidae | af_xlsx_rata_topo | Rata topo gigante | *Tachyoryctes macrocephalus* | África | Tierras altas de Etiopía | Normal, Albino | No | Normal, Notable |
+| Tiburones y rayas | Aetobatidae | mar_esp_aetobatus_ocellatus | Raya águila ocelada indopacífica | *Aetobatus ocellatus* | Océanos | Mar tropical asiático, Archipiélagos tropicales | Normal | No | Normal, Notable |
+| Tiburones y rayas | Mobulidae | mar_esp_mobula_mobular | Raya diablo del Mediterráneo | *Mobula mobular* | Océanos | Atlántico septentrional | Normal | No | Normal, Notable |
 | Ungulados | Bovidae | rebeco_alpino | Rebeco alpino | *Rupicapra rupicapra* | Europa | Alpes, Balcanes | Normal, Albino | No | Normal |
 | Ungulados | Bovidae | eu_esp_0626 | Rebeco pirenaico | *Rupicapra pyrenaica* | Europa | Península Ibérica | Normal, Melánico | No | Normal, Notable |
 | Ungulados | Cervidae | reno | Reno | *Rangifer tarandus* | Europa, Asia, Norteamérica | Escandinavia, Siberia Occidental, Siberia Central, Siberia Oriental, Kamchatka, Alaska, Bosques boreales de Canadá, Yukón, Bahía de Hudson | Normal, Macho, Hembra, Albino | Sí | Normal, Épico |
@@ -794,6 +798,20 @@
 | Afrosorícidos | Tenrecidae | af_tenrec | Tenrec común | *Tenrec ecaudatus* | África | Madagascar | Normal, Albino, Melánico | No | Normal, Notable |
 | Roedores | Cuniculidae | na_esp_cuniculus_paca | Tepezcuintle | *Cuniculus paca* | Norteamérica | Península de Yucatán, América Central | Normal | No | Normal, Notable |
 | Ribereñas y humedales | Charadriidae | sa_esp_vanellus_chilensis | Tero | *Vanellus chilensis* | Sudamérica | Pampas | Normal | No | Normal, Notable |
+| Tiburones y rayas | Chlamydoselachidae | deep_esp_chlamydoselachus_anguineus | Tiburón anguila | *Chlamydoselachus anguineus* | Océanos | Índico profundo | Normal | No | Normal, Notable |
+| Tiburones y rayas | Carcharhinidae | mar_esp_prionace_glauca | Tiburón azul | *Prionace glauca* | Océanos | Índico meridional, Pacífico austral, Atlántico austral | Normal | No | Normal, Notable |
+| Tiburones y rayas | Rhincodontidae | mar_esp_rhincodon_typus | Tiburón ballena | *Rhincodon typus* | Océanos | Océano Índico tropical, Mar tropical asiático, Archipiélagos tropicales | Normal | No | Normal, Notable |
+| Tiburones y rayas | Lamnidae | af_tiburon_blanco | Tiburón blanco | *Carcharodon carcharias* | África, Océanos | Costa del Cabo, Litoral sudoriental africano, Pacífico nororiental, Pacífico suroccidental | Normal, Albino, Melánico | No | Normal, Notable |
+| Tiburones y rayas | Dalatiidae | mar_esp_isistius_brasiliensis | Tiburón cigarro | *Isistius brasiliensis* | Océanos | Océano Índico tropical, Pacífico profundo oriental | Normal | No | Normal, Notable |
+| Tiburones y rayas | Somniosidae | polar_esp_somniosus_microcephalus | Tiburón de Groenlandia | *Somniosus microcephalus* | Polos, Océanos | Hielo ártico occidental, Atlántico profundo norte | Normal | No | Normal, Notable |
+| Tiburones y rayas | Carcharhinidae | af_tiburon_puntas_negras | Tiburón de puntas negras de arrecife | *Carcharhinus melanopterus* | África, Océanos | Archipiélagos del Índico occidental, Océano Índico tropical, Mar tropical asiático, Archipiélagos tropicales | Normal | No | Normal, Notable |
+| Tiburones y rayas | Mitsukurinidae | deep_esp_mitsukurina_owstoni | Tiburón duende | *Mitsukurina owstoni* | Océanos | Atlántico profundo norte, Pacífico profundo suroccidental | Normal | No | Normal, Notable |
+| Tiburones y rayas | Lamnidae | mar_esp_isurus_oxyrinchus | Tiburón mako | *Isurus oxyrinchus* | Océanos | Atlántico septentrional, Pacífico austral | Normal | No | Normal, Notable |
+| Tiburones y rayas | Sphyrnidae | mar_esp_sphyrna_lewini | Tiburón martillo común | *Sphyrna lewini* | Océanos | Mar tropical asiático, Archipiélagos tropicales | Normal | No | Normal, Notable |
+| Tiburones y rayas | Carcharhinidae | mar_esp_carcharhinus_longimanus | Tiburón oceánico | *Carcharhinus longimanus* | Océanos | Océano Índico tropical, Índico meridional | Normal | No | Normal, Notable |
+| Tiburones y rayas | Cetorhinidae | mar_esp_cetorhinus_maximus | Tiburón peregrino | *Cetorhinus maximus* | Océanos | Atlántico septentrional, Pacífico suroccidental | Normal | No | Normal, Notable |
+| Tiburones y rayas | Lamnidae | mar_esp_lamna_ditropis | Tiburón salmón | *Lamna ditropis* | Océanos | Pacífico noroccidental | Normal | No | Normal, Notable |
+| Tiburones y rayas | Alopiidae | mar_esp_alopias_vulpinus | Tiburón zorro común | *Alopias vulpinus* | Océanos | Atlántico septentrional, Pacífico nororiental | Normal | No | Normal, Notable |
 | Felinos | Felidae | asia_esp_0402 | Tigre siberiano | *Panthera tigris* | Asia | Siberia Oriental, China Septentrional, Subcontinente Indio, Sudeste Asiático | Normal, Albino, Melánico | No | Normal, Notable, Épico, Excepcional, Legendario · Ámbar |
 | Felinos | Felidae | sa_esp_leopardus_tigrinus | Tigrillo | *Leopardus tigrinus* | Sudamérica | Andes del Norte, Amazonía | Normal, Melánico | No | Normal, Notable |
 | Felinos | Felidae | na_esp_leopardus_wiedii | Tigrillo margay | *Leopardus wiedii* | Norteamérica | Península de Yucatán, América Central | Normal | No | Normal, Notable |

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#294337">
+  <title>Actualizar El Gran Atlas</title>
+  <link rel="stylesheet" href="css/atlas-pwa-update.css?entrada=actualizar">
+  <script src="js/atlas-pwa-update.js?entrada=actualizar" defer></script>
+</head>
+<body class="atlas-update-page">
+  <main id="atlasUpdatePage">
+    <h1>Actualizar El Gran Atlas</h1>
+    <dl class="atlas-update-versions">
+      <div><dt>Versión instalada</dt><dd id="atlasUpdateInstalled">Comprobando…</dd></div>
+      <div><dt>Versión disponible</dt><dd id="atlasUpdateAvailable">Comprobando…</dd></div>
+    </dl>
+    <p id="status" role="status" aria-live="polite">Buscando actualizaciones…</p>
+    <progress id="atlasUpdateProgress" aria-label="Recursos descargados y verificados" hidden></progress>
+    <div class="atlas-update-actions">
+      <button id="atlasUpdateApply" type="button" disabled>Descargar actualización</button>
+      <button id="atlasUpdateInstall" type="button" hidden>Instalar</button>
+      <a id="backup" hidden download="Gran-Atlas-respaldo-antes-de-actualizar.json">Descargar copia de la partida</a>
+      <a id="atlasUpdateReturn" href="./index.html">Volver al juego</a>
+    </div>
+    <p class="atlas-update-hint">Usa el mismo navegador y perfil en que juegas. Cierra las otras pestañas del Atlas y la ventana de la PWA antes de instalar. La partida se guarda en este navegador.</p>
+  </main>
+</body>
+</html>

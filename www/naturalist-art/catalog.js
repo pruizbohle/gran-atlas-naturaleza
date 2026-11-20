@@ -30114,6 +30114,118 @@ const catalog = [
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"mongoose\" data-mammal-morph=\"mongoose\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M27 58Q11 57 7 73Q7 79 12 76Q17 67 31 65Z\" fill=\"#8e7d62\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31.8584 68C28.8584 75 30 72 33 76Q36 79 35.8 80L35.8 77Q39 76 42.1 78Q44.1 80 41.1 80L35 80Q33 78 33.199999999999996 75L33.599999999999994 80Q30 77 30.152 73C34 78 38.1416 74 38.1416 70Z\" fill=\"#8e7d62\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31.8584 76C28.8584 75 30 72 33 76Q36 79 35.8 80L35.8 77Q39 76 42.1 78Q44.1 80 41.1 80L35 80Q33 78 33.199999999999996 75L33.599999999999994 80Q30 77 30.152 73C34 78 38.1416 74 38.1416 70\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80.075 65C79.075 72 81 73 81.7 76L81.8 79L81.8 76Q85 75 88.1 77Q90.1 79 87.1 79L79.6 79Q79 77 79.2 74L79.2 79L79 75Q78 75 83.925 67Z\" fill=\"#8e7d62\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80.075 71C79.075 72 81 73 81.7 76L81.8 79L81.8 76Q85 75 88.1 77Q90.1 79 87.1 79L79.6 79Q79 77 79.2 74L79.2 79L79 75Q78 75 83.925 67\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 46C68 38 83 35 82 46Z\" fill=\"#ac9b80\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M75 44Q72 41 77 42L79 44Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M82 47C77 40 92 37 91 47Z\" fill=\"#ac9b80\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M84 45Q81 43 86 44L88 45Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M21 63C24 52 36 47 49 49.3Q64 43.8 75 53Q79 46 87 46Q92.45 47 93.36 54Q97 56 97 59Q97.91 64 84 66Q80 65 77 61Q69 72.03 56 76.47Q40 81 27 75C19 72 18 67 21 63Z\" fill=\"#ac9b80\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25.92 68C22.92 75 29 72 32 76Q35 79 27.8 80L27.8 80Q31 79 34.1 81Q36.1 83 33.1 83L27 83Q25 81 25.2 78L25.6 80Q29 77 28.6 73C29 78 34.08 74 34.08 70Z\" fill=\"#ac9b80\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25.92 76C22.92 75 29 72 32 76Q35 79 27.8 80L27.8 80Q31 79 34.1 81Q36.1 83 33.1 83L27 83Q25 81 25.2 78L25.6 80Q29 77 28.6 73C29 78 34.08 74 34.08 70\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M30.8 81L31.2 82.4M32.6 81L33 82.4\" fill=\"none\" stroke=\"#8e7d62\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M74.5 65C73.5 72 74 73 74.7 76L77.8 79L77.8 79Q81 78 84.1 80Q86.1 82 83.1 82L75.6 82Q75 80 75.2 77L75.2 79L72 75Q73 75 79.5 67Z\" fill=\"#ac9b80\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M74.5 71C73.5 72 74 73 74.7 76L77.8 79L77.8 79Q81 78 84.1 80Q86.1 82 83.1 82L75.6 82Q75 80 75.2 77L75.2 79L72 75Q73 75 79.5 67\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M80.8 80L81.2 81.4M82.6 80L83 81.4\" fill=\"none\" stroke=\"#8e7d62\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-mungos-mungo-normal-base-coat\"><path d=\"M21 63C24 52 36 47 49 49.3Q64 43.8 75 53Q79 46 87 46Q92.45 47 93.36 54Q97 56 97 59Q97.91 64 84 66Q80 65 77 61Q69 72.03 56 76.47Q40 81 27 75C19 72 18 67 21 63Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-mungos-mungo-normal-base-coat)\"><path d=\"M29 52L32 66M38 50L41 67M48 50L51 66M58 49L61 62\" fill=\"none\" stroke=\"#8e7d62\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"84\" cy=\"53\" r=\"1.82\" fill=\"#c4b398\"/><circle cx=\"84\" cy=\"53\" r=\"1.5\" fill=\"#302e26\"/><circle cx=\"84.45\" cy=\"52.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#8e7d62\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
   },
   {
+    "id": "mar_esp_mobula_alfredi",
+    "name": "Manta de arrecife",
+    "latin": "Mobula alfredi",
+    "rarity": "Común",
+    "group": "Tiburones y rayas",
+    "family": "Mobulidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "oceano_abierto",
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_oceano_indico_tropical",
+        "name": "Océano Índico tropical",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_mar_tropical_asiatico",
+        "name": "Mar tropical asiático",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_mobula_alfredi--normal.webp",
+        "bytes": 29940,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Manta de arrecife\" data-marine-profile=\"manta\" data-zoological-family=\"Myliobatidae\"><path d=\"M39 40L7 20 17 54 43 72 62 72 88 55 96 20 62 40Z\" fill=\"#425765\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M43 42Q50 27 59 42L62 69 44 69Z\" fill=\"#5e91a6\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M49 70Q66 84 46 98\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"43\" cy=\"41\" r=\"1.3\" fill=\"#203c48\"/><circle cx=\"59\" cy=\"41\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M43 39Q29 22 36 21L45 35M60 39Q73 22 68 22L59 34\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
+    "id": "af_manta_gigante",
+    "name": "Manta gigante",
+    "latin": "Mobula birostris",
+    "rarity": "Raro",
+    "group": "Tiburones y rayas",
+    "family": "Mobulidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "costa"
+    ],
+    "regions": [
+      {
+        "id": "HX-10-12",
+        "name": "Litoral sudoriental africano",
+        "continent": "África"
+      },
+      {
+        "id": "HX-07-14",
+        "name": "Archipiélagos del Índico occidental",
+        "continent": "África"
+      },
+      {
+        "id": "mar_indico_meridional",
+        "name": "Índico meridional",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/af_manta_gigante--normal.webp",
+        "bytes": 21848,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/af_manta_gigante--melanico.webp",
+        "bytes": 19356,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"manta\" data-fish-version=\"3.19.9\" data-pigmentation=\"melanico\"><path d=\"M42 40Q34 42 24 32Q15 25 7 20Q8 46 27 62Q38 73 49 69Q61 74 74 60Q90 44 94 20Q82 26 72 34Q61 43 57 40L56 31Q51 28 47 31L45 41Z\" fill=\"#2f353d\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M47 67Q50 82 46 94Q53 87 52 68Z\" fill=\"#2b3139\" stroke=\"#47515a\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M42 39Q38 31 40 26Q45 25 47 32L46 40M55 39Q60 31 58 26Q53 25 52 32L53 40\" fill=\"#2b3139\" stroke=\"#47515a\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M35 48Q50 40 66 49Q64 64 51 66Q36 63 35 48Z\" fill=\"#343a42\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M17 33Q24 48 37 55M83 33Q76 48 64 55\" fill=\"none\" stroke=\"#48525b\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"42\" cy=\"41\" r=\"1.5\" fill=\"#222830\"/><circle cx=\"42.4\" cy=\"40.6\" r=\"0.45\" fill=\"#8d969c\"/></g><g data-fish-eye=\"true\"><circle cx=\"59\" cy=\"41\" r=\"1.5\" fill=\"#222830\"/><circle cx=\"59.4\" cy=\"40.6\" r=\"0.45\" fill=\"#8d969c\"/></g><path d=\"M45 46q5 2 11 0\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"manta\" data-fish-version=\"3.19.9\"><path d=\"M42 40Q34 42 24 32Q15 25 7 20Q8 46 27 62Q38 73 49 69Q61 74 74 60Q90 44 94 20Q82 26 72 34Q61 43 57 40L56 31Q51 28 47 31L45 41Z\" fill=\"#556f73\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M47 67Q50 82 46 94Q53 87 52 68Z\" fill=\"#455e65\" stroke=\"#3b4b48\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M42 39Q38 31 40 26Q45 25 47 32L46 40M55 39Q60 31 58 26Q53 25 52 32L53 40\" fill=\"#455e65\" stroke=\"#3b4b48\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M35 48Q50 40 66 49Q64 64 51 66Q36 63 35 48Z\" fill=\"#6d878b\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M17 33Q24 48 37 55M83 33Q76 48 64 55\" fill=\"none\" stroke=\"#395357\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"42\" cy=\"41\" r=\"1.5\" fill=\"#27332f\"/><circle cx=\"42.4\" cy=\"40.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g><g data-fish-eye=\"true\"><circle cx=\"59\" cy=\"41\" r=\"1.5\" fill=\"#27332f\"/><circle cx=\"59.4\" cy=\"40.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g><path d=\"M45 46q5 2 11 0\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
     "id": "asia_esp_0387",
     "name": "Manul",
     "latin": "Otocolobus manul",
@@ -40841,6 +40953,89 @@ const catalog = [
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"mole-rat\" data-mammal-morph=\"mole-rat\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M32 67L16 71L11 79L19 80L38 74Z\" fill=\"#7e7461\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 61Q22 43 44 42Q63 37 76 50L85.77 51.78Q87 52 87.73 53.02L91.27 57.98Q92 59 91.86 60.24L91.14 66.76Q91 68 89.78 68.26L78.22 70.74Q77 71 76.16 71.92Q67 82 45 80L27.21 75.32Q26 75 24.96 74.31Q17 69 21 61Z\" fill=\"#9c927f\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68 66Q76 65 80 73L88 78L82 82L72 78L64 73Z\" fill=\"#b4aa97\" stroke=\"#47483f\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M35 68Q27 69 28 77L19 81L22 85L38 80L44 71Z\" fill=\"#b4aa97\" stroke=\"#47483f\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><circle cx=\"80\" cy=\"54\" r=\"1.62\" fill=\"#b4aa97\"/><circle cx=\"80\" cy=\"54\" r=\"1.3\" fill=\"#302e26\"/><circle cx=\"80.45\" cy=\"53.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><circle cx=\"91\" cy=\"62\" r=\"1.7\" fill=\"#bc9d87\"/><path d=\"M75 74L79 79M69 74L68 80M25 81L22 85\" fill=\"none\" stroke=\"#e9e0cd\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 67L92 67L91 73L87 72Z\" fill=\"#e9e0cd\" stroke=\"#47483f\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
   },
   {
+    "id": "mar_esp_aetobatus_ocellatus",
+    "name": "Raya águila ocelada indopacífica",
+    "latin": "Aetobatus ocellatus",
+    "rarity": "Común",
+    "group": "Tiburones y rayas",
+    "family": "Aetobatidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_mar_tropical_asiatico",
+        "name": "Mar tropical asiático",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_aetobatus_ocellatus--normal.webp",
+        "bytes": 39238,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Raya águila ocelada indopacífica\" data-marine-profile=\"eagle_ray\" data-zoological-family=\"Myliobatidae\"><path d=\"M39 40L7 25 14 57 43 72 62 72 90 57 96 25 62 40Z\" fill=\"#607985\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M43 42Q50 27 59 42L62 69 44 69Z\" fill=\"#5e91a6\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M49 70Q66 84 46 98\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"43\" cy=\"41\" r=\"1.3\" fill=\"#203c48\"/><circle cx=\"59\" cy=\"41\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M45 36L50 29 58 36Z\" fill=\"#a9b1a0\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"25\" cy=\"49\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"34\" cy=\"58\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"45\" cy=\"49\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"57\" cy=\"58\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"67\" cy=\"49\" r=\"1.4\" fill=\"#eef1df\"/></svg>"
+  },
+  {
+    "id": "mar_esp_mobula_mobular",
+    "name": "Raya diablo del Mediterráneo",
+    "latin": "Mobula mobular",
+    "rarity": "Común",
+    "group": "Tiburones y rayas",
+    "family": "Mobulidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "oceano_abierto"
+    ],
+    "regions": [
+      {
+        "id": "mar_atlantico_septentrional",
+        "name": "Atlántico septentrional",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_mobula_mobular--normal.webp",
+        "bytes": 24888,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Raya diablo del Mediterráneo\" data-marine-profile=\"devil_ray\" data-zoological-family=\"Myliobatidae\"><path d=\"M39 40L7 25 14 57 43 72 62 72 90 57 96 25 62 40Z\" fill=\"#607985\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M43 42Q50 27 59 42L62 69 44 69Z\" fill=\"#5e91a6\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M49 70Q66 84 46 98\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"43\" cy=\"41\" r=\"1.3\" fill=\"#203c48\"/><circle cx=\"59\" cy=\"41\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M43 39Q29 22 36 21L45 35M60 39Q73 22 68 22L59 34\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
     "id": "rebeco_alpino",
     "name": "Rebeco alpino",
     "latin": "Rupicapra rupicapra",
@@ -44515,6 +44710,672 @@ const catalog = [
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-sa-version=\"3.23.0\" data-sa-profile=\"vanellus-chilensis\" data-sa-morphology=\"southern-lapwing\" data-zoological-family=\"Charadriidae\" data-bird-family=\"Charadriidae\"><path d=\"M20 48Q27 35 45 39Q61 40 67 55L59 66Q37 72 23 61Q17 57 20 48Z\" fill=\"#a3a994\" stroke=\"#395243\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 47Q39 38 54 48L56 59Q43 65 27 58Z\" fill=\"#45634f\" stroke=\"#395243\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q40 43 49 51\" fill=\"none\" stroke=\"#e3dbbb\" stroke-width=\"0.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M58 43Q58 29 72 30Q84 31 84 41L78 49L65 50Z\" fill=\"#a3a994\" stroke=\"#395243\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M81 39L96 41L83 45Z\" fill=\"#45634f\" stroke=\"#395243\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"75\" cy=\"35\" r=\"1.4\" fill=\"#23352d\"/><circle cx=\"74.65\" cy=\"34.65\" r=\"0.38\" fill=\"#f3e8ca\"/><path d=\"M67 31Q57 18 52 20\" fill=\"none\" stroke=\"#45634f\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M37 65L34 86M54 65L60 86\" fill=\"none\" stroke=\"#45634f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M34 86l-4 2m4-2 4 2m-4-2 0 3\" fill=\"none\" stroke=\"#45634f\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 86l-4 2m4-2 4 2m-4-2 0 3\" fill=\"none\" stroke=\"#45634f\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M59 51L65 55L57 67L47 66L45 60Z\" fill=\"#45634f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "deep_esp_chlamydoselachus_anguineus",
+    "name": "Tiburón anguila",
+    "latin": "Chlamydoselachus anguineus",
+    "rarity": "Raro",
+    "group": "Tiburones y rayas",
+    "family": "Chlamydoselachidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "columna_batial"
+    ],
+    "regions": [
+      {
+        "id": "profundo_indico_profundo",
+        "name": "Índico profundo",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/deep_esp_chlamydoselachus_anguineus--normal.webp",
+        "bytes": 20508,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón anguila\" data-deep-profile=\"frilled_shark\" data-zoological-family=\"Chlamydoselachidae\" data-light-organs=\"none\"><path d=\"M6 45Q17 39 29 47Q49 53 70 49L79 42 78 52 96 44 90 55 97 60 81 61Q60 67 38 61L7 58Z\" fill=\"#766d68\" stroke=\"#233942\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"16\" cy=\"48\" r=\"2\" fill=\"#d7d0ab\" stroke=\"#233942\"/><circle cx=\"16\" cy=\"48\" r=\"1.1\" fill=\"#233942\"/><path d=\"M55 64L65 76 70 65M69 49L74 39 79 52Z\" fill=\"#76828b\" stroke=\"#233942\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8 54Q16 48 25 56M26 47L27 59M30 48L31 62M34 49L35 64M38 50L39 65M42 51L43 65M46 51L47 65\" fill=\"none\" stroke=\"#233942\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M10 53l2 5 1 -5Z\" fill=\"#ddd7b9\" stroke=\"#233942\" stroke-width=\"0.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M15 53l2 5 1 -5Z\" fill=\"#ddd7b9\" stroke=\"#233942\" stroke-width=\"0.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M20 53l2 5 1 -5Z\" fill=\"#ddd7b9\" stroke=\"#233942\" stroke-width=\"0.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "mar_esp_prionace_glauca",
+    "name": "Tiburón azul",
+    "latin": "Prionace glauca",
+    "rarity": "Poco común",
+    "group": "Tiburones y rayas",
+    "family": "Carcharhinidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "oceano_abierto"
+    ],
+    "regions": [
+      {
+        "id": "mar_indico_meridional",
+        "name": "Índico meridional",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_pacifico_austral",
+        "name": "Pacífico austral",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_atlantico_austral",
+        "name": "Atlántico austral",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_prionace_glauca--normal.webp",
+        "bytes": 22474,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón azul\" data-marine-profile=\"requiem_shark\" data-zoological-family=\"Carcharhinidae\"><path d=\"M3 56L20 49Q44 43 71 54L80 56 95 36 88 58 97 72 79 64Q47 73 14 64Z\" fill=\"#5e91a6\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M47 48L56 35 59 51Z M37 64L65 90 69 88 46 62Z\" fill=\"#5e91a6\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"53\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M26 51L29 61M31 50L34 62M36 50L39 63\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M13 62Q40 70 71 62L63 69Q39 75 18 66Z\" fill=\"#eef1df\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
+    "id": "mar_esp_rhincodon_typus",
+    "name": "Tiburón ballena",
+    "latin": "Rhincodon typus",
+    "rarity": "Raro",
+    "group": "Tiburones y rayas",
+    "family": "Rhincodontidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "oceano_abierto",
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_oceano_indico_tropical",
+        "name": "Océano Índico tropical",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_mar_tropical_asiatico",
+        "name": "Mar tropical asiático",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_rhincodon_typus--normal.webp",
+        "bytes": 29120,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón ballena\" data-marine-profile=\"whale_shark\" data-zoological-family=\"Rhincodontidae\"><path d=\"M6 49Q13 35 35 41L74 50 92 26 86 53 97 68 81 63Q46 77 9 64Z\" fill=\"#5e8291\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M43 45L53 27 57 48M38 64L54 80 60 66Z\" fill=\"#5e8291\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"18\" cy=\"53\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M26 51L29 61M31 50L34 62M36 50L39 63\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"25\" cy=\"49\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"34\" cy=\"58\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"45\" cy=\"49\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"57\" cy=\"58\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"67\" cy=\"49\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"25\" cy=\"49\" r=\"1.4\" fill=\"#b9d3d5\"/><circle cx=\"34\" cy=\"58\" r=\"1.4\" fill=\"#b9d3d5\"/><circle cx=\"45\" cy=\"49\" r=\"1.4\" fill=\"#b9d3d5\"/><circle cx=\"57\" cy=\"58\" r=\"1.4\" fill=\"#b9d3d5\"/><circle cx=\"67\" cy=\"49\" r=\"1.4\" fill=\"#b9d3d5\"/><path d=\"M6 59L20 59\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
+    "id": "af_tiburon_blanco",
+    "name": "Tiburón blanco",
+    "latin": "Carcharodon carcharias",
+    "rarity": "Muy rara",
+    "group": "Tiburones y rayas",
+    "family": "Lamnidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "rio",
+      "costa"
+    ],
+    "regions": [
+      {
+        "id": "HX-11-11",
+        "name": "Costa del Cabo",
+        "continent": "África"
+      },
+      {
+        "id": "HX-10-12",
+        "name": "Litoral sudoriental africano",
+        "continent": "África"
+      },
+      {
+        "id": "mar_pacifico_nororiental",
+        "name": "Pacífico nororiental",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_pacifico_suroccidental",
+        "name": "Pacífico suroccidental",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/af_tiburon_blanco--normal.webp",
+        "bytes": 24432,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/af_tiburon_blanco--albino.webp",
+        "bytes": 19490,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"tiburon-blanco\" data-fish-version=\"3.19.9\" data-pigmentation=\"albino\"><path d=\"M23 53Q11 45 7 24Q8 46 12 57L5 79Q15 77 25 63Z\" fill=\"#e1dcd9\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M39 46Q42 27 51 17Q53 36 63 45Z\" fill=\"#e1dcd9\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M50 66Q47 80 37 86Q59 81 67 67Z\" fill=\"#e1dcd9\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 63Q26 70 19 73Q31 73 37 66Z\" fill=\"#e1dcd9\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 49Q30 43 35 43L39 48Z\" fill=\"#e1dcd9\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 54Q38 41 61 43Q80 43 94 53L91 60Q75 73 47 69Q29 66 19 62Z\" fill=\"#e5e0dd\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 60Q59 64 92 55Q77 72 48 67Q32 64 25 60Z\" fill=\"#f0ebe8\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 51q-2 4 0 9\" fill=\"none\" stroke=\"#8b8587\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67.2 51q-2 4 0 9\" fill=\"none\" stroke=\"#8b8587\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64.4 51q-2 4 0 9\" fill=\"none\" stroke=\"#8b8587\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61.6 51q-2 4 0 9\" fill=\"none\" stroke=\"#8b8587\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M58.8 51q-2 4 0 9\" fill=\"none\" stroke=\"#8b8587\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M83 61q5 0 8-4\" fill=\"none\" stroke=\"#8b8587\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.45\" fill=\"#d6d1ce\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#faf4eb\"/></g></svg>"
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/af_tiburon_blanco--melanico.webp",
+        "bytes": 17466,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"tiburon-blanco\" data-fish-version=\"3.19.9\" data-pigmentation=\"melanico\"><path d=\"M23 53Q11 45 7 24Q8 46 12 57L5 79Q15 77 25 63Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M39 46Q42 27 51 17Q53 36 63 45Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M50 66Q47 80 37 86Q59 81 67 67Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 63Q26 70 19 73Q31 73 37 66Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 49Q30 43 35 43L39 48Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 54Q38 41 61 43Q80 43 94 53L91 60Q75 73 47 69Q29 66 19 62Z\" fill=\"#373d45\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 60Q59 64 92 55Q77 72 48 67Q32 64 25 60Z\" fill=\"#474d55\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 51q-2 4 0 9\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67.2 51q-2 4 0 9\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64.4 51q-2 4 0 9\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61.6 51q-2 4 0 9\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M58.8 51q-2 4 0 9\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M83 61q5 0 8-4\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.45\" fill=\"#222830\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#8d969c\"/></g></svg>"
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"tiburon-blanco\" data-fish-version=\"3.19.9\"><path d=\"M23 53Q11 45 7 24Q8 46 12 57L5 79Q15 77 25 63Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M39 46Q42 27 51 17Q53 36 63 45Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M50 66Q47 80 37 86Q59 81 67 67Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 63Q26 70 19 73Q31 73 37 66Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 49Q30 43 35 43L39 48Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 54Q38 41 61 43Q80 43 94 53L91 60Q75 73 47 69Q29 66 19 62Z\" fill=\"#82938f\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 60Q59 64 92 55Q77 72 48 67Q32 64 25 60Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67.2 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64.4 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61.6 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M58.8 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M83 61q5 0 8-4\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.45\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g></svg>"
+  },
+  {
+    "id": "mar_esp_isistius_brasiliensis",
+    "name": "Tiburón cigarro",
+    "latin": "Isistius brasiliensis",
+    "rarity": "Poco común",
+    "group": "Tiburones y rayas",
+    "family": "Dalatiidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "oceano_abierto"
+    ],
+    "regions": [
+      {
+        "id": "mar_oceano_indico_tropical",
+        "name": "Océano Índico tropical",
+        "continent": "Océanos"
+      },
+      {
+        "id": "profundo_pacifico_profundo_oriental",
+        "name": "Pacífico profundo oriental",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_isistius_brasiliensis--normal.webp",
+        "bytes": 17320,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón cigarro\" data-marine-profile=\"cookiecutter\" data-zoological-family=\"Dalatiidae\"><path d=\"M7 52Q14 42 32 47L78 53 92 44 88 57 95 67 80 63Q44 69 9 62Z\" fill=\"#887e6b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M61 48L66 41 69 51M71 52L77 45 80 54Z\" fill=\"#887e6b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"18\" cy=\"53\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M26 51L29 61M31 50L34 62M36 50L39 63\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M23 47L31 48 32 65 24 64Z\" fill=\"#485351\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
+    "id": "polar_esp_somniosus_microcephalus",
+    "name": "Tiburón de Groenlandia",
+    "latin": "Somniosus microcephalus",
+    "rarity": "Poco común",
+    "group": "Tiburones y rayas",
+    "family": "Somniosidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "agua_polar"
+    ],
+    "regions": [
+      {
+        "id": "polar_hielo_artico_occidental",
+        "name": "Hielo ártico occidental",
+        "continent": "Polos"
+      },
+      {
+        "id": "profundo_atlantico_profundo_norte",
+        "name": "Atlántico profundo norte",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/polar_esp_somniosus_microcephalus--normal.webp",
+        "bytes": 22008,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón de Groenlandia\" data-polar-profile=\"shark\"><path d=\"M9 54Q29 39 68 48L89 27 85 51 96 64 81 62 73 59Q47 73 16 65Z\" fill=\"#758a85\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /><path d=\"M44 46L50 32 55 47M46 65L58 77 60 63\" fill=\"#859a9f\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /><circle cx=\"21\" cy=\"53\" r=\"1.2\" fill=\"#101c20\"/><path d=\"M28 51L30 60M32 50L34 61M36 50L38 61M11 62L23 63\" fill=\"none\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /></svg>"
+  },
+  {
+    "id": "af_tiburon_puntas_negras",
+    "name": "Tiburón de puntas negras de arrecife",
+    "latin": "Carcharhinus melanopterus",
+    "rarity": "Poco común",
+    "group": "Tiburones y rayas",
+    "family": "Carcharhinidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "costa"
+    ],
+    "regions": [
+      {
+        "id": "HX-07-14",
+        "name": "Archipiélagos del Índico occidental",
+        "continent": "África"
+      },
+      {
+        "id": "mar_oceano_indico_tropical",
+        "name": "Océano Índico tropical",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_mar_tropical_asiatico",
+        "name": "Mar tropical asiático",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/af_tiburon_puntas_negras--normal.webp",
+        "bytes": 20422,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"tiburon-arrecife\" data-fish-version=\"3.19.9\"><path d=\"M24 54Q13 43 8 26L12 56 5 79Q18 72 26 63Z\" fill=\"#6c8581\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 49Q45 33 52 23Q54 41 62 49Z\" fill=\"#6c8581\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M52 65Q50 76 42 81Q57 77 67 66Z\" fill=\"#6c8581\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 63Q26 70 19 73Q31 73 37 66Z\" fill=\"#6c8581\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 49Q30 43 35 43L39 48Z\" fill=\"#6c8581\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 54Q42 45 66 48Q81 48 94 55L92 60Q72 70 49 66L19 62Z\" fill=\"#899b90\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 60Q59 64 92 55Q77 72 48 67Q32 64 25 60Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67.2 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64.4 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61.6 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M58.8 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M83 61q5 0 8-4\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M49 28L52 23Q53 31 55 34Z\" fill=\"#3e4d48\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 77l-2 4 8-4Z\" fill=\"#3e4d48\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.45\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g></svg>"
+  },
+  {
+    "id": "deep_esp_mitsukurina_owstoni",
+    "name": "Tiburón duende",
+    "latin": "Mitsukurina owstoni",
+    "rarity": "Común",
+    "group": "Tiburones y rayas",
+    "family": "Mitsukurinidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "columna_batial"
+    ],
+    "regions": [
+      {
+        "id": "profundo_atlantico_profundo_norte",
+        "name": "Atlántico profundo norte",
+        "continent": "Océanos"
+      },
+      {
+        "id": "profundo_pacifico_profundo_suroccidental",
+        "name": "Pacífico profundo suroccidental",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/deep_esp_mitsukurina_owstoni--normal.webp",
+        "bytes": 13076,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón duende\" data-deep-profile=\"goblin_shark\" data-zoological-family=\"Mitsukurinidae\" data-light-organs=\"none\"><path d=\"M3 47L26 35 43 43 74 51 93 37 88 56 97 68 78 64Q47 77 20 65L12 58 21 51Z\" fill=\"#b89891\" stroke=\"#233942\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"29\" cy=\"48\" r=\"2\" fill=\"#d7d0ab\" stroke=\"#233942\"/><circle cx=\"29\" cy=\"48\" r=\"1.1\" fill=\"#233942\"/><path d=\"M45 44L52 30 58 47M41 66L51 79 58 66Z\" fill=\"#76828b\" stroke=\"#233942\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M13 56L29 52 35 59 24 64M35 47L37 61M40 48L42 63M45 49L47 64\" fill=\"none\" stroke=\"#233942\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 57l2 5 1 -5Z\" fill=\"#ddd7b9\" stroke=\"#233942\" stroke-width=\"0.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23 57l2 5 1 -5Z\" fill=\"#ddd7b9\" stroke=\"#233942\" stroke-width=\"0.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 57l2 5 1 -5Z\" fill=\"#ddd7b9\" stroke=\"#233942\" stroke-width=\"0.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "mar_esp_isurus_oxyrinchus",
+    "name": "Tiburón mako",
+    "latin": "Isurus oxyrinchus",
+    "rarity": "Raro",
+    "group": "Tiburones y rayas",
+    "family": "Lamnidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "oceano_abierto"
+    ],
+    "regions": [
+      {
+        "id": "mar_atlantico_septentrional",
+        "name": "Atlántico septentrional",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_pacifico_austral",
+        "name": "Pacífico austral",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_isurus_oxyrinchus--normal.webp",
+        "bytes": 18246,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón mako\" data-marine-profile=\"mako\" data-zoological-family=\"Lamnidae\"><path d=\"M2 57L21 44Q43 33 65 49L77 55 95 34 87 57 96 78 77 64Q42 78 16 65Z\" fill=\"#537b8b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M44 44L51 33 55 48Z M40 64L51 76 57 72 49 62Z\" fill=\"#537b8b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"17\" cy=\"53\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M26 51L29 61M31 50L34 62M36 50L39 63\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M13 62Q40 70 71 62L63 69Q39 75 18 66Z\" fill=\"#eef1df\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
+    "id": "mar_esp_sphyrna_lewini",
+    "name": "Tiburón martillo común",
+    "latin": "Sphyrna lewini",
+    "rarity": "Común",
+    "group": "Tiburones y rayas",
+    "family": "Sphyrnidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_mar_tropical_asiatico",
+        "name": "Mar tropical asiático",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_sphyrna_lewini--normal.webp",
+        "bytes": 23776,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón martillo común\" data-marine-profile=\"hammerhead\" data-zoological-family=\"Sphyrnidae\"><path d=\"M5 56Q22 37 49 46L75 54 93 32 86 56 97 69 78 65Q43 77 12 65Z\" fill=\"#708f9a\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M43 45L53 27 57 48M38 64L54 80 60 66Z\" fill=\"#708f9a\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"18\" cy=\"53\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M26 51L29 61M31 50L34 62M36 50L39 63\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M8 48L20 40 26 44 18 52 18 61 29 68 21 73 6 65Z\" fill=\"#708f9a\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"20\" cy=\"44\" r=\"1.3\" fill=\"#203c48\"/><circle cx=\"21\" cy=\"68\" r=\"1.3\" fill=\"#203c48\"/></svg>"
+  },
+  {
+    "id": "mar_esp_carcharhinus_longimanus",
+    "name": "Tiburón oceánico",
+    "latin": "Carcharhinus longimanus",
+    "rarity": "Común",
+    "group": "Tiburones y rayas",
+    "family": "Carcharhinidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "oceano_abierto"
+    ],
+    "regions": [
+      {
+        "id": "mar_oceano_indico_tropical",
+        "name": "Océano Índico tropical",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_indico_meridional",
+        "name": "Índico meridional",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_carcharhinus_longimanus--normal.webp",
+        "bytes": 31458,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón oceánico\" data-marine-profile=\"requiem_shark\" data-zoological-family=\"Carcharhinidae\"><path d=\"M7 53Q18 40 45 46L74 54 92 34 86 56 96 69 78 65Q43 78 10 65Q5 61 7 53Z\" fill=\"#708f9a\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M42 46Q43 25 51 27Q56 30 58 49Z M37 64Q50 76 65 85Q66 91 58 88L40 70Z\" fill=\"#708f9a\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"53\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M26 51L29 61M31 50L34 62M36 50L39 63\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M44 32Q48 25 52 30L54 34Z\" fill=\"#eef1df\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M57 83L64 85Q67 90 60 88Z\" fill=\"#eef1df\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
+    "id": "mar_esp_cetorhinus_maximus",
+    "name": "Tiburón peregrino",
+    "latin": "Cetorhinus maximus",
+    "rarity": "Común",
+    "group": "Tiburones y rayas",
+    "family": "Cetorhinidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "oceano_abierto",
+      "costa_marina"
+    ],
+    "regions": [
+      {
+        "id": "mar_atlantico_septentrional",
+        "name": "Atlántico septentrional",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_pacifico_suroccidental",
+        "name": "Pacífico suroccidental",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_cetorhinus_maximus--normal.webp",
+        "bytes": 23454,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón peregrino\" data-marine-profile=\"basking_shark\" data-zoological-family=\"Cetorhinidae\"><path d=\"M5 56Q22 37 49 46L75 54 93 32 86 56 97 69 78 65Q43 77 12 65Z\" fill=\"#708f9a\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M43 45L53 27 57 48M38 64L54 80 60 66Z\" fill=\"#708f9a\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"18\" cy=\"53\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M26 51L29 61M31 50L34 62M36 50L39 63\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M7 55Q17 47 23 51L23 62 10 65Z\" fill=\"#263d45\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M31 48L35 64M36 48L40 65M41 49L45 65\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
+    "id": "mar_esp_lamna_ditropis",
+    "name": "Tiburón salmón",
+    "latin": "Lamna ditropis",
+    "rarity": "Común",
+    "group": "Tiburones y rayas",
+    "family": "Lamnidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "costa_marina"
+    ],
+    "regions": [
+      {
+        "id": "mar_pacifico_noroccidental",
+        "name": "Pacífico noroccidental",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_lamna_ditropis--normal.webp",
+        "bytes": 24826,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón salmón\" data-marine-profile=\"mako\" data-zoological-family=\"Lamnidae\"><path d=\"M10 52Q20 34 45 38Q64 40 74 54L81 56 95 35 87 57 96 78 78 65Q49 80 18 69Q9 64 10 52Z\" fill=\"#526d77\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M40 41L49 26 56 45Z M37 65L51 79 58 72 48 63Z\" fill=\"#526d77\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"53\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M26 51L29 61M31 50L34 62M36 50L39 63\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M16 62Q41 72 72 61L65 70Q42 79 21 69Z\" fill=\"#eef1df\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"27\" cy=\"68\" r=\"0.9\" fill=\"#203c48\"/><circle cx=\"35\" cy=\"70\" r=\"0.9\" fill=\"#203c48\"/><circle cx=\"43\" cy=\"68\" r=\"0.9\" fill=\"#203c48\"/><circle cx=\"51\" cy=\"70\" r=\"0.9\" fill=\"#203c48\"/></svg>"
+  },
+  {
+    "id": "mar_esp_alopias_vulpinus",
+    "name": "Tiburón zorro común",
+    "latin": "Alopias vulpinus",
+    "rarity": "Común",
+    "group": "Tiburones y rayas",
+    "family": "Alopiidae",
+    "edition": "4.9.0",
+    "dimorphism": false,
+    "habitats": [
+      "oceano_abierto",
+      "costa_marina"
+    ],
+    "regions": [
+      {
+        "id": "mar_atlantico_septentrional",
+        "name": "Atlántico septentrional",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_pacifico_nororiental",
+        "name": "Pacífico nororiental",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_alopias_vulpinus--normal.webp",
+        "bytes": 15636,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón zorro común\" data-marine-profile=\"thresher\" data-zoological-family=\"Alopiidae\"><path d=\"M7 54Q23 40 47 47L72 54Q84 25 95 10L87 55 97 65 78 65Q47 76 13 64Z\" fill=\"#708f9a\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M43 45L53 27 57 48M38 64L54 80 60 66Z\" fill=\"#708f9a\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"18\" cy=\"53\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M26 51L29 61M31 50L34 62M36 50L39 63\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
   },
   {
     "id": "asia_esp_0402",
@@ -51717,4 +52578,149 @@ const amphibianComparisons = {
     ]
   }
 };
-const migrationProgress = {"migrated":887,"total":998,"cutouts":1536,"plates":1536,"biological":660,"legendary":11,"review":0,"classical":1536,"target":1536,"ungulates":122,"mammals":461,"mammalsMigrated":461,"birds":287,"birdsMigrated":287,"reptiles":104,"reptilesMigrated":104,"amphibians":35,"amphibiansMigrated":35};
+const cartilaginousComparisons = {
+  "lamnids": {
+    "label": "Lámnidos · hocico y pedúnculo caudal",
+    "cartilaginous": [
+      {
+        "id": "af_tiburon_blanco",
+        "trait": "Cuerpo robusto, hocico cónico y aleta caudal en media luna."
+      },
+      {
+        "id": "mar_esp_isurus_oxyrinchus",
+        "trait": "Cuerpo fusiforme, hocico muy puntiagudo y pectorales cortas."
+      },
+      {
+        "id": "mar_esp_lamna_ditropis",
+        "trait": "Hocico corto, quilla caudal secundaria y manchas oscuras ventrales en adultos."
+      }
+    ]
+  },
+  "requiem": {
+    "label": "Carcarínidos · aletas y extremos",
+    "cartilaginous": [
+      {
+        "id": "mar_esp_carcharhinus_longimanus",
+        "trait": "Pectorales anchas, largas y redondeadas con ápices blancos."
+      },
+      {
+        "id": "af_tiburon_puntas_negras",
+        "trait": "Mancha negra bien delimitada en la primera dorsal, con banda pálida debajo."
+      },
+      {
+        "id": "mar_esp_prionace_glauca",
+        "trait": "Cuerpo delgado, pectorales largas y estrechas y primera dorsal retrasada."
+      }
+    ]
+  },
+  "open-ocean": {
+    "label": "Tiburones pelágicos · cabeza, cola y filtración",
+    "cartilaginous": [
+      {
+        "id": "mar_esp_alopias_vulpinus",
+        "trait": "Lóbulo superior de la cola muy largo."
+      },
+      {
+        "id": "mar_esp_sphyrna_lewini",
+        "trait": "Cabeza expandida con borde frontal festoneado y ojos laterales."
+      },
+      {
+        "id": "mar_esp_rhincodon_typus",
+        "trait": "Hocico ancho, boca terminal y patrón dorsal de puntos y bandas."
+      },
+      {
+        "id": "mar_esp_cetorhinus_maximus",
+        "trait": "Grandes hendiduras branquiales y boca amplia de filtración."
+      }
+    ]
+  },
+  "deep": {
+    "label": "Aguas profundas, abiertas y polares · formas de nado",
+    "cartilaginous": [
+      {
+        "id": "deep_esp_chlamydoselachus_anguineus",
+        "trait": "Cuerpo anguiliforme con seis pares de hendiduras branquiales."
+      },
+      {
+        "id": "deep_esp_mitsukurina_owstoni",
+        "trait": "Rostro aplanado y alargado, mandíbula corta y cola asimétrica."
+      },
+      {
+        "id": "polar_esp_somniosus_microcephalus",
+        "trait": "Cuerpo pesado, ojos pequeños y dorsales bajas."
+      },
+      {
+        "id": "mar_esp_isistius_brasiliensis",
+        "trait": "Cuerpo cilíndrico, collar oscuro y dorsales próximas a la cola."
+      }
+    ]
+  },
+  "mobulids": {
+    "label": "Mobúlidos · mantas y raya diablo",
+    "cartilaginous": [
+      {
+        "id": "af_manta_gigante",
+        "trait": "Alas anchas, boca terminal y marcas dorsales de hombro angulosas."
+      },
+      {
+        "id": "mar_esp_mobula_alfredi",
+        "trait": "Manchas de hombro con curvas más suaves y boca terminal."
+      },
+      {
+        "id": "mar_esp_mobula_mobular",
+        "trait": "Lóbulos cefálicos largos y estrechos, boca inferior y cola fina."
+      }
+    ]
+  },
+  "eagle-ray": {
+    "label": "Raya águila y mantas · disco, rostro y cola",
+    "cartilaginous": [
+      {
+        "id": "mar_esp_aetobatus_ocellatus",
+        "trait": "Rostro saliente, dorso moteado y cola larga en látigo."
+      },
+      {
+        "id": "af_manta_gigante",
+        "trait": "Disco pelágico con dos lóbulos que flanquean los lados de la boca."
+      },
+      {
+        "id": "mar_esp_mobula_alfredi",
+        "trait": "Disco ancho, boca terminal y lóbulos cefálicos curvos."
+      }
+    ]
+  },
+  "white-shark-pigment": {
+    "label": "Tiburón blanco · normal, albino y melánico",
+    "cartilaginous": [
+      {
+        "id": "af_tiburon_blanco",
+        "trait": "Dorso gris y vientre claro."
+      },
+      {
+        "id": "af_tiburon_blanco",
+        "trait": "Pigmentación reducida en dorso y ojos.",
+        "plateKey": "albino"
+      },
+      {
+        "id": "af_tiburon_blanco",
+        "trait": "Pigmentación oscura extendida en los flancos.",
+        "plateKey": "melanico"
+      }
+    ]
+  },
+  "manta-pigment": {
+    "label": "Manta gigante · normal y melánica",
+    "cartilaginous": [
+      {
+        "id": "af_manta_gigante",
+        "trait": "Manchas claras en los hombros."
+      },
+      {
+        "id": "af_manta_gigante",
+        "trait": "Dorso intensamente oscuro, con la silueta y los lóbulos cefálicos definidos.",
+        "plateKey": "melanico"
+      }
+    ]
+  }
+};
+const migrationProgress = {"migrated":905,"total":998,"cutouts":1557,"plates":1557,"biological":663,"legendary":11,"review":0,"classical":1557,"target":1557,"ungulates":122,"mammals":461,"mammalsMigrated":461,"birds":287,"birdsMigrated":287,"reptiles":104,"reptilesMigrated":104,"amphibians":35,"amphibiansMigrated":35,"cartilaginous":18,"cartilaginousMigrated":18};

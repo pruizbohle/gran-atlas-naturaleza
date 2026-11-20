@@ -21,11 +21,12 @@ const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
   gallery: 'Galería', variants: 'Variantes', frames: 'Ejemplares especiales',
-  compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles', amphibians: 'Comparar anfibios',
+  compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles', amphibians: 'Comparar anfibios', cartilaginous: 'Comparar tiburones y rayas',
   compression: 'Compresión WebP', scale: 'Escala real', 'visual-scale': 'Ajustes de escala', review: 'Revisión artística'
 };
 const taxonComparisons = {
-  birds: birdComparisons, reptiles: reptileComparisons, amphibians: amphibianComparisons
+  birds: birdComparisons, reptiles: reptileComparisons, amphibians: amphibianComparisons,
+  cartilaginous: cartilaginousComparisons
 };
 const frames = {
   Normal: 'classic', Notable: 'notable', 'Épico': 'epic',
@@ -52,7 +53,8 @@ byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + m
   migrationProgress.legendary + ' legendarios · ' + migrationProgress.mammalsMigrated + ' de ' +
   migrationProgress.mammals + ' mamíferos · ' + migrationProgress.birdsMigrated + ' de ' +
   migrationProgress.birds + ' aves · ' + migrationProgress.reptilesMigrated + ' de ' + migrationProgress.reptiles + ' reptiles · ' +
-  migrationProgress.amphibiansMigrated + ' de ' + migrationProgress.amphibians + ' anfibios';
+  migrationProgress.amphibiansMigrated + ' de ' + migrationProgress.amphibians + ' anfibios · ' +
+  migrationProgress.cartilaginousMigrated + ' de ' + migrationProgress.cartilaginous + ' tiburones y rayas';
 for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
 selectOptions(comparisonHalo, Object.keys(frames).map(label => [label, label]));
 updateOrders();
@@ -455,10 +457,12 @@ byId('export').addEventListener('click', () => {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 });
 if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
-  navigator.serviceWorker.register('../sw.js').catch(() => {
+  navigator.serviceWorker.getRegistration().then(registration =>
+    registration || navigator.serviceWorker.register('../sw.js', { updateViaCache: 'none' })).catch(() => {
     byId('status').textContent = 'No se pudo preparar el acceso sin conexión.';
   });
   const button = byId('review-offline');
+  const prepareOffline = byId('review-prepare-offline');
   const size = (AtlasNaturalistAssets.labBytes / 1e6).toLocaleString('es-CL', { maximumFractionDigits: 1 });
   button.textContent = 'Descargar comparaciones offline · ' + size + ' MB';
   button.hidden = false;
@@ -471,15 +475,17 @@ if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
       if (!registration?.active) throw Error('Service worker inactive');
       const channel = new MessageChannel();
       const timeout = setTimeout(() => finish(false), 150000);
-      function finish(success) {
+      function finish(success, needsOffline = false) {
         clearTimeout(timeout);
         channel.port1.close();
         button.disabled = false;
+        prepareOffline.hidden = !needsOffline;
         status.textContent = success ? 'Comparaciones listas para usar sin conexión.' :
-          'La descarga quedó incompleta. Puedes volver a intentarlo.';
+          needsOffline ? 'Prepara el juego sin conexión y vuelve al laboratorio para guardar las comparaciones.' :
+            'La descarga quedó incompleta. Puedes volver a intentarlo.';
       }
       channel.port1.onmessage = ({ data }) => {
-        if (data.done || data.failed) finish(Boolean(data.done));
+        if (data.done || data.failed || data.needsOffline) finish(Boolean(data.done), Boolean(data.needsOffline));
         else status.textContent = 'Descargando comparaciones · ' + data.complete + ' de ' + data.total;
       };
       registration.active.postMessage({ type: 'ATLAS_CACHE_NATURALIST_REVIEW' }, [channel.port2]);

@@ -1,0 +1,54 @@
+.atlas-update-page {
+  margin: 0;
+  min-height: 100vh;
+  padding: clamp(1rem, 6vw, 4rem);
+  box-sizing: border-box;
+  font: 1rem/1.55 system-ui, sans-serif;
+  color: #26382e;
+  background: #ece2cd;
+}
+.atlas-update-page main {
+  max-width: 34rem;
+  margin: auto;
+  padding: clamp(1rem, 5vw, 2rem);
+  background: #f9f3e4;
+  border: 1px solid #b9ac90;
+  border-radius: 1rem;
+}
+.atlas-update-page h1 { margin: 0 0 1.4rem; font: 700 clamp(1.6rem, 6vw, 2.3rem)/1.15 Georgia, serif; }
+.atlas-update-versions { display: flex; flex-wrap: wrap; gap: 0.7rem 2rem; }
+.atlas-update-versions dt, .atlas-update-hint { font-size: 0.9em; color: #4d5c4f; }
+.atlas-update-versions dd { margin: 0; font-weight: 700; }
+.atlas-update-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; }
+.atlas-update-page progress { display: block; width: 100%; margin-bottom: 1rem; accent-color: #355d43; }
+.atlas-update-actions button, .atlas-update-notice button {
+  border: 1px solid #a89564;
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  min-height: 2.75rem;
+  font: inherit;
+  font-weight: 700;
+  color: #fff7e1;
+  background: #31563e;
+  cursor: pointer;
+}
+.atlas-update-page button:disabled { opacity: 0.55; cursor: default; }
+.atlas-update-page a { color: #2d533a; }
+.atlas-update-page [data-error=true] { color: #873628; }
+.atlas-update-notice {
+  position: fixed;
+  z-index: 55;
+  right: max(0.75rem, env(safe-area-inset-right));
+  bottom: calc(4.5rem + env(safe-area-inset-bottom));
+  width: min(22rem, calc(100% - 1.5rem));
+  box-sizing: border-box;
+  padding: 0.85rem;
+  color: #26382e;
+  background: #f9f3e4;
+  border: 1px solid #b9ac90;
+  border-radius: 0.85rem;
+  box-shadow: 0 4px 20px #26382e42;
+}
+.atlas-update-notice p { margin: 0.3rem 0 0.65rem; }
+.atlas-update-notice button + button { margin-left: 0.4rem; color: #26382e; background: transparent; }
+.atlas-update-page [hidden], .atlas-update-notice[hidden] { display: none; }

@@ -5,16 +5,14 @@ const path = require('node:path');
 const http = require('node:http');
 const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v482';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v490';
 const { harness } = require('../tests/helpers/live-game.cjs');
 
-const baseline = process.env.ATLAS_BASELINE || '23c28cc50fec35e6d6b95f441d9a072319790d80';
+const baseline = process.env.ATLAS_BASELINE || 'ee5097ce4bab604453d299898ac805496724543e';
 const baselineWeb = process.env.ATLAS_BASELINE_WWW;
 const version = require('../package.json').version;
-const versionSlug = version.replaceAll('.', '');
 const baselineRelease = execFileSync('git', ['show', baseline + ':www/atlas-release.json'], { encoding: 'utf8' });
 if (baselineWeb) assert.equal(fs.readFileSync(path.join(baselineWeb, 'atlas-release.json'), 'utf8'), baselineRelease);
-const baselineSlug = JSON.parse(baselineRelease).version.replaceAll('.', '');
 const mime = { html: 'text/html', js: 'text/javascript', css: 'text/css', webp: 'image/webp', png: 'image/png', svg: 'image/svg+xml' };
 const oldFiles = new Map();
 let candidate = false;
@@ -136,19 +134,21 @@ async function run() {
       const beforeHeap = await jsHeap(page);
 
       candidate = true;
-      await page.evaluate(async () => (await navigator.serviceWorker.getRegistration()).update());
-      await page.waitForFunction(async () => !!(await navigator.serviceWorker.getRegistration()).waiting, null, { timeout: 120000 });
       const updated = await ctx.newPage();
       updated.on('pageerror', e => errors.push(e.message));
-      // Installed games still open their cached update entry point.
-      const upgradeSlug = width === 390 ? baselineSlug : versionSlug;
-      await updated.goto(url + 'actualizar-v' + upgradeSlug + '.html');
+      await updated.goto(url + 'actualizar-atlas.html');
       await updated.locator('#atlasUpdateApply').click();
-      await updated.waitForFunction(() => document.querySelector('#status').dataset.error === 'true', null, { timeout: 120000 });
-      assert.match(await updated.locator('#status').innerText(), /otra ventana/);
+      await updated.getByText(/Descarga completa e integridad verificada/).waitFor({ timeout: 180000 });
+      await updated.locator('#atlasUpdateInstall').click();
+      await updated.getByText(/otra pestaña o ventana/).waitFor();
       await page.close();
       const raw = await updated.evaluate(() => localStorage.getItem('gran_atlas_v05'));
-      await updated.locator('#atlasUpdateApply').click();
+      await updated.locator('#atlasUpdateInstall').click();
+      const refreshed = updated.getByText(/Se verificó un respaldo nuevo/);
+      await updated.getByText(/Se verificó un respaldo nuevo|instalada\. El juego/).waitFor();
+      if (await refreshed.isVisible()) await updated.locator('#atlasUpdateInstall').click();
+      await updated.getByText(/instalada\. El juego/).waitFor();
+      await updated.locator('#atlasUpdateReturn').click();
       await updated.waitForURL(url + 'index.html?actualizado=' + version, { timeout: 120000 });
       await updated.waitForFunction(() => !!window.AtlasSaveBridge);
       const after = await updated.evaluate(() => AtlasSaveBridge.getSaveData());

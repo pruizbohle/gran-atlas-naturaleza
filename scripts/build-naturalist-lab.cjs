@@ -17,6 +17,9 @@ const visualScales = { sa_esp_brachycephalus_pulex: 0.25, gm06_mellisuga_helenae
 const additions = require('../www/js/gm07-a04/catalog.js').records;
 const amphibians = new Map(herpetologyPlan['4.8.2'].inventory.map(animal => [animal.id, animal]));
 const amphibianSets = require('./amphibian-comparisons.cjs');
+const cartilaginous = new Map(require('../docs/cientifica-v482/inventario-v49.json').lots.condrictios.inventory
+  .map(animal => [animal.id, animal]));
+const cartilaginousSets = require('./cartilaginous-comparisons.cjs');
 const comparisonSets = {
   ...require('./passerine-comparisons.cjs'),
   ...require('./arboreal-bird-comparisons.cjs'),
@@ -197,6 +200,11 @@ function classify(id, sp) {
     const { family, order } = amphibian;
     return { family, order, group: 'Anfibios', edition: id === 'sa_esp_brachycephalus_pulex' ? '4.7.3' : '4.8.2' };
   }
+  const fish = cartilaginous.get(id);
+  if (fish) {
+    if (taxonomy.className !== fish.className || fish.latin !== sp.latin) throw Error('Condrictio fuera del inventario: ' + id);
+    return { family: fish.family, group: 'Tiburones y rayas', edition: '4.9.0' };
+  }
   const genus = sp.latin.split(' ')[0];
   const aquatic = aquaticMammal(sp.latin);
   if (aquatic) return { family: aquatic.family, group: aquaticGroups[aquatic.group] };
@@ -292,6 +300,7 @@ function buildComparisons(sets, members, key) {
 const birdComparisons = buildComparisons(comparisonSets, birds, 'birds');
 const reptileComparisons = buildComparisons(reptileSets, reptiles, 'reptiles');
 const amphibianComparisons = buildComparisons(amphibianSets, amphibians, 'amphibians');
+const cartilaginousComparisons = buildComparisons(cartilaginousSets, cartilaginous, 'cartilaginous');
 const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,
   total: catalogEntries.length,
@@ -310,7 +319,9 @@ const migrationProgress = {
   reptiles: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Reptilia').length,
   reptilesMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Reptilia').length,
   amphibians: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Amphibia').length,
-  amphibiansMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Amphibia').length
+  amphibiansMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Amphibia').length,
+  cartilaginous: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Chondrichthyes').length,
+  cartilaginousMigrated: species.filter(sp => sp.records[0].src && cartilaginous.has(sp.id)).length
 };
 const mixedFieldSprites = ['eu_esp_0669', 'eu_esp_0668', 'eu_esp_0667'].map(id => {
   const sp = audit.SPECIES[id];
@@ -323,6 +334,7 @@ fs.writeFileSync(path.join(out, 'catalog.js'),
   'const birdComparisons = ' + JSON.stringify(birdComparisons, null, 2) + ';\n' +
   'const reptileComparisons = ' + JSON.stringify(reptileComparisons, null, 2) + ';\n' +
   'const amphibianComparisons = ' + JSON.stringify(amphibianComparisons, null, 2) + ';\n' +
+  'const cartilaginousComparisons = ' + JSON.stringify(cartilaginousComparisons, null, 2) + ';\n' +
   'const migrationProgress = ' + JSON.stringify(migrationProgress) + ';\n');
 const version = require('../package.json').version;
 const rows = species.map(sp => [
