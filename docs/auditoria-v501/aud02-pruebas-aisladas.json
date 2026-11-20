@@ -1,0 +1,130 @@
+{
+  "baseline": "84298f39b4e333dc2f9a8bae0e07e3ae84a1264e",
+  "method": "Execution of exact function excerpts from app.js with minimal controlled dependencies; not full engine or browser. Passing means observed behavior reproduced, not necessarily correct gameplay. No game state or production modified.",
+  "results": [
+    {
+      "id": "base",
+      "actual": {
+        "manual": 0.5,
+        "auto": 0,
+        "interval": 5,
+        "knowledge": 1,
+        "manualCensus": 1,
+        "autoCensus": 1
+      },
+      "expected": {
+        "manual": 0.5,
+        "auto": 0,
+        "interval": 5,
+        "knowledge": 1,
+        "manualCensus": 1,
+        "autoCensus": 1
+      },
+      "pass": true
+    },
+    {
+      "id": "max-chance",
+      "actual": {
+        "manual": 0.74,
+        "auto": 0.6004,
+        "interval": 0.5,
+        "knowledge": 1.4600000000000002,
+        "manualCensus": 3,
+        "autoCensus": 2
+      },
+      "expected": {
+        "manual": 0.74,
+        "auto": 0.6004,
+        "interval": 0.5,
+        "knowledge": 1.46,
+        "manualCensus": 3,
+        "autoCensus": 2
+      },
+      "pass": true
+    },
+    {
+      "id": "ichthyology-scope",
+      "actual": [
+        1.65,
+        1
+      ],
+      "expected": [
+        1.65,
+        1
+      ],
+      "pass": true
+    },
+    {
+      "id": "voyage-equipment",
+      "actual": [
+        105,
+        104
+      ],
+      "expected": [
+        105,
+        104
+      ],
+      "pass": true
+    },
+    {
+      "id": "museum-wing-zero",
+      "actual": 12,
+      "expected": 12,
+      "pass": true
+    },
+    {
+      "id": "offline-eight-hours-base",
+      "actual": {
+        "attempts": 500,
+        "remainingAccum": 0,
+        "lastTick": 32400000
+      },
+      "expected": {
+        "attempts": 500,
+        "remainingAccum": 0,
+        "lastTick": 32400000
+      },
+      "pass": true
+    },
+    {
+      "id": "offline-eight-hours-max",
+      "actual": {
+        "attempts": 500,
+        "remainingAccum": 0,
+        "lastTick": 32400000
+      },
+      "expected": {
+        "attempts": 500,
+        "remainingAccum": 0,
+        "lastTick": 32400000
+      },
+      "pass": true
+    },
+    {
+      "id": "offline-final-hour-saturated",
+      "actual": {
+        "attempts": 0,
+        "remainingAccum": 0,
+        "lastTick": 32400000
+      },
+      "expected": {
+        "attempts": 0,
+        "remainingAccum": 0,
+        "lastTick": 32400000
+      },
+      "pass": true
+    },
+    {
+      "id": "trial-crowns",
+      "actual": {
+        "money": 520,
+        "crownCoins": 0
+      },
+      "expected": {
+        "money": 520,
+        "crownCoins": 0
+      },
+      "pass": true
+    }
+  ]
+}
