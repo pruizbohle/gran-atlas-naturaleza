@@ -156,11 +156,23 @@ async function run() {
       await updated.getByText(/Se verificó un respaldo nuevo|instalada\. El juego/).waitFor();
       if (await refreshed.isVisible()) await updated.locator('#atlasUpdateInstall').click();
       await updated.getByText(/instalada\. El juego/).waitFor();
+      const before = JSON.parse(raw);
+      await updated.addInitScript(lastTick => {
+        if (!location.search.includes('actualizado=') || sessionStorage.getItem('atlas-test-snapshot-read')) return;
+        sessionStorage.setItem('atlas-test-snapshot-read', 'yes');
+        // Compare the restored save before the normal museum income clock advances.
+        const realtime = Date.now;
+        Date.now = () => lastTick;
+        window.__restoreAtlasTestClock = () => { Date.now = realtime; };
+      }, before.lastTick);
       await updated.locator('#atlasUpdateReturn').click();
       await updated.waitForURL(url + 'index.html?actualizado=' + version, { timeout: 120000 });
       await updated.waitForFunction(() => !!window.AtlasSaveBridge);
-      const after = await updated.evaluate(() => AtlasSaveBridge.getSaveData());
-      const before = JSON.parse(raw);
+      const after = await updated.evaluate(() => {
+        const save = AtlasSaveBridge.getSaveData();
+        window.__restoreAtlasTestClock?.();
+        return save;
+      });
       assert.equal(await updated.evaluate(() => localStorage.getItem('gran_atlas_backup_before_update')), raw);
       const keys = ['discovered', 'published', 'sightings', 'stages', 'specialFound', 'legendaryFound', 'museum', 'inventory', 'knowledge', 'money', 'regionUnlocked'];
       for (const key of keys) assert.deepEqual(after[key], before[key], key);

@@ -1,0 +1,22 @@
+{
+  "baselineCommit": "dc7929a902a6383f1b32e1ba6501e31675747071",
+  "v491": {
+    "tests": 817,
+    "pass": 590,
+    "fail": 227
+  },
+  "fullRun": {
+    "tests": 818,
+    "pass": 590,
+    "fail": 228
+  },
+  "verifiedAfterRetest": {
+    "tests": 818,
+    "pass": 591,
+    "fail": 227
+  },
+  "resolvedInRetest": [
+    "all freshwater and estuarine fish use their configured transparent plates and registered habitats"
+  ],
+  "newFailures": []
+}

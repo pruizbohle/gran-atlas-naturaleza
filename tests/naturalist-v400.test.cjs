@@ -744,7 +744,7 @@ test('all freshwater and estuarine fish use their configured transparent plates 
   const initial = require('../docs/cientifica-v491/inventario-pendiente.json').lots.dulceacuicolas;
   const { catalog, migrationProgress, freshwaterComparisons } = vm.runInNewContext(
     fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog,migrationProgress,freshwaterComparisons});');
-  const { routes, cutouts, files, landscapes } = globalThis.AtlasNaturalistAssets;
+  const { routes, cutouts, files, landscapes, bestiaryHabitats } = globalThis.AtlasNaturalistAssets;
   const precached = new Set(files);
   const runtime = harness({}, null, { gameSource: source }).window.__atlasTest;
   const classify = require('../scripts/aquatic-plate-taxonomy.cjs');
@@ -768,7 +768,7 @@ test('all freshwater and estuarine fish use their configured transparent plates 
     assert.equal(lab.edition, '4.9.2');
     assert.deepEqual(Object.values(routes[id]).sort(), pendingPlates.slice().sort());
     const preferred = art.preferredHabitat(live.habitats);
-    const landscape = art.landscapeKey(preferred);
+    const landscape = art.landscapeKey(bestiaryHabitats[id] || preferred);
     assert.ok(landscapes.includes(landscape), id);
     for (const [variant, file] of Object.entries(routes[id])) {
       assert.equal(cutouts[file], true);
@@ -776,7 +776,7 @@ test('all freshwater and estuarine fish use their configured transparent plates 
       for (const surface of ['field', 'journal', 'bestiary', 'museum']) {
         const markup = art.render(id, { variant, surface, habitat: preferred }, () => '');
         assert.ok(markup.includes('atlas-art-' + surface + ' atlas-art-cutout') && markup.includes(file));
-        if (surface === 'bestiary') assert.ok(markup.includes('/landscapes/' + landscape + '.webp'));
+        if (surface === 'bestiary') assert.ok(markup.includes('src="landscapes/' + landscape + '.webp"'), id);
       }
     }
   }

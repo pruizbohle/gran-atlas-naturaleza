@@ -1,0 +1,2703 @@
+{
+  "chromium": "156.0.8078.79",
+  "offline": false,
+  "repetitions": 12,
+  "summary": [
+    {
+      "width": 390,
+      "version": "4.9.0",
+      "initialMs": {
+        "median": 7.649999998509884,
+        "p90": 10.600000001490116,
+        "min": 3,
+        "max": 11.700000002980232
+      },
+      "repeatedMs": {
+        "median": 2.7000000029802322,
+        "p90": 5.5999999940395355,
+        "min": 1.4000000059604645,
+        "max": 12.399999998509884
+      },
+      "initialDriverMs": {
+        "median": 13.504154500000368,
+        "p90": 18.18881599999986,
+        "min": 7.885613000000376,
+        "max": 18.306106
+      },
+      "heapBytes": {
+        "median": 7444010,
+        "p90": 7512124,
+        "min": 7215040,
+        "max": 7522204
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 390,
+      "version": "4.9.1",
+      "initialMs": {
+        "median": 8,
+        "p90": 10.600000001490116,
+        "min": 3,
+        "max": 12.300000004470348
+      },
+      "repeatedMs": {
+        "median": 2.899999998509884,
+        "p90": 5.700000002980232,
+        "min": 1.0999999940395355,
+        "max": 7.5
+      },
+      "initialDriverMs": {
+        "median": 14.289397999999892,
+        "p90": 17.409538000001703,
+        "min": 8.370742999999493,
+        "max": 17.717619999999442
+      },
+      "heapBytes": {
+        "median": 7414990,
+        "p90": 7529648,
+        "min": 7171268,
+        "max": 7547604
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 390,
+      "version": "4.9.2",
+      "initialMs": {
+        "median": 4.00000000372529,
+        "p90": 6.300000004470348,
+        "min": 2.600000001490116,
+        "max": 11.699999995529652
+      },
+      "repeatedMs": {
+        "median": 3.100000001490116,
+        "p90": 7.700000002980232,
+        "min": 1.8999999985098839,
+        "max": 10.800000004470348
+      },
+      "initialDriverMs": {
+        "median": 9.936719500000436,
+        "p90": 14.094272000000274,
+        "min": 7.704775000001973,
+        "max": 17.927716000001965
+      },
+      "heapBytes": {
+        "median": 7517242,
+        "p90": 7527756,
+        "min": 7303848,
+        "max": 7553688
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 1280,
+      "version": "4.9.0",
+      "initialMs": {
+        "median": 6.550000000745058,
+        "p90": 98.5,
+        "min": 3.2999999970197678,
+        "max": 117.90000000596046
+      },
+      "repeatedMs": {
+        "median": 2.25,
+        "p90": 17.299999997019768,
+        "min": 1.1000000014901161,
+        "max": 31.100000001490116
+      },
+      "initialDriverMs": {
+        "median": 10.89596999999776,
+        "p90": 113.75298599999223,
+        "min": 7.893888999999035,
+        "max": 192.64027400000487
+      },
+      "heapBytes": {
+        "median": 7382572,
+        "p90": 7486556,
+        "min": 7233616,
+        "max": 7493164
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 1280,
+      "version": "4.9.1",
+      "initialMs": {
+        "median": 4.300000000745058,
+        "p90": 60.600000001490116,
+        "min": 3,
+        "max": 141.5
+      },
+      "repeatedMs": {
+        "median": 3.300000000745058,
+        "p90": 72.20000000298023,
+        "min": 1.3999999985098839,
+        "max": 173
+      },
+      "initialDriverMs": {
+        "median": 9.45859449999989,
+        "p90": 72.34611399999994,
+        "min": 6.238321000004362,
+        "max": 184.84847299999092
+      },
+      "heapBytes": {
+        "median": 7467462,
+        "p90": 7502128,
+        "min": 7248472,
+        "max": 7577632
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 1280,
+      "version": "4.9.2",
+      "initialMs": {
+        "median": 5.25,
+        "p90": 56,
+        "min": 1.8000000044703484,
+        "max": 104
+      },
+      "repeatedMs": {
+        "median": 2.3500000052154064,
+        "p90": 13.199999995529652,
+        "min": 1.2999999970197678,
+        "max": 41.69999999552965
+      },
+      "initialDriverMs": {
+        "median": 10.050089999996999,
+        "p90": 81.03648599999724,
+        "min": 6.891974999998638,
+        "max": 189.11546600000293
+      },
+      "heapBytes": {
+        "median": 7478200,
+        "p90": 7529268,
+        "min": 7314856,
+        "max": 7559648
+      },
+      "imageRGBABytes": 65536
+    }
+  ],
+  "samples": [
+    {
+      "width": 390,
+      "trial": 0,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 11.700000002980232,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 17.539397999999892
+      },
+      "repeats": [
+        {
+          "ms": 2.600000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.047923999999966
+        },
+        {
+          "ms": 5.300000004470348,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.882740999999896
+        }
+      ],
+      "heapBytes": 7481084
+    },
+    {
+      "width": 390,
+      "trial": 0,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 10.600000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 16.36468100000002
+      },
+      "repeats": [
+        {
+          "ms": 1.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.471201000000292
+        },
+        {
+          "ms": 3.2000000029802322,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.2181070000001455
+        }
+      ],
+      "heapBytes": 7476708
+    },
+    {
+      "width": 390,
+      "trial": 0,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 5.200000002980232,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.02974600000016
+      },
+      "repeats": [
+        {
+          "ms": 2.399999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.518180000000029
+        },
+        {
+          "ms": 3.100000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.413567000000057
+        }
+      ],
+      "heapBytes": 7401952
+    },
+    {
+      "width": 390,
+      "trial": 1,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 7.799999997019768,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 13.868688000000475
+      },
+      "repeats": [
+        {
+          "ms": 7.399999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 11.776562000000013
+        },
+        {
+          "ms": 3.8000000044703484,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.438084999999774
+        }
+      ],
+      "heapBytes": 7428220
+    },
+    {
+      "width": 390,
+      "trial": 1,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 2.600000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.99439799999982
+      },
+      "repeats": [
+        {
+          "ms": 2.1999999955296516,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.731955999999627
+        },
+        {
+          "ms": 5.700000002980232,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.867747000000236
+        }
+      ],
+      "heapBytes": 7527756
+    },
+    {
+      "width": 390,
+      "trial": 1,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 3.899999998509884,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.531535999999505
+      },
+      "repeats": [
+        {
+          "ms": 4.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 13.331838000000062
+        },
+        {
+          "ms": 1.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.6098900000006324
+        }
+      ],
+      "heapBytes": 7481736
+    },
+    {
+      "width": 390,
+      "trial": 2,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 3.7000000029802322,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.608201000000008
+      },
+      "repeats": [
+        {
+          "ms": 2.7000000029802322,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.29215000000022
+        },
+        {
+          "ms": 7.700000002980232,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 11.536019000000124
+        }
+      ],
+      "heapBytes": 7439712
+    },
+    {
+      "width": 390,
+      "trial": 2,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 10.5,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 18.18881599999986
+      },
+      "repeats": [
+        {
+          "ms": 2.899999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.9140440000001036
+        },
+        {
+          "ms": 9.699999995529652,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 14.97518299999956
+        }
+      ],
+      "heapBytes": 7512124
+    },
+    {
+      "width": 390,
+      "trial": 2,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 3.600000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.370742999999493
+      },
+      "repeats": [
+        {
+          "ms": 2.399999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.716291000000638
+        },
+        {
+          "ms": 3.2000000029802322,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.411610999999539
+        }
+      ],
+      "heapBytes": 7285000
+    },
+    {
+      "width": 390,
+      "trial": 3,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 4.899999998509884,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.52390000000014
+      },
+      "repeats": [
+        {
+          "ms": 5.5999999940395355,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.614129999999932
+        },
+        {
+          "ms": 3,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.454325999999128
+        }
+      ],
+      "heapBytes": 7407244
+    },
+    {
+      "width": 390,
+      "trial": 3,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 9.300000004470348,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.163601999998718
+      },
+      "repeats": [
+        {
+          "ms": 1.6999999955296516,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.437362999999095
+        },
+        {
+          "ms": 2.100000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.053411000000779
+        }
+      ],
+      "heapBytes": 7385004
+    },
+    {
+      "width": 390,
+      "trial": 3,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 5.199999995529652,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.445212000000538
+      },
+      "repeats": [
+        {
+          "ms": 3.100000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.561216000000059
+        },
+        {
+          "ms": 2.2999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.52715999999964
+        }
+      ],
+      "heapBytes": 7553688
+    },
+    {
+      "width": 390,
+      "trial": 4,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 7.700000002980232,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 17.409538000001703
+      },
+      "repeats": [
+        {
+          "ms": 3.399999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.680460999999923
+        },
+        {
+          "ms": 2.6999999955296516,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.280561999999918
+        }
+      ],
+      "heapBytes": 7171268
+    },
+    {
+      "width": 390,
+      "trial": 4,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 3.100000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.094272000000274
+      },
+      "repeats": [
+        {
+          "ms": 1.8999999985098839,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.926875999999538
+        },
+        {
+          "ms": 2.899999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.965151000000333
+        }
+      ],
+      "heapBytes": 7524436
+    },
+    {
+      "width": 390,
+      "trial": 4,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 4.199999995529652,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.806029000001217
+      },
+      "repeats": [
+        {
+          "ms": 2.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.1247760000005655
+        },
+        {
+          "ms": 2.399999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.355083000000377
+        }
+      ],
+      "heapBytes": 7414632
+    },
+    {
+      "width": 390,
+      "trial": 5,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 4.300000004470348,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.977081999999427
+      },
+      "repeats": [
+        {
+          "ms": 2.600000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.397143000000142
+        },
+        {
+          "ms": 5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.598200000000361
+        }
+      ],
+      "heapBytes": 7303848
+    },
+    {
+      "width": 390,
+      "trial": 5,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 3,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.885613000000376
+      },
+      "repeats": [
+        {
+          "ms": 2,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.9737629999999626
+        },
+        {
+          "ms": 1.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.5531900000005407
+        }
+      ],
+      "heapBytes": 7483092
+    },
+    {
+      "width": 390,
+      "trial": 5,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 7.399999998509884,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.903176000001622
+      },
+      "repeats": [
+        {
+          "ms": 1.2999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.877872999999454
+        },
+        {
+          "ms": 1.0999999940395355,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.9821149999988847
+        }
+      ],
+      "heapBytes": 7500996
+    },
+    {
+      "width": 390,
+      "trial": 6,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 6.899999998509884,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 11.918409000001702
+      },
+      "repeats": [
+        {
+          "ms": 2.8000000044703484,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.979275999998208
+        },
+        {
+          "ms": 1.8000000044703484,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.573330999999598
+        }
+      ],
+      "heapBytes": 7522204
+    },
+    {
+      "width": 390,
+      "trial": 6,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 3,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.580111999999644
+      },
+      "repeats": [
+        {
+          "ms": 2.899999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.686566000000312
+        },
+        {
+          "ms": 2,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.477169000001595
+        }
+      ],
+      "heapBytes": 7547604
+    },
+    {
+      "width": 390,
+      "trial": 6,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 3.100000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.704775000001973
+      },
+      "repeats": [
+        {
+          "ms": 10.800000004470348,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 13.467468999999255
+        },
+        {
+          "ms": 5.800000004470348,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.423811000000569
+        }
+      ],
+      "heapBytes": 7518440
+    },
+    {
+      "width": 390,
+      "trial": 7,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 8.400000005960464,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.415194000001065
+      },
+      "repeats": [
+        {
+          "ms": 3.2999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.274363000000449
+        },
+        {
+          "ms": 2.899999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.922244000001228
+        }
+      ],
+      "heapBytes": 7494516
+    },
+    {
+      "width": 390,
+      "trial": 7,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 3.5,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 11.196733999997377
+      },
+      "repeats": [
+        {
+          "ms": 5.199999995529652,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.288258000000496
+        },
+        {
+          "ms": 7.700000002980232,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.235896999998658
+        }
+      ],
+      "heapBytes": 7411508
+    },
+    {
+      "width": 390,
+      "trial": 7,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 9,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 15.089899999999034
+      },
+      "repeats": [
+        {
+          "ms": 1.4000000059604645,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.682760000003327
+        },
+        {
+          "ms": 2.1999999955296516,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.626956000000064
+        }
+      ],
+      "heapBytes": 7473388
+    },
+    {
+      "width": 390,
+      "trial": 8,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 6.300000004470348,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.305062999999791
+      },
+      "repeats": [
+        {
+          "ms": 2.1999999955296516,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.513436000001093
+        },
+        {
+          "ms": 2,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.409214000002976
+        }
+      ],
+      "heapBytes": 7516044
+    },
+    {
+      "width": 390,
+      "trial": 8,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 3.7999999970197678,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.825284000002284
+      },
+      "repeats": [
+        {
+          "ms": 2.600000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.748650999998063
+        },
+        {
+          "ms": 2.100000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.1657779999986815
+        }
+      ],
+      "heapBytes": 7323076
+    },
+    {
+      "width": 390,
+      "trial": 8,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 9.700000002980232,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.623337999997602
+      },
+      "repeats": [
+        {
+          "ms": 7.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 11.616925999998784
+        },
+        {
+          "ms": 2.7999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.209838000002492
+        }
+      ],
+      "heapBytes": 7387936
+    },
+    {
+      "width": 390,
+      "trial": 9,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 10.600000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 15.576687000000675
+      },
+      "repeats": [
+        {
+          "ms": 3,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 11.548273999997036
+        },
+        {
+          "ms": 4.300000004470348,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.8365000000012515
+        }
+      ],
+      "heapBytes": 7402836
+    },
+    {
+      "width": 390,
+      "trial": 9,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 8.200000002980232,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.944847000002483
+      },
+      "repeats": [
+        {
+          "ms": 5.700000002980232,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.120692000000417
+        },
+        {
+          "ms": 3,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.3485470000014175
+        }
+      ],
+      "heapBytes": 7287604
+    },
+    {
+      "width": 390,
+      "trial": 9,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 5,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.896357000001444
+      },
+      "repeats": [
+        {
+          "ms": 3.100000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.676719999999477
+        },
+        {
+          "ms": 4.399999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.433092999999644
+        }
+      ],
+      "heapBytes": 7520596
+    },
+    {
+      "width": 390,
+      "trial": 10,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 3.2999999970197678,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.838584999997693
+      },
+      "repeats": [
+        {
+          "ms": 2.399999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.375181999999768
+        },
+        {
+          "ms": 2.2000000029802322,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.941563999997015
+        }
+      ],
+      "heapBytes": 7401760
+    },
+    {
+      "width": 390,
+      "trial": 10,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 11.699999995529652,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 17.927716000001965
+      },
+      "repeats": [
+        {
+          "ms": 2.7999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.213683000001765
+        },
+        {
+          "ms": 5.600000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.257398999998259
+        }
+      ],
+      "heapBytes": 7527444
+    },
+    {
+      "width": 390,
+      "trial": 10,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 8.399999998509884,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 16.225744000003033
+      },
+      "repeats": [
+        {
+          "ms": 2.2000000029802322,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.443864999997459
+        },
+        {
+          "ms": 4.700000002980232,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 12.157028999998147
+        }
+      ],
+      "heapBytes": 7408204
+    },
+    {
+      "width": 390,
+      "trial": 11,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 3.1999999955296516,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.0191679999989
+      },
+      "repeats": [
+        {
+          "ms": 2.2999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.792914000001474
+        },
+        {
+          "ms": 5.0999999940395355,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.97591100000136
+        }
+      ],
+      "heapBytes": 7310808
+    },
+    {
+      "width": 390,
+      "trial": 11,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 9.099999994039536,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 18.306106
+      },
+      "repeats": [
+        {
+          "ms": 5.5999999940395355,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 20.73025399999824
+        },
+        {
+          "ms": 12.399999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 17.530687999998918
+        }
+      ],
+      "heapBytes": 7215040
+    },
+    {
+      "width": 390,
+      "trial": 11,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 12.300000004470348,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 17.717619999999442
+      },
+      "repeats": [
+        {
+          "ms": 2.899999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.105726000001596
+        },
+        {
+          "ms": 4.299999997019768,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.689399999999296
+        }
+      ],
+      "heapBytes": 7529648
+    },
+    {
+      "width": 1280,
+      "trial": 0,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 5.5,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.893888999999035
+      },
+      "repeats": [
+        {
+          "ms": 1.2000000029802322,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.6308810000045924
+        },
+        {
+          "ms": 5.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.054291000000376
+        }
+      ],
+      "heapBytes": 7483652
+    },
+    {
+      "width": 1280,
+      "trial": 0,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 4,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.370716999997967
+      },
+      "repeats": [
+        {
+          "ms": 1.6000000014901161,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.277008000004571
+        },
+        {
+          "ms": 6.300000004470348,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.64343799999915
+        }
+      ],
+      "heapBytes": 7487252
+    },
+    {
+      "width": 1280,
+      "trial": 0,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 8.100000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.324933999996574
+      },
+      "repeats": [
+        {
+          "ms": 1.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.45069599999988
+        },
+        {
+          "ms": 2.100000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.11627099999896
+        }
+      ],
+      "heapBytes": 7314856
+    },
+    {
+      "width": 1280,
+      "trial": 1,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 10.300000004470348,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.06290099999751
+      },
+      "repeats": [
+        {
+          "ms": 9.399999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 11.049323999999615
+        },
+        {
+          "ms": 2.600000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.265842000000703
+        }
+      ],
+      "heapBytes": 7463260
+    },
+    {
+      "width": 1280,
+      "trial": 1,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 2.5999999940395355,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 6.891974999998638
+      },
+      "repeats": [
+        {
+          "ms": 1.7999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.915139999997336
+        },
+        {
+          "ms": 4.5999999940395355,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.785445000001346
+        }
+      ],
+      "heapBytes": 7480236
+    },
+    {
+      "width": 1280,
+      "trial": 1,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 6.600000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.161447999998927
+      },
+      "repeats": [
+        {
+          "ms": 6.800000004470348,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.16946900000039
+        },
+        {
+          "ms": 2.399999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.770726000002469
+        }
+      ],
+      "heapBytes": 7381892
+    },
+    {
+      "width": 1280,
+      "trial": 2,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 5.199999995529652,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.51965200000268
+      },
+      "repeats": [
+        {
+          "ms": 6.899999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 13.063115999997535
+        },
+        {
+          "ms": 1.9000000059604645,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.4280909999943106
+        }
+      ],
+      "heapBytes": 7559648
+    },
+    {
+      "width": 1280,
+      "trial": 2,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 3.2999999970197678,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.957750000001397
+      },
+      "repeats": [
+        {
+          "ms": 2.100000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.848168999997142
+        },
+        {
+          "ms": 1.1000000014901161,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.650982999999542
+        }
+      ],
+      "heapBytes": 7486556
+    },
+    {
+      "width": 1280,
+      "trial": 2,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 3.100000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 6.238321000004362
+      },
+      "repeats": [
+        {
+          "ms": 5.100000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.021997000003466
+        },
+        {
+          "ms": 1.4000000059604645,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.5257930000007036
+        }
+      ],
+      "heapBytes": 7264092
+    },
+    {
+      "width": 1280,
+      "trial": 3,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 6.899999998509884,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.946737999998732
+      },
+      "repeats": [
+        {
+          "ms": 1.8999999985098839,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.131827000004705
+        },
+        {
+          "ms": 5.700000002980232,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.63498399999662
+        }
+      ],
+      "heapBytes": 7392248
+    },
+    {
+      "width": 1280,
+      "trial": 3,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 3.4000000059604645,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.083292000002984
+      },
+      "repeats": [
+        {
+          "ms": 4,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 13.388241000000562
+        },
+        {
+          "ms": 1.3999999985098839,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.657510999997612
+        }
+      ],
+      "heapBytes": 7471664
+    },
+    {
+      "width": 1280,
+      "trial": 3,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 5.300000004470348,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.775245999997423
+      },
+      "repeats": [
+        {
+          "ms": 1.5999999940395355,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.1328709999943385
+        },
+        {
+          "ms": 2.3000000044703484,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.7251439999963623
+        }
+      ],
+      "heapBytes": 7521460
+    },
+    {
+      "width": 1280,
+      "trial": 4,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 5.399999998509884,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.546472000001813
+      },
+      "repeats": [
+        {
+          "ms": 4.5999999940395355,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 24.10046099999454
+        },
+        {
+          "ms": 1.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.0850500000015018
+        }
+      ],
+      "heapBytes": 7501336
+    },
+    {
+      "width": 1280,
+      "trial": 4,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 3.3000000044703484,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.906105999994907
+      },
+      "repeats": [
+        {
+          "ms": 2.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.532799000000523
+        },
+        {
+          "ms": 8.399999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 15.099536000001535
+        }
+      ],
+      "heapBytes": 7528092
+    },
+    {
+      "width": 1280,
+      "trial": 4,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 3.2999999970197678,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.934415999996418
+      },
+      "repeats": [
+        {
+          "ms": 2,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.5954730000012205
+        },
+        {
+          "ms": 1.7000000029802322,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.483628000001772
+        }
+      ],
+      "heapBytes": 7380236
+    },
+    {
+      "width": 1280,
+      "trial": 5,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 1.8000000044703484,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 6.934870999997656
+      },
+      "repeats": [
+        {
+          "ms": 1.2999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.893143999994209
+        },
+        {
+          "ms": 1.2999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.2422910000022966
+        }
+      ],
+      "heapBytes": 7401120
+    },
+    {
+      "width": 1280,
+      "trial": 5,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 6.5,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.943155999993905
+      },
+      "repeats": [
+        {
+          "ms": 5.100000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.207426000000851
+        },
+        {
+          "ms": 3.5999999940395355,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.351837000001979
+        }
+      ],
+      "heapBytes": 7383252
+    },
+    {
+      "width": 1280,
+      "trial": 5,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 3,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.8228780000063125
+      },
+      "repeats": [
+        {
+          "ms": 2.399999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.738450000004377
+        },
+        {
+          "ms": 6.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.017571000003954
+        }
+      ],
+      "heapBytes": 7275724
+    },
+    {
+      "width": 1280,
+      "trial": 6,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 7.600000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 13.26255300000048
+      },
+      "repeats": [
+        {
+          "ms": 1.7000000029802322,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.3497130000032485
+        },
+        {
+          "ms": 1.7999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.140480000001844
+        }
+      ],
+      "heapBytes": 7379308
+    },
+    {
+      "width": 1280,
+      "trial": 6,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 6.699999995529652,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.96204299999954
+      },
+      "repeats": [
+        {
+          "ms": 2.1999999955296516,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.161238000000594
+        },
+        {
+          "ms": 2,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.373884000000544
+        }
+      ],
+      "heapBytes": 7421744
+    },
+    {
+      "width": 1280,
+      "trial": 6,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 4.600000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.484636000001046
+      },
+      "repeats": [
+        {
+          "ms": 2.4000000059604645,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.206844000000274
+        },
+        {
+          "ms": 1.6000000014901161,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.9049640000012005
+        }
+      ],
+      "heapBytes": 7529268
+    },
+    {
+      "width": 1280,
+      "trial": 7,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 3.9000000059604645,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.941923999998835
+      },
+      "repeats": [
+        {
+          "ms": 9.699999995529652,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 11.760748000000603
+        },
+        {
+          "ms": 1.8999999985098839,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.6276480000015
+        }
+      ],
+      "heapBytes": 7502128
+    },
+    {
+      "width": 1280,
+      "trial": 7,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 7.100000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 12.411217000000761
+      },
+      "repeats": [
+        {
+          "ms": 1.7999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.667507999998634
+        },
+        {
+          "ms": 2.100000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.5931300000011106
+        }
+      ],
+      "heapBytes": 7502960
+    },
+    {
+      "width": 1280,
+      "trial": 7,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 6.200000002980232,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.848784000001615
+      },
+      "repeats": [
+        {
+          "ms": 1.3999999985098839,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.5421579999965616
+        },
+        {
+          "ms": 4.300000004470348,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.697683999998844
+        }
+      ],
+      "heapBytes": 7493164
+    },
+    {
+      "width": 1280,
+      "trial": 8,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 7.200000002980232,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 11.497072000005573
+      },
+      "repeats": [
+        {
+          "ms": 2.6999999955296516,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.979562000000442
+        },
+        {
+          "ms": 1.9000000059604645,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.864458999996714
+        }
+      ],
+      "heapBytes": 7475292
+    },
+    {
+      "width": 1280,
+      "trial": 8,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 7.5999999940395355,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 11.53705600000103
+      },
+      "repeats": [
+        {
+          "ms": 1.7999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.372794000002614
+        },
+        {
+          "ms": 2.7999999970197678,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.364604000002146
+        }
+      ],
+      "heapBytes": 7258744
+    },
+    {
+      "width": 1280,
+      "trial": 8,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 4.5,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 6.877154999994673
+      },
+      "repeats": [
+        {
+          "ms": 1.8999999985098839,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.941766000003554
+        },
+        {
+          "ms": 2.3000000044703484,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.735540999994555
+        }
+      ],
+      "heapBytes": 7477360
+    },
+    {
+      "width": 1280,
+      "trial": 9,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 4.899999998509884,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.28392800000438
+      },
+      "repeats": [
+        {
+          "ms": 2,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.0439129999940633
+        },
+        {
+          "ms": 1.3999999985098839,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.5211959999942337
+        }
+      ],
+      "heapBytes": 7387400
+    },
+    {
+      "width": 1280,
+      "trial": 9,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 4.100000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.913141999997606
+      },
+      "repeats": [
+        {
+          "ms": 2.3000000044703484,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.653789000003599
+        },
+        {
+          "ms": 7.799999997019768,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.603867000005266
+        }
+      ],
+      "heapBytes": 7248472
+    },
+    {
+      "width": 1280,
+      "trial": 9,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 3.399999998509884,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.348791000003985
+      },
+      "repeats": [
+        {
+          "ms": 2.899999998509884,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.79620900000009
+        },
+        {
+          "ms": 13.199999995529652,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 49.60467100000096
+        }
+      ],
+      "heapBytes": 7476164
+    },
+    {
+      "width": 1280,
+      "trial": 10,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 60.600000001490116,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 72.34611399999994
+      },
+      "repeats": [
+        {
+          "ms": 72.20000000298023,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 84.20351500000106
+        },
+        {
+          "ms": 38.900000005960464,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 100.77785099999892
+        }
+      ],
+      "heapBytes": 7577632
+    },
+    {
+      "width": 1280,
+      "trial": 10,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 104,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 189.11546600000293
+      },
+      "repeats": [
+        {
+          "ms": 41.69999999552965,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 143.12324500000977
+        },
+        {
+          "ms": 11.799999997019768,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 16.676791999998386
+        }
+      ],
+      "heapBytes": 7391160
+    },
+    {
+      "width": 1280,
+      "trial": 10,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 117.90000000596046,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 192.64027400000487
+      },
+      "repeats": [
+        {
+          "ms": 7.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 18.18934799999988
+        },
+        {
+          "ms": 31.100000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 96.70483500001137
+        }
+      ],
+      "heapBytes": 7233616
+    },
+    {
+      "width": 1280,
+      "trial": 11,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 56,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 81.03648599999724
+      },
+      "repeats": [
+        {
+          "ms": 17.599999994039536,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 22.975019000004977
+        },
+        {
+          "ms": 6.100000001490116,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 15.076895000005607
+        }
+      ],
+      "heapBytes": 7421492
+    },
+    {
+      "width": 1280,
+      "trial": 11,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 98.5,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 113.75298599999223
+      },
+      "repeats": [
+        {
+          "ms": 25,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 104.21710500000336
+        },
+        {
+          "ms": 17.299999997019768,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 38.88580699999875
+        }
+      ],
+      "heapBytes": 7357176
+    },
+    {
+      "width": 1280,
+      "trial": 11,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 141.5,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 184.84847299999092
+      },
+      "repeats": [
+        {
+          "ms": 173,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 267.7930570000026
+        },
+        {
+          "ms": 99.80000000447035,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 198.65443299998879
+        }
+      ],
+      "heapBytes": 7428932
+    }
+  ]
+}
