@@ -1,0 +1,2702 @@
+{
+  "chromium": "156.0.8078.79",
+  "repetitions": 12,
+  "summary": [
+    {
+      "width": 390,
+      "version": "4.8.2",
+      "initialMs": {
+        "median": 4.699999995529652,
+        "p90": 7.799999997019768,
+        "min": 3.2000000029802322,
+        "max": 11.599999994039536
+      },
+      "repeatedMs": {
+        "median": 5.099999997764826,
+        "p90": 9.299999997019768,
+        "min": 1.8999999985098839,
+        "max": 10.299999997019768
+      },
+      "initialDriverMs": {
+        "median": 10.543857000000571,
+        "p90": 13.552801999999929,
+        "min": 6.8261380000003555,
+        "max": 16.31840199999897
+      },
+      "heapBytes": {
+        "median": 7716812,
+        "p90": 7922392,
+        "min": 7573880,
+        "max": 7947160
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 390,
+      "version": "4.9.0",
+      "initialMs": {
+        "median": 6.24999999627471,
+        "p90": 9.799999997019768,
+        "min": 3,
+        "max": 11.299999997019768
+      },
+      "repeatedMs": {
+        "median": 3.050000000745058,
+        "p90": 6.899999998509884,
+        "min": 1.7000000029802322,
+        "max": 11.599999994039536
+      },
+      "initialDriverMs": {
+        "median": 11.360321500000282,
+        "p90": 16.99229000000014,
+        "min": 7.6616570000005595,
+        "max": 18.412287000002834
+      },
+      "heapBytes": {
+        "median": 7888058,
+        "p90": 7963040,
+        "min": 7690784,
+        "max": 7966564
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 390,
+      "version": "4.9.1",
+      "initialMs": {
+        "median": 6.650000002235174,
+        "p90": 8.399999998509884,
+        "min": 3.100000001490116,
+        "max": 8.899999998509884
+      },
+      "repeatedMs": {
+        "median": 4.199999999254942,
+        "p90": 8.5,
+        "min": 1.5,
+        "max": 9.899999998509884
+      },
+      "initialDriverMs": {
+        "median": 12.085415999999896,
+        "p90": 14.784287000000404,
+        "min": 8.12703799999872,
+        "max": 16.706194000000323
+      },
+      "heapBytes": {
+        "median": 7908230,
+        "p90": 7949160,
+        "min": 7714484,
+        "max": 7958380
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 1280,
+      "version": "4.8.2",
+      "initialMs": {
+        "median": 4.350000001490116,
+        "p90": 7.299999997019768,
+        "min": 2,
+        "max": 8.400000005960464
+      },
+      "repeatedMs": {
+        "median": 2.25,
+        "p90": 5.5,
+        "min": 1.3999999985098839,
+        "max": 6.299999997019768
+      },
+      "initialDriverMs": {
+        "median": 9.213255000002391,
+        "p90": 12.45021899999847,
+        "min": 7.363760000000184,
+        "max": 12.757111000006262
+      },
+      "heapBytes": {
+        "median": 7792566,
+        "p90": 7896008,
+        "min": 7608060,
+        "max": 7900380
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 1280,
+      "version": "4.9.0",
+      "initialMs": {
+        "median": 3.5,
+        "p90": 5.5,
+        "min": 1.6999999955296516,
+        "max": 5.800000004470348
+      },
+      "repeatedMs": {
+        "median": 3.149999998509884,
+        "p90": 5.699999995529652,
+        "min": 1.5,
+        "max": 7.5
+      },
+      "initialDriverMs": {
+        "median": 7.465822499994829,
+        "p90": 11.189691999999923,
+        "min": 3.7253099999943515,
+        "max": 14.758724999999686
+      },
+      "heapBytes": {
+        "median": 7911836,
+        "p90": 7939876,
+        "min": 7676432,
+        "max": 7946964
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 1280,
+      "version": "4.9.1",
+      "initialMs": {
+        "median": 4.449999999254942,
+        "p90": 8.799999997019768,
+        "min": 2.600000001490116,
+        "max": 9.800000004470348
+      },
+      "repeatedMs": {
+        "median": 2.25,
+        "p90": 5.100000001490116,
+        "min": 1.3999999985098839,
+        "max": 6.799999997019768
+      },
+      "initialDriverMs": {
+        "median": 10.149524499996915,
+        "p90": 12.689193999998679,
+        "min": 5.991903000001912,
+        "max": 16.15566899999976
+      },
+      "heapBytes": {
+        "median": 7812266,
+        "p90": 7903008,
+        "min": 7650636,
+        "max": 7914204
+      },
+      "imageRGBABytes": 65536
+    }
+  ],
+  "samples": [
+    {
+      "width": 390,
+      "trial": 0,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 5.799999997019768,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 13.552801999999929
+      },
+      "repeats": [
+        {
+          "ms": 8.400000005960464,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 12.074274999999943
+        },
+        {
+          "ms": 9.599999994039536,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 14.767791999999872
+        }
+      ],
+      "heapBytes": 7862820
+    },
+    {
+      "width": 390,
+      "trial": 0,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 3.600000001490116,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.232230999999956
+      },
+      "repeats": [
+        {
+          "ms": 3.2999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.591173999999683
+        },
+        {
+          "ms": 6.299999997019768,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.507105000000138
+        }
+      ],
+      "heapBytes": 7845364
+    },
+    {
+      "width": 390,
+      "trial": 0,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 8.300000004470348,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.141072999999778
+      },
+      "repeats": [
+        {
+          "ms": 2.399999998509884,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.4571750000000065
+        },
+        {
+          "ms": 2.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.556670999999824
+        }
+      ],
+      "heapBytes": 7949160
+    },
+    {
+      "width": 390,
+      "trial": 1,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 4.5,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.830777000000126
+      },
+      "repeats": [
+        {
+          "ms": 2.8000000044703484,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.630308999999215
+        },
+        {
+          "ms": 2.5999999940395355,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.696810000000369
+        }
+      ],
+      "heapBytes": 7966564
+    },
+    {
+      "width": 390,
+      "trial": 1,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 8.899999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.050562999999784
+      },
+      "repeats": [
+        {
+          "ms": 3.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.236380000000281
+        },
+        {
+          "ms": 8.699999995529652,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 13.875460000000203
+        }
+      ],
+      "heapBytes": 7930788
+    },
+    {
+      "width": 390,
+      "trial": 1,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 4.799999997019768,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 11.31706800000029
+      },
+      "repeats": [
+        {
+          "ms": 8.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 12.88312599999972
+        },
+        {
+          "ms": 5.199999995529652,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.7275810000001
+        }
+      ],
+      "heapBytes": 7674884
+    },
+    {
+      "width": 390,
+      "trial": 2,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 7.200000002980232,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.784287000000404
+      },
+      "repeats": [
+        {
+          "ms": 8.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 13.530389999999898
+        },
+        {
+          "ms": 9.899999998509884,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 14.272057000000132
+        }
+      ],
+      "heapBytes": 7930784
+    },
+    {
+      "width": 390,
+      "trial": 2,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 11.599999994039536,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 16.31840199999897
+      },
+      "repeats": [
+        {
+          "ms": 2.7999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.102552000000287
+        },
+        {
+          "ms": 10.299999997019768,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 16.66080199999851
+        }
+      ],
+      "heapBytes": 7922392
+    },
+    {
+      "width": 390,
+      "trial": 2,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 3,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.748186000000715
+      },
+      "repeats": [
+        {
+          "ms": 2.0999999940395355,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.159863999999288
+        },
+        {
+          "ms": 4,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.139950000000681
+        }
+      ],
+      "heapBytes": 7865596
+    },
+    {
+      "width": 390,
+      "trial": 3,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 4.5,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 12.926190000000133
+      },
+      "repeats": [
+        {
+          "ms": 6.399999998509884,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.601090000000113
+        },
+        {
+          "ms": 2.9000000059604645,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.182323000000906
+        }
+      ],
+      "heapBytes": 7902412
+    },
+    {
+      "width": 390,
+      "trial": 3,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 7.899999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 13.605470000000423
+      },
+      "repeats": [
+        {
+          "ms": 2.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.29604499999914
+        },
+        {
+          "ms": 2,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.9976349999997183
+        }
+      ],
+      "heapBytes": 7936156
+    },
+    {
+      "width": 390,
+      "trial": 3,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 8.399999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 16.706194000000323
+      },
+      "repeats": [
+        {
+          "ms": 2.600000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.7874659999997675
+        },
+        {
+          "ms": 3.899999998509884,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.775277999999162
+        }
+      ],
+      "heapBytes": 7944924
+    },
+    {
+      "width": 390,
+      "trial": 4,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 9.799999997019768,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 16.99229000000014
+      },
+      "repeats": [
+        {
+          "ms": 6,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.704850000000079
+        },
+        {
+          "ms": 2.3000000044703484,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.573808000001009
+        }
+      ],
+      "heapBytes": 7824716
+    },
+    {
+      "width": 390,
+      "trial": 4,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 7.5,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.677588999998989
+      },
+      "repeats": [
+        {
+          "ms": 3.2999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 11.397703000000547
+        },
+        {
+          "ms": 4.5999999940395355,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.05598899999859
+        }
+      ],
+      "heapBytes": 7818808
+    },
+    {
+      "width": 390,
+      "trial": 4,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 4.5999999940395355,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.800004000000627
+      },
+      "repeats": [
+        {
+          "ms": 2,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.3351889999994455
+        },
+        {
+          "ms": 3.0999999940395355,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.01817200000005
+        }
+      ],
+      "heapBytes": 7573880
+    },
+    {
+      "width": 390,
+      "trial": 5,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 4.5,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 11.092508000001544
+      },
+      "repeats": [
+        {
+          "ms": 6.600000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.446501000000353
+        },
+        {
+          "ms": 4.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.914991999999984
+        }
+      ],
+      "heapBytes": 7843152
+    },
+    {
+      "width": 390,
+      "trial": 5,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 4.800000004470348,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.526380999999674
+      },
+      "repeats": [
+        {
+          "ms": 2.1999999955296516,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.645305999998527
+        },
+        {
+          "ms": 5.300000004470348,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.123585000001185
+        }
+      ],
+      "heapBytes": 7597500
+    },
+    {
+      "width": 390,
+      "trial": 5,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 7.600000001490116,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 18.412287000002834
+      },
+      "repeats": [
+        {
+          "ms": 2.6999999955296516,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.22674299999926
+        },
+        {
+          "ms": 2,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.650667000001704
+        }
+      ],
+      "heapBytes": 7836780
+    },
+    {
+      "width": 390,
+      "trial": 6,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 7.799999997019768,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 12.20681699999841
+      },
+      "repeats": [
+        {
+          "ms": 3.399999998509884,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.124558999999863
+        },
+        {
+          "ms": 5.299999997019768,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.620265000001382
+        }
+      ],
+      "heapBytes": 7611432
+    },
+    {
+      "width": 390,
+      "trial": 6,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 7.799999997019768,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.21946200000093
+      },
+      "repeats": [
+        {
+          "ms": 11.599999994039536,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 19.959405999998125
+        },
+        {
+          "ms": 4.100000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.177316000001156
+        }
+      ],
+      "heapBytes": 7963040
+    },
+    {
+      "width": 390,
+      "trial": 6,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 3.100000001490116,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.060335999998642
+      },
+      "repeats": [
+        {
+          "ms": 5.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.647651999999653
+        },
+        {
+          "ms": 6.700000002980232,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.753207000001566
+        }
+      ],
+      "heapBytes": 7720320
+    },
+    {
+      "width": 390,
+      "trial": 7,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 3.600000001490116,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.840761999999813
+      },
+      "repeats": [
+        {
+          "ms": 6.899999998509884,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.77380600000106
+        },
+        {
+          "ms": 2.100000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.7840179999984684
+        }
+      ],
+      "heapBytes": 7945492
+    },
+    {
+      "width": 390,
+      "trial": 7,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 5.700000002980232,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.256140000001324
+      },
+      "repeats": [
+        {
+          "ms": 6.800000004470348,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 13.938297000000603
+        },
+        {
+          "ms": 6.100000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 13.974429999998392
+        }
+      ],
+      "heapBytes": 7714484
+    },
+    {
+      "width": 390,
+      "trial": 7,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 4.5999999940395355,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.969710999997915
+      },
+      "repeats": [
+        {
+          "ms": 6.9000000059604645,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 12.130392999999458
+        },
+        {
+          "ms": 3.6999999955296516,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.888969999999972
+        }
+      ],
+      "heapBytes": 7627392
+    },
+    {
+      "width": 390,
+      "trial": 8,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 6.100000001490116,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.18300200000158
+      },
+      "repeats": [
+        {
+          "ms": 2.2000000029802322,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.599048000000039
+        },
+        {
+          "ms": 5.199999995529652,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.7231229999997595
+        }
+      ],
+      "heapBytes": 7726756
+    },
+    {
+      "width": 390,
+      "trial": 8,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 5.100000001490116,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.287710000000516
+      },
+      "repeats": [
+        {
+          "ms": 5.700000002980232,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.810043999998015
+        },
+        {
+          "ms": 2.600000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.081041000001278
+        }
+      ],
+      "heapBytes": 7758740
+    },
+    {
+      "width": 390,
+      "trial": 8,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 5.799999997019768,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 11.615989999998419
+      },
+      "repeats": [
+        {
+          "ms": 4.399999998509884,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.605591000003187
+        },
+        {
+          "ms": 7.699999995529652,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.977928999996948
+        }
+      ],
+      "heapBytes": 7925576
+    },
+    {
+      "width": 390,
+      "trial": 9,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 3.2999999970197678,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 6.8261380000003555
+      },
+      "repeats": [
+        {
+          "ms": 2,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.6585679999989225
+        },
+        {
+          "ms": 4.100000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.101133000000118
+        }
+      ],
+      "heapBytes": 7947160
+    },
+    {
+      "width": 390,
+      "trial": 9,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 3.5,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.6616570000005595
+      },
+      "repeats": [
+        {
+          "ms": 4.5999999940395355,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 12.310311999997793
+        },
+        {
+          "ms": 1.7999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.756821999999374
+        }
+      ],
+      "heapBytes": 7690784
+    },
+    {
+      "width": 390,
+      "trial": 9,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 3.899999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.12703799999872
+      },
+      "repeats": [
+        {
+          "ms": 5.600000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.732981000001018
+        },
+        {
+          "ms": 2.1999999955296516,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.9273490000014135
+        }
+      ],
+      "heapBytes": 7958380
+    },
+    {
+      "width": 390,
+      "trial": 10,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 11.299999997019768,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 15.506328999999823
+      },
+      "repeats": [
+        {
+          "ms": 2.7000000029802322,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.346357000002172
+        },
+        {
+          "ms": 6.5999999940395355,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 11.6217710000019
+        }
+      ],
+      "heapBytes": 7811484
+    },
+    {
+      "width": 390,
+      "trial": 10,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 7.899999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 13.078323999998247
+      },
+      "repeats": [
+        {
+          "ms": 3.2000000029802322,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.960058000000572
+        },
+        {
+          "ms": 2.7000000029802322,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.708031999998639
+        }
+      ],
+      "heapBytes": 7888996
+    },
+    {
+      "width": 390,
+      "trial": 10,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 3.899999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.544121999999334
+      },
+      "repeats": [
+        {
+          "ms": 5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.361149000000296
+        },
+        {
+          "ms": 1.8999999985098839,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.711340999998356
+        }
+      ],
+      "heapBytes": 7800288
+    },
+    {
+      "width": 390,
+      "trial": 11,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 5.100000001490116,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.946454000000813
+      },
+      "repeats": [
+        {
+          "ms": 2,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.44676399999662
+        },
+        {
+          "ms": 1.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.9463660000001255
+        }
+      ],
+      "heapBytes": 7927464
+    },
+    {
+      "width": 390,
+      "trial": 11,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 3.2000000029802322,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.550852000000305
+      },
+      "repeats": [
+        {
+          "ms": 9.299999997019768,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 14.276093000000401
+        },
+        {
+          "ms": 5.4000000059604645,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.406012999999803
+        }
+      ],
+      "heapBytes": 7659020
+    },
+    {
+      "width": 390,
+      "trial": 11,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 6.699999995529652,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 11.104653000002145
+      },
+      "repeats": [
+        {
+          "ms": 6.399999998509884,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.436346000002231
+        },
+        {
+          "ms": 1.7000000029802322,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.616549999998824
+        }
+      ],
+      "heapBytes": 7910520
+    },
+    {
+      "width": 1280,
+      "trial": 0,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 7.299999997019768,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 12.45021899999847
+      },
+      "repeats": [
+        {
+          "ms": 1.8999999985098839,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.759580999998434
+        },
+        {
+          "ms": 1.6000000014901161,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.4356430000043474
+        }
+      ],
+      "heapBytes": 7845916
+    },
+    {
+      "width": 1280,
+      "trial": 0,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 3.3000000044703484,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.108123999998497
+      },
+      "repeats": [
+        {
+          "ms": 2.100000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.2511759999979404
+        },
+        {
+          "ms": 4.600000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.598319000004267
+        }
+      ],
+      "heapBytes": 7913336
+    },
+    {
+      "width": 1280,
+      "trial": 0,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 3.600000001490116,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.02269299999898
+      },
+      "repeats": [
+        {
+          "ms": 2.1999999955296516,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.972416999997222
+        },
+        {
+          "ms": 2.2000000029802322,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.90144500000315
+        }
+      ],
+      "heapBytes": 7914204
+    },
+    {
+      "width": 1280,
+      "trial": 1,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 2.5,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 6.072764999997162
+      },
+      "repeats": [
+        {
+          "ms": 1.6999999955296516,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.9333169999954407
+        },
+        {
+          "ms": 1.7999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.7848640000011073
+        }
+      ],
+      "heapBytes": 7939876
+    },
+    {
+      "width": 1280,
+      "trial": 1,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 4.700000002980232,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 11.133478000003379
+      },
+      "repeats": [
+        {
+          "ms": 1.6000000014901161,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.271555999999691
+        },
+        {
+          "ms": 4.799999997019768,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.078890999997384
+        }
+      ],
+      "heapBytes": 7778756
+    },
+    {
+      "width": 1280,
+      "trial": 1,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 7.299999997019768,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.6545100000003
+      },
+      "repeats": [
+        {
+          "ms": 1.7000000029802322,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.129671000002418
+        },
+        {
+          "ms": 6.299999997019768,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 14.789418000000296
+        }
+      ],
+      "heapBytes": 7871300
+    },
+    {
+      "width": 1280,
+      "trial": 2,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 3.8000000044703484,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.217055000000983
+      },
+      "repeats": [
+        {
+          "ms": 1.3999999985098839,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.539254000002984
+        },
+        {
+          "ms": 1.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.5234760000021197
+        }
+      ],
+      "heapBytes": 7813224
+    },
+    {
+      "width": 1280,
+      "trial": 2,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 4.4000000059604645,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.935646999998426
+      },
+      "repeats": [
+        {
+          "ms": 5.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.75135600000067
+        },
+        {
+          "ms": 2.2999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.951381999999285
+        }
+      ],
+      "heapBytes": 7732388
+    },
+    {
+      "width": 1280,
+      "trial": 2,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 5.800000004470348,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.684385000000475
+      },
+      "repeats": [
+        {
+          "ms": 1.6000000014901161,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.8345400000034715
+        },
+        {
+          "ms": 1.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.232683999995061
+        }
+      ],
+      "heapBytes": 7916420
+    },
+    {
+      "width": 1280,
+      "trial": 3,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 2,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.363760000000184
+      },
+      "repeats": [
+        {
+          "ms": 2,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.15411199999653
+        },
+        {
+          "ms": 1.3999999985098839,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 2.3534750000035274
+        }
+      ],
+      "heapBytes": 7722476
+    },
+    {
+      "width": 1280,
+      "trial": 3,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 4.899999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 11.189691999999923
+      },
+      "repeats": [
+        {
+          "ms": 3.7000000029802322,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.100874000003387
+        },
+        {
+          "ms": 2.6999999955296516,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.239473000001453
+        }
+      ],
+      "heapBytes": 7765912
+    },
+    {
+      "width": 1280,
+      "trial": 3,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 6.100000001490116,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 11.034908000001451
+      },
+      "repeats": [
+        {
+          "ms": 6.799999997019768,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.7833319999990636
+        },
+        {
+          "ms": 2.4000000059604645,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.404259000002639
+        }
+      ],
+      "heapBytes": 7650636
+    },
+    {
+      "width": 1280,
+      "trial": 4,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 5,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.73296599999594
+      },
+      "repeats": [
+        {
+          "ms": 5.0999999940395355,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.214615999997477
+        },
+        {
+          "ms": 3,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.6239930000010645
+        }
+      ],
+      "heapBytes": 7937396
+    },
+    {
+      "width": 1280,
+      "trial": 4,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 3.5,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 6.9690540000010515
+      },
+      "repeats": [
+        {
+          "ms": 5.100000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.943844000001263
+        },
+        {
+          "ms": 2.2999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.6635779999996885
+        }
+      ],
+      "heapBytes": 7813252
+    },
+    {
+      "width": 1280,
+      "trial": 4,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 3.899999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.845373000003747
+      },
+      "repeats": [
+        {
+          "ms": 1.8999999985098839,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.099519000003056
+        },
+        {
+          "ms": 1.6999999955296516,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.664110999998229
+        }
+      ],
+      "heapBytes": 7841332
+    },
+    {
+      "width": 1280,
+      "trial": 5,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 8.799999997019768,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 12.429140000000189
+      },
+      "repeats": [
+        {
+          "ms": 1.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.50972300000285
+        },
+        {
+          "ms": 1.7999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.217182000000321
+        }
+      ],
+      "heapBytes": 7764376
+    },
+    {
+      "width": 1280,
+      "trial": 5,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 4.299999997019768,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.645713999998407
+      },
+      "repeats": [
+        {
+          "ms": 5.299999997019768,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.753212000003259
+        },
+        {
+          "ms": 4.600000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.858797000000777
+        }
+      ],
+      "heapBytes": 7655712
+    },
+    {
+      "width": 1280,
+      "trial": 5,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 3.6999999955296516,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 6.284225000003062
+      },
+      "repeats": [
+        {
+          "ms": 5.699999995529652,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.390419999996084
+        },
+        {
+          "ms": 1.8000000044703484,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.747857999995176
+        }
+      ],
+      "heapBytes": 7946964
+    },
+    {
+      "width": 1280,
+      "trial": 6,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 3.5,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.437471000004734
+      },
+      "repeats": [
+        {
+          "ms": 4,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.016010999999708
+        },
+        {
+          "ms": 2.100000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.533784999999625
+        }
+      ],
+      "heapBytes": 7733364
+    },
+    {
+      "width": 1280,
+      "trial": 6,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 2.6999999955296516,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.256196999995154
+      },
+      "repeats": [
+        {
+          "ms": 2.2999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.69729599999846
+        },
+        {
+          "ms": 1.7999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.123240000000806
+        }
+      ],
+      "heapBytes": 7918168
+    },
+    {
+      "width": 1280,
+      "trial": 6,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 5.800000004470348,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 16.15566899999976
+      },
+      "repeats": [
+        {
+          "ms": 4.800000004470348,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.114138999997522
+        },
+        {
+          "ms": 4.199999995529652,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.178931000002194
+        }
+      ],
+      "heapBytes": 7903008
+    },
+    {
+      "width": 1280,
+      "trial": 7,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 1.6999999955296516,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 3.7253099999943515
+      },
+      "repeats": [
+        {
+          "ms": 5.100000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.1769690000001
+        },
+        {
+          "ms": 4.800000004470348,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.34619300000486
+        }
+      ],
+      "heapBytes": 7910336
+    },
+    {
+      "width": 1280,
+      "trial": 7,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 6.299999997019768,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.210986999998568
+      },
+      "repeats": [
+        {
+          "ms": 2.7000000029802322,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.957386000001861
+        },
+        {
+          "ms": 2,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.531924000002618
+        }
+      ],
+      "heapBytes": 7784428
+    },
+    {
+      "width": 1280,
+      "trial": 7,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 3.399999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.570505999996385
+      },
+      "repeats": [
+        {
+          "ms": 5.100000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 12.138008000001719
+        },
+        {
+          "ms": 4.799999997019768,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.645275000002584
+        }
+      ],
+      "heapBytes": 7900380
+    },
+    {
+      "width": 1280,
+      "trial": 8,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 9.800000004470348,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 12.689193999998679
+      },
+      "repeats": [
+        {
+          "ms": 5.800000004470348,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.824353000003612
+        },
+        {
+          "ms": 4.899999998509884,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.37602400000469
+        }
+      ],
+      "heapBytes": 7781920
+    },
+    {
+      "width": 1280,
+      "trial": 8,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 3.399999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 8.344195999998192
+      },
+      "repeats": [
+        {
+          "ms": 4.600000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.450925999997708
+        },
+        {
+          "ms": 1.7999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.017147000005934
+        }
+      ],
+      "heapBytes": 7743800
+    },
+    {
+      "width": 1280,
+      "trial": 8,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 5.5,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 14.758724999999686
+      },
+      "repeats": [
+        {
+          "ms": 5.800000004470348,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.45158100000117
+        },
+        {
+          "ms": 5.300000004470348,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.9926459999987856
+        }
+      ],
+      "heapBytes": 7898416
+    },
+    {
+      "width": 1280,
+      "trial": 9,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 8.400000005960464,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 12.757111000006262
+      },
+      "repeats": [
+        {
+          "ms": 6.199999995529652,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.082588000004762
+        },
+        {
+          "ms": 5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.86926699999458
+        }
+      ],
+      "heapBytes": 7608060
+    },
+    {
+      "width": 1280,
+      "trial": 9,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 2.6999999955296516,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.048506999999518
+      },
+      "repeats": [
+        {
+          "ms": 3.2999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.324257999993279
+        },
+        {
+          "ms": 1.6000000014901161,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.461443000000145
+        }
+      ],
+      "heapBytes": 7801644
+    },
+    {
+      "width": 1280,
+      "trial": 9,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 4.199999995529652,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.088061999995261
+      },
+      "repeats": [
+        {
+          "ms": 3.6999999955296516,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.713629999998375
+        },
+        {
+          "ms": 1.6999999955296516,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.187661999996635
+        }
+      ],
+      "heapBytes": 7811308
+    },
+    {
+      "width": 1280,
+      "trial": 10,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 3.1999999955296516,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.675447999994503
+      },
+      "repeats": [
+        {
+          "ms": 7.5,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 9.111081000002741
+        },
+        {
+          "ms": 5.600000001490116,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.398911999996926
+        }
+      ],
+      "heapBytes": 7676432
+    },
+    {
+      "width": 1280,
+      "trial": 10,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 2.899999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 5.991903000001912
+      },
+      "repeats": [
+        {
+          "ms": 2,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 4.0521220000009635
+        },
+        {
+          "ms": 1.7999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 8.39512200000172
+        }
+      ],
+      "heapBytes": 7814340
+    },
+    {
+      "width": 1280,
+      "trial": 10,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 4.899999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 10.732881999996607
+      },
+      "repeats": [
+        {
+          "ms": 3.7999999970197678,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 7.910362999995414
+        },
+        {
+          "ms": 1.8000000044703484,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.703136000003724
+        }
+      ],
+      "heapBytes": 7896008
+    },
+    {
+      "width": 1280,
+      "trial": 11,
+      "version": "4.9.1",
+      "initial": {
+        "ms": 2.600000001490116,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.224835000000894
+      },
+      "repeats": [
+        {
+          "ms": 1.6999999955296516,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 3.770647999997891
+        },
+        {
+          "ms": 2.7000000029802322,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.2113679999965825
+        }
+      ],
+      "heapBytes": 7901756
+    },
+    {
+      "width": 1280,
+      "trial": 11,
+      "version": "4.8.2",
+      "initial": {
+        "ms": 5.100000001490116,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 9.490863000006357
+      },
+      "repeats": [
+        {
+          "ms": 2.2000000029802322,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.010634999998729
+        },
+        {
+          "ms": 1.6000000014901161,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.808001999997941
+        }
+      ],
+      "heapBytes": 7854720
+    },
+    {
+      "width": 1280,
+      "trial": 11,
+      "version": "4.9.0",
+      "initial": {
+        "ms": 5.399999998509884,
+        "images": [
+          "nutria_europea--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 7.194844000005105
+      },
+      "repeats": [
+        {
+          "ms": 2.899999998509884,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 11.55221700000402
+        },
+        {
+          "ms": 3.4000000059604645,
+          "images": [
+            "nutria_europea--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 5.997652000005473
+        }
+      ],
+      "heapBytes": 7910288
+    }
+  ]
+}

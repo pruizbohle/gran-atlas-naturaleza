@@ -5,10 +5,10 @@ const path = require('node:path');
 const http = require('node:http');
 const { execFileSync } = require('node:child_process');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v490';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v491';
 const { harness } = require('../tests/helpers/live-game.cjs');
 
-const baseline = process.env.ATLAS_BASELINE || 'ee5097ce4bab604453d299898ac805496724543e';
+const baseline = process.env.ATLAS_BASELINE || '4ee0853d636d6e99cfff5c71eec8e8162d11b8ff';
 const baselineWeb = process.env.ATLAS_BASELINE_WWW;
 const version = require('../package.json').version;
 const baselineRelease = execFileSync('git', ['show', baseline + ':www/atlas-release.json'], { encoding: 'utf8' });
@@ -76,13 +76,14 @@ async function run() {
   const url = 'http://127.0.0.1:' + server.address().port + '/';
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
   const id = 'nutria_europea';
-  const id2 = 'eu_esp_0669';
+  const id2 = 'eu_esp_0668';
   const regions = harness().window.__atlasTest.REGIONS;
   const { records } = require('../www/js/gm07-a04/catalog.js');
   const catalogSource = ['gm06/catalog', 'gm07-a04/catalog', 'app']
     .map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
   const expandedRegions = harness({}, null, { gameSource: catalogSource }).window.__atlasTest.REGIONS;
   const britishSpecies = regions.find(region => region.id === 'HX-01-09').species;
+  const mixedRegion = regions.find(region => region.id === 'HX-02-11');
   const primateRegion = regions.find(region => region.id === 'HX-09-11');
   const elephant = 'af_elefante_sabana';
   const savanna = regions.find(region => region.id === 'HX-07-10');
@@ -98,10 +99,15 @@ async function run() {
       const errors = [];
       const page = await ctx.newPage();
       page.on('pageerror', e => errors.push(e.message));
-      await page.goto(url);
+      await page.goto(url + 'actualizar-atlas.html');
+      await page.locator('#atlasUpdateApply').click();
+      await page.getByText(/Descarga completa e integridad verificada/).waitFor({ timeout: 180000 });
+      await page.locator('#atlasUpdateInstall').click();
+      await page.getByText(/instalada\. El juego/).waitFor();
+      await page.locator('#atlasUpdateReturn').click();
       await page.waitForFunction(() => !!window.AtlasSaveBridge);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller, null, { timeout: 120000 });
-      await page.evaluate(({ id, id2 }) => {
+      await page.evaluate(({ id, id2, zone }) => {
         const save = AtlasSaveBridge.getSaveData();
         for (const key of [id, id2]) {
           save.discovered[key] = true;
@@ -109,7 +115,7 @@ async function run() {
           save.stages[key] = 5;
           save.sightings[key] = 430;
         }
-        save.currentRegion = 'HX-01-09';
+        save.currentRegion = zone;
         save.regionUnlocked[save.currentRegion] = true;
         save.selectedJournal = id;
         save.discovered.sa_esp_scelorchilus_rubecula = true;
@@ -126,7 +132,7 @@ async function run() {
         ] };
         AtlasSaveBridge.restoreGame(save);
         AtlasSaveBridge.persistBeforeUpdate();
-      }, { id, id2 });
+      }, { id, id2, zone: mixedRegion.id });
       const startOld = performance.now();
       await openTab(page, 'field');
       await page.locator('#fieldResult .atlas-art-image').first().evaluate(img => img.decode());
@@ -215,17 +221,17 @@ async function run() {
       }
 
       // Exercise the real automatic timer while deterministic rolls select a single repeatable WebP.
-      await updated.evaluate(({ id, britishSpecies }) => {
+      await updated.evaluate(({ id, mixedSpecies }) => {
         const save = AtlasSaveBridge.getSaveData();
         save.helpers = 3;
         save.upgrades.autoTier = 3;
         save.lastTick = Date.now();
         const hour = Math.floor(save.lastTick / 3600000);
-        save.autoHourly = Object.fromEntries(britishSpecies.filter(key => key !== id)
+        save.autoHourly = Object.fromEntries(mixedSpecies.filter(key => key !== id)
           .map(key => [hour + ':' + key, 999]));
         Math.random = () => 0.29;
         AtlasSaveBridge.restoreGame(save);
-      }, { id, britishSpecies });
+      }, { id, mixedSpecies: mixedRegion.species });
       await openTab(updated, 'field');
       const automaticImage = updated.locator('#fieldResult img[src$="nutria_europea--normal.webp"]');
       await automaticImage.evaluate(img => img.decode());
@@ -253,6 +259,7 @@ async function run() {
       for (const size of ['', '64/', '128/', '256/']) {
         assert.ok(workerCache.resources.includes('/naturalist-art/plates/' + size + 'nutria_europea--normal.webp'));
         assert.ok(workerCache.resources.includes('/naturalist-art/plates/' + size + 'af_gorila_montana--silverback.webp'));
+        assert.ok(workerCache.resources.includes('/naturalist-art/plates/' + size + 'asia_esp_0369--remonte.webp'));
       }
       assert.equal(workerCache.resources.some(resource => resource.includes('/naturalist-art/review/')), false);
 

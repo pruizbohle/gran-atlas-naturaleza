@@ -166,10 +166,34 @@ function aquaticPlatePlan() {
   };
 }
 
+function legendaryCoverage() {
+  require('../www/js/naturalist-assets-v400.js');
+  const { routes, cutouts, files } = globalThis.AtlasNaturalistAssets;
+  const precached = new Set(files);
+  const inventory = game.LEGENDARY_SPECIMENS.map(legendary => {
+    const id = legendary.speciesId;
+    const filename = routes[id]?.legendario;
+    assert.equal(filename, id + '--' + legendary.id + '.webp');
+    assert.ok(cutouts[filename], filename);
+    const resolutions = [64, 128, 256, 512].map(size => {
+      const resource = 'naturalist-art/plates/' + (size < 512 ? size + '/' : '') + filename;
+      assert.ok(precached.has(resource) && fs.existsSync('www/' + resource), resource);
+      return { size, resource };
+    });
+    const halo = art.render(id, { variant: 'legendario', category: 'Legendario', size: 128 }, () => '');
+    assert.match(halo, /class="atlas-art-frame legendary/);
+    return { ...legendary, species: game.SPECIES[id].latin, rate: game.specimenRates(id).Legendario, resolutions };
+  });
+  assert.equal(inventory.length, 12);
+  return { version: require('../package.json').version, migrated: inventory.length, inventory };
+}
+
 if (process.argv.includes('--birds')) {
   console.log(JSON.stringify(members('Aves').map(([id, sp]) => describe(id, sp)), null, 2));
 } else if (process.argv.includes('--bird-coverage')) {
   console.log(JSON.stringify(birdCoverage(), null, 2));
+} else if (process.argv.includes('--legendary-coverage')) {
+  console.log(JSON.stringify(legendaryCoverage(), null, 2));
 } else if (process.argv.includes('--aquatic-plan')) {
   console.log(JSON.stringify(aquaticPlatePlan(), null, 2));
 } else if (process.argv.includes('--herpetology')) {

@@ -51,7 +51,7 @@ test('catalog is read from the production runtime and only known records can be 
     Cetáceos: 28, Pinnípedos: 20, Sirenios: 2, 'Nutria marina': 1,
     Rapaces: 49, 'Marinas y costeras': 42, 'Ribereñas y humedales': 50,
     'Corredoras y paleognatas': 9, Galliformes: 24, 'Otras aves terrestres': 6,
-    'Arborícolas y otros no paseriformes': 62, Paseriformes: 45, Anfibios: 35, 'Tiburones y rayas': 18, Serpientes: 36, Lagartos: 42, Tortugas: 12, Crocodilianos: 13, Rincocéfalos: 1
+    'Arborícolas y otros no paseriformes': 62, Paseriformes: 45, Anfibios: 35, 'Tiburones y rayas': 18, 'Salmónidos': 8, Serpientes: 36, Lagartos: 42, Tortugas: 12, Crocodilianos: 13, Rincocéfalos: 1
   });
 });
 
@@ -157,7 +157,7 @@ test('terrestrial Carnivora covers the nine present families with only the confi
   assert.ok(records.some(sp => sp.id === 'sa_esp_lontra_felina'));
   assert.ok(!records.some(sp => sp.latin.startsWith('Enhydra ')));
   assert.equal(catalog.migrationProgress.total, 998);
-  assert.equal(catalog.migrationProgress.target, 1557);
+  assert.equal(catalog.migrationProgress.target, 1573);
 });
 
 test('biome library and transparent editions use module-specific layers and existing category routes', () => {
@@ -196,7 +196,7 @@ test('lab preserves the originals and reserves comparison downloads for the revi
   const archived = new Set(catalog.flatMap(sp => sp.records.flatMap(record => record.previous ? [record.previous.src] : [])));
   assert.equal(archived.size, 341);
   assert.equal(plates.size, migrationProgress.plates);
-  assert.equal(migrationProgress.migrated, 905);
+  assert.equal(migrationProgress.migrated, 913);
   assert.equal(migrationProgress.classical, migrationProgress.target);
   assert.equal(migrationProgress.plates, migrationProgress.target);
   assert.equal(migrationProgress.cutouts, Object.keys(cutouts).length);
@@ -328,8 +328,8 @@ test('bird routes match the released inventories, with distinct dimorphism and C
   }
   assert.equal(cat.migrationProgress.birds, 287);
   assert.equal(cat.migrationProgress.birdsMigrated, 287);
-  assert.equal(cat.migrationProgress.biological, 663);
-  assert.equal(cat.migrationProgress.legendary, 11);
+  assert.equal(cat.migrationProgress.biological, 670);
+  assert.equal(cat.migrationProgress.legendary, 12);
   for (const [wave, count] of [['Marinas y costeras', 50], ['Ribereñas y humedales', 94]]) {
     const files = aquatic.filter(sp => sp.wave === wave).flatMap(sp => Object.values(routes[sp.id]));
     assert.equal(new Set(files).size, count, wave);
@@ -660,4 +660,81 @@ test('the 18 cartilaginous fishes retain their configured pigmentation, habitats
   }
   assert.equal(count, 21);
   assert.equal(Object.keys(cartilaginousComparisons).length, 8);
+});
+
+
+test('all salmonids have their configured plates and Remonte completes the unchanged twelve legends', () => {
+  const initial = require('../docs/cientifica-v490/inventario-pendiente.json').lots.salmonidos;
+  const { catalog, migrationProgress, salmonidComparisons, legendaryComparisons } = vm.runInNewContext(
+    fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog,migrationProgress,salmonidComparisons,legendaryComparisons});');
+  const { routes, cutouts, files } = globalThis.AtlasNaturalistAssets;
+  const runtime = harness({}, null, { gameSource: source }).window.__atlasTest;
+  const classify = require('../scripts/aquatic-plate-taxonomy.cjs');
+  const inGame = Object.entries(runtime.SPECIES).filter(([id, sp]) => {
+    const className = runtime.taxonomyInfo(id).className;
+    return className === 'Actinopterygii' && classify(sp.latin, className, sp.habitats).family === 'Salmonidae';
+  });
+  assert.deepEqual(inGame.map(([id]) => id).sort(), initial.inventory.map(animal => animal.id).sort());
+  assert.equal(migrationProgress.salmonidsMigrated, 8);
+  assert.equal(migrationProgress.salmonids, 8);
+  assert.equal(Object.keys(salmonidComparisons).length, 5);
+
+  let count = 0;
+  for (const { id, family, habitats, pendingPlates, configuredSpecimens } of initial.inventory) {
+    const live = runtime.SPECIES[id];
+    const lab = catalog.find(species => species.id === id);
+    assert.deepEqual([...live.habitats], habitats);
+    assert.ok(runtime.REGIONS.some(region => region.species.includes(id) && zoneSupports(region, habitats)), id);
+    assert.deepEqual([...runtime.configuredSpecials(live)], configuredSpecimens);
+    assert.equal(lab.family, family);
+    assert.equal(lab.edition, '4.9.1');
+    assert.deepEqual(Object.values(routes[id]).sort(), pendingPlates.slice().sort());
+    for (const [variant, file] of Object.entries(routes[id])) {
+      count += 1;
+      assert.equal(cutouts[file], true);
+      for (const size of ['', '64/', '128/', '256/']) assert.ok(files.includes('naturalist-art/plates/' + size + file));
+      for (const surface of ['field', 'journal', 'bestiary', 'museum']) {
+        const markup = art.render(id, { variant, surface, habitat: habitats[0] }, () => '');
+        assert.ok(markup.includes('atlas-art-' + surface + ' atlas-art-cutout') && markup.includes(file));
+      }
+    }
+  }
+  assert.equal(count, 16);
+
+  const legends = [...runtime.LEGENDARY_SPECIMENS];
+  assert.deepEqual(legends.map(item => item.name).sort(),
+    ['Ámbar', 'Niebla', 'Fenrir', 'Ascua', 'Silverback', 'Atlas', 'Centinela', 'Basalto', 'Seda', 'Junco', 'Áncora', 'Remonte'].sort());
+  assert.deepEqual(Array.from(legendaryComparisons.all.legendary, item => item.id), legends.map(item => item.speciesId));
+  const priorApp = execFileSync('git', ['show', '4ee0853:www/js/app.js'], { encoding: 'utf8', maxBuffer: 8e6 });
+  assert.equal(read('app'), priorApp, 'The game rules and original legend definitions remain identical');
+
+  const id = 'asia_esp_0369';
+  assert.notDeepEqual(fs.readFileSync('www/naturalist-art/plates/' + routes[id].normal),
+    fs.readFileSync('www/naturalist-art/plates/' + routes[id].legendario));
+  for (const legendary of legends) {
+    const species = legendary.speciesId;
+    const file = species + '--' + legendary.id + '.webp';
+    assert.equal(routes[species].legendario, file);
+    assert.equal(cutouts[file], true);
+    for (const size of [64, 128, 256, 512]) {
+      const derivative = (size === 512 ? '' : size + '/') + file;
+      assert.ok(files.includes('naturalist-art/plates/' + derivative));
+      const markup = art.render(species, { variant: 'legendario', category: 'Legendario', size }, () => '');
+      assert.match(markup, /class="atlas-art-frame legendary/);
+      assert.ok(markup.includes(derivative));
+    }
+    const rates = Object.entries(runtime.specimenRates(species));
+    const begin = rates.filter(([name]) => name !== 'Legendario').reduce((sum, [, rate]) => sum + rate, 0);
+    const draw = () => [0.9, begin + rates.find(([name]) => name === 'Legendario')[1] / 2][turn++];
+    let turn = 0;
+    const encounter = runtime.rollSpecimen(species, runtime.state, draw);
+    assert.equal(encounter.category, 'Legendario');
+    runtime.recordSpecimen(species, encounter, runtime.state);
+    assert.equal(runtime.state.legendaryFound[legendary.id].speciesId, species);
+    turn = 0;
+    assert.equal(runtime.rollSpecimen(species, runtime.state, draw).category, '');
+  }
+  assert.equal(migrationProgress.legendary, 12);
+  const collection = runtime.renderLegendaryCollection();
+  for (const legendary of legends) assert.ok(collection.includes(legendary.name), legendary.name);
 });

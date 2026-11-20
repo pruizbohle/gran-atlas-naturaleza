@@ -7,8 +7,10 @@ const os = require('node:os');
 const path = require('node:path');
 const { chromium } = require('playwright');
 
-const archive = process.env.ATLAS_HISTORY_WWW || '/workspace/work/v490/reference';
+const archive = process.env.ATLAS_HISTORY_WWW || '/workspace/work/v491/reference';
 const version = require('../package.json').version;
+const previous = '4.9.0';
+const future = version.replace(/\d+$/, patch => String(Number(patch) + 1));
 const evidence = process.env.ATLAS_EVIDENCE_DIR;
 const host = '127.0.0.1';
 const rollbackKeys = ['discovered', 'published', 'sightings', 'stages', 'specialFound', 'legendaryFound',
@@ -104,6 +106,16 @@ async function finish(page, base, raw) {
   }
 }
 
+async function openPreparedBaseline(page, base) {
+  await page.goto(base + 'actualizar-atlas.html');
+  await page.locator('#atlasUpdateApply').click();
+  await statusText(page, /Descarga completa e integridad verificada/);
+  await page.locator('#atlasUpdateInstall').click();
+  await statusText(page, /instalada\. El juego/);
+  await page.locator('#atlasUpdateReturn').click();
+  await page.waitForFunction(() => !!window.AtlasSaveBridge);
+}
+
 async function runMigration(browser, base, old, mobile) {
   serving = path.join(archive, old.replaceAll('.', ''), 'www');
   const context = await browser.newContext({
@@ -115,7 +127,8 @@ async function runMigration(browser, base, old, mobile) {
   page.on('pageerror', error => errors.push(error.message));
   const row = { from: old, to: version, mobile, tested: [] };
   try {
-    await page.goto(base);
+    if (old === previous) await openPreparedBaseline(page, base);
+    else await page.goto(base);
     await page.waitForFunction(() => navigator.serviceWorker.controller, null, { timeout: 180000 });
     assert.match(await page.title(), new RegExp('v' + old));
     await seed(page);
@@ -136,6 +149,18 @@ async function runMigration(browser, base, old, mobile) {
     assert.equal(await page.evaluate(async () => Boolean((await navigator.serviceWorker.getRegistration()).waiting)), false);
     assert.deepEqual(candidateRequests(), []);
     row.tested.push('sin precarga automática');
+    if (old === previous) {
+      await page.evaluate(() => {
+        const now = Date.now;
+        Date.now = () => now() + 61000;
+        window.dispatchEvent(new Event('focus'));
+      });
+      const notice = page.locator('#atlasUpdateNotice');
+      await notice.waitFor();
+      assert.ok((await notice.innerText()).includes('Disponible ' + version));
+      assert.deepEqual(candidateRequests(), []);
+      row.tested.push('detección real de la publicación al recuperar el foco');
+    }
 
     if (old === '4.3.0') {
       await page.goto(base + 'actualizar.html?demo=viejo');
@@ -153,7 +178,7 @@ async function runMigration(browser, base, old, mobile) {
     row.tested.push('ruta universal bajo el service worker histórico');
 
     const readSave = () => update.evaluate(() => localStorage.getItem('gran_atlas_v05'));
-    if (old === '4.8.1') {
+    if (old === '4.8.1' || old === previous) {
       const raw = await readSave();
       await context.setOffline(true);
       await update.locator('#atlasUpdateApply').click();
@@ -165,9 +190,9 @@ async function runMigration(browser, base, old, mobile) {
       row.tested.push('pérdida de conexión');
     }
 
-    if (old === '4.8.2') {
+    if (old === previous) {
       for (const kind of ['interruption', 'checksum']) {
-        fault = { kind, file: '/naturalist-art/plates/64/af_manta_gigante--melanico.webp' };
+        fault = { kind, file: '/naturalist-art/plates/64/asia_esp_0369--remonte.webp' };
         const active = await update.evaluate(() => navigator.serviceWorker.controller.scriptURL);
         await update.locator('#atlasUpdateApply').click();
         await statusText(update, /Se interrumpió la descarga o falló/);
@@ -189,7 +214,7 @@ async function runMigration(browser, base, old, mobile) {
     row.tested.push('activación bloqueada con otra pestaña');
     await page.close();
     let raw = await readSave();
-    if (old === '4.8.2') {
+    if (old === previous) {
       await update.evaluate(() => {
         const data = JSON.parse(localStorage.getItem('gran_atlas_v05'));
         data.money += 9;
@@ -208,8 +233,8 @@ async function runMigration(browser, base, old, mobile) {
     await update.reload();
     await update.waitForFunction(() => !!window.AtlasSaveBridge);
     await update.goto(base + 'naturalist-art/');
-    await update.locator('[data-mode=cartilaginous]').click();
-    await update.locator('#bird-set').selectOption('manta-pigment');
+    await update.locator('[data-mode=salmonids]').click();
+    await update.locator('#bird-set').selectOption('remonte');
     const plates = await update.locator('.taxon-comparison img').evaluateAll(imgs => Promise.all(imgs.map(async img => {
       await img.decode();
       return img.naturalWidth;
@@ -238,7 +263,7 @@ async function freshAndNotify(browser, base) {
     await page.evaluate(() => window.dispatchEvent(new Event('focus')));
     assert.equal(requests.filter(url => url.startsWith('/atlas-release.json?')).length, count);
 
-    announced = '4.9.1';
+    announced = future;
     // Advance only the version-check clock and dispatch focus without modifying the worker.
     await page.evaluate(() => {
       const now = Date.now;
@@ -246,14 +271,16 @@ async function freshAndNotify(browser, base) {
       window.dispatchEvent(new Event('focus'));
     });
     await page.locator('#atlasUpdateNotice').waitFor();
-    assert.match(await page.locator('#atlasUpdateNotice').innerText(), /Nueva versión disponible[\s\S]*4.9.0[\s\S]*4.9.1/);
+    const detail = await page.locator('#atlasUpdateNotice').innerText();
+    assert.ok(detail.includes('Nueva versión disponible') && detail.includes('Instalada ' + version) &&
+      detail.includes('Disponible ' + future));
     await page.locator('#atlasUpdateLater').click();
     assert.equal(await page.locator('#atlasUpdateNotice').isHidden(), true);
     await page.locator('#saveManagerOpen').click();
     const backups = page.locator('[data-cp-save]');
     if (await backups.isVisible()) await backups.click();
     await page.locator('#atlasUpdateLaunch').click();
-    await page.getByText('Versión nueva disponible 4.9.1.').waitFor();
+    await page.getByText('Versión nueva disponible ' + future + '.').waitFor();
     assert.equal(await page.locator('#atlasUpdatePageLink').isVisible(), true);
     assert.deepEqual(candidateRequests(), []);
 
@@ -280,11 +307,11 @@ async function freshAndNotify(browser, base) {
   }
 }
 
-async function checkMantaInGame(app) {
+async function checkRemonteInGame(app) {
   const { harness } = require('../tests/helpers/live-game.cjs');
   const gameSource = ['gm06/catalog', 'gm07-a04/catalog', 'app'].map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
-  const region = harness({}, null, { gameSource }).window.__atlasTest.REGIONS.find(zone => zone.id === 'HX-07-14');
-  const id = 'af_manta_gigante';
+  const region = harness({}, null, { gameSource }).window.__atlasTest.REGIONS.find(zone => zone.id === 'HX-03-18');
+  const id = 'asia_esp_0369';
   const open = tab => app.locator('.tab[data-tab=' + tab + ']').first().evaluate(button => button.click());
   await app.bringToFront();
   await app.evaluate(({ region, id }) => {
@@ -293,7 +320,7 @@ async function checkMantaInGame(app) {
     const save = AtlasSaveBridge.getSaveData();
     save.currentRegion = region.id;
     save.regionUnlocked[region.id] = true;
-    save.habitat = 'costa';
+    save.habitat = 'rio';
     save.time = 'dia';
     save.season = 'primavera';
     save.helpers = 3;
@@ -309,7 +336,7 @@ async function checkMantaInGame(app) {
   await open('field');
   const start = performance.now();
   try {
-    await app.locator('#fieldResult img[src*="/af_manta_gigante--"]').evaluate(img => img.decode(), undefined, { timeout: 20000 });
+    await app.locator('#fieldResult img[src*="/asia_esp_0369--"]').evaluate(img => img.decode(), undefined, { timeout: 20000 });
   } catch (error) {
     console.error(await app.evaluate(id => {
       const save = AtlasSaveBridge.getSaveData();
@@ -326,22 +353,22 @@ async function checkMantaInGame(app) {
     save.stages[id] = 5;
     save.published[id] = true;
     save.selectedJournal = id;
-    save.specialFound[id] = { 'Melánico': true, Notable: true };
+    save.legendaryFound.remonte = { id: 'remonte', speciesId: id };
     save.museum.exhibits[id] = true;
-    save.lastEncounter = { species: id, title: 'Manta gigante', sequence: save.encounterSequence,
-      entries: [{ id, amount: 2, variant: 'Melánico', category: 'Notable' }] };
+    save.lastEncounter = { species: id, title: 'Remonte', sequence: save.encounterSequence,
+      entries: [{ id, amount: 1, variant: 'Legendario', category: 'Legendario' }] };
     AtlasSaveBridge.restoreGame(save);
   }, id);
-  const variant = app.locator('#fieldResult .notable img[src$="/af_manta_gigante--melanico.webp"]');
+  const variant = app.locator('#fieldResult .legendary img[src$="/asia_esp_0369--remonte.webp"]');
   await variant.evaluate(img => img.decode());
   assert.match(await variant.evaluate(img => getComputedStyle(img).filter), /drop-shadow/);
-  await app.locator('.field-environment .landscape-costa').evaluate(img => img.decode());
-  if (evidence) await app.locator('.field-stage').screenshot({ path: path.join(evidence, 'manta-campo.jpg') });
-  const normal = 'img[src$="/af_manta_gigante--normal.webp"]';
+  await app.locator('.field-environment .landscape-rio').evaluate(img => img.decode());
+  if (evidence) await app.locator('.field-stage').screenshot({ path: path.join(evidence, 'remonte-campo.jpg') });
+  const normal = 'img[src$="/asia_esp_0369--normal.webp"]';
   await open('journal');
   await app.locator('.j25-sheet ' + normal).first().evaluate(img => img.decode());
   await open('bestiary');
-  await app.locator('#b26-search').fill('Mobula birostris');
+  await app.locator('#b26-search').fill('Oncorhynchus gorbuscha');
   await app.locator('.b26-card').filter({ has: app.locator(normal) }).click();
   await app.locator('.b26-dialog ' + normal).first().evaluate(img => img.decode());
   await app.locator('[data-action=b26-close]').click();
@@ -378,7 +405,7 @@ async function legacyEntry(browser, base) {
 }
 
 async function installedMigration(base) {
-  serving = path.join(archive, '482', 'www');
+  serving = path.join(archive, previous.replaceAll('.', ''), 'www');
   requests = [];
   const profile = fs.mkdtempSync(path.join(os.tmpdir(), 'atlas-installed-'));
   try {
@@ -389,7 +416,7 @@ async function installedMigration(base) {
     });
     try {
       const browserTab = context.pages()[0];
-      await browserTab.goto(base);
+      await openPreparedBaseline(browserTab, base);
       await browserTab.waitForFunction(() => navigator.serviceWorker.controller, null, { timeout: 180000 });
       const protocol = await context.newCDPSession(browserTab);
       await protocol.send('PWA.install', { manifestId: base, installUrlOrBundleUrl: base });
@@ -399,13 +426,13 @@ async function installedMigration(base) {
       const app = await opened;
       await app.waitForLoadState();
       await app.waitForFunction(() => matchMedia('(display-mode: standalone)').matches);
-      assert.match(await app.title(), /v4\.8\.2/);
+      assert.ok((await app.title()).includes('v' + previous));
       await browserTab.goto('about:blank');
       await seed(app);
       serving = 'www';
       await app.goto(base + 'actualizar-atlas.html');
       await statusText(app, /Nueva versión disponible/);
-      assert.equal(await app.locator('#atlasUpdateInstalled').innerText(), '4.8.2');
+      assert.equal(await app.locator('#atlasUpdateInstalled').innerText(), previous);
       const raw = await app.evaluate(() => localStorage.getItem('gran_atlas_v05'));
       await app.locator('#atlasUpdateApply').click();
       await statusText(app, /Descarga completa e integridad verificada/);
@@ -416,13 +443,13 @@ async function installedMigration(base) {
       await app.reload();
       await app.waitForFunction(() => !!window.AtlasSaveBridge && matchMedia('(display-mode: standalone)').matches);
       assert.match(await app.title(), new RegExp('v' + version));
-      const manta = await checkMantaInGame(app);
+      const remonte = await checkRemonteInGame(app);
       await context.setOffline(false);
       await protocol.send('PWA.uninstall', { manifestId: base });
-      evidenceRows.push({ from: '4.8.2', to: version, installed: true, manta, tested: [
+      evidenceRows.push({ from: previous, to: version, installed: true, remonte, tested: [
         'PWA instalada mediante Chromium', 'ventana standalone', 'respaldo exacto', 'reapertura offline'
       ] });
-      console.log('PASS PWA V4.8.2 instalada en Chromium, ventana standalone, actualización y reapertura offline');
+      console.log('PASS PWA V4.9.0 instalada en Chromium, ventana standalone, actualización y reapertura offline');
     } finally {
       await context.close();
     }
@@ -443,7 +470,7 @@ async function installedMigration(base) {
         if (process.argv.includes('--legacy-link')) {
           await legacyEntry(browser, base);
         } else if (!process.argv.includes('--fresh-only')) {
-          for (const [old, mobile] of [['4.3.0', false], ['4.8.1', true], ['4.8.2', false]]) {
+          for (const [old, mobile] of [['4.3.0', false], ['4.8.1', true], ['4.8.2', false], [previous, true]]) {
             requests = [];
             await runMigration(browser, base, old, mobile);
           }

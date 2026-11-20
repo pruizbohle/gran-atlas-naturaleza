@@ -1,4 +1,4 @@
-# Inventario naturalista del catálogo 4.9.0
+# Inventario naturalista del catálogo 4.9.1
 
 | Grupo | Familia | ID | Nombre común | Nombre científico | Continente | Zonas del juego | Variantes | Dimorfismo | Ejemplares |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -749,6 +749,11 @@
 | Anfibios | Cryptobranchidae | asia_esp_0017 | Salamandra gigante japonesa | *Andrias japonicus* | Asia | Archipiélago Japonés | Normal, Melánico | No | Normal, Notable |
 | Anfibios | Hynobiidae | asia_esp_0899 | Salamandra siberiana | *Salamandrella keyserlingii* | Asia | Siberia Central, Siberia Oriental, Kamchatka | Normal, Albino | No | Normal, Notable |
 | Anfibios | Ambystomatidae | na_esp_ambystoma_tigrinum | Salamandra tigre | *Ambystoma tigrinum* | Norteamérica | Región de los Grandes Lagos | Normal | No | Normal, Notable |
+| Salmónidos | Salmonidae | gm06_salmo_salar | Salmón atlántico | *Salmo salar* | Norteamérica | Labrador subártico, Atlántico canadiense | Normal | No | Normal, Notable, Épico, Excepcional |
+| Salmónidos | Salmonidae | mar_esp_oncorhynchus_keta | Salmón chum | *Oncorhynchus keta* | Océanos | Pacífico noroccidental | Normal | No | Normal, Notable |
+| Salmónidos | Salmonidae | mar_esp_oncorhynchus_tshawytscha | Salmón real | *Oncorhynchus tshawytscha* | Océanos | Pacífico nororiental | Normal | No | Normal, Notable |
+| Salmónidos | Salmonidae | asia_esp_0371 | Salmón rojo | *Oncorhynchus nerka* | Asia | Kamchatka | Normal, Albino, Melánico | No | Normal, Notable |
+| Salmónidos | Salmonidae | asia_esp_0369 | Salmón rosado | *Oncorhynchus gorbuscha* | Asia | Kamchatka | Normal, Albino, Melánico | No | Normal, Notable, Épico, Excepcional, Legendario · Remonte |
 | Anfibios | Bufonidae | af_xlsx_131_sclerophrys_regularis | Sapo común africano | *Sclerophrys regularis* | África | Valle del Nilo | Normal, Albino | No | Normal, Notable |
 | Anfibios | Bufonidae | eu_esp_0659 | Sapo corredor | *Epidalea calamita* | Europa | Europa Occidental, Península Ibérica | Normal, Melánico | No | Normal, Notable |
 | Anfibios | Bufonidae | af_xlsx_131_schismaderma_carens | Sapo de vientre rojo | *Schismaderma carens* | África | Sabanas del sudeste africano | Normal, Albino | No | Normal, Notable |
@@ -838,6 +843,9 @@
 | Anfibios | Salamandridae | eu_esp_0657 | Tritón alpino | *Ichthyosaura alpestris* | Europa | Alpes, Europa Central | Normal, Melánico | No | Normal, Notable |
 | Anfibios | Salamandridae | eu_esp_0655 | Tritón crestado | *Triturus cristatus* | Europa | Islas Británicas, Europa Occidental, Europa Central | Normal, Melánico | No | Normal, Notable |
 | Anfibios | Salamandridae | eu_esp_0656 | Tritón palmeado | *Lissotriton helveticus* | Europa | Islas Británicas, Europa Occidental | Normal, Melánico | No | Normal, Notable |
+| Salmónidos | Salmonidae | na_esp_oncorhynchus_mykiss | Trucha arcoíris | *Oncorhynchus mykiss* | Norteamérica | Columbia Británica, Montañas Rocosas | Normal, Albino | No | Normal, Notable |
+| Salmónidos | Salmonidae | eu_esp_0669 | Trucha común | *Salmo trutta* | Europa | Islas Británicas, Escandinavia, Europa Central | Normal, Melánico | No | Normal, Notable |
+| Salmónidos | Salmonidae | na_esp_salvelinus_fontinalis | Trucha de arroyo | *Salvelinus fontinalis* | Norteamérica | Región de los Grandes Lagos, Bosques del este norteamericano | Normal, Albino | No | Normal, Notable |
 | Rincocéfalos | Sphenodontidae | oc_esp_sphenodon_punctatus | Tuátara | *Sphenodon punctatus* | Oceanía | Nueva Zelanda | Normal | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Ramphastidae | sa_esp_andigena_hypoglauca | Tucán andino pechigris | *Andigena hypoglauca* | Sudamérica | Andes del Norte | Normal | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Ramphastidae | sa_esp_ramphastos_tucanus | Tucán de garganta blanca | *Ramphastos tucanus* | Sudamérica | Amazonía | Normal | No | Normal, Notable |

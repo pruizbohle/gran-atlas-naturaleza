@@ -6,7 +6,7 @@ const path = require('node:path');
 const http = require('node:http');
 const vm = require('node:vm');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v490';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v491';
 require('../www/js/naturalist-assets-v400.js');
 const expected = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') +
   '\n({catalog,migrationProgress});');
@@ -62,7 +62,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#category').selectOption('Notable');
       await page.locator('.mixed-field .atlas-art-image').evaluate(img => img.decode());
       assert.equal(await page.locator('.mixed-field .field-animal-sprite > svg').count(), 1);
-      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Trucha común · SVG/);
+      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Barbo común · SVG/);
       const art = page.locator('.mixed-field .plate');
       const image = art.locator('.atlas-art-image');
       const src = await image.getAttribute('src');
@@ -93,7 +93,9 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 905);
+      assert.equal(await page.locator('.gallery-card').count(), 913);
+      await page.locator('#release-scope').selectOption('4.9.1');
+      assert.equal(await page.locator('.gallery-card').count(), 8);
       await page.locator('#release-scope').selectOption('4.9.0');
       assert.equal(await page.locator('.gallery-card').count(), 18);
       await page.locator('#release-scope').selectOption('');
@@ -195,6 +197,28 @@ const server = http.createServer((req, res) => {
         await sharks.screenshot({ path: evidenceDir + '/tiburon-blanco-' + viewport.width + '.jpg' });
         await page.locator('#bird-set').selectOption('eagle-ray');
         await sharks.screenshot({ path: evidenceDir + '/rayas-' + viewport.width + '.jpg' });
+      }
+      await page.locator('[data-mode=salmonids]').click();
+      const salmonids = page.locator('.taxon-comparison');
+      assert.equal(await page.locator('#bird-set option').count(), 5);
+      await page.locator('#bird-set').selectOption('remonte');
+      for (const size of [64, 128]) {
+        await page.locator('#comparison-size').selectOption(String(size));
+        assert.deepEqual(await salmonids.locator('img').evaluateAll(decodePlates), [
+          [size, 'asia_esp_0369--normal.webp'], [size, 'asia_esp_0369--remonte.webp']
+        ]);
+      }
+      if (process.argv.includes('--write-evidence')) {
+        await salmonids.screenshot({ path: evidenceDir + '/remonte-comparacion-' + viewport.width + '.jpg' });
+      }
+      await page.locator('[data-mode=legendary]').click();
+      const collection = page.locator('.taxon-comparison');
+      assert.equal(await collection.locator('figure').count(), 12);
+      assert.equal(await collection.locator('.atlas-art-frame.legendary').count(), 12);
+      assert.ok((await collection.locator('img').evaluateAll(decodePlates)).every(([size]) => size === 128));
+      assert.match(await collection.innerText(), /Remonte/);
+      if (process.argv.includes('--write-evidence')) {
+        await collection.screenshot({ path: evidenceDir + '/legendarios-' + viewport.width + '.jpg' });
       }
       await page.locator('[data-mode=visual-scale]').click();
       await page.locator('#comparison-size').selectOption('256');
@@ -509,7 +533,7 @@ const server = http.createServer((req, res) => {
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 905);
+      assert.equal(await page.locator('.gallery-card').count(), 913);
       await page.locator('#cut-state').selectOption('pending');
       assert.equal(await page.locator('.gallery-card').count(),
         expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);
@@ -550,7 +574,7 @@ const server = http.createServer((req, res) => {
       assert.ok(plates.every(([width, height]) => width === 512 && height === 512));
       assert.deepEqual(errors, []);
       await session.close();
-      console.log('PASS', viewport.width, 'px: diecisiete modos, filtros, comparación de condrictios, escala visual y exportación offline; primera lámina', firstRender, 'ms');
+      console.log('PASS', viewport.width, 'px: diecinueve modos, filtros, salmónidos y doce legendarios, escala visual y exportación offline; primera lámina', firstRender, 'ms');
     }
   } finally { await browser.close(); server.close(); }
 })().catch(error => { console.error(error); server.close(); process.exitCode = 1; });

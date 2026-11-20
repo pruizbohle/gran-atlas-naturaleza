@@ -1,0 +1,2010 @@
+{
+  "version": "4.9.1",
+  "summary": {
+    "species": 85,
+    "families": [
+      "Acanthuridae",
+      "Acipenseridae",
+      "Alestidae",
+      "Alloposidae",
+      "Anoplogastridae",
+      "Arapaimidae",
+      "Architeuthidae",
+      "Atherinopsidae",
+      "Balistidae",
+      "Bryconidae",
+      "Carangidae",
+      "Ceratiidae",
+      "Chaetodontidae",
+      "Channichthyidae",
+      "Channidae",
+      "Characidae",
+      "Cichlidae",
+      "Clupeidae",
+      "Cranchiidae",
+      "Cyprinidae",
+      "Enteroctopodidae",
+      "Epinephelidae",
+      "Esocidae",
+      "Eurypharyngidae",
+      "Exocoetidae",
+      "Gadidae",
+      "Gonatidae",
+      "Grimpoteuthidae",
+      "Gymnotidae",
+      "Histioteuthidae",
+      "Ipnopidae",
+      "Istiophoridae",
+      "Labridae",
+      "Latidae",
+      "Liparidae",
+      "Loliginidae",
+      "Molidae",
+      "Myctophidae",
+      "Nototheniidae",
+      "Octopodidae",
+      "Ommastrephidae",
+      "Onychoteuthidae",
+      "Opisthoproctidae",
+      "Pantodontidae",
+      "Percidae",
+      "Pimelodidae",
+      "Pomacanthidae",
+      "Pomacentridae",
+      "Scombridae",
+      "Scorpaenidae",
+      "Serrasalmidae",
+      "Sinipercidae",
+      "Sternoptychidae",
+      "Stomiidae",
+      "Synanceiidae",
+      "Syngnathidae",
+      "Thysanoteuthidae",
+      "Tincidae",
+      "Tremoctopodidae",
+      "Vampyroteuthidae",
+      "Xiphiidae"
+    ],
+    "albino": 7,
+    "melanic": 5,
+    "dimorphicSpecies": 0,
+    "legendary": [],
+    "estimatedPlates": 97
+  },
+  "classes": {
+    "Actinopterygii": 65,
+    "Cephalopoda": 20
+  },
+  "lots": {
+    "condrictios": {
+      "title": "Tiburones y rayas",
+      "review": "Hocico, dientes y cinco a siete hendiduras branquiales en tiburones, disco y posición de las branquias en rayas.",
+      "species": 0,
+      "families": [],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 0,
+      "inventory": []
+    },
+    "salmonidos": {
+      "title": "Salmónidos y Remonte",
+      "review": "Aleta adiposa, radios, pedúnculo caudal y contraste entre coloración habitual y nupcial.",
+      "species": 0,
+      "families": [],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 0,
+      "inventory": []
+    },
+    "dulceacuicolas": {
+      "title": "Peces dulceacuícolas y estuarinos",
+      "review": "Barbillones, placas, línea lateral, forma de mandíbulas, aletas y patrones de escamas.",
+      "species": 23,
+      "families": [
+        "Acipenseridae",
+        "Alestidae",
+        "Arapaimidae",
+        "Atherinopsidae",
+        "Bryconidae",
+        "Channidae",
+        "Characidae",
+        "Cichlidae",
+        "Cyprinidae",
+        "Esocidae",
+        "Gymnotidae",
+        "Latidae",
+        "Pantodontidae",
+        "Percidae",
+        "Pimelodidae",
+        "Serrasalmidae",
+        "Sinipercidae",
+        "Tincidae"
+      ],
+      "albino": 7,
+      "melanic": 5,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 35,
+      "inventory": [
+        {
+          "id": "asia_esp_0914",
+          "name": "Esturión siberiano",
+          "latin": "Acipenser baerii",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [
+            "Albino"
+          ],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Acipenseridae",
+          "configuredSpecimens": [
+            "Albino"
+          ],
+          "pendingPlates": [
+            "asia_esp_0914--normal.webp",
+            "asia_esp_0914--albino.webp"
+          ]
+        },
+        {
+          "id": "sa_esp_arapaima_gigas",
+          "name": "Arapaima",
+          "latin": "Arapaima gigas",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [
+            "Albino"
+          ],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Arapaimidae",
+          "configuredSpecimens": [
+            "Albino",
+            "Notable",
+            "Épico",
+            "Excepcional"
+          ],
+          "pendingPlates": [
+            "sa_esp_arapaima_gigas--normal.webp",
+            "sa_esp_arapaima_gigas--albino.webp"
+          ]
+        },
+        {
+          "id": "eu_esp_0668",
+          "name": "Barbo común",
+          "latin": "Barbus barbus",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [
+            "Melánico"
+          ],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Cyprinidae",
+          "configuredSpecimens": [
+            "Melánico",
+            "Notable"
+          ],
+          "pendingPlates": [
+            "eu_esp_0668--normal.webp",
+            "eu_esp_0668--melanico.webp"
+          ]
+        },
+        {
+          "id": "asia_esp_0915",
+          "name": "Pez cabeza de serpiente del norte",
+          "latin": "Channa argus",
+          "habitats": [
+            "rio",
+            "costa"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [
+            "Melánico"
+          ],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Channidae",
+          "configuredSpecimens": [
+            "Melánico",
+            "Notable"
+          ],
+          "pendingPlates": [
+            "asia_esp_0915--normal.webp",
+            "asia_esp_0915--melanico.webp"
+          ]
+        },
+        {
+          "id": "sa_esp_colossoma_macropomum",
+          "name": "Pacu negro",
+          "latin": "Colossoma macropomum",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Serrasalmidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "sa_esp_colossoma_macropomum--normal.webp"
+          ]
+        },
+        {
+          "id": "asia_esp_0910",
+          "name": "Carpa común",
+          "latin": "Cyprinus carpio",
+          "habitats": [
+            "humedal",
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Cyprinidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "asia_esp_0910--normal.webp"
+          ]
+        },
+        {
+          "id": "sa_esp_electrophorus_electricus",
+          "name": "Pez eléctrico amazónico",
+          "latin": "Electrophorus electricus",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Gymnotidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "sa_esp_electrophorus_electricus--normal.webp"
+          ]
+        },
+        {
+          "id": "na_esp_esox_lucius",
+          "name": "Lucio del norte",
+          "latin": "Esox lucius",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [
+            "Albino"
+          ],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Esocidae",
+          "configuredSpecimens": [
+            "Albino",
+            "Notable"
+          ],
+          "pendingPlates": [
+            "na_esp_esox_lucius--normal.webp",
+            "na_esp_esox_lucius--albino.webp"
+          ]
+        },
+        {
+          "id": "af_xlsx_pez_tigre_goliat",
+          "name": "Pez tigre goliat",
+          "latin": "Hydrocynus goliath",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [
+            "Albino"
+          ],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Alestidae",
+          "configuredSpecimens": [
+            "Albino",
+            "Notable"
+          ],
+          "pendingPlates": [
+            "af_xlsx_pez_tigre_goliat--normal.webp",
+            "af_xlsx_pez_tigre_goliat--albino.webp"
+          ]
+        },
+        {
+          "id": "af_xlsx_131_hydrocynus_vittatus",
+          "name": "Pez tigre africano",
+          "latin": "Hydrocynus vittatus",
+          "habitats": [
+            "rio",
+            "humedal"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [
+            "Albino"
+          ],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Alestidae",
+          "configuredSpecimens": [
+            "Albino",
+            "Notable"
+          ],
+          "pendingPlates": [
+            "af_xlsx_131_hydrocynus_vittatus--normal.webp",
+            "af_xlsx_131_hydrocynus_vittatus--albino.webp"
+          ]
+        },
+        {
+          "id": "oc_esp_lates_calcarifer",
+          "name": "Barramundi",
+          "latin": "Lates calcarifer",
+          "habitats": [
+            "rio",
+            "costa",
+            "humedal"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Latidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "oc_esp_lates_calcarifer--normal.webp"
+          ]
+        },
+        {
+          "id": "sa_esp_odontesthes_bonariensis",
+          "name": "Pejerrey argentino",
+          "latin": "Odontesthes bonariensis",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Atherinopsidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "sa_esp_odontesthes_bonariensis--normal.webp"
+          ]
+        },
+        {
+          "id": "af_xlsx_tilapia",
+          "name": "Tilapia del Nilo",
+          "latin": "Oreochromis niloticus",
+          "habitats": [
+            "rio",
+            "humedal"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [
+            "Albino"
+          ],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Cichlidae",
+          "configuredSpecimens": [
+            "Albino",
+            "Notable"
+          ],
+          "pendingPlates": [
+            "af_xlsx_tilapia--normal.webp",
+            "af_xlsx_tilapia--albino.webp"
+          ]
+        },
+        {
+          "id": "af_xlsx_131_pantodon_buchholzi",
+          "name": "Pez mariposa africano",
+          "latin": "Pantodon buchholzi",
+          "habitats": [
+            "rio",
+            "humedal"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [
+            "Albino"
+          ],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Pantodontidae",
+          "configuredSpecimens": [
+            "Albino",
+            "Notable"
+          ],
+          "pendingPlates": [
+            "af_xlsx_131_pantodon_buchholzi--normal.webp",
+            "af_xlsx_131_pantodon_buchholzi--albino.webp"
+          ]
+        },
+        {
+          "id": "sa_esp_paracheirodon_axelrodi",
+          "name": "Tetra cardenal",
+          "latin": "Paracheirodon axelrodi",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Characidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "sa_esp_paracheirodon_axelrodi--normal.webp"
+          ]
+        },
+        {
+          "id": "na_esp_perca_flavescens",
+          "name": "Perca amarilla",
+          "latin": "Perca flavescens",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Percidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "na_esp_perca_flavescens--normal.webp"
+          ]
+        },
+        {
+          "id": "eu_esp_0670",
+          "name": "Perca europea",
+          "latin": "Perca fluviatilis",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [
+            "Melánico"
+          ],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Percidae",
+          "configuredSpecimens": [
+            "Melánico",
+            "Notable"
+          ],
+          "pendingPlates": [
+            "eu_esp_0670--normal.webp",
+            "eu_esp_0670--melanico.webp"
+          ]
+        },
+        {
+          "id": "sa_esp_pseudoplatystoma_corruscans",
+          "name": "Bagre surubí",
+          "latin": "Pseudoplatystoma corruscans",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Pimelodidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "sa_esp_pseudoplatystoma_corruscans--normal.webp"
+          ]
+        },
+        {
+          "id": "sa_esp_pygocentrus_nattereri",
+          "name": "Piraña de vientre rojo",
+          "latin": "Pygocentrus nattereri",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Serrasalmidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "sa_esp_pygocentrus_nattereri--normal.webp"
+          ]
+        },
+        {
+          "id": "sa_esp_salminus_brasiliensis",
+          "name": "Dorado del río",
+          "latin": "Salminus brasiliensis",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Bryconidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "sa_esp_salminus_brasiliensis--normal.webp"
+          ]
+        },
+        {
+          "id": "asia_esp_0911",
+          "name": "Pez mandarín chino",
+          "latin": "Siniperca chuatsi",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [
+            "Melánico"
+          ],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Sinipercidae",
+          "configuredSpecimens": [
+            "Melánico",
+            "Notable"
+          ],
+          "pendingPlates": [
+            "asia_esp_0911--normal.webp",
+            "asia_esp_0911--melanico.webp"
+          ]
+        },
+        {
+          "id": "sa_esp_symphysodon_aequifasciatus",
+          "name": "Pez disco",
+          "latin": "Symphysodon aequifasciatus",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Cichlidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "sa_esp_symphysodon_aequifasciatus--normal.webp"
+          ]
+        },
+        {
+          "id": "eu_esp_0667",
+          "name": "Tenca",
+          "latin": "Tinca tinca",
+          "habitats": [
+            "rio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [
+            "Melánico"
+          ],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Tincidae",
+          "configuredSpecimens": [
+            "Melánico",
+            "Notable"
+          ],
+          "pendingPlates": [
+            "eu_esp_0667--normal.webp",
+            "eu_esp_0667--melanico.webp"
+          ]
+        }
+      ]
+    },
+    "arrecife": {
+      "title": "Peces óseos de arrecife",
+      "review": "Diversidad del perfil lateral, espinas, aletas transparentes y marcas diagnósticas en miniaturas.",
+      "species": 12,
+      "families": [
+        "Acanthuridae",
+        "Balistidae",
+        "Chaetodontidae",
+        "Epinephelidae",
+        "Exocoetidae",
+        "Labridae",
+        "Pomacanthidae",
+        "Pomacentridae",
+        "Scorpaenidae",
+        "Synanceiidae",
+        "Syngnathidae"
+      ],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 12,
+      "inventory": [
+        {
+          "id": "mar_esp_amphiprion_ocellaris",
+          "name": "Pez payaso común",
+          "latin": "Amphiprion ocellaris",
+          "habitats": [
+            "oceano_abierto",
+            "arrecife"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Pomacentridae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_balistoides_conspicillum",
+          "name": "Pez ballesta payaso",
+          "latin": "Balistoides conspicillum",
+          "habitats": [
+            "arrecife"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Balistidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_balistoides_conspicillum--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_bolbometopon_muricatum",
+          "name": "Pez loro jorobado",
+          "latin": "Bolbometopon muricatum",
+          "habitats": [
+            "arrecife"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Labridae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_bolbometopon_muricatum--normal.webp"
+          ]
+        },
+        {
+          "id": "gm06_chaetodon_semilarvatus",
+          "name": "Pez mariposa enmascarado",
+          "latin": "Chaetodon semilarvatus",
+          "habitats": [
+            "arrecife"
+          ],
+          "historicalGroup": "Chaetodontidae",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Chaetodontidae",
+          "configuredSpecimens": [
+            "Notable",
+            "Épico",
+            "Excepcional"
+          ],
+          "pendingPlates": [
+            "gm06_chaetodon_semilarvatus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_cheilinus_undulatus",
+          "name": "Pez napoleón",
+          "latin": "Cheilinus undulatus",
+          "habitats": [
+            "arrecife"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Labridae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_cheilinus_undulatus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_epinephelus_lanceolatus",
+          "name": "Mero gigante",
+          "latin": "Epinephelus lanceolatus",
+          "habitats": [
+            "arrecife"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Epinephelidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_epinephelus_lanceolatus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_exocoetus_volitans",
+          "name": "Pez volador tropical",
+          "latin": "Exocoetus volitans",
+          "habitats": [
+            "oceano_abierto",
+            "arrecife"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Exocoetidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_exocoetus_volitans--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_hippocampus_comes",
+          "name": "Caballito de mar tigre",
+          "latin": "Hippocampus comes",
+          "habitats": [
+            "arrecife"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Syngnathidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_hippocampus_comes--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_paracanthurus_hepatus",
+          "name": "Pez cirujano azul",
+          "latin": "Paracanthurus hepatus",
+          "habitats": [
+            "arrecife"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Acanthuridae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_paracanthurus_hepatus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_pomacanthus_imperator",
+          "name": "Pez ángel emperador",
+          "latin": "Pomacanthus imperator",
+          "habitats": [
+            "arrecife"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Pomacanthidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_pomacanthus_imperator--normal.webp"
+          ]
+        },
+        {
+          "id": "gm06_pterois_miles",
+          "name": "Pez león del Índico",
+          "latin": "Pterois miles",
+          "habitats": [
+            "arrecife"
+          ],
+          "historicalGroup": "Scorpaenidae",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Scorpaenidae",
+          "configuredSpecimens": [
+            "Notable",
+            "Épico",
+            "Excepcional"
+          ],
+          "pendingPlates": [
+            "gm06_pterois_miles--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_synanceia_verrucosa",
+          "name": "Pez piedra",
+          "latin": "Synanceia verrucosa",
+          "habitats": [
+            "arrecife"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Synanceiidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_synanceia_verrucosa--normal.webp"
+          ]
+        }
+      ]
+    },
+    "marinos": {
+      "title": "Peces óseos costeros, pelágicos y de plataforma",
+      "review": "Aletas y pínulas de pelágicos, barbillón de gadiformes y proporciones de peces luna.",
+      "species": 16,
+      "families": [
+        "Carangidae",
+        "Channichthyidae",
+        "Clupeidae",
+        "Gadidae",
+        "Istiophoridae",
+        "Molidae",
+        "Nototheniidae",
+        "Scombridae",
+        "Xiphiidae"
+      ],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 16,
+      "inventory": [
+        {
+          "id": "mar_esp_chaenocephalus_aceratus",
+          "name": "Pez hielo antártico",
+          "latin": "Chaenocephalus aceratus",
+          "habitats": [
+            "plataforma_marina"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Channichthyidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_chaenocephalus_aceratus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_clupea_harengus",
+          "name": "Arenque atlántico",
+          "latin": "Clupea harengus",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Clupeidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_clupea_harengus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_dissostichus_eleginoides",
+          "name": "Bacalao austral",
+          "latin": "Dissostichus eleginoides",
+          "habitats": [
+            "plataforma_marina"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Nototheniidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_dissostichus_eleginoides--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_gadus_macrocephalus",
+          "name": "Bacalao del Pacífico",
+          "latin": "Gadus macrocephalus",
+          "habitats": [
+            "costa_marina"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Gadidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_gadus_macrocephalus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_gadus_morhua",
+          "name": "Bacalao atlántico",
+          "latin": "Gadus morhua",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Gadidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_gadus_morhua--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_istiophorus_platypterus",
+          "name": "Pez vela del Indo-Pacífico",
+          "latin": "Istiophorus platypterus",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Istiophoridae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_istiophorus_platypterus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_mola_alexandrini",
+          "name": "Pez luna del sur",
+          "latin": "Mola alexandrini",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Molidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_mola_alexandrini--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_mola_mola",
+          "name": "Pez luna común",
+          "latin": "Mola mola",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Molidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_mola_mola--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_sardina_pilchardus",
+          "name": "Sardina europea",
+          "latin": "Sardina pilchardus",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Clupeidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_sardina_pilchardus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_scomber_scombrus",
+          "name": "Caballa atlántica",
+          "latin": "Scomber scombrus",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Scombridae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_scomber_scombrus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_thunnus_alalunga",
+          "name": "Bonito del norte",
+          "latin": "Thunnus alalunga",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Scombridae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_thunnus_alalunga--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_thunnus_albacares",
+          "name": "Atún de aleta amarilla",
+          "latin": "Thunnus albacares",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Scombridae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_thunnus_albacares--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_thunnus_thynnus",
+          "name": "Atún rojo atlántico",
+          "latin": "Thunnus thynnus",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Scombridae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_thunnus_thynnus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_trachurus_murphyi",
+          "name": "Jurel chileno",
+          "latin": "Trachurus murphyi",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Carangidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_trachurus_murphyi--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_trachurus_novaezelandiae",
+          "name": "Jurel austral",
+          "latin": "Trachurus novaezelandiae",
+          "habitats": [
+            "costa_marina"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Carangidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_trachurus_novaezelandiae--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_xiphias_gladius",
+          "name": "Pez espada",
+          "latin": "Xiphias gladius",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Xiphiidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_xiphias_gladius--normal.webp"
+          ]
+        }
+      ]
+    },
+    "profundos": {
+      "title": "Peces óseos de aguas profundas",
+      "review": "Fotóforos, señuelos, ojos tubulares, radios alargados y piel delicada, con contraste sobre fondo de aguas profundas.",
+      "species": 14,
+      "families": [
+        "Anoplogastridae",
+        "Ceratiidae",
+        "Eurypharyngidae",
+        "Ipnopidae",
+        "Liparidae",
+        "Myctophidae",
+        "Nototheniidae",
+        "Opisthoproctidae",
+        "Sternoptychidae",
+        "Stomiidae"
+      ],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 14,
+      "inventory": [
+        {
+          "id": "deep_esp_anoplogaster_brachycera",
+          "name": "Pez ogro",
+          "latin": "Anoplogaster brachycera",
+          "habitats": [
+            "columna_batial"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Anoplogastridae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_anoplogaster_brachycera--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_anoplogaster_cornuta",
+          "name": "Pez abisal colmillo largo",
+          "latin": "Anoplogaster cornuta",
+          "habitats": [
+            "columna_batial"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Anoplogastridae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_anoplogaster_cornuta--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_argyropelecus_aculeatus",
+          "name": "Pez hacha plateado",
+          "latin": "Argyropelecus aculeatus",
+          "habitats": [
+            "columna_mesopelagica",
+            "columna_profunda_fria"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Sternoptychidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_argyropelecus_aculeatus--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_bathypterois_grallator",
+          "name": "Pez trípode",
+          "latin": "Bathypterois grallator",
+          "habitats": [
+            "fondo_batial"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Ipnopidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_bathypterois_grallator--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_benthosema_glaciale",
+          "name": "Pez linterna boreal",
+          "latin": "Benthosema glaciale",
+          "habitats": [
+            "columna_mesopelagica"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Myctophidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_benthosema_glaciale--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_ceratias_holboelli",
+          "name": "Rape abisal",
+          "latin": "Ceratias holboelli",
+          "habitats": [
+            "columna_batial",
+            "columna_profunda_fria"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Ceratiidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_ceratias_holboelli--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_chauliodus_macouni",
+          "name": "Pez víbora del Pacífico",
+          "latin": "Chauliodus macouni",
+          "habitats": [
+            "columna_mesopelagica",
+            "columna_batial"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Stomiidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_chauliodus_macouni--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_dissostichus_mawsoni",
+          "name": "Bacalao antártico",
+          "latin": "Dissostichus mawsoni",
+          "habitats": [
+            "fondo_profundo_frio"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Nototheniidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_dissostichus_mawsoni--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_eurypharynx_pelecanoides",
+          "name": "Pez pelícano",
+          "latin": "Eurypharynx pelecanoides",
+          "habitats": [
+            "columna_batial"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Eurypharyngidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_eurypharynx_pelecanoides--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_idiacanthus_antrostomus",
+          "name": "Pez dragón negro",
+          "latin": "Idiacanthus antrostomus",
+          "habitats": [
+            "columna_mesopelagica"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Stomiidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_idiacanthus_antrostomus--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_macropinna_microstoma",
+          "name": "Pez cabeza transparente",
+          "latin": "Macropinna microstoma",
+          "habitats": [
+            "columna_mesopelagica",
+            "columna_batial"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Opisthoproctidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ]
+        },
+        {
+          "id": "abisal_esp_pseudoliparis_kermadecensis",
+          "name": "Pez caracol de Kermadec",
+          "latin": "Pseudoliparis kermadecensis",
+          "habitats": [
+            "hadal_kermadec"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Liparidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "abisal_esp_pseudoliparis_kermadecensis--normal.webp"
+          ]
+        },
+        {
+          "id": "abisal_esp_pseudoliparis_swirei",
+          "name": "Pez caracol de las Marianas",
+          "latin": "Pseudoliparis swirei",
+          "habitats": [
+            "hadal_marianas"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Liparidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "abisal_esp_pseudoliparis_swirei--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_stomias_boa",
+          "name": "Pez dragón abisal",
+          "latin": "Stomias boa",
+          "habitats": [
+            "columna_batial"
+          ],
+          "historicalGroup": "Peces óseos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Actinopterygii",
+          "family": "Stomiidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_stomias_boa--normal.webp"
+          ]
+        }
+      ]
+    },
+    "cefalopodos": {
+      "title": "Pulpos, calamares y calamar vampiro",
+      "review": "Ocho brazos en octópodos, dos tentáculos adicionales en calamares, membranas y aletas, con margen transparente en ventosas y filamentos.",
+      "species": 20,
+      "families": [
+        "Alloposidae",
+        "Architeuthidae",
+        "Cranchiidae",
+        "Enteroctopodidae",
+        "Gonatidae",
+        "Grimpoteuthidae",
+        "Histioteuthidae",
+        "Loliginidae",
+        "Octopodidae",
+        "Ommastrephidae",
+        "Onychoteuthidae",
+        "Thysanoteuthidae",
+        "Tremoctopodidae",
+        "Vampyroteuthidae"
+      ],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 20,
+      "inventory": [
+        {
+          "id": "mar_esp_amphioctopus_marginatus",
+          "name": "Pulpo de coco",
+          "latin": "Amphioctopus marginatus",
+          "habitats": [
+            "arrecife",
+            "costa_marina"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Octopodidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_amphioctopus_marginatus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_architeuthis_dux",
+          "name": "Calamar gigante",
+          "latin": "Architeuthis dux",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Architeuthidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_architeuthis_dux--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_dosidicus_gigas",
+          "name": "Calamar de Humboldt",
+          "latin": "Dosidicus gigas",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Ommastrephidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_dosidicus_gigas--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_enteroctopus_dofleini",
+          "name": "Pulpo gigante del Pacífico",
+          "latin": "Enteroctopus dofleini",
+          "habitats": [
+            "arrecife",
+            "costa_marina"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Enteroctopodidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_enteroctopus_dofleini--normal.webp"
+          ]
+        },
+        {
+          "id": "polar_esp_gonatus_fabricii",
+          "name": "Calamar boreal",
+          "latin": "Gonatus fabricii",
+          "habitats": [
+            "agua_polar"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Gonatidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "polar_esp_gonatus_fabricii--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_grimpoteuthis_abyssicola",
+          "name": "Pulpo dumbo",
+          "latin": "Grimpoteuthis abyssicola",
+          "habitats": [
+            "fondo_batial"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Grimpoteuthidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_grimpoteuthis_abyssicola--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_haliphron_atlanticus",
+          "name": "Pulpo de siete brazos",
+          "latin": "Haliphron atlanticus",
+          "habitats": [
+            "columna_batial"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Alloposidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_haliphron_atlanticus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_hapalochlaena_lunulata",
+          "name": "Pulpo de anillos azules",
+          "latin": "Hapalochlaena lunulata",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Octopodidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_hapalochlaena_lunulata--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_histioteuthis_reversa",
+          "name": "Calamar de aguas profundas",
+          "latin": "Histioteuthis reversa",
+          "habitats": [
+            "columna_batial"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Histioteuthidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_loligo_vulgaris",
+          "name": "Calamar europeo",
+          "latin": "Loligo vulgaris",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Loliginidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_loligo_vulgaris--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_mesonychoteuthis_hamiltoni",
+          "name": "Calamar colosal",
+          "latin": "Mesonychoteuthis hamiltoni",
+          "habitats": [
+            "columna_profunda_fria"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Cranchiidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_mesonychoteuthis_hamiltoni--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_moroteuthopsis_ingens",
+          "name": "Calamar de anzuelo",
+          "latin": "Moroteuthopsis ingens",
+          "habitats": [
+            "columna_batial",
+            "columna_profunda_fria"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Onychoteuthidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_moroteuthopsis_ingens--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_octopus_bimaculoides",
+          "name": "Pulpo del Pacífico oriental",
+          "latin": "Octopus bimaculoides",
+          "habitats": [
+            "arrecife",
+            "costa_marina"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Octopodidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_octopus_bimaculoides--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_octopus_cyanea",
+          "name": "Pulpo de día",
+          "latin": "Octopus cyanea",
+          "habitats": [
+            "arrecife",
+            "costa_marina"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Octopodidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_octopus_cyanea--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_octopus_tetricus",
+          "name": "Pulpo de arrecife austral",
+          "latin": "Octopus tetricus",
+          "habitats": [
+            "arrecife",
+            "costa_marina"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Octopodidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_octopus_tetricus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_octopus_vulgaris",
+          "name": "Pulpo común",
+          "latin": "Octopus vulgaris",
+          "habitats": [
+            "arrecife",
+            "costa_marina"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Octopodidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_octopus_vulgaris--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_sepioteuthis_lessoniana",
+          "name": "Calamar de aleta grande",
+          "latin": "Sepioteuthis lessoniana",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Loliginidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_sepioteuthis_lessoniana--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_thysanoteuthis_rhombus",
+          "name": "Calamar diamante",
+          "latin": "Thysanoteuthis rhombus",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Thysanoteuthidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_thysanoteuthis_rhombus--normal.webp"
+          ]
+        },
+        {
+          "id": "mar_esp_tremoctopus_violaceus",
+          "name": "Pulpo de manta",
+          "latin": "Tremoctopus violaceus",
+          "habitats": [
+            "oceano_abierto"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Tremoctopodidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "mar_esp_tremoctopus_violaceus--normal.webp"
+          ]
+        },
+        {
+          "id": "deep_esp_vampyroteuthis_infernalis",
+          "name": "Calamar vampiro",
+          "latin": "Vampyroteuthis infernalis",
+          "habitats": [
+            "columna_batial",
+            "columna_profunda_fria"
+          ],
+          "historicalGroup": "Cefalópodos",
+          "pigmentation": [],
+          "dimorphism": false,
+          "legendary": null,
+          "className": "Cephalopoda",
+          "family": "Vampyroteuthidae",
+          "configuredSpecimens": [
+            "Notable"
+          ],
+          "pendingPlates": [
+            "deep_esp_vampyroteuthis_infernalis--normal.webp"
+          ]
+        }
+      ]
+    }
+  }
+}

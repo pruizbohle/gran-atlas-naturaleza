@@ -42051,6 +42051,284 @@ const catalog = [
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-na-version=\"3.22.1\" data-na-profile=\"ambystoma-tigrinum\" data-na-polish=\"AM-03\" data-zoological-family=\"Ambystomatidae\" data-herp-family=\"Ambystomatidae\"><path d=\"M41 53C25 43 12 45 6 59Q4 73 17 79Q9 69 18 61Q26 54 43 66Z\" fill=\"#717d63\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M40 49Q33 41 25 47L20 56L24 59L30 53L40 57M58 49Q64 38 74 42L82 49L79 53L72 48L65 58M39 64Q31 66 29 77L20 80L22 84L34 81L46 69M61 63Q72 65 75 75L85 78L86 82L71 80L57 70Z\" fill=\"#717d63\" stroke=\"#3b5144\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32 51Q38 41 54 43Q70 41 78 49L79 61Q70 72 48 68L35 65Q30 62 32 51Z\" fill=\"#717d63\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"45\" cy=\"53\" rx=\"10\" ry=\"3\" fill=\"#849076\" opacity=\".45\"/><path d=\"M36 48q2 6 0 12m8-14q2 7 0 15m9-15q2 5 1 13m8-12 2 10\" fill=\"none\" stroke=\"#c7b77e\" stroke-width=\"3.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 47Q65 37 79 40Q94 41 94 52Q95 62 80 63Q66 63 61 55Z\" fill=\"#717d63\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-na3221-eye=\"true\"><circle cx=\"69\" cy=\"46\" r=\"1.2\" fill=\"#23352d\"/><circle cx=\"69.35\" cy=\"45.6\" r=\"0.35\" fill=\"#f5eed8\"/></g><g data-na3221-eye=\"true\"><circle cx=\"87\" cy=\"47\" r=\"1.2\" fill=\"#23352d\"/><circle cx=\"87.35\" cy=\"46.6\" r=\"0.35\" fill=\"#f5eed8\"/></g><path d=\"M69 56Q79 60 89 55\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"74\" cy=\"42\" r=\"0.7\" fill=\"#c7b77e\"/><circle cx=\"80\" cy=\"42\" r=\"0.7\" fill=\"#c7b77e\"/><circle cx=\"89\" cy=\"52\" r=\"0.7\" fill=\"#c7b77e\"/><path d=\"M24 58q-3 2 -4.5 3\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 58q-1 2 -1.5 4\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 58q1 2 1.5 3\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 58q3 2 4.5 4\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M79 51q-3 2 -4.5 3\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M79 51q-1 2 -1.5 4\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M79 51q1 2 1.5 3\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M79 51q3 2 4.5 4\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 82q-3 2 -4.5 3\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 82q-1 2 -1.5 4\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 82q1 2 1.5 3\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 82q3 2 4.5 4\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 82q5 2 7.5 3\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M85 80q-3 2 -4.5 3\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M85 80q-1 2 -1.5 4\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M85 80q1 2 1.5 3\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M85 80q3 2 4.5 4\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M85 80q5 2 7.5 3\" fill=\"none\" stroke=\"#455f49\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
   },
   {
+    "id": "gm06_salmo_salar",
+    "name": "Salmón atlántico",
+    "latin": "Salmo salar",
+    "rarity": "Raro",
+    "group": "Salmónidos",
+    "family": "Salmonidae",
+    "order": "Salmoniformes",
+    "edition": "4.9.1",
+    "dimorphism": false,
+    "habitats": [
+      "rio",
+      "costa"
+    ],
+    "regions": [
+      {
+        "id": "gm06_labrador",
+        "name": "Labrador subártico",
+        "continent": "Norteamérica"
+      },
+      {
+        "id": "gm06_atlantico",
+        "name": "Atlántico canadiense",
+        "continent": "Norteamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable",
+      "Épico",
+      "Excepcional"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/gm06_salmo_salar--normal.webp",
+        "bytes": 22306,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 100\" role=\"img\" aria-label=\"Salmón atlántico\" data-gm06-morph=\"salmon\"><g stroke=\"#35473e\" stroke-width=\"1.5\" stroke-linejoin=\"round\"><path d=\"M32 56L7 37L12 56L6 77L32 65Z\" fill=\"#809b9c\" /><ellipse cx=\"62\" cy=\"58\" rx=\"34\" ry=\"14\" fill=\"#809b9c\"/><path d=\"M53 46L65 29L77 47Z\" fill=\"#809b9c\" /><path d=\"M62 70L75 80L81 67Z\" fill=\"#809b9c\" /><ellipse cx=\"65\" cy=\"63\" rx=\"26\" ry=\"6\" fill=\"#c8c8ac\"/><circle cx=\"89\" cy=\"54\" r=\"2\" fill=\"#35473e\"/><path d=\"M40 51L43 51M49 47L51 47M58 51L60 51M69 47L71 47M77 51L79 51\" fill=\"none\" stroke=\"#303d39\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 61L101 60\" fill=\"none\" stroke=\"#35473e\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>"
+  },
+  {
+    "id": "mar_esp_oncorhynchus_keta",
+    "name": "Salmón chum",
+    "latin": "Oncorhynchus keta",
+    "rarity": "Común",
+    "group": "Salmónidos",
+    "family": "Salmonidae",
+    "order": "Salmoniformes",
+    "edition": "4.9.1",
+    "dimorphism": false,
+    "habitats": [
+      "costa_marina"
+    ],
+    "regions": [
+      {
+        "id": "mar_pacifico_noroccidental",
+        "name": "Pacífico noroccidental",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_oncorhynchus_keta--normal.webp",
+        "bytes": 26168,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Salmón chum\" data-marine-profile=\"salmon\" data-zoological-family=\"Salmonidae\"><path d=\"M6 56Q24 40 44 44Q65 45 78 55L95 38 90 58 97 74 77 66Q39 76 11 65Z\" fill=\"#8fafb3\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M40 47L47 35 53 48M68 52L72 47 76 54Z\" fill=\"#5e91a6\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"25\" cy=\"49\" r=\"1.4\" fill=\"#516a70\"/><circle cx=\"34\" cy=\"58\" r=\"1.4\" fill=\"#516a70\"/><circle cx=\"45\" cy=\"49\" r=\"1.4\" fill=\"#516a70\"/><circle cx=\"57\" cy=\"58\" r=\"1.4\" fill=\"#516a70\"/><circle cx=\"67\" cy=\"49\" r=\"1.4\" fill=\"#516a70\"/></svg>"
+  },
+  {
+    "id": "mar_esp_oncorhynchus_tshawytscha",
+    "name": "Salmón real",
+    "latin": "Oncorhynchus tshawytscha",
+    "rarity": "Poco común",
+    "group": "Salmónidos",
+    "family": "Salmonidae",
+    "order": "Salmoniformes",
+    "edition": "4.9.1",
+    "dimorphism": false,
+    "habitats": [
+      "costa_marina"
+    ],
+    "regions": [
+      {
+        "id": "mar_pacifico_nororiental",
+        "name": "Pacífico nororiental",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_oncorhynchus_tshawytscha--normal.webp",
+        "bytes": 29338,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Salmón real\" data-marine-profile=\"salmon\" data-zoological-family=\"Salmonidae\"><path d=\"M6 56Q24 40 44 44Q65 45 78 55L95 38 90 58 97 74 77 66Q39 76 11 65Z\" fill=\"#8fafb3\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M40 47L47 35 53 48M68 52L72 47 76 54Z\" fill=\"#5e91a6\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"25\" cy=\"49\" r=\"1.4\" fill=\"#516a70\"/><circle cx=\"34\" cy=\"58\" r=\"1.4\" fill=\"#516a70\"/><circle cx=\"45\" cy=\"49\" r=\"1.4\" fill=\"#516a70\"/><circle cx=\"57\" cy=\"58\" r=\"1.4\" fill=\"#516a70\"/><circle cx=\"67\" cy=\"49\" r=\"1.4\" fill=\"#516a70\"/></svg>"
+  },
+  {
+    "id": "asia_esp_0371",
+    "name": "Salmón rojo",
+    "latin": "Oncorhynchus nerka",
+    "rarity": "Poco común",
+    "group": "Salmónidos",
+    "family": "Salmonidae",
+    "order": "Salmoniformes",
+    "edition": "4.9.1",
+    "dimorphism": false,
+    "habitats": [
+      "rio",
+      "costa"
+    ],
+    "regions": [
+      {
+        "id": "HX-03-18",
+        "name": "Kamchatka",
+        "continent": "Asia"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/asia_esp_0371--normal.webp",
+        "bytes": 27556,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/asia_esp_0371--albino.webp",
+        "bytes": 24614,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"salmon-rojo\" data-fish-version=\"3.19.9\" data-pigmentation=\"albino\"><path d=\"M25 51Q15 46 7 37L12 55 7 75Q19 67 26 62Z\" fill=\"#e0dbd8\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 42Q45 30 53 27L62 42Z\" fill=\"#e0dbd8\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 65Q43 76 52 79L58 66Z\" fill=\"#e0dbd8\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#e0dbd8\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q29 40 34 40L38 45Z\" fill=\"#e0dbd8\" stroke=\"#8b8587\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 52Q40 37 65 42Q82 43 91 53L92 58Q76 70 52 68Q35 66 21 60Z\" fill=\"#e0dbd8\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#f0ebe8\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M75 45Q85 47 91 53L91 57 78 60Z\" fill=\"#e3dedb\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#8d8789\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#e0dbd8\" stroke=\"#8b8587\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#8d8789\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#8b8587\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#d6d1ce\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#faf4eb\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#8d8789\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#8d8789\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/asia_esp_0371--melanico.webp",
+        "bytes": 23992,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"salmon-rojo\" data-fish-version=\"3.19.9\" data-pigmentation=\"melanico\"><path d=\"M25 51Q15 46 7 37L12 55 7 75Q19 67 26 62Z\" fill=\"#30363e\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 42Q45 30 53 27L62 42Z\" fill=\"#30363e\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 65Q43 76 52 79L58 66Z\" fill=\"#30363e\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#30363e\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q29 40 34 40L38 45Z\" fill=\"#30363e\" stroke=\"#47515a\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 52Q40 37 65 42Q82 43 91 53L92 58Q76 70 52 68Q35 66 21 60Z\" fill=\"#30363e\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#474d55\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M75 45Q85 47 91 53L91 57 78 60Z\" fill=\"#353b43\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#48525b\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#30363e\" stroke=\"#47515a\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#48525b\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#222830\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#8d969c\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#48525b\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#48525b\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"salmon-rojo\" data-fish-version=\"3.19.9\"><path d=\"M25 51Q15 46 7 37L12 55 7 75Q19 67 26 62Z\" fill=\"#8b6b59\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 42Q45 30 53 27L62 42Z\" fill=\"#8b6b59\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 65Q43 76 52 79L58 66Z\" fill=\"#8b6b59\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#8b6b59\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q29 40 34 40L38 45Z\" fill=\"#8b6b59\" stroke=\"#3b4b48\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 52Q40 37 65 42Q82 43 91 53L92 58Q76 70 52 68Q35 66 21 60Z\" fill=\"#a96257\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M75 45Q85 47 91 53L91 57 78 60Z\" fill=\"#7b8a66\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#8d463b\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#8b6b59\" stroke=\"#3b4b48\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#8d463b\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#8d463b\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#8d463b\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "asia_esp_0369",
+    "name": "Salmón rosado",
+    "latin": "Oncorhynchus gorbuscha",
+    "rarity": "Poco común",
+    "group": "Salmónidos",
+    "family": "Salmonidae",
+    "order": "Salmoniformes",
+    "edition": "4.9.1",
+    "dimorphism": false,
+    "habitats": [
+      "rio",
+      "costa"
+    ],
+    "regions": [
+      {
+        "id": "HX-03-18",
+        "name": "Kamchatka",
+        "continent": "Asia"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable",
+      "Épico",
+      "Excepcional",
+      "Legendario"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/asia_esp_0369--normal.webp",
+        "bytes": 25452,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/asia_esp_0369--albino.webp",
+        "bytes": 22414,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"salmon-rosado\" data-fish-version=\"3.19.9\" data-pigmentation=\"albino\"><path d=\"M25 53Q15 44 7 39L12 55 6 74Q17 68 26 62Z\" fill=\"#e1dcd9\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M39 36Q42 25 48 24L56 34Z\" fill=\"#e1dcd9\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 65Q44 74 52 78L58 67Z\" fill=\"#e1dcd9\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#e1dcd9\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q29 40 34 40L38 45Z\" fill=\"#e1dcd9\" stroke=\"#8b8587\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 54Q34 42 44 32Q54 26 66 40Q81 44 91 52L93 59Q76 69 53 67Q35 66 22 61Z\" fill=\"#e5e0dd\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#f0ebe8\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"31\" cy=\"51\" r=\"2\" fill=\"#ded9d6\"/><circle cx=\"42\" cy=\"43\" r=\"2.1\" fill=\"#ded9d6\"/><circle cx=\"51\" cy=\"38\" r=\"2\" fill=\"#ded9d6\"/><circle cx=\"61\" cy=\"47\" r=\"2\" fill=\"#ded9d6\"/><circle cx=\"69\" cy=\"50\" r=\"1.8\" fill=\"#ded9d6\"/><circle cx=\"50\" cy=\"57\" r=\"1.8\" fill=\"#ded9d6\"/><circle cx=\"35\" cy=\"59\" r=\"1.3\" fill=\"#ded9d6\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#918b8d\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#e1dcd9\" stroke=\"#8b8587\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#918b8d\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#8b8587\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#d6d1ce\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#faf4eb\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#918b8d\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#918b8d\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/asia_esp_0369--melanico.webp",
+        "bytes": 24882,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"salmon-rosado\" data-fish-version=\"3.19.9\" data-pigmentation=\"melanico\"><path d=\"M25 53Q15 44 7 39L12 55 6 74Q17 68 26 62Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M39 36Q42 25 48 24L56 34Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 65Q44 74 52 78L58 67Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q29 40 34 40L38 45Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 54Q34 42 44 32Q54 26 66 40Q81 44 91 52L93 59Q76 69 53 67Q35 66 22 61Z\" fill=\"#373d45\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#474d55\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"31\" cy=\"51\" r=\"2\" fill=\"#2d333b\"/><circle cx=\"42\" cy=\"43\" r=\"2.1\" fill=\"#2d333b\"/><circle cx=\"51\" cy=\"38\" r=\"2\" fill=\"#2d333b\"/><circle cx=\"61\" cy=\"47\" r=\"2\" fill=\"#2d333b\"/><circle cx=\"69\" cy=\"50\" r=\"1.8\" fill=\"#2d333b\"/><circle cx=\"50\" cy=\"57\" r=\"1.8\" fill=\"#2d333b\"/><circle cx=\"35\" cy=\"59\" r=\"1.3\" fill=\"#2d333b\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#4b555e\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#4b555e\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#222830\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#8d969c\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#4b555e\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#4b555e\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+      },
+      {
+        "key": "legendario",
+        "label": "Remonte",
+        "src": "plates/asia_esp_0369--remonte.webp",
+        "bytes": 24074,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" data-legendary-id=\"remonte\"><title>Individuo legendario: remonte</title><ellipse cx=\"50\" cy=\"89\" rx=\"33\" ry=\"2\" fill=\"#c7c7ad\"/><path d=\"M22 53Q31 47 38 35Q49 30 63 39Q72 43 81 44L93 49 96 54 91 59 82 60Q68 66 54 66Q37 66 25 59L10 73 13 58 8 44Z\" fill=\"#929e82\" stroke=\"#384038\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23 54Q46 44 63 47L80 48 90 52 93 55 85 57Q55 68 27 59Z\" fill=\"#c7bd99\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M38 39Q40 29 45 26Q50 31 55 34L57 38Z\" fill=\"#828f6f\" stroke=\"#384038\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M48 63Q51 72 61 78Q61 70 65 64M68 44Q71 37 74 38L78 45M38 61Q36 68 29 70L41 64\" fill=\"#8a9777\" stroke=\"#384038\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M75 54Q82 61 90 56L92 52 96 54Q94 63 82 62L75 58Z\" fill=\"#9d9c77\" stroke=\"#384038\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"29\" cy=\"51\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"34\" cy=\"48\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"40\" cy=\"42\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"46\" cy=\"39\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"52\" cy=\"41\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"59\" cy=\"44\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"65\" cy=\"46\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"42\" cy=\"48\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"50\" cy=\"47\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"59\" cy=\"49\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"18\" cy=\"53\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"15\" cy=\"48\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"16\" cy=\"61\" rx=\"1.15\" ry=\"0.9\" fill=\"#53694f\"/><ellipse cx=\"84\" cy=\"49\" rx=\"0.95\" ry=\"0.95\" fill=\"#252d27\"/><ellipse cx=\"83.75\" cy=\"48.75\" rx=\"0.25\" ry=\"0.25\" fill=\"#ece3c9\"/><path d=\"M76 48Q70 53 75 59M92 55l-5 1m-72-4 6 3m-6 8 6-5\" fill=\"none\" stroke=\"#546d51\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 82Q30 78 40 80m27-54q9-4 17-1\" fill=\"none\" stroke=\"#a2b9b3\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"salmon-rosado\" data-fish-version=\"3.19.9\"><path d=\"M25 53Q15 44 7 39L12 55 6 74Q17 68 26 62Z\" fill=\"#7b7770\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M39 36Q42 25 48 24L56 34Z\" fill=\"#7b7770\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 65Q44 74 52 78L58 67Z\" fill=\"#7b7770\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#7b7770\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q29 40 34 40L38 45Z\" fill=\"#7b7770\" stroke=\"#3b4b48\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 54Q34 42 44 32Q54 26 66 40Q81 44 91 52L93 59Q76 69 53 67Q35 66 22 61Z\" fill=\"#a08c85\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"31\" cy=\"51\" r=\"2\" fill=\"#596956\"/><circle cx=\"42\" cy=\"43\" r=\"2.1\" fill=\"#596956\"/><circle cx=\"51\" cy=\"38\" r=\"2\" fill=\"#596956\"/><circle cx=\"61\" cy=\"47\" r=\"2\" fill=\"#596956\"/><circle cx=\"69\" cy=\"50\" r=\"1.8\" fill=\"#596956\"/><circle cx=\"50\" cy=\"57\" r=\"1.8\" fill=\"#596956\"/><circle cx=\"35\" cy=\"59\" r=\"1.3\" fill=\"#596956\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#847069\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#7b7770\" stroke=\"#3b4b48\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#847069\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#847069\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#847069\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
     "id": "af_xlsx_131_sclerophrys_regularis",
     "name": "Sapo común africano",
     "latin": "Sclerophrys regularis",
@@ -46939,6 +47217,185 @@ const catalog = [
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-herp-family=\"newt\" data-herp-morph=\"swimming-newt\" data-herp-version=\"3.19.2b\"><g data-herp-anatomy=\"true\"><path d=\"M36 51Q34 43 40 38L45 37Q46 39 42 41L41 53Z\" fill=\"#232b2b\" stroke=\"#344038\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64 49Q65 41 73 40L77 42Q78 44 73 44L70 53Z\" fill=\"#232b2b\" stroke=\"#344038\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M6 79Q12 54 28 51Q43 48 59 52Q71 47 82 49Q92 51 94 57Q93 64 83 65Q72 66 64 62Q46 69 29 60Q15 62 6 79Z\" fill=\"#414949\" stroke=\"#344038\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-herp-detail=\"true\"><path d=\"M24 57Q44 52 63 57Q43 63 24 57Z\" fill=\"#596161\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M36 61Q32 64 32 72L27 76Q25 79 30 78L38 74Q41 70 42 63Z\" fill=\"#414949\" stroke=\"#344038\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 61Q62 69 69 75L75 77Q80 77 76 74L72 70L72 62Z\" fill=\"#414949\" stroke=\"#344038\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 78L21 82M29 77L28 82M76 77L76 82M76 76L82 79M41 38L40 34M45 38L47 35M74 42L77 38\" fill=\"none\" stroke=\"#344038\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-herp-detail=\"true\"><circle cx=\"84\" cy=\"54\" r=\"2.8\" fill=\"#596161\"/><circle cx=\"84\" cy=\"54\" r=\"1.8\" fill=\"#202d29\"/><circle cx=\"84.55\" cy=\"53.35\" r=\"0.65\" fill=\"#faf5e6\"/></g><g data-herp-detail=\"true\"><path d=\"M83 61Q90 62 93 59\" fill=\"none\" stroke=\"#323a3a\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-herp-detail=\"true\"><path d=\"M32 61Q48 66 61 61\" fill=\"none\" stroke=\"#ca9b63\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"38\" cy=\"55\" r=\"1.3\" fill=\"#232b2b\"/><circle cx=\"47\" cy=\"56\" r=\"1.3\" fill=\"#232b2b\"/><circle cx=\"58\" cy=\"56\" r=\"1.3\" fill=\"#232b2b\"/></g></g></svg>"
   },
   {
+    "id": "na_esp_oncorhynchus_mykiss",
+    "name": "Trucha arcoíris",
+    "latin": "Oncorhynchus mykiss",
+    "rarity": "Poco común",
+    "group": "Salmónidos",
+    "family": "Salmonidae",
+    "order": "Salmoniformes",
+    "edition": "4.9.1",
+    "dimorphism": false,
+    "habitats": [
+      "rio"
+    ],
+    "regions": [
+      {
+        "id": "HX-02-02",
+        "name": "Columbia Británica",
+        "continent": "Norteamérica"
+      },
+      {
+        "id": "HX-02-04",
+        "name": "Montañas Rocosas",
+        "continent": "Norteamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/na_esp_oncorhynchus_mykiss--normal.webp",
+        "bytes": 29366,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/na_esp_oncorhynchus_mykiss--albino.webp",
+        "bytes": 25902,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"trucha-arcoiris\" data-fish-version=\"3.19.9\" data-pigmentation=\"albino\"><path d=\"M25 52Q14 47 7 40L12 55 7 71Q17 66 26 62Z\" fill=\"#e5e0dd\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 44Q44 32 53 29L62 44Z\" fill=\"#e5e0dd\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 64Q43 75 51 78L59 66Z\" fill=\"#e5e0dd\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#e5e0dd\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q29 40 34 40L38 45Z\" fill=\"#e5e0dd\" stroke=\"#8b8587\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 53Q40 40 63 43Q81 44 91 52L92 58Q78 69 54 66Q35 65 21 61Z\" fill=\"#e6e1de\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#f0ebe8\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 56Q50 50 75 51L77 57Q50 60 28 59Z\" fill=\"#e6e1de\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"32\" cy=\"51\" r=\"1.1\" fill=\"#ded9d6\"/><circle cx=\"40\" cy=\"47\" r=\"1.1\" fill=\"#ded9d6\"/><circle cx=\"49\" cy=\"45\" r=\"1.4\" fill=\"#ded9d6\"/><circle cx=\"58\" cy=\"47\" r=\"1.2\" fill=\"#ded9d6\"/><circle cx=\"66\" cy=\"50\" r=\"1.3\" fill=\"#ded9d6\"/><circle cx=\"43\" cy=\"57\" r=\"1.1\" fill=\"#ded9d6\"/><circle cx=\"55\" cy=\"55\" r=\"1.1\" fill=\"#ded9d6\"/><circle cx=\"64\" cy=\"59\" r=\"1\" fill=\"#ded9d6\"/><circle cx=\"74\" cy=\"51\" r=\"0.9\" fill=\"#faf4eb\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#918b8d\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#e5e0dd\" stroke=\"#8b8587\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#918b8d\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#8b8587\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#d6d1ce\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#faf4eb\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#918b8d\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#918b8d\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"trucha-arcoiris\" data-fish-version=\"3.19.9\"><path d=\"M25 52Q14 47 7 40L12 55 7 71Q17 66 26 62Z\" fill=\"#8c9184\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 44Q44 32 53 29L62 44Z\" fill=\"#8c9184\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 64Q43 75 51 78L59 66Z\" fill=\"#8c9184\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#8c9184\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q29 40 34 40L38 45Z\" fill=\"#8c9184\" stroke=\"#3b4b48\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 53Q40 40 63 43Q81 44 91 52L92 58Q78 69 54 66Q35 65 21 61Z\" fill=\"#859c87\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 56Q50 50 75 51L77 57Q50 60 28 59Z\" fill=\"#be8b83\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"32\" cy=\"51\" r=\"1.1\" fill=\"#596956\"/><circle cx=\"40\" cy=\"47\" r=\"1.1\" fill=\"#596956\"/><circle cx=\"49\" cy=\"45\" r=\"1.4\" fill=\"#596956\"/><circle cx=\"58\" cy=\"47\" r=\"1.2\" fill=\"#596956\"/><circle cx=\"66\" cy=\"50\" r=\"1.3\" fill=\"#596956\"/><circle cx=\"43\" cy=\"57\" r=\"1.1\" fill=\"#596956\"/><circle cx=\"55\" cy=\"55\" r=\"1.1\" fill=\"#596956\"/><circle cx=\"64\" cy=\"59\" r=\"1\" fill=\"#596956\"/><circle cx=\"74\" cy=\"51\" r=\"0.9\" fill=\"#596956\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#69806b\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#8c9184\" stroke=\"#3b4b48\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#69806b\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#69806b\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#69806b\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "eu_esp_0669",
+    "name": "Trucha común",
+    "latin": "Salmo trutta",
+    "rarity": "Común",
+    "group": "Salmónidos",
+    "family": "Salmonidae",
+    "order": "Salmoniformes",
+    "edition": "4.9.1",
+    "dimorphism": false,
+    "habitats": [
+      "rio"
+    ],
+    "regions": [
+      {
+        "id": "HX-01-09",
+        "name": "Islas Británicas",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-01-11",
+        "name": "Escandinavia",
+        "continent": "Europa"
+      },
+      {
+        "id": "HX-02-11",
+        "name": "Europa Central",
+        "continent": "Europa"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/eu_esp_0669--normal.webp",
+        "bytes": 31286,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      },
+      {
+        "key": "melanico",
+        "label": "Melánico",
+        "src": "plates/eu_esp_0669--melanico.webp",
+        "bytes": 27742,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"trucha-comun\" data-fish-version=\"3.19.9\" data-pigmentation=\"melanico\"><path d=\"M26 51Q15 46 7 42L11 55 8 69Q18 65 27 61Z\" fill=\"#363c44\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M41 44Q43 32 54 29L62 43Z\" fill=\"#363c44\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 64Q43 74 51 77L56 65Z\" fill=\"#363c44\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#363c44\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q29 40 34 40L38 45Z\" fill=\"#363c44\" stroke=\"#47515a\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 52Q39 39 63 42Q81 43 91 51L92 57Q75 68 52 66Q32 65 22 60Z\" fill=\"#373d45\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#474d55\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"32\" cy=\"51\" r=\"1.1\" fill=\"#2f353d\"/><circle cx=\"40\" cy=\"47\" r=\"1.1\" fill=\"#2f353d\"/><circle cx=\"49\" cy=\"45\" r=\"1.4\" fill=\"#2d333b\"/><circle cx=\"58\" cy=\"47\" r=\"1.2\" fill=\"#2f353d\"/><circle cx=\"66\" cy=\"50\" r=\"1.3\" fill=\"#2f353d\"/><circle cx=\"43\" cy=\"57\" r=\"1.1\" fill=\"#2d333b\"/><circle cx=\"55\" cy=\"55\" r=\"1.1\" fill=\"#2d333b\"/><circle cx=\"64\" cy=\"59\" r=\"1\" fill=\"#2f353d\"/><circle cx=\"74\" cy=\"51\" r=\"0.9\" fill=\"#8d969c\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#4b555e\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#363c44\" stroke=\"#47515a\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#4b555e\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#222830\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#8d969c\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#4b555e\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#4b555e\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"trucha-comun\" data-fish-version=\"3.19.9\"><path d=\"M26 51Q15 46 7 42L11 55 8 69Q18 65 27 61Z\" fill=\"#a38665\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M41 44Q43 32 54 29L62 43Z\" fill=\"#a38665\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 64Q43 74 51 77L56 65Z\" fill=\"#a38665\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#a38665\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q29 40 34 40L38 45Z\" fill=\"#a38665\" stroke=\"#3b4b48\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 52Q39 39 63 42Q81 43 91 51L92 57Q75 68 52 66Q32 65 22 60Z\" fill=\"#8d9473\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"32\" cy=\"51\" r=\"1.1\" fill=\"#985f4f\"/><circle cx=\"40\" cy=\"47\" r=\"1.1\" fill=\"#985f4f\"/><circle cx=\"49\" cy=\"45\" r=\"1.4\" fill=\"#596956\"/><circle cx=\"58\" cy=\"47\" r=\"1.2\" fill=\"#985f4f\"/><circle cx=\"66\" cy=\"50\" r=\"1.3\" fill=\"#985f4f\"/><circle cx=\"43\" cy=\"57\" r=\"1.1\" fill=\"#596956\"/><circle cx=\"55\" cy=\"55\" r=\"1.1\" fill=\"#596956\"/><circle cx=\"64\" cy=\"59\" r=\"1\" fill=\"#985f4f\"/><circle cx=\"74\" cy=\"51\" r=\"0.9\" fill=\"#985f4f\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#717857\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#a38665\" stroke=\"#3b4b48\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#717857\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#717857\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#717857\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "na_esp_salvelinus_fontinalis",
+    "name": "Trucha de arroyo",
+    "latin": "Salvelinus fontinalis",
+    "rarity": "Raro",
+    "group": "Salmónidos",
+    "family": "Salmonidae",
+    "order": "Salmoniformes",
+    "edition": "4.9.1",
+    "dimorphism": false,
+    "habitats": [
+      "rio"
+    ],
+    "regions": [
+      {
+        "id": "HX-03-02",
+        "name": "Región de los Grandes Lagos",
+        "continent": "Norteamérica"
+      },
+      {
+        "id": "HX-03-04",
+        "name": "Bosques del este norteamericano",
+        "continent": "Norteamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/na_esp_salvelinus_fontinalis--normal.webp",
+        "bytes": 30352,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      },
+      {
+        "key": "albino",
+        "label": "Albino",
+        "src": "plates/na_esp_salvelinus_fontinalis--albino.webp",
+        "bytes": 28446,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-na-version=\"3.22.1\" data-na-profile=\"salvelinus-fontinalis\" data-na-polish=\"AM-03\" data-zoological-family=\"Salmonidae\" data-fish-family=\"Salmonidae\" data-pigmentation=\"albino\"><path d=\"M25 48Q15 41 7 39L11 54L7 72Q18 68 27 61Z\" fill=\"#e4dfdc\" stroke=\"#8c8688\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M11 43L21 52M11 67L21 58\" fill=\"none\" stroke=\"#989294\" stroke-width=\"0.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 49Q40 35 63 39Q82 39 96 50L98 56Q83 72 55 69Q36 69 22 60Z\" fill=\"#e7e2df\" stroke=\"#8c8688\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"45\" cy=\"53\" rx=\"10\" ry=\"3\" fill=\"#eae5e2\" opacity=\".45\"/><path d=\"M29 47q3-5 6-1t6-1 6-1 6-1 6 0m-29 7q3-4 5-1t5-1 5 0\" fill=\"none\" stroke=\"#908a8c\" stroke-width=\"0.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"35\" cy=\"56\" r=\"1.65\" fill=\"#e8e3e0\"/><circle cx=\"35\" cy=\"56\" r=\"0.85\" fill=\"#faf4eb\"/><circle cx=\"45\" cy=\"53\" r=\"1.65\" fill=\"#e8e3e0\"/><circle cx=\"45\" cy=\"53\" r=\"0.85\" fill=\"#faf4eb\"/><circle cx=\"56\" cy=\"57\" r=\"1.65\" fill=\"#e8e3e0\"/><circle cx=\"56\" cy=\"57\" r=\"0.85\" fill=\"#faf4eb\"/><circle cx=\"65\" cy=\"51\" r=\"1.65\" fill=\"#e8e3e0\"/><circle cx=\"65\" cy=\"51\" r=\"0.85\" fill=\"#faf4eb\"/><circle cx=\"71\" cy=\"59\" r=\"1.65\" fill=\"#e8e3e0\"/><circle cx=\"71\" cy=\"59\" r=\"0.85\" fill=\"#faf4eb\"/><path d=\"M42 40Q45 28 52 26Q58 33 64 41Z\" fill=\"#e4dfdc\" stroke=\"#8c8688\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M49 31L51 40M54 33L57 41\" fill=\"none\" stroke=\"#989294\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 41Q75 34 80 39L81 44Z\" fill=\"#e4dfdc\" stroke=\"#8c8688\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 70Q44 82 53 84L62 72Z\" fill=\"#e7e2df\" stroke=\"#8c8688\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M74 55Q64 54 59 65Q69 71 78 60Z\" fill=\"#e7e2df\" stroke=\"#8c8688\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M74 57L64 64M72 60L66 66\" fill=\"none\" stroke=\"#989294\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 72Q46 81 52 82M60 64L66 68\" fill=\"none\" stroke=\"#9d9799\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M86 56L96 54\" fill=\"none\" stroke=\"#908a8c\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M79 45Q73 53 79 63\" fill=\"none\" stroke=\"#908a8c\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-na3221-eye=\"true\"><circle cx=\"87\" cy=\"48\" r=\"1.6\" fill=\"#ad858d\"/><circle cx=\"87.35\" cy=\"47.6\" r=\"0.35\" fill=\"#faf4eb\"/></g></svg>"
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-na-version=\"3.22.1\" data-na-profile=\"salvelinus-fontinalis\" data-na-polish=\"AM-03\" data-zoological-family=\"Salmonidae\" data-fish-family=\"Salmonidae\"><path d=\"M25 48Q15 41 7 39L11 54L7 72Q18 68 27 61Z\" fill=\"#7b9177\" stroke=\"#3b5144\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M11 43L21 52M11 67L21 58\" fill=\"none\" stroke=\"#a3b99f\" stroke-width=\"0.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 49Q40 35 63 39Q82 39 96 50L98 56Q83 72 55 69Q36 69 22 60Z\" fill=\"#90a68c\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"45\" cy=\"53\" rx=\"10\" ry=\"3\" fill=\"#a3b99f\" opacity=\".45\"/><path d=\"M29 47q3-5 6-1t6-1 6-1 6-1 6 0m-29 7q3-4 5-1t5-1 5 0\" fill=\"none\" stroke=\"#55785c\" stroke-width=\"0.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"35\" cy=\"56\" r=\"1.65\" fill=\"#8ca7a5\"/><circle cx=\"35\" cy=\"56\" r=\"0.85\" fill=\"#c19994\"/><circle cx=\"45\" cy=\"53\" r=\"1.65\" fill=\"#8ca7a5\"/><circle cx=\"45\" cy=\"53\" r=\"0.85\" fill=\"#c19994\"/><circle cx=\"56\" cy=\"57\" r=\"1.65\" fill=\"#8ca7a5\"/><circle cx=\"56\" cy=\"57\" r=\"0.85\" fill=\"#c19994\"/><circle cx=\"65\" cy=\"51\" r=\"1.65\" fill=\"#8ca7a5\"/><circle cx=\"65\" cy=\"51\" r=\"0.85\" fill=\"#c19994\"/><circle cx=\"71\" cy=\"59\" r=\"1.65\" fill=\"#8ca7a5\"/><circle cx=\"71\" cy=\"59\" r=\"0.85\" fill=\"#c19994\"/><path d=\"M42 40Q45 28 52 26Q58 33 64 41Z\" fill=\"#7b9177\" stroke=\"#3b5144\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M49 31L51 40M54 33L57 41\" fill=\"none\" stroke=\"#a3b99f\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 41Q75 34 80 39L81 44Z\" fill=\"#7b9177\" stroke=\"#3b5144\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 70Q44 82 53 84L62 72Z\" fill=\"#c09388\" stroke=\"#3b5144\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M74 55Q64 54 59 65Q69 71 78 60Z\" fill=\"#c09388\" stroke=\"#3b5144\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M74 57L64 64M72 60L66 66\" fill=\"none\" stroke=\"#a3b99f\" stroke-width=\"0.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 72Q46 81 52 82M60 64L66 68\" fill=\"none\" stroke=\"#d5dfc0\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M86 56L96 54\" fill=\"none\" stroke=\"#55785c\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M79 45Q73 53 79 63\" fill=\"none\" stroke=\"#55785c\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-na3221-eye=\"true\"><circle cx=\"87\" cy=\"48\" r=\"1.6\" fill=\"#23352d\"/><circle cx=\"87.35\" cy=\"47.6\" r=\"0.35\" fill=\"#f5eed8\"/></g></svg>"
+  },
+  {
     "id": "oc_esp_sphenodon_punctatus",
     "name": "Tuátara",
     "latin": "Sphenodon punctatus",
@@ -50889,11 +51346,6 @@ const catalog = [
 ];
 const mixedFieldSprites = [
   {
-    "id": "eu_esp_0669",
-    "name": "Trucha común",
-    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"trucha-comun\" data-fish-version=\"3.19.9\"><path d=\"M26 51Q15 46 7 42L11 55 8 69Q18 65 27 61Z\" fill=\"#a38665\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M41 44Q43 32 54 29L62 43Z\" fill=\"#a38665\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 64Q43 74 51 77L56 65Z\" fill=\"#a38665\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#a38665\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q29 40 34 40L38 45Z\" fill=\"#a38665\" stroke=\"#3b4b48\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M22 52Q39 39 63 42Q81 43 91 51L92 57Q75 68 52 66Q32 65 22 60Z\" fill=\"#8d9473\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"32\" cy=\"51\" r=\"1.1\" fill=\"#985f4f\"/><circle cx=\"40\" cy=\"47\" r=\"1.1\" fill=\"#985f4f\"/><circle cx=\"49\" cy=\"45\" r=\"1.4\" fill=\"#596956\"/><circle cx=\"58\" cy=\"47\" r=\"1.2\" fill=\"#985f4f\"/><circle cx=\"66\" cy=\"50\" r=\"1.3\" fill=\"#985f4f\"/><circle cx=\"43\" cy=\"57\" r=\"1.1\" fill=\"#596956\"/><circle cx=\"55\" cy=\"55\" r=\"1.1\" fill=\"#596956\"/><circle cx=\"64\" cy=\"59\" r=\"1\" fill=\"#985f4f\"/><circle cx=\"74\" cy=\"51\" r=\"0.9\" fill=\"#985f4f\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#717857\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#a38665\" stroke=\"#3b4b48\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#717857\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#717857\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#717857\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
-  },
-  {
     "id": "eu_esp_0668",
     "name": "Barbo común",
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"barbo\" data-fish-version=\"3.19.9\"><path d=\"M24 53Q14 45 6 38Q8 53 14 57L6 75Q16 70 25 61Z\" fill=\"#a18458\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M42 45Q45 32 51 26L60 44Z\" fill=\"#a18458\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 64Q42 74 49 78L56 66Z\" fill=\"#a18458\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#a18458\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 54Q43 40 66 44Q82 46 92 54L90 60Q67 70 43 65L22 61Z\" fill=\"#9f9b72\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#837f56\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#a18458\" stroke=\"#3b4b48\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#837f56\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M88 59q5 3 7 8m-9-7q-2 5 1 8\" fill=\"none\" stroke=\"#837f56\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#837f56\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#837f56\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
@@ -50902,6 +51354,11 @@ const mixedFieldSprites = [
     "id": "eu_esp_0667",
     "name": "Tenca",
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"tenca\" data-fish-version=\"3.19.9\"><path d=\"M25 51Q16 43 9 45Q6 56 10 69Q17 68 25 62Z\" fill=\"#827648\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 39Q48 25 57 31Q62 34 64 39Z\" fill=\"#827648\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 70Q40 81 50 83Q58 81 60 71Z\" fill=\"#827648\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#827648\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 52Q29 37 52 37Q78 37 89 51L90 59Q81 74 56 73Q30 72 21 61Z\" fill=\"#768258\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 48Q54 40 71 46\" fill=\"none\" stroke=\"#8e9a70\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M38 61Q53 65 68 61\" fill=\"none\" stroke=\"#5a663c\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#5a663c\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#827648\" stroke=\"#3b4b48\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#5a663c\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M87 59q7 3 7 7\" fill=\"none\" stroke=\"#5a663c\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g><path d=\"M49 37l3-5m4 5 1-4\" fill=\"none\" stroke=\"#5a663c\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#5a663c\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "eu_esp_0670",
+    "name": "Perca europea",
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"perca\" data-fish-version=\"3.19.9\"><path d=\"M27 51Q18 43 8 40L12 55 7 73Q19 70 28 62Z\" fill=\"#be835c\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31 45L34 27 39 32 43 23 48 31 52 25 58 40Q65 29 72 39L77 44Z\" fill=\"#be835c\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M46 69Q44 79 49 82L61 71Z\" fill=\"#be835c\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#be835c\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 51Q36 36 57 39Q78 40 91 51L91 58Q77 73 53 72Q36 70 24 60Z\" fill=\"#8d9d69\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M36 43q4 4 1 21l-4-5Z\" fill=\"#596956\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M44 45q4 4 1 18l-4-5Z\" fill=\"#596956\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M52 43q4 4 1 21l-4-5Z\" fill=\"#596956\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M60 45q4 4 1 18l-4-5Z\" fill=\"#596956\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68 43q4 4 1 21l-4-5Z\" fill=\"#596956\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#71814d\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#be835c\" stroke=\"#3b4b48\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#71814d\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#71814d\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
   }
 ];
 const birdComparisons = {
@@ -52723,4 +53180,174 @@ const cartilaginousComparisons = {
     ]
   }
 };
-const migrationProgress = {"migrated":905,"total":998,"cutouts":1557,"plates":1557,"biological":663,"legendary":11,"review":0,"classical":1557,"target":1557,"ungulates":122,"mammals":461,"mammalsMigrated":461,"birds":287,"birdsMigrated":287,"reptiles":104,"reptilesMigrated":104,"amphibians":35,"amphibiansMigrated":35,"cartilaginous":18,"cartilaginousMigrated":18};
+const salmonidComparisons = {
+  "pacific": {
+    "label": "Salmones del Pacífico",
+    "salmonids": [
+      {
+        "id": "asia_esp_0369",
+        "trait": "Cuerpo esbelto, pedúnculo estrecho y manchas ovales en ambos lóbulos de la cola."
+      },
+      {
+        "id": "mar_esp_oncorhynchus_keta",
+        "trait": "Cola casi sin manchas y barras verticales en la coloración nupcial."
+      },
+      {
+        "id": "asia_esp_0371",
+        "trait": "Cuerpo rojo y cabeza olivácea en fase nupcial, con cola sin manchas grandes."
+      },
+      {
+        "id": "mar_esp_oncorhynchus_tshawytscha",
+        "trait": "Cabeza y cuerpo robustos, encías oscuras y manchas en ambos lóbulos caudales."
+      }
+    ]
+  },
+  "atlantic-and-trout": {
+    "label": "Salmón atlántico y truchas",
+    "salmonids": [
+      {
+        "id": "gm06_salmo_salar",
+        "trait": "Pedúnculo delgado, cola suavemente ahorquillada y manchas en X hacia el dorso."
+      },
+      {
+        "id": "eu_esp_0669",
+        "trait": "Mandíbula más larga, cola menos hendida y puntos rojos con halo claro."
+      },
+      {
+        "id": "na_esp_oncorhynchus_mykiss",
+        "trait": "Franja lateral rosada, motas finas en el dorso y cola moteada."
+      },
+      {
+        "id": "na_esp_salvelinus_fontinalis",
+        "trait": "Vermiculaciones dorsales, puntos rojizos y bordes anteriores blancos en las aletas inferiores."
+      }
+    ]
+  },
+  "albino": {
+    "label": "Salmones y truchas albinos",
+    "salmonids": [
+      {
+        "id": "asia_esp_0369",
+        "trait": "Aletas claras y pedúnculo fino con cola bifurcada.",
+        "plateKey": "albino"
+      },
+      {
+        "id": "asia_esp_0371",
+        "trait": "Cuerpo comprimido y ojos rosados.",
+        "plateKey": "albino"
+      },
+      {
+        "id": "na_esp_oncorhynchus_mykiss",
+        "trait": "Franja lateral rosa tenue sobre flancos dorados.",
+        "plateKey": "albino"
+      },
+      {
+        "id": "na_esp_salvelinus_fontinalis",
+        "trait": "Puntos anaranjados, cola casi recta y bordes de aletas claros.",
+        "plateKey": "albino"
+      }
+    ]
+  },
+  "melanico": {
+    "label": "Salmones y truchas melánicos",
+    "salmonids": [
+      {
+        "id": "asia_esp_0369",
+        "trait": "Manchas dorsales y caudales visibles sobre gris oscuro.",
+        "plateKey": "melanico"
+      },
+      {
+        "id": "asia_esp_0371",
+        "trait": "Perfil comprimido y dorso oscuro con ciertas zonas de reflejo cobrizo.",
+        "plateKey": "melanico"
+      },
+      {
+        "id": "eu_esp_0669",
+        "trait": "Cola relativamente recta, mandíbula robusta y marcas oscuras contrastantes.",
+        "plateKey": "melanico"
+      }
+    ]
+  },
+  "remonte": {
+    "label": "Salmón rosado y Remonte",
+    "salmonids": [
+      {
+        "id": "asia_esp_0369",
+        "trait": "Adulto plateado de fase marina, sin joroba y con maxilar corto."
+      },
+      {
+        "id": "asia_esp_0369",
+        "trait": "Macho de fase nupcial con joroba, mandíbulas ganchudas y dorso moteado.",
+        "plateKey": "legendario"
+      }
+    ]
+  }
+};
+const legendaryComparisons = {
+  "all": {
+    "label": "Colección completa",
+    "legendary": [
+      {
+        "id": "af_gorila_montana",
+        "trait": "Un adulto de espalda plateada, mirada serena y cresta pronunciada.",
+        "plateKey": "legendario"
+      },
+      {
+        "id": "asia_esp_0402",
+        "trait": "Rayas anchas y un pelaje invernal denso en una pausa vigilante.",
+        "plateKey": "legendario"
+      },
+      {
+        "id": "asia_esp_0403",
+        "trait": "Rosetas abiertas y una larga cola que acompaña el borde de la roca.",
+        "plateKey": "legendario"
+      },
+      {
+        "id": "lobo_gris",
+        "trait": "Un lobo de manto gris, pecho claro y perfil atento.",
+        "plateKey": "legendario"
+      },
+      {
+        "id": "af_elefante_sabana",
+        "trait": "Orejas desplegadas y colmillos asimétricos de crecimiento natural.",
+        "plateKey": "legendario"
+      },
+      {
+        "id": "aguila_real",
+        "trait": "La nuca dorada destaca sobre las alas recogidas de este vigilante.",
+        "plateKey": "legendario"
+      },
+      {
+        "id": "asia_esp_0527",
+        "trait": "Escamas oscuras y patas robustas sostienen una silueta rasante.",
+        "plateKey": "legendario"
+      },
+      {
+        "id": "asia_esp_0373",
+        "trait": "Una cobra de capucha estrecha se eleva entre sus propios anillos.",
+        "plateKey": "legendario"
+      },
+      {
+        "id": "af_cocodrilo_nilo",
+        "trait": "Escudos dorsales irregulares y un hocico surcado por viejas cicatrices.",
+        "plateKey": "legendario"
+      },
+      {
+        "id": "af_tortuga_aldabra",
+        "trait": "Caparazón de anillos marcados y cuello extendido sobre patas columnares.",
+        "plateKey": "legendario"
+      },
+      {
+        "id": "zorro_rojo",
+        "trait": "Un zorro de pecho marfil se sienta envuelto en su cola rojiza.",
+        "plateKey": "legendario"
+      },
+      {
+        "id": "asia_esp_0369",
+        "trait": "Un salmón de dorso moteado y mandíbula curva en plena remontada.",
+        "plateKey": "legendario"
+      }
+    ]
+  }
+};
+const migrationProgress = {"migrated":913,"total":998,"cutouts":1573,"plates":1573,"biological":670,"legendary":12,"review":0,"classical":1573,"target":1573,"ungulates":122,"mammals":461,"mammalsMigrated":461,"birds":287,"birdsMigrated":287,"reptiles":104,"reptilesMigrated":104,"amphibians":35,"amphibiansMigrated":35,"cartilaginous":18,"cartilaginousMigrated":18,"salmonids":8,"salmonidsMigrated":8};

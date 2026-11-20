@@ -1,0 +1,318 @@
+{
+  "version": "4.9.1",
+  "migrated": 12,
+  "inventory": [
+    {
+      "id": "silverback",
+      "speciesId": "af_gorila_montana",
+      "name": "Silverback",
+      "description": "Un adulto de espalda plateada, mirada serena y cresta pronunciada.",
+      "species": "Gorilla beringei beringei",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/af_gorila_montana--silverback.webp"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/af_gorila_montana--silverback.webp"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/af_gorila_montana--silverback.webp"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/af_gorila_montana--silverback.webp"
+        }
+      ]
+    },
+    {
+      "id": "ambar",
+      "speciesId": "asia_esp_0402",
+      "name": "Ámbar",
+      "description": "Rayas anchas y un pelaje invernal denso en una pausa vigilante.",
+      "species": "Panthera tigris",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/asia_esp_0402--ambar.webp"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/asia_esp_0402--ambar.webp"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/asia_esp_0402--ambar.webp"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/asia_esp_0402--ambar.webp"
+        }
+      ]
+    },
+    {
+      "id": "niebla",
+      "speciesId": "asia_esp_0403",
+      "name": "Niebla",
+      "description": "Rosetas abiertas y una larga cola que acompaña el borde de la roca.",
+      "species": "Panthera uncia",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/asia_esp_0403--niebla.webp"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/asia_esp_0403--niebla.webp"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/asia_esp_0403--niebla.webp"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/asia_esp_0403--niebla.webp"
+        }
+      ]
+    },
+    {
+      "id": "fenrir",
+      "speciesId": "lobo_gris",
+      "name": "Fenrir",
+      "description": "Un lobo de manto gris, pecho claro y perfil atento.",
+      "species": "Canis lupus",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/lobo_gris--fenrir.webp"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/lobo_gris--fenrir.webp"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/lobo_gris--fenrir.webp"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/lobo_gris--fenrir.webp"
+        }
+      ]
+    },
+    {
+      "id": "atlas",
+      "speciesId": "af_elefante_sabana",
+      "name": "Atlas",
+      "description": "Orejas desplegadas y colmillos asimétricos de crecimiento natural.",
+      "species": "Loxodonta africana",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/af_elefante_sabana--atlas.webp"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/af_elefante_sabana--atlas.webp"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/af_elefante_sabana--atlas.webp"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/af_elefante_sabana--atlas.webp"
+        }
+      ]
+    },
+    {
+      "id": "centinela",
+      "speciesId": "aguila_real",
+      "name": "Centinela",
+      "description": "La nuca dorada destaca sobre las alas recogidas de este vigilante.",
+      "species": "Aquila chrysaetos",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/aguila_real--centinela.webp"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/aguila_real--centinela.webp"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/aguila_real--centinela.webp"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/aguila_real--centinela.webp"
+        }
+      ]
+    },
+    {
+      "id": "basalto",
+      "speciesId": "asia_esp_0527",
+      "name": "Basalto",
+      "description": "Escamas oscuras y patas robustas sostienen una silueta rasante.",
+      "species": "Varanus komodoensis",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/asia_esp_0527--basalto.webp"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/asia_esp_0527--basalto.webp"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/asia_esp_0527--basalto.webp"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/asia_esp_0527--basalto.webp"
+        }
+      ]
+    },
+    {
+      "id": "seda",
+      "speciesId": "asia_esp_0373",
+      "name": "Seda",
+      "description": "Una cobra de capucha estrecha se eleva entre sus propios anillos.",
+      "species": "Ophiophagus hannah",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/asia_esp_0373--seda.webp"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/asia_esp_0373--seda.webp"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/asia_esp_0373--seda.webp"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/asia_esp_0373--seda.webp"
+        }
+      ]
+    },
+    {
+      "id": "junco",
+      "speciesId": "af_cocodrilo_nilo",
+      "name": "Junco",
+      "description": "Escudos dorsales irregulares y un hocico surcado por viejas cicatrices.",
+      "species": "Crocodylus niloticus",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/af_cocodrilo_nilo--junco.webp"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/af_cocodrilo_nilo--junco.webp"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/af_cocodrilo_nilo--junco.webp"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/af_cocodrilo_nilo--junco.webp"
+        }
+      ]
+    },
+    {
+      "id": "ancora",
+      "speciesId": "af_tortuga_aldabra",
+      "name": "Áncora",
+      "description": "Caparazón de anillos marcados y cuello extendido sobre patas columnares.",
+      "species": "Aldabrachelys gigantea",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/af_tortuga_aldabra--ancora.webp"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/af_tortuga_aldabra--ancora.webp"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/af_tortuga_aldabra--ancora.webp"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/af_tortuga_aldabra--ancora.webp"
+        }
+      ]
+    },
+    {
+      "id": "ascua",
+      "speciesId": "zorro_rojo",
+      "name": "Ascua",
+      "description": "Un zorro de pecho marfil se sienta envuelto en su cola rojiza.",
+      "species": "Vulpes vulpes",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/zorro_rojo--ascua.webp"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/zorro_rojo--ascua.webp"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/zorro_rojo--ascua.webp"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/zorro_rojo--ascua.webp"
+        }
+      ]
+    },
+    {
+      "id": "remonte",
+      "speciesId": "asia_esp_0369",
+      "name": "Remonte",
+      "description": "Un salmón de dorso moteado y mandíbula curva en plena remontada.",
+      "species": "Oncorhynchus gorbuscha",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/asia_esp_0369--remonte.webp"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/asia_esp_0369--remonte.webp"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/asia_esp_0369--remonte.webp"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/asia_esp_0369--remonte.webp"
+        }
+      ]
+    }
+  ]
+}

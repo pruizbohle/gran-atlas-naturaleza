@@ -20,6 +20,9 @@ const amphibianSets = require('./amphibian-comparisons.cjs');
 const cartilaginous = new Map(require('../docs/cientifica-v482/inventario-v49.json').lots.condrictios.inventory
   .map(animal => [animal.id, animal]));
 const cartilaginousSets = require('./cartilaginous-comparisons.cjs');
+const salmonids = new Map(require('../docs/cientifica-v490/inventario-pendiente.json').lots.salmonidos.inventory
+  .map(animal => [animal.id, animal]));
+const salmonidSets = require('./salmonid-comparisons.cjs');
 const comparisonSets = {
   ...require('./passerine-comparisons.cjs'),
   ...require('./arboreal-bird-comparisons.cjs'),
@@ -205,6 +208,11 @@ function classify(id, sp) {
     if (taxonomy.className !== fish.className || fish.latin !== sp.latin) throw Error('Condrictio fuera del inventario: ' + id);
     return { family: fish.family, group: 'Tiburones y rayas', edition: '4.9.0' };
   }
+  const salmonid = salmonids.get(id);
+  if (salmonid) {
+    if (taxonomy.className !== salmonid.className || salmonid.latin !== sp.latin) throw Error('Salmónido fuera del inventario: ' + id);
+    return { family: salmonid.family, order: 'Salmoniformes', group: 'Salmónidos', edition: '4.9.1' };
+  }
   const genus = sp.latin.split(' ')[0];
   const aquatic = aquaticMammal(sp.latin);
   if (aquatic) return { family: aquatic.family, group: aquaticGroups[aquatic.group] };
@@ -301,6 +309,15 @@ const birdComparisons = buildComparisons(comparisonSets, birds, 'birds');
 const reptileComparisons = buildComparisons(reptileSets, reptiles, 'reptiles');
 const amphibianComparisons = buildComparisons(amphibianSets, amphibians, 'amphibians');
 const cartilaginousComparisons = buildComparisons(cartilaginousSets, cartilaginous, 'cartilaginous');
+const salmonidComparisons = buildComparisons(salmonidSets, salmonids, 'salmonids');
+const legendMembers = new Map(audit.LEGENDARY_SPECIMENS.map(legend => [legend.speciesId, legend]));
+const legendaryComparisons = buildComparisons({
+  all: {
+    label: 'Colección completa',
+    legendary: audit.LEGENDARY_SPECIMENS.map(legend =>
+      [audit.SPECIES[legend.speciesId].latin, legend.description, 'legendario'])
+  }
+}, legendMembers, 'legendary');
 const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,
   total: catalogEntries.length,
@@ -321,9 +338,11 @@ const migrationProgress = {
   amphibians: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Amphibia').length,
   amphibiansMigrated: species.filter(sp => sp.records[0].src && audit.taxonomyInfo(sp.id).className === 'Amphibia').length,
   cartilaginous: catalogEntries.filter(([id]) => audit.taxonomyInfo(id).className === 'Chondrichthyes').length,
-  cartilaginousMigrated: species.filter(sp => sp.records[0].src && cartilaginous.has(sp.id)).length
+  cartilaginousMigrated: species.filter(sp => sp.records[0].src && cartilaginous.has(sp.id)).length,
+  salmonids: salmonids.size,
+  salmonidsMigrated: species.filter(sp => sp.records[0].src && salmonids.has(sp.id)).length
 };
-const mixedFieldSprites = ['eu_esp_0669', 'eu_esp_0668', 'eu_esp_0667'].map(id => {
+const mixedFieldSprites = ['eu_esp_0668', 'eu_esp_0667', 'eu_esp_0670'].map(id => {
   const sp = audit.SPECIES[id];
   if (classify(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
   return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };
@@ -335,6 +354,8 @@ fs.writeFileSync(path.join(out, 'catalog.js'),
   'const reptileComparisons = ' + JSON.stringify(reptileComparisons, null, 2) + ';\n' +
   'const amphibianComparisons = ' + JSON.stringify(amphibianComparisons, null, 2) + ';\n' +
   'const cartilaginousComparisons = ' + JSON.stringify(cartilaginousComparisons, null, 2) + ';\n' +
+  'const salmonidComparisons = ' + JSON.stringify(salmonidComparisons, null, 2) + ';\n' +
+  'const legendaryComparisons = ' + JSON.stringify(legendaryComparisons, null, 2) + ';\n' +
   'const migrationProgress = ' + JSON.stringify(migrationProgress) + ';\n');
 const version = require('../package.json').version;
 const rows = species.map(sp => [

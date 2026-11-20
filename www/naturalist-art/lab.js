@@ -22,11 +22,12 @@ const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
   gallery: 'Galería', variants: 'Variantes', frames: 'Ejemplares especiales',
   compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles', amphibians: 'Comparar anfibios', cartilaginous: 'Comparar tiburones y rayas',
+  salmonids: 'Comparar salmónidos', legendary: 'Colección de legendarios',
   compression: 'Compresión WebP', scale: 'Escala real', 'visual-scale': 'Ajustes de escala', review: 'Revisión artística'
 };
 const taxonComparisons = {
   birds: birdComparisons, reptiles: reptileComparisons, amphibians: amphibianComparisons,
-  cartilaginous: cartilaginousComparisons
+  cartilaginous: cartilaginousComparisons, salmonids: salmonidComparisons, legendary: legendaryComparisons
 };
 const frames = {
   Normal: 'classic', Notable: 'notable', 'Épico': 'epic',
@@ -54,7 +55,8 @@ byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + m
   migrationProgress.mammals + ' mamíferos · ' + migrationProgress.birdsMigrated + ' de ' +
   migrationProgress.birds + ' aves · ' + migrationProgress.reptilesMigrated + ' de ' + migrationProgress.reptiles + ' reptiles · ' +
   migrationProgress.amphibiansMigrated + ' de ' + migrationProgress.amphibians + ' anfibios · ' +
-  migrationProgress.cartilaginousMigrated + ' de ' + migrationProgress.cartilaginous + ' tiburones y rayas';
+  migrationProgress.cartilaginousMigrated + ' de ' + migrationProgress.cartilaginous + ' tiburones y rayas · ' +
+  migrationProgress.salmonidsMigrated + ' de ' + migrationProgress.salmonids + ' salmónidos';
 for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
 selectOptions(comparisonHalo, Object.keys(frames).map(label => [label, label]));
 updateOrders();
@@ -247,7 +249,8 @@ function compareTaxa(sets, key) {
     const sp = catalog.find(item => item.id === id);
     const plate = plateKey ? sp.records.find(record => record.key === plateKey) : specimenPlate(sp, 'Normal');
     const name = plateKey ? sp.name + ' · ' + plate.label : sp.name;
-    return '<figure>' + illustration(sp, plate, comparisonHalo.value, size, true) +
+    const halo = key === 'legendary' ? 'Legendario' : comparisonHalo.value;
+    return '<figure>' + illustration(sp, plate, halo, size, true) +
       '<figcaption><strong>' + text(name) + '</strong><p class="latin">' + text(sp.latin) +
       '</p><p>' + text(trait) + '</p></figcaption></figure>';
   });
@@ -312,9 +315,9 @@ function draw() {
 
   for (const label of document.querySelectorAll('[data-catalog-filter]')) label.hidden = comparingSets;
   byId('order-control').hidden = comparingSets || birdOrder.options.length < 2;
-  byId('bird-set-control').hidden = !comparingTaxa;
+  byId('bird-set-control').hidden = !comparingTaxa || mode === 'legendary';
   byId('comparison-size-control').hidden = !comparingSets && !comparingVariants;
-  byId('comparison-halo-control').hidden = !comparingSets && !comparingVariants;
+  byId('comparison-halo-control').hidden = (!comparingSets && !comparingVariants) || mode === 'legendary';
   byId('variant-view-control').hidden = !comparingVariants || !sp.dimorphism;
   byId('species-control').hidden = mode === 'gallery' || comparingSets;
   byId('context-control').hidden = mode !== 'scale';
