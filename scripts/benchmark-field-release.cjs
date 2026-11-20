@@ -9,6 +9,7 @@ const { chromium } = require('playwright');
 const archive = process.env.ATLAS_HISTORY_WWW;
 const repetitions = Number(process.env.ATLAS_FIELD_REPETITIONS || 10);
 const current = require('../package.json').version;
+const offline = process.argv.includes('--offline');
 const versions = ['4.8.2', '4.9.0', current];
 assert.ok(archive && Number.isInteger(repetitions) && repetitions >= 6);
 const roots = new Map(versions.map(version => {
@@ -22,11 +23,13 @@ const server = http.createServer((request, response) => {
   try {
     const [, version, ...parts] = decodeURIComponent(new URL(request.url, 'http://atlas').pathname).split('/');
     const root = roots.get(version);
-    const name = parts.join('/') || 'index.html';
+    const joined = parts.join('/');
+    const name = !joined || joined.endsWith('/') ? joined + 'index.html' : joined;
     const file = path.resolve(root, name);
     if (!file.startsWith(root + path.sep)) throw Error('path');
+    const bytes = fs.readFileSync(file);
     response.writeHead(200, { 'Content-Type': mime[path.extname(file)] || 'application/octet-stream' });
-    response.end(fs.readFileSync(file));
+    response.end(bytes);
   } catch {
     response.writeHead(404).end();
   }
@@ -45,11 +48,38 @@ const measure = page => page.evaluate(async () => {
   };
 });
 
-async function benchmark(browser, url, width) {
-  const ctx = await browser.newContext({ viewport: { width, height: 900 }, isMobile: width === 390,
-    hasTouch: width === 390, serviceWorkers: 'block' });
+function contextOptions(width) {
+  return { viewport: { width, height: 900 }, isMobile: width === 390, hasTouch: width === 390 };
+}
+
+async function prepareOffline(browser, url, width, version) {
+  const context = await browser.newContext(contextOptions(width));
   try {
-    const page = await ctx.newPage();
+    const page = await context.newPage();
+    if (version === '4.8.2') {
+      await page.goto(url);
+    } else {
+      await page.goto(url + 'actualizar-atlas.html');
+      await page.locator('#atlasUpdateApply').click();
+      await page.getByText(/Descarga completa e integridad verificada/).waitFor({ timeout: 120000 });
+      await page.locator('#atlasUpdateInstall').click();
+      await page.getByText(/instalada\. El juego/).waitFor();
+      await page.locator('#atlasUpdateReturn').click();
+    }
+    await page.waitForFunction(() => navigator.serviceWorker.controller, null, { timeout: 120000 });
+    await page.close();
+    await context.setOffline(true);
+    return context;
+  } catch (error) {
+    await context.close();
+    throw error;
+  }
+}
+
+async function benchmark(browser, url, width, prepared) {
+  const context = prepared || await browser.newContext({ ...contextOptions(width), serviceWorkers: 'block' });
+  const page = await context.newPage();
+  try {
     await page.goto(url);
     await page.waitForFunction(() => !!window.AtlasSaveBridge);
     await page.evaluate(() => {
@@ -80,13 +110,14 @@ async function benchmark(browser, url, width) {
       assert.equal(sample.svg, 1);
       samples.push(sample);
     }
-    const session = await ctx.newCDPSession(page);
+    const session = await context.newCDPSession(page);
     await session.send('Performance.enable');
     const { metrics } = await session.send('Performance.getMetrics');
     const heapBytes = metrics.find(item => item.name === 'JSHeapUsedSize').value;
     return { initial: samples[0], repeats: samples.slice(1), heapBytes };
   } finally {
-    await ctx.close();
+    if (prepared) await page.close();
+    else await context.close();
   }
 }
 
@@ -102,18 +133,29 @@ function stats(values) {
   const address = 'http://127.0.0.1:' + server.address().port + '/';
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
   try {
+    const widths = offline ? [390] : [390, 1280];
     const samples = [];
-    for (const width of [390, 1280]) {
-      for (let trial = 0; trial < repetitions; trial++) {
-        // Rotate the execution order so build position and warm-up do not favor a release.
-        for (let step = 0; step < versions.length; step++) {
-          const version = versions[(step + trial) % versions.length];
-          samples.push({ width, trial, version, ...await benchmark(browser, address + version + '/', width) });
+    for (const width of widths) {
+      const prepared = new Map();
+      try {
+        if (offline) {
+          for (const version of versions) {
+            prepared.set(version, await prepareOffline(browser, address + version + '/', width, version));
+          }
         }
+        for (let trial = 0; trial < repetitions; trial++) {
+          // Rotate the execution order so build position and warm-up do not favor a release.
+          for (let step = 0; step < versions.length; step++) {
+            const version = versions[(step + trial) % versions.length];
+            samples.push({ width, trial, version, ...await benchmark(browser, address + version + '/', width, prepared.get(version)) });
+          }
+        }
+      } finally {
+        await Promise.all([...prepared.values()].map(context => context.close()));
       }
     }
     const summary = [];
-    for (const width of [390, 1280]) {
+    for (const width of widths) {
       for (const version of versions) {
         const rows = samples.filter(sample => sample.width === width && sample.version === version);
         summary.push({ width, version, initialMs: stats(rows.map(row => row.initial.ms)),
@@ -122,7 +164,7 @@ function stats(values) {
           heapBytes: stats(rows.map(row => row.heapBytes)), imageRGBABytes: rows[0].initial.rgbaBytes });
       }
     }
-    console.log(JSON.stringify({ chromium: browser.version(), repetitions, summary, samples }, null, 2));
+    console.log(JSON.stringify({ chromium: browser.version(), offline, repetitions, summary, samples }, null, 2));
   } finally {
     await browser.close();
     server.closeAllConnections();

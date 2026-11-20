@@ -15,4 +15,23 @@ El ensayo controlado usó Chromium 156.0.8078.79, con emulación táctil a 390 p
 
 El aumento de cientos de milisegundos no se reprodujo. A 390 px, la primera apertura de V4.9.0 fue más lenta en siete rondas, más rápida en cuatro e igual en una respecto de V4.8.2. La diferencia pareada mediana fue de **0,45 ms**. Al volver a abrir Campo, la mediana de V4.9.0 fue de 3,05 ms frente a 5,10 ms en V4.8.2. V4.9.1 registró 6,65 ms en la primera apertura y 4,20 ms en las repeticiones. El mismo WebP de Campo ocupó 65.536 bytes RGBA en las seis combinaciones.
 
-Estos resultados dejan un aumento pequeño en la primera apertura emulada y no muestran una regresión sostenida. Para V4.10 queda por contrastar el arranque completo y la decodificación con caché frío en Android físico. El ensayo local mide Campo con el navegador y la partida ya abiertos.
+## Campo con el caché offline activo
+
+Una segunda serie de 12 rondas a 390 px usó los tres service workers instalados y la red desconectada. Los recursos se prepararon una vez por versión. Se abrió una pestaña nueva en cada ronda, con la misma escena y el mismo orden alternado. [Muestras offline](rendimiento-campo-offline.json)
+
+| Versión | Primera apertura, mediana en ms | Primera, p90 en ms | Repetición, mediana en ms | Primera con controlador, mediana en ms | Heap JS, mediana en MB |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 4.8.2 | 20,00 | 68,80 | 14,65 | 68,70 | 9,16 |
+| 4.9.0 | 22,40 | 68,40 | 12,20 | 61,31 | 9,33 |
+| 4.9.1 | 20,05 | 68,00 | 12,95 | 50,97 | 9,23 |
+
+La diferencia pareada de V4.9.0 frente a V4.8.2 fue de +4,10 ms en la primera apertura, con ocho rondas más lentas y cuatro más rápidas. El p90 fue de 68,40 ms frente a 68,80 ms. En V4.9.1 la mediana de primera apertura offline quedó a 0,05 ms de V4.8.2. En ambas comparaciones, el aumento de cientos de milisegundos de la medición anterior quedó fuera de los resultados. El ensayo local mide Campo con el navegador y la partida ya abiertos. Para V4.10 queda por contrastar el arranque completo y la decodificación con caché frío en Android físico.
+
+## Repetición del ensayo
+
+El script lee la versión actual de `package.json`. Para comparar los archivos históricos, exporta `www` de V4.8.2 y V4.9.0 con Git a `482/www` y `490/www` dentro del directorio indicado en `ATLAS_HISTORY_WWW`. Los commits de referencia son `ee5097c` y `4ee0853`.
+
+```bash
+ATLAS_HISTORY_WWW=/ruta/archivos ATLAS_FIELD_REPETITIONS=12 node scripts/benchmark-field-release.cjs
+ATLAS_HISTORY_WWW=/ruta/archivos ATLAS_FIELD_REPETITIONS=12 node scripts/benchmark-field-release.cjs --offline
+```
