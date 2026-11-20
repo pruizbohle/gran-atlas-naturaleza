@@ -1,0 +1,28 @@
+# AUD-03 — Integridad, guardado y restauración
+Base inalterada: V4.9.6, 84298f39b4e333dc2f9a8bae0e07e3ae84a1264e. Se revisó www/js/save-manager.js y www/js/app.js, incluyendo restauración del estado vivo, procesos pendientes, comercio, sondeos y migraciones. Nueve comprobaciones aisladas reproducen comportamientos concretos; no equivalen a ejecutar el juego completo, dispositivos físicos o las 227 pruebas históricas. Evidencia: aud03-pruebas-aisladas.json.
+
+## Protecciones existentes
+- Formato 1 y versión de juego separada; importación de formatos históricos, rechazo de recursos principales negativos o no finitos y de formato futuro no soportado; selección de archivo con token de versión y confirmación explícita.
+- La restauración sincroniza estado vivo con persistencia, conserva el registro ilegible sin sobrescribir y advierte ante fallo de almacenamiento. La copia de emergencia precede a la importación. Se conservan alias, accesos cartográficos históricos y legendarios únicos en la misma colección.
+- Comercio y sondeos normalizan identificadores y duración, descartan trabajos ya presentes en historial, usan transacciones con restauración de estado si falla persistencia y limitan el reloj de liquidación a Date.now(). Comercio posee recibos adicionales. La protección de expediciones cartográficas se apoya en la transacción comercial.
+- Excavaciones y misiones de relictos retiran el trabajo antes de entregar recompensas, pero necesitan verificación de normalización y persistencia.
+
+## Hallazgos
+| ID | Prioridad | Evidencia / estado | Acción propuesta |
+|---|---|---|---|
+| AUD03-01 | P1 | receiptSnapshot, compareReceipt y matchImported (save-manager.js): verifican agregados de avistamientos, publicaciones, prestigio, región y algunas comprobaciones de libras. En caso aislado no detectaron pérdida de inventario, conocimiento, etapas ni cambio de identidad con igual total. | Comparar estado completo normalizado por campos y por ID, distinguir migraciones permitidas y operaciones legítimas posteriores. No confundir recibo positivo con integridad completa. |
+| AUD03-02 | P1 | parseBackup/normalizeGame aceptó fixtures con trabajos duplicados, nivel de museo cero y etapa 99; esto no certifica que el motor final acepte todos. | Validar y normalizar estructuras internas de manera no destructiva, preservar datos válidos, rechazar o informar inconsistencias y respaldar original. Revisar colecciones, mejoras, equipo, IDs, tiempos y límites por módulo. |
+| AUD03-03 | P1 | En el processVoyages original (app.js 4751–4772), dos trabajos vencidos con mismo ID llaman dos veces al resolvedor simulado y el trabajo con endAt nulo permanece. El wrapper de 7144–7151 sólo añade atomicidad si hay un trabajo cartográfico vencido; no demuestra que un respaldo real reproduzca duplicación tras todas las migraciones. | Ejecutar prueba integral con respaldos legítimos históricos y datos anómalos; deduplicar trabajos, liquidar exactamente una vez con recibos persistentes y tratar trabajos inválidos explícitamente. Aplicar atomicidad también a viajes sin datos cartográficos. |
+| AUD03-04 | P1 | restoreGame (2464–2504) y restoreSelected: copia de estado y rollback de la sesión, pero flags y buffers derivados no se restauran todos explícitamente. Una copia de emergencia que exceda cuota bloquea importación antes de escritura. | Inyectar fallo antes/después de guardar, en render y en restauración de emergencia; comprobar memoria, archivo, notificaciones y capacidad de exportar. No retirar guardas existentes. |
+| AUD03-05 | P2 | normalizeDeep3330 (6779–6788) usa historial truncado a 12 y filtra trabajos duplicados; excavaciones/relictos históricos sólo validan endAt finito en rutas de carga. | Ensayar ciclos repetidos, historial lleno y retorno después de 72h; comprobar que recibos, trabajos y recompensas se conservan sin repetirse. No rediseñar relictos. |
+| AUD03-06 | P2 | parseBackup limita tamaño a 4 MiB; prepareBackup genera JSON sin comprobar el mismo límite. Inspección estática, no se midió un guardado de larga duración. | Medir respaldo de partida avanzada y probar exportación-reimportación en web y Android. Probar cuota real y compatibilidad con formato existente. |
+
+## Matriz de aceptación para la fase de ejecución
+- Exportar/reimportar una partida nueva, intermedia y avanzada; probar respaldo de V3.28–3.41 y las rutas PWA V4.3.0–4.9.6 disponibles.
+- Comparar saldo de libras/conocimiento, inventario por ID, avistamientos por ID, cuaderno, monografías, especímenes, museo y logros, compras, equipo, geografía, trabajos y recibos. Registrar migraciones explícitas (alias, accesos, preservación de legendarios).
+- Probar trabajos pendientes de comercio 24h, expediciones, excavaciones, relictos y sondeos, reapertura después de 1/8/72h y cada recompensa una sola vez. Aplicar máximo offline vigente; no usar ayudas ni coronas.
+- Reproducir almacenamiento lleno, respaldo ilegible, archivo no compatible, cancelación y retorno tras actualización PWA; verificar exportación de progreso en memoria y recuperación. Ejecutar validación Android física más adelante con candidato autorizado, no generar APK ahora.
+- Conservar trazabilidad de AUD-01/02/03, corregir fallos reales priorizados y mantener pruebas antiguas como garantía histórica o actualizar aserciones obsoletas justificadamente.
+
+## Continuidad
+El siguiente bloque es AUD-04: calidad visual por familia, 22 rutas de dimorfismo compartidas y consistencia de variantes, escalas y legibilidad. No se ha modificado producción, ni se ha publicado nada, ni se ha firmado APK. Los hallazgos son insumos para Codex y no representan cierre de V5.0.1.
