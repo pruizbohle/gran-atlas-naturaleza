@@ -1,5 +1,5 @@
 {
-  "version": "4.9.5",
+  "version": "4.9.6",
   "atlas": "simple",
   "gm07P04": {
     "activeTaxa": 1000,
@@ -14,6 +14,16 @@
     "scientificallyIllustratedTaxa": 964,
     "scientificPlates": 1636,
     "deepSeaTaxa": 14,
+    "illustratedLegendary": 12,
+    "relicts": 9
+  },
+  "gm07P06": {
+    "activeTaxa": 1000,
+    "scientificallyIllustratedTaxa": 1000,
+    "scientificPlates": 1672,
+    "newMarineFishPlates": 16,
+    "newCephalopodPlates": 20,
+    "regions": 125,
     "illustratedLegendary": 12,
     "relicts": 9
   },
@@ -170,7 +180,7 @@
   },
   "androidDistribution": {
     "appId": "com.elgranatlas.naturaleza.beta314",
-    "versionCode": 40905,
+    "versionCode": 40906,
     "policy": "Permanent certificate and exact-candidate physical restoration required before Android publication"
   },
   "campamentoProfile": {

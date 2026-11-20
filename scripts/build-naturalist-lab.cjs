@@ -36,6 +36,10 @@ const reefSets = require('./reef-fish-comparisons.cjs');
 const deepSea = new Map(require('../docs/cientifica-v493/inventario-pendiente.json').lots.profundos.inventory
   .map(animal => [animal.id, animal]));
 const deepSeaSets = require('./deep-sea-fish-comparisons.cjs');
+const closeout = require('../docs/cientifica-v495/inventario-pendiente.json').lots;
+const marine = new Map(closeout.marinos.inventory.map(animal => [animal.id, animal]));
+const cephalopods = new Map(closeout.cefalopodos.inventory.map(animal => [animal.id, animal]));
+const closeoutSets = require('./marine-closeout-comparisons.cjs');
 const comparisonSets = {
   ...require('./passerine-comparisons.cjs'),
   ...require('./arboreal-bird-comparisons.cjs'),
@@ -247,6 +251,13 @@ function classify(id, sp) {
     }
     return { family: deepFish.family, group: 'Peces de aguas profundas', edition: '4.9.5' };
   }
+  const coastalAnimal = marine.get(id) || cephalopods.get(id);
+  if (coastalAnimal) {
+    if (taxonomy.className !== coastalAnimal.className || coastalAnimal.latin !== sp.latin) {
+      throw Error('Especie marina fuera del inventario de cierre: ' + id);
+    }
+    return { family: coastalAnimal.family, group: marine.has(id) ? 'Peces marinos' : 'Cefalópodos', edition: '4.9.6' };
+  }
   if (Object.hasOwn(worldAdditions, id)) {
     const { family, order, subClass: group } = taxonomy;
     return { family, order, group, edition: '4.9.3' };
@@ -351,6 +362,8 @@ const salmonidComparisons = buildComparisons(salmonidSets, salmonids, 'salmonids
 const freshwaterComparisons = buildComparisons(freshwaterSets, freshwater, 'freshwater');
 const reefComparisons = buildComparisons(reefSets, reef, 'reef');
 const deepSeaComparisons = buildComparisons(deepSeaSets, deepSea, 'deep');
+const marineComparisons = buildComparisons(closeoutSets.marine, marine, 'marine');
+const cephalopodComparisons = buildComparisons(closeoutSets.cephalopods, cephalopods, 'cephalopods');
 const legendMembers = new Map(audit.LEGENDARY_SPECIMENS.map(legend => [legend.speciesId, legend]));
 const legendaryComparisons = buildComparisons({
   all: {
@@ -387,11 +400,14 @@ const migrationProgress = {
   reef: reef.size,
   reefMigrated: species.filter(sp => sp.records[0].src && reef.has(sp.id)).length,
   deepSea: deepSea.size,
-  deepSeaMigrated: species.filter(sp => sp.records[0].src && deepSea.has(sp.id)).length
+  deepSeaMigrated: species.filter(sp => sp.records[0].src && deepSea.has(sp.id)).length,
+  marine: marine.size,
+  marineMigrated: species.filter(sp => sp.records[0].src && marine.has(sp.id)).length,
+  cephalopods: cephalopods.size,
+  cephalopodsMigrated: species.filter(sp => sp.records[0].src && cephalopods.has(sp.id)).length
 };
 const mixedFieldSprites = ['mar_esp_thunnus_albacares', 'mar_esp_mola_mola', 'mar_esp_scomber_scombrus'].map(id => {
   const sp = audit.SPECIES[id];
-  if (classify(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
   return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };
 });
 fs.writeFileSync(path.join(out, 'catalog.js'),
@@ -405,6 +421,8 @@ fs.writeFileSync(path.join(out, 'catalog.js'),
   'const freshwaterComparisons = ' + JSON.stringify(freshwaterComparisons, null, 2) + ';\n' +
   'const reefComparisons = ' + JSON.stringify(reefComparisons, null, 2) + ';\n' +
   'const deepSeaComparisons = ' + JSON.stringify(deepSeaComparisons, null, 2) + ';\n' +
+  'const marineComparisons = ' + JSON.stringify(marineComparisons, null, 2) + ';\n' +
+  'const cephalopodComparisons = ' + JSON.stringify(cephalopodComparisons, null, 2) + ';\n' +
   'const legendaryComparisons = ' + JSON.stringify(legendaryComparisons, null, 2) + ';\n' +
   'const migrationProgress = ' + JSON.stringify(migrationProgress) + ';\n');
 const version = require('../package.json').version;

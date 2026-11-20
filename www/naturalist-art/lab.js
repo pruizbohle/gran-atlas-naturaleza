@@ -22,13 +22,13 @@ const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
   gallery: 'Galería', variants: 'Variantes', frames: 'Ejemplares especiales',
   compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles', amphibians: 'Comparar anfibios', cartilaginous: 'Comparar tiburones y rayas',
-  salmonids: 'Comparar salmónidos', freshwater: 'Comparar peces de agua dulce', reef: 'Comparar peces de arrecife', deep: 'Comparar peces de aguas profundas', legendary: 'Colección de legendarios',
+  salmonids: 'Comparar salmónidos', freshwater: 'Comparar peces de agua dulce', reef: 'Comparar peces de arrecife', deep: 'Comparar peces de aguas profundas', marine: 'Comparar peces marinos', cephalopods: 'Comparar cefalópodos', legendary: 'Colección de legendarios',
   compression: 'Compresión WebP', scale: 'Escala real', 'visual-scale': 'Ajustes de escala', review: 'Revisión artística'
 };
 const taxonComparisons = {
   birds: birdComparisons, reptiles: reptileComparisons, amphibians: amphibianComparisons,
   cartilaginous: cartilaginousComparisons, salmonids: salmonidComparisons,
-  freshwater: freshwaterComparisons, reef: reefComparisons, deep: deepSeaComparisons, legendary: legendaryComparisons
+  freshwater: freshwaterComparisons, reef: reefComparisons, deep: deepSeaComparisons, marine: marineComparisons, cephalopods: cephalopodComparisons, legendary: legendaryComparisons
 };
 const frames = {
   Normal: 'classic', Notable: 'notable', 'Épico': 'epic',
@@ -60,7 +60,9 @@ byId('migration-progress').textContent = migrationProgress.migrated + ' de ' + m
   migrationProgress.salmonidsMigrated + ' de ' + migrationProgress.salmonids + ' salmónidos · ' +
   migrationProgress.freshwaterMigrated + ' de ' + migrationProgress.freshwater + ' peces dulceacuícolas y estuarinos · ' +
   migrationProgress.reefMigrated + ' de ' + migrationProgress.reef + ' peces de arrecife · ' +
-  migrationProgress.deepSeaMigrated + ' de ' + migrationProgress.deepSea + ' peces de aguas profundas';
+  migrationProgress.deepSeaMigrated + ' de ' + migrationProgress.deepSea + ' peces de aguas profundas · ' +
+  migrationProgress.marineMigrated + ' de ' + migrationProgress.marine + ' peces marinos · ' +
+  migrationProgress.cephalopodsMigrated + ' de ' + migrationProgress.cephalopods + ' cefalópodos';
 for (const name of new Set(catalog.map(sp => sp.group))) group.add(new Option(name, name));
 selectOptions(comparisonHalo, Object.keys(frames).map(label => [label, label]));
 updateOrders();
@@ -182,7 +184,7 @@ function gamePreview(sp) {
     ];
     return '<article class="mixed-field" aria-label="Comparación de avistamiento mixto">' +
       environment + AtlasFieldUI.encounter({ entries, reward: '3 avistamientos' }) +
-      '<p>' + text(sp.name + (record.src ? ' · WebP' : ' · SVG de respaldo') + ' / ' + companion.name + ' · SVG') + '</p></article>';
+      '<p>' + text(sp.name + (record.src ? ' · WebP' : ' · SVG de respaldo') + ' / ' + companion.name + ' · SVG histórico') + '</p></article>';
   }
   if (mode === 'field') {
     return '<article class="field-card"><header>' + text(zone?.name || 'Avistamiento') + '</header>' +

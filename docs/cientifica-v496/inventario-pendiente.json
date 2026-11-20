@@ -1,0 +1,99 @@
+{
+  "version": "4.9.6",
+  "summary": {
+    "species": 0,
+    "families": [],
+    "albino": 0,
+    "melanic": 0,
+    "dimorphicSpecies": 0,
+    "legendary": [],
+    "estimatedPlates": 0
+  },
+  "classes": {},
+  "lots": {
+    "condrictios": {
+      "title": "Tiburones y rayas",
+      "review": "Hocico, dientes y cinco a siete hendiduras branquiales en tiburones, disco y posición de las branquias en rayas.",
+      "species": 0,
+      "families": [],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 0,
+      "inventory": []
+    },
+    "salmonidos": {
+      "title": "Salmónidos y Remonte",
+      "review": "Aleta adiposa, radios, pedúnculo caudal y contraste entre coloración habitual y nupcial.",
+      "species": 0,
+      "families": [],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 0,
+      "inventory": []
+    },
+    "dulceacuicolas": {
+      "title": "Peces dulceacuícolas y estuarinos",
+      "review": "Barbillones, placas, línea lateral, forma de mandíbulas, aletas y patrones de escamas.",
+      "species": 0,
+      "families": [],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 0,
+      "inventory": []
+    },
+    "arrecife": {
+      "title": "Peces óseos de arrecife",
+      "review": "Diversidad del perfil lateral, espinas, aletas transparentes y marcas diagnósticas en miniaturas.",
+      "species": 0,
+      "families": [],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 0,
+      "inventory": []
+    },
+    "marinos": {
+      "title": "Peces óseos costeros, pelágicos y de plataforma",
+      "review": "Aletas y pínulas de pelágicos, barbillón de gadiformes y proporciones de peces luna.",
+      "species": 0,
+      "families": [],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 0,
+      "inventory": []
+    },
+    "profundos": {
+      "title": "Peces óseos de aguas profundas",
+      "review": "Fotóforos, señuelos, ojos tubulares, radios alargados y piel delicada, con contraste sobre fondo de aguas profundas.",
+      "species": 0,
+      "families": [],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 0,
+      "inventory": []
+    },
+    "cefalopodos": {
+      "title": "Pulpos, calamares y calamar vampiro",
+      "review": "Ocho brazos en octópodos, dos tentáculos adicionales en calamares, membranas y aletas, con margen transparente en ventosas y filamentos.",
+      "species": 0,
+      "families": [],
+      "albino": 0,
+      "melanic": 0,
+      "dimorphicSpecies": 0,
+      "legendary": [],
+      "estimatedPlates": 0,
+      "inventory": []
+    }
+  }
+}

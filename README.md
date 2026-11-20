@@ -1,4 +1,8 @@
-# El Gran Atlas · Fauna de las profundidades (V4.9.5)
+# El Gran Atlas · Catálogo mundial ilustrado (V4.9.6)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.6](docs/cientifica-v496/README.md) · [Auditoría V5.0](docs/cientifica-v496/auditoria-v50.md)
+
+## Serie 4 · Fauna de las profundidades (V4.9.5)
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.5](docs/cientifica-v495/README.md) · [Plan V4.9.6](docs/cientifica-v495/plan-v496.md)
 

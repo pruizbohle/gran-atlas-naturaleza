@@ -7,10 +7,10 @@ const os = require('node:os');
 const path = require('node:path');
 const { chromium } = require('playwright');
 
-const archive = process.env.ATLAS_HISTORY_WWW || '/workspace/work/v495/reference';
+const archive = process.env.ATLAS_HISTORY_WWW || '/workspace/work/v496/reference';
 const version = require('../package.json').version;
-const previous = '4.9.3';
-const candidatePlate = '/naturalist-art/plates/64/deep_esp_macropinna_microstoma--normal.webp';
+const previous = '4.9.5';
+const candidatePlate = '/naturalist-art/plates/64/deep_esp_grimpoteuthis_abyssicola--normal.webp';
 const future = version.replace(/\d+$/, patch => String(Number(patch) + 1));
 const evidence = process.env.ATLAS_EVIDENCE_DIR;
 const host = '127.0.0.1';
@@ -137,7 +137,7 @@ async function runMigration(browser, base, old, mobile) {
   page.on('pageerror', error => errors.push(error.message));
   const row = { from: old, to: version, mobile, tested: [] };
   try {
-    if (old === previous || old === '4.9.2') await openPreparedBaseline(page, base);
+    if (old === previous || ['4.9.2', '4.9.3'].includes(old)) await openPreparedBaseline(page, base);
     else await page.goto(base);
     await page.waitForFunction(() => navigator.serviceWorker.controller, null, { timeout: 180000 });
     assert.match(await page.title(), new RegExp('v' + old));
@@ -245,7 +245,9 @@ async function runMigration(browser, base, old, mobile) {
     await update.goto(base + 'naturalist-art/');
     await update.locator('[data-mode=freshwater]').click();
     await update.locator('#bird-set').selectOption('tigerfish');
-    const plates = await update.locator('.taxon-comparison img').evaluateAll(imgs => Promise.all(imgs.map(async img => {
+    const images = update.locator('.taxon-comparison img');
+    await images.nth(1).waitFor();
+    const plates = await images.evaluateAll(imgs => Promise.all(imgs.map(async img => {
       await img.decode();
       return img.naturalWidth;
     })));
@@ -403,32 +405,51 @@ async function checkNewCatalogInGame(app) {
   return results;
 }
 
-async function checkSurfaceInGame(app) {
-  const id = 'mar_esp_eretmochelys_imbricata';
-  const region = 'mar_oceano_indico_tropical';
-  await app.evaluate(({ id, region }) => {
+async function checkSurfaceInGame(app, {
+  id = 'mar_esp_eretmochelys_imbricata', region = 'mar_oceano_indico_tropical',
+  habitat = 'arrecife', draw = 0.01, automatic = false
+} = {}) {
+  await app.evaluate(({ id, region, habitat }) => {
     const save = AtlasSaveBridge.getSaveData();
-    Object.assign(save, { currentRegion: region, habitat: 'arrecife', time: 'dia', season: 'primavera',
+    Object.assign(save, { currentRegion: region, habitat, time: 'dia', season: 'primavera',
       helpers: 0, lastTick: Date.now(), lastEncounter: null });
     save.craftedItems.world_map = true;
     save.purchases.mares_superficiales_1 = 1;
     save.regionUnlocked[region] = true;
     delete save.sightings[id];
     AtlasSaveBridge.restoreGame(save);
-  }, { id, region });
+  }, { id, region, habitat });
   await app.locator('.tab[data-tab=field]').first().evaluate(button => button.click());
-  await app.locator('[data-action=search-manual]').evaluate(button => {
+  await app.locator('[data-action=search-manual]').evaluate((button, draw) => {
     const original = Math.random;
-    Math.random = () => 0.01;
+    const rolls = [0.01, draw];
+    Math.random = () => rolls.shift() ?? 0.5;
     try { button.click(); }
     finally { Math.random = original; }
-  });
+  }, draw);
   const { sightings, lastEncounter } = await app.evaluate(() => AtlasSaveBridge.getSaveData());
   assert.ok(sightings[id] > 0);
   assert.equal(lastEncounter.deepEvidence, undefined);
   await app.locator('#fieldResult img[src$="/' + id + '--normal.webp"]').evaluate(img => img.decode());
-  await app.locator('.field-environment .landscape-arrecife').evaluate(img => img.decode());
-  return { id, region, habitat: 'arrecife', method: 'observación directa' };
+  const landscape = habitat === 'oceano_abierto' ? 'oceano' : 'arrecife';
+  await app.locator('.field-environment .landscape-' + landscape).evaluate(img => img.decode());
+  if (automatic) {
+    const sea = require('../www/js/marine-data-v3320.js');
+    const other = sea.regions.find(zone => zone.id === region).species.filter(key => key !== id);
+    await app.evaluate(other => {
+      const save = AtlasSaveBridge.getSaveData();
+      save.helpers = 3;
+      save.upgrades.autoTier = 4;
+      save.lastTick = Date.now();
+      const hour = Math.floor(save.lastTick / 3600000);
+      save.autoHourly = Object.fromEntries(other.map(key => [hour + ':' + key, 999]));
+      Math.random = () => 0.24;
+      AtlasSaveBridge.restoreGame(save);
+    }, other);
+    await app.waitForFunction(({ id, count }) => AtlasSaveBridge.getSaveData().sightings[id] > count,
+      { id, count: sightings[id] }, { timeout: 20000 });
+  }
+  return { id, region, habitat, method: 'observación directa', automatic };
 }
 
 async function checkDeepSeaInGame(app) {
@@ -438,6 +459,7 @@ async function checkDeepSeaInGame(app) {
   const scenarios = [
     ['deep_esp_macropinna_microstoma', 'columna_mesopelagica', 'sondeo', 60, 6],
     ['deep_esp_bathypterois_grallator', 'fondo_batial', 'muestreo', 180, 0],
+    ['deep_esp_grimpoteuthis_abyssicola', 'fondo_batial', 'muestreo', 180, 0],
     ['abisal_esp_pseudoliparis_swirei', 'hadal_marianas', 'extraordinario', 300, 0],
     ['abisal_esp_pseudoliparis_kermadecensis', 'hadal_kermadec', 'extraordinario', 300, 0]
   ];
@@ -610,10 +632,18 @@ async function installedMigration(base) {
       assert.match(await app.title(), new RegExp('v' + version.replaceAll('.', '\\.')));
       const catalog = await checkNewCatalogInGame(app);
       const surface = await checkSurfaceInGame(app);
+      const closeout = [
+        await checkSurfaceInGame(app, {
+          id: 'mar_esp_thunnus_albacares', habitat: 'oceano_abierto', draw: 0.945, automatic: true
+        }),
+        await checkSurfaceInGame(app, {
+          id: 'mar_esp_amphioctopus_marginatus', region: 'mar_mar_tropical_asiatico', draw: 0.025, automatic: true
+        })
+      ];
       const deepSea = await checkDeepSeaInGame(app);
       await context.setOffline(false);
       await protocol.send('PWA.uninstall', { manifestId: base });
-      evidenceRows.push({ from: previous, to: version, installed: true, catalog, surface, deepSea, tested: [
+      evidenceRows.push({ from: previous, to: version, installed: true, catalog, surface, closeout, deepSea, tested: [
         'PWA instalada mediante Chromium', 'ventana standalone', 'respaldo exacto', 'reapertura offline'
       ] });
       console.log('PASS PWA ' + previous + ' instalada en Chromium, ventana standalone, actualización y reapertura offline');
@@ -637,7 +667,7 @@ async function installedMigration(base) {
         if (process.argv.includes('--legacy-link')) {
           await legacyEntry(browser, base);
         } else if (!process.argv.includes('--fresh-only')) {
-          for (const [old, mobile] of [['4.3.0', false], ['4.8.1', true], ['4.8.2', false], ['4.9.2', false], [previous, true]]) {
+          for (const [old, mobile] of [['4.3.0', false], ['4.8.1', true], ['4.8.2', false], ['4.9.2', false], ['4.9.3', false], [previous, true]]) {
             requests = [];
             await runMigration(browser, base, old, mobile);
           }

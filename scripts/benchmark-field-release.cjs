@@ -10,7 +10,7 @@ const archive = process.env.ATLAS_HISTORY_WWW;
 const repetitions = Number(process.env.ATLAS_FIELD_REPETITIONS || 10);
 const current = require('../package.json').version;
 const offline = process.argv.includes('--offline');
-const versions = ['4.9.3', current];
+const versions = ['4.9.5', current];
 assert.ok(archive && Number.isInteger(repetitions) && repetitions >= 6);
 const roots = new Map(versions.map(version => {
   const directory = version === current ? 'www' : path.join(archive, version.replaceAll('.', ''), 'www');
@@ -72,7 +72,7 @@ async function prepareOffline(browser, url, width) {
   }
 }
 
-async function benchmark(browser, url, width, prepared, scientificBarreleye) {
+async function benchmark(browser, url, width, prepared, scientificSquid) {
   const context = prepared || await browser.newContext({ ...contextOptions(width), serviceWorkers: 'block' });
   const page = await context.newPage();
   try {
@@ -80,22 +80,22 @@ async function benchmark(browser, url, width, prepared, scientificBarreleye) {
     await page.waitForFunction(() => !!window.AtlasSaveBridge);
     await page.evaluate(() => {
       const save = AtlasSaveBridge.getSaveData();
-      const cookiecutter = 'mar_esp_isistius_brasiliensis';
       const barreleye = 'deep_esp_macropinna_microstoma';
-      Object.assign(save, { currentRegion: 'profundo_pacifico_profundo_oriental', habitat: 'columna_mesopelagica', time: 'dia', season: 'primavera', helpers: 0 });
+      const squid = 'deep_esp_histioteuthis_reversa';
+      Object.assign(save, { currentRegion: 'profundo_pacifico_profundo_suroccidental', habitat: 'columna_batial', time: 'dia', season: 'primavera', helpers: 0 });
       save.regionUnlocked[save.currentRegion] = true;
       save.craftedItems.world_map = true;
       save.craftedItems.sounding_kit = true;
       save.purchases.exploracion_profunda_1 = 1;
-      for (const id of [cookiecutter, barreleye]) {
+      for (const id of [barreleye, squid]) {
         save.discovered[id] = true;
         save.stages[id] = 5;
         save.sightings[id] = 430;
       }
-      save.selectedJournal = cookiecutter;
-      save.lastEncounter = { species: cookiecutter, title: 'Registro indirecto de muestra', sequence: 1,
+      save.selectedJournal = barreleye;
+      save.lastEncounter = { species: barreleye, title: 'Registro indirecto de muestra', sequence: 1,
         deepEvidence: { method: 'sondeo', region: save.currentRegion, direct: false }, entries: [
-        { id: cookiecutter, amount: 3 }, { id: barreleye, amount: 2 }
+        { id: barreleye, amount: 3 }, { id: squid, amount: 2 }
       ] };
       AtlasSaveBridge.restoreGame(save);
     });
@@ -105,10 +105,10 @@ async function benchmark(browser, url, width, prepared, scientificBarreleye) {
       const start = performance.now();
       const sample = await measure(page);
       sample.driverMs = performance.now() - start;
-      const files = ['mar_esp_isistius_brasiliensis--normal.webp'];
-      if (scientificBarreleye) files.push('deep_esp_macropinna_microstoma--normal.webp');
+      const files = ['deep_esp_macropinna_microstoma--normal.webp'];
+      if (scientificSquid) files.push('deep_esp_histioteuthis_reversa--normal.webp');
       assert.deepEqual(sample.images, files);
-      assert.equal(sample.svg, scientificBarreleye ? 0 : 1);
+      assert.equal(sample.svg, scientificSquid ? 0 : 1);
       samples.push(sample);
     }
     const session = await context.newCDPSession(page);

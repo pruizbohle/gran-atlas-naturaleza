@@ -1,0 +1,1877 @@
+{
+  "chromium": "156.0.8078.79",
+  "offline": false,
+  "repetitions": 12,
+  "summary": [
+    {
+      "width": 390,
+      "version": "4.9.5",
+      "initialMs": {
+        "median": 111.40000000037253,
+        "p90": 146.3999999994412,
+        "min": 9.199999999254942,
+        "max": 175.79999999981374
+      },
+      "repeatedMs": {
+        "median": 106.45000000018626,
+        "p90": 153.59999999962747,
+        "min": 12,
+        "max": 264.29999999981374
+      },
+      "initialDriverMs": {
+        "median": 197.2533985000009,
+        "p90": 263.50448100001086,
+        "min": 57.4829630000022,
+        "max": 304.0973920000106
+      },
+      "heapBytes": {
+        "median": 7906848,
+        "p90": 7961904,
+        "min": 7844068,
+        "max": 7993852
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 390,
+      "version": "4.9.6",
+      "initialMs": {
+        "median": 112.25000000046566,
+        "p90": 225.30000000074506,
+        "min": 9.299999999813735,
+        "max": 367.90000000037253
+      },
+      "repeatedMs": {
+        "median": 105.29999999981374,
+        "p90": 163.59999999962747,
+        "min": 19.799999999813735,
+        "max": 183.5
+      },
+      "initialDriverMs": {
+        "median": 187.04671049999888,
+        "p90": 335.52985000000626,
+        "min": 48.42755400000169,
+        "max": 402.6859059999988
+      },
+      "heapBytes": {
+        "median": 7801278,
+        "p90": 7853008,
+        "min": 7726892,
+        "max": 7869320
+      },
+      "imageRGBABytes": 131072
+    },
+    {
+      "width": 1280,
+      "version": "4.9.5",
+      "initialMs": {
+        "median": 63.950000000186265,
+        "p90": 101.70000000018626,
+        "min": 18.799999999813735,
+        "max": 106.79999999981374
+      },
+      "repeatedMs": {
+        "median": 51.14999999990687,
+        "p90": 94.19999999925494,
+        "min": 5.8999999994412065,
+        "max": 107.70000000018626
+      },
+      "initialDriverMs": {
+        "median": 99.04048099998909,
+        "p90": 123.3337579999934,
+        "min": 35.595043000008445,
+        "max": 175.6128059999901
+      },
+      "heapBytes": {
+        "median": 7872424,
+        "p90": 7988352,
+        "min": 7844536,
+        "max": 8012256
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 1280,
+      "version": "4.9.6",
+      "initialMs": {
+        "median": 57.39999999990687,
+        "p90": 116.09999999962747,
+        "min": 15.199999999254942,
+        "max": 213.70000000018626
+      },
+      "repeatedMs": {
+        "median": 27.549999999813735,
+        "p90": 71.6000000005588,
+        "min": 2.400000000372529,
+        "max": 85.40000000037253
+      },
+      "initialDriverMs": {
+        "median": 100.04993099998683,
+        "p90": 230.9121289999748,
+        "min": 40.04914099999587,
+        "max": 393.58522300000186
+      },
+      "heapBytes": {
+        "median": 7814830,
+        "p90": 7902008,
+        "min": 7706164,
+        "max": 8286372
+      },
+      "imageRGBABytes": 131072
+    }
+  ],
+  "samples": [
+    {
+      "width": 390,
+      "trial": 0,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 120.29999999981374,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 205.59845599999971
+      },
+      "repeats": [
+        {
+          "ms": 264.29999999981374,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 322.23366500000157
+        },
+        {
+          "ms": 107.29999999981374,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 129.35073700000066
+        }
+      ],
+      "heapBytes": 7879468
+    },
+    {
+      "width": 390,
+      "trial": 0,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 212.6000000005588,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 313.1922769999983
+      },
+      "repeats": [
+        {
+          "ms": 145.40000000037253,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 218.52120400000058
+        },
+        {
+          "ms": 107,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 190.29298700000072
+        }
+      ],
+      "heapBytes": 7784740
+    },
+    {
+      "width": 390,
+      "trial": 1,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 187.90000000037253,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 254.61091900000247
+      },
+      "repeats": [
+        {
+          "ms": 163.59999999962747,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 203.5938189999979
+        },
+        {
+          "ms": 111.5,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 138.20471700000053
+        }
+      ],
+      "heapBytes": 7780600
+    },
+    {
+      "width": 390,
+      "trial": 1,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 88.5,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 176.83804200000304
+      },
+      "repeats": [
+        {
+          "ms": 107.59999999962747,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 171.73688599999878
+        },
+        {
+          "ms": 111.20000000018626,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 132.19683399999485
+        }
+      ],
+      "heapBytes": 7961904
+    },
+    {
+      "width": 390,
+      "trial": 2,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 142.6000000005588,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 211.21642900000006
+      },
+      "repeats": [
+        {
+          "ms": 22.299999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 34.058376999993925
+        },
+        {
+          "ms": 124.40000000037253,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 179.22847999999794
+        }
+      ],
+      "heapBytes": 7915080
+    },
+    {
+      "width": 390,
+      "trial": 2,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 112.40000000037253,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 131.60257299999648
+      },
+      "repeats": [
+        {
+          "ms": 93.90000000037253,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 130.2172869999995
+        },
+        {
+          "ms": 113.79999999981374,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 147.47740899999917
+        }
+      ],
+      "heapBytes": 7797620
+    },
+    {
+      "width": 390,
+      "trial": 3,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 9.299999999813735,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 48.42755400000169
+      },
+      "repeats": [
+        {
+          "ms": 36.09999999962747,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 59.01525799999945
+        },
+        {
+          "ms": 49.799999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 57.4981340000013
+        }
+      ],
+      "heapBytes": 7869320
+    },
+    {
+      "width": 390,
+      "trial": 3,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 175.79999999981374,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 304.0973920000106
+      },
+      "repeats": [
+        {
+          "ms": 127,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 271.84431400000176
+        },
+        {
+          "ms": 52.60000000055879,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 75.53181800000311
+        }
+      ],
+      "heapBytes": 7923896
+    },
+    {
+      "width": 390,
+      "trial": 4,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 125.90000000037253,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 248.6577479999978
+      },
+      "repeats": [
+        {
+          "ms": 115.29999999981374,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 185.6779019999958
+        },
+        {
+          "ms": 59.200000000186265,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 169.2424830000091
+        }
+      ],
+      "heapBytes": 7884596
+    },
+    {
+      "width": 390,
+      "trial": 4,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 225.30000000074506,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 321.3499429999938
+      },
+      "repeats": [
+        {
+          "ms": 139.40000000037253,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 208.90931499999715
+        },
+        {
+          "ms": 103.59999999962747,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 199.91627299999527
+        }
+      ],
+      "heapBytes": 7814360
+    },
+    {
+      "width": 390,
+      "trial": 5,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 112.1000000005588,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 184.95514299999923
+      },
+      "repeats": [
+        {
+          "ms": 107.29999999981374,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 180.19220099999802
+        },
+        {
+          "ms": 99.80000000074506,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 197.15174899999693
+        }
+      ],
+      "heapBytes": 7726892
+    },
+    {
+      "width": 390,
+      "trial": 5,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 37.90000000037253,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 263.50448100001086
+      },
+      "repeats": [
+        {
+          "ms": 150.09999999962747,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 234.4929140000022
+        },
+        {
+          "ms": 105.6000000005588,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 159.5358009999909
+        }
+      ],
+      "heapBytes": 7902584
+    },
+    {
+      "width": 390,
+      "trial": 6,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 118.90000000037253,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 233.04314700000396
+      },
+      "repeats": [
+        {
+          "ms": 203.5,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 279.440552
+        },
+        {
+          "ms": 149.79999999981374,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 203.5324799999944
+        }
+      ],
+      "heapBytes": 7889464
+    },
+    {
+      "width": 390,
+      "trial": 6,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 101.59999999962747,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 164.548483999999
+      },
+      "repeats": [
+        {
+          "ms": 175.6000000005588,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 205.81676699999662
+        },
+        {
+          "ms": 122.80000000074506,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 211.32732500000566
+        }
+      ],
+      "heapBytes": 7832248
+    },
+    {
+      "width": 390,
+      "trial": 7,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 123,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 335.52985000000626
+      },
+      "repeats": [
+        {
+          "ms": 98.79999999981374,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 121.86073400000168
+        },
+        {
+          "ms": 130.6000000005588,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 200.48453299999528
+        }
+      ],
+      "heapBytes": 7786268
+    },
+    {
+      "width": 390,
+      "trial": 7,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 9.199999999254942,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 57.4829630000022
+      },
+      "repeats": [
+        {
+          "ms": 153.59999999962747,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 163.07269000000088
+        },
+        {
+          "ms": 69.69999999925494,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 98.58396200000425
+        }
+      ],
+      "heapBytes": 7905968
+    },
+    {
+      "width": 390,
+      "trial": 8,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 15.5,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 68.14611299999524
+      },
+      "repeats": [
+        {
+          "ms": 12,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 56.016806999978144
+        },
+        {
+          "ms": 14.099999999627471,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 22.3873339999991
+        }
+      ],
+      "heapBytes": 7919200
+    },
+    {
+      "width": 390,
+      "trial": 8,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 84,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 189.13827799999854
+      },
+      "repeats": [
+        {
+          "ms": 183.5,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 230.71616899999208
+        },
+        {
+          "ms": 143.19999999925494,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 184.10552300000563
+        }
+      ],
+      "heapBytes": 7823932
+    },
+    {
+      "width": 390,
+      "trial": 9,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 107.8999999994412,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 183.71479700002237
+      },
+      "repeats": [
+        {
+          "ms": 103,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 134.5142530000012
+        },
+        {
+          "ms": 79.5,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 97.56069199999911
+        }
+      ],
+      "heapBytes": 7804936
+    },
+    {
+      "width": 390,
+      "trial": 9,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 146.3999999994412,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 188.9083410000021
+      },
+      "repeats": [
+        {
+          "ms": 119.19999999925494,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 177.91720799999894
+        },
+        {
+          "ms": 30.700000000186265,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 46.6860100000049
+        }
+      ],
+      "heapBytes": 7993852
+    },
+    {
+      "width": 390,
+      "trial": 10,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 51,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 66.80720399998245
+      },
+      "repeats": [
+        {
+          "ms": 55.5,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 166.54114300000947
+        },
+        {
+          "ms": 65.5,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 88.22175799999968
+        }
+      ],
+      "heapBytes": 7844068
+    },
+    {
+      "width": 390,
+      "trial": 10,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 367.90000000037253,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 402.6859059999988
+      },
+      "repeats": [
+        {
+          "ms": 19.799999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 37.58250799999223
+        },
+        {
+          "ms": 35.09999999962747,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 83.6055060000217
+        }
+      ],
+      "heapBytes": 7853008
+    },
+    {
+      "width": 390,
+      "trial": 11,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 59.40000000037253,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 75.81611200000043
+      },
+      "repeats": [
+        {
+          "ms": 95.1000000005588,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 111.23503899999196
+        },
+        {
+          "ms": 33.799999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 80.25042900000699
+        }
+      ],
+      "heapBytes": 7790628
+    },
+    {
+      "width": 390,
+      "trial": 11,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 103.90000000037253,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 177.86315000001923
+      },
+      "repeats": [
+        {
+          "ms": 89.3999999994412,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 129.4781120000116
+        },
+        {
+          "ms": 54.39999999944121,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 95.85564799999702
+        }
+      ],
+      "heapBytes": 7907728
+    },
+    {
+      "width": 1280,
+      "trial": 0,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 64.5,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 80.09814799999003
+      },
+      "repeats": [
+        {
+          "ms": 43.5,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 53.57761000000755
+        },
+        {
+          "ms": 58.40000000037253,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 103.60091500001727
+        }
+      ],
+      "heapBytes": 7927976
+    },
+    {
+      "width": 1280,
+      "trial": 0,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 69.29999999981374,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 110.20672099999501
+      },
+      "repeats": [
+        {
+          "ms": 64.70000000018626,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 89.5820319999766
+        },
+        {
+          "ms": 26.899999999441206,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 98.28191799999331
+        }
+      ],
+      "heapBytes": 7741072
+    },
+    {
+      "width": 1280,
+      "trial": 1,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 85.70000000018626,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 106.92032800000743
+      },
+      "repeats": [
+        {
+          "ms": 25.799999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 87.71970699998201
+        },
+        {
+          "ms": 75.69999999925494,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 98.87811999997939
+        }
+      ],
+      "heapBytes": 8286372
+    },
+    {
+      "width": 1280,
+      "trial": 1,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 41.200000000186265,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 56.327183999994304
+      },
+      "repeats": [
+        {
+          "ms": 39.90000000037253,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 52.41665599998669
+        },
+        {
+          "ms": 40.39999999944121,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 100.36767599999439
+        }
+      ],
+      "heapBytes": 7844536
+    },
+    {
+      "width": 1280,
+      "trial": 2,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 101.70000000018626,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 123.31912000000011
+      },
+      "repeats": [
+        {
+          "ms": 52.19999999925494,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 66.96148900000844
+        },
+        {
+          "ms": 68.20000000018626,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 90.31607400000212
+        }
+      ],
+      "heapBytes": 7857400
+    },
+    {
+      "width": 1280,
+      "trial": 2,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 25.700000000186265,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 40.04914099999587
+      },
+      "repeats": [
+        {
+          "ms": 2.400000000372529,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 6.189740999980131
+        },
+        {
+          "ms": 20.5,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 26.773959000012837
+        }
+      ],
+      "heapBytes": 7834636
+    },
+    {
+      "width": 1280,
+      "trial": 3,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 17.09999999962747,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 43.380378000001656
+      },
+      "repeats": [
+        {
+          "ms": 51.200000000186265,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 71.63189199997578
+        },
+        {
+          "ms": 22,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 38.709373000019696
+        }
+      ],
+      "heapBytes": 7726656
+    },
+    {
+      "width": 1280,
+      "trial": 3,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 50.40000000037253,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 107.95420899998862
+      },
+      "repeats": [
+        {
+          "ms": 41.299999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 86.94960699998774
+        },
+        {
+          "ms": 71,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 76.32710100000259
+        }
+      ],
+      "heapBytes": 7865908
+    },
+    {
+      "width": 1280,
+      "trial": 4,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 26.59999999962747,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 35.595043000008445
+      },
+      "repeats": [
+        {
+          "ms": 50.799999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 59.77667799999472
+        },
+        {
+          "ms": 20.5,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 32.545509999996284
+        }
+      ],
+      "heapBytes": 7878940
+    },
+    {
+      "width": 1280,
+      "trial": 4,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 15.199999999254942,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 60.86134299999685
+      },
+      "repeats": [
+        {
+          "ms": 45.799999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 68.80947000000742
+        },
+        {
+          "ms": 10.199999999254942,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 14.392132000008132
+        }
+      ],
+      "heapBytes": 7860844
+    },
+    {
+      "width": 1280,
+      "trial": 5,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 75.20000000018626,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 105.03180699999211
+      },
+      "repeats": [
+        {
+          "ms": 19,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 30.108170000021346
+        },
+        {
+          "ms": 67.30000000074506,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 87.8839759999828
+        }
+      ],
+      "heapBytes": 7706164
+    },
+    {
+      "width": 1280,
+      "trial": 5,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 59.90000000037253,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 90.12675299998955
+      },
+      "repeats": [
+        {
+          "ms": 98.80000000074506,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 156.54355200001737
+        },
+        {
+          "ms": 15.900000000372529,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 22.205890000012005
+        }
+      ],
+      "heapBytes": 7848572
+    },
+    {
+      "width": 1280,
+      "trial": 6,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 63.40000000037253,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 78.4408350000158
+      },
+      "repeats": [
+        {
+          "ms": 7.599999999627471,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 11.919057999999495
+        },
+        {
+          "ms": 33,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 82.76130200002808
+        }
+      ],
+      "heapBytes": 7970080
+    },
+    {
+      "width": 1280,
+      "trial": 6,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 116.09999999962747,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 230.9121289999748
+      },
+      "repeats": [
+        {
+          "ms": 68.29999999981374,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 79.2943700000178
+        },
+        {
+          "ms": 18.700000000186265,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 72.01409500002046
+        }
+      ],
+      "heapBytes": 7902008
+    },
+    {
+      "width": 1280,
+      "trial": 7,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 213.70000000018626,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 393.58522300000186
+      },
+      "repeats": [
+        {
+          "ms": 53,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 58.842281999997795
+        },
+        {
+          "ms": 85.40000000037253,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 102.5401520000014
+        }
+      ],
+      "heapBytes": 7865856
+    },
+    {
+      "width": 1280,
+      "trial": 7,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 106.79999999981374,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 175.6128059999901
+      },
+      "repeats": [
+        {
+          "ms": 107.70000000018626,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 174.62680999998702
+        },
+        {
+          "ms": 22.299999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 91.00385300000198
+        }
+      ],
+      "heapBytes": 8012256
+    },
+    {
+      "width": 1280,
+      "trial": 8,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 98.59999999962747,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 123.3337579999934
+      },
+      "repeats": [
+        {
+          "ms": 51.5,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 148.91499100002693
+        },
+        {
+          "ms": 68.09999999962747,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 91.63166900002398
+        }
+      ],
+      "heapBytes": 7886476
+    },
+    {
+      "width": 1280,
+      "trial": 8,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 45.299999999813735,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 95.06805499998154
+      },
+      "repeats": [
+        {
+          "ms": 64,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 77.5567550000269
+        },
+        {
+          "ms": 71.6000000005588,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 80.8558919999632
+        }
+      ],
+      "heapBytes": 7821640
+    },
+    {
+      "width": 1280,
+      "trial": 9,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 45.5,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 54.058809000009205
+      },
+      "repeats": [
+        {
+          "ms": 60.700000000186265,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 70.87527199997567
+        },
+        {
+          "ms": 22.09999999962747,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 69.86894100002246
+        }
+      ],
+      "heapBytes": 7808020
+    },
+    {
+      "width": 1280,
+      "trial": 9,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 18.799999999813735,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 69.28734899999108
+      },
+      "repeats": [
+        {
+          "ms": 5.8999999994412065,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 10.979303999978583
+        },
+        {
+          "ms": 13.799999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 17.543860999983735
+        }
+      ],
+      "heapBytes": 7988352
+    },
+    {
+      "width": 1280,
+      "trial": 10,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 80.29999999981374,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 109.02629200002411
+      },
+      "repeats": [
+        {
+          "ms": 55.09999999962747,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 159.3242930000415
+        },
+        {
+          "ms": 82.70000000018626,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 99.100924999977
+        }
+      ],
+      "heapBytes": 7856716
+    },
+    {
+      "width": 1280,
+      "trial": 10,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 36.89999999944121,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 86.43556700000772
+      },
+      "repeats": [
+        {
+          "ms": 18.799999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 30.62022199999774
+        },
+        {
+          "ms": 28.200000000186265,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 38.37055300001521
+        }
+      ],
+      "heapBytes": 7785964
+    },
+    {
+      "width": 1280,
+      "trial": 11,
+      "version": "4.9.6",
+      "initial": {
+        "ms": 88.70000000018626,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp",
+          "deep_esp_histioteuthis_reversa--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 109.53806799999438
+      },
+      "repeats": [
+        {
+          "ms": 17.799999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 66.3827900000033
+        },
+        {
+          "ms": 8.299999999813735,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp",
+            "deep_esp_histioteuthis_reversa--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 94.89764699997613
+        }
+      ],
+      "heapBytes": 7803068
+    },
+    {
+      "width": 1280,
+      "trial": 11,
+      "version": "4.9.5",
+      "initial": {
+        "ms": 84.80000000074506,
+        "images": [
+          "deep_esp_macropinna_microstoma--normal.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 114.03208400000585
+      },
+      "repeats": [
+        {
+          "ms": 85.1000000005588,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 107.58219300000928
+        },
+        {
+          "ms": 94.19999999925494,
+          "images": [
+            "deep_esp_macropinna_microstoma--normal.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 121.99583799997345
+        }
+      ],
+      "heapBytes": 7858884
+    }
+  ]
+}

@@ -188,7 +188,93 @@ function legendaryCoverage() {
   return { version: require('../package.json').version, migrated: inventory.length, inventory };
 }
 
-if (process.argv.includes('--birds')) {
+function worldCoverage() {
+  require('../www/js/naturalist-assets-v400.js');
+  const assets = globalThis.AtlasNaturalistAssets;
+  const indexes = new Map(game.REGIONS.map(zone => [zone.id, zone]));
+  const cached = new Set(assets.files);
+  const { files: integrity } = require('../www/atlas-integrity.json');
+  const { catalog, migrationProgress } = vm.runInNewContext(
+    fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog,migrationProgress});');
+  const specimens = [];
+  const families = new Map();
+  const plates = new Set();
+  const habitatChecks = [];
+  const times = ['amanecer', 'dia', 'atardecer', 'noche'];
+  const seasons = ['primavera', 'verano', 'otono', 'invierno'];
+
+  for (const entry of catalog) {
+    const species = game.SPECIES[entry.id];
+    const className = game.taxonomyInfo(entry.id).className;
+    assert.equal(entry.latin, species.latin);
+    assert.ok(entry.family && entry.regions.length, entry.id);
+    const listed = Array.from(game.REGIONS.filter(zone => zone.species.includes(entry.id)), zone => zone.id);
+    const zones = Array.from(entry.regions, zone => zone.id);
+    assert.deepEqual(zones.slice().sort(), listed.sort(), entry.id);
+    const habitats = [...species.habitats];
+    for (const id of zones) {
+      const zone = indexes.get(id);
+      if (!zone.habitats.some(habitat => habitats.includes(habitat))) {
+        // Some marine and hadal records override the species-wide ecology by region.
+        const original = game.state.deepSurvey.method;
+        let witness;
+        for (const method of ['sondeo', 'muestreo', 'extraordinario']) {
+          game.state.deepSurvey.method = method;
+          witness = zone.habitats.flatMap(habitat => times.flatMap(time => seasons.map(season => ({ habitat, time, season }))))
+            .find(({ habitat, time, season }) => game.eligibleSpecies(id, habitat, time, season).includes(entry.id));
+          if (witness) {
+            if (/^(profundo|abisal)_/.test(id)) witness.method = method;
+            break;
+          }
+        }
+        game.state.deepSurvey.method = original;
+        habitatChecks.push({ species: entry.id, region: id, eligible: witness ?? null });
+      }
+    }
+    const routes = assets.routes[entry.id];
+    assert.ok(routes.normal);
+    assert.equal(Object.keys(routes).length, entry.records.length);
+    for (const [variant, filename] of Object.entries(routes)) {
+      assert.ok(assets.cutouts[filename], filename);
+      assert.equal(entry.records.find(record => record.key === variant).src, 'plates/' + filename);
+      plates.add(filename);
+      for (const format of ['', '64/', '128/', '256/']) {
+        const resource = 'naturalist-art/plates/' + format + filename;
+        assert.ok(cached.has(resource) && Object.hasOwn(integrity, resource) && fs.existsSync('www/' + resource), resource);
+      }
+    }
+
+    if (!families.has(entry.family)) {
+      families.set(entry.family, { family: entry.family, className, ids: [], plates: new Set(), review: 'pendiente' });
+    }
+    const family = families.get(entry.family);
+    assert.equal(family.className, className, entry.family);
+    family.ids.push(entry.id);
+    for (const filename of Object.values(routes)) family.plates.add(filename);
+    specimens.push({ id: entry.id, latin: entry.latin, className, family: entry.family, habitats, regions: zones, routes,
+      sharedPlates: Object.fromEntries(entry.records.filter(record => record.sharedWith).map(record => [record.key, record.sharedWith])),
+      scale: assets.visualScales[entry.id] ?? 1 });
+  }
+
+  assert.equal(specimens.length, Object.keys(game.SPECIES).length);
+  assert.equal(specimens.length, migrationProgress.migrated);
+  assert.equal(new Set(specimens.map(sp => sp.latin.trim().toLowerCase().replace(/\s+/g, ' '))).size, specimens.length);
+  assert.equal(plates.size, migrationProgress.classical);
+  return {
+    version: require('../package.json').version,
+    coverage: { species: specimens.length, routes: Object.keys(assets.routes).length, plates: plates.size, regions: indexes.size,
+      associations: game.REGIONS.reduce((sum, zone) => sum + zone.species.length, 0), legends: game.LEGENDARY_SPECIMENS.length,
+      relicts: game.MUSEUM_RELICTS.length, landscapes: assets.landscapes.length, graphicResources: assets.files.length },
+    families: [...families.values()].sort((a, b) => a.family.localeCompare(b.family)).map(({ plates, ...family }) =>
+      ({ ...family, plateCount: plates.size })),
+    habitatChecks,
+    specimens: specimens.sort((a, b) => a.id.localeCompare(b.id))
+  };
+}
+
+if (process.argv.includes('--world-coverage')) {
+  console.log(JSON.stringify(worldCoverage(), null, 2));
+} else if (process.argv.includes('--birds')) {
   console.log(JSON.stringify(members('Aves').map(([id, sp]) => describe(id, sp)), null, 2));
 } else if (process.argv.includes('--bird-coverage')) {
   console.log(JSON.stringify(birdCoverage(), null, 2));

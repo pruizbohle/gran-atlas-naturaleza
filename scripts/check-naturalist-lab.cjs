@@ -6,7 +6,7 @@ const path = require('node:path');
 const http = require('node:http');
 const vm = require('node:vm');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v495';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v496';
 require('../www/js/naturalist-assets-v400.js');
 const expected = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') +
   '\n({catalog,migrationProgress});');
@@ -97,7 +97,9 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 964);
+      assert.equal(await page.locator('.gallery-card').count(), 1000);
+      await page.locator('#release-scope').selectOption('4.9.6');
+      assert.equal(await page.locator('.gallery-card').count(), 36);
       await page.locator('#release-scope').selectOption('4.9.5');
       assert.equal(await page.locator('.gallery-card').count(), 14);
       await page.locator('#release-scope').selectOption('4.9.3');
@@ -250,6 +252,29 @@ const server = http.createServer((req, res) => {
         }
         if (process.argv.includes('--write-evidence')) {
           await deep.screenshot({ path: evidenceDir + '/profundidad-' + key + '-' + viewport.width + '.jpg' });
+        }
+      }
+      await page.locator('#backdrop').selectOption('light');
+      for (const [mode, groups] of [
+        ['marine', [['northernCods', 4], ['mackerels', 4], ['molids', 2], ['jacks', 2], ['clupeids', 2], ['billfishes', 2]]],
+        ['cephalopods', [['giantSquid', 3], ['hooksAndEyes', 3], ['squidFins', 3], ['octopods', 7], ['webs', 4]]]
+      ]) {
+        await page.locator('[data-mode=' + mode + ']').click();
+        const comparisons = page.locator('.taxon-comparison');
+        for (const backdrop of ['light', 'dark']) {
+          await page.locator('#backdrop').selectOption(backdrop);
+          for (const [key, count] of groups) {
+            await page.locator('#bird-set').selectOption(key);
+            for (const size of ['64', '128']) {
+              await page.locator('#comparison-size').selectOption(size);
+              const measured = await comparisons.locator('img').evaluateAll(decodePlates);
+              assert.equal(measured.length, count);
+              assert.ok(measured.every(([natural]) => natural === Number(size)));
+            }
+            if (process.argv.includes('--write-evidence') && backdrop === 'dark') {
+              await comparisons.screenshot({ path: evidenceDir + '/cierre-' + key + '-' + viewport.width + '.jpg' });
+            }
+          }
         }
       }
       await page.locator('#backdrop').selectOption('light');
@@ -594,7 +619,7 @@ const server = http.createServer((req, res) => {
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 964);
+      assert.equal(await page.locator('.gallery-card').count(), 1000);
       await page.locator('#cut-state').selectOption('pending');
       assert.equal(await page.locator('.gallery-card').count(),
         expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);
@@ -634,7 +659,7 @@ const server = http.createServer((req, res) => {
       assert.ok(plates.every(([width, height]) => width === 512 && height === 512));
       assert.deepEqual(errors, []);
       await session.close();
-      console.log('PASS', viewport.width, 'px: 22 modos, peces de aguas profundas y doce legendarios, escala visual y exportación offline; primera lámina', firstRender, 'ms');
+      console.log('PASS', viewport.width, 'px: 24 modos, peces marinos, cefalópodos y doce legendarios, escala visual y exportación offline; primera lámina', firstRender, 'ms');
     }
   } finally { await browser.close(); server.close(); }
 })().catch(error => { console.error(error); server.close(); process.exitCode = 1; });
