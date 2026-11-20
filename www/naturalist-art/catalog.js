@@ -8142,6 +8142,45 @@ const catalog = [
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-bird-family=\"buzzard\" data-bird-morph=\"buzzard\" data-bird-version=\"3.19.3\"><g><path d=\"M32 65L21 78Q31 85 45 78L49 65Z\" fill=\"#594a3b\" stroke=\"#39483f\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M48 73L46 86L40 87M59 70L61 84L68 86\" fill=\"none\" stroke=\"#8f8566\" stroke-width=\"3.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 61Q25 45 47 43L53 33Q58 25 69 27Q80 28 77 40L70 48Q78 66 61 77Q38 83 25 70Z\" fill=\"#806c50\" stroke=\"#39483f\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><path d=\"M56 33Q64 26 75 32L72 45L63 50Q60 41 56 33Z\" fill=\"#887456\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M35 49Q48 42 62 54Q58 69 32 75Q29 64 35 49Z\" fill=\"#594a3b\" stroke=\"#39483f\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><path d=\"M36 61Q45 66 54 57M33 68Q43 71 53 64\" fill=\"none\" stroke=\"#6f6051\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 31Q90 29 88 40L83 44L83 38L76 39Z\" fill=\"#c4a652\" stroke=\"#39483f\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><circle cx=\"70\" cy=\"32\" r=\"2.4\" fill=\"#eee7cf\"/><circle cx=\"70\" cy=\"32\" r=\"1.7\" fill=\"#23352d\"/><circle cx=\"70.5\" cy=\"31.45\" r=\"0.55\" fill=\"#eee7cf\"/></g><g data-bird-detail=\"true\"><path d=\"M63 29L71 29\" fill=\"none\" stroke=\"#594a3b\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-bird-detail=\"true\"><path d=\"M62 54l4 1M58 60l7 1M55 66l7 1M25 78l9 2\" fill=\"none\" stroke=\"#594a3b\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
   },
   {
+    "id": "mar_esp_hippocampus_comes",
+    "name": "Caballito de mar tigre",
+    "latin": "Hippocampus comes",
+    "rarity": "Común",
+    "group": "Peces de arrecife",
+    "family": "Syngnathidae",
+    "edition": "4.9.3",
+    "dimorphism": false,
+    "habitats": [
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_mar_tropical_asiatico",
+        "name": "Mar tropical asiático",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_hippocampus_comes--normal.webp",
+        "bytes": 33082,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Caballito de mar tigre\" data-marine-profile=\"seahorse\" data-zoological-family=\"Syngnathidae\"><path d=\"M59 14L75 24 72 31 61 30 59 39Q40 49 48 65Q59 79 44 90Q21 99 26 78Q29 67 36 74Q26 90 43 83Q47 75 37 65Q22 46 44 32L43 21Z\" fill=\"#c0a075\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"59\" cy=\"23\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M36 40L23 43 29 57 38 53Z\" fill=\"#9c9f80\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M45 40L53 43M40 47L49 49M39 55L47 57\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
     "id": "asia_esp_0184",
     "name": "Caballo de Przewalski",
     "latin": "Equus przewalskii",
@@ -31692,6 +31731,50 @@ const catalog = [
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"mongoose\" data-mammal-morph=\"mongoose\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M27 58Q11 57 7 73Q7 79 12 76Q17 67 31 65Z\" fill=\"#5c4828\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31.8584 68C28.8584 75 30 72 33 76Q36 79 35.8 80L35.8 77Q39 76 42.1 78Q44.1 80 41.1 80L35 80Q33 78 33.199999999999996 75L33.599999999999994 80Q30 77 30.152 73C34 78 38.1416 74 38.1416 70Z\" fill=\"#5c4828\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31.8584 76C28.8584 75 30 72 33 76Q36 79 35.8 80L35.8 77Q39 76 42.1 78Q44.1 80 41.1 80L35 80Q33 78 33.199999999999996 75L33.599999999999994 80Q30 77 30.152 73C34 78 38.1416 74 38.1416 70\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80.075 65C79.075 72 81 73 81.7 76L81.8 79L81.8 76Q85 75 88.1 77Q90.1 79 87.1 79L79.6 79Q79 77 79.2 74L79.2 79L79 75Q78 75 83.925 67Z\" fill=\"#5c4828\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80.075 71C79.075 72 81 73 81.7 76L81.8 79L81.8 76Q85 75 88.1 77Q90.1 79 87.1 79L79.6 79Q79 77 79.2 74L79.2 79L79 75Q78 75 83.925 67\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 46C68 40 83 37 82 46Z\" fill=\"#7a6646\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M75 44Q72 43 77 44L79 44Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M82 47C77 42 92 39 91 47Z\" fill=\"#7a6646\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M84 45Q81 45 86 46L88 45Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M19 62C22.11 53 34.74 48 48.42 50Q64 44 75 53Q79 46 87 46Q93 47 94 54Q98 56 98 59Q98 64 84 66Q80 65 77 61Q69 72 55.79 76Q38.95 80 25.26 74C17 71 16 66 19 62Z\" fill=\"#7a6646\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25.92 68C22.92 75 29 72 32 76Q35 79 27.8 80L27.8 80Q31 79 34.1 81Q36.1 83 33.1 83L27 83Q25 81 25.2 78L25.6 80Q29 77 28.6 73C29 78 34.08 74 34.08 70Z\" fill=\"#7a6646\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25.92 76C22.92 75 29 72 32 76Q35 79 27.8 80L27.8 80Q31 79 34.1 81Q36.1 83 33.1 83L27 83Q25 81 25.2 78L25.6 80Q29 77 28.6 73C29 78 34.08 74 34.08 70\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M30.8 81L31.2 82.4M32.6 81L33 82.4\" fill=\"none\" stroke=\"#5c4828\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M74.5 65C73.5 72 74 73 74.7 76L77.8 79L77.8 79Q81 78 84.1 80Q86.1 82 83.1 82L75.6 82Q75 80 75.2 77L75.2 79L72 75Q73 75 79.5 67Z\" fill=\"#7a6646\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M74.5 71C73.5 72 74 73 74.7 76L77.8 79L77.8 79Q81 78 84.1 80Q86.1 82 83.1 82L75.6 82Q75 80 75.2 77L75.2 79L72 75Q73 75 79.5 67\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M80.8 80L81.2 81.4M82.6 80L83 81.4\" fill=\"none\" stroke=\"#5c4828\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-herpestes-ichneumon-normal-base-coat\"><path d=\"M19 62C22.11 53 34.74 48 48.42 50Q64 44 75 53Q79 46 87 46Q93 47 94 54Q98 56 98 59Q98 64 84 66Q80 65 77 61Q69 72 55.79 76Q38.95 80 25.26 74C17 71 16 66 19 62Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-herpestes-ichneumon-normal-base-coat)\"></g></g><g data-mammal-detail=\"true\"><circle cx=\"84\" cy=\"53\" r=\"1.82\" fill=\"#927e5e\"/><circle cx=\"84\" cy=\"53\" r=\"1.5\" fill=\"#302e26\"/><circle cx=\"84.45\" cy=\"52.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M87 52L94 53\" fill=\"none\" stroke=\"#5c4828\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
   },
   {
+    "id": "mar_esp_epinephelus_lanceolatus",
+    "name": "Mero gigante",
+    "latin": "Epinephelus lanceolatus",
+    "rarity": "Poco común",
+    "group": "Peces de arrecife",
+    "family": "Epinephelidae",
+    "edition": "4.9.3",
+    "dimorphism": false,
+    "habitats": [
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_mar_tropical_asiatico",
+        "name": "Mar tropical asiático",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_epinephelus_lanceolatus--normal.webp",
+        "bytes": 38112,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Mero gigante\" data-marine-profile=\"grouper\" data-zoological-family=\"Serranidae\"><path d=\"M6 60L12 42 29 33Q52 29 78 52L94 43 90 60 96 75 75 67Q44 83 12 70Z\" fill=\"#8c9c86\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M35 38L48 24 59 36 67 33 72 48Z\" fill=\"#8c9c86\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M38 71L49 82 61 74Z\" fill=\"#8c9c86\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"25\" cy=\"49\" r=\"1.4\" fill=\"#536f63\"/><circle cx=\"34\" cy=\"58\" r=\"1.4\" fill=\"#536f63\"/><circle cx=\"45\" cy=\"49\" r=\"1.4\" fill=\"#536f63\"/><circle cx=\"57\" cy=\"58\" r=\"1.4\" fill=\"#536f63\"/><circle cx=\"67\" cy=\"49\" r=\"1.4\" fill=\"#536f63\"/></svg>"
+  },
+  {
     "id": "oc_esp_phylidonyris_novaehollandiae",
     "name": "Mielero de Nueva Holanda",
     "latin": "Phylidonyris novaehollandiae",
@@ -33177,6 +33260,47 @@ const catalog = [
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-mammal-family=\"deer\" data-mammal-morph=\"muskdeer\" data-mammal-version=\"3.19.4\" data-mammal-polish=\"3.19.9\"><g><path d=\"M25 49Q16 47 12 52Q13 57 23 57L29 54Z\" fill=\"#e1c595\" stroke=\"#47483f\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32.1972 57C29.197200000000002 64 35 67 38 71Q41 74 35.5 83L35.5 83Q38 82 39.8 84Q41.8 86 38.8 86L34 86Q32 84 32.9 81L33.3 83Q35 72 34.844 68C34 67 37.8028 63 37.8028 59Z\" fill=\"#ab8f5f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32.1972 65C29.197200000000002 64 35 67 38 71Q41 74 35.5 83L35.5 83Q38 82 39.8 84Q41.8 86 38.8 86L34 86Q32 84 32.9 81L33.3 83Q35 72 34.844 68C34 67 37.8028 63 37.8028 59\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33.3 83Q38 82 39.8 84L39.3 86L33.3 86Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M37.2 84L36.8 86\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M74.0288 53C73.0288 60 72 69 72.7 72L74.5 84L74.5 84Q77 83 78.8 85Q80.8 87 77.8 87L72.3 87Q71 85 71.9 82L71.9 84L70 71Q72 63 77.9712 55Z\" fill=\"#ab8f5f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M74.0288 59C73.0288 60 72 69 72.7 72L74.5 84L74.5 84Q77 83 78.8 85Q80.8 87 77.8 87L72.3 87Q71 85 71.9 82L71.9 84L70 71Q72 63 77.9712 55\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M72.3 84Q77 83 78.8 85L78.3 87L72.3 87Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M76.2 85L75.8 87\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M75 33L73 25L69 23M82 33L85 24L88 22\" fill=\"none\" stroke=\"#a39881\" stroke-width=\"2.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 35Q61 25 67 25Q73 26 75 35Z\" fill=\"#c9ad7d\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M68 33Q65 28 70 29L72 33Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M75 36Q70 27 76 27Q82 28 84 36Z\" fill=\"#c9ad7d\" stroke=\"#47483f\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M77 34Q74 30 79 31L81 34Z\" fill=\"#bc9d87\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M22 51C23 40 33 34 45 38Q58 35 68 45Q72 35 79 32Q87 30 88 41Q88 46 95 49Q98 53 94 56Q89 60 81 56Q77 55 76 51Q72 65 60 71Q44 76 28 68C21 65 19 58 22 51Z\" fill=\"#c9ad7d\" stroke=\"#47483f\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26.36 57C23.36 64 34 67 37 71Q40 74 27.5 83L27.5 86Q30 85 31.8 87Q33.8 89 30.8 89L26 89Q24 87 24.9 84L25.3 83Q34 72 33.2 68C29 67 33.64 63 33.64 59Z\" fill=\"#c9ad7d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26.36 65C23.36 64 34 67 37 71Q40 74 27.5 83L27.5 86Q30 85 31.8 87Q33.8 89 30.8 89L26 89Q24 87 24.9 84L25.3 83Q34 72 33.2 68C29 67 33.64 63 33.64 59\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25.3 86Q30 85 31.8 87L31.3 89L25.3 89Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M29.2 87L28.8 89\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M68.44 53C67.44 60 65 69 65.7 72L70.5 84L70.5 87Q73 86 74.8 88Q76.8 90 73.8 90L68.3 90Q67 88 67.9 85L67.9 84L63 71Q67 63 73.56 55Z\" fill=\"#c9ad7d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68.44 59C67.44 60 65 69 65.7 72L70.5 84L70.5 87Q73 86 74.8 88Q76.8 90 73.8 90L68.3 90Q67 88 67.9 85L67.9 84L63 71Q67 63 73.56 55\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68.3 87Q73 86 74.8 88L74.3 90L68.3 90Z\" fill=\"#716e5c\" stroke=\"#47483f\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-mammal-detail=\"true\"><path d=\"M72.2 88L71.8 90\" fill=\"none\" stroke=\"#47483f\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><defs><clipPath id=\"m3194-muntiacus-reevesi-normal-base-coat\"><path d=\"M22 51C23 40 33 34 45 38Q58 35 68 45Q72 35 79 32Q87 30 88 41Q88 46 95 49Q98 53 94 56Q89 60 81 56Q77 55 76 51Q72 65 60 71Q44 76 28 68C21 65 19 58 22 51Z\" fill=\"#ffffff\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></clipPath></defs><g data-mammal-detail=\"true\"><g clip-path=\"url(#m3194-muntiacus-reevesi-normal-base-coat)\"><path d=\"M27 61Q48 68 69 56L65 66L45 70L28 67Z\" fill=\"#e1c595\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g><g data-mammal-detail=\"true\"><circle cx=\"83\" cy=\"34\" r=\"1.82\" fill=\"#e1c595\"/><circle cx=\"83\" cy=\"34\" r=\"1.5\" fill=\"#302e26\"/><circle cx=\"83.45\" cy=\"33.55\" r=\"0.45\" fill=\"#e9e0cd\"/></g><g data-mammal-detail=\"true\"><path d=\"M86 47Q90 50 93 47\" fill=\"none\" stroke=\"#ab8f5f\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
+  },
+  {
+    "id": "asia_esp_craseonycteris_thonglongyai",
+    "name": "Murciélago abejorro",
+    "latin": "Craseonycteris thonglongyai",
+    "rarity": "Muy rara",
+    "group": "Murciélagos",
+    "family": "Craseonycteridae",
+    "order": "Chiroptera",
+    "edition": "4.9.3",
+    "catalogChange": "new",
+    "dimorphism": false,
+    "habitats": [
+      "bosque"
+    ],
+    "regions": [
+      {
+        "id": "HX-06-17",
+        "name": "Sudeste Asiático",
+        "continent": "Asia"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/asia_esp_craseonycteris_thonglongyai--normal.webp",
+        "bytes": 35702,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\"><path d=\"M15 58q12-16 25-5q8-9 20 0q12-10 25 5q-5 4-12 3q-6-1-13-6q-5 10-10 10q-5 0-10-10q-7 5-13 6q-7 1-12-3z\" fill=\"#725546\" stroke=\"#3a3026\" stroke-width=\"3\"/><circle cx=\"50\" cy=\"52\" r=\"7\" fill=\"#6c4f40\" stroke=\"#3a3026\" stroke-width=\"2.5\"/><circle cx=\"48\" cy=\"51\" r=\"1.2\" fill=\"#1d1a17\"/><circle cx=\"53\" cy=\"51\" r=\"1.2\" fill=\"#1d1a17\"/></svg>"
   },
   {
     "id": "eu_esp_0614",
@@ -38683,6 +38807,94 @@ const catalog = [
     "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Petrel gigante austral\" data-marine-profile=\"petrel\" data-zoological-family=\"Procellariidae\"><path d=\"M24 60Q39 45 56 49L64 38Q75 33 76 44L89 48 74 54Q55 73 31 66L8 77Z\" fill=\"#626d6b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M35 52L6 23 43 41 77 16 66 51 80 74 48 64Z\" fill=\"#596d76\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"70\" cy=\"42\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M80 46L89 49 84 52\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
   },
   {
+    "id": "mar_esp_pomacanthus_imperator",
+    "name": "Pez ángel emperador",
+    "latin": "Pomacanthus imperator",
+    "rarity": "Poco común",
+    "group": "Peces de arrecife",
+    "family": "Pomacanthidae",
+    "edition": "4.9.3",
+    "dimorphism": false,
+    "habitats": [
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_mar_tropical_asiatico",
+        "name": "Mar tropical asiático",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_pomacanthus_imperator--normal.webp",
+        "bytes": 53082,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Pez ángel emperador\" data-marine-profile=\"angelfish\" data-zoological-family=\"Pomacanthidae\"><path d=\"M8 56L28 34 50 28 69 36 79 51 95 40 90 58 95 76 77 68 58 80 29 76Z\" fill=\"#4c82a5\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M35 38L48 24 59 36 67 33 72 48Z\" fill=\"#4c82a5\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M38 71L49 82 61 74Z\" fill=\"#4c82a5\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M32 39L33 73M39 36L41 77M47 35L48 77M55 37L57 76M64 42L65 73\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
+    "id": "mar_esp_balistoides_conspicillum",
+    "name": "Pez ballesta payaso",
+    "latin": "Balistoides conspicillum",
+    "rarity": "Poco común",
+    "group": "Peces de arrecife",
+    "family": "Balistidae",
+    "edition": "4.9.3",
+    "dimorphism": false,
+    "habitats": [
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_mar_tropical_asiatico",
+        "name": "Mar tropical asiático",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_balistoides_conspicillum--normal.webp",
+        "bytes": 41500,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Pez ballesta payaso\" data-marine-profile=\"triggerfish\" data-zoological-family=\"Balistidae\"><path d=\"M11 55L31 32 67 36 79 51 96 38 91 57 96 74 77 65 35 76Z\" fill=\"#405865\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M32 33L40 21 43 35Z\" fill=\"#405865\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M38 71L49 82 61 74Z\" fill=\"#405865\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"25\" cy=\"49\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"34\" cy=\"58\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"45\" cy=\"49\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"57\" cy=\"58\" r=\"1.4\" fill=\"#eef1df\"/><circle cx=\"67\" cy=\"49\" r=\"1.4\" fill=\"#eef1df\"/><path d=\"M13 57L25 52 27 62 15 66Z\" fill=\"#d4b86e\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
     "id": "asia_esp_0915",
     "name": "Pez cabeza de serpiente del norte",
     "latin": "Channa argus",
@@ -38739,6 +38951,45 @@ const catalog = [
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"cabeza-serpiente\" data-fish-version=\"3.19.9\"><path d=\"M21 50Q12 44 8 48Q3 58 9 68Q15 69 22 62Z\" fill=\"#686f56\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 47Q39 31 52 34Q68 34 79 42L78 46Z\" fill=\"#686f56\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 63Q41 78 66 72L76 65Z\" fill=\"#686f56\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M32 64Q39 73 59 74L67 67Z\" fill=\"#686f56\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M17 50Q45 37 75 42Q87 42 94 49L94 58Q84 69 62 68Q37 67 17 61Z\" fill=\"#7b8467\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 48l5-3 4 7-5 5-4-3Z\" fill=\"#596956\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M35 52l5-3 4 7-5 5-4-3Z\" fill=\"#596956\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M43 48l5-3 4 7-5 5-4-3Z\" fill=\"#596956\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M51 52l5-3 4 7-5 5-4-3Z\" fill=\"#596956\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M59 48l5-3 4 7-5 5-4-3Z\" fill=\"#596956\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67 52l5-3 4 7-5 5-4-3Z\" fill=\"#596956\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M75 48l5-3 4 7-5 5-4-3Z\" fill=\"#596956\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31 38l-2 8m10-10-1 9m10-10v9m10-8 1 8m8-6 2 5\" fill=\"none\" stroke=\"#5f684b\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#5f684b\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M74 55Q60 56 62 66Q72 65 77 59Z\" fill=\"#686f56\" stroke=\"#3b4b48\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#5f684b\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M82 57l12-2\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g><path d=\"M35 45l3-8m7 7 1-8m9 7v-6m9 6v-3\" fill=\"none\" stroke=\"#5f684b\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "mar_esp_paracanthurus_hepatus",
+    "name": "Pez cirujano azul",
+    "latin": "Paracanthurus hepatus",
+    "rarity": "Común",
+    "group": "Peces de arrecife",
+    "family": "Acanthuridae",
+    "edition": "4.9.3",
+    "dimorphism": false,
+    "habitats": [
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_paracanthurus_hepatus--normal.webp",
+        "bytes": 37704,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Pez cirujano azul\" data-marine-profile=\"surgeonfish\" data-zoological-family=\"Acanthuridae\"><path d=\"M8 57Q13 38 37 33Q59 29 77 51L94 40 90 58 96 74 76 66Q48 84 20 72Z\" fill=\"#467fbb\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M35 38L48 24 59 36 67 33 72 48Z\" fill=\"#467fbb\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M38 71L49 82 61 74Z\" fill=\"#467fbb\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M29 45Q47 37 63 48L44 55 64 65 34 68Z\" fill=\"#264955\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M79 56L93 43 90 58 95 71 78 64Z\" fill=\"#dec868\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
   },
   {
     "id": "sa_esp_symphysodon_aequifasciatus",
@@ -38817,6 +39068,86 @@ const catalog = [
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-sa-version=\"3.23.1\" data-sa-polish=\"3231\" data-sa-profile=\"electrophorus-electricus\" data-sa-morphology=\"electrophorus-electricus\" data-zoological-family=\"Gymnotidae\" data-fish-family=\"Gymnotidae\"><path d=\"M7 72C24 82 39 73 35 62C28 46 33 30 52 26Q76 21 94 32Q100 36 97 43L92 46Q78 42 66 43C52 41 45 44 48 54C58 77 35 94 7 76Z\" fill=\"#999377\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M9 77C34 94 58 78 50 56C45 45 53 41 66 44Q79 45 92 46L94 51Q76 48 65 48C54 47 53 49 55 57C62 81 36 98 9 80Z\" fill=\"#647c61\" stroke=\"#3b5244\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M15 80l-1 3m9-1v4m8-4 1 4m7-7 3 4m3-9 3 3m0-10 4 1m-4-10 4-1m1-9 2 4m7-6v4m9-3v4m8-3v4\" fill=\"none\" stroke=\"#d2c9a7\" stroke-width=\"0.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M77 42Q72 43 73 50L80 48Z\" fill=\"#647c61\" stroke=\"#3b5244\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-sa-eye=\"true\"><circle cx=\"91\" cy=\"35\" r=\"1\" fill=\"#23352d\"/><circle cx=\"90.7\" cy=\"34.65\" r=\"0.32\" fill=\"#f5ecd5\"/></g><path d=\"M93 41L98 40M83 35Q80 39 83 42\" fill=\"none\" stroke=\"#647c61\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+  },
+  {
+    "id": "gm06_pterois_miles",
+    "name": "Pez león del Índico",
+    "latin": "Pterois miles",
+    "rarity": "Raro",
+    "group": "Peces de arrecife",
+    "family": "Scorpaenidae",
+    "edition": "4.9.3",
+    "dimorphism": false,
+    "habitats": [
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "gm06_rojo",
+        "name": "Arco del mar Rojo",
+        "continent": "África"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable",
+      "Épico",
+      "Excepcional"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/gm06_pterois_miles--normal.webp",
+        "bytes": 81394,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 100\" role=\"img\" aria-label=\"Pez león del Índico\" data-gm06-morph=\"lionfish\"><g stroke=\"#35473e\" stroke-width=\"1.5\" stroke-linejoin=\"round\"><path d=\"M37 50L9 29L17 56L7 80L39 66Z\" fill=\"#b87864\" /><path d=\"M41 45L35 12L48 35L50 7L59 37L69 9L70 39L87 18L83 48Z\" fill=\"#b87864\" /><path d=\"M44 61L20 92L52 77L66 96L74 75L94 86L83 62Z\" fill=\"#b87864\" /><ellipse cx=\"63\" cy=\"55\" rx=\"30\" ry=\"16\" fill=\"#b87864\"/><path d=\"M43 44L48 66M53 40L58 69M65 41L70 69M77 44L82 65\" fill=\"none\" stroke=\"#eee9d7\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"86\" cy=\"51\" r=\"3\" fill=\"#35473e\"/><path d=\"M44 40L35 12M57 39L50 7M68 40L69 9M78 46L87 18\" fill=\"none\" stroke=\"#eee9d7\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></svg>"
+  },
+  {
+    "id": "mar_esp_bolbometopon_muricatum",
+    "name": "Pez loro jorobado",
+    "latin": "Bolbometopon muricatum",
+    "rarity": "Común",
+    "group": "Peces de arrecife",
+    "family": "Labridae",
+    "edition": "4.9.3",
+    "dimorphism": false,
+    "habitats": [
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_bolbometopon_muricatum--normal.webp",
+        "bytes": 36560,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Pez loro jorobado\" data-marine-profile=\"parrotfish\" data-zoological-family=\"Scaridae\"><path d=\"M8 51L22 33Q37 30 51 40L76 52 93 42 90 58 95 72 75 65Q47 83 17 70L8 61Z\" fill=\"#79a295\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M35 38L48 24 59 36 67 33 72 48Z\" fill=\"#79a295\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M38 71L49 82 61 74Z\" fill=\"#79a295\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M8 55L17 51 18 59 11 63Z\" fill=\"#d9b6a0\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
   },
   {
     "id": "asia_esp_0911",
@@ -38939,6 +39270,175 @@ const catalog = [
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"pez-mariposa-africano\" data-fish-version=\"3.19.9\"><path d=\"M26 48Q15 40 9 44L8 55 6 71Q20 69 28 61Z\" fill=\"#aa9270\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M34 44Q33 35 40 33L49 43Z\" fill=\"#aa9270\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M34 62Q22 76 34 85Q50 82 61 66Z\" fill=\"#aa9270\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#aa9270\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 49Q42 39 66 44L89 50 93 57Q76 69 53 68Q35 65 21 59Z\" fill=\"#a79676\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M63 52Q49 24 24 23Q23 38 36 50Q49 59 63 57Z\" fill=\"#aa9270\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M62 55Q45 64 32 80Q53 82 70 63Z\" fill=\"#bfae8e\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M62 54L31 29m29 26L29 38m28 18-22-9m26 12L39 76m24-15L50 77\" fill=\"none\" stroke=\"#8b7a5a\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M41 66l-3 22m7-20 3 21\" fill=\"none\" stroke=\"#8b7a5a\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#8b7a5a\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M84 57q5 0 7-2\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g></svg>"
   },
   {
+    "id": "gm06_chaetodon_semilarvatus",
+    "name": "Pez mariposa enmascarado",
+    "latin": "Chaetodon semilarvatus",
+    "rarity": "Raro",
+    "group": "Peces de arrecife",
+    "family": "Chaetodontidae",
+    "edition": "4.9.3",
+    "dimorphism": false,
+    "habitats": [
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "gm06_rojo",
+        "name": "Arco del mar Rojo",
+        "continent": "África"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable",
+      "Épico",
+      "Excepcional"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/gm06_chaetodon_semilarvatus--normal.webp",
+        "bytes": 46762,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 100\" role=\"img\" aria-label=\"Pez mariposa enmascarado\" data-gm06-morph=\"butterflyfish\"><g stroke=\"#35473e\" stroke-width=\"1.5\" stroke-linejoin=\"round\"><path d=\"M38 52L14 35L15 78L39 65Z\" fill=\"#e1bf4b\" /><ellipse cx=\"64\" cy=\"57\" rx=\"29\" ry=\"31\" fill=\"#e1bf4b\"/><path d=\"M56 28L75 14L89 44M52 84L71 94L86 76Z\" fill=\"#e1bf4b\" /><path d=\"M88 52L108 56L90 63Z\" fill=\"#e1bf4b\" /><path d=\"M49 39L48 74M57 31L56 84M66 28L66 85M76 35L77 79\" fill=\"none\" stroke=\"#c49c40\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"83\" cy=\"46\" rx=\"6\" ry=\"9\" fill=\"#6b8992\"/><circle cx=\"85\" cy=\"45\" r=\"2\" fill=\"#35473e\"/></g></svg>"
+  },
+  {
+    "id": "mar_esp_cheilinus_undulatus",
+    "name": "Pez napoleón",
+    "latin": "Cheilinus undulatus",
+    "rarity": "Común",
+    "group": "Peces de arrecife",
+    "family": "Labridae",
+    "edition": "4.9.3",
+    "dimorphism": false,
+    "habitats": [
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_mar_tropical_asiatico",
+        "name": "Mar tropical asiático",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_cheilinus_undulatus--normal.webp",
+        "bytes": 43144,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Pez napoleón\" data-marine-profile=\"wrasse\" data-zoological-family=\"Labridae\"><path d=\"M9 53Q12 24 32 28Q56 30 76 49L93 38 90 56 96 74 76 64Q33 88 12 65Z\" fill=\"#8fafb3\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M35 38L48 24 59 36 67 33 72 48Z\" fill=\"#8fafb3\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M38 71L49 82 61 74Z\" fill=\"#8fafb3\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M28 40Q45 29 63 48M32 47Q50 36 66 55M37 56Q51 48 66 62\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
+    "id": "mar_esp_amphiprion_ocellaris",
+    "name": "Pez payaso común",
+    "latin": "Amphiprion ocellaris",
+    "rarity": "Raro",
+    "group": "Peces de arrecife",
+    "family": "Pomacentridae",
+    "edition": "4.9.3",
+    "dimorphism": false,
+    "habitats": [
+      "oceano_abierto",
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_oceano_indico_tropical",
+        "name": "Océano Índico tropical",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_mar_tropical_asiatico",
+        "name": "Mar tropical asiático",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_amphiprion_ocellaris--normal.webp",
+        "bytes": 37842,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Pez payaso común\" data-marine-profile=\"clownfish\" data-zoological-family=\"Pomacentridae\"><path d=\"M10 53Q16 34 37 36Q60 33 76 51L92 44 91 61 96 71 76 66Q56 82 30 74L13 64Z\" fill=\"#d69b5b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M35 38L48 24 59 36 67 33 72 48Z\" fill=\"#d69b5b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M38 71L49 82 61 74Z\" fill=\"#d69b5b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M26 41L30 38 38 39 40 71 33 72Z\" fill=\"#eef1df\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M59 40L64 43 65 73 58 75Z\" fill=\"#eef1df\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M79 51L84 49 84 67 79 65Z\" fill=\"#eef1df\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
+    "id": "mar_esp_synanceia_verrucosa",
+    "name": "Pez piedra",
+    "latin": "Synanceia verrucosa",
+    "rarity": "Raro",
+    "group": "Peces de arrecife",
+    "family": "Synanceiidae",
+    "edition": "4.9.3",
+    "dimorphism": false,
+    "habitats": [
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_synanceia_verrucosa--normal.webp",
+        "bytes": 50246,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Pez piedra\" data-marine-profile=\"stonefish\" data-zoological-family=\"Synanceiidae\"><path d=\"M9 63L15 49 23 47 25 37 35 42 42 34 49 41 59 37 65 47 76 50 89 43 85 60 93 70 76 69 64 76 52 70 40 77 28 71 17 74Z\" fill=\"#aaa18b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"22\" cy=\"49\" r=\"2\" fill=\"#203c48\"/><circle cx=\"30\" cy=\"44\" r=\"2\" fill=\"#203c48\"/><path d=\"M11 62Q25 55 36 62\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"44\" cy=\"49\" r=\"3\" fill=\"#8f937f\"/><circle cx=\"57\" cy=\"59\" r=\"3\" fill=\"#8f937f\"/><circle cx=\"64\" cy=\"49\" r=\"3\" fill=\"#8f937f\"/><circle cx=\"38\" cy=\"59\" r=\"3\" fill=\"#8f937f\"/></svg>"
+  },
+  {
     "id": "af_xlsx_131_hydrocynus_vittatus",
     "name": "Pez tigre africano",
     "latin": "Hydrocynus vittatus",
@@ -39044,6 +39544,51 @@ const catalog = [
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"tigre-goliat\" data-fish-version=\"3.19.9\"><path d=\"M25 52Q13 44 5 32L12 56 6 79Q19 71 26 63Z\" fill=\"#ac8b68\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M42 42Q45 29 54 24L63 42Z\" fill=\"#ac8b68\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M45 67Q45 79 53 81L61 69Z\" fill=\"#ac8b68\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M30 62Q29 71 35 75L42 65Z\" fill=\"#ac8b68\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M29 48Q29 40 34 40L38 45Z\" fill=\"#ac8b68\" stroke=\"#3b4b48\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M20 53Q39 37 63 39Q79 39 92 50L95 58Q79 73 55 70Q33 67 20 62Z\" fill=\"#a4ad9e\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 59Q58 66 87 53Q79 69 54 65Q38 63 28 59Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"40\" cy=\"50\" r=\"0.8\" fill=\"#596956\"/><circle cx=\"50\" cy=\"47\" r=\"0.8\" fill=\"#596956\"/><circle cx=\"59\" cy=\"49\" r=\"0.8\" fill=\"#596956\"/><path d=\"M77 44Q70 53 77 64\" fill=\"none\" stroke=\"#889182\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 56Q63 57 59 66Q69 68 77 59Z\" fill=\"#ac8b68\" stroke=\"#3b4b48\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M73 58l-9 6\" fill=\"none\" stroke=\"#889182\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M82 56l11-1\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M83 57l1 4 2-4 2 3 2-4\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.7\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g><path d=\"M47 42l3-8m5 8 1-8\" fill=\"none\" stroke=\"#889182\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M19 55L10 45m9 13-9 9\" fill=\"none\" stroke=\"#889182\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
   },
   {
+    "id": "mar_esp_exocoetus_volitans",
+    "name": "Pez volador tropical",
+    "latin": "Exocoetus volitans",
+    "rarity": "Común",
+    "group": "Peces de arrecife",
+    "family": "Exocoetidae",
+    "edition": "4.9.3",
+    "dimorphism": false,
+    "habitats": [
+      "oceano_abierto",
+      "arrecife"
+    ],
+    "regions": [
+      {
+        "id": "mar_oceano_indico_tropical",
+        "name": "Océano Índico tropical",
+        "continent": "Océanos"
+      },
+      {
+        "id": "mar_archipielagos_tropicales",
+        "name": "Archipiélagos tropicales",
+        "continent": "Océanos"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/mar_esp_exocoetus_volitans--normal.webp",
+        "bytes": 37594,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Pez volador tropical\" data-marine-profile=\"flyingfish\" data-zoological-family=\"Exocoetidae\"><path d=\"M6 56Q28 42 52 47L78 55 95 36 89 58 97 75 77 65Q35 77 10 66Z\" fill=\"#8fafb3\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M28 56L68 18 75 19 51 66Z\" fill=\"#afc8ca\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M48 64L72 82 75 77 60 61Z\" fill=\"#bed6d0\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+  },
+  {
     "id": "na_esp_ochotona_princeps",
     "name": "Pica americana",
     "latin": "Ochotona princeps",
@@ -39122,6 +39667,47 @@ const catalog = [
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-bird-family=\"rockfowl\" data-bird-morph=\"rockfowl\" data-bird-version=\"3.19.3\"><g><path d=\"M32 60L15 77L36 72L43 63Z\" fill=\"#677577\" stroke=\"#39483f\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M47 66L42 86L34 88M57 66L64 84L73 86\" fill=\"none\" stroke=\"#8f8566\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 55Q35 41 53 42L60 26Q66 19 75 26Q83 34 76 43L68 51Q65 65 51 69Q35 71 27 62Z\" fill=\"#a3a7a0\" stroke=\"#39483f\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><path d=\"M53 46Q61 54 71 44L68 59Q64 73 50 75L40 69Q54 60 53 46Z\" fill=\"#e3dfc8\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-bird-detail=\"true\"><path d=\"M51 40Q52 29 65 30Q77 30 78 41L69 47Q61 49 51 40Z\" fill=\"#8f927e\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M31 53Q44 45 59 55Q49 69 30 69Q27 61 31 53Z\" fill=\"#677577\" stroke=\"#39483f\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><path d=\"M34 59Q45 61 52 54M32 65L48 61\" fill=\"none\" stroke=\"#7d8b8d\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M76 41L88 43L77 48Z\" fill=\"#8c866c\" stroke=\"#39483f\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><circle cx=\"70\" cy=\"31\" r=\"2.5\" fill=\"#eee7cf\"/><circle cx=\"70\" cy=\"31\" r=\"1.8\" fill=\"#23352d\"/><circle cx=\"70.5\" cy=\"30.45\" r=\"0.55\" fill=\"#eee7cf\"/></g><g data-bird-detail=\"true\"><path d=\"M58 27L64 23L69 28L65 36L57 36Z\" fill=\"#bf755d\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
+  },
+  {
+    "id": "sa_esp_chlamyphorus_truncatus",
+    "name": "Pichiciego menor",
+    "latin": "Chlamyphorus truncatus",
+    "rarity": "Muy rara",
+    "group": "Armadillos",
+    "family": "Chlamyphoridae",
+    "order": "Cingulata",
+    "edition": "4.9.3",
+    "catalogChange": "new",
+    "dimorphism": false,
+    "habitats": [
+      "pradera"
+    ],
+    "regions": [
+      {
+        "id": "sa_pampas",
+        "name": "Pampas",
+        "continent": "Sudamérica"
+      }
+    ],
+    "categories": [
+      "Normal",
+      "Notable"
+    ],
+    "records": [
+      {
+        "key": "normal",
+        "label": "Normal",
+        "src": "plates/sa_esp_chlamyphorus_truncatus--normal.webp",
+        "bytes": 32092,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {}
+      }
+    ],
+    "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\"><ellipse cx=\"50\" cy=\"62\" rx=\"18\" ry=\"16\" fill=\"#af786e\" stroke=\"#3a3026\" stroke-width=\"3\"/><circle cx=\"62\" cy=\"49\" r=\"10\" fill=\"#af786e\" stroke=\"#3a3026\" stroke-width=\"3\"/><circle cx=\"66\" cy=\"46\" r=\"1.8\" fill=\"#1d1a17\"/><ellipse cx=\"51\" cy=\"67\" rx=\"9\" ry=\"6\" fill=\"#efe4d2\" opacity=\"0.9\"/><line x1=\"45\" y1=\"71\" x2=\"44\" y2=\"86\" stroke=\"#3a3026\" stroke-width=\"3.3\" stroke-linecap=\"round\"/><line x1=\"55\" y1=\"71\" x2=\"56\" y2=\"86\" stroke=\"#3a3026\" stroke-width=\"3.3\" stroke-linecap=\"round\"/></svg>"
   },
   {
     "id": "eu_esp_0159",
@@ -52477,19 +53063,19 @@ const catalog = [
 ];
 const mixedFieldSprites = [
   {
-    "id": "mar_esp_amphiprion_ocellaris",
-    "name": "Pez payaso común",
-    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Pez payaso común\" data-marine-profile=\"clownfish\" data-zoological-family=\"Pomacentridae\"><path d=\"M10 53Q16 34 37 36Q60 33 76 51L92 44 91 61 96 71 76 66Q56 82 30 74L13 64Z\" fill=\"#d69b5b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M35 38L48 24 59 36 67 33 72 48Z\" fill=\"#d69b5b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M38 71L49 82 61 74Z\" fill=\"#d69b5b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M26 41L30 38 38 39 40 71 33 72Z\" fill=\"#eef1df\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M59 40L64 43 65 73 58 75Z\" fill=\"#eef1df\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M79 51L84 49 84 67 79 65Z\" fill=\"#eef1df\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+    "id": "mar_esp_thunnus_albacares",
+    "name": "Atún de aleta amarilla",
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Atún de aleta amarilla\" data-marine-profile=\"tuna\" data-zoological-family=\"Scombridae\"><path d=\"M6 56Q30 36 52 45L78 55 96 35 89 58 97 76 77 65Q36 79 10 65Z\" fill=\"#8fafb3\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M36 61L50 74 52 64Z\" fill=\"#5e91a6\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M39 47L46 30 51 48M60 51L65 41 70 54Z\" fill=\"#5e91a6\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M71 52l3-5m1 8 3-5M72 65l3 5m2-6 4 4\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
   },
   {
-    "id": "mar_esp_hippocampus_comes",
-    "name": "Caballito de mar tigre",
-    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Caballito de mar tigre\" data-marine-profile=\"seahorse\" data-zoological-family=\"Syngnathidae\"><path d=\"M59 14L75 24 72 31 61 30 59 39Q40 49 48 65Q59 79 44 90Q21 99 26 78Q29 67 36 74Q26 90 43 83Q47 75 37 65Q22 46 44 32L43 21Z\" fill=\"#c0a075\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"59\" cy=\"23\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M36 40L23 43 29 57 38 53Z\" fill=\"#9c9f80\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M45 40L53 43M40 47L49 49M39 55L47 57\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+    "id": "mar_esp_mola_mola",
+    "name": "Pez luna común",
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Pez luna común\" data-marine-profile=\"sunfish\" data-zoological-family=\"Molidae\"><path d=\"M18 50Q20 29 49 33L58 14 67 13 64 39 81 48 79 64 63 72 66 91 57 88 48 73Q21 75 18 50Z\" fill=\"#9cadaa\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"27\" cy=\"47\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M44 55L58 61 46 67Z\" fill=\"#5e91a6\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M73 46L69 52 75 58 69 65M20 57L28 57\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
   },
   {
-    "id": "mar_esp_paracanthurus_hepatus",
-    "name": "Pez cirujano azul",
-    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Pez cirujano azul\" data-marine-profile=\"surgeonfish\" data-zoological-family=\"Acanthuridae\"><path d=\"M8 57Q13 38 37 33Q59 29 77 51L94 40 90 58 96 74 76 66Q48 84 20 72Z\" fill=\"#467fbb\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M35 38L48 24 59 36 67 33 72 48Z\" fill=\"#467fbb\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M38 71L49 82 61 74Z\" fill=\"#467fbb\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M29 45Q47 37 63 48L44 55 64 65 34 68Z\" fill=\"#264955\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M79 56L93 43 90 58 95 71 78 64Z\" fill=\"#dec868\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
+    "id": "mar_esp_scomber_scombrus",
+    "name": "Caballa atlántica",
+    "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Caballa atlántica\" data-marine-profile=\"mackerel\" data-zoological-family=\"Scombridae\"><path d=\"M6 56Q30 42 52 47L78 55 96 35 89 58 97 76 77 65Q36 75 10 65Z\" fill=\"#8fafb3\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"19\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 63L24 64M27 51Q34 59 27 66\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M36 61L50 74 52 64Z\" fill=\"#5e91a6\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M39 47L46 30 51 48M60 51L65 41 70 54Z\" fill=\"#5e91a6\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M71 52l3-5m1 8 3-5M72 65l3 5m2-6 4 4\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M34 47l4 8m4-8 3 8m5-8 3 8m6-6 2 7\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /></svg>"
   }
 ];
 const birdComparisons = {
@@ -54560,6 +55146,71 @@ const freshwaterComparisons = {
     ]
   }
 };
+const reefComparisons = {
+  "compressed-profiles": {
+    "label": "Perfiles comprimidos y marcas de color",
+    "reef": [
+      {
+        "id": "mar_esp_amphiprion_ocellaris",
+        "trait": "Tres franjas blancas con bordes oscuros sobre fondo anaranjado."
+      },
+      {
+        "id": "gm06_chaetodon_semilarvatus",
+        "trait": "Perfil alto, hocico fino y máscara azul detrás del ojo."
+      },
+      {
+        "id": "mar_esp_paracanthurus_hepatus",
+        "trait": "Dibujo negro curvado, cuerpo azul y cola amarilla triangular."
+      },
+      {
+        "id": "mar_esp_pomacanthus_imperator",
+        "trait": "Adulto con líneas azules y amarillas, máscara oscura y cola amarilla."
+      }
+    ]
+  },
+  "wrasses-and-grouper": {
+    "label": "Lábridos y mero",
+    "reef": [
+      {
+        "id": "mar_esp_bolbometopon_muricatum",
+        "trait": "Frente casi vertical y dientes fusionados en un pico."
+      },
+      {
+        "id": "mar_esp_cheilinus_undulatus",
+        "trait": "Joroba frontal redondeada, labios gruesos y dos líneas detrás del ojo."
+      },
+      {
+        "id": "mar_esp_epinephelus_lanceolatus",
+        "trait": "Cabeza ancha, gran abertura bucal y aleta caudal redondeada."
+      }
+    ]
+  },
+  "fin-shapes": {
+    "label": "Aletas, espinas y cola prensil",
+    "reef": [
+      {
+        "id": "mar_esp_balistoides_conspicillum",
+        "trait": "Primera espina dorsal, boca amarilla y manchas blancas ventrales."
+      },
+      {
+        "id": "mar_esp_exocoetus_volitans",
+        "trait": "Pectorales alargadas y lóbulo inferior de la cola más largo."
+      },
+      {
+        "id": "mar_esp_hippocampus_comes",
+        "trait": "Cuerpo vertical con anillos óseos, bandas y cola prensil."
+      },
+      {
+        "id": "gm06_pterois_miles",
+        "trait": "Espinas dorsales largas y radios pectorales visibles."
+      },
+      {
+        "id": "mar_esp_synanceia_verrucosa",
+        "trait": "Piel verrugosa, boca oblicua y espinas dorsales bajas."
+      }
+    ]
+  }
+};
 const legendaryComparisons = {
   "all": {
     "label": "Colección completa",
@@ -54627,4 +55278,4 @@ const legendaryComparisons = {
     ]
   }
 };
-const migrationProgress = {"migrated":936,"total":998,"cutouts":1608,"plates":1608,"biological":682,"legendary":12,"review":0,"classical":1608,"target":1608,"ungulates":122,"mammals":461,"mammalsMigrated":461,"birds":287,"birdsMigrated":287,"reptiles":104,"reptilesMigrated":104,"amphibians":35,"amphibiansMigrated":35,"cartilaginous":18,"cartilaginousMigrated":18,"salmonids":8,"salmonidsMigrated":8,"freshwater":23,"freshwaterMigrated":23};
+const migrationProgress = {"migrated":950,"total":1000,"cutouts":1622,"plates":1622,"biological":682,"legendary":12,"review":0,"classical":1622,"target":1622,"ungulates":122,"mammals":463,"mammalsMigrated":463,"birds":287,"birdsMigrated":287,"reptiles":104,"reptilesMigrated":104,"amphibians":35,"amphibiansMigrated":35,"cartilaginous":18,"cartilaginousMigrated":18,"salmonids":8,"salmonidsMigrated":8,"freshwater":23,"freshwaterMigrated":23,"reef":12,"reefMigrated":12};

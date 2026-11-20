@@ -2,6 +2,7 @@
   'use strict';
 
   const records = {
+    ...root.AtlasGM07P04?.records,
     sa_esp_scelorchilus_rubecula: {
       name: 'Chucao',
       latin: 'Scelorchilus rubecula',
@@ -50,11 +51,11 @@
       const region = regions.find(item => item.id === record.region);
       const habitats = existing?.habitats || record.species?.habitats;
       if (!region || !habitats?.some(habitat => region.habitats.includes(habitat))) {
-        throw Error('Hábitat o región de V4.7.3 incompatible: ' + id);
+        throw Error('Hábitat o región de catálogo incompatible: ' + id);
       }
       if ((existing && existing.latin !== record.latin) ||
           Object.entries(species).some(([otherId, item]) => otherId !== id && item.latin.toLowerCase() === record.latin.toLowerCase())) {
-        throw Error('Identidad de V4.7.3 duplicada: ' + id);
+        throw Error('Identidad de catálogo duplicada: ' + id);
       }
       if (!existing) {
         species[id] = { ...record.species, name: record.name, latin: record.latin, family: record.taxonomy.family };

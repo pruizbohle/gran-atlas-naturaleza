@@ -7,9 +7,10 @@ const os = require('node:os');
 const path = require('node:path');
 const { chromium } = require('playwright');
 
-const archive = process.env.ATLAS_HISTORY_WWW || '/workspace/work/v492/reference';
+const archive = process.env.ATLAS_HISTORY_WWW || '/workspace/work/v493/reference';
 const version = require('../package.json').version;
-const previous = '4.9.1';
+const previous = '4.9.2';
+const candidatePlate = '/naturalist-art/plates/64/gm06_pterois_miles--normal.webp';
 const future = version.replace(/\d+$/, patch => String(Number(patch) + 1));
 const evidence = process.env.ATLAS_EVIDENCE_DIR;
 const host = '127.0.0.1';
@@ -55,7 +56,7 @@ const server = http.createServer((req, res) => {
 });
 
 function candidateRequests() {
-  return requests.filter(name => name.startsWith('/atlas-integrity.json') || name.includes('--melanico.webp'));
+  return requests.filter(name => name.startsWith('/atlas-integrity.json') || name.startsWith(candidatePlate));
 }
 
 async function seed(page) {
@@ -98,7 +99,7 @@ async function finish(page, base, raw) {
   await page.locator('#atlasUpdateReturn').click();
   await page.waitForURL(base + 'index.html?actualizado=' + version);
   await page.waitForFunction(() => !!window.AtlasSaveBridge);
-  assert.match(await page.title(), new RegExp('v' + version));
+  assert.match(await page.title(), new RegExp('v' + version.replaceAll('.', '\\.')));
   if (raw !== null) {
     const previous = JSON.parse(raw);
     const current = await page.evaluate(() => AtlasSaveBridge.getSaveData());
@@ -192,7 +193,7 @@ async function runMigration(browser, base, old, mobile) {
 
     if (old === previous) {
       for (const kind of ['interruption', 'checksum']) {
-        fault = { kind, file: '/naturalist-art/plates/64/eu_esp_0668--melanico.webp' };
+        fault = { kind, file: candidatePlate };
         const active = await update.evaluate(() => navigator.serviceWorker.controller.scriptURL);
         await update.locator('#atlasUpdateApply').click();
         await statusText(update, /Se interrumpió la descarga o falló/);
@@ -307,77 +308,90 @@ async function freshAndNotify(browser, base) {
   }
 }
 
-async function checkBarbelInGame(app) {
+async function checkNewCatalogInGame(app) {
   const { harness } = require('../tests/helpers/live-game.cjs');
-  const gameSource = ['gm06/catalog', 'gm07-a04/catalog', 'app'].map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
-  const region = harness({}, null, { gameSource }).window.__atlasTest.REGIONS.find(zone => zone.id === 'HX-02-11');
-  const id = 'eu_esp_0668';
+  const { records } = require('../www/js/gm07-p04/catalog.js');
+  const modules = ['gm06/catalog', 'gm07-p04/catalog', 'gm07-a04/catalog', 'app'];
+  const gameSource = modules.map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
+  const { REGIONS } = harness({}, null, { gameSource }).window.__atlasTest;
   const open = tab => app.locator('.tab[data-tab=' + tab + ']').first().evaluate(button => button.click());
+  const results = [];
   await app.bringToFront();
-  await app.evaluate(({ region, id }) => {
-    // Exercise the normal automatic timer with a deterministic draw.
-    Math.random = () => 0.24;
-    const save = AtlasSaveBridge.getSaveData();
-    save.currentRegion = region.id;
-    save.regionUnlocked[region.id] = true;
-    save.habitat = 'rio';
-    save.time = 'dia';
-    save.season = 'primavera';
-    save.helpers = 3;
-    save.upgrades.autoTier = 4;
-    save.lastTick = Date.now();
-    delete save.discovered[id];
-    delete save.sightings[id];
-    delete save.stages[id];
-    const hour = Math.floor(save.lastTick / 3600000);
-    save.autoHourly = Object.fromEntries(region.species.filter(key => key !== id).map(key => [hour + ':' + key, 999]));
-    AtlasSaveBridge.restoreGame(save);
-  }, { region, id });
-  await open('field');
-  const start = performance.now();
-  try {
-    await app.locator('#fieldResult img[src*="/eu_esp_0668--"]').evaluate(img => img.decode(), undefined, { timeout: 20000 });
-  } catch (error) {
-    console.error(await app.evaluate(id => {
+  for (const [id, record] of Object.entries(records)) {
+    const region = REGIONS.find(zone => zone.id === record.region);
+    const scenario = { id, region, habitat: record.species.habitats[0], time: record.species.times.at(-1) };
+    await app.evaluate(({ id, region, habitat, time }) => {
       const save = AtlasSaveBridge.getSaveData();
-      return { region: save.currentRegion, helpers: save.helpers, sightings: save.sightings[id],
-        visible: document.visibilityState, entries: save.lastEncounter?.entries?.map(entry => entry.id) };
-    }, id));
-    throw error;
+      Object.assign(save, { currentRegion: region.id, habitat, time, season: 'primavera', helpers: 0, lastTick: Date.now() });
+      save.regionUnlocked[region.id] = true;
+      delete save.discovered[id];
+      delete save.sightings[id];
+      delete save.stages[id];
+      AtlasSaveBridge.restoreGame(save);
+    }, scenario);
+    await open('field');
+    await app.evaluate(() => {
+      const originalRandom = Math.random;
+      const rolls = [0.01, 0.99999];
+      Math.random = () => rolls.shift() ?? 0.5;
+      try { document.querySelector('[data-action=search-manual]').click(); }
+      finally { Math.random = originalRandom; }
+    });
+    const normal = 'img[src$="/' + id + '--normal.webp"]';
+    const field = app.locator('#fieldResult ' + normal);
+    await field.evaluate(img => img.decode(), undefined, { timeout: 20000 });
+    const afterManual = await app.evaluate(id => AtlasSaveBridge.getSaveData().sightings[id], id);
+    assert.ok(afterManual > 0, id + ' · avistamiento manual');
+    const { scale, visualWidth } = await field.evaluate(img => {
+      const property = '--art-visual-transform';
+      const visualWidth = img.getBoundingClientRect().width;
+      const original = img.style.getPropertyValue(property);
+      img.style.removeProperty(property);
+      const scale = visualWidth / img.getBoundingClientRect().width;
+      img.style.setProperty(property, original);
+      return { scale, visualWidth };
+    });
+    assert.ok(Math.abs(scale - (id.startsWith('asia_') ? 0.35 : 0.40)) < 0.003, id + ' · escala ' + scale);
+    await app.evaluate(({ id, region }) => {
+      Math.random = () => 0.24;
+      const save = AtlasSaveBridge.getSaveData();
+      save.helpers = 3;
+      save.upgrades.autoTier = 4;
+      save.lastTick = Date.now();
+      const hour = Math.floor(save.lastTick / 3600000);
+      save.autoHourly = Object.fromEntries(region.species.filter(key => key !== id).map(key => [hour + ':' + key, 999]));
+      AtlasSaveBridge.restoreGame(save);
+    }, scenario);
+    const start = performance.now();
+    await app.waitForFunction(({ id, afterManual }) => AtlasSaveBridge.getSaveData().sightings[id] > afterManual,
+      { id, afterManual }, { timeout: 20000 });
+    const automaticMs = Math.round(performance.now() - start);
+    await field.evaluate(img => img.decode());
+    if (evidence) await app.locator('.field-stage').screenshot({ path: path.join(evidence, id + '-campo.jpg') });
+    await app.evaluate(id => {
+      const save = AtlasSaveBridge.getSaveData();
+      save.helpers = 0;
+      save.stages[id] = 5;
+      save.published[id] = true;
+      save.selectedJournal = id;
+      save.museum.exhibits[id] = true;
+      AtlasSaveBridge.restoreGame(save);
+    }, id);
+    await open('journal');
+    await app.locator('.j25-sheet ' + normal).first().evaluate(img => img.decode());
+    await open('bestiary');
+    await app.locator('#b26-search').fill(record.latin);
+    await app.locator('.b26-card').filter({ has: app.locator(normal) }).click();
+    await app.locator('.b26-dialog ' + normal).first().evaluate(img => img.decode());
+    await app.locator('[data-action=b26-close]').click();
+    await open('museum');
+    await app.getByRole('tab', { name: 'Exposiciones', exact: true }).click();
+    await app.locator('.m27-vitrines [data-action=m27-open]').filter({ has: app.locator(normal) }).click();
+    await app.locator('.m27-dialog ' + normal).first().evaluate(img => img.decode());
+    await app.locator('[data-action=m27-close]').click();
+    results.push({ id, region: region.id, automaticMs, scale, visualWidth, modules: ['Campo', 'Cuaderno', 'Bestiario', 'Museo'] });
   }
-  const automaticMs = Math.round(performance.now() - start);
-  assert.ok(await app.evaluate(id => AtlasSaveBridge.getSaveData().sightings[id] > 0, id));
-  await app.evaluate(id => {
-    const save = AtlasSaveBridge.getSaveData();
-    save.helpers = 0;
-    save.stages[id] = 5;
-    save.published[id] = true;
-    save.selectedJournal = id;
-    save.specialFound[id] = { 'Melánico': true, Notable: true };
-    save.museum.exhibits[id] = true;
-    save.lastEncounter = { species: id, title: 'Barbo común', sequence: save.encounterSequence,
-      entries: [{ id, amount: 1, variant: 'Melánico', category: 'Notable' }] };
-    AtlasSaveBridge.restoreGame(save);
-  }, id);
-  const variant = app.locator('#fieldResult .notable img[src$="/eu_esp_0668--melanico.webp"]');
-  await variant.evaluate(img => img.decode());
-  assert.match(await variant.evaluate(img => getComputedStyle(img).filter), /drop-shadow/);
-  await app.locator('.field-environment .landscape-rio').evaluate(img => img.decode());
-  if (evidence) await app.locator('.field-stage').screenshot({ path: path.join(evidence, 'barbo-campo.jpg') });
-  const normal = 'img[src$="/eu_esp_0668--normal.webp"]';
-  await open('journal');
-  await app.locator('.j25-sheet ' + normal).first().evaluate(img => img.decode());
-  await open('bestiary');
-  await app.locator('#b26-search').fill('Barbus barbus');
-  await app.locator('.b26-card').filter({ has: app.locator(normal) }).click();
-  await app.locator('.b26-dialog ' + normal).first().evaluate(img => img.decode());
-  await app.locator('[data-action=b26-close]').click();
-  await open('museum');
-  await app.getByRole('tab', { name: 'Exposiciones', exact: true }).click();
-  await app.locator('.m27-vitrines [data-action=m27-open]').filter({ has: app.locator(normal) }).click();
-  await app.locator('.m27-dialog ' + normal).first().evaluate(img => img.decode());
-  await app.locator('[data-action=m27-close]').click();
-  return { automaticMs, modules: ['Campo', 'Cuaderno', 'Bestiario', 'Museo'] };
+  return results;
 }
 
 async function legacyEntry(browser, base) {
@@ -395,7 +409,7 @@ async function legacyEntry(browser, base) {
     const raw = await page.evaluate(() => localStorage.getItem('gran_atlas_v05'));
     await page.locator('#atlasUpdateApply').click();
     await page.waitForURL(base + 'index.html?actualizado=' + version, { timeout: 180000 });
-    assert.match(await page.title(), new RegExp('v' + version));
+    assert.match(await page.title(), new RegExp('v' + version.replaceAll('.', '\\.')));
     assert.equal(await page.evaluate(() => localStorage.getItem('gran_atlas_backup_before_update')), raw);
     evidenceRows.push({ from: '4.3.0', to: version, tested: ['actualizar-v430.html desde la caché histórica', 'respaldo exacto'] });
     console.log('PASS actualización desde el enlace histórico actualizar-v430.html');
@@ -442,14 +456,14 @@ async function installedMigration(base) {
       await context.setOffline(true);
       await app.reload();
       await app.waitForFunction(() => !!window.AtlasSaveBridge && matchMedia('(display-mode: standalone)').matches);
-      assert.match(await app.title(), new RegExp('v' + version));
-      const barbel = await checkBarbelInGame(app);
+      assert.match(await app.title(), new RegExp('v' + version.replaceAll('.', '\\.')));
+      const catalog = await checkNewCatalogInGame(app);
       await context.setOffline(false);
       await protocol.send('PWA.uninstall', { manifestId: base });
-      evidenceRows.push({ from: previous, to: version, installed: true, barbel, tested: [
+      evidenceRows.push({ from: previous, to: version, installed: true, catalog, tested: [
         'PWA instalada mediante Chromium', 'ventana standalone', 'respaldo exacto', 'reapertura offline'
       ] });
-      console.log('PASS PWA V4.9.1 instalada en Chromium, ventana standalone, actualización y reapertura offline');
+      console.log('PASS PWA ' + previous + ' instalada en Chromium, ventana standalone, actualización y reapertura offline');
     } finally {
       await context.close();
     }

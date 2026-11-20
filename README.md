@@ -1,4 +1,8 @@
-# El Gran Atlas · Peces dulceacuícolas y estuarinos (V4.9.2)
+# El Gran Atlas · Peces de arrecife y cierre del catálogo mundial (V4.9.3)
+
+[Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.3](docs/cientifica-v493/README.md) · [Plan V4.9.5](docs/cientifica-v493/plan-v495.md)
+
+## Serie 4 · Peces dulceacuícolas y estuarinos (V4.9.2)
 
 [Juego](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Actualizar PWA](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html) · [Informe V4.9.2](docs/cientifica-v492/README.md) · [Plan V4.9.3](docs/cientifica-v492/plan-v493.md).
 

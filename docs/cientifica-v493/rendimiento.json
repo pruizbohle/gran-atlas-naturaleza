@@ -1,0 +1,1877 @@
+{
+  "chromium": "156.0.8078.79",
+  "offline": false,
+  "repetitions": 12,
+  "summary": [
+    {
+      "width": 390,
+      "version": "4.9.2",
+      "initialMs": {
+        "median": 101.14999999990687,
+        "p90": 179.60000000009313,
+        "min": 17.700000000186265,
+        "max": 229.29999999981374
+      },
+      "repeatedMs": {
+        "median": 68.35000000009313,
+        "p90": 173.29999999981374,
+        "min": 5.5,
+        "max": 309.5
+      },
+      "initialDriverMs": {
+        "median": 189.5160079999987,
+        "p90": 302.428516999993,
+        "min": 43.62695400000666,
+        "max": 398.22602200000074
+      },
+      "heapBytes": {
+        "median": 7404296,
+        "p90": 7517792,
+        "min": 7200480,
+        "max": 7567096
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 390,
+      "version": "4.9.3",
+      "initialMs": {
+        "median": 84.19999999995343,
+        "p90": 157.79999999981374,
+        "min": 20,
+        "max": 413.20000000018626
+      },
+      "repeatedMs": {
+        "median": 84.95000000018626,
+        "p90": 223.89999999990687,
+        "min": 10.899999999906868,
+        "max": 398.70000000018626
+      },
+      "initialDriverMs": {
+        "median": 154.16292049999356,
+        "p90": 285.33307700000296,
+        "min": 34.423102999993716,
+        "max": 615.5385810000007
+      },
+      "heapBytes": {
+        "median": 7570278,
+        "p90": 7590588,
+        "min": 7505208,
+        "max": 7607540
+      },
+      "imageRGBABytes": 131072
+    },
+    {
+      "width": 1280,
+      "version": "4.9.2",
+      "initialMs": {
+        "median": 68.20000000018626,
+        "p90": 133.89999999990687,
+        "min": 15.399999999906868,
+        "max": 148.40000000037253
+      },
+      "repeatedMs": {
+        "median": 40.10000000009313,
+        "p90": 100.79999999981374,
+        "min": 2,
+        "max": 115.70000000018626
+      },
+      "initialDriverMs": {
+        "median": 150.53625699997065,
+        "p90": 180.90856599999825,
+        "min": 84.51161799998954,
+        "max": 213.52139000000898
+      },
+      "heapBytes": {
+        "median": 7424254,
+        "p90": 7518740,
+        "min": 7279500,
+        "max": 7523748
+      },
+      "imageRGBABytes": 65536
+    },
+    {
+      "width": 1280,
+      "version": "4.9.3",
+      "initialMs": {
+        "median": 78.69999999995343,
+        "p90": 100.90000000037253,
+        "min": 19.200000000186265,
+        "max": 110.89999999990687
+      },
+      "repeatedMs": {
+        "median": 62.25,
+        "p90": 106.89999999990687,
+        "min": 7.400000000372529,
+        "max": 142.70000000018626
+      },
+      "initialDriverMs": {
+        "median": 129.20335150000756,
+        "p90": 179.75133100000676,
+        "min": 46.73813599999994,
+        "max": 211.48679499997525
+      },
+      "heapBytes": {
+        "median": 7503146,
+        "p90": 7581180,
+        "min": 7415088,
+        "max": 7950208
+      },
+      "imageRGBABytes": 131072
+    }
+  ],
+  "samples": [
+    {
+      "width": 390,
+      "trial": 0,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 179,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 398.22602200000074
+      },
+      "repeats": [
+        {
+          "ms": 194.09999999962747,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 316.71653100000003
+        },
+        {
+          "ms": 25.699999999720603,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 95.83385400000043
+        }
+      ],
+      "heapBytes": 7567096
+    },
+    {
+      "width": 390,
+      "trial": 0,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 77.10000000009313,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 166.76409200000126
+      },
+      "repeats": [
+        {
+          "ms": 82.70000000018626,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 112.15020799999911
+        },
+        {
+          "ms": 88,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 140.84985700000107
+        }
+      ],
+      "heapBytes": 7570400
+    },
+    {
+      "width": 390,
+      "trial": 1,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 413.20000000018626,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 615.5385810000007
+      },
+      "repeats": [
+        {
+          "ms": 212.79999999981374,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 302.34292300000016
+        },
+        {
+          "ms": 101.70000000018626,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 191.45989700000064
+        }
+      ],
+      "heapBytes": 7505208
+    },
+    {
+      "width": 390,
+      "trial": 1,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 78.20000000018626,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 115.2504540000009
+      },
+      "repeats": [
+        {
+          "ms": 32.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 84.85848899999837
+        },
+        {
+          "ms": 33.90000000037253,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 107.05832600000576
+        }
+      ],
+      "heapBytes": 7381376
+    },
+    {
+      "width": 390,
+      "trial": 2,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 47.60000000009313,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 117.24124500000471
+      },
+      "repeats": [
+        {
+          "ms": 28.799999999813735,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 77.80393300000287
+        },
+        {
+          "ms": 61.200000000186265,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 81.25336299999617
+        }
+      ],
+      "heapBytes": 7306036
+    },
+    {
+      "width": 390,
+      "trial": 2,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 108.8000000002794,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 253.34881799999857
+      },
+      "repeats": [
+        {
+          "ms": 104.40000000037253,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 207.53888099999313
+        },
+        {
+          "ms": 398.70000000018626,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 481.74882599999546
+        }
+      ],
+      "heapBytes": 7590588
+    },
+    {
+      "width": 390,
+      "trial": 3,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 89,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 175.72888099999545
+      },
+      "repeats": [
+        {
+          "ms": 62.59999999962747,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 80.19021300000168
+        },
+        {
+          "ms": 70.20000000018626,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 78.01094400000147
+        }
+      ],
+      "heapBytes": 7580968
+    },
+    {
+      "width": 390,
+      "trial": 3,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 139.5,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 240.30713800000376
+      },
+      "repeats": [
+        {
+          "ms": 36.200000000186265,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 102.71461500000441
+        },
+        {
+          "ms": 95.89999999990687,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 131.2298759999976
+        }
+      ],
+      "heapBytes": 7457884
+    },
+    {
+      "width": 390,
+      "trial": 4,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 90,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 139.40559799999755
+      },
+      "repeats": [
+        {
+          "ms": 26.200000000186265,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 45.46332999999868
+        },
+        {
+          "ms": 75.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 116.81943699999829
+        }
+      ],
+      "heapBytes": 7447316
+    },
+    {
+      "width": 390,
+      "trial": 4,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 138.20000000018626,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 285.33307700000296
+      },
+      "repeats": [
+        {
+          "ms": 34.1999999997206,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 43.184527999997954
+        },
+        {
+          "ms": 18,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 32.829054999994696
+        }
+      ],
+      "heapBytes": 7541412
+    },
+    {
+      "width": 390,
+      "trial": 5,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 32.3000000002794,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 51.01018199999817
+      },
+      "repeats": [
+        {
+          "ms": 19.5,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 68.97152800000913
+        },
+        {
+          "ms": 63.5,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 81.17226099999971
+        }
+      ],
+      "heapBytes": 7570156
+    },
+    {
+      "width": 390,
+      "trial": 5,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 33.39999999990687,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 43.62695400000666
+      },
+      "repeats": [
+        {
+          "ms": 14.899999999906868,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 54.68959300000279
+        },
+        {
+          "ms": 5.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 28.41021700001147
+        }
+      ],
+      "heapBytes": 7313932
+    },
+    {
+      "width": 390,
+      "trial": 6,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 35.10000000009313,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 100.58162100000482
+      },
+      "repeats": [
+        {
+          "ms": 47.89999999990687,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 62.164246000000276
+        },
+        {
+          "ms": 48.700000000186265,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 59.340351000006194
+        }
+      ],
+      "heapBytes": 7290688
+    },
+    {
+      "width": 390,
+      "trial": 6,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 115.5,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 141.56174899998587
+      },
+      "repeats": [
+        {
+          "ms": 87.20000000018626,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 104.64949499999057
+        },
+        {
+          "ms": 82.39999999990687,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 106.07477999999537
+        }
+      ],
+      "heapBytes": 7607540
+    },
+    {
+      "width": 390,
+      "trial": 7,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 20,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 34.423102999993716
+      },
+      "repeats": [
+        {
+          "ms": 10.899999999906868,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 48.2609220000013
+        },
+        {
+          "ms": 19.300000000279397,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 28.58936700000777
+        }
+      ],
+      "heapBytes": 7552448
+    },
+    {
+      "width": 390,
+      "trial": 7,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 179.60000000009313,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 263.7639729999937
+      },
+      "repeats": [
+        {
+          "ms": 102.1999999997206,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 130.85275800000818
+        },
+        {
+          "ms": 83.20000000018626,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 95.71737199999916
+        }
+      ],
+      "heapBytes": 7278728
+    },
+    {
+      "width": 390,
+      "trial": 8,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 112.29999999981374,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 239.62641799999983
+      },
+      "repeats": [
+        {
+          "ms": 83.89999999990687,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 152.89107699999295
+        },
+        {
+          "ms": 76.8000000002794,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 97.72150200000033
+        }
+      ],
+      "heapBytes": 7517792
+    },
+    {
+      "width": 390,
+      "trial": 8,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 24.399999999906868,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 46.19796699998551
+      },
+      "repeats": [
+        {
+          "ms": 30.700000000186265,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 41.74275000000489
+        },
+        {
+          "ms": 36.799999999813735,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 49.14710399998876
+        }
+      ],
+      "heapBytes": 7522308
+    },
+    {
+      "width": 390,
+      "trial": 9,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 157.79999999981374,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 231.91046600000118
+      },
+      "repeats": [
+        {
+          "ms": 95.89999999990687,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 129.84836299999733
+        },
+        {
+          "ms": 90.5,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 120.18326299999899
+        }
+      ],
+      "heapBytes": 7573384
+    },
+    {
+      "width": 390,
+      "trial": 9,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 17.700000000186265,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 44.69285299998592
+      },
+      "repeats": [
+        {
+          "ms": 30,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 85.85173600001144
+        },
+        {
+          "ms": 81.60000000009313,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 119.38795000000391
+        }
+      ],
+      "heapBytes": 7200480
+    },
+    {
+      "width": 390,
+      "trial": 10,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 229.29999999981374,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 302.428516999993
+      },
+      "repeats": [
+        {
+          "ms": 80.3000000002794,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 102.93125599998166
+        },
+        {
+          "ms": 173.29999999981374,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 196.69581299999845
+        }
+      ],
+      "heapBytes": 7427216
+    },
+    {
+      "width": 390,
+      "trial": 10,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 44.10000000009313,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 94.77106199998525
+      },
+      "repeats": [
+        {
+          "ms": 223.89999999990687,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 285.9059750000015
+        },
+        {
+          "ms": 326.39999999990687,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 392.07282299999497
+        }
+      ],
+      "heapBytes": 7537412
+    },
+    {
+      "width": 390,
+      "trial": 11,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 79.39999999990687,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 107.18007500001113
+      },
+      "repeats": [
+        {
+          "ms": 132.29999999981374,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 219.9411459999974
+        },
+        {
+          "ms": 113.29999999981374,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 207.77399899999727
+        }
+      ],
+      "heapBytes": 7579752
+    },
+    {
+      "width": 390,
+      "trial": 11,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 159.60000000009313,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 255.75228099999367
+      },
+      "repeats": [
+        {
+          "ms": 144.90000000037253,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 167.5816020000202
+        },
+        {
+          "ms": 309.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 370.84632700000657
+        }
+      ],
+      "heapBytes": 7444972
+    },
+    {
+      "width": 1280,
+      "trial": 0,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 133.89999999990687,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 160.78985999998986
+      },
+      "repeats": [
+        {
+          "ms": 22.199999999720603,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 37.73991999999271
+        },
+        {
+          "ms": 115.70000000018626,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 136.38459600001806
+        }
+      ],
+      "heapBytes": 7432832
+    },
+    {
+      "width": 1280,
+      "trial": 0,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 100.90000000037253,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 179.75133100000676
+      },
+      "repeats": [
+        {
+          "ms": 7.400000000372529,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 19.924475000007078
+        },
+        {
+          "ms": 61.39999999990687,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 82.86499699999695
+        }
+      ],
+      "heapBytes": 7493680
+    },
+    {
+      "width": 1280,
+      "trial": 1,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 19.200000000186265,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 88.91537199998857
+      },
+      "repeats": [
+        {
+          "ms": 89.89999999990687,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 109.5222960000101
+        },
+        {
+          "ms": 142.70000000018626,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 247.75865999999223
+        }
+      ],
+      "heapBytes": 7531852
+    },
+    {
+      "width": 1280,
+      "trial": 1,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 58.10000000009313,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 180.90856599999825
+      },
+      "repeats": [
+        {
+          "ms": 23.700000000186265,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 28.46685900000739
+        },
+        {
+          "ms": 16.800000000279397,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 23.445618999976432
+        }
+      ],
+      "heapBytes": 7279500
+    },
+    {
+      "width": 1280,
+      "trial": 2,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 67.90000000037253,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 94.5945950000023
+      },
+      "repeats": [
+        {
+          "ms": 100.79999999981374,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 128.77959399999236
+        },
+        {
+          "ms": 110.89999999990687,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 154.23396599999978
+        }
+      ],
+      "heapBytes": 7510668
+    },
+    {
+      "width": 1280,
+      "trial": 2,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 110.89999999990687,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 167.055680999998
+      },
+      "repeats": [
+        {
+          "ms": 84,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 137.00689099999727
+        },
+        {
+          "ms": 105.5,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 205.38552099998924
+        }
+      ],
+      "heapBytes": 7415088
+    },
+    {
+      "width": 1280,
+      "trial": 3,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 92.79999999981374,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 172.2644469999941
+      },
+      "repeats": [
+        {
+          "ms": 18.899999999906868,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 26.549013000010746
+        },
+        {
+          "ms": 23.100000000093132,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 37.00101000000723
+        }
+      ],
+      "heapBytes": 7950208
+    },
+    {
+      "width": 1280,
+      "trial": 3,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 15.399999999906868,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 89.94902000000002
+      },
+      "repeats": [
+        {
+          "ms": 39.40000000037253,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 42.49839100000099
+        },
+        {
+          "ms": 2,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 6.83074399997713
+        }
+      ],
+      "heapBytes": 7514476
+    },
+    {
+      "width": 1280,
+      "trial": 4,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 56,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 108.90366799998446
+      },
+      "repeats": [
+        {
+          "ms": 81.29999999981374,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 95.33720999999787
+        },
+        {
+          "ms": 98.60000000009313,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 172.29685500002233
+        }
+      ],
+      "heapBytes": 7434200
+    },
+    {
+      "width": 1280,
+      "trial": 4,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 79,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 99.57225599998492
+      },
+      "repeats": [
+        {
+          "ms": 9.100000000093132,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 13.092589000007138
+        },
+        {
+          "ms": 11.5,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 23.79079400000046
+        }
+      ],
+      "heapBytes": 7521656
+    },
+    {
+      "width": 1280,
+      "trial": 5,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 85.6999999997206,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 137.33462900001905
+      },
+      "repeats": [
+        {
+          "ms": 15.300000000279397,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 20.133058000006713
+        },
+        {
+          "ms": 86.39999999990687,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 106.89965199999278
+        }
+      ],
+      "heapBytes": 7499584
+    },
+    {
+      "width": 1280,
+      "trial": 5,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 108.40000000037253,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 213.52139000000898
+      },
+      "repeats": [
+        {
+          "ms": 27.699999999720603,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 63.67353000000003
+        },
+        {
+          "ms": 36.10000000009313,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 46.6247629999998
+        }
+      ],
+      "heapBytes": 7415676
+    },
+    {
+      "width": 1280,
+      "trial": 6,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 148.40000000037253,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 175.7648310000077
+      },
+      "repeats": [
+        {
+          "ms": 11.399999999906868,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 17.96985200000927
+        },
+        {
+          "ms": 6.599999999627471,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 15.61421599998721
+        }
+      ],
+      "heapBytes": 7518740
+    },
+    {
+      "width": 1280,
+      "trial": 6,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 38.89999999990687,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 121.07207399999606
+      },
+      "repeats": [
+        {
+          "ms": 12.899999999906868,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 62.79058799997438
+        },
+        {
+          "ms": 10.399999999906868,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 23.034747000026982
+        }
+      ],
+      "heapBytes": 7496176
+    },
+    {
+      "width": 1280,
+      "trial": 7,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 68.60000000009313,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 97.62074899999425
+      },
+      "repeats": [
+        {
+          "ms": 46.700000000186265,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 58.853601999988314
+        },
+        {
+          "ms": 87.1999999997206,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 97.751986999996
+        }
+      ],
+      "heapBytes": 7500420
+    },
+    {
+      "width": 1280,
+      "trial": 7,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 31.199999999720603,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 159.37443999998504
+      },
+      "repeats": [
+        {
+          "ms": 84.60000000009313,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 106.19159299996682
+        },
+        {
+          "ms": 69.29999999981374,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 100.42198199999984
+        }
+      ],
+      "heapBytes": 7523748
+    },
+    {
+      "width": 1280,
+      "trial": 8,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 107.40000000037253,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 159.30099999997765
+      },
+      "repeats": [
+        {
+          "ms": 68.20000000018626,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 74.56532900000457
+        },
+        {
+          "ms": 29.199999999720603,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 32.2709840000025
+        }
+      ],
+      "heapBytes": 7375356
+    },
+    {
+      "width": 1280,
+      "trial": 8,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 39.5,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 46.73813599999994
+      },
+      "repeats": [
+        {
+          "ms": 8.600000000093132,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 14.30113999999594
+        },
+        {
+          "ms": 63.10000000009313,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 69.9151079999865
+        }
+      ],
+      "heapBytes": 7479828
+    },
+    {
+      "width": 1280,
+      "trial": 9,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 90.8000000002794,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 211.48679499997525
+      },
+      "repeats": [
+        {
+          "ms": 106.89999999990687,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 130.52137299999595
+        },
+        {
+          "ms": 74.39999999990687,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 103.86970199999632
+        }
+      ],
+      "heapBytes": 7560636
+    },
+    {
+      "width": 1280,
+      "trial": 9,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 21.299999999813735,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 84.51161799998954
+      },
+      "repeats": [
+        {
+          "ms": 51.40000000037253,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 63.588395999977365
+        },
+        {
+          "ms": 89.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 113.27473300002748
+        }
+      ],
+      "heapBytes": 7413300
+    },
+    {
+      "width": 1280,
+      "trial": 10,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 106.79999999981374,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 141.77151399996364
+      },
+      "repeats": [
+        {
+          "ms": 15.700000000186265,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 98.15816900000209
+        },
+        {
+          "ms": 36.5,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 53.192654000013135
+        }
+      ],
+      "heapBytes": 7286692
+    },
+    {
+      "width": 1280,
+      "trial": 10,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 78.39999999990687,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 161.16576599999098
+      },
+      "repeats": [
+        {
+          "ms": 108.1999999997206,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 150.46443300001556
+        },
+        {
+          "ms": 105.70000000018626,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 216.92299700004514
+        }
+      ],
+      "heapBytes": 7581180
+    },
+    {
+      "width": 1280,
+      "trial": 11,
+      "version": "4.9.3",
+      "initial": {
+        "ms": 50.10000000009313,
+        "images": [
+          "af_dugongo--albino.webp",
+          "mar_esp_amphiprion_ocellaris--normal.webp"
+        ],
+        "rgbaBytes": 131072,
+        "svg": 0,
+        "driverMs": 86.09789199999068
+      },
+      "repeats": [
+        {
+          "ms": 74.1999999997206,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 98.27337500004796
+        },
+        {
+          "ms": 50.8000000002794,
+          "images": [
+            "af_dugongo--albino.webp",
+            "mar_esp_amphiprion_ocellaris--normal.webp"
+          ],
+          "rgbaBytes": 131072,
+          "svg": 0,
+          "driverMs": 147.13127399998484
+        }
+      ],
+      "heapBytes": 7505872
+    },
+    {
+      "width": 1280,
+      "trial": 11,
+      "version": "4.9.2",
+      "initial": {
+        "ms": 68.5,
+        "images": [
+          "af_dugongo--albino.webp"
+        ],
+        "rgbaBytes": 65536,
+        "svg": 1,
+        "driverMs": 88.4209930000361
+      },
+      "repeats": [
+        {
+          "ms": 65.20000000018626,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 71.80649700004142
+        },
+        {
+          "ms": 40.799999999813735,
+          "images": [
+            "af_dugongo--albino.webp"
+          ],
+          "rgbaBytes": 65536,
+          "svg": 1,
+          "driverMs": 97.90994599997066
+        }
+      ],
+      "heapBytes": 7401732
+    }
+  ]
+}

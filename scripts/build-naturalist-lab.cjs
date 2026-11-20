@@ -13,8 +13,12 @@ const reptileSets = {
   ...require('./turtle-crocodilian-comparisons.cjs'),
   ...require('./squamate-comparisons.cjs')
 };
-const visualScales = { sa_esp_brachycephalus_pulex: 0.25, gm06_mellisuga_helenae: 0.5 };
-const additions = require('../www/js/gm07-a04/catalog.js').records;
+const visualScales = {
+  sa_esp_brachycephalus_pulex: 0.25, gm06_mellisuga_helenae: 0.5,
+  asia_esp_craseonycteris_thonglongyai: 0.35, sa_esp_chlamyphorus_truncatus: 0.40
+};
+const worldAdditions = require('../www/js/gm07-p04/catalog.js').records;
+const additions = { ...require('../www/js/gm07-a04/catalog.js').records, ...worldAdditions };
 const amphibians = new Map(herpetologyPlan['4.8.2'].inventory.map(animal => [animal.id, animal]));
 const amphibianSets = require('./amphibian-comparisons.cjs');
 const cartilaginous = new Map(require('../docs/cientifica-v482/inventario-v49.json').lots.condrictios.inventory
@@ -26,6 +30,9 @@ const salmonidSets = require('./salmonid-comparisons.cjs');
 const freshwater = new Map(require('../docs/cientifica-v491/inventario-pendiente.json').lots.dulceacuicolas.inventory
   .map(animal => [animal.id, animal]));
 const freshwaterSets = require('./freshwater-fish-comparisons.cjs');
+const reef = new Map(require('../docs/cientifica-v492/inventario-pendiente.json').lots.arrecife.inventory
+  .map(animal => [animal.id, animal]));
+const reefSets = require('./reef-fish-comparisons.cjs');
 const comparisonSets = {
   ...require('./passerine-comparisons.cjs'),
   ...require('./arboreal-bird-comparisons.cjs'),
@@ -43,7 +50,7 @@ const classicalIndex = path.join(reviewDir, 'classical-plates.json');
 const classical = new Set(fs.existsSync(classicalIndex) ? JSON.parse(fs.readFileSync(classicalIndex, 'utf8')) : []);
 const qualities = [75, 80, 85, 90, 95];
 const reviewFiles = new Set();
-const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'gm07-a04/catalog', 'app'];
+const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'gm07-p04/catalog', 'gm07-a04/catalog', 'app'];
 const gameSource = modules.map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
 const audit = harness({}, null, { gameSource }).window.__atlasTest;
 const priority = [
@@ -223,6 +230,17 @@ function classify(id, sp) {
     }
     return { family: freshwaterFish.family, group: 'Peces dulceacuícolas y estuarinos', edition: '4.9.2' };
   }
+  const reefFish = reef.get(id);
+  if (reefFish) {
+    if (taxonomy.className !== reefFish.className || reefFish.latin !== sp.latin) {
+      throw Error('Pez de arrecife fuera del inventario: ' + id);
+    }
+    return { family: reefFish.family, group: 'Peces de arrecife', edition: '4.9.3' };
+  }
+  if (Object.hasOwn(worldAdditions, id)) {
+    const { family, order, subClass: group } = taxonomy;
+    return { family, order, group, edition: '4.9.3' };
+  }
   const genus = sp.latin.split(' ')[0];
   const aquatic = aquaticMammal(sp.latin);
   if (aquatic) return { family: aquatic.family, group: aquaticGroups[aquatic.group] };
@@ -321,6 +339,7 @@ const amphibianComparisons = buildComparisons(amphibianSets, amphibians, 'amphib
 const cartilaginousComparisons = buildComparisons(cartilaginousSets, cartilaginous, 'cartilaginous');
 const salmonidComparisons = buildComparisons(salmonidSets, salmonids, 'salmonids');
 const freshwaterComparisons = buildComparisons(freshwaterSets, freshwater, 'freshwater');
+const reefComparisons = buildComparisons(reefSets, reef, 'reef');
 const legendMembers = new Map(audit.LEGENDARY_SPECIMENS.map(legend => [legend.speciesId, legend]));
 const legendaryComparisons = buildComparisons({
   all: {
@@ -353,9 +372,11 @@ const migrationProgress = {
   salmonids: salmonids.size,
   salmonidsMigrated: species.filter(sp => sp.records[0].src && salmonids.has(sp.id)).length,
   freshwater: freshwater.size,
-  freshwaterMigrated: species.filter(sp => sp.records[0].src && freshwater.has(sp.id)).length
+  freshwaterMigrated: species.filter(sp => sp.records[0].src && freshwater.has(sp.id)).length,
+  reef: reef.size,
+  reefMigrated: species.filter(sp => sp.records[0].src && reef.has(sp.id)).length
 };
-const mixedFieldSprites = ['mar_esp_amphiprion_ocellaris', 'mar_esp_hippocampus_comes', 'mar_esp_paracanthurus_hepatus'].map(id => {
+const mixedFieldSprites = ['mar_esp_thunnus_albacares', 'mar_esp_mola_mola', 'mar_esp_scomber_scombrus'].map(id => {
   const sp = audit.SPECIES[id];
   if (classify(id, sp)) throw Error('El ejemplo de Campo debe conservar SVG: ' + id);
   return { id, name: sp.name, sprite: audit.getSpriteMarkup(id, 'normal') };
@@ -369,6 +390,7 @@ fs.writeFileSync(path.join(out, 'catalog.js'),
   'const cartilaginousComparisons = ' + JSON.stringify(cartilaginousComparisons, null, 2) + ';\n' +
   'const salmonidComparisons = ' + JSON.stringify(salmonidComparisons, null, 2) + ';\n' +
   'const freshwaterComparisons = ' + JSON.stringify(freshwaterComparisons, null, 2) + ';\n' +
+  'const reefComparisons = ' + JSON.stringify(reefComparisons, null, 2) + ';\n' +
   'const legendaryComparisons = ' + JSON.stringify(legendaryComparisons, null, 2) + ';\n' +
   'const migrationProgress = ' + JSON.stringify(migrationProgress) + ';\n');
 const version = require('../package.json').version;

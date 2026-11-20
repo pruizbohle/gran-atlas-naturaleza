@@ -1,4 +1,4 @@
-# Inventario naturalista del catálogo 4.9.2
+# Inventario naturalista del catálogo 4.9.3
 
 | Grupo | Familia | ID | Nombre común | Nombre científico | Continente | Zonas del juego | Variantes | Dimorfismo | Ejemplares |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -146,6 +146,7 @@
 | Rapaces | Accipitridae | buitre_leonado | Buitre leonado | *Gyps fulvus* | Europa | Península Ibérica, Balcanes | Normal, Albino | No | Normal |
 | Rapaces | Accipitridae | af_xlsx_sahara_buitre | Buitre orejudo | *Torgos tracheliotos* | África | Desierto del Sáhara, Sahel oriental | Normal, Albino | No | Normal, Notable |
 | Rapaces | Accipitridae | eu_esp_0643 | Busardo ratonero | *Buteo buteo* | Europa | Islas Británicas, Europa Occidental, Europa Central | Normal, Melánico | No | Normal, Notable |
+| Peces de arrecife | Syngnathidae | mar_esp_hippocampus_comes | Caballito de mar tigre | *Hippocampus comes* | Océanos | Mar tropical asiático | Normal | No | Normal, Notable |
 | Ungulados | Equidae | asia_esp_0184 | Caballo de Przewalski | *Equus przewalskii* | Asia | Mongolia, Estepas de Asia Central | Normal | No | Normal, Notable |
 | Ungulados | Bovidae | na_esp_oreamnos_americanus | Cabra de las Rocosas | *Oreamnos americanus* | Norteamérica | Montañas Rocosas | Normal | No | Normal, Notable |
 | Ungulados | Bovidae | cabra_montes_iberica | Cabra montés ibérica | *Capra pyrenaica* | Europa | Península Ibérica | Normal, Macho, Hembra | Sí | Normal, Notable |
@@ -555,6 +556,7 @@
 | Ribereñas y humedales | Alcedinidae | af_martin_malaquita | Martín pescador malaquita | *Corythornis cristatus* | África | Litoral sudoriental africano | Normal, Albino | No | Normal, Notable |
 | Ribereñas y humedales | Alcedinidae | af_xlsx_martin_pio | Martín pescador pío | *Ceryle rudis* | África | Valle del Nilo | Normal, Albino | No | Normal, Notable |
 | Carnívoros terrestres | Herpestidae | meloncillo | Meloncillo | *Herpestes ichneumon* | Europa | Península Ibérica | Normal, Melánico | No | Normal |
+| Peces de arrecife | Epinephelidae | mar_esp_epinephelus_lanceolatus | Mero gigante | *Epinephelus lanceolatus* | Océanos | Mar tropical asiático, Archipiélagos tropicales | Normal | No | Normal, Notable |
 | Paseriformes | Meliphagidae | oc_esp_phylidonyris_novaehollandiae | Mielero de Nueva Holanda | *Phylidonyris novaehollandiae* | Oceanía | Australia Occidental | Normal | No | Normal, Notable |
 | Rapaces | Accipitridae | milano_real | Milano real | *Milvus milvus* | Europa | Europa Occidental, Península Ibérica | Normal, Albino, Melánico | No | Normal |
 | Paseriformes | Turdidae | eu_esp_0628 | Mirlo común | *Turdus merula* | Europa | Islas Británicas, Europa Occidental, Europa Central | Normal, Macho, Hembra, Melánico | Sí | Normal, Notable |
@@ -584,6 +586,7 @@
 | Marsupiales | Dasyuridae | oc_esp_dasycercus_cristicauda | Mulgará de cola crestada | *Dasycercus cristicauda* | Oceanía | Interior árido australiano | Normal | No | Normal, Notable |
 | Armadillos | Dasypodidae | sa_esp_dasypus_septemcinctus | Mulita | *Dasypus septemcinctus* | Sudamérica | Pampas | Normal, Albino | No | Normal, Notable |
 | Ungulados | Cervidae | asia_esp_0345 | Muntíaco de Reeves | *Muntiacus reevesi* | Asia | China Meridional | Normal, Melánico | No | Normal, Notable |
+| Murciélagos | Craseonycteridae | asia_esp_craseonycteris_thonglongyai | Murciélago abejorro | *Craseonycteris thonglongyai* | Asia | Sudeste Asiático | Normal | No | Normal, Notable |
 | Murciélagos | Vespertilionidae | eu_esp_0614 | Murciélago común | *Pipistrellus pipistrellus* | Europa | Islas Británicas, Europa Occidental, Península Ibérica | Normal, Melánico | No | Normal, Notable |
 | Murciélagos | Rhinolophidae | eu_esp_0616 | Murciélago de herradura grande | *Rhinolophus ferrumequinum* | Europa | Europa Occidental, Península Ibérica | Normal, Melánico | No | Normal, Notable |
 | Murciélagos | Vespertilionidae | eu_esp_0615 | Murciélago hortelano | *Eptesicus serotinus* | Europa | Europa Occidental, Europa Central | Normal, Melánico | No | Normal, Notable |
@@ -683,15 +686,26 @@
 | Paseriformes | Muscicapidae | asia_esp_0877 | Petirrojo japonés | *Larvivora akahige* | Asia | Archipiélago Japonés | Normal, Albino | No | Normal, Notable |
 | Marinas y costeras | Procellariidae | polar_esp_pagodroma_nivea | Petrel de las nieves | *Pagodroma nivea* | Polos | Hielo antártico occidental, Hielo antártico central, Hielo antártico costero, Hielo antártico oriental | Normal | No | Normal, Notable |
 | Marinas y costeras | Procellariidae | mar_esp_macronectes_giganteus | Petrel gigante austral | *Macronectes giganteus* | Océanos | Océano Austral central | Normal | No | Normal, Notable |
+| Peces de arrecife | Pomacanthidae | mar_esp_pomacanthus_imperator | Pez ángel emperador | *Pomacanthus imperator* | Océanos | Mar tropical asiático, Archipiélagos tropicales | Normal | No | Normal, Notable |
+| Peces de arrecife | Balistidae | mar_esp_balistoides_conspicillum | Pez ballesta payaso | *Balistoides conspicillum* | Océanos | Mar tropical asiático, Archipiélagos tropicales | Normal | No | Normal, Notable |
 | Peces dulceacuícolas y estuarinos | Channidae | asia_esp_0915 | Pez cabeza de serpiente del norte | *Channa argus* | Asia | China Septentrional, Península de Corea | Normal, Melánico | No | Normal, Notable |
+| Peces de arrecife | Acanthuridae | mar_esp_paracanthurus_hepatus | Pez cirujano azul | *Paracanthurus hepatus* | Océanos | Archipiélagos tropicales | Normal | No | Normal, Notable |
 | Peces dulceacuícolas y estuarinos | Cichlidae | sa_esp_symphysodon_aequifasciatus | Pez disco | *Symphysodon aequifasciatus* | Sudamérica | Amazonía | Normal | No | Normal, Notable |
 | Peces dulceacuícolas y estuarinos | Gymnotidae | sa_esp_electrophorus_electricus | Pez eléctrico amazónico | *Electrophorus electricus* | Sudamérica | Amazonía | Normal | No | Normal, Notable |
+| Peces de arrecife | Scorpaenidae | gm06_pterois_miles | Pez león del Índico | *Pterois miles* | África | Arco del mar Rojo | Normal | No | Normal, Notable, Épico, Excepcional |
+| Peces de arrecife | Labridae | mar_esp_bolbometopon_muricatum | Pez loro jorobado | *Bolbometopon muricatum* | Océanos | Archipiélagos tropicales | Normal | No | Normal, Notable |
 | Peces dulceacuícolas y estuarinos | Sinipercidae | asia_esp_0911 | Pez mandarín chino | *Siniperca chuatsi* | Asia | China Septentrional, China Meridional | Normal, Melánico | No | Normal, Notable |
 | Peces dulceacuícolas y estuarinos | Pantodontidae | af_xlsx_131_pantodon_buchholzi | Pez mariposa africano | *Pantodon buchholzi* | África | Cuenca del Congo, Bosques guineanos occidentales, Bosques atlánticos ecuatoriales | Normal, Albino | No | Normal, Notable |
+| Peces de arrecife | Chaetodontidae | gm06_chaetodon_semilarvatus | Pez mariposa enmascarado | *Chaetodon semilarvatus* | África | Arco del mar Rojo | Normal | No | Normal, Notable, Épico, Excepcional |
+| Peces de arrecife | Labridae | mar_esp_cheilinus_undulatus | Pez napoleón | *Cheilinus undulatus* | Océanos | Mar tropical asiático | Normal | No | Normal, Notable |
+| Peces de arrecife | Pomacentridae | mar_esp_amphiprion_ocellaris | Pez payaso común | *Amphiprion ocellaris* | Océanos | Océano Índico tropical, Mar tropical asiático, Archipiélagos tropicales | Normal | No | Normal, Notable |
+| Peces de arrecife | Synanceiidae | mar_esp_synanceia_verrucosa | Pez piedra | *Synanceia verrucosa* | Océanos | Archipiélagos tropicales | Normal | No | Normal, Notable |
 | Peces dulceacuícolas y estuarinos | Alestidae | af_xlsx_131_hydrocynus_vittatus | Pez tigre africano | *Hydrocynus vittatus* | África | Grandes Lagos africanos | Normal, Albino | No | Normal, Notable |
 | Peces dulceacuícolas y estuarinos | Alestidae | af_xlsx_pez_tigre_goliat | Pez tigre goliat | *Hydrocynus goliath* | África | Cuenca del Congo | Normal, Albino | No | Normal, Notable |
+| Peces de arrecife | Exocoetidae | mar_esp_exocoetus_volitans | Pez volador tropical | *Exocoetus volitans* | Océanos | Océano Índico tropical, Archipiélagos tropicales | Normal | No | Normal, Notable |
 | Lagomorfos | Ochotonidae | na_esp_ochotona_princeps | Pica americana | *Ochotona princeps* | Norteamérica | Montañas Rocosas | Normal | No | Normal, Notable |
 | Paseriformes | Picathartidae | af_picatartes_gris | Picatartes de cuello gris | *Picathartes oreas* | África | Bosques atlánticos ecuatoriales | Normal | No | Normal, Notable |
+| Armadillos | Chlamyphoridae | sa_esp_chlamyphorus_truncatus | Pichiciego menor | *Chlamyphorus truncatus* | Sudamérica | Pampas | Normal | No | Normal, Notable |
 | Arborícolas y otros no paseriformes | Picidae | eu_esp_0159 | Pico picapinos | *Dendrocopos major* | Europa | Europa Central | Normal, Melánico | No | Normal, Notable |
 | Ribereñas y humedales | Balaenicipitidae | af_picozapato | Picozapato | *Balaeniceps rex* | África | Grandes Lagos africanos, Humedales de Bangweulu | Normal | No | Normal, Notable, Épico |
 | Rapaces | Accipitridae | af_aguila_pescadora | Pigargo vocinglero | *Icthyophaga vocifer* | África | Sabana de África oriental, Delta del Okavango, Litoral sudoriental africano, Lagos del Rift, Humedales de Bangweulu | Normal, Albino, Melánico | No | Normal, Notable |

@@ -1,0 +1,113 @@
+[
+  {
+    "from": "4.3.0",
+    "to": "4.9.3",
+    "mobile": false,
+    "tested": [
+      "sin precarga automática",
+      "ruta antigua estancada aun con parámetro",
+      "ruta universal bajo el service worker histórico",
+      "activación bloqueada con otra pestaña",
+      "respaldo exacto, avance restaurado, juego y laboratorio offline"
+    ]
+  },
+  {
+    "from": "4.8.1",
+    "to": "4.9.3",
+    "mobile": true,
+    "tested": [
+      "sin precarga automática",
+      "ruta universal bajo el service worker histórico",
+      "pérdida de conexión",
+      "activación bloqueada con otra pestaña",
+      "respaldo renovado ante escritura concurrente",
+      "respaldo exacto, avance restaurado, juego y laboratorio offline"
+    ]
+  },
+  {
+    "from": "4.8.2",
+    "to": "4.9.3",
+    "mobile": false,
+    "tested": [
+      "sin precarga automática",
+      "ruta universal bajo el service worker histórico",
+      "activación bloqueada con otra pestaña",
+      "respaldo renovado ante escritura concurrente",
+      "respaldo exacto, avance restaurado, juego y laboratorio offline"
+    ]
+  },
+  {
+    "from": "4.9.2",
+    "to": "4.9.3",
+    "mobile": true,
+    "tested": [
+      "sin precarga automática",
+      "detección real de la publicación al recuperar el foco",
+      "ruta universal bajo el service worker histórico",
+      "pérdida de conexión",
+      "transferencia cortada y SHA-256 incorrecto con reversión y reintento",
+      "activación bloqueada con otra pestaña",
+      "respaldo renovado ante escritura concurrente",
+      "respaldo exacto, avance restaurado, juego y laboratorio offline"
+    ]
+  },
+  {
+    "from": "nueva",
+    "to": "4.9.3",
+    "mobile": false,
+    "tested": [
+      "consulta inicial",
+      "foco con límite",
+      "aviso y Más tarde",
+      "consulta manual",
+      "instalación sin partida, acceso offline"
+    ]
+  },
+  {
+    "from": "4.9.2",
+    "to": "4.9.3",
+    "installed": true,
+    "catalog": [
+      {
+        "id": "asia_esp_craseonycteris_thonglongyai",
+        "region": "HX-06-17",
+        "automaticMs": 957,
+        "scale": 0.35000016203711204,
+        "visualWidth": 46.142578125,
+        "modules": [
+          "Campo",
+          "Cuaderno",
+          "Bestiario",
+          "Museo"
+        ]
+      },
+      {
+        "id": "sa_esp_chlamyphorus_truncatus",
+        "region": "sa_pampas",
+        "automaticMs": 801,
+        "scale": 0.3999998167508925,
+        "visualWidth": 53.29150390625,
+        "modules": [
+          "Campo",
+          "Cuaderno",
+          "Bestiario",
+          "Museo"
+        ]
+      }
+    ],
+    "tested": [
+      "PWA instalada mediante Chromium",
+      "ventana standalone",
+      "respaldo exacto",
+      "reapertura offline"
+    ]
+  },
+  {
+    "from": "4.3.0",
+    "to": "4.9.3",
+    "tested": [
+      "actualizar-v430.html desde la caché histórica",
+      "respaldo exacto"
+    ]
+  }
+]

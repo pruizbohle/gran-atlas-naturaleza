@@ -6,7 +6,7 @@ const path = require('node:path');
 const http = require('node:http');
 const vm = require('node:vm');
 const { chromium } = require('playwright');
-const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v492';
+const evidenceDir = process.env.ATLAS_EVIDENCE_DIR || 'docs/cientifica-v493';
 require('../www/js/naturalist-assets-v400.js');
 const expected = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') +
   '\n({catalog,migrationProgress});');
@@ -62,7 +62,7 @@ const server = http.createServer((req, res) => {
       await page.locator('#category').selectOption('Notable');
       await page.locator('.mixed-field .atlas-art-image').evaluate(img => img.decode());
       assert.equal(await page.locator('.mixed-field .field-animal-sprite > svg').count(), 1);
-      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Pez payaso común · SVG/);
+      assert.match(await page.locator('.mixed-field').innerText(), /Zorro rojo · WebP \/ Atún de aleta amarilla · SVG/);
       const art = page.locator('.mixed-field .plate');
       const image = art.locator('.atlas-art-image');
       const src = await image.getAttribute('src');
@@ -93,7 +93,9 @@ const server = http.createServer((req, res) => {
       await page.locator('[data-mode=gallery]').click();
       await page.evaluate(() => navigator.serviceWorker.ready);
       await page.waitForFunction(() => !!navigator.serviceWorker.controller);
-      assert.equal(await page.locator('.gallery-card').count(), 936);
+      assert.equal(await page.locator('.gallery-card').count(), 950);
+      await page.locator('#release-scope').selectOption('4.9.3');
+      assert.equal(await page.locator('.gallery-card').count(), 14);
       await page.locator('#release-scope').selectOption('4.9.2');
       assert.equal(await page.locator('.gallery-card').count(), 23);
       await page.locator('#release-scope').selectOption('4.9.1');
@@ -126,11 +128,11 @@ const server = http.createServer((req, res) => {
       await page.locator('#release-scope').selectOption('4.7.3');
       assert.equal(await page.locator('.gallery-card').count(), 64);
       await page.locator('#release-scope').selectOption('catalog');
-      assert.equal(await page.locator('.gallery-card').count(), 2);
+      assert.equal(await page.locator('.gallery-card').count(), 4);
       const chucao = page.locator('.gallery-card[data-species="sa_esp_scelorchilus_rubecula"]');
       await chucao.locator('img').evaluate(img => img.decode());
       await page.locator('#release-scope').selectOption('new');
-      assert.equal(await page.locator('.gallery-card').count(), 1);
+      assert.equal(await page.locator('.gallery-card').count(), 3);
       await page.locator('.gallery-card[data-species="sa_esp_brachycephalus_pulex"]').click();
       assert.match(await page.locator('.comparison-styles').innerText(), /Sin lámina histórica/);
       await page.locator('.comparison-styles img').evaluate(img => img.decode());
@@ -212,6 +214,22 @@ const server = http.createServer((req, res) => {
       }
       if (process.argv.includes('--write-evidence')) {
         await salmonids.screenshot({ path: evidenceDir + '/remonte-comparacion-' + viewport.width + '.jpg' });
+      }
+      await page.locator('[data-mode=reef]').click();
+      const reef = page.locator('.taxon-comparison');
+      for (const [key, count] of [['compressed-profiles', 4], ['wrasses-and-grouper', 3], ['fin-shapes', 5]]) {
+        await page.locator('#bird-set').selectOption(key);
+        for (const size of ['64', '128']) {
+          await page.locator('#comparison-size').selectOption(size);
+          const measured = await reef.locator('img').evaluateAll(decodePlates);
+          assert.equal(measured.length, count);
+          assert.ok(measured.every(([natural]) => natural === Number(size)));
+        }
+        if (process.argv.includes('--write-evidence')) {
+          await page.locator('#backdrop').selectOption('dark');
+          await reef.screenshot({ path: evidenceDir + '/arrecife-' + key + '-' + viewport.width + '.jpg' });
+          await page.locator('#backdrop').selectOption('light');
+        }
       }
       await page.locator('[data-mode=freshwater]').click();
       const freshwater = page.locator('.taxon-comparison');
@@ -555,7 +573,7 @@ const server = http.createServer((req, res) => {
       await session.setOffline(true);
       await page.reload();
       await page.locator('[data-mode=gallery]').click();
-      assert.equal(await page.locator('.gallery-card').count(), 936);
+      assert.equal(await page.locator('.gallery-card').count(), 950);
       await page.locator('#cut-state').selectOption('pending');
       assert.equal(await page.locator('.gallery-card').count(),
         expected.catalog.filter(sp => sp.records.some(record => !record.cutout)).length);
@@ -596,7 +614,7 @@ const server = http.createServer((req, res) => {
       assert.ok(plates.every(([width, height]) => width === 512 && height === 512));
       assert.deepEqual(errors, []);
       await session.close();
-      console.log('PASS', viewport.width, 'px: veinte modos, peces dulceacuícolas y doce legendarios, escala visual y exportación offline; primera lámina', firstRender, 'ms');
+      console.log('PASS', viewport.width, 'px: 21 modos, peces de arrecife y doce legendarios, escala visual y exportación offline; primera lámina', firstRender, 'ms');
     }
   } finally { await browser.close(); server.close(); }
 })().catch(error => { console.error(error); server.close(); process.exitCode = 1; });

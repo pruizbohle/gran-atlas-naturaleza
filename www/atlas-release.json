@@ -1,6 +1,14 @@
 {
-  "version": "4.9.2",
+  "version": "4.9.3",
   "atlas": "simple",
+  "gm07P04": {
+    "activeTaxa": 1000,
+    "scientificallyIllustratedTaxa": 950,
+    "scientificPlates": 1622,
+    "illustratedLegendary": 12,
+    "newCatalogEntries": 2,
+    "newRegions": 0
+  },
   "cells": {
     "Europa": 10,
     "Asia": 27,
@@ -154,7 +162,7 @@
   },
   "androidDistribution": {
     "appId": "com.elgranatlas.naturaleza.beta314",
-    "versionCode": 40902,
+    "versionCode": 40903,
     "policy": "Permanent certificate and exact-candidate physical restoration required before Android publication"
   },
   "campamentoProfile": {

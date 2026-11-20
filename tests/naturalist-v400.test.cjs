@@ -11,7 +11,9 @@ const read = name => fs.readFileSync('www/js/' + name + '.js', 'utf8');
 const added = ['naturalist-assets-v400', 'naturalist-art-v400'];
 const legacyFixtures = require('./fixtures/stability-saves-v3240.json');
 const production = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'gm07-a04/catalog'];
-const source = [...production, ...added, 'app'].map(read).join('\n');
+const historicalSource = [...production, ...added, 'app'].map(read).join('\n');
+const currentProduction = [...production.slice(0, -1), 'gm07-p04/catalog', production.at(-1)];
+const source = [...currentProduction, ...added, 'app'].map(read).join('\n');
 const art = require('../www/js/naturalist-art-v400.js');
 require('../www/js/naturalist-assets-v400.js');
 
@@ -45,13 +47,13 @@ test('catalog is read from the production runtime and only known records can be 
   }
   assert.deepEqual(counts, {
     Marsupiales: 29, Monotremas: 3, Felinos: 31, 'Cánidos': 28, 'Carnívoros terrestres': 51,
-    Primates: 49, Ungulados: 122, Roedores: 41, Lagomorfos: 15, Murciélagos: 7,
-    Eulipotiflos: 10, Armadillos: 6, 'Perezosos y osos hormigueros': 6, Pangolines: 6,
+    Primates: 49, Ungulados: 122, Roedores: 41, Lagomorfos: 15, Murciélagos: 8,
+    Eulipotiflos: 10, Armadillos: 7, 'Perezosos y osos hormigueros': 6, Pangolines: 6,
     Elefantes: 3, Damanes: 1, Tubulidentados: 1, Afrosorícidos: 1,
     Cetáceos: 28, Pinnípedos: 20, Sirenios: 2, 'Nutria marina': 1,
     Rapaces: 49, 'Marinas y costeras': 42, 'Ribereñas y humedales': 50,
     'Corredoras y paleognatas': 9, Galliformes: 24, 'Otras aves terrestres': 6,
-    'Arborícolas y otros no paseriformes': 62, Paseriformes: 45, Anfibios: 35, 'Tiburones y rayas': 18, 'Salmónidos': 8, 'Peces dulceacuícolas y estuarinos': 23, Serpientes: 36, Lagartos: 42, Tortugas: 12, Crocodilianos: 13, Rincocéfalos: 1
+    'Arborícolas y otros no paseriformes': 62, Paseriformes: 45, Anfibios: 35, 'Tiburones y rayas': 18, 'Salmónidos': 8, 'Peces dulceacuícolas y estuarinos': 23, 'Peces de arrecife': 12, Serpientes: 36, Lagartos: 42, Tortugas: 12, Crocodilianos: 13, Rincocéfalos: 1
   });
 });
 
@@ -105,7 +107,7 @@ test('the six historical save fixtures read and restore identically to the curre
 });
 
 test('manual and automatic encounters keep identical saved results with and without WebP presentation', () => {
-  const svgSource = [...production, 'app'].map(read).join('\n');
+  const svgSource = [...currentProduction, 'app'].map(read).join('\n');
   const bridge = '\nwindow.__atlasTest={get state(){return state},encounter,fieldEncounterModel,automaticEligibleSpecies,visibleName};\n})();';
   class Clock extends Date { static now() { return 1700000000000; } }
   const options = { bridge, Date: Clock, rng: () => 0.29 };
@@ -156,8 +158,8 @@ test('terrestrial Carnivora covers the nine present families with only the confi
   assert.equal(total, 42);
   assert.ok(records.some(sp => sp.id === 'sa_esp_lontra_felina'));
   assert.ok(!records.some(sp => sp.latin.startsWith('Enhydra ')));
-  assert.equal(catalog.migrationProgress.total, 998);
-  assert.equal(catalog.migrationProgress.target, 1608);
+  assert.equal(catalog.migrationProgress.total, 1000);
+  assert.equal(catalog.migrationProgress.target, 1622);
 });
 
 test('biome library and transparent editions use module-specific layers and existing category routes', () => {
@@ -196,7 +198,7 @@ test('lab preserves the originals and reserves comparison downloads for the revi
   const archived = new Set(catalog.flatMap(sp => sp.records.flatMap(record => record.previous ? [record.previous.src] : [])));
   assert.equal(archived.size, 341);
   assert.equal(plates.size, migrationProgress.plates);
-  assert.equal(migrationProgress.migrated, 936);
+  assert.equal(migrationProgress.migrated, 950);
   assert.equal(migrationProgress.classical, migrationProgress.target);
   assert.equal(migrationProgress.plates, migrationProgress.target);
   assert.equal(migrationProgress.cutouts, Object.keys(cutouts).length);
@@ -240,7 +242,7 @@ test('the mammal audit completes each configured route and keeps Inia in freshwa
   const mammalia = Object.entries(game.SPECIES).filter(([id]) => game.taxonomyInfo(id).className === 'Mammalia');
   const terrestrial = mammalia.filter(([, sp]) => terrestrialMammal(sp.latin));
   const aquatic = mammalia.filter(([, sp]) => aquaticMammal(sp.latin));
-  assert.equal(mammalia.length, 461);
+  assert.equal(mammalia.length, 463);
   assert.equal(terrestrial.length, 97);
   assert.equal(aquatic.length, 51);
   const earlier = require('../docs/cientifica-v450/inventario.json');
@@ -468,8 +470,11 @@ test('all 104 reptiles and 35 amphibians resolve to their configured categories 
   assert.equal(catalog.find(sp => sp.id === 'oc_esp_sphenodon_punctatus').order, 'Rhynchocephalia');
 });
 
-test('the two visual exceptions preserve image paths, dimensions, backgrounds and halo categories', () => {
-  const scales = { sa_esp_brachycephalus_pulex: 0.25, gm06_mellisuga_helenae: 0.5 };
+test('visual exceptions preserve image paths, dimensions, backgrounds and halo categories', () => {
+  const scales = {
+    sa_esp_brachycephalus_pulex: 0.25, gm06_mellisuga_helenae: 0.5,
+    asia_esp_craseonycteris_thonglongyai: 0.35, sa_esp_chlamyphorus_truncatus: 0.40
+  };
   const assets = globalThis.AtlasNaturalistAssets;
   assert.deepEqual(assets.visualScales, scales);
   for (const [id, scale] of Object.entries(scales)) {
@@ -513,7 +518,7 @@ test('the V4.7.3 records keep the existing chucao identity, prior saves and regi
   prev.stages[bird] = 3;
   const saved = JSON.stringify(prev);
   const normalized = harness({ gran_atlas_v05: saved }, null, { gameSource: legacySource }).window.AtlasSaveBridge.getSaveData();
-  const next = harness({ gran_atlas_v05: saved }, null, { gameSource: source }).window;
+  const next = harness({ gran_atlas_v05: saved }, null, { gameSource: historicalSource }).window;
   const after = next.AtlasSaveBridge.getSaveData();
   const game = next.__atlasTest;
   const clone = item => JSON.parse(JSON.stringify(item));
@@ -537,8 +542,8 @@ test('the V4.7.3 records keep the existing chucao identity, prior saves and regi
   assert.deepEqual(clone(game.taxonomyInfo(frog)), records[frog].taxonomy);
 });
 
-test('chucao and sapo pulga can be discovered, researched, published and exhibited through the normal game', () => {
-  const { records } = require('../www/js/gm07-a04/catalog.js');
+test('catalog additions can be discovered, researched, published and exhibited through the normal game', () => {
+  const records = { ...require('../www/js/gm07-a04/catalog.js').records, ...require('../www/js/gm07-p04/catalog.js').records };
   const now = Date.now();
   for (const [id, rec] of Object.entries(records)) {
     let rolls = [];
@@ -547,12 +552,12 @@ test('chucao and sapo pulga can be discovered, researched, published and exhibit
     const state = game.state;
     state.currentRegion = rec.region;
     state.regionUnlocked[rec.region] = true;
-    state.habitat = 'bosque';
-    state.time = 'dia';
+    state.habitat = rec.species?.habitats[0] || 'bosque';
+    state.time = rec.species?.times.at(-1) || 'dia';
     state.season = 'primavera';
     state.societyView = 'publications';
     state.publicationView = 'monographs';
-    assert.equal(game.eligibleSpecies(rec.region, 'bosque', 'dia', 'primavera').at(-1), id);
+    assert.equal(game.eligibleSpecies(rec.region, state.habitat, state.time, state.season).at(-1), id);
     assert.ok(!game.eligibleSpecies(rec.region, 'rio', 'dia', 'primavera').includes(id));
     assert.ok(game.automaticEligibleSpecies(rec.region, 'primavera').includes(id));
     assert.ok(!state.discovered[id]);
@@ -786,4 +791,65 @@ test('all freshwater and estuarine fish use their configured transparent plates 
   assert.equal(initial.inventory.flatMap(animal => Object.values(routes[animal.id])).length, 35);
   const previousApp = execFileSync('git', ['show', 'dc7929a:www/js/app.js'], { encoding: 'utf8', maxBuffer: 8e6 });
   assert.equal(read('app'), previousApp, 'The catalog, rarity, probabilities and game mechanics remain identical');
+});
+
+test('V4.9.3 adds exactly two unique taxa and fourteen scientific plates and preserves legacy world data', () => {
+  const baseline = '62fa8bad1d65617d6bf233859abce65b7e465761';
+  const fromBaseline = path => execFileSync('git', ['show', baseline + ':' + path], { encoding: 'utf8', maxBuffer: 8e6 });
+  const old = harness({}, null, { gameSource: [...production, 'app'].map(name => fromBaseline('www/js/' + name + '.js')).join('\n') }).window.__atlasTest;
+  const live = harness({}, null, { gameSource: source }).window.__atlasTest;
+  const { records } = require('../www/js/gm07-p04/catalog.js');
+  const reef = require('../docs/cientifica-v492/inventario-pendiente.json').lots.arrecife.inventory;
+  const pending = require('../docs/cientifica-v493/inventario-pendiente.json').lots;
+  const { routes, cutouts, files } = globalThis.AtlasNaturalistAssets;
+  const { catalog, reefComparisons } = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog,reefComparisons});');
+  const accounted = new Set();
+  const clone = item => JSON.parse(JSON.stringify(item));
+  assert.equal(Object.keys(live.SPECIES).length, 1000);
+  assert.equal(new Set(Object.values(live.SPECIES).map(sp => sp.latin.trim().toLowerCase().replace(/\s+/g, ' '))).size, 1000);
+  assert.deepEqual(Object.keys(live.SPECIES).filter(id => !old.SPECIES[id]).sort(), Object.keys(records).sort());
+  assert.equal(live.REGIONS.length, old.REGIONS.length);
+  assert.deepEqual(clone(live.LEGENDARY_SPECIMENS), clone(old.LEGENDARY_SPECIMENS));
+  assert.equal(Object.keys(routes).length, 950);
+  assert.equal(Object.keys(cutouts).length, 1622);
+  assert.deepEqual(Array.from(catalog.filter(sp => sp.edition === '4.9.3'), sp => sp.id).sort(),
+    [...reef.map(sp => sp.id), ...Object.keys(records)].sort());
+  assert.deepEqual(Object.values(reefComparisons).flatMap(group => Array.from(group.reef, sp => sp.id)).sort(),
+    reef.map(sp => sp.id).sort());
+
+  for (const [id, sp] of Object.entries(old.SPECIES)) {
+    assert.deepEqual(clone(live.SPECIES[id]), clone(sp), id);
+    assert.deepEqual(clone(live.taxonomyInfo(id)), clone(old.taxonomyInfo(id)), id);
+    assert.deepEqual(clone(live.SPECIMEN_CATEGORIES[id] || []), clone(old.SPECIMEN_CATEGORIES[id] || []), id);
+  }
+  for (const region of old.REGIONS) {
+    const addedIds = Object.keys(records).filter(id => records[id].region === region.id);
+    assert.deepEqual(clone(live.REGIONS.find(r => r.id === region.id)),
+      { ...clone(region), species: [...region.species, ...addedIds] }, region.id);
+  }
+  for (const [id, rec] of Object.entries(records)) {
+    assert.equal(live.SPECIES[id].rare, 'Muy rara');
+    assert.deepEqual(clone(live.taxonomyInfo(id)), rec.taxonomy);
+    assert.deepEqual(clone(live.configuredSpecials(live.SPECIES[id])), ['Notable']);
+  }
+  for (const { id, family } of [...reef, ...Object.entries(records).map(([id, rec]) => ({ id, family: rec.taxonomy.family }))]) {
+    const catalogEntry = catalog.find(sp => sp.id === id);
+    const habitats = live.SPECIES[id].habitats;
+    const file = id + '--normal.webp';
+    assert.equal(catalogEntry.family, family);
+    assert.deepEqual(routes[id], { normal: file });
+    assert.ok(cutouts[file]);
+    assert.ok(live.REGIONS.some(region => region.species.includes(id) && zoneSupports(region, habitats)), id);
+    for (const size of ['', '64/', '128/', '256/']) {
+      const local = 'naturalist-art/plates/' + size + file;
+      assert.ok(files.includes(local) && fs.existsSync('www/' + local), local);
+    }
+    for (const surface of ['field', 'journal', 'bestiary', 'museum']) {
+      assert.ok(art.render(id, { surface, habitat: art.preferredHabitat(habitats) }, () => '').includes(file));
+    }
+    accounted.add(id);
+  }
+  assert.equal(accounted.size, 14);
+  assert.equal(pending.profundos.estimatedPlates, 14);
+  assert.equal(pending.marinos.estimatedPlates + pending.cefalopodos.estimatedPlates, 36);
 });

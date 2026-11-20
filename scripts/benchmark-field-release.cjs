@@ -10,7 +10,7 @@ const archive = process.env.ATLAS_HISTORY_WWW;
 const repetitions = Number(process.env.ATLAS_FIELD_REPETITIONS || 10);
 const current = require('../package.json').version;
 const offline = process.argv.includes('--offline');
-const versions = ['4.9.0', '4.9.1', current];
+const versions = ['4.9.2', current];
 assert.ok(archive && Number.isInteger(repetitions) && repetitions >= 6);
 const roots = new Map(versions.map(version => {
   const directory = version === current ? 'www' : path.join(archive, version.replaceAll('.', ''), 'www');
@@ -72,7 +72,7 @@ async function prepareOffline(browser, url, width) {
   }
 }
 
-async function benchmark(browser, url, width, prepared) {
+async function benchmark(browser, url, width, prepared, scientificClownfish) {
   const context = prepared || await browser.newContext({ ...contextOptions(width), serviceWorkers: 'block' });
   const page = await context.newPage();
   try {
@@ -102,8 +102,10 @@ async function benchmark(browser, url, width, prepared) {
       const start = performance.now();
       const sample = await measure(page);
       sample.driverMs = performance.now() - start;
-      assert.deepEqual(sample.images, ['af_dugongo--albino.webp']);
-      assert.equal(sample.svg, 1);
+      const files = ['af_dugongo--albino.webp'];
+      if (scientificClownfish) files.push('mar_esp_amphiprion_ocellaris--normal.webp');
+      assert.deepEqual(sample.images, files);
+      assert.equal(sample.svg, scientificClownfish ? 0 : 1);
       samples.push(sample);
     }
     const session = await context.newCDPSession(page);
@@ -143,7 +145,7 @@ function stats(values) {
           // Rotate the execution order so build position and warm-up do not favor a release.
           for (let step = 0; step < versions.length; step++) {
             const version = versions[(step + trial) % versions.length];
-            samples.push({ width, trial, version, ...await benchmark(browser, address + version + '/', width, prepared.get(version)) });
+            samples.push({ width, trial, version, ...await benchmark(browser, address + version + '/', width, prepared.get(version), version === current) });
           }
         }
       } finally {

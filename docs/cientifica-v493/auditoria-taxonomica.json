@@ -1,0 +1,134 @@
+{
+  "version": "4.9.3",
+  "catalogRecords": 1000,
+  "uniqueIds": 1000,
+  "uniqueNormalizedScientificNames": 1000,
+  "historicalBinomialGroups": {
+    "cervus elaphus": [
+      "Cervus elaphus",
+      "Cervus elaphus barbarus"
+    ],
+    "equus africanus": [
+      "Equus africanus somaliensis",
+      "Equus africanus"
+    ],
+    "giraffa camelopardalis": [
+      "Giraffa camelopardalis",
+      "Giraffa camelopardalis rothschildi"
+    ],
+    "kobus leche": [
+      "Kobus leche",
+      "Kobus leche smithemani"
+    ],
+    "panthera pardus": [
+      "Panthera pardus tulliana",
+      "Panthera pardus pardus"
+    ]
+  },
+  "externalCrosscheck": {
+    "checkedNames": 1000,
+    "initialSource": "https://api.gbif.org/v1/species/match",
+    "matchTypes": {
+      "EXACT": 990,
+      "NONE": 5,
+      "HIGHERRANK": 1,
+      "FUZZY": 4
+    },
+    "exactReferenceCollision": {
+      "names": [
+        "Mola alexandrini",
+        "Mola mola"
+      ],
+      "resolution": "WoRMS reconoce dos especies válidas. Se conservan ambas fichas.",
+      "source": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Mola"
+    },
+    "reviewedNames": [
+      {
+        "id": "asia_esp_0401",
+        "name": "Panthera pardus tulliana",
+        "matchType": "NONE",
+        "note": "Subespecie conservada, diferente del leopardo africano registrado.",
+        "source": "https://www.mammaldiversity.org/taxon/1006022/"
+      },
+      {
+        "id": "asia_esp_0073",
+        "name": "Camelus ferus",
+        "matchType": "HIGHERRANK",
+        "note": "Especie silvestre reconocida, diferente del camello bactriano doméstico.",
+        "source": "https://www.mammaldiversity.org/taxon/1006384/"
+      },
+      {
+        "id": "af_grulla_carunculada",
+        "name": "Grus carunculata",
+        "matchType": "FUZZY",
+        "note": "La grulla carunculada también figura bajo Bugeranus carunculatus.",
+        "source": "https://www.worldbirdnames.org/new/updates/archives/taxonomy-version-2/"
+      },
+      {
+        "id": "af_xlsx_131_lupulella_mesomelas",
+        "name": "Lupulella mesomelas",
+        "matchType": "NONE",
+        "note": "Especie reconocida en Lupulella, género que reemplaza Canis en esta combinación.",
+        "source": "https://www.mammaldiversity.org/taxon/1005953/"
+      },
+      {
+        "id": "na_esp_erethizon_dorsatum",
+        "name": "Erethizon dorsatum",
+        "matchType": "FUZZY",
+        "note": "Es la grafía de referencia de la Mammal Diversity Database.",
+        "source": "https://www.mammaldiversity.org/taxon/1001254/"
+      },
+      {
+        "id": "sa_esp_leopardus_jacobita",
+        "name": "Leopardus jacobita",
+        "matchType": "FUZZY",
+        "note": "Es la grafía de referencia de la Mammal Diversity Database.",
+        "source": "https://www.mammaldiversity.org/taxon/1005999/"
+      },
+      {
+        "id": "sa_esp_pudella_mephistophiles",
+        "name": "Pudella mephistophiles",
+        "matchType": "NONE",
+        "note": "El pudú del norte se reconoce bajo Pudella.",
+        "source": "https://www.mammaldiversity.org/taxon/1006304/"
+      },
+      {
+        "id": "oc_esp_apteryx_haastii",
+        "name": "Apteryx maxima",
+        "matchType": "NONE",
+        "note": "El nombre del kiwi moteado mayor adoptado por el IOC reemplaza a Apteryx haastii en este uso.",
+        "source": "https://www.worldbirdnames.org/new/updates/taxonomy/"
+      },
+      {
+        "id": "oc_esp_strigops_habroptilus",
+        "name": "Strigops habroptilus",
+        "matchType": "FUZZY",
+        "note": "El IOC adoptó habroptilus como sustantivo en aposición.",
+        "source": "https://www.worldbirdnames.org/updates/taxonomy/"
+      },
+      {
+        "id": "abisal_esp_pseudoliparis_kermadecensis",
+        "name": "Pseudoliparis kermadecensis",
+        "matchType": "NONE",
+        "note": "WoRMS registra al lipárido de Kermadec como Notoliparis kermadecensis. La discrepancia de género queda señalada para revisar en V4.9.5.",
+        "source": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Careproctus"
+      }
+    ],
+    "newExactMatches": [
+      {
+        "id": "asia_esp_craseonycteris_thonglongyai",
+        "name": "Craseonycteris thonglongyai",
+        "status": "ACCEPTED",
+        "url": "https://www.gbif.org/species/2433358"
+      },
+      {
+        "id": "sa_esp_chlamyphorus_truncatus",
+        "name": "Chlamyphorus truncatus",
+        "status": "ACCEPTED",
+        "url": "https://www.gbif.org/species/5220098"
+      }
+    ]
+  },
+  "catalogRecordsWithRegion": 1000,
+  "regions": 125
+}
