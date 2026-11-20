@@ -280,6 +280,103 @@ async function freshAndNotify(browser, base) {
   }
 }
 
+async function checkMantaInGame(app) {
+  const { harness } = require('../tests/helpers/live-game.cjs');
+  const gameSource = ['gm06/catalog', 'gm07-a04/catalog', 'app'].map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
+  const region = harness({}, null, { gameSource }).window.__atlasTest.REGIONS.find(zone => zone.id === 'HX-07-14');
+  const id = 'af_manta_gigante';
+  const open = tab => app.locator('.tab[data-tab=' + tab + ']').first().evaluate(button => button.click());
+  await app.bringToFront();
+  await app.evaluate(({ region, id }) => {
+    // Exercise the normal automatic timer with a deterministic draw.
+    Math.random = () => 0.24;
+    const save = AtlasSaveBridge.getSaveData();
+    save.currentRegion = region.id;
+    save.regionUnlocked[region.id] = true;
+    save.habitat = 'costa';
+    save.time = 'dia';
+    save.season = 'primavera';
+    save.helpers = 3;
+    save.upgrades.autoTier = 4;
+    save.lastTick = Date.now();
+    delete save.discovered[id];
+    delete save.sightings[id];
+    delete save.stages[id];
+    const hour = Math.floor(save.lastTick / 3600000);
+    save.autoHourly = Object.fromEntries(region.species.filter(key => key !== id).map(key => [hour + ':' + key, 999]));
+    AtlasSaveBridge.restoreGame(save);
+  }, { region, id });
+  await open('field');
+  const start = performance.now();
+  try {
+    await app.locator('#fieldResult img[src*="/af_manta_gigante--"]').evaluate(img => img.decode(), undefined, { timeout: 20000 });
+  } catch (error) {
+    console.error(await app.evaluate(id => {
+      const save = AtlasSaveBridge.getSaveData();
+      return { region: save.currentRegion, helpers: save.helpers, sightings: save.sightings[id],
+        visible: document.visibilityState, entries: save.lastEncounter?.entries?.map(entry => entry.id) };
+    }, id));
+    throw error;
+  }
+  const automaticMs = Math.round(performance.now() - start);
+  assert.ok(await app.evaluate(id => AtlasSaveBridge.getSaveData().sightings[id] > 0, id));
+  await app.evaluate(id => {
+    const save = AtlasSaveBridge.getSaveData();
+    save.helpers = 0;
+    save.stages[id] = 5;
+    save.published[id] = true;
+    save.selectedJournal = id;
+    save.specialFound[id] = { 'Melánico': true, Notable: true };
+    save.museum.exhibits[id] = true;
+    save.lastEncounter = { species: id, title: 'Manta gigante', sequence: save.encounterSequence,
+      entries: [{ id, amount: 2, variant: 'Melánico', category: 'Notable' }] };
+    AtlasSaveBridge.restoreGame(save);
+  }, id);
+  const variant = app.locator('#fieldResult .notable img[src$="/af_manta_gigante--melanico.webp"]');
+  await variant.evaluate(img => img.decode());
+  assert.match(await variant.evaluate(img => getComputedStyle(img).filter), /drop-shadow/);
+  await app.locator('.field-environment .landscape-costa').evaluate(img => img.decode());
+  if (evidence) await app.locator('.field-stage').screenshot({ path: path.join(evidence, 'manta-campo.jpg') });
+  const normal = 'img[src$="/af_manta_gigante--normal.webp"]';
+  await open('journal');
+  await app.locator('.j25-sheet ' + normal).first().evaluate(img => img.decode());
+  await open('bestiary');
+  await app.locator('#b26-search').fill('Mobula birostris');
+  await app.locator('.b26-card').filter({ has: app.locator(normal) }).click();
+  await app.locator('.b26-dialog ' + normal).first().evaluate(img => img.decode());
+  await app.locator('[data-action=b26-close]').click();
+  await open('museum');
+  await app.getByRole('tab', { name: 'Exposiciones', exact: true }).click();
+  await app.locator('.m27-vitrines [data-action=m27-open]').filter({ has: app.locator(normal) }).click();
+  await app.locator('.m27-dialog ' + normal).first().evaluate(img => img.decode());
+  await app.locator('[data-action=m27-close]').click();
+  return { automaticMs, modules: ['Campo', 'Cuaderno', 'Bestiario', 'Museo'] };
+}
+
+async function legacyEntry(browser, base) {
+  serving = path.join(archive, '430', 'www');
+  requests = [];
+  const context = await browser.newContext();
+  try {
+    const page = await context.newPage();
+    await page.goto(base);
+    await page.waitForFunction(() => navigator.serviceWorker.controller, null, { timeout: 180000 });
+    await seed(page);
+    serving = 'www';
+    await page.goto(base + 'actualizar-v430.html');
+    assert.match(await page.title(), /4\.3\.0/);
+    const raw = await page.evaluate(() => localStorage.getItem('gran_atlas_v05'));
+    await page.locator('#atlasUpdateApply').click();
+    await page.waitForURL(base + 'index.html?actualizado=' + version, { timeout: 180000 });
+    assert.match(await page.title(), new RegExp('v' + version));
+    assert.equal(await page.evaluate(() => localStorage.getItem('gran_atlas_backup_before_update')), raw);
+    evidenceRows.push({ from: '4.3.0', to: version, tested: ['actualizar-v430.html desde la caché histórica', 'respaldo exacto'] });
+    console.log('PASS actualización desde el enlace histórico actualizar-v430.html');
+  } finally {
+    await context.close();
+  }
+}
+
 async function installedMigration(base) {
   serving = path.join(archive, '482', 'www');
   requests = [];
@@ -319,9 +416,10 @@ async function installedMigration(base) {
       await app.reload();
       await app.waitForFunction(() => !!window.AtlasSaveBridge && matchMedia('(display-mode: standalone)').matches);
       assert.match(await app.title(), new RegExp('v' + version));
+      const manta = await checkMantaInGame(app);
       await context.setOffline(false);
       await protocol.send('PWA.uninstall', { manifestId: base });
-      evidenceRows.push({ from: '4.8.2', to: version, installed: true, tested: [
+      evidenceRows.push({ from: '4.8.2', to: version, installed: true, manta, tested: [
         'PWA instalada mediante Chromium', 'ventana standalone', 'respaldo exacto', 'reapertura offline'
       ] });
       console.log('PASS PWA V4.8.2 instalada en Chromium, ventana standalone, actualización y reapertura offline');
@@ -342,7 +440,9 @@ async function installedMigration(base) {
     } else {
       const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
       try {
-        if (!process.argv.includes('--fresh-only')) {
+        if (process.argv.includes('--legacy-link')) {
+          await legacyEntry(browser, base);
+        } else if (!process.argv.includes('--fresh-only')) {
           for (const [old, mobile] of [['4.3.0', false], ['4.8.1', true], ['4.8.2', false]]) {
             requests = [];
             await runMigration(browser, base, old, mobile);
@@ -351,13 +451,14 @@ async function installedMigration(base) {
           serving = 'www';
           requests = [];
         }
-        await freshAndNotify(browser, base);
+        if (!process.argv.includes('--legacy-link')) await freshAndNotify(browser, base);
       } finally {
         await browser.close();
       }
     }
     const filename = process.argv.includes('--installed') ? 'pwa-instalada.json' :
-      process.argv.includes('--fresh-only') ? 'pwa-nueva.json' : 'migraciones-pwa.json';
+      process.argv.includes('--legacy-link') ? 'enlace-historico.json' :
+        process.argv.includes('--fresh-only') ? 'pwa-nueva.json' : 'migraciones-pwa.json';
     if (evidence) fs.writeFileSync(path.join(evidence, filename), JSON.stringify(evidenceRows, null, 2) + '\n');
   } finally {
     server.closeAllConnections();

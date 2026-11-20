@@ -1,0 +1,24 @@
+{
+  "baselineCommit": "ee5097ce4bab604453d299898ac805496724543e",
+  "baseline": {
+    "tests": 815,
+    "pass": 587,
+    "fail": 228
+  },
+  "fullRun": {
+    "tests": 816,
+    "pass": 587,
+    "fail": 229
+  },
+  "updatedFixtureRetest": "node --test tests/pwa-update-v3212.test.cjs",
+  "verifiedAfterRetest": {
+    "tests": 816,
+    "pass": 589,
+    "fail": 227
+  },
+  "resolvedInRetest": [
+    "update entrypoint is independent of the old app bundle and publishes an identifiable version",
+    "waiting worker activates only from the dedicated updater with other app windows closed"
+  ],
+  "newFailures": []
+}

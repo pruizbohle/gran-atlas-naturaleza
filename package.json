@@ -6,7 +6,7 @@
     "cap:add:android": "npx cap add android",
     "cap:sync": "npx cap sync",
     "cap:open:android": "npx cap open android",
-    "release:verify": "node scripts/build-naturalist-release.cjs && node --test tests/naturalist-v400.test.cjs"
+    "release:verify": "node scripts/build-naturalist-release.cjs && node --test tests/naturalist-v400.test.cjs tests/pwa-update-v3212.test.cjs"
   },
   "dependencies": {
     "@capacitor/core": "7.6.10",

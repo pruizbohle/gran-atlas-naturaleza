@@ -1,0 +1,80 @@
+[
+  {
+    "from": "4.3.0",
+    "to": "4.9.0",
+    "mobile": false,
+    "tested": [
+      "sin precarga automática",
+      "ruta antigua estancada aun con parámetro",
+      "ruta universal bajo el service worker histórico",
+      "activación bloqueada con otra pestaña",
+      "respaldo exacto, avance restaurado, juego y laboratorio offline"
+    ]
+  },
+  {
+    "from": "4.8.1",
+    "to": "4.9.0",
+    "mobile": true,
+    "tested": [
+      "sin precarga automática",
+      "ruta universal bajo el service worker histórico",
+      "pérdida de conexión",
+      "activación bloqueada con otra pestaña",
+      "respaldo renovado ante escritura concurrente",
+      "respaldo exacto, avance restaurado, juego y laboratorio offline"
+    ]
+  },
+  {
+    "from": "4.8.2",
+    "to": "4.9.0",
+    "mobile": false,
+    "tested": [
+      "sin precarga automática",
+      "ruta universal bajo el service worker histórico",
+      "transferencia cortada y SHA-256 incorrecto con reversión y reintento",
+      "activación bloqueada con otra pestaña",
+      "respaldo renovado ante escritura concurrente",
+      "respaldo exacto, avance restaurado, juego y laboratorio offline"
+    ]
+  },
+  {
+    "from": "nueva",
+    "to": "4.9.0",
+    "mobile": false,
+    "tested": [
+      "consulta inicial",
+      "foco con límite",
+      "aviso y Más tarde",
+      "consulta manual",
+      "instalación sin partida, acceso offline"
+    ]
+  },
+  {
+    "from": "4.8.2",
+    "to": "4.9.0",
+    "installed": true,
+    "manta": {
+      "automaticMs": 1824,
+      "modules": [
+        "Campo",
+        "Cuaderno",
+        "Bestiario",
+        "Museo"
+      ]
+    },
+    "tested": [
+      "PWA instalada mediante Chromium",
+      "ventana standalone",
+      "respaldo exacto",
+      "reapertura offline"
+    ]
+  },
+  {
+    "from": "4.3.0",
+    "to": "4.9.0",
+    "tested": [
+      "actualizar-v430.html desde la caché histórica",
+      "respaldo exacto"
+    ]
+  }
+]
