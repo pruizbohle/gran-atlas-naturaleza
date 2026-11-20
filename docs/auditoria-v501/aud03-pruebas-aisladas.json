@@ -1,0 +1,72 @@
+{
+  "baseline": "84298f39b4e333dc2f9a8bae0e07e3ae84a1264e",
+  "method": "Exact excerpts from save-manager.js and app.js with controlled dependencies. Parser tests use ASCII JSON and a minimal TextEncoder substitute; runtime normalizers/whole app not executed. reproduced=true means expected observed behavior, not a passing functional contract. Fixtures synthetic.",
+  "checks": [
+    {
+      "id": "valid-backup",
+      "actual": true,
+      "expected": true,
+      "reproduced": true
+    },
+    {
+      "id": "negative-money-rejected",
+      "actual": false,
+      "expected": false,
+      "reproduced": true
+    },
+    {
+      "id": "future-format-rejected",
+      "actual": false,
+      "expected": false,
+      "reproduced": true
+    },
+    {
+      "id": "malformed-museum-accepted",
+      "actual": true,
+      "expected": true,
+      "reproduced": true
+    },
+    {
+      "id": "duplicate-voyage-accepted",
+      "actual": true,
+      "expected": true,
+      "reproduced": true
+    },
+    {
+      "id": "stage-out-of-range-accepted",
+      "actual": true,
+      "expected": true,
+      "reproduced": true
+    },
+    {
+      "id": "aggregate-receipt-does-not-detect-item-loss",
+      "actual": true,
+      "expected": true,
+      "reproduced": true
+    },
+    {
+      "id": "live-check-does-not-detect-knowledge-loss",
+      "actual": true,
+      "expected": true,
+      "reproduced": true
+    },
+    {
+      "id": "legacy-voyage-duplicate-and-invalid",
+      "actual": {
+        "resolved": 2,
+        "paid": 2,
+        "remaining": [
+          2
+        ]
+      },
+      "expected": {
+        "resolved": 2,
+        "paid": 2,
+        "remaining": [
+          2
+        ]
+      },
+      "reproduced": true
+    }
+  ]
+}
