@@ -2199,7 +2199,7 @@ function initialState(){
     commerce:{seq:0,jobs:[],history:[]},craftedItems:{},
     cartography3400:{version:1,historicalAccess:{}},
  // EC3300 END initial-commerce
-    lastTick:Date.now(), lastGrant:0, autoHourly:{}, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
+    lastTick:Date.now(), lastGrant:0, autoHourly:{}, autoPending:[], autoRemainder:0, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
   };
 }
 
@@ -2334,7 +2334,6 @@ Object.keys(SEXUAL_DIMORPHISM).forEach(id=>{
   else if(state.sexSeen[id]) state.dimorphism[id]=!!(state.sexSeen[id].male && state.sexSeen[id].female);
 });
 try{if(!localStorage.getItem('gran_atlas_v07_backup_before_v08'))localStorage.setItem('gran_atlas_v07_backup_before_v08',JSON.stringify(state));}catch(e){}
-let autoAccum=0;
 let batchingOffline=false;
 let diaryDirty=false;
 let lastPanelSignature='';
@@ -2369,6 +2368,7 @@ function load(){
     }
     merged.asiaPricingVersion=Math.max(2, saved.asiaPricingVersion||2);
     merged.lastTick=Number.isFinite(saved.lastTick)?saved.lastTick:Date.now();
+    normalizeAutomaticProgress(merged);
     globalThis.AtlasCampProfile3430?.normalize(merged);
     return normalizeSpecialDiscoveries(mergeHistoricalBeardedVulture(merged));
   }catch(e){
@@ -2426,7 +2426,7 @@ window.AtlasSaveBridge={
      throw new Error('La partida que llegó al motor no es válida.');
    const before=state;
    const wasUnreadable=unreadableSave,wasCorrupt=corruptSave;
-   const beforeRuntime={autoAccum,autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,tab};
+   const beforeRuntime={autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,tab};
    try{
      state={...initialState(),...imported,
        upgrades:{...initialState().upgrades,...(imported.upgrades||{})},
@@ -2486,7 +2486,8 @@ window.AtlasSaveBridge={
      if(curationReady3380){globalThis.AtlasMuseumCuration3380.merge(state,before);globalThis.AtlasMuseumCuration3380.initialize(state,curationContext3380());curationDirty3380=false;}
      // Evitar calcular un intervalo offline obsoleto al actualizar la partida.
      state.lastTick=Date.now();
-     autoAccum=0;autoDiaryBuffer={searches:0,hits:0,knowledge:0};
+     normalizeAutomaticProgress(state);
+     autoDiaryBuffer={searches:0,hits:0,knowledge:0};
      lastAutoDiaryFlush=0;lastPanelSignature='';currentAutoNotice='';
      tab='field';
      unreadableSave=false;corruptSave=false;
@@ -2496,7 +2497,7 @@ window.AtlasSaveBridge={
    }catch(error){
      state=before;
      unreadableSave=wasUnreadable;corruptSave=wasCorrupt;
-     ({autoAccum,autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,tab}=beforeRuntime);
+     ({autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,tab}=beforeRuntime);
      try{render();}catch(_){}
      throw error;
    }
@@ -2714,19 +2715,23 @@ function automaticEligibleSpecies(regionId,season){
     && sp.habitats.some(h=>region.habitats.includes(h));
  });
 }
-function automaticSearchCapacity(at=Date.now()){
+function automaticSearchCapacity(at=Date.now(),ids=automaticEligibleSpecies(state.currentRegion,state.season)){
  const hour=Math.floor(at/3600000);
- const ids=automaticEligibleSpecies(state.currentRegion,state.season);
  const remaining=ids.filter(id=>(state.autoHourly[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR);
  return {total:ids.length,remaining:remaining.length};
 }
-function encounter(source='manual', at=Date.now(), guaranteed=false){
+function pruneAutomaticHours(at){
+ // Preserve the historical buckets needed by work still queued, even on manual searches.
+ const hour=Math.floor(Math.min(at,state.autoPending[0]?.at??at)/3600000);
+ for(const key of Object.keys(state.autoHourly))if(Number(key.split(':')[0])<hour-8)delete state.autoHourly[key];
+}
+function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=null){
  // Cada búsqueda permite una sola probabilidad de encuentro, independientemente de cuántas especies registre.
  const hour=Math.floor(at/3600000);
  const bucket=state.autoHourly;
- for(const key of Object.keys(bucket)){if(Number(key.split(':')[0])<hour-8)delete bucket[key];}
+ if(!automatic)pruneAutomaticHours(at);
  const baseChoices=source==='auto'
-  ?automaticEligibleSpecies(state.currentRegion,state.season)
+  ?automatic?.species??automaticEligibleSpecies(state.currentRegion,state.season)
   :eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season);
  const choices=baseChoices.filter(id=>source!=='auto'
   ||(bucket[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR);
@@ -2760,7 +2765,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false){
  // nunca una vez por individuo del censo (evita multiplicar objetos o variantes).
  const knowledgeGain=Math.round((manual?5:3)*knowledgeBonus());
  state.knowledge+=knowledgeGain;
- const museumFinds=maybeMuseumFieldDiscovery(source);
+ const museumFinds=maybeMuseumFieldDiscovery(source,automatic?.segment);
  const entries=[];
  const census=researchCensusCount(source);
  for(const chosen of selected){
@@ -3767,9 +3772,9 @@ function addRelictLead(id,qty=1){
  pushLog('📜 Indicio de relicto: '+MUSEUM_RELICTS.find(r=>r.id===id).name+' · '+next+'/3.');
  return true;
 }
-function maybeMuseumRelictLead(source,random=Math.random){
- const candidates=MUSEUM_RELICTS.filter(r=>r.region===state.currentRegion &&
-   r.habitats.includes(state.habitat)&&r.times.includes(state.time)&&
+function maybeMuseumRelictLead(source,random=Math.random,conditions=state){
+ const candidates=MUSEUM_RELICTS.filter(r=>r.region===conditions.currentRegion &&
+   r.habitats.includes(conditions.habitat)&&r.times.includes(conditions.time)&&
    !museumRelictOwned(r.id)&&relictLeadCount(r.id)<3);
  if(!candidates.length)return null;
  const base=source==='manual'?0.04:0.007;
@@ -3873,7 +3878,7 @@ function recordMuseumRelict(id){
  pushLog('🗿 Hallazgo extraordinario del Museo: '+relict.name+'. No computa para el Atlas.');
  return true;
 }
-function maybeMuseumFieldDiscovery(source){
+function maybeMuseumFieldDiscovery(source,conditions=state){
  // Se ejecuta solo tras un avistamiento normal, sin modificar sus contadores.
  const manual=source==='manual';
  let found=[];
@@ -3881,13 +3886,13 @@ function maybeMuseumFieldDiscovery(source){
  if(Math.random()<(manual?0.0015:0.00035)){addInventory('fossil_tooth',1);found.push('diente fósil');}
  if(Math.random()<(manual?0.00008:0.000015)){addInventory('fossil_skull',1);found.push('cráneo fósil');}
   // Perlas: tirada independiente para ríos o costas; no aumenta avistamientos.
-  if(['rio','costa'].includes(state.habitat)&&Math.random()<(manual?0.012:0.0015)){
+  if(['rio','costa'].includes(conditions.habitat)&&Math.random()<(manual?0.012:0.0015)){
    addInventory('river_pearl',1);found.push('perla fluvial');
   }
- const clue=maybeMuseumRelictLead(source);
+ const clue=maybeMuseumRelictLead(source,Math.random,conditions);
  if(clue)found.push('indicio: '+clue);
- const candidates=MUSEUM_RELICTS.filter(r=>r.region===state.currentRegion &&
-   r.habitats.includes(state.habitat)&&r.times.includes(state.time)&&!museumRelictOwned(r.id));
+ const candidates=MUSEUM_RELICTS.filter(r=>r.region===conditions.currentRegion &&
+   r.habitats.includes(conditions.habitat)&&r.times.includes(conditions.time)&&!museumRelictOwned(r.id));
  if(candidates.length&&Math.random()<(manual?0.0006:0.00009)){
   const picked=candidates[Math.floor(Math.random()*candidates.length)];
   if(recordMuseumRelict(picked.id))found.push('relicto: '+picked.name);
@@ -5243,61 +5248,92 @@ function syncMuseumTimers(now=Date.now()){
  if(globalThis.AtlasMuseumUI)globalThis.AtlasMuseumUI.sync(panel,museumTimerModels3270(now));
  // M-3270 END progress
 }
+function normalizeAutomaticProgress(snapshot){
+ snapshot.autoHourly=snapshot.autoHourly&&typeof snapshot.autoHourly==='object'&&!Array.isArray(snapshot.autoHourly)?snapshot.autoHourly:{};
+ snapshot.autoRemainder=Number.isFinite(snapshot.autoRemainder)?Math.max(0,Math.min(4999,snapshot.autoRemainder)):0;
+ const pending=[];
+ for(const job of Array.isArray(snapshot.autoPending)?snapshot.autoPending:[]){
+   if(!job||!Number.isFinite(job.at)||!Number.isFinite(job.end)||job.end<job.at||job.end-job.at>MAX_OFFLINE_MS||
+     ![500,1000,2000,3000,5000].includes(job.interval)||!REGIONS.some(r=>r.id===job.currentRegion)||
+     job.at<=(pending.at(-1)?.end??-Infinity))continue;
+   pending.push({...job});
+ }
+ snapshot.autoPending=pending;
+}
+function queueAutomaticSearches(now,elapsed){
+ const interval=autoInterval()*1000;
+ if(state.helpers<=0||!Number.isFinite(interval)||elapsed<=0)return;
+ const remainder=Math.min(state.autoRemainder,interval-1);
+ const first=now-elapsed+interval-remainder;
+ const attempts=Math.floor((elapsed+remainder)/interval);
+ state.autoRemainder=(elapsed+remainder)%interval;
+ if(!attempts)return;
+ const {currentRegion,season,habitat,time}=state;
+ const method=state.deepSurvey?.method;
+ const end=first+interval*(attempts-1);
+ const tail=state.autoPending.at(-1);
+ if(tail&&tail.end+interval===first&&tail.interval===interval&&tail.currentRegion===currentRegion&&
+    tail.season===season&&tail.habitat===habitat&&tail.time===time&&tail.method===method&&end-tail.at<=MAX_OFFLINE_MS){
+   tail.end=end;
+ }else{
+   state.autoPending.push({at:first,end,interval,currentRegion,season,habitat,time,method});
+ }
+}
+function processAutomaticSearches(){
+ const k0=state.knowledge,s0=totalSightings();
+ let performed=0;
+ batchingOffline=true;
+ try{
+   while(state.autoPending.length&&performed<500){
+     const segment=state.autoPending[0];
+     const species=automaticEligibleSpecies(segment.currentRegion,segment.season,segment);
+     while(segment.at<=segment.end&&performed<500){
+       if(!species.length)break;
+       if(automaticSearchCapacity(segment.at,species).remaining===0){
+         // The attempts in this hour have no capacity. Later hours still have their own quota.
+         const nextHour=(Math.floor(segment.at/3600000)+1)*3600000;
+         segment.at+=Math.ceil((nextHour-segment.at)/segment.interval)*segment.interval;
+         continue;
+       }
+       encounter('auto',segment.at,false,{segment,species});
+       segment.at+=segment.interval;
+       performed++;
+     }
+     if(segment.at>segment.end||!species.length)state.autoPending.shift();
+   }
+ }finally{batchingOffline=false;}
+ return {performed,gainK:Math.max(0,Math.floor(state.knowledge-k0)),gainS:Math.max(0,Math.floor(totalSightings()-s0))};
+}
 function tick(){
  const now=Date.now();
  const previous=Number.isFinite(state.lastTick)?state.lastTick:now;
  const elapsed=Math.min(MAX_OFFLINE_MS,Math.max(0,now-previous));
- const startAt=now-elapsed;
- state.lastTick=now;
- if(state.helpers>0 && elapsed>0){
-   autoAccum+=elapsed;
-   const interval=autoInterval()*1000;
-   const actualSearches=Math.floor(autoAccum/interval);
-   autoAccum-=actualSearches*interval;
-   const searches=Math.min(500,actualSearches);
-   if(searches>0){
-     const before=automaticSearchCapacity(now);
-     const saturatedBefore=before.total>0&&before.remaining===0;
-     let performed=0,gainK=0,gainS=0;
-     if(!saturatedBefore){
-       const k0=state.knowledge,s0=totalSightings();
-       batchingOffline=true;
-       try{
-         for(let i=0;i<searches;i++){
-           // Al completar los cupos, detener el lote; no contar intentos ficticios.
-           if(automaticSearchCapacity(startAt+elapsed*((i+.5)/searches)).remaining===0)break;
-           encounter('auto',startAt+elapsed*((i+.5)/searches));
-           performed++;
-         }
-       }finally{batchingOffline=false;}
-       gainK=Math.max(0,Math.floor(state.knowledge-k0));
-       gainS=Math.max(0,Math.floor(totalSightings()-s0));
-     }
-     const capacity=automaticSearchCapacity(now);
-     const saturated=capacity.total>0&&capacity.remaining===0;
-     if(performed){
-       autoDiaryBuffer.searches+=performed;
-       autoDiaryBuffer.hits+=gainS;
-       autoDiaryBuffer.knowledge+=gainK;
-     }
-     currentAutoNotice=saturated
-       ?`Equipo automático en pausa: cupo horario completo de ${capacity.total} especies en ${currentRegion().name}. Se reanuda en la siguiente hora; la observación manual sigue disponible.`
-       :capacity.total===0
-         ?'Equipo automático en pausa: sin especies compatibles con la estación en esta región.'
-         :`Equipo automático: ${performed} búsquedas · ${gainS} avistamientos · +${gainK} conocimiento · ${capacity.remaining}/${capacity.total} especies con cupo.`;
-     if(saturated&&state.autoSaturationNoticeHour!==Math.floor(now/3600000)){
-       state.autoSaturationNoticeHour=Math.floor(now/3600000);
-       pushLog(`⏳ Equipo automático en pausa: cupo horario de ${capacity.total} especies completo en ${currentRegion().name}.`);
-     }
+ state.lastTick=Math.max(previous,now);
+ queueAutomaticSearches(now,elapsed);
+ if(state.autoPending.length){
+   pruneAutomaticHours(now);
+   const {performed,gainK,gainS}=processAutomaticSearches();
+   const capacity=automaticSearchCapacity(now);
+   const saturated=capacity.total>0&&capacity.remaining===0;
+   if(performed){
+     autoDiaryBuffer.searches+=performed;
+     autoDiaryBuffer.hits+=gainS;
+     autoDiaryBuffer.knowledge+=gainK;
    }
-   if(autoDiaryBuffer.searches>0 && (now-lastAutoDiaryFlush>5000 || autoDiaryBuffer.hits>0)){
-     pushLog(`👨‍🔬 Equipo automático · ${autoDiaryBuffer.searches} búsquedas · ${autoDiaryBuffer.hits} avistamientos · +${autoDiaryBuffer.knowledge} conocimiento.`);
-     autoDiaryBuffer={searches:0,hits:0,knowledge:0};
-
-
-
-     lastAutoDiaryFlush=now;
+   currentAutoNotice=saturated
+     ?`Equipo automático en pausa: cupo horario completo de ${capacity.total} especies en ${currentRegion().name}. Se reanuda en la siguiente hora; la observación manual sigue disponible.`
+     :capacity.total===0
+       ?'Equipo automático en pausa: sin especies compatibles con la estación en esta región.'
+       :`Equipo automático: ${performed} búsquedas · ${gainS} avistamientos · +${gainK} conocimiento · ${capacity.remaining}/${capacity.total} especies con cupo.`;
+   if(saturated&&state.autoSaturationNoticeHour!==Math.floor(now/3600000)){
+     state.autoSaturationNoticeHour=Math.floor(now/3600000);
+     pushLog(`⏳ Equipo automático en pausa: cupo horario de ${capacity.total} especies completo en ${currentRegion().name}.`);
    }
+ }
+ if(autoDiaryBuffer.searches>0 && (now-lastAutoDiaryFlush>5000 || autoDiaryBuffer.hits>0)){
+   pushLog(`👨‍🔬 Equipo automático · ${autoDiaryBuffer.searches} búsquedas · ${autoDiaryBuffer.hits} avistamientos · +${autoDiaryBuffer.knowledge} conocimiento.`);
+   autoDiaryBuffer={searches:0,hits:0,knowledge:0};
+   lastAutoDiaryFlush=now;
  }
  if(museumRate()>0){state.money+=museumRate()*(elapsed/1000);}
  const returns=processVoyages(now);
@@ -6792,20 +6828,28 @@ regionRequirementsMet=function(r){if(!deepRegionIndex3330.has(r?.id))return regi
 function craftedReady3330(){return CONTINENT_RULES3300['Océanos profundos'].items.every(id=>state.craftedItems?.[id]===true);}
 atlasRegionModel=function(r){const m=modelBefore3330(r);if(deepRegionIndex3330.has(r.id)){m.name='⚓ '+r.name;m.requirements.unshift({label:'Investigación de sondeo profundo',met:!!state.upgrades.deepUnlocked},{label:'Equipo de sondeo acreditado',met:state.craftedItems?.sounding_kit===true});m.requirements=m.requirements.filter(x=>!x.label.includes('sin navegación profunda'));if(m.status==='bloqueada')m.summary=m.requirements.find(x=>!x.met)?.label||'Preparación pendiente';}return m;};
 const eligibleBefore3330=eligibleSpecies,autoBefore3330=automaticEligibleSpecies;
-function deepChoices3330(region,habitat,time,season,automatic=false){const ps=deepPresenceIndex3330.get(region);if(!ps)return [];const method=state.deepSurvey?.method||'sondeo';return ps.filter(p=>p.methods.includes(method)&&p.seasons.includes(season)&&(automatic&&!abyssalRegionIndex3340.has(region)||p.habitats.includes(automatic?state.habitat:habitat)&&p.times.includes(automatic?state.time:time))).map(p=>p.speciesId);}
+function deepChoices3330(region,habitat,time,season,automatic=false,method=state.deepSurvey?.method||'sondeo'){
+ const ps=deepPresenceIndex3330.get(region);
+ return ps?.filter(p=>p.methods.includes(method)&&p.seasons.includes(season)&&
+  (automatic&&!abyssalRegionIndex3340.has(region)||p.habitats.includes(habitat)&&p.times.includes(time))).map(p=>p.speciesId)||[];
+}
 eligibleSpecies=function(region,habitat,time,season){return deepRegionIndex3330.has(region)?deepChoices3330(region,habitat,time,season):eligibleBefore3330(region,habitat,time,season);};
-automaticEligibleSpecies=function(region,season){return deepRegionIndex3330.has(region)?deepReady3330(region)?deepChoices3330(region,null,null,season,true):[]:autoBefore3330(region,season);};
+automaticEligibleSpecies=function(region,season,conditions=state){
+ if(!deepRegionIndex3330.has(region))return autoBefore3330(region,season);
+ return deepReady3330(region)?deepChoices3330(region,conditions.habitat,conditions.time,season,true,conditions.method):[];
+};
 const habitatBefore3330=habitatLabel;
 habitatLabel=function(h){return ({columna_mesopelagica:'⚓ Columna mesopelágica',columna_batial:'⚓ Aguas batiales',columna_profunda_fria:'❄ Columna profunda fría',fondo_batial:'⚓ Fondo batial',fondo_profundo_frio:'❄ Fondo profundo frío'}[h]||habitatBefore3330(h));};
 let deepResolving3330=false;
 const encounterBefore3330=encounter;
-encounter=function(source='manual',at=Date.now(),guaranteed=false){
- if(!deepRegionIndex3330.has(state.currentRegion))return encounterBefore3330(source,at,guaranteed);
- if(!deepReady3330()||source==='manual'&&!deepResolving3330)return false;
+encounter=function(source='manual',at=Date.now(),guaranteed=false,automatic=null){
+ const region=automatic?.segment.currentRegion??state.currentRegion;
+ if(!deepRegionIndex3330.has(region))return encounterBefore3330(source,at,guaranteed,automatic);
+ if(!deepReady3330(region)||source==='manual'&&!deepResolving3330)return false;
  const last=state.lastEncounter,batch=batchingOffline,logs=new Set(state.log);batchingOffline=true;
- try{encounterBefore3330(source,at,false);}finally{batchingOffline=batch;}
+ try{encounterBefore3330(source,at,false,automatic);}finally{batchingOffline=batch;}
  state.log=state.log.map(x=>logs.has(x)?x:x.replace(/comiendo/g,'evidencia alimentaria').replace(/Avistamiento/g,'Registro indirecto'));
- if(state.lastEncounter!==last){state.lastEncounter.deepEvidence={method:state.deepSurvey.method,region:state.currentRegion,direct:false,...(abyssalRegionIndex3340.has(state.currentRegion)?{depthTier:'abisal',stratum:state.habitat}: {})};state.lastEncounter.title=state.lastEncounter.entries?.length?'Registro indirecto de muestra':'Muestra sin identificación';state.lastEncounter.subtitle='Examen a bordo · '+(state.lastEncounter.subtitle||'').replace(/avistamientos/g,'registros').replace(/comiendo/g,'contenido digestivo examinado');}
+ if(state.lastEncounter!==last){state.lastEncounter.deepEvidence={method:automatic?.segment.method??state.deepSurvey.method,region,direct:false,...(abyssalRegionIndex3340.has(region)?{depthTier:'abisal',stratum:automatic?.segment.habitat??state.habitat}: {})};state.lastEncounter.title=state.lastEncounter.entries?.length?'Registro indirecto de muestra':'Muestra sin identificación';state.lastEncounter.subtitle='Examen a bordo · '+(state.lastEncounter.subtitle||'').replace(/avistamientos/g,'registros').replace(/comiendo/g,'contenido digestivo examinado');}
  if(!batch){renderCounters();updateFieldOutput();}return state.lastEncounter!==last;
 };
 function deepTransaction3330(change){const before=JSON.parse(JSON.stringify(state));try{if(!change())return false;if(!persist()){state=before;achievementNotices3360=[];commissionNotices3370=[];achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360?.categories||{}));return false;}return true;}catch(error){state=before;achievementNotices3360=[];commissionNotices3370=[];throw error;}}
