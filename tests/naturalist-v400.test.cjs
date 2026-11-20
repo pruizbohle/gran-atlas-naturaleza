@@ -8,6 +8,7 @@ const { harness } = require('./helpers/live-game.cjs');
 const { aquaticMammal, terrestrialMammal } = require('../scripts/terrestrial-mammal-families.cjs');
 
 const read = name => fs.readFileSync('www/js/' + name + '.js', 'utf8');
+const readRevision = (rev, path) => execFileSync('git', ['show', rev + ':' + path], { encoding: 'utf8', maxBuffer: 16e6 });
 const added = ['naturalist-assets-v400', 'naturalist-art-v400'];
 const legacyFixtures = require('./fixtures/stability-saves-v3240.json');
 const production = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'gm07-a04/catalog'];
@@ -85,7 +86,7 @@ test('Canidae uses exact variant routes and the original two legendary identitie
 });
 
 test('the six historical save fixtures read and restore identically to the current stable series 3', () => {
-  const readStable = path => execFileSync('git', ['show', 'd906224533559193e87704fa44471ea73d4069c9:' + path], { encoding: 'utf8', maxBuffer: 16e6 });
+  const readStable = path => readRevision('d906224533559193e87704fa44471ea73d4069c9', path);
   const stable = [...production.map(read), readStable('www/js/app.js')].join('\n');
   const stableSave = readStable('www/js/save-manager.js');
   class Clock extends Date { static now() { return 1700000000000; } }
@@ -97,6 +98,13 @@ test('the six historical save fixtures read and restore identically to the curre
       const result = h.window.AtlasSaveBridge.getSaveData();
       // A missing collection ID is generated on restore for both releases.
       delete result.collectionId;
+      // V5.0.1 adds two default fields only. Assert those defaults and compare every historical field.
+      if (h === current) {
+        assert.deepEqual(Array.from(result.autoPending), []);
+        assert.equal(result.autoRemainder, 0);
+        delete result.autoPending;
+        delete result.autoRemainder;
+      }
       return JSON.parse(JSON.stringify(result));
     };
     assert.deepEqual(normalized(current), normalized(old), fixture.scenario + ' open');
@@ -710,8 +718,8 @@ test('all salmonids have their configured plates and Remonte completes the uncha
   assert.deepEqual(legends.map(item => item.name).sort(),
     ['Ámbar', 'Niebla', 'Fenrir', 'Ascua', 'Silverback', 'Atlas', 'Centinela', 'Basalto', 'Seda', 'Junco', 'Áncora', 'Remonte'].sort());
   assert.deepEqual(Array.from(legendaryComparisons.all.legendary, item => item.id), legends.map(item => item.speciesId));
-  const priorApp = execFileSync('git', ['show', '4ee0853:www/js/app.js'], { encoding: 'utf8', maxBuffer: 8e6 });
-  assert.equal(read('app'), priorApp, 'The game rules and original legend definitions remain identical');
+  assert.equal(readRevision('952a263', 'www/js/app.js'), readRevision('4ee0853', 'www/js/app.js'),
+    'V4.9.1 changes neither the game rules nor the original legend definitions');
 
   const id = 'asia_esp_0369';
   assert.notDeepEqual(fs.readFileSync('www/naturalist-art/plates/' + routes[id].normal),
@@ -789,8 +797,8 @@ test('all freshwater and estuarine fish use their configured transparent plates 
   assert.equal(initial.albino, 7);
   assert.equal(initial.melanic, 5);
   assert.equal(initial.inventory.flatMap(animal => Object.values(routes[animal.id])).length, 35);
-  const previousApp = execFileSync('git', ['show', 'dc7929a:www/js/app.js'], { encoding: 'utf8', maxBuffer: 8e6 });
-  assert.equal(read('app'), previousApp, 'The catalog, rarity, probabilities and game mechanics remain identical');
+  assert.equal(readRevision('71d16ba', 'www/js/app.js'), readRevision('dc7929a', 'www/js/app.js'),
+    'V4.9.2 changes neither the catalog, rarity, probabilities nor game mechanics');
 });
 
 test('V4.9.3 adds exactly two unique taxa and fourteen scientific plates and preserves legacy world data', () => {
@@ -880,8 +888,9 @@ test('V4.9.5 migrates the fourteen deep-sea taxa and preserves catalogue, relics
     assert.deepEqual(routes[id], JSON.parse(JSON.stringify(variants)), id);
   }
   for (const name of Object.keys(previous.cutouts)) assert.equal(cutouts[name], true, name);
-  for (const file of ['app', 'deep-data-v3330', 'abyssal-data-v3340', 'relict-art-v3199']) {
-    assert.equal(read(file), execFileSync('git', ['show', '75c5887:www/js/' + file + '.js'], { encoding: 'utf8', maxBuffer: 8e6 }));
+  assert.equal(readRevision('b510945', 'www/js/app.js'), readRevision('75c5887', 'www/js/app.js'));
+  for (const file of ['deep-data-v3330', 'abyssal-data-v3340', 'relict-art-v3199']) {
+    assert.equal(read(file), readRevision('75c5887', 'www/js/' + file + '.js'));
   }
 
   const valid = inventory.map(sp => sp.id).sort();

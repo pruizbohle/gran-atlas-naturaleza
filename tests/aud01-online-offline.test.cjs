@@ -162,3 +162,88 @@ test('AUD-03 un fallo al dibujar un respaldo deja la partida original en memoria
   assert.equal(bridge.getSaveData().money, save.money);
   assert.equal(game.h.store[key], stored);
 });
+
+test('AUD-02 prismáticos, catalejo y cuaderno cambian el resultado del motor en el umbral anunciado', () => {
+  const game = open({}, () => 0.67);
+  const g = game.g;
+  const s = g.state;
+  s.knowledge = 150; // Recursos de un fixture diagnóstico de bonificaciones.
+  s.inventory.field_telescope = 1;
+  const previousSightings = () => Object.values(s.sightings).reduce((a, b) => a + b, 0);
+  const firstChance = g.manualSearchChance();
+  assert.equal(firstChance, 0.50);
+  g.encounter('manual', noon);
+  assert.equal(previousSightings(), 0);
+  assert.equal(s.knowledge, 153);
+  assert.equal(g.buyNode('prismaticos_2'), false);
+  assert.equal(g.buyNode('prismaticos_1'), true);
+  assert.equal(g.buyNode('prismaticos_2'), true);
+  assert.equal(g.buyNode('cuaderno_1'), true);
+  g.equipItem('field_telescope');
+  assert.ok(Math.abs(g.manualSearchChance() - 0.74) < 1e-10);
+  const before = s.knowledge;
+  g.encounter('manual', noon);
+  assert.equal(previousSightings(), 1);
+  assert.equal(s.knowledge - before, 6);
+  g.equipItem('field_telescope');
+  assert.equal(g.manualSearchChance(), 0.62);
+  g.encounter('manual', noon);
+  assert.equal(previousSightings(), 1);
+  assert.equal(s.knowledge - before, 10);
+});
+
+test('AUD-02 contrataciones y capacitación respetan el tope y equipo activo cambia los encuentros', () => {
+  const game = open({}, () => 0.58);
+  const g = game.g;
+  const s = g.state;
+  s.money = 1200;
+  s.knowledge = 650;
+  s.inventory.amulet = 1;
+  s.inventory.rain_hood = 1;
+  for (let i = 0; i < 10; i++) assert.equal(g.buyNode('novato'), true);
+  assert.equal(g.buyNode('novato'), false);
+  assert.equal(s.helpers, 10);
+  assert.equal(g.buyNode('capacitacion_1'), true);
+  assert.equal(g.buyNode('capacitacion_2'), true);
+  assert.ok(Math.abs(g.automaticSearchChance() - 0.551) < 1e-10);
+  g.encounter('auto', noon);
+  assert.equal(Object.keys(s.sightings).length, 0);
+  g.equipItem('amulet');
+  g.equipItem('rain_hood');
+  assert.ok(Math.abs(g.automaticSearchChance() - 0.6004) < 1e-10);
+  g.encounter('auto', noon);
+  assert.equal(Object.keys(s.sightings).length, 1);
+  assert.equal(g.buyNode('metodo_4'), false);
+  for (const tier of [1, 2, 3, 4]) assert.equal(g.buyNode('metodo_' + tier), true);
+  assert.equal(g.autoInterval(), 0.5);
+});
+
+test('AUD-02 al censar automáticamente con un registro disponible solo se concede un registro', () => {
+  const game = open({}, () => 0);
+  const g = game.g;
+  const s = g.state;
+  s.helpers = 1;
+  s.upgrades.censusTier = 2;
+  s.upgrades.autoCensus = 1;
+  const ids = g.automaticEligibleSpecies(s.currentRegion, s.season);
+  const h = noon / hour;
+  for (const id of ids) s.autoHourly[h + ':' + id] = 100;
+  s.autoHourly[h + ':' + ids[0]] = 99;
+  assert.equal(g.researchCensusCount('auto'), 2);
+  g.encounter('auto', noon);
+  assert.equal(s.sightings[ids[0]], 1);
+  assert.equal(s.autoHourly[h + ':' + ids[0]], 100);
+  g.encounter('auto', noon);
+  assert.equal(s.sightings[ids[0]], 1);
+  assert.ok(Object.values(s.autoHourly).every(n => n <= 100));
+});
+
+test('AUD-03 el arnés integral detecta un ala de museo inválida admitida por la restauración', () => {
+  const game = open();
+  const bridge = game.h.window.AtlasSaveBridge;
+  const snapshot = bridge.getSaveData();
+  snapshot.museum.wing = 0;
+  bridge.restoreGame(snapshot);
+  assert.equal(game.g.state.museum.wing, 0);
+  assert.equal(game.g.museumCapacity(), 12);
+});
