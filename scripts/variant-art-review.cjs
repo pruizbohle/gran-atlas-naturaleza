@@ -5,7 +5,7 @@ const { createHash } = require('node:crypto');
 const fs = require('node:fs');
 
 const root = 'www/naturalist-art';
-const reviewStages = ['art01', 'art02', 'art03', 'art04', 'art05'];
+const reviewStages = ['art01', 'art02', 'art03', 'art04', 'art05', 'art06'];
 const corrected = row => reviewStages.some(stage => row[stage]?.outcome === 'aprobada');
 
 function buildVariantReview({ lot, previousLot, review, supersededArchive, version, correctionsOnly = false, viewer = false }) {
@@ -31,13 +31,20 @@ function buildVariantReview({ lot, previousLot, review, supersededArchive, versi
 
   const seen = new Set();
   const lab = decisions.rows.map(decision => {
-    const id = key(decision);
+    const { replaces, previousLabel } = decision;
+    const id = key(replaces ? { ...decision, variant: replaces } : decision);
     const row = entries.get(id);
     assert.ok(row && row.visualState !== 'pendiente' && !seen.has(id), id);
     if (correctionsOnly) assert.ok(['insuficiente', 'mejorable'].includes(row.visualState), id);
     seen.add(id);
     const { outcome, morph, evidence, note, rejected, history, eye } = decision;
     const approved = outcome === 'aprobada';
+    const previousPlate = row.plate;
+    if (replaces) {
+      assert.ok(approved && replaces !== decision.variant && !entries.has(key(decision)) && previousLabel, id);
+      row.variant = decision.variant;
+      row.plate = row.id + '--' + row.variant + '.webp';
+    }
     const historyFiles = history ? Object.fromEntries(sizes.map(size => {
       const file = 'review/' + history + '/' + (size === 512 ? '' : size + '/') + row.plate;
       assert.ok(fs.existsSync(root + '/' + file), file);
@@ -51,11 +58,13 @@ function buildVariantReview({ lot, previousLot, review, supersededArchive, versi
     if (approved) {
       const resolutions = sizes.map(size => {
         const file = (size === 512 ? '' : size + '/') + row.plate;
-        before[size] = 'review/' + review + '/' + file;
+        const oldFile = (size === 512 ? '' : size + '/') + previousPlate;
+        before[size] = 'review/' + review + '/' + oldFile;
         const previous = fs.readFileSync(root + '/' + before[size]);
         const current = publishedPlate(file);
         assert.notEqual(sha(previous), sha(current), file);
         return { size, path: 'naturalist-art/plates/' + file, before: 'naturalist-art/' + before[size],
+          ...(replaces ? { previousPath: 'naturalist-art/plates/' + oldFile } : {}),
           oldBytes: previous.length, newBytes: current.length, oldSha256: sha(previous), newSha256: sha(current) };
       });
       assets.push({ id: row.id, variant: row.variant, resolutions });
@@ -68,7 +77,8 @@ function buildVariantReview({ lot, previousLot, review, supersededArchive, versi
     }
     const priorReview = ['art04', 'art03', 'art02', 'art01'].find(name => row[name]?.outcome === 'aprobada');
     row[review] = { priorState: row.visualState, priorFinding: row.observation, outcome, morph, evidence,
-      ...(rejected ? { rejected } : {}), ...(eye ? { eye } : {}), ...(version ? { version } : {}) };
+      ...(rejected ? { rejected } : {}), ...(eye ? { eye } : {}), ...(version ? { version } : {}),
+      ...(replaces ? { replaces, previousPlate } : {}) };
     if (decision.state) {
       assert.ok(Object.hasOwn(baseline.states, decision.state) && decision.state !== 'pendiente');
       row.visualState = decision.state;
@@ -78,6 +88,7 @@ function buildVariantReview({ lot, previousLot, review, supersededArchive, versi
     row.reviewedSizes = sizes;
     return { id: row.id, variant: row.variant, status: approved ? 'Correcta y aprobada' : outcome === 'ratificada' ? 'Lámina ratificada' : 'Pendiente de ajuste',
       morph, evidence, note, before: approved ? before : historyFiles,
+      ...(replaces ? { replaces, previousLabel } : {}),
       ...(eye ? { eye: eye.color } : {}), ...(version ? { version: approved ? version : decision.plateVersion } : {}),
       ...(approved && historyFiles ? { legacy: historyFiles } : {}),
       ...(approved ? {} : { caption: 'Variante vigente' }),
@@ -107,7 +118,13 @@ function buildVariantReview({ lot, previousLot, review, supersededArchive, versi
       ...(corrected(row) ? { corrected: true } : {})
     }));
     const lines = records.map(record => '  ' + JSON.stringify(record)).join(',\n');
-    artifacts[root + '/pigment-audit-data.js'] = 'const pigmentAuditRecords = [\n' + lines + '\n];\n';
+    const viewerFile = root + '/pigment-audit-data.js';
+    if (typeof viewer === 'string') {
+      const published = require('node:child_process').execFileSync('git', ['show', viewer + ':' + viewerFile], { encoding: 'utf8' });
+      assert.equal(published, 'const pigmentAuditRecords = [\n' + lines + '\n];\n');
+    } else {
+      artifacts[viewerFile] = 'const pigmentAuditRecords = [\n' + lines + '\n];\n';
+    }
   }
   for (const [file, content] of Object.entries(artifacts)) {
     if (process.argv.includes('--write')) fs.writeFileSync(file, content);

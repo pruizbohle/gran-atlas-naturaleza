@@ -1,0 +1,38 @@
+{
+  "chromium": "156.0.8078.79",
+  "audit": {
+    "variants": 564,
+    "albinas": 303,
+    "melanicas": 261,
+    "corrected": 47,
+    "sizes": {
+      "64": 3,
+      "128": 3,
+      "256": 3,
+      "512": 3
+    },
+    "retiredBearHistory": true,
+    "filtering": [
+      "tipo",
+      "estado",
+      "familia",
+      "corrección",
+      "comparativa"
+    ],
+    "sorting": [
+      "familia",
+      "nombre",
+      "estado",
+      "prioridad"
+    ],
+    "approved": 9,
+    "legacyVariantSelector": true,
+    "mobileWidth": 390,
+    "labVariantPreviews": [
+      "field",
+      "journal",
+      "bestiary",
+      "museum"
+    ]
+  }
+}

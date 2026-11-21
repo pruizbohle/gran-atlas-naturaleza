@@ -1,0 +1,52 @@
+{
+  "baseline": "415b36a",
+  "filter": "insuficiente",
+  "summary": "23 de 564 variantes",
+  "planned": [
+    {
+      "key": "af_leopardo/albino",
+      "name": "Leopardo africano · Albino",
+      "finding": "El blanco uniforme borra el perfil facial en claro; rosetas lavadas dominan el torso. Revisar pigmentación y relieve."
+    },
+    {
+      "key": "af_licaon/albino",
+      "name": "Licaón · Albino",
+      "finding": "Parches corporales muy marcados, tejidos y cara demasiado lavados. Distinguir albinismo y áreas claras del patrón propio del licaón."
+    },
+    {
+      "key": "af_xlsx_131_lupulella_mesomelas/albino",
+      "name": "Chacal de lomo negro · Albino",
+      "finding": "La banda dorsal parece una versión lavada del patrón normal. Validar pigmentación residual y hacer legibles ojos y hocico."
+    },
+    {
+      "key": "af_abejaruco_carmin/albino",
+      "name": "Abejaruco carmín · Albino",
+      "finding": "Pérdida de lectura de pico, ojo y plumaje, aspecto lavado; revisar pigmentos no melánicos y tejidos."
+    },
+    {
+      "key": "asia_esp_0030/albino",
+      "name": "Águila esteparia · Albino",
+      "finding": "Sobre fondo claro se pierde el contorno de las primarias y casi desaparece la cabeza en perfil. Recuperar lectura de pico, ojo y separación entre plumas."
+    },
+    {
+      "key": "af_zorro_palido/melanico",
+      "name": "Zorro pálido · Melánico",
+      "finding": "Patillas finas y hocico casi invisibles en oscuro. Reforzar planos de hombro y bordes de patas largas."
+    },
+    {
+      "key": "asia_esp_0820/melanico",
+      "name": "Cuón · Melánico",
+      "finding": "Desaparecen el hocico y las extremidades distales sobre oscuro a 64 px. Recuperar hombro y textura de la cola."
+    },
+    {
+      "key": "asia_esp_0300/melanico",
+      "name": "Nutria lisa · Melánico",
+      "finding": "Se conserva el perfil horizontal sobre claro. En oscuro apenas se distinguen la cola gruesa y la mandíbula inferior; recuperar transiciones anatómicas."
+    },
+    {
+      "key": "asia_esp_0523/melanico",
+      "name": "Oso negro asiático · Melánico",
+      "finding": "El negro y la media luna clara ya caracterizan al oso tibetano normal. La variante vigente aplana la cara, los pies y la marca pectoral. Sigue insuficiente a la espera de evidencia de un morfo oscuro diferenciable."
+    }
+  ]
+}

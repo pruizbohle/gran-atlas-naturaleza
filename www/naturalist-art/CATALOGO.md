@@ -1,4 +1,4 @@
-# Inventario naturalista del catálogo 5.0.9
+# Inventario naturalista del catálogo 5.0.10
 
 | Grupo | Familia | ID | Nombre común | Nombre científico | Continente | Zonas del juego | Variantes | Dimorfismo | Ejemplares |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -648,7 +648,7 @@
 | Perezosos y osos hormigueros | Myrmecophagidae | na_esp_myrmecophaga_tridactyla | Oso hormiguero gigante | *Myrmecophaga tridactyla* | Norteamérica, Sudamérica | América Central, Litoral caribeño sudamericano, Llanos del Orinoco, Amazonía, Pantanal, Cerrado brasileño | Normal | No | Normal, Notable |
 | Carnívoros terrestres | Ursidae | asia_esp_0238 | Oso malayo | *Helarctos malayanus* | Asia | Sudeste Asiático | Normal | No | Normal, Notable |
 | Carnívoros terrestres | Ursidae | na_esp_ursus_americanus | Oso negro americano | *Ursus americanus* | Norteamérica | Alaska, Columbia Británica, Montañas Rocosas, Costa del Pacífico, Bosques del este norteamericano, Sierra Madre | Normal, Albino | No | Normal, Notable |
-| Carnívoros terrestres | Ursidae | asia_esp_0523 | Oso negro asiático | *Ursus thibetanus* | Asia | Himalaya, China Meridional, Península de Corea, Archipiélago Japonés | Normal, Melánico | No | Normal, Notable |
+| Carnívoros terrestres | Ursidae | asia_esp_0523 | Oso negro asiático | *Ursus thibetanus* | Asia | Himalaya, China Meridional, Península de Corea, Archipiélago Japonés | Normal, Albino | No | Normal, Notable |
 | Carnívoros terrestres | Ursidae | oso_pardo | Oso pardo | *Ursus arctos* | Europa, Asia, Norteamérica | Escandinavia, Península Itálica, Balcanes, Cáucaso, Anatolia, Siberia Occidental, Siberia Central, Montes Urales, Siberia Oriental, Kamchatka, Desierto de Gobi, Meseta de Irán, Alaska, Columbia Británica | Normal | No | Normal, Notable |
 | Carnívoros terrestres | Ursidae | polar_esp_ursus_maritimus | Oso polar | *Ursus maritimus* | Polos, Norteamérica | Hielo ártico occidental, Hielo ártico central, Hielo ártico oriental, Bahía de Hudson | Normal | No | Normal, Notable |
 | Marinas y costeras | Haematopodidae | af_ostrero_africano | Ostrero africano | *Haematopus moquini* | África | Costa del Cabo, Desierto del Namib | Normal, Albino | No | Normal, Notable |

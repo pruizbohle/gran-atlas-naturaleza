@@ -1,0 +1,136 @@
+{
+  "baseline": "415b36a",
+  "rows": [
+    {
+      "id": "asia_esp_0523",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Gris rosado tenue",
+        "changed": true,
+        "why": "El iris y la nariz gris rosada acompañan la despigmentación. Se conservaron párpados, pupila oscura y sombras de la órbita."
+      },
+      "note": "La gorguera, las orejas redondas, el hocico y las garras permanecen legibles. La media luna pectoral es una diferencia sutil de valor y dirección del pelaje marfil.",
+      "replaces": "melanico",
+      "previousLabel": "Melánico"
+    },
+    {
+      "id": "af_leopardo",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación intensa",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Gris verdoso",
+        "color": "Gris rosado tenue",
+        "changed": true,
+        "why": "La órbita y el iris claro se distinguen del pelo con un matiz discreto."
+      },
+      "note": "Las rosetas quedan como un patrón muy tenue. Se recuperan la musculatura del cuello, los bigotes y la cola gruesa con la punta completa."
+    },
+    {
+      "id": "af_xlsx_131_lupulella_mesomelas",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo dorado",
+        "color": "Gris rosado tenue",
+        "changed": true,
+        "why": "Los párpados y la trufa rosada se separan con sombras locales, sin añadir brillo intenso."
+      },
+      "note": "Se recuperan el hocico fino, las orejas triangulares, las patas y la cola. La silla dorsal queda sugerida con valores suaves del pelaje marfil."
+    },
+    {
+      "id": "af_abejaruco_carmin",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación intensa",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Rojo oscuro",
+        "color": "Gris pardo tenue",
+        "changed": true,
+        "why": "Se distinguen el iris y el contorno de la órbita. El tono de la lámina es interpretativo."
+      },
+      "note": "Se reconocen el pico curvo, el ala plegada y las dos plumas centrales prolongadas. El plumaje marfil conserva volumen y los dedos se separan del apoyo."
+    },
+    {
+      "id": "af_zorro_palido",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Ámbar pardo",
+        "color": "Ámbar pardo oscuro",
+        "changed": false,
+        "why": "Se conserva la gama cálida y el contraste procede de la mejilla y el borde del ojo."
+      },
+      "note": "Las orejas altas, el hocico estrecho y las patas largas se separan del carbón. Se conserva el volumen de la cola y su punta oscura."
+    },
+    {
+      "id": "asia_esp_0300",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo oscuro",
+        "changed": false,
+        "why": "Se conserva el iris natural y se perfila la órbita con una transición tenue."
+      },
+      "note": "La mandíbula inferior y las vibrisas se separan del cuello. La cabeza redondeada, los dedos y la cola ancha y aplanada se distinguen del manto oscuro."
+    },
+    {
+      "id": "asia_esp_0820",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo oscuro",
+        "changed": false,
+        "why": "Se conserva el pardo natural. Las sombras modelan la órbita, el hocico y el borde de la boca."
+      },
+      "note": "Las orejas redondeadas, el hocico corto, el hombro y las patas distales se distinguen. La cola conserva un volumen separado del tronco."
+    },
+    {
+      "id": "asia_esp_0030",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Gris pardo tenue",
+        "changed": true,
+        "why": "Se reduce la intensidad ocular y se conserva la pupila. El ojo se aprecia sobre todo al ampliar."
+      },
+      "note": "Las primarias digitadas, el pico ganchudo, la cabeza y la cola se separan en crema. El sombreado de cobertoras y rémiges conserva la lectura del vuelo."
+    },
+    {
+      "id": "af_licaon",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Gris rosado tenue",
+        "changed": true,
+        "why": "El ojo y el párpado quedan definidos en un rango rosado discreto, separado de la trufa."
+      },
+      "note": "Se recuperaron las orejas redondas, el hocico, las patas largas y la punta de la cola. La segunda propuesta conserva el volumen marfil con marcas casi imperceptibles.",
+      "rejected": [
+        "La primera propuesta conservaba parches oscuros y una máscara demasiado pigmentada para la variante clara."
+      ]
+    }
+  ]
+}

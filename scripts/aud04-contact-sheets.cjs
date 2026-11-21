@@ -19,9 +19,18 @@ for(const name of fs.readdirSync(auditDir).filter(name=>/^aud04-.*\.json$/.test(
   if(row.status&&row.finding)variants.set(row.id+'/'+row.variant,{visualState:row.status,observation:row.finding});
  }
 }
-const current=path.join(root,'docs/arte-v509/inventario-aud04.json');
+const current=path.join(root,'docs/arte-v5010/inventario-aud04.json');
 if(fs.existsSync(current)){
- for(const row of JSON.parse(fs.readFileSync(current,'utf8')).variants)variants.set(row.id+'/'+row.variant,row);
+ const byId=new Map(specimens.map(specimen=>[specimen.id,specimen]));
+ for(const row of JSON.parse(fs.readFileSync(current,'utf8')).variants){
+  variants.set(row.id+'/'+row.variant,row);
+  const replaced=row.art06?.replaces,specimen=byId.get(row.id);
+  if(replaced&&specimen){
+   delete specimen.routes[replaced];
+   specimen.routes[row.variant]=row.plate;
+   variants.delete(row.id+'/'+replaced);
+  }
+ }
 }
 const dimorphism=new Map(audit.dimorphism.map(v=>[v.id,v]));const selected=specimens.filter(s=>mode==='family'||(mode==='variants'?s.routes.albino||s.routes.melanico:s.routes.male&&s.routes.female));
 const grouped=new Map();for(const s of selected.sort((a,b)=>a.family.localeCompare(b.family)||a.latin.localeCompare(b.latin))){let list=grouped.get(s.family)||[];list.push(s);grouped.set(s.family,list);}

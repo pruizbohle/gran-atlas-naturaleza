@@ -65,7 +65,8 @@ function createPigmentAudit() {
     const normal = illustration(row.sp, row.normal, 'Normal', size, expanded, 'plain', true);
     const current = illustration(row.sp, row.record, 'Normal', size, expanded, 'plain', true);
     const previous = versions.map(version => {
-      const label = expanded ? 'Anterior a ' + version.lot : 'Anterior';
+      const label = version.previousLabel ? version.previousLabel + ' · variante retirada'
+        : expanded ? 'Anterior a ' + version.lot : 'Anterior';
       return figure(archivedIllustration(version.before[size], alts + label, size), label);
     }).join('');
     return '<div class="audit-plates" style="--audit-size:' + size + 'px">' +

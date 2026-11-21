@@ -72,10 +72,13 @@ test('ART-03 records ocular decisions and leaves the unsupported bear variant in
   const bear = decisions.rows.find(row => row.id === 'asia_esp_0523');
   assert.deepEqual([bear.variant, bear.outcome, bear.evidence], ['melanico', 'pendiente', 'Sin confirmar']);
   assert.equal(inventory.variants.find(row => key(row) === key(bear)).visualState, 'insuficiente');
-  const file = assets.routes[bear.id][bear.variant];
+  const file = bear.id + '--' + bear.variant + '.webp';
   for (const size of sizes) {
-    const route = 'www/naturalist-art/plates/' + (size === 512 ? '' : size + '/') + file;
-    assert.deepEqual(fs.readFileSync(route), execFileSync('git', ['show', integrity.baseline + ':' + route]));
+    const suffix = (size === 512 ? '' : size + '/') + file;
+    const route = 'www/naturalist-art/plates/' + suffix;
+    const archived = 'www/naturalist-art/review/art06/' + suffix;
+    assert.deepEqual(fs.readFileSync(fs.existsSync(archived) ? archived : route),
+      execFileSync('git', ['show', integrity.baseline + ':' + route]));
   }
   for (const row of decisions.rows) {
     assert.ok(row.eye.normal && row.eye.color && row.eye.why);

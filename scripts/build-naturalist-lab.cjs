@@ -57,6 +57,9 @@ const classicalIndex = path.join(reviewDir, 'classical-plates.json');
 const classical = new Set(fs.existsSync(classicalIndex) ? JSON.parse(fs.readFileSync(classicalIndex, 'utf8')) : []);
 const qualities = [75, 80, 85, 90, 95];
 const reviewFiles = new Set();
+const replacements = new Map(require('../docs/arte-v5010/decisiones.json').rows
+  .filter(row => row.replaces && row.outcome === 'aprobada')
+  .map(row => [row.id + '/' + row.variant, row]));
 const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'gm07-p04/catalog', 'gm07-a04/catalog', 'app'];
 const gameSource = modules.map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
 const audit = harness({}, null, { gameSource }).window.__atlasTest;
@@ -143,8 +146,10 @@ function plate(id, key, label) {
     reviewFiles.add('naturalist-art/' + relative);
     return { src: relative, bytes: fs.statSync(location).size };
   };
-  const before = reviewAsset('before', file);
-  const previous = reviewAsset('series-4.3', file);
+  const replacement = replacements.get(id + '/' + key);
+  const historyFile = replacement ? id + '--' + replacement.replaces + '.webp' : file;
+  const before = reviewAsset('before', historyFile);
+  const previous = reviewAsset('series-4.3', historyFile);
   const compression = Object.fromEntries(qualities.flatMap(quality => {
     const sample = reviewAsset('compression/' + quality, file);
     return sample ? [[quality, sample]] : [];
@@ -152,7 +157,8 @@ function plate(id, key, label) {
   return {
     key, label, src: exists ? 'plates/' + file : null, bytes: exists ? fs.statSync(source).size : 0,
     cutout: cutouts[file] === true, classical: classical.has(file),
-    note: classical.has(file) ? '' : observations[file] || '', before, previous, compression
+    note: classical.has(file) ? '' : observations[file] || '', before, previous, compression,
+    ...(replacement ? { previousLabel: replacement.previousLabel } : {})
   };
 }
 
@@ -451,7 +457,7 @@ const landscapes = fs.readdirSync(path.join(out, 'landscapes')).filter(file => f
 const animalFiles = [...assets].sort().flatMap(file =>
   ['', '64/', '128/', '256/'].map(size => 'naturalist-art/plates/' + size + file));
 const files = [...animalFiles, ...landscapes.map(key => 'naturalist-art/landscapes/' + key + '.webp')];
-for (const lot of ['art01', 'art02', 'art03', 'art04', 'art05']) {
+for (const lot of ['art01', 'art02', 'art03', 'art04', 'art05', 'art06']) {
   const archive = path.join(out, 'review', lot);
   if (!fs.existsSync(archive)) continue;
   for (const file of fs.readdirSync(archive, { recursive: true })) {

@@ -26,7 +26,7 @@ for (const [value, label] of [
 const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
-  gallery: 'Galería', variants: 'Variantes', 'pigment-audit': 'Visor de albinos y melánicos', art01: 'Variantes revisadas en ART-01', art02: 'Variantes revisadas en ART-02', art03: 'Variantes revisadas en ART-03', art04: 'Variantes corregidas en ART-04', art05: 'Variantes corregidas en ART-05', frames: 'Ejemplares especiales',
+  gallery: 'Galería', variants: 'Variantes', 'pigment-audit': 'Visor de albinos y melánicos', art01: 'Variantes revisadas en ART-01', art02: 'Variantes revisadas en ART-02', art03: 'Variantes revisadas en ART-03', art04: 'Variantes corregidas en ART-04', art05: 'Variantes corregidas en ART-05', art06: 'Variantes corregidas en ART-06', frames: 'Ejemplares especiales',
   compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles', amphibians: 'Comparar anfibios', cartilaginous: 'Comparar tiburones y rayas',
   salmonids: 'Comparar salmónidos', freshwater: 'Comparar peces de agua dulce', reef: 'Comparar peces de arrecife', deep: 'Comparar peces de aguas profundas', marine: 'Comparar peces marinos', cephalopods: 'Comparar cefalópodos', legendary: 'Colección de legendarios',
   compression: 'Compresión WebP', scale: 'Escala real', 'visual-scale': 'Ajustes de escala', review: 'Revisión artística'
@@ -175,7 +175,7 @@ function pigmentGallery() {
     }).join('') + '</div>';
 }
 
-const artReviews = { art01: art01Review, art02: art02Review, art03: art03Review, art04: art04Review, art05: art05Review };
+const artReviews = { art01: art01Review, art02: art02Review, art03: art03Review, art04: art04Review, art05: art05Review, art06: art06Review };
 let auditView;
 
 function archivedIllustration(src, label, size) {
@@ -196,30 +196,34 @@ function artComparisons(lot) {
     const sp = speciesById.get(row.id);
     const normal = sp.records.find(record => record.key === 'normal');
     const variant = sp.records.find(record => record.key === row.variant);
-    const savedImage = (src, label) => archivedIllustration(src, sp.name + ' · ' + variant.label + ' · ' + label, size);
+    const replacement = releases.find(item => item.id === row.id && item.replaces === row.variant);
+    const variantLabel = variant?.label || (replacement ? replacement.previousLabel : row.variant);
+    const savedImage = (src, label) => archivedIllustration(src, sp.name + ' · ' + variantLabel + ' · ' + label, size);
     const previous = row.before?.[size];
     const legacy = row.legacy?.[size];
     const subsequent = releases.find(item =>
       (item.supersedes === lot || item.supersedesArt01 && lot === 'art01') &&
       item.id === row.id && item.variant === row.variant);
-    const published = subsequent?.before[size];
-    const publishedLabel = 'Variante de ART-' + lot.slice(-2);
+    const published = replacement?.before[size] || subsequent?.before[size];
+    const publishedLabel = replacement ? 'Melánica retirada en ART-06' : 'Variante de ART-' + lot.slice(-2);
+    const previousLabel = row.previousLabel ? row.previousLabel + ' · variante retirada' : 'Variante anterior';
+    const status = replacement ? 'Variante retirada en ART-06' : row.status;
     const legacyLabel = lot === 'art03' ? 'Anterior a ART-02' : 'Anterior a ART-01';
     const caption = row.caption || (previous ? 'Variante corregida' : 'Variante vigente');
     const images = [
       figure(illustration(sp, normal, 'Normal', size), 'Lámina normal'),
       ...(legacy ? [figure(savedImage(legacy, legacyLabel), legacyLabel)] : []),
-      ...(previous ? [figure(savedImage(previous, 'Variante anterior'), 'Variante anterior')] : []),
+      ...(previous ? [figure(savedImage(previous, previousLabel), previousLabel)] : []),
       figure(published ? savedImage(published, publishedLabel) : illustration(sp, variant, 'Normal', size),
         published ? publishedLabel : caption)
     ];
-    const morph = row.morph ? '<dl class="morph-facts"><dt>Categoría del juego</dt><dd>' + text(variant.label) +
+    const morph = row.morph ? '<dl class="morph-facts"><dt>Categoría del juego</dt><dd>' + text(variantLabel) +
       '</dd><dt>Morfo</dt><dd>' + text(row.morph) + ' · ' + text(row.evidence) + '</dd>' +
       (row.eye ? '<dt>Iris representado</dt><dd>' + text(row.eye) + '</dd>' : '') +
       (row.version ? '<dt>Última corrección</dt><dd>V' + text(row.version) + '</dd>' : '') + '</dl>' : '';
     return '<article class="art01-comparison gallery-card" data-' + lot + '-species="' + text(row.id) +
-      '" data-' + lot + '-variant="' + text(row.variant) + '"><h3>' + text(sp.name + ' · ' + variant.label) +
-      '</h3><p class="latin">' + text(sp.latin) + '</p><p><strong>' + text(row.status) +
+      '" data-' + lot + '-variant="' + text(row.variant) + '"><h3>' + text(sp.name + ' · ' + variantLabel) +
+      '</h3><p class="latin">' + text(sp.latin) + '</p><p><strong>' + text(status) +
       '</strong>' + (row.interpretation ? ' · ' + text(row.interpretation) : '') + '</p>' + morph + '<p>' + text(row.note) +
       '</p><div class="comparison-styles review-comparison plate-comparison" style="--comparison-size:' +
       size + 'px">' + images.join('') + '</div></article>';
@@ -313,23 +317,24 @@ function compareStyles(sp) {
   selectOptions(scalePlate, records.map(record => [record.key, record.label]));
   const record = records.find(item => item.key === scalePlate.value) || records[0];
   const frame = record.key === 'legendario' ? 'Legendario' : 'Normal';
+  const history = record.previousLabel ? ' · ' + record.previousLabel + ' histórico' : '';
   if (byId('comparison-source').value === 'original') {
-    const before = record.before ? compareImage(record.before, sp.name + ' · original', frame) :
+    const before = record.before ? compareImage(record.before, sp.name + ' · original' + history, frame) :
       comparisonPlaceholder('Original con fondo no disponible');
-    const after = record.previous ? compareImage(record.previous, sp.name + ' · recorte anterior', frame) :
+    const after = record.previous ? compareImage(record.previous, sp.name + ' · recorte anterior' + history, frame) :
       comparisonPlaceholder('Recorte anterior no disponible');
-    return '<div class="pair review-comparison">' + figure(before, 'Original con fondo') +
-      figure(after, 'Recorte Serie 4.3') + '</div>';
+    return '<div class="pair review-comparison">' + figure(before, 'Original con fondo' + history) +
+      figure(after, 'Recorte Serie 4.3' + history) + '</div>';
   }
   const svg = sp.catalogChange === 'new' ? comparisonPlaceholder('Sin lámina histórica') :
     AtlasNaturalistArt.frame('<span class="atlas-art-image legacy-sprite" role="img" aria-label="' +
       text(sp.name + ' · SVG original') + '">' + (record.svg || sp.sprite) + '</span>', frame, 'plate atlas-art-cutout');
-  const previous = record.previous ? compareImage(record.previous, sp.name + ' · naturalista', frame) :
+  const previous = record.previous ? compareImage(record.previous, sp.name + ' · naturalista' + history, frame) :
     comparisonPlaceholder('Sin lámina naturalista previa');
   const current = record.classical ? illustration(sp, record, frame, 256, true) :
     comparisonPlaceholder('Lámina científica pendiente');
   return '<div class="review-comparison comparison-styles">' +
-    figure(svg, 'SVG · Serie 3') + figure(previous, 'Naturalista · Serie 4.3') +
+    figure(svg, 'SVG · Serie 3') + figure(previous, 'Naturalista · Serie 4.3' + history) +
     figure(current, 'Científica clásica') + '</div>';
 }
 

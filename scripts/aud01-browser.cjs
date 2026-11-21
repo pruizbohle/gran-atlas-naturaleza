@@ -270,7 +270,7 @@ async function art03Checks(page, lab) {
   assert.equal(await archive.count(), 7);
   const bear = lab.locator('[data-art03-species="asia_esp_0523"]');
   assert.equal(await bear.locator('img').count(), 2);
-  assert.match(await bear.locator('strong').textContent(), /Pendiente/);
+  assert.match(await bear.locator('strong').textContent(), /Pendiente|Variante retirada en ART-06/);
   const minkCard = lab.locator('[data-art03-species="eu_esp_0622"]');
   assert.equal(await minkCard.locator('img').count(), 4);
   assert.deepEqual(await minkCard.locator('.morph-facts dd').allTextContents(),
@@ -359,7 +359,14 @@ async function art04Smoke(browser) {
   }
 }
 
-async function art05Smoke(browser) {
+async function pigmentAuditSmoke(browser) {
+  const { version } = JSON.parse(readFileSync('www/atlas-release.json', 'utf8'));
+  const hasBearReplacement = version === '5.0.10';
+  const lot = hasBearReplacement ? 'art06' : 'art05';
+  const docs = hasBearReplacement ? 'docs/arte-v5010' : 'docs/arte-v509';
+  const albinas = hasBearReplacement ? 303 : 302;
+  const melanicas = hasBearReplacement ? 261 : 262;
+  const { totals } = JSON.parse(readFileSync(docs + '/inventario-aud04.json', 'utf8'));
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, serviceWorkers: 'block' });
   try {
     const lab = await context.newPage();
@@ -376,16 +383,16 @@ async function art05Smoke(browser) {
     };
     await count(564);
     await audit('kind').selectOption('albino');
-    await count(302);
+    await count(albinas);
     await audit('kind').selectOption('melanico');
-    await count(262);
+    await count(melanicas);
     await audit('kind').selectOption('');
     await audit('state').selectOption('pendiente');
     await count(390);
     await audit('state').selectOption('');
     await audit('corrected').selectOption('with');
     const corrected = await cards.count();
-    assert.ok(corrected > 30 && corrected < 40);
+    assert.equal(corrected, totals.corregidas);
     await audit('comparison').selectOption('without');
     await count(0);
     await audit('comparison').selectOption('with');
@@ -396,8 +403,8 @@ async function art05Smoke(browser) {
     await count(564);
     await audit('family').selectOption('Ursidae');
     await audit('state').selectOption('insuficiente');
-    await count(1);
-    assert.equal(await cards.first().getAttribute('data-audit-key'), 'asia_esp_0523/melanico');
+    await count(hasBearReplacement ? 0 : 1);
+    if (!hasBearReplacement) assert.equal(await cards.first().getAttribute('data-audit-key'), 'asia_esp_0523/melanico');
     await audit('reset').click();
     await audit('sort').selectOption('state');
     assert.equal(await cards.first().getAttribute('data-art-state'), 'correcta');
@@ -409,7 +416,7 @@ async function art05Smoke(browser) {
     assert.deepEqual(families, [...families].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' })));
     await audit('sort').selectOption('priority');
     assert.equal(await cards.first().getAttribute('data-art-state'), 'insuficiente');
-    const screenshots = process.env.ATLAS_ART05_SCREENSHOTS;
+    const screenshots = process.env.ATLAS_ART06_SCREENSHOTS || process.env.ATLAS_ART05_SCREENSHOTS;
     assert.ok(await lab.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
     assert.ok(await lab.locator('#pigment-audit-filters label').evaluateAll(labels => labels.every(label =>
       label.firstElementChild.getBoundingClientRect().right <= label.getBoundingClientRect().right + 1)));
@@ -434,10 +441,16 @@ async function art05Smoke(browser) {
     await count(2);
     assert.match(await cards.filter({ hasText: 'Pseudomelanismo' }).textContent(), /Documentado/);
 
-    const { rows } = JSON.parse(readFileSync('docs/arte-v509/decisiones.json', 'utf8'));
+    const { rows } = JSON.parse(readFileSync(docs + '/decisiones.json', 'utf8'));
     const approved = rows.filter(row => row.outcome === 'aprobada');
-    await audit('search').fill(approved[0].id);
-    await audit('kind').selectOption(approved[0].variant);
+    const example = hasBearReplacement ? approved.find(row => row.id === 'asia_esp_0523') : approved[0];
+    await audit('search').fill(example.id);
+    if (hasBearReplacement) {
+      await count(1);
+      await audit('kind').selectOption('melanico');
+      await count(0);
+    }
+    await audit('kind').selectOption(example.variant);
     await count(1);
     await audit('backdrop').selectOption('dark');
     assert.equal(await lab.locator('.audit-gallery').getAttribute('data-audit-backdrop'), 'dark');
@@ -455,14 +468,19 @@ async function art05Smoke(browser) {
       assert.deepEqual(widths, [size, size, size]);
       sizes[size] = widths.length;
     }
+    if (hasBearReplacement) {
+      assert.match(await dialog.textContent(), /Melánico · variante retirada/);
+      assert.match(await dialog.locator('img').nth(1).getAttribute('src'), /review\/art06\/asia_esp_0523--melanico.webp$/);
+      assert.match(await dialog.locator('img').last().getAttribute('src'), /plates\/asia_esp_0523--albino.webp$/);
+    }
     if (screenshots) await lab.screenshot({ path: path.join(screenshots, 'ficha-ampliada.png') });
     await audit('detail-backdrop').selectOption('light');
     assert.equal(await audit('detail-content').getAttribute('data-audit-backdrop'), 'light');
     await dialog.getByRole('button', { name: 'Cerrar ficha' }).click();
     assert.ok(!(await dialog.isVisible()));
 
-    await lab.locator('[data-mode="art05"]').click();
-    const batch = lab.locator('[data-art05-species]');
+    await lab.locator('[data-mode="' + lot + '"]').click();
+    const batch = lab.locator('[data-' + lot + '-species]');
     assert.equal(await batch.count(), rows.length);
     await lab.locator('#comparison-size').selectOption('128');
     const correctedPlates = await batch.locator('img').evaluateAll(images =>
@@ -479,7 +497,26 @@ async function art05Smoke(browser) {
     assert.equal(await lab.locator('[data-pigment-key="albino"],[data-pigment-key="melanico"]').count(), 564);
     await lab.locator('[data-mode="art04"]').click();
     assert.equal(await lab.locator('[data-art04-species]').count(), 9);
-    await labArtworkPreviews(lab, { id: approved[0].id, key: approved[0].variant });
+    if (hasBearReplacement) {
+      await lab.locator('[data-mode="art03"]').click();
+      const retired = lab.locator('[data-art03-species="asia_esp_0523"]');
+      assert.match(await retired.textContent(), /Variante retirada en ART-06/);
+      assert.match(await retired.locator('img').last().getAttribute('src'), /review\/art06\/128\/asia_esp_0523--melanico.webp$/);
+      assert.equal(await decoded(retired.locator('img').last()), 128);
+    }
+    await labArtworkPreviews(lab, { id: example.id, key: example.variant });
+    if (hasBearReplacement) {
+      await lab.locator('[data-mode="compare"]').click();
+      await lab.locator('#species').selectOption(example.id);
+      await lab.locator('#scale-plate').selectOption('albino');
+      await lab.locator('#comparison-source').selectOption('original');
+      const references = lab.locator('#content img');
+      assert.deepEqual(await references.evaluateAll(images => images.map(img => img.getAttribute('src'))), [
+        'review/before/asia_esp_0523--melanico.webp',
+        'review/series-4.3/asia_esp_0523--melanico.webp'
+      ]);
+      assert.equal(await lab.locator('#content figcaption').filter({ hasText: 'Melánico histórico' }).count(), 2);
+    }
     await lab.setViewportSize({ width: 390, height: 844 });
     await lab.goto(link);
     await count(564);
@@ -490,7 +527,7 @@ async function art05Smoke(browser) {
     assert.ok(await dialog.isVisible());
     assert.ok(await dialog.evaluate(node => node.scrollWidth <= node.clientWidth + 1));
     assert.deepEqual(errors, []);
-    return { variants: 564, albinas: 302, melanicas: 262, corrected, sizes,
+    return { variants: 564, albinas, melanicas, corrected, sizes, ...(hasBearReplacement ? { retiredBearHistory: true } : {}),
       filtering: ['tipo', 'estado', 'familia', 'corrección', 'comparativa'],
       sorting: ['familia', 'nombre', 'estado', 'prioridad'], approved: approved.length,
       legacyVariantSelector: true, mobileWidth: 390, labVariantPreviews: artworkModules };
@@ -568,7 +605,8 @@ async function offlineRun(browser) {
       options.filter(o => ['albino', 'melanico', 'pigments'].includes(o.value)).map(o => o.value)), ['albino', 'melanico', 'pigments']);
     await lab.locator('[data-mode="variants"]').click();
     const pigmentCounts = {};
-    for (const [value, expected] of [['albino', 302], ['melanico', 262], ['pigments', 564]]) {
+    const bearReplaced = JSON.parse(readFileSync('www/atlas-release.json', 'utf8')).version === '5.0.10';
+    for (const [value, expected] of [['albino', bearReplaced ? 303 : 302], ['melanico', bearReplaced ? 261 : 262], ['pigments', 564]]) {
       await lab.locator('#variant-view').selectOption(value);
       const selector = value === 'pigments' ? '[data-pigment-key="albino"], [data-pigment-key="melanico"]' : '[data-pigment-key="' + value + '"]';
       pigmentCounts[value] = await lab.locator(selector).count();
@@ -589,8 +627,8 @@ async function offlineRun(browser) {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const browser = await chromium.launch({ executablePath: process.env.ATLAS_CHROMIUM || '/usr/bin/chromium', args: ['--no-sandbox'] });
   try {
-    if (process.env.ATLAS_ART05_SMOKE === '1') {
-      const audit = await art05Smoke(browser);
+    if (process.env.ATLAS_ART05_SMOKE === '1' || process.env.ATLAS_ART06_SMOKE === '1') {
+      const audit = await pigmentAuditSmoke(browser);
       console.log(JSON.stringify({ chromium: browser.version(), audit }, null, 2));
       return;
     }

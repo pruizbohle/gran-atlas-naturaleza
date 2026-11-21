@@ -1254,7 +1254,7 @@ const SPECIES={
   "asia_esp_0855":{"name": "Macaco rhesus", "latin": "Macaca mulatta", "rare": "Común", "kind": "primate", "color": "#aa907a", "habitats": ["bosque", "montana", "pradera", "estepa", "tundra"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": false},
   "asia_esp_0850":{"name": "Marta de garganta amarilla", "latin": "Martes flavigula", "rare": "Común", "kind": "mustelid", "color": "#a07a49", "habitats": ["bosque", "montana", "pradera", "estepa", "tundra"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": false},
   "asia_esp_0844":{"name": "Ardilla voladora gigante roja", "latin": "Petaurista petaurista", "rare": "Poco común", "kind": "small", "color": "#9b5343", "habitats": ["bosque", "montana", "pradera", "estepa", "tundra"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Leucístico", "Melánico", "Notable"], "dimorphism": false},
-  "asia_esp_0523":{"name": "Oso negro asiático", "latin": "Ursus thibetanus", "rare": "Poco común", "kind": "bear", "color": "#28282b", "habitats": ["bosque", "montana", "pradera", "tundra", "estepa"], "times": ["amanecer", "atardecer", "noche"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": false},
+  "asia_esp_0523":{"name": "Oso negro asiático", "latin": "Ursus thibetanus", "rare": "Poco común", "kind": "bear", "color": "#28282b", "habitats": ["bosque", "montana", "pradera", "tundra", "estepa"], "times": ["amanecer", "atardecer", "noche"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Albino", "Notable"], "dimorphism": false},
   "asia_esp_0062":{"name": "Yak salvaje", "latin": "Bos mutus", "rare": "Raro", "kind": "bison", "color": "#514037", "habitats": ["montana", "pradera", "bosque", "tundra", "estepa"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": true},
   "asia_esp_0821":{"name": "Takin", "latin": "Budorcas taxicolor", "rare": "Poco común", "kind": "bison", "color": "#907357", "habitats": ["montana", "pradera", "bosque", "tundra", "estepa"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": false},
   "asia_esp_0240":{"name": "Tahr del Himalaya", "latin": "Hemitragus jemlahicus", "rare": "Común", "kind": "deer", "color": "#a38c6c", "habitats": ["montana", "pradera", "bosque", "tundra", "estepa"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Leucístico", "Melánico", "Notable"], "dimorphism": false},
@@ -1943,6 +1943,19 @@ function normalizeSpecialDiscoveries(snapshot){
    records[id]=unified;
   }
   snapshot.specialFound=records;
+ }
+ // V5.0.10: conservar el progreso de la ranura pigmentaria del oso al sustituir su variante.
+ const bearId='asia_esp_0523';
+ const foundBear=snapshot.specialFound?.[bearId];
+ if(foundBear&&typeof foundBear==='object'&&Object.hasOwn(foundBear,'Melánico')){
+  foundBear.Albino=Boolean(foundBear.Albino||foundBear.Melánico);
+  delete foundBear.Melánico;
+ }
+ const countedBear=snapshot.specialCounts[bearId];
+ for(const label of Object.keys(countedBear||{})){
+  if(specialVariantName(label)!=='Melánico')continue;
+  countedBear.Albino=(Number(countedBear.Albino)||0)+(Number(countedBear[label])||0);
+  delete countedBear[label];
  }
  // Historical diary text and last encounter must not expose a second category.
  const text=value=>typeof value==='string'?value.replace(/leucístic[oa]/gi,'Albino'):value;
@@ -3288,7 +3301,8 @@ function fieldBackdropMarkup(habitat){return globalThis.AtlasFieldScene.render(h
 function fieldEncounterModel(last){
  const entries=(Array.isArray(last?.entries)?last.entries:[]).filter(e=>SPECIES[e.id]).slice(0,3).map((e,index)=>{
   const individual=(e.category==='Legendario'||e.variant==='Legendario')?legendaryForSpecies(e.id):null;
-  return {...e,name:(individual?individual.name+' — ':'')+visibleName(e.id),image:animalMarkup(e.id,{variant:e.variant,category:e.category,sex:e.sex,eager:true,surface:'field'}),amount:Number(e.amount)||1,sexLabel:e.sex==='male'?'macho':'hembra',sexNew:!!(index===0&&e.sex&&last?.subtitle?.includes('primera observación'))};
+  const variant=e.id==='asia_esp_0523'&&specialVariantName(e.variant)==='Melánico'?'Melánico (histórico)':e.variant;
+  return {...e,variant,name:(individual?individual.name+' — ':'')+visibleName(e.id),image:animalMarkup(e.id,{variant:e.variant,category:e.category,sex:e.sex,eager:true,surface:'field'}),amount:Number(e.amount)||1,sexLabel:e.sex==='male'?'macho':'hembra',sexNew:!!(index===0&&e.sex&&last?.subtitle?.includes('primera observación'))};
  });
  if(!entries.length&&last?.species&&SPECIES[last.species])entries.push({id:last.species,name:visibleName(last.species),image:last.sprite||animalMarkup(last.species,{eager:true}),amount:1});
  const knowledge=(last?.subtitle||'').match(/\+\d+ conocimiento/),money=(last?.subtitle||'').match(/\+£\d+/),sample=(last?.subtitle||'').match(/muestra obtenida: ([^,·]+)/);

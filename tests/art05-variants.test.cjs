@@ -11,7 +11,7 @@ const current = require('../docs/arte-v509/inventario-aud04.json');
 const decisions = require('../docs/arte-v509/decisiones.json');
 const integrity = require('../docs/arte-v509/integridad.json');
 const release = require('../www/atlas-integrity.json').files;
-const { version } = require('../www/atlas-release.json');
+const publishedFile = file => execFileSync('git', ['show', '415b36a:www/' + file], { maxBuffer: 4 * 1024 * 1024 });
 require('../www/js/naturalist-assets-v400.js');
 const assets = globalThis.AtlasNaturalistAssets;
 
@@ -47,13 +47,12 @@ test('ART-05 changes only approved WebPs and archives the originals at all four 
   }
   const baseRelease = JSON.parse(baselineFile('atlas-integrity.json')).files;
   const nature = files => Object.keys(files).filter(file => file.startsWith('naturalist-art/plates/'));
-  const plates = nature(release);
+  const published = JSON.parse(publishedFile('atlas-integrity.json')).files;
+  const plates = nature(published);
   assert.deepEqual(plates, nature(baseRelease));
   assert.equal(plates.length, 1672 * sizes.length);
-  if (version === '5.0.9') {
-    const releasesChanged = plates.filter(file => baseRelease[file][1] !== release[file][1]);
-    assert.deepEqual(new Set(releasesChanged), changed);
-  }
+  const releasesChanged = plates.filter(file => baseRelease[file][1] !== published[file][1]);
+  assert.deepEqual(new Set(releasesChanged), changed);
 });
 
 test('ART-05 preserves 174 audited variants and intervenes only in previously recorded defects', () => {
@@ -85,9 +84,10 @@ test('ART-05 preserves 174 audited variants and intervenes only in previously re
 });
 
 test('ART-05 viewer includes every configured pigment and mirrors the current audit', () => {
-  const script = fs.readFileSync('www/naturalist-art/pigment-audit-data.js', 'utf8');
+  const script = publishedFile('naturalist-art/pigment-audit-data.js').toString('utf8');
   const records = vm.runInNewContext(script + '\nJSON.stringify(pigmentAuditRecords)');
   const items = JSON.parse(records);
+  const published = JSON.parse(publishedFile('atlas-integrity.json')).files;
   assert.equal(items.length, 564);
   assert.equal(new Set(items.map(key)).size, 564);
   assert.equal(items.filter(row => row.variant === 'albino').length, 302);
@@ -98,6 +98,6 @@ test('ART-05 viewer includes every configured pigment and mirrors the current au
     assert.equal(key(item), key(row));
     assert.equal(item.state, row.visualState);
     assert.equal(item.finding, row.observation);
-    assert.ok(assets.routes[item.id][item.variant], key(item));
+    assert.ok(published['naturalist-art/plates/' + row.plate], key(item));
   }
 });

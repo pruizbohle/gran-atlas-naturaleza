@@ -53,3 +53,7 @@ ART-04 corrigió nueve variantes previamente clasificadas como insuficientes. AU
 ## Continuidad en V5.0.9
 
 ART-05 corrigió ocho variantes con diagnóstico previo y añadió un visor global con las 564 albinas y melánicas. AUD-04 mantiene 174 examinadas con 47 correctas, 104 mejorables, 23 insuficientes y 390 pendientes de evaluación. [Informe y visor](../arte-v509/README.md) · [Inventario vigente](../arte-v509/inventario-aud04.json)
+
+## Continuidad en V5.0.10
+
+ART-06 aprobó ocho correcciones de variantes insuficientes y sustituyó el oso tibetano melánico por un albino interpretativo en el mismo registro auditado. AUD-04 conserva 174 variantes examinadas, con 56 correctas, 104 mejorables, 14 insuficientes y 390 pendientes de evaluación. [Informe y selección con el visor](../arte-v5010/README.md) · [Inventario vigente](../arte-v5010/inventario-aud04.json)
