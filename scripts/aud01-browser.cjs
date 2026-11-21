@@ -307,6 +307,58 @@ async function art03Checks(page, lab) {
     renderedGameSurfaces: artworkModules, labVariantPreviews: artworkModules };
 }
 
+async function art04Smoke(browser) {
+  const context = await browser.newContext({ ...mobile, serviceWorkers: 'block' });
+  try {
+    const lab = await context.newPage();
+    const errors = [];
+    lab.on('pageerror', err => errors.push(err.message));
+    await lab.goto(origin() + '/audit/naturalist-art/');
+    await lab.locator('[data-mode="art04"]').click();
+
+    const { rows } = JSON.parse(readFileSync('docs/arte-v508/decisiones.json', 'utf8'));
+    const approved = rows.filter(row => row.outcome === 'aprobada');
+    const comparisons = lab.locator('[data-art04-species]');
+    assert.equal(await comparisons.count(), rows.length);
+    for (const row of approved) {
+      const card = comparisons.and(lab.locator('[data-art04-species="' + row.id + '"][data-art04-variant="' + row.variant + '"]'));
+      assert.equal(await card.locator('img').count(), 3);
+      assert.ok((await card.locator('.morph-facts dd').allTextContents()).includes('V5.0.8'));
+    }
+    const sizes = {};
+    for (const size of [64, 128, 256, 512]) {
+      await lab.locator('#comparison-size').selectOption(String(size));
+      const widths = await comparisons.locator('img').evaluateAll(images =>
+        Promise.all(images.map(async img => {
+          img.loading = 'eager';
+          await img.decode();
+          return img.naturalWidth;
+        })));
+      assert.equal(widths.length, approved.length * 3 + (rows.length - approved.length) * 2);
+      assert.ok(widths.every(width => width === size), String(size));
+      sizes[size] = widths.length;
+    }
+    for (const backdrop of ['dark', 'light']) {
+      await lab.locator('#backdrop').selectOption(backdrop);
+      assert.equal(await lab.locator('#content').getAttribute('data-backdrop'), backdrop);
+    }
+    await lab.locator('#family').selectOption('Elephantidae');
+    assert.equal(await comparisons.count(), 2);
+    await lab.locator('#family').selectOption('');
+    for (const [lot, count] of [['art01', 11], ['art02', 7], ['art03', 7]]) {
+      await lab.locator('[data-mode="' + lot + '"]').click();
+      assert.equal(await lab.locator('[data-' + lot + '-species]').count(), count);
+      assert.equal(await decoded(lab.locator('[data-' + lot + '-species] img')), 512);
+    }
+    await labArtworkPreviews(lab, { id: 'af_facoquero', key: 'melanico' });
+    assert.deepEqual(errors, []);
+    return { sizes, comparisons: rows.length, approved: approved.length, priorLots: ['art01', 'art02', 'art03'],
+      labVariantPreviews: artworkModules };
+  } finally {
+    await context.close();
+  }
+}
+
 async function offlineRun(browser) {
   const context = await browser.newContext(mobile);
   const transition = process.env.AUD05_PWA_TRANSITION === '1';
@@ -397,6 +449,10 @@ async function offlineRun(browser) {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const browser = await chromium.launch({ executablePath: process.env.ATLAS_CHROMIUM || '/usr/bin/chromium', args: ['--no-sandbox'] });
   try {
+    if (process.env.ATLAS_ART04_SMOKE === '1') {
+      console.log(JSON.stringify({ chromium: browser.version(), lab: await art04Smoke(browser) }, null, 2));
+      return;
+    }
     const runs = [];
     if (process.env.AUD05_PWA_ONLY !== '1') {
       for (const id of ['base', 'audit', 'audit', 'base', 'base', 'audit']) runs.push(await performanceRun(browser, id));

@@ -45,3 +45,7 @@ ART-02 incorpora 32 evaluaciones visuales de Ursidae, Cervidae y Bovidae, docume
 ## Continuidad en V5.0.7
 
 ART-03 revisa 34 variantes nuevas, incorpora seis sustituciones y establece la revisión ocular para futuras correcciones. El total alcanza 174 de 564 variantes. [Informe y comparativas](../arte-v507/README.md) · [Inventario vigente](../arte-v507/inventario-aud04.json) · [Estándar de pigmentación ocular](../cientifica-v440/estandar.md#pigmentación-ocular-de-variantes-especiales--vigente-desde-v507)
+
+## Continuidad en V5.0.8
+
+ART-04 corrigió nueve variantes previamente clasificadas como insuficientes. AUD-04 registra 174 variantes examinadas, 39 correctas, 104 mejorables, 31 insuficientes y 390 pendientes de evaluación. [Informe y comparativas](../arte-v508/README.md) · [Inventario vigente](../arte-v508/inventario-aud04.json)

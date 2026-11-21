@@ -6,9 +6,9 @@ const fs = require('node:fs');
 
 const root = 'www/naturalist-art';
 
-function buildVariantReview({ lot, previousLot, review, supersededArchive, version }) {
+function buildVariantReview({ lot, previousLot, review, supersededArchive, version, correctionsOnly = false }) {
   const baseline = JSON.parse(fs.readFileSync('docs/' + previousLot + '/inventario-aud04.json'));
-  const evaluations = JSON.parse(fs.readFileSync(lot + '/evaluaciones.json'));
+  const evaluations = correctionsOnly ? [] : JSON.parse(fs.readFileSync(lot + '/evaluaciones.json'));
   const decisions = JSON.parse(fs.readFileSync(lot + '/decisiones.json'));
   const sizes = [64, 128, 256, 512];
   const key = row => row.id + '/' + row.variant;
@@ -32,6 +32,7 @@ function buildVariantReview({ lot, previousLot, review, supersededArchive, versi
     const id = key(decision);
     const row = entries.get(id);
     assert.ok(row && row.visualState !== 'pendiente' && !seen.has(id), id);
+    if (correctionsOnly) assert.ok(['insuficiente', 'mejorable'].includes(row.visualState), id);
     seen.add(id);
     const { outcome, morph, evidence, note, rejected, history, eye } = decision;
     const approved = outcome === 'aprobada';
@@ -63,7 +64,7 @@ function buildVariantReview({ lot, previousLot, review, supersededArchive, versi
       if (row.bytesRatio < 0.55) row.lowWeight = true;
       else delete row.lowWeight;
     }
-    const priorReview = ['art02', 'art01'].find(name => row[name]?.outcome === 'aprobada');
+    const priorReview = ['art03', 'art02', 'art01'].find(name => row[name]?.outcome === 'aprobada');
     row[review] = { priorState: row.visualState, priorFinding: row.observation, outcome, morph, evidence,
       ...(rejected ? { rejected } : {}), ...(eye ? { eye } : {}), ...(version ? { version } : {}) };
     if (decision.state) {
@@ -87,7 +88,7 @@ function buildVariantReview({ lot, previousLot, review, supersededArchive, versi
   for (const row of entries.values()) {
     totals[row.visualState]++;
     if (row.visualState !== 'pendiente') totals.auditadas++;
-    if (['art01', 'art02', 'art03'].some(name => row[name]?.outcome === 'aprobada')) totals.corregidas++;
+    if (['art01', 'art02', 'art03', 'art04'].some(name => row[name]?.outcome === 'aprobada')) totals.corregidas++;
   }
   assert.equal(totals.auditadas, baseline.totals.auditadas + evaluations.length);
   const inventory = { baseline: decisions.baseline, states: baseline.states, totals,

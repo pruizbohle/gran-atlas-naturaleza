@@ -26,7 +26,7 @@ for (const [value, label] of [
 const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
-  gallery: 'Galería', variants: 'Variantes', art01: 'Variantes revisadas en ART-01', art02: 'Variantes revisadas en ART-02', art03: 'Variantes revisadas en ART-03', frames: 'Ejemplares especiales',
+  gallery: 'Galería', variants: 'Variantes', art01: 'Variantes revisadas en ART-01', art02: 'Variantes revisadas en ART-02', art03: 'Variantes revisadas en ART-03', art04: 'Variantes corregidas en ART-04', frames: 'Ejemplares especiales',
   compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles', amphibians: 'Comparar anfibios', cartilaginous: 'Comparar tiburones y rayas',
   salmonids: 'Comparar salmónidos', freshwater: 'Comparar peces de agua dulce', reef: 'Comparar peces de arrecife', deep: 'Comparar peces de aguas profundas', marine: 'Comparar peces marinos', cephalopods: 'Comparar cefalópodos', legendary: 'Colección de legendarios',
   compression: 'Compresión WebP', scale: 'Escala real', 'visual-scale': 'Ajustes de escala', review: 'Revisión artística'
@@ -175,11 +175,12 @@ function pigmentGallery() {
     }).join('') + '</div>';
 }
 
-const artReviews = { art01: art01Review, art02: art02Review, art03: art03Review };
+const artReviews = { art01: art01Review, art02: art02Review, art03: art03Review, art04: art04Review };
 
 function artComparisons(lot) {
   const speciesById = new Map(matchingSpecies().map(sp => [sp.id, sp]));
   const rows = artReviews[lot].filter(row => speciesById.has(row.id));
+  const releases = Object.values(artReviews).flat();
   const size = Number(comparisonSize.value);
   byId('summary').textContent = rows.length + ' variantes del lote';
   if (!rows.length) return '<p>No se encontraron variantes con estos filtros.</p>';
@@ -193,7 +194,7 @@ function artComparisons(lot) {
       'Normal', 'plate atlas-art-cutout');
     const previous = row.before?.[size];
     const legacy = row.legacy?.[size];
-    const subsequent = [...art02Review, ...art03Review].find(item =>
+    const subsequent = releases.find(item =>
       (item.supersedes === lot || item.supersedesArt01 && lot === 'art01') &&
       item.id === row.id && item.variant === row.variant);
     const published = subsequent?.before[size];

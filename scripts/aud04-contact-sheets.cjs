@@ -19,7 +19,7 @@ for(const name of fs.readdirSync(auditDir).filter(name=>/^aud04-.*\.json$/.test(
   if(row.status&&row.finding)variants.set(row.id+'/'+row.variant,{visualState:row.status,observation:row.finding});
  }
 }
-const current=path.join(root,'docs/arte-v507/inventario-aud04.json');
+const current=path.join(root,'docs/arte-v508/inventario-aud04.json');
 if(fs.existsSync(current)){
  for(const row of JSON.parse(fs.readFileSync(current,'utf8')).variants)variants.set(row.id+'/'+row.variant,row);
 }
