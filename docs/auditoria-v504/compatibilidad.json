@@ -1,0 +1,64 @@
+{
+  "chromium": "156.0.8078.79",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "simulatedCPUThrottling": 4,
+  "interaction": {
+    "newDiscovery": true,
+    "touchScroll": 165,
+    "keyboardPaging": true,
+    "savedSearch": true,
+    "landscape": true,
+    "oldBackupImported": "3.19.9",
+    "verifiedFields": 7
+  },
+  "interruptedStartup": {
+    "version": "candidate",
+    "closedAfterLoad": true,
+    "exactBeforeReopen": true,
+    "fields": [
+      "sightings",
+      "money",
+      "knowledge",
+      "inventory",
+      "published",
+      "purchases",
+      "specialCounts",
+      "legendaryFound",
+      "stages",
+      "voyages",
+      "voyageSettled"
+    ]
+  },
+  "pwa": {
+    "integrityVerified": true,
+    "exactBackup": true,
+    "previousCaches": [
+      "gran-atlas-v5.0.3-naturalist-02a954eed08d"
+    ],
+    "unchangedSaveReceipt": {
+      "money": 20006,
+      "knowledge": 32624,
+      "prestige": 23,
+      "currentRegion": "HX-02-11",
+      "sightings": 75323,
+      "published": 23
+    },
+    "bestiaryOffline": 1000,
+    "caches": {
+      "gran-atlas-v5.0.4-naturalist-36615deb5253": 6931
+    },
+    "pigmentCounts": {
+      "albino": 302,
+      "melanico": 262,
+      "pigments": 564
+    }
+  },
+  "android": {
+    "versionName": "5.0.4",
+    "versionCode": 50004,
+    "physicalTest": false
+  }
+}

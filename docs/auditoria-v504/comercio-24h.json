@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "hours": 8,
+      "helpers": 10,
+      "version": "base",
+      "trade": {
+        "pending": 1,
+        "receipts": []
+      }
+    },
+    {
+      "hours": 8,
+      "helpers": 10,
+      "version": "candidate",
+      "trade": {
+        "pending": 1,
+        "receipts": []
+      }
+    },
+    {
+      "hours": 72,
+      "helpers": 10,
+      "version": "base",
+      "trade": {
+        "pending": 0,
+        "receipts": [
+          {
+            "id": 4,
+            "route": "ocean_trade",
+            "at": 1700357400000,
+            "money": 1350,
+            "rewards": {
+              "brass_shard": 5,
+              "polished_lens": 4,
+              "old_ink": 3,
+              "carved_wood": 6
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hours": 72,
+      "helpers": 10,
+      "version": "candidate",
+      "trade": {
+        "pending": 0,
+        "receipts": [
+          {
+            "id": 4,
+            "route": "ocean_trade",
+            "at": 1700357400000,
+            "money": 1350,
+            "rewards": {
+              "brass_shard": 5,
+              "polished_lens": 4,
+              "old_ink": 3,
+              "carved_wood": 6
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
