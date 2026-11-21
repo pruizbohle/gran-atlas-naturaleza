@@ -140,41 +140,55 @@ async function advancedRun(browser, file, source, waitUntilDrained) {
     await context.close();
   }
 }
-async function art01Checks(page, lab) {
-  const decoded = locator => locator.first().evaluate(async img => {
-    img.loading = 'eager';
-    await img.decode();
-    return img.naturalWidth;
-  });
+const artworkModules = ['field', 'journal', 'bestiary', 'museum'];
+const decoded = locator => locator.first().evaluate(async img => {
+  img.loading = 'eager';
+  await img.decode();
+  return img.naturalWidth;
+});
+
+async function gameArtworkChecks(page, specimen) {
   const tabs = name => page.locator('.tab[data-tab="' + name + '"]').first().evaluate(node => node.click());
   // A disposable save exercises ordinary presentation of an already observed variant.
-  await page.evaluate(() => {
+  await page.evaluate(({ id, name, variant }) => {
     const save = AtlasSaveBridge.getSaveData();
-    const id = 'zorro_rojo';
     save.currentRegion = 'HX-01-09';
     save.selectedJournal = id;
     save.discovered[id] = true;
     save.published[id] = true;
     save.stages[id] = 5;
     save.sightings[id] = 500;
-    save.specialFound[id] = { Albino: true, Melánico: true };
-    save.lastEncounter = { species: id, sequence: 900, title: 'Zorro rojo', subtitle: '',
-      entries: [{ id, variant: 'Melánico', note: [], amount: 1 }] };
+    save.specialFound[id] = { [variant]: true };
+    save.lastEncounter = { species: id, sequence: 900, title: name, subtitle: '',
+      entries: [{ id, variant, note: [], amount: 1 }] };
     AtlasSaveBridge.restoreGame(save);
-  });
-  const melanic = 'img[src$="/zorro_rojo--melanico.webp"]';
+  }, specimen);
+  const variantImage = 'img[src$="/' + specimen.id + '--' + specimen.key + '.webp"]';
   await tabs('field');
-  await decoded(page.locator('#fieldResult ' + melanic));
+  await decoded(page.locator('#fieldResult ' + variantImage));
   await tabs('journal');
-  await decoded(page.locator('#journalSelectedSheet ' + melanic));
+  await decoded(page.locator('#journalSelectedSheet ' + variantImage));
   await tabs('bestiary');
-  await page.locator('#b26-search').fill('zorro rojo');
+  await page.locator('#b26-search').fill(specimen.name);
   await page.locator('[data-b26-collection] summary').first().evaluate(node => node.click());
-  await decoded(page.locator('[data-b26-collection] ' + melanic));
+  await decoded(page.locator('[data-b26-collection] ' + variantImage));
   await tabs('museum');
   await page.locator('[data-action="museum-tab"][data-id="samples"]').evaluate(node => node.click());
-  await decoded(page.locator('.m27-grid img[src$="/zorro_rojo--normal.webp"]'));
+  await decoded(page.locator('.m27-grid img[src$="/' + specimen.id + '--normal.webp"]'));
+}
 
+async function labArtworkPreviews(lab, specimen) {
+  for (const mode of artworkModules) {
+    await lab.locator('[data-mode="' + mode + '"]').click();
+    await lab.locator('#species').selectOption(specimen.id);
+    await lab.locator('#scale-plate').selectOption(specimen.key);
+    await decoded(lab.locator('#content img[src$="/' + specimen.id + '--' + specimen.key + '.webp"]'));
+  }
+}
+
+async function art01Checks(page, lab) {
+  const fox = { id: 'zorro_rojo', name: 'zorro rojo', variant: 'Melánico', key: 'melanico' };
+  await gameArtworkChecks(page, fox);
   await lab.locator('[data-mode="art01"]').click();
   const archive = lab.locator('[data-art01-species]');
   assert.equal(await archive.count(), 11);
@@ -201,20 +215,58 @@ async function art01Checks(page, lab) {
   assert.equal(await archive.count(), 2);
   await lab.locator('#search').fill('');
   await lab.locator('#family').selectOption('');
-  for (const mode of ['field', 'journal', 'bestiary', 'museum']) {
-    await lab.locator('[data-mode="' + mode + '"]').click();
-    await lab.locator('#species').selectOption('zorro_rojo');
-    await lab.locator('#scale-plate').selectOption('melanico');
-    await decoded(lab.locator('#content ' + melanic));
+  await labArtworkPreviews(lab, fox);
+  return { sizes, renderedGameSurfaces: artworkModules,
+    labVariantPreviews: artworkModules, archivedVariants: 11 };
+}
+
+async function art02Checks(page, lab) {
+  const badger = { id: 'tejon_europeo', name: 'tejón europeo', variant: 'Albino', key: 'albino' };
+  await gameArtworkChecks(page, badger);
+  await lab.locator('[data-mode="art02"]').click();
+  const archive = lab.locator('[data-art02-species]');
+  assert.equal(await archive.count(), 7);
+  const tiger = archive.filter({ hasText: 'Pseudomelanismo' });
+  assert.equal(await tiger.getAttribute('data-art02-species'), 'asia_esp_0402');
+  assert.equal(await tiger.getAttribute('data-art02-variant'), 'melanico');
+  assert.deepEqual(await tiger.locator('.morph-facts dd').allTextContents(), ['Melánico', 'Pseudomelanismo · Documentado']);
+  const otter = lab.locator('[data-art02-species="nutria_europea"]');
+  assert.equal(await otter.locator('img').count(), 4);
+  assert.deepEqual(await otter.locator('.morph-facts dd').allTextContents(), ['Melánico', 'Melanismo · Interpretativo']);
+
+  const sizes = {};
+  for (const size of [64, 128, 256, 512]) {
+    await lab.locator('#comparison-size').selectOption(String(size));
+    const widths = await archive.locator('img').evaluateAll(images =>
+      Promise.all(images.map(async img => {
+        img.loading = 'eager';
+        await img.decode();
+        return img.naturalWidth;
+      })));
+    assert.equal(widths.length, 22);
+    assert.ok(widths.every(width => width === size), String(size));
+    sizes[size] = widths.length;
   }
-  return { sizes, renderedGameSurfaces: ['field', 'journal', 'bestiary', 'museum'],
-    labVariantPreviews: ['field', 'journal', 'bestiary', 'museum'], archivedVariants: 11 };
+  for (const backdrop of ['dark', 'light']) {
+    await lab.locator('#backdrop').selectOption(backdrop);
+    assert.equal(await lab.locator('#content').getAttribute('data-backdrop'), backdrop);
+  }
+  await lab.locator('#family').selectOption('Felidae');
+  assert.equal(await archive.count(), 2);
+  await lab.locator('#search').fill('acinonyx');
+  assert.equal(await archive.count(), 1);
+  await lab.locator('#search').fill('');
+  await lab.locator('#family').selectOption('');
+  await labArtworkPreviews(lab, badger);
+  return { sizes, archivedComparisons: 7, tigerMorph: 'Pseudomelanismo', renderedGameSurfaces: artworkModules,
+    labVariantPreviews: artworkModules };
 }
 
 async function offlineRun(browser) {
   const context = await browser.newContext(mobile);
   const transition = process.env.AUD05_PWA_TRANSITION === '1';
   const inspectArt01 = process.env.ATLAS_ART01 === '1';
+  const inspectArt02 = process.env.ATLAS_ART02 === '1';
   const candidate = sources.audit;
   try {
     const fixture = process.env.AUD05_PWA_SAVE;
@@ -260,7 +312,7 @@ async function offlineRun(browser) {
     for (const previous of previousCaches) assert.ok(!(previous in caches));
     const lab = await context.newPage();
     lab.on('pageerror', err => errors.push(err.message));
-    if (inspectArt01) {
+    if (inspectArt01 || inspectArt02) {
       await lab.goto(url + 'naturalist-art/');
       await lab.locator('#review-offline').click();
       await lab.getByText('Comparaciones listas para usar sin conexión.').waitFor({ timeout: 160000 });
@@ -285,9 +337,10 @@ async function offlineRun(browser) {
       assert.equal(pigmentCounts[value], expected);
     }
     const art01 = inspectArt01 ? await art01Checks(page, lab) : undefined;
+    const art02 = inspectArt02 ? await art02Checks(page, lab) : undefined;
     assert.deepEqual(errors, []);
     return { integrityVerified: true, exactBackup: true, previousCaches,
-      unchangedSaveReceipt: JSON.parse(saved), bestiaryOffline: 1000, caches, pigmentCounts, art01 };
+      unchangedSaveReceipt: JSON.parse(saved), bestiaryOffline: 1000, caches, pigmentCounts, art01, art02 };
   } finally {
     sources.audit = candidate;
     await context.close();

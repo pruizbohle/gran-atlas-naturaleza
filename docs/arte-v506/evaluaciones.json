@@ -1,0 +1,386 @@
+[
+  {
+    "id": "af_ciervo_berberia",
+    "variant": "albino",
+    "family": "Cervidae",
+    "status": "mejorable",
+    "observation": "La cornamenta ramificada y la gorguera siguen presentes, pero ambas pierden el contorno sobre papel a 128 px. Falta separación tonal entre el hocico y el cuello.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0050",
+    "variant": "melanico",
+    "family": "Cervidae",
+    "status": "mejorable",
+    "observation": "El moteado del flanco conserva la pauta de Axis y se ve sobre papel. En fondo oscuro se debilitan las puntas de las astas y las patas finas a 64 px.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0086",
+    "variant": "albino",
+    "family": "Cervidae",
+    "status": "mejorable",
+    "observation": "Orejas, cuerna corta y escudo caudal siguen definidos sobre fondo oscuro. El ojo, el hocico y la pata posterior pierden separación sobre papel.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0086",
+    "variant": "melanico",
+    "family": "Cervidae",
+    "status": "insuficiente",
+    "observation": "La cara, las astas cortas y los bordes de las cuatro patas se funden con el fondo oscuro. Apenas queda visible el volumen del escudo caudal.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0111",
+    "variant": "melanico",
+    "family": "Cervidae",
+    "status": "mejorable",
+    "observation": "Todavía se distinguen manchas, escudo caudal y ramificación de las astas. La frente y el cuello forman una zona negra poco articulada, en especial a 128 px.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0149",
+    "variant": "albino",
+    "family": "Cervidae",
+    "status": "mejorable",
+    "observation": "Las palas identifican al gamo en fondo oscuro. El contraste entre el moteado claro y los tejidos del rostro resulta débil sobre papel.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0149",
+    "variant": "melanico",
+    "family": "Cervidae",
+    "status": "mejorable",
+    "observation": "Las astas palmeadas y el moteado se reconocen sobre papel. En oscuro casi desaparecen las puntas de las palas y el borde de la pata anterior.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0249",
+    "variant": "melanico",
+    "family": "Cervidae",
+    "status": "insuficiente",
+    "observation": "Los caninos prolongados y la ausencia de astas aún se leen sobre papel. En oscuro se pierden colmillos, ojo y patas distales, tres referencias para reconocer la especie.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0336",
+    "variant": "albino",
+    "family": "Ursidae",
+    "status": "insuficiente",
+    "observation": "Se reconoce el pelo largo del oso bezudo, pero el hocico, las garras y la marca gular pierden separación sobre papel. El ojo carece de volumen a 128 px.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0345",
+    "variant": "melanico",
+    "family": "Cervidae",
+    "status": "mejorable",
+    "observation": "Los pedículos, las orejas y un colmillo se ven sobre papel. El oscurecimiento uniforma la sutura de la mandíbula y el pedículo del lado lejano.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0523",
+    "variant": "melanico",
+    "family": "Ursidae",
+    "status": "insuficiente",
+    "observation": "El oso de referencia ya es negro. La lámina vuelve más opacos el rostro y la pata delantera, con muy poca separación de la marca pectoral en fondo oscuro.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "corzo_europeo",
+    "variant": "albino",
+    "family": "Cervidae",
+    "status": "mejorable",
+    "observation": "Las tres puntas de la cuerna y el escudo caudal se conservan sobre oscuro. Sobre papel el ojo y la articulación distal posterior casi desaparecen.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "na_esp_cervus_canadensis",
+    "variant": "albino",
+    "family": "Cervidae",
+    "status": "mejorable",
+    "observation": "La gorguera densa y las astas largas dan identidad al uapití. Las puntas y la apertura de la boca se desdibujan sobre los fondos claros.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "na_esp_odocoileus_hemionus",
+    "variant": "albino",
+    "family": "Cervidae",
+    "status": "mejorable",
+    "observation": "Las orejas anchas y las astas bifurcadas distinguen al ciervo mulo. El extremo de la cola y el ojo apenas se separan del resto en miniatura clara.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "na_esp_odocoileus_virginianus",
+    "variant": "albino",
+    "family": "Cervidae",
+    "status": "mejorable",
+    "observation": "La cara interna blanca de la cola aún se separa del cuerpo y el cuello conserva volumen. Las puntas de la cuerna en papel necesitan más definición.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "na_esp_odocoileus_virginianus",
+    "variant": "melanico",
+    "family": "Cervidae",
+    "status": "insuficiente",
+    "observation": "El borde de la cola y la mandíbula se apagan junto con las patas del lado lejano. En oscuro cuesta distinguirlo del corzo melánico.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "na_esp_ursus_americanus",
+    "variant": "albino",
+    "family": "Ursidae",
+    "status": "mejorable",
+    "observation": "Se conservan orejas redondeadas, perfil del hocico y posición de la pata en marcha. Falta separación entre ojo, nariz y pelaje corto en papel.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "reno",
+    "variant": "albino",
+    "family": "Cervidae",
+    "status": "mejorable",
+    "observation": "El ramal frontal y la amplitud de las pezuñas son legibles en oscuro. La lámina pierde ramas finas de las astas y perfil nasal en papel a 128 px.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_antilope_bongo",
+    "variant": "albino",
+    "family": "Bovidae",
+    "status": "mejorable",
+    "observation": "Las líneas laterales y los cuernos espirales separan al bongo de los cérvidos. El morro conserva una zona oscura que requiere revisar la interpretación como albino.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_antilope_bongo",
+    "variant": "melanico",
+    "family": "Bovidae",
+    "status": "correcta",
+    "observation": "El dorso es oscuro y mantiene franjas laterales tenues, cuernos espirales y medias claras. El tronco y las patas preservan volumen a 128 px.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_bufalo_cafre",
+    "variant": "albino",
+    "family": "Bovidae",
+    "status": "mejorable",
+    "observation": "Se distingue la base ancha de los cuernos con sus puntas ascendentes. El perfil de las orejas y el plano del hocico pierden contraste sobre papel.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_bufalo_cafre",
+    "variant": "melanico",
+    "family": "Bovidae",
+    "status": "insuficiente",
+    "observation": "La cabeza queda demasiado próxima al negro del tronco. En miniatura oscura se funden el puente de los cuernos, la nariz y las dos patas delanteras.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_orix",
+    "variant": "albino",
+    "family": "Bovidae",
+    "status": "mejorable",
+    "observation": "Los cuernos rectos y las marcas laterales siguen presentes. El fuerte contraste residual en la máscara necesita una interpretación explícita del morfo, y las puntas se pierden sobre papel.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_orix",
+    "variant": "melanico",
+    "family": "Bovidae",
+    "status": "insuficiente",
+    "observation": "El oscurecimiento deja la máscara prácticamente fusionada con el cuello. Sobre fondo oscuro se pierden las puntas de los cuernos y la separación de los miembros más lejanos.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_nu_azul",
+    "variant": "albino",
+    "family": "Bovidae",
+    "status": "mejorable",
+    "observation": "Los pliegues del cuello y las bandas del ñu quedan insinuados. Sobre papel se diluyen el perfil de los cuernos bajos y los bordes de la barba.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_nu_azul",
+    "variant": "melanico",
+    "family": "Bovidae",
+    "status": "mejorable",
+    "observation": "En papel se aprecia el dibujo vertical del cuello y la barba. La cornamenta y el ollar pierden separación en fondo oscuro.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0833",
+    "variant": "melanico",
+    "family": "Bovidae",
+    "status": "mejorable",
+    "observation": "Mantiene los cuernos en tirabuzón, pero el macho de referencia ya es oscuro. El anillo orbital y la división entre vientre y lomo resultan demasiado profundos en sombra en miniatura.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0061",
+    "variant": "melanico",
+    "family": "Bovidae",
+    "status": "insuficiente",
+    "observation": "Se conserva la giba del gaur en claro. En oscuro se unen la cruz, el cuello y el plano facial, y las puntas de los cuernos quedan casi invisibles.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "bisonte_europeo",
+    "variant": "albino",
+    "family": "Bovidae",
+    "status": "mejorable",
+    "observation": "Conserva el lomo menos abrupto y la cabeza más alta del bisonte europeo. Sobre papel falta definición entre ojo, cuerno y melena.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "na_esp_bison_bison",
+    "variant": "albino",
+    "family": "Bovidae",
+    "status": "mejorable",
+    "observation": "La giba pronunciada y el pelo de los miembros anteriores permiten separarlo del bisonte europeo. En claro se debilitan las pezuñas y el volumen del morro.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "na_esp_ovibos_moschatus",
+    "variant": "albino",
+    "family": "Bovidae",
+    "status": "mejorable",
+    "observation": "La cortina de pelo y los cuernos descendentes sostienen la identidad. Piel del hocico, pezuñas y pliegues del pelo se separan poco sobre papel.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "na_esp_ovis_dalli",
+    "variant": "albino",
+    "family": "Bovidae",
+    "status": "mejorable",
+    "observation": "La cornamenta enrollada se reconoce en ambos fondos. La especie de referencia ya tiene vellón blanco, y la lámina necesita más lectura del iris y de la piel nasal para distinguir el morfo.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  }
+]

@@ -1,0 +1,257 @@
+{
+  "baseline": "b798ca6",
+  "assets": [
+    {
+      "id": "af_guepardo",
+      "variant": "albino",
+      "resolutions": [
+        {
+          "size": 64,
+          "path": "naturalist-art/plates/64/af_guepardo--albino.webp",
+          "before": "naturalist-art/review/art02/64/af_guepardo--albino.webp",
+          "oldBytes": 2330,
+          "newBytes": 2352,
+          "oldSha256": "953ca35ac5b5629dae7c032de117c5bbfdd3a9266787e6dfd971389a22a869c5",
+          "newSha256": "31a05785b0c9099d3befbfd3d1bfe609d104fbe81adff367661268d52f0b9ec4"
+        },
+        {
+          "size": 128,
+          "path": "naturalist-art/plates/128/af_guepardo--albino.webp",
+          "before": "naturalist-art/review/art02/128/af_guepardo--albino.webp",
+          "oldBytes": 5816,
+          "newBytes": 5862,
+          "oldSha256": "88041f1e64921bd4005244978b4ac6b9fe1f6f5c2122dc395d510154db5aebef",
+          "newSha256": "94a9917401dfa397bc4923407b9b4715bfe1feaf3d2ea24697c80a2bbf4d2330"
+        },
+        {
+          "size": 256,
+          "path": "naturalist-art/plates/256/af_guepardo--albino.webp",
+          "before": "naturalist-art/review/art02/256/af_guepardo--albino.webp",
+          "oldBytes": 15602,
+          "newBytes": 14980,
+          "oldSha256": "3d4331a01fd220fa33e9007c55991ac246d57fa450f61c32076a68c9e703266e",
+          "newSha256": "189482950055f69c90137b3dee66f0cc31f85bdace32c6d8a187ce0ca35f5b06"
+        },
+        {
+          "size": 512,
+          "path": "naturalist-art/plates/af_guepardo--albino.webp",
+          "before": "naturalist-art/review/art02/af_guepardo--albino.webp",
+          "oldBytes": 37422,
+          "newBytes": 39778,
+          "oldSha256": "9876e31fa1dc15ca9f019fdc43bae5818aa49c22b8c30deb5211c7f7bbfd3865",
+          "newSha256": "8051bebc1d0b001b0f9edbf365507c338689488050fd63fc7453290d06436ba1"
+        }
+      ]
+    },
+    {
+      "id": "tejon_europeo",
+      "variant": "albino",
+      "resolutions": [
+        {
+          "size": 64,
+          "path": "naturalist-art/plates/64/tejon_europeo--albino.webp",
+          "before": "naturalist-art/review/art02/64/tejon_europeo--albino.webp",
+          "oldBytes": 1744,
+          "newBytes": 1936,
+          "oldSha256": "9510294f9afd228cdf302f8279f895f807e8125e19a338f347fb6fe62d0f6a80",
+          "newSha256": "1e362c245a74167fc20a71cd6bacbf450b46a1be531259ad6e24d7128f45a521"
+        },
+        {
+          "size": 128,
+          "path": "naturalist-art/plates/128/tejon_europeo--albino.webp",
+          "before": "naturalist-art/review/art02/128/tejon_europeo--albino.webp",
+          "oldBytes": 4136,
+          "newBytes": 4522,
+          "oldSha256": "a087d054b4769fc2ce175194f6121db8e3b0502a9589c6a5e40942d7bffb1f8e",
+          "newSha256": "2a752cc76492643a395c16d8c10d8998120acaa750ed365f11328c0363a2d2a1"
+        },
+        {
+          "size": 256,
+          "path": "naturalist-art/plates/256/tejon_europeo--albino.webp",
+          "before": "naturalist-art/review/art02/256/tejon_europeo--albino.webp",
+          "oldBytes": 12430,
+          "newBytes": 13508,
+          "oldSha256": "90e540bb6558e279f224a654c8d6e2d6fc9d0674ae305f1e391f461da9977496",
+          "newSha256": "ab920d182d7117571b3c92d13bfbb89cc0207be65d8c7e07bf3358581c168c5f"
+        },
+        {
+          "size": 512,
+          "path": "naturalist-art/plates/tejon_europeo--albino.webp",
+          "before": "naturalist-art/review/art02/tejon_europeo--albino.webp",
+          "oldBytes": 33814,
+          "newBytes": 48866,
+          "oldSha256": "3581970380d221bb6869b5aeb63f9c86d28041e624866e124b50746310b63365",
+          "newSha256": "73ed8fcf5989b53040df6dc32df5ae7d91669fb23bc90d40a591e44f1bb8d62c"
+        }
+      ]
+    },
+    {
+      "id": "eu_esp_0622",
+      "variant": "melanico",
+      "resolutions": [
+        {
+          "size": 64,
+          "path": "naturalist-art/plates/64/eu_esp_0622--melanico.webp",
+          "before": "naturalist-art/review/art02/64/eu_esp_0622--melanico.webp",
+          "oldBytes": 992,
+          "newBytes": 1406,
+          "oldSha256": "fee20a05e614574c2e00729f23844a72f61e31dbafd59099813ae83924a05e08",
+          "newSha256": "1d2e2b7db8ed61d85d688ed6926d4c8b8c80ee687b9ec084853b6f41a947c4da"
+        },
+        {
+          "size": 128,
+          "path": "naturalist-art/plates/128/eu_esp_0622--melanico.webp",
+          "before": "naturalist-art/review/art02/128/eu_esp_0622--melanico.webp",
+          "oldBytes": 2102,
+          "newBytes": 3148,
+          "oldSha256": "5417393efd5522fa4cb74e8b30dc8c4c51d591006fe4321ab7a32a454b555f42",
+          "newSha256": "5774a14f356e9bec497313f5b8923aab893dc20d9863f0e68ffbbbd7d97b9924"
+        },
+        {
+          "size": 256,
+          "path": "naturalist-art/plates/256/eu_esp_0622--melanico.webp",
+          "before": "naturalist-art/review/art02/256/eu_esp_0622--melanico.webp",
+          "oldBytes": 5908,
+          "newBytes": 8940,
+          "oldSha256": "027c51d110c948acc308418f5b56393bb3ef861ab0380865e7856f7c48b3013a",
+          "newSha256": "c4da1fea549d1e586b53d609746e4b7092fe140ac04c1b205b2d31a8a54b5d30"
+        },
+        {
+          "size": 512,
+          "path": "naturalist-art/plates/eu_esp_0622--melanico.webp",
+          "before": "naturalist-art/review/art02/eu_esp_0622--melanico.webp",
+          "oldBytes": 17518,
+          "newBytes": 28656,
+          "oldSha256": "9343702c6c50158316ed89c8838615cec7f9dda6ee5dba78556979f7ba7144dd",
+          "newSha256": "565012fd612aaa727094bf495ef08649f42454a603251d094e4f715167c5777e"
+        }
+      ]
+    },
+    {
+      "id": "nutria_europea",
+      "variant": "melanico",
+      "resolutions": [
+        {
+          "size": 64,
+          "path": "naturalist-art/plates/64/nutria_europea--melanico.webp",
+          "before": "naturalist-art/review/art02/64/nutria_europea--melanico.webp",
+          "oldBytes": 1574,
+          "newBytes": 1544,
+          "oldSha256": "b524e03d24b14e193b5e2ba6a9ce18c573b3e989c1b4db25b9ebcbfc0f2836ac",
+          "newSha256": "837295953252507b6da6b1ad904248ad3d418adf455ac6d4e62e8ce47c9fbe78"
+        },
+        {
+          "size": 128,
+          "path": "naturalist-art/plates/128/nutria_europea--melanico.webp",
+          "before": "naturalist-art/review/art02/128/nutria_europea--melanico.webp",
+          "oldBytes": 3552,
+          "newBytes": 3432,
+          "oldSha256": "57e807299ad7a6401415d024d06c6c508aafcdb089d77111d0018dad086f4ab9",
+          "newSha256": "cc86efcf4859aa4cd915aae8a139d17c32e42527ae944998cae55cd7d9b365d9"
+        },
+        {
+          "size": 256,
+          "path": "naturalist-art/plates/256/nutria_europea--melanico.webp",
+          "before": "naturalist-art/review/art02/256/nutria_europea--melanico.webp",
+          "oldBytes": 10712,
+          "newBytes": 10126,
+          "oldSha256": "21c2446aef71be9b3c1275990b799a41aad7e52fcc63e4fa3402bc16768819eb",
+          "newSha256": "f2b6694257c3d5fb0ef1ea43d63d0dce5e23562faad6940efda3037a4bb22449"
+        },
+        {
+          "size": 512,
+          "path": "naturalist-art/plates/nutria_europea--melanico.webp",
+          "before": "naturalist-art/review/art02/nutria_europea--melanico.webp",
+          "oldBytes": 35852,
+          "newBytes": 33570,
+          "oldSha256": "fd0e8872877657fe25ae46db31a0233804de2cd9ce4db19e2af081f2fe273894",
+          "newSha256": "9ae58cd01d61d1081943a012f4e8f34b0ce0b7a38e0522953dd7781f5275a0b6"
+        }
+      ]
+    },
+    {
+      "id": "asia_esp_0336",
+      "variant": "albino",
+      "resolutions": [
+        {
+          "size": 64,
+          "path": "naturalist-art/plates/64/asia_esp_0336--albino.webp",
+          "before": "naturalist-art/review/art02/64/asia_esp_0336--albino.webp",
+          "oldBytes": 2032,
+          "newBytes": 2092,
+          "oldSha256": "caf3569bf3b3097eb4ea331b32b97543c5665b17485cfde2e48d4c922f2e05d1",
+          "newSha256": "55b8dd47cc00b490604cbfbde17afb9324b587eacfbc5b2001d85413935d8ae4"
+        },
+        {
+          "size": 128,
+          "path": "naturalist-art/plates/128/asia_esp_0336--albino.webp",
+          "before": "naturalist-art/review/art02/128/asia_esp_0336--albino.webp",
+          "oldBytes": 5242,
+          "newBytes": 5254,
+          "oldSha256": "95b67b1d809a7a13f4bee6c01e05a0ff8187e36af3159494a81fdb2ee9a4997f",
+          "newSha256": "3e3a067495ff218fbe0dc31ac0490a2ff8c9c8de7e1b1792d15e194bceb1f4e2"
+        },
+        {
+          "size": 256,
+          "path": "naturalist-art/plates/256/asia_esp_0336--albino.webp",
+          "before": "naturalist-art/review/art02/256/asia_esp_0336--albino.webp",
+          "oldBytes": 16858,
+          "newBytes": 15660,
+          "oldSha256": "c84680df412f9afbc0233ee81a3ccb2634580ee2d93afed40bc81d68738f3176",
+          "newSha256": "e5236e3cf4880e1742cd92a929b92515f2ad31144aec5af919affcee7b0189ec"
+        },
+        {
+          "size": 512,
+          "path": "naturalist-art/plates/asia_esp_0336--albino.webp",
+          "before": "naturalist-art/review/art02/asia_esp_0336--albino.webp",
+          "oldBytes": 48944,
+          "newBytes": 57120,
+          "oldSha256": "116016d16799a662dbe256f0016a057adcf7fb84cd3169203c526a3e7fa334f8",
+          "newSha256": "281d883d9b9e72576c9f99a8e890f25949d7d4a7ba9f271c684e4d561e33d942"
+        }
+      ]
+    },
+    {
+      "id": "af_orix",
+      "variant": "melanico",
+      "resolutions": [
+        {
+          "size": 64,
+          "path": "naturalist-art/plates/64/af_orix--melanico.webp",
+          "before": "naturalist-art/review/art02/64/af_orix--melanico.webp",
+          "oldBytes": 1828,
+          "newBytes": 2212,
+          "oldSha256": "5314c47947b0c0e383d4306127e188af1d3190471a396c0dd5002d2324e2bcb4",
+          "newSha256": "2be5feeb9d8224d8542f14cdf56a97d4e36d8fe446633be04091db4655f41023"
+        },
+        {
+          "size": 128,
+          "path": "naturalist-art/plates/128/af_orix--melanico.webp",
+          "before": "naturalist-art/review/art02/128/af_orix--melanico.webp",
+          "oldBytes": 4106,
+          "newBytes": 5140,
+          "oldSha256": "fb55d9008916686558f90d60c71cc3b2734b6a247e7a6c9dfce0129363f06788",
+          "newSha256": "9efbb3802ea116f5d70e5165dfd3a72838c7e502ecf1d016ba49eff2ba359c25"
+        },
+        {
+          "size": 256,
+          "path": "naturalist-art/plates/256/af_orix--melanico.webp",
+          "before": "naturalist-art/review/art02/256/af_orix--melanico.webp",
+          "oldBytes": 10722,
+          "newBytes": 13130,
+          "oldSha256": "ab37e289f2c692f2e311e04b3b060482afa8fd49ce11d1aa7d17f20b853e645c",
+          "newSha256": "348bf5030561363e205d0039a381d2c1e33bbe71503443c1bf0f6c2997a98682"
+        },
+        {
+          "size": 512,
+          "path": "naturalist-art/plates/af_orix--melanico.webp",
+          "before": "naturalist-art/review/art02/af_orix--melanico.webp",
+          "oldBytes": 30094,
+          "newBytes": 39122,
+          "oldSha256": "4187d33e45d8c6e20942623b87c72181fc310b5f14a43490ecb43525464770ab",
+          "newSha256": "ab8c5b0f69e0ac2df78734e18e264d286c836c8da613388fe4b9391df9bda39c"
+        }
+      ]
+    }
+  ]
+}

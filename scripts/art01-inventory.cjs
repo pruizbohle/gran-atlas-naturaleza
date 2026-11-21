@@ -40,17 +40,22 @@ for (const decision of decisions.rows) {
   let before;
   if (approved) {
     before = {};
+    // ART-02 archives an ART-01 plate when it supersedes that publication.
+    const publishedPlate = file => {
+      const archived = path.join('www/naturalist-art/review/art02', file);
+      return fs.readFileSync(fs.existsSync(archived) ? archived : path.join('www/naturalist-art/plates', file));
+    };
     const resolutions = dimensions.map(size => {
       const file = relativePlate(size, row.plate);
       const historical = 'review/art01/' + file;
       const older = fs.readFileSync(path.join('www/naturalist-art', historical));
-      const current = fs.readFileSync(path.join('www/naturalist-art/plates', file));
+      const current = publishedPlate(file);
       before[size] = historical;
       assert.notEqual(sha(older), sha(current), historical);
       return { size, path: 'naturalist-art/plates/' + file, before: 'naturalist-art/' + historical,
         oldBytes: older.length, newBytes: current.length, oldSha256: sha(older), newSha256: sha(current) };
     });
-    const current = fs.readFileSync(path.join('www/naturalist-art/plates', row.plate));
+    const current = publishedPlate(row.plate);
     const normal = fs.readFileSync(path.join('www/naturalist-art/plates', row.normal));
     // Preserve the convention used by the historical inventory for the Git blob ID.
     row.sha = sha(Buffer.concat([Buffer.from('blob ' + current.length + '\0'), current]), 'sha1');

@@ -1,0 +1,65 @@
+{
+  "baseline": "b798ca6",
+  "rows": [
+    {
+      "id": "af_guepardo",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo",
+      "evidence": "Interpretativo",
+      "note": "Párpados y hocico modelados localmente, iris cobrizo tenue, fondo marfil y manchas residuales discretas. El contorno es reconocible a 64 px y las manchas finas se aprecian mejor en tamaños mayores.",
+      "rejected": ["El primer repintado mantenía demasiado ocre en el pelaje y las marcas faciales oscuras tenían un peso excesivo para la despigmentación planteada."]
+    },
+    {
+      "id": "tejon_europeo",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo",
+      "evidence": "Interpretativo",
+      "note": "Hocico y orejas rosados, ojos definidos y bandas faciales apenas sugeridas por cambios de valor. Conserva la cabeza acuñada, el pelo direccional, la postura excavadora y las garras."
+    },
+    {
+      "id": "eu_esp_0622",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "note": "El pelaje café negruzco conserva volumen y separación de patas y cola. Son visibles ojo, oreja redonda, nariz y vibrisas. El ribete claro superior e inferior se lee en tamaños grandes, donde ayuda a distinguirlo del visón americano.",
+      "rejected": ["En la primera propuesta faltaba un ribete claro legible en ambos labios, un rasgo de identificación del visón europeo."]
+    },
+    {
+      "id": "asia_esp_0402",
+      "variant": "melanico",
+      "outcome": "ratificada",
+      "morph": "Pseudomelanismo",
+      "evidence": "Documentado",
+      "history": "art01",
+      "note": "Las franjas dorsales y del flanco son anchas y confluentes, con ventanas ocres visibles, como en el fenotipo descrito en Similipal. La lámina de ART-01 se conserva byte a byte."
+    },
+    {
+      "id": "nutria_europea",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "history": "art01",
+      "note": "El dorso carbón frío se distingue del marrón habitual. Las sombras separan extremidades, mandíbula y cola. La garganta mantiene contraste y se conservan el hocico ancho y el nacimiento de las vibrisas."
+    },
+    {
+      "id": "asia_esp_0336",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo",
+      "evidence": "Interpretativo",
+      "note": "El pelaje desgreñado conserva volumen. Ojo, hocico largo rosado y garras curvas se distinguen sobre papel. En la miniatura prima la silueta y la forma de la cabeza."
+    },
+    {
+      "id": "af_orix",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "note": "Los cuernos acanalados y la máscara son reconocibles en oscuro. Se conservan la banda lateral y las pezuñas, con planos en gris pizarra para diferenciar un flanco oscuro de las extremidades."
+    }
+  ]
+}

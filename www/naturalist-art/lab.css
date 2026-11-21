@@ -240,3 +240,7 @@ figcaption { padding: .4rem 0; }
 .art01-comparison{display:block;margin-block:1rem;text-align:left}
 .art01-comparison .comparison-styles{grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr))}
 .art01-comparison .atlas-art-frame{min-width:0}
+
+.morph-facts { display: grid; grid-template-columns: max-content 1fr; gap: .2rem .7rem; margin: .55rem 0; font-size: .9rem; }
+.morph-facts dt { font-weight: 700; }
+.morph-facts dd { margin: 0; }
