@@ -14,6 +14,7 @@ const repeats = Number(process.env.AUD06_REPEATS || 3);
 const states = (process.env.AUD06_STAGES || 'new,intermediate,advanced').split(',');
 const active = process.env.AUD06_ACTIVE === '1';
 const pageSweep = process.env.AUD06_PAGES === '1';
+const detailedPaging = process.env.AUD06_PAGING_DETAIL === '1';
 const qa = process.env.AUD06_QA === '1';
 const interrupt = process.env.AUD06_INTERRUPT === '1';
 const storageKey = 'gran_atlas_v05';
@@ -40,6 +41,21 @@ function instrument(code) {
     mark('panel-model', 'end') + mark('panel-dom', 'start') + 'panel.innerHTML=markup;' + mark('panel-dom', 'end') + '}');
   around('panel-hooks', 'bindPanel();');
   code = code.replace('setInterval(tick,1000);', 'setInterval(()=>{' + mark('tick', 'start') + 'tick();' + mark('tick', 'end') + '},1000);');
+  if (detailedPaging) {
+    code = code.replaceAll('processAutomaticSearches(globalThis.performance);',
+      "{performance.mark('aud06:work:searches:start');processAutomaticSearches(globalThis.performance);performance.mark('aud06:work:searches:end');}");
+    const flushes = ['achievementFlush3360();', 'commissionFlush3370();', 'curationFlush3380();'];
+    code = code.replace(flushes.join(''), flushes.map((call, i) => {
+      const name = ['achievements', 'commissions', 'curation'][i];
+      return mark('work:' + name, 'start') + call + mark('work:' + name, 'end');
+    }).join(''));
+    for (const [name, call] of [['counters', 'renderCounters();'], ['field', 'updateFieldOutput();']]) {
+      code = code.replaceAll('\n ' + call, '\n ' + mark('work:' + name, 'start') + call + mark('work:' + name, 'end'));
+    }
+    const checkpoint = 'persist({skipUnchanged:true})';
+    code = code.replace(checkpoint, "(performance.mark('aud06:work:save:start')," +
+      "((ok)=>{performance.mark('aud06:work:save:end');return ok;})(" + checkpoint + '))');
+  }
   for (const [phase, expression] of [
     ['achievements', 'achievementNotices3360=globalThis.AtlasAchievements3360.initialize(state,achievementContext3360());'],
     ['commissions', 'globalThis.AtlasCommissions3370.initialize(state,commissionContext3370());'],
@@ -323,8 +339,15 @@ async function measure(browser, version, stage) {
         performance.mark('aud06:paging:end');
         const marks = performance.getEntriesByType('mark').filter(m => m.startTime >= start && m.name.startsWith('aud06:tick:'));
         const timerMs = marks.reduce((n,m) => n + m.startTime * (m.name.endsWith(':end') ? 1 : -1), 0);
+        const parts = new Map();
+        for (const m of performance.getEntriesByType('mark')) {
+          if (m.startTime < start || !m.name.startsWith('aud06:work:')) continue;
+          const [, , name, edge] = m.name.split(':');
+          parts.set(name, (parts.get(name) || 0) + m.startTime * (edge === 'end' ? 1 : -1));
+        }
         return { sync, paint, totalSlots: slots.length, distinctSlots: new Set(slots).size,
-          ticks: marks.length / 2, timerMs, sightings: AtlasSaveBridge.getSnapshot().sightings - before };
+          ticks: marks.length / 2, timerMs, workMs: Object.fromEntries(parts),
+          sightings: AtlasSaveBridge.getSnapshot().sightings - before };
       });
       assert.equal(paging.totalSlots, 1000);
       assert.equal(paging.distinctSlots, 1000);
