@@ -1,17 +1,12 @@
 {
-  "name": "El Gran Atlas — Iconoteca 1842 V1",
-  "version": "v1-candidate",
+  "name": "El Gran Atlas — iconoteca ilustrada",
+  "status": "visual review only",
   "branch": "arte/iconoteca-1842-v1",
   "base_commit": "c8af26e7c5d8862fc14f36bf23798bae02229f3c",
   "icons": 24,
-  "status": "art prototypes not integrated",
-  "source": "www/iconoteca/atlas-ui-icons.js",
-  "gallery": "www/iconoteca/index.html",
-  "groups": [
-    "Navegación",
-    "Indicadores",
-    "Acciones",
-    "Museo y gabinete"
-  ],
-  "integration_allowed": false
+  "format": "24 PNGs embedded as data URIs into one standalone HTML",
+  "review_gallery": "www/iconoteca/index.html",
+  "variant_svg_mock": "retired (different artwork)",
+  "integration_approved": false,
+  "game_files_modified": false
 }
