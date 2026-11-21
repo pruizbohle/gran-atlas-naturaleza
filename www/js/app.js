@@ -2192,7 +2192,7 @@ function initialState(){
     money:420, knowledge:0, prestige:0, helpers:0, books:0,
     asiaPricingVersion:3, currentRegion:region, habitat:'bosque', time:'amanecer', season:'primavera',
     discovered:{}, sightings:{}, stages:{}, feedObs:{}, dimorphism:{}, sexSeen:{}, specialSeen:{}, specialFound:{}, published:{},
-    log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial de prueba: £420. En Corona puedes simular más libras.'],
+    log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial: £420.'],
     upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,africaUnlocked:0,newWorldUnlocked:0,northAmericaUnlocked:0,fundingTier:1,groupTier:0,censusTier:0,autoGroup:0,autoCensus:0,mammalogy:0,ornithology:0,herpetology:0,ichthyology:0,ethology:0,paleoTier:0,museumIncomeTier:0,excavationTier:0,specimenPrep:0,relictSurveyTier:0,relictFieldTier:0}, purchases:{},
     regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0,excavations:[],excavationSeq:0,excavationsCompleted:0,curationPoints:0,excavationHistory:[],relictLeads:{},relictSurveys:[],relictSurveySeq:0,relictSurveyHistory:[],relictResearchPoints:0,relictAchievements:{}}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', bestiaryDescending:false, bestiaryHideMonographs:false, crownCoins:0, lastEncounter:null,
  // EC3300 BEGIN initial-commerce
@@ -3055,22 +3055,8 @@ function updateFieldOutput(){
 function render(){ renderCounters(); renderPanel(); persist(); }
 function renderCrown(){
   const coins=Math.floor(Math.max(0,state.crownCoins||0));
-  return `<section class="card crown-card stack trial-crown">
-    <div class="big">👑</div><h3 class="section">Corona inglesa · Laboratorio</h3>
-    <div class="small">Esta es una herramienta de pruebas: las coronas son gratuitas, no hay compras reales ni pagos.</div>
-    <div class="req"><strong>Coronas disponibles: ${fmt(coins)}</strong><div class="small">Equivalencia de prueba: 1 corona = £1</div></div>
-    <div class="crown-quick-actions">
-      <button class="btn gold" data-action="buy-crown" data-id="100">+100 coronas</button>
-      <button class="btn gold" data-action="buy-crown" data-id="500">+500 coronas</button>
-      <button class="btn gold" data-action="buy-crown" data-id="1000">+1.000 coronas</button>
-      <button class="btn gold" data-action="buy-crown" data-id="5000">+5.000 coronas</button>
-    </div>
-    <div class="crown-quick-actions">
-      <button class="btn" data-action="exchange-crown" data-id="100" ${coins<100?'disabled':''}>Canjear 100 → £100</button>
-      <button class="btn" data-action="exchange-crown" data-id="500" ${coins<500?'disabled':''}>Canjear 500 → £500</button>
-      <button class="btn alt" data-action="exchange-crown" data-id="all" ${coins<1?'disabled':''}>Canjear todas → £${fmt(coins)}</button>
-    </div>
-    <div class="small">El canje consume coronas y añade la misma cantidad de libras. Tus datos existentes no se reinician.</div>
+  return `<section class="card crown-card stack"><div class="big">👑</div><h3 class="section">Corona</h3>
+    <div class="req"><strong>Saldo histórico: ${fmt(coins)} coronas</strong></div>
   </section>`;
 }
 
@@ -3171,39 +3157,6 @@ function unlockRegion(id){
   state.regionUnlocked[id]=true; pushLog('🗝️ Región desbloqueada: '+r.name+'.'); render();
 }
 function travelToRegion(id){ setRegion(id); tab='field'; renderPanel(); persist(); }
-function fieldAid(kind){
-  if(kind==='knowledge'){
-    state.knowledge+=500;
-    pushLog('📜 Ayuda de campo: +500 conocimiento.');
-    // Conservar abierto el panel <details> de herramientas.
-    renderCounters(); updateFieldOutput(); persist();
-    return;
-  }
-  if(kind==='sightings'){
-    // Son 50 avistamientos confirmados, no 50 intentos aleatorios.
-    if(!eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season).length){
-      pushLog('🔭 No hay fauna disponible con estos filtros; cambia las condiciones de exploración.');
-      renderCounters(); updateFieldOutput(); persist();
-      return;
-    }
-    const before=totalSightings();
-    batchingOffline=true;
-    try{for(let i=0;i<50;i++)encounter('manual',Date.now(),true);}
-    finally{batchingOffline=false;}
-    const gained=totalSightings()-before;
-    state.knowledge+=20;
-    pushLog('🔭 Ayuda de campo: +'+gained+' avistamientos confirmados.');
-    renderCounters(); updateFieldOutput(); persist();
-    return;
-  }
-  if(kind!=='guided') return;
-  batchingOffline=true;
-  try{for(let i=0;i<5;i++)encounter('manual');}
-  finally{batchingOffline=false;}
-  state.knowledge+=60;
-  pushLog('🧭 Sesión guiada de campo completada.');
-  renderCounters(); updateFieldOutput(); persist();
-}
 function spendMoneyForKnowledge(multiplier=1){
   if(![1,10,100,1000].includes(multiplier)) return;
   const max=state.purchases.fondos_x1000?1000:state.purchases.fondos_x100?100:state.purchases.fondos_x10?10:1;
@@ -3223,20 +3176,6 @@ function removeExhibit(id){
   if(!state.museum.exhibits[id]) return;
   delete state.museum.exhibits[id]; pushLog('🏛️ Se retiró de la sala: '+SPECIES[id].name); render();
 }
-function buyCrownPack(amount){
-  if(!Number.isSafeInteger(amount) || ![100,500,1000,5000].includes(amount)) return;
-  state.crownCoins=(state.crownCoins||0)+amount;
-  pushLog('👑 Prueba: +'+amount+' coronas sin costo real.');render();
-}
-function exchangeTrialCrowns(amount){
-  if(!Number.isSafeInteger(amount)||amount<=0) return;
-  const available=Math.floor(Math.max(0,state.crownCoins||0));
-  if(amount>available) return;
-  state.crownCoins=available-amount;
-  state.money=(Number(state.money)||0)+amount;
-  pushLog('💷 Conversión de prueba: '+amount+' coronas → £'+amount+'.');render();
-}
-
 function bestiaryTypeBucket(id){
   const c=taxonomyInfo(id).className;
   if(c==='Mammalia') return 'Mamífero';
@@ -3334,7 +3273,7 @@ function fieldLogMarkup(){
 }
 function fieldViewModel(){
  const region=currentRegion();
- return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:globalThis.AtlasNaturalistArt?.landscape(state.habitat,region.id,true)||fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),progress:fieldProgressModel(),auto:fieldAutomaticModel(),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(),logHTML:fieldLogMarkup(),toolsHTML:'<div class="helper-row"><button class="btn gold" data-action="field-aid" data-id="knowledge">+500 conocimiento</button><button class="btn gold" data-action="field-aid" data-id="sightings">+50 avistamientos</button><button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button></div>',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
+ return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:globalThis.AtlasNaturalistArt?.landscape(state.habitat,region.id,true)||fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),progress:fieldProgressModel(),auto:fieldAutomaticModel(),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(),logHTML:fieldLogMarkup(),toolsHTML:'',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
 }
 function renderField(){return globalThis.AtlasFieldUI.render(fieldViewModel());}
 function renderJournal(){
@@ -5204,7 +5143,7 @@ function handlePanelAction(e){
     if(act.startsWith('inv-')){inventoryAction3400(act,id);return;}
  // GM3330 BEGIN actions
     if(act.startsWith('deep-')){deepAction3330(act,id);return;}
-    if(deepRegionIndex3330.has(state.currentRegion)&&(act==='search-manual'||act==='field-aid')){if(act==='search-manual')deepAction3330('deep-start');return;}
+    if(deepRegionIndex3330.has(state.currentRegion)&&act==='search-manual'){deepAction3330('deep-start');return;}
  // GM3330 END actions
  // EC3300 BEGIN actions
     if(act.startsWith('trade-')){tradeAction3300(act,id);return;}
@@ -5250,7 +5189,6 @@ function handlePanelAction(e){
     if(act==='set-time'){ state.time=id; renderPanel(); persist(); }
     if(act==='set-season'){ state.season=id; renderPanel(); persist(); }
     if(act==='search-manual') { encounter('manual'); persist(); }
-    if(act==='field-aid'){ fieldAid(id); }
     if(act==='select-journal'){ if(!currentRegion().species.includes(id))return; state.selectedJournal=id; journalSheetScrollTop=0; renderPanel(); persist(); }
     if(act==='advance-species'){ advanceSpecies(id); }
     if(act==='research-branch' && RESEARCH_BRANCHES.some(b=>b.id===id)){state.researchBranch=id;renderPanel();persist();}
@@ -5292,8 +5230,6 @@ function handlePanelAction(e){
       bestiaryPage=page;renderPanel();window.scrollTo?.({top:0,behavior:'instant'});
     }
 // AM-06 END bestiary-navigation
-    if(act==='buy-crown'){buyCrownPack(Number(id)||0);}
-    if(act==='exchange-crown'){exchangeTrialCrowns(id==='all'?Math.floor(Math.max(0,state.crownCoins||0)):Number(id));}
     if(act.startsWith('curate-')){curationAction3380(act,id,el);return;}
     if(act.startsWith('enc-')){commissionAction3370(act,id);return;}
     if(act==='claim-mission'){claimScientificMission(id);}
@@ -6976,7 +6912,7 @@ const backdropBefore3330=fieldBackdropMarkup;const deepScenes3330=new Map();
 fieldBackdropMarkup=function(h){if(!['columna_mesopelagica','columna_batial','columna_profunda_fria','fondo_batial','fondo_profundo_frio'].includes(h))return backdropBefore3330(h);if(deepScenes3330.has(h))return deepScenes3330.get(h);const svg='<svg xmlns="http://www.w3.org/2000/svg" class="field-backdrop" viewBox="0 0 640 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path fill="#d4d5c5" d="M0 0H640V280H0Z"/><path fill="#567183" d="M0 0H110V280H0Z"/><path stroke="#dccda7" stroke-width="3" d="M48 0V220M41 32h14m-14 35h14m-14 35h14m-14 35h14m-14 35h14"/><path fill="#d8e5df" stroke="#294352" stroke-width="2" d="M30 216h37l-7 25H37Z"/><path fill="#faf3df" stroke="#9b947c" d="M143 36L605 28 610 250 147 258Z"/><path stroke="#d2c6a5" d="M161 231H591M162 218H591"/></svg>';deepScenes3330.set(h,svg);return svg;};
 function renderDeepPanel3330(){const d=state.deepSurvey;return '<section class="card deep-panel"><h3>Cuaderno de sondeo profundo</h3><p class="small">Sonda lastrada, red vertical y draga. Evidencias y muestras examinadas a bordo; las imágenes son láminas de referencia, no animales vistos desde cubierta. Cada operación es un intento sin hallazgo garantizado.</p><div class="deep-protocols">'+Object.entries(DEEP_METHODS3330).filter(([id])=>id!=='extraordinario').map(([id,m])=>'<button class="btn '+(d.method===id?'':'alt')+'" data-action="deep-method" data-id="'+id+'" aria-pressed="'+(d.method===id)+'">'+m.name+' · '+m.seconds+' s · £'+m.money+' + '+m.knowledge+' conocimiento</button>').join('')+'</div><p class="small">Cupo: '+d.jobs.length+'/1. Equipo de sondeo '+(state.craftedItems.sounding_kit?'acreditado':'pendiente de fabricar')+'.</p>'+d.jobs.map(j=>'<p data-deep-countdown="'+j.endAt+'" class="small">'+DEEP_METHODS3330[j.method].name+' · '+tradeCountdown3300(j.endAt)+'</p>').join('')+'<details><summary>Registros de expedición</summary>'+[...d.history].reverse().map(h=>'<p class="small">'+DEEP_METHODS3330[h.method].name+' · '+esc(deepRegionIndex3330.get(h.region).name)+' · '+(Object.entries(h.records).map(([id,n])=>esc(visibleName(id))+' ×'+n).join(' · ')||'Muestra sin identificación')+'</p>').join('')+'</details><details><summary>Condiciones y métodos de este sector</summary>'+deepPresenceIndex3330.get(state.currentRegion).map(p=>'<p class="small">'+esc(visibleName(p.speciesId))+' · '+p.methods.map(m=>DEEP_METHODS3330[m].name).join(' / ')+' · '+esc(p.evidenceNote)+'</p>').join('')+'</details></section>';}
 const fieldRenderBefore3330=renderField;
-renderField=function(){const view=fieldRenderBefore3330();if(!deepRegionIndex3330.has(state.currentRegion))return view;return renderDeepPanel3330()+view.replace('EL CAMPO TE ESPERA','CUADERNO DE MUESTRAS').replace('RASTROS EN EL SENDERO','MUESTRA SIN IDENTIFICACIÓN').replace('OBSERVACIÓN REGISTRADA','REGISTRO INDIRECTO').replace('NUEVA ESPECIE','NUEVA EVIDENCIA').replace('class="field-game"','class="field-game deep-field"').replace('data-action="search-manual"','data-action="deep-start" '+(canStartDeep3330()?'':'disabled')).replace('Observar fauna','Preparar operación').replace('Una nueva página de tu expedición','Sondeo o muestreo: examen indirecto a bordo').replace(/<button class="btn[^>]*data-action="field-aid"[^>]*>[\s\S]*?<\/button>/g,'');};
+renderField=function(){const view=fieldRenderBefore3330();if(!deepRegionIndex3330.has(state.currentRegion))return view;return renderDeepPanel3330()+view.replace('EL CAMPO TE ESPERA','CUADERNO DE MUESTRAS').replace('RASTROS EN EL SENDERO','MUESTRA SIN IDENTIFICACIÓN').replace('OBSERVACIÓN REGISTRADA','REGISTRO INDIRECTO').replace('NUEVA ESPECIE','NUEVA EVIDENCIA').replace('class="field-game"','class="field-game deep-field"').replace('data-action="search-manual"','data-action="deep-start" '+(canStartDeep3330()?'':'disabled')).replace('Observar fauna','Preparar operación').replace('Una nueva página de tu expedición','Sondeo o muestreo: examen indirecto a bordo');};
 const objectsBefore3330=renderObjects;
 renderObjects=function(){return objectsBefore3330()+'<section class="card"><h3>Equipo de sondeo y muestreo</h3><p class="small">Cuatro latones, cuatro maderas talladas, tres pergaminos y un morral reforzado. Componentes obtenibles en Europa y mediante Comercio. Acreditación permanente: habilita métodos profundos sin consumir el equipo al abrir regiones.</p><button class="btn" data-action="deep-craft" '+(canCraft('sounding_kit')?'':'disabled')+'>Fabricar equipo de sondeo</button></section>';};
 function syncDeep3330(now){if(tab!=='field'||!deepRegionIndex3330.has(state.currentRegion))return;for(const node of panel.querySelectorAll('[data-deep-countdown]')){const text=tradeCountdown3300(Number(node.dataset.deepCountdown),now);if(node.textContent!==text)node.textContent=text;}const button=panel.querySelector('[data-action="deep-start"]');if(button)button.disabled=!canStartDeep3330();}
