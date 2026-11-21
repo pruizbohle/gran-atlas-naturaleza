@@ -85,7 +85,7 @@ async function measure(browser, label, elapsed, helpers, { crash = false } = {})
     if (crash) {
       await page.waitForFunction(({ key, now }) => {
         const s = JSON.parse(localStorage.getItem(key));
-        return s.lastTick === now && s.autoPending.length > 0 && s.knowledge > 0;
+        return s.lastTick === now && s.autoPending.length > 0 && s.autoPending[0].at > now - 8 * 3600000 + 60000;
       }, { key, now });
       checkpoint = await page.evaluate(key => {
         const s = JSON.parse(localStorage.getItem(key));
@@ -163,13 +163,15 @@ async function measure(browser, label, elapsed, helpers, { crash = false } = {})
   const browser = await chromium.launch({ executablePath: process.env.ATLAS_CHROMIUM || '/usr/bin/chromium', args: ['--no-sandbox'] });
   try {
     const runs = [];
-    for (const label of side === 'both' ? ['base', 'candidate'] : [side]) {
-      for (const elapsed of hours) for (const helpers of teams) {
-        if(selected && selected!==elapsed+':'+helpers)continue;
-        const run = await measure(browser, label, elapsed, helpers);
+    for (const elapsed of hours) for (const helpers of teams) {
+      if(selected && selected!==elapsed+':'+helpers)continue;
+      const labels=side==='both'?(runs.length%4?['candidate','base']:['base','candidate']):[side];
+      for(const label of labels){
+        const run=await measure(browser,label,elapsed,helpers);
         runs.push(run);
-        process.stderr.write(`${label} ${elapsed}h ${helpers} naturales · ${run.recoveryMs.toFixed(0)} ms\n`);
+        process.stderr.write(`${label} ${elapsed}h · ${helpers} naturalistas · ${run.recoveryMs.toFixed(0)} ms\n`);
       }
+      if(side==='both')assert.deepEqual(runs.at(-1).balances,runs.at(-2).balances,`${elapsed} h · ${helpers} naturalistas`);
     }
     const interrupted = side !== 'base' && !selected ? await measure(browser, 'candidate', 8, 10, { crash: true }) : null;
     if (interrupted) assert.deepEqual(interrupted.balances,
