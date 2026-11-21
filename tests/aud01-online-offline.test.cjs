@@ -2,6 +2,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const {execFileSync} = require('node:child_process');
 const { harness } = require('./helpers/live-game.cjs');
 
 const hour = 3600000;
@@ -360,4 +361,117 @@ test('AUD-02 la cola en pantalla avanza en cuadros acotados y se guarda al salir
   const reopened = open(game.h.store);
   reopened.at(noon + hour);
   assert.equal(reopened.g.state.knowledge, 720 * 2);
+});
+
+test('V5.0.2 los lotes conservan los sorteos, cupos y la recompensa por identificador de V5.0.1', () => {
+  const baselineApp = execFileSync('git', ['show', '4d3737d:www/js/app.js'], { encoding: 'utf8', maxBuffer: 6e6 });
+  const baseline = [...scripts.slice(0, -1).map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')), baselineApp].join('\n');
+  const save = open().h.window.AtlasSaveBridge.getSaveData();
+  save.helpers = 10;
+  Object.assign(save.upgrades,{autoTier:4,groupTier:3,autoGroup:1,censusTier:2,autoCensus:1,ornithology:2,mammalogy:2});
+  const run = source => {
+    let seed = 12345, draws = 0;
+    const rng = () => {
+      draws++;
+      seed = (Math.imul(seed,1664525)+1013904223) >>> 0;
+      return seed / 2**32;
+    };
+    const game = open({[key]:JSON.stringify(save)},rng,{gameSource:source});
+    game.drain(noon + 2 * hour);
+    return {state:game.h.window.AtlasSaveBridge.getSaveData(),draws};
+  };
+  assert.deepEqual(run(gameSource),run(baseline));
+});
+
+test('V5.0.2 tras perder los cuadros no escritos se recupera desde el último cursor durable', () => {
+  const frames=[];
+  let ms=0;
+  const game=open({},()=>0.99,{performance:{now:()=>ms++},
+    prepareWindow(w){w.requestAnimationFrame=fn=>frames.push(fn);}});
+  game.g.state.helpers=1;
+  game.at(noon+hour);
+  frames.shift()();
+  game.at(noon+hour);
+  const durable=game.h.store[key];
+  for(let i=0;i<5;i++)frames.shift()();
+  assert.ok(game.g.state.knowledge>JSON.parse(durable).knowledge);
+  const restarted=open({[key]:durable});
+  restarted.drain(noon+hour);
+  assert.equal(restarted.g.state.knowledge,1440);
+  assert.equal(restarted.g.state.autoPending.length,0);
+});
+
+for(const operation of [
+  {name:'excavación',jobs:'excavations',receipts:'excavationSettled',history:'excavationHistory',
+    start:'startExcavation',collect:'collectExcavation',kind:'british_cliffs'},
+  {name:'prospección de relictos',jobs:'relictSurveys',receipts:'relictSurveySettled',history:'relictSurveyHistory',
+    start:'startRelictSurvey',collect:'collectRelictSurvey',kind:'olm_balkans',region:'HX-03-12'}
+]){
+  test('V5.0.2 '+operation.name+' restaura saldo y recibo si falla la escritura y liquida una sola vez',()=>{
+    const game=open();
+    const bridge=game.h.window.AtlasSaveBridge;
+    const save=bridge.getSaveData();
+    save.money=500;save.knowledge=500;
+    if(operation.region)save.regionUnlocked[operation.region]=true;
+    bridge.restoreGame(save);
+    const stored=game.h.store[key];
+    const start=()=>game.g[operation.start](operation.kind,noon);
+    const write=game.h.localStorage.setItem;
+    game.h.localStorage.setItem=()=>{throw new Error('QuotaExceededError');};
+    assert.equal(start(),false);
+    assert.equal(game.g.state.money,500);
+    assert.equal(game.g.state.museum[operation.jobs].length,0);
+    assert.equal(game.h.store[key],stored);
+    game.h.localStorage.setItem=write;
+    assert.equal(start(),true);
+    const job=bridge.getSaveData().museum[operation.jobs][0];
+    const duplicate=bridge.getSaveData();
+    duplicate.museum[operation.jobs].push({...job,id:String(job.id)});
+    bridge.restoreGame(duplicate);
+    assert.equal(game.g.state.museum[operation.jobs].length,1);
+    const pending=bridge.getSaveData(),raw=game.h.store[key];
+    const collect=()=>game.g[operation.collect](job.id,job.endAt,()=>0);
+    game.h.localStorage.setItem=()=>{throw new Error('QuotaExceededError');};
+    assert.equal(collect(),false);
+    assert.deepEqual(bridge.getSaveData(),pending);
+    assert.equal(game.h.store[key],raw);
+    game.h.localStorage.setItem=write;
+    assert.equal(collect(),true);
+    assert.equal(collect(),false);
+    const replay=bridge.getSaveData();
+    assert.equal(replay.museum[operation.receipts][job.id],true);
+    replay.museum[operation.history]=[];
+    replay.museum[operation.jobs].push(job);
+    bridge.restoreGame(replay);
+    assert.equal(game.g.state.museum[operation.jobs].length,0);
+    assert.equal(collect(),false);
+    assert.deepEqual(bridge.getSaveData().inventory,replay.inventory);
+  });
+}
+
+test('V5.0.2 el sondeo no vuelve a premiar un identificador antiguo recuperado desde un respaldo',()=>{
+  const game=open();
+  const bridge=game.h.window.AtlasSaveBridge;
+  const save=bridge.getSaveData();
+  const region='profundo_atlantico_profundo_norte';
+  const sample={id:1,region,method:'sondeo',habitat:'columna_batial',time:'amanecer',season:'primavera',
+    startedAt:noon-60000,endAt:noon,seed:1073741824};
+  save.purchases.exploracion_profunda_1=1;
+  save.craftedItems.world_map=true;
+  save.craftedItems.sounding_kit=true;
+  save.regionUnlocked[region]=true;
+  save.deepSurvey={method:'sondeo',seq:13,history:[],jobs:Array.from({length:13},(_,i)=>({...sample,id:i+1}))};
+  bridge.restoreGame(save);
+  game.at(noon);
+  const done=bridge.getSaveData();
+  assert.equal(done.deepSurvey.history.length,12);
+  assert.equal(done.deepSurvey.settled[1],true);
+  assert.ok(!done.deepSurvey.history.some(record=>record.id===1));
+  done.deepSurvey.jobs=[sample];
+  bridge.restoreGame(done);
+  const reopened=open(game.h.store);
+  reopened.at(noon);
+  assert.equal(reopened.g.state.deepSurvey.jobs.length,0);
+  assert.equal(reopened.g.state.knowledge,done.knowledge);
+  assert.deepEqual(reopened.h.window.AtlasSaveBridge.getSaveData().sightings,done.sightings);
 });

@@ -2512,6 +2512,7 @@ window.AtlasSaveBridge={
      state.lastTick=Date.now();
      normalizeAutomaticProgress(state);
      normalizeScientificVoyages(state);
+     normalizeMuseumJobs(state.museum);
      autoDiaryBuffer={searches:0,hits:0,knowledge:0};
      lastAutoDiaryFlush=0;lastPanelSignature='';currentAutoNotice='';
      tab='field';
@@ -3591,6 +3592,31 @@ const MUSEUM_CURATORIAL_PROJECTS=[
  {id:'tracks',name:'Análisis de huellas',icon:'🐾',requires:{fossil_track:2,animal_trace:1},knowledge:115,points:2},
  {id:'restoration',name:'Restauración de esqueletos',icon:'🦴',requires:{bone_long:1,fossil_rib:2,carved_wood:1},knowledge:165,points:3}
 ];
+function museumJobTransaction(change){
+ const committed=tradeTransaction3300(()=>{change();return true;});
+ if(committed){renderCounters();renderPanel();}
+ return committed;
+}
+function normalizeMuseumJobs(museum){
+ for(const [jobsKey,seqKey,receiptsKey,historyKey,typeKey,types] of [
+   ['excavations','excavationSeq','excavationSettled','excavationHistory','site',MUSEUM_DIG_SITES],
+   ['relictSurveys','relictSurveySeq','relictSurveySettled','relictSurveyHistory','relict',MUSEUM_RELICTS]
+ ]){
+   const knownTypes=new Set(types.map(type=>type.id));
+   const history=museum[historyKey].filter(row=>row&&knownTypes.has(row[typeKey]));
+   const lastId=normalizeSettledJobs(museum,receiptsKey,history,row=>row.jobId);
+   let seq=Math.max(scientificVoyageId(museum[seqKey])??0,lastId);
+   const seen=new Set();
+   museum[jobsKey]=museum[jobsKey].filter(job=>{
+     const id=scientificVoyageId(job.id);
+     if(id===null||!knownTypes.has(job[typeKey])||seen.has(id)||museum[receiptsKey]?.[id])return false;
+     seen.add(id);seq=Math.max(seq,id);
+     return true;
+   });
+   museum[seqKey]=seq;
+ }
+}
+normalizeMuseumJobs(state.museum);
 function museumFossilMountCount(){return MUSEUM_FOSSIL_RECIPES.filter(p=>p.unique&&state.museum?.collections?.[p.id]).length;}
 function museumFossilSetBonus(){
  return MUSEUM_FOSSIL_SETS.reduce((sum,set)=>
@@ -3608,11 +3634,12 @@ function canStartExcavation(id){
 function startExcavation(id,now=Date.now()){
  const site=MUSEUM_DIG_SITES.find(x=>x.id===id);
  if(!canStartExcavation(id)||!Number.isFinite(now))return false;
- state.money-=site.money;state.knowledge-=site.knowledge;
- state.museum.excavationSeq=(Number(state.museum.excavationSeq)||0)+1;
- state.museum.excavations.push({id:state.museum.excavationSeq,site:id,endAt:now+site.seconds*1000});
- pushLog('⛏️ Excavación iniciada: '+site.name+'.');render();
- return true;
+ if(state.museum.excavationSeq>=Number.MAX_SAFE_INTEGER)return false;
+ return museumJobTransaction(()=>{
+   state.money-=site.money;state.knowledge-=site.knowledge;
+   state.museum.excavations.push({id:++state.museum.excavationSeq,site:id,endAt:now+site.seconds*1000});
+   pushLog('⛏️ Excavación iniciada: '+site.name+'.');
+ });
 }
 function formatMuseumTimeRemaining(endAt,now=Date.now()){
  const seconds=Math.max(0,Math.ceil((Number(endAt)-now)/1000));
@@ -3624,26 +3651,27 @@ function collectExcavation(jobId,now=Date.now(),random=Math.random){
  const index=jobs.findIndex(job=>String(job.id)===String(jobId));
  if(index<0||!Number.isFinite(now))return false;
  const job=jobs[index],site=MUSEUM_DIG_SITES.find(x=>x.id===job.site);
- if(!site||now<job.endAt)return false;
- // Retirar antes de entregar el botín impide reclamarlo dos veces.
- jobs.splice(index,1);
- const [lo,hi]=site.fragments;
- const amount=lo+Math.floor(random()*(hi-lo+1))+(state.upgrades.excavationTier?1:0);
- addInventory('fossil_fragment',amount);
- const found=['fragmentos fósiles ×'+amount],rewards={fossil_fragment:amount};
- for(const [id,p,label] of [
-  ['fossil_tooth',site.tooth,'diente fósil'],
-  ['fossil_track',Math.min(1,site.track+(state.upgrades.specimenPrep?0.10:0)),'huella fosilizada'],
-  ['fossil_claw',Math.min(1,site.claw+(state.upgrades.specimenPrep?0.05:0)),'garra fósil'],
-  ['fossil_skull',site.skull,'cráneo fósil']
- ]){
-  if(random()<p){addInventory(id,1);rewards[id]=1;found.push(label);}
- }
- state.museum.excavationsCompleted=(Number(state.museum.excavationsCompleted)||0)+1;
- state.museum.excavationHistory=(state.museum.excavationHistory||[]).concat([{site:job.site,at:now,rewards}]).slice(-12);
- pushLog('⛏️ Excavación finalizada · '+site.name+': '+found.join(', ')+'.');
- render();
- return true;
+ const id=scientificVoyageId(job.id);
+ if(!site||id===null||!Number.isFinite(job.endAt)||now<job.endAt||state.museum.excavationSettled?.[id])return false;
+ return museumJobTransaction(()=>{
+   jobs.splice(index,1);
+   (state.museum.excavationSettled??={})[id]=true;
+   const [lo,hi]=site.fragments;
+   const amount=lo+Math.floor(random()*(hi-lo+1))+(state.upgrades.excavationTier?1:0);
+   addInventory('fossil_fragment',amount);
+   const found=['fragmentos fósiles ×'+amount],rewards={fossil_fragment:amount};
+   for(const [id,p,label] of [
+    ['fossil_tooth',site.tooth,'diente fósil'],
+    ['fossil_track',Math.min(1,site.track+(state.upgrades.specimenPrep?0.10:0)),'huella fosilizada'],
+    ['fossil_claw',Math.min(1,site.claw+(state.upgrades.specimenPrep?0.05:0)),'garra fósil'],
+    ['fossil_skull',site.skull,'cráneo fósil']
+   ]){
+    if(random()<p){addInventory(id,1);rewards[id]=1;found.push(label);}
+   }
+   state.museum.excavationsCompleted=(Number(state.museum.excavationsCompleted)||0)+1;
+   state.museum.excavationHistory=(state.museum.excavationHistory||[]).concat([{jobId:id,site:job.site,at:now,rewards}]).slice(-12);
+   pushLog('⛏️ Excavación finalizada · '+site.name+': '+found.join(', ')+'.');
+ });
 }
 function canCurateMuseum(id){
  const project=MUSEUM_CURATORIAL_PROJECTS.find(x=>x.id===id);
@@ -3779,29 +3807,33 @@ function canStartRelictSurvey(id){
 function startRelictSurvey(id,now=Date.now()){
  const mission=relictSurveySpec(id);
  if(!canStartRelictSurvey(id)||!Number.isFinite(now))return false;
- state.money-=mission.money;state.knowledge-=mission.knowledge;
- state.museum.relictSurveySeq=(Number(state.museum.relictSurveySeq)||0)+1;
- state.museum.relictSurveys.push({id:state.museum.relictSurveySeq,relict:id,endAt:now+mission.seconds*1000});
- pushLog('🔎 Archivo de campo iniciado: '+mission.name+'.');render();
- return true;
+ if(state.museum.relictSurveySeq>=Number.MAX_SAFE_INTEGER)return false;
+ return museumJobTransaction(()=>{
+   state.money-=mission.money;state.knowledge-=mission.knowledge;
+   state.museum.relictSurveys.push({id:++state.museum.relictSurveySeq,relict:id,endAt:now+mission.seconds*1000});
+   pushLog('🔎 Archivo de campo iniciado: '+mission.name+'.');
+ });
 }
 function collectRelictSurvey(jobId,now=Date.now(),random=Math.random){
  const jobs=state.museum.relictSurveys||[],index=jobs.findIndex(x=>String(x.id)===String(jobId));
  if(index<0||!Number.isFinite(now))return false;
  const job=jobs[index],r=MUSEUM_RELICTS.find(x=>x.id===job.relict);
- if(!r||now<job.endAt)return false;
- jobs.splice(index,1); // Reclamar una vez.
- const gain=state.upgrades.relictSurveyTier?2:1;
- const old=relictLeadCount(r.id);
- addRelictLead(r.id,gain);
- const granted=relictLeadCount(r.id)-old;
- const material=random()<0.20?'animal_trace':null;
- if(material)addInventory(material,1);
- state.museum.relictSurveyHistory=(state.museum.relictSurveyHistory||[]).concat([{
-  relict:r.id,at:now,leads:granted,material
- }]).slice(-8);
- pushLog('🔎 Investigación completada: '+r.name+' · '+granted+' indicio(s)'+(material?' y una muestra de huellas':'')+'.');
- render();return true;
+ const id=scientificVoyageId(job.id);
+ if(!r||id===null||!Number.isFinite(job.endAt)||now<job.endAt||state.museum.relictSurveySettled?.[id])return false;
+ return museumJobTransaction(()=>{
+   jobs.splice(index,1);
+   (state.museum.relictSurveySettled??={})[id]=true;
+   const gain=state.upgrades.relictSurveyTier?2:1;
+   const old=relictLeadCount(r.id);
+   addRelictLead(r.id,gain);
+   const granted=relictLeadCount(r.id)-old;
+   const material=random()<0.20?'animal_trace':null;
+   if(material)addInventory(material,1);
+   state.museum.relictSurveyHistory=(state.museum.relictSurveyHistory||[]).concat([{
+    jobId:id,relict:r.id,at:now,leads:granted,material
+   }]).slice(-8);
+   pushLog('🔎 Investigación completada: '+r.name+' · '+granted+' indicio(s)'+(material?' y una muestra de huellas':'')+'.');
+ });
 }
 function canCatalogRelict(id){
  return !!(MUSEUM_RELICTS.some(r=>r.id===id)&&!museumRelictOwned(id)&&relictLeadCount(id)>=3&&
@@ -4667,26 +4699,31 @@ function scientificVoyageId(id){
  if(typeof id==='string'&&/^[1-9]\d*$/.test(id))id=Number(id);
  return Number.isSafeInteger(id)&&id>0?id:null;
 }
+function normalizeSettledJobs(owner,key,history,idOf){
+ const saved=owner[key];
+ const settled=Object.create(null);
+ let lastId=0;
+ if(saved&&typeof saved==='object'&&!Array.isArray(saved)){
+   for(const [text,paid] of Object.entries(saved)){
+     const id=scientificVoyageId(text);
+     if(paid!==true||id===null)continue;
+     settled[id]=true;lastId=Math.max(lastId,id);
+   }
+ }
+ for(const row of history){
+   const id=scientificVoyageId(idOf(row));
+   if(id===null||!Number.isFinite(row.at))continue;
+   settled[id]=true;lastId=Math.max(lastId,id);
+ }
+ if(lastId)owner[key]=settled;
+ else delete owner[key];
+ return lastId;
+}
 function normalizeScientificVoyages(snapshot){
- const completed=Object.create(null);
- let seq=scientificVoyageId(snapshot.voyageSeq)??0;
- const receipts=snapshot.voyageSettled;
- const entries=receipts&&typeof receipts==='object'&&!Array.isArray(receipts)?Object.entries(receipts):[];
- for(const [key,settled] of entries){
-   const id=scientificVoyageId(key);
-   if(settled!==true||id===null)continue;
-   completed[id]=true;
-   seq=Math.max(seq,id);
- }
- for(const receipt of Array.isArray(snapshot.voyageHistory)?snapshot.voyageHistory:[]){
-   const id=scientificVoyageId(receipt?.jobId);
-   if(id===null||!Number.isFinite(receipt.at))continue;
-   if(!Number.isFinite(receipt.money)||!Number.isFinite(receipt.knowledge))continue;
-   completed[id]=true;
-   seq=Math.max(seq,id);
- }
- if(Object.keys(completed).length)snapshot.voyageSettled=completed;
- else delete snapshot.voyageSettled;
+ const history=Array.isArray(snapshot.voyageHistory)?snapshot.voyageHistory.filter(row=>
+   Number.isFinite(row?.money)&&Number.isFinite(row.knowledge)):[];
+ const lastId=normalizeSettledJobs(snapshot,'voyageSettled',history,row=>row.jobId);
+ let seq=Math.max(scientificVoyageId(snapshot.voyageSeq)??0,lastId);
  const pending=new Set();
  snapshot.voyages=(Array.isArray(snapshot.voyages)?snapshot.voyages:[]).filter(job=>{
    if(!job||typeof job!=='object')return false;
@@ -4694,7 +4731,7 @@ function normalizeScientificVoyages(snapshot){
    if(id===null)return true;
    seq=Math.max(seq,id);
    // Leave a historical job with an unreadable date visible, unless the same departure has a valid date.
-   if(completed[id]||pending.has(id))return false;
+   if(snapshot.voyageSettled?.[id]||pending.has(id))return false;
    if(Number.isFinite(job.endAt))pending.add(id);
    return true;
  }).filter(job=>Number.isFinite(job.endAt)||!pending.has(scientificVoyageId(job.id)));
@@ -6875,7 +6912,9 @@ function normalizeDeep3330(s){
  d.jobs=Array.isArray(d.jobs)?d.jobs.filter(j=>j&&Number.isSafeInteger(j.id)&&j.id>0&&Object.hasOwn(DEEP_METHODS3330,j.method)&&deepRegionIndex3330.has(j.region)&&deepRegionIndex3330.get(j.region).habitats.includes(j.habitat)&&['amanecer','dia','atardecer','noche'].includes(j.time)&&['primavera','verano','otono','invierno'].includes(j.season)&&Number.isFinite(j.startedAt)&&Number.isFinite(j.endAt)&&j.endAt-j.startedAt===DEEP_METHODS3330[j.method].seconds*1000&&Number.isInteger(j.seed)&&j.seed>=0&&j.seed<=4294967295):[];
  d.jobs=d.jobs.filter((j,i,a)=>a.findIndex(x=>x.id===j.id)===i);
  d.history=Array.isArray(d.history)?d.history.filter(h=>h&&Number.isSafeInteger(h.id)&&deepRegionIndex3330.has(h.region)&&Object.hasOwn(DEEP_METHODS3330,h.method)&&Number.isFinite(h.at)).slice(-12).map(h=>({id:h.id,region:h.region,method:h.method,at:h.at,records:Object.fromEntries(Object.entries(h.records||{}).filter(([id,n])=>SPECIES[id]&&Number.isSafeInteger(n)&&n>0)),...(abyssalRegionIndex3340.get(h.region)?.habitats.includes(h.stratum)?{stratum:h.stratum}: {})})):[];
- d.jobs=d.jobs.filter(j=>!d.history.some(h=>h.id===j.id));d.seq=Math.max(0,Number.isSafeInteger(d.seq)?d.seq:0,...d.jobs.map(j=>j.id),...d.history.map(h=>h.id));s.deepSurvey=d;s.upgrades.deepUnlocked=!!s.purchases.exploracion_profunda_1;s.upgrades.abyssalUnlocked=!!s.purchases.exploracion_abisal_1;return d;
+ const lastId=normalizeSettledJobs(d,'settled',d.history,row=>row.id);
+ d.jobs=d.jobs.filter(j=>!d.settled?.[j.id]);
+ d.seq=Math.max(lastId,Number.isSafeInteger(d.seq)?d.seq:0,...d.jobs.map(j=>j.id));s.deepSurvey=d;s.upgrades.deepUnlocked=!!s.purchases.exploracion_profunda_1;s.upgrades.abyssalUnlocked=!!s.purchases.exploracion_abisal_1;return d;
 }
 normalizeDeep3330(state);
 function deepReady3330(region=state.currentRegion){return deepRegionIndex3330.has(region)&&regionAccessible(deepRegionIndex3330.get(region))&&!!state.upgrades.deepUnlocked&&(!abyssalRegionIndex3340.has(region)||!!state.upgrades.abyssalUnlocked)&&state.craftedItems?.sounding_kit===true;}
@@ -6913,10 +6952,10 @@ function canStartDeep3330(method=state.deepSurvey.method){const m=Object.hasOwn(
 function startDeep3330(method=state.deepSurvey.method){if(!canStartDeep3330(method))return false;const m=DEEP_METHODS3330[method],at=Date.now();if(!Number.isFinite(at))return false;return deepTransaction3330(()=>{state.money-=m.money;state.knowledge-=m.knowledge;state.deepSurvey.method=method;state.deepSurvey.jobs.push({id:++state.deepSurvey.seq,method,region:state.currentRegion,habitat:state.habitat,time:state.time,season:state.season,startedAt:at,endAt:at+m.seconds*1000,seed:Math.floor(Math.random()*4294967296)});return true;});}
 function processDeep3330(now=Date.now()){
  if(!Number.isFinite(now))return false;now=Math.min(now,Date.now());const due=state.deepSurvey.jobs.filter(j=>j.endAt<=now);if(!due.length)return false;
- return deepTransaction3330(()=>{for(const j of due){if(state.deepSurvey.history.some(h=>h.id===j.id))continue;const context={currentRegion:state.currentRegion,habitat:state.habitat,time:state.time,season:state.season},method=state.deepSurvey.method,last=state.lastEncounter,before={...state.sightings},random=Math.random,batch=batchingOffline;let seed=j.seed;
+ return deepTransaction3330(()=>{for(const j of due){if(state.deepSurvey.settled?.[j.id])continue;const context={currentRegion:state.currentRegion,habitat:state.habitat,time:state.time,season:state.season},method=state.deepSurvey.method,last=state.lastEncounter,before={...state.sightings},random=Math.random,batch=batchingOffline;let seed=j.seed;
   try{Object.assign(state,{currentRegion:j.region,habitat:j.habitat,time:j.time,season:j.season});state.deepSurvey.method=j.method;deepResolving3330=true;batchingOffline=true;Math.random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};encounter('manual',j.endAt,false);}
   finally{Math.random=random;deepResolving3330=false;batchingOffline=batch;Object.assign(state,context);state.deepSurvey.method=method;if(context.currentRegion!==j.region)state.lastEncounter=last;}
-  const records=Object.fromEntries(deepRegionIndex3330.get(j.region).species.map(id=>[id,(state.sightings[id]||0)-(before[id]||0)]).filter(([,n])=>n>0));achievementRecord3360('deep',{method:j.method,records,abyss:abyssalRegionIndex3340.has(j.region)});state.deepSurvey.history.push({id:j.id,method:j.method,region:j.region,at:now,records,...(abyssalRegionIndex3340.has(j.region)?{stratum:j.habitat}: {})});
+  const records=Object.fromEntries(deepRegionIndex3330.get(j.region).species.map(id=>[id,(state.sightings[id]||0)-(before[id]||0)]).filter(([,n])=>n>0));achievementRecord3360('deep',{method:j.method,records,abyss:abyssalRegionIndex3340.has(j.region)});(state.deepSurvey.settled??={})[j.id]=true;state.deepSurvey.history.push({id:j.id,method:j.method,region:j.region,at:now,records,...(abyssalRegionIndex3340.has(j.region)?{stratum:j.habitat}: {})});
  }const ids=new Set(due.map(j=>j.id));state.deepSurvey.jobs=state.deepSurvey.jobs.filter(j=>!ids.has(j.id));state.deepSurvey.history=state.deepSurvey.history.slice(-12);return true;});
 }
 function deepAction3330(action,id){if(action==='deep-method'&&Object.hasOwn(DEEP_METHODS3330,id)){state.deepSurvey.method=id;renderPanel();persist();return;}if(action==='deep-start'){if(startDeep3330()){renderCounters();renderPanel();}return;}if(action==='deep-craft'){craftItem('sounding_kit');return;}}
