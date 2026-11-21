@@ -40,7 +40,7 @@ Revisión de los 24 PNG incorporados en `www/iconoteca/index.html` (256 × 256 p
 | 24 | brujula | Brújula de latón | Conforme provisional | Test a 32 px |
 
 ### Resumen de prioridad
-- **8 ilustraciones con residuos evidentes de recorte**: Campo, Inventario, Museo, Corona, Conocimiento, Libras, Tomos, Exploración, Excavación (son **9**, revisadas individualmente).
+- **9 ilustraciones con residuos evidentes de recorte**: Campo, Inventario, Museo, Corona, Conocimiento, Libras, Tomos, Exploración y Excavación.
 - **1 decisión de producto pendiente**: Corona; no volver a introducir moneda de prueba.
 - **Piezas detalladas a comprobar primero en pequeño**: Naturalistas, Prestigio, Huellas, Conocimiento.
 - **24/24 imágenes reconocibles por significado**, pendiente la aprobación final del diseño.
