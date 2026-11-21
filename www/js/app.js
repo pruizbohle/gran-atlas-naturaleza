@@ -1836,17 +1836,34 @@ const SPECIMEN_SELECTION={
  excepcional:['zorro_rojo','lobo_gris','aguila_real','af_gran_kudu','af_pangolin_gigante','af_gorila_montana','af_elefante_sabana','af_cocodrilo_nilo','af_tortuga_aldabra','asia_esp_0402','asia_esp_0403','asia_esp_0527','asia_esp_0373','asia_esp_0369']
 };
 function canonicalTaxon(id){return (SPECIES[id]?.latin||'').toLowerCase().trim().split(/\s+/).slice(0,2).join(' ');}
-function legendaryForSpecies(id){return LEGENDARY_SPECIMENS.find(l=>SPECIES[l.speciesId]&&canonicalTaxon(id)&&canonicalTaxon(l.speciesId)===canonicalTaxon(id));}
+function indexLegendaryTaxa(){
+ const index=new Map();
+ for(const specimen of LEGENDARY_SPECIMENS){
+  const taxon=canonicalTaxon(specimen.speciesId);
+  if(taxon&&!index.has(taxon))index.set(taxon,specimen);
+ }
+ return index;
+}
+let legendaryTaxa=indexLegendaryTaxa();
+function legendaryForSpecies(id){return legendaryTaxa.get(canonicalTaxon(id));}
 const SPECIMEN_CATEGORIES=Object.fromEntries(Object.keys(SPECIES).map(id=>{
- const categories=[];
+ const categories=[],legendary=legendaryForSpecies(id);
  if(SPECIES[id].special.some(v=>specialVariantName(v)==='Notable'))categories.push('Notable');
- if(SPECIMEN_SELECTION.epico.includes(id)||legendaryForSpecies(id))categories.push('Épico');
- if(SPECIMEN_SELECTION.excepcional.includes(id)||legendaryForSpecies(id))categories.push('Excepcional');
- if(legendaryForSpecies(id))categories.push('Legendario');
+ if(SPECIMEN_SELECTION.epico.includes(id)||legendary)categories.push('Épico');
+ if(SPECIMEN_SELECTION.excepcional.includes(id)||legendary)categories.push('Excepcional');
+ if(legendary)categories.push('Legendario');
  return [id,categories];
 }));
+let specimenIds;
 function configuredSpecials(sp){
- const id=Object.keys(SPECIES).find(id=>SPECIES[id]===sp);
+ // The catalogue extensions are all loaded before this is first called.
+ if(!specimenIds){
+  specimenIds=new WeakMap();
+  for(const [id,species] of Object.entries(SPECIES)){
+   if(!specimenIds.has(species))specimenIds.set(species,id);
+  }
+ }
+ const id=specimenIds.get(sp);
  return [...new Set([...(sp.special||[]).map(specialVariantName),...(SPECIMEN_CATEGORIES[id]||[])])];
 }
 // Keep the v3.19.6 array intact: its length defines each pigmentation probability.
@@ -2020,14 +2037,20 @@ if(southAmerica3230){
  taxonomyInfo=function(id){return SPECIES[id]?.origin==='sa3230'?SPECIES[id].taxonomy:previousTaxonomy(id);};
 }
 // AM-04 END catalog
+function installUniqueTaxa(species,duplicateMessage,categories){
+ const names=new Set(Object.values(SPECIES).map(entry=>entry.latin));
+ for(const [id,entry] of Object.entries(species)){
+  if(SPECIES[id]||names.has(entry.latin))throw Error(duplicateMessage+id);
+  SPECIES[id]=entry;
+  names.add(entry.latin);
+  if(categories)SPECIMEN_CATEGORIES[id]=categories.slice();
+ }
+}
 // OC3290 BEGIN AM-04 END catalog
 
  const oceaniaReview=globalThis.AtlasOceaniaRuntime3290;
 if(!oceaniaReview||(!oceaniaReview.approvedForProduction&&!false))throw Error('Oceanian release is not approved');
- for(const[id,sp]of Object.entries(oceaniaReview.species)){
-  if(SPECIES[id]||Object.values(SPECIES).some(s=>s.latin===sp.latin))throw Error('Oceanian collision: '+id);
-  SPECIES[id]=sp;
- }
+ installUniqueTaxa(oceaniaReview.species,'Oceanian collision: ');
  for(const region of oceaniaReview.regions){if(REGIONS.some(r=>r.id===region.id))throw Error('Oceanian region collision');REGIONS.push(region);}
  Object.assign(SEXUAL_DIMORPHISM,oceaniaReview.dimorphism);Object.assign(SPECIMEN_CATEGORIES,oceaniaReview.categories);
  const previousOceaniaTaxonomy=taxonomyInfo;
@@ -2140,7 +2163,7 @@ RESEARCH_NODES.push({id:'polos_1',name:'Exploración de las regiones polares',de
 // GM3320 BEGIN catalog
 const marine3320=globalThis.AtlasMarine3320;
 if(!marine3320)throw Error('Faltan los datos marinos superficiales 3.32.0');
-for(const[id,sp]of Object.entries(marine3320.species)){if(SPECIES[id]||Object.values(SPECIES).some(s=>s.latin===sp.latin))throw Error('Identidad marina duplicada');SPECIES[id]=sp;SPECIMEN_CATEGORIES[id]=['Notable'];}
+installUniqueTaxa(marine3320.species,'Identidad marina duplicada: ',['Notable']);
 for(const r of marine3320.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región marina duplicada');REGIONS.push(r);}
 const taxonomyBefore3320=taxonomyInfo;
 taxonomyInfo=function(id){return SPECIES[id]?.origin==='marine3320'?SPECIES[id].taxonomy:taxonomyBefore3320(id);};
@@ -2149,7 +2172,7 @@ RESEARCH_NODES.push({id:'mares_superficiales_1',name:'Navegación de mares super
 // GM3330 BEGIN catalog
 const deep3330=globalThis.AtlasDeep3330;
 if(!deep3330)throw Error('Faltan datos de océanos profundos');
-for(const[id,sp]of Object.entries(deep3330.species)){if(SPECIES[id]||Object.values(SPECIES).some(s=>s.latin===sp.latin))throw Error('Identidad profunda duplicada');SPECIES[id]=sp;SPECIMEN_CATEGORIES[id]=['Notable'];}
+installUniqueTaxa(deep3330.species,'Identidad profunda duplicada: ',['Notable']);
 for(const r of deep3330.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región profunda duplicada');REGIONS.push(r);}
 const taxonomyBefore3330=taxonomyInfo;
 taxonomyInfo=function(id){return SPECIES[id]?.origin==='deep3330'?SPECIES[id].taxonomy:taxonomyBefore3330(id);};
@@ -2158,7 +2181,7 @@ RESEARCH_NODES.push({id:'exploracion_profunda_1',name:'Sondeo y muestreo de océ
 // GM3340 BEGIN catalog
 const abyssal3340=globalThis.AtlasAbyssal3340;
 if(!abyssal3340)throw Error('Faltan datos de fosas 3.34.0');
-for(const[id,sp]of Object.entries(abyssal3340.species)){if(SPECIES[id]||Object.values(SPECIES).some(s=>s.latin===sp.latin))throw Error('Identidad abisal duplicada');SPECIES[id]=sp;SPECIMEN_CATEGORIES[id]=['Notable'];}
+installUniqueTaxa(abyssal3340.species,'Identidad abisal duplicada: ',['Notable']);
 for(const r of abyssal3340.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región abisal duplicada');REGIONS.push(r);}
 const taxonomyBefore3340=taxonomyInfo;
 taxonomyInfo=function(id){return SPECIES[id]?.origin==='abyssal3340'?SPECIES[id].taxonomy:taxonomyBefore3340(id);};
@@ -2176,10 +2199,16 @@ if(globalThis.AtlasGM06){
 const catalogA04=globalThis.AtlasGM07A04;
 if(catalogA04){
  catalogA04.apply(SPECIES,REGIONS,SPECIMEN_CATEGORIES);
+ legendaryTaxa=indexLegendaryTaxa();
  const previousTaxonomy=taxonomyInfo;
  taxonomyInfo=function(id){
   return Object.hasOwn(catalogA04.records,id)?catalogA04.records[id].taxonomy:previousTaxonomy(id);
  };
+}
+const catalogueTaxa=new Map();
+function catalogueTaxonomy(id){
+ if(!catalogueTaxa.has(id))catalogueTaxa.set(id,taxonomyInfo(id));
+ return catalogueTaxa.get(id);
 }
 
 function publishedMonographA04(id){
@@ -2259,7 +2288,7 @@ function commissionAction3370(action,id){
 let achievementReady3360=false;
 const achievementDirty3360=new Set();
 let achievementNotices3360=[];
-function achievementContext3360(){return {species:SPECIES,regions:REGIONS,research:RESEARCH_NODES,recipes:RECIPES,collections:MUSEUM_COLLECTIONS,fossilRecipes:MUSEUM_FOSSIL_RECIPES,relicts:MUSEUM_RELICTS,voyages:VOYAGES,taxonomy:taxonomyInfo,specials:configuredSpecials};}
+function achievementContext3360(){return {species:SPECIES,regions:REGIONS,research:RESEARCH_NODES,recipes:RECIPES,collections:MUSEUM_COLLECTIONS,fossilRecipes:MUSEUM_FOSSIL_RECIPES,relicts:MUSEUM_RELICTS,voyages:VOYAGES,taxonomy:catalogueTaxonomy,specials:configuredSpecials};}
 function achievementMark3360(...groups){for(const g of groups)achievementDirty3360.add(g);commissionDirty3370=true;if(groups.some(g=>['museum','research','zoology'].includes(g)))curationDirty3380=true;}
 function achievementIncrement3360(key){globalThis.AtlasAchievements3360?.increment(state,key);achievementMark3360('navigation');}
 function achievementRecord3360(type,data){globalThis.AtlasAchievements3360?.record(state,type,data);achievementMark3360('navigation','exploration');}
@@ -2554,8 +2583,7 @@ function manualSearchChance(){return Math.min(0.96,0.50*manualEncounterBonus());
 function automaticSearchChance(){return state.helpers>0?Math.min(0.96,0.38*helperBonus()):0;}
 function automaticCensusRate(){return state.upgrades.autoCensus?2:1;}
 function manualCensusRate(){return state.upgrades.censusTier>=2?3:state.upgrades.censusTier?2:1;}
-function fieldBuffSummaryMarkup(){
- const cap=automaticSearchCapacity();
+function fieldBuffSummaryMarkup(cap=automaticSearchCapacity()){
  const manualChoices=eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season).length;
  const group=state.upgrades.groupTier||0;
  const manualGroup=group===3?'25 % de 2 / 5 % de 3 especies':group===2?'20 % de 2 especies':group===1?'10 % de 2 especies':'1 especie por encuentro';
@@ -3032,29 +3060,36 @@ function replaceFieldEncounter(result, markup){
  }
  result.replaceChildren(template.content);
 }
+const fieldSectionMarkup=new WeakMap();
+function updateFieldSection(node,next){
+ if(fieldSectionMarkup.get(node)===next)return;
+ if(fieldSectionMarkup.has(node)||node.innerHTML!==next)node.innerHTML=next;
+ fieldSectionMarkup.set(node,next);
+}
 function updateFieldOutput(){
  if(tab!=='field')return;
  const last=state.lastEncounter;
  const result=document.getElementById('fieldResult');
  if(result){const signature=fieldEncounterSignature(last);if(signature!==lastPanelSignature){replaceFieldEncounter(result,encounterCardMarkup(last));result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
  const buffs=document.getElementById('fieldBuffSummary');
- if(buffs){const next=fieldBuffSummaryMarkup();if(buffs.innerHTML!==next)buffs.innerHTML=next;}
- const automatic=fieldAutomaticModel();
+ const capacity=automaticSearchCapacity();
+ if(buffs)updateFieldSection(buffs,fieldBuffSummaryMarkup(capacity));
+ const automatic=fieldAutomaticModel(capacity);
  const autoNoticeEl=document.getElementById('autoNotice');
  if(autoNoticeEl){
   const text=automatic.summary;
   if(autoNoticeEl.textContent!==text)autoNoticeEl.textContent=text;
  }
  const progress=document.getElementById('fieldProgress');
- if(progress){const next=globalThis.AtlasFieldUI.progress(fieldProgressModel());if(progress.innerHTML!==next)progress.innerHTML=next;}
+ if(progress)updateFieldSection(progress,globalThis.AtlasFieldUI.progress(fieldProgressModel()));
  const cadence=document.getElementById('fieldAutoCadence');
  if(cadence){const next=automatic.detail;if(cadence.textContent!==next)cadence.textContent=next;}
  const autoDetail=document.getElementById('fieldAutoDetail');
  if(autoDetail&&autoDetail.textContent!==currentAutoNotice)autoDetail.textContent=currentAutoNotice;
  const log=document.getElementById('fieldLog');
  if(log && (diaryDirty||log.dataset?.artSequence!==String(last?.sequence||0))){
-  const wasNearTop=log.scrollTop<42,next=fieldLogMarkup();
-  if(log.innerHTML!==next)log.innerHTML=next;
+  const wasNearTop=log.scrollTop<42;
+  updateFieldSection(log,fieldLogMarkup());
   if(wasNearTop)log.scrollTop=0;
   if(log.dataset)log.dataset.artSequence=String(last?.sequence||0);
   diaryDirty=false;
@@ -3270,8 +3305,8 @@ function fieldProgressModel(){
  let goal=st>=5?(state.published[id]?'Registro completo · sigue explorando.':'Tu monografía está lista para publicar.'):!req.sightOk?'Observa '+Math.max(0,req.needSight-sight(id))+' ejemplares más.':!req.extraOk?(st===3?'Documenta conducta o dimorfismo.':'Busca un espécimen especial.'):!req.moneyOk||!req.knowledgeOk?'Siguiente etapa: £'+req.money+' y '+req.knowledge+' conocimiento.':'Puedes avanzar una etapa en el Cuaderno.';
  return {id,name:visibleName(id),label:st+'/5 etapas',percent:st>=5?100:Math.min(100,100*sight(id)/Math.max(1,req.needSight)),goal};
 }
-function fieldAutomaticModel(){
- const cap=automaticSearchCapacity(),helpers=state.helpers||0;
+function fieldAutomaticModel(cap=automaticSearchCapacity()){
+ const helpers=state.helpers||0;
  const paused=helpers>0&&(!cap.total||!cap.remaining);
  return {helpers,summary:helpers?(helpers+' naturalistas · '+(paused?'en pausa':'explorando')):'Explora con ayuda de naturalistas',detail:helpers?(paused?(cap.total?'Cupo horario completo · búsqueda manual disponible':'Sin fauna compatible con la estación'):'Cada '+autoInterval()+' s · censo ×'+automaticCensusRate()+' · '+cap.remaining+'/'+cap.total+' especies con cupo'):'Contrata tu equipo en Investigación',notice:currentAutoNotice};
 }
@@ -3284,8 +3319,8 @@ function fieldLogMarkup(){
  return (art?'<div class="field-log-art" aria-label="Último avistamiento">'+art+'</div>':'')+history;
 }
 function fieldViewModel(){
- const region=currentRegion();
- return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:globalThis.AtlasNaturalistArt?.landscape(state.habitat,region.id,true)||fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),progress:fieldProgressModel(),auto:fieldAutomaticModel(),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(),logHTML:fieldLogMarkup(),toolsHTML:'',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
+ const region=currentRegion(),capacity=automaticSearchCapacity();
+ return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:globalThis.AtlasNaturalistArt?.landscape(state.habitat,region.id,true)||fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),progress:fieldProgressModel(),auto:fieldAutomaticModel(capacity),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(capacity),logHTML:fieldLogMarkup(),toolsHTML:'',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
 }
 function renderField(){return globalThis.AtlasFieldUI.render(fieldViewModel());}
 function renderJournal(){
@@ -4992,7 +5027,7 @@ function bestiaryData3260(){
  if(bestiaryCatalog3260)return bestiaryCatalog3260;
  const ids=Object.keys(SPECIES),buckets={Mammalia:'Mamífero',Aves:'Ave',Actinopterygii:'Pez',Chondrichthyes:'Pez'},rarities={'Común':1,'Poco común':2,'Raro':3,'Muy rara':4};
  // Same presentation buckets as bestiaryTypeBucket(), one taxonomy lookup.
- bestiaryCatalog3260={ids,regions:null,entries:ids.map((id,slot)=>{const taxonomy=taxonomyInfo(id);return {id,slot,taxonomy,group:buckets[taxonomy.className]||'Reptil/Anfibio',rarity:rarities[SPECIES[id].rare]||0};})};
+ bestiaryCatalog3260={ids,regions:null,entries:ids.map((id,slot)=>{const taxonomy=catalogueTaxonomy(id);return {id,slot,taxonomy,group:buckets[taxonomy.className]||'Reptil/Anfibio',rarity:rarities[SPECIES[id].rare]||0};})};
  return bestiaryCatalog3260;
 }
 function bestiaryRegions3260(){

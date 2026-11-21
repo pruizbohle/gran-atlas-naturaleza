@@ -5,3 +5,7 @@
 @media(prefers-reduced-motion:reduce){.b26-dialog,.b26-root *{scroll-behavior:auto!important}}
 @media(max-width:760px){body:has(.b26-root) .mobile-view-heading{display:none}}
 @media(max-width:360px){.b26-heading h1{font-size:18px}.b26-heading .b26-eyebrow{font-size:6px}}
+
+/* Preserve card order and keyboard access while deferring offscreen layout. */
+.b26-entry{content-visibility:auto;contain-intrinsic-block-size:auto 189px}
+@media(max-width:760px){.b26-entry{contain-intrinsic-block-size:auto 165px}}

@@ -22,3 +22,7 @@
 .j25-note-body .variant-card .sprite-wrap svg{width:88px;height:88px;max-width:100%}
 .j25-note-body .sex-sprite.sprite-wrap{width:108px;height:108px;background:#f2e9d3}
 .j25-note-body .sex-sprite svg{width:100px;height:100px;max-width:100%}
+
+/* The selector remains scrollable and focusable before thumbnails enter view. */
+.j25-animal{content-visibility:auto;contain-intrinsic-size:auto 60px}
+@media(max-width:760px){.j25-animal{contain-intrinsic-size:auto 65px auto 70px}}
