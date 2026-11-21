@@ -28,7 +28,9 @@ test('ART-02 preserves stable artwork routes, alpha and the exact historical Web
     for (const row of item.resolutions) {
       assert.ok(!paths.has(row.path));
       paths.add(row.path);
-      const after = fs.readFileSync('www/' + row.path);
+      const current = fs.readFileSync('www/' + row.path);
+      const historicalRelease = 'www/' + row.path.replace('/plates/', '/review/art03/');
+      const after = fs.existsSync(historicalRelease) ? fs.readFileSync(historicalRelease) : current;
       const before = fs.readFileSync('www/' + row.before);
       assert.equal(after.toString('ascii', 0, 4), 'RIFF');
       assert.equal(after.toString('ascii', 8, 16), 'WEBPVP8X');
@@ -36,7 +38,7 @@ test('ART-02 preserves stable artwork routes, alpha and the exact historical Web
       assert.equal(after.readUIntLE(24, 3) + 1, row.size);
       assert.equal(after.readUIntLE(27, 3) + 1, row.size);
       assert.deepEqual([after.length, sha(after)], [row.newBytes, row.newSha256]);
-      assert.deepEqual(release[row.path], [row.newBytes, row.newSha256]);
+      assert.deepEqual(release[row.path], [current.length, sha(current)]);
       assert.deepEqual([before.length, sha(before)], [row.oldBytes, row.oldSha256]);
       assert.deepEqual(before, execFileSync('git', ['show', integrity.baseline + ':www/' + row.path]));
       assert.ok(assets.labFiles.includes(row.before));

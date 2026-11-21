@@ -26,7 +26,7 @@ for (const [value, label] of [
 const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
-  gallery: 'Galería', variants: 'Variantes', art01: 'Variantes revisadas en ART-01', art02: 'Variantes revisadas en ART-02', frames: 'Ejemplares especiales',
+  gallery: 'Galería', variants: 'Variantes', art01: 'Variantes revisadas en ART-01', art02: 'Variantes revisadas en ART-02', art03: 'Variantes revisadas en ART-03', frames: 'Ejemplares especiales',
   compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles', amphibians: 'Comparar anfibios', cartilaginous: 'Comparar tiburones y rayas',
   salmonids: 'Comparar salmónidos', freshwater: 'Comparar peces de agua dulce', reef: 'Comparar peces de arrecife', deep: 'Comparar peces de aguas profundas', marine: 'Comparar peces marinos', cephalopods: 'Comparar cefalópodos', legendary: 'Colección de legendarios',
   compression: 'Compresión WebP', scale: 'Escala real', 'visual-scale': 'Ajustes de escala', review: 'Revisión artística'
@@ -175,9 +175,11 @@ function pigmentGallery() {
     }).join('') + '</div>';
 }
 
-function artComparisons(review, lot) {
+const artReviews = { art01: art01Review, art02: art02Review, art03: art03Review };
+
+function artComparisons(lot) {
   const speciesById = new Map(matchingSpecies().map(sp => [sp.id, sp]));
-  const rows = review.filter(row => speciesById.has(row.id));
+  const rows = artReviews[lot].filter(row => speciesById.has(row.id));
   const size = Number(comparisonSize.value);
   byId('summary').textContent = rows.length + ' variantes del lote';
   if (!rows.length) return '<p>No se encontraron variantes con estos filtros.</p>';
@@ -191,19 +193,24 @@ function artComparisons(review, lot) {
       'Normal', 'plate atlas-art-cutout');
     const previous = row.before?.[size];
     const legacy = row.legacy?.[size];
-    const subsequent = lot === 'art01' ? art02Review.find(item =>
-      item.supersedesArt01 && item.id === row.id && item.variant === row.variant) : undefined;
+    const subsequent = [...art02Review, ...art03Review].find(item =>
+      (item.supersedes === lot || item.supersedesArt01 && lot === 'art01') &&
+      item.id === row.id && item.variant === row.variant);
     const published = subsequent?.before[size];
+    const publishedLabel = 'Variante de ART-' + lot.slice(-2);
+    const legacyLabel = lot === 'art03' ? 'Anterior a ART-02' : 'Anterior a ART-01';
     const caption = row.caption || (previous ? 'Variante corregida' : 'Variante vigente');
     const images = [
       figure(illustration(sp, normal, 'Normal', size), 'Lámina normal'),
-      ...(legacy ? [figure(savedImage(legacy, 'Anterior a ART-01'), 'Anterior a ART-01')] : []),
+      ...(legacy ? [figure(savedImage(legacy, legacyLabel), legacyLabel)] : []),
       ...(previous ? [figure(savedImage(previous, 'Variante anterior'), 'Variante anterior')] : []),
-      figure(published ? savedImage(published, 'Variante de ART-01') : illustration(sp, variant, 'Normal', size),
-        published ? 'Variante de ART-01' : caption)
+      figure(published ? savedImage(published, publishedLabel) : illustration(sp, variant, 'Normal', size),
+        published ? publishedLabel : caption)
     ];
     const morph = row.morph ? '<dl class="morph-facts"><dt>Categoría del juego</dt><dd>' + text(variant.label) +
-      '</dd><dt>Morfo</dt><dd>' + text(row.morph) + ' · ' + text(row.evidence) + '</dd></dl>' : '';
+      '</dd><dt>Morfo</dt><dd>' + text(row.morph) + ' · ' + text(row.evidence) + '</dd>' +
+      (row.eye ? '<dt>Iris representado</dt><dd>' + text(row.eye) + '</dd>' : '') +
+      (row.version ? '<dt>Última corrección</dt><dd>V' + text(row.version) + '</dd>' : '') + '</dl>' : '';
     return '<article class="art01-comparison gallery-card" data-' + lot + '-species="' + text(row.id) +
       '" data-' + lot + '-variant="' + text(row.variant) + '"><h3>' + text(sp.name + ' · ' + variant.label) +
       '</h3><p class="latin">' + text(sp.latin) + '</p><p><strong>' + text(row.status) +
@@ -388,7 +395,7 @@ function draw() {
   const comparingVisualScale = mode === 'visual-scale';
   const comparingSets = comparingTaxa || comparingVisualScale;
   const comparingVariants = mode === 'variants';
-  const comparingArt = mode === 'art01' || mode === 'art02';
+  const comparingArt = Object.hasOwn(artReviews, mode);
   const comparingPigments = comparingVariants && pigmentViews.has(variantView.value);
   byId('heading').textContent = modes[mode];
   byId('mixed-control').hidden = mode !== 'mixed';
@@ -424,7 +431,7 @@ function draw() {
     return;
   }
   if (comparingArt) {
-    content.innerHTML = artComparisons(mode === 'art01' ? art01Review : art02Review, mode);
+    content.innerHTML = artComparisons(mode);
     return;
   }
   if (!sp && mode !== 'gallery') {

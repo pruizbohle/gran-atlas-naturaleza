@@ -262,11 +262,57 @@ async function art02Checks(page, lab) {
     labVariantPreviews: artworkModules };
 }
 
+async function art03Checks(page, lab) {
+  const mink = { id: 'eu_esp_0622', name: 'visón europeo', variant: 'Melánico', key: 'melanico' };
+  await gameArtworkChecks(page, mink);
+  await lab.locator('[data-mode="art03"]').click();
+  const archive = lab.locator('[data-art03-species]');
+  assert.equal(await archive.count(), 7);
+  const bear = lab.locator('[data-art03-species="asia_esp_0523"]');
+  assert.equal(await bear.locator('img').count(), 2);
+  assert.match(await bear.locator('strong').textContent(), /Pendiente/);
+  const minkCard = lab.locator('[data-art03-species="eu_esp_0622"]');
+  assert.equal(await minkCard.locator('img').count(), 4);
+  assert.deepEqual(await minkCard.locator('.morph-facts dd').allTextContents(),
+    ['Melánico', 'Melanismo · Interpretativo', 'Pardo oscuro', 'V5.0.7']);
+  const sizes = {};
+  for (const size of [64, 128, 256, 512]) {
+    await lab.locator('#comparison-size').selectOption(String(size));
+    const widths = await archive.locator('img').evaluateAll(images =>
+      Promise.all(images.map(async img => {
+        img.loading = 'eager';
+        await img.decode();
+        return img.naturalWidth;
+      })));
+    assert.equal(widths.length, 21);
+    assert.ok(widths.every(width => width === size), String(size));
+    sizes[size] = widths.length;
+  }
+  for (const backdrop of ['dark', 'light']) {
+    await lab.locator('#backdrop').selectOption(backdrop);
+    assert.equal(await lab.locator('#content').getAttribute('data-backdrop'), backdrop);
+  }
+  await lab.locator('#family').selectOption('Cervidae');
+  assert.equal(await archive.count(), 3);
+  await lab.locator('#search').fill('hydropotes');
+  assert.equal(await archive.count(), 1);
+  await lab.locator('#search').fill('');
+  await lab.locator('#family').selectOption('');
+  await lab.locator('[data-mode="art02"]').click();
+  const prior = lab.locator('[data-art02-species="eu_esp_0622"] img').last();
+  assert.match(await prior.getAttribute('src'), /^review\/art03\/.*eu_esp_0622--melanico\.webp$/);
+  await decoded(prior);
+  await labArtworkPreviews(lab, mink);
+  return { sizes, comparisons: 7, pendingBear: true, preservedMinkComparison: true,
+    renderedGameSurfaces: artworkModules, labVariantPreviews: artworkModules };
+}
+
 async function offlineRun(browser) {
   const context = await browser.newContext(mobile);
   const transition = process.env.AUD05_PWA_TRANSITION === '1';
   const inspectArt01 = process.env.ATLAS_ART01 === '1';
   const inspectArt02 = process.env.ATLAS_ART02 === '1';
+  const inspectArt03 = process.env.ATLAS_ART03 === '1';
   const candidate = sources.audit;
   try {
     const fixture = process.env.AUD05_PWA_SAVE;
@@ -312,7 +358,7 @@ async function offlineRun(browser) {
     for (const previous of previousCaches) assert.ok(!(previous in caches));
     const lab = await context.newPage();
     lab.on('pageerror', err => errors.push(err.message));
-    if (inspectArt01 || inspectArt02) {
+    if (inspectArt01 || inspectArt02 || inspectArt03) {
       await lab.goto(url + 'naturalist-art/');
       await lab.locator('#review-offline').click();
       await lab.getByText('Comparaciones listas para usar sin conexión.').waitFor({ timeout: 160000 });
@@ -338,9 +384,10 @@ async function offlineRun(browser) {
     }
     const art01 = inspectArt01 ? await art01Checks(page, lab) : undefined;
     const art02 = inspectArt02 ? await art02Checks(page, lab) : undefined;
+    const art03 = inspectArt03 ? await art03Checks(page, lab) : undefined;
     assert.deepEqual(errors, []);
     return { integrityVerified: true, exactBackup: true, previousCaches,
-      unchangedSaveReceipt: JSON.parse(saved), bestiaryOffline: 1000, caches, pigmentCounts, art01, art02 };
+      unchangedSaveReceipt: JSON.parse(saved), bestiaryOffline: 1000, caches, pigmentCounts, art01, art02, art03 };
   } finally {
     sources.audit = candidate;
     await context.close();

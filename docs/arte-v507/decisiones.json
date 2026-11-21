@@ -1,0 +1,85 @@
+{
+  "baseline": "465d6fb",
+  "rows": [
+    {
+      "id": "asia_esp_0086", "variant": "melanico", "outcome": "aprobada",
+      "morph": "Melanismo", "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Avellana oscura",
+        "changed": true,
+        "why": "Se recupera un anillo cálido poco saturado alrededor de la pupila discretamente alargada. El arco del párpado aporta más contraste que el iris."
+      },
+      "note": "El manto pardo negruzco se separa del tono cálido normal. Se recuperaron las astas cortas, el escudo caudal ceniza y las articulaciones de las patas finas."
+    },
+    {
+      "id": "asia_esp_0249", "variant": "melanico", "outcome": "aprobada",
+      "morph": "Melanismo", "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo casi negro",
+        "color": "Pardo casi negro",
+        "changed": false,
+        "why": "Se conserva el iris muy oscuro de la referencia zoológica. La lectura mejora con el párpado y un reflejo corneal contenido."
+      },
+      "note": "Se conservan los dos caninos superiores, las orejas redondeadas y la grupa compacta. El repintado carbón recupera hocico y patas. La especie carece de astas.",
+      "rejected": ["El primer repintado recuperaba ojos y caninos, pero el flanco castaño era demasiado próximo al pelaje habitual en crema y carbón."]
+    },
+    {
+      "id": "na_esp_odocoileus_virginianus", "variant": "melanico", "outcome": "aprobada",
+      "morph": "Melanismo", "evidence": "Documentado",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Avellana parda oscura",
+        "changed": true,
+        "why": "Se refuerza un matiz cálido tenue y la forma horizontal de la pupila. El tratamiento ocular es interpretativo."
+      },
+      "note": "Capa dorsal muy oscura, mandíbula visible y cara inferior clara de la cola, según la descripción del morfo. Se separan las extremidades y se recupera la cornamenta del macho."
+    },
+    {
+      "id": "af_bufalo_cafre", "variant": "melanico", "outcome": "aprobada",
+      "morph": "Melanismo", "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo negruzco",
+        "changed": false,
+        "why": "La lectura depende de párpados, frente y reflejo discreto, con un iris dentro de la gama parda natural."
+      },
+      "note": "Se modelaron el puente frontal y la curvatura de los cuernos, el hocico y las pezuñas. El manto carbón conserva relieve en cuello y hombros. El pelaje negro también es habitual en adultos.",
+      "rejected": ["El primer repintado conservaba demasiada claridad en flancos y cuartos traseros, con escasa diferenciación del pelaje normal."]
+    },
+    {
+      "id": "asia_esp_0061", "variant": "melanico", "outcome": "aprobada",
+      "morph": "Melanismo", "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo oscuro cálido",
+        "changed": false,
+        "why": "Se conserva el tono de referencia con una sombra cálida discreta. La iluminación del iris es mate."
+      },
+      "note": "La giba y la papada se separan en fondo oscuro. Los cuernos conservan bases claras y las medias ceniza delimitan las patas, dentro de la variación natural oscura de los machos adultos."
+    },
+    {
+      "id": "asia_esp_0523", "variant": "melanico", "outcome": "pendiente",
+      "morph": "Melanismo", "evidence": "Sin confirmar",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Sin corrección ocular",
+        "changed": false,
+        "why": "La revisión se aplaza hasta contar con evidencia de una diferencia pigmentaria distinta del negro habitual."
+      },
+      "note": "El negro y la media luna clara ya caracterizan al oso tibetano normal. La variante vigente aplana la cara, los pies y la marca pectoral. Sigue insuficiente a la espera de evidencia de un morfo oscuro diferenciable."
+    },
+    {
+      "id": "eu_esp_0622", "variant": "melanico", "outcome": "aprobada",
+      "morph": "Melanismo", "evidence": "Interpretativo",
+      "history": "art02",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo oscuro",
+        "changed": false,
+        "why": "Se conserva el iris oscuro. El contraste del morfo procede del manto carbón, y la lectura facial del párpado, los labios y las vibrisas."
+      },
+      "note": "El manto es más oscuro y neutro que el pardo normal. A 64 px se distingue la silueta y a 128 px mejora la separación de la cabeza. En ampliación se ven el margen claro superior e inferior y las vibrisas."
+    }
+  ]
+}
