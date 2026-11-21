@@ -3071,12 +3071,16 @@ function renderCrown(){
 function filterJournalRail(){
   // J-3250 BEGIN filter
   if(panel.querySelector('.journal-v3250')){
-   const q=globalThis.AtlasJournalUI.normalize(journalRailQuery);let count=0;
+   const normalize=globalThis.AtlasJournalUI.normalize,q=normalize(journalRailQuery);
+   const ids=currentRegion().species;let count=0;
    panel.querySelectorAll('[data-action="select-journal"][data-journal-slot]').forEach(button=>{
-    const sid=currentRegion().species[Number(button.dataset.journalSlot)];
-    button.hidden=!!q&&!globalThis.AtlasJournalUI.normalize(visibleName(sid)).includes(q);if(!button.hidden)count++;
+    const sid=ids[Number(button.dataset.journalSlot)],hidden=!!q&&!normalize(visibleName(sid)).includes(q);
+    if(button.hidden!==hidden)button.hidden=hidden;
+    if(!hidden)count++;
    });
-   const counter=panel.querySelector('#journalRailCount');if(counter)counter.textContent=count?count+' especies':'Sin resultados';return;
+   const counter=panel.querySelector('#journalRailCount'),label=count?count+' especies':'Sin resultados';
+   if(counter&&counter.textContent!==label)counter.textContent=label;
+   return;
   }
   // J-3250 END filter
   const rail=panel.querySelector('#journalSpeciesRail');
@@ -3287,14 +3291,18 @@ function renderField(){return globalThis.AtlasFieldUI.render(fieldViewModel());}
 function renderJournal(){
   const ids=currentRegion().species;
   if(!ids.includes(state.selectedJournal)) state.selectedJournal=ids.find(sid=>stage(sid)>=1)||ids[0];
+  // J-3250 BEGIN render
+  if(globalThis.AtlasJournalUI){
+    const model=journalViewModel3250();
+    journalRailModel3250=model;
+    return globalThis.AtlasJournalUI.render(model,journalRailCache3250?.ids===ids);
+  }
+  // J-3250 END render
   const id=state.selectedJournal || ids[0];
   const sp=SPECIES[id];
   const st=stage(id);
   const next=st<5?stageRequirements(id,st):null;
   const isKnown=!!state.discovered[id];
-  // J-3250 BEGIN render
-  if(globalThis.AtlasJournalUI)return globalThis.AtlasJournalUI.render(journalViewModel3250());
-  // J-3250 END render
   const stamps=['I','II','III','IV','V'].map((mark,i)=>`<div class="journal-stamp ${i<st?'earned':''}" aria-label="Etapa ${i+1} ${i<st?'alcanzada':'pendiente'}"><span>${i<st?'✦':mark}</span><small>${['Vista','Nombre','Conducta','Hábitos','Estudio'][i]}</small></div>`).join('');
   const railIds=journalSortMode==='sightings'
     ? [...ids].sort((a,b)=>sight(b)-sight(a)||ids.indexOf(a)-ids.indexOf(b))
@@ -3348,24 +3356,30 @@ function renderJournal(){
 
 // J-3250 BEGIN model
 function journalViewModel3250(detailOnly=false){
- const ids=currentRegion().species,id=state.selectedJournal||ids[0],sp=SPECIES[id],st=stage(id),next=st<5?stageRequirements(id,st):null;
- const items=ids.map((sid,slot)=>({slot,name:visibleName(sid),stage:stage(sid),sightings:sight(sid),discovered:!!state.discovered[sid],sprite:state.discovered[sid]&&!detailOnly?animalMarkup(sid,{size:64}):''}));
+ const region=currentRegion(),ids=region.species,id=state.selectedJournal||ids[0],sp=SPECIES[id],st=stage(id),next=st<5?stageRequirements(id,st):null;
+ const items=detailOnly?[]:ids.map((sid,slot)=>({
+  slot,name:visibleName(sid),stage:stage(sid),sightings:sight(sid),discovered:!!state.discovered[sid],
+  get sprite(){return animalMarkup(sid,{size:64});}
+ }));
  if(journalSortMode==='sightings')items.sort((a,b)=>b.sightings-a.sightings||a.slot-b.slot);
  const foundVariants=specialBadges(id).replace(/<div class="variant-card unknown">[\s\S]*?<\/div><\/div><div class="small">[\s\S]*?<\/div><\/div>/g,'');
  const observedVariants=foundVariants.includes('variant-card seen')?foundVariants.replaceAll(sp.name,visibleName(id)):'';
- return {region:currentRegion().name,identified:regionIdentifiedCount(state.currentRegion),query:journalRailQuery,sort:journalSortMode,items,money:fmt(state.money),knowledge:fmt(state.knowledge),selected:{...items.find(p=>p.slot===ids.indexOf(id)),sprite:state.discovered[id]?animalMarkup(id,{size:256,surface:'journal'}):'',name:visibleName(id),latin:visibleLatin(id),rarity:sp.rare,next,published:!!state.published[id],food:feed(id),specials:specials(id),sexProgress:sp.dimorphism?dimorphismProgress(id)+'/2':'—',extraLabel:st===3?(sp.dimorphism?'Alimentación o sexos':'Alimentación'):'Espécimen especial',extraProgress:st===3?(sp.dimorphism?feed(id)+'/10 · '+dimorphismProgress(id)+'/2 sexos':feed(id)+'/10'):specials(id)+'/1',taxonomy:taxonomyText(id),habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',variants:observedVariants,sexes:SEXUAL_DIMORPHISM[id]?renderSexComparison(id):''}};
+ return {region:region.name,identified:detailOnly?0:items.filter(item=>item.stage>=1).length,query:journalRailQuery,sort:journalSortMode,items,money:fmt(state.money),knowledge:fmt(state.knowledge),selected:{slot:ids.indexOf(id),stage:st,sightings:sight(id),discovered:!!state.discovered[id],sprite:state.discovered[id]?animalMarkup(id,{size:256,surface:'journal'}):'',name:visibleName(id),latin:visibleLatin(id),rarity:sp.rare,next,published:!!state.published[id],food:feed(id),specials:specials(id),sexProgress:sp.dimorphism?dimorphismProgress(id)+'/2':'—',extraLabel:st===3?(sp.dimorphism?'Alimentación o sexos':'Alimentación'):'Espécimen especial',extraProgress:st===3?(sp.dimorphism?feed(id)+'/10 · '+dimorphismProgress(id)+'/2 sexos':feed(id)+'/10'):specials(id)+'/1',taxonomy:taxonomyText(id),habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',variants:observedVariants,sexes:SEXUAL_DIMORPHISM[id]?renderSexComparison(id):''}};
 }
 let journalRailScrollLeft3250=0,journalRailRegion3250='',journalRailSelection3250='';
+let journalRailCache3250=null,journalRailModel3250=null;
 function refreshJournalSheet3250(){
  const container=panel.querySelector('#journalSelectedSheet');
  if(!container)return false;
  container.innerHTML=globalThis.AtlasJournalUI.sheet(journalViewModel3250(true));
  journalRailSelection3250=state.selectedJournal;
- panel.querySelectorAll('[data-action="select-journal"][data-journal-slot]').forEach(button=>{
-  const selected=currentRegion().species[Number(button.dataset.journalSlot)]===state.selectedJournal;
-  button.classList.toggle('selected',selected);
-  if(selected)button.setAttribute('aria-current','true');else button.removeAttribute('aria-current');
- });
+ const previous=panel.querySelector('#journalSpeciesRail [aria-current="true"]');
+ const slot=currentRegion().species.indexOf(state.selectedJournal);
+ const selected=panel.querySelector('#journalSpeciesRail [data-journal-slot="'+slot+'"]');
+ if(previous!==selected){
+  previous?.classList.remove('selected');previous?.removeAttribute('aria-current');
+  selected?.classList.add('selected');selected?.setAttribute('aria-current','true');
+ }
  return true;
 }
 // J-3250 END model
@@ -4973,6 +4987,7 @@ function renderBestiary(){
 
 // B-3260 BEGIN presentation
 let bestiaryFilters3260=null,bestiaryCatalog3260=null,bestiaryModalId3260=null,bestiaryReturnScroll3260=null;
+const bestiaryCompare3260=new Intl.Collator('es').compare;
 function bestiaryData3260(){
  if(bestiaryCatalog3260)return bestiaryCatalog3260;
  const ids=Object.keys(SPECIES),buckets={Mammalia:'Mamífero',Aves:'Ave',Actinopterygii:'Pez',Chondrichthyes:'Pez'},rarities={'Común':1,'Poco común':2,'Raro':3,'Muy rara':4};
@@ -4991,27 +5006,34 @@ function bestiaryFilterState3260(){
 }
 function bestiaryQuery3260(){
  const f=bestiaryFilterState3260(),data=bestiaryData3260(),normalize=globalThis.AtlasBestiaryUI.normalize;
- const entries=data.entries.map(entry=>{
-  const id=entry.id,discovered=!!state.discovered[id],st=stage(id);
-  return {...entry,discovered,stage:st,name:discovered&&st>=1?visibleName(id):'No identificado',latin:discovered&&st>=2?visibleLatin(id):'por identificar',knownGroup:discovered&&st>=2?entry.group:null,knownSubgroup:discovered&&st>=3?entry.taxonomy.subClass:null,sightings:sight(id),published:!!state.published[id]};
- });
- const subgroups=[...new Set(entries.filter(p=>p.knownSubgroup&&(f.group==='all'||p.knownGroup===f.group)).map(p=>p.knownSubgroup))].sort((a,b)=>a.localeCompare(b,'es'));
+ const entries=[],availableSubgroups=new Set(),q=normalize(f.query);
+ const sightingsMinimum=f.sightings==='all'||f.sightings==='zero'?0:Number(f.sightings);
+ for(const entry of data.entries){
+  const {id,slot,group,rarity,taxonomy}=entry;
+  const discovered=!!state.discovered[id],st=stage(id),sightings=sight(id),published=!!state.published[id];
+  const knownGroup=discovered&&st>=2?group:null,knownSubgroup=discovered&&st>=3?taxonomy.subClass:null;
+  if(knownSubgroup&&(f.group==='all'||knownGroup===f.group))availableSubgroups.add(knownSubgroup);
+  if(f.group!=='all'&&knownGroup!==f.group)continue;
+  if(f.sightings==='zero'&&sightings!==0||sightings<sightingsMinimum)continue;
+  if(f.hide&&published)continue;
+  if(f.progress==='unknown'&&discovered||f.progress==='discovered'&&!discovered||f.progress==='incomplete'&&(!discovered||st>=5)||f.progress==='complete'&&(!discovered||st!==5)||f.progress==='published'&&(!discovered||!published))continue;
+  const name=discovered&&st>=1?visibleName(id):'No identificado',latin=knownGroup?visibleLatin(id):'por identificar';
+  if(q){
+   if(!discovered||st<1)continue;
+   const searchable=st>=2?(entry.searchFull??=normalize(name+' '+latin)):(entry.searchName??=normalize(name));
+   if(!searchable.includes(q))continue;
+  }
+  entries.push({id,slot,rarity,discovered,stage:st,sightings,published,name,latin,knownGroup,knownSubgroup});
+ }
+ const subgroups=[...availableSubgroups].sort(bestiaryCompare3260);
  if(f.subgroup!=='all'&&!subgroups.includes(f.subgroup))f.subgroup='all';
- const q=normalize(f.query);
- let visible=entries.filter(p=>{
-  if(q&&!normalize([p.discovered&&p.stage>=1?p.name:'',p.discovered&&p.stage>=2?p.latin:''].join(' ')).includes(q))return false;
-  if(f.group!=='all'&&p.knownGroup!==f.group||f.subgroup!=='all'&&p.knownSubgroup!==f.subgroup)return false;
-  if(f.sightings==='zero'&&p.sightings!==0||!['all','zero'].includes(f.sightings)&&p.sightings<Number(f.sightings))return false;
-  if(f.hide&&p.published)return false;
-  if(f.progress==='unknown'&&p.discovered||f.progress==='discovered'&&!p.discovered||f.progress==='incomplete'&&(!p.discovered||p.stage>=5)||f.progress==='complete'&&(!p.discovered||p.stage!==5)||f.progress==='published'&&(!p.discovered||!p.published))return false;
-  return true;
- });
- const alpha=(a,b)=>a.name.localeCompare(b.name,'es')||a.slot-b.slot;
+ const visible=f.subgroup==='all'?entries:entries.filter(p=>p.knownSubgroup===f.subgroup);
+ const alpha=(a,b)=>(a.name===b.name?0:bestiaryCompare3260(a.name,b.name))||a.slot-b.slot;
  visible.sort((a,b)=>{
   // Unknown names cannot be alphabetized by their hidden identity. Keep their
   // opaque entries after observed animals in either alphabetical direction.
   if(f.sort==='alpha'&&a.discovered!==b.discovered)return a.discovered?-1:1;
-  const comparison=f.sort==='sightings'?a.sightings-b.sightings||alpha(a,b):f.sort==='rarity'?a.rarity-b.rarity||alpha(a,b):f.sort==='type'?(a.knownGroup||'Por estudiar').localeCompare(b.knownGroup||'Por estudiar','es')||alpha(a,b):alpha(a,b);
+  const comparison=f.sort==='sightings'?a.sightings-b.sightings||alpha(a,b):f.sort==='rarity'?a.rarity-b.rarity||alpha(a,b):f.sort==='type'?bestiaryCompare3260(a.knownGroup||'Por estudiar',b.knownGroup||'Por estudiar')||alpha(a,b):alpha(a,b);
   return f.descending?-comparison:comparison;
  });
  return {entries:visible,subgroups,filters:{...f},total:data.ids.length};
@@ -5119,7 +5141,7 @@ function researchNodeCard(node){
 
 function bindPanel(){
  // E-3280 BEGIN binding
- const development=panel.querySelector('.er28-root');
+ const development=tab==='research'||tab==='expeditions'?panel.querySelector('.er28-root'):null;
  if(development){
   const nav=development.querySelector('.er28-branches');if(nav){const selected=nav.querySelector('.selected');nav.scrollLeft=developmentUI3280.branchLeft;if(developmentUI3280.lastBranch!==state.researchBranch&&selected)nav.scrollLeft=Math.max(0,selected.offsetLeft-nav.offsetLeft-(nav.clientWidth-selected.offsetWidth)/2);developmentUI3280.lastBranch=state.researchBranch;developmentUI3280.branchLeft=nav.scrollLeft;nav.addEventListener('scroll',()=>{developmentUI3280.branchLeft=nav.scrollLeft;},{passive:true});}
   globalThis.AtlasDevelopmentUI.bind(development,{change:developmentChange3280,fold:(key,open)=>developmentUI3280.folds[key]=open,load:developmentDetail3280});
@@ -5129,7 +5151,7 @@ function bindPanel(){
  if(tab==='objects'&&developmentUI3280.item){const name=ITEMS[developmentUI3280.item]?.name;developmentUI3280.item=null;globalThis.requestAnimationFrame?.(()=>{const entry=[...panel.querySelectorAll('.inventory-item strong')].find(el=>el.textContent===name);entry?.closest('.inventory-item')?.scrollIntoView({block:'center'});});}
  // E-3280 END binding
   // M-3270 BEGIN binding
-  const museumRoot=panel.querySelector('.m27-root');
+  const museumRoot=tab==='museum'?panel.querySelector('.m27-root'):null;
   if(museumRoot){
    globalThis.AtlasMuseumUI.bind(museumRoot,{filter:museumFilter3270,fold:(key,open)=>{museumUI3270.folds[key]=open;},legendary:renderLegendaryCollection,loadFold:key=>museumViewModel3270(key).view});
    const nav=museumRoot.querySelector('.m27-rooms'),selected=nav?.querySelector('.selected');
@@ -5139,19 +5161,37 @@ function bindPanel(){
   }
   // M-3270 END binding
   // B-3260 BEGIN binding
-  const bestiaryRoot=panel.querySelector('.b26-root');
+  const bestiaryRoot=tab==='bestiary'?panel.querySelector('.b26-root'):null;
   if(bestiaryRoot){globalThis.AtlasBestiaryUI.bind(bestiaryRoot,changeBestiaryFilter3260,bestiaryCollection3260);if(bestiaryReturnScroll3260!==null){const top=bestiaryReturnScroll3260;bestiaryReturnScroll3260=null;globalThis.requestAnimationFrame?.(()=>globalThis.scrollTo?.({top,behavior:'instant'}));}}
   // B-3260 END binding
-  const atlasMap=panel.querySelector('.atlas-v32-map-scroll');
-  atlasMap?.addEventListener('scroll',rememberAtlasViewport,{passive:true});
-  panel.querySelector('[data-atlas-continent]')?.addEventListener('change',e=>{
+  if(tab==='atlas'){
+   panel.querySelector('.atlas-v32-map-scroll')?.addEventListener('scroll',rememberAtlasViewport,{passive:true});
+   panel.querySelector('[data-atlas-continent]')?.addEventListener('change',e=>{
     if(!ATLAS_CONTINENTS.some(c=>c.id===e.target.value))return;
     rememberAtlasViewport();state.atlasView=e.target.value;renderPanel();persist();
-  });
-  const rail=panel.querySelector('#journalSpeciesRail');
+   });
+  }
+  if(tab!=='journal')return;
+  let rail=panel.querySelector('#journalSpeciesRail');
   const sheet=panel.querySelector('.journal-v311 .journal-sheet');
   // J-3250 BEGIN rail
-  if(panel.querySelector('.journal-v3250')&&rail){
+  const journal=panel.querySelector('.journal-v3250'),model=journalRailModel3250;
+  journalRailModel3250=null;
+  if(journal&&rail&&model){
+    const ids=currentRegion().species;
+    if(journalRailCache3250?.ids===ids){
+      const cached=journalRailCache3250;
+      globalThis.AtlasJournalUI.updateRail(cached.rail,model,cached.items);
+      rail.replaceWith(cached.rail);
+      rail=cached.rail;
+    }else{
+      const node=rail;
+      node.addEventListener('scroll',()=>{
+        journalRailScrollTop=node.scrollTop;
+        journalRailScrollLeft3250=node.scrollLeft;
+      },{passive:true});
+    }
+    journalRailCache3250={ids,rail,items:new Map(model.items.map(item=>[item.slot,item]))};
     rail.scrollLeft=journalRailScrollLeft3250;
     if(journalRailRegion3250!==state.currentRegion||journalRailSelection3250!==state.selectedJournal){
       const selected=rail.querySelector('.selected');
@@ -5159,10 +5199,8 @@ function bindPanel(){
       journalRailRegion3250=state.currentRegion;journalRailSelection3250=state.selectedJournal;
     }
     journalRailScrollLeft3250=rail.scrollLeft;
-    rail.addEventListener('scroll',()=>{journalRailScrollLeft3250=rail.scrollLeft;},{passive:true});
-  }
+  }else rail?.addEventListener('scroll',()=>{journalRailScrollTop=rail.scrollTop;},{passive:true});
   // J-3250 END rail
-  rail?.addEventListener('scroll',()=>{journalRailScrollTop=rail.scrollTop;},{passive:true});
   sheet?.addEventListener('scroll',()=>{journalSheetScrollTop=sheet.scrollTop;},{passive:true});
   panel.querySelector('#journalRailSearch')?.addEventListener('input',e=>{
     journalRailQuery=e.target.value;
@@ -5175,12 +5213,14 @@ function bindPanel(){
     journalRailScrollTop=0;
     renderPanel();
   });
-  filterJournalRail();
-  panel.querySelectorAll('.atlas-v32-hex').forEach(el=>el.addEventListener('keydown',e=>{
-    if(e.key==='Enter'||e.key===' '){e.preventDefault();el.dispatchEvent(new MouseEvent('click',{bubbles:true}));}
-    else globalThis.AtlasMap.keyboard(e,el);
-  }));
+  if(!journal)filterJournalRail();
 }
+panel.addEventListener('keydown',e=>{
+ const hex=e.target.closest?.('.atlas-v32-hex');
+ if(!hex||!panel.contains(hex))return;
+ if(e.key==='Enter'||e.key===' '){e.preventDefault();hex.dispatchEvent(new MouseEvent('click',{bubbles:true}));}
+ else globalThis.AtlasMap.keyboard(e,hex);
+});
 function handlePanelAction(e){
     const el=e.target.closest?.('[data-action]');
     if(!el||!panel.contains(el)||el.disabled)return;
@@ -5273,7 +5313,18 @@ function handlePanelAction(e){
 // AM-06 BEGIN bestiary-navigation
     if(act==='bestiary-page'){
       const page=Number(id);if(!Number.isInteger(page)||page<0)return;
-      bestiaryPage=page;renderPanel();window.scrollTo?.({top:0,behavior:'instant'});
+      bestiaryPage=page;
+      const root=panel.querySelector('.b26-root');
+      if(root){
+        const focus=el===document.activeElement;
+        globalThis.AtlasBestiaryUI.refresh(root,bestiaryViewModel3260());
+        if(focus){
+          const status=root.querySelector('[data-bestiary-pager] [role="status"]');
+          status?.setAttribute('tabindex','-1');
+          status?.focus({preventScroll:true});
+        }
+      }else renderPanel();
+      window.scrollTo?.({top:0,behavior:'instant'});
     }
 // AM-06 END bestiary-navigation
     if(act.startsWith('curate-')){curationAction3380(act,id,el);return;}
