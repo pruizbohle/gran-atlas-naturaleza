@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>El Gran Atlas | Lote 2 · Comparador de referencias</title>
+<style>
+:root{color-scheme:light;--paper:#f6f0e1;--ink:#332b22;--edge:#bba989;--card:#fffaf0;--muted:#6b6254}
+*{box-sizing:border-box}body{font-family:Georgia,serif;margin:0;background:var(--paper);color:var(--ink);line-height:1.45}
+header,main,footer{max-width:1260px;margin:auto;padding:20px}header{border-bottom:1px solid var(--edge)}
+h1{font-size:clamp(1.5rem,3vw,2.3rem);margin:.3em 0}p{margin:.5em 0}a{color:inherit;text-decoration:underline}
+.notice{border-left:4px solid #8a6742;padding:.7em 1em;margin:1em 0;background:#ece1cb}
+.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:1em 0}
+label{font-size:.9rem;display:grid;gap:4px}select,input,button{font:inherit;padding:8px;border:1px solid #9d8767;background:#fffaf2;color:#332b22;border-radius:6px}
+button{cursor:pointer}.count{font-size:.9rem;color:var(--muted)}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:12px}
+.tile{background:var(--card);border:1px solid var(--edge);border-radius:10px;padding:12px;min-width:0}
+.visual{height:148px;display:grid;place-items:center;overflow:hidden;border-radius:7px;border:1px solid #d5c6aa;background:#f4ead7}
+.visual svg{height:var(--icon-size,80px);width:var(--icon-size,80px);max-width:95%;max-height:95%}
+.dark .visual{background:#283337;border-color:#566569}.name{font-weight:bold;margin:10px 0 2px}.meta{font-size:.76rem;color:var(--muted);overflow-wrap:anywhere}
+.pill{display:inline-block;margin-top:8px;font-size:.68rem;padding:2px 7px;border:1px solid #baaa8a;border-radius:20px}
+.empty{padding:2rem;text-align:center}.nav{display:flex;gap:20px;flex-wrap:wrap}
+@media(max-width:460px){main,header,footer{padding:12px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.tile{padding:8px}.visual{height:126px}}
+</style>
+</head>
+<body>
+<header>
+<div class="nav"><a href="./index.html">Iconoteca ilustrada V1 (24 PNG)</a><a href="../index.html">Juego 4.9.6</a></div>
+<h1>Gabinete 1842 · Segunda tanda en revisión</h1>
+<p>20 objetos de El Gran Atlas, organizados para revisión visual y semántica.</p>
+<div class="notice"><strong>Estado real:</strong> estas son las <strong>20 ilustraciones vectoriales que ya existen en el juego</strong>, mostradas como referencias de identidad. <strong>No son 20 PNG nuevos</strong>, no reemplazan la colección ilustrada V1 y <strong>no se integran aún como iconos del juego</strong>. La creación de una nueva lámina pictórica está pendiente.</div>
+</header>
+<main>
+<div class="controls">
+<label>Grupo<select id="group"><option value="">Todos los grupos</option><option>Fósiles</option><option>Coleccionables</option><option>Instrumentos</option></select></label>
+<label>Buscar<input id="q" type="search" placeholder="Objeto o identificador"></label>
+<label>Tamaño<select id="size"><option value="24">24 px</option><option value="32">32 px</option><option value="48">48 px</option><option value="60">60 px</option><option value="80" selected>80 px</option><option value="128">128 px</option></select></label>
+<label><span>Contraste</span><button id="theme" type="button" aria-pressed="false">Probar fondo oscuro</button></label>
+</div>
+<p id="count" class="count" aria-live="polite"></p>
+<section id="gallery" class="gallery" aria-label="Referencias del segundo lote"></section>
+<p id="empty" class="empty" hidden>No hay coincidencias con esos filtros.</p>
+</main>
+<footer><p>Galería experimental separada del juego. El origen de las figuras es <code>AtlasItemArt</code> en <code>www/js/item-art-v3198.js</code>. Las ilustraciones definitivas requieren revisión y aprobación.</p></footer>
+<script src="../js/item-art-v3198.js"></script>
+<script>
+"use strict";
+const items=[["fossil_fragment","Fragmento fósil","Fósiles"],["fossil_skull","Cráneo fósil","Fósiles"],["fossil_tooth","Diente fósil","Fósiles"],["fossil_horn","Cuerno fósil","Fósiles"],["hard_bone","Hueso duro","Fósiles"],["fossil_track","Huella fósil","Fósiles"],["fossil_plate","Placa fósil","Fósiles"],["fossil_rib","Costilla fósil","Fósiles"],["fossil_claw","Garra fósil","Fósiles"],["fossil_amber","Ámbar fósil","Fósiles"],["pressed_flower","Flor prensada","Coleccionables"],["owl_feather","Pluma de búho","Coleccionables"],["antler_fragment","Fragmento de asta","Coleccionables"],["river_pebble","Piedra de río","Coleccionables"],["ancient_coin","Moneda antigua","Coleccionables"],["brass_compass","Brújula de latón","Instrumentos"],["field_telescope","Catalejo de campo","Instrumentos"],["old_ink","Tintero antiguo","Instrumentos"],["brass_shard","Fragmentos de latón","Instrumentos"],["carved_wood","Madera tallada","Instrumentos"]];
+const gallery=document.getElementById('gallery'),search=document.getElementById('q'),group=document.getElementById('group'),size=document.getElementById('size'),theme=document.getElementById('theme'),count=document.getElementById('count'),empty=document.getElementById('empty');
+function render(){
+ const term=search.value.toLocaleLowerCase('es').trim(),g=group.value;
+ const chosen=items.filter(([id,name,c])=>(!g||c===g)&&(!term||(id+' '+name+' '+c).toLocaleLowerCase('es').includes(term)));
+ gallery.replaceChildren();
+ const art=window.AtlasItemArt;
+ for (const [id,name,c] of chosen){
+  const tile=document.createElement('article');tile.className='tile';
+  const visual=document.createElement('div');visual.className='visual';
+  visual.style.setProperty('--icon-size',size.value+'px');
+  visual.innerHTML=art&&art.renderItemArt(id)||'';
+  const title=document.createElement('div');title.className='name';title.textContent=name;
+  const meta=document.createElement('div');meta.className='meta';meta.textContent=id;
+  const pill=document.createElement('span');pill.className='pill';pill.textContent=c+' · referencia existente';
+  tile.append(visual,title,meta,pill);gallery.append(tile);
+ }
+ count.textContent=chosen.length+' de '+items.length+' referencias visibles';
+ empty.hidden=chosen.length>0;
+}
+for(const el of [search,group,size]) el.addEventListener('input',render);
+theme.addEventListener('click',()=>{document.body.classList.toggle('dark');const active=document.body.classList.contains('dark');theme.setAttribute('aria-pressed',String(active));theme.textContent=active?'Volver a fondo claro':'Probar fondo oscuro';});
+render();
+</script>
+</body>
+</html>
