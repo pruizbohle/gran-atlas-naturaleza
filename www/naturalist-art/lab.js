@@ -26,7 +26,7 @@ for (const [value, label] of [
 const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
-  gallery: 'Galería', variants: 'Variantes', art01: 'Variantes revisadas en ART-01', art02: 'Variantes revisadas en ART-02', art03: 'Variantes revisadas en ART-03', art04: 'Variantes corregidas en ART-04', frames: 'Ejemplares especiales',
+  gallery: 'Galería', variants: 'Variantes', 'pigment-audit': 'Visor de albinos y melánicos', art01: 'Variantes revisadas en ART-01', art02: 'Variantes revisadas en ART-02', art03: 'Variantes revisadas en ART-03', art04: 'Variantes corregidas en ART-04', art05: 'Variantes corregidas en ART-05', frames: 'Ejemplares especiales',
   compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles', amphibians: 'Comparar anfibios', cartilaginous: 'Comparar tiburones y rayas',
   salmonids: 'Comparar salmónidos', freshwater: 'Comparar peces de agua dulce', reef: 'Comparar peces de arrecife', deep: 'Comparar peces de aguas profundas', marine: 'Comparar peces marinos', cephalopods: 'Comparar cefalópodos', legendary: 'Colección de legendarios',
   compression: 'Compresión WebP', scale: 'Escala real', 'visual-scale': 'Ajustes de escala', review: 'Revisión artística'
@@ -46,7 +46,7 @@ const text = value => String(value).replace(/[&<>"']/g, c => ({
 })[c]);
 const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 const previews = ['field', 'mixed', 'journal', 'bestiary', 'museum'];
-let mode = 'field';
+let mode = new URLSearchParams(location.search).get('view') === 'pigment-audit' ? 'pigment-audit' : 'field';
 let reviewKey = 'normal';
 let review = {};
 try {
@@ -175,7 +175,15 @@ function pigmentGallery() {
     }).join('') + '</div>';
 }
 
-const artReviews = { art01: art01Review, art02: art02Review, art03: art03Review, art04: art04Review };
+const artReviews = { art01: art01Review, art02: art02Review, art03: art03Review, art04: art04Review, art05: art05Review };
+let auditView;
+
+function archivedIllustration(src, label, size) {
+  return AtlasNaturalistArt.frame(
+    '<img class="atlas-art-image" src="' + text(src) + '" width="' + size + '" height="' + size +
+    '" alt="' + text(label) + '" loading="lazy" decoding="async">',
+    'Normal', 'plate atlas-art-cutout');
+}
 
 function artComparisons(lot) {
   const speciesById = new Map(matchingSpecies().map(sp => [sp.id, sp]));
@@ -188,10 +196,7 @@ function artComparisons(lot) {
     const sp = speciesById.get(row.id);
     const normal = sp.records.find(record => record.key === 'normal');
     const variant = sp.records.find(record => record.key === row.variant);
-    const savedImage = (src, label) => AtlasNaturalistArt.frame(
-      '<img class="atlas-art-image" src="' + text(src) + '" width="' + size + '" height="' + size +
-      '" alt="' + text(sp.name + ' · ' + variant.label + ' · ' + label) + '" loading="lazy" decoding="async">',
-      'Normal', 'plate atlas-art-cutout');
+    const savedImage = (src, label) => archivedIllustration(src, sp.name + ' · ' + variant.label + ' · ' + label, size);
     const previous = row.before?.[size];
     const legacy = row.legacy?.[size];
     const subsequent = releases.find(item =>
@@ -397,17 +402,20 @@ function draw() {
   const comparingSets = comparingTaxa || comparingVisualScale;
   const comparingVariants = mode === 'variants';
   const comparingArt = Object.hasOwn(artReviews, mode);
+  const auditingPigments = mode === 'pigment-audit';
   const comparingPigments = comparingVariants && pigmentViews.has(variantView.value);
   byId('heading').textContent = modes[mode];
   byId('mixed-control').hidden = mode !== 'mixed';
 
-  for (const label of document.querySelectorAll('[data-catalog-filter]')) label.hidden = comparingSets;
-  byId('order-control').hidden = comparingSets || birdOrder.options.length < 2;
+  for (const label of document.querySelectorAll('[data-catalog-filter]')) label.hidden = comparingSets || auditingPigments;
+  byId('order-control').hidden = comparingSets || auditingPigments || birdOrder.options.length < 2;
+  byId('frame-style-control').hidden = auditingPigments;
+  byId('pigment-audit-filters').hidden = !auditingPigments;
   byId('bird-set-control').hidden = !comparingTaxa || mode === 'legendary';
   byId('comparison-size-control').hidden = !comparingSets && !comparingVariants && !comparingArt;
   byId('comparison-halo-control').hidden = (!comparingSets && !comparingVariants) || mode === 'legendary';
   byId('variant-view-control').hidden = !comparingVariants;
-  byId('species-control').hidden = mode === 'gallery' || comparingSets || comparingPigments || comparingArt;
+  byId('species-control').hidden = mode === 'gallery' || comparingSets || comparingPigments || comparingArt || auditingPigments;
   byId('context-control').hidden = mode !== 'scale';
   byId('scale-plate-control').hidden = !['scale', 'compare', 'compression', ...previews].includes(mode);
   byId('backdrop-control').hidden = !comparingSets && !comparingArt && !['compare', 'variants', 'compression', 'review', 'frames'].includes(mode);
@@ -418,6 +426,11 @@ function draw() {
   byId('summary').textContent = mode === 'gallery' || comparingSets ? '' : (sp?.latin || '');
   for (const button of document.querySelectorAll('[data-mode]')) {
     button.setAttribute('aria-pressed', String(button.dataset.mode === mode));
+  }
+  if (auditingPigments) {
+    auditView ??= createPigmentAudit();
+    auditView.draw();
+    return;
   }
   if (comparingVisualScale) {
     content.innerHTML = compareVisualScales();

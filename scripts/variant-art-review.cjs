@@ -5,8 +5,10 @@ const { createHash } = require('node:crypto');
 const fs = require('node:fs');
 
 const root = 'www/naturalist-art';
+const reviewStages = ['art01', 'art02', 'art03', 'art04', 'art05'];
+const corrected = row => reviewStages.some(stage => row[stage]?.outcome === 'aprobada');
 
-function buildVariantReview({ lot, previousLot, review, supersededArchive, version, correctionsOnly = false }) {
+function buildVariantReview({ lot, previousLot, review, supersededArchive, version, correctionsOnly = false, viewer = false }) {
   const baseline = JSON.parse(fs.readFileSync('docs/' + previousLot + '/inventario-aud04.json'));
   const evaluations = correctionsOnly ? [] : JSON.parse(fs.readFileSync(lot + '/evaluaciones.json'));
   const decisions = JSON.parse(fs.readFileSync(lot + '/decisiones.json'));
@@ -64,7 +66,7 @@ function buildVariantReview({ lot, previousLot, review, supersededArchive, versi
       if (row.bytesRatio < 0.55) row.lowWeight = true;
       else delete row.lowWeight;
     }
-    const priorReview = ['art03', 'art02', 'art01'].find(name => row[name]?.outcome === 'aprobada');
+    const priorReview = ['art04', 'art03', 'art02', 'art01'].find(name => row[name]?.outcome === 'aprobada');
     row[review] = { priorState: row.visualState, priorFinding: row.observation, outcome, morph, evidence,
       ...(rejected ? { rejected } : {}), ...(eye ? { eye } : {}), ...(version ? { version } : {}) };
     if (decision.state) {
@@ -88,7 +90,7 @@ function buildVariantReview({ lot, previousLot, review, supersededArchive, versi
   for (const row of entries.values()) {
     totals[row.visualState]++;
     if (row.visualState !== 'pendiente') totals.auditadas++;
-    if (['art01', 'art02', 'art03', 'art04'].some(name => row[name]?.outcome === 'aprobada')) totals.corregidas++;
+    if (corrected(row)) totals.corregidas++;
   }
   assert.equal(totals.auditadas, baseline.totals.auditadas + evaluations.length);
   const inventory = { baseline: decisions.baseline, states: baseline.states, totals,
@@ -98,6 +100,15 @@ function buildVariantReview({ lot, previousLot, review, supersededArchive, versi
     [lot + '/integridad.json']: JSON.stringify({ baseline: decisions.baseline, assets }, null, 2) + '\n',
     [root + '/' + review + '.js']: 'const ' + review + 'Review = ' + JSON.stringify(lab, null, 2) + ';\n'
   };
+  if (viewer) {
+    const records = inventory.variants.map(row => ({
+      id: row.id, variant: row.variant, state: row.visualState, finding: row.observation,
+      ...(row.triage === 'P1' ? { priority: true } : {}),
+      ...(corrected(row) ? { corrected: true } : {})
+    }));
+    const lines = records.map(record => '  ' + JSON.stringify(record)).join(',\n');
+    artifacts[root + '/pigment-audit-data.js'] = 'const pigmentAuditRecords = [\n' + lines + '\n];\n';
+  }
   for (const [file, content] of Object.entries(artifacts)) {
     if (process.argv.includes('--write')) fs.writeFileSync(file, content);
     else assert.equal(fs.readFileSync(file, 'utf8'), content, file);

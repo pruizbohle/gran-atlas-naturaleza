@@ -44,11 +44,13 @@ test('ART-04 changes only approved WebPs and archives the originals at all four 
     }
   }
   const baseRelease = JSON.parse(baselineFile('atlas-integrity.json')).files;
+  const published = JSON.parse(execFileSync('git', ['show', '75eb63d:www/atlas-integrity.json'],
+    { maxBuffer: 4 * 1024 * 1024 })).files;
   const nature = files => Object.keys(files).filter(file => file.startsWith('naturalist-art/plates/'));
-  const plates = nature(release);
+  const plates = nature(published);
   assert.deepEqual(plates, nature(baseRelease));
   assert.equal(plates.length, 1672 * sizes.length);
-  const releasesChanged = plates.filter(file => baseRelease[file][1] !== release[file][1]);
+  const releasesChanged = plates.filter(file => baseRelease[file][1] !== published[file][1]);
   assert.deepEqual(new Set(releasesChanged), changed);
 });
 

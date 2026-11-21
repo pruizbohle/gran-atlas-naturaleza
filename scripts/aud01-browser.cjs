@@ -359,6 +359,146 @@ async function art04Smoke(browser) {
   }
 }
 
+async function art05Smoke(browser) {
+  const context = await browser.newContext({ viewport: { width: 1280, height: 900 }, serviceWorkers: 'block' });
+  try {
+    const lab = await context.newPage();
+    const errors = [];
+    lab.on('pageerror', err => errors.push(err.message));
+    const link = origin() + '/audit/naturalist-art/?view=pigment-audit';
+    await lab.goto(link);
+    const audit = name => lab.locator('#audit-' + name);
+    const cards = lab.locator('[data-audit-key]');
+    const results = lab.locator('#summary');
+    const count = async expected => {
+      assert.equal(await cards.count(), expected);
+      assert.equal(await results.textContent(), expected + ' de 564 variantes');
+    };
+    await count(564);
+    await audit('kind').selectOption('albino');
+    await count(302);
+    await audit('kind').selectOption('melanico');
+    await count(262);
+    await audit('kind').selectOption('');
+    await audit('state').selectOption('pendiente');
+    await count(390);
+    await audit('state').selectOption('');
+    await audit('corrected').selectOption('with');
+    const corrected = await cards.count();
+    assert.ok(corrected > 30 && corrected < 40);
+    await audit('comparison').selectOption('without');
+    await count(0);
+    await audit('comparison').selectOption('with');
+    await count(corrected);
+    await audit('corrected').selectOption('without');
+    await count(0);
+    await audit('reset').click();
+    await count(564);
+    await audit('family').selectOption('Ursidae');
+    await audit('state').selectOption('insuficiente');
+    await count(1);
+    assert.equal(await cards.first().getAttribute('data-audit-key'), 'asia_esp_0523/melanico');
+    await audit('reset').click();
+    await audit('sort').selectOption('state');
+    assert.equal(await cards.first().getAttribute('data-art-state'), 'correcta');
+    await audit('sort').selectOption('name');
+    const names = await cards.locator('h3').allTextContents();
+    assert.deepEqual(names, [...names].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' })));
+    await audit('sort').selectOption('family');
+    const families = await cards.locator('.audit-taxonomy span').allTextContents();
+    assert.deepEqual(families, [...families].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' })));
+    await audit('sort').selectOption('priority');
+    assert.equal(await cards.first().getAttribute('data-art-state'), 'insuficiente');
+    const screenshots = process.env.ATLAS_ART05_SCREENSHOTS;
+    assert.ok(await lab.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    assert.ok(await lab.locator('#pigment-audit-filters label').evaluateAll(labels => labels.every(label =>
+      label.firstElementChild.getBoundingClientRect().right <= label.getBoundingClientRect().right + 1)));
+    if (screenshots) {
+      await lab.locator('#heading').evaluate(node => node.scrollIntoView());
+      await decoded(cards.first().locator('img'));
+      await lab.screenshot({ path: path.join(screenshots, 'visor-global.png') });
+    }
+
+    await audit('search').fill('vison europeo');
+    await count(1);
+    assert.equal(await cards.first().getAttribute('data-audit-key'), 'eu_esp_0622/melanico');
+    await cards.first().locator('button').click();
+    const dialog = lab.locator('#pigment-audit-detail');
+    assert.ok(await dialog.isVisible());
+    assert.equal(await dialog.locator('img').count(), 4);
+    await audit('detail-size').selectOption('512');
+    assert.equal(await decoded(dialog.locator('img')), 512);
+    await lab.keyboard.press('Escape');
+    assert.ok(!(await dialog.isVisible()));
+    await audit('search').fill('asia_esp_0402');
+    await count(2);
+    assert.match(await cards.filter({ hasText: 'Pseudomelanismo' }).textContent(), /Documentado/);
+
+    const { rows } = JSON.parse(readFileSync('docs/arte-v509/decisiones.json', 'utf8'));
+    const approved = rows.filter(row => row.outcome === 'aprobada');
+    await audit('search').fill(approved[0].id);
+    await audit('kind').selectOption(approved[0].variant);
+    await count(1);
+    await audit('backdrop').selectOption('dark');
+    assert.equal(await lab.locator('.audit-gallery').getAttribute('data-audit-backdrop'), 'dark');
+    await cards.first().locator('button').click();
+    assert.equal(await audit('detail-content').getAttribute('data-audit-backdrop'), 'dark');
+    const sizes = {};
+    for (const size of [64, 128, 256, 512]) {
+      await audit('detail-size').selectOption(String(size));
+      const widths = await dialog.locator('img').evaluateAll(images =>
+        Promise.all(images.map(async img => {
+          img.loading = 'eager';
+          await img.decode();
+          return img.naturalWidth;
+        })));
+      assert.deepEqual(widths, [size, size, size]);
+      sizes[size] = widths.length;
+    }
+    if (screenshots) await lab.screenshot({ path: path.join(screenshots, 'ficha-ampliada.png') });
+    await audit('detail-backdrop').selectOption('light');
+    assert.equal(await audit('detail-content').getAttribute('data-audit-backdrop'), 'light');
+    await dialog.getByRole('button', { name: 'Cerrar ficha' }).click();
+    assert.ok(!(await dialog.isVisible()));
+
+    await lab.locator('[data-mode="art05"]').click();
+    const batch = lab.locator('[data-art05-species]');
+    assert.equal(await batch.count(), rows.length);
+    await lab.locator('#comparison-size').selectOption('128');
+    const correctedPlates = await batch.locator('img').evaluateAll(images =>
+      Promise.all(images.map(async img => {
+        img.loading = 'eager';
+        await img.decode();
+        return img.naturalWidth;
+      })));
+    assert.equal(correctedPlates.length, approved.length * 3 + (rows.length - approved.length) * 2);
+    assert.ok(correctedPlates.every(width => width === 128));
+    await lab.locator('[data-mode="variants"]').click();
+    assert.ok(await lab.locator('#variant-view').isVisible());
+    await lab.locator('#variant-view').selectOption('pigments');
+    assert.equal(await lab.locator('[data-pigment-key="albino"],[data-pigment-key="melanico"]').count(), 564);
+    await lab.locator('[data-mode="art04"]').click();
+    assert.equal(await lab.locator('[data-art04-species]').count(), 9);
+    await labArtworkPreviews(lab, { id: approved[0].id, key: approved[0].variant });
+    await lab.setViewportSize({ width: 390, height: 844 });
+    await lab.goto(link);
+    await count(564);
+    assert.ok(await lab.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await audit('search').fill(approved[0].id);
+    await audit('kind').selectOption(approved[0].variant);
+    await cards.first().locator('button').click();
+    assert.ok(await dialog.isVisible());
+    assert.ok(await dialog.evaluate(node => node.scrollWidth <= node.clientWidth + 1));
+    assert.deepEqual(errors, []);
+    return { variants: 564, albinas: 302, melanicas: 262, corrected, sizes,
+      filtering: ['tipo', 'estado', 'familia', 'corrección', 'comparativa'],
+      sorting: ['familia', 'nombre', 'estado', 'prioridad'], approved: approved.length,
+      legacyVariantSelector: true, mobileWidth: 390, labVariantPreviews: artworkModules };
+  } finally {
+    await context.close();
+  }
+}
+
 async function offlineRun(browser) {
   const context = await browser.newContext(mobile);
   const transition = process.env.AUD05_PWA_TRANSITION === '1';
@@ -449,6 +589,11 @@ async function offlineRun(browser) {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const browser = await chromium.launch({ executablePath: process.env.ATLAS_CHROMIUM || '/usr/bin/chromium', args: ['--no-sandbox'] });
   try {
+    if (process.env.ATLAS_ART05_SMOKE === '1') {
+      const audit = await art05Smoke(browser);
+      console.log(JSON.stringify({ chromium: browser.version(), audit }, null, 2));
+      return;
+    }
     if (process.env.ATLAS_ART04_SMOKE === '1') {
       console.log(JSON.stringify({ chromium: browser.version(), lab: await art04Smoke(browser) }, null, 2));
       return;

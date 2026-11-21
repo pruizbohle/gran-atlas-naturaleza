@@ -1,0 +1,117 @@
+{
+  "baseline": "75eb63d",
+  "rows": [
+    {
+      "id": "af_caracal",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Documentado",
+      "eye": {
+        "normal": "Ámbar pardo",
+        "color": "Ámbar pardo",
+        "changed": false,
+        "why": "Se mantiene el iris cálido y se recupera la lectura del párpado, sin aumentar su brillo."
+      },
+      "note": "Los mechones auriculares largos, el hocico fino y los bigotes se separan del fondo carbón. El manto oscuro conserva volumen en hombro, flanco y patas."
+    },
+    {
+      "id": "asia_esp_0205",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Documentado",
+      "eye": {
+        "normal": "Avellana dorada",
+        "color": "Avellana dorada tenue",
+        "changed": false,
+        "why": "Se mantiene la gama del iris, con un contraste localizado en párpado y frente."
+      },
+      "note": "Las orejas altas de pincel corto, el hocico triangular y los anillos terminales diferencian al gato de la jungla. Se recuperaron las patas y el lomo."
+    },
+    {
+      "id": "asia_esp_0387",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Ámbar pardo",
+        "color": "Ámbar pardo tenue",
+        "changed": false,
+        "why": "La lectura proviene del sombreado local de la órbita. Se conserva la pupila redondeada."
+      },
+      "note": "Las orejas bajas y redondas, la cara aplanada y los mechones largos se distinguen en fondo oscuro. Persisten los anillos tenues de la cola."
+    },
+    {
+      "id": "gato_montes",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Avellana parda",
+        "color": "Avellana parda",
+        "changed": false,
+        "why": "Los párpados y los contornos del rostro se definen sin cambiar la gama natural."
+      },
+      "note": "La cola gruesa, anillada y de punta roma sigue legible. La mejilla y el pecho se separan de las patas y las franjas del manto permanecen discretas."
+    },
+    {
+      "id": "af_zorro_cabo",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo ámbar",
+        "color": "Pardo ámbar oscuro",
+        "changed": false,
+        "why": "Se conserva la gama original con un reflejo corneal tenue."
+      },
+      "note": "El manto pardo negruzco deja visibles las orejas grandes, el hocico estrecho y la unión de la cola tupida. La punta y las cuatro patas se distinguen en carbón."
+    },
+    {
+      "id": "af_aguila_pescadora",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación intensa",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Gris pardo claro",
+        "changed": true,
+        "why": "La órbita y el iris se aclaran con un tono discreto. El color de la lámina no basta para atribuir albinismo completo."
+      },
+      "note": "La cabeza y la cola claras conservan bordes propios. Se separaron las cobertoras, la cera pajiza, el gancho del pico y los tarsos, con volumen de pluma visible en crema."
+    },
+    {
+      "id": "af_chacal_dorado",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo dorado",
+        "color": "Gris rosado tenue",
+        "changed": true,
+        "why": "El iris y el borde del párpado se tratan como zonas hipopigmentadas, con una trufa de tono rosado grisáceo."
+      },
+      "note": "El hocico estrecho, las vibrisas, las orejas erguidas y los dedos se distinguen del pelaje marfil sobre crema. La cola tupida y las patas largas conservan las proporciones del cánido."
+    },
+    {
+      "id": "gloton",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo rosado tenue",
+        "changed": true,
+        "why": "Se conserva una pupila oscura y se separa la órbita en un rango cálido poco saturado; en miniatura prima la forma de la cabeza."
+      },
+      "note": "El pelo largo, la cola tupida, las orejas redondeadas y los dedos con garras conservan el perfil del glotón. El hocico y el párpado recuperan volumen; la banda lateral queda sugerida por el valor del pelo."
+    }
+  ]
+}
