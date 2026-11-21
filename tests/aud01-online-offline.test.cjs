@@ -348,6 +348,7 @@ test('AUD-02 la cola en pantalla avanza en cuadros acotados y se guarda al salir
   assert.ok(game.g.state.knowledge > 0 && game.g.state.knowledge < 500);
   assert.equal(frames.length, 1);
   assert.equal(game.h.imported.knowledge, 0);
+  assert.equal(game.h.window.AtlasSaveBridge.verifySavedGame(), true);
   events.pagehide();
   assert.equal(game.h.imported.knowledge, game.g.state.knowledge);
   assert.equal(game.h.imported.autoPending[0].at, game.g.state.autoPending[0].at);

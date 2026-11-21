@@ -2206,6 +2206,7 @@ function initialState(){
 let unreadableSave=false;
 let corruptSave=false;
 let storageFault=false;
+let committedSave=null;
 let state=load();
 // ACH3360: el catálogo y la persistencia viven en el módulo independiente.
 let curationReady3380=false,curationDirty3380=false;
@@ -2406,6 +2407,7 @@ function persist({verify=false}={}){
     throw error;
    }
   }
+  committedSave=raw;
  }catch(error){
   storageFault=true;
   showStorageFault('No se pudo guardar en este dispositivo. El progreso sigue en memoria: abre Respaldos y exporta la partida antes de cerrar.');
@@ -2436,7 +2438,7 @@ function atlasLiveReceipt(){
 window.AtlasSaveBridge={
  persistBeforeUpdate:persist,
  getSnapshot:()=>atlasLiveReceipt(),
- verifySavedGame:()=>!unreadableSave&&localStorage.getItem(STORAGE_KEY)===JSON.stringify(state),
+ verifySavedGame:()=>!unreadableSave&&!storageFault&&committedSave!==null&&localStorage.getItem(STORAGE_KEY)===committedSave,
  getSaveData:()=>{if(corruptSave)throw new Error('La partida almacenada no se pudo leer. Recupérala desde un respaldo válido.');return JSON.parse(JSON.stringify(state));},
  normalizeSpecialDiscoveries,
  restoreGame(imported){
