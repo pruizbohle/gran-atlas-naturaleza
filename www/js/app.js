@@ -4724,7 +4724,9 @@ function scientificVoyageId(id){
 function normalizeScientificVoyages(snapshot){
  const completed=Object.create(null);
  let seq=scientificVoyageId(snapshot.voyageSeq)??0;
- for(const [key,settled] of Object.entries(snapshot.voyageSettled||{})){
+ const receipts=snapshot.voyageSettled;
+ const entries=receipts&&typeof receipts==='object'&&!Array.isArray(receipts)?Object.entries(receipts):[];
+ for(const [key,settled] of entries){
    const id=scientificVoyageId(key);
    if(settled!==true||id===null)continue;
    completed[id]=true;

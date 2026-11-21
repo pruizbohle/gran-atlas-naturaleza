@@ -309,6 +309,7 @@ test('AUD-03 un viaje liquidado fuera del historial visible conserva su recibo a
   const save = bridge.getSaveData();
   const route = game.g.VOYAGES.find(v => v.id === 'coast');
   const first = { id: 1, type: route.id, endAt: noon };
+  save.voyageSettled = [true, true]; // An invalid array must not mark voyage 1 settled.
   save.voyages = Array.from({ length: 14 }, (_, i) => ({ ...first, id: i + 1 }));
   bridge.restoreGame(save);
   game.at(noon);
