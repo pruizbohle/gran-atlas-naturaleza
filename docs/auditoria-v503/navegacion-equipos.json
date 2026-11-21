@@ -1,0 +1,4457 @@
+{
+  "chromium": "156.0.8078.79",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "cpuSlowdown": 4,
+  "runs": [
+    {
+      "version": "base",
+      "stage": "initial",
+      "helpers": 1,
+      "timings": [
+        {
+          "label": "cold:field",
+          "sync": 7.899999998509884,
+          "paint": 21.200000002980232,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "cold:journal",
+          "sync": 96.90000000596046,
+          "paint": 140.70000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "cold:bestiary",
+          "sync": 141.39999999850988,
+          "paint": 362.79999999701977,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "cold:atlas",
+          "sync": 122.79999999701977,
+          "paint": 147.60000000149012,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "cold:research",
+          "sync": 55.5,
+          "paint": 84.39999999850988,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "cold:expeditions",
+          "sync": 6.5999999940395355,
+          "paint": 44.899999998509884,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "cold:objects",
+          "sync": 25.299999997019768,
+          "paint": 93.29999999701977,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "cold:museum",
+          "sync": 71,
+          "paint": 93.70000000298023,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "cold:society",
+          "sync": 30.899999998509884,
+          "paint": 81.69999999552965,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "warm:field",
+          "sync": 10.699999995529652,
+          "paint": 29.69999999552965,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "warm:journal",
+          "sync": 75.69999999552965,
+          "paint": 106.79999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "warm:bestiary",
+          "sync": 24,
+          "paint": 199,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "warm:atlas",
+          "sync": 64.60000000149012,
+          "paint": 85.60000000149012,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "warm:research",
+          "sync": 33.600000001490116,
+          "paint": 68.39999999850988,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "warm:expeditions",
+          "sync": 7.5,
+          "paint": 30.399999998509884,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "warm:objects",
+          "sync": 11.900000005960464,
+          "paint": 66.10000000149012,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "warm:museum",
+          "sync": 36.20000000298023,
+          "paint": 53.399999998509884,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "warm:society",
+          "sync": 13.899999998509884,
+          "paint": 46.399999998509884,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "camp",
+          "sync": 7.700000002980232,
+          "paint": 22.5,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "expeditions",
+          "sync": 32.5,
+          "paint": 62,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "camp:back",
+          "sync": 16.100000001490116,
+          "paint": 35.70000000298023,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "commerce",
+          "sync": 31.100000001490116,
+          "paint": 56.20000000298023,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile:menu",
+          "sync": 7.899999998509884,
+          "paint": 29.200000002980232,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile",
+          "sync": 27.799999997019768,
+          "paint": 70.79999999701977,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile:close",
+          "sync": 4.100000001490116,
+          "paint": 26.700000002980232,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "museum",
+          "sync": 28.900000005960464,
+          "paint": 49.80000000447035,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:exhibitions",
+          "sync": 46.19999999552965,
+          "paint": 67.19999999552965,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:samples",
+          "sync": 32.70000000298023,
+          "paint": 61.29999999701977,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:fossils",
+          "sync": 64.10000000149012,
+          "paint": 100.70000000298023,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:relicts",
+          "sync": 41.29999999701977,
+          "paint": 58,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:artifacts",
+          "sync": 55.899999998509884,
+          "paint": 79.09999999403954,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "society",
+          "sync": 15.600000001490116,
+          "paint": 35.70000000298023,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "achievements",
+          "sync": 35.100000001490116,
+          "paint": 80.29999999701977,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "inventory",
+          "sync": 11.600000001490116,
+          "paint": 62.600000001490116,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "inventory:workshop",
+          "sync": 15.899999998509884,
+          "paint": 93.29999999701977,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "inventory:search",
+          "sync": 52.100000001490116,
+          "paint": 83.89999999850988,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "atlas",
+          "sync": 44.30000000447035,
+          "paint": 63.5,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:center",
+          "sync": 33.5,
+          "paint": 46.30000000447035,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:keyboard",
+          "sync": 7.5,
+          "paint": 33.5,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "field",
+          "sync": 12.700000002980232,
+          "paint": 37.80000000447035,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "field:manual",
+          "sync": 93.79999999701977,
+          "paint": 130.89999999850988,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal",
+          "sync": 82.69999999552965,
+          "paint": 118.39999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:entry",
+          "sync": 10,
+          "paint": 46.69999999552965,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:search",
+          "sync": 5.9000000059604645,
+          "paint": 31.30000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:leave",
+          "sync": 13.299999997019768,
+          "paint": 38.600000001490116,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal:return",
+          "sync": 48.100000001490116,
+          "paint": 78.30000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:clear",
+          "sync": 4.600000001490116,
+          "paint": 50.399999998509884,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:sort",
+          "sync": 85,
+          "paint": 106.20000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary",
+          "sync": 25.600000001490116,
+          "paint": 198.69999999552965,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:card",
+          "sync": 96.70000000298023,
+          "paint": 115.5,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:close",
+          "sync": 49.600000001490116,
+          "paint": 80,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:filter",
+          "sync": 18.899999998509884,
+          "paint": 47,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:leave",
+          "sync": 7.100000001490116,
+          "paint": 40.100000001490116,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:return",
+          "sync": 9.5,
+          "paint": 53.100000001490116,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:clear",
+          "sync": 11.399999998509884,
+          "paint": 97.29999999701977,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 10.600000001490116,
+          "paint": 28.899999998509884,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 72.69999999552965,
+          "paint": 134.89999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 12.700000002980232,
+          "paint": 39.100000001490116,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 79.10000000149012,
+          "paint": 108.19999999552965,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 15,
+          "paint": 52.80000000447035,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 49.30000000447035,
+          "paint": 79.89999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 31.69999999552965,
+          "paint": 83,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 48.899999998509884,
+          "paint": 73.39999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 12.099999994039536,
+          "paint": 65.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 25.100000001490116,
+          "paint": 46.20000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 2,
+          "paint": 63.099999994039536,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 36.30000000447035,
+          "paint": 56.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 13.600000001490116,
+          "paint": 60.100000001490116,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 39.70000000298023,
+          "paint": 72.10000000149012,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 12.200000002980232,
+          "paint": 44.399999998509884,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 54.5,
+          "paint": 83.30000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 9.399999998509884,
+          "paint": 37.599999994039536,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 55.30000000447035,
+          "paint": 84.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 11.300000004470348,
+          "paint": 32.20000000298023,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 68.19999999552965,
+          "paint": 101.60000000149012,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 23.299999997019768,
+          "paint": 47.19999999552965,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 52.80000000447035,
+          "paint": 97.30000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 8.899999998509884,
+          "paint": 33.29999999701977,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 60.600000001490116,
+          "paint": 82.39999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:auto",
+          "sync": 10.5,
+          "paint": 33.29999999701977,
+          "module": "field",
+          "scroll": 0
+        }
+      ],
+      "pages": 32,
+      "slots": 1000,
+      "writes": 29,
+      "panelReplacements": 98,
+      "childChanges": 149,
+      "startupMs": 1622.3000000044703,
+      "longTasks": [
+        {
+          "start": 652.7000000029802,
+          "ms": 141,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 881.6000000014901,
+          "ms": 644,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 1525.6000000014901,
+          "ms": 73,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 1818.3000000044703,
+          "ms": 111,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 1959,
+          "ms": 312,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 2321.10000000149,
+          "ms": 137,
+          "operation": "cold:atlas"
+        },
+        {
+          "start": 2469.60000000149,
+          "ms": 63,
+          "operation": "cold:research"
+        },
+        {
+          "start": 2599.10000000149,
+          "ms": 77,
+          "operation": "cold:objects"
+        },
+        {
+          "start": 2692.39999999851,
+          "ms": 82,
+          "operation": "cold:museum"
+        },
+        {
+          "start": 2786.10000000149,
+          "ms": 73,
+          "operation": "cold:society"
+        },
+        {
+          "start": 2907.5,
+          "ms": 92,
+          "operation": "warm:journal"
+        },
+        {
+          "start": 3013.5,
+          "ms": 173,
+          "operation": "warm:bestiary"
+        },
+        {
+          "start": 3213.39999999851,
+          "ms": 75,
+          "operation": "warm:atlas"
+        },
+        {
+          "start": 3299.10000000149,
+          "ms": 57,
+          "operation": "warm:research"
+        },
+        {
+          "start": 3930.10000000149,
+          "ms": 52,
+          "operation": "museum:exhibitions"
+        },
+        {
+          "start": 4058.8000000044703,
+          "ms": 78,
+          "operation": "museum:fossils"
+        },
+        {
+          "start": 4159.20000000298,
+          "ms": 51,
+          "operation": "museum:relicts"
+        },
+        {
+          "start": 4217.70000000298,
+          "ms": 65,
+          "operation": "museum:artifacts"
+        },
+        {
+          "start": 4333,
+          "ms": 66,
+          "operation": "achievements"
+        },
+        {
+          "start": 4476,
+          "ms": 74,
+          "operation": "inventory:workshop"
+        },
+        {
+          "start": 4570.10000000149,
+          "ms": 62,
+          "operation": "inventory:search"
+        },
+        {
+          "start": 4653.89999999851,
+          "ms": 56,
+          "operation": "atlas"
+        },
+        {
+          "start": 4834.80000000447,
+          "ms": 118,
+          "operation": "field:manual"
+        },
+        {
+          "start": 4966,
+          "ms": 100,
+          "operation": "journal"
+        },
+        {
+          "start": 5218.80000000447,
+          "ms": 58,
+          "operation": "journal:return"
+        },
+        {
+          "start": 5475.30000000447,
+          "ms": 96,
+          "operation": "journal:sort"
+        },
+        {
+          "start": 5581.70000000298,
+          "ms": 178,
+          "operation": "bestiary"
+        },
+        {
+          "start": 5802.70000000298,
+          "ms": 99,
+          "operation": "bestiary:card"
+        },
+        {
+          "start": 5918.80000000447,
+          "ms": 66,
+          "operation": "bestiary:close"
+        },
+        {
+          "start": 6379.20000000298,
+          "ms": 55,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6434.30000000447,
+          "ms": 74,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6509.70000000298,
+          "ms": 83,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6600.80000000447,
+          "ms": 87,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6697.70000000298,
+          "ms": 65,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6765.10000000149,
+          "ms": 94,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6865.5,
+          "ms": 99,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6975.20000000298,
+          "ms": 97,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7079.60000000149,
+          "ms": 163,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7249.10000000149,
+          "ms": 174,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7435.5,
+          "ms": 89,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7535.10000000149,
+          "ms": 85,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7633.80000000447,
+          "ms": 84,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7735.10000000149,
+          "ms": 82,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7828.20000000298,
+          "ms": 104,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7940.89999999851,
+          "ms": 92,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8050.20000000298,
+          "ms": 65,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8128.39999999851,
+          "ms": 75,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8208.20000000298,
+          "ms": 82,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8298.39999999851,
+          "ms": 119,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8422.10000000149,
+          "ms": 150,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8579.39999999851,
+          "ms": 144,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8728.89999999851,
+          "ms": 122,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8860.80000000447,
+          "ms": 94,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8960.80000000447,
+          "ms": 73,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9056.30000000447,
+          "ms": 69,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9150.10000000149,
+          "ms": 67,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9229.89999999851,
+          "ms": 82,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9320.39999999851,
+          "ms": 87,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9415.60000000149,
+          "ms": 72,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9615,
+          "ms": 88,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 9726.20000000298,
+          "ms": 52,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 9789.10000000149,
+          "ms": 93,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 9949.10000000149,
+          "ms": 65,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 10030.80000000447,
+          "ms": 50,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 10113.30000000447,
+          "ms": 62,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 10479.80000000447,
+          "ms": 52,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 10597,
+          "ms": 67,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 10714.39999999851,
+          "ms": 74,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 10834.60000000149,
+          "ms": 89,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 10983.30000000447,
+          "ms": 80,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 11113.80000000447,
+          "ms": 72,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 16273.39999999851,
+          "ms": 51,
+          "operation": "startup/idle"
+        }
+      ],
+      "heaps": [
+        6098260,
+        8525644,
+        10217832,
+        9634472,
+        10480480
+      ],
+      "snapshots": [
+        {
+          "money": 435,
+          "knowledge": 34,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4,
+          "published": 0
+        },
+        {
+          "money": 435,
+          "knowledge": 34,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4,
+          "published": 0
+        },
+        {
+          "money": 450,
+          "knowledge": 41,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 5,
+          "published": 0
+        },
+        {
+          "money": 450,
+          "knowledge": 43,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 5,
+          "published": 0
+        },
+        {
+          "money": 465,
+          "knowledge": 46,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 6,
+          "published": 0
+        }
+      ],
+      "motion": {
+        "start": 11204.30000000447,
+        "end": 11596.89999999851,
+        "moved": 1152,
+        "axis": "scrollLeft",
+        "element": "journalSpeciesRail",
+        "frameGapsMs": [
+          16.600000000000364,
+          16.700000000000728,
+          16.69999999999891,
+          16.600000000000364,
+          16.700000000000728,
+          16.69999999999891,
+          16.700000000000728,
+          16.600000000000364,
+          16.600000000000364,
+          16.69999999999891,
+          16.700000000000728,
+          16.69999999999891,
+          16.700000000000728,
+          16.600000000000364,
+          16.600000000000364,
+          16.69999999999891,
+          16.700000000000728,
+          16.600000000000364,
+          16.69999999999891,
+          16.700000000000728,
+          16.69999999999891,
+          16.600000000000364,
+          16.700000000000728,
+          16.69999999999891
+        ]
+      },
+      "pageTurnsMs": [
+        52.80000000447035,
+        57.70000000298023,
+        68,
+        67.70000000298023,
+        44.80000000447035,
+        59.20000000298023,
+        66,
+        87.79999999701977,
+        143,
+        148.69999999552965,
+        70.70000000298023,
+        65.89999999850988,
+        65.5,
+        64.80000000447035,
+        78,
+        75.60000000149012,
+        50.70000000298023,
+        57.69999999552965,
+        64.39999999850988,
+        99,
+        128.39999999850988,
+        120.90000000596046,
+        58.70000000298023,
+        61.30000000447035,
+        50.5,
+        52.5,
+        52,
+        68.30000000447035,
+        73.5,
+        55.899999998509884,
+        26.200000002980232
+      ],
+      "extraChecks": null,
+      "cpu": null
+    },
+    {
+      "version": "candidate",
+      "stage": "initial",
+      "helpers": 1,
+      "timings": [
+        {
+          "label": "cold:field",
+          "sync": 7.9000000059604645,
+          "paint": 20,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "cold:journal",
+          "sync": 95.20000000298023,
+          "paint": 132.40000000596046,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "cold:bestiary",
+          "sync": 43,
+          "paint": 196.90000000596046,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "cold:atlas",
+          "sync": 97.39999999850988,
+          "paint": 127.20000000298023,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "cold:research",
+          "sync": 106.19999999552965,
+          "paint": 132.29999999701977,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "cold:expeditions",
+          "sync": 10.299999997019768,
+          "paint": 62.399999998509884,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "cold:objects",
+          "sync": 67.29999999701977,
+          "paint": 160.60000000149012,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "cold:museum",
+          "sync": 73.39999999850988,
+          "paint": 100.89999999850988,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "cold:society",
+          "sync": 52.399999998509884,
+          "paint": 86.89999999850988,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "warm:field",
+          "sync": 10.5,
+          "paint": 40.19999999552965,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "warm:journal",
+          "sync": 44.5,
+          "paint": 68.80000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "warm:bestiary",
+          "sync": 13.300000004470348,
+          "paint": 111.5,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "warm:atlas",
+          "sync": 51.600000001490116,
+          "paint": 67.29999999701977,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "warm:research",
+          "sync": 36.600000001490116,
+          "paint": 64.20000000298023,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "warm:expeditions",
+          "sync": 7.5,
+          "paint": 32.70000000298023,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "warm:objects",
+          "sync": 12.799999997019768,
+          "paint": 65.79999999701977,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "warm:museum",
+          "sync": 22.400000005960464,
+          "paint": 35.400000005960464,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "warm:society",
+          "sync": 12.100000001490116,
+          "paint": 57.20000000298023,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "camp",
+          "sync": 5.799999997019768,
+          "paint": 26.799999997019768,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "expeditions",
+          "sync": 26.100000001490116,
+          "paint": 56.29999999701977,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "camp:back",
+          "sync": 14.200000002980232,
+          "paint": 27.30000000447035,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "commerce",
+          "sync": 25.100000001490116,
+          "paint": 47.400000005960464,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile:menu",
+          "sync": 25.299999997019768,
+          "paint": 32.29999999701977,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile",
+          "sync": 27.700000002980232,
+          "paint": 39.5,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile:close",
+          "sync": 3.5,
+          "paint": 26.80000000447035,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "museum",
+          "sync": 36.899999998509884,
+          "paint": 57.099999994039536,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:exhibitions",
+          "sync": 23.700000002980232,
+          "paint": 42.600000001490116,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:samples",
+          "sync": 33.70000000298023,
+          "paint": 52.600000001490116,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:fossils",
+          "sync": 43.29999999701977,
+          "paint": 78.10000000149012,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:relicts",
+          "sync": 23.799999997019768,
+          "paint": 45.600000001490116,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:artifacts",
+          "sync": 77.09999999403954,
+          "paint": 105.69999999552965,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "society",
+          "sync": 16.100000001490116,
+          "paint": 43.30000000447035,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "achievements",
+          "sync": 16,
+          "paint": 59.899999998509884,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "inventory",
+          "sync": 14.399999998509884,
+          "paint": 73,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "inventory:workshop",
+          "sync": 20.899999998509884,
+          "paint": 107.20000000298023,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "inventory:search",
+          "sync": 72.39999999850988,
+          "paint": 99.69999999552965,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "atlas",
+          "sync": 71.5,
+          "paint": 99.70000000298023,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:center",
+          "sync": 100.29999999701977,
+          "paint": 116.79999999701977,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:keyboard",
+          "sync": 12.5,
+          "paint": 38.899999998509884,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "field",
+          "sync": 18.100000001490116,
+          "paint": 61.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "field:manual",
+          "sync": 114.29999999701977,
+          "paint": 156.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal",
+          "sync": 93.39999999850988,
+          "paint": 130.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:entry",
+          "sync": 11.799999997019768,
+          "paint": 47.79999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:search",
+          "sync": 5.100000001490116,
+          "paint": 26.600000001490116,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:leave",
+          "sync": 10.399999998509884,
+          "paint": 49.600000001490116,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal:return",
+          "sync": 33,
+          "paint": 50.70000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:clear",
+          "sync": 4.199999995529652,
+          "paint": 33.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:sort",
+          "sync": 43,
+          "paint": 74.09999999403954,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary",
+          "sync": 21.100000001490116,
+          "paint": 141.60000000149012,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:card",
+          "sync": 53.70000000298023,
+          "paint": 69,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:close",
+          "sync": 14.200000002980232,
+          "paint": 57.30000000447035,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:filter",
+          "sync": 17.80000000447035,
+          "paint": 31.5,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:leave",
+          "sync": 2.8000000044703484,
+          "paint": 36.80000000447035,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:return",
+          "sync": 9,
+          "paint": 46.20000000298023,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:clear",
+          "sync": 12.600000001490116,
+          "paint": 78.60000000149012,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 13.399999998509884,
+          "paint": 33.79999999701977,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 58.599999994039536,
+          "paint": 85.19999999552965,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 10.700000002980232,
+          "paint": 62.20000000298023,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 14.800000004470348,
+          "paint": 37,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 10.5,
+          "paint": 54.20000000298023,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 34,
+          "paint": 66.60000000149012,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 11.699999995529652,
+          "paint": 45.600000001490116,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 38.100000001490116,
+          "paint": 69.80000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 9.5,
+          "paint": 37.399999998509884,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 30.69999999552965,
+          "paint": 81.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 10.399999998509884,
+          "paint": 29.19999999552965,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 30.200000002980232,
+          "paint": 54.70000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 1.7999999970197678,
+          "paint": 47.899999998509884,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 29.600000001490116,
+          "paint": 71.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 9.5,
+          "paint": 29.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 21.100000001490116,
+          "paint": 78,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 8.299999997019768,
+          "paint": 33.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 27.799999997019768,
+          "paint": 58,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 9.700000002980232,
+          "paint": 41.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 32.399999998509884,
+          "paint": 57.399999998509884,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 8.200000002980232,
+          "paint": 43.399999998509884,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 22.200000002980232,
+          "paint": 59.70000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 8.299999997019768,
+          "paint": 52.69999999552965,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 24.900000005960464,
+          "paint": 72.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:auto",
+          "sync": 11.899999998509884,
+          "paint": 28.399999998509884,
+          "module": "field",
+          "scroll": 0
+        }
+      ],
+      "pages": 32,
+      "slots": 1000,
+      "writes": 28,
+      "panelReplacements": 67,
+      "childChanges": 223,
+      "startupMs": 1554.5,
+      "longTasks": [
+        {
+          "start": 333.8999999985099,
+          "ms": 53,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 639.1999999955297,
+          "ms": 81,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 800,
+          "ms": 653,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 1454,
+          "ms": 68,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 1721.1000000014901,
+          "ms": 110,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 1853.5,
+          "ms": 146,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 2050.5,
+          "ms": 107,
+          "operation": "cold:atlas"
+        },
+        {
+          "start": 2177.7999999970198,
+          "ms": 118,
+          "operation": "cold:research"
+        },
+        {
+          "start": 2373.1999999955297,
+          "ms": 138,
+          "operation": "cold:objects"
+        },
+        {
+          "start": 2534,
+          "ms": 83,
+          "operation": "cold:museum"
+        },
+        {
+          "start": 2634.89999999851,
+          "ms": 76,
+          "operation": "cold:society"
+        },
+        {
+          "start": 2771.1999999955297,
+          "ms": 58,
+          "operation": "warm:journal"
+        },
+        {
+          "start": 2840,
+          "ms": 93,
+          "operation": "warm:bestiary"
+        },
+        {
+          "start": 2951.6999999955297,
+          "ms": 61,
+          "operation": "warm:atlas"
+        },
+        {
+          "start": 3020.10000000149,
+          "ms": 51,
+          "operation": "warm:research"
+        },
+        {
+          "start": 3702,
+          "ms": 55,
+          "operation": "museum:fossils"
+        },
+        {
+          "start": 3827.89999999851,
+          "ms": 91,
+          "operation": "museum:artifacts"
+        },
+        {
+          "start": 4037.2999999970198,
+          "ms": 51,
+          "operation": "inventory"
+        },
+        {
+          "start": 4110.10000000149,
+          "ms": 81,
+          "operation": "inventory:workshop"
+        },
+        {
+          "start": 4217.89999999851,
+          "ms": 85,
+          "operation": "inventory:search"
+        },
+        {
+          "start": 4317.69999999553,
+          "ms": 85,
+          "operation": "atlas"
+        },
+        {
+          "start": 4417.29999999702,
+          "ms": 105,
+          "operation": "atlas:center"
+        },
+        {
+          "start": 4635.10000000149,
+          "ms": 142,
+          "operation": "field:manual"
+        },
+        {
+          "start": 4791.69999999553,
+          "ms": 114,
+          "operation": "journal"
+        },
+        {
+          "start": 5215,
+          "ms": 64,
+          "operation": "journal:sort"
+        },
+        {
+          "start": 5286.10000000149,
+          "ms": 120,
+          "operation": "bestiary"
+        },
+        {
+          "start": 5476,
+          "ms": 56,
+          "operation": "bestiary:card"
+        },
+        {
+          "start": 5887,
+          "ms": 59,
+          "operation": "bestiary:clear"
+        },
+        {
+          "start": 5993.5,
+          "ms": 58,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6052,
+          "ms": 76,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6131.5,
+          "ms": 85,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6223.10000000149,
+          "ms": 87,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6343.89999999851,
+          "ms": 68,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6416.5,
+          "ms": 97,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6519.69999999553,
+          "ms": 84,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6609.79999999702,
+          "ms": 60,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6677.89999999851,
+          "ms": 99,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6779.89999999851,
+          "ms": 133,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6915.60000000149,
+          "ms": 154,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7074.29999999702,
+          "ms": 59,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7138.5,
+          "ms": 76,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7278.19999999553,
+          "ms": 54,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7343.89999999851,
+          "ms": 62,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7416.10000000149,
+          "ms": 78,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7496.79999999702,
+          "ms": 61,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7575.10000000149,
+          "ms": 55,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7632.10000000149,
+          "ms": 64,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7697.60000000149,
+          "ms": 62,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7772.19999999553,
+          "ms": 79,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7854.5,
+          "ms": 113,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7968.79999999702,
+          "ms": 118,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8092.10000000149,
+          "ms": 88,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8181.89999999851,
+          "ms": 73,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8274.89999999851,
+          "ms": 55,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8332.19999999553,
+          "ms": 64,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8407.60000000149,
+          "ms": 55,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8473.5,
+          "ms": 63,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8631.60000000149,
+          "ms": 70,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 8871.69999999553,
+          "ms": 54,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 8984,
+          "ms": 60,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 9830.29999999702,
+          "ms": 59,
+          "operation": "rapid:journal"
+        }
+      ],
+      "heaps": [
+        6148544,
+        8332972,
+        8958812,
+        8254520,
+        9713336
+      ],
+      "snapshots": [
+        {
+          "money": 435,
+          "knowledge": 34,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4,
+          "published": 0
+        },
+        {
+          "money": 435,
+          "knowledge": 34,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4,
+          "published": 0
+        },
+        {
+          "money": 450,
+          "knowledge": 41,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 5,
+          "published": 0
+        },
+        {
+          "money": 450,
+          "knowledge": 43,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 5,
+          "published": 0
+        },
+        {
+          "money": 465,
+          "knowledge": 46,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 6,
+          "published": 0
+        }
+      ],
+      "motion": {
+        "start": 9917.5,
+        "end": 10302,
+        "moved": 1152,
+        "axis": "scrollLeft",
+        "element": "journalSpeciesRail",
+        "frameGapsMs": [
+          16.600000000000364,
+          16.69999999999891,
+          16.600000000000364,
+          16.80000000000109,
+          16.599999999998545,
+          16.700000000000728,
+          16.700000000000728,
+          16.599999999998545,
+          16.700000000000728,
+          16.600000000000364,
+          16.69999999999891,
+          16.600000000000364,
+          16.700000000000728,
+          16.799999999999272,
+          16.5,
+          16.80000000000109,
+          16.599999999998545,
+          16.700000000000728,
+          16.700000000000728,
+          16.599999999998545,
+          16.700000000000728,
+          16.700000000000728,
+          16.599999999998545
+        ]
+      },
+      "pageTurnsMs": [
+        55.29999999701977,
+        57.80000000447035,
+        64.19999999552965,
+        70.80000000447035,
+        51.19999999552965,
+        77.39999999850988,
+        66.20000000298023,
+        50.899999998509884,
+        70.5,
+        112.79999999701977,
+        132,
+        45,
+        61.899999998509884,
+        39.899999998509884,
+        39,
+        48.599999994039536,
+        60.70000000298023,
+        44.79999999701977,
+        40,
+        50.5,
+        48.70000000298023,
+        63.20000000298023,
+        94.19999999552965,
+        89.39999999850988,
+        66.70000000298023,
+        38.100000001490116,
+        40.69999999552965,
+        48.20000000298023,
+        41.20000000298023,
+        41,
+        18.200000002980232
+      ],
+      "extraChecks": null,
+      "cpu": null
+    },
+    {
+      "version": "base",
+      "stage": "intermediate-five",
+      "helpers": 5,
+      "timings": [
+        {
+          "label": "cold:field",
+          "sync": 9.600000001490116,
+          "paint": 28.200000002980232,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "cold:journal",
+          "sync": 121.40000000596046,
+          "paint": 202.60000000149012,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "cold:bestiary",
+          "sync": 60.5,
+          "paint": 430.09999999403954,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "cold:atlas",
+          "sync": 124.89999999850988,
+          "paint": 155.39999999850988,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "cold:research",
+          "sync": 50.100000001490116,
+          "paint": 71.79999999701977,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "cold:expeditions",
+          "sync": 1.7000000029802322,
+          "paint": 57.899999998509884,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "cold:objects",
+          "sync": 17.5,
+          "paint": 61.600000001490116,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "cold:museum",
+          "sync": 58.70000000298023,
+          "paint": 80.10000000149012,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "cold:society",
+          "sync": 29.399999998509884,
+          "paint": 67.19999999552965,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "warm:field",
+          "sync": 12.600000001490116,
+          "paint": 29.299999997019768,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "warm:journal",
+          "sync": 78.10000000149012,
+          "paint": 107.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "warm:bestiary",
+          "sync": 17.700000002980232,
+          "paint": 169,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "warm:atlas",
+          "sync": 38.600000001490116,
+          "paint": 80.89999999850988,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "warm:research",
+          "sync": 21.600000001490116,
+          "paint": 32,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "warm:expeditions",
+          "sync": 3.8000000044703484,
+          "paint": 31.5,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "warm:objects",
+          "sync": 20.299999997019768,
+          "paint": 49.399999998509884,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "warm:museum",
+          "sync": 19.19999999552965,
+          "paint": 50.29999999701977,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "warm:society",
+          "sync": 32.29999999701977,
+          "paint": 51.099999994039536,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "camp",
+          "sync": 7.300000004470348,
+          "paint": 21,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "expeditions",
+          "sync": 55.80000000447035,
+          "paint": 71.10000000149012,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "camp:back",
+          "sync": 12.299999997019768,
+          "paint": 26.299999997019768,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "commerce",
+          "sync": 25.200000002980232,
+          "paint": 52.80000000447035,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile:menu",
+          "sync": 8.200000002980232,
+          "paint": 30,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile",
+          "sync": 24.30000000447035,
+          "paint": 39.5,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile:close",
+          "sync": 2.899999998509884,
+          "paint": 25.600000001490116,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "museum",
+          "sync": 23.5,
+          "paint": 35.79999999701977,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:exhibitions",
+          "sync": 58.5,
+          "paint": 81,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:samples",
+          "sync": 23.100000001490116,
+          "paint": 37,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:fossils",
+          "sync": 58,
+          "paint": 82.70000000298023,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:relicts",
+          "sync": 29.600000001490116,
+          "paint": 56.79999999701977,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:artifacts",
+          "sync": 30.200000002980232,
+          "paint": 45.80000000447035,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "society",
+          "sync": 35.900000005960464,
+          "paint": 76.5,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "achievements",
+          "sync": 31.100000001490116,
+          "paint": 101.10000000149012,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "inventory",
+          "sync": 9.399999998509884,
+          "paint": 72.60000000149012,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "inventory:workshop",
+          "sync": 34.100000001490116,
+          "paint": 99,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "inventory:search",
+          "sync": 42.899999998509884,
+          "paint": 64.19999999552965,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "atlas",
+          "sync": 43.100000001490116,
+          "paint": 62.20000000298023,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:center",
+          "sync": 17,
+          "paint": 40.19999999552965,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:keyboard",
+          "sync": 10.900000005960464,
+          "paint": 45.400000005960464,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "field",
+          "sync": 17.200000002980232,
+          "paint": 51.80000000447035,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "field:manual",
+          "sync": 84,
+          "paint": 118.69999999552965,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal",
+          "sync": 52.80000000447035,
+          "paint": 123,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:entry",
+          "sync": 2.7000000029802322,
+          "paint": 52.20000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:search",
+          "sync": 3.899999998509884,
+          "paint": 48.600000001490116,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:leave",
+          "sync": 10.199999995529652,
+          "paint": 32.100000001490116,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal:return",
+          "sync": 35.70000000298023,
+          "paint": 67.90000000596046,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:clear",
+          "sync": 14.599999994039536,
+          "paint": 98.09999999403954,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:sort",
+          "sync": 95.19999999552965,
+          "paint": 164.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary",
+          "sync": 90,
+          "paint": 309.1000000014901,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:card",
+          "sync": 42.80000000447035,
+          "paint": 53.400000005960464,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:close",
+          "sync": 59,
+          "paint": 84.29999999701977,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:filter",
+          "sync": 33.600000001490116,
+          "paint": 87.90000000596046,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:leave",
+          "sync": 9,
+          "paint": 86.69999999552965,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:return",
+          "sync": 13.600000001490116,
+          "paint": 54.399999998509884,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:clear",
+          "sync": 21.19999999552965,
+          "paint": 108.39999999850988,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 10.700000002980232,
+          "paint": 50.900000005960464,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 65.70000000298023,
+          "paint": 141.20000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 9.899999998509884,
+          "paint": 61,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 56.899999998509884,
+          "paint": 83.29999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 21.5,
+          "paint": 46,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 74,
+          "paint": 101.20000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 8.700000002980232,
+          "paint": 66.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 79.70000000298023,
+          "paint": 130.10000000149012,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 9.299999997019768,
+          "paint": 36,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 50.5,
+          "paint": 83.89999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 8.699999995529652,
+          "paint": 53.29999999701977,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 64,
+          "paint": 103.89999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 2.2000000029802322,
+          "paint": 38.80000000447035,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 76,
+          "paint": 120.39999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 13.899999998509884,
+          "paint": 66.69999999552965,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 124.20000000298023,
+          "paint": 169.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 14.5,
+          "paint": 42.20000000298023,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 93.69999999552965,
+          "paint": 180.39999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 13.899999998509884,
+          "paint": 52.399999998509884,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 115.39999999850988,
+          "paint": 155.29999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 12.200000002980232,
+          "paint": 48.100000001490116,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 72.5,
+          "paint": 98.10000000149012,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 22.5,
+          "paint": 47.899999998509884,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 60.20000000298023,
+          "paint": 78.79999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:auto",
+          "sync": 13.700000002980232,
+          "paint": 97.90000000596046,
+          "module": "field",
+          "scroll": 0
+        }
+      ],
+      "pages": 32,
+      "slots": 1000,
+      "writes": 30,
+      "panelReplacements": 98,
+      "childChanges": 170,
+      "startupMs": 1731.1999999955297,
+      "longTasks": [
+        {
+          "start": 309.6000000014901,
+          "ms": 77,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 505.8999999985099,
+          "ms": 80,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 592.3999999985099,
+          "ms": 57,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 761.3999999985099,
+          "ms": 120,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 988.6000000014901,
+          "ms": 665,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 1654.5,
+          "ms": 57,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 1894.5,
+          "ms": 140,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 2097.60000000149,
+          "ms": 346,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 2545,
+          "ms": 163,
+          "operation": "cold:atlas"
+        },
+        {
+          "start": 2727.2999999970198,
+          "ms": 58,
+          "operation": "cold:research"
+        },
+        {
+          "start": 2918.7999999970198,
+          "ms": 66,
+          "operation": "cold:museum"
+        },
+        {
+          "start": 2998.89999999851,
+          "ms": 58,
+          "operation": "cold:society"
+        },
+        {
+          "start": 3102.1999999955297,
+          "ms": 91,
+          "operation": "warm:journal"
+        },
+        {
+          "start": 3209.60000000149,
+          "ms": 135,
+          "operation": "warm:bestiary"
+        },
+        {
+          "start": 3709.6999999955297,
+          "ms": 60,
+          "operation": "expeditions"
+        },
+        {
+          "start": 3992.10000000149,
+          "ms": 71,
+          "operation": "museum:exhibitions"
+        },
+        {
+          "start": 4110.29999999702,
+          "ms": 71,
+          "operation": "museum:fossils"
+        },
+        {
+          "start": 4297.10000000149,
+          "ms": 60,
+          "operation": "society"
+        },
+        {
+          "start": 4373.19999999553,
+          "ms": 74,
+          "operation": "achievements"
+        },
+        {
+          "start": 4546.39999999851,
+          "ms": 68,
+          "operation": "inventory:workshop"
+        },
+        {
+          "start": 4646.39999999851,
+          "ms": 53,
+          "operation": "inventory:search"
+        },
+        {
+          "start": 4710.60000000149,
+          "ms": 53,
+          "operation": "atlas"
+        },
+        {
+          "start": 4908.29999999702,
+          "ms": 91,
+          "operation": "field:manual"
+        },
+        {
+          "start": 5029.5,
+          "ms": 71,
+          "operation": "journal"
+        },
+        {
+          "start": 5290.10000000149,
+          "ms": 59,
+          "operation": "journal:return"
+        },
+        {
+          "start": 5550.10000000149,
+          "ms": 80,
+          "operation": "journal:clear"
+        },
+        {
+          "start": 5631.5,
+          "ms": 129,
+          "operation": "journal:sort"
+        },
+        {
+          "start": 5798,
+          "ms": 230,
+          "operation": "bestiary"
+        },
+        {
+          "start": 6207,
+          "ms": 77,
+          "operation": "bestiary:close"
+        },
+        {
+          "start": 6593.39999999851,
+          "ms": 77,
+          "operation": "bestiary:clear"
+        },
+        {
+          "start": 6706.10000000149,
+          "ms": 73,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6779.10000000149,
+          "ms": 68,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6858.69999999553,
+          "ms": 68,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6933.89999999851,
+          "ms": 82,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7024.39999999851,
+          "ms": 75,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7107.10000000149,
+          "ms": 89,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7206.10000000149,
+          "ms": 111,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7326.19999999553,
+          "ms": 75,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7502,
+          "ms": 79,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7594.60000000149,
+          "ms": 58,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7665.29999999702,
+          "ms": 70,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7748.10000000149,
+          "ms": 64,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7819.69999999553,
+          "ms": 52,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7879.29999999702,
+          "ms": 60,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7951.60000000149,
+          "ms": 98,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8058,
+          "ms": 142,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8209.39999999851,
+          "ms": 170,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8388.29999999702,
+          "ms": 170,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8616.29999999702,
+          "ms": 105,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8748.29999999702,
+          "ms": 79,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8850.39999999851,
+          "ms": 79,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8951.19999999553,
+          "ms": 80,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9056.79999999702,
+          "ms": 88,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9156.19999999553,
+          "ms": 76,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9255,
+          "ms": 78,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9350.39999999851,
+          "ms": 75,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9428.10000000149,
+          "ms": 53,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9512,
+          "ms": 121,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9640.60000000149,
+          "ms": 69,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9717.39999999851,
+          "ms": 90,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9943.5,
+          "ms": 80,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 10146.19999999553,
+          "ms": 69,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 10275.60000000149,
+          "ms": 88,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 10443.29999999702,
+          "ms": 92,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 10609.39999999851,
+          "ms": 63,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 10746.19999999553,
+          "ms": 82,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 10889.5,
+          "ms": 105,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 11009.19999999553,
+          "ms": 53,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 11075.89999999851,
+          "ms": 146,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 11289.5,
+          "ms": 112,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 11522.10000000149,
+          "ms": 139,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 11725.89999999851,
+          "ms": 86,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 11872.79999999702,
+          "ms": 63,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 12395.89999999851,
+          "ms": 64,
+          "operation": "field:auto"
+        },
+        {
+          "start": 13378.39999999851,
+          "ms": 53,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 17378.5,
+          "ms": 73,
+          "operation": "startup/idle"
+        }
+      ],
+      "heaps": [
+        6265112,
+        8335068,
+        8398576,
+        8903852,
+        9585768
+      ],
+      "snapshots": [
+        {
+          "money": 1179,
+          "knowledge": 1770,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4178,
+          "published": 0
+        },
+        {
+          "money": 1179,
+          "knowledge": 1786,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4180,
+          "published": 0
+        },
+        {
+          "money": 1179,
+          "knowledge": 1826,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4186,
+          "published": 0
+        },
+        {
+          "money": 1179,
+          "knowledge": 1838,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4188,
+          "published": 0
+        },
+        {
+          "money": 1179,
+          "knowledge": 1878,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4194,
+          "published": 0
+        }
+      ],
+      "motion": {
+        "start": 11959.60000000149,
+        "end": 12357.19999999553,
+        "moved": 1152,
+        "axis": "scrollLeft",
+        "element": "journalSpeciesRail",
+        "frameGapsMs": [
+          16.600000000000364,
+          16.700000000000728,
+          16.600000000000364,
+          16.69999999999891,
+          16.700000000000728,
+          16.600000000000364,
+          16.69999999999891,
+          16.700000000000728,
+          16.600000000000364,
+          16.69999999999891,
+          16.700000000000728,
+          16.69999999999891,
+          16.600000000000364,
+          16.600000000000364,
+          16.799999999999272,
+          16.600000000000364,
+          16.700000000000728,
+          16.69999999999891,
+          16.700000000000728,
+          16.5,
+          16.700000000000728,
+          16.69999999999891,
+          16.700000000000728,
+          16.600000000000364
+        ]
+      },
+      "pageTurnsMs": [
+        70.10000000149012,
+        50.79999999701977,
+        51,
+        54.20000000298023,
+        54.5,
+        72.10000000149012,
+        57,
+        58.30000000447035,
+        29,
+        59.900000005960464,
+        44.5,
+        54.19999999552965,
+        48.5,
+        38.5,
+        56.5,
+        87.39999999850988,
+        122.29999999701977,
+        150,
+        139,
+        81,
+        59.399999998509884,
+        61.5,
+        61.399999998509884,
+        60.600000001490116,
+        57.70000000298023,
+        59.100000001490116,
+        58.29999999701977,
+        38.100000001490116,
+        103,
+        55.100000001490116,
+        79.69999999552965
+      ],
+      "extraChecks": null,
+      "cpu": null
+    },
+    {
+      "version": "candidate",
+      "stage": "intermediate-five",
+      "helpers": 5,
+      "timings": [
+        {
+          "label": "cold:field",
+          "sync": 5.100000001490116,
+          "paint": 83.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "cold:journal",
+          "sync": 197.10000000149012,
+          "paint": 404.70000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "cold:bestiary",
+          "sync": 85.89999999850988,
+          "paint": 600,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "cold:atlas",
+          "sync": 171.60000000149012,
+          "paint": 221.80000000447035,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "cold:research",
+          "sync": 89.19999999552965,
+          "paint": 143.19999999552965,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "cold:expeditions",
+          "sync": 14.899999998509884,
+          "paint": 109.80000000447035,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "cold:objects",
+          "sync": 28,
+          "paint": 248.20000000298023,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "cold:museum",
+          "sync": 141,
+          "paint": 195.29999999701977,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "cold:society",
+          "sync": 64.39999999850988,
+          "paint": 199.60000000149012,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "warm:field",
+          "sync": 14,
+          "paint": 40.399999998509884,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "warm:journal",
+          "sync": 360.8999999985099,
+          "paint": 564.7000000029802,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "warm:bestiary",
+          "sync": 41.19999999552965,
+          "paint": 594,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "warm:atlas",
+          "sync": 105.89999999850988,
+          "paint": 202.79999999701977,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "warm:research",
+          "sync": 123.80000000447035,
+          "paint": 244.70000000298023,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "warm:expeditions",
+          "sync": 3,
+          "paint": 50.69999999552965,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "warm:objects",
+          "sync": 9.899999998509884,
+          "paint": 102.30000000447035,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "warm:museum",
+          "sync": 28.099999994039536,
+          "paint": 111.59999999403954,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "warm:society",
+          "sync": 22.600000001490116,
+          "paint": 88.20000000298023,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "camp",
+          "sync": 5.899999998509884,
+          "paint": 60.899999998509884,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "expeditions",
+          "sync": 121,
+          "paint": 146.89999999850988,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "camp:back",
+          "sync": 49.5,
+          "paint": 77.10000000149012,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "commerce",
+          "sync": 27.5,
+          "paint": 91.29999999701977,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile:menu",
+          "sync": 12.399999998509884,
+          "paint": 33.600000001490116,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile",
+          "sync": 53.899999998509884,
+          "paint": 170.29999999701977,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile:close",
+          "sync": 1.9000000059604645,
+          "paint": 16.700000002980232,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "museum",
+          "sync": 18.299999997019768,
+          "paint": 71.60000000149012,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:exhibitions",
+          "sync": 107.5,
+          "paint": 143.29999999701977,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:samples",
+          "sync": 64.5,
+          "paint": 90,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:fossils",
+          "sync": 64.5,
+          "paint": 101.59999999403954,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:relicts",
+          "sync": 86.70000000298023,
+          "paint": 143.39999999850988,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:artifacts",
+          "sync": 49.5,
+          "paint": 99.39999999850988,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "society",
+          "sync": 38,
+          "paint": 101.20000000298023,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "achievements",
+          "sync": 51.100000001490116,
+          "paint": 159.10000000149012,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "inventory",
+          "sync": 44.399999998509884,
+          "paint": 99.39999999850988,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "inventory:workshop",
+          "sync": 60.899999998509884,
+          "paint": 178.39999999850988,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "inventory:search",
+          "sync": 86.69999999552965,
+          "paint": 123.89999999850988,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "atlas",
+          "sync": 78.70000000298023,
+          "paint": 139.60000000149012,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:center",
+          "sync": 12.5,
+          "paint": 43.20000000298023,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:keyboard",
+          "sync": 12.699999995529652,
+          "paint": 73.29999999701977,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "field",
+          "sync": 23.599999994039536,
+          "paint": 134.89999999850988,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "field:manual",
+          "sync": 105.39999999850988,
+          "paint": 183.29999999701977,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal",
+          "sync": 103,
+          "paint": 212.39999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:entry",
+          "sync": 65.79999999701977,
+          "paint": 111.69999999552965,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:search",
+          "sync": 39.899999998509884,
+          "paint": 81.79999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:leave",
+          "sync": 9.799999997019768,
+          "paint": 92.10000000149012,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal:return",
+          "sync": 65.79999999701977,
+          "paint": 95.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:clear",
+          "sync": 4.399999998509884,
+          "paint": 97.69999999552965,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:sort",
+          "sync": 109.89999999850988,
+          "paint": 267.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary",
+          "sync": 26,
+          "paint": 293.1000000014901,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:card",
+          "sync": 94.69999999552965,
+          "paint": 113.39999999850988,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:close",
+          "sync": 77.80000000447035,
+          "paint": 115,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:filter",
+          "sync": 16.69999999552965,
+          "paint": 33.899999998509884,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:leave",
+          "sync": 49.600000001490116,
+          "paint": 172.70000000298023,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:return",
+          "sync": 16.400000005960464,
+          "paint": 107.30000000447035,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:clear",
+          "sync": 25.5,
+          "paint": 203.10000000149012,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 60.400000005960464,
+          "paint": 101.70000000298023,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 194.5,
+          "paint": 369.80000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 18,
+          "paint": 94,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 99.70000000298023,
+          "paint": 205,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 23,
+          "paint": 101.80000000447035,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 125.30000000447035,
+          "paint": 209.20000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 12.799999997019768,
+          "paint": 83.19999999552965,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 44.100000001490116,
+          "paint": 206,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 17.299999997019768,
+          "paint": 103.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 87.69999999552965,
+          "paint": 139.59999999403954,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 50.29999999701977,
+          "paint": 95.69999999552965,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 87.89999999850988,
+          "paint": 173.30000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 13.600000001490116,
+          "paint": 85.20000000298023,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 119.60000000149012,
+          "paint": 243.29999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 51.100000001490116,
+          "paint": 98.70000000298023,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 96.10000000149012,
+          "paint": 168.79999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 2,
+          "paint": 91.39999999850988,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 201.20000000298023,
+          "paint": 295.6000000014901,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 33.5,
+          "paint": 102.09999999403954,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 106.69999999552965,
+          "paint": 331.09999999403954,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 11.899999998509884,
+          "paint": 96.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 115.5,
+          "paint": 192.39999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 10.299999997019768,
+          "paint": 97.29999999701977,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 87.39999999850988,
+          "paint": 159.19999999552965,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:auto",
+          "sync": 13.5,
+          "paint": 87.89999999850988,
+          "module": "field",
+          "scroll": 0
+        }
+      ],
+      "pages": 32,
+      "slots": 1000,
+      "writes": 39,
+      "panelReplacements": 67,
+      "childChanges": 307,
+      "startupMs": 3312.6999999955297,
+      "longTasks": [
+        {
+          "start": 287.19999999552965,
+          "ms": 478,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 997.6999999955297,
+          "ms": 2106,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 3103.89999999851,
+          "ms": 99,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 3446.10000000149,
+          "ms": 58,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 3504.60000000149,
+          "ms": 100,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 3773,
+          "ms": 278,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 4104.19999999553,
+          "ms": 50,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 4178.5,
+          "ms": 381,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 4562,
+          "ms": 95,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 4681.19999999553,
+          "ms": 94,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 4779.89999999851,
+          "ms": 199,
+          "operation": "cold:atlas"
+        },
+        {
+          "start": 5002.39999999851,
+          "ms": 99,
+          "operation": "cold:research"
+        },
+        {
+          "start": 5257.39999999851,
+          "ms": 126,
+          "operation": "cold:objects"
+        },
+        {
+          "start": 5384.39999999851,
+          "ms": 81,
+          "operation": "cold:objects"
+        },
+        {
+          "start": 5506.29999999702,
+          "ms": 155,
+          "operation": "cold:museum"
+        },
+        {
+          "start": 5702.19999999553,
+          "ms": 160,
+          "operation": "cold:society"
+        },
+        {
+          "start": 5990.79999999702,
+          "ms": 392,
+          "operation": "warm:journal"
+        },
+        {
+          "start": 6386.39999999851,
+          "ms": 53,
+          "operation": "warm:journal"
+        },
+        {
+          "start": 6458.39999999851,
+          "ms": 98,
+          "operation": "warm:journal"
+        },
+        {
+          "start": 6556.60000000149,
+          "ms": 490,
+          "operation": "warm:bestiary"
+        },
+        {
+          "start": 7086.69999999553,
+          "ms": 58,
+          "operation": "warm:bestiary"
+        },
+        {
+          "start": 7153.60000000149,
+          "ms": 134,
+          "operation": "warm:atlas"
+        },
+        {
+          "start": 7291.89999999851,
+          "ms": 56,
+          "operation": "warm:atlas"
+        },
+        {
+          "start": 7356.19999999553,
+          "ms": 149,
+          "operation": "warm:research"
+        },
+        {
+          "start": 7867,
+          "ms": 78,
+          "operation": "warm:society"
+        },
+        {
+          "start": 8052,
+          "ms": 133,
+          "operation": "expeditions"
+        },
+        {
+          "start": 8200.19999999553,
+          "ms": 58,
+          "operation": "camp:back"
+        },
+        {
+          "start": 8276.69999999553,
+          "ms": 63,
+          "operation": "commerce"
+        },
+        {
+          "start": 8401.89999999851,
+          "ms": 64,
+          "operation": "profile"
+        },
+        {
+          "start": 8466.60000000149,
+          "ms": 86,
+          "operation": "profile"
+        },
+        {
+          "start": 8590.19999999553,
+          "ms": 55,
+          "operation": "museum"
+        },
+        {
+          "start": 8661.79999999702,
+          "ms": 123,
+          "operation": "museum:exhibitions"
+        },
+        {
+          "start": 8805.29999999702,
+          "ms": 70,
+          "operation": "museum:samples"
+        },
+        {
+          "start": 8895,
+          "ms": 81,
+          "operation": "museum:fossils"
+        },
+        {
+          "start": 8997.10000000149,
+          "ms": 95,
+          "operation": "museum:relicts"
+        },
+        {
+          "start": 9140.60000000149,
+          "ms": 54,
+          "operation": "museum:artifacts"
+        },
+        {
+          "start": 9240.10000000149,
+          "ms": 51,
+          "operation": "society"
+        },
+        {
+          "start": 9341.19999999553,
+          "ms": 115,
+          "operation": "achievements"
+        },
+        {
+          "start": 9500.10000000149,
+          "ms": 74,
+          "operation": "inventory"
+        },
+        {
+          "start": 9599.69999999553,
+          "ms": 86,
+          "operation": "inventory:workshop"
+        },
+        {
+          "start": 9686.60000000149,
+          "ms": 66,
+          "operation": "inventory:workshop"
+        },
+        {
+          "start": 9778.39999999851,
+          "ms": 97,
+          "operation": "inventory:search"
+        },
+        {
+          "start": 9901.79999999702,
+          "ms": 137,
+          "operation": "atlas"
+        },
+        {
+          "start": 10085.29999999702,
+          "ms": 56,
+          "operation": "atlas:keyboard"
+        },
+        {
+          "start": 10157.5,
+          "ms": 88,
+          "operation": "field"
+        },
+        {
+          "start": 10292.5,
+          "ms": 150,
+          "operation": "field:manual"
+        },
+        {
+          "start": 10478.19999999553,
+          "ms": 172,
+          "operation": "journal"
+        },
+        {
+          "start": 10689.69999999553,
+          "ms": 95,
+          "operation": "journal:entry"
+        },
+        {
+          "start": 10802.5,
+          "ms": 55,
+          "operation": "journal:search"
+        },
+        {
+          "start": 10886.19999999553,
+          "ms": 63,
+          "operation": "field:leave"
+        },
+        {
+          "start": 10976.39999999851,
+          "ms": 82,
+          "operation": "journal:return"
+        },
+        {
+          "start": 11298.19999999553,
+          "ms": 90,
+          "operation": "journal:clear"
+        },
+        {
+          "start": 11390.60000000149,
+          "ms": 165,
+          "operation": "journal:sort"
+        },
+        {
+          "start": 11658,
+          "ms": 214,
+          "operation": "bestiary"
+        },
+        {
+          "start": 11975.29999999702,
+          "ms": 97,
+          "operation": "bestiary:card"
+        },
+        {
+          "start": 12091,
+          "ms": 99,
+          "operation": "bestiary:close"
+        },
+        {
+          "start": 12395.89999999851,
+          "ms": 68,
+          "operation": "bestiary:leave"
+        },
+        {
+          "start": 12485.60000000149,
+          "ms": 81,
+          "operation": "bestiary:leave"
+        },
+        {
+          "start": 12567,
+          "ms": 75,
+          "operation": "bestiary:return"
+        },
+        {
+          "start": 12773,
+          "ms": 127,
+          "operation": "bestiary:clear"
+        },
+        {
+          "start": 12998.60000000149,
+          "ms": 99,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 13098.39999999851,
+          "ms": 174,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 13295.69999999553,
+          "ms": 192,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 13496.39999999851,
+          "ms": 165,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 13664.10000000149,
+          "ms": 80,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 13761.60000000149,
+          "ms": 112,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 13894.19999999553,
+          "ms": 109,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 14047,
+          "ms": 112,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 14174.19999999553,
+          "ms": 90,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 14280.5,
+          "ms": 108,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 14398.69999999553,
+          "ms": 161,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 14600.10000000149,
+          "ms": 148,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 14757,
+          "ms": 193,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 14960.89999999851,
+          "ms": 217,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 15185,
+          "ms": 201,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 15396.79999999702,
+          "ms": 194,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 15600.69999999553,
+          "ms": 69,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 15669.89999999851,
+          "ms": 369,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 16044.5,
+          "ms": 116,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 16169,
+          "ms": 105,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 16293.39999999851,
+          "ms": 100,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 16441.79999999702,
+          "ms": 122,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 16578.19999999553,
+          "ms": 103,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 16682,
+          "ms": 85,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 16785.39999999851,
+          "ms": 117,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 16950.89999999851,
+          "ms": 125,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 17088.89999999851,
+          "ms": 93,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 17191.89999999851,
+          "ms": 96,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 17290.89999999851,
+          "ms": 68,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 17364.89999999851,
+          "ms": 117,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 17492.5,
+          "ms": 168,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 17696.19999999553,
+          "ms": 100,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 17796.69999999553,
+          "ms": 156,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 17985.10000000149,
+          "ms": 173,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 18286.29999999702,
+          "ms": 70,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 18390.19999999553,
+          "ms": 261,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 18667.19999999553,
+          "ms": 72,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 18855.5,
+          "ms": 121,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 19060.39999999851,
+          "ms": 79,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 19160.19999999553,
+          "ms": 186,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 19401.79999999702,
+          "ms": 51,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 19453.79999999702,
+          "ms": 104,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 19603.79999999702,
+          "ms": 52,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 19760.10000000149,
+          "ms": 110,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 19904.10000000149,
+          "ms": 70,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 20001.19999999553,
+          "ms": 141,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 20260.29999999702,
+          "ms": 141,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 20495.79999999702,
+          "ms": 79,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 20601.60000000149,
+          "ms": 148,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 20798.10000000149,
+          "ms": 61,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 20859.89999999851,
+          "ms": 233,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 21095,
+          "ms": 57,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 21157.79999999702,
+          "ms": 85,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 21260.60000000149,
+          "ms": 133,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 21398.60000000149,
+          "ms": 52,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 21481.19999999553,
+          "ms": 105,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 21586.60000000149,
+          "ms": 77,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 21688.60000000149,
+          "ms": 165,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 21881.29999999702,
+          "ms": 72,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 21979.89999999851,
+          "ms": 109,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 22702.89999999851,
+          "ms": 54,
+          "operation": "field:auto"
+        },
+        {
+          "start": 23104.39999999851,
+          "ms": 55,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 23445.60000000149,
+          "ms": 105,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 24449.69999999553,
+          "ms": 105,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 25448,
+          "ms": 106,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 26446,
+          "ms": 126,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 28447.10000000149,
+          "ms": 104,
+          "operation": "startup/idle"
+        }
+      ],
+      "heaps": [
+        8065260,
+        10961800,
+        10071724,
+        10594564,
+        9156424
+      ],
+      "snapshots": [
+        {
+          "money": 1179,
+          "knowledge": 1786,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4180,
+          "published": 0
+        },
+        {
+          "money": 1179,
+          "knowledge": 1810,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4184,
+          "published": 0
+        },
+        {
+          "money": 1179,
+          "knowledge": 1876,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4194,
+          "published": 0
+        },
+        {
+          "money": 1179,
+          "knowledge": 1902,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4198,
+          "published": 0
+        },
+        {
+          "money": 1179,
+          "knowledge": 1936,
+          "prestige": 0,
+          "currentRegion": "HX-01-09",
+          "sightings": 4203,
+          "published": 0
+        }
+      ],
+      "motion": {
+        "start": 22159.69999999553,
+        "end": 22669,
+        "moved": 1152,
+        "axis": "scrollLeft",
+        "element": "journalSpeciesRail",
+        "frameGapsMs": [
+          16.700000000000728,
+          16.69999999999709,
+          16.600000000002183,
+          33.39999999999782,
+          16.700000000000728,
+          16.600000000002183,
+          16.69999999999709,
+          16.700000000000728,
+          33.20000000000073,
+          16.700000000000728,
+          16.700000000000728,
+          16.599999999998545,
+          16.700000000000728,
+          33.39999999999782,
+          16.600000000002183,
+          33.29999999999927,
+          50,
+          16.799999999999272,
+          16.600000000002183,
+          16.599999999998545,
+          16.700000000000728,
+          33.39999999999782,
+          16.600000000002183,
+          16.700000000000728
+        ]
+      },
+      "pageTurnsMs": [
+        95.30000000447035,
+        152.39999999850988,
+        178.60000000149012,
+        148.29999999701977,
+        87.60000000149012,
+        88.20000000298023,
+        90.5,
+        71.80000000447035,
+        84.70000000298023,
+        99.60000000149012,
+        50.399999998509884,
+        132.19999999552965,
+        193.5,
+        173.80000000447035,
+        178,
+        295.5,
+        95.89999999850988,
+        85.59999999403954,
+        81.10000000149012,
+        62.70000000298023,
+        81.80000000447035,
+        99.39999999850988,
+        108.59999999403954,
+        77.29999999701977,
+        77.79999999701977,
+        56.399999998509884,
+        101.29999999701977,
+        99,
+        96.60000000149012,
+        120.29999999701977,
+        29
+      ],
+      "extraChecks": null,
+      "cpu": null
+    }
+  ]
+}

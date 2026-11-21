@@ -1,0 +1,4090 @@
+{
+  "chromium": "156.0.8078.79",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "cpuSlowdown": 4,
+  "runs": [
+    {
+      "version": "base",
+      "stage": "advanced",
+      "helpers": 10,
+      "timings": [
+        {
+          "label": "cold:field",
+          "sync": 10.5,
+          "paint": 44.400000005960464,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "cold:journal",
+          "sync": 281.6000000014901,
+          "paint": 799.1000000014901,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "cold:bestiary",
+          "sync": 145.79999999701977,
+          "paint": 1168.0999999940395,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "cold:atlas",
+          "sync": 291.79999999701977,
+          "paint": 418.29999999701977,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "cold:research",
+          "sync": 467.70000000298023,
+          "paint": 548.2000000029802,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "cold:expeditions",
+          "sync": 7.800000004470348,
+          "paint": 64,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "cold:objects",
+          "sync": 61.20000000298023,
+          "paint": 174.20000000298023,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "cold:museum",
+          "sync": 111.60000000149012,
+          "paint": 314.1000000014901,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "cold:society",
+          "sync": 41,
+          "paint": 129.30000000447035,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "warm:field",
+          "sync": 2,
+          "paint": 94.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "warm:journal",
+          "sync": 207.80000000447035,
+          "paint": 287.1000000014901,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "warm:bestiary",
+          "sync": 76.20000000298023,
+          "paint": 406.70000000298023,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "warm:atlas",
+          "sync": 95,
+          "paint": 310.1000000014901,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "warm:research",
+          "sync": 77.09999999403954,
+          "paint": 109.59999999403954,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "warm:expeditions",
+          "sync": 48.70000000298023,
+          "paint": 85.60000000149012,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "warm:objects",
+          "sync": 7.299999997019768,
+          "paint": 97.29999999701977,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "warm:museum",
+          "sync": 75.39999999850988,
+          "paint": 97.70000000298023,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "warm:society",
+          "sync": 64.89999999850988,
+          "paint": 179,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "research",
+          "sync": 68.19999999552965,
+          "paint": 95.09999999403954,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "research:filter",
+          "sync": 77.20000000298023,
+          "paint": 95.30000000447035,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "museum",
+          "sync": 37.399999998509884,
+          "paint": 114.10000000149012,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:samples",
+          "sync": 183.69999999552965,
+          "paint": 392.1000000014901,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:filter",
+          "sync": 4.5,
+          "paint": 24.200000002980232,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "camp",
+          "sync": 14.100000001490116,
+          "paint": 35.80000000447035,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "expeditions",
+          "sync": 99.09999999403954,
+          "paint": 154.29999999701977,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "camp:back",
+          "sync": 12.300000004470348,
+          "paint": 36.70000000298023,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "commerce",
+          "sync": 59.5,
+          "paint": 85.89999999850988,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile:menu",
+          "sync": 11.100000001490116,
+          "paint": 75.70000000298023,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile",
+          "sync": 25.5,
+          "paint": 38.29999999701977,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile:close",
+          "sync": 5.299999997019768,
+          "paint": 58.5,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "museum",
+          "sync": 62.29999999701977,
+          "paint": 418.8999999985099,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:exhibitions",
+          "sync": 107.40000000596046,
+          "paint": 192.60000000149012,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:samples",
+          "sync": 100.20000000298023,
+          "paint": 185.89999999850988,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:fossils",
+          "sync": 198.60000000149012,
+          "paint": 251.39999999850988,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:relicts",
+          "sync": 95.5,
+          "paint": 180.20000000298023,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:artifacts",
+          "sync": 93,
+          "paint": 167.5,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "society",
+          "sync": 46,
+          "paint": 132.79999999701977,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "achievements",
+          "sync": 94.09999999403954,
+          "paint": 216.79999999701977,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "inventory",
+          "sync": 16.100000001490116,
+          "paint": 109.89999999850988,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "inventory:workshop",
+          "sync": 50.80000000447035,
+          "paint": 145.20000000298023,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "inventory:search",
+          "sync": 88.39999999850988,
+          "paint": 370.5,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "atlas",
+          "sync": 97.29999999701977,
+          "paint": 130,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:center",
+          "sync": 72.40000000596046,
+          "paint": 162.20000000298023,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:keyboard",
+          "sync": 91,
+          "paint": 120.20000000298023,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:travel",
+          "sync": 108.19999999552965,
+          "paint": 212.59999999403954,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "field",
+          "sync": 9.900000005960464,
+          "paint": 72.20000000298023,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "field:manual",
+          "sync": 42.69999999552965,
+          "paint": 99.39999999850988,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal",
+          "sync": 130.69999999552965,
+          "paint": 403.1000000014901,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:entry",
+          "sync": 10.699999995529652,
+          "paint": 109,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:search",
+          "sync": 4.899999998509884,
+          "paint": 67.79999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:leave",
+          "sync": 16.900000005960464,
+          "paint": 111.60000000149012,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal:return",
+          "sync": 37.70000000298023,
+          "paint": 125.39999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:clear",
+          "sync": 3.7000000029802322,
+          "paint": 208.70000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:sort",
+          "sync": 213.29999999701977,
+          "paint": 417.8999999985099,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary",
+          "sync": 70.20000000298023,
+          "paint": 477.70000000298023,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "journal:resume",
+          "sync": 112,
+          "paint": 195,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:leave",
+          "sync": 25.100000001490116,
+          "paint": 55.30000000447035,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal:reopen",
+          "sync": 95.80000000447035,
+          "paint": 177,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:resume",
+          "sync": 60.70000000298023,
+          "paint": 198,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:card",
+          "sync": 136.79999999701977,
+          "paint": 336.6000000014901,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:close",
+          "sync": 266.19999999552965,
+          "paint": 485.69999999552965,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:filter",
+          "sync": 24.899999998509884,
+          "paint": 81.10000000149012,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:leave",
+          "sync": 9.899999998509884,
+          "paint": 102.89999999850988,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:return",
+          "sync": 21.100000001490116,
+          "paint": 130.60000000149012,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:clear",
+          "sync": 24.69999999552965,
+          "paint": 295.8999999985099,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 27.799999997019768,
+          "paint": 100.29999999701977,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 195.79999999701977,
+          "paint": 340.79999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 56.899999998509884,
+          "paint": 101.10000000149012,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 259.79999999701977,
+          "paint": 345.8999999985099,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 13.400000005960464,
+          "paint": 50.400000005960464,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 157,
+          "paint": 201.09999999403954,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 47.79999999701977,
+          "paint": 81.20000000298023,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 121.29999999701977,
+          "paint": 272.69999999552965,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 11.800000004470348,
+          "paint": 45,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 105.40000000596046,
+          "paint": 172.80000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 11.699999995529652,
+          "paint": 71.09999999403954,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 106.39999999850988,
+          "paint": 153.29999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 44.399999998509884,
+          "paint": 84.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 178.69999999552965,
+          "paint": 219.10000000149012,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 49,
+          "paint": 102.09999999403954,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 143.90000000596046,
+          "paint": 184.30000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 10.799999997019768,
+          "paint": 104.09999999403954,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 308.20000000298023,
+          "paint": 377.8999999985099,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 16.5,
+          "paint": 91.09999999403954,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 102.10000000149012,
+          "paint": 140.30000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 1.8999999985098839,
+          "paint": 184.89999999850988,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 113.70000000298023,
+          "paint": 254.40000000596046,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 13.400000005960464,
+          "paint": 62.30000000447035,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 159.10000000149012,
+          "paint": 356.3999999985099,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:auto",
+          "sync": 79.40000000596046,
+          "paint": 355.90000000596046,
+          "module": "field",
+          "scroll": 0
+        }
+      ],
+      "pages": 32,
+      "slots": 1000,
+      "writes": 112,
+      "panelReplacements": 108,
+      "childChanges": 405,
+      "startupMs": 4717,
+      "longTasks": [
+        {
+          "start": 723.7000000029802,
+          "ms": 59,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 786,
+          "ms": 88,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 1107.8000000044703,
+          "ms": 387,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 1796.2000000029802,
+          "ms": 94,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 2025.8999999985099,
+          "ms": 66,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 2111.10000000149,
+          "ms": 66,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 2307.7000000029802,
+          "ms": 68,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 2436.7000000029802,
+          "ms": 1798,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 4234.70000000298,
+          "ms": 173,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 4705.39999999851,
+          "ms": 67,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 4800.60000000149,
+          "ms": 83,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 4886,
+          "ms": 88,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 5993.60000000149,
+          "ms": 206,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 6327.20000000298,
+          "ms": 572,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 6932.5,
+          "ms": 65,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 7029.89999999851,
+          "ms": 94,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 7125.30000000447,
+          "ms": 688,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 7822.30000000447,
+          "ms": 104,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 7933.70000000298,
+          "ms": 162,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 8113.80000000447,
+          "ms": 184,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 8301.80000000447,
+          "ms": 326,
+          "operation": "cold:atlas"
+        },
+        {
+          "start": 8726.30000000447,
+          "ms": 482,
+          "operation": "cold:research"
+        },
+        {
+          "start": 9340.70000000298,
+          "ms": 144,
+          "operation": "cold:objects"
+        },
+        {
+          "start": 9515,
+          "ms": 183,
+          "operation": "cold:museum"
+        },
+        {
+          "start": 9700.70000000298,
+          "ms": 108,
+          "operation": "cold:museum"
+        },
+        {
+          "start": 9829.20000000298,
+          "ms": 150,
+          "operation": "cold:society"
+        },
+        {
+          "start": 10036.20000000298,
+          "ms": 63,
+          "operation": "warm:field"
+        },
+        {
+          "start": 10113.70000000298,
+          "ms": 269,
+          "operation": "warm:journal"
+        },
+        {
+          "start": 10403.30000000447,
+          "ms": 285,
+          "operation": "warm:bestiary"
+        },
+        {
+          "start": 10706.5,
+          "ms": 103,
+          "operation": "warm:bestiary"
+        },
+        {
+          "start": 10809.89999999851,
+          "ms": 118,
+          "operation": "warm:atlas"
+        },
+        {
+          "start": 10941.39999999851,
+          "ms": 55,
+          "operation": "warm:atlas"
+        },
+        {
+          "start": 11001.10000000149,
+          "ms": 119,
+          "operation": "warm:atlas"
+        },
+        {
+          "start": 11124.10000000149,
+          "ms": 94,
+          "operation": "warm:research"
+        },
+        {
+          "start": 11236.30000000447,
+          "ms": 71,
+          "operation": "warm:expeditions"
+        },
+        {
+          "start": 11322,
+          "ms": 69,
+          "operation": "warm:objects"
+        },
+        {
+          "start": 11419,
+          "ms": 91,
+          "operation": "warm:museum"
+        },
+        {
+          "start": 11517.10000000149,
+          "ms": 80,
+          "operation": "warm:society"
+        },
+        {
+          "start": 11597.39999999851,
+          "ms": 75,
+          "operation": "warm:society"
+        },
+        {
+          "start": 11704.80000000447,
+          "ms": 71,
+          "operation": "research"
+        },
+        {
+          "start": 11801.80000000447,
+          "ms": 83,
+          "operation": "research:filter"
+        },
+        {
+          "start": 11896.89999999851,
+          "ms": 88,
+          "operation": "museum"
+        },
+        {
+          "start": 12011.60000000149,
+          "ms": 223,
+          "operation": "museum:samples"
+        },
+        {
+          "start": 12322,
+          "ms": 58,
+          "operation": "museum:samples"
+        },
+        {
+          "start": 12519.30000000447,
+          "ms": 106,
+          "operation": "expeditions"
+        },
+        {
+          "start": 12715.89999999851,
+          "ms": 64,
+          "operation": "commerce"
+        },
+        {
+          "start": 12975.10000000149,
+          "ms": 322,
+          "operation": "museum"
+        },
+        {
+          "start": 13394.5,
+          "ms": 132,
+          "operation": "museum:exhibitions"
+        },
+        {
+          "start": 13594,
+          "ms": 130,
+          "operation": "museum:samples"
+        },
+        {
+          "start": 13783.10000000149,
+          "ms": 235,
+          "operation": "museum:fossils"
+        },
+        {
+          "start": 14035.39999999851,
+          "ms": 158,
+          "operation": "museum:relicts"
+        },
+        {
+          "start": 14215.70000000298,
+          "ms": 107,
+          "operation": "museum:artifacts"
+        },
+        {
+          "start": 14381.30000000447,
+          "ms": 108,
+          "operation": "society"
+        },
+        {
+          "start": 14515.89999999851,
+          "ms": 167,
+          "operation": "achievements"
+        },
+        {
+          "start": 14736.5,
+          "ms": 77,
+          "operation": "inventory"
+        },
+        {
+          "start": 14881.10000000149,
+          "ms": 117,
+          "operation": "inventory:workshop"
+        },
+        {
+          "start": 15027.60000000149,
+          "ms": 107,
+          "operation": "inventory:search"
+        },
+        {
+          "start": 15185.80000000447,
+          "ms": 115,
+          "operation": "inventory:search"
+        },
+        {
+          "start": 15301.70000000298,
+          "ms": 76,
+          "operation": "inventory:search"
+        },
+        {
+          "start": 15397.20000000298,
+          "ms": 117,
+          "operation": "atlas"
+        },
+        {
+          "start": 15528.10000000149,
+          "ms": 79,
+          "operation": "atlas:center"
+        },
+        {
+          "start": 15690.10000000149,
+          "ms": 108,
+          "operation": "atlas:keyboard"
+        },
+        {
+          "start": 15810.80000000447,
+          "ms": 174,
+          "operation": "atlas:travel"
+        },
+        {
+          "start": 16022.89999999851,
+          "ms": 65,
+          "operation": "field"
+        },
+        {
+          "start": 16095.20000000298,
+          "ms": 85,
+          "operation": "field:manual"
+        },
+        {
+          "start": 16195,
+          "ms": 195,
+          "operation": "journal"
+        },
+        {
+          "start": 16412.39999999851,
+          "ms": 70,
+          "operation": "journal"
+        },
+        {
+          "start": 16596.39999999851,
+          "ms": 81,
+          "operation": "journal:entry"
+        },
+        {
+          "start": 16831.5,
+          "ms": 51,
+          "operation": "field:leave"
+        },
+        {
+          "start": 16886.89999999851,
+          "ms": 88,
+          "operation": "journal:return"
+        },
+        {
+          "start": 17211.20000000298,
+          "ms": 125,
+          "operation": "journal:clear"
+        },
+        {
+          "start": 17402.5,
+          "ms": 283,
+          "operation": "journal:sort"
+        },
+        {
+          "start": 17726.5,
+          "ms": 93,
+          "operation": "journal:sort"
+        },
+        {
+          "start": 17820.60000000149,
+          "ms": 284,
+          "operation": "bestiary"
+        },
+        {
+          "start": 18322.70000000298,
+          "ms": 114,
+          "operation": "journal:resume"
+        },
+        {
+          "start": 18436.80000000447,
+          "ms": 62,
+          "operation": "journal:resume"
+        },
+        {
+          "start": 18581.10000000149,
+          "ms": 92,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 18729.39999999851,
+          "ms": 74,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 19034.70000000298,
+          "ms": 149,
+          "operation": "journal:reopen"
+        },
+        {
+          "start": 19215.60000000149,
+          "ms": 67,
+          "operation": "bestiary:resume"
+        },
+        {
+          "start": 19283.39999999851,
+          "ms": 110,
+          "operation": "bestiary:resume"
+        },
+        {
+          "start": 19550,
+          "ms": 163,
+          "operation": "bestiary:card"
+        },
+        {
+          "start": 19713.89999999851,
+          "ms": 90,
+          "operation": "bestiary:card"
+        },
+        {
+          "start": 19837.20000000298,
+          "ms": 486,
+          "operation": "bestiary:close"
+        },
+        {
+          "start": 20334.10000000149,
+          "ms": 56,
+          "operation": "bestiary:close"
+        },
+        {
+          "start": 20582.80000000447,
+          "ms": 52,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 20737.39999999851,
+          "ms": 50,
+          "operation": "bestiary:filter"
+        },
+        {
+          "start": 20894.70000000298,
+          "ms": 88,
+          "operation": "bestiary:return"
+        },
+        {
+          "start": 21117.30000000447,
+          "ms": 218,
+          "operation": "bestiary:clear"
+        },
+        {
+          "start": 21434.39999999851,
+          "ms": 564,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 21998.5,
+          "ms": 274,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 22309.5,
+          "ms": 107,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 22417.80000000447,
+          "ms": 174,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 22632.70000000298,
+          "ms": 181,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 22814.89999999851,
+          "ms": 86,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 22919.80000000447,
+          "ms": 189,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 23129,
+          "ms": 158,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 23306.5,
+          "ms": 119,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 23437.60000000149,
+          "ms": 290,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 23733.30000000447,
+          "ms": 56,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 23792.89999999851,
+          "ms": 223,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 24017.89999999851,
+          "ms": 93,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 24128.60000000149,
+          "ms": 200,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 24379.30000000447,
+          "ms": 156,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 24581.80000000447,
+          "ms": 198,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 24816.30000000447,
+          "ms": 215,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 25090.10000000149,
+          "ms": 340,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 25434.60000000149,
+          "ms": 51,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 25497.5,
+          "ms": 475,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 26004.60000000149,
+          "ms": 105,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 26110,
+          "ms": 314,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 26482.20000000298,
+          "ms": 121,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 26609.70000000298,
+          "ms": 125,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 26736.20000000298,
+          "ms": 82,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 26824.5,
+          "ms": 206,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 27075.10000000149,
+          "ms": 107,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 27199.30000000447,
+          "ms": 131,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 27333,
+          "ms": 104,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 27489.60000000149,
+          "ms": 129,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 27627.60000000149,
+          "ms": 154,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 27897.5,
+          "ms": 181,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 28081.89999999851,
+          "ms": 134,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 28228.89999999851,
+          "ms": 280,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 28511.30000000447,
+          "ms": 175,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 28701.10000000149,
+          "ms": 117,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 28819.5,
+          "ms": 84,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 28910.80000000447,
+          "ms": 121,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 29132.60000000149,
+          "ms": 54,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 29327.39999999851,
+          "ms": 52,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 29387.89999999851,
+          "ms": 225,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 29622.39999999851,
+          "ms": 50,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 29673.5,
+          "ms": 50,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 29723.80000000447,
+          "ms": 91,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 29830.20000000298,
+          "ms": 288,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 30227.20000000298,
+          "ms": 180,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 30428.89999999851,
+          "ms": 69,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 30510.70000000298,
+          "ms": 184,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 30706.5,
+          "ms": 69,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 30830.80000000447,
+          "ms": 151,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 31074.89999999851,
+          "ms": 123,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 31228.10000000149,
+          "ms": 61,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 31312.70000000298,
+          "ms": 203,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 31532,
+          "ms": 68,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 31634.39999999851,
+          "ms": 165,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 31819.10000000149,
+          "ms": 72,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 31920,
+          "ms": 361,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 32394.80000000447,
+          "ms": 121,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 32535.30000000447,
+          "ms": 52,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 32589.39999999851,
+          "ms": 109,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 32718.89999999851,
+          "ms": 196,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 33034.89999999851,
+          "ms": 237,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 33432.89999999851,
+          "ms": 50,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 33588.5,
+          "ms": 104,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 33819.39999999851,
+          "ms": 64,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 34023.30000000447,
+          "ms": 158,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 34522.30000000447,
+          "ms": 85,
+          "operation": "field:auto"
+        },
+        {
+          "start": 34607.89999999851,
+          "ms": 82,
+          "operation": "field:auto"
+        },
+        {
+          "start": 34694.20000000298,
+          "ms": 182,
+          "operation": "field:auto"
+        },
+        {
+          "start": 35428.10000000149,
+          "ms": 92,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 35577.39999999851,
+          "ms": 156,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 35733.5,
+          "ms": 52,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 36580,
+          "ms": 102,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 37576.70000000298,
+          "ms": 63,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 38576.80000000447,
+          "ms": 54,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 39575.89999999851,
+          "ms": 105,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 40247.10000000149,
+          "ms": 56,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 40574.39999999851,
+          "ms": 136,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 40919.5,
+          "ms": 100,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 41573.60000000149,
+          "ms": 149,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 41722.89999999851,
+          "ms": 52,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 42577.39999999851,
+          "ms": 148,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 44577.20000000298,
+          "ms": 52,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 45576.70000000298,
+          "ms": 117,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 46574.60000000149,
+          "ms": 128,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 47582,
+          "ms": 52,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 48576.20000000298,
+          "ms": 50,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 49928.5,
+          "ms": 51,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 50575.70000000298,
+          "ms": 157,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 51573.20000000298,
+          "ms": 99,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 52577.10000000149,
+          "ms": 117,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 54575.39999999851,
+          "ms": 105,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 55578.39999999851,
+          "ms": 126,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 56576.10000000149,
+          "ms": 107,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 56717.5,
+          "ms": 54,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 58576.39999999851,
+          "ms": 56,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 59578.89999999851,
+          "ms": 104,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 60576.89999999851,
+          "ms": 101,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 61573.80000000447,
+          "ms": 61,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 62587.10000000149,
+          "ms": 110,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 62820.80000000447,
+          "ms": 170,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 63024.80000000447,
+          "ms": 51,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 63581.30000000447,
+          "ms": 222,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 64580.89999999851,
+          "ms": 115,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 65577.5,
+          "ms": 108,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 66579.70000000298,
+          "ms": 137,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 67577.89999999851,
+          "ms": 129,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 67707.80000000447,
+          "ms": 76,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 68573.70000000298,
+          "ms": 231,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 68805.30000000447,
+          "ms": 81,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 69573.20000000298,
+          "ms": 215,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 69788.70000000298,
+          "ms": 86,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 70576.80000000447,
+          "ms": 199,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 71582.5,
+          "ms": 243,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 72582.89999999851,
+          "ms": 410,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 73577.30000000447,
+          "ms": 246,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 73824,
+          "ms": 54,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 75573.10000000149,
+          "ms": 124,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 75783.89999999851,
+          "ms": 102,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 77573.39999999851,
+          "ms": 149,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 78574.39999999851,
+          "ms": 141,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 79576.89999999851,
+          "ms": 51,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 79875.39999999851,
+          "ms": 143,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 80019.5,
+          "ms": 53,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 80592.20000000298,
+          "ms": 389,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 81578.39999999851,
+          "ms": 60,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 82009.60000000149,
+          "ms": 111,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 82579.10000000149,
+          "ms": 54,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 85576.80000000447,
+          "ms": 57,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 86384.89999999851,
+          "ms": 110,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 86576.5,
+          "ms": 100,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 87577.80000000447,
+          "ms": 56,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 88575.70000000298,
+          "ms": 60,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 88742,
+          "ms": 85,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 89597.70000000298,
+          "ms": 296,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 90328,
+          "ms": 68,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 90396.60000000149,
+          "ms": 120,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 90576.70000000298,
+          "ms": 223,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 91573.39999999851,
+          "ms": 66,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 92534.5,
+          "ms": 68,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 92609.60000000149,
+          "ms": 83,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 93575.30000000447,
+          "ms": 54,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 94884.70000000298,
+          "ms": 341,
+          "operation": "startup/idle"
+        }
+      ],
+      "heaps": [
+        7677652,
+        8581392,
+        11587792,
+        11915400,
+        10787564
+      ],
+      "snapshots": [
+        {
+          "money": 18628.777759999997,
+          "knowledge": 31601,
+          "prestige": 23,
+          "currentRegion": "HX-02-11",
+          "sightings": 75332,
+          "published": 23
+        },
+        {
+          "money": 18631.4672,
+          "knowledge": 31639,
+          "prestige": 23,
+          "currentRegion": "HX-02-11",
+          "sightings": 75340,
+          "published": 23
+        },
+        {
+          "money": 18639.733759999992,
+          "knowledge": 31747,
+          "prestige": 23,
+          "currentRegion": "HX-01-09",
+          "sightings": 75360,
+          "published": 23
+        },
+        {
+          "money": 18642.02287999999,
+          "knowledge": 31773,
+          "prestige": 23,
+          "currentRegion": "HX-01-09",
+          "sightings": 75365,
+          "published": 23
+        },
+        {
+          "money": 18736.296639999957,
+          "knowledge": 32204,
+          "prestige": 23,
+          "currentRegion": "HX-01-09",
+          "sightings": 75461,
+          "published": 23
+        }
+      ],
+      "motion": {
+        "start": 33420.10000000149,
+        "end": 34491.89999999851,
+        "moved": 1152,
+        "axis": "scrollLeft",
+        "element": "journalSpeciesRail",
+        "frameGapsMs": [
+          16.69999999999709,
+          33.30000000000291,
+          33.400000000001455,
+          16.599999999998545,
+          16.69999999999709,
+          183.3000000000029,
+          83.29999999999563,
+          33.30000000000291,
+          83.40000000000146,
+          83.29999999999563,
+          133.3000000000029,
+          83.40000000000146,
+          66.69999999999709,
+          16.700000000004366,
+          16.599999999998545,
+          16.599999999998545,
+          33.400000000001455,
+          16.599999999998545,
+          16.69999999999709,
+          16.700000000004366,
+          16.599999999998545,
+          33.400000000001455,
+          16.599999999998545
+        ]
+      },
+      "pageTurnsMs": [
+        552.8999999985099,
+        177.89999999850988,
+        62.70000000298023,
+        160.39999999850988,
+        166.10000000149012,
+        108.79999999701977,
+        96.10000000149012,
+        93.29999999701977,
+        194,
+        168,
+        129.5,
+        135,
+        184.70000000298023,
+        307.8999999985099,
+        202.60000000149012,
+        272.8999999985099,
+        105.5,
+        93.80000000447035,
+        166.69999999552965,
+        49.29999999701977,
+        109.19999999552965,
+        83.60000000149012,
+        106.10000000149012,
+        90.70000000298023,
+        113.29999999701977,
+        118.69999999552965,
+        251.90000000596046,
+        112.69999999552965,
+        100.70000000298023,
+        89.79999999701977,
+        34.79999999701977
+      ],
+      "extraChecks": {
+        "completedMonograph": true,
+        "hasMultiple": true
+      },
+      "cpu": [
+        {
+          "name": "bindPanel · app.js?v=4.9.6:5120",
+          "ms": 2805.862000000004
+        },
+        {
+          "name": "renderPanel · app.js?v=4.9.6:3094",
+          "ms": 2743.9719999999993
+        },
+        {
+          "name": "updateFieldOutput · app.js?v=4.9.6:3035",
+          "ms": 2055.385999999997
+        },
+        {
+          "name": "metrics · achievements-v3360.js:49",
+          "ms": 1468.385999999998
+        },
+        {
+          "name": "(anónima) · achievements-v3360.js:53",
+          "ms": 919.0610000000007
+        },
+        {
+          "name": "(anónima) · achievements-v3360.js:59",
+          "ms": 694.1779999999997
+        },
+        {
+          "name": "(anónima) · achievements-v3360.js:51",
+          "ms": 569.776
+        },
+        {
+          "name": "metrics · commissions-v3370.js:31",
+          "ms": 447.96200000000005
+        },
+        {
+          "name": "persist · app.js?v=4.9.6:2393",
+          "ms": 333.983
+        },
+        {
+          "name": "(anónima) · achievements-v3360.js:54",
+          "ms": 316.42099999999994
+        },
+        {
+          "name": "fitScale · atlas-map-v3211.js?v=4.9.6:5",
+          "ms": 284.788
+        },
+        {
+          "name": "progress · museum-curation-v3380.js:23",
+          "ms": 279.279
+        },
+        {
+          "name": "(anónima) · museum-curation-v3380.js:25",
+          "ms": 264.00900000000007
+        },
+        {
+          "name": "(anónima) · commissions-v3370.js:34",
+          "ms": 172.81999999999994
+        },
+        {
+          "name": "show · bestiary-ui-v3260.js?v=4.9.6:33",
+          "ms": 130.508
+        },
+        {
+          "name": "close · bestiary-ui-v3260.js?v=4.9.6:24",
+          "ms": 104.93799999999997
+        },
+        {
+          "name": "commissionFlush3370 · app.js?v=4.9.6:2232",
+          "ms": 104.276
+        },
+        {
+          "name": "bestiaryQuery3260 · app.js?v=4.9.6:4992",
+          "ms": 83.07500000000002
+        },
+        {
+          "name": "refresh · museum-curation-ui-v3380.js:13",
+          "ms": 69.144
+        },
+        {
+          "name": "replaceFieldEncounter · app.js?v=4.9.6:3019",
+          "ms": 67.23899999999999
+        },
+        {
+          "name": "refresh · commissions-ui-v3370.js:19",
+          "ms": 66.965
+        },
+        {
+          "name": "stage · app.js?v=4.9.6:2569",
+          "ms": 66.768
+        },
+        {
+          "name": "animalMarkup · app.js?v=4.9.6:1890",
+          "ms": 66.33
+        },
+        {
+          "name": "identifiedCount · app.js?v=4.9.6:2591",
+          "ms": 65.184
+        },
+        {
+          "name": "(anónima) · app.js?v=4.9.6:2748",
+          "ms": 62.31099999999999
+        },
+        {
+          "name": "setCounterText · app.js?v=4.9.6:3002",
+          "ms": 58.959999999999994
+        },
+        {
+          "name": "(anónima) · app.js?v=4.9.6:4994",
+          "ms": 58.003
+        },
+        {
+          "name": "renderPanel · app.js?v=4.9.6:7442",
+          "ms": 56.485
+        },
+        {
+          "name": "uxSnapshot3410 · app.js?v=4.9.6:7456",
+          "ms": 54.856
+        },
+        {
+          "name": "(anónima) · museum-curation-ui-v3380.js:20",
+          "ms": 54.243
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "stage": "advanced",
+      "helpers": 10,
+      "timings": [
+        {
+          "label": "cold:field",
+          "sync": 9.699999995529652,
+          "paint": 70.19999999552965,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "cold:journal",
+          "sync": 154.20000000298023,
+          "paint": 453.30000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "cold:bestiary",
+          "sync": 91,
+          "paint": 792.3000000044703,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "cold:atlas",
+          "sync": 193.5,
+          "paint": 271.19999999552965,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "cold:research",
+          "sync": 97.70000000298023,
+          "paint": 133.5,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "cold:expeditions",
+          "sync": 47.5,
+          "paint": 459.29999999701977,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "cold:objects",
+          "sync": 30.299999997019768,
+          "paint": 132.10000000149012,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "cold:museum",
+          "sync": 106.70000000298023,
+          "paint": 203.10000000149012,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "cold:society",
+          "sync": 115.29999999701977,
+          "paint": 262,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "warm:field",
+          "sync": 19.5,
+          "paint": 216.70000000298023,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "warm:journal",
+          "sync": 663,
+          "paint": 793.8999999985099,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "warm:bestiary",
+          "sync": 170,
+          "paint": 578.7000000029802,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "warm:atlas",
+          "sync": 100.80000000447035,
+          "paint": 173.30000000447035,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "warm:research",
+          "sync": 33.70000000298023,
+          "paint": 105.70000000298023,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "warm:expeditions",
+          "sync": 13.700000002980232,
+          "paint": 46.600000001490116,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "warm:objects",
+          "sync": 43.100000001490116,
+          "paint": 200.89999999850988,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "warm:museum",
+          "sync": 74.19999999552965,
+          "paint": 152.89999999850988,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "warm:society",
+          "sync": 46.100000001490116,
+          "paint": 118.80000000447035,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "research",
+          "sync": 71.10000000149012,
+          "paint": 93.20000000298023,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "research:filter",
+          "sync": 65.19999999552965,
+          "paint": 94.89999999850988,
+          "module": "research",
+          "scroll": 0
+        },
+        {
+          "label": "museum",
+          "sync": 29.19999999552965,
+          "paint": 268.5,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:samples",
+          "sync": 241.59999999403954,
+          "paint": 443.69999999552965,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:filter",
+          "sync": 1.2000000029802322,
+          "paint": 49.899999998509884,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "camp",
+          "sync": 10.099999994039536,
+          "paint": 32.899999998509884,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "expeditions",
+          "sync": 93.5,
+          "paint": 154.89999999850988,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "camp:back",
+          "sync": 13.799999997019768,
+          "paint": 37.899999998509884,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "commerce",
+          "sync": 12.600000001490116,
+          "paint": 75.20000000298023,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile:menu",
+          "sync": 9.800000004470348,
+          "paint": 24.100000001490116,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile",
+          "sync": 63.5,
+          "paint": 85.5,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "profile:close",
+          "sync": 4.5,
+          "paint": 31,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "museum",
+          "sync": 138.5,
+          "paint": 455.6000000014901,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:exhibitions",
+          "sync": 92.39999999850988,
+          "paint": 124,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:samples",
+          "sync": 292.6000000014901,
+          "paint": 496.80000000447035,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:fossils",
+          "sync": 292.30000000447035,
+          "paint": 454.70000000298023,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:relicts",
+          "sync": 50.19999999552965,
+          "paint": 122.5,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "museum:artifacts",
+          "sync": 195.29999999701977,
+          "paint": 270.19999999552965,
+          "module": "museum",
+          "scroll": 0
+        },
+        {
+          "label": "society",
+          "sync": 33.80000000447035,
+          "paint": 99.5,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "achievements",
+          "sync": 24.899999998509884,
+          "paint": 110.10000000149012,
+          "module": "society",
+          "scroll": 0
+        },
+        {
+          "label": "inventory",
+          "sync": 10,
+          "paint": 132.39999999850988,
+          "module": "objects",
+          "scroll": 0
+        },
+        {
+          "label": "inventory:workshop",
+          "sync": 95.29999999701977,
+          "paint": 181.39999999850988,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "inventory:search",
+          "sync": 76.19999999552965,
+          "paint": 101.69999999552965,
+          "module": "expeditions",
+          "scroll": 0
+        },
+        {
+          "label": "atlas",
+          "sync": 91.39999999850988,
+          "paint": 119,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:center",
+          "sync": 66.5,
+          "paint": 79.30000000447035,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:keyboard",
+          "sync": 6.800000004470348,
+          "paint": 33,
+          "module": "atlas",
+          "scroll": 0
+        },
+        {
+          "label": "atlas:travel",
+          "sync": 168.60000000149012,
+          "paint": 470.3999999985099,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "field",
+          "sync": 16.80000000447035,
+          "paint": 113,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "field:manual",
+          "sync": 165.29999999701977,
+          "paint": 266.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal",
+          "sync": 186.60000000149012,
+          "paint": 319.70000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:entry",
+          "sync": 9.699999995529652,
+          "paint": 94.39999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:search",
+          "sync": 5.199999995529652,
+          "paint": 74.39999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:leave",
+          "sync": 14.600000001490116,
+          "paint": 107.80000000447035,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal:return",
+          "sync": 27.400000005960464,
+          "paint": 99.40000000596046,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:clear",
+          "sync": 6.399999998509884,
+          "paint": 112.79999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "journal:sort",
+          "sync": 119.10000000149012,
+          "paint": 281.80000000447035,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary",
+          "sync": 9.199999995529652,
+          "paint": 624.2999999970198,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "journal:resume",
+          "sync": 173.89999999850988,
+          "paint": 291.79999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:leave",
+          "sync": 17.799999997019768,
+          "paint": 33.5,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "journal:reopen",
+          "sync": 77.09999999403954,
+          "paint": 158.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:resume",
+          "sync": 30.399999998509884,
+          "paint": 213.29999999701977,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:card",
+          "sync": 47.899999998509884,
+          "paint": 96.39999999850988,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:close",
+          "sync": 37.599999994039536,
+          "paint": 98.69999999552965,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:filter",
+          "sync": 52.19999999552965,
+          "paint": 70.69999999552965,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:leave",
+          "sync": 9.100000001490116,
+          "paint": 115.30000000447035,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:return",
+          "sync": 12,
+          "paint": 77.5,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "bestiary:clear",
+          "sync": 15.800000004470348,
+          "paint": 312.80000000447035,
+          "module": "bestiary",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 15.599999994039536,
+          "paint": 41.599999994039536,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 179.5,
+          "paint": 271.70000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 74.70000000298023,
+          "paint": 126.10000000149012,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 172.29999999701977,
+          "paint": 259.79999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 16.5,
+          "paint": 193,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 116.39999999850988,
+          "paint": 304.20000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 14.299999997019768,
+          "paint": 50.29999999701977,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 81,
+          "paint": 145.19999999552965,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 17.400000005960464,
+          "paint": 94.60000000149012,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 64.80000000447035,
+          "paint": 303.20000000298023,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 18.19999999552965,
+          "paint": 55.19999999552965,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 242,
+          "paint": 366,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 20.200000002980232,
+          "paint": 107.10000000149012,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 181.39999999850988,
+          "paint": 221.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 48.100000001490116,
+          "paint": 94.10000000149012,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 175.5,
+          "paint": 269.8999999985099,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 14.399999998509884,
+          "paint": 82.10000000149012,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 108.79999999701977,
+          "paint": 219.29999999701977,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 3.100000001490116,
+          "paint": 31,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 91.39999999850988,
+          "paint": 151.89999999850988,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 3,
+          "paint": 52.600000001490116,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 101.10000000149012,
+          "paint": 168,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:field",
+          "sync": 15,
+          "paint": 93.20000000298023,
+          "module": "field",
+          "scroll": 0
+        },
+        {
+          "label": "rapid:journal",
+          "sync": 126.90000000596046,
+          "paint": 218.5,
+          "module": "journal",
+          "scroll": 0
+        },
+        {
+          "label": "field:auto",
+          "sync": 22.5,
+          "paint": 106.30000000447035,
+          "module": "field",
+          "scroll": 0
+        }
+      ],
+      "pages": 32,
+      "slots": 1000,
+      "writes": 106,
+      "panelReplacements": 77,
+      "childChanges": 522,
+      "startupMs": 2685.39999999851,
+      "longTasks": [
+        {
+          "start": 368,
+          "ms": 237,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 809.7000000029802,
+          "ms": 51,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 862.2999999970198,
+          "ms": 51,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 914.2000000029802,
+          "ms": 64,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 988,
+          "ms": 1515,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 2503.39999999851,
+          "ms": 150,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 2787.5,
+          "ms": 87,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 2880.7999999970198,
+          "ms": 93,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 2976.2999999970198,
+          "ms": 78,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 3758.7999999970198,
+          "ms": 107,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 3953.10000000149,
+          "ms": 241,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 4290.20000000298,
+          "ms": 65,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 4409.20000000298,
+          "ms": 405,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 4815.10000000149,
+          "ms": 50,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 5006.10000000149,
+          "ms": 193,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 5200.89999999851,
+          "ms": 252,
+          "operation": "cold:atlas"
+        },
+        {
+          "start": 5478,
+          "ms": 115,
+          "operation": "cold:research"
+        },
+        {
+          "start": 5612,
+          "ms": 148,
+          "operation": "cold:expeditions"
+        },
+        {
+          "start": 5766,
+          "ms": 247,
+          "operation": "cold:expeditions"
+        },
+        {
+          "start": 6013.39999999851,
+          "ms": 57,
+          "operation": "cold:expeditions"
+        },
+        {
+          "start": 6072.29999999702,
+          "ms": 103,
+          "operation": "cold:objects"
+        },
+        {
+          "start": 6205.70000000298,
+          "ms": 163,
+          "operation": "cold:museum"
+        },
+        {
+          "start": 6409.60000000149,
+          "ms": 171,
+          "operation": "cold:society"
+        },
+        {
+          "start": 6792.60000000149,
+          "ms": 112,
+          "operation": "warm:field"
+        },
+        {
+          "start": 6905.10000000149,
+          "ms": 770,
+          "operation": "warm:journal"
+        },
+        {
+          "start": 7703.79999999702,
+          "ms": 402,
+          "operation": "warm:bestiary"
+        },
+        {
+          "start": 8106.10000000149,
+          "ms": 53,
+          "operation": "warm:bestiary"
+        },
+        {
+          "start": 8185.39999999851,
+          "ms": 87,
+          "operation": "warm:bestiary"
+        },
+        {
+          "start": 8284,
+          "ms": 124,
+          "operation": "warm:atlas"
+        },
+        {
+          "start": 8458,
+          "ms": 54,
+          "operation": "warm:research"
+        },
+        {
+          "start": 8610.70000000298,
+          "ms": 87,
+          "operation": "warm:objects"
+        },
+        {
+          "start": 8714.39999999851,
+          "ms": 53,
+          "operation": "warm:objects"
+        },
+        {
+          "start": 8811.89999999851,
+          "ms": 96,
+          "operation": "warm:museum"
+        },
+        {
+          "start": 8966.20000000298,
+          "ms": 105,
+          "operation": "warm:society"
+        },
+        {
+          "start": 9094.20000000298,
+          "ms": 72,
+          "operation": "research"
+        },
+        {
+          "start": 9188.89999999851,
+          "ms": 84,
+          "operation": "research:filter"
+        },
+        {
+          "start": 9283.39999999851,
+          "ms": 209,
+          "operation": "museum"
+        },
+        {
+          "start": 9551.5,
+          "ms": 320,
+          "operation": "museum:samples"
+        },
+        {
+          "start": 9912.20000000298,
+          "ms": 51,
+          "operation": "museum:samples"
+        },
+        {
+          "start": 9995.70000000298,
+          "ms": 51,
+          "operation": "museum:filter"
+        },
+        {
+          "start": 10105.29999999702,
+          "ms": 145,
+          "operation": "expeditions"
+        },
+        {
+          "start": 10298.79999999702,
+          "ms": 62,
+          "operation": "commerce"
+        },
+        {
+          "start": 10398.79999999702,
+          "ms": 77,
+          "operation": "profile"
+        },
+        {
+          "start": 10515.39999999851,
+          "ms": 257,
+          "operation": "museum"
+        },
+        {
+          "start": 10778.10000000149,
+          "ms": 92,
+          "operation": "museum"
+        },
+        {
+          "start": 10873.89999999851,
+          "ms": 96,
+          "operation": "museum"
+        },
+        {
+          "start": 10971.10000000149,
+          "ms": 119,
+          "operation": "museum:exhibitions"
+        },
+        {
+          "start": 11100.20000000298,
+          "ms": 314,
+          "operation": "museum:samples"
+        },
+        {
+          "start": 11594.39999999851,
+          "ms": 393,
+          "operation": "museum:fossils"
+        },
+        {
+          "start": 12051.10000000149,
+          "ms": 110,
+          "operation": "museum:relicts"
+        },
+        {
+          "start": 12182.89999999851,
+          "ms": 215,
+          "operation": "museum:artifacts"
+        },
+        {
+          "start": 12455.79999999702,
+          "ms": 55,
+          "operation": "society"
+        },
+        {
+          "start": 12556.79999999702,
+          "ms": 54,
+          "operation": "achievements"
+        },
+        {
+          "start": 12801,
+          "ms": 168,
+          "operation": "inventory:workshop"
+        },
+        {
+          "start": 12982.89999999851,
+          "ms": 87,
+          "operation": "inventory:search"
+        },
+        {
+          "start": 13084.70000000298,
+          "ms": 104,
+          "operation": "atlas"
+        },
+        {
+          "start": 13203.70000000298,
+          "ms": 72,
+          "operation": "atlas:center"
+        },
+        {
+          "start": 13316.10000000149,
+          "ms": 241,
+          "operation": "atlas:travel"
+        },
+        {
+          "start": 13779.89999999851,
+          "ms": 83,
+          "operation": "field"
+        },
+        {
+          "start": 13901.39999999851,
+          "ms": 187,
+          "operation": "field:manual"
+        },
+        {
+          "start": 14108.60000000149,
+          "ms": 56,
+          "operation": "field:manual"
+        },
+        {
+          "start": 14166.89999999851,
+          "ms": 226,
+          "operation": "journal"
+        },
+        {
+          "start": 14487.10000000149,
+          "ms": 84,
+          "operation": "journal:entry"
+        },
+        {
+          "start": 14715.60000000149,
+          "ms": 50,
+          "operation": "field:leave"
+        },
+        {
+          "start": 15074.60000000149,
+          "ms": 105,
+          "operation": "journal:clear"
+        },
+        {
+          "start": 15180.39999999851,
+          "ms": 180,
+          "operation": "journal:sort"
+        },
+        {
+          "start": 15462.89999999851,
+          "ms": 197,
+          "operation": "bestiary"
+        },
+        {
+          "start": 15708.89999999851,
+          "ms": 71,
+          "operation": "bestiary"
+        },
+        {
+          "start": 15780.10000000149,
+          "ms": 211,
+          "operation": "bestiary"
+        },
+        {
+          "start": 16012.10000000149,
+          "ms": 69,
+          "operation": "bestiary"
+        },
+        {
+          "start": 16107,
+          "ms": 249,
+          "operation": "journal:resume"
+        },
+        {
+          "start": 16567.70000000298,
+          "ms": 86,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 16890.70000000298,
+          "ms": 91,
+          "operation": "journal:reopen"
+        },
+        {
+          "start": 17099.79999999702,
+          "ms": 159,
+          "operation": "bestiary:resume"
+        },
+        {
+          "start": 17355.60000000149,
+          "ms": 51,
+          "operation": "bestiary:card"
+        },
+        {
+          "start": 17454.5,
+          "ms": 56,
+          "operation": "bestiary:close"
+        },
+        {
+          "start": 17606.89999999851,
+          "ms": 52,
+          "operation": "bestiary:filter"
+        },
+        {
+          "start": 17710.5,
+          "ms": 81,
+          "operation": "bestiary:leave"
+        },
+        {
+          "start": 17792.89999999851,
+          "ms": 55,
+          "operation": "bestiary:return"
+        },
+        {
+          "start": 17916.10000000149,
+          "ms": 282,
+          "operation": "bestiary:clear"
+        },
+        {
+          "start": 18297,
+          "ms": 117,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 18414,
+          "ms": 79,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 18586.10000000149,
+          "ms": 66,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 18709.89999999851,
+          "ms": 68,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 18910.70000000298,
+          "ms": 237,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 19183.5,
+          "ms": 228,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 19412.5,
+          "ms": 306,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 19750,
+          "ms": 201,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 19968.29999999702,
+          "ms": 213,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 20184.10000000149,
+          "ms": 179,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 20381.79999999702,
+          "ms": 185,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 20588.20000000298,
+          "ms": 171,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 20766.29999999702,
+          "ms": 118,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 20959.39999999851,
+          "ms": 108,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 21086,
+          "ms": 122,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 21250.79999999702,
+          "ms": 54,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 21312.60000000149,
+          "ms": 90,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 21450,
+          "ms": 135,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 21591,
+          "ms": 162,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 21763.60000000149,
+          "ms": 125,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 21915.79999999702,
+          "ms": 176,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 22103.29999999702,
+          "ms": 282,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 22387.39999999851,
+          "ms": 179,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 22574.5,
+          "ms": 97,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 22674.60000000149,
+          "ms": 122,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 22813,
+          "ms": 143,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 22957,
+          "ms": 91,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 23063.79999999702,
+          "ms": 149,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 23266.20000000298,
+          "ms": 146,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 23457,
+          "ms": 122,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 23595.89999999851,
+          "ms": 114,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 23749.10000000149,
+          "ms": 62,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 23811.79999999702,
+          "ms": 58,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 23878.70000000298,
+          "ms": 115,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 23996.70000000298,
+          "ms": 106,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 24110.39999999851,
+          "ms": 83,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 24201.79999999702,
+          "ms": 169,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 24372.20000000298,
+          "ms": 179,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 24704.70000000298,
+          "ms": 191,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 24899.79999999702,
+          "ms": 68,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 24974.89999999851,
+          "ms": 106,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 25102.79999999702,
+          "ms": 200,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 25362.79999999702,
+          "ms": 92,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 25556.60000000149,
+          "ms": 191,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 25767,
+          "ms": 85,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 25911,
+          "ms": 98,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 26150.70000000298,
+          "ms": 243,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 26509.70000000298,
+          "ms": 275,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 26793.39999999851,
+          "ms": 70,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 26866.5,
+          "ms": 90,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 26984,
+          "ms": 201,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 27206,
+          "ms": 72,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 27298.79999999702,
+          "ms": 205,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 27651.70000000298,
+          "ms": 125,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 27795.60000000149,
+          "ms": 67,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 27902.10000000149,
+          "ms": 105,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 28106.89999999851,
+          "ms": 148,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 28366.39999999851,
+          "ms": 182,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 28712.5,
+          "ms": 93,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 28809.10000000149,
+          "ms": 58,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 28904.5,
+          "ms": 62,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 29388.20000000298,
+          "ms": 71,
+          "operation": "field:auto"
+        },
+        {
+          "start": 29710.10000000149,
+          "ms": 270,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 30498.20000000298,
+          "ms": 68,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 30708.10000000149,
+          "ms": 80,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 31708.5,
+          "ms": 164,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 32707.89999999851,
+          "ms": 142,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 32907.89999999851,
+          "ms": 51,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 33709.20000000298,
+          "ms": 101,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 34708.79999999702,
+          "ms": 106,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 34815.20000000298,
+          "ms": 54,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 34899.60000000149,
+          "ms": 50,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 35709.60000000149,
+          "ms": 72,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 36702,
+          "ms": 62,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 36772,
+          "ms": 184,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 37707.79999999702,
+          "ms": 84,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 38708.29999999702,
+          "ms": 250,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 39751.70000000298,
+          "ms": 127,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 40707.60000000149,
+          "ms": 72,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 41707.60000000149,
+          "ms": 62,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 42707.60000000149,
+          "ms": 73,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 43708,
+          "ms": 64,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 44708.70000000298,
+          "ms": 72,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 45708.39999999851,
+          "ms": 99,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 45807.79999999702,
+          "ms": 60,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 46708.29999999702,
+          "ms": 172,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 47014,
+          "ms": 52,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 47708.10000000149,
+          "ms": 254,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 48710.39999999851,
+          "ms": 199,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 48909.39999999851,
+          "ms": 52,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 49707.70000000298,
+          "ms": 151,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 50708,
+          "ms": 96,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 50804.70000000298,
+          "ms": 55,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 51708,
+          "ms": 98,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 52707.89999999851,
+          "ms": 158,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 53709.20000000298,
+          "ms": 246,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 54707.60000000149,
+          "ms": 64,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 55707.60000000149,
+          "ms": 96,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 56708.70000000298,
+          "ms": 442,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 57187.39999999851,
+          "ms": 63,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 57708.60000000149,
+          "ms": 144,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 58198.60000000149,
+          "ms": 63,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 58271.79999999702,
+          "ms": 123,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 58709.79999999702,
+          "ms": 178,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 58887.89999999851,
+          "ms": 63,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 59000.60000000149,
+          "ms": 60,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 59604.79999999702,
+          "ms": 51,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 59708.89999999851,
+          "ms": 142,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 60415.5,
+          "ms": 83,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 60707.60000000149,
+          "ms": 142,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 61707.79999999702,
+          "ms": 91,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 62710.89999999851,
+          "ms": 103,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 62814.70000000298,
+          "ms": 56,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 63707.70000000298,
+          "ms": 91,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 64675.29999999702,
+          "ms": 122,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 64800.60000000149,
+          "ms": 206,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 65708,
+          "ms": 139,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 66707.60000000149,
+          "ms": 175,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 67708,
+          "ms": 69,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 68708.20000000298,
+          "ms": 106,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 69708.20000000298,
+          "ms": 52,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 70708.10000000149,
+          "ms": 87,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 70998.29999999702,
+          "ms": 80,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 71708.89999999851,
+          "ms": 338,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 72201.29999999702,
+          "ms": 54,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 72707.89999999851,
+          "ms": 84,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 73082.39999999851,
+          "ms": 106,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 73707.79999999702,
+          "ms": 92,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 74708.10000000149,
+          "ms": 89,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 75167.60000000149,
+          "ms": 84,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 75707.70000000298,
+          "ms": 78,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 76707.60000000149,
+          "ms": 79,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 77258.10000000149,
+          "ms": 99,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 77708.10000000149,
+          "ms": 79,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 78707.89999999851,
+          "ms": 174,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 78882.60000000149,
+          "ms": 71,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 79296.79999999702,
+          "ms": 102,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 79708.60000000149,
+          "ms": 74,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 80707.79999999702,
+          "ms": 175,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 81708.10000000149,
+          "ms": 77,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 82708,
+          "ms": 79,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 83708.29999999702,
+          "ms": 143,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 84708.5,
+          "ms": 92,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 84801.29999999702,
+          "ms": 50,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 85517.70000000298,
+          "ms": 138,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 85708.70000000298,
+          "ms": 106,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 86708.10000000149,
+          "ms": 83,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 87709,
+          "ms": 175,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 88707.60000000149,
+          "ms": 53,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 89507.5,
+          "ms": 150,
+          "operation": "startup/idle"
+        }
+      ],
+      "heaps": [
+        7495236,
+        11584456,
+        10047740,
+        10550160,
+        11007584
+      ],
+      "snapshots": [
+        {
+          "money": 18627.75344,
+          "knowledge": 31587,
+          "prestige": 23,
+          "currentRegion": "HX-02-11",
+          "sightings": 75329,
+          "published": 23
+        },
+        {
+          "money": 18630.739039999997,
+          "knowledge": 31627,
+          "prestige": 23,
+          "currentRegion": "HX-02-11",
+          "sightings": 75337,
+          "published": 23
+        },
+        {
+          "money": 18637.37839999999,
+          "knowledge": 31719,
+          "prestige": 23,
+          "currentRegion": "HX-01-09",
+          "sightings": 75358,
+          "published": 23
+        },
+        {
+          "money": 18639.73087999999,
+          "knowledge": 31747,
+          "prestige": 23,
+          "currentRegion": "HX-01-09",
+          "sightings": 75362,
+          "published": 23
+        },
+        {
+          "money": 18733.52847999996,
+          "knowledge": 32164,
+          "prestige": 23,
+          "currentRegion": "HX-01-09",
+          "sightings": 75451,
+          "published": 23
+        }
+      ],
+      "motion": {
+        "start": 28660,
+        "end": 29356.79999999702,
+        "moved": 1152,
+        "axis": "scrollLeft",
+        "element": "journalSpeciesRail",
+        "frameGapsMs": [
+          16.799999999999272,
+          16.599999999998545,
+          16.700000000000728,
+          50,
+          100,
+          33.29999999999927,
+          16.600000000002183,
+          50,
+          50,
+          66.70000000000073,
+          16.69999999999709,
+          16.700000000000728,
+          49.900000000001455,
+          16.700000000000728,
+          16.69999999999709,
+          16.600000000002183,
+          16.700000000000728,
+          33.29999999999927,
+          16.700000000000728,
+          16.69999999999709,
+          16.600000000002183,
+          16.700000000000728,
+          33.29999999999927
+        ]
+      },
+      "pageTurnsMs": [
+        222.10000000149012,
+        237.29999999701977,
+        156.69999999552965,
+        103.20000000298023,
+        118.10000000149012,
+        149.90000000596046,
+        91.29999999701977,
+        93.79999999701977,
+        99.39999999850988,
+        34.20000000298023,
+        69.69999999552965,
+        108.70000000298023,
+        97.29999999701977,
+        103.09999999403954,
+        155.5,
+        255.20000000298023,
+        121.10000000149012,
+        72.60000000149012,
+        97.39999999850988,
+        59.29999999701977,
+        114.59999999403954,
+        106.79999999701977,
+        100,
+        95,
+        48.099999994039536,
+        75.80000000447035,
+        92.20000000298023,
+        69.90000000596046,
+        150.10000000149012,
+        119.39999999850988,
+        27.5
+      ],
+      "extraChecks": {
+        "completedMonograph": true,
+        "hasMultiple": true
+      },
+      "cpu": [
+        {
+          "name": "bindPanel · app.js?v=5.0.3:5142",
+          "ms": 3298.983999999999
+        },
+        {
+          "name": "updateFieldOutput · app.js?v=5.0.3:3035",
+          "ms": 2628.86
+        },
+        {
+          "name": "metrics · achievements-v3360.js:49",
+          "ms": 1314.5129999999992
+        },
+        {
+          "name": "renderPanel · app.js?v=5.0.3:3098",
+          "ms": 1312.285000000001
+        },
+        {
+          "name": "refresh · bestiary-ui-v3260.js?v=5.0.3:53",
+          "ms": 794.456
+        },
+        {
+          "name": "(anónima) · achievements-v3360.js:53",
+          "ms": 706.3359999999996
+        },
+        {
+          "name": "(anónima) · achievements-v3360.js:51",
+          "ms": 593.638
+        },
+        {
+          "name": "(anónima) · achievements-v3360.js:59",
+          "ms": 525.8129999999999
+        },
+        {
+          "name": "metrics · commissions-v3370.js:31",
+          "ms": 525.3999999999997
+        },
+        {
+          "name": "persist · app.js?v=5.0.3:2393",
+          "ms": 318.2290000000001
+        },
+        {
+          "name": "(anónima) · achievements-v3360.js:54",
+          "ms": 309.167
+        },
+        {
+          "name": "progress · museum-curation-v3380.js:23",
+          "ms": 302.6400000000001
+        },
+        {
+          "name": "(anónima) · commissions-v3370.js:34",
+          "ms": 242.33499999999992
+        },
+        {
+          "name": "replaceFieldEncounter · app.js?v=5.0.3:3019",
+          "ms": 240.04500000000004
+        },
+        {
+          "name": "fitScale · atlas-map-v3211.js?v=5.0.3:5",
+          "ms": 237.75399999999996
+        },
+        {
+          "name": "setCounterText · app.js?v=5.0.3:3002",
+          "ms": 189.316
+        },
+        {
+          "name": "(anónima) · app.js?v=5.0.3:2756",
+          "ms": 144.649
+        },
+        {
+          "name": "(anónima) · museum-curation-v3380.js:25",
+          "ms": 132.265
+        },
+        {
+          "name": "(anónima) · achievements-v3360.js:57",
+          "ms": 81.17500000000001
+        },
+        {
+          "name": "bestiaryQuery3260 · app.js?v=5.0.3:5007",
+          "ms": 79.067
+        },
+        {
+          "name": "taxonomyInfo · app.js?v=5.0.3:1564",
+          "ms": 78.03999999999999
+        },
+        {
+          "name": "(anónima) · app.js?v=5.0.3:2748",
+          "ms": 71.50300000000001
+        },
+        {
+          "name": "fmt · app.js?v=5.0.3:2542",
+          "ms": 65.863
+        },
+        {
+          "name": "animalMarkup · app.js?v=5.0.3:1890",
+          "ms": 58.343
+        },
+        {
+          "name": "achievementFlush3360 · app.js?v=5.0.3:2266",
+          "ms": 56.05499999999999
+        },
+        {
+          "name": "updateRail · journal-ui-v3250.js?v=5.0.3:31",
+          "ms": 55.565999999999995
+        },
+        {
+          "name": "stage · app.js?v=5.0.3:2569",
+          "ms": 53.296
+        },
+        {
+          "name": "configuredSpecials · app.js?v=5.0.3:1848",
+          "ms": 50.508
+        },
+        {
+          "name": "tick · app.js?v=5.0.3:5449",
+          "ms": 50.316
+        },
+        {
+          "name": "cpTitle3430 · app.js?v=5.0.3:7577",
+          "ms": 49.613
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,844 @@
+{
+  "chromium": "156.0.8078.79",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "cpuSlowdown": 4,
+  "runs": [
+    {
+      "version": "base",
+      "stage": "advanced",
+      "panelReplacements": 100,
+      "pageTurnsMs": [
+        107,
+        95.70000000298023,
+        69.79999999701977,
+        64.30000000447035,
+        62.29999999701977,
+        67.20000000298023,
+        107.20000000298023,
+        185.20000000298023,
+        65.70000000298023,
+        64.69999999552965,
+        59.80000000447035,
+        65,
+        69.29999999701977,
+        66.89999999850988,
+        71.80000000447035,
+        64.20000000298023,
+        72.10000000149012,
+        98.59999999403954,
+        89,
+        114.30000000447035,
+        60.5,
+        55,
+        53.80000000447035,
+        59.399999998509884,
+        59.69999999552965,
+        61.5,
+        73.5,
+        67.80000000447035,
+        66.79999999701977,
+        71.70000000298023,
+        35.79999999701977
+      ],
+      "heaps": [
+        6671680,
+        10598212,
+        11933452,
+        10007480,
+        11428016
+      ],
+      "longTasks": [
+        {
+          "start": 473.20000000298023,
+          "ms": 67,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 659,
+          "ms": 107,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 854.8999999985099,
+          "ms": 697,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 1552.7000000029802,
+          "ms": 95,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 1821.6000000014901,
+          "ms": 232,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 2129.7000000029802,
+          "ms": 289,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 2478.3000000044703,
+          "ms": 62,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 2562.89999999851,
+          "ms": 156,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 2735.2000000029802,
+          "ms": 54,
+          "operation": "cold:research"
+        },
+        {
+          "start": 2849.60000000149,
+          "ms": 57,
+          "operation": "cold:expeditions"
+        },
+        {
+          "start": 2925,
+          "ms": 87,
+          "operation": "cold:objects"
+        },
+        {
+          "start": 3026.89999999851,
+          "ms": 64,
+          "operation": "cold:society"
+        },
+        {
+          "start": 3139.39999999851,
+          "ms": 141,
+          "operation": "warm:field"
+        },
+        {
+          "start": 3323.3000000044703,
+          "ms": 212,
+          "operation": "warm:journal"
+        },
+        {
+          "start": 3564,
+          "ms": 65,
+          "operation": "warm:bestiary"
+        },
+        {
+          "start": 3792.3000000044703,
+          "ms": 58,
+          "operation": "warm:museum"
+        },
+        {
+          "start": 3866.10000000149,
+          "ms": 50,
+          "operation": "warm:museum"
+        },
+        {
+          "start": 3985.3000000044703,
+          "ms": 68,
+          "operation": "camp"
+        },
+        {
+          "start": 4266.10000000149,
+          "ms": 62,
+          "operation": "profile:close"
+        },
+        {
+          "start": 4395.30000000447,
+          "ms": 71,
+          "operation": "museum"
+        },
+        {
+          "start": 4483.70000000298,
+          "ms": 140,
+          "operation": "museum:exhibitions"
+        },
+        {
+          "start": 4633.60000000149,
+          "ms": 89,
+          "operation": "museum:fossils"
+        },
+        {
+          "start": 4749.89999999851,
+          "ms": 52,
+          "operation": "museum:fossils"
+        },
+        {
+          "start": 4952.39999999851,
+          "ms": 64,
+          "operation": "society"
+        },
+        {
+          "start": 5299.5,
+          "ms": 83,
+          "operation": "atlas:keyboard"
+        },
+        {
+          "start": 5433.10000000149,
+          "ms": 75,
+          "operation": "field:manual"
+        },
+        {
+          "start": 5516.5,
+          "ms": 79,
+          "operation": "journal"
+        },
+        {
+          "start": 5948,
+          "ms": 87,
+          "operation": "journal:clear"
+        },
+        {
+          "start": 6051.89999999851,
+          "ms": 149,
+          "operation": "journal:sort"
+        },
+        {
+          "start": 6347.10000000149,
+          "ms": 54,
+          "operation": "bestiary:card"
+        },
+        {
+          "start": 6415.80000000447,
+          "ms": 62,
+          "operation": "bestiary:card"
+        },
+        {
+          "start": 6687.10000000149,
+          "ms": 97,
+          "operation": "bestiary:clear"
+        },
+        {
+          "start": 6819.70000000298,
+          "ms": 113,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6932.89999999851,
+          "ms": 124,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7061.60000000149,
+          "ms": 92,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7175.60000000149,
+          "ms": 86,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7264,
+          "ms": 76,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7342,
+          "ms": 87,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7485.89999999851,
+          "ms": 132,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7631.20000000298,
+          "ms": 197,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7831.30000000447,
+          "ms": 84,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7926.30000000447,
+          "ms": 84,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8024.80000000447,
+          "ms": 79,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8121.10000000149,
+          "ms": 82,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8212.10000000149,
+          "ms": 91,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8306.30000000447,
+          "ms": 92,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8404.70000000298,
+          "ms": 52,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 8463.10000000149,
+          "ms": 100,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8577.60000000149,
+          "ms": 87,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8672.10000000149,
+          "ms": 93,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8773.20000000298,
+          "ms": 120,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8895.80000000447,
+          "ms": 109,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9008.30000000447,
+          "ms": 132,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9158.20000000298,
+          "ms": 86,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9250.70000000298,
+          "ms": 72,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9328.30000000447,
+          "ms": 73,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9462.5,
+          "ms": 80,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9555,
+          "ms": 77,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9645.70000000298,
+          "ms": 86,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9734.39999999851,
+          "ms": 98,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9838.5,
+          "ms": 92,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9938.80000000447,
+          "ms": 89,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 10031.30000000447,
+          "ms": 92,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 10301.60000000149,
+          "ms": 77,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 10532.60000000149,
+          "ms": 83,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 10665.89999999851,
+          "ms": 100,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 10815.80000000447,
+          "ms": 88,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 10949.5,
+          "ms": 88,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 11085,
+          "ms": 76,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 11216.39999999851,
+          "ms": 108,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 11432.70000000298,
+          "ms": 84,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 11586.30000000447,
+          "ms": 70,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 11716.5,
+          "ms": 78,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 11849.39999999851,
+          "ms": 72,
+          "operation": "rapid:journal"
+        },
+        {
+          "start": 11965.80000000447,
+          "ms": 80,
+          "operation": "rapid:field"
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "stage": "advanced",
+      "panelReplacements": 69,
+      "pageTurnsMs": [
+        92.70000000298023,
+        69,
+        45,
+        55.399999998509884,
+        41,
+        41.600000001490116,
+        52.099999994039536,
+        42.899999998509884,
+        96.40000000596046,
+        80.60000000149012,
+        90.5,
+        60.100000001490116,
+        41.19999999552965,
+        42.399999998509884,
+        47.69999999552965,
+        44.399999998509884,
+        54.20000000298023,
+        42.899999998509884,
+        45.80000000447035,
+        54.30000000447035,
+        57.20000000298023,
+        81,
+        106.90000000596046,
+        110.59999999403954,
+        111.59999999403954,
+        121.60000000149012,
+        116.89999999850988,
+        83.69999999552965,
+        174.60000000149012,
+        58,
+        23.700000002980232
+      ],
+      "heaps": [
+        6522356,
+        9999524,
+        9438336,
+        9905516,
+        10797660
+      ],
+      "longTasks": [
+        {
+          "start": 279.6000000014901,
+          "ms": 62,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 585.2000000029802,
+          "ms": 72,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 723.6000000014901,
+          "ms": 683,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 1406.8000000044703,
+          "ms": 73,
+          "operation": "startup/idle"
+        },
+        {
+          "start": 1667.6000000014901,
+          "ms": 203,
+          "operation": "cold:field"
+        },
+        {
+          "start": 1915,
+          "ms": 280,
+          "operation": "cold:journal"
+        },
+        {
+          "start": 2291.8000000044703,
+          "ms": 150,
+          "operation": "cold:bestiary"
+        },
+        {
+          "start": 2455.9000000059605,
+          "ms": 62,
+          "operation": "cold:atlas"
+        },
+        {
+          "start": 2582.9000000059605,
+          "ms": 54,
+          "operation": "cold:expeditions"
+        },
+        {
+          "start": 2653.7000000029802,
+          "ms": 89,
+          "operation": "cold:objects"
+        },
+        {
+          "start": 2765.2000000029802,
+          "ms": 63,
+          "operation": "cold:museum"
+        },
+        {
+          "start": 2869.8000000044703,
+          "ms": 132,
+          "operation": "warm:field"
+        },
+        {
+          "start": 3022.2000000029802,
+          "ms": 234,
+          "operation": "warm:journal"
+        },
+        {
+          "start": 3337,
+          "ms": 64,
+          "operation": "warm:bestiary"
+        },
+        {
+          "start": 3548.7000000029802,
+          "ms": 55,
+          "operation": "warm:objects"
+        },
+        {
+          "start": 3932.10000000149,
+          "ms": 55,
+          "operation": "profile:close"
+        },
+        {
+          "start": 3998.7000000029802,
+          "ms": 99,
+          "operation": "museum"
+        },
+        {
+          "start": 4109.60000000149,
+          "ms": 131,
+          "operation": "museum:exhibitions"
+        },
+        {
+          "start": 4272.4000000059605,
+          "ms": 103,
+          "operation": "museum:samples"
+        },
+        {
+          "start": 4388.20000000298,
+          "ms": 107,
+          "operation": "museum:fossils"
+        },
+        {
+          "start": 4616.10000000149,
+          "ms": 61,
+          "operation": "society"
+        },
+        {
+          "start": 4948.60000000149,
+          "ms": 87,
+          "operation": "atlas:travel"
+        },
+        {
+          "start": 5081.80000000447,
+          "ms": 54,
+          "operation": "field"
+        },
+        {
+          "start": 5151.10000000149,
+          "ms": 108,
+          "operation": "field:manual"
+        },
+        {
+          "start": 5272.60000000149,
+          "ms": 65,
+          "operation": "journal"
+        },
+        {
+          "start": 5615.30000000447,
+          "ms": 54,
+          "operation": "journal:clear"
+        },
+        {
+          "start": 5670,
+          "ms": 88,
+          "operation": "journal:clear"
+        },
+        {
+          "start": 5779.30000000447,
+          "ms": 126,
+          "operation": "journal:sort"
+        },
+        {
+          "start": 5955.20000000298,
+          "ms": 57,
+          "operation": "bestiary:card"
+        },
+        {
+          "start": 6026.60000000149,
+          "ms": 57,
+          "operation": "bestiary:card"
+        },
+        {
+          "start": 6320.70000000298,
+          "ms": 92,
+          "operation": "bestiary:clear"
+        },
+        {
+          "start": 6474.4000000059605,
+          "ms": 98,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6572.80000000447,
+          "ms": 93,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6673.9000000059605,
+          "ms": 59,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6757.70000000298,
+          "ms": 68,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6829.80000000447,
+          "ms": 53,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6892.5,
+          "ms": 55,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 6957.80000000447,
+          "ms": 64,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7029.5,
+          "ms": 60,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7096.4000000059605,
+          "ms": 113,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7215.20000000298,
+          "ms": 96,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7367,
+          "ms": 112,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7486.20000000298,
+          "ms": 73,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7565.10000000149,
+          "ms": 56,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7625.20000000298,
+          "ms": 56,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7692.9000000059605,
+          "ms": 61,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7765.10000000149,
+          "ms": 62,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7837.60000000149,
+          "ms": 70,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7917.10000000149,
+          "ms": 57,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 7979.60000000149,
+          "ms": 61,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8044.5,
+          "ms": 73,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8124,
+          "ms": 77,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8206.80000000447,
+          "ms": 99,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8359.30000000447,
+          "ms": 130,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8500.70000000298,
+          "ms": 131,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8639.80000000447,
+          "ms": 133,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8779.10000000149,
+          "ms": 142,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 8929.30000000447,
+          "ms": 139,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9076.10000000149,
+          "ms": 102,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9185.90000000596,
+          "ms": 193,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9434.60000000149,
+          "ms": 77,
+          "operation": "bestiary:pages"
+        },
+        {
+          "start": 9622.10000000149,
+          "ms": 81,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 9788.80000000447,
+          "ms": 85,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 9931.70000000298,
+          "ms": 75,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 10065.80000000447,
+          "ms": 96,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 10236.30000000447,
+          "ms": 75,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 10365.60000000149,
+          "ms": 82,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 10503.5,
+          "ms": 105,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 10665,
+          "ms": 75,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 10798.40000000596,
+          "ms": 80,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 10941.80000000447,
+          "ms": 68,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 11066.40000000596,
+          "ms": 92,
+          "operation": "rapid:field"
+        },
+        {
+          "start": 11233.80000000447,
+          "ms": 73,
+          "operation": "rapid:field"
+        }
+      ]
+    }
+  ]
+}
