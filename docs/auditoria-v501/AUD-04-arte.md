@@ -37,3 +37,7 @@ AUD-04 sigue abierta. No generar APK firmado, no actualizar versión pública, n
 ## Continuidad en V5.0.5
 
 El inventario consolidado conserva los estados históricos y registra por separado las correcciones aprobadas. La revisión por familia usa las decisiones vigentes. [Informe ART-01](../arte-v505/README.md) · [Inventario consolidado](../arte-v505/inventario-aud04.json)
+
+## Continuidad en V5.0.6
+
+ART-02 incorpora 32 evaluaciones visuales de Ursidae, Cervidae y Bovidae, documenta seis correcciones y ratifica la lámina del tigre pseudomelánico. La cobertura alcanza 140 de 564 variantes pigmentarias. [Informe y comparativas ART-02](../arte-v506/README.md) · [Inventario vigente](../arte-v506/inventario-aud04.json)
