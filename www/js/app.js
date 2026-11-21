@@ -2397,7 +2397,7 @@ function persist({verify=false}={}){
  try{
   const previous=verify?localStorage.getItem(STORAGE_KEY):null;
   const raw=JSON.stringify(state);
-  localStorage.setItem(STORAGE_KEY,raw);
+  if(verify||storageFault||raw!==committedSave||localStorage.getItem(STORAGE_KEY)!==raw)localStorage.setItem(STORAGE_KEY,raw);
   if(verify){
    try{
     if(localStorage.getItem(STORAGE_KEY)!==raw)throw new Error('La partida escrita difiere de la partida restaurada.');
@@ -2537,7 +2537,8 @@ window.AtlasSaveBridge={
  }
 };
 function esc(x){return String(x).replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]))}
-function fmt(n){return Math.floor(n).toLocaleString('es-CL')}
+const atlasNumberFormat=new Intl.NumberFormat('es-CL');
+function fmt(n){return atlasNumberFormat.format(Math.floor(n))}
 function currentRegion(){return REGIONS.find(r=>r.id===state.currentRegion)||REGIONS[0]}
 function totalSightings(){return Object.values(state.sightings).reduce((a,b)=>a+b,0)}
 function monographCount(){return Object.values(state.published).filter(Boolean).length}
@@ -2712,10 +2713,11 @@ function researchRarityWeight(id){
   :sp.rare==='Poco común'?(tier>=2?1.25:1.12):1;
  return base*multiplier;
 }
-function weightedSpeciesPick(ids){
- const total=ids.reduce((sum,id)=>sum+researchRarityWeight(id),0);
+function weightedSpeciesPick(ids,weight=researchRarityWeight){
+ // Preserve the original addition and subtraction order, including floating-point ties.
+ const total=ids.reduce((sum,id)=>sum+weight(id),0);
  let roll=Math.random()*total;
- for(const id of ids){roll-=researchRarityWeight(id);if(roll<=0)return id;}
+ for(const id of ids){roll-=weight(id);if(roll<=0)return id;}
  return ids[ids.length-1];
 }
 function researchEncounterTargets(source){
@@ -2766,7 +2768,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
  const baseChoices=source==='auto'
   ?automatic?.species??automaticEligibleSpecies(state.currentRegion,state.season)
   :eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season);
- const choices=baseChoices.filter(id=>source!=='auto'
+ const choices=automatic?.choices??baseChoices.filter(id=>source!=='auto'
   ||(bucket[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR);
  const manual=source==='manual';
  let chanceBase=manual?0.50:0.38;
@@ -2790,7 +2792,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
  const pool=[...choices],selected=[];
  const maxSpecies=Math.min(pool.length,researchEncounterTargets(source));
  for(let i=0;i<maxSpecies;i++){
-  const chosen=weightedSpeciesPick(pool);
+  const chosen=weightedSpeciesPick(pool,automatic?.weight);
   selected.push(chosen);
   pool.splice(pool.indexOf(chosen),1);
  }
@@ -2809,6 +2811,10 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
    amount=Math.min(amount,MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR-(bucket[key]||0));
    if(amount<1)continue;
    bucket[key]=(bucket[key]||0)+amount;
+   if(automatic){
+    automatic.hits+=amount;
+    if(bucket[key]===MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR)automatic.choices.splice(automatic.choices.indexOf(chosen),1);
+   }
   }
   state.discovered[chosen]=true;
   state.sightings[chosen]=sight(chosen)+amount;
@@ -2835,20 +2841,21 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
   entries.push({id:chosen,first,amount,note,variant,category,sexObservation});
  }
  if(!entries.length)return;
+ const sequence=state.encounterSequence=(state.encounterSequence||0)+1;
+ if(automatic?.deferPresentation)automatic.latest={entries,knowledgeGain,sequence};
+ else presentEncounter(entries,knowledgeGain,sequence);
+ if(manual)pushLog(`🔭 ${entries.length>1?'Encuentro múltiple · ':''}${entries.map(e=>visibleName(e.id)+' ×'+e.amount).join(', ')}${entries[0].note.length?' · '+entries[0].note.join(', '):''}.`);
+ if(!batchingOffline){renderCounters();updateFieldOutput();}
+}
+function presentEncounter(entries,knowledgeGain,sequence){
  const primary=entries[0],sp=SPECIES[primary.id],many=entries.length>1;
  const title=many?`Encuentro múltiple: ${entries.length} especies`
   :`${primary.first?'¡Nueva especie! ':'Avistamiento: '}${visibleName(primary.id)}`;
  const summary=many?entries.map(e=>`${visibleName(e.id)} ×${e.amount}`).join(' · '):`${fmt(sight(primary.id))} avistamientos`;
  const subtitle=`${many?summary:sp.rare+(primary.variant?` · ${primary.variant}`:'')+' · '+summary} · +${knowledgeGain} conocimiento${primary.first?' · +£15':''}${primary.note.length?' · '+primary.note.join(', '):''}`;
- // Guardar los integrantes de cada encuentro para representarlos gráficamente en Campo.
- // Los IDs anteriores y el formato del respaldo siguen intactos.
- state.encounterSequence=(state.encounterSequence||0)+1;
  state.lastEncounter={species:primary.id,title,subtitle,sprite:primary.variant?specimenMarkup(primary.id,primary.variant,primary.category)
    :(primary.sexObservation?getSpriteMarkup(primary.id,'normal',primary.sexObservation.sex):getSpriteMarkup(primary.id)),
-   sequence:state.encounterSequence,
-   entries:entries.map(e=>({id:e.id,amount:e.amount,variant:e.variant||'',category:e.category||'',sex:e.sexObservation?.sex||null,first:e.first}))};
- if(manual)pushLog(`🔭 ${many?'Encuentro múltiple · ':''}${entries.map(e=>visibleName(e.id)+' ×'+e.amount).join(', ')}${primary.note.length?' · '+primary.note.join(', '):''}.`);
- if(!batchingOffline){renderCounters();updateFieldOutput();}
+   sequence,entries:entries.map(e=>({id:e.id,amount:e.amount,variant:e.variant||'',category:e.category||'',sex:e.sexObservation?.sex||null,first:e.first}))};
 }
 function variantToSkin(variant){
   if(/albino|leuc/i.test(variant)) return 'albino';
@@ -3028,7 +3035,7 @@ function updateFieldOutput(){
  if(tab!=='field')return;
  const last=state.lastEncounter;
  const result=document.getElementById('fieldResult');
- if(result){const signature=fieldEncounterSignature(last);if(signature!==lastPanelSignature){replaceFieldEncounter(result,encounterCardMarkup(last));result.classList.remove('encounter-reveal');void result.offsetWidth;result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
+ if(result){const signature=fieldEncounterSignature(last);if(signature!==lastPanelSignature){replaceFieldEncounter(result,encounterCardMarkup(last));result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
  const buffs=document.getElementById('fieldBuffSummary');
  if(buffs){const next=fieldBuffSummaryMarkup();if(buffs.innerHTML!==next)buffs.innerHTML=next;}
  const automatic=fieldAutomaticModel();
@@ -5290,8 +5297,13 @@ function queueAutomaticSearches(now,elapsed){
 }
 function processAutomaticSearches(clock){
  const deadline=clock?clock.now()+AUTOMATIC_FRAME_BUDGET_MS:Infinity;
- const k0=state.knowledge,s0=totalSightings();
- let performed=0;
+ const k0=state.knowledge;
+ let performed=0,context=null;
+ const weights=new Map();
+ const weight=id=>{
+   if(!weights.has(id))weights.set(id,researchRarityWeight(id));
+   return weights.get(id);
+ };
  const hasTime=()=>performed<500&&(!clock||clock.now()<deadline);
  batchingOffline=true;
  try{
@@ -5299,24 +5311,36 @@ function processAutomaticSearches(clock){
      const segment=state.autoPending[0];
      const species=automaticEligibleSpecies(segment.currentRegion,segment.season,segment);
      if(!species.length){state.autoPending.shift();continue;}
-     while(segment.at<=segment.end&&hasTime()){
-       const hour=Math.floor(segment.at/3600000);
-       if(!species.some(id=>(state.autoHourly[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR)){
-         // The attempts in this hour have no capacity. Later hours still have their own quota.
-         const nextHour=(hour+1)*3600000;
-         segment.at+=Math.ceil((nextHour-segment.at)/segment.interval)*segment.interval;
-         continue;
+     context={segment,species,weight,hits:0,deferPresentation:!deepRegionIndex3330.has(segment.currentRegion)};
+     try{
+       let hour=null;
+       while(segment.at<=segment.end&&hasTime()){
+         const nextHour=Math.floor(segment.at/3600000);
+         if(hour!==nextHour){
+           hour=nextHour;
+           context.choices=species.filter(id=>(state.autoHourly[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR);
+         }
+         if(!context.choices.length){
+           const boundary=(hour+1)*3600000;
+           segment.at+=Math.ceil((boundary-segment.at)/segment.interval)*segment.interval;
+           continue;
+         }
+         encounter('auto',segment.at,false,context);
+         segment.at+=segment.interval;
+         performed++;
        }
-       encounter('auto',segment.at,false,{segment,species});
-       segment.at+=segment.interval;
-       performed++;
+     }finally{
+       autoDiaryBuffer.hits+=context.hits;
+       if(context.latest){
+         const {entries,knowledgeGain,sequence}=context.latest;
+         presentEncounter(entries,knowledgeGain,sequence);
+       }
      }
      if(segment.at>segment.end)state.autoPending.shift();
    }
  }finally{batchingOffline=false;}
  autoDiaryBuffer.searches+=performed;
  autoDiaryBuffer.knowledge+=Math.max(0,Math.floor(state.knowledge-k0));
- autoDiaryBuffer.hits+=Math.max(0,Math.floor(totalSightings()-s0));
 }
 function animatedAutomaticWork(){
  return !document.hidden&&typeof window.requestAnimationFrame==='function'&&typeof globalThis.performance?.now==='function';
