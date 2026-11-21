@@ -320,6 +320,7 @@
       return;
     }
     let old=null,applied=false;
+    const verifiedInEngine=typeof bridge.verifySavedGame==='function';
     const restoreVersion=++selectionVersion;
     const expected=receiptSnapshot(pending);
     const pendingMoney=pending.money;
@@ -329,14 +330,16 @@
       if(old) localStorage.setItem(EMERGENCY_KEY,old);
       applied=true;
       const actual=bridge.restoreGame(pending);
-      if(!matchImported({...expected,money:pending.money},actual)){
-        throw new Error('El motor no adoptó los avistamientos, prestigio o libras de la partida.');
+      if(!verifiedInEngine){
+        if(!matchImported({...expected,money:pendingMoney},actual)){
+          throw new Error('El motor no adoptó los avistamientos, prestigio o libras de la partida.');
+        }
+        const current=localStorage.getItem(STORAGE_KEY);
+        if(!current) throw new Error('No se escribió la partida en el teléfono.');
+        const written=receiptSnapshot(normalizeGame(JSON.parse(current)));
+        if(!compareReceipt(expected,written) || Math.abs(JSON.parse(current).money-pendingMoney)>0.01)
+          throw new Error('La partida escrita no coincide con la importada.');
       }
-      const current=localStorage.getItem(STORAGE_KEY);
-      if(!current) throw new Error('No se escribió la partida en el teléfono.');
-      const written=receiptSnapshot(normalizeGame(JSON.parse(current)));
-      if(!compareReceipt(expected,written) || Math.abs(JSON.parse(current).money-pending.money)>0.01)
-        throw new Error('La partida escrita no coincide con la importada.');
       // No se deja un recibo pendiente: la verificación ya ocurre en la misma sesión.
       summary.textContent='✅ Recuperación inmediata: '+actual.sightings.toLocaleString('es-CL')+
         ' avistamientos · £'+Math.floor(actual.money).toLocaleString('es-CL')+
@@ -348,9 +351,9 @@
       setTimeout(()=>{
         if(restoreVersion!==selectionVersion)return;
         try {
-          const inMemory=bridge.getSnapshot();
-          const onDisk=receiptSnapshot(normalizeGame(JSON.parse(localStorage.getItem(STORAGE_KEY))));
-          if(matchImported({...expected,money:pendingMoney},inMemory) && onDisk.prestige===expected.prestige && onDisk.currentRegion===expected.currentRegion && onDisk.sightings>=expected.sightings && onDisk.published>=expected.published){
+          const agrees=verifiedInEngine?bridge.verifySavedGame():matchImported({...expected,money:pendingMoney},bridge.getSnapshot())&&
+            matchImported(expected,receiptSnapshot(normalizeGame(JSON.parse(localStorage.getItem(STORAGE_KEY)))));
+          if(agrees){
             message('✅ Restauración confirmada: el motor y el guardado automático conservan tu partida.');
           }else {
             message('⚠️ Diferencia entre memoria y archivo. Conserva tu respaldo JSON y no desinstales la versión anterior.',true);
@@ -359,7 +362,7 @@
       },1400);
     } catch(error){
       message('Fallo al aplicar la partida: '+(error?.message||error)+'. No elimines tu archivo JSON.',true);
-      if(applied && old && bridge && typeof bridge.restoreGame==='function'){
+      if(applied && old && !verifiedInEngine){
         try{bridge.restoreGame(normalizeGame(JSON.parse(old)));localStorage.setItem(STORAGE_KEY,old);}
         catch(_){message('No se pudo completar la recuperación anterior. Conserva las copias externas y la copia de emergencia; no desinstales la aplicación.',true);}
       }

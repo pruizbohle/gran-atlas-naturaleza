@@ -247,3 +247,58 @@ test('AUD-03 el arnés integral detecta un ala de museo inválida admitida por l
   assert.equal(game.g.state.museum.wing, 0);
   assert.equal(game.g.museumCapacity(), 12);
 });
+
+test('AUD-03 el importador detecta una sustitución por ID aunque todos los totales coincidan', async () => {
+  const game = open();
+  game.g.state.inventory.fossil_fragment = 2;
+  game.g.persist();
+  const old = game.h.store[key];
+  const save = game.h.window.AtlasSaveBridge.getSaveData();
+  save.sightings.zorro_rojo = 12;
+  save.stages.zorro_rojo = 1;
+  save.inventory.fossil_fragment = 9;
+  game.h.window.Capacitor.Plugins.AtlasImport.openFile = async () => ({
+    content: JSON.stringify(save), name: 'integridad-por-id.json'
+  });
+  const write = game.h.localStorage.setItem;
+  let altered = false;
+  game.h.localStorage.setItem = (name, value) => {
+    if (name === key && !altered) {
+      altered = true;
+      const data = JSON.parse(value);
+      data.sightings = { lobo_gris: 12 };
+      data.inventory = {};
+      value = JSON.stringify(data);
+    }
+    write(name, value);
+  };
+  await game.h.import();
+  assert.ok(altered);
+  assert.match(game.h.elements.saveManagerStatus.textContent, /Fallo al aplicar/);
+  assert.equal(game.h.store[key], old);
+  assert.equal(game.h.store.gran_atlas_backup_pre_import_v301, old);
+  assert.equal(game.g.state.inventory.fossil_fragment, 2);
+  assert.deepEqual(Object.keys(game.g.state.sightings), []);
+});
+
+test('AUD-03 la confirmación del guardado acepta migraciones y progreso posterior ya persistido', async () => {
+  const game = open();
+  game.g.persist();
+  const save = game.h.window.AtlasSaveBridge.getSaveData();
+  save.sightings = { af_quebrantahuesos: 3, quebrantahuesos: 5 };
+  save.stages = { af_quebrantahuesos: 2, quebrantahuesos: 1 };
+  save.published = { af_quebrantahuesos: true, quebrantahuesos: true };
+  save.money += 50;
+  game.h.window.Capacitor.Plugins.AtlasImport.openFile = async () => ({
+    content: JSON.stringify(save), name: 'migracion-por-id.json'
+  });
+  await game.h.import();
+  assert.equal(game.g.state.sightings.quebrantahuesos, 8);
+  assert.equal(game.g.state.stages.quebrantahuesos, 2);
+  assert.deepEqual(Object.keys(game.g.state.published), ['quebrantahuesos']);
+  game.g.state.money -= 15;
+  game.g.persist();
+  game.h.finishTimers();
+  assert.match(game.h.elements.saveManagerStatus.textContent, /Restauración confirmada/);
+  assert.equal(JSON.parse(game.h.store[key]).money, save.money - 15);
+});

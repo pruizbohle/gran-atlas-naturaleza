@@ -2386,23 +2386,37 @@ function showStorageFault(message){
  const button=document.getElementById('saveManagerOpen');
  if(button){if(button.textContent!=='⚠️')button.textContent='⚠️';button.setAttribute('title',message);button.setAttribute('aria-label',message);}
 }
-function persist(){
- if(commissionClaiming3370)return true;
+function persist({verify=false}={}){
+ if(commissionClaiming3370)return !verify;
  achievementFlush3360();commissionFlush3370();curationFlush3380();
  if(unreadableSave){showStorageFault('La partida almacenada no se pudo leer y se conserva sin reemplazar. Abre Respaldos para recuperarla.');return false;}
  try{
-  localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
-  if(storageFault){const button=document.getElementById('saveManagerOpen');if(button){button.textContent='💾';button.setAttribute('title','Respaldos');button.setAttribute('aria-label','Respaldos');}}
-  if(storageFault){const status=document.getElementById('saveManagerStatus');if(status?.textContent.startsWith('No se pudo guardar en este dispositivo.')){status.textContent='Guardado automático restablecido.';status.classList.remove('error');}}
-  storageFault=false;
-  if(commissionNotices3370.length&&globalThis.AtlasCommissionsUI3370)globalThis.AtlasCommissionsUI3370.notify(commissionNotices3370.splice(0));
-  if(achievementNotices3360.length&&globalThis.AtlasSociety3360){const notices=achievementNotices3360.splice(0);globalThis.AtlasSociety3360.notify(notices);}
-  return true;
+  const previous=verify?localStorage.getItem(STORAGE_KEY):null;
+  const raw=JSON.stringify(state);
+  localStorage.setItem(STORAGE_KEY,raw);
+  if(verify){
+   try{
+    if(localStorage.getItem(STORAGE_KEY)!==raw)throw new Error('La partida escrita difiere de la partida restaurada.');
+   }catch(error){
+    if(previous===null)localStorage.removeItem(STORAGE_KEY);
+    else localStorage.setItem(STORAGE_KEY,previous);
+    throw error;
+   }
+  }
  }catch(error){
   storageFault=true;
   showStorageFault('No se pudo guardar en este dispositivo. El progreso sigue en memoria: abre Respaldos y exporta la partida antes de cerrar.');
   return false;
  }
+ const wasFault=storageFault;
+ storageFault=false;
+ try{
+  if(wasFault){const button=document.getElementById('saveManagerOpen');if(button){button.textContent='💾';button.setAttribute('title','Respaldos');button.setAttribute('aria-label','Respaldos');}}
+  if(wasFault){const status=document.getElementById('saveManagerStatus');if(status?.textContent.startsWith('No se pudo guardar en este dispositivo.')){status.textContent='Guardado automático restablecido.';status.classList.remove('error');}}
+  if(commissionNotices3370.length&&globalThis.AtlasCommissionsUI3370)globalThis.AtlasCommissionsUI3370.notify(commissionNotices3370.splice(0));
+  if(achievementNotices3360.length&&globalThis.AtlasSociety3360){const notices=achievementNotices3360.splice(0);globalThis.AtlasSociety3360.notify(notices);}
+ }catch(error){console.error('El Gran Atlas: no se pudo actualizar el aviso de guardado.',error);}
+ return true;
 }
 /**
  * v3.5: Restauración real de la sesión en ejecución.
@@ -2419,15 +2433,19 @@ function atlasLiveReceipt(){
 window.AtlasSaveBridge={
  persistBeforeUpdate:persist,
  getSnapshot:()=>atlasLiveReceipt(),
+ verifySavedGame:()=>!unreadableSave&&localStorage.getItem(STORAGE_KEY)===JSON.stringify(state),
  getSaveData:()=>{if(corruptSave)throw new Error('La partida almacenada no se pudo leer. Recupérala desde un respaldo válido.');return JSON.parse(JSON.stringify(state));},
  normalizeSpecialDiscoveries,
  restoreGame(imported){
    if(!imported || typeof imported!=='object'||!Number.isFinite(imported.money)||
        !Number.isFinite(imported.prestige)||!Number.isFinite(imported.knowledge))
      throw new Error('La partida que llegó al motor no es válida.');
+   imported=JSON.parse(JSON.stringify(imported));
    const before=state;
    const wasUnreadable=unreadableSave,wasCorrupt=corruptSave;
-   const beforeRuntime={autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,tab};
+   const beforeRuntime={autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,diaryDirty,tab};
+   const beforeNotices={achievements:achievementNotices3360,commissions:commissionNotices3370,
+     groups:[...achievementDirty3360],commissionDirty:commissionDirty3370,curationDirty:curationDirty3380};
    try{
      state={...initialState(),...imported,
        upgrades:{...initialState().upgrades,...(imported.upgrades||{})},
@@ -2496,13 +2514,19 @@ window.AtlasSaveBridge={
      // Render may fail on malformed historical data. Keep disk untouched until it succeeds.
      renderCounters();
      renderPanel();
-     if(!persist())throw new Error('No se pudo guardar la partida restaurada. Conserva el archivo de respaldo y libera almacenamiento.');
+     if(!persist({verify:true}))throw new Error('No se pudo guardar la partida restaurada. Conserva el archivo de respaldo y libera almacenamiento.');
      return atlasLiveReceipt();
    }catch(error){
      state=before;
      unreadableSave=wasUnreadable;corruptSave=wasCorrupt;
-     ({autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,tab}=beforeRuntime);
-     try{render();}catch(_){}
+     ({autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,diaryDirty,tab}=beforeRuntime);
+     achievementNotices3360=beforeNotices.achievements;
+     commissionNotices3370=beforeNotices.commissions;
+     achievementDirty3360.clear();
+     for(const group of beforeNotices.groups)achievementDirty3360.add(group);
+     commissionDirty3370=beforeNotices.commissionDirty;
+     curationDirty3380=beforeNotices.curationDirty;
+     try{renderCounters();renderPanel();}catch(_){}
      throw error;
    }
  }
@@ -7409,9 +7433,13 @@ function uxAnnounce3410(){
  try{globalThis.AtlasSociety3360?.notifyExperience?.(events);}catch(error){console.error('UX3410 notification:',error);}
 }
 const persistBeforeExperience3410=persist;
-persist=function(){const ok=persistBeforeExperience3410();if(ok)uxAnnounce3410();return ok;};
+persist=function(options){
+ const ok=persistBeforeExperience3410(options);
+ if(ok)try{uxAnnounce3410();}catch(error){console.error('UX3410 save presentation:',error);}
+ return ok;
+};
 const restoreBeforeExperience3410=window.AtlasSaveBridge.restoreGame;
-window.AtlasSaveBridge.restoreGame=function(imported){uxRuntime3410.importing=true;try{uxRuntime3410.trail=[];uxRuntime3410.scrolls.clear();uxRuntime3410.folds.clear();uxRuntime3410.viewKey=null;const result=restoreBeforeExperience3410.call(this,imported);uxRuntime3410.snapshot=uxSnapshot3410();uxRuntime3410.lastEvents=[];return result;}finally{uxRuntime3410.importing=false;}};
+window.AtlasSaveBridge.restoreGame=function(imported){uxRuntime3410.importing=true;try{uxRuntime3410.trail=[];uxRuntime3410.scrolls.clear();uxRuntime3410.folds.clear();uxRuntime3410.viewKey=null;const result=restoreBeforeExperience3410.call(this,imported);try{uxRuntime3410.snapshot=uxSnapshot3410();uxRuntime3410.lastEvents=[];}catch(error){console.error('UX3410 restore presentation:',error);}return result;}finally{uxRuntime3410.importing=false;}};
 // Use the same transaction-aware persistence entry point as the existing updater.
 window.AtlasSaveBridge.persistBeforeUpdate=persist;
 // UX3410 END continuity and existing notification stream
@@ -7464,11 +7492,15 @@ const cpFault3430=showStorageFault;
 showStorageFault=function(message){cp3430.storageMessage=message;cpFault3430(message);cpPaintAvatar3430();};
 function cpRefresh3430(){if(tab!=='expeditions'||cp3430.active)return;const models=cpModels3430();for(const [id,m]of Object.entries(models)){for(const button of panel.querySelectorAll('[data-cp-open="'+id+'"]')){const status=button.querySelector('.cp3430-state');if(status&&status.textContent!==m.label){status.innerHTML='<i aria-hidden="true"></i>'+cpUI3430.esc(m.label);for(const kind of ['ready','running','available','locked'])button.classList.toggle('state-'+kind,m.kind===kind);}}}const summary=panel.querySelector('.cp3430-summary');if(summary&&summary.textContent!==cpSummary3430())summary.textContent=cpSummary3430();}
 const cpPersist3430=persist;
-persist=function(){const ok=cpPersist3430();cpPaintAvatar3430();cpRefresh3430();return ok;};window.AtlasSaveBridge.persistBeforeUpdate=persist;
+persist=function(options){
+ const ok=cpPersist3430(options);
+ try{cpPaintAvatar3430();cpRefresh3430();}catch(error){console.error('Campamento save presentation:',error);}
+ return ok;
+};window.AtlasSaveBridge.persistBeforeUpdate=persist;
 function cpOpenDialog3430(which){cpMenu3430.hidden=true;cpAvatarButton3430.setAttribute('aria-expanded','false');cpDialog3430.hidden=false;const title={profile:'Perfil del naturalista',stats:'Estadísticas de tu expedición',about:'Sobre El Gran Atlas'}[which];document.getElementById('cp3430-dialog-title').textContent=title;document.getElementById('cp3430-dialog-content').innerHTML=which==='profile'?cpUI3430.profileForm(cpUI3430.profile(state),cpTitle3430()):which==='stats'?cpUI3430.stats(cpStats3430()):cpUI3430.about(cpUI3430.version);document.getElementById('cp3430-dialog-title').focus({preventScroll:true});}
 function cpRestore3430(){cp3430.active=false;cp3430.facility=null;cp3430.pending=null;cp3430.paintKey='';cpClose3430(false);}
 const cpOriginalRestore3430=window.AtlasSaveBridge.restoreGame;
-window.AtlasSaveBridge.restoreGame=function(data){cpRestore3430();const result=cpOriginalRestore3430.call(this,data);cpPaintAvatar3430();return result;};
+window.AtlasSaveBridge.restoreGame=function(data){cpRestore3430();const result=cpOriginalRestore3430.call(this,data);try{cpPaintAvatar3430();}catch(error){console.error('Campamento restore presentation:',error);}return result;};
 document.addEventListener('click',event=>{
  const target=event.target.closest('button,[data-action]');if(!target)return;
  if(target.closest('#saveManagerOpen')&&cp3430.mode==='new'&&!cp3430.allowBackup){event.preventDefault();event.stopImmediatePropagation();cpPaintAvatar3430();cpDialog3430.hidden=true;cpMenu3430.hidden=!cpMenu3430.hidden;cpAvatarButton3430.setAttribute('aria-expanded',String(!cpMenu3430.hidden));if(!cpMenu3430.hidden)cpMenu3430.querySelector('button').focus({preventScroll:true});return;}
