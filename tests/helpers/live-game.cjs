@@ -21,9 +21,10 @@ function harness(store={},backup,options={}){
   AtlasImport:{async openFile(){return {content:JSON.stringify(backup),name:'partida-real.json'};}},
   AtlasExport:{async saveFile(){return {uri:'content://test'};}}
  }}};
+ options.prepareWindow?.(w);
  const ctx=vm.createContext({window:w,document:doc,localStorage,TextEncoder,
    Date:options.Date||Date,Math:Object.assign(Object.create(Math),options.rng?{random:options.rng}:{}),Number,JSON,Map,Set,console,URL,Blob,Intl,
-   setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
+   performance:options.performance,setInterval(cb){tick=cb;return 1;},setTimeout(cb){timeouts.push(cb);return 2;}});
  vm.runInContext(fs.readFileSync('www/js/journal-ui-v3250.js','utf8'),ctx);
  if(options.bestiary3260||options.museum3270||options.development3280)vm.runInContext(fs.readFileSync('www/js/bestiary-ui-v3260.js','utf8'),ctx);
  if(options.development3280)vm.runInContext(fs.readFileSync('www/js/expeditions-research-ui-v3280.js','utf8'),ctx);

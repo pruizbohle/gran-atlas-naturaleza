@@ -10,10 +10,10 @@ const key = 'gran_atlas_v05';
 const scripts = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art',
   'gm07-m01/art', 'gm07-p04/catalog', 'gm07-a04/catalog', 'app'];
 const gameSource = scripts.map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
-function open(store = {}, random = () => 0.99) {
+function open(store = {}, random = () => 0.99, options = {}) {
   let now = noon;
   class Clock extends Date { static now() { return now; } }
-  const h = harness(store, null, { Date: Clock, rng: random, gameSource });
+  const h = harness(store, null, { Date: Clock, rng: random, gameSource, ...options });
   const g = h.window.__atlasTest;
   return { h, g, at(time) { now = time; h.tick(); },
     drain(time) {
@@ -326,4 +326,36 @@ test('AUD-03 un viaje liquidado fuera del historial visible conserva su recibo a
   assert.equal(reopened.g.state.voyageSeq, 14);
   assert.equal(reopened.g.state.museum.voyagesCompleted, 14);
   assert.equal(reopened.g.state.voyages.length, 0);
+});
+
+test('AUD-02 la cola en pantalla avanza en cuadros acotados y se guarda al salir', () => {
+  let ms = 0;
+  const frames = [];
+  const events = {};
+  const window = {
+    requestAnimationFrame(fn) { frames.push(fn); },
+    addEventListener(name, fn) { events[name] = fn; }
+  };
+  const game = open({}, () => 0.99, {
+    performance: { now: () => ms++ },
+    prepareWindow(w) { Object.assign(w, window); }
+  });
+  game.g.state.helpers = 1;
+  game.at(noon + hour);
+  assert.equal(frames.length, 1);
+  assert.equal(game.g.state.knowledge, 0);
+  frames.shift()();
+  assert.ok(game.g.state.knowledge > 0 && game.g.state.knowledge < 500);
+  assert.equal(frames.length, 1);
+  assert.equal(game.h.imported.knowledge, 0);
+  events.pagehide();
+  assert.equal(game.h.imported.knowledge, game.g.state.knowledge);
+  assert.equal(game.h.imported.autoPending[0].at, game.g.state.autoPending[0].at);
+  for (let i = 0; i < 1000 && frames.length; i++) frames.shift()();
+  assert.equal(game.g.state.knowledge, 720 * 2);
+  assert.equal(game.g.state.autoPending.length, 0);
+  events.pagehide();
+  const reopened = open(game.h.store);
+  reopened.at(noon + hour);
+  assert.equal(reopened.g.state.knowledge, 720 * 2);
 });

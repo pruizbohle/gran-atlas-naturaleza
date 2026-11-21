@@ -2335,6 +2335,9 @@ Object.keys(SEXUAL_DIMORPHISM).forEach(id=>{
 });
 try{if(!localStorage.getItem('gran_atlas_v07_backup_before_v08'))localStorage.setItem('gran_atlas_v07_backup_before_v08',JSON.stringify(state));}catch(e){}
 let batchingOffline=false;
+let automaticFramePending=false;
+let automaticProgressUnwritten=false;
+const AUTOMATIC_FRAME_BUDGET_MS=8;
 let diaryDirty=false;
 let lastPanelSignature='';
 let currentAutoNotice='';
@@ -5345,19 +5348,22 @@ function queueAutomaticSearches(now,elapsed){
    state.autoPending.push({at:first,end,interval,currentRegion,season,habitat,time,method});
  }
 }
-function processAutomaticSearches(){
+function processAutomaticSearches(clock){
+ const deadline=clock?clock.now()+AUTOMATIC_FRAME_BUDGET_MS:Infinity;
  const k0=state.knowledge,s0=totalSightings();
  let performed=0;
+ const hasTime=()=>performed<500&&(!clock||clock.now()<deadline);
  batchingOffline=true;
  try{
-   while(state.autoPending.length&&performed<500){
+   while(state.autoPending.length&&hasTime()){
      const segment=state.autoPending[0];
      const species=automaticEligibleSpecies(segment.currentRegion,segment.season,segment);
-     while(segment.at<=segment.end&&performed<500){
-       if(!species.length)break;
-       if(automaticSearchCapacity(segment.at,species).remaining===0){
+     if(!species.length){state.autoPending.shift();continue;}
+     while(segment.at<=segment.end&&hasTime()){
+       const hour=Math.floor(segment.at/3600000);
+       if(!species.some(id=>(state.autoHourly[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR)){
          // The attempts in this hour have no capacity. Later hours still have their own quota.
-         const nextHour=(Math.floor(segment.at/3600000)+1)*3600000;
+         const nextHour=(hour+1)*3600000;
          segment.at+=Math.ceil((nextHour-segment.at)/segment.interval)*segment.interval;
          continue;
        }
@@ -5365,10 +5371,26 @@ function processAutomaticSearches(){
        segment.at+=segment.interval;
        performed++;
      }
-     if(segment.at>segment.end||!species.length)state.autoPending.shift();
+     if(segment.at>segment.end)state.autoPending.shift();
    }
  }finally{batchingOffline=false;}
- return {performed,gainK:Math.max(0,Math.floor(state.knowledge-k0)),gainS:Math.max(0,Math.floor(totalSightings()-s0))};
+ autoDiaryBuffer.searches+=performed;
+ autoDiaryBuffer.knowledge+=Math.max(0,Math.floor(state.knowledge-k0));
+ autoDiaryBuffer.hits+=Math.max(0,Math.floor(totalSightings()-s0));
+}
+function animatedAutomaticWork(){
+ return !document.hidden&&typeof window.requestAnimationFrame==='function'&&typeof globalThis.performance?.now==='function';
+}
+function scheduleAutomaticFrame(){
+ if(automaticFramePending||!state.autoPending.length||!animatedAutomaticWork())return;
+ automaticFramePending=true;
+ window.requestAnimationFrame(()=>{
+   automaticFramePending=false;
+   if(!state.autoPending.length||!animatedAutomaticWork())return;
+   processAutomaticSearches(globalThis.performance);
+   automaticProgressUnwritten=true;
+   scheduleAutomaticFrame();
+ });
 }
 function tick(){
  const now=Date.now();
@@ -5376,16 +5398,15 @@ function tick(){
  const elapsed=Math.min(MAX_OFFLINE_MS,Math.max(0,now-previous));
  state.lastTick=Math.max(previous,now);
  queueAutomaticSearches(now,elapsed);
- if(state.autoPending.length){
+ const queued=state.autoPending.length>0;
+ if(queued){
    pruneAutomaticHours(now);
-   const {performed,gainK,gainS}=processAutomaticSearches();
+   if(!animatedAutomaticWork())processAutomaticSearches(globalThis.performance);
+ }
+ const {searches:performed,hits:gainS,knowledge:gainK}=autoDiaryBuffer;
+ if(queued||performed){
    const capacity=automaticSearchCapacity(now);
    const saturated=capacity.total>0&&capacity.remaining===0;
-   if(performed){
-     autoDiaryBuffer.searches+=performed;
-     autoDiaryBuffer.hits+=gainS;
-     autoDiaryBuffer.knowledge+=gainK;
-   }
    currentAutoNotice=saturated
      ?`Equipo automático en pausa: cupo horario completo de ${capacity.total} especies en ${currentRegion().name}. Se reanuda en la siguiente hora; la observación manual sigue disponible.`
      :capacity.total===0
@@ -5427,9 +5448,14 @@ function tick(){
  // E-3280 END tick-display
  updateFieldOutput();
  if(returns && tab==='expeditions')renderPanel();
- persist();
+ if(persist())automaticProgressUnwritten=false;
+ scheduleAutomaticFrame();
 }
 setInterval(tick,1000);
+document.addEventListener('visibilitychange',scheduleAutomaticFrame);
+window.addEventListener?.('pagehide',()=>{
+ if(automaticProgressUnwritten&&persist())automaticProgressUnwritten=false;
+});
 
 
 // Sprites simplificados para ejemplares macho y hembra. No son variantes raras.
