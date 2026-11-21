@@ -1,33 +1,45 @@
-# Iconoteca 1842 — Etapa 2: 20 objetos
+# Iconoteca 1842 — lote 2 CORREGIDO (solo UI)
+**21 de noviembre de 2026.** El usuario precisó el alcance: sustituir **emojis de módulos, funciones, navegación y estados**, como los de Misiones y Cuaderno, **no** crear ilustraciones de los artículos del inventario que ya tienen recursos artísticos en la rama de actualización.
 
-Fecha: 21 de noviembre de 2026. Estado: **preparación y comparación visual**, sin integración al juego.
+## Exclusión definitiva
+- Todos los `plate.*` de `www/js/item-art-v3198.js`: huesos, cráneos, fósiles, monedas, armas? (No; ninguno del inventario), mapas físicos, flores prensadas, plumas, herramientas, materiales, etc.
+- Todo el arte de coleccionables ya actualizado, particularmente el trabajo de `feat/coleccionables-arte-240`, y los sprites de especies/variantes.
+- No modificar `www/js/item-art-v3198.js`, catálogos de objetos, inventario, guardado, economía ni versión del juego.
+- No producir **una segunda versión gráfica de un mismo objeto**. Un icono de sección (por ejemplo Museo > Fósiles) es distinto de la imagen de un fósil individual; aun así esta tanda prioriza otras funciones para evitar confusiones.
 
-## Qué se hizo realmente
+## Dónde sí actuar
+1. Navegación de escritorio y móvil: Atlas, Campo, Cuaderno, Investigación, Sociedad, Bestiario, Campamento, Inventario, Museo y Corona. **Ya están representadas en la V1 de 24 PNG**; no dibujar otra vez, primero revisar/aprobar.
+2. Cabecera: Conocimiento, Libras, Prestigio, Equipo, Tomos. **Ya cubierto V1.**
+3. UI interna: subpestañas de Sociedad y Museo, encargos, logros, registro científico, indicios, análisis, avisos, requisitos bloqueados/completados, respaldo/importación/exportación.
 
-- Se identificaron 20 piezas de objetos y se verificó que cada identificador existe en `www/js/item-art-v3198.js`.
-- Se publicó en `main` una galería aislada de esas **referencias vectoriales que ya estaban en el juego**, accesible en `www/iconoteca/lote2-revision.html`. No se tocaron la economía, el catálogo zoológico, las partidas ni el runtime.
-- Las 24 ilustraciones PNG anteriores siguen en `www/iconoteca/index.html` y no son sustituidas por estas referencias.
-- **No se crearon 20 ilustraciones nuevas**: el generador de imágenes falló. La siguiente versión pictórica sigue pendiente. No presentar la galería de referencias como iconos finales.
+## 20 objetivos de la segunda tanda (no son 20 imágenes nuevas)
+| # | Sección | Icono actual | Función | Estado |
+|---|---|---|---|---|
+| 1 | Sociedad | 🎯 | Encargos y misiones | Nuevo diseño pendiente |
+| 2 | Sociedad | 🏅 | Logros | Diferenciar del Prestigio V1 |
+| 3 | Sociedad | 💷 | Subvenciones | Reutilizar Libras V1 |
+| 4 | Sociedad | 📚 | Publicaciones | Reutilizar Tomos V1 |
+| 5 | Cuaderno | 📜 | Monografías | Nuevo diseño pendiente, distinto de Conocimiento |
+| 6 | Cuaderno | 🌐 | Atlas total | Nuevo diseño pendiente |
+| 7 | Cuaderno | 📊 | Registro científico | Nuevo diseño pendiente |
+| 8 | Museo | 🖼️ | Exposiciones | Nuevo diseño pendiente |
+| 9 | Museo | 🐾 | Muestras | Nuevo diseño pendiente |
+| 10 | Museo | 🗿 | Relictos | Nuevo diseño pendiente |
+| 11 | Museo | 🗃️ | Conservación | Nuevo diseño pendiente |
+| 12 | Museo | 🧬 | Análisis comparativo | Nuevo diseño pendiente |
+| 13 | Campo | 🔎 | Indicios de campo | Nuevo diseño pendiente |
+| 14 | Campo | ⚓ | Navegación y comercio | Nuevo diseño pendiente |
+| 15 | Estados | 🗝️ | Región desbloqueada | Nuevo diseño pendiente |
+| 16 | Estados | 🔒 | Requisito pendiente | Nuevo diseño pendiente |
+| 17 | Estados | ✅ | Objetivo completado | Nuevo diseño pendiente |
+| 18 | Sistema | 💾 | Respaldar partida | Nuevo diseño pendiente |
+| 19 | Sistema | 📤 | Exportar respaldo | Nuevo diseño pendiente |
+| 20 | Sistema | 📥 | Importar respaldo | Nuevo diseño pendiente |
 
-## Catálogo y orden
+**Fuentes verificadas**: `www/index.html` (navegación, cabecera y respaldos), `www/js/mobile-ui.js` (textos de ruta), `www/js/app.js` (Sociedad, Cuaderno, Museo, notificaciones, investigación), `www/js/commissions-v3370.js` (Navegación y Comercio), `www/js/society-achievements-ui-v3360.js` (logros). Emoticonos de catálogos de piezas excluidos incluso si aparecen en `app.js`.
 
-| Grupo | Identificadores |
-|---|---|
-| Fósiles (10) | fossil_fragment, fossil_skull, fossil_tooth, fossil_horn, hard_bone, fossil_track, fossil_plate, fossil_rib, fossil_claw, fossil_amber |
-| Coleccionables (5) | pressed_flower, owl_feather, antler_fragment, river_pebble, ancient_coin |
-| Instrumentos (5) | brass_compass, field_telescope, old_ink, brass_shard, carved_wood |
-
-## Diseño futuro
-
-- Misma dirección artística que los 24 PNG V1: grabado naturalista victoriano, tintas sepia, bronce envejecido, cuero y papel marfil.
-- Un icono = un objeto real, sin sustituirlo por una silueta genérica ni reutilizar otra imagen arbitraria.
-- Separar referencias, propuestas ilustradas y piezas aprobadas con identificadores permanentes y una vista comparativa que muestre el objeto exacto del juego.
-- Validar a 24/32/48/60/128 px, fondos claro y oscuro, bordes de recorte, transparencia y legibilidad.
-- En la V1 siguen pendientes las nueve limpiezas de borde documentadas en `docs/iconoteca-v1/REVISION_VISUAL_24.md` antes de declarar los PNG aptos para integrar.
-
-## Criterio de incorporación
-
-1. Generar láminas pictóricas nuevas a partir de estos 20 IDs; recortar y guardar cada figura como un recurso independiente.
-2. Revisión visual humana y aprobación explícita, con 1:1 entre ilustración, nombre y destino de UI.
-3. Publicar los PNG optimizados con el mismo estilo del lote V1. No agregar un segundo set SVG alternativo que contradiga las ilustraciones.
-4. Reemplazar emojis en el juego únicamente en un PR distinto y verificable, con pruebas automáticas y capturas desktop/móvil. Nunca alterar el guardado ni cambiar la versión jugable 4.9.6 como parte de esta fase visual.
+## Estado y próximos pasos
+- Se corrigió el visor independiente publicado en `main`: `www/iconoteca/lote2-revision.html`. Muestra **emojis de referencia** con filtros y contexto; **no declara nuevas ilustraciones**.
+- Se conservaron los 24 PNG ilustrados V1 en `www/iconoteca/index.html` sin alteración.
+- Diseñar solo los íconos UI que falten, con estética naturalista 1842, validar lectura a 24/32/48 y fondos contrastados. No redibujar piezas con arte existente.
+- Una vez aprobados los archivos concretos, integrar en PR independiente a través de datos centralizados que permitan reemplazo coherente en escritorio/móvil y tengan fallback de texto, sin tocar la partida.
