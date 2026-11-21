@@ -1,72 +1,52 @@
 <!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>El Gran Atlas | Lote 2 · Comparador de referencias</title>
-<style>
-:root{color-scheme:light;--paper:#f6f0e1;--ink:#332b22;--edge:#bba989;--card:#fffaf0;--muted:#6b6254}
-*{box-sizing:border-box}body{font-family:Georgia,serif;margin:0;background:var(--paper);color:var(--ink);line-height:1.45}
-header,main,footer{max-width:1260px;margin:auto;padding:20px}header{border-bottom:1px solid var(--edge)}
-h1{font-size:clamp(1.5rem,3vw,2.3rem);margin:.3em 0}p{margin:.5em 0}a{color:inherit;text-decoration:underline}
-.notice{border-left:4px solid #8a6742;padding:.7em 1em;margin:1em 0;background:#ece1cb}
-.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:1em 0}
-label{font-size:.9rem;display:grid;gap:4px}select,input,button{font:inherit;padding:8px;border:1px solid #9d8767;background:#fffaf2;color:#332b22;border-radius:6px}
-button{cursor:pointer}.count{font-size:.9rem;color:var(--muted)}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:12px}
-.tile{background:var(--card);border:1px solid var(--edge);border-radius:10px;padding:12px;min-width:0}
-.visual{height:148px;display:grid;place-items:center;overflow:hidden;border-radius:7px;border:1px solid #d5c6aa;background:#f4ead7}
-.visual svg{height:var(--icon-size,80px);width:var(--icon-size,80px);max-width:95%;max-height:95%}
-.dark .visual{background:#283337;border-color:#566569}.name{font-weight:bold;margin:10px 0 2px}.meta{font-size:.76rem;color:var(--muted);overflow-wrap:anywhere}
-.pill{display:inline-block;margin-top:8px;font-size:.68rem;padding:2px 7px;border:1px solid #baaa8a;border-radius:20px}
-.empty{padding:2rem;text-align:center}.nav{display:flex;gap:20px;flex-wrap:wrap}
-@media(max-width:460px){main,header,footer{padding:12px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.tile{padding:8px}.visual{height:126px}}
-</style>
-</head>
-<body>
-<header>
-<div class="nav"><a href="./index.html">Iconoteca ilustrada V1 (24 PNG)</a><a href="../index.html">Juego 4.9.6</a></div>
-<h1>Gabinete 1842 · Segunda tanda en revisión</h1>
-<p>20 objetos de El Gran Atlas, organizados para revisión visual y semántica.</p>
-<div class="notice"><strong>Estado real:</strong> estas son las <strong>20 ilustraciones vectoriales que ya existen en el juego</strong>, mostradas como referencias de identidad. <strong>No son 20 PNG nuevos</strong>, no reemplazan la colección ilustrada V1 y <strong>no se integran aún como iconos del juego</strong>. La creación de una nueva lámina pictórica está pendiente.</div>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>El Gran Atlas · Iconoteca 1842 · Interfaces</title><style>
+:root{color-scheme:light;--paper:#f5eedf;--ink:#352b22;--border:#b9a788;--soft:#eae0ca;--card:#fff9ed}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 Georgia,'Times New Roman',serif}
+header,main,footer{max-width:1250px;margin:auto;padding:20px}header{border-bottom:1px solid var(--border)}
+h1{font-size:clamp(1.5rem,3.2vw,2.1rem);line-height:1.2;margin:.5rem 0}.lead{max-width:840px}
+a{color:#5b4834}button,input,select{font:inherit;border:1px solid #9f8e72;border-radius:6px;background:#fffdf8;padding:7px;color:inherit}
+button{cursor:pointer}.notice{background:var(--soft);border-left:4px solid #866743;padding:12px 16px;margin:18px 0}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin:16px 0}
+label{display:grid;gap:4px;font-size:.9rem}.toolbar input{width:230px;max-width:75vw}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(194px,1fr));gap:12px}
+.tile{min-width:0;background:var(--card);padding:12px;border:1px solid var(--border);border-radius:10px}
+.visual{display:grid;place-items:center;height:124px;border:1px solid #d2c5aa;border-radius:7px;background:#efe3cb}
+.visual span{font-family:system-ui,'Segoe UI Emoji','Apple Color Emoji',sans-serif;font-size:var(--icon-size,56px)}
+.dark .visual{background:#28343a;border-color:#607078}.name{font-weight:700;font-size:1rem;margin:.65rem 0 .2rem}
+.meta,.note{font-size:.79rem;color:#675d51;margin:.2rem 0}.state{display:inline-block;margin:.5rem 0 .2rem;font-size:.7rem;border:1px solid #ac9773;border-radius:30px;padding:2px 7px}
+.count{font-size:.9rem;color:#655744}.links{display:flex;gap:20px;flex-wrap:wrap}
+footer{border-top:1px solid var(--border);font-size:.88rem}
+@media(max-width:470px){header,main,footer{padding:12px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.tile{padding:9px}.visual{height:98px}.meta{overflow-wrap:anywhere}}
+</style></head><body>
+<header><div class="links"><a href="./index.html">Ver 24 ilustraciones de la iconoteca V1</a><a href="../index.html">Volver al juego</a></div>
+<h1>Gabinete de iconos · Interfaz y funciones</h1>
+<p class="lead">Lote 2 corregido: <strong>20 ubicaciones funcionales</strong> donde el Atlas usa emojis. Incluye Misiones, Cuaderno, Sociedad, Museo, Campo, estados y respaldos.</p>
+<div class="notice"><strong>Esto es una auditoría de los emojis que se reemplazarán, no una colección de 20 dibujos nuevos.</strong> Los objetos de inventario y las imágenes de coleccionables ya actualizadas están fuera de alcance. Las ilustraciones V1 siguen disponibles arriba. No hay cambios en el juego ni en las partidas.</div>
 </header>
-<main>
-<div class="controls">
-<label>Grupo<select id="group"><option value="">Todos los grupos</option><option>Fósiles</option><option>Coleccionables</option><option>Instrumentos</option></select></label>
-<label>Buscar<input id="q" type="search" placeholder="Objeto o identificador"></label>
-<label>Tamaño<select id="size"><option value="24">24 px</option><option value="32">32 px</option><option value="48">48 px</option><option value="60">60 px</option><option value="80" selected>80 px</option><option value="128">128 px</option></select></label>
-<label><span>Contraste</span><button id="theme" type="button" aria-pressed="false">Probar fondo oscuro</button></label>
-</div>
-<p id="count" class="count" aria-live="polite"></p>
-<section id="gallery" class="gallery" aria-label="Referencias del segundo lote"></section>
-<p id="empty" class="empty" hidden>No hay coincidencias con esos filtros.</p>
-</main>
-<footer><p>Galería experimental separada del juego. El origen de las figuras es <code>AtlasItemArt</code> en <code>www/js/item-art-v3198.js</code>. Las ilustraciones definitivas requieren revisión y aprobación.</p></footer>
-<script src="../js/item-art-v3198.js"></script>
+<main><div class="toolbar">
+<label>Sección<select id="section"><option value="">Todas</option><option>Sociedad</option><option>Cuaderno</option><option>Museo</option><option>Campo</option><option>Estados</option><option>Sistema</option></select></label>
+<label>Buscar<input id="q" type="search" placeholder="Misiones, monografías, etc."></label>
+<label>Tamaño del emoji de referencia<select id="size"><option value="24">24 px</option><option value="32">32 px</option><option value="48">48 px</option><option value="56" selected>56 px</option><option value="80">80 px</option></select></label>
+<button id="contrast" type="button" aria-pressed="false">Fondo oscuro</button></div>
+<p id="count" class="count" aria-live="polite"></p><section class="gallery" id="gallery" aria-label="Objetivos de sustitución de emojis"></section>
+<p id="empty" hidden>No hay resultados para esos filtros.</p>
+</main><footer>Revisión de ubicaciones reales en el código de El Gran Atlas 4.9.6. Para aprobar una sustitución, primero debe existir una ilustración propia fiel al concepto y legible a tamaño móvil. No sustituir imágenes de objetos ni animales.</footer>
 <script>
 "use strict";
-const items=[["fossil_fragment","Fragmento fósil","Fósiles"],["fossil_skull","Cráneo fósil","Fósiles"],["fossil_tooth","Diente fósil","Fósiles"],["fossil_horn","Cuerno fósil","Fósiles"],["hard_bone","Hueso duro","Fósiles"],["fossil_track","Huella fósil","Fósiles"],["fossil_plate","Placa fósil","Fósiles"],["fossil_rib","Costilla fósil","Fósiles"],["fossil_claw","Garra fósil","Fósiles"],["fossil_amber","Ámbar fósil","Fósiles"],["pressed_flower","Flor prensada","Coleccionables"],["owl_feather","Pluma de búho","Coleccionables"],["antler_fragment","Fragmento de asta","Coleccionables"],["river_pebble","Piedra de río","Coleccionables"],["ancient_coin","Moneda antigua","Coleccionables"],["brass_compass","Brújula de latón","Instrumentos"],["field_telescope","Catalejo de campo","Instrumentos"],["old_ink","Tintero antiguo","Instrumentos"],["brass_shard","Fragmentos de latón","Instrumentos"],["carved_wood","Madera tallada","Instrumentos"]];
-const gallery=document.getElementById('gallery'),search=document.getElementById('q'),group=document.getElementById('group'),size=document.getElementById('size'),theme=document.getElementById('theme'),count=document.getElementById('count'),empty=document.getElementById('empty');
-function render(){
- const term=search.value.toLocaleLowerCase('es').trim(),g=group.value;
- const chosen=items.filter(([id,name,c])=>(!g||c===g)&&(!term||(id+' '+name+' '+c).toLocaleLowerCase('es').includes(term)));
- gallery.replaceChildren();
- const art=window.AtlasItemArt;
- for (const [id,name,c] of chosen){
-  const tile=document.createElement('article');tile.className='tile';
-  const visual=document.createElement('div');visual.className='visual';
-  visual.style.setProperty('--icon-size',size.value+'px');
-  visual.innerHTML=art&&art.renderItemArt(id)||'';
-  const title=document.createElement('div');title.className='name';title.textContent=name;
-  const meta=document.createElement('div');meta.className='meta';meta.textContent=id;
-  const pill=document.createElement('span');pill.className='pill';pill.textContent=c+' · referencia existente';
-  tile.append(visual,title,meta,pill);gallery.append(tile);
+const targets=[{"id":"encargos","name":"Encargos y misiones","emoji":"🎯","group":"Sociedad","where":"www/js/app.js · Sociedad > Misiones","status":"nuevo","note":"Un objetivo asignado; no confundir con el icono general de Misiones de V1."},{"id":"logros","name":"Logros","emoji":"🏅","group":"Sociedad","where":"www/js/society-achievements-ui-v3360.js · avisos de logros","status":"nuevo","note":"Diferenciar del Prestigio; aunque compartan emoji, las funciones son distintas."},{"id":"subvenciones","name":"Subvenciones","emoji":"💷","group":"Sociedad","where":"www/js/app.js · Sociedad > Subvenciones","status":"reusar","reuse":"libras","note":"Puede reutilizar la moneda de Libras V1 sin dibujar otra."},{"id":"publicaciones","name":"Publicaciones","emoji":"📚","group":"Sociedad","where":"www/js/app.js · Sociedad > Publicaciones","status":"reusar","reuse":"tomos","note":"Reutilizar libros V1 y mantener rótulo diferenciado."},{"id":"monografias","name":"Monografías","emoji":"📜","group":"Cuaderno","where":"www/js/app.js · Sociedad > Monografías","status":"nuevo","note":"Ficha de estudio completa; distinta del pergamino de Conocimiento."},{"id":"atlas_total","name":"Atlas total","emoji":"🌐","group":"Cuaderno","where":"www/js/app.js · Sociedad > Atlas total","status":"nuevo","note":"Globo/cartografía mundial; no objeto coleccionable."},{"id":"registro","name":"Registro científico","emoji":"📊","group":"Cuaderno","where":"www/js/app.js · sección Registro científico","status":"nuevo","note":"Estadísticas y progreso de investigación."},{"id":"exposiciones","name":"Exposiciones","emoji":"🖼️","group":"Museo","where":"www/js/app.js · Museo > Exposiciones","status":"nuevo","note":"Sala de exposición, no una pieza de inventario."},{"id":"muestras","name":"Muestras","emoji":"🐾","group":"Museo","where":"www/js/app.js · Museo > Muestras","status":"nuevo","note":"Subsección de colecciones, no sprite de animal."},{"id":"relictos","name":"Relictos","emoji":"🗿","group":"Museo","where":"www/js/app.js · Investigación de relictos","status":"nuevo","note":"Identidad de la sección, no ilustración de ejemplares."},{"id":"conservacion","name":"Conservación","emoji":"🗃️","group":"Museo","where":"www/js/app.js · conservación de colecciones","status":"nuevo","note":"Archivo científico, no material conservado."},{"id":"comparativo","name":"Análisis comparativo","emoji":"🧬","group":"Museo","where":"www/js/app.js · análisis comparativo","status":"nuevo","note":"Herramienta científica de análisis."},{"id":"indicios","name":"Indicios de campo","emoji":"🔎","group":"Campo","where":"www/js/app.js · archivo de campo e indicios","status":"nuevo","note":"Función de búsqueda de pistas; no nuevo objeto."},{"id":"navegacion","name":"Navegación y comercio","emoji":"⚓","group":"Campo","where":"www/js/commissions-v3370.js · categoría Navegación y Comercio","status":"nuevo","note":"Subcategoría funcional de encargos."},{"id":"desbloqueo","name":"Región desbloqueada","emoji":"🗝️","group":"Estados","where":"www/js/app.js · notificación de desbloqueo","status":"nuevo","note":"Estado funcional del mapa."},{"id":"bloqueado","name":"Requisito pendiente","emoji":"🔒","group":"Estados","where":"www/js/app.js · requisitos de Investigación","status":"nuevo","note":"Indicador de acceso bloqueado."},{"id":"completado","name":"Objetivo completado","emoji":"✅","group":"Estados","where":"www/js/app.js · monografías / Museo","status":"nuevo","note":"Estado de progreso finalizado."},{"id":"respaldo","name":"Respaldar partida","emoji":"💾","group":"Sistema","where":"www/index.html · guardar y recuperar partida","status":"nuevo","note":"Acción del sistema; no coleccionable."},{"id":"exportar","name":"Exportar respaldo","emoji":"📤","group":"Sistema","where":"www/index.html · compartir respaldo","status":"nuevo","note":"Acción de exportación."},{"id":"importar","name":"Importar respaldo","emoji":"📥","group":"Sistema","where":"www/index.html · recuperar una partida JSON","status":"nuevo","note":"Acción de restauración."}];
+const $=id=>document.getElementById(id),section=$('section'),q=$('q'),size=$('size'),gallery=$('gallery'),count=$('count');
+function paint(){
+ const term=q.value.toLocaleLowerCase('es').trim(),group=section.value;gallery.replaceChildren();
+ const matched=targets.filter(x=>(!group||x.group===group)&&(!term||(x.name+' '+x.id+' '+x.emoji+' '+x.where).toLocaleLowerCase('es').includes(term)));
+ for(const x of matched){const tile=document.createElement('article');tile.className='tile';const visual=document.createElement('div');visual.className='visual';visual.style.setProperty('--icon-size',size.value+'px');
+ const emoji=document.createElement('span');emoji.textContent=x.emoji;emoji.setAttribute('aria-label',x.name);visual.append(emoji);
+ const name=document.createElement('div');name.className='name';name.textContent=x.name;
+ const category=document.createElement('div');category.className='meta';category.textContent=x.group+' · '+x.where;
+ const tag=document.createElement('span');tag.className='state';tag.textContent=x.status==='reusar'?'Reutilizar V1: '+x.reuse:'Diseño nuevo pendiente';
+ const note=document.createElement('div');note.className='note';note.textContent=x.note;
+ tile.append(visual,name,category,tag,note);gallery.append(tile);
  }
- count.textContent=chosen.length+' de '+items.length+' referencias visibles';
- empty.hidden=chosen.length>0;
+ count.textContent=matched.length+' de '+targets.length+' objetivos de interfaz visibles';$('empty').hidden=matched.length>0;
 }
-for(const el of [search,group,size]) el.addEventListener('input',render);
-theme.addEventListener('click',()=>{document.body.classList.toggle('dark');const active=document.body.classList.contains('dark');theme.setAttribute('aria-pressed',String(active));theme.textContent=active?'Volver a fondo claro':'Probar fondo oscuro';});
-render();
-</script>
-</body>
-</html>
+for(const control of [section,q,size])control.addEventListener('input',paint);
+$('contrast').addEventListener('click',()=>{document.body.classList.toggle('dark');const d=document.body.classList.contains('dark');$('contrast').textContent=d?'Fondo claro':'Fondo oscuro';$('contrast').setAttribute('aria-pressed',String(d));});paint();
+</script></body></html>
