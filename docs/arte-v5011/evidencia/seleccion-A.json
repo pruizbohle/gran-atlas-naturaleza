@@ -1,0 +1,37 @@
+{
+  "baseline": "eaeb392",
+  "filter": "insuficiente",
+  "summary": "14 de 564 variantes",
+  "planned": [
+    {
+      "key": "af_fosa_ave/albino",
+      "name": "Águila pescadora de Madagascar · Albino",
+      "finding": "Plumaje lavado y perfil facial poco legible en claro. Cuidar la transición de la cabeza al pico y separar el blanco de la cola del fondo."
+    },
+    {
+      "key": "af_xlsx_131_circaetus_gallicus/albino",
+      "name": "Águila culebrera · Albino",
+      "finding": "El barrado residual destaca más que la cabeza. Sobre claro no se distingue el ojo grande ni el disco facial; comprobar pigmentación y tejidos."
+    },
+    {
+      "key": "af_xlsx_131_gyps_africanus/albino",
+      "name": "Buitre dorsiblanco africano · Albino",
+      "finding": "Cuello y cabeza ofrecen poco relieve y el manto tiende a un tono plano; diferenciar piel de plumas, garras y zonas claras de las escapulares."
+    },
+    {
+      "key": "af_xlsx_131_polemaetus_bellicosus/albino",
+      "name": "Águila marcial · Albino",
+      "finding": "Las motas de pecho se leen, pero la cara, los tarsos y las garras se pierden sobre la roca en claro. Recuperar tejidos, apoyos y detalle de cresta."
+    },
+    {
+      "key": "af_xlsx_sahara_buitre/albino",
+      "name": "Buitre orejudo · Albino",
+      "finding": "Cabeza y cuello desnudos pierden los pliegues característicos frente al manto rosa. Separar piel, garras, musculatura y soporte."
+    },
+    {
+      "key": "af_xlsx_131_hydrictis_maculicollis/albino",
+      "name": "Nutria de cuello manchado · Albino",
+      "finding": "El moteado residual domina la garganta mientras hocico y ojos se pierden. La variante requiere un tratamiento propio de boca, vibrisas y pigmentación residual."
+    }
+  ]
+}

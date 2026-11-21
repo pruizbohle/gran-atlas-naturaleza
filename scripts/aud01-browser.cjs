@@ -361,9 +361,10 @@ async function art04Smoke(browser) {
 
 async function pigmentAuditSmoke(browser) {
   const { version } = JSON.parse(readFileSync('www/atlas-release.json', 'utf8'));
-  const hasBearReplacement = version === '5.0.10';
-  const lot = hasBearReplacement ? 'art06' : 'art05';
-  const docs = hasBearReplacement ? 'docs/arte-v5010' : 'docs/arte-v509';
+  const art07 = version === '5.0.11';
+  const hasBearReplacement = art07 || version === '5.0.10';
+  const lot = art07 ? 'art07' : hasBearReplacement ? 'art06' : 'art05';
+  const docs = 'docs/arte-v' + version.replaceAll('.', '');
   const albinas = hasBearReplacement ? 303 : 302;
   const melanicas = hasBearReplacement ? 261 : 262;
   const { totals } = JSON.parse(readFileSync(docs + '/inventario-aud04.json', 'utf8'));
@@ -416,7 +417,7 @@ async function pigmentAuditSmoke(browser) {
     assert.deepEqual(families, [...families].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' })));
     await audit('sort').selectOption('priority');
     assert.equal(await cards.first().getAttribute('data-art-state'), 'insuficiente');
-    const screenshots = process.env.ATLAS_ART06_SCREENSHOTS || process.env.ATLAS_ART05_SCREENSHOTS;
+    const screenshots = process.env.ATLAS_ART07_SCREENSHOTS || process.env.ATLAS_ART06_SCREENSHOTS || process.env.ATLAS_ART05_SCREENSHOTS;
     assert.ok(await lab.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
     assert.ok(await lab.locator('#pigment-audit-filters label').evaluateAll(labels => labels.every(label =>
       label.firstElementChild.getBoundingClientRect().right <= label.getBoundingClientRect().right + 1)));
@@ -443,7 +444,7 @@ async function pigmentAuditSmoke(browser) {
 
     const { rows } = JSON.parse(readFileSync(docs + '/decisiones.json', 'utf8'));
     const approved = rows.filter(row => row.outcome === 'aprobada');
-    const example = hasBearReplacement ? approved.find(row => row.id === 'asia_esp_0523') : approved[0];
+    const example = hasBearReplacement ? { id: 'asia_esp_0523', variant: 'albino' } : approved[0];
     await audit('search').fill(example.id);
     if (hasBearReplacement) {
       await count(1);
@@ -505,6 +506,7 @@ async function pigmentAuditSmoke(browser) {
       assert.equal(await decoded(retired.locator('img').last()), 128);
     }
     await labArtworkPreviews(lab, { id: example.id, key: example.variant });
+    if (art07 && approved.length) await labArtworkPreviews(lab, { id: approved[0].id, key: approved[0].variant });
     if (hasBearReplacement) {
       await lab.locator('[data-mode="compare"]').click();
       await lab.locator('#species').selectOption(example.id);
@@ -521,11 +523,16 @@ async function pigmentAuditSmoke(browser) {
     await lab.goto(link);
     await count(564);
     assert.ok(await lab.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
-    await audit('search').fill(approved[0].id);
-    await audit('kind').selectOption(approved[0].variant);
+    const mobileExample = approved[0] || example;
+    await audit('search').fill(mobileExample.id);
+    await audit('kind').selectOption(mobileExample.variant);
     await cards.first().locator('button').click();
     assert.ok(await dialog.isVisible());
     assert.ok(await dialog.evaluate(node => node.scrollWidth <= node.clientWidth + 1));
+    if (art07 && screenshots) {
+      await decoded(dialog.locator('img'));
+      await lab.screenshot({ path: path.join(screenshots, 'ficha-art07-movil.png') });
+    }
     assert.deepEqual(errors, []);
     return { variants: 564, albinas, melanicas, corrected, sizes, ...(hasBearReplacement ? { retiredBearHistory: true } : {}),
       filtering: ['tipo', 'estado', 'familia', 'corrección', 'comparativa'],
@@ -605,7 +612,7 @@ async function offlineRun(browser) {
       options.filter(o => ['albino', 'melanico', 'pigments'].includes(o.value)).map(o => o.value)), ['albino', 'melanico', 'pigments']);
     await lab.locator('[data-mode="variants"]').click();
     const pigmentCounts = {};
-    const bearReplaced = JSON.parse(readFileSync('www/atlas-release.json', 'utf8')).version === '5.0.10';
+    const bearReplaced = ['5.0.10', '5.0.11'].includes(JSON.parse(readFileSync('www/atlas-release.json', 'utf8')).version);
     for (const [value, expected] of [['albino', bearReplaced ? 303 : 302], ['melanico', bearReplaced ? 261 : 262], ['pigments', 564]]) {
       await lab.locator('#variant-view').selectOption(value);
       const selector = value === 'pigments' ? '[data-pigment-key="albino"], [data-pigment-key="melanico"]' : '[data-pigment-key="' + value + '"]';
@@ -627,7 +634,7 @@ async function offlineRun(browser) {
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const browser = await chromium.launch({ executablePath: process.env.ATLAS_CHROMIUM || '/usr/bin/chromium', args: ['--no-sandbox'] });
   try {
-    if (process.env.ATLAS_ART05_SMOKE === '1' || process.env.ATLAS_ART06_SMOKE === '1') {
+    if (process.env.ATLAS_ART05_SMOKE === '1' || process.env.ATLAS_ART06_SMOKE === '1' || process.env.ATLAS_ART07_SMOKE === '1') {
       const audit = await pigmentAuditSmoke(browser);
       console.log(JSON.stringify({ chromium: browser.version(), audit }, null, 2));
       return;

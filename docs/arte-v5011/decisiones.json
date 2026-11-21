@@ -1,0 +1,95 @@
+{
+  "baseline": "eaeb392",
+  "rows": [
+    {
+      "lot": "A",
+      "id": "af_fosa_ave",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación de aspecto albino",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo amarillento",
+        "color": "Rosado pardo claro",
+        "changed": true,
+        "why": "El anillo claro separa iris y pupila en la cabeza. El tono y la pigmentación residual son interpretaciones."
+      },
+      "note": "La cara y la cera amarilla suave se separan del pico córneo. Las plumas escalonadas mantienen el perfil y la cola blanca conserva contorno sobre crema."
+    },
+    {
+      "lot": "A",
+      "id": "af_xlsx_131_circaetus_gallicus",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación de aspecto albino",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Amarillo anaranjado",
+        "color": "Ámbar rosado pálido",
+        "changed": true,
+        "why": "El matiz es más tenue que el amarillo habitual. Conserva el ojo ancho que caracteriza a la especie."
+      },
+      "note": "Cabeza redonda, pico corto y primarias digitadas se distinguen en crema. El barrado alar residual se conserva muy tenue y los tarsos quedan recogidos en vuelo."
+    },
+    {
+      "lot": "A",
+      "id": "af_xlsx_131_polemaetus_bellicosus",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación de aspecto albino",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Amarillo",
+        "color": "Ámbar pálido con borde rosado",
+        "changed": true,
+        "why": "Se conserva la pupila bajo el arco supraocular. La elección de color se limita a la interpretación de la lámina."
+      },
+      "note": "Se recuperan cresta corta, capas del ala y garras sobre la roca. Las motas del pecho quedan muy tenues y el tarso emplumado se separa de los dedos."
+    },
+    {
+      "lot": "A",
+      "id": "af_xlsx_131_gyps_africanus",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo rosado tenue",
+        "changed": true,
+        "why": "La pupila se distingue de la piel gris malva. El iris queda discreto y la referencia zoológica documenta la anatomía."
+      },
+      "note": "Cuello gris malva y collar marfil se separan del parche blanco del dorso. Las capas alares se distinguen por grafito y los pies conservan uñas y apoyo."
+    },
+    {
+      "lot": "A",
+      "id": "af_xlsx_sahara_buitre",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación de aspecto albino",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo rosado oscuro",
+        "changed": true,
+        "why": "El iris sigue discreto. El rosado de la piel reconoce los pliegues desnudos y sugiere vascularización sin diagnosticar el fenotipo."
+      },
+      "note": "El pico macizo, los pliegues del cuello y los tarsos se leen por separado. El manto marfil recupera el relieve y el pequeño apoyo conserva un tono propio."
+    },
+    {
+      "lot": "A",
+      "id": "af_xlsx_131_hydrictis_maculicollis",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación de aspecto albino",
+      "evidence": "Albinismo referido en la especie · distribución del pigmento interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo rosado suave",
+        "changed": true,
+        "why": "El ojo pequeño gana lectura con un contorno suave. No se atribuye al ejemplar ilustrado el iris de un registro clínico."
+      },
+      "note": "Hocico, nariz y vibrisas cortas se distinguen del pelo marfil. Las motas quedan atenuadas en la garganta y la cola curva y las patas conservan sus perfiles."
+    }
+  ]
+}

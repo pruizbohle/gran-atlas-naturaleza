@@ -11,7 +11,8 @@ const previous = require('../docs/arte-v509/inventario-aud04.json');
 const current = require('../docs/arte-v5010/inventario-aud04.json');
 const decisions = require('../docs/arte-v5010/decisiones.json');
 const integrity = require('../docs/arte-v5010/integridad.json');
-const release = require('../www/atlas-integrity.json').files;
+const publishedFile = file => execFileSync('git', ['show', 'eaeb392:www/' + file], { maxBuffer: 4 * 1024 * 1024 });
+const release = JSON.parse(publishedFile('atlas-integrity.json')).files;
 require('../www/js/naturalist-assets-v400.js');
 const assets = globalThis.AtlasNaturalistAssets;
 
@@ -89,7 +90,7 @@ test('ART-06 retains the audited slot and updates the active viewer inventory', 
     assert.equal(now.visualState, decision.outcome === 'aprobada' ? 'correcta' : row.visualState);
     assert.ok(decision.eye?.color && decision.eye.why);
   }
-  const script = fs.readFileSync('www/naturalist-art/pigment-audit-data.js', 'utf8');
+  const script = publishedFile('naturalist-art/pigment-audit-data.js').toString('utf8');
   const items = JSON.parse(vm.runInNewContext(script + '\nJSON.stringify(pigmentAuditRecords)'));
   assert.deepEqual(items.map(key), current.variants.map(key));
   assert.equal(items.filter(row => row.variant === 'albino').length, 303);

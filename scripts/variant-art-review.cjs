@@ -5,7 +5,7 @@ const { createHash } = require('node:crypto');
 const fs = require('node:fs');
 
 const root = 'www/naturalist-art';
-const reviewStages = ['art01', 'art02', 'art03', 'art04', 'art05', 'art06'];
+const reviewStages = ['art01', 'art02', 'art03', 'art04', 'art05', 'art06', 'art07'];
 const corrected = row => reviewStages.some(stage => row[stage]?.outcome === 'aprobada');
 
 function buildVariantReview({ lot, previousLot, review, supersededArchive, version, correctionsOnly = false, viewer = false }) {
