@@ -76,25 +76,38 @@ async function performanceRun(browser, source) {
     await context.close();
   }
 }
-async function advancedRun(browser, file) {
+async function advancedRun(browser, file, source, waitUntilDrained) {
   const context = await browser.newContext({ ...mobile, serviceWorkers: 'block' });
   try {
     const page = await context.newPage();
     const cdp = await context.newCDPSession(page);
     await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 });
     await context.addInitScript(save => {
+      Date.now = () => 1700002800000;
       save.lastTick = Date.now() - 8 * 3600000;
+      let seed = 501;
+      Math.random = () => {
+        seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+        return seed / 2 ** 32;
+      };
       localStorage.setItem('gran_atlas_v05', JSON.stringify(save));
       window.auditLongTasks = [];
-      new PerformanceObserver(list => window.auditLongTasks.push(...list.getEntries().map(e => e.duration)))
+      new PerformanceObserver(list => window.auditLongTasks.push(...list.getEntries()
+        .map(e => ({ start: e.startTime, ms: e.duration }))))
         .observe({ type: 'longtask', buffered: true });
     }, JSON.parse(readFileSync(file, 'utf8')));
-    await start(page, origin() + '/audit/');
+    await start(page, origin() + '/' + source + '/');
     await page.waitForFunction(() => {
       const save = AtlasSaveBridge.getSaveData();
       return save.helpers === 10 && save.autoPending.length > 0;
     });
-    const first = await page.evaluate(() => AtlasSaveBridge.getSnapshot());
+    const inspect = () => page.evaluate(() => {
+      const save = AtlasSaveBridge.getSaveData();
+      const pending = save.autoPending.reduce((total, job) =>
+        total + 1 + Math.floor((job.end - job.at) / job.interval), 0);
+      return { pending, ...AtlasSaveBridge.getSnapshot(), time: performance.now() };
+    });
+    const first = await inspect();
     const deadline = Date.now() + 5000;
     const fieldNavigationMs = [];
     while (Date.now() < deadline) {
@@ -106,10 +119,22 @@ async function advancedRun(browser, file) {
       }));
       await new Promise(resolve => setTimeout(resolve, 350));
     }
-    const last = await page.evaluate(() => AtlasSaveBridge.getSnapshot());
+    const last = await inspect();
     assert.ok(last.sightings > first.sightings);
-    return { helpers: 10, sightingsDuringSample: last.sightings - first.sightings,
-      fieldNavigationMs, longTasksMs: await page.evaluate(() => window.auditLongTasks),
+    const longTasksMs = await page.evaluate(({ start, end }) => window.auditLongTasks
+      .filter(entry => entry.start >= start && entry.start <= end).map(entry => entry.ms),
+    { start: first.time, end: last.time });
+    let drained = null;
+    if (waitUntilDrained) {
+      await page.waitForFunction(() => AtlasSaveBridge.getSaveData().autoPending.length === 0, null, { timeout: 90000 });
+      await page.waitForFunction(() => AtlasSaveBridge.verifySavedGame() &&
+        JSON.parse(localStorage.getItem('gran_atlas_v05')).autoPending.length === 0);
+      drained = await inspect();
+      assert.equal(drained.pending, 0);
+    }
+    return { source, helpers: 10, sampleMs: last.time - first.time,
+      sightingsDuringSample: last.sightings - first.sightings, pendingStart: first.pending, pendingAfterSample: last.pending,
+      observedDrainMsSinceFirstSample: drained ? drained.time - first.time : null, fieldNavigationMs, longTasksMs,
       jsHeapUsedBytes: (await cdp.send('Runtime.getHeapUsage')).usedSize };
   } finally {
     await context.close();
@@ -169,7 +194,11 @@ async function offlineRun(browser) {
   try {
     const runs = [];
     for (const id of ['base', 'audit', 'audit', 'base', 'base', 'audit']) runs.push(await performanceRun(browser, id));
-    const advanced = process.env.AUD01_ADVANCED_SAVE ? await advancedRun(browser, process.env.AUD01_ADVANCED_SAVE) : null;
+    const file = process.env.AUD01_ADVANCED_SAVE;
+    const advanced = file ? [
+      await advancedRun(browser, file, 'base', false),
+      await advancedRun(browser, file, 'audit', true)
+    ] : [];
     const offline = await offlineRun(browser);
     console.log(JSON.stringify({ chromium: browser.version(), viewport, cpuThrottle: 4, runs, advanced, offline }, null, 2));
   } finally {

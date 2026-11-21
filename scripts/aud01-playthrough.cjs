@@ -43,7 +43,7 @@ function metrics(g) {
 }
 const checkedSaveFields = ['sightings', 'discovered', 'inventory', 'stages', 'published', 'purchases',
   'specialCounts', 'legendaryFound', 'specialFound', 'equipment', 'regionUnlocked', 'museum',
-  'voyages', 'voyageSeq', 'voyageHistory', 'commerce', 'deepSurvey'];
+  'voyages', 'voyageSeq', 'voyageHistory', 'voyageSettled', 'commerce', 'deepSurvey'];
 function persistentProgress(g) {
   return JSON.parse(JSON.stringify(Object.fromEntries(checkedSaveFields.map(field => [field, g.state[field]]))));
 }
