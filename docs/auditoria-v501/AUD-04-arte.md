@@ -41,3 +41,7 @@ El inventario consolidado conserva los estados históricos y registra por separa
 ## Continuidad en V5.0.6
 
 ART-02 incorpora 32 evaluaciones visuales de Ursidae, Cervidae y Bovidae, documenta seis correcciones y ratifica la lámina del tigre pseudomelánico. La cobertura alcanza 140 de 564 variantes pigmentarias. [Informe y comparativas ART-02](../arte-v506/README.md) · [Inventario vigente](../arte-v506/inventario-aud04.json)
+
+## Continuidad en V5.0.7
+
+ART-03 revisa 34 variantes nuevas, incorpora seis sustituciones y establece la revisión ocular para futuras correcciones. El total alcanza 174 de 564 variantes. [Informe y comparativas](../arte-v507/README.md) · [Inventario vigente](../arte-v507/inventario-aud04.json) · [Estándar de pigmentación ocular](../cientifica-v440/estandar.md#pigmentación-ocular-de-variantes-especiales--vigente-desde-v507)

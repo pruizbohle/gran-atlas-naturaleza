@@ -150,9 +150,9 @@ const decoded = locator => locator.first().evaluate(async img => {
 async function gameArtworkChecks(page, specimen) {
   const tabs = name => page.locator('.tab[data-tab="' + name + '"]').first().evaluate(node => node.click());
   // A disposable save exercises ordinary presentation of an already observed variant.
-  await page.evaluate(({ id, name, variant }) => {
+  await page.evaluate(({ id, name, variant, region }) => {
     const save = AtlasSaveBridge.getSaveData();
-    save.currentRegion = 'HX-01-09';
+    save.currentRegion = region || 'HX-01-09';
     save.selectedJournal = id;
     save.discovered[id] = true;
     save.published[id] = true;
@@ -263,7 +263,7 @@ async function art02Checks(page, lab) {
 }
 
 async function art03Checks(page, lab) {
-  const mink = { id: 'eu_esp_0622', name: 'visón europeo', variant: 'Melánico', key: 'melanico' };
+  const mink = { id: 'eu_esp_0622', name: 'visón europeo', variant: 'Melánico', key: 'melanico', region: 'HX-02-10' };
   await gameArtworkChecks(page, mink);
   await lab.locator('[data-mode="art03"]').click();
   const archive = lab.locator('[data-art03-species]');
