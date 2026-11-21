@@ -3608,8 +3608,10 @@ function normalizeMuseumJobs(museum){
    let seq=Math.max(scientificVoyageId(museum[seqKey])??0,lastId);
    const seen=new Set();
    museum[jobsKey]=museum[jobsKey].filter(job=>{
+     // Preserve historical unknown sites as records; only registered operations pay rewards.
+     if(!knownTypes.has(job[typeKey]))return true;
      const id=scientificVoyageId(job.id);
-     if(id===null||!knownTypes.has(job[typeKey])||seen.has(id)||museum[receiptsKey]?.[id])return false;
+     if(id===null||seen.has(id)||museum[receiptsKey]?.[id])return false;
      seen.add(id);seq=Math.max(seq,id);
      return true;
    });
@@ -3648,7 +3650,7 @@ function formatMuseumTimeRemaining(endAt,now=Date.now()){
 }
 function collectExcavation(jobId,now=Date.now(),random=Math.random){
  const jobs=state.museum?.excavations||[];
- const index=jobs.findIndex(job=>String(job.id)===String(jobId));
+ const index=jobs.findIndex(job=>String(job.id)===String(jobId)&&MUSEUM_DIG_SITES.some(site=>site.id===job.site));
  if(index<0||!Number.isFinite(now))return false;
  const job=jobs[index],site=MUSEUM_DIG_SITES.find(x=>x.id===job.site);
  const id=scientificVoyageId(job.id);
