@@ -451,6 +451,12 @@ const landscapes = fs.readdirSync(path.join(out, 'landscapes')).filter(file => f
 const animalFiles = [...assets].sort().flatMap(file =>
   ['', '64/', '128/', '256/'].map(size => 'naturalist-art/plates/' + size + file));
 const files = [...animalFiles, ...landscapes.map(key => 'naturalist-art/landscapes/' + key + '.webp')];
+const art01Archive = path.join(out, 'review', 'art01');
+if (fs.existsSync(art01Archive)) {
+  for (const file of fs.readdirSync(art01Archive, { recursive: true })) {
+    if (file.endsWith('.webp')) reviewFiles.add('naturalist-art/review/art01/' + file.split(path.sep).join('/'));
+  }
+}
 const labFiles = [...reviewFiles].sort();
 for (const file of [...files, ...labFiles]) {
   if (!fs.existsSync('www/' + file)) throw Error('Falta derivado gráfico: ' + file);

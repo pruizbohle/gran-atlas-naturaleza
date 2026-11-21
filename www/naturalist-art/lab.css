@@ -236,3 +236,7 @@ figcaption { padding: .4rem 0; }
   color: #353027;
   border-radius: .25rem;
 }
+
+.art01-comparison{display:block;margin-block:1rem;text-align:left}
+.art01-comparison .comparison-styles{grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr))}
+.art01-comparison .atlas-art-frame{min-width:0}

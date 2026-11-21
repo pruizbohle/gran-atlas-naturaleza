@@ -1,0 +1,92 @@
+{
+  "baseline": "cd90a9e",
+  "positives": [
+    "oc_esp_vombatus_ursinus/albino",
+    "na_esp_corvus_corax/albino",
+    "na_esp_ambystoma_mexicanum/albino",
+    "asia_esp_0369/albino"
+  ],
+  "rows": [
+    {
+      "id": "af_gorila_montana",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "interpretation": "Extrapolación ilustrativa a gorila de montaña",
+      "note": "Marfil en el manto, sombras frías en hombros y piel desnuda diferenciada en párpados, rostro y nudillos. El caso documentado de Copito de Nieve corresponde a otro taxón de gorila."
+    },
+    {
+      "id": "af_gorila_montana",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "interpretation": "Hipótesis pigmentaria",
+      "note": "El pelaje casi negro conserva mechones en hombros y antebrazos. Los reflejos locales recuperan la profundidad de las cejas, la nariz y las manos.",
+      "rejected": "Se descartó el primer manto gris, demasiado similar a la lámina habitual."
+    },
+    {
+      "id": "asia_esp_0402",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "interpretation": "Interpretación de hipopigmentación extrema",
+      "note": "Hocico claro, iris poco pigmentado y mejillas anchas. Las bandas tenues se tratan como valores del pelaje y ayudan a reconocer la especie. El tigre blanco documentado conserva un patrón pigmentario distinto.",
+      "rejected": "La primera propuesta perdía la gorguera y se leía como un gran felino genérico."
+    },
+    {
+      "id": "asia_esp_0402",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "interpretation": "Pseudomelanismo documentado",
+      "note": "Las rayas se ensanchan y confluyen sobre lomo y flancos. Se mantienen ventanas ocres, la cara y el patrón de las extremidades."
+    },
+    {
+      "id": "na_esp_panthera_onca",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "interpretation": "Hipótesis de albinismo",
+      "note": "El pelaje marfil deja leer la mandíbula y las patas robustas. Se ajustaron la pigmentación del iris, la trufa y el interior de las orejas. Las rosetas oscuras de la variante anterior ceden protagonismo a la anatomía."
+    },
+    {
+      "id": "na_esp_panthera_onca",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "interpretation": "Melanismo documentado",
+      "note": "Sobre el manto carbón quedan rosetas oscuras discretas en luz lateral. El ojo, las almohadillas de las vibrisas y las articulaciones conservan volumen.",
+      "rejected": "La primera propuesta daba al manto un marrón demasiado claro para el morfo."
+    },
+    {
+      "id": "zorro_rojo",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "interpretation": "Interpretación de albinismo",
+      "note": "La piel de oreja, hocico y párpado se separa del pelo claro. Se retuvieron la línea fina del hocico y la textura de la cola."
+    },
+    {
+      "id": "zorro_rojo",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "interpretation": "Morfo plateado documentado",
+      "note": "Manto pardo negruzco con pelos de guarda plateados y punta clara de la cola. La luz local vuelve a definir hocico, ojos y extremidades."
+    },
+    {
+      "id": "af_hipopotamo",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "interpretation": "Hipótesis pigmentaria",
+      "note": "Piel dorsal de pizarra, reflejos pardos en los pliegues y transición localizada en orejas y labios. Los dedos, la nuca y la papada mantienen relieve en fondo oscuro."
+    },
+    {
+      "id": "af_pangolin_gigante",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "interpretation": "Hipótesis pigmentaria",
+      "note": "Las escamas de queratina en marrón carbón conservan bordes y estrías. El ojo, la cara y las garras siguen separados de la armadura."
+    },
+    {
+      "id": "nutria_europea",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "interpretation": "Hipótesis pigmentaria",
+      "note": "Se distingue el hocico por la trufa y las vibrisas, la garganta por el valor intermedio y las patas delanteras por sus contornos. La cola sigue legible en fondo oscuro.",
+      "extension": true
+    }
+  ]
+}
