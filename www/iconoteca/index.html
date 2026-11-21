@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Gran Atlas · Iconoteca de 1842</title>
+<style>
+:root{--ink:#433525;--muted:#756550;--line:#d1bb96;--green:#385646;--gold:#b68a40;--paper:#fbf4e5}
+*{box-sizing:border-box}body{margin:0;background:#ebe2d0;color:var(--ink);font-family:Georgia,serif}
+.top{padding:30px 18px;background:linear-gradient(115deg,#253b30,#49624c);color:#fff0d0;border-bottom:4px solid #b99756}
+.wrap{max-width:1160px;margin:auto;padding:0 16px}
+.eyebrow{font:12px/1.4 system-ui,sans-serif;letter-spacing:.2em;color:#e0cba5}
+h1{font-size:clamp(30px,4vw,46px);margin:9px 0}h2{font-size:17px;margin:8px 0}
+.top p{font:14px/1.6 system-ui,sans-serif;max-width:800px;color:#e6ddc9}
+main{padding-top:18px!important}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+input,select,button{font:14px system-ui,sans-serif}
+input,select,.tools button{padding:11px;border:1px solid #c7b392;border-radius:9px;background:#fffaf0;color:#41392e}
+input{flex:1;min-width:190px}button{cursor:pointer}
+.hint{font:13px/1.5 system-ui,sans-serif;color:#756550;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(164px,1fr));gap:12px;margin-bottom:24px}
+.art-card{background:#fff8e9;border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:pointer;box-shadow:0 2px 0 #b9a28140}
+.art-card:hover{outline:2px solid #aa8c57}.art-card:focus-visible{outline:3px solid var(--green)}
+.artbox{height:150px;background:linear-gradient(180deg,#f9f0df,#f0e5d0);display:grid;place-items:center}
+.artbox svg{width:112px;height:112px;display:block}
+.art-card .info{padding:12px;display:grid;gap:5px;text-align:center}
+.art-card .info strong{font-size:16px}.art-card .info small{font:12px system-ui,sans-serif;color:var(--muted)}
+.art-card .info .from{font-size:15px;min-height:19px;color:#8d7b62}
+.tiny .artbox{height:70px}.tiny .artbox svg{width:32px;height:32px}
+.medium .artbox{height:98px}.medium .artbox svg{width:56px;height:56px}
+.dark .artbox{background:#2f4a3c}
+.dark .artbox svg{filter:drop-shadow(0 1px 0 #c9b08380)}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:#7b6a55;font:13px/1.6 system-ui,sans-serif}
+.modal{border:1px solid var(--line);border-radius:12px;padding:0;max-width:520px;width:90%;background:var(--paper);box-shadow:0 14px 60px #0006}
+.modal::backdrop{background:#1b2920bc}
+.mhead{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:#365441;color:#fff4d5}
+.mhead button{color:#fff5d9;border:1px solid #91a08b;background:none;border-radius:6px;padding:7px 10px}
+.mart{height:300px;display:grid;place-items:center}.mart svg{width:min(270px,74vw);height:270px}
+.mmeta{padding:15px 18px;font:14px/1.6 system-ui,sans-serif}
+.tag{display:inline-block;background:#e8dec7;border-radius:4px;padding:2px 6px}
+@media(max-width:550px){.wrap{padding-left:10px;padding-right:10px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.artbox{height:132px}.artbox svg{width:100px;height:100px}.art-card .info{padding:8px 4px}.art-card .info strong{font-size:14px}}
+</style></head><body>
+<header class="top"><div class="wrap">
+<div class="eyebrow">GABINETE DEL NATURALISTA · 1842</div>
+<h1>Iconoteca de El Gran Atlas</h1>
+<p>24 iconos SVG candidatos para reemplazar emojis. Incluye ilustraciones nuevas y láminas originales de objetos ya presentes en el juego. Laboratorio separado: no cambia el motor, el guardado ni la versión publicada.</p>
+</div></header>
+<main class="wrap">
+<div class="tools"><input id="query" placeholder="Buscar iconos..." type="search" aria-label="Buscar iconos">
+<select id="group" aria-label="Filtrar por categoría"><option value="">Todas las categorías</option></select>
+<button id="scale" type="button">Tamaño: 112 px</button><button id="background" type="button">Fondo: claro</button></div>
+<p id="status" class="hint" role="status">Biblioteca en preparación.</p>
+<section id="gallery" class="grid"></section>
+<footer><strong>Fase de revisión visual.</strong> Los activos en el proyecto aún usan sus emojis originales. Antes de integrar, validar 24/32/48 px, modo móvil, contraste y accesibilidad. Las láminas del inventario se reutilizan desde <code>AtlasItemArt</code>, sin duplicar el arte base.</footer>
+</main>
+<dialog id="details" class="modal"><div class="mhead"><strong id="m-title"></strong><button type="button" id="m-close">Cerrar ✕</button></div><div class="mart" id="m-art"></div><div class="mmeta"><div id="m-description"></div><div id="m-origin"></div></div></dialog>
+<script src="../js/item-art-v3198.js"></script>
+<script src="./atlas-ui-icons.js"></script>
+<script>
+(()=>{
+'use strict';
+const lib=window.AtlasUiIcons,container=document.getElementById('gallery'),search=document.getElementById('query'),select=document.getElementById('group'),status=document.getElementById('status'),modal=document.getElementById('details');
+if(!lib){status.textContent='No se pudo cargar la biblioteca de iconos.';return;}
+for(const g of [...new Set(lib.entries.map(x=>x.group))]){const opt=document.createElement('option');opt.value=opt.textContent=g;select.appendChild(opt);}
+const norm=s=>(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+function open(x){
+ document.getElementById('m-title').textContent=x.name;
+ document.getElementById('m-art').innerHTML=lib.render(x.id);
+ document.getElementById('m-description').textContent='Grupo: '+x.group+' · Emoji original: '+x.emoji;
+ document.getElementById('m-origin').textContent='Origen: '+(x.source==='AtlasItemArt'?'Arte existente reutilizado · '+x.asset:'Dibujo vectorial nuevo')+' · Estado: candidato';
+ modal.showModal();
+}
+function draw(){
+ let visible=lib.entries.filter(x=>(!select.value||x.group===select.value)&&norm(x.name+' '+x.group+' '+x.id).includes(norm(search.value)));
+ status.textContent=visible.length+' de '+lib.entries.length+' iconos. Selecciona uno para ampliar sus trazos y consultar el origen.';
+ container.replaceChildren();
+ for(const x of visible){
+  const el=document.createElement('article');el.className='art-card';el.tabIndex=0;el.role='button';el.setAttribute('aria-label','Ampliar '+x.name);
+  const art=document.createElement('div');art.className='artbox';art.innerHTML=lib.render(x.id);
+  const info=document.createElement('div');info.className='info';
+  const title=document.createElement('strong');title.textContent=x.name;
+  const before=document.createElement('div');before.className='from';before.textContent=x.emoji+' → grabado';
+  const note=document.createElement('small');note.textContent=x.group+(x.source==='AtlasItemArt'?' · reutilizado':' · nuevo');
+  info.append(title,before,note);el.append(art,info);
+  el.onclick=()=>open(x);el.onkeydown=ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();open(x)}};
+  container.appendChild(el);
+ }
+}
+search.oninput=draw;select.onchange=draw;
+let size=0;document.getElementById('scale').onclick=e=>{size=(size+1)%3;container.classList.toggle('medium',size===1);container.classList.toggle('tiny',size===2);e.target.textContent='Tamaño: '+[112,56,32][size]+' px';};
+let dark=false;document.getElementById('background').onclick=e=>{dark=!dark;container.classList.toggle('dark',dark);e.target.textContent='Fondo: '+(dark?'oscuro':'claro');};
+document.getElementById('m-close').onclick=()=>modal.close();draw();
+})();
+</script></body></html>
