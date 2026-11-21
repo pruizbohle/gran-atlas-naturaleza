@@ -4717,15 +4717,23 @@ function scientificVoyageId(id){
  return Number.isSafeInteger(id)&&id>0?id:null;
 }
 function normalizeScientificVoyages(snapshot){
- const completed=new Set();
+ const completed=Object.create(null);
  let seq=scientificVoyageId(snapshot.voyageSeq)??0;
+ for(const [key,settled] of Object.entries(snapshot.voyageSettled||{})){
+   const id=scientificVoyageId(key);
+   if(settled!==true||id===null)continue;
+   completed[id]=true;
+   seq=Math.max(seq,id);
+ }
  for(const receipt of Array.isArray(snapshot.voyageHistory)?snapshot.voyageHistory:[]){
    const id=scientificVoyageId(receipt?.jobId);
    if(id===null||!Number.isFinite(receipt.at))continue;
    if(!Number.isFinite(receipt.money)||!Number.isFinite(receipt.knowledge))continue;
-   completed.add(id);
+   completed[id]=true;
    seq=Math.max(seq,id);
  }
+ if(Object.keys(completed).length)snapshot.voyageSettled=completed;
+ else delete snapshot.voyageSettled;
  const pending=new Set();
  snapshot.voyages=(Array.isArray(snapshot.voyages)?snapshot.voyages:[]).filter(job=>{
    if(!job||typeof job!=='object')return false;
@@ -4733,7 +4741,7 @@ function normalizeScientificVoyages(snapshot){
    if(id===null)return true;
    seq=Math.max(seq,id);
    // Leave a historical job with an unreadable date visible, unless the same departure has a valid date.
-   if(completed.has(id)||pending.has(id))return false;
+   if(completed[id]||pending.has(id))return false;
    if(Number.isFinite(job.endAt))pending.add(id);
    return true;
  }).filter(job=>Number.isFinite(job.endAt)||!pending.has(scientificVoyageId(job.id)));
@@ -4760,7 +4768,8 @@ function voyageMoneyReward(v){return Math.round(v.prize*(1+(state.equipment.neck
 function voyageKnowledgeReward(v){return v.notes+(state.equipment.instrument==='brass_compass'?Math.round(v.notes*0.04):0);}
 function resolveVoyageReward(job/* E-3280 BEGIN receipt-time */,resolvedAt=Date.now()/* E-3280 END receipt-time */){
   const v=VOYAGES.find(x=>x.id===job.type);
-  if(!v) return false;
+  const jobId=scientificVoyageId(job.id);
+  if(!v||(jobId!==null&&state.voyageSettled?.[jobId]===true))return false;
  // E-3280 BEGIN receipt-before
   const inventoryBefore={...state.inventory};
  // E-3280 END receipt-before
@@ -4807,6 +4816,7 @@ if(Math.random()<amberChance){addInventory('fossil_amber',1);pushLog('🟠 Halla
   const found=Object.fromEntries(Object.entries(received).map(([id,n])=>[id,n-(guaranteed[id]||0)]).filter(([,n])=>n>0));
   state.voyageHistory=(Array.isArray(state.voyageHistory)?state.voyageHistory:[]).concat([{jobId:job.id??null,type:v.id,at:resolvedAt,money:prize,knowledge:notes,guaranteed,found}]).slice(-12);
  // E-3280 END receipt-after
+  if(jobId!==null)(state.voyageSettled??={})[jobId]=true;
   return true;
 }
 function processVoyages(now){
@@ -7251,12 +7261,14 @@ finishVoyage=function(id){
  const job=state.voyages.find(j=>String(j.id)===String(id));
  const now=Date.now();
  if(!job||!Number.isFinite(job.endAt)||now<job.endAt)return false;
+ let rewarded=false;
  const ok=tradeTransaction3300(()=>{
    state.voyages=state.voyages.filter(j=>j!==job);
-   return resolveVoyageReward(job,now);
+   rewarded=resolveVoyageReward(job,now);
+   return true;
  });
  renderCounters();renderPanel();
- return ok;
+ return ok&&rewarded;
 };
 // INV3400 END atomic scientific departures and research
 

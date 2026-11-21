@@ -302,3 +302,28 @@ test('AUD-03 la confirmación del guardado acepta migraciones y progreso posteri
   assert.match(game.h.elements.saveManagerStatus.textContent, /Restauración confirmada/);
   assert.equal(JSON.parse(game.h.store[key]).money, save.money - 15);
 });
+
+test('AUD-03 un viaje liquidado fuera del historial visible conserva su recibo al volver a importar', () => {
+  const game = open();
+  const bridge = game.h.window.AtlasSaveBridge;
+  const save = bridge.getSaveData();
+  const route = game.g.VOYAGES.find(v => v.id === 'coast');
+  const first = { id: 1, type: route.id, endAt: noon };
+  save.voyages = Array.from({ length: 14 }, (_, i) => ({ ...first, id: i + 1 }));
+  bridge.restoreGame(save);
+  game.at(noon);
+  const completed = bridge.getSaveData();
+  assert.equal(game.g.state.money, save.money + route.prize * 14);
+  assert.equal(completed.voyageHistory.length, 12);
+  assert.ok(!completed.voyageHistory.some(entry => entry.jobId === 1));
+  assert.equal(completed.voyageSettled[1], true);
+  completed.voyages.push({ ...first, id: '1' });
+  bridge.restoreGame(completed);
+  const reopened = open(game.h.store);
+  reopened.at(noon);
+  assert.equal(reopened.g.state.money, completed.money);
+  assert.equal(reopened.g.state.knowledge, completed.knowledge);
+  assert.equal(reopened.g.state.voyageSeq, 14);
+  assert.equal(reopened.g.state.museum.voyagesCompleted, 14);
+  assert.equal(reopened.g.state.voyages.length, 0);
+});
