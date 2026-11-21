@@ -1,0 +1,17 @@
+{
+  "name": "El Gran Atlas — Iconoteca 1842 V1",
+  "version": "v1-candidate",
+  "branch": "arte/iconoteca-1842-v1",
+  "base_commit": "c8af26e7c5d8862fc14f36bf23798bae02229f3c",
+  "icons": 24,
+  "status": "art prototypes not integrated",
+  "source": "www/iconoteca/atlas-ui-icons.js",
+  "gallery": "www/iconoteca/index.html",
+  "groups": [
+    "Navegación",
+    "Indicadores",
+    "Acciones",
+    "Museo y gabinete"
+  ],
+  "integration_allowed": false
+}
