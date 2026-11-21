@@ -1,0 +1,450 @@
+{
+  "chromium": "156.0.8078.79",
+  "cpuSlowdown": 4,
+  "runs": [
+    {
+      "label": "base",
+      "hours": 8,
+      "recoveryMs": 16280.4,
+      "longTasks": 54,
+      "longestTaskMs": 320,
+      "maxInterfaceDelayMs": 441.5,
+      "navigationMs": [
+        251.70000000298023,
+        45.100000001490116,
+        209.10000000149012,
+        49.100000001490116,
+        219.10000000149012,
+        22.100000001490116,
+        131,
+        37.100000001490116,
+        126,
+        18.899999998509884,
+        205.70000000298023,
+        49.29999999701977,
+        258.8999999985099,
+        14.200000002980232,
+        126.39999999850988,
+        22
+      ],
+      "writes": 22,
+      "balances": {
+        "money": 34075,
+        "knowledge": 203587,
+        "sightings": {
+          "eu_esp_0628": 2486,
+          "ardilla_roja": 1310,
+          "eu_esp_0631": 1331,
+          "eu_esp_0636": 781,
+          "eu_esp_0617": 2477,
+          "eu_esp_0646": 1284,
+          "eu_esp_0629": 2478,
+          "nutria_europea": 1932,
+          "eu_esp_0656": 1295,
+          "eu_esp_0643": 2441,
+          "eu_esp_0655": 2020,
+          "eu_esp_0614": 1306,
+          "eu_esp_0654": 1294,
+          "buho_comun": 677,
+          "eu_esp_0649": 765,
+          "eu_esp_0612": 2459,
+          "erizo_europeo": 781,
+          "eu_esp_0661": 1280,
+          "eu_esp_0604": 1818,
+          "eu_esp_0669": 2465,
+          "eu_esp_0613": 916,
+          "eu_esp_0619": 2049,
+          "eu_esp_0606": 906,
+          "ciervo_rojo": 2496,
+          "tejon_europeo": 1811,
+          "eu_esp_0611": 2469,
+          "eu_esp_0637": 2508,
+          "eu_esp_0660": 1846,
+          "zorro_rojo": 1273,
+          "cisne_vulgar": 1809,
+          "corzo_europeo": 2068,
+          "martin_pescador": 623,
+          "frailecillo_atlantico": 605,
+          "eu_esp_0618": 833,
+          "oso_pardo": 600,
+          "eu_esp_0610": 600,
+          "eu_esp_0639": 602,
+          "eu_esp_0267": 600,
+          "eu_esp_0640": 600,
+          "lince_boreal": 2306,
+          "gloton": 600,
+          "lobo_gris": 1714,
+          "eu_esp_0621": 1966,
+          "eu_esp_0609": 600,
+          "eu_esp_0657": 1729,
+          "eu_esp_0642": 601,
+          "marmota_alpina": 600,
+          "rebeco_alpino": 600,
+          "aguila_real": 605,
+          "vibora_aspid": 655,
+          "salamandra_alpina": 600,
+          "liebre_variable": 600,
+          "quebrantahuesos": 600,
+          "ibice_alpino": 600,
+          "perdiz_nival": 600,
+          "eu_esp_0603": 1727,
+          "eu_esp_0630": 1687,
+          "eu_esp_0666": 525,
+          "eu_esp_0650": 546,
+          "eu_esp_0665": 1708,
+          "eu_esp_0667": 1692,
+          "petirrojo": 534,
+          "eu_esp_0653": 538,
+          "eu_esp_0605": 1703,
+          "jabali": 1724,
+          "eu_esp_0620": 1367,
+          "salamandra_comun": 529,
+          "eu_esp_0616": 230,
+          "milano_real": 87,
+          "eu_esp_0668": 1702,
+          "eu_esp_0645": 512,
+          "eu_esp_0632": 1707,
+          "eu_esp_0659": 546,
+          "buho_real": 251,
+          "eu_esp_0601": 207,
+          "eu_esp_0652": 1683,
+          "eu_esp_0602": 1361,
+          "eu_esp_0615": 1377,
+          "gato_montes": 1720,
+          "eu_esp_0644": 1391,
+          "eu_esp_0622": 79,
+          "castor_europeo": 1131,
+          "eu_esp_0608": 1143,
+          "eu_esp_0159": 1179,
+          "ciguena_blanca": 1133,
+          "eu_esp_0638": 1125
+        },
+        "inventory": {
+          "polished_lens": 1,
+          "fossil_fragment": 146,
+          "fossil_tooth": 38,
+          "brass_shard": 2,
+          "carved_wood": 1,
+          "parchment_scrap": 9,
+          "pressed_flower": 6,
+          "river_pebble": 10,
+          "fossil_skull": 3,
+          "map_fragment": 3,
+          "animal_trace": 0,
+          "rain_hood": 1
+        }
+      },
+      "hourlyMax": 100,
+      "dataLength": 37661,
+      "helpers": 10,
+      "jsHeapUsedBytes": 10831976,
+      "checkpoint": null,
+      "cpu": [
+        {
+          "name": "fmt",
+          "ms": 2215.7289999999994
+        },
+        {
+          "name": "app.js?v=4.9.6 (anónima)",
+          "ms": 1271.616
+        },
+        {
+          "name": "bindPanel",
+          "ms": 1100.0600000000002
+        },
+        {
+          "name": "encounter",
+          "ms": 733.0540000000004
+        },
+        {
+          "name": "achievements-v3360.js (anónima)",
+          "ms": 519.8830000000003
+        },
+        {
+          "name": "renderPanel",
+          "ms": 506.84299999999996
+        },
+        {
+          "name": "updateFieldOutput",
+          "ms": 315.4380000000002
+        },
+        {
+          "name": "metrics",
+          "ms": 256.637
+        },
+        {
+          "name": "getSpriteMarkup",
+          "ms": 123.49600000000002
+        },
+        {
+          "name": "researchRarityWeight",
+          "ms": 118.227
+        },
+        {
+          "name": "progress",
+          "ms": 94.116
+        },
+        {
+          "name": "pruneAutomaticHours",
+          "ms": 92.48100000000001
+        },
+        {
+          "name": "automaticEligibleSpecies",
+          "ms": 83.14700000000003
+        },
+        {
+          "name": "specimenRates",
+          "ms": 68.22800000000001
+        },
+        {
+          "name": "rarityWeight",
+          "ms": 65.83399999999997
+        },
+        {
+          "name": "recordSexObservation",
+          "ms": 53.411000000000016
+        },
+        {
+          "name": "rollSpecimen",
+          "ms": 48.87199999999999
+        },
+        {
+          "name": "persist",
+          "ms": 45.624
+        },
+        {
+          "name": "render",
+          "ms": 43.714999999999996
+        },
+        {
+          "name": "processAutomaticSearches",
+          "ms": 40.338
+        }
+      ]
+    },
+    {
+      "label": "candidate",
+      "hours": 8,
+      "recoveryMs": 19781.8,
+      "longTasks": 82,
+      "longestTaskMs": 699,
+      "maxInterfaceDelayMs": 776.1000000014901,
+      "navigationMs": [
+        251.79999999701977,
+        17.100000001490116,
+        268.20000000298023,
+        210.30000000447035,
+        511.30000000447035,
+        99.10000000149012,
+        420.29999999701977,
+        75.29999999701977,
+        569.7000000029802,
+        180.89999999850988,
+        502.3999999985099,
+        63.20000000298023,
+        375.09999999403954,
+        43.29999999701977,
+        504.70000000298023,
+        44.5,
+        281.6000000014901,
+        93.89999999850988,
+        550.1999999955297
+      ],
+      "writes": 25,
+      "balances": {
+        "money": 34075,
+        "knowledge": 203587,
+        "sightings": {
+          "eu_esp_0628": 2486,
+          "ardilla_roja": 1310,
+          "eu_esp_0631": 1331,
+          "eu_esp_0636": 781,
+          "eu_esp_0617": 2477,
+          "eu_esp_0646": 1284,
+          "eu_esp_0629": 2478,
+          "nutria_europea": 1932,
+          "eu_esp_0656": 1295,
+          "eu_esp_0643": 2441,
+          "eu_esp_0655": 2020,
+          "eu_esp_0614": 1306,
+          "eu_esp_0654": 1294,
+          "buho_comun": 677,
+          "eu_esp_0649": 765,
+          "eu_esp_0612": 2459,
+          "erizo_europeo": 781,
+          "eu_esp_0661": 1280,
+          "eu_esp_0604": 1818,
+          "eu_esp_0669": 2465,
+          "eu_esp_0613": 916,
+          "eu_esp_0619": 2049,
+          "eu_esp_0606": 906,
+          "ciervo_rojo": 2496,
+          "tejon_europeo": 1811,
+          "eu_esp_0611": 2469,
+          "eu_esp_0637": 2508,
+          "eu_esp_0660": 1846,
+          "zorro_rojo": 1273,
+          "cisne_vulgar": 1809,
+          "corzo_europeo": 2068,
+          "martin_pescador": 623,
+          "frailecillo_atlantico": 605,
+          "eu_esp_0618": 833,
+          "oso_pardo": 600,
+          "eu_esp_0610": 600,
+          "eu_esp_0639": 602,
+          "eu_esp_0267": 600,
+          "eu_esp_0640": 600,
+          "lince_boreal": 2306,
+          "gloton": 600,
+          "lobo_gris": 1714,
+          "eu_esp_0621": 1966,
+          "eu_esp_0609": 600,
+          "eu_esp_0657": 1729,
+          "eu_esp_0642": 601,
+          "marmota_alpina": 600,
+          "rebeco_alpino": 600,
+          "aguila_real": 605,
+          "vibora_aspid": 655,
+          "salamandra_alpina": 600,
+          "liebre_variable": 600,
+          "quebrantahuesos": 600,
+          "ibice_alpino": 600,
+          "perdiz_nival": 600,
+          "eu_esp_0603": 1727,
+          "eu_esp_0630": 1687,
+          "eu_esp_0666": 525,
+          "eu_esp_0650": 546,
+          "eu_esp_0665": 1708,
+          "eu_esp_0667": 1692,
+          "petirrojo": 534,
+          "eu_esp_0653": 538,
+          "eu_esp_0605": 1703,
+          "jabali": 1724,
+          "eu_esp_0620": 1367,
+          "salamandra_comun": 529,
+          "eu_esp_0616": 230,
+          "milano_real": 87,
+          "eu_esp_0668": 1702,
+          "eu_esp_0645": 512,
+          "eu_esp_0632": 1707,
+          "eu_esp_0659": 546,
+          "buho_real": 251,
+          "eu_esp_0601": 207,
+          "eu_esp_0652": 1683,
+          "eu_esp_0602": 1361,
+          "eu_esp_0615": 1377,
+          "gato_montes": 1720,
+          "eu_esp_0644": 1391,
+          "eu_esp_0622": 79,
+          "castor_europeo": 1131,
+          "eu_esp_0608": 1143,
+          "eu_esp_0159": 1179,
+          "ciguena_blanca": 1133,
+          "eu_esp_0638": 1125
+        },
+        "inventory": {
+          "polished_lens": 1,
+          "fossil_fragment": 146,
+          "fossil_tooth": 38,
+          "brass_shard": 2,
+          "carved_wood": 1,
+          "parchment_scrap": 9,
+          "pressed_flower": 6,
+          "river_pebble": 10,
+          "fossil_skull": 3,
+          "map_fragment": 3,
+          "animal_trace": 0,
+          "rain_hood": 1
+        }
+      },
+      "hourlyMax": 100,
+      "dataLength": 37657,
+      "helpers": 10,
+      "jsHeapUsedBytes": 11194164,
+      "checkpoint": null,
+      "cpu": [
+        {
+          "name": "bindPanel",
+          "ms": 3004.193999999997
+        },
+        {
+          "name": "renderPanel",
+          "ms": 1493.8860000000006
+        },
+        {
+          "name": "achievements-v3360.js (anónima)",
+          "ms": 1207.6750000000002
+        },
+        {
+          "name": "updateFieldOutput",
+          "ms": 863.482
+        },
+        {
+          "name": "app.js?v=4.9.6 (anónima)",
+          "ms": 790.8559999999998
+        },
+        {
+          "name": "encounter",
+          "ms": 737.4830000000001
+        },
+        {
+          "name": "metrics",
+          "ms": 677.9210000000002
+        },
+        {
+          "name": "specimenRates",
+          "ms": 215.079
+        },
+        {
+          "name": "weight",
+          "ms": 210.39800000000002
+        },
+        {
+          "name": "rollSpecimen",
+          "ms": 193.99899999999994
+        },
+        {
+          "name": "persist",
+          "ms": 192.19800000000004
+        },
+        {
+          "name": "progress",
+          "ms": 182.886
+        },
+        {
+          "name": "museum-curation-v3380.js (anónima)",
+          "ms": 177.825
+        },
+        {
+          "name": "maybeMuseumFieldDiscovery",
+          "ms": 125.06700000000001
+        },
+        {
+          "name": "getSpriteMarkup",
+          "ms": 93.60600000000001
+        },
+        {
+          "name": "automaticEligibleSpecies",
+          "ms": 91.02900000000002
+        },
+        {
+          "name": "weightedSpeciesPick",
+          "ms": 85.66499999999999
+        },
+        {
+          "name": "render",
+          "ms": 79.16
+        },
+        {
+          "name": "achievementMark3360",
+          "ms": 68.54599999999999
+        },
+        {
+          "name": "spriteFor",
+          "ms": 68.09599999999999
+        }
+      ]
+    }
+  ],
+  "interrupted": null
+}

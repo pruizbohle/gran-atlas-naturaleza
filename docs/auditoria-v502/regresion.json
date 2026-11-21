@@ -1,0 +1,41 @@
+{
+  "base": "4d3737d",
+  "candidate": "a1a4fb9",
+  "node": "v24.22.1",
+  "baseline": {
+    "tests": 837,
+    "failed": 211,
+    "passed": 626,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "topLevel": 837,
+    "suites": 0
+  },
+  "candidateSuite": {
+    "tests": 843,
+    "failed": 211,
+    "passed": 632,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "topLevel": 843,
+    "suites": 0
+  },
+  "addedTests": 6,
+  "newFailures": 0,
+  "historicalResults": 227,
+  "focused": {
+    "passing": 77,
+    "failed": 0
+  },
+  "release": {
+    "passing": 28,
+    "failed": 0
+  },
+  "pwa": {
+    "integrityVerified": true,
+    "bestiaryOffline": 1000
+  },
+  "regressionLogVersion": 1
+}
