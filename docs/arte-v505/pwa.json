@@ -1,0 +1,55 @@
+{
+  "chromium": "156.0.8078.79",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "cpuThrottle": 4,
+  "runs": [],
+  "advanced": [],
+  "offline": {
+    "integrityVerified": true,
+    "exactBackup": true,
+    "previousCaches": [
+      "gran-atlas-v5.0.4-naturalist-36615deb5253"
+    ],
+    "unchangedSaveReceipt": {
+      "money": 20006,
+      "knowledge": 32626,
+      "prestige": 23,
+      "currentRegion": "HX-02-11",
+      "sightings": 75324,
+      "published": 23
+    },
+    "bestiaryOffline": 1000,
+    "caches": {
+      "gran-atlas-v5.0.5-naturalist-cd252b5f504a": 6932
+    },
+    "pigmentCounts": {
+      "albino": 302,
+      "melanico": 262,
+      "pigments": 564
+    },
+    "art01": {
+      "sizes": {
+        "64": 33,
+        "128": 33,
+        "256": 33,
+        "512": 33
+      },
+      "renderedGameSurfaces": [
+        "field",
+        "journal",
+        "bestiary",
+        "museum"
+      ],
+      "labVariantPreviews": [
+        "field",
+        "journal",
+        "bestiary",
+        "museum"
+      ],
+      "archivedVariants": 11
+    }
+  }
+}

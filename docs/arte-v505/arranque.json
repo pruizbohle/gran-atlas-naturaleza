@@ -1,0 +1,958 @@
+{
+  "chromium": "156.0.8078.79",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "cpuSlowdown": 4,
+  "runs": [
+    {
+      "version": "base",
+      "stage": "new",
+      "helpers": 0,
+      "heapSamples": [
+        7221992,
+        7681560
+      ],
+      "startupMs": 1266,
+      "longStartupTasks": [
+        {
+          "start": 401.90000000037253,
+          "ms": 118
+        },
+        {
+          "start": 833.7000000001863,
+          "ms": 332
+        },
+        {
+          "start": 1169.5,
+          "ms": 85
+        }
+      ],
+      "moduleTimings": [
+        {
+          "name": "journal",
+          "sync": 67.39999999990687,
+          "nextPaint": 112.39999999990687,
+          "module": "journal",
+          "art": 0
+        },
+        {
+          "name": "bestiary",
+          "sync": 35.10000000009313,
+          "nextPaint": 185.29999999981374,
+          "module": "bestiary",
+          "art": 0
+        },
+        {
+          "name": "atlas",
+          "sync": 110.89999999990687,
+          "nextPaint": 138.89999999990687,
+          "module": "atlas",
+          "art": 0
+        },
+        {
+          "name": "research",
+          "sync": 61.6999999997206,
+          "nextPaint": 89.5,
+          "module": "research",
+          "art": 0
+        },
+        {
+          "name": "museum",
+          "sync": 62,
+          "nextPaint": 104,
+          "module": "museum",
+          "art": 0
+        },
+        {
+          "name": "society",
+          "sync": 30.100000000093132,
+          "nextPaint": 70.3000000002794,
+          "module": "society",
+          "art": 0
+        },
+        {
+          "name": "objects",
+          "sync": 25.100000000093132,
+          "nextPaint": 93.60000000009313,
+          "module": "objects",
+          "art": 0
+        },
+        {
+          "name": "expeditions",
+          "sync": 13.199999999720603,
+          "nextPaint": 54,
+          "module": "expeditions",
+          "art": 0
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "stage": "new",
+      "helpers": 0,
+      "heapSamples": [
+        7222380,
+        7688256
+      ],
+      "startupMs": 1136.5,
+      "longStartupTasks": [
+        {
+          "start": 732.4000000003725,
+          "ms": 337
+        },
+        {
+          "start": 1073.1000000000931,
+          "ms": 63
+        }
+      ],
+      "moduleTimings": [
+        {
+          "name": "journal",
+          "sync": 55.799999999813735,
+          "nextPaint": 79.79999999981374,
+          "module": "journal",
+          "art": 0
+        },
+        {
+          "name": "bestiary",
+          "sync": 24.899999999906868,
+          "nextPaint": 105.79999999981374,
+          "module": "bestiary",
+          "art": 0
+        },
+        {
+          "name": "atlas",
+          "sync": 94.89999999990687,
+          "nextPaint": 120.8000000002794,
+          "module": "atlas",
+          "art": 0
+        },
+        {
+          "name": "research",
+          "sync": 47.8000000002794,
+          "nextPaint": 77.70000000018626,
+          "module": "research",
+          "art": 0
+        },
+        {
+          "name": "museum",
+          "sync": 54.799999999813735,
+          "nextPaint": 84.29999999981374,
+          "module": "museum",
+          "art": 0
+        },
+        {
+          "name": "society",
+          "sync": 35.10000000009313,
+          "nextPaint": 69.5,
+          "module": "society",
+          "art": 0
+        },
+        {
+          "name": "objects",
+          "sync": 18.200000000186265,
+          "nextPaint": 65.40000000037253,
+          "module": "objects",
+          "art": 0
+        },
+        {
+          "name": "expeditions",
+          "sync": 8.400000000372529,
+          "nextPaint": 44.90000000037253,
+          "module": "expeditions",
+          "art": 0
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "stage": "new",
+      "helpers": 0,
+      "heapSamples": [
+        7238424,
+        7688224
+      ],
+      "startupMs": 1116.3,
+      "longStartupTasks": [
+        {
+          "start": 681.2000000001863,
+          "ms": 349
+        },
+        {
+          "start": 1031.3999999999069,
+          "ms": 76
+        }
+      ],
+      "moduleTimings": [
+        {
+          "name": "journal",
+          "sync": 75.70000000018626,
+          "nextPaint": 113.70000000018626,
+          "module": "journal",
+          "art": 0
+        },
+        {
+          "name": "bestiary",
+          "sync": 28.09999999962747,
+          "nextPaint": 131.59999999962747,
+          "module": "bestiary",
+          "art": 0
+        },
+        {
+          "name": "atlas",
+          "sync": 100,
+          "nextPaint": 129.29999999981374,
+          "module": "atlas",
+          "art": 0
+        },
+        {
+          "name": "research",
+          "sync": 60.39999999990687,
+          "nextPaint": 92.39999999990687,
+          "module": "research",
+          "art": 0
+        },
+        {
+          "name": "museum",
+          "sync": 52.799999999813735,
+          "nextPaint": 76.10000000009313,
+          "module": "museum",
+          "art": 0
+        },
+        {
+          "name": "society",
+          "sync": 27.399999999906868,
+          "nextPaint": 65.09999999962747,
+          "module": "society",
+          "art": 0
+        },
+        {
+          "name": "objects",
+          "sync": 21.899999999906868,
+          "nextPaint": 63,
+          "module": "objects",
+          "art": 0
+        },
+        {
+          "name": "expeditions",
+          "sync": 12.399999999906868,
+          "nextPaint": 55.89999999990687,
+          "module": "expeditions",
+          "art": 0
+        }
+      ]
+    },
+    {
+      "version": "base",
+      "stage": "new",
+      "helpers": 0,
+      "heapSamples": [
+        7207568,
+        7614252
+      ],
+      "startupMs": 1211.8,
+      "longStartupTasks": [
+        {
+          "start": 314.70000000018626,
+          "ms": 52
+        },
+        {
+          "start": 680.7000000001863,
+          "ms": 399
+        },
+        {
+          "start": 1082.3000000002794,
+          "ms": 91
+        }
+      ],
+      "moduleTimings": [
+        {
+          "name": "journal",
+          "sync": 67.5,
+          "nextPaint": 105.5,
+          "module": "journal",
+          "art": 0
+        },
+        {
+          "name": "bestiary",
+          "sync": 31.299999999813735,
+          "nextPaint": 138.60000000009313,
+          "module": "bestiary",
+          "art": 0
+        },
+        {
+          "name": "atlas",
+          "sync": 87,
+          "nextPaint": 108.70000000018626,
+          "module": "atlas",
+          "art": 0
+        },
+        {
+          "name": "research",
+          "sync": 42.200000000186265,
+          "nextPaint": 65.90000000037253,
+          "module": "research",
+          "art": 0
+        },
+        {
+          "name": "museum",
+          "sync": 44.90000000037253,
+          "nextPaint": 67.3000000002794,
+          "module": "museum",
+          "art": 0
+        },
+        {
+          "name": "society",
+          "sync": 36.1999999997206,
+          "nextPaint": 71,
+          "module": "society",
+          "art": 0
+        },
+        {
+          "name": "objects",
+          "sync": 17.90000000037253,
+          "nextPaint": 65.8000000002794,
+          "module": "objects",
+          "art": 0
+        },
+        {
+          "name": "expeditions",
+          "sync": 11.300000000279397,
+          "nextPaint": 44.700000000186265,
+          "module": "expeditions",
+          "art": 0
+        }
+      ]
+    },
+    {
+      "version": "base",
+      "stage": "new",
+      "helpers": 0,
+      "heapSamples": [
+        7192676,
+        7674768
+      ],
+      "startupMs": 1293.2,
+      "longStartupTasks": [
+        {
+          "start": 766,
+          "ms": 384
+        },
+        {
+          "start": 1152.2000000001863,
+          "ms": 68
+        }
+      ],
+      "moduleTimings": [
+        {
+          "name": "journal",
+          "sync": 71.89999999990687,
+          "nextPaint": 104.89999999990687,
+          "module": "journal",
+          "art": 0
+        },
+        {
+          "name": "bestiary",
+          "sync": 33.10000000009313,
+          "nextPaint": 135.60000000009313,
+          "module": "bestiary",
+          "art": 0
+        },
+        {
+          "name": "atlas",
+          "sync": 105.3000000002794,
+          "nextPaint": 132.20000000018626,
+          "module": "atlas",
+          "art": 0
+        },
+        {
+          "name": "research",
+          "sync": 70.10000000009313,
+          "nextPaint": 113.79999999981374,
+          "module": "research",
+          "art": 0
+        },
+        {
+          "name": "museum",
+          "sync": 74.3000000002794,
+          "nextPaint": 121.3000000002794,
+          "module": "museum",
+          "art": 0
+        },
+        {
+          "name": "society",
+          "sync": 34.39999999990687,
+          "nextPaint": 88.6999999997206,
+          "module": "society",
+          "art": 0
+        },
+        {
+          "name": "objects",
+          "sync": 22.5,
+          "nextPaint": 75.39999999990687,
+          "module": "objects",
+          "art": 0
+        },
+        {
+          "name": "expeditions",
+          "sync": 12.700000000186265,
+          "nextPaint": 47.200000000186265,
+          "module": "expeditions",
+          "art": 0
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "stage": "new",
+      "helpers": 0,
+      "heapSamples": [
+        7188816,
+        7665048
+      ],
+      "startupMs": 1175.3,
+      "longStartupTasks": [
+        {
+          "start": 725.9000000003725,
+          "ms": 386
+        },
+        {
+          "start": 1112,
+          "ms": 73
+        }
+      ],
+      "moduleTimings": [
+        {
+          "name": "journal",
+          "sync": 77.89999999990687,
+          "nextPaint": 120.5,
+          "module": "journal",
+          "art": 0
+        },
+        {
+          "name": "bestiary",
+          "sync": 32.90000000037253,
+          "nextPaint": 144.3000000002794,
+          "module": "bestiary",
+          "art": 0
+        },
+        {
+          "name": "atlas",
+          "sync": 131.5,
+          "nextPaint": 160.3000000002794,
+          "module": "atlas",
+          "art": 0
+        },
+        {
+          "name": "research",
+          "sync": 52,
+          "nextPaint": 74.89999999990687,
+          "module": "research",
+          "art": 0
+        },
+        {
+          "name": "museum",
+          "sync": 55.60000000009313,
+          "nextPaint": 99.10000000009313,
+          "module": "museum",
+          "art": 0
+        },
+        {
+          "name": "society",
+          "sync": 30.199999999720603,
+          "nextPaint": 70.5,
+          "module": "society",
+          "art": 0
+        },
+        {
+          "name": "objects",
+          "sync": 22.199999999720603,
+          "nextPaint": 79.79999999981374,
+          "module": "objects",
+          "art": 0
+        },
+        {
+          "name": "expeditions",
+          "sync": 14.100000000093132,
+          "nextPaint": 48,
+          "module": "expeditions",
+          "art": 0
+        }
+      ]
+    },
+    {
+      "version": "base",
+      "stage": "advanced",
+      "helpers": 10,
+      "heapSamples": [
+        8093264,
+        8931412
+      ],
+      "startupMs": 1174.7,
+      "longStartupTasks": [
+        {
+          "start": 623.2000000001863,
+          "ms": 429
+        },
+        {
+          "start": 1053.7999999998137,
+          "ms": 71
+        }
+      ],
+      "moduleTimings": [
+        {
+          "name": "journal",
+          "sync": 99.29999999981374,
+          "nextPaint": 214.89999999990687,
+          "module": "journal",
+          "art": 40
+        },
+        {
+          "name": "bestiary",
+          "sync": 76,
+          "nextPaint": 335.10000000009313,
+          "module": "bestiary",
+          "art": 64
+        },
+        {
+          "name": "atlas",
+          "sync": 102.6999999997206,
+          "nextPaint": 148,
+          "module": "atlas",
+          "art": 0
+        },
+        {
+          "name": "research",
+          "sync": 71.3000000002794,
+          "nextPaint": 93,
+          "module": "research",
+          "art": 0
+        },
+        {
+          "name": "museum",
+          "sync": 80.79999999981374,
+          "nextPaint": 123.10000000009313,
+          "module": "museum",
+          "art": 3
+        },
+        {
+          "name": "society",
+          "sync": 49.799999999813735,
+          "nextPaint": 85.79999999981374,
+          "module": "society",
+          "art": 0
+        },
+        {
+          "name": "objects",
+          "sync": 21.699999999720603,
+          "nextPaint": 76.10000000009313,
+          "module": "objects",
+          "art": 0
+        },
+        {
+          "name": "expeditions",
+          "sync": 11.5,
+          "nextPaint": 64.8000000002794,
+          "module": "expeditions",
+          "art": 0
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "stage": "advanced",
+      "helpers": 10,
+      "heapSamples": [
+        8089984,
+        8903280
+      ],
+      "startupMs": 1193.5,
+      "longStartupTasks": [
+        {
+          "start": 700.2000000001863,
+          "ms": 385
+        },
+        {
+          "start": 1087,
+          "ms": 65
+        }
+      ],
+      "moduleTimings": [
+        {
+          "name": "journal",
+          "sync": 77.70000000018626,
+          "nextPaint": 145.3000000002794,
+          "module": "journal",
+          "art": 40
+        },
+        {
+          "name": "bestiary",
+          "sync": 76,
+          "nextPaint": 328.70000000018626,
+          "module": "bestiary",
+          "art": 64
+        },
+        {
+          "name": "atlas",
+          "sync": 129.8000000002794,
+          "nextPaint": 193.8000000002794,
+          "module": "atlas",
+          "art": 0
+        },
+        {
+          "name": "research",
+          "sync": 54.6999999997206,
+          "nextPaint": 76.89999999990687,
+          "module": "research",
+          "art": 0
+        },
+        {
+          "name": "museum",
+          "sync": 86.59999999962747,
+          "nextPaint": 138,
+          "module": "museum",
+          "art": 3
+        },
+        {
+          "name": "society",
+          "sync": 48.700000000186265,
+          "nextPaint": 91.3000000002794,
+          "module": "society",
+          "art": 0
+        },
+        {
+          "name": "objects",
+          "sync": 26.399999999906868,
+          "nextPaint": 97.39999999990687,
+          "module": "objects",
+          "art": 0
+        },
+        {
+          "name": "expeditions",
+          "sync": 14.800000000279397,
+          "nextPaint": 64.10000000009313,
+          "module": "expeditions",
+          "art": 0
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "stage": "advanced",
+      "helpers": 10,
+      "heapSamples": [
+        8095052,
+        8902372
+      ],
+      "startupMs": 1094.4,
+      "longStartupTasks": [
+        {
+          "start": 400.39999999990687,
+          "ms": 95
+        },
+        {
+          "start": 740,
+          "ms": 344
+        },
+        {
+          "start": 1085.1000000000931,
+          "ms": 50
+        }
+      ],
+      "moduleTimings": [
+        {
+          "name": "journal",
+          "sync": 75.60000000009313,
+          "nextPaint": 125.29999999981374,
+          "module": "journal",
+          "art": 40
+        },
+        {
+          "name": "bestiary",
+          "sync": 37,
+          "nextPaint": 264.39999999990687,
+          "module": "bestiary",
+          "art": 64
+        },
+        {
+          "name": "atlas",
+          "sync": 88.6999999997206,
+          "nextPaint": 109.10000000009313,
+          "module": "atlas",
+          "art": 0
+        },
+        {
+          "name": "research",
+          "sync": 43.60000000009313,
+          "nextPaint": 65.70000000018626,
+          "module": "research",
+          "art": 0
+        },
+        {
+          "name": "museum",
+          "sync": 67,
+          "nextPaint": 116.70000000018626,
+          "module": "museum",
+          "art": 3
+        },
+        {
+          "name": "society",
+          "sync": 39.89999999990687,
+          "nextPaint": 90.79999999981374,
+          "module": "society",
+          "art": 0
+        },
+        {
+          "name": "objects",
+          "sync": 23.5,
+          "nextPaint": 84.20000000018626,
+          "module": "objects",
+          "art": 0
+        },
+        {
+          "name": "expeditions",
+          "sync": 12,
+          "nextPaint": 49.39999999990687,
+          "module": "expeditions",
+          "art": 0
+        }
+      ]
+    },
+    {
+      "version": "base",
+      "stage": "advanced",
+      "helpers": 10,
+      "heapSamples": [
+        8087116,
+        8911816
+      ],
+      "startupMs": 1198.7,
+      "longStartupTasks": [
+        {
+          "start": 767.3999999999069,
+          "ms": 305
+        },
+        {
+          "start": 1073.3999999999069,
+          "ms": 57
+        }
+      ],
+      "moduleTimings": [
+        {
+          "name": "journal",
+          "sync": 85.5,
+          "nextPaint": 184.89999999990687,
+          "module": "journal",
+          "art": 40
+        },
+        {
+          "name": "bestiary",
+          "sync": 77.89999999990687,
+          "nextPaint": 357.29999999981374,
+          "module": "bestiary",
+          "art": 64
+        },
+        {
+          "name": "atlas",
+          "sync": 100.39999999990687,
+          "nextPaint": 132.20000000018626,
+          "module": "atlas",
+          "art": 0
+        },
+        {
+          "name": "research",
+          "sync": 40.39999999990687,
+          "nextPaint": 61.200000000186265,
+          "module": "research",
+          "art": 0
+        },
+        {
+          "name": "museum",
+          "sync": 64.60000000009313,
+          "nextPaint": 102.90000000037253,
+          "module": "museum",
+          "art": 3
+        },
+        {
+          "name": "society",
+          "sync": 42.59999999962747,
+          "nextPaint": 75,
+          "module": "society",
+          "art": 0
+        },
+        {
+          "name": "objects",
+          "sync": 23.100000000093132,
+          "nextPaint": 97.60000000009313,
+          "module": "objects",
+          "art": 0
+        },
+        {
+          "name": "expeditions",
+          "sync": 17.899999999906868,
+          "nextPaint": 55.10000000009313,
+          "module": "expeditions",
+          "art": 0
+        }
+      ]
+    },
+    {
+      "version": "base",
+      "stage": "advanced",
+      "helpers": 10,
+      "heapSamples": [
+        8128584,
+        9012700
+      ],
+      "startupMs": 1162.9,
+      "longStartupTasks": [
+        {
+          "start": 809.3999999999069,
+          "ms": 369
+        },
+        {
+          "start": 1184.8999999999069,
+          "ms": 65
+        }
+      ],
+      "moduleTimings": [
+        {
+          "name": "journal",
+          "sync": 67.40000000037253,
+          "nextPaint": 114.70000000018626,
+          "module": "journal",
+          "art": 40
+        },
+        {
+          "name": "bestiary",
+          "sync": 27.5,
+          "nextPaint": 228,
+          "module": "bestiary",
+          "art": 64
+        },
+        {
+          "name": "atlas",
+          "sync": 79.60000000009313,
+          "nextPaint": 104.70000000018626,
+          "module": "atlas",
+          "art": 0
+        },
+        {
+          "name": "research",
+          "sync": 52.10000000009313,
+          "nextPaint": 78.89999999990687,
+          "module": "research",
+          "art": 0
+        },
+        {
+          "name": "museum",
+          "sync": 60.299999999813735,
+          "nextPaint": 106.39999999990687,
+          "module": "museum",
+          "art": 3
+        },
+        {
+          "name": "society",
+          "sync": 45.200000000186265,
+          "nextPaint": 109.70000000018626,
+          "module": "society",
+          "art": 0
+        },
+        {
+          "name": "objects",
+          "sync": 18.199999999720603,
+          "nextPaint": 63.5,
+          "module": "objects",
+          "art": 0
+        },
+        {
+          "name": "expeditions",
+          "sync": 10.399999999906868,
+          "nextPaint": 52.10000000009313,
+          "module": "expeditions",
+          "art": 0
+        }
+      ]
+    },
+    {
+      "version": "candidate",
+      "stage": "advanced",
+      "helpers": 10,
+      "heapSamples": [
+        8097912,
+        8934860
+      ],
+      "startupMs": 1294.8,
+      "longStartupTasks": [
+        {
+          "start": 737.1000000000931,
+          "ms": 509
+        },
+        {
+          "start": 1253,
+          "ms": 63
+        }
+      ],
+      "moduleTimings": [
+        {
+          "name": "journal",
+          "sync": 83.59999999962747,
+          "nextPaint": 164.5,
+          "module": "journal",
+          "art": 40
+        },
+        {
+          "name": "bestiary",
+          "sync": 37.5,
+          "nextPaint": 244.79999999981374,
+          "module": "bestiary",
+          "art": 64
+        },
+        {
+          "name": "atlas",
+          "sync": 93.89999999990687,
+          "nextPaint": 124.5,
+          "module": "atlas",
+          "art": 0
+        },
+        {
+          "name": "research",
+          "sync": 44.89999999990687,
+          "nextPaint": 67.6999999997206,
+          "module": "research",
+          "art": 0
+        },
+        {
+          "name": "museum",
+          "sync": 60.5,
+          "nextPaint": 89.5,
+          "module": "museum",
+          "art": 3
+        },
+        {
+          "name": "society",
+          "sync": 54.60000000009313,
+          "nextPaint": 95.5,
+          "module": "society",
+          "art": 0
+        },
+        {
+          "name": "objects",
+          "sync": 21.399999999906868,
+          "nextPaint": 74.09999999962747,
+          "module": "objects",
+          "art": 0
+        },
+        {
+          "name": "expeditions",
+          "sync": 14.100000000093132,
+          "nextPaint": 50.10000000009313,
+          "module": "expeditions",
+          "art": 0
+        }
+      ]
+    }
+  ]
+}

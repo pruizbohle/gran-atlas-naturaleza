@@ -33,3 +33,7 @@ El generador produce HTML local con pares de fondos claro/oscuro y enlaces al or
 
 ## Condiciones de cierre
 AUD-04 sigue abierta. No generar APK firmado, no actualizar versión pública, no introducir mecánicas ni cambiar balance. Continuar en paralelo con AUD-01/02/03 y consolidar antes de publicar.
+
+## Continuidad en V5.0.5
+
+El inventario consolidado conserva los estados históricos y registra por separado las correcciones aprobadas. La revisión por familia usa las decisiones vigentes. [Informe ART-01](../arte-v505/README.md) · [Inventario consolidado](../arte-v505/inventario-aud04.json)
