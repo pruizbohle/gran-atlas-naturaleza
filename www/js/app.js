@@ -2390,14 +2390,14 @@ function showStorageFault(message){
  const button=document.getElementById('saveManagerOpen');
  if(button){if(button.textContent!=='⚠️')button.textContent='⚠️';button.setAttribute('title',message);button.setAttribute('aria-label',message);}
 }
-function persist({verify=false}={}){
+function persist({verify=false,skipUnchanged=false}={}){
  if(commissionClaiming3370)return !verify;
  achievementFlush3360();commissionFlush3370();curationFlush3380();
  if(unreadableSave){showStorageFault('La partida almacenada no se pudo leer y se conserva sin reemplazar. Abre Respaldos para recuperarla.');return false;}
  try{
   const previous=verify?localStorage.getItem(STORAGE_KEY):null;
   const raw=JSON.stringify(state);
-  if(verify||storageFault||raw!==committedSave||localStorage.getItem(STORAGE_KEY)!==raw)localStorage.setItem(STORAGE_KEY,raw);
+  if(!skipUnchanged||verify||storageFault||raw!==committedSave||localStorage.getItem(STORAGE_KEY)!==raw)localStorage.setItem(STORAGE_KEY,raw);
   if(verify){
    try{
     if(localStorage.getItem(STORAGE_KEY)!==raw)throw new Error('La partida escrita difiere de la partida restaurada.');
@@ -5449,7 +5449,7 @@ function tick(){
  // E-3280 END tick-display
  updateFieldOutput();
  if(returns && tab==='expeditions')renderPanel();
- if(persist())automaticProgressUnwritten=false;
+ if(persist({skipUnchanged:true}))automaticProgressUnwritten=false;
  scheduleAutomaticFrame();
 }
 setInterval(tick,1000);
