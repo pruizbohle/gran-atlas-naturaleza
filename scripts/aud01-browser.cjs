@@ -142,26 +142,50 @@ async function advancedRun(browser, file, source, waitUntilDrained) {
 }
 async function offlineRun(browser) {
   const context = await browser.newContext(mobile);
+  const transition = process.env.AUD05_PWA_TRANSITION === '1';
+  const candidate = sources.audit;
   try {
+    const fixture = process.env.AUD05_PWA_SAVE;
+    const save = fixture ? JSON.parse(readFileSync(fixture, 'utf8')) : null;
+    await context.addInitScript(save => {
+      Date.now = () => save?.lastTick ?? 1700002800000;
+      if (save && !localStorage.getItem('gran_atlas_v05')) {
+        localStorage.setItem('gran_atlas_v05', JSON.stringify(save));
+      }
+    }, save);
     const page = await context.newPage();
     const errors = [];
     page.on('pageerror', err => errors.push(err.message));
     const url = origin() + '/audit/';
+    async function install() {
+      await page.goto(url + 'actualizar-atlas.html');
+      await page.locator('#atlasUpdateApply').click();
+      await page.getByText(/Descarga completa e integridad verificada/).waitFor({ timeout: 120000 });
+      await page.locator('#atlasUpdateInstall').click();
+      await page.getByText(/instalada\. El juego/).waitFor();
+      await page.locator('#atlasUpdateReturn').click();
+      await page.waitForFunction(() => !!window.AtlasSaveBridge && !!navigator.serviceWorker.controller);
+    }
+    if (transition) sources.audit = sources.base;
     await start(page, url);
+    let previousCaches = [];
+    if (transition) {
+      await install();
+      previousCaches = await page.evaluate(async () => (await caches.keys()).filter(name => name.includes('naturalist')));
+      assert.ok(previousCaches.length > 0);
+    }
     await page.locator('[data-action="search-manual"]').first().evaluate(el => el.click());
     const saved = await page.evaluate(() => JSON.stringify(AtlasSaveBridge.getSnapshot()));
-    await page.goto(url + 'actualizar-atlas.html');
-    await page.locator('#atlasUpdateApply').click();
-    await page.getByText(/Descarga completa e integridad verificada/).waitFor({ timeout: 120000 });
-    await page.locator('#atlasUpdateInstall').click();
-    await page.getByText(/instalada\. El juego/).waitFor();
-    await page.locator('#atlasUpdateReturn').click();
-    await page.waitForFunction(() => !!window.AtlasSaveBridge && !!navigator.serviceWorker.controller);
+    const raw = await page.evaluate(() => localStorage.getItem('gran_atlas_v05'));
+    sources.audit = candidate;
+    await install();
     assert.equal(await page.evaluate(() => JSON.stringify(AtlasSaveBridge.getSnapshot())), saved);
+    assert.equal(await page.evaluate(() => localStorage.getItem('gran_atlas_backup_before_update')), raw);
     const caches = await page.evaluate(async () => {
       const names = (await window.caches.keys()).filter(name => name.includes('naturalist'));
       return Object.fromEntries(await Promise.all(names.map(async name => [name, (await (await window.caches.open(name)).keys()).length])));
     });
+    for (const previous of previousCaches) assert.ok(!(previous in caches));
     await context.setOffline(true);
     await start(page, url);
     assert.equal(await page.evaluate(() => JSON.stringify(AtlasSaveBridge.getSnapshot())), saved);
@@ -183,8 +207,10 @@ async function offlineRun(browser) {
       assert.equal(pigmentCounts[value], expected);
     }
     assert.deepEqual(errors, []);
-    return { integrityVerified: true, unchangedSaveReceipt: JSON.parse(saved), bestiaryOffline: 1000, caches, pigmentCounts };
+    return { integrityVerified: true, exactBackup: true, previousCaches,
+      unchangedSaveReceipt: JSON.parse(saved), bestiaryOffline: 1000, caches, pigmentCounts };
   } finally {
+    sources.audit = candidate;
     await context.close();
   }
 }
@@ -193,7 +219,9 @@ async function offlineRun(browser) {
   const browser = await chromium.launch({ executablePath: process.env.ATLAS_CHROMIUM || '/usr/bin/chromium', args: ['--no-sandbox'] });
   try {
     const runs = [];
-    for (const id of ['base', 'audit', 'audit', 'base', 'base', 'audit']) runs.push(await performanceRun(browser, id));
+    if (process.env.AUD05_PWA_ONLY !== '1') {
+      for (const id of ['base', 'audit', 'audit', 'base', 'base', 'audit']) runs.push(await performanceRun(browser, id));
+    }
     const file = process.env.AUD01_ADVANCED_SAVE;
     const advanced = file ? [
       await advancedRun(browser, file, 'base', false),

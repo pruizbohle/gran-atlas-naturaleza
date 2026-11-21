@@ -1,5 +1,6 @@
 'use strict';
 const assert = require('node:assert/strict');
+const { createHash } = require('node:crypto');
 const fs = require('node:fs');
 const http = require('node:http');
 const path = require('node:path');
@@ -14,6 +15,14 @@ const hours = [1, 4, 8, 72];
 const teams = [1, 5, 10];
 const hour = 3600000;
 const selected = process.env.ATLAS_OFFLINE_CASE;
+const exact = process.env.ATLAS_OFFLINE_EXACT === '1';
+const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
+function checkSave(left, right, label) {
+  const keys = new Set([...Object.keys(left.saveFieldHashes), ...Object.keys(right.saveFieldHashes)]);
+  // The visible diary is grouped by the ticks that drain each animation-frame batch.
+  const different = [...keys].filter(key => key !== 'log' && left.saveFieldHashes[key] !== right.saveFieldHashes[key]);
+  assert.deepEqual(different, [], label);
+}
 const key = 'gran_atlas_v05';
 const mime = { '.js': 'text/javascript', '.html': 'text/html', '.css': 'text/css', '.json': 'application/json',
   '.webmanifest': 'application/manifest+json', '.webp': 'image/webp', '.png': 'image/png', '.svg': 'image/svg+xml' };
@@ -102,7 +111,7 @@ async function measure(browser, label, elapsed, helpers, { crash = false } = {})
       await cdp.send('Profiler.enable');
       await cdp.send('Profiler.start');
     }
-    const result = await page.evaluate(async ({ key, now }) => {
+    const { saved, ...result } = await page.evaluate(async ({ key, now, exact }) => {
       let start, lastNavigation = 0;
       const timeout=performance.now()+90000;
       const timings = [];
@@ -129,12 +138,17 @@ async function measure(browser, label, elapsed, helpers, { crash = false } = {})
       const tasks = during(window.auditTasks);
       const gaps = during(window.auditGaps);
       const s = JSON.parse(localStorage.getItem(key));
+      // Pruning runs while work is queued. Different frame timings can keep
+      // expired buckets for longer, but none can supply a future search.
+      const oldestRelevantHour = Math.floor(now / 3600000) - 8;
+      const liveHourly = exact ? Object.fromEntries(Object.entries(s.autoHourly)
+        .filter(([bucket]) => Number(bucket.split(':')[0]) >= oldestRelevantHour)) : null;
       return { recoveryMs: end - start, longTasks: tasks.length, longestTaskMs: Math.max(0, ...tasks),
         maxInterfaceDelayMs: Math.max(0, ...gaps), navigationMs: timings, writes: window.auditWrites,
         balances: { money: s.money, knowledge: s.knowledge, sightings: s.sightings, inventory: s.inventory },
         hourlyMax: Math.max(0, ...Object.values(s.autoHourly)), dataLength: localStorage.getItem(key).length,
-        helpers: s.helpers };
-    }, { key, now });
+        helpers: s.helpers, saved: exact ? JSON.stringify({ ...s, autoHourly: liveHourly }) : null };
+    }, { key, now, exact });
     assert.equal(result.helpers, helpers);
     assert.ok(result.hourlyMax <= 100);
     assert.deepEqual(faults, []);
@@ -152,7 +166,8 @@ async function measure(browser, label, elapsed, helpers, { crash = false } = {})
       cpu = [...totals].sort((a,b)=>b[1]-a[1]).slice(0,20).map(([name,ms])=>({name,ms}));
     }
     const heap = await cdp.send('Runtime.getHeapUsage');
-    return { label, hours: elapsed, ...result, jsHeapUsedBytes: heap.usedSize, checkpoint, cpu };
+    const saveFieldHashes = saved && Object.fromEntries(Object.entries(JSON.parse(saved)).map(([key, value]) => [key, digest(value)]));
+    return { label, hours: elapsed, ...result, jsHeapUsedBytes: heap.usedSize, checkpoint, cpu, saveFieldHashes };
   } finally {
     await context.close();
   }
@@ -171,11 +186,17 @@ async function measure(browser, label, elapsed, helpers, { crash = false } = {})
         runs.push(run);
         process.stderr.write(`${label} ${elapsed}h · ${helpers} naturalistas · ${run.recoveryMs.toFixed(0)} ms\n`);
       }
-      if(side==='both')assert.deepEqual(runs.at(-1).balances,runs.at(-2).balances,`${elapsed} h · ${helpers} naturalistas`);
+      if(side==='both'){
+        const left=runs.at(-1),right=runs.at(-2),label=`${elapsed} h · ${helpers} naturalistas`;
+        assert.deepEqual(left.balances,right.balances,label);
+        if(exact)checkSave(left,right,label);
+      }
     }
     const interrupted = side !== 'base' && !selected ? await measure(browser, 'candidate', 8, 10, { crash: true }) : null;
     if (interrupted) assert.deepEqual(interrupted.balances,
       runs.find(r => r.label === 'candidate' && r.hours === 8 && r.helpers === 10).balances);
+    if (interrupted && exact) checkSave(interrupted,
+      runs.find(r => r.label === 'candidate' && r.hours === 8 && r.helpers === 10), 'Reanudación tras cierre brusco');
     console.log(JSON.stringify({ chromium: browser.version(), cpuSlowdown: Number(process.env.ATLAS_CPU_SLOWDOWN || 4),
       runs, interrupted }, null, 2));
   } finally {

@@ -1,5 +1,6 @@
 'use strict';
 const fs = require('node:fs');
+const path = require('node:path');
 const { performance } = require('node:perf_hooks');
 const assert = require('node:assert/strict');
 const { make } = require('../tests/helpers/ux3410-game.cjs');
@@ -108,6 +109,21 @@ const intermediate = checkpoint(h);
 play(h, 52, hour / 2);
 const advanced = checkpoint(h);
 if (process.env.AUD01_ADVANCED_SAVE) fs.writeFileSync(process.env.AUD01_ADVANCED_SAVE, advanced.store.gran_atlas_v05);
+if (process.env.AUD05_SAVE_DIR) {
+  fs.mkdirSync(process.env.AUD05_SAVE_DIR, { recursive: true });
+  for (const [name, snapshot] of Object.entries({ initial, intermediate, advanced })) {
+    fs.writeFileSync(path.join(process.env.AUD05_SAVE_DIR, name + '.json'), snapshot.store.gran_atlas_v05);
+  }
+  const five = open(intermediate.time, 503, { ...intermediate.store });
+  for (let i = five.g.state.helpers; i < 5; i++) five.g.buyNode('novato');
+  assert.equal(five.g.state.helpers, 5);
+  fs.writeFileSync(path.join(process.env.AUD05_SAVE_DIR, 'intermediate-five.json'), checkpoint(five).store.gran_atlas_v05);
+  const groups = open(advanced.time, 503, { ...advanced.store });
+  for (const id of ['grupos_1', 'grupos_2', 'grupos_3', 'censo_campo_1', 'grupos_auto_1']) groups.g.buyNode(id);
+  assert.equal(groups.g.state.upgrades.groupTier, 3);
+  assert.equal(groups.g.state.upgrades.censusTier, 1);
+  fs.writeFileSync(path.join(process.env.AUD05_SAVE_DIR, 'advanced-group.json'), checkpoint(groups).store.gran_atlas_v05);
+}
 assert.ok(initial.metrics.helpers >= 1 && intermediate.metrics.purchases > initial.metrics.purchases);
 assert.equal(advanced.metrics.helpers, 10);
 assert.ok(advanced.metrics.prestige > intermediate.metrics.prestige);
