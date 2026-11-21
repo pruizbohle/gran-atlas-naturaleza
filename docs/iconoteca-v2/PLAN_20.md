@@ -2,7 +2,7 @@
 **21 de noviembre de 2026.** El usuario precisó el alcance: sustituir **emojis de módulos, funciones, navegación y estados**, como los de Misiones y Cuaderno, **no** crear ilustraciones de los artículos del inventario que ya tienen recursos artísticos en la rama de actualización.
 
 ## Exclusión definitiva
-- Todos los `plate.*` de `www/js/item-art-v3198.js`: huesos, cráneos, fósiles, monedas, armas? (No; ninguno del inventario), mapas físicos, flores prensadas, plumas, herramientas, materiales, etc.
+- Todos los `plate.*` de `www/js/item-art-v3198.js`: huesos, cráneos, fósiles, monedas, mapas físicos, flores prensadas, plumas, herramientas, materiales, etc.
 - Todo el arte de coleccionables ya actualizado, particularmente el trabajo de `feat/coleccionables-arte-240`, y los sprites de especies/variantes.
 - No modificar `www/js/item-art-v3198.js`, catálogos de objetos, inventario, guardado, economía ni versión del juego.
 - No producir **una segunda versión gráfica de un mismo objeto**. Un icono de sección (por ejemplo Museo > Fósiles) es distinto de la imagen de un fósil individual; aun así esta tanda prioriza otras funciones para evitar confusiones.
