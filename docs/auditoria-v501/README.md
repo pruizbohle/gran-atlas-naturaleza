@@ -1,5 +1,7 @@
 # V5.0.1 · Integración de la auditoría global
 
+[Segunda etapa de consolidación](continuacion-v501.md) · Restitución por identificador, recibos de expediciones, rendimiento offline y revisión de Mustelidae y Accipitridae.
+
 Rama de trabajo `audit/aud-01-v501`. Se integraron los diez commits de `audit/v501-aud01` mediante `5567e9d`, sobre el `main` de V4.9.6 que ya incluía el filtro de variantes del laboratorio en `c8af26e`. La candidata conserva la versión pública declarada 4.9.6 hasta la consolidación. El repositorio principal sigue en esa versión.
 
 ## Registro de resultados

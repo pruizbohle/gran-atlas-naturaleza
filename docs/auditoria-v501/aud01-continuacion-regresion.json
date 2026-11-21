@@ -1,0 +1,55 @@
+{
+  "auditedRevision": "96badbc",
+  "comparison": "c976671",
+  "node": "v24.22.1",
+  "previousSuite": {
+    "success": false,
+    "counts": {
+      "tests": 833,
+      "failed": 211,
+      "passed": 622,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "topLevel": 833,
+      "suites": 0
+    },
+    "duration_ms": 286962.434496
+  },
+  "finalSuite": {
+    "success": false,
+    "counts": {
+      "tests": 837,
+      "failed": 211,
+      "passed": 626,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "topLevel": 837,
+      "suites": 0
+    },
+    "duration_ms": 314656.945157
+  },
+  "newFailures": 0,
+  "changedHistoricalOutcomes": 0,
+  "focused": {
+    "passing": 59,
+    "failed": 0
+  },
+  "release": {
+    "passing": 28,
+    "failed": 0
+  },
+  "independentHistoricalChecks": [
+    {
+      "file": "tests/expeditions-research-v3280.test.cjs",
+      "passing": 28,
+      "knownFailures": 3
+    },
+    {
+      "file": "tests/ux3410-integrity.test.cjs",
+      "passing": 3,
+      "knownFailures": 0
+    }
+  ]
+}
