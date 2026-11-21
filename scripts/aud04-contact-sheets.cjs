@@ -12,6 +12,13 @@ const asset=(file,size)=>pathToFileURL(path.join(root,'www/naturalist-art/plates
 const plate=(file,label)=>file?'<div class="plate"><strong>'+esc(label)+'</strong>'+[64,128].map(size=>'<div class="pair"><figure class="light"><img src="'+esc(asset(file,size))+'" width="'+size+'" height="'+size+'" loading="lazy"></figure><figure class="dark"><img src="'+esc(asset(file,size))+'" width="'+size+'" height="'+size+'" loading="lazy"></figure></div>').join('')+'<a href="'+esc(asset(file,512))+'">Original 512</a></div>':'';
 const csv=JSON.parse(fs.readFileSync(path.join(root,'docs/cientifica-v496/inventario-auditoria-v50.json'),'utf8'));
 const specimens=csv.specimens.filter(s=>(group==='all'||s.className===group)&&(family==='all'||s.family===family));const variants=new Map(audit.variants.map(v=>[v.id+'/'+v.variant,v]));
+const auditDir=path.join(root,'docs/auditoria-v501');
+for(const name of fs.readdirSync(auditDir).filter(name=>/^aud04-.*\.json$/.test(name)&&name!=='aud04-inventario-artistico.json').sort()){
+ const review=JSON.parse(fs.readFileSync(path.join(auditDir,name),'utf8'));
+ for(const row of review.variants||[]){
+  if(row.status&&row.finding)variants.set(row.id+'/'+row.variant,{visualState:row.status,observation:row.finding});
+ }
+}
 const dimorphism=new Map(audit.dimorphism.map(v=>[v.id,v]));const selected=specimens.filter(s=>mode==='family'||(mode==='variants'?s.routes.albino||s.routes.melanico:s.routes.male&&s.routes.female));
 const grouped=new Map();for(const s of selected.sort((a,b)=>a.family.localeCompare(b.family)||a.latin.localeCompare(b.latin))){let list=grouped.get(s.family)||[];list.push(s);grouped.set(s.family,list);}
 const sections=[...grouped].map(([f,list])=>'<section><h2>'+esc(f)+' · '+list.length+'</h2>'+list.map(s=>{let keys=mode==='variants'?['normal','albino','melanico']:mode==='dimorphism'?['normal','male','female']:['normal'];return '<article><h3>'+esc(s.latin)+'</h3><small>'+esc(s.id)+' · '+esc(s.className)+'</small><div class="plates">'+keys.map(k=>plate(s.routes[k],k+(variants.get(s.id+'/'+k)?' · '+variants.get(s.id+'/'+k).visualState:''))).join('')+'</div>'+keys.flatMap(k=>{const v=variants.get(s.id+'/'+k);return v?.observation?['<p>'+esc(k)+': '+esc(v.observation)+'</p>']:[]}).join('')+(mode==='dimorphism'?'<p>Rutas compartidas: '+esc(JSON.stringify(dimorphism.get(s.id)?.shared||{}))+'</p>':'')+'</article>'}).join('')+'</section>').join('');

@@ -1,0 +1,377 @@
+{
+  "method": "Comparación programática de láminas existentes más revisión visual de normal y variante, WebP originales de 64 y 128 px sobre fondos crema y carbón y fuente de 512 px reducida en la hoja de contacto. El juicio se refiere a la presentación y señala los morfos que necesitan confirmación zoológica.",
+  "positiveReferences": [
+    "oc_esp_vombatus_ursinus/albino",
+    "na_esp_corvus_corax/albino",
+    "na_esp_ambystoma_mexicanum/albino",
+    "asia_esp_0369/albino"
+  ],
+  "priorReviewed": 87,
+  "uniqueReviewed": 108,
+  "inventoried": 564,
+  "statusThisReview": {
+    "mejorable": 12,
+    "insuficiente": 7,
+    "correcta": 2
+  },
+  "variants": [
+    {
+      "id": "eu_esp_0644",
+      "latin": "Accipiter nisus",
+      "family": "Accipitridae",
+      "variant": "melanico",
+      "normal": "eu_esp_0644--normal.webp",
+      "plate": "eu_esp_0644--melanico.webp",
+      "sha": "f4aca6e96b6863d81896bb4a49f256c38ba40b54",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Las barras fantasma en ala y cola sobreviven en 128 px. Recuperar el ojo, el pico y la separación de primarias en oscuro."
+    },
+    {
+      "id": "af_xlsx_131_aquila_fasciata",
+      "latin": "Aquila fasciata",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "af_xlsx_131_aquila_fasciata--normal.webp",
+      "plate": "af_xlsx_131_aquila_fasciata--albino.webp",
+      "sha": "2bd55c5ddf975e0fa93c00cb70a82b9103ed0c87",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Conserva el perfil erguido, listado ventral y banda caudal. En claro se funden iris y garras con el cuerpo; tratar los tejidos por separado."
+    },
+    {
+      "id": "eu_esp_0029",
+      "latin": "Aquila heliaca",
+      "family": "Accipitridae",
+      "variant": "melanico",
+      "normal": "eu_esp_0029--normal.webp",
+      "plate": "eu_esp_0029--melanico.webp",
+      "sha": "9ce97e67f48b3c30abb46b4677a6321ec43b8185",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Los parches escapulares, la nuca y los tarsos retienen estructura. El ojo y el perfil mandibular pierden lectura en oscuro."
+    },
+    {
+      "id": "asia_esp_0030",
+      "latin": "Aquila nipalensis",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "asia_esp_0030--normal.webp",
+      "plate": "asia_esp_0030--albino.webp",
+      "sha": "d60ffb01b1159e0824619dfed09e0bd8107f78b1",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Sobre fondo claro se pierde el contorno de las primarias y casi desaparece la cabeza en perfil. Recuperar lectura de pico, ojo y separación entre plumas."
+    },
+    {
+      "id": "eu_esp_0643",
+      "latin": "Buteo buteo",
+      "family": "Accipitridae",
+      "variant": "melanico",
+      "normal": "eu_esp_0643--normal.webp",
+      "plate": "eu_esp_0643--melanico.webp",
+      "sha": "a88a7d17998d7618e78fb140533e6b710091e826",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Se reconocen alas anchas, cola en abanico y tarsos. Dar más separación a las superficies ventrales y la cabeza en oscuro."
+    },
+    {
+      "id": "af_xlsx_131_circaetus_gallicus",
+      "latin": "Circaetus gallicus",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "af_xlsx_131_circaetus_gallicus--normal.webp",
+      "plate": "af_xlsx_131_circaetus_gallicus--albino.webp",
+      "sha": "1b067131aa1526494ee42104de95de533fdc1516",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "El barrado residual destaca más que la cabeza. Sobre claro no se distingue el ojo grande ni el disco facial; comprobar pigmentación y tejidos."
+    },
+    {
+      "id": "quebrantahuesos",
+      "latin": "Gypaetus barbatus",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "quebrantahuesos--normal.webp",
+      "plate": "quebrantahuesos--albino.webp",
+      "sha": "e85e166b0ef52d63c76cb9eb4c1fd18daa42e935",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Conserva alas largas y cola cuneiforme en oscuro. Recuperar barba, ojo y pico en claro y verificar el papel de la coloración externa del plumaje."
+    },
+    {
+      "id": "af_xlsx_131_gyps_africanus",
+      "latin": "Gyps africanus",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "af_xlsx_131_gyps_africanus--normal.webp",
+      "plate": "af_xlsx_131_gyps_africanus--albino.webp",
+      "sha": "cdd5dc436d587c1c9020f7254b409a58fba95226",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Cuello y cabeza ofrecen poco relieve y el manto tiende a un tono plano; diferenciar piel de plumas, garras y zonas claras de las escapulares."
+    },
+    {
+      "id": "buitre_leonado",
+      "latin": "Gyps fulvus",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "buitre_leonado--normal.webp",
+      "plate": "buitre_leonado--albino.webp",
+      "sha": "8f463e240766d3ac5db22300a93080124fd615a1",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Gorguera, postura y grupos de plumas se conservan. La roca clara resta lectura a los pies; mejorar borde de pico e iris."
+    },
+    {
+      "id": "eu_esp_0232",
+      "latin": "Haliaeetus albicilla",
+      "family": "Accipitridae",
+      "variant": "melanico",
+      "normal": "eu_esp_0232--normal.webp",
+      "plate": "eu_esp_0232--melanico.webp",
+      "sha": "510aa7dbf50159880802cdcfbbb4bb53e1ed5568",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Cola y forma de ala siguen reconocibles en claro. En oscuro, recuperar el perfil de la cabeza y el contraste local de primarias sin aclarar todo el manto."
+    },
+    {
+      "id": "na_esp_haliaeetus_leucocephalus",
+      "latin": "Haliaeetus leucocephalus",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "na_esp_haliaeetus_leucocephalus--normal.webp",
+      "plate": "na_esp_haliaeetus_leucocephalus--albino.webp",
+      "sha": "8626133627620de114f2946002ce5cb0cb10fac6",
+      "visualState": "pendiente",
+      "status": "correcta",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Pico y párpado rosados, planos de plumaje blanco, garras y cabeza robusta se distinguen. El encuadre conserva lectura en los dos fondos. Mantener la lámina."
+    },
+    {
+      "id": "asia_esp_0234",
+      "latin": "Haliaeetus pelagicus",
+      "family": "Accipitridae",
+      "variant": "melanico",
+      "normal": "asia_esp_0234--normal.webp",
+      "plate": "asia_esp_0234--melanico.webp",
+      "sha": "e33c4b84879cf04472438812fc3f2669f92a9eb7",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "El pico amarillo y las áreas grisáceas de hombros y cola ofrecen buena diferenciación. Reforzar ojo y separación de plumas oscuras en miniatura."
+    },
+    {
+      "id": "af_fosa_ave",
+      "latin": "Haliaeetus vociferoides",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "af_fosa_ave--normal.webp",
+      "plate": "af_fosa_ave--albino.webp",
+      "sha": "863420fc215d4e553ac311df7c10c2cebb7414a8",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Plumaje lavado y perfil facial poco legible en claro. Cuidar la transición de la cabeza al pico y separar el blanco de la cola del fondo."
+    },
+    {
+      "id": "af_fosa_ave",
+      "latin": "Haliaeetus vociferoides",
+      "family": "Accipitridae",
+      "variant": "melanico",
+      "normal": "af_fosa_ave--normal.webp",
+      "plate": "af_fosa_ave--melanico.webp",
+      "sha": "c65eb50f2da5c073f853d82db2d317b30b79ea19",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La cola más clara, los tarsos y la estructura de plumas siguen presentes. Recuperar planos de pico y nuca en carbón."
+    },
+    {
+      "id": "af_aguila_pescadora",
+      "latin": "Icthyophaga vocifer",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "af_aguila_pescadora--normal.webp",
+      "plate": "af_aguila_pescadora--albino.webp",
+      "sha": "8da2e4f2bf9a3015b1cf9735a25fc6a1091c8f57",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La cabeza blanca y la cola se funden con el fondo claro; el cuerpo queda rosa uniforme. Trabajar ojo, cera, patas y textura de las cobertoras por separado."
+    },
+    {
+      "id": "af_aguila_pescadora",
+      "latin": "Icthyophaga vocifer",
+      "family": "Accipitridae",
+      "variant": "melanico",
+      "normal": "af_aguila_pescadora--normal.webp",
+      "plate": "af_aguila_pescadora--melanico.webp",
+      "sha": "30df4aa291907ee8242b5f328271732818ae113e",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Se distinguen pico, tarsos y bloques de cabeza y cola gris. Retener plumas y volumen del pecho en oscuro; verificar si el morfo se documenta."
+    },
+    {
+      "id": "milano_real",
+      "latin": "Milvus milvus",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "milano_real--normal.webp",
+      "plate": "milano_real--albino.webp",
+      "sha": "13abfa638a1f4303848744e908aee80d67b29a1c",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La horquilla de la cola y las ventanas alares dan identidad. En fondo claro los grupos de plumas y el pico pierden contraste a 64 px."
+    },
+    {
+      "id": "milano_real",
+      "latin": "Milvus milvus",
+      "family": "Accipitridae",
+      "variant": "melanico",
+      "normal": "milano_real--normal.webp",
+      "plate": "milano_real--melanico.webp",
+      "sha": "21bd71a0bca398f72ab614abf2990330f02cf4c6",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La horquilla y las ventanas alares conservan su forma. Modelar las primarias y realzar el ojo y el pecho para fondo oscuro."
+    },
+    {
+      "id": "af_xlsx_131_neophron_percnopterus",
+      "latin": "Neophron percnopterus",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "af_xlsx_131_neophron_percnopterus--normal.webp",
+      "plate": "af_xlsx_131_neophron_percnopterus--albino.webp",
+      "sha": "9e0e193301203ead24531f690ab5a0532f5e4c60",
+      "visualState": "pendiente",
+      "status": "correcta",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La piel facial rosada se diferencia del plumaje blanco y las primarias aún muestran su estructura. Buena lectura de alas, cola y pico en ambos fondos. Mantener la lámina."
+    },
+    {
+      "id": "af_xlsx_131_polemaetus_bellicosus",
+      "latin": "Polemaetus bellicosus",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "af_xlsx_131_polemaetus_bellicosus--normal.webp",
+      "plate": "af_xlsx_131_polemaetus_bellicosus--albino.webp",
+      "sha": "7e879c8c9733a1ba915e071794a3f007a71ecb9c",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Las motas de pecho se leen, pero la cara, los tarsos y las garras se pierden sobre la roca en claro. Recuperar tejidos, apoyos y detalle de cresta."
+    },
+    {
+      "id": "af_xlsx_sahara_buitre",
+      "latin": "Torgos tracheliotos",
+      "family": "Accipitridae",
+      "variant": "albino",
+      "normal": "af_xlsx_sahara_buitre--normal.webp",
+      "plate": "af_xlsx_sahara_buitre--albino.webp",
+      "sha": "541e6af75f8c174bd860b2190faff66f84cedc81",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Cabeza y cuello desnudos pierden los pliegues característicos frente al manto rosa. Separar piel, garras, musculatura y soporte."
+    }
+  ],
+  "notReviewed": 456
+}

@@ -1,0 +1,359 @@
+{
+  "method": "Comparación programática de láminas existentes más revisión visual de normal y variante, WebP originales de 64 y 128 px sobre fondos crema y carbón y fuente de 512 px reducida en la hoja de contacto. El juicio se refiere a la presentación y señala los morfos que necesitan confirmación zoológica.",
+  "positiveReferences": [
+    "oc_esp_vombatus_ursinus/albino",
+    "na_esp_corvus_corax/albino",
+    "na_esp_ambystoma_mexicanum/albino",
+    "asia_esp_0369/albino"
+  ],
+  "priorReviewed": 67,
+  "uniqueReviewed": 87,
+  "inventoried": 564,
+  "statusThisReview": {
+    "mejorable": 13,
+    "insuficiente": 7
+  },
+  "variants": [
+    {
+      "id": "asia_esp_0177",
+      "latin": "Enhydra lutris",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0177--normal.webp",
+      "plate": "asia_esp_0177--melanico.webp",
+      "sha": "9b77247ac3685eeaaba59781186a58ca50816d83",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Conserva la postura flotante, el abanico de las patas traseras y la diferencia entre cara y manto. En oscuro, separar el ojo, los dedos y el hombro con reflejos locales."
+    },
+    {
+      "id": "gloton",
+      "latin": "Gulo gulo",
+      "family": "Mustelidae",
+      "variant": "albino",
+      "normal": "gloton--normal.webp",
+      "plate": "gloton--albino.webp",
+      "sha": "182f43b3f038602b4fdcef05ca0126fa1d91b894",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La franja dorsal aún se distingue en oscuro, pero se lavan párpado, trufa y dedos en claro. Separar tejidos desnudos, garras y mechones gruesos."
+    },
+    {
+      "id": "af_xlsx_131_hydrictis_maculicollis",
+      "latin": "Hydrictis maculicollis",
+      "family": "Mustelidae",
+      "variant": "albino",
+      "normal": "af_xlsx_131_hydrictis_maculicollis--normal.webp",
+      "plate": "af_xlsx_131_hydrictis_maculicollis--albino.webp",
+      "sha": "13a917a072ebce8cec392a6d61a76b9786b609bb",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "El moteado residual domina la garganta mientras hocico y ojos se pierden. La variante requiere un tratamiento propio de boca, vibrisas y pigmentación residual."
+    },
+    {
+      "id": "na_esp_lontra_canadensis",
+      "latin": "Lontra canadensis",
+      "family": "Mustelidae",
+      "variant": "albino",
+      "normal": "na_esp_lontra_canadensis--normal.webp",
+      "plate": "na_esp_lontra_canadensis--albino.webp",
+      "sha": "d62c7614522163aa2a2e00f02f53dc02954efee8",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Costado y cola baja conservan volumen en oscuro. Recuperar el borde del hocico y las vibrisas en claro; revisar rasgos que distinguen a Lontra de Lutra."
+    },
+    {
+      "id": "nutria_europea",
+      "latin": "Lutra lutra",
+      "family": "Mustelidae",
+      "variant": "albino",
+      "normal": "nutria_europea--normal.webp",
+      "plate": "nutria_europea--albino.webp",
+      "sha": "f0f753e5f2dfc66bd53d5eed918a9f16034c09ec",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "El cuello claro se lee en oscuro; en claro se pierden nariz y ojo a 64 px. Reforzar la diferencia entre pelo de garganta, piel y bigotes."
+    },
+    {
+      "id": "nutria_europea",
+      "latin": "Lutra lutra",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "nutria_europea--normal.webp",
+      "plate": "nutria_europea--melanico.webp",
+      "sha": "6f0aa13fae096d171f73784e48793f69f209e2e4",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "En oscuro el flanco se funde y la cabeza pierde hocico y ojo. Mantener el modelado de la garganta y recuperar vibrisas y patas delanteras."
+    },
+    {
+      "id": "asia_esp_0300",
+      "latin": "Lutrogale perspicillata",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0300--normal.webp",
+      "plate": "asia_esp_0300--melanico.webp",
+      "sha": "ed9b6b74ac469ac924db5c3090b19e81360bebf3",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Se conserva el perfil horizontal sobre claro. En oscuro apenas se distinguen la cola gruesa y la mandíbula inferior; recuperar transiciones anatómicas."
+    },
+    {
+      "id": "asia_esp_0850",
+      "latin": "Martes flavigula",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0850--normal.webp",
+      "plate": "asia_esp_0850--melanico.webp",
+      "sha": "3eaa62080ca37fc9ad7e8fe008d8eb7aa21a43df",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La garganta aún se separa del hombro y el lomo. La rama compite con patas y garras en oscuro; dar lectura a la extremidad y revisar el soporte."
+    },
+    {
+      "id": "eu_esp_0620",
+      "latin": "Martes foina",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "eu_esp_0620--normal.webp",
+      "plate": "eu_esp_0620--melanico.webp",
+      "sha": "9dc010f374c7182581ff71fe5a4c2fc54d090d02",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La pechera gris diferencia el cuello del cuerpo. A 64 px, recuperar perfil de oreja, textura de cola y límites de la pechera."
+    },
+    {
+      "id": "eu_esp_0621",
+      "latin": "Martes martes",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "eu_esp_0621--normal.webp",
+      "plate": "eu_esp_0621--melanico.webp",
+      "sha": "c85194726ab0fd4cafdb5c5895acf62ea1e10575",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "El ángulo de la cabeza y la pechera permanecen en claro. La lectura de hocico y patas en oscuro distingue poco de la garduña; revisar forma y tonos locales."
+    },
+    {
+      "id": "asia_esp_0326",
+      "latin": "Martes zibellina",
+      "family": "Mustelidae",
+      "variant": "albino",
+      "normal": "asia_esp_0326--normal.webp",
+      "plate": "asia_esp_0326--albino.webp",
+      "sha": "0caeaa6cd740d2711e46cefb46bb40fcd2136b5e",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Silueta esponjosa legible en oscuro. En claro se pierde el detalle del ojo y el interior de orejas y trufa. Afinar tejidos y contacto de patas."
+    },
+    {
+      "id": "asia_esp_0333",
+      "latin": "Meles leucurus",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0333--normal.webp",
+      "plate": "asia_esp_0333--melanico.webp",
+      "sha": "8f29877c3d5c5cc61b15b95f19d8407bec5b3dad",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Las bandas faciales y la postura excavadora permanecen. En oscuro sostener los planos de lomo, cara y garras sin aumentar todo el contraste."
+    },
+    {
+      "id": "tejon_europeo",
+      "latin": "Meles meles",
+      "family": "Mustelidae",
+      "variant": "albino",
+      "normal": "tejon_europeo--normal.webp",
+      "plate": "tejon_europeo--albino.webp",
+      "sha": "9cd660fb17fd8cd0ca3e73a342acd8a8dcb1f085",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Las franjas se leen mejor que la nariz y los ojos, que quedan lavados en claro. Verificar pigmentación restante y recuperar volumen en la cabeza."
+    },
+    {
+      "id": "af_xlsx_131_mellivora_capensis",
+      "latin": "Mellivora capensis",
+      "family": "Mustelidae",
+      "variant": "albino",
+      "normal": "af_xlsx_131_mellivora_capensis--normal.webp",
+      "plate": "af_xlsx_131_mellivora_capensis--albino.webp",
+      "sha": "5fac468c58ea2a1703c0d5be26850b7837d0eed0",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Manto dorsal y anatomía baja se distinguen en oscuro. Recuperar ojo, pliegue de oreja y garras en fondo claro."
+    },
+    {
+      "id": "eu_esp_0618",
+      "latin": "Mustela erminea",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "eu_esp_0618--normal.webp",
+      "plate": "eu_esp_0618--melanico.webp",
+      "sha": "e0ebaa647fac1ace0df5b5c783e52463ebbee58b",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "El manto gris queda plano; en oscuro se borran pecho y dedos. Confirmar el morfo y conservar la punta de cola y la textura del pelaje."
+    },
+    {
+      "id": "asia_esp_0347",
+      "latin": "Mustela eversmanii",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "asia_esp_0347--normal.webp",
+      "plate": "asia_esp_0347--melanico.webp",
+      "sha": "09a1963d75fec5082ad38ec384142d4197efa257",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La máscara y el arco del lomo se distinguen en claro. Acentuar cejas, mejillas y transiciones ventrales para diferenciarlo del turón europeo."
+    },
+    {
+      "id": "eu_esp_0622",
+      "latin": "Mustela lutreola",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "eu_esp_0622--normal.webp",
+      "plate": "eu_esp_0622--melanico.webp",
+      "sha": "35d9957d5fa54ed4ddfe9dee46e5a7e65b0ba88a",
+      "visualState": "pendiente",
+      "status": "insuficiente",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Hocico y ojo se funden en ambos fondos a 64 px. Revisar el borde de labios, vibrisas y espalda sin borrar el carácter oscuro."
+    },
+    {
+      "id": "eu_esp_0617",
+      "latin": "Mustela nivalis",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "eu_esp_0617--normal.webp",
+      "plate": "eu_esp_0617--melanico.webp",
+      "sha": "e8963d50126dbb16cf0280688bdf7c76ad0746ca",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "La línea ventral queda reconocible incluso en oscuro. Separar orejas, ojo y cuello y mantener la silueta delgada."
+    },
+    {
+      "id": "eu_esp_0619",
+      "latin": "Mustela putorius",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "eu_esp_0619--normal.webp",
+      "plate": "eu_esp_0619--melanico.webp",
+      "sha": "320f340c5844abd19a4a848c752cfa2b5f82566d",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Máscara legible en 128 px sobre claro; el torso pierde relieve en oscuro. Separar hombro y pata posterior y contrastar los rasgos con Mustela eversmanii."
+    },
+    {
+      "id": "eu_esp_0625",
+      "latin": "Vormela peregusna",
+      "family": "Mustelidae",
+      "variant": "melanico",
+      "normal": "eu_esp_0625--normal.webp",
+      "plate": "eu_esp_0625--melanico.webp",
+      "sha": "42c0dbd2ed5fd4adedcdb744221698ba2b6b7f77",
+      "visualState": "pendiente",
+      "status": "mejorable",
+      "sizes": [
+        64,
+        128,
+        512
+      ],
+      "finding": "Conserva el patrón jaspeado, máscara y cola gruesa en 128 px. En oscuro se pierden ojo y apoyos; conservar patrón fantasma mientras se corrige volumen."
+    }
+  ],
+  "notReviewed": 477
+}
