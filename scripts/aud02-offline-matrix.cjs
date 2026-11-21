@@ -14,6 +14,13 @@ const fixture = JSON.parse(fs.readFileSync(fixtureFile, 'utf8'));
 const hours = [1, 4, 8, 72];
 const teams = [1, 5, 10];
 const hour = 3600000;
+const auditTrade = process.env.ATLAS_OFFLINE_TRADE24 === '1';
+const auditTradeId = auditTrade ? fixture.commerce.seq + 1 : null;
+if (auditTrade) {
+  fixture.commerce.seq = auditTradeId;
+  fixture.commerce.jobs.push({ id: auditTradeId, route: 'ocean_trade', startedAt: fixture.lastTick,
+    endAt: fixture.lastTick + 24 * hour });
+}
 const selected = process.env.ATLAS_OFFLINE_CASE;
 const exact = process.env.ATLAS_OFFLINE_EXACT === '1';
 const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
@@ -111,7 +118,7 @@ async function measure(browser, label, elapsed, helpers, { crash = false } = {})
       await cdp.send('Profiler.enable');
       await cdp.send('Profiler.start');
     }
-    const { saved, ...result } = await page.evaluate(async ({ key, now, exact }) => {
+    const { saved, ...result } = await page.evaluate(async ({ key, now, exact, auditTradeId }) => {
       let start, lastNavigation = 0;
       const timeout=performance.now()+90000;
       const timings = [];
@@ -147,10 +154,19 @@ async function measure(browser, label, elapsed, helpers, { crash = false } = {})
         maxInterfaceDelayMs: Math.max(0, ...gaps), navigationMs: timings, writes: window.auditWrites,
         balances: { money: s.money, knowledge: s.knowledge, sightings: s.sightings, inventory: s.inventory },
         hourlyMax: Math.max(0, ...Object.values(s.autoHourly)), dataLength: localStorage.getItem(key).length,
-        helpers: s.helpers, saved: exact ? JSON.stringify({ ...s, autoHourly: liveHourly }) : null };
-    }, { key, now, exact });
+        helpers: s.helpers, saved: exact ? JSON.stringify({ ...s, autoHourly: liveHourly }) : null,
+        ...(auditTradeId === null ? {} : { trade: {
+          pending: s.commerce.jobs.filter(job => job.id === auditTradeId).length,
+          receipts: s.commerce.tradeReceipts.filter(receipt => receipt.id === auditTradeId)
+        } }) };
+    }, { key, now, exact, auditTradeId });
     assert.equal(result.helpers, helpers);
     assert.ok(result.hourlyMax <= 100);
+    if (auditTrade) {
+      assert.equal(result.trade.pending, elapsed < 24 ? 1 : 0);
+      assert.equal(result.trade.receipts.length, elapsed < 24 ? 0 : 1);
+      if (elapsed >= 24) assert.equal(result.trade.receipts[0].route, 'ocean_trade');
+    }
     assert.deepEqual(faults, []);
     let cpu = null;
     if (profiling) {
