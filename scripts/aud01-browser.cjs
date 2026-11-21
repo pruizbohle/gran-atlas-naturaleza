@@ -140,9 +140,81 @@ async function advancedRun(browser, file, source, waitUntilDrained) {
     await context.close();
   }
 }
+async function art01Checks(page, lab) {
+  const decoded = locator => locator.first().evaluate(async img => {
+    img.loading = 'eager';
+    await img.decode();
+    return img.naturalWidth;
+  });
+  const tabs = name => page.locator('.tab[data-tab="' + name + '"]').first().evaluate(node => node.click());
+  // A disposable save exercises ordinary presentation of an already observed variant.
+  await page.evaluate(() => {
+    const save = AtlasSaveBridge.getSaveData();
+    const id = 'zorro_rojo';
+    save.currentRegion = 'HX-01-09';
+    save.selectedJournal = id;
+    save.discovered[id] = true;
+    save.published[id] = true;
+    save.stages[id] = 5;
+    save.sightings[id] = 500;
+    save.specialFound[id] = { Albino: true, Melánico: true };
+    save.lastEncounter = { species: id, sequence: 900, title: 'Zorro rojo', subtitle: '',
+      entries: [{ id, variant: 'Melánico', note: [], amount: 1 }] };
+    AtlasSaveBridge.restoreGame(save);
+  });
+  const melanic = 'img[src$="/zorro_rojo--melanico.webp"]';
+  await tabs('field');
+  await decoded(page.locator('#fieldResult ' + melanic));
+  await tabs('journal');
+  await decoded(page.locator('#journalSelectedSheet ' + melanic));
+  await tabs('bestiary');
+  await page.locator('#b26-search').fill('zorro rojo');
+  await page.locator('[data-b26-collection] summary').first().evaluate(node => node.click());
+  await decoded(page.locator('[data-b26-collection] ' + melanic));
+  await tabs('museum');
+  await page.locator('[data-action="museum-tab"][data-id="samples"]').evaluate(node => node.click());
+  await decoded(page.locator('.m27-grid img[src$="/zorro_rojo--normal.webp"]'));
+
+  await lab.locator('[data-mode="art01"]').click();
+  const archive = lab.locator('[data-art01-species]');
+  assert.equal(await archive.count(), 11);
+  const sizes = {};
+  for (const size of [64, 128, 256, 512]) {
+    await lab.locator('#comparison-size').selectOption(String(size));
+    const widths = await archive.locator('img').evaluateAll(images =>
+      Promise.all(images.map(async img => {
+        img.loading = 'eager';
+        await img.decode();
+        return img.naturalWidth;
+      })));
+    assert.equal(widths.length, 33);
+    assert.ok(widths.every(width => width === size), String(size));
+    sizes[size] = widths.length;
+  }
+  await lab.locator('#backdrop').selectOption('dark');
+  assert.equal(await lab.locator('#content').getAttribute('data-backdrop'), 'dark');
+  await lab.locator('#backdrop').selectOption('light');
+  assert.equal(await lab.locator('#content').getAttribute('data-backdrop'), 'light');
+  await lab.locator('#family').selectOption('Felidae');
+  assert.equal(await archive.count(), 4);
+  await lab.locator('#search').fill('panthera onca');
+  assert.equal(await archive.count(), 2);
+  await lab.locator('#search').fill('');
+  await lab.locator('#family').selectOption('');
+  for (const mode of ['field', 'journal', 'bestiary', 'museum']) {
+    await lab.locator('[data-mode="' + mode + '"]').click();
+    await lab.locator('#species').selectOption('zorro_rojo');
+    await lab.locator('#scale-plate').selectOption('melanico');
+    await decoded(lab.locator('#content ' + melanic));
+  }
+  return { sizes, renderedGameSurfaces: ['field', 'journal', 'bestiary', 'museum'],
+    labVariantPreviews: ['field', 'journal', 'bestiary', 'museum'], archivedVariants: 11 };
+}
+
 async function offlineRun(browser) {
   const context = await browser.newContext(mobile);
   const transition = process.env.AUD05_PWA_TRANSITION === '1';
+  const inspectArt01 = process.env.ATLAS_ART01 === '1';
   const candidate = sources.audit;
   try {
     const fixture = process.env.AUD05_PWA_SAVE;
@@ -186,6 +258,13 @@ async function offlineRun(browser) {
       return Object.fromEntries(await Promise.all(names.map(async name => [name, (await (await window.caches.open(name)).keys()).length])));
     });
     for (const previous of previousCaches) assert.ok(!(previous in caches));
+    const lab = await context.newPage();
+    lab.on('pageerror', err => errors.push(err.message));
+    if (inspectArt01) {
+      await lab.goto(url + 'naturalist-art/');
+      await lab.locator('#review-offline').click();
+      await lab.getByText('Comparaciones listas para usar sin conexión.').waitFor({ timeout: 160000 });
+    }
     await context.setOffline(true);
     await start(page, url);
     assert.equal(await page.evaluate(() => JSON.stringify(AtlasSaveBridge.getSnapshot())), saved);
@@ -193,7 +272,6 @@ async function offlineRun(browser) {
     await page.evaluate(() => document.querySelector('.tab[data-tab="journal"]').click());
     await page.evaluate(() => document.querySelector('.tab[data-tab="bestiary"]').click());
     assert.equal(await page.locator('[data-bestiary-pager]').first().getAttribute('data-total'), '1000');
-    const lab = await context.newPage();
     await lab.goto(url + 'naturalist-art/');
     await lab.waitForFunction(() => !!document.querySelector('#variant-view option[value="pigments"]'));
     assert.deepEqual(await lab.locator('#variant-view option').evaluateAll(options =>
@@ -206,9 +284,10 @@ async function offlineRun(browser) {
       pigmentCounts[value] = await lab.locator(selector).count();
       assert.equal(pigmentCounts[value], expected);
     }
+    const art01 = inspectArt01 ? await art01Checks(page, lab) : undefined;
     assert.deepEqual(errors, []);
     return { integrityVerified: true, exactBackup: true, previousCaches,
-      unchangedSaveReceipt: JSON.parse(saved), bestiaryOffline: 1000, caches, pigmentCounts };
+      unchangedSaveReceipt: JSON.parse(saved), bestiaryOffline: 1000, caches, pigmentCounts, art01 };
   } finally {
     sources.audit = candidate;
     await context.close();

@@ -19,6 +19,10 @@ for(const name of fs.readdirSync(auditDir).filter(name=>/^aud04-.*\.json$/.test(
   if(row.status&&row.finding)variants.set(row.id+'/'+row.variant,{visualState:row.status,observation:row.finding});
  }
 }
+const current=path.join(root,'docs/arte-v505/inventario-aud04.json');
+if(fs.existsSync(current)){
+ for(const row of JSON.parse(fs.readFileSync(current,'utf8')).variants)variants.set(row.id+'/'+row.variant,row);
+}
 const dimorphism=new Map(audit.dimorphism.map(v=>[v.id,v]));const selected=specimens.filter(s=>mode==='family'||(mode==='variants'?s.routes.albino||s.routes.melanico:s.routes.male&&s.routes.female));
 const grouped=new Map();for(const s of selected.sort((a,b)=>a.family.localeCompare(b.family)||a.latin.localeCompare(b.latin))){let list=grouped.get(s.family)||[];list.push(s);grouped.set(s.family,list);}
 const sections=[...grouped].map(([f,list])=>'<section><h2>'+esc(f)+' · '+list.length+'</h2>'+list.map(s=>{let keys=mode==='variants'?['normal','albino','melanico']:mode==='dimorphism'?['normal','male','female']:['normal'];return '<article><h3>'+esc(s.latin)+'</h3><small>'+esc(s.id)+' · '+esc(s.className)+'</small><div class="plates">'+keys.map(k=>plate(s.routes[k],k+(variants.get(s.id+'/'+k)?' · '+variants.get(s.id+'/'+k).visualState:''))).join('')+'</div>'+keys.flatMap(k=>{const v=variants.get(s.id+'/'+k);return v?.observation?['<p>'+esc(k)+': '+esc(v.observation)+'</p>']:[]}).join('')+(mode==='dimorphism'?'<p>Rutas compartidas: '+esc(JSON.stringify(dimorphism.get(s.id)?.shared||{}))+'</p>':'')+'</article>'}).join('')+'</section>').join('');
