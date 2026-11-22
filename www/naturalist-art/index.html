@@ -15,10 +15,12 @@
   <script src="art05.js" defer></script>
   <script src="art06.js" defer></script>
   <script src="art07.js" defer></script>
+  <script src="art08.js" defer></script>
   <script src="pigment-audit-data.js" defer></script>
   <script src="../js/naturalist-assets-v400.js" defer></script>
   <script src="../js/naturalist-art-v400.js" defer></script>
   <script src="../js/field-ui-v3210.js" defer></script>
+  <script src="plate-view.js" defer></script>
   <script src="pigment-audit.js" defer></script>
   <script src="lab.js" defer></script>
 </head>
@@ -47,6 +49,7 @@
       <button type="button" data-mode="art05">Variantes corregidas en ART-05</button>
       <button type="button" data-mode="art06">Variantes corregidas en ART-06</button>
       <button type="button" data-mode="art07">Variantes revisadas en ART-07</button>
+      <button type="button" data-mode="art08">Variantes revisadas en ART-08</button>
       <button type="button" data-mode="frames">Ejemplares especiales</button>
       <button type="button" data-mode="gallery">Galería</button>
       <button type="button" data-mode="compare">Comparar estilos</button>
@@ -141,7 +144,7 @@
         <a id="review-prepare-offline" href="../actualizar-atlas.html" hidden>Preparar el juego sin conexión</a>
       </div>
       <div id="pigment-audit-filters" class="pigment-audit-filters" role="group" aria-label="Filtros del visor" hidden>
-        <label>Buscar especie <input id="audit-search" type="search" placeholder="Nombre o ID"></label>
+        <label>Buscar especie <input id="audit-search" type="search" placeholder="Nombre común, científico o ID"></label>
         <label>Variante <select id="audit-kind">
           <option value="">Todas</option><option value="albino">Albina</option><option value="melanico">Melánica</option>
         </select></label>
@@ -162,9 +165,29 @@
           <option value="state">Estado</option><option value="priority">Prioridad</option>
         </select></label>
         <label>Fondo <select id="audit-backdrop"><option value="light">Claro</option><option value="dark">Oscuro</option></select></label>
+        <label>Animales por página <select id="audit-page-size">
+          <option value="20">20</option><option value="40">40</option><option value="60">60</option>
+        </select></label>
         <button id="audit-reset" type="button">Restablecer filtros</button>
       </div>
+      <div id="audit-navigation" hidden>
+        <nav class="audit-lots" aria-label="Bibliotecas de ART-08">
+          <a data-audit-batch="" href="?view=pigment-audit">Todas las variantes</a>
+          <a data-audit-batch="A" href="?view=pigment-audit&amp;lote=A">ART-08A</a>
+          <a data-audit-batch="B" href="?view=pigment-audit&amp;lote=B">ART-08B</a>
+        </nav>
+        <nav class="audit-pagination" aria-label="Páginas del visor">
+          <button type="button" data-audit-page="-1">Anterior</button>
+          <span id="audit-page-status" aria-live="polite"></span>
+          <button type="button" data-audit-page="1">Siguiente</button>
+        </nav>
+      </div>
       <div id="content" data-frame-style="bare"></div>
+      <nav class="audit-pagination" id="audit-navigation-bottom" aria-label="Páginas del visor al pie de la galería" hidden>
+        <button type="button" data-audit-page="-1">Anterior</button>
+        <span id="audit-page-status-bottom"></span>
+        <button type="button" data-audit-page="1">Siguiente</button>
+      </nav>
       <dialog id="pigment-audit-detail" aria-labelledby="audit-detail-title">
         <div class="audit-detail-toolbar">
           <h3 id="audit-detail-title"></h3>

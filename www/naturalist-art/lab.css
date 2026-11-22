@@ -320,3 +320,27 @@ figcaption { padding: .4rem 0; }
   .pigment-audit-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: .7rem; }
   .pigment-audit-filters label:first-child { grid-column: 1 / -1; }
 }
+
+.audit-pagination, .audit-lots {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .55rem;
+  margin-block: .75rem;
+}
+.audit-pagination button, .audit-lots a {
+  min-height: 44px;
+  padding: .6rem .85rem;
+}
+.audit-pagination button:disabled { opacity: .5; cursor: default; }
+.audit-lots a {
+  border: 1px solid var(--line);
+  border-radius: .3rem;
+  color: var(--ink);
+  text-decoration: underline;
+}
+.audit-lots a[aria-current="page"] { background: #dde9d3; font-weight: 700; }
+.audit-specimens > div { flex: 1; min-width: 0; }
+.audit-variant .audit-open { width: 100%; padding-inline: .25rem; }
+.audit-variant .audit-tags { gap: .2rem; }
+.audit-variant .audit-morph { overflow-wrap: anywhere; }

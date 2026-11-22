@@ -457,7 +457,7 @@ const landscapes = fs.readdirSync(path.join(out, 'landscapes')).filter(file => f
 const animalFiles = [...assets].sort().flatMap(file =>
   ['', '64/', '128/', '256/'].map(size => 'naturalist-art/plates/' + size + file));
 const files = [...animalFiles, ...landscapes.map(key => 'naturalist-art/landscapes/' + key + '.webp')];
-for (const lot of ['art01', 'art02', 'art03', 'art04', 'art05', 'art06', 'art07']) {
+for (const lot of ['art01', 'art02', 'art03', 'art04', 'art05', 'art06', 'art07', 'art08']) {
   const archive = path.join(out, 'review', lot);
   if (!fs.existsSync(archive)) continue;
   for (const file of fs.readdirSync(archive, { recursive: true })) {

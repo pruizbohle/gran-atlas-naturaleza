@@ -10,7 +10,8 @@ const previous = require('../docs/arte-v5010/inventario-aud04.json');
 const current = require('../docs/arte-v5011/inventario-aud04.json');
 const decisions = require('../docs/arte-v5011/decisiones.json');
 const integrity = require('../docs/arte-v5011/integridad.json');
-const release = require('../www/atlas-integrity.json').files;
+const publishedFile = file => execFileSync('git', ['show', '8ff5428:' + file], { maxBuffer: 8 * 1024 * 1024 });
+const release = JSON.parse(publishedFile('www/atlas-integrity.json')).files;
 require('../www/js/naturalist-assets-v400.js');
 
 const assets = globalThis.AtlasNaturalistAssets;
@@ -94,7 +95,7 @@ test('ART-07 accounts for audited variants once and leaves other decisions intac
     if (decision.rejected) assert.ok(fs.existsSync('docs/arte-v5011/comparativas/' + decision.lot + '/' +
       row.plate.replace('.webp', '--rechazo.jpg')));
   }
-  const viewer = fs.readFileSync('www/naturalist-art/pigment-audit-data.js', 'utf8');
+  const viewer = publishedFile('www/naturalist-art/pigment-audit-data.js').toString('utf8');
   const items = JSON.parse(vm.runInNewContext(viewer + '\nJSON.stringify(pigmentAuditRecords)'));
   assert.deepEqual(items.map(key), current.variants.map(key));
   assert.deepEqual(items.map(row => row.state), current.variants.map(row => row.visualState));

@@ -5,7 +5,7 @@ const { createHash } = require('node:crypto');
 const fs = require('node:fs');
 
 const root = 'www/naturalist-art';
-const reviewStages = ['art01', 'art02', 'art03', 'art04', 'art05', 'art06', 'art07'];
+const reviewStages = ['art01', 'art02', 'art03', 'art04', 'art05', 'art06', 'art07', 'art08'];
 const corrected = row => reviewStages.some(stage => row[stage]?.outcome === 'aprobada');
 
 function buildVariantReview({ lot, previousLot, review, supersededArchive, version, correctionsOnly = false, viewer = false }) {
@@ -89,6 +89,8 @@ function buildVariantReview({ lot, previousLot, review, supersededArchive, versi
     return { id: row.id, variant: row.variant, status: approved ? 'Correcta y aprobada' : outcome === 'ratificada' ? 'Lámina ratificada' : 'Pendiente de ajuste',
       morph, evidence, note, before: approved ? before : historyFiles,
       ...(replaces ? { replaces, previousLabel } : {}),
+      ...(decision.lot && review === 'art08' ? { batch: decision.lot } : {}),
+      ...(decision.comparison ? { comparison: decision.comparison } : {}),
       ...(eye ? { eye: eye.color } : {}), ...(version ? { version: approved ? version : decision.plateVersion } : {}),
       ...(approved && historyFiles ? { legacy: historyFiles } : {}),
       ...(approved ? {} : { caption: 'Variante vigente' }),

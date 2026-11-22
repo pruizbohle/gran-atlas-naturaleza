@@ -1,6 +1,5 @@
 'use strict';
 
-const byId = id => document.getElementById(id);
 const content = byId('content');
 const search = byId('search');
 const species = byId('species');
@@ -26,7 +25,7 @@ for (const [value, label] of [
 const storageKey = 'gran-atlas-naturalist-art-review-v1';
 const modes = {
   field: 'Campo', mixed: 'Campo mixto', journal: 'Cuaderno', bestiary: 'Bestiario', museum: 'Museo',
-  gallery: 'Galería', variants: 'Variantes', 'pigment-audit': 'Visor de albinos y melánicos', art01: 'Variantes revisadas en ART-01', art02: 'Variantes revisadas en ART-02', art03: 'Variantes revisadas en ART-03', art04: 'Variantes corregidas en ART-04', art05: 'Variantes corregidas en ART-05', art06: 'Variantes corregidas en ART-06', art07: 'Variantes revisadas en ART-07', frames: 'Ejemplares especiales',
+  gallery: 'Galería', variants: 'Variantes', 'pigment-audit': 'Visor de albinos y melánicos', art01: 'Variantes revisadas en ART-01', art02: 'Variantes revisadas en ART-02', art03: 'Variantes revisadas en ART-03', art04: 'Variantes corregidas en ART-04', art05: 'Variantes corregidas en ART-05', art06: 'Variantes corregidas en ART-06', art07: 'Variantes revisadas en ART-07', art08: 'Variantes revisadas en ART-08', frames: 'Ejemplares especiales',
   compare: 'Comparar estilos', birds: 'Comparar aves', reptiles: 'Comparar reptiles', amphibians: 'Comparar anfibios', cartilaginous: 'Comparar tiburones y rayas',
   salmonids: 'Comparar salmónidos', freshwater: 'Comparar peces de agua dulce', reef: 'Comparar peces de arrecife', deep: 'Comparar peces de aguas profundas', marine: 'Comparar peces marinos', cephalopods: 'Comparar cefalópodos', legendary: 'Colección de legendarios',
   compression: 'Compresión WebP', scale: 'Escala real', 'visual-scale': 'Ajustes de escala', review: 'Revisión artística'
@@ -41,10 +40,6 @@ const frames = {
   Excepcional: 'exceptional', Legendario: 'legendary'
 };
 const statuses = ['Pendiente', 'Aprobada', 'Requiere ajustes', 'Rechazada'];
-const text = value => String(value).replace(/[&<>"']/g, c => ({
-  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-})[c]);
-const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 const previews = ['field', 'mixed', 'journal', 'bestiary', 'museum'];
 let mode = new URLSearchParams(location.search).get('view') === 'pigment-audit' ? 'pigment-audit' : 'field';
 let reviewKey = 'normal';
@@ -75,18 +70,6 @@ updateOrders();
 updateFamilies();
 updateSpecies();
 for (const sp of mixedFieldSprites) mixedSvg.add(new Option(sp.name, sp.id));
-
-function illustration(sp, record, frame = 'Normal', resolution = 512, eager = false, surface = 'plain', fullSize = false) {
-  const habitat = AtlasNaturalistArt.preferredHabitat(sp.habitats);
-  return AtlasNaturalistArt.render(sp.id, {
-    variant: record.key, category: frame, size: resolution, eager, alt: sp.name + ' · ' + record.label,
-    surface, habitat, region: sp.regions[0]?.id, classes: 'plate', fullSize
-  }, () => AtlasNaturalistArt.frame('<span>Lámina pendiente</span>', frame, 'plate'));
-}
-
-function figure(markup, caption) {
-  return '<figure>' + markup + '<figcaption>' + text(caption) + '</figcaption></figure>';
-}
 
 function cutStatus(record) {
   return !record.cutout ? 'pending' : record.note ? 'review' : 'ready';
@@ -175,15 +158,8 @@ function pigmentGallery() {
     }).join('') + '</div>';
 }
 
-const artReviews = { art01: art01Review, art02: art02Review, art03: art03Review, art04: art04Review, art05: art05Review, art06: art06Review, art07: art07Review };
+const artReviews = { art01: art01Review, art02: art02Review, art03: art03Review, art04: art04Review, art05: art05Review, art06: art06Review, art07: art07Review, art08: art08Review };
 let auditView;
-
-function archivedIllustration(src, label, size) {
-  return AtlasNaturalistArt.frame(
-    '<img class="atlas-art-image" src="' + text(src) + '" width="' + size + '" height="' + size +
-    '" alt="' + text(label) + '" loading="lazy" decoding="async">',
-    'Normal', 'plate atlas-art-cutout');
-}
 
 function artComparisons(lot) {
   const speciesById = new Map(matchingSpecies().map(sp => [sp.id, sp]));
@@ -237,12 +213,6 @@ function specimenPlate(sp, frame) {
 function specialFrames(sp) {
   const samples = sp.categories.map(frame => figure(illustration(sp, specimenPlate(sp, frame), frame), frame));
   return '<div class="grid frame-grid review-comparison">' + samples.join('') + '</div>';
-}
-
-function selectOptions(select, entries) {
-  const selected = select.value;
-  select.replaceChildren(...entries.map(([key, label]) => new Option(label, key)));
-  if (entries.some(([key]) => selected === key)) select.value = selected;
 }
 
 function selectedPlate(sp, frame = 'Normal') {
@@ -416,6 +386,8 @@ function draw() {
   byId('order-control').hidden = comparingSets || auditingPigments || birdOrder.options.length < 2;
   byId('frame-style-control').hidden = auditingPigments;
   byId('pigment-audit-filters').hidden = !auditingPigments;
+  byId('audit-navigation').hidden = !auditingPigments;
+  if (!auditingPigments) byId('audit-navigation-bottom').hidden = true;
   byId('bird-set-control').hidden = !comparingTaxa || mode === 'legendary';
   byId('comparison-size-control').hidden = !comparingSets && !comparingVariants && !comparingArt;
   byId('comparison-halo-control').hidden = (!comparingSets && !comparingVariants) || mode === 'legendary';
