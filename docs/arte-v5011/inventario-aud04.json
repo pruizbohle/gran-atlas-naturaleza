@@ -8,13 +8,13 @@
   },
   "totals": {
     "auditadas": 174,
-    "correcta": 62,
+    "correcta": 68,
     "mejorable": 104,
-    "insuficiente": 8,
+    "insuficiente": 2,
     "pendiente": 390,
-    "corregidas": 53,
-    "correccionesAprobadas": 55,
-    "propuestasRechazadas": 9
+    "corregidas": 59,
+    "correccionesAprobadas": 61,
+    "propuestasRechazadas": 10
   },
   "positiveReferences": [
     "oc_esp_vombatus_ursinus/albino",
@@ -1956,18 +1956,33 @@
       "variant": "melanico",
       "normal": "af_jirafa--normal.webp",
       "plate": "af_jirafa--melanico.webp",
-      "bytesRatio": 0.5799,
-      "sha": "ecf131f6c3465665004f5a6cc8458068868de703",
-      "visualState": "insuficiente",
-      "observation": "El cuello moteado se intuye en carbón, pero la cabeza, los osiconos y la caña de los miembros desaparecen en miniatura. Apenas se distingue el patrón del torso en claro.",
+      "bytesRatio": 0.8852,
+      "sha": "f23beb4bdca0d50d47e0f68e96c68a28ec1c0a36",
+      "visualState": "correcta",
+      "observation": "El patrón de manchas oscuras queda visible sobre el cuello y el torso. Se distinguen los osiconos y las cuatro extremidades. Se usa como referencia el oscurecimiento natural de las manchas con la edad.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
-        256
+        256,
+        512
       ],
-      "priorAudit": "arte-v507/evaluaciones.json"
+      "priorAudit": "arte-v507/evaluaciones.json",
+      "art07": {
+        "priorState": "insuficiente",
+        "priorFinding": "El cuello moteado se intuye en carbón, pero la cabeza, los osiconos y la caña de los miembros desaparecen en miniatura. Apenas se distingue el patrón del torso en claro.",
+        "outcome": "aprobada",
+        "morph": "Melanismo interpretativo",
+        "evidence": "Oscurecimiento natural de las manchas documentado · grado del morfo interpretativo",
+        "eye": {
+          "normal": "Pardo oscuro",
+          "color": "Pardo oscuro",
+          "changed": false,
+          "why": "Se mantiene el iris natural y se modela el arco alrededor del ojo."
+        },
+        "version": "5.0.11"
+      }
     },
     {
       "id": "af_lechwe_rojo",
@@ -4066,18 +4081,33 @@
       "variant": "albino",
       "normal": "af_xlsx_gato_dorado--normal.webp",
       "plate": "af_xlsx_gato_dorado--albino.webp",
-      "bytesRatio": 0.827,
-      "sha": "989cfcc8b95996059faabaad4225d106d273cfed",
-      "visualState": "insuficiente",
-      "observation": "Orejas y hocico se pierden a 64 px en claro. El rosa invade el manto; separar piel, pelo y sombras.",
+      "bytesRatio": 0.8957,
+      "sha": "5baa755e6fee0d0d8919c55b927526e32f39775f",
+      "visualState": "correcta",
+      "observation": "El rosa se concentra en nariz, pabellones y párpados. Mejillas, orejas y patas se separan del manto marfil. El moteado ventral queda tenue.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
+        256,
         512
       ],
-      "priorAudit": "aud04-felidae-canidae.json"
+      "priorAudit": "aud04-felidae-canidae.json",
+      "art07": {
+        "priorState": "insuficiente",
+        "priorFinding": "Orejas y hocico se pierden a 64 px en claro. El rosa invade el manto; separar piel, pelo y sombras.",
+        "outcome": "aprobada",
+        "morph": "Hipopigmentación de aspecto albino",
+        "evidence": "Interpretativa",
+        "eye": {
+          "normal": "Ámbar pardo",
+          "color": "Ámbar rosado tenue",
+          "changed": true,
+          "why": "Se aclara la gama habitual y se conserva un punto pupilar oscuro. El tono concreto es interpretativo."
+        },
+        "version": "5.0.11"
+      }
     },
     {
       "id": "af_xlsx_gecko_hoja",
@@ -4564,18 +4594,33 @@
       "variant": "melanico",
       "normal": "af_zorro_ruppell--normal.webp",
       "plate": "af_zorro_ruppell--melanico.webp",
-      "bytesRatio": 0.5901,
-      "sha": "55b22a56337f7396d9aad3a23c2714733f1b2e5e",
-      "visualState": "insuficiente",
-      "observation": "Se conserva la oreja ancha en claro pero el hocico y vientre se pierden en oscuro. Revisar tonos intermedios de la máscara.",
+      "bytesRatio": 0.8858,
+      "sha": "683fcc0e1782df79fac619081d73b047de95bbac",
+      "visualState": "correcta",
+      "observation": "La máscara, el hocico fino, el interior de la oreja y el vientre recuperan medios tonos. La punta clara de la cola y las patas finas conservan la silueta típica.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
+        256,
         512
       ],
-      "priorAudit": "aud04-felidae-canidae.json"
+      "priorAudit": "aud04-felidae-canidae.json",
+      "art07": {
+        "priorState": "insuficiente",
+        "priorFinding": "Se conserva la oreja ancha en claro pero el hocico y vientre se pierden en oscuro. Revisar tonos intermedios de la máscara.",
+        "outcome": "aprobada",
+        "morph": "Melanismo interpretativo",
+        "evidence": "Interpretativa",
+        "eye": {
+          "normal": "Ámbar avellana",
+          "color": "Ámbar avellana",
+          "changed": false,
+          "why": "Se conserva la gama del ojo habitual. El relieve de la máscara y de los párpados mejora la lectura."
+        },
+        "version": "5.0.11"
+      }
     },
     {
       "id": "ardilla_roja",
@@ -5783,19 +5828,33 @@
       "variant": "melanico",
       "normal": "asia_esp_0355--normal.webp",
       "plate": "asia_esp_0355--melanico.webp",
-      "bytesRatio": 0.5491,
-      "sha": "99e08c08cb5dc2f445f98074c8ae788482328992",
-      "visualState": "insuficiente",
-      "observation": "La rama comparte el oscurecimiento y compite con las patas. Retirar o separar el soporte al corregir la variante.",
+      "bytesRatio": 0.9142,
+      "sha": "6bbdb12cab433b2c8e8abc55c0156166786d5427",
+      "visualState": "correcta",
+      "observation": "Las manchas en nube y los anillos de la cola conservan su patrón. La madera clara se distingue del pelo, las patas y los dedos sobre carbón.",
       "visualSize": null,
       "triage": "revisar_primero_por_compresion",
       "reviewedSizes": [
         64,
         128,
+        256,
         512
       ],
       "priorAudit": "aud04-felidae-canidae.json",
-      "lowWeight": true
+      "art07": {
+        "priorState": "insuficiente",
+        "priorFinding": "La rama comparte el oscurecimiento y compite con las patas. Retirar o separar el soporte al corregir la variante.",
+        "outcome": "aprobada",
+        "morph": "Melanismo con patrón visible",
+        "evidence": "Ejemplares melánicos referidos · patrón y tonos del ejemplar interpretativos",
+        "eye": {
+          "normal": "Amarillo ámbar",
+          "color": "Amarillo ámbar",
+          "changed": false,
+          "why": "Se mantiene un ámbar apagado coherente con el ojo de la lámina normal."
+        },
+        "version": "5.0.11"
+      }
     },
     {
       "id": "asia_esp_0363",
@@ -7600,18 +7659,33 @@
       "variant": "melanico",
       "normal": "eu_esp_0618--normal.webp",
       "plate": "eu_esp_0618--melanico.webp",
-      "bytesRatio": 0.6131,
-      "sha": "e0ebaa647fac1ace0df5b5c783e52463ebbee58b",
-      "visualState": "insuficiente",
-      "observation": "El manto gris queda plano; en oscuro se borran pecho y dedos. Confirmar el morfo y conservar la punta de cola y la textura del pelaje.",
+      "bytesRatio": 1.0096,
+      "sha": "ad5d62f021b3678875792411c7503a523fba79e9",
+      "visualState": "correcta",
+      "observation": "Se recuperan las patas cortas y los dedos bajo el pecho. El manto oscuro mantiene textura localizada y la punta negra de la cola se distingue del resto del pelo. La punta también es un rasgo del fenotipo habitual.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
+        256,
         512
       ],
-      "priorAudit": "aud04-mustelidae.json"
+      "priorAudit": "aud04-mustelidae.json",
+      "art07": {
+        "priorState": "insuficiente",
+        "priorFinding": "El manto gris queda plano; en oscuro se borran pecho y dedos. Confirmar el morfo y conservar la punta de cola y la textura del pelaje.",
+        "outcome": "aprobada",
+        "morph": "Melanismo interpretativo",
+        "evidence": "Interpretativa",
+        "eye": {
+          "normal": "Pardo oscuro",
+          "color": "Pardo oscuro",
+          "changed": false,
+          "why": "Se mantiene la gama parda. La definición de párpado y hocico da lectura al ojo sin cambiar el pigmento."
+        },
+        "version": "5.0.11"
+      }
     },
     {
       "id": "eu_esp_0619",
@@ -9105,18 +9179,36 @@
       "variant": "albino",
       "normal": "na_esp_lynx_rufus--normal.webp",
       "plate": "na_esp_lynx_rufus--albino.webp",
-      "bytesRatio": 0.6826,
-      "sha": "d4775312dee9e3e848b8085c23a08df6805f4285",
-      "visualState": "insuficiente",
-      "observation": "El pelo granulado se mezcla con el fondo claro y se pierde el ojo. Ajustar los tonos del pelo largo y el hocico.",
+      "bytesRatio": 0.8106,
+      "sha": "51a584bab2e34d5fba5717379966bb408802f2e1",
+      "visualState": "correcta",
+      "observation": "La segunda propuesta conserva los pinceles cortos, las patillas, la cola corta y los dedos mediante sombras localizadas. Las marcas residuales casi desaparecen sin aplanar el pelaje.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
+        256,
         512
       ],
-      "priorAudit": "aud04-felidae-canidae.json"
+      "priorAudit": "aud04-felidae-canidae.json",
+      "art07": {
+        "priorState": "insuficiente",
+        "priorFinding": "El pelo granulado se mezcla con el fondo claro y se pierde el ojo. Ajustar los tonos del pelo largo y el hocico.",
+        "outcome": "aprobada",
+        "morph": "Albinismo interpretativo",
+        "evidence": "Interpretativa",
+        "rejected": [
+          "Primera propuesta descartada por el contraste excesivo del moteado y la pérdida del hocico en crema a 64 px."
+        ],
+        "eye": {
+          "normal": "Pardo amarillento",
+          "color": "Pardo rosado grisáceo",
+          "changed": true,
+          "why": "El párpado y el pequeño iris se distinguen del pelo del hocico. El gris rosado es una elección de la lámina."
+        },
+        "version": "5.0.11"
+      }
     },
     {
       "id": "na_esp_marmota_vancouverensis",

@@ -1,0 +1,52 @@
+{
+  "chromium": "156.0.8078.79",
+  "audit": {
+    "variants": 564,
+    "albinas": 303,
+    "melanicas": 261,
+    "corrected": 59,
+    "sizes": {
+      "64": 3,
+      "128": 3,
+      "256": 3,
+      "512": 3
+    },
+    "retiredBearHistory": true,
+    "filtering": [
+      "tipo",
+      "estado",
+      "familia",
+      "corrección",
+      "comparativa"
+    ],
+    "sorting": [
+      "familia",
+      "nombre",
+      "estado",
+      "prioridad"
+    ],
+    "approved": 12,
+    "legacyVariantSelector": true,
+    "mobileWidth": 390,
+    "labVariantPreviews": [
+      "field",
+      "journal",
+      "bestiary",
+      "museum"
+    ],
+    "art07Comparisons": [
+      "af_fosa_ave/albino",
+      "af_xlsx_131_circaetus_gallicus/albino",
+      "af_xlsx_131_polemaetus_bellicosus/albino",
+      "af_xlsx_131_gyps_africanus/albino",
+      "af_xlsx_sahara_buitre/albino",
+      "af_xlsx_131_hydrictis_maculicollis/albino",
+      "eu_esp_0618/melanico",
+      "af_jirafa/melanico",
+      "af_xlsx_gato_dorado/albino",
+      "af_zorro_ruppell/melanico",
+      "asia_esp_0355/melanico",
+      "na_esp_lynx_rufus/albino"
+    ]
+  }
+}

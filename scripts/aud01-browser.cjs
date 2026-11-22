@@ -519,6 +519,37 @@ async function pigmentAuditSmoke(browser) {
       ]);
       assert.equal(await lab.locator('#content figcaption').filter({ hasText: 'Melánico histórico' }).count(), 2);
     }
+    const art07Comparisons = [];
+    if (art07) {
+      await lab.goto(link);
+      for (const row of approved) {
+        await audit('search').fill(row.id);
+        const card = lab.locator('[data-audit-key="' + row.id + '/' + row.variant + '"]');
+        await card.locator('button').click();
+        const images = dialog.locator('img');
+        assert.match(await dialog.textContent(), /Anterior a ART-07/);
+        for (const size of [64, 128, 256, 512]) {
+          await audit('detail-size').selectOption(String(size));
+          const widths = await images.evaluateAll(images => Promise.all(images.map(async img => {
+            img.loading = 'eager';
+            await img.decode();
+            return img.naturalWidth;
+          })));
+          assert.ok(widths.length >= 3 && widths.every(width => width === size));
+          const directory = size === 512 ? '' : size + '/';
+          const active = directory + row.id + '--' + row.variant + '.webp';
+          const paths = await images.evaluateAll(list => list.map(img => new URL(img.src).pathname));
+          assert.equal(paths.at(-1), '/audit/naturalist-art/plates/' + active);
+          assert.ok(paths.includes('/audit/naturalist-art/review/art07/' + active));
+        }
+        if (screenshots && art07Comparisons.length === 0) {
+          await audit('detail-backdrop').selectOption('dark');
+          await lab.screenshot({ path: path.join(screenshots, 'ficha-art07-oscura.png') });
+        }
+        art07Comparisons.push(row.id + '/' + row.variant);
+        await lab.keyboard.press('Escape');
+      }
+    }
     await lab.setViewportSize({ width: 390, height: 844 });
     await lab.goto(link);
     await count(564);
@@ -537,7 +568,8 @@ async function pigmentAuditSmoke(browser) {
     return { variants: 564, albinas, melanicas, corrected, sizes, ...(hasBearReplacement ? { retiredBearHistory: true } : {}),
       filtering: ['tipo', 'estado', 'familia', 'corrección', 'comparativa'],
       sorting: ['familia', 'nombre', 'estado', 'prioridad'], approved: approved.length,
-      legacyVariantSelector: true, mobileWidth: 390, labVariantPreviews: artworkModules };
+      legacyVariantSelector: true, mobileWidth: 390, labVariantPreviews: artworkModules,
+      ...(art07 ? { art07Comparisons } : {}) };
   } finally {
     await context.close();
   }
