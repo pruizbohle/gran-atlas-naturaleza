@@ -3,6 +3,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
+const { createHash } = require('node:crypto');
 const { harness } = require('../tests/helpers/live-game.cjs');
 const { aquaticMammal } = require('./terrestrial-mammal-families.cjs');
 const herpetology = require('./herpetology-taxonomy.cjs');
@@ -178,13 +179,15 @@ function legendaryCoverage() {
     const resolutions = [64, 128, 256, 512].map(size => {
       const resource = 'naturalist-art/plates/' + (size < 512 ? size + '/' : '') + filename;
       assert.ok(precached.has(resource) && fs.existsSync('www/' + resource), resource);
-      return { size, resource };
+      const bytes = fs.readFileSync('www/' + resource);
+      return { size, resource, bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex') };
     });
     const halo = art.render(id, { variant: 'legendario', category: 'Legendario', size: 128 }, () => '');
     assert.match(halo, /class="atlas-art-frame legendary/);
-    return { ...legendary, species: game.SPECIES[id].latin, rate: game.specimenRates(id).Legendario, resolutions };
+    return { ...legendary, commonName: game.SPECIES[id].name, species: game.SPECIES[id].latin, rate: game.specimenRates(id).Legendario, resolutions };
   });
-  assert.equal(inventory.length, 12);
+  assert.equal(inventory.length, 30);
+  for (const key of ['id', 'speciesId', 'species']) assert.equal(new Set(inventory.map(row => row[key])).size, 30);
   return { version: require('../package.json').version, migrated: inventory.length, inventory };
 }
 

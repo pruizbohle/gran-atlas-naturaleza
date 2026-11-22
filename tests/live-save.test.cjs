@@ -1,3 +1,4 @@
+const {execFileSync}=require('node:child_process');
 // Prueba de integración del motor real + gestor JSON con el tick automático.
 const test=require('node:test');
 const assert=require('node:assert/strict');
@@ -14,7 +15,7 @@ const backup={format:'el-gran-atlas-save',formatVersion:1,game:{
  regionUnlocked:{'HX-01-09':true},inventory:{},equipment:{instrument:null,hat:null,necklace:null},
  helpers:0,sexSeen:{},voyages:[],log:[]
 }};
-const harness=store=>require('./helpers/live-game.cjs').harness(store,backup);
+const harness=(store,options)=>require('./helpers/live-game.cjs').harness(store,backup,options);
 test('motor completo mantiene 12139 avistamientos, £4465 y prestigio 4 después del tick',async()=>{
  const store={};
  const h=harness(store);
@@ -48,8 +49,9 @@ test('restaurar una partida no la sobrescribe con la sesión anterior',async()=>
 });
 
 
+const trialGameSource=()=>execFileSync('git',['show','4d3737d:www/js/app.js'],{encoding:'utf8',maxBuffer:6e6});
 test('ayudas de campo otorgan exactamente 500 conocimiento y 50 avistamientos confirmados',()=>{
- const h=harness({});
+ const h=harness({},{gameSource:trialGameSource()});
  const original=JSON.parse(h.store[KEY]);
  h.evalInGame('fieldAid("knowledge")');
  assert.equal(JSON.parse(h.store[KEY]).knowledge-original.knowledge,500);
@@ -85,7 +87,7 @@ test('Fondos científicos IV exige III y desbloquea canje x1000 por £100000',()
 });
 
 test('coronas de laboratorio x5000 se canjean 1:1 y persisten',()=>{
- const h=harness({});
+ const h=harness({},{gameSource:trialGameSource()});
  h.evalInGame('buyCrownPack(5000)');
  let current=JSON.parse(h.store[KEY]);
  assert.equal(current.crownCoins,5000);
@@ -96,12 +98,33 @@ test('coronas de laboratorio x5000 se canjean 1:1 y persisten',()=>{
  assert.equal(current.money,5420);
 });
 
-test('primeras misiones científicas permiten cobrar una vez y conservar el premio',()=>{
+test('V5.0.2 conserva saldos de coronas y las antiguas acciones de prueba no conceden recursos',async()=>{
  const h=harness({});
+ const bridge=h.window.AtlasSaveBridge;
+ bridge.restoreGame({...bridge.getSaveData(),crownCoins:725,money:2000,knowledge:127});
+ const before=bridge.getSaveData();
+ assert.match(h.evalInGame('renderCrown()'),/725 coronas/);
+ assert.doesNotMatch(h.evalInGame('renderCrown()'),/buy-crown|exchange-crown/);
+ assert.doesNotMatch(h.elements.panel.innerHTML,/field-aid/);
+ for(const [action,id] of [['field-aid','knowledge'],['field-aid','sightings'],['field-aid','guided'],['buy-crown','5000'],['exchange-crown','all']]){
+   h.window.__atlasTest.handlePanelAction({target:{closest:()=>({dataset:{action,id}})}});
+ }
+ assert.deepEqual(bridge.getSaveData(),before);
+ let exported;
+ h.window.Capacitor.Plugins.AtlasExport.saveFile=async({content})=>{exported=JSON.parse(content);return {uri:'content://test'};};
+ await h.elements.saveDownloadBtn.fire('click');
+ assert.equal(exported.game.crownCoins,725);
+ assert.equal(exported.game.money,2000);
+ assert.equal(harness(h.store).window.AtlasSaveBridge.getSaveData().crownCoins,725);
+});
+
+test('primeras misiones científicas permiten cobrar una vez y conservar el premio',()=>{
+ const h=harness({},{rng:()=>0.4});
  assert.match(h.evalInGame('renderScientificMissions()'),/Primer censo de fauna/);
  h.evalInGame('claimScientificMission("censo_50")');
  assert.equal(JSON.parse(h.store[KEY]).purchases.mission_censo_50,undefined);
- h.evalInGame('fieldAid("sightings")');
+ for(let i=0;i<50;i++)h.evalInGame('encounter("manual")');
+ h.evalInGame('persist()');
  const before=JSON.parse(h.store[KEY]);
  h.evalInGame('claimScientificMission("censo_50")');
  const claimed=JSON.parse(h.store[KEY]);
@@ -336,9 +359,9 @@ test('Beta 3.11: 90 fragmentos, 1 cráneo y 10 dientes producen un T. rex único
 test('Beta 3.11: relictos no tributan al Atlas y se conservan en JSON',()=>{
  const h=harness({});
  const original=JSON.parse(h.store[KEY]);
- assert.equal(h.evalInGame('MUSEUM_RELICTS.length'),9);
- assert.equal(h.evalInGame('recordMuseumRelict("coelacanth_indic")'),true);
- assert.equal(h.evalInGame('recordMuseumRelict("coelacanth_indic")'),false);
+ assert.equal(h.evalInGame('MUSEUM_RELICTS.length'),20);
+ assert.equal(Boolean(h.evalInGame('searchRelictInField("manual",Date.now(),{currentRegion:"HX-10-12",habitat:"costa",time:"noche"},()=>0)')),true);
+ assert.equal(Boolean(h.evalInGame('searchRelictInField("manual",Date.now(),{currentRegion:"HX-10-12",habitat:"costa",time:"noche"},()=>0)')),false);
  assert.equal(h.evalInGame('recordMuseumRelict("invalid")'),false);
  const before=JSON.parse(h.store[KEY]);
  h.tick();
@@ -477,10 +500,10 @@ test('Beta 3.12: artefactos consumen materiales y aparecen en vitrinas sin doble
 
 test('Beta 3.12: dos relictos adicionales no entran en estadísticas del Atlas',()=>{
  const h=harness({}),old=JSON.parse(h.store[KEY]);
- assert.equal(h.evalInGame('MUSEUM_RELICTS.length'),9);
- assert.equal(h.evalInGame('recordMuseumRelict("angonoka")'),true);
- assert.equal(h.evalInGame('recordMuseumRelict("african_lungfish")'),true);
- assert.equal(h.evalInGame('recordMuseumRelict("angonoka")'),false);
+ assert.equal(h.evalInGame('MUSEUM_RELICTS.length'),20);
+ assert.equal(Boolean(h.evalInGame('searchRelictInField("manual",Date.now(),{currentRegion:"HX-09-14",habitat:"bosque",time:"dia"},()=>0)')),true);
+ assert.equal(Boolean(h.evalInGame('searchRelictInField("manual",Date.now(),{currentRegion:"HX-09-11",habitat:"humedal",time:"noche"},()=>0)')),true);
+ assert.equal(Boolean(h.evalInGame('searchRelictInField("manual",Date.now(),{currentRegion:"HX-09-14",habitat:"bosque",time:"dia"},()=>0)')),false);
  h.tick();
  const after=JSON.parse(h.store[KEY]);
  assert.equal(after.museum.relicts.angonoka,true);

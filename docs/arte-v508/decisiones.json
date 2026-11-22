@@ -1,0 +1,134 @@
+{
+  "baseline": "a57c86b",
+  "rows": [
+    {
+      "id": "af_facoquero",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo oscuro",
+        "changed": false,
+        "why": "El contraste se obtiene con el relieve del párpado y la mejilla."
+      },
+      "note": "Los colmillos superiores de marfil curvados hacia arriba se distinguen del disco nasal. Se recuperaron las verrugas, la crin de cerdas y la separación entre pezuñas sin perder el manto carbón."
+    },
+    {
+      "id": "asia_esp_0834",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo oscuro",
+        "changed": false,
+        "why": "La ceja y el nacimiento de la barba ayudan a ubicar el ojo, con el iris en su gama natural."
+      },
+      "note": "Las cerdas ceniza de la barba salen por debajo del hocico alargado. Se modelaron el vientre, los corvejones y el penacho caudal. La cabeza y las articulaciones se distinguen mejor sobre carbón."
+    },
+    {
+      "id": "asia_esp_0344",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo oscuro",
+        "changed": false,
+        "why": "El párpado y la órbita se definieron con cambios locales de tono."
+      },
+      "note": "La grupa alta, las patas posteriores potentes y el pecho estrecho mantienen su perfil. Se ven los caninos del macho y la marca gular tenue. El dibujo residual del costado sigue presente en el manto oscuro."
+    },
+    {
+      "id": "af_elefante_sabana",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo oscuro",
+        "changed": false,
+        "why": "La frente y el contorno de la órbita aportan la separación visual."
+      },
+      "note": "Las orejas amplias y angulosas y los colmillos curvos hacia delante se distinguen del elefante de bosque. Los pliegues de la trompa, los espacios entre las patas y el relieve de los pies se leen sobre carbón."
+    },
+    {
+      "id": "af_elefante_bosque",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo oscuro",
+        "changed": false,
+        "why": "El ojo mantiene un tono discreto. La lectura depende de la frente, la órbita y las arrugas cercanas."
+      },
+      "note": "Conserva el perfil compacto, las orejas redondeadas y dos colmillos delgados casi verticales. La trompa se separa de los colmillos, y los pliegues de las patas y uñas recuperan relieve sobre carbón."
+    },
+    {
+      "id": "af_xlsx_131_equus_africanus",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Gris rosado tenue",
+        "changed": true,
+        "why": "Se trata como apariencia de un iris hipopigmentado, con el párpado modelado y sin reflejos saturados."
+      },
+      "note": "El marfil del pelaje se separa del hocico rosado, el interior de las orejas largas y los cascos estrechos. La cruz escapular queda como una huella tonal muy tenue."
+    },
+    {
+      "id": "af_serval",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo dorado",
+        "color": "Gris rosado tenue",
+        "changed": true,
+        "why": "Se distingue el contorno del iris con un tono bajo en saturación. El detalle visible es pequeño y se aprecia en la lámina grande."
+      },
+      "note": "El segundo repintado conserva las orejas grandes, las patas altas y la cola corta. Las motas quedan atenuadas y los tejidos del hocico y la cara se distinguen del pelaje marfil.",
+      "rejected": [
+        "La primera propuesta tenía un rectángulo oscuro incrustado alrededor del animal y comprimía el perfil del tronco. Se descartó antes de tocar las rutas del juego."
+      ]
+    },
+    {
+      "id": "af_rinoceronte_blanco",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo",
+      "evidence": "Interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo oscuro",
+        "changed": false,
+        "why": "Se mantiene el iris natural y se mejora la lectura mediante la órbita y los pliegues."
+      },
+      "note": "La cabeza baja, el labio ancho y los dos cuernos de tamaño desigual se distinguen sobre carbón. El manto oscuro conserva el relieve de cuello, hombro, rodilla y pies."
+    },
+    {
+      "id": "na_esp_canis_latrans",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo",
+      "evidence": "Documentado",
+      "eye": {
+        "normal": "Ámbar pardo",
+        "color": "Rosado cobrizo tenue",
+        "changed": true,
+        "why": "Los casos históricos de albinismo verdadero describen ojos rosados. Los párpados y una pupila oscura modelan la órbita."
+      },
+      "note": "Se recuperaron ojos, trufa y orejas en crema. El perfil del hocico estrecho, la cola densa y baja y las patas largas separan al coyote de un cánido de cuerpo más pesado."
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "chromium": "156.0.8078.79",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "slowdown": 4,
+  "runs": [
+    {
+      "identity": {
+        "stage": "advanced",
+        "version": "base",
+        "helpers": 10
+      },
+      "phases": {
+        "game-script": 642.2,
+        "specimens": 79.8,
+        "achievements": 137.5,
+        "initial-render": 38.4
+      },
+      "startup": 1422.2,
+      "journal": {
+        "ms": 303.3,
+        "style": 23.2,
+        "layout": 174.2,
+        "paint": 17.8,
+        "image": 0.1
+      },
+      "bestiary": {
+        "ms": 447.4,
+        "style": 32.8,
+        "layout": 224.3,
+        "paint": 50.6,
+        "image": 6.6
+      }
+    },
+    {
+      "identity": {
+        "stage": "advanced",
+        "version": "candidate",
+        "helpers": 10
+      },
+      "phases": {
+        "game-script": 430.5,
+        "specimens": 9.3,
+        "achievements": 42.2,
+        "initial-render": 39.8
+      },
+      "startup": 1225.7,
+      "journal": {
+        "ms": 132.7,
+        "style": 16.6,
+        "layout": 68.5,
+        "paint": 10.2,
+        "image": 0
+      },
+      "bestiary": {
+        "ms": 264,
+        "style": 21.1,
+        "layout": 95.8,
+        "paint": 42.9,
+        "image": 5.1
+      }
+    },
+    {
+      "identity": {
+        "stage": "advanced",
+        "version": "candidate",
+        "helpers": 10
+      },
+      "phases": {
+        "game-script": 436.8,
+        "specimens": 10.9,
+        "achievements": 40.9,
+        "initial-render": 41.9
+      },
+      "startup": 1154.9,
+      "journal": {
+        "ms": 205.3,
+        "style": 24,
+        "layout": 100.3,
+        "paint": 14.6,
+        "image": 0.1
+      },
+      "bestiary": {
+        "ms": 286.6,
+        "style": 25.8,
+        "layout": 124,
+        "paint": 38.6,
+        "image": 5.9
+      }
+    },
+    {
+      "identity": {
+        "stage": "advanced",
+        "version": "base",
+        "helpers": 10
+      },
+      "phases": {
+        "game-script": 670.9,
+        "specimens": 98.2,
+        "achievements": 181.4,
+        "initial-render": 45.9
+      },
+      "startup": 1338.4,
+      "journal": {
+        "ms": 171,
+        "style": 17.3,
+        "layout": 73.7,
+        "paint": 15,
+        "image": 0
+      },
+      "bestiary": {
+        "ms": 292.8,
+        "style": 25.6,
+        "layout": 124.7,
+        "paint": 42.2,
+        "image": 6.5
+      }
+    }
+  ]
+}

@@ -8,9 +8,21 @@
   <link rel="stylesheet" href="../css/field-v3210.css">
   <link rel="stylesheet" href="lab.css">
   <script src="catalog.js" defer></script>
+  <script src="art01.js" defer></script>
+  <script src="art02.js" defer></script>
+  <script src="art03.js" defer></script>
+  <script src="art04.js" defer></script>
+  <script src="art05.js" defer></script>
+  <script src="art06.js" defer></script>
+  <script src="art07.js" defer></script>
+  <script src="art08.js" defer></script>
+  <script src="pigment-audit-data.js" defer></script>
   <script src="../js/naturalist-assets-v400.js" defer></script>
   <script src="../js/naturalist-art-v400.js" defer></script>
   <script src="../js/field-ui-v3210.js" defer></script>
+  <script src="plate-view.js" defer></script>
+  <script src="legendary-view.js" defer></script>
+  <script src="pigment-audit.js" defer></script>
   <script src="lab.js" defer></script>
 </head>
 <body>
@@ -30,6 +42,15 @@
       <button type="button" data-mode="bestiary">Bestiario</button>
       <button type="button" data-mode="museum">Museo</button>
       <button type="button" data-mode="variants">Variantes</button>
+      <button type="button" data-mode="pigment-audit">Visor de albinos y melánicos</button>
+      <button type="button" data-mode="art01">Variantes revisadas en ART-01</button>
+      <button type="button" data-mode="art02">Variantes revisadas en ART-02</button>
+      <button type="button" data-mode="art03">Variantes revisadas en ART-03</button>
+      <button type="button" data-mode="art04">Variantes corregidas en ART-04</button>
+      <button type="button" data-mode="art05">Variantes corregidas en ART-05</button>
+      <button type="button" data-mode="art06">Variantes corregidas en ART-06</button>
+      <button type="button" data-mode="art07">Variantes revisadas en ART-07</button>
+      <button type="button" data-mode="art08">Variantes revisadas en ART-08</button>
       <button type="button" data-mode="frames">Ejemplares especiales</button>
       <button type="button" data-mode="gallery">Galería</button>
       <button type="button" data-mode="compare">Comparar estilos</button>
@@ -51,7 +72,7 @@
     </nav>
     <section aria-labelledby="heading" class="workspace">
       <div class="toolbar">
-        <div><h2 id="heading"></h2><p id="summary"></p></div>
+        <div><h2 id="heading"></h2><p id="summary" aria-live="polite"></p></div>
         <label data-catalog-filter>Grupo <select id="group"><option value="">Todos</option></select></label>
         <label id="order-control" data-catalog-filter>Orden zoológico <select id="bird-order"></select></label>
         <label data-catalog-filter>Familia zoológica <select id="family"></select></label>
@@ -84,7 +105,7 @@
         <label id="search-control" data-catalog-filter>Buscar especie <input id="search" type="search" placeholder="Nombre común o científico"></label>
         <label id="species-control" hidden>Especie <select id="species"></select></label>
         <label id="scale-plate-control" hidden>Lámina <select id="scale-plate"></select></label>
-        <label>Presentación
+        <label id="frame-style-control">Presentación
           <select id="frame-style">
             <option value="bare">Sin marco · halos de categoría</option>
             <option value="outline">Contorno minimalista</option>
@@ -101,7 +122,8 @@
           <option value="dark">Oscuro</option>
           <option value="grid">Cuadrícula</option>
         </select></label>
-        <label id="bird-set-control" hidden>Conjunto anatómico <select id="bird-set"></select></label>
+        <label id="legendary-search-control" hidden>Buscar por nombre o especie <input id="legendary-search" type="search" autocomplete="off"></label>
+        <label id="bird-set-control" hidden><span id="comparison-set-label">Conjunto anatómico</span> <select id="bird-set"></select></label>
         <label id="variant-view-control" hidden>Comparación de variantes <select id="variant-view">
           <option value="all">Todas las láminas</option>
           <option value="sex">Macho y hembra</option>
@@ -123,7 +145,67 @@
         <button id="review-offline" type="button" hidden></button>
         <a id="review-prepare-offline" href="../actualizar-atlas.html" hidden>Preparar el juego sin conexión</a>
       </div>
+      <div id="pigment-audit-filters" class="pigment-audit-filters" role="group" aria-label="Filtros del visor" hidden>
+        <label>Buscar especie <input id="audit-search" type="search" placeholder="Nombre común, científico o ID"></label>
+        <label>Variante <select id="audit-kind">
+          <option value="">Todas</option><option value="albino">Albina</option><option value="melanico">Melánica</option>
+        </select></label>
+        <label>Estado artístico <select id="audit-state">
+          <option value="">Todos</option>
+          <option value="correcta">Correcta</option><option value="mejorable">Mejorable</option>
+          <option value="insuficiente">Insuficiente</option><option value="pendiente">Pendiente</option>
+        </select></label>
+        <label>Familia zoológica <select id="audit-family"><option value="">Todas</option></select></label>
+        <label>Corrección <select id="audit-corrected">
+          <option value="">Todas</option><option value="with">Corregidas</option><option value="without">Sin corrección</option>
+        </select></label>
+        <label>Comparativa <select id="audit-comparison">
+          <option value="">Todas</option><option value="with">Con comparativa</option><option value="without">Sin comparativa</option>
+        </select></label>
+        <label>Ordenar por <select id="audit-sort">
+          <option value="family">Familia</option><option value="name">Nombre</option>
+          <option value="state">Estado</option><option value="priority">Prioridad</option>
+        </select></label>
+        <label>Fondo <select id="audit-backdrop"><option value="light">Claro</option><option value="dark">Oscuro</option></select></label>
+        <label>Animales por página <select id="audit-page-size">
+          <option value="20">20</option><option value="40">40</option><option value="60">60</option>
+        </select></label>
+        <button id="audit-reset" type="button">Restablecer filtros</button>
+      </div>
+      <div id="audit-navigation" hidden>
+        <nav class="audit-lots" aria-label="Bibliotecas de ART-08">
+          <a data-audit-batch="" href="?view=pigment-audit">Todas las variantes</a>
+          <a data-audit-batch="A" href="?view=pigment-audit&amp;lote=A">ART-08A</a>
+          <a data-audit-batch="B" href="?view=pigment-audit&amp;lote=B">ART-08B</a>
+        </nav>
+        <nav class="audit-pagination" aria-label="Páginas del visor">
+          <button type="button" data-audit-page="-1">Anterior</button>
+          <span id="audit-page-status" aria-live="polite"></span>
+          <button type="button" data-audit-page="1">Siguiente</button>
+        </nav>
+      </div>
       <div id="content" data-frame-style="bare"></div>
+      <nav class="audit-pagination" id="audit-navigation-bottom" aria-label="Páginas del visor al pie de la galería" hidden>
+        <button type="button" data-audit-page="-1">Anterior</button>
+        <span id="audit-page-status-bottom"></span>
+        <button type="button" data-audit-page="1">Siguiente</button>
+      </nav>
+      <dialog id="pigment-audit-detail" aria-labelledby="audit-detail-title">
+        <div class="audit-detail-toolbar">
+          <h3 id="audit-detail-title"></h3>
+          <form method="dialog"><button type="submit" autofocus>Cerrar ficha</button></form>
+        </div>
+        <div class="audit-detail-toolbar">
+          <label>Resolución <select id="audit-detail-size">
+            <option value="64">64 px</option><option value="128">128 px</option>
+            <option value="256" selected>256 px</option><option value="512">512 px</option>
+          </select></label>
+          <label>Fondo <select id="audit-detail-backdrop">
+            <option value="light">Claro</option><option value="dark">Oscuro</option>
+          </select></label>
+        </div>
+        <div id="audit-detail-content"></div>
+      </dialog>
       <p id="status" role="status"></p>
     </section>
   </main>

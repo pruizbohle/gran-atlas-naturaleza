@@ -57,6 +57,9 @@ const classicalIndex = path.join(reviewDir, 'classical-plates.json');
 const classical = new Set(fs.existsSync(classicalIndex) ? JSON.parse(fs.readFileSync(classicalIndex, 'utf8')) : []);
 const qualities = [75, 80, 85, 90, 95];
 const reviewFiles = new Set();
+const replacements = new Map(require('../docs/arte-v5010/decisiones.json').rows
+  .filter(row => row.replaces && row.outcome === 'aprobada')
+  .map(row => [row.id + '/' + row.variant, row]));
 const modules = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'gm07-p04/catalog', 'gm07-a04/catalog', 'app'];
 const gameSource = modules.map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')).join('\n');
 const audit = harness({}, null, { gameSource }).window.__atlasTest;
@@ -143,8 +146,10 @@ function plate(id, key, label) {
     reviewFiles.add('naturalist-art/' + relative);
     return { src: relative, bytes: fs.statSync(location).size };
   };
-  const before = reviewAsset('before', file);
-  const previous = reviewAsset('series-4.3', file);
+  const replacement = replacements.get(id + '/' + key);
+  const historyFile = replacement ? id + '--' + replacement.replaces + '.webp' : file;
+  const before = reviewAsset('before', historyFile);
+  const previous = reviewAsset('series-4.3', historyFile);
   const compression = Object.fromEntries(qualities.flatMap(quality => {
     const sample = reviewAsset('compression/' + quality, file);
     return sample ? [[quality, sample]] : [];
@@ -152,7 +157,8 @@ function plate(id, key, label) {
   return {
     key, label, src: exists ? 'plates/' + file : null, bytes: exists ? fs.statSync(source).size : 0,
     cutout: cutouts[file] === true, classical: classical.has(file),
-    note: classical.has(file) ? '' : observations[file] || '', before, previous, compression
+    note: classical.has(file) ? '' : observations[file] || '', before, previous, compression,
+    ...(replacement ? { previousLabel: replacement.previousLabel } : {})
   };
 }
 
@@ -364,14 +370,47 @@ const reefComparisons = buildComparisons(reefSets, reef, 'reef');
 const deepSeaComparisons = buildComparisons(deepSeaSets, deepSea, 'deep');
 const marineComparisons = buildComparisons(closeoutSets.marine, marine, 'marine');
 const cephalopodComparisons = buildComparisons(closeoutSets.cephalopods, cephalopods, 'cephalopods');
-const legendMembers = new Map(audit.LEGENDARY_SPECIMENS.map(legend => [legend.speciesId, legend]));
-const legendaryComparisons = buildComparisons({
-  all: {
-    label: 'Colección completa',
-    legendary: audit.LEGENDARY_SPECIMENS.map(legend =>
-      [audit.SPECIES[legend.speciesId].latin, legend.description, 'legendario'])
-  }
-}, legendMembers, 'legendary');
+const leg01Additions = new Set(require('../docs/leg01/decisiones.json')
+  .filter(row => row.status === 'nuevo').map(row => row.id));
+const legendaryRows = audit.LEGENDARY_SPECIMENS.map(legend => {
+  const id = legend.speciesId;
+  const file = id + '--' + legend.id + '.webp';
+  const archives = [
+    ['leg02', 'Legendario anterior · LEG-01'],
+    ['leg01', 'Legendario anterior · Original'],
+    ['leg02-propuestas', 'Propuesta de revisión · LEG-02']
+  ].flatMap(([folder, label]) => {
+    const files = {};
+    for (const size of [64, 128, 256, 512]) {
+      const relative = 'review/' + folder + '/' + (size === 512 ? '' : size + '/') + file;
+      if (fs.existsSync(path.join(out, relative))) {
+        reviewFiles.add('naturalist-art/' + relative);
+        files[size] = relative;
+      }
+    }
+    const count = Object.keys(files).length;
+    if (count && count !== 4) throw Error('Archivo legendario incompleto: ' + folder + '/' + file);
+    return count ? [{ label, files }] : [];
+  });
+  const origin = leg01Additions.has(legend.id) ? 'LEG-01' : legend.legendaryOnly ? 'LEG-02' : 'Original';
+  const status = archives.some(archive => archive.label.startsWith('Legendario anterior'))
+    ? 'revisado' : origin === 'Original' ? 'conservado' : 'nuevo';
+  const trait = {
+    ascua: 'La cola envuelve las patas y concentra los tonos cobre y bermellón.',
+    atlas: 'Cuatro patas diferenciadas, trompa libre y dos colmillos asimétricos.',
+    fenrir: 'El perfil de aullido alza el hocico sobre la gorguera invernal plateada.',
+    silverback: 'En reposo, la cresta alta y la silla plateada se distinguen de brazos y pecho.'
+  }[legend.id] || legend.description;
+  return { id, legendaryId: legend.id, trait, plateKey: 'legendario', status, origin, archives,
+    ...(legend.id === 'filigrana' ? { aliases: ['Filigrana'] } : {}) };
+});
+const legendaryComparisons = {
+  all: { label: 'Colección completa', legendary: legendaryRows },
+  leg01: { label: 'Incorporados en LEG-01', legendary: legendaryRows.filter(row => row.origin === 'LEG-01') },
+  leg02: { label: 'Incorporados en LEG-02', legendary: legendaryRows.filter(row => row.origin === 'LEG-02') },
+  revised: { label: 'Con comparativas históricas', legendary: legendaryRows.filter(row => row.archives.length) },
+  retained: { label: 'Originales conservados', legendary: legendaryRows.filter(row => row.status === 'conservado') }
+};
 const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,
   total: catalogEntries.length,
@@ -451,14 +490,27 @@ const landscapes = fs.readdirSync(path.join(out, 'landscapes')).filter(file => f
 const animalFiles = [...assets].sort().flatMap(file =>
   ['', '64/', '128/', '256/'].map(size => 'naturalist-art/plates/' + size + file));
 const files = [...animalFiles, ...landscapes.map(key => 'naturalist-art/landscapes/' + key + '.webp')];
+for (const lot of ['art01', 'art02', 'art03', 'art04', 'art05', 'art06', 'art07', 'art08']) {
+  const archive = path.join(out, 'review', lot);
+  if (!fs.existsSync(archive)) continue;
+  for (const file of fs.readdirSync(archive, { recursive: true })) {
+    if (file.endsWith('.webp')) reviewFiles.add('naturalist-art/review/' + lot + '/' + file.split(path.sep).join('/'));
+  }
+}
 const labFiles = [...reviewFiles].sort();
-for (const file of [...files, ...labFiles]) {
+const relictCatalogue = audit.MUSEUM_RELICTS.map(({ id, name, latin, region, locality, desc, plate }) =>
+  ({ id, name, latin, hex: audit.REGIONS.find(zone => zone.id === region).code, locality, desc, plate }));
+fs.writeFileSync(path.join(out, 'relict-catalog.js'),
+  'const AtlasRelictReview = ' + JSON.stringify(relictCatalogue, null, 2) + ';\n');
+const relictFiles = audit.MUSEUM_RELICTS.filter(relict => relict.plate).flatMap(relict =>
+  ['', '64/', '128/', '256/'].map(size => 'naturalist-art/relicts/' + size + relict.id + '.webp')).sort();
+for (const file of [...files, ...labFiles, ...relictFiles]) {
   if (!fs.existsSync('www/' + file)) throw Error('Falta derivado gráfico: ' + file);
 }
 const labBytes = labFiles.reduce((bytes, file) => bytes + fs.statSync('www/' + file).size, 0);
 fs.writeFileSync('www/js/naturalist-assets-v400.js',
   'globalThis.AtlasNaturalistAssets = ' +
-  JSON.stringify({ routes, cutouts, landscapes, bestiaryHabitats, visualScales, files, labFiles, labBytes }, null, 2) + ';\n');
+  JSON.stringify({ routes, cutouts, landscapes, bestiaryHabitats, visualScales, files, labFiles, labBytes, relictFiles }, null, 2) + ';\n');
 console.log(JSON.stringify({
   species: species.length,
   catalogSize: migrationProgress.total,

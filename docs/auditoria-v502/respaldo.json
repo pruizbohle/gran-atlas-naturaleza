@@ -1,0 +1,18 @@
+{
+  "sha256": "8ad9004ea8b02eef42c5f248cb63751dd3abd131f279ac3e77ff508e16f4089b",
+  "beforeChanges": 39,
+  "afterRestoreAndReload": [
+    "money",
+    "knowledge",
+    "sightings",
+    "inventory",
+    "purchases",
+    "upgrades",
+    "museum",
+    "voyages",
+    "voyageSettled",
+    "commerce",
+    "legendaryFound",
+    "crownCoins"
+  ]
+}

@@ -1,7 +1,7 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const {catalogSource}=require('./helpers/catalog.cjs'),{harness}=require('./helpers/live-game.cjs');
-const source=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8')),ctx=vm.createContext({});
+const source=require('./helpers/legacy-source.cjs').withoutOceania3290(require('node:child_process').execFileSync('git',['show','ee39bfc:www/js/app.js'],{encoding:'utf8',maxBuffer:16e6})),ctx=vm.createContext({});
 for(const n of ['herp-art-v3192','bird-art-v3193','mammal-art-v3194','legendary-art-v3197'])vm.runInContext(fs.readFileSync('www/js/'+n+'.js','utf8'),ctx);
 vm.runInContext(catalogSource(source)+'\n'+source.slice(source.indexOf('function sexSpriteMarkup('),source.indexOf('// initial unlock checks and migration'))+'\napi={SPECIES,SPECIMEN_LEVELS,SPECIMEN_CATEGORIES,SPECIMEN_SELECTION,LEGENDARY_SPECIMENS,legendaryForSpecies,configuredSpecials,rollSpecimen,recordSpecimen,specimenRates,normalizeSpecialDiscoveries,getSpriteMarkup};',ctx);
 const a=ctx.api,clone=x=>JSON.parse(JSON.stringify(x)),KEY='gran_atlas_v05';

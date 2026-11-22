@@ -1,0 +1,37 @@
+{
+  "baseline": "29dc914",
+  "filter": "insuficiente",
+  "summary": "8 de 564 variantes",
+  "planned": [
+    {
+      "key": "eu_esp_0618/melanico",
+      "name": "Armiño · Melánico",
+      "finding": "El manto gris queda plano; en oscuro se borran pecho y dedos. Confirmar el morfo y conservar la punta de cola y la textura del pelaje."
+    },
+    {
+      "key": "asia_esp_0355/melanico",
+      "name": "Leopardo nublado · Melánico",
+      "finding": "La rama comparte el oscurecimiento y compite con las patas. Retirar o separar el soporte al corregir la variante."
+    },
+    {
+      "key": "af_xlsx_gato_dorado/albino",
+      "name": "Gato dorado africano · Albino",
+      "finding": "Orejas y hocico se pierden a 64 px en claro. El rosa invade el manto; separar piel, pelo y sombras."
+    },
+    {
+      "key": "na_esp_lynx_rufus/albino",
+      "name": "Lince rojo · Albino",
+      "finding": "El pelo granulado se mezcla con el fondo claro y se pierde el ojo. Ajustar los tonos del pelo largo y el hocico."
+    },
+    {
+      "key": "af_zorro_ruppell/melanico",
+      "name": "Zorro de Rüppell · Melánico",
+      "finding": "Se conserva la oreja ancha en claro pero el hocico y vientre se pierden en oscuro. Revisar tonos intermedios de la máscara."
+    },
+    {
+      "key": "af_jirafa/melanico",
+      "name": "Jirafa · Melánico",
+      "finding": "El cuello moteado se intuye en carbón, pero la cabeza, los osiconos y la caña de los miembros desaparecen en miniatura. Apenas se distingue el patrón del torso en claro."
+    }
+  ]
+}

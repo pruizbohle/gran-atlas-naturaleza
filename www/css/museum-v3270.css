@@ -4,3 +4,9 @@
 @media(max-width:360px){.m27-heading h1{font-size:18px}.m27-statline>span{font-size:7px}.m27-room-heading h2{font-size:18px}.m27-materials>span{font-size:8px}.m27-art{height:91px}.m27-art svg{height:86px;width:98px}.m27-plate>strong{font-size:14px}}
 @media(max-height:700px) and (max-width:760px){.m27-dialog-art{height:135px}.m27-dialog-art svg{height:130px}.m27-dialog{max-height:calc(100dvh - 90px)}}
 @media(prefers-reduced-motion:reduce){.m27-root *,.m27-dialog *{scroll-behavior:auto!important}}
+
+.m27-relict-details { margin: .45rem 0; font-size: .88rem; }
+.m27-relict-details div + div { margin-top: .3rem; }
+.m27-relict-details dt { font-weight: 700; }
+.m27-relict-details dd { margin: 0; overflow-wrap: anywhere; }
+.m27-root img.relict-plate, .m27-dialog img.relict-plate { max-width: 100%; max-height: 100%; object-fit: contain; }

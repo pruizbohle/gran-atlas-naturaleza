@@ -27,9 +27,31 @@
    </div><footer class="j25-colophon">EL GRAN ATLAS · SOCIEDAD DE HISTORIA NATURAL</footer>
   </article>`;
  }
- function render(m){
-  const q=normalize(m.query),visible=m.items.filter(p=>normalize(p.name).includes(q)).length;
-  return `<div class="journal-v3250"><header class="j25-heading"><h1>Cuaderno del naturalista</h1><span>${escape(m.region)} · ${m.identified}/${m.items.length} identificadas</span></header><div class="j25-layout"><aside class="j25-directory" aria-label="Especies de la región"><div class="j25-filters"><label class="sr-only" for="journalRailSearch">Buscar especie conocida</label><input id="journalRailSearch" type="search" placeholder="Buscar especie" autocomplete="off" value="${escape(m.query)}"><label class="sr-only" for="journalRailSort">Ordenar especies</label><select id="journalRailSort" aria-label="Ordenar especies"><option value="catalog" ${m.sort==='catalog'?'selected':''}>Catálogo</option><option value="sightings" ${m.sort==='sightings'?'selected':''}>Más avistadas</option></select><span id="journalRailCount" aria-live="polite">${visible?visible+' especies':'Sin resultados'}</span></div><nav id="journalSpeciesRail" class="j25-rail" aria-label="Selector de especies de la región">${m.items.map(p=>`<button type="button" class="j25-animal ${p.slot===m.selected.slot?'selected':''}" data-action="select-journal" data-journal-slot="${p.slot}" ${p.slot===m.selected.slot?'aria-current="true"':''} ${normalize(p.name).includes(q)?'':'hidden'} aria-label="${escape(p.name)}, ${p.sightings} avistamientos, ${p.stage} de 5"><span class="j25-avatar">${p.discovered?illustration(p.sprite):unknown}</span><span class="j25-animal-name">${escape(p.name)}</span><span class="j25-animal-progress">${p.stage}/5 · ${p.sightings}</span></button>`).join('')}</nav></aside><div id="journalSelectedSheet">${sheet(m)}</div></div></div>`;
+ function railButton(p,selected,q){return `<button type="button" class="j25-animal ${p.slot===selected?'selected':''}" data-action="select-journal" data-journal-slot="${p.slot}" ${p.slot===selected?'aria-current="true"':''} ${!q||normalize(p.name).includes(q)?'':'hidden'} aria-label="${escape(railLabel(p))}"><span class="j25-avatar">${p.discovered?illustration(p.sprite):unknown}</span><span class="j25-animal-name">${escape(p.name)}</span><span class="j25-animal-progress">${p.stage}/5 · ${p.sightings}</span></button>`;}
+ function updateRail(rail,m,previous){
+  const q=normalize(m.query);
+  const buttons=Array.from(rail.children),bySlot=new Map(buttons.map(button=>[Number(button.dataset.journalSlot),button]));
+  let next=rail.firstElementChild;
+  for(const item of m.items){
+   const button=bySlot.get(item.slot),old=previous.get(item.slot),selected=item.slot===m.selected.slot;
+   if(button!==next)rail.insertBefore(button,next);
+   next=button.nextElementSibling;
+   const hidden=!!q&&!normalize(item.name).includes(q);
+   if(button.hidden!==hidden)button.hidden=hidden;
+   if(button.classList.contains('selected')!==selected){
+    button.classList.toggle('selected',selected);
+    if(selected)button.setAttribute('aria-current','true');else button.removeAttribute('aria-current');
+   }
+   if(old.name!==item.name)button.querySelector('.j25-animal-name').textContent=item.name;
+   if(old.sightings!==item.sightings||old.stage!==item.stage)button.querySelector('.j25-animal-progress').textContent=item.stage+'/5 · '+item.sightings;
+   if(old.name!==item.name||old.sightings!==item.sightings||old.stage!==item.stage)button.setAttribute('aria-label',railLabel(item));
+   if(old.discovered!==item.discovered)button.querySelector('.j25-avatar').innerHTML=item.discovered?illustration(item.sprite):unknown;
+  }
  }
- root.AtlasJournalUI=Object.freeze({render,sheet,illustration,normalize});
+ const railLabel=p=>p.name+', '+p.sightings+' avistamientos, '+p.stage+' de 5';
+ function render(m,reuseRail=false){
+  const q=normalize(m.query),visible=q?m.items.filter(p=>normalize(p.name).includes(q)).length:m.items.length;
+  return `<div class="journal-v3250"><header class="j25-heading"><h1>Cuaderno del naturalista</h1><span>${escape(m.region)} · ${m.identified}/${m.items.length} identificadas</span></header><div class="j25-layout"><aside class="j25-directory" aria-label="Especies de la región"><div class="j25-filters"><label class="sr-only" for="journalRailSearch">Buscar especie conocida</label><input id="journalRailSearch" type="search" placeholder="Buscar especie" autocomplete="off" value="${escape(m.query)}"><label class="sr-only" for="journalRailSort">Ordenar especies</label><select id="journalRailSort" aria-label="Ordenar especies"><option value="catalog" ${m.sort==='catalog'?'selected':''}>Catálogo</option><option value="sightings" ${m.sort==='sightings'?'selected':''}>Más avistadas</option></select><span id="journalRailCount" aria-live="polite">${visible?visible+' especies':'Sin resultados'}</span></div><nav id="journalSpeciesRail" class="j25-rail" aria-label="Selector de especies de la región">${reuseRail?'':m.items.map(p=>railButton(p,m.selected.slot,q)).join('')}</nav></aside><div id="journalSelectedSheet">${sheet(m)}</div></div></div>`;
+ }
+ root.AtlasJournalUI=Object.freeze({render,sheet,updateRail,illustration,normalize});
 })(globalThis);

@@ -1,0 +1,34 @@
+{
+  "chromium": "156.0.8078.79",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "cpuThrottle": 4,
+  "runs": [],
+  "advanced": [],
+  "offline": {
+    "integrityVerified": true,
+    "exactBackup": true,
+    "previousCaches": [
+      "gran-atlas-v4.9.6-naturalist-6d46d2018396"
+    ],
+    "unchangedSaveReceipt": {
+      "money": 20006,
+      "knowledge": 32626,
+      "prestige": 23,
+      "currentRegion": "HX-02-11",
+      "sightings": 75324,
+      "published": 23
+    },
+    "bestiaryOffline": 1000,
+    "caches": {
+      "gran-atlas-v5.0.3-naturalist-02a954eed08d": 6931
+    },
+    "pigmentCounts": {
+      "albino": 302,
+      "melanico": 262,
+      "pigments": 564
+    }
+  }
+}

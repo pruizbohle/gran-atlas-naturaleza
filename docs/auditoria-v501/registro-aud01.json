@@ -1,0 +1,2754 @@
+{
+  "baseline": "84298f39b4e333dc2f9a8bae0e07e3ae84a1264e",
+  "source": "docs/cientifica-v496/regresion.json",
+  "originalSummary": {
+    "tests": 821,
+    "pass": 594,
+    "fail": 227
+  },
+  "method": "Inventario y clasificación estática preliminar. Expectativa obsoleta confirmada no equivale a causa raíz confirmada; no se ejecutaron pruebas. Prioridad heurística, no severidad verificada.",
+  "counts": {
+    "requiere_reproduccion": 166,
+    "criterio_historico_probable": 24,
+    "expectativa_desactualizada_confirmada": 20,
+    "fixture_incompleto_probable": 15,
+    "fallo_de_archivo_sin_diagnostico": 2
+  },
+  "priority": {
+    "P3": 101,
+    "P1": 48,
+    "P2": 78
+  },
+  "entries": [
+    {
+      "id": "AUD-01-001",
+      "title": "20 new species complete five notebook stages, publish once and enter Museum; Cephalopoda under Peces",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 25
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-002",
+      "title": "3.23.0 South American progress, old regions, inventory, museum, variants and expeditions survive save reload and Android export/import",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-003",
+      "title": "3.25 only adds journal presentation: all original game source, including the five-stage engine, remains exact",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-004",
+      "title": "3.26 adds presentation only; every original 3.25 gameplay, journal, art and catalog byte remains exact",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P3",
+      "reason": "Compara app.js actual con instantánea V3.25; separar verificación histórica de regresión funcional actual.",
+      "sourceLocations": [
+        {
+          "path": "tests/bestiary-v3260.test.cjs",
+          "line": 10
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-005",
+      "title": "3.28 changes only delimited presentation, observational receipts and explicitly authorized validation blocks; all previous 3.27 bytes remain exact",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-006",
+      "title": "3.32 advanced save, native export/import, pending24h commerce and new operation survive72h once",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 26
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-007",
+      "title": "3.33 advanced save preserves all resources,old60s job and24h trade through export/import and72h return",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 24
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-008",
+      "title": "332..420 thresholds, five permanent crafts, research after Polos, prestige never spent or access revoked",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-009",
+      "title": "475/485 thresholds,research6800/5800 after deep and same six nonconsumed crafts,old unlocks retained",
+      "category": "fixture_incompleto_probable",
+      "priority": "P2",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 14
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-010",
+      "title": "60 original deterministic SVGs work in Node without window or external resources",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/items-v3198.test.cjs",
+          "line": 34
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-011",
+      "title": "807 species,79 regions,eight unchanged voyages and five research branches remain present",
+      "category": "criterio_historico_probable",
+      "priority": "P2",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-012",
+      "title": "923 unique identities,106 regions,1697 presences; all828 previous identities and94 regions byte-for-byte equal",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-013",
+      "title": "943 identities /111 regions /1741 presences, original923 profiles and106 regions exact",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 9
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-014",
+      "title": "ACH03 Sociedad ofrece cuatro accesos y renderizar no concede ni reclama logros",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-015",
+      "title": "ACH03 tarjetas secretas ocultan nombre, requisitos, progreso y título hasta obtenerse",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-016",
+      "title": "AM-03 preserves the complete production gameplay, global art engines, data, geography and updater byte for byte",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-017",
+      "title": "AM-05 preserves the complete gameplay source, 710 identities, 79 regions, ten South American regions and all 192 source records",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-018",
+      "title": "AM-06 changes only the additive Bestiary presentation; approved art, catalog, geography, CSS and all gameplay bytes remain intact",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-019",
+      "title": "AND02 script real calcula 34200 y mantiene applicationId",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-020",
+      "title": "AND02 versiones fijas y lockfile para npm ci",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-021",
+      "title": "AND03 exportador histórico 3.28 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-022",
+      "title": "AND03 exportador histórico 3.29 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-023",
+      "title": "AND03 exportador histórico 3.30 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-024",
+      "title": "AND03 exportador histórico 3.31 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-025",
+      "title": "AND03 exportador histórico 3.32 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-026",
+      "title": "AND03 exportador histórico 3.33 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-027",
+      "title": "AND03 exportador histórico 3.34 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-028",
+      "title": "AND03 exportador histórico 3.35 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-029",
+      "title": "AND03 exportador histórico 3.36 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-030",
+      "title": "AND03 exportador histórico 3.37 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-031",
+      "title": "AND03 exportador histórico 3.38 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-032",
+      "title": "AND03 exportador histórico 3.39 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-033",
+      "title": "AND03 exportador histórico 3.40 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-034",
+      "title": "AND03 exportador histórico 3.41 restaura en el gestor actual y vuelve a exportar",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P1",
+      "reason": "Exige gameVersion === '3.42.0' al reexportar. Las aserciones previas de integridad todavía deben ejecutarse; no se atribuye el fallo concreto a esa línea sin log.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-migrations.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-035",
+      "title": "AND08 coherencia de versión, PWA, diez módulos y actualizador con respaldo",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P2",
+      "reason": "Exige 3.42.0 en package.json, atlas-release y SW; preservar coherencia y migración.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-release.test.cjs",
+          "line": 7
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-036",
+      "title": "AND08 el motor, catálogos, geometría y algoritmos temporales permanecen intactos",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-release.test.cjs",
+          "line": 4
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-037",
+      "title": "AND08 no se modifica ninguna prueba histórica de 3.41 ni anteriores",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/and3420-release.test.cjs",
+          "line": 5
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-038",
+      "title": "Amuleto de ámbar aplica +5 % al monto base de subvenciones",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-039",
+      "title": "Asia, Africa and North America retain their exact independent cartographic gates",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-040",
+      "title": "Atlas keeps all continent, requirement, unlock and travel implementations from 3.21.0",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-041",
+      "title": "Atlas projection preserves region metadata and game-state bytes while cartography supplies visual positions",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-042",
+      "title": "Bestiario oculta solo monografías, no especies 5/5 sin publicación",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v317.test.cjs",
+          "line": 52
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-043",
+      "title": "Bestiario permite invertir un mismo criterio y conserva selección",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-044",
+      "title": "Bestiary opens 32 of 807 cards, preserves global counters and only generates visible SVGs",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/bestiary-v3240.test.cjs",
+          "line": 8
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-045",
+      "title": "Beta 3.16 mantiene catálogo, mapa y materiales de recetas coherentes",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v316.test.cjs",
+          "line": 27
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-046",
+      "title": "Botín de viajes contiene materiales, no equipamiento terminados, y fragmentos geográficos",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v316.test.cjs",
+          "line": 85
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-047",
+      "title": "CP el motor previo queda intacto fuera de los adaptadores CP, GM06 y arte M01 opcionales",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-048",
+      "title": "CP release: Pages valida la candidata actual antes de desplegar",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-049",
+      "title": "CP release: diez módulos y alias histórico; actualizador compatible con la versión nueva",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-050",
+      "title": "CP release: firma, publicación Android y SAF conservan sus guardas originales",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-051",
+      "title": "CP release: versión coherente, respaldo formato 1 y aprobación final",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-052",
+      "title": "Campo representa 1, 2 y 3 especies con imágenes y censos ×2/×3 evidentes",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-053",
+      "title": "Catalejo fabricado consume prismáticos y desactiva la herramienta anterior",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v316.test.cjs",
+          "line": 64
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-054",
+      "title": "Catálogo sin animales huérfanos, referencias rotas ni taxones binomiales duplicados",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-055",
+      "title": "Clases uniformes en todas las especies; anfibios, peces y cálao correctos",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-056",
+      "title": "Colecciones de relictos dan bonificación a vitrinas, no al Atlas ni a cada relicto",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v318.test.cjs",
+          "line": 127
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-057",
+      "title": "Collar de conchas +5 % libras al regreso; brújula +4 % conocimiento",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-058",
+      "title": "Cálao ave, desmán sin caparazón, cobras con capucha y liebres homologadas",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-059",
+      "title": "Diario: registra claramente la pausa automática sin alterar los avistamientos manuales",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-060",
+      "title": "Dos lagópodos se mantienen con sus IDs, rareza y nombres científicos",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-061",
+      "title": "ENC01 conserva literalmente las 13 definiciones y el premio original, y los 80 criterios",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-062",
+      "title": "ENC05 presupuesto finito y conservación de probabilidades, rutas, recetas y costes de3.36",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-063",
+      "title": "El Atlas mantiene las 487 especies y 57 zonas; nuevas recetas y colecciones válidas",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v317.test.cjs",
+          "line": 32
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-064",
+      "title": "El avance se adquiere por niveles y las mejoras automáticas no quedan disponibles al inicio",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-065",
+      "title": "El panel muestra el ratio actual de búsqueda y diferencia manual y automático",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-066",
+      "title": "El tiempo pendiente de excavación es HH:MM:SS y se refresca en Museo",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v318.test.cjs",
+          "line": 52
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-067",
+      "title": "Encuentro grupal manual: 3 especies distintas ×3 registros, con un botín por búsqueda",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-068",
+      "title": "Equipo activo: probabilidades reales y ranuras, sin bonificaciones de objetos no equipados",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-069",
+      "title": "Especialidades: mamíferos, aves, reptiles y peces no se pierden por taxonomía incompleta",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-070",
+      "title": "Europe uses prestige without spending it; unlock and travel retain progress and open Field",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-071",
+      "title": "Excavaciones requieren fondos, región, y solo ocupan una ranura inicialmente",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v317.test.cjs",
+          "line": 69
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-072",
+      "title": "Excavación entrega recompensas exactas y guarda el historial una sola vez",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v318.test.cjs",
+          "line": 64
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-073",
+      "title": "Fauna de África: ninguna especie regional queda sin bioma ni horario posible",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-074",
+      "title": "Field rendering and artwork modules remain untouched by the Atlas update",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-075",
+      "title": "GM05 preserves all economic definitions, rates, five stage costs and research prices from9da9808",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-076",
+      "title": "GM06 offline manifest verifies every resource hash and the safe updater",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-077",
+      "title": "GM06 preserves 945 full records, 113 stable IDs and every historical access threshold",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-078",
+      "title": "GM06 preserves Android signing, workflows, Capacitor configuration and native save code",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-079",
+      "title": "GM06 public entry loads the three modules once, after base geography and before the game",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-080",
+      "title": "Galerías paleontológicas bonifican solo con colecciones completas",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v317.test.cjs",
+          "line": 126
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-081",
+      "title": "Gorro +6 puntos o morral +3 puntos en el botín, solamente al equiparse",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-082",
+      "title": "Guardados anteriores se migran sin perder muestras ni monografías",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v318.test.cjs",
+          "line": 166
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-083",
+      "title": "INV07 catálogos científicos, contratos, conversiones y economía anterior no cambian",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-084",
+      "title": "INV08 PWA coherente, actualizador autorizado y laboratorio precargado aislado",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-085",
+      "title": "Inventario móvil ofrece cinco pestañas, origen, usos y estudio ×1/×5",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v316.test.cjs",
+          "line": 106
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-086",
+      "title": "Investigaciones encadenadas requieren artefacto y mapa, sin consumirlos",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-087",
+      "title": "LOG01 catálogo verificable: diez contratos, cuatro grupos, ocho únicos, dos repetibles y materiales obtenibles",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-088",
+      "title": "LOG01 reserva recursiva protege las seis preparaciones y descuenta piezas intermedias existentes",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-089",
+      "title": "LOG06 catálogo, recetas, rutas, costos y premios anteriores idénticos a3.38",
+      "category": "criterio_historico_probable",
+      "priority": "P2",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-090",
+      "title": "LOG06 conserva byte a byte80 logros,37 misiones,12 exposiciones y los cinco renderizadores de Museo",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-091",
+      "title": "LOG06 versión PWA, actualizador con copia exacta y laboratorio con aislamiento de almacenamiento",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-092",
+      "title": "Las cinco ramas cubren todas las investigaciones sin perder las existentes",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-093",
+      "title": "Las investigaciones nuevas no modifican los códigos de África",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-094",
+      "title": "Las nuevas materias primas aparecen en recetas, y el museo conserva las anteriores",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v316.test.cjs",
+          "line": 130
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-095",
+      "title": "Las pistas de Campo y expedientes permiten registrar relictos sin inventario negativo",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v318.test.cjs",
+          "line": 109
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-096",
+      "title": "Logros y análisis comparativo generan bonificaciones reales, no repetibles sin costo",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v318.test.cjs",
+          "line": 136
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-097",
+      "title": "Los censos automáticos no superan el límite de 100 registros por especie y hora",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-098",
+      "title": "Los materiales repetidos dan resultados reales y nunca dejan saldos negativos",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v316.test.cjs",
+          "line": 48
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-099",
+      "title": "M01 changes only the opt-in scoped art hook; catalog,geography,economy,save/native logic stay exact",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-100",
+      "title": "M01 comparison provenance retains the previous worldwide candidate and exact art revision",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-101",
+      "title": "M01 preserves Android identity,signing,workflows and all historical offline entries; new hashes verify",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-102",
+      "title": "M01 public entry loads the scoped module once afterGM06 and beforethegame; version metadata agrees",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-103",
+      "title": "MUS01 conserva catálogos de80 logros/37 misiones y renderer base de cinco salas",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-104",
+      "title": "Migración de alias conserva avances y no suma dos veces",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-105",
+      "title": "Migración de partidas fusiona avances históricos sin repetir al volver a cargar",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-106",
+      "title": "Misiones de relictos tienen cupo, territorio y tiempo real, sin recompensa doble",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v318.test.cjs",
+          "line": 89
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-107",
+      "title": "Museo móvil muestra expedientes, misiones, logros e historial",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v318.test.cjs",
+          "line": 154
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-108",
+      "title": "Museum presentation preserves historical 3.19.9 europe through all rooms, native import/export and restoration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-109",
+      "title": "Museum presentation preserves historical 3.21.2 africa through all rooms, native import/export and restoration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-110",
+      "title": "Museum presentation preserves historical 3.22.1 northamerica through all rooms, native import/export and restoration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-111",
+      "title": "Museum presentation preserves historical 3.22.1 variants-monographs through all rooms, native import/export and restoration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-112",
+      "title": "Museum presentation preserves historical 3.23.0 museum through all rooms, native import/export and restoration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-113",
+      "title": "Museum presentation preserves historical 3.23.1 southamerica through all rooms, native import/export and restoration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-114",
+      "title": "Mustélidos, nutrias y pangolines comparten estilo familiar con variaciones propias",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-115",
+      "title": "Norteamérica tiene exactamente dos regiones iniciales con fauna del Excel y biomas",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-116",
+      "title": "Nueve relictos con zonas existentes y colecciones biogeográficas propias",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v318.test.cjs",
+          "line": 79
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-117",
+      "title": "Nutria europea: variantes configuradas, con sprites distintos y SVG válido",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-118",
+      "title": "Ocho reconstrucciones, cuerno fósil y hueso duro: materiales válidos y sin taxones nuevos",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v318.test.cjs",
+          "line": 31
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-119",
+      "title": "Paleontología avanza gradualmente y añade hallazgos sin modificar botín anterior",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-120",
+      "title": "Paleontología avanzada habilita dos campañas y mejora recompensas",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v317.test.cjs",
+          "line": 92
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-121",
+      "title": "Partida antigua sin campos nuevos se recupera y mantiene sus colecciones",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v317.test.cjs",
+          "line": 153
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-122",
+      "title": "Probabilidad: categorías ordenadas de común a muy rara",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-123",
+      "title": "Quebrantahuesos es un solo taxón, presente en Europa, Asia y África",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-124",
+      "title": "Recetas de anquilosaurio e iguanodonte se ensamblan una sola vez",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v317.test.cjs",
+          "line": 140
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-125",
+      "title": "Restauración usa materiales, exige esqueleto y puede continuar después del montaje",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v317.test.cjs",
+          "line": 104
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-126",
+      "title": "Sombrero y medallón producen bonificaciones cuantificables",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/patch-v316.test.cjs",
+          "line": 76
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-127",
+      "title": "Sáhara: el equipo busca por toda la región aunque el filtro manual sea desierto/día",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-128",
+      "title": "UX07 identidad, PWA y laboratorio aislado coherentes",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-129",
+      "title": "UX07 ningún intervalo nuevo ni alteración de las suites históricas",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-130",
+      "title": "Una disciplina mejora ponderación de raros sin borrar la posibilidad de observar otras especies",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-131",
+      "title": "a real 3.28 export envelope restores all progress through the 3.29 native import bridge and exports again",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-132",
+      "title": "actual 3.29.0 saves retain every old field and all unlocked regions on migration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/commerce-v3300.test.cjs",
+          "line": 20
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-133",
+      "title": "actual one-second ticker resolves operations and naturalists, no duplicate on next tick",
+      "category": "fixture_incompleto_probable",
+      "priority": "P2",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 28
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-134",
+      "title": "actual paid seeded operations attain all3 presences using each method,failures and valid evidence exist",
+      "category": "fixture_incompleto_probable",
+      "priority": "P3",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 18
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-135",
+      "title": "actual seeded encounters discover every assigned animal manually and automatically without changing global rates",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-136",
+      "title": "actual timed seeded samples discover every assigned presence; failed attempts exist at unchanged rates",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 18
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-137",
+      "title": "all 218 non-mammals retain exactly their previous sprites, skins and configured sexes",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-138",
+      "title": "all 807 eligible samples are reachable on 26 pages; at most 32 visible sprites and no permanent UI fields",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-139",
+      "title": "all 807 entries remain reachable through 26 pages; only 32 visible cards request SVGs and filters clamp an invalid page",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P3",
+      "reason": "Usa cantidades fijas de 807 fichas/26 páginas; actualizar tamaño y conservar todas las pruebas de filtros, orden y paginación.",
+      "sourceLocations": [
+        {
+          "path": "tests/bestiary-v3260.test.cjs",
+          "line": 26
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-140",
+      "title": "all 807 species complete five knowledge stages and publish one monograph, with original costs and rewards",
+      "category": "criterio_historico_probable",
+      "priority": "P2",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-141",
+      "title": "all 807 stage-zero illustrations omit technical identity metadata without changing a single SVG drawing",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-142",
+      "title": "all former1741 manual and automatic eligibility conditions exact,deep protocols and global rates unchanged",
+      "category": "fixture_incompleto_probable",
+      "priority": "P2",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 15
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-143",
+      "title": "all prior trade routes, recipes, items, investigations, voyages and global rates exact",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 23
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-144",
+      "title": "all research prerequisites are acyclic and every continent can be unlocked and travelled without spending prestige",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-145",
+      "title": "all six existing sort orders and the monograph filter exactly match the 3.23.1 full renderer across every page",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/bestiary-v3240.test.cjs",
+          "line": 11
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-146",
+      "title": "all three presences attainable with permitted method and turn filters, sondeo cannot bypass",
+      "category": "fixture_incompleto_probable",
+      "priority": "P2",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 13
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-147",
+      "title": "all1744 source/runtime witnesses remain reachable by actual current manual and automatic filters",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-148",
+      "title": "birds, herpetofauna and the inventory art remain byte-for-byte protected",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-149",
+      "title": "cards collapse historical aliases and display one discovered Albino",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-150",
+      "title": "catalog remains 807 species / 79 regions and exactly five Museum rooms",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-151",
+      "title": "changing to eastern trench selects compatible extraordinary method;insufficient resources never negative",
+      "category": "fixture_incompleto_probable",
+      "priority": "P3",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 28
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-152",
+      "title": "commercial routes,recipes,items,old research,old continent requirements and scientific voyages exactly unchanged",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 16
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-153",
+      "title": "continental formula follows historical threshold order and prestige is never spent",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/commerce-v3300.test.cjs",
+          "line": 18
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-154",
+      "title": "current runtime retains old research, recipes, items, probabilities and naturalist intervals",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-155",
+      "title": "direct/manual and guaranteed flag blocked; meaningful extraordinary300s,cost60/10,one shared queue",
+      "category": "fixture_incompleto_probable",
+      "priority": "P2",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 17
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-156",
+      "title": "discovery, incomplete study, 5/5 and publication are separate progress conditions",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P2",
+      "reason": "Usa cantidades fijas de 807 fichas/26 páginas; actualizar tamaño y conservar todas las pruebas de filtros, orden y paginación.",
+      "sourceLocations": [
+        {
+          "path": "tests/bestiary-v3260.test.cjs",
+          "line": 23
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-157",
+      "title": "eight-hour offline progress with the full 710-species catalog matches 3.23.1 state and every RNG call",
+      "category": "criterio_historico_probable",
+      "priority": "P2",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [
+        {
+          "path": "tests/persistence-v3240.test.cjs",
+          "line": 13
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-158",
+      "title": "entire catalog, 3473 sprite combinations and seven art modules remain exactly unchanged",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-159",
+      "title": "entrypoint loads the art module first and every offline asset exists",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-160",
+      "title": "every one of the 1460 regional presences supports manual and automatic encounters with original rewards",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-161",
+      "title": "every44 presence attainable through actual method/habitat filters; bottom only muestreo",
+      "category": "fixture_incompleto_probable",
+      "priority": "P2",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 12
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-162",
+      "title": "exact192 GM01 source records traced, only12 source Mar sectors, all three HX collisions remain intact",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-163",
+      "title": "four commercial routes and all old recipes,items,research,scientific voyages,rates,intervals stay equal",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-164",
+      "title": "full world remains 807 species,87 regions,1460 presences",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [
+        {
+          "path": "tests/commerce-v3300.test.cjs",
+          "line": 22
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-165",
+      "title": "future continents stay empty and locked with no invented playable regions",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-166",
+      "title": "groups, census multipliers, hourly caps and equipment/research bonuses function in all 79 regions",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-167",
+      "title": "historical 3.19.9 europe survives startup, native import and exported restoration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-168",
+      "title": "historical 3.21.2 africa survives startup, native import and exported restoration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-169",
+      "title": "historical 3.22.1 northamerica survives startup, native import and exported restoration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-170",
+      "title": "historical 3.22.1 variants-monographs survives startup, native import and exported restoration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-171",
+      "title": "historical 3.23.0 museum survives startup, native import and exported restoration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-172",
+      "title": "historical 3.23.1 southamerica survives startup, native import and exported restoration",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-173",
+      "title": "historical 3.29 release exactly matches the final reproducible split-module package",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-174",
+      "title": "historical gameplay function bodies remain exact outside the explicitly tested 3.28 validation/receipt additions",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-175",
+      "title": "invalid navigation is ignored; filters clamp the page and all-hidden catalog stays usable",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/bestiary-v3240.test.cjs",
+          "line": 20
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-176",
+      "title": "inventory views use plates and preserve equip, upgrade, consumption and study actions",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/items-v3198.test.cjs",
+          "line": 41
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-177",
+      "title": "lab bundle is reproducible and isolated from game progress; offline resources are complete",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-178",
+      "title": "laboratory is reproducible and cannot bootstrap game/save side effects",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-179",
+      "title": "laboratory metadata matches the production catalog exactly",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/items-v3198.test.cjs",
+          "line": 56
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-180",
+      "title": "manual direct observation and guaranteed flag cannot discover deep species",
+      "category": "fixture_incompleto_probable",
+      "priority": "P3",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 15
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-181",
+      "title": "naturalist automatic encounters attain all3 assignments while respecting selected stratum and hourly cap",
+      "category": "fixture_incompleto_probable",
+      "priority": "P2",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 19
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-182",
+      "title": "naturalists discover all44 assignments using original auto encounter probability and cap",
+      "category": "fixture_incompleto_probable",
+      "priority": "P2",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 19
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-183",
+      "title": "new animals integrate with Museum, notebook and paginated Bestiary; cached graphics are deterministic",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-184",
+      "title": "new game gates require four different crafted objects cumulatively; Asia remains exempt",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/commerce-v3300.test.cjs",
+          "line": 17
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-185",
+      "title": "normalization retains valid300s work and rejects wrongduration/unknown habitat/duplicate receipts",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 27
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-186",
+      "title": "offline worker serves its immutable revision first and never turns missing scripts into HTML",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-187",
+      "title": "old pending60s scientific operation occupies same queue in a trench,then completes correctly",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 23
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-188",
+      "title": "one scientific job, exact costs/durations, early/future/NaN settlement rejected, exactly once receipt",
+      "category": "fixture_incompleto_probable",
+      "priority": "P2",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 16
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-189",
+      "title": "polar thresholds continue 275 at 282..324, access requires research and all five permanent crafts",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-190",
+      "title": "presentation is additive: original 3.26 app and every game rule remain byte-for-byte exact",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-191",
+      "title": "production 3.30.0 installs 807 identities, 87 regions, 1460 pairs and the original save key",
+      "category": "criterio_historico_probable",
+      "priority": "P1",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-192",
+      "title": "production field projection is read-only and preserves hidden names for unidentified specimens",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/field-v3210.test.cjs",
+          "line": 16
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-193",
+      "title": "production/laboratory bundles reproduce exactly and all offline files exist",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-194",
+      "title": "quota failures roll back entire start/resolution,deterministic retry and receipt preserve stratum on reload",
+      "category": "fixture_incompleto_probable",
+      "priority": "P1",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 22
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-195",
+      "title": "real one-second ticker settles extraordinary work once; naturalists use same production ticker",
+      "category": "fixture_incompleto_probable",
+      "priority": "P2",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 20
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-196",
+      "title": "real seeded manual and automatic encounters discover every regional presence without changing probabilities",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-197",
+      "title": "release and offline cache include the same production journal, isolated comparison and safe update entry",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-198",
+      "title": "release precaches all Museum resources and actual isolated before/after lab with twelve states and no storage access",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-199",
+      "title": "release precaches both actual renderers and an opaque memory-only sixteen-state comparison laboratory",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-200",
+      "title": "release precaches the production Bestiary and an isolated twelve-state comparison using the actual 3.25 engine",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/bestiary-v3260.test.cjs",
+          "line": 67
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-201",
+      "title": "research costs6000/5200, surface prerequisite, six permanent crafts and429..465 progression",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 13
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-202",
+      "title": "restart resolves same seed/context,away completion preserves region and previous Field output",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 21
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-203",
+      "title": "runtime generation is deterministic, scientifically approved and loaded by public entry/cache",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-204",
+      "title": "sanitization discards malformed/duplicate/already resolved work, imported valid job preserved",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 22
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-205",
+      "title": "saved job same seed/context resolves identically after reload, away-region completion preserves Field",
+      "category": "criterio_historico_probable",
+      "priority": "P1",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 20
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-206",
+      "title": "search, group, subgroup, sightings, progress and monograph hiding combine, including an empty result and clearing",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P2",
+      "reason": "Usa cantidades fijas de 807 fichas/26 páginas; actualizar tamaño y conservar todas las pruebas de filtros, orden y paginación.",
+      "sourceLocations": [
+        {
+          "path": "tests/bestiary-v3260.test.cjs",
+          "line": 20
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-207",
+      "title": "seeded automatic stress at 1s, 1h and 8h matches historical gameplay bytes and RNG calls of v3.19.9, excluding the additive 3.28 voyage receipts",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-208",
+      "title": "selection changes only existing Atlas UI state and never travels or unlocks",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-209",
+      "title": "seven semantic IDs retain source collisions, preserve Cape coast and create no reserved cells",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-210",
+      "title": "shared UI exposes named keyboard targets, independent state symbols and safe lightweight art",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-211",
+      "title": "sighting orders and every threshold use the real complete catalog before pagination",
+      "category": "expectativa_desactualizada_confirmada",
+      "priority": "P2",
+      "reason": "Usa cantidades fijas de 807 fichas/26 páginas; actualizar tamaño y conservar todas las pruebas de filtros, orden y paginación.",
+      "sourceLocations": [
+        {
+          "path": "tests/bestiary-v3260.test.cjs",
+          "line": 17
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-212",
+      "title": "sondeo incompatible with bottom habitat; muestreo180s permitted, insufficient money/knowledge rejects",
+      "category": "fixture_incompleto_probable",
+      "priority": "P2",
+      "reason": "Helpers antiguos preparan recursos y desbloqueos, sin acreditar explícitamente la cartografía posterior. Reproducir antes y después de completar requisitos vigentes.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 17
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-213",
+      "title": "specimen collections remain empty until requested; repeated full navigation reuses a bounded cache",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/bestiary-v3240.test.cjs",
+          "line": 26
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-214",
+      "title": "staging preserves native import/export installers and configures Android version 32900 without changing app ID",
+      "category": "criterio_historico_probable",
+      "priority": "P1",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-215",
+      "title": "staging refuses output inside the repository and never changes the public version",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-216",
+      "title": "standalone laboratory catalog is reproducible and offline assets exist",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-217",
+      "title": "start and resolution quota failures roll back ALL state; retry same seed gives no duplicate",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/deep-v3330.test.cjs",
+          "line": 21
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-218",
+      "title": "storage failure keeps the live session exportable and failed imports roll back in memory",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-219",
+      "title": "tests/northamerica-v3220.test.cjs",
+      "category": "fallo_de_archivo_sin_diagnostico",
+      "priority": "P3",
+      "reason": "Entrada de archivo, no subprueba; recuperar diagnóstico y desglosar.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-220",
+      "title": "tests/southamerica-v3230.test.cjs",
+      "category": "fallo_de_archivo_sin_diagnostico",
+      "priority": "P3",
+      "reason": "Entrada de archivo, no subprueba; recuperar diagnóstico y desglosar.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-221",
+      "title": "the compact audit laboratory, frozen comparison engines and new art are available offline without touching saves",
+      "category": "requiere_reproduccion",
+      "priority": "P1",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-222",
+      "title": "the game, current labs and offline cache include the new art in the existing architecture",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-223",
+      "title": "the global catalog has 807 scientific identities, 79 regions and 1460 valid, reachable presences",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-224",
+      "title": "the new release precaches production polish, exact comparisons, visual ledger and an independent safe updater",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-225",
+      "title": "three conservative depth windows and localities; no tripod in hadal nor snailfish in wrong trench",
+      "category": "requiere_reproduccion",
+      "priority": "P2",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/abyssal-v3340.test.cjs",
+          "line": 12
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-226",
+      "title": "unchanged 807 identities and 87 regions, exact 828/94/1505 totals and 45 traced source rows",
+      "category": "criterio_historico_probable",
+      "priority": "P3",
+      "reason": "El título indica comparación histórica; investigar aserción exacta, mantener garantía funcional.",
+      "sourceLocations": [],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    },
+    {
+      "id": "AUD-01-227",
+      "title": "v3.19.8 preserves all 52 item definitions, recipes, eight studies and museum data",
+      "category": "requiere_reproduccion",
+      "priority": "P3",
+      "reason": "El título no permite atribuir causa; reproducir diagnóstico.",
+      "sourceLocations": [
+        {
+          "path": "tests/items-v3198.test.cjs",
+          "line": 30
+        }
+      ],
+      "status": "pendiente_de_reproduccion",
+      "functionalBugConfirmed": false
+    }
+  ]
+}

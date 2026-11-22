@@ -1,0 +1,944 @@
+{
+  "base": "465d6fb",
+  "candidate": "73f8c23",
+  "node": "v24.22.1",
+  "suite": {
+    "base": {
+      "tests": 852,
+      "failed": 211,
+      "passed": 641,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "topLevel": 852,
+      "suites": 0
+    },
+    "candidate": {
+      "tests": 855,
+      "failed": 211,
+      "passed": 644,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "topLevel": 855,
+      "suites": 0
+    }
+  },
+  "newFailures": 0,
+  "addedTests": 3,
+  "historicalStatusChanges": [],
+  "releaseVerification": {
+    "passed": 28,
+    "failed": 0
+  },
+  "historicCases": [
+    {
+      "id": "AUD-01-001",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-002",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-003",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-004",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-005",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-006",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-007",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-008",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-009",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-010",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-011",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-012",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-013",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-014",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-015",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-016",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-017",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-018",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-019",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-020",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-021",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-022",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-023",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-024",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-025",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-026",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-027",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-028",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-029",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-030",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-031",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-032",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-033",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-034",
+      "status": "aprobado"
+    },
+    {
+      "id": "AUD-01-035",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-036",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-037",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-038",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-039",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-040",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-041",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-042",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-043",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-044",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-045",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-046",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-047",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-048",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-049",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-050",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-051",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-052",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-053",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-054",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-055",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-056",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-057",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-058",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-059",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-060",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-061",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-062",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-063",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-064",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-065",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-066",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-067",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-068",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-069",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-070",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-071",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-072",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-073",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-074",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-075",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-076",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-077",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-078",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-079",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-080",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-081",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-082",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-083",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-084",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-085",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-086",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-087",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-088",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-089",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-090",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-091",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-092",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-093",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-094",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-095",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-096",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-097",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-098",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-099",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-100",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-101",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-102",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-103",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-104",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-105",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-106",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-107",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-108",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-109",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-110",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-111",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-112",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-113",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-114",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-115",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-116",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-117",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-118",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-119",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-120",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-121",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-122",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-123",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-124",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-125",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-126",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-127",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-128",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-129",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-130",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-131",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-132",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-133",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-134",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-135",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-136",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-137",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-138",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-139",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-140",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-141",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-142",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-143",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-144",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-145",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-146",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-147",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-148",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-149",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-150",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-151",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-152",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-153",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-154",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-155",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-156",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-157",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-158",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-159",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-160",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-161",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-162",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-163",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-164",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-165",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-166",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-167",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-168",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-169",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-170",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-171",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-172",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-173",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-174",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-175",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-176",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-177",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-178",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-179",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-180",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-181",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-182",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-183",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-184",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-185",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-186",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-187",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-188",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-189",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-190",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-191",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-192",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-193",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-194",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-195",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-196",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-197",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-198",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-199",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-200",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-201",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-202",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-203",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-204",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-205",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-206",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-207",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-208",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-209",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-210",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-211",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-212",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-213",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-214",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-215",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-216",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-217",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-218",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-219",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-220",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-221",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-222",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-223",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-224",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-225",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-226",
+      "status": "fallo_reproducido"
+    },
+    {
+      "id": "AUD-01-227",
+      "status": "fallo_reproducido"
+    }
+  ]
+}

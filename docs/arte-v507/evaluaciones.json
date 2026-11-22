@@ -1,0 +1,410 @@
+[
+  {
+    "id": "af_cebra_llanura",
+    "variant": "albino",
+    "family": "Equidae",
+    "status": "mejorable",
+    "observation": "Las franjas del flanco preservan su disposición de cebra, pero siguen contrastadas para el grado de albinismo sugerido. En crema se pierden el iris y las rayas finas de la cuartilla.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_cebra_llanura",
+    "variant": "melanico",
+    "family": "Equidae",
+    "status": "mejorable",
+    "observation": "Se conservan la crin corta y el patrón de franjas, visible también sobre carbón. El morro y la punta de la oreja se funden a 64 px y la distribución del pigmento requiere revisión aparte.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_xlsx_131_equus_africanus",
+    "variant": "albino",
+    "family": "Equidae",
+    "status": "insuficiente",
+    "observation": "Sobre crema se pierden los tarsos y parte del morro del asno salvaje. La cruz de la espalda sigue más definida que el ojo o los bordes de orejas y pezuñas.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0182",
+    "variant": "melanico",
+    "family": "Equidae",
+    "status": "mejorable",
+    "observation": "Las orejas erguidas y el perfil recto del hemión se distinguen en crema. Los bordes de los miembros cercanos y del ollar apenas se separan en carbón a 64 px.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0183",
+    "variant": "melanico",
+    "family": "Equidae",
+    "status": "mejorable",
+    "observation": "La banda ventral y el tronco compacto permiten distinguir al kiang. El sombreado oscurece demasiado la frente, las inserciones de las orejas y los cascos.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_facoquero",
+    "variant": "albino",
+    "family": "Suidae",
+    "status": "mejorable",
+    "observation": "El colmillo superior curvo y la crin permanecen legibles en carbón. Sobre crema, el iris, verrugas faciales y base del colmillo comparten valores demasiado próximos.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_facoquero",
+    "variant": "melanico",
+    "family": "Suidae",
+    "status": "insuficiente",
+    "observation": "En carbón el colmillo y las verrugas se mezclan con el puente nasal, y las patas del lado lejano se pierden. El contorno del hocico es el único rasgo facial que persiste a 64 px.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_potamoquero",
+    "variant": "melanico",
+    "family": "Suidae",
+    "status": "mejorable",
+    "observation": "El penacho auricular y los arcos claros de los ojos siguen presentes. La base de la trompa y las pezuñas quedan empastadas en carbón.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0834",
+    "variant": "melanico",
+    "family": "Suidae",
+    "status": "insuficiente",
+    "observation": "La barba característica forma una mancha plana y el ojo apenas se separa del hocico. A 64 px en carbón se confunden las articulaciones y la línea del vientre.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "jabali",
+    "variant": "albino",
+    "family": "Suidae",
+    "status": "mejorable",
+    "observation": "El lomo en arco, la oreja triangular y el hocico largo se distinguen en oscuro. Sobre crema el borde del labio, los pelos del ojo y los cascos exigen más separación tonal.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "oc_esp_macropus_giganteus",
+    "variant": "albino",
+    "family": "Macropodidae",
+    "status": "correcta",
+    "observation": "Las orejas y el hocico rosados, los pies largos y la postura erguida conservan lectura a ambos tamaños. La tinta suave conserva la separación entre los dedos y el contorno de la cola.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "oc_esp_osphranter_rufus",
+    "variant": "albino",
+    "family": "Macropodidae",
+    "status": "correcta",
+    "observation": "La cola gruesa y el impulso de la pata posterior se distinguen a 64 px. El hocico rosado y la oreja interna acompañan la despigmentación con un contorno facial definido.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_dromedario",
+    "variant": "albino",
+    "family": "Camelidae",
+    "status": "mejorable",
+    "observation": "La joroba única y las proporciones del cuello se leen bien en carbón. En crema, el iris, el labio partido y las almohadillas pierden volumen.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_dromedario",
+    "variant": "melanico",
+    "family": "Camelidae",
+    "status": "mejorable",
+    "observation": "Se conserva la silueta de una sola joroba. El lado en sombra del cuello y los miembros finos quedan demasiado próximos al fondo carbón.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0073",
+    "variant": "melanico",
+    "family": "Camelidae",
+    "status": "mejorable",
+    "observation": "Las dos jorobas y la barba del camello salvaje se distinguen. Las patas delanteras y las fosas nasales necesitan un sombreado más localizado para leerse en oscuro.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0344",
+    "variant": "albino",
+    "family": "Moschidae",
+    "status": "mejorable",
+    "observation": "El lomo arqueado, la falta de astas y el canino quedan visibles en carbón. En crema, el iris y la transición entre labio y diente pierden separación.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0344",
+    "variant": "melanico",
+    "family": "Moschidae",
+    "status": "insuficiente",
+    "observation": "El canino, la marca gular y las pezuñas se funden con el fondo oscuro. La mandíbula corta es difícil de leer y podría confundirse con la del ciervo acuático en miniatura.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0498",
+    "variant": "melanico",
+    "family": "Tapiridae",
+    "status": "mejorable",
+    "observation": "El tapir malayo preserva la silla dorsal más clara y la trompa corta. El borde de oreja, la mandíbula y los dedos se empastan a 64 px en carbón.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "sa_esp_tapirus_terrestris",
+    "variant": "albino",
+    "family": "Tapiridae",
+    "status": "mejorable",
+    "observation": "La crin dorsal corta y las proporciones de la trompa separan al tapir sudamericano del malayo. Sobre crema el iris, el borde de la oreja y los dedos delanteros se pierden.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_jirafa",
+    "variant": "albino",
+    "family": "Giraffidae",
+    "status": "mejorable",
+    "observation": "El cuello largo y los osiconos conservan la lectura en oscuro. Sobre crema las patas distales y la cara se lavan, y las manchas residuales deben justificarse para el morfo.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_jirafa",
+    "variant": "melanico",
+    "family": "Giraffidae",
+    "status": "insuficiente",
+    "observation": "El cuello moteado se intuye en carbón, pero la cabeza, los osiconos y la caña de los miembros desaparecen en miniatura. Apenas se distingue el patrón del torso en claro.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_okapi",
+    "variant": "albino",
+    "family": "Giraffidae",
+    "status": "mejorable",
+    "observation": "Las orejas amplias, el perfil de la cara y los listones de la grupa identifican al okapi. En papel destacan las franjas residuales por encima del iris y del volumen de las pezuñas.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_okapi",
+    "variant": "melanico",
+    "family": "Giraffidae",
+    "status": "mejorable",
+    "observation": "El cuello largo y las franjas de las extremidades se mantienen. En carbón se hunde la unión cuello-tronco y la oreja posterior desaparece a 64 px.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_xlsx_jirafa_reticulada",
+    "variant": "albino",
+    "family": "Giraffidae",
+    "status": "mejorable",
+    "observation": "La retícula poligonal y los osiconos se reconocen en oscuro. En crema se pierde el hocico y el pelaje conserva mucho contraste relativo respecto de los tejidos claros.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_rinoceronte_blanco",
+    "variant": "albino",
+    "family": "Rhinocerotidae",
+    "status": "mejorable",
+    "observation": "El labio ancho, la giba cervical y ambos cuernos se distinguen en carbón. En crema la base del cuerno y el iris pierden la separación necesaria para leer la cara.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_rinoceronte_blanco",
+    "variant": "melanico",
+    "family": "Rhinocerotidae",
+    "status": "insuficiente",
+    "observation": "La cabeza baja y el cuerno anterior casi desaparecen en carbón a 64 px. Los pliegues de hombro y rodilla quedan uniformes y falta contraste en la pezuña.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_xlsx_rinoceronte_negro",
+    "variant": "albino",
+    "family": "Rhinocerotidae",
+    "status": "mejorable",
+    "observation": "Persiste el perfil alto del hocico y los dos cuernos, distinto del rinoceronte blanco. Las orejas y el extremo prensil del labio apenas se leen sobre crema.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "asia_esp_0465",
+    "variant": "melanico",
+    "family": "Rhinocerotidae",
+    "status": "mejorable",
+    "observation": "El cuerno único y los pliegues de la piel siguen marcados en claro. En carbón la base de la oreja y el arco del tarso quedan demasiado cerca del fondo.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_hipopotamo",
+    "variant": "albino",
+    "family": "Hippopotamidae",
+    "status": "mejorable",
+    "observation": "El hocico ancho y el cuello plegado se reconocen sobre carbón, pero sobre crema se diluyen el ojo alto y el límite de los labios.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_xlsx_hipopotamo_pigmeo",
+    "variant": "albino",
+    "family": "Hippopotamidae",
+    "status": "mejorable",
+    "observation": "La cabeza más baja y el tronco compacto separan al hipopótamo pigmeo del común. Los párpados y el borde de los dedos pierden contraste en crema.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_elefante_bosque",
+    "variant": "albino",
+    "family": "Elephantidae",
+    "status": "mejorable",
+    "observation": "Las orejas redondeadas y los colmillos rectos del elefante de bosque se conservan en carbón. En crema los colmillos, las uñas y el detalle del ojo se desdibujan.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_elefante_bosque",
+    "variant": "melanico",
+    "family": "Elephantidae",
+    "status": "insuficiente",
+    "observation": "Sobre carbón el borde de la trompa y los colmillos rectos se funden con la cabeza, y la oreja apenas se distingue del tronco. A 64 px los pies son casi una sola masa.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_elefante_sabana",
+    "variant": "albino",
+    "family": "Elephantidae",
+    "status": "mejorable",
+    "observation": "Las orejas anchas y los colmillos curvos siguen legibles en oscuro. El pliegue bajo el ojo y la punta de la trompa necesitan más contraste en crema.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  },
+  {
+    "id": "af_elefante_sabana",
+    "variant": "melanico",
+    "family": "Elephantidae",
+    "status": "insuficiente",
+    "observation": "Los colmillos curvos y los bordes de las orejas se pierden en carbón. La miniatura confunde la trompa y las patas del lado lejano con el fondo.",
+    "sizes": [
+      64,
+      128,
+      256
+    ]
+  }
+]

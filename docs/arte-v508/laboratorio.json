@@ -1,0 +1,24 @@
+{
+  "chromium": "156.0.8078.79",
+  "lab": {
+    "sizes": {
+      "64": 27,
+      "128": 27,
+      "256": 27,
+      "512": 27
+    },
+    "comparisons": 9,
+    "approved": 9,
+    "priorLots": [
+      "art01",
+      "art02",
+      "art03"
+    ],
+    "labVariantPreviews": [
+      "field",
+      "journal",
+      "bestiary",
+      "museum"
+    ]
+  }
+}

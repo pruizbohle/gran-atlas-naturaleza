@@ -1,0 +1,313 @@
+{
+  "baseline": "8ff5428",
+  "rows": [
+    {
+      "lot": "A",
+      "id": "af_aguila_pescadora",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo de manto interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo oscuro",
+        "changed": false,
+        "why": "Se mantiene la gama natural al definir la pupila y la cera."
+      },
+      "note": "Cabeza, babero y cola gris humo destacan frente a pecho oscuro y alas estratificadas. El plumaje todavía conserva trazos castaños en los hombros."
+    },
+    {
+      "lot": "A",
+      "id": "af_caracal",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Ámbar",
+        "color": "Rosado pardo tenue",
+        "changed": true,
+        "why": "Iris y pupila se separan del relieve del hocico."
+      },
+      "note": "Los pinceles largos ganan contorno fino. El manto marfil conserva sombras en nariz, pecho y patas delanteras."
+    },
+    {
+      "lot": "A",
+      "id": "af_gato_montes_africano",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Ámbar oliváceo",
+        "color": "Ámbar oliváceo",
+        "changed": false,
+        "why": "Se recupera el iris mediante el modelado de párpados y planos del cuello."
+      },
+      "note": "El pelaje gris pardo oscuro conserva barras y anillos. Se distinguen cuello, cara y patas superpuestas sobre carbón."
+    },
+    {
+      "lot": "A",
+      "id": "af_fenec",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo rosado",
+        "changed": true,
+        "why": "La pupila se mantiene pequeña y oscura y la nariz se aclara sin teñir el pelaje."
+      },
+      "note": "La piel interior de la oreja queda bien separada del borde con pelo. Vientre, patas y hocico se leen con sombras grises."
+    },
+    {
+      "lot": "A",
+      "id": "af_elefante_bosque",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo apagado con entorno malva",
+        "changed": true,
+        "why": "El ojo pequeño se conserva en una gama sobria. El rosado se concentra en tejidos cercanos."
+      },
+      "note": "Colmillos rectos, uñas, pliegues de la trompa y orejas ovaladas conservan detalle. Los colmillos color marfil se separan de la piel."
+    },
+    {
+      "lot": "A",
+      "id": "af_guepardo",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Ámbar pardo",
+        "color": "Ámbar pardo",
+        "changed": false,
+        "why": "Se mantiene el iris habitual y se devuelve relieve al párpado dentro de la línea lagrimal."
+      },
+      "note": "Sobre carbón se leen cabeza, hombros y extremidades largas. Conserva puntos pequeños, abdomen recogido y cola anillada."
+    },
+    {
+      "lot": "A",
+      "id": "af_cebra_llanura",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación de aspecto albino",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo rosado atenuado",
+        "changed": true,
+        "why": "Se recupera el iris con un tono tenue. Las franjas residuales indican una interpretación gráfica de hipopigmentación."
+      },
+      "note": "Las franjas pasan a crema cerca de la crin y las cuartillas. El relieve local separa hocico, casco y patas."
+    },
+    {
+      "lot": "A",
+      "id": "af_chacal_dorado",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Ámbar",
+        "color": "Ámbar pardo",
+        "changed": false,
+        "why": "El ojo conserva una gama cálida natural bajo el reborde supraocular."
+      },
+      "note": "El lomo oscuro conserva relieve en hombros, patas y base de la cola. El sombreado local mantiene el perfil de orejas y hocico."
+    },
+    {
+      "lot": "A",
+      "id": "af_fosa_ave",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo amarillento",
+        "color": "Pardo amarillento",
+        "changed": false,
+        "why": "El tono habitual se mantiene legible al separar cera, pico, ojo y nuca."
+      },
+      "note": "El repintado pizarra conserva la cola gris y los tarsos ocres. Las hileras de plumas mantienen detalle sobre carbón.",
+      "rejected": [
+        "Primera propuesta descartada por aproximarse demasiado al tono pardo y la cola blanca del ejemplar normal."
+      ],
+      "comparison": "review/art08/comparativas/A/af_fosa_ave--melanico--rechazo.jpg"
+    },
+    {
+      "lot": "A",
+      "id": "af_cocodrilo_nilo",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación de aspecto albino",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Ámbar oliváceo",
+        "color": "Ámbar rosado pálido",
+        "changed": true,
+        "why": "Se aclara la gama del iris y se preserva la pupila vertical del cocodrilo."
+      },
+      "note": "Se distinguen las escamas dorsales, el vientre y el perfil mandibular. La cola conserva la curvatura y los dedos se leen sobre carbón."
+    },
+    {
+      "lot": "B",
+      "id": "af_dromedario",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación de aspecto albino",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo grisáceo claro",
+        "changed": true,
+        "why": "El ojo conserva una pupila oscura. El párpado y el labio recuperan su sombra local."
+      },
+      "note": "La joroba única, el cuello, el labio hendido y las almohadillas de dos dedos ganan definición en crema."
+    },
+    {
+      "lot": "B",
+      "id": "af_facoquero",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo rosado",
+        "changed": true,
+        "why": "El tono y la sombra del párpado se separan de las verrugas y del colmillo."
+      },
+      "note": "La crin, los colmillos y las verrugas faciales conservan volumen. La piel rosada del morro se distingue de las cerdas claras."
+    },
+    {
+      "lot": "B",
+      "id": "af_hipopotamo",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo rosado claro",
+        "changed": true,
+        "why": "El ojo alto recupera contorno y el tono se limita al iris y al tejido próximo."
+      },
+      "note": "El volumen del labio y los pliegues del cuello se distinguen sobre crema. La piel mantiene motas suaves y sombras en las cuatro patas."
+    },
+    {
+      "lot": "B",
+      "id": "af_ciervo_berberia",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Albinismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Rosado pardo tenue",
+        "changed": true,
+        "why": "Se recuperan el ojo y la transición entre párpado, hocico y gorguera."
+      },
+      "note": "Sobre papel se distinguen las puntas de la cuerna y el pelo largo del cuello. Las patas mantienen articulaciones y pezuñas separadas."
+    },
+    {
+      "lot": "B",
+      "id": "af_okapi",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación de aspecto albino",
+      "evidence": "Leucismo documentado en la especie · albinismo interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo rosado suave",
+        "changed": true,
+        "why": "El iris tenue es interpretativo. La guía EAZA describe leucismo, una condición pigmentaria diferente."
+      },
+      "note": "Las bandas de grupa y patas se atenúan. Las orejas, el ojo y las pezuñas recuperan volumen sobre crema."
+    },
+    {
+      "lot": "B",
+      "id": "af_jirafa",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación de aspecto albino",
+      "evidence": "Leucismo conocido en jirafas · morfo del Atlas interpretativo",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Gris rosado tenue",
+        "changed": true,
+        "why": "Se aclara la gama ocular. La lámina representa un ejemplar hipotético y el ojo de las jirafas leucísticas puede conservar pigmento."
+      },
+      "note": "Las manchas quedan insinuadas en marfil. La cara, los osiconos y las patas distales mantienen relieve sobre crema."
+    },
+    {
+      "lot": "B",
+      "id": "af_nu_azul",
+      "variant": "albino",
+      "outcome": "aprobada",
+      "morph": "Hipopigmentación de aspecto albino",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo rosado suave",
+        "changed": true,
+        "why": "Se aclara el iris y se reserva el rosado para el ollar, labios y entorno ocular."
+      },
+      "note": "Cuernos bajos y barba conservan contorno. Las bandas del cuello quedan suaves y mantienen relieve entre el pecho y el hombro."
+    },
+    {
+      "lot": "B",
+      "id": "af_leopardo",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo con rosetas visibles",
+      "evidence": "Documentada en leopardo africano · lámina interpretativa del ejemplar",
+      "eye": {
+        "normal": "Ámbar pardo",
+        "color": "Ámbar pardo",
+        "changed": false,
+        "why": "Se conserva el iris natural y se modelan el ojo y el morro con reflejos locales."
+      },
+      "note": "Las rosetas y el patrón de la cola siguen visibles sobre un manto oscuro. La mandíbula y el cuello se distinguen en miniatura."
+    },
+    {
+      "lot": "B",
+      "id": "af_lobo_etiope",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Ámbar oscuro",
+        "color": "Ámbar oscuro",
+        "changed": false,
+        "why": "El ojo conserva su gama cálida. Se recupera el detalle de la pupila y de la nariz mediante sombras y reflejos pequeños."
+      },
+      "note": "Se distinguen máscara, morro largo, orejas y patas altas. El manto pardo oscuro conserva una gama intermedia sobre el vientre y el cuello."
+    },
+    {
+      "lot": "B",
+      "id": "af_licaon",
+      "variant": "melanico",
+      "outcome": "aprobada",
+      "morph": "Melanismo interpretativo",
+      "evidence": "Interpretativa",
+      "eye": {
+        "normal": "Pardo oscuro",
+        "color": "Pardo oscuro",
+        "changed": false,
+        "why": "Se conserva el iris natural y se mejora el contraste local con el hocico."
+      },
+      "note": "La segunda propuesta separa las orejas redondas, los dedos y los parches del cuello y las patas sobre carbón. La punta caudal conserva un gris más claro.",
+      "rejected": [
+        "Primera propuesta descartada por sus parches dorados y blancos, demasiado cercanos a la lámina normal."
+      ],
+      "comparison": "review/art08/comparativas/B/af_licaon--melanico--rechazo.jpg"
+    }
+  ]
+}

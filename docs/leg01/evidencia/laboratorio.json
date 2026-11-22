@@ -1,0 +1,27 @@
+{
+  "chromium": "156.0.8078.79",
+  "counts": {
+    "all": 20,
+    "new": 8,
+    "revised": 4,
+    "retained": 8
+  },
+  "sizes": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "modules": [
+    "field",
+    "journal",
+    "bestiary",
+    "museum"
+  ],
+  "examples": [
+    "ascua",
+    "atlas",
+    "marea"
+  ],
+  "mobileWidth": 390
+}

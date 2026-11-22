@@ -1,0 +1,100 @@
+{
+  "chromium": "156.0.8078.79",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "cpuThrottle": 4,
+  "runs": [],
+  "advanced": [],
+  "offline": {
+    "integrityVerified": true,
+    "exactBackup": true,
+    "previousCaches": [
+      "gran-atlas-v5.0.6-naturalist-d46aecf3bccf"
+    ],
+    "unchangedSaveReceipt": {
+      "money": 20006,
+      "knowledge": 32626,
+      "prestige": 23,
+      "currentRegion": "HX-02-11",
+      "sightings": 75324,
+      "published": 23
+    },
+    "bestiaryOffline": 1000,
+    "caches": {
+      "gran-atlas-v5.0.7-naturalist-c780a14a760b": 6934
+    },
+    "pigmentCounts": {
+      "albino": 302,
+      "melanico": 262,
+      "pigments": 564
+    },
+    "art01": {
+      "sizes": {
+        "64": 33,
+        "128": 33,
+        "256": 33,
+        "512": 33
+      },
+      "renderedGameSurfaces": [
+        "field",
+        "journal",
+        "bestiary",
+        "museum"
+      ],
+      "labVariantPreviews": [
+        "field",
+        "journal",
+        "bestiary",
+        "museum"
+      ],
+      "archivedVariants": 11
+    },
+    "art02": {
+      "sizes": {
+        "64": 22,
+        "128": 22,
+        "256": 22,
+        "512": 22
+      },
+      "archivedComparisons": 7,
+      "tigerMorph": "Pseudomelanismo",
+      "renderedGameSurfaces": [
+        "field",
+        "journal",
+        "bestiary",
+        "museum"
+      ],
+      "labVariantPreviews": [
+        "field",
+        "journal",
+        "bestiary",
+        "museum"
+      ]
+    },
+    "art03": {
+      "sizes": {
+        "64": 21,
+        "128": 21,
+        "256": 21,
+        "512": 21
+      },
+      "comparisons": 7,
+      "pendingBear": true,
+      "preservedMinkComparison": true,
+      "renderedGameSurfaces": [
+        "field",
+        "journal",
+        "bestiary",
+        "museum"
+      ],
+      "labVariantPreviews": [
+        "field",
+        "journal",
+        "bestiary",
+        "museum"
+      ]
+    }
+  }
+}

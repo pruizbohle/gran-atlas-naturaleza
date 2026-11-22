@@ -1254,7 +1254,7 @@ const SPECIES={
   "asia_esp_0855":{"name": "Macaco rhesus", "latin": "Macaca mulatta", "rare": "Común", "kind": "primate", "color": "#aa907a", "habitats": ["bosque", "montana", "pradera", "estepa", "tundra"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": false},
   "asia_esp_0850":{"name": "Marta de garganta amarilla", "latin": "Martes flavigula", "rare": "Común", "kind": "mustelid", "color": "#a07a49", "habitats": ["bosque", "montana", "pradera", "estepa", "tundra"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": false},
   "asia_esp_0844":{"name": "Ardilla voladora gigante roja", "latin": "Petaurista petaurista", "rare": "Poco común", "kind": "small", "color": "#9b5343", "habitats": ["bosque", "montana", "pradera", "estepa", "tundra"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Leucístico", "Melánico", "Notable"], "dimorphism": false},
-  "asia_esp_0523":{"name": "Oso negro asiático", "latin": "Ursus thibetanus", "rare": "Poco común", "kind": "bear", "color": "#28282b", "habitats": ["bosque", "montana", "pradera", "tundra", "estepa"], "times": ["amanecer", "atardecer", "noche"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": false},
+  "asia_esp_0523":{"name": "Oso negro asiático", "latin": "Ursus thibetanus", "rare": "Poco común", "kind": "bear", "color": "#28282b", "habitats": ["bosque", "montana", "pradera", "tundra", "estepa"], "times": ["amanecer", "atardecer", "noche"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Albino", "Notable"], "dimorphism": false},
   "asia_esp_0062":{"name": "Yak salvaje", "latin": "Bos mutus", "rare": "Raro", "kind": "bison", "color": "#514037", "habitats": ["montana", "pradera", "bosque", "tundra", "estepa"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": true},
   "asia_esp_0821":{"name": "Takin", "latin": "Budorcas taxicolor", "rare": "Poco común", "kind": "bison", "color": "#907357", "habitats": ["montana", "pradera", "bosque", "tundra", "estepa"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Melánico", "Notable"], "dimorphism": false},
   "asia_esp_0240":{"name": "Tahr del Himalaya", "latin": "Hemitragus jemlahicus", "rare": "Común", "kind": "deer", "color": "#a38c6c", "habitats": ["montana", "pradera", "bosque", "tundra", "estepa"], "times": ["amanecer", "dia", "atardecer"], "seasons": ["primavera", "verano", "otono", "invierno"], "special": ["Leucístico", "Melánico", "Notable"], "dimorphism": false},
@@ -1829,24 +1829,61 @@ const LEGENDARY_SPECIMENS=[
  ['junco','af_cocodrilo_nilo','Junco','Escudos dorsales irregulares y un hocico surcado por viejas cicatrices.'],
  ['ancora','af_tortuga_aldabra','Áncora','Caparazón de anillos marcados y cuello extendido sobre patas columnares.'],
  ['ascua','zorro_rojo','Ascua','Un zorro de pecho marfil se sienta envuelto en su cola rojiza.'],
- ['remonte','asia_esp_0369','Remonte','Un salmón de dorso moteado y mandíbula curva en plena remontada.']
-].map(([id,speciesId,name,description])=>({id,speciesId,name,description}));
+ ['remonte','asia_esp_0369','Remonte','Un salmón de dorso moteado y mandíbula curva en plena remontada.'],
+ ['espiral','af_gran_kudu','Espiral','Un macho de cornamenta alargada con espiras más marcadas, barba larga y franjas de marfil sobre el flanco.',true],
+ ['bastion','af_pangolin_gigante','Bastión','El cuerpo se repliega en un arco defensivo de escamas cobrizas y deja ver el hocico bajo la cola.',true],
+ ['cienaga','af_picozapato','Ciénaga','Permanece agazapado con el pico jaspeado inclinado, el iris rojizo y una cresta desflecada sobre el manto pizarra.',true],
+ ['alisio','frailecillo_atlantico','Alisio','Un frailecillo abre las alas mientras alza el pico y extiende los pies anaranjados. Trazos oscuros dispersos interrumpen el vientre blanco.',true],
+ ['filigrana','na_esp_ambystoma_mexicanum','Nácar','Tres pares de branquias ramificadas enmarcan su cabeza y el flanco oliváceo muestra un punteado dorado.',true],
+ ['terracota','oc_esp_osphranter_rufus','Terracota','Un macho de pecho robusto se impulsa con las patas recogidas y la cola extendida bajo un manto de rojo arcilla.',true],
+ ['orla','mar_esp_megaptera_novaeangliae','Orla','La ballena gira y deja ver el borde moteado de las aletas pectorales y las marcas blancas de la cola.',true],
+ ['marea','mar_esp_enteroctopus_dofleini','Marea','El pulpo abre sus brazos en abanico y deja ver ventosas color marfil bajo una piel moteada de coral.',true],
+ ['aconcagua','sa_esp_vultur_gryphus','Aconcagua','Un cóndor macho abre las alas y deja ver un collar blanco espeso y paneles claros en el plumaje oscuro.',true],
+ ['titan','na_esp_bison_bison','Titán','Un bisonte de gran giba inclina la cabeza y apoya los cuartos delanteros bajo una melena densa.',true],
+ ['boreal','polar_esp_ursus_maritimus','Boreal','Un oso de pelaje marfil levanta la cabeza al avanzar, con el cuello largo y el perfil de una oreja ligeramente mellado.',true],
+ ['leviatan','mar_esp_balaenoptera_musculus','Leviatán','La ballena azul gira en diagonal y deja ver sus surcos ventrales y la cola horizontal.',true],
+ ['esmeralda','oc_esp_strigops_habroptilus','Esmeralda','Un kākāpō de disco facial dorado gira la cabeza y muestra verde profundo y barras oscuras en el ala.',true],
+ ['abismo','af_tiburon_blanco','Abismo','Un tiburón blanco de lomo gris acero gira hacia el observador, con cicatrices antiguas apenas visibles.',true],
+ ['kraken','mar_esp_architeuthis_dux','Kraken','Un calamar gigante rojizo despliega ocho brazos y dos tentáculos de captura mucho más largos, terminados en mazas.',true],
+ ['solitario','gm06_chelonoidis_porteri','Solitario','Una tortuga ficticia de Santa Cruz levanta el cuello sobre cuatro patas columnares y un caparazón abovedado de escudos marcados.',true],
+ ['eterno','polar_esp_somniosus_microcephalus','Eterno','Un robusto tiburón de Groenlandia muestra la piel gris profunda y las marcas acumuladas en el lomo.',true],
+ ['vertigo','na_esp_falco_peregrinus','Vértigo','Un peregrino adulto se lanza en picado con las alas plegadas hacia atrás y la cola estrecha.',true]
+].map(([id,speciesId,name,description,legendaryOnly])=>({id,speciesId,name,description,...(legendaryOnly?{legendaryOnly}:{})}));
 const SPECIMEN_SELECTION={
  epico:['zorro_rojo','lobo_gris','aguila_real','reno','buho_real','jabali','af_gran_kudu','af_pangolin_gigante','af_gorila_montana','af_elefante_sabana','af_cocodrilo_nilo','af_tortuga_aldabra','asia_esp_0402','asia_esp_0403','asia_esp_0527','asia_esp_0373','asia_esp_0369','af_hipopotamo','af_jirafa','af_leon','af_suricata','af_secretario','af_picozapato','af_piton_africana'],
  excepcional:['zorro_rojo','lobo_gris','aguila_real','af_gran_kudu','af_pangolin_gigante','af_gorila_montana','af_elefante_sabana','af_cocodrilo_nilo','af_tortuga_aldabra','asia_esp_0402','asia_esp_0403','asia_esp_0527','asia_esp_0373','asia_esp_0369']
 };
 function canonicalTaxon(id){return (SPECIES[id]?.latin||'').toLowerCase().trim().split(/\s+/).slice(0,2).join(' ');}
-function legendaryForSpecies(id){return LEGENDARY_SPECIMENS.find(l=>SPECIES[l.speciesId]&&canonicalTaxon(id)&&canonicalTaxon(l.speciesId)===canonicalTaxon(id));}
+function indexLegendaryTaxa(){
+ const index=new Map();
+ for(const specimen of LEGENDARY_SPECIMENS){
+  const taxon=canonicalTaxon(specimen.speciesId);
+  if(taxon&&!index.has(taxon))index.set(taxon,specimen);
+ }
+ return index;
+}
+let legendaryTaxa=indexLegendaryTaxa();
+function legendaryForSpecies(id){return legendaryTaxa.get(canonicalTaxon(id));}
 const SPECIMEN_CATEGORIES=Object.fromEntries(Object.keys(SPECIES).map(id=>{
- const categories=[];
+ const categories=[],legendary=legendaryForSpecies(id);
  if(SPECIES[id].special.some(v=>specialVariantName(v)==='Notable'))categories.push('Notable');
- if(SPECIMEN_SELECTION.epico.includes(id)||legendaryForSpecies(id))categories.push('Épico');
- if(SPECIMEN_SELECTION.excepcional.includes(id)||legendaryForSpecies(id))categories.push('Excepcional');
- if(legendaryForSpecies(id))categories.push('Legendario');
+ // Later additions only receive the legendary category.
+ const historicalLegendary=legendary&&!legendary.legendaryOnly;
+ if(SPECIMEN_SELECTION.epico.includes(id)||historicalLegendary)categories.push('Épico');
+ if(SPECIMEN_SELECTION.excepcional.includes(id)||historicalLegendary)categories.push('Excepcional');
+ if(historicalLegendary)categories.push('Legendario');
  return [id,categories];
 }));
+let specimenIds;
 function configuredSpecials(sp){
- const id=Object.keys(SPECIES).find(id=>SPECIES[id]===sp);
+ // The catalogue extensions are all loaded before this is first called.
+ if(!specimenIds){
+  specimenIds=new WeakMap();
+  for(const [id,species] of Object.entries(SPECIES)){
+   if(!specimenIds.has(species))specimenIds.set(species,id);
+  }
+ }
+ const id=specimenIds.get(sp);
  return [...new Set([...(sp.special||[]).map(specialVariantName),...(SPECIMEN_CATEGORIES[id]||[])])];
 }
 // Keep the v3.19.6 array intact: its length defines each pigmentation probability.
@@ -1926,6 +1963,19 @@ function normalizeSpecialDiscoveries(snapshot){
    records[id]=unified;
   }
   snapshot.specialFound=records;
+ }
+ // V5.0.10: conservar el progreso de la ranura pigmentaria del oso al sustituir su variante.
+ const bearId='asia_esp_0523';
+ const foundBear=snapshot.specialFound?.[bearId];
+ if(foundBear&&typeof foundBear==='object'&&Object.hasOwn(foundBear,'Melánico')){
+  foundBear.Albino=Boolean(foundBear.Albino||foundBear.Melánico);
+  delete foundBear.Melánico;
+ }
+ const countedBear=snapshot.specialCounts[bearId];
+ for(const label of Object.keys(countedBear||{})){
+  if(specialVariantName(label)!=='Melánico')continue;
+  countedBear.Albino=(Number(countedBear.Albino)||0)+(Number(countedBear[label])||0);
+  delete countedBear[label];
  }
  // Historical diary text and last encounter must not expose a second category.
  const text=value=>typeof value==='string'?value.replace(/leucístic[oa]/gi,'Albino'):value;
@@ -2020,14 +2070,20 @@ if(southAmerica3230){
  taxonomyInfo=function(id){return SPECIES[id]?.origin==='sa3230'?SPECIES[id].taxonomy:previousTaxonomy(id);};
 }
 // AM-04 END catalog
+function installUniqueTaxa(species,duplicateMessage,categories){
+ const names=new Set(Object.values(SPECIES).map(entry=>entry.latin));
+ for(const [id,entry] of Object.entries(species)){
+  if(SPECIES[id]||names.has(entry.latin))throw Error(duplicateMessage+id);
+  SPECIES[id]=entry;
+  names.add(entry.latin);
+  if(categories)SPECIMEN_CATEGORIES[id]=categories.slice();
+ }
+}
 // OC3290 BEGIN AM-04 END catalog
 
  const oceaniaReview=globalThis.AtlasOceaniaRuntime3290;
 if(!oceaniaReview||(!oceaniaReview.approvedForProduction&&!false))throw Error('Oceanian release is not approved');
- for(const[id,sp]of Object.entries(oceaniaReview.species)){
-  if(SPECIES[id]||Object.values(SPECIES).some(s=>s.latin===sp.latin))throw Error('Oceanian collision: '+id);
-  SPECIES[id]=sp;
- }
+ installUniqueTaxa(oceaniaReview.species,'Oceanian collision: ');
  for(const region of oceaniaReview.regions){if(REGIONS.some(r=>r.id===region.id))throw Error('Oceanian region collision');REGIONS.push(region);}
  Object.assign(SEXUAL_DIMORPHISM,oceaniaReview.dimorphism);Object.assign(SPECIMEN_CATEGORIES,oceaniaReview.categories);
  const previousOceaniaTaxonomy=taxonomyInfo;
@@ -2109,8 +2165,8 @@ RESEARCH_NODES.push(...RESEARCH_V317_NODES);
 
 // Relictos y mecánicas: rutas patrimoniales independientes del Atlas zoológico.
 const RESEARCH_V318_NODES=[
- {id:'relictos_1',name:'Archivos de historia natural',desc:'Permite dos investigaciones de relictos simultáneas y añade una pista adicional al finalizar cada misión.',branch:'museologia',money:340,knowledge:250,req:'gabinete_1',once:true,effect(s){s.upgrades.relictSurveyTier=1;}},
- {id:'relictos_2',name:'Rastreo de poblaciones singulares',desc:'Duplica la probabilidad de hallar indicios en Campo (manual y automático).',branch:'museologia',money:550,knowledge:420,req:'relictos_1',reqAll:['etologia_1'],once:true,effect(s){s.upgrades.relictFieldTier=1;}}
+ {id:'relictos_1',name:'Archivos de historia natural',desc:'Permite dos prospecciones simultáneas y un indicio adicional al recogerlas. Al investigar, registra un indicio si hay un expediente accesible.',branch:'museologia',money:340,knowledge:250,req:'gabinete_1',once:true,effect(s){s.upgrades.relictSurveyTier=1;}},
+ {id:'relictos_2',name:'Rastreo de poblaciones singulares',desc:'Duplica la probabilidad de hallar indicios en Campo. Al investigar, registra un indicio si hay un expediente accesible.',branch:'museologia',money:550,knowledge:420,req:'relictos_1',reqAll:['etologia_1'],once:true,effect(s){s.upgrades.relictFieldTier=1;}}
 ];
 RESEARCH_NODES.push(...RESEARCH_V318_NODES);
 const RESEARCH_BRANCHES=[
@@ -2140,7 +2196,7 @@ RESEARCH_NODES.push({id:'polos_1',name:'Exploración de las regiones polares',de
 // GM3320 BEGIN catalog
 const marine3320=globalThis.AtlasMarine3320;
 if(!marine3320)throw Error('Faltan los datos marinos superficiales 3.32.0');
-for(const[id,sp]of Object.entries(marine3320.species)){if(SPECIES[id]||Object.values(SPECIES).some(s=>s.latin===sp.latin))throw Error('Identidad marina duplicada');SPECIES[id]=sp;SPECIMEN_CATEGORIES[id]=['Notable'];}
+installUniqueTaxa(marine3320.species,'Identidad marina duplicada: ',['Notable']);
 for(const r of marine3320.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región marina duplicada');REGIONS.push(r);}
 const taxonomyBefore3320=taxonomyInfo;
 taxonomyInfo=function(id){return SPECIES[id]?.origin==='marine3320'?SPECIES[id].taxonomy:taxonomyBefore3320(id);};
@@ -2149,7 +2205,7 @@ RESEARCH_NODES.push({id:'mares_superficiales_1',name:'Navegación de mares super
 // GM3330 BEGIN catalog
 const deep3330=globalThis.AtlasDeep3330;
 if(!deep3330)throw Error('Faltan datos de océanos profundos');
-for(const[id,sp]of Object.entries(deep3330.species)){if(SPECIES[id]||Object.values(SPECIES).some(s=>s.latin===sp.latin))throw Error('Identidad profunda duplicada');SPECIES[id]=sp;SPECIMEN_CATEGORIES[id]=['Notable'];}
+installUniqueTaxa(deep3330.species,'Identidad profunda duplicada: ',['Notable']);
 for(const r of deep3330.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región profunda duplicada');REGIONS.push(r);}
 const taxonomyBefore3330=taxonomyInfo;
 taxonomyInfo=function(id){return SPECIES[id]?.origin==='deep3330'?SPECIES[id].taxonomy:taxonomyBefore3330(id);};
@@ -2158,7 +2214,7 @@ RESEARCH_NODES.push({id:'exploracion_profunda_1',name:'Sondeo y muestreo de océ
 // GM3340 BEGIN catalog
 const abyssal3340=globalThis.AtlasAbyssal3340;
 if(!abyssal3340)throw Error('Faltan datos de fosas 3.34.0');
-for(const[id,sp]of Object.entries(abyssal3340.species)){if(SPECIES[id]||Object.values(SPECIES).some(s=>s.latin===sp.latin))throw Error('Identidad abisal duplicada');SPECIES[id]=sp;SPECIMEN_CATEGORIES[id]=['Notable'];}
+installUniqueTaxa(abyssal3340.species,'Identidad abisal duplicada: ',['Notable']);
 for(const r of abyssal3340.regions){if(REGIONS.some(x=>x.id===r.id))throw Error('Región abisal duplicada');REGIONS.push(r);}
 const taxonomyBefore3340=taxonomyInfo;
 taxonomyInfo=function(id){return SPECIES[id]?.origin==='abyssal3340'?SPECIES[id].taxonomy:taxonomyBefore3340(id);};
@@ -2181,6 +2237,16 @@ if(catalogA04){
   return Object.hasOwn(catalogA04.records,id)?catalogA04.records[id].taxonomy:previousTaxonomy(id);
  };
 }
+legendaryTaxa=indexLegendaryTaxa();
+for(const specimen of LEGENDARY_SPECIMENS){
+ const id=specimen.speciesId;
+ if(specimen.legendaryOnly&&SPECIES[id])SPECIMEN_CATEGORIES[id]=[...(SPECIMEN_CATEGORIES[id]||[]),'Legendario'];
+}
+const catalogueTaxa=new Map();
+function catalogueTaxonomy(id){
+ if(!catalogueTaxa.has(id))catalogueTaxa.set(id,taxonomyInfo(id));
+ return catalogueTaxa.get(id);
+}
 
 function publishedMonographA04(id){
  return state.published[id]&&catalogA04?catalogA04.monograph(id):'';
@@ -2192,20 +2258,21 @@ function initialState(){
     money:420, knowledge:0, prestige:0, helpers:0, books:0,
     asiaPricingVersion:3, currentRegion:region, habitat:'bosque', time:'amanecer', season:'primavera',
     discovered:{}, sightings:{}, stages:{}, feedObs:{}, dimorphism:{}, sexSeen:{}, specialSeen:{}, specialFound:{}, published:{},
-    log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial de prueba: £420. En Corona puedes simular más libras.'],
+    log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial: £420.'],
     upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,africaUnlocked:0,newWorldUnlocked:0,northAmericaUnlocked:0,fundingTier:1,groupTier:0,censusTier:0,autoGroup:0,autoCensus:0,mammalogy:0,ornithology:0,herpetology:0,ichthyology:0,ethology:0,paleoTier:0,museumIncomeTier:0,excavationTier:0,specimenPrep:0,relictSurveyTier:0,relictFieldTier:0}, purchases:{},
     regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0,excavations:[],excavationSeq:0,excavationsCompleted:0,curationPoints:0,excavationHistory:[],relictLeads:{},relictSurveys:[],relictSurveySeq:0,relictSurveyHistory:[],relictResearchPoints:0,relictAchievements:{}}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', bestiaryDescending:false, bestiaryHideMonographs:false, crownCoins:0, lastEncounter:null,
  // EC3300 BEGIN initial-commerce
     commerce:{seq:0,jobs:[],history:[]},craftedItems:{},
     cartography3400:{version:1,historicalAccess:{}},
  // EC3300 END initial-commerce
-    lastTick:Date.now(), lastGrant:0, autoHourly:{}, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
+    lastTick:Date.now(), lastGrant:0, autoHourly:{}, autoPending:[], autoRemainder:0, voyages:[], voyageSeq:0, inventory:{},equipment:{instrument:null,hat:null,necklace:null}
   };
 }
 
 let unreadableSave=false;
 let corruptSave=false;
 let storageFault=false;
+let committedSave=null;
 let state=load();
 // ACH3360: el catálogo y la persistencia viven en el módulo independiente.
 let curationReady3380=false,curationDirty3380=false;
@@ -2258,7 +2325,7 @@ function commissionAction3370(action,id){
 let achievementReady3360=false;
 const achievementDirty3360=new Set();
 let achievementNotices3360=[];
-function achievementContext3360(){return {species:SPECIES,regions:REGIONS,research:RESEARCH_NODES,recipes:RECIPES,collections:MUSEUM_COLLECTIONS,fossilRecipes:MUSEUM_FOSSIL_RECIPES,relicts:MUSEUM_RELICTS,voyages:VOYAGES,taxonomy:taxonomyInfo,specials:configuredSpecials};}
+function achievementContext3360(){return {species:SPECIES,regions:REGIONS,research:RESEARCH_NODES,recipes:RECIPES,collections:MUSEUM_COLLECTIONS,fossilRecipes:MUSEUM_FOSSIL_RECIPES,relicts:MUSEUM_RELICTS,voyages:VOYAGES,taxonomy:catalogueTaxonomy,specials:configuredSpecials};}
 function achievementMark3360(...groups){for(const g of groups)achievementDirty3360.add(g);commissionDirty3370=true;if(groups.some(g=>['museum','research','zoology'].includes(g)))curationDirty3380=true;}
 function achievementIncrement3360(key){globalThis.AtlasAchievements3360?.increment(state,key);achievementMark3360('navigation');}
 function achievementRecord3360(type,data){globalThis.AtlasAchievements3360?.record(state,type,data);achievementMark3360('navigation','exploration');}
@@ -2334,8 +2401,10 @@ Object.keys(SEXUAL_DIMORPHISM).forEach(id=>{
   else if(state.sexSeen[id]) state.dimorphism[id]=!!(state.sexSeen[id].male && state.sexSeen[id].female);
 });
 try{if(!localStorage.getItem('gran_atlas_v07_backup_before_v08'))localStorage.setItem('gran_atlas_v07_backup_before_v08',JSON.stringify(state));}catch(e){}
-let autoAccum=0;
 let batchingOffline=false;
+let automaticFramePending=false;
+let automaticProgressUnwritten=false;
+const AUTOMATIC_FRAME_BUDGET_MS=8;
 let diaryDirty=false;
 let lastPanelSignature='';
 let currentAutoNotice='';
@@ -2369,6 +2438,8 @@ function load(){
     }
     merged.asiaPricingVersion=Math.max(2, saved.asiaPricingVersion||2);
     merged.lastTick=Number.isFinite(saved.lastTick)?saved.lastTick:Date.now();
+    normalizeAutomaticProgress(merged);
+    normalizeScientificVoyages(merged);
     globalThis.AtlasCampProfile3430?.normalize(merged);
     return normalizeSpecialDiscoveries(mergeHistoricalBeardedVulture(merged));
   }catch(e){
@@ -2385,23 +2456,38 @@ function showStorageFault(message){
  const button=document.getElementById('saveManagerOpen');
  if(button){if(button.textContent!=='⚠️')button.textContent='⚠️';button.setAttribute('title',message);button.setAttribute('aria-label',message);}
 }
-function persist(){
- if(commissionClaiming3370)return true;
+function persist({verify=false,skipUnchanged=false}={}){
+ if(commissionClaiming3370)return !verify;
  achievementFlush3360();commissionFlush3370();curationFlush3380();
  if(unreadableSave){showStorageFault('La partida almacenada no se pudo leer y se conserva sin reemplazar. Abre Respaldos para recuperarla.');return false;}
  try{
-  localStorage.setItem(STORAGE_KEY,JSON.stringify(state));
-  if(storageFault){const button=document.getElementById('saveManagerOpen');if(button){button.textContent='💾';button.setAttribute('title','Respaldos');button.setAttribute('aria-label','Respaldos');}}
-  if(storageFault){const status=document.getElementById('saveManagerStatus');if(status?.textContent.startsWith('No se pudo guardar en este dispositivo.')){status.textContent='Guardado automático restablecido.';status.classList.remove('error');}}
-  storageFault=false;
-  if(commissionNotices3370.length&&globalThis.AtlasCommissionsUI3370)globalThis.AtlasCommissionsUI3370.notify(commissionNotices3370.splice(0));
-  if(achievementNotices3360.length&&globalThis.AtlasSociety3360){const notices=achievementNotices3360.splice(0);globalThis.AtlasSociety3360.notify(notices);}
-  return true;
+  const previous=verify?localStorage.getItem(STORAGE_KEY):null;
+  const raw=JSON.stringify(state);
+  if(!skipUnchanged||verify||storageFault||raw!==committedSave||localStorage.getItem(STORAGE_KEY)!==raw)localStorage.setItem(STORAGE_KEY,raw);
+  if(verify){
+   try{
+    if(localStorage.getItem(STORAGE_KEY)!==raw)throw new Error('La partida escrita difiere de la partida restaurada.');
+   }catch(error){
+    if(previous===null)localStorage.removeItem(STORAGE_KEY);
+    else localStorage.setItem(STORAGE_KEY,previous);
+    throw error;
+   }
+  }
+  committedSave=raw;
  }catch(error){
   storageFault=true;
   showStorageFault('No se pudo guardar en este dispositivo. El progreso sigue en memoria: abre Respaldos y exporta la partida antes de cerrar.');
   return false;
  }
+ const wasFault=storageFault;
+ storageFault=false;
+ try{
+  if(wasFault){const button=document.getElementById('saveManagerOpen');if(button){button.textContent='💾';button.setAttribute('title','Respaldos');button.setAttribute('aria-label','Respaldos');}}
+  if(wasFault){const status=document.getElementById('saveManagerStatus');if(status?.textContent.startsWith('No se pudo guardar en este dispositivo.')){status.textContent='Guardado automático restablecido.';status.classList.remove('error');}}
+  if(commissionNotices3370.length&&globalThis.AtlasCommissionsUI3370)globalThis.AtlasCommissionsUI3370.notify(commissionNotices3370.splice(0));
+  if(achievementNotices3360.length&&globalThis.AtlasSociety3360){const notices=achievementNotices3360.splice(0);globalThis.AtlasSociety3360.notify(notices);}
+ }catch(error){console.error('El Gran Atlas: no se pudo actualizar el aviso de guardado.',error);}
+ return true;
 }
 /**
  * v3.5: Restauración real de la sesión en ejecución.
@@ -2418,15 +2504,19 @@ function atlasLiveReceipt(){
 window.AtlasSaveBridge={
  persistBeforeUpdate:persist,
  getSnapshot:()=>atlasLiveReceipt(),
+ verifySavedGame:()=>!unreadableSave&&!storageFault&&committedSave!==null&&localStorage.getItem(STORAGE_KEY)===committedSave,
  getSaveData:()=>{if(corruptSave)throw new Error('La partida almacenada no se pudo leer. Recupérala desde un respaldo válido.');return JSON.parse(JSON.stringify(state));},
  normalizeSpecialDiscoveries,
  restoreGame(imported){
    if(!imported || typeof imported!=='object'||!Number.isFinite(imported.money)||
        !Number.isFinite(imported.prestige)||!Number.isFinite(imported.knowledge))
      throw new Error('La partida que llegó al motor no es válida.');
+   imported=JSON.parse(JSON.stringify(imported));
    const before=state;
    const wasUnreadable=unreadableSave,wasCorrupt=corruptSave;
-   const beforeRuntime={autoAccum,autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,tab};
+   const beforeRuntime={autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,diaryDirty,tab};
+   const beforeNotices={achievements:achievementNotices3360,commissions:commissionNotices3370,
+     groups:[...achievementDirty3360],commissionDirty:commissionDirty3370,curationDirty:curationDirty3380};
    try{
      state={...initialState(),...imported,
        upgrades:{...initialState().upgrades,...(imported.upgrades||{})},
@@ -2486,24 +2576,36 @@ window.AtlasSaveBridge={
      if(curationReady3380){globalThis.AtlasMuseumCuration3380.merge(state,before);globalThis.AtlasMuseumCuration3380.initialize(state,curationContext3380());curationDirty3380=false;}
      // Evitar calcular un intervalo offline obsoleto al actualizar la partida.
      state.lastTick=Date.now();
-     autoAccum=0;autoDiaryBuffer={searches:0,hits:0,knowledge:0};
+     normalizeAutomaticProgress(state);
+     normalizeScientificVoyages(state);
+     normalizeMuseumJobs(state.museum);
+     autoDiaryBuffer={searches:0,hits:0,knowledge:0};
      lastAutoDiaryFlush=0;lastPanelSignature='';currentAutoNotice='';
      tab='field';
      unreadableSave=false;corruptSave=false;
-     if(!persist())throw new Error('No se pudo guardar la partida restaurada. Conserva el archivo de respaldo y libera almacenamiento.');
-     render();
+     // Render may fail on malformed historical data. Keep disk untouched until it succeeds.
+     renderCounters();
+     renderPanel();
+     if(!persist({verify:true}))throw new Error('No se pudo guardar la partida restaurada. Conserva el archivo de respaldo y libera almacenamiento.');
      return atlasLiveReceipt();
    }catch(error){
      state=before;
      unreadableSave=wasUnreadable;corruptSave=wasCorrupt;
-     ({autoAccum,autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,tab}=beforeRuntime);
-     try{render();}catch(_){}
+     ({autoDiaryBuffer,lastAutoDiaryFlush,lastPanelSignature,currentAutoNotice,diaryDirty,tab}=beforeRuntime);
+     achievementNotices3360=beforeNotices.achievements;
+     commissionNotices3370=beforeNotices.commissions;
+     achievementDirty3360.clear();
+     for(const group of beforeNotices.groups)achievementDirty3360.add(group);
+     commissionDirty3370=beforeNotices.commissionDirty;
+     curationDirty3380=beforeNotices.curationDirty;
+     try{renderCounters();renderPanel();}catch(_){}
      throw error;
    }
  }
 };
 function esc(x){return String(x).replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]))}
-function fmt(n){return Math.floor(n).toLocaleString('es-CL')}
+const atlasNumberFormat=new Intl.NumberFormat('es-CL');
+function fmt(n){return atlasNumberFormat.format(Math.floor(n))}
 function currentRegion(){return REGIONS.find(r=>r.id===state.currentRegion)||REGIONS[0]}
 function totalSightings(){return Object.values(state.sightings).reduce((a,b)=>a+b,0)}
 function monographCount(){return Object.values(state.published).filter(Boolean).length}
@@ -2518,8 +2620,7 @@ function manualSearchChance(){return Math.min(0.96,0.50*manualEncounterBonus());
 function automaticSearchChance(){return state.helpers>0?Math.min(0.96,0.38*helperBonus()):0;}
 function automaticCensusRate(){return state.upgrades.autoCensus?2:1;}
 function manualCensusRate(){return state.upgrades.censusTier>=2?3:state.upgrades.censusTier?2:1;}
-function fieldBuffSummaryMarkup(){
- const cap=automaticSearchCapacity();
+function fieldBuffSummaryMarkup(cap=automaticSearchCapacity()){
  const manualChoices=eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season).length;
  const group=state.upgrades.groupTier||0;
  const manualGroup=group===3?'25 % de 2 / 5 % de 3 especies':group===2?'20 % de 2 especies':group===1?'10 % de 2 especies':'1 especie por encuentro';
@@ -2678,10 +2779,11 @@ function researchRarityWeight(id){
   :sp.rare==='Poco común'?(tier>=2?1.25:1.12):1;
  return base*multiplier;
 }
-function weightedSpeciesPick(ids){
- const total=ids.reduce((sum,id)=>sum+researchRarityWeight(id),0);
+function weightedSpeciesPick(ids,weight=researchRarityWeight){
+ // Preserve the original addition and subtraction order, including floating-point ties.
+ const total=ids.reduce((sum,id)=>sum+weight(id),0);
  let roll=Math.random()*total;
- for(const id of ids){roll-=researchRarityWeight(id);if(roll<=0)return id;}
+ for(const id of ids){roll-=weight(id);if(roll<=0)return id;}
  return ids[ids.length-1];
 }
 function researchEncounterTargets(source){
@@ -2714,21 +2816,25 @@ function automaticEligibleSpecies(regionId,season){
     && sp.habitats.some(h=>region.habitats.includes(h));
  });
 }
-function automaticSearchCapacity(at=Date.now()){
+function automaticSearchCapacity(at=Date.now(),ids=automaticEligibleSpecies(state.currentRegion,state.season)){
  const hour=Math.floor(at/3600000);
- const ids=automaticEligibleSpecies(state.currentRegion,state.season);
  const remaining=ids.filter(id=>(state.autoHourly[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR);
  return {total:ids.length,remaining:remaining.length};
 }
-function encounter(source='manual', at=Date.now(), guaranteed=false){
+function pruneAutomaticHours(at){
+ // Preserve the historical buckets needed by work still queued, even on manual searches.
+ const hour=Math.floor(Math.min(at,state.autoPending[0]?.at??at)/3600000);
+ for(const key of Object.keys(state.autoHourly))if(Number(key.split(':')[0])<hour-8)delete state.autoHourly[key];
+}
+function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=null){
  // Cada búsqueda permite una sola probabilidad de encuentro, independientemente de cuántas especies registre.
  const hour=Math.floor(at/3600000);
  const bucket=state.autoHourly;
- for(const key of Object.keys(bucket)){if(Number(key.split(':')[0])<hour-8)delete bucket[key];}
+ if(!automatic)pruneAutomaticHours(at);
  const baseChoices=source==='auto'
-  ?automaticEligibleSpecies(state.currentRegion,state.season)
+  ?automatic?.species??automaticEligibleSpecies(state.currentRegion,state.season)
   :eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season);
- const choices=baseChoices.filter(id=>source!=='auto'
+ const choices=automatic?.choices??baseChoices.filter(id=>source!=='auto'
   ||(bucket[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR);
  const manual=source==='manual';
  let chanceBase=manual?0.50:0.38;
@@ -2740,7 +2846,9 @@ function encounter(source='manual', at=Date.now(), guaranteed=false){
   return;
  }
  currentAutoNotice='';
+ const relicConditions=automatic?.segment??state;
  if(!choices.length||(!guaranteed&&Math.random()>chanceBase)){
+  searchRelictInField(source,at,relicConditions);
   const k=Math.round((manual?3:1.5)*knowledgeBonus());
   state.knowledge+=k;
   if(manual)state.lastEncounter={title:'Sin avistamiento',subtitle:`Se encontraron rastros. +${k} conocimiento`,sprite:null};
@@ -2752,7 +2860,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false){
  const pool=[...choices],selected=[];
  const maxSpecies=Math.min(pool.length,researchEncounterTargets(source));
  for(let i=0;i<maxSpecies;i++){
-  const chosen=weightedSpeciesPick(pool);
+  const chosen=weightedSpeciesPick(pool,automatic?.weight);
   selected.push(chosen);
   pool.splice(pool.indexOf(chosen),1);
  }
@@ -2760,7 +2868,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false){
  // nunca una vez por individuo del censo (evita multiplicar objetos o variantes).
  const knowledgeGain=Math.round((manual?5:3)*knowledgeBonus());
  state.knowledge+=knowledgeGain;
- const museumFinds=maybeMuseumFieldDiscovery(source);
+ const museumFinds=maybeMuseumFieldDiscovery(source,relicConditions);
  const entries=[];
  const census=researchCensusCount(source);
  for(const chosen of selected){
@@ -2771,6 +2879,10 @@ function encounter(source='manual', at=Date.now(), guaranteed=false){
    amount=Math.min(amount,MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR-(bucket[key]||0));
    if(amount<1)continue;
    bucket[key]=(bucket[key]||0)+amount;
+   if(automatic){
+    automatic.hits+=amount;
+    if(bucket[key]===MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR)automatic.choices.splice(automatic.choices.indexOf(chosen),1);
+   }
   }
   state.discovered[chosen]=true;
   state.sightings[chosen]=sight(chosen)+amount;
@@ -2797,20 +2909,25 @@ function encounter(source='manual', at=Date.now(), guaranteed=false){
   entries.push({id:chosen,first,amount,note,variant,category,sexObservation});
  }
  if(!entries.length)return;
+ const relict=searchRelictInField(source,at,relicConditions);
+ const clue=maybeMuseumRelictLead(source,Math.random,relicConditions);
+ if(relict)entries[0].note.push('relicto: '+relict.name);
+ if(clue)entries[0].note.push('indicio: '+clue);
+ const sequence=state.encounterSequence=(state.encounterSequence||0)+1;
+ if(automatic?.deferPresentation)automatic.latest={entries,knowledgeGain,sequence};
+ else presentEncounter(entries,knowledgeGain,sequence);
+ if(manual)pushLog(`🔭 ${entries.length>1?'Encuentro múltiple · ':''}${entries.map(e=>visibleName(e.id)+' ×'+e.amount).join(', ')}${entries[0].note.length?' · '+entries[0].note.join(', '):''}.`);
+ if(!batchingOffline){renderCounters();updateFieldOutput();}
+}
+function presentEncounter(entries,knowledgeGain,sequence){
  const primary=entries[0],sp=SPECIES[primary.id],many=entries.length>1;
  const title=many?`Encuentro múltiple: ${entries.length} especies`
   :`${primary.first?'¡Nueva especie! ':'Avistamiento: '}${visibleName(primary.id)}`;
  const summary=many?entries.map(e=>`${visibleName(e.id)} ×${e.amount}`).join(' · '):`${fmt(sight(primary.id))} avistamientos`;
  const subtitle=`${many?summary:sp.rare+(primary.variant?` · ${primary.variant}`:'')+' · '+summary} · +${knowledgeGain} conocimiento${primary.first?' · +£15':''}${primary.note.length?' · '+primary.note.join(', '):''}`;
- // Guardar los integrantes de cada encuentro para representarlos gráficamente en Campo.
- // Los IDs anteriores y el formato del respaldo siguen intactos.
- state.encounterSequence=(state.encounterSequence||0)+1;
  state.lastEncounter={species:primary.id,title,subtitle,sprite:primary.variant?specimenMarkup(primary.id,primary.variant,primary.category)
    :(primary.sexObservation?getSpriteMarkup(primary.id,'normal',primary.sexObservation.sex):getSpriteMarkup(primary.id)),
-   sequence:state.encounterSequence,
-   entries:entries.map(e=>({id:e.id,amount:e.amount,variant:e.variant||'',category:e.category||'',sex:e.sexObservation?.sex||null,first:e.first}))};
- if(manual)pushLog(`🔭 ${many?'Encuentro múltiple · ':''}${entries.map(e=>visibleName(e.id)+' ×'+e.amount).join(', ')}${primary.note.length?' · '+primary.note.join(', '):''}.`);
- if(!batchingOffline){renderCounters();updateFieldOutput();}
+   sequence,entries:entries.map(e=>({id:e.id,amount:e.amount,variant:e.variant||'',category:e.category||'',sex:e.sexObservation?.sex||null,first:e.first}))};
 }
 function variantToSkin(variant){
   if(/albino|leuc/i.test(variant)) return 'albino';
@@ -2949,6 +3066,11 @@ function buyNode(id){
   if(node.reqItem && node.reqItemConsume!==false) state.inventory[node.reqItem]=(state.inventory[node.reqItem]||0)-(node.reqItemQty||1);
   state.purchases[id]=(state.purchases[id]||0)+1;
   node.effect(state);
+  if(id==='relictos_1'||id==='relictos_2'){
+   const needsClue=r=>state.regionUnlocked[r.region]&&!museumRelictOwned(r.id)&&relictLeadCount(r.id)<3;
+   const relict=relictsByRegion.get(state.currentRegion)?.find(needsClue)??MUSEUM_RELICTS.find(needsClue);
+   if(relict)addRelictLead(relict.id);
+  }
   pushLog(`🔬 Investigación completada: ${node.name}.`);
   render();
 }
@@ -2986,29 +3108,38 @@ function replaceFieldEncounter(result, markup){
  }
  result.replaceChildren(template.content);
 }
+const fieldSectionMarkup=new WeakMap();
+function updateFieldSection(node,next){
+ if(fieldSectionMarkup.get(node)===next)return;
+ if(fieldSectionMarkup.has(node)||node.innerHTML!==next)node.innerHTML=next;
+ fieldSectionMarkup.set(node,next);
+}
 function updateFieldOutput(){
  if(tab!=='field')return;
  const last=state.lastEncounter;
  const result=document.getElementById('fieldResult');
- if(result){const signature=fieldEncounterSignature(last);if(signature!==lastPanelSignature){replaceFieldEncounter(result,encounterCardMarkup(last));result.classList.remove('encounter-reveal');void result.offsetWidth;result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
+ if(result){const signature=fieldEncounterSignature(last);if(signature!==lastPanelSignature){replaceFieldEncounter(result,encounterCardMarkup(last));result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
+ const relicNotice=document.getElementById('fieldRelictNotice');
+ if(relicNotice)updateFieldSection(relicNotice,globalThis.AtlasFieldUI.relictNotice(fieldRelictNotice()));
  const buffs=document.getElementById('fieldBuffSummary');
- if(buffs){const next=fieldBuffSummaryMarkup();if(buffs.innerHTML!==next)buffs.innerHTML=next;}
- const automatic=fieldAutomaticModel();
+ const capacity=automaticSearchCapacity();
+ if(buffs)updateFieldSection(buffs,fieldBuffSummaryMarkup(capacity));
+ const automatic=fieldAutomaticModel(capacity);
  const autoNoticeEl=document.getElementById('autoNotice');
  if(autoNoticeEl){
   const text=automatic.summary;
   if(autoNoticeEl.textContent!==text)autoNoticeEl.textContent=text;
  }
  const progress=document.getElementById('fieldProgress');
- if(progress){const next=globalThis.AtlasFieldUI.progress(fieldProgressModel());if(progress.innerHTML!==next)progress.innerHTML=next;}
+ if(progress)updateFieldSection(progress,globalThis.AtlasFieldUI.progress(fieldProgressModel()));
  const cadence=document.getElementById('fieldAutoCadence');
  if(cadence){const next=automatic.detail;if(cadence.textContent!==next)cadence.textContent=next;}
  const autoDetail=document.getElementById('fieldAutoDetail');
  if(autoDetail&&autoDetail.textContent!==currentAutoNotice)autoDetail.textContent=currentAutoNotice;
  const log=document.getElementById('fieldLog');
  if(log && (diaryDirty||log.dataset?.artSequence!==String(last?.sequence||0))){
-  const wasNearTop=log.scrollTop<42,next=fieldLogMarkup();
-  if(log.innerHTML!==next)log.innerHTML=next;
+  const wasNearTop=log.scrollTop<42;
+  updateFieldSection(log,fieldLogMarkup());
   if(wasNearTop)log.scrollTop=0;
   if(log.dataset)log.dataset.artSequence=String(last?.sequence||0);
   diaryDirty=false;
@@ -3017,34 +3148,24 @@ function updateFieldOutput(){
 function render(){ renderCounters(); renderPanel(); persist(); }
 function renderCrown(){
   const coins=Math.floor(Math.max(0,state.crownCoins||0));
-  return `<section class="card crown-card stack trial-crown">
-    <div class="big">👑</div><h3 class="section">Corona inglesa · Laboratorio</h3>
-    <div class="small">Esta es una herramienta de pruebas: las coronas son gratuitas, no hay compras reales ni pagos.</div>
-    <div class="req"><strong>Coronas disponibles: ${fmt(coins)}</strong><div class="small">Equivalencia de prueba: 1 corona = £1</div></div>
-    <div class="crown-quick-actions">
-      <button class="btn gold" data-action="buy-crown" data-id="100">+100 coronas</button>
-      <button class="btn gold" data-action="buy-crown" data-id="500">+500 coronas</button>
-      <button class="btn gold" data-action="buy-crown" data-id="1000">+1.000 coronas</button>
-      <button class="btn gold" data-action="buy-crown" data-id="5000">+5.000 coronas</button>
-    </div>
-    <div class="crown-quick-actions">
-      <button class="btn" data-action="exchange-crown" data-id="100" ${coins<100?'disabled':''}>Canjear 100 → £100</button>
-      <button class="btn" data-action="exchange-crown" data-id="500" ${coins<500?'disabled':''}>Canjear 500 → £500</button>
-      <button class="btn alt" data-action="exchange-crown" data-id="all" ${coins<1?'disabled':''}>Canjear todas → £${fmt(coins)}</button>
-    </div>
-    <div class="small">El canje consume coronas y añade la misma cantidad de libras. Tus datos existentes no se reinician.</div>
+  return `<section class="card crown-card stack"><div class="big">👑</div><h3 class="section">Corona</h3>
+    <div class="req"><strong>Saldo histórico: ${fmt(coins)} coronas</strong></div>
   </section>`;
 }
 
 function filterJournalRail(){
   // J-3250 BEGIN filter
   if(panel.querySelector('.journal-v3250')){
-   const q=globalThis.AtlasJournalUI.normalize(journalRailQuery);let count=0;
+   const normalize=globalThis.AtlasJournalUI.normalize,q=normalize(journalRailQuery);
+   const ids=currentRegion().species;let count=0;
    panel.querySelectorAll('[data-action="select-journal"][data-journal-slot]').forEach(button=>{
-    const sid=currentRegion().species[Number(button.dataset.journalSlot)];
-    button.hidden=!!q&&!globalThis.AtlasJournalUI.normalize(visibleName(sid)).includes(q);if(!button.hidden)count++;
+    const sid=ids[Number(button.dataset.journalSlot)],hidden=!!q&&!normalize(visibleName(sid)).includes(q);
+    if(button.hidden!==hidden)button.hidden=hidden;
+    if(!hidden)count++;
    });
-   const counter=panel.querySelector('#journalRailCount');if(counter)counter.textContent=count?count+' especies':'Sin resultados';return;
+   const counter=panel.querySelector('#journalRailCount'),label=count?count+' especies':'Sin resultados';
+   if(counter&&counter.textContent!==label)counter.textContent=label;
+   return;
   }
   // J-3250 END filter
   const rail=panel.querySelector('#journalSpeciesRail');
@@ -3133,39 +3254,6 @@ function unlockRegion(id){
   state.regionUnlocked[id]=true; pushLog('🗝️ Región desbloqueada: '+r.name+'.'); render();
 }
 function travelToRegion(id){ setRegion(id); tab='field'; renderPanel(); persist(); }
-function fieldAid(kind){
-  if(kind==='knowledge'){
-    state.knowledge+=500;
-    pushLog('📜 Ayuda de campo: +500 conocimiento.');
-    // Conservar abierto el panel <details> de herramientas.
-    renderCounters(); updateFieldOutput(); persist();
-    return;
-  }
-  if(kind==='sightings'){
-    // Son 50 avistamientos confirmados, no 50 intentos aleatorios.
-    if(!eligibleSpecies(state.currentRegion,state.habitat,state.time,state.season).length){
-      pushLog('🔭 No hay fauna disponible con estos filtros; cambia las condiciones de exploración.');
-      renderCounters(); updateFieldOutput(); persist();
-      return;
-    }
-    const before=totalSightings();
-    batchingOffline=true;
-    try{for(let i=0;i<50;i++)encounter('manual',Date.now(),true);}
-    finally{batchingOffline=false;}
-    const gained=totalSightings()-before;
-    state.knowledge+=20;
-    pushLog('🔭 Ayuda de campo: +'+gained+' avistamientos confirmados.');
-    renderCounters(); updateFieldOutput(); persist();
-    return;
-  }
-  if(kind!=='guided') return;
-  batchingOffline=true;
-  try{for(let i=0;i<5;i++)encounter('manual');}
-  finally{batchingOffline=false;}
-  state.knowledge+=60;
-  pushLog('🧭 Sesión guiada de campo completada.');
-  renderCounters(); updateFieldOutput(); persist();
-}
 function spendMoneyForKnowledge(multiplier=1){
   if(![1,10,100,1000].includes(multiplier)) return;
   const max=state.purchases.fondos_x1000?1000:state.purchases.fondos_x100?100:state.purchases.fondos_x10?10:1;
@@ -3185,20 +3273,6 @@ function removeExhibit(id){
   if(!state.museum.exhibits[id]) return;
   delete state.museum.exhibits[id]; pushLog('🏛️ Se retiró de la sala: '+SPECIES[id].name); render();
 }
-function buyCrownPack(amount){
-  if(!Number.isSafeInteger(amount) || ![100,500,1000,5000].includes(amount)) return;
-  state.crownCoins=(state.crownCoins||0)+amount;
-  pushLog('👑 Prueba: +'+amount+' coronas sin costo real.');render();
-}
-function exchangeTrialCrowns(amount){
-  if(!Number.isSafeInteger(amount)||amount<=0) return;
-  const available=Math.floor(Math.max(0,state.crownCoins||0));
-  if(amount>available) return;
-  state.crownCoins=available-amount;
-  state.money=(Number(state.money)||0)+amount;
-  pushLog('💷 Conversión de prueba: '+amount+' coronas → £'+amount+'.');render();
-}
-
 function bestiaryTypeBucket(id){
   const c=taxonomyInfo(id).className;
   if(c==='Mammalia') return 'Mamífero';
@@ -3264,7 +3338,8 @@ function fieldBackdropMarkup(habitat){return globalThis.AtlasFieldScene.render(h
 function fieldEncounterModel(last){
  const entries=(Array.isArray(last?.entries)?last.entries:[]).filter(e=>SPECIES[e.id]).slice(0,3).map((e,index)=>{
   const individual=(e.category==='Legendario'||e.variant==='Legendario')?legendaryForSpecies(e.id):null;
-  return {...e,name:(individual?individual.name+' — ':'')+visibleName(e.id),image:animalMarkup(e.id,{variant:e.variant,category:e.category,sex:e.sex,eager:true,surface:'field'}),amount:Number(e.amount)||1,sexLabel:e.sex==='male'?'macho':'hembra',sexNew:!!(index===0&&e.sex&&last?.subtitle?.includes('primera observación'))};
+  const variant=e.id==='asia_esp_0523'&&specialVariantName(e.variant)==='Melánico'?'Melánico (histórico)':e.variant;
+  return {...e,variant,name:(individual?individual.name+' — ':'')+visibleName(e.id),image:animalMarkup(e.id,{variant:e.variant,category:e.category,sex:e.sex,eager:true,surface:'field'}),amount:Number(e.amount)||1,sexLabel:e.sex==='male'?'macho':'hembra',sexNew:!!(index===0&&e.sex&&last?.subtitle?.includes('primera observación'))};
  });
  if(!entries.length&&last?.species&&SPECIES[last.species])entries.push({id:last.species,name:visibleName(last.species),image:last.sprite||animalMarkup(last.species,{eager:true}),amount:1});
  const knowledge=(last?.subtitle||'').match(/\+\d+ conocimiento/),money=(last?.subtitle||'').match(/\+£\d+/),sample=(last?.subtitle||'').match(/muestra obtenida: ([^,·]+)/);
@@ -3281,8 +3356,8 @@ function fieldProgressModel(){
  let goal=st>=5?(state.published[id]?'Registro completo · sigue explorando.':'Tu monografía está lista para publicar.'):!req.sightOk?'Observa '+Math.max(0,req.needSight-sight(id))+' ejemplares más.':!req.extraOk?(st===3?'Documenta conducta o dimorfismo.':'Busca un espécimen especial.'):!req.moneyOk||!req.knowledgeOk?'Siguiente etapa: £'+req.money+' y '+req.knowledge+' conocimiento.':'Puedes avanzar una etapa en el Cuaderno.';
  return {id,name:visibleName(id),label:st+'/5 etapas',percent:st>=5?100:Math.min(100,100*sight(id)/Math.max(1,req.needSight)),goal};
 }
-function fieldAutomaticModel(){
- const cap=automaticSearchCapacity(),helpers=state.helpers||0;
+function fieldAutomaticModel(cap=automaticSearchCapacity()){
+ const helpers=state.helpers||0;
  const paused=helpers>0&&(!cap.total||!cap.remaining);
  return {helpers,summary:helpers?(helpers+' naturalistas · '+(paused?'en pausa':'explorando')):'Explora con ayuda de naturalistas',detail:helpers?(paused?(cap.total?'Cupo horario completo · búsqueda manual disponible':'Sin fauna compatible con la estación'):'Cada '+autoInterval()+' s · censo ×'+automaticCensusRate()+' · '+cap.remaining+'/'+cap.total+' especies con cupo'):'Contrata tu equipo en Investigación',notice:currentAutoNotice};
 }
@@ -3291,25 +3366,34 @@ function fieldLogMarkup(){
  const art=Array.isArray(lastEntries)?lastEntries.slice(0,3).filter(entry=>state.discovered[entry.id]&&
   Object.hasOwn(globalThis.AtlasNaturalistAssets?.routes||{},entry.id)).map(entry=>
    animalMarkup(entry.id,{variant:entry.variant,category:entry.category,sex:entry.sex,size:64})).join(''):'';
- const history=state.log.map(line=>'<div class="log">'+esc(line)+'</div>').join('');
+ const history=state.log.map(line=>'<div class="log">'+esc(line.replace(/(espécimen especial: (?:(?:Albino|Melánico) · )?Legendario, )Filigrana(?=[,.]|$)/g,'$1Nácar'))+'</div>').join('');
  return (art?'<div class="field-log-art" aria-label="Último avistamiento">'+art+'</div>':'')+history;
 }
+function fieldRelictNotice(){
+ const id=Object.keys(state.museum.relictDiscoveries||{}).find(key=>state.museum.relictDiscoveries[key].notice===true);
+ const relict=relictById.get(id);
+ return relict?{id,name:relict.name,description:relict.desc,art:relictArtwork(relict,128)}:null;
+}
 function fieldViewModel(){
- const region=currentRegion();
- return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:globalThis.AtlasNaturalistArt?.landscape(state.habitat,region.id,true)||fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),progress:fieldProgressModel(),auto:fieldAutomaticModel(),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(),logHTML:fieldLogMarkup(),toolsHTML:'<div class="helper-row"><button class="btn gold" data-action="field-aid" data-id="knowledge">+500 conocimiento</button><button class="btn gold" data-action="field-aid" data-id="sightings">+50 avistamientos</button><button class="btn alt" data-action="field-aid" data-id="guided">Sesión guiada</button></div>',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
+ const region=currentRegion(),capacity=automaticSearchCapacity();
+ return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:globalThis.AtlasNaturalistArt?.landscape(state.habitat,region.id,true)||fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),relictNotice:fieldRelictNotice(),progress:fieldProgressModel(),auto:fieldAutomaticModel(capacity),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(capacity),logHTML:fieldLogMarkup(),toolsHTML:'',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
 }
 function renderField(){return globalThis.AtlasFieldUI.render(fieldViewModel());}
 function renderJournal(){
   const ids=currentRegion().species;
   if(!ids.includes(state.selectedJournal)) state.selectedJournal=ids.find(sid=>stage(sid)>=1)||ids[0];
+  // J-3250 BEGIN render
+  if(globalThis.AtlasJournalUI){
+    const model=journalViewModel3250();
+    journalRailModel3250=model;
+    return globalThis.AtlasJournalUI.render(model,journalRailCache3250?.ids===ids);
+  }
+  // J-3250 END render
   const id=state.selectedJournal || ids[0];
   const sp=SPECIES[id];
   const st=stage(id);
   const next=st<5?stageRequirements(id,st):null;
   const isKnown=!!state.discovered[id];
-  // J-3250 BEGIN render
-  if(globalThis.AtlasJournalUI)return globalThis.AtlasJournalUI.render(journalViewModel3250());
-  // J-3250 END render
   const stamps=['I','II','III','IV','V'].map((mark,i)=>`<div class="journal-stamp ${i<st?'earned':''}" aria-label="Etapa ${i+1} ${i<st?'alcanzada':'pendiente'}"><span>${i<st?'✦':mark}</span><small>${['Vista','Nombre','Conducta','Hábitos','Estudio'][i]}</small></div>`).join('');
   const railIds=journalSortMode==='sightings'
     ? [...ids].sort((a,b)=>sight(b)-sight(a)||ids.indexOf(a)-ids.indexOf(b))
@@ -3363,24 +3447,30 @@ function renderJournal(){
 
 // J-3250 BEGIN model
 function journalViewModel3250(detailOnly=false){
- const ids=currentRegion().species,id=state.selectedJournal||ids[0],sp=SPECIES[id],st=stage(id),next=st<5?stageRequirements(id,st):null;
- const items=ids.map((sid,slot)=>({slot,name:visibleName(sid),stage:stage(sid),sightings:sight(sid),discovered:!!state.discovered[sid],sprite:state.discovered[sid]&&!detailOnly?animalMarkup(sid,{size:64}):''}));
+ const region=currentRegion(),ids=region.species,id=state.selectedJournal||ids[0],sp=SPECIES[id],st=stage(id),next=st<5?stageRequirements(id,st):null;
+ const items=detailOnly?[]:ids.map((sid,slot)=>({
+  slot,name:visibleName(sid),stage:stage(sid),sightings:sight(sid),discovered:!!state.discovered[sid],
+  get sprite(){return animalMarkup(sid,{size:64});}
+ }));
  if(journalSortMode==='sightings')items.sort((a,b)=>b.sightings-a.sightings||a.slot-b.slot);
  const foundVariants=specialBadges(id).replace(/<div class="variant-card unknown">[\s\S]*?<\/div><\/div><div class="small">[\s\S]*?<\/div><\/div>/g,'');
  const observedVariants=foundVariants.includes('variant-card seen')?foundVariants.replaceAll(sp.name,visibleName(id)):'';
- return {region:currentRegion().name,identified:regionIdentifiedCount(state.currentRegion),query:journalRailQuery,sort:journalSortMode,items,money:fmt(state.money),knowledge:fmt(state.knowledge),selected:{...items.find(p=>p.slot===ids.indexOf(id)),sprite:state.discovered[id]?animalMarkup(id,{size:256,surface:'journal'}):'',name:visibleName(id),latin:visibleLatin(id),rarity:sp.rare,next,published:!!state.published[id],food:feed(id),specials:specials(id),sexProgress:sp.dimorphism?dimorphismProgress(id)+'/2':'—',extraLabel:st===3?(sp.dimorphism?'Alimentación o sexos':'Alimentación'):'Espécimen especial',extraProgress:st===3?(sp.dimorphism?feed(id)+'/10 · '+dimorphismProgress(id)+'/2 sexos':feed(id)+'/10'):specials(id)+'/1',taxonomy:taxonomyText(id),habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',variants:observedVariants,sexes:SEXUAL_DIMORPHISM[id]?renderSexComparison(id):''}};
+ return {region:region.name,identified:detailOnly?0:items.filter(item=>item.stage>=1).length,query:journalRailQuery,sort:journalSortMode,items,money:fmt(state.money),knowledge:fmt(state.knowledge),selected:{slot:ids.indexOf(id),stage:st,sightings:sight(id),discovered:!!state.discovered[id],sprite:state.discovered[id]?animalMarkup(id,{size:256,surface:'journal'}):'',name:visibleName(id),latin:visibleLatin(id),rarity:sp.rare,next,published:!!state.published[id],food:feed(id),specials:specials(id),sexProgress:sp.dimorphism?dimorphismProgress(id)+'/2':'—',extraLabel:st===3?(sp.dimorphism?'Alimentación o sexos':'Alimentación'):'Espécimen especial',extraProgress:st===3?(sp.dimorphism?feed(id)+'/10 · '+dimorphismProgress(id)+'/2 sexos':feed(id)+'/10'):specials(id)+'/1',taxonomy:taxonomyText(id),habitats:st>=1?sp.habitats.map(habitatLabel).join(', '):'desconocidos',times:st>=3?sp.times.map(timeLabel).join(', '):'por estudiar',seasons:st>=4?sp.seasons.map(seasonLabel).join(', '):'pendientes de estudio',variants:observedVariants,sexes:SEXUAL_DIMORPHISM[id]?renderSexComparison(id):''}};
 }
 let journalRailScrollLeft3250=0,journalRailRegion3250='',journalRailSelection3250='';
+let journalRailCache3250=null,journalRailModel3250=null;
 function refreshJournalSheet3250(){
  const container=panel.querySelector('#journalSelectedSheet');
  if(!container)return false;
  container.innerHTML=globalThis.AtlasJournalUI.sheet(journalViewModel3250(true));
  journalRailSelection3250=state.selectedJournal;
- panel.querySelectorAll('[data-action="select-journal"][data-journal-slot]').forEach(button=>{
-  const selected=currentRegion().species[Number(button.dataset.journalSlot)]===state.selectedJournal;
-  button.classList.toggle('selected',selected);
-  if(selected)button.setAttribute('aria-current','true');else button.removeAttribute('aria-current');
- });
+ const previous=panel.querySelector('#journalSpeciesRail [aria-current="true"]');
+ const slot=currentRegion().species.indexOf(state.selectedJournal);
+ const selected=panel.querySelector('#journalSpeciesRail [data-journal-slot="'+slot+'"]');
+ if(previous!==selected){
+  previous?.classList.remove('selected');previous?.removeAttribute('aria-current');
+  selected?.classList.add('selected');selected?.setAttribute('aria-current','true');
+ }
  return true;
 }
 // J-3250 END model
@@ -3570,16 +3660,36 @@ const MUSEUM_FOSSIL_RECIPES=[
  {id:"carnotaurus_mount",name:"Reconstrucción de Carnotauro",icon:"🦖",requires:{bone_long:9,bone_short:15,carnivore_skull:1,fossil_horn:2,fossil_claw:3},unique:true}
 ];
 const MUSEUM_RELICTS=[
- {id:'coelacanth_indic',name:'Celacanto del Índico',latin:'Latimeria chalumnae',icon:'🐟',region:'HX-10-12',habitats:['costa'],times:['atardecer','noche'],desc:'Pez de linaje muy antiguo; hallazgo costero excepcional.',shape:'fish'},
- {id:'atlas_lion',name:'León del Atlas',latin:'Panthera leo leo',icon:'🦁',region:'HX-06-08',habitats:['montana','estepa'],times:['amanecer','atardecer','noche'],desc:'Población histórica norteafricana, desaparecida de la naturaleza en la actualidad.',shape:'lion'},
- {id:'seychelles_sheathbat',name:'Murciélago de Seychelles',latin:'Coleura seychellensis',icon:'🦇',region:'HX-07-14',habitats:['bosque'],times:['atardecer','noche'],desc:'Murciélago insular muy amenazado, de detección excepcional.',shape:'bat'},
- {id:'gabon_dwarf_croc',name:'Cocodrilo enano africano',latin:'Osteolaemus tetraspis',icon:'🐊',region:'HX-08-10',habitats:['rio','bosque','humedal'],times:['atardecer','noche'],desc:'Crocodílido forestal de distribución restringida.',shape:'croc'},
- {id:"angonoka",name:"Tortuga angonoka",latin:"Astrochelys yniphora",icon:"🐢",region:"HX-09-14",habitats:["bosque","pradera"],times:["amanecer","dia","atardecer"],desc:"Tortuga endémica de Madagascar y gravemente amenazada; relicto insular extraordinario.",shape:"tortoise"},
- {id:"african_lungfish",name:"Pez pulmonado africano",latin:"Protopterus aethiopicus",icon:"🐟",region:"HX-09-11",habitats:["humedal"],times:["amanecer","atardecer","noche"],desc:"Pez de linaje antiguo capaz de respirar aire; hallazgo museístico extraordinario.",shape:"lungfish"},
- {id:"white_sturgeon",name:"Esturión blanco del Pacífico",latin:"Acipenser transmontanus",icon:"🐟",region:"HX-02-02",habitats:["rio"],times:["amanecer","atardecer","noche"],desc:"Linaje muy antiguo de peces; archivo de observaciones fluviales en Columbia Británica.",shape:"sturgeon"},
- {id:"gharial",name:"Gavial del Ganges",latin:"Gavialis gangeticus",icon:"🐊",region:"HX-05-16",habitats:["rio"],times:["amanecer","dia","atardecer"],desc:"Crocodiliano de hocico estrecho y linaje singular; registros excepcionales de ríos del subcontinente indio.",shape:"gharial"},
- {id:"olm_balkans",name:"Proteo de las cuevas",latin:"Proteus anguinus",icon:"🦎",region:"HX-03-12",habitats:["bosque"],times:["noche"],desc:"Anfibio cavernícola de los sistemas kársticos balcánicos; se investiga mediante registros subterráneos, no por aparición superficial.",shape:"olm"}
+ {id:'coelacanth_indic',name:'Celacanto del Índico',latin:'Latimeria chalumnae',icon:'🐟',region:'HX-10-12',habitats:['costa'],times:['atardecer','noche'],desc:'Pez de aletas lobuladas que aún vive en el Índico occidental. Su primer registro por la ciencia moderna data de 1938.',shape:'fish',locality:'Aguas del cabo Oriental',habitatDetail:'Fondos rocosos de la plataforma, representados con el entorno de costa.'},
+ {id:'atlas_lion',name:'León del Atlas',latin:'Panthera leo leo',icon:'🦁',region:'HX-06-08',habitats:['montana','estepa'],times:['amanecer','atardecer','noche'],desc:'Población histórica norteafricana, desaparecida de la naturaleza en la actualidad.',shape:'lion',speciesId:'af_leon',locality:'Montañas del Atlas, norte de África',habitatDetail:'Montes y estepas norteafricanas.'},
+ {id:'seychelles_sheathbat',name:'Murciélago de Seychelles',latin:'Coleura seychellensis',icon:'🦇',region:'HX-07-14',habitats:['bosque'],times:['atardecer','noche'],desc:'Murciélago insular muy amenazado, de detección excepcional.',shape:'bat',locality:'Islas Seychelles',habitatDetail:'Bosques costeros próximos a refugios rocosos.'},
+ {id:'gabon_dwarf_croc',name:'Cocodrilo enano africano',latin:'Osteolaemus tetraspis',icon:'🐊',region:'HX-08-10',habitats:['rio','bosque','humedal'],times:['atardecer','noche'],desc:'Crocodílido forestal de distribución restringida.',shape:'croc',speciesId:'af_xlsx_cocodrilo_enano',locality:'Gabón y litoral ecuatorial',habitatDetail:'Cursos lentos y humedales dentro del bosque.'},
+ {id:"angonoka",name:"Tortuga angonoka",latin:"Astrochelys yniphora",icon:"🐢",region:"HX-09-14",habitats:["bosque","pradera"],times:["amanecer","dia","atardecer"],desc:"Tortuga endémica de Madagascar y gravemente amenazada; relicto insular extraordinario.",shape:"tortoise",locality:'Bahía de Baly, noroeste de Madagascar',habitatDetail:'Bosque seco y claros de matorral de la bahía de Baly.'},
+ {id:"african_lungfish",name:"Pez pulmonado africano",latin:"Protopterus aethiopicus",icon:"🐟",region:"HX-09-11",habitats:["humedal"],times:["amanecer","atardecer","noche"],desc:"Pez de linaje antiguo capaz de respirar aire; hallazgo museístico extraordinario.",shape:"lungfish",locality:'Grandes lagos de África oriental',habitatDetail:'Humedales y aguas someras de los lagos.'},
+ {id:"white_sturgeon",name:"Esturión blanco del Pacífico",latin:"Acipenser transmontanus",icon:"🐟",region:"HX-02-02",habitats:["rio"],times:["amanecer","atardecer","noche"],desc:"Linaje muy antiguo de peces; archivo de observaciones fluviales en Columbia Británica.",shape:"sturgeon",locality:'Sistema del río Fraser',habitatDetail:'Canal principal y pozas profundas del Fraser.'},
+ {id:"gharial",name:"Gavial del Ganges",latin:"Gavialis gangeticus",icon:"🐊",region:"HX-05-16",habitats:["rio"],times:["amanecer","dia","atardecer"],desc:"Crocodiliano de hocico estrecho y linaje singular; registros excepcionales de ríos del subcontinente indio.",shape:"gharial",locality:'Cuenca del río Ganges',habitatDetail:'Ríos anchos, bancos arenosos y aguas permanentes.'},
+ {id:"olm_balkans",name:"Proteo de las cuevas",latin:"Proteus anguinus",icon:"🦎",region:"HX-03-12",habitats:["rio"],times:["noche"],desc:"Anfibio cavernícola de los sistemas kársticos balcánicos; se investiga mediante registros subterráneos, no por aparición superficial.",shape:"olm",locality:'Karst dinárico',habitatDetail:'Arroyos subterráneos en cuevas kársticas, accesibles desde el entorno Río. El horario indica el turno de prospección.'},
+ {"id":"thylacine","name":"Tilacino","latin":"Thylacinus cynocephalus","region":"oc_tasmania","habitats":["bosque","pradera"],"times":["atardecer","noche"],"locality":"Tasmania","habitatDetail":"Borde de bosque y claros con cobertura.","desc":"Marsupial carnívoro de dorso rayado. En 1842 persistía en Tasmania y el último ejemplar cautivo murió en 1936.","plate":true},
+ {"id":"great_auk","name":"Alca gigante","latin":"Pinguinus impennis","region":"mar_atlantico_septentrional","habitats":["archipielago"],"times":["amanecer","dia"],"locality":"Eldey, frente a Islandia","habitatDetail":"Islotes rocosos de cría del Atlántico norte.","desc":"Ave marina no voladora del Atlántico norte. En 1842 sobrevivían los últimos ejemplares cerca de Islandia, donde se documentaron los últimos en 1844.","plate":true},
+ {"id":"falkland_wolf","name":"Lobo de las Malvinas","latin":"Dusicyon australis","region":"mar_atlantico_austral","habitats":["archipielago"],"times":["amanecer","atardecer"],"locality":"Islas Malvinas","habitatDetail":"Pastizales y dunas insulares, observados desde tierra.","desc":"También llamado guará. Fue el único mamífero terrestre nativo de las islas Malvinas y desapareció en el siglo XIX.","plate":true},
+ {"id":"carolina_parakeet","name":"Periquito de Carolina","latin":"Conuropsis carolinensis","region":"HX-03-04","habitats":["bosque","humedal"],"times":["amanecer","dia","atardecer"],"locality":"Este de Norteamérica","habitatDetail":"Bosques de llanura aluvial y márgenes arboladas.","desc":"Loro norteamericano de rostro naranja y cola larga. En 1842 aún se encontraba en bosques y humedales del este de Norteamérica.","plate":true},
+ {"id":"huia","name":"Huía","latin":"Heteralocha acutirostris","region":"oc_nueva_zelanda","habitats":["bosque"],"times":["amanecer","dia"],"locality":"Sur de la Isla Norte","habitatDetail":"Bosques nativos maduros de la Isla Norte neozelandesa.","desc":"Ave neozelandesa de plumaje oscuro y carúnculas anaranjadas. La lámina muestra a una hembra, cuyo pico largo y curvo la distingue del macho.","plate":true},
+ {"id":"caribbean_monk_seal","name":"Foca monje del Caribe","latin":"Neomonachus tropicalis","region":"gm06_antillas","habitats":["costa"],"times":["amanecer","dia","atardecer"],"locality":"Caribe insular","habitatDetail":"Playas, cayos y orillas tranquilas del Caribe.","desc":"Foca tropical que descansaba en costas e islotes del Caribe. Estaba presente en 1842 y su último registro confirmado fue en 1952.","plate":true},
+ {"id":"chinese_paddlefish","name":"Pez espátula chino","latin":"Psephurus gladius","region":"HX-05-17","habitats":["rio"],"times":["amanecer","atardecer","noche"],"locality":"Cuenca del Yangtsé","habitatDetail":"Canal fluvial principal y pozas profundas del Yangtsé.","desc":"Pez migratorio del Yangtsé con un rostro alargado en forma de espada. Vivía en 1842 y se extinguió a comienzos del siglo XXI.","plate":true},
+ {"id":"australian_lungfish","name":"Pez pulmonado australiano","latin":"Neoceratodus forsteri","region":"oc_costa_nordeste_australiana","habitats":["rio"],"times":["atardecer","noche"],"locality":"Ríos Burnett y Mary, Queensland","habitatDetail":"Tramos fluviales lentos y pozas con vegetación sumergida.","desc":"Pez pulmonado australiano viviente de grandes escamas y aletas pareadas lobuladas. Su distribución nativa está ligada a los ríos Burnett y Mary.","plate":true},
+ {"id":"largetooth_sawfish","name":"Pez sierra común","latin":"Pristis pristis","region":"HX-04-04","habitats":["rio","costa"],"times":["amanecer","atardecer","noche"],"locality":"Golfo de México","habitatDetail":"Estuarios y desembocaduras de aguas someras.","desc":"Raya con rostro dentado capaz de remontar aguas dulces. Corresponde al pez sierra de dientes grandes, Pristis pristis.","plate":true},
+ {"id":"cuban_solenodon","name":"Solenodonte cubano","latin":"Atopogale cubana","region":"gm06_antillas","habitats":["bosque","selva"],"times":["noche"],"locality":"Oriente de Cuba","habitatDetail":"Bosques húmedos y su hojarasca en el oriente cubano.","desc":"Mamífero nocturno de hocico móvil, distinto del solenodonte de La Española. También se conoce como Solenodon cubanus.","plate":true},
+ {"id":"fiji_banded_iguana","name":"Iguana bandeada de Fiyi","latin":"Brachylophus fasciatus","region":"gm06_melanesia","habitats":["bosque","selva"],"times":["amanecer","dia"],"locality":"Islas Lau y otras islas orientales de Fiyi","habitatDetail":"Dosel y ramas de bosques insulares de Fiyi oriental.","desc":"Iguana arborícola viviente. La lámina muestra un macho de la forma bandeada oriental, con franjas claras sobre el cuerpo verde.","plate":true}
 ];
+const relictById=new Map(MUSEUM_RELICTS.map(relict=>[relict.id,relict]));
+const relictsByRegion=new Map();
+for(const relict of MUSEUM_RELICTS){
+ if(!relictsByRegion.has(relict.region))relictsByRegion.set(relict.region,[]);
+ relictsByRegion.get(relict.region).push(relict);
+}
+let relictMuseumDirty=false;
+const RELICT_DISCOVERY_RATES=Object.freeze([0.0002,0.0005,0.0012,0.003]);
+const RELICT_EXPEDITION_REGIONS={balkans:'HX-03-12',atlantic_survey:'mar_atlantico_septentrional'};
 // Beta 3.17 · Yacimientos de investigación, sin sustituir las expediciones originales.
 const MUSEUM_DIG_SITES=[
  {id:'british_cliffs',name:'Estratos de las Islas Británicas',region:'HX-01-09',seconds:180,money:55,knowledge:15,fragments:[2,3],tooth:0.12,track:0.24,claw:0.03,skull:0.004},
@@ -3607,6 +3717,38 @@ const MUSEUM_CURATORIAL_PROJECTS=[
  {id:'tracks',name:'Análisis de huellas',icon:'🐾',requires:{fossil_track:2,animal_trace:1},knowledge:115,points:2},
  {id:'restoration',name:'Restauración de esqueletos',icon:'🦴',requires:{bone_long:1,fossil_rib:2,carved_wood:1},knowledge:165,points:3}
 ];
+function museumJobTransaction(change){
+ const committed=tradeTransaction3300(()=>{change();return true;});
+ if(committed){renderCounters();renderPanel();}
+ return committed;
+}
+function normalizeMuseumJobs(museum){
+ if(museum.relictDiscoveries) museum.relictDiscoveries=Object.fromEntries(Object.entries(museum.relictDiscoveries).filter(([id,record])=>
+  museum.relicts[id]&&record&&record.region===relictById.get(id)?.region&&Number.isFinite(record.at)&&record.at>=0
+  &&['manual','auto'].includes(record.source)));
+ if(museum.relictAutoHour) museum.relictAutoHour=Object.fromEntries(Object.entries(museum.relictAutoHour).filter(([id,hour])=>
+  relictById.has(id)&&Number.isSafeInteger(hour)&&hour>=0));
+ for(const [jobsKey,seqKey,receiptsKey,historyKey,typeKey,types] of [
+   ['excavations','excavationSeq','excavationSettled','excavationHistory','site',MUSEUM_DIG_SITES],
+   ['relictSurveys','relictSurveySeq','relictSurveySettled','relictSurveyHistory','relict',MUSEUM_RELICTS]
+ ]){
+   const knownTypes=new Set(types.map(type=>type.id));
+   const history=museum[historyKey].filter(row=>row&&knownTypes.has(row[typeKey]));
+   const lastId=normalizeSettledJobs(museum,receiptsKey,history,row=>row.jobId);
+   let seq=Math.max(scientificVoyageId(museum[seqKey])??0,lastId);
+   const seen=new Set();
+   museum[jobsKey]=museum[jobsKey].filter(job=>{
+     // Preserve historical unknown sites as records; only registered operations pay rewards.
+     if(!knownTypes.has(job[typeKey]))return true;
+     const id=scientificVoyageId(job.id);
+     if(id===null||seen.has(id)||museum[receiptsKey]?.[id])return false;
+     seen.add(id);seq=Math.max(seq,id);
+     return true;
+   });
+   museum[seqKey]=seq;
+ }
+}
+normalizeMuseumJobs(state.museum);
 function museumFossilMountCount(){return MUSEUM_FOSSIL_RECIPES.filter(p=>p.unique&&state.museum?.collections?.[p.id]).length;}
 function museumFossilSetBonus(){
  return MUSEUM_FOSSIL_SETS.reduce((sum,set)=>
@@ -3624,11 +3766,12 @@ function canStartExcavation(id){
 function startExcavation(id,now=Date.now()){
  const site=MUSEUM_DIG_SITES.find(x=>x.id===id);
  if(!canStartExcavation(id)||!Number.isFinite(now))return false;
- state.money-=site.money;state.knowledge-=site.knowledge;
- state.museum.excavationSeq=(Number(state.museum.excavationSeq)||0)+1;
- state.museum.excavations.push({id:state.museum.excavationSeq,site:id,endAt:now+site.seconds*1000});
- pushLog('⛏️ Excavación iniciada: '+site.name+'.');render();
- return true;
+ if(state.museum.excavationSeq>=Number.MAX_SAFE_INTEGER)return false;
+ return museumJobTransaction(()=>{
+   state.money-=site.money;state.knowledge-=site.knowledge;
+   state.museum.excavations.push({id:++state.museum.excavationSeq,site:id,endAt:now+site.seconds*1000});
+   pushLog('⛏️ Excavación iniciada: '+site.name+'.');
+ });
 }
 function formatMuseumTimeRemaining(endAt,now=Date.now()){
  const seconds=Math.max(0,Math.ceil((Number(endAt)-now)/1000));
@@ -3637,29 +3780,30 @@ function formatMuseumTimeRemaining(endAt,now=Date.now()){
 }
 function collectExcavation(jobId,now=Date.now(),random=Math.random){
  const jobs=state.museum?.excavations||[];
- const index=jobs.findIndex(job=>String(job.id)===String(jobId));
+ const index=jobs.findIndex(job=>String(job.id)===String(jobId)&&MUSEUM_DIG_SITES.some(site=>site.id===job.site));
  if(index<0||!Number.isFinite(now))return false;
  const job=jobs[index],site=MUSEUM_DIG_SITES.find(x=>x.id===job.site);
- if(!site||now<job.endAt)return false;
- // Retirar antes de entregar el botín impide reclamarlo dos veces.
- jobs.splice(index,1);
- const [lo,hi]=site.fragments;
- const amount=lo+Math.floor(random()*(hi-lo+1))+(state.upgrades.excavationTier?1:0);
- addInventory('fossil_fragment',amount);
- const found=['fragmentos fósiles ×'+amount],rewards={fossil_fragment:amount};
- for(const [id,p,label] of [
-  ['fossil_tooth',site.tooth,'diente fósil'],
-  ['fossil_track',Math.min(1,site.track+(state.upgrades.specimenPrep?0.10:0)),'huella fosilizada'],
-  ['fossil_claw',Math.min(1,site.claw+(state.upgrades.specimenPrep?0.05:0)),'garra fósil'],
-  ['fossil_skull',site.skull,'cráneo fósil']
- ]){
-  if(random()<p){addInventory(id,1);rewards[id]=1;found.push(label);}
- }
- state.museum.excavationsCompleted=(Number(state.museum.excavationsCompleted)||0)+1;
- state.museum.excavationHistory=(state.museum.excavationHistory||[]).concat([{site:job.site,at:now,rewards}]).slice(-12);
- pushLog('⛏️ Excavación finalizada · '+site.name+': '+found.join(', ')+'.');
- render();
- return true;
+ const id=scientificVoyageId(job.id);
+ if(!site||id===null||!Number.isFinite(job.endAt)||now<job.endAt||state.museum.excavationSettled?.[id])return false;
+ return museumJobTransaction(()=>{
+   jobs.splice(index,1);
+   (state.museum.excavationSettled??={})[id]=true;
+   const [lo,hi]=site.fragments;
+   const amount=lo+Math.floor(random()*(hi-lo+1))+(state.upgrades.excavationTier?1:0);
+   addInventory('fossil_fragment',amount);
+   const found=['fragmentos fósiles ×'+amount],rewards={fossil_fragment:amount};
+   for(const [id,p,label] of [
+    ['fossil_tooth',site.tooth,'diente fósil'],
+    ['fossil_track',Math.min(1,site.track+(state.upgrades.specimenPrep?0.10:0)),'huella fosilizada'],
+    ['fossil_claw',Math.min(1,site.claw+(state.upgrades.specimenPrep?0.05:0)),'garra fósil'],
+    ['fossil_skull',site.skull,'cráneo fósil']
+   ]){
+    if(random()<p){addInventory(id,1);rewards[id]=1;found.push(label);}
+   }
+   state.museum.excavationsCompleted=(Number(state.museum.excavationsCompleted)||0)+1;
+   state.museum.excavationHistory=(state.museum.excavationHistory||[]).concat([{jobId:id,site:job.site,at:now,rewards}]).slice(-12);
+   pushLog('⛏️ Excavación finalizada · '+site.name+': '+found.join(', ')+'.');
+ });
 }
 function canCurateMuseum(id){
  const project=MUSEUM_CURATORIAL_PROJECTS.find(x=>x.id===id);
@@ -3756,29 +3900,48 @@ function craftMuseumFossil(id,qty=1){
  render();
  return true;
 }
-// Beta 3.18 · Investigación de relictos: pistas, misiones, expedientes y logros.
-// Las apariciones naturales extraordinarias antiguas siguen siendo compatibles.
-function relictLeadCount(id){return Math.min(3,Math.max(0,Number(state.museum.relictLeads?.[id])||0));}
+
+// Relictos 5.0. Los indicios y el descubrimiento se guardan por separado.
+function normalizeRelictLeads(value){return Math.min(3,Math.max(0,Math.floor(Number(value)||0)));}
+function relictLeadCount(id){return normalizeRelictLeads(state.museum.relictLeads?.[id]);}
 function addRelictLead(id,qty=1){
- if(!MUSEUM_RELICTS.some(r=>r.id===id)||museumRelictOwned(id))return false;
- const before=relictLeadCount(id),next=Math.min(3,before+Math.max(0,Math.floor(qty)));
+ const relict=relictById.get(id);
+ if(!relict||museumRelictOwned(id))return false;
+ const before=relictLeadCount(id),next=normalizeRelictLeads(before+normalizeRelictLeads(qty));
  if(next===before)return false;
  state.museum.relictLeads[id]=next;
- pushLog('📜 Indicio de relicto: '+MUSEUM_RELICTS.find(r=>r.id===id).name+' · '+next+'/3.');
+ relictMuseumDirty=true;
+ pushLog('📜 Indicio de relicto: '+relict.name+' · '+next+'/3.');
  return true;
 }
-function maybeMuseumRelictLead(source,random=Math.random){
- const candidates=MUSEUM_RELICTS.filter(r=>r.region===state.currentRegion &&
-   r.habitats.includes(state.habitat)&&r.times.includes(state.time)&&
-   !museumRelictOwned(r.id)&&relictLeadCount(r.id)<3);
+function relictsInField(conditions){
+ return (relictsByRegion.get(conditions.currentRegion)||[]).filter(r=>
+  r.habitats.includes(conditions.habitat)&&r.times.includes(conditions.time)&&!museumRelictOwned(r.id));
+}
+function maybeMuseumRelictLead(source,random=Math.random,conditions=state){
+ const candidates=relictsInField(conditions).filter(r=>relictLeadCount(r.id)<3);
  if(!candidates.length)return null;
  const base=source==='manual'?0.04:0.007;
  if(random()>=base*(state.upgrades.relictFieldTier?2:1))return null;
  const selected=candidates[Math.floor(random()*candidates.length)];
  return addRelictLead(selected.id)?selected.name:null;
 }
+function searchRelictInField(source,at,conditions,random=Math.random){
+ if(!Number.isFinite(at)||at<0||!['manual','auto'].includes(source))return null;
+ const hour=Math.floor(at/3600000);
+ for(const relict of relictsInField(conditions)){
+  if(source==='auto'){
+   // One qualifying search per relic and hour, including the historical time of queued work.
+   const attemptHours=state.museum.relictAutoHour??={};
+   if((attemptHours[relict.id]??-1)>=hour)continue;
+   attemptHours[relict.id]=hour;
+  }
+  if(random()<RELICT_DISCOVERY_RATES[relictLeadCount(relict.id)]&&recordMuseumRelict(relict.id,{at,source,conditions}))return relict;
+ }
+ return null;
+}
 function relictSurveySpec(id){
- const r=MUSEUM_RELICTS.find(r=>r.id===id);
+ const r=relictById.get(id);
  if(!r)return null;
  const region=REGIONS.find(x=>x.id===r.region);
  if(!region)return null;
@@ -3795,41 +3958,35 @@ function canStartRelictSurvey(id){
 function startRelictSurvey(id,now=Date.now()){
  const mission=relictSurveySpec(id);
  if(!canStartRelictSurvey(id)||!Number.isFinite(now))return false;
- state.money-=mission.money;state.knowledge-=mission.knowledge;
- state.museum.relictSurveySeq=(Number(state.museum.relictSurveySeq)||0)+1;
- state.museum.relictSurveys.push({id:state.museum.relictSurveySeq,relict:id,endAt:now+mission.seconds*1000});
- pushLog('🔎 Archivo de campo iniciado: '+mission.name+'.');render();
- return true;
+ if(state.museum.relictSurveySeq>=Number.MAX_SAFE_INTEGER)return false;
+ return museumJobTransaction(()=>{
+   state.money-=mission.money;state.knowledge-=mission.knowledge;
+   state.museum.relictSurveys.push({id:++state.museum.relictSurveySeq,relict:id,endAt:now+mission.seconds*1000});
+   pushLog('🔎 Prospección documental iniciada: '+museumRelictName3270(relictById.get(id))+'.');
+ });
 }
 function collectRelictSurvey(jobId,now=Date.now(),random=Math.random){
  const jobs=state.museum.relictSurveys||[],index=jobs.findIndex(x=>String(x.id)===String(jobId));
  if(index<0||!Number.isFinite(now))return false;
  const job=jobs[index],r=MUSEUM_RELICTS.find(x=>x.id===job.relict);
- if(!r||now<job.endAt)return false;
- jobs.splice(index,1); // Reclamar una vez.
- const gain=state.upgrades.relictSurveyTier?2:1;
- const old=relictLeadCount(r.id);
- addRelictLead(r.id,gain);
- const granted=relictLeadCount(r.id)-old;
- const material=random()<0.20?'animal_trace':null;
- if(material)addInventory(material,1);
- state.museum.relictSurveyHistory=(state.museum.relictSurveyHistory||[]).concat([{
-  relict:r.id,at:now,leads:granted,material
- }]).slice(-8);
- pushLog('🔎 Investigación completada: '+r.name+' · '+granted+' indicio(s)'+(material?' y una muestra de huellas':'')+'.');
- render();return true;
+ const id=scientificVoyageId(job.id);
+ if(!r||id===null||!Number.isFinite(job.endAt)||now<job.endAt||state.museum.relictSurveySettled?.[id])return false;
+ return museumJobTransaction(()=>{
+   jobs.splice(index,1);
+   (state.museum.relictSurveySettled??={})[id]=true;
+   const gain=state.upgrades.relictSurveyTier?2:1;
+   const old=relictLeadCount(r.id);
+   addRelictLead(r.id,gain);
+   const granted=relictLeadCount(r.id)-old;
+   const material=random()<0.20?'animal_trace':null;
+   if(material)addInventory(material,1);
+   state.museum.relictSurveyHistory=(state.museum.relictSurveyHistory||[]).concat([{
+    jobId:id,relict:r.id,at:now,leads:granted,material
+   }]).slice(-8);
+   pushLog('🔎 Investigación completada: '+r.name+' · '+granted+' indicio(s)'+(material?' y una muestra de huellas':'')+'.');
+ });
 }
-function canCatalogRelict(id){
- return !!(MUSEUM_RELICTS.some(r=>r.id===id)&&!museumRelictOwned(id)&&relictLeadCount(id)>=3&&
-  state.knowledge>=140&&(state.inventory.old_ink||0)>=1&&(state.inventory.parchment_scrap||0)>=2);
-}
-function catalogRelict(id){
- if(!canCatalogRelict(id))return false;
- state.knowledge-=140;state.inventory.old_ink-=1;state.inventory.parchment_scrap-=2;
- recordMuseumRelict(id);
- pushLog('📖 Expediente patrimonial completado: '+MUSEUM_RELICTS.find(r=>r.id===id).name+'.');
- render();return true;
-}
+
 function museumRelictSetBonus(){
  return MUSEUM_RELICT_SETS.reduce((sum,set)=>
   sum+(set.requires.every(id=>museumRelictOwned(id))?set.bonus:0),0);
@@ -3864,16 +4021,18 @@ function researchRelict(){
 function relictResearchBonus(){return Math.min(12,state.museum.relictResearchPoints||0)*0.01;}
 
 function museumRelictOwned(id){return !!state.museum?.relicts?.[id];}
-function recordMuseumRelict(id){
- const relict=MUSEUM_RELICTS.find(r=>r.id===id);
- if(!relict||museumRelictOwned(id))return false;
- state.museum.relicts=state.museum.relicts||{};
+
+function recordMuseumRelict(id,{at,source,conditions}={}){
+ const relict=relictById.get(id);
+ if(!relict||!Number.isFinite(at)||at<0||!['manual','auto'].includes(source)||!conditions||
+    !relictsInField(conditions).includes(relict))return false;
  state.museum.relicts[id]=true;
- state.museum.relictLeads[id]=3;
- pushLog('🗿 Hallazgo extraordinario del Museo: '+relict.name+'. No computa para el Atlas.');
+ relictMuseumDirty=true;
+ (state.museum.relictDiscoveries??={})[id]={at,source,region:relict.region,habitat:conditions.habitat,time:conditions.time,notice:true};
+ pushLog('🗿 Relicto descubierto en Campo: '+relict.name+'.');
  return true;
 }
-function maybeMuseumFieldDiscovery(source){
+function maybeMuseumFieldDiscovery(source,conditions=state){
  // Se ejecuta solo tras un avistamiento normal, sin modificar sus contadores.
  const manual=source==='manual';
  let found=[];
@@ -3881,17 +4040,9 @@ function maybeMuseumFieldDiscovery(source){
  if(Math.random()<(manual?0.0015:0.00035)){addInventory('fossil_tooth',1);found.push('diente fósil');}
  if(Math.random()<(manual?0.00008:0.000015)){addInventory('fossil_skull',1);found.push('cráneo fósil');}
   // Perlas: tirada independiente para ríos o costas; no aumenta avistamientos.
-  if(['rio','costa'].includes(state.habitat)&&Math.random()<(manual?0.012:0.0015)){
+  if(['rio','costa'].includes(conditions.habitat)&&Math.random()<(manual?0.012:0.0015)){
    addInventory('river_pearl',1);found.push('perla fluvial');
   }
- const clue=maybeMuseumRelictLead(source);
- if(clue)found.push('indicio: '+clue);
- const candidates=MUSEUM_RELICTS.filter(r=>r.region===state.currentRegion &&
-   r.habitats.includes(state.habitat)&&r.times.includes(state.time)&&!museumRelictOwned(r.id));
- if(candidates.length&&Math.random()<(manual?0.0006:0.00009)){
-  const picked=candidates[Math.floor(Math.random()*candidates.length)];
-  if(recordMuseumRelict(picked.id))found.push('relicto: '+picked.name);
- }
  return found;
 }
 function museumDisplayKey(kind,id){return kind+':'+id;}
@@ -3940,9 +4091,15 @@ function renderMuseumCollections(tab){
 
 // Cinco salas: los animales ocupan las doce vitrinas originales;
 // las colecciones científicas tienen exhibición independiente, sin renta.
+function relictArtwork(relict,size){
+ if(!relict.plate)return globalThis.ATLAS_RELICT_ART?.render(relict.id)||'';
+ const file='./naturalist-art/relicts/'+(size===512?'':size+'/')+relict.id+'.webp';
+ return '<img class="relict-plate" src="'+file+'" width="'+size+'" height="'+size+'" alt="'+esc(relict.name)+'" decoding="async">';
+}
 function museumCardArt(kind,id){
- const relictArt=globalThis.ATLAS_RELICT_ART?.render(id);
- if(relictArt)return relictArt;
+ const relict=relictById.get(id);
+ if(relict)return relictArtwork(relict,256);
+
  const frame=(paths)=>'<svg viewBox="0 0 100 100" aria-hidden="true">'+paths+'</svg>';
  if(id==='ankylosaurus_mount')return frame(
   '<path d="M20 64Q37 41 65 49Q85 55 80 70L43 75Z" fill="#d9c19a" stroke="#795d41" stroke-width="4"/>'+
@@ -4132,23 +4289,15 @@ function renderMuseumRelicts(){
    '<button class="btn alt" data-action="claim-relict-milestone" data-id="'+m.id+'" '+(canClaimRelictMilestone(m.id)?'':'disabled')+'>'+(claimed?'Logrado':'Reclamar')+'</button></div>';
  }).join('');
  const pieces=MUSEUM_RELICTS.map(r=>{
-  const found=museumRelictOwned(r.id),leads=relictLeadCount(r.id),zone=REGIONS.find(z=>z.id===r.region);
-  const regionOpen=!!state.regionUnlocked?.[r.region],on=found&&museumIsDisplayed('relict',r.id);
-  const survey=relictSurveySpec(r.id);
-  const signals=Array.from({length:3},(_,i)=>'<span class="'+(found||i<leads?'is-known':'')+'"></span>').join('');
-  const actions=found?'<button class="btn alt" data-action="museum-display" data-id="relict:'+r.id+'">'+(on?'Retirar vitrina':'Exponer')+'</button>':
-   '<button class="btn alt" data-action="start-relict-survey" data-id="'+r.id+'" '+(canStartRelictSurvey(r.id)?'':'disabled')+'>'+
-   (regionOpen?'Investigar · £'+survey.money+' / '+survey.knowledge+' K':'Zona bloqueada')+'</button>'+
-   '<button class="btn" data-action="catalog-relict" data-id="'+r.id+'" '+(canCatalogRelict(r.id)?'':'disabled')+'>Catalogar</button>';
+  const model=museumRelict3270(r);
+  const action=model.actions[0];
   return '<div class="showpiece museum-v33-vitrine museum-v311-special museum-v318-card">'+
-   '<div class="museum-v33-frame"><div class="sprite-wrap">'+(found?museumCardArt('',r.id):'<div class="qmark">?</div>')+'</div></div>'+
-   '<strong>'+(found||leads?r.name:'Relicto desconocido')+'</strong>'+
-   '<div class="small">'+(found?r.latin:r.desc)+'</div>'+
-   '<div class="small"><b>Zona:</b> '+(zone?zone.name:'Desconocida')+' · '+r.habitats.map(habitatLabel).join(' / ')+'</div>'+
-   '<div class="museum-v318-indicia"><span>Indicios '+(found?'completo':leads+'/3')+'</span><div>'+signals+'</div></div>'+
-   (!found?'<div class="small">Catalogación: 3 indicios, 140 conocimiento, 1 tinta y 2 pergaminos. Investigación: '+Math.ceil(survey.seconds/60)+' min.</div>':
-    '<div class="small">Expediente conservado · vitrina '+(on?'activa':'retirada')+'</div>')+
-   '<div class="museum-v318-actions">'+actions+'</div></div>';
+   '<div class="museum-v33-frame"><div class="sprite-wrap">'+(model.art||'<div class="qmark">?</div>')+'</div></div>'+
+   '<strong>'+esc(model.name)+'</strong><div class="small">'+esc(model.latin)+'</div>'+
+   model.details.map(entry=>'<div class="small">'+esc(entry.label)+' · '+esc(entry.value)+'</div>').join('')+
+   '<div class="small">Indicios '+model.leads+'/3 · '+esc(model.status)+'</div>'+
+   (model.description?'<p class="small">'+esc(model.description)+'</p>':'')+
+   (action?'<button class="btn alt" data-action="'+action.action+'" data-id="'+(model.owned?'relict:':'')+r.id+'" '+(action.enabled===false?'disabled':'')+'>'+esc(action.label)+'</button>':'')+'</div>';
  }).join('');
  const archive=(state.museum.relictSurveyHistory||[]).slice(-8).reverse().map(entry=>{
   const r=MUSEUM_RELICTS.find(x=>x.id===entry.relict);
@@ -4244,7 +4393,7 @@ function renderMuseum(){
  </section></div>`;
 }
 // M-3270 BEGIN presentation
-const museumUI3270={filter:'all',sort:'income-desc',samplePage:0,galleryPage:0,folds:{},scrolls:{},navLeft:0,lastRoom:null,restore:null,focusRoom:false,modal:null};
+const museumUI3270={filter:'all',sort:'income-desc',samplePage:0,galleryPage:0,relictPage:0,folds:{},scrolls:{},navLeft:0,lastRoom:null,restore:null,focusRoom:false,modal:null};
 const museumTokens3270=new Map(),museumTokenKeys3270=new Map();
 function museumToken3270(kind,id){
  const key=kind+':'+id;if(museumTokenKeys3270.has(key))return museumTokenKeys3270.get(key);
@@ -4275,10 +4424,27 @@ function museumCollection3270(p){
  const owned=!!state.museum.collections[p.id],displayed=owned&&museumIsDisplayed('collection',p.id),ready=museumCollectionReady(p),token=museumToken3270('collection',p.id),req=museumMaterials3270(p.requires);
  return {token,kind:p.tab==='artifacts'?'Artefacto histórico':'Registro paleontológico',name:p.name,owned,open:owned,art:museumCardArt('',p.id),silhouette:!owned,status:owned?displayed?'En exposición':'Catalogado':ready?'Disponible para catalogar':'Pendiente',description:p.description,materials:owned?[]:req,referenceMaterials:req,knowledge:owned?null:{have:state.knowledge,need:p.knowledge,met:state.knowledge>=p.knowledge},detail:owned?'Pieza conservada · exposición independiente':p.description,actions:owned?[{action:'museum-display',token,label:displayed?'Retirar vitrina':'Exponer',alt:true}]:[{action:'catalog-museum',token,label:'Catalogar',enabled:ready}]};
 }
-function museumRelictName3270(r){return museumRelictOwned(r.id)||relictLeadCount(r.id)>0?r.name:'Relicto desconocido';}
+function museumRelictName3270(r){
+ return museumRelictOwned(r.id)||relictLeadCount(r.id)>0?r.name:'Expediente '+(MUSEUM_RELICTS.indexOf(r)+1);
+}
 function museumRelict3270(r){
- const owned=museumRelictOwned(r.id),leads=owned?3:relictLeadCount(r.id),displayed=owned&&museumIsDisplayed('relict',r.id),known=owned||leads>0,token=museumToken3270('relict',r.id),survey=relictSurveySpec(r.id),region=REGIONS.find(z=>z.id===r.region),ready=canCatalogRelict(r.id);
- return {token,kind:'Relicto del gabinete',name:museumRelictName3270(r),latin:owned?r.latin:'',owned,open:owned,art:owned?museumCardArt('',r.id):'',status:owned?displayed?'En exposición':'Catalogado':ready?'Disponible para catalogar':leads?'Indicios encontrados':'Desconocido',leads,description:known?r.desc:'Expediente pendiente de identificación.',detail:(region?.name||'Región no registrada')+(owned?' · registro conservado':leads>=3?' · indicios completos':' · prospección documental'),materials:!owned&&leads>=3?museumMaterials3270({old_ink:1,parchment_scrap:2}):[],knowledge:!owned&&leads>=3?{have:state.knowledge,need:140,met:state.knowledge>=140}:null,actions:owned?[{action:'museum-display',token,label:displayed?'Retirar vitrina':'Exponer',alt:true}]:leads>=3?[{action:'catalog-relict',token,label:'Catalogar',enabled:ready}]:[{action:'start-relict-survey',token,label:survey?'Investigar · £'+survey.money+' / '+survey.knowledge+' K':'Archivo no disponible',enabled:canStartRelictSurvey(r.id),alt:true}]};
+ const owned=museumRelictOwned(r.id),discovery=state.museum.relictDiscoveries?.[r.id];
+ const leads=owned&&!discovery?3:relictLeadCount(r.id);
+ const displayed=owned&&museumIsDisplayed('relict',r.id);
+ const token=museumToken3270('relict',r.id),survey=relictSurveySpec(r.id);
+ const region=REGIONS.find(z=>z.id===r.region);
+ const details=[];
+ if(owned||leads>=1)details.push({label:'Localización',value:[region?.code,region?.name,r.locality].filter(Boolean).join(' · ')});
+ if(owned||leads>=2)details.push({label:'Hábitat',value:r.habitats.map(h=>habitatLabel(h).replace(/[^\p{L}\p{N}\s]/gu,'').trim()).join(' / ')+'. '+r.habitatDetail});
+ if(owned||leads>=3)details.push({label:'Comportamiento',value:'Turno favorable: '+r.times.map(t=>timeLabel(t).replace(/[^\p{L}\p{N}\s]/gu,'').trim()).join(' / ')});
+ if(owned)details.push({label:'Fecha de registro',value:discovery?museumDate3270(discovery.at)+' · '+(discovery.source==='auto'?'Equipo de naturalistas':'Búsqueda manual'):'Fecha histórica sin registrar'});
+ let actions=[];
+ if(owned)actions=[{action:'museum-display',token,label:displayed?'Retirar vitrina':'Exponer',alt:true}];
+ else if(leads<3)actions=[{action:'start-relict-survey',token,label:survey?'Investigar · £'+survey.money+' / '+survey.knowledge+' K':'Archivo no disponible',enabled:canStartRelictSurvey(r.id),alt:true}];
+ if(!owned&&leads&&state.regionUnlocked[r.region])actions.push({action:'relict-travel',token,label:'Ir a Campo',alt:true});
+ return {token,kind:'Relicto del gabinete',name:museumRelictName3270(r),latin:owned?r.latin:'',owned,open:owned,
+  art:owned?relictArtwork(r,256):'',status:owned?displayed?'En exposición':'Descubierto':leads===3?'Buscar en Campo':leads?'Indicios encontrados':'Sin indicios',
+  leads,details,description:owned?r.desc:'',actions};
 }
 function museumSampleQuery3270(){
  let ids=Object.keys(SPECIES).filter(id=>(stage(id)===5&&state.published[id])||state.museum.exhibits[id]);const eligible=ids.length;
@@ -4303,7 +4469,7 @@ function museumJobs3270(type,now=Date.now()){
  return (type==='dig'?state.museum.excavations:state.museum.relictSurveys).flatMap(job=>{
   const p=type==='dig'?MUSEUM_DIG_SITES.find(s=>s.id===job.site):MUSEUM_RELICTS.find(r=>r.id===job.relict);if(!p)return [];
   const spec=type==='dig'?p:relictSurveySpec(p.id),t=museumTimer3270(job,spec,type,now),region=REGIONS.find(r=>r.id===p.region);
-  return [{...t,kind:type==='dig'?'Excavación':'Prospección documental',name:type==='dig'?p.name:museumRelictName3270(p),region:region?.name||'Región no registrada',finished:type==='dig'?'Excavación finalizada — Recoger hallazgos':'Prospección finalizada — Recoger indicios',reward:type==='dig'?`Fragmentos ${p.fragments[0]}–${p.fragments[1]}${state.upgrades.excavationTier?' +1 por investigación':''}; posibles dientes, huellas, garras y cráneos.`:`Hasta ${state.upgrades.relictSurveyTier?2:1} indicio(s), con límite de 3; posible muestra de huellas.`,actions:[{action:type==='dig'?'collect-excavation':'collect-relict-survey',token:type+':'+job.id,label:t.ready?'Recoger hallazgos':'En curso',enabled:t.ready}]}];
+  return [{...t,kind:type==='dig'?'Excavación':'Prospección documental',name:type==='dig'?p.name:museumRelictName3270(p),region:type==='dig'||museumRelictOwned(p.id)||relictLeadCount(p.id)>0?region?.name||'Región no registrada':'Ubicación por confirmar',finished:type==='dig'?'Excavación finalizada — Recoger hallazgos':'Prospección finalizada — Recoger indicios',reward:type==='dig'?`Fragmentos ${p.fragments[0]}–${p.fragments[1]}${state.upgrades.excavationTier?' +1 por investigación':''}; posibles dientes, huellas, garras y cráneos.`:`Hasta ${state.upgrades.relictSurveyTier?2:1} indicio(s), con límite de 3; posible muestra de huellas.`,actions:[{action:type==='dig'?'collect-excavation':'collect-relict-survey',token:type+':'+job.id,label:t.ready?'Recoger hallazgos':'En curso',enabled:t.ready}]}];
  });
 }
 function museumDate3270(at){return Number.isFinite(Number(at))&&Number(at)>0?new Date(Number(at)).toLocaleString('es-CL',{timeZone:'America/Santiago',dateStyle:'short',timeStyle:'short'}):'Fecha no registrada';}
@@ -4322,7 +4488,12 @@ function museumViewModel3270(loadFold=null){
   view={folds:museumUI3270.folds,jobs:museumJobs3270('dig'),activeJobs:state.museum.excavations.length,maxJobs:maxExcavations(),sites:MUSEUM_DIG_SITES.map(p=>({name:p.name,region:REGIONS.find(r=>r.id===p.region)?.name||'Región no registrada',minutes:p.seconds/60,money:p.money,knowledge:p.knowledge,reward:`Fragmentos ${p.fragments[0]}–${p.fragments[1]}; opción de dientes, huellas, garras y cráneos.`,actions:[{action:'start-excavation',token:museumToken3270('site',p.id),label:canStartExcavation(p.id)?'Iniciar excavación':'Requisitos pendientes',enabled:canStartExcavation(p.id)}]})),mountCount:museumFossilMountCount(),mounts:loadFold?[]:MUSEUM_FOSSIL_RECIPES.filter(p=>p.unique).map(museumRecipe3270),components:load('components')?MUSEUM_FOSSIL_RECIPES.filter(p=>!p.unique).map(museumRecipe3270):[],records:load('fossil-records')?MUSEUM_COLLECTIONS.filter(p=>p.tab==='fossils').map(museumCollection3270):[],curation:{points:Math.min(20,Math.max(0,Number(state.museum.curationPoints)||0)),bonus:Math.round(museumCurationBonus()*100),active:sets.filter(s=>s.complete),pending:sets.filter(s=>!s.complete),projects:!load('curation')?[]:MUSEUM_CURATORIAL_PROJECTS.map(p=>({name:p.name,materials:museumMaterials3270(p.requires),reward:p.knowledge,points:p.points,actions:[{action:'curate-museum',token:museumToken3270('project',p.id),label:'Investigar conservación',enabled:canCurateMuseum(p.id)}]}))},completedJobs:state.museum.excavationsCompleted||0,history:[...state.museum.excavationHistory].reverse().map(entry=>({name:MUSEUM_DIG_SITES.find(s=>s.id===entry.site)?.name||'Yacimiento histórico',date:museumDate3270(entry.at),detail:Object.entries(entry.rewards||{}).filter(([id,n])=>ITEMS[id]&&n>0).map(([id,n])=>ITEMS[id].name+' ×'+n).join(' · ')||'Sin recompensas registradas'}))};
  }else if(room==='relicts'){
   const sets=museumSetModels3270(MUSEUM_RELICT_SETS,true),owned=relicMuseumCount();
-  view={folds:museumUI3270.folds,owned,jobs:museumJobs3270('survey'),activeJobs:state.museum.relictSurveys.length,maxJobs:maxRelictSurveys(),pieces:MUSEUM_RELICTS.map(museumRelict3270),activeSets:sets.filter(s=>s.complete),pendingSets:sets.filter(s=>!s.complete),milestones:MUSEUM_RELICT_MILESTONES.map(p=>({name:p.name,done:Math.min(owned,p.count),total:p.count,claimed:!!state.museum.relictAchievements[p.id],knowledge:p.knowledge,actions:[{action:'claim-relict-milestone',token:museumToken3270('milestone',p.id),label:state.museum.relictAchievements[p.id]?'Logro obtenido':'Reclamar hito',enabled:canClaimRelictMilestone(p.id),alt:true}]})),research:{points:state.museum.relictResearchPoints||0,bonus:Math.round(relictResearchBonus()*100),achievementBonus:Math.round(relictAchievementBonus()*100),actions:[{action:'research-relict',label:'Analizar registros',enabled:canResearchRelict()}]},history:[...state.museum.relictSurveyHistory].reverse().map(entry=>{const r=MUSEUM_RELICTS.find(p=>p.id===entry.relict);return {name:r?museumRelictName3270(r):'Prospección histórica',date:museumDate3270(entry.at),detail:(Number.isFinite(entry.leads)?entry.leads+' indicio(s) registrados':'Sin cantidad registrada')+(entry.material&&ITEMS[entry.material]?' · '+ITEMS[entry.material].name:'')};})};
+  const pageSize=8,total=MUSEUM_RELICTS.length,pages=Math.ceil(total/pageSize);
+  const page=museumUI3270.relictPage=Math.min(museumUI3270.relictPage,pages-1);
+  const ordered=[...MUSEUM_RELICTS].sort((a,b)=>Number(museumRelictOwned(b.id))-Number(museumRelictOwned(a.id))||
+   relictLeadCount(b.id)-relictLeadCount(a.id)||
+   Number(Boolean(state.regionUnlocked[b.region]))-Number(Boolean(state.regionUnlocked[a.region])));
+  view={folds:museumUI3270.folds,owned,page,pages,total,jobs:museumJobs3270('survey'),activeJobs:state.museum.relictSurveys.length,maxJobs:maxRelictSurveys(),pieces:ordered.slice(page*pageSize,(page+1)*pageSize).map(museumRelict3270),activeSets:sets.filter(s=>s.complete),pendingSets:sets.filter(s=>!s.complete),milestones:MUSEUM_RELICT_MILESTONES.map(p=>({name:p.name,done:Math.min(owned,p.count),total:p.count,claimed:!!state.museum.relictAchievements[p.id],knowledge:p.knowledge,actions:[{action:'claim-relict-milestone',token:museumToken3270('milestone',p.id),label:state.museum.relictAchievements[p.id]?'Logro obtenido':'Reclamar hito',enabled:canClaimRelictMilestone(p.id),alt:true}]})),research:{points:state.museum.relictResearchPoints||0,bonus:Math.round(relictResearchBonus()*100),achievementBonus:Math.round(relictAchievementBonus()*100),actions:[{action:'research-relict',label:'Analizar registros',enabled:canResearchRelict()}]},history:[...state.museum.relictSurveyHistory].reverse().map(entry=>{const r=MUSEUM_RELICTS.find(p=>p.id===entry.relict);return {name:r?museumRelictName3270(r):'Prospección histórica',date:museumDate3270(entry.at),detail:(Number.isFinite(entry.leads)?entry.leads+' indicio(s) registrados':'Sin cantidad registrada')+(entry.material&&ITEMS[entry.material]?' · '+ITEMS[entry.material].name:'')};})};
  }else{const pieces=MUSEUM_COLLECTIONS.filter(p=>p.tab==='artifacts').map(museumCollection3270);view={pieces,owned:pieces.filter(p=>p.owned).length};}
  return {room,view,level:state.museum.wing,wingName:MUSEUM_WINGS.find(w=>w.level===state.museum.wing)?.name||'Galería histórica',used,capacity,rate:museumRate(),collections:Object.values(state.museum.collections).filter(Boolean).length,relicts:relicMuseumCount(),cataloged:Object.values(state.museum.collections).filter(Boolean).length+relicMuseumCount(),otherCount:extra.length,legendaryCount:LEGENDARY_SPECIMENS.filter(l=>state.legendaryFound?.[l.id]).length,expandInfo:next?'Ampliación: '+next.name+' · £'+next.cost+' · '+next.prestige+' prestigio (no se consume).':null,folds:museumUI3270.folds};
 }
@@ -4353,7 +4524,8 @@ function museumAction3270(action,token,quantity,source){
  if(action==='museum-tab'){museumSetRoom3270(token);return;}
  if(action==='m27-candidates'){museumUI3270.filter='available';museumUI3270.samplePage=0;museumSetRoom3270('samples');return;}
  if(action==='m27-page'||action==='m27-next'){
-  if(!['samples','gallery'].includes(token))return;const key=token==='samples'?'samplePage':'galleryPage';museumUI3270[key]=Math.max(0,museumUI3270[key]+(action==='m27-next'?1:-1));
+  const pageKeys={samples:'samplePage',gallery:'galleryPage',relicts:'relictPage'};
+  if(!Object.hasOwn(pageKeys,token))return;const key=pageKeys[token];museumUI3270[key]=Math.max(0,museumUI3270[key]+(action==='m27-next'?1:-1));
   if(token==='samples'){const target=panel.querySelector('#m27-samples-result');if(target)target.innerHTML=globalThis.AtlasMuseumUI.samples(museumSamples3270());}else renderPanel();return;
  }
  const p=museumResolve3270(token);if(!p)return;
@@ -4368,8 +4540,11 @@ function museumAction3270(action,token,quantity,source){
  if(action==='collect-excavation'&&p.kind==='dig')collectExcavation(p.id);
  if(action==='curate-museum'&&p.kind==='project')curateMuseum(p.id);
  if(action==='start-relict-survey'&&p.kind==='relict')startRelictSurvey(p.id);
+ if(action==='relict-travel'&&p.kind==='relict'&&relictLeadCount(p.id)>0){
+  const relict=relictById.get(p.id);
+  if(relict&&state.regionUnlocked[relict.region])travelToRegion(relict.region);
+ }
  if(action==='collect-relict-survey'&&p.kind==='survey')collectRelictSurvey(p.id);
- if(action==='catalog-relict'&&p.kind==='relict')catalogRelict(p.id);
  if(action==='claim-relict-milestone'&&p.kind==='milestone')claimRelictMilestone(p.id);
 }
 // M-3270 END presentation
@@ -4679,6 +4854,49 @@ function renderObjects(){
 }
 
 
+function scientificVoyageId(id){
+ if(typeof id==='string'&&/^[1-9]\d*$/.test(id))id=Number(id);
+ return Number.isSafeInteger(id)&&id>0?id:null;
+}
+function normalizeSettledJobs(owner,key,history,idOf){
+ const saved=owner[key];
+ const settled=Object.create(null);
+ let lastId=0;
+ if(saved&&typeof saved==='object'&&!Array.isArray(saved)){
+   for(const [text,paid] of Object.entries(saved)){
+     const id=scientificVoyageId(text);
+     if(paid!==true||id===null)continue;
+     settled[id]=true;lastId=Math.max(lastId,id);
+   }
+ }
+ for(const row of history){
+   const id=scientificVoyageId(idOf(row));
+   if(id===null||!Number.isFinite(row.at))continue;
+   settled[id]=true;lastId=Math.max(lastId,id);
+ }
+ if(lastId)owner[key]=settled;
+ else delete owner[key];
+ return lastId;
+}
+function normalizeScientificVoyages(snapshot){
+ const history=Array.isArray(snapshot.voyageHistory)?snapshot.voyageHistory.filter(row=>
+   Number.isFinite(row?.money)&&Number.isFinite(row.knowledge)):[];
+ const lastId=normalizeSettledJobs(snapshot,'voyageSettled',history,row=>row.jobId);
+ let seq=Math.max(scientificVoyageId(snapshot.voyageSeq)??0,lastId);
+ const pending=new Set();
+ snapshot.voyages=(Array.isArray(snapshot.voyages)?snapshot.voyages:[]).filter(job=>{
+   if(!job||typeof job!=='object')return false;
+   const id=scientificVoyageId(job.id);
+   if(id===null)return true;
+   seq=Math.max(seq,id);
+   // Leave a historical job with an unreadable date visible, unless the same departure has a valid date.
+   if(snapshot.voyageSettled?.[id]||pending.has(id))return false;
+   if(Number.isFinite(job.endAt))pending.add(id);
+   return true;
+ }).filter(job=>Number.isFinite(job.endAt)||!pending.has(scientificVoyageId(job.id)));
+ snapshot.voyageSeq=seq;
+}
+
 function sail(voyageId){
  const v=VOYAGES.find(x=>x.id===voyageId);
  if(!v||!state.upgrades.shipyard||state.voyages.length>=maxVoyages()||state.prestige<v.required||state.money<v.cost||state.knowledge<v.knowledge)return;
@@ -4699,7 +4917,8 @@ function voyageMoneyReward(v){return Math.round(v.prize*(1+(state.equipment.neck
 function voyageKnowledgeReward(v){return v.notes+(state.equipment.instrument==='brass_compass'?Math.round(v.notes*0.04):0);}
 function resolveVoyageReward(job/* E-3280 BEGIN receipt-time */,resolvedAt=Date.now()/* E-3280 END receipt-time */){
   const v=VOYAGES.find(x=>x.id===job.type);
-  if(!v) return false;
+  const jobId=scientificVoyageId(job.id);
+  if(!v||(jobId!==null&&state.voyageSettled?.[jobId]===true))return false;
  // E-3280 BEGIN receipt-before
   const inventoryBefore={...state.inventory};
  // E-3280 END receipt-before
@@ -4746,7 +4965,14 @@ if(Math.random()<amberChance){addInventory('fossil_amber',1);pushLog('🟠 Halla
   const found=Object.fromEntries(Object.entries(received).map(([id,n])=>[id,n-(guaranteed[id]||0)]).filter(([,n])=>n>0));
   state.voyageHistory=(Array.isArray(state.voyageHistory)?state.voyageHistory:[]).concat([{jobId:job.id??null,type:v.id,at:resolvedAt,money:prize,knowledge:notes,guaranteed,found}]).slice(-12);
  // E-3280 END receipt-after
+  if(jobId!==null)(state.voyageSettled??={})[jobId]=true;
   return true;
+}
+function creditRelictVoyageClue(job){
+ const eligible=relictsByRegion.get(RELICT_EXPEDITION_REGIONS[job.type])?.find(r=>!museumRelictOwned(r.id)&&relictLeadCount(r.id)<3);
+ if(eligible&&addRelictLead(eligible.id)){
+  state.voyageHistory.at(-1).relictLead={id:eligible.id,level:relictLeadCount(eligible.id)};
+ }
 }
 function processVoyages(now){
  // E-3280 BEGIN clock-validation
@@ -4758,7 +4984,10 @@ function processVoyages(now){
   if(!job||!Number.isFinite(job.endAt))return true;
  // E-3280 END historical-date-validation
   if(job.endAt>now)return true;
-  if(resolveVoyageReward(job/* E-3280 BEGIN process-time */,now/* E-3280 END process-time */)) count++;
+  if(resolveVoyageReward(job/* E-3280 BEGIN process-time */,now/* E-3280 END process-time */)){
+   creditRelictVoyageClue(job);
+   count++;
+  }
   return false;
  });
  return count;
@@ -4771,7 +5000,7 @@ function finishVoyage(jobId){
  const idx=state.voyages.findIndex(v=>String(v.id)===String(jobId));
  if(idx<0) return;
  const [job]=state.voyages.splice(idx,1);
- resolveVoyageReward(job);
+ if(resolveVoyageReward(job))creditRelictVoyageClue(job);
  render();
 }
 
@@ -4816,7 +5045,10 @@ function voyageHistory3280(){return (Array.isArray(state.voyageHistory)?state.vo
 function voyageReceipt3280(index,illustrated=false){
  const h=voyageHistory3280()[index];if(!h)return null;
  const items=object=>Object.entries(object||{}).filter(([id,n])=>ITEMS[id]&&Number.isFinite(n)&&n>0).map(([id,n])=>developmentItem3280(id,n,illustrated));
- return {index,key:'receipt:'+h.at+':'+(h.jobId??index)+':'+h.type,name:VOYAGES.find(v=>v.id===h.type).name,date:developmentDate3280(h.at),money:h.money,knowledge:h.knowledge,guaranteed:items(h.guaranteed),found:items(h.found)};
+ const relic=relictById.get(h.relictLead?.id);
+ const lead=relic&&Number.isInteger(h.relictLead.level)&&h.relictLead.level>=1&&h.relictLead.level<=3
+  ?relic.name+' · '+h.relictLead.level+'/3':'';
+ return {index,key:'receipt:'+h.at+':'+(h.jobId??index)+':'+h.type,name:VOYAGES.find(v=>v.id===h.type).name,date:developmentDate3280(h.at),money:h.money,knowledge:h.knowledge,guaranteed:items(h.guaranteed),found:items(h.found),...(lead?{relictLead:lead}:{})};
 }
 function voyagePossibilities3280(id){
  const v=VOYAGES.find(v=>v.id===id);if(!v)return null;
@@ -4910,11 +5142,12 @@ function renderBestiary(){
 
 // B-3260 BEGIN presentation
 let bestiaryFilters3260=null,bestiaryCatalog3260=null,bestiaryModalId3260=null,bestiaryReturnScroll3260=null;
+const bestiaryCompare3260=new Intl.Collator('es').compare;
 function bestiaryData3260(){
  if(bestiaryCatalog3260)return bestiaryCatalog3260;
  const ids=Object.keys(SPECIES),buckets={Mammalia:'Mamífero',Aves:'Ave',Actinopterygii:'Pez',Chondrichthyes:'Pez'},rarities={'Común':1,'Poco común':2,'Raro':3,'Muy rara':4};
  // Same presentation buckets as bestiaryTypeBucket(), one taxonomy lookup.
- bestiaryCatalog3260={ids,regions:null,entries:ids.map((id,slot)=>{const taxonomy=taxonomyInfo(id);return {id,slot,taxonomy,group:buckets[taxonomy.className]||'Reptil/Anfibio',rarity:rarities[SPECIES[id].rare]||0};})};
+ bestiaryCatalog3260={ids,regions:null,entries:ids.map((id,slot)=>{const taxonomy=catalogueTaxonomy(id);return {id,slot,taxonomy,group:buckets[taxonomy.className]||'Reptil/Anfibio',rarity:rarities[SPECIES[id].rare]||0};})};
  return bestiaryCatalog3260;
 }
 function bestiaryRegions3260(){
@@ -4928,27 +5161,34 @@ function bestiaryFilterState3260(){
 }
 function bestiaryQuery3260(){
  const f=bestiaryFilterState3260(),data=bestiaryData3260(),normalize=globalThis.AtlasBestiaryUI.normalize;
- const entries=data.entries.map(entry=>{
-  const id=entry.id,discovered=!!state.discovered[id],st=stage(id);
-  return {...entry,discovered,stage:st,name:discovered&&st>=1?visibleName(id):'No identificado',latin:discovered&&st>=2?visibleLatin(id):'por identificar',knownGroup:discovered&&st>=2?entry.group:null,knownSubgroup:discovered&&st>=3?entry.taxonomy.subClass:null,sightings:sight(id),published:!!state.published[id]};
- });
- const subgroups=[...new Set(entries.filter(p=>p.knownSubgroup&&(f.group==='all'||p.knownGroup===f.group)).map(p=>p.knownSubgroup))].sort((a,b)=>a.localeCompare(b,'es'));
+ const entries=[],availableSubgroups=new Set(),q=normalize(f.query);
+ const sightingsMinimum=f.sightings==='all'||f.sightings==='zero'?0:Number(f.sightings);
+ for(const entry of data.entries){
+  const {id,slot,group,rarity,taxonomy}=entry;
+  const discovered=!!state.discovered[id],st=stage(id),sightings=sight(id),published=!!state.published[id];
+  const knownGroup=discovered&&st>=2?group:null,knownSubgroup=discovered&&st>=3?taxonomy.subClass:null;
+  if(knownSubgroup&&(f.group==='all'||knownGroup===f.group))availableSubgroups.add(knownSubgroup);
+  if(f.group!=='all'&&knownGroup!==f.group)continue;
+  if(f.sightings==='zero'&&sightings!==0||sightings<sightingsMinimum)continue;
+  if(f.hide&&published)continue;
+  if(f.progress==='unknown'&&discovered||f.progress==='discovered'&&!discovered||f.progress==='incomplete'&&(!discovered||st>=5)||f.progress==='complete'&&(!discovered||st!==5)||f.progress==='published'&&(!discovered||!published))continue;
+  const name=discovered&&st>=1?visibleName(id):'No identificado',latin=knownGroup?visibleLatin(id):'por identificar';
+  if(q){
+   if(!discovered||st<1)continue;
+   const searchable=st>=2?(entry.searchFull??=normalize(name+' '+latin)):(entry.searchName??=normalize(name));
+   if(!searchable.includes(q))continue;
+  }
+  entries.push({id,slot,rarity,discovered,stage:st,sightings,published,name,latin,knownGroup,knownSubgroup});
+ }
+ const subgroups=[...availableSubgroups].sort(bestiaryCompare3260);
  if(f.subgroup!=='all'&&!subgroups.includes(f.subgroup))f.subgroup='all';
- const q=normalize(f.query);
- let visible=entries.filter(p=>{
-  if(q&&!normalize([p.discovered&&p.stage>=1?p.name:'',p.discovered&&p.stage>=2?p.latin:''].join(' ')).includes(q))return false;
-  if(f.group!=='all'&&p.knownGroup!==f.group||f.subgroup!=='all'&&p.knownSubgroup!==f.subgroup)return false;
-  if(f.sightings==='zero'&&p.sightings!==0||!['all','zero'].includes(f.sightings)&&p.sightings<Number(f.sightings))return false;
-  if(f.hide&&p.published)return false;
-  if(f.progress==='unknown'&&p.discovered||f.progress==='discovered'&&!p.discovered||f.progress==='incomplete'&&(!p.discovered||p.stage>=5)||f.progress==='complete'&&(!p.discovered||p.stage!==5)||f.progress==='published'&&(!p.discovered||!p.published))return false;
-  return true;
- });
- const alpha=(a,b)=>a.name.localeCompare(b.name,'es')||a.slot-b.slot;
+ const visible=f.subgroup==='all'?entries:entries.filter(p=>p.knownSubgroup===f.subgroup);
+ const alpha=(a,b)=>(a.name===b.name?0:bestiaryCompare3260(a.name,b.name))||a.slot-b.slot;
  visible.sort((a,b)=>{
   // Unknown names cannot be alphabetized by their hidden identity. Keep their
   // opaque entries after observed animals in either alphabetical direction.
   if(f.sort==='alpha'&&a.discovered!==b.discovered)return a.discovered?-1:1;
-  const comparison=f.sort==='sightings'?a.sightings-b.sightings||alpha(a,b):f.sort==='rarity'?a.rarity-b.rarity||alpha(a,b):f.sort==='type'?(a.knownGroup||'Por estudiar').localeCompare(b.knownGroup||'Por estudiar','es')||alpha(a,b):alpha(a,b);
+  const comparison=f.sort==='sightings'?a.sightings-b.sightings||alpha(a,b):f.sort==='rarity'?a.rarity-b.rarity||alpha(a,b):f.sort==='type'?bestiaryCompare3260(a.knownGroup||'Por estudiar',b.knownGroup||'Por estudiar')||alpha(a,b):alpha(a,b);
   return f.descending?-comparison:comparison;
  });
  return {entries:visible,subgroups,filters:{...f},total:data.ids.length};
@@ -5056,7 +5296,7 @@ function researchNodeCard(node){
 
 function bindPanel(){
  // E-3280 BEGIN binding
- const development=panel.querySelector('.er28-root');
+ const development=tab==='research'||tab==='expeditions'?panel.querySelector('.er28-root'):null;
  if(development){
   const nav=development.querySelector('.er28-branches');if(nav){const selected=nav.querySelector('.selected');nav.scrollLeft=developmentUI3280.branchLeft;if(developmentUI3280.lastBranch!==state.researchBranch&&selected)nav.scrollLeft=Math.max(0,selected.offsetLeft-nav.offsetLeft-(nav.clientWidth-selected.offsetWidth)/2);developmentUI3280.lastBranch=state.researchBranch;developmentUI3280.branchLeft=nav.scrollLeft;nav.addEventListener('scroll',()=>{developmentUI3280.branchLeft=nav.scrollLeft;},{passive:true});}
   globalThis.AtlasDevelopmentUI.bind(development,{change:developmentChange3280,fold:(key,open)=>developmentUI3280.folds[key]=open,load:developmentDetail3280});
@@ -5066,7 +5306,7 @@ function bindPanel(){
  if(tab==='objects'&&developmentUI3280.item){const name=ITEMS[developmentUI3280.item]?.name;developmentUI3280.item=null;globalThis.requestAnimationFrame?.(()=>{const entry=[...panel.querySelectorAll('.inventory-item strong')].find(el=>el.textContent===name);entry?.closest('.inventory-item')?.scrollIntoView({block:'center'});});}
  // E-3280 END binding
   // M-3270 BEGIN binding
-  const museumRoot=panel.querySelector('.m27-root');
+  const museumRoot=tab==='museum'?panel.querySelector('.m27-root'):null;
   if(museumRoot){
    globalThis.AtlasMuseumUI.bind(museumRoot,{filter:museumFilter3270,fold:(key,open)=>{museumUI3270.folds[key]=open;},legendary:renderLegendaryCollection,loadFold:key=>museumViewModel3270(key).view});
    const nav=museumRoot.querySelector('.m27-rooms'),selected=nav?.querySelector('.selected');
@@ -5076,19 +5316,37 @@ function bindPanel(){
   }
   // M-3270 END binding
   // B-3260 BEGIN binding
-  const bestiaryRoot=panel.querySelector('.b26-root');
+  const bestiaryRoot=tab==='bestiary'?panel.querySelector('.b26-root'):null;
   if(bestiaryRoot){globalThis.AtlasBestiaryUI.bind(bestiaryRoot,changeBestiaryFilter3260,bestiaryCollection3260);if(bestiaryReturnScroll3260!==null){const top=bestiaryReturnScroll3260;bestiaryReturnScroll3260=null;globalThis.requestAnimationFrame?.(()=>globalThis.scrollTo?.({top,behavior:'instant'}));}}
   // B-3260 END binding
-  const atlasMap=panel.querySelector('.atlas-v32-map-scroll');
-  atlasMap?.addEventListener('scroll',rememberAtlasViewport,{passive:true});
-  panel.querySelector('[data-atlas-continent]')?.addEventListener('change',e=>{
+  if(tab==='atlas'){
+   panel.querySelector('.atlas-v32-map-scroll')?.addEventListener('scroll',rememberAtlasViewport,{passive:true});
+   panel.querySelector('[data-atlas-continent]')?.addEventListener('change',e=>{
     if(!ATLAS_CONTINENTS.some(c=>c.id===e.target.value))return;
     rememberAtlasViewport();state.atlasView=e.target.value;renderPanel();persist();
-  });
-  const rail=panel.querySelector('#journalSpeciesRail');
+   });
+  }
+  if(tab!=='journal')return;
+  let rail=panel.querySelector('#journalSpeciesRail');
   const sheet=panel.querySelector('.journal-v311 .journal-sheet');
   // J-3250 BEGIN rail
-  if(panel.querySelector('.journal-v3250')&&rail){
+  const journal=panel.querySelector('.journal-v3250'),model=journalRailModel3250;
+  journalRailModel3250=null;
+  if(journal&&rail&&model){
+    const ids=currentRegion().species;
+    if(journalRailCache3250?.ids===ids){
+      const cached=journalRailCache3250;
+      globalThis.AtlasJournalUI.updateRail(cached.rail,model,cached.items);
+      rail.replaceWith(cached.rail);
+      rail=cached.rail;
+    }else{
+      const node=rail;
+      node.addEventListener('scroll',()=>{
+        journalRailScrollTop=node.scrollTop;
+        journalRailScrollLeft3250=node.scrollLeft;
+      },{passive:true});
+    }
+    journalRailCache3250={ids,rail,items:new Map(model.items.map(item=>[item.slot,item]))};
     rail.scrollLeft=journalRailScrollLeft3250;
     if(journalRailRegion3250!==state.currentRegion||journalRailSelection3250!==state.selectedJournal){
       const selected=rail.querySelector('.selected');
@@ -5096,10 +5354,8 @@ function bindPanel(){
       journalRailRegion3250=state.currentRegion;journalRailSelection3250=state.selectedJournal;
     }
     journalRailScrollLeft3250=rail.scrollLeft;
-    rail.addEventListener('scroll',()=>{journalRailScrollLeft3250=rail.scrollLeft;},{passive:true});
-  }
+  }else rail?.addEventListener('scroll',()=>{journalRailScrollTop=rail.scrollTop;},{passive:true});
   // J-3250 END rail
-  rail?.addEventListener('scroll',()=>{journalRailScrollTop=rail.scrollTop;},{passive:true});
   sheet?.addEventListener('scroll',()=>{journalSheetScrollTop=sheet.scrollTop;},{passive:true});
   panel.querySelector('#journalRailSearch')?.addEventListener('input',e=>{
     journalRailQuery=e.target.value;
@@ -5112,12 +5368,14 @@ function bindPanel(){
     journalRailScrollTop=0;
     renderPanel();
   });
-  filterJournalRail();
-  panel.querySelectorAll('.atlas-v32-hex').forEach(el=>el.addEventListener('keydown',e=>{
-    if(e.key==='Enter'||e.key===' '){e.preventDefault();el.dispatchEvent(new MouseEvent('click',{bubbles:true}));}
-    else globalThis.AtlasMap.keyboard(e,el);
-  }));
+  if(!journal)filterJournalRail();
 }
+panel.addEventListener('keydown',e=>{
+ const hex=e.target.closest?.('.atlas-v32-hex');
+ if(!hex||!panel.contains(hex))return;
+ if(e.key==='Enter'||e.key===' '){e.preventDefault();hex.dispatchEvent(new MouseEvent('click',{bubbles:true}));}
+ else globalThis.AtlasMap.keyboard(e,hex);
+});
 function handlePanelAction(e){
     const el=e.target.closest?.('[data-action]');
     if(!el||!panel.contains(el)||el.disabled)return;
@@ -5126,7 +5384,7 @@ function handlePanelAction(e){
     if(act.startsWith('inv-')){inventoryAction3400(act,id);return;}
  // GM3330 BEGIN actions
     if(act.startsWith('deep-')){deepAction3330(act,id);return;}
-    if(deepRegionIndex3330.has(state.currentRegion)&&(act==='search-manual'||act==='field-aid')){if(act==='search-manual')deepAction3330('deep-start');return;}
+    if(deepRegionIndex3330.has(state.currentRegion)&&act==='search-manual'){deepAction3330('deep-start');return;}
  // GM3330 END actions
  // EC3300 BEGIN actions
     if(act.startsWith('trade-')){tradeAction3300(act,id);return;}
@@ -5158,6 +5416,11 @@ function handlePanelAction(e){
     // J-3250 END actions
     if(act==='field-journal'){if(id&&currentRegion().species.includes(id))state.selectedJournal=id;tab='journal';renderPanel();}
     if(act==='field-research'){tab='research';renderPanel();}
+    if(act==='dismiss-relict-notice'&&state.museum.relictDiscoveries?.[id]?.notice===true){
+      state.museum.relictDiscoveries[id].notice=false;
+      persist();
+      updateFieldOutput();
+    }
     if(act==='set-region') setRegion(id);
     if(act==='travel-region') travelToRegion(id);
     if(act==='unlock-region') unlockRegion(id);
@@ -5172,7 +5435,6 @@ function handlePanelAction(e){
     if(act==='set-time'){ state.time=id; renderPanel(); persist(); }
     if(act==='set-season'){ state.season=id; renderPanel(); persist(); }
     if(act==='search-manual') { encounter('manual'); persist(); }
-    if(act==='field-aid'){ fieldAid(id); }
     if(act==='select-journal'){ if(!currentRegion().species.includes(id))return; state.selectedJournal=id; journalSheetScrollTop=0; renderPanel(); persist(); }
     if(act==='advance-species'){ advanceSpecies(id); }
     if(act==='research-branch' && RESEARCH_BRANCHES.some(b=>b.id===id)){state.researchBranch=id;renderPanel();persist();}
@@ -5194,7 +5456,6 @@ function handlePanelAction(e){
     if(act==='curate-museum'){curateMuseum(id);}
     if(act==='start-relict-survey'){startRelictSurvey(id);}
     if(act==='collect-relict-survey'){collectRelictSurvey(id);}
-    if(act==='catalog-relict'){catalogRelict(id);}
     if(act==='claim-relict-milestone'){claimRelictMilestone(id);}
     if(act==='research-relict'){researchRelict();}
     if(act==='museum-display'){toggleMuseumDisplay(id);}
@@ -5211,11 +5472,20 @@ function handlePanelAction(e){
 // AM-06 BEGIN bestiary-navigation
     if(act==='bestiary-page'){
       const page=Number(id);if(!Number.isInteger(page)||page<0)return;
-      bestiaryPage=page;renderPanel();window.scrollTo?.({top:0,behavior:'instant'});
+      bestiaryPage=page;
+      const root=panel.querySelector('.b26-root');
+      if(root){
+        const focus=el===document.activeElement;
+        globalThis.AtlasBestiaryUI.refresh(root,bestiaryViewModel3260());
+        if(focus){
+          const status=root.querySelector('[data-bestiary-pager] [role="status"]');
+          status?.setAttribute('tabindex','-1');
+          status?.focus({preventScroll:true});
+        }
+      }else renderPanel();
+      window.scrollTo?.({top:0,behavior:'instant'});
     }
 // AM-06 END bestiary-navigation
-    if(act==='buy-crown'){buyCrownPack(Number(id)||0);}
-    if(act==='exchange-crown'){exchangeTrialCrowns(id==='all'?Math.floor(Math.max(0,state.crownCoins||0)):Number(id));}
     if(act.startsWith('curate-')){curationAction3380(act,id,el);return;}
     if(act.startsWith('enc-')){commissionAction3370(act,id);return;}
     if(act==='claim-mission'){claimScientificMission(id);}
@@ -5243,61 +5513,127 @@ function syncMuseumTimers(now=Date.now()){
  if(globalThis.AtlasMuseumUI)globalThis.AtlasMuseumUI.sync(panel,museumTimerModels3270(now));
  // M-3270 END progress
 }
+function normalizeAutomaticProgress(snapshot){
+ snapshot.autoHourly=snapshot.autoHourly&&typeof snapshot.autoHourly==='object'&&!Array.isArray(snapshot.autoHourly)?snapshot.autoHourly:{};
+ snapshot.autoRemainder=Number.isFinite(snapshot.autoRemainder)?Math.max(0,Math.min(4999,snapshot.autoRemainder)):0;
+ const pending=[];
+ for(const job of Array.isArray(snapshot.autoPending)?snapshot.autoPending:[]){
+   if(!job||!Number.isFinite(job.at)||!Number.isFinite(job.end)||job.end<job.at||job.end-job.at>MAX_OFFLINE_MS||
+     ![500,1000,2000,3000,5000].includes(job.interval)||!REGIONS.some(r=>r.id===job.currentRegion)||
+     job.at<=(pending.at(-1)?.end??-Infinity))continue;
+   pending.push({...job});
+ }
+ snapshot.autoPending=pending;
+}
+function queueAutomaticSearches(now,elapsed){
+ const interval=autoInterval()*1000;
+ if(state.helpers<=0||!Number.isFinite(interval)||elapsed<=0)return;
+ const remainder=Math.min(state.autoRemainder,interval-1);
+ const first=now-elapsed+interval-remainder;
+ const attempts=Math.floor((elapsed+remainder)/interval);
+ state.autoRemainder=(elapsed+remainder)%interval;
+ if(!attempts)return;
+ const {currentRegion,season,habitat,time}=state;
+ const method=state.deepSurvey?.method;
+ const end=first+interval*(attempts-1);
+ const tail=state.autoPending.at(-1);
+ if(tail&&tail.end+interval===first&&tail.interval===interval&&tail.currentRegion===currentRegion&&
+    tail.season===season&&tail.habitat===habitat&&tail.time===time&&tail.method===method&&end-tail.at<=MAX_OFFLINE_MS){
+   tail.end=end;
+ }else{
+   state.autoPending.push({at:first,end,interval,currentRegion,season,habitat,time,method});
+ }
+}
+function processAutomaticSearches(clock){
+ const deadline=clock?clock.now()+AUTOMATIC_FRAME_BUDGET_MS:Infinity;
+ const k0=state.knowledge;
+ let performed=0,context=null;
+ const weights=new Map();
+ const weight=id=>{
+   if(!weights.has(id))weights.set(id,researchRarityWeight(id));
+   return weights.get(id);
+ };
+ const hasTime=()=>performed<500&&(!clock||clock.now()<deadline);
+ batchingOffline=true;
+ try{
+   while(state.autoPending.length&&hasTime()){
+     const segment=state.autoPending[0];
+     const species=automaticEligibleSpecies(segment.currentRegion,segment.season,segment);
+     if(!species.length){state.autoPending.shift();continue;}
+     context={segment,species,weight,hits:0,deferPresentation:!deepRegionIndex3330.has(segment.currentRegion)};
+     try{
+       let hour=null;
+       while(segment.at<=segment.end&&hasTime()){
+         const nextHour=Math.floor(segment.at/3600000);
+         if(hour!==nextHour){
+           hour=nextHour;
+           context.choices=species.filter(id=>(state.autoHourly[hour+':'+id]||0)<MAX_AUTOMATIC_SIGHTINGS_PER_SPECIES_PER_HOUR);
+         }
+         if(!context.choices.length){
+           const boundary=(hour+1)*3600000;
+           segment.at+=Math.ceil((boundary-segment.at)/segment.interval)*segment.interval;
+           continue;
+         }
+         encounter('auto',segment.at,false,context);
+         segment.at+=segment.interval;
+         performed++;
+       }
+     }finally{
+       autoDiaryBuffer.hits+=context.hits;
+       if(context.latest){
+         const {entries,knowledgeGain,sequence}=context.latest;
+         presentEncounter(entries,knowledgeGain,sequence);
+       }
+     }
+     if(segment.at>segment.end)state.autoPending.shift();
+   }
+ }finally{batchingOffline=false;}
+ autoDiaryBuffer.searches+=performed;
+ autoDiaryBuffer.knowledge+=Math.max(0,Math.floor(state.knowledge-k0));
+}
+function animatedAutomaticWork(){
+ return !document.hidden&&typeof window.requestAnimationFrame==='function'&&typeof globalThis.performance?.now==='function';
+}
+function scheduleAutomaticFrame(){
+ if(automaticFramePending||!state.autoPending.length||!animatedAutomaticWork())return;
+ automaticFramePending=true;
+ window.requestAnimationFrame(()=>{
+   automaticFramePending=false;
+   if(!state.autoPending.length||!animatedAutomaticWork())return;
+   processAutomaticSearches(globalThis.performance);
+   automaticProgressUnwritten=true;
+   scheduleAutomaticFrame();
+ });
+}
 function tick(){
  const now=Date.now();
  const previous=Number.isFinite(state.lastTick)?state.lastTick:now;
  const elapsed=Math.min(MAX_OFFLINE_MS,Math.max(0,now-previous));
- const startAt=now-elapsed;
- state.lastTick=now;
- if(state.helpers>0 && elapsed>0){
-   autoAccum+=elapsed;
-   const interval=autoInterval()*1000;
-   const actualSearches=Math.floor(autoAccum/interval);
-   autoAccum-=actualSearches*interval;
-   const searches=Math.min(500,actualSearches);
-   if(searches>0){
-     const before=automaticSearchCapacity(now);
-     const saturatedBefore=before.total>0&&before.remaining===0;
-     let performed=0,gainK=0,gainS=0;
-     if(!saturatedBefore){
-       const k0=state.knowledge,s0=totalSightings();
-       batchingOffline=true;
-       try{
-         for(let i=0;i<searches;i++){
-           // Al completar los cupos, detener el lote; no contar intentos ficticios.
-           if(automaticSearchCapacity(startAt+elapsed*((i+.5)/searches)).remaining===0)break;
-           encounter('auto',startAt+elapsed*((i+.5)/searches));
-           performed++;
-         }
-       }finally{batchingOffline=false;}
-       gainK=Math.max(0,Math.floor(state.knowledge-k0));
-       gainS=Math.max(0,Math.floor(totalSightings()-s0));
-     }
-     const capacity=automaticSearchCapacity(now);
-     const saturated=capacity.total>0&&capacity.remaining===0;
-     if(performed){
-       autoDiaryBuffer.searches+=performed;
-       autoDiaryBuffer.hits+=gainS;
-       autoDiaryBuffer.knowledge+=gainK;
-     }
-     currentAutoNotice=saturated
-       ?`Equipo automático en pausa: cupo horario completo de ${capacity.total} especies en ${currentRegion().name}. Se reanuda en la siguiente hora; la observación manual sigue disponible.`
-       :capacity.total===0
-         ?'Equipo automático en pausa: sin especies compatibles con la estación en esta región.'
-         :`Equipo automático: ${performed} búsquedas · ${gainS} avistamientos · +${gainK} conocimiento · ${capacity.remaining}/${capacity.total} especies con cupo.`;
-     if(saturated&&state.autoSaturationNoticeHour!==Math.floor(now/3600000)){
-       state.autoSaturationNoticeHour=Math.floor(now/3600000);
-       pushLog(`⏳ Equipo automático en pausa: cupo horario de ${capacity.total} especies completo en ${currentRegion().name}.`);
-     }
+ state.lastTick=Math.max(previous,now);
+ queueAutomaticSearches(now,elapsed);
+ const queued=state.autoPending.length>0;
+ if(queued){
+   pruneAutomaticHours(now);
+   if(!animatedAutomaticWork())processAutomaticSearches(globalThis.performance);
+ }
+ const {searches:performed,hits:gainS,knowledge:gainK}=autoDiaryBuffer;
+ if(queued||performed){
+   const capacity=automaticSearchCapacity(now);
+   const saturated=capacity.total>0&&capacity.remaining===0;
+   currentAutoNotice=saturated
+     ?`Equipo automático en pausa: cupo horario completo de ${capacity.total} especies en ${currentRegion().name}. Se reanuda en la siguiente hora; la observación manual sigue disponible.`
+     :capacity.total===0
+       ?'Equipo automático en pausa: sin especies compatibles con la estación en esta región.'
+       :`Equipo automático: ${performed} búsquedas · ${gainS} avistamientos · +${gainK} conocimiento · ${capacity.remaining}/${capacity.total} especies con cupo.`;
+   if(saturated&&state.autoSaturationNoticeHour!==Math.floor(now/3600000)){
+     state.autoSaturationNoticeHour=Math.floor(now/3600000);
+     pushLog(`⏳ Equipo automático en pausa: cupo horario de ${capacity.total} especies completo en ${currentRegion().name}.`);
    }
-   if(autoDiaryBuffer.searches>0 && (now-lastAutoDiaryFlush>5000 || autoDiaryBuffer.hits>0)){
-     pushLog(`👨‍🔬 Equipo automático · ${autoDiaryBuffer.searches} búsquedas · ${autoDiaryBuffer.hits} avistamientos · +${autoDiaryBuffer.knowledge} conocimiento.`);
-     autoDiaryBuffer={searches:0,hits:0,knowledge:0};
-
-
-
-     lastAutoDiaryFlush=now;
-   }
+ }
+ if(autoDiaryBuffer.searches>0 && (now-lastAutoDiaryFlush>5000 || autoDiaryBuffer.hits>0)){
+   pushLog(`👨‍🔬 Equipo automático · ${autoDiaryBuffer.searches} búsquedas · ${autoDiaryBuffer.hits} avistamientos · +${autoDiaryBuffer.knowledge} conocimiento.`);
+   autoDiaryBuffer={searches:0,hits:0,knowledge:0};
+   lastAutoDiaryFlush=now;
  }
  if(museumRate()>0){state.money+=museumRate()*(elapsed/1000);}
  const returns=processVoyages(now);
@@ -5311,7 +5647,11 @@ function tick(){
  // EC3300 END tick
  if(tab==='museum'&&state.museumView==='relicts'){
   const ready=state.museum.relictSurveys.filter(job=>job.endAt<=now&&!job.readyNotified);
-  if(ready.length){ready.forEach(job=>job.readyNotified=true);renderPanel();}
+  if(ready.length||relictMuseumDirty){
+   ready.forEach(job=>job.readyNotified=true);
+   relictMuseumDirty=false;
+   renderPanel();
+  }
  }
  if(tab==='museum'&&state.museumView==='fossils'){
   const newlyReady=state.museum.excavations.filter(job=>job.endAt<=now&&!job.readyNotified);
@@ -5325,9 +5665,14 @@ function tick(){
  // E-3280 END tick-display
  updateFieldOutput();
  if(returns && tab==='expeditions')renderPanel();
- persist();
+ if(persist({skipUnchanged:true}))automaticProgressUnwritten=false;
+ scheduleAutomaticFrame();
 }
 setInterval(tick,1000);
+document.addEventListener('visibilitychange',scheduleAutomaticFrame);
+window.addEventListener?.('pagehide',()=>{
+ if(automaticProgressUnwritten&&persist())automaticProgressUnwritten=false;
+});
 
 
 // Sprites simplificados para ejemplares macho y hembra. No son variantes raras.
@@ -5402,23 +5747,26 @@ function sexSpriteMarkup(id,sex){
 
 const spriteCache=new Map();
 function getSpriteMarkup(id, skin='normal', sex=null, legacy=false){
-  if(!legacy&&globalThis.AtlasM01Art?.has(id))return spriteMarkupM01(id,skin);
- // GM3330 BEGIN art
- if(SPECIES[id]?.origin==='abyssal3340')return globalThis.AtlasAbyssalArt3340.render(SPECIES[id]);
- if(SPECIES[id]?.origin==='deep3330')return globalThis.AtlasDeepArt3330.render(SPECIES[id]);
- // GM3330 END art
- // GM3320 BEGIN art
- if(SPECIES[id]?.origin==='marine3320')return globalThis.AtlasMarineArt3320.render(SPECIES[id]);
- // GM3320 END art
- // GM3310 BEGIN art
- if(SPECIES[id]?.origin==='polar3310')return globalThis.AtlasPolarArt3310.render(SPECIES[id]);
- // GM3310 END art
+  if(skin!=='legendario'){
+   if(!legacy&&globalThis.AtlasM01Art?.has(id))return spriteMarkupM01(id,skin);
+  // GM3330 BEGIN art
+  if(SPECIES[id]?.origin==='abyssal3340')return globalThis.AtlasAbyssalArt3340.render(SPECIES[id]);
+  if(SPECIES[id]?.origin==='deep3330')return globalThis.AtlasDeepArt3330.render(SPECIES[id]);
+  // GM3330 END art
+  // GM3320 BEGIN art
+  if(SPECIES[id]?.origin==='marine3320')return globalThis.AtlasMarineArt3320.render(SPECIES[id]);
+  // GM3320 END art
+  // GM3310 BEGIN art
+  if(SPECIES[id]?.origin==='polar3310')return globalThis.AtlasPolarArt3310.render(SPECIES[id]);
+  // GM3310 END art
+  }
   const category=Object.keys(SPECIMEN_LEVELS).find(c=>SPECIMEN_LEVELS[c].skin===skin);
   if(category){
    const key=id+':'+skin+':base';
    if(spriteCache.has(key))return spriteCache.get(key);
    const l=legendaryForSpecies(id);
-   const base=category==='Legendario'&&l&&globalThis.ATLAS_LEGENDARY_ART?globalThis.ATLAS_LEGENDARY_ART.render(l.id):getSpriteMarkup(id,'normal');
+   const historicArt=globalThis.ATLAS_LEGENDARY_ART;
+   const base=category==='Legendario'&&l&&historicArt?.ids.includes(l.id)?historicArt.render(l.id):getSpriteMarkup(id,'normal');
    const svg=decorateSpecimen(base,category);
    spriteCache.set(key,svg);
    return svg;
@@ -6783,7 +7131,9 @@ function normalizeDeep3330(s){
  d.jobs=Array.isArray(d.jobs)?d.jobs.filter(j=>j&&Number.isSafeInteger(j.id)&&j.id>0&&Object.hasOwn(DEEP_METHODS3330,j.method)&&deepRegionIndex3330.has(j.region)&&deepRegionIndex3330.get(j.region).habitats.includes(j.habitat)&&['amanecer','dia','atardecer','noche'].includes(j.time)&&['primavera','verano','otono','invierno'].includes(j.season)&&Number.isFinite(j.startedAt)&&Number.isFinite(j.endAt)&&j.endAt-j.startedAt===DEEP_METHODS3330[j.method].seconds*1000&&Number.isInteger(j.seed)&&j.seed>=0&&j.seed<=4294967295):[];
  d.jobs=d.jobs.filter((j,i,a)=>a.findIndex(x=>x.id===j.id)===i);
  d.history=Array.isArray(d.history)?d.history.filter(h=>h&&Number.isSafeInteger(h.id)&&deepRegionIndex3330.has(h.region)&&Object.hasOwn(DEEP_METHODS3330,h.method)&&Number.isFinite(h.at)).slice(-12).map(h=>({id:h.id,region:h.region,method:h.method,at:h.at,records:Object.fromEntries(Object.entries(h.records||{}).filter(([id,n])=>SPECIES[id]&&Number.isSafeInteger(n)&&n>0)),...(abyssalRegionIndex3340.get(h.region)?.habitats.includes(h.stratum)?{stratum:h.stratum}: {})})):[];
- d.jobs=d.jobs.filter(j=>!d.history.some(h=>h.id===j.id));d.seq=Math.max(0,Number.isSafeInteger(d.seq)?d.seq:0,...d.jobs.map(j=>j.id),...d.history.map(h=>h.id));s.deepSurvey=d;s.upgrades.deepUnlocked=!!s.purchases.exploracion_profunda_1;s.upgrades.abyssalUnlocked=!!s.purchases.exploracion_abisal_1;return d;
+ const lastId=normalizeSettledJobs(d,'settled',d.history,row=>row.id);
+ d.jobs=d.jobs.filter(j=>!d.settled?.[j.id]);
+ d.seq=Math.max(lastId,Number.isSafeInteger(d.seq)?d.seq:0,...d.jobs.map(j=>j.id));s.deepSurvey=d;s.upgrades.deepUnlocked=!!s.purchases.exploracion_profunda_1;s.upgrades.abyssalUnlocked=!!s.purchases.exploracion_abisal_1;return d;
 }
 normalizeDeep3330(state);
 function deepReady3330(region=state.currentRegion){return deepRegionIndex3330.has(region)&&regionAccessible(deepRegionIndex3330.get(region))&&!!state.upgrades.deepUnlocked&&(!abyssalRegionIndex3340.has(region)||!!state.upgrades.abyssalUnlocked)&&state.craftedItems?.sounding_kit===true;}
@@ -6792,20 +7142,28 @@ regionRequirementsMet=function(r){if(!deepRegionIndex3330.has(r?.id))return regi
 function craftedReady3330(){return CONTINENT_RULES3300['Océanos profundos'].items.every(id=>state.craftedItems?.[id]===true);}
 atlasRegionModel=function(r){const m=modelBefore3330(r);if(deepRegionIndex3330.has(r.id)){m.name='⚓ '+r.name;m.requirements.unshift({label:'Investigación de sondeo profundo',met:!!state.upgrades.deepUnlocked},{label:'Equipo de sondeo acreditado',met:state.craftedItems?.sounding_kit===true});m.requirements=m.requirements.filter(x=>!x.label.includes('sin navegación profunda'));if(m.status==='bloqueada')m.summary=m.requirements.find(x=>!x.met)?.label||'Preparación pendiente';}return m;};
 const eligibleBefore3330=eligibleSpecies,autoBefore3330=automaticEligibleSpecies;
-function deepChoices3330(region,habitat,time,season,automatic=false){const ps=deepPresenceIndex3330.get(region);if(!ps)return [];const method=state.deepSurvey?.method||'sondeo';return ps.filter(p=>p.methods.includes(method)&&p.seasons.includes(season)&&(automatic&&!abyssalRegionIndex3340.has(region)||p.habitats.includes(automatic?state.habitat:habitat)&&p.times.includes(automatic?state.time:time))).map(p=>p.speciesId);}
+function deepChoices3330(region,habitat,time,season,automatic=false,method=state.deepSurvey?.method||'sondeo'){
+ const ps=deepPresenceIndex3330.get(region);
+ return ps?.filter(p=>p.methods.includes(method)&&p.seasons.includes(season)&&
+  (automatic&&!abyssalRegionIndex3340.has(region)||p.habitats.includes(habitat)&&p.times.includes(time))).map(p=>p.speciesId)||[];
+}
 eligibleSpecies=function(region,habitat,time,season){return deepRegionIndex3330.has(region)?deepChoices3330(region,habitat,time,season):eligibleBefore3330(region,habitat,time,season);};
-automaticEligibleSpecies=function(region,season){return deepRegionIndex3330.has(region)?deepReady3330(region)?deepChoices3330(region,null,null,season,true):[]:autoBefore3330(region,season);};
+automaticEligibleSpecies=function(region,season,conditions=state){
+ if(!deepRegionIndex3330.has(region))return autoBefore3330(region,season);
+ return deepReady3330(region)?deepChoices3330(region,conditions.habitat,conditions.time,season,true,conditions.method):[];
+};
 const habitatBefore3330=habitatLabel;
 habitatLabel=function(h){return ({columna_mesopelagica:'⚓ Columna mesopelágica',columna_batial:'⚓ Aguas batiales',columna_profunda_fria:'❄ Columna profunda fría',fondo_batial:'⚓ Fondo batial',fondo_profundo_frio:'❄ Fondo profundo frío'}[h]||habitatBefore3330(h));};
 let deepResolving3330=false;
 const encounterBefore3330=encounter;
-encounter=function(source='manual',at=Date.now(),guaranteed=false){
- if(!deepRegionIndex3330.has(state.currentRegion))return encounterBefore3330(source,at,guaranteed);
- if(!deepReady3330()||source==='manual'&&!deepResolving3330)return false;
+encounter=function(source='manual',at=Date.now(),guaranteed=false,automatic=null){
+ const region=automatic?.segment.currentRegion??state.currentRegion;
+ if(!deepRegionIndex3330.has(region))return encounterBefore3330(source,at,guaranteed,automatic);
+ if(!deepReady3330(region)||source==='manual'&&!deepResolving3330)return false;
  const last=state.lastEncounter,batch=batchingOffline,logs=new Set(state.log);batchingOffline=true;
- try{encounterBefore3330(source,at,false);}finally{batchingOffline=batch;}
+ try{encounterBefore3330(source,at,false,automatic);}finally{batchingOffline=batch;}
  state.log=state.log.map(x=>logs.has(x)?x:x.replace(/comiendo/g,'evidencia alimentaria').replace(/Avistamiento/g,'Registro indirecto'));
- if(state.lastEncounter!==last){state.lastEncounter.deepEvidence={method:state.deepSurvey.method,region:state.currentRegion,direct:false,...(abyssalRegionIndex3340.has(state.currentRegion)?{depthTier:'abisal',stratum:state.habitat}: {})};state.lastEncounter.title=state.lastEncounter.entries?.length?'Registro indirecto de muestra':'Muestra sin identificación';state.lastEncounter.subtitle='Examen a bordo · '+(state.lastEncounter.subtitle||'').replace(/avistamientos/g,'registros').replace(/comiendo/g,'contenido digestivo examinado');}
+ if(state.lastEncounter!==last){state.lastEncounter.deepEvidence={method:automatic?.segment.method??state.deepSurvey.method,region,direct:false,...(abyssalRegionIndex3340.has(region)?{depthTier:'abisal',stratum:automatic?.segment.habitat??state.habitat}: {})};state.lastEncounter.title=state.lastEncounter.entries?.length?'Registro indirecto de muestra':'Muestra sin identificación';state.lastEncounter.subtitle='Examen a bordo · '+(state.lastEncounter.subtitle||'').replace(/avistamientos/g,'registros').replace(/comiendo/g,'contenido digestivo examinado');}
  if(!batch){renderCounters();updateFieldOutput();}return state.lastEncounter!==last;
 };
 function deepTransaction3330(change){const before=JSON.parse(JSON.stringify(state));try{if(!change())return false;if(!persist()){state=before;achievementNotices3360=[];commissionNotices3370=[];achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360?.categories||{}));return false;}return true;}catch(error){state=before;achievementNotices3360=[];commissionNotices3370=[];throw error;}}
@@ -6813,10 +7171,10 @@ function canStartDeep3330(method=state.deepSurvey.method){const m=Object.hasOwn(
 function startDeep3330(method=state.deepSurvey.method){if(!canStartDeep3330(method))return false;const m=DEEP_METHODS3330[method],at=Date.now();if(!Number.isFinite(at))return false;return deepTransaction3330(()=>{state.money-=m.money;state.knowledge-=m.knowledge;state.deepSurvey.method=method;state.deepSurvey.jobs.push({id:++state.deepSurvey.seq,method,region:state.currentRegion,habitat:state.habitat,time:state.time,season:state.season,startedAt:at,endAt:at+m.seconds*1000,seed:Math.floor(Math.random()*4294967296)});return true;});}
 function processDeep3330(now=Date.now()){
  if(!Number.isFinite(now))return false;now=Math.min(now,Date.now());const due=state.deepSurvey.jobs.filter(j=>j.endAt<=now);if(!due.length)return false;
- return deepTransaction3330(()=>{for(const j of due){if(state.deepSurvey.history.some(h=>h.id===j.id))continue;const context={currentRegion:state.currentRegion,habitat:state.habitat,time:state.time,season:state.season},method=state.deepSurvey.method,last=state.lastEncounter,before={...state.sightings},random=Math.random,batch=batchingOffline;let seed=j.seed;
+ return deepTransaction3330(()=>{for(const j of due){if(state.deepSurvey.settled?.[j.id])continue;const context={currentRegion:state.currentRegion,habitat:state.habitat,time:state.time,season:state.season},method=state.deepSurvey.method,last=state.lastEncounter,before={...state.sightings},random=Math.random,batch=batchingOffline;let seed=j.seed;
   try{Object.assign(state,{currentRegion:j.region,habitat:j.habitat,time:j.time,season:j.season});state.deepSurvey.method=j.method;deepResolving3330=true;batchingOffline=true;Math.random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};encounter('manual',j.endAt,false);}
   finally{Math.random=random;deepResolving3330=false;batchingOffline=batch;Object.assign(state,context);state.deepSurvey.method=method;if(context.currentRegion!==j.region)state.lastEncounter=last;}
-  const records=Object.fromEntries(deepRegionIndex3330.get(j.region).species.map(id=>[id,(state.sightings[id]||0)-(before[id]||0)]).filter(([,n])=>n>0));achievementRecord3360('deep',{method:j.method,records,abyss:abyssalRegionIndex3340.has(j.region)});state.deepSurvey.history.push({id:j.id,method:j.method,region:j.region,at:now,records,...(abyssalRegionIndex3340.has(j.region)?{stratum:j.habitat}: {})});
+  const records=Object.fromEntries(deepRegionIndex3330.get(j.region).species.map(id=>[id,(state.sightings[id]||0)-(before[id]||0)]).filter(([,n])=>n>0));achievementRecord3360('deep',{method:j.method,records,abyss:abyssalRegionIndex3340.has(j.region)});(state.deepSurvey.settled??={})[j.id]=true;state.deepSurvey.history.push({id:j.id,method:j.method,region:j.region,at:now,records,...(abyssalRegionIndex3340.has(j.region)?{stratum:j.habitat}: {})});
  }const ids=new Set(due.map(j=>j.id));state.deepSurvey.jobs=state.deepSurvey.jobs.filter(j=>!ids.has(j.id));state.deepSurvey.history=state.deepSurvey.history.slice(-12);return true;});
 }
 function deepAction3330(action,id){if(action==='deep-method'&&Object.hasOwn(DEEP_METHODS3330,id)){state.deepSurvey.method=id;renderPanel();persist();return;}if(action==='deep-start'){if(startDeep3330()){renderCounters();renderPanel();}return;}if(action==='deep-craft'){craftItem('sounding_kit');return;}}
@@ -6836,7 +7194,7 @@ const backdropBefore3330=fieldBackdropMarkup;const deepScenes3330=new Map();
 fieldBackdropMarkup=function(h){if(!['columna_mesopelagica','columna_batial','columna_profunda_fria','fondo_batial','fondo_profundo_frio'].includes(h))return backdropBefore3330(h);if(deepScenes3330.has(h))return deepScenes3330.get(h);const svg='<svg xmlns="http://www.w3.org/2000/svg" class="field-backdrop" viewBox="0 0 640 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path fill="#d4d5c5" d="M0 0H640V280H0Z"/><path fill="#567183" d="M0 0H110V280H0Z"/><path stroke="#dccda7" stroke-width="3" d="M48 0V220M41 32h14m-14 35h14m-14 35h14m-14 35h14m-14 35h14"/><path fill="#d8e5df" stroke="#294352" stroke-width="2" d="M30 216h37l-7 25H37Z"/><path fill="#faf3df" stroke="#9b947c" d="M143 36L605 28 610 250 147 258Z"/><path stroke="#d2c6a5" d="M161 231H591M162 218H591"/></svg>';deepScenes3330.set(h,svg);return svg;};
 function renderDeepPanel3330(){const d=state.deepSurvey;return '<section class="card deep-panel"><h3>Cuaderno de sondeo profundo</h3><p class="small">Sonda lastrada, red vertical y draga. Evidencias y muestras examinadas a bordo; las imágenes son láminas de referencia, no animales vistos desde cubierta. Cada operación es un intento sin hallazgo garantizado.</p><div class="deep-protocols">'+Object.entries(DEEP_METHODS3330).filter(([id])=>id!=='extraordinario').map(([id,m])=>'<button class="btn '+(d.method===id?'':'alt')+'" data-action="deep-method" data-id="'+id+'" aria-pressed="'+(d.method===id)+'">'+m.name+' · '+m.seconds+' s · £'+m.money+' + '+m.knowledge+' conocimiento</button>').join('')+'</div><p class="small">Cupo: '+d.jobs.length+'/1. Equipo de sondeo '+(state.craftedItems.sounding_kit?'acreditado':'pendiente de fabricar')+'.</p>'+d.jobs.map(j=>'<p data-deep-countdown="'+j.endAt+'" class="small">'+DEEP_METHODS3330[j.method].name+' · '+tradeCountdown3300(j.endAt)+'</p>').join('')+'<details><summary>Registros de expedición</summary>'+[...d.history].reverse().map(h=>'<p class="small">'+DEEP_METHODS3330[h.method].name+' · '+esc(deepRegionIndex3330.get(h.region).name)+' · '+(Object.entries(h.records).map(([id,n])=>esc(visibleName(id))+' ×'+n).join(' · ')||'Muestra sin identificación')+'</p>').join('')+'</details><details><summary>Condiciones y métodos de este sector</summary>'+deepPresenceIndex3330.get(state.currentRegion).map(p=>'<p class="small">'+esc(visibleName(p.speciesId))+' · '+p.methods.map(m=>DEEP_METHODS3330[m].name).join(' / ')+' · '+esc(p.evidenceNote)+'</p>').join('')+'</details></section>';}
 const fieldRenderBefore3330=renderField;
-renderField=function(){const view=fieldRenderBefore3330();if(!deepRegionIndex3330.has(state.currentRegion))return view;return renderDeepPanel3330()+view.replace('EL CAMPO TE ESPERA','CUADERNO DE MUESTRAS').replace('RASTROS EN EL SENDERO','MUESTRA SIN IDENTIFICACIÓN').replace('OBSERVACIÓN REGISTRADA','REGISTRO INDIRECTO').replace('NUEVA ESPECIE','NUEVA EVIDENCIA').replace('class="field-game"','class="field-game deep-field"').replace('data-action="search-manual"','data-action="deep-start" '+(canStartDeep3330()?'':'disabled')).replace('Observar fauna','Preparar operación').replace('Una nueva página de tu expedición','Sondeo o muestreo: examen indirecto a bordo').replace(/<button class="btn[^>]*data-action="field-aid"[^>]*>[\s\S]*?<\/button>/g,'');};
+renderField=function(){const view=fieldRenderBefore3330();if(!deepRegionIndex3330.has(state.currentRegion))return view;return renderDeepPanel3330()+view.replace('EL CAMPO TE ESPERA','CUADERNO DE MUESTRAS').replace('RASTROS EN EL SENDERO','MUESTRA SIN IDENTIFICACIÓN').replace('OBSERVACIÓN REGISTRADA','REGISTRO INDIRECTO').replace('NUEVA ESPECIE','NUEVA EVIDENCIA').replace('class="field-game"','class="field-game deep-field"').replace('data-action="search-manual"','data-action="deep-start" '+(canStartDeep3330()?'':'disabled')).replace('Observar fauna','Preparar operación').replace('Una nueva página de tu expedición','Sondeo o muestreo: examen indirecto a bordo');};
 const objectsBefore3330=renderObjects;
 renderObjects=function(){return objectsBefore3330()+'<section class="card"><h3>Equipo de sondeo y muestreo</h3><p class="small">Cuatro latones, cuatro maderas talladas, tres pergaminos y un morral reforzado. Componentes obtenibles en Europa y mediante Comercio. Acreditación permanente: habilita métodos profundos sin consumir el equipo al abrir regiones.</p><button class="btn" data-action="deep-craft" '+(canCraft('sounding_kit')?'':'disabled')+'>Fabricar equipo de sondeo</button></section>';};
 function syncDeep3330(now){if(tab!=='field'||!deepRegionIndex3330.has(state.currentRegion))return;for(const node of panel.querySelectorAll('[data-deep-countdown]')){const text=tradeCountdown3300(Number(node.dataset.deepCountdown),now);if(node.textContent!==text)node.textContent=text;}const button=panel.querySelector('[data-action="deep-start"]');if(button)button.disabled=!canStartDeep3330();}
@@ -7144,11 +7502,23 @@ buyNode=function(id){const node=RESEARCH_NODES.find(n=>n.id===id);if(!node||!can
 const processBeforeInventory3400=processVoyages;
 processVoyages=function(now){
  if(!Number.isFinite(now))return 0;
- if(!state.voyages.some(j=>j.cartography&&Number.isFinite(j.endAt)&&j.endAt<=now))return processBeforeInventory3400(now);
+ if(!state.voyages.some(j=>Number.isFinite(j.endAt)&&j.endAt<=now))return 0;
  let count=0;const ok=tradeTransaction3300(()=>{count=processBeforeInventory3400(now);return true;});return ok?count:0;
 };
-const finishBeforeInventory3400=finishVoyage;
-finishVoyage=function(id){const job=state.voyages.find(j=>String(j.id)===String(id));if(!job?.cartography)return finishBeforeInventory3400(id);if(!Number.isFinite(job.endAt)||Date.now()<job.endAt)return false;const ok=tradeTransaction3300(()=>{state.voyages=state.voyages.filter(j=>j!==job);return resolveVoyageReward(job);});renderCounters();renderPanel();return ok;};
+finishVoyage=function(id){
+ const job=state.voyages.find(j=>String(j.id)===String(id));
+ const now=Date.now();
+ if(!job||!Number.isFinite(job.endAt)||now<job.endAt)return false;
+ let rewarded=false;
+ const ok=tradeTransaction3300(()=>{
+   state.voyages=state.voyages.filter(j=>j!==job);
+   rewarded=resolveVoyageReward(job,now);
+   if(rewarded)creditRelictVoyageClue(job);
+   return true;
+ });
+ renderCounters();renderPanel();
+ return ok&&rewarded;
+};
 // INV3400 END atomic scientific departures and research
 
 
@@ -7324,9 +7694,13 @@ function uxAnnounce3410(){
  try{globalThis.AtlasSociety3360?.notifyExperience?.(events);}catch(error){console.error('UX3410 notification:',error);}
 }
 const persistBeforeExperience3410=persist;
-persist=function(){const ok=persistBeforeExperience3410();if(ok)uxAnnounce3410();return ok;};
+persist=function(options){
+ const ok=persistBeforeExperience3410(options);
+ if(ok)try{uxAnnounce3410();}catch(error){console.error('UX3410 save presentation:',error);}
+ return ok;
+};
 const restoreBeforeExperience3410=window.AtlasSaveBridge.restoreGame;
-window.AtlasSaveBridge.restoreGame=function(imported){uxRuntime3410.importing=true;try{uxRuntime3410.trail=[];uxRuntime3410.scrolls.clear();uxRuntime3410.folds.clear();uxRuntime3410.viewKey=null;const result=restoreBeforeExperience3410.call(this,imported);uxRuntime3410.snapshot=uxSnapshot3410();uxRuntime3410.lastEvents=[];return result;}finally{uxRuntime3410.importing=false;}};
+window.AtlasSaveBridge.restoreGame=function(imported){uxRuntime3410.importing=true;try{uxRuntime3410.trail=[];uxRuntime3410.scrolls.clear();uxRuntime3410.folds.clear();uxRuntime3410.viewKey=null;const result=restoreBeforeExperience3410.call(this,imported);try{uxRuntime3410.snapshot=uxSnapshot3410();uxRuntime3410.lastEvents=[];}catch(error){console.error('UX3410 restore presentation:',error);}return result;}finally{uxRuntime3410.importing=false;}};
 // Use the same transaction-aware persistence entry point as the existing updater.
 window.AtlasSaveBridge.persistBeforeUpdate=persist;
 // UX3410 END continuity and existing notification stream
@@ -7346,7 +7720,7 @@ function cpUnderlying3430(id){return ['shipyard','caravan'].includes(id)?'expedi
 function cpGo3430(id){if(!cpUI3430.facilities.some(f=>f[0]===id))return false;cp3430.active=true;cp3430.facility=id;cp3430.pending=null;tab=cpUnderlying3430(id);if(id==='shipyard')navigationTab3300='expeditions';if(id==='caravan')navigationTab3300='commerce';if(id==='workshop')state.inventoryView='taller';if(id==='excavations'){state.museumView='fossils';museumUI3270.folds['dig-sites']=true;}if(id==='surveys')state.museumView='relicts';renderPanel();globalThis.scrollTo({top:0,behavior:'instant'});return true;}
 function cpHome3430(){cp3430.active=false;cp3430.facility=null;cp3430.pending=null;tab='expeditions';renderPanel();globalThis.scrollTo({top:0,behavior:'instant'});}
 renderExpeditions=function(){if(cp3430.mode==='old')return cpOriginalExpeditions3430();if(cp3430.active){return cp3430.facility==='caravan'?renderTrade3300():scientificExpeditions3300();}return cpUI3430.camp(cpModels3430(),cpSummary3430());};
-function cpMuseumPresentation3430(){const root=panel.querySelector('.m27-root'),room=root?.querySelector('#m27-room');if(!root||!room)return;root.querySelectorAll('.m27-heading,.m27-rooms,[data-m27-fold="ledger"],.m27-legendary').forEach(n=>n.remove());room.setAttribute('aria-label',cp3430.facility==='excavations'?'Excavaciones del Campamento':'Prospecciones del Campamento');for(const node of [...room.children]){const keep=node.classList.contains('m27-jobs')||(cp3430.facility==='excavations'?['dig-sites','dig-history'].includes(node.dataset.m27Fold):node.classList.contains('m27-grid')||node.dataset.m27Fold==='relict-history');if(!keep)node.remove();}
+function cpMuseumPresentation3430(){const root=panel.querySelector('.m27-root'),room=root?.querySelector('#m27-room');if(!root||!room)return;root.querySelectorAll('.m27-heading,.m27-rooms,[data-m27-fold="ledger"],.m27-legendary').forEach(n=>n.remove());room.setAttribute('aria-label',cp3430.facility==='excavations'?'Excavaciones del Campamento':'Prospecciones del Campamento');for(const node of [...room.children]){const keep=node.classList.contains('m27-jobs')||(cp3430.facility==='excavations'?['dig-sites','dig-history'].includes(node.dataset.m27Fold):node.classList.contains('m27-grid')||node.classList.contains('m27-pager')||node.dataset.m27Fold==='relict-history');if(!keep)node.remove();}
  if(cp3430.facility==='surveys'){const grid=room.querySelector('.m27-grid');grid?.querySelectorAll('.m27-piece').forEach(n=>{if(!n.querySelector('[data-action="start-relict-survey"]'))n.remove();});if(grid&&!grid.children.length)grid.innerHTML='<p class="m27-note">No quedan nuevos expedientes de campo en esta selección. Consulta los registros conservados en el Museo.</p>';}
  room.insertAdjacentHTML('beforeend','<p class="cp3430-museum-link"><button type="button" data-cp-museum="'+(cp3430.facility==='excavations'?'fossils':'relicts')+'">'+(cp3430.facility==='excavations'?'Ver reconstrucciones y colecciones en el Museo':'Ver catalogación y relictos en el Museo')+' →</button></p>');}
 renderPanel=function(){
@@ -7379,11 +7753,15 @@ const cpFault3430=showStorageFault;
 showStorageFault=function(message){cp3430.storageMessage=message;cpFault3430(message);cpPaintAvatar3430();};
 function cpRefresh3430(){if(tab!=='expeditions'||cp3430.active)return;const models=cpModels3430();for(const [id,m]of Object.entries(models)){for(const button of panel.querySelectorAll('[data-cp-open="'+id+'"]')){const status=button.querySelector('.cp3430-state');if(status&&status.textContent!==m.label){status.innerHTML='<i aria-hidden="true"></i>'+cpUI3430.esc(m.label);for(const kind of ['ready','running','available','locked'])button.classList.toggle('state-'+kind,m.kind===kind);}}}const summary=panel.querySelector('.cp3430-summary');if(summary&&summary.textContent!==cpSummary3430())summary.textContent=cpSummary3430();}
 const cpPersist3430=persist;
-persist=function(){const ok=cpPersist3430();cpPaintAvatar3430();cpRefresh3430();return ok;};window.AtlasSaveBridge.persistBeforeUpdate=persist;
+persist=function(options){
+ const ok=cpPersist3430(options);
+ try{cpPaintAvatar3430();cpRefresh3430();}catch(error){console.error('Campamento save presentation:',error);}
+ return ok;
+};window.AtlasSaveBridge.persistBeforeUpdate=persist;
 function cpOpenDialog3430(which){cpMenu3430.hidden=true;cpAvatarButton3430.setAttribute('aria-expanded','false');cpDialog3430.hidden=false;const title={profile:'Perfil del naturalista',stats:'Estadísticas de tu expedición',about:'Sobre El Gran Atlas'}[which];document.getElementById('cp3430-dialog-title').textContent=title;document.getElementById('cp3430-dialog-content').innerHTML=which==='profile'?cpUI3430.profileForm(cpUI3430.profile(state),cpTitle3430()):which==='stats'?cpUI3430.stats(cpStats3430()):cpUI3430.about(cpUI3430.version);document.getElementById('cp3430-dialog-title').focus({preventScroll:true});}
 function cpRestore3430(){cp3430.active=false;cp3430.facility=null;cp3430.pending=null;cp3430.paintKey='';cpClose3430(false);}
 const cpOriginalRestore3430=window.AtlasSaveBridge.restoreGame;
-window.AtlasSaveBridge.restoreGame=function(data){cpRestore3430();const result=cpOriginalRestore3430.call(this,data);cpPaintAvatar3430();return result;};
+window.AtlasSaveBridge.restoreGame=function(data){cpRestore3430();const result=cpOriginalRestore3430.call(this,data);try{cpPaintAvatar3430();}catch(error){console.error('Campamento restore presentation:',error);}return result;};
 document.addEventListener('click',event=>{
  const target=event.target.closest('button,[data-action]');if(!target)return;
  if(target.closest('#saveManagerOpen')&&cp3430.mode==='new'&&!cp3430.allowBackup){event.preventDefault();event.stopImmediatePropagation();cpPaintAvatar3430();cpDialog3430.hidden=true;cpMenu3430.hidden=!cpMenu3430.hidden;cpAvatarButton3430.setAttribute('aria-expanded',String(!cpMenu3430.hidden));if(!cpMenu3430.hidden)cpMenu3430.querySelector('button').focus({preventScroll:true});return;}
