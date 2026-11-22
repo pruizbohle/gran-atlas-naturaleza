@@ -32,7 +32,7 @@ El título precede a un área propia de ilustración, seguida por el nombre cien
 
 - Chromium verificó los veinte relictos a **320, 360, 390, 412, 768 y 1.280 px**. Se midieron 120 vitrinas y seis fichas ampliadas. Se cubrieron niveles de indicio del 0 al 3 y la ocultación del arte y los datos de las especies desconocidas.
 - Se comprobaron selección con teclado, escalas del Atlas, navegación móvil y el indicador de un indicio legitimado. El visor ofrece controles de tamaño, categoría, estado y fondos claro y oscuro.
-- La PWA descargó y verificó los **7.166 recursos**. Chromium abrió la biblioteca y el mapa con la red desactivada. Una partida de V5.2.0 conservó sus saldos, inventario, exposiciones, hallazgos y la identidad de Nácar. Las pruebas de navegador recorrieron los indicios y el hallazgo en Campo del tilacino y comprobaron los 30 legendarios.
+- La PWA descargó y verificó los **7.166 recursos**. Chromium abrió la biblioteca y el mapa con la red desactivada. También se ejecutó la actualización autorizada desde la instalación de V5.2.0, se cotejó el respaldo byte a byte y se reabrió la partida sin conexión. Se conservaron saldos, inventario y el relicto histórico. La revisión de restauración comprobó las exposiciones, los hallazgos y la identidad de Nácar. Las pruebas de navegador recorrieron los indicios y el hallazgo en Campo del tilacino y comprobaron los 30 legendarios. [Resultados de Chromium](navegador.json)
 - Las **42 pruebas críticas** pasaron en Node 22. La suite completa registró 666 pruebas aprobadas, 219 fallos ya presentes en V5.2.0 y cero fallos nuevos. [Regresión](regresion.json)
 - La verificación Android fue estática. APK sin generar.
 

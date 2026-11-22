@@ -1,0 +1,60 @@
+{
+  "cases": {
+    "320": 20,
+    "360": 20,
+    "390": 20,
+    "412": 20,
+    "768": 20,
+    "1280": 20
+  },
+  "library": 138,
+  "biomes": 16,
+  "previewStates": 6,
+  "offline": 7166,
+  "chromium": "156.0.8078.79",
+  "navigation": {
+    "desktop": 1240,
+    "mobile": 390,
+    "compass": true,
+    "research": true,
+    "inventory": true,
+    "campMuseumReturn": true
+  },
+  "migration": {
+    "from": "5.2.0",
+    "to": "5.3.0",
+    "authorized": true,
+    "sha256": true,
+    "identicalBackup": true,
+    "historicRelict": true,
+    "offlineFiles": 7166
+  },
+  "legendaryRun": {
+    "chromium": "156.0.8078.79",
+    "legends": 30,
+    "sizes": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "modules": [
+      "field",
+      "journal",
+      "bestiary",
+      "museum"
+    ],
+    "newModulePreviews": 40,
+    "legacyGameSurfaces": 4,
+    "narrowViewport": 390,
+    "isolated": false
+  },
+  "relictRun": {
+    "chromium": "156.0.8078.79",
+    "specimen": "thylacine",
+    "clues": 3,
+    "mobileWidth": 390,
+    "gallery": 20,
+    "offlineFiles": null
+  }
+}
