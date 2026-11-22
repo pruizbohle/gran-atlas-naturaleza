@@ -6,14 +6,21 @@
       "oldBytes": 530342,
       "newBytes": 676308,
       "deltaBytes": 145966
+    },
+    "B": {
+      "plates": 10,
+      "files": 40,
+      "oldBytes": 563538,
+      "newBytes": 687742,
+      "deltaBytes": 124204
     }
   },
   "total": {
-    "plates": 10,
-    "files": 40,
-    "oldBytes": 530342,
-    "newBytes": 676308,
-    "deltaBytes": 145966
+    "plates": 20,
+    "files": 80,
+    "oldBytes": 1093880,
+    "newBytes": 1364050,
+    "deltaBytes": 270170
   },
   "alphaChecks": [
     {
@@ -643,6 +650,636 @@
             319
           ],
           "fullyTransparentPixels": 226790
+        }
+      ]
+    },
+    {
+      "id": "af_dromedario",
+      "variant": "albino",
+      "lot": "B",
+      "resolutions": [
+        {
+          "size": 64,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            2,
+            2,
+            62,
+            62
+          ],
+          "fullyTransparentPixels": 2156
+        },
+        {
+          "size": 128,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            5,
+            7,
+            122,
+            121
+          ],
+          "fullyTransparentPixels": 9710
+        },
+        {
+          "size": 256,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            14,
+            16,
+            242,
+            240
+          ],
+          "fullyTransparentPixels": 41232
+        },
+        {
+          "size": 512,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            32,
+            36,
+            480,
+            475
+          ],
+          "fullyTransparentPixels": 169588
+        }
+      ]
+    },
+    {
+      "id": "af_facoquero",
+      "variant": "albino",
+      "lot": "B",
+      "resolutions": [
+        {
+          "size": 64,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            2,
+            8,
+            63,
+            56
+          ],
+          "fullyTransparentPixels": 2424
+        },
+        {
+          "size": 128,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            6,
+            19,
+            123,
+            109
+          ],
+          "fullyTransparentPixels": 10383
+        },
+        {
+          "size": 256,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            14,
+            41,
+            243,
+            216
+          ],
+          "fullyTransparentPixels": 43166
+        },
+        {
+          "size": 512,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            32,
+            85,
+            480,
+            426
+          ],
+          "fullyTransparentPixels": 176305
+        }
+      ]
+    },
+    {
+      "id": "af_hipopotamo",
+      "variant": "albino",
+      "lot": "B",
+      "resolutions": [
+        {
+          "size": 64,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            2,
+            13,
+            62,
+            51
+          ],
+          "fullyTransparentPixels": 2534
+        },
+        {
+          "size": 128,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            6,
+            29,
+            122,
+            99
+          ],
+          "fullyTransparentPixels": 10742
+        },
+        {
+          "size": 256,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            15,
+            61,
+            242,
+            195
+          ],
+          "fullyTransparentPixels": 44253
+        },
+        {
+          "size": 512,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            32,
+            127,
+            480,
+            384
+          ],
+          "fullyTransparentPixels": 179759
+        }
+      ]
+    },
+    {
+      "id": "af_ciervo_berberia",
+      "variant": "albino",
+      "lot": "B",
+      "resolutions": [
+        {
+          "size": 64,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            2,
+            2,
+            62,
+            63
+          ],
+          "fullyTransparentPixels": 2426
+        },
+        {
+          "size": 128,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            7,
+            6,
+            121,
+            123
+          ],
+          "fullyTransparentPixels": 10759
+        },
+        {
+          "size": 256,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            16,
+            14,
+            239,
+            243
+          ],
+          "fullyTransparentPixels": 45464
+        },
+        {
+          "size": 512,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            38,
+            32,
+            473,
+            480
+          ],
+          "fullyTransparentPixels": 187180
+        }
+      ]
+    },
+    {
+      "id": "af_okapi",
+      "variant": "albino",
+      "lot": "B",
+      "resolutions": [
+        {
+          "size": 64,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            4,
+            2,
+            60,
+            63
+          ],
+          "fullyTransparentPixels": 2588
+        },
+        {
+          "size": 128,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            10,
+            6,
+            117,
+            123
+          ],
+          "fullyTransparentPixels": 11178
+        },
+        {
+          "size": 256,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            24,
+            14,
+            232,
+            243
+          ],
+          "fullyTransparentPixels": 46625
+        },
+        {
+          "size": 512,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            52,
+            32,
+            459,
+            480
+          ],
+          "fullyTransparentPixels": 190457
+        }
+      ]
+    },
+    {
+      "id": "af_jirafa",
+      "variant": "albino",
+      "lot": "B",
+      "resolutions": [
+        {
+          "size": 64,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            11,
+            2,
+            53,
+            63
+          ],
+          "fullyTransparentPixels": 3043
+        },
+        {
+          "size": 128,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            24,
+            6,
+            104,
+            123
+          ],
+          "fullyTransparentPixels": 12843
+        },
+        {
+          "size": 256,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            50,
+            14,
+            206,
+            243
+          ],
+          "fullyTransparentPixels": 53079
+        },
+        {
+          "size": 512,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            104,
+            32,
+            407,
+            480
+          ],
+          "fullyTransparentPixels": 215853
+        }
+      ]
+    },
+    {
+      "id": "af_nu_azul",
+      "variant": "albino",
+      "lot": "B",
+      "resolutions": [
+        {
+          "size": 64,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            1,
+            6,
+            62,
+            58
+          ],
+          "fullyTransparentPixels": 2420
+        },
+        {
+          "size": 128,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            5,
+            15,
+            122,
+            113
+          ],
+          "fullyTransparentPixels": 10480
+        },
+        {
+          "size": 256,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            13,
+            32,
+            242,
+            223
+          ],
+          "fullyTransparentPixels": 43641
+        },
+        {
+          "size": 512,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            32,
+            70,
+            480,
+            441
+          ],
+          "fullyTransparentPixels": 178666
+        }
+      ]
+    },
+    {
+      "id": "af_leopardo",
+      "variant": "melanico",
+      "lot": "B",
+      "resolutions": [
+        {
+          "size": 64,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            2,
+            6,
+            62,
+            58
+          ],
+          "fullyTransparentPixels": 2328
+        },
+        {
+          "size": 128,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            6,
+            15,
+            122,
+            113
+          ],
+          "fullyTransparentPixels": 10116
+        },
+        {
+          "size": 256,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            14,
+            32,
+            242,
+            224
+          ],
+          "fullyTransparentPixels": 42231
+        },
+        {
+          "size": 512,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            32,
+            69,
+            480,
+            443
+          ],
+          "fullyTransparentPixels": 172433
+        }
+      ]
+    },
+    {
+      "id": "af_lobo_etiope",
+      "variant": "melanico",
+      "lot": "B",
+      "resolutions": [
+        {
+          "size": 64,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            2,
+            6,
+            63,
+            58
+          ],
+          "fullyTransparentPixels": 2667
+        },
+        {
+          "size": 128,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            6,
+            14,
+            123,
+            114
+          ],
+          "fullyTransparentPixels": 11434
+        },
+        {
+          "size": 256,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            14,
+            31,
+            243,
+            225
+          ],
+          "fullyTransparentPixels": 47248
+        },
+        {
+          "size": 512,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            32,
+            67,
+            480,
+            444
+          ],
+          "fullyTransparentPixels": 192366
+        }
+      ]
+    },
+    {
+      "id": "af_licaon",
+      "variant": "melanico",
+      "lot": "B",
+      "resolutions": [
+        {
+          "size": 64,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            1,
+            8,
+            62,
+            56
+          ],
+          "fullyTransparentPixels": 2629
+        },
+        {
+          "size": 128,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            5,
+            18,
+            122,
+            110
+          ],
+          "fullyTransparentPixels": 11337
+        },
+        {
+          "size": 256,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            14,
+            38,
+            242,
+            218
+          ],
+          "fullyTransparentPixels": 47224
+        },
+        {
+          "size": 512,
+          "alphaExtrema": [
+            0,
+            255
+          ],
+          "bounds": [
+            32,
+            81,
+            480,
+            431
+          ],
+          "fullyTransparentPixels": 192829
         }
       ]
     }

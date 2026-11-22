@@ -8,13 +8,13 @@
   },
   "totals": {
     "auditadas": 174,
-    "correcta": 78,
-    "mejorable": 94,
+    "correcta": 88,
+    "mejorable": 84,
     "insuficiente": 2,
     "pendiente": 390,
-    "corregidas": 69,
-    "correccionesAprobadas": 71,
-    "propuestasRechazadas": 11
+    "corregidas": 79,
+    "correccionesAprobadas": 81,
+    "propuestasRechazadas": 12
   },
   "positiveReferences": [
     "oc_esp_vombatus_ursinus/albino",
@@ -698,18 +698,33 @@
       "variant": "albino",
       "normal": "af_ciervo_berberia--normal.webp",
       "plate": "af_ciervo_berberia--albino.webp",
-      "bytesRatio": 0.8327,
-      "sha": "85ea5ec726c47a2078a04ec85c2f9f38a7d78abd",
-      "visualState": "mejorable",
-      "observation": "La cornamenta ramificada y la gorguera siguen presentes, pero ambas pierden el contorno sobre papel a 128 px. Falta separación tonal entre el hocico y el cuello.",
+      "bytesRatio": 0.9334,
+      "sha": "969bb5cf447b2e9837e5c1c4e84566953249065f",
+      "visualState": "correcta",
+      "observation": "Sobre papel se distinguen las puntas de la cuerna y el pelo largo del cuello. Las patas mantienen articulaciones y pezuñas separadas.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
-        256
+        256,
+        512
       ],
-      "priorAudit": "arte-v506/evaluaciones.json"
+      "priorAudit": "arte-v506/evaluaciones.json",
+      "art08": {
+        "priorState": "mejorable",
+        "priorFinding": "La cornamenta ramificada y la gorguera siguen presentes, pero ambas pierden el contorno sobre papel a 128 px. Falta separación tonal entre el hocico y el cuello.",
+        "outcome": "aprobada",
+        "morph": "Albinismo interpretativo",
+        "evidence": "Interpretativa",
+        "eye": {
+          "normal": "Pardo oscuro",
+          "color": "Rosado pardo tenue",
+          "changed": true,
+          "why": "Se recuperan el ojo y la transición entre párpado, hocico y gorguera."
+        },
+        "version": "5.0.12"
+      }
     },
     {
       "id": "af_civeta",
@@ -935,18 +950,33 @@
       "variant": "albino",
       "normal": "af_dromedario--normal.webp",
       "plate": "af_dromedario--albino.webp",
-      "bytesRatio": 0.7544,
-      "sha": "aa28097b3cb23beb68220db644e4781ae646e8c8",
-      "visualState": "mejorable",
-      "observation": "La joroba única y las proporciones del cuello se leen bien en carbón. En crema, el iris, el labio partido y las almohadillas pierden volumen.",
+      "bytesRatio": 1.0481,
+      "sha": "668e27f554e292a5fd9b1662dec7685d8b1bbd2e",
+      "visualState": "correcta",
+      "observation": "La joroba única, el cuello, el labio hendido y las almohadillas de dos dedos ganan definición en crema.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
-        256
+        256,
+        512
       ],
-      "priorAudit": "arte-v507/evaluaciones.json"
+      "priorAudit": "arte-v507/evaluaciones.json",
+      "art08": {
+        "priorState": "mejorable",
+        "priorFinding": "La joroba única y las proporciones del cuello se leen bien en carbón. En crema, el iris, el labio partido y las almohadillas pierden volumen.",
+        "outcome": "aprobada",
+        "morph": "Hipopigmentación de aspecto albino",
+        "evidence": "Interpretativa",
+        "eye": {
+          "normal": "Pardo oscuro",
+          "color": "Pardo grisáceo claro",
+          "changed": true,
+          "why": "El ojo conserva una pupila oscura. El párpado y el labio recuperan su sombra local."
+        },
+        "version": "5.0.12"
+      }
     },
     {
       "id": "af_dromedario",
@@ -1181,18 +1211,33 @@
       "variant": "albino",
       "normal": "af_facoquero--normal.webp",
       "plate": "af_facoquero--albino.webp",
-      "bytesRatio": 0.7589,
-      "sha": "70fb15dfcabaec4e20f1eec4ed9b11f633b9d0c9",
-      "visualState": "mejorable",
-      "observation": "El colmillo superior curvo y la crin permanecen legibles en carbón. Sobre crema, el iris, verrugas faciales y base del colmillo comparten valores demasiado próximos.",
+      "bytesRatio": 0.9847,
+      "sha": "8f0faf02fe94a24fca5cee53969be6b190fa8273",
+      "visualState": "correcta",
+      "observation": "La crin, los colmillos y las verrugas faciales conservan volumen. La piel rosada del morro se distingue de las cerdas claras.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
-        256
+        256,
+        512
       ],
-      "priorAudit": "arte-v507/evaluaciones.json"
+      "priorAudit": "arte-v507/evaluaciones.json",
+      "art08": {
+        "priorState": "mejorable",
+        "priorFinding": "El colmillo superior curvo y la crin permanecen legibles en carbón. Sobre crema, el iris, verrugas faciales y base del colmillo comparten valores demasiado próximos.",
+        "outcome": "aprobada",
+        "morph": "Albinismo interpretativo",
+        "evidence": "Interpretativa",
+        "eye": {
+          "normal": "Pardo oscuro",
+          "color": "Pardo rosado",
+          "changed": true,
+          "why": "El tono y la sombra del párpado se separan de las verrugas y del colmillo."
+        },
+        "version": "5.0.12"
+      }
     },
     {
       "id": "af_facoquero",
@@ -1892,18 +1937,33 @@
       "variant": "albino",
       "normal": "af_hipopotamo--normal.webp",
       "plate": "af_hipopotamo--albino.webp",
-      "bytesRatio": 0.8084,
-      "sha": "857c67616e8d229403f5bd9a2ba1264331748fe2",
-      "visualState": "mejorable",
-      "observation": "El hocico ancho y el cuello plegado se reconocen sobre carbón, pero sobre crema se diluyen el ojo alto y el límite de los labios.",
+      "bytesRatio": 0.9535,
+      "sha": "01ffa3749ca1bc7d7fe18a0aad49e0d1dcd9295a",
+      "visualState": "correcta",
+      "observation": "El volumen del labio y los pliegues del cuello se distinguen sobre crema. La piel mantiene motas suaves y sombras en las cuatro patas.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
-        256
+        256,
+        512
       ],
-      "priorAudit": "arte-v507/evaluaciones.json"
+      "priorAudit": "arte-v507/evaluaciones.json",
+      "art08": {
+        "priorState": "mejorable",
+        "priorFinding": "El hocico ancho y el cuello plegado se reconocen sobre carbón, pero sobre crema se diluyen el ojo alto y el límite de los labios.",
+        "outcome": "aprobada",
+        "morph": "Albinismo interpretativo",
+        "evidence": "Interpretativa",
+        "eye": {
+          "normal": "Pardo oscuro",
+          "color": "Pardo rosado claro",
+          "changed": true,
+          "why": "El ojo alto recupera contorno y el tono se limita al iris y al tejido próximo."
+        },
+        "version": "5.0.12"
+      }
     },
     {
       "id": "af_hipopotamo",
@@ -2091,18 +2151,33 @@
       "variant": "albino",
       "normal": "af_jirafa--normal.webp",
       "plate": "af_jirafa--albino.webp",
-      "bytesRatio": 0.74,
-      "sha": "98fc41bd9ca2d8abdfeb5646a0b7d4486a3f261c",
-      "visualState": "mejorable",
-      "observation": "El cuello largo y los osiconos conservan la lectura en oscuro. Sobre crema las patas distales y la cara se lavan, y las manchas residuales deben justificarse para el morfo.",
+      "bytesRatio": 0.7707,
+      "sha": "3f8d1b825caf40db673f470d9368f36033ecb455",
+      "visualState": "correcta",
+      "observation": "Las manchas quedan insinuadas en marfil. La cara, los osiconos y las patas distales mantienen relieve sobre crema.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
-        256
+        256,
+        512
       ],
-      "priorAudit": "arte-v507/evaluaciones.json"
+      "priorAudit": "arte-v507/evaluaciones.json",
+      "art08": {
+        "priorState": "mejorable",
+        "priorFinding": "El cuello largo y los osiconos conservan la lectura en oscuro. Sobre crema las patas distales y la cara se lavan, y las manchas residuales deben justificarse para el morfo.",
+        "outcome": "aprobada",
+        "morph": "Hipopigmentación de aspecto albino",
+        "evidence": "Leucismo conocido en jirafas · morfo del Atlas interpretativo",
+        "eye": {
+          "normal": "Pardo oscuro",
+          "color": "Gris rosado tenue",
+          "changed": true,
+          "why": "Se aclara la gama ocular. La lámina representa un ejemplar hipotético y el ojo de las jirafas leucísticas puede conservar pigmento."
+        },
+        "version": "5.0.12"
+      }
     },
     {
       "id": "af_jirafa",
@@ -2272,19 +2347,33 @@
       "variant": "melanico",
       "normal": "af_leopardo--normal.webp",
       "plate": "af_leopardo--melanico.webp",
-      "bytesRatio": 0.528,
-      "sha": "6fe1234599e4ee958aa0a2da43f19a9f0c4d08d7",
-      "visualState": "mejorable",
-      "observation": "Se lee el patrón de rosetas; a 64 px se pierde la separación cuello-cara. Restaurar reflejos discretos.",
+      "bytesRatio": 0.7676,
+      "sha": "aff632f3a82b1eb9a142d0516d7b6da7bf360888",
+      "visualState": "correcta",
+      "observation": "Las rosetas y el patrón de la cola siguen visibles sobre un manto oscuro. La mandíbula y el cuello se distinguen en miniatura.",
       "visualSize": null,
       "triage": "revisar_primero_por_compresion",
       "reviewedSizes": [
         64,
         128,
+        256,
         512
       ],
       "priorAudit": "aud04-felidae-canidae.json",
-      "lowWeight": true
+      "art08": {
+        "priorState": "mejorable",
+        "priorFinding": "Se lee el patrón de rosetas; a 64 px se pierde la separación cuello-cara. Restaurar reflejos discretos.",
+        "outcome": "aprobada",
+        "morph": "Melanismo con rosetas visibles",
+        "evidence": "Documentada en leopardo africano · lámina interpretativa del ejemplar",
+        "eye": {
+          "normal": "Ámbar pardo",
+          "color": "Ámbar pardo",
+          "changed": false,
+          "why": "Se conserva el iris natural y se modelan el ojo y el morro con reflejos locales."
+        },
+        "version": "5.0.12"
+      }
     },
     {
       "id": "af_licaon",
@@ -2333,18 +2422,36 @@
       "variant": "melanico",
       "normal": "af_licaon--normal.webp",
       "plate": "af_licaon--melanico.webp",
-      "bytesRatio": 0.5639,
-      "sha": "cfd9156310d69960e059857962475a6f2cdfb322",
-      "visualState": "mejorable",
-      "observation": "El mosaico permanece reconocible en claro. Separar parches y patas a 64 px en oscuro sin quitar el patrón propio.",
+      "bytesRatio": 0.7545,
+      "sha": "d0bf613fbd3694ae563c4fb06578df272a150df3",
+      "visualState": "correcta",
+      "observation": "La segunda propuesta separa las orejas redondas, los dedos y los parches del cuello y las patas sobre carbón. La punta caudal conserva un gris más claro.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
+        256,
         512
       ],
-      "priorAudit": "aud04-felidae-canidae.json"
+      "priorAudit": "aud04-felidae-canidae.json",
+      "art08": {
+        "priorState": "mejorable",
+        "priorFinding": "El mosaico permanece reconocible en claro. Separar parches y patas a 64 px en oscuro sin quitar el patrón propio.",
+        "outcome": "aprobada",
+        "morph": "Melanismo interpretativo",
+        "evidence": "Interpretativa",
+        "rejected": [
+          "Primera propuesta descartada por sus parches dorados y blancos, demasiado cercanos a la lámina normal."
+        ],
+        "eye": {
+          "normal": "Pardo oscuro",
+          "color": "Pardo oscuro",
+          "changed": false,
+          "why": "Se conserva el iris natural y se mejora el contraste local con el hocico."
+        },
+        "version": "5.0.12"
+      }
     },
     {
       "id": "af_lobo_etiope",
@@ -2354,18 +2461,33 @@
       "variant": "melanico",
       "normal": "af_lobo_etiope--normal.webp",
       "plate": "af_lobo_etiope--melanico.webp",
-      "bytesRatio": 0.5695,
-      "sha": "2b36711210600e30bb6802e23a5aadce44673313",
-      "visualState": "mejorable",
-      "observation": "Morro largo y patas altas reconocibles. La máscara y nariz necesitan reflejos locales en oscuro; verificar el carácter hipotético.",
+      "bytesRatio": 0.9848,
+      "sha": "67cf300aaca6e90a3c1c0d2b094b577532fd9b93",
+      "visualState": "correcta",
+      "observation": "Se distinguen máscara, morro largo, orejas y patas altas. El manto pardo oscuro conserva una gama intermedia sobre el vientre y el cuello.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
+        256,
         512
       ],
-      "priorAudit": "aud04-felidae-canidae.json"
+      "priorAudit": "aud04-felidae-canidae.json",
+      "art08": {
+        "priorState": "mejorable",
+        "priorFinding": "Morro largo y patas altas reconocibles. La máscara y nariz necesitan reflejos locales en oscuro; verificar el carácter hipotético.",
+        "outcome": "aprobada",
+        "morph": "Melanismo interpretativo",
+        "evidence": "Interpretativa",
+        "eye": {
+          "normal": "Ámbar oscuro",
+          "color": "Ámbar oscuro",
+          "changed": false,
+          "why": "El ojo conserva su gama cálida. Se recupera el detalle de la pupila y de la nariz mediante sombras y reflejos pequeños."
+        },
+        "version": "5.0.12"
+      }
     },
     {
       "id": "af_lobo_marino_cabo",
@@ -2557,18 +2679,33 @@
       "variant": "albino",
       "normal": "af_nu_azul--normal.webp",
       "plate": "af_nu_azul--albino.webp",
-      "bytesRatio": 0.7762,
-      "sha": "11a85dddbba21fb71446756502101428d9a67cf9",
-      "visualState": "mejorable",
-      "observation": "Los pliegues del cuello y las bandas del ñu quedan insinuados. Sobre papel se diluyen el perfil de los cuernos bajos y los bordes de la barba.",
+      "bytesRatio": 0.946,
+      "sha": "e8e8ab567ae1ef3d2b158491a2e03d4fc102441b",
+      "visualState": "correcta",
+      "observation": "Cuernos bajos y barba conservan contorno. Las bandas del cuello quedan suaves y mantienen relieve entre el pecho y el hombro.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
-        256
+        256,
+        512
       ],
-      "priorAudit": "arte-v506/evaluaciones.json"
+      "priorAudit": "arte-v506/evaluaciones.json",
+      "art08": {
+        "priorState": "mejorable",
+        "priorFinding": "Los pliegues del cuello y las bandas del ñu quedan insinuados. Sobre papel se diluyen el perfil de los cuernos bajos y los bordes de la barba.",
+        "outcome": "aprobada",
+        "morph": "Hipopigmentación de aspecto albino",
+        "evidence": "Interpretativa",
+        "eye": {
+          "normal": "Pardo oscuro",
+          "color": "Pardo rosado suave",
+          "changed": true,
+          "why": "Se aclara el iris y se reserva el rosado para el ollar, labios y entorno ocular."
+        },
+        "version": "5.0.12"
+      }
     },
     {
       "id": "af_nu_azul",
@@ -2629,18 +2766,33 @@
       "variant": "albino",
       "normal": "af_okapi--normal.webp",
       "plate": "af_okapi--albino.webp",
-      "bytesRatio": 0.7668,
-      "sha": "06b0bda54bf41e2382d617287349c0d46d423250",
-      "visualState": "mejorable",
-      "observation": "Las orejas amplias, el perfil de la cara y los listones de la grupa identifican al okapi. En papel destacan las franjas residuales por encima del iris y del volumen de las pezuñas.",
+      "bytesRatio": 0.9118,
+      "sha": "a35254349669eb91f7e2e750f621a8cde0237727",
+      "visualState": "correcta",
+      "observation": "Las bandas de grupa y patas se atenúan. Las orejas, el ojo y las pezuñas recuperan volumen sobre crema.",
       "visualSize": null,
       "triage": "pendiente",
       "reviewedSizes": [
         64,
         128,
-        256
+        256,
+        512
       ],
-      "priorAudit": "arte-v507/evaluaciones.json"
+      "priorAudit": "arte-v507/evaluaciones.json",
+      "art08": {
+        "priorState": "mejorable",
+        "priorFinding": "Las orejas amplias, el perfil de la cara y los listones de la grupa identifican al okapi. En papel destacan las franjas residuales por encima del iris y del volumen de las pezuñas.",
+        "outcome": "aprobada",
+        "morph": "Hipopigmentación de aspecto albino",
+        "evidence": "Leucismo documentado en la especie · albinismo interpretativo",
+        "eye": {
+          "normal": "Pardo oscuro",
+          "color": "Pardo rosado suave",
+          "changed": true,
+          "why": "El iris tenue es interpretativo. La guía EAZA describe leucismo, una condición pigmentaria diferente."
+        },
+        "version": "5.0.12"
+      }
     },
     {
       "id": "af_okapi",

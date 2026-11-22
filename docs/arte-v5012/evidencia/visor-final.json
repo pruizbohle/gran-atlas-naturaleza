@@ -1,0 +1,39 @@
+{
+  "chromium": "156.0.8078.79",
+  "animals": 479,
+  "variants": 564,
+  "pageSizes": [
+    20,
+    40,
+    60
+  ],
+  "checkedSizes": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "mobileWidth": 390,
+  "comparisons": [
+    "af_aguila_pescadora/melanico",
+    "af_caracal/albino",
+    "af_gato_montes_africano/melanico",
+    "af_fenec/albino",
+    "af_elefante_bosque/albino",
+    "af_guepardo/melanico",
+    "af_cebra_llanura/albino",
+    "af_chacal_dorado/melanico",
+    "af_fosa_ave/melanico",
+    "af_cocodrilo_nilo/albino",
+    "af_dromedario/albino",
+    "af_facoquero/albino",
+    "af_hipopotamo/albino",
+    "af_ciervo_berberia/albino",
+    "af_okapi/albino",
+    "af_jirafa/albino",
+    "af_nu_azul/albino",
+    "af_leopardo/melanico",
+    "af_lobo_etiope/melanico",
+    "af_licaon/melanico"
+  ]
+}

@@ -169,5 +169,176 @@ const art08Review = [
     "batch": "A",
     "eye": "Ámbar rosado pálido",
     "version": "5.0.12"
+  },
+  {
+    "id": "af_dromedario",
+    "variant": "albino",
+    "status": "Correcta y aprobada",
+    "morph": "Hipopigmentación de aspecto albino",
+    "evidence": "Interpretativa",
+    "note": "La joroba única, el cuello, el labio hendido y las almohadillas de dos dedos ganan definición en crema.",
+    "before": {
+      "64": "review/art08/64/af_dromedario--albino.webp",
+      "128": "review/art08/128/af_dromedario--albino.webp",
+      "256": "review/art08/256/af_dromedario--albino.webp",
+      "512": "review/art08/af_dromedario--albino.webp"
+    },
+    "batch": "B",
+    "eye": "Pardo grisáceo claro",
+    "version": "5.0.12"
+  },
+  {
+    "id": "af_facoquero",
+    "variant": "albino",
+    "status": "Correcta y aprobada",
+    "morph": "Albinismo interpretativo",
+    "evidence": "Interpretativa",
+    "note": "La crin, los colmillos y las verrugas faciales conservan volumen. La piel rosada del morro se distingue de las cerdas claras.",
+    "before": {
+      "64": "review/art08/64/af_facoquero--albino.webp",
+      "128": "review/art08/128/af_facoquero--albino.webp",
+      "256": "review/art08/256/af_facoquero--albino.webp",
+      "512": "review/art08/af_facoquero--albino.webp"
+    },
+    "batch": "B",
+    "eye": "Pardo rosado",
+    "version": "5.0.12"
+  },
+  {
+    "id": "af_hipopotamo",
+    "variant": "albino",
+    "status": "Correcta y aprobada",
+    "morph": "Albinismo interpretativo",
+    "evidence": "Interpretativa",
+    "note": "El volumen del labio y los pliegues del cuello se distinguen sobre crema. La piel mantiene motas suaves y sombras en las cuatro patas.",
+    "before": {
+      "64": "review/art08/64/af_hipopotamo--albino.webp",
+      "128": "review/art08/128/af_hipopotamo--albino.webp",
+      "256": "review/art08/256/af_hipopotamo--albino.webp",
+      "512": "review/art08/af_hipopotamo--albino.webp"
+    },
+    "batch": "B",
+    "eye": "Pardo rosado claro",
+    "version": "5.0.12"
+  },
+  {
+    "id": "af_ciervo_berberia",
+    "variant": "albino",
+    "status": "Correcta y aprobada",
+    "morph": "Albinismo interpretativo",
+    "evidence": "Interpretativa",
+    "note": "Sobre papel se distinguen las puntas de la cuerna y el pelo largo del cuello. Las patas mantienen articulaciones y pezuñas separadas.",
+    "before": {
+      "64": "review/art08/64/af_ciervo_berberia--albino.webp",
+      "128": "review/art08/128/af_ciervo_berberia--albino.webp",
+      "256": "review/art08/256/af_ciervo_berberia--albino.webp",
+      "512": "review/art08/af_ciervo_berberia--albino.webp"
+    },
+    "batch": "B",
+    "eye": "Rosado pardo tenue",
+    "version": "5.0.12"
+  },
+  {
+    "id": "af_okapi",
+    "variant": "albino",
+    "status": "Correcta y aprobada",
+    "morph": "Hipopigmentación de aspecto albino",
+    "evidence": "Leucismo documentado en la especie · albinismo interpretativo",
+    "note": "Las bandas de grupa y patas se atenúan. Las orejas, el ojo y las pezuñas recuperan volumen sobre crema.",
+    "before": {
+      "64": "review/art08/64/af_okapi--albino.webp",
+      "128": "review/art08/128/af_okapi--albino.webp",
+      "256": "review/art08/256/af_okapi--albino.webp",
+      "512": "review/art08/af_okapi--albino.webp"
+    },
+    "batch": "B",
+    "eye": "Pardo rosado suave",
+    "version": "5.0.12"
+  },
+  {
+    "id": "af_jirafa",
+    "variant": "albino",
+    "status": "Correcta y aprobada",
+    "morph": "Hipopigmentación de aspecto albino",
+    "evidence": "Leucismo conocido en jirafas · morfo del Atlas interpretativo",
+    "note": "Las manchas quedan insinuadas en marfil. La cara, los osiconos y las patas distales mantienen relieve sobre crema.",
+    "before": {
+      "64": "review/art08/64/af_jirafa--albino.webp",
+      "128": "review/art08/128/af_jirafa--albino.webp",
+      "256": "review/art08/256/af_jirafa--albino.webp",
+      "512": "review/art08/af_jirafa--albino.webp"
+    },
+    "batch": "B",
+    "eye": "Gris rosado tenue",
+    "version": "5.0.12"
+  },
+  {
+    "id": "af_nu_azul",
+    "variant": "albino",
+    "status": "Correcta y aprobada",
+    "morph": "Hipopigmentación de aspecto albino",
+    "evidence": "Interpretativa",
+    "note": "Cuernos bajos y barba conservan contorno. Las bandas del cuello quedan suaves y mantienen relieve entre el pecho y el hombro.",
+    "before": {
+      "64": "review/art08/64/af_nu_azul--albino.webp",
+      "128": "review/art08/128/af_nu_azul--albino.webp",
+      "256": "review/art08/256/af_nu_azul--albino.webp",
+      "512": "review/art08/af_nu_azul--albino.webp"
+    },
+    "batch": "B",
+    "eye": "Pardo rosado suave",
+    "version": "5.0.12"
+  },
+  {
+    "id": "af_leopardo",
+    "variant": "melanico",
+    "status": "Correcta y aprobada",
+    "morph": "Melanismo con rosetas visibles",
+    "evidence": "Documentada en leopardo africano · lámina interpretativa del ejemplar",
+    "note": "Las rosetas y el patrón de la cola siguen visibles sobre un manto oscuro. La mandíbula y el cuello se distinguen en miniatura.",
+    "before": {
+      "64": "review/art08/64/af_leopardo--melanico.webp",
+      "128": "review/art08/128/af_leopardo--melanico.webp",
+      "256": "review/art08/256/af_leopardo--melanico.webp",
+      "512": "review/art08/af_leopardo--melanico.webp"
+    },
+    "batch": "B",
+    "eye": "Ámbar pardo",
+    "version": "5.0.12"
+  },
+  {
+    "id": "af_lobo_etiope",
+    "variant": "melanico",
+    "status": "Correcta y aprobada",
+    "morph": "Melanismo interpretativo",
+    "evidence": "Interpretativa",
+    "note": "Se distinguen máscara, morro largo, orejas y patas altas. El manto pardo oscuro conserva una gama intermedia sobre el vientre y el cuello.",
+    "before": {
+      "64": "review/art08/64/af_lobo_etiope--melanico.webp",
+      "128": "review/art08/128/af_lobo_etiope--melanico.webp",
+      "256": "review/art08/256/af_lobo_etiope--melanico.webp",
+      "512": "review/art08/af_lobo_etiope--melanico.webp"
+    },
+    "batch": "B",
+    "eye": "Ámbar oscuro",
+    "version": "5.0.12"
+  },
+  {
+    "id": "af_licaon",
+    "variant": "melanico",
+    "status": "Correcta y aprobada",
+    "morph": "Melanismo interpretativo",
+    "evidence": "Interpretativa",
+    "note": "La segunda propuesta separa las orejas redondas, los dedos y los parches del cuello y las patas sobre carbón. La punta caudal conserva un gris más claro.",
+    "before": {
+      "64": "review/art08/64/af_licaon--melanico.webp",
+      "128": "review/art08/128/af_licaon--melanico.webp",
+      "256": "review/art08/256/af_licaon--melanico.webp",
+      "512": "review/art08/af_licaon--melanico.webp"
+    },
+    "batch": "B",
+    "comparison": "review/art08/comparativas/B/af_licaon--melanico--rechazo.jpg",
+    "eye": "Pardo oscuro",
+    "version": "5.0.12"
   }
 ];

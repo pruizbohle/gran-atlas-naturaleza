@@ -92,7 +92,7 @@ Primera propuesta descartada por aproximarse demasiado al tono pardo y la cola b
 
 ![Comparativa de Cebra de llanura](comparativas/A/af_cebra_llanura--albino.jpg)
 
-[San Diego Zoo Wildlife Alliance](https://animals.sandiegozoo.org/animals/zebra)
+[San Diego Zoo Wildlife Alliance](https://ielc.libguides.com/c.php?g=692911&p=4908695)
 
 ## Chacal dorado africano · melánica
 
@@ -102,4 +102,4 @@ Primera propuesta descartada por aproximarse demasiado al tono pardo y la cola b
 
 ![Comparativa de Chacal dorado africano](comparativas/A/af_chacal_dorado--melanico.jpg)
 
-[IUCN Canid Specialist Group](https://www.canids.org/species/view/PREKSA246997)
+[IUCN Canid Specialist Group](https://doi.org/10.2305%2FIUCN.UK.2019-1.RLTS.T118264888A118265889.en)

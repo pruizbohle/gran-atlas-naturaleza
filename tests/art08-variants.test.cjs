@@ -68,7 +68,7 @@ test('ART-08 accounts for audited variants once and leaves other decisions intac
   assert.equal(revisions.size, decisions.rows.length);
   assert.deepEqual(new Set(decisions.rows.filter(row => row.lot === 'A').map(key)), planned.A);
   const lotB = decisions.rows.filter(row => row.lot === 'B');
-  if (lotB.length) assert.deepEqual(new Set(lotB.map(key)), planned.B);
+  assert.deepEqual(new Set(lotB.map(key)), planned.B);
   assert.equal(new Set(decisions.rows.map(row => row.id)).size, decisions.rows.length);
   assert.equal(current.totals.auditadas, 174);
   assert.equal(current.totals.correcta, 68 + approved.length);

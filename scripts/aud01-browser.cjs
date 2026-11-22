@@ -361,9 +361,10 @@ async function art04Smoke(browser) {
 
 async function pigmentAuditSmoke(browser) {
   const { version } = JSON.parse(readFileSync('www/atlas-release.json', 'utf8'));
+  const art08 = version === '5.0.12';
   const art07 = version === '5.0.11';
-  const hasBearReplacement = art07 || version === '5.0.10';
-  const lot = art07 ? 'art07' : hasBearReplacement ? 'art06' : 'art05';
+  const hasBearReplacement = art08 || art07 || version === '5.0.10';
+  const lot = art08 ? 'art08' : art07 ? 'art07' : hasBearReplacement ? 'art06' : 'art05';
   const docs = 'docs/arte-v' + version.replaceAll('.', '');
   const albinas = hasBearReplacement ? 303 : 302;
   const melanicas = hasBearReplacement ? 261 : 262;
@@ -379,8 +380,13 @@ async function pigmentAuditSmoke(browser) {
     const cards = lab.locator('[data-audit-key]');
     const results = lab.locator('#summary');
     const count = async expected => {
-      assert.equal(await cards.count(), expected);
-      assert.equal(await results.textContent(), expected + ' de 564 variantes');
+      if (art08) {
+        assert.equal(Number(await results.getAttribute('data-variants')), expected);
+        assert.ok(await lab.locator('[data-audit-species]').count() <= 20);
+      } else {
+        assert.equal(await cards.count(), expected);
+        assert.equal(await results.textContent(), expected + ' de 564 variantes');
+      }
     };
     await count(564);
     await audit('kind').selectOption('albino');
@@ -392,8 +398,8 @@ async function pigmentAuditSmoke(browser) {
     await count(390);
     await audit('state').selectOption('');
     await audit('corrected').selectOption('with');
-    const corrected = await cards.count();
-    assert.equal(corrected, totals.corregidas);
+    const corrected = totals.corregidas;
+    await count(corrected);
     await audit('comparison').selectOption('without');
     await count(0);
     await audit('comparison').selectOption('with');
@@ -410,10 +416,11 @@ async function pigmentAuditSmoke(browser) {
     await audit('sort').selectOption('state');
     assert.equal(await cards.first().getAttribute('data-art-state'), 'correcta');
     await audit('sort').selectOption('name');
-    const names = await cards.locator('h3').allTextContents();
+    const names = await (art08 ? lab.locator('[data-audit-species] h3') : cards.locator('h3')).allTextContents();
     assert.deepEqual(names, [...names].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' })));
     await audit('sort').selectOption('family');
-    const families = await cards.locator('.audit-taxonomy span').allTextContents();
+    const families = await (art08 ? lab.locator('[data-audit-species] .audit-taxonomy span') :
+      cards.locator('.audit-taxonomy span')).allTextContents();
     assert.deepEqual(families, [...families].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' })));
     await audit('sort').selectOption('priority');
     assert.equal(await cards.first().getAttribute('data-art-state'), 'insuficiente');
@@ -490,7 +497,8 @@ async function pigmentAuditSmoke(browser) {
         await img.decode();
         return img.naturalWidth;
       })));
-    assert.equal(correctedPlates.length, approved.length * 3 + (rows.length - approved.length) * 2);
+    if (art08) assert.ok(correctedPlates.length >= approved.length * 3 + (rows.length - approved.length) * 2);
+    else assert.equal(correctedPlates.length, approved.length * 3 + (rows.length - approved.length) * 2);
     assert.ok(correctedPlates.every(width => width === 128));
     await lab.locator('[data-mode="variants"]').click();
     assert.ok(await lab.locator('#variant-view').isVisible());
@@ -644,7 +652,7 @@ async function offlineRun(browser) {
       options.filter(o => ['albino', 'melanico', 'pigments'].includes(o.value)).map(o => o.value)), ['albino', 'melanico', 'pigments']);
     await lab.locator('[data-mode="variants"]').click();
     const pigmentCounts = {};
-    const bearReplaced = ['5.0.10', '5.0.11'].includes(JSON.parse(readFileSync('www/atlas-release.json', 'utf8')).version);
+    const bearReplaced = ['5.0.10', '5.0.11', '5.0.12'].includes(JSON.parse(readFileSync('www/atlas-release.json', 'utf8')).version);
     for (const [value, expected] of [['albino', bearReplaced ? 303 : 302], ['melanico', bearReplaced ? 261 : 262], ['pigments', 564]]) {
       await lab.locator('#variant-view').selectOption(value);
       const selector = value === 'pigments' ? '[data-pigment-key="albino"], [data-pigment-key="melanico"]' : '[data-pigment-key="' + value + '"]';

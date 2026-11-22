@@ -61,3 +61,7 @@ ART-06 aprobó ocho correcciones de variantes insuficientes y sustituyó el oso 
 ## Continuidad en V5.0.11
 
 ART-07 aprobó doce correcciones de variantes insuficientes en dos lotes de seis. El inventario registra 174 variantes examinadas, 68 correctas, 104 mejorables, 2 insuficientes y 390 pendientes de evaluación. Los casos melánicos de león y zorro ártico quedan reservados para revisión biológica. [Informe y comparativas](../arte-v5011/README.md) · [Inventario vigente](../arte-v5011/inventario-aud04.json)
+
+## Continuidad en V5.0.12
+
+ART-08 corrigió veinte variantes previamente clasificadas como mejorables. El inventario registra 174 variantes examinadas, 88 correctas, 84 mejorables, 2 insuficientes y 390 pendientes de evaluación. El visor reúne las 564 variantes de 479 animales, con 20 fichas por página de forma predeterminada. [Informe y bibliotecas](../arte-v5012/README.md) · [Inventario vigente](../arte-v5012/inventario-aud04.json)

@@ -61,8 +61,7 @@ function createPigmentAudit() {
     const morph = row.latest?.morph
       ? row.latest.morph + ' · ' + row.latest.evidence
       : row.latest?.interpretation;
-    return '<div class="audit-tags"><span>' + labels[row.variant] + '</span>' +
-      '<span class="audit-state" data-state="' + text(row.state) + '">' + states[row.state] + '</span></div>' +
+    return '<div class="audit-tags"><span class="audit-state" data-state="' + text(row.state) + '">' + states[row.state] + '</span></div>' +
       (morph ? '<p class="audit-morph">' + text(morph) + '</p>' : '');
   }
 
@@ -167,7 +166,8 @@ function createPigmentAudit() {
   for (const button of pagination) button.addEventListener('click', () => {
     page += Number(button.dataset.auditPage);
     draw();
-    const active = pagination.find(control => !control.disabled && control.closest('#audit-navigation'));
+    const available = pagination.filter(control => !control.disabled && control.closest('#audit-navigation'));
+    const active = available.find(control => control.dataset.auditPage === button.dataset.auditPage) || available[0];
     active?.focus({ preventScroll: true });
     byId('audit-navigation').scrollIntoView({ block: 'start' });
   });
