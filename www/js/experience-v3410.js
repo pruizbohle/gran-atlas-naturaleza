@@ -47,5 +47,24 @@ function render(m,preference='visible'){
  if(preference==='hidden')return '<button type="button" class="ux3410-show" data-action="ux-compass-show">Mostrar Brújula del naturalista</button>';
  const collapsed=preference==='collapsed';return '<section class="ux3410-compass" aria-label="Brújula del naturalista" data-ux-compass><header><span class="ux3410-rose" aria-hidden="true">✥</span><h3>Brújula del naturalista</h3><button type="button" data-action="ux-compass-fold" aria-expanded="'+!collapsed+'" aria-label="'+(collapsed?'Desplegar':'Plegar')+' Brújula">'+(collapsed?'+':'−')+'</button><button type="button" data-action="ux-compass-hide" aria-label="Ocultar Brújula">×</button></header>'+(collapsed?'':'<div class="ux3410-direction"><strong>'+escape(m.title)+'</strong><p>'+escape(m.detail)+'</p>'+(m.kind==='neutral'?'':'<progress value="'+m.progress.value+'" max="'+m.progress.target+'" aria-label="Progreso del objetivo"></progress>')+'<button type="button" class="btn alt" data-action="ux-compass-go" data-id="'+escape(m.key)+'">'+escape(m.action.label)+'</button></div>')+'</section>';
 }
-const api=Object.freeze({suggest,render,escape});if(typeof module==='object'&&module.exports)module.exports=api;root.AtlasExperience3410=api;
+const guideTopics={
+  atlas:['Desbloquear regiones','Selecciona un hexágono y consulta sus requisitos. Publicar monografías da prestigio. Algunas rutas también piden una investigación, un mapa o equipo fabricado.', ['module','journal','Abrir Cuaderno']],
+  field:['Registrar tus primeros avistamientos','Elige hábitat, horario y estación en Entorno. Pulsa Observar fauna y consulta el Cuaderno. El equipo y la contratación de naturalistas amplían tus opciones de búsqueda.', ['module','research','Ver apoyos en Investigación']],
+  journal:['Completar una monografía','Elige una especie y revisa las cinco etapas. Reúne las observaciones, las evidencias y los recursos que pide cada una. Publica la monografía terminada en Sociedad.', ['society','publications','Consultar publicaciones']],
+  research:['Investigar y preparar una expedición','Cada estudio muestra costos, prerrequisitos y bonificaciones. Consulta también el equipo y las recetas que pide la ruta de tu próximo destino.', ['module','objects','Abrir Inventario']],
+  expeditions:['Enviar una expedición','En Campamento, abre el Astillero para consultar costos, requisitos y duración de cada ruta. Al regresar, revisa el recibo de libras, conocimiento, materiales y posibles indicios.', ['research','astillero','Consultar Astillero básico']],
+  objects:['Obtener y fabricar materiales','Abre una ficha para ver sus fuentes, como Campo, expediciones, comercio o excavaciones. El Taller indica las cantidades necesarias para fabricar. Equipa las piezas para activar sus efectos.', ['module','expeditions','Abrir Campamento']],
+  bestiary:['Consultar especies y legendarios','El Bestiario revela información a medida que identificas especies. Los ejemplares legendarios se encuentran excepcionalmente en Campo y cada identidad queda registrada una sola vez.', ['museum','exhibitions','Ver la colección del Museo']],
+  museum:['Exhibiciones y relictos','Las monografías publicadas permiten exponer muestras de animales. En Relictos reúne indicios de ubicación, hábitat y horario. El hallazgo en Campo abre la ficha y su vitrina.', ['museum-room','relicts','Consultar Relictos']],
+  society:['Publicaciones, encargos y reconocimientos','Publica los estudios que ya completaste y consulta los requisitos de encargos y subvenciones. Los reconocimientos registran hitos de tu expedición.', ['module','journal','Abrir Cuaderno']],
+  crown:['Consultar el saldo histórico','La Corona conserva el saldo de las partidas anteriores. Los fondos de juego se obtienen en Sociedad, expediciones y exhibiciones del Museo.', ['society','grants','Consultar financiación']]
+};
+function guide(module){
+ const topic=Object.hasOwn(guideTopics,module)?guideTopics[module]:null;
+ if(!topic)return '';
+ const [title,body,[type,id,label]]=topic;
+ return '<details class="ux3410-guide"><summary>Guía del naturalista</summary><div><h2>'+escape(title)+'</h2><p>'+escape(body)+'</p>'+
+  '<button type="button" class="ux3410-link" data-action="ux-open" data-id="'+type+'|'+id+'">'+escape(label)+'</button></div></details>';
+}
+const api=Object.freeze({suggest,render,escape,guide});if(typeof module==='object'&&module.exports)module.exports=api;root.AtlasExperience3410=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

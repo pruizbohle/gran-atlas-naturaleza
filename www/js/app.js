@@ -3660,26 +3660,26 @@ const MUSEUM_FOSSIL_RECIPES=[
  {id:"carnotaurus_mount",name:"Reconstrucción de Carnotauro",icon:"🦖",requires:{bone_long:9,bone_short:15,carnivore_skull:1,fossil_horn:2,fossil_claw:3},unique:true}
 ];
 const MUSEUM_RELICTS=[
- {id:'coelacanth_indic',name:'Celacanto del Índico',latin:'Latimeria chalumnae',icon:'🐟',region:'HX-10-12',habitats:['costa'],times:['atardecer','noche'],desc:'Pez de aletas lobuladas que aún vive en el Índico occidental. Su primer registro por la ciencia moderna data de 1938.',shape:'fish',locality:'Aguas del cabo Oriental',habitatDetail:'Fondos rocosos de la plataforma, representados con el entorno de costa.'},
- {id:'atlas_lion',name:'León del Atlas',latin:'Panthera leo leo',icon:'🦁',region:'HX-06-08',habitats:['montana','estepa'],times:['amanecer','atardecer','noche'],desc:'Población histórica norteafricana, desaparecida de la naturaleza en la actualidad.',shape:'lion',speciesId:'af_leon',locality:'Montañas del Atlas, norte de África',habitatDetail:'Montes y estepas norteafricanas.'},
- {id:'seychelles_sheathbat',name:'Murciélago de Seychelles',latin:'Coleura seychellensis',icon:'🦇',region:'HX-07-14',habitats:['bosque'],times:['atardecer','noche'],desc:'Murciélago insular muy amenazado, de detección excepcional.',shape:'bat',locality:'Islas Seychelles',habitatDetail:'Bosques costeros próximos a refugios rocosos.'},
- {id:'gabon_dwarf_croc',name:'Cocodrilo enano africano',latin:'Osteolaemus tetraspis',icon:'🐊',region:'HX-08-10',habitats:['rio','bosque','humedal'],times:['atardecer','noche'],desc:'Crocodílido forestal de distribución restringida.',shape:'croc',speciesId:'af_xlsx_cocodrilo_enano',locality:'Gabón y litoral ecuatorial',habitatDetail:'Cursos lentos y humedales dentro del bosque.'},
- {id:"angonoka",name:"Tortuga angonoka",latin:"Astrochelys yniphora",icon:"🐢",region:"HX-09-14",habitats:["bosque","pradera"],times:["amanecer","dia","atardecer"],desc:"Tortuga endémica de Madagascar y gravemente amenazada; relicto insular extraordinario.",shape:"tortoise",locality:'Bahía de Baly, noroeste de Madagascar',habitatDetail:'Bosque seco y claros de matorral de la bahía de Baly.'},
- {id:"african_lungfish",name:"Pez pulmonado africano",latin:"Protopterus aethiopicus",icon:"🐟",region:"HX-09-11",habitats:["humedal"],times:["amanecer","atardecer","noche"],desc:"Pez de linaje antiguo capaz de respirar aire; hallazgo museístico extraordinario.",shape:"lungfish",locality:'Grandes lagos de África oriental',habitatDetail:'Humedales y aguas someras de los lagos.'},
- {id:"white_sturgeon",name:"Esturión blanco del Pacífico",latin:"Acipenser transmontanus",icon:"🐟",region:"HX-02-02",habitats:["rio"],times:["amanecer","atardecer","noche"],desc:"Linaje muy antiguo de peces; archivo de observaciones fluviales en Columbia Británica.",shape:"sturgeon",locality:'Sistema del río Fraser',habitatDetail:'Canal principal y pozas profundas del Fraser.'},
- {id:"gharial",name:"Gavial del Ganges",latin:"Gavialis gangeticus",icon:"🐊",region:"HX-05-16",habitats:["rio"],times:["amanecer","dia","atardecer"],desc:"Crocodiliano de hocico estrecho y linaje singular; registros excepcionales de ríos del subcontinente indio.",shape:"gharial",locality:'Cuenca del río Ganges',habitatDetail:'Ríos anchos, bancos arenosos y aguas permanentes.'},
- {id:"olm_balkans",name:"Proteo de las cuevas",latin:"Proteus anguinus",icon:"🦎",region:"HX-03-12",habitats:["rio"],times:["noche"],desc:"Anfibio cavernícola de los sistemas kársticos balcánicos; se investiga mediante registros subterráneos, no por aparición superficial.",shape:"olm",locality:'Karst dinárico',habitatDetail:'Arroyos subterráneos en cuevas kársticas, accesibles desde el entorno Río. El horario indica el turno de prospección.'},
- {"id":"thylacine","name":"Tilacino","latin":"Thylacinus cynocephalus","region":"oc_tasmania","habitats":["bosque","pradera"],"times":["atardecer","noche"],"locality":"Tasmania","habitatDetail":"Borde de bosque y claros con cobertura.","desc":"Marsupial carnívoro de dorso rayado. En 1842 persistía en Tasmania y el último ejemplar cautivo murió en 1936.","plate":true},
- {"id":"great_auk","name":"Alca gigante","latin":"Pinguinus impennis","region":"mar_atlantico_septentrional","habitats":["archipielago"],"times":["amanecer","dia"],"locality":"Eldey, frente a Islandia","habitatDetail":"Islotes rocosos de cría del Atlántico norte.","desc":"Ave marina no voladora del Atlántico norte. En 1842 sobrevivían los últimos ejemplares cerca de Islandia, donde se documentaron los últimos en 1844.","plate":true},
- {"id":"falkland_wolf","name":"Lobo de las Malvinas","latin":"Dusicyon australis","region":"mar_atlantico_austral","habitats":["archipielago"],"times":["amanecer","atardecer"],"locality":"Islas Malvinas","habitatDetail":"Pastizales y dunas insulares, observados desde tierra.","desc":"También llamado guará. Fue el único mamífero terrestre nativo de las islas Malvinas y desapareció en el siglo XIX.","plate":true},
- {"id":"carolina_parakeet","name":"Periquito de Carolina","latin":"Conuropsis carolinensis","region":"HX-03-04","habitats":["bosque","humedal"],"times":["amanecer","dia","atardecer"],"locality":"Este de Norteamérica","habitatDetail":"Bosques de llanura aluvial y márgenes arboladas.","desc":"Loro norteamericano de rostro naranja y cola larga. En 1842 aún se encontraba en bosques y humedales del este de Norteamérica.","plate":true},
- {"id":"huia","name":"Huía","latin":"Heteralocha acutirostris","region":"oc_nueva_zelanda","habitats":["bosque"],"times":["amanecer","dia"],"locality":"Sur de la Isla Norte","habitatDetail":"Bosques nativos maduros de la Isla Norte neozelandesa.","desc":"Ave neozelandesa de plumaje oscuro y carúnculas anaranjadas. La lámina muestra a una hembra, cuyo pico largo y curvo la distingue del macho.","plate":true},
- {"id":"caribbean_monk_seal","name":"Foca monje del Caribe","latin":"Neomonachus tropicalis","region":"gm06_antillas","habitats":["costa"],"times":["amanecer","dia","atardecer"],"locality":"Caribe insular","habitatDetail":"Playas, cayos y orillas tranquilas del Caribe.","desc":"Foca tropical que descansaba en costas e islotes del Caribe. Estaba presente en 1842 y su último registro confirmado fue en 1952.","plate":true},
- {"id":"chinese_paddlefish","name":"Pez espátula chino","latin":"Psephurus gladius","region":"HX-05-17","habitats":["rio"],"times":["amanecer","atardecer","noche"],"locality":"Cuenca del Yangtsé","habitatDetail":"Canal fluvial principal y pozas profundas del Yangtsé.","desc":"Pez migratorio del Yangtsé con un rostro alargado en forma de espada. Vivía en 1842 y se extinguió a comienzos del siglo XXI.","plate":true},
- {"id":"australian_lungfish","name":"Pez pulmonado australiano","latin":"Neoceratodus forsteri","region":"oc_costa_nordeste_australiana","habitats":["rio"],"times":["atardecer","noche"],"locality":"Ríos Burnett y Mary, Queensland","habitatDetail":"Tramos fluviales lentos y pozas con vegetación sumergida.","desc":"Pez pulmonado australiano viviente de grandes escamas y aletas pareadas lobuladas. Su distribución nativa está ligada a los ríos Burnett y Mary.","plate":true},
- {"id":"largetooth_sawfish","name":"Pez sierra común","latin":"Pristis pristis","region":"HX-04-04","habitats":["rio","costa"],"times":["amanecer","atardecer","noche"],"locality":"Golfo de México","habitatDetail":"Estuarios y desembocaduras de aguas someras.","desc":"Raya con rostro dentado capaz de remontar aguas dulces. Corresponde al pez sierra de dientes grandes, Pristis pristis.","plate":true},
- {"id":"cuban_solenodon","name":"Solenodonte cubano","latin":"Atopogale cubana","region":"gm06_antillas","habitats":["bosque","selva"],"times":["noche"],"locality":"Oriente de Cuba","habitatDetail":"Bosques húmedos y su hojarasca en el oriente cubano.","desc":"Mamífero nocturno de hocico móvil, distinto del solenodonte de La Española. También se conoce como Solenodon cubanus.","plate":true},
- {"id":"fiji_banded_iguana","name":"Iguana bandeada de Fiyi","latin":"Brachylophus fasciatus","region":"gm06_melanesia","habitats":["bosque","selva"],"times":["amanecer","dia"],"locality":"Islas Lau y otras islas orientales de Fiyi","habitatDetail":"Dosel y ramas de bosques insulares de Fiyi oriental.","desc":"Iguana arborícola viviente. La lámina muestra un macho de la forma bandeada oriental, con franjas claras sobre el cuerpo verde.","plate":true}
+ {id:'coelacanth_indic',name:'Celacanto del Índico',latin:'Latimeria chalumnae',icon:'🐟',region:'HX-10-12',habitats:['costa'],times:['atardecer','noche'],desc:'Pez de aletas lobuladas que aún vive en el Índico occidental. Su primer registro por la ciencia moderna data de 1938.',shape:'fish',locality:'Aguas del cabo Oriental',habitatDetail:'Fondos rocosos de la plataforma, representados con el entorno de costa.',beforeSvg:true},
+ {id:'atlas_lion',name:'León del Atlas',latin:'Panthera leo leo',icon:'🦁',region:'HX-06-08',habitats:['montana','estepa'],times:['amanecer','atardecer','noche'],desc:'Población histórica norteafricana, desaparecida de la naturaleza en la actualidad.',shape:'lion',speciesId:'af_leon',locality:'Montañas del Atlas, norte de África',habitatDetail:'Montes y estepas norteafricanas.',beforeSvg:true},
+ {id:'seychelles_sheathbat',name:'Murciélago de Seychelles',latin:'Coleura seychellensis',icon:'🦇',region:'HX-07-14',habitats:['bosque'],times:['atardecer','noche'],desc:'Murciélago insular muy amenazado, de detección excepcional.',shape:'bat',locality:'Islas Seychelles',habitatDetail:'Bosques costeros próximos a refugios rocosos.',beforeSvg:true},
+ {id:'gabon_dwarf_croc',name:'Cocodrilo enano africano',latin:'Osteolaemus tetraspis',icon:'🐊',region:'HX-08-10',habitats:['rio','bosque','humedal'],times:['atardecer','noche'],desc:'Crocodílido forestal de distribución restringida.',shape:'croc',speciesId:'af_xlsx_cocodrilo_enano',locality:'Gabón y litoral ecuatorial',habitatDetail:'Cursos lentos y humedales dentro del bosque.',beforeSvg:true},
+ {id:"angonoka",name:"Tortuga angonoka",latin:"Astrochelys yniphora",icon:"🐢",region:"HX-09-14",habitats:["bosque","pradera"],times:["amanecer","dia","atardecer"],desc:"Tortuga endémica de Madagascar y gravemente amenazada; relicto insular extraordinario.",shape:"tortoise",locality:'Bahía de Baly, noroeste de Madagascar',habitatDetail:'Bosque seco y claros de matorral de la bahía de Baly.',beforeSvg:true},
+ {id:"african_lungfish",name:"Pez pulmonado africano",latin:"Protopterus aethiopicus",icon:"🐟",region:"HX-09-11",habitats:["humedal"],times:["amanecer","atardecer","noche"],desc:"Pez de linaje antiguo capaz de respirar aire; hallazgo museístico extraordinario.",shape:"lungfish",locality:'Grandes lagos de África oriental',habitatDetail:'Humedales y aguas someras de los lagos.',beforeSvg:true},
+ {id:"white_sturgeon",name:"Esturión blanco del Pacífico",latin:"Acipenser transmontanus",icon:"🐟",region:"HX-02-02",habitats:["rio"],times:["amanecer","atardecer","noche"],desc:"Linaje muy antiguo de peces; archivo de observaciones fluviales en Columbia Británica.",shape:"sturgeon",locality:'Sistema del río Fraser',habitatDetail:'Canal principal y pozas profundas del Fraser.',beforeSvg:true},
+ {id:"gharial",name:"Gavial del Ganges",latin:"Gavialis gangeticus",icon:"🐊",region:"HX-05-16",habitats:["rio"],times:["amanecer","dia","atardecer"],desc:"Crocodiliano de hocico estrecho y linaje singular; registros excepcionales de ríos del subcontinente indio.",shape:"gharial",locality:'Cuenca del río Ganges',habitatDetail:'Ríos anchos, bancos arenosos y aguas permanentes.',beforeSvg:true},
+ {id:"olm_balkans",name:"Proteo de las cuevas",latin:"Proteus anguinus",icon:"🦎",region:"HX-03-12",habitats:["rio"],times:["noche"],desc:"Anfibio cavernícola de los sistemas kársticos balcánicos; se investiga mediante registros subterráneos, no por aparición superficial.",shape:"olm",locality:'Karst dinárico',habitatDetail:'Arroyos subterráneos en cuevas kársticas, accesibles desde el entorno Río. El horario indica el turno de prospección.',beforeSvg:true},
+ {"id":"thylacine","name":"Tilacino","latin":"Thylacinus cynocephalus","region":"oc_tasmania","habitats":["bosque","pradera"],"times":["atardecer","noche"],"locality":"Tasmania","habitatDetail":"Borde de bosque y claros con cobertura.","desc":"Marsupial carnívoro de dorso rayado. En 1842 persistía en Tasmania y el último ejemplar cautivo murió en 1936."},
+ {"id":"great_auk","name":"Alca gigante","latin":"Pinguinus impennis","region":"mar_atlantico_septentrional","habitats":["archipielago"],"times":["amanecer","dia"],"locality":"Eldey, frente a Islandia","habitatDetail":"Islotes rocosos de cría del Atlántico norte.","desc":"Ave marina no voladora del Atlántico norte. En 1842 sobrevivían los últimos ejemplares cerca de Islandia, donde se documentaron los últimos en 1844."},
+ {"id":"falkland_wolf","name":"Lobo de las Malvinas","latin":"Dusicyon australis","region":"mar_atlantico_austral","habitats":["archipielago"],"times":["amanecer","atardecer"],"locality":"Islas Malvinas","habitatDetail":"Pastizales y dunas insulares, observados desde tierra.","desc":"También llamado guará. Fue el único mamífero terrestre nativo de las islas Malvinas y desapareció en el siglo XIX."},
+ {"id":"carolina_parakeet","name":"Periquito de Carolina","latin":"Conuropsis carolinensis","region":"HX-03-04","habitats":["bosque","humedal"],"times":["amanecer","dia","atardecer"],"locality":"Este de Norteamérica","habitatDetail":"Bosques de llanura aluvial y márgenes arboladas.","desc":"Loro norteamericano de rostro naranja y cola larga. En 1842 aún se encontraba en bosques y humedales del este de Norteamérica."},
+ {"id":"huia","name":"Huía","latin":"Heteralocha acutirostris","region":"oc_nueva_zelanda","habitats":["bosque"],"times":["amanecer","dia"],"locality":"Sur de la Isla Norte","habitatDetail":"Bosques nativos maduros de la Isla Norte neozelandesa.","desc":"Ave neozelandesa de plumaje oscuro y carúnculas anaranjadas. La lámina muestra a una hembra, cuyo pico largo y curvo la distingue del macho."},
+ {"id":"caribbean_monk_seal","name":"Foca monje del Caribe","latin":"Neomonachus tropicalis","region":"gm06_antillas","habitats":["costa"],"times":["amanecer","dia","atardecer"],"locality":"Caribe insular","habitatDetail":"Playas, cayos y orillas tranquilas del Caribe.","desc":"Foca tropical que descansaba en costas e islotes del Caribe. Estaba presente en 1842 y su último registro confirmado fue en 1952."},
+ {"id":"chinese_paddlefish","name":"Pez espátula chino","latin":"Psephurus gladius","region":"HX-05-17","habitats":["rio"],"times":["amanecer","atardecer","noche"],"locality":"Cuenca del Yangtsé","habitatDetail":"Canal fluvial principal y pozas profundas del Yangtsé.","desc":"Pez migratorio del Yangtsé con un rostro alargado en forma de espada. Vivía en 1842 y se extinguió a comienzos del siglo XXI."},
+ {"id":"australian_lungfish","name":"Pez pulmonado australiano","latin":"Neoceratodus forsteri","region":"oc_costa_nordeste_australiana","habitats":["rio"],"times":["atardecer","noche"],"locality":"Ríos Burnett y Mary, Queensland","habitatDetail":"Tramos fluviales lentos y pozas con vegetación sumergida.","desc":"Pez pulmonado australiano viviente de grandes escamas y aletas pareadas lobuladas. Su distribución nativa está ligada a los ríos Burnett y Mary."},
+ {"id":"largetooth_sawfish","name":"Pez sierra común","latin":"Pristis pristis","region":"HX-04-04","habitats":["rio","costa"],"times":["amanecer","atardecer","noche"],"locality":"Golfo de México","habitatDetail":"Estuarios y desembocaduras de aguas someras.","desc":"Raya con rostro dentado capaz de remontar aguas dulces. Corresponde al pez sierra de dientes grandes, Pristis pristis."},
+ {"id":"cuban_solenodon","name":"Solenodonte cubano","latin":"Atopogale cubana","region":"gm06_antillas","habitats":["bosque","selva"],"times":["noche"],"locality":"Oriente de Cuba","habitatDetail":"Bosques húmedos y su hojarasca en el oriente cubano.","desc":"Mamífero nocturno de hocico móvil, distinto del solenodonte de La Española. También se conoce como Solenodon cubanus."},
+ {"id":"fiji_banded_iguana","name":"Iguana bandeada de Fiyi","latin":"Brachylophus fasciatus","region":"gm06_melanesia","habitats":["bosque","selva"],"times":["amanecer","dia"],"locality":"Islas Lau y otras islas orientales de Fiyi","habitatDetail":"Dosel y ramas de bosques insulares de Fiyi oriental.","desc":"Iguana arborícola viviente. La lámina muestra un macho de la forma bandeada oriental, con franjas claras sobre el cuerpo verde."}
 ];
 const relictById=new Map(MUSEUM_RELICTS.map(relict=>[relict.id,relict]));
 const relictsByRegion=new Map();
@@ -4092,7 +4092,6 @@ function renderMuseumCollections(tab){
 // Cinco salas: los animales ocupan las doce vitrinas originales;
 // las colecciones científicas tienen exhibición independiente, sin renta.
 function relictArtwork(relict,size){
- if(!relict.plate)return globalThis.ATLAS_RELICT_ART?.render(relict.id)||'';
  const file='./naturalist-art/relicts/'+(size===512?'':size+'/')+relict.id+'.webp';
  return '<img class="relict-plate" src="'+file+'" width="'+size+'" height="'+size+'" alt="'+esc(relict.name)+'" decoding="async">';
 }
@@ -4441,7 +4440,7 @@ function museumRelict3270(r){
  let actions=[];
  if(owned)actions=[{action:'museum-display',token,label:displayed?'Retirar vitrina':'Exponer',alt:true}];
  else if(leads<3)actions=[{action:'start-relict-survey',token,label:survey?'Investigar · £'+survey.money+' / '+survey.knowledge+' K':'Archivo no disponible',enabled:canStartRelictSurvey(r.id),alt:true}];
- if(!owned&&leads&&state.regionUnlocked[r.region])actions.push({action:'relict-travel',token,label:'Ir a Campo',alt:true});
+ if(!owned&&leads&&regionAccessible(region))actions.push({action:'relict-travel',token,label:'Ir a Campo',alt:true});
  return {token,kind:'Relicto del gabinete',name:museumRelictName3270(r),latin:owned?r.latin:'',owned,open:owned,
   art:owned?relictArtwork(r,256):'',status:owned?displayed?'En exposición':'Descubierto':leads===3?'Buscar en Campo':leads?'Indicios encontrados':'Sin indicios',
   leads,details,description:owned?r.desc:'',actions};
@@ -4542,7 +4541,7 @@ function museumAction3270(action,token,quantity,source){
  if(action==='start-relict-survey'&&p.kind==='relict')startRelictSurvey(p.id);
  if(action==='relict-travel'&&p.kind==='relict'&&relictLeadCount(p.id)>0){
   const relict=relictById.get(p.id);
-  if(relict&&state.regionUnlocked[relict.region])travelToRegion(relict.region);
+  if(relict)uxNavigate3410('travel',relict.region);
  }
  if(action==='collect-relict-survey'&&p.kind==='survey')collectRelictSurvey(p.id);
  if(action==='claim-relict-milestone'&&p.kind==='milestone')claimRelictMilestone(p.id);
@@ -7571,10 +7570,12 @@ function uxNavigate3410(type,id){
  else if(type==='research'){if(!researchIndex3280.has(id))return false;developmentAction3280('er28-research',id);return true;}
  else if(type==='atlas'){const r=REGIONS.find(r=>r.id===id);if(!r)return false;state.atlasView=r.continent;state.atlasSelectedRegion=r.id;tab='atlas';}
  else if(type==='field'){tab='field';}
+ else if(type==='travel'){if(!REGIONS.some(r=>r.id===id&&regionAccessible(r)))return false;travelToRegion(id);return true;}
  else if(type==='journal'){if(!SPECIES[id]||!currentRegion().species.includes(id)||!state.discovered[id])return false;state.selectedJournal=id;tab='journal';}
  else if(type==='publication'){if(!SPECIES[id]||stage(id)<5||state.published[id])return false;state.societyView='publications';state.publicationView='monographs';tab='society';}
  else if(type==='mission'){if(!globalThis.AtlasCommissions3370?.models(state,commissionContext3370()).some(m=>m.id===id))return false;state.societyView='missions';tab='society';renderPanel();globalThis.AtlasCommissionsUI3370?.find(id);return true;}
- else if(type==='museum'){if(!['exhibitions','samples','fossils','relicts','artifacts'].includes(id))return false;tab='museum';museumSetRoom3270(id);return true;}
+ else if(type==='equipment'){if(id!=='equipo')return false;state.inventoryView=id;tab='objects';}
+ else if(type==='museum'||type==='museum-room'){if(!['exhibitions','samples','fossils','relicts','artifacts'].includes(id))return false;tab='museum';museumSetRoom3270(id);return true;}
  else if(type==='trade'){if(!['routes','contracts','barters','market','register'].includes(id))return false;tab='expeditions';navigationTab3300='commerce';tradeSection3390=id;}
  else if(type==='voyage'){if(!VOYAGES.some(v=>v.id===id))return false;tab='expeditions';navigationTab3300='expeditions';developmentUI3280.route=id;}
  else if(type==='society'){if(!['grants','missions','publications','achievements'].includes(id))return false;state.societyView=id;tab='society';}
@@ -7588,10 +7589,10 @@ function compassAction3410(action,id){
 // UX3410 END contextual orientation
 
 // UX3410 BEGIN safe contextual navigation
-const uxLabels3410={atlas:'Atlas',field:'Campo',journal:'Cuaderno',research:'Investigación',society:'Sociedad',bestiary:'Bestiario',museum:'Museo',expeditions:'Expediciones',objects:'Inventario',crown:'Corona'};
+const uxLabels3410={atlas:'Atlas',field:'Campo',journal:'Cuaderno',research:'Investigación',society:'Sociedad',bestiary:'Bestiario',museum:'Museo',expeditions:'Campamento',objects:'Inventario',crown:'Corona'};
 uxRuntime3410.trail=[];
 function uxViewKey3410(){return [tab,state.inventoryView,state.societyView,state.publicationView,state.museumView,state.researchBranch,navigationTab3300,tradeSection3390].filter(Boolean).join('|');}
-function uxViewSnapshot3410(){return {tab,scroll:globalThis.scrollY||0,fields:Object.fromEntries(['inventoryView','societyView','publicationView','museumView','researchBranch','atlasView','atlasSelectedRegion','selectedJournal'].map(k=>[k,state[k]])),inventory:{...inventoryUI3400},navigation:navigationTab3300,commerce:tradeSection3390,development:{route:developmentUI3280.route,filter:developmentUI3280.filter,projects:{...developmentUI3280.projects}}};}
+function uxViewSnapshot3410(){return {tab,scroll:globalThis.scrollY||0,fields:Object.fromEntries(['inventoryView','societyView','publicationView','museumView','researchBranch','atlasView','atlasSelectedRegion','selectedJournal'].map(k=>[k,state[k]])),inventory:{...inventoryUI3400},navigation:navigationTab3300,commerce:tradeSection3390,development:{route:developmentUI3280.route,filter:developmentUI3280.filter,projects:{...developmentUI3280.projects}},museum:Object.fromEntries(['filter','sort','samplePage','galleryPage','relictPage'].map(key=>[key,museumUI3270[key]]))};}
 const uxNavigateBeforeTrail3410=uxNavigate3410;
 uxNavigate3410=function(type,id){
  const before=uxViewSnapshot3410(),trail=uxRuntime3410.trail.slice();uxRuntime3410.trail.push(before);if(uxRuntime3410.trail.length>8)uxRuntime3410.trail.shift();
@@ -7599,7 +7600,7 @@ uxNavigate3410=function(type,id){
  if(type==='module'&&Object.hasOwn(uxLabels3410,id)){tab=id;renderPanel();ok=true;}else ok=uxNavigateBeforeTrail3410(type,id);
  if(!ok)uxRuntime3410.trail=trail;return ok;
 };
-function uxBack3410(){const last=uxRuntime3410.trail.pop();if(!last)return false;for(const [key,value]of Object.entries(last.fields))if(value===undefined)delete state[key];else state[key]=value;Object.assign(inventoryUI3400,last.inventory);navigationTab3300=last.navigation;tradeSection3390=last.commerce;Object.assign(developmentUI3280,last.development);tab=last.tab;renderPanel();globalThis.requestAnimationFrame?.(()=>globalThis.scrollTo?.({top:last.scroll,behavior:'instant'}));return true;}
+function uxBack3410(){const last=uxRuntime3410.trail.pop();if(!last)return false;for(const [key,value]of Object.entries(last.fields))if(value===undefined)delete state[key];else state[key]=value;Object.assign(inventoryUI3400,last.inventory);Object.assign(museumUI3270,last.museum);navigationTab3300=last.navigation;tradeSection3390=last.commerce;Object.assign(developmentUI3280,last.development);tab=last.tab;renderPanel();globalThis.requestAnimationFrame?.(()=>globalThis.scrollTo?.({top:last.scroll,behavior:'instant'}));return true;}
 function uxLink3410(type,id,label){return '<button type="button" class="ux3410-link" data-action="ux-open" data-id="'+type+'|'+id+'">'+esc(label)+'</button>';}
 const atlasModelBeforeLinks3410=atlasRegionModel;
 atlasRegionModel=function(r){
@@ -7648,13 +7649,19 @@ function uxAction3410(action,id){
  return false;
 }
 const panelBeforeTrail3410=renderPanel;
-renderPanel=function(){panelBeforeTrail3410();const last=uxRuntime3410.trail.at(-1);if(last)panel.insertAdjacentHTML?.('afterbegin','<button type="button" class="ux3410-back" data-action="ux-back">‹ Volver a '+uxLabels3410[last.tab]+'</button>');};
+renderPanel=function(){
+ panelBeforeTrail3410();
+ const guide=globalThis.AtlasExperience3410?.guide?.(tab);
+ if(guide)panel.insertAdjacentHTML?.('afterbegin',guide);
+ const last=uxRuntime3410.trail.at(-1);
+ if(last)panel.insertAdjacentHTML?.('afterbegin','<button type="button" class="ux3410-back" data-action="ux-back">‹ Volver a '+uxLabels3410[last.camp3430?.active?'expeditions':last.tab]+'</button>');
+};
 // UX3410 END safe contextual navigation
 
 // UX3410 BEGIN continuity and existing notification stream
 uxRuntime3410.scrolls=new Map();uxRuntime3410.folds=new Map();uxRuntime3410.viewKey=null;uxRuntime3410.lastEvents=[];uxRuntime3410.snapshot=null;
 uxViewKey3410=function(){const detail=tab==='objects'?state.inventoryView:tab==='society'?state.societyView+(state.societyView==='publications'?':'+state.publicationView:''):tab==='museum'?state.museumView:tab==='research'?state.researchBranch:tab==='expeditions'?navigationTab3300+':'+tradeSection3390:tab==='atlas'?state.atlasView:'';return tab+':'+(detail||'');};
-function uxManagedFolds3410(){return [...panel.querySelectorAll('.inv340-filters,.inv340-chart,.inv340-recipe details,.inv340-detail>details,.ux3410-sources>details,.supply-root details,.atlas-requirements')];}
+function uxManagedFolds3410(){return [...panel.querySelectorAll('.inv340-filters,.inv340-chart,.inv340-recipe details,.inv340-detail>details,.ux3410-sources>details,.ux3410-guide,.supply-root details,.atlas-requirements')];}
 function uxFoldKey3410(node,index){const parent=node.closest('[data-supply-contract]');return (node.dataset.supplyContract||node.dataset.curProject||parent?.dataset.supplyContract||'')+':'+node.className+':'+index;}
 const renderBeforeContinuity3410=renderPanel;
 renderPanel=function(){
@@ -7732,7 +7739,7 @@ renderPanel=function(){
   if(cp3430.active&&tab==='museum'&&!['fossils','relicts'].includes(state.museumView)){cp3430.active=false;cp3430.facility=null;}
  }
  cpOriginalRender3430();document.body.classList.toggle('cp3430-camp-open',cp3430.mode==='new'&&(cp3430.active||tab==='expeditions'));document.body.classList.toggle('cp3430-workshop',cp3430.mode==='new'&&cp3430.active&&cp3430.facility==='workshop');
- if(cp3430.mode==='new'&&cp3430.active){panel.querySelector('.ux3410-back')?.remove();panel.insertAdjacentHTML('afterbegin',cpUI3430.section(cp3430.facility));if(tab==='museum')cpMuseumPresentation3430();if(cp3430.facility==='workshop')panel.insertAdjacentHTML('beforeend','<button class="cp3430-inventory-link" type="button" data-cp-inventory>Consultar existencias y equipo en Inventario →</button>');document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab==='expeditions'));document.body.dataset.uxModule='expeditions';}
+ if(cp3430.mode==='new'&&cp3430.active){panel.insertAdjacentHTML('afterbegin',cpUI3430.section(cp3430.facility));if(tab==='museum')cpMuseumPresentation3430();if(cp3430.facility==='workshop')panel.insertAdjacentHTML('beforeend','<button class="cp3430-inventory-link" type="button" data-cp-inventory>Consultar existencias y equipo en Inventario →</button>');document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab==='expeditions'));document.body.dataset.uxModule='expeditions';}
  cpPaintAvatar3430();
 };
 const cpSnapshot3430=uxViewSnapshot3410;
@@ -7772,8 +7779,8 @@ document.addEventListener('click',event=>{
  if(cp3430.mode==='new'){
   if(target.dataset.cpOpen){event.preventDefault();event.stopImmediatePropagation();cpGo3430(target.dataset.cpOpen);return;}
   if(target.matches('[data-cp-back]')){event.preventDefault();event.stopImmediatePropagation();cpHome3430();return;}
-  if(target.dataset.cpMuseum){event.preventDefault();event.stopImmediatePropagation();cp3430.active=false;cp3430.facility=null;tab='museum';state.museumView=target.dataset.cpMuseum;renderPanel();return;}
-  if(target.matches('[data-cp-inventory]')){event.preventDefault();event.stopImmediatePropagation();cp3430.active=false;cp3430.facility=null;tab='objects';state.inventoryView='equipo';renderPanel();return;}
+  if(target.dataset.cpMuseum){event.preventDefault();event.stopImmediatePropagation();uxNavigate3410('museum-room',target.dataset.cpMuseum);return;}
+  if(target.matches('[data-cp-inventory]')){event.preventDefault();event.stopImmediatePropagation();uxNavigate3410('equipment','equipo');return;}
   if(target.matches('.tab[data-tab]')){cp3430.active=false;cp3430.facility=null;cp3430.pending=null;}
   if(['inventory-tab','trade-inventory'].includes(target.dataset.action)&&target.dataset.id==='taller'){cp3430.pending='workshop';}
   if(target.dataset.action==='er28-expeditions'){cp3430.pending='shipyard';}

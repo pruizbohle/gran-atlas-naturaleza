@@ -56,15 +56,19 @@ test('the twenty relic records use existing regions and independently preserve t
   const oldArt = Object.keys(previousManifest).filter(file => file.startsWith('naturalist-art/plates/'));
   assert.equal(oldArt.length, 6760);
   for (const file of oldArt) assert.deepEqual(manifest[file], previousManifest[file], file);
+  const earlierRelictArt = JSON.parse(execFileSync('git', ['show', '03bf329:www/atlas-integrity.json'], { maxBuffer: 16e6 })).files;
+  for (const file of Object.keys(earlierRelictArt).filter(path=>path.startsWith('naturalist-art/relicts/'))) {
+    assert.deepEqual(manifest[file],earlierRelictArt[file],file);
+  }
   const newArt = Object.keys(manifest).filter(file => file.startsWith('naturalist-art/relicts/'));
-  assert.equal(newArt.length, 44);
+  assert.equal(newArt.length, 80);
   for (const row of catalog) {
     const c = conditions(row, game);
     const region = game.REGIONS.find(zone => zone.id === row.region);
     assert.ok(region && row.habitats.every(habitat => region.habitats.includes(habitat)), row.id);
     assert.ok(game.automaticEligibleSpecies(row.region, c.season, c).length, row.id);
     if (row.speciesId) assert.ok(game.SPECIES[row.speciesId], row.id);
-    for (const size of row.plate ? [64, 128, 256, 512] : []) {
+    for (const size of [64, 128, 256, 512]) {
       const url = 'naturalist-art/relicts/' + (size === 512 ? '' : size + '/') + row.id + '.webp';
       const bytes = fs.readFileSync('www/' + url);
       assert.equal(bytes.toString('ascii', 8, 16), 'WEBPVP8X');
@@ -111,7 +115,7 @@ test('all twenty discoveries require the precise region, habitat and time and re
   assert.equal(Object.keys(game.state.museum.relicts).length, 20);
   const first = game.fieldRelictNotice();
   assert.equal(first.id, game.MUSEUM_RELICTS[0].id);
-  assert.match(first.art, /svg/);
+  assert.match(first.art, /128\/coelacanth_indic\.webp/);
 });
 
 test('the production threshold yields 2, 5, 12 and 30 finds per 10,000 valid attempts', () => {
@@ -205,7 +209,7 @@ test('research, voyages, documentary jobs and Field report distinct clues withou
   const modal = game.museumModalModel3270(game.museumToken3270('relict', target.id));
   assert.equal(modal.latin, 'Proteus anguinus');
   assert.ok(modal.details.find(row => row.label === 'Fecha de registro'));
-  assert.match(modal.art, /svg/);
+  assert.match(modal.art, /256\/olm_balkans\.webp/);
 
   const other = game.MUSEUM_RELICTS.find(r => r.id === 'gabon_dwarf_croc');
   const field = conditions(other, game);

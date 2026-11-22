@@ -1,6 +1,14 @@
 {
-  "version": "5.1.2",
+  "version": "5.2.0",
   "atlas": "simple",
+  "v520": {
+    "activeTaxa": 1000,
+    "regions": 125,
+    "legendary": 30,
+    "relicts": 20,
+    "relictWebPFiles": 80,
+    "contextualGuide": true
+  },
   "gm07P04": {
     "activeTaxa": 1000,
     "scientificallyIllustratedTaxa": 950,
@@ -51,7 +59,7 @@
     "reusedSpecies": 10,
     "presences": 192
   },
-  "channel": "audit",
+  "channel": "release",
   "oceania": {
     "regions": 8,
     "taxa": 97,

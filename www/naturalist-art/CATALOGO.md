@@ -1,4 +1,4 @@
-# Inventario naturalista del catálogo 5.1.2
+# Inventario naturalista del catálogo 5.2.0
 
 | Grupo | Familia | ID | Nombre común | Nombre científico | Continente | Zonas del juego | Variantes | Dimorfismo | Ejemplares |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |

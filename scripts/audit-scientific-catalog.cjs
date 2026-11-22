@@ -167,6 +167,31 @@ function aquaticPlatePlan() {
   };
 }
 
+function eligibleConditions(species, region) {
+  const times = ['amanecer', 'dia', 'atardecer', 'noche'];
+  const seasons = ['primavera', 'verano', 'otono', 'invierno'];
+  const methods = region.depthTier ? ['sondeo', 'muestreo', 'extraordinario'] : [null];
+  const survey = game.state.deepSurvey;
+  const previous = survey.method;
+  try {
+    for (const method of methods) {
+      if (method) survey.method = method;
+      for (const habitat of region.habitats) {
+        for (const time of times) {
+          for (const season of seasons) {
+            if (game.eligibleSpecies(region.id, habitat, time, season).includes(species)) {
+              return { habitat, time, season, ...(method && { method }) };
+            }
+          }
+        }
+      }
+    }
+    return null;
+  } finally {
+    survey.method = previous;
+  }
+}
+
 function legendaryCoverage() {
   require('../www/js/naturalist-assets-v400.js');
   const { routes, cutouts, files } = globalThis.AtlasNaturalistAssets;
@@ -184,10 +209,35 @@ function legendaryCoverage() {
     });
     const halo = art.render(id, { variant: 'legendario', category: 'Legendario', size: 128 }, () => '');
     assert.match(halo, /class="atlas-art-frame legendary/);
-    return { ...legendary, commonName: game.SPECIES[id].name, species: game.SPECIES[id].latin, rate: game.specimenRates(id).Legendario, resolutions };
+    const regions = game.REGIONS.filter(region => region.species.includes(id))
+      .map(region => ({ id: region.id, name: region.name, eligible: eligibleConditions(id, region) }));
+    assert.ok(regions.some(region => region.eligible), id);
+    return { ...legendary, commonName: game.SPECIES[id].name, species: game.SPECIES[id].latin,
+      rate: game.specimenRates(id).Legendario, ethology2Rate: game.specimenRates(id, 2).Legendario, regions, resolutions };
   });
   assert.equal(inventory.length, 30);
   for (const key of ['id', 'speciesId', 'species']) assert.equal(new Set(inventory.map(row => row[key])).size, 30);
+  return { version: require('../package.json').version, migrated: inventory.length, inventory };
+}
+
+function relictCoverage() {
+  const { files } = require('../www/atlas-integrity.json');
+  const inventory = game.MUSEUM_RELICTS.map(({ id, name, latin, region, locality, habitats, times, beforeSvg, speciesId }) => {
+    const zone = game.REGIONS.find(item => item.id === region);
+    assert.ok(zone && habitats.every(habitat => zone.habitats.includes(habitat)), id);
+    const resolutions = [64, 128, 256, 512].map(size => {
+      const resource = 'naturalist-art/relicts/' + (size === 512 ? '' : size + '/') + id + '.webp';
+      const data = fs.readFileSync('www/' + resource);
+      const sha256 = createHash('sha256').update(data).digest('hex');
+      assert.deepEqual(files[resource], [data.length, sha256], resource);
+      return { size, resource, bytes: data.length, sha256 };
+    });
+    return { id, name, latin, speciesId, region, hex: zone.code, zone: zone.name, locality, habitats, times,
+      redrawn: beforeSvg === true, resolutions };
+  });
+  assert.equal(inventory.length, 20);
+  assert.equal(inventory.filter(row => row.redrawn).length, 9);
+  assert.equal(new Set(inventory.map(row => row.id)).size, 20);
   return { version: require('../package.json').version, migrated: inventory.length, inventory };
 }
 
@@ -203,9 +253,6 @@ function worldCoverage() {
   const families = new Map();
   const plates = new Set();
   const habitatChecks = [];
-  const times = ['amanecer', 'dia', 'atardecer', 'noche'];
-  const seasons = ['primavera', 'verano', 'otono', 'invierno'];
-
   for (const entry of catalog) {
     const species = game.SPECIES[entry.id];
     const className = game.taxonomyInfo(entry.id).className;
@@ -219,19 +266,7 @@ function worldCoverage() {
       const zone = indexes.get(id);
       if (!zone.habitats.some(habitat => habitats.includes(habitat))) {
         // Some marine and hadal records override the species-wide ecology by region.
-        const original = game.state.deepSurvey.method;
-        let witness;
-        for (const method of ['sondeo', 'muestreo', 'extraordinario']) {
-          game.state.deepSurvey.method = method;
-          witness = zone.habitats.flatMap(habitat => times.flatMap(time => seasons.map(season => ({ habitat, time, season }))))
-            .find(({ habitat, time, season }) => game.eligibleSpecies(id, habitat, time, season).includes(entry.id));
-          if (witness) {
-            if (/^(profundo|abisal)_/.test(id)) witness.method = method;
-            break;
-          }
-        }
-        game.state.deepSurvey.method = original;
-        habitatChecks.push({ species: entry.id, region: id, eligible: witness ?? null });
+        habitatChecks.push({ species: entry.id, region: id, eligible: eligibleConditions(entry.id, zone) });
       }
     }
     const routes = assets.routes[entry.id];
@@ -283,6 +318,8 @@ if (process.argv.includes('--world-coverage')) {
   console.log(JSON.stringify(birdCoverage(), null, 2));
 } else if (process.argv.includes('--legendary-coverage')) {
   console.log(JSON.stringify(legendaryCoverage(), null, 2));
+} else if (process.argv.includes('--relict-coverage')) {
+  console.log(JSON.stringify(relictCoverage(), null, 2));
 } else if (process.argv.includes('--aquatic-plan')) {
   console.log(JSON.stringify(aquaticPlatePlan(), null, 2));
 } else if (process.argv.includes('--herpetology')) {

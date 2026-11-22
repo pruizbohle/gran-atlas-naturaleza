@@ -16,7 +16,14 @@ async function verifyGallery(page) {
   await page.goto(laboratory);
   const gallery = page.locator('#relict-preview');
   assert.equal(await gallery.locator('article').count(), 20);
+  assert.equal(await gallery.locator('img').count(), 20);
+  assert.equal(await gallery.locator('svg').count(), 0);
+  await page.locator('#relict-before').check();
   assert.equal(await gallery.locator('svg').count(), 9);
+  await page.locator('#relict-query').fill('Celacanto');
+  await page.locator('#relict-size').selectOption('64');
+  assert.equal(await gallery.locator('img').evaluate(async img => { await img.decode(); return img.naturalWidth; }), 64);
+  assert.equal(await gallery.locator('svg').count(), 1);
   await page.locator('#relict-query').fill('Thylacinus cynocephalus');
   assert.equal(await gallery.locator('article').count(), 1);
   const image = gallery.locator('img');
@@ -40,6 +47,7 @@ async function play(browser) {
   await page.evaluate(() => {
     const state = AtlasSaveBridge.getSaveData();
     state.regionUnlocked.oc_tasmania = true;
+    state.cartography3400.historicalAccess['Oceanía'] = true;
     state.currentRegion = 'oc_tasmania';
     state.habitat = 'bosque';
     state.time = 'atardecer';
@@ -73,6 +81,9 @@ async function play(browser) {
   assert.equal(await page.evaluate(id => AtlasSaveBridge.getSaveData().museum.relicts[id], specimen), undefined);
   assert.equal(await cabinet.locator('[data-action="catalog-relict"]').count(), 0);
 
+  await card().getByRole('button', { name: 'Ir a Campo' }).click();
+  await page.getByRole('button', { name: 'Volver a Museo' }).click();
+  assert.match(await card().textContent(), /3\/3 indicios/);
   await card().getByRole('button', { name: 'Ir a Campo' }).click();
   const notice = page.locator('#fieldRelictNotice');
   await page.evaluate(() => { window.__relictDraws = [.99999, .00299]; });
@@ -126,7 +137,7 @@ async function verifyOffline(browser) {
   await verifyGallery(page);
   await page.goto(base);
   await page.locator('.mobile-dock [data-tab="field"]').click();
-  assert.match(await page.locator('.subbrand').textContent(), /5\.1\.2/);
+  assert.ok((await page.locator('.subbrand').textContent()).includes(version));
   await context.close();
   return cached - 1;
 }

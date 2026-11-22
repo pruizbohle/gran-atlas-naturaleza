@@ -5,7 +5,8 @@ const AtlasRelictReview = [
     "latin": "Latimeria chalumnae",
     "hex": "HX-10-12",
     "locality": "Aguas del cabo Oriental",
-    "desc": "Pez de aletas lobuladas que aún vive en el Índico occidental. Su primer registro por la ciencia moderna data de 1938."
+    "desc": "Pez de aletas lobuladas que aún vive en el Índico occidental. Su primer registro por la ciencia moderna data de 1938.",
+    "beforeSvg": true
   },
   {
     "id": "atlas_lion",
@@ -13,7 +14,8 @@ const AtlasRelictReview = [
     "latin": "Panthera leo leo",
     "hex": "HX-06-08",
     "locality": "Montañas del Atlas, norte de África",
-    "desc": "Población histórica norteafricana, desaparecida de la naturaleza en la actualidad."
+    "desc": "Población histórica norteafricana, desaparecida de la naturaleza en la actualidad.",
+    "beforeSvg": true
   },
   {
     "id": "seychelles_sheathbat",
@@ -21,7 +23,8 @@ const AtlasRelictReview = [
     "latin": "Coleura seychellensis",
     "hex": "HX-07-14",
     "locality": "Islas Seychelles",
-    "desc": "Murciélago insular muy amenazado, de detección excepcional."
+    "desc": "Murciélago insular muy amenazado, de detección excepcional.",
+    "beforeSvg": true
   },
   {
     "id": "gabon_dwarf_croc",
@@ -29,7 +32,8 @@ const AtlasRelictReview = [
     "latin": "Osteolaemus tetraspis",
     "hex": "HX-08-10",
     "locality": "Gabón y litoral ecuatorial",
-    "desc": "Crocodílido forestal de distribución restringida."
+    "desc": "Crocodílido forestal de distribución restringida.",
+    "beforeSvg": true
   },
   {
     "id": "angonoka",
@@ -37,7 +41,8 @@ const AtlasRelictReview = [
     "latin": "Astrochelys yniphora",
     "hex": "HX-09-14",
     "locality": "Bahía de Baly, noroeste de Madagascar",
-    "desc": "Tortuga endémica de Madagascar y gravemente amenazada; relicto insular extraordinario."
+    "desc": "Tortuga endémica de Madagascar y gravemente amenazada; relicto insular extraordinario.",
+    "beforeSvg": true
   },
   {
     "id": "african_lungfish",
@@ -45,7 +50,8 @@ const AtlasRelictReview = [
     "latin": "Protopterus aethiopicus",
     "hex": "HX-09-11",
     "locality": "Grandes lagos de África oriental",
-    "desc": "Pez de linaje antiguo capaz de respirar aire; hallazgo museístico extraordinario."
+    "desc": "Pez de linaje antiguo capaz de respirar aire; hallazgo museístico extraordinario.",
+    "beforeSvg": true
   },
   {
     "id": "white_sturgeon",
@@ -53,7 +59,8 @@ const AtlasRelictReview = [
     "latin": "Acipenser transmontanus",
     "hex": "HX-02-02",
     "locality": "Sistema del río Fraser",
-    "desc": "Linaje muy antiguo de peces; archivo de observaciones fluviales en Columbia Británica."
+    "desc": "Linaje muy antiguo de peces; archivo de observaciones fluviales en Columbia Británica.",
+    "beforeSvg": true
   },
   {
     "id": "gharial",
@@ -61,7 +68,8 @@ const AtlasRelictReview = [
     "latin": "Gavialis gangeticus",
     "hex": "HX-05-16",
     "locality": "Cuenca del río Ganges",
-    "desc": "Crocodiliano de hocico estrecho y linaje singular; registros excepcionales de ríos del subcontinente indio."
+    "desc": "Crocodiliano de hocico estrecho y linaje singular; registros excepcionales de ríos del subcontinente indio.",
+    "beforeSvg": true
   },
   {
     "id": "olm_balkans",
@@ -69,7 +77,8 @@ const AtlasRelictReview = [
     "latin": "Proteus anguinus",
     "hex": "HX-03-12",
     "locality": "Karst dinárico",
-    "desc": "Anfibio cavernícola de los sistemas kársticos balcánicos; se investiga mediante registros subterráneos, no por aparición superficial."
+    "desc": "Anfibio cavernícola de los sistemas kársticos balcánicos; se investiga mediante registros subterráneos, no por aparición superficial.",
+    "beforeSvg": true
   },
   {
     "id": "thylacine",
@@ -77,8 +86,7 @@ const AtlasRelictReview = [
     "latin": "Thylacinus cynocephalus",
     "hex": "OC-05",
     "locality": "Tasmania",
-    "desc": "Marsupial carnívoro de dorso rayado. En 1842 persistía en Tasmania y el último ejemplar cautivo murió en 1936.",
-    "plate": true
+    "desc": "Marsupial carnívoro de dorso rayado. En 1842 persistía en Tasmania y el último ejemplar cautivo murió en 1936."
   },
   {
     "id": "great_auk",
@@ -86,8 +94,7 @@ const AtlasRelictReview = [
     "latin": "Pinguinus impennis",
     "hex": "HX-03-08",
     "locality": "Eldey, frente a Islandia",
-    "desc": "Ave marina no voladora del Atlántico norte. En 1842 sobrevivían los últimos ejemplares cerca de Islandia, donde se documentaron los últimos en 1844.",
-    "plate": true
+    "desc": "Ave marina no voladora del Atlántico norte. En 1842 sobrevivían los últimos ejemplares cerca de Islandia, donde se documentaron los últimos en 1844."
   },
   {
     "id": "falkland_wolf",
@@ -95,8 +102,7 @@ const AtlasRelictReview = [
     "latin": "Dusicyon australis",
     "hex": "HX-09-11",
     "locality": "Islas Malvinas",
-    "desc": "También llamado guará. Fue el único mamífero terrestre nativo de las islas Malvinas y desapareció en el siglo XIX.",
-    "plate": true
+    "desc": "También llamado guará. Fue el único mamífero terrestre nativo de las islas Malvinas y desapareció en el siglo XIX."
   },
   {
     "id": "carolina_parakeet",
@@ -104,8 +110,7 @@ const AtlasRelictReview = [
     "latin": "Conuropsis carolinensis",
     "hex": "HX-03-04",
     "locality": "Este de Norteamérica",
-    "desc": "Loro norteamericano de rostro naranja y cola larga. En 1842 aún se encontraba en bosques y humedales del este de Norteamérica.",
-    "plate": true
+    "desc": "Loro norteamericano de rostro naranja y cola larga. En 1842 aún se encontraba en bosques y humedales del este de Norteamérica."
   },
   {
     "id": "huia",
@@ -113,8 +118,7 @@ const AtlasRelictReview = [
     "latin": "Heteralocha acutirostris",
     "hex": "OC-08",
     "locality": "Sur de la Isla Norte",
-    "desc": "Ave neozelandesa de plumaje oscuro y carúnculas anaranjadas. La lámina muestra a una hembra, cuyo pico largo y curvo la distingue del macho.",
-    "plate": true
+    "desc": "Ave neozelandesa de plumaje oscuro y carúnculas anaranjadas. La lámina muestra a una hembra, cuyo pico largo y curvo la distingue del macho."
   },
   {
     "id": "caribbean_monk_seal",
@@ -122,8 +126,7 @@ const AtlasRelictReview = [
     "latin": "Neomonachus tropicalis",
     "hex": "GM06-ANTILLAS",
     "locality": "Caribe insular",
-    "desc": "Foca tropical que descansaba en costas e islotes del Caribe. Estaba presente en 1842 y su último registro confirmado fue en 1952.",
-    "plate": true
+    "desc": "Foca tropical que descansaba en costas e islotes del Caribe. Estaba presente en 1842 y su último registro confirmado fue en 1952."
   },
   {
     "id": "chinese_paddlefish",
@@ -131,8 +134,7 @@ const AtlasRelictReview = [
     "latin": "Psephurus gladius",
     "hex": "HX-05-17",
     "locality": "Cuenca del Yangtsé",
-    "desc": "Pez migratorio del Yangtsé con un rostro alargado en forma de espada. Vivía en 1842 y se extinguió a comienzos del siglo XXI.",
-    "plate": true
+    "desc": "Pez migratorio del Yangtsé con un rostro alargado en forma de espada. Vivía en 1842 y se extinguió a comienzos del siglo XXI."
   },
   {
     "id": "australian_lungfish",
@@ -140,8 +142,7 @@ const AtlasRelictReview = [
     "latin": "Neoceratodus forsteri",
     "hex": "OC-02",
     "locality": "Ríos Burnett y Mary, Queensland",
-    "desc": "Pez pulmonado australiano viviente de grandes escamas y aletas pareadas lobuladas. Su distribución nativa está ligada a los ríos Burnett y Mary.",
-    "plate": true
+    "desc": "Pez pulmonado australiano viviente de grandes escamas y aletas pareadas lobuladas. Su distribución nativa está ligada a los ríos Burnett y Mary."
   },
   {
     "id": "largetooth_sawfish",
@@ -149,8 +150,7 @@ const AtlasRelictReview = [
     "latin": "Pristis pristis",
     "hex": "HX-04-04",
     "locality": "Golfo de México",
-    "desc": "Raya con rostro dentado capaz de remontar aguas dulces. Corresponde al pez sierra de dientes grandes, Pristis pristis.",
-    "plate": true
+    "desc": "Raya con rostro dentado capaz de remontar aguas dulces. Corresponde al pez sierra de dientes grandes, Pristis pristis."
   },
   {
     "id": "cuban_solenodon",
@@ -158,8 +158,7 @@ const AtlasRelictReview = [
     "latin": "Atopogale cubana",
     "hex": "GM06-ANTILLAS",
     "locality": "Oriente de Cuba",
-    "desc": "Mamífero nocturno de hocico móvil, distinto del solenodonte de La Española. También se conoce como Solenodon cubanus.",
-    "plate": true
+    "desc": "Mamífero nocturno de hocico móvil, distinto del solenodonte de La Española. También se conoce como Solenodon cubanus."
   },
   {
     "id": "fiji_banded_iguana",
@@ -167,7 +166,6 @@ const AtlasRelictReview = [
     "latin": "Brachylophus fasciatus",
     "hex": "GM06-MELANESIA",
     "locality": "Islas Lau y otras islas orientales de Fiyi",
-    "desc": "Iguana arborícola viviente. La lámina muestra un macho de la forma bandeada oriental, con franjas claras sobre el cuerpo verde.",
-    "plate": true
+    "desc": "Iguana arborícola viviente. La lámina muestra un macho de la forma bandeada oriental, con franjas claras sobre el cuerpo verde."
   }
 ];

@@ -12,7 +12,7 @@ const readRevision = (rev, path) => execFileSync('git', ['show', rev + ':' + pat
 const added = ['naturalist-assets-v400', 'naturalist-art-v400'];
 const legacyFixtures = require('./fixtures/stability-saves-v3240.json');
 const production = ['campamento-perfil-ui-v3430', 'gm06/catalog', 'gm06/geography', 'gm06/art', 'gm07-m01/art', 'gm07-a04/catalog'];
-const historicalSource = [...production, ...added, 'app'].map(read).join('\n');
+const historicalSource = [...production, ...added].map(read).join('\n') + '\n' + readRevision('31951d3', 'www/js/app.js');
 const currentProduction = [...production.slice(0, -1), 'gm07-p04/catalog', production.at(-1)];
 const source = [...currentProduction, ...added, 'app'].map(read).join('\n');
 const art = require('../www/js/naturalist-art-v400.js');
@@ -821,11 +821,11 @@ test('V4.9.3 adds exactly two unique taxa and fourteen scientific plates and pre
   const baseline = '62fa8bad1d65617d6bf233859abce65b7e465761';
   const fromBaseline = path => execFileSync('git', ['show', baseline + ':' + path], { encoding: 'utf8', maxBuffer: 8e6 });
   const old = harness({}, null, { gameSource: [...production, 'app'].map(name => fromBaseline('www/js/' + name + '.js')).join('\n') }).window.__atlasTest;
-  const live = harness({}, null, { gameSource: [...currentProduction, ...added].map(read).join('\n') + '\n' + readRevision('ee39bfc', 'www/js/app.js') }).window.__atlasTest;
+  const live = harness({}, null, { gameSource: [...currentProduction, ...added].map(read).join('\n') + '\n' + readRevision('75c5887', 'www/js/app.js') }).window.__atlasTest;
   const { records } = require('../www/js/gm07-p04/catalog.js');
   const reef = require('../docs/cientifica-v492/inventario-pendiente.json').lots.arrecife.inventory;
   const pending = require('../docs/cientifica-v493/inventario-pendiente.json').lots;
-  const { routes, cutouts, files } = JSON.parse(vm.runInNewContext(readRevision('ee39bfc', 'www/js/naturalist-assets-v400.js') + '\nJSON.stringify(AtlasNaturalistAssets)'));
+  const { routes, cutouts, files } = JSON.parse(vm.runInNewContext(readRevision('75c5887', 'www/js/naturalist-assets-v400.js') + '\nJSON.stringify(AtlasNaturalistAssets)'));
   const { catalog, reefComparisons } = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog,reefComparisons});');
   const accounted = new Set();
   const clone = item => JSON.parse(JSON.stringify(item));
@@ -889,8 +889,8 @@ test('V4.9.5 migrates the fourteen deep-sea taxa and preserves catalogue, relics
   const pending = require('../docs/cientifica-v495/inventario-pendiente.json');
   const { catalog, deepSeaComparisons } = vm.runInNewContext(
     fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\n({catalog,deepSeaComparisons});');
-  const { routes, cutouts, files, landscapes } = JSON.parse(vm.runInNewContext(readRevision('ee39bfc', 'www/js/naturalist-assets-v400.js') + '\nJSON.stringify(AtlasNaturalistAssets)'));
-  const game = harness({}, null, { gameSource: [...currentProduction, ...added].map(read).join('\n') + '\n' + readRevision('ee39bfc', 'www/js/app.js') }).window.__atlasTest;
+  const { routes, cutouts, files, landscapes } = JSON.parse(vm.runInNewContext(readRevision('b510945', 'www/js/naturalist-assets-v400.js') + '\nJSON.stringify(AtlasNaturalistAssets)'));
+  const game = harness({}, null, { gameSource: [...currentProduction, ...added].map(read).join('\n') + '\n' + readRevision('b510945', 'www/js/app.js') }).window.__atlasTest;
   assert.equal(Object.keys(game.SPECIES).length, 1000);
   assert.equal(new Set(game.REGIONS.flatMap(r => [...r.species])).size, 1000);
   assert.equal(game.REGIONS.length, 125);

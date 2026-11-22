@@ -1,0 +1,884 @@
+{
+  "version": "5.2.0",
+  "migrated": 20,
+  "inventory": [
+    {
+      "id": "coelacanth_indic",
+      "name": "Celacanto del Índico",
+      "latin": "Latimeria chalumnae",
+      "region": "HX-10-12",
+      "hex": "HX-10-12",
+      "zone": "Litoral sudoriental africano",
+      "locality": "Aguas del cabo Oriental",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "redrawn": true,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/coelacanth_indic.webp",
+          "bytes": 1466,
+          "sha256": "0c76eebdacd5f9c6972934cce7a6e4daaf2f0e08e2190e4aa506aafb7c2b8bb8"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/coelacanth_indic.webp",
+          "bytes": 3326,
+          "sha256": "b28b79f37d13f39079729e110e4c6e797ce50a96f2d475a7dbf8b20da355e9bd"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/coelacanth_indic.webp",
+          "bytes": 9094,
+          "sha256": "9ccb4fe113c0e8f92ddb50d71f1eb49b5cc96c604cf2d0bd1c69da97c18c5470"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/coelacanth_indic.webp",
+          "bytes": 30274,
+          "sha256": "e4b1cd53c0fe2eff4955b5f4d569b051026f3ea6c4602644db5eda9d5622316a"
+        }
+      ]
+    },
+    {
+      "id": "atlas_lion",
+      "name": "León del Atlas",
+      "latin": "Panthera leo leo",
+      "speciesId": "af_leon",
+      "region": "HX-06-08",
+      "hex": "HX-06-08",
+      "zone": "Montañas del Atlas",
+      "locality": "Montañas del Atlas, norte de África",
+      "habitats": [
+        "montana",
+        "estepa"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "redrawn": true,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/atlas_lion.webp",
+          "bytes": 2334,
+          "sha256": "01512f60859edb74fa10f5cb097fd21994bbcfb5c5226a960a6ff352e3723575"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/atlas_lion.webp",
+          "bytes": 5772,
+          "sha256": "82d34f1ff2163670b46246e74ac3a4fe08950919ce80a50a426e52e8195352b2"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/atlas_lion.webp",
+          "bytes": 15954,
+          "sha256": "61ab230642bb652047e4bbcaf012a3b47915c12b22fe2aeb2b39b9632810fff0"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/atlas_lion.webp",
+          "bytes": 54140,
+          "sha256": "40a48e3a918a0f232ed2656b424ea36847a6c59cee9bd38687cf8801fa6758ed"
+        }
+      ]
+    },
+    {
+      "id": "seychelles_sheathbat",
+      "name": "Murciélago de Seychelles",
+      "latin": "Coleura seychellensis",
+      "region": "HX-07-14",
+      "hex": "HX-07-14",
+      "zone": "Archipiélagos del Índico occidental",
+      "locality": "Islas Seychelles",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "redrawn": true,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/seychelles_sheathbat.webp",
+          "bytes": 1350,
+          "sha256": "1111eb921bb7cc87ffd6da96c46a7310f9be8557c1bebf34923c0728d759c0cd"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/seychelles_sheathbat.webp",
+          "bytes": 3022,
+          "sha256": "3ce8c113749a76488277734d80cec1bfd753076f10002e17a93f7a4948a5c8bf"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/seychelles_sheathbat.webp",
+          "bytes": 7924,
+          "sha256": "de84ddbba0f1fc31ded2a7d5a7885ddab6b4f489202bc5e8705624bc62eb1ab6"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/seychelles_sheathbat.webp",
+          "bytes": 24584,
+          "sha256": "57faf0e5a51c4da6b30c97f8baa0e5c03072784be855704e6b5f1021824110fc"
+        }
+      ]
+    },
+    {
+      "id": "gabon_dwarf_croc",
+      "name": "Cocodrilo enano africano",
+      "latin": "Osteolaemus tetraspis",
+      "speciesId": "af_xlsx_cocodrilo_enano",
+      "region": "HX-08-10",
+      "hex": "HX-08-10",
+      "zone": "Bosques atlánticos ecuatoriales",
+      "locality": "Gabón y litoral ecuatorial",
+      "habitats": [
+        "rio",
+        "bosque",
+        "humedal"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "redrawn": true,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/gabon_dwarf_croc.webp",
+          "bytes": 1448,
+          "sha256": "35a6d346a6adcff378f19559211d33554ead2901f58a11975e77b76862a02252"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/gabon_dwarf_croc.webp",
+          "bytes": 3498,
+          "sha256": "e2afb7065282e29ddf04f78e267d287ebbb54e250ca2dd9371fd99afcaed5a9e"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/gabon_dwarf_croc.webp",
+          "bytes": 9870,
+          "sha256": "d386488eefce587ecbd70b94fed0705b02d6ca121f62ffd4474077defae41e17"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/gabon_dwarf_croc.webp",
+          "bytes": 32558,
+          "sha256": "8222f707f89d7e4e382e9b0e9259ae2130a8fd5a0b033137362ea41aa2217a52"
+        }
+      ]
+    },
+    {
+      "id": "angonoka",
+      "name": "Tortuga angonoka",
+      "latin": "Astrochelys yniphora",
+      "region": "HX-09-14",
+      "hex": "HX-09-14",
+      "zone": "Madagascar",
+      "locality": "Bahía de Baly, noroeste de Madagascar",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "redrawn": true,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/angonoka.webp",
+          "bytes": 2572,
+          "sha256": "5039ec41043f0dcf5786ee4af64349839cc0dcc9ac6cf567c000cfcfbfaa8c31"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/angonoka.webp",
+          "bytes": 5916,
+          "sha256": "5a89418bae451e97157f7be688878d86b13f6b2facf487025cb783bdff83ba1a"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/angonoka.webp",
+          "bytes": 16970,
+          "sha256": "f91f78d00130b340cefccaa68825ad9569552eceae2af932dab3f09080067cfb"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/angonoka.webp",
+          "bytes": 60466,
+          "sha256": "20887a92e8a94d0f11f46adc2cd602fb2e984b200fe157a6d7f5833ee551a3e5"
+        }
+      ]
+    },
+    {
+      "id": "african_lungfish",
+      "name": "Pez pulmonado africano",
+      "latin": "Protopterus aethiopicus",
+      "region": "HX-09-11",
+      "hex": "HX-09-11",
+      "zone": "Grandes Lagos africanos",
+      "locality": "Grandes lagos de África oriental",
+      "habitats": [
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "redrawn": true,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/african_lungfish.webp",
+          "bytes": 1276,
+          "sha256": "1d40cfbecd442f2b3f8f4122b2ed6f51374ec305223be76b9da8c89931ab3b09"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/african_lungfish.webp",
+          "bytes": 2846,
+          "sha256": "4284dc5d041a9df429a4625bd6ec219dccde206d15916f200d555786ee26f11d"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/african_lungfish.webp",
+          "bytes": 7586,
+          "sha256": "395cc685fed3ef3a4adc829fdf76872b32083604fe90c95ae78d43b0afafb119"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/african_lungfish.webp",
+          "bytes": 22934,
+          "sha256": "6af1309f2021afe3e9bdc9e3bca9da47613031c6b4360e246bf3e54bed90512b"
+        }
+      ]
+    },
+    {
+      "id": "white_sturgeon",
+      "name": "Esturión blanco del Pacífico",
+      "latin": "Acipenser transmontanus",
+      "region": "HX-02-02",
+      "hex": "HX-02-02",
+      "zone": "Columbia Británica",
+      "locality": "Sistema del río Fraser",
+      "habitats": [
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "redrawn": true,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/white_sturgeon.webp",
+          "bytes": 1342,
+          "sha256": "83fb23a5f6b42433fc6d034acad8fd4fdf2e6871e385574880318b77047f8a84"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/white_sturgeon.webp",
+          "bytes": 3082,
+          "sha256": "e53a02334d1d7dbf69e2e3b6c44d30415bb38e135f72a7b4e888140b656fb5c4"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/white_sturgeon.webp",
+          "bytes": 8152,
+          "sha256": "376ee449e008f2630eb1d4414a6c44f309a2af1f86308ef01488ef6bfe68a89b"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/white_sturgeon.webp",
+          "bytes": 24728,
+          "sha256": "b4bb83e10a0fea8ce0e7e7a6e9cfff17c9c74bd7a327acdc231570c919a874c0"
+        }
+      ]
+    },
+    {
+      "id": "gharial",
+      "name": "Gavial del Ganges",
+      "latin": "Gavialis gangeticus",
+      "region": "HX-05-16",
+      "hex": "HX-05-16",
+      "zone": "Subcontinente Indio",
+      "locality": "Cuenca del río Ganges",
+      "habitats": [
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "redrawn": true,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/gharial.webp",
+          "bytes": 1704,
+          "sha256": "cf3cee59eb3a0f8267a2baac4de16ef665d22d63df4c0673f5de94f352b5c9c2"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/gharial.webp",
+          "bytes": 4202,
+          "sha256": "a8f8a27ab77ca96d068f212d880fedc6feb0809ec87a8f4adf876ee86e1ce9a0"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/gharial.webp",
+          "bytes": 11306,
+          "sha256": "d0ba5b22ac0e9f4e740fcf47398c36cae435d2d6d25d32de5ec475d67ef6433d"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/gharial.webp",
+          "bytes": 35710,
+          "sha256": "58aced282200d6de92ddb3fe72e803da43b7b5b55b34a7a487e0fe16d726bf6b"
+        }
+      ]
+    },
+    {
+      "id": "olm_balkans",
+      "name": "Proteo de las cuevas",
+      "latin": "Proteus anguinus",
+      "region": "HX-03-12",
+      "hex": "HX-03-12",
+      "zone": "Balcanes",
+      "locality": "Karst dinárico",
+      "habitats": [
+        "rio"
+      ],
+      "times": [
+        "noche"
+      ],
+      "redrawn": true,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/olm_balkans.webp",
+          "bytes": 1522,
+          "sha256": "3f65db4e36e23eefcacf4bf4f7182ae6685dbe93457a6276d4f150bf1b3044f4"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/olm_balkans.webp",
+          "bytes": 3522,
+          "sha256": "7214a79c9b49d101ee7f4d8b38554dc7995f79f6682cc472fabce91d605f3d3d"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/olm_balkans.webp",
+          "bytes": 8592,
+          "sha256": "ab80fde0ebf94e38c5ce08c1d38772980c60975c7e0dc21502d144d644721c5d"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/olm_balkans.webp",
+          "bytes": 23290,
+          "sha256": "31f6664c45e1ad10f992e5135528afecfe4f2bc831264a2dea745e66ac84df35"
+        }
+      ]
+    },
+    {
+      "id": "thylacine",
+      "name": "Tilacino",
+      "latin": "Thylacinus cynocephalus",
+      "region": "oc_tasmania",
+      "hex": "OC-05",
+      "zone": "Tasmania",
+      "locality": "Tasmania",
+      "habitats": [
+        "bosque",
+        "pradera"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "redrawn": false,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/thylacine.webp",
+          "bytes": 1632,
+          "sha256": "7bfc61a1b8431d857ab5607c94e1de7fb1dd1afd9d8ab55a191d8819a679432e"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/thylacine.webp",
+          "bytes": 3758,
+          "sha256": "741f13e9f6bbed83897582a6fb132108e3d6158b83dfc444ee3790a18a52ccf8"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/thylacine.webp",
+          "bytes": 9064,
+          "sha256": "9319456ee33e2a24434001a8f418779c57cf19685855e8ec0372753089331cfa"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/thylacine.webp",
+          "bytes": 25018,
+          "sha256": "c3848faa96ad680b0b006c5813762dd70507d8eeeae5657152970b468005dbd6"
+        }
+      ]
+    },
+    {
+      "id": "great_auk",
+      "name": "Alca gigante",
+      "latin": "Pinguinus impennis",
+      "region": "mar_atlantico_septentrional",
+      "hex": "HX-03-08",
+      "zone": "Atlántico septentrional",
+      "locality": "Eldey, frente a Islandia",
+      "habitats": [
+        "archipielago"
+      ],
+      "times": [
+        "amanecer",
+        "dia"
+      ],
+      "redrawn": false,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/great_auk.webp",
+          "bytes": 1556,
+          "sha256": "64eff7c0c2900ea5abdbb5e82edc68dd4313bba75591795730f4b42354782862"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/great_auk.webp",
+          "bytes": 3610,
+          "sha256": "7bbaeeb89c99043d5598ec4801f54ef725c12b2131fa77f598747e5662ac9d5a"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/great_auk.webp",
+          "bytes": 9118,
+          "sha256": "89bed1a23a23210a11add535f80a86c492f7202e99e25a58b774010955ae17cd"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/great_auk.webp",
+          "bytes": 28922,
+          "sha256": "4d8103bf3fc4cfeb2c6482059d03f820bd74cc7def27a5d540f0cb5cc8153bd6"
+        }
+      ]
+    },
+    {
+      "id": "falkland_wolf",
+      "name": "Lobo de las Malvinas",
+      "latin": "Dusicyon australis",
+      "region": "mar_atlantico_austral",
+      "hex": "HX-09-11",
+      "zone": "Atlántico austral",
+      "locality": "Islas Malvinas",
+      "habitats": [
+        "archipielago"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer"
+      ],
+      "redrawn": false,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/falkland_wolf.webp",
+          "bytes": 2210,
+          "sha256": "da2dae6f4b6df3ab6ee6391ec0c76acfebce781003d65179bdff2e15d7c09f85"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/falkland_wolf.webp",
+          "bytes": 5222,
+          "sha256": "7ae7ac82be6f28ea675316cb8c495080381606be21ee098ca0057cdaa735e06b"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/falkland_wolf.webp",
+          "bytes": 14014,
+          "sha256": "b67bd36384d8641a2270b52dfc08eb0838cf701240888112627d4a9524b5f6f5"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/falkland_wolf.webp",
+          "bytes": 46632,
+          "sha256": "b8966cb26ed0204e7abe38e4f709a19321780eddb3c13704bad1fe33371e88de"
+        }
+      ]
+    },
+    {
+      "id": "carolina_parakeet",
+      "name": "Periquito de Carolina",
+      "latin": "Conuropsis carolinensis",
+      "region": "HX-03-04",
+      "hex": "HX-03-04",
+      "zone": "Bosques del este norteamericano",
+      "locality": "Este de Norteamérica",
+      "habitats": [
+        "bosque",
+        "humedal"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "redrawn": false,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/carolina_parakeet.webp",
+          "bytes": 1644,
+          "sha256": "9074bdc9bc9567c6cabcbef4667d605326923586d697d31372abb1f2cd2b9131"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/carolina_parakeet.webp",
+          "bytes": 3760,
+          "sha256": "7c48174f27edbfb10bd9e5f453282b64a012cff41b82eb73e99867ebf90fc795"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/carolina_parakeet.webp",
+          "bytes": 9922,
+          "sha256": "6ac519446c508b31e2657a92d8363ae146856f2b7e3328eaa7a4dd53a53e56de"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/carolina_parakeet.webp",
+          "bytes": 30392,
+          "sha256": "1ab720516b2691139a7cab45811eaf9a7b5b91b59efc6421ef2af1be865935c4"
+        }
+      ]
+    },
+    {
+      "id": "huia",
+      "name": "Huía",
+      "latin": "Heteralocha acutirostris",
+      "region": "oc_nueva_zelanda",
+      "hex": "OC-08",
+      "zone": "Nueva Zelanda",
+      "locality": "Sur de la Isla Norte",
+      "habitats": [
+        "bosque"
+      ],
+      "times": [
+        "amanecer",
+        "dia"
+      ],
+      "redrawn": false,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/huia.webp",
+          "bytes": 1704,
+          "sha256": "342bd3979b9c366962271e3ff7271c796e09c0365cfab7ed06c6d617d92f3006"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/huia.webp",
+          "bytes": 3522,
+          "sha256": "df9809cb3bf71dc8729c5af39db14ee20c4e3c9d3f18a765acc71b48d32ea7fd"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/huia.webp",
+          "bytes": 9488,
+          "sha256": "f1a589131399e03ad43fe79e3f903acfb2eb9b199e043b3029a9fe90809368e0"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/huia.webp",
+          "bytes": 28312,
+          "sha256": "2143bf8bd754e9cc0f8341a9d9d5b2464f04778b5e06df34f262572db6f549b6"
+        }
+      ]
+    },
+    {
+      "id": "caribbean_monk_seal",
+      "name": "Foca monje del Caribe",
+      "latin": "Neomonachus tropicalis",
+      "region": "gm06_antillas",
+      "hex": "GM06-ANTILLAS",
+      "zone": "Antillas y Caribe insular",
+      "locality": "Caribe insular",
+      "habitats": [
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "dia",
+        "atardecer"
+      ],
+      "redrawn": false,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/caribbean_monk_seal.webp",
+          "bytes": 1632,
+          "sha256": "93efdc66432df8a76f01e312ac71c3aec3da90627055226fe9d666670f92e5bb"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/caribbean_monk_seal.webp",
+          "bytes": 3384,
+          "sha256": "b2e96815c7e1d4a612cd6e5d1bef10aae9c137b4c89aebb42523e2988c33af18"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/caribbean_monk_seal.webp",
+          "bytes": 8672,
+          "sha256": "ea93a5bb3ed61cf116f5c0a8564eb92ff0e8c63354d16c0a7da87118f31461bf"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/caribbean_monk_seal.webp",
+          "bytes": 28978,
+          "sha256": "1eb37a775aabd0fa2dfa38c0472a0fff8506cf76359cc94fa2ca5cfd0ee0601a"
+        }
+      ]
+    },
+    {
+      "id": "chinese_paddlefish",
+      "name": "Pez espátula chino",
+      "latin": "Psephurus gladius",
+      "region": "HX-05-17",
+      "hex": "HX-05-17",
+      "zone": "China Meridional",
+      "locality": "Cuenca del Yangtsé",
+      "habitats": [
+        "rio"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "redrawn": false,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/chinese_paddlefish.webp",
+          "bytes": 1014,
+          "sha256": "5bd12465ff5fcbb6f4b5a1859d1620bcb8f7c3d8e3b7baeb27d5b7d2336b3612"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/chinese_paddlefish.webp",
+          "bytes": 2204,
+          "sha256": "dbd090f6d9543e9ec44efa12be5a617414872f68139f1b63c45c766647bd13c7"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/chinese_paddlefish.webp",
+          "bytes": 5170,
+          "sha256": "b573b6708e0d4f6b49941e091088cccae165f1d7159657839b7fd6f88b12ac6c"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/chinese_paddlefish.webp",
+          "bytes": 14188,
+          "sha256": "b9b572bbc2d497900ed059a04bd27adbb0ddf7c95bc173c312c84743cbf3d503"
+        }
+      ]
+    },
+    {
+      "id": "australian_lungfish",
+      "name": "Pez pulmonado australiano",
+      "latin": "Neoceratodus forsteri",
+      "region": "oc_costa_nordeste_australiana",
+      "hex": "OC-02",
+      "zone": "Costa nordeste australiana",
+      "locality": "Ríos Burnett y Mary, Queensland",
+      "habitats": [
+        "rio"
+      ],
+      "times": [
+        "atardecer",
+        "noche"
+      ],
+      "redrawn": false,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/australian_lungfish.webp",
+          "bytes": 1394,
+          "sha256": "0bb581f5d9a7ec8bff591b1a944b64a24754a3209c3eeebf28073f62783354f1"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/australian_lungfish.webp",
+          "bytes": 3200,
+          "sha256": "072bff1f1850b5a394bdcaaeddc05ffee3c5622acae655057d30ee757d8dbbfd"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/australian_lungfish.webp",
+          "bytes": 8460,
+          "sha256": "285efc473f1bf175751a7704c7b9b0c8a2518432927bfdc508c22527e573f1fb"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/australian_lungfish.webp",
+          "bytes": 28382,
+          "sha256": "bb774dc85579815bcb3aaac36f2627db24bd19e91c8cb12af209fd99ad76a4a1"
+        }
+      ]
+    },
+    {
+      "id": "largetooth_sawfish",
+      "name": "Pez sierra común",
+      "latin": "Pristis pristis",
+      "region": "HX-04-04",
+      "hex": "HX-04-04",
+      "zone": "Costa del golfo de México",
+      "locality": "Golfo de México",
+      "habitats": [
+        "rio",
+        "costa"
+      ],
+      "times": [
+        "amanecer",
+        "atardecer",
+        "noche"
+      ],
+      "redrawn": false,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/largetooth_sawfish.webp",
+          "bytes": 1788,
+          "sha256": "21e9aca5b6876997c94598c2937368059a925fc5c29cb1f2dabc2e6118999459"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/largetooth_sawfish.webp",
+          "bytes": 3894,
+          "sha256": "8cb7f572dec9f9b3a172afebab0a7c89ab58ecf4f3e20f2a6520dcb3f87daf3a"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/largetooth_sawfish.webp",
+          "bytes": 10084,
+          "sha256": "301ef2ae3df01c37a84e7a011a753b43df774933f5efc1abcd3eceb819d4bc13"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/largetooth_sawfish.webp",
+          "bytes": 30306,
+          "sha256": "5aa80f8d861f9512110c722414257418668d7f38e8ccd2a1394432c1ec0b16fa"
+        }
+      ]
+    },
+    {
+      "id": "cuban_solenodon",
+      "name": "Solenodonte cubano",
+      "latin": "Atopogale cubana",
+      "region": "gm06_antillas",
+      "hex": "GM06-ANTILLAS",
+      "zone": "Antillas y Caribe insular",
+      "locality": "Oriente de Cuba",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "noche"
+      ],
+      "redrawn": false,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/cuban_solenodon.webp",
+          "bytes": 2024,
+          "sha256": "68bb18843a5960e94dd0f4644962e43e8be266f44d4a2b032661786ebe711744"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/cuban_solenodon.webp",
+          "bytes": 5016,
+          "sha256": "449b433ddca7ca10fe85e325e72deb2001a96fed2c0a7e348ac3f83a9e26d348"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/cuban_solenodon.webp",
+          "bytes": 14132,
+          "sha256": "44cade50608b4f1055a891a3af076db21d3fb58c0c29b7359856598a5a1696fb"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/cuban_solenodon.webp",
+          "bytes": 47390,
+          "sha256": "d9e3ecc7ae311184a2b8c05df5ee801247a83814cca2182077b6d8acdcc4c336"
+        }
+      ]
+    },
+    {
+      "id": "fiji_banded_iguana",
+      "name": "Iguana bandeada de Fiyi",
+      "latin": "Brachylophus fasciatus",
+      "region": "gm06_melanesia",
+      "hex": "GM06-MELANESIA",
+      "zone": "Melanesia oriental",
+      "locality": "Islas Lau y otras islas orientales de Fiyi",
+      "habitats": [
+        "bosque",
+        "selva"
+      ],
+      "times": [
+        "amanecer",
+        "dia"
+      ],
+      "redrawn": false,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/relicts/64/fiji_banded_iguana.webp",
+          "bytes": 2548,
+          "sha256": "dbce74294cc39983f80f2219a4b581ce27fe70ea2d7f2a71b2545746f08d65dc"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/relicts/128/fiji_banded_iguana.webp",
+          "bytes": 6060,
+          "sha256": "6c4a1e42015f8d78f2ca70a138538cca609a3fe8101f79a0ebf987f519a869f3"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/relicts/256/fiji_banded_iguana.webp",
+          "bytes": 15844,
+          "sha256": "df79bc5e22d01665f5b5ae6e8cb0901ad50e6c41f138e2fbc926d3170555cb7e"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/relicts/fiji_banded_iguana.webp",
+          "bytes": 48322,
+          "sha256": "fea6c47ad153e63bfd42db34c6c89165ab3317b9931d6f6c339718a0aeb46515"
+        }
+      ]
+    }
+  ]
+}
