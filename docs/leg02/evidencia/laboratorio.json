@@ -1,0 +1,20 @@
+{
+  "chromium": "156.0.8078.79",
+  "legends": 30,
+  "sizes": [
+    64,
+    128,
+    256,
+    512
+  ],
+  "modules": [
+    "field",
+    "journal",
+    "bestiary",
+    "museum"
+  ],
+  "newModulePreviews": 40,
+  "legacyGameSurfaces": 4,
+  "narrowViewport": 390,
+  "isolated": false
+}

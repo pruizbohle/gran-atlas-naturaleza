@@ -1,0 +1,1074 @@
+{
+  "version": "5.1.1",
+  "migrated": 30,
+  "inventory": [
+    {
+      "id": "silverback",
+      "speciesId": "af_gorila_montana",
+      "name": "Silverback",
+      "description": "Un adulto de espalda plateada, mirada serena y cresta pronunciada.",
+      "commonName": "Gorila de montaña",
+      "species": "Gorilla beringei beringei",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/af_gorila_montana--silverback.webp",
+          "bytes": 2066,
+          "sha256": "a8975b081d962b97800de6eaee8916a6aeab16fd1e05d1cd12fb7b0d25f525c8"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/af_gorila_montana--silverback.webp",
+          "bytes": 4788,
+          "sha256": "99e382dad79476402925f2753c455b70bc38b303891f1e6d4d3ae40492b3b0e4"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/af_gorila_montana--silverback.webp",
+          "bytes": 14000,
+          "sha256": "bfbbfbfc2b6bbfd2f53bde7257b5586fb64132844704b03278cba22e52afed78"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/af_gorila_montana--silverback.webp",
+          "bytes": 52360,
+          "sha256": "7dc9f890ab1e8aee76d8e098f2c976e7d063bb222980045e6b918a73cd3e1366"
+        }
+      ]
+    },
+    {
+      "id": "ambar",
+      "speciesId": "asia_esp_0402",
+      "name": "Ámbar",
+      "description": "Rayas anchas y un pelaje invernal denso en una pausa vigilante.",
+      "commonName": "Tigre siberiano",
+      "species": "Panthera tigris",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/asia_esp_0402--ambar.webp",
+          "bytes": 2612,
+          "sha256": "9819beff73376b7bf1bcf01429c979ba0fd746803d508b647439e298c2ff3d87"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/asia_esp_0402--ambar.webp",
+          "bytes": 6750,
+          "sha256": "747944f60edc924e335218adce91f9a007edf056b7d925197ae4d84a19d207fe"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/asia_esp_0402--ambar.webp",
+          "bytes": 19718,
+          "sha256": "00e4d051f002eef502f13f76e313b2979ee78a238e0ea18e96592b328322a29e"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/asia_esp_0402--ambar.webp",
+          "bytes": 66226,
+          "sha256": "2424a1255275473f2766aa65855830d385f6ed7696d28144cfb2d6c8eb46c134"
+        }
+      ]
+    },
+    {
+      "id": "niebla",
+      "speciesId": "asia_esp_0403",
+      "name": "Niebla",
+      "description": "Rosetas abiertas y una larga cola que acompaña el borde de la roca.",
+      "commonName": "Leopardo de las nieves",
+      "species": "Panthera uncia",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/asia_esp_0403--niebla.webp",
+          "bytes": 2260,
+          "sha256": "072c590f5210f970c9b411d0b18e1f748db9d3a73c5b58ac9cf6439b0e1b474e"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/asia_esp_0403--niebla.webp",
+          "bytes": 5806,
+          "sha256": "228270f74daea77ebfed0f2482262f5ba4d4fe87c34166bf6f2f830f4ffab445"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/asia_esp_0403--niebla.webp",
+          "bytes": 16294,
+          "sha256": "b8039fc9cbd29d411aaab0c6407b2afb67b353d024150c23a62652cd8498a92c"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/asia_esp_0403--niebla.webp",
+          "bytes": 52426,
+          "sha256": "1b74fb421ff3e7b11f61a27f80c7e02720fdda337dd9ac1a81805ac2e479f6ff"
+        }
+      ]
+    },
+    {
+      "id": "fenrir",
+      "speciesId": "lobo_gris",
+      "name": "Fenrir",
+      "description": "Un lobo de manto gris, pecho claro y perfil atento.",
+      "commonName": "Lobo gris",
+      "species": "Canis lupus",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/lobo_gris--fenrir.webp",
+          "bytes": 2562,
+          "sha256": "9258923c2f65921b9d749dda0a5519602e0cbeabc9acedccfd0d7450796427f7"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/lobo_gris--fenrir.webp",
+          "bytes": 6436,
+          "sha256": "4082376b6046640901b4724c09a3c34202b9bd4c9be514b986051437e54e22bf"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/lobo_gris--fenrir.webp",
+          "bytes": 17908,
+          "sha256": "0acc547b825bd4cdab3d63268bb163126347761abe6256f9e4129d32c53b51da"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/lobo_gris--fenrir.webp",
+          "bytes": 57566,
+          "sha256": "152ebbf13346afeca76c93a78dc3eb3bd9b74760966c14428fbefa8996b7d3f8"
+        }
+      ]
+    },
+    {
+      "id": "atlas",
+      "speciesId": "af_elefante_sabana",
+      "name": "Atlas",
+      "description": "Orejas desplegadas y colmillos asimétricos de crecimiento natural.",
+      "commonName": "Elefante africano de sabana",
+      "species": "Loxodonta africana",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/af_elefante_sabana--atlas.webp",
+          "bytes": 2642,
+          "sha256": "b94642d632911bb3823098c124a4efc00bfd6690f5923c11e08637bf2b91e4d7"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/af_elefante_sabana--atlas.webp",
+          "bytes": 6062,
+          "sha256": "889c6106da66e11f2230fc3d9e0f708828dc9c45a8d75f42b5ff05866892a758"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/af_elefante_sabana--atlas.webp",
+          "bytes": 17466,
+          "sha256": "241a08a131d410df73bb6b651c2e8b58648f0698b7ce3af90a275df9bcab5df4"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/af_elefante_sabana--atlas.webp",
+          "bytes": 58494,
+          "sha256": "3b6af2a6e26e5fc19649703acf6cce25451636356940320493c0739b57325065"
+        }
+      ]
+    },
+    {
+      "id": "centinela",
+      "speciesId": "aguila_real",
+      "name": "Centinela",
+      "description": "La nuca dorada destaca sobre las alas recogidas de este vigilante.",
+      "commonName": "Águila real",
+      "species": "Aquila chrysaetos",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/aguila_real--centinela.webp",
+          "bytes": 2282,
+          "sha256": "8b2d1edc8b5385aa9e564ec116ff61c7c5b34e17aa6894a14062881d5d1036df"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/aguila_real--centinela.webp",
+          "bytes": 5566,
+          "sha256": "f22fdddfecd65020ff112d4fe13ab3342ed8c1cf8b5d0180aaae7777b297c73f"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/aguila_real--centinela.webp",
+          "bytes": 16384,
+          "sha256": "f93ac10f0a227d3da2c99a7a19fce3e9a094b80c7aaa5704f3a50e28a2b5406f"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/aguila_real--centinela.webp",
+          "bytes": 55662,
+          "sha256": "a644c2bb13e7c8f9ef82b20d007b9cbd3d9838fedaf1fcbf2b75f92737b2c0f8"
+        }
+      ]
+    },
+    {
+      "id": "basalto",
+      "speciesId": "asia_esp_0527",
+      "name": "Basalto",
+      "description": "Escamas oscuras y patas robustas sostienen una silueta rasante.",
+      "commonName": "Dragón de Komodo",
+      "species": "Varanus komodoensis",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/asia_esp_0527--basalto.webp",
+          "bytes": 2356,
+          "sha256": "d87d07587d15f325c2524c5c6f90c031751e18172b457baca9dc5a86285808b7"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/asia_esp_0527--basalto.webp",
+          "bytes": 5794,
+          "sha256": "8df6e720081416b43c0fedc4fbd5708508822025415bab45d9168bab38b56428"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/asia_esp_0527--basalto.webp",
+          "bytes": 16612,
+          "sha256": "49004f4d7201c95e1ebcdf9fb6c9878fbdc1d1326a4d9c1cd14333f0fa7d4ff6"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/asia_esp_0527--basalto.webp",
+          "bytes": 58322,
+          "sha256": "f8fdfa290d8c278dc73e8201a17fcbde206c13337567a1296682c16f402d1d2e"
+        }
+      ]
+    },
+    {
+      "id": "seda",
+      "speciesId": "asia_esp_0373",
+      "name": "Seda",
+      "description": "Una cobra de capucha estrecha se eleva entre sus propios anillos.",
+      "commonName": "Cobra real",
+      "species": "Ophiophagus hannah",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/asia_esp_0373--seda.webp",
+          "bytes": 2214,
+          "sha256": "03c7634748538fb2f5b872c352a7e106aa4747db2ce6c97b5831f85c51517c80"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/asia_esp_0373--seda.webp",
+          "bytes": 5180,
+          "sha256": "4b60029dfea181c94515feb1eaf4c5c5c8ac2a16914edab2a2200ef9fc5cc27e"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/asia_esp_0373--seda.webp",
+          "bytes": 14534,
+          "sha256": "0ac011a96dd329b6d2ed1d590b52b4a6f5c314a5a6afadda6422331226017edf"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/asia_esp_0373--seda.webp",
+          "bytes": 47792,
+          "sha256": "055ef5d1de7930bea08f15aedf4aec20500da497cf50097fee9931a10321225b"
+        }
+      ]
+    },
+    {
+      "id": "junco",
+      "speciesId": "af_cocodrilo_nilo",
+      "name": "Junco",
+      "description": "Escudos dorsales irregulares y un hocico surcado por viejas cicatrices.",
+      "commonName": "Cocodrilo del Nilo",
+      "species": "Crocodylus niloticus",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/af_cocodrilo_nilo--junco.webp",
+          "bytes": 1618,
+          "sha256": "f8927955cd8c620fb5937d43b19174600fdb288bc6041e6450b6bfd96fbcbe72"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/af_cocodrilo_nilo--junco.webp",
+          "bytes": 3842,
+          "sha256": "7652d62dc36ec1eeafa3d707230acfd2147fc84f4e4438ebdedf5eeaec2625b2"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/af_cocodrilo_nilo--junco.webp",
+          "bytes": 10784,
+          "sha256": "4f70cb1368ca9b1a34a1d72673ce83caef2926d2f3b772c6f68b037e91413ea8"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/af_cocodrilo_nilo--junco.webp",
+          "bytes": 35756,
+          "sha256": "abaff936f7a8eb77fa09671d13250e6c83a90d088e8deedf2315aebae7281ed5"
+        }
+      ]
+    },
+    {
+      "id": "ancora",
+      "speciesId": "af_tortuga_aldabra",
+      "name": "Áncora",
+      "description": "Caparazón de anillos marcados y cuello extendido sobre patas columnares.",
+      "commonName": "Tortuga gigante de Aldabra",
+      "species": "Aldabrachelys gigantea",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/af_tortuga_aldabra--ancora.webp",
+          "bytes": 2076,
+          "sha256": "5ef6d7265e7c2f90ed7e29ef7667347f8d43a0da7338390c5289b55bc766b6e9"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/af_tortuga_aldabra--ancora.webp",
+          "bytes": 4672,
+          "sha256": "e8d596bd8bfef7f55df0046ce7602e35017a0bd3fd423cc97fed62b09ebbaddf"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/af_tortuga_aldabra--ancora.webp",
+          "bytes": 13388,
+          "sha256": "d841aa2b545e49ed3a4c5957c6a14a26bc353bad247063110473cfa7ddc70359"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/af_tortuga_aldabra--ancora.webp",
+          "bytes": 47112,
+          "sha256": "fabbc8e11ff5edbb2eca6f24318590da75865e3aa3ff3004922fd916f451d087"
+        }
+      ]
+    },
+    {
+      "id": "ascua",
+      "speciesId": "zorro_rojo",
+      "name": "Ascua",
+      "description": "Un zorro de pecho marfil se sienta envuelto en su cola rojiza.",
+      "commonName": "Zorro rojo",
+      "species": "Vulpes vulpes",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/zorro_rojo--ascua.webp",
+          "bytes": 1946,
+          "sha256": "3f22fd50df967403e301a711d45f93ed4ab9c906dc1dcb8996168f3ab598f7d5"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/zorro_rojo--ascua.webp",
+          "bytes": 4720,
+          "sha256": "5d0f94b7b2d3a4e01bde42eeb0b5700c1d22531f14d9e84ce5516380b8bdc648"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/zorro_rojo--ascua.webp",
+          "bytes": 13636,
+          "sha256": "60667023ad54600db3663e54ad68c715d9f4583733cbb89c69cdd415f820c35a"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/zorro_rojo--ascua.webp",
+          "bytes": 49202,
+          "sha256": "96462cce149ecde598633bec231222ebf9537350048d49fcf85fb29182389fb2"
+        }
+      ]
+    },
+    {
+      "id": "remonte",
+      "speciesId": "asia_esp_0369",
+      "name": "Remonte",
+      "description": "Un salmón de dorso moteado y mandíbula curva en plena remontada.",
+      "commonName": "Salmón rosado",
+      "species": "Oncorhynchus gorbuscha",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/asia_esp_0369--remonte.webp",
+          "bytes": 1394,
+          "sha256": "ed85e8e4eb3b73cf84b72cff10f2732121735fda5d240139412f8c15e7b4b4f0"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/asia_esp_0369--remonte.webp",
+          "bytes": 3016,
+          "sha256": "dff850bf303848b99d35734e9d63f52ff1242a918c33e77183542ed6e3201024"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/asia_esp_0369--remonte.webp",
+          "bytes": 7678,
+          "sha256": "fbdcb9a7daa744a7995a0dc971c38e87fee2e2479e259288bb524b70253b26e1"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/asia_esp_0369--remonte.webp",
+          "bytes": 24074,
+          "sha256": "b3664e690684ebda40cf30ef963c4e5c10d5996d48ba573992394db66155ba04"
+        }
+      ]
+    },
+    {
+      "id": "espiral",
+      "speciesId": "af_gran_kudu",
+      "name": "Espiral",
+      "description": "Un macho de cornamenta alargada con espiras más marcadas, barba larga y franjas de marfil sobre el flanco.",
+      "legendaryOnly": true,
+      "commonName": "Gran kudú",
+      "species": "Tragelaphus strepsiceros",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/af_gran_kudu--espiral.webp",
+          "bytes": 2480,
+          "sha256": "d2e6d530c179aca825d681161158ac1ccbec21faf6901e8f5941e28cc2fec49b"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/af_gran_kudu--espiral.webp",
+          "bytes": 6034,
+          "sha256": "9133a2ccd6e31a68083fa3fcb2c7796ac243a884fa66f0472043e438380e26bb"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/af_gran_kudu--espiral.webp",
+          "bytes": 15728,
+          "sha256": "f13b451e591ffb4caea00702a6d6abbaeedacde942e03419a9af42db7d3648cc"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/af_gran_kudu--espiral.webp",
+          "bytes": 45060,
+          "sha256": "26e01fefd76f167a0019de9b056fa5f75064b5e3d5cb27e4945cb38c102dd084"
+        }
+      ]
+    },
+    {
+      "id": "bastion",
+      "speciesId": "af_pangolin_gigante",
+      "name": "Bastión",
+      "description": "El cuerpo se repliega en un arco defensivo de escamas cobrizas y deja ver el hocico bajo la cola.",
+      "legendaryOnly": true,
+      "commonName": "Pangolín gigante",
+      "species": "Smutsia gigantea",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/af_pangolin_gigante--bastion.webp",
+          "bytes": 2276,
+          "sha256": "0064721b985cc093312b5eb7e2f4818bf939298fe47b693bbeddf65efe354ce2"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/af_pangolin_gigante--bastion.webp",
+          "bytes": 5680,
+          "sha256": "84a4f31ca349c76c4dc62afdf964880d85d7774d2e74befc1039eaad5d1b29fc"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/af_pangolin_gigante--bastion.webp",
+          "bytes": 17128,
+          "sha256": "17dd0d139d4e89d92c8b769bf74e7578fed389703e133f629d56e0c5a38bec82"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/af_pangolin_gigante--bastion.webp",
+          "bytes": 61922,
+          "sha256": "cd34d7e4c3e78142e643d448ee5376d994ded0298d47143e44819c54e3d72b24"
+        }
+      ]
+    },
+    {
+      "id": "cienaga",
+      "speciesId": "af_picozapato",
+      "name": "Ciénaga",
+      "description": "Permanece agazapado con el pico jaspeado inclinado, el iris rojizo y una cresta desflecada sobre el manto pizarra.",
+      "legendaryOnly": true,
+      "commonName": "Picozapato",
+      "species": "Balaeniceps rex",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/af_picozapato--cienaga.webp",
+          "bytes": 2386,
+          "sha256": "fafe38c31ce52a02f44811b9d6baa5bc3420dd61fd76b50a543069223058e9ad"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/af_picozapato--cienaga.webp",
+          "bytes": 5554,
+          "sha256": "fd5d4e106773f006856ab554a415945a1d4dfa77fabff5cacc118c9570341e34"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/af_picozapato--cienaga.webp",
+          "bytes": 15008,
+          "sha256": "deab68decd03b5141163b722e05a364aa273edfa6153a4e054829dbe2a2d4424"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/af_picozapato--cienaga.webp",
+          "bytes": 44202,
+          "sha256": "04473acb1d9bbfd16db735dc547d4651de9b16f6408c620ecaf603ac2fd106ab"
+        }
+      ]
+    },
+    {
+      "id": "alisio",
+      "speciesId": "frailecillo_atlantico",
+      "name": "Alisio",
+      "description": "Un frailecillo abre las alas mientras alza el pico y extiende los pies anaranjados. Trazos oscuros dispersos interrumpen el vientre blanco.",
+      "legendaryOnly": true,
+      "commonName": "Frailecillo atlántico",
+      "species": "Fratercula arctica",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/frailecillo_atlantico--alisio.webp",
+          "bytes": 2502,
+          "sha256": "892d68d1199c9a021d38be0722102ec0fb4169d29f595814d846c4dc21f8b914"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/frailecillo_atlantico--alisio.webp",
+          "bytes": 5760,
+          "sha256": "dfbe1e32dca3973252549a5a4866785cc3686218765807b0dc972919e333963f"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/frailecillo_atlantico--alisio.webp",
+          "bytes": 15812,
+          "sha256": "05a2765aac0d45fd910b0cddc1e7c80ddec87e3e2a4ced260655264751c3aa0e"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/frailecillo_atlantico--alisio.webp",
+          "bytes": 47314,
+          "sha256": "3f328a3e0cecda527a20223d2bf4c489639d1d4c67f578ff1ff9c84ec94e86b2"
+        }
+      ]
+    },
+    {
+      "id": "filigrana",
+      "speciesId": "na_esp_ambystoma_mexicanum",
+      "name": "Nácar",
+      "description": "Tres pares de branquias ramificadas enmarcan su cabeza y el flanco oliváceo muestra un punteado dorado.",
+      "legendaryOnly": true,
+      "commonName": "Ajolote mexicano",
+      "species": "Ambystoma mexicanum",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/na_esp_ambystoma_mexicanum--filigrana.webp",
+          "bytes": 2490,
+          "sha256": "dd48d68dac1c2b686830eb6be5b7f396f10f1e434978ac5f638388505a683640"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/na_esp_ambystoma_mexicanum--filigrana.webp",
+          "bytes": 6154,
+          "sha256": "974e290b78470613262476861b50eb1aedfb9e5aca6323cd9718c023ba4bdb4d"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/na_esp_ambystoma_mexicanum--filigrana.webp",
+          "bytes": 17514,
+          "sha256": "dfbce551022fe16a61c264d4fcf6085d966bc7534ac166b4c584c4cd73e6df1b"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/na_esp_ambystoma_mexicanum--filigrana.webp",
+          "bytes": 58368,
+          "sha256": "4969739c280e76b0606fd57280b5a352abf3708dbd4f03184751ff929c9d8f6b"
+        }
+      ]
+    },
+    {
+      "id": "terracota",
+      "speciesId": "oc_esp_osphranter_rufus",
+      "name": "Terracota",
+      "description": "Un macho de pecho robusto se impulsa con las patas recogidas y la cola extendida bajo un manto de rojo arcilla.",
+      "legendaryOnly": true,
+      "commonName": "Canguro rojo",
+      "species": "Osphranter rufus",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/oc_esp_osphranter_rufus--terracota.webp",
+          "bytes": 1688,
+          "sha256": "d188f16074194e2910834f7c861ab252c8cbacc3c52c95971b639429fe98464f"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/oc_esp_osphranter_rufus--terracota.webp",
+          "bytes": 3686,
+          "sha256": "102d2e6785e3bca3782359fe1c21761f28374d81047d90cf50c202334e36ec83"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/oc_esp_osphranter_rufus--terracota.webp",
+          "bytes": 9156,
+          "sha256": "280ce11312e677126841527da945f24f0b9fc08e7b340da72311c24c3b100e05"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/oc_esp_osphranter_rufus--terracota.webp",
+          "bytes": 26998,
+          "sha256": "bf1bd97d585386d5947aec8f197239fccd2c1fb37e75b90441ad37a26c639127"
+        }
+      ]
+    },
+    {
+      "id": "orla",
+      "speciesId": "mar_esp_megaptera_novaeangliae",
+      "name": "Orla",
+      "description": "La ballena gira y deja ver el borde moteado de las aletas pectorales y las marcas blancas de la cola.",
+      "legendaryOnly": true,
+      "commonName": "Ballena jorobada",
+      "species": "Megaptera novaeangliae",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/mar_esp_megaptera_novaeangliae--orla.webp",
+          "bytes": 1894,
+          "sha256": "130ba6c5f8a937ea3c79f7ae3886f82b97017e680eb8fac81cb40fe184f7407a"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/mar_esp_megaptera_novaeangliae--orla.webp",
+          "bytes": 4226,
+          "sha256": "24abfbf6899ef3dfd27e51b19cb00f460476b4788235257679cd58b8390cac62"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/mar_esp_megaptera_novaeangliae--orla.webp",
+          "bytes": 10912,
+          "sha256": "5927ad98de6bcd34d99a3fbefefb577480dd8ff9ebb53ff78face715df55bdea"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/mar_esp_megaptera_novaeangliae--orla.webp",
+          "bytes": 32630,
+          "sha256": "4e03ffce85d31eee59b2f883f1e4985cc4a3ead8240fd0e509701c01e6e3755e"
+        }
+      ]
+    },
+    {
+      "id": "marea",
+      "speciesId": "mar_esp_enteroctopus_dofleini",
+      "name": "Marea",
+      "description": "El pulpo abre sus brazos en abanico y deja ver ventosas color marfil bajo una piel moteada de coral.",
+      "legendaryOnly": true,
+      "commonName": "Pulpo gigante del Pacífico",
+      "species": "Enteroctopus dofleini",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/mar_esp_enteroctopus_dofleini--marea.webp",
+          "bytes": 3200,
+          "sha256": "df3a03b642ca70e97690650c1f29aba5de4179486a73ce2c1493703a67231a1b"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/mar_esp_enteroctopus_dofleini--marea.webp",
+          "bytes": 8340,
+          "sha256": "a8013bc90e5ab55977675806d3565cc34fb50720d7b67c89635082469dfa411c"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/mar_esp_enteroctopus_dofleini--marea.webp",
+          "bytes": 22660,
+          "sha256": "c6b51ecfa00102d31b3ca4ab1ef86dc1b1e2a538a734b8daee6de274ec3af8c0"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/mar_esp_enteroctopus_dofleini--marea.webp",
+          "bytes": 71906,
+          "sha256": "280e9d6f63098c8c273d5e6a0a17d63e56f55716103684a631fff418b88d9a02"
+        }
+      ]
+    },
+    {
+      "id": "aconcagua",
+      "speciesId": "sa_esp_vultur_gryphus",
+      "name": "Aconcagua",
+      "description": "Un cóndor macho abre las alas y deja ver un collar blanco espeso y paneles claros en el plumaje oscuro.",
+      "legendaryOnly": true,
+      "commonName": "Cóndor andino",
+      "species": "Vultur gryphus",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/sa_esp_vultur_gryphus--aconcagua.webp",
+          "bytes": 1428,
+          "sha256": "914989ff609c98af2b1d23d4645cca049ceaf4b9fc9b28f8d62a9bd0803f3713"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/sa_esp_vultur_gryphus--aconcagua.webp",
+          "bytes": 3378,
+          "sha256": "9cde7dbe61b627503603a1a9b4d0fd68ad408c7af480b8015b1bc61a2ac8219b"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/sa_esp_vultur_gryphus--aconcagua.webp",
+          "bytes": 9536,
+          "sha256": "eb01dd3c2d6126609e4948e52847fe282554ae6a5996ec49e7b99308c6ab1f89"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/sa_esp_vultur_gryphus--aconcagua.webp",
+          "bytes": 29918,
+          "sha256": "3dbe578804b25a7901fa17a46937621cb2b917d4dcb1bd769b1866ebe325547c"
+        }
+      ]
+    },
+    {
+      "id": "titan",
+      "speciesId": "na_esp_bison_bison",
+      "name": "Titán",
+      "description": "Un bisonte de gran giba inclina la cabeza y apoya los cuartos delanteros bajo una melena densa.",
+      "legendaryOnly": true,
+      "commonName": "Bisonte americano",
+      "species": "Bison bison",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/na_esp_bison_bison--titan.webp",
+          "bytes": 2800,
+          "sha256": "0e5a3339c2e6924dc7b28eabf5cbbf329f50bcdcb544d8cb79a68cf07ff296ad"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/na_esp_bison_bison--titan.webp",
+          "bytes": 7366,
+          "sha256": "fd3235f54db1dc0c45a60c3cf78cd25a640ea7629fb6f7fdd74a0b4368202435"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/na_esp_bison_bison--titan.webp",
+          "bytes": 21332,
+          "sha256": "741b081d1b72efa9a868cf94a77d9853e727016ae2441dc00d9cde7d4da33915"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/na_esp_bison_bison--titan.webp",
+          "bytes": 74830,
+          "sha256": "c05cb95baa68b6a6cdd20376bcb1d00dca9a2a33a1b17067029bc6ef773f9bc3"
+        }
+      ]
+    },
+    {
+      "id": "boreal",
+      "speciesId": "polar_esp_ursus_maritimus",
+      "name": "Boreal",
+      "description": "Un oso de pelaje marfil levanta la cabeza al avanzar, con el cuello largo y el perfil de una oreja ligeramente mellado.",
+      "legendaryOnly": true,
+      "commonName": "Oso polar",
+      "species": "Ursus maritimus",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/polar_esp_ursus_maritimus--boreal.webp",
+          "bytes": 1942,
+          "sha256": "3b8e789479d57bf638cbb57b8c57fd77e08b0cbdd34fa3ca28a8d188976781e3"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/polar_esp_ursus_maritimus--boreal.webp",
+          "bytes": 4264,
+          "sha256": "e79822dcf9b543274b2cc9ed5c9c541afcb77504c0727a714aca313ffa76be9b"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/polar_esp_ursus_maritimus--boreal.webp",
+          "bytes": 11692,
+          "sha256": "6ad159cf9a2cb7e1d614dcd26d0f9fd226eef60ab90cebcd9f1108fea93e5c5a"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/polar_esp_ursus_maritimus--boreal.webp",
+          "bytes": 38564,
+          "sha256": "1e66ea0a5b324e7380ccb71b6e4a6b758fcefc7a808e484d2919f8341f4575b1"
+        }
+      ]
+    },
+    {
+      "id": "leviatan",
+      "speciesId": "mar_esp_balaenoptera_musculus",
+      "name": "Leviatán",
+      "description": "La ballena azul gira en diagonal y deja ver sus surcos ventrales y la cola horizontal.",
+      "legendaryOnly": true,
+      "commonName": "Ballena azul",
+      "species": "Balaenoptera musculus",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/mar_esp_balaenoptera_musculus--leviatan.webp",
+          "bytes": 2084,
+          "sha256": "eddf2c07139ede111be07ca23fce62e9db523795e32b1e0b302f396c1819bbd4"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/mar_esp_balaenoptera_musculus--leviatan.webp",
+          "bytes": 4598,
+          "sha256": "9553cbe388b88860e408964a2f7f06b7a73f5fda03e7405a082af540cafee91b"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/mar_esp_balaenoptera_musculus--leviatan.webp",
+          "bytes": 12058,
+          "sha256": "f681859179463cceb6153893e098e28c9f8882f86d32776d7e5ceebd0bf31e22"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/mar_esp_balaenoptera_musculus--leviatan.webp",
+          "bytes": 38822,
+          "sha256": "feaee2c0b01e83f8970c402338fe5054a29bbed86961b553069c67f4a190f68f"
+        }
+      ]
+    },
+    {
+      "id": "esmeralda",
+      "speciesId": "oc_esp_strigops_habroptilus",
+      "name": "Esmeralda",
+      "description": "Un kākāpō de disco facial dorado gira la cabeza y muestra verde profundo y barras oscuras en el ala.",
+      "legendaryOnly": true,
+      "commonName": "Kakapo",
+      "species": "Strigops habroptilus",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/oc_esp_strigops_habroptilus--esmeralda.webp",
+          "bytes": 2082,
+          "sha256": "16ba277a93fd79410251b546e6e0bfa38182006f620d88a6bac9f7a3df858fc2"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/oc_esp_strigops_habroptilus--esmeralda.webp",
+          "bytes": 5286,
+          "sha256": "afc46600bf3e0b0b05b24cbe15d197ccc729dc89e424e38e8d4e7b98b507a169"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/oc_esp_strigops_habroptilus--esmeralda.webp",
+          "bytes": 16224,
+          "sha256": "dce242b91d278e89f6da4b5cec9ead5372f20ea1bb86e3a914feae8032efd820"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/oc_esp_strigops_habroptilus--esmeralda.webp",
+          "bytes": 55652,
+          "sha256": "fc789fd3ba7cf8a168cf36969da0f0c2490e1848f60ef29696b62efb515820d9"
+        }
+      ]
+    },
+    {
+      "id": "abismo",
+      "speciesId": "af_tiburon_blanco",
+      "name": "Abismo",
+      "description": "Un tiburón blanco de lomo gris acero gira hacia el observador, con cicatrices antiguas apenas visibles.",
+      "legendaryOnly": true,
+      "commonName": "Tiburón blanco",
+      "species": "Carcharodon carcharias",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/af_tiburon_blanco--abismo.webp",
+          "bytes": 1762,
+          "sha256": "f5b810f331a3b569775c8cf541ac7ef9462dd9662aeb7279a3747f0e2711e3d8"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/af_tiburon_blanco--abismo.webp",
+          "bytes": 3814,
+          "sha256": "464b27a3a24149237e5524ca6848545eef26d35644bfebe8d018352bba14701a"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/af_tiburon_blanco--abismo.webp",
+          "bytes": 9766,
+          "sha256": "aa489e9f1ad0a1d0ad21c0cd5ec5ba5d0ea94bb7d6fad8ac673f61aa6f98cdc8"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/af_tiburon_blanco--abismo.webp",
+          "bytes": 29522,
+          "sha256": "91489e41e17cf51e81b998b945048b372089a6f1c8e556ce27b93f273e2f8737"
+        }
+      ]
+    },
+    {
+      "id": "kraken",
+      "speciesId": "mar_esp_architeuthis_dux",
+      "name": "Kraken",
+      "description": "Un calamar gigante rojizo despliega ocho brazos y dos tentáculos de captura mucho más largos, terminados en mazas.",
+      "legendaryOnly": true,
+      "commonName": "Calamar gigante",
+      "species": "Architeuthis dux",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/mar_esp_architeuthis_dux--kraken.webp",
+          "bytes": 2262,
+          "sha256": "aefab566583471854e0304698ba6d91908b1100325f0a02f373325e7ae8d6679"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/mar_esp_architeuthis_dux--kraken.webp",
+          "bytes": 5480,
+          "sha256": "cb49b945303dcb1deb8da784c9f0ae28aa61e831620e471b984b809601340ad3"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/mar_esp_architeuthis_dux--kraken.webp",
+          "bytes": 14608,
+          "sha256": "d6f374b31d5e59fb71d8e659df75e9f3094a8f7f00f59036d577afb9cd14b220"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/mar_esp_architeuthis_dux--kraken.webp",
+          "bytes": 40884,
+          "sha256": "50e5b6f81662ff5631c2f375f398e2f88f8bd20b87391f6c52f5d4b80a0427a2"
+        }
+      ]
+    },
+    {
+      "id": "solitario",
+      "speciesId": "gm06_chelonoidis_porteri",
+      "name": "Solitario",
+      "description": "Una tortuga ficticia de Santa Cruz levanta el cuello sobre cuatro patas columnares y un caparazón abovedado de escudos marcados.",
+      "legendaryOnly": true,
+      "commonName": "Tortuga gigante de Santa Cruz occidental",
+      "species": "Chelonoidis porteri",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/gm06_chelonoidis_porteri--solitario.webp",
+          "bytes": 2376,
+          "sha256": "1f87d2a087a5251fdc41cf4d4a3abf9b150541207e6f5bd0e77be3af4d276651"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/gm06_chelonoidis_porteri--solitario.webp",
+          "bytes": 5676,
+          "sha256": "9abc2a41c7fe6f9cbca3fd577686e07c127bc4e1f8d8ace3213e25e21025a673"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/gm06_chelonoidis_porteri--solitario.webp",
+          "bytes": 16618,
+          "sha256": "1ba786f79e00aed6c5f5d167d23b518167447c72d76e848db8696346ed6887a9"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/gm06_chelonoidis_porteri--solitario.webp",
+          "bytes": 59014,
+          "sha256": "67a568255b049e359e820e12b0a80c74f7ac2715143652951bdbf54fef8b7121"
+        }
+      ]
+    },
+    {
+      "id": "eterno",
+      "speciesId": "polar_esp_somniosus_microcephalus",
+      "name": "Eterno",
+      "description": "Un robusto tiburón de Groenlandia muestra la piel gris profunda y las marcas acumuladas en el lomo.",
+      "legendaryOnly": true,
+      "commonName": "Tiburón de Groenlandia",
+      "species": "Somniosus microcephalus",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/polar_esp_somniosus_microcephalus--eterno.webp",
+          "bytes": 1698,
+          "sha256": "b8f6b080db2410fb2c7db2750882e28b9a9ca01abb97cba49e0c42e20aa74042"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/polar_esp_somniosus_microcephalus--eterno.webp",
+          "bytes": 3632,
+          "sha256": "1fe819282a0c3192ad79d2fd69975ebd56ac0465a023f8f7cfd77ad4da026d69"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/polar_esp_somniosus_microcephalus--eterno.webp",
+          "bytes": 9294,
+          "sha256": "7b9a9c7e5edcad0337329de273fc7f9e7ef5684a8af1accb5fabb36ea8f8a7bb"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/polar_esp_somniosus_microcephalus--eterno.webp",
+          "bytes": 32200,
+          "sha256": "6d2b971bdaf9a6fe233c99e731e7ec647ae255a94766e482d5a5d8042072e130"
+        }
+      ]
+    },
+    {
+      "id": "vertigo",
+      "speciesId": "na_esp_falco_peregrinus",
+      "name": "Vértigo",
+      "description": "Un peregrino adulto se lanza en picado con las alas plegadas hacia atrás y la cola estrecha.",
+      "legendaryOnly": true,
+      "commonName": "Halcón peregrino",
+      "species": "Falco peregrinus",
+      "rate": 0.0001,
+      "resolutions": [
+        {
+          "size": 64,
+          "resource": "naturalist-art/plates/64/na_esp_falco_peregrinus--vertigo.webp",
+          "bytes": 1658,
+          "sha256": "19deb02de7f744af693cc91f5178d8c7b9a9f81c298701119a0e5f410cb4eb7a"
+        },
+        {
+          "size": 128,
+          "resource": "naturalist-art/plates/128/na_esp_falco_peregrinus--vertigo.webp",
+          "bytes": 4272,
+          "sha256": "93ab71a46540c2e6f392ffd83d1b0a8c4a402124c1d07b2066fac3a45abb128c"
+        },
+        {
+          "size": 256,
+          "resource": "naturalist-art/plates/256/na_esp_falco_peregrinus--vertigo.webp",
+          "bytes": 12242,
+          "sha256": "0aac57f2743aa4f1f3ced3719588d08c8e4ff1bdd9e7e36ceb190c2afba73f3d"
+        },
+        {
+          "size": 512,
+          "resource": "naturalist-art/plates/na_esp_falco_peregrinus--vertigo.webp",
+          "bytes": 41832,
+          "sha256": "648394af8fbfd394e3451b8f7776d75e1a040250edb575d1b320b9fae4f55036"
+        }
+      ]
+    }
+  ]
+}

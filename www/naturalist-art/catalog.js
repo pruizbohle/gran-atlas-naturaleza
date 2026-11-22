@@ -952,7 +952,7 @@ const catalog = [
         "key": "legendario",
         "label": "Alisio",
         "src": "plates/frailecillo_atlantico--alisio.webp",
-        "bytes": 47264,
+        "bytes": 47314,
         "cutout": true,
         "classical": true,
         "note": "",
@@ -3015,7 +3015,7 @@ const catalog = [
       },
       {
         "key": "legendario",
-        "label": "Filigrana",
+        "label": "Nácar",
         "src": "plates/na_esp_ambystoma_mexicanum--filigrana.webp",
         "bytes": 58368,
         "cutout": true,
@@ -6581,7 +6581,8 @@ const catalog = [
     ],
     "categories": [
       "Normal",
-      "Notable"
+      "Notable",
+      "Legendario"
     ],
     "records": [
       {
@@ -6595,6 +6596,19 @@ const catalog = [
         "before": null,
         "previous": null,
         "compression": {}
+      },
+      {
+        "key": "legendario",
+        "label": "Leviatán",
+        "src": "plates/mar_esp_balaenoptera_musculus--leviatan.webp",
+        "bytes": 38822,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Ballena azul\" data-marine-profile=\"blue_whale\" data-zoological-family=\"Balaenopteridae\"><path d=\"M7 56Q17 34 40 40Q62 39 79 55L86 56 97 45 94 56 98 63 84 63Q50 78 14 65Z\" fill=\"#779ca9\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M65 48L72 35 76 53Z\" fill=\"#779ca9\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M37 62L49 78 57 75 49 61Z\" fill=\"#779ca9\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"20\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 60Q24 66 34 61\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M17 64Q40 75 65 64M21 66Q39 78 59 69M26 69Q40 80 53 71\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"25\" cy=\"49\" r=\"1.4\" fill=\"#adc4c5\"/><circle cx=\"34\" cy=\"58\" r=\"1.4\" fill=\"#adc4c5\"/><circle cx=\"45\" cy=\"49\" r=\"1.4\" fill=\"#adc4c5\"/><circle cx=\"57\" cy=\"58\" r=\"1.4\" fill=\"#adc4c5\"/><circle cx=\"67\" cy=\"49\" r=\"1.4\" fill=\"#adc4c5\"/></svg>"
       }
     ],
     "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Ballena azul\" data-marine-profile=\"blue_whale\" data-zoological-family=\"Balaenopteridae\"><path d=\"M7 56Q17 34 40 40Q62 39 79 55L86 56 97 45 94 56 98 63 84 63Q50 78 14 65Z\" fill=\"#779ca9\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M65 48L72 35 76 53Z\" fill=\"#779ca9\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M37 62L49 78 57 75 49 61Z\" fill=\"#779ca9\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"20\" cy=\"54\" r=\"1.3\" fill=\"#203c48\"/><path d=\"M10 60Q24 66 34 61\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M17 64Q40 75 65 64M21 66Q39 78 59 69M26 69Q40 80 53 71\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"25\" cy=\"49\" r=\"1.4\" fill=\"#adc4c5\"/><circle cx=\"34\" cy=\"58\" r=\"1.4\" fill=\"#adc4c5\"/><circle cx=\"45\" cy=\"49\" r=\"1.4\" fill=\"#adc4c5\"/><circle cx=\"57\" cy=\"58\" r=\"1.4\" fill=\"#adc4c5\"/><circle cx=\"67\" cy=\"49\" r=\"1.4\" fill=\"#adc4c5\"/></svg>"
@@ -7150,7 +7164,8 @@ const catalog = [
       "Normal",
       "Notable",
       "Épico",
-      "Excepcional"
+      "Excepcional",
+      "Legendario"
     ],
     "records": [
       {
@@ -7177,6 +7192,19 @@ const catalog = [
         "previous": null,
         "compression": {},
         "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-na-version=\"3.22.1\" data-na-profile=\"bison-bison\" data-na-polish=\"AM-03\" data-zoological-family=\"Bovidae\" data-mammal-family=\"Bovidae\" data-pigmentation=\"albino\"><path d=\"M33 56Q31 65 39 72L38 78Q39 81 46 80L46 77L43 76Q45 66 40 58Z\" fill=\"#ded9d6\" stroke=\"#8c8688\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64 55Q62 64 68 71L67 77Q68 80 75 79L75 76L72 75Q74 65 71 57Z\" fill=\"#ded9d6\" stroke=\"#8c8688\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23 51Q27 43 36 44Q44 25 59 29Q71 30 77 44L77 62Q67 72 52 65L32 65Q22 63 23 51Z\" fill=\"#e1dcd9\" stroke=\"#8c8688\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M36 42Q49 27 61 33L70 48L68 64Q58 73 41 63Z\" fill=\"#dbd6d3\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 59Q24 68 25 75L24 81Q25 84 32 83L32 80L29 79Q31 69 33 61Z\" fill=\"#e1dcd9\" stroke=\"#8c8688\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61 59Q59 68 61 75L60 81Q61 84 68 83L68 80L65 79Q67 69 68 61Z\" fill=\"#e1dcd9\" stroke=\"#8c8688\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 83h7M62 83h7\" fill=\"none\" stroke=\"#8c8688\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 39Q80 32 88 43L89 57Q88 63 80 66L69 62L62 52Z\" fill=\"#e1dcd9\" stroke=\"#8c8688\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 41Q61 33 64 28Q68 30 70 38M82 38Q89 30 90 25Q95 31 88 44Z\" fill=\"#e6e1de\" stroke=\"#8c8688\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 59Q77 70 83 63L82 76L77 74L74 78L69 66Z\" fill=\"#dbd6d3\" stroke=\"#8c8688\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M36 48l-3 8m9-16-3 11m9-10-1 11m9-6 1 11\" fill=\"none\" stroke=\"#948e90\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 52Q11 48 13 62\" fill=\"none\" stroke=\"#8c8688\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-na3221-eye=\"true\"><circle cx=\"82\" cy=\"46\" r=\"1.35\" fill=\"#ad858d\"/><circle cx=\"82.35\" cy=\"45.6\" r=\"0.35\" fill=\"#faf4eb\"/></g><ellipse cx=\"87\" cy=\"56\" rx=\"2.4\" ry=\"1.8\" fill=\"#dbd6d3\" stroke=\"#8c8688\" stroke-width=\"0\"/></svg>"
+      },
+      {
+        "key": "legendario",
+        "label": "Titán",
+        "src": "plates/na_esp_bison_bison--titan.webp",
+        "bytes": 74830,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-na-version=\"3.22.1\" data-na-profile=\"bison-bison\" data-na-polish=\"AM-03\" data-zoological-family=\"Bovidae\" data-mammal-family=\"Bovidae\"><path d=\"M33 56Q31 65 39 72L38 78Q39 81 46 80L46 77L43 76Q45 66 40 58Z\" fill=\"#726045\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64 55Q62 64 68 71L67 77Q68 80 75 79L75 76L72 75Q74 65 71 57Z\" fill=\"#726045\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23 51Q27 43 36 44Q44 25 59 29Q71 30 77 44L77 62Q67 72 52 65L32 65Q22 63 23 51Z\" fill=\"#87755a\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M36 42Q49 27 61 33L70 48L68 64Q58 73 41 63Z\" fill=\"#4e5140\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 59Q24 68 25 75L24 81Q25 84 32 83L32 80L29 79Q31 69 33 61Z\" fill=\"#87755a\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61 59Q59 68 61 75L60 81Q61 84 68 83L68 80L65 79Q67 69 68 61Z\" fill=\"#87755a\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 83h7M62 83h7\" fill=\"none\" stroke=\"#4e5140\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 39Q80 32 88 43L89 57Q88 63 80 66L69 62L62 52Z\" fill=\"#87755a\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 41Q61 33 64 28Q68 30 70 38M82 38Q89 30 90 25Q95 31 88 44Z\" fill=\"#aa9170\" stroke=\"#3b5144\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 59Q77 70 83 63L82 76L77 74L74 78L69 66Z\" fill=\"#4e5140\" stroke=\"#3b5144\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M36 48l-3 8m9-16-3 11m9-10-1 11m9-6 1 11\" fill=\"none\" stroke=\"#aa9170\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 52Q11 48 13 62\" fill=\"none\" stroke=\"#4e5140\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-na3221-eye=\"true\"><circle cx=\"82\" cy=\"46\" r=\"1.35\" fill=\"#23352d\"/><circle cx=\"82.35\" cy=\"45.6\" r=\"0.35\" fill=\"#f5eed8\"/></g><ellipse cx=\"87\" cy=\"56\" rx=\"2.4\" ry=\"1.8\" fill=\"#4e5140\" stroke=\"#3b5144\" stroke-width=\"0\"/></svg>"
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-na-version=\"3.22.1\" data-na-profile=\"bison-bison\" data-na-polish=\"AM-03\" data-zoological-family=\"Bovidae\" data-mammal-family=\"Bovidae\"><path d=\"M33 56Q31 65 39 72L38 78Q39 81 46 80L46 77L43 76Q45 66 40 58Z\" fill=\"#726045\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64 55Q62 64 68 71L67 77Q68 80 75 79L75 76L72 75Q74 65 71 57Z\" fill=\"#726045\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M23 51Q27 43 36 44Q44 25 59 29Q71 30 77 44L77 62Q67 72 52 65L32 65Q22 63 23 51Z\" fill=\"#87755a\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M36 42Q49 27 61 33L70 48L68 64Q58 73 41 63Z\" fill=\"#4e5140\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 59Q24 68 25 75L24 81Q25 84 32 83L32 80L29 79Q31 69 33 61Z\" fill=\"#87755a\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61 59Q59 68 61 75L60 81Q61 84 68 83L68 80L65 79Q67 69 68 61Z\" fill=\"#87755a\" stroke=\"#3b5144\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 83h7M62 83h7\" fill=\"none\" stroke=\"#4e5140\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M65 39Q80 32 88 43L89 57Q88 63 80 66L69 62L62 52Z\" fill=\"#87755a\" stroke=\"#3b5144\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66 41Q61 33 64 28Q68 30 70 38M82 38Q89 30 90 25Q95 31 88 44Z\" fill=\"#aa9170\" stroke=\"#3b5144\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 59Q77 70 83 63L82 76L77 74L74 78L69 66Z\" fill=\"#4e5140\" stroke=\"#3b5144\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M36 48l-3 8m9-16-3 11m9-10-1 11m9-6 1 11\" fill=\"none\" stroke=\"#aa9170\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 52Q11 48 13 62\" fill=\"none\" stroke=\"#4e5140\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-na3221-eye=\"true\"><circle cx=\"82\" cy=\"46\" r=\"1.35\" fill=\"#23352d\"/><circle cx=\"82.35\" cy=\"45.6\" r=\"0.35\" fill=\"#f5eed8\"/></g><ellipse cx=\"87\" cy=\"56\" rx=\"2.4\" ry=\"1.8\" fill=\"#4e5140\" stroke=\"#3b5144\" stroke-width=\"0\"/></svg>"
@@ -9724,7 +9752,8 @@ const catalog = [
     ],
     "categories": [
       "Normal",
-      "Notable"
+      "Notable",
+      "Legendario"
     ],
     "records": [
       {
@@ -9738,6 +9767,19 @@ const catalog = [
         "before": null,
         "previous": null,
         "compression": {}
+      },
+      {
+        "key": "legendario",
+        "label": "Kraken",
+        "src": "plates/mar_esp_architeuthis_dux--kraken.webp",
+        "bytes": 40884,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Calamar gigante\" data-marine-profile=\"giant_squid\" data-zoological-family=\"Architeuthidae\"><path d=\"M25 44L92 35Q99 47 92 58L25 57Z\" fill=\"#c4aba3\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M79 37L90 27 95 41M79 57L90 67 95 53Z\" fill=\"#ab929b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 43Q4 20 9 27\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 45Q6 28 10 34\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 47Q8 36 11 41\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 49Q10 44 12 48\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 51Q12 52 13 55\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 53Q14 60 14 62\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 55Q16 68 15 69\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 57Q18 76 16 76\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M29 46Q2 1 3 13M29 56Q2 98 4 86\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"32\" cy=\"49\" r=\"2.5\" fill=\"#203c48\"/></svg>"
       }
     ],
     "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Calamar gigante\" data-marine-profile=\"giant_squid\" data-zoological-family=\"Architeuthidae\"><path d=\"M25 44L92 35Q99 47 92 58L25 57Z\" fill=\"#c4aba3\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M79 37L90 27 95 41M79 57L90 67 95 53Z\" fill=\"#ab929b\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 43Q4 20 9 27\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 45Q6 28 10 34\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 47Q8 36 11 41\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 49Q10 44 12 48\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 51Q12 52 13 55\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 53Q14 60 14 62\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 55Q16 68 15 69\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M30 57Q18 76 16 76\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><path d=\"M29 46Q2 1 3 13M29 56Q2 98 4 86\" fill=\"none\" stroke=\"#203c48\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" /><circle cx=\"32\" cy=\"49\" r=\"2.5\" fill=\"#203c48\"/></svg>"
@@ -14914,7 +14956,8 @@ const catalog = [
     "categories": [
       "Normal",
       "Notable",
-      "Épico"
+      "Épico",
+      "Legendario"
     ],
     "records": [
       {
@@ -14954,6 +14997,19 @@ const catalog = [
         "previous": null,
         "compression": {},
         "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-sa-version=\"3.23.1\" data-sa-polish=\"3231\" data-sa-profile=\"vultur-gryphus\" data-sa-morphology=\"vultur-gryphus\" data-zoological-family=\"Cathartidae\" data-bird-family=\"Cathartidae\" data-sa-sex=\"female\"><path d=\"M36 60L15 89Q25 94 41 87L54 68Z\" fill=\"#354f40\" stroke=\"#3b5244\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 47C28 32 43 30 56 36Q69 39 72 54Q77 69 64 79Q42 89 29 73Q22 63 26 47Z\" fill=\"#596656\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31 47Q33 33 50 39Q64 42 64 55L59 71L37 77L29 65Z\" fill=\"#354f40\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M34 45Q44 35 56 43L59 53L49 57L34 53Z\" fill=\"#ece5ce\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 57Q45 60 58 56M33 63Q43 65 56 61M35 69L52 67\" fill=\"none\" stroke=\"#596656\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M57 42Q60 33 62 24Q63 16 71 18Q81 19 80 29L75 38L73 47L64 52Z\" fill=\"#af9381\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M57 42Q65 49 75 41L80 45L77 51L69 53L60 49L56 46Z\" fill=\"#ece5ce\" stroke=\"#3b5244\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M59 44l3 5m2-3 2 5m2-4 2 5m2-5 3 3\" fill=\"none\" stroke=\"#ccc5ae\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M75 23Q90 20 94 29L92 36L88 38L87 31L78 29Z\" fill=\"#c9b997\" stroke=\"#3b5244\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-sa-eye=\"true\"><circle cx=\"73\" cy=\"24\" r=\"1.15\" fill=\"#23352d\"/><circle cx=\"72.7\" cy=\"23.65\" r=\"0.32\" fill=\"#f5ecd5\"/></g><path d=\"M66 32Q69 34 73 31\" fill=\"none\" stroke=\"#806b60\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M42 80L40 88M61 78L64 88\" fill=\"none\" stroke=\"#354f40\" stroke-width=\"2.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M40 88l-6 3m6-3 3 4m-3-4 0 4M64 88l-4 4m4-4 6 3m-6-3 2 4\" fill=\"none\" stroke=\"#354f40\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
+      },
+      {
+        "key": "legendario",
+        "label": "Aconcagua",
+        "src": "plates/sa_esp_vultur_gryphus--aconcagua.webp",
+        "bytes": 29918,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-sa-version=\"3.23.1\" data-sa-polish=\"3231\" data-sa-profile=\"vultur-gryphus\" data-sa-morphology=\"vultur-gryphus\" data-zoological-family=\"Cathartidae\" data-bird-family=\"Cathartidae\"><path d=\"M36 60L15 89Q25 94 41 87L54 68Z\" fill=\"#354f40\" stroke=\"#3b5244\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 47C28 32 43 30 56 36Q69 39 72 54Q77 69 64 79Q42 89 29 73Q22 63 26 47Z\" fill=\"#596656\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31 47Q33 33 50 39Q64 42 64 55L59 71L37 77L29 65Z\" fill=\"#354f40\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M34 45Q44 35 56 43L59 53L49 57L34 53Z\" fill=\"#ece5ce\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 57Q45 60 58 56M33 63Q43 65 56 61M35 69L52 67\" fill=\"none\" stroke=\"#596656\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M57 42Q60 33 62 24Q63 16 71 18Q81 19 80 29L75 38L73 47L64 52Z\" fill=\"#af9381\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M57 42Q65 49 75 41L80 45L77 51L69 53L60 49L56 46Z\" fill=\"#ece5ce\" stroke=\"#3b5244\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M59 44l3 5m2-3 2 5m2-4 2 5m2-5 3 3\" fill=\"none\" stroke=\"#ccc5ae\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M75 23Q90 20 94 29L92 36L88 38L87 31L78 29Z\" fill=\"#c9b997\" stroke=\"#3b5244\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-sa-eye=\"true\"><circle cx=\"73\" cy=\"24\" r=\"1.15\" fill=\"#23352d\"/><circle cx=\"72.7\" cy=\"23.65\" r=\"0.32\" fill=\"#f5ecd5\"/></g><path d=\"M66 32Q69 34 73 31\" fill=\"none\" stroke=\"#806b60\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64 21Q60 12 67 13Q74 13 78 21L76 25L70 21Z\" fill=\"#b09984\" stroke=\"#3b5244\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M42 80L40 88M61 78L64 88\" fill=\"none\" stroke=\"#354f40\" stroke-width=\"2.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M40 88l-6 3m6-3 3 4m-3-4 0 4M64 88l-4 4m4-4 6 3m-6-3 2 4\" fill=\"none\" stroke=\"#354f40\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-sa-version=\"3.23.1\" data-sa-polish=\"3231\" data-sa-profile=\"vultur-gryphus\" data-sa-morphology=\"vultur-gryphus\" data-zoological-family=\"Cathartidae\" data-bird-family=\"Cathartidae\"><path d=\"M36 60L15 89Q25 94 41 87L54 68Z\" fill=\"#354f40\" stroke=\"#3b5244\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M26 47C28 32 43 30 56 36Q69 39 72 54Q77 69 64 79Q42 89 29 73Q22 63 26 47Z\" fill=\"#596656\" stroke=\"#3b5244\" stroke-width=\"1.65\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M31 47Q33 33 50 39Q64 42 64 55L59 71L37 77L29 65Z\" fill=\"#354f40\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M34 45Q44 35 56 43L59 53L49 57L34 53Z\" fill=\"#ece5ce\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M33 57Q45 60 58 56M33 63Q43 65 56 61M35 69L52 67\" fill=\"none\" stroke=\"#596656\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M57 42Q60 33 62 24Q63 16 71 18Q81 19 80 29L75 38L73 47L64 52Z\" fill=\"#af9381\" stroke=\"#3b5244\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M57 42Q65 49 75 41L80 45L77 51L69 53L60 49L56 46Z\" fill=\"#ece5ce\" stroke=\"#3b5244\" stroke-width=\"1.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M59 44l3 5m2-3 2 5m2-4 2 5m2-5 3 3\" fill=\"none\" stroke=\"#ccc5ae\" stroke-width=\"0.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M75 23Q90 20 94 29L92 36L88 38L87 31L78 29Z\" fill=\"#c9b997\" stroke=\"#3b5244\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-sa-eye=\"true\"><circle cx=\"73\" cy=\"24\" r=\"1.15\" fill=\"#23352d\"/><circle cx=\"72.7\" cy=\"23.65\" r=\"0.32\" fill=\"#f5ecd5\"/></g><path d=\"M66 32Q69 34 73 31\" fill=\"none\" stroke=\"#806b60\" stroke-width=\"0.85\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64 21Q60 12 67 13Q74 13 78 21L76 25L70 21Z\" fill=\"#b09984\" stroke=\"#3b5244\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M42 80L40 88M61 78L64 88\" fill=\"none\" stroke=\"#354f40\" stroke-width=\"2.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M40 88l-6 3m6-3 3 4m-3-4 0 4M64 88l-4 4m4-4 6 3m-6-3 2 4\" fill=\"none\" stroke=\"#354f40\" stroke-width=\"1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
@@ -23051,7 +23107,7 @@ const catalog = [
         "key": "legendario",
         "label": "Espiral",
         "src": "plates/af_gran_kudu--espiral.webp",
-        "bytes": 48168,
+        "bytes": 45060,
         "cutout": true,
         "classical": true,
         "note": "",
@@ -24038,7 +24094,8 @@ const catalog = [
     ],
     "categories": [
       "Normal",
-      "Notable"
+      "Notable",
+      "Legendario"
     ],
     "records": [
       {
@@ -24065,6 +24122,19 @@ const catalog = [
         "previous": null,
         "compression": {},
         "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-bird-family=\"falcon\" data-bird-morph=\"pointed-falcon\" data-bird-version=\"3.19.3\" data-pigmentation=\"albino\"><g><path d=\"M36 62L22 84L38 81L49 63Z\" fill=\"#ddd8d5\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M48 73L46 86L40 87M59 70L61 84L68 86\" fill=\"none\" stroke=\"#938d8f\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 61Q32 45 50 43L57 31Q64 24 74 30Q82 36 77 45L68 53Q68 69 52 76Q35 80 27 67Z\" fill=\"#e4dfdc\" stroke=\"#8b8587\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><path d=\"M56 33Q64 26 75 32L72 45L63 50Q60 41 56 33Z\" fill=\"#dfdad7\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M40 48Q53 44 62 50Q58 66 29 77Q35 57 40 48Z\" fill=\"#ddd8d5\" stroke=\"#8b8587\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><path d=\"M36 61Q45 66 54 57M33 68Q43 71 53 64\" fill=\"none\" stroke=\"#908a8c\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M75 34Q87 31 85 41L80 45L80 39L75 40Z\" fill=\"#e8e3e0\" stroke=\"#8b8587\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><circle cx=\"70\" cy=\"32\" r=\"2.4\" fill=\"#f2edea\"/><circle cx=\"70\" cy=\"32\" r=\"1.7\" fill=\"#ad858d\"/><circle cx=\"70.5\" cy=\"31.45\" r=\"0.55\" fill=\"#faf4eb\"/></g><g data-bird-detail=\"true\"><path d=\"M63 29L71 29\" fill=\"none\" stroke=\"#8e888a\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-bird-detail=\"true\"><path d=\"M69 38L71 47L67 45L65 37Z\" fill=\"#d9d4d1\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
+      },
+      {
+        "key": "legendario",
+        "label": "Vértigo",
+        "src": "plates/na_esp_falco_peregrinus--vertigo.webp",
+        "bytes": 41832,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-bird-family=\"falcon\" data-bird-morph=\"pointed-falcon\" data-bird-version=\"3.19.3\"><g><path d=\"M36 62L22 84L38 81L49 63Z\" fill=\"#455f5e\" stroke=\"#39483f\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M48 73L46 86L40 87M59 70L61 84L68 86\" fill=\"none\" stroke=\"#8f8566\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 61Q32 45 50 43L57 31Q64 24 74 30Q82 36 77 45L68 53Q68 69 52 76Q35 80 27 67Z\" fill=\"#758b89\" stroke=\"#39483f\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><path d=\"M56 33Q64 26 75 32L72 45L63 50Q60 41 56 33Z\" fill=\"#4f6c66\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M40 48Q53 44 62 50Q58 66 29 77Q35 57 40 48Z\" fill=\"#455f5e\" stroke=\"#39483f\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><path d=\"M36 61Q45 66 54 57M33 68Q43 71 53 64\" fill=\"none\" stroke=\"#5b7574\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M75 34Q87 31 85 41L80 45L80 39L75 40Z\" fill=\"#b3a566\" stroke=\"#39483f\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><circle cx=\"70\" cy=\"32\" r=\"2.4\" fill=\"#eee7cf\"/><circle cx=\"70\" cy=\"32\" r=\"1.7\" fill=\"#23352d\"/><circle cx=\"70.5\" cy=\"31.45\" r=\"0.55\" fill=\"#eee7cf\"/></g><g data-bird-detail=\"true\"><path d=\"M63 29L71 29\" fill=\"none\" stroke=\"#455f5e\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-bird-detail=\"true\"><path d=\"M69 38L71 47L67 45L65 37Z\" fill=\"#34483f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-bird-family=\"falcon\" data-bird-morph=\"pointed-falcon\" data-bird-version=\"3.19.3\"><g><path d=\"M36 62L22 84L38 81L49 63Z\" fill=\"#455f5e\" stroke=\"#39483f\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M48 73L46 86L40 87M59 70L61 84L68 86\" fill=\"none\" stroke=\"#8f8566\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M27 61Q32 45 50 43L57 31Q64 24 74 30Q82 36 77 45L68 53Q68 69 52 76Q35 80 27 67Z\" fill=\"#758b89\" stroke=\"#39483f\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><path d=\"M56 33Q64 26 75 32L72 45L63 50Q60 41 56 33Z\" fill=\"#4f6c66\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M40 48Q53 44 62 50Q58 66 29 77Q35 57 40 48Z\" fill=\"#455f5e\" stroke=\"#39483f\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><path d=\"M36 61Q45 66 54 57M33 68Q43 71 53 64\" fill=\"none\" stroke=\"#5b7574\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M75 34Q87 31 85 41L80 45L80 39L75 40Z\" fill=\"#b3a566\" stroke=\"#39483f\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-bird-detail=\"true\"><circle cx=\"70\" cy=\"32\" r=\"2.4\" fill=\"#eee7cf\"/><circle cx=\"70\" cy=\"32\" r=\"1.7\" fill=\"#23352d\"/><circle cx=\"70.5\" cy=\"31.45\" r=\"0.55\" fill=\"#eee7cf\"/></g><g data-bird-detail=\"true\"><path d=\"M63 29L71 29\" fill=\"none\" stroke=\"#455f5e\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g data-bird-detail=\"true\"><path d=\"M69 38L71 47L67 45L65 37Z\" fill=\"#34483f\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g></g></svg>"
@@ -26510,7 +26580,8 @@ const catalog = [
     ],
     "categories": [
       "Normal",
-      "Notable"
+      "Notable",
+      "Legendario"
     ],
     "records": [
       {
@@ -26524,6 +26595,19 @@ const catalog = [
         "before": null,
         "previous": null,
         "compression": {}
+      },
+      {
+        "key": "legendario",
+        "label": "Esmeralda",
+        "src": "plates/oc_esp_strigops_habroptilus--esmeralda.webp",
+        "bytes": 55652,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-oc-profile=\"kakapo\" data-oc-species=\"Strigops-habroptilus\" data-zoological-family=\"Strigopidae\" data-oc-sex=\"base\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M33 64L15 79L39 76Z\" fill=\"#789459\" stroke=\"#37463b\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M29 52Q31 35 50 36Q69 33 75 49L73 68Q58 83 38 73Z\" fill=\"#789459\" stroke=\"#37463b\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M33 49Q40 40 54 46L60 66Q42 72 34 62Z\" fill=\"#789459\" stroke=\"#37463b\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M37 53Q45 48 53 53M38 58Q48 53 56 59M39 63Q49 59 58 64\" fill=\"none\" stroke=\"#58634e\" stroke-width=\"0.8\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M43 72L43 83L35 88L50 86M60 71L62 83L55 89L71 87\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.9\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M55 44Q50 24 67 23Q82 22 83 37L78 49L67 53Z\" fill=\"#789459\" stroke=\"#37463b\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M77 34Q92 32 87 44L80 51L81 42L76 40Z\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"71\" cy=\"34\" r=\"1.7\" fill=\"#202d29\" stroke=\"#37463b\" stroke-width=\".4\"/><circle cx=\"70.65\" cy=\"33.6\" r=\".35\" fill=\"#faf4eb\"/><ellipse cx=\"37\" cy=\"46\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><ellipse cx=\"46\" cy=\"42\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><ellipse cx=\"52\" cy=\"50\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><ellipse cx=\"41\" cy=\"60\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><ellipse cx=\"48\" cy=\"66\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><ellipse cx=\"63\" cy=\"58\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><ellipse cx=\"68\" cy=\"49\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><path d=\"M61 31Q67 25 74 32M59 35Q66 39 76 36\" fill=\"none\" stroke=\"#d9d4b8\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></g></svg>"
       }
     ],
     "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-oc-profile=\"kakapo\" data-oc-species=\"Strigops-habroptilus\" data-zoological-family=\"Strigopidae\" data-oc-sex=\"base\"><g stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M33 64L15 79L39 76Z\" fill=\"#789459\" stroke=\"#37463b\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M29 52Q31 35 50 36Q69 33 75 49L73 68Q58 83 38 73Z\" fill=\"#789459\" stroke=\"#37463b\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M33 49Q40 40 54 46L60 66Q42 72 34 62Z\" fill=\"#789459\" stroke=\"#37463b\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M37 53Q45 48 53 53M38 58Q48 53 56 59M39 63Q49 59 58 64\" fill=\"none\" stroke=\"#58634e\" stroke-width=\"0.8\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M43 72L43 83L35 88L50 86M60 71L62 83L55 89L71 87\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.9\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M55 44Q50 24 67 23Q82 22 83 37L78 49L67 53Z\" fill=\"#789459\" stroke=\"#37463b\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M77 34Q92 32 87 44L80 51L81 42L76 40Z\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"71\" cy=\"34\" r=\"1.7\" fill=\"#202d29\" stroke=\"#37463b\" stroke-width=\".4\"/><circle cx=\"70.65\" cy=\"33.6\" r=\".35\" fill=\"#faf4eb\"/><ellipse cx=\"37\" cy=\"46\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><ellipse cx=\"46\" cy=\"42\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><ellipse cx=\"52\" cy=\"50\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><ellipse cx=\"41\" cy=\"60\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><ellipse cx=\"48\" cy=\"66\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><ellipse cx=\"63\" cy=\"58\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><ellipse cx=\"68\" cy=\"49\" rx=\"1.5\" ry=\"1.5\" fill=\"#58634e\" stroke=\"#37463b\" stroke-width=\"0.3\"/><path d=\"M61 31Q67 25 74 32M59 35Q66 39 76 36\" fill=\"none\" stroke=\"#d9d4b8\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></g></svg>"
@@ -36855,7 +36939,8 @@ const catalog = [
     ],
     "categories": [
       "Normal",
-      "Notable"
+      "Notable",
+      "Legendario"
     ],
     "records": [
       {
@@ -36875,6 +36960,19 @@ const catalog = [
           "bytes": 15252
         },
         "compression": {}
+      },
+      {
+        "key": "legendario",
+        "label": "Boreal",
+        "src": "plates/polar_esp_ursus_maritimus--boreal.webp",
+        "bytes": 38564,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Oso polar\" data-polar-profile=\"polar_bear\"><path d=\"M15 55Q12 32 38 33L65 39Q70 28 80 36L92 44 92 52 78 55 69 53 65 78 56 78 54 59 36 59 31 78 21 78 23 56Z\" fill=\"#edf4ef\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /><path d=\"M74 35Q69 26 75 26Q82 26 81 35\" fill=\"#edf4ef\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /><circle cx=\"83\" cy=\"43\" r=\"1.2\" fill=\"#101c20\"/><path d=\"M89 45L94 47 91 50Z\" fill=\"#25383e\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /></svg>"
       }
     ],
     "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Oso polar\" data-polar-profile=\"polar_bear\"><path d=\"M15 55Q12 32 38 33L65 39Q70 28 80 36L92 44 92 52 78 55 69 53 65 78 56 78 54 59 36 59 31 78 21 78 23 56Z\" fill=\"#edf4ef\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /><path d=\"M74 35Q69 26 75 26Q82 26 81 35\" fill=\"#edf4ef\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /><circle cx=\"83\" cy=\"43\" r=\"1.2\" fill=\"#101c20\"/><path d=\"M89 45L94 47 91 50Z\" fill=\"#25383e\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /></svg>"
@@ -41533,7 +41631,7 @@ const catalog = [
         "key": "legendario",
         "label": "Ciénaga",
         "src": "plates/af_picozapato--cienaga.webp",
-        "bytes": 44384,
+        "bytes": 44202,
         "cutout": true,
         "classical": true,
         "note": "",
@@ -49083,7 +49181,8 @@ const catalog = [
     ],
     "categories": [
       "Normal",
-      "Notable"
+      "Notable",
+      "Legendario"
     ],
     "records": [
       {
@@ -49123,6 +49222,19 @@ const catalog = [
         "previous": null,
         "compression": {},
         "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"tiburon-blanco\" data-fish-version=\"3.19.9\" data-pigmentation=\"melanico\"><path d=\"M23 53Q11 45 7 24Q8 46 12 57L5 79Q15 77 25 63Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M39 46Q42 27 51 17Q53 36 63 45Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M50 66Q47 80 37 86Q59 81 67 67Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 63Q26 70 19 73Q31 73 37 66Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 49Q30 43 35 43L39 48Z\" fill=\"#323840\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 54Q38 41 61 43Q80 43 94 53L91 60Q75 73 47 69Q29 66 19 62Z\" fill=\"#373d45\" stroke=\"#47515a\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 60Q59 64 92 55Q77 72 48 67Q32 64 25 60Z\" fill=\"#474d55\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 51q-2 4 0 9\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67.2 51q-2 4 0 9\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64.4 51q-2 4 0 9\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61.6 51q-2 4 0 9\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M58.8 51q-2 4 0 9\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M83 61q5 0 8-4\" fill=\"none\" stroke=\"#47515a\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.45\" fill=\"#222830\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#8d969c\"/></g></svg>"
+      },
+      {
+        "key": "legendario",
+        "label": "Abismo",
+        "src": "plates/af_tiburon_blanco--abismo.webp",
+        "bytes": 29522,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"tiburon-blanco\" data-fish-version=\"3.19.9\"><path d=\"M23 53Q11 45 7 24Q8 46 12 57L5 79Q15 77 25 63Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M39 46Q42 27 51 17Q53 36 63 45Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M50 66Q47 80 37 86Q59 81 67 67Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 63Q26 70 19 73Q31 73 37 66Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 49Q30 43 35 43L39 48Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 54Q38 41 61 43Q80 43 94 53L91 60Q75 73 47 69Q29 66 19 62Z\" fill=\"#82938f\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 60Q59 64 92 55Q77 72 48 67Q32 64 25 60Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67.2 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64.4 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61.6 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M58.8 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M83 61q5 0 8-4\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.45\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g></svg>"
       }
     ],
     "sprite": "<svg viewBox=\"0 0 100 100\" aria-hidden=\"true\" data-fish-family=\"tiburon-blanco\" data-fish-version=\"3.19.9\"><path d=\"M23 53Q11 45 7 24Q8 46 12 57L5 79Q15 77 25 63Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M39 46Q42 27 51 17Q53 36 63 45Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M50 66Q47 80 37 86Q59 81 67 67Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 63Q26 70 19 73Q31 73 37 66Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M28 49Q30 43 35 43L39 48Z\" fill=\"#657e7d\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 54Q38 41 61 43Q80 43 94 53L91 60Q75 73 47 69Q29 66 19 62Z\" fill=\"#82938f\" stroke=\"#3b4b48\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M25 60Q59 64 92 55Q77 72 48 67Q32 64 25 60Z\" fill=\"#d9dbbf\" stroke=\"none\" stroke-width=\"0\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M70 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67.2 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M64.4 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M61.6 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M58.8 51q-2 4 0 9\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.15\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M83 61q5 0 8-4\" fill=\"none\" stroke=\"#3b4b48\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><g data-fish-eye=\"true\"><circle cx=\"84\" cy=\"50\" r=\"1.45\" fill=\"#27332f\"/><circle cx=\"84.4\" cy=\"49.6\" r=\"0.45\" fill=\"#f6f1dc\"/></g></svg>"
@@ -49197,7 +49309,8 @@ const catalog = [
     ],
     "categories": [
       "Normal",
-      "Notable"
+      "Notable",
+      "Legendario"
     ],
     "records": [
       {
@@ -49211,6 +49324,19 @@ const catalog = [
         "before": null,
         "previous": null,
         "compression": {}
+      },
+      {
+        "key": "legendario",
+        "label": "Eterno",
+        "src": "plates/polar_esp_somniosus_microcephalus--eterno.webp",
+        "bytes": 32200,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón de Groenlandia\" data-polar-profile=\"shark\"><path d=\"M9 54Q29 39 68 48L89 27 85 51 96 64 81 62 73 59Q47 73 16 65Z\" fill=\"#758a85\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /><path d=\"M44 46L50 32 55 47M46 65L58 77 60 63\" fill=\"#859a9f\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /><circle cx=\"21\" cy=\"53\" r=\"1.2\" fill=\"#101c20\"/><path d=\"M28 51L30 60M32 50L34 61M36 50L38 61M11 62L23 63\" fill=\"none\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /></svg>"
       }
     ],
     "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" role=\"img\" aria-label=\"Tiburón de Groenlandia\" data-polar-profile=\"shark\"><path d=\"M9 54Q29 39 68 48L89 27 85 51 96 64 81 62 73 59Q47 73 16 65Z\" fill=\"#758a85\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /><path d=\"M44 46L50 32 55 47M46 65L58 77 60 63\" fill=\"#859a9f\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /><circle cx=\"21\" cy=\"53\" r=\"1.2\" fill=\"#101c20\"/><path d=\"M28 51L30 60M32 50L34 61M36 50L38 61M11 62L23 63\" fill=\"none\" stroke=\"#25383e\" stroke-width=\"1.7\" stroke-linejoin=\"round\" /></svg>"
@@ -50529,7 +50655,8 @@ const catalog = [
       "Normal",
       "Notable",
       "Épico",
-      "Excepcional"
+      "Excepcional",
+      "Legendario"
     ],
     "records": [
       {
@@ -50543,6 +50670,19 @@ const catalog = [
         "before": null,
         "previous": null,
         "compression": {}
+      },
+      {
+        "key": "legendario",
+        "label": "Solitario",
+        "src": "plates/gm06_chelonoidis_porteri--solitario.webp",
+        "bytes": 59014,
+        "cutout": true,
+        "classical": true,
+        "note": "",
+        "before": null,
+        "previous": null,
+        "compression": {},
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 100\" role=\"img\" aria-label=\"Tortuga gigante de Santa Cruz occidental\" data-gm06-morph=\"tortoise\"><g stroke=\"#35473e\" stroke-width=\"1.5\" stroke-linejoin=\"round\"><path d=\"M24 68L18 84L31 84L38 71M68 70L74 84L85 83L80 68Z\" fill=\"#77765a\" /><path d=\"M22 67Q19 26 57 27Q88 29 86 68Z\" fill=\"#77765a\" /><path d=\"M45 31L35 47L48 63L69 61L76 43L61 29M35 47L23 52M48 63L47 70M69 61L77 69\" fill=\"none\" stroke=\"#aaa58a\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80 59Q89 42 101 47Q112 55 100 65L84 70Z\" fill=\"#77765a\" /><circle cx=\"102\" cy=\"52\" r=\"2\" fill=\"#35473e\"/></g></svg>"
       }
     ],
     "sprite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 100\" role=\"img\" aria-label=\"Tortuga gigante de Santa Cruz occidental\" data-gm06-morph=\"tortoise\"><g stroke=\"#35473e\" stroke-width=\"1.5\" stroke-linejoin=\"round\"><path d=\"M24 68L18 84L31 84L38 71M68 70L74 84L85 83L80 68Z\" fill=\"#77765a\" /><path d=\"M22 67Q19 26 57 27Q88 29 86 68Z\" fill=\"#77765a\" /><path d=\"M45 31L35 47L48 63L69 61L76 43L61 29M35 47L23 52M48 63L47 70M69 61L77 69\" fill=\"none\" stroke=\"#aaa58a\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M80 59Q89 42 101 47Q112 55 100 65L84 70Z\" fill=\"#77765a\" /><circle cx=\"102\" cy=\"52\" r=\"2\" fill=\"#35473e\"/></g></svg>"
@@ -57762,26 +57902,36 @@ const legendaryComparisons = {
         "trait": "En reposo, la cresta alta y la silla plateada se distinguen de brazos y pecho.",
         "plateKey": "legendario",
         "status": "revisado",
-        "before": {
-          "64": "review/leg01/64/af_gorila_montana--silverback.webp",
-          "128": "review/leg01/128/af_gorila_montana--silverback.webp",
-          "256": "review/leg01/256/af_gorila_montana--silverback.webp",
-          "512": "review/leg01/af_gorila_montana--silverback.webp"
-        }
+        "origin": "Original",
+        "archives": [
+          {
+            "label": "Legendario anterior · Original",
+            "files": {
+              "64": "review/leg01/64/af_gorila_montana--silverback.webp",
+              "128": "review/leg01/128/af_gorila_montana--silverback.webp",
+              "256": "review/leg01/256/af_gorila_montana--silverback.webp",
+              "512": "review/leg01/af_gorila_montana--silverback.webp"
+            }
+          }
+        ]
       },
       {
         "id": "asia_esp_0402",
         "legendaryId": "ambar",
         "trait": "Rayas anchas y un pelaje invernal denso en una pausa vigilante.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "asia_esp_0403",
         "legendaryId": "niebla",
         "trait": "Rosetas abiertas y una larga cola que acompaña el borde de la roca.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "lobo_gris",
@@ -57789,12 +57939,18 @@ const legendaryComparisons = {
         "trait": "El perfil de aullido alza el hocico sobre la gorguera invernal plateada.",
         "plateKey": "legendario",
         "status": "revisado",
-        "before": {
-          "64": "review/leg01/64/lobo_gris--fenrir.webp",
-          "128": "review/leg01/128/lobo_gris--fenrir.webp",
-          "256": "review/leg01/256/lobo_gris--fenrir.webp",
-          "512": "review/leg01/lobo_gris--fenrir.webp"
-        }
+        "origin": "Original",
+        "archives": [
+          {
+            "label": "Legendario anterior · Original",
+            "files": {
+              "64": "review/leg01/64/lobo_gris--fenrir.webp",
+              "128": "review/leg01/128/lobo_gris--fenrir.webp",
+              "256": "review/leg01/256/lobo_gris--fenrir.webp",
+              "512": "review/leg01/lobo_gris--fenrir.webp"
+            }
+          }
+        ]
       },
       {
         "id": "af_elefante_sabana",
@@ -57802,47 +57958,63 @@ const legendaryComparisons = {
         "trait": "Cuatro patas diferenciadas, trompa libre y dos colmillos asimétricos.",
         "plateKey": "legendario",
         "status": "revisado",
-        "before": {
-          "64": "review/leg01/64/af_elefante_sabana--atlas.webp",
-          "128": "review/leg01/128/af_elefante_sabana--atlas.webp",
-          "256": "review/leg01/256/af_elefante_sabana--atlas.webp",
-          "512": "review/leg01/af_elefante_sabana--atlas.webp"
-        }
+        "origin": "Original",
+        "archives": [
+          {
+            "label": "Legendario anterior · Original",
+            "files": {
+              "64": "review/leg01/64/af_elefante_sabana--atlas.webp",
+              "128": "review/leg01/128/af_elefante_sabana--atlas.webp",
+              "256": "review/leg01/256/af_elefante_sabana--atlas.webp",
+              "512": "review/leg01/af_elefante_sabana--atlas.webp"
+            }
+          }
+        ]
       },
       {
         "id": "aguila_real",
         "legendaryId": "centinela",
         "trait": "La nuca dorada destaca sobre las alas recogidas de este vigilante.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "asia_esp_0527",
         "legendaryId": "basalto",
         "trait": "Escamas oscuras y patas robustas sostienen una silueta rasante.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "asia_esp_0373",
         "legendaryId": "seda",
         "trait": "Una cobra de capucha estrecha se eleva entre sus propios anillos.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "af_cocodrilo_nilo",
         "legendaryId": "junco",
         "trait": "Escudos dorsales irregulares y un hocico surcado por viejas cicatrices.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "af_tortuga_aldabra",
         "legendaryId": "ancora",
         "trait": "Caparazón de anillos marcados y cuello extendido sobre patas columnares.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "zorro_rojo",
@@ -57850,141 +58022,490 @@ const legendaryComparisons = {
         "trait": "La cola envuelve las patas y concentra los tonos cobre y bermellón.",
         "plateKey": "legendario",
         "status": "revisado",
-        "before": {
-          "64": "review/leg01/64/zorro_rojo--ascua.webp",
-          "128": "review/leg01/128/zorro_rojo--ascua.webp",
-          "256": "review/leg01/256/zorro_rojo--ascua.webp",
-          "512": "review/leg01/zorro_rojo--ascua.webp"
-        }
+        "origin": "Original",
+        "archives": [
+          {
+            "label": "Legendario anterior · Original",
+            "files": {
+              "64": "review/leg01/64/zorro_rojo--ascua.webp",
+              "128": "review/leg01/128/zorro_rojo--ascua.webp",
+              "256": "review/leg01/256/zorro_rojo--ascua.webp",
+              "512": "review/leg01/zorro_rojo--ascua.webp"
+            }
+          }
+        ]
       },
       {
         "id": "asia_esp_0369",
         "legendaryId": "remonte",
         "trait": "Un salmón de dorso moteado y mandíbula curva en plena remontada.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "af_gran_kudu",
         "legendaryId": "espiral",
-        "trait": "Un macho de cuernos ampliamente espiralados, barba larga y franjas de marfil sobre el flanco.",
+        "trait": "Un macho de cornamenta alargada con espiras más marcadas, barba larga y franjas de marfil sobre el flanco.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "revisado",
+        "origin": "LEG-01",
+        "archives": [
+          {
+            "label": "Legendario anterior · LEG-01",
+            "files": {
+              "64": "review/leg02/64/af_gran_kudu--espiral.webp",
+              "128": "review/leg02/128/af_gran_kudu--espiral.webp",
+              "256": "review/leg02/256/af_gran_kudu--espiral.webp",
+              "512": "review/leg02/af_gran_kudu--espiral.webp"
+            }
+          }
+        ]
       },
       {
         "id": "af_pangolin_gigante",
         "legendaryId": "bastion",
         "trait": "El cuerpo se repliega en un arco defensivo de escamas cobrizas y deja ver el hocico bajo la cola.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "nuevo",
+        "origin": "LEG-01",
+        "archives": []
       },
       {
         "id": "af_picozapato",
         "legendaryId": "cienaga",
-        "trait": "Permanece inmóvil con el pico jaspeado inclinado y una cresta desflecada sobre el manto pizarra.",
+        "trait": "Permanece agazapado con el pico jaspeado inclinado, el iris rojizo y una cresta desflecada sobre el manto pizarra.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "revisado",
+        "origin": "LEG-01",
+        "archives": [
+          {
+            "label": "Legendario anterior · LEG-01",
+            "files": {
+              "64": "review/leg02/64/af_picozapato--cienaga.webp",
+              "128": "review/leg02/128/af_picozapato--cienaga.webp",
+              "256": "review/leg02/256/af_picozapato--cienaga.webp",
+              "512": "review/leg02/af_picozapato--cienaga.webp"
+            }
+          },
+          {
+            "label": "Propuesta de revisión · LEG-02",
+            "files": {
+              "64": "review/leg02-propuestas/64/af_picozapato--cienaga.webp",
+              "128": "review/leg02-propuestas/128/af_picozapato--cienaga.webp",
+              "256": "review/leg02-propuestas/256/af_picozapato--cienaga.webp",
+              "512": "review/leg02-propuestas/af_picozapato--cienaga.webp"
+            }
+          }
+        ]
       },
       {
         "id": "frailecillo_atlantico",
         "legendaryId": "alisio",
-        "trait": "Un frailecillo de plumaje nupcial abre las alas mientras alza el pico y extiende los pies anaranjados.",
+        "trait": "Un frailecillo abre las alas mientras alza el pico y extiende los pies anaranjados. Trazos oscuros dispersos interrumpen el vientre blanco.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "revisado",
+        "origin": "LEG-01",
+        "archives": [
+          {
+            "label": "Legendario anterior · LEG-01",
+            "files": {
+              "64": "review/leg02/64/frailecillo_atlantico--alisio.webp",
+              "128": "review/leg02/128/frailecillo_atlantico--alisio.webp",
+              "256": "review/leg02/256/frailecillo_atlantico--alisio.webp",
+              "512": "review/leg02/frailecillo_atlantico--alisio.webp"
+            }
+          }
+        ]
       },
       {
         "id": "na_esp_ambystoma_mexicanum",
         "legendaryId": "filigrana",
         "trait": "Tres pares de branquias ramificadas enmarcan su cabeza y el flanco oliváceo muestra un punteado dorado.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "nuevo",
+        "origin": "LEG-01",
+        "archives": [],
+        "aliases": [
+          "Filigrana"
+        ]
       },
       {
         "id": "oc_esp_osphranter_rufus",
         "legendaryId": "terracota",
         "trait": "Un macho de pecho robusto se impulsa con las patas recogidas y la cola extendida bajo un manto de rojo arcilla.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "nuevo",
+        "origin": "LEG-01",
+        "archives": []
       },
       {
         "id": "mar_esp_megaptera_novaeangliae",
         "legendaryId": "orla",
         "trait": "La ballena gira y deja ver el borde moteado de las aletas pectorales y las marcas blancas de la cola.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "nuevo",
+        "origin": "LEG-01",
+        "archives": []
       },
       {
         "id": "mar_esp_enteroctopus_dofleini",
         "legendaryId": "marea",
         "trait": "El pulpo abre sus brazos en abanico y deja ver ventosas color marfil bajo una piel moteada de coral.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "nuevo",
+        "origin": "LEG-01",
+        "archives": []
+      },
+      {
+        "id": "sa_esp_vultur_gryphus",
+        "legendaryId": "aconcagua",
+        "trait": "Un cóndor macho abre las alas y deja ver un collar blanco espeso y paneles claros en el plumaje oscuro.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "na_esp_bison_bison",
+        "legendaryId": "titan",
+        "trait": "Un bisonte de gran giba inclina la cabeza y apoya los cuartos delanteros bajo una melena densa.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "polar_esp_ursus_maritimus",
+        "legendaryId": "boreal",
+        "trait": "Un oso de pelaje marfil levanta la cabeza al avanzar, con el cuello largo y el perfil de una oreja ligeramente mellado.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "mar_esp_balaenoptera_musculus",
+        "legendaryId": "leviatan",
+        "trait": "La ballena azul gira en diagonal y deja ver sus surcos ventrales y la cola horizontal.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "oc_esp_strigops_habroptilus",
+        "legendaryId": "esmeralda",
+        "trait": "Un kākāpō de disco facial dorado gira la cabeza y muestra verde profundo y barras oscuras en el ala.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": [
+          {
+            "label": "Propuesta de revisión · LEG-02",
+            "files": {
+              "64": "review/leg02-propuestas/64/oc_esp_strigops_habroptilus--esmeralda.webp",
+              "128": "review/leg02-propuestas/128/oc_esp_strigops_habroptilus--esmeralda.webp",
+              "256": "review/leg02-propuestas/256/oc_esp_strigops_habroptilus--esmeralda.webp",
+              "512": "review/leg02-propuestas/oc_esp_strigops_habroptilus--esmeralda.webp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "af_tiburon_blanco",
+        "legendaryId": "abismo",
+        "trait": "Un tiburón blanco de lomo gris acero gira hacia el observador, con cicatrices antiguas apenas visibles.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "mar_esp_architeuthis_dux",
+        "legendaryId": "kraken",
+        "trait": "Un calamar gigante rojizo despliega ocho brazos y dos tentáculos de captura mucho más largos, terminados en mazas.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "gm06_chelonoidis_porteri",
+        "legendaryId": "solitario",
+        "trait": "Una tortuga ficticia de Santa Cruz levanta el cuello sobre cuatro patas columnares y un caparazón abovedado de escudos marcados.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "polar_esp_somniosus_microcephalus",
+        "legendaryId": "eterno",
+        "trait": "Un robusto tiburón de Groenlandia muestra la piel gris profunda y las marcas acumuladas en el lomo.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": [
+          {
+            "label": "Propuesta de revisión · LEG-02",
+            "files": {
+              "64": "review/leg02-propuestas/64/polar_esp_somniosus_microcephalus--eterno.webp",
+              "128": "review/leg02-propuestas/128/polar_esp_somniosus_microcephalus--eterno.webp",
+              "256": "review/leg02-propuestas/256/polar_esp_somniosus_microcephalus--eterno.webp",
+              "512": "review/leg02-propuestas/polar_esp_somniosus_microcephalus--eterno.webp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "na_esp_falco_peregrinus",
+        "legendaryId": "vertigo",
+        "trait": "Un peregrino adulto se lanza en picado con las alas plegadas hacia atrás y la cola estrecha.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
       }
     ]
   },
-  "new": {
-    "label": "Nuevos en LEG-01",
+  "leg01": {
+    "label": "Incorporados en LEG-01",
     "legendary": [
       {
         "id": "af_gran_kudu",
         "legendaryId": "espiral",
-        "trait": "Un macho de cuernos ampliamente espiralados, barba larga y franjas de marfil sobre el flanco.",
+        "trait": "Un macho de cornamenta alargada con espiras más marcadas, barba larga y franjas de marfil sobre el flanco.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "revisado",
+        "origin": "LEG-01",
+        "archives": [
+          {
+            "label": "Legendario anterior · LEG-01",
+            "files": {
+              "64": "review/leg02/64/af_gran_kudu--espiral.webp",
+              "128": "review/leg02/128/af_gran_kudu--espiral.webp",
+              "256": "review/leg02/256/af_gran_kudu--espiral.webp",
+              "512": "review/leg02/af_gran_kudu--espiral.webp"
+            }
+          }
+        ]
       },
       {
         "id": "af_pangolin_gigante",
         "legendaryId": "bastion",
         "trait": "El cuerpo se repliega en un arco defensivo de escamas cobrizas y deja ver el hocico bajo la cola.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "nuevo",
+        "origin": "LEG-01",
+        "archives": []
       },
       {
         "id": "af_picozapato",
         "legendaryId": "cienaga",
-        "trait": "Permanece inmóvil con el pico jaspeado inclinado y una cresta desflecada sobre el manto pizarra.",
+        "trait": "Permanece agazapado con el pico jaspeado inclinado, el iris rojizo y una cresta desflecada sobre el manto pizarra.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "revisado",
+        "origin": "LEG-01",
+        "archives": [
+          {
+            "label": "Legendario anterior · LEG-01",
+            "files": {
+              "64": "review/leg02/64/af_picozapato--cienaga.webp",
+              "128": "review/leg02/128/af_picozapato--cienaga.webp",
+              "256": "review/leg02/256/af_picozapato--cienaga.webp",
+              "512": "review/leg02/af_picozapato--cienaga.webp"
+            }
+          },
+          {
+            "label": "Propuesta de revisión · LEG-02",
+            "files": {
+              "64": "review/leg02-propuestas/64/af_picozapato--cienaga.webp",
+              "128": "review/leg02-propuestas/128/af_picozapato--cienaga.webp",
+              "256": "review/leg02-propuestas/256/af_picozapato--cienaga.webp",
+              "512": "review/leg02-propuestas/af_picozapato--cienaga.webp"
+            }
+          }
+        ]
       },
       {
         "id": "frailecillo_atlantico",
         "legendaryId": "alisio",
-        "trait": "Un frailecillo de plumaje nupcial abre las alas mientras alza el pico y extiende los pies anaranjados.",
+        "trait": "Un frailecillo abre las alas mientras alza el pico y extiende los pies anaranjados. Trazos oscuros dispersos interrumpen el vientre blanco.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "revisado",
+        "origin": "LEG-01",
+        "archives": [
+          {
+            "label": "Legendario anterior · LEG-01",
+            "files": {
+              "64": "review/leg02/64/frailecillo_atlantico--alisio.webp",
+              "128": "review/leg02/128/frailecillo_atlantico--alisio.webp",
+              "256": "review/leg02/256/frailecillo_atlantico--alisio.webp",
+              "512": "review/leg02/frailecillo_atlantico--alisio.webp"
+            }
+          }
+        ]
       },
       {
         "id": "na_esp_ambystoma_mexicanum",
         "legendaryId": "filigrana",
         "trait": "Tres pares de branquias ramificadas enmarcan su cabeza y el flanco oliváceo muestra un punteado dorado.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "nuevo",
+        "origin": "LEG-01",
+        "archives": [],
+        "aliases": [
+          "Filigrana"
+        ]
       },
       {
         "id": "oc_esp_osphranter_rufus",
         "legendaryId": "terracota",
         "trait": "Un macho de pecho robusto se impulsa con las patas recogidas y la cola extendida bajo un manto de rojo arcilla.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "nuevo",
+        "origin": "LEG-01",
+        "archives": []
       },
       {
         "id": "mar_esp_megaptera_novaeangliae",
         "legendaryId": "orla",
         "trait": "La ballena gira y deja ver el borde moteado de las aletas pectorales y las marcas blancas de la cola.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "nuevo",
+        "origin": "LEG-01",
+        "archives": []
       },
       {
         "id": "mar_esp_enteroctopus_dofleini",
         "legendaryId": "marea",
         "trait": "El pulpo abre sus brazos en abanico y deja ver ventosas color marfil bajo una piel moteada de coral.",
         "plateKey": "legendario",
-        "status": "nuevo"
+        "status": "nuevo",
+        "origin": "LEG-01",
+        "archives": []
+      }
+    ]
+  },
+  "leg02": {
+    "label": "Incorporados en LEG-02",
+    "legendary": [
+      {
+        "id": "sa_esp_vultur_gryphus",
+        "legendaryId": "aconcagua",
+        "trait": "Un cóndor macho abre las alas y deja ver un collar blanco espeso y paneles claros en el plumaje oscuro.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "na_esp_bison_bison",
+        "legendaryId": "titan",
+        "trait": "Un bisonte de gran giba inclina la cabeza y apoya los cuartos delanteros bajo una melena densa.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "polar_esp_ursus_maritimus",
+        "legendaryId": "boreal",
+        "trait": "Un oso de pelaje marfil levanta la cabeza al avanzar, con el cuello largo y el perfil de una oreja ligeramente mellado.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "mar_esp_balaenoptera_musculus",
+        "legendaryId": "leviatan",
+        "trait": "La ballena azul gira en diagonal y deja ver sus surcos ventrales y la cola horizontal.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "oc_esp_strigops_habroptilus",
+        "legendaryId": "esmeralda",
+        "trait": "Un kākāpō de disco facial dorado gira la cabeza y muestra verde profundo y barras oscuras en el ala.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": [
+          {
+            "label": "Propuesta de revisión · LEG-02",
+            "files": {
+              "64": "review/leg02-propuestas/64/oc_esp_strigops_habroptilus--esmeralda.webp",
+              "128": "review/leg02-propuestas/128/oc_esp_strigops_habroptilus--esmeralda.webp",
+              "256": "review/leg02-propuestas/256/oc_esp_strigops_habroptilus--esmeralda.webp",
+              "512": "review/leg02-propuestas/oc_esp_strigops_habroptilus--esmeralda.webp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "af_tiburon_blanco",
+        "legendaryId": "abismo",
+        "trait": "Un tiburón blanco de lomo gris acero gira hacia el observador, con cicatrices antiguas apenas visibles.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "mar_esp_architeuthis_dux",
+        "legendaryId": "kraken",
+        "trait": "Un calamar gigante rojizo despliega ocho brazos y dos tentáculos de captura mucho más largos, terminados en mazas.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "gm06_chelonoidis_porteri",
+        "legendaryId": "solitario",
+        "trait": "Una tortuga ficticia de Santa Cruz levanta el cuello sobre cuatro patas columnares y un caparazón abovedado de escudos marcados.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
+      },
+      {
+        "id": "polar_esp_somniosus_microcephalus",
+        "legendaryId": "eterno",
+        "trait": "Un robusto tiburón de Groenlandia muestra la piel gris profunda y las marcas acumuladas en el lomo.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": [
+          {
+            "label": "Propuesta de revisión · LEG-02",
+            "files": {
+              "64": "review/leg02-propuestas/64/polar_esp_somniosus_microcephalus--eterno.webp",
+              "128": "review/leg02-propuestas/128/polar_esp_somniosus_microcephalus--eterno.webp",
+              "256": "review/leg02-propuestas/256/polar_esp_somniosus_microcephalus--eterno.webp",
+              "512": "review/leg02-propuestas/polar_esp_somniosus_microcephalus--eterno.webp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "na_esp_falco_peregrinus",
+        "legendaryId": "vertigo",
+        "trait": "Un peregrino adulto se lanza en picado con las alas plegadas hacia atrás y la cola estrecha.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": []
       }
     ]
   },
   "revised": {
-    "label": "Mejorados en LEG-01",
+    "label": "Con comparativas históricas",
     "legendary": [
       {
         "id": "af_gorila_montana",
@@ -57992,12 +58513,18 @@ const legendaryComparisons = {
         "trait": "En reposo, la cresta alta y la silla plateada se distinguen de brazos y pecho.",
         "plateKey": "legendario",
         "status": "revisado",
-        "before": {
-          "64": "review/leg01/64/af_gorila_montana--silverback.webp",
-          "128": "review/leg01/128/af_gorila_montana--silverback.webp",
-          "256": "review/leg01/256/af_gorila_montana--silverback.webp",
-          "512": "review/leg01/af_gorila_montana--silverback.webp"
-        }
+        "origin": "Original",
+        "archives": [
+          {
+            "label": "Legendario anterior · Original",
+            "files": {
+              "64": "review/leg01/64/af_gorila_montana--silverback.webp",
+              "128": "review/leg01/128/af_gorila_montana--silverback.webp",
+              "256": "review/leg01/256/af_gorila_montana--silverback.webp",
+              "512": "review/leg01/af_gorila_montana--silverback.webp"
+            }
+          }
+        ]
       },
       {
         "id": "lobo_gris",
@@ -58005,12 +58532,18 @@ const legendaryComparisons = {
         "trait": "El perfil de aullido alza el hocico sobre la gorguera invernal plateada.",
         "plateKey": "legendario",
         "status": "revisado",
-        "before": {
-          "64": "review/leg01/64/lobo_gris--fenrir.webp",
-          "128": "review/leg01/128/lobo_gris--fenrir.webp",
-          "256": "review/leg01/256/lobo_gris--fenrir.webp",
-          "512": "review/leg01/lobo_gris--fenrir.webp"
-        }
+        "origin": "Original",
+        "archives": [
+          {
+            "label": "Legendario anterior · Original",
+            "files": {
+              "64": "review/leg01/64/lobo_gris--fenrir.webp",
+              "128": "review/leg01/128/lobo_gris--fenrir.webp",
+              "256": "review/leg01/256/lobo_gris--fenrir.webp",
+              "512": "review/leg01/lobo_gris--fenrir.webp"
+            }
+          }
+        ]
       },
       {
         "id": "af_elefante_sabana",
@@ -58018,12 +58551,18 @@ const legendaryComparisons = {
         "trait": "Cuatro patas diferenciadas, trompa libre y dos colmillos asimétricos.",
         "plateKey": "legendario",
         "status": "revisado",
-        "before": {
-          "64": "review/leg01/64/af_elefante_sabana--atlas.webp",
-          "128": "review/leg01/128/af_elefante_sabana--atlas.webp",
-          "256": "review/leg01/256/af_elefante_sabana--atlas.webp",
-          "512": "review/leg01/af_elefante_sabana--atlas.webp"
-        }
+        "origin": "Original",
+        "archives": [
+          {
+            "label": "Legendario anterior · Original",
+            "files": {
+              "64": "review/leg01/64/af_elefante_sabana--atlas.webp",
+              "128": "review/leg01/128/af_elefante_sabana--atlas.webp",
+              "256": "review/leg01/256/af_elefante_sabana--atlas.webp",
+              "512": "review/leg01/af_elefante_sabana--atlas.webp"
+            }
+          }
+        ]
       },
       {
         "id": "zorro_rojo",
@@ -58031,75 +58570,201 @@ const legendaryComparisons = {
         "trait": "La cola envuelve las patas y concentra los tonos cobre y bermellón.",
         "plateKey": "legendario",
         "status": "revisado",
-        "before": {
-          "64": "review/leg01/64/zorro_rojo--ascua.webp",
-          "128": "review/leg01/128/zorro_rojo--ascua.webp",
-          "256": "review/leg01/256/zorro_rojo--ascua.webp",
-          "512": "review/leg01/zorro_rojo--ascua.webp"
-        }
+        "origin": "Original",
+        "archives": [
+          {
+            "label": "Legendario anterior · Original",
+            "files": {
+              "64": "review/leg01/64/zorro_rojo--ascua.webp",
+              "128": "review/leg01/128/zorro_rojo--ascua.webp",
+              "256": "review/leg01/256/zorro_rojo--ascua.webp",
+              "512": "review/leg01/zorro_rojo--ascua.webp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "af_gran_kudu",
+        "legendaryId": "espiral",
+        "trait": "Un macho de cornamenta alargada con espiras más marcadas, barba larga y franjas de marfil sobre el flanco.",
+        "plateKey": "legendario",
+        "status": "revisado",
+        "origin": "LEG-01",
+        "archives": [
+          {
+            "label": "Legendario anterior · LEG-01",
+            "files": {
+              "64": "review/leg02/64/af_gran_kudu--espiral.webp",
+              "128": "review/leg02/128/af_gran_kudu--espiral.webp",
+              "256": "review/leg02/256/af_gran_kudu--espiral.webp",
+              "512": "review/leg02/af_gran_kudu--espiral.webp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "af_picozapato",
+        "legendaryId": "cienaga",
+        "trait": "Permanece agazapado con el pico jaspeado inclinado, el iris rojizo y una cresta desflecada sobre el manto pizarra.",
+        "plateKey": "legendario",
+        "status": "revisado",
+        "origin": "LEG-01",
+        "archives": [
+          {
+            "label": "Legendario anterior · LEG-01",
+            "files": {
+              "64": "review/leg02/64/af_picozapato--cienaga.webp",
+              "128": "review/leg02/128/af_picozapato--cienaga.webp",
+              "256": "review/leg02/256/af_picozapato--cienaga.webp",
+              "512": "review/leg02/af_picozapato--cienaga.webp"
+            }
+          },
+          {
+            "label": "Propuesta de revisión · LEG-02",
+            "files": {
+              "64": "review/leg02-propuestas/64/af_picozapato--cienaga.webp",
+              "128": "review/leg02-propuestas/128/af_picozapato--cienaga.webp",
+              "256": "review/leg02-propuestas/256/af_picozapato--cienaga.webp",
+              "512": "review/leg02-propuestas/af_picozapato--cienaga.webp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "frailecillo_atlantico",
+        "legendaryId": "alisio",
+        "trait": "Un frailecillo abre las alas mientras alza el pico y extiende los pies anaranjados. Trazos oscuros dispersos interrumpen el vientre blanco.",
+        "plateKey": "legendario",
+        "status": "revisado",
+        "origin": "LEG-01",
+        "archives": [
+          {
+            "label": "Legendario anterior · LEG-01",
+            "files": {
+              "64": "review/leg02/64/frailecillo_atlantico--alisio.webp",
+              "128": "review/leg02/128/frailecillo_atlantico--alisio.webp",
+              "256": "review/leg02/256/frailecillo_atlantico--alisio.webp",
+              "512": "review/leg02/frailecillo_atlantico--alisio.webp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "oc_esp_strigops_habroptilus",
+        "legendaryId": "esmeralda",
+        "trait": "Un kākāpō de disco facial dorado gira la cabeza y muestra verde profundo y barras oscuras en el ala.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": [
+          {
+            "label": "Propuesta de revisión · LEG-02",
+            "files": {
+              "64": "review/leg02-propuestas/64/oc_esp_strigops_habroptilus--esmeralda.webp",
+              "128": "review/leg02-propuestas/128/oc_esp_strigops_habroptilus--esmeralda.webp",
+              "256": "review/leg02-propuestas/256/oc_esp_strigops_habroptilus--esmeralda.webp",
+              "512": "review/leg02-propuestas/oc_esp_strigops_habroptilus--esmeralda.webp"
+            }
+          }
+        ]
+      },
+      {
+        "id": "polar_esp_somniosus_microcephalus",
+        "legendaryId": "eterno",
+        "trait": "Un robusto tiburón de Groenlandia muestra la piel gris profunda y las marcas acumuladas en el lomo.",
+        "plateKey": "legendario",
+        "status": "nuevo",
+        "origin": "LEG-02",
+        "archives": [
+          {
+            "label": "Propuesta de revisión · LEG-02",
+            "files": {
+              "64": "review/leg02-propuestas/64/polar_esp_somniosus_microcephalus--eterno.webp",
+              "128": "review/leg02-propuestas/128/polar_esp_somniosus_microcephalus--eterno.webp",
+              "256": "review/leg02-propuestas/256/polar_esp_somniosus_microcephalus--eterno.webp",
+              "512": "review/leg02-propuestas/polar_esp_somniosus_microcephalus--eterno.webp"
+            }
+          }
+        ]
       }
     ]
   },
   "retained": {
-    "label": "Históricos conservados",
+    "label": "Originales conservados",
     "legendary": [
       {
         "id": "asia_esp_0402",
         "legendaryId": "ambar",
         "trait": "Rayas anchas y un pelaje invernal denso en una pausa vigilante.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "asia_esp_0403",
         "legendaryId": "niebla",
         "trait": "Rosetas abiertas y una larga cola que acompaña el borde de la roca.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "aguila_real",
         "legendaryId": "centinela",
         "trait": "La nuca dorada destaca sobre las alas recogidas de este vigilante.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "asia_esp_0527",
         "legendaryId": "basalto",
         "trait": "Escamas oscuras y patas robustas sostienen una silueta rasante.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "asia_esp_0373",
         "legendaryId": "seda",
         "trait": "Una cobra de capucha estrecha se eleva entre sus propios anillos.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "af_cocodrilo_nilo",
         "legendaryId": "junco",
         "trait": "Escudos dorsales irregulares y un hocico surcado por viejas cicatrices.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "af_tortuga_aldabra",
         "legendaryId": "ancora",
         "trait": "Caparazón de anillos marcados y cuello extendido sobre patas columnares.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       },
       {
         "id": "asia_esp_0369",
         "legendaryId": "remonte",
         "trait": "Un salmón de dorso moteado y mandíbula curva en plena remontada.",
         "plateKey": "legendario",
-        "status": "conservado"
+        "status": "conservado",
+        "origin": "Original",
+        "archives": []
       }
     ]
   }
 };
-const migrationProgress = {"migrated":1000,"total":1000,"cutouts":1680,"plates":1680,"biological":682,"legendary":20,"review":0,"classical":1680,"target":1680,"ungulates":122,"mammals":463,"mammalsMigrated":463,"birds":287,"birdsMigrated":287,"reptiles":104,"reptilesMigrated":104,"amphibians":35,"amphibiansMigrated":35,"cartilaginous":18,"cartilaginousMigrated":18,"salmonids":8,"salmonidsMigrated":8,"freshwater":23,"freshwaterMigrated":23,"reef":12,"reefMigrated":12,"deepSea":14,"deepSeaMigrated":14,"marine":16,"marineMigrated":16,"cephalopods":20,"cephalopodsMigrated":20};
+const migrationProgress = {"migrated":1000,"total":1000,"cutouts":1690,"plates":1690,"biological":682,"legendary":30,"review":0,"classical":1690,"target":1690,"ungulates":122,"mammals":463,"mammalsMigrated":463,"birds":287,"birdsMigrated":287,"reptiles":104,"reptilesMigrated":104,"amphibians":35,"amphibiansMigrated":35,"cartilaginous":18,"cartilaginousMigrated":18,"salmonids":8,"salmonidsMigrated":8,"freshwater":23,"freshwaterMigrated":23,"reef":12,"reefMigrated":12,"deepSea":14,"deepSeaMigrated":14,"marine":16,"marineMigrated":16,"cephalopods":20,"cephalopodsMigrated":20};

@@ -7,15 +7,19 @@ const fs = require('node:fs');
 const test = require('node:test');
 const vm = require('node:vm');
 const { harness } = require('./helpers/live-game.cjs');
-const manifest = require('../www/atlas-integrity.json').files;
 const decisions = require('../docs/leg01/decisiones.json');
-require('../www/js/naturalist-assets-v400.js');
 
 const sizes = [64, 128, 256, 512];
-const packed = globalThis.AtlasNaturalistAssets;
-const previousFile = file => execFileSync('git', ['show', 'ee39bfc:' + file], { maxBuffer: 16e6 });
+const revisionFile = (revision, file) => execFileSync('git', ['show', revision + ':' + file], { maxBuffer: 16e6 });
+const previousFile = file => revisionFile('ee39bfc', file);
+const leg01File = file => revisionFile('1f136518', file);
+const manifest = JSON.parse(leg01File('www/atlas-integrity.json')).files;
+const assetsContext = vm.createContext({});
+vm.runInContext(leg01File('www/js/naturalist-assets-v400.js').toString(), assetsContext);
+const packed = assetsContext.AtlasNaturalistAssets;
+const leg01Source = leg01File('www/js/app.js').toString();
 const previous = harness({}, null, { gameSource: previousFile('www/js/app.js').toString() }).window.__atlasTest;
-const game = harness().window.__atlasTest;
+const game = harness({}, null, { gameSource: leg01Source }).window.__atlasTest;
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const participating = decisions.filter(row => ['nuevo', 'revisado'].includes(row.status));
 
@@ -46,7 +50,7 @@ test('LEG-01 catalogues only approved plates and preserves the original variants
     return sizes.map(size => {
       const relative = (size === 512 ? '' : size + '/') + file;
       const route = 'naturalist-art/plates/' + relative;
-      const bytes = fs.readFileSync('www/' + route);
+      const bytes = leg01File('www/' + route);
       assert.equal(bytes.toString('ascii', 8, 16), 'WEBPVP8X', route);
       assert.ok(bytes[20] & 0x10, route);
       assert.equal(bytes.readUIntLE(24, 3) + 1, size, route);
@@ -62,7 +66,7 @@ test('LEG-01 catalogues only approved plates and preserves the original variants
     });
   });
   assert.deepEqual(new Set(changed), new Set(expected));
-  const review = vm.runInNewContext(fs.readFileSync('www/naturalist-art/catalog.js', 'utf8') + '\nlegendaryComparisons');
+  const review = vm.runInNewContext(leg01File('www/naturalist-art/catalog.js').toString() + '\nlegendaryComparisons');
   assert.equal(review.all.legendary.length, 20);
   assert.equal(review.new.legendary.length, 8);
   for (const required of ['ascua', 'atlas']) {
@@ -72,14 +76,14 @@ test('LEG-01 catalogues only approved plates and preserves the original variants
 });
 
 test('LEG-01 discovers and restores each identity without duplicating it', async () => {
-  const h = harness();
+  const h = harness({}, null, { gameSource: leg01Source });
   const current = h.window.__atlasTest;
   const archived = {
     ...JSON.parse(JSON.stringify(current.state)),
     collectionId: 'leg01-prior-save',
     legendaryFound: { ascua: { id: 'ascua', speciesId: 'zorro_rojo' }, atlas: { id: 'atlas', speciesId: 'af_elefante_sabana' } }
   };
-  const target = harness({}, archived);
+  const target = harness({}, archived, { gameSource: leg01Source });
   await target.import();
   assert.deepEqual(target.imported.legendaryFound, archived.legendaryFound);
   for (const row of game.LEGENDARY_SPECIMENS.slice(12)) {
@@ -98,7 +102,7 @@ test('LEG-01 discovers and restores each identity without duplicating it', async
     assert.equal(target.window.__atlasTest.state.specialSeen[speciesId], 1, id);
   }
   target.window.__atlasTest.persist();
-  const saved = harness(target.store).window.__atlasTest;
+  const saved = harness(target.store, null, { gameSource: leg01Source }).window.__atlasTest;
   assert.equal(Object.keys(saved.state.legendaryFound).length, 10);
   assert.match(saved.renderLegendaryCollection(), /10\/20/);
 });

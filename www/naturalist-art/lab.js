@@ -324,25 +324,6 @@ function compareTaxa(sets, key) {
     size + 'px">' + cards.join('') + '</div>';
 }
 
-function compareLegendary() {
-  selectOptions(birdSet, Object.entries(legendaryComparisons).map(([id, set]) => [id, set.label]));
-  const size = Number(comparisonSize.value);
-  const rows = legendaryComparisons[birdSet.value].legendary;
-  byId('summary').textContent = rows.length + ' de ' + migrationProgress.legendary + ' legendarios';
-  return rows.map(row => {
-    const sp = catalog.find(item => item.id === row.id);
-    const current = specimenPlate(sp, 'Legendario');
-    const variants = sp.records.filter(record => ['normal', 'albino', 'melanico'].includes(record.key) && record.src);
-    const plates = variants.map(record => figure(illustration(sp, record, 'Normal', size), record.label));
-    if (row.before) plates.push(figure(archivedIllustration(row.before[size], current.label + ' · anterior', size), 'Legendario anterior'));
-    plates.push(figure(illustration(sp, current, 'Normal', size), row.status === 'nuevo' ? 'Legendario nuevo' : 'Legendario vigente'));
-    return '<article class="gallery-card legendary-review" data-legendary="' + text(row.legendaryId) + '">' +
-      '<h3>' + text(current.label + ' · ' + sp.name) + '</h3><p class="latin">' + text(sp.latin) +
-      '</p><p>' + text(row.trait) + '</p><div class="comparison-styles review-comparison plate-comparison" style="--comparison-size:' +
-      size + 'px">' + plates.join('') + '</div></article>';
-  }).join('');
-}
-
 function compression(sp) {
   const records = matchingPlates(sp);
   selectOptions(scalePlate, records.map(record => [record.key, record.label]));
@@ -408,6 +389,7 @@ function draw() {
   byId('audit-navigation').hidden = !auditingPigments;
   if (!auditingPigments) byId('audit-navigation-bottom').hidden = true;
   byId('bird-set-control').hidden = !comparingTaxa;
+  byId('legendary-search-control').hidden = mode !== 'legendary';
   byId('comparison-set-label').textContent = mode === 'legendary' ? 'Colección' : 'Conjunto anatómico';
   byId('comparison-size-control').hidden = !comparingSets && !comparingVariants && !comparingArt;
   byId('comparison-halo-control').hidden = (!comparingSets && !comparingVariants) || mode === 'legendary';
@@ -434,7 +416,7 @@ function draw() {
     return;
   }
   if (comparingTaxa) {
-    content.innerHTML = mode === 'legendary' ? compareLegendary() : compareTaxa(taxonComparisons[mode], mode);
+    content.innerHTML = mode === 'legendary' ? compareLegendary({ set: birdSet, size: comparisonSize }) : compareTaxa(taxonComparisons[mode], mode);
     return;
   }
   if (comparingPigments) {
@@ -518,6 +500,7 @@ function applyFilters() {
   draw();
 }
 search.addEventListener('input', applyFilters);
+byId('legendary-search').addEventListener('input', draw);
 group.addEventListener('change', () => {
   updateOrders();
   updateFamilies();

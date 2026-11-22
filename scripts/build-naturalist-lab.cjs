@@ -370,33 +370,46 @@ const reefComparisons = buildComparisons(reefSets, reef, 'reef');
 const deepSeaComparisons = buildComparisons(deepSeaSets, deepSea, 'deep');
 const marineComparisons = buildComparisons(closeoutSets.marine, marine, 'marine');
 const cephalopodComparisons = buildComparisons(closeoutSets.cephalopods, cephalopods, 'cephalopods');
+const leg01Additions = new Set(require('../docs/leg01/decisiones.json')
+  .filter(row => row.status === 'nuevo').map(row => row.id));
 const legendaryRows = audit.LEGENDARY_SPECIMENS.map(legend => {
   const id = legend.speciesId;
   const file = id + '--' + legend.id + '.webp';
-  const before = {};
-  for (const size of [64, 128, 256, 512]) {
-    const relative = 'review/leg01/' + (size === 512 ? '' : size + '/') + file;
-    if (fs.existsSync(path.join(out, relative))) {
-      reviewFiles.add('naturalist-art/' + relative);
-      before[size] = relative;
+  const archives = [
+    ['leg02', 'Legendario anterior · LEG-01'],
+    ['leg01', 'Legendario anterior · Original'],
+    ['leg02-propuestas', 'Propuesta de revisión · LEG-02']
+  ].flatMap(([folder, label]) => {
+    const files = {};
+    for (const size of [64, 128, 256, 512]) {
+      const relative = 'review/' + folder + '/' + (size === 512 ? '' : size + '/') + file;
+      if (fs.existsSync(path.join(out, relative))) {
+        reviewFiles.add('naturalist-art/' + relative);
+        files[size] = relative;
+      }
     }
-  }
-  const revised = Object.keys(before).length > 0;
-  if (revised && Object.keys(before).length !== 4) throw Error('Archivo legendario incompleto: ' + file);
-  const status = legend.legendaryOnly ? 'nuevo' : revised ? 'revisado' : 'conservado';
+    const count = Object.keys(files).length;
+    if (count && count !== 4) throw Error('Archivo legendario incompleto: ' + folder + '/' + file);
+    return count ? [{ label, files }] : [];
+  });
+  const origin = leg01Additions.has(legend.id) ? 'LEG-01' : legend.legendaryOnly ? 'LEG-02' : 'Original';
+  const status = archives.some(archive => archive.label.startsWith('Legendario anterior'))
+    ? 'revisado' : origin === 'Original' ? 'conservado' : 'nuevo';
   const trait = {
     ascua: 'La cola envuelve las patas y concentra los tonos cobre y bermellón.',
     atlas: 'Cuatro patas diferenciadas, trompa libre y dos colmillos asimétricos.',
     fenrir: 'El perfil de aullido alza el hocico sobre la gorguera invernal plateada.',
     silverback: 'En reposo, la cresta alta y la silla plateada se distinguen de brazos y pecho.'
   }[legend.id] || legend.description;
-  return { id, legendaryId: legend.id, trait, plateKey: 'legendario', status, ...(revised ? { before } : {}) };
+  return { id, legendaryId: legend.id, trait, plateKey: 'legendario', status, origin, archives,
+    ...(legend.id === 'filigrana' ? { aliases: ['Filigrana'] } : {}) };
 });
 const legendaryComparisons = {
   all: { label: 'Colección completa', legendary: legendaryRows },
-  new: { label: 'Nuevos en LEG-01', legendary: legendaryRows.filter(row => row.status === 'nuevo') },
-  revised: { label: 'Mejorados en LEG-01', legendary: legendaryRows.filter(row => row.status === 'revisado') },
-  retained: { label: 'Históricos conservados', legendary: legendaryRows.filter(row => row.status === 'conservado') }
+  leg01: { label: 'Incorporados en LEG-01', legendary: legendaryRows.filter(row => row.origin === 'LEG-01') },
+  leg02: { label: 'Incorporados en LEG-02', legendary: legendaryRows.filter(row => row.origin === 'LEG-02') },
+  revised: { label: 'Con comparativas históricas', legendary: legendaryRows.filter(row => row.archives.length) },
+  retained: { label: 'Originales conservados', legendary: legendaryRows.filter(row => row.status === 'conservado') }
 };
 const migrationProgress = {
   migrated: species.filter(sp => sp.records[0].src).length,

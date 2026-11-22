@@ -1830,14 +1830,24 @@ const LEGENDARY_SPECIMENS=[
  ['ancora','af_tortuga_aldabra','Áncora','Caparazón de anillos marcados y cuello extendido sobre patas columnares.'],
  ['ascua','zorro_rojo','Ascua','Un zorro de pecho marfil se sienta envuelto en su cola rojiza.'],
  ['remonte','asia_esp_0369','Remonte','Un salmón de dorso moteado y mandíbula curva en plena remontada.'],
- ['espiral','af_gran_kudu','Espiral','Un macho de cuernos ampliamente espiralados, barba larga y franjas de marfil sobre el flanco.',true],
+ ['espiral','af_gran_kudu','Espiral','Un macho de cornamenta alargada con espiras más marcadas, barba larga y franjas de marfil sobre el flanco.',true],
  ['bastion','af_pangolin_gigante','Bastión','El cuerpo se repliega en un arco defensivo de escamas cobrizas y deja ver el hocico bajo la cola.',true],
- ['cienaga','af_picozapato','Ciénaga','Permanece inmóvil con el pico jaspeado inclinado y una cresta desflecada sobre el manto pizarra.',true],
- ['alisio','frailecillo_atlantico','Alisio','Un frailecillo de plumaje nupcial abre las alas mientras alza el pico y extiende los pies anaranjados.',true],
- ['filigrana','na_esp_ambystoma_mexicanum','Filigrana','Tres pares de branquias ramificadas enmarcan su cabeza y el flanco oliváceo muestra un punteado dorado.',true],
+ ['cienaga','af_picozapato','Ciénaga','Permanece agazapado con el pico jaspeado inclinado, el iris rojizo y una cresta desflecada sobre el manto pizarra.',true],
+ ['alisio','frailecillo_atlantico','Alisio','Un frailecillo abre las alas mientras alza el pico y extiende los pies anaranjados. Trazos oscuros dispersos interrumpen el vientre blanco.',true],
+ ['filigrana','na_esp_ambystoma_mexicanum','Nácar','Tres pares de branquias ramificadas enmarcan su cabeza y el flanco oliváceo muestra un punteado dorado.',true],
  ['terracota','oc_esp_osphranter_rufus','Terracota','Un macho de pecho robusto se impulsa con las patas recogidas y la cola extendida bajo un manto de rojo arcilla.',true],
  ['orla','mar_esp_megaptera_novaeangliae','Orla','La ballena gira y deja ver el borde moteado de las aletas pectorales y las marcas blancas de la cola.',true],
- ['marea','mar_esp_enteroctopus_dofleini','Marea','El pulpo abre sus brazos en abanico y deja ver ventosas color marfil bajo una piel moteada de coral.',true]
+ ['marea','mar_esp_enteroctopus_dofleini','Marea','El pulpo abre sus brazos en abanico y deja ver ventosas color marfil bajo una piel moteada de coral.',true],
+ ['aconcagua','sa_esp_vultur_gryphus','Aconcagua','Un cóndor macho abre las alas y deja ver un collar blanco espeso y paneles claros en el plumaje oscuro.',true],
+ ['titan','na_esp_bison_bison','Titán','Un bisonte de gran giba inclina la cabeza y apoya los cuartos delanteros bajo una melena densa.',true],
+ ['boreal','polar_esp_ursus_maritimus','Boreal','Un oso de pelaje marfil levanta la cabeza al avanzar, con el cuello largo y el perfil de una oreja ligeramente mellado.',true],
+ ['leviatan','mar_esp_balaenoptera_musculus','Leviatán','La ballena azul gira en diagonal y deja ver sus surcos ventrales y la cola horizontal.',true],
+ ['esmeralda','oc_esp_strigops_habroptilus','Esmeralda','Un kākāpō de disco facial dorado gira la cabeza y muestra verde profundo y barras oscuras en el ala.',true],
+ ['abismo','af_tiburon_blanco','Abismo','Un tiburón blanco de lomo gris acero gira hacia el observador, con cicatrices antiguas apenas visibles.',true],
+ ['kraken','mar_esp_architeuthis_dux','Kraken','Un calamar gigante rojizo despliega ocho brazos y dos tentáculos de captura mucho más largos, terminados en mazas.',true],
+ ['solitario','gm06_chelonoidis_porteri','Solitario','Una tortuga ficticia de Santa Cruz levanta el cuello sobre cuatro patas columnares y un caparazón abovedado de escudos marcados.',true],
+ ['eterno','polar_esp_somniosus_microcephalus','Eterno','Un robusto tiburón de Groenlandia muestra la piel gris profunda y las marcas acumuladas en el lomo.',true],
+ ['vertigo','na_esp_falco_peregrinus','Vértigo','Un peregrino adulto se lanza en picado con las alas plegadas hacia atrás y la cola estrecha.',true]
 ].map(([id,speciesId,name,description,legendaryOnly])=>({id,speciesId,name,description,...(legendaryOnly?{legendaryOnly}:{})}));
 const SPECIMEN_SELECTION={
  epico:['zorro_rojo','lobo_gris','aguila_real','reno','buho_real','jabali','af_gran_kudu','af_pangolin_gigante','af_gorila_montana','af_elefante_sabana','af_cocodrilo_nilo','af_tortuga_aldabra','asia_esp_0402','asia_esp_0403','asia_esp_0527','asia_esp_0373','asia_esp_0369','af_hipopotamo','af_jirafa','af_leon','af_suricata','af_secretario','af_picozapato','af_piton_africana'],
@@ -1857,7 +1867,7 @@ function legendaryForSpecies(id){return legendaryTaxa.get(canonicalTaxon(id));}
 const SPECIMEN_CATEGORIES=Object.fromEntries(Object.keys(SPECIES).map(id=>{
  const categories=[],legendary=legendaryForSpecies(id);
  if(SPECIES[id].special.some(v=>specialVariantName(v)==='Notable'))categories.push('Notable');
- // LEG-01 adds the named individual to the existing categories of each species.
+ // Later additions only receive the legendary category.
  const historicalLegendary=legendary&&!legendary.legendaryOnly;
  if(SPECIMEN_SELECTION.epico.includes(id)||historicalLegendary)categories.push('Épico');
  if(SPECIMEN_SELECTION.excepcional.includes(id)||historicalLegendary)categories.push('Excepcional');
@@ -3343,7 +3353,7 @@ function fieldLogMarkup(){
  const art=Array.isArray(lastEntries)?lastEntries.slice(0,3).filter(entry=>state.discovered[entry.id]&&
   Object.hasOwn(globalThis.AtlasNaturalistAssets?.routes||{},entry.id)).map(entry=>
    animalMarkup(entry.id,{variant:entry.variant,category:entry.category,sex:entry.sex,size:64})).join(''):'';
- const history=state.log.map(line=>'<div class="log">'+esc(line)+'</div>').join('');
+ const history=state.log.map(line=>'<div class="log">'+esc(line.replace(/(espécimen especial: (?:(?:Albino|Melánico) · )?Legendario, )Filigrana(?=[,.]|$)/g,'$1Nácar'))+'</div>').join('');
  return (art?'<div class="field-log-art" aria-label="Último avistamiento">'+art+'</div>':'')+history;
 }
 function fieldViewModel(){
