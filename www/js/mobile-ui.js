@@ -13,12 +13,16 @@
   });
 
   if(!menu||!open||!heading)return;
-  const labels={atlas:'🗺️ Atlas',field:'🌿 Campo',journal:'📖 Cuaderno',research:'🔬 Investigación',society:'📜 Sociedad',bestiary:'🦉 Bestiario',expeditions:'⛺ Campamento',objects:'🎒 Inventario',museum:'🏛️ Museo',crown:'👑 Corona'};
+  const labels={atlas:'Atlas',field:'Campo',journal:'Cuaderno',research:'Investigación',society:'Sociedad',bestiary:'Bestiario',expeditions:'Campamento',objects:'Inventario',museum:'Museo',crown:'Corona'};
   const main=['atlas','field','journal','research'];
   function selected(){return Array.from(document.querySelectorAll('.mobile-dock-link.active,.mobile-menu-item.active')).find(e=>e.dataset.tab)?.dataset.tab||'field';}
   function sync(){
     const value=selected();
-    heading.textContent=labels[value]||'🌿 Campo';
+    const name=labels[value]||'Campo';
+    if(heading.dataset.module!==value){
+      heading.dataset.module=value;
+      heading.innerHTML=(window.AtlasIcons530?.image(window.AtlasIcons530.tabs[value])||'')+' '+name;
+    }
     open.classList.toggle('is-active', !main.includes(value));
     document.querySelector('.mobile-dock')?.setAttribute('aria-label','Navegación móvil · '+(labels[value]||''));
     document.querySelectorAll('.mobile-dock-link,.mobile-menu-item').forEach(b=>b.setAttribute('aria-current',b.classList.contains('active')?'page':'false'));

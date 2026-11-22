@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "binoculars",
+    "name": "Prismáticos de viaje",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 1180
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/binoculars/inventario-128.webp",
+      "bytes": 7588
+    }
+  },
+  {
+    "id": "brass_compass",
+    "name": "Brújula de latón",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 896
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/brass_compass/inventario-128.webp",
+      "bytes": 5682
+    }
+  },
+  {
+    "id": "sturdy_pack",
+    "name": "Morral reforzado",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 941
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/sturdy_pack/inventario-128.webp",
+      "bytes": 5894
+    }
+  },
+  {
+    "id": "field_hat",
+    "name": "Sombrero de naturalista",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 641
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/field_hat/inventario-128.webp",
+      "bytes": 3784
+    }
+  },
+  {
+    "id": "feather_cap",
+    "name": "Gorro emplumado",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 871
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/feather_cap/inventario-128.webp",
+      "bytes": 4236
+    }
+  },
+  {
+    "id": "rain_hood",
+    "name": "Capucha impermeable",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 700
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/rain_hood/inventario-128.webp",
+      "bytes": 6142
+    }
+  },
+  {
+    "id": "amulet",
+    "name": "Colgante del explorador",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 576
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/amulet/inventario-128.webp",
+      "bytes": 5014
+    }
+  },
+  {
+    "id": "amber_charm",
+    "name": "Amuleto de ámbar",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 635
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/amber_charm/inventario-128.webp",
+      "bytes": 4784
+    }
+  },
+  {
+    "id": "shell_necklace",
+    "name": "Collar de conchas",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 1938
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/shell_necklace/inventario-128.webp",
+      "bytes": 6712
+    }
+  },
+  {
+    "id": "fossil_fragment",
+    "name": "Fragmento fósil",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 568
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/fossil_fragment/inventario-128.webp",
+      "bytes": 6462
+    }
+  },
+  {
+    "id": "fossil_skull",
+    "name": "Cráneo fósil",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 736
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/fossil_skull/inventario-128.webp",
+      "bytes": 5894
+    }
+  },
+  {
+    "id": "fossil_tooth",
+    "name": "Diente fósil",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 414
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/fossil_tooth/inventario-128.webp",
+      "bytes": 4078
+    }
+  },
+  {
+    "id": "bone_short",
+    "name": "Hueso corto",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 436
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/bone_short/inventario-128.webp",
+      "bytes": 4858
+    }
+  },
+  {
+    "id": "bone_long",
+    "name": "Hueso largo",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 435
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/bone_long/inventario-128.webp",
+      "bytes": 2946
+    }
+  },
+  {
+    "id": "carnivore_skull",
+    "name": "Cráneo carnívoro",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 906
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/carnivore_skull/inventario-128.webp",
+      "bytes": 6620
+    }
+  },
+  {
+    "id": "herbivore_skull",
+    "name": "Cráneo herbívoro",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 671
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/herbivore_skull/inventario-128.webp",
+      "bytes": 5324
+    }
+  },
+  {
+    "id": "fossil_plate",
+    "name": "Placa fósil dorsal",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 442
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/fossil_plate/inventario-128.webp",
+      "bytes": 6812
+    }
+  },
+  {
+    "id": "fossil_sail",
+    "name": "Espina de vela fósil",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 416
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/fossil_sail/inventario-128.webp",
+      "bytes": 3170
+    }
+  },
+  {
+    "id": "animal_trace",
+    "name": "Muestra de huellas",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 681
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/animal_trace/inventario-128.webp",
+      "bytes": 7846
+    }
+  },
+  {
+    "id": "pressed_flower",
+    "name": "Flor prensada",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 1212
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/pressed_flower/inventario-128.webp",
+      "bytes": 5920
+    }
+  },
+  {
+    "id": "ancient_coin",
+    "name": "Moneda antigua",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 629
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/ancient_coin/inventario-128.webp",
+      "bytes": 7210
+    }
+  },
+  {
+    "id": "map_fragment",
+    "name": "Fragmento de mapa",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 704
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/map_fragment/inventario-128.webp",
+      "bytes": 6414
+    }
+  },
+  {
+    "id": "asia_map_piece",
+    "name": "Parte de mapa de Asia",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 716
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/asia_map_piece/inventario-128.webp",
+      "bytes": 3948
+    }
+  },
+  {
+    "id": "asia_map",
+    "name": "Mapa de Asia",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 821
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/asia_map/inventario-128.webp",
+      "bytes": 2672
+    }
+  },
+  {
+    "id": "africa_map_piece",
+    "name": "Parte de mapa de África",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 709
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/africa_map_piece/inventario-128.webp",
+      "bytes": 3278
+    }
+  },
+  {
+    "id": "africa_map",
+    "name": "Mapa de África",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 814
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/africa_map/inventario-128.webp",
+      "bytes": 3024
+    }
+  },
+  {
+    "id": "north_america_map_piece",
+    "name": "Parte de mapa de Norteamérica",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 724
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/north_america_map_piece/inventario-128.webp",
+      "bytes": 3642
+    }
+  },
+  {
+    "id": "north_america_map",
+    "name": "Mapa de Norteamérica",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 829
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/north_america_map/inventario-128.webp",
+      "bytes": 3344
+    }
+  },
+  {
+    "id": "oceanic_quadrant",
+    "name": "Cuadrante transatlántico",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 962
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/oceanic_quadrant/inventario-128.webp",
+      "bytes": 6544
+    }
+  },
+  {
+    "id": "parchment_scrap",
+    "name": "Pergamino antiguo",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 594
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/parchment_scrap/inventario-128.webp",
+      "bytes": 4564
+    }
+  },
+  {
+    "id": "river_pebble",
+    "name": "Piedra de río pulida",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 571
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/river_pebble/inventario-128.webp",
+      "bytes": 5282
+    }
+  },
+  {
+    "id": "heron_feather",
+    "name": "Pluma de garza",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 525
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/heron_feather/inventario-128.webp",
+      "bytes": 4346
+    }
+  },
+  {
+    "id": "polished_lens",
+    "name": "Lente pulida",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 573
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/polished_lens/inventario-128.webp",
+      "bytes": 5500
+    }
+  },
+  {
+    "id": "brass_shard",
+    "name": "Pieza de latón antiguo",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 583
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/brass_shard/inventario-128.webp",
+      "bytes": 6514
+    }
+  },
+  {
+    "id": "old_ink",
+    "name": "Tintero antiguo",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 883
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/old_ink/inventario-128.webp",
+      "bytes": 6604
+    }
+  },
+  {
+    "id": "carved_wood",
+    "name": "Madera tallada",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 693
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/carved_wood/inventario-128.webp",
+      "bytes": 6086
+    }
+  },
+  {
+    "id": "wolf_tooth",
+    "name": "Diente de lobo",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 405
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/wolf_tooth/inventario-128.webp",
+      "bytes": 3282
+    }
+  },
+  {
+    "id": "owl_feather",
+    "name": "Pluma de rapaz",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 525
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/owl_feather/inventario-128.webp",
+      "bytes": 5878
+    }
+  },
+  {
+    "id": "antler_fragment",
+    "name": "Fragmento de cornamenta",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 459
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/antler_fragment/inventario-128.webp",
+      "bytes": 4452
+    }
+  },
+  {
+    "id": "otter_whisker",
+    "name": "Bigote de nutria",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 655
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/otter_whisker/inventario-128.webp",
+      "bytes": 3308
+    }
+  },
+  {
+    "id": "boar_tusk",
+    "name": "Colmillo de jabalí",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 546
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/boar_tusk/inventario-128.webp",
+      "bytes": 5104
+    }
+  },
+  {
+    "id": "beaver_tail_scale",
+    "name": "Escama de cola de castor",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 468
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/beaver_tail_scale/inventario-128.webp",
+      "bytes": 6260
+    }
+  },
+  {
+    "id": "field_telescope",
+    "name": "Catalejo de precisión",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 783
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/field_telescope/inventario-128.webp",
+      "bytes": 3260
+    }
+  },
+  {
+    "id": "scholar_hat",
+    "name": "Sombrero académico",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 737
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/scholar_hat/inventario-128.webp",
+      "bytes": 3662
+    }
+  },
+  {
+    "id": "museum_medallion",
+    "name": "Medallón de ámbar",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 895
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/museum_medallion/inventario-128.webp",
+      "bytes": 5276
+    }
+  },
+  {
+    "id": "fossil_amber",
+    "name": "Ámbar fósil",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 659
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/fossil_amber/inventario-128.webp",
+      "bytes": 6592
+    }
+  },
+  {
+    "id": "river_pearl",
+    "name": "Perla fluvial",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 666
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/river_pearl/inventario-128.webp",
+      "bytes": 6066
+    }
+  },
+  {
+    "id": "fossil_track",
+    "name": "Huella fosilizada",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 550
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/fossil_track/inventario-128.webp",
+      "bytes": 7314
+    }
+  },
+  {
+    "id": "fossil_claw",
+    "name": "Garra fósil",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 508
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/fossil_claw/inventario-128.webp",
+      "bytes": 5254
+    }
+  },
+  {
+    "id": "fossil_rib",
+    "name": "Costilla fósil",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 426
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/fossil_rib/inventario-128.webp",
+      "bytes": 3970
+    }
+  },
+  {
+    "id": "fossil_horn",
+    "name": "Cuerno fósil",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 424
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/fossil_horn/inventario-128.webp",
+      "bytes": 5526
+    }
+  },
+  {
+    "id": "hard_bone",
+    "name": "Hueso duro",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 730
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/hard_bone/inventario-128.webp",
+      "bytes": 7490
+    }
+  },
+  {
+    "id": "polar_coat",
+    "name": "Abrigo de expedición polar",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 873
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/polar_coat/inventario-128.webp",
+      "bytes": 5316
+    }
+  },
+  {
+    "id": "sounding_kit",
+    "name": "Equipo de sondeo y muestreo",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 896
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/sounding_kit/inventario-128.webp",
+      "bytes": 9502
+    }
+  },
+  {
+    "id": "south_america_map_piece",
+    "name": "Parte de mapa de Sudamérica",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 723
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/south_america_map_piece/inventario-128.webp",
+      "bytes": 3744
+    }
+  },
+  {
+    "id": "south_america_map",
+    "name": "Mapa de Sudamérica",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 828
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/south_america_map/inventario-128.webp",
+      "bytes": 2234
+    }
+  },
+  {
+    "id": "oceania_map_piece",
+    "name": "Parte de mapa de Oceanía",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 738
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/oceania_map_piece/inventario-128.webp",
+      "bytes": 3328
+    }
+  },
+  {
+    "id": "oceania_map",
+    "name": "Mapa de Oceanía",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 843
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/oceania_map/inventario-128.webp",
+      "bytes": 2696
+    }
+  },
+  {
+    "id": "polar_map_piece",
+    "name": "Parte de mapa de regiones polares",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 754
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/polar_map_piece/inventario-128.webp",
+      "bytes": 4806
+    }
+  },
+  {
+    "id": "polar_map",
+    "name": "Mapa de regiones polares",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 859
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/polar_map/inventario-128.webp",
+      "bytes": 2572
+    }
+  },
+  {
+    "id": "world_map",
+    "name": "Mapamundi",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 798
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/world_map/inventario-128.webp",
+      "bytes": 5312
+    }
+  },
+  {
+    "id": "asian_spices",
+    "name": "Especias de gabinete oriental",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 863
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/asian_spices/inventario-128.webp",
+      "bytes": 6128
+    }
+  },
+  {
+    "id": "asian_trade_folio",
+    "name": "Folio de comercio asiático",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 729
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/asian_trade_folio/inventario-128.webp",
+      "bytes": 7252
+    }
+  },
+  {
+    "id": "african_textile_sample",
+    "name": "Muestra textil de gabinete africano",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 834
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/african_textile_sample/inventario-128.webp",
+      "bytes": 8200
+    }
+  },
+  {
+    "id": "north_american_trade_document",
+    "name": "Documento comercial norteamericano",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 778
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/north_american_trade_document/inventario-128.webp",
+      "bytes": 5284
+    }
+  },
+  {
+    "id": "south_american_cacao",
+    "name": "Cacao de colección botánica",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 843
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/south_american_cacao/inventario-128.webp",
+      "bytes": 7570
+    }
+  },
+  {
+    "id": "oceanian_nacre",
+    "name": "Nácar insular histórico",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 913
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/oceanian_nacre/inventario-128.webp",
+      "bytes": 5102
+    }
+  },
+  {
+    "id": "polar_geology_record",
+    "name": "Registro geológico polar",
+    "type": "Objeto productivo",
+    "artState": "Candidato",
+    "approval": "Pendiente",
+    "original": {
+      "renderer": "AtlasItemArt",
+      "bytes": 796
+    },
+    "candidate": {
+      "src": "objetos-cientificos/arte/polar_geology_record/inventario-128.webp",
+      "bytes": 6240
+    }
+  }
+]

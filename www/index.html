@@ -8,17 +8,18 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icons/atlas-icon.svg" type="image/svg+xml" />
-  <meta name="atlas-version" content="5.2.0" />
-  <link rel="stylesheet" href="css/atlas-pwa-update.css?v=5.2.0" />
-  <title>El Gran Atlas v5.2.0 — Catálogo mundial ilustrado</title>
-  <link rel="stylesheet" href="css/styles.css?v=5.2.0" />
-  <link rel="stylesheet" href="css/naturalist-art-v400.css?v=5.2.0" />
-  <link rel="stylesheet" href="css/field-v3210.css?v=5.2.0" />
-  <link rel="stylesheet" href="css/atlas-v3211.css?v=5.2.0" />
-  <link rel="stylesheet" href="css/journal-v3250.css?v=5.2.0" />
-  <link rel="stylesheet" href="css/bestiary-v3260.css?v=5.2.0" />
-  <link rel="stylesheet" href="css/museum-v3270.css?v=5.2.0" />
-  <link rel="stylesheet" href="css/expeditions-research-v3280.css?v=5.2.0" />
+  <meta name="atlas-version" content="5.3.0" />
+  <link rel="stylesheet" href="css/atlas-pwa-update.css?v=5.3.0" />
+  <title>El Gran Atlas v5.3.0 — Catálogo mundial ilustrado</title>
+  <link rel="stylesheet" href="css/styles.css?v=5.3.0" />
+  <link rel="stylesheet" href="css/iconography-v530.css" />
+  <link rel="stylesheet" href="css/naturalist-art-v400.css?v=5.3.0" />
+  <link rel="stylesheet" href="css/field-v3210.css?v=5.3.0" />
+  <link rel="stylesheet" href="css/atlas-v3211.css?v=5.3.0" />
+  <link rel="stylesheet" href="css/journal-v3250.css?v=5.3.0" />
+  <link rel="stylesheet" href="css/bestiary-v3260.css?v=5.3.0" />
+  <link rel="stylesheet" href="css/museum-v3270.css?v=5.3.0" />
+  <link rel="stylesheet" href="css/expeditions-research-v3280.css?v=5.3.0" />
 <link rel="stylesheet" href="css/commerce-v3300.css">
 <link rel="stylesheet" href="css/polar-v3310.css">
 <link rel="stylesheet" href="css/marine-v3320.css">
@@ -29,45 +30,45 @@
   <link rel="stylesheet" href="css/museum-curation-v3380.css">
   <link rel="stylesheet" href="css/inventory-v3400.css">
   <link rel="stylesheet" href="css/experience-v3410.css">
-  <link rel="stylesheet" href="css/campamento-perfil-v3430.css?v=5.2.0" />
+  <link rel="stylesheet" href="css/campamento-perfil-v3430.css?v=5.3.0" />
 </head>
 <body>
   <div id="app" class="app-shell">
     <header class="topbar">
       <div>
         <div class="brand">✦ El Gran Atlas de la Naturaleza</div>
-        <div class="subbrand">v5.2.0 · Catálogo mundial ilustrado</div>
+        <div class="subbrand">v5.3.0 · Catálogo mundial ilustrado</div>
       </div>
       <div class="region-pill" id="regionPill">Islas Británicas · HX-01-09</div>
       <button id="saveManagerOpen" class="save-tools-launch" type="button" aria-label="Respaldo y recuperación de partida" title="Respaldo y recuperación de partida">💾</button>
     </header>
 
     <section class="stats-grid">
-      <div class="stat-card"><span>📜 Conocimiento</span><strong id="statKnowledge">0</strong></div>
-      <div class="stat-card"><span>🪙 Libras</span><strong id="statMoney">0</strong></div>
-      <div class="stat-card"><span>🏅 Prestigio</span><strong id="statPrestige">0</strong></div>
-      <div class="stat-card"><span>👨‍🔬 Equipo</span><strong id="statHelpers">0</strong></div>
-      <div class="stat-card"><span>📚 Tomos</span><strong id="statBooks">0</strong></div>
+      <div class="stat-card"><span><span data-atlas-icon="conocimiento" aria-hidden="true"></span> Conocimiento</span><strong id="statKnowledge">0</strong></div>
+      <div class="stat-card"><span><span data-atlas-icon="libras" aria-hidden="true"></span> Libras</span><strong id="statMoney">0</strong></div>
+      <div class="stat-card"><span><span data-atlas-icon="prestigio" aria-hidden="true"></span> Prestigio</span><strong id="statPrestige">0</strong></div>
+      <div class="stat-card"><span><span data-atlas-icon="naturalistas" aria-hidden="true"></span> Equipo</span><strong id="statHelpers">0</strong></div>
+      <div class="stat-card"><span><span data-atlas-icon="tomos" aria-hidden="true"></span> Tomos</span><strong id="statBooks">0</strong></div>
     </section>
     <button class="mobile-stats-toggle" id="mobileStatsToggle" type="button" aria-expanded="false" aria-controls="mobileExtraStats">Ver más estadísticas <span aria-hidden="true">▾</span></button>
     <div class="minor-stats" id="mobileExtraStats">Avistamientos totales: <b id="statSightings">0</b> · Monografías publicadas: <b id="statMonographs">0</b> · Regiones disponibles en el proyecto: <b>Europa 10 · Asia 23 · África 25 · Norteamérica 18 · Sudamérica 14 · Oceanía 9 · Polos 7 · Océanos 19</b></div>
 
     <nav class="tabs">
-      <button data-tab="atlas" class="tab active">🗺️ Atlas</button>
-      <button data-tab="field" class="tab">🌿 Campo</button>
-      <button data-tab="journal" class="tab">📖 Cuaderno</button>
-      <button data-tab="research" class="tab">🔬 Investigación</button>
-      <button data-tab="society" class="tab">🏛️ Sociedad</button>
-      <button data-tab="bestiary" class="tab">🦉 Bestiario</button>
-      <button data-tab="expeditions" class="tab">⛺ Campamento</button>
-      <button data-tab="objects" class="tab">🎒 Inventario</button>
-      <button data-tab="museum" class="tab">🏛️ Museo</button>
-      <button data-tab="crown" class="tab">👑 Corona</button>
+      <button data-tab="atlas" class="tab active"><span data-atlas-icon="atlas" aria-hidden="true"></span> Atlas</button>
+      <button data-tab="field" class="tab"><span data-atlas-icon="campo" aria-hidden="true"></span> Campo</button>
+      <button data-tab="journal" class="tab"><span data-atlas-icon="cuaderno" aria-hidden="true"></span> Cuaderno</button>
+      <button data-tab="research" class="tab"><span data-atlas-icon="investigacion" aria-hidden="true"></span> Investigación</button>
+      <button data-tab="society" class="tab"><span data-atlas-icon="sociedad" aria-hidden="true"></span> Sociedad</button>
+      <button data-tab="bestiary" class="tab"><span data-atlas-icon="bestiario" aria-hidden="true"></span> Bestiario</button>
+      <button data-tab="expeditions" class="tab"><span data-atlas-icon="campamento" aria-hidden="true"></span> Campamento</button>
+      <button data-tab="objects" class="tab"><span data-atlas-icon="inventario" aria-hidden="true"></span> Inventario</button>
+      <button data-tab="museum" class="tab"><span data-atlas-icon="museo" aria-hidden="true"></span> Museo</button>
+      <button data-tab="crown" class="tab"><span data-atlas-icon="corona" aria-hidden="true"></span> Corona</button>
     </nav>
 
     <div class="mobile-view-heading" id="mobileViewHeading" aria-live="polite">
       <span class="mobile-route">CUADERNO DE VIAJE <span class="mobile-route-diamond">✦</span> 1842</span>
-      <strong id="mobileViewTitle">🌿 Campo</strong>
+      <strong id="mobileViewTitle"><span data-atlas-icon="campo" aria-hidden="true"></span> Campo</strong>
     </div>
 
     <main id="panel" class="panel"></main>
@@ -77,11 +78,11 @@
     </footer>
   </div>
   <nav class="mobile-dock" aria-label="Navegación móvil">
-    <button class="tab mobile-dock-link" data-tab="atlas" type="button"><span class="dock-icon">🗺️</span><span class="dock-label">Atlas</span></button>
-    <button class="tab mobile-dock-link" data-tab="field" type="button"><span class="dock-icon">🌿</span><span class="dock-label">Campo</span></button>
-    <button class="tab mobile-dock-link" data-tab="journal" type="button"><span class="dock-icon">📖</span><span class="dock-label">Cuaderno</span></button>
-    <button class="tab mobile-dock-link" data-tab="research" type="button"><span class="dock-icon">🔬</span><span class="dock-label">Mejoras</span></button>
-    <button class="mobile-dock-more" id="mobileMenuOpen" type="button" aria-expanded="false" aria-controls="mobileDrawer"><span class="dock-icon">☰</span><span class="dock-label">Más</span></button>
+    <button class="tab mobile-dock-link" data-tab="atlas" type="button"><span class="dock-icon" data-atlas-icon="atlas" aria-hidden="true"></span> <span class="dock-label">Atlas</span></button>
+    <button class="tab mobile-dock-link" data-tab="field" type="button"><span class="dock-icon" data-atlas-icon="campo" aria-hidden="true"></span> <span class="dock-label">Campo</span></button>
+    <button class="tab mobile-dock-link" data-tab="journal" type="button"><span class="dock-icon" data-atlas-icon="cuaderno" aria-hidden="true"></span> <span class="dock-label">Cuaderno</span></button>
+    <button class="tab mobile-dock-link" data-tab="research" type="button"><span class="dock-icon" data-atlas-icon="investigacion" aria-hidden="true"></span> <span class="dock-label">Mejoras</span></button>
+    <button class="mobile-dock-more" id="mobileMenuOpen" type="button" aria-expanded="false" aria-controls="mobileDrawer"><span class="dock-icon" data-atlas-icon="glyph:more" aria-hidden="true"></span><span class="dock-label">Más</span></button>
   </nav>
 
   <div class="mobile-drawer" id="mobileDrawer" hidden>
@@ -90,12 +91,12 @@
       <div class="mobile-drawer-grip"></div>
       <div class="mobile-drawer-top"><div><span class="mobile-eyebrow">GABINETE DEL NATURALISTA</span><h2>Más secciones</h2></div><button id="mobileMenuClose" class="drawer-close" type="button" aria-label="Cerrar">✕</button></div>
       <div class="mobile-menu-grid">
-        <button class="tab mobile-menu-item" type="button" data-tab="expeditions"><span>⛺</span><strong>Campamento</strong></button>
-        <button class="tab mobile-menu-item" type="button" data-tab="museum"><span>🏛️</span><strong>Museo</strong></button>
-        <button class="tab mobile-menu-item" type="button" data-tab="society"><span>📜</span><strong>Sociedad</strong></button>
-        <button class="tab mobile-menu-item" type="button" data-tab="bestiary"><span>🦉</span><strong>Bestiario</strong></button>
-        <button class="tab mobile-menu-item" type="button" data-tab="objects"><span>🎒</span><strong>Inventario</strong></button>
-        <button class="tab mobile-menu-item" type="button" data-tab="crown"><span>👑</span><strong>Corona</strong></button>
+        <button class="tab mobile-menu-item" type="button" data-tab="expeditions"><span data-atlas-icon="campamento" aria-hidden="true"></span> <strong>Campamento</strong></button>
+        <button class="tab mobile-menu-item" type="button" data-tab="museum"><span data-atlas-icon="museo" aria-hidden="true"></span> <strong>Museo</strong></button>
+        <button class="tab mobile-menu-item" type="button" data-tab="society"><span data-atlas-icon="sociedad" aria-hidden="true"></span> <strong>Sociedad</strong></button>
+        <button class="tab mobile-menu-item" type="button" data-tab="bestiary"><span data-atlas-icon="bestiario" aria-hidden="true"></span> <strong>Bestiario</strong></button>
+        <button class="tab mobile-menu-item" type="button" data-tab="objects"><span data-atlas-icon="inventario" aria-hidden="true"></span> <strong>Inventario</strong></button>
+        <button class="tab mobile-menu-item" type="button" data-tab="crown"><span data-atlas-icon="corona" aria-hidden="true"></span> <strong>Corona</strong></button>
       </div>
       <p class="drawer-note">El progreso y el inventario son los mismos de la versión de escritorio.</p>
     </div>
@@ -103,13 +104,13 @@
   <div id="saveManager" class="save-manager" hidden>
     <button id="saveManagerBackdrop" class="save-manager-backdrop" type="button" aria-label="Cerrar respaldos"></button>
     <section class="save-manager-panel" role="dialog" aria-modal="true" aria-labelledby="saveManagerTitle">
-      <div class="save-manager-header"><div><div class="small">ARCHIVO DEL NATURALISTA</div><h2 id="saveManagerTitle">💾 Respaldo de partida</h2></div><button id="saveManagerClose" class="save-manager-close" type="button" aria-label="Cerrar">✕</button></div>
+      <div class="save-manager-header"><div><div class="small">ARCHIVO DEL NATURALISTA</div><h2 id="saveManagerTitle"><span data-atlas-icon="glyph:backup" aria-hidden="true"></span> Respaldo de partida</h2></div><button id="saveManagerClose" class="save-manager-close" type="button" aria-label="Cerrar">✕</button></div>
       <p class="small">Guarda un archivo JSON en Descargas o compártelo con otra aplicación. No hace falta conexión a internet.</p>
-      <button id="saveDownloadBtn" class="btn gold save-action" type="button">⬇️ Guardar en el teléfono</button>
-      <button id="saveExportBtn" class="btn alt save-action" type="button">📤 Compartir respaldo</button>
-      <p class="small">Versión 5.2.0 · Atlas simple · <a href="./naturalist-art/">Laboratorio gráfico</a></p><button id="atlasUpdateLaunch" class="btn alt save-action" type="button">Buscar actualizaciones</button><a id="atlasUpdatePageLink" class="small" href="./actualizar-atlas.html" hidden>Abrir el actualizador</a><div class="divider"></div>
-      <label class="save-file-label" for="saveImportFile">📥 Recuperar una partida JSON</label>
-      <button id="saveNativeImportBtn" class="btn gold save-action" type="button">📁 Abrir archivo del teléfono</button>
+      <button id="saveDownloadBtn" class="btn gold save-action" type="button"><span data-atlas-icon="glyph:export" aria-hidden="true"></span> Guardar en el teléfono</button>
+      <button id="saveExportBtn" class="btn alt save-action" type="button"><span data-atlas-icon="glyph:export" aria-hidden="true"></span> Compartir respaldo</button>
+      <p class="small">Versión 5.3.0 · Atlas simple · <a href="./naturalist-art/">Laboratorio gráfico</a></p><button id="atlasUpdateLaunch" class="btn alt save-action" type="button">Buscar actualizaciones</button><a id="atlasUpdatePageLink" class="small" href="./actualizar-atlas.html" hidden>Abrir el actualizador</a><div class="divider"></div>
+      <label class="save-file-label" for="saveImportFile"><span data-atlas-icon="glyph:import" aria-hidden="true"></span> Recuperar una partida JSON</label>
+      <button id="saveNativeImportBtn" class="btn gold save-action" type="button"><span data-atlas-icon="glyph:import" aria-hidden="true"></span> Abrir archivo del teléfono</button>
       <input id="saveImportFile" type="file" accept=".json,application/json" aria-label="Seleccionar archivo JSON desde navegador" />
       <details class="save-paste-fallback"><summary>¿No abre el archivo? Restaurar pegando JSON</summary><p class="small">Alternativa si el selector de archivos de Android falla. Copia el texto completo del respaldo JSON, no el enlace de la APK.</p><textarea id="savePasteJson" rows="4" placeholder='{"format":"el-gran-atlas-save", "game":{...}}' aria-label="Texto completo del respaldo JSON"></textarea><button type="button" id="savePasteBtn" class="btn alt save-action">Validar JSON pegado</button></details>
       <div id="saveImportSummary" class="save-import-summary small" aria-live="polite">Aún no seleccionaste un archivo.</div>
@@ -124,32 +125,33 @@
     <button id="atlasUpdateNoticeOpen" type="button">Actualizar</button>
     <button id="atlasUpdateLater" type="button">Más tarde</button>
   </section>
-  <script src="js/fish-art-v3191.js?v=5.2.0"></script>
-  <script src="js/relict-art-v3199.js?v=5.2.0"></script>
-  <script src="js/herp-art-v3192.js?v=5.2.0"></script>
-  <script src="js/bird-art-v3193.js?v=5.2.0"></script>
-  <script src="js/mammal-art-v3194.js?v=5.2.0"></script>
-  <script src="js/legendary-art-v3197.js?v=5.2.0"></script>
-  <script src="js/item-art-v3198.js?v=5.2.0"></script>
-  <script src="js/field-scene-v3210.js?v=5.2.0"></script>
-  <script src="js/field-ui-v3210.js?v=5.2.0"></script>
-  <script src="js/atlas-geography-v3211b.js?v=5.2.0"></script>
-  <script src="js/southamerica-geography-v3230.js?v=5.2.0"></script>
-  <script src="js/atlas-ui-v3211.js?v=5.2.0"></script>
-  <script src="js/atlas-map-v3211.js?v=5.2.0"></script>
-  <script src="js/northamerica-data-v3220.js?v=5.2.0"></script>
-  <script src="js/northamerica-polish-v3221.js?v=5.2.0"></script>
-  <script src="js/northamerica-art-v3220.js?v=5.2.0"></script>
-  <script src="js/southamerica-data-v3230.js?v=5.2.0"></script>
-  <script src="js/southamerica-polish-v3231.js?v=5.2.0"></script>
-  <script src="js/southamerica-art-v3230.js?v=5.2.0"></script>
-  <script src="js/journal-ui-v3250.js?v=5.2.0"></script>
-  <script src="js/bestiary-ui-v3260.js?v=5.2.0"></script>
-  <script src="js/museum-ui-v3270.js?v=5.2.0"></script>
-  <script src="js/expeditions-research-ui-v3280.js?v=5.2.0"></script>
-  <script src="js/oceania-runtime-v3290.js?v=5.2.0"></script>
-  <script src="js/oceania-art-v3290.js?v=5.2.0"></script>
-  <script src="js/oceania-geography-v3290.js?v=5.2.0"></script>
+  <script src="js/iconography-v530.js"></script>
+  <script src="js/fish-art-v3191.js?v=5.3.0"></script>
+  <script src="js/relict-art-v3199.js?v=5.3.0"></script>
+  <script src="js/herp-art-v3192.js?v=5.3.0"></script>
+  <script src="js/bird-art-v3193.js?v=5.3.0"></script>
+  <script src="js/mammal-art-v3194.js?v=5.3.0"></script>
+  <script src="js/legendary-art-v3197.js?v=5.3.0"></script>
+  <script src="js/item-art-v3198.js?v=5.3.0"></script>
+  <script src="js/field-scene-v3210.js?v=5.3.0"></script>
+  <script src="js/field-ui-v3210.js?v=5.3.0"></script>
+  <script src="js/atlas-geography-v3211b.js?v=5.3.0"></script>
+  <script src="js/southamerica-geography-v3230.js?v=5.3.0"></script>
+  <script src="js/atlas-ui-v3211.js?v=5.3.0"></script>
+  <script src="js/atlas-map-v3211.js?v=5.3.0"></script>
+  <script src="js/northamerica-data-v3220.js?v=5.3.0"></script>
+  <script src="js/northamerica-polish-v3221.js?v=5.3.0"></script>
+  <script src="js/northamerica-art-v3220.js?v=5.3.0"></script>
+  <script src="js/southamerica-data-v3230.js?v=5.3.0"></script>
+  <script src="js/southamerica-polish-v3231.js?v=5.3.0"></script>
+  <script src="js/southamerica-art-v3230.js?v=5.3.0"></script>
+  <script src="js/journal-ui-v3250.js?v=5.3.0"></script>
+  <script src="js/bestiary-ui-v3260.js?v=5.3.0"></script>
+  <script src="js/museum-ui-v3270.js?v=5.3.0"></script>
+  <script src="js/expeditions-research-ui-v3280.js?v=5.3.0"></script>
+  <script src="js/oceania-runtime-v3290.js?v=5.3.0"></script>
+  <script src="js/oceania-art-v3290.js?v=5.3.0"></script>
+  <script src="js/oceania-geography-v3290.js?v=5.3.0"></script>
   <script src="js/polar-data-v3310.js"></script>
   <script src="js/polar-geography-v3310.js"></script>
   <script src="js/polar-art-v3310.js"></script>
@@ -170,19 +172,19 @@
   <script src="js/museum-curation-v3380.js"></script>
   <script src="js/museum-curation-ui-v3380.js"></script>
   <script src="js/experience-v3410.js"></script>
-<script src="js/campamento-perfil-ui-v3430.js?v=5.2.0"></script>
-<script src="js/gm06/catalog.js?v=5.2.0"></script>
-<script src="js/gm06/geography.js?v=5.2.0"></script>
-<script src="js/gm06/art.js?v=5.2.0"></script>
-<script src="js/gm07-m01/art.js?v=5.2.0"></script>
-<script src="js/gm07-p04/catalog.js?v=5.2.0"></script>
-<script src="js/gm07-a04/catalog.js?v=5.2.0"></script>
-<script src="js/naturalist-assets-v400.js?v=5.2.0"></script>
-<script src="js/naturalist-art-v400.js?v=5.2.0"></script>
-<script src="js/app.js?v=5.2.0"></script>
-  <script src="js/mobile-ui.js?v=5.2.0"></script>
-  <script src="js/save-manager.js?v=5.2.0"></script>
-  <script src="js/atlas-pwa-update.js?v=5.2.0"></script>
+<script src="js/campamento-perfil-ui-v3430.js?v=5.3.0"></script>
+<script src="js/gm06/catalog.js?v=5.3.0"></script>
+<script src="js/gm06/geography.js?v=5.3.0"></script>
+<script src="js/gm06/art.js?v=5.3.0"></script>
+<script src="js/gm07-m01/art.js?v=5.3.0"></script>
+<script src="js/gm07-p04/catalog.js?v=5.3.0"></script>
+<script src="js/gm07-a04/catalog.js?v=5.3.0"></script>
+<script src="js/naturalist-assets-v400.js?v=5.3.0"></script>
+<script src="js/naturalist-art-v400.js?v=5.3.0"></script>
+<script src="js/app.js?v=5.3.0"></script>
+  <script src="js/mobile-ui.js?v=5.3.0"></script>
+  <script src="js/save-manager.js?v=5.3.0"></script>
+  <script src="js/atlas-pwa-update.js?v=5.3.0"></script>
 </body>
 </html>
 

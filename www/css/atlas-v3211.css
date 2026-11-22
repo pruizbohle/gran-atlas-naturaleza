@@ -33,3 +33,12 @@ body.atlas-active .region-pill{display:none}
 .atlas-land-cell.atlas-ice>polygon{fill:#e1eeed;stroke:#a7c2bf}.atlas-context-name{fill:#6b7768;font:12px Georgia}
 
 .atlas-context-name{font-size:9px}
+
+.atlas-biome-art, .atlas-map-marker { pointer-events: none; }
+.atlas-map-marker { color: #233c33; }
+.atlas-map-marker rect { fill: #faf0d1; stroke: #5b624e; stroke-width: .75; }
+.atlas-map-marker .atlas-icon { width: 14px; height: 14px; }
+.atlas-game .atlas-tile.atlas-selected .atlas-selection-ring { stroke-width: 2.4; stroke-dasharray: 5 2; }
+.atlas-map-key { flex-wrap: wrap; }
+.atlas-habitat-list .atlas-icon { margin-right: .3em; }
+.atlas-game[data-overview=true] .atlas-biome-art { opacity: .96; }

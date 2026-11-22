@@ -1,12 +1,12 @@
 {
   "name": "el-gran-atlas-mobile",
-  "version": "5.2.0",
+  "version": "5.3.0",
   "private": true,
   "scripts": {
     "cap:add:android": "npx cap add android",
     "cap:sync": "npx cap sync",
     "cap:open:android": "npx cap open android",
-    "release:verify": "node scripts/build-naturalist-release.cjs && node --test tests/naturalist-v400.test.cjs tests/pwa-update-v3212.test.cjs tests/leg02.test.cjs tests/relictos-v50.test.cjs tests/ayudas-v520.test.cjs"
+    "release:verify": "node scripts/build-naturalist-release.cjs && node --test tests/naturalist-v400.test.cjs tests/pwa-update-v3212.test.cjs tests/leg02.test.cjs tests/relictos-v50.test.cjs tests/ayudas-v520.test.cjs tests/iconography-v530.test.cjs"
   },
   "dependencies": {
     "@capacitor/core": "7.6.10",

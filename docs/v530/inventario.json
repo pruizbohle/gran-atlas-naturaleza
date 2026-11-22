@@ -1,0 +1,3254 @@
+{
+  "baseline": "5070f8a",
+  "referenceFiles": [
+    "www/index.html",
+    "www/js/app.js",
+    "www/js/mobile-ui.js",
+    "www/js/field-ui-v3210.js",
+    "www/js/atlas-ui-v3211.js",
+    "www/js/museum-ui-v3270.js",
+    "www/js/expeditions-research-ui-v3280.js",
+    "www/js/campamento-perfil-ui-v3430.js",
+    "www/js/commissions-v3370.js",
+    "www/js/society-achievements-ui-v3360.js",
+    "www/js/bestiary-ui-v3260.js",
+    "www/js/journal-ui-v3250.js",
+    "www/js/item-art-v3198.js",
+    "www/js/save-manager.js"
+  ],
+  "counts": {
+    "rows": 138,
+    "roles": {
+      "existente": 61,
+      "nuevo": 28,
+      "corregido": 41,
+      "pendiente": 8
+    },
+    "files": 63,
+    "bytes": 493132,
+    "totalBytes": 133430111,
+    "baselineBytes": 132854722,
+    "offlineFiles": 7166
+  },
+  "emoji": {
+    "initial": {
+      "distinct": 143,
+      "mentions": 557,
+      "details": {
+        "💾": {
+          "mentions": 4,
+          "references": [
+            "www/index.html:42",
+            "www/index.html:106",
+            "www/js/app.js:2485",
+            "www/js/app.js:7757"
+          ]
+        },
+        "📜": {
+          "mentions": 10,
+          "references": [
+            "www/index.html:46",
+            "www/index.html:95",
+            "www/js/app.js:3610",
+            "www/js/app.js:3914",
+            "www/js/app.js:4267",
+            "www/js/app.js:4324",
+            "www/js/app.js:4590",
+            "www/js/app.js:4679",
+            "www/js/app.js:7330",
+            "www/js/mobile-ui.js:16"
+          ]
+        },
+        "🪙": {
+          "mentions": 5,
+          "references": [
+            "www/index.html:47",
+            "www/js/app.js:2889",
+            "www/js/app.js:3004",
+            "www/js/app.js:3638",
+            "www/js/app.js:4581"
+          ]
+        },
+        "🏅": {
+          "mentions": 8,
+          "references": [
+            "www/index.html:48",
+            "www/js/app.js:2984",
+            "www/js/app.js:4004",
+            "www/js/app.js:4286",
+            "www/js/app.js:4318",
+            "www/js/app.js:4605",
+            "www/js/society-achievements-ui-v3360.js:15",
+            "www/js/society-achievements-ui-v3360.js:24"
+          ]
+        },
+        "👨‍🔬": {
+          "mentions": 3,
+          "references": [
+            "www/index.html:49",
+            "www/js/app.js:2629",
+            "www/js/app.js:5633"
+          ]
+        },
+        "📚": {
+          "mentions": 10,
+          "references": [
+            "www/index.html:50",
+            "www/js/app.js:3011",
+            "www/js/app.js:3264",
+            "www/js/app.js:3610",
+            "www/js/app.js:3616",
+            "www/js/app.js:3874",
+            "www/js/app.js:4316",
+            "www/js/app.js:4747",
+            "www/js/app.js:4843",
+            "www/js/society-achievements-ui-v3360.js:15"
+          ]
+        },
+        "🗺": {
+          "mentions": 14,
+          "references": [
+            "www/index.html:56",
+            "www/index.html:80",
+            "www/js/app.js:3637",
+            "www/js/app.js:4336",
+            "www/js/app.js:4373",
+            "www/js/app.js:4582",
+            "www/js/app.js:4584",
+            "www/js/app.js:4586",
+            "www/js/app.js:4588",
+            "www/js/app.js:4848",
+            "www/js/app.js:4956",
+            "www/js/app.js:7237",
+            "www/js/mobile-ui.js:16",
+            "www/js/commissions-v3370.js:4"
+          ]
+        },
+        "🌿": {
+          "mentions": 18,
+          "references": [
+            "www/index.html:57",
+            "www/index.html:70",
+            "www/index.html:81",
+            "www/js/app.js:2702",
+            "www/js/app.js:2710",
+            "www/js/app.js:2714",
+            "www/js/app.js:2727",
+            "www/js/app.js:2733",
+            "www/js/app.js:2738",
+            "www/js/app.js:2741",
+            "www/js/app.js:2745",
+            "www/js/app.js:2748",
+            "www/js/app.js:2750",
+            "www/js/app.js:4372",
+            "www/js/app.js:4677",
+            "www/js/app.js:5265",
+            "www/js/mobile-ui.js:16",
+            "www/js/mobile-ui.js:21"
+          ]
+        },
+        "📖": {
+          "mentions": 7,
+          "references": [
+            "www/index.html:58",
+            "www/index.html:82",
+            "www/js/app.js:2975",
+            "www/js/app.js:3402",
+            "www/js/app.js:3640",
+            "www/js/mobile-ui.js:16",
+            "www/js/commissions-v3370.js:4"
+          ]
+        },
+        "🔬": {
+          "mentions": 6,
+          "references": [
+            "www/index.html:59",
+            "www/index.html:83",
+            "www/js/app.js:3074",
+            "www/js/app.js:3512",
+            "www/js/mobile-ui.js:16",
+            "www/js/commissions-v3370.js:4"
+          ]
+        },
+        "🏛": {
+          "mentions": 17,
+          "references": [
+            "www/index.html:60",
+            "www/index.html:64",
+            "www/index.html:94",
+            "www/js/app.js:2177",
+            "www/js/app.js:2996",
+            "www/js/app.js:3274",
+            "www/js/app.js:3438",
+            "www/js/app.js:3615",
+            "www/js/app.js:4071",
+            "www/js/app.js:4353",
+            "www/js/app.js:4359",
+            "www/js/app.js:4371",
+            "www/js/app.js:4372",
+            "www/js/app.js:4680",
+            "www/js/app.js:4795",
+            "www/js/app.js:4848",
+            "www/js/mobile-ui.js:16"
+          ]
+        },
+        "🦉": {
+          "mentions": 6,
+          "references": [
+            "www/index.html:61",
+            "www/index.html:96",
+            "www/js/app.js:2174",
+            "www/js/app.js:3524",
+            "www/js/app.js:5134",
+            "www/js/mobile-ui.js:16"
+          ]
+        },
+        "⛺": {
+          "mentions": 3,
+          "references": [
+            "www/index.html:62",
+            "www/index.html:93",
+            "www/js/mobile-ui.js:16"
+          ]
+        },
+        "🎒": {
+          "mentions": 7,
+          "references": [
+            "www/index.html:63",
+            "www/index.html:97",
+            "www/js/app.js:4563",
+            "www/js/app.js:4784",
+            "www/js/app.js:4852",
+            "www/js/app.js:4930",
+            "www/js/mobile-ui.js:16"
+          ]
+        },
+        "👑": {
+          "mentions": 4,
+          "references": [
+            "www/index.html:65",
+            "www/index.html:98",
+            "www/js/app.js:3151",
+            "www/js/mobile-ui.js:16"
+          ]
+        },
+        "⬇": {
+          "mentions": 1,
+          "references": [
+            "www/index.html:108"
+          ]
+        },
+        "📤": {
+          "mentions": 1,
+          "references": [
+            "www/index.html:109"
+          ]
+        },
+        "📥": {
+          "mentions": 1,
+          "references": [
+            "www/index.html:111"
+          ]
+        },
+        "📁": {
+          "mentions": 1,
+          "references": [
+            "www/index.html:112"
+          ]
+        },
+        "↔": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:1636"
+          ]
+        },
+        "🔭": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:2173",
+            "www/js/app.js:2628",
+            "www/js/app.js:2855",
+            "www/js/app.js:2919",
+            "www/js/app.js:3523",
+            "www/js/app.js:4561",
+            "www/js/app.js:4603"
+          ]
+        },
+        "⛵": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:2175",
+            "www/js/app.js:4912",
+            "www/js/app.js:4960",
+            "www/js/app.js:5012",
+            "www/js/app.js:5265",
+            "www/js/app.js:7109"
+          ]
+        },
+        "🦴": {
+          "mentions": 25,
+          "references": [
+            "www/js/app.js:2176",
+            "www/js/app.js:3525",
+            "www/js/app.js:3632",
+            "www/js/app.js:3644",
+            "www/js/app.js:3645",
+            "www/js/app.js:3649",
+            "www/js/app.js:3651",
+            "www/js/app.js:3652",
+            "www/js/app.js:3656",
+            "www/js/app.js:3718",
+            "www/js/app.js:3898",
+            "www/js/app.js:4265",
+            "www/js/app.js:4373",
+            "www/js/app.js:4382",
+            "www/js/app.js:4570",
+            "www/js/app.js:4573",
+            "www/js/app.js:4574",
+            "www/js/app.js:4577",
+            "www/js/app.js:4578",
+            "www/js/app.js:4609",
+            "www/js/app.js:4610",
+            "www/js/app.js:4611",
+            "www/js/app.js:4681",
+            "www/js/app.js:4944",
+            "www/js/commissions-v3370.js:4"
+          ]
+        },
+        "💷": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:2261",
+            "www/js/app.js:3616",
+            "www/js/society-achievements-ui-v3360.js:15"
+          ]
+        },
+        "📋": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2306"
+          ]
+        },
+        "⚠": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:2457",
+            "www/js/app.js:3205",
+            "www/js/app.js:7757",
+            "www/js/save-manager.js:302",
+            "www/js/save-manager.js:359"
+          ]
+        },
+        "♂": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2683"
+          ]
+        },
+        "♀": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2683"
+          ]
+        },
+        "✅": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:2694",
+            "www/js/app.js:3839",
+            "www/js/app.js:4275",
+            "www/js/save-manager.js:299",
+            "www/js/save-manager.js:344",
+            "www/js/save-manager.js:357"
+          ]
+        },
+        "❄": {
+          "mentions": 16,
+          "references": [
+            "www/js/app.js:2699",
+            "www/js/app.js:2717",
+            "www/js/app.js:2718",
+            "www/js/app.js:2720",
+            "www/js/app.js:2734",
+            "www/js/app.js:2735",
+            "www/js/app.js:2742",
+            "www/js/app.js:2743",
+            "www/js/app.js:2752",
+            "www/js/app.js:5265",
+            "www/js/app.js:5267",
+            "www/js/app.js:7082",
+            "www/js/app.js:7088",
+            "www/js/app.js:7155",
+            "www/js/commissions-v3370.js:4"
+          ]
+        },
+        "🐻": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2699",
+            "www/js/app.js:2700"
+          ]
+        },
+        "🌲": {
+          "mentions": 26,
+          "references": [
+            "www/js/app.js:2699",
+            "www/js/app.js:2700",
+            "www/js/app.js:2707",
+            "www/js/app.js:2716",
+            "www/js/app.js:2717",
+            "www/js/app.js:2718",
+            "www/js/app.js:2720",
+            "www/js/app.js:2734",
+            "www/js/app.js:2735",
+            "www/js/app.js:2737",
+            "www/js/app.js:2742",
+            "www/js/app.js:2743",
+            "www/js/app.js:2744",
+            "www/js/app.js:2745",
+            "www/js/app.js:2747",
+            "www/js/app.js:2748",
+            "www/js/app.js:2749",
+            "www/js/app.js:2750",
+            "www/js/app.js:2752"
+          ]
+        },
+        "🦌": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:2699",
+            "www/js/app.js:2704",
+            "www/js/app.js:2708",
+            "www/js/app.js:2742",
+            "www/js/app.js:2745",
+            "www/js/app.js:4599"
+          ]
+        },
+        "🦅": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:2700",
+            "www/js/app.js:2710",
+            "www/js/app.js:2718",
+            "www/js/app.js:2737",
+            "www/js/app.js:2746",
+            "www/js/app.js:2750"
+          ]
+        },
+        "🌊": {
+          "mentions": 22,
+          "references": [
+            "www/js/app.js:2700",
+            "www/js/app.js:2705",
+            "www/js/app.js:2706",
+            "www/js/app.js:2709",
+            "www/js/app.js:2713",
+            "www/js/app.js:2718",
+            "www/js/app.js:2724",
+            "www/js/app.js:2727",
+            "www/js/app.js:2729",
+            "www/js/app.js:2730",
+            "www/js/app.js:2734",
+            "www/js/app.js:2741",
+            "www/js/app.js:2744",
+            "www/js/app.js:2745",
+            "www/js/app.js:2747",
+            "www/js/app.js:2748",
+            "www/js/app.js:2749",
+            "www/js/app.js:2752",
+            "www/js/app.js:3229",
+            "www/js/app.js:5265",
+            "www/js/app.js:7088",
+            "www/js/app.js:7109"
+          ]
+        },
+        "🏜": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:2701",
+            "www/js/app.js:2711",
+            "www/js/app.js:2712",
+            "www/js/app.js:2719",
+            "www/js/app.js:2725",
+            "www/js/app.js:2731",
+            "www/js/app.js:5265"
+          ]
+        },
+        "🦊": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:2701",
+            "www/js/app.js:2725",
+            "www/js/app.js:2731",
+            "www/js/app.js:4683"
+          ]
+        },
+        "🐍": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2701"
+          ]
+        },
+        "☀": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:2701",
+            "www/js/app.js:2711",
+            "www/js/app.js:2719",
+            "www/js/app.js:2728",
+            "www/js/app.js:2738",
+            "www/js/app.js:5266",
+            "www/js/app.js:5267"
+          ]
+        },
+        "🌾": {
+          "mentions": 22,
+          "references": [
+            "www/js/app.js:2702",
+            "www/js/app.js:2703",
+            "www/js/app.js:2704",
+            "www/js/app.js:2705",
+            "www/js/app.js:2708",
+            "www/js/app.js:2711",
+            "www/js/app.js:2712",
+            "www/js/app.js:2713",
+            "www/js/app.js:2724",
+            "www/js/app.js:2725",
+            "www/js/app.js:2732",
+            "www/js/app.js:2736",
+            "www/js/app.js:2738",
+            "www/js/app.js:2741",
+            "www/js/app.js:2744",
+            "www/js/app.js:2745",
+            "www/js/app.js:2746",
+            "www/js/app.js:2747",
+            "www/js/app.js:5265"
+          ]
+        },
+        "🐆": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:2702",
+            "www/js/app.js:2720",
+            "www/js/app.js:2728"
+          ]
+        },
+        "🐦": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:2702",
+            "www/js/app.js:2703",
+            "www/js/app.js:2705",
+            "www/js/app.js:2713",
+            "www/js/app.js:2726",
+            "www/js/app.js:2727"
+          ]
+        },
+        "🪷": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2703",
+            "www/js/app.js:5265"
+          ]
+        },
+        "💧": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2703"
+          ]
+        },
+        "🌳": {
+          "mentions": 10,
+          "references": [
+            "www/js/app.js:2704",
+            "www/js/app.js:2706",
+            "www/js/app.js:2708",
+            "www/js/app.js:2714",
+            "www/js/app.js:2726",
+            "www/js/app.js:2732",
+            "www/js/app.js:2733",
+            "www/js/app.js:2741",
+            "www/js/app.js:2744",
+            "www/js/app.js:5265"
+          ]
+        },
+        "🦏": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2704"
+          ]
+        },
+        "🦩": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2705"
+          ]
+        },
+        "🏝": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:2706",
+            "www/js/app.js:2709",
+            "www/js/app.js:3702",
+            "www/js/app.js:7109"
+          ]
+        },
+        "🐢": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2706",
+            "www/js/app.js:3667"
+          ]
+        },
+        "⛰": {
+          "mentions": 12,
+          "references": [
+            "www/js/app.js:2707",
+            "www/js/app.js:2710",
+            "www/js/app.js:2716",
+            "www/js/app.js:2720",
+            "www/js/app.js:2736",
+            "www/js/app.js:2737",
+            "www/js/app.js:2738",
+            "www/js/app.js:2743",
+            "www/js/app.js:2746",
+            "www/js/app.js:2750",
+            "www/js/app.js:2752",
+            "www/js/app.js:5265"
+          ]
+        },
+        "🐒": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:2707",
+            "www/js/app.js:2714",
+            "www/js/app.js:2726",
+            "www/js/app.js:2730"
+          ]
+        },
+        "🪨": {
+          "mentions": 12,
+          "references": [
+            "www/js/app.js:2707",
+            "www/js/app.js:2712",
+            "www/js/app.js:2716",
+            "www/js/app.js:2719",
+            "www/js/app.js:2737",
+            "www/js/app.js:2743",
+            "www/js/app.js:2748",
+            "www/js/app.js:2750",
+            "www/js/app.js:3635",
+            "www/js/app.js:3650",
+            "www/js/app.js:4591",
+            "www/js/app.js:4612"
+          ]
+        },
+        "🍂": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2708",
+            "www/js/app.js:5267"
+          ]
+        },
+        "🐬": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2709"
+          ]
+        },
+        "🐠": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2709"
+          ]
+        },
+        "🐺": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2710"
+          ]
+        },
+        "🦎": {
+          "mentions": 5,
+          "references": [
+            "www/js/app.js:2711",
+            "www/js/app.js:2719",
+            "www/js/app.js:2730",
+            "www/js/app.js:3671",
+            "www/js/app.js:5135"
+          ]
+        },
+        "🐐": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2712"
+          ]
+        },
+        "🐘": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2713",
+            "www/js/app.js:2732"
+          ]
+        },
+        "🌧": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2714"
+          ]
+        },
+        "🍃": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2716"
+          ]
+        },
+        "🐅": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2717"
+          ]
+        },
+        "🏔": {
+          "mentions": 5,
+          "references": [
+            "www/js/app.js:2717",
+            "www/js/app.js:2720",
+            "www/js/app.js:2735",
+            "www/js/app.js:2743",
+            "www/js/app.js:7088"
+          ]
+        },
+        "🌋": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2718"
+          ]
+        },
+        "🐪": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2719",
+            "www/js/app.js:2731"
+          ]
+        },
+        "🐊": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:2724",
+            "www/js/app.js:3666",
+            "www/js/app.js:3670",
+            "www/js/app.js:3703"
+          ]
+        },
+        "🦛": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2724"
+          ]
+        },
+        "🐫": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2725"
+          ]
+        },
+        "🌴": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:2726",
+            "www/js/app.js:2730",
+            "www/js/app.js:5265"
+          ]
+        },
+        "🦍": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2727",
+            "www/js/app.js:2733"
+          ]
+        },
+        "🌵": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:2728",
+            "www/js/app.js:2731",
+            "www/js/app.js:2746"
+          ]
+        },
+        "🦓": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2728"
+          ]
+        },
+        "🐧": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:2729",
+            "www/js/app.js:7082",
+            "www/js/app.js:7088"
+          ]
+        },
+        "🦭": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2729"
+          ]
+        },
+        "🌅": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2729",
+            "www/js/app.js:5266"
+          ]
+        },
+        "🦁": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2732",
+            "www/js/app.js:3664"
+          ]
+        },
+        "🦜": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2733",
+            "www/js/app.js:3226"
+          ]
+        },
+        "🐿": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2734"
+          ]
+        },
+        "🪶": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:2735",
+            "www/js/app.js:2741",
+            "www/js/app.js:2744",
+            "www/js/app.js:4565",
+            "www/js/app.js:4592",
+            "www/js/app.js:4598",
+            "www/js/app.js:4682"
+          ]
+        },
+        "🐎": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2736"
+          ]
+        },
+        "🐈": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2736",
+            "www/js/app.js:2738"
+          ]
+        },
+        "🌄": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2737"
+          ]
+        },
+        "🌨": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2742"
+          ]
+        },
+        "🌞": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2746",
+            "www/js/app.js:2748"
+          ]
+        },
+        "🦬": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2747",
+            "www/js/app.js:3225"
+          ]
+        },
+        "🦢": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2749"
+          ]
+        },
+        "🌫": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2749"
+          ]
+        },
+        "🧭": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:3043",
+            "www/js/app.js:4562",
+            "www/js/app.js:4583",
+            "www/js/app.js:4589",
+            "www/js/app.js:4795",
+            "www/js/app.js:4824",
+            "www/js/app.js:5016"
+          ]
+        },
+        "🌏": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3223"
+          ]
+        },
+        "🌍": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3224"
+          ]
+        },
+        "🪃": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3227"
+          ]
+        },
+        "🧊": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:3228",
+            "www/js/app.js:7088"
+          ]
+        },
+        "🗝": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3254"
+          ]
+        },
+        "📘": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3270"
+          ]
+        },
+        "👁": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3420"
+          ]
+        },
+        "✒": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3434"
+          ]
+        },
+        "🔒": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3498"
+          ]
+        },
+        "📊": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:3517",
+            "www/js/app.js:3620",
+            "www/js/app.js:4385",
+            "www/js/app.js:4820"
+          ]
+        },
+        "🎯": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:3565",
+            "www/js/app.js:3616",
+            "www/js/society-achievements-ui-v3360.js:15"
+          ]
+        },
+        "🌐": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:3610",
+            "www/js/app.js:3641",
+            "www/js/app.js:7242"
+          ]
+        },
+        "🐾": {
+          "mentions": 9,
+          "references": [
+            "www/js/app.js:3633",
+            "www/js/app.js:3634",
+            "www/js/app.js:3717",
+            "www/js/app.js:4373",
+            "www/js/app.js:4579",
+            "www/js/app.js:4608",
+            "www/js/app.js:4678",
+            "www/js/app.js:4795",
+            "www/js/app.js:4822"
+          ]
+        },
+        "⚙": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:3639",
+            "www/js/app.js:4594"
+          ]
+        },
+        "💀": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:3646",
+            "www/js/app.js:3648",
+            "www/js/app.js:3713",
+            "www/js/app.js:4571",
+            "www/js/app.js:4575",
+            "www/js/app.js:4576",
+            "www/js/app.js:4933"
+          ]
+        },
+        "🦖": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:3647",
+            "www/js/app.js:3655",
+            "www/js/app.js:3659",
+            "www/js/app.js:3660",
+            "www/js/app.js:3711",
+            "www/js/app.js:3895"
+          ]
+        },
+        "🦕": {
+          "mentions": 5,
+          "references": [
+            "www/js/app.js:3653",
+            "www/js/app.js:3654",
+            "www/js/app.js:3657",
+            "www/js/app.js:3658",
+            "www/js/app.js:3712"
+          ]
+        },
+        "🐟": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:3663",
+            "www/js/app.js:3668",
+            "www/js/app.js:3669",
+            "www/js/app.js:3701",
+            "www/js/app.js:5135",
+            "www/js/app.js:7109"
+          ]
+        },
+        "🦇": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3665"
+          ]
+        },
+        "🧽": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3716"
+          ]
+        },
+        "⛏": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:3773",
+            "www/js/app.js:3805",
+            "www/js/app.js:3829",
+            "www/js/app.js:3843"
+          ]
+        },
+        "🗃": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3819"
+          ]
+        },
+        "🔎": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:3965",
+            "www/js/app.js:3986",
+            "www/js/app.js:4274",
+            "www/js/app.js:4928"
+          ]
+        },
+        "🧬": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:4018",
+            "www/js/app.js:4319"
+          ]
+        },
+        "🗿": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:4032",
+            "www/js/app.js:4308",
+            "www/js/app.js:4373"
+          ]
+        },
+        "🔍": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:4315",
+            "www/js/app.js:4593"
+          ]
+        },
+        "🪴": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4372"
+          ]
+        },
+        "🖼": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4373"
+          ]
+        },
+        "🎩": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4564"
+          ]
+        },
+        "🧥": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:4566",
+            "www/js/app.js:7072"
+          ]
+        },
+        "📿": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4567"
+          ]
+        },
+        "🟠": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:4568",
+            "www/js/app.js:4606",
+            "www/js/app.js:4952"
+          ]
+        },
+        "🐚": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4569"
+          ]
+        },
+        "🦷": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:4572",
+            "www/js/app.js:4597",
+            "www/js/app.js:4601",
+            "www/js/app.js:4934"
+          ]
+        },
+        "🌼": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4580"
+          ]
+        },
+        "🧩": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:4585",
+            "www/js/app.js:4587",
+            "www/js/app.js:7236"
+          ]
+        },
+        "🖋": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4595"
+          ]
+        },
+        "🪵": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:4596",
+            "www/js/app.js:4602"
+          ]
+        },
+        "〰": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4600"
+          ]
+        },
+        "🎓": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4604"
+          ]
+        },
+        "⚪": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4607"
+          ]
+        },
+        "🦦": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4684"
+          ]
+        },
+        "🛠": {
+          "mentions": 5,
+          "references": [
+            "www/js/app.js:4781",
+            "www/js/app.js:4795",
+            "www/js/app.js:4820",
+            "www/js/app.js:4840",
+            "www/js/app.js:7462"
+          ]
+        },
+        "🎽": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:4795",
+            "www/js/app.js:4820",
+            "www/js/app.js:4852"
+          ]
+        },
+        "📦": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4852"
+          ]
+        },
+        "🏺": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4949"
+          ]
+        },
+        "⚒": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:5014"
+          ]
+        },
+        "🌇": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:5266"
+          ]
+        },
+        "🌙": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:5266"
+          ]
+        },
+        "🌱": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:5267"
+          ]
+        },
+        "❔": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:5276"
+          ]
+        },
+        "⏳": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:5629"
+          ]
+        },
+        "🪸": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:7109"
+          ]
+        },
+        "🌬": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:7109"
+          ]
+        },
+        "⚓": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:7122",
+            "www/js/app.js:7142",
+            "www/js/app.js:7155",
+            "www/js/commissions-v3370.js:4"
+          ]
+        }
+      }
+    },
+    "candidate": {
+      "distinct": 138,
+      "mentions": 515,
+      "details": {
+        "💾": {
+          "mentions": 3,
+          "references": [
+            "www/index.html:43",
+            "www/js/app.js:2485",
+            "www/js/app.js:7771"
+          ]
+        },
+        "↔": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:1636"
+          ]
+        },
+        "🔭": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:2173",
+            "www/js/app.js:2628",
+            "www/js/app.js:2855",
+            "www/js/app.js:2919",
+            "www/js/app.js:3533",
+            "www/js/app.js:4571",
+            "www/js/app.js:4613"
+          ]
+        },
+        "🦉": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:2174",
+            "www/js/app.js:3534",
+            "www/js/app.js:5147"
+          ]
+        },
+        "⛵": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:2175",
+            "www/js/app.js:4925",
+            "www/js/app.js:4973",
+            "www/js/app.js:5025",
+            "www/js/app.js:5278",
+            "www/js/app.js:7122"
+          ]
+        },
+        "🦴": {
+          "mentions": 25,
+          "references": [
+            "www/js/app.js:2176",
+            "www/js/app.js:3535",
+            "www/js/app.js:3642",
+            "www/js/app.js:3654",
+            "www/js/app.js:3655",
+            "www/js/app.js:3659",
+            "www/js/app.js:3661",
+            "www/js/app.js:3662",
+            "www/js/app.js:3666",
+            "www/js/app.js:3728",
+            "www/js/app.js:3908",
+            "www/js/app.js:4275",
+            "www/js/app.js:4383",
+            "www/js/app.js:4392",
+            "www/js/app.js:4580",
+            "www/js/app.js:4583",
+            "www/js/app.js:4584",
+            "www/js/app.js:4587",
+            "www/js/app.js:4588",
+            "www/js/app.js:4619",
+            "www/js/app.js:4620",
+            "www/js/app.js:4621",
+            "www/js/app.js:4691",
+            "www/js/app.js:4957",
+            "www/js/commissions-v3370.js:4"
+          ]
+        },
+        "🏛": {
+          "mentions": 13,
+          "references": [
+            "www/js/app.js:2177",
+            "www/js/app.js:2996",
+            "www/js/app.js:3274",
+            "www/js/app.js:3448",
+            "www/js/app.js:3625",
+            "www/js/app.js:4081",
+            "www/js/app.js:4363",
+            "www/js/app.js:4369",
+            "www/js/app.js:4381",
+            "www/js/app.js:4382",
+            "www/js/app.js:4690",
+            "www/js/app.js:4808",
+            "www/js/app.js:4861"
+          ]
+        },
+        "💷": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:2261",
+            "www/js/app.js:3626",
+            "www/js/society-achievements-ui-v3360.js:15"
+          ]
+        },
+        "📋": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2306"
+          ]
+        },
+        "⚠": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:2457",
+            "www/js/app.js:3205",
+            "www/js/app.js:7771",
+            "www/js/save-manager.js:302",
+            "www/js/save-manager.js:359"
+          ]
+        },
+        "👨‍🔬": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2629",
+            "www/js/app.js:5646"
+          ]
+        },
+        "♂": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2683"
+          ]
+        },
+        "♀": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2683"
+          ]
+        },
+        "✅": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:2694",
+            "www/js/app.js:3849",
+            "www/js/app.js:4285",
+            "www/js/save-manager.js:299",
+            "www/js/save-manager.js:344",
+            "www/js/save-manager.js:357"
+          ]
+        },
+        "❄": {
+          "mentions": 16,
+          "references": [
+            "www/js/app.js:2699",
+            "www/js/app.js:2717",
+            "www/js/app.js:2718",
+            "www/js/app.js:2720",
+            "www/js/app.js:2734",
+            "www/js/app.js:2735",
+            "www/js/app.js:2742",
+            "www/js/app.js:2743",
+            "www/js/app.js:2752",
+            "www/js/app.js:5278",
+            "www/js/app.js:5280",
+            "www/js/app.js:7095",
+            "www/js/app.js:7101",
+            "www/js/app.js:7168",
+            "www/js/commissions-v3370.js:4"
+          ]
+        },
+        "🐻": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2699",
+            "www/js/app.js:2700"
+          ]
+        },
+        "🌲": {
+          "mentions": 26,
+          "references": [
+            "www/js/app.js:2699",
+            "www/js/app.js:2700",
+            "www/js/app.js:2707",
+            "www/js/app.js:2716",
+            "www/js/app.js:2717",
+            "www/js/app.js:2718",
+            "www/js/app.js:2720",
+            "www/js/app.js:2734",
+            "www/js/app.js:2735",
+            "www/js/app.js:2737",
+            "www/js/app.js:2742",
+            "www/js/app.js:2743",
+            "www/js/app.js:2744",
+            "www/js/app.js:2745",
+            "www/js/app.js:2747",
+            "www/js/app.js:2748",
+            "www/js/app.js:2749",
+            "www/js/app.js:2750",
+            "www/js/app.js:2752"
+          ]
+        },
+        "🦌": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:2699",
+            "www/js/app.js:2704",
+            "www/js/app.js:2708",
+            "www/js/app.js:2742",
+            "www/js/app.js:2745",
+            "www/js/app.js:4609"
+          ]
+        },
+        "🦅": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:2700",
+            "www/js/app.js:2710",
+            "www/js/app.js:2718",
+            "www/js/app.js:2737",
+            "www/js/app.js:2746",
+            "www/js/app.js:2750"
+          ]
+        },
+        "🌊": {
+          "mentions": 22,
+          "references": [
+            "www/js/app.js:2700",
+            "www/js/app.js:2705",
+            "www/js/app.js:2706",
+            "www/js/app.js:2709",
+            "www/js/app.js:2713",
+            "www/js/app.js:2718",
+            "www/js/app.js:2724",
+            "www/js/app.js:2727",
+            "www/js/app.js:2729",
+            "www/js/app.js:2730",
+            "www/js/app.js:2734",
+            "www/js/app.js:2741",
+            "www/js/app.js:2744",
+            "www/js/app.js:2745",
+            "www/js/app.js:2747",
+            "www/js/app.js:2748",
+            "www/js/app.js:2749",
+            "www/js/app.js:2752",
+            "www/js/app.js:3229",
+            "www/js/app.js:5278",
+            "www/js/app.js:7101",
+            "www/js/app.js:7122"
+          ]
+        },
+        "🏜": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:2701",
+            "www/js/app.js:2711",
+            "www/js/app.js:2712",
+            "www/js/app.js:2719",
+            "www/js/app.js:2725",
+            "www/js/app.js:2731",
+            "www/js/app.js:5278"
+          ]
+        },
+        "🦊": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:2701",
+            "www/js/app.js:2725",
+            "www/js/app.js:2731",
+            "www/js/app.js:4693"
+          ]
+        },
+        "🐍": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2701"
+          ]
+        },
+        "☀": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:2701",
+            "www/js/app.js:2711",
+            "www/js/app.js:2719",
+            "www/js/app.js:2728",
+            "www/js/app.js:2738",
+            "www/js/app.js:5279",
+            "www/js/app.js:5280"
+          ]
+        },
+        "🌾": {
+          "mentions": 22,
+          "references": [
+            "www/js/app.js:2702",
+            "www/js/app.js:2703",
+            "www/js/app.js:2704",
+            "www/js/app.js:2705",
+            "www/js/app.js:2708",
+            "www/js/app.js:2711",
+            "www/js/app.js:2712",
+            "www/js/app.js:2713",
+            "www/js/app.js:2724",
+            "www/js/app.js:2725",
+            "www/js/app.js:2732",
+            "www/js/app.js:2736",
+            "www/js/app.js:2738",
+            "www/js/app.js:2741",
+            "www/js/app.js:2744",
+            "www/js/app.js:2745",
+            "www/js/app.js:2746",
+            "www/js/app.js:2747",
+            "www/js/app.js:5278"
+          ]
+        },
+        "🐆": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:2702",
+            "www/js/app.js:2720",
+            "www/js/app.js:2728"
+          ]
+        },
+        "🐦": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:2702",
+            "www/js/app.js:2703",
+            "www/js/app.js:2705",
+            "www/js/app.js:2713",
+            "www/js/app.js:2726",
+            "www/js/app.js:2727"
+          ]
+        },
+        "🌿": {
+          "mentions": 13,
+          "references": [
+            "www/js/app.js:2702",
+            "www/js/app.js:2710",
+            "www/js/app.js:2714",
+            "www/js/app.js:2727",
+            "www/js/app.js:2733",
+            "www/js/app.js:2738",
+            "www/js/app.js:2741",
+            "www/js/app.js:2745",
+            "www/js/app.js:2748",
+            "www/js/app.js:2750",
+            "www/js/app.js:4382",
+            "www/js/app.js:4687",
+            "www/js/app.js:5278"
+          ]
+        },
+        "🪷": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2703",
+            "www/js/app.js:5278"
+          ]
+        },
+        "💧": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2703"
+          ]
+        },
+        "🌳": {
+          "mentions": 10,
+          "references": [
+            "www/js/app.js:2704",
+            "www/js/app.js:2706",
+            "www/js/app.js:2708",
+            "www/js/app.js:2714",
+            "www/js/app.js:2726",
+            "www/js/app.js:2732",
+            "www/js/app.js:2733",
+            "www/js/app.js:2741",
+            "www/js/app.js:2744",
+            "www/js/app.js:5278"
+          ]
+        },
+        "🦏": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2704"
+          ]
+        },
+        "🦩": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2705"
+          ]
+        },
+        "🏝": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:2706",
+            "www/js/app.js:2709",
+            "www/js/app.js:3712",
+            "www/js/app.js:7122"
+          ]
+        },
+        "🐢": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2706",
+            "www/js/app.js:3677"
+          ]
+        },
+        "⛰": {
+          "mentions": 12,
+          "references": [
+            "www/js/app.js:2707",
+            "www/js/app.js:2710",
+            "www/js/app.js:2716",
+            "www/js/app.js:2720",
+            "www/js/app.js:2736",
+            "www/js/app.js:2737",
+            "www/js/app.js:2738",
+            "www/js/app.js:2743",
+            "www/js/app.js:2746",
+            "www/js/app.js:2750",
+            "www/js/app.js:2752",
+            "www/js/app.js:5278"
+          ]
+        },
+        "🐒": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:2707",
+            "www/js/app.js:2714",
+            "www/js/app.js:2726",
+            "www/js/app.js:2730"
+          ]
+        },
+        "🪨": {
+          "mentions": 12,
+          "references": [
+            "www/js/app.js:2707",
+            "www/js/app.js:2712",
+            "www/js/app.js:2716",
+            "www/js/app.js:2719",
+            "www/js/app.js:2737",
+            "www/js/app.js:2743",
+            "www/js/app.js:2748",
+            "www/js/app.js:2750",
+            "www/js/app.js:3645",
+            "www/js/app.js:3660",
+            "www/js/app.js:4601",
+            "www/js/app.js:4622"
+          ]
+        },
+        "🍂": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2708",
+            "www/js/app.js:5280"
+          ]
+        },
+        "🐬": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2709"
+          ]
+        },
+        "🐠": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2709"
+          ]
+        },
+        "🐺": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2710"
+          ]
+        },
+        "🦎": {
+          "mentions": 5,
+          "references": [
+            "www/js/app.js:2711",
+            "www/js/app.js:2719",
+            "www/js/app.js:2730",
+            "www/js/app.js:3681",
+            "www/js/app.js:5148"
+          ]
+        },
+        "🐐": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2712"
+          ]
+        },
+        "🐘": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2713",
+            "www/js/app.js:2732"
+          ]
+        },
+        "🌧": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2714"
+          ]
+        },
+        "🍃": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2716"
+          ]
+        },
+        "🐅": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2717"
+          ]
+        },
+        "🏔": {
+          "mentions": 5,
+          "references": [
+            "www/js/app.js:2717",
+            "www/js/app.js:2720",
+            "www/js/app.js:2735",
+            "www/js/app.js:2743",
+            "www/js/app.js:7101"
+          ]
+        },
+        "🌋": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2718"
+          ]
+        },
+        "🐪": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2719",
+            "www/js/app.js:2731"
+          ]
+        },
+        "🐊": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:2724",
+            "www/js/app.js:3676",
+            "www/js/app.js:3680",
+            "www/js/app.js:3713"
+          ]
+        },
+        "🦛": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2724"
+          ]
+        },
+        "🐫": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2725"
+          ]
+        },
+        "🌴": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:2726",
+            "www/js/app.js:2730",
+            "www/js/app.js:5278"
+          ]
+        },
+        "🦍": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2727",
+            "www/js/app.js:2733"
+          ]
+        },
+        "🌵": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:2728",
+            "www/js/app.js:2731",
+            "www/js/app.js:2746"
+          ]
+        },
+        "🦓": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2728"
+          ]
+        },
+        "🐧": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:2729",
+            "www/js/app.js:7095",
+            "www/js/app.js:7101"
+          ]
+        },
+        "🦭": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2729"
+          ]
+        },
+        "🌅": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2729",
+            "www/js/app.js:5279"
+          ]
+        },
+        "🦁": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2732",
+            "www/js/app.js:3674"
+          ]
+        },
+        "🦜": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2733",
+            "www/js/app.js:3226"
+          ]
+        },
+        "🐿": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2734"
+          ]
+        },
+        "🪶": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:2735",
+            "www/js/app.js:2741",
+            "www/js/app.js:2744",
+            "www/js/app.js:4575",
+            "www/js/app.js:4602",
+            "www/js/app.js:4608",
+            "www/js/app.js:4692"
+          ]
+        },
+        "🐎": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2736"
+          ]
+        },
+        "🐈": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2736",
+            "www/js/app.js:2738"
+          ]
+        },
+        "🌄": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2737"
+          ]
+        },
+        "🌨": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2742"
+          ]
+        },
+        "🌞": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2746",
+            "www/js/app.js:2748"
+          ]
+        },
+        "🦬": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:2747",
+            "www/js/app.js:3225"
+          ]
+        },
+        "🦢": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2749"
+          ]
+        },
+        "🌫": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:2749"
+          ]
+        },
+        "🪙": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:2889",
+            "www/js/app.js:3004",
+            "www/js/app.js:3648",
+            "www/js/app.js:4591"
+          ]
+        },
+        "📖": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:2975",
+            "www/js/app.js:3412",
+            "www/js/app.js:3650",
+            "www/js/commissions-v3370.js:4"
+          ]
+        },
+        "🏅": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:2984",
+            "www/js/app.js:4014",
+            "www/js/app.js:4296",
+            "www/js/app.js:4328",
+            "www/js/app.js:4615",
+            "www/js/society-achievements-ui-v3360.js:15",
+            "www/js/society-achievements-ui-v3360.js:24"
+          ]
+        },
+        "📚": {
+          "mentions": 9,
+          "references": [
+            "www/js/app.js:3011",
+            "www/js/app.js:3264",
+            "www/js/app.js:3620",
+            "www/js/app.js:3626",
+            "www/js/app.js:3884",
+            "www/js/app.js:4326",
+            "www/js/app.js:4757",
+            "www/js/app.js:4856",
+            "www/js/society-achievements-ui-v3360.js:15"
+          ]
+        },
+        "🧭": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:3043",
+            "www/js/app.js:4572",
+            "www/js/app.js:4593",
+            "www/js/app.js:4599",
+            "www/js/app.js:4808",
+            "www/js/app.js:4837",
+            "www/js/app.js:5029"
+          ]
+        },
+        "🔬": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:3074",
+            "www/js/app.js:3522",
+            "www/js/commissions-v3370.js:4"
+          ]
+        },
+        "👑": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3151"
+          ]
+        },
+        "🌏": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3223"
+          ]
+        },
+        "🌍": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3224"
+          ]
+        },
+        "🪃": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3227"
+          ]
+        },
+        "🧊": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:3228",
+            "www/js/app.js:7101"
+          ]
+        },
+        "🗝": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3254"
+          ]
+        },
+        "📘": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3270"
+          ]
+        },
+        "👁": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3430"
+          ]
+        },
+        "✒": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3444"
+          ]
+        },
+        "🔒": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3508"
+          ]
+        },
+        "📊": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:3527",
+            "www/js/app.js:3630",
+            "www/js/app.js:4395",
+            "www/js/app.js:4833"
+          ]
+        },
+        "🎯": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:3575",
+            "www/js/app.js:3626",
+            "www/js/society-achievements-ui-v3360.js:15"
+          ]
+        },
+        "📜": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:3620",
+            "www/js/app.js:3924",
+            "www/js/app.js:4277",
+            "www/js/app.js:4334",
+            "www/js/app.js:4600",
+            "www/js/app.js:4689",
+            "www/js/app.js:7343"
+          ]
+        },
+        "🌐": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:3620",
+            "www/js/app.js:3651",
+            "www/js/app.js:7255"
+          ]
+        },
+        "🐾": {
+          "mentions": 9,
+          "references": [
+            "www/js/app.js:3643",
+            "www/js/app.js:3644",
+            "www/js/app.js:3727",
+            "www/js/app.js:4383",
+            "www/js/app.js:4589",
+            "www/js/app.js:4618",
+            "www/js/app.js:4688",
+            "www/js/app.js:4808",
+            "www/js/app.js:4835"
+          ]
+        },
+        "🗺": {
+          "mentions": 11,
+          "references": [
+            "www/js/app.js:3647",
+            "www/js/app.js:4346",
+            "www/js/app.js:4383",
+            "www/js/app.js:4592",
+            "www/js/app.js:4594",
+            "www/js/app.js:4596",
+            "www/js/app.js:4598",
+            "www/js/app.js:4861",
+            "www/js/app.js:4969",
+            "www/js/app.js:7250",
+            "www/js/commissions-v3370.js:4"
+          ]
+        },
+        "⚙": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:3649",
+            "www/js/app.js:4604"
+          ]
+        },
+        "💀": {
+          "mentions": 7,
+          "references": [
+            "www/js/app.js:3656",
+            "www/js/app.js:3658",
+            "www/js/app.js:3723",
+            "www/js/app.js:4581",
+            "www/js/app.js:4585",
+            "www/js/app.js:4586",
+            "www/js/app.js:4946"
+          ]
+        },
+        "🦖": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:3657",
+            "www/js/app.js:3665",
+            "www/js/app.js:3669",
+            "www/js/app.js:3670",
+            "www/js/app.js:3721",
+            "www/js/app.js:3905"
+          ]
+        },
+        "🦕": {
+          "mentions": 5,
+          "references": [
+            "www/js/app.js:3663",
+            "www/js/app.js:3664",
+            "www/js/app.js:3667",
+            "www/js/app.js:3668",
+            "www/js/app.js:3722"
+          ]
+        },
+        "🐟": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:3673",
+            "www/js/app.js:3678",
+            "www/js/app.js:3679",
+            "www/js/app.js:3711",
+            "www/js/app.js:5148",
+            "www/js/app.js:7122"
+          ]
+        },
+        "🦇": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3675"
+          ]
+        },
+        "🧽": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3726"
+          ]
+        },
+        "⛏": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:3783",
+            "www/js/app.js:3815",
+            "www/js/app.js:3839",
+            "www/js/app.js:3853"
+          ]
+        },
+        "🗃": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:3829"
+          ]
+        },
+        "🔎": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:3975",
+            "www/js/app.js:3996",
+            "www/js/app.js:4284",
+            "www/js/app.js:4941"
+          ]
+        },
+        "🧬": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:4028",
+            "www/js/app.js:4329"
+          ]
+        },
+        "🗿": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:4042",
+            "www/js/app.js:4318",
+            "www/js/app.js:4383"
+          ]
+        },
+        "🔍": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:4325",
+            "www/js/app.js:4603"
+          ]
+        },
+        "🪴": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4382"
+          ]
+        },
+        "🖼": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4383"
+          ]
+        },
+        "🎒": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:4573",
+            "www/js/app.js:4794",
+            "www/js/app.js:4865",
+            "www/js/app.js:4943"
+          ]
+        },
+        "🎩": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4574"
+          ]
+        },
+        "🧥": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:4576",
+            "www/js/app.js:7085"
+          ]
+        },
+        "📿": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4577"
+          ]
+        },
+        "🟠": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:4578",
+            "www/js/app.js:4616",
+            "www/js/app.js:4965"
+          ]
+        },
+        "🐚": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4579"
+          ]
+        },
+        "🦷": {
+          "mentions": 4,
+          "references": [
+            "www/js/app.js:4582",
+            "www/js/app.js:4607",
+            "www/js/app.js:4611",
+            "www/js/app.js:4947"
+          ]
+        },
+        "🌼": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4590"
+          ]
+        },
+        "🧩": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:4595",
+            "www/js/app.js:4597",
+            "www/js/app.js:7249"
+          ]
+        },
+        "🖋": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4605"
+          ]
+        },
+        "🪵": {
+          "mentions": 2,
+          "references": [
+            "www/js/app.js:4606",
+            "www/js/app.js:4612"
+          ]
+        },
+        "〰": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4610"
+          ]
+        },
+        "🎓": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4614"
+          ]
+        },
+        "⚪": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4617"
+          ]
+        },
+        "🦦": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4694"
+          ]
+        },
+        "🛠": {
+          "mentions": 5,
+          "references": [
+            "www/js/app.js:4791",
+            "www/js/app.js:4808",
+            "www/js/app.js:4833",
+            "www/js/app.js:4853",
+            "www/js/app.js:7476"
+          ]
+        },
+        "🎽": {
+          "mentions": 3,
+          "references": [
+            "www/js/app.js:4808",
+            "www/js/app.js:4833",
+            "www/js/app.js:4865"
+          ]
+        },
+        "📦": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4865"
+          ]
+        },
+        "🏺": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:4962"
+          ]
+        },
+        "⚒": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:5027"
+          ]
+        },
+        "🌇": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:5279"
+          ]
+        },
+        "🌙": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:5279"
+          ]
+        },
+        "🌱": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:5280"
+          ]
+        },
+        "❔": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:5289"
+          ]
+        },
+        "⏳": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:5642"
+          ]
+        },
+        "🪸": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:7122"
+          ]
+        },
+        "🌬": {
+          "mentions": 1,
+          "references": [
+            "www/js/app.js:7122"
+          ]
+        },
+        "⚓": {
+          "mentions": 6,
+          "references": [
+            "www/js/app.js:7135",
+            "www/js/app.js:7155",
+            "www/js/app.js:7168",
+            "www/js/commissions-v3370.js:4"
+          ]
+        }
+      }
+    }
+  },
+  "resources": [
+    {
+      "id": "ancient_coin",
+      "path": "iconoteca/arte/ancient_coin.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7210,
+      "sha256": "b1183e9ba57158f2db3402ff2878bace9a297bff8590b08ae7a5c2fffa403ff5",
+      "uses": [
+        "obj-ancient_coin"
+      ]
+    },
+    {
+      "id": "atlas",
+      "path": "iconoteca/arte/atlas.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7778,
+      "sha256": "8f44258973bb347113f17c956bc07896a52d5822eb736560d7e9e929317b5a66",
+      "uses": [
+        "atlas"
+      ]
+    },
+    {
+      "id": "atlas-total",
+      "path": "iconoteca/arte/atlas-total.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7838,
+      "sha256": "cae473a28f7a81408024e01ce357b51435a5dbc1de2a1d6c0b4d886db454d376",
+      "uses": [
+        "atlas-total"
+      ]
+    },
+    {
+      "id": "bestiario",
+      "path": "iconoteca/arte/bestiario.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 10490,
+      "sha256": "8d688f357e2075a3e7bedf3ef65aa068aa6ff239531a5ab04355782026fb3d43",
+      "uses": [
+        "bestiario"
+      ]
+    },
+    {
+      "id": "binoculars",
+      "path": "iconoteca/arte/binoculars.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7588,
+      "sha256": "a53ff712522bfef198b9b74b058cdd201f53647b6c0d837a5517dd596da2d593",
+      "uses": [
+        "obj-binoculars"
+      ]
+    },
+    {
+      "id": "biome-arrecife",
+      "path": "iconoteca/arte/biome-arrecife.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 10352,
+      "sha256": "9580a173b982aa5096a4317c451d9b2afae0ad907658ca0f33f81a3c61d875ab",
+      "uses": [
+        "biome-arrecife"
+      ]
+    },
+    {
+      "id": "biome-bosque",
+      "path": "iconoteca/arte/biome-bosque.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 9268,
+      "sha256": "575cd5525d056797469cf3a3f503bade704b9a391664aeea83d08a9bd9e39581",
+      "uses": [
+        "biome-bosque"
+      ]
+    },
+    {
+      "id": "biome-costa",
+      "path": "iconoteca/arte/biome-costa.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6928,
+      "sha256": "ebe420bd8a08e0c4b20e1eb437e81f7efb7659ce6ecc5514974178eebde3b947",
+      "uses": [
+        "biome-costa"
+      ]
+    },
+    {
+      "id": "biome-desierto",
+      "path": "iconoteca/arte/biome-desierto.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 4832,
+      "sha256": "9f269606abe1bc04d624d74290074aa7c6f343e6be3adcf003a139ae03aba464",
+      "uses": [
+        "biome-desierto"
+      ]
+    },
+    {
+      "id": "biome-estepa",
+      "path": "iconoteca/arte/biome-estepa.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 4698,
+      "sha256": "9c3c4129d8b15f60576cae60e0fa3f30e34f67527f33d0e268270a76594393e6",
+      "uses": [
+        "biome-estepa"
+      ]
+    },
+    {
+      "id": "biome-hadal",
+      "path": "iconoteca/arte/biome-hadal.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7698,
+      "sha256": "4d873effefe58ac8d5ef4bbf870e8c609d606303567cfa34430e845f81bdb952",
+      "uses": [
+        "biome-hadal"
+      ]
+    },
+    {
+      "id": "biome-humedal",
+      "path": "iconoteca/arte/biome-humedal.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 10762,
+      "sha256": "6e3466401d388d183c96afe91c85fe35c5234acd6d33bb3ec592642d1d34ef2a",
+      "uses": [
+        "biome-humedal"
+      ]
+    },
+    {
+      "id": "biome-mediterraneo",
+      "path": "iconoteca/arte/biome-mediterraneo.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 11348,
+      "sha256": "0f527ccb66bcf100f63c638a0c8432cbebbf98f4860f0867ab39f71f6bd9b4ad",
+      "uses": [
+        "biome-mediterraneo"
+      ]
+    },
+    {
+      "id": "biome-montana",
+      "path": "iconoteca/arte/biome-montana.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6598,
+      "sha256": "a57618a76aeb5845211564aff88fca78573398bfa178be0f4eb17ed88f62ff08",
+      "uses": [
+        "biome-montana"
+      ]
+    },
+    {
+      "id": "biome-oceano",
+      "path": "iconoteca/arte/biome-oceano.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6520,
+      "sha256": "191805b0fe343f544824e13731b4c93b70589f5c59f17a9b36f9fb2f157a9fb7",
+      "uses": [
+        "biome-oceano"
+      ]
+    },
+    {
+      "id": "biome-polar",
+      "path": "iconoteca/arte/biome-polar.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5952,
+      "sha256": "f5f1b99d6b9057308fefaede243045eac0c535614b2d18f18e73bf0654d4c356",
+      "uses": [
+        "biome-polar"
+      ]
+    },
+    {
+      "id": "biome-pradera",
+      "path": "iconoteca/arte/biome-pradera.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5078,
+      "sha256": "4c568c638c843d38510374dc363d560dfdea3507a82bd31f3b2bab9f52def175",
+      "uses": [
+        "biome-pradera"
+      ]
+    },
+    {
+      "id": "biome-profundo",
+      "path": "iconoteca/arte/biome-profundo.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6416,
+      "sha256": "0bb4372bc72b25f0dfad8738ca9860d9227a127a9550c624161fb8769de0dd48",
+      "uses": [
+        "biome-profundo"
+      ]
+    },
+    {
+      "id": "biome-rio",
+      "path": "iconoteca/arte/biome-rio.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 8092,
+      "sha256": "7f17d466bd13b2b778ccbfc824760dab0935851fa65d50283961da59718b53dd",
+      "uses": [
+        "biome-rio"
+      ]
+    },
+    {
+      "id": "biome-sabana",
+      "path": "iconoteca/arte/biome-sabana.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 8828,
+      "sha256": "4ede25101b3bc84589fa0767e7a1bfd1f6eea5d1ab510ae9e7f68b0e18eab8e0",
+      "uses": [
+        "biome-sabana"
+      ]
+    },
+    {
+      "id": "biome-selva",
+      "path": "iconoteca/arte/biome-selva.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 12458,
+      "sha256": "2be501c0018f9d989b0e589c6b758cfc456798926f25745da92868cbffcf4fc1",
+      "uses": [
+        "biome-selva"
+      ]
+    },
+    {
+      "id": "brujula",
+      "path": "iconoteca/arte/brujula.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 8906,
+      "sha256": "420ba2223adb4bb1f908887cd2f35daec84e668a4024255fb91e0e153a405c14",
+      "uses": [
+        "brujula"
+      ]
+    },
+    {
+      "id": "campamento",
+      "path": "iconoteca/arte/campamento.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7374,
+      "sha256": "a8fe5bae8cc22ef5b513c79499155404a400a47b1d1b5ff4ab7fdf7fd2a4d858",
+      "uses": [
+        "campamento"
+      ]
+    },
+    {
+      "id": "campo",
+      "path": "iconoteca/arte/campo.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 9898,
+      "sha256": "07432cb36160c410561cb05f471f4fbf603a17c55efca3814afa979c22dd9da8",
+      "uses": [
+        "campo"
+      ]
+    },
+    {
+      "id": "coleccionables",
+      "path": "iconoteca/arte/coleccionables.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 10292,
+      "sha256": "3ff879e32b8a1b11e45d3c2a9bde8477f13f450e38e49211dd84ceea2fcd4062",
+      "uses": [
+        "coleccionables"
+      ]
+    },
+    {
+      "id": "comercio",
+      "path": "iconoteca/arte/comercio.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 11130,
+      "sha256": "307f7a35a97d11f977ca386c9c46a85244167c579f5fb13340b55eca0ef0eb51",
+      "uses": [
+        "comercio"
+      ]
+    },
+    {
+      "id": "comparativo",
+      "path": "iconoteca/arte/comparativo.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7950,
+      "sha256": "a56536325a6d317e2ab91a033d28a3f9e838b1cc5bb09f98d15429ede5a6287b",
+      "uses": [
+        "comparativo"
+      ]
+    },
+    {
+      "id": "conocimiento",
+      "path": "iconoteca/arte/conocimiento.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 10336,
+      "sha256": "a809a32317a48586b23f95a3ab6f2d1673e4cb65d1038b79abe1a1153fcaef31",
+      "uses": [
+        "conocimiento"
+      ]
+    },
+    {
+      "id": "conservacion",
+      "path": "iconoteca/arte/conservacion.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6388,
+      "sha256": "648a395948d49c08bbbef1f1e9a5b14b3af4f72ae80cf43dbb4d788fd7c6c434",
+      "uses": [
+        "conservacion"
+      ]
+    },
+    {
+      "id": "corona",
+      "path": "iconoteca/arte/corona.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7146,
+      "sha256": "ee2293756a1bb7fa021ad52db7b4ce423aa77800ffbc7350a4773bb39eb4951a",
+      "uses": [
+        "corona"
+      ]
+    },
+    {
+      "id": "cuaderno",
+      "path": "iconoteca/arte/cuaderno.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 10656,
+      "sha256": "203027eb15afa180b40223728280fb8e96fccecd2aedd8d4693c7bda7f7f253d",
+      "uses": [
+        "cuaderno"
+      ]
+    },
+    {
+      "id": "encargos",
+      "path": "iconoteca/arte/encargos.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7356,
+      "sha256": "3b3ed8d8c23497e3dfcd318a0f01774c0e24c9448ecfca1a16c3f3a24f2f1d8d",
+      "uses": [
+        "encargos"
+      ]
+    },
+    {
+      "id": "excavacion",
+      "path": "iconoteca/arte/excavacion.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5878,
+      "sha256": "39752b45b4c50843d586907672b9b25432ee3c93a2131ee11e1d34a42f8a5991",
+      "uses": [
+        "excavacion"
+      ]
+    },
+    {
+      "id": "expediciones",
+      "path": "iconoteca/arte/expediciones.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 11228,
+      "sha256": "2a43ec39c13b224d92f1f21040dc325bdf0328d437987e351bde7b4944b7ffc2",
+      "uses": [
+        "expediciones"
+      ]
+    },
+    {
+      "id": "exploracion",
+      "path": "iconoteca/arte/exploracion.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5272,
+      "sha256": "d5c426dfbf44d75e6fcd62ec898af2de1936fabcfbaa5e437b5988a4674acb15",
+      "uses": [
+        "exploracion"
+      ]
+    },
+    {
+      "id": "exposiciones",
+      "path": "iconoteca/arte/exposiciones.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6698,
+      "sha256": "5c5bdad28256d1affd2baffe807e2049057d17a98e2e23ce6520e5ebe9c988d3",
+      "uses": [
+        "exposiciones"
+      ]
+    },
+    {
+      "id": "field_hat",
+      "path": "iconoteca/arte/field_hat.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 3784,
+      "sha256": "d1cefac375e23be3102002b39fd880422342db7b60872b3f03aa3f94895550d7",
+      "uses": [
+        "obj-field_hat"
+      ]
+    },
+    {
+      "id": "fosiles",
+      "path": "iconoteca/arte/fosiles.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7574,
+      "sha256": "d0fee006cf24753649d238b1347f78afba809d9a2b30537c474fe35015358599",
+      "uses": [
+        "fosiles"
+      ]
+    },
+    {
+      "id": "fossil_amber",
+      "path": "iconoteca/arte/fossil_amber.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6592,
+      "sha256": "5062246414ca6d00aabdeb0934a88e26afa7c8e54c40bad26c2ef3d6a9c6f8a3",
+      "uses": [
+        "obj-fossil_amber"
+      ]
+    },
+    {
+      "id": "fossil_fragment",
+      "path": "iconoteca/arte/fossil_fragment.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6462,
+      "sha256": "60d9cc9b6ef3f392f66b34d7013b29465dd6d8988658f6a6b0a1f7f769dcd119",
+      "uses": [
+        "obj-fossil_fragment"
+      ]
+    },
+    {
+      "id": "huellas",
+      "path": "iconoteca/arte/huellas.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7628,
+      "sha256": "c9798c12484be687aa719c8560c9a815fd7a9e18c52ea34e78cc02379fc52bda",
+      "uses": [
+        "huellas"
+      ]
+    },
+    {
+      "id": "indicios",
+      "path": "iconoteca/arte/indicios.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6934,
+      "sha256": "0c78cbb9067de27219e0d3ea7a2c3c054366b90084c3008ead45aff69c617bad",
+      "uses": [
+        "indicios"
+      ]
+    },
+    {
+      "id": "inventario",
+      "path": "iconoteca/arte/inventario.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 9708,
+      "sha256": "5a3237d62f30dd1c0f32ccfd1996ccefeb4c6b1e6cb2ec6164c758a6784a06db",
+      "uses": [
+        "inventario"
+      ]
+    },
+    {
+      "id": "investigacion",
+      "path": "iconoteca/arte/investigacion.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6686,
+      "sha256": "ec89524be721fa6066cbc44c477a8796856cddcd94cdd95be1287cb694cfc627",
+      "uses": [
+        "investigacion"
+      ]
+    },
+    {
+      "id": "libras",
+      "path": "iconoteca/arte/libras.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 11372,
+      "sha256": "d1d9c930321e909d067229f1c710359ebf94c1e8071b66ecaa7b24b3af41276e",
+      "uses": [
+        "libras"
+      ]
+    },
+    {
+      "id": "logros",
+      "path": "iconoteca/arte/logros.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5628,
+      "sha256": "c9245a99030a642dafa80a895ccc632db208210ae0f957e0d02a19172a2e17fb",
+      "uses": [
+        "logros"
+      ]
+    },
+    {
+      "id": "misiones",
+      "path": "iconoteca/arte/misiones.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7588,
+      "sha256": "bcfc14b0559ecde226281883e58dbbb754331dd478fd62f846ed85f5a3e1cd94",
+      "uses": [
+        "misiones"
+      ]
+    },
+    {
+      "id": "monografias",
+      "path": "iconoteca/arte/monografias.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6706,
+      "sha256": "33f35c1e02b63b69a6f5c770bd11c2b7811e759f45982fdd5b036ebed1aa3fbc",
+      "uses": [
+        "monografias"
+      ]
+    },
+    {
+      "id": "muestras",
+      "path": "iconoteca/arte/muestras.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6500,
+      "sha256": "04292b4aaf655aae8f3d339b8217b19f00f0726579c77feaf40f923fd8a73bc9",
+      "uses": [
+        "muestras"
+      ]
+    },
+    {
+      "id": "museo",
+      "path": "iconoteca/arte/museo.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 10370,
+      "sha256": "e476ed85381ea3781707de9526f03336ae4a71dbd88ab0098fdf8f7104d58b45",
+      "uses": [
+        "museo"
+      ]
+    },
+    {
+      "id": "naturalistas",
+      "path": "iconoteca/arte/naturalistas.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 8530,
+      "sha256": "74b820300a0986ec90d4cfb4328f0290050b654f200eda35a41ef60cbc3a854d",
+      "uses": [
+        "naturalistas"
+      ]
+    },
+    {
+      "id": "navegacion",
+      "path": "iconoteca/arte/navegacion.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7712,
+      "sha256": "54b200768423dfe247a8473b868a2bc85d2db6160bf4a1d88979aa7cf1705059",
+      "uses": [
+        "navegacion"
+      ]
+    },
+    {
+      "id": "oceanic_quadrant",
+      "path": "iconoteca/arte/oceanic_quadrant.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6544,
+      "sha256": "b7d2cdb9fea39a2ed0a7af145a8d5965483082d9f65a6b47ce04192396da575a",
+      "uses": [
+        "obj-oceanic_quadrant"
+      ]
+    },
+    {
+      "id": "polished_lens",
+      "path": "iconoteca/arte/polished_lens.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5500,
+      "sha256": "e18b8f3698216b7cfc9a68c0979cec5f8cc674607ba61efead2de5f43c015e0e",
+      "uses": [
+        "obj-polished_lens"
+      ]
+    },
+    {
+      "id": "pressed_flower",
+      "path": "iconoteca/arte/pressed_flower.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5920,
+      "sha256": "73b1a247141b616c70c13874a824136884fb0490ecff91bcdb983fdb1786f9f9",
+      "uses": [
+        "obj-pressed_flower"
+      ]
+    },
+    {
+      "id": "prestigio",
+      "path": "iconoteca/arte/prestigio.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 7938,
+      "sha256": "61e7d728d7b75c3409c9fb3257a03445e08174ac1a8c79d0c2bc621d093e0538",
+      "uses": [
+        "prestigio"
+      ]
+    },
+    {
+      "id": "registro-cientifico",
+      "path": "iconoteca/arte/registro-cientifico.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6890,
+      "sha256": "c88c512f75d4f1e15a9a053beb1340aa6f65b69184a1b83a03b7b75332f2f30a",
+      "uses": [
+        "registro-cientifico"
+      ]
+    },
+    {
+      "id": "relictos",
+      "path": "iconoteca/arte/relictos.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 6526,
+      "sha256": "4ba0262e775f2822c0c8f8ebb6294abdb3beb6870a89be2bead6409cf92f8051",
+      "uses": [
+        "relictos"
+      ]
+    },
+    {
+      "id": "river_pebble",
+      "path": "iconoteca/arte/river_pebble.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 5282,
+      "sha256": "dc234ba9b678671dc90940ee8aef69051d9bbd9570f9d8f4f53096d0a22d9df4",
+      "uses": [
+        "obj-river_pebble"
+      ]
+    },
+    {
+      "id": "sociedad",
+      "path": "iconoteca/arte/sociedad.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 9300,
+      "sha256": "5a94315d8efaefd843cff2643f2f4e4d9add5e504c8bbe5becf1dc64f5b7556d",
+      "uses": [
+        "sociedad"
+      ]
+    },
+    {
+      "id": "sounding_kit",
+      "path": "iconoteca/arte/sounding_kit.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 9502,
+      "sha256": "b8c3946fc279b623cd511b96c090067a8d58e0f13cc7842249ec280486569a13",
+      "uses": [
+        "obj-sounding_kit"
+      ]
+    },
+    {
+      "id": "taller",
+      "path": "iconoteca/arte/taller.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 8044,
+      "sha256": "85f62813dcf7219445be57293a3b9d53402f493d5fe556121a2687a779e2230a",
+      "uses": [
+        "taller"
+      ]
+    },
+    {
+      "id": "tomos",
+      "path": "iconoteca/arte/tomos.webp",
+      "format": "WebP con alfa",
+      "width": 128,
+      "height": 128,
+      "bytes": 8672,
+      "sha256": "5ad374ac5b56c95b9dd7912af836b48ce559c3e301316737822f6adec0d5e33d",
+      "uses": [
+        "tomos"
+      ]
+    }
+  ]
+}

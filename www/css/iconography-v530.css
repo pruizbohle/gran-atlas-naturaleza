@@ -1,0 +1,18 @@
+.atlas-icon { display: inline-block; width: 1.45em; height: 1.45em; object-fit: contain; vertical-align: -.37em; pointer-events: none; flex: none; }
+.atlas-icon-line { width: 1.2em; height: 1.2em; vertical-align: -.23em; }
+[data-atlas-icon] { display: inline-flex; vertical-align: middle; align-items: center; }
+.tabs .atlas-icon { width: 25px; height: 25px; }
+.stats-grid .atlas-icon { width: 20px; height: 20px; }
+.mobile-dock .atlas-icon { width: 24px; height: 24px; }
+.mobile-menu-item .atlas-icon { width: 36px; height: 36px; }
+#mobileViewTitle .atlas-icon { width: 24px; height: 24px; }
+.m27-institution > .atlas-icon, .er28-institution > .atlas-icon { width: 48px; height: 48px; }
+.er28-card-heading > .atlas-icon { width: 36px; height: 36px; }
+.cp3430-facility > .atlas-icon { width: min(75%, 76px); height: clamp(23px, 7vw, 62px); display: block; margin-inline: auto; }
+.inv340-detail .item-art-inline > img.atlas-item-naturalist, .item-art-inline > img.atlas-item-naturalist { width: 100%; max-width: 96px; height: auto; aspect-ratio: 1; object-fit: contain; vertical-align: middle; }
+@media (max-width: 360px) {
+  .mobile-dock .atlas-icon { width: 21px; height: 21px; }
+  .mobile-menu-item .atlas-icon { width: 28px; height: 28px; }
+}
+.stat-card [data-atlas-icon] { display: inline-flex; }
+.inv340-search .atlas-icon-line, .inv340-filters .atlas-icon-line { margin-right: .25em; }

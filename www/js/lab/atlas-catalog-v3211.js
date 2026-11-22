@@ -50,12 +50,12 @@ function continentStatus(continent){
  const missing=requirements.find(req=>!req.met&&!req.context);
  return {id:r.id,code:r.code,name:r.name,habitats:r.habitats,speciesCount:r.species.length,identified,progress:Math.round(100*identified/Math.max(1,r.species.length)),status:active?'actual':unlocked?'abierta':ready?'disponible':'bloqueada',requirements,summary:active?'Estás explorando esta región':unlocked?'Ruta habilitada':ready?'Requisitos reunidos':missing?.label||'Requisitos pendientes'};
 }
-function atlasViewModel(){
+function atlasViewModel(presentation=()=>({})){
  const selected=ATLAS_CONTINENTS.some(c=>c.id===state.atlasView)?state.atlasView:'Europa';
  const continent=ATLAS_CONTINENTS.find(c=>c.id===selected),source=REGIONS.filter(r=>r.continent===selected);
  const chosen=source.find(r=>r.id===state.atlasSelectedRegion)||source.find(r=>r.id===state.currentRegion)||source[0];
  const mesh=globalThis.AtlasGeography.layout(selected,source);
- const regions=source.map(r=>({...atlasRegionModel(r),...mesh.positions[r.id]}));
+ const regions=source.map(r=>({...atlasRegionModel(r),...mesh.positions[r.id],...presentation(r)}));
  for(const r of regions){const cell=mesh.cells.find(c=>c.cellId===r.cellId);if(cell.regionIds.length>1)r.group=cell.regionIds.map(id=>({id,name:regions.find(x=>x.id===id).name}));}
  const ids=[...new Set(source.flatMap(r=>r.species))];
  return {continent:{...continent,status:continentStatus(selected)},continents:ATLAS_CONTINENTS.map(c=>({...c,status:continentStatus(c.id)})),regions,cells:mesh.cells.map(c=>({...c,regions:c.regionIds.map(id=>regions.find(r=>r.id===id))})),selectedId:chosen?.id,currentId:state.currentRegion,readyCount:regions.filter(r=>r.status==='actual'||r.status==='abierta').length,identified:ids.filter(id=>stage(id)>=1).length,total:ids.length,board:mesh.board};

@@ -1,0 +1,897 @@
+{
+  "version": "5.3.0",
+  "command": "node --test --test-concurrency=4 tests/*.test.cjs",
+  "baseline": {
+    "commit": "5070f8a",
+    "counts": {
+      "tests": 883,
+      "pass": 664,
+      "fail": 219
+    }
+  },
+  "counts": {
+    "tests": 885,
+    "pass": 666,
+    "fail": 219
+  },
+  "historical": [
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "3.33 advanced save preserves all resources,old60s job and24h trade through export/import and72h return"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "475/485 thresholds,research6800/5800 after deep and same six nonconsumed crafts,old unlocks retained"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "945 unique identities,113 regions,1744 presences; all943 profiles and111 regions byte-equal"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "actual paid seeded operations attain all3 presences using each method,failures and valid evidence exist"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "all former1741 manual and automatic eligibility conditions exact,deep protocols and global rates unchanged"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "all three presences attainable with permitted method and turn filters, sondeo cannot bypass"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "changing to eastern trench selects compatible extraordinary method;insufficient resources never negative"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "commercial routes,recipes,items,old research,old continent requirements and scientific voyages exactly unchanged"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "direct/manual and guaranteed flag blocked; meaningful extraordinary300s,cost60/10,one shared queue"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "naturalist automatic encounters attain all3 assignments while respecting selected stratum and hourly cap"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "normalization retains valid300s work and rejects wrongduration/unknown habitat/duplicate receipts"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "old pending60s scientific operation occupies same queue in a trench,then completes correctly"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "quota failures roll back entire start/resolution,deterministic retry and receipt preserve stratum on reload"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "real one-second ticker settles extraordinary work once; naturalists use same production ticker"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "restart resolves same seed/context,away completion preserves region and previous Field output"
+    },
+    {
+      "file": "tests/abyssal-v3340.test.cjs",
+      "case": "three conservative depth windows and localities; no tripod in hadal nor snailfish in wrong trench"
+    },
+    {
+      "file": "tests/ach3360-ui.test.cjs",
+      "case": "ACH03 Sociedad ofrece cuatro accesos y renderizar no concede ni reclama logros"
+    },
+    {
+      "file": "tests/ach3360-ui.test.cjs",
+      "case": "ACH03 tarjetas secretas ocultan nombre, requisitos, progreso y título hasta obtenerse"
+    },
+    {
+      "file": "tests/and3420-release.test.cjs",
+      "case": "AND08 coherencia de versión, PWA, diez módulos y actualizador con respaldo"
+    },
+    {
+      "file": "tests/and3420-release.test.cjs",
+      "case": "AND08 el motor, catálogos, geometría y algoritmos temporales permanecen intactos"
+    },
+    {
+      "file": "tests/and3420-release.test.cjs",
+      "case": "AND08 no se modifica ninguna prueba histórica de 3.41 ni anteriores"
+    },
+    {
+      "file": "tests/atlas-v314.test.cjs",
+      "case": "Fauna de África: ninguna especie regional queda sin bioma ni horario posible"
+    },
+    {
+      "file": "tests/atlas-v314.test.cjs",
+      "case": "Investigaciones encadenadas requieren artefacto y mapa, sin consumirlos"
+    },
+    {
+      "file": "tests/atlas-v314.test.cjs",
+      "case": "Las investigaciones nuevas no modifican los códigos de África"
+    },
+    {
+      "file": "tests/atlas-v314.test.cjs",
+      "case": "Norteamérica tiene exactamente dos regiones iniciales con fauna del Excel y biomas"
+    },
+    {
+      "file": "tests/atlas-v314.test.cjs",
+      "case": "Probabilidad: categorías ordenadas de común a muy rara"
+    },
+    {
+      "file": "tests/atlas-v3211.test.cjs",
+      "case": "Asia, Africa and North America retain their exact independent cartographic gates"
+    },
+    {
+      "file": "tests/atlas-v3211.test.cjs",
+      "case": "Atlas keeps all continent, requirement, unlock and travel implementations from 3.21.0"
+    },
+    {
+      "file": "tests/atlas-v3211.test.cjs",
+      "case": "Atlas projection preserves region metadata and game-state bytes while cartography supplies visual positions"
+    },
+    {
+      "file": "tests/atlas-v3211.test.cjs",
+      "case": "Europe uses prestige without spending it; unlock and travel retain progress and open Field"
+    },
+    {
+      "file": "tests/atlas-v3211.test.cjs",
+      "case": "Field rendering and artwork modules remain untouched by the Atlas update"
+    },
+    {
+      "file": "tests/atlas-v3211.test.cjs",
+      "case": "future continents stay empty and locked with no invented playable regions"
+    },
+    {
+      "file": "tests/atlas-v3211.test.cjs",
+      "case": "selection changes only existing Atlas UI state and never travels or unlocks"
+    },
+    {
+      "file": "tests/atlas-v3211.test.cjs",
+      "case": "shared UI exposes named keyboard targets, independent state symbols and safe lightweight art"
+    },
+    {
+      "file": "tests/aud06-startup.test.cjs",
+      "case": "AUD-06 El índice de especímenes conserva precedencia, alias taxonómicos y variantes en las 1000 fichas"
+    },
+    {
+      "file": "tests/bestiary-v3240.test.cjs",
+      "case": "Bestiary opens 32 of 807 cards, preserves global counters and only generates visible SVGs"
+    },
+    {
+      "file": "tests/bestiary-v3240.test.cjs",
+      "case": "all six existing sort orders and the monograph filter exactly match the 3.23.1 full renderer across every page"
+    },
+    {
+      "file": "tests/bestiary-v3240.test.cjs",
+      "case": "invalid navigation is ignored; filters clamp the page and all-hidden catalog stays usable"
+    },
+    {
+      "file": "tests/bestiary-v3240.test.cjs",
+      "case": "specimen collections remain empty until requested; repeated full navigation reuses a bounded cache"
+    },
+    {
+      "file": "tests/bestiary-v3260.test.cjs",
+      "case": "3.26 adds presentation only; every original 3.25 gameplay, journal, art and catalog byte remains exact"
+    },
+    {
+      "file": "tests/bestiary-v3260.test.cjs",
+      "case": "all 807 entries remain reachable through 26 pages; only 32 visible cards request SVGs and filters clamp an invalid page"
+    },
+    {
+      "file": "tests/bestiary-v3260.test.cjs",
+      "case": "discovery, incomplete study, 5/5 and publication are separate progress conditions"
+    },
+    {
+      "file": "tests/bestiary-v3260.test.cjs",
+      "case": "release precaches the production Bestiary and an isolated twelve-state comparison using the actual 3.25 engine"
+    },
+    {
+      "file": "tests/bestiary-v3260.test.cjs",
+      "case": "search, group, subgroup, sightings, progress and monograph hiding combine, including an empty result and clearing"
+    },
+    {
+      "file": "tests/bestiary-v3260.test.cjs",
+      "case": "sighting orders and every threshold use the real complete catalog before pagination"
+    },
+    {
+      "file": "tests/birds-v3193.test.cjs",
+      "case": "entrypoint loads the art module first and every offline asset exists"
+    },
+    {
+      "file": "tests/commerce-v3300.test.cjs",
+      "case": "actual 3.29.0 saves retain every old field and all unlocked regions on migration"
+    },
+    {
+      "file": "tests/commerce-v3300.test.cjs",
+      "case": "continental formula follows historical threshold order and prestige is never spent"
+    },
+    {
+      "file": "tests/commerce-v3300.test.cjs",
+      "case": "full world remains 807 species,87 regions,1460 presences"
+    },
+    {
+      "file": "tests/commerce-v3300.test.cjs",
+      "case": "new game gates require four different crafted objects cumulatively; Asia remains exempt"
+    },
+    {
+      "file": "tests/cp3430-release.test.cjs",
+      "case": "CP release: Pages valida la candidata actual antes de desplegar"
+    },
+    {
+      "file": "tests/cp3430-release.test.cjs",
+      "case": "CP release: diez módulos y alias histórico; actualizador compatible con la versión nueva"
+    },
+    {
+      "file": "tests/cp3430-release.test.cjs",
+      "case": "CP release: firma, publicación Android y SAF conservan sus guardas originales"
+    },
+    {
+      "file": "tests/cp3430-release.test.cjs",
+      "case": "CP release: versión coherente, respaldo formato 1 y aprobación final"
+    },
+    {
+      "file": "tests/cp3430-ui.test.cjs",
+      "case": "CP el motor previo queda intacto fuera de los adaptadores CP, GM06 y arte M01 opcionales"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "20 new species complete five notebook stages, publish once and enter Museum; Cephalopoda under Peces"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "3.32 advanced save, native export/import, pending24h commerce and new operation survive72h once"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "943 identities /111 regions /1741 presences, original923 profiles and106 regions exact"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "actual one-second ticker resolves operations and naturalists, no duplicate on next tick"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "actual timed seeded samples discover every assigned presence; failed attempts exist at unchanged rates"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "all prior trade routes, recipes, items, investigations, voyages and global rates exact"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "every44 presence attainable through actual method/habitat filters; bottom only muestreo"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "manual direct observation and guaranteed flag cannot discover deep species"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "naturalists discover all44 assignments using original auto encounter probability and cap"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "one scientific job, exact costs/durations, early/future/NaN settlement rejected, exactly once receipt"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "research costs6000/5200, surface prerequisite, six permanent crafts and429..465 progression"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "sanitization discards malformed/duplicate/already resolved work, imported valid job preserved"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "saved job same seed/context resolves identically after reload, away-region completion preserves Field"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "sondeo incompatible with bottom habitat; muestreo180s permitted, insufficient money/knowledge rejects"
+    },
+    {
+      "file": "tests/deep-v3330.test.cjs",
+      "case": "start and resolution quota failures roll back ALL state; retry same seed gives no duplicate"
+    },
+    {
+      "file": "tests/dimorphism-v3195.test.cjs",
+      "case": "32 valid distinct IDs preserve all 24 originals and every gameplay catalog field"
+    },
+    {
+      "file": "tests/dimorphism-v3195.test.cjs",
+      "case": "laboratory is reproducible and cannot bootstrap game/save side effects"
+    },
+    {
+      "file": "tests/enc3370-baseline.test.cjs",
+      "case": "ENC01 conserva literalmente las 13 definiciones y el premio original, y los 80 criterios"
+    },
+    {
+      "file": "tests/enc3370-playability.test.cjs",
+      "case": "ENC05 presupuesto finito y conservación de probabilidades, rutas, recetas y costes de3.36"
+    },
+    {
+      "file": "tests/expeditions-research-v3280.test.cjs",
+      "case": "3.28 changes only delimited presentation, observational receipts and explicitly authorized validation blocks; all previous 3.27 bytes remain exact"
+    },
+    {
+      "file": "tests/expeditions-research-v3280.test.cjs",
+      "case": "807 species,79 regions,eight unchanged voyages and five research branches remain present"
+    },
+    {
+      "file": "tests/expeditions-research-v3280.test.cjs",
+      "case": "release precaches both actual renderers and an opaque memory-only sixteen-state comparison laboratory"
+    },
+    {
+      "file": "tests/field-v3210.test.cjs",
+      "case": "production field projection is read-only and preserves hidden names for unidentified specimens"
+    },
+    {
+      "file": "tests/global-v3240.test.cjs",
+      "case": "AM-06 changes only the additive Bestiary presentation; approved art, catalog, geography, CSS and all gameplay bytes remain intact"
+    },
+    {
+      "file": "tests/global-v3240.test.cjs",
+      "case": "all 807 species complete five knowledge stages and publish one monograph, with original costs and rewards"
+    },
+    {
+      "file": "tests/global-v3240.test.cjs",
+      "case": "all research prerequisites are acyclic and every continent can be unlocked and travelled without spending prestige"
+    },
+    {
+      "file": "tests/global-v3240.test.cjs",
+      "case": "every one of the 1460 regional presences supports manual and automatic encounters with original rewards"
+    },
+    {
+      "file": "tests/global-v3240.test.cjs",
+      "case": "groups, census multipliers, hourly caps and equipment/research bonuses function in all 79 regions"
+    },
+    {
+      "file": "tests/global-v3240.test.cjs",
+      "case": "the global catalog has 807 scientific identities, 79 regions and 1460 valid, reachable presences"
+    },
+    {
+      "file": "tests/gm05-art.test.cjs",
+      "case": "all2605 configured routes retained; only four explicitly reviewed sharks change drawings"
+    },
+    {
+      "file": "tests/gm05-economy.test.cjs",
+      "case": "GM05 preserves all economic definitions, rates, five stage costs and research prices from9da9808"
+    },
+    {
+      "file": "tests/gm05-integrity.test.cjs",
+      "case": "all1744 source/runtime witnesses remain reachable by actual current manual and automatic filters"
+    },
+    {
+      "file": "tests/gm06-release.test.cjs",
+      "case": "GM06 offline manifest verifies every resource hash and the safe updater"
+    },
+    {
+      "file": "tests/gm06-release.test.cjs",
+      "case": "GM06 preserves Android signing, workflows, Capacitor configuration and native save code"
+    },
+    {
+      "file": "tests/gm06-release.test.cjs",
+      "case": "GM06 public entry loads the three modules once, after base geography and before the game"
+    },
+    {
+      "file": "tests/gm06.test.cjs",
+      "case": "GM06 preserves 945 full records, 113 stable IDs and every historical access threshold"
+    },
+    {
+      "file": "tests/gm07-m01-release.test.cjs",
+      "case": "M01 preserves Android identity,signing,workflows and all historical offline entries; new hashes verify"
+    },
+    {
+      "file": "tests/gm07-m01-release.test.cjs",
+      "case": "M01 public entry loads the scoped module once afterGM06 and beforethegame; version metadata agrees"
+    },
+    {
+      "file": "tests/gm07-m01.test.cjs",
+      "case": "M01 changes only the opt-in scoped art hook; catalog,geography,economy,save/native logic stay exact"
+    },
+    {
+      "file": "tests/gm07-m01.test.cjs",
+      "case": "M01 comparison provenance retains the previous worldwide candidate and exact art revision"
+    },
+    {
+      "file": "tests/herp-v3192b.test.cjs",
+      "case": "standalone laboratory catalog is reproducible and offline assets exist"
+    },
+    {
+      "file": "tests/inv3400-integration.test.cjs",
+      "case": "INV07 catálogos científicos, contratos, conversiones y economía anterior no cambian"
+    },
+    {
+      "file": "tests/inv3400-release.test.cjs",
+      "case": "INV08 PWA coherente, actualizador autorizado y laboratorio precargado aislado"
+    },
+    {
+      "file": "tests/items-v3198.test.cjs",
+      "case": "60 original deterministic SVGs work in Node without window or external resources"
+    },
+    {
+      "file": "tests/items-v3198.test.cjs",
+      "case": "inventory views use plates and preserve equip, upgrade, consumption and study actions"
+    },
+    {
+      "file": "tests/items-v3198.test.cjs",
+      "case": "laboratory metadata matches the production catalog exactly"
+    },
+    {
+      "file": "tests/items-v3198.test.cjs",
+      "case": "v3.19.8 preserves all 52 item definitions, recipes, eight studies and museum data"
+    },
+    {
+      "file": "tests/journal-v3250.test.cjs",
+      "case": "3.25 only adds journal presentation: all original game source, including the five-stage engine, remains exact"
+    },
+    {
+      "file": "tests/journal-v3250.test.cjs",
+      "case": "all 807 stage-zero illustrations omit technical identity metadata without changing a single SVG drawing"
+    },
+    {
+      "file": "tests/journal-v3250.test.cjs",
+      "case": "release and offline cache include the same production journal, isolated comparison and safe update entry"
+    },
+    {
+      "file": "tests/log3390-contracts.test.cjs",
+      "case": "LOG01 catálogo verificable: diez contratos, cuatro grupos, ocho únicos, dos repetibles y materiales obtenibles"
+    },
+    {
+      "file": "tests/log3390-contracts.test.cjs",
+      "case": "LOG01 reserva recursiva protege las seis preparaciones y descuenta piezas intermedias existentes"
+    },
+    {
+      "file": "tests/log3390-integrity.test.cjs",
+      "case": "LOG06 catálogo, recetas, rutas, costos y premios anteriores idénticos a3.38"
+    },
+    {
+      "file": "tests/log3390-integrity.test.cjs",
+      "case": "LOG06 conserva byte a byte80 logros,37 misiones,12 exposiciones y los cinco renderizadores de Museo"
+    },
+    {
+      "file": "tests/log3390-integrity.test.cjs",
+      "case": "LOG06 versión PWA, actualizador con copia exacta y laboratorio con aislamiento de almacenamiento"
+    },
+    {
+      "file": "tests/mammals-v3194.test.cjs",
+      "case": "3.19.4 inventories all 269 mammals in the effective 487-species catalog"
+    },
+    {
+      "file": "tests/mammals-v3194.test.cjs",
+      "case": "all 218 non-mammals retain exactly their previous sprites, skins and configured sexes"
+    },
+    {
+      "file": "tests/mammals-v3194.test.cjs",
+      "case": "gameplay catalog fields and original 24 IDs survive the dimorphism update"
+    },
+    {
+      "file": "tests/mammals-v3194.test.cjs",
+      "case": "the game, current labs and offline cache include the new art in the existing architecture"
+    },
+    {
+      "file": "tests/marine-v3320.test.cjs",
+      "case": "332..420 thresholds, five permanent crafts, research after Polos, prestige never spent or access revoked"
+    },
+    {
+      "file": "tests/marine-v3320.test.cjs",
+      "case": "923 unique identities,106 regions,1697 presences; all828 previous identities and94 regions byte-for-byte equal"
+    },
+    {
+      "file": "tests/marine-v3320.test.cjs",
+      "case": "actual seeded encounters discover every assigned animal manually and automatically without changing global rates"
+    },
+    {
+      "file": "tests/marine-v3320.test.cjs",
+      "case": "exact192 GM01 source records traced, only12 source Mar sectors, all three HX collisions remain intact"
+    },
+    {
+      "file": "tests/marine-v3320.test.cjs",
+      "case": "four commercial routes and all old recipes,items,research,scientific voyages,rates,intervals stay equal"
+    },
+    {
+      "file": "tests/marine-v3320.test.cjs",
+      "case": "new animals integrate with Museum, notebook and paginated Bestiary; cached graphics are deterministic"
+    },
+    {
+      "file": "tests/mus3380-baseline.test.cjs",
+      "case": "MUS01 conserva catálogos de80 logros/37 misiones y renderer base de cinco salas"
+    },
+    {
+      "file": "tests/museum-v3270.test.cjs",
+      "case": "Museum presentation preserves historical 3.19.9 europe through all rooms, native import/export and restoration"
+    },
+    {
+      "file": "tests/museum-v3270.test.cjs",
+      "case": "Museum presentation preserves historical 3.21.2 africa through all rooms, native import/export and restoration"
+    },
+    {
+      "file": "tests/museum-v3270.test.cjs",
+      "case": "Museum presentation preserves historical 3.22.1 northamerica through all rooms, native import/export and restoration"
+    },
+    {
+      "file": "tests/museum-v3270.test.cjs",
+      "case": "Museum presentation preserves historical 3.22.1 variants-monographs through all rooms, native import/export and restoration"
+    },
+    {
+      "file": "tests/museum-v3270.test.cjs",
+      "case": "Museum presentation preserves historical 3.23.0 museum through all rooms, native import/export and restoration"
+    },
+    {
+      "file": "tests/museum-v3270.test.cjs",
+      "case": "Museum presentation preserves historical 3.23.1 southamerica through all rooms, native import/export and restoration"
+    },
+    {
+      "file": "tests/museum-v3270.test.cjs",
+      "case": "all 807 eligible samples are reachable on 26 pages; at most 32 visible sprites and no permanent UI fields"
+    },
+    {
+      "file": "tests/museum-v3270.test.cjs",
+      "case": "catalog remains 807 species / 79 regions and exactly five Museum rooms"
+    },
+    {
+      "file": "tests/museum-v3270.test.cjs",
+      "case": "presentation is additive: original 3.26 app and every game rule remain byte-for-byte exact"
+    },
+    {
+      "file": "tests/museum-v3270.test.cjs",
+      "case": "release precaches all Museum resources and actual isolated before/after lab with twelve states and no storage access"
+    },
+    {
+      "file": "tests/northamerica-v3220.test.cjs",
+      "case": "tests/northamerica-v3220.test.cjs"
+    },
+    {
+      "file": "tests/northamerica-v3221.test.cjs",
+      "case": "AM-03 preserves the complete production gameplay, global art engines, data, geography and updater byte for byte"
+    },
+    {
+      "file": "tests/northamerica-v3221.test.cjs",
+      "case": "the compact audit laboratory, frozen comparison engines and new art are available offline without touching saves"
+    },
+    {
+      "file": "tests/oceania-gm02a.test.cjs",
+      "case": "production 3.30.0 installs 807 identities, 87 regions, 1460 pairs and the original save key"
+    },
+    {
+      "file": "tests/oceania-production-v3290.test.cjs",
+      "case": "a real 3.28 export envelope restores all progress through the 3.29 native import bridge and exports again"
+    },
+    {
+      "file": "tests/oceania-production-v3290.test.cjs",
+      "case": "historical 3.29 release exactly matches the final reproducible split-module package"
+    },
+    {
+      "file": "tests/oceania-release-v3290.test.cjs",
+      "case": "staging preserves native import/export installers and configures Android version 32900 without changing app ID"
+    },
+    {
+      "file": "tests/oceania-release-v3290.test.cjs",
+      "case": "staging refuses output inside the repository and never changes the public version"
+    },
+    {
+      "file": "tests/oceania-runtime-v3290.test.cjs",
+      "case": "runtime generation is deterministic, scientifically approved and loaded by public entry/cache"
+    },
+    {
+      "file": "tests/patch-v3153.test.cjs",
+      "case": "Campo representa 1, 2 y 3 especies con imágenes y censos ×2/×3 evidentes"
+    },
+    {
+      "file": "tests/patch-v3153.test.cjs",
+      "case": "Migración de partidas fusiona avances históricos sin repetir al volver a cargar"
+    },
+    {
+      "file": "tests/patch-v3153.test.cjs",
+      "case": "Mustélidos, nutrias y pangolines comparten estilo familiar con variaciones propias"
+    },
+    {
+      "file": "tests/patch-v3153.test.cjs",
+      "case": "Nutria europea: variantes configuradas, con sprites distintos y SVG válido"
+    },
+    {
+      "file": "tests/patch-v3153.test.cjs",
+      "case": "Quebrantahuesos es un solo taxón, presente en Europa, Asia y África"
+    },
+    {
+      "file": "tests/patch-v3154.test.cjs",
+      "case": "Bestiario permite invertir un mismo criterio y conserva selección"
+    },
+    {
+      "file": "tests/patch-v3154.test.cjs",
+      "case": "Catálogo sin animales huérfanos, referencias rotas ni taxones binomiales duplicados"
+    },
+    {
+      "file": "tests/patch-v3154.test.cjs",
+      "case": "Clases uniformes en todas las especies; anfibios, peces y cálao correctos"
+    },
+    {
+      "file": "tests/patch-v3154.test.cjs",
+      "case": "Cálao ave, desmán sin caparazón, cobras con capucha y liebres homologadas"
+    },
+    {
+      "file": "tests/patch-v3154.test.cjs",
+      "case": "Dos lagópodos se mantienen con sus IDs, rareza y nombres científicos"
+    },
+    {
+      "file": "tests/patch-v3154.test.cjs",
+      "case": "Migración de alias conserva avances y no suma dos veces"
+    },
+    {
+      "file": "tests/patch-v316.test.cjs",
+      "case": "Beta 3.16 mantiene catálogo, mapa y materiales de recetas coherentes"
+    },
+    {
+      "file": "tests/patch-v316.test.cjs",
+      "case": "Botín de viajes contiene materiales, no equipamiento terminados, y fragmentos geográficos"
+    },
+    {
+      "file": "tests/patch-v316.test.cjs",
+      "case": "Catalejo fabricado consume prismáticos y desactiva la herramienta anterior"
+    },
+    {
+      "file": "tests/patch-v316.test.cjs",
+      "case": "Inventario móvil ofrece cinco pestañas, origen, usos y estudio ×1/×5"
+    },
+    {
+      "file": "tests/patch-v316.test.cjs",
+      "case": "Las nuevas materias primas aparecen en recetas, y el museo conserva las anteriores"
+    },
+    {
+      "file": "tests/patch-v316.test.cjs",
+      "case": "Los materiales repetidos dan resultados reales y nunca dejan saldos negativos"
+    },
+    {
+      "file": "tests/patch-v316.test.cjs",
+      "case": "Sombrero y medallón producen bonificaciones cuantificables"
+    },
+    {
+      "file": "tests/patch-v317.test.cjs",
+      "case": "Bestiario oculta solo monografías, no especies 5/5 sin publicación"
+    },
+    {
+      "file": "tests/patch-v317.test.cjs",
+      "case": "El Atlas mantiene las 487 especies y 57 zonas; nuevas recetas y colecciones válidas"
+    },
+    {
+      "file": "tests/patch-v317.test.cjs",
+      "case": "Excavaciones requieren fondos, región, y solo ocupan una ranura inicialmente"
+    },
+    {
+      "file": "tests/patch-v317.test.cjs",
+      "case": "Galerías paleontológicas bonifican solo con colecciones completas"
+    },
+    {
+      "file": "tests/patch-v317.test.cjs",
+      "case": "Paleontología avanzada habilita dos campañas y mejora recompensas"
+    },
+    {
+      "file": "tests/patch-v317.test.cjs",
+      "case": "Partida antigua sin campos nuevos se recupera y mantiene sus colecciones"
+    },
+    {
+      "file": "tests/patch-v317.test.cjs",
+      "case": "Recetas de anquilosaurio e iguanodonte se ensamblan una sola vez"
+    },
+    {
+      "file": "tests/patch-v317.test.cjs",
+      "case": "Restauración usa materiales, exige esqueleto y puede continuar después del montaje"
+    },
+    {
+      "file": "tests/patch-v318.test.cjs",
+      "case": "Colecciones de relictos dan bonificación a vitrinas, no al Atlas ni a cada relicto"
+    },
+    {
+      "file": "tests/patch-v318.test.cjs",
+      "case": "El tiempo pendiente de excavación es HH:MM:SS y se refresca en Museo"
+    },
+    {
+      "file": "tests/patch-v318.test.cjs",
+      "case": "Excavación entrega recompensas exactas y guarda el historial una sola vez"
+    },
+    {
+      "file": "tests/patch-v318.test.cjs",
+      "case": "Guardados anteriores se migran sin perder muestras ni monografías"
+    },
+    {
+      "file": "tests/patch-v318.test.cjs",
+      "case": "Las pistas de Campo y expedientes permiten registrar relictos sin inventario negativo"
+    },
+    {
+      "file": "tests/patch-v318.test.cjs",
+      "case": "Logros y análisis comparativo generan bonificaciones reales, no repetibles sin costo"
+    },
+    {
+      "file": "tests/patch-v318.test.cjs",
+      "case": "Misiones de relictos tienen cupo, territorio y tiempo real, sin recompensa doble"
+    },
+    {
+      "file": "tests/patch-v318.test.cjs",
+      "case": "Museo móvil muestra expedientes, misiones, logros e historial"
+    },
+    {
+      "file": "tests/patch-v318.test.cjs",
+      "case": "Nueve relictos con zonas existentes y colecciones biogeográficas propias"
+    },
+    {
+      "file": "tests/patch-v318.test.cjs",
+      "case": "Ocho reconstrucciones, cuerno fósil y hueso duro: materiales válidos y sin taxones nuevos"
+    },
+    {
+      "file": "tests/persistence-v3240.test.cjs",
+      "case": "eight-hour offline progress with the full 710-species catalog matches 3.23.1 state and every RNG call"
+    },
+    {
+      "file": "tests/persistence-v3240.test.cjs",
+      "case": "historical 3.19.9 europe survives startup, native import and exported restoration"
+    },
+    {
+      "file": "tests/persistence-v3240.test.cjs",
+      "case": "historical 3.21.2 africa survives startup, native import and exported restoration"
+    },
+    {
+      "file": "tests/persistence-v3240.test.cjs",
+      "case": "historical 3.22.1 northamerica survives startup, native import and exported restoration"
+    },
+    {
+      "file": "tests/persistence-v3240.test.cjs",
+      "case": "historical 3.22.1 variants-monographs survives startup, native import and exported restoration"
+    },
+    {
+      "file": "tests/persistence-v3240.test.cjs",
+      "case": "historical 3.23.0 museum survives startup, native import and exported restoration"
+    },
+    {
+      "file": "tests/persistence-v3240.test.cjs",
+      "case": "historical 3.23.1 southamerica survives startup, native import and exported restoration"
+    },
+    {
+      "file": "tests/pigmentation-v3196.test.cjs",
+      "case": "canonical labels, catalog inventory and duplicate-free options preserve configured availability"
+    },
+    {
+      "file": "tests/pigmentation-v3196.test.cjs",
+      "case": "cards collapse historical aliases and display one discovered Albino"
+    },
+    {
+      "file": "tests/pigmentation-v3196.test.cjs",
+      "case": "lab bundle is reproducible and isolated from game progress; offline resources are complete"
+    },
+    {
+      "file": "tests/polar-v3310.test.cjs",
+      "case": "current runtime retains old research, recipes, items, probabilities and naturalist intervals"
+    },
+    {
+      "file": "tests/polar-v3310.test.cjs",
+      "case": "polar thresholds continue 275 at 282..324, access requires research and all five permanent crafts"
+    },
+    {
+      "file": "tests/polar-v3310.test.cjs",
+      "case": "real seeded manual and automatic encounters discover every regional presence without changing probabilities"
+    },
+    {
+      "file": "tests/polar-v3310.test.cjs",
+      "case": "seven semantic IDs retain source collisions, preserve Cape coast and create no reserved cells"
+    },
+    {
+      "file": "tests/polar-v3310.test.cjs",
+      "case": "unchanged 807 identities and 87 regions, exact 828/94/1505 totals and 45 traced source rows"
+    },
+    {
+      "file": "tests/polish-v3199.test.cjs",
+      "case": "birds, herpetofauna and the inventory art remain byte-for-byte protected"
+    },
+    {
+      "file": "tests/polish-v3199.test.cjs",
+      "case": "historical gameplay function bodies remain exact outside the explicitly tested 3.28 validation/receipt additions"
+    },
+    {
+      "file": "tests/polish-v3199.test.cjs",
+      "case": "production/laboratory bundles reproduce exactly and all offline files exist"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "Amuleto de ámbar aplica +5 % al monto base de subvenciones"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "Collar de conchas +5 % libras al regreso; brújula +4 % conocimiento"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "Diario: registra claramente la pausa automática sin alterar los avistamientos manuales"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "El avance se adquiere por niveles y las mejoras automáticas no quedan disponibles al inicio"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "El panel muestra el ratio actual de búsqueda y diferencia manual y automático"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "Encuentro grupal manual: 3 especies distintas ×3 registros, con un botín por búsqueda"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "Equipo activo: probabilidades reales y ranuras, sin bonificaciones de objetos no equipados"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "Especialidades: mamíferos, aves, reptiles y peces no se pierden por taxonomía incompleta"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "Gorro +6 puntos o morral +3 puntos en el botín, solamente al equiparse"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "Las cinco ramas cubren todas las investigaciones sin perder las existentes"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "Los censos automáticos no superan el límite de 100 registros por especie y hora"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "Paleontología avanza gradualmente y añade hallazgos sin modificar botín anterior"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "Sáhara: el equipo busca por toda la región aunque el filtro manual sea desierto/día"
+    },
+    {
+      "file": "tests/research-v315.test.cjs",
+      "case": "Una disciplina mejora ponderación de raros sin borrar la posibilidad de observar otras especies"
+    },
+    {
+      "file": "tests/southamerica-v3230.test.cjs",
+      "case": "tests/southamerica-v3230.test.cjs"
+    },
+    {
+      "file": "tests/southamerica-v3231.test.cjs",
+      "case": "3.23.0 South American progress, old regions, inventory, museum, variants and expeditions survive save reload and Android export/import"
+    },
+    {
+      "file": "tests/southamerica-v3231.test.cjs",
+      "case": "AM-05 preserves the complete gameplay source, 710 identities, 79 regions, ten South American regions and all 192 source records"
+    },
+    {
+      "file": "tests/southamerica-v3231.test.cjs",
+      "case": "the new release precaches production polish, exact comparisons, visual ledger and an independent safe updater"
+    },
+    {
+      "file": "tests/stability-v3200.test.cjs",
+      "case": "entire catalog, 3473 sprite combinations and seven art modules remain exactly unchanged"
+    },
+    {
+      "file": "tests/stability-v3200.test.cjs",
+      "case": "offline worker serves its immutable revision first and never turns missing scripts into HTML"
+    },
+    {
+      "file": "tests/stability-v3200.test.cjs",
+      "case": "seeded automatic stress at 1s, 1h and 8h matches historical gameplay bytes and RNG calls of v3.19.9, excluding the additive 3.28 voyage receipts"
+    },
+    {
+      "file": "tests/stability-v3200.test.cjs",
+      "case": "storage failure keeps the live session exportable and failed imports roll back in memory"
+    },
+    {
+      "file": "tests/ux3410-integrity.test.cjs",
+      "case": "UX05 catálogos, recetas, costes, requisitos y rutas coinciden con 3.40"
+    },
+    {
+      "file": "tests/ux3410-release.test.cjs",
+      "case": "UX07 identidad, PWA y laboratorio aislado coherentes"
+    },
+    {
+      "file": "tests/ux3410-release.test.cjs",
+      "case": "UX07 ningún intervalo nuevo ni alteración de las suites históricas"
+    }
+  ],
+  "new": [],
+  "resolved": []
+}

@@ -1,6 +1,7 @@
 {
-  "version": "5.2.0",
+  "version": "5.3.0",
   "atlas": "simple",
+  "v530": {"iconography": true, "relictCases": 20, "illustratedBiomes": 16},
   "v520": {
     "activeTaxa": 1000,
     "regions": 125,
