@@ -19,7 +19,7 @@ const key = row => row.id + '/' + row.variant;
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 
 test('ART-02 preserves stable artwork routes, alpha and the exact historical WebPs', () => {
-  assert.equal(assets.files.filter(file => file.startsWith('naturalist-art/plates/')).length, 1672 * sizes.length);
+  assert.equal(assets.files.filter(file => file.startsWith('naturalist-art/plates/')).length, 1680 * sizes.length);
   assert.equal(integrity.assets.length, 6);
   const paths = new Set();
   for (const item of integrity.assets) {

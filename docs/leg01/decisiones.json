@@ -1,0 +1,534 @@
+[
+  {
+    "id": "silverback",
+    "speciesId": "af_gorila_montana",
+    "name": "Silverback",
+    "status": "revisado",
+    "assessment": "La silueta erguida y el parche plateado de la versión anterior quedaban cerca de la normal.",
+    "trait": "La pose de reposo presenta la cresta, los nudillos y la silla plateada del lomo.",
+    "discarded": [
+      "Primera propuesta descartada porque repetía el apoyo y el ángulo de la lámina anterior con menos contraste."
+    ],
+    "assets": [
+      {
+        "size": 64,
+        "path": "www/naturalist-art/plates/64/af_gorila_montana--silverback.webp",
+        "bytes": 2066,
+        "sha256": "a8975b081d962b97800de6eaee8916a6aeab16fd1e05d1cd12fb7b0d25f525c8",
+        "before": "www/naturalist-art/review/leg01/64/af_gorila_montana--silverback.webp",
+        "oldBytes": 2506,
+        "oldSha256": "ecc20e0fe741f16aab4046207d5a0e7b4b32813e32b126f19b694daf29663e3d"
+      },
+      {
+        "size": 128,
+        "path": "www/naturalist-art/plates/128/af_gorila_montana--silverback.webp",
+        "bytes": 4788,
+        "sha256": "99e382dad79476402925f2753c455b70bc38b303891f1e6d4d3ae40492b3b0e4",
+        "before": "www/naturalist-art/review/leg01/128/af_gorila_montana--silverback.webp",
+        "oldBytes": 6284,
+        "oldSha256": "1988331f563df4af8001a92c22e81ebb9b2fa4de58ff5c08a5e56a7e861da423"
+      },
+      {
+        "size": 256,
+        "path": "www/naturalist-art/plates/256/af_gorila_montana--silverback.webp",
+        "bytes": 14000,
+        "sha256": "bfbbfbfc2b6bbfd2f53bde7257b5586fb64132844704b03278cba22e52afed78",
+        "before": "www/naturalist-art/review/leg01/256/af_gorila_montana--silverback.webp",
+        "oldBytes": 17906,
+        "oldSha256": "8834a04e059b76accf69d09fd85f82f5ed80974af5f172a58361cf444fa3e4b8"
+      },
+      {
+        "size": 512,
+        "path": "www/naturalist-art/plates/af_gorila_montana--silverback.webp",
+        "bytes": 52360,
+        "sha256": "7dc9f890ab1e8aee76d8e098f2c976e7d063bb222980045e6b918a73cd3e1366",
+        "before": "www/naturalist-art/review/leg01/af_gorila_montana--silverback.webp",
+        "oldBytes": 64542,
+        "oldSha256": "b81437f12b0f4198378c5a406948b52e36a4e6cc34b0cc727abe92c71aba2491"
+      }
+    ]
+  },
+  {
+    "id": "ambar",
+    "speciesId": "asia_esp_0402",
+    "name": "Ámbar",
+    "status": "conservado",
+    "assessment": "La zancada con una pata adelantada, la gorguera y las rayas anchas se distinguen del tigre normal y del pseudomelánico.",
+    "trait": "Se conserva la postura vigilante con la cabeza baja y el pelaje invernal."
+  },
+  {
+    "id": "niebla",
+    "speciesId": "asia_esp_0403",
+    "name": "Niebla",
+    "status": "conservado",
+    "assessment": "La cola en arco y la postura sobre la roca forman una silueta propia.",
+    "trait": "Se conserva el apoyo bajo y el patrón abierto de rosetas."
+  },
+  {
+    "id": "fenrir",
+    "speciesId": "lobo_gris",
+    "name": "Fenrir",
+    "status": "revisado",
+    "assessment": "El lobo frontal y el normal compartían gran parte del manto y la postura era la única diferencia clara.",
+    "trait": "La postura de aullido y la gorguera invernal plateada se reconocen en miniatura.",
+    "discarded": [
+      "Primera propuesta descartada por volver al perfil de la lámina normal y mantener la cabeza neutra."
+    ],
+    "assets": [
+      {
+        "size": 64,
+        "path": "www/naturalist-art/plates/64/lobo_gris--fenrir.webp",
+        "bytes": 2562,
+        "sha256": "9258923c2f65921b9d749dda0a5519602e0cbeabc9acedccfd0d7450796427f7",
+        "before": "www/naturalist-art/review/leg01/64/lobo_gris--fenrir.webp",
+        "oldBytes": 2744,
+        "oldSha256": "b1109496e0aaa9d293b42b6b57e8481946e002d40306b7e19d770ba5cca2c123"
+      },
+      {
+        "size": 128,
+        "path": "www/naturalist-art/plates/128/lobo_gris--fenrir.webp",
+        "bytes": 6436,
+        "sha256": "4082376b6046640901b4724c09a3c34202b9bd4c9be514b986051437e54e22bf",
+        "before": "www/naturalist-art/review/leg01/128/lobo_gris--fenrir.webp",
+        "oldBytes": 6952,
+        "oldSha256": "c80a112c5ee7c254ae05701413c8bfb11a9fae18eaf9ba868c6386c44979233e"
+      },
+      {
+        "size": 256,
+        "path": "www/naturalist-art/plates/256/lobo_gris--fenrir.webp",
+        "bytes": 17908,
+        "sha256": "0acc547b825bd4cdab3d63268bb163126347761abe6256f9e4129d32c53b51da",
+        "before": "www/naturalist-art/review/leg01/256/lobo_gris--fenrir.webp",
+        "oldBytes": 19298,
+        "oldSha256": "1c6727618d693c8fd9a774d258b340263aa21f8e7b7e9506f45a4c659778320a"
+      },
+      {
+        "size": 512,
+        "path": "www/naturalist-art/plates/lobo_gris--fenrir.webp",
+        "bytes": 57566,
+        "sha256": "152ebbf13346afeca76c93a78dc3eb3bd9b74760966c14428fbefa8996b7d3f8",
+        "before": "www/naturalist-art/review/leg01/lobo_gris--fenrir.webp",
+        "oldBytes": 63192,
+        "oldSha256": "41bc03fda554dff4b5a1b066f01f6e45d57bda26cf0200242845fc43b023a073"
+      }
+    ]
+  },
+  {
+    "id": "atlas",
+    "speciesId": "af_elefante_sabana",
+    "name": "Atlas",
+    "status": "revisado",
+    "assessment": "La trompa caía entre planos superpuestos y daba la impresión de apoyos adicionales.",
+    "trait": "Se distinguen cuatro patas con cuatro pies. La trompa se curva hacia delante y los dos colmillos conservan longitudes distintas.",
+    "assets": [
+      {
+        "size": 64,
+        "path": "www/naturalist-art/plates/64/af_elefante_sabana--atlas.webp",
+        "bytes": 2642,
+        "sha256": "b94642d632911bb3823098c124a4efc00bfd6690f5923c11e08637bf2b91e4d7",
+        "before": "www/naturalist-art/review/leg01/64/af_elefante_sabana--atlas.webp",
+        "oldBytes": 2316,
+        "oldSha256": "cd763eda921ef30baa457807f11e95987b99f99d3096b9ab3155f90ba7be3d49"
+      },
+      {
+        "size": 128,
+        "path": "www/naturalist-art/plates/128/af_elefante_sabana--atlas.webp",
+        "bytes": 6062,
+        "sha256": "889c6106da66e11f2230fc3d9e0f708828dc9c45a8d75f42b5ff05866892a758",
+        "before": "www/naturalist-art/review/leg01/128/af_elefante_sabana--atlas.webp",
+        "oldBytes": 5712,
+        "oldSha256": "5b499899a2cd16907d559516c952a0090591e06f29b00a81fa58077ad6228d51"
+      },
+      {
+        "size": 256,
+        "path": "www/naturalist-art/plates/256/af_elefante_sabana--atlas.webp",
+        "bytes": 17466,
+        "sha256": "241a08a131d410df73bb6b651c2e8b58648f0698b7ce3af90a275df9bcab5df4",
+        "before": "www/naturalist-art/review/leg01/256/af_elefante_sabana--atlas.webp",
+        "oldBytes": 16714,
+        "oldSha256": "cf54269affccae15e5edcbcdb2e95ed5e58fd131a9c6ecedef6167be64a06287"
+      },
+      {
+        "size": 512,
+        "path": "www/naturalist-art/plates/af_elefante_sabana--atlas.webp",
+        "bytes": 58494,
+        "sha256": "3b6af2a6e26e5fc19649703acf6cce25451636356940320493c0739b57325065",
+        "before": "www/naturalist-art/review/leg01/af_elefante_sabana--atlas.webp",
+        "oldBytes": 60498,
+        "oldSha256": "e7e017efb3c4f2b6589f52058e9ddd1fd5dc8fdbfc0c8af2d3393ecd3b4624ef"
+      }
+    ]
+  },
+  {
+    "id": "centinela",
+    "speciesId": "aguila_real",
+    "name": "Centinela",
+    "status": "conservado",
+    "assessment": "La silueta posada y la nuca dorada se separan del águila normal en vuelo.",
+    "trait": "Se conservan las primarias recogidas, las garras bien apoyadas y la nuca cálida."
+  },
+  {
+    "id": "basalto",
+    "speciesId": "asia_esp_0527",
+    "name": "Basalto",
+    "status": "conservado",
+    "assessment": "El ángulo bajo, el cuerpo ancho y la cola alta dan identidad más allá del oscurecimiento.",
+    "trait": "Se conserva la presentación rasante y el volumen de las patas."
+  },
+  {
+    "id": "seda",
+    "speciesId": "asia_esp_0373",
+    "name": "Seda",
+    "status": "conservado",
+    "assessment": "El cuello elevado, la capucha y las espiras verticales se leen frente al perfil bajo de la normal.",
+    "trait": "Se conserva la línea continua y la coloración ocre de las escamas ventrales."
+  },
+  {
+    "id": "junco",
+    "speciesId": "af_cocodrilo_nilo",
+    "name": "Junco",
+    "status": "conservado",
+    "assessment": "Los escudos y la perspectiva del hocico distinguen al individuo del cocodrilo normal y sus morfos.",
+    "trait": "Se conserva el ángulo de tres cuartos y el hocico marcado."
+  },
+  {
+    "id": "ancora",
+    "speciesId": "af_tortuga_aldabra",
+    "name": "Áncora",
+    "status": "conservado",
+    "assessment": "El cuello levantado, las patas columnares y los anillos de los escudos se separan de la tortuga normal.",
+    "trait": "Se conservan el peso de sus apoyos y el caparazón de anillos."
+  },
+  {
+    "id": "ascua",
+    "speciesId": "zorro_rojo",
+    "name": "Ascua",
+    "status": "revisado",
+    "assessment": "La cola beige del ejemplar anterior perdía el rasgo que da origen al nombre.",
+    "trait": "La cola envolvente concentra cobre y bermellón. El babero marfil, las patas oscuras y la punta clara se mantienen.",
+    "assets": [
+      {
+        "size": 64,
+        "path": "www/naturalist-art/plates/64/zorro_rojo--ascua.webp",
+        "bytes": 1946,
+        "sha256": "3f22fd50df967403e301a711d45f93ed4ab9c906dc1dcb8996168f3ab598f7d5",
+        "before": "www/naturalist-art/review/leg01/64/zorro_rojo--ascua.webp",
+        "oldBytes": 1930,
+        "oldSha256": "3fc4cf5d86d16211b37dbac67ad3eaad8f94b2d7da475837babbc7a49d2ec423"
+      },
+      {
+        "size": 128,
+        "path": "www/naturalist-art/plates/128/zorro_rojo--ascua.webp",
+        "bytes": 4720,
+        "sha256": "5d0f94b7b2d3a4e01bde42eeb0b5700c1d22531f14d9e84ce5516380b8bdc648",
+        "before": "www/naturalist-art/review/leg01/128/zorro_rojo--ascua.webp",
+        "oldBytes": 4644,
+        "oldSha256": "6a89bf000a11efbd0e6e7861cfc5bc93c26d76143a9ce97b1d1630baf8b5dd88"
+      },
+      {
+        "size": 256,
+        "path": "www/naturalist-art/plates/256/zorro_rojo--ascua.webp",
+        "bytes": 13636,
+        "sha256": "60667023ad54600db3663e54ad68c715d9f4583733cbb89c69cdd415f820c35a",
+        "before": "www/naturalist-art/review/leg01/256/zorro_rojo--ascua.webp",
+        "oldBytes": 13674,
+        "oldSha256": "9dedd4d74d3b4dc8b2515abe94e6e37dda3e4db883b11dd8a2b0bf22fe0fb613"
+      },
+      {
+        "size": 512,
+        "path": "www/naturalist-art/plates/zorro_rojo--ascua.webp",
+        "bytes": 49202,
+        "sha256": "96462cce149ecde598633bec231222ebf9537350048d49fcf85fb29182389fb2",
+        "before": "www/naturalist-art/review/leg01/zorro_rojo--ascua.webp",
+        "oldBytes": 48290,
+        "oldSha256": "68077210f903955ce7eefbd9d01922096c511115c06a6fa05b0ee20106d03977"
+      }
+    ]
+  },
+  {
+    "id": "remonte",
+    "speciesId": "asia_esp_0369",
+    "name": "Remonte",
+    "status": "conservado",
+    "assessment": "La joroba alta y la mandíbula ganchuda de macho reproductor diferencian la silueta de las demás variantes.",
+    "trait": "Se conserva el perfil de remontada y el punteado del dorso."
+  },
+  {
+    "id": "espiral",
+    "speciesId": "af_gran_kudu",
+    "name": "Espiral",
+    "status": "nuevo",
+    "assessment": "Gran kudú del catálogo. Ya pertenecía a las categorías Épico y Excepcional.",
+    "trait": "Cuernos de dos vueltas visibles, cabeza de frente y barba con un borde blanco sobre flancos rayados.",
+    "assets": [
+      {
+        "size": 64,
+        "path": "www/naturalist-art/plates/64/af_gran_kudu--espiral.webp",
+        "bytes": 2572,
+        "sha256": "95266d5781244ffa00ca62d7f08b7350f951e737aa069b37308be4977353c73e"
+      },
+      {
+        "size": 128,
+        "path": "www/naturalist-art/plates/128/af_gran_kudu--espiral.webp",
+        "bytes": 6198,
+        "sha256": "8328a2c4bd053bd6850716177a8ac2dbed37496f4983af02cc7991f53b3086bf"
+      },
+      {
+        "size": 256,
+        "path": "www/naturalist-art/plates/256/af_gran_kudu--espiral.webp",
+        "bytes": 16348,
+        "sha256": "108590e2cd73538919d0c34c8d4f42f18177cad51667447433bd16452d88d00f"
+      },
+      {
+        "size": 512,
+        "path": "www/naturalist-art/plates/af_gran_kudu--espiral.webp",
+        "bytes": 48168,
+        "sha256": "76bc877f467400a1ad3c22c886b67317baecd6fe2f39b6175b6b92f534b27802"
+      }
+    ]
+  },
+  {
+    "id": "bastion",
+    "speciesId": "af_pangolin_gigante",
+    "name": "Bastión",
+    "status": "nuevo",
+    "assessment": "Pangolín gigante del catálogo. Ya pertenecía a las categorías Épico y Excepcional.",
+    "trait": "El perfil cerrado en defensa concentra las escamas cobrizas y conserva la forma ancha de la base de la cola.",
+    "assets": [
+      {
+        "size": 64,
+        "path": "www/naturalist-art/plates/64/af_pangolin_gigante--bastion.webp",
+        "bytes": 2276,
+        "sha256": "0064721b985cc093312b5eb7e2f4818bf939298fe47b693bbeddf65efe354ce2"
+      },
+      {
+        "size": 128,
+        "path": "www/naturalist-art/plates/128/af_pangolin_gigante--bastion.webp",
+        "bytes": 5680,
+        "sha256": "84a4f31ca349c76c4dc62afdf964880d85d7774d2e74befc1039eaad5d1b29fc"
+      },
+      {
+        "size": 256,
+        "path": "www/naturalist-art/plates/256/af_pangolin_gigante--bastion.webp",
+        "bytes": 17128,
+        "sha256": "17dd0d139d4e89d92c8b769bf74e7578fed389703e133f629d56e0c5a38bec82"
+      },
+      {
+        "size": 512,
+        "path": "www/naturalist-art/plates/af_pangolin_gigante--bastion.webp",
+        "bytes": 61922,
+        "sha256": "cd34d7e4c3e78142e643d448ee5376d994ded0298d47143e44819c54e3d72b24"
+      }
+    ]
+  },
+  {
+    "id": "cienaga",
+    "speciesId": "af_picozapato",
+    "name": "Ciénaga",
+    "status": "nuevo",
+    "assessment": "Picozapato del catálogo. Ya pertenecía a la categoría Épico.",
+    "trait": "Pico en gancho inclinado, cresta desflecada y patas largas abiertas sobre una silueta agazapada.",
+    "assets": [
+      {
+        "size": 64,
+        "path": "www/naturalist-art/plates/64/af_picozapato--cienaga.webp",
+        "bytes": 2220,
+        "sha256": "0139583cd8bcaf76340bdf85fc671608207388c7591fefe8213f4d5b88fd3053"
+      },
+      {
+        "size": 128,
+        "path": "www/naturalist-art/plates/128/af_picozapato--cienaga.webp",
+        "bytes": 5244,
+        "sha256": "2a795143f0ff82e014d562419e3d278dd1c04d0e9c5467372c86c11aab0b53c3"
+      },
+      {
+        "size": 256,
+        "path": "www/naturalist-art/plates/256/af_picozapato--cienaga.webp",
+        "bytes": 14354,
+        "sha256": "a49acc46c33881173b811ad1c229fd38a7c8c88eee316cc1f198a71909438db7"
+      },
+      {
+        "size": 512,
+        "path": "www/naturalist-art/plates/af_picozapato--cienaga.webp",
+        "bytes": 44384,
+        "sha256": "236a4a143a252db3ba68d512e6f5395109b037dee5d67ad5957ee4fdb5775dc8"
+      }
+    ]
+  },
+  {
+    "id": "alisio",
+    "speciesId": "frailecillo_atlantico",
+    "name": "Alisio",
+    "status": "nuevo",
+    "assessment": "Frailecillo atlántico del catálogo en plumaje nupcial.",
+    "trait": "Alas elevadas al despegar, pies palmeados tras el cuerpo y surcos de color bien delimitados en el pico.",
+    "assets": [
+      {
+        "size": 64,
+        "path": "www/naturalist-art/plates/64/frailecillo_atlantico--alisio.webp",
+        "bytes": 2416,
+        "sha256": "95eec0cc3d55c8da2eba3f282c4a71ed633696f3282e3e9a39c42934b0629782"
+      },
+      {
+        "size": 128,
+        "path": "www/naturalist-art/plates/128/frailecillo_atlantico--alisio.webp",
+        "bytes": 5594,
+        "sha256": "56212c8099490f7dac7e7010c75c5036174f6745b80b08e1cda8636f1e1fba3a"
+      },
+      {
+        "size": 256,
+        "path": "www/naturalist-art/plates/256/frailecillo_atlantico--alisio.webp",
+        "bytes": 15206,
+        "sha256": "b09a5d96333e1c81691ca84f45613387639671bbb6c6ae29617a9329ae1040b8"
+      },
+      {
+        "size": 512,
+        "path": "www/naturalist-art/plates/frailecillo_atlantico--alisio.webp",
+        "bytes": 47264,
+        "sha256": "1eaacd070143b8eb6e706ee3293248466d3512a5cf8704f26c1476a83e8729bf"
+      }
+    ]
+  },
+  {
+    "id": "filigrana",
+    "speciesId": "na_esp_ambystoma_mexicanum",
+    "name": "Filigrana",
+    "status": "nuevo",
+    "assessment": "Ajolote mexicano del catálogo. La guía distingue el tipo silvestre oscuro de las formas pigmentarias en cautiverio.",
+    "trait": "Vista oblicua en nado, branquias color ciruela y punteado fino sobre oliváceo.",
+    "discarded": [
+      "Primera propuesta descartada por repetir casi el mismo ángulo de la lámina normal."
+    ],
+    "assets": [
+      {
+        "size": 64,
+        "path": "www/naturalist-art/plates/64/na_esp_ambystoma_mexicanum--filigrana.webp",
+        "bytes": 2490,
+        "sha256": "dd48d68dac1c2b686830eb6be5b7f396f10f1e434978ac5f638388505a683640"
+      },
+      {
+        "size": 128,
+        "path": "www/naturalist-art/plates/128/na_esp_ambystoma_mexicanum--filigrana.webp",
+        "bytes": 6154,
+        "sha256": "974e290b78470613262476861b50eb1aedfb9e5aca6323cd9718c023ba4bdb4d"
+      },
+      {
+        "size": 256,
+        "path": "www/naturalist-art/plates/256/na_esp_ambystoma_mexicanum--filigrana.webp",
+        "bytes": 17514,
+        "sha256": "dfbce551022fe16a61c264d4fcf6085d966bc7534ac166b4c584c4cd73e6df1b"
+      },
+      {
+        "size": 512,
+        "path": "www/naturalist-art/plates/na_esp_ambystoma_mexicanum--filigrana.webp",
+        "bytes": 58368,
+        "sha256": "4969739c280e76b0606fd57280b5a352abf3708dbd4f03184751ff929c9d8f6b"
+      }
+    ]
+  },
+  {
+    "id": "terracota",
+    "speciesId": "oc_esp_osphranter_rufus",
+    "name": "Terracota",
+    "status": "nuevo",
+    "assessment": "Canguro rojo del catálogo en postura de salto.",
+    "trait": "El cuerpo casi horizontal, la cola en contrapeso y las patas en extensión construyen una silueta diferente a la postura en reposo.",
+    "assets": [
+      {
+        "size": 64,
+        "path": "www/naturalist-art/plates/64/oc_esp_osphranter_rufus--terracota.webp",
+        "bytes": 1688,
+        "sha256": "d188f16074194e2910834f7c861ab252c8cbacc3c52c95971b639429fe98464f"
+      },
+      {
+        "size": 128,
+        "path": "www/naturalist-art/plates/128/oc_esp_osphranter_rufus--terracota.webp",
+        "bytes": 3686,
+        "sha256": "102d2e6785e3bca3782359fe1c21761f28374d81047d90cf50c202334e36ec83"
+      },
+      {
+        "size": 256,
+        "path": "www/naturalist-art/plates/256/oc_esp_osphranter_rufus--terracota.webp",
+        "bytes": 9156,
+        "sha256": "280ce11312e677126841527da945f24f0b9fc08e7b340da72311c24c3b100e05"
+      },
+      {
+        "size": 512,
+        "path": "www/naturalist-art/plates/oc_esp_osphranter_rufus--terracota.webp",
+        "bytes": 26998,
+        "sha256": "bf1bd97d585386d5947aec8f197239fccd2c1fb37e75b90441ad37a26c639127"
+      }
+    ]
+  },
+  {
+    "id": "orla",
+    "speciesId": "mar_esp_megaptera_novaeangliae",
+    "name": "Orla",
+    "status": "nuevo",
+    "assessment": "Ballena jorobada del catálogo. Giro de tres cuartos para exponer las marcas ventrales.",
+    "trait": "Perfil en ascenso con aletas pectorales largas, nódulos de los bordes y manchas en la cara inferior de la cola.",
+    "assets": [
+      {
+        "size": 64,
+        "path": "www/naturalist-art/plates/64/mar_esp_megaptera_novaeangliae--orla.webp",
+        "bytes": 1894,
+        "sha256": "130ba6c5f8a937ea3c79f7ae3886f82b97017e680eb8fac81cb40fe184f7407a"
+      },
+      {
+        "size": 128,
+        "path": "www/naturalist-art/plates/128/mar_esp_megaptera_novaeangliae--orla.webp",
+        "bytes": 4226,
+        "sha256": "24abfbf6899ef3dfd27e51b19cb00f460476b4788235257679cd58b8390cac62"
+      },
+      {
+        "size": 256,
+        "path": "www/naturalist-art/plates/256/mar_esp_megaptera_novaeangliae--orla.webp",
+        "bytes": 10912,
+        "sha256": "5927ad98de6bcd34d99a3fbefefb577480dd8ff9ebb53ff78face715df55bdea"
+      },
+      {
+        "size": 512,
+        "path": "www/naturalist-art/plates/mar_esp_megaptera_novaeangliae--orla.webp",
+        "bytes": 32630,
+        "sha256": "4e03ffce85d31eee59b2f883f1e4985cc4a3ead8240fd0e509701c01e6e3755e"
+      }
+    ]
+  },
+  {
+    "id": "marea",
+    "speciesId": "mar_esp_enteroctopus_dofleini",
+    "name": "Marea",
+    "status": "nuevo",
+    "assessment": "Pulpo gigante del Pacífico del catálogo. Abre el abanico de brazos y expone las ventosas.",
+    "trait": "Manto alto, ocho brazos trazables y contraste entre las ventosas claras y la piel coral.",
+    "discarded": [
+      "Primera propuesta descartada porque solo siete brazos podían distinguirse en la lámina."
+    ],
+    "assets": [
+      {
+        "size": 64,
+        "path": "www/naturalist-art/plates/64/mar_esp_enteroctopus_dofleini--marea.webp",
+        "bytes": 3200,
+        "sha256": "df3a03b642ca70e97690650c1f29aba5de4179486a73ce2c1493703a67231a1b"
+      },
+      {
+        "size": 128,
+        "path": "www/naturalist-art/plates/128/mar_esp_enteroctopus_dofleini--marea.webp",
+        "bytes": 8340,
+        "sha256": "a8013bc90e5ab55977675806d3565cc34fb50720d7b67c89635082469dfa411c"
+      },
+      {
+        "size": 256,
+        "path": "www/naturalist-art/plates/256/mar_esp_enteroctopus_dofleini--marea.webp",
+        "bytes": 22660,
+        "sha256": "c6b51ecfa00102d31b3ca4ab1ef86dc1b1e2a538a734b8daee6de274ec3af8c0"
+      },
+      {
+        "size": 512,
+        "path": "www/naturalist-art/plates/mar_esp_enteroctopus_dofleini--marea.webp",
+        "bytes": 71906,
+        "sha256": "280e9d6f63098c8c273d5e6a0a17d63e56f55716103684a631fff418b88d9a02"
+      }
+    ]
+  }
+]

@@ -10,10 +10,11 @@ const previous = require('../docs/arte-v5011/inventario-aud04.json');
 const current = require('../docs/arte-v5012/inventario-aud04.json');
 const decisions = require('../docs/arte-v5012/decisiones.json');
 const integrity = require('../docs/arte-v5012/integridad.json');
-const release = require('../www/atlas-integrity.json').files;
-require('../www/js/naturalist-assets-v400.js');
-
-const assets = globalThis.AtlasNaturalistAssets;
+const issued = file => execFileSync('git', ['show', 'ee39bfc:' + file], { maxBuffer: 8 * 1024 * 1024 });
+const release = JSON.parse(issued('www/atlas-integrity.json')).files;
+const sandbox = { globalThis: {} };
+vm.runInNewContext(issued('www/js/naturalist-assets-v400.js').toString(), sandbox);
+const assets = JSON.parse(JSON.stringify(sandbox.globalThis.AtlasNaturalistAssets));
 const sizes = [64, 128, 256, 512];
 const key = row => row.id + '/' + row.variant;
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');

@@ -344,3 +344,5 @@ figcaption { padding: .4rem 0; }
 .audit-variant .audit-open { width: 100%; padding-inline: .25rem; }
 .audit-variant .audit-tags { gap: .2rem; }
 .audit-variant .audit-morph { overflow-wrap: anywhere; }
+
+.legendary-review { margin-block: .8rem; }

@@ -14,7 +14,7 @@ const release = require('../www/atlas-integrity.json').files;
 test('ART-01 Las 44 variantes WebP tienen dimensiones y alfa válidos, conservan la ruta y archivan los originales exactos', () => {
   const count = integrity.assets.reduce((total, entry) => total + entry.resolutions.length, 0);
   assert.equal(count, 44);
-  assert.equal(assets.files.length, 6704);
+  assert.equal(assets.files.length, 6736);
   const seen = new Set();
   for (const entry of integrity.assets) {
     const stem = entry.id + '--' + entry.variant + '.webp';

@@ -12,9 +12,9 @@ const decisions = require('../docs/arte-v5011/decisiones.json');
 const integrity = require('../docs/arte-v5011/integridad.json');
 const publishedFile = file => execFileSync('git', ['show', '8ff5428:' + file], { maxBuffer: 8 * 1024 * 1024 });
 const release = JSON.parse(publishedFile('www/atlas-integrity.json')).files;
-require('../www/js/naturalist-assets-v400.js');
-
-const assets = globalThis.AtlasNaturalistAssets;
+const sandbox = { globalThis: {} };
+vm.runInNewContext(publishedFile('www/js/naturalist-assets-v400.js').toString(), sandbox);
+const assets = JSON.parse(JSON.stringify(sandbox.globalThis.AtlasNaturalistAssets));
 const sizes = [64, 128, 256, 512];
 const key = row => row.id + '/' + row.variant;
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');

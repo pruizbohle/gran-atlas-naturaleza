@@ -1829,8 +1829,16 @@ const LEGENDARY_SPECIMENS=[
  ['junco','af_cocodrilo_nilo','Junco','Escudos dorsales irregulares y un hocico surcado por viejas cicatrices.'],
  ['ancora','af_tortuga_aldabra','Áncora','Caparazón de anillos marcados y cuello extendido sobre patas columnares.'],
  ['ascua','zorro_rojo','Ascua','Un zorro de pecho marfil se sienta envuelto en su cola rojiza.'],
- ['remonte','asia_esp_0369','Remonte','Un salmón de dorso moteado y mandíbula curva en plena remontada.']
-].map(([id,speciesId,name,description])=>({id,speciesId,name,description}));
+ ['remonte','asia_esp_0369','Remonte','Un salmón de dorso moteado y mandíbula curva en plena remontada.'],
+ ['espiral','af_gran_kudu','Espiral','Un macho de cuernos ampliamente espiralados, barba larga y franjas de marfil sobre el flanco.',true],
+ ['bastion','af_pangolin_gigante','Bastión','El cuerpo se repliega en un arco defensivo de escamas cobrizas y deja ver el hocico bajo la cola.',true],
+ ['cienaga','af_picozapato','Ciénaga','Permanece inmóvil con el pico jaspeado inclinado y una cresta desflecada sobre el manto pizarra.',true],
+ ['alisio','frailecillo_atlantico','Alisio','Un frailecillo de plumaje nupcial abre las alas mientras alza el pico y extiende los pies anaranjados.',true],
+ ['filigrana','na_esp_ambystoma_mexicanum','Filigrana','Tres pares de branquias ramificadas enmarcan su cabeza y el flanco oliváceo muestra un punteado dorado.',true],
+ ['terracota','oc_esp_osphranter_rufus','Terracota','Un macho de pecho robusto se impulsa con las patas recogidas y la cola extendida bajo un manto de rojo arcilla.',true],
+ ['orla','mar_esp_megaptera_novaeangliae','Orla','La ballena gira y deja ver el borde moteado de las aletas pectorales y las marcas blancas de la cola.',true],
+ ['marea','mar_esp_enteroctopus_dofleini','Marea','El pulpo abre sus brazos en abanico y deja ver ventosas color marfil bajo una piel moteada de coral.',true]
+].map(([id,speciesId,name,description,legendaryOnly])=>({id,speciesId,name,description,...(legendaryOnly?{legendaryOnly}:{})}));
 const SPECIMEN_SELECTION={
  epico:['zorro_rojo','lobo_gris','aguila_real','reno','buho_real','jabali','af_gran_kudu','af_pangolin_gigante','af_gorila_montana','af_elefante_sabana','af_cocodrilo_nilo','af_tortuga_aldabra','asia_esp_0402','asia_esp_0403','asia_esp_0527','asia_esp_0373','asia_esp_0369','af_hipopotamo','af_jirafa','af_leon','af_suricata','af_secretario','af_picozapato','af_piton_africana'],
  excepcional:['zorro_rojo','lobo_gris','aguila_real','af_gran_kudu','af_pangolin_gigante','af_gorila_montana','af_elefante_sabana','af_cocodrilo_nilo','af_tortuga_aldabra','asia_esp_0402','asia_esp_0403','asia_esp_0527','asia_esp_0373','asia_esp_0369']
@@ -1849,9 +1857,11 @@ function legendaryForSpecies(id){return legendaryTaxa.get(canonicalTaxon(id));}
 const SPECIMEN_CATEGORIES=Object.fromEntries(Object.keys(SPECIES).map(id=>{
  const categories=[],legendary=legendaryForSpecies(id);
  if(SPECIES[id].special.some(v=>specialVariantName(v)==='Notable'))categories.push('Notable');
- if(SPECIMEN_SELECTION.epico.includes(id)||legendary)categories.push('Épico');
- if(SPECIMEN_SELECTION.excepcional.includes(id)||legendary)categories.push('Excepcional');
- if(legendary)categories.push('Legendario');
+ // LEG-01 adds the named individual to the existing categories of each species.
+ const historicalLegendary=legendary&&!legendary.legendaryOnly;
+ if(SPECIMEN_SELECTION.epico.includes(id)||historicalLegendary)categories.push('Épico');
+ if(SPECIMEN_SELECTION.excepcional.includes(id)||historicalLegendary)categories.push('Excepcional');
+ if(historicalLegendary)categories.push('Legendario');
  return [id,categories];
 }));
 let specimenIds;
@@ -2212,11 +2222,15 @@ if(globalThis.AtlasGM06){
 const catalogA04=globalThis.AtlasGM07A04;
 if(catalogA04){
  catalogA04.apply(SPECIES,REGIONS,SPECIMEN_CATEGORIES);
- legendaryTaxa=indexLegendaryTaxa();
  const previousTaxonomy=taxonomyInfo;
  taxonomyInfo=function(id){
   return Object.hasOwn(catalogA04.records,id)?catalogA04.records[id].taxonomy:previousTaxonomy(id);
  };
+}
+legendaryTaxa=indexLegendaryTaxa();
+for(const specimen of LEGENDARY_SPECIMENS){
+ const id=specimen.speciesId;
+ if(specimen.legendaryOnly&&SPECIES[id])SPECIMEN_CATEGORIES[id]=[...(SPECIMEN_CATEGORIES[id]||[]),'Legendario'];
 }
 const catalogueTaxa=new Map();
 function catalogueTaxonomy(id){
@@ -5633,23 +5647,26 @@ function sexSpriteMarkup(id,sex){
 
 const spriteCache=new Map();
 function getSpriteMarkup(id, skin='normal', sex=null, legacy=false){
-  if(!legacy&&globalThis.AtlasM01Art?.has(id))return spriteMarkupM01(id,skin);
- // GM3330 BEGIN art
- if(SPECIES[id]?.origin==='abyssal3340')return globalThis.AtlasAbyssalArt3340.render(SPECIES[id]);
- if(SPECIES[id]?.origin==='deep3330')return globalThis.AtlasDeepArt3330.render(SPECIES[id]);
- // GM3330 END art
- // GM3320 BEGIN art
- if(SPECIES[id]?.origin==='marine3320')return globalThis.AtlasMarineArt3320.render(SPECIES[id]);
- // GM3320 END art
- // GM3310 BEGIN art
- if(SPECIES[id]?.origin==='polar3310')return globalThis.AtlasPolarArt3310.render(SPECIES[id]);
- // GM3310 END art
+  if(skin!=='legendario'){
+   if(!legacy&&globalThis.AtlasM01Art?.has(id))return spriteMarkupM01(id,skin);
+  // GM3330 BEGIN art
+  if(SPECIES[id]?.origin==='abyssal3340')return globalThis.AtlasAbyssalArt3340.render(SPECIES[id]);
+  if(SPECIES[id]?.origin==='deep3330')return globalThis.AtlasDeepArt3330.render(SPECIES[id]);
+  // GM3330 END art
+  // GM3320 BEGIN art
+  if(SPECIES[id]?.origin==='marine3320')return globalThis.AtlasMarineArt3320.render(SPECIES[id]);
+  // GM3320 END art
+  // GM3310 BEGIN art
+  if(SPECIES[id]?.origin==='polar3310')return globalThis.AtlasPolarArt3310.render(SPECIES[id]);
+  // GM3310 END art
+  }
   const category=Object.keys(SPECIMEN_LEVELS).find(c=>SPECIMEN_LEVELS[c].skin===skin);
   if(category){
    const key=id+':'+skin+':base';
    if(spriteCache.has(key))return spriteCache.get(key);
    const l=legendaryForSpecies(id);
-   const base=category==='Legendario'&&l&&globalThis.ATLAS_LEGENDARY_ART?globalThis.ATLAS_LEGENDARY_ART.render(l.id):getSpriteMarkup(id,'normal');
+   const historicArt=globalThis.ATLAS_LEGENDARY_ART;
+   const base=category==='Legendario'&&l&&historicArt?.ids.includes(l.id)?historicArt.render(l.id):getSpriteMarkup(id,'normal');
    const svg=decorateSpecimen(base,category);
    spriteCache.set(key,svg);
    return svg;

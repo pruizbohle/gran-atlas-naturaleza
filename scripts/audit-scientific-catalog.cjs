@@ -184,7 +184,7 @@ function legendaryCoverage() {
     assert.match(halo, /class="atlas-art-frame legendary/);
     return { ...legendary, species: game.SPECIES[id].latin, rate: game.specimenRates(id).Legendario, resolutions };
   });
-  assert.equal(inventory.length, 12);
+  assert.equal(new Set(inventory.map(row => row.id)).size, 20);
   return { version: require('../package.json').version, migrated: inventory.length, inventory };
 }
 

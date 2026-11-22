@@ -65,3 +65,7 @@ ART-07 aprobó doce correcciones de variantes insuficientes en dos lotes de seis
 ## Continuidad en V5.0.12
 
 ART-08 corrigió veinte variantes previamente clasificadas como mejorables. El inventario registra 174 variantes examinadas, 88 correctas, 84 mejorables, 2 insuficientes y 390 pendientes de evaluación. El visor reúne las 564 variantes de 479 animales, con 20 fichas por página de forma predeterminada. [Informe y bibliotecas](../arte-v5012/README.md) · [Inventario vigente](../arte-v5012/inventario-aud04.json)
+
+## Continuidad en V5.1
+
+LEG-01 pausa la revisión pigmentaria en el inventario de ART-08 y amplía la colección a veinte identidades legendarias. Se revisaron los doce ejemplares originales, se aprobaron cuatro rediseños y se incorporaron ocho nuevos individuos sobre especies existentes. [Estado de pausa](../arte-pigmentarias/estado-pausa.md) · [Informe y comparativas de LEG-01](../leg01/README.md)
