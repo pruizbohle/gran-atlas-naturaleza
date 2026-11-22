@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratorio de relictos · El Gran Atlas</title>
+  <link rel="stylesheet" href="naturalist-art/lab.css">
+  <script src="js/relict-art-v3199.js" defer></script>
+  <script src="naturalist-art/relict-catalog.js" defer></script>
+  <script src="naturalist-art/relict-review.js" defer></script>
+  <style>
+    .relict-preview { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: .8rem; }
+    .relict-preview article { min-width: 0; }
+    .relict-preview-drawing { display: grid; place-items: center; min-height: 8rem; padding: .5rem; }
+    .relict-preview[data-dark="true"] .relict-preview-drawing { background: #25333b; }
+    .relict-preview-drawing :is(svg, img) { display: block; width: min(100%, var(--relict-size)); height: auto; }
+    .relict-preview-drawing svg { min-height: 4rem; }
+  </style>
+</head>
+<body>
+  <header class="masthead"><div class="container"><h1>Laboratorio de relictos</h1></div></header>
+  <main class="container workspace">
+    <p class="note">Muestra las veinte fichas completas para revisión zoológica.</p>
+    <div class="toolbar">
+      <label>Buscar por relicto o especie <input id="relict-query" type="search" autocomplete="off"></label>
+      <label>Resolución <select id="relict-size"><option>64</option><option>128</option><option selected>256</option><option>512</option></select></label>
+      <label>Fondo <select id="relict-background"><option value="light">Claro</option><option value="dark">Oscuro</option></select></label>
+      <div><p id="relict-count" aria-live="polite"></p></div>
+    </div>
+    <div id="relict-preview" class="relict-preview"></div>
+  </main>
+</body>
+</html>

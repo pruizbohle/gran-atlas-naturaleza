@@ -2165,8 +2165,8 @@ RESEARCH_NODES.push(...RESEARCH_V317_NODES);
 
 // Relictos y mecánicas: rutas patrimoniales independientes del Atlas zoológico.
 const RESEARCH_V318_NODES=[
- {id:'relictos_1',name:'Archivos de historia natural',desc:'Permite dos investigaciones de relictos simultáneas y añade una pista adicional al finalizar cada misión.',branch:'museologia',money:340,knowledge:250,req:'gabinete_1',once:true,effect(s){s.upgrades.relictSurveyTier=1;}},
- {id:'relictos_2',name:'Rastreo de poblaciones singulares',desc:'Duplica la probabilidad de hallar indicios en Campo (manual y automático).',branch:'museologia',money:550,knowledge:420,req:'relictos_1',reqAll:['etologia_1'],once:true,effect(s){s.upgrades.relictFieldTier=1;}}
+ {id:'relictos_1',name:'Archivos de historia natural',desc:'Permite dos prospecciones simultáneas y un indicio adicional al recogerlas. Al investigar, registra un indicio si hay un expediente accesible.',branch:'museologia',money:340,knowledge:250,req:'gabinete_1',once:true,effect(s){s.upgrades.relictSurveyTier=1;}},
+ {id:'relictos_2',name:'Rastreo de poblaciones singulares',desc:'Duplica la probabilidad de hallar indicios en Campo. Al investigar, registra un indicio si hay un expediente accesible.',branch:'museologia',money:550,knowledge:420,req:'relictos_1',reqAll:['etologia_1'],once:true,effect(s){s.upgrades.relictFieldTier=1;}}
 ];
 RESEARCH_NODES.push(...RESEARCH_V318_NODES);
 const RESEARCH_BRANCHES=[
@@ -2846,7 +2846,9 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
   return;
  }
  currentAutoNotice='';
+ const relicConditions=automatic?.segment??state;
  if(!choices.length||(!guaranteed&&Math.random()>chanceBase)){
+  searchRelictInField(source,at,relicConditions);
   const k=Math.round((manual?3:1.5)*knowledgeBonus());
   state.knowledge+=k;
   if(manual)state.lastEncounter={title:'Sin avistamiento',subtitle:`Se encontraron rastros. +${k} conocimiento`,sprite:null};
@@ -2866,7 +2868,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
  // nunca una vez por individuo del censo (evita multiplicar objetos o variantes).
  const knowledgeGain=Math.round((manual?5:3)*knowledgeBonus());
  state.knowledge+=knowledgeGain;
- const museumFinds=maybeMuseumFieldDiscovery(source,automatic?.segment);
+ const museumFinds=maybeMuseumFieldDiscovery(source,relicConditions);
  const entries=[];
  const census=researchCensusCount(source);
  for(const chosen of selected){
@@ -2907,6 +2909,10 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
   entries.push({id:chosen,first,amount,note,variant,category,sexObservation});
  }
  if(!entries.length)return;
+ const relict=searchRelictInField(source,at,relicConditions);
+ const clue=maybeMuseumRelictLead(source,Math.random,relicConditions);
+ if(relict)entries[0].note.push('relicto: '+relict.name);
+ if(clue)entries[0].note.push('indicio: '+clue);
  const sequence=state.encounterSequence=(state.encounterSequence||0)+1;
  if(automatic?.deferPresentation)automatic.latest={entries,knowledgeGain,sequence};
  else presentEncounter(entries,knowledgeGain,sequence);
@@ -3060,6 +3066,11 @@ function buyNode(id){
   if(node.reqItem && node.reqItemConsume!==false) state.inventory[node.reqItem]=(state.inventory[node.reqItem]||0)-(node.reqItemQty||1);
   state.purchases[id]=(state.purchases[id]||0)+1;
   node.effect(state);
+  if(id==='relictos_1'||id==='relictos_2'){
+   const needsClue=r=>state.regionUnlocked[r.region]&&!museumRelictOwned(r.id)&&relictLeadCount(r.id)<3;
+   const relict=relictsByRegion.get(state.currentRegion)?.find(needsClue)??MUSEUM_RELICTS.find(needsClue);
+   if(relict)addRelictLead(relict.id);
+  }
   pushLog(`🔬 Investigación completada: ${node.name}.`);
   render();
 }
@@ -3108,6 +3119,8 @@ function updateFieldOutput(){
  const last=state.lastEncounter;
  const result=document.getElementById('fieldResult');
  if(result){const signature=fieldEncounterSignature(last);if(signature!==lastPanelSignature){replaceFieldEncounter(result,encounterCardMarkup(last));result.classList.add('encounter-reveal');lastPanelSignature=signature;}}
+ const relicNotice=document.getElementById('fieldRelictNotice');
+ if(relicNotice)updateFieldSection(relicNotice,globalThis.AtlasFieldUI.relictNotice(fieldRelictNotice()));
  const buffs=document.getElementById('fieldBuffSummary');
  const capacity=automaticSearchCapacity();
  if(buffs)updateFieldSection(buffs,fieldBuffSummaryMarkup(capacity));
@@ -3356,9 +3369,14 @@ function fieldLogMarkup(){
  const history=state.log.map(line=>'<div class="log">'+esc(line.replace(/(espécimen especial: (?:(?:Albino|Melánico) · )?Legendario, )Filigrana(?=[,.]|$)/g,'$1Nácar'))+'</div>').join('');
  return (art?'<div class="field-log-art" aria-label="Último avistamiento">'+art+'</div>':'')+history;
 }
+function fieldRelictNotice(){
+ const id=Object.keys(state.museum.relictDiscoveries||{}).find(key=>state.museum.relictDiscoveries[key].notice===true);
+ const relict=relictById.get(id);
+ return relict?{id,name:relict.name,description:relict.desc,art:relictArtwork(relict,128)}:null;
+}
 function fieldViewModel(){
  const region=currentRegion(),capacity=automaticSearchCapacity();
- return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:globalThis.AtlasNaturalistArt?.landscape(state.habitat,region.id,true)||fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),progress:fieldProgressModel(),auto:fieldAutomaticModel(capacity),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(capacity),logHTML:fieldLogMarkup(),toolsHTML:'',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
+ return {regionName:region.name,regionCode:region.code,biome:state.habitat,time:state.time,habitatLabel:habitatLabel(state.habitat).replace(/[^\p{L}\p{N}\s]/gu,'').trim(),timeLabel:timeLabel(state.time).replace(/[^\p{L}\s]/gu,'').trim(),seasonLabel:seasonLabel(state.season).replace(/[^\p{L}\s]/gu,'').trim(),backgroundSVG:globalThis.AtlasNaturalistArt?.landscape(state.habitat,region.id,true)||fieldBackdropMarkup(state.habitat),encounter:fieldEncounterModel(state.lastEncounter),relictNotice:fieldRelictNotice(),progress:fieldProgressModel(),auto:fieldAutomaticModel(capacity),filtersOpen:!!state.fieldFiltersOpen,buffHTML:fieldBuffSummaryMarkup(capacity),logHTML:fieldLogMarkup(),toolsHTML:'',filtersHTML:[['Hábitat',region.habitats,state.habitat,'set-habitat',habitatLabel],['Horario',['amanecer','dia','atardecer','noche'],state.time,'set-time',timeLabel],['Estación',['primavera','verano','otono','invierno'],state.season,'set-season',seasonLabel]].map(([name,values,current,action,label])=>'<div><h3>'+name+'</h3><div class="choice-row">'+values.map(id=>'<button class="choice '+(id===current?'active':'')+'" data-action="'+action+'" data-id="'+id+'">'+label(id)+'</button>').join('')+'</div></div>').join('')};
 }
 function renderField(){return globalThis.AtlasFieldUI.render(fieldViewModel());}
 function renderJournal(){
@@ -3642,16 +3660,36 @@ const MUSEUM_FOSSIL_RECIPES=[
  {id:"carnotaurus_mount",name:"Reconstrucción de Carnotauro",icon:"🦖",requires:{bone_long:9,bone_short:15,carnivore_skull:1,fossil_horn:2,fossil_claw:3},unique:true}
 ];
 const MUSEUM_RELICTS=[
- {id:'coelacanth_indic',name:'Celacanto del Índico',latin:'Latimeria chalumnae',icon:'🐟',region:'HX-10-12',habitats:['costa'],times:['atardecer','noche'],desc:'Pez de linaje muy antiguo; hallazgo costero excepcional.',shape:'fish'},
- {id:'atlas_lion',name:'León del Atlas',latin:'Panthera leo leo',icon:'🦁',region:'HX-06-08',habitats:['montana','estepa'],times:['amanecer','atardecer','noche'],desc:'Población histórica norteafricana, desaparecida de la naturaleza en la actualidad.',shape:'lion'},
- {id:'seychelles_sheathbat',name:'Murciélago de Seychelles',latin:'Coleura seychellensis',icon:'🦇',region:'HX-07-14',habitats:['bosque'],times:['atardecer','noche'],desc:'Murciélago insular muy amenazado, de detección excepcional.',shape:'bat'},
- {id:'gabon_dwarf_croc',name:'Cocodrilo enano africano',latin:'Osteolaemus tetraspis',icon:'🐊',region:'HX-08-10',habitats:['rio','bosque','humedal'],times:['atardecer','noche'],desc:'Crocodílido forestal de distribución restringida.',shape:'croc'},
- {id:"angonoka",name:"Tortuga angonoka",latin:"Astrochelys yniphora",icon:"🐢",region:"HX-09-14",habitats:["bosque","pradera"],times:["amanecer","dia","atardecer"],desc:"Tortuga endémica de Madagascar y gravemente amenazada; relicto insular extraordinario.",shape:"tortoise"},
- {id:"african_lungfish",name:"Pez pulmonado africano",latin:"Protopterus aethiopicus",icon:"🐟",region:"HX-09-11",habitats:["humedal"],times:["amanecer","atardecer","noche"],desc:"Pez de linaje antiguo capaz de respirar aire; hallazgo museístico extraordinario.",shape:"lungfish"},
- {id:"white_sturgeon",name:"Esturión blanco del Pacífico",latin:"Acipenser transmontanus",icon:"🐟",region:"HX-02-02",habitats:["rio"],times:["amanecer","atardecer","noche"],desc:"Linaje muy antiguo de peces; archivo de observaciones fluviales en Columbia Británica.",shape:"sturgeon"},
- {id:"gharial",name:"Gavial del Ganges",latin:"Gavialis gangeticus",icon:"🐊",region:"HX-05-16",habitats:["rio"],times:["amanecer","dia","atardecer"],desc:"Crocodiliano de hocico estrecho y linaje singular; registros excepcionales de ríos del subcontinente indio.",shape:"gharial"},
- {id:"olm_balkans",name:"Proteo de las cuevas",latin:"Proteus anguinus",icon:"🦎",region:"HX-03-12",habitats:["bosque"],times:["noche"],desc:"Anfibio cavernícola de los sistemas kársticos balcánicos; se investiga mediante registros subterráneos, no por aparición superficial.",shape:"olm"}
+ {id:'coelacanth_indic',name:'Celacanto del Índico',latin:'Latimeria chalumnae',icon:'🐟',region:'HX-10-12',habitats:['costa'],times:['atardecer','noche'],desc:'Pez de aletas lobuladas que aún vive en el Índico occidental. Su primer registro por la ciencia moderna data de 1938.',shape:'fish',locality:'Aguas del cabo Oriental',habitatDetail:'Fondos rocosos de la plataforma, representados con el entorno de costa.'},
+ {id:'atlas_lion',name:'León del Atlas',latin:'Panthera leo leo',icon:'🦁',region:'HX-06-08',habitats:['montana','estepa'],times:['amanecer','atardecer','noche'],desc:'Población histórica norteafricana, desaparecida de la naturaleza en la actualidad.',shape:'lion',speciesId:'af_leon',locality:'Montañas del Atlas, norte de África',habitatDetail:'Montes y estepas norteafricanas.'},
+ {id:'seychelles_sheathbat',name:'Murciélago de Seychelles',latin:'Coleura seychellensis',icon:'🦇',region:'HX-07-14',habitats:['bosque'],times:['atardecer','noche'],desc:'Murciélago insular muy amenazado, de detección excepcional.',shape:'bat',locality:'Islas Seychelles',habitatDetail:'Bosques costeros próximos a refugios rocosos.'},
+ {id:'gabon_dwarf_croc',name:'Cocodrilo enano africano',latin:'Osteolaemus tetraspis',icon:'🐊',region:'HX-08-10',habitats:['rio','bosque','humedal'],times:['atardecer','noche'],desc:'Crocodílido forestal de distribución restringida.',shape:'croc',speciesId:'af_xlsx_cocodrilo_enano',locality:'Gabón y litoral ecuatorial',habitatDetail:'Cursos lentos y humedales dentro del bosque.'},
+ {id:"angonoka",name:"Tortuga angonoka",latin:"Astrochelys yniphora",icon:"🐢",region:"HX-09-14",habitats:["bosque","pradera"],times:["amanecer","dia","atardecer"],desc:"Tortuga endémica de Madagascar y gravemente amenazada; relicto insular extraordinario.",shape:"tortoise",locality:'Bahía de Baly, noroeste de Madagascar',habitatDetail:'Bosque seco y claros de matorral de la bahía de Baly.'},
+ {id:"african_lungfish",name:"Pez pulmonado africano",latin:"Protopterus aethiopicus",icon:"🐟",region:"HX-09-11",habitats:["humedal"],times:["amanecer","atardecer","noche"],desc:"Pez de linaje antiguo capaz de respirar aire; hallazgo museístico extraordinario.",shape:"lungfish",locality:'Grandes lagos de África oriental',habitatDetail:'Humedales y aguas someras de los lagos.'},
+ {id:"white_sturgeon",name:"Esturión blanco del Pacífico",latin:"Acipenser transmontanus",icon:"🐟",region:"HX-02-02",habitats:["rio"],times:["amanecer","atardecer","noche"],desc:"Linaje muy antiguo de peces; archivo de observaciones fluviales en Columbia Británica.",shape:"sturgeon",locality:'Sistema del río Fraser',habitatDetail:'Canal principal y pozas profundas del Fraser.'},
+ {id:"gharial",name:"Gavial del Ganges",latin:"Gavialis gangeticus",icon:"🐊",region:"HX-05-16",habitats:["rio"],times:["amanecer","dia","atardecer"],desc:"Crocodiliano de hocico estrecho y linaje singular; registros excepcionales de ríos del subcontinente indio.",shape:"gharial",locality:'Cuenca del río Ganges',habitatDetail:'Ríos anchos, bancos arenosos y aguas permanentes.'},
+ {id:"olm_balkans",name:"Proteo de las cuevas",latin:"Proteus anguinus",icon:"🦎",region:"HX-03-12",habitats:["rio"],times:["noche"],desc:"Anfibio cavernícola de los sistemas kársticos balcánicos; se investiga mediante registros subterráneos, no por aparición superficial.",shape:"olm",locality:'Karst dinárico',habitatDetail:'Arroyos subterráneos en cuevas kársticas, accesibles desde el entorno Río. El horario indica el turno de prospección.'},
+ {"id":"thylacine","name":"Tilacino","latin":"Thylacinus cynocephalus","region":"oc_tasmania","habitats":["bosque","pradera"],"times":["atardecer","noche"],"locality":"Tasmania","habitatDetail":"Borde de bosque y claros con cobertura.","desc":"Marsupial carnívoro de dorso rayado. En 1842 persistía en Tasmania y el último ejemplar cautivo murió en 1936.","plate":true},
+ {"id":"great_auk","name":"Alca gigante","latin":"Pinguinus impennis","region":"mar_atlantico_septentrional","habitats":["archipielago"],"times":["amanecer","dia"],"locality":"Eldey, frente a Islandia","habitatDetail":"Islotes rocosos de cría del Atlántico norte.","desc":"Ave marina no voladora del Atlántico norte. En 1842 sobrevivían los últimos ejemplares cerca de Islandia, donde se documentaron los últimos en 1844.","plate":true},
+ {"id":"falkland_wolf","name":"Lobo de las Malvinas","latin":"Dusicyon australis","region":"mar_atlantico_austral","habitats":["archipielago"],"times":["amanecer","atardecer"],"locality":"Islas Malvinas","habitatDetail":"Pastizales y dunas insulares, observados desde tierra.","desc":"También llamado guará. Fue el único mamífero terrestre nativo de las islas Malvinas y desapareció en el siglo XIX.","plate":true},
+ {"id":"carolina_parakeet","name":"Periquito de Carolina","latin":"Conuropsis carolinensis","region":"HX-03-04","habitats":["bosque","humedal"],"times":["amanecer","dia","atardecer"],"locality":"Este de Norteamérica","habitatDetail":"Bosques de llanura aluvial y márgenes arboladas.","desc":"Loro norteamericano de rostro naranja y cola larga. En 1842 aún se encontraba en bosques y humedales del este de Norteamérica.","plate":true},
+ {"id":"huia","name":"Huía","latin":"Heteralocha acutirostris","region":"oc_nueva_zelanda","habitats":["bosque"],"times":["amanecer","dia"],"locality":"Sur de la Isla Norte","habitatDetail":"Bosques nativos maduros de la Isla Norte neozelandesa.","desc":"Ave neozelandesa de plumaje oscuro y carúnculas anaranjadas. La lámina muestra a una hembra, cuyo pico largo y curvo la distingue del macho.","plate":true},
+ {"id":"caribbean_monk_seal","name":"Foca monje del Caribe","latin":"Neomonachus tropicalis","region":"gm06_antillas","habitats":["costa"],"times":["amanecer","dia","atardecer"],"locality":"Caribe insular","habitatDetail":"Playas, cayos y orillas tranquilas del Caribe.","desc":"Foca tropical que descansaba en costas e islotes del Caribe. Estaba presente en 1842 y su último registro confirmado fue en 1952.","plate":true},
+ {"id":"chinese_paddlefish","name":"Pez espátula chino","latin":"Psephurus gladius","region":"HX-05-17","habitats":["rio"],"times":["amanecer","atardecer","noche"],"locality":"Cuenca del Yangtsé","habitatDetail":"Canal fluvial principal y pozas profundas del Yangtsé.","desc":"Pez migratorio del Yangtsé con un rostro alargado en forma de espada. Vivía en 1842 y se extinguió a comienzos del siglo XXI.","plate":true},
+ {"id":"australian_lungfish","name":"Pez pulmonado australiano","latin":"Neoceratodus forsteri","region":"oc_costa_nordeste_australiana","habitats":["rio"],"times":["atardecer","noche"],"locality":"Ríos Burnett y Mary, Queensland","habitatDetail":"Tramos fluviales lentos y pozas con vegetación sumergida.","desc":"Pez pulmonado australiano viviente de grandes escamas y aletas pareadas lobuladas. Su distribución nativa está ligada a los ríos Burnett y Mary.","plate":true},
+ {"id":"largetooth_sawfish","name":"Pez sierra común","latin":"Pristis pristis","region":"HX-04-04","habitats":["rio","costa"],"times":["amanecer","atardecer","noche"],"locality":"Golfo de México","habitatDetail":"Estuarios y desembocaduras de aguas someras.","desc":"Raya con rostro dentado capaz de remontar aguas dulces. Corresponde al pez sierra de dientes grandes, Pristis pristis.","plate":true},
+ {"id":"cuban_solenodon","name":"Solenodonte cubano","latin":"Atopogale cubana","region":"gm06_antillas","habitats":["bosque","selva"],"times":["noche"],"locality":"Oriente de Cuba","habitatDetail":"Bosques húmedos y su hojarasca en el oriente cubano.","desc":"Mamífero nocturno de hocico móvil, distinto del solenodonte de La Española. También se conoce como Solenodon cubanus.","plate":true},
+ {"id":"fiji_banded_iguana","name":"Iguana bandeada de Fiyi","latin":"Brachylophus fasciatus","region":"gm06_melanesia","habitats":["bosque","selva"],"times":["amanecer","dia"],"locality":"Islas Lau y otras islas orientales de Fiyi","habitatDetail":"Dosel y ramas de bosques insulares de Fiyi oriental.","desc":"Iguana arborícola viviente. La lámina muestra un macho de la forma bandeada oriental, con franjas claras sobre el cuerpo verde.","plate":true}
 ];
+const relictById=new Map(MUSEUM_RELICTS.map(relict=>[relict.id,relict]));
+const relictsByRegion=new Map();
+for(const relict of MUSEUM_RELICTS){
+ if(!relictsByRegion.has(relict.region))relictsByRegion.set(relict.region,[]);
+ relictsByRegion.get(relict.region).push(relict);
+}
+let relictMuseumDirty=false;
+const RELICT_DISCOVERY_RATES=Object.freeze([0.0002,0.0005,0.0012,0.003]);
+const RELICT_EXPEDITION_REGIONS={balkans:'HX-03-12',atlantic_survey:'mar_atlantico_septentrional'};
 // Beta 3.17 · Yacimientos de investigación, sin sustituir las expediciones originales.
 const MUSEUM_DIG_SITES=[
  {id:'british_cliffs',name:'Estratos de las Islas Británicas',region:'HX-01-09',seconds:180,money:55,knowledge:15,fragments:[2,3],tooth:0.12,track:0.24,claw:0.03,skull:0.004},
@@ -3685,6 +3723,11 @@ function museumJobTransaction(change){
  return committed;
 }
 function normalizeMuseumJobs(museum){
+ if(museum.relictDiscoveries) museum.relictDiscoveries=Object.fromEntries(Object.entries(museum.relictDiscoveries).filter(([id,record])=>
+  museum.relicts[id]&&record&&record.region===relictById.get(id)?.region&&Number.isFinite(record.at)&&record.at>=0
+  &&['manual','auto'].includes(record.source)));
+ if(museum.relictAutoHour) museum.relictAutoHour=Object.fromEntries(Object.entries(museum.relictAutoHour).filter(([id,hour])=>
+  relictById.has(id)&&Number.isSafeInteger(hour)&&hour>=0));
  for(const [jobsKey,seqKey,receiptsKey,historyKey,typeKey,types] of [
    ['excavations','excavationSeq','excavationSettled','excavationHistory','site',MUSEUM_DIG_SITES],
    ['relictSurveys','relictSurveySeq','relictSurveySettled','relictSurveyHistory','relict',MUSEUM_RELICTS]
@@ -3857,29 +3900,48 @@ function craftMuseumFossil(id,qty=1){
  render();
  return true;
 }
-// Beta 3.18 · Investigación de relictos: pistas, misiones, expedientes y logros.
-// Las apariciones naturales extraordinarias antiguas siguen siendo compatibles.
-function relictLeadCount(id){return Math.min(3,Math.max(0,Number(state.museum.relictLeads?.[id])||0));}
+
+// Relictos 5.0. Los indicios y el descubrimiento se guardan por separado.
+function normalizeRelictLeads(value){return Math.min(3,Math.max(0,Math.floor(Number(value)||0)));}
+function relictLeadCount(id){return normalizeRelictLeads(state.museum.relictLeads?.[id]);}
 function addRelictLead(id,qty=1){
- if(!MUSEUM_RELICTS.some(r=>r.id===id)||museumRelictOwned(id))return false;
- const before=relictLeadCount(id),next=Math.min(3,before+Math.max(0,Math.floor(qty)));
+ const relict=relictById.get(id);
+ if(!relict||museumRelictOwned(id))return false;
+ const before=relictLeadCount(id),next=normalizeRelictLeads(before+normalizeRelictLeads(qty));
  if(next===before)return false;
  state.museum.relictLeads[id]=next;
- pushLog('📜 Indicio de relicto: '+MUSEUM_RELICTS.find(r=>r.id===id).name+' · '+next+'/3.');
+ relictMuseumDirty=true;
+ pushLog('📜 Indicio de relicto: '+relict.name+' · '+next+'/3.');
  return true;
 }
+function relictsInField(conditions){
+ return (relictsByRegion.get(conditions.currentRegion)||[]).filter(r=>
+  r.habitats.includes(conditions.habitat)&&r.times.includes(conditions.time)&&!museumRelictOwned(r.id));
+}
 function maybeMuseumRelictLead(source,random=Math.random,conditions=state){
- const candidates=MUSEUM_RELICTS.filter(r=>r.region===conditions.currentRegion &&
-   r.habitats.includes(conditions.habitat)&&r.times.includes(conditions.time)&&
-   !museumRelictOwned(r.id)&&relictLeadCount(r.id)<3);
+ const candidates=relictsInField(conditions).filter(r=>relictLeadCount(r.id)<3);
  if(!candidates.length)return null;
  const base=source==='manual'?0.04:0.007;
  if(random()>=base*(state.upgrades.relictFieldTier?2:1))return null;
  const selected=candidates[Math.floor(random()*candidates.length)];
  return addRelictLead(selected.id)?selected.name:null;
 }
+function searchRelictInField(source,at,conditions,random=Math.random){
+ if(!Number.isFinite(at)||at<0||!['manual','auto'].includes(source))return null;
+ const hour=Math.floor(at/3600000);
+ for(const relict of relictsInField(conditions)){
+  if(source==='auto'){
+   // One qualifying search per relic and hour, including the historical time of queued work.
+   const attemptHours=state.museum.relictAutoHour??={};
+   if((attemptHours[relict.id]??-1)>=hour)continue;
+   attemptHours[relict.id]=hour;
+  }
+  if(random()<RELICT_DISCOVERY_RATES[relictLeadCount(relict.id)]&&recordMuseumRelict(relict.id,{at,source,conditions}))return relict;
+ }
+ return null;
+}
 function relictSurveySpec(id){
- const r=MUSEUM_RELICTS.find(r=>r.id===id);
+ const r=relictById.get(id);
  if(!r)return null;
  const region=REGIONS.find(x=>x.id===r.region);
  if(!region)return null;
@@ -3900,7 +3962,7 @@ function startRelictSurvey(id,now=Date.now()){
  return museumJobTransaction(()=>{
    state.money-=mission.money;state.knowledge-=mission.knowledge;
    state.museum.relictSurveys.push({id:++state.museum.relictSurveySeq,relict:id,endAt:now+mission.seconds*1000});
-   pushLog('🔎 Archivo de campo iniciado: '+mission.name+'.');
+   pushLog('🔎 Prospección documental iniciada: '+museumRelictName3270(relictById.get(id))+'.');
  });
 }
 function collectRelictSurvey(jobId,now=Date.now(),random=Math.random){
@@ -3924,17 +3986,7 @@ function collectRelictSurvey(jobId,now=Date.now(),random=Math.random){
    pushLog('🔎 Investigación completada: '+r.name+' · '+granted+' indicio(s)'+(material?' y una muestra de huellas':'')+'.');
  });
 }
-function canCatalogRelict(id){
- return !!(MUSEUM_RELICTS.some(r=>r.id===id)&&!museumRelictOwned(id)&&relictLeadCount(id)>=3&&
-  state.knowledge>=140&&(state.inventory.old_ink||0)>=1&&(state.inventory.parchment_scrap||0)>=2);
-}
-function catalogRelict(id){
- if(!canCatalogRelict(id))return false;
- state.knowledge-=140;state.inventory.old_ink-=1;state.inventory.parchment_scrap-=2;
- recordMuseumRelict(id);
- pushLog('📖 Expediente patrimonial completado: '+MUSEUM_RELICTS.find(r=>r.id===id).name+'.');
- render();return true;
-}
+
 function museumRelictSetBonus(){
  return MUSEUM_RELICT_SETS.reduce((sum,set)=>
   sum+(set.requires.every(id=>museumRelictOwned(id))?set.bonus:0),0);
@@ -3969,13 +4021,15 @@ function researchRelict(){
 function relictResearchBonus(){return Math.min(12,state.museum.relictResearchPoints||0)*0.01;}
 
 function museumRelictOwned(id){return !!state.museum?.relicts?.[id];}
-function recordMuseumRelict(id){
- const relict=MUSEUM_RELICTS.find(r=>r.id===id);
- if(!relict||museumRelictOwned(id))return false;
- state.museum.relicts=state.museum.relicts||{};
+
+function recordMuseumRelict(id,{at,source,conditions}={}){
+ const relict=relictById.get(id);
+ if(!relict||!Number.isFinite(at)||at<0||!['manual','auto'].includes(source)||!conditions||
+    !relictsInField(conditions).includes(relict))return false;
  state.museum.relicts[id]=true;
- state.museum.relictLeads[id]=3;
- pushLog('🗿 Hallazgo extraordinario del Museo: '+relict.name+'. No computa para el Atlas.');
+ relictMuseumDirty=true;
+ (state.museum.relictDiscoveries??={})[id]={at,source,region:relict.region,habitat:conditions.habitat,time:conditions.time,notice:true};
+ pushLog('🗿 Relicto descubierto en Campo: '+relict.name+'.');
  return true;
 }
 function maybeMuseumFieldDiscovery(source,conditions=state){
@@ -3989,14 +4043,6 @@ function maybeMuseumFieldDiscovery(source,conditions=state){
   if(['rio','costa'].includes(conditions.habitat)&&Math.random()<(manual?0.012:0.0015)){
    addInventory('river_pearl',1);found.push('perla fluvial');
   }
- const clue=maybeMuseumRelictLead(source,Math.random,conditions);
- if(clue)found.push('indicio: '+clue);
- const candidates=MUSEUM_RELICTS.filter(r=>r.region===conditions.currentRegion &&
-   r.habitats.includes(conditions.habitat)&&r.times.includes(conditions.time)&&!museumRelictOwned(r.id));
- if(candidates.length&&Math.random()<(manual?0.0006:0.00009)){
-  const picked=candidates[Math.floor(Math.random()*candidates.length)];
-  if(recordMuseumRelict(picked.id))found.push('relicto: '+picked.name);
- }
  return found;
 }
 function museumDisplayKey(kind,id){return kind+':'+id;}
@@ -4045,9 +4091,15 @@ function renderMuseumCollections(tab){
 
 // Cinco salas: los animales ocupan las doce vitrinas originales;
 // las colecciones científicas tienen exhibición independiente, sin renta.
+function relictArtwork(relict,size){
+ if(!relict.plate)return globalThis.ATLAS_RELICT_ART?.render(relict.id)||'';
+ const file='./naturalist-art/relicts/'+(size===512?'':size+'/')+relict.id+'.webp';
+ return '<img class="relict-plate" src="'+file+'" width="'+size+'" height="'+size+'" alt="'+esc(relict.name)+'" decoding="async">';
+}
 function museumCardArt(kind,id){
- const relictArt=globalThis.ATLAS_RELICT_ART?.render(id);
- if(relictArt)return relictArt;
+ const relict=relictById.get(id);
+ if(relict)return relictArtwork(relict,256);
+
  const frame=(paths)=>'<svg viewBox="0 0 100 100" aria-hidden="true">'+paths+'</svg>';
  if(id==='ankylosaurus_mount')return frame(
   '<path d="M20 64Q37 41 65 49Q85 55 80 70L43 75Z" fill="#d9c19a" stroke="#795d41" stroke-width="4"/>'+
@@ -4237,23 +4289,15 @@ function renderMuseumRelicts(){
    '<button class="btn alt" data-action="claim-relict-milestone" data-id="'+m.id+'" '+(canClaimRelictMilestone(m.id)?'':'disabled')+'>'+(claimed?'Logrado':'Reclamar')+'</button></div>';
  }).join('');
  const pieces=MUSEUM_RELICTS.map(r=>{
-  const found=museumRelictOwned(r.id),leads=relictLeadCount(r.id),zone=REGIONS.find(z=>z.id===r.region);
-  const regionOpen=!!state.regionUnlocked?.[r.region],on=found&&museumIsDisplayed('relict',r.id);
-  const survey=relictSurveySpec(r.id);
-  const signals=Array.from({length:3},(_,i)=>'<span class="'+(found||i<leads?'is-known':'')+'"></span>').join('');
-  const actions=found?'<button class="btn alt" data-action="museum-display" data-id="relict:'+r.id+'">'+(on?'Retirar vitrina':'Exponer')+'</button>':
-   '<button class="btn alt" data-action="start-relict-survey" data-id="'+r.id+'" '+(canStartRelictSurvey(r.id)?'':'disabled')+'>'+
-   (regionOpen?'Investigar · £'+survey.money+' / '+survey.knowledge+' K':'Zona bloqueada')+'</button>'+
-   '<button class="btn" data-action="catalog-relict" data-id="'+r.id+'" '+(canCatalogRelict(r.id)?'':'disabled')+'>Catalogar</button>';
+  const model=museumRelict3270(r);
+  const action=model.actions[0];
   return '<div class="showpiece museum-v33-vitrine museum-v311-special museum-v318-card">'+
-   '<div class="museum-v33-frame"><div class="sprite-wrap">'+(found?museumCardArt('',r.id):'<div class="qmark">?</div>')+'</div></div>'+
-   '<strong>'+(found||leads?r.name:'Relicto desconocido')+'</strong>'+
-   '<div class="small">'+(found?r.latin:r.desc)+'</div>'+
-   '<div class="small"><b>Zona:</b> '+(zone?zone.name:'Desconocida')+' · '+r.habitats.map(habitatLabel).join(' / ')+'</div>'+
-   '<div class="museum-v318-indicia"><span>Indicios '+(found?'completo':leads+'/3')+'</span><div>'+signals+'</div></div>'+
-   (!found?'<div class="small">Catalogación: 3 indicios, 140 conocimiento, 1 tinta y 2 pergaminos. Investigación: '+Math.ceil(survey.seconds/60)+' min.</div>':
-    '<div class="small">Expediente conservado · vitrina '+(on?'activa':'retirada')+'</div>')+
-   '<div class="museum-v318-actions">'+actions+'</div></div>';
+   '<div class="museum-v33-frame"><div class="sprite-wrap">'+(model.art||'<div class="qmark">?</div>')+'</div></div>'+
+   '<strong>'+esc(model.name)+'</strong><div class="small">'+esc(model.latin)+'</div>'+
+   model.details.map(entry=>'<div class="small">'+esc(entry.label)+' · '+esc(entry.value)+'</div>').join('')+
+   '<div class="small">Indicios '+model.leads+'/3 · '+esc(model.status)+'</div>'+
+   (model.description?'<p class="small">'+esc(model.description)+'</p>':'')+
+   (action?'<button class="btn alt" data-action="'+action.action+'" data-id="'+(model.owned?'relict:':'')+r.id+'" '+(action.enabled===false?'disabled':'')+'>'+esc(action.label)+'</button>':'')+'</div>';
  }).join('');
  const archive=(state.museum.relictSurveyHistory||[]).slice(-8).reverse().map(entry=>{
   const r=MUSEUM_RELICTS.find(x=>x.id===entry.relict);
@@ -4349,7 +4393,7 @@ function renderMuseum(){
  </section></div>`;
 }
 // M-3270 BEGIN presentation
-const museumUI3270={filter:'all',sort:'income-desc',samplePage:0,galleryPage:0,folds:{},scrolls:{},navLeft:0,lastRoom:null,restore:null,focusRoom:false,modal:null};
+const museumUI3270={filter:'all',sort:'income-desc',samplePage:0,galleryPage:0,relictPage:0,folds:{},scrolls:{},navLeft:0,lastRoom:null,restore:null,focusRoom:false,modal:null};
 const museumTokens3270=new Map(),museumTokenKeys3270=new Map();
 function museumToken3270(kind,id){
  const key=kind+':'+id;if(museumTokenKeys3270.has(key))return museumTokenKeys3270.get(key);
@@ -4380,10 +4424,27 @@ function museumCollection3270(p){
  const owned=!!state.museum.collections[p.id],displayed=owned&&museumIsDisplayed('collection',p.id),ready=museumCollectionReady(p),token=museumToken3270('collection',p.id),req=museumMaterials3270(p.requires);
  return {token,kind:p.tab==='artifacts'?'Artefacto histórico':'Registro paleontológico',name:p.name,owned,open:owned,art:museumCardArt('',p.id),silhouette:!owned,status:owned?displayed?'En exposición':'Catalogado':ready?'Disponible para catalogar':'Pendiente',description:p.description,materials:owned?[]:req,referenceMaterials:req,knowledge:owned?null:{have:state.knowledge,need:p.knowledge,met:state.knowledge>=p.knowledge},detail:owned?'Pieza conservada · exposición independiente':p.description,actions:owned?[{action:'museum-display',token,label:displayed?'Retirar vitrina':'Exponer',alt:true}]:[{action:'catalog-museum',token,label:'Catalogar',enabled:ready}]};
 }
-function museumRelictName3270(r){return museumRelictOwned(r.id)||relictLeadCount(r.id)>0?r.name:'Relicto desconocido';}
+function museumRelictName3270(r){
+ return museumRelictOwned(r.id)||relictLeadCount(r.id)>0?r.name:'Expediente '+(MUSEUM_RELICTS.indexOf(r)+1);
+}
 function museumRelict3270(r){
- const owned=museumRelictOwned(r.id),leads=owned?3:relictLeadCount(r.id),displayed=owned&&museumIsDisplayed('relict',r.id),known=owned||leads>0,token=museumToken3270('relict',r.id),survey=relictSurveySpec(r.id),region=REGIONS.find(z=>z.id===r.region),ready=canCatalogRelict(r.id);
- return {token,kind:'Relicto del gabinete',name:museumRelictName3270(r),latin:owned?r.latin:'',owned,open:owned,art:owned?museumCardArt('',r.id):'',status:owned?displayed?'En exposición':'Catalogado':ready?'Disponible para catalogar':leads?'Indicios encontrados':'Desconocido',leads,description:known?r.desc:'Expediente pendiente de identificación.',detail:(region?.name||'Región no registrada')+(owned?' · registro conservado':leads>=3?' · indicios completos':' · prospección documental'),materials:!owned&&leads>=3?museumMaterials3270({old_ink:1,parchment_scrap:2}):[],knowledge:!owned&&leads>=3?{have:state.knowledge,need:140,met:state.knowledge>=140}:null,actions:owned?[{action:'museum-display',token,label:displayed?'Retirar vitrina':'Exponer',alt:true}]:leads>=3?[{action:'catalog-relict',token,label:'Catalogar',enabled:ready}]:[{action:'start-relict-survey',token,label:survey?'Investigar · £'+survey.money+' / '+survey.knowledge+' K':'Archivo no disponible',enabled:canStartRelictSurvey(r.id),alt:true}]};
+ const owned=museumRelictOwned(r.id),discovery=state.museum.relictDiscoveries?.[r.id];
+ const leads=owned&&!discovery?3:relictLeadCount(r.id);
+ const displayed=owned&&museumIsDisplayed('relict',r.id);
+ const token=museumToken3270('relict',r.id),survey=relictSurveySpec(r.id);
+ const region=REGIONS.find(z=>z.id===r.region);
+ const details=[];
+ if(owned||leads>=1)details.push({label:'Localización',value:[region?.code,region?.name,r.locality].filter(Boolean).join(' · ')});
+ if(owned||leads>=2)details.push({label:'Hábitat',value:r.habitats.map(h=>habitatLabel(h).replace(/[^\p{L}\p{N}\s]/gu,'').trim()).join(' / ')+'. '+r.habitatDetail});
+ if(owned||leads>=3)details.push({label:'Comportamiento',value:'Turno favorable: '+r.times.map(t=>timeLabel(t).replace(/[^\p{L}\p{N}\s]/gu,'').trim()).join(' / ')});
+ if(owned)details.push({label:'Fecha de registro',value:discovery?museumDate3270(discovery.at)+' · '+(discovery.source==='auto'?'Equipo de naturalistas':'Búsqueda manual'):'Fecha histórica sin registrar'});
+ let actions=[];
+ if(owned)actions=[{action:'museum-display',token,label:displayed?'Retirar vitrina':'Exponer',alt:true}];
+ else if(leads<3)actions=[{action:'start-relict-survey',token,label:survey?'Investigar · £'+survey.money+' / '+survey.knowledge+' K':'Archivo no disponible',enabled:canStartRelictSurvey(r.id),alt:true}];
+ if(!owned&&leads&&state.regionUnlocked[r.region])actions.push({action:'relict-travel',token,label:'Ir a Campo',alt:true});
+ return {token,kind:'Relicto del gabinete',name:museumRelictName3270(r),latin:owned?r.latin:'',owned,open:owned,
+  art:owned?relictArtwork(r,256):'',status:owned?displayed?'En exposición':'Descubierto':leads===3?'Buscar en Campo':leads?'Indicios encontrados':'Sin indicios',
+  leads,details,description:owned?r.desc:'',actions};
 }
 function museumSampleQuery3270(){
  let ids=Object.keys(SPECIES).filter(id=>(stage(id)===5&&state.published[id])||state.museum.exhibits[id]);const eligible=ids.length;
@@ -4408,7 +4469,7 @@ function museumJobs3270(type,now=Date.now()){
  return (type==='dig'?state.museum.excavations:state.museum.relictSurveys).flatMap(job=>{
   const p=type==='dig'?MUSEUM_DIG_SITES.find(s=>s.id===job.site):MUSEUM_RELICTS.find(r=>r.id===job.relict);if(!p)return [];
   const spec=type==='dig'?p:relictSurveySpec(p.id),t=museumTimer3270(job,spec,type,now),region=REGIONS.find(r=>r.id===p.region);
-  return [{...t,kind:type==='dig'?'Excavación':'Prospección documental',name:type==='dig'?p.name:museumRelictName3270(p),region:region?.name||'Región no registrada',finished:type==='dig'?'Excavación finalizada — Recoger hallazgos':'Prospección finalizada — Recoger indicios',reward:type==='dig'?`Fragmentos ${p.fragments[0]}–${p.fragments[1]}${state.upgrades.excavationTier?' +1 por investigación':''}; posibles dientes, huellas, garras y cráneos.`:`Hasta ${state.upgrades.relictSurveyTier?2:1} indicio(s), con límite de 3; posible muestra de huellas.`,actions:[{action:type==='dig'?'collect-excavation':'collect-relict-survey',token:type+':'+job.id,label:t.ready?'Recoger hallazgos':'En curso',enabled:t.ready}]}];
+  return [{...t,kind:type==='dig'?'Excavación':'Prospección documental',name:type==='dig'?p.name:museumRelictName3270(p),region:type==='dig'||museumRelictOwned(p.id)||relictLeadCount(p.id)>0?region?.name||'Región no registrada':'Ubicación por confirmar',finished:type==='dig'?'Excavación finalizada — Recoger hallazgos':'Prospección finalizada — Recoger indicios',reward:type==='dig'?`Fragmentos ${p.fragments[0]}–${p.fragments[1]}${state.upgrades.excavationTier?' +1 por investigación':''}; posibles dientes, huellas, garras y cráneos.`:`Hasta ${state.upgrades.relictSurveyTier?2:1} indicio(s), con límite de 3; posible muestra de huellas.`,actions:[{action:type==='dig'?'collect-excavation':'collect-relict-survey',token:type+':'+job.id,label:t.ready?'Recoger hallazgos':'En curso',enabled:t.ready}]}];
  });
 }
 function museumDate3270(at){return Number.isFinite(Number(at))&&Number(at)>0?new Date(Number(at)).toLocaleString('es-CL',{timeZone:'America/Santiago',dateStyle:'short',timeStyle:'short'}):'Fecha no registrada';}
@@ -4427,7 +4488,12 @@ function museumViewModel3270(loadFold=null){
   view={folds:museumUI3270.folds,jobs:museumJobs3270('dig'),activeJobs:state.museum.excavations.length,maxJobs:maxExcavations(),sites:MUSEUM_DIG_SITES.map(p=>({name:p.name,region:REGIONS.find(r=>r.id===p.region)?.name||'Región no registrada',minutes:p.seconds/60,money:p.money,knowledge:p.knowledge,reward:`Fragmentos ${p.fragments[0]}–${p.fragments[1]}; opción de dientes, huellas, garras y cráneos.`,actions:[{action:'start-excavation',token:museumToken3270('site',p.id),label:canStartExcavation(p.id)?'Iniciar excavación':'Requisitos pendientes',enabled:canStartExcavation(p.id)}]})),mountCount:museumFossilMountCount(),mounts:loadFold?[]:MUSEUM_FOSSIL_RECIPES.filter(p=>p.unique).map(museumRecipe3270),components:load('components')?MUSEUM_FOSSIL_RECIPES.filter(p=>!p.unique).map(museumRecipe3270):[],records:load('fossil-records')?MUSEUM_COLLECTIONS.filter(p=>p.tab==='fossils').map(museumCollection3270):[],curation:{points:Math.min(20,Math.max(0,Number(state.museum.curationPoints)||0)),bonus:Math.round(museumCurationBonus()*100),active:sets.filter(s=>s.complete),pending:sets.filter(s=>!s.complete),projects:!load('curation')?[]:MUSEUM_CURATORIAL_PROJECTS.map(p=>({name:p.name,materials:museumMaterials3270(p.requires),reward:p.knowledge,points:p.points,actions:[{action:'curate-museum',token:museumToken3270('project',p.id),label:'Investigar conservación',enabled:canCurateMuseum(p.id)}]}))},completedJobs:state.museum.excavationsCompleted||0,history:[...state.museum.excavationHistory].reverse().map(entry=>({name:MUSEUM_DIG_SITES.find(s=>s.id===entry.site)?.name||'Yacimiento histórico',date:museumDate3270(entry.at),detail:Object.entries(entry.rewards||{}).filter(([id,n])=>ITEMS[id]&&n>0).map(([id,n])=>ITEMS[id].name+' ×'+n).join(' · ')||'Sin recompensas registradas'}))};
  }else if(room==='relicts'){
   const sets=museumSetModels3270(MUSEUM_RELICT_SETS,true),owned=relicMuseumCount();
-  view={folds:museumUI3270.folds,owned,jobs:museumJobs3270('survey'),activeJobs:state.museum.relictSurveys.length,maxJobs:maxRelictSurveys(),pieces:MUSEUM_RELICTS.map(museumRelict3270),activeSets:sets.filter(s=>s.complete),pendingSets:sets.filter(s=>!s.complete),milestones:MUSEUM_RELICT_MILESTONES.map(p=>({name:p.name,done:Math.min(owned,p.count),total:p.count,claimed:!!state.museum.relictAchievements[p.id],knowledge:p.knowledge,actions:[{action:'claim-relict-milestone',token:museumToken3270('milestone',p.id),label:state.museum.relictAchievements[p.id]?'Logro obtenido':'Reclamar hito',enabled:canClaimRelictMilestone(p.id),alt:true}]})),research:{points:state.museum.relictResearchPoints||0,bonus:Math.round(relictResearchBonus()*100),achievementBonus:Math.round(relictAchievementBonus()*100),actions:[{action:'research-relict',label:'Analizar registros',enabled:canResearchRelict()}]},history:[...state.museum.relictSurveyHistory].reverse().map(entry=>{const r=MUSEUM_RELICTS.find(p=>p.id===entry.relict);return {name:r?museumRelictName3270(r):'Prospección histórica',date:museumDate3270(entry.at),detail:(Number.isFinite(entry.leads)?entry.leads+' indicio(s) registrados':'Sin cantidad registrada')+(entry.material&&ITEMS[entry.material]?' · '+ITEMS[entry.material].name:'')};})};
+  const pageSize=8,total=MUSEUM_RELICTS.length,pages=Math.ceil(total/pageSize);
+  const page=museumUI3270.relictPage=Math.min(museumUI3270.relictPage,pages-1);
+  const ordered=[...MUSEUM_RELICTS].sort((a,b)=>Number(museumRelictOwned(b.id))-Number(museumRelictOwned(a.id))||
+   relictLeadCount(b.id)-relictLeadCount(a.id)||
+   Number(Boolean(state.regionUnlocked[b.region]))-Number(Boolean(state.regionUnlocked[a.region])));
+  view={folds:museumUI3270.folds,owned,page,pages,total,jobs:museumJobs3270('survey'),activeJobs:state.museum.relictSurveys.length,maxJobs:maxRelictSurveys(),pieces:ordered.slice(page*pageSize,(page+1)*pageSize).map(museumRelict3270),activeSets:sets.filter(s=>s.complete),pendingSets:sets.filter(s=>!s.complete),milestones:MUSEUM_RELICT_MILESTONES.map(p=>({name:p.name,done:Math.min(owned,p.count),total:p.count,claimed:!!state.museum.relictAchievements[p.id],knowledge:p.knowledge,actions:[{action:'claim-relict-milestone',token:museumToken3270('milestone',p.id),label:state.museum.relictAchievements[p.id]?'Logro obtenido':'Reclamar hito',enabled:canClaimRelictMilestone(p.id),alt:true}]})),research:{points:state.museum.relictResearchPoints||0,bonus:Math.round(relictResearchBonus()*100),achievementBonus:Math.round(relictAchievementBonus()*100),actions:[{action:'research-relict',label:'Analizar registros',enabled:canResearchRelict()}]},history:[...state.museum.relictSurveyHistory].reverse().map(entry=>{const r=MUSEUM_RELICTS.find(p=>p.id===entry.relict);return {name:r?museumRelictName3270(r):'Prospección histórica',date:museumDate3270(entry.at),detail:(Number.isFinite(entry.leads)?entry.leads+' indicio(s) registrados':'Sin cantidad registrada')+(entry.material&&ITEMS[entry.material]?' · '+ITEMS[entry.material].name:'')};})};
  }else{const pieces=MUSEUM_COLLECTIONS.filter(p=>p.tab==='artifacts').map(museumCollection3270);view={pieces,owned:pieces.filter(p=>p.owned).length};}
  return {room,view,level:state.museum.wing,wingName:MUSEUM_WINGS.find(w=>w.level===state.museum.wing)?.name||'Galería histórica',used,capacity,rate:museumRate(),collections:Object.values(state.museum.collections).filter(Boolean).length,relicts:relicMuseumCount(),cataloged:Object.values(state.museum.collections).filter(Boolean).length+relicMuseumCount(),otherCount:extra.length,legendaryCount:LEGENDARY_SPECIMENS.filter(l=>state.legendaryFound?.[l.id]).length,expandInfo:next?'Ampliación: '+next.name+' · £'+next.cost+' · '+next.prestige+' prestigio (no se consume).':null,folds:museumUI3270.folds};
 }
@@ -4458,7 +4524,8 @@ function museumAction3270(action,token,quantity,source){
  if(action==='museum-tab'){museumSetRoom3270(token);return;}
  if(action==='m27-candidates'){museumUI3270.filter='available';museumUI3270.samplePage=0;museumSetRoom3270('samples');return;}
  if(action==='m27-page'||action==='m27-next'){
-  if(!['samples','gallery'].includes(token))return;const key=token==='samples'?'samplePage':'galleryPage';museumUI3270[key]=Math.max(0,museumUI3270[key]+(action==='m27-next'?1:-1));
+  const pageKeys={samples:'samplePage',gallery:'galleryPage',relicts:'relictPage'};
+  if(!Object.hasOwn(pageKeys,token))return;const key=pageKeys[token];museumUI3270[key]=Math.max(0,museumUI3270[key]+(action==='m27-next'?1:-1));
   if(token==='samples'){const target=panel.querySelector('#m27-samples-result');if(target)target.innerHTML=globalThis.AtlasMuseumUI.samples(museumSamples3270());}else renderPanel();return;
  }
  const p=museumResolve3270(token);if(!p)return;
@@ -4473,8 +4540,11 @@ function museumAction3270(action,token,quantity,source){
  if(action==='collect-excavation'&&p.kind==='dig')collectExcavation(p.id);
  if(action==='curate-museum'&&p.kind==='project')curateMuseum(p.id);
  if(action==='start-relict-survey'&&p.kind==='relict')startRelictSurvey(p.id);
+ if(action==='relict-travel'&&p.kind==='relict'&&relictLeadCount(p.id)>0){
+  const relict=relictById.get(p.id);
+  if(relict&&state.regionUnlocked[relict.region])travelToRegion(relict.region);
+ }
  if(action==='collect-relict-survey'&&p.kind==='survey')collectRelictSurvey(p.id);
- if(action==='catalog-relict'&&p.kind==='relict')catalogRelict(p.id);
  if(action==='claim-relict-milestone'&&p.kind==='milestone')claimRelictMilestone(p.id);
 }
 // M-3270 END presentation
@@ -4898,6 +4968,12 @@ if(Math.random()<amberChance){addInventory('fossil_amber',1);pushLog('🟠 Halla
   if(jobId!==null)(state.voyageSettled??={})[jobId]=true;
   return true;
 }
+function creditRelictVoyageClue(job){
+ const eligible=relictsByRegion.get(RELICT_EXPEDITION_REGIONS[job.type])?.find(r=>!museumRelictOwned(r.id)&&relictLeadCount(r.id)<3);
+ if(eligible&&addRelictLead(eligible.id)){
+  state.voyageHistory.at(-1).relictLead={id:eligible.id,level:relictLeadCount(eligible.id)};
+ }
+}
 function processVoyages(now){
  // E-3280 BEGIN clock-validation
  if(!Number.isFinite(now))return 0;
@@ -4908,7 +4984,10 @@ function processVoyages(now){
   if(!job||!Number.isFinite(job.endAt))return true;
  // E-3280 END historical-date-validation
   if(job.endAt>now)return true;
-  if(resolveVoyageReward(job/* E-3280 BEGIN process-time */,now/* E-3280 END process-time */)) count++;
+  if(resolveVoyageReward(job/* E-3280 BEGIN process-time */,now/* E-3280 END process-time */)){
+   creditRelictVoyageClue(job);
+   count++;
+  }
   return false;
  });
  return count;
@@ -4921,7 +5000,7 @@ function finishVoyage(jobId){
  const idx=state.voyages.findIndex(v=>String(v.id)===String(jobId));
  if(idx<0) return;
  const [job]=state.voyages.splice(idx,1);
- resolveVoyageReward(job);
+ if(resolveVoyageReward(job))creditRelictVoyageClue(job);
  render();
 }
 
@@ -4966,7 +5045,10 @@ function voyageHistory3280(){return (Array.isArray(state.voyageHistory)?state.vo
 function voyageReceipt3280(index,illustrated=false){
  const h=voyageHistory3280()[index];if(!h)return null;
  const items=object=>Object.entries(object||{}).filter(([id,n])=>ITEMS[id]&&Number.isFinite(n)&&n>0).map(([id,n])=>developmentItem3280(id,n,illustrated));
- return {index,key:'receipt:'+h.at+':'+(h.jobId??index)+':'+h.type,name:VOYAGES.find(v=>v.id===h.type).name,date:developmentDate3280(h.at),money:h.money,knowledge:h.knowledge,guaranteed:items(h.guaranteed),found:items(h.found)};
+ const relic=relictById.get(h.relictLead?.id);
+ const lead=relic&&Number.isInteger(h.relictLead.level)&&h.relictLead.level>=1&&h.relictLead.level<=3
+  ?relic.name+' · '+h.relictLead.level+'/3':'';
+ return {index,key:'receipt:'+h.at+':'+(h.jobId??index)+':'+h.type,name:VOYAGES.find(v=>v.id===h.type).name,date:developmentDate3280(h.at),money:h.money,knowledge:h.knowledge,guaranteed:items(h.guaranteed),found:items(h.found),...(lead?{relictLead:lead}:{})};
 }
 function voyagePossibilities3280(id){
  const v=VOYAGES.find(v=>v.id===id);if(!v)return null;
@@ -5334,6 +5416,11 @@ function handlePanelAction(e){
     // J-3250 END actions
     if(act==='field-journal'){if(id&&currentRegion().species.includes(id))state.selectedJournal=id;tab='journal';renderPanel();}
     if(act==='field-research'){tab='research';renderPanel();}
+    if(act==='dismiss-relict-notice'&&state.museum.relictDiscoveries?.[id]?.notice===true){
+      state.museum.relictDiscoveries[id].notice=false;
+      persist();
+      updateFieldOutput();
+    }
     if(act==='set-region') setRegion(id);
     if(act==='travel-region') travelToRegion(id);
     if(act==='unlock-region') unlockRegion(id);
@@ -5369,7 +5456,6 @@ function handlePanelAction(e){
     if(act==='curate-museum'){curateMuseum(id);}
     if(act==='start-relict-survey'){startRelictSurvey(id);}
     if(act==='collect-relict-survey'){collectRelictSurvey(id);}
-    if(act==='catalog-relict'){catalogRelict(id);}
     if(act==='claim-relict-milestone'){claimRelictMilestone(id);}
     if(act==='research-relict'){researchRelict();}
     if(act==='museum-display'){toggleMuseumDisplay(id);}
@@ -5561,7 +5647,11 @@ function tick(){
  // EC3300 END tick
  if(tab==='museum'&&state.museumView==='relicts'){
   const ready=state.museum.relictSurveys.filter(job=>job.endAt<=now&&!job.readyNotified);
-  if(ready.length){ready.forEach(job=>job.readyNotified=true);renderPanel();}
+  if(ready.length||relictMuseumDirty){
+   ready.forEach(job=>job.readyNotified=true);
+   relictMuseumDirty=false;
+   renderPanel();
+  }
  }
  if(tab==='museum'&&state.museumView==='fossils'){
   const newlyReady=state.museum.excavations.filter(job=>job.endAt<=now&&!job.readyNotified);
@@ -7423,6 +7513,7 @@ finishVoyage=function(id){
  const ok=tradeTransaction3300(()=>{
    state.voyages=state.voyages.filter(j=>j!==job);
    rewarded=resolveVoyageReward(job,now);
+   if(rewarded)creditRelictVoyageClue(job);
    return true;
  });
  renderCounters();renderPanel();
@@ -7629,7 +7720,7 @@ function cpUnderlying3430(id){return ['shipyard','caravan'].includes(id)?'expedi
 function cpGo3430(id){if(!cpUI3430.facilities.some(f=>f[0]===id))return false;cp3430.active=true;cp3430.facility=id;cp3430.pending=null;tab=cpUnderlying3430(id);if(id==='shipyard')navigationTab3300='expeditions';if(id==='caravan')navigationTab3300='commerce';if(id==='workshop')state.inventoryView='taller';if(id==='excavations'){state.museumView='fossils';museumUI3270.folds['dig-sites']=true;}if(id==='surveys')state.museumView='relicts';renderPanel();globalThis.scrollTo({top:0,behavior:'instant'});return true;}
 function cpHome3430(){cp3430.active=false;cp3430.facility=null;cp3430.pending=null;tab='expeditions';renderPanel();globalThis.scrollTo({top:0,behavior:'instant'});}
 renderExpeditions=function(){if(cp3430.mode==='old')return cpOriginalExpeditions3430();if(cp3430.active){return cp3430.facility==='caravan'?renderTrade3300():scientificExpeditions3300();}return cpUI3430.camp(cpModels3430(),cpSummary3430());};
-function cpMuseumPresentation3430(){const root=panel.querySelector('.m27-root'),room=root?.querySelector('#m27-room');if(!root||!room)return;root.querySelectorAll('.m27-heading,.m27-rooms,[data-m27-fold="ledger"],.m27-legendary').forEach(n=>n.remove());room.setAttribute('aria-label',cp3430.facility==='excavations'?'Excavaciones del Campamento':'Prospecciones del Campamento');for(const node of [...room.children]){const keep=node.classList.contains('m27-jobs')||(cp3430.facility==='excavations'?['dig-sites','dig-history'].includes(node.dataset.m27Fold):node.classList.contains('m27-grid')||node.dataset.m27Fold==='relict-history');if(!keep)node.remove();}
+function cpMuseumPresentation3430(){const root=panel.querySelector('.m27-root'),room=root?.querySelector('#m27-room');if(!root||!room)return;root.querySelectorAll('.m27-heading,.m27-rooms,[data-m27-fold="ledger"],.m27-legendary').forEach(n=>n.remove());room.setAttribute('aria-label',cp3430.facility==='excavations'?'Excavaciones del Campamento':'Prospecciones del Campamento');for(const node of [...room.children]){const keep=node.classList.contains('m27-jobs')||(cp3430.facility==='excavations'?['dig-sites','dig-history'].includes(node.dataset.m27Fold):node.classList.contains('m27-grid')||node.classList.contains('m27-pager')||node.dataset.m27Fold==='relict-history');if(!keep)node.remove();}
  if(cp3430.facility==='surveys'){const grid=room.querySelector('.m27-grid');grid?.querySelectorAll('.m27-piece').forEach(n=>{if(!n.querySelector('[data-action="start-relict-survey"]'))n.remove();});if(grid&&!grid.children.length)grid.innerHTML='<p class="m27-note">No quedan nuevos expedientes de campo en esta selección. Consulta los registros conservados en el Museo.</p>';}
  room.insertAdjacentHTML('beforeend','<p class="cp3430-museum-link"><button type="button" data-cp-museum="'+(cp3430.facility==='excavations'?'fossils':'relicts')+'">'+(cp3430.facility==='excavations'?'Ver reconstrucciones y colecciones en el Museo':'Ver catalogación y relictos en el Museo')+' →</button></p>');}
 renderPanel=function(){

@@ -66,6 +66,8 @@ for (const row of Object.values(reviews).flat()) {
   if (row.comparison) files.add(art + row.comparison);
 }
 for (const file of files) copy(file);
+for (const file of [...(sourceAssets.relictFiles || []), 'laboratorio-relictos.html', 'js/relict-art-v3199.js',
+  art + 'relict-catalog.js', art + 'relict-review.js']) copy(file);
 for (const file of ['lab.css', 'plate-view.js', 'pigment-audit.js', 'pigment-audit-data.js', 'legendary-view.js', ...stages.map(stage => stage + '.js')]) copy(art + file);
 copy('css/naturalist-art-v400.css');
 copy('js/naturalist-art-v400.js');
@@ -102,7 +104,7 @@ write('index.html', `<!DOCTYPE html>
     <div class="container">
       <p class="eyebrow">El Gran Atlas · V${version}</p>
       <h1>Visor de albinos y melánicos</h1>
-      <nav aria-label="Visores de ilustración"><a href="legendarios/">Colección de legendarios</a></nav>
+      <nav aria-label="Visores de ilustración"><a href="legendarios/">Colección de legendarios</a> · <a href="laboratorio-relictos.html">Laboratorio de relictos</a></nav>
     </div>
   </header>
   <main class="container">

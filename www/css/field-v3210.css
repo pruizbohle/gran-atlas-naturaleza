@@ -19,3 +19,25 @@
 @media(max-width:700px){body.field-active .save-tools-launch{min-height:44px}body.field-active .mobile-stats-toggle{min-height:44px}.field-stage{height:clamp(240px,calc(100dvh - 528px),390px)}.field-game .field-animal-sprite{width:180px;max-height:180px}.field-game .field-actors-group .field-animal-sprite{width:100px;max-height:125px}}
 @media(max-width:370px){.field-stage{height:240px}}
 @media(min-width:701px) and (max-height:950px){.field-stage{height:300px}}
+
+#fieldRelictNotice:empty { display: none; }
+.field-relict-card {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .7rem;
+  padding: .65rem .8rem;
+  margin-block: .5rem;
+  color: #244238;
+  background: #edf4e8;
+  border: 1px solid #88a79a;
+  border-radius: .6rem;
+}
+.field-relict-art :is(svg, img) { display: block; width: 100%; height: auto; }
+.field-relict-label { display: block; color: #365f51; font-size: .8rem; }
+.field-relict-card strong { font-size: 1.05rem; }
+.field-relict-card p { margin: .2rem 0 0; font-size: .9rem; }
+@media (max-width: 27rem) {
+  .field-relict-card { grid-template-columns: 3.5rem minmax(0, 1fr); }
+  .field-relict-card button { grid-column: 2; justify-self: start; }
+}

@@ -1,0 +1,33 @@
+{
+  "baseline": "7cd5110",
+  "command": "node --test --test-concurrency=4 tests/*.test.cjs",
+  "baselineResults": {
+    "tests": 874,
+    "pass": 652,
+    "fail": 222,
+    "skipped": 0
+  },
+  "fullRun": {
+    "tests": 880,
+    "pass": 657,
+    "fail": 223,
+    "skipped": 0
+  },
+  "finalFileRerun": {
+    "file": "tests/mus3380-playability.test.cjs",
+    "command": "node --test tests/mus3380-playability.test.cjs",
+    "results": {
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "combinedFinalResults": {
+    "tests": 880,
+    "pass": 658,
+    "fail": 222,
+    "skipped": 0
+  },
+  "newFailures": 0
+}

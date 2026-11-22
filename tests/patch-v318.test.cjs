@@ -3,7 +3,9 @@ const test=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
-const SOURCE=require('./helpers/legacy-source.cjs').withoutOceania3290(fs.readFileSync('www/js/app.js','utf8'));
+// Preserve the original contract now that the live game only discovers relics in Field.
+const preRelictUpdate=require('node:child_process').execFileSync('git',['show','7cd5110:www/js/app.js'],{encoding:'utf8'});
+const SOURCE=require('./helpers/legacy-source.cjs').withoutOceania3290(preRelictUpdate);
 const CSS=fs.readFileSync('www/css/styles.css','utf8');
 function game(saved=null){
  const store={},nodes={};

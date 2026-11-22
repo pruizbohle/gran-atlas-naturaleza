@@ -51,7 +51,7 @@ test('LEG-02 preserves all identities, adds exactly ten named taxa and changes n
   assert.deepEqual(snapshot(game.REGIONS), snapshot(old.REGIONS));
   assert.equal(Object.keys(game.SPECIES).length, 1000);
   assert.equal(game.REGIONS.length, 125);
-  assert.equal(game.MUSEUM_RELICTS.length, 9);
+  assert.equal(old.MUSEUM_RELICTS.length, 9);
   const newTaxa = new Set(Object.values(additions));
   for (const id of Object.keys(game.SPECIES)) {
     for (const ethology of [0, 1, 2]) {
@@ -142,7 +142,7 @@ test('LEG-02 restores Filigrana as Nácar, registers each new identity once and 
   let exported;
   target.window.Capacitor.Plugins.AtlasExport.saveFile = async ({ content }) => { exported = JSON.parse(content); };
   await target.elements.saveDownloadBtn.fire('click');
-  assert.equal(exported.gameVersion, '5.1.1');
+  assert.equal(exported.gameVersion, require('../package.json').version);
   assert.deepEqual(exported.game.log, archived.log);
   const recovery = harness({}, exported, { gameSource });
   await recovery.import();

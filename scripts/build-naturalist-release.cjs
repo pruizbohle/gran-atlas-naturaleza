@@ -11,7 +11,7 @@ for (const file of new Set(Object.values(assets.routes).flatMap(route => Object.
 const source = fs.readFileSync('www/sw.js', 'utf8');
 const core = [...source.match(/const CORE=\[([^;]+)\];/)[1].matchAll(/['"]([^'"]+)['"]/g)]
   .map(match => match[1].slice(2));
-const files = [...new Set([...core, ...assets.files].map(file =>
+const files = [...new Set([...core, ...assets.files, ...assets.relictFiles].map(file =>
   file.endsWith('/') || !file ? file + 'index.html' : file))].sort();
 const review = assets.labFiles || [];
 const withPlaceholders = source.replace(/const CACHE='[^']+'/, 'const CACHE=REVISION')
@@ -44,4 +44,4 @@ if (process.argv.includes('--write')) {
   assert.equal(fs.readFileSync(manifestPath, 'utf8'), manifest, 'Ejecuta scripts/build-naturalist-release.cjs --write');
   assert.equal(source, generated, 'Ejecuta scripts/build-naturalist-release.cjs --write');
 }
-console.log(JSON.stringify({ version, offlineFiles: files.length, naturalistFiles: assets.files.length, reviewFiles: review.length, reviewBytes: assets.labBytes, revision }));
+console.log(JSON.stringify({ version, offlineFiles: files.length, naturalistFiles: assets.files.length, relictFiles: assets.relictFiles.length, reviewFiles: review.length, reviewBytes: assets.labBytes, revision }));

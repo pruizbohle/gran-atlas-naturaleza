@@ -498,13 +498,19 @@ for (const lot of ['art01', 'art02', 'art03', 'art04', 'art05', 'art06', 'art07'
   }
 }
 const labFiles = [...reviewFiles].sort();
-for (const file of [...files, ...labFiles]) {
+const relictCatalogue = audit.MUSEUM_RELICTS.map(({ id, name, latin, region, locality, desc, plate }) =>
+  ({ id, name, latin, hex: audit.REGIONS.find(zone => zone.id === region).code, locality, desc, plate }));
+fs.writeFileSync(path.join(out, 'relict-catalog.js'),
+  'const AtlasRelictReview = ' + JSON.stringify(relictCatalogue, null, 2) + ';\n');
+const relictFiles = audit.MUSEUM_RELICTS.filter(relict => relict.plate).flatMap(relict =>
+  ['', '64/', '128/', '256/'].map(size => 'naturalist-art/relicts/' + size + relict.id + '.webp')).sort();
+for (const file of [...files, ...labFiles, ...relictFiles]) {
   if (!fs.existsSync('www/' + file)) throw Error('Falta derivado gráfico: ' + file);
 }
 const labBytes = labFiles.reduce((bytes, file) => bytes + fs.statSync('www/' + file).size, 0);
 fs.writeFileSync('www/js/naturalist-assets-v400.js',
   'globalThis.AtlasNaturalistAssets = ' +
-  JSON.stringify({ routes, cutouts, landscapes, bestiaryHabitats, visualScales, files, labFiles, labBytes }, null, 2) + ';\n');
+  JSON.stringify({ routes, cutouts, landscapes, bestiaryHabitats, visualScales, files, labFiles, labBytes, relictFiles }, null, 2) + ';\n');
 console.log(JSON.stringify({
   species: species.length,
   catalogSize: migrationProgress.total,

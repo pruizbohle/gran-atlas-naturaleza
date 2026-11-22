@@ -956,7 +956,7 @@ test('V4.9.6 completes the 1000 illustrated taxa with the 36 remaining plates an
   assert.equal(Object.keys(cutouts).length, 1690);
   assert.equal(game.REGIONS.length, 125);
   assert.equal(game.LEGENDARY_SPECIMENS.length, 30);
-  assert.equal(game.MUSEUM_RELICTS.length, 9);
+  assert.equal(game.MUSEUM_RELICTS.length, 20);
   assert.equal(new Set(Object.values(game.SPECIES).map(sp => sp.latin.trim().toLowerCase().replace(/\s+/g, ' '))).size, 1000);
   assert.ok(Object.keys(game.SPECIES).every(id => routes[id]?.normal));
   assert.ok(catalog.every(row => row.records.every(form => form.src && form.cutout)));
