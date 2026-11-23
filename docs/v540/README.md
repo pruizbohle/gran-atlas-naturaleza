@@ -26,3 +26,9 @@ Una partida nueva solo muestra ya ✦ (marca) y marcas tipográficas (✥ ✓ �
 - 97 rótulos con prefijo emoji (secciones, subpestañas, hábitat, hora y estación) pasan a texto.
 - Se mantienen ♂ ♀ ⚤ ✦ ✓ ★ ☆ ✕ ❧ ✥ y el ❔ de especie no descubierta.
 - Pruebas: dos expectativas de texto se actualizaron (`expeditions-research-v3280`, compara el registro sin emoji inicial; `patch-v3154`, `selva:'Selva'`). Suite completa en clon superficial: 492 pasan y 273 fallan, la misma lista de fallos que antes del Lote 2.
+
+## Lote 3 · Hexágonos por bioma (opción B)
+- Cada hexágono del mapa lleva `data-biome` y un matiz de bioma en relleno y borde (`css/iconography-v530.css`). Pradera verde lima, estepa ocre grisáceo y desierto naranja dejan de confundirse.
+- El estado se sigue leyendo igual: la región actual conserva su verde oscuro, las bloqueadas se atenúan, las disponibles mantienen el borde discontinuo y las abiertas usan el color pleno del bioma.
+- La biblioteca de iconografía carga la misma hoja de estilos, así que su vista previa de hexágonos muestra el mismo diseño.
+- Los dibujos de los motivos no cambian. Pendiente de revisar con una partida avanzada: contraste del nombre de región sobre los biomas más oscuros (profundo, hadal) y 125 regiones juntas.

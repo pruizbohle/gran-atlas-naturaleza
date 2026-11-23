@@ -16,3 +16,55 @@
 }
 .stat-card [data-atlas-icon] { display: inline-flex; }
 .inv340-search .atlas-icon-line, .inv340-filters .atlas-icon-line { margin-right: .25em; }
+
+/* V5.4 · hexágonos por bioma: el color de bioma se matiza según el estado (actual conserva su verde). */
+.atlas-tile[data-biome=bosque].atlas-abierta .atlas-territory{fill:#cfdcc3;stroke:#5f7d57}
+.atlas-tile[data-biome=bosque].atlas-disponible .atlas-territory{fill:#cfdcc3;stroke:#5f7d57}
+.atlas-tile[data-biome=bosque].atlas-bloqueada .atlas-territory{fill:#d3d6c0;stroke:#829074}
+.atlas-tile[data-biome=selva].atlas-abierta .atlas-territory{fill:#c2d9b2;stroke:#3f7a45}
+.atlas-tile[data-biome=selva].atlas-disponible .atlas-territory{fill:#c2d9b2;stroke:#3f7a45}
+.atlas-tile[data-biome=selva].atlas-bloqueada .atlas-territory{fill:#cdd5b8;stroke:#758e6d}
+.atlas-tile[data-biome=montana].atlas-abierta .atlas-territory{fill:#d9dcdc;stroke:#76808a}
+.atlas-tile[data-biome=montana].atlas-disponible .atlas-territory{fill:#d9dcdc;stroke:#76808a}
+.atlas-tile[data-biome=montana].atlas-bloqueada .atlas-territory{fill:#d7d6cb;stroke:#8b9188}
+.atlas-tile[data-biome=pradera].atlas-abierta .atlas-territory{fill:#d2e2a0;stroke:#7f9a32}
+.atlas-tile[data-biome=pradera].atlas-disponible .atlas-territory{fill:#d2e2a0;stroke:#7f9a32}
+.atlas-tile[data-biome=pradera].atlas-bloqueada .atlas-territory{fill:#d4d9b0;stroke:#8f9b65}
+.atlas-tile[data-biome=desierto].atlas-abierta .atlas-territory{fill:#f1d29a;stroke:#c98a3a}
+.atlas-tile[data-biome=desierto].atlas-disponible .atlas-territory{fill:#f1d29a;stroke:#c98a3a}
+.atlas-tile[data-biome=desierto].atlas-bloqueada .atlas-territory{fill:#e2d2ad;stroke:#ac9568}
+.atlas-tile[data-biome=estepa].atlas-abierta .atlas-territory{fill:#dccfa8;stroke:#8f7f52}
+.atlas-tile[data-biome=estepa].atlas-disponible .atlas-territory{fill:#dccfa8;stroke:#8f7f52}
+.atlas-tile[data-biome=estepa].atlas-bloqueada .atlas-territory{fill:#d9d1b4;stroke:#959072}
+.atlas-tile[data-biome=sabana].atlas-abierta .atlas-territory{fill:#ead58f;stroke:#b08a2a}
+.atlas-tile[data-biome=sabana].atlas-disponible .atlas-territory{fill:#ead58f;stroke:#b08a2a}
+.atlas-tile[data-biome=sabana].atlas-bloqueada .atlas-territory{fill:#dfd3a8;stroke:#a29562}
+.atlas-tile[data-biome=mediterraneo].atlas-abierta .atlas-territory{fill:#cfd6b3;stroke:#7a8a4f}
+.atlas-tile[data-biome=mediterraneo].atlas-disponible .atlas-territory{fill:#cfd6b3;stroke:#7a8a4f}
+.atlas-tile[data-biome=mediterraneo].atlas-bloqueada .atlas-territory{fill:#d3d4b8;stroke:#8d9571}
+.atlas-tile[data-biome=humedal].atlas-abierta .atlas-territory{fill:#c3dbd0;stroke:#4f8b78}
+.atlas-tile[data-biome=humedal].atlas-disponible .atlas-territory{fill:#c3dbd0;stroke:#4f8b78}
+.atlas-tile[data-biome=humedal].atlas-bloqueada .atlas-territory{fill:#cdd6c6;stroke:#7b9581}
+.atlas-tile[data-biome=rio].atlas-abierta .atlas-territory{fill:#bdd8e2;stroke:#4a86a0}
+.atlas-tile[data-biome=rio].atlas-disponible .atlas-territory{fill:#bdd8e2;stroke:#4a86a0}
+.atlas-tile[data-biome=rio].atlas-bloqueada .atlas-territory{fill:#cbd5ce;stroke:#799391}
+.atlas-tile[data-biome=costa].atlas-abierta .atlas-territory{fill:#bcd5de;stroke:#4f8397}
+.atlas-tile[data-biome=costa].atlas-disponible .atlas-territory{fill:#bcd5de;stroke:#4f8397}
+.atlas-tile[data-biome=costa].atlas-bloqueada .atlas-territory{fill:#cad3cc;stroke:#7b928d}
+.atlas-tile[data-biome=oceano].atlas-abierta .atlas-territory{fill:#aecfe0;stroke:#2f77a3}
+.atlas-tile[data-biome=oceano].atlas-disponible .atlas-territory{fill:#aecfe0;stroke:#2f77a3}
+.atlas-tile[data-biome=oceano].atlas-bloqueada .atlas-territory{fill:#c4d1cd;stroke:#6f8d92}
+.atlas-tile[data-biome=arrecife].atlas-abierta .atlas-territory{fill:#c0ddd9;stroke:#d0705a}
+.atlas-tile[data-biome=arrecife].atlas-disponible .atlas-territory{fill:#c0ddd9;stroke:#d0705a}
+.atlas-tile[data-biome=arrecife].atlas-bloqueada .atlas-territory{fill:#ccd7ca;stroke:#af8a75}
+.atlas-tile[data-biome=profundo].atlas-abierta .atlas-territory{fill:#9fb7cc;stroke:#2b4f7a}
+.atlas-tile[data-biome=profundo].atlas-disponible .atlas-territory{fill:#9fb7cc;stroke:#2b4f7a}
+.atlas-tile[data-biome=profundo].atlas-bloqueada .atlas-territory{fill:#bdc6c4;stroke:#6d7d82}
+.atlas-tile[data-biome=hadal].atlas-abierta .atlas-territory{fill:#92a6c0;stroke:#1f3856}
+.atlas-tile[data-biome=hadal].atlas-disponible .atlas-territory{fill:#92a6c0;stroke:#1f3856}
+.atlas-tile[data-biome=hadal].atlas-bloqueada .atlas-territory{fill:#b7bebe;stroke:#687473}
+.atlas-tile[data-biome=polar].atlas-abierta .atlas-territory{fill:#dfecf2;stroke:#7fa6bc}
+.atlas-tile[data-biome=polar].atlas-disponible .atlas-territory{fill:#dfecf2;stroke:#7fa6bc}
+.atlas-tile[data-biome=polar].atlas-bloqueada .atlas-territory{fill:#daded5;stroke:#8fa09c}
+.atlas-game .atlas-tile[data-biome].atlas-abierta .atlas-territory,.atlas-game .atlas-tile[data-biome].atlas-disponible .atlas-territory{stroke-width:2}
+.atlas-game .atlas-tile[data-biome].atlas-bloqueada .atlas-territory{stroke-width:1.4}
