@@ -1,6 +1,6 @@
 # El Gran Atlas — hoja de ruta (23 de noviembre de 2026)
 
-Estado de partida: **V5.5.0**. Esta hoja distingue lo que ya está hecho, lo que los informes del repositorio dejan pendiente y lo que es solo una propuesta. El plan anterior, que llegaba hasta la Beta 3.12, está en [`docs/ROADMAP-historico.md`](docs/ROADMAP-historico.md).
+Estado de partida: **V5.5.1**. Esta hoja distingue lo que ya está hecho, lo que los informes del repositorio dejan pendiente y lo que es solo una propuesta. El plan anterior, que llegaba hasta la Beta 3.12, está en [`docs/ROADMAP-historico.md`](docs/ROADMAP-historico.md).
 
 ## Completado
 
@@ -17,7 +17,7 @@ Estado de partida: **V5.5.0**. Esta hoja distingue lo que ya está hecho, lo que
 | Auditoría y arte | 5.0.1 – 5.0.12 | Auditoría global, rendimiento de arranque y repintado de variantes pigmentarias |
 | Legendarios, relictos y guía | 5.1.2 – 5.2.0 | 30 legendarios, 20 relictos y Guía del naturalista |
 | Iconografía | 5.3.0 – 5.4.2 | 63 iconos y 16 motivos de bioma, 64 objetos ilustrados más, hexágonos por bioma e interfaz sin emojis |
-| Marco móvil | 5.5.0 | Cabecera, monedas, título de pestaña y barra de 9 iconos fijos; el contenido se desplaza dentro de su ventana |
+| Marco móvil y Campamento | 5.5.0 – 5.5.1 | Cabecera, monedas, título de pestaña y barra de 9 iconos fijos; el contenido se desplaza dentro de su ventana; el Campamento tiene fondo pintado y 6 áreas |
 
 ## Pendiente según los informes del repositorio
 

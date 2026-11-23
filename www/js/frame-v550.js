@@ -65,6 +65,18 @@
   panel.addEventListener('click',e=>{if(mq.matches&&currentTab()==='atlas'&&e.target.closest('.atlas-tile'))requestAnimationFrame(()=>show('ficha',document.querySelector('.frame-tool-info')));});
   // Aviso: el panel guarda sus controles; cualquier navegación cierra los pops.
   document.querySelectorAll('.mobile-dock-link').forEach(b=>b.addEventListener('click',close));
+
+  // Tienda del naturalista (Campamento): pop con el equipo
+  window.AtlasFrame550=Object.freeze({
+    shop(){
+      let n=0;try{n=typeof state!=='undefined'?Math.floor(state.helpers||0):0;}catch{}
+      if(!mq.matches){document.querySelector('.tabs .tab[data-tab="objects"]')?.click();return;}
+      close();open='tienda';
+      pop.innerHTML='<b class="fp-t">'+icon('campamento')+'Tienda del naturalista</b><p>Equipo contratado: '+fmt(n)+'.</p><p class="fp-sub">Aquí se reúne el equipo de tu expedición. Equipa piezas y revisa tus ayudantes desde el Inventario.</p><button type="button" class="fp-go" data-go="objects">Abrir Inventario</button>';
+      pop.hidden=false;scrim=document.createElement('div');scrim.className='frame-scrim';scrim.addEventListener('click',close);document.getElementById('app').appendChild(scrim);
+    }
+  });
+  document.addEventListener('click',e=>{if(e.target.closest('[data-cp-shop]')){e.preventDefault();window.AtlasFrame550.shop();}});
   // Subtítulo de región
   const brand=document.querySelector('.topbar .brand');
   if(brand&&!document.querySelector('.frame-region')){const r=document.createElement('div');r.className='frame-region';brand.after(r);}
