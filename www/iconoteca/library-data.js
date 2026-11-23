@@ -954,7 +954,7 @@ globalThis.AtlasIconLibrary530 = {
       "icon": "binoculars",
       "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "pendiente",
+      "status": "corregido",
       "size": 32,
       "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
@@ -996,7 +996,7 @@ globalThis.AtlasIconLibrary530 = {
       "icon": "field_hat",
       "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "pendiente",
+      "status": "corregido",
       "size": 32,
       "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
@@ -1234,7 +1234,7 @@ globalThis.AtlasIconLibrary530 = {
       "icon": "ancient_coin",
       "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "pendiente",
+      "status": "corregido",
       "size": 32,
       "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
@@ -1346,7 +1346,7 @@ globalThis.AtlasIconLibrary530 = {
       "icon": "oceanic_quadrant",
       "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "pendiente",
+      "status": "corregido",
       "size": 32,
       "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
@@ -1402,7 +1402,7 @@ globalThis.AtlasIconLibrary530 = {
       "icon": "polished_lens",
       "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario · Equipo, Taller y materiales",
-      "status": "pendiente",
+      "status": "corregido",
       "size": 32,
       "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },
@@ -1584,7 +1584,7 @@ globalThis.AtlasIconLibrary530 = {
       "icon": "fossil_amber",
       "source": "experiment/scientific-illustration-objects · 952d9c0e",
       "place": "Inventario y Museo · materiales",
-      "status": "pendiente",
+      "status": "corregido",
       "size": 32,
       "detail": "Objeto jugable con el mismo identificador. WebP 128 px del inventario experimental."
     },

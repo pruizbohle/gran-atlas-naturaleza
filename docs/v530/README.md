@@ -38,4 +38,4 @@ El título precede a un área propia de ilustración, seguida por el nombre cien
 
 ## Pendientes de revisión
 
-Ocho fichas están pendientes. Incluyen el motivo de análisis comparativo, el sobre individual de V1 y seis propuestas de objetos que conservan su representación vigente en el juego. Son la moneda antigua, los prismáticos, el sombrero de naturalista, el ámbar fósil, el cuadrante oceánico y la lente pulida. El inventario también identifica emojis secundarios. [Pendientes en la biblioteca](../../www/iconoteca/biblioteca.html)
+Ocho fichas estaban pendientes (Lote 0 de V5.4 conectó seis objetos; quedan dos: `misiones` y análisis comparativo). Incluyen el motivo de análisis comparativo, el sobre individual de V1 y seis propuestas de objetos que conservan su representación vigente en el juego. Son la moneda antigua, los prismáticos, el sombrero de naturalista, el ámbar fósil, el cuadrante oceánico y la lente pulida. El inventario también identifica emojis secundarios. [Pendientes en la biblioteca](../../www/iconoteca/biblioteca.html)

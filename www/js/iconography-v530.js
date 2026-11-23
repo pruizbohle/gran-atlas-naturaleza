@@ -24,7 +24,9 @@
   });
   const objects = Object.freeze({
     fossil_fragment: 'fossil_fragment', pressed_flower: 'pressed_flower',
-    river_pebble: 'river_pebble', sounding_kit: 'sounding_kit'
+    river_pebble: 'river_pebble', sounding_kit: 'sounding_kit',
+    ancient_coin: 'ancient_coin', binoculars: 'binoculars', field_hat: 'field_hat',
+    oceanic_quadrant: 'oceanic_quadrant', polished_lens: 'polished_lens', fossil_amber: 'fossil_amber'
   });
   const glyphs = Object.freeze({
     back: '<path d="m10 5-7 7 7 7M3 12h17"/>',
