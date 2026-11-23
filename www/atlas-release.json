@@ -1,6 +1,7 @@
 {
-  "version": "5.4.2",
+  "version": "5.5.0",
   "atlas": "simple",
+  "v550": {"mobileFixedFrame": true, "dockIcons": 9, "currencyPops": true},
   "v540": {"objectIcons": 68, "biomeHexTint": true, "emojiFreeLog": true},
   "v530": {"iconography": true, "relictCases": 20, "illustratedBiomes": 16},
   "v520": {

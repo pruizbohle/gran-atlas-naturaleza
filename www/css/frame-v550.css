@@ -1,0 +1,65 @@
+/* V5.5.0 · Marco móvil estable. Solo presentación: no toca datos ni partidas. */
+.frame-cur,.frame-title,.frame-pop{display:none}
+@media (max-width:700px){
+  html,body{height:100%;overflow:hidden;overscroll-behavior:none}
+  body{position:fixed;inset:0;width:100%;display:flex;flex-direction:column}
+  #app.app-shell{display:flex;flex-direction:column;flex:1 1 auto;min-height:0;height:auto;max-width:none;margin:0;padding:0;gap:0;overflow:hidden}
+  #app .topbar{flex:none;height:60px;min-height:60px;box-sizing:border-box;padding:6px 14px!important;margin:0;border-radius:0 0 14px 14px;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center;justify-content:space-between;gap:8px;position:static}
+  #app .topbar>div:first-child{min-width:0;flex:1}
+  .topbar .brand{font-size:0;line-height:1}
+  .topbar .brand::after{content:"✦ El Gran Atlas";font-size:19px;font-weight:700}
+  .topbar .subbrand,.topbar .region-pill{display:none}
+  .frame-region{font:500 11.5px/1.2 system-ui,sans-serif;color:#dfe8d2;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:62vw}
+  #app .topbar .save-tools-launch{width:44px;height:44px;min-width:44px;min-height:44px;flex:none;margin:0 0 0 auto;position:relative}
+  .stats-grid,.mobile-stats-toggle,.minor-stats,.tabs:not(.mobile-dock),.mobile-view-heading,.footer-note,.mobile-dock-more,.mobile-drawer{display:none!important}
+  .frame-cur{flex:none;height:54px;box-sizing:border-box;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:8px 12px}
+  .frame-chip{display:flex;align-items:center;justify-content:center;gap:6px;height:38px;padding:0 4px;border-radius:12px;background:#fdf6e3;border:1px solid #d8c9a0;color:#2c3f2f;font:700 15px system-ui,sans-serif;cursor:pointer;min-width:0}
+  .frame-chip img{width:26px;height:26px}
+  .frame-chip b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .frame-chip[aria-expanded=true],.frame-tool[aria-expanded=true]{border-color:#7f8966;box-shadow:0 0 0 2px #cfdcb9}
+  .frame-title{flex:none;height:40px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;padding:0 14px;border-bottom:1px solid #d8c9a0}
+  .frame-title h1{margin:0;font:700 20px Georgia,serif;color:#2c3f2f}
+  .frame-tools{display:flex;gap:8px}
+  .frame-tool{width:32px;height:32px;padding:0;border-radius:10px;background:#fdf6e3;border:1px solid #d8c9a0;display:flex;align-items:center;justify-content:center;cursor:pointer}
+  .frame-tool img{width:22px;height:22px}
+  main#panel.panel{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding:8px 8px 10px;margin:0;position:relative;-webkit-overflow-scrolling:touch}
+  .ux3410-guide,.ux3410-compass,.ux3410-show{display:none!important}
+  .mobile-dock{position:static;flex:none;height:calc(58px + env(safe-area-inset-bottom));box-sizing:border-box;display:flex;justify-content:space-around;align-items:center;padding:0 2px env(safe-area-inset-bottom);gap:0;z-index:20}
+  .mobile-dock .mobile-dock-link{flex:1;min-width:0;min-height:0;height:46px;padding:0;margin:0 1px;display:flex;align-items:center;justify-content:center;gap:0}
+  .mobile-dock .dock-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .mobile-dock .dock-icon img{width:30px;height:30px}
+  .frame-pop{position:fixed;z-index:60;left:12px;right:12px;top:112px;max-height:calc(100dvh - 200px);overflow:auto;background:#fffaf0;border:1px solid #b9a56f;border-radius:12px;padding:12px 14px;box-shadow:0 8px 22px rgba(40,50,30,.3);font-size:13.5px;color:#33402f;line-height:1.4}
+  .frame-pop:not([hidden]){display:block}
+  .frame-pop b.fp-t{display:flex;align-items:center;gap:8px;font-size:16px;margin-bottom:4px}
+  .frame-pop b.fp-t img{width:24px;height:24px}
+  .frame-pop p{margin:4px 0 0}
+  .frame-pop .fp-sub{color:#6a6a52;font-size:12.5px}
+  .frame-pop button.fp-go{margin-top:8px;padding:7px 12px;border-radius:9px;border:1px solid #9aae85;background:#e1e9d3;font-weight:700;color:#2c3f2f;cursor:pointer}
+  /* Guía y Brújula originales se muestran como pop, conservando sus controles */
+  body.fr-pop-guia .ux3410-guide,body.fr-pop-brujula .ux3410-compass{display:block!important;position:fixed;z-index:61;left:12px;right:12px;top:112px;max-height:calc(100dvh - 200px);overflow:auto;margin:0;box-shadow:0 8px 22px rgba(40,50,30,.3);background:#fffaf0}
+  body.fr-pop-guia .ux3410-guide>div{display:block}
+  .frame-scrim{position:fixed;inset:0;z-index:55;background:transparent}
+  /* Herramienta de ficha (Atlas: región · Museo: resumen) */
+  .frame-tool-info{display:none}
+  body[data-frame-tab=atlas] .frame-tool-info,body[data-frame-tab=museum] .frame-tool-info{display:flex}
+  /* Atlas: el mapa es lo central */
+  body[data-frame-tab=atlas] main#panel{display:flex;flex-direction:column;padding:6px}
+  body[data-frame-tab=atlas] .atlas-game{flex:1;min-height:0!important;height:auto!important;position:relative;display:block}
+  body[data-frame-tab=atlas] .atlas-cartography-head{position:absolute;top:6px;right:6px;left:auto;z-index:6;min-height:0;padding:0;background:transparent;border:0;display:block}
+  body[data-frame-tab=atlas] .atlas-cartography-head>div:not(.atlas-continent-picker){display:none}
+  body[data-frame-tab=atlas] .atlas-continent-picker select{height:36px;font-size:14px;min-width:126px}
+  body[data-frame-tab=atlas] .atlas-game-layout{display:block;height:100%}
+  body[data-frame-tab=atlas] .atlas-map-frame{display:grid;grid-template-rows:minmax(0,1fr) auto;height:100%;min-height:0}
+  body[data-frame-tab=atlas] .atlas-map-key{display:none}
+  body[data-frame-tab=atlas] .atlas-region-panel{display:none}
+  body[data-frame-tab=atlas].fr-sheet .atlas-region-panel{display:grid;position:fixed;z-index:61;left:10px;right:10px;bottom:70px;max-height:58dvh;overflow:auto;box-shadow:0 8px 22px rgba(40,50,30,.3)}
+  /* Campo: escena central, sin encabezado repetido */
+  body[data-frame-tab=field] .field-expedition-head{display:none}
+  body[data-frame-tab=field] .field-stage{height:clamp(240px,calc(100dvh - 470px),520px)}
+  /* Museo: salas como fila de iconos; resumen como pop */
+  body[data-frame-tab=museum] .m27-rooms{position:sticky;top:-8px;z-index:5;display:flex;justify-content:center;gap:10px;height:46px;margin:-8px -8px 8px;padding:5px 8px;align-items:center;background:#fbf4e2;border-bottom:1px solid #e4d8b6;font-size:0;overflow:hidden}
+  body[data-frame-tab=museum] .m27-rooms button{width:46px;height:34px;min-height:0;border-radius:9px;padding:0;display:flex;align-items:center;justify-content:center;font-size:0;gap:0}
+  body[data-frame-tab=museum] .m27-rooms button img{width:26px;height:26px}
+  body[data-frame-tab=museum] .m27-heading{display:none}
+  body[data-frame-tab=museum].fr-sheet .m27-heading{display:block;position:fixed;z-index:61;left:10px;right:10px;top:112px;max-height:60dvh;overflow:auto;box-shadow:0 8px 22px rgba(40,50,30,.3)}
+}
