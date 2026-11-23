@@ -62,4 +62,5 @@
   body[data-frame-tab=museum] .m27-rooms button img{width:26px;height:26px}
   body[data-frame-tab=museum] .m27-heading{display:none}
   body[data-frame-tab=museum].fr-sheet .m27-heading{display:block;position:fixed;z-index:61;left:10px;right:10px;top:112px;max-height:60dvh;overflow:auto;box-shadow:0 8px 22px rgba(40,50,30,.3)}
+  @media (max-width:380px){.frame-cur{padding:8px 8px;gap:4px}.frame-chip{font-size:13.5px;gap:3px;padding:0 2px}.frame-chip img{width:22px;height:22px}}
 }

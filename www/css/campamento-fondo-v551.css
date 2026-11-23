@@ -1,19 +1,20 @@
 /* V5.5.1 · Campamento con fondo pintado y 6 áreas. Solo presentación. */
 .cp3430-plan{background:#e9dfc0 url(../img/campamento-fondo.webp) center/cover no-repeat;aspect-ratio:2/3;max-height:none;width:100%;max-width:560px;margin:0 auto;border:1px solid #b7ac87;border-radius:12px}
 .cp3430-paths,.cp3430-tent{display:none}
-.cp3430-plan .cp3430-facility,.cp3430-plan .cp3430-shop{position:absolute;width:47%;height:9.2%;min-height:52px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;align-content:center;align-items:center;column-gap:0;row-gap:2px;justify-items:start;padding:0 8px 0 0;border:1.5px solid #8b7442;border-radius:8px;background:linear-gradient(#f7ecd0,#ecdcb2);box-shadow:0 3px 8px rgba(40,30,10,.4);color:#2b2a1c;text-align:left;cursor:pointer;font:inherit}
-.cp3430-plan .cp3430-facility>.atlas-icon,.cp3430-plan .cp3430-shop>.atlas-icon{flex:none;width:52px;height:52px;grid-row:1/3;margin:0 8px 0 -10px;padding:4px;border-radius:50%;background:radial-gradient(#fffaf0,#efe2c0);border:2.5px solid #6d5a33;box-shadow:0 3px 8px rgba(40,30,10,.5);box-sizing:border-box;object-fit:contain}
-.cp3430-plan .cp3430-facility>strong,.cp3430-plan .cp3430-shop>strong{display:block;font:700 14px/1.1 Georgia,serif;color:#2b2a1c}
-.cp3430-plan .cp3430-state{display:block;font:italic 10px/1.15 Georgia,serif;color:#5c5233;margin-top:2px}
+.cp3430-plan .cp3430-facility,.cp3430-plan .cp3430-shop{position:absolute;width:45%;height:9.2%;min-height:50px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;align-content:center;align-items:center;column-gap:0;row-gap:2px;justify-items:start;padding:0 8px 0 0;border:1.5px solid #8b7442;border-radius:8px;background:linear-gradient(#f7ecd0,#ecdcb2);box-shadow:0 3px 8px rgba(40,30,10,.4);color:#2b2a1c;text-align:left;cursor:pointer;font:inherit}
+.cp3430-plan .cp3430-facility>.atlas-icon,.cp3430-plan .cp3430-shop>.atlas-icon{flex:none;width:48px;height:48px;grid-row:1/3;margin:0 6px 0 -9px;padding:4px;border-radius:50%;background:radial-gradient(#fffaf0,#efe2c0);border:2.5px solid #6d5a33;box-shadow:0 3px 8px rgba(40,30,10,.5);box-sizing:border-box;object-fit:contain}
+.cp3430-plan .cp3430-facility>strong,.cp3430-plan .cp3430-shop>strong{display:block;font:700 13px/1.1 Georgia,serif;color:#2b2a1c}
+.cp3430-plan .cp3430-state{display:block;font:italic 9.5px/1.15 Georgia,serif;color:#5c5233;margin-top:2px}
 .cp3430-plan .cp3430-state i{display:none}
 .cp3430-plan .cp3430-facility>svg{display:none}
 .cp3430-plan .cp3430-state{grid-column:2}
-.cp3430-plan .cp3430-shipyard{left:4%;right:auto;top:18%}
-.cp3430-plan .cp3430-caravan{left:auto;right:3%;top:16%}
-.cp3430-plan .cp3430-workshop{left:4%;right:auto;top:38%}
-.cp3430-plan .cp3430-excavations{left:auto;right:3%;top:31%}
-.cp3430-plan .cp3430-surveys{left:4%;right:auto;bottom:auto;top:66%}
-.cp3430-plan .cp3430-shop{left:auto;right:3%;top:70%}
+
+.cp3430-plan .cp3430-shipyard{left:3%;right:auto;top:20%}
+.cp3430-plan .cp3430-caravan{left:auto;right:3%;top:12%}
+.cp3430-plan .cp3430-workshop{left:3%;right:auto;top:40%}
+.cp3430-plan .cp3430-excavations{left:auto;right:3%;top:28%}
+.cp3430-plan .cp3430-surveys{left:3%;right:auto;bottom:auto;top:62%}
+.cp3430-plan .cp3430-shop{left:auto;right:3%;top:72%}
 .cp3430-plan .cp3430-facility:hover,.cp3430-plan .cp3430-shop:hover{background:linear-gradient(#fbf2da,#f0e2bc)}
 @media (max-width:700px){
   .cp3430-camp .cp3430-title,.cp3430-camp .cp3430-compact,.cp3430-camp .cp3430-note{display:none}
