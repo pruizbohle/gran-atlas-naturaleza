@@ -364,7 +364,8 @@ test('AUD-02 la cola en pantalla avanza en cuadros acotados y se guarda al salir
 });
 
 test('V5.0.2 los lotes conservan los sorteos, cupos y la recompensa por identificador de V5.0.1', () => {
-  const baselineApp = execFileSync('git', ['show', '4d3737d:www/js/app.js'], { encoding: 'utf8', maxBuffer: 6e6 });
+  const baselineApp = execFileSync('git', ['show', '4d3737d:www/js/app.js'], { encoding: 'utf8', maxBuffer: 6e6 })
+    .replace(/(pushLog\(\s*[`'"])[\p{Extended_Pictographic}\uFE0F\u200d]+\s*/gu, '$1').replace("'💷 Fondo inicial", "'Fondo inicial");
   const baseline = [...scripts.slice(0, -1).map(name => fs.readFileSync('www/js/' + name + '.js', 'utf8')), baselineApp].join('\n');
   const save = open().h.window.AtlasSaveBridge.getSaveData();
   save.helpers = 10;
