@@ -28,6 +28,7 @@ Estado de partida: **V5.5.0**. Esta hoja distingue lo que ya está hecho, lo que
 | Arte pigmentario | Siguiente lote propuesto: 20 animales con variante albina o melánica mejorable | [Próximo lote ART-08](docs/arte-v5012/proximo-lote.md) |
 | Coleccionables | El desarrollo de coleccionables (300 piezas y Filatelia) quedó fuera de V5.2 y de la iconografía 5.3–5.4 | [Auditoría de integración](docs/v520/auditoria.md) |
 | Iconos restantes | Motivo `comparativo` (sin pantalla donde mostrarlo todavía) y arte de legendarios y relictos | [docs/v540](docs/v540/README.md) |
+| Niveles del Campamento | Decidido para la etapa de mecánicas: cada instalación (Astillero, Caravana, Taller, Excavación, Prospecciones y Tienda) tendrá 5 niveles de mejora, con un ícono por nivel (`<área>-1` a `<área>-5`). Hoy se muestra un solo ícono por área; aún no se ha comprobado si el guardado tiene un nivel por instalación | [Campamento](docs/v550/README.md) |
 
 ## Propuestas
 
