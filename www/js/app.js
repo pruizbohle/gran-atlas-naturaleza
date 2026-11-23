@@ -2258,7 +2258,7 @@ function initialState(){
     money:420, knowledge:0, prestige:0, helpers:0, books:0,
     asiaPricingVersion:3, currentRegion:region, habitat:'bosque', time:'amanecer', season:'primavera',
     discovered:{}, sightings:{}, stages:{}, feedObs:{}, dimorphism:{}, sexSeen:{}, specialSeen:{}, specialFound:{}, published:{},
-    log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','💷 Fondo inicial: £420.'],
+    log:['Bienvenido al Gran Atlas. Tu primera misión es estudiar las Islas Británicas.','Fondo inicial: £420.'],
     upgrades:{prism:0,journal:0,autoTier:0,training:0,shipyard:0,grantBonus:0,noteBonus:0,voyageTime:1,fleet:0,routeTier:0,specimenDrops:0,asiaUnlocked:0,africaUnlocked:0,newWorldUnlocked:0,northAmericaUnlocked:0,fundingTier:1,groupTier:0,censusTier:0,autoGroup:0,autoCensus:0,mammalogy:0,ornithology:0,herpetology:0,ichthyology:0,ethology:0,paleoTier:0,museumIncomeTier:0,excavationTier:0,specimenPrep:0,relictSurveyTier:0,relictFieldTier:0}, purchases:{},
     regionUnlocked:{[REGIONS[0].id]:true}, museum:{wing:1,exhibits:{},collections:{},relicts:{},displays:{},voyagesCompleted:0,excavations:[],excavationSeq:0,excavationsCompleted:0,curationPoints:0,excavationHistory:[],relictLeads:{},relictSurveys:[],relictSurveySeq:0,relictSurveyHistory:[],relictResearchPoints:0,relictAchievements:{}}, inventoryView:'equipo', atlasView:'Europa', museumView:'exhibitions', societyView:'grants', publicationView:'monographs', bestiarySort:'alpha', bestiaryDescending:false, bestiaryHideMonographs:false, crownCoins:0, lastEncounter:null,
  // EC3300 BEGIN initial-commerce
@@ -2303,7 +2303,7 @@ function commissionClaim3370(id,legacyClaim){
  if(original?(!!state.purchases['mission_'+id]||!!state.commissions.legacyClaims[id]||original.progress()<original.target):(!state.commissions.ready[id]||!!state.commissions.claimed[id]))return false;
  const before=JSON.parse(JSON.stringify(state)),achNotices=achievementNotices3360.slice(),encNotices=commissionNotices3370.slice();
  commissionClaiming3370=true;
- try{if(original){legacyClaim(id);state.commissions.legacyClaims[id]={claimedAt:Date.now(),source:'original-claim'};state.commissions.tracked=state.commissions.tracked.filter(x=>x!==id);}else{if(!api.pay(state,id))return false;pushLog('📋 Encargo reclamado: '+api.catalog.find(d=>d.id===id).name+'.');}}
+ try{if(original){legacyClaim(id);state.commissions.legacyClaims[id]={claimedAt:Date.now(),source:'original-claim'};state.commissions.tracked=state.commissions.tracked.filter(x=>x!==id);}else{if(!api.pay(state,id))return false;pushLog('Encargo reclamado: '+api.catalog.find(d=>d.id===id).name+'.');}}
  catch(error){state=before;throw error;}finally{commissionClaiming3370=false;}
  achievementMark3360(...Object.keys(globalThis.AtlasAchievements3360.categories));
  if(!persist()){state=before;achievementNotices3360=achNotices;commissionNotices3370=encNotices;achievementDirty3360.clear();commissionDirty3370=true;renderCounters();renderPanel();return false;}
@@ -2852,7 +2852,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
   const k=Math.round((manual?3:1.5)*knowledgeBonus());
   state.knowledge+=k;
   if(manual)state.lastEncounter={title:'Sin avistamiento',subtitle:`Se encontraron rastros. +${k} conocimiento`,sprite:null};
-  if(manual)pushLog(`🔭 Búsqueda sin avistamiento · +${k} conocimiento.`);
+  if(manual)pushLog(`Búsqueda sin avistamiento · +${k} conocimiento.`);
   if(!batchingOffline){renderCounters();updateFieldOutput();}
   return;
  }
@@ -2886,7 +2886,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
   }
   state.discovered[chosen]=true;
   state.sightings[chosen]=sight(chosen)+amount;
-  if(first){state.money+=15;pushLog(`🪙 Descubrimiento de ${visibleName(chosen)}: la Sociedad entrega £15.`);}
+  if(first){state.money+=15;pushLog(`Descubrimiento de ${visibleName(chosen)}: la Sociedad entrega £15.`);}
   const note=[];
   if(Math.random()<0.12){state.feedObs[chosen]=feed(chosen)+1;note.push('comiendo');}
   const sexObservation=recordSexObservation(chosen,manual);
@@ -2916,7 +2916,7 @@ function encounter(source='manual', at=Date.now(), guaranteed=false, automatic=n
  const sequence=state.encounterSequence=(state.encounterSequence||0)+1;
  if(automatic?.deferPresentation)automatic.latest={entries,knowledgeGain,sequence};
  else presentEncounter(entries,knowledgeGain,sequence);
- if(manual)pushLog(`🔭 ${entries.length>1?'Encuentro múltiple · ':''}${entries.map(e=>visibleName(e.id)+' ×'+e.amount).join(', ')}${entries[0].note.length?' · '+entries[0].note.join(', '):''}.`);
+ if(manual)pushLog(`${entries.length>1?'Encuentro múltiple · ':''}${entries.map(e=>visibleName(e.id)+' ×'+e.amount).join(', ')}${entries[0].note.length?' · '+entries[0].note.join(', '):''}.`);
  if(!batchingOffline){renderCounters();updateFieldOutput();}
 }
 function presentEncounter(entries,knowledgeGain,sequence){
@@ -2972,7 +2972,7 @@ function advanceSpecies(id){
   state.money-=req.money;
   state.knowledge-=req.knowledge;
   state.stages[id]=current+1;
-  pushLog(`📖 ${SPECIES[id].name} avanzó a ${state.stages[id]}/5.`);
+  pushLog(`${SPECIES[id].name} avanzó a ${state.stages[id]}/5.`);
   render();
 }
 function publishMonograph(id){
@@ -2981,7 +2981,7 @@ function publishMonograph(id){
   state.prestige+=1;
   state.money+=90;
 if(state.prestige>=2) state.regionUnlocked[REGIONS[2].id]=true;
-  pushLog(`🏅 Monografía publicada: ${SPECIES[id].name}. +1 prestigio, +£90.`);
+  pushLog(`Monografía publicada: ${SPECIES[id].name}. +1 prestigio, +£90.`);
   render();
 }
 
@@ -2993,7 +2993,7 @@ function requestGrant(){
   const grant=Math.round((35+discovered*5)*(1+(state.upgrades.grantBonus||0)+(state.equipment.necklace==='amber_charm'?0.05:0)));
   state.money+=grant;
   state.lastGrant=now;
-  pushLog(`🏛️ La Sociedad concede una subvención de £${grant}.`);
+  pushLog(`La Sociedad concede una subvención de £${grant}.`);
   render();
 }
 function exchangeNotes(){
@@ -3001,14 +3001,14 @@ function exchangeNotes(){
   state.knowledge-=40;
   const reward=Math.round(25*(1+(state.upgrades.noteBonus||0)));
   state.money+=reward;
-  pushLog(`🪙 Notas de campo canjeadas: -40 conocimiento, +£${reward}.`);
+  pushLog(`Notas de campo canjeadas: -40 conocimiento, +£${reward}.`);
   render();
 }
 function craftTome(){
   if(state.knowledge<10000) return;
   state.knowledge-=10000;
   state.books+=1;
-  pushLog('📚 Has compilado un Tomo de historia natural.');
+  pushLog('Has compilado un Tomo de historia natural.');
   render();
 }
 function unlockRegion(id){
@@ -3040,7 +3040,7 @@ function setRegion(id){
   }
   state.lastEncounter=null;
   currentAutoNotice='';
-  pushLog(`🧭 Expedición terrestre: llegada a ${dest.name}.`);
+  pushLog(`Expedición terrestre: llegada a ${dest.name}.`);
   render();
 }
 
@@ -3071,7 +3071,7 @@ function buyNode(id){
    const relict=relictsByRegion.get(state.currentRegion)?.find(needsClue)??MUSEUM_RELICTS.find(needsClue);
    if(relict)addRelictLead(relict.id);
   }
-  pushLog(`🔬 Investigación completada: ${node.name}.`);
+  pushLog(`Investigación completada: ${node.name}.`);
   render();
 }
 
@@ -3251,7 +3251,7 @@ function continentStatus(continent){
 }
 function unlockRegion(id){
   const r=REGIONS.find(x=>x.id===id); if(!r || !regionRequirementsMet(r)) return;
-  state.regionUnlocked[id]=true; pushLog('🗝️ Región desbloqueada: '+r.name+'.'); render();
+  state.regionUnlocked[id]=true; pushLog('Región desbloqueada: '+r.name+'.'); render();
 }
 function travelToRegion(id){ setRegion(id); tab='field'; renderPanel(); persist(); }
 function spendMoneyForKnowledge(multiplier=1){
@@ -3261,17 +3261,17 @@ function spendMoneyForKnowledge(multiplier=1){
   const cost=100*multiplier, gain=70*multiplier;
   if(state.money<cost) return;
   state.money-=cost; state.knowledge+=gain;
-  pushLog('📚 Aporte científico ×'+multiplier+': £'+fmt(cost)+' por '+fmt(gain)+' conocimiento.');
+  pushLog('Aporte científico ×'+multiplier+': £'+fmt(cost)+' por '+fmt(gain)+' conocimiento.');
   render();
 }
 function compileAtlas(){
   const total=Object.keys(state.published).length;
   if(total<20 || state.knowledge<500) return;
-  state.knowledge-=500; state.prestige+=1; pushLog('📘 Atlas general compilado: +1 prestigio.'); render();
+  state.knowledge-=500; state.prestige+=1; pushLog('Atlas general compilado: +1 prestigio.'); render();
 }
 function removeExhibit(id){
   if(!state.museum.exhibits[id]) return;
-  delete state.museum.exhibits[id]; pushLog('🏛️ Se retiró de la sala: '+SPECIES[id].name); render();
+  delete state.museum.exhibits[id]; pushLog('Se retiró de la sala: '+SPECIES[id].name); render();
 }
 function bestiaryTypeBucket(id){
   const c=taxonomyInfo(id).className;
@@ -3572,7 +3572,7 @@ function claimScientificMission(id){
   state.money+=mission.money;
   state.knowledge+=mission.knowledge;
   for(const [item,qty] of Object.entries(mission.items||{}))addInventory(item,qty);
-  pushLog('🎯 Encargo completado: '+mission.name+' · £'+fmt(mission.money)+' y '+fmt(mission.knowledge)+' conocimiento.');
+  pushLog('Encargo completado: '+mission.name+' · £'+fmt(mission.money)+' y '+fmt(mission.knowledge)+' conocimiento.');
   render();
 }
 function renderScientificMissions(){
@@ -3780,7 +3780,7 @@ function startExcavation(id,now=Date.now()){
  return museumJobTransaction(()=>{
    state.money-=site.money;state.knowledge-=site.knowledge;
    state.museum.excavations.push({id:++state.museum.excavationSeq,site:id,endAt:now+site.seconds*1000});
-   pushLog('⛏️ Excavación iniciada: '+site.name+'.');
+   pushLog('Excavación iniciada: '+site.name+'.');
  });
 }
 function formatMuseumTimeRemaining(endAt,now=Date.now()){
@@ -3812,7 +3812,7 @@ function collectExcavation(jobId,now=Date.now(),random=Math.random){
    }
    state.museum.excavationsCompleted=(Number(state.museum.excavationsCompleted)||0)+1;
    state.museum.excavationHistory=(state.museum.excavationHistory||[]).concat([{jobId:id,site:job.site,at:now,rewards}]).slice(-12);
-   pushLog('⛏️ Excavación finalizada · '+site.name+': '+found.join(', ')+'.');
+   pushLog('Excavación finalizada · '+site.name+': '+found.join(', ')+'.');
  });
 }
 function canCurateMuseum(id){
@@ -3826,7 +3826,7 @@ function curateMuseum(id){
  for(const [item,qty] of Object.entries(project.requires))state.inventory[item]-=qty;
  state.knowledge+=project.knowledge;
  state.museum.curationPoints=Math.min(20,(Number(state.museum.curationPoints)||0)+project.points);
- pushLog('🗃️ Conservación: '+project.name+' · +'+project.knowledge+' conocimiento; índice de conservación '+state.museum.curationPoints+'/20.');
+ pushLog('Conservación: '+project.name+' · +'+project.knowledge+' conocimiento; índice de conservación '+state.museum.curationPoints+'/20.');
  render();
  return true;
 }
@@ -3902,10 +3902,10 @@ function craftMuseumFossil(id,qty=1){
  if(piece.unique){
   state.museum.collections=state.museum.collections||{};
   state.museum.collections[piece.id]=true;
-  pushLog('🦖 Nueva muestra de Museo: '+piece.name+'.');
+  pushLog('Nueva muestra de Museo: '+piece.name+'.');
  }else{
   addInventory(piece.id,qty);
-  pushLog('🦴 Fabricación: '+piece.name+' ×'+qty+'.');
+  pushLog('Fabricación: '+piece.name+' ×'+qty+'.');
  }
  render();
  return true;
@@ -3921,7 +3921,7 @@ function addRelictLead(id,qty=1){
  if(next===before)return false;
  state.museum.relictLeads[id]=next;
  relictMuseumDirty=true;
- pushLog('📜 Indicio de relicto: '+relict.name+' · '+next+'/3.');
+ pushLog('Indicio de relicto: '+relict.name+' · '+next+'/3.');
  return true;
 }
 function relictsInField(conditions){
@@ -3972,7 +3972,7 @@ function startRelictSurvey(id,now=Date.now()){
  return museumJobTransaction(()=>{
    state.money-=mission.money;state.knowledge-=mission.knowledge;
    state.museum.relictSurveys.push({id:++state.museum.relictSurveySeq,relict:id,endAt:now+mission.seconds*1000});
-   pushLog('🔎 Prospección documental iniciada: '+museumRelictName3270(relictById.get(id))+'.');
+   pushLog('Prospección documental iniciada: '+museumRelictName3270(relictById.get(id))+'.');
  });
 }
 function collectRelictSurvey(jobId,now=Date.now(),random=Math.random){
@@ -3993,7 +3993,7 @@ function collectRelictSurvey(jobId,now=Date.now(),random=Math.random){
    state.museum.relictSurveyHistory=(state.museum.relictSurveyHistory||[]).concat([{
     jobId:id,relict:r.id,at:now,leads:granted,material
    }]).slice(-8);
-   pushLog('🔎 Investigación completada: '+r.name+' · '+granted+' indicio(s)'+(material?' y una muestra de huellas':'')+'.');
+   pushLog('Investigación completada: '+r.name+' · '+granted+' indicio(s)'+(material?' y una muestra de huellas':'')+'.');
  });
 }
 
@@ -4011,7 +4011,7 @@ function claimRelictMilestone(id){
  if(!canClaimRelictMilestone(id))return false;
  state.museum.relictAchievements[id]=true;
  state.knowledge+=m.knowledge;
- pushLog('🏅 Logro: '+m.name+' · +'+m.knowledge+' conocimiento · +3 % conocimiento de Campo.');
+ pushLog('Logro: '+m.name+' · +'+m.knowledge+' conocimiento · +3 % conocimiento de Campo.');
  render();return true;
 }
 function relictAchievementBonus(){
@@ -4025,7 +4025,7 @@ function researchRelict(){
  if(!canResearchRelict())return false;
  state.knowledge-=100;state.inventory.animal_trace-=2;state.inventory.old_ink-=1;
  state.museum.relictResearchPoints++;
- pushLog('🧬 Análisis comparativo · '+state.museum.relictResearchPoints+'/12 · +1 % de conocimiento de Campo.');
+ pushLog('Análisis comparativo · '+state.museum.relictResearchPoints+'/12 · +1 % de conocimiento de Campo.');
  render();return true;
 }
 function relictResearchBonus(){return Math.min(12,state.museum.relictResearchPoints||0)*0.01;}
@@ -4039,7 +4039,7 @@ function recordMuseumRelict(id,{at,source,conditions}={}){
  state.museum.relicts[id]=true;
  relictMuseumDirty=true;
  (state.museum.relictDiscoveries??={})[id]={at,source,region:relict.region,habitat:conditions.habitat,time:conditions.time,notice:true};
- pushLog('🗿 Relicto descubierto en Campo: '+relict.name+'.');
+ pushLog('Relicto descubierto en Campo: '+relict.name+'.');
  return true;
 }
 function maybeMuseumFieldDiscovery(source,conditions=state){
@@ -4078,7 +4078,7 @@ function catalogMuseumCollection(id){
  for(const [item,qty] of Object.entries(piece.requires))state.inventory[item]-=qty;
  state.knowledge-=piece.knowledge;
  state.museum.collections[id]=true;
- pushLog('🏛️ Pieza catalogada: '+piece.name+'.');
+ pushLog('Pieza catalogada: '+piece.name+'.');
  render();
  return true;
 }
@@ -4360,13 +4360,13 @@ function museumCapacity(){return [0,3,7,12][state.museum.wing] || 12;}
 function expandMuseum(){
  const next=MUSEUM_WINGS[state.museum.wing];
  if(!next || state.prestige<next.prestige || state.money<next.cost)return;
- state.money-=next.cost;state.museum.wing++;pushLog('🏛️ Museo ampliado: '+next.name);render();
+ state.money-=next.cost;state.museum.wing++;pushLog('Museo ampliado: '+next.name);render();
 }
 function exhibitAnimal(id){
  if(stage(id)!==5 || !state.published[id] || state.museum.exhibits[id] || Object.keys(state.museum.exhibits).length>=museumCapacity())return;
  const price=exhibitPrice(id);if(state.money<price)return;
  state.money-=price;state.museum.exhibits[id]=true;
- pushLog('🏛️ Exposición inaugurada: '+SPECIES[id].name);render();
+ pushLog('Exposición inaugurada: '+SPECIES[id].name);render();
 }
 function renderMuseum(){
  // M-3270 BEGIN render
@@ -4754,7 +4754,7 @@ function processMaterials(id,repeat=1){
   state.inventory[item]-=qty*repeat;
  state.money+=(project.money||0)*repeat;
  state.knowledge+=(project.knowledge||0)*repeat;
- pushLog('📚 Taller · '+project.name+' ×'+repeat+' · +£'+(project.money||0)*repeat+' y +'+(project.knowledge||0)*repeat+' conocimiento.');
+ pushLog('Taller · '+project.name+' ×'+repeat+' · +£'+(project.money||0)*repeat+' y +'+(project.knowledge||0)*repeat+' conocimiento.');
  render();
  return true;
 }
@@ -4788,10 +4788,10 @@ function craftItem(id){
  // EC3300 BEGIN crafted-credit
   state.craftedItems=state.craftedItems||{};state.craftedItems[id]=true;
  // EC3300 END crafted-credit
-  pushLog('🛠️ Fabricado: '+item.name);
+  pushLog('Fabricado: '+item.name);
   render();
 }
-function equipItem(id){const item=ITEMS[id];if(!item||!item.slot||!(state.inventory[id]||0))return;state.equipment[item.slot]=state.equipment[item.slot]===id?null:id;pushLog('🎒 Equipo actualizado: '+item.name);render();}
+function equipItem(id){const item=ITEMS[id];if(!item||!item.slot||!(state.inventory[id]||0))return;state.equipment[item.slot]=state.equipment[item.slot]===id?null:id;pushLog('Equipo actualizado: '+item.name);render();}
 // v2.3: cuatro subpestañas internas; el Inventario mantiene su botón principal.
 // Presentation only: no inventory or equipment mutations.
 function renderItemArt(id){
@@ -4935,7 +4935,7 @@ function sail(voyageId){
  newJob.startedAt=newJob.endAt-voyageDuration(v.seconds)*1000;
  if(typeof prepareCartography3400==='function')newJob.cartography=prepareCartography3400(newJob);
  // E-3280 END departure
- pushLog('⛵ Zarpó una expedición: '+v.name);render();
+ pushLog('Zarpó una expedición: '+v.name);render();
 }
 // Efectos cuantificables del equipo, reutilizados por interfaz y cálculo de recompensas.
 function voyageMoneyReward(v){return Math.round(v.prize*(1+(state.equipment.necklace==='shell_necklace'?0.05:0)));}
@@ -4951,13 +4951,13 @@ function resolveVoyageReward(job/* E-3280 BEGIN receipt-time */,resolvedAt=Date.
   const prize=voyageMoneyReward(v);
   state.money+=prize;state.knowledge+=notes;
   // Hallazgo seguro solo en reconocimientos dirigidos; las misiones antiguas no cambian.
-  if(v.sample && ITEMS[v.sample]){addInventory(v.sample,1);pushLog('🔎 Muestra recogida: '+ITEMS[v.sample].name+'.');}
+  if(v.sample && ITEMS[v.sample]){addInventory(v.sample,1);pushLog('Muestra recogida: '+ITEMS[v.sample].name+'.');}
   const loot=rollLoot(v);
-  if(loot){addInventory(loot,1); pushLog('🎒 Hallazgo: '+ITEMS[loot].name);}
+  if(loot){addInventory(loot,1); pushLog('Hallazgo: '+ITEMS[loot].name);}
   // Prospección opcional, adicional al botín original. No altera premios de rutas.
   const paleontology=Math.random();
-  if(paleontology<0.025){addInventory('fossil_skull',1);pushLog('💀 Hallazgo raro: cráneo fósil.');}
-  else if(paleontology<0.23){addInventory('fossil_tooth',1);pushLog('🦷 Hallazgo: diente fósil.');}
+  if(paleontology<0.025){addInventory('fossil_skull',1);pushLog('Hallazgo raro: cráneo fósil.');}
+  else if(paleontology<0.23){addInventory('fossil_tooth',1);pushLog('Hallazgo: diente fósil.');}
   // Beta 3.15: una prospección EXTRA por expedición según Paleontología.
   // Las probabilidades fósiles originales permanecen intactas; nunca se multiplican por censos.
   const tier=Math.min(3,Math.max(0,state.upgrades.paleoTier||0));
@@ -4967,23 +4967,23 @@ function resolveVoyageReward(job/* E-3280 BEGIN receipt-time */,resolvedAt=Date.
    const tooth=tier===3?0.12:tier===2?0.08:0.025;
    const fragment=tier===3?0.52:tier===2?0.38:0.24;
    const item=roll<skull?'fossil_skull':roll<skull+tooth?'fossil_tooth':roll<skull+tooth+fragment?'fossil_fragment':null;
-   if(item){addInventory(item,1);pushLog('🦴 Prospección científica: '+ITEMS[item].name+'.');}
+   if(item){addInventory(item,1);pushLog('Prospección científica: '+ITEMS[item].name+'.');}
   }
   // Hallazgos de artefactos sin disminuir el botín original.
   const artifactRoll=Math.random();
   const artifactItem=artifactRoll<0.13?'brass_shard':artifactRoll<0.20?'old_ink':artifactRoll<0.31?'carved_wood':null;
-  if(artifactItem){addInventory(artifactItem,1);pushLog('🏺 Material histórico: '+ITEMS[artifactItem].name+'.');}
+  if(artifactItem){addInventory(artifactItem,1);pushLog('Material histórico: '+ITEMS[artifactItem].name+'.');}
 // Ámbar raro: expediciones de exploración, nunca como premio garantizado.
 const amberChance=(v.id==='coast'||v.id==='namib_survey')?0.035:0.014;
-if(Math.random()<amberChance){addInventory('fossil_amber',1);pushLog('🟠 Hallazgo raro: ámbar fósil.');}
+if(Math.random()<amberChance){addInventory('fossil_amber',1);pushLog('Hallazgo raro: ámbar fósil.');}
 
   // Extra cartography is fixed at departure; old voyages receive no retroactive draw.
   if(job.cartography?.version===1)for(const [id,n]of Object.entries(job.cartography.parts||{})){
-   if(n===1&&CARTOGRAPHY3400.some(d=>d.sourceResearch&&d.piece===id&&d.routes.includes(job.type))){addInventory(id,1);pushLog('🗺️ Documento cartográfico: '+ITEMS[id].name+'.');}
+   if(n===1&&CARTOGRAPHY3400.some(d=>d.sourceResearch&&d.piece===id&&d.routes.includes(job.type))){addInventory(id,1);pushLog('Documento cartográfico: '+ITEMS[id].name+'.');}
   }
   state.museum.voyagesCompleted=(state.museum.voyagesCompleted||0)+1;
   achievementRecord3360('voyage',{type:v.id});
-  pushLog('⛵ Regresó '+v.name+': +£'+prize+' y +'+notes+' conocimiento.');
+  pushLog('Regresó '+v.name+': +£'+prize+' y +'+notes+' conocimiento.');
  // E-3280 BEGIN receipt-after
   const received=Object.fromEntries(Object.entries(state.inventory).filter(([id,n])=>ITEMS[id]&&n>(Number(inventoryBefore[id])||0)).map(([id,n])=>[id,n-(Number(inventoryBefore[id])||0)]));
   const guaranteed=v.sample&&received[v.sample]?{[v.sample]:1}:{};
@@ -5656,7 +5656,7 @@ function tick(){
    }
  }
  if(autoDiaryBuffer.searches>0 && (now-lastAutoDiaryFlush>5000 || autoDiaryBuffer.hits>0)){
-   pushLog(`👨‍🔬 Equipo automático · ${autoDiaryBuffer.searches} búsquedas · ${autoDiaryBuffer.hits} avistamientos · +${autoDiaryBuffer.knowledge} conocimiento.`);
+   pushLog(`Equipo automático · ${autoDiaryBuffer.searches} búsquedas · ${autoDiaryBuffer.hits} avistamientos · +${autoDiaryBuffer.knowledge} conocimiento.`);
    autoDiaryBuffer={searches:0,hits:0,knowledge:0};
    lastAutoDiaryFlush=now;
  }
@@ -7486,7 +7486,7 @@ craftItem=function(id){
    state.inventory[mat]-=n;
    if(state.inventory[mat]===0)for(const slot of ['instrument','hat','necklace'])if(state.equipment[slot]===mat)state.equipment[slot]=null;
   }
-  addInventory(id,1);state.craftedItems[id]=true;pushLog('🛠️ Fabricado: '+ITEMS[id].name);achievementMark3360('research');return true;
+  addInventory(id,1);state.craftedItems[id]=true;pushLog('Fabricado: '+ITEMS[id].name);achievementMark3360('research');return true;
  });
  if(ok)inventoryActionSeq3400++;renderCounters();renderPanel();return ok;
 };
