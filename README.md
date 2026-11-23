@@ -2,11 +2,11 @@
 
 Juego naturalista y catálogo ilustrado de la fauna del mundo. Funciona en el navegador como PWA, también sin conexión, y tiene una versión Android preparada con Capacitor. La partida se guarda en el propio dispositivo.
 
-**Versión actual: 5.4.1**
+**Versión actual: 5.4.2**
 
 [Jugar](https://pruizbohle.github.io/gran-atlas-naturaleza/) · [Laboratorio gráfico](https://pruizbohle.github.io/gran-atlas-naturaleza/naturalist-art/) · [Galería de relictos](https://pruizbohle.github.io/gran-atlas-naturaleza/laboratorio-relictos.html) · [Actualizar la PWA conservando la partida](https://pruizbohle.github.io/gran-atlas-naturaleza/actualizar-atlas.html)
 
-## Estado actual (V5.4.1)
+## Estado actual (V5.4.2)
 
 | Contenido | Cantidad |
 | --- | --- |
@@ -44,7 +44,7 @@ npm ci
 npm run release:verify
 ```
 
-`release:verify` genera la versión (`scripts/build-naturalist-release.cjs`) y ejecuta las pruebas críticas. La compilación de Pages usa Node 22. La suite completa (`node --test --test-concurrency=4 tests/*.test.cjs`, con el historial de git completo) da 666 de 885 pruebas aprobadas en V5.4.1. Los 219 fallos restantes ya se reproducían en V5.3.0 y V5.2.0: son comparaciones con commits históricos que hay que revisar una a una. Ver [docs/v530/regresion.json](docs/v530/regresion.json).
+`release:verify` genera la versión (`scripts/build-naturalist-release.cjs`) y ejecuta las pruebas críticas. La compilación de Pages usa Node 22. La suite completa (`node --test --test-concurrency=4 tests/*.test.cjs`, con el historial de git completo) da 666 de 885 pruebas aprobadas en V5.4.2. Los 219 fallos restantes ya se reproducían en V5.3.0 y V5.2.0: son comparaciones con commits históricos que hay que revisar una a una. Ver [docs/v530/regresion.json](docs/v530/regresion.json).
 
 Cada envío a `main` despliega el sitio mediante `.github/workflows/static.yml`.
 

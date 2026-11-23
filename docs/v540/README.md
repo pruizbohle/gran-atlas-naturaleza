@@ -36,3 +36,7 @@ Una partida nueva solo muestra ya ✦ (marca) y marcas tipográficas (✥ ✓ �
 
 ## V5.4.1 · Tres objetos pendientes
 `fossil_tooth`, `field_telescope` y `parchment_scrap` pasan a usar su ilustración de OBJ-11 (68 objetos con icono propio). La revisión preliminar pedía diferenciarlos de piezas coleccionables (FOS-05, FOS-12, INS-08); esos coleccionables todavía no están en el juego, así que la comparación queda para cuando se incorporen. Pendientes: `misiones` y `comparativo`.
+
+## V5.4.2 · Retiro de `misiones`
+- Se retira del repositorio el icono `misiones` y su ficha: era casi idéntico a `encargos` (diferencia 30,3 a 24 px, con mediana de 57,4) y la pestaña Misiones de Sociedad ya usa el sobre con sello. La biblioteca queda con 137 fichas.
+- `comparativo` sigue pendiente. La sección "Análisis comparativo" de `app.js` la sobrescribe `museum-ui-v3270.js`, y la interfaz real no tiene ningún título donde mostrarlo. Se conectará cuando exista una pantalla de análisis comparativo en el Museo.

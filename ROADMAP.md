@@ -1,6 +1,6 @@
 # El Gran Atlas — hoja de ruta (23 de noviembre de 2026)
 
-Estado de partida: **V5.4.1**. Esta hoja distingue lo que ya está hecho, lo que los informes del repositorio dejan pendiente y lo que es solo una propuesta. El plan anterior, que llegaba hasta la Beta 3.12, está en [`docs/ROADMAP-historico.md`](docs/ROADMAP-historico.md).
+Estado de partida: **V5.4.2**. Esta hoja distingue lo que ya está hecho, lo que los informes del repositorio dejan pendiente y lo que es solo una propuesta. El plan anterior, que llegaba hasta la Beta 3.12, está en [`docs/ROADMAP-historico.md`](docs/ROADMAP-historico.md).
 
 ## Completado
 
@@ -16,7 +16,7 @@ Estado de partida: **V5.4.1**. Esta hoja distingue lo que ya está hecho, lo que
 | Catálogo mundial ilustrado | 4.2 – 4.9.6 | 1.000 fichas activas con láminas científicas de todos los grupos |
 | Auditoría y arte | 5.0.1 – 5.0.12 | Auditoría global, rendimiento de arranque y repintado de variantes pigmentarias |
 | Legendarios, relictos y guía | 5.1.2 – 5.2.0 | 30 legendarios, 20 relictos y Guía del naturalista |
-| Iconografía | 5.3.0 – 5.4.1 | 63 iconos y 16 motivos de bioma, 64 objetos ilustrados más, hexágonos por bioma e interfaz sin emojis |
+| Iconografía | 5.3.0 – 5.4.2 | 63 iconos y 16 motivos de bioma, 64 objetos ilustrados más, hexágonos por bioma e interfaz sin emojis |
 
 ## Pendiente según los informes del repositorio
 
@@ -26,7 +26,7 @@ Estado de partida: **V5.4.1**. Esta hoja distingue lo que ya está hecho, lo que
 | Pruebas históricas | 219 de 885 pruebas fallan desde antes de V5.2.0. Hay que revisar cuáles son obsoletas y cuáles esconden errores | [Regresión V5.3.0](docs/v530/regresion.json) |
 | Arte pigmentario | Siguiente lote propuesto: 20 animales con variante albina o melánica mejorable | [Próximo lote ART-08](docs/arte-v5012/proximo-lote.md) |
 | Coleccionables | El desarrollo de coleccionables (300 piezas y Filatelia) quedó fuera de V5.2 y de la iconografía 5.3–5.4 | [Auditoría de integración](docs/v520/auditoria.md) |
-| Iconos restantes | Motivos `misiones` y `comparativo`, y arte de legendarios y relictos | [docs/v540](docs/v540/README.md) |
+| Iconos restantes | Motivo `comparativo` (sin pantalla donde mostrarlo todavía) y arte de legendarios y relictos | [docs/v540](docs/v540/README.md) |
 
 ## Propuestas
 

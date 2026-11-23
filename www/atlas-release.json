@@ -1,5 +1,5 @@
 {
-  "version": "5.4.1",
+  "version": "5.4.2",
   "atlas": "simple",
   "v540": {"objectIcons": 68, "biomeHexTint": true, "emojiFreeLog": true},
   "v530": {"iconography": true, "relictCases": 20, "illustratedBiomes": 16},

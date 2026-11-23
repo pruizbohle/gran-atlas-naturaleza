@@ -319,20 +319,6 @@ globalThis.AtlasIconLibrary530 = {
       "detail": "PNG RGBA de 256 px recuperado de la iconoteca V1, encuadrado y optimizado."
     },
     {
-      "id": "misiones",
-      "name": "Misiones / encargos",
-      "category": "Actividades principales",
-      "old": {
-        "text": "📋"
-      },
-      "icon": "misiones",
-      "source": "arte/iconoteca-1842-v1 · a1d22c7",
-      "place": "Iconoteca V1 · referencia individual",
-      "status": "pendiente",
-      "size": 32,
-      "detail": "PNG RGBA de 256 px recuperado de la iconoteca V1, encuadrado y optimizado."
-    },
-    {
       "id": "brujula",
       "name": "Orientación",
       "category": "Cartografía y hexágonos",

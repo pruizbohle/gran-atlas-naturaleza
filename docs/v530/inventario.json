@@ -17,18 +17,18 @@
     "www/js/save-manager.js"
   ],
   "counts": {
-    "rows": 138,
+    "rows": 137,
     "roles": {
       "existente": 3,
       "nuevo": 28,
       "corregido": 105,
-      "pendiente": 2
+      "pendiente": 1
     },
-    "files": 121,
-    "bytes": 785466,
-    "totalBytes": 133722445,
+    "files": 120,
+    "bytes": 777878,
+    "totalBytes": 133714857,
     "baselineBytes": 132854722,
-    "offlineFiles": 7224
+    "offlineFiles": 7223
   },
   "emoji": {
     "initial": {
@@ -3044,18 +3044,6 @@
       "sha256": "c9245a99030a642dafa80a895ccc632db208210ae0f957e0d02a19172a2e17fb",
       "uses": [
         "logros"
-      ]
-    },
-    {
-      "id": "misiones",
-      "path": "iconoteca/arte/misiones.webp",
-      "format": "WebP con alfa",
-      "width": 128,
-      "height": 128,
-      "bytes": 7588,
-      "sha256": "bcfc14b0559ecde226281883e58dbbb754331dd478fd62f846ed85f5a3e1cd94",
-      "uses": [
-        "misiones"
       ]
     },
     {
